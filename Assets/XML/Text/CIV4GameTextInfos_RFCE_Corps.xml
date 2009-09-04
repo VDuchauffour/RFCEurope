@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - New -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER</Tag>
+		<English>Knights Hospitaller</English>
+		<French>Knights Hospitaller</French>
+		<German>Knights Hospitaller</German>
+		<Italian>Knights Hospitaller</Italian>
+		<Spanish>Knights Hospitaller</Spanish>
+		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#251;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
+		<English>Knights Templar</English>
+		<French>Knights Templar</French>
+		<German>Knights Templar</German>
+		<Italian>Knights Templar</Italian>
+		<Spanish>Knights Templar</Spanish>
+		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;&#251;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TEUTONIC_KNIGHTS</Tag>
+		<English>Teutonic Knights</English>
+		<French>Teutonic Knights</French>
+		<German>Teutonic Knights</German>
+		<Italian>Teutonic Knights</Italian>
+		<Spanish>Teutonic Knights</Spanish>
+		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#229; &#208;&#251;&#246;&#224;&#240;&#232;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANSEATIC_LEAGUE</Tag>
+		<English>Hanseatic League</English>
+		<French>Hanseatic League</French>
+		<German>Hanseatic League</German>
+		<Italian>Hanseatic League</Italian>
+		<Spanish>Hanseatic League</Spanish>
+		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#224;&#255; &#203;&#232;&#227;&#224;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEDICI_BANKS</Tag>
+		<English>Medici Banks</English>
+		<French>Medici Banks</French>
+		<German>Medici Banks</German>
+		<Italian>Medici Banks</Italian>
+		<Spanish>Medici Banks</Spanish>
+		<Russian>&#193;&#224;&#237;&#234;&#232; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AUGSBURG_FAMILIES</Tag>
+		<English>Augsburg Families</English>
+		<French>Augsburg Families</French>
+		<German>Augsburg Families</German>
+		<Italian>Augsburg Families</Italian>
+		<Spanish>Augsburg Families</Spanish>
+		<Russian>&#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#209;&#229;&#236;&#252;&#232;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BANK_OF_ST_GEORGE</Tag>
+		<English>Bank of St. George</English>
+		<French>Bank of St. George</French>
+		<German>Bank of St. George</German>
+		<Italian>Bank of St. George</Italian>
+		<Spanish>Bank of St. George</Spanish>
+		<Russian>&#193;&#224;&#237;&#234; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_1</Tag>
+		<English>Hospitaller Master</English>
+		<French>Hospitaller Master</French>
+		<German>Hospitaller Master</German>
+		<Italian>Hospitaller Master</Italian>
+		<Spanish>Hospitaller Master</Spanish>
+		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
+		<English>Templar Master</English>
+		<French>Templar Master</French>
+		<German>Templar Master</German>
+		<Italian>Templar Master</Italian>
+		<Spanish>Templar Master</Spanish>
+		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_3</Tag>
+		<English>Teutonic Master</English>
+		<French> Teutonic Master</French>
+		<German> Teutonic Master</German>
+		<Italian>Teutonic Master</Italian>
+		<Spanish>Teutonic Master</Spanish>
+		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_4</Tag>
+		<English>Hanseatic Executive</English>
+		<French>Hanseatic Executive</French>
+		<German>Hanseatic Executive</German>
+		<Italian>Hanseatic Executive</Italian>
+		<Spanish>Hanseatic Executive</Spanish>
+		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#232;&#233; &#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_5</Tag>
+		<English>Medici Executive</English>
+		<French>Medici Executive</French>
+		<German>Medici Executive</German>
+		<Italian>Medici Executive</Italian>
+		<Spanish>Medici Executive</Spanish>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_6</Tag>
+		<English>Augsburg Executive</English>
+		<French>Augsburg Executive</French>
+		<German>Augsburg Executive</German>
+		<Italian>Augsburg Executive</Italian>
+		<Spanish>Augsburg Executive</Spanish>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_7</Tag>
+		<English>Bank of St. George Executive</English>
+		<French>Bank of St. George Executive</French>
+		<German>Bank of St. George Executive</German>
+		<Italian>Bank of St. George Executive</Italian>
+		<Spanish>Bank of St. George Executive</Spanish>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TEMPLAR</Tag>
+		<English>Knight Templar</English>
+		<French>Knight Templar</French>
+		<German>Knight Templar</German>
+		<Italian>Knight Templar</Italian>
+		<Spanish>Knight Templar</Spanish>
+		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TEUTONIC</Tag>
+		<English>Teutonic Knight</English>
+		<French>Teutonic Knight</French>
+		<German>Teutonic Knight</German>
+		<Italian>Teutonic Knight</Italian>
+		<Spanish>Teutonic Knight</Spanish>
+		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Tag>
+		<English>The Poor Fellow-Soldiers of Christ and of the Temple of Solomon (Latin: Pauperes Commilitones Christi Templique Solomonice), commonly known as the Knights Templar or the Order of the Temple, were among the most famous of the Western Christian military orders. The organizaton existed for approximately two centuries in the Middle Ages. It was founded in the aftermath of the First Crusade of 1096 to ensure the safety of the many Europeans who made the pilgrimage to Jerusalem after its conquest.</English>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Tag>
+		<English>In 1143 Pope Celestine II ordered the Knight Hospitaller to take over management of a German Hospital in Jerusalem, which, according to the chronicler Jean d'Ypres, accommodated the countless German pilgrims and crusaders who could neither speak the local tongue (i.e.French) no Latin (patrie linguam ignorantibus atque Latinam). However although formally an institution of the Hospitallers, the Pope commanded that the prior and the brothers of the domus Teutonicorum (house of the Germans) should always be Germans themselves,so a tradition of a German-led religious institution could develop during the 12th century in Palestine.</English>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Tag>
+		<English>The Knights Hospitaller (also known as the Sovereign Military Hospitaller, Order of St. John of Jerusalem of Rhodos and of Malta, Knights of Malta, Knights of Rhodos and Chevaliers of Malta) is a Christian organization that began as an Amalfitan hospital founded in Jerusalem in 1080 to provide care for poor and sick pilgrims to the Holy Land. After the Christian conquest of Jerusalem in 1099 during the First Crusade it became a religious/military order under its own charter, and was charged with the care and defense of the Holy Land. Following the loss of the Holy Land by Christan forces, the Order operated from Rhodos, over which it was sovereign, and later from Malta where it administered a vassal state under the Spanish viceroy of Sicily</English>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+</Civ4GameText>

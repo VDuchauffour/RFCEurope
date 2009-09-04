@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text Infos -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ALCHEMY_QUOTE</Tag>
+		<English>"The glorious sun stays in its course and plays the alchemist. Turning with splendour of his precious eye the meagre earth to glittering gold." - William Shakespeare</English>
+		<French>"Il y a des dieux parce que la nature en a imprim&#233; la notion dans toutes les &#226;mes." - Cic&#233;ron</French>
+		<German>"Die Natur hat uns den Begriff der G&#246;tter selbst gegeben." - Cicero</German>
+		<Italian>"La Natura stessa ha impresso nelle menti di tutti l'idea di Dio." - Cicerone</Italian>
+		<Spanish>"La propia Naturaleza ha grabado en la mente de todos la idea de Dios." - Cicer&#243;n</Spanish>
+		<Russian>"The glorious sun stays in its course and plays the alchemist. Turning with splendour of his precious eye the meagre earth to glittering gold." - William Shakespeare</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ARABIC_KNOWLEDGE_QUOTE</Tag>
+		<English>"We reveal this Book unto thee as an exposition of all things, and a guidance and a mercy to those of you who submit to Allah" - Muhammad, Sura 16.90</English>
+		<French>"Le sage s'adonne &#224; la m&#233;ditation ; l'ignorant s'y refuse. Apprends &#224; reconna&#238;tre ce qui te fait avancer et ce qui entrave ta progression." - Bouddha</French>
+		<German>"Meditation bedeutet Weisheit. Mangelnde Meditation bedeutet Ignoranz. Wisse, was dich voranbringt oder hemmt." - Buddha</German>
+		<Italian>"La meditazione porta saggezza. La mancanza di meditazione rende ignoranti. Impara bene ci&#242; che pu&#242; migliorarti e ci&#242; che pu&#242; peggiorarti." - Budda</Italian>
+		<Spanish>"La meditaci&#243;n trae la sabidur&#237;a y su carencia conlleva ignorancia. Has de conocer bien lo que te hace avanzar y lo que te frena." - Buda</Spanish>
+		<Russian>"We reveal this Book unto thee as an exposition of all things, and a guidance and a mercy to those of you who submit to Allah" - Muhammad, Sura 16.90</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ARABIC_MEDICINE_QUOTE</Tag>
+		<English>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</English>
+		<French>"La race des Dieux Immortels n'est point semblable &#224; celle des hommes qui marchent sur la Terre." - Hom&#232;re</French>
+		<German>"Die unsterblichen G&#246;tter haben nichts mit den Menschen, die auf Erden wandeln, gemein." - Homer</German>
+		<Italian>"La razza degli dei immortali e quella degli uomini terreni non sempre si somigliano." - Omero</Italian>
+		<Spanish>"No se parecen en absoluto la raza de los dioses inmortales y la raza de los hombres que hollan la Tierra." - Homero</Spanish>
+		<Russian>"There is no disease that Allah has created, except that He also has created its treatment." - Sunan Abi Dawood</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ARCHITECTURE_QUOTE</Tag>
+		<English>"It is from their foes, not from their friends, that cities learn the wisdom of building walls." - Aristophanes</English>
+		<French>"Le Seigneur te b&#233;nit et te garde ; il tourne vers toi son visage et te sourit. Il fait briller sur toi sa lumi&#232;re et te donne sa joie." - La Bible, Nombres 6.24</French>
+		<German>"Der Herr segne euch und beh&#252;te euch! Der Herr lasse sein Angesicht leuchten &#252;ber euch und sei euch gn&#228;dig! Der Herr erhebe sein Angesicht auf euch und gebe euch Frieden." - Die Bibel, Numeri</German>
+		<Italian>"Il Signore ti benedice e ti conforta; gli occhi del Signore sono gentili e vegliano su di te; lo sguardo del Signore si volge verso di te e ti dona la pace." - La Bibbia</Italian>
+		<Spanish>"El Se&#241;or te bendiga y te guarde. El Se&#241;or te muestre su rostro y tenga misericordia de ti. Vuelva el Se&#241;or su rostro hacia ti y te conceda la paz." - La Biblia, N&#250;meros</Spanish>
+		<Russian>"It is from their foes, not from their friends, that cities learn the wisdom of building walls." - Aristophanes</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ARISTOCRACY_QUOTE</Tag>
+		<English>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</English>
+		<French>"Je suis le Seigneur, ton Dieu. Tu n'adoreras pas d'autre Dieu que moi." - La Bible, l'Exode</French>
+		<German>"Ich bin der Herr, dein Gott. Du sollst nicht haben andere G&#246;tter neben mir." - Die Bibel, Exodus</German>
+		<Italian>"Io sono il Signore. Non avrai altro Dio all'infuori di me." - La Bibbia - Esodo</Italian>
+		<Spanish>"Yo soy Yav&#233;, tu Dios. No tendr&#225;s otro Dios que a m&#237;." - La Biblia, &#201;xodo</Spanish>
+		<Russian>"There is nothing which wounds the heart of a noble man more than the thought of his honour being assailed." - Moliere</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ASTROLABE_QUOTE</Tag>
+		<English>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</English>
+		<French>"Abondance de souverains nuit ! Il ne peut y en avoir qu'un, un seul Roi !" - H&#233;rodote</French>
+		<German>"Zu viele Herrscher sind nicht gut. M&#246;ge ein Herrscher als K&#246;nig regieren!" - Herodot</German>
+		<Italian>"Non servono molti sovrani. Che il comando sia di un uomo solo, che sia proclamato un re." - Erodoto</Italian>
+		<Spanish>"No es bueno el caudillaje de muchos; sea uno solo el caudillo, uno solo el rey." - Herodoto</Spanish>
+		<Russian>"All things are in the Universe, and the Universe in all things; we in it and it in us; in this way everything in perfect unity." - Giordano Bruno</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ASTRONOMY_QUOTE</Tag>
+		<English>"Astronomy compels the soul to look upwards and leads us from this world to another." - Plato</English>
+		<French>"Certains livres se go&#251;tent, d'autres se d&#233;vorent, d'autres encore se m&#226;chent et se dig&#232;rent lentement." - Sir Francis Bacon</French>
+		<German>"Manche B&#252;cher m&#252;ssen gekostet werden, manche verschlingt man, und nur einige wenige kaut man und verdaut sie ganz." - Sir Francis Bacon</German>
+		<Italian>"Alcuni libri devono essere gustati, altri inghiottiti, altri divorati e digeriti." - Sir Francis Bacon</Italian>
+		<Spanish>"Algunos libros se han de paladear, otros se han de engullir y unos cuantos m&#225;s se han de masticar y digerir." - Sir Francis Bacon</Spanish>
+		<Russian>"Astronomy compels the soul to look upwards and leads us from this world to another." - Plato</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_BANKING_QUOTE</Tag>
+		<English>"Banking establishments are more dangerous than standing armies." - Thomas Jefferson </English>
+		<French>"Pour accompagner le r&#232;gne des justes sur la Terre afin que le fort jamais ne brutalise le faible." - Code d'Hammurabi, Prologue</French>
+		<German>"Es wird Zeit, dem Land Gesetze zu schenken, auf dass die Reichen die Armen nicht unterdr&#252;cken." - Codex Hammurabi, Prolog</German>
+		<Italian>"Per portare regole e giustizia, in modo che il pi&#249; forte non possa nuocere al pi&#249; debole." - Codice di Hammurabi, Prologo</Italian>
+		<Spanish>"Para traer el imperio de la Justicia al pa&#237;s y que los fuertes no perjudiquen a los d&#233;biles." - Pre&#225;mbulo del C&#243;digo de Hammurabi</Spanish>
+		<Russian>"Banking establishments are more dangerous than standing armies." - Thomas Jefferson</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_BIOLOGY_QUOTE</Tag>
+		<English>"In all things of Nature, there is something of the marvellous." - Cicero</English>
+		<French>"Le monde entier est une immense sc&#232;ne ! Tous, hommes et femmes, des acteurs qui y jouent leurs sorties, qui y jouent leurs entr&#233;es ; chacun interpr&#232;te maints r&#244;les dans sa vie !" - William Shakespeare</French>
+		<German>"Die ganze Welt ist B&#252;hne. Und alle Frauen und M&#228;nner blo&#223;e Spieler. Sie treten auf und gehen wieder ab. Sein Leben lang spielt einer manche Rollen." - William Shakespeare</German>
+		<Italian>"Il mondo &#232; un palco, uomini e donne sono solamente attori. Ci sono ingressi e uscite e ciascuno pu&#242; rivestire ruoli diversi. " - William Shakespeare</Italian>
+		<Spanish>"El mundo es un escenario y los hombres y mujeres que lo pueblan son solo actores. Todos hacen entradas y mutis y diversos papeles en la vida. " - William Shakespeare</Spanish>
+		<Russian>"In all things of Nature, there is something of the marvellous." - Cicero</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_BLAST_FURNACE_QUOTE</Tag>
+		<English>"And them that take up the sword shall perish by the sword" - Book of Matthew, the Bible</English>
+		<French>"Je jure loyaut&#233; et fid&#233;lit&#233; &#224; mon seigneur, j'aimerai ce qu'il aime et me d&#233;tournerai de ce dont il se d&#233;tourne." - Serment d'all&#233;geance anglo-saxon</French>
+		<German>"Ich werde meinem Herrn treue Dienste leisten. Seine Feinde sollen auch meine Feinde sein." - Angels&#228;chsischer Treueeid</German>
+		<Italian>"Sono devoto e credo nel mio Signore, amo ci&#242; che lui ama e rifuggo ci&#242; che lui rifugge." - Giuramento di fedelt&#224; anglosassone</Italian>
+		<Spanish>"Ser&#233; fiel y sincero para con mi se&#241;or, y amar&#233; todo lo que ame y abominar&#233; de todo lo que abomine." - Juramento de fidelidad anglosaj&#243;n</Spanish>
+		<Russian>"And them that take up the sword shall perish by the sword" - Book of Matthew, the Bible</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_BRONZE_CASTING_QUOTE</Tag>
+		<English>"It is entirely seemly for a young man killed in battle to lie mangled by the bronze spear. In his death all things appear fair." - Homer</English>
+		<French>"Deux amours ont fait deux cit&#233;s : l'amour de soi, la cit&#233; terrestre ; l'amour de Dieu, la cit&#233; c&#233;leste." - Saint-Augustin</French>
+		<German>"Es gibt zwei St&#228;dte auf der Welt. Die eine ist auf der Liebe zu sich selbst, die andere auf der Liebe zu Gott errichtet." - Augustinus</German>
+		<Italian>"Esistono due tipi di citt&#224;, fondate su due tipi d'amore: quello terreno per s&#233; stessi e quello celeste per di Dio." - Sant'Agostino</Italian>
+		<Spanish>"Dos amores han fundado dos ciudades: el amor a uno mismo, la terrenal; y el amor a Dios, la celestial." - San Agust&#237;n</Spanish>
+		<Russian>"It is entirely seemly for a young man killed in battle to lie mangled by the bronze spear. In his death all things appear fair." - Homer</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CALENDAR_QUOTE</Tag>
+		<English>"For everything there is a season and a time for every purpose under heaven." - Ecclisiastics, The Bible</English>
+		<French>"Si la musique nourrit l'amour, alors jouez !" - William Shakespeare</French>
+		<German>"Wenn Musik die Nahrung der Liebe ist, so spielt fort." - William Shakespeare</German>
+		<Italian>"Se la musica &#232; il nutrimento dell'amore, continua a suonare." - William Shakespeare</Italian>
+		<Spanish>"Si la m&#250;sica es el alimento del amor, tocadla." - William Shakespeare</Spanish>
+		<Russian>"For everything there is a season and a time for every purpose under heaven." - Ecclisiastics, The Bible</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CHAIN_MAIL_QUOTE</Tag>
+		<English>"The glories of our blood and state are shadows not substantial things. There is no armour against fate. Death lays his icy hand on kings." - James Shirley</English>
+		<French>"Ceux qui partagent le m&#234;me m&#233;tier se r&#233;unissent rarement, m&#234;me pour se divertir, mais leur conversation se fait in&#233;vitablement au d&#233;triment du public." - Adam Smith</French>
+		<German>"Gesch&#228;ftsleute des gleichen Gewerbes kommen selten, selbst zu Festen und zur Zerstreuung, zusammen, ohne dass das Gespr&#228;ch in einer Verschw&#246;rung gegen die &#214;ffentlichkeit endet." - Adam Smith</German>
+		<Italian>"&#200; raro che quelli che fanno lo stesso lavoro si riuniscano, nemmeno per divertirsi o fare baldoria, ma la conversazione termina sempre con una cospirazione ai danni della clientela." - Adam Smith</Italian>
+		<Spanish>"Gente del mismo oficio rara vez se re&#250;ne, ni tan solo para alegrarse o divertirse, sin que la conversaci&#243;n termine en una conspiraci&#243;n contra el p&#250;blico." - Adam Smith</Spanish>
+		<Russian>"The glories of our blood and state are shadows not substantial things. There is no armour against fate. Death lays his icy hand on kings." - James Shirley</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CHEMISTRY_QUOTE</Tag>
+		<English>"We must trust to nothing but facts. These are presented to us by Nature and cannot deceive. We ought in every instance to submit our reasoning to the test of experiment and observation." - Antoine Lavoissier</English>
+		<French>"La bureaucratie grandit pour r&#233;pondre aux besoins croissants de la bureaucratie grandissante." - Inconnu</French>
+		<German>"Die B&#252;rokratie wurde erfunden, um die Bed&#252;rfnisse der B&#252;rokratie zu stillen." - Unbekannt</German>
+		<Italian>"La burocrazia si espande per soddisfare i bisogni di una burocrazia in espansione." - Anonimo</Italian>
+		<Spanish>"La burocracia se expande para satisfacer las necesidades de una burocracia en expansi&#243;n." - An&#243;nimo</Spanish>
+		<Russian>"We must trust to nothing but facts. These are presented to us by Nature and cannot deceive. We ought in every instance to submit our reasoning to the test of experiment and observation." - Antoine Lavoissier</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CHIVALRY_QUOTE</Tag>
+		<English>"He was a verrey purfit, gentil knight." - Geoffrey Chaucer</English>
+		<French>"L'Etat, c'est moi." - Louis XIV</French>
+		<German>"Der Staat bin ich." - Ludwig XIV.</German>
+		<Italian>"Lo stato sono io." - Luigi XIV</Italian>
+		<Spanish>"El Estado soy yo." - Luis XIV</Spanish>
+		<Russian>"He was a verrey purfit, gentil knight." - Geoffrey Chaucer</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CIVIL_ENGINEERING_QUOTE</Tag>
+		<English>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</English>
+		<French>"Un homme n'accepte pas de risquer sa vie pour deux sous par jour ou pour une m&#233;daille. Il faut parler &#224; son &#226;me, le galvaniser !" - Napol&#233;on Bonaparte</French>
+		<German>"Ein Mann riskiert nicht f&#252;r einen j&#228;mmerlichen Sold sein Leben. Man muss seine Seele ansprechen, um ihn zu elektrisieren!" - Napoleon Bonaparte</German>
+		<Italian>"Un uomo non rischia la vita per pochi soldi o per promozioni insignificanti. Per infervorarlo, bisogna parlare alla sua anima." - Napoleone Bonaparte</Italian>
+		<Spanish>"Un hombre no est&#225; dispuesto a morir por medio penique al d&#237;a ni por un qu&#237;tame all&#225; esas penas. Debes hablarle al alma para conmoverlo." - Napole&#243;n Bonaparte</Spanish>
+		<Russian>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CIVIL_SERVICE_QUOTE</Tag>
+		<English>"For forms of government let fools contest, whatever's best administered is best." - Alexander Pope</English>
+		<French>"Le vainqueur triomphe avant m&#234;me de partir &#224; la guerre, le vaincu part &#224; la guerre puis r&#234;ve de triomphe." - Sun-Tzu</French>
+		<German>"Der General, der eine Schlacht gewinnt, stellt vor dem Kampf viele Berechnungen an. Der General, der verliert, stellt vorher kaum Berechnungen an." - Sun-Tzu</German>
+		<Italian>"I guerrieri vittoriosi prima vincono e poi vanno in guerra; quelli sconfitti, prima vanno in guerra e poi cercano di vincere." - Sun-Tzu</Italian>
+		<Spanish>"Los guerreros vencedores ganan primero y luego van a la guerra, mientras que los perdedores van a la guerra primero y luego pretenden ganar." - Sun Tzu</Spanish>
+		<Russian>"Building well has three conditions; firmness, commodity and delight." - Vitruvius</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CLASSICAL_KNOWLEDGE_QUOTE</Tag>
+		<English>"True knowledge exists in knowing that you know nothing". - Socrates</English>
+		<French>"Aucun homme libre ne sera saisi, emprisonn&#233; ou ex&#233;cut&#233;, de quelque mani&#232;re que ce soit, sans un jugement l&#233;gal de ses pairs." - La Magna Carta</French>
+		<German>"Kein freier Mann darf eingesperrt oder bestraft werden ohne ein rechtm&#228;&#223;iges Urteil seiner Standesgenossen." - Magna Carta</German>
+		<Italian>"Nessun uomo libero pu&#242; essere sequestrato, imprigionato o annullato in qualsiasi modo, ma deve essere giudicato solamente per le sue azioni." - La Magna Carta</Italian>
+		<Spanish>"Ning&#250;n hombre libre podr&#225; ser detenido o encarcelado o privado de sus derechos de cualquier otra forma, sino en virtud de sentencia judicial de sus pares y con arreglo a la ley del reino." - La Carta Magna</Spanish>
+		<Russian>"True knowledge exists in knowing that you know nothing". - Socrates</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CLOCK_MAKING_QUOTE</Tag>
+		<English>"The wisest men follow their own direction".- Euripides</English>
+		<French>"Une soci&#233;t&#233; pr&#234;te &#224; sacrifier un peu de libert&#233; contre un peu de s&#233;curit&#233; ne m&#233;rite ni l'une ni l'autre et finit par perdre les deux !" - Benjamin Franklin</French>
+		<German>"Eine Gesellschaft, die ihre Freiheit zugunsten der Sicherheit opfert, hat beides nicht verdient." - Benjamin Franklin</German>
+		<Italian>"Qualsiasi societ&#224; che sacrifica un po' di libert&#224; per una maggiore sicurezza non si merita nessuna delle due cose e le perde entrambe." - Benjamin Franklin</Italian>
+		<Spanish>"Cualquier sociedad que renuncie a un poco de libertad para obtener algo de seguridad no se merece ni una ni otra y acabar&#225; perdiendo ambas." - Benjamin Franklin</Spanish>
+		<Russian>"The wisest men follow their own direction".- Euripides</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CODE_OF_LAWS_QUOTE</Tag>
+		<English>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</English>
+		<French>"On a dit que la d&#233;mocratie est la pire forme de gouvernement &#224; l'exception de toutes les autres." - Winston Churchill</French>
+		<German>"Man sagt, die Demokratie ist die schlechteste Staatsform, mit Ausnahme aller anderen." - Winston Churchill</German>
+		<Italian>"&#200; stato detto che la democrazia &#232; la peggior forma di governo all'infuori di tutte quelle che sono state gi&#224; tentate precedentemente." - Winston Churchill</Italian>
+		<Spanish>"La democracia es el peor de los reg&#237;menes, con excepci&#243;n de todos los dem&#225;s que se han probado." - Winston Churchill</Spanish>
+		<Russian>"Justice is a contract of expediency, entered upon to prevent men harming or being harmed." - Epicurus</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_COMBINED_ARMS_QUOTE</Tag>
+		<English>"Such as do build up their faith upon the holy text of pike and gun...and decide all controversies by infalliable artillery." - Samuel Butler</English>
+		<French>"C'est un fait que les masses avalent plus facilement un gros mensonge qu'un petit." - Adolf Hitler</French>
+		<German>"Die meisten Menschen werden leichter Opfer einer gro&#223;en L&#252;ge als einer kleinen." - deutscher Diktator</German>
+		<Italian>"Le grandi masse... sono pi&#249; propense a cadere vittime di una grande bugia, piuttosto di una piccola." - Adolf Hitler</Italian>
+		<Spanish>"Las grandes masas del pueblo caer&#225;n m&#225;s f&#225;cilmente v&#237;ctimas de una mentira grande que de una peque&#241;a." - Adolf Hitler</Spanish>
+		<Russian>"Such as do build up their faith upon the holy text of pike and gun...and decide all controversies by infalliable artillery." - Samuel Butler</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_CONSTITUTION_QUOTE</Tag>
+		<English>"No man shall be taken, imprisoned or destroyed, except by the lawful judgement of his peers. - The Magna Carta</English>
+		<French>"Soci&#233;t&#233; commerciale, d&#233;finition : dispositif ing&#233;nieux favorisant le profit individuel sans responsabilit&#233; individuelle." - Ambrose Pierce</French>
+		<German>"Unternehmen sind eine M&#246;glichkeit, ohne individuelle Verantwortlichkeit Gewinne zu erwirtschaften." - Ambrose Bierce</German>
+		<Italian>"Corporazione, sostantivo. Un meccanismo ingegnoso per conquistare profitti individuali senza responsabilit&#224; individuali." - Ambrose Bierce</Italian>
+		<Spanish>"Persona jur&#237;dica, f. Der. Un ingenioso artificio para obtener ganancia individual sin responsabilidad individual." - Ambrose Bierce</Spanish>
+		<Russian>"No man shall be taken, imprisoned or destroyed, except by the lawful judgement of his peers. - The Magna Carta</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_DIVINE_RIGHT_QUOTE</Tag>
+		<English>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</English>
+		<French>"Je nourris un pauvre et l'on me dit que je suis un saint. Je demande pourquoi le pauvre n'a pas de quoi se nourrir et l'on me traite de communiste !" - Dom Helder Camara</French>
+		<German>"Gebe ich den Armen zu essen, nennen sie mich einen Heiligen. Frage ich, warum sie nichts zu essen haben, nennen sie mich einen Kommunisten!" - Dom Helder Camara</German>
+		<Italian>"Quando offro il cibo ai poveri, mi chiamano santo. Quando chiedo perch&#233; i poveri non hanno cibo, mi chiamano comunista." - Dom Helder Camara</Italian>
+		<Spanish>"Cuando doy comida a un pobre me llaman santo. Cuando pregunto por qu&#233; un pobre no tiene comida me llaman comunista." - Dom H&#233;lder C&#226;mara</Spanish>
+		<Russian>"Kings arose before any estates or ranks of men, before any parliaments were holden, or laws made and by then all land was distributed which was at first wholely theirs. So it is that kings are the makers of law, not laws the makers of kings." - James I</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_DRAMA_QUOTE</Tag>
+		<English>"All the world's a stage. And all the men and women merely players. They have their exits and their entrances. And each man, in his time, plays many parts." - William Shakespeare</English>
+		<French>"Qu'on parle de vous, c'est affreux. Mais il y a une chose pire : c'est qu'on n'en parle pas." - Oscar Wilde</French>
+		<German>"Schlimmer als &#252;ber jemanden zu reden, ist &#252;ber jemanden nicht zu reden!" - Oscar Wilde</German>
+		<Italian>"L'unica cosa peggiore del parlare di qualcosa, &#232; non parlarne affatto." - Oscar Wilde</Italian>
+		<Spanish>"En este mundo lo &#250;nico peor que soportar que hablen de ti es que no se diga nada." - Oscar Wilde</Spanish>
+		<Russian>"All the world's a stage. And all the men and women merely players. They have their exits and their entrances. And each man, in his time, plays many parts." - William Shakespeare</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ECONOMICS_QUOTE</Tag>
+		<English>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</English>
+		<French>"Nous n'h&#233;ritons pas de la Terre de nos anc&#234;tres, nous l'empruntons &#224; nos enfants." - Chant am&#233;rindien</French>
+		<German>"Wir haben die Erde nicht von unseren Vorfahren geerbt, sondern von unseren Kindern geliehen." - Indianerlied</German>
+		<Italian>"Non ereditiamo la terra dai nostri antenati, la prendiamo in prestito per i nostri figli." - Canzone dei Nativi Americani</Italian>
+		<Spanish>"La Tierra no es una herencia de nuestros padres, sino un pr&#233;stamo de nuestros hijos." - Canci&#243;n de los ind&#237;genas americanos</Spanish>
+		<Russian>"The more opportunities there are in a Society for some persons to live upon the toil of others, the less those others may enjoy the fruits of their work themselves." - Anders Chydenius</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_EDUCATION_QUOTE</Tag>
+		<English>"There is no wealth like knowledge, no poverty like ignorance." - Caliph Ali ibn Abi-Talib</English>
+		<French>"Donne un poisson &#224; un homme et tu le nourris pour un jour, apprends-lui &#224; p&#234;cher et tu le nourris pour toujours." - Lao-Tseu</French>
+		<German>"Gib einem Menschen einen Fisch, und du ern&#228;hrst ihn f&#252;r einen Tag. Bring ihm bei zu fischen, und du ern&#228;hrst ihn sein Leben lang." - Laotse</German>
+		<Italian>"Un uomo pu&#242; saziarsi con un pesce al giorno. Un uomo che impara a pescare pu&#242; saziarsi per tutta la vita." - Lao Tzu</Italian>
+		<Spanish>"Si le das a un hombre un pescado, comer&#225; un d&#237;a. Si le ense&#241;as a pescar, comer&#225; toda la vida." - Lao Ts&#233;</Spanish>
+		<Russian>"There is no wealth like knowledge, no poverty like ignorance." - Caliph Ali ibn Abi-Talib</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_ENGINEERING_QUOTE</Tag>
+		<English>"A designer knows he has achieved perfection, not when there is nothing left to add, but when there is nothing left to take away." - Antoine de Saint-Expury</English>
+		<French>"La roue de la fortune tourne plus vite que celle du moulin." - Miguel de Cervant&#232;s</French>
+		<German>"Das Rad der Zeit l&#228;sst sich nicht zur&#252;ckdrehen." - Sprichwort</German>
+		<Italian>"Mettiti al lavoro di buona lena." - Esopo</Italian>
+		<Spanish>"Arrima el hombro a la rueda." - Esopo</Spanish>
+		<Russian>"A designer knows he has achieved perfection, not when there is nothing left to add, but when there is nothing left to take away." - Antoine de Saint-Expury</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_EXPLOSIVES_QUOTE</Tag>
+		<English>"A desperate disease requires a dangerous remedy." - Guy Fawkes </English>
+		<French>"Oh, paysan, prie afin que tes &#233;t&#233;s soient humides et tes hivers secs." - Virgile</French>
+		<German>"Nassen Sommer kann auch der Herbst nicht trocknen." - Bauernregel</German>
+		<Italian>"Oh contadini, pregate perch&#233; le vostre estati non siano aride e i vostri inverni rigidi.." - Virgilio</Italian>
+		<Spanish>"Oh, campesinos, rezad para que en vuestros veranos llueva y vuestros inviernos sean despejados." - Virgilio</Spanish>
+		<Russian>"A desperate disease requires a dangerous remedy." - Guy Fawkes</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_FARRIERS_QUOTE</Tag>
+		<English>"For want of a nail the shoe is lost. For want of a shoe the horse is lost. For want of a horse the rider is lost." - George Herbert</English>
+		<French>"Le potier n'a-t-il pas pouvoir sur l'argile pour faire de la m&#234;me masse un vase &#224; honneur et un autre &#224; d&#233;shonneur ?" - La Bible, Ep&#238;tre aux Romains</French>
+		<German>"Hat nicht ein T&#246;pfer Macht &#252;ber den Ton, aus demselben Klumpen ein Gef&#228;&#223; zu ehrenvollem und ein anderes zu nicht ehrenvollem Gebrauch zu machen?" - Die Bibel, R&#246;mer</German>
+		<Italian>"Nelle mani dell'artigiano sta la capacit&#224; di creare vasi da giorno e vasi da notte." - La Bibbia, i Romani</Italian>
+		<Spanish>"&#191;O es que no puede el alfarero hacer del mismo barro un vaso de honor y uno indecoroso?" - La Biblia, San Mateo, Ep&#237;stola a los Romanos</Spanish>
+		<Russian>"For want of a nail the shoe is lost. For want of a shoe the horse is lost. For want of a horse the rider is lost." - George Herbert</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_FEUDALISM_QUOTE</Tag>
+		<English>"I will to my lord be true, and love all which he loves and shun all which he shuns."- Anglo-Saxon Oath of Fealty</English>
+		<French>"On ne peut pas faire tourner le vent, mais on peut faire tourner ses voiles." - Inconnu</French>
+		<German>"Den Wind vermagst du nicht zu lenken, deine Segel wohl." - Unbekannt</German>
+		<Italian>"Non puoi cambiare la direzione del vento, ma puoi orientare le tue vele." - Rhye</Italian>
+		<Spanish>"No puedes dirigir el viento, pero puedes mover las velas de tu barco." - Proverbio chino</Spanish>
+		<Russian>"For want of a nail the shoe is lost. For want of a shoe the horse is lost. For want of a horse the rider is lost." - George Herbert</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_FLINTLOCK_QUOTE</Tag>
+		<English>"Wise anger is like fire from a flint. There is a great ado to get it out. And when it does, it is out again immediately." - Mathew Henry</English>
+		<French>"La gloire s'acquiert en accomplissant ce qui m&#233;rite d'&#234;tre &#233;crit et en &#233;crivant ce qui m&#233;rite d'&#234;tre lu." - Pline l'Ancien</French>
+		<German>"Gl&#252;cklich sind jene, die Taten vollbringen, die es wert sind, aufgezeichnet zu werden, oder Schriften verfassen, die es wert sind, gelesen zu werden." - Plinius der &#196;ltere</German>
+		<Italian>"La vera gloria consiste nel fare ci&#242; che merita di essere scritto e nello scrivere ci&#242; che merita di essere letto." - Plinio il Vecchio</Italian>
+		<Spanish>"La verdadera gloria consiste en hacer lo que merece escribirse y en escribir lo que merece leerse." - Plinio el Viejo</Spanish>
+		<Russian>"Wise anger is like fire from a flint. There is a great ado to get it out. And when it does, it is out again immediately." - Mathew Henry</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_FREE_MARKET_QUOTE</Tag>
+		<English>"Everything is worth what its purchaser will pay for it." - Publius Syrus</English>
+		<French>"La science vise une certitude qui ne souffre aucun doute, une v&#233;rit&#233; qui ne souffre aucune erreur, les math&#233;matiques s'imposent donc comme les fondations de toute science." - Roger Bacon</French>
+		<German>"Nur mithilfe der Mathematik kann man wirklich wissen, denn in jeder Wissenschaft ist nur so viel an Wahrheit enthalten, wie in ihr Mathematik steckt." - Roger Bacon</German>
+		<Italian>"Se in altre scienze &#232; probabile raggiungere la certezza senza dubbio e senza errore, &#232; giusto porre le fondamenta del sapere nella matematica." - Roger Bacon</Italian>
+		<Spanish>"Si en las dem&#225;s ciencias hubi&#233;ramos de obtener la certeza sin dudas y la verdad sin errores, nos corresponder&#237;a basar el conocimiento en las Matem&#225;ticas." - Roger Bacon</Spanish>
+		<Russian>"Everything is worth what its purchaser will pay for it." - Publius Syrus</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_GOTHIC_ARCHITECTURE_QUOTE</Tag>
+		<English>"I would call architecture frozen music." - Friedrich Schiller</English>
+		<French>"Les mots ont le pouvoir de d&#233;truire et de soigner. Lorsqu'ils sont justes et g&#233;n&#233;reux, ils peuvent changer le monde." - Bouddha</French>
+		<German>"Worte haben die Kraft zu zerst&#246;ren oder zu heilen. Wenn Worte wahr und zugleich g&#252;tig sind, k&#246;nnen sie unsere Welt ver&#228;ndern." - Buddha</German>
+		<Italian>"Le parole hanno il potere di distruggere e di creare. Quando le parole sono sincere e gentili, possono cambiare il mondo." - Budda</Italian>
+		<Spanish>"Las palabras tienen el poder de destruir y sanar. Cuando las palabras son buenas y sinceras tienen el poder de cambiar el mundo." - Buda</Spanish>
+		<Russian>"I would call architecture frozen music." - Friedrich Schiller</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_GUILDS_QUOTE</Tag>
+		<English>"People of the same trade seldom meet together, even for merriment and diversion, but the conversation ends in a conspiracy against the public." - Adam Smith, "The Wealth of Nations"</English>
+		<French>"A toute chose sa saison, et &#224; toute affaire sous les cieux, son temps." - Le livre de l'Eccl&#233;siaste</French>
+		<German>"F&#252;r alles gibt es eine Stunde. Und f&#252;r jedes Vorhaben unter dem Himmel eine Zeit." - Ekklesiastes</German>
+		<Italian>"Esistono una stagione e un tempo per ogni cosa." - Ecclesiaste</Italian>
+		<Spanish>"Todo tiene su tiempo, y todo cuanto se hace bajo el sol tiene su hora." - La Biblia, Eclesiast&#233;s</Spanish>
+		<Russian>"People of the same trade seldom meet together, even for merriment and diversion, but the conversation ends in a conspiracy against the public." - Adam Smith, "The Wealth of Nations"</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_GUNPOWDER_QUOTE</Tag>
+		<English>"Put your trust in God. And keep your powder dry". - Oliver Cromwell</English>
+		<French>"Toute chose a la valeur que son acqu&#233;reur est pr&#234;t &#224; payer." - Publius Syrus</French>
+		<German>"Jedes Ding ist wert, was der K&#228;ufer daf&#252;r zahlen will." - Publius Syrus</German>
+		<Italian>"Ogni cosa vale il prezzo che un acquirente &#232; disposto a pagare." - Publilio Siro</Italian>
+		<Spanish>"Las cosas valen lo que su comprador est&#233; dispuesto a pagar por ellas." - Publio Siro</Spanish>
+		<Russian>"Put your trust in God. And keep your powder dry". - Oliver Cromwell</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_HERBAL MEDICINE_QUOTE</Tag>
+		<English>"The Art of Medicine is to amuse the patient while Nature cures the disease." - Voltaire</English>
+		<French>"L'astronomie oblige l'&#226;me &#224; se tourner vers les cieux et nous guide de ce monde vers un autre." - Platon </French>
+		<German>"Die Astronomie zwingt die Seele, nach oben zu schauen, und f&#252;hrt sie in eine andere Welt." - Plato</German>
+		<Italian>"L'astronomia obbliga l'anima a guardare in alto e ci conduce da un mondo a un altro." - Platone</Italian>
+		<Spanish>"La Astronom&#237;a obliga al alma a mirar hacia arriba y nos lleva de este mundo a otro." - Plat&#243;n</Spanish>
+		<Russian>"The Art of Medicine is to amuse the patient while Nature cures the disease." - Voltaire</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_INDUSTRIAL_REVOLUTION_QUOTE</Tag>
+		<English>"There are only two ways of getting on in the world; By one's industry or by the stupidity of others." - Jean de La Bruyere</English>
+		<French>"La philosophie m'a appris ceci : ce que je fais sans que l'on me l'ordonne, les autres le font par crainte de la loi." - Aristote</French>
+		<German>"Dies habe ich durch Philosophie gewonnen. Dass ich tue, ohne befohlen zu werden, was andere nur aus Furcht vor dem Gesetz tun." - Aristoteles</German>
+		<Italian>"Con la filosofia ho conquistato il diritto di fare ci&#242; che voglio senza essere comandato da chi lo fa solo per timore della legge." - Aristotele</Italian>
+		<Spanish>"Con la filosof&#237;a he logrado lo siguiente: hacer, sin que me lo ordenen, lo que otros hacen solamente por temor a la ley." - Arist&#243;teles</Spanish>
+		<Russian>"There are only two ways of getting on in the world; By one's industry or by the stupidity of others." - Jean de La Bruyere</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_LATEEN_SAILS_QUOTE</Tag>
+		<English>"You can't direct the wind, but you can adjust your sails". - unknown</English>
+		<French>"Je ne peux pas vivre sans livres." - Thomas Jefferson</French>
+		<German>"Ohne B&#252;cher kann ich nicht leben!" - Thomas Jefferson</German>
+		<Italian>"Non potrei vivere senza libri" - Thomas Jefferson</Italian>
+		<Spanish>"No puedo vivir sin libros." - Thomas Jefferson</Spanish>
+		<Russian>"You can't direct the wind, but you can adjust your sails". - unknown</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_LIBERALISM_QUOTE</Tag>
+		<English>"Any society that would give up a little liberty to gain a little security, will deserve neither and lose both." - Benjamin Franklin</English>
+		<French>"Les &#233;tablissements bancaires sont plus dangereux qu'une arm&#233;e en campagne." - Thomas Jefferson</French>
+		<German>"Banken sind gef&#228;hrlicher als stehende Armeen." - Thomas Jefferson</German>
+		<Italian>"Gli istituti bancari sono pi&#249; pericolosi di un esercito sul piede di guerra." - Thomas Jefferson</Italian>
+		<Spanish>"Los bancos son m&#225;s peligrosos para nuestras libertades que los ej&#233;rcitos en armas." - Thomas Jefferson</Spanish>
+		<Russian>"Any society that would give up a little liberty to gain a little security, will deserve neither and lose both." - Benjamin Franklin</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_LITERATURE_QUOTE</Tag>
+		<English>"Some books are to be tasted, others to be swallowed, and some few to be chewed and digested". - Sir Francis Bacon</English>
+		<French>"Il n'existe plus grande richesse que le savoir, plus grande pauvret&#233; que l'ignorance." - Ali ibn Abi Talib</French>
+		<German>"Wissen ist der gr&#246;&#223;te Reichtum und Ignoranz zeugt von Armut." - Ali ibn Abi-Talib</German>
+		<Italian>"La conoscenza &#232; sintomo di benessere, l'ignoranza &#232; sintomo di povert&#224;." - Ali ibn Abi-Talib</Italian>
+		<Spanish>"No hay mayor riqueza que el conocimiento ni mayor pobreza que la ignorancia." - Al&#237; ibn Abi-Talib</Spanish>
+		<Russian>"Some books are to be tasted, others to be swallowed, and some few to be chewed and digested". - Sir Francis Bacon</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MACHINE_TOOLS_QUOTE</Tag>
+		<English>"Man is a tool-using animal. Without tools he is nothing. With tools he is all." - Thomas Carlyle</English>
+		<French>"La presse &#233;crite a chang&#233; l'esprit comme la poudre &#224; canon a chang&#233; la guerre." - Wendell Phillips</French>
+		<German>"Was das Schie&#223;pulver f&#252;r den Krieg war, ist die Druckerpresse f&#252;r den Geist." - Wendell Phillips</German>
+		<Italian>"La tipografia sta alla mente come la polvere da sparo sta alla guerra." - Wendell Phillips</Italian>
+		<Spanish>"La imprenta ha hecho por la mente lo que la p&#243;lvora hizo por la guerra." - Wendell Phillips</Spanish>
+		<Russian>"Man is a tool-using animal. Without tools he is nothing. With tools he is all." - Thomas Carlyle</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MACHINERY_QUOTE</Tag>
+		<English>"It is questionable if all the mechanical inventions yet made have lightened the days toil of any human being." - J.S. Mill</English>
+		<French>"Les int&#233;r&#234;ts compos&#233;s sont la plus grande force de tout l'univers." - Albert Einstein</French>
+		<German>"Der Zinseszins war die gr&#246;&#223;te Erfindung des menschlichen Denkens." - Albert Einstein</German>
+		<Italian>"L'interesse composto &#232; la forza pi&#249; potente dell'universo." - Albert Einstein</Italian>
+		<Spanish>"El inter&#233;s compuesto es la fuerza m&#225;s poderosa de la galaxia." - Albert Einstein</Spanish>
+		<Russian>"It is questionable if all the mechanical inventions yet made have lightened the days toil of any human being." - J.S. Mill</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MANORIALISM_QUOTE</Tag>
+		<English>"They have shelter and ease in their fine manors. While we have hardship and toil and the rain in the fields. And from us must come from our labour, the things that keep them in luxury." - Jean Froissart </English>
+		<French>"J'ai du mal &#224; croire que le m&#234;me Dieu qui nous a dot&#233;s d'esprit, de raison et d'intelligence puisse vouloir que nous y renoncions." - Galil&#233;e</French>
+		<German>"Ich f&#252;hle mich nicht zu dem Glauben verpflichtet, dass derselbe Gott, der uns mit Sinnen, Vernunft und Verstand ausgestattet hat, von uns verlangt, dieselben nicht zu benutzen." - Galileo Galilei</German>
+		<Italian>"Non sono obbligato a credere che lo stesso Dio che ci ha donato il senso, la ragione e l'intelligenza voleva che ne dimenticassimo l_uso." - Galileo Galilei</Italian>
+		<Spanish>"No me siento obligado a creer que el mismo Dios que nos ha dotado de sentido com&#250;n, raciocinio e intelecto tuviera como intenci&#243;n privarnos de su uso." - Galileo Galilei</Spanish>
+		<Russian>"They have shelter and ease in their fine manors. While we have hardship and toil and the rain in the fields. And from us must come from our labour, the things that keep them in luxury." - Jean Froissart</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MAPMAKING_QUOTE</Tag>
+		<English>"Like sea discoverers to new worlds have gone, like maps to other worlds have shown. Let us possess one World, each hath one and one for all ." - John Donne</English>
+		<French>"La chimie est ce qui s&#233;pare la pauvret&#233; et la famine de l'abondance." - Robert Brent</French>
+		<German>"Die Chemie macht den Unterschied zwischen Armut und Hunger und einem Leben im &#220;berfluss." - Robert Brent</German>
+		<Italian>"La chimica rappresenta la differenza tra povert&#224; e fame e una vita piena di abbondanza." - Robert Brent</Italian>
+		<Spanish>"La Qu&#237;mica supone la diferencia entre la pobreza y la hambruna y una vida llena de abundancia." - Robert Brent</Spanish>
+		<Russian>"Like sea discoverers to new worlds have gone, like maps to other worlds have shown. Let us possess one World, each hath one and one for all ." - John Donne</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MEDICINE_QUOTE</Tag>
+		<English>"As to diseases make a habit of two things - to help, or at least, to do no harm." - Hippocrates</English>
+		<French>"A chaque action correspond une r&#233;action &#233;gale." - Isaac Newton</French>
+		<German>"Jede Aktion erzeugt gleichzeitig eine Reaktion." - Isaac Newton</German>
+		<Italian>"Ad ogni azione, corrisponde una reazione uguale ma di segno opposto." - Isaac Newton</Italian>
+		<Spanish>"Para cada acci&#243;n existe siempre una reacci&#243;n igual y de sentido contrario." - Isaac Newton</Spanish>
+		<Russian>"As to diseases make a habit of two things - to help, or at least, to do no harm." - Hippocrates</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MILITARY_TACTICS_QUOTE</Tag>
+		<English>"One minute decides the outcome of a battle, one hour the outcome of a campaign, and one day the fate of empires." - Alexander Suvorov</English>
+		<French>"Ce n'est pas l'esp&#232;ce la plus puissante qui survit mais celle qui s'adapte le mieux au changement." - Charles Darwin</French>
+		<German>"Nicht die st&#228;rksten Spezies werden &#252;berleben, sondern jene, die sich Ver&#228;nderungen am besten anpassen k&#246;nnen." - Charles Darwin</German>
+		<Italian>"Non sopravvive la specie pi&#249; forte, ma quella pi&#249; adatta al cambiamento." - Charles Darwin</Italian>
+		<Spanish>"No sobrevive la especie m&#225;s fuerte, sino la m&#225;s adaptable al cambio." - Charles Darwin</Spanish>
+		<Russian>"One minute decides the outcome of a battle, one hour the outcome of a campaign, and one day the fate of empires." - Alexander Suvorov</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MILITARY_TRADITION_QUOTE</Tag>
+		<English>"Diplomacy without armies is like music without instruments." - Frederick the Great</English>
+		<French>"Il faut s'exercer, dans le domaine des maladies, &#224; deux choses : &#234;tre utile, sinon ne pas nuire." - Hippocrate</French>
+		<German>"Was Krankheiten betrifft, so hat man zwei M&#246;glichkeiten: zu heilen oder wenigstens nicht zu schaden." - Hippokrates</German>
+		<Italian>"Per debellare le malattie ci vogliono cose in grado di aiutare o, al massimo, non nuocere." - Ippocrate</Italian>
+		<Spanish>"En cuanto a las enfermedades, ten por costumbre dos cosas: ayudar o, al menos, no hacer m&#225;s da&#241;o." - Hip&#243;crates</Spanish>
+		<Russian>"Diplomacy without armies is like music without instruments." - Frederick the Great</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MONASTICISM_QUOTE</Tag>
+		<English>"Meditation is the life of the soul, action is the soul of meditation, so meditate that you mayst give God glory." - Francis Quarles</English>
+		<French>"L'&#233;lectricit&#233; sera si bon march&#233; que seuls les riches s'&#233;claireront encore &#224; la bougie." - Thomas Edison</French>
+		<German>"Wir machen die Elektrizit&#228;t so billig, dass nur noch die Reichen Kerzen benutzen!" - Thomas Edison</German>
+		<Italian>"Renderemo l'elettricit&#224; cos&#236; economica che solamente i ricchi accenderanno le candele." - Thomas Edison</Italian>
+		<Spanish>"Abarataremos tanto la electricidad que solo los ricos usar&#225;n velas." - Thomas Edison</Spanish>
+		<Russian>"Meditation is the life of the soul, action is the soul of meditation, so meditate that you mayst give God glory." - Francis Quarles</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MONUMENT_BUILDING_QUOTE</Tag>
+		<English>"The monuments of wit survive the monuments of power." - Francis Bacon</English>
+		<French>"Dans la vie, tout est ailleurs, et on ne peut y aller qu'en voiture !" - E. B. White</French>
+		<German>"Im Leben ist alles irgendwo anders. Und hin kommt man mit dem Auto." - E. B. White</German>
+		<Italian>"Ogni cosa della vita si trova da qualche parte ed &#232; raggiungibile in automobile." - E. B. White</Italian>
+		<Spanish>"Todo en la vida est&#225; en otra parte, y all&#237; se llega en coche." - E. B. White</Spanish>
+		<Russian>"The monuments of wit survive the monuments of power." - Francis Bacon</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_MUSIC_QUOTE</Tag>
+		<English>"If music be the food of love, play on." - William Shakespeare</English>
+		<French>"Si la splendeur de mille soleils &#233;clatait &#224; la fois dans les cieux, cela serait comparable au rayonnement du grand Etre... Je suis devenu la Mort, le destructeur des mondes." - J. Robert Oppenheimer, citant la Bhagavad Gita</French>
+		<German>"Wenn das Licht von tausend Sonnen am Himmel pl&#246;tzlich br&#228;ch' hervor, zu gleicher Zeit - das w&#228;re gleich dem Glanze des Herrlichen ... Ich bin der Tod, der alles raubt, Ersch&#252;tterer der Welten." - J. Robert Oppenheimer, Zitat aus der "Bhagavad Gita"</German>
+		<Italian>Se migliaia di soli illuminassero il cielo sarebbe uno spettacolo di straordinaria potenza... Sono la Morte, Distruttrice di Mondi. - J. Robert Oppenheimer, citando il "Bhagavad Gita"</Italian>
+		<Spanish>"Si el brillo de mil soles refulgiese a la vez en el cielo, ser&#237;a como el esplendor del Poderoso... Me he convertido en la Muerte, la destructora de mundos." - J. Robert Oppenheimer, citando "El Bhagavad Gita"</Spanish>
+		<Russian>"If music be the food of love, play on." - William Shakespeare</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_NATIONALISM_QUOTE</Tag>
+		<English>"Such is the human condition, that to wish greatness for one's country is to wish harm to another's." - Voltaire</English>
+		<French>"Car lorsque vous aurez go&#251;t&#233; aux beaut&#233;s du vol, vous parcourrez la Terre les yeux tourn&#233;s vers le ciel, car vous y serez all&#233; et qu'il vous tardera d'y revenir." - L&#233;onard de Vinci</French>
+		<German>"Wenn du einmal das Fliegen empfunden hast, wirst du f&#252;r immer auf der Erde wandeln mit deinen Augen himmelw&#228;rts gerichtet, denn dort bist du gewesen und dort wird es dich immer wieder hinziehen." - Leonardo Da Vinci</German>
+		<Italian>"Una volta aver assaporato il volo, quando tornerai sulla terra continuerai a guardare verso il cielo." - Leonardo Da Vinci</Italian>
+		<Spanish>"Una vez hayas probado el vuelo caminar&#225;s por la tierra con los ojos alzados hacia el cielo porque ya habr&#225;s estado all&#237; y querr&#225;s volver." - Leonardo Da Vinci</Spanish>
+		<Russian>"Such is the human condition, that to wish greatness for one's country is to wish harm to another's." - Voltaire</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_NAVAL_ARCHITECTURE_QUOTE</Tag>
+		<English>"The royal navy hath ever been its greatest defence and ornament. It is its ancient and natural strength, the floating bulwarks of our island." - William Blackstone</English>
+		<French>"Je ne vous dirai qu'un mot, un seul mot : plastique." - Calder Willingham, Le Laur&#233;at</French>
+		<German>"Ich sage nur ein Wort. Nur ein einziges Wort: Plastik!" - Calder Willingham, Die Reifepr&#252;fung</German>
+		<Italian>"Voglio solo dirti una parola. Una sola. Plastica." - Calder Willingham, Il Laureato</Italian>
+		<Spanish>"Solo quiero decirle una palabra, una nada m&#225;s: pl&#225;stico." - Calder Willingham, El graduado</Spanish>
+		<Russian>"The royal navy hath ever been its greatest defence and ornament. It is its ancient and natural strength, the floating bulwarks of our island." - William Blackstone</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_OPTICS_QUOTE</Tag>
+		<English>"We should distinguish the properties of particulars, and gather by induction what pertains to the eye when vision takes place; And what is found in the manner of sensation to be uniform, unchanging, manifest and not subject to doubt." - Ibn al-Haytham</English>
+		<French>"La totalit&#233; est plus que la somme des parties." - Aristotle</French>
+		<German>"Das Ganze ist mehr als die Summe seiner Teile." - Aristoteles</German>
+		<Italian>"Il risultato &#232; migliore della somma delle sue parti." - Aristotele</Italian>
+		<Spanish>"Un todo es mayor que la suma de sus partes." - Arist&#243;teles</Spanish>
+		<Russian>"We should distinguish the properties of particulars, and gather by induction what pertains to the eye when vision takes place; And what is found in the manner of sensation to be uniform, unchanging, manifest and not subject to doubt." - Ibn al-Haytham</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PAPER_QUOTE</Tag>
+		<English>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</English>
+		<French>"Bient&#244;t, ce sera un p&#233;ch&#233; pour des parents d'avoir un enfant souffrant d'une maladie g&#233;n&#233;tique." - Bob Edwards</French>
+		<German>"Bald wird es eine S&#252;nde sein, wenn Eltern ein behindertes Kind zur Welt bringen." - Bob Edwards</German>
+		<Italian>"Presto sar&#224; un peccato per dei genitori avere figli che portano il fardello di una malattia genetica." - Bob Edwards</Italian>
+		<Spanish>"Pronto ser&#225; un pecado que los padres tengan hijos que lleven la pesada carga de una enfermedad gen&#233;tica." - Bob Edwards</Spanish>
+		<Russian>"You philosophers are lucky men. You write on paper. And paper is patient. But I am an Empress. And the people are not." - Catherine the Great</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PATRONAGE_QUOTE</Tag>
+		<English>"Patron (n.) One who countenances, supports or protects. Commonly a wretch who supports with insolence and is repaid with flattery." - Samuel Johnson</English>
+		<French>"La lumi&#232;re de la science est unique et lorsqu'elle &#233;claire quelque part, elle &#233;claire partout." - Isaac Asimov</French>
+		<German>"Es gibt nur ein Licht der Wissenschaft, und es irgendwo zu entz&#252;nden hei&#223;t, es &#252;berall zu entz&#252;nden." - Isaac Asimov</German>
+		<Italian>"Accendendo la luce della scienza da qualche parte, lo si fa ovunque." - Isaac Asimov</Italian>
+		<Spanish>"La ciencia es una sola luz, e iluminar con ella cualquier parte es iluminar con ella el mundo entero." - Isaac Asimov</Spanish>
+		<Russian>"Patron (n.) One who countenances, supports or protects. Commonly a wretch who supports with insolence and is repaid with flattery." - Samuel Johnson</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PHILOSOPHY_QUOTE</Tag>
+		<English>"I have gained this by philosophy, that I do without being commanded what others do only from the fear of the law." - Aristotle</English>
+		<French>"Une technologie suffisamment sophistiqu&#233;e ne peut &#234;tre distingu&#233;e de la magie." - Arthur C. Clarke</French>
+		<German>"Jede fortgeschrittene Technologie ist anfangs von Magie nicht zu unterscheiden." - Arthur C. Clarke</German>
+		<Italian>"Ogni tecnologia sufficientemente avanzata, &#232; indistinguibile dalla magia." - Arthur C. Clarke</Italian>
+		<Spanish>"Cualquier tecnolog&#237;a lo suficientemente avanzada es indistinguible de la magia." - Arthur C. Clarke</Spanish>
+		<Russian>"I have gained this by philosophy, that I do without being commanded what others do only from the fear of the law." - Aristotle</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PHYSICS_QUOTE</Tag>
+		<English>"To every action there is always an opposed but equal reaction." - Isaac Newton</English>
+		<French>"Chasse deux li&#232;vres &#224; la fois et tu n'en attraperas aucun." - Proverbe am&#233;rindien</French>
+		<German>"Der, der zwei Hasen jagt, l&#228;sst einen zur&#252;ck und verliert den anderen." - Indianisches Sprichwort</German>
+		<Italian>"Se dai la caccia a due conigli, li perderai entrambi." - Proverbio dei Nativi Americani</Italian>
+		<Spanish>"Si persigues a dos conejos al mismo tiempo, los perder&#225;s a ambos." - Dicho de los ind&#237;genas americanos</Spanish>
+		<Russian>"To every action there is always an opposed but equal reaction." - Isaac Newton</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PLATE_ARMOUR_QUOTE</Tag>
+		<English>"You should hammer your iron when it is glowing hot." - Publius Syrus</English>
+		<French>"L'homme qui d&#233;place une montagne commence par les petites pierres." - Confucius</French>
+		<German>"Der Mann, der den Berg abtrug, war derselbe, der anfing, kleine Steine wegzutragen." - Konfuzius</German>
+		<Italian>"Un uomo che deve spostare una montagna comincia dalle piccole pietre." - Confucio</Italian>
+		<Spanish>"El hombre que mueve monta&#241;as empieza apartando piedrecitas." - Confucio</Spanish>
+		<Russian>"You should hammer your iron when it is glowing hot." - Publius Syrus</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_POLYGONAL_FORT_QUOTE</Tag>
+		<English>"The house of everyone is to him his castle and fortress ...as well for his defence against injury and violence as for his repose." - Edward Coke </English>
+		<French>"Ne lance pas la fl&#232;che qui se retournera contre toi !" - Proverbe kurde</French>
+		<German>"Schie&#223;e keinen Pfeil, der zu dir zur&#252;ckkehren k&#246;nnte." - Kurdisches Sprichwort</German>
+		<Italian>"Non scagliare la freccia che ti si rivolter&#224; contro." - Proverbio Curdo</Italian>
+		<Spanish>"No dispares la flecha que pueda volverse contra ti." - Proverbio kurdo</Spanish>
+		<Russian>"The house of everyone is to him his castle and fortress ...as well for his defence against injury and violence as for his repose." - Edward Coke</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PROFESSIONAL_ARMY_QUOTE</Tag>
+		<English>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</English>
+		<French>"Ce sont leurs ennemis et non leurs amis qui ont enseign&#233; aux cit&#233;s &#224; b&#226;tir de hautes murailles !" - Aristophane</French>
+		<German>"Nicht von ihren Freunden, sondern von ihren Feinden lernen St&#228;dte, hohe Mauern zu bauen." - Aristophanes</German>
+		<Italian>"&#200; dai nemici, non dagli amici, che le citt&#224; imparano la lezione di costruire alte mura." - Aristofane</Italian>
+		<Spanish>"Es de los enemigos, no de los amigos, que las ciudades aprenden la lecci&#243;n de construir murallas altas." - Arist&#243;fanes</Spanish>
+		<Russian>"Good order and discipline in an army are more to be depended upon than mere ferocity." - Nicolo Machiavelli</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PUBLIC_WORKS_QUOTE</Tag>
+		<English>"The city will gain beauty worthy of its name and to you it will be useful for its revenues and the eternal flame of its aggrandizement." - Leonardo Da Vinci</English>
+		<French>"Un jeune homme tomb&#233; dans la bataille peut afficher la pointe d'airain fich&#233;e dans son corps car rien ne choque chez un mort." - Hom&#232;re</French>
+		<German>"So mancher J&#252;ngling f&#228;llt in der Schlacht, zermalmt von bronzenem Speer. Im Tode so scheint sein Schicksal vollbracht." - Homer</German>
+		<Italian>"Per un giovane &#232; decoroso morire in battaglia trafitto da una lancia di bronzo. Nella morte, tutte le cose sembrano giuste." - Omero</Italian>
+		<Spanish>"Yacer en el suelo, habiendo sido atravesado en la lid por el agudo bronce, es decoroso para un joven, y cuanto de &#233;l pueda verse todo es bello, a pesar de la muerte." - Homero</Spanish>
+		<Russian>"The city will gain beauty worthy of its name and to you it will be useful for its revenues and the eternal flame of its aggrandizement." - Leonardo Da Vinci</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_RELIGIOUS_ART_QUOTE</Tag>
+		<English>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</English>
+		<French>"B&#233;nis seront le fruit de ton b&#233;tail, le fruit de tes entrailles et la laine de tes brebis." - La Bible, Deut&#233;ronome 28:4</French>
+		<German>"Gesegnet wird sein der Ertrag deines Ackers und die Jungtiere deines Viehs, deiner Rinder und deiner Schafe." - Die Bibel, Deut. 28:4</German>
+		<Italian>"Sia benedetto il frutto delle mandrie di bovini e delle greggi di pecore." - La Bibbia, Deut. 28:4</Italian>
+		<Spanish>"Bendito el fruto de tu vientre, y el fruto de tu bestia, la cr&#237;a de tus vacas, y los reba&#241;os de tus ovejas." - La Biblia, Deuteronomio 28:4</Spanish>
+		<Russian>"The true work of Art is but a shadow of the Divine Perfection." - Michelangelo</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_RENAISSANCE_ART_QUOTE</Tag>
+		<English>"I saw the angel in the marble and carved until I set him free." - Michelangelo</English>
+		<French>"Il faut battre le fer tant qu'il est chaud." - Publius Syrus</French>
+		<German>"Man muss das Eisen schmieden, solange es hei&#223; ist." - Publius Syrus</German>
+		<Italian>"Dovresti battere il ferro finch&#233; &#232; caldo." - Publilio Siro</Italian>
+		<Spanish>"Debes golpear el hierro cuando a&#250;n est&#225; al rojo vivo." - Publio Siro</Spanish>
+		<Russian>"I saw the angel in the marble and carved until I set him free." - Michelangelo</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_REPLACEABLE_PARTS_QUOTE</Tag>
+		<English>"True knowledge is greater than the sum of its parts." - Aristotle</English>
+		<French>"Et ceux qui auront v&#233;cu par l'&#233;p&#233;e p&#233;riront par l'&#233;p&#233;e." - La Bible, Matthieu</French>
+		<German>"Wer das Schwert nimmt, der soll durchs Schwert umkommen." - Die Bibel, Matth&#228;us</German>
+		<Italian>"Chi di spada ferisce, di spada perisce." - La Bibbia, Matteo</Italian>
+		<Spanish>"Quien toma la espada, a espada morir&#225;." - La Biblia, San Mateo</Spanish>
+		<Russian>"True knowledge is greater than the sum of its parts." - Aristotle</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_RIGHTS_OF_MAN_QUOTE</Tag>
+		<English>"Man is born free but everywhere he is in chains." - Jean Jacques Rousseau</English>
+		<French>"Et sur le pi&#233;destal apparaissent ces mots : 'Je suis Ozymandias, le Roi des Rois ; contemple mon oeuvre, &#212; Tout-puissant, et d&#233;sesp&#232;re !'" - Percy Bysshe Shelley </French>
+		<German>"Und auf dem Sockel erscheinen folgende Worte: 'Mein Name ist Ozymandias, K&#246;nig der K&#246;nige: Betrachtet mein Werk, ihr M&#228;chtigen, und verzweifelt!'" - Percy Bysshe Shelley</German>
+		<Italian>"E sul mio piedistallo saranno incise queste parole: 'Il mio nome &#232; Ozymandias, re dei re; guarda il mio operato e ammutolisci!'" - Percy Bysshe Shelley</Italian>
+		<Spanish>"Y en el pedestal se leen estas palabras: 'Mi nombre es Ozymandias, rey de reyes: &#161;Contemplad mis obras, poderosos, y perded la esperanza!' " - Percy Bysshe Shelley</Spanish>
+		<Russian>"True knowledge is greater than the sum of its parts." - Aristotle</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_SCIENTIFIC_METHOD_QUOTE</Tag>
+		<English>"I do not feel obliged to believe that the same God who endowed us with sense, reason and intellect has intended us to forgoe its use." - Gallileo Gallei</English>
+		<French>"Si tu dis vrai, mets le pied &#224; l'&#233;trier." - Proverbe turc</French>
+		<German>"Wer die Wahrheit spricht, sollte besser einen Fu&#223; im Steigb&#252;gel haben." - Arabisches Sprichwort</German>
+		<Italian>"Se dici il vero, metti un piede nella staffa." - Proverbio Turco</Italian>
+		<Spanish>"Si dices la verdad, ya tienes un pie en el estribo." - Proverbio turco</Spanish>
+		<Russian>"True knowledge is greater than the sum of its parts." - Aristotle</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_SHIPBUILDING_QUOTE</Tag>
+		<English>"Is this the face that launched a thousand ships?" - Christopher Marlowe</English>
+		<French>"L'homme avis&#233; suit sa propre direction." - Euripide</French>
+		<German>"Ein weiser Mann folgt nur sich selbst." - Euripides</German>
+		<Italian>"Gli uomini pi&#249; saggi conoscono la direzione in cui andare." - Euripide</Italian>
+		<Spanish>"Los hombres m&#225;s sabios siguen su propio rumbo." - Eur&#237;pides</Spanish>
+		<Russian>"Is this the face that launched a thousand ships?" - Christopher Marlowe</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_SIEGE_ENGINES_QUOTE</Tag>
+		<English>"And forty winters shall besiege thy brow, And dig deep trenches in the beauty's field. Against the wrackful siege of battering day. When rocks impregnable are not so stout." - William Shakespeare </English>
+		<French>"La machine a enfant&#233; un DIEU." - Menander</French>
+		<German>"Deus ex machina." - Menander</German>
+		<Italian>"La divinit&#224; delle macchine" - Menandro</Italian>
+		<Spanish>"Deus ex machina." - Menandro</Spanish>
+		<Russian>"And forty winters shall besiege thy brow, And dig deep trenches in the beauty's field. Against the wrackful siege of battering day. When rocks impregnable are not so stout." - William Shakespeare</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_STEAM_ENGINES_QUOTE</Tag>
+		<English>"Wit's an unruly engine, wildly striking sometimes a friend, sometimes the engineer." - George Herbert</English>
+		<French>"La perfection est atteinte non pas parce qu'il n'y a plus rien &#224; ajouter, mais lorsqu'il n'y a plus rien &#224; retirer." - Antoine de Saint-Exup&#233;ry</French>
+		<German>"Perfektion ist nicht dann erreicht, wenn es nichts mehr hinzuzuf&#252;gen gibt, sondern wenn man nichts mehr weglassen kann." - Antoine de Saint-Exup&#233;ry</German>
+		<Italian>"Un progettista sa di aver raggiunto la perfezione non quando non c'&#232; pi&#249; niente da aggiungere, ma quando non c'&#232; pi&#249; nulla da eliminare." - Antoine de Saint-Exupry</Italian>
+		<Spanish>"Un dise&#241;ador sabe que ha alcanzado la perfecci&#243;n no cuando ya no tiene nada m&#225;s que a&#241;adir, sino cuando no le queda nada m&#225;s que quitar." - Antoine de Saint-Exup&#233;ry</Spanish>
+		<Russian>"Wit's an unruly engine, wildly striking sometimes a friend, sometimes the engineer." - George Herbert</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_STIRRUP_QUOTE</Tag>
+		<English>"If you speak the truth, have a foot in the stirrup." - Turkish proverb</English>
+		<French>"Ne d&#233;couvre de nouvelles terres, que celui qui sait quitter tout rivage." - Andr&#233; Gide</French>
+		<German>"Man kann keine neuen L&#228;nder entdecken, ohne die K&#252;ste aus den Augen zu verlieren." - Andr&#233; Gide</German>
+		<Italian>"Una persona non pu&#242; scoprire nuove terre senza vederne la spiagge." - Andre Gide</Italian>
+		<Spanish>"Uno no descubre nuevas tierras sin perder de vista la costa." - Andr&#233; Gide</Spanish>
+		<Russian>"If you speak the truth, have a foot in the stirrup." - Turkish proverb</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_THEOLOGY_QUOTE</Tag>
+		<English>"Two cities have been formed by two loves, the earthly by love of self, the heavenly by the love of God." - St. Augustine</English>
+		<French>"On obtient plus en demandant poliment une arme &#224; la main qu'en demandant juste poliment." - Al Capone</French>
+		<German>"Wenn du etwas wirklich willst, musst du deinen Worten mit einer Waffe Nachdruck verleihen." - Al Capone</German>
+		<Italian>"Con una parola gentile e una pistola, puoi ottenere di pi&#249; che con una sola parola gentile." - Al Capone</Italian>
+		<Spanish>"Uno puede conseguir m&#225;s con una palabra amable y una pistola que solo con una palabra amable." - Al Capone</Spanish>
+		<Russian>"Two cities have been formed by two loves, the earthly by love of self, the heavenly by the love of God." - St. Augustine</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_TRADING_COMPANIES_QUOTE</Tag>
+		<English>"Our wants are various, and nobody has been found able to acquire even the necessaries without the aid of other peoples. And there is scarcely any Nation that has not stood in the need of others." - Anders Chydenius</English>
+		<French>"La totalit&#233; est plus que la somme des parties." - Aristote</French>
+		<German>"Das Ganze ist gr&#246;&#223;er als die Summe seiner Teile." - Aristoteles</German>
+		<Italian>"Il risultato &#232; migliore della somma delle sue parti." - Aristotele</Italian>
+		<Spanish>"Un todo es m&#225;s que la suma de sus partes." - Arist&#243;teles</Spanish>
+		<Russian>"Our wants are various, and nobody has been found able to acquire even the necessaries without the aid of other peoples. And there is scarcely any Nation that has not stood in the need of others." - Anders Chydenius</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_VASSALAGE_QUOTE</Tag>
+		<English>"As the King lives, so shall his vassals." - Old Portugese proverb</English>
+		<French>"Le pouvoir politique sort du canon d'un fusil." - Mao Ts&#233;-Tung</French>
+		<German>"Alle politische Macht r&#252;hrt von einem Gewehrlauf." - Mao Tsetung</German>
+		<Italian>"Il potere politico nasce dalla canna di un fucile." - Mao Tse Tung</Italian>
+		<Spanish>"El poder pol&#237;tico nace de los ca&#241;ones de los fusiles." - Mao Zedong</Spanish>
+		<Russian>"As the King lives, so shall his vassals." - Old Portugese proverb</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_VAULTED_ARCHES_QUOTE</Tag>
+		<English>"Heavens gates are not so highly arched as prince's palaces, that they enter there must go upon their knees." - John Webster</English>
+		<French>"Vous feriez avancer un navire contre vents et courants en allumant un brasier sous le pont ? Je n'ai pas de temps &#224; perdre avec de telles inepties." - Napol&#233;on parlant du bateau &#224; vapeur de Robert Fulton</French>
+		<German>"Was veranlasst Sie zu der Annahme, dass ein Schiff gegen den Wind und gegen die Str&#246;mung segeln k&#246;nnte, wenn man nur ein Feuer unter Deck anz&#252;nde? Ich habe keine Zeit, mir so einen Unsinn anzuh&#246;ren." - Napoleon &#252;ber Robert Fultons Dampfschiff</German>
+		<Italian>"Quindi per far andare una nave controvento dovresti accendere un fuoco nella stiva? Non ho tempo per queste idiozie." - Napoleone a proposito della nave a vapore di Robert Fulton</Italian>
+		<Spanish>"-&#191;Usted har&#237;a barcos que navegaran contra las corrientes y los vientos con solo encender una caldera bajo la cubierta? &#173;Disc&#250;lpeme, no tengo tiempo para escuchar tonter&#237;as." - Napole&#243;n, hablando del barco a vapor de Robert Fulton</Spanish>
+		<Russian>"Heavens gates are not so highly arched as prince's palaces, that they enter there must go upon their knees." - John Webster</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_EU_PRINTING_PRESS_QUOTE</Tag>
+		<English>"He who first shortened the labour of copyists by device of moveable type was disbanding hired armies and creating a whole democratic world through the art of the printing machine." - Thomas Carlyle</English>
+		<French>"Je mourrai le marteau &#224; la main avant que la machine &#224; vapeur ne me batte." - Chanson de John Henry (Steel-Driving Man)</French>
+		<German>"Wenn dieser Dampfbohrer mich schl&#228;gt, sterbe ich mit dem Hammer in der Hand." - Aus "John Henry, Steel-Driving Man"</German>
+		<Italian>"Piuttosto che farmi eliminare dalla trivella a vapore, morir&#242; con il martello in mano." - da "John Henry, the Steel-Driving Man"</Italian>
+		<Spanish>"Antes de que esa perforadora a vapor me derrote, morir&#233; con el martillo en la mano." - De la balada popular norteamericana "John Henry, the Steel-Driving Man"</Spanish>
+		<Russian>"He who first shortened the labour of copyists by device of moveable type was disbanding hired armies and creating a whole democratic world through the art of the printing machine." - Thomas Carlyle</Russian>
+		<Japanese/><Chinese/></TEXT>
+</Civ4GameText>

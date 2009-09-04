@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text Objects -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_INIT</Tag>
+		<English>The Pope has called for a Crusade to the Holy Land to defend the Holy City of Jerusalem from the infidel pest. Would you accept your duty, take up your sword, and leave for the Holy Land?</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#208;&#232;&#236;&#241;&#234;&#232;&#233; &#239;&#224;&#239;&#224; &#239;&#240;&#232;&#231;&#226;&#224;&#235; &#234; &#207;&#238;&#245;&#238;&#228;&#243; &#234; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#238;&#233; &#199;&#229;&#236;&#235;&#229;, &#247;&#242;&#238;&#225;&#251; &#231;&#224;&#249;&#232;&#242;&#232;&#242;&#252; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#251;&#233; &#195;&#238;&#240;&#238;&#228; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#238;&#242; &#237;&#229;&#226;&#229;&#240;&#243;&#254;&#249;&#229;&#227;&#238; &#229;&#240;&#229;&#242;&#232;&#234;&#224;. &#194;&#251; &#227;&#238;&#242;&#238;&#226;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#226;&#224;&#248;&#243; &#238;&#225;&#255;&#231;&#224;&#237;&#237;&#238;&#241;&#242;&#252;, &#239;&#238;&#228;&#237;&#255;&#242;&#252; &#226;&#224;&#248; &#236;&#229;&#247;, &#232; &#238;&#242;&#239;&#240;&#224;&#226;&#232;&#242;&#252;&#241;&#255; &#226; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#243;&#254; &#199;&#229;&#236;&#235;&#254;?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_ACCEPT</Tag>
+		<English>By my Honor and in the name of my God I will defend the Holy Land!</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#202;&#235;&#255;&#237;&#243;&#241;&#252; &#236;&#238;&#229;&#233; &#215;&#229;&#241;&#242;&#252;&#254; &#232; &#232;&#236;&#229;&#237;&#229;&#236; &#236;&#238;&#229;&#227;&#238; &#227;&#238;&#241;&#239;&#238;&#228;&#224; &#193;&#238;&#227;&#224;, &#255; &#231;&#224;&#249;&#232;&#249;&#243; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#243;&#254; &#199;&#229;&#236;&#235;&#254;!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DENY</Tag>
+		<English>I will NEVER play a role in the schemes of that snake of a Pope!</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#223; &#237;&#229; &#225;&#243;&#228;&#243; &#205;&#200;&#202;&#206;&#195;&#196;&#192; &#232;&#227;&#240;&#224;&#242;&#252; &#240;&#238;&#235;&#252; &#226; &#239;&#235;&#224;&#237;&#224;&#245; &#253;&#242;&#238;&#233; &#239;&#238;&#228;&#235;&#238;&#233; &#231;&#236;&#229;&#232; - &#240;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#239;&#224;&#239;&#251;!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_CALLED</Tag>
+		<English>The Pope has called for a crusade!</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#207;&#224;&#239;&#224; &#208;&#232;&#236;&#241;&#234;&#232;&#233; &#238;&#225;&#252;&#255;&#226;&#232;&#235; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_LEAD</Tag>
+		<English> [SPACE] was chosen to lead the Crusade!</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian> [SPACE] &#225;&#251;&#235; &#226;&#251;&#225;&#240;&#224;&#237;, &#247;&#242;&#238;&#225;&#251; &#226;&#238;&#231;&#227;&#235;&#224;&#226;&#232;&#242;&#252; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_VOTE</Tag>
+		<English> Who will you vote for to lead the Crusade?</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian> &#199;&#224; &#234;&#238;&#227;&#238; &#226;&#251; &#225;&#243;&#228;&#229;&#242;&#229; &#227;&#238;&#235;&#238;&#241;&#238;&#226;&#224;&#242;&#252;, &#247;&#242;&#238;&#225;&#251; &#238;&#237; &#226;&#238;&#231;&#227;&#235;&#224;&#226;&#232;&#235; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_OK</Tag>
+		<English> OK </English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian> &#213;&#206;&#208;&#206;&#216;&#206; </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_RICHEST</Tag>
+		<English>The Pope spreads his influence over the spiritual life of the Catholics, but there are forces more powerful than faith. You have build an empire of the wealth and in many ways your political influence extends beyond that of the Pope. You have the opportunity to use that influence and take over command of the Crusade, deviating it to whatever target you find appropriate.[NEWLINE]</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#208;&#232;&#236;&#241;&#234;&#232;&#233; &#239;&#224;&#239;&#224; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#255;&#229;&#242; &#229;&#227;&#238; &#226;&#235;&#232;&#255;&#237;&#232;&#229; &#237;&#224; &#228;&#243;&#245;&#238;&#226;&#237;&#243;&#254; &#230;&#232;&#231;&#237;&#252; &#234;&#224;&#242;&#238;&#235;&#232;&#234;&#238;&#226;, &#237;&#238; &#229;&#241;&#242;&#252; &#241;&#232;&#235;&#251;, &#236;&#238;&#249;&#237;&#229;&#229;, &#247;&#229;&#236; &#226;&#229;&#240;&#224;. &#194;&#251; &#241;&#242;&#240;&#238;&#229;&#242;&#229; &#232;&#236;&#239;&#229;&#240;&#232;&#254; &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#224; &#232; &#226;&#238; &#236;&#237;&#238;&#227;&#232;&#245; &#238;&#242;&#237;&#238;&#248;&#229;&#237;&#232;&#255;&#245; &#226;&#224;&#248;&#229; &#239;&#238;&#235;&#232;&#242;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#226;&#235;&#232;&#255;&#237;&#232;&#229; &#239;&#240;&#238;&#241;&#242;&#232;&#240;&#224;&#229;&#242;&#241;&#255; &#231;&#224; &#239;&#240;&#229;&#228;&#229;&#235;&#224;&#236;&#232; &#226;&#235;&#232;&#255;&#237;&#232;&#255; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238;. &#194;&#251; &#232;&#236;&#229;&#229;&#242;&#229; &#226;&#238;&#231;&#236;&#238;&#230;&#237;&#238;&#241;&#242;&#252; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#229;&#227;&#238; &#226;&#235;&#232;&#255;&#237;&#232;&#229; &#232; &#226;&#231;&#255;&#242;&#252; &#237;&#224; &#241;&#229;&#225;&#255; &#234;&#238;&#236;&#224;&#237;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#236; &#207;&#238;&#245;&#238;&#228;&#238;&#236; &#232;&#235;&#232; &#238;&#242;&#234;&#235;&#238;&#237;&#255;&#255;&#241;&#252; &#238;&#242; &#253;&#242;&#238;&#227;&#238;, &#241;&#238;&#227;&#235;&#224;&#241;&#237;&#238; &#241;&#238;&#242;&#226;&#229;&#242;&#241;&#242;&#226;&#232;&#254; &#253;&#242;&#238;&#227;&#238; &#226;&#224;&#248;&#232;&#236; &#246;&#229;&#235;&#255;&#236;.[NEWLINE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_GOLD</Tag>
+		<English>gold.[NEWLINE]</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#231;&#238;&#235;&#238;&#242;&#238;.[NEWLINE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_COST</Tag>
+		<English>The cost to take over </English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#209;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#239;&#240;&#232;&#237;&#255;&#242;&#232;&#255; </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_CURRENT_LEADER</Tag>
+		<English>is the current chosen leader. </English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>- &#242;&#229;&#234;&#243;&#249;&#232;&#233; &#232;&#231;&#225;&#240;&#224;&#237;&#237;&#251;&#233; &#235;&#232;&#228;&#229;&#240;. </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DECIDE_WEALTH</Tag>
+		<English>Take over the Crusade, for it is wealth that moves the world and profit that rules it.</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#209;&#238;&#227;&#235;&#224;&#241;&#232;&#242;&#229;&#241;&#252; &#226;&#231;&#255;&#242;&#252; &#237;&#224; &#241;&#229;&#225;&#255; &#243;&#239;&#240;&#224;&#226;&#235;&#229;&#237;&#232;&#229; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#236; &#207;&#238;&#245;&#238;&#228;&#238;&#236;, &#232;&#225;&#238; &#253;&#242;&#238; - &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#238;, &#234;&#238;&#242;&#238;&#240;&#238;&#229; &#232;&#231;&#236;&#229;&#237;&#255;&#229;&#242; &#236;&#232;&#240; &#232; &#228;&#238;&#245;&#238;&#228;, &#234;&#238;&#242;&#238;&#240;&#251;&#233; &#232;&#236; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#229;&#242;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DECIDE_FAITH</Tag>
+		<English>Do not interfere with the Divine's will, money is the root of all evil.</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#205;&#229; &#236;&#229;&#248;&#224;&#233;&#242;&#229; &#226;&#238;&#235;&#229; &#193;&#238;&#227;&#238;&#241;&#235;&#238;&#226;&#224;, &#228;&#229;&#237;&#252;&#227;&#232; - &#234;&#238;&#240;&#229;&#237;&#252; &#226;&#241;&#229;&#227;&#238; &#231;&#235;&#224;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_COST</Tag>
+		<English>Do not interfere with the Divine's will, money is the root of all evil.</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#205;&#229; &#236;&#229;&#248;&#224;&#233;&#242;&#229; &#226;&#238;&#235;&#229; &#193;&#238;&#227;&#238;&#241;&#235;&#238;&#226;&#224;, &#228;&#229;&#237;&#252;&#227;&#232; - &#234;&#238;&#240;&#229;&#237;&#252; &#226;&#241;&#229;&#227;&#238; &#231;&#235;&#224;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_TARGET</Tag>
+		<English>Choose a new target for the Crusade!</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#194;&#251;&#225;&#229;&#240;&#232;&#242;&#229; &#237;&#238;&#226;&#243;&#254; &#246;&#229;&#235;&#252; &#228;&#235;&#255; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#238;&#227;&#238; &#207;&#238;&#245;&#238;&#228;&#224;!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK1</Tag>
+		<English>The Crusaders have chosen our beautiful city of</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#237;&#238;&#241;&#246;&#251; &#226;&#251;&#225;&#240;&#224;&#235;&#232; &#237;&#224;&#248; &#234;&#240;&#224;&#241;&#232;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK2</Tag>
+		<English>as their target. They will arrive in 3 turns.</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#241;&#226;&#238;&#229;&#233; &#246;&#229;&#235;&#232;. &#206;&#237;&#232; &#239;&#240;&#232;&#225;&#243;&#228;&#243;&#242; &#226; &#242;&#229;&#247;&#229;&#237;&#232;&#232; &#242;&#240;&#229;&#245; &#245;&#238;&#228;&#238;&#226;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEVIATED</Tag>
+		<English>has used financial power to take control of the Crusade.</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#235; &#244;&#232;&#237;&#224;&#237;&#241;&#238;&#226;&#243;&#254; &#226;&#235;&#224;&#241;&#242;&#252;, &#247;&#242;&#238;&#225;&#251; &#226;&#231;&#255;&#242;&#252; &#239;&#238;&#228; &#234;&#238;&#237;&#242;&#240;&#238;&#235;&#252; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_START1</Tag>
+		<English>Crusaders are leaving under the leadership of</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#237;&#238;&#241;&#246;&#251; &#238;&#242;&#239;&#240;&#224;&#226;&#235;&#255;&#254;&#242;&#241;&#255; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_START2</Tag>
+		<English>to conquer the city of</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#247;&#242;&#238;&#225;&#251; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#242;&#252; &#227;&#238;&#240;&#238;&#228;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_START3</Tag>
+		<English>in the name of their God.</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#226; &#232;&#236;&#229;&#237;&#232; &#232;&#245; &#193;&#238;&#227;&#224;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_INIT_POPUP</Tag>
+		<English>Crusade!</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_LEADER_POPUP</Tag>
+		<English>Crusade Leader Chosen:</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#194;&#251;&#225;&#240;&#224;&#237;&#237;&#251;&#233; &#203;&#232;&#228;&#229;&#240; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#238;&#227;&#238; &#207;&#238;&#245;&#238;&#228;&#224;:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_VOTE_POPUP</Tag>
+		<English>Vote for a Leader</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#195;&#238;&#235;&#238;&#241;&#243;&#233;&#242;&#229; &#231;&#224; &#203;&#232;&#228;&#229;&#240;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEVIATE</Tag>
+		<English>Wealth or Faith</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#193;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#238; &#232;&#235;&#232; &#194;&#229;&#240;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_CORRUPT</Tag>
+		<English>Corrupt Crusade</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#200;&#241;&#239;&#238;&#240;&#247;&#229;&#237;&#237;&#251;&#233; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_ATTACK</Tag>
+		<English>Under Crusade Attack</English>
+		<French>
+			<Text>Mysticisme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mystik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#207;&#238;&#228; &#243;&#228;&#224;&#240;&#238;&#236; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#238;&#227;&#238; &#207;&#238;&#245;&#238;&#228;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_LEAVE</Tag>
+		<English>Our Unit is leaving for the Crusade: </English>
+		<French>
+			<Text>Our Unit is leaving for the Crusade: </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Our Unit is leaving for the Crusade: </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Our Unit is leaving for the Crusade: </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Our Unit is leaving for the Crusade: </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Our Unit is leaving for the Crusade: </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE</Tag>
+		<English>The Pope has called for a Crusade to aid </English>
+		<French>
+			<Text>The Pope has called for a Crusade to aid </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>The Pope has called for a Crusade to aid </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>The Pope has called for a Crusade to aid </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>The Pope has called for a Crusade to aid </Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>The Pope has called for a Crusade to aid </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL</Tag>
+		<English>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</English>
+		<French>
+			<Text>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_YES</Tag>
+		<English>YES, let the infidels feel our combined wrath!</English>
+		<French>
+			<Text>YES, let the infidels feel our combined wrath!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>YES, let the infidels feel our combined wrath!</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>YES, let the infidels feel our combined wrath!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>YES, let the infidels feel our combined wrath!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>YES, let the infidels feel our combined wrath!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_NO</Tag>
+		<English>NO, we can crush the scum ourselves!</English>
+		<French>
+			<Text>NO, we can crush the scum ourselves!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>NO, we can crush the scum ourselves!</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>NO, we can crush the scum ourselves!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>NO, we can crush the scum ourselves!</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>NO, we can crush the scum ourselves!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP</Tag>
+		<English>Defensive Crusade</English>
+		<French>
+			<Text>Defensive Crusade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Defensive Crusade</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Defensive Crusade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Defensive Crusade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Defensive Crusade</Russian>
+	</TEXT>
+</Civ4GameText>

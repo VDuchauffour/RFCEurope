@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_COLLAPSING</Tag>
+		<English>Collapsing</English>
+		<French>En chute</French>
+		<German>Zerfallend</German>
+		<Italian>Collasso</Italian>
+		<Spanish>Al borde del colapso</Spanish>
+		<Russian>&#208;&#224;&#231;&#240;&#243;&#248;&#229;&#237;&#232;&#229;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_UNSTABLE</Tag>
+		<English>Unstable</English>
+		<French>Instable</French>
+		<German>Instabil</German>
+		<Italian>Instabile</Italian>
+		<Spanish>Inestable</Spanish>
+		<Russian>&#205;&#229;&#241;&#242;&#238;&#233;&#234;&#232;&#233;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_SHAKY</Tag>
+		<English>Shaky</English>
+		<French>Agit&#233;</French>
+		<German>Wankend</German>
+		<Italian>Traballante</Italian>
+		<Spanish>Incierta</Spanish>
+		<Russian>&#216;&#224;&#242;&#234;&#232;&#233;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_STABLE</Tag>
+		<English>Stable</English>
+		<French>Stable</French>
+		<German>Stabil</German>
+		<Italian>Stabile</Italian>
+		<Spanish>Estable</Spanish>
+		<Russian>&#211;&#241;&#242;&#238;&#233;&#247;&#232;&#226;&#251;&#233;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_SOLID</Tag>
+		<English>Solid</English>
+		<French>Solide</French>
+		<German>Solide</German>
+		<Italian>Solido</Italian>
+		<Spanish>S&#243;lida</Spanish>
+		<Russian>&#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_VERYSOLID</Tag>
+		<English>Very Solid</English>
+		<French>Tr&#232;s solide</French>
+		<German>Sehr solide</German>
+		<Italian>Molto solido</Italian>
+		<Spanish>Muy s&#243;lida</Spanish>
+		<Russian>&#206;&#247;&#229;&#237;&#252; &#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_HUMAN</Tag>
+		<English>Your empire is descending into civil war!</English>
+		<French>Votre empire entre en guerre civile !</French>
+		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
+		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
+		<Russian>&#194;&#224;&#248;&#224; &#232;&#236;&#239;&#229;&#240;&#232;&#255; &#237;&#232;&#241;&#245;&#238;&#228;&#255;&#249;&#224;&#255; &#226; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233; &#226;&#238;&#233;&#237;&#229;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR</Tag>
+		<English>is descending into civil war!</English>
+		<French>entre en guerre civile !</French>
+		<German>steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>sta cadendo nella guerra civile!</Italian>
+		<Spanish>est&#225; sufriendo una guerra civil.</Spanish>
+		<Russian>&#237;&#232;&#241;&#245;&#238;&#228;&#255;&#249;&#232;&#233; &#226; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233; &#226;&#238;&#233;&#237;&#229;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_SECESSION</Tag>
+		<English>has declared its independence!</English>
+		<French>a d&#233;clar&#233; son ind&#233;pendance !</French>
+		<German>hat seine Unabh&#228;ngigkeit erkl&#228;rt!</German>
+		<Italian>ha dichiarato la propria indipendenza!</Italian>
+		<Spanish>ha declarado su independencia.</Spanish>
+		<Russian>&#238;&#225;&#250;&#255;&#226;&#232;&#235; &#229;&#227;&#238; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PERIOD</Tag>
+		<English>Your empire is experiencing a period of</English>
+		<French>Votre empire conna&#238;t une p&#233;riode</French>
+		<German>Euer Reich durchlebt eine Phase der</German>
+		<Italian>Il tuo impero sta vivendo un periodo di</Italian>
+		<Spanish>Tu imperio est&#225; pasando por un periodo de</Spanish>
+		<Russian>&#194;&#224;&#248;&#224; &#232;&#236;&#239;&#229;&#240;&#232;&#255; &#232;&#241;&#239;&#251;&#242;&#251;&#226;&#224;&#229;&#242; &#239;&#229;&#240;&#232;&#238;&#228;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_GREAT_DEPRESSION</Tag>
+		<English>Great Depression!</English>
+		<French>de Grande D&#233;pression !</French>
+		<German>Gro&#223;en Depression!</German>
+		<Italian>Grande Depressione!</Italian>
+		<Spanish>Gran Depresi&#243;n.</Spanish>
+		<Russian>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#196;&#229;&#239;&#240;&#229;&#241;&#241;&#232;&#255;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_POST_COMMUNISM</Tag>
+		<English>post-communist crisis!</English>
+		<French>de crise post-communiste !</French>
+		<German>post-kommunistischen Krise!</German>
+		<Italian>crisi post-comunista!</Italian>
+		<Spanish>crisis post-comunista.</Spanish>
+		<Russian>&#239;&#238;&#241;&#242;&#234;&#238;&#236;&#236;&#243;&#237;&#232;&#241;&#242;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#234;&#240;&#232;&#231;&#232;&#241;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_DEMOCRACY</Tag>
+		<English>instability caused by transition to democracy!</English>
+		<French>d'instabilit&#233; caus&#233;e par la transition d&#233;mocratique !</French>
+		<German>Instabilit&#228;t, verursacht durch den Wechsel zur Demokratie!</German>
+		<Italian>instabilit&#224;, causata dal passaggio alla democrazia!</Italian>
+		<Spanish>inestabilidad causada por la transici&#243;n a la democracia.</Spanish>
+		<Russian>&#237;&#229;&#243;&#241;&#242;&#238;&#233;&#247;&#232;&#226;&#238;&#241;&#242;&#252;, &#226;&#251;&#231;&#226;&#224;&#237;&#237;&#224;&#255; &#239;&#229;&#240;&#229;&#236;&#229;&#249;&#229;&#237;&#232;&#229;&#236; &#234; &#228;&#229;&#236;&#238;&#234;&#240;&#224;&#242;&#232;&#232;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_GREAT_DEPRESSION_INFLUENCE1</Tag>
+		<English>The period of Great Depression in the</English>
+		<French>La p&#233;riode de Grande D&#233;pression en</French>
+		<German>Die Phase der Gro&#223;en Depression in</German>
+		<Italian>Il periodo di Grande Depressione nel</Italian>
+		<Spanish>El periodo de Gran Depresi&#243;n del</Spanish>
+		<Russian>&#207;&#229;&#240;&#232;&#238;&#228; &#194;&#229;&#235;&#232;&#234;&#238;&#233; &#196;&#229;&#239;&#240;&#229;&#241;&#241;&#232;&#232; &#226;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_GREAT_DEPRESSION_INFLUENCE2</Tag>
+		<English>is negatively influencing our economy!</English>
+		<French>influence n&#233;gativement notre &#233;conomie !</French>
+		<German>hat negative Auswirkungen auf unsere Wirtschaft!</German>
+		<Italian>sta influenzando negativamente la nostra economia!</Italian>
+		<Spanish>est&#225; afectando negativamente a nuestra econom&#237;a.</Spanish>
+		<Russian>&#238;&#242;&#240;&#232;&#246;&#224;&#242;&#229;&#235;&#252;&#237;&#238; &#226;&#235;&#232;&#255;&#229;&#242; &#237;&#224; &#237;&#224;&#248;&#243; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TITLE</Tag>
+		<English>Interior Advisor</English>
+		<French>Conseiller Interne</French>
+		<German>Inlandsberater</German>
+		<Italian>Consigliere per gli interni</Italian>
+		<Spanish>Consejero de Interior</Spanish>
+		<Russian>&#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#232;&#233; &#209;&#238;&#226;&#229;&#242;&#237;&#232;&#234;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_ADVISOR_TITLE</Tag>
+		<English>STABILITY: </English>
+		<French>STABILITE : </French>
+		<German>STABILIT&#196;T: </German>
+		<Italian>STABILIT&#192;: </Italian>
+		<Spanish>ESTABILIDAD: </Spanish>
+		<Russian>&#209;&#210;&#192;&#193;&#200;&#203;&#220;&#205;&#206;&#209;&#210;&#220;:</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PARAMETER_CITIES</Tag>
+		<English>CITIES</English>
+		<French>VILLES</French>
+		<German>ST&#196;DTE</German>
+		<Italian>CITT&#192;</Italian>
+		<Spanish>CIUDADES</Spanish>
+		<Russian>&#195;&#206;&#208;&#206;&#196;&#192;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PARAMETER_CIVICS</Tag>
+		<English>CIVICS</English>
+		<French>REGIME</French>
+		<German>STAATSFORMEN</German>
+		<Italian>FORME DI GOVERNO</Italian>
+		<Spanish>PRINCIPIOS</Spanish>
+		<Russian>&#195;&#208;&#192;&#198;&#196;&#192;&#205;&#209;&#202;&#200;&#197; &#196;&#197;&#203;&#192;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PARAMETER_FOREIGN</Tag>
+		<English>FOREIGN</English>
+		<French>ETRANGER</French>
+		<German>AUSLAND</German>
+		<Italian>ESTERO</Italian>
+		<Spanish>ASUNTOS EXTERIORES</Spanish>
+		<Russian>&#199;&#192;&#208;&#211;&#193;&#197;&#198;&#205;&#219;&#201;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PARAMETER_ECONOMY</Tag>
+		<English>ECONOMY</English>
+		<French>ECONOMIE</French>
+		<German>WIRTSCHAFT</German>
+		<Italian>ECONOMIA</Italian>
+		<Spanish>ECONOM&#205;A</Spanish>
+		<Russian>&#221;&#202;&#206;&#205;&#206;&#204;&#200;&#202;&#192;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PARAMETER_EXPANSION</Tag>
+		<English>EXPANSION</English>
+		<French>EXPANSION</French>
+		<German>EXPANSION</German>
+		<Italian>ESPANSIONE</Italian>
+		<Spanish>EXPANSI&#211;N</Spanish>
+		<Russian>&#208;&#192;&#209;&#216;&#200;&#208;&#197;&#205;&#200;&#197;</Russian>
+		<Japanese/><Chinese/></TEXT>
+</Civ4GameText>
