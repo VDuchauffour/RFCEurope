@@ -79,7 +79,7 @@ lNovgorod = [80,62,240,0] #800 AD
 lMinsk = [76,50,120,0] #800 AD
 lRiga = [72,58,240,0] #900 AD
 lMemel = [70,55,240,0] #900 AD
-lGdansk = [67,52,100,0] #900 AD
+lTvanksta = [70,54,100,0] #900 AD
 lBreslau = [65,46,100,0] #900 AD
 lYaroslavl = [92,61,240,0] #900 AD
 lVologda = [89,64,240,0] #900 AD
@@ -143,12 +143,17 @@ class Barbs:
 			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iGalleon, 1, con.iMusketman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 0)
 
 		
-		#Germanic Barbarians throughout Western Europe (France,Italy,Germany)
+		#Germanic Barbarians throughout Western Europe (France, Germany)
 		if (iGameTurn >= con.i500AD and iGameTurn < con.i800AD):
 			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iAxeman, 1 + iHandicap*2, iGameTurn,10,0,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iSpearman, 1 + iHandicap*2, iGameTurn,15,0,utils.outerInvasion,1)
 		if (iGameTurn >= con.i800AD and iGameTurn <= con.i1000AD):
 			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
+
+		#Longobards in Italy
+
+		if (iGameTurn >= con.i632AD and iGameTurn <= con.i800AD):
+			self.spawnUnits( iBarbarian, (50,30),(55,38), con.iAxeman, 1 + iHandicap*2, iGameTurn,10,0,utils.outerInvasion,1)
 		
 		#Christians in Spain
 		if (iGameTurn >= con.i700AD and iGameTurn <= con.i880AD):
@@ -267,7 +272,7 @@ class Barbs:
 		self.foundCity(iIndependent2, lTonsberg, "Tonsberg", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iBarbarian, lRiga, "Riga", iGameTurn, 1, con.iCrossbowman, 2)
 		#self.foundCity(iIndependent2, lMemel, "Memel", iGameTurn, 1, con.iCrossbowman, 2)
-		self.foundCity(iIndependent, lGdansk, "Gdansk", iGameTurn, 1, con.iCrossbowman, 2)
+		self.foundCity(iIndependent, lTvanksta, "Tvanksta", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent, lLubeck, "Liubice", iGameTurn, 1, con.iArcher, 2)
 		#self.foundCity(iIndependent2, lLeipzig, "Leipzig", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent, lPrague, "Prague", iGameTurn, 1, con.iCrossbowman, 2)
