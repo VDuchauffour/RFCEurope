@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- -->
+<!-- Game Text - Unit Upgrades for Civilopedia -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EMBASSY_EP</Tag>
+		<English>[ICON_BULLET] Requires 10 [ICON_ESPIONAGE] against this civilization</English>
+		<French>[ICON_BULLET] N&#233;cessite 10 [ICON_ESPIONAGE] contre cette civilisation</French>
+		<German>[ICON_BULLET] Erfordert 10 [ICON_ESPIONAGE] gegen diese Zivilisation</German>
+		<Italian>[ICON_BULLET] Richiede 10 [ICON_ESPIONAGE] contro questa civilt&#224;.</Italian>
+		<Spanish>[ICON_BULLET] Se necesitan 10 [ICON_ESPIONAGE] contra esta civilizaci&#243;n</Spanish>
+		<Russian>[ICON_BULLET] &#210;&#240;&#229;&#225;&#243;&#229;&#242; 10 [ICON_ESPIONAGE] &#239;&#240;&#238;&#242;&#232;&#226; &#253;&#242;&#238;&#233; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ETH_EMBASSY</Tag>
+		<English>Ethiopian Embassy</English>
+		<French>Ambassade &#233;thiopienne</French>
+		<German>&#196;thiopische Botschaft</German>
+		<Italian>Ambasciata etiope</Italian>
+		<Spanish>Embajada et&#237;ope</Spanish>
+		<Russian>&#221;&#244;&#232;&#238;&#239;&#241;&#234;&#238;&#229; &#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAY_EMBASSY</Tag>
+		<English>Mayan Embassy</English>
+		<French>Ambassade maya</French>
+		<German>Maya-Botschaft</German>
+		<Italian>Ambasciata maya</Italian>
+		<Spanish>Embajada maya</Spanish>
+		<Russian>&#204;&#224;&#233;&#255;&#241;&#234;&#238;&#229; &#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KHM_EMBASSY</Tag>
+		<English>Khmer Embassy</English>
+		<French>Ambassade khm&#232;re</French>
+		<German>Khmerische Botschaft</German>
+		<Italian>Ambasciata khmer</Italian>
+		<Spanish>Embajada j&#233;mer</Spanish>
+		<Russian>&#202;&#245;&#236;&#229;&#240;&#241;&#234;&#238;&#229; &#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HOL_EMBASSY</Tag>
+		<English>Dutch Embassy</English>
+		<French>Ambassade n&#233;erlandaise</French>
+		<German>Holl&#228;ndische Botschaft</German>
+		<Italian>Ambasciata olandese</Italian>
+		<Spanish>Embajada holandesa</Spanish>
+		<Russian>&#195;&#238;&#235;&#235;&#224;&#237;&#228;&#241;&#234;&#238;&#229; &#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POR_EMBASSY</Tag>
+		<English>Portuguese Embassy</English>
+		<French>Ambassade portugaise</French>
+		<German>Portugiesische Botschaft</German>
+		<Italian>Ambasciata portoghese</Italian>
+		<Spanish>Embajada portuguesa</Spanish>
+		<Russian>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#252;&#241;&#234;&#238;&#229; &#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238;</Russian>
+		<Japanese/><Chinese/></TEXT>
+</Civ4GameText>

@@ -1,0 +1,91 @@
+Some PYthon pointers.
+
+Consts: (with consts for players and civs and some relations, edit for new civ)
+	tCoreArea and tNormalArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
+	TL is actually BottomLeft and BR is TopRight
+	Many functions reference those and there are search algorithm that I do not whant to change, so leave this with the comment on how to be used
+
+AIWars (not sure how this works, edit for new civ)
+Barbs (edit for babrb invasions, Mongols would be here, also indep cities)
+CityNameManager (for city name maps only)
+RFCEventHandler ( Tech and city building UHVs and UPs)
+Resourse (resourses appear)
+
+RiseAndFall: initially consts on top, 
+	setup:	 		for intial civ creations plus gold
+	createStartingUnits: on spawn
+	create4000starting:  units (on load)
+	assignTech: 		for late civs, on load
+	checkTurn: 	iFirstSpawn starts the loop for the birth of nations
+
+Victory: checks for many of the victories
+	checkPlayerTurn: times victories (i.e. at year)
+
+
+Some C++ pointers:
+
+CvRhyes.*: Player constants, starting turns, references to the UP and UHV texts, share borders
+
+CvGame.*: late starts
+	update: the catapult AIAutoPlay trick
+	AIAutoplay, AIAutoplayCatapult: working with the late start
+	setAIAutoPlay: kills all units
+	reviveActivePlayer: creates the catapult
+	doTurn: decrements the AIAutoPlay variable
+
+CvDefines.h: MAX_CIV_PLAYERS defined next to the comment \\Rhye
+
+CvPlayer.* : doTurn() gets called for all players and it calls Pyton first
+
+CvCity.* : doTurn() gets called every turn from the CvPlayer
+	Porduction - does the production and overflow
+	popOrder() does a lot of stuff, changes the production order
+	
+CvCityAI.* : inherits from CvCity and implements the AI_chooseProduction() popOrder -> unitAIViability
+
+logMsg: with printf type of format outputs info to sdk* in Log folder
+
+
+CvGameTextMgr.cpp: all the year and begining of the game texts, in Rhye.cpp the civs are addressed as in the XML file, i.e. orderes as in the XML file
+	setDateStrPlayer: the current year and the hide year before calendar
+	parseCivInfos: does the work for starting years and other things
+			DawnOfMan is the text under the leaderhead, the rest is the text on top of the civ (put the mouse over)
+			As in the starting year, Unique power is displayed from Rhye.cpp (entrie 0 is the name of the power, on the next row is the desctiption 1)
+
+
+
+Some XML pointers:
+	CIV4GameText_AdjectivesFix.xml: the Adjectives, i.e. Byzantine, Persian and so on
+	CIV4GameText_DynamicCivNames_05PER.xml: for each civ, all the keys for the different names in history. Bulky files.
+	CIV4GameText_RFCGeneral.xml: AD, BC keys, also age keys
+	CIV4GameText_RiseAndFall.xml: Events, birth of civ, rebellion
+	in victory files, there are the UHV descriptions (changes from one distribution Warlords, BtS make the UHVs in different files) Not all of them are in that file
+	CIV4GameText_TextFix2.xml: persian short description and others
+	ForthRoundTranslations: info about the mod
+	fifth round has some UHVs
+	RFC_General: Ages
+	RFCVanilla TextFix: Obsolete Units, but need to be kept for now
+	RFCWarlords: independents + cotton
+	TextFix2: religions
+
+	THERE ARE TWO FILES, UNIT_INFOS AND UNIT_CLASS INFOS!!!!!!
+
+	Sound xml files do not work with comments, <!-- --> sructure causes a crash (not even an XML error, just crash)
+
+To add a new nation:
+	Add it to the Civilizations XML file along with the Leader, Civ Names, UP, UHV, ART
+	Add it to c++, CvDefines.h for the number of civs, Rhyes.h and Rhyes.cpp. Increase the size of the arrays and add setler maps.
+	Add it to Consts.py with maps, grouping and so on.
+	Add it to RhyesAndFall.py for starting units and gold (and techs)
+	Add it to the WB file
+
+
+Tech Three:
+	disable all buildings for the barbs
+	Techs in Tech folder
+	Text_KEY in text *RFCE*
+	
+Balancing:
+	add arrays in Rhyes.h and Rhyes.cpp, then add modifying functions in CyGlobalContext.*, then add a line in CyGlobalContextInterface4 to expose the function to Python
+	call balancing functions in RFCEBalance
+

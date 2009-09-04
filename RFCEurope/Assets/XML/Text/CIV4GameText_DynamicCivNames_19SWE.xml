@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- -->
+<!-- Game Text - Unit Upgrades for Civilopedia -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWEDEN_DESC</Tag>
+		<English>The Swedish</English>
+		<French>
+			<Text>Les Perses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Perser:Die Perser:den Persern</Text>
+			<Gender>Male:Male:Male</Gender>
+			<Plural>1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>I Persiani</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Los Persas</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Russian>&#216;&#226;&#229;&#228;&#251;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWEDEN_SHORT_DESC</Tag>
+		<English>Sweden</English>
+		<French>
+			<Text>Perse</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Persien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Persia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Persia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>&#216;&#226;&#229;&#246;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWEDEN_ADJECTIVE</Tag>
+		<English>Swedish</English>
+		<French>
+			<Text>perse:perse:perses:perses</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>Persisch:persischen:persische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>persiano:persiana:persiani:persiane</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>persa:persa:persas:persas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+		<Russian>&#216;&#226;&#229;&#228;&#241;&#234;&#232;&#233;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE00</Tag>
+		<English>Kingdom of Sweden</English>
+		<French>
+			<Text>Peuplades Indoues</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Hinduv&#246;lker:Hinduv&#246;lker:Hinduv&#246;lkern</Text>
+			<Gender>Female:Female:Female</Gender>
+			<Plural>1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Popoli Ind&#249;</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pueblos Hindu</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#242;&#226;&#238; &#216;&#226;&#229;&#246;&#232;&#232;</Russian>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_LEADER_GUSTAVUS_PEDIA</Tag>
+		<English>[H1]Gustavus I[\H1]
+[BOLD]King of Sweden[\BOLD]
+[BOLD]Lived:[\BOLD] May 12, 1496 - September 29, 1560
+
+
+	[BOLD]Background:[\BOLD]
+	Gustav I of Sweden was born as Gustav Eriksson at May 12, 1496, being an offspring of a noble family. During the Swedish-Danish war, Gustav led the victorious rebellion against the Danes, and was elected as king on 6 June, 1523. During his reign, he confronted many rebellions at his country. Moreover, Protestantism was introduced at this era in Sweden. Gustav I died on September 29, 1560, and was buried at the Cathedral of Uppsala. Despite the fact that he was autarchic and absolute at the handling of his power, it is recognized that he was the founder of modern Sweden.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+</Civ4GameText>

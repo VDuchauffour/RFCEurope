@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text Objects -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUNGEON</Tag>
+		<English>Dungeon</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE</Tag>
+		<English>Archery Range</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOTHECARY</Tag>
+		<English>Apothecary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOLL_HOUSE</Tag>
+		<English>Toll House</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#196;&#238;&#236; &#209;&#225;&#238;&#240;&#224; &#205;&#224;&#235;&#238;&#227;&#238;&#226;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
+		<English>Wharf</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TANNERY</Tag>
+		<English>Tannery</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH</Tag>
+		<English>Night Watch</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GUILD_HALL</Tag>
+		<English>Guild Hall</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SIEGE_WORKSHOP</Tag>
+		<English>Siege Workshop</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#214;&#229;&#245; &#239;&#238; &#238;&#241;&#224;&#228;&#237;&#251;&#236; &#238;&#240;&#243;&#228;&#232;&#255;&#236;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_ODEON</Tag>
+		<English>Odeon</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#206;&#228;&#229;&#238;&#237;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL</Tag>
+		<English>Arsenal</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Tag>
+		<English>Protestant Church</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_MONASTERY</Tag>
+		<English>Protestant Monastery</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL</Tag>
+		<English>Protestant Cathedral</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE</Tag>
+		<English>All Saints' Church</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>
+		<English>Catholic Church</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_MONASTERY</Tag>
+		<English>Catholic Monastery</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL</Tag>
+		<English>Catholic Cathedral</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Tag>
+		<English>St. Peter's Basilica</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Tag>
+		<English>Orthodox Church</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_MONASTERY</Tag>
+		<English>Orthodox Monastery</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL</Tag>
+		<English>Orthodox Cathedral</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#209;&#238;&#225;&#238;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Tag>
+		<English>Hagia Sophia</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#209;&#238;&#244;&#232;&#233;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
+		<English>Islamic Mosque</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_MONASTERY</Tag>
+		<English>Islamic Monastery</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
+		<English>Islamic Grand Mosque</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#195;&#240;&#224;&#237;&#228;&#232;&#238;&#231;&#237;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
+		<English>Bulgarian Stan</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233; &#209;&#242;&#253;&#237;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KIEV_VECHE</Tag>
+		<English>Veche Hall</English>
+		<French>Veche Salle</French>
+		<German>Wetsche Saal</German>
+		<Italian>Veche Femminile</Italian>
+		<Spanish>Veche Feminino</Spanish>
+		<Russian>&#199;&#224;&#235; &#241;&#238;&#225;&#240;&#224;&#237;&#232;&#255; &#194;&#229;&#247;&#229;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KIEV_VECHE_PEDIA</Tag>
+		<English>[TAB]The word "veche" refers to popular assemblies in medieval Slavic countries.  In the Kievan Rus, a medieval Ukrainian kingdom is known to be the origin of many of the other veches throughout Slavic countries.  The earliest mentions of veches in Russian chronicles refer to examples in Belgorod, a city on the Dnieper in 977, the Novgorod Republic in 1016, and in Kiev in 1068.  The assemblies discussed matters of war and peace, adopted laws, and called for and expelled rulers.</English>
+		<French>[TAB]Le mot &#194;&#180;&#226;€&#160;veche&#226;€&#160;&#194;&#170; se rapporte aux assembl&#195;&#136;es populaires dans les pays slaves m&#195;&#136;di&#195;&#136;vaux.  Dans le Kievan Rus, un royaume ukrainien m&#195;&#136;di&#195;&#136;val est connu pour &#195;&#141;tre l'origine de plusieurs des autres veches dans tous les pays slaves.  Les mentions les plus t&#195;&#153;t des veches en chroniques russes se rapportent &#226;€&#161; des exemples dans Belgorod, &#226;€&#161; une ville sur le Dnieper dans 977, &#226;€&#161; la R&#195;&#136;publique de Novgorod en 1016, et &#226;€&#161; Kiev en 1068.  Les assembl&#195;&#136;es ont discut&#195;&#136; des points de guerre et de paix, ont adopt&#195;&#136; des lois, et ont appel&#195;&#136; pour et ont expuls&#195;&#136; des r&#195;&#139;gles.</French>
+		<German>[TAB]Das Wort &#195;&#145;veche&#195;&#172; bezieht sich auf popul&#226;€&#176;re Versammlungen in den mittelalterlichen Slavic L&#226;€&#176;ndern.  Im Kievan Rus, bekannt ein mittelalterliches ukrainisches K&#203;&#134;nigreich, um der Ursprung von vielen der anderen veches in Slavic L&#226;€&#176;ndern zu sein.  Die fr&#194;&#184;hesten Erw&#226;€&#176;hnungen von veches in den russischen Chroniken beziehen sich Beispiele in Belgorod, eine Stadt auf dem Dnieper in 977, die auf Novgorod Republik 1016 und in Kiew 1068.  Die Versammlungen berieten &#194;&#184;ber Sachen des Krieges und des Friedens, nahmen Gesetze an und verlangten und trieben Lehren weg.</German>
+		<Italian>[TAB]La parola &#195;&#172;veche&#195;&#145; si riferisce ai complessivi popolari nei paesi medioevali di Slavic.  Nel Kievan Rus, un regno ucraino medioevale &#195;&#139; conosciuto per essere l'origine di molti degli altri veches durante i paesi di Slavic.  Le menzioni pi? iniziali dei veches in chronicles russi si riferiscono agli esempi in Belgorod, ad una citt&#226;€&#161; sul Dnieper in 977, alla Repubblica di Novgorod in 1016 ed a Kiev in 1068.  I complessivi hanno discusso sugli argomenti della guerra e della pace, hanno adottato le leggi ed hanno richiesto ed hanno espulso i righelli.</Italian>
+		<Spanish>[TAB]La palabra &#195;&#172;veche&#195;&#174; refiere a las asambleas populares en los pa&#195;&#140;ses medievales de Slavic.  En el Kievan Rus, un reino ucraniano medieval se conoce para ser el origen de muchos de los otros veches a trav&#195;&#136;s de los pa&#195;&#140;ses de Slavic.  Las menciones m&#194;&#183;s tempranas de veches en los chronicles rusos refieren a ejemplos en Belgorod, a una ciudad en el Dnieper en 977, a la rep?blica de Novgorod en 1016, y en Kiev en 1068.  Las materias discutidas asambleas de la guerra y paz, leyes adoptados, y llamado para y reglas expelidas.</Spanish>
+		<Russian>[TAB]The word "veche" refers to popular assemblies in medieval Slavic countries.  In the Kievan Rus, a medieval Ukrainian kingdom is known to be the origin of many of the other veches throughout Slavic countries.  The earliest mentions of veches in Russian chronicles refer to examples in Belgorod, a city on the Dnieper in 977, the Novgorod Republic in 1016, and in Kiev in 1068.  The assemblies discussed matters of war and peace, adopted laws, and called for and expelled rulers.</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KIEV_VECHE_STRATEGY</Tag>
+		<English>[TAB]The [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], the Kievan Rus' replacement for the [COLOR_BUILDING_TEXT]Courthouse[COLOR_REVERT], offers additional happiness.</English>
+		<French>[TAB]Le [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], le remplacement de l'Ukrainien [COLOR_BUILDING_TEXT]Tribunal[COLOR_REVERT], offre en prime le bonheur.</French>
+		<German>[TAB]Die [COLOR_BUILDING_TEXT]Wetsche[COLOR_REVERT], die Ukrainisch Ersatz f&#194;&#184;r die [COLOR_BUILDING_TEXT]Gerichtsgeb&#228;ude[COLOR_REVERT], bietet Bonus Gl&#194;&#184;ck.</German>
+		<Italian>[TAB]L'[COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], la sostituzione Ucraino per il [COLOR_BUILDING_TEXT]Palazzo di giustizia[COLOR_REVERT], offre bonus di felicit&#226;€&#161;.</Italian>
+		<Spanish>[TAB]El [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], la sustituci&#195;&#155;n de Ucraniano para el [COLOR_BUILDING_TEXT]Delegaci&#243;[COLOR_REVERT], ofrece bonificaci&#195;&#155;n de la felicidad. </Spanish>
+		<Russian>[TAB]The [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], the Kievan Rus' replacement for the [COLOR_BUILDING_TEXT]Courthouse[COLOR_REVERT], offers additional happiness.</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD</Tag>
+		<English>Stronghold</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK</Tag>
+		<English>Folwark</English>
+		<French>Folwark</French>
+		<German>Folwark</German>
+		<Italian>Folwark</Italian>
+		<Spanish>Folwark</Spanish>
+		<Russian>&#212;&#238;&#235;&#252;&#226;&#224;&#240;&#234;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK_PEDIA</Tag>
+		<English>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th.  They were used to produce a surplus of food.  The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants.  The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.  [PARAGRAPH: 1] The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy.  The noble's attempt to increase use of folwarks only hurt the economic crisis more.  Until the 18th century, folwarks remained the basis for Polish noble's economic and political power.  After the abolition of serfdom in Poland, folwarks used paid labor.  Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</English>
+		<French>[TAB]Folwarks sont g&#195;&#169;ant polonais exploitations qui ont &#195;&#169;t&#195;&#169; op&#195;&#169;r&#195;&#169;s dans le polonais-lituanien du 14e si&#195;&#168;cle dans le 20&#195;&#168;me. Ils ont servi &#195;&#160; produire un exc&#195;&#169;dent de nourriture. La premi&#195;&#168;re folwarks ont &#195;&#169;t&#195;&#169; cr&#195;&#169;&#195;&#169;s sur l'&#195;&#169;glise et le monast&#195;&#168;re appartenant motifs, mais ont par la suite &#195;&#169;t&#195;&#169; adopt&#195;&#169; par la noblesse et les paysans riches. La cr&#195;&#169;ation de folwarks a &#195;&#169;t&#195;&#169; stimul&#195;&#169;e par une demande croissante de c&#195;&#169;r&#195;&#169;ales et de sa forte rentabilit&#195;&#169;. Folwark fond&#195;&#169;e sur l'exportation de c&#195;&#169;r&#195;&#169;ales a &#195;&#169;t&#195;&#169; une partie importante de l'&#195;&#169;conomie de la polonais-lituanien Commonwealth. [PARAGRAPH: 1] La chute du prix des produits agricoles &#195;&#160; la fin du 17e si&#195;&#168;cle ont marqu&#195;&#169; le d&#195;&#169;but d'une crise pour la folwark li&#195;&#169;s &#195;&#169;conomie. La noble tentative d'accro&#195;&#174;tre l'utilisation des folwarks seulement bless&#195;&#169; plus de la crise &#195;&#169;conomique. Jusqu'au 18e si&#195;&#168;cle, folwarks demeure la base d'nobles polonais du pouvoir &#195;&#169;conomique et politique. Apr&#195;&#168;s l'abolition du servage en Pologne, folwarks utilis&#195;&#169; travail r&#195;&#169;mun&#195;&#169;r&#195;&#169;. Folwarks ont &#195;&#169;t&#195;&#169; abolis par la R&#195;&#169;publique populaire de Pologne avec le PKWN d&#195;&#169;cret du 6 septembre 1944 sur la r&#195;&#169;forme agricole.</French>
+		<German>[TAB]Folwarks sind riesigen polnischen Bauernh&#195;&#182;fen betrieben, die in der polnisch-litauischen Commonwealth aus dem 14. Jahrhundert in das 20. Jahrhundert. Sie wurden f&#195;&#188;r die Herstellung von einem &#195;&#156;berschuss von Lebensmitteln. Die erste folwarks wurden auf Kirche und Kloster im Besitz Gr&#195;&#188;nden, sondern wurden sp&#195;&#164;ter vom Adel und reichen Bauern. Die Schaffung von folwarks wurde durch eine wachsende Nachfrage nach Getreide und seiner hohen Gewinn. Folwark - auf der Grundlage Getreide exportieren war ein wichtiger Teil der Wirtschaft in der polnisch-litauischen Commonwealth. [PARAGRAPH: 1] Der R&#195;&#188;ckgang der Landwirtschaft Waren, die Preise in der Ende des 17. Jahrhunderts markiert den Beginn einer Krise f&#195;&#188;r die folwark &#195;&#164;hnliche Wirtschaft. Die edle Versuch zur Erh&#195;&#182;hung der Nutzung von folwarks nur schaden, die wirtschaftliche Krise. Bis zum 18. Jahrhundert, folwarks blieb die Grundlage f&#195;&#188;r die polnische edlen die wirtschaftliche und politische Macht. Nach der Abschaffung der Leibeigenschaft in Polen, folwarks verwendet Lohnarbeit. Folwarks abgeschafft wurden von der Volksrepublik Polen mit dem PKWN Dekret vom 6. September 1944 &#195;&#188;ber die Agrarreform.</German>
+		<Italian>[TAB]Folwarks sono gigante polacco aziende agricole che sono stati operati nel Polacco-Lituano dal 14 &#194;&#176; secolo in 20a. Essi sono stati utilizzati per la produzione di un surplus di cibo. Il primo folwarks sono stati creati sulla chiesa e del convento di propriet&#195;&#160; motivi, ma sono stati in seguito adottati dalla nobilt&#195;&#160; e ricchi contadini. La creazione di folwarks &#195;&#168; stata incentivata da una crescente domanda di cereali e il suo alto profitto. Folwark a base di grano di esportazione &#195;&#168; stato una parte importante dell 'economia di Stato polacco - lituano. [PARAGRAPH: 1] La caduta dei prezzi in agricoltura merci alla fine del 17 &#194;&#176; secolo ha segnato l'inizio di una crisi per il folwark connessi economia. Il nobile del tentativo di aumentare l'uso di folwarks solo male la crisi economica pi&#195;&#185;. Fino al 18 &#194;&#176; secolo, folwarks rimasti la base per la nobile polacco potere economico e politico. Dopo l'abolizione della serfdom in Polonia, folwarks utilizzati pagato lavoro. Folwarks sono state abolite dalla Repubblica popolare di Polonia con il PKWN decreto del 6 settembre 1944 sulla riforma agricola.</Italian>
+		<Spanish>[TAB]Folwarks son gigantes granjas polacas que fueron operados en la Comunidad de Polonia - Lituania desde el siglo 14 en la 20. Estos recursos se utilizaron para producir un excedente de alimentos. La primera folwarks se crearon en la iglesia y el monasterio de propiedad de motivos, pero luego fueron aprobadas por la nobleza y los campesinos ricos. La creaci&#195;&#179;n de folwarks fue impulsada por una creciente demanda de cereales y su alto beneficio. Folwark basado en la exportaci&#195;&#179;n de cereales es una parte importante de la econom&#195;&#173;a de la polaca y lituana ELA. [PARAGRAPH: 1] La ca&#195;&#173;da de los precios de los bienes en la agricultura a finales del siglo 17 marc&#195;&#179; el inicio de una crisis para la folwark relacionados con la econom&#195;&#173;a. El noble intento de aumentar la utilizaci&#195;&#179;n de folwarks s&#195;&#179;lo perjudican la crisis econ&#195;&#179;mica m&#195;&#161;s. Hasta el siglo 18, folwarks sigue siendo la base de nobles polacos del poder econ&#195;&#179;mico y pol&#195;&#173;tico. Despu&#195;&#169;s de la abolici&#195;&#179;n de la servidumbre de la gleba en Polonia, folwarks utilizados trabajo remunerado. Folwarks fueron abolidas por la Rep&#195;&#186;blica Popular de Polonia con la PKWN decreto de 6 de septiembre de 1944 sobre la reforma agr&#195;&#173;cola.</Spanish>
+		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th.  They were used to produce a surplus of food.  The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants.  The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.  [PARAGRAPH: 1] The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy.  The noble's attempt to increase use of folwarks only hurt the economic crisis more.  Until the 18th century, folwarks remained the basis for Polish noble's economic and political power.  After the abolition of serfdom in Poland, folwarks used paid labor.  Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Granary[COLOR_REVERT], offers bonus food.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], le remplacement de l'polonais [COLOR_BUILDING_TEXT]Grenier[COLOR_REVERT], les offres de bonus nourriture.</French>
+		<German>Die [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], die polnisch Ersatz f&#195;&#188;r die [COLOR_BUILDING_TEXT]Kornkammer[COLOR_REVERT], bietet bonus lebensmittel</German>
+		<Italian>L'[COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], la sostituzione polacco per il [COLOR_BUILDING_TEXT]Granaio[COLOR_REVERT], offre bonus di alimentare.</Italian>
+		<Spanish> El [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], la sustituci&#195;&#179;n de polaco para el [COLOR_BUILDING_TEXT]Granero[COLOR_REVERT], ofrece bono de la alimentos. </Spanish>
+		<Russian>The [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Granary[COLOR_REVERT], offers bonus food.</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
+		<English>Royal Exchange</English>
+		<French/><German/><Italian/><Spanish/><Russian>"&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#233; &#206;&#225;&#236;&#229;&#237;"</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE</Tag>
+		<English>Opera House</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#196;&#238;&#236; &#206;&#239;&#229;&#240;&#251;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_STRATEGY</Tag>
+		<English>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness.</English>
+		<French>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</French>
+		<German>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</German>
+		<Italian>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</Italian>
+		<Spanish>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</Spanish>
+		<Russian>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness.</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
+		<English>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</English>
+		<French/><German/><Italian/><Spanish/><Russian>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT</Tag>
+		<English>Soldier Tennant</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#209;&#238;&#235;&#228;&#224;&#242; &#210;&#229;&#237;&#237;&#224;&#237;&#242;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
+		<English>[ICON_BULLET] Damages enemy units in the area.</English>
+		<French>Peste</French>
+		<German>Pest</German>
+		<Italian>Peste</Italian>
+		<Spanish>Peste</Spanish>
+		<Russian>[ICON_BULLET] &#207;&#238;&#226;&#240;&#229;&#230;&#228;&#224;&#229;&#242; &#226;&#240;&#224;&#230;&#229;&#241;&#234;&#232;&#229; &#229;&#228;&#232;&#237;&#232;&#246;&#251; &#226; &#238;&#225;&#235;&#224;&#241;&#242;&#232;.</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TAVERN</Tag>
+		<English>Tavern</English>
+		<French>Taverne</French>
+		<German>Tavern</German>
+		<Italian>Locanda</Italian>
+		<Spanish>Taberna</Spanish>
+		<Russian>&#210;&#224;&#226;&#229;&#240;&#237;&#224;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KREMLIN</Tag>
+		<English>Kremlin</English>
+		<French>Kremlin</French>
+		<German>Kremlin</German>
+		<Italian>Kremlin</Italian>
+		<Spanish>Kremlin</Spanish>
+		<Russian>&#202;&#240;&#229;&#236;&#235;&#252;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TAVERN_PEDIA</Tag>
+		<English>[TAB]A tavern is, loosely, a place of business where people gather to drink alcoholic beverages and, more than likely, also be served food, though not licenced to put up guests. The word derives from the Latin taberna. The distinction of a tavern from an inn, bar or pub varies by location, in some places being identical and in others being distinguished by traditions or by legal license.[PARAGRAPH:1]Gathering in a tavern to drink beer or other alcoholic drinks is a longstanding social tradition dating at least to Sumer (3500 BC); in Sumer the tavern keeper was traditionally a woman but in other places and times women could be completely excluded from tavern culture.[PARAGRAPH:1]They have existed in England from as early as the 13th Century and were often kept by women usually known as Ale-wives. In the mid-14th century there were only three in London. An act of 1552 allowed forty in London, eight in York, six in Bristol and many more in towns all across England.[PARAGRAPH:1]By the 19th century the word tavern had developed an archaic flavour, the current term being public house (pub).</English>
+		<French>[TAB]Une taverne est, l&#226;chement, un endroit des affaires o&#249; les gens se r&#233;unissent pour boire les boissons alcooliques et, tr&#232;s probablement, pour &#234;tre servis &#233;galement la nourriture, cependant non autoris&#233;e pour mettre vers le haut des invit&#233;s. Le mot d&#233;rive du taberna latin. La distinction d'une taverne d'une auberge, d'une barre ou d'une publication change par endroit, dans quelques endroits &#233;tant identiques et dans d'autres qui sont distingu&#233;s par des traditions ou par license.[PARAGRAPH:1]Gathering l&#233;gal dans une taverne pour boire la bi&#232;re ou d'autres boissons alcooliques est une tradition sociale de longue date datant au moins &#224; Sumer (3500 AVANT J&#201;SUS CHRIST) ; dans Sumer le garde de taverne &#233;tait traditionnellement une femme mais en quelques d'autres endroits et fois des femmes pourraient &#234;tre compl&#232;tement exclues de la taverne culture.[PARAGRAPH:1]They ont exist&#233; en Angleterre de d&#232;s le 13&#232;me si&#232;cle et ont &#233;t&#233; souvent gard&#233;es par des femmes habituellement connues sous le nom d'aloses. En si&#232;cle de mid-14th il y avait seulement de trois &#224; Londres. Un acte de 1552 a permis quarante &#224; Londres, huit &#224; York, six &#224; Bristol et beaucoup plus dans les villes toutes &#224; travers England.[PARAGRAPH:1]By le 19&#232;me si&#232;cle la taverne de mot avaient d&#233;velopp&#233; une saveur archa&#239;que, la limite courante &#233;tant la taverne (publication).</French>
+		<German>[TAB]A Tavern ist lose ein Gesch&#228;ftssitz, in dem Leute, um alkoholische Getr&#228;nke zu trinken und erfassen, mehr als wahrscheinlich, die Nahrung auch gedient zu werden, zwar nicht genehmigt worden, um G&#228;ste oben zu setzen. Das Wort leitet vom lateinischen taberna ab. Die Unterscheidung eines Tavern von einem Gasthaus, von einem Stab oder von einer Publikation schwankt durch Position, in einigen Pl&#228;tzen, die identisch sind und in anderen, die durch Traditionen oder durch zugelassenes license.[PARAGRAPH:1]Gathering in einem Tavern, um unterschieden werden, Bier oder andere alkoholische Getr&#228;nke ist zu trinken eine althergebrachte Sozialtradition, die mindestens zu Sumer (3500 BC) datiert; in Sumer war der Tavernw&#228;chter traditionsgem&#228;&#223; eine Frau, aber in anderen Pl&#228;tzen und in Malen konnten Frauen vom Tavern vollst&#228;ndig ausgeschlossen werden culture.[PARAGRAPH:1]They haben bestanden in England schon in vom 13. Jahrhundert und wurden gehalten h&#228;ufig von den Frauen, die normalerweise als Maifische bekannt sind. Im mid-14th Jahrhundert gab es nur drei in London. Eine Tat von 1552 erlaubte vierzig in London, acht in York, sechs in Bristol und viel mehr in den St&#228;dten alle &#252;ber England.[PARAGRAPH:1]By das 19. Jahrhundert der Wort Tavern hatten ein veraltetes Aroma, die gegenw&#228;rtige Bezeichnung entwickelt, die Gasthaus (Publikation) ist.</German>
+		<Italian>[TAB]Una locanda &#232;, senza bloccare, un posto del commercio in cui la gente riunisce per bere le bevande di alcoolico e, molto probabilmente, anche per essere servita l'alimento, comunque non concesso una licenza a per mettere in su gli ospiti. La parola deriva dal taberna latino. La distinzione di una locanda da una locanda, da una barra o da una pubblicazione varia da posizione, in alcuni posti che sono identici ed in altri che sono distinti dalle tradizioni o da license.[PARAGRAPH:1]riunione legale in una locanda per bere la birra o altre bevande alcoliche &#232; una tradizione sociale di vecchia data che data almeno a Sumer (3500 BC); in Sumer il custode della locanda era tradizionalmente una donna ma in altre localit&#224; e date le donne potrebbero completamente essere escluse dalla locanda culture.[PARAGRAPH:1]They hanno esistito in Inghilterra fin dal tredicesimo secolo e spesso sono state mantenute dalle donne conosciute solitamente come le alose. Nel secolo di mid-14th ci erano soltanto tre a Londra. Un atto di 1552 ha permesso quaranta a Londra, otto a York, sei a Bristol e molto in citt&#224; tutte attraverso England.[PARAGRAPH:1]By il diciannovesimo secolo la locanda di parola avevano sviluppato un sapore archaic, il termine corrente che &#232; osteria (pubblicazione).</Italian>
+		<Spanish>[TAB]Una taberna es, libremente, un lugar del negocio en donde la gente recolecta para beber las bebidas alcoh&#243;licas y, m&#225;s que probablemente, tambi&#233;n para ser servida el alimento, aunque no autorizado para poner para arriba a hu&#233;spedes. La palabra deriva del taberna latino. La distinci&#243;n de una taberna de un mes&#243;n, de una barra o de una publicaci&#243;n var&#237;a por la localizaci&#243;n, en algunos lugares que son id&#233;nticos y en otros que son distinguidos por tradiciones o por license.[PARAGRAPH:1]Gathering legal en una taberna para beber la cerveza u otras bebidas alcoh&#243;licas es una tradici&#243;n social de muchos a&#241;os que fecha por lo menos a Sumer (3500 A.C.); en Sumer el encargado de la taberna era tradicionalmente una mujer pero en otros lugares y veces las mujeres podr&#237;an ser excluidas totalmente de taberna culture.[PARAGRAPH:1]They han existido en Inglaterra a partir desde del d&#233;cimotercero siglo y fueron guardadas a menudo por las mujeres conocidas generalmente como alosas. En el siglo de mid-14th hab&#237;a solamente tres en Londres. Un acto de 1552 permiti&#243; cuarenta en Londres, ocho en York, seises en Bristol y muchos m&#225;s en las ciudades todas a trav&#233;s de England.[PARAGRAPH:1]By el diecinueveavo siglo la taberna de la palabra hab&#237;an desarrollado un sabor arcaico, el t&#233;rmino actual que era la casa p&#250;blica (publicaci&#243;n).</Spanish>
+		<Russian>[TAB]A tavern is, loosely, a place of business where people gather to drink alcoholic beverages and, more than likely, also be served food, though not licenced to put up guests. The word derives from the Latin taberna. The distinction of a tavern from an inn, bar or pub varies by location, in some places being identical and in others being distinguished by traditions or by legal license.[PARAGRAPH:1]Gathering in a tavern to drink beer or other alcoholic drinks is a longstanding social tradition dating at least to Sumer (3500 BC); in Sumer the tavern keeper was traditionally a woman but in other places and times women could be completely excluded from tavern culture.[PARAGRAPH:1]They have existed in England from as early as the 13th Century and were often kept by women usually known as Ale-wives. In the mid-14th century there were only three in London. An act of 1552 allowed forty in London, eight in York, six in Bristol and many more in towns all across England.[PARAGRAPH:1]By the 19th century the word tavern had developed an archaic flavour, the current term being public house (pub).</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TAVERN_STRATEGY</Tag>
+		<English>A [COLOR_BUILDING_TEXT]Tavern[COLOR_REVERT] will increase happiness and decrease war weariness</English>
+		<French>A [COLOR_BUILDING_TEXT]Taverne[COLOR_REVERT] augmentera le bonheur et diminuera la lassitude de guerre</French>
+		<German>A [COLOR_BUILDING_TEXT]Tavern[COLOR_REVERT] erh&#246;ht Gl&#252;ck und verringert Krieg weariness</German>
+		<Italian>A [COLOR_BUILDING_TEXT]Locanda[COLOR_REVERT] aumenter&#224; la felicit&#224; e far&#224; diminuire il weariness di guerra</Italian>
+		<Spanish>A [COLOR_BUILDING_TEXT]Taberna[COLOR_REVERT] aumentar&#225; felicidad y disminuir&#225; weariness de la guerra</Spanish>
+		<Russian>A [COLOR_BUILDING_TEXT]Tavern[COLOR_REVERT] will increase happiness and decrease war weariness</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE</Tag>
+		<English>National Theatre</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE</Tag>
+		<English>Summer Palace</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Tag>
+		<English>National University</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#211;&#237;&#232;&#226;&#229;&#240;&#241;&#232;&#242;&#229;&#242;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
+		<English>[ICON_BULLET]Provides %D1_Mod </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
+		<English>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
+		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
+		<English> [SPACE] (%D1_Mod) </English>
+		<French/><German/><Italian/><Spanish/><Russian>[SPACE] (%D1_Mod)</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INN</Tag>
+		<English>Inn</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
+		<English>Manor House</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HERBALIST</Tag>
+		<English>Herbalist</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#209;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242; &#239;&#238; &#242;&#240;&#224;&#226;&#224;&#236;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
+		<English>Pagan Shrine</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#226;&#255;&#242;&#251;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
+		<English>Weaver</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#210;&#234;&#224;&#247;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BREWERY</Tag>
+		<English>Brewery</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA</Tag>
+		<English>Noria</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#205;&#238;&#240;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FORGE</Tag>
+		<English>Blacksmith</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CARPENTER</Tag>
+		<English>Carpenter</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#235;&#238;&#242;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASON</Tag>
+		<English>Mason</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#236;&#229;&#237;&#249;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL</Tag>
+		<English>Textile Mill</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#210;&#229;&#234;&#241;&#242;&#232;&#235;&#252;&#237;&#224;&#255; &#204;&#229;&#235;&#252;&#237;&#232;&#246;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWELER</Tag>
+		<English>Jeweler</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE</Tag>
+		<English>Smokehouse</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TANNER</Tag>
+		<English>Tanner</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#196;&#243;&#225;&#232;&#235;&#252;&#249;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUTCHER</Tag>
+		<English>Butcher</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#255;&#241;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LUXURY_STORE</Tag>
+		<English>Luxury Store</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WAREHOUSE</Tag>
+		<English>Warehouse</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#209;&#234;&#235;&#224;&#228;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE</Tag>
+		<English>Coffee House</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU</Tag>
+		<English>Ch&#226;teau</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#199;&#224;&#236;&#238;&#234;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
+		<English>Infirmary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER</Tag>
+		<English>Jewish Quarter</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SCHOOL</Tag>
+		<English>Protestant Church School</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY</Tag>
+		<English>Protestant Seminary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL</Tag>
+		<English>Protestant Belfry</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL</Tag>
+		<English>Islamic Minaret</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#237;&#224;&#240;&#229;&#242;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_RELIQUARY</Tag>
+		<English>Islamic Sahn</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#209;&#224;&#245;&#237;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL</Tag>
+		<English>House of Wisdom</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA</Tag>
+		<English>Islamic Madrassa</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL</Tag>
+		<English>Catholic Belfry</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY</Tag>
+		<English>Catholic Reliquary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL</Tag>
+		<English>Catholic Cathedral School</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM</Tag>
+		<English>Catholic Scriptorium</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY</Tag>
+		<English>Catholic Seminary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL</Tag>
+		<English>Orthodox Belfry</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY</Tag>
+		<English>Orthodox Reliquary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL</Tag>
+		<English>Orthodox Cathedral School</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM</Tag>
+		<English>Orthodox Scriptorium</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY</Tag>
+		<English>Orthodox Seminary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_SEMINARY</Tag>
+		<English>Seminary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_SCHOOL</Tag>
+		<English>Religious School</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_CHAPEL</Tag>
+		<English>Belfry</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_RELIQUARY</Tag>
+		<English>Reliquary</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_SCRIPTORIUM</Tag>
+		<English>Scriptorium</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN</Tag>
+		<English>Bazaar</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#193;&#224;&#231;&#224;&#240;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_HELP</Tag>
+		<English>[ICON_BULLET] +1 Stability</English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COURTHOUSE_HELP</Tag>
+		<English>[ICON_BULLET] +1 Stability</English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUNGEON_HELP</Tag>
+		<English>[ICON_BULLET] +1 Stability</English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NIGHTWATCH_HELP</Tag>
+		<English>[ICON_BULLET] +1 Stability</English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE</Tag>
+		<English>Topkapi Palace</English>
+		<French>Topkapi Palace</French>
+		<German>Topkapi Palace</German>
+		<Italian>Topkapi Palace</Italian>
+		<Spanish>Topkapi Palace</Spanish>
+		<Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_PEDIA</Tag>
+		<English>[TAB]The Topkapi Palace is a palace in Istanbul, Turkey, which was the official and primary residence in the city of the Ottoman Sultans, from 1465 to 1853. The palace was a setting for state occasions and royal entertainments and is a major tourist attraction today. The name directly translates as "Cannongate Palace", from the palace being named after a nearby, now lost gate.[NEWLINE][NEWLINE][TAB]nitial construction started in 1459, ordered by Sultan Mehmed II, the conqueror of Byzantine Constantinople. The palace is a complex made up of four main courtyards and many smaller buildings. At the height of its existence as a royal residence, the palace was home to as many as 4,000 people, formerly covering a larger area with a long shoreline. The complex has been expanded over the centuries, with many renovations such as after the 1509 earthquake and 1665 fire.[NEWLINE][NEWLINE][TAB]Topkapi Palace gradually lost its importance at the end of the 17th century, as the Sultans preferred to spend more time in their new palaces along the Bosporus. In 1853, Sultan Abd&#252;l Mecid I decided to move the court to the newly built Dolmabah&#231;e Palace, the first European-style palace in the city. Some functions, such as the imperial treasury, the library, mosque and mint, were retained though.[NEWLINE][NEWLINE][TAB]After the end of the Ottoman Empire in 1921, Topkapi Palace was transformed by government decree on April 3, 1924 into a museum of the imperial era. The Topkapi Palace Museum is under the administration of the Ministry of Culture and Tourism. The palace complex has hundreds of rooms and chambers, but only the most important are accessible to the public today. The complex is guarded by officials of the ministry as well as armed guards of the Turkish military. The palace is full of examples of Ottoman architecture and also contains large collections of porcelain, robes, weapons, shields, armor, Ottoman miniatures, Islamic calligraphic manuscripts and murals, as well as a display of Ottoman treasure and jewelry.[NEWLINE][NEWLINE][TAB]Topkapi Palace is among those monuments belonging to the "Historic Areas of Istanbul", which became a UNESCO World Heritage Site in 1985, and is described in Criterion iv as "the best example[s] of ensembles of palaces [...] of the Ottoman period."</English>
+		<French/><German/><Italian/><Spanish/><Russian>[TAB]The Topkapi Palace is a palace in Istanbul, Turkey, which was the official and primary residence in the city of the Ottoman Sultans, from 1465 to 1853. The palace was a setting for state occasions and royal entertainments and is a major tourist attraction today. The name directly translates as "Cannongate Palace", from the palace being named after a nearby, now lost gate.[NEWLINE][NEWLINE][TAB]nitial construction started in 1459, ordered by Sultan Mehmed II, the conqueror of Byzantine Constantinople. The palace is a complex made up of four main courtyards and many smaller buildings. At the height of its existence as a royal residence, the palace was home to as many as 4,000 people, formerly covering a larger area with a long shoreline. The complex has been expanded over the centuries, with many renovations such as after the 1509 earthquake and 1665 fire.[NEWLINE][NEWLINE][TAB]Topkapi Palace gradually lost its importance at the end of the 17th century, as the Sultans preferred to spend more time in their new palaces along the Bosporus. In 1853, Sultan Abd&#252;l Mecid I decided to move the court to the newly built Dolmabah&#231;e Palace, the first European-style palace in the city. Some functions, such as the imperial treasury, the library, mosque and mint, were retained though.[NEWLINE][NEWLINE][TAB]After the end of the Ottoman Empire in 1921, Topkapi Palace was transformed by government decree on April 3, 1924 into a museum of the imperial era. The Topkapi Palace Museum is under the administration of the Ministry of Culture and Tourism. The palace complex has hundreds of rooms and chambers, but only the most important are accessible to the public today. The complex is guarded by officials of the ministry as well as armed guards of the Turkish military. The palace is full of examples of Ottoman architecture and also contains large collections of porcelain, robes, weapons, shields, armor, Ottoman miniatures, Islamic calligraphic manuscripts and murals, as well as a display of Ottoman treasure and jewelry.[NEWLINE][NEWLINE][TAB]Topkapi Palace is among those monuments belonging to the "Historic Areas of Istanbul", which became a UNESCO World Heritage Site in 1985, and is described in Criterion iv as "the best example[s] of ensembles of palaces [...] of the Ottoman period."</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] allows you to train your vassal's UU instead of the standard unit when training a unit of the same unit class.</English>
+		<French/><German/><Italian/><Spanish/><Russian>[COLOR_BUILDING_TEXT]&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;[COLOR_REVERT] &#239;&#238;&#231;&#226;&#238;&#235;&#255;&#229;&#242; &#226;&#224;&#236; &#238;&#225;&#243;&#247;&#224;&#242;&#252; &#226;&#224;&#248; &#226;&#224;&#241;&#241;&#224;&#235; UU &#226;&#236;&#229;&#241;&#242;&#238; &#241;&#242;&#224;&#237;&#228;&#224;&#240;&#242;&#237;&#238;&#233; &#229;&#228;&#232;&#237;&#232;&#246;&#251;, &#238;&#225;&#243;&#247;&#224;&#255; &#229;&#228;&#232;&#237;&#232;&#246;&#243; &#242;&#238;&#227;&#238; &#230;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#227;&#238; &#234;&#235;&#224;&#241;&#241;&#224;.</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VASSAL_UU</Tag>
+		<English>[ICON_BULLET]Train a Vassal's Unique Unit</English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#209;&#238;&#231;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#243;&#237;&#232;&#234;&#224;&#235;&#252;&#237;&#251;&#233; &#254;&#237;&#232;&#242; &#194;&#224;&#241;&#241;&#224;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
+		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
+		<French>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</French> 
+		<German>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</German>
+		<Italian>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</Italian>
+		<Spanish>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
+		<English>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
+		<French>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</French> 
+		<German>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</German>
+		<Italian>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Italian>
+		<Spanish>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_SIEGE_WORKSHOP_PEDIA</Tag>
+		<English>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</English>
+		<French>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</French>
+		<German>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</German>
+		<Italian>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</Italian>
+		<Spanish>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP_PEDIA</Tag>
+		<English>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</English>
+		<French>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</French>
+		<German>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</German>
+		<Italian>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</Italian>
+		<Spanish>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</Spanish>
+		<Russian>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_DOME_ROCK_PEDIA</Tag>
+		<English>The Dome of the Rock is located at the visual center of an ancient man-made platform known as the Temple Mount, which Muslims refer to as the "Noble Sanctuary". The platform, greatly enlarged under the rule of Herod the Great, is the site of the Second Jewish Temple which was destroyed during the Roman Siege of Jerusalem in 70 CE. In 637 CE, Jerusalem was conquered by the Rashidun Caliphate army during the Islamic invasion of the Byzantine Empire.
+
+The Dome of the Rock was erected between 685 and 691 CE. The names of the two engineers in charge of the project are given as: Yazid Ibn Salam from Jerusalem and Raja Ibn Haywah from Baysan. Umayyad Caliph Abd al-Malik ibn Marwan who initiated construction of the Dome, hoped that it would "house the Muslims from cold and heat" and intended the building to serve as a shrine for pilgrims and not as a mosque for public worship. Historians contend that the Caliph wished to create a structure which would compete with the existing buildings of other religions in the city. al-Maqdisi writes that he
+
+    "Sought to build for the Muslims a masjid that should be unique and a wonder to the world. And in like manner, is it not evident that Caliph Abd al-Malik, seeing the greatness of the martyrium of the Church of the Holy Sepulchre and its magnificence was moved lest it should dazzle the minds of Muslims and hence erected above the Rock the dome which is now seen there."
+
+During the Crusades the Dome of the Rock was given to the Augustinians, who turned it into a church, and the Al-Aqsa Mosque became the royal palace of Baldwin I of Jerusalem in 1104. The Knights Templar, who believed the Dome of the Rock was the site of the Temple of Solomon, set up their headquarters in the Al-Aqsa Mosque adjacent to the Dome for much of the 12th century. The "Templum Domini," as they called it, was featured on the official seals of the Order's Grand Masters, and it became the architectural model for Templar churches across Europe.
+
+Jerusalem was recaptured by Saladin on Friday, 2 October 1187 and the Haram was reconsecrated as a Muslim sanctuary. The cross on top of the Dome of the Rock was replaced by a golden crescent and a wooden screen was placed around the rock below. Salah al-Din's nephew al-Malik al-Mu'azzam Isa (615-24/1218-27) carried out other restorations within the Haram and added the porch to the Aqsa mosque.
+
+Large-scale renovation was undertaken during the reign of Mahmud II in 1817. Adjacent to the Dome of the Rock, the Ottomans built the free-standing Dome of the Prophet in 1620.
+
+The Dome of the Rock was badly shaken during an earthquake in Palestine on Monday, 11 July 1927 rendering useless many of the repairs that had taken place over previous years.
+
+Under Jordanian rule of Jerusalem, Jews were forbidden from entering the Old City. Israel took control of the Dome of the Rock during its victory in the Six-Day War in 1967. A few hours after the Israeli flag was hoisted over the Dome of the Rock in 1967, at the conclusion of the Six-Day War, Israelis lowered it on the orders of General Moshe Dayan, and invested the Muslim Waqf (religious trust) with the authority to manage the Temple Mount-Haram al-Sharif in order to "keep the peace".
+
+
+The Dome of the Rock, being among a complex of buildings on the Temple Mount, (the other principal building being the Al-Aqsa Mosque) is one of the holiest sites in Islam, following Mecca, Medina, and, for shia Muslims, the Imam Ali Mosque. Its significance stems from the religious beliefs regarding the rock at its heart. According to Islamic tradition, the rock is the spot from where Muhammad ascended to Heaven accompanied by the angel Gabriel.
+
+The stone over which the Muslim shrine, the Dome of Rock, was built is the holiest site in Judaism. Jews have traditionally regarded the location of the stone as the holiest spot on Earth, the site of the Holy of Holies during the Temple Period. In former times, some Jewish scholars thought that the location of the Holy of Holies was not known for certain. Today this is a minority opinion.
+
+Just as Muslims pray towards the Kaaba at Mecca, the holiest site in Islam, Jews pray towards the site of the ancient Holy of Holies, the Foundation Stone, the holiest site in Judaism.
+
+n Christianity it is believed that during the time of the Byzantine Empire, nearby the spot where the Dome was later constructed was where Constantine's mother built a small church, calling it the Church of St. Cyrus and St. John, later on enlarged and called the Church of the Holy Wisdom. On the walls of the Dome of the Rock is an inscription in a mosaic frieze that includes the following words:
+
+    "Bless your envoy and your servant Jesus son of Mary and peace upon him on the day of birth and on the day of death and on the day he is raised up again. It is a word of truth in which they doubt. It is not for God to take a son. Glory be to him when he decrees a thing he only says be, and it is."</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
+		<English>A brewery is a dedicated building for the making of beer, though beer can be made in the home, and has been for much of beer's history. A company which makes beer is called either a brewery or a brewing company.
+
+The diversity of size in breweries is matched by the diversity of processes, degrees of automation, and kinds of beer produced in breweries. Typically a brewery is divided into distinct sections, with each section reserved for one part of the brewing process.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_BUTCHER_PEDIA</Tag>
+		<English>Butchery is a traditional work. Primary butchery consists of selecting carcasses, sides, or quarters from which primal cuts can be produced with the minimum of wastage, separate the primal cuts from the carcasses using the appropriate tools and equipment following company procedures, trim primal cuts and prepare for secondary butchery or sale, and store cut meats hygienically and safely. Secondary butchery involves boning and trimming primal cuts in preparation for sale. Historically, primary and secondary butchery were performed in the same establishment but the advent of methods of preservation and low cost transportation has largely separated them.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
+		<English>Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.
+
+Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.
+
+In Europe, it is the provision of accommodation, if anything, that now differentiates inns from taverns, alehouses and pubs. The latter tend only to supply alcohol (although in the UK the conditions of their licence sometimes require them to have a nominal supply of food and soft drinks). Inns tend to be grander and more long-lived establishments. Famous London examples include the George and The Tabard. There is however no longer a formal distinction between an inn and other kinds of establishment, and many pubs will use the name "inn", either simply because they are long established and maybe were once a Coaching inn, or to summon up a particular kind of image; however, originally an Inn had to provide not only food and lodging, but also stabling and fodder for the traveller's horse(s) and for fresh horses for the Mail coach.
+
+The original functions of an inn are now usually split among separate establishments, such as hotels, lodges, and motels, all of which might provide the traditional functions of an inn but which focus more on lodging customers than on other services; public houses, which are primarily alcohol-serving establishments; and restaurants and taverns, which serve food and drink. (Hotels often contain restaurants and also often serve complimentary breakfast and meals, thus providing all of the functions of traditional inns.) In North America, the lodging aspect of the word "inn" lives on in hotel brand names like Holiday Inn, and in some state laws that refer to lodging operators as innkeepers.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
+		<English>A manor house or fortified manor-house is a country house, which has historically formed the administrative centre of a manor, the lowest unit of territorial organization in the feudal system. The term is sometimes applied to relatively small country houses which belonged to gentry families, as well as to grand stately homes, particularly as a technical term for minor late medieval fortified country houses intended more for show than for defence.
+
+In general terms, the manor house was the dwelling house, or "capital messuage", of a feudal lord of a manor, which he occupied only on occasional visits if he held many manors. As such it was the place in which sessions of his "court baron", or manor court, were held. Sometimes a steward or seneschal was appointed by the seigneurial lord to oversee and manage his different manorial properties. The day-to-day administration was delegated to a bailiff, or reeve.
+
+Although not typically built with strong fortifications as castles were, many manor-houses were partly fortified: they were enclosed within walls or ditches that often included the farm buildings as well. Arranged for defence against robbers and thieves, it was often surrounded by a moat with a drawbridge, and equipped with small gatehouses and watchtowers; but was not provided with a keep or with large towers or lofty curtain walls so as to withstand a siege. The primary feature of the manor-house was its great hall, to which subsidiary apartments were added as the lessening of feudal warfare permitted more peaceful domestic life.
+
+By the beginning of the 16th century, manor-houses as well as small castles began to acquire the character and amenities of the residences of country gentlemen. This late 16th century transformation produced many of the smaller Renaissance châteaux of France and the numerous country mansions of the Elizabethan and Jacobean styles in England.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA_PEDIA</Tag>
+		<English>A noria is a machine for lifting water into a small aqueduct, either for the purpose of irrigation or, in at least one known instance, to feed seawater into a saltern.
+
+There are three types of noria. The most common examples consist of a vertical wheel which is slung with a chain of buckets. The buckets hang down into a well which may be up to 8m (26ft) deep. The most primitive norias of this type are driven by donkeys, mules, or oxen. The animal turns another wheel, which is engaged with the noria and so causes it to turn. This causes the buckets to circulate.
+
+A second type of noria uses the same system, of a necklace of clay or wooden buckets, but it is driven by the wind. The wind driven norias in the vicinity of Cartagena, Spain, are virtually identical in appearance with the local grinding mills.
+
+The third type of noria uses the energy derived from the flow of a river. It consists of a large, very narrow undershot waterwheel whose rim is made up of a series of containers which lift water from the river to a very small aqueduct at the top of the wheel. Unlike the water wheels found in mills, a noria does not provide mechanical power to any other process. Its concept is similar to the modern hydraulic ram, which also uses the power of flowing water to pump some of the water out of the river.
+
+A few norias were hybrids, consisting of an animal-driven waterwheel.
+
+A noria can raise water to somewhat less than its full height. The largest noria in the world, with a diameter of about 20 meters, is located in the Syrian city of Hama.
+
+It performs a similar function to chain pumps (including the saqiya), and other pumps, that of moving water from a lower elevation to that of a higher elevation, but these are generally powered by other means, not by a waterwheel).
+
+It has been suggested that the cakkavattaka mentioned in an Indian text of c.350 BC was a noria, but others dispute this (see watermill). It is certainly referred to by Lucretius (d. 55 BC), who alluded to 'rivers that turn wheels and buckets.
+ This device may have been used in the ancient Near East since circa 200 BC.
+
+Norias later became more widespread during the Muslim Agricultural Revolution and were in large-scale use in the medieval Islamic world, where Muslim inventors and engineers made a number of improvements to the noria. For example, the flywheel mechanism used to smooth out the delivery of power from a driving device to a driven machine, was invented by Ibn Bassal (fl. 1038-1075) of al-Andalus, who pioneered the use of the flywheel in the noria and chain pump (Sakia or saqiya). In 1206, Al-Jazari introduced the use of the crankshaft in a noria and saqiya, and the concept of minimizing intermittent working was implied for the purpose of maximising their efficiency.
+
+Muslim engineers used norias to discharge water into aqueducts which carried the water to towns and fields. Some of the norias used in the medieval Islamic world were as large as 20 meters in diameter, the one in Hama being a surviving example still used in modern times. It has 120 water collection compartments and could raise as much as 95 litres of water per minute.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
+		<English>A wharf is a landing place or pier where ships may tie up and load or unload.
+
+A wharf commonly comprises a fixed platform, often on pilings. They often serve as interim storage areas with warehouses, since the typical objective is to unload and reload vessels as quickly as possible. Where capacity is sufficient a single quay constructed along the land adjacent to the water is normally used; where there is a need for more capacity many wharves will instead be constructed projecting into the water, as with the well known collection of wharves in San Francisco. A pier, raised over the water rather than within it, is one type of wharf, commonly used for cases where the weight or volume of cargos will be low.
+
+Smaller and more modern wharves are sometimes built on flotation devices (pontoons) to keep them at the same level to the ship even during changing tides.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_DUNGEON_PEDIA</Tag>
+		<English>A dungeon is a room or cell in which prisoners are kept, especially underground. Dungeons are generally associated with medieval castles, though their association with torture probably belongs more to the Renaissance period. The image of dark, damp dungeons as the scene of lengthy incarceration and unspeakable cruelty is a powerful one in popular culture.
+
+In its original medieval usage, donjon meant a keep, the main tower of a castle which formed the final defensive position to which the garrison could retreat when outer fortifications were overcome. By association of a tower with a prison, its English meaning has evolved over time to mean an underground prison or oubliette, typically in a basement of a castle.
+
+In French the term donjon still refers to a "keep", and the term oubliette is a more appropriate translation of English "dungeon". Donjon is therefore a false friend to "dungeon".</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
+		<English>A "madrassa" is an Arabic institute of higher learning, usually religious in nature. The earliest madrasses were formed in Islamic mosques, where scholars gathered to study and debate religious and secular issues of the day. Over time students would come to study with the most learned scholars; the most popular teachers often had to construct separate buildings to hold their growing student population.[NEWLINE][NEWLINE]At the madrassas the students would learn to read and write and study religious doctrine, history and law. Some madrassas also taught logic, world history, foreign language, mathematics, art and science. Since state-run colleges and universities did not appear until later in history, the madrassas were critical centers of learning in many early Arabic cities.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
+		<English>Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has.
+
+Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+</Civ4GameText>
