@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- RESMOD v0.75 by CreativeMind -->
+<!-- Game Text Infos -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_GOLD_COAST</Tag>
+		<English>Gold Coast</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#229; &#207;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_IVORY_COAST</Tag>
+		<English>Ivory Coast</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#193;&#229;&#240;&#229;&#227; &#241;&#235;&#238;&#237;&#238;&#226;&#238;&#233; &#234;&#238;&#241;&#242;&#232;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_CUBA</Tag>
+		<English>Cuba</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#243;&#225;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_BRAZIL</Tag>
+		<English>Brazil</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#193;&#240;&#224;&#231;&#232;&#235;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_HUDSON</Tag>
+		<English>Hudson Bay</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#195;&#243;&#228;&#231;&#238;&#237;&#241;&#234;&#224;&#255; &#193;&#243;&#245;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT</Tag>
+		<English>Far Eastern Treaty Port</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#196;&#224;&#235;&#229;&#234;&#232;&#233; &#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#233; &#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#251;&#233; &#207;&#238;&#240;&#242;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_INDIA</Tag>
+		<English>Indian Trading Post</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#200;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#212;&#224;&#234;&#242;&#238;&#240;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_EAST_INDIES</Tag>
+		<English>East Indies</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#229; &#200;&#237;&#228;&#232;&#232;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_MALAYSIA</Tag>
+		<English>Malaya</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#204;&#224;&#235;&#224;&#233;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_CAPE_TOWN</Tag>
+		<English>Cape Town</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#229;&#233;&#239;&#242;&#224;&#243;&#237;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_VIRGINIA</Tag>
+		<English>Virginia</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#194;&#232;&#240;&#228;&#230;&#232;&#237;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_EAST_AFRICA</Tag>
+		<English>East Africa</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#192;&#244;&#240;&#232;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE</Tag>
+		<English>L'Encyclopedie</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#221;&#237;&#246;&#232;&#234;&#235;&#238;&#239;&#229;&#228;&#232;&#255; ("L'Encyclopedie")</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_AZTEC_CONQUEST</Tag>
+		<English>Aztec Conquest</English>
+		<French/><German/><Italian/><Spanish/><Russian>Aztec Conquest</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_INCA_CONQUEST</Tag>
+		<English>Inca Conquest</English>
+		<French/><German/><Italian/><Spanish/><Russian>Inca Conquest</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_HISPANIOLA</Tag>
+		<English>Hispaniola</English>
+		<French/><German/><Italian/><Spanish/><Russian>Hispaniola</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_QUEBEC</Tag>
+		<English>Quebec</English>
+		<French/><German/><Italian/><Spanish/><Russian>Quebec</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_NEW_ENGLAND</Tag>
+		<English>New England</English>
+		<French/><German/><Italian/><Spanish/><Russian>New England</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_JAMAICA</Tag>
+		<English>Jamaica</English>
+		<French/><German/><Italian/><Spanish/><Russian>Jamaica</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PANAMA</Tag>
+		<English>Panama</English>
+		<French/><German/><Italian/><Spanish/><Russian>Panama</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_LOUISIANA</Tag>
+		<English>Louisiana</English>
+		<French/><German/><Italian/><Spanish/><Russian>Louisiana</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PHILLIPPINES</Tag>
+		<English>Philippines</English>
+		<French/><German/><Italian/><Spanish/><Russian>Phillipines</Russian><Japanese/><Chinese/></TEXT>		
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_GUINEA</Tag>
+		<English>Guinea</English>
+		<French/><German/><Italian/><Spanish/><Russian>Guinea</Russian><Japanese/><Chinese/></TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
+		<English>[ICON_BULLET]Provides %D1_Mod </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
+		<English>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
+		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
+		<English> [SPACE] (%D1_Mod) </English>
+		<French/><German/><Italian/><Spanish/><Russian>[SPACE] (%D1_Mod)</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
+		<English>[ICON_BULLET]Provides %D1_Mod </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
+		<English>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
+		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
+		<English> [SPACE] (%D1_Mod) </English>
+		<French/><German/><Italian/><Spanish/><Russian>[SPACE] (%D1_Mod)</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_PREREQ_BONUS</Tag>
+		<English> [ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </Russian><Japanese/><Chinese/></TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Tag>
+		<English>[TAB]The idea of collecting all of the world's knowledge into a single work was an elusive vision for centuries. Many writers of antiquity (such as Aristotle) attempted to write comprehensively about all human knowledge. One of the most significant of these early encyclopedists was Pliny the Elder (first century CE), who wrote the Naturalis Historia (Natural History), a 37-volume account of the natural world that was widely copied in western Europe for much of the Middle Ages. [PARAGRAPH:1]The first Christian encyclopedia was Cassiodorus' Institutiones (560 CE) which inspired St. Isidore of Seville's Etymologiae (636) which became the most influential encyclopedia of the Early Middle Ages. The Bibliotheca by the Patriarch Photius (9th century) was the earliest Byzantine work that could be called an encyclopedia. Bartholomeus de Glanvilla's De proprietatibus rerum (1240) was the most widely read and quoted encyclopedia in the High Middle Ages while Vincent of Beauvais's Speculum Majus (1260) was the most ambitious encyclopedia in the late-medieval period at over 3 million words. [PARAGRAPH:1]The early Muslim compilations of knowledge in the Middle Ages included many comprehensive works, and much development of what we now call scientific method, historical method, and citation. About year 960, the Brethren of Purity of Basra were engaged in their Encyclopedia of the Brethren of Purity. Notable works include Abu Bakr al-Razi's encyclopedia of science, the Mutazilite Al-Kindi's prolific output of 270 books, and Ibn Sina's medical encyclopedia, which was a standard reference work for centuries. Also notable are works of universal history (or sociology) from Asharites, al-Tabri, al-Masudi, Tabari's History of the Prophets and Kings, Ibn Rustah, al-Athir, and Ibn Khaldun, whose Muqadimmah contains cautions regarding trust in written records that remain wholly applicable today. These scholars had an incalculable influence on methods of research and editing, due in part to the Islamic practice of isnad which emphasized fidelity to written record, checking sources, and skeptical inquiry.</English>
+		<French>[TAB]The idea of collecting all of the world's knowledge into a single work was an elusive vision for centuries. Many writers of antiquity (such as Aristotle) attempted to write comprehensively about all human knowledge. One of the most significant of these early encyclopedists was Pliny the Elder (first century CE), who wrote the Naturalis Historia (Natural History), a 37-volume account of the natural world that was widely copied in western Europe for much of the Middle Ages. [PARAGRAPH:1]The first Christian encyclopedia was Cassiodorus' Institutiones (560 CE) which inspired St. Isidore of Seville's Etymologiae (636) which became the most influential encyclopedia of the Early Middle Ages. The Bibliotheca by the Patriarch Photius (9th century) was the earliest Byzantine work that could be called an encyclopedia. Bartholomeus de Glanvilla's De proprietatibus rerum (1240) was the most widely read and quoted encyclopedia in the High Middle Ages while Vincent of Beauvais's Speculum Majus (1260) was the most ambitious encyclopedia in the late-medieval period at over 3 million words. [PARAGRAPH:1]The early Muslim compilations of knowledge in the Middle Ages included many comprehensive works, and much development of what we now call scientific method, historical method, and citation. About year 960, the Brethren of Purity of Basra were engaged in their Encyclopedia of the Brethren of Purity. Notable works include Abu Bakr al-Razi's encyclopedia of science, the Mutazilite Al-Kindi's prolific output of 270 books, and Ibn Sina's medical encyclopedia, which was a standard reference work for centuries. Also notable are works of universal history (or sociology) from Asharites, al-Tabri, al-Masudi, Tabari's History of the Prophets and Kings, Ibn Rustah, al-Athir, and Ibn Khaldun, whose Muqadimmah contains cautions regarding trust in written records that remain wholly applicable today. These scholars had an incalculable influence on methods of research and editing, due in part to the Islamic practice of isnad which emphasized fidelity to written record, checking sources, and skeptical inquiry.</French> 
+		<German>[TAB]The idea of collecting all of the world's knowledge into a single work was an elusive vision for centuries. Many writers of antiquity (such as Aristotle) attempted to write comprehensively about all human knowledge. One of the most significant of these early encyclopedists was Pliny the Elder (first century CE), who wrote the Naturalis Historia (Natural History), a 37-volume account of the natural world that was widely copied in western Europe for much of the Middle Ages. [PARAGRAPH:1]The first Christian encyclopedia was Cassiodorus' Institutiones (560 CE) which inspired St. Isidore of Seville's Etymologiae (636) which became the most influential encyclopedia of the Early Middle Ages. The Bibliotheca by the Patriarch Photius (9th century) was the earliest Byzantine work that could be called an encyclopedia. Bartholomeus de Glanvilla's De proprietatibus rerum (1240) was the most widely read and quoted encyclopedia in the High Middle Ages while Vincent of Beauvais's Speculum Majus (1260) was the most ambitious encyclopedia in the late-medieval period at over 3 million words. [PARAGRAPH:1]The early Muslim compilations of knowledge in the Middle Ages included many comprehensive works, and much development of what we now call scientific method, historical method, and citation. About year 960, the Brethren of Purity of Basra were engaged in their Encyclopedia of the Brethren of Purity. Notable works include Abu Bakr al-Razi's encyclopedia of science, the Mutazilite Al-Kindi's prolific output of 270 books, and Ibn Sina's medical encyclopedia, which was a standard reference work for centuries. Also notable are works of universal history (or sociology) from Asharites, al-Tabri, al-Masudi, Tabari's History of the Prophets and Kings, Ibn Rustah, al-Athir, and Ibn Khaldun, whose Muqadimmah contains cautions regarding trust in written records that remain wholly applicable today. These scholars had an incalculable influence on methods of research and editing, due in part to the Islamic practice of isnad which emphasized fidelity to written record, checking sources, and skeptical inquiry.</German>
+		<Italian>[TAB]The idea of collecting all of the world's knowledge into a single work was an elusive vision for centuries. Many writers of antiquity (such as Aristotle) attempted to write comprehensively about all human knowledge. One of the most significant of these early encyclopedists was Pliny the Elder (first century CE), who wrote the Naturalis Historia (Natural History), a 37-volume account of the natural world that was widely copied in western Europe for much of the Middle Ages. [PARAGRAPH:1]The first Christian encyclopedia was Cassiodorus' Institutiones (560 CE) which inspired St. Isidore of Seville's Etymologiae (636) which became the most influential encyclopedia of the Early Middle Ages. The Bibliotheca by the Patriarch Photius (9th century) was the earliest Byzantine work that could be called an encyclopedia. Bartholomeus de Glanvilla's De proprietatibus rerum (1240) was the most widely read and quoted encyclopedia in the High Middle Ages while Vincent of Beauvais's Speculum Majus (1260) was the most ambitious encyclopedia in the late-medieval period at over 3 million words. [PARAGRAPH:1]The early Muslim compilations of knowledge in the Middle Ages included many comprehensive works, and much development of what we now call scientific method, historical method, and citation. About year 960, the Brethren of Purity of Basra were engaged in their Encyclopedia of the Brethren of Purity. Notable works include Abu Bakr al-Razi's encyclopedia of science, the Mutazilite Al-Kindi's prolific output of 270 books, and Ibn Sina's medical encyclopedia, which was a standard reference work for centuries. Also notable are works of universal history (or sociology) from Asharites, al-Tabri, al-Masudi, Tabari's History of the Prophets and Kings, Ibn Rustah, al-Athir, and Ibn Khaldun, whose Muqadimmah contains cautions regarding trust in written records that remain wholly applicable today. These scholars had an incalculable influence on methods of research and editing, due in part to the Islamic practice of isnad which emphasized fidelity to written record, checking sources, and skeptical inquiry.</Italian>
+		<Spanish>[TAB]The idea of collecting all of the world's knowledge into a single work was an elusive vision for centuries. Many writers of antiquity (such as Aristotle) attempted to write comprehensively about all human knowledge. One of the most significant of these early encyclopedists was Pliny the Elder (first century CE), who wrote the Naturalis Historia (Natural History), a 37-volume account of the natural world that was widely copied in western Europe for much of the Middle Ages. [PARAGRAPH:1]The first Christian encyclopedia was Cassiodorus' Institutiones (560 CE) which inspired St. Isidore of Seville's Etymologiae (636) which became the most influential encyclopedia of the Early Middle Ages. The Bibliotheca by the Patriarch Photius (9th century) was the earliest Byzantine work that could be called an encyclopedia. Bartholomeus de Glanvilla's De proprietatibus rerum (1240) was the most widely read and quoted encyclopedia in the High Middle Ages while Vincent of Beauvais's Speculum Majus (1260) was the most ambitious encyclopedia in the late-medieval period at over 3 million words. [PARAGRAPH:1]The early Muslim compilations of knowledge in the Middle Ages included many comprehensive works, and much development of what we now call scientific method, historical method, and citation. About year 960, the Brethren of Purity of Basra were engaged in their Encyclopedia of the Brethren of Purity. Notable works include Abu Bakr al-Razi's encyclopedia of science, the Mutazilite Al-Kindi's prolific output of 270 books, and Ibn Sina's medical encyclopedia, which was a standard reference work for centuries. Also notable are works of universal history (or sociology) from Asharites, al-Tabri, al-Masudi, Tabari's History of the Prophets and Kings, Ibn Rustah, al-Athir, and Ibn Khaldun, whose Muqadimmah contains cautions regarding trust in written records that remain wholly applicable today. These scholars had an incalculable influence on methods of research and editing, due in part to the Islamic practice of isnad which emphasized fidelity to written record, checking sources, and skeptical inquiry.</Spanish>
+	</TEXT>
+</Civ4GameText>
