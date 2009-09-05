@@ -241,6 +241,7 @@ i500AD = 0
 i632AD = 33
 i640AD = 35
 i700AD = 50
+i712AD = 53
 i720AD = 55
 i770AD = 68
 i800AD = 75
@@ -418,7 +419,7 @@ tCoreAreasBR = (
 (46,47),   #Franks
 (99,15),   #Arabs
 (84,36),   #Bulgaria
-(35,31),   #Cordoba
+(35,32),   #Cordoba
 (33,40),   #Spain
 (59,65),   #Norse
 (61,36),   #Venice
