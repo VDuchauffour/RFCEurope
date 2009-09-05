@@ -231,6 +231,13 @@ class Barbs:
 			#Middle East
 			self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,2,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
+
+		#Mongols, the return! (aka Tamerlane)
+		if (iGameTurn >=con.i1359AD and iGameTurn <=con.i1431AD):
+			#Eastern Europe
+			self.spawnUnits( iBarbarian, (99,47),(85,57), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
+			#Anatolia
+			self.spawnUnits( iBarbarian, (99,17),(87,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
 			
 		
 

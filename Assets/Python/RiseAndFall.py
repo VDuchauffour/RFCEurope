@@ -2076,7 +2076,7 @@ class RiseAndFall:
 
         def createAdditionalUnits( self, iCiv, tPlot ):
         	if ( iCiv == iArabia ):
-        		utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 2)
+        		utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 3)
         	if ( iCiv == iBulgaria ):
         		utils.makeUnit(con.iKonnik, iCiv, tPlot, 2)
         	if ( iCiv == iCordoba ):
@@ -2124,7 +2124,7 @@ class RiseAndFall:
 		if (iCiv == iArabia):
         		utils.makeUnit(con.iArcher, iCiv, tPlot, 2)
         		utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
-        		utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 5)
+        		utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 3)
         	if (iCiv == iBulgaria):
         		utils.makeUnit(con.iArcher, iCiv, tPlot, 2)
         		utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
