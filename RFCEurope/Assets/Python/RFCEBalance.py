@@ -313,7 +313,7 @@ class RFCEBalance:
 		gc.setCityClusterAI( iVenecia, 1, 3, 1 )
 		gc.setCityClusterAI( iKiev, 1, 4, 1 )
 		gc.setCityClusterAI( iHungary, 1, 3, 1 )
-		gc.setCityClusterAI( iGermany, 2, 3, 1 )
+		gc.setCityClusterAI( iGermany, 1, 4, 1 )
 		gc.setCityClusterAI( iPoland, 1, 3, 0 )
 		gc.setCityClusterAI( iMoscow, 1, 4, 1 )
 		gc.setCityClusterAI( iGenoa, 1, 3, 1 )
