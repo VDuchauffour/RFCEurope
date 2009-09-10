@@ -179,6 +179,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Summer Palace-->
 			<BuildingClass>BUILDINGCLASS_GREAT_PALACE</BuildingClass>
@@ -375,6 +376,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo><!--Royal Academy-->
 			<BuildingClass>BUILDINGCLASS_ROYAL_ACADEMY</BuildingClass>
@@ -554,6 +556,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Versailles-->
 			<BuildingClass>BUILDINGCLASS_VERSAILLES</BuildingClass>
@@ -740,6 +743,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Walls-->
 			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
@@ -912,6 +916,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Dun (un-needed?)-->
 			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
@@ -1084,6 +1089,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Castle -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1282,6 +1288,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Kremlin -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1480,6 +1487,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hungarian Stronghold -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1678,6 +1686,7 @@
 			<bDamageEnemies>1</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Citadel-->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1881,6 +1890,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Barracks -->
 			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
@@ -2053,6 +2063,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Swedish Soldier Tennant -->
 			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
@@ -2230,6 +2241,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Archery Range-->
 			<BuildingClass>BUILDINGCLASS_ARCHERY_RANGE</BuildingClass>
@@ -2402,6 +2414,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Siege Workshop-->
 			<BuildingClass>BUILDINGCLASS_SIEGE_WORKSHOP</BuildingClass>
@@ -2574,6 +2587,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Stable-->
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
@@ -2749,6 +2763,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Stan (Bulgaria)-->
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
@@ -2924,6 +2939,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Granary-->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
@@ -3103,6 +3119,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Cordoban Noria-->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
@@ -3287,6 +3304,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Folwark-->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
@@ -3470,6 +3488,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Aqueduct-->
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
@@ -3637,6 +3656,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hammam -->
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
@@ -3803,6 +3823,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Lighthouse -->
 			<BuildingClass>BUILDINGCLASS_LIGHTHOUSE</BuildingClass>
@@ -3988,6 +4009,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Trading Post-->
 			<BuildingClass>BUILDINGCLASS_LIGHTHOUSE</BuildingClass>
@@ -4172,6 +4194,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- River Wharf-->
 			<BuildingClass>BUILDINGCLASS_WHARF</BuildingClass>
@@ -4342,6 +4365,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Harbor -->
 			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
@@ -4510,6 +4534,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Custom House-->
 			<BuildingClass>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClass>
@@ -4681,6 +4706,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Feitoria-->
 			<BuildingClass>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClass>
@@ -4856,6 +4882,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Drydock-->
 			<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
@@ -5033,6 +5060,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Venice Arsenal-->
 			<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
@@ -5210,6 +5238,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Forge-->
 			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
@@ -5411,6 +5440,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Carpenter-->
 			<BuildingClass>BUILDINGCLASS_CARPENTER</BuildingClass>
@@ -5591,6 +5621,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Mason-->
 			<BuildingClass>BUILDINGCLASS_MASON</BuildingClass>
@@ -5779,6 +5810,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Guild Hall-->
 			<BuildingClass>BUILDINGCLASS_GUILD_HALL</BuildingClass>
@@ -5951,6 +5983,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Textile Mill-->
 			<BuildingClass>BUILDINGCLASS_TEXTILE_MILL</BuildingClass>
@@ -6123,6 +6156,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Monument (tweak use?) -->
 			<BuildingClass>BUILDINGCLASS_OBELISK</BuildingClass>
@@ -6302,6 +6336,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Academy-->
 			<BuildingClass>BUILDINGCLASS_ACADEMY</BuildingClass>
@@ -6479,6 +6514,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- University-->
 			<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
@@ -6661,6 +6697,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Observatory-->
 			<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
@@ -6830,6 +6867,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Salon -->
 			<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
@@ -7004,6 +7042,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hospital-->
 			<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
@@ -7170,6 +7209,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Theatre-->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
@@ -7358,6 +7398,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hippodrome-->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
@@ -7541,6 +7582,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Opera House-->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
@@ -7722,6 +7764,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Market-->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
@@ -7895,6 +7938,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Brewery -->
 			<BuildingClass>BUILDINGCLASS_BREWERY</BuildingClass>
@@ -8082,6 +8126,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Jeweler -->
 			<BuildingClass>BUILDINGCLASS_JEWELER</BuildingClass>
@@ -8265,6 +8310,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>		
 		<BuildingInfo> <!-- Weaver -->
 			<BuildingClass>BUILDINGCLASS_WEAVER</BuildingClass>
@@ -8448,6 +8494,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Smokehouse -->
 			<BuildingClass>BUILDINGCLASS_SMOKEHOUSE</BuildingClass>
@@ -8635,6 +8682,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Tanner -->
 			<BuildingClass>BUILDINGCLASS_TANNER</BuildingClass>
@@ -8810,6 +8858,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Butcher-->
 			<BuildingClass>BUILDINGCLASS_BUTCHER</BuildingClass>
@@ -9011,6 +9060,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Grocer-->
 			<BuildingClass>BUILDINGCLASS_GROCER</BuildingClass>
@@ -9220,6 +9270,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Luxury Store -->
 			<BuildingClass>BUILDINGCLASS_LUXURY_STORE</BuildingClass>
@@ -9437,6 +9488,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Warehouse -->
 			<BuildingClass>BUILDINGCLASS_WAREHOUSE</BuildingClass>
@@ -9644,6 +9696,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Apothecary-->
 			<BuildingClass>BUILDINGCLASS_APOTHECARY</BuildingClass>
@@ -9810,6 +9863,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Bank-->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
@@ -9978,6 +10032,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Genoese Mint -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
@@ -10151,6 +10206,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Stock Exchange-->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
@@ -10319,6 +10375,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Courthouse-->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -10501,6 +10558,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Veche-->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -10683,6 +10741,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Rathaus-->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -10865,6 +10924,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Toll House-->
 			<BuildingClass>BUILDINGCLASS_TOLL_HOUSE</BuildingClass>
@@ -11031,6 +11091,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Dungeon-->
 			<BuildingClass>BUILDINGCLASS_DUNGEON</BuildingClass>
@@ -11217,6 +11278,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Night Watch-->
 			<BuildingClass>BUILDINGCLASS_NIGHT_WATCH</BuildingClass>
@@ -11403,6 +11465,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Levee-->
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
@@ -11572,6 +11635,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Dike -->
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
@@ -11744,6 +11808,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Inn-->
 			<BuildingClass>BUILDINGCLASS_INN</BuildingClass>
@@ -11957,6 +12022,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Coffee House-->
 			<BuildingClass>BUILDINGCLASS_COFFEE_HOUSE</BuildingClass>
@@ -12140,6 +12206,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Manor House-->
 			<BuildingClass>BUILDINGCLASS_MANOR_HOUSE</BuildingClass>
@@ -12319,6 +12386,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Burgundian Chateau-->
 			<BuildingClass>BUILDINGCLASS_MANOR_HOUSE</BuildingClass>
@@ -12498,6 +12566,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Herbalist-->
 			<BuildingClass>BUILDINGCLASS_HERBALIST</BuildingClass>
@@ -12664,6 +12733,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Infirmary-->
 			<BuildingClass>BUILDINGCLASS_INFIRMARY</BuildingClass>
@@ -12830,6 +12900,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Pagan Shrine -->
 			<BuildingClass>BUILDINGCLASS_PAGAN_SHRINE</BuildingClass>
@@ -13001,6 +13072,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Jewish Quarter -->
 			<BuildingClass>BUILDINGCLASS_JEWISH_QUARTER</BuildingClass>
@@ -13180,6 +13252,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Temple-->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_TEMPLE</BuildingClass>
@@ -13359,6 +13432,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant School-->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SCHOOL</BuildingClass>
@@ -13555,6 +13629,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>		
 		<BuildingInfo> <!-- Protestant Cathedral-->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_CATHEDRAL</BuildingClass>
@@ -13745,6 +13820,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Chapel-->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_CHAPEL</BuildingClass>
@@ -13924,6 +14000,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Seminary -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SEMINARY</BuildingClass>
@@ -14105,6 +14182,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Shrine -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SHRINE</BuildingClass>
@@ -14293,6 +14371,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Temple-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
@@ -14472,6 +14551,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Chapel-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CHAPEL</BuildingClass>
@@ -14651,6 +14731,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
@@ -14841,6 +14922,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Reliquary -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_RELIQUARY</BuildingClass>
@@ -15016,6 +15098,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic School-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SCHOOL</BuildingClass>
@@ -15202,6 +15285,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>		
 		<BuildingInfo> <!-- Islamic Madrassa-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_MADRASSA</BuildingClass>
@@ -15392,6 +15476,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Shrine-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SHRINE</BuildingClass>
@@ -15580,6 +15665,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Temple-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_TEMPLE</BuildingClass>
@@ -15759,6 +15845,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Cathedral-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CATHEDRAL</BuildingClass>
@@ -15949,6 +16036,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Chapel-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CHAPEL</BuildingClass>
@@ -16132,6 +16220,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Reliquary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_RELIQUARY</BuildingClass>
@@ -16312,6 +16401,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic School-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SCHOOL</BuildingClass>
@@ -16508,6 +16598,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>		
 		<BuildingInfo> <!-- Catholic Monastery-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_MONASTERY</BuildingClass>
@@ -16685,6 +16776,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Scriptorium-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SCRIPTORIUM</BuildingClass>
@@ -16872,6 +16964,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Seminary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SEMINARY</BuildingClass>
@@ -17053,6 +17146,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Shrine-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SHRINE</BuildingClass>
@@ -17241,6 +17335,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Temple-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_TEMPLE</BuildingClass>
@@ -17420,6 +17515,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Cathedral-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_CATHEDRAL</BuildingClass>
@@ -17610,6 +17706,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Chapel-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_CHAPEL</BuildingClass>
@@ -17793,6 +17890,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Reliquary -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_RELIQUARY</BuildingClass>
@@ -17973,6 +18071,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox School-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SCHOOL</BuildingClass>
@@ -18169,6 +18268,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>		
 		<BuildingInfo> <!-- Orthodox Monastery-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_MONASTERY</BuildingClass>
@@ -18346,6 +18446,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Scriptorium-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SCRIPTORIUM</BuildingClass>
@@ -18533,6 +18634,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Seminary -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SEMINARY</BuildingClass>
@@ -18714,6 +18816,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Shrine-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SHRINE</BuildingClass>
@@ -18902,6 +19005,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Sistine Chapel-->
 			<BuildingClass>BUILDINGCLASS_SISTINE_CHAPEL</BuildingClass>
@@ -19098,6 +19202,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Notre Dame-->
 			<BuildingClass>BUILDINGCLASS_NOTRE_DAME</BuildingClass>
@@ -19281,6 +19386,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Leaning Tower-->
 			<BuildingClass>BUILDINGCLASS_LEANING_TOWER</BuildingClass>
@@ -19466,6 +19572,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Theodosian Walls-->
 			<BuildingClass>BUILDINGCLASS_THEODOSIAN_WALLS</BuildingClass>
@@ -19650,6 +19757,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Topkapi Palace-->
 			<BuildingClass>BUILDINGCLASS_TOPKAPI_PALACE</BuildingClass>
@@ -19832,6 +19940,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>1</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Shrine of Uppsala-->
 			<BuildingClass>BUILDINGCLASS_SHRINE_OF_UPPSALA</BuildingClass>
@@ -20020,6 +20129,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- National Theatre -->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_THEATRE</BuildingClass>
@@ -20209,6 +20319,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hermitage -->
 			<BuildingClass>BUILDINGCLASS_HERMITAGE</BuildingClass>
@@ -20384,6 +20495,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Oxford -->
 			<!-- Rhye - start -->
@@ -20581,6 +20693,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Heroic Epic-->
 			<BuildingClass>BUILDINGCLASS_HEROIC_EPIC</BuildingClass>
@@ -20765,6 +20878,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Alhambra -->
 			<BuildingClass>BUILDINGCLASS_ALHAMBRA</BuildingClass>
@@ -20946,6 +21060,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Krak Des Chevaliers -->
 			<BuildingClass>BUILDINGCLASS_KRAK_DES_CHEVALIERS</BuildingClass>
@@ -21125,6 +21240,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_SAN_MARCO</BuildingClass>
@@ -21317,6 +21433,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- La Mezquita de Cordoba -->
 			<BuildingClass>BUILDINGCLASS_LA_MEZQUITA</BuildingClass>
@@ -21506,6 +21623,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ST_BASIL</BuildingClass>
@@ -21693,6 +21811,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Magna Carta -->
 			<BuildingClass>BUILDINGCLASS_MAGNA_CARTA</BuildingClass>
@@ -21866,6 +21985,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- St. Sophia (Kiev) -->
 			<BuildingClass>BUILDINGCLASS_SOPHIA_KIEV</BuildingClass>
@@ -22062,6 +22182,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!--The Dome of the Rock -->
 			<BuildingClass>BUILDINGCLASS_DOME_ROCK</BuildingClass>
@@ -22244,7 +22365,8 @@
 			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
-			<bAllowVassalUU>0</bAllowVassalUU>г
+			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>г
 		</BuildingInfo>
 		<BuildingInfo> <!-- Brandenburg Gate -->
 			<BuildingClass>BUILDINGCLASS_BRANDENBURG_GATE</BuildingClass>
@@ -22429,6 +22551,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Palacio De Pena -->
 			<BuildingClass>BUILDINGCLASS_PALACIO_DE_PENA</BuildingClass>
@@ -22603,6 +22726,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Monastery of Cluny-->
 			<BuildingClass>BUILDINGCLASS_MONASTERY_OF_CLUNY</BuildingClass>
@@ -22789,6 +22913,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Round Church -->
 			<BuildingClass>BUILDINGCLASS_ROUND_CHURCH</BuildingClass>
@@ -22973,6 +23098,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>1</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Corp 1-->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_1</BuildingClass>
@@ -23155,6 +23281,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CORPORATION_2</BuildingClass>
@@ -23337,6 +23464,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CORPORATION_3</BuildingClass>
@@ -23519,6 +23647,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CORPORATION_4</BuildingClass>
@@ -23701,6 +23830,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CORPORATION_5</BuildingClass>
@@ -23883,6 +24013,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CORPORATION_6</BuildingClass>
@@ -24065,6 +24196,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CORPORATION_7</BuildingClass>
@@ -24247,6 +24379,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Caravan House-->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
@@ -24420,6 +24553,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!--Leonardo's Inventions-->
 			<BuildingClass>BUILDINGCLASS_LEONARDOS_WORKSHOP</BuildingClass>
@@ -24621,6 +24755,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_GARDENS_AL_ANDALUS</BuildingClass>
@@ -24801,6 +24936,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MAGELLANS_VOYAGE</BuildingClass>
@@ -24989,6 +25125,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MARCO_POLO</BuildingClass>
@@ -25177,6 +25314,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ESCORIAL</BuildingClass>
@@ -25359,6 +25497,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Temple Mount -->
 			<BuildingClass>BUILDINGCLASS_TEMPLE_MOUNT</BuildingClass>
@@ -25557,6 +25696,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo><!-- Belem Tower -->
 			<BuildingClass>BUILDINGCLASS_BELEM_TOWER</BuildingClass>
@@ -25749,6 +25889,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo><!-- Golden Bull -->
 			<BuildingClass>BUILDINGCLASS_GOLDEN_BULL</BuildingClass>
@@ -25927,6 +26068,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo><!--Kalmar Castle-->
 			<BuildingClass>BUILDINGCLASS_KALMAR_CASTLE</BuildingClass>
@@ -26106,6 +26248,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!--Palais des Papes-->
 			<BuildingClass>BUILDINGCLASS_PALAIS_PAPES</BuildingClass>
@@ -26289,6 +26432,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo><!--Tomb of Al Khalid-->
 			<BuildingClass>BUILDINGCLASS_TOMB_KHAL</BuildingClass>
@@ -26474,6 +26618,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!--National Epic-->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
@@ -26659,7 +26804,8 @@
 			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
-			<bAllowVassalUU>0</bAllowVassalUU>g
+			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!--Plague-->
 			<BuildingClass>BUILDINGCLASS_PLAGUE</BuildingClass>
@@ -26821,6 +26967,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

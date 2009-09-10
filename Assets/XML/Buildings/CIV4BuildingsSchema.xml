@@ -89,6 +89,7 @@
 	<ElementType name="bDamageEnemies" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowBrotherWar" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowVassalUU" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAllowIrrigation" content="textOnly" dt:type="boolean"/>
 	<!-- 3Miro -->
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
@@ -550,6 +551,7 @@
 		<element type="bDamageEnemies"/>
 		<element type="bAllowBrotherWar"/>
 		<element type="bAllowVassalUU"/>
+		<element type="bAllowIrrigation"/>
 		<!-- 3Miro -->
 	</ElementType>
 	<ElementType name="BuildingInfos" content="eltOnly">
