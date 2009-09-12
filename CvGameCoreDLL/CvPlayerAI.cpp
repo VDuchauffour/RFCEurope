@@ -10321,6 +10321,14 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 			}
 		}
 
+		// 3MiroAI: estimate the potential of the religion, mainly consider it together with the Faith UP
+			if ( (UniquePowers[getID()* UP_TOTAL_NUM + UP_FAITH] > -1) ){
+				iCommerceCount += MAX_COM_SHRINE;
+			};
+			iValue += 5;
+		// 3MiroAI: end
+
+
 			if (bOurHolyCity)
 		{
 			iValue *= (3 + iCommerceCount);
