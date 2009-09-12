@@ -24936,7 +24936,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-			<bAllowIrrigation>0</bAllowIrrigation>
+			<bAllowIrrigation>1</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_MAGELLANS_VOYAGE</BuildingClass>
