@@ -1110,8 +1110,11 @@ iCoffee = 43
 iSlaves = 44
 iTea = 45
 iTobacco = 46
-iAccess = 47
-
+iOlives = 47
+iAccess = 48
+iNorthAccess = 49
+iSouthAccess = 50
+iAsiaAccess = 51
 
 #Buildings
 

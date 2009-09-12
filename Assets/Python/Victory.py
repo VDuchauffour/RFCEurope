@@ -742,15 +742,10 @@ class Victory:
 				else:
 					self.setGoal( iMoscow, 1, 0 )
 					
-			if ( iGameTurn == i1670AD and self.getGoal( iMoscow, 2 ) == -1 ):
-				iMoscowCulture = pMoscow.countTotalCulture()
-				if ( pBulgaria.isAlive() and pBulgaria.countTotalCulture() > iMoscowCulture ):
-					self.setGoal( iMoscow, 2, 0 )
-				elif ( pKiev.isAlive() and pKiev.countTotalCulture() > iMoscowCulture ):
-					self.setGoal( iMoscow, 2, 0 )
-				elif ( pPoland.isAlive() and pPoland.countTotalCulture() > iMoscowCulture ):
-					self.setGoal( iMoscow, 2, 0 )
-				else:
+			if ( self.getGoal( iMoscow, 2 ) == -1 ):
+				if ( pMoscow.countOwnedBonuses( con.iAccess ) > 0 ):
+					self.setGoal( iMoscow, 2, 1 )
+				elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
 					self.setGoal( iMoscow, 2, 1 )
 					
 		elif ( iPlayer == iGenoa and pGenoa.isAlive() ):
