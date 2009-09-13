@@ -5503,7 +5503,7 @@ int CvPlayerAI::AI_getSameReligionAttitude(PlayerTypes ePlayer) const
 		}
 
 		// 3MiroFaith: diplomacy boost
-		if ( isFaithBenefit( FP_DIPLOMACY)  ){
+		if ( isFaithBenefit( FP_DIPLOMACY) ){
 			iAttitude += GET_PLAYER(ePlayer).getFaithBenefit( FP_DIPLOMACY );
 		};
 	}
@@ -5516,7 +5516,7 @@ int CvPlayerAI::AI_getSameReligionAttitude(PlayerTypes ePlayer) const
 		};
 	};
 
-	iAttitude += AI_getFaithAttitude( ePlayer );
+	//iAttitude += AI_getFaithAttitude( ePlayer );
 
 	//Rhye - start
 	// 3Miro: religion is equally important fro this mod
