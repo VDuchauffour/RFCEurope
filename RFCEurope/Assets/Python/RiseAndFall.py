@@ -2435,7 +2435,7 @@ class RiseAndFall:
                 if ( iCiv == iArabia ):
                 	teamArabia.setHasTech( con.iTheology, True, iCiv, False, False )
                 	teamArabia.setHasTech( con.iCalendar, True, iCiv, False, False )
-                	teamArabia.setHasTech( con.iMapMaking, True, iCiv, False, False )
+                	teamArabia.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamArabia.setHasTech( con.iStirrup, True, iCiv, False, False )
                 	teamArabia.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
                 	teamArabia.setHasTech( con.iArchitecture, True, iCiv, False, False )
@@ -2458,7 +2458,7 @@ class RiseAndFall:
                 if ( iCiv == iCordoba ):
                 	teamCordoba.setHasTech( con.iTheology, True, iCiv, False, False )
                 	teamCordoba.setHasTech( con.iCalendar, True, iCiv, False, False )
-                	teamCordoba.setHasTech( con.iMapMaking, True, iCiv, False, False )
+                	teamCordoba.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamCordoba.setHasTech( con.iStirrup, True, iCiv, False, False )
                 	teamCordoba.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
                 	teamCordoba.setHasTech( con.iArchitecture, True, iCiv, False, False )
@@ -2473,7 +2473,7 @@ class RiseAndFall:
 
                 if ( iCiv == iSpain ):
                 	teamSpain.setHasTech( con.iCalendar, True, iCiv, False, False )
-                	teamSpain.setHasTech( con.iMapMaking, True, iCiv, False, False )
+                	teamSpain.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamSpain.setHasTech( con.iAstrolabe, True, iCiv, False, False )
                 	teamSpain.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamSpain.setHasTech( con.iTheology, True, iCiv, False, False )
@@ -2494,7 +2494,7 @@ class RiseAndFall:
                 	teamNorse.setHasTech( con.iVassalage, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iCalendar, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iAstrolabe, True, iCiv, False, False )
-                	teamNorse.setHasTech( con.iMapMaking, True, iCiv, False, False )
+                	teamNorse.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iManorialism, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
@@ -2502,7 +2502,7 @@ class RiseAndFall:
                 
                 if ( iCiv == iVenecia ):
                 	teamVenecia.setHasTech( con.iCalendar, True, iCiv, False, False )
-                	teamVenecia.setHasTech( con.iMapMaking, True, iCiv, False, False )
+                	teamVenecia.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamVenecia.setHasTech( con.iAstrolabe, True, iCiv, False, False )
                 	teamVenecia.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamVenecia.setHasTech( con.iTheology, True, iCiv, False, False )
@@ -2547,7 +2547,7 @@ class RiseAndFall:
                 	teamHungary.setHasTech( con.iArt, True, iCiv, False, False )
                 	
                 if ( iCiv == iGermany ):
-			teamGermany.setHasTech( con.iCalendar, True, iCiv, False, False )
+                	teamGermany.setHasTech( con.iCalendar, True, iCiv, False, False )
                 	teamGermany.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamGermany.setHasTech( con.iTheology, True, iCiv, False, False )
                 	teamGermany.setHasTech( con.iMonasticism, True, iCiv, False, False )
@@ -2565,7 +2565,7 @@ class RiseAndFall:
 
                 	
                 if ( iCiv == iPoland ):
-			teamPoland.setHasTech( con.iCalendar, True, iCiv, False, False )
+                	teamPoland.setHasTech( con.iCalendar, True, iCiv, False, False )
                 	teamPoland.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamPoland.setHasTech( con.iTheology, True, iCiv, False, False )
                 	teamPoland.setHasTech( con.iMonasticism, True, iCiv, False, False )
@@ -2582,7 +2582,7 @@ class RiseAndFall:
                 	
 
                 if ( iCiv == iMoscow ):
-		 #     teamMoscow.setHasTech( con.iCalendar, True, iCiv, False, False )
+                 #     teamMoscow.setHasTech( con.iCalendar, True, iCiv, False, False )
                  #     teamMoscow.setHasTech( con.iArchitecture, True, iCiv, False, False )
                  #     teamMoscow.setHasTech( con.iTheology, True, iCiv, False, False )
                  #     teamMoscow.setHasTech( con.iMonasticism, True, iCiv, False, False )
@@ -2598,19 +2598,19 @@ class RiseAndFall:
                  #     teamMoscow.setHasTech( con.iBlastFurnace, True, iCiv, False, False )
                  #     teamMoscow.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
                  #     teamMoscow.setHasTech( con.iChainMail, True, iCiv, False, False )
-			for iTech in range( con.iFarriers + 1 ):
-				teamMoscow.setHasTech( iTech, True, iCiv, False, False )
-			teamMoscow.setHasTech( con.iBlastFurnace, True, iCiv, False, False )
-			teamMoscow.setHasTech( con.iCodeOfLaws, True, iCiv, False, False )
-			teamMoscow.setHasTech( con.iGothicArchitecture, True, iCiv, False, False )
-			teamMoscow.setHasTech( con.iChivalry, True, iCiv, False, False )
-			teamMoscow.setHasTech( con.iAristocracy, True, iCiv, False, False )
-			teamMoscow.setHasTech( con.iCivilService, True, iCiv, False, False )
+                    for iTech in range( con.iFarriers + 1 ):
+                        teamMoscow.setHasTech( iTech, True, iCiv, False, False )
+                    teamMoscow.setHasTech( con.iBlastFurnace, True, iCiv, False, False )
+                    teamMoscow.setHasTech( con.iCodeOfLaws, True, iCiv, False, False )
+                    teamMoscow.setHasTech( con.iGothicArchitecture, True, iCiv, False, False )
+                    teamMoscow.setHasTech( con.iChivalry, True, iCiv, False, False )
+                    teamMoscow.setHasTech( con.iAristocracy, True, iCiv, False, False )
+                    teamMoscow.setHasTech( con.iCivilService, True, iCiv, False, False )
 
                 	
                 if ( iCiv == iGenoa ):
                 	teamGenoa.setHasTech( con.iCalendar, True, iCiv, False, False )
-                	teamGenoa.setHasTech( con.iMapMaking, True, iCiv, False, False )
+                	teamGenoa.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamGenoa.setHasTech( con.iAstrolabe, True, iCiv, False, False )
                 	teamGenoa.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamGenoa.setHasTech( con.iTheology, True, iCiv, False, False )
@@ -2645,7 +2645,7 @@ class RiseAndFall:
                 	teamPortugal.setHasTech( con.iBlastFurnace, True, iCiv, False, False )
                 	teamPortugal.setHasTech( con.iCodeOfLaws, True, iCiv, False, False )
                 	teamPortugal.setHasTech( con.iLiterature, True, iCiv, False, False )
-                	teamPortugal.setHasTech( con.iLateenSails, True, iCiv, False, False )
+                	teamPortugal.setHasTech( con.iMapMaking, True, iCiv, False, False )
                 	teamPortugal.setHasTech( con.iAristocracy, True, iCiv, False, False )
 
                 	
@@ -2659,18 +2659,18 @@ class RiseAndFall:
                 	teamAustria.setHasTech( con.iAristocracy, True, iCiv, False, False )
 
                 	
- 		if ( iCiv == iTurkey ):
+                if ( iCiv == iTurkey ):
                 	for iTech in range( con.iChivalry + 1 ):
                 		teamTurkey.setHasTech( iTech, True, iCiv, False, False )
                 	teamTurkey.setHasTech( con.iGunpowder, True, iCiv, False, False )   
                 	teamTurkey.setHasTech( con.iMilitaryTradition, True, iCiv, False, False )              
            
                 
-		if ( iCiv == iSweden ):
+                if ( iCiv == iSweden ):
                 	for iTech in range( con.iAstronomy + 1 ):
                 		teamSweden.setHasTech( iTech, True, iCiv, False, False )          
                 		
-		if ( iCiv == iDutch ):
+                if ( iCiv == iDutch ):
                 	for iTech in range( con.iAstronomy + 1 ):
                 		teamDutch.setHasTech( iTech, True, iCiv, False, False )
 

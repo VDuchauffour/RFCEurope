@@ -894,14 +894,14 @@ iHerbalMedicine=15
 iFeudalism=16
 iFarriers=17
 #High
-iMapMaking=18
+iLateenSails=18
 iBlastFurnace=19
 iSiegeEngines=20
 iGothicArchitecture=21
 iLiterature=22
 iCodeOfLaws=23
 iAristocracy=24
-iLateenSails=25
+iMapMaking=25
 iPlateArmor=26
 iMonumentBuilding=27
 iClassicalKnowledge=28
