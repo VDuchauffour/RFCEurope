@@ -13833,9 +13833,9 @@
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
 		</UnitInfo>
-		<UnitInfo> <!--Trireme-->
-			<Class>UNITCLASS_TRIREME</Class>
-			<Type>UNIT_TRIREME</Type>
+		<UnitInfo> <!--War Galley-->
+			<Class>UNITCLASS_WAR_GALLEY</Class>
+			<Type>UNIT_WAR_GALLEY</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
 			<Capture>NONE</Capture>
@@ -13844,9 +13844,9 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_TRIREME</Description>
-			<Civilopedia>CHANGED_TXT_KEY_UNIT_TRIREME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRIREME_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_WAR_GALLEY</Description>
+			<Civilopedia>CHANGED_TXT_KEY_UNIT_WAR_GALLEY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WAR_GALLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -13889,7 +13889,7 @@
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_COGGE</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_CARRACK</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -13929,7 +13929,7 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
@@ -13941,7 +13941,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>20</iMinAreaSize>
-			<iMoves>4</iMoves>
+			<iMoves>5</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -13965,7 +13965,7 @@
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>2</iCombat>
+			<iCombat>4</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -13990,18 +13990,8 @@
 			<TerrainDefenses/>
 			<FeatureAttacks/>
 			<FeatureDefenses/>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_GALLEY</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_GALLEY</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitClassAttackMods/>
+			<UnitClassDefenseMods/>
 			<UnitCombatMods/>
 			<UnitCombatCollateralImmunes/>
 			<DomainMods/>
@@ -14024,7 +14014,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TRIREME</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_WAR_GALLEY</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -14321,7 +14311,7 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
+			<PrereqTech>TECH_MAP_MAKING</PrereqTech>
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
@@ -14333,7 +14323,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>20</iMinAreaSize>
-			<iMoves>5</iMoves>
+			<iMoves>4</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -14348,12 +14338,7 @@
 			<iTradeMultiplier>0</iTradeMultiplier>
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
-			<TerrainImpassables>
-				<TerrainImpassable>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrainImpassable>1</bTerrainImpassable>
-				</TerrainImpassable>
-			</TerrainImpassables>
+			<TerrainImpassables/>
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>

@@ -1226,7 +1226,7 @@
 			<bIrrigation>0</bIrrigation>
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
-			<iGridX>4</iGridX>
+			<iGridX>5</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
 			<CommerceFlexible/>
@@ -1243,7 +1243,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_ASTROLABE</PrereqTech>
+				<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs/>
 			<Quote>TXT_KEY_TECH_EU_MAPMAKING_QUOTE</Quote>
@@ -1694,7 +1694,7 @@
 			<bIrrigation>0</bIrrigation>
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
-			<iGridX>5</iGridX>
+			<iGridX>4</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
 			<CommerceFlexible/>
@@ -1711,7 +1711,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-			  <PrereqTech>TECH_MAP_MAKING</PrereqTech>
+			  <PrereqTech>TECH_ASTROLABE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs/>
 			<Quote>TXT_KEY_TECH_EU_LATEEN_SAILS_QUOTE</Quote>
@@ -2122,7 +2122,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
+				<PrereqTech>TECH_MAP_MAKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs/>
 			<Quote>TXT_KEY_TECH_EU_CLOCK_MAKING_QUOTE</Quote>

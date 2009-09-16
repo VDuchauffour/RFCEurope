@@ -283,9 +283,13 @@
 		<French/><German/><Italian/><Spanish/><Russian>&#203;&#232;&#237;&#229;&#233;&#237;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COGGE</Tag>
-		<English>Cogge</English>
+		<English>Cog</English>
 		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#227;&#227;&#229;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_WAR_GALLEY</Tag>
+		<English>War Galley</English>
+		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#227;&#227;&#229;</Russian><Japanese/><Chinese/></TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRACK</Tag>
 		<English>Carrack</English>
 		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#240;&#224;&#234;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
