@@ -135,6 +135,7 @@ i1660AD = con.i1660AD
 i1670AD = con.i1670AD
 i1680AD = con.i1680AD
 i1700AD = con.i1700AD
+i1730AD = con.i1730AD
 i1750AD = con.i1750AD
 
 
@@ -683,7 +684,7 @@ class Victory:
 				iCount = 0
 				for iVassal in range( iNumMajorPlayers ):
 					pVassal = gc.getPlayer( iVassal )
-					if ( iVassal != iGermany and pPlayer.isAlive() ):
+					if ( iVassal != iGermany and pVassal.isAlive() ):
 						if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
 							iCount += 1
 				
@@ -723,8 +724,23 @@ class Victory:
 			if ( iGameTurn == i1600AD and self.getGoal( iPoland, 1 ) == -1 ):
 				self.setGoal( iPoland, 1, 1 )
 				
-			if ( iGameTurn == i1660AD+1 and self.getGoal( iPoland, 2 ) == -1 ):
-				self.setGoal( iPoland, 2, 0 )
+			#if ( iGameTurn == i1660AD+1 and self.getGoal( iPoland, 2 ) == -1 ):
+			#	self.setGoal( iPoland, 2, 0 )
+			if ( iGameTurn == i1730AD and self.getGoal( iPoland, 2 ) == -1 ):
+				iPolishFaith = pPoland.getFaith()
+				bMostFaithful = True
+				# 3Miro: iNumPlayers - 1 => do not count the Pope
+				for iFaithful in range( iNumPlayers - 1 ):
+					pFaithful = gc.getPlayer( i )
+					if ( pFaithful.isAlive() and pFaithful.getStateReligion() == con.iCatholicism and pFaithful.getFaith() > iPolishFaith ):
+						bMostFaithful = False
+				if ( pPoland.getStateReligion() != con.iCatholicism ):
+					bMostFaithful = False
+				if ( bMostFaithful ):
+					self.setGoal( iPoland, 2, 1 )
+				else:
+					self.setGoal( iPoland, 2, 0 )
+					
 				
 		elif ( iPlayer == iMoscow and pMoscow.isAlive() ):
 			
@@ -1030,8 +1046,9 @@ class Victory:
                 	if ( pPoland.isAlive() ):
                 		if ( bConquest ):
                 			if ( self.getGoal( iPoland, 1 ) == -1 ):
-                				if ( playerType == iGermany or playerType == iMoscow or playerType == iKiev ):
-                					self.setGoal( iPoland, 1, 0 )
+                				# 3Miro: Change UHV to "any" city
+                				#if ( playerType == iGermany or playerType == iMoscow or playerType == iKiev ):
+                				self.setGoal( iPoland, 1, 0 )
                 					
                 elif ( iPlayer == iMoscow ):
                 	if ( pMoscow.isAlive() ):
@@ -1137,24 +1154,24 @@ class Victory:
                                         	                                iMonasteryCounter += 1
                                         	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
                                         	                	self.setGoal( iKiev, 2, 1 ) 
-                                        	                	
-                elif ( iPlayer == iPoland ):
-                	if ( pPoland.isAlive() ):
-                		if ( self.getGoal( iPoland, 2 ) == -1 ):
-                			if ( iGameTurn <= i1700AD ):
-                				if ( iBuilding == con.iCatholicMonastery or iBuilding == con.iCatholicCathedral ):
-                					iNumCities = pPoland.getNumCities()
-                					if ( iNumCities > 7 ):
-								iCathedralCounter = 0
-								iMonasteryCounter = 0
-								for iCity in range(iNumCities):
-									pCity = pPoland.getCity(iCity)
-                                        	                        if (pCity.hasBuilding(con.iCatholicCathedral)):
-                                        	                                iCathedralCounter += 1
-                                        	                        if (pCity.hasBuilding(con.iCatholicMonastery)):
-                                        	                                iMonasteryCounter += 1
-                                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
-                                        	                	self.setGoal( iPoland, 2, 1 )                 						
+                # 3Miro: Polish UHV chnaged                 	                	
+                #elif ( iPlayer == iPoland ):
+                #	if ( pPoland.isAlive() ):
+                #		if ( self.getGoal( iPoland, 2 ) == -1 ):
+                #			if ( iGameTurn <= i1700AD ):
+                #				if ( iBuilding == con.iCatholicMonastery or iBuilding == con.iCatholicCathedral ):
+                #					iNumCities = pPoland.getNumCities()
+                #					if ( iNumCities > 7 ):
+		#						iCathedralCounter = 0
+		#						iMonasteryCounter = 0
+		#						for iCity in range(iNumCities):
+		#							pCity = pPoland.getCity(iCity)
+                #                        	                        if (pCity.hasBuilding(con.iCatholicCathedral)):
+                #                        	                                iCathedralCounter += 1
+                #                        	                        if (pCity.hasBuilding(con.iCatholicMonastery)):
+                #                        	                                iMonasteryCounter += 1
+                #                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
+                #                        	                	self.setGoal( iPoland, 2, 1 )                 						
 
 		elif ( iPlayer == iGenoa ): # Buildings Goal 2
 			if ( pGenoa.isAlive() ):
