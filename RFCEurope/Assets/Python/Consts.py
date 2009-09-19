@@ -1035,13 +1035,13 @@ iCannon= 68
 iFieldArtillery= 69
 iWorkboat= 70
 iGalley= 71
-iTrireme= 72
+iWarGalley= 72
 iCaravel= 73
 iCogge= 74
 iVeniceGalleas= 75
 iCarrack= 76
 iGalleon= 77
-iWarGalleon= 78
+iHolk= 78
 iPrivateer= 79
 iFrigate= 80
 iSpy= 81
@@ -1058,8 +1058,9 @@ iHighlander= 91
 iWelshLongbowman= 92
 iTagmata= 93
 iSeljuk= 94
+iGunGalley=95
 
-iProsecutorClass = 63
+iProsecutorClass = 64
 
 
 

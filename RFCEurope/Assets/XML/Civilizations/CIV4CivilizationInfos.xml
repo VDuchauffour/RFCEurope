@@ -2245,7 +2245,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_COGGE</UnitClassType>
+					<UnitClassType>UNITCLASS_GUN_GALLEY</UnitClassType>
 					<UnitType>UNIT_VENICE_GALLEAS</UnitType>
 				</Unit>
 				<Unit>

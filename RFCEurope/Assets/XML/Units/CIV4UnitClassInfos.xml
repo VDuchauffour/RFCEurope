@@ -519,14 +519,23 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GALLEON</DefaultUnit>
 		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_WAR_GALLEON</Type>
-			<Description>TXT_KEY_UNIT_WAR_GALLEON</Description>
+        <UnitClassInfo>
+			<Type>UNITCLASS_GUN_GALLEY</Type>
+			<Description>TXT_KEY_UNIT_GUN_GALLEY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
-			<DefaultUnit>UNIT_WAR_GALLEON</DefaultUnit>
+			<DefaultUnit>UNIT_GUN_GALLEY</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_HOLK</Type>
+			<Description>TXT_KEY_UNIT_HOLK</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>UNIT_HOLK</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PRIVATEER</Type>

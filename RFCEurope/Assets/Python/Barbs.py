@@ -127,7 +127,7 @@ class Barbs:
                 
 		#Mediterranean Pirates (Light before 1500,then heavy for rest of game)
 		if ( iGameTurn >= con.i960AD and iGameTurn < con.i1401AD):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iTrireme, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 0)
+			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iWarGalley, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 0)
 		
 		if ( iGameTurn >= con.i1401AD ):
 			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCaravel, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 0)
