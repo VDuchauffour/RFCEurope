@@ -2479,7 +2479,9 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_CLOCKMAKING</PrereqTech>
 			</OrPreReqs>
-			<AndPreReqs/>
+			<AndPreReqs>
+				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EU_OPTICS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>AS2D_TECH_MP_OPTICS</SoundMP>

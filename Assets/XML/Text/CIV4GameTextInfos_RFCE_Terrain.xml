@@ -7,8 +7,12 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
-		<English>Dense Forest</English>
+		<English>Forest</English>
 		<French/><German/><Italian/><Spanish/><Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
+		<English>Woodland</English>
+		<French/><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
 		<English>Moorland</English>

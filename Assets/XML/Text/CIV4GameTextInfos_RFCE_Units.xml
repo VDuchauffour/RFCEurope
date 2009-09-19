@@ -288,15 +288,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_GALLEY</Tag>
 		<English>War Galley</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#227;&#227;&#229;</Russian><Japanese/><Chinese/></TEXT>
-		<TEXT>
+		<French/><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRACK</Tag>
 		<English>Carrack</English>
 		<French/><German/><Italian/><Spanish/><Russian>&#202;&#224;&#240;&#224;&#234;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WAR_GALLEON</Tag>
-		<English>War Galleon</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#193;&#238;&#229;&#226;&#238;&#233; &#195;&#224;&#235;&#229;&#238;&#237;</Russian><Japanese/><Chinese/></TEXT>
+		<Tag>TXT_KEY_UNIT_HOLK</Tag>
+		<English>Holk</English>
+		<French/><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GUN_GALLEY</Tag>
+		<English>Gun Galley</English>
+		<French/><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROSECUTOR</Tag>
 		<English>Religious Prosecutor</English>
