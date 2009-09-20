@@ -2150,7 +2150,7 @@ class RiseAndFall:
         			#utils.makeUnit(con.iGalley, iCiv, tSeaPlot, 1 )
         			#utils.makeUnit(con.iWarGalley, iCiv, tSeaPlot, 1 )
         			pNorse.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                pNorse.initUnit(con.iTrireme, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pNorse.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(con.iSettler, iCiv, tSeaPlot, 1 )
         			utils.makeUnit(con.iArcher, iCiv, tSeaPlot, 1 )
         	if (iCiv == iVenecia):
@@ -2162,7 +2162,7 @@ class RiseAndFall:
         		if ( tSeaPlot ):
         			utils.makeUnit(con.iWorkboat, iCiv, tSeaPlot, 1 )
 				pVenecia.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                pVenecia.initUnit(con.iTrireme, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pVenecia.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
         			utils.makeUnit(con.iSettler,iCiv,tSeaPlot,1)
 				utils.makeUnit(con.iArcher,iCiv,tSeaPlot,1)
 		if (iCiv == iKiev):
