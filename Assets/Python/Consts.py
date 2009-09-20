@@ -318,7 +318,7 @@ tCapitals = (
 (88, 56), #tMoscow
 (50, 34), #tGenoa
 (43, 53), #tLondon, England
-(22, 32), #tLisboa, Portugal
+(22, 31), #tLisboa, Portugal
 (63, 39), #tAustria
 (88, 22), #tTurkey
 (67, 64), #tSweden
