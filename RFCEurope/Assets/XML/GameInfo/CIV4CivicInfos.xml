@@ -81,7 +81,7 @@
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_ELECTORATE</Type>
 			<Description>TXT_KEY_CIVIC_ELECTORATE</Description>
-			<Civilopedia>TXT_KEY_CIVIC_ELECTORATE</Civilopedia>
+			<Civilopedia>TXT_KEY_CIVIC_ELECTORATE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_ELECTORATE</Strategy>
 			<Button>,Art/Interface/Buttons/Civics/Representation.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,2</Button>
 			<TechPrereq>TECH_FEUDALISM</TechPrereq> <!-- Unknown, sedna17 -->
