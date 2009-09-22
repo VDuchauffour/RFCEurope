@@ -190,3 +190,4 @@ extern int *StrategicTileY;
 
 // 3Miro GlobalWarming
 extern bool USE_GLOBAL_WARMING;
+extern int FAST_TERRAIN;

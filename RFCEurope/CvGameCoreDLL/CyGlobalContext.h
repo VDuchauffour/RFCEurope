@@ -411,6 +411,9 @@ public:
 	// 3Miro: set strategic tile
 	void setStrategicTile( int iCiv, int iX, int iY );
 
+	// 3Miro: set fast terrain (i.e. ships move fast over ocean)
+	void setFastTerrain( int iFastTerrain );
+
 };
 
 #endif	// CyGlobalContext_h

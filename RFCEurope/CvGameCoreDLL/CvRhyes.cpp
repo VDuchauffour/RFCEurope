@@ -150,6 +150,7 @@ int BARBARIAN = -1;
 bool *AI_INDEP_HUNT = NULL;
 
 bool USE_GLOBAL_WARMING = true;
+int FAST_TERRAIN = -1;
 
 int *StrategicTileX = NULL;
 int *StrategicTileY = NULL;
