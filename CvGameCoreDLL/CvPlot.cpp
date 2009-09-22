@@ -2785,7 +2785,8 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 	iRegularCost *= GC.getMOVE_DENOMINATOR();
 
 	//Rhye - start
-	if (getTerrainType() == 6) //ocean
+	// 3Miro: Fast Movement over some terrain
+	if (getTerrainType() == FAST_TERRAIN)
 	{
 		iRegularCost /= 2;
 	}

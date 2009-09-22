@@ -1056,3 +1056,7 @@ void CyGlobalContext::setStrategicTile( int iCiv, int iX, int iY ){
 	StrategicTileX[iCiv] = iX;
 	StrategicTileY[iCiv] = iY;
 };
+
+void CyGlobalContext::setFastTerrain( int iFastTerrain ){
+	FAST_TERRAIN = iFastTerrain;
+};

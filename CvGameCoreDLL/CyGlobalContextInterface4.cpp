@@ -259,5 +259,8 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		// set strategic tiles
 		.def("setStrategicTile", &CyGlobalContext::setStrategicTile, "void ( int iCiv, int iX, int iY )") // 3Miro
+
+		// set fast Terrain
+		.def("setFastTerrain", &CyGlobalContext::setFastTerrain, "void ( int iFastTerrain )") // 3Miro
 		;
 }

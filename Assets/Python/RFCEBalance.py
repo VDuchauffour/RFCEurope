@@ -451,6 +451,9 @@ class RFCEBalance:
 		# GlobalWarming
 		gc.setGlobalWarming( False )
 		
+		# Set FastTerrain (i.e. double movement over ocean)
+		gc.setFastTerrain( con.iTerrainOcean )
+		
 		# set religious spread factors
 		for iCiv in range( iNumTotalPlayers + 1 ): # include barbs
 			for iRel in range( con.iNumReligions ):
