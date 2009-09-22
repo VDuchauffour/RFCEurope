@@ -43,7 +43,7 @@ lBurgos = [32,35,50,0] # 720 AD
 #lZaragoza = [35,32,45,0] # 720 AD
 lValencia = [34,29,50,0] #700 AD
 lPamplona = [34,35,50,0] #500 AD
-lBurdigala = [38,40,0,0] #500 AD
+lBurdigala = [37,40,0,0] #500 AD
 lNantes = [37,45,0,0] #500 AD
 lAlger = [39,20,0,0] #500 AD
 lBarcino = [39,31,0,0] #500 AD
@@ -167,6 +167,10 @@ class Barbs:
 		if (iGameTurn >= con.i632AD and iGameTurn < con.i800AD):
 			self.spawnUnits( iBarbarian, (60,30),(75,40), con.iScout, 1 + iHandicap*2, iGameTurn,5,0,utils.outerInvasion,1)
 		
+		#Pre-Bulgarian Slavs in South Balkans
+		if (iGameTurn > con.i500AD and iGameTurn < con.i640AD):
+			self.spawnUnits( iBarbarian, (68,18),(78,28), con.iScout, 1 + iHandicap*2, iGameTurn,5,0,utils.outerInvasion,1)	
+
 		#Misc Asiatic tribes to keep Ukraine empty
 		if (iGameTurn >= con.i632AD and iGameTurn < con.i1000AD):
 			self.spawnUnits( iBarbarian, (80,36),(87,40), con.iScout, 1 + iHandicap*2, iGameTurn,7,1,utils.outerInvasion,1)
@@ -251,7 +255,7 @@ class Barbs:
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent2,lZaragoza, "Zaragoza", iGameTurn, 1, con.iArcher, 1) 
 		self.foundCity(iIndependent2, lPamplona, "Pamplona", iGameTurn, 1, con.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, con.iArcher, 1)
 		#self.foundCity(iIndependent2, lNantes, "Nantes", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lBarcino, "Barcino", iGameTurn, 1, con.iArcher, 1)
