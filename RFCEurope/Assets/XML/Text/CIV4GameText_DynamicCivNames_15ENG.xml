@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_ENGLAND_DESC</Tag>
 		<English>The English</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Anglais</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_ENGLAND_SHORT_DESC</Tag>
 		<English>England</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Angleterre</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Tag>
 		<English>English</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>anglais:anglaise:anglaises:anglaises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_ENG00</Tag>
 		<English>Kingdom of England</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Royaume-Uni</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

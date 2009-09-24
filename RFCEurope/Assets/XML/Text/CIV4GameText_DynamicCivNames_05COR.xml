@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_CORDOBA_DESC</Tag>
 		<English>The Cordobans</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Cordouans</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_CORDOBA_SHORT_DESC</Tag>
 		<English>Cordoba</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Courdoue</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_CIV_CORDOBA_ADJECTIVE</Tag>
 		<English>Cordoban</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>courdouan:courdouanne:courdouans:courdouannes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_DN_COR00</Tag>
 		<English>Al-Andalus</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Califat d'Al-Andalus</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

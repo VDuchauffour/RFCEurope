@@ -16,7 +16,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_BYZ</Tag>
 		<English>The Power the Emperor:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de l'Empereur :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -25,7 +25,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_BYZ2</Tag>
 		<English>The core of the Empire cannot collapse due to instability</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Le coeur de l'Empire ne peut pas s'effondrer &#224; cause de l'instabilit&#233;</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -34,7 +34,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUL</Tag>
 		<English>The Power of the Khan:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir du Khan :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -43,7 +43,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUL2</Tag>
 		<English>No resistance in conquered cities</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Pas de r&#233;sistance dans les villes conquites</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -52,7 +52,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRA</Tag>
 		<English>The Power of Stability:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Stabilit&#233; :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -61,7 +61,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRA2</Tag>
 		<English>Reduced penalty for expanding into foreign land.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>P&#233;nalit&#233; r&#233;duite pour l'expension lointaine</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -70,7 +70,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUR</Tag>
 		<English>The Power of Culture:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Culture :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -79,7 +79,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUR2</Tag>
 		<English>+2 Culture and +1 Happiness in every city. </English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>+2 Culture et +1 Bonheur dans chaque ville</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -88,7 +88,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA</Tag>
 		<English>The Power of Faith:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Foi :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -97,7 +97,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
 		<English>State Religion spreads to every city with a Temple. </English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -106,7 +106,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_COR</Tag>
 		<English>The Power of Medicine:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de ma M&#233;decine :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -115,7 +115,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_COR2</Tag>
 		<English>All units start with Medic I promotion</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Chaque unit&#233; commence avec la promotion Infirmier I</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -124,7 +124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN</Tag>
 		<English>The Power of The Inquisition:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de l'Inquisition :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -133,7 +133,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN2</Tag>
 		<English>No stability penalty from Religious Prosecution and +2EP per city.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Pas de p&#233;nalit&#233;s pour les Pers&#233;cuteur et +2XP par ville.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -142,7 +142,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR</Tag>
 		<English>The Power of the Sea:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Mer :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -151,7 +151,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR2</Tag>
 		<English>All naval units can enter ocean tiles.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Toutes les unit&#233;s navales peuvent entrer dans l'oc&#233;an.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -160,7 +160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_VEN</Tag>
 		<English>The Power of Trade:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir des &#233;changes :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -169,7 +169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_VEN2</Tag>
 		<English>Starts with Merchant Republic.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Commence avec la Republique Marchande.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -178,7 +178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_KIE</Tag>
 		<English>The Power of Growth:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Croissance:</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -187,7 +187,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_KIE2</Tag>
 		<English>Yield 2 extra food per city.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>+2 Nourritures par ville.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -196,7 +196,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_HUN</Tag>
 		<English>The Power of Tolerance:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Tol&#233;rance :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -205,7 +205,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_HUN2</Tag>
 		<English>No unhappiness or instability from foreign culture or religion.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Pas de m&#233;contentement ou d'instabilit&#233; pour une cuture &#233;trang&#232;re ou une religion non-officiel.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -214,7 +214,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_GER</Tag>
 		<English>The Power of Industry:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de l'Industrie :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -223,7 +223,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_GER2</Tag>
 		<English>25% faster unit production after the discovery of Gunpowder.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Production d'unit&#233;s 25%% plus rapide apr&#232;s la d&#233;couverte de la Poudre &#224; Canon.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -232,7 +232,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_POL</Tag>
 		<English>The Power of Golden Liberty:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Libert&#233; :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -241,7 +241,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_POL2</Tag>
 		<English>+10% research and +1 happyness in all cities.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>+10%% de recherche et +1 Bonheur dans les villes.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -250,7 +250,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS</Tag>
 		<English>The Power of the Endless Land:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de l'Expension :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -259,7 +259,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
 		<English>-50% decrease in all maintenance cost assosiated with the number of the cities.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>-50%% de coût de maintenance pour le nombre de villes.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -268,7 +268,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN</Tag>
 		<English>The Power of Banking:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir des Banques :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -277,7 +277,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN2</Tag>
 		<English>Half Mercenaries cost.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Coût des Mercenaires divis&#233; par 2.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -286,7 +286,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG</Tag>
 		<English>The Power of Cottage Economy:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir des Cottages :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -295,7 +295,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG2</Tag>
 		<English>Workshops give +1 hammer.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Atelier ont +1 Marteaux.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -304,7 +304,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR</Tag>
 		<English>The Power of Discovery:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la d&#233;couverte :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -313,7 +313,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR2</Tag>
 		<English>Colonial Projects are 40% cheaper to build</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Les projets coloniaux coûte 40%% moins cher &#224; produire.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -322,7 +322,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_AUS</Tag>
 		<English>The Power of Alliances:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir des Alliances:</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -331,7 +331,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_AUS2</Tag>
 		<English>Foreign nations are generally friendlier.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Les nations lointaines sont plus amicale.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -340,7 +340,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR</Tag>
 		<English>The Power of Janissaries:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir des Janissaires :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -349,7 +349,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
 		<English>Can draft 3 units per turn from cities with at least 70% foreign culture.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Peut enr&#244;ler 3 unit&#233;s par tour dans les villes avec au moins 70%% de culture &#233;trang&#232;re.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -358,7 +358,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE</Tag>
 		<English>The Power of Military Formation:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir de la Formation Militaire :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -367,7 +367,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE2</Tag>
 		<English>All units start with Formation promotion.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>Toute les unit&#233;s commence avec la promotion Formation.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
@@ -376,7 +376,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_DUT</Tag>
 		<English>The Power of Commerce:</English>
-		<French>Le Pouvoir du Pharaon :</French>
+		<French>Le Pouvoir du Commerce :</French>
 		<German>Die Macht des Pharaos:</German>
 		<Italian>Il potere del faraone:</Italian>
 		<Spanish>El poder del fara&#243;n:</Spanish>
@@ -385,7 +385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_DUT2</Tag>
 		<English>+2 Trade Routes per city.</English>
-		<French>Le droit h&#239;&#191;&#189;r&#239;&#191;&#189;ditaire et l'esclavage sont disponibles au d&#239;&#191;&#189;part</French>
+		<French>+2 Routes Commerciale par ville.</French>
 		<German>Aktivierung von Erbrecht und Sklaverei beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>

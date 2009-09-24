@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_SWEDEN_DESC</Tag>
 		<English>The Swedish</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Su&#233;dois</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_SWEDEN_SHORT_DESC</Tag>
 		<English>Sweden</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Su&#232;de</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_SWEDEN_ADJECTIVE</Tag>
 		<English>Swedish</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>su&#233;dois:su&#233;doise:su&#233;dois:su&#233;doises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_SWE00</Tag>
 		<English>Kingdom of Sweden</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Royaume de Su&#232;de</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

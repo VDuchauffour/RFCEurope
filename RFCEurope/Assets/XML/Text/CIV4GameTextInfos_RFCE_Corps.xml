@@ -8,7 +8,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER</Tag>
 		<English>Knights Hospitaller</English>
-		<French>Knights Hospitaller</French>
+		<French>Ordre Hospitalier</French>
 		<German>Knights Hospitaller</German>
 		<Italian>Knights Hospitaller</Italian>
 		<Spanish>Knights Hospitaller</Spanish>
@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
-		<French>Knights Templar</French>
+		<French>Ordre des Templiers</French>
 		<German>Knights Templar</German>
 		<Italian>Knights Templar</Italian>
 		<Spanish>Knights Templar</Spanish>
@@ -26,7 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TEUTONIC_KNIGHTS</Tag>
 		<English>Teutonic Knights</English>
-		<French>Teutonic Knights</French>
+		<French>Ordre Teutonique</French>
 		<German>Teutonic Knights</German>
 		<Italian>Teutonic Knights</Italian>
 		<Spanish>Teutonic Knights</Spanish>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HANSEATIC_LEAGUE</Tag>
 		<English>Hanseatic League</English>
-		<French>Hanseatic League</French>
+		<French>Hanse Germanique</French>
 		<German>Hanseatic League</German>
 		<Italian>Hanseatic League</Italian>
 		<Spanish>Hanseatic League</Spanish>
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MEDICI_BANKS</Tag>
 		<English>Medici Banks</English>
-		<French>Medici Banks</French>
+		<French>Maison de M&#233;dicis</French>
 		<German>Medici Banks</German>
 		<Italian>Medici Banks</Italian>
 		<Spanish>Medici Banks</Spanish>
@@ -53,7 +53,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUGSBURG_FAMILIES</Tag>
 		<English>Augsburg Families</English>
-		<French>Augsburg Families</French>
+		<French>Famille Augsburg</French>
 		<German>Augsburg Families</German>
 		<Italian>Augsburg Families</Italian>
 		<Spanish>Augsburg Families</Spanish>
@@ -62,7 +62,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BANK_OF_ST_GEORGE</Tag>
 		<English>Bank of St. George</English>
-		<French>Bank of St. George</French>
+		<French>Banque de St George</French>
 		<German>Bank of St. George</German>
 		<Italian>Bank of St. George</Italian>
 		<Spanish>Bank of St. George</Spanish>
@@ -71,7 +71,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_1</Tag>
 		<English>Hospitaller Master</English>
-		<French>Hospitaller Master</French>
+		<French>Maître Hospitalier</French>
 		<German>Hospitaller Master</German>
 		<Italian>Hospitaller Master</Italian>
 		<Spanish>Hospitaller Master</Spanish>
@@ -80,7 +80,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
 		<English>Templar Master</English>
-		<French>Templar Master</French>
+		<French>Maître Templiers</French>
 		<German>Templar Master</German>
 		<Italian>Templar Master</Italian>
 		<Spanish>Templar Master</Spanish>
@@ -89,7 +89,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_3</Tag>
 		<English>Teutonic Master</English>
-		<French> Teutonic Master</French>
+		<French>Maître Teutonique</French>
 		<German> Teutonic Master</German>
 		<Italian>Teutonic Master</Italian>
 		<Spanish>Teutonic Master</Spanish>
@@ -98,7 +98,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_4</Tag>
 		<English>Hanseatic Executive</English>
-		<French>Hanseatic Executive</French>
+		<French>Cadre Hanse</French>
 		<German>Hanseatic Executive</German>
 		<Italian>Hanseatic Executive</Italian>
 		<Spanish>Hanseatic Executive</Spanish>
@@ -107,7 +107,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_5</Tag>
 		<English>Medici Executive</English>
-		<French>Medici Executive</French>
+		<French>Cadre M&#233;dicis</French>
 		<German>Medici Executive</German>
 		<Italian>Medici Executive</Italian>
 		<Spanish>Medici Executive</Spanish>
@@ -116,7 +116,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_6</Tag>
 		<English>Augsburg Executive</English>
-		<French>Augsburg Executive</French>
+		<French>Cadre Augsburg</French>
 		<German>Augsburg Executive</German>
 		<Italian>Augsburg Executive</Italian>
 		<Spanish>Augsburg Executive</Spanish>
@@ -125,7 +125,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_7</Tag>
 		<English>Bank of St. George Executive</English>
-		<French>Bank of St. George Executive</French>
+		<French>Cadre de la Banque de St George</French>
 		<German>Bank of St. George Executive</German>
 		<Italian>Bank of St. George Executive</Italian>
 		<Spanish>Bank of St. George Executive</Spanish>
@@ -134,7 +134,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR</Tag>
 		<English>Knight Templar</English>
-		<French>Knight Templar</French>
+		<French>Chevalier Templier</French>
 		<German>Knight Templar</German>
 		<Italian>Knight Templar</Italian>
 		<Spanish>Knight Templar</Spanish>
@@ -143,7 +143,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC</Tag>
 		<English>Teutonic Knight</English>
-		<French>Teutonic Knight</French>
+		<French>Chevalier Teutonique</French>
 		<German>Teutonic Knight</German>
 		<Italian>Teutonic Knight</Italian>
 		<Spanish>Teutonic Knight</Spanish>
@@ -152,7 +152,7 @@
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Tag>
 		<English>The Poor Fellow-Soldiers of Christ and of the Temple of Solomon (Latin: Pauperes Commilitones Christi Templique Solomonice), commonly known as the Knights Templar or the Order of the Temple, were among the most famous of the Western Christian military orders. The organizaton existed for approximately two centuries in the Middle Ages. It was founded in the aftermath of the First Crusade of 1096 to ensure the safety of the many Europeans who made the pilgrimage to Jerusalem after its conquest.</English>
-		<French>.</French> 
+		<French>Le pauvre enfant-soldats du Christ et du Temple de Salomon (en latin: Pauperes commilitones Christi Templique Solomonice), commun&#233;ment appel&#233; l'Ordre du Temple ou de l'Ordre du Temple, furent parmi les plus c&#233;l&#232;bres de l'ordre chr&#233;tien occidental militaire. Cette Organisation existe depuis environ deux si&#232;cles dans le Moyen Age. Elle a &#233;t&#233; fond&#233;e au lendemain de la premi&#232;re croisade de 1096 pour assurer la s&#233;curit&#233; des nombreux Europ&#233;ens qui ont fait le p&#232;lerinage &#224; J&#233;rusalem apr&#232;s sa conqu&#234;te.</French> 
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -160,15 +160,15 @@
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Tag>
 		<English>In 1143 Pope Celestine II ordered the Knight Hospitaller to take over management of a German Hospital in Jerusalem, which, according to the chronicler Jean d'Ypres, accommodated the countless German pilgrims and crusaders who could neither speak the local tongue (i.e.French) no Latin (patrie linguam ignorantibus atque Latinam). However although formally an institution of the Hospitallers, the Pope commanded that the prior and the brothers of the domus Teutonicorum (house of the Germans) should always be Germans themselves,so a tradition of a German-led religious institution could develop during the 12th century in Palestine.</English>
-		<French>.</French> 
+		<French>En 1143, le Pape C&#233;lestin II ordonna l'Ordre Hospitalier, pour reprendre la gestion d'un h&#244;pital allemand &#224; J&#233;rusalem, qui, selon le chroniqueur Jean d'Ypres, accueilli les innombrables p&#232;lerins et les crois&#233;s allemands qui ne pouvait ni parler la langue locale n i le Latin. Toutefois, bien que formellement une institution des Hospitaliers, le Pape ordonna que le prieur et les fr&#232;res de la Teutonicorum domus (maison des Allemands) doit toujours &#234;tre Allemands eux-m&#234;mes, donc une tradition d'une conduite par l'Allemagne institution religieuse pourrait se d&#233;velopper pendant le 12&#232;me si&#232;cle en Palestine.</French> 
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Tag>
-		<English>The Knights Hospitaller (also known as the Sovereign Military Hospitaller, Order of St. John of Jerusalem of Rhodos and of Malta, Knights of Malta, Knights of Rhodos and Chevaliers of Malta) is a Christian organization that began as an Amalfitan hospital founded in Jerusalem in 1080 to provide care for poor and sick pilgrims to the Holy Land. After the Christian conquest of Jerusalem in 1099 during the First Crusade it became a religious/military order under its own charter, and was charged with the care and defense of the Holy Land. Following the loss of the Holy Land by Christan forces, the Order operated from Rhodos, over which it was sovereign, and later from Malta where it administered a vassal state under the Spanish viceroy of Sicily</English>
-		<French>.</French> 
+		<English>The Knights Hospitaller (also known as the Sovereign Military Hospitaller, Order of St. John of Jerusalem of Rhodos and of Malta, Knights of Malta, Knights of Rhodos and Chevaliers of Malta) is a Christian organization that began as an Amalfitan hospital founded in Jerusalem in 1080 to provide care for poor and sick pilgrims to the Holy Land. After the Christian conquest of Jerusalem in 1099 during the First Crusade it became a religious/military order under its own charter, and was charged with the care and defense of the Holy Land. Following the loss of the Holy Land by Christan forces, the Order operated from Rhodos, over which it was sovereign, and later from Malta where it administered a vassal state under the Spanish viceroy of Sicily.</English>
+		<French>Hospitaliers Chevaliers (&#233;galement connu sous le Souverain Militaire Hospitalier de l'Ordre de Saint Jean de J&#233;rusalem de Rhodes et de Malte, les Chevaliers de Malte, les Chevaliers de Rhodes et Chevaliers de Malte) est une organisation chr&#233;tienne qui a commenc&#233; comme un h&#244;pital d'Amalfi fond&#233; &#224; J&#233;rusalem en 1080 pour fournir des soins pour les p&#232;lerins pauvres et des malades vers la Terre Sainte. Apr&#232;s la conqu&#234;te chr&#233;tienne de J&#233;rusalem en 1099 pendant la premi&#232;re croisade, il est devenu un ordre religieux-militaire en vertu de sa propre charte, et a &#233;t&#233; charg&#233; du soin et la d&#233;fense de la Terre Sainte. Apr&#232;s la perte de la Terre Sainte par les forces de Christan, l'Ordre exploit&#233; depuis Rhodes, sur laquelle elle est souveraine, et plus tard en provenance de Malte où il a g&#233;r&#233; un Etat vassal en vertu de la vice-roi espagnol de la Sicile.</French> 
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>

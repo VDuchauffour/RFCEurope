@@ -8,7 +8,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_POLEARM</Tag>
 		<English>Polearm</English>
-		<French>Polearm</French>
+		<French>Arme d'hast</French>
 		<German>Polearm</German>
 		<Italian>Polearm</Italian>
 		<Spanish>Polearm</Spanish>
@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_INFANTRY</Tag>
 		<English>Heavy Infantry</English>
-		<French>Heavy Infantry</French>
+		<French>Infantrie Lourde</French>
 		<German>Heavy Infantry</German>
 		<Italian>Heavy Infantry</Italian>
 		<Spanish>Heavy Infantry</Spanish>
@@ -26,7 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Tag>
 		<English>Light Cavalry</English>
-		<French>Light Cavalry</French>
+		<French>Cavalerie L&#233;g&#232;re</French>
 		<German>Light Cavalry</German>
 		<Italian>Light Cavalry</Italian>
 		<Spanish>Light Cavalry</Spanish>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_CAVALRY</Tag>
 		<English>Heavy Cavalry</English>
-		<French>Heavy Cavalry</French>
+		<French>Cavalerie Lourde</French>
 		<German>Heavy Cavalry</German>
 		<Italian>Heavy Cavalry</Italian>
 		<Spanish>Heavy Cavalry</Spanish>
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FEINT</Tag>
 		<English>Feint</English>
-		<French>Feint</French>
+		<French>Feinte</French>
 		<German>Feint</German>
 		<Italian>Feint</Italian>
 		<Spanish>Feint</Spanish>

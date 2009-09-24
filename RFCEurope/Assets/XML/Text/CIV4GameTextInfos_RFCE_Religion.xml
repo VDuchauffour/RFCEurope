@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM</Tag>
 		<English>Catholicism</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Catholicisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -34,7 +34,7 @@
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM_ADJECTIVE</Tag>
 		<English>Catholic</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Catholique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY</Tag>
 		<English>Orthodoxy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Orthodoxie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY_ADJECTIVE</Tag>
 		<English>Orthodox</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Orthodoxe</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -109,7 +109,7 @@
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM</Tag>
 		<English>Protestantism</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Protestantisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -134,7 +134,7 @@
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM_ADJECTIVE</Tag>
 		<English>Protestant</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Protestant</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -159,7 +159,7 @@
 		<Tag>TXT_KEY_RELIGION_ISLAM</Tag>
 		<English>Islam</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Islam</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -184,7 +184,7 @@
 		<Tag>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Tag>
 		<English>Islamic</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Islamique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -208,7 +208,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_TITLE</Tag>
 		<English>The Reformation!</English>
-		<French>The Reformation!</French>
+		<French>La R&#233;forme !</French>
 		<German>The Reformation!</German>
 		<Italian>The Reformation!</Italian>
 		<Spanish>The Reformation!</Spanish>
@@ -217,7 +217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
 		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (All our Catholic cities and buildings will be converted to the new religion.)</English>
-		<French>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</French>
+		<French>L'invention de l'imprimerie a suscité une r&#233;formation du Catholicisme. Allons-nous accepter cette r&#233;forme ? Toutes nos villes Catholique seront automatiquement convertie.</French>
 		<German>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</German>
 		<Italian>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
@@ -226,7 +226,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_SCHISM</Tag>
 		<English>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</English>
-		<French>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</French>
+		<French>Le Grand Schisme: Apr&#232; des ann&#233;es de discution, les Chr&#233;tiens Catholique et Orthodoxe ont finallement d&#233;cider de se separer en 2 religions rivales.</French>
 		<German>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</German>
 		<Italian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Italian>
 		<Spanish>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Spanish>
@@ -236,7 +236,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_POINTS</Tag>
 		<English>Faith Points</English>
-		<French>Faith Points</French>
+		<French>Points de la foi</French>
 		<German>Faith Points</German>
 		<Italian>Faith Points</Italian>
 		<Spanish>Faith Points</Spanish>
@@ -246,7 +246,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_COUNT</Tag>
 		<English>Prosecution Instability Countdown</English>
-		<French>Prosecution Instability Countdown</French>
+		<French>Compte &#224; rebours de la poursuite de l'Instabilit&#233;</French>
 		<German>Prosecution Instability Countdown</German>
 		<Italian>Prosecution Instability Countdown</Italian>
 		<Spanish>Prosecution Instability Countdown</Spanish>
@@ -256,7 +256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_INSTABILITY</Tag>
 		<English>Prosecution Instability:</English>
-		<French>Prosecution Instability:</French>
+		<French>Poursuite de l'Instabilit&#233;:</French>
 		<German>Prosecution Instability:</German>
 		<Italian>Prosecution Instability:</Italian>
 		<Spanish>Prosecution Instability:</Spanish>
@@ -266,7 +266,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_STABILITY</Tag>
 		<English>Stability:</English>
-		<French>Stability:</French>
+		<French>Stabilit&#233;:</French>
 		<German>Stability:</German>
 		<Italian>Stability:</Italian>
 		<Spanish>Stability:</Spanish>
@@ -276,7 +276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_CIVIC</Tag>
 		<English>Civic Upkeep:</English>
-		<French>Civic Upkeep:</French>
+		<French>Entretient des Doctrines:</French>
 		<German>Civic Upkeep:</German>
 		<Italian>Civic Upkeep:</Italian>
 		<Spanish>Civic Upkeep:</Spanish>
@@ -286,7 +286,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GROWTH</Tag>
 		<English>City Growth:</English>
-		<French>City Growth:</French>
+		<French>Croissance Urbaine:</French>
 		<German>City Growth:</German>
 		<Italian>City Growth:</Italian>
 		<Spanish>City Growth:</Spanish>
@@ -296,7 +296,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_UNITS</Tag>
 		<English>Unit Production Cost:</English>
-		<French>Unit Production Cost:</French>
+		<French>Co&#251;t de la Production d'Unit&#233;e:</French>
 		<German>Unit Production Cost:</German>
 		<Italian>Unit Production Cost:</Italian>
 		<Spanish>Unit Production Cost:</Spanish>
@@ -316,7 +316,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PRODUCTION</Tag>
 		<English>Wonder and Project Production Cost:</English>
-		<French>Wonder and Project Production Cost:</French>
+		<French>Co&#251;t de la Production de Merveilles et Projets:</French>
 		<German>Wonder and Project Production Cost:</German>
 		<Italian>Wonder and Project Production Cost:</Italian>
 		<Spanish>Wonder and Project Production Cost:</Spanish>
@@ -326,7 +326,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_DIPLOMACY</Tag>
 		<English>Diplomacy Boost:</English>
-		<French>Diplomacy Boost:</French>
+		<French>Hausse Diplomatique:</French>
 		<German>Diplomacy Boost:</German>
 		<Italian>Diplomacy Boost:</Italian>
 		<Spanish>Diplomacy Boost:</Spanish>
@@ -336,7 +336,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GIFT</Tag>
 		<English>You have received a gift of gold from the Pope</English>
-		<French>You have received a gift of gold from the Pope</French>
+		<French>Vous avez re&#231;u un cadeau d'Or du Pape</French>
 		<German>You have received a gift of gold from the Pope</German>
 		<Italian>You have received a gift of gold from the Pope</Italian>
 		<Spanish>You have received a gift of gold from the Pope</Spanish>
@@ -346,7 +346,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_BUILDING1</Tag>
 		<English>The Pope has build a </English>
-		<French>The Pope has build a </French>
+		<French>Le Pape a construire un </French>
 		<German>The Pope has build a </German>
 		<Italian>The Pope has build a </Italian>
 		<Spanish>The Pope has build a </Spanish>
@@ -356,7 +356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_BUILDING2</Tag>
 		<English> in your city of </English>
-		<French> in your city of </French>
+		<French> dans la ville de </French>
 		<German> in your city of </German>
 		<Italian> in your city of </Italian>
 		<Spanish> in your city of </Spanish>
@@ -366,7 +366,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_SAINT</Tag>
 		<English>Become a Saint and strengthen the Faith of your nation.</English>
-		<French>Become a Saint and strengthen the Faith of your nation.</French>
+		<French>Devenir un saint et renforcer la foi de votre nation.</French>
 		<German>Become a Saint and strengthen the Faith of your nation.</German>
 		<Italian>Become a Saint and strengthen the Faith of your nation.</Italian>
 		<Spanish>Become a Saint and strengthen the Faith of your nation.</Spanish>

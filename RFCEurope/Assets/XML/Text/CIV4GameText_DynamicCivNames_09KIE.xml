@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_KIEV_DESC</Tag>
 		<English>The Kievans</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Kievs</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_KIEV_SHORT_DESC</Tag>
 		<English>Kievan Rus</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Kiev</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_KIEV_ADJECTIVE</Tag>
 		<English>Kievan</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>kiev:kiev:kievs:kievs</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_KIE00</Tag>
 		<English>Kievan Rus</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Rus' de Kiev</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

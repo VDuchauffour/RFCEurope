@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_BURGUNDY_DESC</Tag>
 		<English>The Burgundians</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Bourguignons</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_BURGUNDY_SHORT_DESC</Tag>
 		<English>Burgundy</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Bourgogne</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -56,9 +56,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BURGUNDY_ADJECTIVE</Tag>
-		<English>Burgundian</English>
+		<English>Bourguigno</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>bourguignon:bourguignonne:bourguignons:bourguignonnes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_BUR00</Tag>
 		<English>Duchy of Burgundy</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Duch&#233; de Bourgogne</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

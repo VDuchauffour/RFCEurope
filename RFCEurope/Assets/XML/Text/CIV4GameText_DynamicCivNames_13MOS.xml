@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_MOSCOW_DESC</Tag>
 		<English>The Moscowans</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Russes</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_MOSCOW_SHORT_DESC</Tag>
 		<English>Moscow</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Russe</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Tag>
 		<English>Moscowan</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>russe:russe:russes:russes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_MOS00</Tag>
 		<English>Moscow</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Moscovie</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_POLAND_DESC</Tag>
 		<English>The Polish</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Polonais</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_POLAND_SHORT_DESC</Tag>
 		<English>Poland</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Pologne</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_POLAND_ADJECTIVE</Tag>
 		<English>Polish</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>polonais:polonaise:polonais:polonaises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_POL00</Tag>
 		<English>Poland</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Duch&#233; de Pologne</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

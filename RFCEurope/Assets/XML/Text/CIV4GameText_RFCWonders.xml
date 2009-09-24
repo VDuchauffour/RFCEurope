@@ -18,7 +18,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO</Tag>
 		<English>Marco Polo's Embassy</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian><Japanese/><Chinese/></TEXT>
+		<French></French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER</Tag>
 		<English>The Leaning Tower</English>
@@ -164,7 +164,7 @@
 		<Tag>TXT_KEY_BUILDING_VERSAILLES</Tag>
 		<English>Versailles</English>
 		<French>
-			<Text>Palais d'&#233;t&#233;</Text>
+			<Text>Ch&#226;teau de Versailles</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -252,40 +252,40 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOPHIA_KIEV</Tag>
 		<English>St. Sophia</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Sainte Sophie</French><German/><Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA</Tag>
 		<English>Magna Carta</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Magna Carta</French><German/><Italian/><Spanish/><Russian>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_ACADEMY</Tag>
 		<English>Royal Academy</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Acad&#233;mie Royal</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_MEZQUITA</Tag>
 		<English>La Mezquita</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>La Mezquita</French><German/><Italian/><Spanish/><Russian>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL</Tag>
 		<English>St. Basil's Cathedral</English>
 		<Spanish>Catedral de San Basilio</Spanish>
-		<French/><German/><Italian/><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Cath&#233;drale de St Basil</French><German/><Italian/><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO</Tag>
 		<English>San Marco Basilica</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Basilique St Marc</French><German/><Italian/><Spanish/><Russian>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE</Tag>
 		<English>Brandenburg Gate</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Porte de Brandenburg</French><German/><Italian/><Spanish/><Russian>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK</Tag>
 		<English>The Dome of the Rock</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Le Dôme du Rocher</French><German/><Italian/><Spanish/><Russian>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Tag>
 		<English>The Alhambra is a palace and fortress complex of the Moorish monarchs of Granada, in southern Spain (known as Al-Andalus when the fortress was constructed), occupying a hilly terrace on the south-eastern border of the city of Granada. It was the residence of the Muslim kings of Granada and their court, but is currently a museum exhibiting exquisite Islamic architecture. A Renaissance palace was also inserted by Charles V, Holy Roman Emperor.[PARAGRAPH:1]The name Alhambra, signifying in Arabic the red, derives from the colour of the red clay of the surroundings of which the fort is made. The buildings of the Alhambra were originally whitewashed; however, the buildings now seen today are reddish. The first reference to the Qal'at al Hamra was during the battles between the Arabs and the Muladies during the rule of the Abdallah (who reigned from 888-912). In one particularly fierce and bloody skirmish, the Muladies soundly defeated the Arabs who were then forced to take shelter in a primitive red castle located in the province of Elvira, nowadays located in Granada. According to surviving documents from the era, the red castle was quite small and its walls were not capable of deterring army intent on conquering. The castle was then largely ignored until the eleventh century when its ruins were renovated and rebuilt by Samuel ibn Naghralla, vizier to the King Badis of the Zirid Dynasty, in an attempt to preserve the small Jewish settlement also located on the Sabikah hill. However, evidence from Arab texts indicates that the fortress was easily penetrated and that the actual Alhambra that survives today was built during the Nasrid Dynasty. -Wikipedia</English>
-		<French>.</French>
+		<French>The Alhambra is a palace and fortress complex of the Moorish monarchs of Granada, in southern Spain (known as Al-Andalus when the fortress was constructed), occupying a hilly terrace on the south-eastern border of the city of Granada. It was the residence of the Muslim kings of Granada and their court, but is currently a museum exhibiting exquisite Islamic architecture. A Renaissance palace was also inserted by Charles V, Holy Roman Emperor.[PARAGRAPH:1]The name Alhambra, signifying in Arabic the red, derives from the colour of the red clay of the surroundings of which the fort is made. The buildings of the Alhambra were originally whitewashed; however, the buildings now seen today are reddish. The first reference to the Qal'at al Hamra was during the battles between the Arabs and the Muladies during the rule of the Abdallah (who reigned from 888-912). In one particularly fierce and bloody skirmish, the Muladies soundly defeated the Arabs who were then forced to take shelter in a primitive red castle located in the province of Elvira, nowadays located in Granada. According to surviving documents from the era, the red castle was quite small and its walls were not capable of deterring army intent on conquering. The castle was then largely ignored until the eleventh century when its ruins were renovated and rebuilt by Samuel ibn Naghralla, vizier to the King Badis of the Zirid Dynasty, in an attempt to preserve the small Jewish settlement also located on the Sabikah hill. However, evidence from Arab texts indicates that the fortress was easily penetrated and that the actual Alhambra that survives today was built during the Nasrid Dynasty. -Wikipedia</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -294,7 +294,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
 		<English>The Alhambra</English>
-		<French>[SPACE].</French>
+		<French>The Alhambra</French>
 		<German>[SPACE].</German>
 		<Italian>[SPACE].</Italian>
 		<Spanish>
@@ -307,7 +307,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEODOSIAN_WALLS</Tag>
 		<English>Theodosian Walls</English>
-		<French>Theodosian Walls</French>
+		<French>Mur Th&#233;odosien</French>
 		<German>Theodosian Walls</German>
 		<Italian>Theodosian Walls</Italian>
 		<Spanish>
@@ -320,7 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEODOSIAN_WALLS_PEDIA</Tag>
 		<English>[TAB]The original walls of Constantinople were built in the 8th century BC when Byzantium was founded by Greek colonists from Megara. At the time the city consisted of an acropolis and little more. The colony was relatively unimportant by the Roman period, but Septimius Severus built a new set of walls during his reign, bringing more land into the city. When Constantine moved the capital of the empire to Byzantium, which he renamed Constantinople, he greatly expanded the walls of the city, incorporating even more territory.[PARAGRAPH:2]In 412 the Roman emperor Theodosius II surrounded Constantinople with a wall that stretched 6.5 kilometers between the Sea of Marmara and the Golden Horn. Although named after Theodosius, they were actually constructed under the direction of Anthemius, Praetorian prefect of the Eastern Empire.[PARAGRAPH:2]The walls were built of stone and brick in two lines of defense which adjoined a ditch 20 meters wide and 10 meters deep. The inner wall had was 5 meters thick and 12 meters high. It was strengthened with 96 unapproachable towers 18-20 meters tall. The thickness of the external wall was 2 meters, and its height was 8.5 meters. The wall contained the Belgrad, Silivrikapi, Mevlevihane, Topkapi, Edirnekapi, Egrikapi and Yedikule gates. Yedikule Gate was also known as the "Porta Aurea" or "Golden Gate", and was the most magnificent, consisting of three archways. As the state entrance into the capital, the Golden Gate was architecturally splendid, and was built of large square blocks of polished marble fitted together without cement, and flanked by two great towers of the same material. Upon the gates were placed sculpted elephants.[PARAGRAPH:2]The inner walls had massive square or hexagonal towers. The southern end of the walls, at the Sea of Marmara, was the location of the Marble Tower. There were ten gates, the four major ones being the Golden Gate at the southern end, the Selymbria Gate leading to the Forum of Constantine and Hagia Sophia, the Adrianople Gate connecting Constantinople's Mese (the main street) with the city of Adrianople and the Via Egnatia, and the Blachernae Gate in the north.[PARAGRAPH:2]In 439 the first sea walls were built. In 447 the wall was damaged by an earthquake, but was quickly restored in time to stop Attila's army. In the northwestern corner of the city, in the suburb of Blachernae, the Theodosian walls were relatively weaker, but were expanded by Leo I. The northern coast of the city, along the Golden Horn, also had a separate set of walls.[PARAGRAPH:2]These walls were almost inpenetrable, saving the city during sieges from the Bulgars, Arabs, and Rus', among others. The first attackers to break through the walls were the knights of the Fourth Crusade, who managed to scale the lower sea walls and also break the Wall of Leo in the northwestern Blachernae section of the city.[PARAGRAPH:2]The second and final time the walls were breached was during the Siege of Constantinople in 1453, by the Ottomans; however, they did not break through by force, but entered through the Kerkoporta Gate, which happened to be open, apparently accidentally but possibly through treachery. A large plaque today marks the spot where the Ottomans entered. Mehmed had the walls repaired in short order among other massive public works projects. Within a few years, due to the renewed importance of the city as the new Ottoman capital, the population started to soar again.[PARAGRAPH:2]Under the Ottomans, the Golden Gate, known to them as Yedikule ("the Seven Towers"), was used as a prison. Many parts of the walls are still standing today and are a testament to the extraordinary longevity of the empire. They have been damaged by recent earthquakes, but many sections have also been restored. The wall runs through the suburbs of modern Istanbul, with a belt of parkland flanking their course. The walls are pierced at intervals by modern roads leading westwards out of the city.</English>
-		<French/><German/><Italian/><Spanish/><Russian>[TAB]&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#228;&#235;&#232;&#237;&#238;&#233; 5630 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#232; &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251; &#228;&#235;&#255; &#231;&#224;&#249;&#232;&#242;&#251; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#255; &#238;&#242; &#226;&#224;&#240;&#226;&#224;&#240;&#238;&#226; &#239;&#240;&#232; &#232;&#236;&#239;&#229;&#240;&#224;&#242;&#238;&#240;&#229; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; II, &#234;&#238;&#227;&#228;&#224; &#227;&#238;&#240;&#238;&#228; &#237;&#224; &#241;&#229;&#236;&#232; &#245;&#238;&#235;&#236;&#224;&#245; &#226;&#251;&#240;&#238;&#241; &#231;&#224; &#239;&#240;&#229;&#228;&#229;&#235;&#251; &#242;&#229;&#245; &#241;&#242;&#229;&#237;, &#234;&#238;&#242;&#238;&#240;&#251;&#229; &#225;&#251;&#235;&#232; &#239;&#240;&#229;&#228;&#243;&#241;&#236;&#238;&#242;&#240;&#229;&#237;&#251; &#229;&#227;&#238; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#229;&#235;&#229;&#236;, &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#236; &#194;&#229;&#235;&#232;&#234;&#232;&#236;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#239;&#240;&#238;&#228;&#238;&#235;&#230;&#224;&#235;&#238;&#241;&#252; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236; &#239;&#240;&#229;&#244;&#229;&#234;&#242;&#224; &#192;&#237;&#244;&#232;&#236;&#232;&#255; &#241; 408 &#239;&#238; 413 &#227;&#238;&#228;&#251;.
+		<French>[TAB]The original walls of Constantinople were built in the 8th century BC when Byzantium was founded by Greek colonists from Megara. At the time the city consisted of an acropolis and little more. The colony was relatively unimportant by the Roman period, but Septimius Severus built a new set of walls during his reign, bringing more land into the city. When Constantine moved the capital of the empire to Byzantium, which he renamed Constantinople, he greatly expanded the walls of the city, incorporating even more territory.[PARAGRAPH:2]In 412 the Roman emperor Theodosius II surrounded Constantinople with a wall that stretched 6.5 kilometers between the Sea of Marmara and the Golden Horn. Although named after Theodosius, they were actually constructed under the direction of Anthemius, Praetorian prefect of the Eastern Empire.[PARAGRAPH:2]The walls were built of stone and brick in two lines of defense which adjoined a ditch 20 meters wide and 10 meters deep. The inner wall had was 5 meters thick and 12 meters high. It was strengthened with 96 unapproachable towers 18-20 meters tall. The thickness of the external wall was 2 meters, and its height was 8.5 meters. The wall contained the Belgrad, Silivrikapi, Mevlevihane, Topkapi, Edirnekapi, Egrikapi and Yedikule gates. Yedikule Gate was also known as the "Porta Aurea" or "Golden Gate", and was the most magnificent, consisting of three archways. As the state entrance into the capital, the Golden Gate was architecturally splendid, and was built of large square blocks of polished marble fitted together without cement, and flanked by two great towers of the same material. Upon the gates were placed sculpted elephants.[PARAGRAPH:2]The inner walls had massive square or hexagonal towers. The southern end of the walls, at the Sea of Marmara, was the location of the Marble Tower. There were ten gates, the four major ones being the Golden Gate at the southern end, the Selymbria Gate leading to the Forum of Constantine and Hagia Sophia, the Adrianople Gate connecting Constantinople's Mese (the main street) with the city of Adrianople and the Via Egnatia, and the Blachernae Gate in the north.[PARAGRAPH:2]In 439 the first sea walls were built. In 447 the wall was damaged by an earthquake, but was quickly restored in time to stop Attila's army. In the northwestern corner of the city, in the suburb of Blachernae, the Theodosian walls were relatively weaker, but were expanded by Leo I. The northern coast of the city, along the Golden Horn, also had a separate set of walls.[PARAGRAPH:2]These walls were almost inpenetrable, saving the city during sieges from the Bulgars, Arabs, and Rus', among others. The first attackers to break through the walls were the knights of the Fourth Crusade, who managed to scale the lower sea walls and also break the Wall of Leo in the northwestern Blachernae section of the city.[PARAGRAPH:2]The second and final time the walls were breached was during the Siege of Constantinople in 1453, by the Ottomans; however, they did not break through by force, but entered through the Kerkoporta Gate, which happened to be open, apparently accidentally but possibly through treachery. A large plaque today marks the spot where the Ottomans entered. Mehmed had the walls repaired in short order among other massive public works projects. Within a few years, due to the renewed importance of the city as the new Ottoman capital, the population started to soar again.[PARAGRAPH:2]Under the Ottomans, the Golden Gate, known to them as Yedikule ("the Seven Towers"), was used as a prison. Many parts of the walls are still standing today and are a testament to the extraordinary longevity of the empire. They have been damaged by recent earthquakes, but many sections have also been restored. The wall runs through the suburbs of modern Istanbul, with a belt of parkland flanking their course. The walls are pierced at intervals by modern roads leading westwards out of the city.</French><German/><Italian/><Spanish/><Russian>[TAB]&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#228;&#235;&#232;&#237;&#238;&#233; 5630 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#232; &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251; &#228;&#235;&#255; &#231;&#224;&#249;&#232;&#242;&#251; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#255; &#238;&#242; &#226;&#224;&#240;&#226;&#224;&#240;&#238;&#226; &#239;&#240;&#232; &#232;&#236;&#239;&#229;&#240;&#224;&#242;&#238;&#240;&#229; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; II, &#234;&#238;&#227;&#228;&#224; &#227;&#238;&#240;&#238;&#228; &#237;&#224; &#241;&#229;&#236;&#232; &#245;&#238;&#235;&#236;&#224;&#245; &#226;&#251;&#240;&#238;&#241; &#231;&#224; &#239;&#240;&#229;&#228;&#229;&#235;&#251; &#242;&#229;&#245; &#241;&#242;&#229;&#237;, &#234;&#238;&#242;&#238;&#240;&#251;&#229; &#225;&#251;&#235;&#232; &#239;&#240;&#229;&#228;&#243;&#241;&#236;&#238;&#242;&#240;&#229;&#237;&#251; &#229;&#227;&#238; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#229;&#235;&#229;&#236;, &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#236; &#194;&#229;&#235;&#232;&#234;&#232;&#236;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#239;&#240;&#238;&#228;&#238;&#235;&#230;&#224;&#235;&#238;&#241;&#252; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236; &#239;&#240;&#229;&#244;&#229;&#234;&#242;&#224; &#192;&#237;&#244;&#232;&#236;&#232;&#255; &#241; 408 &#239;&#238; 413 &#227;&#238;&#228;&#251;.
 
 &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#225;&#251;&#235;&#232; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#251; &#239;&#238;&#241;&#235;&#229; &#242;&#238;&#227;&#238;, &#234;&#224;&#234; &#247;&#224;&#241;&#242;&#252; &#232;&#245; &#238;&#225;&#240;&#243;&#248;&#232;&#235;&#224;&#241;&#252; &#239;&#240;&#232; &#231;&#229;&#236;&#235;&#229;&#242;&#240;&#255;&#241;&#229;&#237;&#232;&#232; 447 &#227;&#238;&#228;&#224;. &#210;&#238;&#227;&#228;&#224; &#230;&#229; &#239;&#229;&#240;&#229;&#228; &#241;&#242;&#229;&#237;&#238;&#233; &#225;&#251;&#235; &#226;&#251;&#240;&#251;&#242; &#248;&#232;&#240;&#238;&#234;&#232;&#233; &#240;&#238;&#226;. &#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#255;&#255; &#241;&#242;&#229;&#237;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 12 &#236;&#229;&#242;&#240;&#238;&#226; &#232; &#248;&#232;&#240;&#232;&#237;&#238;&#233; 5 &#236;&#229;&#242;&#240;&#238;&#226; &#247;&#229;&#240;&#229;&#231; &#234;&#224;&#230;&#228;&#251;&#229; 55 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#224; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#224; &#248;&#229;&#241;&#242;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#235;&#232;&#225;&#238; &#226;&#238;&#241;&#252;&#236;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#225;&#224;&#248;&#237;&#229;&#233; &#226;&#251;&#241;&#238;&#242;&#238;&#233; &#226; 20 &#236;&#229;&#242;&#240;&#238;&#226;, &#238;&#225;&#249;&#229;&#229; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#238; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#228;&#238;&#245;&#238;&#228;&#232;&#235;&#238; &#228;&#238; &#241;&#242;&#224;. &#205;&#232;&#230;&#237;&#232;&#233; &#255;&#240;&#243;&#241; &#225;&#224;&#248;&#229;&#237; &#225;&#251;&#235; &#239;&#240;&#232;&#241;&#239;&#238;&#241;&#238;&#225;&#235;&#229;&#237; &#239;&#238;&#228; &#241;&#234;&#235;&#224;&#228; &#239;&#240;&#238;&#228;&#238;&#226;&#238;&#235;&#252;&#241;&#242;&#226;&#232;&#255;.
 
@@ -330,23 +330,23 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Tag>
 		<English>The Shrine of Uppsala</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Le Sanctuaire d'Uppsala</French><German/><Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_PEDIA</Tag>
 		<English>[TAB]The Shrine of Uppsala was a religious site in Gamla Uppsala (Old Uppsala), near modern Uppsala, Sweden, that was created to worship the Norse gods of prehistoric times. The cult site is sparsely documented, but it is referenced in the Norse sagas and Saxo Grammaticus' Gesta Danorum, and most notably as a gilded temple in the work of Adam of Bremen.[PARAGRAPH:2]Adam of Bremen wrote that the Swedes had a famous temple named Ubsola near which there was a large tree with wide branches. It was always green, and no one knew what species it was. There was also a well where they apparently used to perform the sacrifices. One of these was to immerse a living man in the well. If the man disappeared the gods would answer the prayers. It was not far from the towns of Sigtuna and Birka.[PARAGRAPH:2]A golden chain was around the temple hanging over its gables. The chain could be seen glittering far and wide for those who approached. It stood on flat ground surrounded by mounds like a theatre. Inside the temple, which was richly decorated with gold, there were three statues of gods. The most important god, Thor sat on a throne in the centre and beside him sat the gods Odin (called Wotan by Adam) and Freyr (called Fricco by Adam). Thor was said to govern the air, thunder, lightning, winds, rain, good weather and harvests. Odin, which meant the furious, brought war and gave strength against enemies. Freyr who gave peace and pleasure was represented by a statue with an immense phallos. Odin's statue was armed, and was likened to Mars and Thor was likened by Adam to Jupiter. The people also worshiped heroes who had been elevated to gods, such as King Erik about whom it is told in Vita Ansgari.[PARAGRAPH:2]There were priests appointed for the gods, and if plague or famine threatened they sacrificed to Thor, whereas they sacrificed to Odin for war and to Freyr for marriages.</English>
-		<French/><German/><Italian/><Spanish/><Russian>[TAB]&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251; &#225;&#251;&#235;&#224; &#240;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#236; &#246;&#229;&#237;&#242;&#240;&#238;&#236; &#226; &#211;&#239;&#241;&#224;&#235;&#229; (&#209;&#242;&#224;&#240;&#224;&#255; &#211;&#239;&#241;&#224;&#235;&#224;) "Gamla", &#226;&#238;&#231;&#235;&#229; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#238;&#233; &#211;&#239;&#241;&#224;&#235;&#251;, &#216;&#226;&#229;&#246;&#232;&#232;, &#238;&#237;&#224; &#225;&#251;&#235;&#224; &#241;&#238;&#231;&#228;&#224;&#237;&#224;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#234;&#235;&#238;&#237;&#255;&#242;&#252;&#241;&#255; &#228;&#240;&#229;&#226;&#237;&#232;&#236; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#236; &#225;&#238;&#227;&#224;&#236;. &#214;&#229;&#237;&#242;&#240; &#234;&#243;&#235;&#252;&#242;&#224; &#240;&#229;&#228;&#234;&#238; &#228;&#238;&#234;&#243;&#236;&#229;&#237;&#242;&#232;&#240;&#243;&#229;&#242;&#241;&#255;, &#237;&#238; &#238; &#237;&#229;&#236; &#229;&#241;&#242;&#252; &#243;&#239;&#238;&#236;&#232;&#237;&#224;&#237;&#232;&#255; &#226; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#245; &#241;&#224;&#227;&#224;&#245; &#232; "Saxo Grammaticus' Gesta Danorum", &#232; &#239;&#238;&#228;&#225;&#240;&#238;&#225;&#237;&#229;&#229;, &#234;&#224;&#234; "&#231;&#238;&#235;&#238;&#247;&#229;&#237;&#237;&#251;&#233; &#245;&#240;&#224;&#236;" &#226; &#240;&#224;&#225;&#238;&#242;&#229; &#192;&#228;&#224;&#236;&#224; &#193;&#240;&#229;&#236;&#229;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>[TAB]The Shrine of Uppsala was a religious site in Gamla Uppsala (Old Uppsala), near modern Uppsala, Sweden, that was created to worship the Norse gods of prehistoric times. The cult site is sparsely documented, but it is referenced in the Norse sagas and Saxo Grammaticus' Gesta Danorum, and most notably as a gilded temple in the work of Adam of Bremen.[PARAGRAPH:2]Adam of Bremen wrote that the Swedes had a famous temple named Ubsola near which there was a large tree with wide branches. It was always green, and no one knew what species it was. There was also a well where they apparently used to perform the sacrifices. One of these was to immerse a living man in the well. If the man disappeared the gods would answer the prayers. It was not far from the towns of Sigtuna and Birka.[PARAGRAPH:2]A golden chain was around the temple hanging over its gables. The chain could be seen glittering far and wide for those who approached. It stood on flat ground surrounded by mounds like a theatre. Inside the temple, which was richly decorated with gold, there were three statues of gods. The most important god, Thor sat on a throne in the centre and beside him sat the gods Odin (called Wotan by Adam) and Freyr (called Fricco by Adam). Thor was said to govern the air, thunder, lightning, winds, rain, good weather and harvests. Odin, which meant the furious, brought war and gave strength against enemies. Freyr who gave peace and pleasure was represented by a statue with an immense phallos. Odin's statue was armed, and was likened to Mars and Thor was likened by Adam to Jupiter. The people also worshiped heroes who had been elevated to gods, such as King Erik about whom it is told in Vita Ansgari.[PARAGRAPH:2]There were priests appointed for the gods, and if plague or famine threatened they sacrificed to Thor, whereas they sacrificed to Odin for war and to Freyr for marriages.</French><German/><Italian/><Spanish/><Russian>[TAB]&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251; &#225;&#251;&#235;&#224; &#240;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#236; &#246;&#229;&#237;&#242;&#240;&#238;&#236; &#226; &#211;&#239;&#241;&#224;&#235;&#229; (&#209;&#242;&#224;&#240;&#224;&#255; &#211;&#239;&#241;&#224;&#235;&#224;) "Gamla", &#226;&#238;&#231;&#235;&#229; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#238;&#233; &#211;&#239;&#241;&#224;&#235;&#251;, &#216;&#226;&#229;&#246;&#232;&#232;, &#238;&#237;&#224; &#225;&#251;&#235;&#224; &#241;&#238;&#231;&#228;&#224;&#237;&#224;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#234;&#235;&#238;&#237;&#255;&#242;&#252;&#241;&#255; &#228;&#240;&#229;&#226;&#237;&#232;&#236; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#236; &#225;&#238;&#227;&#224;&#236;. &#214;&#229;&#237;&#242;&#240; &#234;&#243;&#235;&#252;&#242;&#224; &#240;&#229;&#228;&#234;&#238; &#228;&#238;&#234;&#243;&#236;&#229;&#237;&#242;&#232;&#240;&#243;&#229;&#242;&#241;&#255;, &#237;&#238; &#238; &#237;&#229;&#236; &#229;&#241;&#242;&#252; &#243;&#239;&#238;&#236;&#232;&#237;&#224;&#237;&#232;&#255; &#226; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#245; &#241;&#224;&#227;&#224;&#245; &#232; "Saxo Grammaticus' Gesta Danorum", &#232; &#239;&#238;&#228;&#225;&#240;&#238;&#225;&#237;&#229;&#229;, &#234;&#224;&#234; "&#231;&#238;&#235;&#238;&#247;&#229;&#237;&#237;&#251;&#233; &#245;&#240;&#224;&#236;" &#226; &#240;&#224;&#225;&#238;&#242;&#229; &#192;&#228;&#224;&#236;&#224; &#193;&#240;&#229;&#236;&#229;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIA_COMPANY</Tag>
 		<English>The East India Company</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Compagnie des Indes de l'Est</French><German/><Italian/><Spanish/><Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_WEST_INDIA_COMPANY</Tag>
 		<English>The West India Company</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Compagnie des Indes de l'Ouest</French><German/><Italian/><Spanish/><Russian>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
 		<English>Krak des Chevaliers</English>
-		<French/>
+		<French>Krak des Chevaliers</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -354,7 +354,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Tag>
 		<English>[TAB]Krak des Chevaliers ("fortress of the knights" in a mixture of Arabic and French) was the headquarters of the Knights Hospitaller in Syria during the Crusades.  The castle is located east of Tripoli in the Homs Gap, atop a 650-meter high hill along the only route from Antioch to Beirut and the Mediterranean Sea. It is one of many fortresses part of a defensive network along the border of the old Crusader states.[PARAGRAPH:1]The original fortress had been built in 1031 for the emir of Aleppo. It was captured by Raymond IV of Toulouse early in 1099, during the First Crusade, but was abandoned when the Crusaders continued their march to Jerusalem. It was reoccupied again by Tancred, Prince of Galilee, in 1110. Raymond II, count of Tripoli, gave it to the Hospitallers in 1144.  The Hospitallers rebuilt it and expanded it into the largest Crusader fortress in the Holy Land, adding an outer wall 3 meters thick with seven guard towers 8-10 meters thick, to create a concentric castle. One of these towers was occupied by the Grand Master of the Hospitallers. In the 12th century there was a moat covered by a drawbridge leading to postern gates.[PARAGRAPH:1]		In 1163, the fortress was unsuccessfully besieged by Nur ad-Din. After their victory the Hospitallers became an essentially independent force on the Tripolitanian frontier. By 1170, the Hospitallers' modifications were complete, but parts of the fortress were rebuilt after numerous earthquakes in the late 12th century and early 13th century.  It is estimated that the castle fortress could hold 50-60 Hospitallers and up to 2,000 foot soldiers. Aside from the control of the road to the Mediterranean, the Hospitallers also exerted some influence over Lake Homs to the east, where they could control the fishing industry and watch for Muslim armies gathering in Syria.[PARAGRAPH:1]Another failed siege was made by Saladin in 1188, during which the castle general was captured. He was taken by Saladin's men to the castle gates where he was told to order the gates opened. He first told his men in Arabic to surrender the castle, then in French told them to hold the castle to the last man. (Adapted from Wikipedia.org)</English>
-		<French/>
+		<French>[TAB]Krak des Chevaliers ("fortress of the knights" in a mixture of Arabic and French) was the headquarters of the Knights Hospitaller in Syria during the Crusades.  The castle is located east of Tripoli in the Homs Gap, atop a 650-meter high hill along the only route from Antioch to Beirut and the Mediterranean Sea. It is one of many fortresses part of a defensive network along the border of the old Crusader states.[PARAGRAPH:1]The original fortress had been built in 1031 for the emir of Aleppo. It was captured by Raymond IV of Toulouse early in 1099, during the First Crusade, but was abandoned when the Crusaders continued their march to Jerusalem. It was reoccupied again by Tancred, Prince of Galilee, in 1110. Raymond II, count of Tripoli, gave it to the Hospitallers in 1144.  The Hospitallers rebuilt it and expanded it into the largest Crusader fortress in the Holy Land, adding an outer wall 3 meters thick with seven guard towers 8-10 meters thick, to create a concentric castle. One of these towers was occupied by the Grand Master of the Hospitallers. In the 12th century there was a moat covered by a drawbridge leading to postern gates.[PARAGRAPH:1]		In 1163, the fortress was unsuccessfully besieged by Nur ad-Din. After their victory the Hospitallers became an essentially independent force on the Tripolitanian frontier. By 1170, the Hospitallers' modifications were complete, but parts of the fortress were rebuilt after numerous earthquakes in the late 12th century and early 13th century.  It is estimated that the castle fortress could hold 50-60 Hospitallers and up to 2,000 foot soldiers. Aside from the control of the road to the Mediterranean, the Hospitallers also exerted some influence over Lake Homs to the east, where they could control the fishing industry and watch for Muslim armies gathering in Syria.[PARAGRAPH:1]Another failed siege was made by Saladin in 1188, during which the castle general was captured. He was taken by Saladin's men to the castle gates where he was told to order the gates opened. He first told his men in Arabic to surrender the castle, then in French told them to hold the castle to the last man. (Adapted from Wikipedia.org)</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -366,7 +366,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Krak des Chevaliers[COLOR_REVERT] adds +50% defense to its host city and gives a free wall and castle in each conquered city.  It also increases its city's odds of generating a [COLOR_UNIT_TEXT]Great Engineer[COLOR_REVERT].</English>
-		<French/>
+		<French>[COLOR_BUILDING_TEXT]Krak des Chevaliers[COLOR_REVERT]  ajoute +50%% de d&#233;fense au ville d&#233;j&#224; sous contrôle et offre le rempart et le chateau aux futures villes conquises. De plus il augmente les chances de faire apparaitre un [COLOR_UNIT_TEXT]Ing&#233;nieur Illustre[COLOR_REVERT].</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -374,11 +374,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP</Tag>
 		<English>[ICON_BULLET]Free walls and castle in very conquered city.</English>
-		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#229; &#241;&#242;&#229;&#237;&#251; &#232; &#231;&#224;&#236;&#238;&#234; &#226; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#236; &#227;&#238;&#240;&#238;&#228;&#229;.</Russian><Japanese/><Chinese/></TEXT>
+		<French>[ICON_BULLET]Rempart et Chateau dans chaque ville conquite.</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#229; &#241;&#242;&#229;&#237;&#251; &#232; &#231;&#224;&#236;&#238;&#234; &#226; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#236; &#227;&#238;&#240;&#238;&#228;&#229;.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALACIO_DE_PENA</Tag>
 		<English>Palacio da Pena</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Palais de Pena</French><German/><Italian/><Spanish/><Russian>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL</Tag>
 		<English>Escorial Palace</English>
@@ -388,11 +388,11 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#221;&#241;&#234;&#238;&#240;&#232;&#224;&#235; </Russian>
-		<French/><German/><Italian/></TEXT>
+		<French>Palace de Escorial</French><German/><Italian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Escorial Palace[COLOR_REVERT] removes any stability hit due to poor economic performance.  It also increases its city's odds of generating a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT].</English>
-		<French/>
+		<French>[COLOR_BUILDING_TEXT]Escorial Palace[COLOR_REVERT] removes any stability hit due to poor economic performance.  It also increases its city's odds of generating a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT].</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -400,19 +400,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_HELP</Tag>
 		<English>[ICON_BULLET]No stability penalty for bad economy.</English>
-		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#231;&#224; &#239;&#235;&#238;&#245;&#243;&#254; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;.</Russian><Japanese/><Chinese/></TEXT>
+		<French>[ICON_BULLET] Pas p&#233;nalit&#233; pour une mauvaise &#233;conomie.</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#231;&#224; &#239;&#235;&#238;&#245;&#243;&#254; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY</Tag>
 		<English>Monastery of Cluny</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Monast&#232;re de Cluny</French><German/><Italian/><Spanish/><Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPLE_MOUNT</Tag>
 		<English>Temple Mount</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Temple Mont</French><German/><Italian/><Spanish/><Russian>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>
 		<English>The Round Church</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Le Cycle de l'Eglise</French><German/><Italian/><Spanish/><Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE</Tag>
 		<English>Magellan's Voyage</English>
@@ -421,7 +421,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>&#204;&#224;&#227;&#229;&#235;&#235;&#224;&#237;&#238;&#226;&#238; &#207;&#243;&#242;&#229;&#248;&#229;&#241;&#242;&#226;&#232;&#229;</Russian></TEXT>
+		<French>Voyage de Magellan</French><German/><Italian/><Russian>&#204;&#224;&#227;&#229;&#235;&#235;&#224;&#237;&#238;&#226;&#238; &#207;&#243;&#242;&#229;&#248;&#229;&#241;&#242;&#226;&#232;&#229;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL</Tag>
 		<English>Golden Bull</English>
@@ -430,7 +430,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Russian></TEXT>
+		<French>Bulle d'Or</French><German/><Italian/><Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE</Tag>
 		<English>Kalmar Castle</English>
@@ -439,7 +439,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Russian></TEXT>
+		<French>Ch&#226;teau</French><German/><Italian/><Russian>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL</Tag>
 		<English>Tomb of Al Khalid</English>
@@ -448,7 +448,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian></TEXT>
+		<French>Tombe de Al Khalid</French><German/><Italian/><Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES</Tag>
 		<English>Palais des Papes</English>
@@ -457,7 +457,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#207;&#224;&#239;&#229;&#241;&#224;</Russian></TEXT>
+		<French>Palais des Papes</French><German/><Italian/><Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#207;&#224;&#239;&#229;&#241;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER</Tag>
 		<English>Belem Tower</English>
@@ -466,18 +466,18 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Russian></TEXT>
+		<French>Tour de Belem</French><German/><Italian/><Russian>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BROTHERS_AT_WAR</Tag>
 		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith.</English>
-		<French/><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Russian><Japanese/><Chinese/></TEXT>
+		<French>[ICON_BULLET]Pas de m&#233;contement pour les guerres contre les fr&#232;res de foi.</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER_PEDIA</Tag>
-		<English>The Belém Tower is a fortified tower located in the Belém district of Lisbon, Portugal.
+		<English>The Bel&#233;m Tower is a fortified tower located in the Bel&#233;m district of Lisbon, Portugal.
 
-The Belém Tower was built in the early sixteenth century in the Portuguese late-Gothic style, the Manueline, to commemorate Vasco da Gama's expedition. This defensive, yet elegant construction has become one of the symbols of the city, a memorial to Portuguese power as it was during the Age of Discovery. In 1983, it was classified, together with the nearby Mosteiro dos Jerónimos (Jerónimos Monastery), as a UNESCO World Heritage Site.
+The Bel&#233;m Tower was built in the early sixteenth century in the Portuguese late-Gothic style, the Manueline, to commemorate Vasco da Gama's expedition. This defensive, yet elegant construction has become one of the symbols of the city, a memorial to Portuguese power as it was during the Age of Discovery. In 1983, it was classified, together with the nearby Mosteiro dos Jerónimos (Jerónimos Monastery), as a UNESCO World Heritage Site.
 
-The Belém Tower was built both as a ceremonial gateway to Lisbon and as part of a defensive system at the entrance to the Tagus river. The system was initiated by King John II (1455-1495), who built the Fortress of Cascais and the Fortress of São Sebastião of Caparica. The shore of Belém had been protected by a ship, the Grande Nau, but it was replaced by the Tower of Belém during the last five years of the reign of King Manuel I. It was dedicated to the patron saint of Lisbon, St Vincent.
+The Bel&#233;m Tower was built both as a ceremonial gateway to Lisbon and as part of a defensive system at the entrance to the Tagus river. The system was initiated by King John II (1455-1495), who built the Fortress of Cascais and the Fortress of São Sebastião of Caparica. The shore of Bel&#233;m had been protected by a ship, the Grande Nau, but it was replaced by the Tower of Bel&#233;m during the last five years of the reign of King Manuel I. It was dedicated to the patron saint of Lisbon, St Vincent.
 
 The tower was constructed, between 1515 and 1521, by the military architect, Francisco de Arruda, who had already built several fortresses in Portuguese territories in Morocco. The influence of Moorish architecture is manifest in the delicate decorations, the arched windows, the balconies, and the ribbed cupolas of the watchtowers. Diogo de Boitaca, the first architect of the nearby Monastery of the Jerónimos, probably also participated in decorating the building. The machicolation and the battlements are decorated with the rich sculptural ornamentation of the Manueline style.
 
@@ -485,8 +485,20 @@ Originally, the tower stood on a little island near the right bank of the Tagus,
 
 In 1580, when Lisbon was invaded by Spanish troops in the course of a struggle for the Portuguese throne, defenders of the tower fought and surrendered to the Duke of Alba. During subsequent centuries, the tower was mainly used as a prison (even though the cellars flooded regularly) and as a custom house. Indeed, given its height and lack of integration into the landscape, some historians believe the tower was always intended to serve as a customs outpost.
 
-In the 1840s, at the urging of romantic writer Almeida Garrett, the Tower of Belém was restored by King Ferdinand II. At that point, many neo-Manueline decorative elements were added to the building. It was declared a National Monument in 1910.</English>
-		<French>.</French>
+In the 1840s, at the urging of romantic writer Almeida Garrett, the Tower of Bel&#233;m was restored by King Ferdinand II. At that point, many neo-Manueline decorative elements were added to the building. It was declared a National Monument in 1910.</English>
+		<French>The Bel&#233;m Tower is a fortified tower located in the Bel&#233;m district of Lisbon, Portugal.
+
+The Bel&#233;m Tower was built in the early sixteenth century in the Portuguese late-Gothic style, the Manueline, to commemorate Vasco da Gama's expedition. This defensive, yet elegant construction has become one of the symbols of the city, a memorial to Portuguese power as it was during the Age of Discovery. In 1983, it was classified, together with the nearby Mosteiro dos Jerónimos (Jerónimos Monastery), as a UNESCO World Heritage Site.
+
+The Bel&#233;m Tower was built both as a ceremonial gateway to Lisbon and as part of a defensive system at the entrance to the Tagus river. The system was initiated by King John II (1455-1495), who built the Fortress of Cascais and the Fortress of São Sebastião of Caparica. The shore of Bel&#233;m had been protected by a ship, the Grande Nau, but it was replaced by the Tower of Bel&#233;m during the last five years of the reign of King Manuel I. It was dedicated to the patron saint of Lisbon, St Vincent.
+
+The tower was constructed, between 1515 and 1521, by the military architect, Francisco de Arruda, who had already built several fortresses in Portuguese territories in Morocco. The influence of Moorish architecture is manifest in the delicate decorations, the arched windows, the balconies, and the ribbed cupolas of the watchtowers. Diogo de Boitaca, the first architect of the nearby Monastery of the Jerónimos, probably also participated in decorating the building. The machicolation and the battlements are decorated with the rich sculptural ornamentation of the Manueline style.
+
+Originally, the tower stood on a little island near the right bank of the Tagus, opposite Restelo beach. With the progressive southward creep of the shoreline over the years, the tower is now practically 'moored' to the bank itself.
+
+In 1580, when Lisbon was invaded by Spanish troops in the course of a struggle for the Portuguese throne, defenders of the tower fought and surrendered to the Duke of Alba. During subsequent centuries, the tower was mainly used as a prison (even though the cellars flooded regularly) and as a custom house. Indeed, given its height and lack of integration into the landscape, some historians believe the tower was always intended to serve as a customs outpost.
+
+In the 1840s, at the urging of romantic writer Almeida Garrett, the Tower of Bel&#233;m was restored by King Ferdinand II. At that point, many neo-Manueline decorative elements were added to the building. It was declared a National Monument in 1910.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -494,7 +506,7 @@ In the 1840s, at the urging of romantic writer Almeida Garrett, the Tower of Bel
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE_PEDIA</Tag>
 		<English>Brandenburg Gate is a former city gate and one of the main symbols of Berlin and Germany. It is located west of the city center at the intersection of Unter den Linden and Ebertstraße, immediately west of the Pariser Platz. It is the only remaining gate of a series through which one formerly entered Berlin. One block to the north stands the Reichstag. The gate is the monumental entry to Unter den Linden, the renowned boulevard of linden trees which formerly led directly to the city palace of the Prussian monarchs. It was commissioned by King Frederick William II of Prussia as a sign of peace and built by Karl Gotthard Langhans from 1788 to 1791. The Brandenburg Gate was restored from 2000 to 2002 by the Stiftung Denkmalschutz Berlin (Berlin Monument Conservation Foundation). Today, it is considered one of Europe's most famous landmarks.</English>
-		<French>.</French>
+		<French>Brandenburg Gate is a former city gate and one of the main symbols of Berlin and Germany. It is located west of the city center at the intersection of Unter den Linden and Ebertstraße, immediately west of the Pariser Platz. It is the only remaining gate of a series through which one formerly entered Berlin. One block to the north stands the Reichstag. The gate is the monumental entry to Unter den Linden, the renowned boulevard of linden trees which formerly led directly to the city palace of the Prussian monarchs. It was commissioned by King Frederick William II of Prussia as a sign of peace and built by Karl Gotthard Langhans from 1788 to 1791. The Brandenburg Gate was restored from 2000 to 2002 by the Stiftung Denkmalschutz Berlin (Berlin Monument Conservation Foundation). Today, it is considered one of Europe's most famous landmarks.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -506,7 +518,11 @@ In the 1840s, at the urging of romantic writer Almeida Garrett, the Tower of Bel
 Philip II of Spain, reacting to the Protestant Reformation sweeping through Europe during the sixteenth century, devoted much of his lengthy reign (1556-1598) and much of his seemingly inexhaustible supply of New World gold to stemming the Protestant tide. His protracted efforts were, in the long run, partly successful. However, the same counter-reformational impulse had a much more benign expression, thirty years earlier, in Philip's decision to build the complex at El Escorial.
 
 Philip engaged the Spanish architect, Juan Bautista de Toledo, to be his collaborator in the design of El Escorial. Juan Bautista had spent the greater part of his career in Rome, where he had worked on the basilica of St. Peter's, and in Naples, where he had served the king's viceroy, whose recommendation brought him to the king's attention. Philip appointed him architect-royal in 1559, and together they designed El Escorial as a monument to Spain's role as a center of the Christian world.</English>
-		<French>.</French>
+		<French>El Escorial is a historical residence of the king of Spain. It is one of the Spanish royal sites and functions as a monastery, royal palace, museum, and school. It is located about 45 kilometres (28 miles) northwest of the Spanish capital, Madrid, in the town of San Lorenzo de El Escorial. El Escorial comprises two architectural complexes of great historical and cultural significance: El Real Monasterio de El Escorial itself and La Granjilla de La Fresneda, a royal hunting lodge and monastic retreat about five kilometres away. These sites have a dual nature; that is to say, during the sixteenth and seventeenth centuries, they were places in which the temporal power of the Spanish monarchy and the ecclesiastical predominance of the Roman Catholic religion in Spain found a common architectural manifestation. El Escorial was, at once, a monastery and a Spanish royal palace. Originally a property of the Hieronymite monks, it is now an monastery of the Order of Saint Augustine.
+
+Philip II of Spain, reacting to the Protestant Reformation sweeping through Europe during the sixteenth century, devoted much of his lengthy reign (1556-1598) and much of his seemingly inexhaustible supply of New World gold to stemming the Protestant tide. His protracted efforts were, in the long run, partly successful. However, the same counter-reformational impulse had a much more benign expression, thirty years earlier, in Philip's decision to build the complex at El Escorial.
+
+Philip engaged the Spanish architect, Juan Bautista de Toledo, to be his collaborator in the design of El Escorial. Juan Bautista had spent the greater part of his career in Rome, where he had worked on the basilica of St. Peter's, and in Naples, where he had served the king's viceroy, whose recommendation brought him to the king's attention. Philip appointed him architect-royal in 1559, and together they designed El Escorial as a monument to Spain's role as a center of the Christian world.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -518,7 +534,11 @@ Philip engaged the Spanish architect, Juan Bautista de Toledo, to be his collabo
 One of the most significant political events took place at Kalmar Castle in 1397, when the Kalmar Union was formed - a union of Denmark, Norway and Sweden, organized by Queen Margaret I of Denmark.
 
 The fortress was improved during the 16th century under the direction of King Gustav Vasa and his sons Eric XIV and John III, who turned the medieval fortress into a castle fit for a renaissance king. Today, it is one of Sweden's best preserved renaissance castles.</English>
-		<French>.</French>
+		<French>Kalmar Castle, located near the site of Kalmar's medieval harbor, has played a crucial part in Swedish history since its initial construction as a fortified tower in the 12th century. King Magnus Ladulås ordered the construction of a fortress around the tower in the 1280s, and was further expanded in the centuries that followed.
+
+One of the most significant political events took place at Kalmar Castle in 1397, when the Kalmar Union was formed - a union of Denmark, Norway and Sweden, organized by Queen Margaret I of Denmark.
+
+The fortress was improved during the 16th century under the direction of King Gustav Vasa and his sons Eric XIV and John III, who turned the medieval fortress into a castle fit for a renaissance king. Today, it is one of Sweden's best preserved renaissance castles.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -545,7 +565,26 @@ In 1236, Córdoba was recaptured from the Muslim army by King Ferdinand III of Ca
 The most significant alteration was building a Renaissance cathedral nave in the middle of the structure. It was constructed by permission of Charles V, king of united Spain. Its reversion to a Christian church (officially the Cathedral of the Assumption of the Virgin) may have helped to preserve it when the Spanish Inquisition was most active.
 
 Artisans and architects continued to add to the existing structure until the late 18th century.</English>
-		<French>.</French>
+		<French>The Mezquita (Spanish for "mosque") of Córdoba or Cordova is a Roman Catholic cathedral originally built as a mosque in the Andalusian city of Córdoba, Spain. It is regarded as perhaps the most accomplished monument of the Umayyad dynasty of Córdoba. After the Spanish Reconquista, it was turned into a church, with a Gothic cathedral inserted into the center of the large Moorish building. Today the entire building is used to house the Cathedral of the diocese of Córdoba in Spain.
+
+The building was begun in approximately 600 A.D. as the Christian Visigothic church of St. Vincent.
+ The first Muslim Emir Abd ar-Rahman I bought the church 
+ and reworked it over two centuries to refashion it as a mosque, starting in 784 A.D. Additionally, Abd ar-Rahman I used the mosque (originally called Aljama Mosque) as an adjunct to his palace and named it to honor his wife. According to some authors 
+ the church of St. Vincent was demolished after it was bought from the local Christian community.
+
+Several explanations have been proposed to explain the mosque's unorthodox orientation. Some have suggested the mihrab faces south because the foundations of the mosque were taken from the old Roman and Visigoth constructions. Others contend that Abd ar-Rahman oriented the mihrab southward as if he were still in the Ummayyad capital of Damascus and not in exile.
+
+The mosque underwent numerous subsequent changes: Abd ar-Rahman III ordered a new minaret; Al-Hakam II, in 961, enlarged the building and enriched the mihrab. The last of the reforms was carried out by Al-Mansur Ibn Abi Aamir in 987.
+
+It was the most magnificent of the more than 1,000 mosques in the city and was at one time the second largest mosque in the Muslim world. It was connected to the Caliph's palace by a raised walk-way, mosques within the palaces being the tradition for the Islamic rulers of all times.
+
+The city in which it was built was subject to frequent invasion and each conquering wave added their own mark to the architecture. The building is most notable for its giant arches, with over 1,000 columns of jasper, onyx, marble, and granite. These were made from pieces of the Roman temple which had occupied the site previously, as well as other destroyed Roman buildings. The double arches, pictured above, were a new introduction to architecture, and helped support the tremendous weight of the higher ceilings. The double arches consist of a lower horseshoe arch and an upper semi-circular arch. The Mezquita also features richly gilded prayer niches. A centrally located honey-combed dome has beautiful blue tiles decorated with stars. The mihrab is a masterpiece of architectural art, with geometric and flowing designs of plants. The Mezquita reached its current dimensions in 987 A.D. with the completion of the outer naves and orange tree courtyard.
+
+In 1236, Córdoba was recaptured from the Muslim army by King Ferdinand III of Castile and the mosque was reconsecrated as a Christian church. Alfonso X oversaw the construction of the Villaviciosa Chapel and the Royal Chapel within the mosque. The kings who followed added further Christian features: Enrique II rebuilt the chapel in the 14th century.
+
+The most significant alteration was building a Renaissance cathedral nave in the middle of the structure. It was constructed by permission of Charles V, king of united Spain. Its reversion to a Christian church (officially the Cathedral of the Assumption of the Virgin) may have helped to preserve it when the Spanish Inquisition was most active.
+
+Artisans and architects continued to add to the existing structure until the late 18th century.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -554,10 +593,14 @@ Artisans and architects continued to add to the existing structure until the lat
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY_PEDIA</Tag>
 		<English>Cluny Abbey is a Benedictine monastery in Cluny, department of Saône-et-Loire, France.
 
-It was founded in 910 by William I, Count of Auvergne, who installed Abbot Berno and placed the abbey under the immediate authority of Pope Sergius III. The abbey and its constellation of dependencies soon came to exemplify the kind of religious life that was at the heart of 11th-century piety. The town of Cluny, in the modern department of Saône-et-Loire in the region of Bourgogne, in east-central France, near Mâcon, grew round the former abbey, founded in a forested hunting reserve.
+It was founded in 910 by William I, Count of Auvergne, who installed Abbot Berno and placed the abbey under the immediate authority of Pope Sergius III. The abbey and its constellation of dependencies soon came to exemplify the kind of religious life that was at the heart of 11th-century piety. The town of Cluny, in the modern department of Saône-et-Loire in the region of Bourgogne, in east-central France, near M&#226;con, grew round the former abbey, founded in a forested hunting reserve.
 
 The Benedictine order was a keystone to the stability that European society achieved in the 11th century, and partly owing to the stricter adherence to a reformed Benedictine rule, Cluny became the acknowledged leader of western monasticism from the later 10th century. A sequence of highly competent abbots of Cluny were statesmen on an international stage. The monastery of Cluny itself became the grandest, most prestigious and best endowed monastic institution in Europe. The height of Cluniac influence was from the second half of the 10th century through the early 12th. The abbey was sacked and mostly destroyed in 1790 during the French Revolution, and only a small part of the original remains.</English>
-		<French>.</French>
+		<French>Cluny Abbey is a Benedictine monastery in Cluny, department of Saône-et-Loire, France.
+
+It was founded in 910 by William I, Count of Auvergne, who installed Abbot Berno and placed the abbey under the immediate authority of Pope Sergius III. The abbey and its constellation of dependencies soon came to exemplify the kind of religious life that was at the heart of 11th-century piety. The town of Cluny, in the modern department of Saône-et-Loire in the region of Bourgogne, in east-central France, near M&#226;con, grew round the former abbey, founded in a forested hunting reserve.
+
+The Benedictine order was a keystone to the stability that European society achieved in the 11th century, and partly owing to the stricter adherence to a reformed Benedictine rule, Cluny became the acknowledged leader of western monasticism from the later 10th century. A sequence of highly competent abbots of Cluny were statesmen on an international stage. The monastery of Cluny itself became the grandest, most prestigious and best endowed monastic institution in Europe. The height of Cluniac influence was from the second half of the 10th century through the early 12th. The abbey was sacked and mostly destroyed in 1790 during the French Revolution, and only a small part of the original remains.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -572,12 +615,24 @@ In the 18th century the monastery was severely damaged by lightning. However, it
 
 For many decades the ruins remained untouched, but they still astonished young prince Ferdinand. In 1838, as King consort Ferdinand II, he decided to acquire the old monastery, all of the surrounding lands, the nearby Castle of the Moors and a few other estates in the area. King Ferdinand then set out to transform the remains of the monastery into a palace that would serve as a summer residence for the Portuguese royal family. The commission for the Romantic style rebuilding was given to Lieutenant-General and mining engineer Baron Wilhelm Ludwig von Eschwege. Eschwege, a German amateur architect, was much traveled and likely had knowledge of several castles along the Rhine river. The construction took place between 1842-1854, although it was almost completed in 1847: King Ferdinand and Queen Maria II intervened decisively on matters of decoration and symbolism. Among others, the King suggested vault arches, Medieval and Islamic elements be included, and he also designed an exquisitely ornate window for the main façade (inspired by the chapter house window of the Convent of the Order of Christ in Tomar).
 
-After the death of Ferdinand the palace passed into the possession of his second wife Elisa Hensler, Countess of Edla. The latter then sold the palace to King Luís, who wanted to retrieve it for the royal family, and thereafter the palace was frequently used by the family. In 1889 it was purchased by the Portuguese State, and after the Republican Revolution of 1910 it was classified as a national monument and transformed into a museum. The last queen of Portugal, Queen Amélia, spent her last night at the palace before leaving the country in exile.
+After the death of Ferdinand the palace passed into the possession of his second wife Elisa Hensler, Countess of Edla. The latter then sold the palace to King Luís, who wanted to retrieve it for the royal family, and thereafter the palace was frequently used by the family. In 1889 it was purchased by the Portuguese State, and after the Republican Revolution of 1910 it was classified as a national monument and transformed into a museum. The last queen of Portugal, Queen Am&#233;lia, spent her last night at the palace before leaving the country in exile.
 
 The palace quickly drew visitors and became one of Portugal's most visited monuments. Over time the colors of the red and yellow façades faded, and for many years the palace was visually identified as being entirely gray. By the end of the 20th century the palace was repainted and the original colors restored, much to the dismay of many Portuguese who were not aware that the palace had once displayed such chromatic variety.
 
 In 1995, the palace and the rest of the Cultural Landscape of Sintra were classified as a World Heritage Site by UNESCO.</English>
-		<French>.</French>
+		<French>The Pena National Palace is the oldest palace inspired by European Romanticism. It is located in the civil parish of São Pedro de Penaferrim, municipality of Sintra, Portugal. The palace stands on the top of a hill above the town of Sintra, and on a clear day it can be easily seen from Lisbon and much of its metropolitan area. It is a national monument and constitutes one of the major expressions of 19th century Romanticism in the world. The palace is a UNESCO World Heritage Site and one of the Seven Wonders of Portugal. It is also used for state occasions by the President of the Portuguese Republic and other government officials.
+
+The palace's history started in the Middle Ages when a chapel dedicated to Our Lady of Pena was built on the top of the hill above Sintra. According to tradition, the construction occurred after an apparition of the Virgin Mary. In 1493, King John II, accompanied by his wife Queen Leonor, made a pilgrimage to the site to fulfill a vow. His successor, King Manuel I, was also very fond of this sanctuary, and ordered the construction there of a monastery which was donated to the Order of Saint Jerome. For centuries Pena was a small, quiet place for meditation, housing a maximum of eighteen monks.
+
+In the 18th century the monastery was severely damaged by lightning. However, it was the Great Lisbon Earthquake of 1755, occurring shortly afterwards, that took the heaviest toll on the monastery, reducing it to ruins. Nonetheless, the chapel (and its magnificent works of marble and alabaster attributed to Nicolau Chanterene) escaped without significant damage.
+
+For many decades the ruins remained untouched, but they still astonished young prince Ferdinand. In 1838, as King consort Ferdinand II, he decided to acquire the old monastery, all of the surrounding lands, the nearby Castle of the Moors and a few other estates in the area. King Ferdinand then set out to transform the remains of the monastery into a palace that would serve as a summer residence for the Portuguese royal family. The commission for the Romantic style rebuilding was given to Lieutenant-General and mining engineer Baron Wilhelm Ludwig von Eschwege. Eschwege, a German amateur architect, was much traveled and likely had knowledge of several castles along the Rhine river. The construction took place between 1842-1854, although it was almost completed in 1847: King Ferdinand and Queen Maria II intervened decisively on matters of decoration and symbolism. Among others, the King suggested vault arches, Medieval and Islamic elements be included, and he also designed an exquisitely ornate window for the main façade (inspired by the chapter house window of the Convent of the Order of Christ in Tomar).
+
+After the death of Ferdinand the palace passed into the possession of his second wife Elisa Hensler, Countess of Edla. The latter then sold the palace to King Luís, who wanted to retrieve it for the royal family, and thereafter the palace was frequently used by the family. In 1889 it was purchased by the Portuguese State, and after the Republican Revolution of 1910 it was classified as a national monument and transformed into a museum. The last queen of Portugal, Queen Am&#233;lia, spent her last night at the palace before leaving the country in exile.
+
+The palace quickly drew visitors and became one of Portugal's most visited monuments. Over time the colors of the red and yellow façades faded, and for many years the palace was visually identified as being entirely gray. By the end of the 20th century the palace was repainted and the original colors restored, much to the dismay of many Portuguese who were not aware that the palace had once displayed such chromatic variety.
+
+In 1995, the palace and the rest of the Cultural Landscape of Sintra were classified as a World Heritage Site by UNESCO.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -598,8 +653,22 @@ Although the Palais remained under papal control (along with the surrounding cit
 
 The Palais was subsequently taken over by the Napoleonic French state for use as a military barracks and prison. Although it was further damaged by the military occupation, especially under the anti-clerical Third Republic, when the remaining interior woodwork was cleared away for use of the structure as a stables - the frescos were covered over and largely destroyed - ironically this ensured the shell of the building's physical survival. It was only vacated in 1906, when it became a national museum. It has been under virtually constant restoration ever since.
 
-The majority of the Palais is now open to the public; it also houses a large convention centre and the archives of the département of Vaucluse.</English>
-		<French>.</French>
+The majority of the Palais is now open to the public; it also houses a large convention centre and the archives of the d&#233;partement of Vaucluse.</English>
+		<French>The Palais des Papes is a historical palace in Avignon, southern France, one of the largest and most important medieval Gothic buildings in Europe.
+
+Avignon became the residence of the Popes in 1309, when the Gascon Bertrand de Goth, as Pope Clement V, unwilling to face the violent chaos of Rome after his election (1305), moved the Papal Curia to Avignon, a period known as the Avignon Papacy. Clement lived as a guest in the Dominican monastery at Avignon, and his successor Pope John XXII set up a magnificent establishment there, but the reconstruction of the old bishops' palace was begun in earnest by Pope Benedict XII (1334-42) and continued by his successors to 1364. The site, on a natural rocky outcrop at the northern edge of Avignon, overlooking the river Rhône, was that of the old episcopal palace of the bishops of Avignon. The Palais was built in two principal phases with two distinct segments, known as the Palais Vieux (Old Palace) and Palais Neuf (New Palace). By the time of its completion, it occupied an area of 11,000 m² (2.6 acres). The building was enormously expensive, consuming much of the papacy's income during its construction.
+
+The Palais Vieux was constructed by the architect Pierre Poisson of Mirepoix at the instruction of Pope Benedict XII. The austere Benedict had the old/new episcopal palace razed and replaced with a much larger building centreed on a cloister, heavily fortified against attackers. Its four wings are flanked with high towers.
+
+Under Popes Clement VI, Innocent VI and Urban V, the building was expanded to form what is now known as the Palais Neuf. Jean de Louvres was commissioned by Clement VI to build a new tower and adjoining buildings, including a 52 m long Grand Chapel to serve as the location for papal acts of worship. Two more towers were built under Innocent VI. Urban V completed the main courtyard (known as the Court d'Honneur) with further buildings enclosing it. The interior of the building was sumptuously decorated with frescos, tapestries, paintings, sculptures and wooden ceilings.
+
+The popes departed Avignon in 1377, returning to Rome, but this prompted the Papal Schism during which time the antipopes Clement VII and Benedict XIII made Avignon their home until 1408. The latter was imprisoned in the Palais for ten years after being besieged when in 1398 Geoffrey Boucicaut led an army of occupation. The building remained in the hands of antipapal forces for some years - it was besieged from 1410 to 1411 - but was returned to the authority of papal legates in 1433.
+
+Although the Palais remained under papal control (along with the surrounding city and Comtat Venaissin) for over 350 years afterwards, it gradually deteriorated despite a restoration in 1516. When the French Revolution broke out in 1789 it was already in a bad state when it was seized and sacked by revolutionary forces. In 1791 it became the scene of a massacre of counter-revolutionaries, whose bodies were thrown into the Tour des Latrines in the Palais Vieux.
+
+The Palais was subsequently taken over by the Napoleonic French state for use as a military barracks and prison. Although it was further damaged by the military occupation, especially under the anti-clerical Third Republic, when the remaining interior woodwork was cleared away for use of the structure as a stables - the frescos were covered over and largely destroyed - ironically this ensured the shell of the building's physical survival. It was only vacated in 1906, when it became a national museum. It has been under virtually constant restoration ever since.
+
+The majority of the Palais is now open to the public; it also houses a large convention centre and the archives of the d&#233;partement of Vaucluse.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -609,7 +678,9 @@ The majority of the Palais is now open to the public; it also houses a large con
 		<English>San Marco Basilica , the cathedral church of Venice, is the most famous of the city's churches and one of the best known examples of Byzantine architecture. It lies on Piazza San Marco adjacent and connected to the Doge's Palace. Originally it was the "chapel" of the Venetian rulers, and not the city's cathedral. Since 1807 it has been the seat of the Patriarch of Venice, archbishop of the Roman Catholic Archdiocese of Venice. For its opulent design, gilded Byzantine mosaics, and its status as a symbol of Venetian wealth and power, from the 11th century on the building was known by the nickname Chiesa d'Oro (Church of gold).
 
 The first San Marco's was a temporary building in the Doge's Palace, constructed in 828, when Venetian merchants stole the supposed relics of San Marco the Evangelist from Alexandria. This was replaced by a new church on its present site in 832; from the same century dates the first San Marco's Campanile (bell tower). The new church was burned in a rebellion in 976, rebuilt in 978 and again to form the basis of the present basilica since 1063. The basilica was consecrated in 1094, the same year in which the body of San Marco was supposedly rediscovered in a pillar by Vitale Faliero, doge at the time. The building also incorporates a low tower (now housing San Marco's Treasure), believed by some to have been part of the original Doge's Palace. Within the first half of the 13th century the narthex and the new façade were constructed, most of the mosaics were completed and the domes were covered with higher wooden, lead-covered domes in order to blend in with the Gothic architecture of the redesigned Doge's Palace.</English>
-		<French>.</French>
+		<French>San Marco Basilica , the cathedral church of Venice, is the most famous of the city's churches and one of the best known examples of Byzantine architecture. It lies on Piazza San Marco adjacent and connected to the Doge's Palace. Originally it was the "chapel" of the Venetian rulers, and not the city's cathedral. Since 1807 it has been the seat of the Patriarch of Venice, archbishop of the Roman Catholic Archdiocese of Venice. For its opulent design, gilded Byzantine mosaics, and its status as a symbol of Venetian wealth and power, from the 11th century on the building was known by the nickname Chiesa d'Oro (Church of gold).
+
+The first San Marco's was a temporary building in the Doge's Palace, constructed in 828, when Venetian merchants stole the supposed relics of San Marco the Evangelist from Alexandria. This was replaced by a new church on its present site in 832; from the same century dates the first San Marco's Campanile (bell tower). The new church was burned in a rebellion in 976, rebuilt in 978 and again to form the basis of the present basilica since 1063. The basilica was consecrated in 1094, the same year in which the body of San Marco was supposedly rediscovered in a pillar by Vitale Faliero, doge at the time. The building also incorporates a low tower (now housing San Marco's Treasure), believed by some to have been part of the original Doge's Palace. Within the first half of the 13th century the narthex and the new façade were constructed, most of the mosaics were completed and the domes were covered with higher wooden, lead-covered domes in order to blend in with the Gothic architecture of the redesigned Doge's Palace.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -627,7 +698,17 @@ The interior of the cathedral is a collection of separate chapels, each filled w
 In a garden at the front of the cathedral stands a bronze statue commemorating Dmitry Pozharsky and Kuzma Minin, who rallied Russia's volunteer army against the Polish invaders during the Time of Troubles in the late sixteenth and early seventeenth centuries.
 
 The initial concept was to build a cluster of chapels, one dedicated to each of the saints on whose feast day the tsar had won a battle, but the construction of a single central tower unifies these spaces into a single cathedral. A popular historical legend says that Ivan had the architect, Postnik Yakovlev, blinded to prevent him from building a more magnificent building for anyone else. In fact, Postnik Yakovlev built a number of churches after Saint Basil's, including one in Kazan'.</English>
-		<French>.</French>
+		<French>The Saint Basil's Basilica is a multi-tented church on the Red Square in Moscow that also features distinctive onion domes. It is very often mistaken for the Church of the Savior on Blood, located in St. Petersburg. In the West, it is frequently confused with the Kremlin which overlooks it. Arguably the most recognized building in Russia, it is an international symbol for the nation and for the city of Moscow.
+
+The cathedral was commissioned by Ivan IV in Moscow to commemorate the capture of the Khanate of Kazan, and built from 1555 to 1561. In 1588 Tsar Fedor Ivanovich had a chapel added on the eastern side above the grave of Basil Fool for Christ, a Russian Orthodox saint after whom the cathedral was popularly named.
+
+Saint Basil's is located at the southeast end of Red Square, just across from the Spasskaya Tower of the Kremlin. Not particularly large, it consists of nine chapels built on a single foundation. The cathedral's design follows that of contemporary tented churches, notably those of Ascension in Kolomenskoye (1530) and of St John the Baptist's Decapitation in Dyakovo (1547).
+
+The interior of the cathedral is a collection of separate chapels, each filled with icons, medieval painted walls, and varying artwork on the top inside of the domes. The feeling is intimate and varied, in contrast to Western cathedrals which usually consist of a massive nave with one artistic style.
+
+In a garden at the front of the cathedral stands a bronze statue commemorating Dmitry Pozharsky and Kuzma Minin, who rallied Russia's volunteer army against the Polish invaders during the Time of Troubles in the late sixteenth and early seventeenth centuries.
+
+The initial concept was to build a cluster of chapels, one dedicated to each of the saints on whose feast day the tsar had won a battle, but the construction of a single central tower unifies these spaces into a single cathedral. A popular historical legend says that Ivan had the architect, Postnik Yakovlev, blinded to prevent him from building a more magnificent building for anyone else. In fact, Postnik Yakovlev built a number of churches after Saint Basil's, including one in Kazan'.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -649,7 +730,21 @@ After the Russian Revolution of 1917 and during the Soviet antireligious campaig
 Since the late 1980s Soviet, and later Ukrainian, politicians promised to return the building to the Orthodox Church. Due to various schisms and factions within the Church the return was postponed as all Orthodox and the Greek-Catholic Churches lay claim to it. Although all of the Orthodox churches have been allowed to conduct services at different dates, other times they are denied access. Most memorable was the funeral of Patriarch Volodymyr of the Ukrainian Orthodox Church - Kiev Patriarchy, when riot police were forced to prevent the burial on the premises of the museum and a bloody clash took place. After events such as those no religious body has yet been given the rights for regular services. The complex now remains a museum of Ukraine's Christianity, with most of its visitors being tourists.
 
 The complex of the Cathedral is the main component the National Sanctuary "Sophia of Kiev" the state institution responsible for the preservation of the Cathedral complex along with several other historic landmarks of the city.</English>
-		<French>.</French>
+		<French>Saint Sophia Cathedral in Kiev is an outstanding architectural monument of Kievan Rus'. Today, it is one of the city's best known landmarks and the first Ukrainian patrimony to be inscribed on the World Heritage List.
+
+The cathedral's name comes from the 6th-century Hagia Sophia cathedral in Constantinople (meaning Holy Wisdom, and dedicated to the Holy Wisdom of God rather than a specific saint named Sophia). According to a less popular theory, its model was the 13-domed oaken Saint Sophia Cathedral in Novgorod (ca. 989), which Yaroslav I the Wise determined to imitate in stone as a sign of gratitude to the citizens of Novgorod who had helped him secure the Kievan throne in 1019.
+
+The first foundations were laid in 1037, but the cathedral took two decades to complete. The structure has 5 naves, 5 apses, and (quite surprisingly for Byzantine architecture) 13 cupolas. It is surrounded by two-tier galleries from three sides. Measuring 37 to 55 m (121 to 180 ft), the exterior used to be faced with plinths. On the inside, it retains mosaics and frescos from the eleventh century, including a dilapidated representation of Yaroslav's family, and the Virgin Orans.
+
+Originally the cathedral was a burial place of the Kievan rulers including Vladimir Monomakh, Vsevolod Yaroslavich and of course the cathedral's founder Yaroslav I the Wise, although only the latter's grave survived to our days (see picture).
+
+After the pillaging of Kiev by Andrei Bogolyubsky of Vladimir-Suzdal in 1169, followed by Mongolian Tatars in 1240, the cathedral fell into disrepair. Following the 1595-96 Union of Brest, the cathedral of Saint Sophia belonged to the Ukrainian Greek Catholic Church until it was claimed by the Moldavian Orthodox metropolitan Peter Mogila (Mohyla) in 1633. Mogila commissioned the repair work and the upper part of the building was thoroughly rebuilt, modeled by the Italian architect Octaviano Mancini in the distinct Ukrainian Baroque style, while preserving the Byzantine interior, keeping its splendor intact. The work continued under the Cossack Hetman Ivan Mazepa, and in 1740 the Cathedral was completed to its present form.
+
+After the Russian Revolution of 1917 and during the Soviet antireligious campaign of the 1920s, the government plan called for the cathedral's destruction and transformation of the grounds into a park "Heroes of Perekop" (after a Red Army victory in the Russian Civil War in Crimea). The cathedral was saved from destruction primarily with the effort of many scientists and historians. Nevertheless, in 1934, Soviet authorities confiscated the structure from the church, including the surrounding seventeenth-eighteenth century architectural complex and designated it as an architectural and historical museum.
+
+Since the late 1980s Soviet, and later Ukrainian, politicians promised to return the building to the Orthodox Church. Due to various schisms and factions within the Church the return was postponed as all Orthodox and the Greek-Catholic Churches lay claim to it. Although all of the Orthodox churches have been allowed to conduct services at different dates, other times they are denied access. Most memorable was the funeral of Patriarch Volodymyr of the Ukrainian Orthodox Church - Kiev Patriarchy, when riot police were forced to prevent the burial on the premises of the museum and a bloody clash took place. After events such as those no religious body has yet been given the rights for regular services. The complex now remains a museum of Ukraine's Christianity, with most of its visitors being tourists.
+
+The complex of the Cathedral is the main component the National Sanctuary "Sophia of Kiev" the state institution responsible for the preservation of the Cathedral complex along with several other historic landmarks of the city.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -667,7 +762,17 @@ Magna Carta was the first document forced onto an English King by a group of his
 In practice, Magna Carta in the medieval period mostly did not limit the power of Kings; but by the time of the English Civil War it had become an important symbol for those who wished to show that the King was bound by the law.
 
 Magna Carta is normally understood to refer to a single document, that of 1215. Various amended versions of Magna Carta appeared in subsequent years however, and it is the 1297 version which remains on the statute books of England and Wales.</English>
-		<French>.</French>
+		<French>Magna Carta, also called Magna Carta Libertatum (the Great Charter of Freedoms), is an English legal charter, originally issued in the year 1215. It was written in Latin and is known by its Latin name. The usual English translation of Magna Carta is Great Charter.
+
+Magna Carta required King John of England to proclaim certain rights (pertaining to freemen), respect certain legal procedures, and accept that his will could be bound by the law. It explicitly protected certain rights of the King's subjects, whether free or fettered - and implicitly supported what became the writ of habeas corpus, allowing appeal against unlawful imprisonment.
+
+Magna Carta was arguably the most significant early influence on the extensive historical process that led to the rule of constitutional law today in the English speaking world. Magna Carta influenced the development of the common law and many constitutional documents, including the United States Constitution. Many clauses were renewed throughout the Middle Ages, and continued to be renewed as late as the 18th century. By the second half of the 19th century, however, most clauses in their original form had been repealed from English law.
+
+Magna Carta was the first document forced onto an English King by a group of his subjects (the barons) in an attempt to limit his powers by law and protect their privileges. It was preceded by the 1100 Charter of Liberties in which King Henry I voluntarily stated that his own powers were under the law.
+
+In practice, Magna Carta in the medieval period mostly did not limit the power of Kings; but by the time of the English Civil War it had become an important symbol for those who wished to show that the King was bound by the law.
+
+Magna Carta is normally understood to refer to a single document, that of 1215. Various amended versions of Magna Carta appeared in subsequent years however, and it is the 1297 version which remains on the statute books of England and Wales.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -681,7 +786,13 @@ The Temple Mount contains the holiest site in Judaism. Jewish Midrash holds that
 The Noble Sanctuary is the third holiest site in Islam, revered as the destination of Muhammad's journey to Jerusalem, and the location of his ascent to heaven. The site is also associated with all the Jewish biblical prophets who are also revered in Islam. The site is the location of the al-Aqsa Mosque and the Dome of the Rock, the oldest extant Islamic structure in the world.
 
 Controlled by Israel since 1967, both Israel and the Palestinian Authority claim sovereignty over the site, which remains a key issue in the Arab-Israeli conflict. A Muslim council, known as the Muslim Waqf, manages the site. The Israeli government enforces a controversial ban on prayer by non-Muslim visitors.</English>
-		<French>.</French>
+		<French>The Temple Mount, also known as Mount Moriah and by Muslims as the Noble Sanctuary, is a religious site in the Old City of Jerusalem. Due to its importance for Judaism and Islam it is one of the most contested religious sites in the world.
+
+The Temple Mount contains the holiest site in Judaism. Jewish Midrash holds that it was from here that the world expanded into its present form, and that this was where God gathered the dust he used to create the first man, Adam. The Torah records that it was here that God chose to rest His Name and Divine Presence, and consequently two Jewish Temples were built at the site. According to Jewish tradition, the Third Temple will also be located here, and will be the final one. In recent times, due to difficulties in ascertaining the precise location of the Mount's holiest spot, many Jews will not set foot on the Mount itself.
+
+The Noble Sanctuary is the third holiest site in Islam, revered as the destination of Muhammad's journey to Jerusalem, and the location of his ascent to heaven. The site is also associated with all the Jewish biblical prophets who are also revered in Islam. The site is the location of the al-Aqsa Mosque and the Dome of the Rock, the oldest extant Islamic structure in the world.
+
+Controlled by Israel since 1967, both Israel and the Palestinian Authority claim sovereignty over the site, which remains a key issue in the Arab-Israeli conflict. A Muslim council, known as the Muslim Waqf, manages the site. The Israeli government enforces a controversial ban on prayer by non-Muslim visitors.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -689,7 +800,7 @@ Controlled by Israel since 1967, both Israel and the Palestinian Authority claim
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_BUILDING_APOSTOLIC_PALACE</Tag>
 		<English>The St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:1]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</English>
-		<French>.</French>
+		<French>The St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:1]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
