@@ -623,7 +623,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_VENICE_GALLEAS</Type>
-			<Button>Art/Interface/Buttons/Units/Galleas.dds</Button>
+			<Button>Art/Interface/Buttons/Units/Venice_Galleas.dds</Button>
 			<fScale>0.35</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
