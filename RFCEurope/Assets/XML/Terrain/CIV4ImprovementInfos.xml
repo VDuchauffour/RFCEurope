@@ -1330,7 +1330,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COTTAGE</ArtDefineTag>
 			<PrereqNatureYields>
-				<iYield>1</iYield>
+				<iYield>0</iYield>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</PrereqNatureYields>
@@ -1371,6 +1371,10 @@
 				</TerrainMakesValid>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_MOORLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>

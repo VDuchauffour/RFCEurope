@@ -1097,7 +1097,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Louisiana.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
