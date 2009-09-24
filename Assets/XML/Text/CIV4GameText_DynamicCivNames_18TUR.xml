@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_TURKEY_DESC</Tag>
 		<English>The Ottomans</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Ottomans</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_TURKEY_SHORT_DESC</Tag>
 		<English>Turkey</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Turquie</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_TURKEY_ADJECTIVE</Tag>
 		<English>Ottoman</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>ottoman:ottomane:ottomans:ottomanes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_TUR00</Tag>
 		<English>Ottoman Empire</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Empire Ottoman</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_PORTUGAL_DESC</Tag>
 		<English>The Portuguese</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Portugais</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_PORTUGAL_SHORT_DESC</Tag>
 		<English>Portugal</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Portugal</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Tag>
 		<English>Portuguese</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>portugais:portugaise:portugais:portugaises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_POR00</Tag>
 		<English>Kingdom of Portugal</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Royaume du Portugal</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_TECH_CALENDAR</Tag>
 		<English>Calendar</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Calendrier</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -34,7 +34,7 @@
 		<Tag>TXT_KEY_TECH_MAP_MAKING</Tag>
 		<English>Map Making</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Carthographie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_TECH_THEOLOGY</Tag>
 		<English>Theology</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Th&#233;ologie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_TECH_LITERATURE</Tag>
 		<English>Literature</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Litt&#233;rature</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -109,7 +109,7 @@
 		<Tag>TXT_KEY_TECH_STIRRUP</Tag>
 		<English>Stirrup</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Etrier</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -134,7 +134,7 @@
 		<Tag>TXT_KEY_TECH_ASTROLABE</Tag>
 		<English>Astrolabe</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Astrolabe</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -159,7 +159,7 @@
 		<Tag>TXT_KEY_TECH_CLOCKMAKING</Tag>
 		<English>Clockmaking</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Horlogerie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -184,7 +184,7 @@
 		<Tag>TXT_KEY_TECH_ART</Tag>
 		<English>Religious Art</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Art Religieux</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -209,7 +209,7 @@
 		<Tag>TXT_KEY_TECH_ARCHITECTURE</Tag>
 		<English>Architecture</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Architecture</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -234,7 +234,7 @@
 		<Tag>TXT_KEY_TECH_MUSIC</Tag>
 		<English>Music</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Musique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -259,7 +259,7 @@
 		<Tag>TXT_KEY_TECH_DRAMA</Tag>
 		<English>Drama</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Com&#233;die Dramatique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -284,7 +284,7 @@
 		<Tag>TXT_KEY_TECH_CODE_OF_LAWS</Tag>
 		<English>Code of Laws</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Code des Lois</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -309,7 +309,7 @@
 		<Tag>TXT_KEY_TECH_MONASTICISM</Tag>
 		<English>Monasticsm</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Monasticisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -334,7 +334,7 @@
 		<Tag>TXT_KEY_TECH_ENGINEERING</Tag>
 		<English>Engineering</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Ing&#233;nierie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -359,7 +359,7 @@
 		<Tag>TXT_KEY_TECH_CLASSICAL_KNOWLEDGE</Tag>
 		<English>Classical Knowledge</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Savoir-Faire Classique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -384,7 +384,7 @@
 		<Tag>TXT_KEY_TECH_MACHINERY</Tag>
 		<English>Machinery</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Machinerie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -409,7 +409,7 @@
 		<Tag>TXT_KEY_TECH_VAULTED_ARCHES</Tag>
 		<English>Vaulted Arches</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Arche Vout&#233;e</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -434,7 +434,7 @@
 		<Tag>TXT_KEY_TECH_PHILOSOPHY</Tag>
 		<English>Philosophy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Philosophie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -459,7 +459,7 @@
 		<Tag>TXT_KEY_TECH_FARRIERS</Tag>
 		<English>Farriers</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Mar&#233;chal-Ferrants</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -484,7 +484,7 @@
 		<Tag>TXT_KEY_TECH_SIEGE_ENGINES</Tag>
 		<English>Siege Engines</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Engins de si&#232;ge</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -509,7 +509,7 @@
 		<Tag>TXT_KEY_TECH_BLAST_FURNACE</Tag>
 		<English>Blast Furnace</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Haut Fourneau</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -534,7 +534,7 @@
 		<Tag>TXT_KEY_TECH_GOTHIC_ARCHITECTURE</Tag>
 		<English>Gothic Architecture</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Architecture gothique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -559,7 +559,7 @@
 		<Tag>TXT_KEY_TECH_MONUMENT_BUILDING</Tag>
 		<English>Monument Building</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Construction</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -584,7 +584,7 @@
 		<Tag>TXT_KEY_TECH_FEUDALISM</Tag>
 		<English>Feudalism</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>F&#233;odalisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -609,7 +609,7 @@
 		<Tag>TXT_KEY_TECH_OPTICS</Tag>
 		<English>Optics</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Optique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -634,7 +634,7 @@
 		<Tag>TXT_KEY_TECH_ALCHEMY</Tag>
 		<English>Alchemy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Alchimie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -659,7 +659,7 @@
 		<Tag>TXT_KEY_TECH_DIVINE_RIGHT</Tag>
 		<English>Divine Right</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Droit Divin</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -684,7 +684,7 @@
 		<Tag>TXT_KEY_TECH_CIVIL_SERVICE</Tag>
 		<English>Civil Service</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Service Civil</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -709,7 +709,7 @@
 		<Tag>TXT_KEY_TECH_LATEEN_SAILS</Tag>
 		<English>Lateen Sails</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Voiles latines</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -734,7 +734,7 @@
 		<Tag>TXT_KEY_TECH_PLATE_ARMOR</Tag>
 		<English>Plate Armor</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Arme Plate</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -759,7 +759,7 @@
 		<Tag>TXT_KEY_TECH_PUBLIC_ENTERTAINMENT</Tag>
 		<English>Public Entertainment</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Divertissement publique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -784,7 +784,7 @@
 		<Tag>TXT_KEY_TECH_GUILDS</Tag>
 		<English>Guilds</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Guilde</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -809,7 +809,7 @@
 		<Tag>TXT_KEY_TECH_HERBAL_MEDICINE</Tag>
 		<English>Herbal Medicine</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Botanique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -834,7 +834,7 @@
 		<Tag>TXT_KEY_TECH_BIOLOGY</Tag>
 		<English>Biology</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Biologie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -859,7 +859,7 @@
 		<Tag>TXT_KEY_TECH_PHYSICS</Tag>
 		<English>Physics</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Physique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -884,7 +884,7 @@
 		<Tag>TXT_KEY_TECH_STEAM_ENGINES</Tag>
 		<English>Steam Engines</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Machines à vapeur</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -909,7 +909,7 @@
 		<Tag>TXT_KEY_TECH_BANKING</Tag>
 		<English>Banking</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Banque</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -934,7 +934,7 @@
 		<Tag>TXT_KEY_TECH_MILITARY_TRADITION</Tag>
 		<English>Military Tradition</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Tradition Militaire</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -959,7 +959,7 @@
 		<Tag>TXT_KEY_TECH_SHIPBUILDING</Tag>
 		<English>Shipbuilding</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Construction Naval</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -984,7 +984,7 @@
 		<Tag>TXT_KEY_TECH_GUNPOWDER</Tag>
 		<English>Gunpowder</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Poudre à Canon</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1009,7 +1009,7 @@
 		<Tag>TXT_KEY_TECH_MILITARY_SCIENCE</Tag>
 		<English>Military Science</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Science Militaire</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1034,7 +1034,7 @@
 		<Tag>TXT_KEY_TECH_PATRONAGE</Tag>
 		<English>Patronage</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Patronage</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1059,7 +1059,7 @@
 		<Tag>TXT_KEY_TECH_PAPER</Tag>
 		<English>Paper</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Papier</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1084,7 +1084,7 @@
 		<Tag>TXT_KEY_TECH_ASTRONOMY</Tag>
 		<English>Astronomy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Astronomie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1109,7 +1109,7 @@
 		<Tag>TXT_KEY_TECH_REPLACEABLE_PARTS</Tag>
 		<English>Replaceable Parts</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Pi&#232;ces remplaçables</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1134,7 +1134,7 @@
 		<Tag>TXT_KEY_TECH_PUBLIC_WORKS</Tag>
 		<English>Public Works</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Travaux Publique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1159,7 +1159,7 @@
 		<Tag>TXT_KEY_TECH_PRINTING_PRESS</Tag>
 		<English>Printing Press</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Imprimerie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1184,7 +1184,7 @@
 		<Tag>TXT_KEY_TECH_EDUCATION</Tag>
 		<English>Education</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Education</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1209,7 +1209,7 @@
 		<Tag>TXT_KEY_TECH_MILITARY_TACTICS</Tag>
 		<English>Military Tactics</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Tactique Militaire</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1234,7 +1234,7 @@
 		<Tag>TXT_KEY_TECH_MILITARY_STRUCTURES</Tag>
 		<English>Military Structures</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Structure Militaire</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1259,7 +1259,7 @@
 		<Tag>TXT_KEY_TECH_TRADING_COMPANIES</Tag>
 		<English>Trading Companies</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Compagnie Marchande</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1284,7 +1284,7 @@
 		<Tag>TXT_KEY_TECH_ARABIC_KNOWLEDGE</Tag>
 		<English>Arabic Knowledge</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Savoir-Faire Arabe</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1309,7 +1309,7 @@
 		<Tag>TXT_KEY_TECH_MUSIC_THEORY</Tag>
 		<English>Music Theory</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Solf&#232;ge</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1334,7 +1334,7 @@
 		<Tag>TXT_KEY_TECH_CHEMISTRY</Tag>
 		<English>Chemistry</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Chimie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1359,7 +1359,7 @@
 		<Tag>TXT_KEY_TECH_ARABIC_MEDICINE</Tag>
 		<English>Arabic Medicine</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>M&#233;decine Orientale</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1384,7 +1384,7 @@
 		<Tag>TXT_KEY_TECH_SCIENTIFIC_METHOD</Tag>
 		<English>Scientific Method</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>M&#233;thode Scientifique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1409,7 +1409,7 @@
 		<Tag>TXT_KEY_TECH_CONSTITUTION</Tag>
 		<English>Constitution</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Constitution</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1434,7 +1434,7 @@
 		<Tag>TXT_KEY_TECH_NATIONALISM</Tag>
 		<English>Nationalism</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Nationalisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1459,7 +1459,7 @@
 		<Tag>TXT_KEY_TECH_EXPLOSIVES</Tag>
 		<English>Explosives</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Explosifs</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1484,7 +1484,7 @@
 		<Tag>TXT_KEY_TECH_MACHINE_TOOLS</Tag>
 		<English>Machine Tools</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Outils M&#233;canique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1509,7 +1509,7 @@
 		<Tag>TXT_KEY_TECH_LIBERALISM</Tag>
 		<English>Liberalism</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Lib&#233;ralisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1534,7 +1534,7 @@
 		<Tag>TXT_KEY_TECH_MEDICINE</Tag>
 		<English>Medicine</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>M&#233;decine</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1559,7 +1559,7 @@
 		<Tag>TXT_KEY_TECH_ECONOMICS</Tag>
 		<English>Economics</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Economie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1584,7 +1584,7 @@
 		<Tag>TXT_KEY_TECH_RATIONAL_PHILOSOPHY</Tag>
 		<English>Rational Philosophy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Phylosophie Rationnel</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1609,7 +1609,7 @@
 		<Tag>TXT_KEY_TECH_CIVIL_ENGINEERING</Tag>
 		<English>Civil Engineering</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Ing&#233;nierie Civil</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1634,7 +1634,7 @@
 		<Tag>TXT_KEY_TECH_FREE_MARKET</Tag>
 		<English>Free Market</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Economie de March&#233;</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1659,7 +1659,7 @@
 		<Tag>TXT_KEY_TECH_RIGHT_OF_MAN</Tag>
 		<English>Right of Man</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Droit de L'Homme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1684,7 +1684,7 @@
 		<Tag>TXT_KEY_TECH_MILITARY_STRATEGY</Tag>
 		<English>Military Strategy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Strat&#233;gie Militaire</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1709,7 +1709,7 @@
 		<Tag>TXT_KEY_TECH_COMBINED_ARMS</Tag>
 		<English>Combined Arms</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Arme Combin&#233;e</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1734,7 +1734,7 @@
 		<Tag>TXT_KEY_TECH_INDUSTRIAL_TECH</Tag>
 		<English>Industrial Rev.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>R&#233;volution Industrielle</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1759,7 +1759,7 @@
 		<Tag>TXT_KEY_TECH_MANORIALISM</Tag>
 		<English>Manorialism</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Manorialisme</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1784,7 +1784,7 @@
 		<Tag>TXT_KEY_TECH_VASSALAGE</Tag>
 		<English>Vassalage</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Vassalit&#233;</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1809,7 +1809,7 @@
 		<Tag>TXT_KEY_TECH_CHIVALRY</Tag>
 		<English>Chivalry</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Chevalerie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1834,7 +1834,7 @@
 		<Tag>TXT_KEY_TECH_MATCHLOCK</Tag>
 		<English>Flintlock</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Silex</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1859,7 +1859,7 @@
 		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY</Tag>
 		<English>Professional Army</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Arme Professionel</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1884,7 +1884,7 @@
 		<Tag>TXT_KEY_TECH_POLYGONAL_FORT</Tag>
 		<English>Polygonal Fort</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Forts Polygonaux</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1909,7 +1909,7 @@
 		<Tag>TXT_KEY_TECH_RENAISSANCE_ART</Tag>
 		<English>Renaissance Art</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Art de la Renaissance</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1934,7 +1934,7 @@
 		<Tag>TXT_KEY_TECH_NAVAL_ARCHITECTURE</Tag>
 		<English>Naval Architecture</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Architecture Naval</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1959,7 +1959,7 @@
 		<Tag>TXT_KEY_TECH_BRONZE_CASTING</Tag>
 		<English>Bronze Casting</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Coul&#233;e de Bronze</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1984,7 +1984,7 @@
 		<Tag>TXT_KEY_TECH_CHAIN_MAIL</Tag>
 		<English>Chain Mail</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>C&#244;te de Maille</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -2009,7 +2009,7 @@
 		<Tag>TXT_KEY_TECH_ARISTOCRACY</Tag>
 		<English>Aristocracy</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Aristocratie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

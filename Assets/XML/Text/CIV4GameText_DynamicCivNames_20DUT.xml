@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_DUTCH_DESC</Tag>
 		<English>The Dutch</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Hollandais</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_DUTCH_SHORT_DESC</Tag>
 		<English>Netherlands</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Pays-Bas</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_DUTCH_ADJECTIVE</Tag>
 		<English>Dutch</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>hollandais:hollandaise:hollandais:hollandaises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_DUT00</Tag>
 		<English>Netherlands</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Pays-Bas</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

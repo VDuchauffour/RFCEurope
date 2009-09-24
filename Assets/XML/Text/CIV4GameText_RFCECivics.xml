@@ -34,7 +34,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE</Tag>
 		<English>Vassalage</English>
-		<French>Vice-royaut&#233;</French>
+		<French>Vassalit&#233;</French>
 		<German>Vizek&#246;nigtum</German>
 		<Italian>Vicereame</Italian>
 		<Spanish>Virreinato</Spanish>
@@ -52,7 +52,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM</Tag>
 		<English>Imperialism</English>
-		<French>Repeuplement</French>
+		<French>Imperialisme</French>
 		<German>Umsiedlung</German>
 		<Italian>Risistemazione</Italian>
 		<Spanish>Reasentamiento</Spanish>
@@ -88,7 +88,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM</Tag>
 		<English>Colonialism</English>
-		<French>Commonwealth</French>
+		<French>Colonialisme</French>
 		<German>Commonwealth</German>
 		<Italian>Commonwealth</Italian>
 		<Spanish>Commonwealth</Spanish>
@@ -151,7 +151,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMERCE_BONUS</Tag>
 		<English></English>
-		<French>[ICON_BULLET]Pas de points de stabilit&#233; n&#233;gatifs pour un faible niveau de ressources &#233;chang&#233;es</French>
+		<French></French>
 		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch eine geringe Anzahl gehandelter Ressourcen</German>
 		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di scarso commercio di risorse.</Italian>
 		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por baja cantidad de recursos intercambiados</Spanish>
@@ -160,7 +160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ECONOMY_BONUS</Tag>
 		<English></English>
-		<French>[ICON_BULLET]Pas de points de stabilit&#233; n&#233;gatifs pour une &#233;conomie pauvre</French>
+		<French></French>
 		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch schlechte Wirtschaftslage</German>
 		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di scarsa economia.</Italian>
 		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por econom&#237;a d&#233;bil</Spanish>
@@ -169,7 +169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DEPRESSION</Tag>
 		<English></English>
-		<French>[ICON_BULLET]Risque de Grande D&#233;pression</French>
+		<French></French>
 		<German>[ICON_BULLET]Risiko einer Gro&#223;en Depression</German>
 		<Italian>[ICON_BULLET]Rischio di Grande Depressione.</Italian>
 		<Spanish>[ICON_BULLET]Riesgo de Gran Depresi&#243;n</Spanish>
@@ -178,7 +178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_POST_COMMUNISM</Tag>
 		<English></English>
-		<French>[ICON_BULLET]Crise post-communiste en cas de changement de syst&#232;me &#233;conomique</French>
+		<French></French>
 		<German>[ICON_BULLET]Post-kommunistische Krise im Falle eines Wirtschaftssystemwechsels</German>
 		<Italian>[ICON_BULLET]Crisi post-comunista in caso di cambio di sistema economico.</Italian>
 		<Spanish>[ICON_BULLET]Crisis post-comunista en caso de cambio de sistema econ&#243;mico</Spanish>
@@ -196,7 +196,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SUBJUGATION_STRATEGY</Tag>
 		<English></English>
-		<French/>
+		<French></French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -275,7 +275,7 @@
 		<Tag>TXT_KEY_CIVIC_ELECTORATE</Tag>
 		<English>Electorate</English>
 		<French>
-			<Text>Droit h&#233;r&#233;ditaire</Text>
+			<Text>Election</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -300,7 +300,7 @@
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY</Tag>
 		<English>Divine Monarchy</English>
 		<French>
-			<Text>Repr&#233;sentation</Text>
+			<Text>Monarchie Divine</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -325,7 +325,7 @@
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
 		<English>Constitutional Monarchy</English>
 		<French>
-			<Text>Etat policier</Text>
+			<Text>Monarchie Constitutionnelle</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -350,7 +350,7 @@
 		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
 		<English>Republic</English>
 		<French>
-			<Text>Suffrage universel</Text>
+			<Text>R&#233;publique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -375,7 +375,7 @@
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW</Tag>
 		<English>Tribal Law</English>
 		<French>
-			<Text>Barbarisme</Text>
+			<Text>Loi Tribale</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -400,7 +400,7 @@
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW</Tag>
 		<English>Feudal Law</English>
 		<French>
-			<Text>Vassalit&#233;</Text>
+			<Text>Loi F&#233;odale</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -450,7 +450,7 @@
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>
 		<English>Religious Law</English>
 		<French>
-			<Text>Nation</Text>
+			<Text>Loi Religieuse</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -475,7 +475,7 @@
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW</Tag>
 		<English>Common Law</English>
 		<French>
-			<Text>Libert&#233; d'expression</Text>
+			<Text>Loi Commune</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -525,7 +525,7 @@
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
 		<English>Apprenticeship</English>
 		<French>
-			<Text>Esclavage</Text>
+			<Text>Apprentissage</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -575,7 +575,7 @@
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
 		<English>Free Peasantry</English>
 		<French>
-			<Text>Syst&#232;me de castes</Text>
+			<Text>Paysannerie</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -600,7 +600,7 @@
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
 		<English>Free Labor</English>
 		<French>
-			<Text>Emancipation</Text>
+			<Text>Libert&#233; de Travail</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -675,7 +675,7 @@
 		<Tag>TXT_KEY_CIVIC_MANORIALISM</Tag>
 		<English>Manorialism</English>
 		<French>
-			<Text>Economie de march&#233;</Text>
+			<Text>Manorialisme</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -700,7 +700,7 @@
 		<Tag>TXT_KEY_CIVIC_GUILDS</Tag>
 		<English>Guilds</English>
 		<French>
-			<Text>Nationalisation</Text>
+			<Text>Guilde</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -725,7 +725,7 @@
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Tag>
 		<English>Merchant Republic</English>
 		<French>
-			<Text>Environnementalisme</Text>
+			<Text>R&#233;publique Marchande</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -825,7 +825,7 @@
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>
 		<English>State Religion</English>
 		<French>
-			<Text>Pacifisme</Text>
+			<Text>Religion d'&#201;tat</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

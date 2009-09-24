@@ -8,7 +8,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_LIGHT_INFANTRY</Tag>
 		<English>Light Infantry</English>
-		<French>Light Infantry</French>
+		<French>Infantrie L&#233;g&#232;re</French>
 		<German>Light Infantry</German>
 		<Italian>Light Infantry</Italian>
 		<Spanish>Light Infantry</Spanish>
@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_INFANTRY</Tag>
 		<English>Heavy Infantry</English>
-		<French>Heavy Infantry</French>
+		<French>Infantrie Lourde</French>
 		<German>Heavy Infantry</German>
 		<Italian>Heavy Infantry</Italian>
 		<Spanish>Heavy Infantry</Spanish>
@@ -26,7 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Tag>
 		<English>Light Cavalry</English>
-		<French>Light Cavalry</French>
+		<French>Cavalerie L&#233;g&#232;re</French>
 		<German>Light Cavalry</German>
 		<Italian>Light Cavalry</Italian>
 		<Spanish>Light Cavalry</Spanish>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_CAVALRY</Tag>
 		<English>Heavy Cavalry</English>
-		<French>Heavy Cavalry</French>
+		<French>Cavalerie Lourde</French>
 		<German>Heavy Cavalry</German>
 		<Italian>Heavy Cavalry</Italian>
 		<Spanish>Heavy Cavalry</Spanish>
@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Early Middle Ages</English>
-		<French>Early Middle Ages</French>
+		<French>Haut Moyen &#194;ge</French>
 		<German>Early Middle Ages</German>
 		<Italian>Early Middle Ages</Italian>
 		<Spanish>Early Middle Ages</Spanish>
@@ -53,7 +53,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>High Middle Ages</English>
-		<French>High Middle Ages</French>
+		<French>Moyen &#194;ge</French>
 		<German>High Middle Ages</German>
 		<Italian>High Middle Ages</Italian>
 		<Spanish>High Middle Ages</Spanish>
@@ -62,7 +62,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
 		<English>Late Middle Ages</English>
-		<French>Late Middle Ages</French>
+		<French>Bas Moyen &#194;ge</French>
 		<German>Late Middle Ages</German>
 		<Italian>Late Middle Ages</Italian>
 		<Spanish>Late Middle Ages</Spanish>

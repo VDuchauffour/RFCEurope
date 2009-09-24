@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_GENOA_DESC</Tag>
 		<English>The Genoans</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les G&#233;nois</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_GENOA_SHORT_DESC</Tag>
 		<English>Genoa</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>G&#234;nes</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_GENOA_ADJECTIVE</Tag>
 		<English>Genoan</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>g&#233;nois:g&#233;noise:g&#233;nois:g&#233;noises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_GEN00</Tag>
 		<English>Genoa</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>R&#233;publique de G&#234;nes</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

@@ -8,7 +8,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
 		<English>Forest</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian><Japanese/><Chinese/></TEXT>
+		<French>For&#234;t Dense</French><German/><Italian/><Spanish/><Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
 		<English>Woodland</English>
@@ -16,33 +16,33 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
 		<English>Moorland</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Terre Maure</French><German/><Italian/><Spanish/><Russian>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_APIARY</Tag>
 		<English>Apiary</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#207;&#224;&#241;&#229;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Rucher</French><German/><Italian/><Spanish/><Russian>&#207;&#224;&#241;&#229;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
 		<English>Colonial Trade Route</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Route Coloniale</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONIAL_TRADE</Tag>
 		<English>Establish Colonial Trade Route</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Route Coloniale Etablie</French><German/><Italian/><Spanish/><Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_APIARY</Tag>
 		<English>Build Apiary</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Construire un rucher</French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARSH</Tag>
 		<English>Marsh</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#193;&#238;&#235;&#238;&#242;&#238;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Marais</French><German/><Italian/><Spanish/><Russian>&#193;&#238;&#235;&#238;&#242;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MUD</Tag>
 		<English>Mud</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#195;&#240;&#255;&#231;&#252;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Vase</French><German/><Italian/><Spanish/><Russian>&#195;&#240;&#255;&#231;&#252;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
 		<English>Colonial Trade Route</English>
-		<French/><German/><Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Route Coloniale</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
 </Civ4GameText>

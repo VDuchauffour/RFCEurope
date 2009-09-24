@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_ARABIA_DESC</Tag>
 		<English>The Arabs</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Arabes</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_ARABIA_SHORT_DESC</Tag>
 		<English>Arabia</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Arabie</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_ARABIA_ADJECTIVE</Tag>
 		<English>Arabian</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>arabe:arabe:arabes:arabes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_ARA00</Tag>
 		<English>Arabia</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Califat d'Arabie</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

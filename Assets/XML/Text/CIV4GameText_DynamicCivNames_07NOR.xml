@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_NORSE_DESC</Tag>
 		<English>The Norse</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Scandinaves</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_NORSE_SHORT_DESC</Tag>
 		<English>Norse</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Scandinavie</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_CIV_NORSE_ADJECTIVE</Tag>
 		<English>Norse</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>scandinave:scandinave:scandinaves:scandinaves</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_DN_NOR00</Tag>
 		<English>Norse</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Royaume Scandinave</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

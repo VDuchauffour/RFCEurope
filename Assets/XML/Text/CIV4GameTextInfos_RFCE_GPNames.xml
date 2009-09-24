@@ -8,7 +8,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SCHOLAR</Tag>
 		<English>Scholar</English>
-		<French>Scholar</French>
+		<French>Scientifique</French>
 		<German>Scholar</German>
 		<Italian>Scholar</Italian>
 		<Spanish>Scholar</Spanish>
@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SCHOLAR</Tag>
 		<English>Great Scholar</English>
-		<French>Great Scholar</French>
+		<French>Scientifique Illustre</French>
 		<German>Great Scholar</German>
 		<Italian>Great Scholar</Italian>
 		<Spanish>Great Scholar</Spanish>
@@ -26,7 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_SCIENTIST</Tag>
 		<English>Great Scholar</English>
-		<French>Great Scholar</French>
+		<French>Scientifique Illustre</French>
 		<German>Great Scholar</German>
 		<Italian>Great Scholar</Italian>
 		<Spanish>Great Scholar</Spanish>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_THE_PIOUS</Tag>
 		<English>Robert the Pious</English>
-		<French>Robert the Pious</French>
+		<French>Robert le Pieux</French>
 		<German>Robert the Pious</German>
 		<Italian>Robert the Pious</Italian>
 		<Spanish>Robert the Pious</Spanish>
@@ -71,7 +71,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CLEMENT_OF_OHRID</Tag>
 		<English>Clement of Ohrid</English>
-		<French>Clement of Ohrid</French>
+		<French>Clement de Ohrid</French>
 		<German>Clement of Ohrid</German>
 		<Italian>Clement of Ohrid</Italian>
 		<Spanish>Clement of Ohrid</Spanish>
@@ -314,7 +314,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NAUM_OF_PRESLAV</Tag>
 		<English>Naum of Preslav</English>
-		<French>Naum of Preslav</French>
+		<French>Naum de Preslav</French>
 		<German>Naum of Preslav</German>
 		<Italian>Naum of Preslav</Italian>
 		<Spanish>Naum of Preslav</Spanish>

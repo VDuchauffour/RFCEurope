@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_CRUSADE_INIT</Tag>
 		<English>The Pope has called for a Crusade to the Holy Land to defend the Holy City of Jerusalem from the infidel pest. Would you accept your duty, take up your sword, and leave for the Holy Land?</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Le Pape a appel&#233; &#224; une croisade en Terre Sainte pour d&#233;fendre la ville sainte de J&#233;rusalem. Accepteriez-vous de votre devoir, prendre votre &#233;p&#233;e, et partir pour la Terre Sainte ?</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -34,7 +34,7 @@
 		<Tag>TXT_KEY_CRUSADE_ACCEPT</Tag>
 		<English>By my Honor and in the name of my God I will defend the Holy Land!</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Sur mon honneur et au nom de mon Dieu, je vais d&#233;fendre la Terre Sainte !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_CRUSADE_DENY</Tag>
 		<English>I will NEVER play a role in the schemes of that snake of a Pope!</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Je ne serais JAMAIS le pantin de ce serpent de Pape !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_CRUSADE_CALLED</Tag>
 		<English>The Pope has called for a crusade!</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Le Pape a appel&#233; &#224; une croisade !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -109,7 +109,7 @@
 		<Tag>TXT_KEY_CRUSADE_LEAD</Tag>
 		<English> [SPACE] was chosen to lead the Crusade!</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text> [SPACE] a &#233;t&#233; choisi pour diriger la croisade !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -134,7 +134,7 @@
 		<Tag>TXT_KEY_CRUSADE_VOTE</Tag>
 		<English> Who will you vote for to lead the Crusade?</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text> Qui allez-vous voter pour conduire la croisade ?</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -159,7 +159,7 @@
 		<Tag>TXT_KEY_CRUSADE_OK</Tag>
 		<English> OK </English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text> OK </Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -184,7 +184,7 @@
 		<Tag>TXT_KEY_CRUSADE_RICHEST</Tag>
 		<English>The Pope spreads his influence over the spiritual life of the Catholics, but there are forces more powerful than faith. You have build an empire of the wealth and in many ways your political influence extends beyond that of the Pope. You have the opportunity to use that influence and take over command of the Crusade, deviating it to whatever target you find appropriate.[NEWLINE]</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Le pape &#233;tend son influence sur la vie spirituelle des catholiques, mais il existe des forces plus puissantes que la foi. Vous avez construit un empire de la richesse et de bien des façons de votre influence politique s'&#233;tend au-del&#224; de celui du Pape. Vous avez la possibilit&#233; d'utiliser cette influence et prendre le commandement de la croisade.[NEWLINE]</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -209,7 +209,7 @@
 		<Tag>TXT_KEY_CRUSADE_GOLD</Tag>
 		<English>gold.[NEWLINE]</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Or.[NEWLINE]</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -234,7 +234,7 @@
 		<Tag>TXT_KEY_CRUSADE_COST</Tag>
 		<English>The cost to take over </English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Le coût pour prendre en charge </Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -259,7 +259,7 @@
 		<Tag>TXT_KEY_CRUSADE_CURRENT_LEADER</Tag>
 		<English>is the current chosen leader. </English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>est le leader choisi.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -284,7 +284,7 @@
 		<Tag>TXT_KEY_CRUSADE_DECIDE_WEALTH</Tag>
 		<English>Take over the Crusade, for it is wealth that moves the world and profit that rules it.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Prendre en charge la croisade, c'est la richesse qui meut le monde et sans but lucratif qui la dirige.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -309,7 +309,7 @@
 		<Tag>TXT_KEY_CRUSADE_DECIDE_FAITH</Tag>
 		<English>Do not interfere with the Divine's will, money is the root of all evil.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>N'interf&#232;rent pas avec la volont&#233; Divine, l'argent est la racine de tout mal.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -334,7 +334,7 @@
 		<Tag>TXT_KEY_CRUSADE_COST</Tag>
 		<English>Do not interfere with the Divine's will, money is the root of all evil.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>N'interf&#232;rent pas avec la volont&#233; Divine, l'argent est la racine de tout mal.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -359,7 +359,7 @@
 		<Tag>TXT_KEY_CRUSADE_TARGET</Tag>
 		<English>Choose a new target for the Crusade!</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Choisissez une nouvelle cible pour la Croisade !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -384,7 +384,7 @@
 		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK1</Tag>
 		<English>The Crusaders have chosen our beautiful city of</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Les crois&#233;s ont choisi notre belle ville de</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -409,7 +409,7 @@
 		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK2</Tag>
 		<English>as their target. They will arrive in 3 turns.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>comme leur cible. Ils arriveront en 3 tours.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -434,7 +434,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEVIATED</Tag>
 		<English>has used financial power to take control of the Crusade.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>a utilis&#233; la puissance financi&#232;re pour prendre le contrôle de la croisade.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -459,7 +459,7 @@
 		<Tag>TXT_KEY_CRUSADE_START1</Tag>
 		<English>Crusaders are leaving under the leadership of</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Les Crois&#233;s sont laiss&#233; sous la direction de</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -484,7 +484,7 @@
 		<Tag>TXT_KEY_CRUSADE_START2</Tag>
 		<English>to conquer the city of</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>&#224; conquerir la ville de</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -509,7 +509,7 @@
 		<Tag>TXT_KEY_CRUSADE_START3</Tag>
 		<English>in the name of their God.</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>au nom de leur Dieu.</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -534,7 +534,7 @@
 		<Tag>TXT_KEY_CRUSADE_INIT_POPUP</Tag>
 		<English>Crusade!</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Croisade !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -559,7 +559,7 @@
 		<Tag>TXT_KEY_CRUSADE_LEADER_POPUP</Tag>
 		<English>Crusade Leader Chosen:</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Leader Choisi pour les Croisades:</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -584,7 +584,7 @@
 		<Tag>TXT_KEY_CRUSADE_VOTE_POPUP</Tag>
 		<English>Vote for a Leader</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Voter pour le Leader</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -609,7 +609,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEVIATE</Tag>
 		<English>Wealth or Faith</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Richesse ou Foi</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -634,7 +634,7 @@
 		<Tag>TXT_KEY_CRUSADE_CORRUPT</Tag>
 		<English>Corrupt Crusade</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>Soudoyer la Croisade</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -659,7 +659,7 @@
 		<Tag>TXT_KEY_CRUSADE_ATTACK</Tag>
 		<English>Under Crusade Attack</English>
 		<French>
-			<Text>Mysticisme</Text>
+			<Text>En vertu de la croisade</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -684,7 +684,7 @@
 		<Tag>TXT_KEY_CRUSADE_LEAVE</Tag>
 		<English>Our Unit is leaving for the Crusade: </English>
 		<French>
-			<Text>Our Unit is leaving for the Crusade: </Text>
+			<Text>Votre Unit&#233;e est partis pour la Croisade: </Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -709,7 +709,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE</Tag>
 		<English>The Pope has called for a Crusade to aid </English>
 		<French>
-			<Text>The Pope has called for a Crusade to aid </Text>
+			<Text>Le Pape a appel&#233; pour la Croisade en aide &#224; </Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -734,7 +734,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL</Tag>
 		<English>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</English>
 		<French>
-			<Text>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</Text>
+			<Text>Votre Majest&#233;, allons-nous demander &#224; notre Saint-P&#232;re de faire appel &#224; nos fr&#232;res et sœurs catholiques afin de nous aider contre les infid&#232;les ?</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -759,7 +759,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_YES</Tag>
 		<English>YES, let the infidels feel our combined wrath!</English>
 		<French>
-			<Text>YES, let the infidels feel our combined wrath!</Text>
+			<Text>OUI, laissez les infid&#232;les sentir notre col&#232;re !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -784,7 +784,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_NO</Tag>
 		<English>NO, we can crush the scum ourselves!</English>
 		<French>
-			<Text>NO, we can crush the scum ourselves!</Text>
+			<Text>NON, nous pouvons &#233;craser l'&#233;cume nous-m&#234;mes !</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -809,7 +809,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP</Tag>
 		<English>Defensive Crusade</English>
 		<French>
-			<Text>Defensive Crusade</Text>
+			<Text>Croisade D&#233;fensive</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

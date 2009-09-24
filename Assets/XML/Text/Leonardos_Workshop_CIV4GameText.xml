@@ -8,7 +8,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDO</Tag>
 		<English>Leonardo's Workshop</English>
-		<French>Leonardo's Workshop</French>
+		<French>Atelier de L&#233;onard</French>
 		<German>Leonardo's Workshop</German>
 		<Italian>Leonardo's Workshop</Italian>
 		<Spanish>Leonardo's Workshop</Spanish>
@@ -26,7 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDO_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Leonardo's Workshop[COLOR_REVERT] reduces the cost of upgrades by 50% until it obsoletes.</English>
-		<French>[COLOR_BUILDING_TEXT]Leonardo's Workshop[COLOR_REVERT] reduces the cost of upgrades by 50% until it obsoletes.</French>
+		<French>[COLOR_BUILDING_TEXT]Atelier de L&#233;onard[COLOR_REVERT] r&#233;duit le co&#251;t de la mise &#224; jour de 50%% jusqu'&#224; qu'il soit obsol&#232;te</French>
 		<German>[COLOR_BUILDING_TEXT]Leonardo's Workshop[COLOR_REVERT] reduces the cost of upgrades by 50% until it obsoletes.</German>
 		<Italian>[COLOR_BUILDING_TEXT]Leonardo's Workshop[COLOR_REVERT] reduces the cost of upgrades by 50% until it obsoletes.</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]Leonardo's Workshop[COLOR_REVERT] reduces the cost of upgrades by 50% until it obsoletes.</Spanish>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDO_HELP</Tag>
 		<English>[ICON_BULLET]50% Less [ICON_GOLD] to Upgrade</English>
-		<French>[ICON_BULLET]50% Less [ICON_GOLD] to Upgrade</French>
+		<French>[ICON_BULLET]Moins de 50%% [ICON_GOLD] de mise &#224; jour</French>
 		<German>[ICON_BULLET]50% Less [ICON_GOLD] to Upgrade</German>
 		<Italian>[ICON_BULLET]50% Less [ICON_GOLD] to Upgrade</Italian>
 		<Spanish>[ICON_BULLET]50% Less [ICON_GOLD] to Upgrade</Spanish>

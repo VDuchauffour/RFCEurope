@@ -129,7 +129,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ1</Tag>
 		<English>Make Constantinople the largest and most cultured city in 1000AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Faire de Constantinople la ville la plus peupl&#233;e et cultiv&#233;e en 1000 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -138,7 +138,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ2</Tag>
 		<English>Own Constantinople and every city in Greece and Anatolia in 1300AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Garder Constantinople et toutes les villes en Gr&#232;ce et en Anatolie en 1300 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -147,7 +147,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ3</Tag>
 		<English>Be the richest empire in the world in 1500AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Etre l'Empire le plus riche du monde en 1500 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -156,7 +156,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL1</Tag>
 		<English>Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1400AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1400 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -165,7 +165,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL2</Tag>
 		<English>Own every city in Moesia, Thracia and Macedonia (incl. Constantinople) by 1200AD. </English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir chaque ville en M&#233;sie, la Thrace et la Mac&#233;doine (y compris Constantinople) en 1200 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -174,7 +174,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
 		<English>Build 8 Orthodox Monasteries, 2 Orthodox Cathedrals and 8 Scriptoria by 1450AD</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Construire 8 Monast&#232;res, 2 Cath&#233;drales et 8 Scriptorium en 1450 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -183,7 +183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA1</Tag>
 		<English>Control the historic territory of France in 1500AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler le t&#233;rritoire historique de la France en 1500 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -192,7 +192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
 		<English>Have 15,000 culture points in Paris by 1680AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir 15 000 points de Culture &#224; Paris en 1680 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -201,7 +201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA3</Tag>
 		<English>Build 6 Colonial Projects.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Construire 6 Projets Coloniaux.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -210,7 +210,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
 		<English>Control the Rhine and Rhone valleys (Mediterranean to the North Sea) in 1200AD</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler la vall&#233;e du Rh&#244;ne et du Rhin en 1200 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -219,7 +219,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR2</Tag>
 		<English>Capture Jerusalem in 1300 AD</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Capturer J&#233;rusalem en 1300 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -228,7 +228,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
 		<English>Control more luxury resources in 1470AD than anyone else in Western Europe (Portugal, Spain, France, England, Genoa, Norse, Germany, Pope, Venice).</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir le plus de resources luxeuses en 1470 ap. JC que les autres Civilisation Occidentale (Portugal, Espagne, France, Angleterre, G&#234;ne, Scandinavie, Allemagne, Etat Pontificaux, Venise).</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -237,7 +237,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA1</Tag>
 		<English>Control the Levant, Aleppo, Antioch and Egypt in 1000AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler le Levant, Alep, Antioche et l'&#233;gypte en 1000 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -246,7 +246,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA2</Tag>
 		<English>Islam to spread to 25% of all people.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>R&#233;pandre l'Islam &#224; 25% dans le monde.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -255,7 +255,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA3</Tag>
 		<English>Control North Africa east of Oran in 1540AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Contr&#244;ler l'Afrique de l'Est d'Oran en 1540 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -264,7 +264,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR1</Tag>
 		<English>Make Cordoba the largest city in the world in 1000AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Faire de Courdoue la ville la plus peupl&#233;e du monde en 1000 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -273,7 +273,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR2</Tag>
 		<English>Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1300AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Construire l'Alhambra, les Jardins d'Al-Andalus et La Mezquita en 1300 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -282,7 +282,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR3</Tag>
 		<English>Control 4 cities in Iberia and 4 cities in North-West Africa in 1490AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir 4 villes dans la p&#233;ninsule Ib&#233;rique et 4 au Nord Ouest de l'Afrique en 1490 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -291,7 +291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN1</Tag>
 		<English>Unite Iberia under one rule and one faith in 1600AD. (you can conquer or vassalize and allow only Catholicism)</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Unifier la p&#233;ninsule Ib&#233;rique d'une seule foi en 1600 ap.JC. (Vous pouvez conqu&#233;rir ou vassaliser et autoriser le Catholicisme)</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -300,7 +300,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN2</Tag>
 		<English>Control total of 4 cities in North Africa, Corsica, Sardinia, Sicily and/or Italy. </English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Contr&#244;ler au total 4 villes en Afrique du Nord, Corse, Sardaigne, Sicile et/ou Italie.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -309,7 +309,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN3</Tag>
 		<English>Build 6 Colonial Projects.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Construire 6 Projets Coloniaux.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -318,7 +318,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
 		<English>Have at least one city in each of France, Britain, Ireland, Iceland, and Sicily before 1100AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir au moins une ville en France, Angleterre, Irlande, Islande et Sicile avant 1100 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -327,7 +327,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
 		<English>Reveal all ocean tiles by 1280AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>D&#233;couvrir toute les cases d'oc&#233;an en 1280 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -336,7 +336,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
 		<English>Raze 10 cities.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Raser 10 villes.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -345,7 +345,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>
 		<English>Control the Dalmatian coast and have a city in Greece, Crete and Cyprus by 1420AD</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler la c&#244;te Dalmate et avoir une ville en Gr&#232;ce, Cr&#232;te et Chypre en 1420 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -354,7 +354,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
 		<English>Conquer Rhodes by 1500AD</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Conqu&#233;rir l'Ile de Rhodes en 1500 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -363,7 +363,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
 		<English>Control 8 Luxury resources by 1570AD. </English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir 8 resources Luxeuses en 1570 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -372,7 +372,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE1</Tag>
 		<English>Control 10 grain (wheat, barley) resources in 1300AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Avoir 10 resources de Bl&#233;/Orge en 1300 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -381,7 +381,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
 		<English>Control all northern Black Sea coast east of the Carpathian mts. in 1350AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Contr&#244;ler tous le nord de la Mer Noire en 1350 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -390,7 +390,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE3</Tag>
 		<English>Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1430AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1430 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -399,7 +399,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
 		<English>Control the most territory in Europe in 1490AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Avoir le plus gand territoire d'Europe en 1490.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -408,7 +408,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN2</Tag>
 		<English>Be the first to adopt Free Religion.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Etre le premier &#224; adopter la Libert&#233; de Culte.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -417,7 +417,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN3</Tag>
 		<English>Allow no Ottoman cities in Europe in 1526AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Aucune ville Ottomanes en Europe en 1526 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -426,7 +426,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
 		<English>Control the east bank of the Rhine in 1360AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler la rive est du Rhin en 1360 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -435,7 +435,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER2</Tag>
 		<English>Have at least 3 vassals in 1460AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir au moins 3 vassals en 1460 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -444,7 +444,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
 		<English>Have the largest army in Europe in 1540AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir la plus grande arm&#233;e d'Europe en 1540 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -453,7 +453,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
 		<English>Be the most populous country in Europe in 1540AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Etre le pays le plus aim&#233; d'Europe en 1540 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -462,11 +462,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL2</Tag>
 		<English>Never lose a city before 1600AD.</English>
-		<French>Never lose a city before 1600AD.</French>
-		<German>Never lose a city before 1600AD.</German>
-		<Italian>Never lose a city before 1600AD.</Italian>
-		<Spanish>Never lose a city before 1600AD.</Spanish>
-		<Russian>Never lose a city before 1600AD.</Russian>
+		<French>Ne perdre aucune ville avant 1600 ap.JC.</French>
+		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
+		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
+		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
+		<Russian>&#205;&#232;&#234;&#238;&#227;&#228;&#224; &#238;&#242;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#226; &#195;&#229;&#240;&#236;&#224;&#237;&#232;&#254; &#232;&#235;&#232; &#208;&#238;&#241;&#241;&#232;&#254; &#239;&#229;&#240;&#229;&#228; 1600AD.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>
@@ -480,7 +480,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>
 		<English>Ensure that there are no Barbarian (Mongol) cities in North-Eastern Europe in 1482AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>V&#233;rifier qu'il ne reste plus de villes Mongols dans le Nord-Est de l'Europe en 1482 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -489,25 +489,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS2</Tag>
 		<English>Control 15 cities in 1600AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir 15 villes en 1600 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
 		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; 15 &#227;&#238;&#240;&#238;&#228;&#224;&#236;&#232; &#226; 1600AD.</Russian>
 		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UHV_MOS3</Tag>
-		<English>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</English>
-		<French>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</French>
-		<German>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</German>
-		<Italian>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Italian>
-		<Spanish>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Spanish>
-		<Russian>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Russian>
-		<Japanese/><Chinese/></TEXT>
+ 	<TEXT>
+ 		<Tag>TXT_KEY_UHV_MOS3</Tag>
+ 		<English>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</English>
+ 		<French>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</French>
+ 		<German>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</German>
+ 		<Italian>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Italian>
+ 		<Spanish>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Spanish>
+ 		<Russian>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Russian>
+ 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN1</Tag>
 		<English>Control Sardinia, Marseilles, Milano, Cyprus and Crete in 1540AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler la Sardaigne, Marseilles, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -516,7 +516,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
 		<English>Found 2 Corporations and build 8 Banks</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Fonder 2 Soci&#233;t&#233;s Commerciale et construire 8 Banques.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -525,7 +525,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN3</Tag>
 		<English>Open borders with 10 other civs in 1640AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir 10 accord de Libre Passage en 1640 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -534,7 +534,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG1</Tag>
 		<English>Control the British Isles (Ireland, Scotland and Wales) and parts of France in 1452AD. (Normandy, Ile-de-France, Brittany, Aquitaine)</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler les Iles Britanniques (Irlande, Ecosse et Pays de Galles) et la France (Normandie, Paris, Bretagne et Aquitaine) en 1452 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -543,7 +543,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>
 		<English>Build 8 Colonial Projects.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Construire 8 Projets Coloniaux.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -552,7 +552,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
 		<English>Be the first to enter the Industrial age.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Etre la premiere civilisation &#224; entrer dans l'Age Industrielle.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -561,7 +561,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR1</Tag>
 		<English>Build 3 cities on islands in the Atlantic Ocean and 2 in North-West Africa.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Fonder 3 villes dans les Iles de l'Atlantique et 2 dans le Nord Ouest de l'Afrique.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -570,7 +570,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR2</Tag>
 		<English>Do not lose a city before 1640AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Ne perdre aucune ville avant 1640 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -579,7 +579,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR3</Tag>
 		<English>Build 6 Colonial Projects.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Construire 6 Projets Coloniaux.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -588,7 +588,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
 		<English>Control all of the Carpathian basin in 1600AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler tout le Bassin Carpatien en 1600 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -597,7 +597,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS2</Tag>
 		<English>Have 3 vassals in 1700AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir 3 vassals en 1700 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -606,7 +606,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS3</Tag>
 		<English>Have 2 Defensive Alliances in 1750AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir 2 pactes de d&#233;fense en 1750 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -615,7 +615,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR1</Tag>
 		<English>Control Constantinople and Anatolia in 1520AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler Constantinople et l'Anatolie en 1520 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -624,7 +624,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR2</Tag>
 		<English>Control the Balkans south of the Danube in 1620AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Contr&#244;ler le Sud du Danube en 1620 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -633,7 +633,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR3</Tag>
 		<English>Control the Levant, Egypt and Vienna by 1700AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Contr&#244;ler le Levant, l'Egypte et Vienne en 1700 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -642,7 +642,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE1</Tag>
 		<English>Control Sweden and Finland in 1600AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Contr&#244;ler la Su&#232;de et la Finlande en 1600 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -651,7 +651,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>
 		<English>Don't lose any cities to Poland or Russia before 1700AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Ne pas perdre de ville par la Pologne ou la Russie avant 1700 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -660,7 +660,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE3</Tag>
 		<English>Have 3 cities west or south of the Baltic in 1750AD.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Avoir 3 villes au sud ou &#224; l'ouest de la Baltique en 1750 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
@@ -669,7 +669,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT1</Tag>
 		<English>Have open borders with 10 civs in 1640AD.</English>
-		<French>Avoir plus de 500 en Culture en 700 av. J.-C. (Tour 86)</French>
+		<French>Avoir 10 accords de Libre Passage en 1640 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -678,7 +678,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT2</Tag>
 		<English>Settle 5 Great Merchants in Amsterdam by 1750AD.</English>
-		<French>Construire les Pyramides, la Grande Biblioth&#232;que et le Phare avant 250 ap. J.-C.(Tour 133)</French>
+		<French>Avoir 5 Marchants Illustre &#224; Amsterdam en 1750 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -687,7 +687,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT3</Tag>
 		<English>Build 4 Colonial Projects.</English>
-		<French>Avoir plus de 5000 en Culture en 450 ap. J.-C. (Tour 143)</French>
+		<French>Construire 4 Projets Coloniaux.</French>
 		<German>Erzielen Sie bis zum Jahr 450 n. Chr. (Runde 143) mehr als 5.000 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>

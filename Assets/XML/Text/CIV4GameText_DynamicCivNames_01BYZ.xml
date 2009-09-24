@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_BYZANTIUM_DESC</Tag>
 		<English>The Byzantines</English>
 		<French>
-			<Text>Les Egyptiens</Text>
+			<Text>Les Byzantins</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -31,7 +31,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_SHORT_DESC</Tag>
-		<English>Roman Empire</English>
+		<English>Byzantium</English>
 		<French>
 			<Text>Byzance</Text>
 			<Gender>Male</Gender>
@@ -57,7 +57,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>
 		<English>
-			<Text>Roman:Roman</Text>
+			<Text>Byzantine:Byzantines</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</English>
@@ -85,9 +85,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ00</Tag>
-		<English>The East Roman Empire</English>
+		<English>The Byzantine Empire</English>
 		<French>
-			<Text>Peuplades Nilotiques</Text>
+			<Text>Empire Byzantin</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

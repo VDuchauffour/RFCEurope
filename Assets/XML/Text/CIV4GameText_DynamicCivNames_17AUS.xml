@@ -8,7 +8,7 @@
 		<Tag>TXT_KEY_CIV_AUSTRIA_DESC</Tag>
 		<English>The Austrians</English>
 		<French>
-			<Text>Les Perses</Text>
+			<Text>Les Autrichiens</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -33,7 +33,7 @@
 		<Tag>TXT_KEY_CIV_AUSTRIA_SHORT_DESC</Tag>
 		<English>Austria</English>
 		<French>
-			<Text>Perse</Text>
+			<Text>Autriche</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_CIV_AUSTRIA_ADJECTIVE</Tag>
 		<English>Austrian</English>
 		<French>
-			<Text>perse:perse:perses:perses</Text>
+			<Text>autrichien:antrichienne:autrichiens:antrichiennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_DN_AUS00</Tag>
 		<English>Austria</English>
 		<French>
-			<Text>Peuplades Indoues</Text>
+			<Text>Autriche</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
