@@ -2696,7 +2696,8 @@ class RiseAndFall:
 	                #                self.reformationchoice(iCiv)
 	                #                break
 	                # Orthodoxes and Muslims don't have Reformation
-	                if ( gc.getPlayer( iCiv ).getStateReligion() == con.iCatholicism ):
+	                pPlayer = gc.getPlayer( iCiv )
+	                if ( pPlayer.isAlive() and pPlayer.getStateReligion() == con.iCatholicism ):
 	                	self.reformationchoice(iCiv)
 	                else:
 	                	self.reformationOther( iCiv )
