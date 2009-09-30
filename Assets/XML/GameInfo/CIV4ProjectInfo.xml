@@ -113,7 +113,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_GOLD_COAST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_GOLD_COAST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ASTRONOMY</TechPrereq>
+			<TechPrereq>TECH_GUNPOWDER</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -157,7 +157,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_IVORY_COAST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_IVORY_COAST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NATIONALISM</TechPrereq>
+			<TechPrereq>TECH_CIVIL_ENGINEERING</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -201,7 +201,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_CUBA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_CUBA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_TRADING_COMPANIES</TechPrereq>
+			<TechPrereq>TECH_GUNPOWDER</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -244,12 +244,7 @@
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 			</FreeBonuses>
-			<PProjects>
-				<PProject>
-					<PProjectType>PROJECT_WEST_INDIA_COMPANY</PProjectType>
-					<iPProjectCount>1</iPProjectCount>
-				</PProject>
-			</PProjects>
+			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CUBA</MovieDefineTag>
@@ -260,7 +255,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_BRAZIL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_BRAZIL_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_LIBERALISM</TechPrereq>
+			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -374,7 +369,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_VIRGINIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_VIRGINIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NAVAL_ARCHITECTURE</TechPrereq>
+			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -433,7 +428,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NAVAL_ARCHITECTURE</TechPrereq>
+			<TechPrereq>TECH_NATIONALISM</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>3</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -479,7 +474,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_INDIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_INDIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NATIONALISM</TechPrereq>
+			<TechPrereq>TECH_MILITARY_TRADITION</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>3</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -534,7 +529,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_EAST_INDIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_EAST_INDIES_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_TRADING_COMPANIES</TechPrereq>
+			<TechPrereq>TECH_NAVAL_ARCHITECTURE</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -589,7 +584,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_MALAYSIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_MALAYSIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_CIVIL_ENGINEERING</TechPrereq>
+			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -648,7 +643,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_CAPE_TOWN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_CAPE_TOWN_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_RIGHT_OF_MAN</TechPrereq>
+			<TechPrereq>TECH_ECONOMICS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -698,7 +693,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_EAST_AFRICA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_EAST_AFRICA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ASTRONOMY</TechPrereq>
+			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -737,7 +732,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_AZTEC_CONQUEST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_AZTEC_CONQUEST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_MATCHLOCK</TechPrereq>
+			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -780,7 +775,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_INCA_CONQUEST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_INCA_CONQUEST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_MATCHLOCK</TechPrereq>
+			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -823,7 +818,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_HISPANIOLA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_HISPANIOLA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NATIONALISM</TechPrereq>
+			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -871,7 +866,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_QUEBEC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_QUEBEC_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_LIBERALISM</TechPrereq>
+			<TechPrereq>TECH_NATIONALISM</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -924,7 +919,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_NEW_ENGLAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_NEW_ENGLAND_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ECONOMICS</TechPrereq>
+			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -977,7 +972,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_JAMAICA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_JAMAICA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_RIGHT_OF_MAN</TechPrereq>
+			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1034,7 +1029,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_PANAMA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_PANAMA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_LIBERALISM</TechPrereq>
+			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1147,7 +1142,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_PHILLIPPINES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_PHILLIPPINES_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_TRADING_COMPANIES</TechPrereq>
+			<TechPrereq>TECH_NAVAL_ARCHITECTURE</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
