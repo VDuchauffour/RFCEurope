@@ -2494,7 +2494,6 @@ class RiseAndFall:
                 	teamNorse.setHasTech( con.iVassalage, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iCalendar, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iAstrolabe, True, iCiv, False, False )
-                	teamNorse.setHasTech( con.iLateenSails, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iArchitecture, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iManorialism, True, iCiv, False, False )
                 	teamNorse.setHasTech( con.iBronzeCasting, True, iCiv, False, False )

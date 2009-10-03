@@ -458,7 +458,7 @@
 		<English>[ICON_BULLET] +1 Stability</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NIGHTWATCH_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -467,7 +467,7 @@
 		<French>Palace Topkapi</French>
 		<German>Topkapi Palace</German>
 		<Italian>Topkapi Palace</Italian>
-		<Spanish>Topkapi Palace</Spanish>
+		<Spanish>Palacio de Topkapi</Spanish>
 		<Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -500,11 +500,11 @@
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_BUILDING_SIEGE_WORKSHOP_PEDIA</Tag>
-		<English>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</English>
-		<French>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</French>
-		<German>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</German>
-		<Italian>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</Italian>
-		<Spanish>A [COLOR_UNIT_TEXT]Siege Weapon[COLOR_REVERT] is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. [COLOR_BUILDING_TEXT]Siege Weapons Workshops[COLOR_REVERT] are places where engineers developed Siege Weapons.</Spanish>
+		<English>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</English>
+		<French>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</French>
+		<German>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</German>
+		<Italian>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</Italian>
+		<Spanish>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</Spanish>
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP_PEDIA</Tag>
@@ -655,9 +655,219 @@ In French the term donjon still refers to a "keep", and the term oubliette is a 
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
-		<English>Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has.
+		<English>Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
+		<English>The Venetian Arsenal is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.
+The Byzantine-style establishment may have existed as early as the 8th century, though the present structure is usually said to have been begun in 1104, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina'a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.
+Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.
+Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early 16th century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Tag>
+		<English>Infirmary is a place for the care of the infirm, sick, or injured. In the Middle Ages, infirmaries were often attached to monasteries, with care provided by monks and nuns. Additionally, they could also serve as almhouses or refuges for pilgrims.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_RELIQUARY_PEDIA</Tag>
+		<English>A sahn, in Islamic architecture, is a courtyard. As per the traditional Islamic architectural style, almost every mosque has a sahn, which is surrounded by an arcade from all sides. In Persian architecture, the sahn usually contains a howz, a symmetrical pool, where ablutions are performed. Some also contain drinking fountains.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
+		<English>Minarets are distinctive architectural features of Islamic mosques. Minarets are generally tall spires with onion-shaped crowns, usually either free standing or much taller than any surrounding support structure. As well as providing a visual cue to a Muslim community, the main function of the minaret is to provide a vantage point from which the muezzin can call out the adhan, calling the faithful to prayer.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL_PEDIA</Tag>
+		<English>The House of Wisdom was a library and translation institute in Abbassid-era Baghdad. It was a key institution in the Translation Movement and considered to have been a major intellectual center of the Islamic Golden Age. The House of Wisdom acted as a society founded by Abbasid caliphs Harun al-Rashid and his son al-Ma'mun who reigned from 813-833 CE. Based in Baghdad from the 9th to 13th centuries, many of the most learned Muslim scholars were part of this excellent research and educational institute.
+The term house of wisdom is a direct translation of Persian Sassanians' designation for a library. It was modeled on that of the Sassanians, had the purpose of translating books from Persian to Arabic, and also of preservation of translated books. The House was an unrivalled centre for the study of humanities and for sciences, including mathematics, astronomy, medicine, chemistry, zoology and geography. Drawing on Persian, Indian and Greek texts - including those of Pythagoras, Plato, Aristotle, Hippocrates, Euclid, Plotinus, Galen, Sushruta, Charaka, Aryabhata, Socrates and Brahmagupta - the scholars accumulated a great collection of world knowledge, and built on it through their own discoveries. The great scholars of the House of Wisdom included Al-Khawarizmi, the "father" of algebra, which takes its name from his book Kitab al-Jabr.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
+		<English>"Great Mosque" refers to a large mosque, resembling a Christian cathedral in size and significance. Examples of such mosques include the Grand Mosque of Damascus, the Great Mosque of Algiers or the Sultan Ahmed Mosque of Istanbul.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL_PEDIA</Tag>
+		<English>A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL_PEDIA</Tag>
+		<English>A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL_PEDIA</Tag>
+		<English>A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM_PEDIA</Tag>
+		<English>Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
+When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM_PEDIA</Tag>
+		<English>Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
+When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL_PEDIA</Tag>
+		<English>A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL_PEDIA</Tag>
+		<English>A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL_PEDIA</Tag>
+		<English>A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL_PEDIA</Tag>
+		<English>The idea for widespread schools dates back to Charlemagne, a king of the Franks. He knew that the Frankish empire would be weak without an education. Because a Frankish King started it, it quickly spread throughout northern and central France. Over time, the schools were fused with the church and became cathedral schools. The first cathedral schools taught future clergy, as they were the only people in Frankish society that were required to be literate. Many people wanted to join the clergy because a career in the church was considered a very high rank. Those who were trained in a cathedral school had a good chance of becoming part of the church.
+Cathedral schools were mostly oriented around the academic welfare of the noble's children. The subjects taught at Cathedral schools ranged from literature to mathematics. These topics were called the Seven Liberal Arts: grammar, astronomy, rhetoric, logic, arithmetic, geometry and music.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL_PEDIA</Tag>
+		<English>The idea for widespread schools dates back to Charlemagne, a king of the Franks. He knew that the Frankish empire would be weak without an education. Because a Frankish King started it, it quickly spread throughout northern and central France. Over time, the schools were fused with the church and became cathedral schools. The first cathedral schools taught future clergy, as they were the only people in Frankish society that were required to be literate. Many people wanted to join the clergy because a career in the church was considered a very high rank. Those who were trained in a cathedral school had a good chance of becoming part of the church.
+Cathedral schools were mostly oriented around the academic welfare of the noble's children. The subjects taught at Cathedral schools ranged from literature to mathematics. These topics were called the Seven Liberal Arts: grammar, astronomy, rhetoric, logic, arithmetic, geometry and music.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY_PEDIA</Tag>
+		<English>A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY_PEDIA</Tag>
+		<English>A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY_PEDIA</Tag>
+		<English>A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY_PEDIA</Tag>
+		<English>A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY_PEDIA</Tag>
+		<English>A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU_PEDIA</Tag>
+		<English>A château is a manor house or residence of the lord of the manor or a country house of nobility or gentry, with or without fortifications, originally-and still most frequently-in French-speaking regions. Where clarification is needed, a fortified château (that is, a castle) is called a château fort, such as Château fort de Roquetaillade. Care should be taken when translating the word château into English. It is not used in the same way as "castle", and most châteaux are described in English as "palaces" or "country houses" rather than "castles". For example, the Château de Versailles is so called because it was located in the countryside when it was built, but it does not bear any resemblance to a castle, so it is usually known in English as the Palace of Versailles.
 
-Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
+The urban counterpart of château is palais, which in French is applied only to grand houses in a city. This usage is again different from that of the term "palace" in English, where there is no requirement that a palace must be in a city, but the word is rarely used for buildings other than the grandest royal residences. The expression hôtel particulier is used for an urban "private house" of a grand sort.
+
+If a château is not old, then it must be grand. A château is a "power house", as Sir John Summerson dubbed the English and Georgian Irish "stately homes" that are Britain's architectural counterparts to French châteaux. It is the personal (and usually hereditary) badge of a family that, with some official rank, locally represents the royal authority; thus, the word château often refers to the dwelling residence of a member of either the French royalty or the nobility, but some fine châteaux, such as Vaux-le-Vicomte, were built by the essentially high-bourgeois - people but recently ennobled: tax-farmers and ministers of Louis XIII and his royal successors.
+
+A château is supported by its terres (lands), composing a demesne that renders the society of the château largely self-sufficient, in the manner of the historic Roman and Early Mediæval villa system, (cf. manorialism). The open villas of Rome in the times of Pliny the Elder, Maecenas, and Emperor Tiberius began to be walled-in, and then fortified in the 3rd century AD, thus evolving to castellar "châteaux". In modern usage, a château retains some enclosures that are distant descendants of these fortifying outworks: a fenced, gated, closeable forecourt, perhaps a gatehouse or a keeper's lodge, and supporting outbuildings (stables, kitchens, breweries, bakeries, manservant quarters in the garçonnière). Besides the cour d'honneur (court of honour) entrance, the château might have an inner cour ("court"), and inside, in the private residence, the château faces a simply and discreetly enclosed park.
+
+In the city of Paris, the original châteaux that were the Louvre (fortified) and the Luxembourg (originally suburban) lost their château etymology, becoming "palaces" when the City enclosed them. In the U.S., the word château took root selectively, in the Gilded Age resort town of Newport, Rhode Island, the châteaux were called "cottages", but, north of Wilmington, Delaware, in the rich, rural "Château Country" centred upon the powerful Du Pont family, château is used with its original definition. In Canada, especially in English, château usually denotes a hotel, not a house, and applies only to the largest, most elaborate railway hotels built in the Canadian Railroad golden age, such as the Château Lake Louise, in Lake Louise, Alberta, the Château Laurier, in Ottawa, Ontario, the Château Montebello, in Montebello, Quebec, and the most-famous Château Frontenac, in Quebec City. Moreover, in other French-speaking European regions, such as Wallonia (Belgium), the word Château is used with the same definition. In Belgium, a strong French architectural influence is evident in the seventeenth-century Château des Comtes de Marchin and the eighteenth-century Château de Seneffe.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Tag>
+		<English>A warehouse is a commercial building for storage of goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs, etc. They are usually large plain buildings in industrial areas of cities and towns. They usually have loading docks to load and unload goods from trucks. Sometimes warehouses load and unload goods directly from railways, airports, or seaports. They often have cranes and forklifts for moving goods, which are usually placed on ISO standard pallets loaded into pallet racks.
+
+Stored goods can include any raw materials, components, or finished goods associated with agriculture, manufacturing, or commerce.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BUILDING_TOLL_HOUSE_PEDIA</Tag>
+		<English>A tollhouse or toll house is a building with accommodation for a toll collector, beside a tollgate on a toll road or canal. Many tollhouses were built by turnpike trusts in England, Wales and Scotland during the 18th and early 19th centuries. Those built in the early 1800s often had a distinctive bay front to give the pikeman a clear view of the road and to provide a display area for the tollboard. In 1840, according to the Turnpike Returns in Parliamentary Papers, there were over 5000 tollhouses operating in England. These were sold off in the 1880s when the turnpikes were closed. Many were demolished but several hundred have survived as domestic houses, with distinctive features of the old tollhouse still visible.
+
+Canal toll houses were built in very similar style to those on turnpikes. They are sited at major canal locks or at junctions. The great age of canal-building in Britain was in the 18th century, so the majority exhibit typical the typical features of vernacular Georgian architecture. In the English Midlands, a major area of 18th century canal development, most are of mellow red brick and hexagonal in plan, and sufficiently tall the give the lock keeper a good view of local traffic on the canal. Being small, most have proved unsuitable for occupation, and so are often used as shop or tourist information outlets.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

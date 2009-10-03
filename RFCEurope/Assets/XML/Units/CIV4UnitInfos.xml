@@ -16253,7 +16253,12 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Buildings/>
+      <Buildings>
+        <Building>
+          <BuildingType>BUILDING_ROYAL_ACADEMY</BuildingType>
+          <bBuilding>1</bBuilding>
+        </Building>
+      </Buildings>
 			<ForceBuildings/>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -17155,7 +17160,12 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Buildings/>
+      <Buildings>
+        <Building>
+          <BuildingType>BUILDING_TOWER_LONDON</BuildingType>
+          <bBuilding>1</bBuilding>
+        </Building>
+      </Buildings>
 			<ForceBuildings/>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -17383,7 +17393,12 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Buildings/>
+			<Buildings>
+				<Building>
+					<BuildingType>BUILDING_TOWER_LONDON</BuildingType>
+					<bBuilding>1</bBuilding>
+				</Building>
+			</Buildings>
 			<ForceBuildings/>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
