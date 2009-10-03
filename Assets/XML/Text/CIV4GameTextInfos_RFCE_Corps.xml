@@ -11,7 +11,7 @@
 		<French>Ordre Hospitalier</French>
 		<German>Knights Hospitaller</German>
 		<Italian>Knights Hospitaller</Italian>
-		<Spanish>Knights Hospitaller</Spanish>
+		<Spanish>Caballeros Hospitalarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#251;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -20,7 +20,7 @@
 		<French>Ordre des Templiers</French>
 		<German>Knights Templar</German>
 		<Italian>Knights Templar</Italian>
-		<Spanish>Knights Templar</Spanish>
+		<Spanish>Caballeros Templarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;&#251;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -29,7 +29,7 @@
 		<French>Ordre Teutonique</French>
 		<German>Teutonic Knights</German>
 		<Italian>Teutonic Knights</Italian>
-		<Spanish>Teutonic Knights</Spanish>
+		<Spanish>Caballeros Teut&#243;nicos</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#229; &#208;&#251;&#246;&#224;&#240;&#232;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -38,7 +38,7 @@
 		<French>Hanse Germanique</French>
 		<German>Hanseatic League</German>
 		<Italian>Hanseatic League</Italian>
-		<Spanish>Hanseatic League</Spanish>
+		<Spanish>Liga Hanse&#225;tica</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#224;&#255; &#203;&#232;&#227;&#224;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -47,7 +47,7 @@
 		<French>Maison de M&#233;dicis</French>
 		<German>Medici Banks</German>
 		<Italian>Medici Banks</Italian>
-		<Spanish>Medici Banks</Spanish>
+		<Spanish>Bancos Medici</Spanish>
 		<Russian>&#193;&#224;&#237;&#234;&#232; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -56,7 +56,7 @@
 		<French>Famille Augsburg</French>
 		<German>Augsburg Families</German>
 		<Italian>Augsburg Families</Italian>
-		<Spanish>Augsburg Families</Spanish>
+		<Spanish>Familias Augsburgo</Spanish>
 		<Russian>&#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#209;&#229;&#236;&#252;&#232;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -65,7 +65,7 @@
 		<French>Banque de St George</French>
 		<German>Bank of St. George</German>
 		<Italian>Bank of St. George</Italian>
-		<Spanish>Bank of St. George</Spanish>
+		<Spanish>Banco de S. Jorge</Spanish>
 		<Russian>&#193;&#224;&#237;&#234; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -74,7 +74,7 @@
 		<French>Maître Hospitalier</French>
 		<German>Hospitaller Master</German>
 		<Italian>Hospitaller Master</Italian>
-		<Spanish>Hospitaller Master</Spanish>
+		<Spanish>Maestre Hospitalario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -83,7 +83,7 @@
 		<French>Maître Templiers</French>
 		<German>Templar Master</German>
 		<Italian>Templar Master</Italian>
-		<Spanish>Templar Master</Spanish>
+		<Spanish>Maestre Templario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -92,7 +92,7 @@
 		<French>Maître Teutonique</French>
 		<German> Teutonic Master</German>
 		<Italian>Teutonic Master</Italian>
-		<Spanish>Teutonic Master</Spanish>
+		<Spanish>Maestre Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -110,7 +110,7 @@
 		<French>Cadre M&#233;dicis</French>
 		<German>Medici Executive</German>
 		<Italian>Medici Executive</Italian>
-		<Spanish>Medici Executive</Spanish>
+		<Spanish>Mercader Medici</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -119,7 +119,7 @@
 		<French>Cadre Augsburg</French>
 		<German>Augsburg Executive</German>
 		<Italian>Augsburg Executive</Italian>
-		<Spanish>Augsburg Executive</Spanish>
+		<Spanish>Mercader Augsburgo</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -128,7 +128,7 @@
 		<French>Cadre de la Banque de St George</French>
 		<German>Bank of St. George Executive</German>
 		<Italian>Bank of St. George Executive</Italian>
-		<Spanish>Bank of St. George Executive</Spanish>
+		<Spanish>Mercader del Banco de S. Jorge</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -137,7 +137,7 @@
 		<French>Chevalier Templier</French>
 		<German>Knight Templar</German>
 		<Italian>Knight Templar</Italian>
-		<Spanish>Knight Templar</Spanish>
+		<Spanish>Caballero Templario</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -146,12 +146,12 @@
 		<French>Chevalier Teutonique</French>
 		<German>Teutonic Knight</German>
 		<Italian>Teutonic Knight</Italian>
-		<Spanish>Teutonic Knight</Spanish>
+		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Tag>
-		<English>The Poor Fellow-Soldiers of Christ and of the Temple of Solomon (Latin: Pauperes Commilitones Christi Templique Solomonice), commonly known as the Knights Templar or the Order of the Temple, were among the most famous of the Western Christian military orders. The organizaton existed for approximately two centuries in the Middle Ages. It was founded in the aftermath of the First Crusade of 1096 to ensure the safety of the many Europeans who made the pilgrimage to Jerusalem after its conquest.</English>
+		<English>[TAB]The Poor Fellow-Soldiers of Christ and of the Temple of Solomon (Latin: Pauperes Commilitones Christi Templique Solomonice), commonly known as the Knights Templar or the Order of the Temple, were among the most famous of the Western Christian military orders. The organizaton existed for approximately two centuries in the Middle Ages. It was founded in the aftermath of the First Crusade of 1096 to ensure the safety of the many Europeans who made the pilgrimage to Jerusalem after its conquest.</English>
 		<French>Le pauvre enfant-soldats du Christ et du Temple de Salomon (en latin: Pauperes commilitones Christi Templique Solomonice), commun&#233;ment appel&#233; l'Ordre du Temple ou de l'Ordre du Temple, furent parmi les plus c&#233;l&#232;bres de l'ordre chr&#233;tien occidental militaire. Cette Organisation existe depuis environ deux si&#232;cles dans le Moyen Age. Elle a &#233;t&#233; fond&#233;e au lendemain de la premi&#232;re croisade de 1096 pour assurer la s&#233;curit&#233; des nombreux Europ&#233;ens qui ont fait le p&#232;lerinage &#224; J&#233;rusalem apr&#232;s sa conqu&#234;te.</French> 
 		<German>.</German>
 		<Italian>.</Italian>
@@ -159,7 +159,7 @@
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Tag>
-		<English>In 1143 Pope Celestine II ordered the Knight Hospitaller to take over management of a German Hospital in Jerusalem, which, according to the chronicler Jean d'Ypres, accommodated the countless German pilgrims and crusaders who could neither speak the local tongue (i.e.French) no Latin (patrie linguam ignorantibus atque Latinam). However although formally an institution of the Hospitallers, the Pope commanded that the prior and the brothers of the domus Teutonicorum (house of the Germans) should always be Germans themselves,so a tradition of a German-led religious institution could develop during the 12th century in Palestine.</English>
+		<English>[TAB] In 1143 Pope Celestine II ordered the Knight Hospitaller to take over management of a German Hospital in Jerusalem, which, according to the chronicler Jean d'Ypres, accommodated the countless German pilgrims and crusaders who could neither speak the local tongue (i.e.French) no Latin (patrie linguam ignorantibus atque Latinam). However although formally an institution of the Hospitallers, the Pope commanded that the prior and the brothers of the domus Teutonicorum (house of the Germans) should always be Germans themselves,so a tradition of a German-led religious institution could develop during the 12th century in Palestine.</English>
 		<French>En 1143, le Pape C&#233;lestin II ordonna l'Ordre Hospitalier, pour reprendre la gestion d'un h&#244;pital allemand &#224; J&#233;rusalem, qui, selon le chroniqueur Jean d'Ypres, accueilli les innombrables p&#232;lerins et les crois&#233;s allemands qui ne pouvait ni parler la langue locale n i le Latin. Toutefois, bien que formellement une institution des Hospitaliers, le Pape ordonna que le prieur et les fr&#232;res de la Teutonicorum domus (maison des Allemands) doit toujours &#234;tre Allemands eux-m&#234;mes, donc une tradition d'une conduite par l'Allemagne institution religieuse pourrait se d&#233;velopper pendant le 12&#232;me si&#232;cle en Palestine.</French> 
 		<German>.</German>
 		<Italian>.</Italian>
@@ -167,10 +167,61 @@
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Tag>
-		<English>The Knights Hospitaller (also known as the Sovereign Military Hospitaller, Order of St. John of Jerusalem of Rhodos and of Malta, Knights of Malta, Knights of Rhodos and Chevaliers of Malta) is a Christian organization that began as an Amalfitan hospital founded in Jerusalem in 1080 to provide care for poor and sick pilgrims to the Holy Land. After the Christian conquest of Jerusalem in 1099 during the First Crusade it became a religious/military order under its own charter, and was charged with the care and defense of the Holy Land. Following the loss of the Holy Land by Christan forces, the Order operated from Rhodos, over which it was sovereign, and later from Malta where it administered a vassal state under the Spanish viceroy of Sicily.</English>
+		<English>[TAB] The Knights Hospitaller (also known as the Sovereign Military Hospitaller, Order of St. John of Jerusalem of Rhodos and of Malta, Knights of Malta, Knights of Rhodos and Chevaliers of Malta) is a Christian organization that began as an Amalfitan hospital founded in Jerusalem in 1080 to provide care for poor and sick pilgrims to the Holy Land. After the Christian conquest of Jerusalem in 1099 during the First Crusade it became a religious/military order under its own charter, and was charged with the care and defense of the Holy Land. Following the loss of the Holy Land by Christan forces, the Order operated from Rhodos, over which it was sovereign, and later from Malta where it administered a vassal state under the Spanish viceroy of Sicily.</English>
 		<French>Hospitaliers Chevaliers (&#233;galement connu sous le Souverain Militaire Hospitalier de l'Ordre de Saint Jean de J&#233;rusalem de Rhodes et de Malte, les Chevaliers de Malte, les Chevaliers de Rhodes et Chevaliers de Malte) est une organisation chr&#233;tienne qui a commenc&#233; comme un h&#244;pital d'Amalfi fond&#233; &#224; J&#233;rusalem en 1080 pour fournir des soins pour les p&#232;lerins pauvres et des malades vers la Terre Sainte. Apr&#232;s la conqu&#234;te chr&#233;tienne de J&#233;rusalem en 1099 pendant la premi&#232;re croisade, il est devenu un ordre religieux-militaire en vertu de sa propre charte, et a &#233;t&#233; charg&#233; du soin et la d&#233;fense de la Terre Sainte. Apr&#232;s la perte de la Terre Sainte par les forces de Christan, l'Ordre exploit&#233; depuis Rhodes, sur laquelle elle est souveraine, et plus tard en provenance de Malte où il a g&#233;r&#233; un Etat vassal en vertu de la vice-roi espagnol de la Sicile.</French> 
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_HANSEATIC_LEAGUE_PEDIA</Tag>
+    <English>[TAB]The Hanseatic League (also known as the Hanse or Hansa) was an alliance of trading cities and their guilds that established and maintained a trade monopoly along the coast of Northern Europe, from the Baltic to the North Sea and inland, during the Late Middle Ages and early modern period (c.13th?17th centuries). The Hanseatic cities had their own law system and furnished their own protection and mutual aid.
+Historians generally trace the origins of the League to the rebuilding of the North German town of L&#252;beck in 1159 by Duke Henry the Lion of Saxony, after Henry had captured the area from Count Adolf II of Holstein.
+Exploratory trading adventures, raids and piracy had happened earlier throughout the Baltic (see Vikings) - the sailors of Gotland sailed up rivers as far away as Novgorod, for example - but the scale of international trade economy in the Baltic area remained insignificant before the growth of the Hanseatic League.
+German cities achieved domination of trade in the Baltic with striking speed over the next (i.e. 13th) century, and L&#252;beck became a central node in all the seaborne trade that linked the areas around the North Sea and the Baltic Sea. The 15th century saw the climax of L&#252;beck's hegemony.</English>
+    <French>.</French>
+    <German>.</German>
+    <Italian>.</Italian>
+    <Spanish>.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_MEDICI_BANKS_PEDIA</Tag>
+    <English>[TAB]The House of Medici was a political dynasty, banking family and later ducal house who first began to gather prominence under Cosimo de Medici in the Republic of Florence during the late 14th century. The family originated in the Mugello region of the Tuscan countryside, gradually rising until they were able to found the Medici Bank. The bank was the largest in Europe during the 15th century, seeing the Medici gain political power in Florence - though officially they remained simply citizens, rather than monarchs. The Medici produced three Popes of the Catholic Church and in 1531 the family became hereditary Dukes of Florence, the duchy would soon be elevated to the Grand Duchy of Tuscany after territorial expansion.
+Their wealth and influence initially derived from the textile trade guided by the guild of the Arte della Lana. Like other signore families they dominated their city's government. They were able to bring Florence under their family's power, allowing for an environment where art and humanism could flourish. They fostered and inspired the birth of the Italian Renaissance along with other families of Italy, such as the Visconti and Sforza of Milan, the Este of Ferrara, and the Gonzaga of Mantua.
+The Medici Bank was one of the most prosperous and most respected institutions in Europe. There are some estimates that the Medici family were the wealthiest family in Europe for a period of time. From this base, they acquired political power initially in Florence and later in wider Italy and Europe. A notable contribution to the profession of accounting was the improvement of the general ledger system through the development of the double-entry bookkeeping system for tracking credits and debits. This system was first used by accountants working for the Medici family in Florence.</English>
+    <French>.</French>
+    <German>.</German>
+    <Italian>.</Italian>
+    <Spanish>.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_AUGSBURG_FAMILIES_PEDIA</Tag>
+    <English>[TAB]The Fugger family was a historically prominent group of European bankers, members of the fifteenth and sixteenth-century mercantile patriciate of Augsburg, international mercantile bankers, and venture capitalists like the Welser and the H&#246;chstetter families.
+The first reference to the Fugger family in the Swabian Free City of Augsburg is the arrival of Hans Fugger recorded in the tax register of 1357. He married Klara Widolf and became an Augsburg citizen. After Klara's death, he married Elizabeth Gfattermann. He joined the Weaver's Guild, and by 1396 he was ranked high in the list of taxpayers.
+His eldest son, Andreas Fugger, was a merchant in the weaving trade, and was nicknamed 'the rich Fugger', buying land and other properties.
+Andreas's son, Lucas Fugger, was granted arms by the Emperor Frederick III, a golden deer on a blue background, and he was soon nicknamed 'the Fugger of the Deer'. However, he was too ambitious and went bankrupt.
+Hans Fugger's younger son, Jakob the Elder, founded another branch of the family, This branch progressed more steadily and they became known as the 'Fuggers of the Lily' after their chosen arms of a flowering lily on a gold and blue background. Jakob was a master weaver, a merchant, and an alderman, and married Barbara Basinger, the daughter of a goldsmith. His fortune progressed, and by 1461, he was the 12th richest man in Augsburg. He died in 1469.
+Jakob's eldest son, Ulrich, took over the business on his father's death, and in 1473 he provided new suits of clothes to Frederick, his son Maximilian I, and his suite on their journey to Trier to meet Charles the Bold of Burgundy and the betrothal of the young prince to Charles's daughter Maria. This started the very profitable relationship between the Fugger family and the Habsburgs. Ulrich died in 1510.
+Ulrich's youngest brother Jakob Fugger was born in 1459, and was to become the most famous member of the dynasty. He married Sibylla Artzt in 1498, but they had no children. He was elevated to the nobility of the Holy Roman Empire in May 1511, and in 1519, led a consortium of German and Italian businessmen that loaned Charles V 850,000 florins (about 95,625 oz(t) of gold) to procure his election as Holy Roman Emperor over Francis I of France. The Fugger's contribution was 543,000 florins. Jakob died in 1525. He is considered to be one of the richest persons of all time, and today he is well known as Jakob Fugger 'the rich'.
+Jakob's successor was his nephew Anton Fugger, son of his elder brother Georg. Anton was born in 1493, married Anna Rehlinger, and died in 1560.
+In 1511, Jakob deposited 15,000 florins as an endowment for some almshouses. In 1514, he bought up part of Augsburg and in 1516 he came to agreement with the city that he would build and provide a number of almshouses for needy citizens. By 1523, 52 houses had been built, and the Fuggerei had come into existence. It is still used today.</English>
+    <French>.</French>
+    <German>.</German>
+    <Italian>.</Italian>
+    <Spanish>.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_BANK_OF_ST_GEORGE_PEDIA</Tag>
+    <English>[TAB]The Bank or Company of Saint George (Italian: "Ufficio di San Giorgio in Genoa" or "Casa di San Giorgio") was a financial institution of the Republic of Genoa. Founded in 1407, it was one of the oldest chartered banks in Europe, if not the world. The bank's headquarters were at the Palazzo San Giorgio, which was built in the 13th century by order of Guglielmo Boccanegra, uncle of Simone Boccanegra, the first Doge of Genoa.
+A number of prominent Genoese families were involved in the establishment and governance of the Bank, including the Houses of Grimaldi and Serra.
+The Bank was governed by four consuls who administered its finances and directed investments. Because the Republic's ruling oligarchs were normally prominent in Bank politics, it is often difficult to determine where the Bank's influence ended and the Republic's began.
+Many of Genoa's overseas territories were governed either directly or indirectly by the Bank. In 1453 the Republic handed over governance of Corsica, Gazaria, and a number of other possessions to Bank officials, though over the course of the fifteenth century the Republic gradually reclaimed many of its territories from Bank control. The Taman peninsula remained in the control of the de Ghisolfi family, but the princes of that clan now reported to the Bank.
+The Bank lent considerable sums of money to many rulers throughout Europe during the fifteenth and sixteenth centuries, gaining widespread influence. Ferdinand and Isabella maintained accounts there, as did Christopher Columbus. Charles V was heavily in debt to the Bank during much of his reign. Niccol&#242; Machiavelli maintained that the Bank's dominion over Genoa made possible the creation of a "republic more worthy of memory than the Venetian."
+In the seventeenth century the Bank became heavily involved in maritime trade, and for a time competed with such concerns as the Dutch East India Company and the British East India Company.
+After Napoleon invaded Italy, he suppressed independent banks, and this led to the Bank's closure in 1805.</English>
+    <French>.</French>
+    <German>.</German>
+    <Italian>.</Italian>
+    <Spanish>.</Spanish>
+  </TEXT>
 </Civ4GameText>

@@ -56,5 +56,35 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
 		<English>New units +2 experience; state religion makes people happy.</English>
-		<French>+2 XP pour les nouvelles unit&#233;s; religion d'&#233;tat rend le peuple heureux.</French><German/><Italian/><Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/></TEXT>
+		<French>+2 XP pour les nouvelles unit&#233;s; religion d'&#233;tat rend le peuple heureux.</French><German/><Italian/><Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/>
+		<German/>
+		<Italian/>
+		<Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
+		<English>Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.
+The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
+		<English>Guilds evolved from various organizations of craftsmen, that tended to form associations based on their trades. By about 1100 European guilds (or gilds) began their medieval evolution into an approximate equivalent to modern-day business organizations such as institutes or consortiums. The guild system reached a mature state in Germany circa 1300 and held on in the German cities into the nineteenth century. The latest guilds to develop in Western Europe were the [gremios] of Hispania that signalled the progress of the Reconquista: Barcelona (1301), Valencia (1332) and Toledo (1426). Not all city economies were controlled by guilds; some cities were "free". Where guilds were in control they shaped labour, production and trade; they had strong controls over instructional capital, and the modern concepts of a lifetime progression of apprentice to craftsman, journeyer, and eventually to widely-recognized master and grandmaster began to emerge. As production became more specialized, trade guilds were divided and subdivided, eliciting the squabbles over jurisdiction that produced the paperwork by which economic historians trace their development: there were 101 trades in Paris by 1260, and earlier in the century the metalworking guilds of Nuremberg were already divided among dozens of independent trades, in the boom economy of the thirteenth century. In Ghent as in Florence the woolen textile industry developed as a congeries of specialized guilds. The appearance of the European guilds was tied to the emergent money economy, and to urbanization. Before this time it was not possible to run a money-driven organization, as commodity money was the normal way of doing business.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Tag>
+		<English>A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.
+The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.
+Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

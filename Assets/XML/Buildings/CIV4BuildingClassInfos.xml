@@ -236,18 +236,18 @@
 			<DefaultBuilding>BUILDING_OBELISK</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- ACADEMY -->
-			<Type>BUILDINGCLASS_ACADEMY</Type>
-			<Description>TXT_KEY_BUILDING_ACADEMY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_ACADEMY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
+    <BuildingClassInfo><!-- TOWER OF LONDON -->
+      <Type>BUILDINGCLASS_TOWER_LONDON</Type>
+      <Description>TXT_KEY_BUILDING_TOWER_LONDON</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>1</bMonument>
+      <DefaultBuilding>BUILDING_TOWER_LONDON</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
 		<BuildingClassInfo><!-- UNIVERSITY -->
 			<Type>BUILDINGCLASS_UNIVERSITY</Type>
 			<Description>TXT_KEY_BUILDING_UNIVERSITY</Description>
@@ -1256,16 +1256,16 @@
 			<DefaultBuilding>BUILDING_KRAK_DES_CHEVALIERS</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- PALACIO_DE_PENA -->
-			<Type>BUILDINGCLASS_PALACIO_DE_PENA</Type>
-			<Description>TXT_KEY_BUILDING_PALACIO_DE_PENA</Description>
+		<BuildingClassInfo><!-- RIBEIRA -->
+			<Type>BUILDINGCLASS_RIBEIRA</Type>
+			<Description>TXT_KEY_BUILDING_RIBEIRA</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_PALACIO_DE_PENA</DefaultBuilding>
+			<DefaultBuilding>BUILDING_RIBEIRA</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- MONASTERY_OF_CLUNY -->
@@ -1436,7 +1436,121 @@
 			<DefaultBuilding>BUILDING_TOMB_KHAL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-	   <!--******************* WONDERS END *******************-->
+		<BuildingClassInfo><!-- STEPHANSDOM -->
+			<Type>BUILDINGCLASS_STEPHANSDOM</Type>
+			<Description>TXT_KEY_BUILDING_STEPHANSDOM</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_STEPHANSDOM</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- BIBLIOTHECA_CORVINIANA -->
+			<Type>BUILDINGCLASS_BIBLIOTHECA_CORVINIANA</Type>
+			<Description>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_BIBLIOTHECA_CORVINIANA</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- FONTAINEBLEAU -->
+			<Type>BUILDINGCLASS_FONTAINEBLEAU</Type>
+			<Description>TXT_KEY_BUILDING_FONTAINEBLEAU</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_FONTAINEBLEAU</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+    <BuildingClassInfo>
+      <!-- IMPERIAL_DIET -->
+      <Type>BUILDINGCLASS_IMPERIAL_DIET</Type>
+      <Description>TXT_KEY_BUILDING_IMPERIAL_DIET</Description>
+      <iMaxGlobalInstances>1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_IMPERIAL_DIET</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <!-- AMSTERDAM BEURS -->
+      <Type>BUILDINGCLASS_BEURS</Type>
+      <Description>TXT_KEY_BUILDING_BEURS</Description>
+      <iMaxGlobalInstances>1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_BEURS</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <!-- COPERNICUS OBSERVATORY -->
+      <Type>BUILDINGCLASS_COPERNICUS</Type>
+      <Description>TXT_KEY_BUILDING_COPERNICUS</Description>
+      <iMaxGlobalInstances>1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_COPERNICUS</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <!-- SAN GIORGIO -->
+      <Type>BUILDINGCLASS_SAN_GIORGIO</Type>
+      <Description>TXT_KEY_BUILDING_SAN_GIORGIO</Description>
+      <iMaxGlobalInstances>1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_SAN_GIORGIO</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <!-- WESTMINSTER -->
+      <Type>BUILDINGCLASS_WESTMINSTER</Type>
+      <Description>TXT_KEY_BUILDING_WESTMINSTER</Description>
+      <iMaxGlobalInstances>1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_WESTMINSTER</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <BuildingClassInfo>
+      <!-- PRESSBURG CASTLE -->
+      <Type>BUILDINGCLASS_PRESSBURG</Type>
+      <Description>TXT_KEY_BUILDING_PRESSBURG</Description>
+      <iMaxGlobalInstances>1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_PRESSBURG</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <!--******************* WONDERS END *******************-->
 
 	   <!--******************* CORPORATIONS START *******************-->
 		<BuildingClassInfo><!-- CORPORATION_1 -->
