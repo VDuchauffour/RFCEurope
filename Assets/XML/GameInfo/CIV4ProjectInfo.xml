@@ -743,7 +743,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Aztecs.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -786,7 +786,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Incas.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -829,7 +829,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Hispanolia.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -877,7 +877,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Quebec.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -930,7 +930,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/NewEngland.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -983,7 +983,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Jamaica.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1040,7 +1040,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Panama.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1153,7 +1153,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/EastIndiaCompany.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Philippines.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
