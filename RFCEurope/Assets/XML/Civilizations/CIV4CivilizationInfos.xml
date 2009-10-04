@@ -669,7 +669,7 @@
 			<Description>TXT_KEY_CIV_DUTCH_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_DUTCH_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_DUTCH_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_DUTCH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_NETHERLANDS_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1580AD</StartingYear>
 			<LoadingTime>60</LoadingTime>
@@ -898,7 +898,7 @@
 			<Description>TXT_KEY_CIV_FRANKIA_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_FRANKIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_FRANKIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_FRANKIA_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_FRANCE_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
 			<LoadingTime>0</LoadingTime>

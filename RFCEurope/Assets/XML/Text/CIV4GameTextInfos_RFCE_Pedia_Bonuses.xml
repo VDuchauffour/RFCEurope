@@ -209,5 +209,53 @@ There are three main cultivar groups of cacao beans used to make cocoa and choco
 		<German>[TAB]Der Apfel ist die pomaceous Frucht des Apfelbaums, Sorte Malus domestica in der rose Familie Rosaceae. Er ist eine der weit bebauten Baumfr&#252;chte. Der Baum ist klein und laubwechselnd und erreicht 5-12 m hoch, mit einer ausgedehnten, h&#228;ufig dicht twiggy Krone.</German>
 		<Italian>[TAB]La mela &#232; la frutta pomaceous di di melo, domestica di Malus di specie nella famiglia di rosa Rosaceae. &#200; una delle frutte il pi&#249; ampiamente coltivate dell'albero. L'albero &#232; piccolo e deciduo, raggiungendo 5-12 m. alto, con una vasta, parte superiore spesso densamente twiggy.</Italian>
 		<Spanish>[TAB]La manzana es la fruta pomaceous del manzano, domestica de Malus de la especie en la familia color de rosa Rosaceae. Es una de las frutas lo m&#225;s extensamente posible cultivadas del &#225;rbol. El &#225;rbol es peque&#241;o y de hojas caducas, alcanzando 5-12 m alto, con una corona amplia, a menudo denso twiggy.</Spanish>
-	</TEXT>	
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BONUS_RELIC_PEDIA</Tag>
+		<English>A relic is an object or a personal item of religious significance, carefully preserved with an air of veneration as a tangible memorial. Relics are an important aspect of some forms of Buddhism, Christianity, Hinduism, Shamanism, and many other religions.
+
+The word relic comes from the Latin reliquiae, meaning "remains." A reliquary is a shrine that houses one or more relics.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BONUS_HONEY_PEDIA</Tag>
+		<English>Honey is a sweet aliment produced by honey bees (and some other species) and derived from the nectar of flowers. According to the United States National Honey Board and various international food regulations, "honey stipulates a pure product that does not allow for the addition of any other substance this includes, but is not limited to, water or other sweeteners". This article refers exclusively to the honey produced by honey bees (the genus Apis); honey produced by other bees or other insects has very different properties.
+
+Honey gets its sweetness from the monosaccharides fructose and glucose and has approximately the same relative sweetness as that of granulated sugar (97% of the sweetness of sucrose, a disaccharide). Honey has attractive chemical properties for baking, and a distinctive flavor which leads some people to prefer it over sugar and other sweeteners.
+
+Most micro-organisms do not grow in honey because of its low water activity of 0.6. However, honey frequently contains dormant endospores of the bacterium Clostridium botulinum, which can be dangerous to infants as the endospores can transform into toxin-producing bacteria in the infant's immature intestinal tract, leading to illness and even death (see Potential health hazards below).
+
+The study of pollens and spores in raw honey (melissopalynology) can determine floral sources of honey. Because bees carry an electrostatic charge, and can attract other particles, the same techniques of melissopalynology can be used in area environmental studies of radioactive particles, dust, or particulate pollution.
+
+A main effect of bees collecting nectar to make honey is pollination, which is crucial for flowering plants.
+
+Beekeepers encourage overproduction of honey within the hive so that the excess can be taken without endangering the bees. When sources of food for the bees are short, beekeepers may have to give the bees supplementary nutrition. Supplementary nutrition usually comes in the form of sugar (sucrose) mixed with water at proper ratios.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BONUS_TIMBER_PEDIA</Tag>
+		<English>Timber or lumber is wood that is used in any of its stages from felling through readiness for use as structural material for construction, or wood pulp for paper production.
+
+Timber is supplied either rough or finished. Besides pulpwood, rough lumber is the raw material for furniture-making and other items requiring additional cutting and shaping. It is available in many species, usually hardwoods. Finished timber is supplied in standard sizes, mostly for the construction industry, primarily softwood from coniferous species including pine, fir and spruce (collectively known as Spruce-pine-fir), cedar, hemlock, but also some hardwood, for high-grade flooring.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_BONUS_SLAVES_PEDIA</Tag>
+		<English>In the Early Middle Ages, slavery was being slowly replaced by serfdom. In some areas outside of Western Europe, however, slaves were still a vital part of the economy.
+In the Viking era starting c. 793, the Norse raiders often captured and enslaved their opponents. In Norway and Iceland the slaves were called Thralls. The thralls were mostly from Western Europe, among them many Franks, Irish and Anglo-Saxons. There is evidence of German and south European slaves as well. The Norse slavery came to an end with the breakthrough of christianity and national laws in the Scandinavian countries.
+The Arab world has traded in slaves like many other cultures of the region. It was one of the oldest slave trades, predating the European transatlantic slave trade by hundreds of years. The Arab or Middle Eastern slave trade is thought to have originated with trans-Saharan slavery. The Moors, starting in the 8th century, raided coastal areas of the Mediterranean and Northern European (including British and even as far north as Scandinavian) coastal areas and would carry away sometimes whole villages to the Moorish slave markets on the Barbary Coast.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>
