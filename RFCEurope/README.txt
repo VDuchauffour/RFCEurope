@@ -1,3 +1,39 @@
+Changes for Alpha 8
+New optimized leadheads from embryodead
+Merged in JediClemente's wonders and merjin_v1's texts (Civilopedias and a few other changes) 
+Changes to Iberia AI maps
+Updated Colony Requirement Techs
+Gave economy civics corporation changes.
+Guild: -10 percent corp payments.
+Merchant Republic: -25 percent corp payments.
+Mercantilism: Foreign corps have no effect.
+Bug Fix - Dead civs joining the reformation
+Moorlands now support cottages. 
+New buttons for Colonis.
+Fixed unit buttons so they work with low-resolution settings (removed Minimaps), more to come. 
+New Venice Galleas button.
+French translation by M41d3n.dc merged in.
+Gustav's eyes fixed
+Bug Fix - Fast Movement Over Snow Terrain, now Ships move fast over Ocean
+Update on Byzantines and Hungarian civilization names
+Lisboa moved 1S, and rework of south Iberia.
+Naval redesign. War galley replaces trimene. Cogge renamed Cog. New units: war galley, gun galley, holk. 
+Beserker no longer upgrades to (worse) longswordsman. 
+Forest/Dense forest renamed to woodland/forest.
+Bug Fix - German UHV, UHV update - Poland
+Added War/Settler reference maps
+Bug Fix - No more brothers in faith between different religions
+New Moscow UHV (get warm water access) and bug fix in consts.py resource list
+Fixed the Orthodox Arabia bug, the AI is now aware of the future cash income from the Faith UP + Holy City synergy
+Buildings can spread irrigation ability (used for Gardens of Al-Andalus)
+Fixed the always re-apperaring burgundy settler map bug, germany spreads out better
+Some synchro in maps at French/Germany, 
+Stronger Cordoba 
+Added Tamerlane's invasion 
+Weakened Arabia at start.
+Side effect for fixing: Arabia and Cordoba spawn one turn later.
+Replaced indy Koenigsberg with Tvanksta, and added some barbs (Longobards) in Northern Italy.
+
 
 Changes for Alpha 7
 Incorporated 6.1 patch (from micbic)
