@@ -16012,22 +16012,6 @@
 			</GreatPeoples>
 			<Buildings>
 				<Building>
-					<BuildingType>BUILDING_CATHOLIC_SHRINE</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_ORTHODOX_SHRINE</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_PROTESTANT_SHRINE</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
 					<BuildingType>BUILDING_CORPORATION_1</BuildingType>
 					<bBuilding>1</bBuilding>
 				</Building>

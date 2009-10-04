@@ -12,7 +12,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
 		<English>Woodland</English>
-		<French/><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+		<French>For&#234;t</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
 		<English>Moorland</English>
@@ -45,4 +45,12 @@
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
 		<English>Colonial Trade Route</English>
 		<French>Route Coloniale</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian><Japanese/><Chinese/></TEXT>
-</Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_REMOVE_FOREST</Tag>
+		<English>Clear [LINK=FEATURE_FOREST]Woodland[\LINK] or [LINK=FEATURE_FOREST]Forest[\LINK]</English>
+		<French>d&#233;fricher la [LINK=FEATURE_FOREST]for&#234;t[\LINK] </French>
+		<German>[LINK=FEATURE_FOREST]Wald[\LINK] abholzen</German>
+		<Italian>Disboscare una [LINK=FEATURE_FOREST]foresta[\LINK]</Italian>
+		<Spanish>Talar un [LINK=FEATURE_FOREST]bosque[\LINK]</Spanish>
+	</TEXT>
+		</Civ4GameText>

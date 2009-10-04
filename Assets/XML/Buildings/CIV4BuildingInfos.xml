@@ -24776,7 +24776,7 @@
 			<Description>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_STRATEGY</Strategy>
-      <Help>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_HELP</Help>
+			<Help/>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GARDENS_AL_ANDALUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GARDENS_AL_ANDALUS</MovieDefineTag>
