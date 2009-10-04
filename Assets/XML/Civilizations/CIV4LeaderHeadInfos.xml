@@ -23150,7 +23150,7 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_SALAHALDIN</Type>
 			<Description>Salah al'Din</Description>
-			<Civilopedia>TXT_KEY_LEADER_SALAHALDIN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_LEADER_SALADIN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_SALADIN</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
@@ -24814,7 +24814,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_CHARLES_V</Type>
-			<Description>Charles V</Description>
+			<Description>Phillip the Bold</Description>
 			<Civilopedia>TXT_KEY_LEADER_CHARLES_V_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_CHARLES_V</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
