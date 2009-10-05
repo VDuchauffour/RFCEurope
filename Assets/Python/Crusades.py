@@ -757,7 +757,7 @@ class Crusades:
 						if ( pPlot.isHills or pPlot.isFlatlands() ):
 							iN = pPlot.getNumUnits()
 							for i in range( iN ):
-								pPlot.getUnit( i ).kill( False )
+								pPlot.getUnit( i ).kill( False, iBarbarian )
 								iChosenX = iX
 								iChosenY = iY
 			

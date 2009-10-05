@@ -31,6 +31,8 @@ class StoredData:
                                     'iBetrayalTurns': 0,
                                     'lLatestRebellionTurn': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'iRebelCiv': 0,
+                                    'lRebelCities': [], # 3Miro: store the rebelling cities
+                                    'lRebelSuppress': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'lExileData': [-1, -1, -1, -1, -1],
                                     'tTempFlippingCity': -1,
                                     'lCheatersCheck': [0, -1],
