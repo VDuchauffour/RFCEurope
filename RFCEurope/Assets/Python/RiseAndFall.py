@@ -1468,6 +1468,9 @@ class RiseAndFall:
                 if ( bSuppressed == True ):
                 	return
 	
+		pDeadCiv = gc.getPlayer(iDeadCiv)
+                teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
+	
                 if (len(tLeaders[iDeadCiv]) > 1):
                         iLen = len(tLeaders[iDeadCiv])
                         iRnd = gc.getGame().getSorenRandNum(iLen, 'odds')
