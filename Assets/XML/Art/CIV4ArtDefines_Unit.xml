@@ -585,7 +585,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_GUN_GALLEY</Type>
 			<Button>Art/Interface/Buttons/Units/Galleas.dds</Button>
-			<fScale>0.15</fScale>
+			<fScale>0.10</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
