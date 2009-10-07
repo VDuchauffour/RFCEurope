@@ -916,14 +916,14 @@ class Victory:
 				self.setGoal( iSweden, 1, 1 )
 				
 			
-			if ( iGameTurn == i1750AD and self.setGoal( iSweden, 2 ) == -1 ):
+			if ( iGameTurn == i1750AD and self.getGoal( iSweden, 2 ) == -1 ):
 				iNumCities = pSweden.getNumCities()
 				iCount = 0
 				for iCity in range(iNumCities):
 					pCity = pSweden.getCity(iCity)
 					iX = pCity.getX()
 					iY = pCity.getY()
-					if ( iX <= 58 or iY <= 53 ):
+					if ( iX >= 70 or iY <= 55 ):
 						iCount += 1
 				
 				if ( iCount >= 3 ):
