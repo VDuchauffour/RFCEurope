@@ -106,6 +106,17 @@
 		<Russian>&#192;&#235;&#252;-&#192;&#237;&#228;&#224;&#235;&#243;&#241;</Russian>
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
+		<Tag>TXT_KEY_CIV_CORDOBA_PEDIA</Tag>
+		<English>In 711 AD, thousands of Muslim Arabs and Berbers landed at Gibraltar to begin a rapid conquest of Spain. The Arabs called the region al-Andalus (from which the modern name "Andalusia" is derived) and brought it under the control of the Umayyad Caliphate. This Arabian dynasty had been the civil and spiritual leaders of Islam for the previous fifty years, but their nepotistic rule caused much unrest in the Muslim world. After the ousting of the Umayyads in Damascus by the Abbasids in 750, Abd ar-Rahman, a grandson of a former caliph and one of the few surviving Umayyad clan, fled to al-Andalus and took over this Muslim salient in Europe. His emirate, centered around Cordoba, was the only one that remained independent from the Abbasid Caliphate. The Abbasids did not have the manpower to re-conquer such a far-flung province and under the rule of the ar-Rahman dynasty, Cordovan Spain became a powerful, centralized state, expanding its territory northward at the expense of Christian kingdoms that had resisted the Muslim invaders. Abd ar-Rahman had Cordoba's Great Mosque built in 785, which survives to this day.
+In 929 AD Abd ar-Rahman III declared himself the Caliph of Cordoba. The title Caliph is reserved for the leader of Islam, but there were already two caliphs in the Muslim world. The Abbasid (or Baghdad) caliph, who was Sunni, traced his descent from Abbas, an uncle of the Prophet Muhammad. The Fatimid caliph, who was Shi'i, traced his descent from Fatima, a daughter of the Prophet. The Umayyads were also Arabs of the Sunni sect, but their lineage traced to Uthman, the third caliph who succeeded Muhammad.
+The Cordovan Umayyads reached their height in the late 10th century, consolidating their hold on the provinces in Spain and expanding into North Africa against the Fatimids. However, following the familiar pattern seen throughout the history of the Muslim Crescent, regional rulers grew discontented with the leadership at Cordoba and undermined the authority of the Umayyads, and between 1009-1031 a bitter civil war ripped apart the Cordovan Caliphate. Afterwards, al-Andalus was split into small kingdoms called taifas, ruled by local warlords.
+These local warlords could not stand up to the Christian kingdoms in the north that started the reconquest of Spain. To lend urgency to this push, Pope Alexander II declared it a Crusade, forgiving the sins of those on the way to fight the Muslims. By 1212, the Christian kingdoms of Leon, Castile, Aragon and Catalonia had pushed the Muslims halfway down the peninsula, and a major defeat of the Muslim rulers at Las Navas de Tolosa heralded the beginning of the end for al-Andalus. Cordoba itself fell in 1236. The rest of the history of al-Andalus is a series of defeats, retreats and the shrinking of the Muslim presence in Spain until all that remained of the once mighty al-Andalus was a narrow strip of land near Granada. Ferdinand of Aragon and Isabella of Castile launched a last war against the Muslims and conquered Granada at last in 1492.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_LEADER_ABDARRAHMAN_PEDIA</Tag>
 		<English>[H1]Abd-ar-Rahman III[\H1]
 [BOLD]Caliph of Cordoba[\BOLD]
