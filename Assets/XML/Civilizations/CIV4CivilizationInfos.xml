@@ -2062,7 +2062,7 @@
 			<Description>TXT_KEY_CIV_TURKEY_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_TURKEY_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_TURKEY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_TURKEY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CHANGED_CIV_OTTOMAN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1300AD</StartingYear>
 			<LoadingTime>30</LoadingTime>
