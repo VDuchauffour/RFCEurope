@@ -1317,8 +1317,9 @@ iForest = 5
 iFallout = 6
 iMud = 7
 
-iDesert = 2
-iTundra = 3
+iDesert = 3
+iTundra = 4
+iCoast = 7
 iMarsh = 9
 
 
