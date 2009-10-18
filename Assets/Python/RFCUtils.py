@@ -926,7 +926,7 @@ class RFCUtils:
                 bPaint = True
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-                if ( pCurrent.isWater()):
+                if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == con.iCoast):
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                 iClean = 0
                                 for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
@@ -946,7 +946,7 @@ class RFCUtils:
                 bPaint = True
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-                if ( pCurrent.isWater()):
+                if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == con.iCoast):
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                 if (pCurrent.countTotalCulture() == 0 ):
                                         iClean = 0
