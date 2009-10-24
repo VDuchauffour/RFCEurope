@@ -302,10 +302,10 @@
 		<English>Blacksmith</English>
 		<French>Forge</French><German/><Italian/><Spanish/><Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CARPENTER</Tag>
-		<English>Carpenter</English>
-		<French>Menuiserie</French><German/><Italian/><Spanish/><Russian>&#207;&#235;&#238;&#242;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUILDERS_YARD</Tag>
+		<English>Builder's Yard</English>
+		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASON</Tag>
 		<English>Mason</English>
 		<French>Maçon</French><German/><Italian/><Spanish/><Russian>&#202;&#224;&#236;&#229;&#237;&#249;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
@@ -321,10 +321,6 @@
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE</Tag>
 		<English>Smokehouse</English>
 		<French>Fumoir</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TANNER</Tag>
-		<English>Tanner</English>
-		<French>Tanneur</French><German/><Italian/><Spanish/><Russian>&#196;&#243;&#225;&#232;&#235;&#252;&#249;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUTCHER</Tag>
 		<English>Butcher</English>

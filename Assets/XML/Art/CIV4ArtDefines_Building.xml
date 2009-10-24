@@ -569,17 +569,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Theatre.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARPENTER</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>0.95</fScale>
-			<fInterfaceScale>1.11</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Carpenter/Carpenter.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/Carpenter.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MASON</Type>
+			<Type>ART_DEF_BUILDING_BUILDERS_YARD</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.75</fScale>
@@ -609,7 +599,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Jeweler.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TANNER</Type>
+			<Type>ART_DEF_BUILDING_TANNERY</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.95</fScale>
