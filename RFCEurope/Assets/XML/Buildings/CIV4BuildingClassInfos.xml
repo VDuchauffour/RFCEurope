@@ -176,28 +176,16 @@
 			<DefaultBuilding>BUILDING_FORGE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CARPENTER -->
-			<Type>BUILDINGCLASS_CARPENTER</Type>
-			<Description>TXT_KEY_BUILDING_CARPENTER</Description>
+		<BuildingClassInfo><!-- BUILDERS YARD -->
+			<Type>BUILDINGCLASS_BUILDERS_YARD</Type>
+			<Description>TXT_KEY_BUILDING_BUILDERS_YARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_CARPENTER</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- MASON -->
-			<Type>BUILDINGCLASS_MASON</Type>
-			<Description>TXT_KEY_BUILDING_MASON</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_MASON</DefaultBuilding>
+			<DefaultBuilding>BUILDING_BUILDERS_YARD</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- GUILD_HALL -->
@@ -356,28 +344,16 @@
 			<DefaultBuilding>BUILDING_SMOKEHOUSE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- TANNER -->
-			<Type>BUILDINGCLASS_TANNER</Type>
-			<Description>TXT_KEY_BUILDING_TANNER</Description>
+		<BuildingClassInfo><!-- TANNERY -->
+			<Type>BUILDINGCLASS_TANNERY</Type>
+			<Description>TXT_KEY_BUILDING_TANNERY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_TANNER</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- BUTCHER -->
-			<Type>BUILDINGCLASS_BUTCHER</Type>
-			<Description>TXT_KEY_BUILDING_BUTCHER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_BUTCHER</DefaultBuilding>
+			<DefaultBuilding>BUILDING_TANNERY</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- GROCER -->
