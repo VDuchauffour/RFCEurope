@@ -81,29 +81,74 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR00</Tag>
-		<English>Duchy of Burgundy</English>
-		<French>
-			<Text>Duch&#233; de Bourgogne</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Hinduv&#246;lker:Hinduv&#246;lker:Hinduv&#246;lkern</Text>
-			<Gender>Female:Female:Female</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Popoli Ind&#249;</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pueblos Hindu</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#195;&#229;&#240;&#246;&#238;&#227;&#241;&#242;&#226;&#238; &#193;&#243;&#240;&#227;&#243;&#237;&#228;&#232;&#232;</Russian>
+		<English>Burgundian Peoples</English>
+		<French/>
+		<German/><Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR01</Tag>
+		<English>Kingdom of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_DN_BUR02</Tag>
+		<English>Kingdom of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR03</Tag>
+		<English>Duchy of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR04</Tag>
+		<English>Duchy of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR05</Tag>
+		<English>Burgundian Republic</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR06</Tag>
+		<English>Burgundy Error</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR07</Tag>
+		<English>Burgundy Error</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR08</Tag>
+		<English>Sultanate of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR09</Tag>
+		<English>Islamic Republic of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR21</Tag>
+		<English>Province of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+
+	
+	
+
 <TEXT> <!--merijn_v1 Text-->
 <Tag>TXT_KEY_CIV_BURGUNDY_PEDIA</Tag> 
 <English>	The Duchy of Burgundy, with origins in the Roman Empire, was a political entity that at its peak spread from what is today southwestern France, to central France, Belgium and the southern Netherlands. A center of trade, art, thought, and military power, it was at the center of conflict amongst the Kingdoms of France, Spain, Austria, and the Holy Roman Empire; as an independent entity, at times the Duchy rivaled the powers that coveted it.

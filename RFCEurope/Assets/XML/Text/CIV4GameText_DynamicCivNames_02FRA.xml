@@ -81,27 +81,65 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA00</Tag>
-		<English>Kingdom of France</English>
-		<French>
-			<Text>Royaume de France</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Hinduv&#246;lker:Hinduv&#246;lker:Hinduv&#246;lkern</Text>
-			<Gender>Female:Female:Female</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Popoli Ind&#249;</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pueblos Hindu</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#242;&#226;&#238; &#212;&#240;&#224;&#237;&#246;&#232;&#232;</Russian>
+		<English>Frankish Peoples</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA01</Tag>
+		<English>West Francia</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA02</Tag>
+		<English>Frankish Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA03</Tag>
+		<English>Kingdom of France</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA04</Tag>
+		<English>French Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA05</Tag>
+		<English>French Republic</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA06</Tag>
+		<English>Frankish Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_DN_FRA07</Tag>
+		<English>Frankish Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_DN_FRA08</Tag>
+		<English>Sultanate of France</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_DN_FRA09</Tag>
+		<English>French Islamic Republic</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_DN_FRA21</Tag>
+		<English>Province of France</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+
+
+
+
+
+
+
+
 </Civ4GameText>
