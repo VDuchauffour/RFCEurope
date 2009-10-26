@@ -85,27 +85,63 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ00</Tag>
-		<English>The Byzantine Empire</English>
-		<French>
-			<Text>Empire Byzantin</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Nilv&#246;lker:Nilv&#246;lker:Nilv&#246;lkern</Text>
-			<Gender>Female:Female:Female</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Popoli del Nilo</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pueblos del Nilo</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#194;&#232;&#231;&#224;&#237;&#242;&#232;&#233;&#241;&#234;&#224;&#255; &#200;&#236;&#239;&#229;&#240;&#232;&#255;</Russian>
+		<English>Byzantine Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ01</Tag>
+		<English>Byzantine Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ02</Tag>
+		<English>Byzantine Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_DN_BYZ03</Tag>
+		<English>Byzantine Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ04</Tag>
+		<English>Byzantine Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ05</Tag>
+		<English>Second Roman Republic</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ06</Tag>
+		<English>Byzantine Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ07</Tag>
+		<English>Byzantine Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ08</Tag>
+		<English>Islamic Byzantine Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ09</Tag>
+		<English>Islamic Roman Republic</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ21</Tag>
+		<English>Province of Byzantium</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+
+
+
+
+
+
 </Civ4GameText>

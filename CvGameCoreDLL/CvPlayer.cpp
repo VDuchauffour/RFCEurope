@@ -22490,42 +22490,24 @@ void CvPlayer::processCivNames()
 			return;
 		}
 		else { //not a vassal
-			if (civDynamicNamesFlag[getID()] == 1 && getStateReligion() == 2) { //Islam
-				if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3) { //desp/mon/pol
-					setCivDescription(civDynamicNames[getID()][8]);
-					return;	
-					}
-				else if (getCivics((CivicOptionTypes)0) == 2 || getCivics((CivicOptionTypes)0) == 4) { //rep/univ
+			// Sedna17: Implementing a crude initial renaming scheme based on Panopticon's list
+			if (civDynamicNamesFlag[getID()] == 1 && getStateReligion() == 1) { //Islam
+				if (getCivics((CivicOptionTypes)0) == 4 || getCivics((CivicOptionTypes)3)==4) { //Republic or Merchant Republic
 					setCivDescription(civDynamicNames[getID()][9]);
 					return;	
 					}
-				}
-
-			if (getCivics((CivicOptionTypes)3) == 18 ) { //state property
-				setCivDescription(civDynamicNames[getID()][6]);
-				return;
-				}
-			else if (getCivics((CivicOptionTypes)0) == 3) { //police state
-				setCivDescription(civDynamicNames[getID()][7]);
-				return;		
-				}
-
-			if (civDynamicNamesFlag[getID()] == 0 && getStateReligion() == 2) { //Islam
-				if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3) { //desp/mon/pol
+				else if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3 || getCivics((CivicOptionTypes)0) == 4) { //Despotism,Electorate,Divine/Limited Monarchy
 					setCivDescription(civDynamicNames[getID()][8]);
 					return;	
 					}
-				else if (getCivics((CivicOptionTypes)0) == 2 || getCivics((CivicOptionTypes)0) == 4) { //rep/univ
-					setCivDescription(civDynamicNames[getID()][9]);
-					return;	
-					}
-			}
 
-			if (getCivics((CivicOptionTypes)0) == 2 || getCivics((CivicOptionTypes)0) == 4) { //rep/univ
+				}
+
+			if (getCivics((CivicOptionTypes)0) == 4 || getCivics((CivicOptionTypes)3) == 4) { //Republic or Merchant Republic
 				setCivDescription(civDynamicNames[getID()][5]);
 				return;
 				}
-			else if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3) { //desp/mon/pol
+			else if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3 || getCivics((CivicOptionTypes)0) == 4) { //Any monarch
 				if (getCurrentEra() < civDynamicNamesEraThreshold[getID()]) {
 					if (getNumCities() <= 6) {
 						setCivDescription(civDynamicNames[getID()][1]);
