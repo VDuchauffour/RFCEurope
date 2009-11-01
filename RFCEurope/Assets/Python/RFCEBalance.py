@@ -134,7 +134,7 @@ class RFCEBalance:
 		#gc.setProductionModifiers(iPortugal,     135, 100, 100, 165 )
 		#gc.setProductionModifiers(iAustria,      120,  90, 100, 132 )
 		#gc.setProductionModifiers(iTurkey,        75,  70, 100, 110 )
-		#gc.setProductionModifiers(iSweden,        75,  60, 100,  88 )
+		#gc.setProductionModifiers(iSweden,       100,  80, 140, 115 )
 		#gc.setProductionModifiers(iDutch,         75,  50, 100,  77 )
 		#gc.setProductionModifiers(iPope,         300, 200, 100, 220 )
 		#gc.setProductionModifiers(iIndependent,  150, 100, 500, 450 )
