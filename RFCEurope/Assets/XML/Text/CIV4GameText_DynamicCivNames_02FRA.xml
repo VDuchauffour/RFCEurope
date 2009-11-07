@@ -114,12 +114,12 @@
 		<English>Frankish Error</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_FRA07</Tag>
 		<English>Frankish Error</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_FRA08</Tag>
 		<English>Sultanate of France</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
@@ -130,17 +130,17 @@
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA10>
+		<Tag>TXT_KEY_DN_FRA10></Tag>
 		<English>Exarchate of Gallia</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA11>
+		<Tag>TXT_KEY_DN_FRA11></Tag>
 		<English>Metropolitan France</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA12>
+		<Tag>TXT_KEY_DN_FRA12></Tag>
 		<English>Emirate of France</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
@@ -184,7 +184,6 @@
 		<English>Principality of Fransa</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA21</Tag>
 		<English>Province of France</English>
