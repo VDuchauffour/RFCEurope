@@ -22484,15 +22484,60 @@ void CvPlayer::processCivNames()
 				}
 			}
 		}
+
 		if (iMaster != -1) {
-			// 3Miro: change civ name depending on the master
-			setCivDescription(civDynamicNames[getID()][21]);
+			switch (iMaster)
+			{
+			case FRANKIA:
+				setCivDescription(civDynamicNames[getID()][10]);
+				break;
+			case ARABIA:
+				setCivDescription(civDynamicNames[getID()][11]);
+				break;
+			case CORDOBA:
+				setCivDescription(civDynamicNames[getID()][11]);
+				break;
+			case SPAIN:
+				setCivDescription(civDynamicNames[getID()][12]);
+				break;
+			case NORSE:
+				setCivDescription(civDynamicNames[getID()][13]);
+				break;
+			case SWEDEN:
+				setCivDescription(civDynamicNames[getID()][13]);
+				break;
+			case VENECIA:
+				setCivDescription(civDynamicNames[getID()][14]);
+				break;
+			case KIEV:
+				setCivDescription(civDynamicNames[getID()][15]);
+				break;
+			case MOSCOW:
+				setCivDescription(civDynamicNames[getID()][15]);
+				break;
+			case GERMANY:
+				setCivDescription(civDynamicNames[getID()][16]);
+				break;
+			case ENGLAND:
+				setCivDescription(civDynamicNames[getID()][17]);
+				break;
+			case AUSTRIA:
+				setCivDescription(civDynamicNames[getID()][18]);
+				break;
+			case TURKEY:
+				setCivDescription(civDynamicNames[getID()][19]);
+				break;
+			default:
+				setCivDescription(civDynamicNames[getID()][21]);
+				break;
+			}
 			return;
 		}
 		else { //not a vassal
 			// Sedna17: Implementing a crude initial renaming scheme based on Panopticon's list
 			if (civDynamicNamesFlag[getID()] == 1 && getStateReligion() == 1) { //Islam
-				if (getCivics((CivicOptionTypes)0) == 4 || getCivics((CivicOptionTypes)3)==4) { //Republic or Merchant Republic
+				
+				if (getCivics((CivicOptionTypes)0) == 4 || getCivics((CivicOptionTypes)3) == 4) { //Republic or Merchant Republic
 					setCivDescription(civDynamicNames[getID()][9]);
 					return;	
 					}

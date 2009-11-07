@@ -140,6 +140,72 @@
 		<Russian/>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_BUR10</Tag>
+		<English>Exarchate of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR11</Tag>
+		<English>French Duchy of Bourgogne</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR12</Tag>
+		<English>Emirate of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR13</Tag>
+		<English>Spanish Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR14</Tag>
+		<English>New Bornholm</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR15</Tag>
+		<English>Venetian Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR16</Tag>
+		<English>Russian Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR17</Tag>
+		<English>Lothringen</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR18</Tag>
+		<English>County of Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR19</Tag>
+		<English>Habsburg Burgundy</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR20</Tag>
+		<English>Principality of Burgonya</English>
+		<French/><German/><Italian/><Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_BUR21</Tag>
 		<English>Province of Burgundy</English>
 		<French/><German/><Italian/><Spanish/>
