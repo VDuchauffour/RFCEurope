@@ -8,8 +8,8 @@
 	<CivilizationArtInfos>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_ARABIA</Type>
-			<Button>,Art/Interface/Buttons/Civilizations/Arabia.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,2,5</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_PalmTree2.dds</Path>
+			<Button>Art/Interface/Buttons/Civilizations/Arab2.dds</Button>
+			<Path>Art/Interface/TeamColor/flagdecal_arabic.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -39,8 +39,8 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_CORDOBA</Type>
-			<Button>Art/Interface/Buttons/Civilizations/CordobaButton.dds</Button>
-			<Path>Art/Interface/TeamColor/flagdecal_Arabia2.dds</Path>
+			<Button>Art/Interface/Buttons/Civilizations/CordobaButton2.dds</Button>
+			<Path>Art/Interface/TeamColor/flagdecal_Moorish2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -100,7 +100,7 @@
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_POLAND</Type>
 			<Button>Art/Interface/Buttons/Civilizations/poland.dds</Button>
-			<Path>Art/Interface/TeamColor/flagdecal_eagle.dds</Path>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Poland.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
