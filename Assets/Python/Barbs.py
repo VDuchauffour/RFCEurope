@@ -130,11 +130,10 @@ class Barbs:
 			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iWarGalley, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 0)
 		
 		if ( iGameTurn >= con.i1401AD ):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCaravel, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 0)
+			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCorsair, 1, 0, 0, iGameTurn, 5,3, utils.outerSeaSpawn, 0)
 			
-		if ( iGameTurn >= con.i1401AD ):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iPrivateer, 1, 0, 0, iGameTurn, 10, 7, utils.outerSeaSpawn, 0)
-
+		#if ( iGameTurn >= con.i1401AD ):
+		#	self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCara, 1, 0, 0, iGameTurn, 10, 7, utils.outerSeaSpawn, 0)
 
 		if ( iGameTurn >= con.i1200AD and iGameTurn < con.i1500AD):
 			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCogge, 1, con.iSwordsman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 0)

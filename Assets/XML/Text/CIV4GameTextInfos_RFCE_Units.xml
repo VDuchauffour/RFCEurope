@@ -500,4 +500,8 @@
 		<Tag>TXT_KEY_UNIT_SELJUK</Tag>
 		<English>Seljuk</English>
 		<French>Seljuk</French><German/><Italian/><Spanish/><Russian>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Russian><Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CORSAIR</Tag>
+		<English>Corsair</English>
+		<French>Corsair</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 </Civ4GameText>

@@ -1059,6 +1059,7 @@ iWelshLongbowman= 92
 iTagmata= 93
 iSeljuk= 94
 iGunGalley=95
+iCorsair=96
 
 iProsecutorClass = 64
 
