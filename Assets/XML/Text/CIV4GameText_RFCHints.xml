@@ -105,15 +105,6 @@
 		<Russian>"Entente"  - &#244;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#238;&#229; &#241;&#235;&#238;&#226;&#238; &#228;&#235;&#255; &#228;&#232;&#239;&#235;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#238;&#227;&#238; &#239;&#238;&#237;&#232;&#236;&#224;&#237;&#232;&#255;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HINT_12</Tag>
-		<English>This Earth map is based on st.Lucifer's projection</English>
-		<French>Cette carte de la Terre est bas&#233;e sur la projection de Robinson.</French>
-		<German>Diese Weltkarte basiert auf der Robinson-Projektion.</German>
-		<Italian>Questa mappa della Terra si basa sulla proiezione di Robinson.</Italian>
-		<Spanish>Este mapamundi se basa en la proyecci&#243;n de Robinson.</Spanish>
-		<Russian>&#221;&#242;&#224; &#234;&#224;&#240;&#242;&#224; &#199;&#229;&#236;&#235;&#232; &#238;&#241;&#237;&#238;&#226;&#224;&#237;&#224; &#239;&#240;&#238;&#229;&#234;&#242;&#238;&#236;.Lucifer'&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HINT_13</Tag>
 		<English>The only way in and out of the Black Sea is via the Bosporus near Constantinople (Istanbul)</English>
 		<French>Les lacs ne produisent pas tous 2 nourriture. Les lacs sal&#233;s produisent seulement 1 nourriture, comme les c&#233;tes.</French>

@@ -581,7 +581,7 @@ class Victory:
 			#	else:
 			#		self.setGoal( iNorse, 0, 0 )
 			
-			if ( iGameTurn <= i1101AD and self.getGoal( iNorse, 0 ) == -1 ):
+			if ( iGameTurn <= i1050AD and self.getGoal( iNorse, 0 ) == -1 ):
 				iCitiesFrance = gc.countOwnedCities( iNorse, tNorseSettle[0][0], tNorseSettle[0][1], tNorseSettle[0][2], tNorseSettle[0][3] ) 
 				iCitiesBritain = gc.countOwnedCities( iNorse, tNorseSettle[1][0], tNorseSettle[1][1], tNorseSettle[1][2], tNorseSettle[1][3] ) + gc.countOwnedCities( iNorse, tNorseSettle[2][0], tNorseSettle[2][1], tNorseSettle[2][2], tNorseSettle[2][3] )
 				iCitiesIreland = gc.countOwnedCities( iNorse, tNorseSettle[3][0], tNorseSettle[3][1], tNorseSettle[3][2], tNorseSettle[3][3] )
@@ -590,7 +590,7 @@ class Victory:
 				if ( iCitiesFrance >0 and iCitiesBritain >0 and iCitiesIreland >0 and iCitiesIceland >0 and iCitiesSicily > 0):
 					self.setGoal( iNorse, 0, 1 )
 			
-			if (iGameTurn == i1101AD+1 and self.getGoal(iNorse,0) == -1):
+			if (iGameTurn == i1050AD+1 and self.getGoal(iNorse,0) == -1):
 				self.setGoal( iNorse, 0, 0 )
 
 			if (self.getGoal(iNorse,1) == -1):
