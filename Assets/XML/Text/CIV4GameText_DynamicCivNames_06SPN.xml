@@ -82,27 +82,112 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN00</Tag>
-		<English>Spain</English>
-		<French>
-			<Text>Royaume d'Espagne</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Hinduv&#246;lker:Hinduv&#246;lker:Hinduv&#246;lkern</Text>
-			<Gender>Female:Female:Female</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Popoli Ind&#249;</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pueblos Hindu</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#200;&#241;&#239;&#224;&#237;&#232;&#255;</Russian>
+		<English>Visigothic Peoples</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN01</Tag>
+		<English>Kingdom of LeÛn</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN02</Tag>
+		<English>Kingdom of Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN03</Tag>
+		<English>Crown of Castile</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN04</Tag>
+		<English>Kingdom of Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN05</Tag>
+		<English>Spanish Republic</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN06</Tag>
+		<English>Placeholder Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN07</Tag>
+		<English>Placeholder Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN08</Tag>
+		<English>Emirate of Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN09</Tag>
+		<English>Spanish Islamic Republic</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN10</Tag>
+		<English>Exarchate of Hispania</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN11</Tag>
+		<English>Duchy of LeÛn</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN12</Tag>
+		<English>Al-Andalus</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN13</Tag>
+		<English>Castile</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN14</Tag>
+		<English>Visigothic Kingdom of Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN15</Tag>
+		<English>Venetian Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN16</Tag>
+		<English>Russian Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN17</Tag>
+		<English>German Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN18</Tag>
+		<English>Counties of Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN19</Tag>
+		<English>Habsburg Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN20</Tag>
+		<English>Principality of Ispanya</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN21</Tag>
+		<English>Province of Spain</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

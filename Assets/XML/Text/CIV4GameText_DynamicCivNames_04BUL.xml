@@ -82,28 +82,113 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL00</Tag>
-		<English>Bulgaria</English>
-		<French>
-			<Text>Royaume de Bulgarie</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Hinduv&#246;lker:Hinduv&#246;lker:Hinduv&#246;lkern</Text>
-			<Gender>Female:Female:Female</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Popoli Ind&#249;</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pueblos Hindu</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#232;&#255;</Russian>
+		<English>Bulgar Peoples</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL01</Tag>
+		<English>Kingdom of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL02</Tag>
+		<English>First Bulgarian Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL03</Tag>
+		<English>Tsardom of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL04</Tag>
+		<English>Second Bulgarian Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL05</Tag>
+		<English>Republic of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL06</Tag>
+		<English>Placeholder Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL07</Tag>
+		<English>Placeholder Error</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL08</Tag>
+		<English>Islamic Bulgarian Empire</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL09</Tag>
+		<English>Islamic Republic of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL10</Tag>
+		<English>Theme of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL11</Tag>
+		<English>Duchy of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL12</Tag>
+		<English>Emirate of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL13</Tag>
+		<English>Spanish Kingdom of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL14</Tag>
+		<English>Varangian Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL15</Tag>
+		<English>Venetian Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL16</Tag>
+		<English>Principality of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL17</Tag>
+		<English>German Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL18</Tag>
+		<English>Counties of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL19</Tag>
+		<English>Habsburg Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL20</Tag>
+		<English>Principality of Rumelia</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL21</Tag>
+		<English>Province of Bulgaria</English>
+		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT> <!--merijn_v1 Text-->
 		<Tag>TXT_KEY_CIV_BULGARIA_PEDIA</Tag>
