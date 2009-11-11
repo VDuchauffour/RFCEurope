@@ -1278,7 +1278,7 @@ iNationalEpic=152
 iTriumphalArch = 152 #Should be same number as National Epic
 iNumBuildings = 153 #Should equal iPlague
 iPlague = 153
-iNumBuildingsPlague = 153
+iNumBuildingsPlague = 154
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
 #Projects
