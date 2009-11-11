@@ -473,7 +473,7 @@
 			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
-			<FontButtonIndex>34</FontButtonIndex>
+			<FontButtonIndex>33</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_VICTORY_BLUE</Type>
