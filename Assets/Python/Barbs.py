@@ -123,7 +123,7 @@ class Barbs:
 		if (iGameTurn <= con.i1000AD):
                         self.spawnUnits( iBarbarian, (56, 53), (99, 72), con.iWolf, 1, iGameTurn, 17, 2, utils.outerInvasion, 0)
                         self.spawnUnits( iBarbarian, (86, 40), (99, 72), con.iBear, 1, iGameTurn, 19, 4, utils.outerInvasion, 0)
-                        self.spawnUnits( iBarbarian, (0, 1), (52, 15), con.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0)
+                        self.spawnUnits( iBarbarian, (0, 1), (52, 10), con.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0)
                 
 		#Mediterranean Pirates (Light before 1500,then heavy for rest of game)
 		if ( iGameTurn >= con.i960AD and iGameTurn < con.i1401AD):

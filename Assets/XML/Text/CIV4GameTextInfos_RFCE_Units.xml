@@ -150,7 +150,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUISARME</Tag>
-		<English>Guisarme</English>
+		<English>Guisarmier</English>
 		<French>
 			<Text>Piquier pontifical</Text>
 			<Gender>Male</Gender>
@@ -171,7 +171,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARBALEST</Tag>
-		<English>Arbalest</English>
+		<English>Arbalestier</English>
 		<French>
 			<Text>Arbal&#233;trier lourd</Text>
 			<Gender>Male</Gender>
@@ -474,8 +474,8 @@
 		<French>Scientifique Illustre</French><German/><Italian/><Spanish/><Russian>&#194;&#229;&#235;&#232;&#234;&#232;&#233; &#211;&#247;&#229;&#237;&#251;&#233;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN</Tag>
-		<English>Long Swordsman</English>
-		<French>Long Spadassin</French><German/><Italian/><Spanish/><Russian>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
+		<English>Longswordsman</English>
+		<French>Longspadassin</French><German/><Italian/><Spanish/><Russian>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT</Tag>
 		<English>Skirmisher</English>

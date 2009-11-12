@@ -660,7 +660,7 @@ class Stability:
                 	iTempCitiesThreshold += 1
 		elif (iBuilding == con.iEscorial):
 			self.setHasEscorial(iPlayer,1)
-		if (iBuilding >= con.iSistineChapel and iBuilding <= con.iTombAlKhalid): #+2 per wonder
+		if (iBuilding >= con.iSistineChapel and iBuilding <= con.iTombKhal): #+2 per wonder
 			iTempCitiesThreshold +=2
                 self.setParameter(iPlayer, iParCitiesE, True, iTempCitiesThreshold)
                 self.setStability(iPlayer, self.getStability(iPlayer)+iTempCitiesThreshold)
