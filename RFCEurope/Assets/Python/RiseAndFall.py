@@ -2314,11 +2314,10 @@ class RiseAndFall:
         		utils.makeUnit(con.iSwordsman, iCiv, tPlot, 1)
         		utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 1)
         	if (iCiv == iPoland):
-		        utils.makeUnit(con.iArcher, iCiv, tPlot, 3)
-		        utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
+		        utils.makeUnit(con.iArcher, iCiv, tPlot, 2)
+		        utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
         		utils.makeUnit(con.iAxeman, iCiv, tPlot, 1)
         		utils.makeUnit(con.iSwordsman, iCiv, tPlot, 1)
-        		utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 1)
         	if (iCiv == iMoscow):
 		        utils.makeUnit(con.iArbalest, iCiv, tPlot, 4)
 		        utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
@@ -2706,7 +2705,6 @@ class RiseAndFall:
                 	teamPoland.setHasTech( con.iFarriers, True, iCiv, False, False )
                 	teamPoland.setHasTech( con.iArt, True, iCiv, False, False )  
                 	teamPoland.setHasTech( con.iEngineering, True, iCiv, False, False ) 
-                	teamPoland.setHasTech( con.iMachinery, True, iCiv, False, False ) 
                 	teamPoland.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
                 	teamPoland.setHasTech( con.iChainMail, True, iCiv, False, False )
                 	

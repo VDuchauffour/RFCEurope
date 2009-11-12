@@ -8283,7 +8283,7 @@
 			<FeatureImpassables>
 				<FeatureImpassable>
        					<FeatureType>FEATURE_MUD</FeatureType>
-       					<bFeatureImpassable>0</bFeatureImpassable>
+       					<bFeatureImpassable>1</bFeatureImpassable>
     				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>

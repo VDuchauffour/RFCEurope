@@ -496,11 +496,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_YAROSLAV</Type>
-			<Button>Art/Leaderheads/YaroslavNew/Yaroslav.dds</Button>
-			<NIF>Art/Leaderheads/YaroslavNew/hector.nif</NIF>
-			<KFM>Art/Leaderheads/YaroslavNew/alexander.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/YaroslavNew/hector.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/YaroslavNew/alexander_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Yaroslav2/Yaroslav.dds</Button>
+			<NIF>Art/Leaderheads/Yaroslav2/hector.nif</NIF>
+			<KFM>Art/Leaderheads/Yaroslav2/alexander.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Yaroslav2/hector.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Yaroslav2/alexander_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_HARALD_HARDRADA</Type>
