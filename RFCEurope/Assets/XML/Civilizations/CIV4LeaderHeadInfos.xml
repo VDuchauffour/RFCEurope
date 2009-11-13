@@ -33046,7 +33046,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_GUSTAVUS</Type>
-			<Description>Gustavus Adolphus</Description>
+			<Description>Gustav Vasa</Description>
 			<Civilopedia>TXT_KEY_LEADER_GUSTAVUS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_GUSTAV</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>

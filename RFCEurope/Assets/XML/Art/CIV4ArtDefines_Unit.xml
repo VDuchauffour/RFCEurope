@@ -2859,7 +2859,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CANNON</Type>
-			<Button>Art/Interface/Buttons/Units/earlycannon.dds</Button>
+			<Button>Art/Interface/Buttons/Units/EarlyCannon3.dds</Button>
 			<fScale>0.53</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>

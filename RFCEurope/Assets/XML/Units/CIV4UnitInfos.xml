@@ -3638,7 +3638,7 @@
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ARBALEST</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
