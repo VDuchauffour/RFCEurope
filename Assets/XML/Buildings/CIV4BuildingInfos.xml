@@ -19653,7 +19653,6 @@
 			<Strategy>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHRINE_OF_UPPSALA</ArtDefineTag>
-			<!-- Rhye -->
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_OF_UPPSALA</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -19666,10 +19665,9 @@
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
-			<!-- Rhye -->
 			<MaxStartEra>NONE</MaxStartEra>
-			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
-			<PrereqTech>TECH_MAP_MAKING</PrereqTech>
+			<ObsoleteTech>TECH_MONASTICISM</ObsoleteTech>
+			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -19707,7 +19705,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>250</iCost>
+			<iCost>200</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
