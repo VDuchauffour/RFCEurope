@@ -226,7 +226,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (93,32),(99,44), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (93,32),(99,44), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1)
 			#Central Europe (So Kiev can't keep them out)
-			self.spawnUnits( iBarbarian, (70,30),(90,55), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,4,2,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (65,30),(90,55), con.iMongolKeshik, 4 + iHandicap*2, iGameTurn,4,2,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (79,37),(85,47), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 			#Moscow
 			self.spawnUnits( iBarbarian, (89,46),(99,56), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
