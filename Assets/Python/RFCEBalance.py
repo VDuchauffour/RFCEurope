@@ -122,7 +122,7 @@ class RFCEBalance:
 		gc.setProductionModifiers(iCordoba,   200, 200, 100, 330)
 		gc.setProductionModifiers(iSpain,     100, 100, 100, 180 )
 		gc.setProductionModifiers(iNorse,     150, 100, 100, 225 )
-		gc.setProductionModifiers(iVenecia,   150, 100, 100, 225 )
+		gc.setProductionModifiers(iVenecia,   150, 100, 100, 275 )
 		gc.setProductionModifiers(iKiev,      150, 100, 100, 225 )
 		gc.setProductionModifiers(iHungary,   150, 100, 100, 225 )
 		gc.setProductionModifiers(iGermany,   150, 100, 100, 180 )
