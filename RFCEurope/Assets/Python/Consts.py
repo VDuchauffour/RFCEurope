@@ -435,7 +435,7 @@ tCoreAreasBR = (
 (64,43),   #Austria
 (99,27),   #Turks
 (67,71),   #Sweden
-(53,54),   #Netherlands
+(51,54),   #Netherlands
 (58,29)	   #Pope
 )
 
