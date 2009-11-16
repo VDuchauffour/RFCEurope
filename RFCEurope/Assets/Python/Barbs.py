@@ -147,7 +147,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iAxeman, 1 + iHandicap*2, iGameTurn,10,0,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iSpearman, 1 + iHandicap*2, iGameTurn,15,0,utils.outerInvasion,1)
 		if (iGameTurn >= con.i800AD and iGameTurn <= con.i1000AD):
-			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
 
 		#Longobards in Italy
 
@@ -277,7 +277,7 @@ class Barbs:
 		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lRhodes, "Rhodes", iGameTurn, 1, con.iArcher, 1) #Start with Orthodoxy and a Harbor?
 		self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, con.iArcher, 2)
-		self.foundCity(iBarbarian, lEdinburgh, "Edinburgh", iGameTurn, 1, con.iArcher, 2)
+		self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent, lDublin, "Dubh Linn", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent2, lTonsberg, "Tonsberg", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iBarbarian, lRiga, "Riga", iGameTurn, 1, con.iCrossbowman, 2)
