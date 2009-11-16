@@ -70,6 +70,7 @@ class StoredData:
                                     #------------Plague
                                     'lPlagueCountdown': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #total players + barbarians
                                     'lGenericPlagueDates': [-1, -1, -1, -1, -1],
+									'bBadPlague':False,
                                      #------------Victories
                                     'lGoals': [[-1, -1, -1],
                                                [-1, -1, -1],
