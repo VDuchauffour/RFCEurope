@@ -22488,44 +22488,47 @@ void CvPlayer::processCivNames()
 		if (iMaster != -1) {
 			switch (iMaster)
 			{
-			case FRANKIA:
+			case BYZANTIUM:
 				setCivDescription(civDynamicNames[getID()][10]);
 				break;
+			case FRANKIA:
+				setCivDescription(civDynamicNames[getID()][11]);
+				break;
 			case ARABIA:
-				setCivDescription(civDynamicNames[getID()][11]);
-				break;
-			case CORDOBA:
-				setCivDescription(civDynamicNames[getID()][11]);
-				break;
-			case SPAIN:
 				setCivDescription(civDynamicNames[getID()][12]);
 				break;
+			case CORDOBA:
+				setCivDescription(civDynamicNames[getID()][12]);
+				break;
+			case SPAIN:
+				setCivDescription(civDynamicNames[getID()][13]);
+				break;
 			case NORSE:
-				setCivDescription(civDynamicNames[getID()][13]);
-				break;
-			case SWEDEN:
-				setCivDescription(civDynamicNames[getID()][13]);
-				break;
-			case VENECIA:
 				setCivDescription(civDynamicNames[getID()][14]);
 				break;
+			case SWEDEN:
+				setCivDescription(civDynamicNames[getID()][14]);
+				break;
+			case VENECIA:
+				setCivDescription(civDynamicNames[getID()][15]);
+				break;
 			case KIEV:
-				setCivDescription(civDynamicNames[getID()][15]);
-				break;
-			case MOSCOW:
-				setCivDescription(civDynamicNames[getID()][15]);
-				break;
-			case GERMANY:
 				setCivDescription(civDynamicNames[getID()][16]);
 				break;
-			case ENGLAND:
+			case MOSCOW:
+				setCivDescription(civDynamicNames[getID()][16]);
+				break;
+			case GERMANY:
 				setCivDescription(civDynamicNames[getID()][17]);
 				break;
-			case AUSTRIA:
+			case ENGLAND:
 				setCivDescription(civDynamicNames[getID()][18]);
 				break;
-			case TURKEY:
+			case AUSTRIA:
 				setCivDescription(civDynamicNames[getID()][19]);
+				break;
+			case TURKEY:
+				setCivDescription(civDynamicNames[getID()][20]);
 				break;
 			default:
 				setCivDescription(civDynamicNames[getID()][21]);
