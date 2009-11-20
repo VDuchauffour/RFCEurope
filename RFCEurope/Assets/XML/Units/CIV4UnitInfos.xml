@@ -871,15 +871,19 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_MALE</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_EUROPEAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_FEMALE</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_FEMALE_EUROPEAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
-					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_CHILD</EarlyArtDefineTag>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_CHILD_EUROPEAN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_SETTLER_CHILD_EUROPEAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -1121,8 +1125,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKER</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_WORKERMODERN</LateArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_WORKER_EUROPEAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -3241,8 +3244,16 @@
 				<iMeleeWaveSize>3</iMeleeWaveSize>
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
-					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ARCHER</EarlyArtDefineTag>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ARCHER_GERMAN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ARCHER_GERMAN_2</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ARCHER_GERMAN_3</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -3638,7 +3649,7 @@
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_PAVISE_CROSSBOWMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -5210,8 +5221,16 @@
 				<iMeleeWaveSize>3</iMeleeWaveSize>
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
-					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN</EarlyArtDefineTag>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_GERMAN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_GERMAN_2</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_GERMAN_3</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -5615,7 +5634,15 @@
 				<iMeleeWaveSize>3</iMeleeWaveSize>
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
-					<iRequired>3</iRequired>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_SWORDSMAN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_SWORDSMAN</EarlyArtDefineTag>
+				</UnitMeshGroup>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_SWORDSMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
@@ -6992,7 +7019,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ARQUEBUSIER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ARQUEBUSIER_GERMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
@@ -8346,7 +8373,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_HORSE_SCOUT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_HORSEMAN_GERMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -10309,7 +10336,7 @@
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ARABIA_GHAZI</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MAMLUK</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
