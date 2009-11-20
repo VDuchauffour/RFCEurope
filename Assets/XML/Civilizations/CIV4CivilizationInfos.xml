@@ -472,7 +472,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_ROYAL_PURPLE_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BYZANTIUM</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_BYZANTINE</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -1019,7 +1019,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GENOA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -1267,7 +1267,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_BROWN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_HUNGARY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -1378,7 +1378,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_KIEV</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_RUSSIAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -1472,7 +1472,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_VERYDARK_RED</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MOSCOW</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_RUSSIAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -1566,7 +1566,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NORSE</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_NORSE</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -1977,7 +1977,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_CYAN_AND_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SWEDEN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_NORSE</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -2081,7 +2081,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_TURKEY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_OTTOMAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -2187,7 +2187,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_VENETIAN_RED_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_VENECIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
@@ -2311,7 +2311,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_OFF_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PAPAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
