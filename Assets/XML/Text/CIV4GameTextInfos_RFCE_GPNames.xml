@@ -294,13 +294,13 @@
 		<Russian>Theophanes</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_FRANCOIS_RALELAIS</Tag>
-		<English>Francois Ralelais</English>
-		<French>Francois Ralelais</French>
-		<German>Francois Ralelais</German>
-		<Italian>Francois Ralelais</Italian>
-		<Spanish>Francois Ralelais</Spanish>
-		<Russian>Francois Ralelais</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_FRANCOIS_RABELAIS</Tag>
+		<English>Francois Rabelais</English>
+		<French>Francois Rabelais</French>
+		<German>Francois Rabelais</German>
+		<Italian>Francois Rabelais</Italian>
+		<Spanish>Francois Rabelais</Spanish>
+		<Russian>Francois Rabelais</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_OMAR_KHAYYAM</Tag>
@@ -393,13 +393,13 @@
 		<Russian>Hieronimus Bosch</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ANREI_RUBLEV</Tag>
-		<English>Anrei Rublev</English>
-		<French>Anrei Rublev</French>
-		<German>Anrei Rublev</German>
-		<Italian>Anrei Rublev</Italian>
-		<Spanish>Anrei Rublev</Spanish>
-		<Russian>Anrei Rublev</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_ANDREI_RUBLEV</Tag>
+		<English>Andrei Rublev</English>
+		<French>Andrei Rublev</French>
+		<German>Andrei Rublev</German>
+		<Italian>Andrei Rublev</Italian>
+		<Spanish>Andrei Rublev</Spanish>
+		<Russian>Andrei Rublev</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MICHAELANGELO</Tag>
@@ -690,13 +690,13 @@
 		<Russian>Johannes Kepler</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_GUNTENBERG</Tag>
-		<English>Johannes Guntenberg</English>
-		<French>Johannes Guntenberg</French>
-		<German>Johannes Guntenberg</German>
-		<Italian>Johannes Guntenberg</Italian>
-		<Spanish>Johannes Guntenberg</Spanish>
-		<Russian>Johannes Guntenberg</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_GUTTENBERG</Tag>
+		<English>Johannes Guttenberg</English>
+		<French>Johannes Guttenberg</French>
+		<German>Johannes Guttenberg</German>
+		<Italian>Johannes Guttenberg</Italian>
+		<Spanish>Johannes Guttenberg</Spanish>
+		<Russian>Johannes Guttenberg</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NICOLAUS_COPERNICUS</Tag>
@@ -924,13 +924,13 @@
 		<Russian>Oktay Sananoglu</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_CHRITOPHER_POLHEM</Tag>
-		<English>Chritopher Polhem</English>
-		<French>Chritopher Polhem</French>
-		<German>Chritopher Polhem</German>
-		<Italian>Chritopher Polhem</Italian>
-		<Spanish>Chritopher Polhem</Spanish>
-		<Russian>Chritopher Polhem</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_CHRISTOPHER_POLHEM</Tag>
+		<English>Christopher Polhem</English>
+		<French>Christopher Polhem</French>
+		<German>Christopher Polhem</German>
+		<Italian>Christopher Polhem</Italian>
+		<Spanish>Christopher Polhem</Spanish>
+		<Russian>Christopher Polhem</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHAN_DE_WITT</Tag>
@@ -1518,22 +1518,22 @@
 		<Russian>Cornelius Drebbel</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PHILIP_THE_GOOD</Tag>
-		<English>Philip the Good</English>
-		<French>Philip the Good</French>
-		<German>Philip the Good</German>
-		<Italian>Philip the Good</Italian>
-		<Spanish>Philip the Good</Spanish>
-		<Russian>Philip the Good</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_BALDWIN_OF_JERUSALEM</Tag>
+		<English>Baldwin of Jerusalem</English>
+		<French>Baldwin of Jerusalem</French>
+		<German>Baldwin of Jerusalem</German>
+		<Italian>Baldwin of Jerusalem</Italian>
+		<Spanish>Baldwin of Jerusalem</Spanish>
+		<Russian>Baldwin of jerusalem</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_BASIL_II</Tag>
-		<English>Basil Ii</English>
-		<French>Basil Ii</French>
-		<German>Basil Ii</German>
-		<Italian>Basil Ii</Italian>
-		<Spanish>Basil Ii</Spanish>
-		<Russian>Philip the Good</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_BELISARIUS</Tag>
+		<English>Belisarius</English>
+		<French>Belisarius</French>
+		<German>Belisarius</German>
+		<Italian>Belisarius</Italian>
+		<Spanish>Belisarius</Spanish>
+		<Russian>Belisarius</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHARLES_MARTEL</Tag>
@@ -1617,13 +1617,13 @@
 		<Russian>Janos Hunyadi</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_FREDERICK_BARBAROSSA</Tag>
-		<English>Frederick Barbarossa</English>
-		<French>Frederick Barbarossa</French>
-		<German>Frederick Barbarossa</German>
-		<Italian>Frederick Barbarossa</Italian>
-		<Spanish>Frederick Barbarossa</Spanish>
-		<Russian>Frederick Barbarossa</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_GEORGE_FREDERICK_WALDECK</Tag>
+		<English>George Frederick Waldeck</English>
+		<French>George Frederick Waldeck</French>
+		<German>George Frederick Waldeck</German>
+		<Italian>George Frederick Waldeck</Italian>
+		<Spanish>George Frederick Waldeck</Spanish>
+		<Russian>George Frederick Waldeck</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_STEFAN_BATORY</Tag>
@@ -1635,13 +1635,13 @@
 		<Russian>Stefan Batory</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_IVAN_IV_GROZNYJ</Tag>
-		<English>Ivan Iv Groznyj</English>
-		<French>Ivan Iv Groznyj</French>
-		<German>Ivan Iv Groznyj</German>
-		<Italian>Ivan Iv Groznyj</Italian>
-		<Spanish>Ivan Iv Groznyj</Spanish>
-		<Russian>Ivan Iv Groznyj</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_THE_BOLD</Tag>
+		<English>Vladimir the Bold</English>
+		<French>Vladimir the Bold</French>
+		<German>Vladimir the Bold</German>
+		<Italian>Vladimir the Bold</Italian>
+		<Spanish>Vladimir the Bold</Spanish>
+		<Russian>Vladimir the Bold</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREA_DORIA</Tag>
@@ -1662,13 +1662,13 @@
 		<Russian>Edward Longshanks</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_AFONSO_HENRIQUES</Tag>
-		<English>Afonso Henriques</English>
-		<French>Afonso Henriques</French>
-		<German>Afonso Henriques</German>
-		<Italian>Afonso Henriques</Italian>
-		<Spanish>Afonso Henriques</Spanish>
-		<Russian>Afonso Henriques</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_AFONSO_DE_ALBUQUERQUE</Tag>
+		<English>Afonso de Albuquerque</English>
+		<French>Afonso de Albuquerque</French>
+		<German>Afonso de Albuquerque</German>
+		<Italian>Afonso de Albuquerque</Italian>
+		<Spanish>Afonso de Albuquerque</Spanish>
+		<Russian>Afonso de Albuquerque</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EUGENE_VON_SAVOYEN</Tag>
@@ -1689,13 +1689,13 @@
 		<Russian>Orhan Ghazi</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_GUSTAVUS_ADOLPHUS</Tag>
-		<English>Gustavus Adolphus</English>
-		<French>Gustavus Adolphus</French>
-		<German>Gustavus Adolphus</German>
-		<Italian>Gustavus Adolphus</Italian>
-		<Spanish>Gustavus Adolphus</Spanish>
-		<Russian>Gustavus Adolphus</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_RICHARD_COEUR_DE_LION</Tag>
+		<English>Richard Coeur de Lion</English>
+		<French>Richard Coeur de Lion</French>
+		<German>Richard Coeur de Lion</German>
+		<Italian>Richard Coeur de Lion</Italian>
+		<Spanish>Richard Coeur de Lion</Spanish>
+		<Russian>Richard Coeur de Lion</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MICHIEL_DE_RUYTER</Tag>
@@ -1743,13 +1743,13 @@
 		<Russian>Amir Ibn Al As</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PETER_II</Tag>
-		<English>Peter Ii</English>
-		<French>Peter Ii</French>
-		<German>Peter Ii</German>
-		<Italian>Peter Ii</Italian>
-		<Spanish>Peter Ii</Spanish>
-		<Russian>Peter Ii</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_MAURICE_OF_NASSAU</Tag>
+		<English>Maurice of Nassau</English>
+		<French>Maurice of Nassau</French>
+		<German>Maurice of Nassau</German>
+		<Italian>Maurice of Nassau</Italian>
+		<Spanish>Maurice of Nassau/Spanish>
+		<Russian>Maurice of Nassau</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YUSUF_IBN_TASHFIN</Tag>
@@ -1770,13 +1770,13 @@
 		<Russian>Gonzalo De Cordoba</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_HARALD_HARDRADA</Tag>
-		<English>Harald Hardrada</English>
-		<French>Harald Hardrada</French>
-		<German>Harald Hardrada</German>
-		<Italian>Harald Hardrada</Italian>
-		<Spanish>Harald Hardrada</Spanish>
-		<Russian>Harald Hardrada</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_SWEYN_FORKBEARD</Tag>
+		<English>Sweyn Forkbeard</English>
+		<French>Sweyn Forkbeard</French>
+		<German>Sweyn Forkbeard</German>
+		<Italian>Sweyn Forkbeard</Italian>
+		<Spanish>Sweyn Forkbeard</Spanish>
+		<Russian>Sweyn Forkbeard</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SEBASTIANO_VENIER</Tag>
@@ -1815,13 +1815,13 @@
 		<Russian>Gebhard Von Blucher</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JAN_III_SOBIESKI</Tag>
-		<English>Jan Iii Sobieski</English>
-		<French>Jan Iii Sobieski</French>
-		<German>Jan Iii Sobieski</German>
-		<Italian>Jan Iii Sobieski</Italian>
-		<Spanish>Jan Iii Sobieski</Spanish>
-		<Russian>Jan Iii Sobieski</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_SELIM_I</Tag>
+		<English>Selim I</English>
+		<French>Selim I</French>
+		<German>Selim I</German>
+		<Italian>Selim I</Italian>
+		<Spanish>Selim I</Spanish>
+		<Russian>Selim I</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_KUTUZOV</Tag>
@@ -2139,13 +2139,13 @@
 		<Russian>Alonso De Contreras</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SVEN_FORKBEARD</Tag>
-		<English>Sven Forkbeard</English>
-		<French>Sven Forkbeard</French>
-		<German>Sven Forkbeard</German>
-		<Italian>Sven Forkbeard</Italian>
-		<Spanish>Sven Forkbeard</Spanish>
-		<Russian>Sven Forkbeard</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_BRITA_TOTT</Tag>
+		<English>Brita Tott</English>
+		<French>Brita Tott</French>
+		<German>Brita Tott</German>
+		<Italian>Brita Tott</Italian>
+		<Spanish>Brita Tott</Spanish>
+		<Russian>Brita Tott</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GIACOMO_CASANOVA</Tag>
