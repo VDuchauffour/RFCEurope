@@ -256,7 +256,7 @@
 			<bAddsFreshWater>0</bAddsFreshWater>
 			<bImpassable>0</bImpassable>
 			<!-- Rhye -->
-			<bNoCity>1</bNoCity>
+			<bNoCity>0</bNoCity>
 			<bNoImprovement>0</bNoImprovement>
 			<bVisibleAlways>0</bVisibleAlways>
 			<bNukeImmune>0</bNukeImmune>
