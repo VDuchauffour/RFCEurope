@@ -4210,6 +4210,12 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					iTempValue += (kBuilding.getCommerceChange(iI) * 4);
 					iTempValue += (kBuilding.getObsoleteSafeCommerceChange(iI) * 4);
 					iTempValue *= 100 + kBuilding.getCommerceModifier(iI);
+					//BCM:Added 27.9.09
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iTempValue *= 100 + kBuilding.getBonusCommerceModifier(iJ,iI);
+					}
+					//BCM:End
 					iTempValue /= 100;
 					
 					if ((CommerceTypes)iI == COMMERCE_CULTURE)
@@ -4230,6 +4236,13 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					
 					// add value for a commerce modifier
 					int iCommerceModifier = kBuilding.getCommerceModifier(iI);
+					//BCM:Added 27.9.09	
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iCommerceModifier += kBuilding.getBonusCommerceModifier(iJ,iI);
+					}
+					//BCM:End					
+					
 					int iBaseCommerceRate = getBaseCommerceRate((CommerceTypes) iI);
 					int iCommerceMultiplierValue = iCommerceModifier * iBaseCommerceRate;
 					if (((CommerceTypes) iI) == COMMERCE_CULTURE && iCommerceModifier != 0)
@@ -4447,6 +4460,12 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				if (iFocusFlags & BUILDINGFOCUS_GOLD)
 				{
 					iTempValue = ((kBuilding.getCommerceModifier(COMMERCE_GOLD) * getBaseCommerceRate(COMMERCE_GOLD)) / 40);
+					//BCM:Added 27.9.09
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iTempValue += ((kBuilding.getBonusCommerceModifier(iJ,COMMERCE_GOLD) * getBaseCommerceRate(COMMERCE_GOLD)) / 40);
+					}
+					//BCM:End
 					
 					if (iTempValue != 0)
 					{
@@ -4476,6 +4495,12 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				if (iFocusFlags & BUILDINGFOCUS_RESEARCH)
 				{
 					iTempValue = ((kBuilding.getCommerceModifier(COMMERCE_RESEARCH) * getBaseCommerceRate(COMMERCE_RESEARCH)) / 40);
+					//BCM:Added 27.9.09					
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iTempValue += ((kBuilding.getBonusCommerceModifier(iJ,COMMERCE_RESEARCH) * getBaseCommerceRate(COMMERCE_RESEARCH)) / 40);
+					}
+					//BCM:End
 					
 					if (iTempValue != 0)
 					{
@@ -4532,16 +4557,36 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 						iValue += iTempValue;
 					}
 					
+//BCM:Added 27.9.09
+					
 					iValue += ((kBuilding.getCommerceModifier(COMMERCE_CULTURE) * getBaseCommerceRate(COMMERCE_CULTURE)) / 15);
+					
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iValue += ((kBuilding.getBonusCommerceModifier(iJ,COMMERCE_CULTURE) * getBaseCommerceRate(COMMERCE_CULTURE)) / 15);
+					}
+					
 					if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
 					{
 						iValue += ((kBuilding.getCommerceModifier(COMMERCE_ESPIONAGE) * getBaseCommerceRate(COMMERCE_ESPIONAGE)) / 15);
+						
+						for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+						{
+							iValue += ((kBuilding.getBonusCommerceModifier(iJ,COMMERCE_ESPIONAGE) * getBaseCommerceRate(COMMERCE_ESPIONAGE)) / 15);
+						}
 					}
+					
 				}
 				
                 if (iFocusFlags & BUILDINGFOCUS_BIGCULTURE)
 				{
 					iTempValue = (kBuilding.getCommerceModifier(COMMERCE_CULTURE) / 5);
+					
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iTempValue += (kBuilding.getBonusCommerceModifier(iJ,COMMERCE_CULTURE) / 5);
+					}
+					
 					if (iTempValue != 0)
 					{
 						if (MAX_INT == aiCommerceRank[COMMERCE_CULTURE])
@@ -4565,6 +4610,11 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				{
 					iTempValue = ((kBuilding.getCommerceModifier(COMMERCE_ESPIONAGE) * getBaseCommerceRate(COMMERCE_ESPIONAGE)) / 60);
 					
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iTempValue += ((kBuilding.getBonusCommerceModifier(iJ,COMMERCE_ESPIONAGE) * getBaseCommerceRate(COMMERCE_ESPIONAGE)) / 60);
+					}
+					
 					if (iTempValue != 0)
 					{
 						if (MAX_INT == aiCommerceRank[COMMERCE_ESPIONAGE])
@@ -4584,9 +4634,17 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					iTempValue = (kBuilding.getCommerceChange(COMMERCE_ESPIONAGE) * 3);
 					iTempValue += (kBuilding.getObsoleteSafeCommerceChange(COMMERCE_ESPIONAGE) * 3);
 					iTempValue *= 100 + kBuilding.getCommerceModifier(COMMERCE_ESPIONAGE);
+					
+					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+					{
+						iTempValue *= 100 + kBuilding.getBonusCommerceModifier(iJ,COMMERCE_ESPIONAGE);
+					}
+					
 					iValue += iTempValue / 100;
 				}
 			}
+			
+//BCM:End
 			
 			if ((iThreshold > 0) && (iPass == 0))
 			{

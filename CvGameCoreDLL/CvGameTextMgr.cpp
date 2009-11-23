@@ -7382,6 +7382,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 		setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusYieldModifierArray(iI), true);
 	}
 
+	//BCM: Added 21.9.09
+	for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	{
+		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
+		setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusCommerceModifierArray(iI), true);
+	}
+	//BCM: End
+
 	for (iI = 0; iI < GC.getNumReligionInfos(); ++iI)
 	{
 		if (kBuilding.getReligionChange(iI) > 0)
@@ -11936,6 +11944,15 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		iBaseCommerceRate += 100 * iFreeCityCommerce;
 	}
 
+	//BCM:Added 26.9.09
+	int iBonusCommerce = city.getBonusCommerceRateModifier(eCommerceType);
+	if (0 != iBonusCommerce)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
+		szBuffer.append(NEWLINE);
+		iBaseCommerceRate += iBaseCommerceRate * iBonusCommerce/100;
+	}
+	//BCM:End
 
 	FAssertMsg(city.getBaseCommerceRateTimes100(eCommerceType) == iBaseCommerceRate, "Base Commerce rate does not agree with actual value");
 	

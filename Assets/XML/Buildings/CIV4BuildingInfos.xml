@@ -168,6 +168,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -356,6 +357,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -540,6 +542,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -727,6 +730,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -900,6 +904,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -1073,6 +1078,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -1264,6 +1270,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -1463,6 +1470,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -1662,6 +1670,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -1866,6 +1875,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -2047,6 +2057,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -2225,6 +2236,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -2398,6 +2410,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -2571,6 +2584,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -2747,6 +2761,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -2923,6 +2938,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -3103,6 +3119,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -3288,6 +3305,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -3472,6 +3490,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -3640,6 +3659,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -3807,6 +3827,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -3992,6 +4013,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -4178,6 +4200,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -4349,6 +4372,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -4518,6 +4542,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -4690,6 +4715,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -4866,6 +4892,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -5044,6 +5071,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -5222,6 +5250,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -5424,6 +5453,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -5621,6 +5651,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -5799,6 +5830,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -5972,6 +6004,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -6152,6 +6185,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -6329,6 +6363,7 @@
       <BuildingClassNeededs/>
       <SpecialistYieldChanges/>
       <BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
       <ImprovementFreeSpecialists/>
       <Flavors>
         <Flavor>
@@ -6512,6 +6547,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -6682,6 +6718,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -6857,6 +6894,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -7024,6 +7062,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -7213,6 +7252,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -7397,6 +7437,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -7590,6 +7631,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -7764,6 +7806,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -7952,6 +7995,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -8136,6 +8180,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -8324,6 +8369,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -8480,24 +8526,7 @@
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
 			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
-			<BonusHealthChanges>
-				<BonusHealthChange>
-					<BonusType>BONUS_SALT</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
-					<BonusType>BONUS_COW</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
-					<BonusType>BONUS_DEER</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
-					<BonusType>BONUS_PIG</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-			</BonusHealthChanges>
+			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
@@ -8508,6 +8537,38 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_COW</BonusType>
+					<CommerceModifiers>
+						<iCommerce>5</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_PIG</BonusType>
+					<CommerceModifiers>
+						<iCommerce>5</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_FISH</BonusType>
+					<CommerceModifiers>
+						<iCommerce>5</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_SALT</BonusType>
+					<CommerceModifiers>
+						<iCommerce>5</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+				<BonusCommerceModifier>
+					<BonusType>BONUS_DEER</BonusType>
+					<CommerceModifiers>
+						<iCommerce>5</iCommerce>
+					</CommerceModifiers>
+				</BonusCommerceModifier>
+			</BonusCommerceModifiers>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -8705,6 +8766,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			 </BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -8931,6 +8993,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -9157,6 +9220,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -9378,6 +9442,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -9545,6 +9610,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -9714,6 +9780,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -9888,6 +9955,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -10057,6 +10125,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -10236,6 +10305,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -10419,6 +10489,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -10602,6 +10673,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -10773,6 +10845,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -10956,6 +11029,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -11143,6 +11217,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -11317,6 +11392,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -11490,6 +11566,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -11704,6 +11781,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -11888,6 +11966,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -12064,6 +12143,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -12244,6 +12324,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -12415,6 +12496,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -12582,6 +12664,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -12754,6 +12837,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -12934,6 +13018,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -13114,6 +13199,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -13307,6 +13393,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -13502,6 +13589,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -13682,6 +13770,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -13860,6 +13949,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -14053,6 +14143,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -14233,6 +14324,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -14413,6 +14505,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -14604,6 +14697,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -14780,6 +14874,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -14967,6 +15062,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -15154,6 +15250,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -15347,6 +15444,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -15527,6 +15625,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -15718,6 +15817,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -15898,6 +15998,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -16083,6 +16184,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -16276,6 +16378,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -16458,6 +16561,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -16646,6 +16750,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -16824,6 +16929,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -17017,6 +17123,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -17197,6 +17304,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -17388,6 +17496,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -17568,6 +17677,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -17753,6 +17863,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -17946,6 +18057,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -18128,6 +18240,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -18316,6 +18429,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -18494,6 +18608,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -18687,6 +18802,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -18879,6 +18995,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -19063,6 +19180,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -19249,6 +19367,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -19434,6 +19553,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -19622,6 +19742,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -19809,6 +19930,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -19999,6 +20121,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -20175,6 +20298,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -20373,6 +20497,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -20558,6 +20683,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -20745,6 +20871,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -20925,6 +21052,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -21113,6 +21241,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -21303,6 +21432,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -21496,6 +21626,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -21675,6 +21806,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -21867,6 +21999,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -22051,6 +22184,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -22232,6 +22366,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -22416,6 +22551,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -22598,6 +22734,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -22786,6 +22923,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -22969,6 +23107,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -23152,6 +23291,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -23335,6 +23475,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -23518,6 +23659,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -23701,6 +23843,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -23884,6 +24027,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -24067,6 +24211,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -24241,6 +24386,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -24440,6 +24586,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -24630,6 +24777,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -24819,6 +24967,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -25008,6 +25157,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -25191,6 +25341,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -25390,6 +25541,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -25593,6 +25745,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -25777,6 +25930,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -25958,6 +26112,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -26146,6 +26301,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -26337,6 +26493,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -26522,6 +26679,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -26709,6 +26867,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -26902,6 +27061,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -27086,6 +27246,7 @@
       </BuildingClassNeededs>
       <SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -27287,6 +27448,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 			  <Flavor>
@@ -27455,6 +27617,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists>
 			  <ImprovementFreeSpecialist>
 			    <ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
@@ -27646,6 +27809,7 @@
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 			  <Flavor>
@@ -27830,6 +27994,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>
@@ -28009,6 +28174,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -28202,6 +28368,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
@@ -28369,6 +28536,7 @@
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
+			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors/>
 			<HotKey/>

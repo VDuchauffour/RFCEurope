@@ -1734,6 +1734,13 @@ public:
 	int getBonusYieldModifier(int i, int j) const;				// Exposed to Python
 	int* getBonusYieldModifierArray(int i) const;
 
+	//BCM: Added 21.9.09
+	//Sedna17: This looks a little different
+	int getBonusCommerceModifier(int i, int j) const;				// Exposed to Python
+	int* getBonusCommerceModifierArray(int i) const;
+	//BCM: End
+	
+
 	// Other
 
 	const CvArtInfoBuilding* getArtInfo() const;
@@ -1920,6 +1927,10 @@ protected:
 
 	int** m_ppaiSpecialistYieldChange;
 	int** m_ppaiBonusYieldModifier;
+	//BCM: Added 21.9.09
+	int** m_ppaiBonusCommerceModifier;
+	//BCM: End
+	
 
 };
 
