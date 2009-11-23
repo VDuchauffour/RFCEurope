@@ -40,6 +40,9 @@ CvCity::CvCity()
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiPowerYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiBonusYieldRateModifier = new int[NUM_YIELD_TYPES];
+	//BCM:Added 26.9.09
+		m_aiBonusCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
+	//BCM:End
 	m_aiTradeYield = new int[NUM_YIELD_TYPES];
 	m_aiCorporationYield = new int[NUM_YIELD_TYPES];
 	m_aiExtraSpecialistYield = new int[NUM_YIELD_TYPES];
@@ -124,6 +127,9 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiPowerYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusYieldRateModifier);
+	//BCM:Added 26.9.09
+	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
+	//BCM:End
 	SAFE_DELETE_ARRAY(m_aiTradeYield);
 	SAFE_DELETE_ARRAY(m_aiCorporationYield);
 	SAFE_DELETE_ARRAY(m_aiExtraSpecialistYield);
@@ -530,6 +536,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiCorporationCommerce[iI] = 0;
 		m_aiCommerceRateModifier[iI] = 0;
 		m_aiCommerceHappinessPer[iI] = 0;
+		//BCM:Added 26.9.09
+		m_aiBonusCommerceRateModifier[iI] = 0;
+		//BCM:End	
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -3661,7 +3670,22 @@ int CvCity::getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) cons
 
 	return iModifier;
 }
+//BCM:Added 26.9.09
+int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus) const
+{
+	int iModifier;
+	int iI;
 
+	iModifier = 0;
+
+	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		iModifier += getNumActiveBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes) iI).getBonusCommerceModifier(eBonus, eIndex);
+	}
+
+	return iModifier;
+}
+//BCM:End
 
 void CvCity::processBonus(BonusTypes eBonus, int iChange)
 {
@@ -3720,6 +3744,12 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 	{
 		changeBonusYieldRateModifier(((YieldTypes)iI), (getBonusYieldRateModifier(((YieldTypes)iI), eBonus) * iChange));
 	}
+	//BCM:Added 26.9.09
+	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	{
+		changeBonusCommerceRateModifier(((CommerceTypes)iI), (getBonusCommerceRateModifier(((CommerceTypes)iI), eBonus) * iChange));
+	}
+	//BCM:End
 }
 
 
@@ -3875,6 +3905,13 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				{
 					changeBonusYieldRateModifier(((YieldTypes)iJ), (GC.getBuildingInfo(eBuilding).getBonusYieldModifier(iI, iJ) * iChange));
 				}
+				//BCM:Added 26.9.09
+				for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+				{
+					changeBonusCommerceRateModifier(((CommerceTypes)iJ), (GC.getBuildingInfo(eBuilding).getBonusCommerceModifier(iI, iJ) * iChange));
+				}
+				//BCM:End
+				
 			}
 		}
 
@@ -7955,6 +7992,41 @@ void CvCity::changeBonusYieldRateModifier(YieldTypes eIndex, int iChange)
 	}
 }
 
+//BCM:Added 26.9.09
+int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex) const												
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	return m_aiBonusCommerceRateModifier[eIndex];
+}
+
+void CvCity::changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+
+	if (iChange != 0)
+	{
+		m_aiBonusCommerceRateModifier[eIndex] = (m_aiBonusCommerceRateModifier[eIndex] + iChange);
+		FAssert(getCommerceRate(eIndex) >= 0);
+
+		GET_PLAYER(getOwnerINLINE()).invalidateCommerceRankCache(eIndex);
+
+		if (eIndex == YIELD_COMMERCE)
+		{
+			updateCommerce();
+		}
+
+		AI_setAssignWorkDirty(true);
+
+		if (getTeam() == GC.getGameINLINE().getActiveTeam())
+		{
+			setInfoDirty(true);
+		}
+	}
+}
+//BCM:End
+
 
 int CvCity::getTradeYield(YieldTypes eIndex) const
 {
@@ -8219,11 +8291,12 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	return iBaseCommerceRate;
 }
 
-
+//BCM:Added 26.9.09
 int CvCity::getTotalCommerceRateModifier(CommerceTypes eIndex) const
 {
-	return std::max(0, (getCommerceRateModifier(eIndex) + GET_PLAYER(getOwnerINLINE()).getCommerceRateModifier(eIndex) + ((isCapital()) ? GET_PLAYER(getOwnerINLINE()).getCapitalCommerceRateModifier(eIndex) : 0) + 100));
+	return std::max(0, (getCommerceRateModifier(eIndex) + getBonusCommerceRateModifier(eIndex) + GET_PLAYER(getOwnerINLINE()).getCommerceRateModifier(eIndex) + ((isCapital()) ? GET_PLAYER(getOwnerINLINE()).getCapitalCommerceRateModifier(eIndex) : 0) + 100));
 }
+//BCM:End
 
 
 void CvCity::updateCommerce(CommerceTypes eIndex)
@@ -12219,6 +12292,9 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_YIELD_TYPES, m_aiYieldRateModifier);
 	pStream->Read(NUM_YIELD_TYPES, m_aiPowerYieldRateModifier);
 	pStream->Read(NUM_YIELD_TYPES, m_aiBonusYieldRateModifier);
+	//BCM:Added 26.9.09
+	pStream->Read(NUM_COMMERCE_TYPES, m_aiBonusCommerceRateModifier);
+	//BCM:End
 	pStream->Read(NUM_YIELD_TYPES, m_aiTradeYield);
 	pStream->Read(NUM_YIELD_TYPES, m_aiCorporationYield);
 	pStream->Read(NUM_YIELD_TYPES, m_aiExtraSpecialistYield);
@@ -12457,6 +12533,9 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(NUM_YIELD_TYPES, m_aiYieldRateModifier);
 	pStream->Write(NUM_YIELD_TYPES, m_aiPowerYieldRateModifier);
 	pStream->Write(NUM_YIELD_TYPES, m_aiBonusYieldRateModifier);
+	//BCM:Added 26.9.09	
+	pStream->Write(NUM_COMMERCE_TYPES, m_aiBonusCommerceRateModifier);
+	//BCM:End
 	pStream->Write(NUM_YIELD_TYPES, m_aiTradeYield);
 	pStream->Write(NUM_YIELD_TYPES, m_aiCorporationYield);
 	pStream->Write(NUM_YIELD_TYPES, m_aiExtraSpecialistYield);

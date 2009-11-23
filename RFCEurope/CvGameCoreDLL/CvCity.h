@@ -140,6 +140,9 @@ public:
 	int getBonusHappiness(BonusTypes eBonus) const;															// Exposed to Python - getBonusHappiness
 	int getBonusPower(BonusTypes eBonus, bool bDirty) const;										// Exposed to Python 
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;	// Exposed to Python 
+	//BCM: Added 26.9.09
+	int getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus) const;	// Exposed to Python 
+	//BCM: End
 
 	void processBonus(BonusTypes eBonus, int iChange);
 	void processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolete = false);
@@ -595,6 +598,11 @@ public:
 
 	int getBonusYieldRateModifier(YieldTypes eIndex) const;											// Exposed to Python 
 	void changeBonusYieldRateModifier(YieldTypes eIndex, int iChange);
+
+	//BCM: Added 26.9.09
+	int getBonusCommerceRateModifier(CommerceTypes eIndex) const;											// Exposed to Python 
+	void changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange);
+	//BCM: End
 
 	int getTradeYield(YieldTypes eIndex) const;																	// Exposed to Python
 	int totalTradeModifier(CvCity* pOtherCity = NULL) const;																							// Exposed to Python
@@ -1060,6 +1068,9 @@ protected:
 	int* m_aiYieldRateModifier;
 	int* m_aiPowerYieldRateModifier;
 	int* m_aiBonusYieldRateModifier;
+	//BCM: Added 26.9.09	
+	int* m_aiBonusCommerceRateModifier;
+	//BCM: End
 	int* m_aiTradeYield;
 	int* m_aiCorporationYield;
 	int* m_aiExtraSpecialistYield;

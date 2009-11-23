@@ -6563,6 +6563,9 @@ m_pbCommerceChangeOriginalOwner(NULL),
 m_pbBuildingClassNeededInCity(NULL),
 m_ppaiSpecialistYieldChange(NULL),
 m_ppaiBonusYieldModifier(NULL)
+//BCM: Added 21.9.09
+m_ppaiBonusCommerceModifier(NULL)
+//BCM: End
 {
 }
 
@@ -6629,6 +6632,17 @@ CvBuildingInfo::~CvBuildingInfo()
 		}
 		SAFE_DELETE_ARRAY(m_ppaiBonusYieldModifier);
 	}
+	//BCM: Added 21.9.09
+	if (m_ppaiBonusCommerceModifier != NULL)
+	{
+		for(int i=0;i<GC.getNumBonusInfos();i++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier[i]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier);
+	}
+	//BCM: End
+	
 }
 
 int CvBuildingInfo::getBuildingClassType() const	
@@ -7577,6 +7591,25 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 	return m_ppaiBonusYieldModifier[i];
 }
 
+//BCM: Added 21.9.09
+int CvBuildingInfo::getBonusCommerceModifier(int i, int j) const
+{
+	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
+	FAssertMsg(j > -1, "Index out of bounds");
+	return m_ppaiBonusCommerceModifier ? m_ppaiBonusCommerceModifier[i][j] : -1;
+}
+
+int* CvBuildingInfo::getBonusCommerceModifierArray(int i) const
+{
+	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_ppaiBonusCommerceModifier[i];
+}
+//BCM: End
+
+
 const TCHAR* CvBuildingInfo::getButton() const
 {
 	const CvArtInfoBuilding * pBuildingArtInfo;
@@ -7933,6 +7966,25 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 		m_ppaiBonusYieldModifier[i]  = new int[NUM_YIELD_TYPES];
 		stream->Read(NUM_YIELD_TYPES, m_ppaiBonusYieldModifier[i]);
 	}
+	
+	//BCM: Added 21.9.09
+	if (m_ppaiBonusCommerceModifier != NULL)
+	{
+		for(i=0;i<GC.getNumBonusInfos();i++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier[i]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier);
+	}
+
+	m_ppaiBonusCommerceModifier = new int*[GC.getNumBonusInfos()];
+	for(i=0;i<GC.getNumBonusInfos();i++)
+	{
+		m_ppaiBonusCommerceModifier[i]  = new int[NUM_COMMERCE_TYPES];
+		stream->Read(NUM_COMMERCE_TYPES, m_ppaiBonusCommerceModifier[i]);
+	}
+	//BCM: End
+	
 }
 
 //
@@ -8116,6 +8168,13 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	{
 		stream->Write(NUM_YIELD_TYPES, m_ppaiBonusYieldModifier[i]);
 	}
+	//BCM: Added 21.9.09
+	for(i=0;i<GC.getNumBonusInfos();i++)
+	{
+		stream->Write(NUM_COMMERCE_TYPES, m_ppaiBonusCommerceModifier[i]);
+	}
+	//BCM: End
+	
 }
 
 //
@@ -8681,6 +8740,49 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		// set the current xml node to it's parent node
 		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
 	}
+	//BCM: Added 21.9.09
+	pXML->Init2DIntList(&m_ppaiBonusCommerceModifier, GC.getNumBonusInfos(), NUM_COMMERCE_TYPES);
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"BonusCommerceModifiers"))
+	{
+		iNumChildren = gDLL->getXMLIFace()->GetNumChildren(pXML->GetXML());
+
+		if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"BonusCommerceModifier"))
+		{
+			for(j=0;j<iNumChildren;j++)
+			{
+				pXML->GetChildXmlValByName(szTextVal, "BonusType");
+				k = pXML->FindInInfoClass(szTextVal);
+				if (k > -1)
+				{
+					// delete the array since it will be reallocated
+					SAFE_DELETE_ARRAY(m_ppaiBonusCommerceModifier[k]);
+					if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"CommerceModifiers"))
+					{
+						// call the function that sets the commerce change variable
+						pXML->SetCommerce(&m_ppaiBonusCommerceModifier[k]);
+						gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+					}
+					else
+					{
+						pXML->InitList(&m_ppaiBonusCommerceModifier[k], NUM_COMMERCE_TYPES);
+					}
+
+				}
+
+				if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML()))
+				{
+					break;
+				}
+			}
+
+			// set the current xml node to it's parent node
+			gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+		}
+
+		// set the current xml node to it's parent node
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+	//BCM: End
 
 	pXML->SetVariableListTagPair(&m_piFlavorValue, "Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 	pXML->SetVariableListTagPair(&m_piImprovementFreeSpecialist, "ImprovementFreeSpecialists", sizeof(GC.getImprovementInfo((ImprovementTypes)0)), GC.getNumImprovementInfos());
