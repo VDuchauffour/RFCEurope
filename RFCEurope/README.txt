@@ -57,7 +57,7 @@ Civilopedia Texts for many civs
 Update and Bugfix - Swedish 3rd UHV
 Fixed buttons so they all work well in low-graphics mode.
 Religion info added to manual and a little more work therein.
-
+New Reference/Settler/War maps to reflect new map.
 
 
 
