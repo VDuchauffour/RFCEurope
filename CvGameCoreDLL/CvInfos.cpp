@@ -6562,7 +6562,7 @@ m_pbCommerceFlexible(NULL),
 m_pbCommerceChangeOriginalOwner(NULL),
 m_pbBuildingClassNeededInCity(NULL),
 m_ppaiSpecialistYieldChange(NULL),
-m_ppaiBonusYieldModifier(NULL)
+m_ppaiBonusYieldModifier(NULL),
 //BCM: Added 21.9.09
 m_ppaiBonusCommerceModifier(NULL)
 //BCM: End
