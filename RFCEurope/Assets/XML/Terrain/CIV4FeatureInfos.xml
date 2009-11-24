@@ -595,7 +595,7 @@
 			<HillsYieldChange/>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iHealthPercent>25</iHealthPercent>
+			<iHealthPercent>0</iHealthPercent>
 			<iDefense>50</iDefense>
 			<iAppearance>0</iAppearance>
 			<iDisappearance>0</iDisappearance>

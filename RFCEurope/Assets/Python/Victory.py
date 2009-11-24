@@ -1080,7 +1080,7 @@ class Victory:
 				if (self.getGoal(iNorse,2) == -1):
 					ioldrazed = self.getNorseRazed()
 					print("Norse Cities Razed =",ioldrazed)
-					if (ioldrazed >= 10):
+					if (ioldrazed >= 9):
 						self.setGoal(iNorse,2,1)
 					else:
 						self.setNorseRazed(ioldrazed+1)
