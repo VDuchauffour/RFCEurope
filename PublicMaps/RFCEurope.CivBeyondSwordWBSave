@@ -7790,7 +7790,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -9374,7 +9373,6 @@ EndPlot
 BeginPlot
 	x=24,y=28
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=1,
@@ -9416,7 +9414,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -13515,7 +13512,6 @@ EndPlot
 BeginPlot
 	x=34,y=33
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -14246,7 +14242,6 @@ EndPlot
 BeginPlot
 	x=36,y=16
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -16728,7 +16723,6 @@ EndPlot
 BeginPlot
 	x=41,y=62
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -17985,7 +17979,6 @@ EndPlot
 BeginPlot
 	x=44,y=47
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,2,
@@ -19698,7 +19691,6 @@ EndPlot
 BeginPlot
 	x=48,y=42
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,2,21,
@@ -19982,7 +19974,6 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,21,
@@ -23563,7 +23554,6 @@ EndPlot
 BeginPlot
 	x=56,y=63
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -23932,7 +23922,6 @@ EndPlot
 BeginPlot
 	x=57,y=47
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -24500,7 +24489,6 @@ EndPlot
 BeginPlot
 	x=58,y=65
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -26328,7 +26316,6 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -26375,7 +26362,6 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -26823,7 +26809,6 @@ EndPlot
 BeginPlot
 	x=63,y=62
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -26870,7 +26855,6 @@ EndPlot
 BeginPlot
 	x=63,y=69
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -28749,7 +28733,6 @@ EndPlot
 BeginPlot
 	x=67,y=72
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -30351,7 +30334,6 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,21,
@@ -31428,7 +31410,6 @@ EndPlot
 BeginPlot
 	x=73,y=36
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=21,
@@ -31634,7 +31615,6 @@ EndPlot
 BeginPlot
 	x=73,y=68
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -32786,7 +32766,6 @@ EndPlot
 BeginPlot
 	x=76,y=28
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -33279,7 +33258,6 @@ EndPlot
 BeginPlot
 	x=77,y=32
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,
@@ -33338,7 +33316,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_COPPER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -34196,7 +34173,6 @@ BeginPlot
 	x=79,y=26
 	BonusType=BONUS_IRON
 	ImprovementType=IMPROVEMENT_MINE
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -34498,7 +34474,6 @@ EndPlot
 BeginPlot
 	x=79,y=71
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -38545,7 +38520,6 @@ EndPlot
 BeginPlot
 	x=88,y=15
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -40312,7 +40286,6 @@ EndPlot
 BeginPlot
 	x=91,y=64
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -40643,7 +40616,6 @@ EndPlot
 BeginPlot
 	x=92,y=44
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -41804,7 +41776,6 @@ EndPlot
 BeginPlot
 	x=94,y=59
 	BonusType=BONUS_IRON
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
