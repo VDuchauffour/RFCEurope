@@ -477,7 +477,7 @@ class CvRFCEventHandler:
                         self.sta.onProjectBuilt(city.getOwner(), iProjectType)
 
         def onImprovementDestroyed(self, argsList):
-                pass
+				pass
                 #iImprovement, iOwner, iX, iY = argsList
                 #if (iOwner < con.iNumPlayers):
                 #        self.sta.onImprovementDestroyed(iOwner)           

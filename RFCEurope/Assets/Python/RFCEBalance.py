@@ -322,7 +322,10 @@ class RFCEBalance:
 		#gc.setTechPreferenceAI(iByzantium,1,200)
 		#gc.setTechPreferenceAI(iFrankia,1,200)
 		gc.setTechPreferenceAI(iBulgaria,con.iBronzeCasting,200)				
+		gc.setTechPreferenceAI(iGermany,con.iPrintingPress,200)
+		gc.setTechPreferenceAI(iEngland,con.iPrintingPress,150)
 
+		
 		#3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
 		# + means they will like each other - they will hate each other.
 		# from Civ1 towards Civ2
