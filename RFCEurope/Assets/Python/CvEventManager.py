@@ -65,7 +65,7 @@ class CvEventManager:
 		self.__LOG_BUILDING = 0
 		self.__LOG_COMBAT = 0
 		self.__LOG_CONTACT = 0
-		self.__LOG_IMPROVEMENT =0
+		self.__LOG_IMPROVEMENT =1
 		self.__LOG_CITYLOST = 0
 		self.__LOG_CITYBUILDING = 0
 		self.__LOG_TECH = 0

@@ -238,9 +238,9 @@ class Barbs:
 		#Mongols, the return! (aka Tamerlane)
 		if (iGameTurn >=con.i1359AD and iGameTurn <=con.i1431AD):
 			#Eastern Europe
-			self.spawnUnits( iBarbarian, (99,47),(85,57), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (85,47),(99,57), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
 			#Anatolia
-			self.spawnUnits( iBarbarian, (99,17),(87,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (87,17),(99,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
 			
 		
 
@@ -401,3 +401,12 @@ class Barbs:
                                         unit = killPlot.getUnit(0)	# 0 instead of i because killing units changes the indices
                                         unit.kill(False, iBarbarian)
 
+	def onImprovementDestroyed(self,iX,iY):
+		print ("Barb improvement destroyed")
+		iTurn = gc.getGame().getGameTurn()
+		if (iTurn > con.i1500AD):
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iMusketman,2,1,1,0,utils.outerInvasion,1)
+		elif (iTurn > con.i1101AD):
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iGuisarme,2,1,1,0,utils.outerInvasion,1)
+		else:
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iSpearman,2,1,1,0,utils.outerInvasion,1)
