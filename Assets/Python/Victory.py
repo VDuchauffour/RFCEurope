@@ -149,7 +149,7 @@ tBulgariaControl = ( 66, 23, 82, 32 )
 tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
 tSpainControl = (( 20, 24, 35, 40 ),(36, 30, 41, 35)) # Iberia
 tSpainControl2 = ((15,14,48,23),(49,6,52,18),(49,22,50,29),(54,16,58,19),(59,19,64,27),(51,25,58,33),(49,43,58,39) ) # Africa x2, Islands (Corsica + Sardines), Sicily, Italy x3
-tNorseSettle = ( (35, 46, 46, 50 ), (39, 52, 45, 67 ), (35, 52, 38, 56 ), (31, 57, 37, 62 ), ( 0, 69, 4, 72 ), ( 54, 16, 58, 19)  ) # France, Britain, Britain, Ireland, Iseland, Sicily
+tNorseSettle = ( (35, 46, 46, 50 ), (39, 52, 45, 67 ), (35, 52, 38, 56 ), (31, 57, 37, 62 ), ( 0, 69, 4, 72 ), ( 54, 16, 58, 19)  ) # North France, Britain, Britain, Ireland, Iseland, Sicily
 #tVenecianControl = ( (59, 32, 61, 36), (61, 28, 64, 32), ( 65, 17, 67, 29 ), ( 67, 23, 81, 25 ), ( 67, 14, 73, 22 ), ( 88, 11, 91, 13 ), ( 71, 10, 75, 10 ), ( 78, 11, 79, 12 ) ) # 3x Dalmatian Coast, 2x Main Land Greece, Cyprus, Crete, Rhodes
 tVenecianControl = ( (56, 33, 60, 36), (61, 29, 62, 34), (63, 25, 65, 30), (66, 21, 67, 27), ( 67, 23, 81, 25 ), ( 67, 14, 73, 22 ), ( 88, 11, 91, 13 ), ( 71, 10, 75, 10 ), ( 78, 11, 79, 12 ) ) # 4x Dalmatian Coast, 2x Main Land Greece, Cyprus, Crete, Rhodes
 tKievControl = (83, 32, 99, 39 )
@@ -165,7 +165,7 @@ tPortugalControl = ((1,15,8,39),(7,0,27,24),(4,0,6,7)) # Islands, Africa x 2
 tNormanControl = ((39,47,46,50), (35,45,38,47), (36,38,41,44), (43,45,46,46)) # Bits of France
 tAustrianControl = ( 58, 33, 70, 38 )
 tTurkishControl = (( 77, 14, 99, 26 ), ( 65, 14, 80, 29 ), (93, 0, 99, 17), (76, 0, 92, 4), ( 60, 33, 63, 41 ) ) # Constantinople Area and Anatolia, Balkans and Peloponnesian, Levant, Egypt, Vienna
-tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 64, 77, 72 ) ) # Sweden, Finland
+tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ) ) # Sweden, Finland/Estland
 
 class Victory:
 
