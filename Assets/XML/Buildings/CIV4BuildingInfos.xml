@@ -22257,7 +22257,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-			<bAllowIrrigation>0</bAllowIrrigation>г
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Brandenburg Gate -->
 			<BuildingClass>BUILDINGCLASS_BRANDENBURG_GATE</BuildingClass>

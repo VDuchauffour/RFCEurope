@@ -157,6 +157,7 @@ class CvRFCEventHandler:
                 eventManager.addEventHandler("unitPromoted",self.onUnitPromoted) #Mercenaries
                 eventManager.addEventHandler("techAcquired",self.onTechAcquired) #Mercenaries, Rhye #Stability
                 #eventManager.addEventHandler("improvementDestroyed",self.onImprovementDestroyed) #Stability
+                eventManager.addEventHandler("unitPillage",self.onUnitPillage) #Stability
                 eventManager.addEventHandler("religionSpread",self.onReligionSpread) #Stability
                 eventManager.addEventHandler("firstContact",self.onFirstContact)
                 eventManager.addEventHandler("corporationFounded",self.onCorporationFounded) #Stability
@@ -475,13 +476,31 @@ class CvRFCEventHandler:
                 self.vic.onProjectBuilt(city.getOwner(), iProjectType)
                 if (city.getOwner() < con.iNumPlayers):
                         self.sta.onProjectBuilt(city.getOwner(), iProjectType)
+	def onUnitPillage(self, argsList):
+		print ("Improvement Destroyed")
+		pUnit, iImprovement, iRoute, iOwner = argsList
+		iPlotX = pUnit.getX()
+		iPlotY = pUnit.getY()
+		pPlot = CyMap().plot(iPlotX, iPlotY)
+		if (pPlot.countTotalCulture() == 0 ):
+			print("No culture, so bard/indy satisfied")
+			if (iImprovement >= con.iImprovementCottage and iImprovement <= con.iImprovementTown):
+				print ("Improve Type Satisfied")
+				self.barb.onImprovementDestroyed(iPlotX,iPlotY)
 
-        def onImprovementDestroyed(self, argsList):
-				pass
-                #iImprovement, iOwner, iX, iY = argsList
-                #if (iOwner < con.iNumPlayers):
-                #        self.sta.onImprovementDestroyed(iOwner)           
-                
+#	def onImprovementDestroyed(self, argsList):
+#		print ("Improvement Destroyed")
+#		iImprovement, iOwner, iX, iY = argsList
+#		print ("Owner was",iOwner)
+#		if (iOwner < con.iNumPlayers):
+#			self.sta.onImprovementDestroyed(iOwner)
+#		self.barb.onImprovementDestroyed(iX,iY)
+#		if (iOwner >= iNumTotalPlayers or iOwner < 0):
+#			print("Owner Satisfied")
+#			if (iImprovement >= con.iImprovementCottage and iImprovement <= con.iImprovementTown):
+#				print ("Improve Type Satisfied")
+#				self.barb.onImprovementDestroyed(iX,iY)
+
         def onBeginGameTurn(self, argsList):
                 iGameTurn = argsList[0]
 

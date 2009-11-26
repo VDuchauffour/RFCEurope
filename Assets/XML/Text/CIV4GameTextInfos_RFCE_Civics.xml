@@ -42,8 +42,11 @@
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
 		<English>Happiness from military units; culture from specialists</English>
 		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French><German/><Italian/><Spanish/><Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian><Japanese/><Chinese/></TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
+		<English>"We Love the Dictator Day"</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DIVINE_LIMITED_MONARCHY_STRATEGY</Tag>
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
 		<English>Can use gold to rush production</English>
 		<French>Peut utiliser l'Or pour terminer la production</French><German/><Italian/><Spanish/><Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
