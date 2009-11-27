@@ -53,4 +53,12 @@
 		<Italian>Disboscare una [LINK=FEATURE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_FOREST]bosque[\LINK]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_REMOVE_MUD</Tag>
+		<English>Clear [LINK=FEATURE_MUD]Mud[\LINK]</English>
+		<French>Clear [LINK=FEATURE_MUD]Mud[\LINK]</French>
+		<German>Clear [LINK=FEATURE_MUD]Mud[\LINK]</German>
+		<Italian>Clear [LINK=FEATURE_MUD]Mud[\LINK]</Italian>
+		<Spanish>Clear [LINK=FEATURE_MUD]Mud[\LINK]</Spanish>
+	</TEXT>
 		</Civ4GameText>
