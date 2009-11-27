@@ -190,7 +190,7 @@
 		<English>Province of Andalusia</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CORDOBA_PEDIA</Tag>
 		<English>[TAB]In 711 AD, thousands of Muslim Arabs and Berbers landed at Gibraltar to begin a rapid conquest of Spain. The Arabs called the region al-Andalus (from which the modern name "Andalusia" is derived) and brought it under the control of the Umayyad Caliphate. This Arabian dynasty had been the civil and spiritual leaders of Islam for the previous fifty years, but their nepotistic rule caused much unrest in the Muslim world. After the ousting of the Umayyads in Damascus by the Abbasids in 750, Abd ar-Rahman, a grandson of a former caliph and one of the few surviving Umayyad clan, fled to al-Andalus and took over this Muslim salient in Europe. His emirate, centered around Cordoba, was the only one that remained independent from the Abbasid Caliphate. The Abbasids did not have the manpower to re-conquer such a far-flung province and under the rule of the ar-Rahman dynasty, Cordovan Spain became a powerful, centralized state, expanding its territory northward at the expense of Christian kingdoms that had resisted the Muslim invaders. Abd ar-Rahman had Cordoba's Great Mosque built in 785, which survives to this day.
 [TAB]In 929 AD Abd ar-Rahman III declared himself the Caliph of Cordoba. The title Caliph is reserved for the leader of Islam, but there were already two caliphs in the Muslim world. The Abbasid (or Baghdad) caliph, who was Sunni, traced his descent from Abbas, an uncle of the Prophet Muhammad. The Fatimid caliph, who was Shi'i, traced his descent from Fatima, a daughter of the Prophet. The Umayyads were also Arabs of the Sunni sect, but their lineage traced to Uthman, the third caliph who succeeded Muhammad.
@@ -201,7 +201,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABDARRAHMAN_PEDIA</Tag>
 		<English>[H1]Abd-ar-Rahman III[\H1]
 [BOLD]Caliph of Cordoba[\BOLD]

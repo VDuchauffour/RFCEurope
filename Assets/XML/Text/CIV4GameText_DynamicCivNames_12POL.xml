@@ -189,7 +189,7 @@
 		<English>Province of Poland</English>
 		<French/><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_CIV_POLAND_PEDIA</Tag>
 		<English>[TAB]There can be little doubt that, had they been able to overcome their internal divisions, the Poles would have been a dominant power in the Middle Ages. The first institution that can be called a Polish kingdom or nation arose in around 980 AD, when a tribal leader named Mieszko united three major tribes in eastern Europe and converted to Catholicism. The concept of a dynasty had not yet caught on in that part of Europe, though, so successions were often extremely violent and chaotic. After Mieszko's rule, the fortunes of the Polish nation-state depended entirely on the ruthlessness and strength of will of its leader. Some of Mieszko's successors were strong and able to impose their wills on the fractious principalities and tribes of Poland and Pomerania, and thereby defend effectively against foreign, usually German or Bohemian, invasion. Others were not.
 [TAB]In 1226 AD, just over two hundred years after Boleslaw II successfully reunited the Polish kingdom, Poland was deeply divided once again. Baltic tribes menaced the north and the German state of Brandenburg sought greater land and influence in the west. The Polish king, Conrad of Mazovia, decided to import an army to fight off both of these threats in exchange for an indefinite homeland in Poland. The army was the Teutonic Knights. They accepted Conrad's offer and, after arriving in northern Poland, waged several bloody campaigns of conquest against the German and Baltic occupiers. To Conrad's surprise, though, the Knights then decided that they would rather have their own country rather than a dependent homeland inside someone else's kingdom. Conrad had saved the Polish kingdom from outside invasion, only to be invaded from within.
@@ -200,7 +200,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_CASIMIR_PEDIA</Tag>
 		<English>[H1]Casimir III[\H1]
 [BOLD]King of Poland[\BOLD]

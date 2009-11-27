@@ -457,7 +457,7 @@
 		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
 		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
 		<French>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</French> 
@@ -465,7 +465,7 @@
 		<Italian>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</Italian>
 		<Spanish>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
 		<English>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
 		<French>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</French> 
@@ -473,7 +473,7 @@
 		<Italian>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Italian>
 		<Spanish>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIEGE_WORKSHOP_PEDIA</Tag>
 		<English>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</English>
 		<French>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</French>
@@ -481,7 +481,7 @@
 		<Italian>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</Italian>
 		<Spanish>A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
 		<English>A brewery is a dedicated building for the making of beer, though beer can be made in the home, and has been for much of beer's history. A company which makes beer is called either a brewery or a brewing company.
 
@@ -491,7 +491,7 @@ The diversity of size in breweries is matched by the diversity of processes, deg
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUTCHER_PEDIA</Tag>
 		<English>Butchery is a traditional work. Primary butchery consists of selecting carcasses, sides, or quarters from which primal cuts can be produced with the minimum of wastage, separate the primal cuts from the carcasses using the appropriate tools and equipment following company procedures, trim primal cuts and prepare for secondary butchery or sale, and store cut meats hygienically and safely. Secondary butchery involves boning and trimming primal cuts in preparation for sale. Historically, primary and secondary butchery were performed in the same establishment but the advent of methods of preservation and low cost transportation has largely separated them.</English>
 		<French>.</French>
@@ -499,7 +499,7 @@ The diversity of size in breweries is matched by the diversity of processes, deg
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
 		<English>Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.
 
@@ -513,7 +513,7 @@ The original functions of an inn are now usually split among separate establishm
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
 		<English>A manor house or fortified manor-house is a country house, which has historically formed the administrative centre of a manor, the lowest unit of territorial organization in the feudal system. The term is sometimes applied to relatively small country houses which belonged to gentry families, as well as to grand stately homes, particularly as a technical term for minor late medieval fortified country houses intended more for show than for defence.
 
@@ -527,7 +527,7 @@ By the beginning of the 16th century, manor-houses as well as small castles bega
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA_PEDIA</Tag>
 		<English>A noria is a machine for lifting water into a small aqueduct, either for the purpose of irrigation or, in at least one known instance, to feed seawater into a saltern.
 
@@ -554,7 +554,7 @@ Muslim engineers used norias to discharge water into aqueducts which carried the
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
 		<English>A wharf is a landing place or pier where ships may tie up and load or unload.
 
@@ -566,7 +566,7 @@ Smaller and more modern wharves are sometimes built on flotation devices (pontoo
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUNGEON_PEDIA</Tag>
 		<English>A dungeon is a room or cell in which prisoners are kept, especially underground. Dungeons are generally associated with medieval castles, though their association with torture probably belongs more to the Renaissance period. The image of dark, damp dungeons as the scene of lengthy incarceration and unspeakable cruelty is a powerful one in popular culture.
 
@@ -578,7 +578,7 @@ In French the term donjon still refers to a "keep", and the term oubliette is a 
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
 		<English>A "madrassa" is an Arabic institute of higher learning, usually religious in nature. The earliest madrasses were formed in Islamic mosques, where scholars gathered to study and debate religious and secular issues of the day. Over time students would come to study with the most learned scholars; the most popular teachers often had to construct separate buildings to hold their growing student population.[NEWLINE][NEWLINE]At the madrassas the students would learn to read and write and study religious doctrine, history and law. Some madrassas also taught logic, world history, foreign language, mathematics, art and science. Since state-run colleges and universities did not appear until later in history, the madrassas were critical centers of learning in many early Arabic cities.</English>
 		<French>.</French>
@@ -586,7 +586,7 @@ In French the term donjon still refers to a "keep", and the term oubliette is a 
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
 		<English>Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
 		<French>.</French>
@@ -594,7 +594,7 @@ In French the term donjon still refers to a "keep", and the term oubliette is a 
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
 		<English>The Venetian Arsenal is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.
 The Byzantine-style establishment may have existed as early as the 8th century, though the present structure is usually said to have been begun in 1104, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina'a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.
@@ -605,7 +605,7 @@ Venice developed methods of mass-producing warships in the Arsenal, including th
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Tag>
 		<English>Infirmary is a place for the care of the infirm, sick, or injured. In the Middle Ages, infirmaries were often attached to monasteries, with care provided by monks and nuns. Additionally, they could also serve as almhouses or refuges for pilgrims.</English>
 		<French>.</French>
@@ -613,7 +613,7 @@ Venice developed methods of mass-producing warships in the Arsenal, including th
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_RELIQUARY_PEDIA</Tag>
 		<English>A sahn, in Islamic architecture, is a courtyard. As per the traditional Islamic architectural style, almost every mosque has a sahn, which is surrounded by an arcade from all sides. In Persian architecture, the sahn usually contains a howz, a symmetrical pool, where ablutions are performed. Some also contain drinking fountains.</English>
 		<French>.</French>
@@ -621,7 +621,7 @@ Venice developed methods of mass-producing warships in the Arsenal, including th
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
 		<English>Minarets are distinctive architectural features of Islamic mosques. Minarets are generally tall spires with onion-shaped crowns, usually either free standing or much taller than any surrounding support structure. As well as providing a visual cue to a Muslim community, the main function of the minaret is to provide a vantage point from which the muezzin can call out the adhan, calling the faithful to prayer.</English>
 		<French>.</French>
@@ -629,7 +629,7 @@ Venice developed methods of mass-producing warships in the Arsenal, including th
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL_PEDIA</Tag>
 		<English>The House of Wisdom was a library and translation institute in Abbassid-era Baghdad. It was a key institution in the Translation Movement and considered to have been a major intellectual center of the Islamic Golden Age. The House of Wisdom acted as a society founded by Abbasid caliphs Harun al-Rashid and his son al-Ma'mun who reigned from 813-833 CE. Based in Baghdad from the 9th to 13th centuries, many of the most learned Muslim scholars were part of this excellent research and educational institute.
 The term house of wisdom is a direct translation of Persian Sassanians' designation for a library. It was modeled on that of the Sassanians, had the purpose of translating books from Persian to Arabic, and also of preservation of translated books. The House was an unrivalled centre for the study of humanities and for sciences, including mathematics, astronomy, medicine, chemistry, zoology and geography. Drawing on Persian, Indian and Greek texts - including those of Pythagoras, Plato, Aristotle, Hippocrates, Euclid, Plotinus, Galen, Sushruta, Charaka, Aryabhata, Socrates and Brahmagupta - the scholars accumulated a great collection of world knowledge, and built on it through their own discoveries. The great scholars of the House of Wisdom included Al-Khawarizmi, the "father" of algebra, which takes its name from his book Kitab al-Jabr.</English>
@@ -638,7 +638,7 @@ The term house of wisdom is a direct translation of Persian Sassanians' designat
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
 		<English>"Great Mosque" refers to a large mosque, resembling a Christian cathedral in size and significance. Examples of such mosques include the Grand Mosque of Damascus, the Great Mosque of Algiers or the Sultan Ahmed Mosque of Istanbul.</English>
 		<French>.</French>
@@ -646,7 +646,7 @@ The term house of wisdom is a direct translation of Persian Sassanians' designat
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL_PEDIA</Tag>
 		<English>A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
 		<French>.</French>
@@ -654,7 +654,7 @@ The term house of wisdom is a direct translation of Persian Sassanians' designat
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL_PEDIA</Tag>
 		<English>A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
 		<French>.</French>
@@ -662,7 +662,7 @@ The term house of wisdom is a direct translation of Persian Sassanians' designat
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL_PEDIA</Tag>
 		<English>A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
 		<French>.</French>
@@ -670,7 +670,7 @@ The term house of wisdom is a direct translation of Persian Sassanians' designat
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM_PEDIA</Tag>
 		<English>Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
 When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
@@ -679,7 +679,7 @@ When monastic libraries and scriptoria arose in the early 6th century, they defi
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM_PEDIA</Tag>
 		<English>Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
 When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
@@ -688,7 +688,7 @@ When monastic libraries and scriptoria arose in the early 6th century, they defi
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL_PEDIA</Tag>
 		<English>A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
 		<French>.</French>
@@ -696,7 +696,7 @@ When monastic libraries and scriptoria arose in the early 6th century, they defi
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL_PEDIA</Tag>
 		<English>A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
 		<French>.</French>
@@ -704,7 +704,7 @@ When monastic libraries and scriptoria arose in the early 6th century, they defi
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL_PEDIA</Tag>
 		<English>A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
 		<French>.</French>
@@ -712,7 +712,7 @@ When monastic libraries and scriptoria arose in the early 6th century, they defi
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL_PEDIA</Tag>
 		<English>The idea for widespread schools dates back to Charlemagne, a king of the Franks. He knew that the Frankish empire would be weak without an education. Because a Frankish King started it, it quickly spread throughout northern and central France. Over time, the schools were fused with the church and became cathedral schools. The first cathedral schools taught future clergy, as they were the only people in Frankish society that were required to be literate. Many people wanted to join the clergy because a career in the church was considered a very high rank. Those who were trained in a cathedral school had a good chance of becoming part of the church.
 Cathedral schools were mostly oriented around the academic welfare of the noble's children. The subjects taught at Cathedral schools ranged from literature to mathematics. These topics were called the Seven Liberal Arts: grammar, astronomy, rhetoric, logic, arithmetic, geometry and music.</English>
@@ -721,7 +721,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL_PEDIA</Tag>
 		<English>The idea for widespread schools dates back to Charlemagne, a king of the Franks. He knew that the Frankish empire would be weak without an education. Because a Frankish King started it, it quickly spread throughout northern and central France. Over time, the schools were fused with the church and became cathedral schools. The first cathedral schools taught future clergy, as they were the only people in Frankish society that were required to be literate. Many people wanted to join the clergy because a career in the church was considered a very high rank. Those who were trained in a cathedral school had a good chance of becoming part of the church.
 Cathedral schools were mostly oriented around the academic welfare of the noble's children. The subjects taught at Cathedral schools ranged from literature to mathematics. These topics were called the Seven Liberal Arts: grammar, astronomy, rhetoric, logic, arithmetic, geometry and music.</English>
@@ -730,7 +730,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY_PEDIA</Tag>
 		<English>A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
 		<French>.</French>
@@ -738,7 +738,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY_PEDIA</Tag>
 		<English>A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
 		<French>.</French>
@@ -746,7 +746,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY_PEDIA</Tag>
 		<English>A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
 		<French>.</French>
@@ -754,7 +754,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY_PEDIA</Tag>
 		<English>A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
 		<French>.</French>
@@ -762,7 +762,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY_PEDIA</Tag>
 		<English>A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
 		<French>.</French>
@@ -770,7 +770,7 @@ Cathedral schools were mostly oriented around the academic welfare of the noble'
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU_PEDIA</Tag>
 		<English>A château is a manor house or residence of the lord of the manor or a country house of nobility or gentry, with or without fortifications, originally-and still most frequently-in French-speaking regions. Where clarification is needed, a fortified château (that is, a castle) is called a château fort, such as Château fort de Roquetaillade. Care should be taken when translating the word château into English. It is not used in the same way as "castle", and most châteaux are described in English as "palaces" or "country houses" rather than "castles". For example, the Château de Versailles is so called because it was located in the countryside when it was built, but it does not bear any resemblance to a castle, so it is usually known in English as the Palace of Versailles.
 
@@ -786,7 +786,7 @@ In the city of Paris, the original châteaux that were the Louvre (fortified) and
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Tag>
 		<English>A warehouse is a commercial building for storage of goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs, etc. They are usually large plain buildings in industrial areas of cities and towns. They usually have loading docks to load and unload goods from trucks. Sometimes warehouses load and unload goods directly from railways, airports, or seaports. They often have cranes and forklifts for moving goods, which are usually placed on ISO standard pallets loaded into pallet racks.
 
@@ -796,7 +796,7 @@ Stored goods can include any raw materials, components, or finished goods associ
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOLL_HOUSE_PEDIA</Tag>
 		<English>A tollhouse or toll house is a building with accommodation for a toll collector, beside a tollgate on a toll road or canal. Many tollhouses were built by turnpike trusts in England, Wales and Scotland during the 18th and early 19th centuries. Those built in the early 1800s often had a distinctive bay front to give the pikeman a clear view of the road and to provide a display area for the tollboard. In 1840, according to the Turnpike Returns in Parliamentary Papers, there were over 5000 tollhouses operating in England. These were sold off in the 1880s when the turnpikes were closed. Many were demolished but several hundred have survived as domestic houses, with distinctive features of the old tollhouse still visible.
 
