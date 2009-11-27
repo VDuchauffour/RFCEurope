@@ -1023,6 +1023,10 @@
 					<BuildType>BUILD_REMOVE_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_REMOVE_MUD</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<ReligionSpreads/>
 			<CorporationSpreads/>
