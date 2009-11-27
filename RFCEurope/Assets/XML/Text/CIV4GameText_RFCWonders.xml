@@ -502,7 +502,7 @@
 		<Tag>TXT_KEY_BUILDING_BROTHERS_AT_WAR</Tag>
 		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith.</English>
 		<French>[ICON_BULLET]Pas de m&#233;contement pour les guerres contre les fr&#232;res de foi.</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER_PEDIA</Tag>
 		<English>[TAB]The Bel&#233;m Tower is a fortified tower located in the Bel&#233;m district of Lisbon, Portugal.
 [TAB]The Bel&#233;m Tower was built in the early sixteenth century in the Portuguese late-Gothic style, the Manueline, to commemorate Vasco da Gama's expedition. This defensive, yet elegant construction has become one of the symbols of the city, a memorial to Portuguese power as it was during the Age of Discovery. In 1983, it was classified, together with the nearby Mosteiro dos Jer&#243;nimos (Jer&#243;nimos Monastery), as a UNESCO World Heritage Site.
@@ -516,7 +516,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE_PEDIA</Tag>
 		<English>[TAB]Brandenburg Gate is a former city gate and one of the main symbols of Berlin and Germany. It is located west of the city center at the intersection of Unter den Linden and Ebertstra&#223;e, immediately west of the Pariser Platz. It is the only remaining gate of a series through which one formerly entered Berlin. One block to the north stands the Reichstag. The gate is the monumental entry to Unter den Linden, the renowned boulevard of linden trees which formerly led directly to the city palace of the Prussian monarchs. It was commissioned by King Frederick William II of Prussia as a sign of peace and built by Karl Gotthard Langhans from 1788 to 1791. The Brandenburg Gate was restored from 2000 to 2002 by the Stiftung Denkmalschutz Berlin (Berlin Monument Conservation Foundation). Today, it is considered one of Europe's most famous landmarks.</English>
 		<French>.</French>
@@ -524,7 +524,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_PEDIA</Tag>
 		<English>[TAB]El Escorial is a historical residence of the king of Spain. It is one of the Spanish royal sites and functions as a monastery, royal palace, museum, and school. It is located about 45 kilometres (28 miles) northwest of the Spanish capital, Madrid, in the town of San Lorenzo de El Escorial. El Escorial comprises two architectural complexes of great historical and cultural significance: El Real Monasterio de El Escorial itself and La Granjilla de La Fresneda, a royal hunting lodge and monastic retreat about five kilometres away. These sites have a dual nature; that is to say, during the sixteenth and seventeenth centuries, they were places in which the temporal power of the Spanish monarchy and the ecclesiastical predominance of the Roman Catholic religion in Spain found a common architectural manifestation. El Escorial was, at once, a monastery and a Spanish royal palace. Originally a property of the Hieronymite monks, it is now an monastery of the Order of Saint Augustine.
 
@@ -536,7 +536,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE_PEDIA</Tag>
 		<English>[TAB]Kalmar Castle, located near the site of Kalmar's medieval harbor, has played a crucial part in Swedish history since its initial construction as a fortified tower in the 12th century. King Magnus Ladulås ordered the construction of a fortress around the tower in the 1280s, and was further expanded in the centuries that followed.
 
@@ -548,7 +548,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_MEZQUITA_PEDIA</Tag>
 		<English>[TAB]The Mezquita (Spanish for "mosque") of Córdoba or Cordova is a Roman Catholic cathedral originally built as a mosque in the Andalusian city of Córdoba, Spain. It is regarded as perhaps the most accomplished monument of the Umayyad dynasty of Córdoba. After the Spanish Reconquista, it was turned into a church, with a Gothic cathedral inserted into the center of the large Moorish building. Today the entire building is used to house the Cathedral of the diocese of Córdoba in Spain.
 
@@ -572,7 +572,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY_PEDIA</Tag>
 		<English>[TAB]Cluny Abbey is a Benedictine monastery in Cluny, department of Saône-et-Loire, France.
 
@@ -584,7 +584,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES_PEDIA</Tag>
 		<English>[TAB]The Palais des Papes is a historical palace in Avignon, southern France, one of the largest and most important medieval Gothic buildings in Europe.
 
@@ -606,7 +606,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO_PEDIA</Tag>
 		<English>[TAB]San Marco Basilica , the cathedral church of Venice, is the most famous of the city's churches and one of the best known examples of Byzantine architecture. It lies on Piazza San Marco adjacent and connected to the Doge's Palace. Originally it was the "chapel" of the Venetian rulers, and not the city's cathedral. Since 1807 it has been the seat of the Patriarch of Venice, archbishop of the Roman Catholic Archdiocese of Venice. For its opulent design, gilded Byzantine mosaics, and its status as a symbol of Venetian wealth and power, from the 11th century on the building was known by the nickname Chiesa d'Oro (Church of gold).
 
@@ -616,7 +616,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL_PEDIA</Tag>
 		<English>[TAB]The Saint Basil's Basilica is a multi-tented church on the Red Square in Moscow that also features distinctive onion domes. It is very often mistaken for the Church of the Savior on Blood, located in St. Petersburg. In the West, it is frequently confused with the Kremlin which overlooks it. Arguably the most recognized building in Russia, it is an international symbol for the nation and for the city of Moscow.
 
@@ -634,7 +634,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOPHIA_KIEV_PEDIA</Tag>
 		<English>[TAB]Saint Sophia Cathedral in Kiev is an outstanding architectural monument of Kievan Rus'. Today, it is one of the city's best known landmarks and the first Ukrainian patrimony to be inscribed on the World Heritage List.
 
@@ -656,7 +656,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA_PEDIA</Tag>
 		<English>[TAB]Magna Carta, also called Magna Carta Libertatum (the Great Charter of Freedoms), is an English legal charter, originally issued in the year 1215. It was written in Latin and is known by its Latin name. The usual English translation of Magna Carta is Great Charter.
 
@@ -674,7 +674,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPLE_MOUNT_PEDIA</Tag>
 		<English>[TAB]The Temple Mount, also known as Mount Moriah and by Muslims as the Noble Sanctuary, is a religious site in the Old City of Jerusalem. Due to its importance for Judaism and Islam it is one of the most contested religious sites in the world.
 
@@ -688,7 +688,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_APOSTOLIC_PALACE</Tag>
 		<English>[TAB]St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:1]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</English>
 		<French>.</French>
@@ -920,7 +920,7 @@
     <Italian>.</Italian>
     <Spanish>.</Spanish>
   </TEXT>
-  <TEXT> <!--merijn_v1 Text-->
+  <TEXT>
 	<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE_PEDIA</Tag>
 	<English>In 1519, Ferdinand Magellan sailed from Spain with the intention of reaching the spice-rich Malouccas Islands of Indonesia by sailing west, instead of east. Although natives in the Philippines killed Magellan, his expedition went on to prove conclusively that the world was round. More importantly, it proved that the Americas were indeed a New World. Magellan's expedition was one of the great sea voyages of history, and it inspired further expeditions by other explorers. The discoveries made along the way reduced the dangers to all the sea expeditions that followed.</English>
     <French>.</French>
@@ -972,7 +972,7 @@
     <Italian>.</Italian>
     <Spanish>.</Spanish>
   </TEXT>
-  <TEXT> <!--merijn_v1 Text-->
+  <TEXT>
 	<Tag>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Tag>
 	<English>Marco Polo (1254-1324) was a Venetian trader and explorer who, together with his father Niccolo and his uncle Maffeo, was one of the first Westerners to travel the Silk Road to China (which he called Cathay) and visited the Great Khan of the Mongol Empire, Kublai Khan (grandson of Genghis Khan). His travels are written down in Il Milione ("The Million" or The Travels of Marco Polo).
 Although the Polos were by no means the first Europeans to reach China overland, thanks to Marco's book their trip was the first to be widely known, and the best-documented until then. Marco Polo's description of the Far East and its riches inspired Christopher Columbus's decision to try to reach those lands by a western route. A heavily annotated copy of Polo's book was among the belongings of Columbus.</English>
@@ -989,7 +989,7 @@ Although the Polos were by no means the first Europeans to reach China overland,
     <Italian>[TAB]La maggior parte delle opere teatrali di William Shakespeare andarono in scena per la prima volta al Globe Theatre di Londra. Il teatro offriva alla gente un diversivo alle tribolazioni della vita quotidiana, consentendo di assistere a commedie, tragedie e successi rappresentati sul palcoscenico. Teatri simili, come la Comedie Fran&#231;aise a Parigi, o La Scala a Milano, svolgevano un ruolo dello stesso genere, attirando con le loro rappresentazioni spettatori da tutte le aree circostanti. Nonostante il Globe Theatre sia ormai da tempo andato distrutto in un incendio, le opere di Shakespeare vengono tutt'oggi rappresentate in un nuovo teatro che porta il suo nome e in quelli di tutto il mondo.</Italian>
     <Spanish>[TAB]La mayor&#237;a de las obras de William Shakespeare fueron representadas por vez primera en el escenario del Globe Theatre de Londres durante el siglo XVII. Los teatros ofrec&#237;an a la gente entretenimiento en su rutina diaria, pues les permit&#237;an disfrutar de las comedias, tragedias y triunfos representados en escena. Otros teatros similares, como la Com&#233;die Fran&#231;aise de Par&#237;s y La Scala de Mil&#225;n, desempe&#241;aban papeles similares ofreciendo diversi&#243;n a los habitantes de sus ciudades. Aunque el Globe Theatre original se incendi&#243;, las obras de Shakespeare a&#250;n se representan en un nuevo teatro bautizado con su nombre, y en otros teatros de todo el mundo.</Spanish>
   </TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP_PEDIA</Tag>
 		<English>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</English>
 		<French>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</French>
@@ -998,7 +998,7 @@ Although the Polos were by no means the first Europeans to reach China overland,
 		<Spanish>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</Spanish>
 		<Russian>[TAB]Leonardo di ser Piero da Vinci was an Italian polymath, being a scientist, mathematician, engineer, inventor, anatomist, painter, sculptor, architect, botanist, musician and writer. Born as the illegitimate son of a notary, Piero da Vinci, and a peasant woman, Caterina, at Vinci in the region of Florence, Leonardo was educated in the studio of the renowned Florentine painter, Verrocchio. Much of his earlier working life was spent in the service of Ludovico il Moro in Milan. He later worked in Rome, Bologna and Venice and spent his last years in France, at the home awarded him by King Fran&#231;ois I.[NEWLINE][NEWLINE][TAB]Leonardo has often been described as the archetype of the "Renaissance man", a man whose seemingly infinite curiosity was equalled only by his powers of invention. He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived.[NEWLINE][NEWLINE][TAB]As an engineer, Leonardo's ideas were vastly ahead of his time. He conceptualised a helicopter, a tank, concentrated solar power, a calculator, the double hull and outlined a rudimentary theory of plate tectonics. Relatively few of his designs were constructed or were even feasible during his lifetime, but some of his smaller inventions, such as an automated bobbin winder and a machine for testing the tensile strength of wire, entered the world of manufacturing unheralded. As a scientist, he greatly advanced the state of knowledge in the fields of anatomy, civil engineering, optics, and hydrodynamics.</Russian>
 		<Japanese/><Chinese/></TEXT>
-	<TEXT> <!--merijn_v1 Text-->
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK_PEDIA</Tag>
 		<English>[TAB]The Dome of the Rock is located at the visual center of an ancient man-made platform known as the Temple Mount, which Muslims refer to as the "Noble Sanctuary". The platform, greatly enlarged under the rule of Herod the Great, is the site of the Second Jewish Temple which was destroyed during the Roman Siege of Jerusalem in 70 CE. In 637 CE, Jerusalem was conquered by the Rashidun Caliphate army during the Islamic invasion of the Byzantine Empire.
 
