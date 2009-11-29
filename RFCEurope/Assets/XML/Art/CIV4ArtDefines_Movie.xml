@@ -48,7 +48,7 @@
     </MovieArtInfo>
     <MovieArtInfo>
       <Type>ART_DEF_MOVIE_COPERNICUS</Type>
-      <Path>Art/Movies/Wonders/Copernicus.dds</Path>
+      <Path>Art/Movies/Wonders/Copernicus.bik</Path>
     </MovieArtInfo>
     <MovieArtInfo>
       <Type>ART_DEF_MOVIE_BEURS</Type>
@@ -234,7 +234,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MAGELLANS_VOYAGE</Type>
-			<Path>Art/Movies/Wonders/magellan.dds</Path>
+			<Path>Art/Movies/Wonders/magellan.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GOLD_COAST</Type>
