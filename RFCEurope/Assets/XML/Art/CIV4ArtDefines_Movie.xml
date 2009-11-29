@@ -76,7 +76,7 @@
     </MovieArtInfo>
     <MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAN_MARCO</Type>
-			<Path>Art/Movies/Wonders/San_Marco/San_Marco.dds</Path>
+			<Path>Art/Movies/Wonders/San_Marco.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOMB_KHAL</Type>
@@ -170,7 +170,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_DOME_ROCK</Type>
-			<Path>Art/Movies/Wonders/Dome_Rock/Dome_Rock.dds</Path>
+			<Path>Art/Movies/Wonders/Dome_Rock.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BELEM_TOWER</Type>
@@ -182,19 +182,19 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BRANDENBURG_GATE</Type>
-			<Path>Art/Movies/Wonders/Brandenburg_Gate/Fersy_-_Brandenburger_Tor.dds</Path>
+			<Path>Art/Movies/Wonders/Brandenburger_Tor.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SOPHIA_KIEV</Type>
-			<Path>Art/Movies/Wonders/Sophia_Kiev/Sophia_Kiev.dds</Path>
+			<Path>Art/Movies/Wonders/Sophia_Kiev.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MAGNA_CARTA</Type>
-			<Path>Art/Movies/Wonders/Magna_Carta/Magna_Carta.dds</Path>
+			<Path>Art/Movies/Wonders/Magna_Carta.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_LA_MEZQUITA</Type>
-			<Path>Art/Movies/Wonders/La_Mezquita/La_Mezquita.dds</Path>
+			<Path>Art/Movies/Wonders/La_Mezquita.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOPKAPI_PALACE</Type>
@@ -218,7 +218,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GARDENS_AL_ANDALUS</Type>
-			<Path>Art/Movies/Wonders/Gardens_Al_Andalus/generalife.dds</Path>
+			<Path>Art/Movies/Wonders/generalife.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ESCORIAL</Type>
