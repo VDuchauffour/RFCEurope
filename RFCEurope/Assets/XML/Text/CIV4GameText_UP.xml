@@ -392,6 +392,24 @@
 		<Russian>+2 &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#245; &#207;&#243;&#242;&#232; &#231;&#224; &#227;&#238;&#240;&#238;&#228;.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UP_POP</Tag>
+		<English>Infallibility</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_POP2</Tag>
+		<English></English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_EMIGRATION</Tag>
 		<English>A part of our population is emigrating to America!</English>
 		<French>Une partie de notre population &#239;&#191;&#189;migre en Am&#239;&#191;&#189;rique !</French>

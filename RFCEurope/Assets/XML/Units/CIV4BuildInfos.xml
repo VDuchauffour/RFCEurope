@@ -100,7 +100,7 @@
 			<Type>BUILD_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_WORKSHOP</Description>
 			<Help/>
-			<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>

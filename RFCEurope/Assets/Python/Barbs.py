@@ -222,17 +222,21 @@ class Barbs:
 			
 		#Mongols! 1250
 		if (iGameTurn >=con.i1236AD and iGameTurn < con.i1284AD):
+			if iHandicap == 1: #Sedna17: Making mongols too weak in viceroy makes AI Kiev a super-power.
+				iExtra = 1
+			else:
+				iExtra = 0
 			#Kiev
-			self.spawnUnits( iBarbarian, (93,32),(99,44), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (93,32),(99,44), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (93,32),(99,44), con.iMongolKeshik, 3 + iExtra*2, iGameTurn,4,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (93,32),(99,44), con.iMongolKeshik, 3 + iExtra*2, iGameTurn,3,1,utils.outerInvasion,1)
 			#Central Europe (So Kiev can't keep them out)
-			self.spawnUnits( iBarbarian, (65,30),(90,55), con.iMongolKeshik, 4 + iHandicap*2, iGameTurn,4,2,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (65,30),(90,55), con.iMongolKeshik, 4 + iExtra*2, iGameTurn,4,2,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (79,37),(85,47), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 			#Moscow
-			self.spawnUnits( iBarbarian, (89,46),(99,56), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (89,46),(99,56), con.iMongolKeshik, 3 + iExtra*2, iGameTurn,4,0,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (89,46),(99,56), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 			#Middle East
-			self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,2,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 2 + iExtra*2, iGameTurn,4,2,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 
 		#Mongols, the return! (aka Tamerlane)
@@ -405,8 +409,12 @@ class Barbs:
 		print ("Barb improvement destroyed")
 		iTurn = gc.getGame().getGameTurn()
 		if (iTurn > con.i1500AD):
-			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iMusketman,2,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iMusketman,1,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iMusketman,1,1,1,0,utils.outerInvasion,1)
 		elif (iTurn > con.i1101AD):
-			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iGuisarme,2,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iGuisarme,1,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iHorseArcher,1,1,1,0,utils.outerInvasion,1)
 		else:
-			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iSpearman,2,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iSpearman,1,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iScout,1,1,1,0,utils.outerInvasion,1)
+

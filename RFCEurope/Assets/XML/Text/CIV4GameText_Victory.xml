@@ -693,4 +693,16 @@
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
 		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_POP1</Tag>
+		<English>Smite the infidels</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_POP2</Tag>
+		<English>???</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
+	</TEXT>
+	<TEXT>
+		<Tag>Prophet</Tag>
+		<English>Smite the infidels</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
+	</TEXT>	
 </Civ4GameText>
