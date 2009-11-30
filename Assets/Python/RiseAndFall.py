@@ -2446,7 +2446,6 @@ class RiseAndFall:
 		# for the late starts those get destroyed
                 utils.makeUnit(iSettler, iBurgundy, tCapitals[iBurgundy], 1)
                 utils.makeUnit(con.iArcher, iBurgundy, tCapitals[iBurgundy], 2)
-                utils.makeUnit(con.iCatholicMissionary, iBurgundy, tCapitals[iBurgundy], 1)
                 utils.makeUnit(con.iWorker, iBurgundy, tCapitals[iBurgundy], 1)
                 
                 # 3Miro: Byzantium Starting Units are in the WB file
