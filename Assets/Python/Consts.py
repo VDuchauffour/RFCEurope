@@ -167,8 +167,8 @@ tBirth = (
 113,#940AD Germany
 123,#970AD Poland
 241,#1000AD Moscow => 1323
-140,#1020AD Genoa
-153,#1060AD England
+140,# 140 normally 1020AD Genoa
+153,# 153 normally 1060AD England
 167,#1100AD Portugal
 187,#1160AD Austria
 233,#1300AD Turkey
@@ -334,7 +334,7 @@ tStartingWorkers = (
 2, #tBulgaria
 2, #tCordoba
 3, #tSpain
- 2, #tNorse
+2, #tNorse
 3, #tVenecia
 3, #tKiev
 3, #tHungary
