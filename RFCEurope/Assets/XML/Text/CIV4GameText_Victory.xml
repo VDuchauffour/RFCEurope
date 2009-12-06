@@ -701,9 +701,8 @@
 		<Tag>TXT_KEY_UHV_POP2</Tag>
 		<English>???</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
 	</TEXT>
-	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_POP3</Tag>
+		<Tag>TXT_KEY_UHV_POPE</Tag>
 		<English>Prophet</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
 	</TEXT>	
 </Civ4GameText>

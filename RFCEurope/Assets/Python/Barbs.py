@@ -247,7 +247,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (87,17),(99,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
 			
 		
-
+		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
                # 3Miro Barbarian and Independent city spawna nd barbarian invasions go here. Check with original RFC file for details
 		self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, con.iCrossbowman, 2) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
 		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, con.iCordobanBerber, 2) #UnitOwner = 22 -> iIndy2 
@@ -268,7 +268,7 @@ class Barbs:
 		#self.foundCity(iIndependent2, lTours, "Tours", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent3, lMarseilles, "Marseilles", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent2, lLyon, "Lyon", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 3, con.iArcher, 1)
 		#self.foundCity(iIndependent, lPisae, "Pisae", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent, lMilano, "Milano", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 1, con.iArcher, 1)
@@ -276,7 +276,7 @@ class Barbs:
 		# self.foundCity(iIndependent, lRoma, "Roma", iGameTurn, 5, con.iArcher, 1)
 		self.foundCity(iIndependent, lAugsburg, "Augsburg", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent2, lCatania, "Catania", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent3, lNapoli, "Napoli", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iIndependent3, lNapoli, "Napoli", iGameTurn, 3, con.iArcher, 1)
 		self.foundCity(iIndependent3, lRagusa, "Ragusa", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lRhodes, "Rhodes", iGameTurn, 1, con.iArcher, 1) #Start with Orthodoxy and a Harbor?
