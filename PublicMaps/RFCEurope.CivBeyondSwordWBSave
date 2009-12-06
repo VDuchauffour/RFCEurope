@@ -32,11 +32,10 @@ BeginTeam
 	Tech=TECH_MONASTICISM
 	Tech=TECH_MUSIC
 	Tech=TECH_HERBAL_MEDICINE
-	Tech=TECH_MAP_MAKING
 	Tech=TECH_LITERATURE
 	Tech=TECH_CODE_OF_LAWS
 	Tech=TECH_CLASSICAL_KNOWLEDGE
-	Tech=TECH_PHILOSOPHY
+	Tech=TECH_ASTROLABE
 EndTeam
 BeginTeam
 	TeamID=2
@@ -30812,6 +30811,7 @@ BeginPlot
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		ReligionType=RELIGION_ORTHODOXY
@@ -31279,6 +31279,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 		Player1Culture=10
@@ -32751,6 +32752,7 @@ BeginPlot
 		CityName=Hadrianopolis
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 		Player1Culture=10
@@ -35128,6 +35130,34 @@ BeginPlot
 	x=81,y=24
 	TerrainType=TERRAIN_COAST
 	PlotType=3
+	BeginUnit
+		UnitType=UNIT_GALLEY, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_ASSAULT_SEA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GALLEY, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_ASSAULT_SEA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_GALLEY, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_ATTACK_SEA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_GALLEY, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_ATTACK_SEA
+	EndUnit
 	TeamReveal=1,
 EndPlot
 BeginPlot
@@ -35197,6 +35227,7 @@ BeginPlot
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		BuildingType=BUILDING_ORTHODOX_SHRINE
@@ -36993,6 +37024,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
@@ -41347,6 +41379,7 @@ BeginPlot
 		CityPopulation=3
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
@@ -41399,6 +41432,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 	EndCity

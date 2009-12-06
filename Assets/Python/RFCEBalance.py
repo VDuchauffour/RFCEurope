@@ -144,11 +144,11 @@ class RFCEBalance:
 
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
-		gc.setSupportModifiers(iBurgundy,      10, 200,  80,  75, 150 )
-		gc.setSupportModifiers(iByzantium,     10, 250,  10,  10, 200 )
+		gc.setSupportModifiers(iBurgundy,      10, 200,  80,  75, 110 )
+		gc.setSupportModifiers(iByzantium,     10, 150,  10,  10, 120 )
 		gc.setSupportModifiers(iFrankia,       10, 150,  50,  25, 100 )
 		gc.setSupportModifiers(iArabia,        10, 250,  50,  15, 120 )
-		gc.setSupportModifiers(iBulgaria,      10, 200,  50,  25, 110 )
+		gc.setSupportModifiers(iBulgaria,      10, 150,  50,  25, 110 )
 		gc.setSupportModifiers(iCordoba,       20, 250,  50,  50, 120 )
 		gc.setSupportModifiers(iSpain,         10, 100,  50,  25, 100 )
 		gc.setSupportModifiers(iNorse,         10, 150,  50,  25, 100 )
