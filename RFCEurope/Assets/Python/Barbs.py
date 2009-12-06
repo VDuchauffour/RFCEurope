@@ -370,7 +370,7 @@ class Barbs:
                                 result = plotList[rndNum]
                                 if (result):
                                         self.makeUnit(iUnitType, iCiv, result, iNumUnits, iForceAttack)
-       	#This is just a clone of spawnUnits but attempting to but a boat under them
+       	#This is just a clone of spawnUnits but attempting to put a boat under them
         def spawnVikings(self, iCiv, tTopLeft, tBottomRight, iUnitType, iNumUnits, iTurn, iPeriod, iRest, function, iForceAttack):
                 if (iTurn % iPeriod == iRest):
                         dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )

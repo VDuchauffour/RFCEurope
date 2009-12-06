@@ -27,9 +27,9 @@ iPlague = con.iPlague
 #Sedna17: Black Death is now set to be especially severe.
 iDuration = 6
 iImmunity = con.iImmunity
-iNumPlagues = 5
-iConstantinople = 0
-iBlackDeath = 1
+iNumPlagues = 4
+iConstantinople = -1
+iBlackDeath = 0
 
 #iHuman = utils.getHumanID()
 
@@ -86,11 +86,11 @@ class Plague:
 		#Sedna17: Set number of GenericPlagues in StoredData
 		#3Miro: Pague 0 strikes France and Burgundy too hard, make it less random and force it to pick Byzantium as starting land
 		#3Miro: follow up - remove Plague 0 since it hits too early
-		self.setGenericPlagueDates(0, 40 + gc.getGame().getSorenRandNum(3, 'Variation') - 10) #Plagues of Constantinople
-		self.setGenericPlagueDates(1, 247 + gc.getGame().getSorenRandNum(40, 'Variation') - 20) #1341 Black Death
-		self.setGenericPlagueDates(2, 300 + gc.getGame().getSorenRandNum(40, 'Variation') - 20) #Generic reaccurance of plague
-		self.setGenericPlagueDates(3, 375 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1650 Great Plague
-		self.setGenericPlagueDates(4, 440 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1740 Small Pox
+		#self.setGenericPlagueDates(0, 40 + gc.getGame().getSorenRandNum(3, 'Variation') - 10) #Plagues of Constantinople
+		self.setGenericPlagueDates(0, 247 + gc.getGame().getSorenRandNum(40, 'Variation') - 20) #1341 Black Death
+		self.setGenericPlagueDates(1, 300 + gc.getGame().getSorenRandNum(40, 'Variation') - 20) #Generic reaccurance of plague
+		self.setGenericPlagueDates(2, 375 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1650 Great Plague
+		self.setGenericPlagueDates(3, 440 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1740 Small Pox
 		#self.setGenericPlagueDates(0, 40 + gc.getGame().getSorenRandNum(4, 'Variation') - 2) # test date 40 (-2, +2)
 		#self.setGenericPlagueDates(0, 40 ) # test date 40
 

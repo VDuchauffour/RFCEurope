@@ -432,7 +432,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_DANDOLO</Type>
-			<Button>Art/Interface/LeaderHeads/Venice/Dandolo/Dandolo.dds</Button>
+			<Button>Art/Leaderheads/Venice/Dandolo/Dandolo.dds</Button>
 			<NIF>Art/Leaderheads/Venice/Dandolo/Brotherhood.nif</NIF>
 			<KFM>Art/Leaderheads/Venice/Dandolo/ramassesii.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Venice/Dandolo/Brotherhood_noshader.nif</NoShaderNIF>

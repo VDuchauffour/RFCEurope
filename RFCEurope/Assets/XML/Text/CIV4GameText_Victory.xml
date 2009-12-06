@@ -701,8 +701,9 @@
 		<Tag>TXT_KEY_UHV_POP2</Tag>
 		<English>???</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
 	</TEXT>
+	</TEXT>
 	<TEXT>
-		<Tag>Prophet</Tag>
-		<English>Smite the infidels</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
+		<Tag>TXT_KEY_UHV_POP3</Tag>
+		<English>Prophet</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/>
 	</TEXT>	
 </Civ4GameText>
