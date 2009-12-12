@@ -1616,7 +1616,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_1</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
@@ -1626,7 +1626,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_2</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
@@ -1636,7 +1636,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_3</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
@@ -1646,7 +1646,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_4</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
@@ -1656,7 +1656,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_5</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
@@ -1666,7 +1666,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_6</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
@@ -1676,7 +1676,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_7</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.25</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/medieval_house2.nif</NIF>
 			<KFM/>
