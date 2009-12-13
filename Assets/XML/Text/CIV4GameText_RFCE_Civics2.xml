@@ -273,7 +273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ELECTORATE</Tag>
-		<English>Electorate</English>
+		<English>Feudal Monarchy</English>
 		<French>
 			<Text>Election</Text>
 			<Gender>Male</Gender>
@@ -323,7 +323,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
-		<English>Constitutional Monarchy</English>
+		<English>Limited Monarchy</English>
 		<French>
 			<Text>Monarchie Constitutionnelle</Text>
 			<Gender>Male</Gender>
