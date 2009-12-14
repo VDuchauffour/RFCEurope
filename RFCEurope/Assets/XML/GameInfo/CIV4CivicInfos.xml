@@ -153,7 +153,7 @@
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_ELECTORATE</WeLoveTheKing>
 		</CivicInfo>
-		<CivicInfo> <!-- Divine Monarch -->
+		<CivicInfo> <!-- Divine Monarchy -->
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_DIVINE_MONARCHY</Type>
 			<Description>TXT_KEY_CIVIC_DIVINE_MONARCHY</Description>
@@ -706,7 +706,7 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>-50</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
@@ -917,7 +917,7 @@
 			</ImprovementYieldChanges>
 			<WeLoveTheKing/>
 		</CivicInfo>
-		<CivicInfo> <!-- Free Peasantry No Civic anger yet, due to Free labor-->
+		<CivicInfo> <!-- Free Peasantry -->
 			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
 			<Type>CIVIC_FREE_PEASANTRY</Type>
 			<Description>TXT_KEY_CIVIC_FREE_PEASANTRY</Description>
@@ -985,7 +985,16 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges/>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
+					<ImprovementYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</ImprovementYields>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
 			<WeLoveTheKing/>
 		</CivicInfo>
 		<CivicInfo> <!-- Apprenticeship-->
@@ -1153,16 +1162,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-			</ImprovementYieldChanges>
+			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
 		<CivicInfo> <!-- Decentralization-->
@@ -1274,7 +1274,7 @@
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>-1</iTradeRoutes>
+			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
@@ -1330,7 +1330,7 @@
 			<Button>,Art/Interface/Buttons/Civics/State_Property.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,5,3</Button>
 			<TechPrereq>TECH_GUILDS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_HIGH</Upkeep>
+			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -1338,7 +1338,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -1358,8 +1358,8 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iTradeRoutes>0</iTradeRoutes>
+			<iFreeSpecialist>0</iFreeSpecialist>
+			<iTradeRoutes>1</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
@@ -1434,11 +1434,11 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>2</iTradeRoutes>
+			<iFreeSpecialist>1</iFreeSpecialist>
+			<iTradeRoutes>1</iTradeRoutes>
 			<bNoForeignTrade>1</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
-			<bNoForeignCorporations>1</bNoForeignCorporations>
+			<bNoForeignCorporations>0</bNoForeignCorporations>
 			<iCivicPercentAnger>0</iCivicPercentAnger>
 			<bStateReligion>0</bStateReligion>
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
@@ -1490,7 +1490,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>-100</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -1535,7 +1535,11 @@
 			  <iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
-			<TradeYieldModifiers/>
+			<TradeYieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>100</iYield>
+			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -1630,7 +1634,7 @@
 			<Description>TXT_KEY_CIVIC_STATE_RELIGION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Strategy>
-			<Button>,Art/Interface/Buttons/Civics/Theocracy.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,3</Button>
+			<Button>Art/Interface/Buttons/Civics/StateReligion.dds</Button>
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -1671,9 +1675,9 @@
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
-			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionUnitProductionModifier>25</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
-			<iStateReligionFreeExperience>3</iStateReligionFreeExperience>
+			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<!-- Rhye - start -->
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
@@ -1695,13 +1699,13 @@
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
-		<CivicInfo> <!-- Moansticism Still needs name change-->
+		<CivicInfo> <!-- Theocracy Still needs name change-->
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
 			<Type>CIVIC_THEOCRACY</Type>
 			<Description>TXT_KEY_CIVIC_THEOCRACY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_THEOCRACY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_THEOCRACY_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/StateReligion.dds</Button>
+			<Button>,Art/Interface/Buttons/Civics/Theocracy.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,3</Button>
 			<TechPrereq>TECH_MONASTICISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -1713,7 +1717,7 @@
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iExtraHealth>1</iExtraHealth>
+			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
@@ -1744,7 +1748,7 @@
 			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
-			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<iStateReligionFreeExperience>3</iStateReligionFreeExperience>
 			<!-- Rhye - start -->
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
