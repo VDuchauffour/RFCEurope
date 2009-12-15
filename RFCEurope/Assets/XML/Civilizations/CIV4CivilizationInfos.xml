@@ -83,10 +83,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_THEOCRACY</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -207,11 +207,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_ELECTORATE</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -553,10 +553,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_BUREAUCRACY</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -647,10 +647,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_THEOCRACY</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -766,11 +766,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_REPUBLIC</CivicType>
+				<CivicType>CIVIC_BUREAUCRACY</CivicType>
+				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
+				<CivicType>CIVIC_GUILDS</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -875,11 +875,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_ELECTORATE</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -1102,10 +1102,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_BUREAUCRACY</CivicType>
+				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
+				<CivicType>CIVIC_GUILDS</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -1226,11 +1226,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_ELECTORATE</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -1526,9 +1526,9 @@
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
 				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -1722,11 +1722,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_ELECTORATE</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -1836,11 +1836,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_ELECTORATE</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -1935,11 +1935,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_ELECTORATE</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -2041,9 +2041,9 @@
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
 				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_FREE_PEASANTRY</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -2146,10 +2146,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_THEOCRACY</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -2270,10 +2270,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_BUREAUCRACY</CivicType>
+				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
+				<CivicType>CIVIC_MERCHANT_REPUBLIC</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -2380,10 +2380,10 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_THEOCRACY</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
