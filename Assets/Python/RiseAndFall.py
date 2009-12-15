@@ -2793,7 +2793,8 @@ class RiseAndFall:
                         for iTech in range( con.iChivalry + 1 ):
                                 teamTurkey.setHasTech( iTech, True, iCiv, False, False )
                         teamTurkey.setHasTech( con.iGunpowder, True, iCiv, False, False )   
-                        teamTurkey.setHasTech( con.iMilitaryTradition, True, iCiv, False, False )              
+                        teamTurkey.setHasTech( con.iMilitaryTradition, True, iCiv, False, False )
+                        teamTurkey.setHasTech( con.iArabicKnowledge, True, iCiv, False, False )              
            
                 
                 if ( iCiv == iSweden ):

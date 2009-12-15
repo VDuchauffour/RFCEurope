@@ -60,7 +60,7 @@
 			<Type>SPECIALBUILDING_SCRIPTORIUM</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_SCRIPTORIUM</Description>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
-			<TechPrereq>TECH_LITERATURE</TechPrereq>
+			<TechPrereq>TECH_ART</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
