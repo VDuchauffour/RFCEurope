@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Burgunder:Die Burgunder:den Burgundern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Burgund</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Burgundisch:burgundischen:burgundische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -83,132 +83,175 @@
 		<Tag>TXT_KEY_DN_BUR00</Tag>
 		<English>Burgundian Peoples</English>
 		<French/>
-		<German/><Italian/><Spanish/><Russian/>
+		<German>Burgundische Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR01</Tag>
 		<English>Kingdom of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Königreich Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_DN_BUR02</Tag>
 		<English>Kingdom of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Königreich Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR03</Tag>
 		<English>Duchy of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Herzogtum Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR04</Tag>
 		<English>Duchy of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Herzogtum Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR05</Tag>
 		<English>Burgundian Republic</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Burgundische Republik</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR06</Tag>
 		<English>Burgundy Error</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Burgundy Error</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR07</Tag>
 		<English>Burgundy Error</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Burgundy Error</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR08</Tag>
 		<English>Sultanate of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Sultanat Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR09</Tag>
 		<English>Islamic Republic of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Islamische Republik Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR10</Tag>
 		<English>Exarchate of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Exarchat Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR11</Tag>
 		<English>French Duchy of Bourgogne</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Französisches Herzogtum Bourgogne</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR12</Tag>
 		<English>Emirate of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Emirat Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR13</Tag>
 		<English>Spanish Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Spanisch-Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR14</Tag>
 		<English>New Bornholm</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Neu Bornholm</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR15</Tag>
 		<English>Venetian Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Venezianisch-Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR16</Tag>
 		<English>Russian Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Russisch-Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR17</Tag>
 		<English>Lothringen</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Lothringen</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR18</Tag>
 		<English>County of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>County Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR19</Tag>
 		<English>Habsburg Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Habsburger Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR20</Tag>
 		<English>Principality of Burgonya</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Fürstentum Burgonya</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR21</Tag>
 		<English>Province of Burgundy</English>
-		<French/><German/><Italian/><Spanish/>
+		<French/>
+		<German>Provinz Burgund</German>
+		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
 	<TEXT>
@@ -218,7 +261,10 @@
 [TAB]Plague in the mid 14th century left Burgundy in a crisis of sucession, but with the outcome of a strong and capable Valois dynasty. Friendly but not subservient to the kings of France, the Valois brought the Duchy's golden age. During this period the Duchy's power extended into the low countries and presided over the wealthy cities of Dijon, Bruges, Ypres, Luxembourg, Brussels, and Ghent, among others.
 [TAB]The Valois, flush with wealth and power, attempted to end the suzerainty of France once and for all, but were defeated. When Duke Charles the Bold died in battle in 1477, the duchy was effectively finished as anything more than a French province.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Das Herzogtum Burgund, mit Ursprung im Römischen Reich, war ein Gebilde, das sich an seinem Höhepunkt von dem heutigen Südwesten Frankreichs bis nach Zentral-Frankreich, Belgien und den südlichen Niederlanden erstreckte. Als Zentrum des Handels, der Kunst, des Denkens und militärischer Macht, war es die Mitte des Konflikts zwischen Frankreich, Spanien, Österreich und dem Heiligen Römischen Reich deutscher Nation; als ein unabhängiges Gebilde konnte das Herzogtum es zeitweise mit den Mächten aufnehmen, die es bedrohten.
+[TAB]Durch politische Intrige, glückliche Vermählungen, finanzielle Macht und militärischer Stärke kontrollierten die frühen Herzöge und Könige ein wohlhabendes Gebiet Galliens, das große Teile der Provence, der Schweiz, Franche-Comté und die heutige Region Bourgogne enthielt. Nach sowohl kriegerischen als auch rechtlichen Schlachten, wurde Burgund nominell ein Lehen Frankreichs. Als eine so große und wohlhabende Provinz, rivalisierten und übertrafenburgundische Herzögeoft ihre feudalen Herren: der Landadel hatte wenig Interesse, nur eine französische Provinz zu werden, und Burgund blühte auf als ein größtenteils unabhängiger Staat.
+[TAB]Die Pest in der Mitte des 14. Jahrhunderts hinterließ Burgund eine Krise der Erbfolge, jedoch mit der Folge einer starken und fähigen Valois Dynastie. Freundlich, aber nicht unterwürfig zu den Königen Frankreichs, brachte das Haus Valois das goldene Zeitalter des Herzogtums. Während dieser Periode breitete sich Burgunds Macht in die schwächeren Länder aus und verwaltete unter anderem die wohlhabenden Städte Dijon, Brügge, Luxemburg, Brüssel und Ghent.
+[TAB]Das Haus Valois, jetzt ebenbürtig mit Wohlhaben und Macht, versuchte die Oberhoheit Frankreichs ein für alle mal zu beenden, wurden aber geschlagen. Als Herzog Karl der Kühne in der Schlacht bei Nancy 1477 starb, endete das Hezogtum gewissermaßen als wenig mehr als eine französische Provinz.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 </TEXT>
