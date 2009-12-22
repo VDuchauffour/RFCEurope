@@ -154,7 +154,7 @@
 			<Type>BUILD_WINDMILL</Type>
 			<Description>TXT_KEY_BUILD_WINDMILL</Description>
 			<Help/>
-			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<PrereqTech>TECH_MONUMENT_BUILDING</PrereqTech>
 			<!-- Rhye  -->
 			<iTime>600</iTime>
 			<iCost>0</iCost>

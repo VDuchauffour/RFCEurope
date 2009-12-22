@@ -7840,7 +7840,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=29
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -10225,7 +10224,6 @@ BeginPlot
 	x=26,y=30
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=1,
@@ -11831,7 +11829,6 @@ BeginPlot
 	x=30,y=26
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -11917,7 +11914,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=38
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -12244,7 +12240,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=27
-	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -12703,7 +12698,6 @@ BeginPlot
 	x=32,y=35
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=1,
@@ -12822,7 +12816,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=58
-	BonusType=BONUS_STONE
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -13047,7 +13040,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=26
-	BonusType=BONUS_WINE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -13519,7 +13511,6 @@ BeginPlot
 	x=34,y=34
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_WINE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -14046,7 +14037,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=52
-	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14366,7 +14356,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=34
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,1,2,
@@ -14765,7 +14754,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	BonusType=BONUS_COW
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -14954,7 +14942,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=60
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15216,7 +15203,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=34
-	BonusType=BONUS_DEER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,1,2,
@@ -15238,7 +15224,6 @@ BeginPlot
 	x=38,y=37
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,2,
@@ -15357,7 +15342,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=55
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -15700,7 +15684,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=41
-	BonusType=BONUS_COW
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -15730,7 +15713,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=45
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,2,
@@ -16563,7 +16545,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=39
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -16688,7 +16669,6 @@ BeginPlot
 	x=41,y=57
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -17122,7 +17102,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=56
-	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -17587,7 +17566,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=57
-	BonusType=BONUS_HONEY
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -18008,7 +17986,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=52
-	BonusType=BONUS_APPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -18077,7 +18054,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=64
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -18826,7 +18802,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=44
-	BonusType=BONUS_WHEAT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -22049,7 +22024,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=49
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -22927,7 +22901,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=44
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -22955,7 +22928,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=48
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -23007,7 +22979,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=57
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -25765,7 +25736,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=46
-	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -26322,7 +26292,6 @@ BeginPlot
 	x=62,y=59
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -26730,7 +26699,6 @@ BeginPlot
 	x=63,y=48
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -27579,7 +27547,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=37
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=21,
@@ -27600,7 +27567,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=40
-	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=21,
@@ -27623,7 +27589,6 @@ BeginPlot
 	x=65,y=43
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=21,
@@ -28514,7 +28479,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=36
-	BonusType=BONUS_BARLEY
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=21,
@@ -28615,7 +28580,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=51
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29069,7 +29033,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=49
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29430,7 +29393,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=34
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=1,21,
@@ -29532,7 +29494,6 @@ BeginPlot
 	x=69,y=48
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -29962,7 +29923,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=43
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=21,
@@ -30425,7 +30385,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=21,
@@ -30452,7 +30411,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=43
-	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=21,
@@ -30465,7 +30423,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=45
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -30918,7 +30875,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=37
-	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=21,
@@ -31394,7 +31350,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=34
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=1,21,
@@ -31463,7 +31418,6 @@ BeginPlot
 	x=73,y=43
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=21,
@@ -31948,7 +31902,6 @@ BeginPlot
 	x=74,y=46
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -32331,7 +32284,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=34
-	BonusType=BONUS_GOLD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -32363,7 +32315,6 @@ BeginPlot
 	x=75,y=39
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -32891,7 +32842,6 @@ BeginPlot
 	x=76,y=45
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -34273,7 +34223,6 @@ BeginPlot
 	x=79,y=39
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37252,7 +37201,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=38
-	BonusType=BONUS_DYE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -37268,7 +37216,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=41
-	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -38734,7 +38681,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=43
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -39306,7 +39252,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=58
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -40635,7 +40580,6 @@ BeginPlot
 	x=92,y=42
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -41119,7 +41063,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -42252,7 +42195,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=54
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
