@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_CRUSADE_INIT</Tag>
 		<English>The Pope has called for a Crusade to the Holy Land to defend the Holy City of Jerusalem from the infidel pest. Would you accept your duty, take up your sword, and leave for the Holy Land?</English>
 		<French>
-			<Text>Le Pape a appel&#233; &#224; une croisade en Terre Sainte pour d&#233;fendre la ville sainte de J&#233;rusalem. Accepteriez-vous de votre devoir, prendre votre &#233;p&#233;e, et partir pour la Terre Sainte ?</Text>
+			<Text>Le Pape a appel&#233; &#224; une croisade en Terre Sainte pour d&#233;fendre la ville sainte de J&#233;rusalem. Accepteriez-vous de votre devoir, de prendre votre &#233;p&#233;e, et partir pour la Terre Sainte ?</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -209,7 +209,7 @@
 		<Tag>TXT_KEY_CRUSADE_GOLD</Tag>
 		<English>gold.[NEWLINE]</English>
 		<French>
-			<Text>Or.[NEWLINE]</Text>
+			<Text>or.[NEWLINE]</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -559,7 +559,7 @@
 		<Tag>TXT_KEY_CRUSADE_LEADER_POPUP</Tag>
 		<English>Crusade Leader Chosen:</English>
 		<French>
-			<Text>Leader Choisi pour les Croisades:</Text>
+			<Text>Leader choisi pour les Croisades:</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -659,7 +659,7 @@
 		<Tag>TXT_KEY_CRUSADE_ATTACK</Tag>
 		<English>Under Crusade Attack</English>
 		<French>
-			<Text>En vertu de la croisade</Text>
+			<Text>En vertu de la Croisade</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -734,7 +734,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL</Tag>
 		<English>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</English>
 		<French>
-			<Text>Votre Majest&#233;, allons-nous demander &#224; notre Saint-P&#232;re de faire appel &#224; nos fr&#232;res et sœurs catholiques afin de nous aider contre les infid&#232;les ?</Text>
+			<Text>Votre Majest&#233;, allons-nous demander &#224; notre Saint-P&#232;re de faire appel &#224; nos fr&#232;res et soeurs catholiques afin de nous aider contre les infid&#232;les ?</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>

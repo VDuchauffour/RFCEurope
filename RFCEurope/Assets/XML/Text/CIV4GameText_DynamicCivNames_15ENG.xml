@@ -82,111 +82,111 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG00</Tag>
 		<English>Anglo-Saxon Peoples</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Anglo-Saxonne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG01</Tag>
 		<English>Kingdom of England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume d'Angleterre</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG02</Tag>
 		<English>Kingdom of Great Britain</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Grande-Bretagne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG03</Tag>
 		<English>United Kingdom of Great Britain</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume-Uni de Grande-Bretagne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG04</Tag>
 		<English>British Empire</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Britannique</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG05</Tag>
 		<English>English Commonwealth</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Commonwealth Anglais</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG06</Tag>
 		<English>Placeholder Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG07</Tag>
 		<English>Placeholder Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG08</Tag>
 		<English>Sultanate of England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat d'Angleterre</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG09</Tag>
 		<English>Islamic Republic of England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique d'Angleterre</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG10</Tag>
 		<English>Exarchate of Britannia</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Bretagne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG11</Tag>
 		<English>Duchy of La Manche</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de La Manche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG12</Tag>
 		<English>Emirate of England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat d'Angleterre</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG13</Tag>
 		<English>Spanish Kingdom of England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol d'Angleterre</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG14</Tag>
 		<English>Danelaw Britain</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Danelaw Britannique</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG15</Tag>
 		<English>Venetian England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Angleterre V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG16</Tag>
 		<English>Russian England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Angleterre Russe</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG17</Tag>
 		<English>British Saxony</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Bretagne Saxonne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG18</Tag>
 		<English>Great Britain</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Grande-Bretagne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG19</Tag>
 		<English>Habsburg England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Angleterre Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG20</Tag>
 		<English>Principality of Britanya</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Britanya</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG21</Tag>
 		<English>Province of England</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Province d'Angleterre</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

@@ -16,7 +16,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO</Tag>
 		<English>Marco Polo's Embassy</English>
-		<French></French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Embassade de Marco Polo</French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER</Tag>
 		<English>The Leaning Tower</English>
@@ -70,7 +70,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Gardens of Al Andalus[COLOR_REVERT] allows to build [COLOR_BUILDING_TEXT]Farms[COLOR_REVERT] without Irrigation.</English>
-		<French/>
+		<French></French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -78,7 +78,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_HELP</Tag>
 		<English>[ICON_BULLET]Allows to build [COLOR_BUILDING_TEXT]Farms[COLOR_REVERT] without Irrigation.</English>
-		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
+		<French>[ICON_BULLET]Permet de construire une [COLOR_BUILDING_TEXT]Ferme[COLOR_REVERT] sans l'Irrigation</French><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_PEDIA</Tag>
 		<English>[TAB]The Leaning Tower of Pisa, or simply The Tower of Pisa (Italian: La Torre di Pisa) is the campanile, or freestanding bell tower, of the cathedral of the Italian city of Pisa. It is situated behind the Cathedral and it is the third structure in Pisa's Campo dei Miracoli (field of Miracles). The tower is the most famous leaning building in the world. While intended to stand vertically, it began leaning to the southeast soon after the onset of construction in 1173 due to a poorly laid foundation and loose substrate that has allowed the foundation to shift.</English>
@@ -162,7 +162,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOWER_LONDON</Tag>
 		<English>The Tower of London</English>
-		<French>.</French>
+		<French>Tour de Londres</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>
@@ -315,7 +315,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
 		<English>The Alhambra</English>
-		<French>The Alhambra</French>
+		<French>L'Alhambra</French>
 		<German>[SPACE].</German>
 		<Italian>[SPACE].</Italian>
 		<Spanish>
@@ -399,13 +399,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIBEIRA</Tag>
 		<English>Pa&#231;o da Ribeira</English>
-		<French/><German/><Italian/>
+		<French>Pa&#231;o da Ribeira</French><German/><Italian/>
     <Spanish>Pa&#231;o da Ribeira</Spanish>
     <Russian>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIBEIRA_PEDIA</Tag>
 		<English>The Ribeira Palace (Portuguese: Pa&#231;o(s) da Ribeira) was Lisbon's royal palace for over 200 years, until it was destroyed by the 1755 Lisbon earthquake. The square in which the Palace was located is now one of the most important Lisbon squares, the Pra&#231;a do Com&#233;rcio.[PARAGRAPH:2]When staying in Lisbon during the Middle Ages, the Kings of Portugal would stay at Lisbon Castle, which crowns a high hill in the Alfama neighbourhood. In the 15th and early 16th centuries, maritime exploration during the Age of Discovery made Lisbon an increasingly important port city, responsible for the commerce between the nascent Portuguese Empire and Africa and India. In this context, King Manuel I decided, around 1500, to build a new royal palace on the banks of the Tagus river (the Ribeira), completely changing the urban landscape of the city.[PARAGRAPH:2]The Ribeira Palace was finished around 1511. King Manuel I and the court were now close to the commercial and industrial heart of the city. The areas around the palace were occupied by the harbour, the shipbuilding area (the so-called Ribeira das Naus), customs and other buildings responsible for the regulation of maritime commerce.[PARAGRAPH:2]On the 1st of November of 1755, a huge earthquake, and resulting tsunami and fire destroyed the palace and most of Lisbon. King Joseph I was not at the palace and survived. His Prime Minister, the 1st Marquess of Pombal, coordinated a massive reconstruction effort that would give rise to the Pombaline Downtown of Lisbon. The royal family abandoned the Ribeira area and moved to palaces in the areas of Ajuda and Bel&#233;m.</English>
-		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
+		<French></French><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL</Tag>
 		<English>Palacio del Escorial</English>
@@ -419,7 +419,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Palacio del Escorial[COLOR_REVERT] removes any stability hit due to poor economic performance.  It also increases its city's odds of generating a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT].</English>
-		<French/>
+		<French></French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -431,7 +431,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY</Tag>
 		<English>Cluny Abbey</English>
-		<French/><German/><Italian/>
+		<French>Abbaye de Cluny</French><German/><Italian/>
 		<Spanish>Monasterio de Cluny</Spanish>
 		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -441,7 +441,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>
 		<English>The Round Church</English>
-		<French>Le Cycle de l'Eglise</French><German/><Italian/><Spanish/><Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>L'Eglise Ronde</French><German/><Italian/><Spanish/><Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE</Tag>
 		<English>Magellan's Voyage</English>
@@ -468,7 +468,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French>Ch&#226;teau</French><German/><Italian/><Russian>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Russian></TEXT>
+		<French>Ch&#226;teau de Kalmar</French><German/><Italian/><Russian>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL</Tag>
 		<English>Tomb of Al Khalid</English>
@@ -477,7 +477,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French>Tombe de Al Khalid</French><German/><Italian/><Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian></TEXT>
+		<French>Tombe de Al-Khalid</French><German/><Italian/><Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES</Tag>
 		<English>Palais des Papes</English>
@@ -491,7 +491,7 @@
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER</Tag>
 		<English>Torre de Bel&#233;m</English>
 		<Spanish>
-			<Text>Torre de Bel&#233;m</Text>
+			<Text>Tour de Bel&#233;m</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -703,11 +703,11 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian/>
-		<French/><German/><Italian/></TEXT>
+		<French>Cath&#233;drale Saint-&#201;tienne de Vienne</French><German/><Italian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Stephansdom[COLOR_REVERT] gives +2 stability points for running a Monarchy (wether Divine or Constitutional). It also increases its city's odds of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
-		<French/>
+		<French></French>
 		<German/>
 		<Italian/>
 		<Spanish/>
@@ -715,7 +715,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_HELP</Tag>
 		<English>[ICON_BULLET]+2 stability points for running a Monarchy.</English>
-		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
+		<French>[ICON_BULLET]+2 points de stabilit&#233; pour l'utilisation de la Monarchie.</French><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_PEDIA</Tag>
 		<English>[TAB]St. Stephen's Cathedral (German: Stephansdom) is the mother church of the Archdiocese of Vienna and the seat of the Archbishop of Vienna, Christoph Cardinal Sch&#246;nborn, OP. Its current Romanesque and Gothic form seen today, situated at the heart of Vienna, Austria in the Stephansplatz, was largely initiated by Rudolf IV and stands on the ruins of two earlier churches, the first being a parish church consecrated in 1147. As the most important religious building in Austria's capital, the cathedral has born witness to many important events in that nation's history and has, with its multi-colored tile roof, become one of the city's most recognizable symbols.
@@ -734,7 +734,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian/>
-		<French/><German/><Italian/></TEXT>
+		<French>Bibliotheca Corviniana</French><German/><Italian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_PEDIA</Tag>
 		<English>[TAB]Bibliotheca Corviniana was one of the most renowned libraries of the Renaissance world, established by Matthias Corvinus, king of Hungary and Croatia between 1458 and 1490.
@@ -755,7 +755,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian/>
-		<French/><German/><Italian/></TEXT>
+		<French>Ch&#226;teau de Fontainebleau</French><German/><Italian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FONTAINEBLEAU_PEDIA</Tag>
 		<English>[TAB]The Palace of Fontainebleau, located 55 kilometres from the centre of Paris, is one of the largest French royal ch&#226;teaux. The palace as it is today is the work of many French monarchs, building on an early 16th century structure of Francis I. The building is arranged around a series of courtyards. The city of Fontainebleau has grown up around the remainder of the Forest of Fontainebleau, a former royal hunting park.
@@ -774,7 +774,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian/>
-		<French/>
+		<French></French>
 		<German>Reichstag</German>
 		<Italian/>
   </TEXT>
@@ -791,12 +791,12 @@
     <Tag>TXT_KEY_BUILDING_COPERNICUS</Tag>
     <English>Copernicus' Observatory</English>
     <Spanish>
-      <Text>Observatorio de Cop&#233;rnico</Text>
+      <Text>Observatoire de Copernic</Text>
       <Gender>Male</Gender>
       <Plural>0</Plural>
     </Spanish>
     <Russian/>
-    <French/>
+    <French>Observatoire de Copernic</French>
     <German/>
     <Italian/>
   </TEXT>
@@ -818,7 +818,7 @@
       <Plural>0</Plural>
     </Spanish>
     <Russian/>
-    <French/>
+    <French>Palazzo San Giorgio</French>
     <German/>
     <Italian/>
   </TEXT>
@@ -841,7 +841,7 @@
       <Plural>0</Plural>
     </Spanish>
     <Russian/>
-    <French/>
+    <French>Sac d'Amsterdam</French>
     <German/>
     <Italian/>
   </TEXT>
@@ -863,7 +863,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>.</Russian></TEXT>
+		<French>Abbaye de Westminster</French><German/><Italian/><Russian>.</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESSBURG</Tag>
 		<English>Pressburg Castle</English>
@@ -872,7 +872,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<French/><German/><Italian/><Russian>.</Russian></TEXT>
+		<French>Ch&#226;teau de Pressburg</French><German/><Italian/><Russian>.</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Tag>
 		<English>[TAB]The Collegiate Church of St Peter at Westminster, which is almost always referred to popularly and informally as Westminster Abbey, is a large, mainly Gothic church, in Westminster, London, just to the west of the Palace of Westminster. It is the traditional place of coronation and burial site for English, later British and later still (and currently) monarchs of the Commonwealth Realms. It briefly held the status of a cathedral from 1546?1556, and is a Royal Peculiar.[PARAGRAPH:1]Westminster Abbey is governed by the Dean and Chapter of Westminster, as established by Royal Charter of Queen Elizabeth I in 1560, which created it as the Collegiate Church of St Peter Westminster and a Royal Peculiar under the personal jurisdiction of the Sovereign. The members of the Chapter are the Dean and four residentiary Canons, together with the Receiver General and Chapter Clerk. One of the Canons is also Rector of St Margaret's Church Westminster Abbey (who currently also holds the post of Chaplain to the Speaker of the House of Commons). In addition to the Dean and Canons there are at present two full time minor canons, one precentor the other succentor. The office of Priest Vicar was created in the 1970's for those who assist the minor canons. Together with the Clergy and Receiver General and Chapter Clerk various Lay Officers constitute the College, including the Organist and Master of the Choristers, the Registrar, the Auditor, the Legal Secretary, the Surveyor of the Fabric, the Head Master of the Choir School, the Keeper of the Muniments and the Clerk of the Works, as well as twelve Lay Vicars and ten of the choristers and the High Steward and High Bailiff. There are also forty Queen's Scholars who are pupils at Westminster School (the School has its own Governing Body). Those most directly concerned with liturgical and ceremonial matters are the two Minor Canons and the Organist and Master of the Choristers.</English>

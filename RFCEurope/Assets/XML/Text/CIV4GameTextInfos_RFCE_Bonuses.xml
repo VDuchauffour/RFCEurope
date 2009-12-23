@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_BONUS_COFFEE</Tag>
 		<English>Coffee</English>
 		<French>
-			<Text>Cafe</Text>
+			<Text>Caf&#233;</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -708,7 +708,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIMBER</Tag>
 		<English>Timber</English>
-		<French>Timber</French>
+		<French>Bois</French>
 		<German>Timber</German>
 		<Italian>Timber</Italian>
 		<Spanish>Timber</Spanish>
@@ -717,7 +717,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONEY</Tag>
 		<English>Honey</English>
-		<French>Honey</French>
+		<French>Miel</French>
 		<German>Honey</German>
 		<Italian>Honey</Italian>
 		<Spanish>Honey</Spanish>
@@ -726,7 +726,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLAVES</Tag>
 		<English>Slaves</English>
-		<French>Slaves</French>
+		<French>Esclaves</French>
 		<German>Slaves</German>
 		<Italian>Slaves</Italian>
 		<Spanish>Slaves</Spanish>
@@ -735,7 +735,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ACCESS</Tag>
 		<English>Atlantic Access</English>
-		<French>Atlantic Access</French>
+		<French>Acc&#232;s Atlantique</French>
 		<German>Atlantic Access</German>
 		<Italian>Atlantic Access</Italian>
 		<Spanish>Atlantic Access</Spanish>
@@ -744,7 +744,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORTH_AMERICA_ACCESS</Tag>
 		<English>North America Access</English>
-		<French>North America Access</French>
+		<French>Acc&#232;s Am&#233;rique Nord</French>
 		<German>North America Access</German>
 		<Italian>North America Access</Italian>
 		<Spanish>North America Access</Spanish>
@@ -753,7 +753,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOUTH_AMERICA_ACCESS</Tag>
 		<English>South America Access</English>
-		<French>South America Access</French>
+		<French>Acc&#232;s Am&#233;rique du Sud</French>
 		<German>South America Access</German>
 		<Italian>South America Access</Italian>
 		<Spanish>South America Access</Spanish>
@@ -762,7 +762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EAST_ASIA_ACCESS</Tag>
 		<English>East Asia Access</English>
-		<French>East Asia Access</French>
+		<French>Acc&#232;s Asie</French>
 		<German>East Asia Access</German>
 		<Italian>East Asia Access</Italian>
 		<Spanish>East Asia Access</Spanish>
@@ -771,7 +771,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RELIC</Tag>
 		<English>Relic</English>
-		<French>Relic</French>
+		<French>Relique</French>
 		<German>Relic</German>
 		<Italian>Relic</Italian>
 		<Spanish>Relic</Spanish>

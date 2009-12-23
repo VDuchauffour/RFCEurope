@@ -217,7 +217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
 		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (All our Catholic cities and buildings will be converted to the new religion.)</English>
-		<French>L'invention de l'imprimerie a suscité une r&#233;formation du Catholicisme. Allons-nous accepter cette r&#233;forme ? Toutes nos villes Catholique seront automatiquement convertie.</French>
+		<French>L'invention de l'imprimerie a suscité&#233; une r&#233;formation du Catholicisme. Allons-nous accepter cette r&#233;forme ? Toutes nos villes Catholique seront automatiquement convertie.</French>
 		<German>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</German>
 		<Italian>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
@@ -306,7 +306,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_SCIENCE</Tag>
 		<English>Tech Breaker Cost:</English>
-		<French>Tech Breaker Cost:</French>
+		<French>Co&#251;t de l'acc&#233;l&#233;ration des sciences:</French>
 		<German>Tech Breaker Cost:</German>
 		<Italian>Tech Breaker Cost:</Italian>
 		<Spanish>Tech Breaker Cost:</Spanish>
@@ -336,7 +336,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GIFT</Tag>
 		<English>You have received a gift of gold from the Pope</English>
-		<French>Vous avez re&#231;u un cadeau d'Or du Pape</French>
+		<French>Le Pape vous &#224; offert de l'or</French>
 		<German>You have received a gift of gold from the Pope</German>
 		<Italian>You have received a gift of gold from the Pope</Italian>
 		<Spanish>You have received a gift of gold from the Pope</Spanish>

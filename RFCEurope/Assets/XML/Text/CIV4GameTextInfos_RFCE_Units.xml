@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_UNIT_ISLAMIC_MISSIONARY</Tag>
 		<English>Islamic Missionary</English>
 		<French>
-			<Text>Missionnaire Islamic</Text>
+			<Text>Missionnaire Islamique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -284,7 +284,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COGGE</Tag>
 		<English>Cog</English>
-		<French>Cog</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#227;&#227;&#229;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Cogue</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#227;&#227;&#229;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRACK</Tag>
 		<English>Carrack</English>
@@ -292,15 +292,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUN_GALLEY</Tag>
 		<English>Gun Galley</English>
-		<French></French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+		<French>Gal&#232;re Arm&#233;e</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOLK</Tag>
 		<English>Holk</English>
-		<French></French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+		<French>Holk</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_GALLEY</Tag>
 		<English>War Galley</English>
-		<French></French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+		<French>Galion de guerre</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROSECUTOR</Tag>
 		<English>Religious Prosecutor</English>
@@ -308,7 +308,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER</Tag>
 		<English>Remove non-state religion</English>
-		<French>Supprimer religion non-officiel</French><German/><Italian/><Spanish/><Russian>&#211;&#228;&#224;&#235;&#232;&#242;&#252; &#237;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Supprime religion non-officiel</French><German/><Italian/><Spanish/><Russian>&#211;&#228;&#224;&#235;&#232;&#242;&#252; &#237;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIA_GHAZI</Tag>
 		<English>Ghazi</English>
@@ -329,7 +329,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULGARIAN_KONNIK_STRATEGY</Tag>
 		<English>This powerful mounted unit (the Bulgarian replacement for the [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT]), can heal while moving.</English>
-		<French>Ce puissant mont&#195;&#169; unit (le Bulgare rempla&#195;&#167;ant pour la[COLOR_UNIT_TEXT] cavalerie[COLOR_REVERT]), peut gu&#195;&#169;rir tout en se d&#195;&#169;pla&#195;&#167;ant.</French>
+		<French>Ce puissant mont&#233; unit (le Bulgare rempla&#195;&#167;ant pour la[COLOR_UNIT_TEXT] cavalerie[COLOR_REVERT]), peut gu&#233;rir tout en se d&#233;pla&#195;&#167;ant.</French>
 		<German>Dieses leistungsf&#195;&#164;hige montiert unit (das Bulgarisch Ersatz f&#195;&#188;r die [COLOR_UNIT_TEXT] Kavallerie [COLOR_REVERT]), kann beim Bewegen heilen.</German>
 		<Italian>Questo potente montato unit (Bulgaro sostituzione per la[COLOR_UNIT_TEXT] cavalleria[COLOR_REVERT]), pu&#195;&#178; guarire mentre si muove</Italian>
 		<Spanish>Esta potente montado unit (el B&#250;lgaro sustituci&#195;&#179;n de la[COLOR_UNIT_TEXT] Caballer&#195;&#173;a[COLOR_REVERT]), puede curar mientras que se mueve</Spanish>
@@ -359,7 +359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KIEV_COSSACK_STRATEGY</Tag>
 		<English>This powerful mounted (the Ukrainian replacement for the [COLOR_UNIT_TEXT]Cuirasser[COLOR_REVERT]), can move farther than regular cavalry.</English>
-		<French>Ce puissant mont&#195;&#169; (le Ukrainien rempla&#195;&#167;ant pour la[COLOR_UNIT_TEXT] cavalerie[COLOR_REVERT]), peut d&#195;&#169;placer la cavalerie plus loin que r&#195;&#169;guli&#195;&#168;re.</French>
+		<French>Ce puissant mont&#233; (le Ukrainien rempla&#195;&#167;ant pour la[COLOR_UNIT_TEXT] cavalerie[COLOR_REVERT]), peut d&#233;placer la cavalerie plus loin que r&#233;guli&#195;&#168;re.</French>
 		<German>Dieses leistungsf&#195;&#164;hige montiert (das Ukrainisch Ersatz f&#195;&#188;r die [COLOR_UNIT_TEXT] Kavallerie [COLOR_REVERT]),  kann weit als regelm&#195;&#164;&#195;&#159;ige Kavallerie verschieben.</German>
 		<Italian>Questo potente montato (Ucraino sostituzione per la[COLOR_UNIT_TEXT] cavalleria[COLOR_REVERT]), spostare il cavalry pi&#195;&#185; lontano normale.</Italian>
 		<Spanish>Esta potente montado (el Ucraniano sustituci&#195;&#179;n de la[COLOR_UNIT_TEXT] Caballer&#195;&#173;a[COLOR_REVERT]),mover a caballer&#195;&#173;a m&#195;&#161;s lejos que regular.</Spanish>
@@ -376,7 +376,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR_STRATEGY</Tag>
 		<English>This powerful mounted unit (the Polish replacement for the [COLOR_UNIT_TEXT]Knight[COLOR_REVERT]) is excellent against seige weapons because of its Charge promotion.</English>
-		<French>Cette puissante unit&#195;&#169; de montage (la Pologne pour le remplacement [COLOR_UNIT_TEXT] Knight [COLOR_REVERT]) est excellent contre les armes de si&#195;&#168;ge &#195;&#160; cause de son charg&#195;&#169; de promotion. </French>
+		<French>Cette puissante unit&#233; de montage (la Pologne pour le remplacement [COLOR_UNIT_TEXT] Knight [COLOR_REVERT]) est excellent contre les armes de si&#195;&#168;ge &#195;&#160; cause de son charg&#233; de promotion. </French>
 		<German>Dieses leistungsf&#195;&#164;hige Einheit montiert (die polnische Ersatz f&#195;&#188;r die [COLOR_UNIT_TEXT] Knight [COLOR_REVERT]) ist hervorragend gegen die Belagerung Waffen wegen seiner Charge F&#195;&#182;rderung. </German>
 		<Italian>Questa potente unit&#195;&#160; montate (il polacco sostituzione per il[COLOR_UNIT_TEXT]  Cavaliere [COLOR_REVERT]), &#195;&#168; eccellente contro assedio armi a causa della sua carica di promozione.</Italian>
 		<Spanish>Esta potente unidad montada (el reemplazo para el polaco [COLOR_UNIT_TEXT] Knight [COLOR_REVERT]) es excelente contra el asedio de armas debido a su encargado de promoci&#195;&#179;n.</Spanish>
@@ -385,7 +385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOSCOW_BOYAR</Tag>
 		<English>Boyar</English>
-		<French></French><German/><Italian/><Spanish/><Russian>&#193;&#238;&#255;&#240;&#232;&#237;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Boyard</French><German/><Italian/><Spanish/><Russian>&#193;&#238;&#255;&#240;&#232;&#237;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENOA_BALESTRIERI</Tag>
 		<English>Balestrieri</English>
@@ -397,7 +397,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Tag>
 		<English>Knight of St. John's</English>
-		<French>Chevalier de St John</French><German/><Italian/><Spanish/><Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Chevalier St John</French><German/><Italian/><Spanish/><Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTRIAN_KURASSIER</Tag>
 		<English>Kurassier</English>
@@ -439,7 +439,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN</Tag>
 		<English>Longswordsman</English>
-		<French>Longspadassin</French><German/><Italian/><Spanish/><Russian>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Spadassin Lourd</French><German/><Italian/><Spanish/><Russian>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT</Tag>
 		<English>Skirmisher</English>
@@ -467,5 +467,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORSAIR</Tag>
 		<English>Corsair</English>
-		<French>Corsair</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
+		<French>Corsaire</French><German/><Italian/><Spanish/><Russian></Russian><Japanese/><Chinese/></TEXT>
 </Civ4GameText>

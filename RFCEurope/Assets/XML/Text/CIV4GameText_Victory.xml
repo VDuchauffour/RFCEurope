@@ -318,7 +318,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
 		<English>Have at least one city in each of Normandy, Britain, Ireland, Iceland, and Sicily before 1050AD.</English>
-		<French>Avoir au moins une ville en France, Angleterre, Irlande, Islande et Sicile avant 1100 ap.JC.</French>
+		<French>Avoir au moins une ville en France, Angleterre, Irlande, Islande et Sicile avant 1050 ap.JC.</French>
 		<German>Bauen Sie bis zum Jahr 250 n. Chr. (Runde 133) die Pyramiden, die Gro&#223;e Bibliothek und den Gro&#223;en Leuchtturm</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
@@ -399,7 +399,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
 		<English>Control the most territory in Europe in 1490AD.</English>
-		<French>Avoir le plus gand territoire d'Europe en 1490.</French>
+		<French>Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
 		<German>Erzielen Sie bis zum Jahr 700 v. Chr. (Runde 86) mehr als 500 Kulturpunkte</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
@@ -471,7 +471,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>
 		<English>Be the Catholic nation with most Faith Points in 1730AD.</English>
-		<French>Be the Catholic nation with most Faith Points in 1730AD.</French>
+		<French>Etre la nation Catholique avec le plus de Points de la Foi en 1730 ap.JC.</French>
 		<German>Be the Catholic nation with most Faith Points in 1730AD.</German>
 		<Italian>Be the Catholic nation with most Faith Points in 1730AD.</Italian>
 		<Spanish>Be the Catholic nation with most Faith Points in 1730AD.</Spanish>
@@ -498,7 +498,7 @@
  	<TEXT>
  		<Tag>TXT_KEY_UHV_MOS3</Tag>
  		<English>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</English>
- 		<French>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</French>
+ 		<French>Avoir un acc&#232;s aux eaux chaudes. (Conqu&#233;rir Constantinople or Avoir une ressource 'Acc&#232;s Atlantique')</French>
  		<German>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</German>
  		<Italian>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Italian>
  		<Spanish>Gain Access to warm waters. (Conquer Constantinople or control one Atlantic Access resource)</Spanish>

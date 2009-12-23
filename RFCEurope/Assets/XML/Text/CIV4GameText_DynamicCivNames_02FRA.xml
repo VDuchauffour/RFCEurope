@@ -82,111 +82,111 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA00</Tag>
 		<English>Frankish Peoples</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Franques</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA01</Tag>
 		<English>West Francia</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Francie occidentale</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA02</Tag>
 		<English>Frankish Empire</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Francs</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA03</Tag>
 		<English>Kingdom of France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA04</Tag>
 		<English>French Empire</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Fran&#231;ais</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA05</Tag>
 		<English>French Republic</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Fran&#231;se</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA06</Tag>
 		<English>Frankish Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Frankish Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA07</Tag>
 		<English>Frankish Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Frankish Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA08</Tag>
 		<English>Sultanate of France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA09</Tag>
 		<English>French Islamic Republic</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique Fran&#231;se</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA10></Tag>
 		<English>Exarchate of Gallia</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de france</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA11></Tag>
 		<English>Metropolitan France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>France M&#233;tropolitaine</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA12></Tag>
 		<English>Emirate of France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA13</Tag>
 		<English>Spanish Kingdom of France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnole de France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA14</Tag>
 		<English>Duchy of Normandy</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Duché de Normandie</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA15</Tag>
 		<English>Venetian France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>France V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA16</Tag>
 		<English>Russian France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>France Russe</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA17</Tag>
 		<English>German France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>France Allemande</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA18</Tag>
 		<English>Counties of France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Comtés de la France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA19</Tag>
 		<English>Habsburg France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>France Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA20</Tag>
 		<English>Principality of Fransa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Principauté de France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA21</Tag>
 		<English>Province of France</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Province de France</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

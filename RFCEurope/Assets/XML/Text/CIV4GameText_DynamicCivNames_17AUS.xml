@@ -82,111 +82,111 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS00</Tag>
 		<English>South German Peoples</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Austro-Bavaroise</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS01</Tag>
 		<English>Archduchy of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Archiduché d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS02</Tag>
 		<English>Habsburg Empire</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS03</Tag>
 		<English>Archduchy of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Archiduché d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS04</Tag>
 		<English>Habsburg Empire</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS05</Tag>
 		<English>Republic of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS06</Tag>
 		<English>Placeholder Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS07</Tag>
 		<English>Placeholder Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS08</Tag>
 		<English>Islamic Habsburg Sultanate</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat Islamique Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS09</Tag>
 		<English>Islamic Republic of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS10</Tag>
 		<English>Exarchate of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS11</Tag>
 		<English>French Archduchy of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Archiduché Fran&#201;ais d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS12</Tag>
 		<English>Emirate of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS13</Tag>
 		<English>Junior Habsburg Lands</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Lands d'Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS14</Tag>
 		<English>Norse Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Autriche Nordique</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS15</Tag>
 		<English>Venetian Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Autriche V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS16</Tag>
 		<English>Russian Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Autriche Russe</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS17</Tag>
 		<English>Southern Great Germany</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Grande Allemagne du Sud</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS18</Tag>
 		<English>Counties of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;s d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS19</Tag>
 		<English>Upper and Lower Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Autriche Intérieure et Antérieure.</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS20</Tag>
 		<English>Principality of Avusturya</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; d'Avusturya</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS21</Tag>
 		<English>Province of Austria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Province d'Autriche</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

@@ -124,7 +124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
 		<English>[ICON_BULLET]+1 stability point for each city outside the core area</English>
-		<French>[ICON_BULLET]+2 points de stabilit&#233; par ville fond&#233;e &#224; 15 cases ou plus de la capitale</French>
+		<French>[ICON_BULLET]+1 points de stabilit&#233; par ville fond&#233;e en dehors du coeur de l'Empire</French>
 		<German>[ICON_BULLET]+2 zus&#228;tzliche Stabilit&#228;tspunkte f&#252;r jede Stadt, die mindestens 15 Gel&#228;ndefelder von der Hauptstadt entfernt gegr&#252;ndet wurde</German>
 		<Italian>[ICON_BULLET]+2 punti stabilit&#224; addizionali per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
 		<Spanish>[ICON_BULLET]+2 puntos de estabilidad adicionales por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
