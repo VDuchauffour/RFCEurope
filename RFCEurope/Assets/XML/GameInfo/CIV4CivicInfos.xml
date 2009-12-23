@@ -79,10 +79,10 @@
 		</CivicInfo>
 		<CivicInfo> <!-- Feudal Monarchy-->
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
-			<Type>CIVIC_ELECTORATE</Type>
-			<Description>TXT_KEY_CIVIC_ELECTORATE</Description>
-			<Civilopedia>TXT_KEY_CIVIC_ELECTORATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_ELECTORATE</Strategy>
+			<Type>CIVIC_FEUDAL_MONARHCY</Type>
+			<Description>TXT_KEY_CIVIC_FEUDAL_MONARHCY</Description>
+			<Civilopedia>TXT_KEY_CIVIC_FEUDAL_MONARHCY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_FEUDAL_MONARHCY</Strategy>
 			<Button>Art/Interface/Buttons/Civics/Electorate.dds</Button>
 			<TechPrereq>TECH_VASSALAGE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -151,7 +151,7 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_ELECTORATE</WeLoveTheKing>
+			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_KING</WeLoveTheKing>
 		</CivicInfo>
 		<CivicInfo> <!-- Divine Monarchy -->
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
@@ -848,7 +848,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>-50</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>-33</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
@@ -1245,7 +1245,7 @@
 			<Button>Art/Interface/Buttons/Civics/Manorialism.dds</Button>
 			<TechPrereq>TECH_MANORIALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_LOW</Upkeep>
+			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -1321,12 +1321,12 @@
 			</ImprovementYieldChanges>
 			<WeLoveTheKing/>
 		</CivicInfo>
-		<CivicInfo> <!-- Guilds -->
+		<CivicInfo> <!-- Market Economy -->
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
-			<Type>CIVIC_GUILDS</Type>
-			<Description>TXT_KEY_CIVIC_GUILDS</Description>
-			<Civilopedia>TXT_KEY_CIVIC_GUILDS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_GUILDS_STRATEGY</Strategy>
+			<Type>CIVIC_MARKETS</Type>
+			<Description>TXT_KEY_CIVIC_MARKETS</Description>
+			<Civilopedia>TXT_KEY_CIVIC_MARKETS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_MARKETS_STRATEGY</Strategy>
 			<Button>,Art/Interface/Buttons/Civics/State_Property.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,5,3</Button>
 			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -2221,6 +2221,7 @@
 			<Description>TXT_KEY_CIVIC_COLONIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_COLONIALISM_HELP</Help>
 			<Button>,Art/Interface/Buttons/Civics/commonwealth.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,4</Button>
 			<TechPrereq>TECH_ASTRONOMY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -2253,7 +2254,7 @@
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>1</iTradeRoutes>
+			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
