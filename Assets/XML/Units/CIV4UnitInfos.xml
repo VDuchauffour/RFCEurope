@@ -9092,7 +9092,7 @@
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<TechTypes>
-			  <PrereqTech>TECH_STIRRUP</PrereqTech>
+			  <PrereqTech/>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses/>

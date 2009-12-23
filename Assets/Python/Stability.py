@@ -670,12 +670,15 @@ class Stability:
 
                             
         def onProjectBuilt(self, iPlayer, iProject):
-            
+                if (iProject >= con.iNumNotColonies):
+                    iExpansionBoost = 1
+                    self.setStability(iPlayer,iParExpansionE, True, iExpansionBoost)
+                    self.setStability(iPlayer, self.getStability(iPlayer)+iExpansionBoost)
+
                 #if (iProject <= con.iApolloProgram ): #no SS parts
                 #        self.setStability(iPlayer, self.getStability(iPlayer) + 1 )
                 #        self.setParameter(iPlayer, iParCitiesE, True, 2)
-                #        #print("Stability - project built", iPlayer)
-                pass
+                    print("Stability - project built", iPlayer)
 
 
 

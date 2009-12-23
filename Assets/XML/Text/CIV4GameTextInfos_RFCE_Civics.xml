@@ -31,16 +31,12 @@
 		<Russian/><Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ELECTORATE_STRATEGY</Tag>
-		<English>Boost to espionage; extra research and culture from specialists</English>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_STRATEGY</Tag>
+		<English>Lower unit costs and happiness from castles</English>
 		<French>Am&#233;liore l'Espionnage; bonus de recherche et culture depuis les sp&#233;cialistes</French><German/><Italian/><Spanish/><Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_WE_LOVE_ELECTORATE</Tag>
-		<English>"We Love the Electorate Day"</English>
-		<French>"Nous aimons le Jour des Elections"</French><German/><Italian/><Spanish/><Russian>"&#204;&#251; &#203;&#254;&#225;&#232;&#236; &#196;&#229;&#237;&#252; &#221;&#235;&#229;&#234;&#242;&#238;&#240;&#224;&#242;&#224;"</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
-		<English>Happiness from military units; culture from specialists</English>
+		<English>Happiness from military units; culture from specialists; faster great generals</English>
 		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French><German/><Italian/><Spanish/><Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian><Japanese/><Chinese/></TEXT>
     <TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
@@ -50,23 +46,23 @@
 		<English>"We Love the King Day"</English><French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
-		<English>Can use gold to rush production</English>
+		<English>Can use gold to rush production; +1 hammer from towns</English>
 		<French>Peut utiliser l'Or pour terminer la production</French><German/><Italian/><Spanish/><Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
-		<English>5 free units; new units +2 experience</English>
+		<English>Can levy units</English>
 		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French><German/><Italian/><Spanish/><Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
-		<English>Reduced cost to buildings; increased research cost. Non-state religion causes unrest</English>
+		<English>Unlimited priests and faster great people; unhappiness with non-state religions</English>
 		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French><German/><Italian/><Spanish/><Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
-		<English>Boost to research, towns, and great people. Unrest from military units.</English>
+		<English>Faster great people. Higher military support costs</English>
 		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French><German/><Italian/><Spanish/><Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
-		<English>+100% growth to cottages, hamlets, and villages.</English>
+		<English>+100% growth to cottages, hamlets, and villages; +2 gold from towns.</English>
 		<French>+100%% de croissance des cottages, hameaux et villages.</French><German/><Italian/><Spanish/><Russian>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
@@ -74,11 +70,11 @@
 		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French><German/><Italian/><Spanish/><Russian>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
-		<English>Extra commerce and production from towns.</English>
+		<English>Extra commerce and production from cities; penalty for other civs not adopting this</English>
 		<French>Amelioration du commerce et de la production depuis les villes</French><German/><Italian/><Spanish/><Russian>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
-		<English>Increased military unit production; -1 trade route, gold from farms</English>
+		<English>-1 trade route, gold from farms</English>
 		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French><German/><Italian/><Spanish/><Russian>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
@@ -86,8 +82,8 @@
 		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French><German/><Italian/><Spanish/><Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
-		<English>New units +2 experience; state religion makes people happy.</English>
-		<French>+2 XP pour les nouvelles unit&#233;s; religion d'&#233;tat rend le peuple heureux.</French><German/><Italian/><Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/>
+		<English>New units +3 experience</English>
+		<French>+3 XP pour les nouvelles unit&#233;s; religion d'&#233;tat rend le peuple heureux.</French><German/><Italian/><Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/>
 		<German/>
 		<Italian/>
 		<Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/></TEXT>
@@ -101,7 +97,7 @@ The word derives from traditional inherited divisions of the countryside reassig
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVIC_MARKETS_PEDIA</Tag>
 		<English>[TAB]Guilds evolved from various organizations of craftsmen, that tended to form associations based on their trades. By about 1100 European guilds (or gilds) began their medieval evolution into an approximate equivalent to modern-day business organizations such as institutes or consortiums. The guild system reached a mature state in Germany circa 1300 and held on in the German cities into the nineteenth century. The latest guilds to develop in Western Europe were the [gremios] of Hispania that signalled the progress of the Reconquista: Barcelona (1301), Valencia (1332) and Toledo (1426). Not all city economies were controlled by guilds; some cities were "free". Where guilds were in control they shaped labour, production and trade; they had strong controls over instructional capital, and the modern concepts of a lifetime progression of apprentice to craftsman, journeyer, and eventually to widely-recognized master and grandmaster began to emerge. As production became more specialized, trade guilds were divided and subdivided, eliciting the squabbles over jurisdiction that produced the paperwork by which economic historians trace their development: there were 101 trades in Paris by 1260, and earlier in the century the metalworking guilds of Nuremberg were already divided among dozens of independent trades, in the boom economy of the thirteenth century. In Ghent as in Florence the woolen textile industry developed as a congeries of specialized guilds. The appearance of the European guilds was tied to the emergent money economy, and to urbanization. Before this time it was not possible to run a money-driven organization, as commodity money was the normal way of doing business.</English>
 		<French>.</French>
 		<German>.</German>
@@ -215,7 +211,7 @@ Historically, the English were divided on the question of the origins and justif
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ELECTORATE_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_PEDIA</Tag>
 		<English>[TAB]An elective monarchy is a state in which the king or emperor is chosen from among an electorate, which is usually strictly limited in number and does not comprise a representative national assembly. In pre-modern Europe, this group was usually the nobility or the rulers of petty states nominally subject to a higher lord. [PARAGRAPH:2]The Holy Roman Emperor was elected by seven religious and secular rulers of significant Germanic states. Poland elected its kings, with the electorate being first a council and then the entire Polish nobility. Similar systems survive to the third millennium in Malaysia and Cambodia, and the Vatican's College of Cardinals is a theocratic version of the electorate.</English>
 		<French>.</French>
 		<German>.</German>
@@ -225,6 +221,14 @@ Historically, the English were divided on the question of the origins and justif
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_PEDIA</Tag>
 		<English>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself. [PARAGRAPH:2] The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
+		<English>+1 stability for each colony founded.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
