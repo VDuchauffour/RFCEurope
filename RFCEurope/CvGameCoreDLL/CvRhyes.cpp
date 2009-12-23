@@ -12,7 +12,7 @@ int *civSpreadFactor = NULL;
 
 // (dynamic civ names - not jdog's)
 wchar civDynamicNames[22][22][19]  = {
-//				//people		monarchy		monarchy ext		monarchy mod		monarchy ext mod		republic			communism			fascism				islam monarchy		islam republic			vas. Persia			vas. Rome			vas. Arabia			vas. Spain				vas. France			vas. England		vas. Germany			vas. Russia			vas. Mongolia			vas. Turkey			vas. Chi/Jap/Khm	vassal generic					
+//				//people		monarchy				monarchy ext		monarchy mod		monarchy ext mod		republic			communism			fascism				islam monarchy		islam republic			vas. Byzantium			vas. Frankia		  vas. Arabia/Cordoba		vas. Spain			vas. Norse/Sweden		vas. Venice			vas. Moscow/Kiev		vas. Germany			vas. England		vas. Austria		vas. Turkey				Vassal generic					
 //Burgundy
 	{	 L"TXT_KEY_DN_BUR00", L"TXT_KEY_DN_BUR01", L"TXT_KEY_DN_BUR02", L"TXT_KEY_DN_BUR03",  L"TXT_KEY_DN_BUR04",  L"TXT_KEY_DN_BUR05",  L"TXT_KEY_DN_BUR06",  L"TXT_KEY_DN_BUR07",  L"TXT_KEY_DN_BUR08",  L"TXT_KEY_DN_BUR09",  L"TXT_KEY_DN_BUR10",  L"TXT_KEY_DN_BUR11",  L"TXT_KEY_DN_BUR12",  L"TXT_KEY_DN_BUR13",  L"TXT_KEY_DN_BUR14",  L"TXT_KEY_DN_BUR15",  L"TXT_KEY_DN_BUR16",  L"TXT_KEY_DN_BUR17",  L"TXT_KEY_DN_BUR18",  L"TXT_KEY_DN_BUR19",  L"TXT_KEY_DN_BUR20",  L"TXT_KEY_DN_BUR21" },
 //Byzantium
