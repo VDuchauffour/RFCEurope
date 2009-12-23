@@ -34,7 +34,7 @@
 		<English>Burgundy</English>
 		<French>
 			<Text>Bourgogne</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
 		<German>
@@ -82,14 +82,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR00</Tag>
 		<English>Burgundian Peoples</English>
-		<French/>
+		<French>Peuplade Burgonde</French>
 		<German>Burgundische Völker</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR01</Tag>
 		<English>Kingdom of Burgundy</English>
-		<French/>
+		<French>Royaume de Bourgogne</French>
 		<German>Königreich Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -97,7 +97,7 @@
 		<TEXT>
 		<Tag>TXT_KEY_DN_BUR02</Tag>
 		<English>Kingdom of Burgundy</English>
-		<French/>
+		<French>Royaume de Bourgogne</French>
 		<German>Königreich Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -105,7 +105,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR03</Tag>
 		<English>Duchy of Burgundy</English>
-		<French/>
+		<French>Duché de Bourgogne</French>
 		<German>Herzogtum Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -113,7 +113,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR04</Tag>
 		<English>Duchy of Burgundy</English>
-		<French/>
+		<French>Duché de Bourgogne</French>
 		<German>Herzogtum Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -121,7 +121,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR05</Tag>
 		<English>Burgundian Republic</English>
-		<French/>
+		<French>R&#233;publique Bourguignonne</French>
 		<German>Burgundische Republik</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -129,7 +129,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR06</Tag>
 		<English>Burgundy Error</English>
-		<French/>
+		<French>Burgundy Error</French>
 		<German>Burgundy Error</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -137,7 +137,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR07</Tag>
 		<English>Burgundy Error</English>
-		<French/>
+		<French>Burgundy Error</French>
 		<German>Burgundy Error</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -145,7 +145,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR08</Tag>
 		<English>Sultanate of Burgundy</English>
-		<French/>
+		<French>Sultanat de Bourgogne</French>
 		<German>Sultanat Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -153,7 +153,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR09</Tag>
 		<English>Islamic Republic of Burgundy</English>
-		<French/>
+		<French>R&#233;publique Islamique de Bourgogne</French>		
 		<German>Islamische Republik Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -161,7 +161,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR10</Tag>
 		<English>Exarchate of Burgundy</English>
-		<French/>
+		<French>Exarchat de Bourgogne</French>
 		<German>Exarchat Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -169,7 +169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR11</Tag>
 		<English>French Duchy of Bourgogne</English>
-		<French/>
+		<French>Duch&#233; Fran&#231;ais de Bougogne</French>
 		<German>Französisches Herzogtum Bourgogne</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -177,7 +177,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR12</Tag>
 		<English>Emirate of Burgundy</English>
-		<French/>
+		<French>Emirat de Bourgogne</French>
 		<German>Emirat Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -185,7 +185,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR13</Tag>
 		<English>Spanish Burgundy</English>
-		<French/>
+		<French>Bourgnogne Espagnol</French>
 		<German>Spanisch-Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -193,7 +193,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR14</Tag>
 		<English>New Bornholm</English>
-		<French/>
+		<French>Nouveau Bornholm</French>
 		<German>Neu Bornholm</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -201,7 +201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR15</Tag>
 		<English>Venetian Burgundy</English>
-		<French/>
+		<French>Bourgogne V&#233;nitienne</French>
 		<German>Venezianisch-Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -209,7 +209,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR16</Tag>
 		<English>Russian Burgundy</English>
-		<French/>
+		<French>Bourgogne Russe</French>
 		<German>Russisch-Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -217,7 +217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR17</Tag>
 		<English>Lothringen</English>
-		<French/>
+		<French>Lotharingie</French>
 		<German>Lothringen</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -225,7 +225,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR18</Tag>
 		<English>County of Burgundy</English>
-		<French/>
+		<French>Comt&#233; de Bourgogne</French>
 		<German>County Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -233,7 +233,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR19</Tag>
 		<English>Habsburg Burgundy</English>
-		<French/>
+		<French>Bourgogne Habsbourg</French>
 		<German>Habsburger Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -241,7 +241,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR20</Tag>
 		<English>Principality of Burgonya</English>
-		<French/>
+		<French>Principaut&#233; de Burgonya</French>
 		<German>Fürstentum Burgonya</German>
 		<Italian/><Spanish/>
 		<Russian/>
@@ -249,7 +249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR21</Tag>
 		<English>Province of Burgundy</English>
-		<French/>
+		<French>Province de Bourgogne</French>
 		<German>Provinz Burgund</German>
 		<Italian/><Spanish/>
 		<Russian/>

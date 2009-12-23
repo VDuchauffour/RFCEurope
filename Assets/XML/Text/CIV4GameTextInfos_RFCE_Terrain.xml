@@ -32,7 +32,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_APIARY</Tag>
 		<English>Build Apiary</English>
-		<French>Construire un rucher</French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian><Japanese/><Chinese/></TEXT>
+		<French>Construire une ruche</French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARSH</Tag>
 		<English>Marsh</English>

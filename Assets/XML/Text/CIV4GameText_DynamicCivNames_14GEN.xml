@@ -82,112 +82,112 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN00</Tag>
 		<English>Genoese Peoples</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade G&#233;noise</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN01</Tag>
 		<English>Duchy of Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN02</Tag>
 		<English>Most Serene Duchy of Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; Serein de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN03</Tag>
 		<English>Duchy of Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN04</Tag>
 		<English>Genoese Empire</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Empire G&#233;nois</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN05</Tag>
 		<English>Most Serene Republic of Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Sereinne de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN06</Tag>
 		<English>Placeholder Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN07</Tag>
 		<English>Placeholder Error</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN08</Tag>
 		<English>Sultanate of Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN09</Tag>
 		<English>Genoese Islamic Republic</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN10</Tag>
 		<English>Exarchate of West Italy</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de </French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN11</Tag>
 		<English>Duchy of Savoie</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de Savoie</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN12</Tag>
 		<English>Emirate of Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de G&#234;nes</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN13</Tag>
 		<English>Spanish Mediterranean</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>M&#233;diterran&#233;e Espagnol</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN14</Tag>
 		<English>Norse West Lombardy</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Lombardie-Ouest Nordique</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN15</Tag>
 		<English>Venetian West Italy</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Italie Ouest V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN16</Tag>
 		<English>Russian Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>G&#234;nes Russe</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN17</Tag>
 		<English>German Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>G&#234;nes Allemande</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN18</Tag>
 		<English>County of Liguria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233; de Ligurie</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN19</Tag>
 		<English>Habsburg Genoa</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>G&#234;nes Habsbourg</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN20</Tag>
 		<English>Principality of Ligurya</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Ligurya</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN21</Tag>
 		<English>Province of Liguria</English>
-		<French/><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Ligurie</French><German/><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GENOA_PEDIA</Tag>
