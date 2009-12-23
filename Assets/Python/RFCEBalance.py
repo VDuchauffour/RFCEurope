@@ -113,9 +113,8 @@ class RFCEBalance:
 		#void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-		# Sedna17: "Base"/no-effect tech rate is now effectively 150
 		gc.setProductionModifiers(iBurgundy,  150, 100, 100, 120 )
-		gc.setProductionModifiers(iByzantium, 400, 200, 200, 170 )
+		gc.setProductionModifiers(iByzantium, 400, 200, 200, 200 )
 		gc.setProductionModifiers(iFrankia,   150, 100, 100, 120 )
 		gc.setProductionModifiers(iArabia,    150, 100, 100, 150 )
 		gc.setProductionModifiers(iBulgaria,  150, 100, 100, 120 )
@@ -129,9 +128,9 @@ class RFCEBalance:
 		gc.setProductionModifiers(iPoland,    150, 150, 120, 150 )
 		gc.setProductionModifiers(iMoscow,     70,  70, 100, 150 )
 		gc.setProductionModifiers(iGenoa,     150, 100, 100, 120 )
-		gc.setProductionModifiers(iEngland,   150, 100, 100, 120 )
-		gc.setProductionModifiers(iPortugal,  135, 100, 100, 120 )
-		gc.setProductionModifiers(iAustria,   110,  90, 100, 120 )
+		gc.setProductionModifiers(iEngland,   150, 100, 100, 110 )
+		gc.setProductionModifiers(iPortugal,  135, 100, 100, 110 )
+		gc.setProductionModifiers(iAustria,   110,  90, 100, 110 )
 		gc.setProductionModifiers(iTurkey,     70,  70, 100, 100 )
 		gc.setProductionModifiers(iSweden,     75,  60, 100, 100 )
 		gc.setProductionModifiers(iDutch,      75,  50, 100,  80 )
