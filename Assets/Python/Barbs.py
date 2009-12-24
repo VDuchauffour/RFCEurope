@@ -217,8 +217,8 @@ class Barbs:
 		#Seljuks 1070
 		if (iGameTurn>=con.i1050AD and iGameTurn < con.i1080AD):
 			#Middle East
-			self.spawnUnits( iBarbarian, (95,15),(99,28), con.iSeljuk, 3 + iHandicap*2, iGameTurn,2,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (95,15),(99,28), con.iSeljuk, 3 + iHandicap*2, iGameTurn,2,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 3 + iHandicap*2, iGameTurn,2,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 3 + iHandicap*2, iGameTurn,2,1,utils.outerInvasion,1)
 			
 		#Mongols! 1250
 		if (iGameTurn >=con.i1236AD and iGameTurn < con.i1284AD):
