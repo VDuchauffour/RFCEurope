@@ -114,7 +114,7 @@ class RFCEBalance:
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
 		gc.setProductionModifiers(iBurgundy,  150, 100, 100, 120 )
-		gc.setProductionModifiers(iByzantium, 400, 200, 200, 200 )
+		gc.setProductionModifiers(iByzantium, 250, 200, 200, 250 )
 		gc.setProductionModifiers(iFrankia,   150, 100, 100, 120 )
 		gc.setProductionModifiers(iArabia,    150, 100, 100, 150 )
 		gc.setProductionModifiers(iBulgaria,  150, 100, 100, 120 )
@@ -135,11 +135,11 @@ class RFCEBalance:
 		gc.setProductionModifiers(iSweden,     75,  60, 100, 100 )
 		gc.setProductionModifiers(iDutch,      75,  50, 100,  80 )
 		gc.setProductionModifiers(iPope,      300, 200, 100, 150 )
-		gc.setProductionModifiers(iIndependent, 150, 100, 500, 200 )
-		gc.setProductionModifiers(iIndependent2, 150, 100, 500, 200 )
-		gc.setProductionModifiers(iIndependent3, 150, 100, 500, 200 )
-		gc.setProductionModifiers(iIndependent4, 150, 100, 500, 200 )
-		gc.setProductionModifiers(iBarbarian, 150, 100, 1000, 250 )
+		gc.setProductionModifiers(iIndependent, 150, 100, 500, 250 )
+		gc.setProductionModifiers(iIndependent2, 150, 100, 500, 250 )
+		gc.setProductionModifiers(iIndependent3, 150, 100, 500, 250 )
+		gc.setProductionModifiers(iIndependent4, 150, 100, 500, 250 )
+		gc.setProductionModifiers(iBarbarian, 150, 100, 1000, 350 )
 
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )

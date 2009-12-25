@@ -56,18 +56,6 @@
 			<DefaultBuilding>BUILDING_ARCHERY_RANGE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- SIEGE_WORKSHOP -->
-			<Type>BUILDINGCLASS_SIEGE_WORKSHOP</Type>
-			<Description>TXT_KEY_BUILDING_SIEGE_WORKSHOP</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_SIEGE_WORKSHOP</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- STABLE -->
 			<Type>BUILDINGCLASS_STABLE</Type>
 			<Description>TXT_KEY_BUILDING_STABLE</Description>
@@ -671,18 +659,6 @@
 			<DefaultBuilding>BUILDING_ISLAMIC_CATHEDRAL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- ISLAMIC_RELIQUARY -->
-			<Type>BUILDINGCLASS_ISLAMIC_RELIQUARY</Type>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_RELIQUARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_ISLAMIC_RELIQUARY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- ISLAMIC_SCHOOL -->
 			<Type>BUILDINGCLASS_ISLAMIC_SCHOOL</Type>
 			<Description>TXT_KEY_BUILDING_ISLAMIC_SCHOOL</Description>
@@ -765,18 +741,6 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>1</bMonument>
 			<DefaultBuilding>BUILDING_CATHOLIC_RELIQUARY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CATHOLIC_SCHOOL -->
-			<Type>BUILDINGCLASS_CATHOLIC_SCHOOL</Type>
-			<Description>TXT_KEY_BUILDING_CATHOLIC_SCHOOL</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_CATHOLIC_SCHOOL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- CATHOLIC_MONASTERY -->
@@ -873,18 +837,6 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>1</bMonument>
 			<DefaultBuilding>BUILDING_ORTHODOX_RELIQUARY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- ORTHODOX_SCHOOL -->
-			<Type>BUILDINGCLASS_ORTHODOX_SCHOOL</Type>
-			<Description>TXT_KEY_BUILDING_ORTHODOX_SCHOOL</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_ORTHODOX_SCHOOL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- ORTHODOX_MONASTERY -->
