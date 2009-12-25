@@ -2861,8 +2861,6 @@ class RiseAndFall:
                         #iRandNum = gc.getSorenRandNum(100, 'Reformation of a City')
                         if (pCity.getPopulation() > iKeepCatholicismBound ):
                                 pCity.setHasReligion(con.iProtestantism,True,True,False)
-                                if(pCity.hasBuilding(con.iCatholicSchool) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicSchool, False)
                                 if(pCity.hasBuilding(con.iCatholicReliquary) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
                                         pCity.setHasRealBuilding(con.iCatholicReliquary, False)
                                 if(pCity.hasBuilding(con.iCatholicScriptorium) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
@@ -2885,8 +2883,6 @@ class RiseAndFall:
                         elif ( bForceConvertSmall or gc.getGame().getSorenRandNum(100, 'Reformation of a City') < lReformationMatrix[pCity.getOwner()] ):
                                 pCity.setHasReligion(con.iProtestantism,True,True,False)
                                 iFaith += 1
-                                if(pCity.hasBuilding(con.iCatholicSchool)):
-                                        pCity.setHasRealBuilding(con.iCatholicSchool, False)
                                 if(pCity.hasBuilding(con.iCatholicReliquary)):
                                         pCity.setHasRealBuilding(con.iCatholicReliquary, False)
                                 if(pCity.hasBuilding(con.iCatholicScriptorium)):
