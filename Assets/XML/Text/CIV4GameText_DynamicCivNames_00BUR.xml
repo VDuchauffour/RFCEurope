@@ -39,7 +39,7 @@
 		</French>
 		<German>
 			<Text>Burgund</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
@@ -64,7 +64,7 @@
 		</French>
 		<German>
 			<Text>Burgundisch:burgundischen:burgundische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
