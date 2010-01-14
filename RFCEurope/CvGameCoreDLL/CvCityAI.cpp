@@ -2381,8 +2381,8 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 
 
 		// 3Miro
-	switch (getOwnerINLINE())
-	{
+	//switch (getOwnerINLINE())
+	//{
 	/*case EGYPT:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
@@ -2579,9 +2579,9 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK_AIR] *= 2;
 		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 2;
 		break;*/
-	default:
-		break;
-	}
+	//default:
+	//	break;
+	//}
 
 	//Rhye - end
 
@@ -4987,6 +4987,13 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 	};
 	//iValue *= colonyAIModifier[ getOwner() ];
 	//iValue /= 100;
+
+	// 3MiroAI: make the AI aware of the projects that unlock other projects
+	for ( iI = 0; iI < GC.getNumProjectInfos(); iI++ ){
+		if ( GC.getProjectInfo( eProject ).getPrereqProject( (ProjectTypes) iI ) > GET_TEAM(getTeam()).getProjectCount((ProjectTypes)iI) ){
+			iValue += 10;
+		};
+	};
 
 	if (GC.getProjectInfo(eProject).getNukeInterception() > 0)
 	{
