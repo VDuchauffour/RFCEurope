@@ -1494,7 +1494,7 @@ class RiseAndFall:
                 iNewUnits = 2
                 if (self.getLatestRebellionTurn(iDeadCiv) > 0):
                         iNewUnits = 4
-                self.setLatestRebellionTurn(iDeadCiv, iGameTurn)
+                self.setLatestRebellionTurn(iDeadCiv, gc.getGame().getGameTurn() )
                 bHuman = False
                 
                 print ("RESURRECTION", gc.getPlayer(iDeadCiv).getCivilizationAdjective(0))
