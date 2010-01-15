@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Bulgaren:die Bulgaren:den Bulgaren</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Bulgarien</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -55,7 +55,6 @@
 		<Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
-		<!-- 3Miro: Persia = Bulgaria -->
 		<Tag>TXT_KEY_CIV_BULGARIA_ADJECTIVE</Tag>
 		<English>Bulgarian</English>
 		<French>
@@ -64,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Bulgarisch:bulgarischen:bulgarische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -83,120 +82,164 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL00</Tag>
 		<English>Bulgar Peoples</English>
-		<French>Peuplade Bulgare</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Bulgare</French>
+		<German>Bulgarische Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL01</Tag>
 		<English>Kingdom of Bulgaria</English>
-		<French>Royaume de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Bulgarie</French>
+		<German>Königreich Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL02</Tag>
 		<English>First Bulgarian Empire</English>
-		<French>Premier Empire Bulgare</French><German/><Italian/><Spanish/><Russian/>
+		<French>Premier Empire Bulgare</French>
+		<German>Erstes Bulgarisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL03</Tag>
 		<English>Tsardom of Bulgaria</English>
-		<French>Tsarie de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Tsarie de Bulgarie</French>
+		<German>Zarenreich Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL04</Tag>
 		<English>Second Bulgarian Empire</English>
-		<French>Second Empire Bulgare</French><German/><Italian/><Spanish/><Russian/>
+		<French>Second Empire Bulgare</French>
+		<German>Zweites Bulgarisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL05</Tag>
 		<English>Republic of Bulgaria</English>
-		<French>R&#233;publique de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique de Bulgarie</French>
+		<German>Republik Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL08</Tag>
 		<English>Islamic Bulgarian Empire</English>
-		<French>Empire Islamique Bulgare</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Islamique Bulgare</French>
+		<German>Islamisches Bulgarisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL09</Tag>
 		<English>Islamic Republic of Bulgaria</English>
-		<French>R&#233;publique Islamique Bulgare</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique Bulgare</French>
+		<German>Islamisches Bulgarisches Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL10</Tag>
 		<English>Theme of Bulgaria</English>
-		<French>Thème de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Thème de Bulgarie</French>
+		<German>Byzantinisches Thema Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL11</Tag>
 		<English>Duchy of Bulgaria</English>
-		<French>Duché de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duché de Bulgarie</French>
+		<German>Herzogtum Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL12</Tag>
 		<English>Emirate of Bulgaria</English>
-		<French>Emirat de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Bulgarie</French>
+		<German>Emirat Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL13</Tag>
 		<English>Spanish Kingdom of Bulgaria</English>
-		<French>Royaume Espagnole de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnole de Bulgarie</French>
+		<German>Spanisches Königreich Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL14</Tag>
 		<English>Varangian Bulgaria</English>
-		<French>Bulgarie Viking</French><German/><Italian/><Spanish/><Russian/>
+		<French>Bulgarie Viking</French>
+		<German>Warägisch-Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL15</Tag>
 		<English>Venetian Bulgaria</English>
-		<French>Bulgarie V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Bulgarie V&#233;nitienne</French>
+		<German>Venezianisch-Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL16</Tag>
 		<English>Principality of Bulgaria</English>
-		<French>Principaut&#233; de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Bulgarie</French>
+		<German>Fürstentum Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL17</Tag>
 		<English>German Bulgaria</English>
-		<French>Bulgarie Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Bulgarie Allemande</French>
+		<German>Deutsch-Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL18</Tag>
 		<English>Counties of Bulgaria</English>
-		<French>Comtés de la Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comtés de la Bulgarie</French>
+		<German>Counties Bulgariens</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL19</Tag>
 		<English>Habsburg Bulgaria</English>
-		<French>Bulgarie Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Bulgarie Habsbourg</French>
+		<German>Habsburger Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL20</Tag>
 		<English>Principality of Rumelia</English>
-		<French>Principaut&#233; de Roum&#233;lie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Roum&#233;lie</French>
+		<German>Fürstentum Rumelia</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL21</Tag>
 		<English>Province of Bulgaria</English>
-		<French>Province de Bulgarie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Bulgarie</French>
+		<German>Provinz Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BULGARIA_PEDIA</Tag>
 		<English>[TAB]The Bulgars originally came from Central Asia, 'somewhere east of the Black Sea,' near modern day Kazakhstan and were occasional allies of the Huns. They began sporadic service with the Byzantines asmercenaries in the late 5th cent., and by the time of Emperor Justinian I were actually administering some towns in the Empire, defending them against other Bulgars and nomadic tribes from the east. The Bulgars had a falling outwith the Empire, retreated to the steppes, and were next heard from when they joined the Gepids and Lombards in invading Italy. Around 600 AD, the Bulgars had returned and conquered the Slavic area of the Balkans controlled bythe Byzantines. The Byzantine Empire recognized the first Bulgarian Empire in 681 AD, and this nation lasted until 1081 AD. 
-[TAB]Even though the Bulgars ruled this area with an iron fist, they ended up assimilating much of the Slavic language and culture and eventually would mingle so much with their subjects that eventually it was impossible to determine who was Bulgar and who was Slav. This interbreeding with their Slavic subjects did not dull their ferocity however, and during the Middle Ages Bulgaria was a great military power. The Bulgars fought many wars against the Byzantine Empire, their other neighbors, and nomadic invaders. By 865 AD, Czar Boris I had converted to Christianity and established an independent Bulgarian branch of the Eastern Orthodox church and adopted the Cyrillic alphabet as the official state language, and this alphabet and church spread from Bulgaria to the rest of eastern Europe and then into Russia. Boris' son, Czar Simeon I (893-927 AD) was one of Bulgaria's greatest rulers and during his reign, Bulgaria flourished as a center of Slavic culture and learning. As befitted his warrior heritage,
-[TAB]Simeon also conquered many new territories and at his death, Bulgaria stretched from the Black Sea to the Adriatic. After Simeon's death, Bulgaria waned in power, eventually being conquered by the Byzantines. After almost two hundred years of rule by the Byzantines, there followed a two hundred year second Bulgarian Empire that was, in turn, conquered by the Ottoman Empire.</English>
+[TAB]Even though the Bulgars ruled this area with an iron fist, they ended up assimilating much of the Slavic language and culture and eventually would mingle so much with their subjects that eventually it was impossible to determine who was Bulgar and who was Slav. This interbreeding with their Slavic subjects did not dull their ferocity however, and during the Middle Ages Bulgaria was a great military power. The Bulgars fought many wars against the Byzantine Empire, their other neighbors, and nomadic invaders. By 865 AD, Czar Boris I had converted to Christianity and established an independent Bulgarian branch of the Eastern Orthodox church and adopted the Cyrillic alphabet as the official state language, and this alphabet and church spread from Bulgaria to the rest of eastern Europe and then into Russia. Boris' son, Czar Simeon I (893-927 AD) was one of Bulgaria's greatest rulers and during his reign, Bulgaria flourished as a center of Slavic culture and learning. As befitted his warrior heritage, Simeon also conquered many new territories and at his death, Bulgaria stretched from the Black Sea to the Adriatic. After Simeon's death, Bulgaria waned in power, eventually being conquered by the Byzantines. After almost two hundred years of rule by the Byzantines, there followed a two hundred year second Bulgarian Empire that was, in turn, conquered by the Ottoman Empire.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Die Bulgaren kamen ursprünglich aus Zentralasien, "irgendwo östlich des Schwarzen Meeres", nahe dem heutigen Kasachstan und waren gelegentlich Alliierte der Hunnen. Ende des fünften Jahrhunderts fingen sie vereinzelt an, Byzanz als Söldner zu dienen, und zur Zeit Kaiser Justinians I. verwalteten sie sogar einige Städte im Reich, die sie gegen andere Bulgaren und nomadische Stämme aus dem Osten verteidigten. Die Bulgaren hatten einen Fall außerhalb des Reichs, zogen sich in die Steppe zurück und wurden zum nächsten Mal gehört, als sie zusammen mit den Gepiden und den Lombarden in Italien einfielen. Um 600 n. Chr. kehrten die Bulgaren um und eroberten das slawische Gebiet des Balkans, das von Byzanz kontrolliert wurde. Das Byzantinische Reich erkannte das Erste Bulgarische Reich 681 n. Chr. an und diese Nation dauerte bis 1081 an.
+[TAB]Obwohl die Bulgaren dieses Gebiet mit eiserner Faust regierten, nahmen sie letztendlich viel von der slawischen Sprache und Kultur an und vermischten sich derart mit den Slawen, dass es unmöglich war, zu unterscheiden, wer Bulgare und wer Slawe war. Diese Vermischung mit dem slawischen Volk  stumpfte ihre Wildheit jedoch nicht ab und während des Mittelalters war Bulgarien eine große militärische Macht. Die Bulgaren kämpften mehrfach gegen das Byzantinische Reich, ihre anderen Nachbarn und nomadische Eindringlinge. 865 konvertierte Zar Boris I. zum Christentum und etablierte einen unabhängigen bulgarischen Ableger der Östlich-Orthodoxen Kirche und übernahm das Kyrillische Alphabet in die offizielle Amtssprache. Dieses Alphabet und diese Kirche breitete sich von Bulgarien zum Rest Osteuropas und dann nach Russland aus. Boris' Sohn, Zar Simeon I. (893-927) war einer von Bulgariens größten Herrschern und während seiner Herrschaft blühte Bulgarien als ein Zentrum slawischer Kultur und Bildung auf. Geziemend seinem kriegerischen Erbe, eroberte Simeon auch viele Gebiete und zu seinem Tod erstreckte sich Bulgarien vom Schwarzen Meer bis zur Adria. Nach Simeons Tod nahm Bulgariens Macht ab und wurde letztendlich von den Byzantinern erobert. Nach fast 200 Jahren der byzantinischen Herrschaft folgte 200 Jahre lang ein Zweites Bulgarisches Reich, das wiederum vom Osmanischen Reich erobert wurde.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>

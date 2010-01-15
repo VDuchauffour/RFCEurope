@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Kiewer:Die Kiewer:den Kiewern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Kiewer Rus</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Kiewisch:kiewer:kiewer</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -82,112 +82,156 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE00</Tag>
 		<English>Kievan Peoples</English>
-		<French>Peuplade Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Kiev</French>
+		<German>Kiewer Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE01</Tag>
 		<English>Kievan Rus'</English>
-		<French>Rus' de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Rus' de Kiev</French>
+		<German>Kiewer Rus</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE02</Tag>
 		<English>Kievan Rus'</English>
-		<French>Rus' de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Rus' de Kiev</French>
+		<German>Kiewer Rus</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE03</Tag>
 		<English>Kievan Russia</English>
-		<French>Petite Russie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Petite Russie</French>
+		<German>Kiewer Russland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE04</Tag>
 		<English>Kievan Russia</English>
-		<French>Petite Russie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Petite Russie</French>
+		<German>Kiewer Russland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE05</Tag>
 		<English>Kievan Republic</English>
-		<French>R&#233;publique de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique de Kiev</French>
+		<German>Kiewer Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE08</Tag>
 		<English>Sultanate of Kiev</English>
-		<French>Sultanat de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de Kiev</French>
+		<German>Sultanat Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE09</Tag>
 		<English>Kievan Islamic Republic</English>
-		<French>R&#233;publique Islamique de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique de Kiev</French>
+		<German>Kiewer Islamische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE10</Tag>
 		<English>Exarchate of Kiev</English>
-		<French>Exarchat de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Kiev</French>
+		<German>Exarchat Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE11</Tag>
 		<English>Duchy of Kiev</English>
-		<French>Duch&#233; de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de Kiev</French>
+		<German>Herzogtum Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE12</Tag>
 		<English>Emirate of Kiev</English>
-		<French>Emirat de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Kiev</French>
+		<German>Emirat Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE13</Tag>
 		<English>Spanish Kiev</English>
-		<French>Kiev Espagnol</French><German/><Italian/><Spanish/><Russian/>
+		<French>Kiev Espagnol</French>
+		<German>Spanisch-Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE14</Tag>
 		<English>Varangian Kiev</English>
-		<French>Kiev Viking</French><German/><Italian/><Spanish/><Russian/>
+		<French>Kiev Viking</French>
+		<German>Warägisch-Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE15</Tag>
 		<English>Venetian Kiev</English>
-		<French>Kiev V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Kiev V&#233;nitienne</French>
+		<German>Venezianisch-Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE16</Tag>
 		<English>South Russia</English>
-		<French>Russie du Sud</French><German/><Italian/><Spanish/><Russian/>
+		<French>Russie du Sud</French>
+		<German>Süd Russland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE17</Tag>
 		<English>German Kiev</English>
-		<French>Kiev Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Kiev Allemande</French>
+		<German>Deutsch-Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE18</Tag>
 		<English>Counties of the Ukraine</English>
-		<French>Comt&#233;es d'Ukraine</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;es d'Ukraine</French>
+		<German>Counties Ukraines</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE19</Tag>
 		<English>Habsburg Kiev</English>
-		<French>Kiev Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Kiev Habsbourg</French>
+		<German>Habsburger Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE20</Tag>
 		<English>Principality of Kiev</English>
-		<French>Principaut&#233; de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Kiev</French>
+		<German>Fürstentum Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE21</Tag>
 		<English>Province of Kiev</English>
-		<French>Province de Kiev</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Kiev</French>
+		<German>Provinz Kiew</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_KIEV_PEDIA</Tag>
@@ -199,7 +243,14 @@
 [TAB]Kievan Rus was not able to maintain its position as a powerful and prosperous state, in part because of the amalgamation of disparate lands under the control of a ruling clan. As the members of that clan became more numerous, they identified themselves with regional interests rather than with the larger patrimony. Thus, the princes fought among themselves, frequently forming alliances with outside groups such as the Polovtsians, Poles, and Hungarians. During the years from 1054 to 1224 no fewer than 64 principalities had a more or less ephemeral existence, 293 princes put forward succession claims, and their disputes led to 83 civil wars.
 [TAB]The Crusades brought a shift in European trade routes that accelerated the decline of Kievan Rus. In 1204 the forces of the Fourth Crusade sacked Constantinople, making the Dnieper trade route marginal. As it declined, Kievan Rus splintered into many principalities and several large regional centers. The three most powerful of them were the Halych-Volhynia (eventually conquered by Poland and Lithuania), Novgorod Republic (later incorporated into Muscovy) and Vladimir-Suzdal, which gradually evolved into the Grand Duchy of Moscow.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Das Volk der Rus beherrschten seit dem achten Jahrhundert wahrscheinlich das, was jetzt das nordwestliche Russland ist. Im frühen neunten Jahrhundert wurden sie lose organisiert unter dem Khanat der Rus, der als ein Vorgänger-Staat der Kiewer Rus betrachtet werden kann. Gemäß der Primären Chronik, der frühsten Chronik der Kiewer Rus, setzte sich ungefähr 860 zuerst ein Waräger mit dem Namen Rurik in Novgorod, bevor er seine Autorität südlich nach Kiew ausweitete. 
+[TAB]Diese Waräger siedelten in Ladoga, zogen dann südwärts nach Novgorod und erreichten schließlich Kiew, den Chasaren, die von den Kiewern Tribut forderten, ein Ende setzend. Die Kiewer Rus wurde von Prinz Oleg ungefähr 880 gegründet. Während der nächsten fünfunddreißig Jahre unterwarfen Oleg und seine Krieger die zahlreichen östlichen finnischen und slawischen Stämme. 907 führte Oleg einen Angriff gegen Konstantinopel, und 911 unterzeichnete er als ein gleichwertiger Partner einen kommerziellen Vertrag mit dem Byzantinischen Reich. Der neue Kiewer Staat gedieh, weil er einen reichen Bestand an Pelzen, Bienenwachs und Honig für den Export hatte, und weil er drei Haupthandelswege Osteuropas kontrollierte: Der Wolga Handelsweg von der Ostsee zum Orient, den Dnjeper-Handelsweg von der Ostsee zum Schwarzen Meer, und den Handelsweg von den Chasaren zu den Deutschen.
+[TAB]Bis zur Herrschaft Swjatoslaws (945-972) hatten die Kiewer Führer die slawische Religion und slawische Namen angenommen, aber ihre Druschina (persönliches Heergefolge eines russischen Fürsten) bestand noch in erster Linie aus Skandinaviern. Die Eroberungen Swjatoslaws waren erstaunlich: Er fügte zwei seiner stärksten Nachbarn (das chasarische und das bulgarische Reich, das bald nach seinen Überfällen zusammenbrach) tödliche Schläge zu.
+[TAB]Das Gebiet Kiews beherrschte den Staat der Kiewer Rus für die nächsten zwei Jahrhunderte. Der Großfürst Kiews kontrollierte die Länder um die Stadt, und seine theoretisch untergeordneten Verwandten herrschten in anderen Städten und zahlten ihm Tribut.Der Zenit der Macht des Staates kam während der Herrschaft von Fürst Wladimir dem Großen (980-1015) und Fürst Yaroslav des Weisen (1019-1054). Beide Herrscher setzten die stetige Expansion der Kiewer Rus fort, die unter Oleg begonnen hatte.
+[TAB]Wladimir kam in Kiew an die Macht nach dem Tod seines Vaters Swjatoslaw I.  972 und nachdem er seinen Halbbruders Yaropolk 980 besiegte. Als Fürst Kiews war die bemerkenswerteste Errungenschaft Wladimirs die Christianisierung der Kiewer Rus, was 988 begann.
+[TAB]Die Kiewer Rus war nicht im Stande, seine Position als ein starker und wohlhabender Staat aufrecht zu erhalten, zum Teil aufgrund des Zusammenschlusses von ganz verschiedenen Ländern unter der Kontrolle eines herrschenden Klans. Als die Mitglieder dieses Klans zahlreicher wurden, identifizierten diese sich eher mit Regionalinteressen als mit dem größeren Erbgut.
+[TAB]So bekämpften die Fürsten sich gegenseitig, oftmals Bündnisse mit äußeren Gruppen wie die Kyptschaken, die Polen, und die Ungarn eingehend. Von 1054 bis 1224 hatten nicht weniger als 64 Fürstentümer eine mehr oder weniger kurzlebige Existenz, 293 Fürsten brachten Erbansprüche vor und ihre Konflikte führten zu 83 Bürgerkriegen.
+[TAB]Die Kreuzzüge führten zu einer Verschiebung der europäischen Handelswege, die den Niedergang der Kiewer Rus beschleunigten. 1204 nahmen die Kräfte des Vierten Kreuzzugs Konstantinopel ein und machten den Dnjeper-Handel marginal. Als der Handel abnahm, zersplitterte die Kiewer Rus in viele Fürstentümer und mehrere große Regionalzentren. Die drei stärksten waren unter ihnen Halytsch-Wolhynien (schließlich erobert von Polen und Litauen), die Republik Novgorod (später eingegliedert in das Großfürstentum Moskau) und das Fürstentum Wladimir-Susdal, das sich allmählich zum Großfürstentum Moskau entwickelte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
