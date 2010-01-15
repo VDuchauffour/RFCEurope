@@ -13,17 +13,17 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Araber:Die Araber:den Arabern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
 		<Italian>
-			<Text>I Persiani</Text>
+			<Text>Gli Arabi</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los &#193;rabes</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -38,17 +38,17 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Arabien</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Persia</Text>
+			<Text>L'Arabia:l'Arabia:dell'Arabia:d'Arabia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Arabia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -63,17 +63,17 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Arabisch:arabischen:arabische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
+			<Text>Arabo:Araba:Arabi:Arabe</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>&#225;rabe:&#225;rabe:&#225;rabes:&#225;rabes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -82,112 +82,167 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA00</Tag>
 		<English>Bedouin</English>
-		<French>Peuplade B&#233;douine</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade B&#233;douine</French>
+		<German>Beduinen</German>
+		<Italian>Popoli Beduini</Italian>
+		<Spanish>Pueblos Beduinos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA01</Tag>
 		<English>Abbasid State of Arabia</English>
-		<French>Etat Abbasside d'Arabie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Etat Abbasside d'Arabie</French>
+		<German>Abbasidischer Staat Arabien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA02</Tag>
 		<English>Abbasid State of Arabia</English>
-		<French>Etat Abbasside d'Arabie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Etat Abbasside d'Arabie</French>
+		<German>Abbasidischer Staat Arabien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA03</Tag>
 		<English>Arabian Empire</English>
-		<French>Empire Arabe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Arabe</French>
+		<German>Arabisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA04</Tag>
 		<English>Arabian Empire</English>
-		<French>Empire Arabe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Arabe</French>
+		<German>Arabisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA05</Tag>
 		<English>Arab Republic</English>
-		<French>R&#233;publique Arabe</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Arabe</French>
+		<German>Arabische Republik</German>
+		<Italian>Repubblica dell'Arabia</Italian>
+		<Spanish>Rep&#250;blica de Arabia</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA06</Tag>
 		<English>Arabia Error</English>
-		<French>Arabia Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Arabia Error</French>
+		<German>Arabia Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA07</Tag>
 		<English>Arabia Error</English>
-		<French>Arabia Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Arabia Error</French>
+		<German>Arabia Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA08</Tag>
 		<English>Caliphate of Arabia</English>
-		<French>Califat d'Arabie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Califat d'Arabie</French>
+		<German>Kalifat Arabien</German>
+		<Italian>Califfato d'Arabia</Italian>
+		<Spanish>Califato de Arabia</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA09</Tag>
 		<English>Arab Islamic Republic</English>
-		<French>R&#233;publique Islamique Arabe</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique Arabe</French>
+		<German>Arabische Islamische Republik</German>
+		<Italian>Repubblica Islamica dell'Arabia</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica de Arabia</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA10</Tag>
 		<English>Exarchate of Arabia</English>
-		<French>Exarchat d'Arabie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat d'Arabie</French>
+		<German>Exarchat Arabien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA11</Tag>
 		<English>French Levant</English>
-		<French>Levant fran&#231;ais</French><German/><Italian/><Spanish/><Russian/>
+		<French>Levant fran&#231;ais</French>
+		<German>Französisch-Levante</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA12</Tag>
 		<English>Emirate of Arabia</English>
-		<French>Emirat d'Arabie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat d'Arabie</French>
+		<German>Emirat Arabien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA13</Tag>
 		<English>Spanish Levant</English>
-		<French>Levant Espagnol</French><German/><Italian/><Spanish/><Russian/>
+		<French>Levant Espagnol</French>
+		<German>Spanisch-Levante</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA14</Tag>
 		<English>Norse Arabia</English>
-		<French>Arabie Nordiste</French><German/><Italian/><Spanish/><Russian/>
+		<French>Arabie Nordiste</French>
+		<German>Nordisch-Arabien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA15</Tag>
 		<English>Venetian Levant</English>
-		<French>Levant V#233;nitien</French><German/><Italian/><Spanish/><Russian/>
+		<French>Levant V#233;nitien</French>
+		<German>Venezianisch-Levante</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA16</Tag>
 		<English>Russian Levant</English>
-		<French>Levant Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Levant Russe</French>
+		<German>Russisch-Levante</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA17</Tag>
 		<English>German Levant</English>
-		<French>Levant Allemand</French><German/><Italian/><Spanish/><Russian/>
+		<French>Levant Allemand</French>
+		<German>Deutsch-Levante</German>
+		<Italian>Arabia Tedesca</Italian>
+		<Spanish>Arabia Alemana</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA18</Tag>
 		<English>Counties of the Levant</English>
-		<French>Comtés du Levant</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comtés du Levant</French>
+		<German>Counties der Levante</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA19</Tag>
 		<English>Habsburg Levant</English>
-		<French>Levant d'Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Levant d'Habsbourg</French>
+		<German>Habsburger Levante</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA20</Tag>
 		<English>Sharifate of Mekke</English>
-		<French>Chérif de La Mecque</French><German/><Italian/><Spanish/><Russian/>
+		<French>Chérif de La Mecque</French>
+		<German>Scherifat Mekka</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA21</Tag>
 		<English>Province of Arabia</English>
-		<French>Province d'Arabie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province d'Arabie</French>
+		<German>Provinz Arabien</German>
+		<Italian>Provincia di Arabia</Italian>
+		<Spanish>Provincia de Arabia</Spanish>
+		<Russian/>
 	</TEXT>
-
 </Civ4GameText>

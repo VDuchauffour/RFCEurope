@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Córdobaner:Die Córdobaner, den Córdobanern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Córdoba</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -55,7 +55,6 @@
 		<Russian>&#202;&#238;&#240;&#228;&#238;&#225;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<!-- 3Miro: Persia = Bulgaria -->
 		<Tag>TXT_KEY_CIV_CORDOBA_ADJECTIVE</Tag>
 		<English>Cordoban</English>
 		<French>
@@ -64,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Córdobanisch:córdobanischen:córdobanische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -83,112 +82,156 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR00</Tag>
 		<English>Andalusian Peoples</English>
-		<French>Peuplade Andalouse</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Andalouse</French>
+		<German>Andalusische Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR01</Tag>
 		<English>Duchy of Andalusia</English>
-		<French>Duch&#233; d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; d'Andalousie</French>
+		<German>Herzogtum Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR02</Tag>
 		<English>Duchy of Andalusia</English>
-		<French>Duch&#233; d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; d'Andalousie</French>
+		<German>Herzogtum Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR03</Tag>
 		<English>Kingdom of Andalusia</English>
-		<French>Royaume d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume d'Andalousie</French>
+		<German>Königreich Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR04</Tag>
 		<English>Kingdom of Andalusia</English>
-		<French>Royaume d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume d'Andalousie</French>
+		<German>Königreich Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR05</Tag>
 		<English>Andalusian Republic</English>
-		<French>R&#233;publique d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique d'Andalousie</French>
+		<German>Andalusische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR08</Tag>
 		<English>Caliphate of Cordoba</English>
-		<French>Califat de Courdoue</French><German/><Italian/><Spanish/><Russian/>
+		<French>Califat de Courdoue</French>
+		<German>Kalifat Córdoba</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR09</Tag>
 		<English>Taifa of Cordoba</English>
-		<French>Ta&#239;fa de Courdoue</French><German/><Italian/><Spanish/><Russian/>
+		<French>Ta&#239;fa de Courdoue</French>
+		<German>Taifa Córdoba</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR10</Tag>
 		<English>Exarchate of Andalusia</English>
-		<French>Exarchat d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat d'Andalousie</French>
+		<German>Exarchat Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR11</Tag>
 		<English>Duchy of Andalusia</English>
-		<French>Duch&#233; d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; d'Andalousie</French>
+		<German>Herzogtum Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR12</Tag>
 		<English>Emirate of Cordoba</English>
-		<French>Emirat de Courdoue</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Courdoue</French>
+		<German>Emirat Córdoba</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR13</Tag>
 		<English>Reconquista Andalusia</English>
-		<French>Andalousie Reconquite</French><German/><Italian/><Spanish/><Russian/>
+		<French>Andalousie Reconquite</French>
+		<German>Reconquista Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR14</Tag>
 		<English>Norse Andalusia</English>
-		<French>Andalousie Nordique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Andalousie Nordique</French>
+		<German>Nordisch-Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR15</Tag>
 		<English>Venetian Andalusia</English>
-		<French>Andalousie V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Andalousie V&#233;nitienne</French>
+		<German>Venezianisch-Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR16</Tag>
 		<English>Russian Andalusia</English>
-		<French>Andalousie Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Andalousie Russe</French>
+		<German>Russisch-Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR17</Tag>
 		<English>German Andalusia</English>
-		<French>Andalousie Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Andalousie Allemande</French>
+		<German>Deutsch-Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR18</Tag>
 		<English>County of Andalusia</English>
-		<French>Comt&#233; d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233; d'Andalousie</French>
+		<German>County Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR19</Tag>
 		<English>Habsburg Andalusia</English>
-		<French>Andalousie Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Andalousie Habsbourg</French>
+		<German>Habsburger Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR20</Tag>
 		<English>Principality of Endulus</English>
-		<French>Principaut&#233; de l'Endulus</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de l'Endulus</French>
+		<German>Fürstentum Endulus</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR21</Tag>
 		<English>Province of Andalusia</English>
-		<French>Province d'Andalousie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province d'Andalousie</French>
+		<German>Provinz Andalusien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CORDOBA_PEDIA</Tag>
@@ -197,7 +240,10 @@
 [TAB]The Cordovan Umayyads reached their height in the late 10th century, consolidating their hold on the provinces in Spain and expanding into North Africa against the Fatimids. However, following the familiar pattern seen throughout the history of the Muslim Crescent, regional rulers grew discontented with the leadership at Cordoba and undermined the authority of the Umayyads, and between 1009-1031 a bitter civil war ripped apart the Cordovan Caliphate. Afterwards, al-Andalus was split into small kingdoms called taifas, ruled by local warlords.
 [TAB]These local warlords could not stand up to the Christian kingdoms in the north that started the reconquest of Spain. To lend urgency to this push, Pope Alexander II declared it a Crusade, forgiving the sins of those on the way to fight the Muslims. By 1212, the Christian kingdoms of Leon, Castile, Aragon and Catalonia had pushed the Muslims halfway down the peninsula, and a major defeat of the Muslim rulers at Las Navas de Tolosa heralded the beginning of the end for al-Andalus. Cordoba itself fell in 1236. The rest of the history of al-Andalus is a series of defeats, retreats and the shrinking of the Muslim presence in Spain until all that remained of the once mighty al-Andalus was a narrow strip of land near Granada. Ferdinand of Aragon and Isabella of Castile launched a last war against the Muslims and conquered Granada at last in 1492.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>711 n. Chr. landeten Tausende von muslimischen Arabern und Berbern an Gibraltar, um eine schnelle Eroberung Spaniens zu beginnen. Die Araber nannten das Gebiet al-Andalus (wovon der moderne Name "Andalusien" abgeleitet wird) und brachte es unter die Kontrolle des umayyadischen Kalifats. Diese arabische Dynastie war die bürgerliche und geistige Elite des Islam in den vorherigen fünfzig Jahren gewesen, aber ihre nepotistische Herrschaft verursachte viel Unruhe in der muslimischen Welt. Nach der Vertreibung der Umayyaden in Damaskus durch die Abbasiden 750 floh Abd ar-Rahman, ein Enkel eines ehemaligen Kalifen und einer der wenigen überlebenden Umayyaden, nach al-Andalus und übernahm diese muslimische Ausbuchtung in Europa. Sein um Córdoba liegendes Emirat war das einzige, das unabhängig von Abbasid Kalifat blieb. Die Abbasiden hatten nicht die Arbeitskräfte, um solch eine abgelegene Provinz zurückzuerobern, und unter der Herrschaft der Dynastie ar-Rahmans wurde das córdobanische Spanien ein starker, zentralisierter Staat, der sein Territorium nordwärts auf Kosten von christlichen Königreichen, die den muslimischen Eindringlingen widerstanden hatten, ausdehnte. Abd ar-Rahman ließ die Mezquita de Córdoba 785 bauen, die bis heute dort steht.
+[TAB]929 n. Chr. erklärte sich Abd ar-Rahman III zum Kalifen Córdobas. Der Titel "Kalif" ist dem Führer des Islam vorbestellt, aber es gab bereits zwei Kalifen in der moslemischen Welt. Der abbasidische (in Bagdad herrschende) Kalif, der Sunnit war, berief sich auf seine Abstammung von Abbas, einem Onkel des Propheten Mohammed. Der fatimidische Kalif, der Schiit war, berief sich auf seinen Abstammung von Fatima, einer Tochter des Propheten. Die Umayyaden waren auch sunnitische Araber, aber ihre Abstammung, beriefen sich aber auf Uthman, dem dritte Kalif, der Mohammed nachfolgte.
+[TAB]Die córdobanischen Umayyaden erreichten ihre Blütezeit gegen Ende des 10. Jahrhunderts, festigten ihren Einfluss auf die Provinzen in Spanien und expandierten in Nordafrika wider die Fatimiden. Wie man es aber überall in der Geschichte des Muslimischen Halbmondes sehen, wurden regionale Herrscher unzufrieden mit der Führung am Córdoba und untergruben die Autorität der Umayyaden, und zwischen 1009-1031 zerriss ein erbitterter Bürgerkrieg das córdobanische Kalifat. Später wurde al-Andalus in kleine Königreiche, sogenannte Taifas, gespalten, die von lokalen Kriegsherren regiert wurden.
+[TAB]Diese lokalen Kriegsherren konnten den christlichen Königreichen im Norden, die begannen Spanien zurückzuerobern, nicht widerstehen. Um diesem Stoß Stärke zu verleihen, erklärte Papst Alexander II einen Kreuzzug, der die Sünden derjenigen erließ, die zum Kampf gegen die Moslems zogen. 1212 hatten die christlichen Königreiche von León, Kastilien, Aragon und Katalonien die Moslems halb von der Halbinsel vertrieben und ein schwere Niederlage der muslimischen Führer bei Las Navas de Tolosa verkündete den Anfang vom Ende für al-Andalus. Córdoba selbst fiel 1236. Der Rest der Geschichte von al-Andalus ist eine Reihe von Niederlagen, Rückzügen und dem Schrumpfen der moslemischen Anwesenheit in Spanien, bis alle, was von dem ehemals mächtigen al-Andalus blieb, ein schmaler Landstreifen in der Nähe von Granada war. Ferdinand von Aragon und Isabella von Kastilien fingen einen letzten Krieg gegen die Moslems an und eroberten Granada schließlich 1492.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -211,7 +257,13 @@
 	[BOLD]Background:[\BOLD]
 	Abd-ar-Rahman III was born at 891, and became Caliph of Cordoba when he was twenty-two. During his reign, he successfully warred both the Fatimid Arabs and the Christian kingdoms at the North, having significant land gains (much of Central Iberia and part of Maghreb). In order to invade to North Africa, he reinforced the Cordoban fleet, turning it into a considerably strong power. Abd-ar-Rahman III was also noted for the tolerance shown to other religion faithfuls (Catholics and Jews). Moreover, he was a patron of science and arts. Specifically, his residence palace, the Medina Azahara, built at his reign, was modelled after the Ummayad Arab palace in Damascus, and he spent money to extend the library of Cordoba, turning the city in an important intellectual center. When, at 961, he died, he left the Caliphate of Cordoba at the colophon of its height.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[H1]Abd-ar-Rahman III.[\H1]
+[BOLD]Kalif von Córdoba[\BOLD]
+[BOLD]Lebte:[\BOLD] 891 - 961
+
+
+	[BOLD]Hintergrund:[\BOLD]
+	Abd-ar-Rahman III. wurde 891 geboren, und wurde Kalif von Córdoba, als er zweiundzwanzig Jahre alt war. Während seiner Regentschaft bekriegte er erfolgreich sowohl die fatimidischen Araber als auch die christlichen Königreiche im Norden und verzeichnete bedeutende Landgewinne (große Teile der Iberischen Halbinsel und ein Teil des Maghrebs). Um in Nordafrika einzufallen, verstärkte er die Kordobanische Flotte und machte es zu einer starken Macht. Abd-ar-Rahman III. war auch bekannt für die Toleranz anderen Religionsgläubigen (Katholiken und Juden) gegenüber. Zudem war er ein Schutzherr der Wissenschaft und Künste. Spezifisch wurde sein Palast, die Medina Azahara, gebaut während seiner Herrschaft, nach dem ummayadisch-arabischen Palast in Damaskus modelliert. Er gab Geld aus, um die Bibliothek des Córdobas zu erweitern und machte die Stadt zu einem wichtigen intellektuellen Zentrum. Als er 961 starb hinterließ er das Kalifat des Córdobas am Gipfel seiner Höhe.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>

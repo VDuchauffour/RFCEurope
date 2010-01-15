@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Skandinavier:Die Skandinavier:den Skandinaviern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Skandinavien</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -55,7 +55,6 @@
 		<Russian>&#205;&#238;&#240;&#226;&#229;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
-		<!-- 3Miro: Persia = Bulgaria -->
 		<Tag>TXT_KEY_CIV_NORSE_ADJECTIVE</Tag>
 		<English>Norse</English>
 		<French>
@@ -64,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Skandinavisch:skandinavischen:skandinavische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -83,111 +82,155 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR00</Tag>
 		<English>Scandinavian Peoples</English>
-		<French>Peuplade Scandinave</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Scandinave</French>
+		<German>Skandinavische Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR01</Tag>
 		<English>Kingdoms of Denmark and Norway</English>
-		<French>Royaumes de Danemark et Norv&#232;ge</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaumes de Danemark et Norv&#232;ge</French>
+		<German>Königreiche Dänemark und Norwegen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR02</Tag>
 		<English>Empire of Denmark and Norway</English>
-		<French>Empire de Danemark et Norv&#232;ge</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire de Danemark et Norv&#232;ge</French>
+		<German>Reich Dänemarks und Norwegens</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR03</Tag>
 		<English>Kingdoms of Denmark and Norway</English>
-		<French>Royaumes de Danemark et Norv&#232;ge</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaumes de Danemark et Norv&#232;ge</French>
+		<German>Königreiche Dänemark und Norwegen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR04</Tag>
 		<English>Union of Denmark and Norway</English>
-		<French>Union du Danemark et Norv&#232;ge</French><German/><Italian/><Spanish/><Russian/>
+		<French>Union du Danemark et Norv&#232;ge</French>
+		<German>Union Dänemarks und Norwegens</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR05</Tag>
 		<English>Danish-Norwegian Republic</English>
-		<French>R&#233;publique Dano-Norv&#233;gien</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Dano-Norv&#233;gien</French>
+		<German>Dänisch-Norwegische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR08</Tag>
 		<English>Islamic Nordic Sultanates</English>
-		<French>Sultanat Nordique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat Nordique</French>
+		<German>Islamische Nordische Sultanate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR09</Tag>
 		<English>Nordic Islamic Republic</English>
-		<French>R&#233;publique Islamique Nordique</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique Nordique</French>
+		<German>Nordische Islamische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR10</Tag>
 		<English>Exarchate of Scandinavia</English>
-		<French>Exarchat de Scandinavie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Scandinavie</French>
+		<German>Exarchat Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR11</Tag>
 		<English>Duchy of Denmark</English>
-		<French>Duch&#233; du Danemark</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; du Danemark</French>
+		<German>Herzogtum Dänemark</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR12</Tag>
 		<English>Scandinavian Emirate</English>
-		<French>Emirat Scandinave</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat Scandinave</French>
+		<German>Skandinavisches Emirat</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR13</Tag>
 		<English>Spanish Kingdom of Scandinavia</English>
-		<French>Royaume Espagnol de Scandinavie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol de Scandinavie</French>
+		<German>Spanisches Königreich Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR14</Tag>
 		<English>Kingdom of Denmark</English>
-		<French>Royaume du Danemark</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume du Danemark</French>
+		<German>Königreich Dänemark</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR15</Tag>
 		<English>Venetian Scandinavia</English>
-		<French>Scandinavie V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Scandinavie V&#233;nitienne</French>
+		<German>Venezianisch-Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR16</Tag>
 		<English>Russian Scandinavia</English>
-		<French>Scandinavie Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Scandinavie Russe</French>
+		<German>Russisch-Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR17</Tag>
 		<English>German Scandinavia</English>
-		<French>Scandinavie Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Scandinavie Allemande</French>
+		<German>Deutsch-Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR18</Tag>
 		<English>Counties of Scandinavia</English>
-		<French>Comt&#233;es de Scandinavie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;es de Scandinavie</French>
+		<German>Counties Skandinaviens</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR19</Tag>
 		<English>Habsburg Scandinavia</English>
-		<French>Scandinavie Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Scandinavie Habsbourg</French>
+		<German>Habsburger Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR20</Tag>
 		<English>Principality of Iskandinavya</English>
-		<French>Principaut&#233; de Iskandinavya</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Iskandinavya</French>
+		<German>Fürstentum Iskandinavya</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR21</Tag>
 		<English>Province of Scandinavia</English>
-		<French>Province de Scandinavie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Scandinavie</French>
+		<German>Provinz Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

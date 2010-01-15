@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>&#196;gypter:Die &#196;gypter:den &#196;gyptern</Text>
+			<Text>Byzantiner:Die Byzantiner:den Byzantinern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -86,111 +86,155 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ00</Tag>
 		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ01</Tag>
 		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ02</Tag>
 		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_DN_BYZ03</Tag>
 		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ04</Tag>
 		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ05</Tag>
 		<English>Second Roman Republic</English>
-		<French>Seconde R&#233;publique Romaine</French><German/><Italian/><Spanish/><Russian/>
+		<French>Seconde R&#233;publique Romaine</French>
+		<German>Zweite Römische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ06</Tag>
 		<English>Byzantine Error</English>
-		<French>Byzantine Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Byzantine Error</French>
+		<German>Byzantine Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ07</Tag>
 		<English>Byzantine Error</English>
-		<French>Byzantine Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Byzantine Error</French>
+		<German>Byzantine Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ08</Tag>
 		<English>Islamic Byzantine Empire</English>
-		<French>Empire Islamique Byzantin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Islamique Byzantin</French>
+		<German>Islamisches Byzantinisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ09</Tag>
 		<English>Islamic Roman Republic</English>
-		<French>R&#233;publique Islamique Romaine</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique Romaine</French>
+		<German>Islamische Römische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ10</Tag>
 		<English>Theme of Constantinople</English>
-		<French>Thème de Constantinople</French><German/><Italian/><Spanish/><Russian/>
+		<French>Thème de Constantinople</French>
+		<German>Byzantinisches Thema Konstantinopel</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ11</Tag>
 		<English>Duchy of Greece</English>
-		<French>Duché de Gr&#232;ce</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duché de Gr&#232;ce</French>
+		<German>Herzogtum Griechenland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ12</Tag>
 		<English>Emirate of Constantinople</English>
-		<French>Emirat de Constantinople</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Constantinople</French>
+		<German>Emirat Konstantinopel</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ13</Tag>
 		<English>Spanish Kingdom of Greece</English>
-		<French>Royaume Espagnol de Gr&#232;ce</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol de Gr&#232;ce</French>
+		<German>Spanisches Königreich Griechenland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ14</Tag>
 		<English>Varangian Roman Empire</English>
-		<French>Empire Romain Viking</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Romain Viking</French>
+		<German>Warägisches Römisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ15</Tag>
 		<English>Kingdom of the Morea</English>
-		<French>Royaume de Mor&#233;e</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Mor&#233;e</French>
+		<German>Königreich Morea</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ16</Tag>
 		<English>Russian Tsargrad</English>
-		<French>Tsargrad Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Tsargrad Russe</French>
+		<German>Russisch-Tsargrad</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ17</Tag>
 		<English>Eastern Roman Empire</English>
-		<French>Empire Romain d'Orient</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Romain d'Orient</French>
+		<German>Oströmisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ18</Tag>
 		<English>Counties of Greece</English>
-		<French>Comt&#233;s de la Gr&#232;ce</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;s de la Gr&#232;ce</French>
+		<German>Counties Griechenlands</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ19</Tag>
 		<English>Habsburg Greece</English>
-		<French>Gr&#232;ce Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Gr&#232;ce Habsbourg</French>
+		<German>Habsburger Griechenland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ20</Tag>
 		<English>Principality of Thrace</English>
-		<French>Principaut&#233; de Thrace</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Thrace</French>
+		<German>Fürstentum Thrakien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ21</Tag>
 		<English>Province of Byzantium</English>
-		<French>Province de Byzance</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Byzance</French>
+		<German>Provinz Byzanz</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>
