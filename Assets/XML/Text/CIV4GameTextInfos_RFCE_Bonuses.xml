@@ -131,56 +131,6 @@
 		<Russian>&#209;&#229;&#240;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PEARLS</Tag>
-		<English>Pearls</English>
-		<French>
-			<Text>Perles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Perlen</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Perle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Perlas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#198;&#229;&#236;&#247;&#243;&#227;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CITRUS_FRUIT</Tag>
-		<English>Citrus Fruit</English>
-		<French>
-			<Text>Agrume</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Zitrusfrucht</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Frutto del cedro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>C&#237;tricos</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#214;&#232;&#242;&#240;&#243;&#241;&#238;&#226;&#251;&#233; &#207;&#235;&#238;&#228;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON</Tag>
 		<English>Cotton</English>
 		<French>
@@ -231,31 +181,6 @@
 		<Russian>&#210;&#224;&#225;&#224;&#234;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_RUBBER</Tag>
-		<English>Rubber</English>
-		<French>
-			<Text>Caoutchouc</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gummi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Gomma</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Caucho</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#202;&#224;&#243;&#247;&#243;&#234;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_BARLEY</Tag>
 		<English>Barley</English>
 		<French>
@@ -279,31 +204,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#223;&#247;&#236;&#229;&#237;&#252;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_NATURAL_GAS</Tag>
-		<English>Natural Gas</English>
-		<French>
-			<Text>Gaz Naturel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Erdgas</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Gas Metano</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gas Natural</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#207;&#240;&#232;&#240;&#238;&#228;&#237;&#251;&#233; &#195;&#224;&#231;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APPLE</Tag>
@@ -331,56 +231,6 @@
 		<Russian>&#223;&#225;&#235;&#238;&#234;&#232;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY</Tag>
-		<English>Clay</English>
-		<French>
-			<Text>Argile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Ton</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Argilla</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arcilla</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#195;&#235;&#232;&#237;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PAPYRUS</Tag>
-		<English>Papyrus</English>
-		<French>
-			<Text>Papyrus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Papyrus</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Papyrus</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Papiro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#207;&#224;&#239;&#232;&#240;&#243;&#241;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
 		<English>Olives</English>
 		<French>
@@ -404,281 +254,6 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Russian>&#204;&#224;&#241;&#235;&#232;&#237;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OPIUM</Tag>
-		<English>Opium</English>
-		<French>
-			<Text>Opium</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Opium</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Oppio</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Opio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#206;&#239;&#232;&#243;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_AMBER</Tag>
-		<English>Amber</English>
-		<French>
-			<Text>Ambre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Bernstein</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ambra</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>&#193;mbar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#223;&#237;&#242;&#224;&#240;&#252;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FLAX</Tag>
-		<English>Flax</English>
-		<French>
-			<Text>Lin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Flachs</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lino</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#203;&#229;&#237;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TIN</Tag>
-		<English>Tin</English>
-		<French>
-			<Text>&#201;tain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Zinn</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Stagno</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Esta&#241;o</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#206;&#235;&#238;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OAT</Tag>
-		<English>Oat</English>
-		<French>
-			<Text>Avena</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Hafer</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Avena</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Avena</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#206;&#226;&#229;&#241;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_JADE</Tag>
-		<English>Jade</English>
-		<French>
-			<Text>Jade</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Jade</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Giada</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Jade</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#205;&#229;&#244;&#240;&#232;&#242;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIAMOND</Tag>
-		<English>Diamonds</English>
-		<French>
-			<Text>Diamants</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Diamanten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Diamanti</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Diamantes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#192;&#235;&#236;&#224;&#231;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LEAD</Tag>
-		<English>Lead</English>
-		<French>
-			<Text>Plomb</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Blei</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Piombo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Plomo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#209;&#226;&#232;&#237;&#229;&#246;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_RUBY</Tag>
-		<English>Rubies</English>
-		<French>
-			<Text>Rubis</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Rubine</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Rubini</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Rub&#237;es</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#208;&#243;&#225;&#232;&#237;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SAPPHIRE</Tag>
-		<English>Sapphires</English>
-		<French>
-			<Text>Saphirs</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Saphire</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Zaffiri</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Zafiros</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#209;&#224;&#239;&#244;&#232;&#240;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CACAO</Tag>
-		<English>Cacao</English>
-		<French>
-			<Text>Cacaoyer</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Kakao</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Cacao</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cacao</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#202;&#224;&#234;&#224;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEA</Tag>
@@ -711,7 +286,7 @@
 		<French>Bois</French>
 		<German>Bauholz</German>
 		<Italian>Legname</Italian>
-		<Spanish>Timber</Spanish>
+		<Spanish>Madera</Spanish>
 		<Russian>&#203;&#229;&#241;&#238;&#236;&#224;&#242;&#229;&#240;&#232;&#224;&#235;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -720,7 +295,7 @@
 		<French>Miel</French>
 		<German>Honig</German>
 		<Italian>Zucchero</Italian>
-		<Spanish>Honey</Spanish>
+		<Spanish>Miel</Spanish>
 		<Russian>&#204;&#229;&#228;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -728,8 +303,8 @@
 		<English>Slaves</English>
 		<French>Esclaves</French>
 		<German>Sklaven</German>
-		<Italian>Slaves</Italian>
-		<Spanish>Slaves</Spanish>
+		<Italian>Schiavi</Italian>
+		<Spanish>Esclavos</Spanish>
 		<Russian>&#208;&#224;&#225;&#251;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
@@ -773,8 +348,8 @@
 		<English>Relic</English>
 		<French>Relique</French>
 		<German>Relikt</German>
-		<Italian>Relic</Italian>
-		<Spanish>Relic</Spanish>
+		<Italian>Reliquia</Italian>
+		<Spanish>Reliquia</Spanish>
 		<Russian>&#208;&#229;&#235;&#232;&#234;&#226;&#232;&#255;</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<!-- ##### Terrain Bonuses - End ##### -->
