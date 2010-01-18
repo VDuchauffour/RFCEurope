@@ -247,6 +247,22 @@ class CvRFCEventHandler:
                 # 3Miro Arab and Turkish UP
                 if ( gc.hasUP( playerType, con.iUP_Faith ) ):
                 	self.up.faithUP( playerType, city )
+                #Sedna17 -- Hack to make Seljuks spread Islam. Just convert on Barb victory in specific time and place
+                if (playerType == iBarbarian):
+                        iGameTurn = gc.getGame().getGameTurn()
+                        if (iGameTurn>=con.i1050AD and iGameTurn < con.i1089AD):
+                                xLoc = city.getY() #Yes, this is correct.
+                                yLoc = city.getX()
+                                #print("Seljuks took:",xLoc,yLoc)
+                                #print("Region:",Victory.tTurkishControl[0][0],Victory.tTurkishControl[0][2],Victory.tTurkishControl[0][1],Victory.tTurkishControl[0][3])
+                                if (yLoc >= Victory.tTurkishControl[0][0] and yLoc <= Victory.tTurkishControl[0][2]):
+                                        #print("Got inside y area")
+                                        if (xLoc >= Victory.tTurkishControl[0][1] and xLoc <= Victory.tTurkishControl[0][3]):
+                                                #print("Got inside x area")
+                                                if (not city.isHasReligion(con.iIslam)):
+                                                        city.setHasReligion(con.iIslam, True, True, False)
+
+
                 #elif (playerType == con.iTurkey):
                 #        self.up.turkishUP(city)
 

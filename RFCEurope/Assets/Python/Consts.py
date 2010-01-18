@@ -167,7 +167,7 @@ tBirth = (
 113,#940AD Germany
 123,#970AD Poland
 241,#1000AD Moscow => 1323
-450,# 140 normally 1020AD Genoa
+150,# 140 normally 1020AD Genoa
 153,# 153 normally 1060AD England
 167,#1100AD Portugal
 187,#1160AD Austria
@@ -257,6 +257,7 @@ i1050AD =150
 i1053AD =151
 i1060AD =153
 i1080AD =160
+i1089AD =163
 i1101AD =167
 i1160AD =187
 i1200AD =200

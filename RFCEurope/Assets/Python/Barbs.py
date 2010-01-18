@@ -86,6 +86,7 @@ lVologda = [89,64,240,0] #900 AD
 lTver = [85,60,240,0] #900 AD
 lSmolensk = [85,53,240,0] #900 AD
 lAstrakhan = [99,40,200,0] #1200 AD
+lMus = [99,21,153,0] #1060 AD
 
 
 #handicap level modifier
@@ -215,11 +216,12 @@ class Barbs:
 
 		
 		#Seljuks 1070
-		if (iGameTurn>=con.i1050AD and iGameTurn < con.i1080AD):
+		if (iGameTurn>=con.i1050AD and iGameTurn < con.i1089AD):
 			#Middle East
-			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 4 + iHandicap*2, iGameTurn,2,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 4 + iHandicap*2, iGameTurn,2,1,utils.outerInvasion,1)
-			
+			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 5 + iHandicap*2, iGameTurn,1,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 5 + iHandicap*2, iGameTurn,1,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (95,0),(99,15), con.iSeljuk, 5 + iHandicap*2, iGameTurn,1,1,utils.outerInvasion,1)
+
 		#Mongols! 1250
 		if (iGameTurn >=con.i1236AD and iGameTurn < con.i1284AD):
 			if iHandicap == 1: #Sedna17: Making mongols too weak in viceroy makes AI Kiev a super-power.
@@ -244,7 +246,7 @@ class Barbs:
 			#Eastern Europe
 			self.spawnUnits( iBarbarian, (85,47),(99,57), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
 			#Anatolia
-			self.spawnUnits( iBarbarian, (87,17),(99,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (87,17),(99,26), con.iMongolKeshik, 2 + iHandicap*2, iGameTurn,4,0,utils.innerInvasion,1)
 			
 		
 		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
@@ -301,6 +303,7 @@ class Barbs:
 		self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, con.iCrossbowman, 1)
 		self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iBarbarian, lAstrakhan, "Astrakhan", iGameTurn, 1, con.iLongbowman, 2)
+		self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, con.iLongbowman, 2)
 
 
 

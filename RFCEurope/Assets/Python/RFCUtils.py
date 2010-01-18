@@ -993,9 +993,8 @@ class RFCUtils:
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
                         if (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-                                        if (pCurrent.getOwner() in argsList ):
-                                                # this is a good plot, so paint it and continue search
-                                                return (None, bPaint, bContinue)
+                                            # this is a good plot, so paint it and continue search
+                                            return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
                 return (None, not bPaint, bContinue)
             
