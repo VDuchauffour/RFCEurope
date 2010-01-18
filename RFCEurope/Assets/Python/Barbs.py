@@ -176,16 +176,16 @@ class Barbs:
 
 		#Cumans and Pechenegs 800 to 1100 		
 		if (iGameTurn >= con.i800AD and iGameTurn < con.i940AD):
-			self.spawnUnits( iBarbarian, (90,20),(99,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,10,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,20),(99,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
 		if (iGameTurn >= con.i940AD and iGameTurn < con.i1000AD):
-			self.spawnUnits( iBarbarian, (90,20),(99,40), con.iLancer, 1 + iHandicap*2, iGameTurn,10,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,20),(99,40), con.iLancer, 1 + iHandicap*2, iGameTurn,5,1,utils.outerInvasion,1)
 		
 		#Vikings on ships 
-		if (iGameTurn >= con.i800AD and iGameTurn < con.i880AD):
-			self.spawnVikings( iBarbarian, (35,48),(50,55), con.iVikingBeserker, 1, iGameTurn,10,0,utils.outerSeaSpawn,1)
-
+		if (gc.getPlayer(con.iNorse).isHuman()): #Humans can properly go viking without help
+			pass
+		elif (iGameTurn >= con.i800AD and iGameTurn < con.i880AD):
+			self.spawnVikings( iBarbarian, (35,48),(50,55), con.iVikingBeserker, 2, iGameTurn,3,0,utils.outerSeaSpawn,1)
 		
-
 		#Scots and Welsh to keep England busy
 		if (iGameTurn>=con.i1000AD and iGameTurn < con.i1060AD):
 			#Scots
@@ -211,14 +211,14 @@ class Barbs:
 		
 		#Magyars (preceeding Hungary)
 		if (iGameTurn >= con.i840AD and iGameTurn < con.i940AD):
-			self.spawnUnits( iBarbarian, (54,40),(62,49), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,5,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (54,40),(62,49), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1)
 
 		
 		#Seljuks 1070
 		if (iGameTurn>=con.i1050AD and iGameTurn < con.i1080AD):
 			#Middle East
-			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 3 + iHandicap*2, iGameTurn,2,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 3 + iHandicap*2, iGameTurn,2,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 4 + iHandicap*2, iGameTurn,2,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 4 + iHandicap*2, iGameTurn,2,1,utils.outerInvasion,1)
 			
 		#Mongols! 1250
 		if (iGameTurn >=con.i1236AD and iGameTurn < con.i1284AD):
@@ -236,7 +236,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (89,46),(99,56), con.iMongolKeshik, 3 + iExtra*2, iGameTurn,4,0,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (89,46),(99,56), con.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 			#Middle East
-			self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 2 + iExtra*2, iGameTurn,4,2,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 3 + iExtra*2, iGameTurn,4,2,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (94,15),(99,26), con.iMongolKeshik, 1 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 
 		#Mongols, the return! (aka Tamerlane)

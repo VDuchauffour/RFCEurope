@@ -2448,7 +2448,7 @@ class RiseAndFall:
                 # 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
                 # for the late starts those get destroyed
                 utils.makeUnit(iSettler, iBurgundy, tCapitals[iBurgundy], 1)
-                utils.makeUnit(con.iArcher, iBurgundy, tCapitals[iBurgundy], 2)
+                utils.makeUnit(con.iArcher, iBurgundy, tCapitals[iBurgundy], 1)
                 utils.makeUnit(con.iWorker, iBurgundy, tCapitals[iBurgundy], 1)
                 
                 # 3Miro: Byzantium Starting Units are in the WB file
@@ -2457,6 +2457,7 @@ class RiseAndFall:
                 
                 utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iArcher, iFrankia, tCapitals[iFrankia], 2)
+                utils.makeUnit(con.iAxeman, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iWorker, iFrankia, tCapitals[iFrankia], 1)
 
