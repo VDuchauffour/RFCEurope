@@ -14037,6 +14037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=52
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15203,6 +15204,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=34
+	BonusType=BONUS_DEER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,1,2,
@@ -15241,6 +15243,7 @@ BeginPlot
 	x=38,y=39
 	isNOfRiver
 	RiverWEDirection=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,2,
@@ -15347,6 +15350,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=56
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -16134,6 +16138,7 @@ BeginPlot
 	x=40,y=43
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,2,21,
@@ -16545,6 +16550,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=39
+	BonusType=BONUS_COW
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -17102,6 +17108,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=56
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -17986,6 +17993,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=52
+	BonusType=BONUS_APPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
