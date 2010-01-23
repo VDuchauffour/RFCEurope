@@ -164,14 +164,14 @@
 		<Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA10></Tag>
+		<Tag>TXT_KEY_DN_FRA10</Tag>
 		<English>Exarchate of Gallia</English>
 		<French>Exarchat de france</French>
 		<German>Exarchat Gallien</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA11></Tag>
+		<Tag>TXT_KEY_DN_FRA11</Tag>
 		<English>Metropolitan France</English>
 		<French>France M&#233;tropolitaine</French>
 		<German>Metropolitan-Frankreich</German>
@@ -180,7 +180,7 @@
 		<Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA12></Tag>
+		<Tag>TXT_KEY_DN_FRA12</Tag>
 		<English>Emirate of France</English>
 		<French>Emirat de France</French>
 		<German>Emirat Frankreich</German>
