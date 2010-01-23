@@ -2268,7 +2268,7 @@ class RiseAndFall:
                 if (iCiv == iSpain):
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
-                        utils.makeUnit(con.iCatholicMissionary, iCiv, tPlot, 2)
+                        utils.makeUnit(con.iCatholicMissionary, iCiv, tPlot, 1)
                         utils.makeUnit(con.iSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iLancer, iCiv, tPlot, 2)
                 if (iCiv == iNorse):
@@ -2288,7 +2288,6 @@ class RiseAndFall:
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 1)
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 1)
-                        utils.makeUnit(con.iCatholicMissionary, iCiv, tPlot, 2)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
                                 utils.makeUnit(con.iWorkboat, iCiv, tSeaPlot, 1 )
@@ -2326,7 +2325,6 @@ class RiseAndFall:
                 if (iCiv == iGenoa):
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(con.iSwordsman, iCiv, tPlot, 2)
-                        utils.makeUnit(con.iCatholicMissionary, iCiv, tPlot, 2)
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 4)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
