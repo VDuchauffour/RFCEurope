@@ -726,12 +726,12 @@ class Victory:
 				
 			#if ( iGameTurn == i1660AD+1 and self.getGoal( iPoland, 2 ) == -1 ):
 			#	self.setGoal( iPoland, 2, 0 )
-			if ( iGameTurn == i1730AD and self.getGoal( iPoland, 2 ) == -1 ):
+			if ( iGameTurn == con.i1730AD and self.getGoal( iPoland, 2 ) == -1 ):
 				iPolishFaith = pPoland.getFaith()
 				bMostFaithful = True
 				# 3Miro: iNumPlayers - 1 => do not count the Pope
 				for iFaithful in range( iNumPlayers - 1 ):
-					pFaithful = gc.getPlayer( i )
+					pFaithful = gc.getPlayer( iFaithful )
 					if ( pFaithful.isAlive() and pFaithful.getStateReligion() == con.iCatholicism and pFaithful.getFaith() > iPolishFaith ):
 						bMostFaithful = False
 				if ( pPoland.getStateReligion() != con.iCatholicism ):
