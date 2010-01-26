@@ -133,13 +133,13 @@ lOlderNeighbours = [
 [], #Cordoba
 [iCordoba], #Spain
 [], #Norse
-[iPope], #Venecia
+[iCordoba], #Venecia
 [iBulgaria], #Kiev
 [iBulgaria], #Hungary
 [iHungary,iVenecia], #Germany
 [iGermany,iKiev], #Poland
 [iKiev,iPoland], #Moscow
-[iVenecia,iGermany,iHungary,iPope], #Genoa
+[iVenecia,iGermany,iCordoba], #Genoa
 [iFrankia], #England
 [iSpain,iCordoba], #Portugal
 [iGermany,iHungary,iVenecia,iGenoa], #Austria

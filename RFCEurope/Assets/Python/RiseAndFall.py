@@ -1324,14 +1324,14 @@ class RiseAndFall:
                                                 iNewCiv = con.iIndepStart + iRndNum
                                                 
                                                 splittingCity = cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
+                                                if (iPlayer == utils.getHumanID()):
+                                                        CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + \
+                                                                                           CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
                                                 utils.cultureManager((splittingCity.getX(),splittingCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
                                                 utils.flipUnitsInCityBefore((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)                            
                                                 self.setTempFlippingCity((splittingCity.getX(),splittingCity.getY()))
                                                 utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
                                                 utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
-                                                if (iPlayer == utils.getHumanID()):
-                                                        CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + \
-                                                                                           CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
                                                 #print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
                                                 utils.setParameter(iPlayer, con.iParExpansionE, True, 2) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
                                                 
