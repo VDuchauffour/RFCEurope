@@ -82,7 +82,7 @@ class RFCEBalance:
 		# iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iBurgundy,     100, 100, 100, 100, 100, 1 )
-		gc.setGrowthModifiers(iByzantium,    300, 100, 150, 150, 100, 2 )
+		gc.setGrowthModifiers(iByzantium,    200, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiers(iFrankia,      100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iArabia,       150, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iBulgaria,     100, 100, 100, 100, 100, 1 )
@@ -114,7 +114,8 @@ class RFCEBalance:
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
 		gc.setProductionModifiers(iBurgundy,  100, 100, 100, 150 )
-		gc.setProductionModifiers(iByzantium, 200, 200, 200, 300 )
+		gc.setProductionModifiers(iByzantium, 200, 200, 200, 250 )
+		gc.setProductionModifiers(iByzantium, 200, 200, 200, 250 )
 		gc.setProductionModifiers(iFrankia,   100, 100, 100, 120 )
 		gc.setProductionModifiers(iArabia,    150, 150, 100, 150 )
 		gc.setProductionModifiers(iBulgaria,  100, 100, 100, 120 )
@@ -144,7 +145,7 @@ class RFCEBalance:
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
 		gc.setSupportModifiers(iBurgundy,      10, 150,  80,  75, 110 )
-		gc.setSupportModifiers(iByzantium,     10, 150,  10,  10, 120 )
+		gc.setSupportModifiers(iByzantium,     10, 100,  10,  10, 100 )
 		gc.setSupportModifiers(iFrankia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiers(iArabia,        10, 150,  50,  15, 120 )
 		gc.setSupportModifiers(iBulgaria,      10, 150,  50,  25, 110 )

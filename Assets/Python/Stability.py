@@ -514,7 +514,7 @@ class Stability:
 		#	self.printStability(iPlayer,tBaseStability1,tBaseStability3,tPermStability)
         
         def continentsNormalization(self, iGameTurn): #Sedna17
-                lContinentModifier = [-1, -1, 0, -2, 0, 0] #Eastern, Central, Atlantic, Islamic, Italian, Norse, see Consts.py
+                lContinentModifier = [0, 0, 0, -2, 0, 0] #Eastern, Central, Atlantic, Islamic, Italian, Norse, see Consts.py
                 for iPlayer in range(iNumPlayers):
                         if (gc.getPlayer(iPlayer).isAlive()):
                                 for j in range(len(con.lCivStabilityGroups)):
