@@ -171,9 +171,9 @@ tBirth = (
 153,# 153 normally 1060AD England
 167,#1100AD Portugal
 187,#1160AD Austria
-233,#1300AD Turkey
+233,#1300AD Turkey - 233 is normal time
 300,#1500AD Sweden
-340,#1580AD Dutch
+441,# 340 is normal 1580AD Dutch
 0,	#Pope
 0,
 0,
@@ -321,7 +321,7 @@ tCapitals = (
 (43, 53), #tLondon, England
 (22, 31), #tLisboa, Portugal
 (63, 39), #tAustria
-(88, 22), #tTurkey
+(79, 22), #tTurkey
 (67, 64), #tSweden
 (49, 52), #tDutch
 (56, 27)  #Rome
@@ -409,7 +409,7 @@ tCoreAreasTL = (
 (38,48),   #England
 (21,30),   #Portugal
 (58,37),   #Austria
-(85,18),   #Turks
+(76,16),   #Turks
 (60,59),   #Sweden
 (48,49),   #Netherlands
 (54,25)	   #Pope
@@ -434,7 +434,7 @@ tCoreAreasBR = (
 (45,58),   #England
 (24,35),   #Portugal
 (64,43),   #Austria
-(99,27),   #Turks
+(84,22),   #Turks
 (67,71),   #Sweden
 (51,54),   #Netherlands
 (58,29)	   #Pope
@@ -461,7 +461,7 @@ tExceptions = (  #for RiseAndFall
 ((20, 29), (22, 28), (23, 28), (24, 28), (24, 36), (24, 37)), #Portugal
 #(), #Austria
 ((59, 37), (60, 37), (64, 37), (59, 44), (60, 44), (62, 44), (61, 44)), #Austria
-(), #Turkey
+((75,24),(75,25),(75,26),(75,27),(76,24),(76,25),(76,26),(76,27),(77,24),(77,25),(77,26),(77,27),(78,24),(78,25),(78,26),(78,27)), #Turkey
 (), #Sweden
 (), #Dutch
 ()  #Pope
@@ -490,7 +490,7 @@ tNormalAreasTL = (
 (35,52),   #England
 (20,28),   #Portugal
 (58,37),   #Austria
-(77,14),   #Turks
+(76,13),   #Turks
 (60,58),   #Sweden
 (48,50),   #Netherlands
 (54,25)	   #Pope
@@ -620,7 +620,7 @@ tVisible = (
 ( (30,51,46,68),(35,46,46,50), ), # England
 ( (18,23,36,42), ), # Portugal
 ( (35,33,48,51),(49,27,63,55), ), # Austria
-( (79,14,99,27),(93,5,99,13), ), # Turkey
+( (77,14,99,27),(93,5,99,13), ), # Turkey
 ( (52,53,74,72), ), # Sweden
 ( (42,42,65,66), ), # Dutch
 ( (39,12,73,44), ), # Pope

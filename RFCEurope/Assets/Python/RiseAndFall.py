@@ -1333,9 +1333,10 @@ class RiseAndFall:
                                                 utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
                                                 utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
                                                 #print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
-                                                utils.setParameter(iPlayer, con.iParExpansionE, True, 2) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+						#Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
+                                                utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
                                                 
-                                                utils.setStability(iPlayer, utils.getStability(iPlayer) + 2) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+                                                utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
 
                                         return #just 1 secession per turn
 
@@ -2432,6 +2433,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
                 if ( iCiv == iTurkey ):
                         utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
+                	self.ottomanInvasion(iCiv,(77,23))
                 if ( iCiv == iSweden ):
                         utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
                 if ( iCiv == iDutch ):
@@ -2440,7 +2442,16 @@ class RiseAndFall:
         def create600ADstartingUnits( self ):
                 # 3Miro: not needed
                 pass
-                
+        
+        def ottomanInvasion(self,iCiv,tPlot):
+			print("I made Ottomans on Gallapoli")
+			utils.makeUnit(con.iLongbowman, iCiv, tPlot, 2)
+			utils.makeUnit(con.iSettler, iCiv, tPlot, 1)
+			utils.makeUnit(con.iMaceman, iCiv, tPlot, 2)
+			utils.makeUnit(con.iKnight, iCiv, tPlot, 3)
+			utils.makeUnit(con.iTurkeyGreatBombard, iCiv, tPlot, 1)
+			utils.makeUnit(con.iIslamicMissionary, iCiv, tPlot, 2)
+
 
         def create4000BCstartingUnits( self ):
                 # 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
