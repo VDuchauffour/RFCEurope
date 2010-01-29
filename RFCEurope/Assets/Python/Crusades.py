@@ -314,25 +314,26 @@ class Crusades:
 		for i in range( iNumCrusades ): # check the Crusades
 			if ( self.getCrusadeInit( i ) == -1 ): # if this one is to start
 				if ( pJPlot.isCity() and self.anyCatholic() ): # if there is Jerusalem and there are any Catholics
-					if ( pJPlot.getPlotCity().getOwner() < con.iNumMajorPlayers ): # if Jerusalem is not Independent
-						#iTJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
-						iVictim = pJPlot.getPlotCity().getOwner() # get the information for the potential Victim
-						pVictim = gc.getPlayer( iVictim )
-						teamVictim = gc.getTeam( pVictim.getTeam() )
-						iVictimReligion = pVictim.getStateReligion()
-						if ( iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy ): # if the Victim is non-Catholic non-Orthodox
-							bVassalOfImmune = False
-							for iPlayerMaster in range( con.iNumMajorPlayers ): # for all the players, check to see if the Vicitm is a Vassal of a Catholic or Orthodox player
-								pMaster = gc.getPlayer( iPlayerMaster )	    # they are immune from Crusades
-								iTMaster = pMaster.getTeam()
-								if ( iPlayerMaster != iVictim and teamVictim.isVassal( iTMaster ) ):
-									iMasterReligion = pMaster.getStateReligion()
-									if ( iMasterReligion == iOrthodoxy or iMasterReligion == iCatholicism ):
-										bVassalOfImmune = True
-							
-							if ( (not bVassalOfImmune) and (i == 0 or ( self.getCrusadeInit( i-1 ) > -1 and self.getCrusadeInit( i-1 ) + 8 < iGameTurn ) ) ):
-								self.setCrusadeInit( i, iGameTurn )
-								print( " Crusade Starting Turn ",iGameTurn )
+					#Sedna17 -- allowing crusades against independent Jerusalem 
+					#if ( pJPlot.getPlotCity().getOwner() < con.iNumMajorPlayers ): # if Jerusalem is not Independent
+					#iTJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
+					iVictim = pJPlot.getPlotCity().getOwner() # get the information for the potential Victim
+					pVictim = gc.getPlayer( iVictim )
+					teamVictim = gc.getTeam( pVictim.getTeam() )
+					iVictimReligion = pVictim.getStateReligion()
+					if ( iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy ): # if the Victim is non-Catholic non-Orthodox
+						bVassalOfImmune = False
+						for iPlayerMaster in range( con.iNumMajorPlayers ): # for all the players, check to see if the Vicitm is a Vassal of a Catholic or Orthodox player
+							pMaster = gc.getPlayer( iPlayerMaster )	    # they are immune from Crusades
+							iTMaster = pMaster.getTeam()
+							if ( iPlayerMaster != iVictim and teamVictim.isVassal( iTMaster ) ):
+								iMasterReligion = pMaster.getStateReligion()
+								if ( iMasterReligion == iOrthodoxy or iMasterReligion == iCatholicism ):
+									bVassalOfImmune = True
+						
+						if ( (not bVassalOfImmune) and (i == 0 or ( self.getCrusadeInit( i-1 ) > -1 and self.getCrusadeInit( i-1 ) + 8 < iGameTurn ) ) ):
+							self.setCrusadeInit( i, iGameTurn )
+							print( " Crusade Starting Turn ",iGameTurn )
 								
 	def anyCatholic( self ):
 		for i in range( con.iNumPlayers ):

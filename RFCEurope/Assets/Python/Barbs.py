@@ -61,7 +61,7 @@ lTripoli = [56,6,0,0] #500 AD
 lRoma = [56,27,0,0] #500 AD
 lAugsburg = [56,41,0,0] #500 AD
 lCatania = [58,18,0,0] #500 AD
-lNapoli = [59,24,0,0] #500 AD
+lNapoli = [60,24,0,0] #500 AD
 lRagusa = [64,28,0,0] #500 AD
 lBeograd = [68,32,0,0] #500 AD
 lRhodes = [79,12,0,0] # 500 AD
@@ -87,7 +87,7 @@ lTver = [85,60,240,0] #900 AD
 lSmolensk = [85,53,240,0] #900 AD
 lAstrakhan = [99,40,200,0] #1200 AD
 lMus = [99,21,153,0] #1060 AD
-
+lPalermo = [55,19,0,0]
 
 #handicap level modifier
 iHandicapOld = (gc.getGame().getHandicapType() - 1)
@@ -255,6 +255,7 @@ class Barbs:
 		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, con.iCordobanBerber, 2) #UnitOwner = 22 -> iIndy2 
 		#self.foundCity(iIndependent3, lCorunna, "A Corunna", iGameTurn, 1, con.iCrossbowman, 2) #UnitOnwer = 21 -> iIndy
 		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, con.iArcher, 2)
+		self.foundCity(iBarbarian, lPalermo, "Palermo", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent3, lLeon, "Leon", iGameTurn, 1, con.iCrossbowman, 2)
 		#self.foundCity(iIndependent3, lBurgos, "Burgos", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, con.iArcher, 1)
