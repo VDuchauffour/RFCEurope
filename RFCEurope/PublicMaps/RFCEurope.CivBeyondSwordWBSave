@@ -23480,12 +23480,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=54
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=55
-	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -24403,7 +24403,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=53
-	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -24867,6 +24866,7 @@ EndPlot
 BeginPlot
 	x=59,y=54
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_SALT
 	PlotType=2
 EndPlot
 BeginPlot
