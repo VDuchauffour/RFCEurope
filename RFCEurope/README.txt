@@ -1,3 +1,63 @@
+Changes for Alpha 10
+
+Major Changes:
+Reduced early game health and happiness by removing resources from the map, eliminating the health bonus of forests, and making early buildings give less health/happy bonuses.
+Significant re-design of civics, focusing on simplification. Civs now spawn with a pre-defined set of civics.
+Reduced penalties against Byzantium and gave them a navy.
+Made Seljuk turks a major barb invasion (like Mongols). They also spread Islam on capture.
+Changed Ottoman spawn zone to be much closer to Constantinople and include Hadrianopolis.
+Removed some un-needed buildings: Monuments, Siege workshop, Catholic/Orthodox schools and Sahn. Removed unhealth from guild hall. Make Archery range obsolete with flintlock. 
+Text updates and cleaning.
+
+Small Changes:
+Disable mines/watermills on forest squares.
+Improved German starting position.
+Made Germany more likely to get Protestantism.
+New scholar specialist art. 
+Pillaging un-owned cottages spawns barbs.
+Military order executives now upgrade to pikemen, a crude way to limit their spreading after a certain date.
+Tweaks to city name maps and settler maps to correspond to new map.
+Workers can remove mud with machine tools
+New explosives Buttons
+New movie of Magellans Voyage
+New movie of Copernicus Observatory
+Many early techs with too many benefits saw things shuffled around slightly.
+Made Mongols harder on Viceroy (so Kiev doesn't become super-power).
+Removed several starting missionaries to religion is a little less deterministic.
+Removed protestantism from Swedish spawn techs.
+Changes to respawn probabilities.
+Made Corps HQ bigger. (structure art)
+Moved Scriptorium up in the tech tree.
+Moved windmills back further in the tech tree.
+Other minor re-arrangements of items on tech tree.
+Reduced cost of techs to keep up with smaller number of resources.
+Modified some balance parameters to preserve balance with new map conditions.
+Strengthened the barb Vikings so they actually do something.
+Some wonders and corporations now require religions in the city.
+Moved some wonders and military corporations now require state religion.
+Changed Shrine of Uppsala 
+City secession now boosts stability more (this helps Byzantium especially)
+Allowed crusades against independent Jerusalem.
+Added barbarian Palermo and moved Naples to be a better city.
+Added Levant to catholic war maps so crusaders actually do something.
+
+Translations:
+French text updates merged in.
+Some initial German translations.
+
+Bugfixes:
+Norse raze UHV now actually 10 cities
+Extended Swedish UHV to Tallinn.
+Cog AI fixed.  
+Fixed Venice button.  
+Fixed a small error in dynamic naming. 
+Bugfix: a Resurection Bug
+AI: Now the AI is aware that some seemingly useless projects unlock other useful projects (not working yet)
+Fixed bug with 3rd Polish UHV
+Fixed bug in French dynamic names
+Fixed(?) city secession name bug
+
+
 Changes for Alpha 9
 
 Major New Things:
