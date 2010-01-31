@@ -165,7 +165,7 @@ tPortugalControl = ((1,15,8,39),(7,0,27,24),(4,0,6,7)) # Islands, Africa x 2
 tNormanControl = ((39,47,46,50), (35,45,38,47), (36,38,41,44), (43,45,46,46)) # Bits of France
 tAustrianControl = ( 58, 33, 70, 38 )
 tTurkishControl = (( 77, 14, 99, 26 ), ( 65, 14, 80, 29 ), (93, 0, 99, 17), (76, 0, 92, 4), ( 60, 33, 63, 41 ) ) # Constantinople Area and Anatolia, Balkans and Peloponnesian, Levant, Egypt, Vienna
-tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ) ) # Sweden, Finland/Estland
+tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ),(59, 43, 90, 55) ) # Sweden, Finland/Estland and east Germany through Central Russia
 
 class Victory:
 
@@ -917,16 +917,8 @@ class Victory:
 				
 			
 			if ( iGameTurn == i1750AD and self.getGoal( iSweden, 2 ) == -1 ):
-				iNumCities = pSweden.getNumCities()
-				iCount = 0
-				for iCity in range(iNumCities):
-					pCity = pSweden.getCity(iCity)
-					iX = pCity.getX()
-					iY = pCity.getY()
-					if ( iX >= 70 or iY <= 55 ):
-						iCount += 1
-				
-				if ( iCount >= 3 ):
+				iCitiesPoland = gc.countOwnedCities( iSweden, tSwedishControl[2][0], tSwedishControl[2][1], tSwedishControl[2][2], tSwedishControl[2][3] ) 
+				if ( iCitiesPoland >= 5 ):
 					self.setGoal( iSweden, 2, 1 )
 				else:
 					self.setGoal( iSweden, 2, 0 )
