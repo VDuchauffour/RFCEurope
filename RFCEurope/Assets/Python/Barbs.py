@@ -55,8 +55,10 @@ lMarseilles = [45,33,0,0] #500 AD
 lLyon = [46,37,0,0] #500 AD
 lTunis = [49,17,0,0] #500 AD
 lPisae = [52,32,0,0] #500 AD These guys want to start with Catholicism?
-lMilano = [52,37,0,0] #500 AD
-lFirenze = [54,31,0,0] #500 AD
+lMediolanum = [52,37,0,0] #500 AD
+lMilan = [52,37,75,0] #800 AD The respawn gambit, so that it still exist if razed
+lFlorentia = [54,31,0,0] #500 AD
+lFirenze = [54,31,75,0] #800 AD Same as Mediolanum--->Milan 
 lTripoli = [56,6,0,0] #500 AD
 lRoma = [56,27,0,0] #500 AD
 lAugsburg = [56,41,0,0] #500 AD
@@ -261,7 +263,7 @@ class Barbs:
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent2,lZaragoza, "Zaragoza", iGameTurn, 1, con.iArcher, 1) 
 		self.foundCity(iIndependent2, lPamplona, "Pamplona", iGameTurn, 1, con.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, con.iArcher, 1)
+		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 3, con.iArcher, 1)
 		#self.foundCity(iIndependent2, lNantes, "Nantes", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lBarcino, "Barcino", iGameTurn, 1, con.iArcher, 1)
@@ -273,8 +275,10 @@ class Barbs:
 		#self.foundCity(iIndependent2, lLyon, "Lyon", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 3, con.iArcher, 1)
 		#self.foundCity(iIndependent, lPisae, "Pisae", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent, lMilano, "Milano", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iIndependent, lMilan, "Milan", iGameTurn, 3, con.iArcher, 2)
+		self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 3, con.iArcher, 2)
 		self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, con.iArcher, 1) 
 		# self.foundCity(iIndependent, lRoma, "Roma", iGameTurn, 5, con.iArcher, 1)
 		self.foundCity(iIndependent, lAugsburg, "Augsburg", iGameTurn, 1, con.iArcher, 1)
