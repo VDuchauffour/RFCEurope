@@ -4989,9 +4989,12 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 	//iValue /= 100;
 
 	// 3MiroAI: make the AI aware of the projects that unlock other projects
+	// Sedna17AI: Old code wasn't working, not sure what it was supposed to do. Much simpler code just counts up the projects with this as Prereq. Doesn't account for
+	// projects which have already been built though. We'll get a lot of India Companies.
 	for ( iI = 0; iI < GC.getNumProjectInfos(); iI++ ){
-		if ( GC.getProjectInfo( eProject ).getPrereqProject( (ProjectTypes) iI ) > GET_TEAM(getTeam()).getProjectCount((ProjectTypes)iI) ){
-			iValue += 10;
+		if ( GC.getProjectInfo( (ProjectTypes) iI ).getPrereqProject(eProject) > 0) 
+		{
+			iValue += 1;
 		};
 	};
 
