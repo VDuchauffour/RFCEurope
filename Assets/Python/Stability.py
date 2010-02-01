@@ -670,15 +670,19 @@ class Stability:
 
                             
         def onProjectBuilt(self, iPlayer, iProject):
-                if (iProject >= con.iNumNotColonies):
-                    iExpansionBoost = 1
-                    self.setStability(iPlayer,iParExpansionE, True, iExpansionBoost)
-                    self.setStability(iPlayer, self.getStability(iPlayer)+iExpansionBoost)
+                pPlayer = gc.getPlayer(iPlayer)
+                iCivic5 = pPlayer.getCivics(5)
+                
+                if (iCivic5 == 29): #If civ is in Colonialism
+                        if (iProject >= con.iNumNotColonies):
+                                iExpansionBoost = 1
+                                self.setParameter(iPlayer,iParExpansionE, True, iExpansionBoost)
+                                self.setStability(iPlayer, self.getStability(iPlayer)+iExpansionBoost)
 
                 #if (iProject <= con.iApolloProgram ): #no SS parts
                 #        self.setStability(iPlayer, self.getStability(iPlayer) + 1 )
                 #        self.setParameter(iPlayer, iParCitiesE, True, 2)
-                    print("Stability - project built", iPlayer)
+                                print("Stability - project built", iPlayer)
 
 
 

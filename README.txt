@@ -10,20 +10,20 @@ Removed some un-needed buildings: Monuments, Siege workshop, Catholic/Orthodox s
 Text updates and cleaning.
 
 Small Changes:
+Revisions to city name maps and settler maps to correspond to new map.
 Disable mines/watermills on forest squares.
 Improved German starting position.
 Made Germany more likely to get Protestantism.
 New scholar specialist art. 
 Pillaging un-owned cottages spawns barbs.
 Military order executives now upgrade to pikemen, a crude way to limit their spreading after a certain date.
-Tweaks to city name maps and settler maps to correspond to new map.
 Workers can remove mud with machine tools
 New explosives Buttons
 New movie of Magellans Voyage
 New movie of Copernicus Observatory
 Many early techs with too many benefits saw things shuffled around slightly.
 Made Mongols harder on Viceroy (so Kiev doesn't become super-power).
-Removed several starting missionaries to religion is a little less deterministic.
+Removed several starting missionaries so religion is a little less deterministic. Religions also auto-spread a bit less fast.
 Removed protestantism from Swedish spawn techs.
 Changes to respawn probabilities.
 Made Corps HQ bigger. (structure art)
@@ -40,6 +40,10 @@ City secession now boosts stability more (this helps Byzantium especially)
 Allowed crusades against independent Jerusalem.
 Added barbarian Palermo and moved Naples to be a better city.
 Added Levant to catholic war maps so crusaders actually do something.
+Pope and Indies can't found corporations.
+New 3rd Swedish UHV
+Excluded Huelva of Portugal spawn zone.
+Milan and Firenze respawn if razed.
 
 Translations:
 French text updates merged in.
@@ -52,7 +56,7 @@ Cog AI fixed.
 Fixed Venice button.  
 Fixed a small error in dynamic naming. 
 Bugfix: a Resurection Bug
-AI: Now the AI is aware that some seemingly useless projects unlock other useful projects (not working yet)
+AI: Now the AI is aware that some seemingly useless projects unlock other useful projects. 
 Fixed bug with 3rd Polish UHV
 Fixed bug in French dynamic names
 Fixed(?) city secession name bug

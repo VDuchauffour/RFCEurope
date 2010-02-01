@@ -17959,48 +17959,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	BeginUnit
-		UnitType=UNIT_AXEMAN, UnitOwner=2
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_COUNTER
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARCHER, UnitOwner=2
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARCHER, UnitOwner=2
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_CATHOLIC_MISSIONARY, UnitOwner=2
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_MISSIONARY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER, UnitOwner=2
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_WORKER
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SETTLER, UnitOwner=2
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_SETTLE
-	EndUnit
 	TeamReveal=0,2,
 EndPlot
 BeginPlot
@@ -19270,27 +19228,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	BeginUnit
-		UnitType=UNIT_ARCHER, UnitOwner=0
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER, UnitOwner=0
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_WORKER
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SETTLER, UnitOwner=0
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_SETTLE
-	EndUnit
 	TeamReveal=0,2,21,
 EndPlot
 BeginPlot
