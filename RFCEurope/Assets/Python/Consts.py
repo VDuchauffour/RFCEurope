@@ -811,24 +811,24 @@ iNumReligions = 5
 
 # religion spread modifiers:
 tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
-(350,  20, 350,  70,  10), #Burgundy
-(100,  50,  70, 350,  10), #Byzantium
-(200,  20, 350,  70,  10), #France
+(150,  20, 150,  70,  10), #Burgundy
+(100,  50,  70, 150,  10), #Byzantium
+(150,  20, 250,  70,  10), #France
 ( 20, 350,  50,  10,  10), #Arabia
-(100,  50, 250, 350,  10), #Bulgaria
-( 50, 350, 100,  20,  10), #Cordoba
-(180,  20, 350,  20,  10), #Spain
+(100,  50, 100, 350,  10), #Bulgaria
+( 50, 250, 100,  20,  10), #Cordoba
+(100,  20, 200,  20,  10), #Spain
 (250,  50, 100, 150,  10), #Norse
-( 90,  50, 350,  30,  10), #tVenecia
-( 90,  90,  90, 350,  10), #tKiev
-(250,  80, 250, 150,  10), #tHungary
-(450,  20, 350,  20,  10), #tGermany
-(200,  20, 350,  80,  10), #tPoland
+( 90,  50, 200,  30,  10), #tVenecia
+( 90,  90,  90, 250,  10), #tKiev
+(250,  80, 150, 100,  10), #tHungary
+(450,  20, 250,  20,  10), #tGermany
+(200,  20, 250,  80,  10), #tPoland
 (100,  20, 100, 250,  10), #tMoscow
-(190,  50, 350,  30,  10), #tGenoa
+(190,  50, 250,  30,  10), #tGenoa
 (450,  20, 100,  20,  10), #tEngland
-(190,  80, 350,  20,  10), #tPortugal
-(200,  20, 350,  20,  10), #tAustria
+(200,  80, 250,  20,  10), #tPortugal
+(200,  20, 250,  20,  10), #tAustria
 ( 20, 350,  80,  80,  10), #tTurkey
 (550,  20, 100, 100,  10), #tSweden
 (550,  20,  90,  20,  10), #tDutch
