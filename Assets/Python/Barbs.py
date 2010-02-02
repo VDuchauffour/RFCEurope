@@ -276,7 +276,7 @@ class Barbs:
 		self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 3, con.iArcher, 1)
 		#self.foundCity(iIndependent, lPisae, "Pisae", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent, lMilan, "Milan", iGameTurn, 3, con.iArcher, 2)
+		self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 3, con.iArcher, 2)
 		self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 3, con.iArcher, 2)
 		self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, con.iArcher, 1) 

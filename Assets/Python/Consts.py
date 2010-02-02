@@ -173,7 +173,7 @@ tBirth = (
 187,#1160AD Austria
 233,#1300AD Turkey - 233 is normal time
 300,#1500AD Sweden
-441,# 340 is normal 1580AD Dutch
+340,#1580AD Dutch
 0,	#Pope
 0,
 0,
