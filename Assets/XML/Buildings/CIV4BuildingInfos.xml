@@ -14439,7 +14439,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
-			<ObsoleteTech>TECH_CHIVALRY</ObsoleteTech>
+			<ObsoleteTech>TECH_EDUCATIOn</ObsoleteTech>
 			<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
