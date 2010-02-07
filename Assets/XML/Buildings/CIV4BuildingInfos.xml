@@ -2001,7 +2001,7 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>0</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -2175,7 +2175,7 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>0</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -2354,7 +2354,7 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>0</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -2527,7 +2527,7 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>0</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -2704,7 +2704,7 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>0</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -7651,7 +7651,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7660,7 +7660,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_BARLEY</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7669,7 +7669,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_APPLE</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7678,7 +7678,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_HONEY</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7687,7 +7687,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_POTATO</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -8052,14 +8052,14 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -8070,14 +8070,14 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
 					<CommerceModifiers>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -8088,7 +8088,7 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
@@ -8868,7 +8868,7 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -8876,7 +8876,7 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -8884,7 +8884,7 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -8892,7 +8892,7 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -8900,7 +8900,7 @@
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
@@ -11421,7 +11421,7 @@
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11450,7 +11450,7 @@
 				<BonusYieldModifier>
 					<BonusType>BONUS_CLAM</BonusType>
 					<YieldModifiers>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 					</YieldModifiers>
@@ -11458,7 +11458,7 @@
 				<BonusYieldModifier>
 					<BonusType>BONUS_CRAB</BonusType>
 					<YieldModifiers>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 					</YieldModifiers>
@@ -11466,7 +11466,7 @@
 				<BonusYieldModifier>
 					<BonusType>BONUS_SPICES</BonusType>
 					<YieldModifiers>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 					</YieldModifiers>
@@ -11479,7 +11479,7 @@
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>5</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>

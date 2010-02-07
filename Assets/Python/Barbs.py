@@ -82,7 +82,8 @@ lMinsk = [76,50,120,0] #800 AD
 lRiga = [72,58,240,0] #900 AD
 lMemel = [70,55,240,0] #900 AD
 lTvanksta = [70,54,100,0] #900 AD
-lBreslau = [65,46,100,0] #900 AD
+lBreslau = [65,45,100,0] #900 AD
+lKrakow = [70,46,100,0]
 lYaroslavl = [92,61,240,0] #900 AD
 lVologda = [89,64,240,0] #900 AD
 lTver = [85,60,240,0] #900 AD
@@ -289,7 +290,7 @@ class Barbs:
 		self.foundCity(iIndependent4, lRhodes, "Rhodes", iGameTurn, 1, con.iArcher, 1) #Start with Orthodoxy and a Harbor?
 		self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, con.iArcher, 2)
-		self.foundCity(iIndependent, lDublin, "Dubh Linn", iGameTurn, 1, con.iArcher, 2)
+		self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent2, lTonsberg, "Tonsberg", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iBarbarian, lRiga, "Riga", iGameTurn, 1, con.iCrossbowman, 2)
 		#self.foundCity(iIndependent2, lMemel, "Memel", iGameTurn, 1, con.iCrossbowman, 2)
@@ -297,7 +298,8 @@ class Barbs:
 		self.foundCity(iIndependent, lLubeck, "Liubice", iGameTurn, 1, con.iArcher, 2)
 		#self.foundCity(iIndependent2, lLeipzig, "Leipzig", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent, lPrague, "Prague", iGameTurn, 1, con.iCrossbowman, 2)
-		self.foundCity(iIndependent2, lBreslau, "Breslau", iGameTurn, 1, con.iCrossbowman, 2)
+		#self.foundCity(iIndependent2, lBreslau, "Breslau", iGameTurn, 1, con.iCrossbowman, 2)
+		self.foundCity(iIndependent2, lKrakow, "Krakow", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent3, lKharkov, "Kharkov", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, con.iCrossbowman, 1)
 		self.foundCity(iBarbarian, lKazan, "Bulgar", iGameTurn, 1, con.iCrossbowman, 1)
