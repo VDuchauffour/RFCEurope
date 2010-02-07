@@ -125,7 +125,7 @@ lNeighbours = [
 
 #for stability hit on spawn
 lOlderNeighbours = [
-[], #Burgundy
+[iFrankia], #Burgundy
 [], #Byzantium
 [], #Frankia
 [iByzantium], #Arabia
@@ -153,7 +153,7 @@ lOlderNeighbours = [
 
 # civ birth dates
 tBirth = (
-0,  #500AD Burgundy
+85,  #500AD Burgundy #840
 0,  #500AD Byzantium
 0,  #500AD Frankia
 33, #632AD Arabia
@@ -173,7 +173,7 @@ tBirth = (
 187,#1160AD Austria
 233,#1300AD Turkey - 233 is normal time
 300,#1500AD Sweden
-340,#1580AD Dutch
+340,#1580AD Dutch 340 is normal time
 0,	#Pope
 0,
 0,
@@ -184,7 +184,7 @@ tBirth = (
 
 
 tYear = (
-("500", "TXT_KEY_AD"),
+("840", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("632", "TXT_KEY_AD"),
@@ -315,7 +315,7 @@ tCapitals = (
 (86, 42), #tKiev
 (67, 37), #tHungary
 (54, 46), #tGermany
-(69, 47), #tPoland
+(65, 48), #tPoland
 (88, 56), #tMoscow
 (50, 34), #tGenoa
 (43, 53), #tLondon, England
@@ -328,7 +328,7 @@ tCapitals = (
 ) 
 
 tStartingWorkers = (
-0, #tBurgundy
+2, #tBurgundy
 0, #tByzantium
 0, #tFrance
 2, #tArabia

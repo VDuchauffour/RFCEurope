@@ -650,7 +650,7 @@ class RiseAndFall:
                 
                                
                 # set starting gold
-                pBurgundy.changeGold( 50 )
+                pBurgundy.changeGold( 250 )
                 pByzantium.changeGold( 1000 )
                 pFrankia.changeGold( 50 )
                 pArabia.changeGold( 200 )
@@ -678,10 +678,10 @@ class RiseAndFall:
                 #self.displayWelcomePopup()
 
                 # 3Miro: only the very first civ in the WB file
-                if (pBurgundy.isHuman()):
-                        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
-                        unit = plotBurgundy.getUnit(0)
-                        unit.centerCamera()
+                #if (pBurgundy.isHuman()):
+                #        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
+                #        unit = plotBurgundy.getUnit(0)
+                #        unit.centerCamera()
                 #center camera on Egyptian units
                 #if (pEgypt.isHuman()):
                 #        plotEgypt = gc.getMap().plot(tCapitals[iEgypt][0], tCapitals[iEgypt][1])   
@@ -699,7 +699,7 @@ class RiseAndFall:
                 #3Miro: first and last civ (first that does not start)
                 # not sure if this even gets called, could be depricated
                 for iCiv in range(iNumPlayers):
-                        if (iCiv >= iArabia and not gc.getPlayer(iCiv).isHuman()):
+                        if ((iCiv >= iArabia and not gc.getPlayer(iCiv).isHuman()) or (iCiv == iBurgundy and not gc.getPlayer(iCiv).isHuman())):
                                 self.setBirthTurnModifier(iCiv, (gc.getGame().getSorenRandNum(11, 'BirthTurnModifier') - 5)) # -5 to +5
                 #now make sure that no civs spawn in the same turn and cause a double "new civ" popup
                 for iCiv in range(iNumPlayers):
@@ -2207,6 +2207,8 @@ class RiseAndFall:
 
 
         def createAdditionalUnits( self, iCiv, tPlot ):
+	        if ( iCiv == iBurgundy ):
+                        utils.makeUnit(con.iLancer, iCiv, tPlot, 2)
                 if ( iCiv == iArabia ):
                         utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 5)
                 if ( iCiv == iBulgaria ):
@@ -2253,6 +2255,10 @@ class RiseAndFall:
 
         def createStartingUnits( self, iCiv, tPlot ):
                 # Change here to make later starting civs work
+		if (iCiv == iBurgundy):
+			utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
+			utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 2)
+			utils.makeUnit(con.iAxeman, iCiv, tPlot, 2)
                 if (iCiv == iArabia):
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
@@ -2402,6 +2408,8 @@ class RiseAndFall:
                 # 3Miro: get the workers
                 #if (iCiv == iGreece):
                 #        utils.makeUnit(con.iWorker, iCiv, tPlot, 2)
+		if ( iCiv == iBurgundy):
+                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
                 if ( iCiv == iArabia ):
                         utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
                 if ( iCiv == iBulgaria ):
@@ -2457,9 +2465,6 @@ class RiseAndFall:
         def create4000BCstartingUnits( self ):
                 # 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
                 # for the late starts those get destroyed
-                utils.makeUnit(iSettler, iBurgundy, tCapitals[iBurgundy], 1)
-                utils.makeUnit(con.iArcher, iBurgundy, tCapitals[iBurgundy], 1)
-                utils.makeUnit(con.iWorker, iBurgundy, tCapitals[iBurgundy], 1)
                 
                 # 3Miro: Byzantium Starting Units are in the WB file
                 #utils.makeUnit(iSettler, iByzantium, tCapitals[iByzantium], 1)
@@ -2471,12 +2476,19 @@ class RiseAndFall:
                 utils.makeUnit(con.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iWorker, iFrankia, tCapitals[iFrankia], 1)
 
-                self.showArea(iBurgundy)
+                #self.showArea(iBurgundy)
                 self.showArea(iByzantium)
                 self.initContact(iByzantium)
                 self.showArea(iFrankia)
                 self.showArea(iPope)
 
+		if ( pBurgundy.isHuman() and tBirth[iBurgundy] > 0 ):
+                        # 3Miro: prohibit contact on turn 0
+                        tBurgundyStart = ( tCapitals[iBurgundy][0]+2, tCapitals[iBurgundy][1] )
+			utils.makeUnit(iSettler, iBurgundy, tCapitals[iBurgundy], 1)
+			utils.makeUnit(con.iArcher, iBurgundy, tCapitals[iBurgundy], 1)
+			utils.makeUnit(con.iWorker, iBurgundy, tCapitals[iBurgundy], 1)
+		
                 if ( pArabia.isHuman() and tBirth[iArabia] > 0 ):
                         # 3Miro: prohibit contact on turn 0
                         tArabStart = ( tCapitals[iArabia][0]+2, tCapitals[iArabia][1] )
@@ -2574,7 +2586,26 @@ class RiseAndFall:
                 
                 if ( tBirth[iCiv] == 0 ):
                         return
-              
+                
+		if ( iCiv == iBurgundy ):
+                        teamBurgundy.setHasTech( con.iCalendar, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iArchitecture, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iTheology, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iMonasticism, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iManorialism, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iVassalage, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iFeudalism, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iStirrup, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iFarriers, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iArt, True, iCiv, False, False )  
+                        teamBurgundy.setHasTech( con.iEngineering, True, iCiv, False, False ) 
+                        teamBurgundy.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iChainMail, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iCodeOfLaws, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iAstrolabe, True, iCiv, False, False )
+                        teamBurgundy.setHasTech( con.iMusic, True, iCiv, False, False )
+		
+		
                 if ( iCiv == iArabia ):
                         teamArabia.setHasTech( con.iTheology, True, iCiv, False, False )
                         teamArabia.setHasTech( con.iCalendar, True, iCiv, False, False )
@@ -2958,6 +2989,10 @@ class RiseAndFall:
                 if ( iCiv == iByzantium ):
                         if ( pPope.isAlive() and ( not teamByzantium.isHasMet( pPope.getTeam() ) ) ):
                                 teamByzantium.meet( pPope.getTeam(), True )
+		if ( iCiv == iBurgundy ):
+                        if ( pFrankia.isAlive() and ( not teamBurgundy.isHasMet( pFrankia.getTeam() ) ) ):
+                                teamBurgundy.meet( pFrankia.getTeam(), True )
+
                 if ( iCiv == iCordoba ):
                         if ( pArabia.isAlive() and ( not teamCordoba.isHasMet( pArabia.getTeam() ) ) ):
                                 teamCordoba.meet( pArabia.getTeam(), True )
