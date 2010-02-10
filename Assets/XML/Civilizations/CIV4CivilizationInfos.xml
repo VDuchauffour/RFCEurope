@@ -354,8 +354,8 @@
 			<Adjective>TXT_KEY_CIV_BURGUNDY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BURGUNDY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<StartingYear>840AD</StartingYear>
+			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_BUR</UP1>
 			<UP2>TXT_KEY_UP_BUR2</UP2>
 			<UHV1>TXT_KEY_UHV_BUR1</UHV1>
