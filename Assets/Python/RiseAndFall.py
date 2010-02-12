@@ -2970,7 +2970,7 @@ class RiseAndFall:
                                         city.city.setHasReligion(con.iProtestantism, True, False, False)
                                         iLostFaith += 1
                                         #iLostFaith += self.reformationReformCity( city.city, 9, False )
-                gc.getPlayer(iCiv).changeFaith( - max( gc.getPlayer(iCiv).getFaith(), iLostFaith ) )
+                gc.getPlayer(iCiv).changeFaith( - min( gc.getPlayer(iCiv).getFaith(), iLostFaith ) )
         ### End Reformation ###
 
         def showRect( self, iCiv, iXs, iYs, iXe, iYe ):
