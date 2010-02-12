@@ -329,15 +329,13 @@ class Stability:
 				if (iCivic4 == 22):
 					iNewBaseCivicStability -=7
 			if (iCivic2 == 13): #Apprenticeship
-				if (iCivic3 == 17): #and Guilds
-					iNewBaseCivicStability +=3
-                        if (iCivic1 == 7): #Bureaucracy 
 				if (iCivic3 == 18): #Bonus with Mercantalism
 					iNewBaseCivicStability +=2
-                                if (pPlayer.getNumCities() <= 5):
-                                        iNewBaseCivicStability += 5
-                                else:
-                                        iNewBaseCivicStability += max(-7,(5 - pPlayer.getNumCities()))
+			if (iCivic1 == 7): #Bureaucracy 
+				if (pPlayer.getNumCities() <= 5):
+					iNewBaseCivicStability += 5
+				else:
+					iNewBaseCivicStability += max(-7,(5 - pPlayer.getNumCities()))
 			if (iCivic0 == 1): #Electorate. -1 per city beyond capitol. Too harsh? 3Miro: Yep, move to .5 per city
 				iNewBaseCivicStability += (1 - pPlayer.getNumCities() / 2)
                         if (iCivic0 == 4): #Merchant Republic city cap (like Republic from RFC)
