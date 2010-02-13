@@ -529,14 +529,14 @@ class RiseAndFall:
                 #               CyTranslator().getText("TXT_KEY_REBELLION_TEXT", (gc.getPlayer(iRebelCiv).getCivilizationAdjectiveKey(),)), \
                 #               (CyTranslator().getText("TXT_KEY_POPUP_YES", ()), \
                 #                CyTranslator().getText("TXT_KEY_POPUP_NO", ())))
-                iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iNumCities )
+                iLoyalPrice = min( (10 * gc.getPlayer( utils.getHumanID() ).getGold()) / 100, 50 * iNumCities )
                 self.showPopup(7622, CyTranslator().getText("TXT_KEY_REBELLION_TITLE", ()), \
-                                CyTranslator().getText("TXT_KEY_REBELION_HUMAN", (gc.getPlayer(iRebelCiv).getCivilizationAdjectiveKey(),)), \
-                                (CyTranslator().getText("TXT_KEY_REBELION_LETGO", ()), \
-                                CyTranslator().getText("TXT_KEY_REBELION_DONOTHING", ()), \
-                                CyTranslator().getText("TXT_KEY_REBELION_CRACK", ()), \
-                                CyTranslator().getText("TXT_KEY_REBELION_BRIBE", ()) + " " + str(iLoyalPrice), \
-                                CyTranslator().getText("TXT_KEY_REBELION_BOTH", ())))
+                                CyTranslator().getText("TXT_KEY_REBELLION_HUMAN", (gc.getPlayer(iRebelCiv).getCivilizationAdjectiveKey(),)), \
+                                (CyTranslator().getText("TXT_KEY_REBELLION_LETGO", ()), \
+                                CyTranslator().getText("TXT_KEY_REBELLION_DONOTHING", ()), \
+                                CyTranslator().getText("TXT_KEY_REBELLION_CRACK", ()), \
+                                CyTranslator().getText("TXT_KEY_REBELLION_BRIBE", ()) + " " + str(iLoyalPrice), \
+                                CyTranslator().getText("TXT_KEY_REBELLION_BOTH", ())))
 
         def eventApply7622(self, popupReturn):
                 #iHuman = utils.getHumanID()
@@ -548,32 +548,34 @@ class RiseAndFall:
                 iHuman = utils.getHumanID()
                 iRebelCiv = self.getRebelCiv()
                 iChoice = popupReturn.getButtonClicked()
+		lCityList = self.getRebelCities()
+		iNumCities = len( lCityList )
                 if ( iChoice == 1 ):
-                        lList = self.getRebelSurppress()
+                        lList = self.getRebelSuppress()
                         lList[iHuman] = 2 # let go + war
-                        self.setRebelSurppress( lList )
+                        self.setRebelSuppress( lList )
                 elif( iChoice == 2 ):
-                        if ( gc.getGame().getSorenRandNum(100, 'odds') > 55 ):
+                        if ( gc.getGame().getSorenRandNum(100, 'odds') < 40 ):
                                 lCityList = self.getRebelCities()
                                 for iCity in range( len( lCityList ) ):
                                         pCity = gc.getMap().plot( lCityList[iCity][0], lCityList[iCity][1] ).getPlotCity()
                                         if ( pCity.getOwner() == iHuman ):
                                                 pCity.changeOccupationTimer( 2 )
                                                 pCity.changeHurryAngerTimer( 10 )
-                                lList = self.getRebelSurppress()
+                                lList = self.getRebelSuppress()
                                 lList[iHuman] = 3 # keep cities + war
-                                self.setRebelSurppress( lList )
+                                self.setRebelSuppress( lList )
                         else:
-                                lList = self.getRebelSurppress()
+                                lList = self.getRebelSuppress()
                                 lList[iHuman] = 4 # let go + war
-                                self.setRebelSurppress( lList )
+                                self.setRebelSuppress( lList )
                 elif( iChoice == 3 ):
                         iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iNumCities )
                         gc.getPlayer( iHuman ).setGold( gc.getPlayer( iHuman ).getGold() - iLoyalPrice )
                         if ( gc.getGame().getSorenRandNum(100, 'odds') < iLoyalPrice / iNumCities ):
-                                lList = self.getRebelSurppress()
+                                lList = self.getRebelSuppress()
                                 lList[iHuman] = 1 # keep + no war
-                                self.setRebelSurppress( lList )
+                                self.setRebelSuppress( lList )
                 elif( iChoice == 4 ):
                         iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iNumCities )
                         gc.getPlayer( iHuman ).setGold( gc.getPlayer( iHuman ).getGold() - iLoyalPrice )
@@ -584,14 +586,14 @@ class RiseAndFall:
                                         if ( pCity.getOwner() == iHuman ):
                                                 pCity.changeOccupationTimer( 2 )
                                                 pCity.changeHurryAngerTimer( 10 )                       
-                                lList = self.getRebelSurppress()
-                                lList[iHuman] = 3 # keep + no war
-                                self.setRebelSurppress( lList )
+                                lList = self.getRebelSuppress()
+                                lList[iHuman] = 3 # keep + war
+                                self.setRebelSuppress( lList )
                                                         
                         else:
-                                lList = self.getRebelSurppress()
+                                lList = self.getRebelSuppress()
                                 lList[iHuman] = 2 # let go + war
-                                self.setRebelSurppress( lList )        
+                                self.setRebelSuppress( lList )        
                 self.resurectCiv( self.getRebelCiv() )
         ### Reformation Begin ###
         def reformationPopup(self):
@@ -1475,7 +1477,7 @@ class RiseAndFall:
                 if (len(tLeaders[iDeadCiv]) > 1):
                         iLen = len(tLeaders[iDeadCiv])
                         iRnd = gc.getGame().getSorenRandNum(iLen, 'odds')
-                        for k in range (iLen):
+                        for k in range(iLen):
                                 iLeader = (iRnd + k) % iLen
                                 if (pDeadCiv.getLeader() != tLeaders[iDeadCiv][iLeader]):
                                         print ("leader switch after resurrection", pDeadCiv.getLeader(), tLeaders[iDeadCiv][iLeader])
@@ -1499,17 +1501,19 @@ class RiseAndFall:
                 bHuman = False
                 
                 print ("RESURRECTION", gc.getPlayer(iDeadCiv).getCivilizationAdjective(0))
-                       
                 
                 for k0 in range(len(lCityList)):
-                        if ( gc.getMap().plot( lCityList[k0][0], lCityList[k0][0] ).getPlotCity().getOwner() == iHuman ):
+                        if ( gc.getMap().plot( lCityList[k0][0], lCityList[k0][1] ).getPlotCity().getOwner() == iHuman ):
                                 bHuman = True
+			#iOwner = lCityList[k0][0].getOwner()
+			#if ( iOwner == iHuman ):
+			#	bHuman = True
 
                 ownersList = []        
                 bAlreadyVassal = False
                 for k in range(len(lCityList)):
                         #print ("INDEPENDENCE: ", cityList[k].getName()) #may cause a c++ exception                                       
-                        pCity = gc.getMap().plot( lCityList[k], lCityList[k] ).getPlotCity()
+                        pCity = gc.getMap().plot( lCityList[k][0], lCityList[k][1] ).getPlotCity()
                         iOwner = pCity.getOwner()
                         teamOwner = gc.getTeam(gc.getPlayer(iOwner).getTeam())
                         bOwnerVassal = teamOwner.isAVassal()
