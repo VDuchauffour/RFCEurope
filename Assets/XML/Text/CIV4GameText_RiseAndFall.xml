@@ -114,6 +114,60 @@
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_REBELLION_HUMAN</Tag>
+		<English>The people of %s1_CivName are trying to regain their independence and rebuild their nation. Cities from our empire want to join them!</English>
+		<French>Ind&#233;pendance !</French>
+		<German>Unabh&#228;ngigkeit!</German>
+		<Italian>Indipendenza!</Italian>
+		<Spanish>&#161;Independencia!</Spanish>
+		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REBELLION_LETGO</Tag>
+		<English>A sign of weakness: Let them go, they contribute nothing to our glorious empire are not worth the trouble.</English>
+		<French>Ind&#233;pendance !</French>
+		<German>Unabh&#228;ngigkeit!</German>
+		<Italian>Indipendenza!</Italian>
+		<Spanish>&#161;Independencia!</Spanish>
+		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REBELLION_DONOTHING</Tag>
+		<English>Stretched too thin: We cannot deal with them right now. Let the local garrison best deal with the situation on their own.</English>
+		<French>Ind&#233;pendance !</French>
+		<German>Unabh&#228;ngigkeit!</German>
+		<Italian>Indipendenza!</Italian>
+		<Spanish>&#161;Independencia!</Spanish>
+		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REBELLION_CRACK</Tag>
+		<English>The whip: Let them feel the strength of our Empire, no one rebel against my rule!</English>
+		<French>Ind&#233;pendance !</French>
+		<German>Unabh&#228;ngigkeit!</German>
+		<Italian>Indipendenza!</Italian>
+		<Spanish>&#161;Independencia!</Spanish>
+		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REBELLION_BRIBE</Tag>
+		<English>The price of loyalty: Bribe the local lords, with them on our side we will not have to bother with the peasants. Bribe: </English>
+		<French>Ind&#233;pendance !</French>
+		<German>Unabh&#228;ngigkeit!</German>
+		<Italian>Indipendenza!</Italian>
+		<Spanish>&#161;Independencia!</Spanish>
+		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REBELLION_BOTH</Tag>
+		<English>Sticks and carrots: Do whatever it takes, but keep those cities loyal and subjugated.</English>
+		<French>Ind&#233;pendance !</French>
+		<German>Unabh&#228;ngigkeit!</German>
+		<Italian>Indipendenza!</Italian>
+		<Spanish>&#161;Independencia!</Spanish>
+		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Japanese/><Chinese/></TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REBELLION_MESSAGE</Tag>
 		<English>cities have declared their independence from us and expelled our garrisons. Shall we leave them free?</English>
 		<French>ont d&#233;clar&#233; leur ind&#233;pendance et attaquent nos garnisons. Devons-nous les laisser libres ?</French>
