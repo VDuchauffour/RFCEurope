@@ -188,17 +188,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR13</Tag>
-<<<<<<< .mine
 		<English>Iberian Union</English>
 		<French>Union Ibérique</French>
 		<German>Iberische Union</German>
 		<Italian/><Spanish/><Russian/>
-=======
-		<English>Viceroyalty of Portugal</English>
-		<French>Union Ibérique</French><German/><Italian/>
-		<Spanish>Virreinato de Portugal</Spanish>
-		<Russian/>
->>>>>>> .r234
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR14</Tag>

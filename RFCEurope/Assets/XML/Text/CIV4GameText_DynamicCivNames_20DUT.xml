@@ -188,18 +188,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT13</Tag>
-<<<<<<< .mine
 		<English>Spanish Netherlands</English>
 		<French>Pays-Bas Espagnol</French>
 		<German>Spanische Niederlande</German>
 		<Italian>Paesi Bassi Spagnoli</Italian>
 		<Spanish>Pa&#237;ses Bajos Espa&#241;oles</Spanish>
 		<Russian/>
-=======
-		<English>Spanish Low Countries</English>
-		<French>Pays-Bas Espagnol</French><German/><Italian/>
-		<Spanish>Paises Bajos Espa&#241;oles</Spanish><Russian/>
->>>>>>> .r234
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT14</Tag>
