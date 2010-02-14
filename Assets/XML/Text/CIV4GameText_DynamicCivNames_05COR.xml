@@ -172,10 +172,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR13</Tag>
-		<English>Reconquista Andalusia</English>
+		<English>Kingdom of Andalusia</English>
 		<French>Andalousie Reconquite</French>
 		<German>Reconquista Andalusien</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian/>
+		<Spanish>Reino de Andalucia</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR14</Tag>

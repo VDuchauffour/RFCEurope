@@ -176,10 +176,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ13</Tag>
-		<English>Spanish Kingdom of Greece</English>
+		<English>Duchy of Neopatria</English>
 		<French>Royaume Espagnol de Gr&#232;ce</French>
 		<German>Spanisches Königreich Griechenland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian/>
+		<Spanish>Ducado de Neopatria</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ14</Tag>

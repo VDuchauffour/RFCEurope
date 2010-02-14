@@ -188,10 +188,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA13</Tag>
-		<English>Spanish Kingdom of France</English>
+		<English>Viceroyalty of France</English>
 		<French>Royaume Espagnole de France</French>
 		<German>Spanisches Königreich Frankreich</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian/>
+		<Spanish>Virreinato de Francia</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA14</Tag>

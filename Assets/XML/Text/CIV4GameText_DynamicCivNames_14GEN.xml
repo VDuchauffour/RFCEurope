@@ -146,8 +146,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN13</Tag>
-		<English>Spanish Mediterranean</English>
-		<French>M&#233;diterran&#233;e Espagnol</French><German/><Italian/><Spanish/><Russian/>
+		<English>Viceroyalty of Italy</English>
+		<French>M&#233;diterran&#233;e Espagnol</French><German/><Italian/>
+		<Spanish>Virreinato de Italia</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN14</Tag>
