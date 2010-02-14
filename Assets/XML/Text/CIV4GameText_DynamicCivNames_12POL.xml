@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Polen:Die Polen:den Polen</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Polen</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Polnisch:polnischen:polnische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -82,112 +82,156 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL00</Tag>
 		<English>Polans Peoples</English>
-		<French>Peuplade Polanes</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Polanes</French>
+		<German>Polanische Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL01</Tag>
 		<English>Kingdom of Poland</English>
-		<French>Royaume de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Pologne</French>
+		<German>Königreich Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL02</Tag>
 		<English>Polish Commonwealth</English>
-		<French>Commonwealth Polonais</French><German/><Italian/><Spanish/><Russian/>
+		<French>Commonwealth Polonais</French>
+		<German>Polnisches Gemeinwesen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL03</Tag>
 		<English>Kingdom of Poland</English>
-		<French>Royaume de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Pologne</French>
+		<German>Königreich Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL04</Tag>
 		<English>Polish Commonwealth</English>
-		<French>Commonwealth Polonais</French><German/><Italian/><Spanish/><Russian/>
+		<French>Commonwealth Polonais</French>
+		<German>Polnisches Gemeinwesen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL05</Tag>
 		<English>Republic of Poland</English>
-		<French>R&#233;publique de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique de Pologne</French>
+		<German>Republik Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL08</Tag>
 		<English>Sultanate of Poland</English>
-		<French>Sultanat de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de Pologne</French>
+		<German>Sultanat Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL09</Tag>
 		<English>Islamic Republic of Poland</English>
-		<French>R&#233;publique Islamique de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique de Pologne</French>
+		<German>Islamische Republik Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL10</Tag>
 		<English>Exarchate of Polonia</English>
-		<French>Exarchat de Polonia</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Polonia</French>
+		<German>Exarchat Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL11</Tag>
 		<English>Duchy of Warsaw</English>
-		<French>Duch&#233; de Varsovie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de Varsovie</French>
+		<German>Herzogtum Warschau</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL12</Tag>
 		<English>Emirate of Poland</English>
-		<French>Emirat de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Pologne</French>
+		<German>Emirat Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL13</Tag>
 		<English>Spanish Kingdom of Poland</English>
-		<French>Royaume Espagnol de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol de Pologne</French>
+		<German>Spanisches Königreich Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL14</Tag>
 		<English>South Baltic State</English>
-		<French>Etat Baltique du Sud</French><German/><Italian/><Spanish/><Russian/>
+		<French>Etat Baltique du Sud</French>
+		<German>Südbaltischer Staat</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL15</Tag>
 		<English>Venetian Poland</English>
-		<French>Pologne V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Pologne V&#233;nitienne</French>
+		<German>Venezianisch-Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL16</Tag>
 		<English>Congress Poland</English>
-		<French>Congr&#232;s Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Congr&#232;s Pologne</French>
+		<German>Kongress Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL17</Tag>
 		<English>Grand Duchy of Posen</English>
-		<French>Grand-Duch&#233; de Posen</French><German/><Italian/><Spanish/><Russian/>
+		<French>Grand-Duch&#233; de Posen</French>
+		<German>Großherzogtum Posen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL18</Tag>
 		<English>Counties of Poland</English>
-		<French>Comt&#233;es de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;es de Pologne</French>
+		<German>Counties Polens</German>
+		><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL19</Tag>
 		<English>Habsburg Poland</English>
-		<French>Pologne Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Pologne Habsbourg</French>
+		<German>Habsburger Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL20</Tag>
 		<English>Principality of Polonya</English>
-		<French>Principaut&#233; de Polonya</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Polonya</French>
+		<German>Fürstentum Polonya</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL21</Tag>
 		<English>Province of Poland</English>
-		<French>Province de Pologne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Pologne</French>
+		<German>Provinz Polen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLAND_PEDIA</Tag>
@@ -196,7 +240,10 @@
 [TAB]Future Polish kings then had to deal not just with Germans, Bohemians and Lithuanians, but the restless and aggressive Teutonic Knights. As if that were not enough, in 1241 a major Mongol invasion force arrived in Silesia (southeastern Poland). The Poles were able to defeat the Mongols, but at huge cost. Vast lands were laid waste and thousands of soldiers perished. In 1330 tensions between the Teutonic Knights and Poland erupted into open war, and after many political and military stalemates, the Polish king Casimir III was able to expand and recover from the Mongol attack and the endless conflicts with Poland's neighbors. But despite holding firm, Casimir had to settle for survival rather than prosperity.
 [TAB]The golden age of Poland came at the end of the Middle Ages, when alliance with Lithuania led to a combined assault on the Teutonic Knights that culminated in the fated battle of Grunwald in 1410. The Knights were able to fight off one contingent of the allied force, but were crushed by the other. The Knights were not totally defeated, but they would never again exert their will upon Poland as forcefully as they had in the preceding two centuries. Casimir IV, perhaps the greatest Polish king, was able to capitalize on this success to unite the Polish succession lines with those of Hungary and Bohemia, creating, albeit briefly, an eastern European super-state that dominated the region culturally and militarily for two generations.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Es kann wenig Zweifel geben, dass, wenn sie fähig gewesen wären, ihre inneren Spaltungen zu überwinden, die Polen eine dominierende Macht im Mittelalter gewesen wären. Die erste Institution, die ein polnisches Königreich oder eine polnische Nation genannt werden kann, entstand ungefähr 980 n. Chr., als ein Stammesführer, Mieszko, drei größere Stämme in Osteuropa vereinigte und zum Katholizismus konvertierte. Obwohl das Konzept einer Dynastie hatte in diesem Teil Europas noch nicht Anklang gefunden, waren Thronfolgen häufig äußerst brutal und chaotisch. Nach der Herrschaft Mieszkos hing das Geschick des polnischen Nationalstaats völlig von der Grausamkeit und Willenskraft seines Führers ab. Einige der Nachfolger Mieszkos waren stark und fähig, ihre Willen den widerspenstigen Fürstentümern und Stämmen Polens und Pommerns aufzuerlegen, und sich dabei effektiv gegen ausländische, gewöhnlich deutsche oder böhmische, Invasionen zu verteidigen. Andere waren es nicht.
+[TAB]1226 n. Chr., nur zweihundert Jahre nachdem Boleslaw II. das polnische Königreich erfolgreich wiedervereinigt hatte, wurde Polen wieder tief geteilt. Baltische Stämme bedrohte den Norden und der deutsche Staat Brandenburg suchte größeres Land und Einfluss im Westen. Der polnische König Konrad I. von Masowien entschied sich dafür, eine Armee anzuheuern, um beide dieser Drohungen im Austausch für ein unbestimmtes Heimatland in Polen zu bekämpfen. Diese Armee waren die teutonischen Ritter. Sie akzeptierten das Angebot von Konrad und nachdem sie im nördlichen Polen angekommen waren, führten sie mehrere blutige Kampagnen der Eroberung gegen die deutschen und baltischen Besatzer. Zur Überraschung Konrads aber entschieden sich die Ritter dann dafür, dass sie lieber ihr eigenes Land und nicht ein abhängiges Heimatland innerhalb eines Königreichs eines anderen haben wollten. Konrad hatte das polnische Königreich vor äußeren Invasionen geschützt, um nun von innen angegriffen zu werden.
+[TAB]Zukünftige polnische Könige mussten sich dann nicht nur mit Deutschen, Böhmen und Litauern, sondern auch den ruhelosen und aggressiven teutonischen Rittern befassen. Als ob das nicht genug war, kam 1241 eine große mongolische Invasionsarmee in Silesia (südöstliches Polen) an. Die Polen waren im Stande, die Mongolen zu besiegen, jedoch mit immensem Aufwand. Riesengroße Länder wurden verwüstet und Tausende von Soldaten kamen um. 1330 mündeten die Spannungen zwischen den teutonischen Rittern und Polen in offenen Krieg aus, und nach vielen politischen und militärischen Patts war der polnische König Kasimir III. im Stande, zu expandieren und sich vom mongolischen Angriff und den endlosen Konflikten mit Polens Nachbarn zu erholen. Aber obwohl er standhaft blieb, musste sich Kasimir eher mit dem Überleben, als mit Wohlstand abfinden.
+[TAB] Das Goldene Zeitalter Polens kam am Ende des Mittelalters, als das Bündnis mit Litauen zu einem vereinigten Angriff gegen die teutonischen Ritter führte, der 1410 in der vom Schicksal bestimmten Schlacht bei Tannenberg kulminierte. Die Ritter waren im Stande, ein Kontingent der verbündeten Streitmacht zu bekämpfen, wurden aber durch den anderen zerschlagen. Die Ritter wurden nicht völlig besiegt, würden aber nie wieder ihren Willen auf Polen so kräftig ausüben, wie sie es in den vorangegangenen zwei Jahrhunderten getan hatten. Kasimir IV., der vielleicht größte polnische König, konnte aus diesem Erfolg Kapital schlagen, um die polnischen Erbfolge-Linien mit den Ungarns und Böhmens zu vereinigen. Er schuf, wenngleich nur für kurze Zeit, einen osteuropäischen Superstaat, der das Gebiet kulturell und militärisch für zwei Generationen beherrschte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -210,7 +257,13 @@
 	[BOLD]Background:[\BOLD]
 	Casimir III was born in Kowal, at April 30, 1310. He became King of Poland at 25 April 1333, and reigned for 37 consecutive years, during which he built many fortresses across his kingdom, reformed  the law system, founded the University of Krakow, and most importantly of all, fought many victorious wars, Gains from these wars include a big part of Ukraine and the Duchy of Halicz. Also, noteworthy is the fact that he ptotected the Jews in his country, and encouraged those living in other countries to emigrate at Poland. Upon his death, at November 5, 1370, Poland had a much healthier economy and its size doubled. For these reasons, historians call him Casimir the Great.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[H1]Kasimir III.[\H1]
+[BOLD]König Polens[\BOLD]
+[BOLD]Lebte:[\BOLD] 30. April 1310 - 5. November 1370
+
+
+	[BOLD]Hintergrund:[\BOLD]
+	Kasimir III. wurde am 30. April 1310 in Kowal geboren. Er wurde am 25. April 1333 König Polens, und regierte 37 Jahre lang, in denen er viele Festungen in seinem Königreich baute, das Gesetzsystem reformierte, die Universität Krakaus gründete, und, am wichtigsten von allem, viele siegreiche Kriege kämpfte. Gewinne dieser Kriegen schließen einen großen Teil der Ukraine und das Herzogtum Halytsch ein. Außerdem beachtenswert ist die Tatsache, dass er die Juden in seinem Land schützte, und diejenigen dazu ermunterte, die in anderen Ländern leben, nach Polen zu emigrieren. Zu seinen Tod, am 5. November 1370, hatte Polen eine viel gesündere Wirtschaft, und seine Größe hatte sich verdoppelt. Aus diesen Gründen nennen Historiker ihn Kasimir den Großen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>

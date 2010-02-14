@@ -13,17 +13,17 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Holländer:Die Holländer:den Holländern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
 		<Italian>
-			<Text>I Persiani</Text>
+			<Text>Gli Olandesi</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Holand&#233;ses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -38,17 +38,17 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Niederlande</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Persia</Text>
+			<Text>Olanda</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Holanda</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -63,17 +63,17 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Holl&#228;ndisch:holl&#228;ndischen:holl&#228;ndische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+			<Text>olandese:olandesi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>holand&#233;s:holandesa:holandeses:holandesas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -82,112 +82,181 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
 		<English>Batavian Peoples</English>
-		<French>Peuplade Batave</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Batave</French>
+		<German>Batavische Völker</German>
+		<Italian>Popoli Batavi</Italian>
+		<Spanish>Pueblos B&#225;tavos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT01</Tag>
 		<English>Kingdom of the Netherlands</English>
-		<French>Royaume de Hollande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Hollande</French>
+		<German>Königreich der Niederlande</German>
+		<Italian>Regno dei Paesi Bassi</Italian>
+		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT02</Tag>
 		<English>United Kingdom of the Netherlands</English>
-		<French>Royaume-Uni de Hollande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume-Uni de Hollande</French>
+		<German>Vereinigtes Königreich der Niederlande</German>
+		<Italian>Regno Unito dei Paesi Bassi</Italian>
+		<Spanish>Reino Unido de los Pa&#237;ses Bajos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT03</Tag>
 		<English>Kingdom of the Netherlands</English>
-		<French>Royaume des Pays-Bas</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume des Pays-Bas</French>
+		<German>Königreich der Niederlande</German>
+		<Italian>Regno dei Paesi Bassi</Italian>
+		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT04</Tag>
 		<English>Dutch Empire</English>
-		<French>Empire N&#233;erlandais</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire N&#233;erlandais</French>
+		<German>Holländisches Reich</German>
+		<Italian>Impero Olandese</Italian>
+		<Spanish>Imperio Holand&#233;s</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT05</Tag>
-		<English>United Provinces of the Netherlands</English>
-		<French>Provinces-Unies des Pays-Bas</French><German/><Italian/><Spanish/><Russian/>
+		<English>Republic of the Seven United Netherlands</English>
+		<French>R&#233;publique des Sept Provinces Unies</French>
+		<German>Republik der Sieben Vereinigten Provinzen</German>
+		<Italian>Repubblica delle Sette Province Unite</Italian>
+		<Spanish>Rep&#250;blica de las Siete Pa&#237;ses Bajos Unidos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT08</Tag>
 		<English>Sultanate of the Netherlands</English>
-		<French>Sultanat N&#233;erlandais</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat des Pays-Bas</French>
+		<German>Sultanat der Niederlande</German>
+		<Italian>Sultanato dei Paesi Bassi</Italian>
+		<Spanish>Sultanato de los Pa&#237;ses Bajos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT09</Tag>
 		<English>Islamic Republic of the Netherlands</English>
-		<French>R&#233;publique Islamique des Pays-Bas</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique des Pays-Bas</French>
+		<German>Islamische Republik der Niederlande</German>
+		<Italian>Repubblica Islamica dei Paesi Bassi</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica de los Pa&#237;ses Bajos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT10</Tag>
 		<English>Exarchate of Batavia</English>
-		<French>Exarchat de Batave</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Batave</French>
+		<German>Exarchat Batavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT11</Tag>
 		<English>Duchy of Batavia</English>
-		<French>Duch&#233; de Batave</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de Batave</French>
+		<German>Herzogtum Batavien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT12</Tag>
 		<English>Emirate of the Netherlands</English>
-		<French>Emirat des Pays-Bas</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat des Pays-Bas</French>
+		<German>Emirat der Niederlande</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT13</Tag>
+<<<<<<< .mine
+		<English>Spanish Netherlands</English>
+		<French>Pays-Bas Espagnol</French>
+		<German>Spanische Niederlande</German>
+		<Italian>Paesi Bassi Spagnoli</Italian>
+		<Spanish>Pa&#237;ses Bajos Espa&#241;oles</Spanish>
+		<Russian/>
+=======
 		<English>Spanish Low Countries</English>
 		<French>Pays-Bas Espagnol</French><German/><Italian/>
 		<Spanish>Paises Bajos Espa&#241;oles</Spanish><Russian/>
+>>>>>>> .r234
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT14</Tag>
 		<English>Norse Netherlands</English>
-		<French>Pays-Bas Viking</French><German/><Italian/><Spanish/><Russian/>
+		<French>Pays-Bas Viking</French>
+		<German>Nordische Niederlande</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT15</Tag>
 		<English>Venetian Netherlands</English>
-		<French>Pays-Bas V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Pays-Bas V&#233;nitienne</French>
+		<German>Venezianische Niederlande</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT16</Tag>
 		<English>Russian Netherlands</English>
-		<French>Pays-Bas Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Pays-Bas Russe</French>
+		<German>v</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT17</Tag>
 		<English>German Holland</English>
-		<French>Hollande Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Hollande Allemande</French>
+		<German>Deutsch-Holland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT18</Tag>
 		<English>County of Holland</English>
-		<French>Comt&#233; de Hollande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233; de Hollande</French>
+		<German>County Holland</German>
+		<Italian>Contea d'Olanda</Italian>
+		<Spanish>Condado de Holanda</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT19</Tag>
 		<English>Habsburg Netherlands</English>
-		<French>Pays-Bas Habsbourg</French><German/><Italian/><Spanish/><Russian/>
+		<French>Pays-Bas Habsbourg</French>
+		<German>Habsburger Niederlande</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT20</Tag>
 		<English>Principality of Holland</English>
-		<French>Principaut&#233; de Hollande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Hollande</French>
+		<German>Fürstentum Holland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT21</Tag>
 		<English>Province of Holland</English>
-		<French>Province de Hollande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Hollande</French>
+		<German>Provinz Holland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

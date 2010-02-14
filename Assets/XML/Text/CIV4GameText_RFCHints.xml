@@ -401,4 +401,18 @@
 		<Spanish>No hay que vender la piel del oso antes de haberlo cazado.</Spanish>
 		<Russian>&#203;&#229;&#227;&#234;&#224;&#255; &#234;&#238;&#237;&#237;&#232;&#246;&#224; &#225;&#251;&#241;&#242;&#240;&#251;&#229; &#232; &#232;&#236;&#229;&#254;&#249;&#232;&#229; &#226;&#251;&#241;&#238;&#234;&#232;&#229; &#237;&#238;&#240;&#236;&#251; &#232;&#231;&#250;&#255;&#242;&#232;&#255;; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#232;&#245;, &#247;&#242;&#238;&#225;&#251; &#227;&#240;&#224;&#225;&#224;&#237;&#243;&#242;&#252; &#231;&#229;&#236;&#235;&#254; &#232; &#225;&#229;&#241;&#239;&#238;&#234;&#238;&#232;&#242;&#252; &#226;&#240;&#224;&#227;&#224;.</Russian>
 		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_46</Tag>
+		<English>If you are to tired to keep playing, there's always coffee...</English>
+		<French>Si vous &#234;tes trop fatigu&#233; pour continuer, il y a toujours le caf&#233;...</French>
+		<German>Wenn Sie müde sind, um weiter spielen, es gibt immer Kaffee ...</German>
+		<Italian>Se siete stanchi di continuare a giocare, c'è sempre il caffè ...</Italian>
+		<Spanish>Si usted está cansado de seguir jugando, siempre hay café ...</Spanish></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_47</Tag>
+		<English>Snacks are good in moderation.</English>
+		<French>Les en-cas sont &#224; consommer avec mod&#233;ration.</French>
+		<German>Snacks in Ma&#223;en sind gut!</German>
+		<Italian>Spuntini sono buone con moderazione.</Italian>
+		<Spanish>Las meriendas son buenas en la moderación.</Spanish></TEXT>
 </Civ4GameText>

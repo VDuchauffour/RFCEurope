@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Ungarn:Die Ungarn:den Ungarn</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Ungarn</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Ungarisch:ungarischen:ungarischee</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -82,112 +82,156 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN00</Tag>
 		<English>Magyar Peoples</English>
-		<French>Peuplade Magyar</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Magyar</French>
+		<German>Magyarische Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN01</Tag>
 		<English>Kingdom of Hungary</English>
-		<French>Royaume de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Hongrie</French>
+		<German>Königreich Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN02</Tag>
 		<English>Hungarian Empire</English>
-		<French>Empire Hongrois</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Hongrois</French>
+		<German>Ungarisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN03</Tag>
 		<English>Kingdom of Hungary</English>
-		<French>Royaume de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Hongrie</French>
+		<German>Königreich Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN04</Tag>
 		<English>Hungarian Empire</English>
-		<French>Empire Hongrois</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Hongrois</French>
+		<German>Ungarisches Reich</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN05</Tag>
 		<English>Republic of Hungary</English>
-		<French>R&#233;publique de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique de Hongrie</French>
+		<German>Republik Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN08</Tag>
 		<English>Sultanate of Hungary</English>
-		<French>Sultanat de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de Hongrie</French>
+		<German>Sultanat Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN09</Tag>
 		<English>Islamic Republic of Hungary</English>
-		<French>R&#233;publique Islamique de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique de Hongrie</French>
+		<German>Islamische Republik Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN10</Tag>
 		<English>Exarchate of Sirmium</English>
-		<French>Exarchat de Sirmium</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Sirmium</French>
+		<German>Exarchat Sirmium</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN11</Tag>
 		<English>Duchy of Hungary</English>
-		<French>Duch&#233; de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; de Hongrie</French>
+		<German>Herzogtum Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN12</Tag>
 		<English>Emirate of Hungary</English>
-		<French>Emirat de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Hongrie</French>
+		<German>Emirat Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN13</Tag>
 		<English>Spanish Kingdom of Hungary</English>
-		<French>Royaume Espagnol de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol de Hongrie</French>
+		<German>Spanisches Königreich Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN14</Tag>
 		<English>Norse Hungary</English>
-		<French>Hongrie Nordique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Hongrie Nordique</French>
+		<German>Nordisch-Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN15</Tag>
 		<English>Venetian Hungary</English>
-		<French>Hongrie V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Hongrie V&#233;nitienne</French>
+		<German>Venezianisch-Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN16</Tag>
 		<English>Russian Hungary</English>
-		<French>Hongrie Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Hongrie Russe</French>
+		<German>Russisch-Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN17</Tag>
 		<English>German Hungary</English>
-		<French>Hongrie Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Hongrie Allemande</French>
+		<German>Deutsch-Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN18</Tag>
 		<English>Counties of Hungary</English>
-		<French>Comt&#233;es de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;es de Hongrie</French>
+		<German>Counties Ungarns</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN19</Tag>
 		<English>Habsburg Kingdom of Hungary</English>
-		<French>Royaume Autro-Hongrois</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Autro-Hongrois</French>
+		<German>Habsburger Königreich Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN20</Tag>
 		<English>Principality of Transylvania</English>
-		<French>Principaut&#233; de Transylvanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Transylvanie</French>
+		<German>Fürstentum Transsylvanien</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN21</Tag>
 		<English>Province of Hungary</English>
-		<French>Province de Hongrie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Hongrie</French>
+		<German>Provinz Ungarn</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HUNGARY_PEDIA</Tag>
@@ -195,7 +239,9 @@
 [TAB]In 997, Duke Geza, the Magyar leader, died and his son Istvan promptly and forcefully asserted his supremacy over the nation and several discontented elder relatives who disputed his right to the succession. Until this point, Magyar leadership had been elected by seniority in the ruling family, not passed on by primogeniture. In 1000 AD, Istvan asked Pope Sylvester II for a royal crown, which the Pope sent, thus recognizing him as the first Christian king of Hungary, King Stephen. During his 38-year reign, Stephen I consolidated the Magyar state under a group of powerful nobles using modified Carolingian administrative practices, completed conversion of the Magyars to Christianity, and allied the kingdom more closely with the West, most notably by marrying Otto the Great's niece. Stephen was canonized in 1083, and the Crown of Saint Stephen became a symbol of Hungarian nationhood. 
 [TAB]The thrones of Hungary and Croatia were united in 1091, and during the reign of Bela III (1173-1196) Hungary became the strongest state in east central Europe. The power of the monarchy declined under the weak rule of Andrew II, who was forced to grant a charter, called the Golded Bull, to the nobles, allowing them greater privileges. In 1241, the Mongols invaded and devastated the land, further weakening the Magyar monarchy. The last of the Arpad dynasty died in 1301, and most of Hungary's rulers after that were foreigners.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB] Die Magyaren waren mit den Hunnen und Avaren verwandte Nomaden und kamen ursprünglich aus der Nähe von Finnland und Estland. Sie ließen sich nördlich vom Schwarzen Meer nieder und traten in Dienst des Byzantinischen Reiches. In byzantinischen Auftrag führten sie Krieg gegen die Bulgaren. Sie wanderten dann aus der Ukraine aus, um den Petschenegen zu entkommen, die sie auf Geheiß der Bulgaren angriffen, und siedelten 896 n. Chr. im Donaubecken unter der Herrschaft ihres Großen Hauptmanns Arpad. Sie waren erfahrene Reiter und furchterregende Krieger und führten wikingergleiche Überfälle auf alle Ländern um sie herum, jedoch zu Pferd, statt mit dem Schiff. Sie beherrschten bald das komplette Gebiet und belagerten sogar deutsche Städte und Konstantinopel. 
+[TAB]997 starb der magyarische Führer Graf Géza und sein Sohn Istvan behauptete schnell und kräftig seine Überlegenheit über die Nation und mehrere unzufriedene ältere Verwandte, die sein Recht auf die Folge bestritten. Bis zu diesem Zeitpunkt hatte der Älteste der Herrscherfamilie die magyarische Führung inne und nicht der Erstgeborene. 1000 n. Chr. bat Istvan Papst Sylvester II. um eine königliche Krone, die der Papst sandte, und erkannte ihn so als den ersten christlichen König Ungarns (als König Stephan I.) an. Während seiner 38-jährigen Regierung konsolidierte Stephan I. den magyarischen Staat unter einer Gruppe von mächtigen Edelmännern und nutzte veränderte karolingische Verwaltungsmethoden. Er vollendete die Konvertierung der Magyaren zum Christentum und verband das Königreich näher mit dem Westen, am bemerkenswertesten durch die Hochzeit der Nichte Otto des Großen. Stephan wurde 1083 heilig gesprochen und die Krone des Heiligen Stephan wurde ein Symbol der ungarischen nationalen Souveränität. 
+[TAB]Die Throne Ungarns und Kroatiens wurden in 1091 vereinigt und während der Regierung von Bela III. (1173-1196) wurde Ungarn der stärkste Staat im östlichen Mitteleuropa. Die Macht der Monarchie neigte sich unter der schwachen Herrschaft Andreas II., der gezwungen wurde, dem Adel eine Goldene Bulle zu erlassen, die ihm größere Privilegien zusprach. 1241 griffen die Mongolen an und verwüstet das Land, was die magyarische Monarchie weiter schwächte. Der Letzte der Arpad-Dynastie starb 1301, und danach waren die meisten ungarischen Führer Ausländer.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
