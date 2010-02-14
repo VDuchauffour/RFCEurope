@@ -13,7 +13,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Papst:Der Papst:den Papst</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Rom</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Päpstlich:päpstlichen:päpstliche</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
@@ -82,111 +82,155 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP00</Tag>
 		<English>Papal Peoples</English>
-		<French>&#201;tats pontificaux</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux</French>
+		<German>Päpstliche Völker</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP01</Tag>
 		<English>Papal States</English>
-		<French>&#201;tats pontificaux</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux</French>
+		<German>Kirchenstaat</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP02</Tag>
 		<English>Papal States</English>
-		<French>&#201;tats pontificaux</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux</French>
+		<German>Kirchenstaat</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP03</Tag>
 		<English>Papal States</English>
-		<French>&#201;tats pontificaux</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux</French>
+		<German>Kirchenstaat</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP04</Tag>
 		<English>Papal States</English>
-		<French>&#201;tats pontificaux</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux</French>
+		<German>Kirchenstaat</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP05</Tag>
 		<English>Roman Republic</English>
-		<French>R&#233;publique Romaine</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Romaine</French>
+		<German>Römische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP08</Tag>
 		<English>Sultanate of Rome</English>
-		<French>Sultanat de Rome</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de Rome</French>
+		<German>Sultanat Rom</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP09</Tag>
 		<English>Italian Islamic Republic</English>
-		<French>R&#233;publique Islamique Romaine</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique Romaine</French>
+		<German>Italienische Islamische Republik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP10</Tag>
 		<English>Imperial Rome</English>
-		<French>Rome Imp&#233;rial</French><German/><Italian/><Spanish/><Russian/>
+		<French>Rome Imp&#233;rial</French>
+		<German>Imperiales Rom</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP11</Tag>
 		<English>French Papal Protectorates</English>
-		<French>D&#233;partement du Tibre</French><German/><Italian/><Spanish/><Russian/>
+		<French>D&#233;partement du Tibre</French>
+		<German>Französische Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP12</Tag>
 		<English>Emirate of Rome</English>
-		<French>Emirat de Rome</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Rome</French>
+		<German>Emirat Rom</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP13</Tag>
 		<English>Spanish Papal Protectorates</English>
-		<French>&#201;tats pontificaux Espagnol</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux Espagnol</French>
+		<German>Spanische Päpstliche Protektorate</German>
+		><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP14</Tag>
 		<English>Norse Papal Protectorates</English>
-		<French>&#201;tats pontificaux Viking</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux Viking</French>
+		<German>Nordische Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP15</Tag>
 		<English>Venetian Papal Protectorates</English>
-		<French>&#201;tats pontificaux V&#233;nitien</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux V&#233;nitien</French>
+		<German>Venezianische Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP16</Tag>
 		<English>Russian Papal Protectorates</English>
-		<French>&#201;tats pontificaux Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux Russe</French>
+		<German>Russische Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP17</Tag>
 		<English>German Papal Protectorates</English>
-		<French>&#201;tats pontificaux Allemand</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux Allemand</French>
+		<German>Deutsche Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP18</Tag>
 		<English>English Papal Protectorates</English>
-		<French>&#201;tats pontificaux Anglais</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux Anglais</French>
+		<German>Englische Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP19</Tag>
 		<English>Austrian Papal Protectorates</English>
-		<French>&#201;tats pontificaux Autrichien</French><German/><Italian/><Spanish/><Russian/>
+		<French>&#201;tats pontificaux Autrichien</French>
+		<German>Österreichische Päpstliche Protektorate</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP20</Tag>
 		<English>Principality of Roma</English>
-		<French>Principaut&#233; de Rome</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Rome</French>
+		<German>Fürstentum Roma</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP21</Tag>
 		<English>Papal Provinces</English>
-		<French>Province du Pape</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province du Pape</French>
+		<German>Päpstliche Provinzen</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

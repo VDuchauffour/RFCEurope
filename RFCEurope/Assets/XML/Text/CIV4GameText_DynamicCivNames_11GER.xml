@@ -13,17 +13,17 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Deutsche:Die Deutschen:den Deutschen</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
 		<Italian>
-			<Text>I Persiani</Text>
+			<Text>I Tedeschi</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Alemanes</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -38,17 +38,17 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Deutschland</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Persia</Text>
+			<Text>La Germania:la Germania:della Germania:di Germania</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Alemania</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -63,17 +63,17 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Deutsch:deutschen:deutsche</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
+			<Text>Tedesco:Tedesca:Tedeschi:Tedesche</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>alem&#225;n:alemana:alemanes:alemanas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -82,112 +82,169 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER00</Tag>
 		<English>Germanic Peoples</English>
-		<French>Peuplade Germanique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplade Germanique</French>
+		<German>Germanische Völker</German>
+		<Italian>Popoli Germanici</Italian>
+		<Spanish>Pueblos Germ&#225;nicos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER01</Tag>
 		<English>Kingdom of Germany</English>
-		<French>Royaume de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Germanie</French>
+		<German>Königreich Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER02</Tag>
 		<English>Kingdom of Germany</English>
-		<French>Royaume de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Germanie</French>
+		<German>Königreich Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER03</Tag>
 		<English>Holy Roman Empire</English>
-		<French>Saint-Empire romain germanique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Saint-Empire romain germanique</French>
+		<German>Heiliges Römisches Reich</German>
+		<Italian>Sacro Romano Impero</Italian>
+		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER04</Tag>
 		<English>Holy Roman Empire</English>
-		<French>Saint-Empire romain germanique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Saint-Empire romain germanique</French>
+		<German>Heiliges Römisches Reich</German>
+		<Italian>Sacro Romano Impero</Italian>
+		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER05</Tag>
 		<English>Republic of Germany</English>
-		<French>R&#233;publique de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique de Germanie</French>
+		<German>Republik Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER08</Tag>
 		<English>Sultanate of Germany</English>
-		<French>Sultanat de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sultanat de Germanie</French>
+		<German>Sultanat Deutschland</German>
+		<Italian>Sultanato di Germania</Italian>
+		<Spanish>Sultanato de Alemania</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER09</Tag>
 		<English>Islamic Republic of Germany</English>
-		<French>R&#233;publique Islamique de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique de Germanie</French>
+		<German>Islamische Republik Deutschland</German>
+		<Italian>Repubblica Islamica di Germania</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica de Alemania</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER10</Tag>
 		<English>Exarchate of Germania</English>
-		<French>Exarchat de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Exarchat de Germanie</French>
+		<German>Exarchat Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER11</Tag>
 		<English>Duchy of the Rhine</English>
-		<French>Duch&#233; du Rhin</French><German/><Italian/><Spanish/><Russian/>
+		<French>Duch&#233; du Rhin</French>
+		<German>Herzogtum am Rhein</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER12</Tag>
 		<English>Emirate of Germany</English>
-		<French>Emirat de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Emirat de Germanie</French>
+		<German>Emirat Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER13</Tag>
 		<English>Spanish Kingdom of Germany</English>
-		<French>Royaume Espagnol de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol de Germanie</French>
+		<German>Spanisches Königreich Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER14</Tag>
 		<English>Greater Denmark</English>
-		<French>Grand Danemark</French><German/><Italian/><Spanish/><Russian/>
+		<French>Grand Danemark</French>
+		<German>Groß-Dänemark</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER15</Tag>
 		<English>Venetian Germany</English>
-		<French>Germanie V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Germanie V&#233;nitienne</French>
+		<German>Venezianisch-Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER16</Tag>
 		<English>Russian Germany</English>
-		<French>Germanie Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Germanie Russe</French>
+		<German>Russisch-Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER17</Tag>
 		<English>Kingdom of Germany</English>
-		<French>Royaume de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume de Germanie</French>
+		<German>Königreich Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER18</Tag>
 		<English>Counties of Germany</English>
-		<French>Comt&#233;es de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;es de Germanie</French>
+		<German>Counties Deutschlands</German>
+		<Italian>Contea di Germania</Italian>
+		<Spanish>Condado de Alemania</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER19</Tag>
 		<English>Northern Great Germany</English>
-		<French>Grande Germanie du Nord</French><German/><Italian/><Spanish/><Russian/>
+		<French>Grande Germanie du Nord</French>
+		<German>Nördliches Groß-Deutschland</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER20</Tag>
 		<English>Principality of Almanya</English>
-		<French>Principaut&#233; d'Almanya</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; d'Almanya</French>
+		<German>Fürstentum Almanya</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER21</Tag>
 		<English>Province of Germany</English>
-		<French>Province de Germanie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Germanie</French>
+		<German>Provinz Deutschland</German>
+		<Italian>Provincia di Germania</Italian>
+		<Spanish>Provincia de Germania</Spanish>
+		<Russian/>
 	</TEXT>
-
 </Civ4GameText>

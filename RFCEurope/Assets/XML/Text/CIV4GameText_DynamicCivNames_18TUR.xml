@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Perser:Die Perser:den Persern</Text>
+			<Text>Osmanen:Die Osmanen:den Osmanen</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Persien</Text>
+			<Text>Türkei</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,17 +63,17 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Persisch:persischen:persische</Text>
+			<Text>Osmanisch:osmanischen:osmanische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
+			<Text>del popolo ottomano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>otomano:otomana:otomanos:otomanas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -82,111 +82,169 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR00</Tag>
 		<English>Turkish Peoples</English>
-		<French>Peuplade Kurde</French><German/><Italian/><Spanish/><Russian/>
+		<French>Peuplades Turques</French>
+		<German>Türkische Völker</German>
+		<Italian>Popoli Turchi</Italian>
+		<Spanish>Pueblos Turcos</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR01</Tag>
 		<English>Turkish Empire</English>
-		<French>Empire Turc</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Turc</French>
+		<German>Osmanisches Reich</German>
+		<Italian>Impero Turco</Italian>
+		<Spanish>Imperio Turco</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR02</Tag>
 		<English>Turkish Empire</English>
-		<French>Empire Turc</French><German/><Italian/><Spanish/><Russian/>
+		<French>Empire Turc</French>
+		<German>Osmanisches Reich</German>
+		<Italian>Impero Turco</Italian>
+		<Spanish>Imperio Turco</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR03</Tag>
 		<English>Sublime Ottoman State</English>
-		<French>Sublime Etat Ottoman</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sublime Etat Ottoman</French>
+		<German>Erhabener Osmanischer Staat</German>
+		<Italian>Sublime Stato Ottomano</Italian>
+		<Spanish>Sublime Estado Otomano</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR04</Tag>
 		<English>Sublime Ottoman State</English>
-		<French>Sublime Etat Ottoman</French><German/><Italian/><Spanish/><Russian/>
+		<French>Sublime Etat Ottoman</French>
+		<German>Erhabener Osmanischer Staat</German>
+		<Italian>Sublime Stato Ottomano</Italian>
+		<Spanish>Sublime Estado Otomano</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR05</Tag>
 		<English>Republic of Turkey</English>
-		<French>R&#233;publique de Turquie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique de Turquie</French>
+		<German>Republik Türkei</German>
+		<Italian>Repubblica di Turchia</Italian>
+		<Spanish>Rep&#250;blica de Turqu&#237;a</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR06</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR07</Tag>
 		<English>Placeholder Error</English>
-		<French>Placeholder Error</French><German/><Italian/><Spanish/><Russian/>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR08</Tag>
 		<English>Ottoman Caliphate</English>
-		<French>Califat Ottoman</French><German/><Italian/><Spanish/><Russian/>
+		<French>Califat Ottoman</French>
+		<German>Osmanisches Kalifat</German>
+		<Italian>Califfato Ottomano</Italian>
+		<Spanish>Califato Otomano</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR09</Tag>
 		<English>Islamic Republic of Turkey</English>
-		<French>R&#233;publique Islamique de Turquie</French><German/><Italian/><Spanish/><Russian/>
+		<French>R&#233;publique Islamique de Turquie</French>
+		<German>Islamische Republik Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR10</Tag>
 		<English>Theme of the Anatolics</English>
-		<French>Th&#232;me de l'Anatolique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Th&#232;me de l'Anatolique</French>
+		<German>Byzantinisches Thema Anatolikon</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR11</Tag>
 		<English>French Turkey</English>
-		<French>Turquie Fran&#201;aise</French><German/><Italian/><Spanish/><Russian/>
+		<French>Turquie Fran&#201;aise</French>
+		<German>Französisch-Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR12</Tag>
 		<English>Ottoman Beylik</English>
-		<French>Beylik Ottoman</French><German/><Italian/><Spanish/><Russian/>
+		<French>Beylik Ottoman</French>
+		<German>Osmanisches Beylik</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR13</Tag>
 		<English>Spanish Kingdom of Turkey</English>
-		<French>Royaume Espagnol de Turquie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Royaume Espagnol de Turquie</French>
+		<German>Spanisches Königreich Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR14</Tag>
 		<English>Norse Turkey</English>
-		<French>Turquie Nordique</French><German/><Italian/><Spanish/><Russian/>
+		<French>Turquie Nordique</French>
+		<German>Nordisch-Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR15</Tag>
 		<English>Venetian Turkey</English>
-		<French>Turquie V&#233;nitienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Turquie V&#233;nitienne</French>
+		<German>Venezianisch-Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR16</Tag>
 		<English>Russian Turkey</English>
-		<French>Turquie Russe</French><German/><Italian/><Spanish/><Russian/>
+		<French>Turquie Russe</French>
+		<German>Russisch-Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR17</Tag>
 		<English>German Turkey</English>
-		<French>Turquie Allemande</French><German/><Italian/><Spanish/><Russian/>
+		<French>Turquie Allemande</French>
+		<German>Deutsch-Türkei</German>
+		><Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR18</Tag>
 		<English>Counties of Turkey</English>
-		<French>Comt&#233;s de Turquie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Comt&#233;s de Turquie</French>
+		<German>Counties der Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR19</Tag>
 		<English>Austrian Turkey</English>
-		<French>Turquie Autrichienne</French><German/><Italian/><Spanish/><Russian/>
+		<French>Turquie Autrichienne</French>
+		<German>Österreichisch-Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR20</Tag>
 		<English>Principality of Anadolu</English>
-		<French>Principaut&#233; de Anadolu</French><German/><Italian/><Spanish/><Russian/>
+		<French>Principaut&#233; de Anadolu</French>
+		<German>Fürstentum Anadolu</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR21</Tag>
 		<English>Province of Turkey</English>
-		<French>Province de Turquie</French><German/><Italian/><Spanish/><Russian/>
+		<French>Province de Turquie</French>
+		<German>Provinz Türkei</German>
+		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>
