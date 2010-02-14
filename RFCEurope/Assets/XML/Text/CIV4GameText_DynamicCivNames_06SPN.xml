@@ -81,17 +81,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN00</Tag>
-		<English>Visigothic Peoples</English>
+		<English>Asturian Peoples</English>
 		<French>Peuplade Wisigoths</French>
 		<German>Westgotische Völker</German>
-		<Italian/><Spanish/>
+		<Italian/>
+		<Spanish>Pueblos Asturianos</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN01</Tag>
-		<English>Kingdom of Leon</English>
+		<English>Kingdom of Le&#243;n</English>
 		<French>Royaume de Le&#243;n</French>
-		<German>Königreich León</German>
+		<German>Königreich Le&#243;n</German>
 		<Italian/><Spanish/>
 		<Russian/>
 	</TEXT>
@@ -109,7 +110,8 @@
 		<English>Crown of Castile</English>
 		<French>Couronne de Castille</French>
 		<German>Krone von Kastilien</German>
-		<Italian/><Spanish/>
+		<Italian/>
+		<Spanish>Corona de Castilla</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
@@ -151,7 +153,8 @@
 		<English>Emirate of Spain</English>
 		<French>Emirat d'Espagne</French>
 		<German>Emirat Spanien</German>
-		<Italian/><Spanish/>
+		<Italian/>
+		<Spanish>Emirato de Espa&#241;a</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>

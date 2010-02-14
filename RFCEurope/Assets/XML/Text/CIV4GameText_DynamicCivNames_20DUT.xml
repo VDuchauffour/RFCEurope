@@ -146,8 +146,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT13</Tag>
-		<English>Spanish Netherlands</English>
-		<French>Pays-Bas Espagnol</French><German/><Italian/><Spanish/><Russian/>
+		<English>Spanish Low Countries</English>
+		<French>Pays-Bas Espagnol</French><German/><Italian/>
+		<Spanish>Paises Bajos Espa&#241;oles</Spanish><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT14</Tag>
