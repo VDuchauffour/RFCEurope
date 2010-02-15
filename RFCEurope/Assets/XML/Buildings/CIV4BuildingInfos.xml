@@ -12450,7 +12450,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>33</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -18911,7 +18911,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>ERA_ANCIENT</MaxStartEra>
-			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
+			<ObsoleteTech>TECH_SHIPBUILDING</ObsoleteTech>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
@@ -23955,8 +23955,10 @@
 			<PrereqTech>TECH_SHIPBUILDING</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
-			<PrereqBonuses/>
-			<ProductionTraits/>
+      <PrereqBonuses>
+        <Bonus>BONUS_ACCESS</Bonus>
+      </PrereqBonuses>
+      <ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
@@ -23990,7 +23992,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>600</iCost>
+			<iCost>500</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -24719,8 +24721,10 @@
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
-			<PrereqBonuses/>
-			<ProductionTraits/>
+      <PrereqBonuses>
+        <Bonus>BONUS_ACCESS</Bonus>
+      </PrereqBonuses>
+      <ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
@@ -24859,12 +24863,7 @@
 			<ConstructSound>AS2D_BUILD_COLOSSUS</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
-      <BonusProductionModifiers>
-        <BonusProductionModifier>
-          <BonusType>BONUS_ACCESS</BonusType>
-          <iProductonModifier>100</iProductonModifier>
-        </BonusProductionModifier>
-      </BonusProductionModifiers>
+      <BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
 			<DomainProductionModifiers/>
@@ -26414,8 +26413,10 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
-			<PrereqBonuses/>
-			<ProductionTraits/>
+      <PrereqBonuses>
+        <Bonus>BONUS_ACCESS</Bonus>
+      </PrereqBonuses>
+      <ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
@@ -26449,7 +26450,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>650</iCost>
+			<iCost>550</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -26557,12 +26558,7 @@
 			    <iHappinessChange>1</iHappinessChange>
 			  </BonusHappinessChange>
 			</BonusHappinessChanges>
-			<BonusProductionModifiers>
-			  <BonusProductionModifier>
-			    <BonusType>BONUS_ACCESS</BonusType>
-			    <iProductonModifier>100</iProductonModifier>
-			  </BonusProductionModifier>
-			</BonusProductionModifiers>
+			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
 			<DomainProductionModifiers/>
