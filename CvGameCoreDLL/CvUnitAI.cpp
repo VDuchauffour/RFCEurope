@@ -1233,7 +1233,19 @@ void CvUnitAI::AI_settleMove()
 	for (int iI = 0; iI < GET_PLAYER(getOwnerINLINE()).AI_getNumCitySites(); iI++)
 	{
 		CvPlot* pCitySitePlot = GET_PLAYER(getOwnerINLINE()).AI_getCitySite(iI);
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       01/10/09                                jdog5000      */
+/*                                                                                              */
+/* Bugfix, settler AI                                                                           */
+/************************************************************************************************/
+/* original bts code
 		if (pCitySitePlot->getArea() == getArea())
+*/
+		// Only count city sites we can get to
+		if (pCitySitePlot->getArea() == getArea() && generatePath(pCitySitePlot, MOVE_SAFE_TERRITORY, true))
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 		{
 			if (plot() == pCitySitePlot)
 			{
@@ -5182,7 +5194,12 @@ void CvUnitAI::AI_assaultSeaMove()
 						//Release any Warships to finish the job.
 						getGroup()->AI_seperateAI(UNITAI_ATTACK_SEA);
 						getGroup()->AI_seperateAI(UNITAI_RESERVE_SEA);
-
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       05/11/09                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+/* original bts code
 					if (pOldGroup == getGroup() && getUnitType() == UNITAI_ASSAULT_SEA)
 					{
 						if (AI_retreatToCity(true))
@@ -5190,6 +5207,23 @@ void CvUnitAI::AI_assaultSeaMove()
 							bMissionPushed = true;
 						}
 					}
+*/
+								// Fixed bug in next line with checking unit type instead of unit AI
+								if (pOldGroup == getGroup() && AI_getUnitAIType() == UNITAI_ASSAULT_SEA)
+								{
+									// Need to be sure all units can move
+									if( getGroup()->canAllMove() )
+									{
+										if (AI_retreatToCity(true))
+										{
+											bMissionPushed = true;
+										}
+									}
+								}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
+
 
 					if (bMissionPushed)
 					{
@@ -9144,6 +9178,19 @@ bool CvUnitAI::AI_spreadReligionAirlift()
 					{
 						if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD, getGroup()) == 0)
 						{
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       08/04/09                                jdog5000      */
+/*                                                                                              */
+/* Unit AI                                                                                      */
+/************************************************************************************************/
+							// Don't airlift where there's already one of our unit types (probably just airlifted)
+							if( pLoopCity->plot()->plotCount(PUF_isUnitType, getUnitType(), -1, getOwnerINLINE()) > 0 )
+							{
+								continue;
+							}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 							iValue = (7 + (pLoopCity->getPopulation() * 4));
 							
 							int iCityReligionCount = pLoopCity->getReligionCount();
@@ -9236,6 +9283,19 @@ bool CvUnitAI::AI_spreadCorporationAirlift()
 					{
 						if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD_CORPORATION, getGroup()) == 0)
 						{
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       08/04/09                                jdog5000      */
+/*                                                                                              */
+/* Unit AI                                                                                      */
+/************************************************************************************************/
+							// Don't airlift where there's already one of our unit types (probably just airlifted)
+							if( pLoopCity->plot()->plotCount(PUF_isUnitType, getUnitType(), -1, getOwnerINLINE()) > 0 )
+							{
+								continue;
+							}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 							int iValue = (pLoopCity->getPopulation() * 4);
 
 							if (pLoopCity->getOwnerINLINE() == getOwnerINLINE())
@@ -9981,11 +10041,26 @@ bool CvUnitAI::AI_paradrop(int iRange)
 
 						PlayerTypes eTargetPlayer = pLoopPlot->getOwnerINLINE();
 						FAssert(NO_PLAYER != eTargetPlayer);
-
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       08/01/08                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+/* original BTS code
 						if (NO_BONUS != pLoopPlot->getBonusType())
 						{
 							iValue += GET_PLAYER(eTargetPlayer).AI_bonusVal(pLoopPlot->getBonusType()) - 10;
 						}
+*/
+						// Bonus values for bonuses the AI has are less than 10 for non-strategic resources... since this is
+						// in the AI territory they probably have it
+						if (NO_BONUS != pLoopPlot->getNonObsoleteBonusType(getTeam()))
+						{
+							iValue += std::max(1,GET_PLAYER(eTargetPlayer).AI_bonusVal(pLoopPlot->getBonusType()) - 10);
+						}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 
 						for (int i = -1; i <= 1; ++i)
 						{
@@ -12588,16 +12663,6 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
-	CvPlot* pAdjacentPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pBestAssaultPlot;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-	int iI, iJ;
-
 	bool bIsAttackCity = (getUnitAICargo(UNITAI_ATTACK_CITY) > 0);
 	
 	FAssert(getGroup()->hasCargo());
@@ -12608,14 +12673,27 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 		return false;
 	}
 
-	int iCargo = getGroup()->getCargo();
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestAssaultPlot = NULL;
-
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	std::vector<CvUnit*> aGroupCargo;
+	CLLNode<IDInfo>* pUnitNode = plot()->headUnitNode();
+	while (pUnitNode != NULL)
 	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = plot()->nextUnitNode(pUnitNode);
+		CvUnit* pTransport = pLoopUnit->getTransportUnit();
+		if (pTransport != NULL && pTransport->getGroup() == getGroup())
+		{
+			aGroupCargo.push_back(pLoopUnit);
+		}
+	}
+
+	int iCargo = getGroup()->getCargo();
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestAssaultPlot = NULL;
+
+	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	{
+		CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
 		if (pLoopPlot->isCoastalLand())
 		{
@@ -12628,9 +12706,28 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 						int iTargetCities = pLoopPlot->area()->getCitiesPerPlayer(pLoopPlot->getOwnerINLINE());
 						if (iTargetCities > 0)
 						{
+							bool bCanCargoAllUnload = true;
+							int iVisibleEnemyDefenders = pLoopPlot->getNumVisibleEnemyDefenders(this);
+							if (iVisibleEnemyDefenders > 0)
+							{
+								for (uint i = 0; i < aGroupCargo.size(); ++i)
+								{
+									CvUnit* pAttacker = aGroupCargo[i];
+									CvUnit* pDefender = pLoopPlot->getBestDefender(NO_PLAYER, pAttacker->getOwnerINLINE(), pAttacker, true);
+									if (pDefender == NULL || !pAttacker->canAttack(*pDefender))
+									{
+										bCanCargoAllUnload = false;
+										break;
+									}
+								}
+							}
+
+							if (bCanCargoAllUnload)
+							{
+								int iPathTurns;
 								if (generatePath(pLoopPlot, 0, true, &iPathTurns))
 								{
-								iValue = 1;
+									int iValue = 1;
 
 									if (!bIsAttackCity)
 									{
@@ -12641,13 +12738,13 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 
 									iValue += (iAssaultsHere * 100);
 
-								pCity = pLoopPlot->getPlotCity();
+									CvCity* pCity = pLoopPlot->getPlotCity();
 
 									if (pCity == NULL)
 									{
-									for (iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
+										for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
 										{
-										pAdjacentPlot = plotDirection(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), ((DirectionTypes)iJ));
+											CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), ((DirectionTypes)iJ));
 
 											if (pAdjacentPlot != NULL)
 											{
@@ -12700,8 +12797,6 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 										}
 									}
 
-								int iVisibleEnemyDefenders = pLoopPlot->getNumVisibleEnemyDefenders(this);
-								
 									iValue *= 1000;
 
 									if (iTargetCities <= iAssaultsHere)
@@ -12768,6 +12863,7 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 				}
 			}
 		}
+	}
 
 	if ((pBestPlot != NULL) && (pBestAssaultPlot != NULL))
 	{
