@@ -964,6 +964,11 @@ public:
 	int getLeaderPromotion() const;   // Exposed to Python
 	int getLeaderExperience() const;				// Exposed to Python
 
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+	std::vector<int> getUpgradeUnitClassTypes() const;
+	void addUpgradeUnitClassTypes(int);
+	bool isUpgradeUnitClassTypes(int);
+	// Sanguo Mod Performance, end
 	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;				// Exposed to Python
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
 	const TCHAR* getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) const;				// Exposed to Python
@@ -1144,6 +1149,9 @@ protected:
 	bool* m_pbFeatureImpassable;
 	bool* m_pbFreePromotions;
 
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+	std::vector<int> m_aiUpgradeUnitClassTypes;
+	// Sanguo Mod Performance, end
 	CvString* m_paszEarlyArtDefineTags;
 	CvString* m_paszLateArtDefineTags;
 	CvString* m_paszMiddleArtDefineTags;

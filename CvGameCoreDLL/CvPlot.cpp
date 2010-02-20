@@ -62,6 +62,10 @@ CvPlot::CvPlot()
 
 	m_szScriptData = NULL;
 
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+	m_apaiPlayerDangerCache = NULL;
+	// Sanguo Mod Performance, end
+
 	reset(0, 0, true);
 }
 
@@ -140,6 +144,17 @@ void CvPlot::uninit()
 		}
 		SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount);
 	}
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+	if (NULL != m_apaiPlayerDangerCache)
+	{
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+		{
+			SAFE_DELETE_ARRAY(m_apaiPlayerDangerCache[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_apaiPlayerDangerCache);
+	}
+	// Sanguo Mod Performance, end
 
 	m_units.clear();
 }
@@ -4601,6 +4616,32 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 		pOldCity = getPlotCity();
 
+		// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.0
+		if (GC.getGameINLINE().isFinalInitialized() && getTeam() != NO_TEAM)
+		{
+            for (iI = 0; iI < MAX_TEAMS; iI++)
+            {
+                if (GET_TEAM(getTeam()).isAtWar((TeamTypes)iI))
+                {
+                    for (int iDX = -DANGER_RANGE; iDX <= DANGER_RANGE; iDX++)
+                    {
+                        for (int iDY = -DANGER_RANGE; iDY <= DANGER_RANGE; iDY++)
+                        {
+                            int iIndex = GC.getMapINLINE().plotNumINLINE(getX_INLINE() + iDX, getY_INLINE() + iDY);
+                            if (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE())
+                            {
+                                for (int iJ = 0; iJ < GET_TEAM((TeamTypes)iI).getPlayerMemberListSize(); iJ++)
+                                {
+                                    GET_PLAYER(GET_TEAM((TeamTypes)iI).getPlayerMemberAt(iJ)).AI_invalidatePlotDangerCache(iIndex);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		// Sanguo Mod Performance, end
+
 		if (pOldCity != NULL)
 		{
 			szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", pOldCity->getNameKey(), GET_PLAYER(eNewValue).getCivilizationDescriptionKey());
@@ -4812,6 +4853,32 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				gDLL->getEngineIFace()->SetDirty(CultureBorders_DIRTY_BIT, true);
 			}
 		}
+
+		// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+		if (GC.getGameINLINE().isFinalInitialized() && getTeam() != NO_TEAM)
+		{
+            for (iI = 0; iI < MAX_TEAMS; iI++)
+            {
+                if (GET_TEAM(getTeam()).isAtWar((TeamTypes)iI))
+                {
+                    for (int iDX = -DANGER_RANGE; iDX <= DANGER_RANGE; iDX++)
+                    {
+                        for (int iDY = -DANGER_RANGE; iDY <= DANGER_RANGE; iDY++)
+                        {
+                            int iIndex = GC.getMapINLINE().plotNumINLINE(getX_INLINE() + iDX, getY_INLINE() + iDY);
+                            if (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE())
+                            {
+                                for (int iJ = 0; iJ < GET_TEAM((TeamTypes)iI).getPlayerMemberListSize(); iJ++)
+                                {
+                                    GET_PLAYER(GET_TEAM((TeamTypes)iI).getPlayerMemberAt(iJ)).AI_invalidatePlotDangerCache(iIndex);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		// Sanguo Mod Performance, end
 
 		updateSymbols();
 	}
@@ -5532,6 +5599,37 @@ void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 		{
 			updateRouteSymbol(true, true);
 		}
+
+		// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.12.09
+		{PROFILE_BEGIN("setRouteType::plotdangercache");
+		if (GC.getGameINLINE().isFinalInitialized())
+		{
+			for (int iDX = -DANGER_RANGE; iDX <= DANGER_RANGE; iDX++)
+			{
+				for (int iDY = -DANGER_RANGE; iDY <= DANGER_RANGE; iDY++)
+				{
+					int iIndex = GC.getMapINLINE().plotNumINLINE(getX_INLINE() + iDX, getY_INLINE() + iDY);
+					if (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE())
+					{
+						CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndex(iIndex);
+						FAssert (pLoopPlot != NULL);
+
+						int iDistance = stepDistance(getX_INLINE(), getY_INLINE(), getX_INLINE() + iDX, getY_INLINE() + iDY);
+
+						FAssert (iDistance <= DANGER_RANGE);
+						for (iI = 0; iI < MAX_PLAYERS; iI++)
+						{
+							for (int iJ = 0; iJ < iDistance; iJ++)
+							{
+								pLoopPlot->invalidatePlayerDangerCache((PlayerTypes)iI, iJ);
+							}
+						}
+					}
+				}
+			}
+		}
+		PROFILE_END();}
+		// Sanguo Mod Performance, end
 
 		if (getRouteType() != NO_ROUTE)
 		{
@@ -10078,3 +10176,73 @@ bool CvPlot::checkLateEra() const
 
 	return (GET_PLAYER(ePlayer).getCurrentEra() > GC.getNumEraInfos() / 2);
 }
+
+// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+int CvPlot::getPlayerDangerCache(PlayerTypes ePlayer, int iRange)
+{
+	if (NULL == m_apaiPlayerDangerCache)
+	{
+		m_apaiPlayerDangerCache = new short*[MAX_PLAYERS];
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+		{
+			m_apaiPlayerDangerCache[iI] = NULL;
+		}
+	}
+
+	if (NULL == m_apaiPlayerDangerCache[ePlayer])
+	{
+		m_apaiPlayerDangerCache[ePlayer] = new short[DANGER_RANGE + 1];
+		for (int iI = 0; iI < DANGER_RANGE + 1; ++iI)
+		{
+			m_apaiPlayerDangerCache[ePlayer][iI] = MAX_SHORT;
+		}
+	}
+
+	return m_apaiPlayerDangerCache[ePlayer][iRange];
+}
+
+void CvPlot::setPlayerDangerCache(PlayerTypes ePlayer, int iRange, int iNewValue)
+{
+	if (NULL == m_apaiPlayerDangerCache)
+	{
+		m_apaiPlayerDangerCache = new short*[MAX_PLAYERS];
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+		{
+			m_apaiPlayerDangerCache[iI] = NULL;
+		}
+	}
+
+	if (NULL == m_apaiPlayerDangerCache[ePlayer])
+	{
+		m_apaiPlayerDangerCache[ePlayer] = new short[DANGER_RANGE + 1];
+		for (int iI = 0; iI < DANGER_RANGE + 1; ++iI)
+		{
+			m_apaiPlayerDangerCache[ePlayer][iI] = MAX_SHORT;
+		}
+	}
+
+	m_apaiPlayerDangerCache[ePlayer][iRange] = iNewValue;
+}
+
+void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange)
+{
+	if (NULL == m_apaiPlayerDangerCache)
+	{
+		m_apaiPlayerDangerCache = new short*[MAX_PLAYERS];
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+		{
+			m_apaiPlayerDangerCache[iI] = NULL;
+		}
+	}
+
+	if (NULL == m_apaiPlayerDangerCache[ePlayer])
+	{
+		m_apaiPlayerDangerCache[ePlayer] = new short[DANGER_RANGE + 1];
+		for (int iI = 0; iI < DANGER_RANGE + 1; ++iI)
+		{
+			m_apaiPlayerDangerCache[ePlayer][iI] = MAX_SHORT;
+		}
+	}
+	m_apaiPlayerDangerCache[ePlayer][iRange] = MAX_SHORT;
+}
+// Sanguo Mod Performance, end

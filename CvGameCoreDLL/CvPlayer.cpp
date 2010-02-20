@@ -1691,6 +1691,16 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		if (pabHolyCity[iI])
 		{
 			GC.getGameINLINE().setHolyCity(((ReligionTypes)iI), pNewCity, false);
+			// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+			for (int iJ = 0; iJ < GC.getMAX_PLAYERS(); iJ++)
+			{
+				if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == (ReligionTypes)iI)
+				{
+					GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+					GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(getID());
+				}
+			}
+			// Sanguo Mod Performance, end
 		}
 	}
 
@@ -10099,6 +10109,10 @@ void CvPlayer::setAlive(bool bNewValue)
 
 		GET_TEAM(getTeam()).changeAliveCount((isAlive()) ? 1 : -1);
 
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+		GET_TEAM(getTeam()).setHasPlayerMember(getID(), isAlive() ? true : false);
+		// Sanguo Mod Performance, end
+
 		// Report event to Python
 		CvEventReporter::getInstance().setPlayerAlive(getID(), bNewValue);
 
@@ -10742,6 +10756,16 @@ void CvPlayer::setLastStateReligion(ReligionTypes eNewValue)
 
 			// Python Event
 			CvEventReporter::getInstance().playerChangeStateReligion(getID(), eNewValue, eOldReligion);
+			// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+			for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
+			{
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION)
+				{
+					GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iI);
+					GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
+				}
+			}
+			// Sanguo Mod Performance, end
 		}
 	}
 }
@@ -10753,6 +10777,12 @@ PlayerTypes CvPlayer::getParent() const
 
 void CvPlayer::setParent(PlayerTypes eParent)
 {
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+	if (m_eParent != eParent)
+	{
+		GET_PLAYER(getID()).AI_invalidateAttitudeCache(eParent);
+	}
+	// Sanguo Mod Performance, end
 	m_eParent = eParent;
 }
 
@@ -10783,10 +10813,16 @@ void CvPlayer::setTeam(TeamTypes eTeam)
 	if (isAlive())
 	{
 		GET_TEAM(getTeam()).changeAliveCount(-1);
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+		GET_TEAM(getTeam()).setHasPlayerMember(getID(), false);
+		// Sanguo Mod Performance, end
 	}
 	if (isEverAlive())
 	{
 		GET_TEAM(getTeam()).changeEverAliveCount(-1);
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+		GET_TEAM(getTeam()).setHasPlayerMember(getID(), true);
+		// Sanguo Mod Performance, end
 	}
 	GET_TEAM(getTeam()).changeNumCities(-(getNumCities()));
 	GET_TEAM(getTeam()).changeTotalPopulation(-(getTotalPopulation()));
@@ -12202,6 +12238,22 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 			}
 			*/
 			//Rhye - end
+		// 3MiroCAR (this should reser attitude upon Civic change): Sanguo Mod Performance start, added by poyuzhe 07.26.09
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getCivics(eIndex) == eNewValue)
+			{
+				if (GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getLeaderType()).getFavoriteCivic() == eNewValue)
+				{
+					GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
+					if (GC.getLeaderHeadInfo(getLeaderType()).getFavoriteCivic() == eNewValue)
+					{
+						GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iI);
+					}
+				}
+			}
+		}
+		// Sanguo Mod Performance, end
 
 			//Rhye - start (dynamic civ names - not jdog's)
 			processCivNames();

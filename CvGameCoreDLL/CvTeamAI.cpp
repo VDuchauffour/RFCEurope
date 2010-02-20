@@ -58,6 +58,9 @@ CvTeamAI::CvTeamAI()
 	m_aiEnemyPeacetimeGrantValue = new int[MAX_TEAMS];
 	m_aeWarPlan = new WarPlanTypes[MAX_TEAMS];
 
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	m_aiLandTargetCache = new unsigned short[MAX_TEAMS];
+	// Sanguo Mod Performance, end
 
 	AI_reset(true);
 }
@@ -78,6 +81,9 @@ CvTeamAI::~CvTeamAI()
 	SAFE_DELETE_ARRAY(m_aiEnemyPeacetimeTradeValue);
 	SAFE_DELETE_ARRAY(m_aiEnemyPeacetimeGrantValue);
 	SAFE_DELETE_ARRAY(m_aeWarPlan);
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	SAFE_DELETE_ARRAY(m_aiLandTargetCache);
+	// Sanguo Mod Performance, end
 }
 
 
@@ -115,6 +121,10 @@ void CvTeamAI::AI_reset(bool bConstructor)
 		m_aiEnemyPeacetimeGrantValue[iI] = 0;
 		m_aeWarPlan[iI] = NO_WARPLAN;
 
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+		m_aiLandTargetCache[iI] = 0;
+		// Sanguo Mod Performance, end
+
 		if (!bConstructor && getID() != NO_TEAM)
 		{
 			TeamTypes eLoopTeam = (TeamTypes) iI;
@@ -130,6 +140,9 @@ void CvTeamAI::AI_reset(bool bConstructor)
 			kLoopTeam.m_aiEnemyPeacetimeTradeValue[getID()] = 0;
 			kLoopTeam.m_aiEnemyPeacetimeGrantValue[getID()] = 0;
 			kLoopTeam.m_aeWarPlan[getID()] = NO_WARPLAN;
+			// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+			kLoopTeam.m_aiLandTargetCache[getID()] = 0;
+			// Sanguo Mod Performance, end
 		}
 	}
 }
@@ -138,6 +151,10 @@ void CvTeamAI::AI_reset(bool bConstructor)
 void CvTeamAI::AI_doTurnPre()
 {
 	AI_doCounter();
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.31.09
+	AI_invalidateLandTargetCache();
+	// Sanguo Mod Performance, end
 
 	if (isHuman())
 	{
@@ -183,8 +200,26 @@ void CvTeamAI::AI_doTurnPost()
 
 void CvTeamAI::AI_makeAssignWorkDirty()
 {
-	int iI;
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// int iI;
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		GET_PLAYER(*iter).AI_makeAssignWorkDirty();
+	}
+	// Sanguo Mod Performance, end
 
+	// 3MiroCAR: Old Code
+	/*int iI;
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -194,7 +229,7 @@ void CvTeamAI::AI_makeAssignWorkDirty()
 				GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
 			}
 		}
-	}
+	}*/
 }
 
 
@@ -222,8 +257,26 @@ void CvTeamAI::AI_updateAreaStragies(bool bTargets)
 
 void CvTeamAI::AI_updateAreaTargets()
 {
-	int iI;
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// int iI;
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// GET_PLAYER((PlayerTypes)iI).AI_updateAreaTargets();
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		GET_PLAYER(*iter).AI_updateAreaTargets();
+	}
+	// Sanguo Mod Performance, end
 
+	// 3MiroCAR: Old code
+	/*int iI;
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -233,13 +286,42 @@ void CvTeamAI::AI_updateAreaTargets()
 				GET_PLAYER((PlayerTypes)iI).AI_updateAreaTargets();
 			}
 		}
-	}
+	}*/
 }
 
 
 int CvTeamAI::AI_countFinancialTrouble() const
 {
-	int iCount;
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	//int iCount;
+	//int iI;
+	//iCount = 0;
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
+				// {
+					// iCount++;
+				// }
+			// }
+		// }
+	// }
+	int iCount = 0;
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (GET_PLAYER(*iter).AI_isFinancialTrouble())
+		{
+			iCount++;
+		}
+	}
+	// Sanguo Mod Performance, end
+	return iCount;
+
+	// 3MiroCAR: Old code
+	/*int iCount;
 	int iI;
 
 	iCount = 0;
@@ -257,14 +339,34 @@ int CvTeamAI::AI_countFinancialTrouble() const
 			}
 		}
 	}
-
-	return iCount;
+	return iCount;*/
 }
 
 
 int CvTeamAI::AI_countMilitaryWeight(CvArea* pArea) const
 {
-	int iCount;
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// int iCount;
+	// int iI;
+	// iCount = 0;
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iCount += GET_PLAYER((PlayerTypes)iI).AI_militaryWeight(pArea);
+			// }
+		// }
+	// }
+	int iCount = 0;
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iCount += GET_PLAYER(*iter).AI_militaryWeight(pArea);
+	}
+	// Sanguo Mod Performance, end
+
+	/*int iCount;
 	int iI;
 
 	iCount = 0;
@@ -278,7 +380,7 @@ int CvTeamAI::AI_countMilitaryWeight(CvArea* pArea) const
 				iCount += GET_PLAYER((PlayerTypes)iI).AI_militaryWeight(pArea);
 			}
 		}
-	}
+	}*/
 
 	return iCount;
 }
@@ -286,8 +388,32 @@ int CvTeamAI::AI_countMilitaryWeight(CvArea* pArea) const
 
 bool CvTeamAI::AI_isAnyCapitalAreaAlone() const
 {
-	int iI;
-
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// int iI;
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).AI_isCapitalAreaAlone())
+				// {
+					// return true;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (GET_PLAYER(*iter).AI_isCapitalAreaAlone())
+		{
+			return true;
+		}
+	}
+	// Sanguo Mod Performance, end
+	return false;
+	// 3MiroCAR: Old code
+	/*int iI;
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -301,15 +427,38 @@ bool CvTeamAI::AI_isAnyCapitalAreaAlone() const
 			}
 		}
 	}
-
-	return false;
+	return false;*/
 }
 
 
 bool CvTeamAI::AI_isPrimaryArea(CvArea* pArea) const
 {
-	int iI;
-
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// int iI;
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).AI_isPrimaryArea(pArea))
+				// {
+					// return true;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (GET_PLAYER(*iter).AI_isPrimaryArea(pArea))
+		{
+			return true;
+		}
+	}
+	// Sanguo Mod Performance, end
+	return false;
+	// 3MiroCAR: Old code
+	/*int iI;
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -323,8 +472,7 @@ bool CvTeamAI::AI_isPrimaryArea(CvArea* pArea) const
 			}
 		}
 	}
-
-	return false;
+	return false;*/
 }
 
 
@@ -453,20 +601,44 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal
 
 		if (bTargets)
 		{
-			for (int iPlayer = 0; iPlayer < MAX_CIV_PLAYERS; iPlayer++)
+			// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+			// for (int iPlayer = 0; iPlayer < MAX_CIV_PLAYERS; iPlayer++)
+			// {
+				// CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iI);
+				// if (kPlayer.isAlive())
+				// {
+					// if (kPlayer.getTeam() == getID())
+					// {
+						// if (kPlayer.AI_isDoStrategy(AI_STRATEGY_DAGGER) || kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+						// {
+							// if (pArea->getCitiesPerPlayer((PlayerTypes)iPlayer) > 0)
+							// {
+								// return AREAAI_MASSING;
+							// }
+						// }
+					// }
+				// }
+			// }
+			for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
 			{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       09/17/09                      cephalo & jdog5000      */
-/*                                                                                              */
-/* Bugfix				                                                                         */
-/************************************************************************************************/
-/* original BTS code
-				CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iI);
-*/
+				CvPlayerAI& kPlayer = GET_PLAYER(*iter);
+				if (kPlayer.AI_isDoStrategy(AI_STRATEGY_DAGGER) || kPlayer.AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+				{
+					if (pArea->getCitiesPerPlayer(*iter) > 0)
+					{
+						return AREAAI_MASSING;
+					}
+				}
+			}
+			// Sanguo Mod Performance, end
+			// 3MiroCAR: Old code
+			/*for (int iPlayer = 0; iPlayer < MAX_CIV_PLAYERS; iPlayer++)
+			{
+				// JediClemente: AI modification for settlers UNOFFICIAL_PATCH
+				// original BTS code - start
+				//CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iI);
+				// end
 				CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 				
 				if (kPlayer.isAlive())
 				{
@@ -481,7 +653,7 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(CvArea* pArea, bool bPreparingTotal
 						}
 					}
 				}
-			}
+			}*/
 			if (bRecentAttack)
 			{
 				int iPower = countPowerByArea(pArea);
@@ -613,14 +785,28 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 	
 	int iMinDistance = MAX_INT;
 	int iMaxDistance = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// pOurCapitalCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		pOurCapitalCity = GET_PLAYER(*iter).getCapitalCity();
+		{
+			{
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code - this is bad, will have to count the loops
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 			{
-				pOurCapitalCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+				pOurCapitalCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();*/
 
 				if (pOurCapitalCity != NULL)
 				{
@@ -684,17 +870,39 @@ bool CvTeamAI::AI_isWarPossible() const
 
 bool CvTeamAI::AI_isLandTarget(TeamTypes eTeam) const
 {
-	if (!AI_hasCitiesInPrimaryArea(eTeam))
+	// 3MiroCAR: the Profile line was not in the commented section of CAR
+	PROFILE_FUNC();
+	// Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	if (m_aiLandTargetCache[eTeam] != MAX_UNSIGNED_SHORT)
+	{
+		return m_aiLandTargetCache[eTeam];
+	}
+	else
+	{
+		if (!AI_hasCitiesInPrimaryArea(eTeam))
+		{
+			m_aiLandTargetCache[eTeam] = 0;
+			return false;
+		}
+		if (AI_calculateAdjacentLandPlots(eTeam) < 8)
+		{
+			m_aiLandTargetCache[eTeam] = 0;
+			return false;
+		}
+		m_aiLandTargetCache[eTeam] = 1;
+		return true;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*if (!AI_hasCitiesInPrimaryArea(eTeam))
 	{
 		return false;
 	}
-
 	if (AI_calculateAdjacentLandPlots(eTeam) < 8)
 	{
 		return false;
 	}
-
-	return true;
+	return true;*/
 }
 
 // this determines if eTeam or any of its allies are land targets of us
@@ -794,7 +1002,38 @@ int CvTeamAI::AI_getAttitudeVal(TeamTypes eTeam, bool bForced) const
 	iAttitudeVal = 0;
 	iCount = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+				// {
+					// if (GET_PLAYER((PlayerTypes)iJ).isAlive())
+					// {
+						// if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
+						// {
+							// iAttitudeVal += GET_PLAYER((PlayerTypes)iI).AI_getAttitudeVal((PlayerTypes)iJ, bForced);
+							// iCount++;
+						// }
+					// }
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter1 = m_aePlayerMembers.begin(); iter1 != m_aePlayerMembers.end(); ++iter1)
+	{
+		for(int iI = 0; iI < GET_TEAM(eTeam).getPlayerMemberListSize(); iI++)
+		{
+			iAttitudeVal += GET_PLAYER(*iter1).AI_getAttitudeVal(GET_TEAM(eTeam).getPlayerMemberAt(iI), bForced);
+			iCount++;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -813,7 +1052,7 @@ int CvTeamAI::AI_getAttitudeVal(TeamTypes eTeam, bool bForced) const
 				}
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -835,7 +1074,38 @@ int CvTeamAI::AI_getMemoryCount(TeamTypes eTeam, MemoryTypes eMemory) const
 	iMemoryCount = 0;
 	iCount = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+				// {
+					// if (GET_PLAYER((PlayerTypes)iJ).isAlive())
+					// {
+						// if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
+						// {
+							// iMemoryCount += GET_PLAYER((PlayerTypes)iI).AI_getMemoryCount(((PlayerTypes)iJ), eMemory);
+							// iCount++;
+						// }
+					// }
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter1 = m_aePlayerMembers.begin(); iter1 != m_aePlayerMembers.end(); ++iter1)
+	{
+		for(int iI = 0; iI < GET_TEAM(eTeam).getPlayerMemberListSize(); iI++)
+		{
+			iMemoryCount += GET_PLAYER(*iter1).AI_getMemoryCount(GET_TEAM(eTeam).getPlayerMemberAt(iI), eMemory);
+			iCount++;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -854,7 +1124,7 @@ int CvTeamAI::AI_getMemoryCount(TeamTypes eTeam, MemoryTypes eMemory) const
 				}
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -991,7 +1261,38 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 	}
 	
 	int iMaxCultureVictoryAdjustment = 1;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if  (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if  (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_CULTURE3))
+				// {
+					// iMaxCultureVictoryAdjustment = std::max(iMaxCultureVictoryAdjustment, 8);
+				// }
+				// else if  (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_CULTURE2))
+				// {
+					// iMaxCultureVictoryAdjustment = std::max(iMaxCultureVictoryAdjustment, 3);
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if  (GET_PLAYER(*iter).AI_isDoStrategy(AI_STRATEGY_CULTURE3))
+		{
+			iMaxCultureVictoryAdjustment = std::max(iMaxCultureVictoryAdjustment, 8);
+		}
+		else if  (GET_PLAYER(*iter).AI_isDoStrategy(AI_STRATEGY_CULTURE2))
+		{
+			iMaxCultureVictoryAdjustment = std::max(iMaxCultureVictoryAdjustment, 3);
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -1007,7 +1308,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 				}
 			}
 		}
-	}	
+	}*/	
 	iValue /= iMaxCultureVictoryAdjustment;
 
 	return iValue;
@@ -1047,7 +1348,38 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 		bool bDagger = false;
 		
 		bool bAnyFinancialTrouble = false;
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+		// for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				// {
+					// if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+					// {
+						// bDagger = true;
+					// }
+					// if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
+					// {
+						// bAnyFinancialTrouble = true;
+					// }
+				// }
+			// }
+		// }
+		for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+		{
+			if (GET_PLAYER(*iter).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+			{
+				bDagger = true;
+			}
+			if (GET_PLAYER(*iter).AI_isFinancialTrouble())
+			{
+				bAnyFinancialTrouble = true;
+			}
+		}
+		// Sanguo Mod Performance, end
+		// 3MiroCAR: Old code
+		/*for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
@@ -1064,7 +1396,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 					}
 				}
 			}
-		}
+		}*/
 		
 		// if dagger, value peace at 90% * power ratio
 		if (bDagger)
@@ -1296,8 +1628,30 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 	}
 
 	eAttitude = AI_getAttitude(eTeam);
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getTechRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getTechRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -1309,7 +1663,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 				}
 			}
 		}
-	}
+	}*/
 
 	if (eAttitude < ATTITUDE_FRIENDLY)
 	{
@@ -1497,8 +1851,30 @@ DenialTypes CvTeamAI::AI_mapTrade(TeamTypes eTeam) const
 	}
 
 	eAttitude = AI_getAttitude(eTeam);
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getMapRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getMapRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -1510,7 +1886,7 @@ DenialTypes CvTeamAI::AI_mapTrade(TeamTypes eTeam) const
 				}
 			}
 		}
-	}
+	}*/
 
 	return NO_DENIAL;
 }
@@ -1635,7 +2011,26 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 	{
 		int iPersonalityModifier = 0;
 		int iMembers = 0;
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+		// for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				// {
+					// iPersonalityModifier += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getVassalPowerModifier();
+					// ++iMembers;
+				// }
+			// }
+		// }
+		for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+		{
+			iPersonalityModifier += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getVassalPowerModifier();
+			++iMembers;
+		}
+		// Sanguo Mod Performance, end
+		// 3MiroCAR: Old code
+		/*for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
@@ -1645,7 +2040,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 					++iMembers;
 				}
 			}
-		}
+		}*/
 
 		int iTotalPower = GC.getGameINLINE().countTotalCivPower();
 		int iAveragePower = iTotalPower / std::max(1, GC.getGameINLINE().countCivTeamsAlive());
@@ -1829,7 +2224,38 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 
 		AttitudeTypes eModifiedAttitude = CvPlayerAI::AI_getAttitudeFromValue(AI_getAttitudeVal(eTeam, false) + iAttitudeModifier);
 
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+		// for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				// {
+					// if (eAttitude <= ATTITUDE_FURIOUS)
+					// {
+						// return DENIAL_ATTITUDE;
+					// }
+					//if (eModifiedAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getVassalRefuseAttitudeThreshold())
+					// {
+						// return DENIAL_ATTITUDE;
+					// }
+				// }
+			// }
+		// }
+		for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+		{
+			if (eAttitude <= ATTITUDE_FURIOUS)
+			{
+				return DENIAL_ATTITUDE;
+			}
+			if (eModifiedAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getVassalRefuseAttitudeThreshold())
+			{
+				return DENIAL_ATTITUDE;
+			}
+		}
+		// Sanguo Mod Performance, end
+		// 3MiroCAR: Old code
+		/*for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
@@ -1846,7 +2272,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 					}
 				}
 			}
-		}
+		}*/
 	}
 	else
 	{
@@ -2167,8 +2593,30 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 	}
 
 	eAttitude = AI_getAttitude(eTeam);
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getDeclareWarRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getDeclareWarRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -2180,11 +2628,33 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 				}
 			}
 		}
-	}
+	}*/
 
 	eAttitudeThem = AI_getAttitude(eWarTeam);
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				//if (eAttitudeThem > GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getDeclareWarThemRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE_THEM;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitudeThem > GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getDeclareWarThemRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE_THEM;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -2196,7 +2666,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 				}
 			}
 		}
-	}
+	}*/
 	
 	if (!atWar(eWarTeam, eTeam))
 	{
@@ -2262,8 +2732,30 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 	}
 
 	eAttitude = AI_getAttitude(eTeam);
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getOpenBordersRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getOpenBordersRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -2275,7 +2767,7 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 				}
 			}
 		}
-	}
+	}*/
 
 	return NO_DENIAL;
 }
@@ -2331,6 +2823,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 		return NO_DENIAL;
 	}
 
+	// 3MiroAI: This code gets called often and thus slows down the game
 	//Rhye - start
 	int iGameTurn = GC.getGameINLINE().getGameTurn();
 
@@ -2342,17 +2835,15 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 			if ((isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)eTeam).isDefensivePact((TeamTypes)iI)) ||
 				(GET_TEAM((TeamTypes)eTeam).isAtWar((TeamTypes)iI) && isDefensivePact((TeamTypes)iI)))
 			{
-				/*char buf[50];
-				sprintf(buf, "getID = %d; eTeam: %d; iI = %d", getID(), eTeam, iI);
-				GC.getGameINLINE().logMsg(buf);*/
 				return DENIAL_JOKING;
 			}
 		}
 	}
 	//Rhye - end
 
+	// 3MiroAI: Alliances
 	//Rhye - start
-	//no world alliances until industrial era
+	//no world alliances until industrial era (renesance in this case)
 	if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0 && GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() <= 3)
 	{
 		return DENIAL_TOO_FAR;
@@ -2432,6 +2923,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 		}
 	}*/
 
+	// 3MiroAI: this results in a semi-random cap of number of alliances
 	//now the cap
 	int iCap = 3;
 	if (iMaxEra >= 5 && iGameTurn > 390) //modern && year > 1940
@@ -2498,7 +2990,30 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 
 	eAttitude = AI_getAttitude(eTeam);
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getDefensivePactRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getDefensivePactRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -2514,7 +3029,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 				}
 			}
 		}
-	}
+	}*/
 
 	return NO_DENIAL;
 }
@@ -2557,8 +3072,30 @@ DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 	}
 
 	eAttitude = AI_getAttitude(eTeam);
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getPermanentAllianceRefuseAttitudeThreshold())
+				// {
+					// return DENIAL_ATTITUDE;
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getPermanentAllianceRefuseAttitudeThreshold())
+		{
+			return DENIAL_ATTITUDE;
+		}
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -2570,7 +3107,7 @@ DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 				}
 			}
 		}
-	}
+	}*/
 
 	return NO_DENIAL;
 }
@@ -2791,6 +3328,19 @@ void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+	if (m_aiWarSuccess[eIndex] != iNewValue)
+	{
+		for (std::vector<PlayerTypes>::const_iterator iter1 = m_aePlayerMembers.begin(); iter1 != m_aePlayerMembers.end(); ++iter1)
+		{
+			for(int iI = 0; iI < GET_TEAM(eIndex).getPlayerMemberListSize(); iI++)
+			{
+				GET_PLAYER(*iter1).AI_invalidateAttitudeCache(GET_TEAM(eIndex).getPlayerMemberAt(iI));
+				GET_PLAYER(GET_TEAM(eIndex).getPlayerMemberAt(iI)).AI_invalidateAttitudeCache(*iter1);
+			}
+		}
+	}
+	// Sanguo Mod Performance, end
 	m_aiWarSuccess[eIndex] = iNewValue;
 	FAssert(AI_getWarSuccess(eIndex) >= 0);
 }
@@ -2906,8 +3456,30 @@ void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar
 			AI_setWarPlanStateCounter(eIndex, 0);
 
 			AI_updateAreaStragies();
-
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+			// for (iI = 0; iI < MAX_PLAYERS; iI++)
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				// {
+					// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+					// {
+						// if (!(GET_PLAYER((PlayerTypes)iI).isHuman()))
+						// {
+							// GET_PLAYER((PlayerTypes)iI).AI_makeProductionDirty();
+						// }
+					// }
+				// }
+			// }
+			for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+			{
+				if (!(GET_PLAYER(*iter).isHuman()))
+				{
+					GET_PLAYER(*iter).AI_makeProductionDirty();
+				}
+			}
+			// Sanguo Mod Performance, end
+			// 3MiroCAR: Old code
+			/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
@@ -2919,7 +3491,7 @@ void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar
 						}
 					}
 				}
-			}
+			}*/
 		}
 	}
 }
@@ -2929,7 +3501,7 @@ void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar
 int CvTeamAI::AI_teamCloseness(TeamTypes eIndex, int iMaxDistance) const
 {
 	PROFILE_FUNC();
-	int iI, iJ;
+	//int iI, iJ; // 3MiroCAR: Commented
 	
 	if (iMaxDistance == -1)
 	{
@@ -2938,7 +3510,35 @@ int CvTeamAI::AI_teamCloseness(TeamTypes eIndex, int iMaxDistance) const
 	
 	FAssert(eIndex != getID());
 	int iValue = 0;
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+				// {
+					// if (GET_PLAYER((PlayerTypes)iJ).isAlive())
+					// {
+						// if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eIndex)
+						// {
+							// iValue += GET_PLAYER((PlayerTypes)iI).AI_playerCloseness((PlayerTypes)iJ, iMaxDistance);
+						// }
+					// }
+				// }
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter1 = m_aePlayerMembers.begin(); iter1 != m_aePlayerMembers.end(); ++iter1)
+	{
+		for(int iI = 0; iI < GET_TEAM(eIndex).getPlayerMemberListSize(); iI++)
+		{
+			iValue += GET_PLAYER(*iter1).AI_playerCloseness(GET_TEAM(eIndex).getPlayerMemberAt(iI), iMaxDistance);
+		}
+	}
+	// Sanguo Mod Performance, end
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -2956,7 +3556,7 @@ int CvTeamAI::AI_teamCloseness(TeamTypes eIndex, int iMaxDistance) const
 				}	
 			}
 		}
-	}
+	}*/
 	
 	return iValue;	
 }
@@ -2982,6 +3582,10 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 
 	pStream->Read(MAX_TEAMS, (int*)m_aeWarPlan);
 	pStream->Read((int*)&m_eWorstEnemy);
+
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	pStream->Read(MAX_TEAMS, m_aiLandTargetCache);
+	// Sanguo Mod Performance, end
 }
 
 
@@ -3005,6 +3609,10 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 
 	pStream->Write(MAX_TEAMS, (int*)m_aeWarPlan);
 	pStream->Write(m_eWorstEnemy);
+
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	pStream->Write(MAX_TEAMS, m_aiLandTargetCache);
+	// Sanguo Mod Performance, end
 }
 
 // Protected Functions...
@@ -3018,7 +3626,26 @@ int CvTeamAI::AI_noTechTradeThreshold() const
 	iRand = 0;
 	iCount = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getNoTechTradeThreshold();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getNoTechTradeThreshold();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3028,7 +3655,7 @@ int CvTeamAI::AI_noTechTradeThreshold() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3047,8 +3674,26 @@ int CvTeamAI::AI_techTradeKnownPercent() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getTechTradeKnownPercent();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getTechTradeKnownPercent();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3058,7 +3703,7 @@ int CvTeamAI::AI_techTradeKnownPercent() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3077,8 +3722,26 @@ int CvTeamAI::AI_maxWarRand() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getMaxWarRand();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getMaxWarRand();
+		iCount++;
+	}
+	// 3MiroCAR: Old code
+	// Sanguo Mod Performance, end
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3088,7 +3751,7 @@ int CvTeamAI::AI_maxWarRand() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3107,8 +3770,26 @@ int CvTeamAI::AI_maxWarNearbyPowerRatio() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getMaxWarNearbyPowerRatio();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getMaxWarNearbyPowerRatio();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3118,7 +3799,7 @@ int CvTeamAI::AI_maxWarNearbyPowerRatio() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 1)
 	{
@@ -3137,8 +3818,26 @@ int CvTeamAI::AI_maxWarDistantPowerRatio() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getMaxWarDistantPowerRatio();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getMaxWarDistantPowerRatio();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3148,7 +3847,7 @@ int CvTeamAI::AI_maxWarDistantPowerRatio() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 1)
 	{
@@ -3167,8 +3866,26 @@ int CvTeamAI::AI_maxWarMinAdjacentLandPercent() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getMaxWarMinAdjacentLandPercent();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getMaxWarMinAdjacentLandPercent();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3178,7 +3895,7 @@ int CvTeamAI::AI_maxWarMinAdjacentLandPercent() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3197,8 +3914,26 @@ int CvTeamAI::AI_limitedWarRand() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getLimitedWarRand();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getLimitedWarRand();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	/// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3208,7 +3943,7 @@ int CvTeamAI::AI_limitedWarRand() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3228,7 +3963,26 @@ int CvTeamAI::AI_limitedWarPowerRatio() const
 	iRand = 0;
 	iCount = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getLimitedWarPowerRatio();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getLimitedWarPowerRatio();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3238,7 +3992,7 @@ int CvTeamAI::AI_limitedWarPowerRatio() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3257,8 +4011,26 @@ int CvTeamAI::AI_dogpileWarRand() const
 
 	iRand = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getDogpileWarRand();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getDogpileWarRand();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3268,7 +4040,7 @@ int CvTeamAI::AI_dogpileWarRand() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3288,7 +4060,26 @@ int CvTeamAI::AI_makePeaceRand() const
 	iRand = 0;
 	iCount = 0;
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iRand += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getMakePeaceRand();
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iRand += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getMakePeaceRand();
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3298,7 +4089,7 @@ int CvTeamAI::AI_makePeaceRand() const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 0)
 	{
@@ -3317,8 +4108,26 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 
 	iProb = 0;
 	iCount = 0;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// iProb += GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getNoWarAttitudeProb(eAttitude);
+				// iCount++;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		iProb += GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getNoWarAttitudeProb(eAttitude);
+		iCount++;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3328,7 +4137,7 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 				iCount++;
 			}
 		}
-	}
+	}*/
 
 	if (iCount > 1)
 	{
@@ -3524,7 +4333,24 @@ void CvTeamAI::AI_doWar()
 		}
 	}
 
-	for (iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// GET_PLAYER((PlayerTypes)iI).AI_doPeace();
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		GET_PLAYER(*iter).AI_doPeace();
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_CIV_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3533,13 +4359,34 @@ void CvTeamAI::AI_doWar()
 				GET_PLAYER((PlayerTypes)iI).AI_doPeace();
 			}
 		}
-	}
+	}*/
 	
 	int iNumMembers = getNumMembers();
 	int iHighUnitSpendingPercent = 0;
 	int iLowUnitSpendingPercent = 0;
 	
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+	// for (iI = 0; iI < MAX_PLAYERS; iI++)
+	// {
+		// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+			// {
+				// int iUnitSpendingPercent = (GET_PLAYER((PlayerTypes)iI).calculateUnitCost() * 100) / std::max(1, GET_PLAYER((PlayerTypes)iI).calculatePreInflatedCosts());
+				// iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
+				// iLowUnitSpendingPercent += iUnitSpendingPercent;
+			// }
+		// }
+	// }
+	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+	{
+		int iUnitSpendingPercent = (GET_PLAYER(*iter).calculateUnitCost() * 100) / std::max(1, GET_PLAYER(*iter).calculatePreInflatedCosts());
+		iHighUnitSpendingPercent += (std::max(0, iUnitSpendingPercent - 7) / 2);
+		iLowUnitSpendingPercent += iUnitSpendingPercent;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -3550,7 +4397,7 @@ void CvTeamAI::AI_doWar()
 				iLowUnitSpendingPercent += iUnitSpendingPercent;
 			}			
 		}
-	}
+	}*/
 	
 	iHighUnitSpendingPercent /= iNumMembers;
 	iLowUnitSpendingPercent /= iNumMembers;
@@ -3624,7 +4471,56 @@ void CvTeamAI::AI_doWar()
 		int iDaggerCount = 0;
 		int iGetBetterUnitsCount = 0;
 		bool bFinalWar = false;
-		for (iI = 0; iI < MAX_PLAYERS; iI++)
+		
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
+		// for (iI = 0; iI < MAX_PLAYERS; iI++)
+		// {
+			// if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			// {
+				// if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				// {
+					// if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+					// {
+						// iDaggerCount++;
+						// bAggressive = true;
+					// }
+					// if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
+					// {
+						// iGetBetterUnitsCount++;
+					// }
+					// if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+					// {						// bFinalWar = true;					// }
+					// if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
+					// {
+						// iFinancialTroubleCount++;
+					// }
+				// }
+			// }
+		// }
+		for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
+		{
+			if (GET_PLAYER(*iter).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+			{
+				iDaggerCount++;
+				bAggressive = true;
+			}
+			if (GET_PLAYER(*iter).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
+			{
+				iGetBetterUnitsCount++;
+			}
+
+			if (GET_PLAYER(*iter).AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+			{
+				bFinalWar = true;
+			}
+			if (GET_PLAYER(*iter).AI_isFinancialTrouble())
+			{
+				iFinancialTroubleCount++;
+			}
+		}
+		// Sanguo Mod Performance, end
+		// 3MiroCAR: Old code
+		/*for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
@@ -3651,7 +4547,7 @@ void CvTeamAI::AI_doWar()
 					}
 				}
 			}
-		}
+		}*/
 
 	    // if random in this range is 0, we go to war of this type (so lower numbers are higher probablity)
 		// average of everyone on our team
@@ -4226,4 +5122,13 @@ bool CvTeamAI::AI_isWaterAreaRelevant(CvArea* pArea)
 	return false;
 }
 
+// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+void CvTeamAI::AI_invalidateLandTargetCache()
+{
+	for (int i = 0; i < MAX_TEAMS; ++i)
+	{
+		m_aiLandTargetCache[i] = MAX_UNSIGNED_SHORT;
+	}
+}
+// Sanguo Mod Performance, end
 // Private Functions...

@@ -328,6 +328,12 @@ public:
 
 	bool hasShrine(ReligionTypes eReligion);
 
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 07.26.09
+	void setHasPlayerMember(PlayerTypes ePlayer, bool bNewValue);
+	bool isHasPlayerMember(PlayerTypes ePlayer) const;
+	PlayerTypes getPlayerMemberAt(int iIndex) const;
+	int getPlayerMemberListSize() const;
+	// Sanguo Mod Performance, end
 	DllExport void getCompletedSpaceshipProjects(std::map<ProjectTypes, int>& mapProjects) const;
 	DllExport int getProjectPartNumber(ProjectTypes projectType, bool bAssert) const;
 	DllExport bool hasLaunched() const;
@@ -454,6 +460,9 @@ protected:
 	std::vector<BonusTypes> m_aeRevealedBonuses;
 
 	void doWarWeariness();
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 07.26.09
+	std::vector<PlayerTypes> m_aePlayerMembers;
+	// Sanguo Mod Performance, end
 
 	void updateTechShare(TechTypes eTech);
 	void updateTechShare();

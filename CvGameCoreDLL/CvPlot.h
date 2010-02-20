@@ -479,6 +479,12 @@ public:
 	DllExport bool shouldDisplayBridge(CvPlot* pToPlot, PlayerTypes ePlayer) const;
 	DllExport bool checkLateEra() const;
 
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+	int getPlayerDangerCache(PlayerTypes ePlayer, int iRange);
+	void setPlayerDangerCache(PlayerTypes ePlayer, int iRange, int iNewValue);
+	void invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange);
+	// Sanguo Mod Performance, end
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 
@@ -559,6 +565,10 @@ protected:
 	CLinkList<IDInfo> m_units;
 
 	std::vector<CvSymbol*> m_symbols;
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+	short** m_apaiPlayerDangerCache;
+	// Sanguo Mod Performance, end
 
 	void doFeature();
 	void doCulture();

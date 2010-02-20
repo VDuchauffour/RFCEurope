@@ -618,6 +618,36 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	{
 		AI_reset();
 	}
+
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+	UnitTypes eUnit;
+	std::vector<UnitTypes> aUpgradeUnits;
+	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	{
+		eUnit = (UnitTypes)iI;
+		aUpgradeUnits.clear();
+		do
+		{
+			for (int iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+			{
+				if (GC.getUnitInfo(eUnit).getUpgradeUnitClass(iJ))
+				{
+					GC.getUnitInfo((UnitTypes)iI).addUpgradeUnitClassTypes(iJ);
+					aUpgradeUnits.push_back((UnitTypes)GC.getUnitClassInfo((UnitClassTypes)iJ).getDefaultUnitIndex());
+				}
+			}
+			if (aUpgradeUnits.size() > 0)
+			{
+				eUnit = aUpgradeUnits.front();
+				aUpgradeUnits.erase(aUpgradeUnits.begin());
+			}
+			else
+			{
+				break;
+			}
+		}while(aUpgradeUnits.size() >= 0);
+	}
+	// Sanguo Mod Performance, end
 	//logMsg(" reset out ");
 }
 
@@ -5022,6 +5052,19 @@ void CvGame::setPlayerRank(PlayerTypes ePlayer, int iRank)
 {
 	FAssertMsg(ePlayer >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+	if (iRank != m_aiPlayerRank[ePlayer])
+	{
+		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			{
+				GET_PLAYER(ePlayer).AI_invalidateAttitudeCache((PlayerTypes)iI);
+				GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(ePlayer);
+			}
+		}
+	}
+	// Sanguo Mod Performance, end
 	m_aiPlayerRank[ePlayer] = iRank;
 	FAssert(getPlayerRank(ePlayer) >= 0);
 }
@@ -5388,6 +5431,16 @@ void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 		m_paiReligionGameTurnFounded[eIndex] = getGameTurn();
 
 		CvEventReporter::getInstance().religionFounded(eIndex, ePlayer);
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex)
+			{
+				GET_PLAYER(ePlayer).AI_invalidateAttitudeCache((PlayerTypes)iI);
+				GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(ePlayer);
+			}
+		}
+		// Sanguo Mod Performance, end
 	}
 }
 

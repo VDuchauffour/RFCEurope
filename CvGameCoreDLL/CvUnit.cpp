@@ -6817,7 +6817,50 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 
 bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass, int iCount) const
 {
-	UnitTypes eLoopUnit;
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+	/*UnitTypes eLoopUnit;
+	int iI;
+	int numUnitClassInfos = GC.getNumUnitClassInfos();
+
+	if (iCount > numUnitClassInfos)
+	{
+		return false;
+	}
+	CvUnitInfo &fromUnitInfo = GC.getUnitInfo(eFromUnit);
+
+	if (fromUnitInfo.getUpgradeUnitClass(eToUnitClass))
+	{
+		return true;
+	}
+	for (iI = 0; iI < numUnitClassInfos; iI++)
+	{
+		if (fromUnitInfo.getUpgradeUnitClass(iI))
+		{
+			eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
+			if (eLoopUnit != NO_UNIT)
+			{
+				if (upgradeAvailable(eLoopUnit, eToUnitClass, (iCount + 1)))
+				{
+					return true;
+				}
+			}
+		}
+	}*/
+
+	int numUnitClassInfos = GC.getNumUnitClassInfos();
+
+	if (iCount > numUnitClassInfos)
+	{
+		return false;
+	}
+
+	if (GC.getUnitInfo(eFromUnit).isUpgradeUnitClassTypes(eToUnitClass))
+	{
+		return true;
+	}
+	// Sanguo Mod Performance, end
+	// 3MiroCAR: Old code
+	/*UnitTypes eLoopUnit;
 	int iI;
 	int numUnitClassInfos = GC.getNumUnitClassInfos();
 
@@ -6847,7 +6890,7 @@ bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass, 
 				}
 			}
 		}
-	}
+	}*/
 
 	return false;
 }
@@ -9624,6 +9667,45 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
  		gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity());
  	}
 
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.12.09
+	{PROFILE_BEGIN("setXY::plotdangercache");
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	{
+		if (GET_TEAM(getTeam()).isAtWar((TeamTypes)iI))
+		{
+			for (int iDX = -DANGER_RANGE; iDX <= DANGER_RANGE; iDX++)
+			{
+				for (int iDY = -DANGER_RANGE; iDY <= DANGER_RANGE; iDY++)
+				{
+					if (pOldPlot != NULL)
+					{
+                        int iIndex = GC.getMapINLINE().plotNumINLINE(pOldPlot->getX_INLINE() + iDX, pOldPlot->getY_INLINE() + iDY);
+                        if (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE())
+                        {
+                            for (int iJ = 0; iJ < GET_TEAM((TeamTypes)iI).getPlayerMemberListSize(); iJ++)
+                            {
+                                GET_PLAYER(GET_TEAM((TeamTypes)iI).getPlayerMemberAt(iJ)).AI_invalidatePlotDangerCache(iIndex);
+                            }
+                        }
+					}
+					if (pNewPlot != NULL)
+					{
+                        int iIndex = GC.getMapINLINE().plotNumINLINE(pNewPlot->getX_INLINE() + iDX, pNewPlot->getY_INLINE() + iDY);
+                        if (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE())
+                        {
+                            for (int iJ = 0; iJ < GET_TEAM((TeamTypes)iI).getPlayerMemberListSize(); iJ++)
+                            {
+                                GET_PLAYER(GET_TEAM((TeamTypes)iI).getPlayerMemberAt(iJ)).AI_invalidatePlotDangerCache(iIndex);
+                            }
+                        }
+					}
+				}
+			}
+		}
+	}
+	PROFILE_END();}
+	// Sanguo Mod Performance, end
+
 	// report event to Python, along with some other key state
 	CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
 }
@@ -9814,6 +9896,32 @@ void CvUnit::setMoves(int iNewValue)
 		{
 			gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
 		}
+
+		// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
+        if (GC.getGameINLINE().isFinalInitialized())
+        {
+            for (int iI = 0; iI < MAX_TEAMS; iI++)
+            {
+                if (GET_TEAM(getTeam()).isAtWar((TeamTypes)iI))
+                {
+                    for (int iDX = -DANGER_RANGE; iDX <= DANGER_RANGE; iDX++)
+                    {
+                        for (int iDY = -DANGER_RANGE; iDY <= DANGER_RANGE; iDY++)
+                        {
+                            int iIndex = GC.getMapINLINE().plotNumINLINE(plot()->getX_INLINE() + iDX, plot()->getY_INLINE() + iDY);
+                            if (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE())
+                            {
+                                for (int iJ = 0; iJ < GET_TEAM((TeamTypes)iI).getPlayerMemberListSize(); iJ++)
+                                {
+                                    GET_PLAYER(GET_TEAM((TeamTypes)iI).getPlayerMemberAt(iJ)).AI_invalidatePlotDangerCache(iIndex);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Sanguo Mod Performance, end
 	}
 }
 
