@@ -152,8 +152,16 @@ class Stability:
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		scriptDict['lHasEscorial'][iCiv] = iNewValue
 		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-	
 
+	#JediClemente: Stephansdom was not considered before, functions similar to Escorial
+	def getHasStephansdom( self, iCiv ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lHasStephansdom'][iCiv]
+
+	def setHasStephansdom( self, iCiv, iNewValue ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lHasStephansdom'][iCiv] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
         
 #######################################
 ### Main methods (Event-Triggered) ###
@@ -282,6 +290,7 @@ class Stability:
                         #Calculate Civic Stability
                         iNewBaseCivicStability = 0
  			if (iCivic3 == 19): #Merchant Republic should be under a republic
+ 								#JediClemente: unless it's Venezia, then don't apply penalty (make an exception); don't know how to do it
 				if (iCivic0 != 4):
 					iNewBaseCivicStability -= 5
 					#print("iNewBaseCivicStability civic combination1",iNewBaseCivicStability, iPlayer)
@@ -298,6 +307,9 @@ class Stability:
 					iNewBaseCivicStability -=5
 				if (iCivic1 == 8): #Religious Law
 					iNewBaseCivicStability +=5
+			if(iCivic0 == 2 or iCivic0 == 3): #JediClemente: Stephansdom gives +2 stability for having a non-feudal monarchy
+				if (self.getHasStephansdom(iPlayer) == 1):
+					iNewBaseCivicStability +=2;
 			if (iCivic0 == 3 or iCivic0 == 4): #Limited Monarchy and Republics both like enlightened civics
 				if (iCivic1 == 9): #Common Law
 					iNewBaseCivicStability +=2
@@ -549,7 +561,10 @@ class Stability:
 		if (city.hasBuilding(con.iEscorial)):
 			self.setHasEscorial(playerType,1)
 			self.setHasEscorial(owner,0)
-			
+		if (city.hasBuilding(con.iStephansdom)):
+			self.setHasStephansdom(playerType,1)
+			self.setHasStephansdom(owner,0)
+
                 if (owner < con.iNumPlayers):
                         iTotalCityLostModifier = 0       
                  	iDiplomacyHit = 0
@@ -658,7 +673,11 @@ class Stability:
                 	iTempCitiesThreshold += 1
 		elif (iBuilding == con.iEscorial):
 			self.setHasEscorial(iPlayer,1)
-		if (iBuilding >= con.iSistineChapel and iBuilding <= con.iTombKhal): #+2 per wonder
+		elif (iBuilding == con.iStephansdom):
+			self.setHasStephansdom(iPlayer,1)
+
+		# JediClemente: the +2 per wonder was obsolete, a bunch of wonders were added after Tomb of Al Khalid
+		if (iBuilding >= con.iSistineChapel and iBuilding <= con.iPressburg): #+2 per wonder
 			iTempCitiesThreshold +=2
                 self.setParameter(iPlayer, iParCitiesE, True, iTempCitiesThreshold)
                 self.setStability(iPlayer, self.getStability(iPlayer)+iTempCitiesThreshold)
