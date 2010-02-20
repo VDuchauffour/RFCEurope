@@ -114,5 +114,8 @@
 #define PYEventModule					"CvEventInterface"
 #define PYRandomEventModule					"CvRandomEventInterface"
 //#define PYRFCUtilsModule					"RFCUtils" //Rhye
+// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.12.09
+#define DANGER_RANGE			(4)
+// Sanguo Mod Performance, end
 
 #endif	// CVDEFINES_H

@@ -154,6 +154,10 @@ public:
 	int AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const;
 	
 	bool AI_isWaterAreaRelevant(CvArea* pArea);
+
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	void AI_invalidateLandTargetCache();
+	// Sanguo Mod Performance, end
 	
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
@@ -174,6 +178,9 @@ protected:
 	int* m_aiWarSuccess;
 	int* m_aiEnemyPeacetimeTradeValue;
 	int* m_aiEnemyPeacetimeGrantValue;
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	unsigned short* m_aiLandTargetCache;
+	// Sanguo Mod Performance, end
 
 	WarPlanTypes* m_aeWarPlan;
 

@@ -346,6 +346,11 @@ public:
 	// 3MiroFaith
 	int AI_getFaithAttitude( PlayerTypes ePlayer ) const;
 
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.22.09
+	void AI_invalidateAttitudeCache(PlayerTypes ePlayer);
+	void AI_invalidatePlotDangerCache(int iPlotIndex);
+	// Sanguo Mod Performance, end
+
 protected:
 
 	static CvPlayerAI* m_aPlayers;
@@ -390,6 +395,9 @@ protected:
 
 	mutable int* m_aiCloseBordersAttitudeCache;
 
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	mutable int* m_aiAttitudeCache;
+	// Sanguo Mod Performance, end
 
 	bool* m_abFirstContact;
 

@@ -575,7 +575,8 @@ void CvUnitAI::AI_upgrade()
 		int iBestValue = 0;
 		UnitTypes eBestUnit = NO_UNIT;
 
-		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+		/*for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			if ((iPass > 0) || GC.getUnitInfo((UnitTypes)iI).getUnitAIType(AI_getUnitAIType()))
 			{
@@ -594,7 +595,50 @@ void CvUnitAI::AI_upgrade()
 					}
 				}
 			}
+		}*/
+		std::vector<int> aPotentialUnitClassTypes = GC.getUnitInfo(getUnitType()).getUpgradeUnitClassTypes();
+		for (int iI = 0; iI < (int)aPotentialUnitClassTypes.size(); iI++)
+		{
+			UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits((UnitClassTypes)aPotentialUnitClassTypes[iI]);
+			if (eUnit != NO_UNIT && ((iPass > 0) || GC.getUnitInfo(eUnit).getUnitAIType(AI_getUnitAIType())))
+			{
+				int iNewValue = kPlayer.AI_unitValue(eUnit, eUnitAI, pArea);
+				if ((iPass == 0 || iNewValue > 0) && iNewValue > iCurrentValue)
+				{
+					if (canUpgrade(eUnit))
+					{
+						int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							eBestUnit = eUnit;
+						}
+					}
+				}
+			}
 		}
+		// Sanguo Mod Performance, end
+		// 3MiroCAR: Old code
+		/*for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+		{
+			if ((iPass > 0) || GC.getUnitInfo((UnitTypes)iI).getUnitAIType(AI_getUnitAIType()))
+			{
+				int iNewValue = kPlayer.AI_unitValue(((UnitTypes)iI), eUnitAI, pArea);
+				if ((iPass == 0 || iNewValue > 0) && iNewValue > iCurrentValue)
+				{
+					if (canUpgrade((UnitTypes)iI))
+					{
+						int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
+
+						if (iValue > iBestValue)
+						{
+							iBestValue = iValue;
+							eBestUnit = ((UnitTypes)iI);
+						}
+					}
+				}
+			}
+		}*/
 
 		if (eBestUnit != NO_UNIT)
 		{

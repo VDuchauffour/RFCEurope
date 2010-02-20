@@ -4039,6 +4039,31 @@ int CvUnitInfo::getLeaderExperience() const
 	return m_iLeaderExperience;
 }
 
+// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+std::vector<int> CvUnitInfo::getUpgradeUnitClassTypes() const
+{
+	return m_aiUpgradeUnitClassTypes;
+}
+void CvUnitInfo::addUpgradeUnitClassTypes(int i)
+{
+	FAssert (i > -1 && i < GC.getNumUnitClassInfos());
+	if (find(m_aiUpgradeUnitClassTypes.begin(), m_aiUpgradeUnitClassTypes.end(), i) == m_aiUpgradeUnitClassTypes.end())
+	{
+		m_aiUpgradeUnitClassTypes.push_back(i);
+	}
+}
+
+bool CvUnitInfo::isUpgradeUnitClassTypes(int i)
+{
+	FAssert (i > -1 && i < GC.getNumUnitClassInfos());
+	if (find(m_aiUpgradeUnitClassTypes.begin(), m_aiUpgradeUnitClassTypes.end(), i) == m_aiUpgradeUnitClassTypes.end())
+	{
+		return false;
+	}
+	return true;
+}
+// Sanguo Mod Performance, end
+
 const TCHAR* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
 	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
@@ -4235,6 +4260,17 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 		stream->Read(&iSeeInvisibleType);
 		m_aiSeeInvisibleTypes.push_back(iSeeInvisibleType);
 	}
+
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+	int iNumUpgradeUnitClassTypes;
+	stream->Read(&iNumUpgradeUnitClassTypes);
+	for(int i=0; i<iNumUpgradeUnitClassTypes;i++)
+	{
+		int iUnitClassType;
+		stream->Read(&iUnitClassType);
+		m_aiUpgradeUnitClassTypes.push_back(iUnitClassType);
+	}
+	// Sanguo Mod Performance, end
 
 	stream->Read(&m_iAdvisorType);
 	stream->Read(&m_iHolyCity);
@@ -4532,6 +4568,14 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 		stream->Write(m_aiSeeInvisibleTypes[i]);
 	}
 	
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.27.09
+	stream->Write((int)m_aiUpgradeUnitClassTypes.size());
+	for(int i=0;i<(int)m_aiUpgradeUnitClassTypes.size();i++)
+	{
+		stream->Write(m_aiUpgradeUnitClassTypes[i]);
+	}
+	// Sanguo Mod Performance, end
+
 	stream->Write(m_iAdvisorType);
 	stream->Write(m_iHolyCity);
 	stream->Write(m_iReligionType);

@@ -103,6 +103,10 @@ CvPlayerAI::CvPlayerAI()
 	m_aiUnitCombatWeights = NULL;
 	m_aiCloseBordersAttitudeCache = new int[MAX_PLAYERS];
 
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	m_aiAttitudeCache = new int[MAX_PLAYERS];
+	// Sanguo Mod Performance, end
+
 	AI_reset(true);
 }
 
@@ -138,6 +142,10 @@ CvPlayerAI::~CvPlayerAI()
 	SAFE_DELETE_ARRAY(m_aiAverageCommerceMultiplier);
 	SAFE_DELETE_ARRAY(m_aiAverageCommerceExchange);
 	SAFE_DELETE_ARRAY(m_aiCloseBordersAttitudeCache);
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	SAFE_DELETE_ARRAY(m_aiAttitudeCache);
+	// Sanguo Mod Performance, end
 }
 
 
@@ -283,6 +291,14 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 		{
 			GET_PLAYER((PlayerTypes) iI).m_aiCloseBordersAttitudeCache[getID()] = 0;
 		}
+
+		// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+		m_aiAttitudeCache[iI] = 0;
+		if (!bConstructor && getID() != NO_PLAYER)
+		{
+			GET_PLAYER((PlayerTypes) iI).m_aiAttitudeCache[getID()] = 0;
+		}
+		// Sanguo Mod Performance, end
 	}
 }
 
@@ -306,6 +322,20 @@ void CvPlayerAI::AI_doTurnPre()
 	AI_invalidateCloseBordersAttitudeCache();
 
 	AI_doCounter();
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+	{
+		AI_invalidateAttitudeCache((PlayerTypes)iI);
+	}
+	if (GC.getGameINLINE().isFinalInitialized())
+	{
+		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); ++iI)
+		{
+			AI_invalidatePlotDangerCache(iI);
+		}
+	}
+	// Sanguo Mod Performance, end
 
 	AI_updateBonusValue();
 	
@@ -3205,7 +3235,99 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 {
 	PROFILE_FUNC();
 
-	CLLNode<IDInfo>* pUnitNode;
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.12.09
+	if (iRange == -1 || iRange > DANGER_RANGE)
+	{
+		iRange = DANGER_RANGE;
+	}
+	if (pPlot->getPlayerDangerCache(getID(), iRange) != MAX_SHORT)
+	{
+		return pPlot->getPlayerDangerCache(getID(), iRange);
+	}
+	else
+	{
+		CLLNode<IDInfo>* pUnitNode;
+		CvUnit* pLoopUnit;
+		CvPlot* pLoopPlot;
+		int iCount;
+		int iDistance;
+		int iBorderDanger;
+		int iDX, iDY;
+		CvArea *pPlotArea = pPlot->area();
+		iCount = 0;
+		iBorderDanger = 0;
+		/*if (iRange == -1)
+		{
+			iRange = DANGER_RANGE;
+		}*/
+		for (iDX = -(iRange); iDX <= iRange; iDX++)
+		{
+			for (iDY = -(iRange); iDY <= iRange; iDY++)
+			{
+				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+				if (pLoopPlot != NULL)
+				{
+					if (pLoopPlot->area() == pPlotArea)
+					{
+						iDistance = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+						if (atWar(pLoopPlot->getTeam(), getTeam()))
+						{
+							if (iDistance == 1)
+							{
+								iBorderDanger++;
+							}
+							else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+							{
+								iBorderDanger++;
+							}
+						}
+						pUnitNode = pLoopPlot->headUnitNode();
+						while (pUnitNode != NULL)
+						{
+							pLoopUnit = ::getUnit(pUnitNode->m_data);
+							pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
+							if (pLoopUnit->isEnemy(getTeam()))
+							{
+								if (pLoopUnit->canAttack())
+								{
+									if (!(pLoopUnit->isInvisible(getTeam(), false)))
+									{
+										if (pLoopUnit->canMoveOrAttackInto(pPlot))
+										{
+											//if (!bTestMoves)
+											//{
+												//iCount++;
+											//}
+											//else
+											//{
+												int iDangerRange = pLoopUnit->baseMoves();
+												iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+												if (iDangerRange >= iDistance)
+												{
+													iCount++;
+												}
+											//}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if (iBorderDanger > 0)
+		{
+			if (!isHuman() && !pPlot->isCity())
+			{
+				iCount += iBorderDanger;
+			}
+		}
+		pPlot->setPlayerDangerCache(getID(), iRange, std::min(iCount, MAX_SHORT));
+		return std::min(iCount, MAX_SHORT);
+	}
+	// 3MiroCAR -- below is the original code
+	/*CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
 	int iCount;
@@ -3292,7 +3414,7 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 	    }
 	}
 
-	return iCount;
+	return iCount;*/
 }
 
 int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, bool bAnyDanger) const
@@ -5364,6 +5486,82 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 		}
 	}
 
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	if (m_aiAttitudeCache[ePlayer] != MAX_INT)
+	{
+		return m_aiAttitudeCache[ePlayer];
+	}
+	else
+	{
+		iAttitude = GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
+		iAttitude += GC.getHandicapInfo(GET_PLAYER(ePlayer).getHandicapType()).getAttitudeChange();
+
+		//Rhye - start UP
+		// 3Miro
+		iAttitude += diplomacyModifiers[getID()][ePlayer];
+		//Rhye - end UP
+		
+		/*if (GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI))
+		{
+			if (GET_PLAYER(ePlayer).isHuman())
+			{
+				iAttitude -= 2;
+			}
+		}*/
+
+		if (!(GET_PLAYER(ePlayer).isHuman()))
+		{
+			iAttitude += (4 - abs(AI_getPeaceWeight() - GET_PLAYER(ePlayer).AI_getPeaceWeight()));
+			iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(), GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getWarmongerRespect());
+		}
+		iAttitude -= std::max(0, (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getNumMembers() - GET_TEAM(getTeam()).getNumMembers()));
+		iRankDifference = (GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer));
+		if (iRankDifference > 0)
+		{
+			iAttitude += ((GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange() * iRankDifference) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1));
+		}
+		else
+		{
+			iAttitude += ((GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange() * -(iRankDifference)) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1));
+		}
+		if ((GC.getGameINLINE().getPlayerRank(getID()) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)) &&
+			  (GC.getGameINLINE().getPlayerRank(ePlayer) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)))
+		{
+			iAttitude++;
+		}
+		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getWarSuccess(getTeam()) > GET_TEAM(getTeam()).AI_getWarSuccess(GET_PLAYER(ePlayer).getTeam()))
+		{
+			iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getLostWarAttitudeChange();
+		}
+		iAttitude += AI_getCloseBordersAttitude(ePlayer);
+		iAttitude += AI_getWarAttitude(ePlayer);
+		iAttitude += AI_getPeaceAttitude(ePlayer);
+		iAttitude += AI_getSameReligionAttitude(ePlayer);
+		iAttitude += AI_getDifferentReligionAttitude(ePlayer);
+		iAttitude += AI_getBonusTradeAttitude(ePlayer);
+		iAttitude += AI_getOpenBordersAttitude(ePlayer);
+		iAttitude += AI_getDefensivePactAttitude(ePlayer);
+		iAttitude += AI_getRivalDefensivePactAttitude(ePlayer);
+		iAttitude += AI_getRivalVassalAttitude(ePlayer);
+		iAttitude += AI_getShareWarAttitude(ePlayer);
+		iAttitude += AI_getFavoriteCivicAttitude(ePlayer);
+		iAttitude += AI_getTradeAttitude(ePlayer);
+		iAttitude += AI_getRivalTradeAttitude(ePlayer);
+		for (iI = 0; iI < NUM_MEMORY_TYPES; iI++)
+		{
+			iAttitude += AI_getMemoryAttitude(ePlayer, ((MemoryTypes)iI));
+		}
+		iAttitude += AI_getColonyAttitude(ePlayer);
+		iAttitude += AI_getAttitudeExtra(ePlayer);
+
+		m_aiAttitudeCache[ePlayer] = range(iAttitude, -100, 100);
+
+		return m_aiAttitudeCache[ePlayer];
+	}
+	// Sanguo Mod Performance, end
+
+	/* // 3MiroCAR: this was the old code
 	iAttitude = GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
 
 	iAttitude += GC.getHandicapInfo(GET_PLAYER(ePlayer).getHandicapType()).getAttitudeChange();
@@ -5429,7 +5627,7 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	iAttitude += AI_getColonyAttitude(ePlayer);
 	iAttitude += AI_getAttitudeExtra(ePlayer);
 
-	return range(iAttitude, -100, 100);
+	return range(iAttitude, -100, 100);*/
 }
 
 
@@ -11243,6 +11441,12 @@ void CvPlayerAI::AI_setAttitudeExtra(PlayerTypes eIndex, int iNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
+	if (m_aiAttitudeExtra[eIndex] != iNewValue)
+	{
+		GET_PLAYER(getID()).AI_invalidateAttitudeCache(eIndex);
+	}
+	// Sanguo Mod Performance, end
 	m_aiAttitudeExtra[eIndex] = iNewValue;
 }
 
@@ -13511,6 +13715,10 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumUnitClassInfos(), m_aiUnitClassWeights);
 	pStream->Read(GC.getNumUnitCombatInfos(), m_aiUnitCombatWeights);
 	pStream->Read(MAX_PLAYERS, m_aiCloseBordersAttitudeCache);
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	pStream->Read(MAX_PLAYERS, m_aiAttitudeCache);
+	// Sanguo Mod Performance, end
 }
 
 
@@ -13584,6 +13792,10 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 	pStream->Write(GC.getNumUnitClassInfos(), m_aiUnitClassWeights);
 	pStream->Write(GC.getNumUnitCombatInfos(), m_aiUnitCombatWeights);
 	pStream->Write(MAX_PLAYERS, m_aiCloseBordersAttitudeCache);
+
+	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 7.26.09
+	pStream->Write(MAX_PLAYERS, m_aiAttitudeCache);
+	// Sanguo Mod Performance, end
 }
 
 
@@ -18209,3 +18421,20 @@ int CvPlayerAI::AI_getFaithAttitude( PlayerTypes ePlayer ) const
 	};
 	return 0;
 };
+
+// 3MiroCAR: Sanguo Mod Performance, start
+void CvPlayerAI::AI_invalidateAttitudeCache(PlayerTypes ePlayer)
+{
+	m_aiAttitudeCache[ePlayer] = MAX_INT;
+}
+void CvPlayerAI::AI_invalidatePlotDangerCache(int iIndex)
+{
+	FAssert (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE());
+	CvPlot* pPlot = GC.getMapINLINE().plotByIndex(iIndex);
+	FAssert (pPlot != NULL);
+	for (int iI = 0; iI < DANGER_RANGE + 1; iI++)
+	{
+		pPlot->invalidatePlayerDangerCache(getID(), iI);
+	}
+}
+// Sanguo Mod Performance, end

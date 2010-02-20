@@ -4991,6 +4991,7 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 	// 3MiroAI: make the AI aware of the projects that unlock other projects
 	// Sedna17AI: Old code wasn't working, not sure what it was supposed to do. Much simpler code just counts up the projects with this as Prereq. Doesn't account for
 	// projects which have already been built though. We'll get a lot of India Companies.
+	// 3Miro: this is exactly what the code was supposed to be doing, I must have messed it up
 	for ( iI = 0; iI < GC.getNumProjectInfos(); iI++ ){
 		if ( GC.getProjectInfo( (ProjectTypes) iI ).getPrereqProject(eProject) > 0) 
 		{
