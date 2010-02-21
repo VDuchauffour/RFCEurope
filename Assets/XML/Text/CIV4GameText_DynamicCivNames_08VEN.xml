@@ -86,32 +86,33 @@
 		<German>Venezianische Völker</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
+  <!-- JediClemente: Venezia should always be a Most Serene Republic as it always has Merchant Republic -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN01</Tag>
-		<English>Duchy of Venice</English>
-		<French>Duch&#233; de Venise</French>
-		<German>Herzogtum Venedig</German>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN02</Tag>
-		<English>Most Serene Duchy of Venice</English>
-		<French>Duch&#233; Serein de Venise</French>
-		<German>Erlauchtestes Herzogtum Venedig</German>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN03</Tag>
-		<English>Duchy of Venice</English>
-		<French>Duch&#233; de Venise</French>
-		<German>Herzogtum Venedig</German>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN04</Tag>
-		<English>Venetian Empire</English>
-		<French>Empire V&#233;nitien</French>
-		<German>Venezianisches Reich</German>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
