@@ -17963,7 +17963,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -18156,7 +18156,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -18341,7 +18341,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -20213,7 +20213,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -20598,7 +20598,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -20787,7 +20787,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -21350,7 +21350,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -24135,7 +24135,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -24326,7 +24326,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -24910,7 +24910,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -25095,7 +25095,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -25654,7 +25654,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -26401,7 +26401,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -26966,7 +26966,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
