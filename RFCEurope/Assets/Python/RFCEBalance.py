@@ -301,7 +301,7 @@ class RFCEBalance:
 		gc.setCityWarDistanceAI( iArabia, 2 )
 		gc.setCityWarDistanceAI( iBulgaria, 2 )
 		gc.setCityWarDistanceAI( iCordoba, 1 )
-		gc.setCityWarDistanceAI( iSpain, 2 )
+		gc.setCityWarDistanceAI( iSpain, 3 )
 		gc.setCityWarDistanceAI( iNorse, 3 )
 		gc.setCityWarDistanceAI( iVenecia, 3 )
 		gc.setCityWarDistanceAI( iKiev, 2 )
@@ -323,7 +323,8 @@ class RFCEBalance:
 		gc.setTechPreferenceAI(iBulgaria,con.iBronzeCasting,200)				
 		gc.setTechPreferenceAI(iGermany,con.iPrintingPress,200)
 		gc.setTechPreferenceAI(iEngland,con.iPrintingPress,150)
-
+		gc.setTechPreferenceAI(iSpain,con.iAstronomy,200)
+		gc.setTechPreferenceAI(iPortugal,con.iAstronomy,200)
 		
 		#3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
 		# + means they will like each other - they will hate each other.
@@ -392,8 +393,9 @@ class RFCEBalance:
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
 		
 		gc.setUP( iNorse, iUP_CanEnterTerrain, con.iTerrainOcean )
-		
-		gc.setUP( iVenecia, iUP_EnableCivic, 100* con.iCivicMerchantRepublic + con.iCivicRepublic )
+
+		#JediClemente: changed to only Merchant Republic
+		gc.setUP( iVenecia, iUP_EnableCivic, 100* con.iCivicMerchantRepublic ) # before + con.iCivicRepublic
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
 		
 		gc.setUP( iKiev, iUP_CityTileYield, 100000 * 2 )

@@ -289,8 +289,8 @@ class Stability:
 
                         #Calculate Civic Stability
                         iNewBaseCivicStability = 0
- 			if (iCivic3 == 19): #Merchant Republic should be under a republic
- 								#JediClemente: unless it's Venezia, then don't apply penalty (make an exception); don't know how to do it
+ 			if (iCivic3 == 19 and iPlayer != con.iVenecia): #Merchant Republic should be under a republic
+ 								#JediClemente: unless it's Venezia, then don't apply penalty (make an exception)
 				if (iCivic0 != 4):
 					iNewBaseCivicStability -= 5
 					#print("iNewBaseCivicStability civic combination1",iNewBaseCivicStability, iPlayer)
