@@ -328,7 +328,7 @@ class RFCEBalance:
 		
 		#3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
 		# + means they will like each other - they will hate each other.
-		# from Civ1 towards Civ2
+		# from Civ1 towards Civ2 (make them symmetric)
 		gc.setDiplomacyModifiers( iCordoba, iArabia, +8 )
 		gc.setDiplomacyModifiers( iArabia, iCordoba, +8 )
 		gc.setDiplomacyModifiers( iArabia, iByzantium, -10 )
@@ -344,9 +344,13 @@ class RFCEBalance:
 		gc.setDiplomacyModifiers( iTurkey, iByzantium, -10 )
 		gc.setDiplomacyModifiers( iByzantium, iTurkey, -10 )
 		gc.setDiplomacyModifiers( iGermany, iPoland, -5 )
+		gc.setDiplomacyModifiers( iPoland, iGermany, -5 )
 		gc.setDiplomacyModifiers( iMoscow, iPoland, -5 )
+		gc.setDiplomacyModifiers( iPoland, iMoscow, -5 )
 		gc.setDiplomacyModifiers( iAustria, iPoland, -2 )
+		gc.setDiplomacyModifiers( iPoland, iAustria, -2 )
 		gc.setDiplomacyModifiers( iSweden, iPoland, -2 )
+		gc.setDiplomacyModifiers( iPoland, iSweden, -2 )
 		
 		#gc.setDiplomacyModifiers( iIndependent, iIndependent2, -10 )
 		
@@ -466,7 +470,7 @@ class RFCEBalance:
 		# iFP_Displomacy: iAttitude += 	iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of an attitude point
 		
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 20 )
+		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 35 )
 		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Civic, 66 )
 		
 		gc.setReligionBenefit( con.iIslam, con.iFP_Growth, 50 )

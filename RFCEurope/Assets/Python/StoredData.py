@@ -99,7 +99,7 @@ class StoredData:
                                                [-1, -1, -1],
                                                [-1, -1, -1],
                                                [-1, -1, -1]],
-                                    'lReligionFounded': [-1, -1, -1, -1],
+                                    'lReligionFounded': [-1, -1, -1, -1, -1],
                                     'iEnslavedUnits': 0,
                                     'iRazedByMongols': 0,
                                     'lEnglishEras': [-1, -1],
@@ -171,6 +171,8 @@ class StoredData:
 				    'iCrusadeSucceeded':0,
 				    'lSelectedUnits':[0, 0, 0, 0, 0, 0], # Templars, Zerglings ops! ... Teutonic Knights, Knights, Heavy Lancers, Siege Weapons, Generic
 				    'bDCEnabled': False,
-				    'iDCLast':0
+				    'iDCLast':0,
+				    # Stephansdom
+				    'lHasStephansdom':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 				}
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
