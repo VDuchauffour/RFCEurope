@@ -262,5 +262,8 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		// set fast Terrain
 		.def("setFastTerrain", &CyGlobalContext::setFastTerrain, "void ( int iFastTerrain )") // 3Miro
+
+		// set AI building prefs
+		.def("setBuildingPref", &CyGlobalContext::setBuildingPref, "void ( int iCiv, int iBuilding, int iPref )") // 3Miro
 		;
 }

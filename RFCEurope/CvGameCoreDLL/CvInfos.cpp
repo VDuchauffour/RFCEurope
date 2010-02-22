@@ -4043,7 +4043,8 @@ int CvUnitInfo::getLeaderExperience() const
 std::vector<int> CvUnitInfo::getUpgradeUnitClassTypes() const
 {
 	return m_aiUpgradeUnitClassTypes;
-}
+}
+
 void CvUnitInfo::addUpgradeUnitClassTypes(int i)
 {
 	FAssert (i > -1 && i < GC.getNumUnitClassInfos());

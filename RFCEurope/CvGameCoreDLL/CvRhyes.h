@@ -166,6 +166,7 @@ extern int* cityClusterMinus;
 extern int** diplomacyModifiers;
 extern int * colonyAIModifier;
 extern int *startingWorkers;
+extern int *buildingPrefs;
 
 extern int* cityWarDistance;
 extern int** techPreferences;

@@ -10245,4 +10245,4 @@ void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange)
 	}
 	m_apaiPlayerDangerCache[ePlayer][iRange] = MAX_SHORT;
 }
-// Sanguo Mod Performance, end
+// Sanguo Mod Performance, end

@@ -4489,7 +4489,9 @@ void CvTeamAI::AI_doWar()
 						// iGetBetterUnitsCount++;
 					// }
 					// if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
-					// {						// bFinalWar = true;					// }
+					// {
+						// bFinalWar = true;
+					// }
 					// if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
 					// {
 						// iFinancialTroubleCount++;

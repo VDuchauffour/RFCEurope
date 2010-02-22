@@ -834,6 +834,9 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	StrategicTileX = new int[NUM_ALL_PLAYERS_B];
 	StrategicTileY = new int[NUM_ALL_PLAYERS_B];
 	for ( int i=0; i< NUM_ALL_PLAYERS_B; i++ ){ StrategicTileX[i] = -1; StrategicTileY[i] = -1; }
+
+	buildingPrefs = new int[ NUM_ALL_PLAYERS_B * NUM_BUILDINGS ];
+	for ( int i=0; i < NUM_ALL_PLAYERS_B * NUM_BUILDINGS; i++ ){ buildingPrefs[i] = 0; }
 };
 
 void CyGlobalContext::setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop ){
@@ -1059,4 +1062,8 @@ void CyGlobalContext::setStrategicTile( int iCiv, int iX, int iY ){
 
 void CyGlobalContext::setFastTerrain( int iFastTerrain ){
 	FAST_TERRAIN = iFastTerrain;
+};
+
+void CyGlobalContext::setBuildingPref( int iCiv, int iBuilding, int iPref ){
+	buildingPrefs[ iCiv * NUM_BUILDINGS + iBuilding ] = iPref;
 };
