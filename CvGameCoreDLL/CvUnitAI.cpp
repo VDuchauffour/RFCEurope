@@ -607,7 +607,8 @@ void CvUnitAI::AI_upgrade()
 				{
 					if (canUpgrade(eUnit))
 					{
-						int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
+						int iValue = (1 + GC.getGameINLINE().getSorenRandNum(10000, "AI Upgrade"));
+
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;

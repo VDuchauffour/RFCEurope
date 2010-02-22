@@ -414,6 +414,9 @@ public:
 	// 3Miro: set fast terrain (i.e. ships move fast over ocean)
 	void setFastTerrain( int iFastTerrain );
 
+	// 3Miro: set building preference
+	void setBuildingPref( int iCiv, int iBuilding, int iPref );
+
 };
 
 #endif	// CyGlobalContext_h

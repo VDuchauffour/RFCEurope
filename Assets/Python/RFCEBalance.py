@@ -82,7 +82,7 @@ class RFCEBalance:
 		# iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iBurgundy,     100, 100, 100, 100, 100, 1 )
-		gc.setGrowthModifiers(iByzantium,    200, 100, 200, 100, 100, 2 )
+		gc.setGrowthModifiers(iByzantium,    150, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiers(iFrankia,      100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iArabia,       150, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iBulgaria,     100, 100, 100, 100, 100, 1 )
@@ -118,7 +118,7 @@ class RFCEBalance:
 		gc.setProductionModifiers(iFrankia,   125, 125, 125, 125 )
 		gc.setProductionModifiers(iArabia,    125, 125, 150, 250 )
 		gc.setProductionModifiers(iBulgaria,  125, 125, 125, 150 )
-		gc.setProductionModifiers(iCordoba,   125, 150, 150, 250 )
+		gc.setProductionModifiers(iCordoba,   125, 150, 160, 250 )
 		gc.setProductionModifiers(iSpain,     100, 100, 100, 120 )
 		gc.setProductionModifiers(iNorse,     100, 100, 100, 100 )
 		gc.setProductionModifiers(iVenecia,   100, 100, 100, 125 )
@@ -486,7 +486,69 @@ class RFCEBalance:
 		# every nation gets a lan tile that is normally impassible and now pass through it
 		gc.setStrategicTile( iVenecia, 56, 35 )
 		
+		# set AI modifiers for preffered buildings (it is possible that it works only for wonders)
+		# gc.setBuildingPref( iFrankia, con.iNotreDame, 10 )
+		# gc.setBuildingPref( iCordoba, con.iNotreDame, -10 )
+		# use values -10 for very unlikely, 0 for default neutral and positive for desirable
+		# values less than -10 might not work, above 10 should be fine
+		gc.setBuildingPref( iBurgundy, con.iMonasteryOfCluny, 20 )
 		
+		gc.setBuildingPref( iByzantium, con.iBibliothecaCorviniana, 5 )
+		gc.setBuildingPref( iByzantium, con.iRoundChurch, -3 )
+		
+		gc.setBuildingPref( iFrankia, con.iNotreDame, 20 )
+		gc.setBuildingPref( iFrankia, con.iVersailles, 10 )
+		gc.setBuildingPref( iFrankia, con.iFontainebleau, 10 )
+		
+		gc.setBuildingPref( iArabia, con.iDomeRock, 10 )
+		gc.setBuildingPref( iArabia, con.iTombKhal, 20 )
+		
+		gc.setBuildingPref( iBulgaria, con.iRoundChurch, 20 )
+		
+		gc.setBuildingPref( iCordoba, con.iGardensAlAndalus, 20 )
+		gc.setBuildingPref( iCordoba, con.iLaMezquita, 20 )
+		gc.setBuildingPref( iCordoba, con.iAlhambra, 20 )
+		gc.setBuildingPref( iCordoba, con.iDomeRock, 10 )
+		gc.setBuildingPref( iCordoba, con.iNotreDame, -3 )
+		
+		gc.setBuildingPref( iSpain, con.iEscorial, 20 )
+		
+		gc.setBuildingPref( iNorse, con.iKalmarCastle, 20 )
+		
+		gc.setBuildingPref( iVenecia, con.iMarcoPolo, 10 )
+		gc.setBuildingPref( iVenecia, con.iSanMarco, 10 )
+		
+		gc.setBuildingPref( iKiev, con.iSophiaKiev, 20 )
+		
+		gc.setBuildingPref( iHungary, con.iGoldenBull, 20 )
+		
+		gc.setBuildingPref( iGermany, con.iBrandenburgGate, 20 )
+		gc.setBuildingPref( iGermany, con.iImperialDiet, 10 )
+		
+		gc.setBuildingPref( iPoland, con.iPressburg, 20 )
+		gc.setBuildingPref( iPoland, con.iTempleMount, 5 )
+		
+		gc.setBuildingPref( iMoscow, con.iStBasil, 20 )
+		
+		gc.setBuildingPref( iGenoa, con.iSanGiorgio, 20 )
+		
+		gc.setBuildingPref( iEngland, con.iMagnaCarta, 20 )
+		gc.setBuildingPref( iEngland, con.iTowerLondon, 10 )
+		gc.setBuildingPref( iEngland, con.iWestminster, 10 )
+		
+		gc.setBuildingPref( iPortugal, con.iBelemTower, 20 )
+		gc.setBuildingPref( iPortugal, con.iRibeira, 20 )
+		
+		gc.setBuildingPref( iAustria, con.iStephansdom, 20 )
+		
+		gc.setBuildingPref( iTurkey, con.iTopkapiPalace, 20 )
+		
+		gc.setBuildingPref( iSweden, con.iKalmarCastle, 20 )
+		
+		gc.setBuildingPref( iDutch, con.iBeurs, 20 )
+		
+		gc.setBuildingPref( iPope, con.iNotreDame, 20 )
+
 		self.postAreas()
 		
 	def preMapsNSizes( self ):

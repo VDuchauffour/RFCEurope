@@ -327,7 +327,8 @@ void CvPlayerAI::AI_doTurnPre()
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
 		AI_invalidateAttitudeCache((PlayerTypes)iI);
-	}
+	}
+
 	if (GC.getGameINLINE().isFinalInitialized())
 	{
 		for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); ++iI)
@@ -5514,9 +5515,11 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 		{
 			iAttitude += (4 - abs(AI_getPeaceWeight() - GET_PLAYER(ePlayer).AI_getPeaceWeight()));
 			iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(), GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getWarmongerRespect());
-		}
+		}
+
 		iAttitude -= std::max(0, (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getNumMembers() - GET_TEAM(getTeam()).getNumMembers()));
-		iRankDifference = (GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer));
+		iRankDifference = (GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer));
+
 		if (iRankDifference > 0)
 		{
 			iAttitude += ((GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange() * iRankDifference) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1));
@@ -5524,16 +5527,19 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 		else
 		{
 			iAttitude += ((GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange() * -(iRankDifference)) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1));
-		}
+		}
+
 		if ((GC.getGameINLINE().getPlayerRank(getID()) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)) &&
 			  (GC.getGameINLINE().getPlayerRank(ePlayer) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)))
 		{
 			iAttitude++;
-		}
+		}
+
 		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getWarSuccess(getTeam()) > GET_TEAM(getTeam()).AI_getWarSuccess(GET_PLAYER(ePlayer).getTeam()))
 		{
 			iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getLostWarAttitudeChange();
-		}
+		}
+
 		iAttitude += AI_getCloseBordersAttitude(ePlayer);
 		iAttitude += AI_getWarAttitude(ePlayer);
 		iAttitude += AI_getPeaceAttitude(ePlayer);
@@ -5547,7 +5553,8 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 		iAttitude += AI_getShareWarAttitude(ePlayer);
 		iAttitude += AI_getFavoriteCivicAttitude(ePlayer);
 		iAttitude += AI_getTradeAttitude(ePlayer);
-		iAttitude += AI_getRivalTradeAttitude(ePlayer);
+		iAttitude += AI_getRivalTradeAttitude(ePlayer);
+
 		for (iI = 0; iI < NUM_MEMORY_TYPES; iI++)
 		{
 			iAttitude += AI_getMemoryAttitude(ePlayer, ((MemoryTypes)iI));
@@ -18426,12 +18433,14 @@ int CvPlayerAI::AI_getFaithAttitude( PlayerTypes ePlayer ) const
 void CvPlayerAI::AI_invalidateAttitudeCache(PlayerTypes ePlayer)
 {
 	m_aiAttitudeCache[ePlayer] = MAX_INT;
-}
+}
+
 void CvPlayerAI::AI_invalidatePlotDangerCache(int iIndex)
 {
 	FAssert (iIndex > -1 && iIndex < GC.getMapINLINE().numPlotsINLINE());
 	CvPlot* pPlot = GC.getMapINLINE().plotByIndex(iIndex);
-	FAssert (pPlot != NULL);
+	FAssert (pPlot != NULL);
+
 	for (int iI = 0; iI < DANGER_RANGE + 1; iI++)
 	{
 		pPlot->invalidatePlayerDangerCache(getID(), iI);

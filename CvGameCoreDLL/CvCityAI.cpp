@@ -3249,8 +3249,11 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 										}
 
 									*/
-									iValue += (iTempValue - 10);
+									//iValue += (iTempValue - 10);
 									//Rhye - end switch
+										// 3MiroAI: Building preferences - wonders
+										iValue += buildingPrefs[ getOwnerINLINE() * NUM_BUILDINGS + iI ];
+										if ( iValue < 0 ){ iValue = 0; }
 									}
 								}
 

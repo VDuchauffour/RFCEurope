@@ -116,6 +116,7 @@ int* cityClusterTop = NULL;
 int* cityClusterBottom = NULL;
 int* cityClusterMinus = NULL;
 int** diplomacyModifiers = NULL;
+int *buildingPrefs = NULL;
 
 int* cityWarDistance = NULL;
 int** techPreferences = NULL;
@@ -155,7 +156,7 @@ int FAST_TERRAIN = -1;
 int *StrategicTileX = NULL;
 int *StrategicTileY = NULL;
 
-extern int * colonyAIModifier = NULL;
+int * colonyAIModifier = NULL;
 
 bool MiroBelongToCore( int iCiv, int x, int y ){
 	if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){

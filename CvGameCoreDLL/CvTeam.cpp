@@ -6820,4 +6820,4 @@ int CvTeam::getPlayerMemberListSize() const
 {
 	return m_aePlayerMembers.size();
 }
-// Sanguo Mod Performance, end
+// Sanguo Mod Performance, end
