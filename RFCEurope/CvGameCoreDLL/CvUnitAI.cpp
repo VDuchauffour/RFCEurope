@@ -314,13 +314,14 @@ bool CvUnitAI::AI_update()
 			}
 			else
 			{
-				if ( getX() == 52 && getY() == 42 ){
-					GC.getGameINLINE().logMsg(" Unit at coordinates: %d",getUnitType() );
-				};
+				// 3Miro: the code below is for debug only
+				/*if ( getX() == 52 && getY() == 42 ){
+					//GC.getGameINLINE().logMsg(" Unit at coordinates: %d",getUnitType() );
+				};*/
 				AI_attackMove();
-				if ( getX() == 52 && getY() == 42 ){
-					GC.getGameINLINE().logMsg(" Unit at coordinates after attack: ",getUnitType() );
-				};
+				/*if ( getX() == 52 && getY() == 42 ){
+					//GC.getGameINLINE().logMsg(" Unit at coordinates after attack: ",getUnitType() );
+				};*/
 			}
 			break;
 
@@ -11557,7 +11558,7 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 
 	if (pBestPlot != NULL)
 	{
-		GC.getGameINLINE().logMsg(" Set best Plot %d %d ",pBestPlot->getX(),pBestPlot->getY() );
+		//GC.getGameINLINE().logMsg(" Set best Plot %d %d ",pBestPlot->getX(),pBestPlot->getY() );
 		FAssert(!atPlot(pBestPlot));
 		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), ((bFollow) ? MOVE_DIRECT_ATTACK : 0));
 		return true;
