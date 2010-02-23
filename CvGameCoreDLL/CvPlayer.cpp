@@ -22640,7 +22640,7 @@ CvCity* CvPlayer::choosePurgeCity(){
 	int j, iStateReligion;
 	CvCity *pCity;
 	iStateReligion = getStateReligion();
-	GC.getGameINLINE().logMsg("  Targeting prosecutor for: %d ",getID()); //Rhye and 3Miro
+	//GC.getGameINLINE().logMsg("  Targeting prosecutor for: %d ",getID()); //Rhye and 3Miro
 	for (pCity = firstCity(&iLoop); pCity != NULL; pCity = nextCity(&iLoop)){
 		for ( j=0; j<NUM_RELIGIONS; j++ ){
 			// if the city has religion other then the player's state religion 
