@@ -99,7 +99,7 @@ class StoredData:
                                                [-1, -1, -1],
                                                [-1, -1, -1],
                                                [-1, -1, -1]],
-                                    'lReligionFounded': [-1, -1, -1, -1, -1],
+                                    'lReligionFounded': [-1, -1, -1, -1],
                                     'iEnslavedUnits': 0,
                                     'iRazedByMongols': 0,
                                     'lEnglishEras': [-1, -1],
@@ -126,6 +126,7 @@ class StoredData:
                                     'lGNPold': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'lGNPnew': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'lHasEscorial': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				    'lHasStephansdom': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'lStatePropertyCountdown': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'lDemocracyCountdown': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     'lStabilityParameters': [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #2+3+2+3+3
@@ -172,7 +173,7 @@ class StoredData:
 				    'lSelectedUnits':[0, 0, 0, 0, 0, 0], # Templars, Zerglings ops! ... Teutonic Knights, Knights, Heavy Lancers, Siege Weapons, Generic
 				    'bDCEnabled': False,
 				    'iDCLast':0,
-				    # Stephansdom
-				    'lHasStephansdom':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				    #Sedna17 Respawns
+				    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 				}
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )

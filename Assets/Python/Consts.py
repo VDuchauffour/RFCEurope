@@ -390,7 +390,7 @@ tReserveCapitals = (
 #	Many functions reference those and there are search algorithm that I do not whant to change, so leave this with the comment on how to be used
 #	Also Broader Area
 
-tCoreAreasTL = (
+tCoreAreasTL = ( #Core Area is initial spawn location, and also important for stability
 (47,37),   #Burgundy
 (71,14),   #Byzantium
 (42,42),   #Franks
@@ -441,7 +441,7 @@ tCoreAreasBR = (
 )
 
 
-tExceptions = (  #for RiseAndFall
+tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in spawn.
 (), #Burgundy
 (), #Byzantium
 (), #Frankia
@@ -469,9 +469,9 @@ tExceptions = (  #for RiseAndFall
 
 
 
-#normal areas (for Victory and resurrection)
+#normal areas
 
-tNormalAreasTL = (
+tNormalAreasTL = ( #These areas are typically used for resurrection. Also used in stability and (maybe) for victory conditions
 (45,33),   #Burgundy
 (66,14),   #Byzantium
 (35,34),   #Franks
@@ -522,7 +522,7 @@ tNormalAreasBR = (
 ) 
 
 
-tNormalAreasSubtract = (  #for resurrection and stability
+tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 ((49, 34), (49, 35),(49, 33)), #Burgundy
 (), #Byzantium
 ((35, 34), (36, 34), (37, 34), (38, 34), (35, 35), (36, 35), (37, 35), (35, 36), (35, 37)), #Frankia
@@ -549,7 +549,8 @@ tNormalAreasSubtract = (  #for resurrection and stability
 
 
 # broader areas coordinates (top left and bottom right) (for RiseAndFall)
-# 3Miro: see core area comment
+# 3Miro: see core area comment 
+# Sedna17: Currently unused?
 tBroaderAreasTL = (
 (42, 36), #Burgundy
 (68, 14), #Byzantium
@@ -771,6 +772,32 @@ tResurrectionProb = (
 60, #Dutch
 90  #Pope
 )  
+
+#Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
+tRespawnTime = (
+245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
+999, #Byzantium -- no special respawn
+350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line. 
+190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders 
+195, #Bulgaria 1185 -- Second Bulgarian empire
+174, #Cordoba 1122 -- Almohads, better timing than Almoravids
+290, #Spain 1467 -- Union of Castile/Aragon and ready for colonies
+265, #Norse 1395 -- Kalmar Union
+999, #Venecia -- no special respawn
+999, #Kiev -- no special respawn
+999, #Hungary -- no special respawn
+401, #Germany 1701 -- Prussia
+999, #Poland -- no special respawn
+999, #Moscow -- no special respawn
+999, #Genoa -- no special respawn
+380, #England 1660 -- Restoration of Monarchy (also leading up to Scottish Union)
+267, #Portugal 1400 -- Make sure Portugal is around for colonies
+313, #Austria 1526 -- Battle of Mohacs, Habsburgs take over Hungary
+294, #Turkey 1482 -- End of Mehmed II conquest. 
+999, #Sweden -- no special respawn
+999, #Dutch -- no special respawn
+999  #Pope -- no special respawn
+)
 
 
 #Congresses.
