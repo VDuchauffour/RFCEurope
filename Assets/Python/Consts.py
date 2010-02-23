@@ -1089,7 +1089,7 @@ iSeljuk= 94
 iGunGalley=95
 iCorsair=96
 
-iProsecutorClass = 64
+iProsecutorClass = 62
 
 
 

@@ -1306,10 +1306,12 @@ void CvCityAI::AI_chooseProduction()
 		
 		if (AI_bestSpreadUnit(true, true, iSpreadUnitRoll, &eBestSpreadUnit, &iBestSpreadUnitValue))
 		{
+			//GC.getGame().logMsg( "  After best spread: %d %d %d ",eBestSpreadUnit,iBestSpreadUnitValue,iSpreadUnitThreshold );
 			if (iBestSpreadUnitValue > iSpreadUnitThreshold)
 			{
 				if (AI_chooseUnit(eBestSpreadUnit, UNITAI_MISSIONARY))
 				{
+					//GC.getGameINLINE().logMsg("  Building %d",eBestSpreadUnit.getUnitType()); //Rhye and 3Miro
 					return;
 				}
 				FAssertMsg(false, "AI_bestSpreadUnit should provide a valid unit when it returns true");
@@ -6806,31 +6808,36 @@ void CvCityAI::AI_doEmphasize()
 bool CvCityAI::AI_chooseUnit(UnitAITypes eUnitAI)
 {
 	// 3MiroAI: Prosecutor make sure the AI builds Prosecutors
-	//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 1 "); //Rhye and 3Miro
+	//GC.getGameINLINE().logMsg("   Into AI Chose unit: %d",UNIT_PROSECUTOR); //Rhye and 3Miro
 	if ( UNIT_PROSECUTOR != -2 && getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
-	if ( ((eUnitAI == UNITAI_CITY_SPECIAL) || (eUnitAI == UNITAI_MISSIONARY)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) ){
-
-		// check if running an oppressive civic
-		bool bOpressor = true;
-		for ( int iI = 0; iI < GC.getNumCivicInfos(); iI++ ){
-			if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iI) ) &&  (GC.getCivicInfo( (CivicTypes) iI ).getNonStateReligionHappiness() > 0) ){
-				bOpressor = false;
+		//GC.getGameINLINE().logMsg("   Step 1 ");
+		//if ( canTrain( (UnitTypes) UNIT_PROSECUTOR ) ){
+		//	GC.getGameINLINE().logMsg("   can train ");
+		//};
+		if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) ){
+			//GC.getGameINLINE().logMsg("   Step 2 ");
+			// check if running an oppressive civic
+			bool bOpressor = true;
+			for ( int iI = 0; iI < GC.getNumCivicInfos(); iI++ ){
+				if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iI) ) &&  (GC.getCivicInfo( (CivicTypes) iI ).getNonStateReligionHappiness() > 0) ){
+					bOpressor = false;
+					//GC.getGameINLINE().logMsg("   --- not oppression ");
+				};
+			};
+			
+			if ( bOpressor ){
+				//GC.getLeaderHeadInfo( GET_PLAYER( getOwner() ).getLeader() ).getFlavorValue( 1 );
+				int iProb = 6* GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 30; // max 90, Flavor religion
+				int iMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 1;
+				// 3MiroProsecutions
+				if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProb) ){
+					//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 3 "); //Rhye and 3Miro
+					pushOrder( ORDER_TRAIN, UNIT_PROSECUTOR, eUnitAI, false, false, false );
+					//GC.getGameINLINE().logMsg("  Building prosecutor for: %d ",getOwnerINLINE()); //Rhye and 3Miro
+					return true;
+				};
 			};
 		};
-		
-		if ( bOpressor ){
-			//GC.getLeaderHeadInfo( GET_PLAYER( getOwner() ).getLeader() ).getFlavorValue( 1 );
-			int iProb = 6* GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 30; // max 90, Flavor religion
-			int iMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 1;
-			// 3MiroProsecutions
-			if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProb) ){
-				//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 3 "); //Rhye and 3Miro
-				pushOrder( ORDER_TRAIN, UNIT_PROSECUTOR, eUnitAI, false, false, false );
-				//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 4 "); //Rhye and 3Miro
-				return true;
-			};
-		};
-	};
 	};
 	
 	
@@ -6858,7 +6865,9 @@ bool CvCityAI::AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 {
 	if (eUnit != NO_UNIT)
 	{
-		
+		/*if ( eUnit == UNIT_PROSECUTOR ){
+			GC.getGame().logMsg(" REALLY building prosecutor for: %d ",getOwnerINLINE() );
+		};*/
 		pushOrder(ORDER_TRAIN, eUnit, eUnitAI, false, false, false);
 		return true;
 	}
@@ -6951,7 +6960,9 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 				}
 				else if (!kTeam.hasHolyCity(eReligion) && !(kPlayer.getStateReligion() == eReligion))
 				{
-					iRoll /= 2;
+					// 3MiroAI: don't spread non-state religion
+					//iRoll /= 2;
+					iRoll /= 6;
 					if (kPlayer.isNoNonStateReligionSpread())
 					{
 						iRoll /= 2;
@@ -6991,6 +7002,33 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 				}
 			}
 		}
+		// 3MiroAI: The code to build Prosecutors in place of missionaries comes here, the other one in AI_choseUnit
+		// is only for special units which I guess comess not very often
+		if ( (!isIndep( getOwnerINLINE())) && (UNIT_PROSECUTOR != -2) ){
+			bool bOpressor = true;
+			for ( int iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
+				if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iCivic) ) &&  (GC.getCivicInfo( (CivicTypes) iCivic ).getNonStateReligionHappiness() > 0) ){
+					bOpressor = false;
+					//GC.getGameINLINE().logMsg("   --- not oppression ");
+				};
+			};
+			
+			if ( bOpressor ){
+				//GC.getLeaderHeadInfo( GET_PLAYER( getOwner() ).getLeader() ).getFlavorValue( 1 );
+				int iProsProb = GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 10;// max 20, Flavor religion
+				int iProsMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 1;
+				//GC.getGameINLINE().logMsg("  Max for: %d  %d ",iProsMaxCount,getOwnerINLINE()); //Rhye and 3Miro
+				// 3MiroProsecutions
+				if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iProsMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProsProb) ){
+					//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 3 "); //Rhye and 3Miro
+					UnitTypes eProsecutorUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(UNIT_PROSECUTOR_CLASS)));
+					*eBestSpreadUnit = eProsecutorUnit;
+					*iBestSpreadUnitValue = 1500;
+					//GC.getGameINLINE().logMsg("  Building prosecutor for: %d %d ",getOwnerINLINE(),eProsecutorUnit); //Rhye and 3Miro
+				};
+			};
+		};
+		// 3MiroAI: end
 	}
 	
 	if (bExecutive)
