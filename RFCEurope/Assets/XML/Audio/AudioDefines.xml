@@ -10999,6 +10999,41 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>DIPLO_POLAND</SoundID>
+			<Filename>Sounds/Soundtrack/poland_theme</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_SWEDEN</SoundID>
+			<Filename>Sounds/Soundtrack/sweden_theme</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_KIEV</SoundID>
+			<Filename>Sounds/Soundtrack/kiev_theme</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_VENICE</SoundID>
+			<Filename>Sounds/Soundtrack/venice_theme</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_AUSTRIA</SoundID>
+			<Filename>Sounds/Soundtrack/austria_theme</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>DIPLO_MAGYAR_INTRO</SoundID>
 			<Filename>Sounds/Soundtrack/magyar_intro</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>

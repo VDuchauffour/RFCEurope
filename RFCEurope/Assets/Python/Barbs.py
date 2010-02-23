@@ -13,24 +13,18 @@ gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer	# LOQ
 utils = RFCUtils.RFCUtils()
 
-
 ### Constants ###
 
 iIndependent = con.iIndependent
 iIndependent2 = con.iIndependent2
 iIndependent3 = con.iIndependent3
 iIndependent4 = con.iIndependent4
-#pIndependent = gc.getPlayer(iIndependent)
-#pIndependent2 = gc.getPlayer(iIndependent2)
-#teamIndependent = gc.getTeam(pIndependent.getTeam())
-#teamIndependent2 = gc.getTeam(pIndependent2.getTeam())
 
 iBarbarian = con.iBarbarian
 pBarbarian = gc.getPlayer(iBarbarian)
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
-      
 
-# 3Miro: comment all out for now, what do spawn and respawn mean, Babylon is never barbarian nor independent? what is retry?
+
 # 3Miro: I believe those are only used for barb spawns coordinates in the class below
 # city coordinates, spawn 1st turn and retries
 
@@ -62,7 +56,7 @@ lFirenze = [54,31,75,0] #800 AD Same as Mediolanum--->Milan
 lTripoli = [56,6,0,0] #500 AD
 lRoma = [56,27,0,0] #500 AD
 lAugsburg = [56,41,0,0] #500 AD
-lCatania = [58,18,0,0] #500 AD
+#lCatania = [58,18,0,0] #500 AD
 lNapoli = [60,24,0,0] #500 AD
 lRagusa = [64,28,0,0] #500 AD
 lBeograd = [68,32,0,0] #500 AD
@@ -88,9 +82,9 @@ lYaroslavl = [92,61,240,0] #900 AD
 lVologda = [89,64,240,0] #900 AD
 lTver = [85,60,240,0] #900 AD
 lSmolensk = [85,53,240,0] #900 AD
-lAstrakhan = [99,40,200,0] #1200 AD
+lSaraiBatu = [99,40,200,0] #1200 AD
 lMus = [99,21,153,0] #1060 AD
-lPalermo = [55,19,0,0]
+lPalermo = [55,19,2,0]
 
 #handicap level modifier
 iHandicapOld = (gc.getGame().getHandicapType() - 1)
@@ -111,8 +105,6 @@ class Barbs:
                                 player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
 
 
-
-        	
         def checkTurn(self, iGameTurn):
             
                 #handicap level modifier
@@ -127,7 +119,7 @@ class Barbs:
 		if (iGameTurn <= con.i1000AD):
                         self.spawnUnits( iBarbarian, (56, 53), (99, 72), con.iWolf, 1, iGameTurn, 17, 2, utils.outerInvasion, 0)
                         self.spawnUnits( iBarbarian, (86, 40), (99, 72), con.iBear, 1, iGameTurn, 19, 4, utils.outerInvasion, 0)
-                        #self.spawnUnits( iBarbarian, (0, 1), (52, 10), con.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0)
+                        self.spawnUnits( iBarbarian, (0, 1), (52, 10), con.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0)
                 
 		#Mediterranean Pirates (Light before 1500,then heavy for rest of game)
 		if ( iGameTurn >= con.i960AD and iGameTurn < con.i1401AD):
@@ -274,7 +266,7 @@ class Barbs:
 		#self.foundCity(iIndependent2, lTours, "Tours", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent3, lMarseilles, "Marseilles", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent2, lLyon, "Lyon", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 3, con.iArcher, 1)
+		self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent, lPisae, "Pisae", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 3, con.iArcher, 2)
@@ -283,8 +275,8 @@ class Barbs:
 		self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, con.iArcher, 1) 
 		# self.foundCity(iIndependent, lRoma, "Roma", iGameTurn, 5, con.iArcher, 1)
 		self.foundCity(iIndependent, lAugsburg, "Augsburg", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent2, lCatania, "Catania", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iIndependent3, lNapoli, "Napoli", iGameTurn, 3, con.iArcher, 1)
+#		self.foundCity(iIndependent2, lCatania, "Catania", iGameTurn, 1, con.iArcher, 1) #This city is in the ocean.
+		self.foundCity(iIndependent3, lNapoli, "Napoli", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent3, lRagusa, "Ragusa", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lRhodes, "Rhodes", iGameTurn, 1, con.iArcher, 1) #Start with Orthodoxy and a Harbor?
@@ -309,7 +301,7 @@ class Barbs:
 		#self.foundCity(iIndependent, lTver, "Tver", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, con.iCrossbowman, 1)
 		self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, con.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lAstrakhan, "Astrakhan", iGameTurn, 1, con.iLongbowman, 2)
+		self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, con.iLongbowman, 2)
 		self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, con.iLongbowman, 2)
 
 
@@ -422,8 +414,8 @@ class Barbs:
 			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iMusketman,1,1,1,0,utils.outerInvasion,1)
 			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iMusketman,1,1,1,0,utils.outerInvasion,1)
 		elif (iTurn > con.i1284AD):
-				self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iArquebusier,1,1,1,0,utils.outerInvasion,1)
-				self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iArquebusier,1,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iArquebusier,1,1,1,0,utils.outerInvasion,1)
+			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iArquebusier,1,1,1,0,utils.outerInvasion,1)
 		elif (iTurn > con.i840AD):
 			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iGuisarme,1,1,1,0,utils.outerInvasion,1)
 			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),con.iHorseArcher,1,1,1,0,utils.outerInvasion,1)

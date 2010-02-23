@@ -44238,7 +44238,7 @@ EndPlot
 BeginPlot
 	x=99,y=64
 	BonusType=BONUS_PIG
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
