@@ -367,7 +367,7 @@
 	</Define>
 	<Define>
 		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>POWER_HEALTH_CHANGE</DefineName>
@@ -540,7 +540,7 @@
 	</Define>
 	<Define>
 		<DefineName>LAKE_MAX_AREA_SIZE</DefineName>
-		<iDefineIntVal>9</iDefineIntVal>
+		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_BASE_FREE_UNITS</DefineName>

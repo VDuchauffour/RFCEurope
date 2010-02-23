@@ -12,32 +12,19 @@ PyPlayer = PyHelpers.PyPlayer
 
 ### Constants ###
 
-
-# initialise bonuses variables
-
-iHorse = con.iHorse
-iBanana = con.iBanana
-iCorn = con.iCorn
-iCow = con.iCow
-iPig = con.iPig
-iSheep = con.iSheep
-iWheat = con.iWheat
-iSugar = con.iSugar
-iWine = con.iWine
-iCotton = con.iCotton
-iDye = con.iDye
-iRice = con.iRice
-     
-
 class Resources:
        	
         def checkTurn(self, iGameTurn):
 		if (iGameTurn == con.i1000AD):
-			gc.getMap().plot(35, 29).setBonusType(iRice) #Rice in Iberia
-			gc.getMap().plot(86, 2).setBonusType(iRice)  #Rice in Middle East
+			gc.getMap().plot(35, 29).setBonusType(con.iRice) #Rice in Iberia
+			gc.getMap().plot(86, 2).setBonusType(con.iRice)  #Rice in Middle East
 		if (iGameTurn == con.i1500AD):
-			gc.getMap().plot(54, 35).setBonusType(iRice) #Rice in Italy?
-
+			gc.getMap().plot(54, 35).setBonusType(con.iRice) #Rice in Italy?
+		if (iGameTurn == con.i1580AD): #1580
+			gc.getMap().plot(35, 58).setBonusType(con.iPotato) #Potatoes in Ireland
+			gc.getMap().plot(37, 60).setBonusType(con.iPotato)
+			gc.getMap().plot(68, 49).setBonusType(con.iPotato) #Poland
+			gc.getMap().plot(59, 53).setBonusType(con.iPotato) #Northern Germany
 
 		# 3Miro: resources appear
                 #if (iGameTurn == 5): #otherwise it's picked by Portugal at the beginning
