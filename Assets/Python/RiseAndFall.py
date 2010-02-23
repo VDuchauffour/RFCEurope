@@ -2236,7 +2236,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(con.iMoscowBoyar, iCiv, tPlot, 6)
                         utils.makeUnit(con.iGuisarme, iCiv, tPlot, 5)
-				utils.makeUnit(con.iOrthodoxMissionary, iCiv, tPlot, 3)
+                        utils.makeUnit(con.iOrthodoxMissionary, iCiv, tPlot, 3)
                 if (iCiv == iGenoa):
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(con.iSwordsman, iCiv, tPlot, 2)
