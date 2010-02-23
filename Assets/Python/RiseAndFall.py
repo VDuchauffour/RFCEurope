@@ -692,11 +692,11 @@ class RiseAndFall:
                 #self.displayWelcomePopup()
 
                 # 3Miro: only the very first civ in the WB file
-		# Sedna17: Not wanted when Burgundy spawns late
-                #if (pBurgundy.isHuman()):
-                #        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
-                #        unit = plotBurgundy.getUnit(0)
-                #        unit.centerCamera()
+		# Sedna17: Not wanted when Burgundy spawns late?
+                if (pBurgundy.isHuman()):
+                        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
+                        unit = plotBurgundy.getUnit(0)
+                        unit.centerCamera()
                 #center camera on Egyptian units
                 #if (pEgypt.isHuman()):
                 #        plotEgypt = gc.getMap().plot(tCapitals[iEgypt][0], tCapitals[iEgypt][1])   
@@ -1263,7 +1263,7 @@ class RiseAndFall:
 			else:
 				iDeadCiv = iDeadCiv #We want a specific civ for special re-spawn
                         cityList = []
-                        if (not gc.getPlayer(iDeadCiv).isAlive() and iGameTurn > con.tBirth[iDeadCiv] + 50 and iGameTurn > utils.getLastTurnAlive(iDeadCiv) + 30):
+                        if (not gc.getPlayer(iDeadCiv).isAlive() and iGameTurn > con.tBirth[iDeadCiv] + 25 and iGameTurn > utils.getLastTurnAlive(iDeadCiv) + 10): #Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
                                 pDeadCiv = gc.getPlayer(iDeadCiv)
                                 teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
                                 #3Miro: inRFC Civs spawn according to Normal Areas, but here we want Core areas. Otherwise Normal Areas should not overlap and that is Hard.
@@ -1506,7 +1506,7 @@ class RiseAndFall:
                 utils.setBaseStabilityLastTurn(iDeadCiv, 0)
                 utils.zeroStability(iDeadCiv)
                 utils.setParameter(iDeadCiv,con.iParExpansionE,False,10)
-                utils.setStability(iDeadCiv, 10) ##the new civs start as slightly stable
+                utils.setStability(iDeadCiv, 15) ##the new civs start as slightly stable
                 utils.setPlagueCountdown(iDeadCiv, -10)
                 utils.clearPlague(iDeadCiv)                                
                 self.convertBackCulture(iDeadCiv)
