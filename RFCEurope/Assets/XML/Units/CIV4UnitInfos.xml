@@ -1689,7 +1689,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>NONE</Capture>
 			<Combat>NONE</Combat>
-			<Domain>DOMAIN_LAND</Domain>
+			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
@@ -1763,12 +1763,12 @@
 			<ProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
-			<iCost>100</iCost>
+			<iCost>80</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>2</iMoves>
+			<iMoves>4</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -1783,15 +1783,13 @@
 			<iTradeMultiplier>0</iTradeMultiplier>
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
-			<TerrainImpassables/>
-			<!-- Rhye - start -->
-			<FeatureImpassables>
-				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-				</FeatureImpassable>
-			</FeatureImpassables>
-			<!-- Rhye - end -->
+			<TerrainImpassables>
+				<TerrainImpassable>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bTerrainImpassable>1</bTerrainImpassable>
+				</TerrainImpassable>
+			</TerrainImpassables>
+			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
 			<iCombat>0</iCombat>
@@ -13597,12 +13595,7 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
-			<FeatureImpassables>
-				<FeatureImpassable>
-       					<FeatureType>FEATURE_MUD</FeatureType>
-       					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
-			</FeatureImpassables>
+			<FeatureImpassables/>
 			<TerrainPassableTechs>
 				<TerrainPassableTech>
 					<TerrainType>TERRAIN_OCEAN</TerrainType>

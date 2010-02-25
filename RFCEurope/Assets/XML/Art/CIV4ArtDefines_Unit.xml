@@ -4442,18 +4442,26 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_4</Type>
 			<Button>Art/Interface/Buttons/Corporations/Hanseatic.dds</Button>
-			<fScale>0.46</fScale>
+			<fScale>0.15</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Trader/greatmerchantancient.nif</NIF>
-			<KFM>Art/Units/Trader/greatmerchantancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Trader/greatmerchantancient_fx.nif</SHADERNIF>
+			<NIF>Art/Units/Hanseatic Executive/EE2_Caravel.nif</NIF>
+			<KFM>Art/Units/Hanseatic Executive/EE2_Caravel.kfm</KFM>
+			<SHADERNIF>Art/Units/Hanseatic Executive/EE2_Caravel_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
 				<fShadowScale>1.0</fShadowScale>
 			</ShadowDef>
+			<TrailDefinition>
+				<Texture>Art/Shared/water_ship_wake.dds</Texture>
+				<fWidth>1</fWidth>
+				<fLength>180.0</fLength>
+				<fTaper>1</fTaper>
+				<fFadeStartTime>.2</fFadeStartTime>
+				<fFadeFalloff>0.35</fFadeFalloff>
+			</TrailDefinition>
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
