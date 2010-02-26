@@ -1309,7 +1309,8 @@ void CvUnitAI::AI_settleMove()
 			iOtherBestFoundValue = std::max(iOtherBestFoundValue, pCitySitePlot->getFoundValue(getOwnerINLINE()));
 		}
 	}
-	
+	//GC.getGame().logMsg(" Settler at %d %d, values %d %d",getX(),getY(),iAreaBestFoundValue,iOtherBestFoundValue);
+
 	if ((iAreaBestFoundValue == 0) && (iOtherBestFoundValue == 0))
 	{
 		if ((GC.getGame().getGameTurn() - getGameTurnCreated()) > 20)
@@ -1330,10 +1331,13 @@ void CvUnitAI::AI_settleMove()
 	
 	if ((iOtherBestFoundValue * 100) > (iAreaBestFoundValue * 110))
 	{
+		//GC.getGame().logMsg(" -- 1 Settler at %d %d, values %d %d",getX(),getY(),iAreaBestFoundValue,iOtherBestFoundValue);
 		if (plot()->getOwnerINLINE() == getOwnerINLINE())
 		{
+			//GC.getGame().logMsg(" -- 2 Settler at %d %d, values %d %d",getX(),getY(),iAreaBestFoundValue,iOtherBestFoundValue);
 			if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, -1, -1, 0, MOVE_SAFE_TERRITORY))
 			{
+				//GC.getGame().logMsg(" -- 3 Settler at %d %d, values %d %d",getX(),getY(),iAreaBestFoundValue,iOtherBestFoundValue);
 				return;
 			}
 		}
@@ -5245,15 +5249,15 @@ void CvUnitAI::AI_assaultSeaMove()
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
-/* original bts code
+/*// original bts code
 					if (pOldGroup == getGroup() && getUnitType() == UNITAI_ASSAULT_SEA)
 					{
 						if (AI_retreatToCity(true))
 						{
 							bMissionPushed = true;
 						}
-					}
-*/
+					}*/
+
 								// Fixed bug in next line with checking unit type instead of unit AI
 								if (pOldGroup == getGroup() && AI_getUnitAIType() == UNITAI_ASSAULT_SEA)
 								{
@@ -5400,13 +5404,17 @@ void CvUnitAI::AI_settlerSeaMove()
 	int iSettlerCount = getUnitAICargo(UNITAI_SETTLE);
 	int iWorkerCount = getUnitAICargo(UNITAI_WORKER);
 
+	//GC.getGame().logMsg(" GALLEY at %d %d ",getX(),getY() );
+
 	if ((iSettlerCount > 0) && (isFull() ||
 			((getUnitAICargo(UNITAI_CITY_DEFENSE) > 0) &&
 			 (getUnitAICargo(UNITAI_WORKER) > 0) &&
 			 (GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(this, MISSIONAI_LOAD_SETTLER) == 0))))
 	{
+		//GC.getGame().logMsg(" GALLEY at %d %d full ",getX(),getY() );
 		if (AI_settlerSeaTransport())
 		{
+			//GC.getGame().logMsg(" GALLEY at %d %d moved ",getX(),getY() );
 			return;
 		}
 	}
@@ -7300,24 +7308,33 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		return false;
 	}*/
 
+	//GC.getGame().logMsg("  into load ");
 	if (getCargo() > 0)
 	{
 		return false;
 	}
 
+	//GC.getGame().logMsg("  getCargo ");
 	if (isCargo())
 	{
 		getGroup()->pushMission(MISSION_SKIP);
 		return true;
 	}
+
+	//GC.getGame().logMsg("  isCargo ");
 	
 	if ((getDomainType() == DOMAIN_LAND) && !canMoveAllTerrain())
 	{
+		//GC.getGame().logMsg("  Into Level One ");
 		if (area()->getNumAIUnits(getOwnerINLINE(), eUnitAI) == 0)
+		//if (plot()->getNumAIUnits(getOwnerINLINE(), eUnitAI) == 0)
 		{
+			//GC.getGame().logMsg("  Breaks here ");
 			return false;
 		}
 	}
+
+	//GC.getGame().logMsg("  gomainSomething ");
 
 	// do not load transports if we are already in a land war
 	AreaAITypes eAreaAIType = area()->getAreaAIType(getTeam());
@@ -7326,6 +7343,8 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 	{
 		return false;
 	}
+
+	//GC.getGame().logMsg("  War ");
 
 	iBestValue = MAX_INT;
 	pBestUnit = NULL;
@@ -7346,38 +7365,53 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 					// special case ASSAULT_SEA UnitAI, so that, if a unit is marked escort, but can load units, it will load them
 					// transport units might have been built as escort, this most commonly happens with galleons
 					UnitAITypes eLoopUnitAI = pLoopUnit->AI_getUnitAIType();
+					//GC.getGame().logMsg("    - before AI check %d %d ",getX(),getY());
 					if (eLoopUnitAI == eUnitAI)// || (eUnitAI == UNITAI_ASSAULT_SEA && eLoopUnitAI == UNITAI_ESCORT_SEA))
 					{
+						//GC.getGame().logMsg("    - into AI check %d %d ",getX(),getY());
 						int iCargoSpaceAvailable = pLoopUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 						iCargoSpaceAvailable -= GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup());
 						if (iCargoSpaceAvailable > 0)
 						{
+							//GC.getGame().logMsg("    -- into 1 %d %d %d",getX(),getY(),eTransportedUnitAI);
 							if ((eTransportedUnitAI == NO_UNITAI) || (pLoopUnit->getUnitAICargo(eTransportedUnitAI) > 0))
 							{
+//AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, -1, -1, 0, MOVE_SAFE_TERRITORY)
+								//GC.getGame().logMsg("    -- into 2 %d %d ",getX(),getY());
 								if ((iMinCargo == -1) || (pLoopUnit->getCargo() >= iMinCargo))
 								{
+									//GC.getGame().logMsg("    -- into 3 %d %d ",getX(),getY());
 									if ((iMinCargoSpace == -1) || (pLoopUnit->cargoSpaceAvailable() >= iMinCargoSpace))
 									{
+										//GC.getGame().logMsg("    -- into 4 %d %d ",getX(),getY());
 										if ((iMaxCargoSpace == -1) || (pLoopUnit->cargoSpaceAvailable() <= iMaxCargoSpace))
 										{
+											//GC.getGame().logMsg("    -- into 5 %d %d ",getX(),getY());
 											if ((iMaxCargoOurUnitAI == -1) || (pLoopUnit->getUnitAICargo(AI_getUnitAIType()) <= iMaxCargoOurUnitAI))
 											{
+												//GC.getGame().logMsg("    -- into 6 %d %d ",getX(),getY());
 												if (getGroup()->getHeadUnitAI() != UNITAI_CITY_DEFENSE || !plot()->isCity() || (plot()->getTeam() != getTeam()))
 												{
+													//GC.getGame().logMsg("    -- into 7 %d %d ",getX(),getY());
 													if (!(pLoopUnit->plot()->isVisibleEnemyUnit(this)))
 													{
+														//GC.getGame().logMsg("    -- into 8 %d %d ",getX(),getY());
 														CvPlot* pUnitTargetPlot = pLoopUnit->getGroup()->AI_getMissionAIPlot();
 														if ((pUnitTargetPlot == NULL) || (pUnitTargetPlot->getTeam() == getTeam()) || (!pUnitTargetPlot->isOwned() || !isPotentialEnemy(pUnitTargetPlot->getTeam(), pUnitTargetPlot)))
 														{
+															//GC.getGame().logMsg("    -- into 9 %d %d ",getX(),getY());
 															if (generatePath(pLoopUnit->plot(), iFlags, true, &iPathTurns))
 															{
+																//GC.getGame().logMsg("    -- into 10 %d %d ",getX(),getY());
 																if (iPathTurns <= iMaxPath)
 																{
+																	//GC.getGame().logMsg("    -- into 11 %d %d ",getX(),getY());
 																	// prefer a transport that can hold as much of our group as possible 
 																	iValue = (std::max(0, iCurrentGroupSize - iCargoSpaceAvailable) * 5) + iPathTurns;
 
 																	if (iValue < iBestValue)
 																	{
+																		//GC.getGame().logMsg("    -- into 12 %d %d ",getX(),getY());
 																		iBestValue = iValue;
 																		pBestUnit = pLoopUnit;
 																	}
@@ -7400,6 +7434,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 
 	if (pBestUnit != NULL)
 	{
+		//GC.getGame().logMsg("    pBestUnit is not NULL ");
 		if (atPlot(pBestUnit->plot()))
 		{
 			getGroup()->setTransportUnit(pBestUnit); // XXX is this dangerous (not pushing a mission...) XXX air units?
@@ -12964,6 +12999,7 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	{
 		return false;
 	}
+	//GC.getGame().logMsg("  settler Sea transport Move 1 %d %d ",getX(),getY());
 
 	//New logic should allow some new tricks like 
 	//unloading settlers when a better site opens up locally
@@ -13006,7 +13042,10 @@ bool CvUnitAI::AI_settlerSeaTransport()
 		if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pCitySitePlot, MISSIONAI_FOUND, getGroup()) == 0)
 		{
 			iValue = pCitySitePlot->getFoundValue(getOwnerINLINE());
-			if (pCitySitePlot->getArea() == getArea())
+			//3MiroAI: Augmet this test to match the one from the other patch
+			//if (pCitySitePlot->getArea() == getArea() && generatePath(pCitySitePlot, MOVE_SAFE_TERRITORY, true)) // Patch
+			//if (pCitySitePlot->getArea() == getArea()) // Old code
+			if (pCitySitePlot->getArea() == getArea() && pSettlerUnit ->generatePath(pCitySitePlot, MOVE_SAFE_TERRITORY, true))
 			{
 				if (iValue > iAreaBestFoundValue)
 				{
@@ -13024,11 +13063,17 @@ bool CvUnitAI::AI_settlerSeaTransport()
 			}
 		}
 	}
+
+
+
+	//GC.getGame().logMsg("  settler Sea transport Move 2 %d %d %d %d ",getX(),getY(),iAreaBestFoundValue,iOtherAreaBestFoundValue );
 	if ((0 == iAreaBestFoundValue) && (0 == iOtherAreaBestFoundValue))
 	{
+		//GC.getGame().logMsg("  Cannot find good spot %d %d ",getX(),getY() );
 		return false;
 	}
 	
+	//GC.getGame().logMsg("  settler Sea transport Move 3 %d %d ",getX(),getY() );
 	if (iAreaBestFoundValue > iOtherAreaBestFoundValue)
 	{
 		//let the settler walk.
@@ -13036,6 +13081,8 @@ bool CvUnitAI::AI_settlerSeaTransport()
 		return true;
 	}
 	
+	//GC.getGame().logMsg("  settler Sea transport Move 4 %d %d ",getX(),getY() );
+
 	iBestValue = 0;
 	pBestPlot = NULL;
 	pBestFoundPlot = NULL;
