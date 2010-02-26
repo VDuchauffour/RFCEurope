@@ -1790,7 +1790,12 @@
 				</TerrainImpassable>
 			</TerrainImpassables>
 			<FeatureImpassables/>
-			<TerrainPassableTechs/>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<FeaturePassableTechs/>
 			<iCombat>0</iCombat>
 			<iCombatLimit>0</iCombatLimit>
