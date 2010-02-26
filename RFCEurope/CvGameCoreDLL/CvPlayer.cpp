@@ -2662,10 +2662,6 @@ void CvPlayer::doTurn()
 	};
 	//Rhye - end
 
-	if ( getID() == 0 && GC.getGameINLINE().getGameTurn() ){
-
-	};
-
 	CvCity* pLoopCity;
 	int iLoop;
 
