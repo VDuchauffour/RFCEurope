@@ -305,7 +305,7 @@ tCapitals = (
 (81, 25), #tConstantinople, Byzantium
 (44, 46), #tFrance
 (97, 13), #tDamascus, Arabia
-(77, 30), #tPresalv, Bulgaria
+(77, 30), #tPreslav, Bulgaria
 (28, 28), #tCordoba
 (28, 37), #tLeon, Spain
 #(31, 33), #tMadrid, Spain
