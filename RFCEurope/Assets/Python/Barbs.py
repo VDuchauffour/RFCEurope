@@ -245,7 +245,7 @@ class Barbs:
 			
 		
 		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
-               # 3Miro Barbarian and Independent city spawna nd barbarian invasions go here. Check with original RFC file for details
+        # 3Miro Barbarian and Independent city spawn and barbarian invasions go here. Check with original RFC file for details
 		self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, con.iCrossbowman, 2) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
 		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, con.iCordobanBerber, 2) #UnitOwner = 22 -> iIndy2 
 		#self.foundCity(iIndependent3, lCorunna, "A Corunna", iGameTurn, 1, con.iCrossbowman, 2) #UnitOnwer = 21 -> iIndy
@@ -275,7 +275,7 @@ class Barbs:
 		self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, con.iArcher, 1) 
 		# self.foundCity(iIndependent, lRoma, "Roma", iGameTurn, 5, con.iArcher, 1)
 		self.foundCity(iIndependent, lAugsburg, "Augsburg", iGameTurn, 1, con.iArcher, 1)
-#		self.foundCity(iIndependent2, lCatania, "Catania", iGameTurn, 1, con.iArcher, 1) #This city is in the ocean.
+		#self.foundCity(iIndependent2, lCatania, "Catania", iGameTurn, 1, con.iArcher, 1) #This city is in the ocean.
 		self.foundCity(iIndependent3, lNapoli, "Napoli", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent3, lRagusa, "Ragusa", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, con.iArcher, 1)

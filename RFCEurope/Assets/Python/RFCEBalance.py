@@ -219,7 +219,7 @@ class RFCEBalance:
 		
 		#gc.setInitialBuilding( iSpain, con.iGranary, True )
 		#gc.setInitialBuilding( iSpain, con.iHerbalist, True )
-		#gc.setInitialBuilding( iSpain, con.iBarracks, True )
+		gc.setInitialBuilding( iSpain, con.iBarracks, True )
 
 		gc.setInitialBuilding( iMoscow, con.iGranary, True )
 		gc.setInitialBuilding( iMoscow, con.iHerbalist, True )
@@ -339,10 +339,10 @@ class RFCEBalance:
 		gc.setDiplomacyModifiers( iSpain, iPortugal, +8 )
 		gc.setDiplomacyModifiers( iCordoba, iPortugal, -10 )
 		gc.setDiplomacyModifiers( iPortugal, iCordoba, -10 )		
-		gc.setDiplomacyModifiers( iFrankia, iBurgundy, +4 )
-		gc.setDiplomacyModifiers( iBurgundy, iFrankia, +4 )
-		gc.setDiplomacyModifiers( iTurkey, iByzantium, -10 )
-		gc.setDiplomacyModifiers( iByzantium, iTurkey, -10 )
+		#gc.setDiplomacyModifiers( iFrankia, iBurgundy, +4 )
+		#gc.setDiplomacyModifiers( iBurgundy, iFrankia, +4 )
+		gc.setDiplomacyModifiers( iTurkey, iByzantium, -20 )
+		gc.setDiplomacyModifiers( iByzantium, iTurkey, -20 )
 		gc.setDiplomacyModifiers( iGermany, iPoland, -5 )
 		gc.setDiplomacyModifiers( iPoland, iGermany, -5 )
 		gc.setDiplomacyModifiers( iMoscow, iPoland, -5 )
@@ -483,7 +483,7 @@ class RFCEBalance:
 		gc.setReligionBenefit( con.iIslam, con.iFP_Displomacy, 10 )
 		gc.setReligionBenefit( con.iProtestantism, con.iFP_Displomacy, 10 )
 
-		# every nation gets a lan tile that is normally impassible and now pass through it
+		# every nation gets a land tile that is normally impassible and now pass through it
 		gc.setStrategicTile( iVenecia, 56, 35 )
 		
 		# set AI modifiers for preffered buildings (it is possible that it works only for wonders)
@@ -493,7 +493,7 @@ class RFCEBalance:
 		# values less than -10 might not work, above 10 should be fine
 		gc.setBuildingPref( iBurgundy, con.iMonasteryOfCluny, 20 )
 		
-		gc.setBuildingPref( iByzantium, con.iBibliothecaCorviniana, 5 )
+		#gc.setBuildingPref( iByzantium, con.iBibliothecaCorviniana, 5 )
 		gc.setBuildingPref( iByzantium, con.iRoundChurch, -3 )
 		
 		gc.setBuildingPref( iFrankia, con.iNotreDame, 20 )
@@ -521,7 +521,8 @@ class RFCEBalance:
 		gc.setBuildingPref( iKiev, con.iSophiaKiev, 20 )
 		
 		gc.setBuildingPref( iHungary, con.iGoldenBull, 20 )
-		
+		gc.setBuildingPref( iHungary, con.iBibliothecaCorviniana, 10 )
+
 		gc.setBuildingPref( iGermany, con.iBrandenburgGate, 20 )
 		gc.setBuildingPref( iGermany, con.iImperialDiet, 10 )
 		
@@ -533,7 +534,7 @@ class RFCEBalance:
 		gc.setBuildingPref( iGenoa, con.iSanGiorgio, 20 )
 		
 		gc.setBuildingPref( iEngland, con.iMagnaCarta, 20 )
-		gc.setBuildingPref( iEngland, con.iTowerLondon, 10 )
+		#gc.setBuildingPref( iEngland, con.iTowerLondon, 10 ) #JediClemente: it's a national wonder!
 		gc.setBuildingPref( iEngland, con.iWestminster, 10 )
 		
 		gc.setBuildingPref( iPortugal, con.iBelemTower, 20 )

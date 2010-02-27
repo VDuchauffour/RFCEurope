@@ -2183,8 +2183,9 @@ class RiseAndFall:
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(con.iCatholicMissionary, iCiv, tPlot, 1)
-                        utils.makeUnit(con.iSwordsman, iCiv, tPlot, 2)
+                        utils.makeUnit(con.iSwordsman, iCiv, tPlot, 3)
                         utils.makeUnit(con.iLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(con.iCatapult, iCiv, tPlot, 1)
                 if (iCiv == iNorse):
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 1)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 1)

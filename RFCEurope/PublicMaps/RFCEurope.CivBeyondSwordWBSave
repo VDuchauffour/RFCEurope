@@ -8957,7 +8957,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=26
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9048,12 +9047,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=41
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=42
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9362,6 +9361,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=27
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=1,
@@ -9877,12 +9877,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=41
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=42
-	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15339,6 +15339,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=54
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16235,7 +16236,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=58
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -25564,6 +25564,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=20
+	BonusType=BONUS_PIG
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -26046,7 +26047,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=21
-	BonusType=BONUS_PIG
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
