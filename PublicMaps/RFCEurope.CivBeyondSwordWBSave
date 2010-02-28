@@ -70,7 +70,6 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=11
-
 EndTeam
 BeginTeam
 	TeamID=12
@@ -11819,6 +11818,7 @@ BeginPlot
 	x=30,y=25
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -12225,7 +12225,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=25
-	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -12992,6 +12991,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=19
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=1,
@@ -13404,7 +13404,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=19
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=1,
@@ -14672,7 +14671,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=19
-	BonusType=BONUS_SILVER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -15107,6 +15105,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=19
+	BonusType=BONUS_SILVER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -15152,8 +15151,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=26
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 	TeamReveal=1,
 EndPlot
 BeginPlot
@@ -16024,6 +16024,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=26
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=1,21,
@@ -16455,6 +16456,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=25
+	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=1,21,
@@ -17815,7 +17817,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=26
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 	TeamReveal=1,21,
@@ -19198,6 +19199,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=37
+	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -19647,7 +19649,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=38
-	BonusType=BONUS_SULPHUR
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=2,21,
@@ -24135,6 +24136,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=12
+	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,21,
@@ -25051,6 +25053,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=12
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=1,21,
@@ -28913,13 +28916,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=30
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=1,21,
 EndPlot
 BeginPlot
 	x=68,y=31
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=1,21,
@@ -28930,7 +28934,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=1,21,
@@ -29742,6 +29745,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=16
+	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -30213,7 +30217,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=15
-	BonusType=BONUS_MARBLE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,21,
@@ -30307,7 +30310,6 @@ BeginPlot
 	x=71,y=27
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,21,
@@ -30831,6 +30833,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=28
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,21,
@@ -38565,7 +38568,6 @@ BeginPlot
 	x=88,y=22
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_IRON
 	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -38574,6 +38576,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=23
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
@@ -42993,13 +42996,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=23
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,
 EndPlot
 BeginPlot
 	x=97,y=24
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=1,
