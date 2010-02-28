@@ -2255,6 +2255,9 @@ class RiseAndFall:
                         utils.makeUnit(con.iLongSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iHeavyLancer, iCiv, tPlot, 2)
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 4)
+			tSeaPlot = self.findSeaPlots(tPlot, 2)
+                        if ( tSeaPlot ):
+				pEngland.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
                 if (iCiv == iPortugal):
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 4)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
