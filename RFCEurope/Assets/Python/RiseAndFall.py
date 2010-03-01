@@ -1480,8 +1480,9 @@ class RiseAndFall:
                                                         print ("colony:", indepCity.getName(), indepCity.getOriginalOwner())
                                                         indX = indepCity.getX()
                                                         indY = indepCity.getY()
+							lCitySpot = ( indX, indY );
                                                         if (gc.getPlayer(iDeadCiv).getSettlersMaps( con.iMapMaxY-indY-1, indX ) >= 90):
-                                                                if (indepCity not in cityList and indepCity not in colonyList):
+                                                                if ((lCitySpot not in lCityList) and indepCity not in colonyList):
                                                                         colonyList.append(indepCity)
                 if (len(colonyList) > 0):
                         for k in range(len(colonyList)):
