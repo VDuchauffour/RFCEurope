@@ -6,7 +6,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOSCOW_DESC</Tag>
-		<English>The Moscovites</English>
+		<English>The Muscovites</English>
 		<French>
 			<Text>Les Russes</Text>
 			<Gender>Male</Gender>
@@ -31,7 +31,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOSCOW_SHORT_DESC</Tag>
-		<English>Moscow</English>
+		<English>Muscovy</English>
 		<French>
 			<Text>Russe</Text>
 			<Gender>Male</Gender>
@@ -56,7 +56,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Tag>
-		<English>Moscowan</English>
+		<English>Muscovy</English>
 		<French>
 			<Text>russe:russe:russes:russes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
