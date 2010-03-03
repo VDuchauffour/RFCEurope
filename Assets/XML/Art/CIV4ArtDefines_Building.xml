@@ -459,14 +459,14 @@
 			<Button>Art/Interface/Buttons/Buildings/Noria.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MALI_MINT</Type>
+			<Type>ART_DEF_BUILDING_GENOA_BANK</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.32</fScale>
 			<fInterfaceScale>0.67</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Mali Mint/Mali_mint.nif</NIF>
+			<NIF>Art/Structures/Buildings/Genoa_Bank/Bank.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Forge.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,3</Button>
+			<Button>,Art/Interface/Buttons/Buildings/Genoan_bank.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GERMAN_ASSEMBLY_PLANT</Type>
