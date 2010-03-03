@@ -25,6 +25,8 @@ class Resources:
 			gc.getMap().plot(37, 60).setBonusType(con.iPotato)
 			gc.getMap().plot(68, 49).setBonusType(con.iPotato) #Poland
 			gc.getMap().plot(59, 53).setBonusType(con.iPotato) #Northern Germany
+		if (iGameTurn == con.i1680AD):
+			gc.getMap().plot(59, 61).setBonusType(con.iAccess) #Atlantic Access in Scandinavia
 
 		# 3Miro: resources appear
                 #if (iGameTurn == 5): #otherwise it's picked by Portugal at the beginning

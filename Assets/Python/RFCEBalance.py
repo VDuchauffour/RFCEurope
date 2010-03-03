@@ -84,7 +84,7 @@ class RFCEBalance:
 		gc.setGrowthModifiers(iBurgundy,     100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iByzantium,    150, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiers(iFrankia,      100, 100, 100, 100, 100, 1 )
-		gc.setGrowthModifiers(iArabia,       150, 100, 100, 100, 100, 1 )
+		gc.setGrowthModifiers(iArabia,       150, 100, 150, 100, 100, 1 )
 		gc.setGrowthModifiers(iBulgaria,     100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iCordoba,      150, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iSpain,        100, 100, 100, 100, 100, 2 )
@@ -113,12 +113,12 @@ class RFCEBalance:
 		#void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-		gc.setProductionModifiers(iBurgundy,  125, 125, 125, 150 )
+		gc.setProductionModifiers(iBurgundy,  110, 110, 120, 130 )
 		gc.setProductionModifiers(iByzantium, 200, 200, 200, 250 )
 		gc.setProductionModifiers(iFrankia,   125, 125, 125, 125 )
 		gc.setProductionModifiers(iArabia,    125, 125, 150, 250 )
 		gc.setProductionModifiers(iBulgaria,  125, 125, 125, 150 )
-		gc.setProductionModifiers(iCordoba,   125, 150, 160, 250 )
+		gc.setProductionModifiers(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiers(iSpain,     100, 100, 100, 120 )
 		gc.setProductionModifiers(iNorse,     100, 100, 100, 100 )
 		gc.setProductionModifiers(iVenecia,   100, 100, 100, 125 )
@@ -275,11 +275,11 @@ class RFCEBalance:
 		gc.setCityClusterAI( iBurgundy, 2, 3, 1 )
 		gc.setCityClusterAI( iByzantium, 1, 3, 1 )
 		gc.setCityClusterAI( iFrankia, 1, 3, 1 )
-		gc.setCityClusterAI( iArabia, 1, 3, 0 )
+		gc.setCityClusterAI( iArabia, 1, 3, 1 )
 		gc.setCityClusterAI( iBulgaria, 1, 2, 1 )
-		gc.setCityClusterAI( iCordoba, 1, 3, 1 )
-		gc.setCityClusterAI( iSpain, 1, 3, 1 )
-		gc.setCityClusterAI( iNorse, 1, 3, 1 )
+		gc.setCityClusterAI( iCordoba, 1, 2, 1 )
+		gc.setCityClusterAI( iSpain, 1, 2, 1 )
+		gc.setCityClusterAI( iNorse, 1, 2, 1 )
 		gc.setCityClusterAI( iVenecia, 1, 3, 1 )
 		gc.setCityClusterAI( iKiev, 1, 4, 1 )
 		gc.setCityClusterAI( iHungary, 1, 3, 1 )
@@ -291,7 +291,7 @@ class RFCEBalance:
 		gc.setCityClusterAI( iAustria, 2, 3, 1 )
 		gc.setCityClusterAI( iTurkey, 1, 3, 1 )
 		gc.setCityClusterAI( iSweden, 1, 2, 1 )		
-		gc.setCityClusterAI( iDutch, 2, 3, 1 )
+		gc.setCityClusterAI( iDutch, 3, 4, 1 )
 
 		#3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
 		# values are 1 - small empires (Egypt,default), 2 - large contiguous empires (Rome,Arabia), 3 - global empire (England,Russia,Mongolia)
@@ -491,10 +491,11 @@ class RFCEBalance:
 		# gc.setBuildingPref( iCordoba, con.iNotreDame, -10 )
 		# use values -10 for very unlikely, 0 for default neutral and positive for desirable
 		# values less than -10 might not work, above 10 should be fine
+		
 		gc.setBuildingPref( iBurgundy, con.iMonasteryOfCluny, 20 )
 		
-		#gc.setBuildingPref( iByzantium, con.iBibliothecaCorviniana, 5 )
 		gc.setBuildingPref( iByzantium, con.iRoundChurch, -3 )
+		gc.setBuildingPref( iByzantium, con.iGoldenBull, -3 )
 		
 		gc.setBuildingPref( iFrankia, con.iNotreDame, 20 )
 		gc.setBuildingPref( iFrankia, con.iVersailles, 10 )
@@ -502,6 +503,11 @@ class RFCEBalance:
 		
 		gc.setBuildingPref( iArabia, con.iDomeRock, 10 )
 		gc.setBuildingPref( iArabia, con.iTombKhal, 20 )
+		gc.setBuildingPref( iArabia, con.iNotreDame, -3 )
+		gc.setBuildingPref( iArabia, con.iSistineChapel, -3 )
+		gc.setBuildingPref( iArabia, con.iKrakDesChevaliers, -3 )
+		gc.setBuildingPref( iArabia, con.iGoldenBull, -3 )
+		gc.setBuildingPref( iArabia, con.iCopernicus, -3 )
 		
 		gc.setBuildingPref( iBulgaria, con.iRoundChurch, 20 )
 		
@@ -510,13 +516,19 @@ class RFCEBalance:
 		gc.setBuildingPref( iCordoba, con.iAlhambra, 20 )
 		gc.setBuildingPref( iCordoba, con.iDomeRock, 10 )
 		gc.setBuildingPref( iCordoba, con.iNotreDame, -3 )
+		gc.setBuildingPref( iArabia, con.iSistineChapel, -3 )
+		gc.setBuildingPref( iCordoba, con.iKrakDesChevaliers, -3 )
+		gc.setBuildingPref( iCordoba, con.iGoldenBull, -3 )
 		
 		gc.setBuildingPref( iSpain, con.iEscorial, 20 )
+		gc.setBuildingPref( iSpain, con.iMagellansVoyage, 10 )
 		
-		gc.setBuildingPref( iNorse, con.iKalmarCastle, 20 )
+		gc.setBuildingPref( iNorse, con.iShrineOfUppsala, 20 )
+		gc.setBuildingPref( iNorse, con.iKalmarCastle, 10 )
 		
 		gc.setBuildingPref( iVenecia, con.iMarcoPolo, 10 )
 		gc.setBuildingPref( iVenecia, con.iSanMarco, 10 )
+		gc.setBuildingPref( iVenecia, con.iLeonardosWorkshop, 5 )
 		
 		gc.setBuildingPref( iKiev, con.iSophiaKiev, 20 )
 		
@@ -525,17 +537,21 @@ class RFCEBalance:
 
 		gc.setBuildingPref( iGermany, con.iBrandenburgGate, 20 )
 		gc.setBuildingPref( iGermany, con.iImperialDiet, 10 )
+		gc.setBuildingPref( iGermany, con.iCopernicus, 5 )
 		
 		gc.setBuildingPref( iPoland, con.iPressburg, 20 )
+		gc.setBuildingPref( iPoland, con.iCopernicus, 5 )
+		gc.setBuildingPref( iPoland, con.iGoldenBull, 5 )
 		gc.setBuildingPref( iPoland, con.iTempleMount, 5 )
 		
 		gc.setBuildingPref( iMoscow, con.iStBasil, 20 )
 		
 		gc.setBuildingPref( iGenoa, con.iSanGiorgio, 20 )
+		gc.setBuildingPref( iGenoa, con.iLeonardosWorkshop, 5 )
 		
 		gc.setBuildingPref( iEngland, con.iMagnaCarta, 20 )
-		#gc.setBuildingPref( iEngland, con.iTowerLondon, 10 ) #JediClemente: it's a national wonder!
 		gc.setBuildingPref( iEngland, con.iWestminster, 10 )
+		#JediClemente: Tower of London is a national wonder!
 		
 		gc.setBuildingPref( iPortugal, con.iBelemTower, 20 )
 		gc.setBuildingPref( iPortugal, con.iRibeira, 20 )
@@ -549,6 +565,7 @@ class RFCEBalance:
 		gc.setBuildingPref( iDutch, con.iBeurs, 20 )
 		
 		gc.setBuildingPref( iPope, con.iNotreDame, 20 )
+		gc.setBuildingPref( iPope, con.iSistineChapel, 20 )
 
 		self.postAreas()
 		
