@@ -1072,7 +1072,7 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-					<BuildingType>BUILDING_GENOA_MINT</BuildingType>
+					<BuildingType>BUILDING_GENOA_BANK</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>

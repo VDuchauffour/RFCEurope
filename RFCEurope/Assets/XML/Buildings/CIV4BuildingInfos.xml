@@ -9500,13 +9500,13 @@
 		</BuildingInfo>
 		<BuildingInfo> <!-- Genoese Mint -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
-			<Type>BUILDING_GENOA_MINT</Type>
+			<Type>BUILDING_GENOA_BANK</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MALI_MINT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GENOA_MINT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GENOA_MINT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GENOA_BANK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GENOA_BANK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MALI_MINT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GENOA_BANK</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -10504,7 +10504,7 @@
 			<iTradeRoutes>0</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
-			<iTradeRouteModifier>25</iTradeRouteModifier>
+			<iTradeRouteModifier>75</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
