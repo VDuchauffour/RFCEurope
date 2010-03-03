@@ -585,14 +585,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_RELIQUARY_PEDIA</Tag>
-		<English>[TAB]A sahn, in Islamic architecture, is a courtyard. As per the traditional Islamic architectural style, almost every mosque has a sahn, which is surrounded by an arcade from all sides. In Persian architecture, the sahn usually contains a howz, a symmetrical pool, where ablutions are performed. Some also contain drinking fountains.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
 		<English>[TAB]Minarets are distinctive architectural features of Islamic mosques. Minarets are generally tall spires with onion-shaped crowns, usually either free standing or much taller than any surrounding support structure. As well as providing a visual cue to a Muslim community, the main function of the minaret is to provide a vantage point from which the muezzin can call out the adhan, calling the faithful to prayer.</English>
 		<French>.</French>
@@ -618,7 +610,7 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CATHEDRAL_PEDIA</Tag>
 		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
 		<French>.</French>
 		<German>.</German>
@@ -626,23 +618,7 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL_PEDIA</Tag>
-		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL_PEDIA</Tag>
-		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SCRIPTORIUM_PEDIA</Tag>
 		<English>[TAB]Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
 [TAB]When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
 		<French>.</French>
@@ -651,16 +627,7 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM_PEDIA</Tag>
-		<English>[TAB]Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
-[TAB]When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CHAPEL_PEDIA</Tag>
 		<English>[TAB]A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
 		<French>.</French>
 		<German>.</German>
@@ -668,41 +635,7 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL_PEDIA</Tag>
-		<English>[TAB]A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL_PEDIA</Tag>
-		<English>[TAB]A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL_PEDIA</Tag>
-		<English>[TAB]The idea for widespread schools dates back to Charlemagne, a king of the Franks. He knew that the Frankish empire would be weak without an education. Because a Frankish King started it, it quickly spread throughout northern and central France. Over time, the schools were fused with the church and became cathedral schools. The first cathedral schools taught future clergy, as they were the only people in Frankish society that were required to be literate. Many people wanted to join the clergy because a career in the church was considered a very high rank. Those who were trained in a cathedral school had a good chance of becoming part of the church.
-[TAB]Cathedral schools were mostly oriented around the academic welfare of the noble's children. The subjects taught at Cathedral schools ranged from literature to mathematics. These topics were called the Seven Liberal Arts: grammar, astronomy, rhetoric, logic, arithmetic, geometry and music.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL_PEDIA</Tag>
-		<English>[TAB]The idea for widespread schools dates back to Charlemagne, a king of the Franks. He knew that the Frankish empire would be weak without an education. Because a Frankish King started it, it quickly spread throughout northern and central France. Over time, the schools were fused with the church and became cathedral schools. The first cathedral schools taught future clergy, as they were the only people in Frankish society that were required to be literate. Many people wanted to join the clergy because a career in the church was considered a very high rank. Those who were trained in a cathedral school had a good chance of becoming part of the church.
-[TAB]Cathedral schools were mostly oriented around the academic welfare of the noble's children. The subjects taught at Cathedral schools ranged from literature to mathematics. These topics were called the Seven Liberal Arts: grammar, astronomy, rhetoric, logic, arithmetic, geometry and music.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_RELIQUARY_PEDIA</Tag>
 		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
 		<French>.</French>
 		<German>.</German>
@@ -710,31 +643,7 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY_PEDIA</Tag>
-		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY_PEDIA</Tag>
-		<English>[TAB]A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY_PEDIA</Tag>
-		<English>[TAB]A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SEMINARY_PEDIA</Tag>
 		<English>[TAB]A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
 		<French>.</French>
 		<German>.</German>
