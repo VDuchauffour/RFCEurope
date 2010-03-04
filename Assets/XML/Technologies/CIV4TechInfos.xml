@@ -1855,7 +1855,7 @@
 			<Quote>TXT_KEY_TECH_EU_MONUMENT_BUILDING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>AS2D_TECH_MP_MONOTHEISM</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Monotheism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,11</Button>
+			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
 		</TechInfo>
 		<TechInfo><!--CLASSICAL_KNOWLEDGE-->
 			<Type>TECH_CLASSICAL_KNOWLEDGE</Type>
