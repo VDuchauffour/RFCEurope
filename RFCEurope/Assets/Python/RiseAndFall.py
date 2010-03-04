@@ -2692,6 +2692,18 @@ class RiseAndFall:
                         teamMoscow.setHasTech( con.iChivalry, True, iCiv, False, False )
                         teamMoscow.setHasTech( con.iAristocracy, True, iCiv, False, False )
                         teamMoscow.setHasTech( con.iCivilService, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iLiterature, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iMonumentBuilding, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iPlateArmor, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iSiegeEngines, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iLateenSails, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iMapMaking, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iClassicalKnowledge, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iClockmaking, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iAlchemy, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iGuilds, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iPhilosophy, True, iCiv, False, False )
+			teamMoscow.setHasTech( con.iReplaceableParts, True, iCiv, False, False )
 
                         
                 if ( iCiv == iGenoa ):

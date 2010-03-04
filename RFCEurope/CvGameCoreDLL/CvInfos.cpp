@@ -2987,6 +2987,8 @@ std::wstring CvActionInfo::getHotKeyDescription() const
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::CvUnitInfo() :
+m_iSpreadByTheSword(-1), // 3MiroUnits: sword
+m_bSpreadByTheSword(false), // 3MiroUnits: sword
 m_iAIWeight(0),
 m_iProductionCost(0),
 m_iHurryCostModifier(0),
@@ -3774,6 +3776,13 @@ void CvUnitInfo::setCommandType(int iNewType)
 	m_iCommandType = iNewType;
 }
 
+//3MiroUnits: spread by the sword
+int CvUnitInfo::getSpreadByTheSword(){
+	return m_iSpreadByTheSword;
+};
+bool CvUnitInfo::getIsSpreadByTheSword(){
+	return m_bSpreadByTheSword;
+};
 
 // Arrays
 
@@ -4496,6 +4505,10 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 
 	stream->ReadString(m_szFormationType);
 
+	// 3MiroUnits: sword
+	stream->Read(&m_iSpreadByTheSword);
+	stream->Read(&m_bSpreadByTheSword);
+
 	updateArtDefineButton();
 }
 
@@ -4681,6 +4694,10 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->WriteString(m_iNumUnitNames, m_paszUnitNames);
 
 	stream->WriteString(m_szFormationType);
+
+	// 3MiroUnits: sword
+	stream->Write(m_iSpreadByTheSword);
+	stream->Write(m_bSpreadByTheSword);
 }
 
 //
@@ -5021,6 +5038,12 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iLeaderPromotion = pXML->FindInInfoClass(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iLeaderExperience, "iLeaderExperience");
+
+	//3MiroUnits: sword
+	pXML->GetChildXmlValByName(&m_bSpreadByTheSword, "bSpreadBySword");
+
+	pXML->GetChildXmlValByName(szTextVal, "SpreadBySword");
+	m_iSpreadByTheSword = pXML->FindInInfoClass(szTextVal);
 
 	updateArtDefineButton();
 

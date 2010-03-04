@@ -2295,3 +2295,18 @@ void CyCity::liberate(bool bConquest)
 		m_pCity->liberate(bConquest);
 	}
 }
+
+// 3Miro: Prosecutions
+bool CyCity::canPurgeReligion(){
+	if ( m_pCity ){
+		return m_pCity ->canPurgeReligion();
+	}else{
+		return false;
+	};
+};
+
+void CyCity::doPurgeReligions(){
+	if ( m_pCity ){
+		m_pCity ->doPurgeReligions();
+	};
+};

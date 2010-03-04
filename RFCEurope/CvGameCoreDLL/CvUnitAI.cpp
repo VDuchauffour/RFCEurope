@@ -118,7 +118,7 @@ bool CvUnitAI::AI_update()
 			//GC.getGameINLINE().logMsg("   Not NULL ");
 			if ( (getX() == pCity ->getX()) && (getY() == pCity ->getY()) ){
 				if ( pCity ->getOwnerINLINE() == getOwnerINLINE() ){
-					pCity ->PurgeReligions();
+					pCity ->doPurgeReligions();
 					pCity ->changeHurryAngerTimer( 10 );
 					if ( UniquePowers[pCity ->getOwner() * UP_TOTAL_NUM + UP_INQUISITION] < 0 ){
 						//ProsecutionCount[pCity ->getOwner()] += 10;
@@ -129,7 +129,7 @@ bool CvUnitAI::AI_update()
 				}else{
 					if ( getOwnerINLINE() == PAPAL_PLAYER ){
 						// 3MiroPapal: the Pope now forces the removal of foreign religion without asking
-						pCity ->PurgeReligions();
+						pCity ->doPurgeReligions();
 						pCity ->changeHurryAngerTimer( 10 );
 						if ( UniquePowers[pCity ->getOwner() * UP_TOTAL_NUM + UP_INQUISITION] < 0 ){
 							//ProsecutionCount[pCity ->getOwner()] += 10;

@@ -1383,10 +1383,10 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 				iRazeValue -= 30;
 			}*/
 
-		// 3Miro
+		// 3Miro: How likely are Barbs to raze cities
 		//if (getID() == NATIVE || isBarbarian()) {
 		if ( isBarbarian() ) {
-				iRazeValue *= 2;
+				//iRazeValue *= 2;
 				iRazeValue += 30;
 			}
 		else {

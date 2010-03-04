@@ -522,6 +522,9 @@ class Victory:
                         		
                         if ( iGameTurn == i1401AD and self.getGoal( iBulgaria, 0 ) == -1 ): # see onCityAquire, if no cities lost so far
                         	self.setGoal( iBulgaria, 0, 1 )
+
+			if ( iGameTurn <= i1449AD and self.getGoal( iBulgaria, 2 ) == -1 and pBulgaria.getStateReligion() == con.iOrthodoxy and pBulgaria.getFaith() >= 50 ):
+				self.setGoal( iBulgaria, 2, 1 )
                         	
                         if ( iGameTurn == i1449AD+1 and self.getGoal( iBulgaria, 2 ) == -1 ):
                         	self.setGoal( iBulgaria, 2, 0 )
@@ -1107,29 +1110,30 @@ class Victory:
 
 		iGameTurn = gc.getGame().getGameTurn()
 		
-		if ( iPlayer == iBulgaria ): # Buildings Goal 2
-			if ( pBulgaria.isAlive() ):
-				if (self.getGoal(iBulgaria, 2) == -1):
-					if ( iGameTurn <= i1600AD ):
-						if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral or iBuilding == con.iOrthodoxScriptorium ):
-							iNumCities = pBulgaria.getNumCities()
-							if ( iNumCities > 7 ): # if there are enough cities
-								iCathedralCounter = 0
-								iMonasteryCounter = 0
-								iLibraryCounter = 0
-								for iCity in range(iNumCities):
-									pCity = pBulgaria.getCity(iCity)
-                                        	                        if (pCity.hasBuilding(con.iOrthodoxCathedral)):
-                                        	                                iCathedralCounter += 1
-                                        	                        if (pCity.hasBuilding(con.iOrthodoxMonastery)):
-                                        	                                iMonasteryCounter += 1
-                                        	                        if (pCity.hasBuilding(con.iOrthodoxScriptorium)):
-                                        	                                iLibraryCounter += 1
-                                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 and iLibraryCounter >= 8 ):
-                                        	                	self.setGoal( iBulgaria, 2, 1 )
+		#if ( iPlayer == iBulgaria ): # Buildings Goal 2
+		#	if ( pBulgaria.isAlive() ):
+		#		if (self.getGoal(iBulgaria, 2) == -1):
+		#			if ( iGameTurn <= i1600AD ):
+		#				if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral or iBuilding == con.iOrthodoxScriptorium ):
+		#					iNumCities = pBulgaria.getNumCities()
+		#					if ( iNumCities > 7 ): # if there are enough cities
+		#						iCathedralCounter = 0
+		#						iMonasteryCounter = 0
+		#						iLibraryCounter = 0
+		#						for iCity in range(iNumCities):
+		#							pCity = pBulgaria.getCity(iCity)
+                #                        	                        if (pCity.hasBuilding(con.iOrthodoxCathedral)):
+                #                        	                                iCathedralCounter += 1
+                #                        	                        if (pCity.hasBuilding(con.iOrthodoxMonastery)):
+                #                        	                                iMonasteryCounter += 1
+                #                        	                        if (pCity.hasBuilding(con.iOrthodoxScriptorium)):
+                #                        	                                iLibraryCounter += 1
+                #                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 and iLibraryCounter >= 8 ):
+                #                        	                	self.setGoal( iBulgaria, 2, 1 )
                 
                 
-                elif ( iPlayer == iKiev ):
+                #elif ( iPlayer == iKiev ):
+		if ( iPlayer == iKiev ):
                 	if ( pKiev.isAlive() ):
                 		if ( self.getGoal( iKiev, 2 ) == -1 ):
                 			if ( iGameTurn <= i1600AD ):

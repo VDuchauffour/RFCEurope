@@ -486,6 +486,10 @@ public:
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
 
+	// 3Miro: Prosecutions
+	bool canPurgeReligion();
+	void doPurgeReligions();
+
 private:
 	CvCity* m_pCity;
 };

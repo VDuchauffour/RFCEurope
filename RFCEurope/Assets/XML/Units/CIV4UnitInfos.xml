@@ -185,6 +185,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_BEAR</Class>
@@ -357,6 +359,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_PANTHER</Class>
@@ -529,6 +533,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_WOLF</Class>
@@ -710,6 +716,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SETTLER</Class>
@@ -895,6 +903,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_WORKER</Class>
@@ -1141,6 +1151,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_1</Class>
@@ -1321,6 +1333,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_2</Class>
@@ -1501,6 +1515,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_3</Class>
@@ -1681,6 +1697,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_4</Class>
@@ -1859,6 +1877,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_5</Class>
@@ -2034,6 +2054,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_6</Class>
@@ -2208,6 +2230,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_7</Class>
@@ -2382,6 +2406,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_CATHOLIC_MISSIONARY</Class>
@@ -2554,6 +2580,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ORTHODOX_MISSIONARY</Class>
@@ -2726,6 +2754,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_PROTESTANT_MISSIONARY</Class>
@@ -2898,6 +2928,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ISLAMIC_MISSIONARY</Class>
@@ -3070,6 +3102,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Archer-->
 			<Class>UNITCLASS_ARCHER</Class>
@@ -3259,6 +3293,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--CrossBow-->
 			<Class>UNITCLASS_CROSSBOWMAN</Class>
@@ -3457,6 +3493,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Arbalest-->
 			<Class>UNITCLASS_ARBALEST</Class>
@@ -3655,6 +3693,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Genoese Balestrieri-->
 			<Class>UNITCLASS_ARBALEST</Class>
@@ -3858,6 +3898,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Longbow-->
 			<Class>UNITCLASS_LONGBOWMAN</Class>
@@ -4048,6 +4090,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--English Longbow-->
 			<Class>UNITCLASS_LONGBOWMAN</Class>
@@ -4247,6 +4291,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Spear-->
 			<Class>UNITCLASS_SPEARMAN</Class>
@@ -4445,6 +4491,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Guisarme-->
 			<Class>UNITCLASS_GUISARME</Class>
@@ -4643,6 +4691,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Pikeman-->
 			<Class>UNITCLASS_PIKEMAN</Class>
@@ -4841,6 +4891,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Landsknecht-->
 			<Class>UNITCLASS_PIKEMAN</Class>
@@ -5038,6 +5090,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Axe-->
 			<Class>UNITCLASS_AXEMAN</Class>
@@ -5245,6 +5299,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Beserker-->
 			<Class>UNITCLASS_AXEMAN</Class>
@@ -5461,6 +5517,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Short Sword-->
 			<Class>UNITCLASS_SWORDSMAN</Class>
@@ -5658,6 +5716,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Long Sword-->
 			<Class>UNITCLASS_LONG_SWORDSMAN</Class>
@@ -5852,6 +5912,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Knight of St. John's-->
 			<Class>UNITCLASS_KNIGHT_OF_ST_JOHNS</Class>
@@ -6046,6 +6108,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Maceman-->
 			<Class>UNITCLASS_MACEMAN</Class>
@@ -6257,6 +6321,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Portuguese Foot Knight-->
 			<Class>UNITCLASS_MACEMAN</Class>
@@ -6463,6 +6529,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Grenadier-->
 			<Class>UNITCLASS_GRENADIER</Class>
@@ -6656,6 +6724,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Netherlands Grenadier-->
 			<Class>UNITCLASS_GRENADIER</Class>
@@ -6849,6 +6919,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Arquebusier-->
 			<Class>UNITCLASS_ARQUEBUSIER</Class>
@@ -7034,6 +7106,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Musketman -->
 			<Class>UNITCLASS_MUSKETMAN</Class>
@@ -7223,6 +7297,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Swedish Karolin-->
 			<Class>UNITCLASS_MUSKETMAN</Class>
@@ -7412,6 +7488,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Spanish Tercio-->
 			<Class>UNITCLASS_MUSKETMAN</Class>
@@ -7614,6 +7692,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Musketeer-->
 			<Class>UNITCLASS_MUSKETMAN</Class>
@@ -7807,6 +7887,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Line Infantry-->
 			<Class>UNITCLASS_LINE_INFANTRY</Class>
@@ -7996,6 +8078,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Dragoon--> 
 			<Class>UNITCLASS_DRAGOON</Class>
@@ -8185,6 +8269,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Scout-->
 			<Class>UNITCLASS_SCOUT</Class>
@@ -8388,6 +8474,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Konnik -->
 			<Class>UNITCLASS_SCOUT</Class>
@@ -8595,6 +8683,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Horse Archer -->
 			<Class>UNITCLASS_HORSE_ARCHER</Class>
@@ -8800,6 +8890,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Hungarian Huzar-->
 			<Class>UNITCLASS_HORSE_ARCHER</Class>
@@ -8998,6 +9090,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Mounted Infantry-->
 			<Class>UNITCLASS_MOUNTED_INFANTRY</Class>
@@ -9185,6 +9279,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Pistolier --> 
 			<Class>UNITCLASS_PISTOLIER</Class>
@@ -9379,6 +9475,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Hussar --> 
 			<Class>UNITCLASS_HUSSAR</Class>
@@ -9572,6 +9670,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Lancer -->
 			<Class>UNITCLASS_LANCER</Class>
@@ -9768,6 +9868,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Berber Cavalry-->
 			<Class>UNITCLASS_LANCER</Class>
@@ -9953,6 +10055,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Heavy Lancer-->
 			<Class>UNITCLASS_HEAVY_LANCER</Class>
@@ -10157,6 +10261,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Ghazi-->
 			<Class>UNITCLASS_HEAVY_LANCER</Class>
@@ -10351,6 +10457,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Cataphract-->
 			<Class>UNITCLASS_HEAVY_LANCER</Class>
@@ -10554,6 +10662,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Knight-->
 			<Class>UNITCLASS_KNIGHT</Class>
@@ -10753,6 +10863,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Templar -->
 			<Class>UNITCLASS_TEMPLAR</Class>
@@ -10952,6 +11064,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Teutonic Knight-->
 			<Class>UNITCLASS_TEUTONIC</Class>
@@ -11151,6 +11265,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Boyar-->
 			<Class>UNITCLASS_KNIGHT</Class>
@@ -11355,6 +11471,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Winged Hussar-->
 			<Class>UNITCLASS_CUIRASSIER</Class>
@@ -11559,6 +11677,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Paladin-->
 			<Class>UNITCLASS_KNIGHT</Class>
@@ -11758,6 +11878,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Cuirasser-->
 			<Class>UNITCLASS_CUIRASSIER</Class>
@@ -11951,6 +12073,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Austrian Kurassier-->
 			<Class>UNITCLASS_CUIRASSIER</Class>
@@ -12158,6 +12282,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Cossack-->
 			<Class>UNITCLASS_HEAVY_LANCER</Class>
@@ -12358,6 +12484,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Catapult-->
 			<Class>UNITCLASS_CATAPULT</Class>
@@ -12544,6 +12672,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Trebuchet-->
 			<Class>UNITCLASS_TREBUCHET</Class>
@@ -12721,6 +12851,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Bombard-->
 			<Class>UNITCLASS_BOMBARD</Class>
@@ -12912,6 +13044,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Turkey Great Bombard-->
 			<Class>UNITCLASS_BOMBARD</Class>
@@ -13103,6 +13237,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Cannon-->
 			<Class>UNITCLASS_CANNON</Class>
@@ -13293,6 +13429,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Field Artillery-->
 			<Class>UNITCLASS_FIELD_ARTILLERY</Class>
@@ -13478,6 +13616,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Workboat-->
 			<Class>UNITCLASS_WORKBOAT</Class>
@@ -13670,6 +13810,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Galley-->
 			<Class>UNITCLASS_GALLEY</Class>
@@ -13852,6 +13994,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--War Galley-->
 			<Class>UNITCLASS_WAR_GALLEY</Class>
@@ -14046,6 +14190,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!-- Caravel-->
 			<Class>UNITCLASS_CARAVEL</Class>
@@ -14234,6 +14380,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--COGGE-->
 			<Class>UNITCLASS_COGGE</Class>
@@ -14420,6 +14568,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Galleas-->
 			<Class>UNITCLASS_GUN_GALLEY</Class>
@@ -14610,6 +14760,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Carrack-->
 			<Class>UNITCLASS_CARRACK</Class>
@@ -14807,6 +14959,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Galleon-->
 			<Class>UNITCLASS_GALLEON</Class>
@@ -14983,6 +15137,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--HOLK-->
 			<Class>UNITCLASS_HOLK</Class>
@@ -15178,6 +15334,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Privateer-->
 			<Class>UNITCLASS_PRIVATEER</Class>
@@ -15373,6 +15531,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Frigate-->
 			<Class>UNITCLASS_FRIGATE</Class>
@@ -15562,6 +15722,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Spy-->
 			<Class>UNITCLASS_SPY</Class>
@@ -15745,6 +15907,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Prosecutor-->
 			<Class>UNITCLASS_PROSECUTOR</Class>
@@ -15917,6 +16081,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_PROPHET</Class>
@@ -16136,6 +16302,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ARTIST</Class>
@@ -16361,6 +16529,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_SCIENTIST</Class>
@@ -16591,6 +16761,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_MERCHANT</Class>
@@ -16822,6 +16994,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ENGINEER</Class>
@@ -17039,6 +17213,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_GENERAL</Class>
@@ -17269,6 +17445,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 			<iLeaderExperience>20</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_GREAT_SPY</Class>
@@ -17501,6 +17679,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Keshik-->
 			<Class>UNITCLASS_KNIGHT</Class>
@@ -17700,6 +17880,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Highlander-->
 			<Class>UNITCLASS_LONG_SWORDSMAN</Class>
@@ -17895,6 +18077,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Welsh Longbowman-->
 			<Class>UNITCLASS_LONGBOWMAN</Class>
@@ -18089,6 +18273,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Tagmata-->
 			<Class>UNITCLASS_GUISARME</Class>
@@ -18269,6 +18455,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Seljuk-->
 			<Class>UNITCLASS_LANCER</Class>
@@ -18454,6 +18642,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>1</bSpreadBySword>
+			<SpreadBySword>RELIGION_ISLAM</SpreadBySword>
 		</UnitInfo>
     	<UnitInfo> <!--Gun Galley-->
 			<Class>UNITCLASS_GUN_GALLEY</Class>
@@ -18644,6 +18834,8 @@
 			<FreePromotions/>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Corsair-->
 			<Class>UNITCLASS_PRIVATEER</Class>
@@ -18839,6 +19031,8 @@
 			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
+			<bSpreadBySword>0</bSpreadBySword>
+			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

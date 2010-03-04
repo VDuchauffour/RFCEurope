@@ -943,13 +943,16 @@ public:
 	int getBestYieldAvailable(YieldTypes eYield) const;
 
 	// 3Miro: Prosecution purge, removed the non-state Religions
-	void PurgeReligions();
+	bool canPurgeReligion();
+	void doPurgeReligions();
 
 	// 3Miro: damage enemy stuff
 	void changeDamageEnemy( int Change );
 	int getDamageEnemy();
 	void damagePlot( int iFoeDamage, int iBarbDamage, CvPlot *pPlot );
 	void doDamageEnemy();
+
+	// 3Miro: for Crusader purposes
 	int getVotingPower( ReligionTypes eReligion );
 
 protected:
