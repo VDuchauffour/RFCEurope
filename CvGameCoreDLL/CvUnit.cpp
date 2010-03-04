@@ -9487,6 +9487,47 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 				if (NO_PLAYER != eNewOwner)
 				{
+					// 3MiroUnits: Spread By the Sword -- Start
+					if ( getUnitInfo().getIsSpreadByTheSword() ){
+						int iSbtS = getUnitInfo().getSpreadByTheSword();
+						int iJ;
+						bool safeReligion;
+						//GC.getGame().logMsg("TryIt %d",iSbtS);
+						//if ( iSbtS != -1 ){
+							if ( !(pNewCity->isHasReligion((ReligionTypes)iSbtS)) ){
+								pNewCity ->setHasReligion((ReligionTypes) iSbtS, true, true );
+								if ( GET_PLAYER(getOwnerINLINE()).getStateReligion() == iSbtS ){
+									GET_PLAYER( getOwnerINLINE() ).changeFaith( 1 );
+								};
+							};
+							if ( !((pNewCity->getX()==HOLIEST_CITY_X)&&(pNewCity->getY()==HOLIEST_CITY_Y)) && (GC.getGameINLINE().getSorenRandNum(100," Shall we Prosecute by the Sword") < 50) ){
+									for( int iI=0; iI < NUM_RELIGIONS; iI++ ){
+										if ( (iI != iSbtS) && (pNewCity ->isHasReligion((ReligionTypes) iI) ) && !(pNewCity ->isHolyCity( (ReligionTypes) iI)) ){
+											safeReligion = false;
+											for( iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++ ){
+												if ( (pNewCity ->hasBuilding((BuildingTypes) iJ)) && (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqReligion() == iI) ){
+													if ( isLimitedWonderClass( (BuildingClassTypes) GC.getBuildingInfo((BuildingTypes)iJ).getBuildingClassType() ) ){
+														safeReligion = true;
+													};
+												};
+											};
+											if ( !safeReligion ){
+												pNewCity ->setHasReligion((ReligionTypes) iI, false, false );
+												// if a building requires a religion that has been purged (i.e. non-state and non-holy city)
+												for( int j=0; j< GC.getNumBuildInfos(); j++ ){
+													if ( pNewCity ->isHasRealBuilding((BuildingTypes) j) ){
+														if ( GC.getBuildingInfo((BuildingTypes)j).getPrereqReligion() == iI ){
+																pNewCity ->setHasRealBuilding( (BuildingTypes) j, false );
+														};
+													};
+												};
+											};
+										};
+									};
+							};
+						//};
+					};
+					// 3MiroUnits: Spread By the Sword -- End
 					GET_PLAYER(eNewOwner).acquireCity(pNewCity, true, false, true); // will delete the pointer
 					pNewCity = NULL;
 				}

@@ -1715,23 +1715,25 @@ class CvMainInterface:
 							
 							pPlayer = gc.getPlayer(pUnit.getOwner())
 							
+							if ( pCity.canPurgeReligion() ):
+								screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSICUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
 							# City belongs to unit's owner
-							if (pCity.getOwner() == pUnit.getOwner() and not pPlayer.getCivics(4) == 24 ):
-								
-								# Make sure city has a religion which isn't this player's state religion
-								for iReligionLoop in range(gc.getNumReligionInfos()):
-									
-									# City has this religion
-									if (pCity.isHasReligion(iReligionLoop)):
-										
-										# City's religion is not player's state
-										if (pPlayer.getStateReligion() != iReligionLoop):
-											
-											screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSICUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
-											screen.show( "BottomButtonContainer" )
-											iCount = iCount + 1
-											
-											break
+							#if (pCity.getOwner() == pUnit.getOwner() and not pPlayer.getCivics(4) == 24 ):
+							#	
+							#	# Make sure city has a religion which isn't this player's state religion
+							#	for iReligionLoop in range(gc.getNumReligionInfos()):
+							#		
+							#		# City has this religion
+							#		if (pCity.isHasReligion(iReligionLoop)):
+							#			
+							#			# City's religion is not player's state
+							#			if (pPlayer.getStateReligion() != iReligionLoop):
+							#				
+							#				screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSICUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
+							#				screen.show( "BottomButtonContainer" )
+							#				iCount = iCount + 1
+							#				
+							#				break
 					
 					iUnitProphet = 	CvUtil.findInfoTypeNum(gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_PROPHET")					
 					if ( iUnitProphet == pUnit.getUnitType() ):

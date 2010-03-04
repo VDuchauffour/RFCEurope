@@ -988,9 +988,17 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
+	// 3MiroUnits: Spread By the Sword
+	bool getIsSpreadByTheSword();
+	int getSpreadByTheSword();
+
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 
 protected:
+
+	// 3MiroUnits: Spread By the Sword
+	bool m_bSpreadByTheSword;
+	int m_iSpreadByTheSword;
 
 	int m_iAIWeight;
 	int m_iProductionCost;

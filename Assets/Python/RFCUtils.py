@@ -1103,8 +1103,8 @@ class RFCUtils:
 
 	def prosecute( self, iPlotX, iPlotY, iUnitID ):
 	# 3Miro: religious purge
-		if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
-			return
+		#if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
+		#	return
 		
 		if ( gc.getMap().plot( iPlotX, iPlotY ).isCity() ):
 			city = gc.getMap().plot( iPlotX, iPlotY ).getPlotCity()
@@ -1115,20 +1115,21 @@ class RFCUtils:
 		
 		pPlayer = gc.getPlayer( iOwner )
 		
-		iStateReligion = pPlayer.getStateReligion()
-		
-		# Loop through all religions, remove them from the city
-		for iReligionLoop in range(gc.getNumReligionInfos()):
-			if (iReligionLoop != iStateReligion and (not city.isHolyCityByType(iReligionLoop) ) ):
-				city.setHasReligion(iReligionLoop, 0, 0, 0)
-				if (iReligionLoop == con.iJudaism): #Jews spread to another random city in the world
-					tCity = self.selectRandomCity()
-					self.spreadJews(tCity,con.iJudaism)
-				# 3Miro: purge Buildings
-				for iBuildingLoop in range( gc.getNumBuildingInfos() ):
-					if ( city.isHasRealBuilding( iBuildingLoop ) and gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligionLoop ):
-						 city.setHasRealBuilding( iBuildingLoop, False )
+		#iStateReligion = pPlayer.getStateReligion()
+		#
+		## Loop through all religions, remove them from the city
+		#for iReligionLoop in range(gc.getNumReligionInfos()):
+		#	if (iReligionLoop != iStateReligion and (not city.isHolyCityByType(iReligionLoop) ) ):
+		#		city.setHasReligion(iReligionLoop, 0, 0, 0)
+		#		if (iReligionLoop == con.iJudaism): #Jews spread to another random city in the world
+		#			tCity = self.selectRandomCity()
+		#			self.spreadJews(tCity,con.iJudaism)
+		#		# 3Miro: purge Buildings
+		#		for iBuildingLoop in range( gc.getNumBuildingInfos() ):
+		#			if ( city.isHasRealBuilding( iBuildingLoop ) and gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligionLoop ):
+		#				 city.setHasRealBuilding( iBuildingLoop, False )
 
+		city.doPurgeReligions()
 		city.changeHurryAngerTimer( 10 )
 		
 		# 3Miro: kill the Prosecutor

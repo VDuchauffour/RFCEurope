@@ -22638,14 +22638,8 @@ CvCity* CvPlayer::choosePurgeCity(){
 	iStateReligion = getStateReligion();
 	//GC.getGameINLINE().logMsg("  Targeting prosecutor for: %d ",getID()); //Rhye and 3Miro
 	for (pCity = firstCity(&iLoop); pCity != NULL; pCity = nextCity(&iLoop)){
-		for ( j=0; j<NUM_RELIGIONS; j++ ){
-			// if the city has religion other then the player's state religion 
-			// and the city is not Jerusalem and the city is not holy city of that religion
-			if ( (j != iStateReligion) && ( pCity ->isHasReligion((ReligionTypes) j) )
-				&& !((pCity->getX()==HOLIEST_CITY_X) && (pCity->getY()==HOLIEST_CITY_Y))
-				&& !(pCity ->isHolyCity((ReligionTypes) j)) )
-				return pCity;
-		};
+		if ( pCity ->canPurgeReligion() )
+			return pCity;
 	};
 	if ( getID() == PAPAL_PLAYER ){
 		int iRandStart, iRandEnd, iI, iPlayer;
@@ -22655,14 +22649,8 @@ CvCity* CvPlayer::choosePurgeCity(){
 			iPlayer = iI % NUM_MAJOR_PLAYERS;
 			if ( GET_PLAYER( (PlayerTypes) iPlayer ).getStateReligion() == PAPAL_RELIGION  ){
 				for (pCity = GET_PLAYER( (PlayerTypes) iPlayer ).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER( (PlayerTypes) iPlayer ).nextCity(&iLoop)){
-					for ( j=0; j<NUM_RELIGIONS; j++ ){
-						// if the city has religion other then the player's state religion 
-						// and the city is not Jerusalem and the city is not holy city of that religion
-						if ( (j != PAPAL_RELIGION) && ( pCity ->isHasReligion((ReligionTypes) j) )
-								&& !((pCity->getX()==HOLIEST_CITY_X) && (pCity->getY()==HOLIEST_CITY_Y))
-								&& !(pCity ->isHolyCity((ReligionTypes) j)) )
-							return pCity;
-					};
+					if ( pCity ->canPurgeReligion() )
+						return pCity;
 				};
 			};
 		};

@@ -474,5 +474,9 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 
 		.def("getLiberationPlayer", &CyCity::getLiberationPlayer, "int ()")
 		.def("liberate", &CyCity::liberate, "void ()")
+
+		// 3Miro: New functions
+		.def("canPurgeReligion", &CyCity::canPurgeReligion, "bool ()")
+		.def("doPurgeReligions", &CyCity::doPurgeReligions, "void ()")
 		;
 }
