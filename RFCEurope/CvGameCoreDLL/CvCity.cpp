@@ -817,6 +817,19 @@ void CvCity::kill(bool bUpdatePlotGroups)
 		abEspionageVisibility.push_back(getEspionageVisibility((TeamTypes)iI));
 	}
 
+	// JediClemente: unofficial patch
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       08/04/09                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+	// Need to clear trade routes of dead city, else they'll be claimed for the owner forever
+	clearTradeRoutes();
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
+
+
 	pPlot->setPlotCity(NULL);
 
 	area()->changeCitiesPerPlayer(getOwnerINLINE(), -1);
@@ -14137,6 +14150,31 @@ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 	}
 }
 
+
+void CvCity::PurgeReligions(){
+	if ( (getX() == HOLIEST_CITY_X) && (getY() == HOLIEST_CITY_Y) ){
+		return;
+	};
+	int iStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+	for( int i=0; i < NUM_RELIGIONS; i++ ){
+		if ( (i != iStateReligion) && (isHasReligion((ReligionTypes) i) ) && !isHolyCity( (ReligionTypes) i) ){
+			setHasReligion((ReligionTypes) i, false, false );
+			// if a building requires a religion that has been purged (i.e. non-state and non-holy city)
+			for( int j=0; j< GC.getNumBuildInfos(); j++ ){
+				if ( isHasRealBuilding((BuildingTypes) j) ){
+					if ( GC.getBuildingInfo((BuildingTypes)j).getPrereqReligion() == i ){
+							setHasRealBuilding( (BuildingTypes) j, false );
+					};
+				};
+			};
+		};
+	};
+
+	// 3MiroFaith
+	GET_PLAYER( getOwnerINLINE() ).changeFaith( 1 );
+	
+};
+
 void CvCity::changeDamageEnemy( int Change ){
 	m_iDamageEnemy += Change;
 };
@@ -14237,69 +14275,4 @@ int CvCity::getVotingPower( ReligionTypes eReligion ){
 
 	return ( getRealPopulation() * iReligionPower ) / ( 1000 + iReligionPower + iOtherPower );
 
-};
-
-bool CvCity::canPurgeReligion(){
-	if ( (getX() == HOLIEST_CITY_X) && (getY() == HOLIEST_CITY_Y) ){
-		return false;
-	};
-	int iStateReligion = GET_PLAYER(getOwner()).getStateReligion();
-	int iI, iJ;
-	bool safeReligion;
-	for( iI = 0; iI < NUM_RELIGIONS; iI++ ){
-		if ( (iI != iStateReligion) && (isHasReligion((ReligionTypes) iI) ) && !isHolyCity( (ReligionTypes) iI) ){
-			safeReligion = false;
-			for( iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++ ){
-				if ( (hasBuilding((BuildingTypes) iJ)) && (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqReligion() == iI) ){
-					if ( isLimitedWonderClass( (BuildingClassTypes) GC.getBuildingInfo((BuildingTypes)iJ).getBuildingClassType() ) ){
-						safeReligion = true;
-					};
-				};
-			};
-			if ( !safeReligion ){
-				return true;
-			};
-		};
-	};
-	return false;
-};
-
-
-void CvCity::doPurgeReligions(){
-	if ( !canPurgeReligion() ){
-		return;
-	};
-	/*if ( (getX() == HOLIEST_CITY_X) && (getY() == HOLIEST_CITY_Y) ){
-		return;
-	};*/
-	int iStateReligion = GET_PLAYER(getOwner()).getStateReligion();
-	bool safeReligion;
-	int iJ;
-	for( int i=0; i < NUM_RELIGIONS; i++ ){
-		if ( (i != iStateReligion) && (isHasReligion((ReligionTypes) i) ) && !isHolyCity( (ReligionTypes) i) ){
-			safeReligion = false;
-			for( iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++ ){
-				if ( (hasBuilding((BuildingTypes) iJ)) && (GC.getBuildingInfo((BuildingTypes)iJ).getPrereqReligion() == i) ){
-					if ( isLimitedWonderClass( (BuildingClassTypes) GC.getBuildingInfo((BuildingTypes)iJ).getBuildingClassType() ) ){
-						safeReligion = true;
-					};
-				};
-			};
-			if ( !safeReligion ){
-				setHasReligion((ReligionTypes) i, false, false );
-				// if a building requires a religion that has been purged (i.e. non-state and non-holy city)
-				for( int j=0; j< GC.getNumBuildInfos(); j++ ){
-					if ( isHasRealBuilding((BuildingTypes) j) ){
-						if ( GC.getBuildingInfo((BuildingTypes)j).getPrereqReligion() == i ){
-								setHasRealBuilding( (BuildingTypes) j, false );
-						};
-					};
-				};
-			};
-		};
-	};
-
-	// 3MiroFaith
-	GET_PLAYER( getOwnerINLINE() ).changeFaith( 1 );
-	
 };
