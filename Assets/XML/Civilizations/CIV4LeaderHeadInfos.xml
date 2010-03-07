@@ -29195,10 +29195,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_STEPHEN</Type>
+			<Type>LEADER_ISTVAN</Type>
 			<Description>Istvan I</Description>
-			<Civilopedia>TXT_KEY_LEADER_STEPHEN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_STEPHEN</ArtDefineTag>
+			<Civilopedia>TXT_KEY_LEADER_ISTVAN_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_ISTVAN</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>2</iBasePeaceWeight>
@@ -35240,7 +35240,7 @@
 			<Type>LEADER_THE_POPE</Type>
 			<Description>The Pope</Description>
 			<Civilopedia>TXT_KEY_LEADER_THE_POPE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_POPE2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_LEADER_POPE</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>4</iBasePeaceWeight>

@@ -8,38 +8,37 @@
 	<CivilizationArtInfos>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_ARABIA</Type>
-			<Button>Art/Interface/Buttons/Civilizations/Arab2.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Arabia.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_arabic.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_AUSTRIA</Type>
-			<Button>Art/Interface/Buttons/Civilizations/AustriaButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Austria.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Austria.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BULGARIA</Type>
-			<Button>Art/Interface/Buttons/Civilizations/BulgariaButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Bulgaria.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Bulgaria.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BURGUNDY</Type>
-			<!--<Button>,Art/Interface/Buttons/Civilizations/Celtia.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,3,1</Button>-->
-			<Button>Art/Interface/Buttons/Civilizations/BurgundyButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Burgundy.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Burgundy.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BYZANTIUM</Type>
-			<Button>Art/Interface/Buttons/Civilizations/ByzantiumButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Byzantium.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Labarum.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_CORDOBA</Type>
-			<Button>Art/Interface/Buttons/Civilizations/CordobaButton2.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Cordoba.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_Moorish2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
@@ -63,7 +62,7 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_GENOA</Type>
-			<Button>Art/Interface/Buttons/Civilizations/GenoaButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Genoa.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_stgeorgecross.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
@@ -81,13 +80,13 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_KIEV</Type>
-			<Button>Art/Interface/Buttons/Civilizations/KievButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Kiev.dds</Button>
 			<Path>Art/Interface/TeamColor/flagDECAL_Kiev.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_MOSCOW</Type>
-			<Button>Art/Interface/Buttons/Civilizations/MoscowButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Moscow.dds</Button>
 			<Path>Art/Interface/TeamColor/flagDECAL_Moscow.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
@@ -99,13 +98,13 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_POLAND</Type>
-			<Button>Art/Interface/Buttons/Civilizations/poland.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Poland.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Poland.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_PORTUGAL</Type>
-			<Button>Art/Interface/Buttons/Civilizations/PortugalButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Portugal.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Escudo.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
@@ -117,7 +116,7 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_SWEDEN</Type>
-			<Button>Art/Interface/Buttons/Civilizations/SwedenButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Sweden.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Sweden.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
@@ -135,7 +134,7 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_PAPAL</Type>
-			<Button>Art/Interface/Buttons/Civilizations/PopeButton.dds</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Pope.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Pope.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
