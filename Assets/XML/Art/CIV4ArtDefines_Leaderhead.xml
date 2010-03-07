@@ -471,7 +471,7 @@
 			<BackgroundKFM>Art/Leaderheads/CharlesV/charles de gaulle_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ISTVAN</Type>
+			<Type>ART_DEF_LEADER_STEPHEN</Type>
 			<Button>Art/Leaderheads/StephenI/vladbutton.dds</Button>
 			<NIF>Art/Leaderheads/StephenI/Justinian.nif</NIF>
 			<KFM>Art/Leaderheads/StephenI/Justinian_Background.kfm</KFM>
