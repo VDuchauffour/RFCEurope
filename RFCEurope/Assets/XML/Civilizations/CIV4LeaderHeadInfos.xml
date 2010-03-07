@@ -29195,10 +29195,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_ISTVAN</Type>
+			<Type>LEADER_STEPHEN</Type>
 			<Description>Istvan I</Description>
 			<Civilopedia>TXT_KEY_LEADER_ISTVAN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_ISTVAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_LEADER_STEPHEN</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>2</iBasePeaceWeight>
