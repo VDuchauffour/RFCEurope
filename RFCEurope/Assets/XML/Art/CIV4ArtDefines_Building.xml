@@ -967,7 +967,7 @@
 			<fInterfaceScale>0.45</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Belfry/Belfry.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/belfry2.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/prot_belfry.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_CATHEDRAL</Type>
