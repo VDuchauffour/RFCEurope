@@ -635,7 +635,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Promotions/Shock.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,5</Button>
+			<Button>,Art/Interface/Buttons/Units/heavyinf.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_FORMATION</Type>
@@ -4260,7 +4260,7 @@
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Promotions/SelfPreservation3.dds</Button>
-		</PromotionInfo> t
+		</PromotionInfo>
 		-->
 		<PromotionInfo>
 			<Type>PROMOTION_MERCENARY</Type>

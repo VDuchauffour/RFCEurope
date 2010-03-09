@@ -29,7 +29,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_HEAVY_INFANTRY</Type>
 			<Description>TXT_KEY_UNITCOMBAT_HEAVY_INFANTRY</Description>
-			<Button>,Art/Interface/Buttons/Promotions/Shock.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,5</Button>
+			<Button>,Art/Interface/Buttons/Units/heavyinf.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SIEGE</Type>
