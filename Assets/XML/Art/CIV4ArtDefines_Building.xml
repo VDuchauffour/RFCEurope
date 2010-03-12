@@ -466,7 +466,7 @@
 			<fInterfaceScale>0.67</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Genoa_Bank/Bank.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Genoan_bank.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/Genoan_bank.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GERMAN_ASSEMBLY_PLANT</Type>
