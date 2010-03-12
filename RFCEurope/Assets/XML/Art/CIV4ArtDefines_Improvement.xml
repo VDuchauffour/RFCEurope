@@ -182,7 +182,7 @@
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_APIARY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.25</fScale>
+			<fScale>0.20</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/beehive/beehive3x.nif</NIF>
 			<KFM></KFM>
