@@ -14,17 +14,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Kalender</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Calendario</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Calendario</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -64,17 +64,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Theologie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Teologia</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Teolog&#237;a</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -89,17 +89,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Literatur</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Letteratura</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Literatura</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -239,17 +239,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Musik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Musica</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>M&#250;sica</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -259,22 +259,22 @@
 		<Tag>TXT_KEY_TECH_DRAMA</Tag>
 		<English>Drama</English>
 		<French>
-			<Text>Com&#233;die Dramatique</Text>
+			<Text>Th&#233;&#226;tre</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Drama</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Drammaturgia</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Drama</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -284,23 +284,23 @@
 		<Tag>TXT_KEY_TECH_CODE_OF_LAWS</Tag>
 		<English>Code of Laws</English>
 		<French>
-			<Text>Code des Lois</Text>
+			<Text>Livre des lois</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Gesetzgebung</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Codice delle leggi</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Legislaci&#243;n</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#202;&#238;&#228;&#229;&#234;&#241; &#199;&#224;&#234;&#238;&#237;&#238;&#226;</Russian>
@@ -339,18 +339,18 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Maschinenbau</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Ingegneria</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Ingenier&#237;a</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#209;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#229;</Russian>
@@ -384,23 +384,23 @@
 		<Tag>TXT_KEY_TECH_MACHINERY</Tag>
 		<English>Machinery</English>
 		<French>
-			<Text>Machinerie</Text>
-			<Gender>Male</Gender>
+			<Text>M&#233;canique</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Maschinen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Meccanica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Maquinaria</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#204;&#229;&#245;&#224;&#237;&#232;&#234;&#224;</Russian>
@@ -439,18 +439,18 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Philosophie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Filosofia</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Filosof&#237;a</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#212;&#232;&#235;&#238;&#241;&#238;&#244;&#232;&#255;</Russian>
@@ -589,17 +589,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Feudalismus</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Feudalesimo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Feudalismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -610,22 +610,22 @@
 		<English>Optics</English>
 		<French>
 			<Text>Optique</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Optik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Ottica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>&#211;ptica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#206;&#239;&#242;&#232;&#234;&#224;</Russian>
@@ -684,26 +684,26 @@
 		<Tag>TXT_KEY_TECH_CIVIL_SERVICE</Tag>
 		<English>Civil Service</English>
 		<French>
-			<Text>Service Civil</Text>
-			<Gender>Male</Gender>
+			<Text>Administration</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>&#214;ffentliche Verwaltung</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Pubblica amministrazione</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Administraci&#243;n p&#250;blica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#224;&#255; &#209;&#235;&#243;&#230;&#225;&#224;</Russian>
+<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#224;&#255; &#209;&#235;&#243;&#230;&#225;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LATEEN_SAILS</Tag>
@@ -756,52 +756,27 @@
 		<Russian>&#207;&#235;&#224;&#241;&#242;&#232;&#237;&#247;&#224;&#242;&#224;&#255; &#193;&#240;&#238;&#237;&#255;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_PUBLIC_ENTERTAINMENT</Tag>
-		<English>Public Entertainment</English>
-		<French>
-			<Text>Divertissement publique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#206;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#238;&#229; &#208;&#224;&#231;&#226;&#235;&#229;&#247;&#229;&#237;&#232;&#229;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_GUILDS</Tag>
 		<English>Guilds</English>
 		<French>
-			<Text>Guilde</Text>
+			<Text>Guildes</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Gilden</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Associazioni</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Gremios</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>1</Plural>
 		</Spanish>
 		<Russian>&#195;&#232;&#235;&#252;&#228;&#232;&#232;</Russian>
 	</TEXT>
@@ -835,22 +810,22 @@
 		<English>Biology</English>
 		<French>
 			<Text>Biologie</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Biologie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Biologia</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Biolog&#237;a</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#193;&#232;&#238;&#235;&#238;&#227;&#232;&#255;</Russian>
@@ -860,22 +835,22 @@
 		<English>Physics</English>
 		<French>
 			<Text>Physique</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Physik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Fisica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>F&#237;sica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#212;&#232;&#231;&#232;&#234;&#224;</Russian>
@@ -910,22 +885,22 @@
 		<English>Banking</English>
 		<French>
 			<Text>Banque</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Bankwesen</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Sistema bancario</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Banca</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#193;&#224;&#237;&#234;&#238;&#226;&#241;&#234;&#238;&#229; &#228;&#229;&#235;&#238;</Russian>
@@ -934,23 +909,23 @@
 		<Tag>TXT_KEY_TECH_MILITARY_TRADITION</Tag>
 		<English>Military Tradition</English>
 		<French>
-			<Text>Tradition Militaire</Text>
-			<Gender>Male</Gender>
+			<Text>Tradition militaire</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Milit&#228;rwesen</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Tradizione militare</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Tradici&#243;n militar</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#210;&#240;&#224;&#228;&#232;&#246;&#232;&#255;</Russian>
@@ -984,23 +959,23 @@
 		<Tag>TXT_KEY_TECH_GUNPOWDER</Tag>
 		<English>Gunpowder</English>
 		<French>
-			<Text>Poudre à Canon</Text>
-			<Gender>Male</Gender>
+			<Text>Poudre &#224; canon</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Schie&#223;pulver</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Polvere da sparo</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>P&#243;lvora</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#207;&#238;&#240;&#238;&#245;</Russian>
@@ -1009,23 +984,23 @@
 		<Tag>TXT_KEY_TECH_MILITARY_SCIENCE</Tag>
 		<English>Military Science</English>
 		<French>
-			<Text>Science Militaire</Text>
-			<Gender>Male</Gender>
+			<Text>Science militaire</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Milit&#228;rwissenschaft</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Scienza militare</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Belicolog&#237;a</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#205;&#224;&#243;&#234;&#224;</Russian>
@@ -1064,17 +1039,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Papier</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Carta</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Papel</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1085,22 +1060,22 @@
 		<English>Astronomy</English>
 		<French>
 			<Text>Astronomie</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Astronomie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Astronomia</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Astronom&#237;a</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#192;&#241;&#242;&#240;&#238;&#237;&#238;&#236;&#232;&#255;</Russian>
@@ -1109,24 +1084,24 @@
 		<Tag>TXT_KEY_TECH_REPLACEABLE_PARTS</Tag>
 		<English>Replaceable Parts</English>
 		<French>
-			<Text>Pi&#232;ces remplaçables</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Pi&#232;ces de rechange</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Ersatzteile</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Componentistica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Repuestos</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>1</Plural>
 		</Spanish>
 		<Russian>&#202;&#238;&#236;&#239;&#238;&#231;&#232;&#242;&#237;&#251;&#229; &#204;&#224;&#242;&#229;&#240;&#232;&#224;&#235;&#251;</Russian>
 	</TEXT>
@@ -1160,22 +1135,22 @@
 		<English>Printing Press</English>
 		<French>
 			<Text>Imprimerie</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Druckerpresse</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Tipografia</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Imprenta</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#207;&#229;&#247;&#224;&#242;&#252; &#207;&#240;&#229;&#241;&#241;&#251;</Russian>
@@ -1185,22 +1160,22 @@
 		<English>Education</English>
 		<French>
 			<Text>Education</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Bildungswesen</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Educazione</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Educaci&#243;n</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#206;&#225;&#240;&#224;&#231;&#238;&#226;&#224;&#237;&#232;&#229;</Russian>
@@ -1229,31 +1204,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#210;&#224;&#234;&#242;&#232;&#234;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_MILITARY_STRUCTURES</Tag>
-		<English>Military Structures</English>
-		<French>
-			<Text>Structure Militaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#194;&#238;&#229;&#237;&#237;&#251;&#229; &#209;&#242;&#240;&#243;&#234;&#242;&#243;&#240;&#251;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRADING_COMPANIES</Tag>
@@ -1306,51 +1256,26 @@
 		<Russian>&#192;&#240;&#224;&#225;&#241;&#234;&#238;&#229; &#199;&#237;&#224;&#237;&#232;&#229;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_MUSIC_THEORY</Tag>
-		<English>Music Theory</English>
-		<French>
-			<Text>Solf&#232;ge</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#210;&#229;&#238;&#240;&#232;&#255; &#204;&#243;&#231;&#251;&#234;&#232;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_CHEMISTRY</Tag>
 		<English>Chemistry</English>
 		<French>
 			<Text>Chimie</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Chemie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Chimica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Qu&#237;mica</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#213;&#232;&#236;&#232;&#255;</Russian>
@@ -1384,22 +1309,22 @@
 		<Tag>TXT_KEY_TECH_SCIENTIFIC_METHOD</Tag>
 		<English>Scientific Method</English>
 		<French>
-			<Text>M&#233;thode Scientifique</Text>
-			<Gender>Male</Gender>
+			<Text>M&#233;thode scientifique</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Wissenschaftliche Methode</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Metodo scientifico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>M&#233;todo cient&#237;fico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1410,22 +1335,22 @@
 		<English>Constitution</English>
 		<French>
 			<Text>Constitution</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Verfassung</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Costituzione</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Constituci&#243;n</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#202;&#238;&#237;&#241;&#242;&#232;&#242;&#243;&#246;&#232;&#255;</Russian>
@@ -1439,17 +1364,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Nationalismus</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Nazionalismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Nacionalismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1514,17 +1439,17 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Liberalismus</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Liberalismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Liberalismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1535,22 +1460,22 @@
 		<English>Medicine</English>
 		<French>
 			<Text>M&#233;decine</Text>
-			<Gender>Male</Gender>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Medizin</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Medicina</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Medicina</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#204;&#229;&#228;&#232;&#246;&#232;&#237;&#224;</Russian>
@@ -1559,51 +1484,26 @@
 		<Tag>TXT_KEY_TECH_ECONOMICS</Tag>
 		<English>Economics</English>
 		<French>
-			<Text>Economie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Sciences &#233;conomiques</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Wirtschaftswesen</Text>
+			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Economia</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Econom&#237;a</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#221;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_RATIONAL_PHILOSOPHY</Tag>
-		<English>Rational Philosophy</English>
-		<French>
-			<Text>Philosophie Rationnel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#208;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#212;&#232;&#235;&#238;&#241;&#238;&#244;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_ENGINEERING</Tag>
@@ -1634,22 +1534,22 @@
 		<Tag>TXT_KEY_TECH_FREE_MARKET</Tag>
 		<English>Free Market</English>
 		<French>
-			<Text>Economie de March&#233;</Text>
-			<Gender>Male</Gender>
+			<Text>Economie de march&#233;</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Freie Marktwirtschaft</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Libero mercato</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Mercado libre</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1681,31 +1581,6 @@
 		<Russian>&#207;&#240;&#224;&#226;&#238; &#204;&#243;&#230;&#247;&#232;&#237;&#251;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_MILITARY_STRATEGY</Tag>
-		<English>Military Strategy</English>
-		<French>
-			<Text>Strat&#233;gie Militaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#209;&#242;&#240;&#224;&#242;&#229;&#227;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_COMBINED_ARMS</Tag>
 		<English>Combined Arms</English>
 		<French>
@@ -1732,7 +1607,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INDUSTRIAL_TECH</Tag>
-		<English>Industrial Rev.</English>
+		<English>Industrial Revolution</English>
 		<French>
 			<Text>R&#233;volution Industrielle</Text>
 			<Gender>Male</Gender>
