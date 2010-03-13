@@ -132,15 +132,6 @@
 		<Russian>[TAB]The word "veche" refers to popular assemblies in medieval Slavic countries.  In the Kievan Rus, a medieval Ukrainian kingdom is known to be the origin of many of the other veches throughout Slavic countries.  The earliest mentions of veches in Russian chronicles refer to examples in Belgorod, a city on the Dnieper in 977, the Novgorod Republic in 1016, and in Kiev in 1068.  The assemblies discussed matters of war and peace, adopted laws, and called for and expelled rulers.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KIEV_VECHE_STRATEGY</Tag>
-		<English>[TAB]The [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], the Kievan Rus' replacement for the [COLOR_BUILDING_TEXT]Courthouse[COLOR_REVERT], offers additional happiness.</English>
-		<French>[TAB]Le [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], le remplacement de l'Ukrainien [COLOR_BUILDING_TEXT]Tribunal[COLOR_REVERT], offre en prime le bonheur.</French>
-		<German>[TAB]Die [COLOR_BUILDING_TEXT]Wetsche[COLOR_REVERT], die Ukrainisch Ersatz f&#194;&#184;r die [COLOR_BUILDING_TEXT]Gerichtsgeb&#228;ude[COLOR_REVERT], bietet Bonus Gl&#194;&#184;ck.</German>
-		<Italian>[TAB]L'[COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], la sostituzione Ucraino per il [COLOR_BUILDING_TEXT]Palazzo di giustizia[COLOR_REVERT], offre bonus di felicit&#226;€&#161;.</Italian>
-		<Spanish>[TAB]El [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], la sustituci&#195;&#155;n de Ucraniano para el [COLOR_BUILDING_TEXT]Delegaci&#243;[COLOR_REVERT], ofrece bonificaci&#195;&#155;n de la felicidad. </Spanish>
-		<Russian>[TAB]The [COLOR_BUILDING_TEXT]Veche[COLOR_REVERT], the Kievan Rus' replacement for the [COLOR_BUILDING_TEXT]Courthouse[COLOR_REVERT], offers additional happiness.</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD</Tag>
 		<English>Stronghold</English>
 		<French>Place Forte</French><German/><Italian/><Spanish/><Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
@@ -163,15 +154,6 @@
 		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th.  They were used to produce a surplus of food.  The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants.  The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.  [PARAGRAPH: 1] The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy.  The noble's attempt to increase use of folwarks only hurt the economic crisis more.  Until the 18th century, folwarks remained the basis for Polish noble's economic and political power.  After the abolition of serfdom in Poland, folwarks used paid labor.  Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Granary[COLOR_REVERT], offers bonus food.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], le remplacement polonais du [COLOR_BUILDING_TEXT]Grenier[COLOR_REVERT], offre des bonus de nourritures.</French>
-		<German>Die [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], die polnisch Ersatz f&#195;&#188;r die [COLOR_BUILDING_TEXT]Kornkammer[COLOR_REVERT], bietet bonus lebensmittel</German>
-		<Italian>L'[COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], la sostituzione polacco per il [COLOR_BUILDING_TEXT]Granaio[COLOR_REVERT], offre bonus di alimentare.</Italian>
-		<Spanish> El [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], la sustituci&#195;&#179;n de polaco para el [COLOR_BUILDING_TEXT]Granero[COLOR_REVERT], ofrece bono de la alimentos. </Spanish>
-		<Russian>The [COLOR_BUILDING_TEXT]Folwark[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Granary[COLOR_REVERT], offers bonus food.</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
 		<English>Royal Exchange</English>
 		<French>Bourse Royale</French><German/><Italian/><Spanish/><Russian>"&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#233; &#206;&#225;&#236;&#229;&#237;"</Russian><Japanese/><Chinese/></TEXT>
@@ -179,15 +161,6 @@
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE</Tag>
 		<English>Opera House</English>
 		<French>Salle d'Op&#233;ra</French><German/><Italian/><Spanish/><Russian>&#196;&#238;&#236; &#206;&#239;&#229;&#240;&#251;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_STRATEGY</Tag>
-		<English>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness.</English>
-		<French>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</French>
-		<German>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</German>
-		<Italian>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</Italian>
-		<Spanish>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness. Additionally, extra happiness occurs with access to [COLOR_HIGHLIGHT_TEXT]Hit Musicals[COLOR_REVERT] and an increased happiness bonus from the money dedicated to your cultural slider. An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] is required to build the [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT] national wonder.</Spanish>
-		<Russian>An [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT], (the Austrian replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT]), greatly increases a city's culture and provides a bonus to happiness.</Russian>
-		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
 		<English>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</English>
@@ -206,15 +179,6 @@
 		<Russian>[ICON_BULLET] &#207;&#238;&#226;&#240;&#229;&#230;&#228;&#224;&#229;&#242; &#226;&#240;&#224;&#230;&#229;&#241;&#234;&#232;&#229; &#229;&#228;&#232;&#237;&#232;&#246;&#251; &#226; &#238;&#225;&#235;&#224;&#241;&#242;&#232;.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TAVERN</Tag>
-		<English>Tavern</English>
-		<French>Taverne</French>
-		<German>Tavern</German>
-		<Italian>Locanda</Italian>
-		<Spanish>Taberna</Spanish>
-		<Russian>&#210;&#224;&#226;&#229;&#240;&#237;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KREMLIN</Tag>
 		<English>Kremlin</English>
 		<French>Kremlin</French>
@@ -223,36 +187,6 @@
 		<Spanish>Kremlin</Spanish>
 		<Russian>&#202;&#240;&#229;&#236;&#235;&#252;</Russian>
 		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TAVERN_PEDIA</Tag>
-		<English>[TAB]A tavern is, loosely, a place of business where people gather to drink alcoholic beverages and, more than likely, also be served food, though not licenced to put up guests. The word derives from the Latin taberna. The distinction of a tavern from an inn, bar or pub varies by location, in some places being identical and in others being distinguished by traditions or by legal license.[PARAGRAPH:1]Gathering in a tavern to drink beer or other alcoholic drinks is a longstanding social tradition dating at least to Sumer (3500 BC); in Sumer the tavern keeper was traditionally a woman but in other places and times women could be completely excluded from tavern culture.[PARAGRAPH:1]They have existed in England from as early as the 13th Century and were often kept by women usually known as Ale-wives. In the mid-14th century there were only three in London. An act of 1552 allowed forty in London, eight in York, six in Bristol and many more in towns all across England.[PARAGRAPH:1]By the 19th century the word tavern had developed an archaic flavour, the current term being public house (pub).</English>
-		<French>[TAB]Une taverne est, l&#226;chement, un endroit des affaires o&#249; les gens se r&#233;unissent pour boire les boissons alcooliques et, tr&#232;s probablement, pour &#234;tre servis &#233;galement la nourriture, cependant non autoris&#233;e pour mettre vers le haut des invit&#233;s. Le mot d&#233;rive du taberna latin. La distinction d'une taverne d'une auberge, d'une barre ou d'une publication change par endroit, dans quelques endroits &#233;tant identiques et dans d'autres qui sont distingu&#233;s par des traditions ou par license.[PARAGRAPH:1]Gathering l&#233;gal dans une taverne pour boire la bi&#232;re ou d'autres boissons alcooliques est une tradition sociale de longue date datant au moins &#224; Sumer (3500 AVANT J&#201;SUS CHRIST) ; dans Sumer le garde de taverne &#233;tait traditionnellement une femme mais en quelques d'autres endroits et fois des femmes pourraient &#234;tre compl&#232;tement exclues de la taverne culture.[PARAGRAPH:1]They ont exist&#233; en Angleterre de d&#232;s le 13&#232;me si&#232;cle et ont &#233;t&#233; souvent gard&#233;es par des femmes habituellement connues sous le nom d'aloses. En si&#232;cle de mid-14th il y avait seulement de trois &#224; Londres. Un acte de 1552 a permis quarante &#224; Londres, huit &#224; York, six &#224; Bristol et beaucoup plus dans les villes toutes &#224; travers England.[PARAGRAPH:1]By le 19&#232;me si&#232;cle la taverne de mot avaient d&#233;velopp&#233; une saveur archa&#239;que, la limite courante &#233;tant la taverne (publication).</French>
-		<German>[TAB]A Tavern ist lose ein Gesch&#228;ftssitz, in dem Leute, um alkoholische Getr&#228;nke zu trinken und erfassen, mehr als wahrscheinlich, die Nahrung auch gedient zu werden, zwar nicht genehmigt worden, um G&#228;ste oben zu setzen. Das Wort leitet vom lateinischen taberna ab. Die Unterscheidung eines Tavern von einem Gasthaus, von einem Stab oder von einer Publikation schwankt durch Position, in einigen Pl&#228;tzen, die identisch sind und in anderen, die durch Traditionen oder durch zugelassenes license.[PARAGRAPH:1]Gathering in einem Tavern, um unterschieden werden, Bier oder andere alkoholische Getr&#228;nke ist zu trinken eine althergebrachte Sozialtradition, die mindestens zu Sumer (3500 BC) datiert; in Sumer war der Tavernw&#228;chter traditionsgem&#228;&#223; eine Frau, aber in anderen Pl&#228;tzen und in Malen konnten Frauen vom Tavern vollst&#228;ndig ausgeschlossen werden culture.[PARAGRAPH:1]They haben bestanden in England schon in vom 13. Jahrhundert und wurden gehalten h&#228;ufig von den Frauen, die normalerweise als Maifische bekannt sind. Im mid-14th Jahrhundert gab es nur drei in London. Eine Tat von 1552 erlaubte vierzig in London, acht in York, sechs in Bristol und viel mehr in den St&#228;dten alle &#252;ber England.[PARAGRAPH:1]By das 19. Jahrhundert der Wort Tavern hatten ein veraltetes Aroma, die gegenw&#228;rtige Bezeichnung entwickelt, die Gasthaus (Publikation) ist.</German>
-		<Italian>[TAB]Una locanda &#232;, senza bloccare, un posto del commercio in cui la gente riunisce per bere le bevande di alcoolico e, molto probabilmente, anche per essere servita l'alimento, comunque non concesso una licenza a per mettere in su gli ospiti. La parola deriva dal taberna latino. La distinzione di una locanda da una locanda, da una barra o da una pubblicazione varia da posizione, in alcuni posti che sono identici ed in altri che sono distinti dalle tradizioni o da license.[PARAGRAPH:1]riunione legale in una locanda per bere la birra o altre bevande alcoliche &#232; una tradizione sociale di vecchia data che data almeno a Sumer (3500 BC); in Sumer il custode della locanda era tradizionalmente una donna ma in altre localit&#224; e date le donne potrebbero completamente essere escluse dalla locanda culture.[PARAGRAPH:1]They hanno esistito in Inghilterra fin dal tredicesimo secolo e spesso sono state mantenute dalle donne conosciute solitamente come le alose. Nel secolo di mid-14th ci erano soltanto tre a Londra. Un atto di 1552 ha permesso quaranta a Londra, otto a York, sei a Bristol e molto in citt&#224; tutte attraverso England.[PARAGRAPH:1]By il diciannovesimo secolo la locanda di parola avevano sviluppato un sapore archaic, il termine corrente che &#232; osteria (pubblicazione).</Italian>
-		<Spanish>[TAB]Una taberna es, libremente, un lugar del negocio en donde la gente recolecta para beber las bebidas alcoh&#243;licas y, m&#225;s que probablemente, tambi&#233;n para ser servida el alimento, aunque no autorizado para poner para arriba a hu&#233;spedes. La palabra deriva del taberna latino. La distinci&#243;n de una taberna de un mes&#243;n, de una barra o de una publicaci&#243;n var&#237;a por la localizaci&#243;n, en algunos lugares que son id&#233;nticos y en otros que son distinguidos por tradiciones o por license.[PARAGRAPH:1]Gathering legal en una taberna para beber la cerveza u otras bebidas alcoh&#243;licas es una tradici&#243;n social de muchos a&#241;os que fecha por lo menos a Sumer (3500 A.C.); en Sumer el encargado de la taberna era tradicionalmente una mujer pero en otros lugares y veces las mujeres podr&#237;an ser excluidas totalmente de taberna culture.[PARAGRAPH:1]They han existido en Inglaterra a partir desde del d&#233;cimotercero siglo y fueron guardadas a menudo por las mujeres conocidas generalmente como alosas. En el siglo de mid-14th hab&#237;a solamente tres en Londres. Un acto de 1552 permiti&#243; cuarenta en Londres, ocho en York, seises en Bristol y muchos m&#225;s en las ciudades todas a trav&#233;s de England.[PARAGRAPH:1]By el diecinueveavo siglo la taberna de la palabra hab&#237;an desarrollado un sabor arcaico, el t&#233;rmino actual que era la casa p&#250;blica (publicaci&#243;n).</Spanish>
-		<Russian>[TAB]A tavern is, loosely, a place of business where people gather to drink alcoholic beverages and, more than likely, also be served food, though not licenced to put up guests. The word derives from the Latin taberna. The distinction of a tavern from an inn, bar or pub varies by location, in some places being identical and in others being distinguished by traditions or by legal license.[PARAGRAPH:1]Gathering in a tavern to drink beer or other alcoholic drinks is a longstanding social tradition dating at least to Sumer (3500 BC); in Sumer the tavern keeper was traditionally a woman but in other places and times women could be completely excluded from tavern culture.[PARAGRAPH:1]They have existed in England from as early as the 13th Century and were often kept by women usually known as Ale-wives. In the mid-14th century there were only three in London. An act of 1552 allowed forty in London, eight in York, six in Bristol and many more in towns all across England.[PARAGRAPH:1]By the 19th century the word tavern had developed an archaic flavour, the current term being public house (pub).</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TAVERN_STRATEGY</Tag>
-		<English>A [COLOR_BUILDING_TEXT]Tavern[COLOR_REVERT] will increase happiness and decrease war weariness</English>
-		<French>Une [COLOR_BUILDING_TEXT]Taverne[COLOR_REVERT] augmentera le bonheur et diminuera la lassitude de guerre</French>
-		<German>A [COLOR_BUILDING_TEXT]Tavern[COLOR_REVERT] erh&#246;ht Gl&#252;ck und verringert Krieg weariness</German>
-		<Italian>A [COLOR_BUILDING_TEXT]Locanda[COLOR_REVERT] aumenter&#224; la felicit&#224; e far&#224; diminuire il weariness di guerra</Italian>
-		<Spanish>A [COLOR_BUILDING_TEXT]Taberna[COLOR_REVERT] aumentar&#225; felicidad y disminuir&#225; weariness de la guerra</Spanish>
-		<Russian>A [COLOR_BUILDING_TEXT]Tavern[COLOR_REVERT] will increase happiness and decrease war weariness</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE</Tag>
-		<English>National Theatre</English>
-		<French>Th&#233;atre Nationale</French><German/><Italian/><Spanish/><Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE</Tag>
-		<English>Summer Palace</English>
-		<French>Palais d'&#233;t&#233;</French><German/><Italian/><Spanish/><Russian>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Tag>
-		<English>National University</English>
-		<French>Universit&#233; Nationale</French><German/><Italian/><Spanish/><Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#211;&#237;&#232;&#226;&#229;&#240;&#241;&#232;&#242;&#229;&#242;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
 		<English>[ICON_BULLET]Provides %D1_Mod </English>
@@ -321,10 +255,6 @@
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE</Tag>
 		<English>Smokehouse</English>
 		<French>Fumoir</French><German/><Italian/><Spanish/><Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian><Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUTCHER</Tag>
-		<English>Butcher</English>
-		<French>Boucherie</French><German/><Italian/><Spanish/><Russian>&#204;&#255;&#241;&#237;&#232;&#234;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_STORE</Tag>
 		<English>Luxury Store</English>
@@ -474,25 +404,9 @@
 		<Spanish>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SIEGE_WORKSHOP_PEDIA</Tag>
-		<English>[TAB]A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</English>
-		<French>[TAB]A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</French>
-		<German>[TAB]A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</German>
-		<Italian>[TAB]A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</Italian>
-		<Spanish>[TAB]A Siege Weapon is a device that is designed to break or circumvent city walls and other fortifications in siege warfare. Siege Weapons Workshops are places where engineers developed Siege Weapons.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
 		<English>[TAB]A brewery is a dedicated building for the making of beer, though beer can be made in the home, and has been for much of beer's history. A company which makes beer is called either a brewery or a brewing company.
 [TAB]The diversity of size in breweries is matched by the diversity of processes, degrees of automation, and kinds of beer produced in breweries. Typically a brewery is divided into distinct sections, with each section reserved for one part of the brewing process.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUTCHER_PEDIA</Tag>
-		<English>[TAB]Butchery is a traditional work. Primary butchery consists of selecting carcasses, sides, or quarters from which primal cuts can be produced with the minimum of wastage, separate the primal cuts from the carcasses using the appropriate tools and equipment following company procedures, trim primal cuts and prepare for secondary butchery or sale, and store cut meats hygienically and safely. Secondary butchery involves boning and trimming primal cuts in preparation for sale. Historically, primary and secondary butchery were performed in the same establishment but the advent of methods of preservation and low cost transportation has largely separated them.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
