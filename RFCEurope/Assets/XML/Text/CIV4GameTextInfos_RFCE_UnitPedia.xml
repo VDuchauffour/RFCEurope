@@ -453,4 +453,29 @@
 		<Spanish>[TAB]El Caroleans era soldados de los reyes suecos Charles XI y Charles XII.  Eran parte del sistema sueco anual de la asignaci&#195;&#179;n.  Las t&#195;&#161;ctica del Caroleans eran atacar ferozmente y seguir siendo sin miedo.  Los soldados tambi&#195;&#169;n sostuvieron la disciplina severa, que sobre el curso extenso de una guerra veinte-a&#195;&#177;o-larga probar&#195;&#173;a vital.  Las t&#195;&#161;ctica suecas del ej&#195;&#169;rcito del tiempo no ense&#195;&#177;aron el retratamiento, as&#195;&#173; que conoc&#195;&#173;an a los soldados nunca para retirarse de batalla.</Spanish>
 		<Russian>[TAB]The Karolins were soldiers of the Swedish kings Charles XI and Charles XII.  They were part of the yearly Swedish allotment system.  The Karolins' tactics were to attack fiercely and remain unafraid.  The soldiers also sustained stern discipline, which over the extensive course of a twenty-year-long war would prove vital.  The Swedish army tactics of the time did not teach retreat, so the soldiers were known to never withdraw from battle.</Russian>
 		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VIKING_BESERKER</Tag>
+		<English>Berserker</English>
+		<French>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Berserk:Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Russian>
+	</TEXT>
 </Civ4GameText>
