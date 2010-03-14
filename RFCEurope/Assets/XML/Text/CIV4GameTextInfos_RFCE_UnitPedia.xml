@@ -12,7 +12,7 @@
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>[TAB]Since a Medieval spear required only a small amount of steel along the sharpened edges, it was an economical weapon. Quick to manufacture, and needing less smithing skill than a sword, it became the common weapon of the peasantry in many parts of the world. With the rise of heavy cavalry, spear shafts began to be planted against the ground to deter charging cavalry. Spears morphed into different pole-arms as mounted knights became more important on the battlefields of Europe and a means to counter them was needed.</Russian><Japanese/><Chinese/></TEXT>
+		<Russian>.</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUISARME_PEDIA</Tag>
 		<English>[TAB]A guisarme was a pole weapon used in Europe to dismount knights and horsemen, primarily between 1000-1400. Like most polearms it was developed by peasants by combining hand tools with long poles: in this case by putting a pruning hook onto a spear shaft. Later designs implemented a small reverse spike on the back of the blade, increasing the weapon's stopping power. Eventually hooks were incorporated into a variety of different polearms and guisarme became a catch-all for any weapon that included a hook on the blade.</English>
@@ -20,7 +20,7 @@
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>A guisarme was a pole weapon used in Europe to dismount knights and horsemen, primarily between 1000-1400. Like most polearms it was developed by peasants by combining hand tools with long poles: in this case by putting a pruning hook onto a spear shaft. Later designs implemented a small reverse spike on the back of the blade, increasing the weapon's stopping power. Eventually hooks were incorporated into a variety of different polearms and guisarme became a catch-all for any weapon that included a hook on the blade.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIKEMAN_PEDIA</Tag>
@@ -29,7 +29,7 @@
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>Early in the middle ages, the pike was only useful on defense; its length made it difficult for untrained soldiers to use in formation. The Swiss brought a renaissance to pike warfare in the 15th century, with strong training regimens and drummers to aid coordination. Now pike blocks could both rise to the attack and go into an impenetrable defensive formation when attacked by cavalry. The deep pike attack column remained an essential part of infantry combat for several hundred years.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWORDSMAN_PEDIA</Tag>
@@ -38,7 +38,7 @@
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>Swords in antiquity and classical times tended to be relatively short, at first because they were made of bronze and later because they were rarely called upon to penetrate armor. The blade of the classic Roman stabbing sword, the gladius, was only some two feet long, though in the twilight years of the empire the gladius gave way to the spatha, the long slashing sword of the barbarians and forerunner of the great broadswords of medieval Europe. During the Early Middle Ages, European swords tended to be long and straight, with no crossguard to protect the wielder's hand.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN_PEDIA</Tag>
@@ -47,7 +47,7 @@
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>The Longsword is a type of European sword used during the late medieval period. Made to counter the increasingly strong armor of the time, the longsword was commonly held in combat with both hands, though some may be used single-handed. A man-at-arms or dismounted knight fighting with a longsword would also have worn substantial other armor, such as a mail hauberk and helm. The terms "hand-and-a-half sword", "greatsword", and "bastard sword" are used colloquially to refer to longswords in general.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT_PEDIA</Tag>
@@ -56,95 +56,86 @@
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>Light cavalry have been employed as scouts and skirmisher from ancient times. The only real requirement for these units is that they be able to cover great distances and escape from situations in which they would be killed. Specially trained or bred horses are not required, and the unit needs to be only minimally armored. Before the development of the stirrup and other equestrian technology, it took years to learn to fight from horseback effectively, not a worthwhile investment for scouting units.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_SEARGENT_PEDIA</Tag>
-		<English>[TAB]A seargent, or serjeant, was a man of lesser rank and wealth to a knight, but with comparable equipment and training. Serjeants could fight either as heavy or light cavalry, and here fulfill that secondary role. Serjeants ranked above the common man-at-arms on the social scale. Although the social structure of the Norman society of England was generally static, the easiest manner for a man to attain social rank and improve his standing was through military service, as the Norman states, unlike the Germanic ones, believed in knighting men of common birth who demonstrated nobility and courage on the field. </English>
-		<French></French>
+		<English>[TAB]A seargent, or serjeant, was a man of lesser rank and wealth to a knight, but with comparable equipment and training. Serjeants could fight either as heavy or light cavalry, and here fulfill that secondary role. Serjeants ranked above the common man-at-arms on the social scale. Although the social structure of the Norman society of England was generally static, the easiest manner for a man to attain social rank and improve his standing was through military service, as the Norman states, unlike the Germanic ones, believed in knighting men of common birth who demonstrated nobility and courage on the field.</English>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>A seargent, or serjeant, was a man of lesser rank and wealth to a knight, but with comparable equipment and training. Serjeants could fight either as heavy or light cavalry, and here fulfill that secondary role. Serjeants ranked above the common man-at-arms on the social scale. Although the social structure of the Norman society of England was generally static, the easiest manner for a man to attain social rank and improve his standing was through military service, as the Norman states, unlike the Germanic ones, believed in knighting men of common birth who demonstrated nobility and courage on the field.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORSE_ARCHER_PEDIA</Tag>
 		<English>[TAB]A horse archer is a cavalryman armed with a bow. Because using a bow requires a horseman to let go of the reins with both hands, horse archers need superb equestrian skills and horse archery is typically associated with steppe nomads. The weapon of choice for horse archers was the recurve bow, which is compact enough to shoot from a horse yet retained sufficient range and penetrating power. Mounted archers needed little or no armor and could ride light, fast mounts.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>A horse archer is a cavalryman armed with a bow. Because using a bow requires a horseman to let go of the reins with both hands, horse archers need superb equestrian skills and horse archery is typically associated with steppe nomads. The weapon of choice for horse archers was the recurve bow, which is compact enough to shoot from a horse yet retained sufficient range and penetrating power. Mounted archers needed little or no armor and could ride light, fast mounts.</Russian><Japanese/><Chinese/></TEXT>
+		<Russian>.</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PISTOLIER_PEDIA</Tag>
 		<English>[TAB]Pistols were the first gunpowder weapons developed for cavalry, and the pistoliers was one of the new cavalry types to develop which signaled the end of the lance-charging heavy cavalry. Pistoliers were expected to be able to engage their opponents both with firearms and sword; they formed up in deep blocks and used their firearms in a caracole attack to disrupt enemy infantry formations before charging home and engaging in hand-to-hand combat. German mercenary cavalry called Reiters or "Black Riders" were some of the most prominent pistoliers.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>Pistols were the first gunpowder weapons developed for cavalry, and the pistoliers was one of the new cavalry types to develop which signaled the end of the lance-charging heavy cavalry. Pistoliers were expected to be able to engage their opponents both with firearms and sword; they formed up in deep blocks and used their firearms in a caracole attack to disrupt enemy infantry formations before charging home and engaging in hand-to-hand combat. German mercenary cavalry called Reiters or "Black Riders" were some of the most prominent pistoliers.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSSAR_PEDIA</Tag>
 		<English>[TAB]Frederick the Great was instrumental in spreading the irregular light cavalry of Hungary (huszars) to the battlefields of Europe. By dropping metal body armor, these light hussars became ideal for reconnaissance and raiding. In battle, they were used in such light cavalry roles as harassing enemy skirmishers, overrunning artillery positions, and pursuing fleeing troops. Following the Prussian example, hussar regiments were introduced across Europe, often maintaining the colorful uniforms a reputation for recklessness in battle of Frederick's original hussars.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>Frederick the Great was instrumental in spreading the irregular light cavalry of Hungary (huszars) to the battlefields of Europe. By dropping metal body armor, these light hussars became ideal for reconnaissance and raiding. In battle, they were used in such light cavalry roles as harassing enemy skirmishers, overrunning artillery positions, and pursuing fleeing troops. Following the Prussian example, hussar regiments were introduced across Europe, often maintaining the colorful uniforms a reputation for recklessness in battle of Frederick's original hussars.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LANCER_PEDIA</Tag>
 		<English>[TAB]The Carolingians of early medieval France relied heavily on mounted warriors in their conquests. Inventions such as the stirrup and high-backed saddle are sometimes identified as the key element driving the shift from infantry to cavalry. Although these technologies were certainly useful in fighting from horseback, strategic considerations are just as likely to have driven the shift; the extended Carolingian empire required a mobile army. These early cavalry were protected with a byrnie (probably long scale armor) and fought primarily with lance and sword.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>The Carolingians of early medieval France relied heavily on mounted warriors in their conquests. Inventions such as the stirrup and high-backed saddle are sometimes identified as the key element driving the shift from infantry to cavalry. Although these technologies were certainly useful in fighting from horseback, strategic considerations are just as likely to have driven the shift; the extended Carolingian empire required a mobile army. These early cavalry were protected with a byrnie (probably long scale armor) and fought primarily with lance and sword.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_LANCER_PEDIA</Tag>
 		<English>[TAB]Increasing armor weight required new breeds of heavier horses to carry mounted warriors. The most highly prized type of war-horse was the destrier, bred specifically for battles or jousts. In the wet climates of Europe, these new breeds required horseshoes to protect their hoofs. All of these developments required a fairly wealthy and advanced civilization, but the price was well worth it: few lighter units could hope to stand against the determined charge of a fully armored lancer.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>Increasing armor weight required new breeds of heavier horses to carry mounted warriors. The most highly prized type of war-horse was the destrier, bred specifically for battles or jousts. In the wet climates of Europe, these new breeds required horseshoes to protect their hoofs. All of these developments required a fairly wealthy and advanced civilization, but the price was well worth it: few lighter units could hope to stand against the determined charge of a fully armored lancer.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARBALEST_PEDIA</Tag>
 		<English>[TAB]The arbalest was a late variation of the medieval European crossbow. A larger weapon, the arbalest had a steel prod ("bow"). Since an arbalest was much larger than earlier crossbows, and because of the greater tensile strength of steel, it had a greater force and range. A skilled arbalestier could shoot two bolts per minute. Arbalests were sometimes considered inhumane or unfair weapons, since an inexperienced arbalestier could use one to kill a knight who had a lifetime of training.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>The arbalest was a late variation of the medieval European crossbow. A larger weapon, the arbalest had a steel prod ("bow"). Since an arbalest was much larger than earlier crossbows, and because of the greater tensile strength of steel, it had a greater force and range. A skilled arbalestier could shoot two bolts per minute. Arbalests were sometimes considered inhumane or unfair weapons, since an inexperienced arbalestier could use one to kill a knight who had a lifetime of training.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARQUEBUSIER_PEDIA</Tag>
 		<English>[TAB]The arquebus is an early muzzle-loaded firearm. They were used against enemies that were often protected by steel-plate armor, which a bullet could pierce only at close range. The arquebus was unable to match the accuracy of a bow in the hands of a highly-skilled archer. However, it had a faster rate of fire than the most powerful crossbow, and a much shorter learning curve than a longbow. Once the methods were developed, powder and shot were relatively easy to mass-produce, while arrow making was a genuine craft requiring highly skilled labor.</English>
-		<French></French>
+		<French>.</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>The arquebus is an early muzzle-loaded firearm. They were used against enemies that were often protected by steel-plate armor, which a bullet could pierce only at close range. The arquebus was unable to match the accuracy of a bow in the hands of a highly-skilled archer. However, it had a faster rate of fire than the most powerful crossbow, and a much shorter learning curve than a longbow. Once the methods were developed, powder and shot were relatively easy to mass-produce, while arrow making was a genuine craft requiring highly skilled labor.</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MUSKETMAN2_PEDIA</Tag>
-		<English>[TAB]The arquebus is an early muzzle-loaded firearm. They were used against enemies that were often protected by steel-plate armor, which a bullet could pierce only at close range. The arquebus was unable to match the accuracy of a bow in the hands of a highly-skilled archer. However, it had a faster rate of fire than the most powerful crossbow, and a much shorter learning curve than a longbow. Once the methods were developed, powder and shot were relatively easy to mass-produce, while arrow making was a genuine craft requiring highly skilled labor.</English>
-		<French></French>
-		<German/>
-		<Italian/>
-		<Spanish/>
-		<Russian>The arquebus is an early muzzle-loaded firearm. They were used against enemies that were often protected by steel-plate armor, which a bullet could pierce only at close range. The arquebus was unable to match the accuracy of a bow in the hands of a highly-skilled archer. However, it had a faster rate of fire than the most powerful crossbow, and a much shorter learning curve than a longbow. Once the methods were developed, powder and shot were relatively easy to mass-produce, while arrow making was a genuine craft requiring highly skilled labor.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD_PEDIA</Tag>
 		<English>[TAB]A bombard is a medieval cannon or mortar, used chiefly in sieges for throwing heavy stone balls. This weapon was usually used during sieges to hurl various forms of missile into enemy fortifications. Projectiles such as stone or metal balls, burning materials and weighted cloth soaked in quicklime or Greek fire are documented.</English>
-		<French>[TAB]A bombard is a medieval cannon or mortar, used chiefly in sieges for throwing heavy stone balls. This weapon was usually used during sieges to hurl various forms of missile into enemy fortifications. Projectiles such as stone or metal balls, burning materials and weighted cloth soaked in quicklime or Greek fire are documented.</French>
-		<German>[TAB]A bombard is a medieval cannon or mortar, used chiefly in sieges for throwing heavy stone balls. This weapon was usually used during sieges to hurl various forms of missile into enemy fortifications. Projectiles such as stone or metal balls, burning materials and weighted cloth soaked in quicklime or Greek fire are documented.</German>
-		<Italian>[TAB]A bombard is a medieval cannon or mortar, used chiefly in sieges for throwing heavy stone balls. This weapon was usually used during sieges to hurl various forms of missile into enemy fortifications. Projectiles such as stone or metal balls, burning materials and weighted cloth soaked in quicklime or Greek fire are documented.</Italian>
-		<Spanish>[TAB]A bombard is a medieval cannon or mortar, used chiefly in sieges for throwing heavy stone balls. This weapon was usually used during sieges to hurl various forms of missile into enemy fortifications. Projectiles such as stone or metal balls, burning materials and weighted cloth soaked in quicklime or Greek fire are documented.</Spanish>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRACK_PEDIA</Tag>
@@ -259,7 +250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENGLISH_LONGBOWMAN_PEDIA</Tag>
-		<English>[TAB]Longbows were tall, powerful bows employed to penetrate all but the best of Medieval armour.Their use by English armies reached a peak during the Hundred Years War when the use of massed longbowmen was highly effective against the French at the battles of Crecy (1346), Poitiers (1356) and at Agincourt in 1415. The longbow combined long range and high accuracy but not both at the same time. Most longbow shooting involved launching volleys of arrows at enemy armies at long range from protected positions. The longbow was the machine gun of the Middle Ages, accurate, deadly and more rapid-firing than the crossbow or even early firearms though with the development of the latter the longbow gradually fell into disuse.</English>
+		<English>[TAB]Longbows were tall, powerful bows employed to penetrate all but the best of Medieval armour. Their use by English armies reached a peak during the Hundred Years War when the use of massed longbowmen was highly effective against the French at the battles of Crecy (1346), Poitiers (1356) and at Agincourt in 1415. The longbow combined long range and high accuracy but not both at the same time. Most longbow shooting involved launching volleys of arrows at enemy armies at long range from protected positions. The longbow was the machine gun of the Middle Ages, accurate, deadly and more rapid-firing than the crossbow or even early firearms though with the development of the latter the longbow gradually fell into disuse.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -267,7 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN_PEDIA</Tag>
-		<English>[TAB]Following the Norman conquest of Wales in the 13thC., during which Welsh bowmen caused heavy casualties to the invader, Kings of England increasingly began to used longbowmen, including Welsh bowmen in their armies. Originally the Welsh employed a much shorter, rougher bow made of elm technically distinct from the classic English yew longbows. But as soon as the Welsh campaign was successfully over, Welsh conscripts began to be incorporated in large numbers into English armies. The valuable lessons the English learned in Wales of the tactic of massed formations of skilled archers using powerful bows was later used with great effect by English and Welsh mercenary longbowmen on the battlefields of Scotland and France. </English>
+		<English>[TAB]Following the Norman conquest of Wales in the 13thC., during which Welsh bowmen caused heavy casualties to the invader, Kings of England increasingly began to used longbowmen, including Welsh bowmen in their armies. Originally the Welsh employed a much shorter, rougher bow made of elm technically distinct from the classic English yew longbows. But as soon as the Welsh campaign was successfully over, Welsh conscripts began to be incorporated in large numbers into English armies. The valuable lessons the English learned in Wales of the tactic of massed formations of skilled archers using powerful bows was later used with great effect by English and Welsh mercenary longbowmen on the battlefields of Scotland and France.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -433,7 +424,7 @@
 		<German>[TAB]Das Bulgars waren in die Reiterk&#195;&#188;nste in hohem Grade erfahren.  Ihre Armee bestand haupts&#195;&#164;chlich aus Reiter wegen ihrer hohen F&#195;&#164;higkeit.  Jeder Bulgar Reiter hatte hohe Disziplin und hatte einige Pferde.  Jedoch nur ein einzelnes Pferd k&#195;&#182;nnte f&#195;&#188;r Kriegangelegenheiten benutzt werden, und es war verboten, um noch etwas mit ihm zu tun.  Es wird geglaubt, da&#195;&#159; das Bulgars das erste waren, wer die Steigb&#195;&#188;gel zu Europa holte.  Dieses gab ihnen Vorteile &#195;&#188;ber den anderen europ&#195;&#164;ischen Armeen dieser Zeit.  Das Bulgars konnte die B&#195;&#182;gen benutzen, die noch an den Pferden angebracht wurden.  Klingen und Stangen wurden auch im Krieg benutzt.  Die Steigb&#195;&#188;gel erh&#195;&#182;hten auch die Stabilit&#195;&#164;t und die Geschwindigkeit des Mitfahrers.</German>
 		<Italian>[TAB]Il Bulgars era altamente esperto nelle arti equestrian.  Il loro esercito pricipalmente ha consistito del horseman a causa dell'loro elevata specializzazione.  Ogni horseman di Bulgar ha avuto alta disciplina ed ha avuto parecchi cavalli.  Tuttavia, soltanto un singolo cavallo potrebbe essere usato per gli argomenti di wartime ed &#195;&#168; stato proibito a per fargli niente altro con.  Si crede che il Bulgars sia stato il primo chi ha portato le staffe ad Europa.  Ci&#195;&#178; ha dato loro i vantaggi sopra gli altri eserciti europei di questo tempo.  Il Bulgars ha potuto usare gli archi ancora montati sui cavalli.  Le spade ed i germogli inoltre sono stati utilizzati nella guerra.  Le staffe inoltre hanno aumentato la stabilit&#195;&#160; e la velocit&#195;&#160; del rider.</Italian>
 		<Spanish>[TAB]El Bulgars era altamente experto en los artes ecuestres.  Su ej&#195;&#169;rcito consisti&#195;&#179; en principalmente el jinete debido a su alta habilidad.  Cada jinete de Bulgar ten&#195;&#173;a alta disciplina y ten&#195;&#173;a varios caballos.  Sin embargo, solamente un solo caballo podr&#195;&#173;a ser utilizado para las materias del tiempo de guerra, y fue prohibido para hacer todo lo dem&#195;&#161;s con &#195;&#169;l.  Se cree que el Bulgars era el primer qui&#195;&#169;n trajo los estribos a Europa.  Esto les dio ventajas sobre los otros ej&#195;&#169;rcitos europeos de este tiempo.  El Bulgars pod&#195;&#173;a utilizar los arcos todav&#195;&#173;a montados en caballos.  Las espadas y las lanzas tambi&#195;&#169;n fueron utilizadas en guerra.  Los estribos tambi&#195;&#169;n aumentaron la estabilidad y la velocidad del jinete.</Spanish>
-		<Russian>[TAB]The Bulgars were highly skilled in the equestrian arts.  Their army mainly consisted of horseman because of their high skill.  Every Bulgar horseman had high discipline and had several horses.  However, only a single horse could be used for wartime matters, and it was forbidden to do anything else with it.  It is believed that the Bulgars were the first who brought the stirrups to Europe.  This gave them advantages above the other European armies of this time.  The Bulgars could use bows still mounted on horses.  Swords and spears were also used in war.  The stirrups also increased the stability and speed of the rider.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR_PEDIA</Tag>
@@ -442,7 +433,7 @@
 		<German>[TAB]Die ersten Husaren in das K&#195;&#182;nigreich Polen wurden durch den Sejm, das polnische Parlament, in der 1503 die drei gemietet Banner der ungarischen S&#195;&#182;ldnern. Bald begann auch die Einstellung der polnischen und litauischen B&#195;&#188;rger. Die Husaren als entscheidend f&#195;&#188;r Polen, weil sie mehr wendiger als die bisher verwendeten Speertr&#195;&#164;ger. But der Regierungszeit von K&#195;&#182;nig Stefan Batory, die Husaren bilden den gr&#195;&#182;&#195;&#159;ten Teil der polnischen und litauischen Kavallerie. &#195;&#156;ber viele Jahre, Husaren in Ungarn wurde schwerer. Wenn Stefan Batory gew&#195;&#164;hlt wurde K&#195;&#182;nig von Polen, er hat die Polnisch Husaren seiner Royal Guard und machen sie zu einer schweren Ausbildung, Ausr&#195;&#188;stung und Speertr&#195;&#164;ger als ihre wichtigste Waffe. Diese polnischen "schwere" Husaren bekannt waren, in ihrer eigenen Heimat als "husaria" [PARAGRAPH: 1] Mit der Schlacht von Lubiszew im 1577, das "Goldene Zeitalter" der Husaren begann. Bis in die Schlacht von Wien, Polnisch Husaren selten verloren in der Schlacht. In vielen Schlachten der polnischen Husaren - Litauisch w&#195;&#188;rde sich als ein wichtiger Faktor gegen die &#195;&#188;berw&#195;&#164;ltigende Quoten. [PARAGRAPH: 1] Der prim&#195;&#164;re Kampf Taktik der polnisch-litauischen Husaren war. Dar&#195;&#188;ber hinaus neigten die Geb&#195;&#188;hr zu wiederholen, bis der Feind Bildung pleite. Die Husaren k&#195;&#164;mpften mit einer langen Lanze, ein szabla, ein oder zwei Pistolen, und einem Karabiner oder arquebus, die in der polnischen als "bandolet." Polnischen Husaren waren auch ber&#195;&#188;hmt f&#195;&#188;r die Fl&#195;&#188;gel trugen sie auf dem R&#195;&#188;cken. Nach einigen Theorien, sie wurden so gestaltet, dass Folie Angriffe von Tataren Lassos, eine andere Theorie ist, dass die Vibrationen von Federn, die ein seltsames Ger&#195;&#164;usch, Angst Feind Pferde. Allerdings, Experimente durchgef&#195;&#188;hrt erneut enactors und Film Entscheidungstr&#195;&#164;ger seit den 1970er Jahren und in j&#195;&#188;ngster Zeit von den polnischen Historiker in der 2001 im Widerspruch zu solchen Ideen. M&#195;&#182;glicherweise die Fl&#195;&#188;gel getragen wurden nur w&#195;&#164;hrend der Paraden und nicht w&#195;&#164;hrend des Kampfes, aber diese Erkl&#195;&#164;rung ist auch umstritten.</German>
 		<Italian>[TAB]La prima unit&#195;&#160; ussaro nel Regno di Polonia si sono formati dal Sejm, il parlamento polacco, nel 1503, che noleggiati tre bandiere ungheresi di mercenari. Presto, ha iniziato il reclutamento anche tra i cittadini polacchi e lituani. Il Ussari rivelato fondamentale per la Polonia perch&#195;&#169; erano pi&#195;&#185; manovrabile da quella usata in precedenza lance. Ma il regno di Stefan Batory, la ussari formata la maggior parte della cavalleria polacco e lituano. Nel corso di molti anni, ussari in Ungheria &#195;&#168; diventata pi&#195;&#185; pesante. Stefan Batory, quando &#195;&#168; stato eletto re di Polonia, ha riorganizzato il Polacco-Lituana ussari del suo Royal Guard rendendoli un pesante formazione, e di dotare le lance come loro principale arma. Questi polacco 'pesanti' ussari erano conosciuti in patria come "husaria" [N: 1] Con la Battaglia di Lubiszew nel 1577, il "Golden Age" del ussaro iniziato. Fino alla battaglia di Vienna, polacco - lituano ussari raramente perso in battaglia. In molti battaglie polacco - lituano ussari sarebbe rivelato un fattore importante contro la stragrande quota. [PARAGRAPH: 1] La principale battaglia tattica del Polacco-Lituana ussari era l'accusa. Essi hanno anche la tendenza a ripetere la carica fino a quando il nemico formazione rotto. Il ussari combattuto con una lunga lancia, un szabla, uno o due pistole, e di una carabina o arquebus, in polacco noto come "bandolet". Ussari polacchi sono stati anche famosa per le ali che indossavano sulle loro spalle. Secondo alcune teorie, che sono stati progettati per sventare attacchi da Tataro lassos, un'altra teoria &#195;&#168; che la vibrazione di piume fatto uno strano suono che spaventati nemico cavalli. Tuttavia, gli esperimenti effettuati da ristabilire enactors movie e responsabili dal 1970 e, pi&#195;&#185; recentemente, dal polacco storici nel 2001 in contrasto con tali idee. Eventualmente, le ali sono stati indossati solo durante parate, e non durante il combattimento, ma questa spiegazione &#195;&#168; anche contestato.</Italian>
 		<Spanish>[TAB]La primera hussar unidades en el Reino de Polonia se formaron por el Sejm, el Parlamento polaco, en 1503, que contrat&#195;&#179; a tres pancartas h&#195;&#186;ngaro de los mercenarios. En breve, tambi&#195;&#169;n se inici&#195;&#179; la contrataci&#195;&#179;n entre los ciudadanos polacos y lituanos. El Hussars result&#195;&#179; vital para Polonia, ya que fueron m&#195;&#161;s maniobrable que los utilizados anteriormente lancers. But el reinado del rey Stefan Batory, la hussars forman el grueso de la caballer&#195;&#173;a polaco y lituano. Durante muchos a&#195;&#177;os, hussars en Hungr&#195;&#173;a se convirti&#195;&#179; en m&#195;&#161;s pesadas. Cuando Stefan Batory fue elegido rey de Polonia, se reorganiz&#195;&#179; el polaco - lituano hussars de su Guardia Real convierten en una pesada formaci&#195;&#179;n, y el equipamiento lancers como su principal arma. Estos polaco 'pesadas' hussars eran conocidos en su tierra natal como "husaria" [PARAGRAPH: 1] Con la Batalla de Lubiszew en 1577, la "Edad de Oro" de la hussar comenz&#195;&#179;. Hasta la Batalla de Viena, polaco, lituano hussars rara vez perdi&#195;&#179; en la batalla. Muchas batallas en todo el polaco - lituano hussars resultar&#195;&#173;a ser un factor importante en contra de enormes dificultades. [PARAGRAPH: 1] La principal batalla de la t&#195;&#161;ctica polaca y lituana hussars era el cargo. Tambi&#195;&#169;n tienden a repetir el cargo hasta que el enemigo rompi&#195;&#179; la formaci&#195;&#179;n. El hussars luch&#195;&#179; con una larga lanza, un szabla, una o dos pistolas, y una carabina o arquebus, conocido en Polonia como una "bandolet". Polish hussars tambi&#195;&#169;n famoso por las alas que llevaban en sus espaldas. Seg&#195;&#186;n algunas teor&#195;&#173;as, que estaban dise&#195;&#177;adas para frustrar los ataques de t&#195;&#161;rtaro lassos, otra teor&#195;&#173;a es que la vibraci&#195;&#179;n de plumas hizo un extra&#195;&#177;o sonido que asustados caballos enemigo. Sin embargo, los experimentos llevados a cabo por volver a enactors y de la pel&#195;&#173;cula de la formulaci&#195;&#179;n desde el decenio de 1970 y m&#195;&#161;s recientemente por historiadores de Polonia en 2001 contradice esas ideas. Posiblemente las alas se usaron s&#195;&#179;lo durante los desfiles y no durante el combate, pero esta explicaci&#195;&#179;n es tambi&#195;&#169;n controvertida.</Spanish>
-		<Russian>[TAB]The first hussar units in the Kingdom of Poland were formed by the Sejm, the Polish Parliament, in 1503 which hired three banners of Hungarian mercenaries.  Soon, recruitment also began among Polish and Lithuanian citizens.  The Hussars proved vital to Poland because they were more maneuverable than the previously used lancers.  But the reign of King Stefan Batory, the hussars formed the bulk of the Polish and Lithuanian cavalry.  Over many years, hussars in Hungary became heavier.  When Stefan Batory was elected king of Poland, he reorganized the Polish-Lithuanian hussars of his Royal Guard making them a heavy formation, and equipping lancers as their main weapon. These Polish 'heavy' hussars were known in their homeland as "husaria" [PARAGRAPH: 1] With the Battle of Lubiszew in 1577, the "Golden Age" of the hussar began.  Until the Battle of Vienna, Polish-Lithuanian hussars rarely lost in battle.  Throughout many battles the Polish-Lithuanian hussars would prove to be an important factor against overwhelming odds. [PARAGRAPH: 1] The primary battle tactic of the Polish-Lithuanian hussars was the charge.  They also tended to repeat the charge until the enemy formation broke.  The hussars fought with a long lance, a szabla, one or two pistols, and a carbine or arquebus, known in Polish as a "bandolet".  Polish hussars were also famous for the wings they wore on their backs.  According to some theories, they were designed to foil attacks by Tatar lassos, another theory being that the vibrating of feathers made a strange sound that frightened enemy horses.  However, experiments carried out by re-enactors and movie-makers since the 1970s and more recently by Polish historians in 2001 contradict such ideas. Possibly the wings were worn only during parades and not during combat, but this explanation is also disputed.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN_PEDIA</Tag>
@@ -451,7 +442,7 @@
 		<German>[TAB]Das Caroleans waren Soldaten der schwedischen K&#195;&#182;nige Charles XI und Charles XII.  Sie waren ein Teil des j&#195;&#164;hrlichen schwedischen Zuteilung Systems.  Die Taktiken des Caroleans waren, w&#195;&#188;tend anzugreifen und furchtlos zu bleiben.  Die Soldaten unterst&#195;&#188;tzten auch stern Disziplin, die &#195;&#188;ber dem umfangreichen Kurs eines Zwanzig-Jahr-langen Krieges lebenswichtiges pr&#195;&#188;fen w&#195;&#188;rde.  Die schwedischen Armeetaktiken der Zeit unterrichteten nicht R&#195;&#188;ckzug, also bekannt die Soldaten, um nie von der Schlacht zur&#195;&#188;ckzutreten.</German>
 		<Italian>[TAB]Il Caroleans era soldati dei re svedesi Charles XI e Charles XII.  Facevano parte del sistema svedese annuale di assegnazione.  Le tattiche del Caroleans erano di attacare ferocemente e rimanere unafraid.  I soldati inoltre hanno sostenuto la disciplina severa, che sopra il vasto corso di una guerra venti-anno-lunga dimostrerebbe vitale.  Le tattiche svedesi dell'esercito del tempo non hanno insegnato la ritirata, in modo da i soldati sono stati conosciuti per non ritirarsi mai dalla battaglia.</Italian>
 		<Spanish>[TAB]El Caroleans era soldados de los reyes suecos Charles XI y Charles XII.  Eran parte del sistema sueco anual de la asignaci&#195;&#179;n.  Las t&#195;&#161;ctica del Caroleans eran atacar ferozmente y seguir siendo sin miedo.  Los soldados tambi&#195;&#169;n sostuvieron la disciplina severa, que sobre el curso extenso de una guerra veinte-a&#195;&#177;o-larga probar&#195;&#173;a vital.  Las t&#195;&#161;ctica suecas del ej&#195;&#169;rcito del tiempo no ense&#195;&#177;aron el retratamiento, as&#195;&#173; que conoc&#195;&#173;an a los soldados nunca para retirarse de batalla.</Spanish>
-		<Russian>[TAB]The Karolins were soldiers of the Swedish kings Charles XI and Charles XII.  They were part of the yearly Swedish allotment system.  The Karolins' tactics were to attack fiercely and remain unafraid.  The soldiers also sustained stern discipline, which over the extensive course of a twenty-year-long war would prove vital.  The Swedish army tactics of the time did not teach retreat, so the soldiers were known to never withdraw from battle.</Russian>
+		<Russian>.</Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIKING_BESERKER</Tag>
