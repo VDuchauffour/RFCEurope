@@ -550,9 +550,9 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/EE2_Cogge/EE2_Cogge.nif</NIF>
-			<KFM>Art/Units/EE2_Cogge/EE2_Cogge.kfm</KFM>
-			<SHADERNIF>Art/Units/EE2_Cogge/EE2_Cogge_FX.nif</SHADERNIF>
+			<NIF>Art/Units/Cogge/EE2_Cogge.nif</NIF>
+			<KFM>Art/Units/Cogge/EE2_Cogge.kfm</KFM>
+			<SHADERNIF>Art/Units/Cogge/EE2_Cogge_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/GalleyShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -589,9 +589,9 @@
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Galleas/galley.nif</NIF>
-			<KFM>Art/Units/Galleas/galley.kfm</KFM>
-			<SHADERNIF>Art/Units/Galleas/galley_fx.nif</SHADERNIF>
+			<NIF>Art/Units/GunGalley/galley.nif</NIF>
+			<KFM>Art/Units/GunGalley/galley.kfm</KFM>
+			<SHADERNIF>Art/Units/GunGalley/galley_fx.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/GalleyShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -628,9 +628,9 @@
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/EE2_Galleas/EE2_Galleas.nif</NIF>
-			<KFM>Art/Units/EE2_Galleas/EE2_Galleas.kfm</KFM>
-			<SHADERNIF>Art/Units/EE2_Galleas/EE2_Galleas_FX.nif</SHADERNIF>
+			<NIF>Art/Units/Galleas/EE2_Galleas.nif</NIF>
+			<KFM>Art/Units/Galleas/EE2_Galleas.kfm</KFM>
+			<SHADERNIF>Art/Units/Galleas/EE2_Galleas_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/GalleyShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -706,9 +706,9 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/EE2_Carrack/EE2_Carrack.nif</NIF>
-			<KFM>Art/Units/EE2_Carrack/EE2_Carrack.kfm</KFM>
-			<SHADERNIF>Art/Units/EE2_Carrack/EE2_Carrack_FX.nif</SHADERNIF>
+			<NIF>Art/Units/Carrack/EE2_Carrack.nif</NIF>
+			<KFM>Art/Units/Carrack/EE2_Carrack.kfm</KFM>
+			<SHADERNIF>Art/Units/Carrack/EE2_Carrack_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/CaravelShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -784,9 +784,9 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/EE2_Holk/EE2_Holk.nif</NIF>
-			<KFM>Art/Units/EE2_Holk/EE2_Holk.kfm</KFM>
-			<SHADERNIF>Art/Units/EE2_Holk/EE2_Holk_FX.nif</SHADERNIF>
+			<NIF>Art/Units/Holk/EE2_Holk.nif</NIF>
+			<KFM>Art/Units/Holk/EE2_Holk.kfm</KFM>
+			<SHADERNIF>Art/Units/Holk/EE2_Holk_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/GalleonShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -1914,9 +1914,9 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/EnglishLongbow2/englb.nif</NIF>
+			<NIF>Art/Units/EnglishLongbow/englb.nif</NIF>
 			<KFM>Art/Units/Longbowman/Longbowman.kfm</KFM>
-			<SHADERNIF>Art/Units/EnglishLongbow2/englb.nif</SHADERNIF>
+			<SHADERNIF>Art/Units/EnglishLongbow/englb.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -2290,9 +2290,9 @@
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/MoscowBoyar2/companion_cavalry.nif</NIF>
+			<NIF>Art/Units/MoscowBoyar/companion_cavalry.nif</NIF>
 			<KFM>Art/Units/Scenario/companion_cavalry/companion_cavalry.kfm</KFM>
-			<SHADERNIF>Art/Units/MoscowBoyar2/companion_cavalry_fx.nif</SHADERNIF>
+			<SHADERNIF>Art/Units/MoscowBoyar/companion_cavalry_fx.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -3966,9 +3966,9 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/highlander_v1/Swordsman.nif</NIF>
+			<NIF>Art/Units/highlander/Swordsman.nif</NIF>
 			<KFM>Art/Units/Swordsman/Swordsman.kfm</KFM>
-			<SHADERNIF>Art/Units/highlander_v1/Swordsman_FX.nif</SHADERNIF>
+			<SHADERNIF>Art/Units/highlander/Swordsman_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
