@@ -2500,30 +2500,6 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_KIEV_COSSACK</Type>
-			<Button>Art/Interface/Buttons/Units/KievCossack.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/KievanCossack/russiancossack.nif</NIF>
-			<KFM>Art/Units/Unique/Russia/Cossack/RussianCossack.kfm</KFM>
-			<SHADERNIF>Art/Units/KievanCossack/russiancossack_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>HorseBip Spine1</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop/>
-				<AudioRunTypeEnd/>
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HUSSAR</Type>
 			<Button>Art/Interface/Buttons/Units/Hussar.dds</Button>
 			<fScale>0.42</fScale>
@@ -8468,30 +8444,6 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop/>
-				<AudioRunTypeEnd/>
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_ZAPOROZHIAN_COSSACK</Type>
-			<Button>Art/Interface/Buttons/Units/Arquebusier.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Zaporozhian Cossack/ZaporozhianCossack.nif</NIF>
-			<KFM>Art/Units/Janissary/Janissary.kfm</KFM>
-			<SHADERNIF>Art/Units/Zaporozhian Cossack/ZaporozhianCossack.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.05</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
