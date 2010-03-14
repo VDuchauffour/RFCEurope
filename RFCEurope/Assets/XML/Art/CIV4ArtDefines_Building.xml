@@ -895,7 +895,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>0.67</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Dungeon/dangeon.nif</NIF>
+			<NIF>Art/Structures/Buildings/Dungeon/dungeon.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/PoliceStation.dds,Art/Interface/Buttons/Buildings_Atlas.dds,5,9</Button>
 		</BuildingArtInfo>
