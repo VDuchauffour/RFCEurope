@@ -376,14 +376,6 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_ARQUEBUSIER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_ZAPOROZHIAN_COSSACK</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_ZAPOROZHIAN_COSSACK</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_ZAPOROZHIAN_COSSACK</MiddleArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
 					<UnitType>UNIT_MUSKETMAN</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_STRELETS</EarlyArtDefineTag>
