@@ -41,6 +41,8 @@ class StoredData:
                                     'lFirstContactConquerors': [0, 0, 0], #maya, inca, aztecs
                                     #------------Religions
                                     'iSeed': -1,
+                                    'bReformationActive': False,
+                                    'lReformationHitMatrix': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     #------------UP
                                     'iImmigrationTurnLength': 0,
                                     'iImmigrationCurrentTurn': 0,

@@ -452,9 +452,6 @@ class CvRFCEventHandler:
         				pCity.setHasRealBuilding(iTemple, True )
         
                 self.vic.onReligionFounded(iReligion, iFounder)
-        
-		if (iReligion == con.iProtestantism): #When protestantism is founded, start the reformation
-			self.rnf.reformation()
 		
                 if (iFounder < con.iNumPlayers):
                         self.sta.onReligionFounded(iFounder)
@@ -744,6 +741,8 @@ class CvRFCEventHandler:
                 #                self.vic.onTechAcquired(argsList[0], argsList[2])		
                 self.vic.onTechAcquired(argsList[0], argsList[2])
                                 
+                if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
+                        self.rel.onTechAcquired(argsList[0], argsList[2])
                 
                 if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
                         self.sta.onTechAcquired(argsList[0], argsList[2])
