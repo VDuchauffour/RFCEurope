@@ -867,40 +867,6 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 ( 20,  20,  20,  20,  10)  #Barb
 )
 
-### Reformation Begin ###       
-#Matrix determines how likely the AI is to switch to Protestantism                                                               
-lReformationMatrix = [
-50, #Burgundy
-10, #Byzantium
-40, #France
-10, #Arabia
-30, #Bulgaria
-10, #Cordoba
-10, #Spain
-80, #Norse
-30, #Venecia
-20, #Kiev
-50, #Hungary
-90, #Germany
-30, #Poland
-10, #Moscow
-30, #Genoa
-80, #England
-30, #Portugal
-50, #Austria
-10, #Turkey
-90, #Sweden
-90, #Dutch
-0,  #Rome
-0,  #Indies and Barbs
-0,
-0,
-0,
-0
-] 
-### Reformation End ###    
-
-
 # initialise tech variables to unit indices from XML
 
 #Early
