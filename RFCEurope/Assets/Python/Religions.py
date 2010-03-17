@@ -239,12 +239,12 @@ class Religions:
 		if (self.getReformationActive() == True):
 				#print( " Reformation #1 " )
 				self.reformationArrayChoice()
-		if (self.getReformationActive() == True):
-				#print( " Reformation #2 " )
-				self.reformationArrayChoice()
-		if (self.getReformationActive() == True):
-				#print( " Reformation #3 " )
-				self.reformationArrayChoice()
+				if (self.getReformationActive() == True):
+						#print( " Reformation #2 " )
+						self.reformationArrayChoice()
+						if (self.getReformationActive() == True):
+								#print( " Reformation #3 " )
+								self.reformationArrayChoice()
 
         def foundReligion(self, tPlot, iReligion):
                 if (tPlot != False):
