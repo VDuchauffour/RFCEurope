@@ -2476,7 +2476,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_1</Type>
-			<Button>Art/Interface/Buttons/Corporations/Hospitaller.dds</Button>
+			<Button>Art/Interface/Buttons/Units/HospitallerExec.dds</Button>
 			<fScale>0.46</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -2500,7 +2500,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_2</Type>
-			<Button>Art/Interface/Buttons/Corporations/Templar.dds</Button>
+			<Button>Art/Interface/Buttons/Units/TemplarExec.dds</Button>
 			<fScale>0.46</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -2524,7 +2524,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_3</Type>
-			<Button>Art/Interface/Buttons/Corporations/Teutonic.dds</Button>
+			<Button>Art/Interface/Buttons/Units/TeutonicExec.dds</Button>
 			<fScale>0.46</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
