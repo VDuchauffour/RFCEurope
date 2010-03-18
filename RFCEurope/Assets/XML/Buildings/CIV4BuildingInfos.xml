@@ -5877,7 +5877,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Tower of London -->
 			<BuildingClass>BUILDINGCLASS_TOWER_LONDON</BuildingClass>
 			<Type>BUILDING_TOWER_LONDON</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -20374,7 +20374,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- San Marco -->
 			<BuildingClass>BUILDINGCLASS_SAN_MARCO</BuildingClass>
 			<Type>BUILDING_SAN_MARCO</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -20759,7 +20759,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- St Basil-->
 			<BuildingClass>BUILDINGCLASS_ST_BASIL</BuildingClass>
 			<Type>BUILDING_ST_BASIL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -23955,10 +23955,10 @@
 			<PrereqTech>TECH_SHIPBUILDING</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
-      <PrereqBonuses>
-        <Bonus>BONUS_ACCESS</Bonus>
-      </PrereqBonuses>
-      <ProductionTraits/>
+			<PrereqBonuses>
+				<Bonus>BONUS_ACCESS</Bonus>
+			</PrereqBonuses>
+			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
