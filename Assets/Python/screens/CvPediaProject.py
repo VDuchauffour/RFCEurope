@@ -28,7 +28,7 @@ class CvPediaProject:
 		
 		self.X_MAIN_PANE = self.top.X_PEDIA_PAGE + 20
 		self.Y_MAIN_PANE = 63
-		self.W_MAIN_PANE = 270
+		self.W_MAIN_PANE = 370
 		self.H_MAIN_PANE = 116
 
 		self.X_ICON = self.X_MAIN_PANE + 8
@@ -41,7 +41,7 @@ class CvPediaProject:
 
 		self.X_STATS_PANE = self.X_ICON + self.W_ICON
 		self.Y_STATS_PANE = 93
-		self.W_STATS_PANE = 200
+		self.W_STATS_PANE = 300
 		self.H_STATS_PANE = 200
 
 		self.X_REQUIRES = self.X_MAIN_PANE + self.W_MAIN_PANE + 10
