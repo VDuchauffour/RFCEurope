@@ -2548,7 +2548,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_4</Type>
-			<Button>Art/Interface/Buttons/Corporations/Hanseatic.dds</Button>
+			<Button>Art/Interface/Buttons/Units/HanseaticExec.dds</Button>
 			<fScale>0.15</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -2580,7 +2580,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_5</Type>
-			<Button>Art/Interface/Buttons/Corporations/Medici.dds</Button>
+			<Button>Art/Interface/Buttons/Units/MediciExec.dds</Button>
 			<fScale>0.46</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -2604,7 +2604,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_6</Type>
-			<Button>Art/Interface/Buttons/Corporations/Augsburg.dds</Button>
+			<Button>Art/Interface/Buttons/Units/AugsburgExec.dds</Button>
 			<fScale>0.46</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -2628,7 +2628,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CEO_7</Type>
-			<Button>Art/Interface/Buttons/Corporations/Grimaldi.dds</Button>
+			<Button>Art/Interface/Buttons/Units/StGeorgeExec.dds</Button>
 			<fScale>0.46</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
