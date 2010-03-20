@@ -445,7 +445,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_FRANCE_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -566,7 +566,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_GREECE</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BYZANTIUM_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_BYZANTIUM_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -780,7 +780,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NETHERLANDS_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NETHERLANDS_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -889,7 +889,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ENGLAND_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ENGLAND_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -991,7 +991,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_FRANCE_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -1642,7 +1642,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_VIKING_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_VIKING_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -1850,7 +1850,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_PORTUGAL_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -1949,7 +1949,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -2053,7 +2053,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
+			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_VIKING_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_VIKING_ORDER</CivilizationActionSound>
 		</CivilizationInfo>

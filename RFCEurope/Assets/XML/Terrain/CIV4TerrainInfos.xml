@@ -1416,7 +1416,7 @@
 			<iSeeThrough>0</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
-			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Peak.dds</Button>
+			<Button>Art\Interface\Buttons\WorldBuilder\Terrain_Peak.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
