@@ -81,12 +81,10 @@
 		<English>Good for trade; bad for war</English>
 		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French><German/><Italian/><Spanish/><Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
-		<English>New units +3 experience</English>
-		<French>+3 XP pour les nouvelles unit&#233;s; religion d'&#233;tat rend le peuple heureux.</French><German/><Italian/><Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/>
-		<German/>
-		<Italian/>
-		<Spanish/><Russian>&#205;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; +2 &#238;&#239;&#251;&#242;&#224;; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#228;&#229;&#235;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;&#232;.</Russian><Japanese/><Chinese/></TEXT>
+		<English>Cities with State Religion train units faster</English>
+		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
 		<English>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</English>
@@ -1098,4 +1096,20 @@
 		</Spanish>
 		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
+		<English>Adds stability for each colony founded</English>
+		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
+		<English>Adds stability for each city outside the core area</English>
+		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
+		<English>+1 production from farms, slower growth for cottages and great people</English>
+		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
 </Civ4GameText>
