@@ -81,7 +81,6 @@
 		<English>Good for trade; bad for war</English>
 		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French><German/><Italian/><Spanish/><Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian><Japanese/><Chinese/></TEXT>
 	<TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
 		<English>Cities with State Religion train units faster</English>
 		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
@@ -1100,14 +1099,10 @@
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
 		<English>Adds stability for each colony founded</English>
 		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
-
-
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
 		<English>Adds stability for each city outside the core area</English>
 		<French/><German/><Italian/><Spanish/><Russian/><Japanese/><Chinese/></TEXT>
-
-
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
 		<English>+1 production from farms, slower growth for cottages and great people</English>

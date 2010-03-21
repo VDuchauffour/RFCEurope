@@ -739,7 +739,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_MARIA_THERESA</Type>
-			<Description>TXT_KEY_LEADER_MARIA_THERESA</Description>
+			<Description>Maria Theresa</Description>
 			<Civilopedia>TXT_KEY_LEADER_MARIA_THERESA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_MARIA_THERESA</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
