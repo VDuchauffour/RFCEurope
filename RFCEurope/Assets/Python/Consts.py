@@ -1335,7 +1335,7 @@ iImmunity = 20
 #leaders
 iLeaderBarbarian = 0
 iAlexander = 1
-iAsoka = 2
+iMariaTheresa = 2
 iAugustus = 3
 iBismarck = 4
 iBoudica = 5
@@ -1390,7 +1390,7 @@ iWillem_Van_Oranje = 51
 iZara_Yaqob = 52
 
 iSalahAlDin = 43
-iLeopold = 44
+iMaximilian = 44
 iSimeon = 45
 iRichard = 46
 iJustinian = 47
@@ -1438,7 +1438,7 @@ tLeaders = (
 (iSimone,),
 (iElizabeth,),
 (iJoao,),
-(iLeopold,),
+(iMaximilian,iMariaTheresa),
 (iSuleiman,),
 (iGustavus,),
 (iWilliamVanOranje,),
@@ -1463,7 +1463,7 @@ tEarlyLeaders = (
 (iSimone),
 (iElizabeth),
 (iJoao),
-(iLeopold),
+(iMaximilian),
 (iSuleiman),
 (iGustavus),
 (iWilliamVanOranje),
@@ -1489,7 +1489,7 @@ tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered af
 (iSimone,),
 (iElizabeth,),
 (iJoao,),
-(iLeopold,),
+(iMariaTheresa,i1700AD),
 (iSuleiman,),
 (iGustavus,),
 (iWilliamVanOranje,),

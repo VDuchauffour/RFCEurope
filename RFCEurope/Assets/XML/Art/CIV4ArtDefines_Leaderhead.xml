@@ -510,5 +510,21 @@
 			<NoShaderNIF>Art/Leaderheads/IvanIV/Grozniy.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/IvanIV/alexander_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MAXIMILIAN</Type>
+			<Button>Art/Leaderheads/Maximilian/MaximilianButton.dds</Button>
+			<NIF>Art/Leaderheads/Maximilian/Sitting Bull.nif</NIF>
+			<KFM>Art/Leaderheads/Maximilian/Sitting Bull.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Maximilian/Sitting_Bull_NOSHADER.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Maximilian/Sitting Bull_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MARIA_THERESA</Type>
+			<Button>Art/Leaderheads/Maximilian/MaximilianButton.dds</Button>
+			<NIF>Art/Leaderheads/MariaTheresa/Maria.nif</NIF>
+			<KFM>Art/Leaderheads/MariaTheresa/catherine.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/MariaTheresa/Maria.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/MariaTheresa/catherine_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

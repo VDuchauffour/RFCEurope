@@ -879,17 +879,17 @@ class RiseAndFall:
 
         def checkPlayerTurn(self, iGameTurn, iPlayer):
                 #switch leader on first anarchy if early leader is different from primary one, and in a late game anarchy period to a late leader              
-##                if (len(tLeaders[iPlayer]) > 1):
-##                        if (tEarlyLeaders[iPlayer] != tLeaders[iPlayer][0]):
-##                                if (iGameTurn > tBirth[iPlayer]+3 and iGameTurn < tBirth[iPlayer]+50):
-##                                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                        
-##                                                gc.getPlayer(iPlayer).setLeader(tLeaders[iPlayer][0])
-##                                                print ("leader early switch:", tLeaders[iPlayer][0], "in civ", iPlayer)                        
-##                        elif (iGameTurn >= tLateLeaders[iPlayer][1]):
-##                                if (tLateLeaders[iPlayer][0] != tLeaders[iPlayer][0]):   
-##                                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                                                                     
-##                                                gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
-##                                                print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer) 
+                if (len(tLeaders[iPlayer]) > 1):
+                        if (tEarlyLeaders[iPlayer] != tLeaders[iPlayer][0]):
+                                if (iGameTurn > tBirth[iPlayer]+3 and iGameTurn < tBirth[iPlayer]+50):
+                                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                        
+                                                gc.getPlayer(iPlayer).setLeader(tLeaders[iPlayer][0])
+                                                print ("leader early switch:", tLeaders[iPlayer][0], "in civ", iPlayer)                        
+                        elif (iGameTurn >= tLateLeaders[iPlayer][1]):
+                                if (tLateLeaders[iPlayer][0] != tLeaders[iPlayer][0]):   
+                                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                                                                     
+                                                gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
+                                                print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer) 
                 if (len(tLeaders[iPlayer]) > 1):
                         if (len(tLateLeaders[iPlayer]) > 5):
                                 if (iGameTurn >= tLateLeaders[iPlayer][5]):
