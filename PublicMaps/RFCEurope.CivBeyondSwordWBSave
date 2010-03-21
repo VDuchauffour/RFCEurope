@@ -239,7 +239,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=17
-	LeaderType=LEADER_LEOPOLD
+	LeaderType=LEADER_MAXIMILIAN
 	CivType=CIVILIZATION_AUSTRIA
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE

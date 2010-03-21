@@ -217,7 +217,11 @@
 			</InitialCivics>
 			<Leaders>
 				<Leader>
-					<LeaderName>LEADER_LEOPOLD</LeaderName>
+					<LeaderName>LEADER_MAXIMILIAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_MARIA_THERESA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

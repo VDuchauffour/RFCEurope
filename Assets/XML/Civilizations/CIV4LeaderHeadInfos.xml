@@ -738,10 +738,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_ASOKA</Type>
-			<Description>TXT_KEY_LEADER_ASOKA</Description>
-			<Civilopedia>TXT_KEY_LEADER_ASOKA_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_ASOKA</ArtDefineTag>
+			<Type>LEADER_MARIA_THERESA</Type>
+			<Description>TXT_KEY_LEADER_MARIA_THERESA</Description>
+			<Civilopedia>TXT_KEY_LEADER_MARIA_THERESA_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_MARIA_THERESA</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
 			<iBaseAttitude>1</iBaseAttitude>
 			<iBasePeaceWeight>8</iBasePeaceWeight>
@@ -23695,10 +23695,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_LEOPOLD</Type>
-			<Description>Leopold I</Description>
-			<Civilopedia>TXT_KEY_LEADER_LEOPOLD_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_WASHINGTON</ArtDefineTag>
+			<Type>LEADER_MAXIMILIAN</Type>
+			<Description>Maximilian I</Description>
+			<Civilopedia>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_MAXIMILIAN</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>8</iBasePeaceWeight>
