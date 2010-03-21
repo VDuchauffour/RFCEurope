@@ -520,7 +520,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_MARIA_THERESA</Type>
-			<Button>Art/Leaderheads/Maximilian/MaximilianButton.dds</Button>
+			<Button>Art/Leaderheads/MariaTheresa/MariaTheresaButton.dds</Button>
 			<NIF>Art/Leaderheads/MariaTheresa/Maria.nif</NIF>
 			<KFM>Art/Leaderheads/MariaTheresa/catherine.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/MariaTheresa/Maria.nif</NoShaderNIF>
