@@ -233,7 +233,7 @@
 			<Type>CIVIC_LIMITED_MONARCHY</Type>
 			<Description>TXT_KEY_CIVIC_LIMITED_MONARCHY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_LIMITED_MONARCHY</Strategy>
+			<Strategy>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Civics/LimitedMonarchy.dds</Button>
 			<TechPrereq>TECH_PAPER</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1095,7 +1095,7 @@
 			<Type>CIVIC_FREE_LABOR</Type>
 			<Description>TXT_KEY_CIVIC_FREE_LABOR</Description>
 			<Civilopedia>TXT_KEY_CIVIC_FREE_LABOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_FREE LABOR_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Strategy>
 			<Button>,Art/Interface/Buttons/Civics/Emancipation.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,1</Button>
 			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
