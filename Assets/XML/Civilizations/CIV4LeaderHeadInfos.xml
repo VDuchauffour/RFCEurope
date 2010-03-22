@@ -1285,10 +1285,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_BASIL</Type>
-			<Description>TXT_KEY_LEADER_BASIL</Description>
-			<Civilopedia>TXT_KEY_LEADER_BASIL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_BASIL</ArtDefineTag>
+			<Type>LEADER_ABUBAKR</Type>
+			<Description>Abu Bakr</Description>
+			<Civilopedia>TXT_KEY_LEADER_ABUBAKR_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_ABUBAKR</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>
@@ -1360,8 +1360,8 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_DESPOTISM</FavoriteCivic>
-			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>
+			<FavoriteCivic>CIVIC_RELIGIOUS_LAW</FavoriteCivic>
+			<FavoriteReligion>RELIGION_ISLAM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -1713,54 +1713,61 @@
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_ANCIENT</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_EARLY_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_CLASSICAL</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_EARLY_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MEDIEVAL</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_MIDDLE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_RENAISSANCE</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_MIDDLE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INDUSTRIAL</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MODERN</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyIntroMusicPeace>
 			<DiplomacyMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_ANCIENT</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_EARLY_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_CLASSICAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_EARLY_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MEDIEVAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_MIDDLE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_RENAISSANCE</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_MIDDLE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INDUSTRIAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MODERN</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
-					<DiploScriptId>AS2D_DIPLO_ALEXANDER_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SALADIN_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyMusicPeace>
 			<DiplomacyIntroMusicWar>

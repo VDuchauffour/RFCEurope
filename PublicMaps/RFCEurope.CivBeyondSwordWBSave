@@ -140,7 +140,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=3
-	LeaderType=LEADER_SALAHALDIN
+	LeaderType=LEADER_ABUBAKR
 	CivType=CIVILIZATION_ARABIA
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
