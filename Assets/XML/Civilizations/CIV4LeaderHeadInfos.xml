@@ -28116,7 +28116,7 @@
 			<Type>LEADER_SIMONE</Type>
 			<Description>Simone Boccanegra</Description>
 			<Civilopedia>TXT_KEY_LEADER_SIMONE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_ALEXANDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_LEADER_SIMONE</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>
