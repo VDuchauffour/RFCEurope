@@ -92,6 +92,10 @@
 			</InitialCivics>
 			<Leaders>
 				<Leader>
+					<LeaderName>LEADER_ABUBAKR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
 					<LeaderName>LEADER_SALAHALDIN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>

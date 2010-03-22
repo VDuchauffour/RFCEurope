@@ -520,11 +520,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_MARIA_THERESA</Type>
-			<Button>Art/Leaderheads/MariaTheresa/MariaTheresaButton.dds</Button>
-			<NIF>Art/Leaderheads/MariaTheresa/Maria.nif</NIF>
-			<KFM>Art/Leaderheads/MariaTheresa/catherine.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/MariaTheresa/Maria.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/MariaTheresa/catherine_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/MariaTheresa/Maria.dds</Button>
+			<NIF>Art/Leaderheads/MariaTheresa/victoria.nif</NIF>
+			<KFM>Art/Leaderheads/MariaTheresa/victoria.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/MariaTheresa/victoria_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/MariaTheresa/victoria_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JOAN</Type>
@@ -533,6 +533,14 @@
 			<KFM>Art/Leaderheads/JoanofArc/catherine.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/JoanofArc/joanofark.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/JoanofArc/catherine_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ABUBAKR</Type>
+			<Button>Art/Leaderheads/AbuBakr/AbuBakr.dds</Button>
+			<NIF>Art/Leaderheads/AbuBakr/abubakr.nif</NIF>
+			<KFM>Art/Leaderheads/AbuBakr/frederick_the_great.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/AbuBakr/frederick_the_great_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/AbuBakr/frederick_the_great_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>
