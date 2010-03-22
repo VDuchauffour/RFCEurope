@@ -133,7 +133,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=2
-	LeaderType=LEADER_LOUIS_XIV
+	LeaderType=LEADER_CHARLEMAGNE
 	CivType=CIVILIZATION_FRANKIA
         PlayableCiv=1
 	Handicap=HANDICAP_PRINCE

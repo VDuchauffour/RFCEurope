@@ -1336,8 +1336,8 @@ iImmunity = 20
 iLeaderBarbarian = 0
 iAlexander = 1
 iMariaTheresa = 2
-iAugustus = 3
-iBismarck = 4
+iBasil = 3
+iJoan = 4
 iBoudica = 5
 iBrennus = 6
 iCatherine = 7
@@ -1422,8 +1422,8 @@ iThePope = 65
 
 tLeaders = (
 (iRichard,),
-(iJustinian,),
-(iLouis_Xiv,),
+(iJustinian),
+(iCharlemagne,iJoan,iLouis_Xiv,),
 (iSalahAlDin,),
 (iSimeon,),
 (iAbdarRahman,),
@@ -1448,7 +1448,7 @@ tLeaders = (
 tEarlyLeaders = (
 (iRichard),
 (iJustinian),
-(iLouis_Xiv),
+(iJoan),
 (iSalahAlDin),
 (iSimeon),
 (iAbdarRahman),
@@ -1474,7 +1474,7 @@ tEarlyLeaders = (
 tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered after a few years
 (iRichard,),
 (iJustinian,),
-(iLouis_Xiv,),
+(iLouis_Xiv,i1452AD),
 (iSalahAlDin,),
 (iSimeon,),
 (iAbdarRahman,),

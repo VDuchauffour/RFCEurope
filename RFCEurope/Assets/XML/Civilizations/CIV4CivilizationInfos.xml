@@ -991,6 +991,14 @@
 			</InitialCivics>
 			<Leaders>
 				<Leader>
+					<LeaderName>LEADER_CHARLEMAGNE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JOAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
 					<LeaderName>LEADER_LOUIS_XIV</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
