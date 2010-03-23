@@ -201,10 +201,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_ALEXANDER</Type>
-			<Description>TXT_KEY_LEADER_ALEXANDER</Description>
-			<Civilopedia>TXT_KEY_LEADER_ALEXANDER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_ALEXANDER</ArtDefineTag>
+			<Type>LEADER_ABUYUSUFYAQUB</Type>
+			<Description>Abu Yusuf Yaqub</Description>
+			<Civilopedia>TXT_KEY_LEADER_ABUYUSUFYAQUB_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_ABUYUSUFYAQUB</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>
@@ -25907,7 +25907,7 @@
 			<Type>LEADER_ABDARRAHMAN</Type>
 			<Description>Abd-ar-Rahman III</Description>
 			<Civilopedia>TXT_KEY_LEADER_ABDARRAHMAN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_MEHMED</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_LEADER_ABDARRAHMAN</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>-1</iBaseAttitude>
 			<iBasePeaceWeight>2</iBasePeaceWeight>
