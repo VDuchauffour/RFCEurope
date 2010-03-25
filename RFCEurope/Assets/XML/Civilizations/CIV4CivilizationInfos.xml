@@ -21,10 +21,10 @@
 			<UHV1>TXT_KEY_UHV_ARA1</UHV1>
 			<UHV2>TXT_KEY_UHV_ARA2</UHV2>
 			<UHV3>TXT_KEY_UHV_ARA3</UHV3>
-			<SituationTrade>TXT_KEY_4STARS</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_5STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_2STARS</SituationGrowth>
+			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_4STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_GREEN_AND_WHITE</DefaultPlayerColor>
@@ -118,11 +118,11 @@
 			<UHV1>TXT_KEY_UHV_AUS1</UHV1>
 			<UHV2>TXT_KEY_UHV_AUS2</UHV2>
 			<UHV3>TXT_KEY_UHV_AUS3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_4STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_2STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_CYAN_AND_BLACK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_AUSTRIA</ArtDefineTag>
@@ -247,11 +247,11 @@
 			<UHV1>TXT_KEY_UHV_BUL1</UHV1>
 			<UHV2>TXT_KEY_UHV_BUL2</UHV2>
 			<UHV3>TXT_KEY_UHV_BUL3</UHV3>
-			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
-			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_2STARS</SituationCulture>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_4STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_4STARS</SituationStart>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIME</DefaultPlayerColor>
@@ -369,10 +369,10 @@
 			<UHV1>TXT_KEY_UHV_BUR1</UHV1>
 			<UHV2>TXT_KEY_UHV_BUR2</UHV2>
 			<UHV3>TXT_KEY_UHV_BUR3</UHV3>
-			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
-			<SituationProduction>TXT_KEY_4STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_4STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_2STARS</SituationGrowth>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_5STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BURGUNDY</DefaultPlayerColor>
@@ -471,10 +471,10 @@
 			<UHV1>TXT_KEY_UHV_BYZ1</UHV1>
 			<UHV2>TXT_KEY_UHV_BYZ2</UHV2>
 			<UHV3>TXT_KEY_UHV_BYZ3</UHV3>
-			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_4STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_4STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_1STAR</SituationGrowth>
+			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_ROYAL_PURPLE_AND_WHITE</DefaultPlayerColor>
@@ -592,11 +592,11 @@
 			<UHV1>TXT_KEY_UHV_COR1</UHV1>
 			<UHV2>TXT_KEY_UHV_COR2</UHV2>
 			<UHV3>TXT_KEY_UHV_COR3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
+			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_4STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationStart>TXT_KEY_4STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_GREEN</DefaultPlayerColor>
@@ -690,11 +690,11 @@
 			<UHV1>TXT_KEY_UHV_DUT1</UHV1>
 			<UHV2>TXT_KEY_UHV_DUT2</UHV2>
 			<UHV3>TXT_KEY_UHV_DUT3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_5STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationStart>TXT_KEY_1STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_ORANGE</DefaultPlayerColor>
@@ -810,11 +810,11 @@
 			<UHV1>TXT_KEY_UHV_ENG1</UHV1>
 			<UHV2>TXT_KEY_UHV_ENG2</UHV2>
 			<UHV3>TXT_KEY_UHV_ENG3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_4STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationStart>TXT_KEY_4STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_RED_AND_GOLD</DefaultPlayerColor>
@@ -919,11 +919,11 @@
 			<UHV1>TXT_KEY_UHV_FRA1</UHV1>
 			<UHV2>TXT_KEY_UHV_FRA2</UHV2>
 			<UHV3>TXT_KEY_UHV_FRA3</UHV3>
-			<SituationTrade>TXT_KEY_4STARS</SituationTrade>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_3STARS</SituationStart>
+			<SituationCulture>TXT_KEY_5STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_4STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_FRANKIA</ArtDefineTag>
@@ -1029,11 +1029,11 @@
 			<UHV1>TXT_KEY_UHV_GEN1</UHV1>
 			<UHV2>TXT_KEY_UHV_GEN2</UHV2>
 			<UHV3>TXT_KEY_UHV_GEN3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_5STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationCulture>TXT_KEY_2STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_2STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_WHITE</DefaultPlayerColor>
@@ -1153,11 +1153,11 @@
 			<UHV1>TXT_KEY_UHV_GER1</UHV1>
 			<UHV2>TXT_KEY_UHV_GER2</UHV2>
 			<UHV3>TXT_KEY_UHV_GER3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_5STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_2STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GERMANY</ArtDefineTag>
@@ -1282,11 +1282,11 @@
 			<UHV1>TXT_KEY_UHV_HUN1</UHV1>
 			<UHV2>TXT_KEY_UHV_HUN2</UHV2>
 			<UHV3>TXT_KEY_UHV_HUN3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BROWN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_HUNGARY</ArtDefineTag>
@@ -1396,11 +1396,11 @@
 			<UHV1>TXT_KEY_UHV_KIE1</UHV1>
 			<UHV2>TXT_KEY_UHV_KIE2</UHV2>
 			<UHV3>TXT_KEY_UHV_KIE3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationCulture>TXT_KEY_4STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_5STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_4STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
@@ -1490,11 +1490,11 @@
 			<UHV1>TXT_KEY_UHV_MOS1</UHV1>
 			<UHV2>TXT_KEY_UHV_MOS2</UHV2>
 			<UHV3>TXT_KEY_UHV_MOS3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_4STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_VERYDARK_RED</DefaultPlayerColor>
@@ -1592,11 +1592,11 @@
 			<UHV1>TXT_KEY_UHV_NOR1</UHV1>
 			<UHV2>TXT_KEY_UHV_NOR2</UHV2>
 			<UHV3>TXT_KEY_UHV_NOR3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_2STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BLUE</DefaultPlayerColor>
@@ -1700,11 +1700,11 @@
 			<UHV1>TXT_KEY_UHV_POL1</UHV1>
 			<UHV2>TXT_KEY_UHV_POL2</UHV2>
 			<UHV3>TXT_KEY_UHV_POL3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_5STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_CERISE</DefaultPlayerColor>
@@ -1798,11 +1798,11 @@
 			<UHV1>TXT_KEY_UHV_POR1</UHV1>
 			<UHV2>TXT_KEY_UHV_POR2</UHV2>
 			<UHV3>TXT_KEY_UHV_POR3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_4STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_2STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PORTUGAL</ArtDefineTag>
@@ -1912,11 +1912,11 @@
 			<UHV1>TXT_KEY_UHV_SPN1</UHV1>
 			<UHV2>TXT_KEY_UHV_SPN2</UHV2>
 			<UHV3>TXT_KEY_UHV_SPN3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_4STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_YELLOW</DefaultPlayerColor>
@@ -2015,11 +2015,11 @@
 			<UHV1>TXT_KEY_UHV_SWE1</UHV1>
 			<UHV2>TXT_KEY_UHV_SWE2</UHV2>
 			<UHV3>TXT_KEY_UHV_SWE3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_3STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_CYAN_AND_LEMON</DefaultPlayerColor>
@@ -2119,11 +2119,11 @@
 			<UHV1>TXT_KEY_UHV_TUR1</UHV1>
 			<UHV2>TXT_KEY_UHV_TUR2</UHV2>
 			<UHV3>TXT_KEY_UHV_TUR3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
+			<SituationTrade>TXT_KEY_2STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_5STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
+			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE</DefaultPlayerColor>
@@ -2225,11 +2225,11 @@
 			<UHV1>TXT_KEY_UHV_VEN1</UHV1>
 			<UHV2>TXT_KEY_UHV_VEN2</UHV2>
 			<UHV3>TXT_KEY_UHV_VEN3</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_5STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_5STARS</SituationStart>
+			<SituationStart>TXT_KEY_4STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_VENETIAN_RED_AND_WHITE</DefaultPlayerColor>
@@ -2349,10 +2349,10 @@
 			<UHV1>TXT_KEY_UHV_POP1</UHV1>
 			<UHV2>TXT_KEY_UHV_POP2</UHV2>
 			<UHV3>TXT_KEY_UHV_POPE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
-			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
-			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
-			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
+			<SituationTrade>TXT_KEY_4STARS</SituationTrade>
+			<SituationProduction>TXT_KEY_3STARS</SituationProduction>
+			<SituationCulture>TXT_KEY_5STARS</SituationCulture>
+			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
@@ -2467,7 +2467,7 @@
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
 			<UHV2>TXT_KEY_UHV_NONE</UHV2>
 			<UHV3>TXT_KEY_UHV_NONE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_1STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
@@ -2572,7 +2572,7 @@
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
 			<UHV2>TXT_KEY_UHV_NONE</UHV2>
 			<UHV3>TXT_KEY_UHV_NONE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_1STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
@@ -2680,7 +2680,7 @@
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
 			<UHV2>TXT_KEY_UHV_NONE</UHV2>
 			<UHV3>TXT_KEY_UHV_NONE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_1STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
@@ -2788,7 +2788,7 @@
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
 			<UHV2>TXT_KEY_UHV_NONE</UHV2>
 			<UHV3>TXT_KEY_UHV_NONE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_1STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
@@ -2896,7 +2896,7 @@
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
 			<UHV2>TXT_KEY_UHV_NONE</UHV2>
 			<UHV3>TXT_KEY_UHV_NONE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_1STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
@@ -3024,7 +3024,7 @@
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
 			<UHV2>TXT_KEY_UHV_NONE</UHV2>
 			<UHV3>TXT_KEY_UHV_NONE</UHV3>
-			<SituationTrade>TXT_KEY_1STAR</SituationTrade>
+			<SituationTrade>TXT_KEY_1STARS</SituationTrade>
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
