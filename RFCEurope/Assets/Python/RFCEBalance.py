@@ -252,7 +252,7 @@ class RFCEBalance:
 		
 		gc.setInitialBuilding( iSweden, con.iGranary, True )
 		gc.setInitialBuilding( iSweden, con.iHerbalist, True )
-		gc.setInitialBuilding( iSweden, con.iBarracks, True )
+		gc.setInitialBuilding( iSweden, con.iSwedishTennant, True )
 		gc.setInitialBuilding( iSweden, con.iForge, True )
 		gc.setInitialBuilding( iSweden, con.iHarbor, True )
 		gc.setInitialBuilding( iSweden, con.iAqueduct, True )
