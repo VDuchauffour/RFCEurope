@@ -203,7 +203,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Jungle.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,5,3</Button>
+			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
