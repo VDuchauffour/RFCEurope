@@ -2370,10 +2370,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_BOUDICA</Type>
-			<Description>TXT_KEY_LEADER_BOUDICA</Description>
-			<Civilopedia>TXT_KEY_LEADER_BOUDICA_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_BOUDICA</ArtDefineTag>
+			<Type>LEADER_MATTHIAS</Type>
+			<Description>Matthias Corvinus</Description>
+			<Civilopedia>TXT_KEY_LEADER_MATTHIAS_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_MATTHIAS</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>2</iBasePeaceWeight>
@@ -2915,10 +2915,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_BRENNUS</Type>
-			<Description>TXT_KEY_LEADER_BRENNUS</Description>
-			<Civilopedia>TXT_KEY_LEADER_BRENNUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_BRENNUS</ArtDefineTag>
+			<Type>LEADER_BARBAROSSA</Type>
+			<Description>Frederick Barbarossa</Description>
+			<Civilopedia>TXT_KEY_LEADER_BARBAROSSA_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_BARBAROSSA</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>-1</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>
@@ -4540,10 +4540,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_CHURCHILL</Type>
-			<Description>TXT_KEY_LEADER_CHURCHILL</Description>
-			<Civilopedia>TXT_KEY_LEADER_WINSTON_CHURCHILL_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_CHURCHILL</ArtDefineTag>
+			<Type>LEADER_PHILIP_II</Type>
+			<Description>Philip II</Description>
+			<Civilopedia>TXT_KEY_LEADER_PHILIP_II_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_PHILIP_II</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
 			<iBasePeaceWeight>6</iBasePeaceWeight>
@@ -5089,10 +5089,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_CYRUS</Type>
-			<Description>TXT_KEY_LEADER_CYRUS</Description>
-			<Civilopedia>TXT_KEY_LEADER_CYRUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_CYRUS</ArtDefineTag>
+			<Type>LEADER_SOBIESKI</Type>
+			<Description>Jan Sobieski</Description>
+			<Civilopedia>TXT_KEY_LEADER_SOBIESKI_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_SOBIESKI</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
 			<iBaseAttitude>1</iBaseAttitude>
 			<iBasePeaceWeight>3</iBasePeaceWeight>
@@ -5642,10 +5642,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_DARIUS</Type>
-			<Description>TXT_KEY_LEADER_DARIUS</Description>
-			<Civilopedia>TXT_KEY_LEADER_DARIUS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_DARIUS</ArtDefineTag>
+			<Type>LEADER_CHRISTIAN_IV</Type>
+			<Description>Christian IV</Description>
+			<Civilopedia>TXT_KEY_LEADER_CHRISTIAN_IV_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_CHRISTIAN_IV</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
 			<iBaseAttitude>1</iBaseAttitude>
 			<iBasePeaceWeight>8</iBasePeaceWeight>
