@@ -1338,14 +1338,13 @@ iAbuYusufYaqub = 1
 iMariaTheresa = 2
 iAbuBakr = 3
 iJoan = 4
-iBoudica = 5
-iBrennus = 6
+iMatthias = 5
+iBarbarossa = 6
 iCatherine = 7
 iCharlemagne = 8
-iOttoI = 8
-iChurchill = 9
-iCyrus = 10
-iDarius = 11
+iPhilip_II = 9
+iSobieski = 10
+iChristian_IV = 11
 iDe_Gaulle = 12
 iElizabeth = 13
 iFrederick = 14
@@ -1412,6 +1411,8 @@ iSuleiman = 62
 iDandolo = 63
 iPietro = 64
 iThePope = 65
+iIvanIV = 66
+iHaraldHadrada = 67
 
 
 # 3Miro - for late Roman Justinian in, should not be used in RFCE
@@ -1427,14 +1428,14 @@ tLeaders = (
 (iAbuBakr,iSalahAlDin),
 (iSimeon,),
 (iAbdarRahman,iAbuYusufYaqub),
-(iIsabella,),
-(iRagnar,),
+(iIsabella,iPhilip_II),
+(iHaraldHadrada,iChristian_IV),
 (iDandolo,),
 (iYaroslav,),
-(iStephen,),
-(iFrederick,),
-(iCasimir,),
-(iPeter,),
+(iStephen,iMatthias),
+(iBarbarossa,iFrederick,),
+(iCasimir,iSobieski),
+(iIvanIV,iPeter,iCatherine),
 (iSimone,),
 (iElizabeth,),
 (iJoao,),
@@ -1453,11 +1454,11 @@ tEarlyLeaders = (
 (iSimeon),
 (iAbdarRahman),
 (iIsabella),
-(iRagnar),
+(iHaraldHadrada),
 (iDandolo),
 (iYaroslav),
 (iStephen),
-(iFrederick),
+(iBarbarossa),
 (iCasimir),
 (iPeter),
 (iSimone),
@@ -1478,14 +1479,14 @@ tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered af
 (iSalahAlDin,i1160AD),
 (iSimeon,),
 (iAbuYusufYaqub,i1101AD),
-(iIsabella,),
-(iRagnar,),
+(iPhilip_II,i1520AD),
+(iChristian_IV,i1520AD),
 (iDandolo,),
 (iYaroslav,),
-(iStephen,),
-(iFrederick,),
-(iCasimir,),
-(iPeter,),
+(iMatthias,i1452AD),
+(iFrederick,i1520AD),
+(iSobieski,i1570AD),
+(iCatherine,i1700AD),
 (iSimone,),
 (iElizabeth,),
 (iJoao,),

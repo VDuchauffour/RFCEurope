@@ -566,5 +566,45 @@
 			<NoShaderNIF>Art/Leaderheads/Sunni/zara yaqob_nonshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Sunni/zara yaqob_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MATTHIAS</Type>
+			<Button>Art/Leaderheads/Matthias/btn_LH_magyar_Matyas.dds</Button>
+			<NIF>Art/Leaderheads/Matthias/John II.nif</NIF>
+			<KFM>Art/Leaderheads/Matthias/John II.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Matthias/John II.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Matthias/JohnII_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BARBAROSSA</Type>
+			<Button>Art/Leaderheads/Barbarossa/BarbarossaButton.dds</Button>
+			<NIF>Art/Leaderheads/Barbarossa/Kylorin.nif</NIF>
+			<KFM>Art/Leaderheads/Barbarossa/george_washington.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Barbarossa/Kylorin_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Barbarossa/washington_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PHILIP_II</Type>
+			<Button>Art/Leaderheads/Philip II/Philip.dds</Button>
+			<NIF>Art/Leaderheads/Philip II/SimonBolivar.nif</NIF>
+			<KFM>Art/Leaderheads/Philip II/SimonBolivar.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Philip II/SimonBolivar.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Philip II/SimonBolivar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SOBIESKI</Type>
+			<Button>Art/Leaderheads/Sobieski/Sobieski.dds</Button>
+			<NIF>Art/Leaderheads/Sobieski/Sobieski.nif</NIF>
+			<KFM>Art/Leaderheads/Sobieski/Sobieski.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Sobieski/Sobieski.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Sobieski/sobieski_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_CHRISTIAN_IV</Type>
+			<Button>Art/Leaderheads/Christian/Christian.dds</Button>
+			<NIF>Art/Leaderheads/Christian/Peter2.nif</NIF>
+			<KFM>Art/Leaderheads/Christian/Peter.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Christian/Peter.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Christian/Peter_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>	
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

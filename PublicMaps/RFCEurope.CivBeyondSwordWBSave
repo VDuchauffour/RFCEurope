@@ -197,7 +197,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=11
-	LeaderType=LEADER_FREDERICK
+	LeaderType=LEADER_BARBAROSSA
 	CivType=CIVILIZATION_GERMANY
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE

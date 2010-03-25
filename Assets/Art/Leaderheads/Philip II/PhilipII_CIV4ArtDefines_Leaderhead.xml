@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4ArtDefines xmlns="x-schema:PhilipII_CIV4ArtDefinesSchema.xml">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PHILIP_II</Type>
+			<Button>Modules/Custom Leaderheads/Philip II/philip.dds</Button>
+			<NIF>Modules/Custom Leaderheads/Philip II/SimonBolivar.nif</NIF>
+			<KFM>Modules/Custom Leaderheads/Philip II/SimonBolivar.kfm</KFM>
+			<NoShaderNIF>Modules/Custom Leaderheads/Philip II/SimonBolivar.nif</NoShaderNIF>
+			<BackgroundKFM>Modules/Custom Leaderheads/Philip II/SimonBolivar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>
