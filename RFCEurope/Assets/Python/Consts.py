@@ -1345,10 +1345,8 @@ iCharlemagne = 8
 iPhilip_II = 9
 iSobieski = 10
 iChristian_IV = 11
-iDe_Gaulle = 12
-iElizabeth = 13
-iFrederick = 14
-iGandhi = 15
+iWilliam = 12
+iAfonso = 13
 iGenghis_Khan = 16
 iGilgamesh = 17
 iHammurabi = 18
@@ -1437,10 +1435,10 @@ tLeaders = (
 (iCasimir,iSobieski),
 (iIvanIV,iPeter,iCatherine),
 (iSimone,),
-(iElizabeth,),
-(iJoao,),
+(iWilliam,iElizabeth,),
+(iAfonso,iJoao,),
 (iMaximilian,iMariaTheresa),
-(iSuleiman,),
+(iMehmed,iSuleiman,),
 (iGustavus,),
 (iWilliamVanOranje,),
 (iThePope,)
@@ -1462,10 +1460,10 @@ tEarlyLeaders = (
 (iCasimir),
 (iPeter),
 (iSimone),
-(iElizabeth),
-(iJoao),
+(iWilliam),
+(iAfonso),
 (iMaximilian),
-(iSuleiman),
+(iMehmed),
 (iGustavus),
 (iWilliamVanOranje),
 (iThePope)
@@ -1475,23 +1473,23 @@ tEarlyLeaders = (
 tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered after a few years
 (iRichard,),
 (iJustinian,),
-(iLouis_Xiv,i1452AD),
-(iSalahAlDin,i1160AD),
+(iLouis_Xiv,i1452AD,25,3),
+(iSalahAlDin,i1160AD,25,2),
 (iSimeon,),
-(iAbuYusufYaqub,i1101AD),
-(iPhilip_II,i1520AD),
-(iChristian_IV,i1520AD),
+(iAbuYusufYaqub,i1101AD,10,2),
+(iPhilip_II,i1520AD,10,3),
+(iChristian_IV,i1520AD,5,3),
 (iDandolo,),
 (iYaroslav,),
-(iMatthias,i1452AD),
-(iFrederick,i1520AD),
-(iSobieski,i1570AD),
-(iCatherine,i1700AD),
+(iMatthias,i1452AD,5,3),
+(iFrederick,i1520AD,5,3),
+(iSobieski,i1570AD,10,3),
+(iCatherine,i1700AD,25,3),
 (iSimone,),
-(iElizabeth,),
-(iJoao,),
-(iMariaTheresa,i1700AD),
-(iSuleiman,),
+(iElizabeth,i1452AD,10,3),
+(iJoao,i1419AD,10,3),
+(iMariaTheresa,i1700AD,25,3),
+(iSuleiman,i1520AD,15,3),
 (iGustavus,),
 (iWilliamVanOranje,),
 (iThePope)

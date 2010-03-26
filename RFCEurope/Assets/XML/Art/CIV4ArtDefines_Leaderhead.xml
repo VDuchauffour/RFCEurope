@@ -606,5 +606,21 @@
 			<NoShaderNIF>Art/Leaderheads/Christian/Peter.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Christian/Peter_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>	
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_WILLIAM</Type>
+			<Button>Art/Leaderheads/William the Conqueror/William_Button.dds</Button>
+			<NIF>Art/Leaderheads/William the Conqueror/frederick_the_great.nif</NIF>
+			<KFM>Art/Leaderheads/William the Conqueror/frederick_the_great.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/William the Conqueror/frederick_the_great_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/William the Conqueror/frederick_the_great_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>	
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_AFONSO</Type>
+			<Button>Art/Leaderheads/Afonso/AfonsoHenriques.dds</Button>
+			<NIF>Art/Leaderheads/Afonso/Pericles.nif</NIF>
+			<KFM>Art/Leaderheads/Afonso/Pericles.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Afonso/Pericles.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Afonso/Pericles_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

@@ -6190,10 +6190,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_DE_GAULLE</Type>
-			<Description>TXT_KEY_LEADER_DE_GAULLE</Description>
-			<Civilopedia>TXT_KEY_LEADER_DE_GAULLE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_DE_GAULLE</ArtDefineTag>
+			<Type>LEADER_WILLIAM</Type>
+			<Description>William the Conqueror</Description>
+			<Civilopedia>TXT_KEY_LEADER_WILLIAM_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_WILLIAM</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>-1</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>
@@ -6735,10 +6735,10 @@
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
-			<Type>LEADER_GANDHI</Type>
-			<Description>TXT_KEY_LEADER_GANDHI</Description>
-			<Civilopedia>TXT_KEY_LEADER_GANDHI_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_GANDHI</ArtDefineTag>
+			<Type>LEADER_AFONSO</Type>
+			<Description>Afonso Henriques</Description>
+			<Civilopedia>TXT_KEY_LEADER_AFONSO_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_AFONSO</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>2</iBaseAttitude>
 			<iBasePeaceWeight>10</iBasePeaceWeight>
