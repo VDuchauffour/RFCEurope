@@ -912,7 +912,6 @@ class RiseAndFall:
                                 iThreshold *= 2
                         if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0 or \
                             utils.getPlagueCountdown(iPlayer) > 0 or \
-                            utils.getGreatDepressionCountdown(iPlayer) > 0 or \
                             utils.getStability(iPlayer) <= -10 or \
                             gc.getGame().getSorenRandNum(100, 'die roll') < iThreshold):
                                 gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][iLeaderIndex])

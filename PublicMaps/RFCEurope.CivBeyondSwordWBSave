@@ -225,14 +225,14 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=15
-	LeaderType=LEADER_ELIZABETH
+	LeaderType=LEADER_WILLIAM
 	CivType=CIVILIZATION_ENGLAND
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=16
-	LeaderType=LEADER_JOAO
+	LeaderType=LEADER_AFONSO
 	CivType=CIVILIZATION_PORTUGAL
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
@@ -246,7 +246,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=18
-	LeaderType=LEADER_SULEIMAN
+	LeaderType=LEADER_MEHMED
 	CivType=CIVILIZATION_TURKEY
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
