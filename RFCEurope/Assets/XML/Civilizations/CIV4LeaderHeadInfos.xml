@@ -2371,7 +2371,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_MATTHIAS</Type>
-			<Description>Matthias Corvinus</Description>
+			<Description>TXT_KEY_LEADER_MAGYAR_MATYAS</Description>
 			<Civilopedia>TXT_KEY_LEADER_MATTHIAS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_MATTHIAS</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -2916,7 +2916,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_BARBAROSSA</Type>
-			<Description>Frederick Barbarossa</Description>
+			<Description>TXT_KEY_LEADER_BARBAROSSA</Description>
 			<Civilopedia>TXT_KEY_LEADER_BARBAROSSA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_BARBAROSSA</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -4541,7 +4541,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_PHILIP_II</Type>
-			<Description>Philip II</Description>
+			<Description>TXT_KEY_LEADER_PHILIP_II</Description>
 			<Civilopedia>TXT_KEY_LEADER_PHILIP_II_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_PHILIP_II</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -5090,7 +5090,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_SOBIESKI</Type>
-			<Description>Jan Sobieski</Description>
+			<Description>TXT_KEY_LEADER_SOBIESKI</Description>
 			<Civilopedia>TXT_KEY_LEADER_SOBIESKI_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_SOBIESKI</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
@@ -5643,7 +5643,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_CHRISTIAN_IV</Type>
-			<Description>Christian IV</Description>
+			<Description>TXT_KEY_LEADER_CHRISTIAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_CHRISTIAN_IV_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_CHRISTIAN_IV</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
@@ -6736,7 +6736,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_AFONSO</Type>
-			<Description>Afonso Henriques</Description>
+			<Description>TXT_KEY_LEADER_AFONSO</Description>
 			<Civilopedia>TXT_KEY_LEADER_AFONSO_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_AFONSO</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -36320,7 +36320,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_IVAN_IV</Type>
-			<Description>Ivan IV</Description>
+			<Description>TXT_KEY_LEADER_IVAN_IV</Description>
 			<Civilopedia>TXT_KEY_LEADER_IVAN_IV_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_IVAN_IV</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>

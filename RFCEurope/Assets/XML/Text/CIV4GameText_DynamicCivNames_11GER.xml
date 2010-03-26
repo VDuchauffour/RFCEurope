@@ -247,4 +247,26 @@
 		<Spanish>Provincia de Germania</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BARBAROSSA</Tag>
+		<English>Frederick Barbarossa</English>
+		<French>Frédéric Barberousse</French>
+		<German>Frederich Barbarossa</German>
+		<Italian>Frederico Barbarossa</Italian>
+		<Spanish>Frederico Barbarroja</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BARBAROSSA_PEDIA</Tag>
+		<English>[H1]Frederick Barbarossa[\H1]
+[BOLD]Holy Roman Emperor[\BOLD]
+[BOLD]Lived:[\BOLD] 1122-1190
+
+
+	[BOLD]Background:[\BOLD]	
+	Frederick Barbossa was was the elected King of Germany at Frankfurt on 4 March 1152 and crowned in Aachen on 9 March, crowned King of Italy at Pavia in 1154, and finally crowned Holy Roman Emperor by Pope Adrian IV on 18 June 1155. He was crowned King of Burgundy at Arles on 30 June 1178. Before his royal election, he was by inheritance Duke of Swabia (1147-1152, as Frederick III). He was the son of Duke Frederick II of the Hohenstaufen dynasty. His mother was Judith, daughter of Henry IX, Duke of Bavaria, from the rival House of Welf, and Frederick therefore descended from Germany's two leading families, making him an acceptable choice for the Empire's prince-electors.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>
