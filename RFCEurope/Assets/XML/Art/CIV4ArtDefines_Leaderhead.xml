@@ -499,7 +499,7 @@
 			<Button>Art/Leaderheads/Istvan/btn_LH_magyar_Istvan.dds</Button>
 			<NIF>Art/Leaderheads/Istvan/Cyrus.nif</NIF>
 			<KFM>Art/Leaderheads/Istvan/Cyrus.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Istvan/Cyrus.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/Istvan/Cyrus_nonshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Istvan/Willem van Oranje_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
