@@ -187,7 +187,7 @@
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_22</Tag>
-		<English>Keep track of the current year, this mod spawns 500AD - 1800AD in 500 turns.</English>
+		<English>Keep track of the current year, this mod spans 500AD - 1800AD in 500 turns.</English>
 		<French>Vous ne pouvez pas conna&#233;tre l'ann&#233;e actuelle avant d'avoir d&#233;couvert le calendrier.</French>
 		<German>Das aktuelle Spieljahr ist bis zur Entdeckung des "Kalenders" nicht sichtbar.</German>
 		<Italian>Non puoi sapere in che anno ti trovi fino a quando non scopri il calendario.</Italian>
@@ -250,7 +250,7 @@
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_29</Tag>
-		<English>In RFC Europe, vassal stases are enabled by the discovery of the Vassalage tech.</English>
+		<English>In RFC Europe, vassal states are enabled by the discovery of the Vassalage tech.</English>
 		<French>Dans Rhye's and Fall of Civilization, la d&#233;couverte de la monarchie permet les &#233;tats vassaux.</French>
 		<German>In Rhye's and Fall of Civilization werden Vasallenstaaten durch die Entdeckung der "Monarchie" verf&#233;gbar.</German>
 		<Italian>In Rhye's and Fall gli stati vassalli sono abilitati dalla scoperta della monarchia.</Italian>
@@ -403,7 +403,7 @@
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_46</Tag>
-		<English>If you are to tired to keep playing, there's always coffee...</English>
+		<English>If you are too tired to keep playing, there's always coffee...</English>
 		<French>Si vous &#234;tes trop fatigu&#233; pour continuer, il y a toujours le caf&#233;...</French>
 		<German>Wenn Sie müde sind, um weiter spielen, es gibt immer Kaffee ...</German>
 		<Italian>Se siete stanchi di continuare a giocare, c'è sempre il caffè ...</Italian>
