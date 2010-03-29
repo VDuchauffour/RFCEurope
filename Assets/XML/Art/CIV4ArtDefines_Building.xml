@@ -1625,7 +1625,7 @@
 			<Type>ART_DEF_BUILDING_CORPORATION_4</Type>
 			<LSystem>LSYSTEM_HARBOR</LSystem>
 			<bAnimated>1</bAnimated>
-			<fScale>0.8</fScale>
+			<fScale>0.4</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hansa/Hanseatic/medieval_house2.nif</NIF>
 			<KFM/>
