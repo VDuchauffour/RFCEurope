@@ -8607,7 +8607,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=32
-	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -9332,7 +9331,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=23
-	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -9782,7 +9780,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=28
-	ImprovementType=IMPROVEMENT_VILLAGE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -11082,7 +11079,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=37
-	ImprovementType=IMPROVEMENT_VILLAGE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -15328,7 +15324,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=52
-	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -17550,7 +17545,6 @@ BeginPlot
 	x=43,y=53
 	isNOfRiver
 	RiverWEDirection=1
-	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -21129,7 +21123,6 @@ BeginPlot
 	x=51,y=48
 	RiverNSDirection=0
 	isWOfRiver
-	ImprovementType=IMPROVEMENT_FORT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -21571,7 +21564,6 @@ BeginPlot
 	x=52,y=46
 	isNOfRiver
 	RiverWEDirection=3
-	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -41912,7 +41904,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=8
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,

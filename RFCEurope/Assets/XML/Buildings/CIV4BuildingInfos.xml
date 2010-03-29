@@ -22809,6 +22809,7 @@
 			<Description>TXT_KEY_HANSEATIC_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_HANSEATIC_LEAGUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_4_STRATEGY</Strategy>
+			<Help>TXT_KEY_HANSEATIC_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_4</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>

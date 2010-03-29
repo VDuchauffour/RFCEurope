@@ -250,7 +250,7 @@ class Barbs:
 		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, con.iCordobanBerber, 2) #UnitOwner = 22 -> iIndy2 
 		#self.foundCity(iIndependent3, lCorunna, "A Corunna", iGameTurn, 1, con.iCrossbowman, 2) #UnitOnwer = 21 -> iIndy
 		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, con.iArcher, 2)
-		self.foundCity(iBarbarian, lPalermo, "Palermo", iGameTurn, 1, con.iArcher, 1)
+		#self.foundCity(iBarbarian, lPalermo, "Palermo", iGameTurn, 1, con.iArcher, 1)
 		#self.foundCity(iIndependent3, lLeon, "Leon", iGameTurn, 1, con.iCrossbowman, 2)
 		#self.foundCity(iIndependent3, lBurgos, "Burgos", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, con.iArcher, 1)

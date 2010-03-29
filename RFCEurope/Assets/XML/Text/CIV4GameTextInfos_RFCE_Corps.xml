@@ -205,4 +205,12 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANSEATIC_HELP</Tag>
+		<English>Can only be founded in coastal town.</English>
+		<French>Can only be founded in coastal town.</French>
+		<German>Can only be founded in coastal town.</German>
+		<Italian>Can only be founded in coastal town.</Italian>
+		<Spanish>Can only be founded in coastal town.</Spanish>
+	</TEXT>
 </Civ4GameText>
