@@ -391,7 +391,7 @@ tReserveCapitals = (
 #	Also Broader Area
 
 tCoreAreasTL = ( #Core Area is initial spawn location, and also important for stability
-(47,37),   #Burgundy
+(45,36),   #Burgundy
 (71,14),   #Byzantium
 (42,42),   #Franks
 (93,1),   #Arabs
@@ -416,7 +416,7 @@ tCoreAreasTL = ( #Core Area is initial spawn location, and also important for st
 ) 
 
 tCoreAreasBR = (
-(51,48),   #Burgundy
+(49,42),   #Burgundy
 (84,26),   #Byzantium
 (46,47),   #Franks
 (99,15),   #Arabs
