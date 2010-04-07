@@ -50,7 +50,7 @@ lLyon = [46,37,0,0] #500 AD
 lTunis = [49,17,0,0] #500 AD
 lPisae = [52,32,0,0] #500 AD These guys want to start with Catholicism?
 lMediolanum = [52,37,0,0] #500 AD
-lMilan = [52,37,75,0] #800 AD The respawn gambit, so that it still exist if razed
+lMilan = [52,37,75,0] #800 AD The respawn gambit, so that it still exists if razed
 lFlorentia = [54,31,0,0] #500 AD
 lFirenze = [54,31,75,0] #800 AD Same as Mediolanum--->Milan 
 lTripoli = [56,6,0,0] #500 AD
@@ -73,6 +73,7 @@ lSamara = [97,54,240,0] #800 AD
 lKazan = [97,60,240,0] #800 AD
 lNovgorod = [80,62,240,0] #800 AD
 lMinsk = [76,50,120,0] #800 AD
+lAlbaIulia = [73,34,100,0] #900 AD
 lRiga = [72,58,240,0] #900 AD
 lMemel = [70,55,240,0] #900 AD
 lTvanksta = [70,54,100,0] #900 AD
@@ -167,14 +168,18 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (68,18),(78,28), con.iScout, 1 + iHandicap*2, iGameTurn,5,0,utils.outerInvasion,1)	
 
 		#Misc Asiatic tribes to keep Ukraine empty
-		if (iGameTurn >= con.i632AD and iGameTurn < con.i1000AD):
+		if (iGameTurn >= con.i632AD and iGameTurn < con.i8AD):
 			self.spawnUnits( iBarbarian, (80,36),(87,40), con.iScout, 1 + iHandicap*2, iGameTurn,7,1,utils.outerInvasion,1)
 
-		#Cumans and Pechenegs 800 to 1100 		
+		#Khazars 800 to 1100 		
 		if (iGameTurn >= con.i800AD and iGameTurn < con.i940AD):
-			self.spawnUnits( iBarbarian, (90,20),(99,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (88,31),(99,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
 		if (iGameTurn >= con.i940AD and iGameTurn < con.i1000AD):
-			self.spawnUnits( iBarbarian, (90,20),(99,40), con.iLancer, 1 + iHandicap*2, iGameTurn,5,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (88,31),(99,40), con.iLancer, 1 + iHandicap*2, iGameTurn,5,1,utils.outerInvasion,1)
+
+		#Pechenegs and Cumans in Northern Balkans
+		if (iGameTurn >= con.i940AD and iGameTurn < con.i1160AD):
+			self.spawnUnits( iBarbarian, (66,33),(78,43), con.iLancer, 2 + iHandicap*2, iGameTurn,4,1,utils.outerInvasion,1)
 		
 		#Vikings on ships 
 		if (gc.getPlayer(con.iNorse).isHuman()): #Humans can properly go viking without help
@@ -278,7 +283,7 @@ class Barbs:
 		#self.foundCity(iIndependent2, lCatania, "Catania", iGameTurn, 1, con.iArcher, 1) #This city is in the ocean.
 		self.foundCity(iIndependent3, lNapoli, "Neapolis", iGameTurn, 3, con.iArcher, 1)
 		self.foundCity(iIndependent3, lRagusa, "Ragusa", iGameTurn, 1, con.iArcher, 1)
-		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, con.iArcher, 1)
+		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent4, lRhodes, "Rhodes", iGameTurn, 1, con.iArcher, 1) #Start with Orthodoxy and a Harbor?
 		self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, con.iArcher, 2)
@@ -293,6 +298,7 @@ class Barbs:
 		#self.foundCity(iIndependent2, lBreslau, "Breslau", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent2, lKrakow, "Krakow", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent3, lKharkov, "Kharkov", iGameTurn, 1, con.iCrossbowman, 2)
+		self.foundCity(iBarbarian, lAlbaIulia, "Belgrad", iGameTurn, 1, con.iCrossbowman, 1)
 		self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, con.iCrossbowman, 1)
 		self.foundCity(iBarbarian, lKazan, "Bulgar", iGameTurn, 1, con.iCrossbowman, 1)
 		self.foundCity(iIndependent4, lYaroslavl, "Yaroslavl", iGameTurn, 1, con.iCrossbowman, 1)

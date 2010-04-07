@@ -392,7 +392,7 @@ tReserveCapitals = (
 
 tCoreAreasTL = ( #Core Area is initial spawn location, and also important for stability
 (45,36),   #Burgundy
-(71,14),   #Byzantium
+(66,14),   #Byzantium
 (42,42),   #Franks
 (93,1),   #Arabs
 (74,28),   #Bulgaria
@@ -426,7 +426,7 @@ tCoreAreasBR = (
 (59,65),   #Norse
 (61,36),   #Venice
 (91,48),   #Kiev
-(72,42),   #Hungary
+(71,39),   #Hungary
 (57,48),   #Germany
 (75,50),   #Poland
 (95,68),   #Moscow
@@ -442,7 +442,7 @@ tCoreAreasBR = (
 
 
 tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in spawn.
-(), #Burgundy
+(), #Burgundy 
 (), #Byzantium
 (), #Frankia
 (), #Arabia
@@ -450,7 +450,7 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 ((24, 23), (24, 22), (24, 21), (24, 20), (24, 19), (23, 22), (23, 21), (23, 20)), #Cordoba
 (), #Spain
 (), #Norse
-(), #Venecia
+(), #Venecia 
 (), #Kiev
 (), #Hungary
 (), #Germany
@@ -531,7 +531,7 @@ tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 (), #Cordoba
 ((35, 40), (36, 40), (37, 40), (38, 40), (39, 40), (40, 40), (41, 39), (41, 40), (40, 39), (39, 39), (38, 39), (37, 39), (36, 39), (35, 39), (35, 38), (36, 38), (37, 38), (38, 38), (39, 38), (40, 38), (41, 38), (37, 37), (36, 37), (38, 37), (39, 37), (40, 37), (41, 37), (41, 36), (40, 36), (39, 36), (38, 36), (37, 36), (36, 36), (38, 35), (39, 35), (40, 35), (41, 35), (41, 34), (40, 34), (39, 34), (24, 36), (24, 35), (24, 34), (24, 33), (24, 32), (24, 31), (25, 36), (25, 35), (25, 34)), #Spain
 (), #Norse
-(), #Venecia
+(), #Venecia 
 (), #Kiev
 (), #Hungary
 (), #Germany
