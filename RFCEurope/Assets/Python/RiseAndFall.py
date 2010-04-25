@@ -2368,7 +2368,7 @@ class RiseAndFall:
                 #utils.makeUnit(iSettler, iByzantium, tCapitals[iByzantium], 1)
                 #utils.makeUnit(iSpearman, iByzantium, tCapitals[iByzantium], 1)
                 
-                utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 1)
+                utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(con.iArcher, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(con.iAxeman, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
