@@ -1334,9 +1334,9 @@ iImmunity = 20
 
 #leaders
 iBarbarian=0
-iAbuyusufyaqub=1
+iAbuYusufYaqub=1
 iMaria_Theresa=2
-iAbubakr=3
+iAbuBakr=3
 iJoan=4
 iMatthias=5
 iBarbarossa=6
@@ -1353,7 +1353,7 @@ iMaximilian=16
 iSimeon=17
 iCharles_V=18
 iJustinian=19
-iAbdarrahman=20
+iAbdarRahman=20
 iWillem_Van_Oranje=21
 iElizabeth=22
 iLouis_Xiv=23
@@ -1386,20 +1386,20 @@ tLeaders = (
 (iSimeon,),
 (iAbdarRahman,iAbuYusufYaqub),
 (iIsabella,iPhilip_Ii),
-(iHaraldHadrada,iChristian_Iv),
+(iHarald_Hardrada,iChristian_Iv),
 (iDandolo,),
 (iYaroslav,),
 (iStephen,iMatthias),
 (iBarbarossa,iFrederick,),
 (iCasimir,iSobieski),
-(iIvanIv,iPeter,iCatherine),
+(iIvan_Iv,iPeter,iCatherine),
 (iSimone,),
 (iWilliam,iElizabeth,),
 (iAfonso,iJoao,),
-(iMaximilian,iMariaTheresa),
+(iMaximilian,iMaria_Theresa),
 (iMehmed,iSuleiman,),
 (iGustavus,),
-(iWilliamVanOranje,),
+(iWillem_Van_Oranje,),
 (iThe_Pope,)
 )
 
@@ -1411,7 +1411,7 @@ tEarlyLeaders = (
 (iSimeon),
 (iAbdarRahman),
 (iIsabella),
-(iHaraldHadrada),
+(iHarald_Hardrada),
 (iDandolo),
 (iYaroslav),
 (iStephen),
@@ -1424,7 +1424,7 @@ tEarlyLeaders = (
 (iMaximilian),
 (iMehmed),
 (iGustavus),
-(iWilliamVanOranje),
+(iWillem_Van_Oranje),
 (iThe_Pope)
 )
 
@@ -1447,10 +1447,10 @@ tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered af
 (iSimone,),
 (iElizabeth,i1452AD,10,3),
 (iJoao,i1419AD,10,3),
-(iMariaTheresa,i1700AD,25,3),
+(iMaria_Theresa,i1700AD,25,3),
 (iSuleiman,i1520AD,15,3),
 (iGustavus,),
-(iWilliamVanOranje,),
+(iWillem_Van_Oranje,),
 (iThe_Pope)
 )
 

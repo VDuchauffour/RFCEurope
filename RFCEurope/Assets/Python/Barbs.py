@@ -168,7 +168,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (68,18),(78,28), con.iScout, 1 + iHandicap*2, iGameTurn,5,0,utils.outerInvasion,1)	
 
 		#Misc Asiatic tribes to keep Ukraine empty
-		if (iGameTurn >= con.i632AD and iGameTurn < con.i8AD):
+		if (iGameTurn >= con.i632AD and iGameTurn < con.i800AD):
 			self.spawnUnits( iBarbarian, (80,36),(87,40), con.iScout, 1 + iHandicap*2, iGameTurn,7,1,utils.outerInvasion,1)
 
 		#Khazars 800 to 1100 		
