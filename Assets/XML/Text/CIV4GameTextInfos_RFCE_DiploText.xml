@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Game Text Objects -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUYUSUFYAQUB_1</Tag>
+		<English>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</English>
+		<French>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</French>
+		<German>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</German>
+		<Italian>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</Italian>
+		<Spanish>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</Spanish>
+		<Russian>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARIA_THERESA_1</Tag>
+		<English>While other nations go to war, we lucky Austria, we wed.</English>
+		<French>While other nations go to war, we lucky Austria, we wed.</French>
+		<German>While other nations go to war, we lucky Austria, we wed.</German>
+		<Italian>While other nations go to war, we lucky Austria, we wed.</Italian>
+		<Spanish>While other nations go to war, we lucky Austria, we wed.</Spanish>
+		<Russian>While other nations go to war, we lucky Austria, we wed.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUBAKR_1</Tag>
+		<English>Assalamu alaikum. Allah will help him who moves in the way of Allah.</English>
+		<French>Assalamu alaikum. Allah will help him who moves in the way of Allah.</French>
+		<German>Assalamu alaikum. Allah will help him who moves in the way of Allah.</German>
+		<Italian>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Italian>
+		<Spanish>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Spanish>
+		<Russian>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JOAN_1</Tag>
+		<English>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</English>
+		<French>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</French>
+		<German>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</German>
+		<Italian>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</Italian>
+		<Spanish>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</Spanish>
+		<Russian>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
+		<English>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</English>
+		<French>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</French>
+		<German>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</German>
+		<Italian>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Italian>
+		<Spanish>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Spanish>
+		<Russian>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BARBAROSSA_1</Tag>
+		<English>By my beard, your lands look easily conquered!</English>
+		<French>By my beard, your lands look easily conquered!</French>
+		<German>By my beard, your lands look easily conquered!</German>
+		<Italian>By my beard, your lands look easily conquered!</Italian>
+		<Spanish>By my beard, your lands look easily conquered!</Spanish>
+		<Russian>By my beard, your lands look easily conquered!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PHILLIP_II_1</Tag>
+		<English>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</English>
+		<French>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</French>
+		<German>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</German>
+		<Italian>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Italian>
+		<Spanish>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Spanish>
+		<Russian>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOBIESKI_1</Tag>
+		<English>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</English>
+		<French>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</French>
+		<German>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</German>
+		<Italian>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</Italian>
+		<Spanish>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</Spanish>
+		<Russian>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHRISTIAN_IV_1</Tag>
+		<English>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</English>
+		<French>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</French>
+		<German>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</German>
+		<Italian>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</Italian>
+		<Spanish>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</Spanish>
+		<Russian>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WILLIAM_1</Tag>
+		<English>Well met friend. What shall we conquer today?</English>
+		<French>Well met friend. What shall we conquer today?</French>
+		<German>Well met friend. What shall we conquer today?</German>
+		<Italian>Well met friend. What shall we conquer today?</Italian>
+		<Spanish>Well met friend. What shall we conquer today?</Spanish>
+		<Russian>Well met friend. What shall we conquer today?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AFONSO_1</Tag>
+		<English>Portugal shall be free, for God is on my side. Whose side are you on?</English>
+		<French>Portugal shall be free, for God is on my side. Whose side are you on?</French>
+		<German>Portugal shall be free, for God is on my side. Whose side are you on?</German>
+		<Italian>Portugal shall be free, for God is on my side. Whose side are you on?</Italian>
+		<Spanish>Portugal shall be free, for God is on my side. Whose side are you on?</Spanish>
+		<Russian>Portugal shall be free, for God is on my side. Whose side are you on?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MAXIMILIAN_1</Tag>
+		<English>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</English>
+		<French>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</French>
+		<German>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</German>
+		<Italian>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</Italian>
+		<Spanish>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</Spanish>
+		<Russian>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SIMEON_1</Tag>
+		<English>By the favour shown to me by heaven, I have led the Bulgarian nation to a height of glory. Tell me about yourself.</English>
+		<French>By the favour shown to me by heaven, I have led the Bulgarian nation to a height of glory. Tell me about yourself.</French>
+		<German>By the favour shown to me by heaven, I have led the Bulgarian nation to a height of glory. Tell me about yourself.</German>
+		<Italian>By the favour shown to me by heaven, I have led the Bulgarian nation to a height of glory. Tell me about yourself.</Italian>
+		<Spanish>By the favour shown to me by heaven, I have led the Bulgarian nation to a height of glory. Tell me about yourself.</Spanish>
+		<Russian>By the favour shown to me by heaven, I have led the Bulgarian nation to a height of glory. Tell me about yourself.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHARLES_V_1</Tag>
+		<English>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</English>
+		<French>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</French>
+		<German>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</German>
+		<Italian>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Italian>
+		<Spanish>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Spanish>
+		<Russian>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABDARRAHMAN_1</Tag>
+		<English>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</English>
+		<French>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</French>
+		<German>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</German>
+		<Italian>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Italian>
+		<Spanish>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Spanish>
+		<Russian>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SIMONE_1</Tag>
+		<English>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</English>
+		<French>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</French>
+		<German>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</German>
+		<Italian>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Italian>
+		<Spanish>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Spanish>
+		<Russian>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Tag>
+		<English>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</English>
+		<French>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</French>
+		<German>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</German>
+		<Italian>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</Italian>
+		<Spanish>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</Spanish>
+		<Russian>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YAROSLAV_1</Tag>
+		<English>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</English>
+		<French>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</French>
+		<German>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</German>
+		<Italian>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</Italian>
+		<Spanish>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</Spanish>
+		<Russian>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CASIMIR_1</Tag>
+		<English>I am Casimir. Will you help me make Poland great?</English>
+		<French>I am Casimir. Will you help me make Poland great?</French>
+		<German>I am Casimir. Will you help me make Poland great?</German>
+		<Italian>I am Casimir. Will you help me make Poland great?</Italian>
+		<Spanish>I am Casimir. Will you help me make Poland great?</Spanish>
+		<Russian>I am Casimir. Will you help me make Poland great?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_1</Tag>
+		<English>The Lord God is my armor!</English>
+		<French>The Lord God is my armor!</French>
+		<German>The Lord God is my armor!</German>
+		<Italian>The Lord God is my armor!</Italian>
+		<Spanish>The Lord God is my armor!</Spanish>
+		<Russian>The Lord God is my armor!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DANDOLO_1</Tag>
+		<English>I can see what you're up to, you know.</English>
+		<French>I can see what you're up to, you know.</French>
+		<German>I can see what you're up to, you know.</German>
+		<Italian>I can see what you're up to, you know.</Italian>
+		<Spanish>I can see what you're up to, you know.</Spanish>
+		<Russian>I can see what you're up to, you know.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_THE_POPE_1</Tag>
+		<English>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</English>
+		<French>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</French>
+		<German>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</German>
+		<Italian>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Italian>
+		<Spanish>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Spanish>
+		<Russian>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IVAN_IV_1</Tag>
+		<English>Two Romes have fallen and the third exists, and there will not be a fourth.</English>
+		<French>Two Romes have fallen and the third exists, and there will not be a fourth.</French>
+		<German>Two Romes have fallen and the third exists, and there will not be a fourth.</German>
+		<Italian>Two Romes have fallen and the third exists, and there will not be a fourth.</Italian>
+		<Spanish>Two Romes have fallen and the third exists, and there will not be a fourth.</Spanish>
+		<Russian>Two Romes have fallen and the third exists, and there will not be a fourth.</Russian>
+	</TEXT>
+</Civ4GameText>

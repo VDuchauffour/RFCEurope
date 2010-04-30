@@ -1333,85 +1333,44 @@ iImmunity = 20
 
 
 #leaders
-iLeaderBarbarian = 0
-iAbuYusufYaqub = 1
-iMariaTheresa = 2
-iAbuBakr = 3
-iJoan = 4
-iMatthias = 5
-iBarbarossa = 6
-iCatherine = 7
-iCharlemagne = 8
-iPhilip_II = 9
-iSobieski = 10
-iChristian_IV = 11
-iWilliam = 12
-iAfonso = 13
-iGenghis_Khan = 16
-iGilgamesh = 17
-iHammurabi = 18
-iHannibal = 19
-iHatshepsut = 20
-iHuayna_Capac = 21
-iIsabella = 22
-iJoao = 23
-iJulius_Caesar = 24
-iJustinian = 25
-iKublai_Khan = 26
-iLincoln = 27
-iLouis_Xiv = 28
-iMansa_Musa = 29
-iMao = 30
-iMehmed = 31
-iMontezuma = 32
-iNapoleon = 33
-iPacal = 34
-iPericles = 35
-iPeter = 36
-iQin_Shi_Huang = 37
-iRamesses = 38
-iRagnar = 39
-iFranklin_Roosevelt = 40
-iSaladin = 41
-iShaka = 42
-iSitting_Bull = 43
-iStalin = 44
-iSuleiman = 45
-iSuryavarman = 46
-iTokugawa = 47
-iVictoria = 48
-iWangkon = 49
-iMing_Tai_Zu = 49
-iWashington = 50
-iWillem_Van_Oranje = 51
-iZara_Yaqob = 52
-
-iSalahAlDin = 43
-iMaximilian = 44
-iSimeon = 45
-iRichard = 46
-iJustinian = 47
-iAbdarRahman = 48
-iWilliamVanOranje = 49
-iElizabeth = 50
-iLouisXIV = 51
-iSimone = 52
-iFrederick = 53
-iStephen = 54
-iYaroslav = 55
-iPeter = 56
-iRagnar = 57
-iCasimir = 58
-iJoao = 59
-iIsabella = 60
-iGustavus = 61
-iSuleiman = 62
-iDandolo = 63
-iPietro = 64
-iThePope = 65
-iIvanIV = 66
-iHaraldHadrada = 67
-
+iBarbarian=0
+iAbuyusufyaqub=1
+iMaria_Theresa=2
+iAbubakr=3
+iJoan=4
+iMatthias=5
+iBarbarossa=6
+iCatherine=7
+iCharlemagne=8
+iPhilip_Ii=9
+iSobieski=10
+iChristian_Iv=11
+iWilliam=12
+iAfonso=13
+iMehmed=14
+iSaladin=15
+iMaximilian=16
+iSimeon=17
+iCharles_V=18
+iJustinian=19
+iAbdarrahman=20
+iWillem_Van_Oranje=21
+iElizabeth=22
+iLouis_Xiv=23
+iSimone=24
+iFrederick=25
+iStephen=26
+iYaroslav=27
+iPeter=28
+iCasimir=29
+iJoao=30
+iIsabella=31
+iGustavus=32
+iSuleiman=33
+iDandolo=34
+iThe_Pope=35
+iHarald_Hardrada=36
+iIvan_Iv=37
 
 # 3Miro - for late Roman Justinian in, should not be used in RFCE
 #if (gc.getPlayer(0).isPlayable()): #late start condition
@@ -1420,20 +1379,20 @@ iHaraldHadrada = 67
 #        tRomanLateLeaders = (iAugustus, i50AD, 5, 2)
 
 tLeaders = (
-(iRichard,),
+(iCharles_V,),
 (iJustinian,),
 (iCharlemagne,iJoan,iLouis_Xiv),
-(iAbuBakr,iSalahAlDin),
+(iAbuBakr,iSaladin),
 (iSimeon,),
 (iAbdarRahman,iAbuYusufYaqub),
-(iIsabella,iPhilip_II),
-(iHaraldHadrada,iChristian_IV),
+(iIsabella,iPhilip_Ii),
+(iHaraldHadrada,iChristian_Iv),
 (iDandolo,),
 (iYaroslav,),
 (iStephen,iMatthias),
 (iBarbarossa,iFrederick,),
 (iCasimir,iSobieski),
-(iIvanIV,iPeter,iCatherine),
+(iIvanIv,iPeter,iCatherine),
 (iSimone,),
 (iWilliam,iElizabeth,),
 (iAfonso,iJoao,),
@@ -1441,11 +1400,11 @@ tLeaders = (
 (iMehmed,iSuleiman,),
 (iGustavus,),
 (iWilliamVanOranje,),
-(iThePope,)
+(iThe_Pope,)
 )
 
 tEarlyLeaders = (
-(iRichard),
+(iCharles_V),
 (iJustinian),
 (iJoan),
 (iAbuBakr),
@@ -1466,19 +1425,19 @@ tEarlyLeaders = (
 (iMehmed),
 (iGustavus),
 (iWilliamVanOranje),
-(iThePope)
+(iThe_Pope)
 )
 
 
 tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered after a few years
-(iRichard,),
+(iCharles_V,),
 (iJustinian,),
 (iLouis_Xiv,i1452AD,25,3),
-(iSalahAlDin,i1160AD,25,2),
+(iSaladin,i1160AD,25,2),
 (iSimeon,),
 (iAbuYusufYaqub,i1101AD,10,2),
-(iPhilip_II,i1520AD,10,3),
-(iChristian_IV,i1520AD,5,3),
+(iPhilip_Ii,i1520AD,10,3),
+(iChristian_Iv,i1520AD,5,3),
 (iDandolo,),
 (iYaroslav,),
 (iMatthias,i1452AD,5,3),
@@ -1492,7 +1451,7 @@ tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered af
 (iSuleiman,i1520AD,15,3),
 (iGustavus,),
 (iWilliamVanOranje,),
-(iThePope)
+(iThe_Pope)
 )
 
 
