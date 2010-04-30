@@ -2389,9 +2389,10 @@ class RiseAndFall:
 		
                 if ( pArabia.isHuman() and tBirth[iArabia] > 0 ):
                         # 3Miro: prohibit contact on turn 0
-                        tArabStart = ( tCapitals[iArabia][0]+2, tCapitals[iArabia][1] )
+                        tArabStart = ( tCapitals[iArabia][0], tCapitals[iArabia][1]-10)
                         utils.makeUnit(iSettler, iArabia, tArabStart, 1)
                         utils.makeUnit(iSpearman, iArabia, tArabStart, 1)
+			
                 if ( pBulgaria.isHuman() and tBirth[iBulgaria] > 0 ):
                         # 3Miro: prohibit contact on turn 0
                         tBulgStart = ( tCapitals[iBulgaria][0], tCapitals[iBulgaria][1] + 1 )
@@ -2451,7 +2452,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iLongSwordsman, iAustria, tCapitals[iAustria], 1)
 
                 if ( pTurkey.isHuman() and tBirth[iTurkey] > 0 ):
-                        tTurkishStart = ( tCapitals[iTurkey][0]+1, tCapitals[iTurkey][1]+1 )
+                        tTurkishStart = ( tCapitals[iTurkey][0]+5, tCapitals[iTurkey][1]+30 )
                         utils.makeUnit(iSettler, iTurkey, tTurkishStart, 1)
                         utils.makeUnit(con.iMaceman, iTurkey, tTurkishStart, 1)
 
@@ -2790,6 +2791,9 @@ class RiseAndFall:
                 if ( iCiv == iByzantium ):
                         if ( pPope.isAlive() and ( not teamByzantium.isHasMet( pPope.getTeam() ) ) ):
                                 teamByzantium.meet( pPope.getTeam(), True )
+			if ( pTurkey.isAlive() and ( teamByzantium.isHasMet( pTurkey.getTeam() ) ) ):
+                                teamByzantium.meet( pTurkey.getTeam(), False )
+
 		if ( iCiv == iBurgundy ):
                         if ( pFrankia.isAlive() and ( not teamBurgundy.isHasMet( pFrankia.getTeam() ) ) ):
                                 teamBurgundy.meet( pFrankia.getTeam(), True )
