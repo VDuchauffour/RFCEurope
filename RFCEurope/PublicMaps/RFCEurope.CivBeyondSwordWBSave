@@ -32958,20 +32958,6 @@ BeginPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_TAGMATA, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_TAGMATA, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
 		UnitType=UNIT_SWORDSMAN, UnitOwner=1
 		Damage=0
 		Level=1, Experience=0

@@ -286,12 +286,12 @@ class Plague:
                         if (city.hasBuilding(iPlague)):
                                 # kill citizens
                                 if (city.getPopulation() > 1):
-                                        if (gc.getGame().getSorenRandNum(100, 'roll') > 40 + 5*city.healthRate(False, 0)):
-                                                if bBadPlague and city.getPopulation() > 2:
-                                                        city.changePopulation(-2)
-                                                        print("This is the Black Death")
-                                                else:
-                                                        city.changePopulation(-1)
+					iRandom = gc.getGame().getSorenRandNum(100, 'roll')
+                                        if (iRandom > 30 + 5*city.healthRate(False, 0)) and bBadPlauge:
+                                                city.changePopulation(-2)
+                                                print("This is the Black Death")
+                                        elif (iRandom > 40 + 5*city.healthRate(False, 0):
+                                                city.changePopulation(-1)
                                 # infect vassals
                                 if (city.isCapital()):
                                         for iLoopCiv in range(iNumMajorPlayers):
