@@ -288,7 +288,7 @@ class Plague:
                                 if (city.getPopulation() > 1):
 					iRandom = gc.getGame().getSorenRandNum(100, 'roll')
                                         if (iRandom > 30 + 5*city.healthRate(False, 0)) and bBadPlague:
-                                                city.changePopulation(-2)
+                                                city.changePopulation(-1)
                                                 print("This is the Black Death")
                                         elif (iRandom > 40 + 5*city.healthRate(False, 0)):
                                                 city.changePopulation(-1)
