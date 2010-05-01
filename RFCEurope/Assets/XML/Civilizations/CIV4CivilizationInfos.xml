@@ -561,7 +561,7 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_BUREAUCRACY</CivicType>
+				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
@@ -778,7 +778,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_REPUBLIC</CivicType>
+				<CivicType>CIVIC_LIMITED_MONARCHY</CivicType>
 				<CivicType>CIVIC_BUREAUCRACY</CivicType>
 				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
 				<CivicType>CIVIC_MARKETS</CivicType>
@@ -1126,9 +1126,9 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_BUREAUCRACY</CivicType>
-				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
-				<CivicType>CIVIC_MARKETS</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_TRIBALISM</CivicType>
+				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
@@ -2330,8 +2330,8 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_BUREAUCRACY</CivicType>
-				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_MERCHANT_REPUBLIC</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
@@ -2448,9 +2448,9 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
+				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_THEOCRACY</CivicType>
+				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
