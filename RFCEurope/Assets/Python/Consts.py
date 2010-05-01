@@ -1333,7 +1333,7 @@ iImmunity = 20
 
 
 #leaders
-iBarbarian=0
+iBarbarianLeader=0 #Do NOT name this iBarbarian.  Very bad.
 iAbuYusufYaqub=1
 iMaria_Theresa=2
 iAbuBakr=3

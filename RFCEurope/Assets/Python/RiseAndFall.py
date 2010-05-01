@@ -2791,8 +2791,6 @@ class RiseAndFall:
                 if ( iCiv == iByzantium ):
                         if ( pPope.isAlive() and ( not teamByzantium.isHasMet( pPope.getTeam() ) ) ):
                                 teamByzantium.meet( pPope.getTeam(), True )
-			if ( pTurkey.isAlive() and ( teamByzantium.isHasMet( pTurkey.getTeam() ) ) ):
-                                teamByzantium.meet( pTurkey.getTeam(), False )
 
 		if ( iCiv == iBurgundy ):
                         if ( pFrankia.isAlive() and ( not teamBurgundy.isHasMet( pFrankia.getTeam() ) ) ):
