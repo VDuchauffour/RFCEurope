@@ -7,6 +7,7 @@ Many old entries removed, so Civilopedia is cleaner.
 Some civs resurrect at new capitol location (thanks to Panopticon for the code)
 Better art for corporations (executives and buildings)
 Balancing in the Balkans: Indy Alba Iulia. Weaker Hungary, Venice. Stronger Ottomans, Austria. Pechenegs and Cumans added to Northern Balkans. Austria and Hungary have a high war chance. Byzantine Core Zone extended west. New Settler Map for Hungary.
+Much cleanup behind the scenes.
 
 Small Changes:
 Update French settler map to leave Burgundy some space.
