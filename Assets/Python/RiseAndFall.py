@@ -124,8 +124,9 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 tVisible = con.tVisible
 
 
-# starting locations coordinates
+# starting locations coordinates and respawn coords
 tCapitals = con.tCapitals
+tNewCapitals = con.tNewCapitals
 
 
 
@@ -1501,13 +1502,16 @@ class RiseAndFall:
 
         def moveBackCapital(self, iCiv):
                 apCityList = PyPlayer(iCiv).getCityList()
-                if (gc.getMap().plot(tCapitals[iCiv][0], tCapitals[iCiv][1]).isCity()):
-                        oldCapital = gc.getMap().plot(tCapitals[iCiv][0], tCapitals[iCiv][1]).getPlotCity()
-                        if (oldCapital.getOwner() == iCiv):
-                                if (not oldCapital.hasBuilding(con.iPalace)):                                        
-                                        for pCity in apCityList:
-                                                pCity.GetCy().setHasRealBuilding((con.iPalace), False)
-                                        oldCapital.setHasRealBuilding((con.iPalace), True)
+                if (len(tNewCapitals[iCiv])):
+                        for j in range(len(tNewCapitals[iCiv])):
+                                pCurrent = gc.getMap().plot( tNewCapitals[iCiv][j][0], tNewCapitals[iCiv][j][1] )
+                                if ( pCurrent.isCity()):
+                                        newCapital = pCurrent.getPlotCity()
+                                        if (newCapital.getOwner() == iCiv):
+                                                if (not newCapital.hasBuilding(con.iPalace)):                                        
+                                                        for pCity in apCityList:
+                                                                pCity.GetCy().setHasRealBuilding((con.iPalace), False)
+                                                        newCapital.setHasRealBuilding((con.iPalace), True)
                 else:
                         iMaxValue = 0
                         bestCity = None
