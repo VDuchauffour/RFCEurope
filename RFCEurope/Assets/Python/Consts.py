@@ -383,6 +383,31 @@ tReserveCapitals = (
 (), 
 )
 
+tNewCapitals = (  #for RiseAndFall
+((47, 41),(47, 41)), #tBurgundy -- Dijon
+((81, 25), (81, 25)), #tConstantinople, Byzantium
+((44, 46),(44, 46)), #tFrance -- Pairs
+((85, 4), (84,3),(85,3)), #Arabia --> Alexandria (best Egyption city)
+((77, 30),(77, 30)), #tPreslav, Bulgaria
+((18, 14),(17, 14)), #tCordoba --> Marrakesh
+((28,32),(28,31),(28,33),(27,31)), #Spain --> Toledo (like Madrid)
+((59, 57),(59, 57)), #tNorse
+((57, 34),(57, 34)), #tVenecia
+((86, 42),(86, 42)), #tKiev
+((67, 37),(67, 37)), #tHungary
+((61, 49),(60, 48),(61,48),(62,48)), #tGermany --> Berlin
+((65, 48),(65, 48)), #tPoland
+((88, 56),(88, 56)), #tMoscow
+((50, 34),(50, 34)), #tGenoa
+((43, 53),(43, 53)), #tLondon, England
+((22, 31),(22, 31)), #tLisboa, Portugal
+((63, 39),(63, 39)), #tAustria
+((79, 22),(79, 22)), #tTurkey
+((67, 64),(67, 64)), #tSweden
+((49, 52),(49, 52)), #tDutch
+((56, 27),(56, 27))  #Rome
+) 
+
 #core areas (for RiseAndFall and Victory)
 
 # 3Miro: tCoreArea and tNormalArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
@@ -477,7 +502,7 @@ tNormalAreasTL = ( #These areas are typically used for resurrection. Also used i
 (35,34),   #Franks
 (48,1),   #Arabs
 (73,28),   #Bulgaria
-(16,17),   #Cordoba
+(16,13),   #Cordoba
 (24,25),   #Spain
 (53,56),   #Norse
 (56,33),   #Venice
