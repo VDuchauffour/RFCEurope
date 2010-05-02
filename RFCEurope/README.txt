@@ -1,5 +1,49 @@
 Changes for Alpha 12
 
+Major Changes:
+New reformation mechanics from Panopticon. Reformation spreads gradually over Europe.
+Dynamic LeaderHeads implemented: most Civs have multiple leaders which change over time.
+Many old entries removed, so Civilopedia is cleaner.
+Some civs resurrect at new capitol location (thanks to Panopticon for the code)
+Better art for corporations (executives and buildings)
+Balancing in the Balkans: Indy Alba Iulia. Weaker Hungary, Venice. Stronger Ottomans, Austria. Pechenegs and Cumans added to Northern Balkans. Austria and Hungary have a high war chance. Byzantine Core Zone extended west. New Settler Map for Hungary.
+
+Small Changes:
+Update French settler map to leave Burgundy some space.
+Fixed starting civics to align with starting techs in (hopefully) all cases.
+Made black death less severe. Removed Byzantine Tagmata (the AI just disbands them, the human doesn't need them).
+Fixed some bugs with initial starting contact: Arabs and Ottomans mainly.
+New LHs have first meeting quotes
+Stronger (possibly to the extent of overkill) Frankia start
+Gave every leader a favorite Religion.
+ Some city name syncro in Transylvania, 
+Removed Alsace-Lorraine off Burgundy spawn zone
+Removed Barbarian in Syracuse (now that AI is using islands again).
+Removed a bunch of villages from WBSave that messed up capital city placement, and added iron to Arab start.
+XML fixes about interface hints and tips
+Workboat now comes at Astrolabe (useless before then).
+Forest has forest button instead of jungle
+Byzantium text without the strategy
+Civ rating (stars) included.
+A bit of fiddling with city names and independents
+Civic strategy texts.
+Fixed incorrect unit buttons for some Ottoman/Arab artstyles.
+Removed modern resources + improvements
+Included all vanilla techs with German, Italian and Spanish name.
+Improvements to beehive art.
+New button Heavy Infantry.
+Pope/Papal text.
+unofficial patch: trade routes of the city deleted after razing.
+Button Fixes
+Bulgarian UHV, Moscowan starting Techs, Tennary cost, Prosecutions and Temple Mount, a few minor bugs
+Moscow names changed
+New art Genoan Bank. Mint now named Genoan.
+Toll House Has +75% trade route modifier instead of 25%.
+Minor balance things. One atlantic access spawn between Norse and Sweden in 1680.
+Mediterranean islands out of Arabs normal area. Pantelleria now out of Genoan settlermap (had forgotten it before).
+BugFix: Resurection of formerly owned cities that are now independent
+
+
 Changes for Alpha 10
 
 Major Changes:
