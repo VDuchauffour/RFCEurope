@@ -341,4 +341,13 @@
 		<Spanish>Un acuerdo de protecci&#243;n mutua: cada parte accede a declarar autom&#225;ticamente la guerra si alguien ataca a la otra.</Spanish>
 		<Russian>&#196;&#238;&#227;&#238;&#226;&#238;&#240; &#202;&#238;&#235;&#235;&#229;&#234;&#242;&#232;&#226;&#237;&#238;&#233; &#199;&#224;&#249;&#232;&#242;&#251; - &#202;&#224;&#230;&#228;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#209;&#238;&#227;&#235;&#224;&#241;&#237;&#224; &#192;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#232; &#206;&#225;&#250;&#255;&#226;&#232;&#242;&#252; &#194;&#238;&#233;&#237;&#243;, &#229;&#241;&#235;&#232; &#228;&#240;&#243;&#227;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#255;&#226;&#235;&#255;&#229;&#242;&#241;&#255; &#192;&#242;&#224;&#234;&#238;&#226;&#224;&#237;&#237;&#238;&#233;.</Russian>
 		<Japanese/><Chinese/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_WAS_TRADED_TO</Tag>
+		<English>%s1_CityName was traded to the %s2_CivName!!!</English>
+		<French>%s1_CityName a &#233;t&#233; &#233;chang&#233; &#224; %s2_CivName!!!</French>
+		<German>Die Stadt %s1_CityName wurde an das %s2:2_CivName &#252;bereignet!!!</German>
+		<Italian>%s1_CityName &#232; stata ceduta a %s2_CivName!!!</Italian>
+		<Spanish>&#161;%s1_CityName ha sido cedida al %s2_CivName!</Spanish>
+		<Russian>%s1 CityName &#242;&#238;&#240;&#227;&#238;&#226;&#224;&#235;&#241;&#255; &#241; %s2 CivName!!!</Russian>
+		<Japanese/><Chinese/></TEXT>
 </Civ4GameText>
