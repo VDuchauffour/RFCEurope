@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<meta name="description" content="description"/>
+<meta name="keywords" content="keywords"/> 
+<meta name="author" content="author"/> 
+<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+<title>Rhye's and Fall of Civilizations: Europe 500-1800 AD</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<div class="header">
+				
+		<div class="title">
+			<h1>Rhye's and Fall of Civilizations: Europe</h1>
+		</div>
+
+	</div>
+
+	<div class="navigation">
+		<a href="index.html">Manual:Main Page</a>
+		<a href="http://forums.civfanatics.com/forumdisplay.php?f=386">Feedback:Civfanatics Forum</a>
+		<a href="http://sourceforge.net/projects/rfceurope/">Download:Sourceforge</a>
+		<div class="clearer"><span></span></div>
+	</div>
+
+	<div class="main">		
+		
+		<div class="content">
+
+			<h1>Religion Overhaul</h1>
+			<p>What sets RFC:Europe apart from RFC is the complete overhaul of the religion dynamics.  We have four major religions (Catholicism, Orthodoxy, Protestantism and Islam) as well as Judaism as a minor religion. All religions are asymmetric, with each one providing unique befits. In order to simulate the complicated dynamics that existed between the religions, we have implemented The Great Schism, Reformation, Crusades, The Pope as a special player, Faith Points and Religious Prosecutions.</p>
+			
+			<h2>On the Five Religions</h2>
+			<p>Catholicism, Judaism and Orthodoxy are founded at the start of the game, with Holy Cities at Rome, Jerusalem and Constantinople. Islam is founded on the turn that Arabia spawns, with its Holy City at Damascus. Mecca is not on the map and hence Damascus was chosen as the Arabic center of religious power (as well as the Arabic capitol). Protestantism is founded by the first player to research the Printing Press; the Protestant Holy City is chosen at random, much like Holy Cities in regular BtS. Whenever a religion is founded, the Holy Shrine is automatically build in the corresponding Holy City.</p>
+			<p>Unlike the other four religions, Jews never tried to spread their faith by the sword and quite often they were the victims of that sword. In RFC:Europe Jews spread throughout Europe in a semi-random manner, driven by trade, trade opportunities, and persecution. Cities with Judaism can build Jewish Quarters that provide a boost of culture and gold.</p>
+			<p><b>The Great Schism</b> - Prior to 1054AD, Catholics and Orthodox Christians had many differences, but in more ways they acted as a single religion. In RFC:Europe, there is no diplomatic penalty between Catholic and Orthodox players until 1054AD.</p>
+			<p><b>Reformation</b> - The founding of Protestantism (with Printing Press) triggers the Reformation. All Catholic players have the opportunity to convert to the new religion. Conversion changes Catholicism to Protestantism and all the religious buildings are converted to their corresponding counterparts. However, Catholicism is not completely removed from all the large cities, and civilizations which remain Catholic may find a Protestant minority in some of their cities. Adopting Protestantism generates some Faith Points. The AI's probability to convert is based upon the actual history of the corresponding nation.</p>
+			<p>The benefits form choosing one religion over another are tied to the individual civilizations' historical preferences. For example the Byzantines would definitely benefit more from Orthodoxy and Spain from Catholicism. Going with the historical setting is never a wrong decision, however, you are always free to experiment anyway you want.</p>
+			
+			<h2>Faith Points</h2>
+			<p>Faith points are an abstract concept that determines the level of benefits that a player can obtain from the corresponding religion.</p>
+			<ul>
+			<li>Civilizations generally start with 0 faith points.</li>
+			<li>Changing the state religion resets the faith points to 0.</li>
+			<li>Generate faith points by spreading your state religion internally and constructing religious buildings </li>
+			<li>Spread of a non-state religion decreases the amount of faith points.</li>
+			<li>Faith points provide different benefit for every religion</li>
+			<li>Great Prophets can generate a large number of faith points (since they can no longer build Holy Shrines)</li>
+			<li>The current number of Faith Points and the benefits they provide can be seen in the Religious Advisor screen</li>
+			</ul>
+			<p>Catholicism: The benefits of Faith Points for Catholic players are not as straight forward as those for the other religions. It all revolves around the Pope and his role as an absolute authority over the Catholic Church. Check the special section on the Pope and his role in the game.</p>
+			<p>Islam: Geographically Islam stretches well beyond the boundaries of our map. Thus, with strong faith (i.e. a lot of Faith Points), the Islamic nations receive a boost on their Growth as well as a hammer discount for new Units.</p>
+			<p>Orthodoxy: One of the key concepts of the Orthodox Church is the principle of Caesaropapism, that is the subjugation of the religious authority under the secular authority. As a result, strong faith boosts the stability of the Orthodox nations and lowers the civic maintenance cost.</p>
+			<p>Protestantism: The new liberal ideas and emphasis on personal freedom, grant Protestant nations beaker discount for new techs and hammer discount on the production of Colonies and Wonders.</p>
+		
+		
+			<h2>Religious Prosecutions and Stability</h2>
+			<div class="descr">Amongst our weaponry...</div>
+			<p>As ugly as they were, religious prosecutions were very common in medieval Europe. Thus, in RFC:Europe we present the Prosecutor unit that can be used to remove all non-state religions and buildings from a given city.</p>
+			<ul>
+			<li>Non-state religion in your cities causes instability</li>
+			<li>Prosecutions remove non-state religion and buildings, but generate unhappiness and cause instability of their own.</li>
+			<li>Prosecution instability and unhappiness wear off over time, so the short term penalty creates a long term benefit</li>
+			<li>Spain does not suffer from Prosecution penalty, however, they do suffer from unhappiness</li>
+			<li>Prosecutions generate Faith Points</li>
+			<li>The sum of Prosecution instability and Orthodox stability (from Faith Points) still generates short term instability</li>
+			<li>Religion cannot be removed from its Holy City and religions can’t be removed form Jerusalem</li>
+			<li>When Jews are driven out of one city they will move randomly to another</li>
+			<li>Under the civic Free Religion, Prosecutions are impossible and extra religions generate no instability.</li>
+			</ul>
+			<h2>The Pope</h2>
+			<p>The Pope is the head of the Catholic Church and has absolute authority over it. Every player that choses Catholicism would have to interact with the Pope in more than one way.</p>
+			<ul>
+			<li>The Pope can never control any city other than Rome and the Pope's culture cannot extend beyond Rome's BFC</li>
+			<li>The Pope will gift money and units to faithful Catholic players</li>
+			<li>Relations with the Pope play a major role in the Crusade dynamics</li>
+			<li>To get any benefits from the Pope you must Open Borders with him</li>
+			<li>If you Open Borders with the Pope, you will soon see an army of Missionaries spreading Catholicism for you</li>
+			<li>For a non-Catholic player, Open Borders with the Pope is probably not a good idea (see Prosecutions and Stability)</li>
+			<li>The Pope can also randomly build Churches and Monasteries for the Catholic nations</li>
+			<li>The Pope can remove non-Catholic religions from the cities of Catholic players</li>
+			</ul>
+
+			<h2>Crusades</h2>
+			<p>There are two types of Crusades: for the Holy Land that aim at capturing Jerusalem and Defensive that aim at reclaiming a city lost by a Catholic player.</p>
+			<h3>Crusades for the Holy Land</h3>
+			<ul>
+			<li>From the 1000AD on, the Pope may periodically call for a Crusade for the Holy Land</li>
+			<li>A Crusade is called only if Jerusalem is controlled by a non-Catholic, non-Orthodox and non-Independent player</li>
+			<li>Every Catholic nation can participate in the Crusade, sending some units at random (city defenders stay)</li>
+			<li>Teutonic Knights and Knights Templar are likely to leave for the Crusade. Archers are unlikely to leave.</li>
+			<li>All participants vote for a Crusade leader; candidates are chosen based on Faith Points, size, and Papal relations</li>
+			<li>The leader of the Crusade declares war on whomever controls Jerusalem and a few turns later receives a stack of units next to the city</li>
+			<li>The first Catholic who captures Jerusalem (with or without a Crusade) gets a golden age, stability, and faith points</li>
+			<li>Refusal to participate in the Crusade decreases one's faith points and damages relations with the Pope</li>
+			<li>Sometimes, Crusades can be deviated to go not after Jerusalem, but the capital of any non-Catholic nation</li>
+			<li>The richest Catholic player gets the opportunity to deviate the crusade for certain amount of gold</li>
+			<li>If one uses gold to take over the Crusade, one can still aim it at Jerusalem</li>
+			<li>Reformation makes the Catholic church turn inward and thus stops any further Crusades for the Holy Land</li>
+			</ul>
+			
+			<h3>Defensive Crusades</h3>
+			<ul>
+			<li>If a non-Catholic and non-Orthodox player holds a city in a Catholic player’s war map then a defensive Crusade can be called</li>
+			<li>If the Catholic player is at war with the one holding the city, and if the Catholic player has good relations with the Pope, the Catholic player may get an opportunity for a Defensive Crusade</li>
+			<li>Defensive Crusade means that some units would spawn at the Catholic player's capital</li>
+			<li>Defensive Crusades cost faith points</li>
+			<li>Faith points can be regained by conquering the other player's cities and converting them to Catholicism</li>
+			</ul>
+			
+			<h3>Crusades and non-Catholic Religions</h3>
+			<p>If you are an Islamic player, prepare for the Crusaders. Whether you are fighting against the Reconquista, defending Jerusalem or conquering Hungary, Crusaders will come to visit you. Meet them accordingly. Strong Islamic faith will help you build more units and successfully fight off the Crusaders. Judaism is not meant to be anyone's state religion, however, it as vulnerable to Crusade as Islam. Orthodox players are generally immune to Crusades, but beware of Balduin I, VI and IX (all numbers refer to the same person). Crusaders can always get greedy and attack you for purely economical reasons. Reformation stops the Crusades for the Holy Land, however, if you are at war with a Catholic nation, you may still suffer from a defensive Crusade.
+</p>			
+		</div>
+
+			<div class="sidenav">
+				<img src="img/rfce/Banner.jpg" width=216>
+				<div class="clearer"><span></span></div>
+
+				<h1>Overview of Major Changes</h1>
+				<ul>
+					<li><a href="civilizations_short.html">Civilizations</a></li>
+					<li><a href="techtree_short.html">Tech Tree</a></li>
+					<li><a href="military_short.html">Military Units</a></li>
+					<li><a href="buildings_short.html">Buildings and Wonders</a></li>
+					<li><a href="resources_short.html">Terrain and Resources</a></li>
+					<li><a href="colonies_short.html">Colonies</a></li>
+					<li><a href="religions_short.html">Religions and Corporations</a></li>
+				</ul>
+
+				<h1>Detailed Guides</h1>
+				<ul>
+					<li><a href="military_detailed.html">Guide to Units</a></li>
+					<li><a href="religious_overhaul.html">Religious Overhaul</a></li>
+				</ul>
+
+				<h1>Additional Information</h1>
+				<ul>
+					<li><a href="more_info.html">Where do you go from here?</a></li>
+					<li><a href="credits.html">Credits</a></li>
+				</ul>
+
+			</div>
+
+			<div class="clearer"><span></span></div>
+
+		</div>
+
+		<div class="footer"> Template design by <a href="http://templates.arcsin.se">Arcsin</a>
+		</div>
+
+</div>
+
+</body>
+
+</html>
