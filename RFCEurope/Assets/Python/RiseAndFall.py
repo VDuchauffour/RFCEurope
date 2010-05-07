@@ -1765,7 +1765,7 @@ class RiseAndFall:
 ##                                        if (unit.getUnitType() == iSettler):
 ##                                                break
 ##                                unit.found()                                
-                                utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, iBarbarian, True, True) #This is for AI only. During Human player spawn, that area is already cleaned                        
+                                utils.flipUnitsInArea((tCapital[0]-4, tCapital[1]-4), (tCapital[0]+4, tCapital[1]+4), iCiv, iBarbarian, True, True) #This is for AI only. During Human player spawn, that area is already cleaned                        
                                 for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
                                         utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, i, True, False) #This is for AI only. During Human player spawn, that area is already cleaned                        
                                 #utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, iIndependent, True, False) #This is for AI only. During Human player spawn, that area is already cleaned                        
