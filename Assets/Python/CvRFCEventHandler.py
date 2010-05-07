@@ -516,8 +516,8 @@ class CvRFCEventHandler:
                 #        utils.makeUnit(con.iAxeman, con.iAmerica, (0,0), 1)
 
 		#print(" 3Miro onBegTurn ")                
+		self.barb.checkTurn(iGameTurn)
                 self.rnf.checkTurn(iGameTurn)
-                self.barb.checkTurn(iGameTurn)
                 self.rel.checkTurn(iGameTurn)
                 self.res.checkTurn(iGameTurn)
                 self.up.checkTurn(iGameTurn)
