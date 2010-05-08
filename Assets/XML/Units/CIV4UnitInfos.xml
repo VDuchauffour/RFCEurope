@@ -7975,7 +7975,7 @@
 			<PrereqTech>TECH_COMBINED_ARMS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_NATIONALISM</PrereqTech>
-				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -15825,7 +15825,7 @@
 			</TechTypes>
 			<BonusType>BONUS_TIMBER</BonusType>
 			<PrereqBonuses>
-				<BonusType>N</BonusType>
+				<BonusType>NONE</BonusType>
 				<BonusType>NONE</BonusType>
 				<BonusType>NONE</BonusType>
 				<BonusType>NONE</BonusType>
