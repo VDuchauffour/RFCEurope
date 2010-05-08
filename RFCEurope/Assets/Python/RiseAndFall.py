@@ -2142,7 +2142,7 @@ class RiseAndFall:
                 if ( iCiv == iSweden ):
                         utils.makeUnit(con.iSwedishKarolin, iCiv, tPlot, 4)
                 if ( iCiv == iDutch ):
-                        utils.makeUnit(con.iNetherlandsGrenadier, iCiv, tPlot, 4)                       
+                        utils.makeUnit(con.iNetherlandsGrenadier, iCiv, tPlot, 2)                       
                 # 3Miro: on war declaration (Greece gets 4! Phalanx!)
                 #if (iCiv == iAmerica):
                 #        utils.makeUnit(con.iPikeman, iCiv, tPlot, 3)
@@ -2283,11 +2283,10 @@ class RiseAndFall:
                                 utils.makeUnit(con.iGalleon, iCiv, tSeaPlot, 1 )
                 if (iCiv == iDutch):
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(con.iMusketman, iCiv, tPlot, 3)
-                        utils.makeUnit(con.iLongbowman, iCiv, tPlot, 3)
+                        utils.makeUnit(con.iMusketman, iCiv, tPlot, 6)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
-                                utils.makeUnit(con.iWorkboat, iCiv, tSeaPlot, 1 )
+                                utils.makeUnit(con.iWorkboat, iCiv, tSeaPlot, 2 )
                                 utils.makeUnit(con.iGalleon, iCiv, tSeaPlot, 2 )
 
                 self.showArea(iCiv)
