@@ -153,6 +153,14 @@
 						<LateArtDefineTag>ART_DEF_UNIT_MUSKETMAN_BYZANTINE</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_WAR_GALLEY</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_DROMON_BYZANTINE</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_DROMON_BYZANTINE</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_DROMON_BYZANTINE</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
