@@ -10592,7 +10592,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>ERA_MODERN</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
-			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PAPER</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
@@ -11481,7 +11481,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
-			<ObsoleteTech>TECH_LIBERALISM</ObsoleteTech>
+			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
