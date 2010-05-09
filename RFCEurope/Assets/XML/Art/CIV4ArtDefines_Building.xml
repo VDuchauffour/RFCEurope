@@ -1311,16 +1311,6 @@
 			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,14</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAVERN</Type>
-			<LSystem>LSYSTEM_3x2</LSystem>
-			<bAnimated>1</bAnimated>
-			<fScale>1.1</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Tavern/Tavern.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/buildings/Tavern.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THEODOSIAN_WALLS</Type>
 			<LSystem>LSYSTEM_GREAT_WALL</LSystem>
 			<bAnimated>1</bAnimated>
