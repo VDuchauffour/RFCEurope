@@ -219,7 +219,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RELIGION_OVERHAUL_PEDIA</Tag>
 		<English>[H1]Religion Overhaul[\H1]
-[PARAGRAPH:2]  What sets RFC:Europe apart from RFC is the complete overhaul of the religion dynamics.  We have four major religions (Catholicism, Orthodoxy, Protestantism and Islam) as well as Judaism as a minor religion. All religions are asymmetric, with each one providing unique befits. In order to simulate the complicated dynamics that existed between the religions, we have implemented The Great Schism, Reformation, Crusades, The Pope as a special player, Faith Points and Religious Prosecutions.
+[PARAGRAPH:2] What sets RFC:Europe apart from RFC is the complete overhaul of the religion dynamics. We have four major religions (Catholicism, Orthodoxy, Protestantism and Islam) as well as Judaism as a minor religion. All religions are asymmetric, with each one providing unique befits. In order to simulate the complicated dynamics that existed between the religions, we have implemented The Great Schism, Reformation, Crusades, The Pope as a special player, Faith Points and Religious Prosecutions.
 [H1]On the Five Religions[\H1]
 [PARAGRAPH:2] Catholicism, Judaism and Orthodoxy are founded at the start of the game, with Holy Cities at Rome, Jerusalem and Constantinople. Islam is founded on the turn that Arabia spawns, with Holy City at Damascus. Mecca is geographically not included and hence Damascus was chosen as the Arabic center of religious power (as well as the Arabic capital). Protestantism is founded by the first player to research the Printing Press, the Protestant Holy City is chosen at random, much like Holy Cities in regular BtS. Whenever a religion is founded, the Holy Shrine is automatically build in the corresponding Holy City.
 [H1]Judaism[\H1]
@@ -288,10 +288,10 @@ There are two types of Crusades: for the Holy Land that aim at capturing Jerusal
 - Defensive Crusades cost faith points
 - Faith points can be regained by conquering the other player's cities and converting them to Catholicism
 [H2]Crusades and non-Catholic Religions[\H2]
-[PARAGRAPH:2] If you are an Islamic player, prepare for the Crusaders. Whether you are fighting against the Reconquista, defensing Jerusalem or conquering Hungary, Crusaders will come to visit you. Meet them accordingly. Strong Islamic faith would help you build more units and successfully fight off the Crusaders.
-[PARAGRAPH:2]  Judaism is not meant to be anyone's state religion, however, it as vulnerable to Crusades as Islam.
-[PARAGRAPH:2]  Orthodox players are generally immune to Crusades, but beware of Balduin I, VI and IX (all numbers refer to the same person). Crusaders can always get greedy and attack you for purely economical reasons.
-[PARAGRAPH:2]  Reformation stops the Crusades for the Holy Land, however, if you are at war with a Catholic nation, you may still suffer from a defensive Crusade.
+[PARAGRAPH:2]If you are an Islamic player, prepare for the Crusaders. Whether you are fighting against the Reconquista, defensing Jerusalem or conquering Hungary, Crusaders will come to visit you. Meet them accordingly. Strong Islamic faith would help you build more units and successfully fight off the Crusaders.
+[PARAGRAPH:2]Judaism is not meant to be anyone's state religion, however, it as vulnerable to Crusades as Islam.
+[PARAGRAPH:2]Orthodox players are generally immune to Crusades, but beware of Balduin I, VI and IX (all numbers refer to the same person). Crusaders can always get greedy and attack you for purely economical reasons.
+[PARAGRAPH:2]Reformation stops the Crusades for the Holy Land, however, if you are at war with a Catholic nation, you may still suffer from a defensive Crusade.
 [H1]The Choice of Religion[\H1]
 [PARAGRAPH:2] The benefits form choosing one religion over another are tied to the individual civilizations' historical preferences. For example the Byzantines would definitely benefit more from Orthodoxy and Spain from Catholicism. Going with the historical setting is never a wrong decision, however, you are always free to experiment anyway you want.</English>
 		<French></French>
