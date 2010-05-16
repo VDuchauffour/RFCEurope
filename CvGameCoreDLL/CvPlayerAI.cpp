@@ -7517,7 +7517,13 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus) const
 			CvProjectInfo& kLoopProject = GC.getProjectInfo(eProject);
 			iTempValue = 0;
 
-			iTempValue += kLoopProject.getBonusProductionModifier(eBonus) / 10;
+			// 3MiroAI: the AI now values production bonuses more
+			// slaves give huge bonus, so take slaves bonus / 2, access is small so give access purely
+			//iTempValue += kLoopProject.getBonusProductionModifier(eBonus) / 10;
+			iTempValue += kLoopProject.getBonusProductionModifier(eBonus);
+			if ( iTempValue > 60 ){
+				iTempValue /= 2;
+			};
 
 			if (iTempValue > 0)
 			{
