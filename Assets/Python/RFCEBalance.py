@@ -81,6 +81,8 @@ class RFCEBalance:
 		#void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
 		# iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
+		# 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshhold
+		# 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
 		gc.setGrowthModifiers(iBurgundy,     100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiers(iByzantium,    150, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiers(iFrankia,      100, 100, 100, 100, 100, 1 )
@@ -101,7 +103,7 @@ class RFCEBalance:
 		gc.setGrowthModifiers(iAustria,      100,  75, 100, 100, 100, 3 )
 		gc.setGrowthModifiers(iTurkey,       100,  75, 100, 100, 100, 3 )
 		gc.setGrowthModifiers(iSweden,       100,  75, 100, 100, 100, 4 )
-		gc.setGrowthModifiers(iDutch,        100,  50,  50, 100,  50, 4 )
+		gc.setGrowthModifiers(iDutch,        100,  50, 200, 100,  50, 4 )
 		gc.setGrowthModifiers(iPope,         150, 200, 100,  50, 100, 1 )
 		gc.setGrowthModifiers(iIndependent,  100, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiers(iIndependent2, 100, 100, 100,  50, 100, 1 )
@@ -327,6 +329,7 @@ class RFCEBalance:
 		gc.setTechPreferenceAI(iBulgaria,con.iBronzeCasting,200)				
 		gc.setTechPreferenceAI(iGermany,con.iPrintingPress,200)
 		gc.setTechPreferenceAI(iEngland,con.iPrintingPress,150)
+
 		gc.setTechPreferenceAI(iSpain,con.iAstronomy,200)
 		gc.setTechPreferenceAI(iPortugal,con.iAstronomy,200)
 		
