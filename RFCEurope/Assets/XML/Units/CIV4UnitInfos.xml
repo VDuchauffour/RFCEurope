@@ -1034,6 +1034,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_REMOVE_WOODLAND</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_REMOVE_MUD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
