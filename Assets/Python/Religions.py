@@ -153,12 +153,17 @@ class Religions:
 			#Spread Judaism to a city in France/Germany
 			tCity = self.selectRandomCityArea(tMainzTL,tMainzBR)
 			utils.spreadJews(tCity,con.iJudaism)
-		if (iGameTurn == con.i1500AD):
+		if (iGameTurn == con.i1101AD):
 			#Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
 			utils.spreadJews(tCity,con.iJudaism)
+		if (iGameTurn == con.i1200AD):
 			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
 			utils.spreadJews(tCity,con.iJudaism)
+		if (iGameTurn == con.i1401AD):
+			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
+			utils.spreadJews(tCity,con.iJudaism)
+		
                	
                	#for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
         		#pPlayer = gc.getPlayer( i )

@@ -420,7 +420,7 @@ class RFCEBalance:
 		
 		gc.setUP( iGermany, iUP_UnitProduction, con.iGunpowder * 100 + 75 )
 		
-		gc.setUP( iHungary, iUP_ReligiousTolerance, 0 )
+		gc.setUP( iPoland, iUP_ReligiousTolerance, 0 )
 		
 		gc.setSupportModifiers(iMoscow, 10, 100, 25, 12, 100 )
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )
