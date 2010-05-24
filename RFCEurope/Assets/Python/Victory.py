@@ -158,6 +158,9 @@ tHungarianControl2 = ( (20,24,48,72),(49,30,99,72),(54,20,76,29),(60,14,75,19),(
 tGermanyControl = ( 49, 40, 54, 53 )
 tMoscowControl = ( 77, 32, 99, 70 )
 #tGenoaControl = (( 49, 22, 50, 25 ), ( 44, 32, 46, 34 ), ( 51, 36, 53, 38 ), ( 88, 11, 91, 13 ), ( 72, 10, 75, 10 ), (86, 32, 91, 35 ) ) #Sardinia, Marseilles, Milano, Cyprus, Crete, Crimea
+tPolandControl = ((58, 38, 64, 44),(65, 32, 77, 40),(78, 35, 94, 47),(72,48,82,63)) #Bohemia, Hungary, Ukraine, Lithuania
+tBaltic = (61,52,79,72)
+tBlackSea = (78,24,99,39)
 
 tGenoaControl = (( 49, 22, 50, 25 ), ( 44, 32, 46, 34 ), ( 51, 36, 53, 38 ), ( 88, 11, 91, 13 ), ( 72, 10, 75, 10 ) ) #Sardinia, Marseilles, Milano, Cyprus, Crete 
 tEnglishControl = ((39, 61, 44, 67), (31,57,37,62), (37,55,40,57)) # Scotland, Ireland, Wales
@@ -709,40 +712,31 @@ class Victory:
 				else:
 					self.setGoal( iGermany, 2, 0 )
 					
-		elif ( iPlayer == iPoland and pPoland.isAlive() ):
+		elif ( iPlayer == con.iPoland and pPoland.isAlive() ):
 			
-			if ( iGameTurn == i1540AD and self.getGoal( iPoland, 0 ) == - 1 ):
-				iPolandPopulation = pPoland.getRealPopulation()
-				bMost = True
+			if (iGameTurn == con.i1600AD and self.getGoal(iPoland,0) == -1 ): #Really 1600
+				if (self.checkOwnedCoastalArea(iPoland, (tBaltic[0],tBaltic[1]), (tBaltic[2],tBaltic[3]), 1)):
+					if (self.checkOwnedCoastalArea(iPoland, (tBlackSea[0],tBlackSea[1]), (tBlackSea[2],tBlackSea[3]), 1)):
+						self.setGoal(iPoland, 0, 1)
+					else:
+						self.setGoal(iPoland, 0, 0)
+				else:
+					self.setGoal(iPoland, 0, 0)
+			#Really 1500 to 1520
+			if ((iGameTurn >= con.i1500AD) and (iGameTurn <= con.i1520AD) and self.getGoal(iPoland,1) == -1 ):
+				iAgriculturePolish = pPoland.calculateTotalYield(YieldTypes.YIELD_FOOD)
+				bFood = True
 				for iPlayer in range( iNumMajorPlayers ):
 					pPlayer = gc.getPlayer( iPlayer )
-					if ( pPlayer.getRealPopulation() > iPolandPopulation ):
-						bMost = False
-						
-				if ( bMost ):
-					self.setGoal( iPoland, 0, 1 )
-				else:
-					self.setGoal( iPoland, 0, 0 )
-					
-			if ( iGameTurn == i1600AD and self.getGoal( iPoland, 1 ) == -1 ):
-				self.setGoal( iPoland, 1, 1 )
-				
-			#if ( iGameTurn == i1660AD+1 and self.getGoal( iPoland, 2 ) == -1 ):
-			#	self.setGoal( iPoland, 2, 0 )
-			if ( iGameTurn == con.i1730AD and self.getGoal( iPoland, 2 ) == -1 ):
-				iPolishFaith = pPoland.getFaith()
-				bMostFaithful = True
-				# 3Miro: iNumPlayers - 1 => do not count the Pope
-				for iFaithful in range( iNumPlayers - 1 ):
-					pFaithful = gc.getPlayer( iFaithful )
-					if ( pFaithful.isAlive() and pFaithful.getStateReligion() == con.iCatholicism and pFaithful.getFaith() > iPolishFaith ):
-						bMostFaithful = False
-				if ( pPoland.getStateReligion() != con.iCatholicism ):
-					bMostFaithful = False
-				if ( bMostFaithful ):
-					self.setGoal( iPoland, 2, 1 )
-				else:
-					self.setGoal( iPoland, 2, 0 )
+					iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
+					if iAgriculture > iAgriculturePolish:
+						bFood = False
+				if (bFood):
+					self.setGoal(iPoland, 1, 1)
+			if ((iGameTurn > con.i1520AD) and self.getGoal(iPoland,1) == -1):
+					self.setGoal(iPoland, 1, 0)
+			#See onBuildingBuilt for 3rd goal
+							
 					
 				
 		elif ( iPlayer == iMoscow and pMoscow.isAlive() ):
@@ -1037,13 +1031,6 @@ class Victory:
                 				if(playerType == iGermany or playerType == iFrankia ):
                 					self.setGoal(iBurgundy,1,0 )
                 					
-                elif ( iPlayer == iPoland ):
-                	if ( pPoland.isAlive() ):
-                		if ( bConquest ):
-                			if ( self.getGoal( iPoland, 1 ) == -1 ):
-                				# 3Miro: Change UHV to "any" city
-                				#if ( playerType == iGermany or playerType == iMoscow or playerType == iKiev ):
-                				self.setGoal( iPoland, 1, 0 )
                 					
                 elif ( iPlayer == iMoscow ):
                 	if ( pMoscow.isAlive() ):
@@ -1150,24 +1137,34 @@ class Victory:
                                         	                                iMonasteryCounter += 1
                                         	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
                                         	                	self.setGoal( iKiev, 2, 1 ) 
-                # 3Miro: Polish UHV chnaged                 	                	
-                #elif ( iPlayer == iPoland ):
-                #	if ( pPoland.isAlive() ):
-                #		if ( self.getGoal( iPoland, 2 ) == -1 ):
-                #			if ( iGameTurn <= i1700AD ):
-                #				if ( iBuilding == con.iCatholicMonastery or iBuilding == con.iCatholicCathedral ):
-                #					iNumCities = pPoland.getNumCities()
-                #					if ( iNumCities > 7 ):
-		#						iCathedralCounter = 0
-		#						iMonasteryCounter = 0
-		#						for iCity in range(iNumCities):
-		#							pCity = pPoland.getCity(iCity)
-                #                        	                        if (pCity.hasBuilding(con.iCatholicCathedral)):
-                #                        	                                iCathedralCounter += 1
-                #                        	                        if (pCity.hasBuilding(con.iCatholicMonastery)):
-                #                        	                                iMonasteryCounter += 1
-                #                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
-                #                        	                	self.setGoal( iPoland, 2, 1 )                 						
+                # Sedna17: Polish UHV changed again                 	                	
+		elif ( iPlayer == iPoland ):
+			if ( pPoland.isAlive() ):
+				if ( self.getGoal( iPoland, 2 ) == -1 ):
+					lBuildingList = [con.iCatholicCathedral,con.iOrthodoxCathedral,con.iProtestantCathedral,con.iJewishQuarter]
+					if ( iBuilding in lBuildingList):
+						iNumCities = pPoland.getNumCities()
+						#print("iNumCities")
+						#print(iNumCities)
+						lBuildingCounter = [0,0,0,0]
+						lBuildingGoal = [3,3,2,2]
+						for iCity in range(iNumCities):
+							pCity = pPoland.getCity(iCity)
+							for index,building in enumerate(lBuildingList):
+						#		print("building")
+						#		print(building)
+						#		print(index)
+								if (pCity.hasBuilding(building)):
+									lBuildingCounter[index] += 1
+						bBuildingGoal = True
+						#print(lBuildingCounter)
+						for count,goal in zip(lBuildingCounter,lBuildingGoal):
+						#	print("Polish 3rd UHV")
+						#	print(count)
+							if count < goal:
+								bBuildingGoal = False
+						if bBuildingGoal:
+							self.setGoal( iPoland, 2, 1 ) 
 
 		elif ( iPlayer == iGenoa ): # Buildings Goal 2
 			if ( pGenoa.isAlive() ):
