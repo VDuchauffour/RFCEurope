@@ -2375,7 +2375,6 @@ class RiseAndFall:
                 utils.makeUnit(con.iArcher, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(con.iAxeman, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
-                utils.makeUnit(con.iWorker, iFrankia, tCapitals[iFrankia], 1)
 
                 #self.showArea(iBurgundy)
                 self.showArea(iByzantium)
