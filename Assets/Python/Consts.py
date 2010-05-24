@@ -875,7 +875,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 ( 90,  90,  90, 250,  10), #tKiev
 (250,  80, 150, 100,  10), #tHungary
 (450,  20, 250,  20,  10), #tGermany
-(200,  20, 250,  80,  10), #tPoland
+(200, 100, 400, 200,  10), #tPoland
 (100,  20, 100, 250,  10), #tMoscow
 (190,  50, 250,  30,  10), #tGenoa
 (450,  20, 100,  20,  10), #tEngland

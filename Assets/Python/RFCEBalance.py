@@ -95,7 +95,7 @@ class RFCEBalance:
 		gc.setGrowthModifiers(iKiev,         100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiers(iHungary,      100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiers(iGermany,      100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiers(iPoland,       150, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiers(iPoland,       100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiers(iMoscow,       100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiers(iGenoa,        100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiers(iEngland,      100, 100, 100, 100, 100, 3 )
@@ -127,7 +127,7 @@ class RFCEBalance:
 		gc.setProductionModifiers(iKiev,      100, 100, 100, 150 )
 		gc.setProductionModifiers(iHungary,   125, 125, 100, 150 )
 		gc.setProductionModifiers(iGermany,   100, 100, 100, 100 )
-		gc.setProductionModifiers(iPoland,    100, 150, 120, 150 )
+		gc.setProductionModifiers(iPoland,    100, 150, 120, 125 )
 		gc.setProductionModifiers(iMoscow,     75,  75, 100, 150 )
 		gc.setProductionModifiers(iGenoa,     100, 100, 100, 125 )
 		gc.setProductionModifiers(iEngland,   100, 100, 100, 100 )
@@ -415,13 +415,12 @@ class RFCEBalance:
 		
 		gc.setUP( iKiev, iUP_CityTileYield, 100000 * 2 )
 		
+		gc.setUP( iHungary, iUP_Happiness, 1 )
 		gc.setUP( iHungary, iUP_CulturalTolerance, 0 )
-		gc.setUP( iHungary, iUP_ReligiousTolerance, 0 )
 		
 		gc.setUP( iGermany, iUP_UnitProduction, con.iGunpowder * 100 + 75 )
 		
-		gc.setUP( iPoland, iUP_Happiness, 1 )
-		gc.setUP( iPoland, iUP_CommercePercent, 100000 )
+		gc.setUP( iHungary, iUP_ReligiousTolerance, 0 )
 		
 		gc.setSupportModifiers(iMoscow, 10, 100, 25, 12, 100 )
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )

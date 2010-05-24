@@ -528,7 +528,11 @@ class CvRFCEventHandler:
                 self.sta.checkTurn(iGameTurn)
                 #self.com.checkTurn(iGameTurn) # 3Miro: no communication problem 
                 self.crusade.checkTurn(iGameTurn)
-
+		#print("********* Polish Test *********")
+		#print(gc.getPlayer(iPoland).getAgricultureHistory(iGameTurn))
+		#iAgriculture = gc.getPlayer(iPoland).calculateTotalYield(YieldTypes.YIELD_FOOD)
+		#print(iAgriculture)
+		#print("*******************************")
                 #Mercenaries - start
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
