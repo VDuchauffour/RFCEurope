@@ -103,7 +103,7 @@ class RFCEBalance:
 		gc.setGrowthModifiers(iAustria,      100,  75, 100, 100, 100, 3 )
 		gc.setGrowthModifiers(iTurkey,       100,  75, 100, 100, 100, 3 )
 		gc.setGrowthModifiers(iSweden,       100,  75, 100, 100, 100, 4 )
-		gc.setGrowthModifiers(iDutch,        100, 200, 200, 100,  50, 4 )
+		gc.setGrowthModifiers(iDutch,        100, 200,  50, 100,  50, 4 )
 		gc.setGrowthModifiers(iPope,         150, 200, 100,  50, 100, 1 )
 		gc.setGrowthModifiers(iIndependent,  100, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiers(iIndependent2, 100, 100, 100,  50, 100, 1 )
