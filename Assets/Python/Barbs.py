@@ -86,6 +86,7 @@ lSmolensk = [85,53,240,0] #900 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
 lMus = [99,21,153,0] #1060 AD
 lPalermo = [55,19,2,0]
+lGroningen = [52,54,150,0] #1050 AD
 
 #handicap level modifier
 iHandicapOld = (gc.getGame().getHandicapType() - 1)
@@ -293,7 +294,7 @@ class Barbs:
 		self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, con.iLongbowman, 2)
 		self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, con.iLongbowman, 2)
-
+		self.foundCity(iIndependent3, lGroningen, "Groningen", iGameTurn, 1, con.iCrossbowman, 2)
 
 
         def getCity(self, tCoords): #by LOQ

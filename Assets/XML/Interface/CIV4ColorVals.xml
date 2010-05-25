@@ -594,20 +594,20 @@
 			<Type>COLOR_PLAYER_DARK_GRAY2</Type>
 			<fRed>0.30</fRed>
 			<fGreen>0.30</fGreen>
-			<fBlue>0.31</fBlue>
+			<fBlue>0.33</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_GRAY3</Type>
 			<fRed>0.30</fRed>
-			<fGreen>0.31</fGreen>
+			<fGreen>0.33</fGreen>
 			<fBlue>0.30</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_GRAY4</Type>
-			<fRed>0.31</fRed>
-			<fGreen>0.31</fGreen>
+			<fRed>0.33</fRed>
+			<fGreen>0.33</fGreen>
 			<fBlue>0.30</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
