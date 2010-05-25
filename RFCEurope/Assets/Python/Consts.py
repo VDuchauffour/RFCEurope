@@ -436,7 +436,7 @@ tCoreAreasTL = ( #Core Area is initial spawn location, and also important for st
 (58,37),   #Austria
 (76,16),   #Turks
 (60,59),   #Sweden
-(48,49),   #Netherlands
+(47,49),   #Netherlands
 (54,25)	   #Pope
 ) 
 
@@ -461,7 +461,7 @@ tCoreAreasBR = (
 (64,43),   #Austria
 (84,22),   #Turks
 (67,71),   #Sweden
-(51,54),   #Netherlands
+(52,57),   #Netherlands
 (58,29)	   #Pope
 )
 
