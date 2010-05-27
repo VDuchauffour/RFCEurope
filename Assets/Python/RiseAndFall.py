@@ -2307,47 +2307,12 @@ class RiseAndFall:
                                 
         def createStartingWorkers( self, iCiv, tPlot ):
                 # 3Miro: get the workers
-                #if (iCiv == iGreece):
-                #        utils.makeUnit(con.iWorker, iCiv, tPlot, 2)
-		if ( iCiv == iBurgundy):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iArabia ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iBulgaria ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iCordoba ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iSpain ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iNorse ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iVenecia ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iKiev ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iHungary ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iGermany ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iPoland ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iMoscow ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iGenoa ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iEngland ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iPortugal ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iAustria ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iTurkey ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                	self.ottomanInvasion(iCiv,(77,23))
-                if ( iCiv == iSweden ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-                if ( iCiv == iDutch ):
-                        utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
+                # Sedna17: Cleaned the code
+               print("Making starting workers")
+               utils.makeUnit(con.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
+               if ( iCiv == iTurkey ):
+                       self.ottomanInvasion(iCiv,(77,23))
+
 
         def create600ADstartingUnits( self ):
                 # 3Miro: not needed
@@ -2374,6 +2339,7 @@ class RiseAndFall:
                 utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(con.iArcher, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(con.iAxeman, iFrankia, tCapitals[iFrankia], 1)
+                utils.makeUnit(con.iWorker, iFrankia, tCapitals[iFrankia], 1)
                 utils.makeUnit(con.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
 
                 #self.showArea(iBurgundy)
