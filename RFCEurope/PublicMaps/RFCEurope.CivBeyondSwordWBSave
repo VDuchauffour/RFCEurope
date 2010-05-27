@@ -674,7 +674,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=70
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -1790,7 +1789,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=72
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -2545,7 +2543,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=2
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -7040,7 +7037,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=20
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -9002,7 +8998,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=34
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -10125,7 +10120,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=25
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -11648,7 +11642,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=19
-	BonusType=BONUS_IVORY
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -12846,7 +12839,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=27
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -14905,6 +14897,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=42
+	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15546,7 +15539,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=16
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -15956,7 +15948,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=18
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -16154,7 +16145,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=52
-	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16558,6 +16548,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=52
+	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -16688,7 +16679,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=0
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -17386,7 +17376,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=52
-	BonusType=BONUS_APPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -18144,7 +18133,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=46
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -18376,7 +18364,6 @@ BeginPlot
 	x=47,y=17
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -18776,7 +18763,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=16
-	BonusType=BONUS_IVORY
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -19308,7 +19294,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=40
-	BonusType=BONUS_APPLE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -19543,7 +19528,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=8
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -20922,7 +20906,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=33
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -21981,7 +21964,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=71
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
@@ -22444,7 +22426,6 @@ BeginPlot
 	x=56,y=72
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -24393,7 +24374,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=48
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -25670,6 +25650,7 @@ BeginPlot
 	x=64,y=47
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27480,8 +27461,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=71
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=72
@@ -27908,8 +27889,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=72
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_TUNDRA
+	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=0
@@ -28344,9 +28325,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=72
-	BonusType=BONUS_CRAB
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_TUNDRA
+	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=0
@@ -28700,7 +28680,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=58
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -28783,8 +28762,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=72
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_TUNDRA
+	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=0
@@ -29056,6 +29035,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_GOLD
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -30753,7 +30733,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=32
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -33746,7 +33725,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=72
-	BonusType=BONUS_IVORY
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
@@ -33858,7 +33836,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=20
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -34082,7 +34059,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=58
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -34616,14 +34592,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=72
-	BonusType=BONUS_IVORY
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
 BeginPlot
 	x=85,y=0
-	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -37157,7 +37131,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=47
-	BonusType=BONUS_APPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -37632,7 +37605,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=50
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -38487,7 +38459,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=46
-	BonusType=BONUS_APPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -38986,7 +38957,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=40
-	BonusType=BONUS_APPLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -39797,7 +39767,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=25
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -40304,7 +40273,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=34
-	BonusType=BONUS_APPLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
