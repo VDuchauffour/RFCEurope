@@ -164,7 +164,7 @@ tBirth = (
 75, #800AD Venecia
 95, #880AD Kiev
 100,#900AD Hungary
-86, # 843AD Germany
+88, # 843AD Germany
 123,#970AD Poland
 241,#1000AD Moscow => 1323
 140,# 140 normally 1020AD Genoa
@@ -184,7 +184,7 @@ tBirth = (
 
 
 tYear = (
-("843", "TXT_KEY_AD"),
+("844", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("632", "TXT_KEY_AD"),
@@ -195,7 +195,7 @@ tYear = (
 ("800", "TXT_KEY_AD"),
 ("880", "TXT_KEY_AD"),
 ("900", "TXT_KEY_AD"),
-("843", "TXT_KEY_AD"),
+("852", "TXT_KEY_AD"),
 ("970", "TXT_KEY_AD"),
 ("1323", "TXT_KEY_AD"),
 ("1020", "TXT_KEY_AD"),

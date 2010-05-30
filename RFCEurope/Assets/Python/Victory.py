@@ -467,18 +467,18 @@ class Victory:
 					self.setGoal( iByzantium, 2, 0 )
 		elif ( iPlayer == iFrankia and pFrankia.isAlive() ):
 			
-			if ( iGameTurn == i840AD and self.getGoal( iFrankia, 0) == -1 ):
+			if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
 				bEnoughCities = True
 				for region in tFrankControl:
 					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
 					if iCity < 2:
 						bEnoughCities = False
-				if bEnough:
+				if bEnoughCities:
 					self.setGoal(iFrankia, 0, 1)
 				else:
 					self.setGoal(iFrankia, 0, 0)
 			
-			if ( iGameTurn == i1401AD and self.getGoal( iFrankia, 1) == -1 ):
+			if ( iGameTurn == con.i1401AD and self.getGoal( iFrankia, 1) == -1 ):
 				lBuildingList = [con.iNotreDame,con.iMonasteryOfCluny,con.iPalaisPapes,con.iFontainebleau,con.iKrakDesChevaliers]
 				iNumCities = pFrankia.getNumCities()
 				lBuildingCounter = [0,0,0,0,0]
