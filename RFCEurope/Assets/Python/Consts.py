@@ -153,7 +153,7 @@ lOlderNeighbours = [
 
 # civ birth dates
 tBirth = (
-85,  #500AD Burgundy #840
+86, #843AD Burgundy
 0,  #500AD Byzantium
 0,  #500AD Frankia
 33, #632AD Arabia
@@ -164,7 +164,7 @@ tBirth = (
 75, #800AD Venecia
 95, #880AD Kiev
 100,#900AD Hungary
-113,#940AD Germany
+86, # 843AD Germany
 123,#970AD Poland
 241,#1000AD Moscow => 1323
 140,# 140 normally 1020AD Genoa
@@ -184,7 +184,7 @@ tBirth = (
 
 
 tYear = (
-("840", "TXT_KEY_AD"),
+("843", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("632", "TXT_KEY_AD"),
@@ -195,7 +195,7 @@ tYear = (
 ("800", "TXT_KEY_AD"),
 ("880", "TXT_KEY_AD"),
 ("900", "TXT_KEY_AD"),
-("940", "TXT_KEY_AD"),
+("843", "TXT_KEY_AD"),
 ("970", "TXT_KEY_AD"),
 ("1323", "TXT_KEY_AD"),
 ("1020", "TXT_KEY_AD"),
@@ -246,6 +246,7 @@ i720AD = 55
 i770AD = 68
 i800AD = 75
 i840AD = 85
+i844AD = 86
 i880AD = 95
 i900AD = 100
 i940AD = 113
@@ -416,7 +417,7 @@ tNewCapitals = (  #for RiseAndFall
 #	Also Broader Area
 
 tCoreAreasTL = ( #Core Area is initial spawn location, and also important for stability
-(45,36),   #Burgundy
+(44,33),   #Burgundy
 (66,14),   #Byzantium
 (42,42),   #Franks
 (93,1),   #Arabs
@@ -441,7 +442,7 @@ tCoreAreasTL = ( #Core Area is initial spawn location, and also important for st
 ) 
 
 tCoreAreasBR = (
-(49,42),   #Burgundy
+(48,42),   #Burgundy
 (84,26),   #Byzantium
 (46,47),   #Franks
 (99,15),   #Arabs

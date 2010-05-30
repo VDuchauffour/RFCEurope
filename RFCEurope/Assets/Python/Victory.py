@@ -143,7 +143,7 @@ i1750AD = con.i1750AD
 # 3Miro: areas
 tBurgundyControl = (( 46, 40, 52, 53 ),(44, 33, 48,39))
 tByzantineControl = ( 68, 15, 99, 26 )
-tFrankControl = (( 36, 36, 40, 49 ),(41, 33, 47, 49)) #France is now two rectangles
+tFrankControl = ((35,31,41,37),(44,33,48,42),(52,40,57,48),(49,31,57,37)) #Pyrenees, Rhone, W Germany, Northern Italy
 tArabiaControl = ( (93, 0, 99, 17), (76, 0, 92, 4), (31, 0, 54, 21), (55, 0, 88, 9) ) # Levant and Allepo and Antioch, Egypt, Egypt and Libia, Algeria and Tunisia
 tBulgariaControl = ( 66, 23, 82, 32 )
 tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
@@ -467,21 +467,34 @@ class Victory:
 					self.setGoal( iByzantium, 2, 0 )
 		elif ( iPlayer == iFrankia and pFrankia.isAlive() ):
 			
-			if ( iGameTurn == i1500AD and self.getGoal( iFrankia, 0) == -1 ):
-				iOwn = gc.doesOwnCities( iFrankia, tFrankControl[0][0], tFrankControl[0][1], tFrankControl[0][2], tFrankControl[0][3] )
-				iOwn += gc.doesOwnCities( iFrankia, tFrankControl[1][0], tFrankControl[1][1], tFrankControl[1][2], tFrankControl[1][3] )
-				if ( iOwn > 20 ):
-					self.setGoal( iFrankia, 0, 1 )
+			if ( iGameTurn == i840AD and self.getGoal( iFrankia, 0) == -1 ):
+				bEnoughCities = True
+				for region in tFrankControl:
+					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
+					if iCity < 2:
+						bEnoughCities = False
+				if bEnough:
+					self.setGoal(iFrankia, 0, 1)
 				else:
-					self.setGoal( iFrankia, 0, 0 )
+					self.setGoal(iFrankia, 0, 0)
 			
-			if ( iGameTurn <= i1680AD and self.getGoal( iFrankia, 1) == -1 ):
-				pPlot = gc.getMap().plot( con.tCapitals[iFrankia][0], con.tCapitals[iFrankia][1] )
-				if ( pPlot.isCity() and pPlot.getPlotCity().getOwner() == iFrankia and pPlot.getPlotCity().getCulture( iFrankia ) >= 15000 ):
-					self.setGoal( iFrankia, 1, 1 )
-
-			if ( iGameTurn == i1680AD+1 and self.getGoal( iFrankia, 1) == -1 ):
-				self.setGoal( iFrankia, 1, 0 )
+			if ( iGameTurn == i1401AD and self.getGoal( iFrankia, 1) == -1 ):
+				lBuildingList = [con.iNotreDame,con.iMonasteryOfCluny,con.iPalaisPapes,con.iFontainebleau,con.iKrakDesChevaliers]
+				iNumCities = pFrankia.getNumCities()
+				lBuildingCounter = [0,0,0,0,0]
+				for iCity in range(iNumCities):
+					pCity = pFrankia.getCity(iCity)
+					for index,building in enumerate(lBuildingList):
+						if (pCity.hasBuilding(building)):
+							lBuildingCounter[index] += 1
+				bBuildingGoal = True
+				for count in lBuildingCounter:
+					if count < 1:
+						bBuildingGoal = False
+				if bBuildingGoal:
+					self.setGoal( iFrankia, 2, 1 ) 
+				else:
+					self.setGoal( iFrankia, 2, 0 ) 
 					
 			if ( self.getGoal( iFrankia, 2 ) == - 1 ):
 				if ( self.getColonies( iFrankia ) > 5 ):
@@ -1144,23 +1157,15 @@ class Victory:
 					lBuildingList = [con.iCatholicCathedral,con.iOrthodoxCathedral,con.iProtestantCathedral,con.iJewishQuarter]
 					if ( iBuilding in lBuildingList):
 						iNumCities = pPoland.getNumCities()
-						#print("iNumCities")
-						#print(iNumCities)
 						lBuildingCounter = [0,0,0,0]
 						lBuildingGoal = [3,3,2,2]
 						for iCity in range(iNumCities):
 							pCity = pPoland.getCity(iCity)
 							for index,building in enumerate(lBuildingList):
-						#		print("building")
-						#		print(building)
-						#		print(index)
 								if (pCity.hasBuilding(building)):
 									lBuildingCounter[index] += 1
 						bBuildingGoal = True
-						#print(lBuildingCounter)
 						for count,goal in zip(lBuildingCounter,lBuildingGoal):
-						#	print("Polish 3rd UHV")
-						#	print(count)
 							if count < goal:
 								bBuildingGoal = False
 						if bBuildingGoal:
