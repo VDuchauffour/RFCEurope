@@ -29226,8 +29226,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=72
-	isNOfRiver
-	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
