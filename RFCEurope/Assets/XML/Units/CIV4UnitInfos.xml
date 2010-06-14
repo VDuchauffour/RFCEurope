@@ -13564,7 +13564,7 @@
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
 			<iCombat>16</iCombat>
-			<iCombatLimit>100</iCombatLimit>
+			<iCombatLimit>85</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
