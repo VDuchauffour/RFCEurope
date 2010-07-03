@@ -694,7 +694,7 @@
 			<SituationProduction>TXT_KEY_2STARS</SituationProduction>
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
-			<SituationStart>TXT_KEY_1STARS</SituationStart>
+			<SituationStart>TXT_KEY_1STAR</SituationStart>
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_ORANGE</DefaultPlayerColor>
