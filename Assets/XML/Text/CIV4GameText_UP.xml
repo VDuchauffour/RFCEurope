@@ -410,42 +410,6 @@
 		<Russian></Russian>
 		<Japanese/><Chinese/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_EMIGRATION</Tag>
-		<English>A part of our population is emigrating to America!</English>
-		<French>Une partie de notre population &#239;&#191;&#189;migre en Am&#239;&#191;&#189;rique !</French>
-		<German>Ein Teil unserer Bev&#239;&#191;&#189;lkerung wandert nach Amerika aus!</German>
-		<Italian>Parte della nostra popolazione emigra in America!</Italian>
-		<Spanish>&#239;&#191;&#189;Parte de nuestra poblaci&#243;n est&#225; emigrando a Estados Unidos!</Spanish>
-		<Russian>&#215;&#224;&#241;&#242;&#252; &#237;&#224;&#248;&#229;&#227;&#238; &#237;&#224;&#241;&#229;&#235;&#229;&#237;&#232;&#255; &#253;&#236;&#232;&#227;&#240;&#232;&#240;&#243;&#229;&#242; &#226; &#192;&#236;&#229;&#240;&#232;&#234;&#243;!</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_IMMIGRATION</Tag>
-		<English>Our population is growing due to immigrants from the Old World!</English>
-		<French>Notre population augmente gr&#239;&#191;&#189;ce aux immigrants du Vieux Monde !</French>
-		<German>Wir profitieren von einem Bev&#239;&#191;&#189;lkerungszuwachs durch Einwanderer aus der Alten Welt!</German>
-		<Italian>La nostra popolazione sta crescendo grazie agli immigranti dal vecchio mondo!</Italian>
-		<Spanish>&#239;&#191;&#189;Nuestra poblaci&#243;n est&#225; creciendo como consecuencia de la inmigraci&#243;n procedente del Viejo Mundo!</Spanish>
-		<Russian>&#205;&#224;&#248;&#229; &#237;&#224;&#241;&#229;&#235;&#229;&#237;&#232;&#229; &#240;&#224;&#241;&#242;&#229;&#242; &#225;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#255; &#232;&#236;&#236;&#232;&#227;&#240;&#224;&#237;&#242;&#224;&#236; &#238;&#242; &#209;&#242;&#224;&#240;&#238;&#227;&#238; &#204;&#232;&#240;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_ENSLAVE_WIN</Tag>
-		<English>An enemy unit has been enslaved!</English>
-		<French>Une unit&#239;&#191;&#189; ennemie a &#239;&#191;&#189;t&#239;&#191;&#189; asservie !</French>
-		<German>Eine feindliche Einheit wurde versklavt!</German>
-		<Italian>Un'unit&#224; nemica &#232; stata schiavizzata!</Italian>
-		<Spanish>&#239;&#191;&#189;Una unidad enemiga ha sido esclavizada!</Spanish>
-		<Russian>&#194;&#240;&#224;&#230;&#229;&#241;&#234;&#224;&#255; &#229;&#228;&#232;&#237;&#232;&#246;&#224; &#225;&#251;&#235;&#224; &#239;&#238;&#240;&#224;&#225;&#238;&#249;&#229;&#237;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_ENSLAVE_LOSE</Tag>
-		<English>Your unit has been enslaved!</English>
-		<French>Votre unit&#239;&#191;&#189; a &#239;&#191;&#189;t&#239;&#191;&#189; asservie !</French>
-		<German>Eure Einheit wurde versklavt!</German>
-		<Italian>La tua unit&#224; &#232; stata schiavizzata!</Italian>
-		<Spanish>&#239;&#191;&#189;Tu unidad ha sido esclavizada!</Spanish>
-		<Russian>&#194;&#224;&#248;&#224; &#229;&#228;&#232;&#237;&#232;&#246;&#224; &#225;&#251;&#235;&#224; &#239;&#238;&#240;&#224;&#225;&#238;&#249;&#229;&#237;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UP_TERROR1</Tag>
 		<English>Citizens of</English>
 		<French>Les citoyens de</French>

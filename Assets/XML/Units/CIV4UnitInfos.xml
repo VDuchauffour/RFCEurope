@@ -4947,7 +4947,12 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades/>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_LINE_INFANTRY</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
@@ -5057,7 +5062,7 @@
 					<iUnitCombatMod>75</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_POLEARM</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_HEAVY_INFANTRY</UnitCombatType>
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
@@ -11531,7 +11536,12 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades/>
+			<UnitClassUpgrades>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+			</UnitClassUpgrades>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
