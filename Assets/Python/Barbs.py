@@ -281,7 +281,7 @@ class Barbs:
 		self.foundCity(iBarbarian, lRiga, "Riga", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent, lTvanksta, "Tvanksta", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent, lLubeck, "Liubice", iGameTurn, 1, con.iArcher, 2)
-		self.foundCity(iIndependent, lPrague, "Zavist", iGameTurn, 1, con.iCrossbowman, 2)
+		self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent2, lKrakow, "Krakow", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iIndependent3, lKharkov, "Kharkov", iGameTurn, 1, con.iCrossbowman, 2)
 		self.foundCity(iBarbarian, lAlbaIulia, "Belograd", iGameTurn, 1, con.iCrossbowman, 1)
