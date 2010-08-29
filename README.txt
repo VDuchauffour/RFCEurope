@@ -3,3 +3,34 @@ Welcome to Rhye's and Fall of Europe, a mod based on the incredibly popular orig
 The mod is now in beta testing. We are looking for feedback on the gameplay experience and the level of difficulty of the Unique Historical Victories. Please post your thoughts in our forum at http://forums.civfanatics.com/forumdisplay.php?f=386
 
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
+
+This is Beta 2. Changes since Beta 1:
+Made naval upgrades more sensible
+Fix to problem where civs are killed by barbs on spawn: increased area in which barbs flip and had barbs spawn before flip.
+Made Netherlands a little more balanced. Better when small, worse when large. UHVs at this setting are about right.
+Added custom unit art for Byzantine Dromon by Edgecrusher. Unnecessary but cool.
+Trebs upgrade to Bombards. 
+Economics and Liberalism no longer obsolete buildings (they come so late anyway there's no need to make them weaker techs).
+Simplified some unit tech requirements.
+Polish Folwark stores 40% food after growth instead of 25%.
+Text fixes.
+Dutch Grenadier gets new color of costume.
+AI now values project resources more.
+Updated Germanification 
+New Coffee art. It has the art of Spices, but with brown  beans.
+Changes in Norse settler maps (Russia excluded), some changes at indy names
+New Polish UHVs and UP.
+Groningen indy added and Dutch spawn area increased
+Indy colors now all unique
+Bonus commerce addition displayed consistently
+Map changes: Sweden connects to Russia -- not correct but leads to better gameplay. A few resources moved, improving London and Polish start. Apples/Ivory removed.
+Fixed East India company button.
+New French UHVs (Charlemagne and Wonder goals). German spawn moved to > 843AD.
+AI uses Dutch Grenadier to do collateral damage.
+Movie for the Brandenburg Gate
+Field Artillery has now max damage.
+Fixed Dutch 1 star (in civilopedia at the starting situation)
+Text for Colonial Access Resources
+Landsknecht + paladin can upgrade, landsknecht has +25% vs. heavy infantry instead of polearm
+XML Cleanup
+Removed happiness bonus from Gardens of Al Andalus.
