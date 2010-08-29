@@ -174,7 +174,7 @@
 			<fInterfaceScale>0.55</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Brandenburg_Gate/brandenburg_gate.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/brandenburg_gate_button.dds</Button>
+			<Button>Art/Interface/Buttons/Wonders/brandenburg_gate_button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MAGNA_CARTA</Type>
