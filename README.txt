@@ -5,6 +5,8 @@ The mod is now in beta testing. We are looking for feedback on the gameplay expe
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
 
 This is Beta 2. Changes since Beta 1:
+Moved art files into a FPK
+Ghazis upgrades to Pistoliers
 Made naval upgrades more sensible
 Fix to problem where civs are killed by barbs on spawn: increased area in which barbs flip and had barbs spawn before flip.
 Made Netherlands a little more balanced. Better when small, worse when large. UHVs at this setting are about right.
