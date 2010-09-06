@@ -1150,7 +1150,7 @@
 			<Adjective>TXT_KEY_CIV_GERMANY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>940AD</StartingYear>
+			<StartingYear>852AD</StartingYear>
 			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_GER</UP1>
 			<UP2>TXT_KEY_UP_GER2</UP2>
