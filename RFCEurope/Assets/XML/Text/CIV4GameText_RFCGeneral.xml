@@ -14,7 +14,7 @@
 		<Italian>Il sole sorge nell'anno %s1_year. La popolazione %s2:2_civ &#232; infine pronta a stabilirsi e a fondare la tua prima citt&#224;. [NEWLINE][NEWLINE]%s3_leader, il tuo popolo ti ha conferito potere assoluto, credendo che tu possa sviluppare una civilt&#224; in grado di resistere alle prove del tempo!</Italian>
 		<Spanish>El sol se alza en el a&#241;o %s1_year. Las gentes del %s2_civ est&#225;n listas para asentarse y fundar vuestra primera ciudad. [NEWLINE][NEWLINE]%s3_leader, vuestro pueblo os ha conferido poder absoluto, confiando en que pod&#225;is desarrollar una civilizaci&#243;n que supere los retos del tiempo.</Spanish>
 		<Russian>&#209;&#238;&#235;&#237;&#246;&#229; &#226;&#238;&#241;&#245;&#238;&#228;&#232;&#242; &#226; %s1_year. %s2_civ &#235;&#254;&#228;&#232; &#227;&#238;&#242;&#238;&#226;&#251; &#231;&#224;&#241;&#229;&#235;&#232;&#242;&#252;&#241;&#255; &#232; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#252; &#226;&#224;&#248; &#239;&#229;&#240;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228;. [NEWLINE][NEWLINE]%s3_leader, &#226;&#224;&#248;&#232; &#235;&#254;&#228;&#232; &#237;&#224;&#228;&#229;&#235;&#232;&#235;&#232; &#226;&#241;&#229;&#226;&#235;&#224;&#241;&#242;&#232;&#229;&#236; &#226;&#224;&#241;, &#228;&#238;&#226;&#229;&#240;&#232;&#226; &#242;&#238;, &#247;&#242;&#238; &#226;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#242;&#252; &#214;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#254;, &#247;&#242;&#238;&#225;&#251; &#226;&#251;&#228;&#229;&#240;&#230;&#224;&#242;&#252; &#232;&#241;&#239;&#251;&#242;&#224;&#237;&#232;&#229; &#226;&#240;&#229;&#236;&#229;&#237;&#229;&#236;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOPLAY_TURNS_REMAINING</Tag>
 		<English>AUTO-PLAY TURNS REMAINING:  %d1_Num</English>
@@ -23,7 +23,7 @@
 		<Italian>TURNI DI GIOCO AUTOMATICO RIMANENTI:  %d1_Num</Italian>
 		<Spanish>TURNOS AUTOM&#193;TICOS RESTANTES: %d1_Num</Spanish>
 		<Russian>AUTO-PLAY TURNS REMAINING:  %d1_Num</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFEAT</Tag>
 		<English></English>
@@ -40,7 +40,7 @@
 		<Italian>Sei stato sconfitto!!!</Italian>
 		<Spanish>&#161;Os han derrotado!</Spanish>
 		<Russian>&#194;&#251; &#225;&#251;&#235;&#232; &#240;&#224;&#231;&#227;&#240;&#238;&#236;&#235;&#229;&#237;&#251;!!!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_VICEROY</Tag>
 		<English>Viceroy</English>
@@ -124,7 +124,7 @@
 		<Italian>Anno di avvio</Italian>
 		<Spanish>A&#241;o de inicio</Spanish>
 		<Russian>&#209;&#242;&#224;&#240;&#242;&#238;&#226;&#251;&#233; &#227;&#238;&#228;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BC</Tag>
 		<English>BC</English>
@@ -133,7 +133,7 @@
 		<Italian>a.C.</Italian>
 		<Spanish>a.C.</Spanish>
 		<Russian>&#228;&#238; &#237;. &#253;.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AD</Tag>
 		<English>AD</English>
@@ -142,7 +142,7 @@
 		<Italian>d.C.</Italian>
 		<Spanish>d.C.</Spanish>
 		<Russian>&#237;. &#253;.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_GOLD</Tag>
 		<English>[ICON_BULLET]Gold: </English>
@@ -151,7 +151,7 @@
 		<Italian>[ICON_BULLET]Oro: </Italian>
 		<Spanish>[ICON_BULLET]Oro: </Spanish>
 		<Russian>[ICON_BULLET]&#199;&#238;&#235;&#238;&#242;&#238;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_SCIENCE</Tag>
 		<English>[ICON_BULLET]Science: </English>
@@ -160,7 +160,7 @@
 		<Italian>[ICON_BULLET]Scienza: </Italian>
 		<Spanish>[ICON_BULLET]Ciencia: </Spanish>
 		<Russian>[ICON_BULLET]&#205;&#224;&#243;&#234;&#224;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_TRADE</Tag>
 		<English>[ICON_BULLET]Trade: </English>
@@ -169,7 +169,7 @@
 		<Italian>[ICON_BULLET]Commercio: </Italian>
 		<Spanish>[ICON_BULLET]Intercambio: </Spanish>
 		<Russian>[ICON_BULLET]&#210;&#238;&#240;&#227;&#238;&#226;&#235;&#255;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_PRODUCTION</Tag>
 		<English>[ICON_BULLET]Production: </English>
@@ -178,7 +178,7 @@
 		<Italian>[ICON_BULLET]Produzione: </Italian>
 		<Spanish>[ICON_BULLET]Producci&#243;n: </Spanish>
 		<Russian>[ICON_BULLET]&#207;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_CULTURE</Tag>
 		<English>[ICON_BULLET]Culture: </English>
@@ -187,7 +187,7 @@
 		<Italian>[ICON_BULLET]Cultura: </Italian>
 		<Spanish>[ICON_BULLET]Cultura: </Spanish>
 		<Russian>[ICON_BULLET]&#202;&#243;&#235;&#252;&#242;&#243;&#240;&#224;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_GROWTH</Tag>
 		<English>[ICON_BULLET]Growth: </English>
@@ -196,7 +196,7 @@
 		<Italian>[ICON_BULLET]Crescita: </Italian>
 		<Spanish>[ICON_BULLET]Crecimiento: </Spanish>
 		<Russian>[ICON_BULLET]&#208;&#238;&#241;&#242;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_STARTING_SITUATION</Tag>
 		<English>[ICON_BULLET]Starting situation: </English>
@@ -205,7 +205,7 @@
 		<Italian>[ICON_BULLET]Situazione di avvio: </Italian>
 		<Spanish>[ICON_BULLET]Situaci&#243;n de inicio: </Spanish>
 		<Russian>[ICON_BULLET]&#209;&#242;&#224;&#240;&#242;&#238;&#226;&#224;&#255; &#241;&#232;&#242;&#243;&#224;&#246;&#232;&#255;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_5STARS</Tag>
 		<English>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn%F5_HealthOrUn</English>
@@ -214,7 +214,7 @@
 		<Italian>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn%F5_HealthOrUn</Italian>
 		<Spanish>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn%F5_HealthOrUn</Spanish>
 		<Russian>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn%F5_HealthOrUn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_4STARS</Tag>
 		<English>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn</English>
@@ -223,7 +223,7 @@
 		<Italian>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn</Italian>
 		<Spanish>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn</Spanish>
 		<Russian>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn%F4_HealthOrUn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_3STARS</Tag>
 		<English>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn</English>
@@ -232,7 +232,7 @@
 		<Italian>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn</Italian>
 		<Spanish>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn</Spanish>
 		<Russian>%F1_HealthOrUn%F2_HealthOrUn%F3_HealthOrUn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_2STARS</Tag>
 		<English>%F1_HealthOrUn%F2_HealthOrUn</English>
@@ -241,7 +241,7 @@
 		<Italian>%F1_HealthOrUn%F2_HealthOrUn</Italian>
 		<Spanish>%F1_HealthOrUn%F2_HealthOrUn</Spanish>
 		<Russian>%F1_HealthOrUn%F2_HealthOrUn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_1STAR</Tag>
 		<English>%F1_HealthOrUn</English>
@@ -250,7 +250,7 @@
 		<Italian>%F1_HealthOrUn%F2_HealthOrUn</Italian>
 		<Spanish>%F1_HealthOrUn</Spanish>
 		<Russian>%F1_HealthOrUn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RATING</Tag>
 		<English>Rating</English>
@@ -259,7 +259,7 @@
 		<Italian>Valutazione</Italian>
 		<Spanish>&#205;ndice</Spanish>
 		<Russian>&#206;&#246;&#229;&#237;&#234;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_BONUS</Tag>
 		<English>Military Bonus</English>
@@ -268,7 +268,7 @@
 		<Italian>Bonus militare</Italian>
 		<Spanish>Bonificaci&#243;n militar</Spanish>
 		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#207;&#240;&#229;&#236;&#232;&#255;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FREE_PROMOTION</Tag>
 		<English>Free Promotion: (%s1)</English>
@@ -277,7 +277,7 @@
 		<Italian>Promozione gratuita: (%s1)</Italian>
 		<Spanish>Ascenso gratis: (%s1)</Spanish>
 		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#207;&#240;&#238;&#234;&#224;&#247;&#234;&#224;: (%s1)</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AGE_RENAISSANCE</Tag>
 		<English>Renaissance Age</English>
@@ -286,7 +286,7 @@
 		<Italian>Et&#224; rinascimentale</Italian>
 		<Spanish>Renacimiento</Spanish>
 		<Russian>&#221;&#239;&#238;&#245;&#224; &#194;&#238;&#231;&#240;&#238;&#230;&#228;&#229;&#237;&#232;&#255;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
 		<English>Medieval Age</English>
@@ -295,7 +295,7 @@
 		<Italian>Et&#224; medievale</Italian>
 		<Spanish>Edad Media</Spanish>
 		<Russian>&#209;&#240;&#229;&#228;&#237;&#229;&#226;&#229;&#234;&#238;&#226;&#252;&#229;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AGE_IRON</Tag>
 		<English>Iron Age</English>
@@ -304,7 +304,7 @@
 		<Italian>Et&#224; del ferro</Italian>
 		<Spanish>Edad de Hierro</Spanish>
 		<Russian>&#198;&#229;&#235;&#229;&#231;&#237;&#251;&#233; &#194;&#229;&#234;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AGE_BRONZE</Tag>
 		<English>Bronze Age</English>
@@ -313,7 +313,7 @@
 		<Italian>Et&#224; del bronzo</Italian>
 		<Spanish>Edad de Bronce</Spanish>
 		<Russian>&#193;&#240;&#238;&#237;&#231;&#238;&#226;&#251;&#233; &#194;&#229;&#234;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AGE_STONE</Tag>
 		<English>Stone Age</English>
@@ -322,7 +322,7 @@
 		<Italian>Eta della pietra</Italian>
 		<Spanish>Edad de Piedra</Spanish>
 		<Russian>&#202;&#224;&#236;&#229;&#237;&#237;&#251;&#233; &#194;&#229;&#234;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVEGAME_TURN</Tag>
 		<English>Turn %d1_TurnNum</English>
@@ -331,7 +331,7 @@
 		<Italian>Turno %d1_TurnNum</Italian>
 		<Spanish>Turno %d1_TurnNum</Spanish>
 		<Russian>Turn %d1_TurnNum</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_DEFENSIVE_PACT</Tag>
 		<English>A Mutual Protection Pact - Each Party Agrees to Automatically Declare War if the Other Party is Attacked.</English>
@@ -340,7 +340,7 @@
 		<Italian>Un patto di protezione reciproca: ogni civilt&#224; accetta di dichiarare automaticamente guerra se la civilt&#224; alleata viene attaccata.</Italian>
 		<Spanish>Un acuerdo de protecci&#243;n mutua: cada parte accede a declarar autom&#225;ticamente la guerra si alguien ataca a la otra.</Spanish>
 		<Russian>&#196;&#238;&#227;&#238;&#226;&#238;&#240; &#202;&#238;&#235;&#235;&#229;&#234;&#242;&#232;&#226;&#237;&#238;&#233; &#199;&#224;&#249;&#232;&#242;&#251; - &#202;&#224;&#230;&#228;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#209;&#238;&#227;&#235;&#224;&#241;&#237;&#224; &#192;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#232; &#206;&#225;&#250;&#255;&#226;&#232;&#242;&#252; &#194;&#238;&#233;&#237;&#243;, &#229;&#241;&#235;&#232; &#228;&#240;&#243;&#227;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#255;&#226;&#235;&#255;&#229;&#242;&#241;&#255; &#192;&#242;&#224;&#234;&#238;&#226;&#224;&#237;&#237;&#238;&#233;.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_WAS_TRADED_TO</Tag>
 		<English>%s1_CityName was traded to the %s2_CivName!!!</English>
@@ -349,5 +349,5 @@
 		<Italian>%s1_CityName &#232; stata ceduta a %s2_CivName!!!</Italian>
 		<Spanish>&#161;%s1_CityName ha sido cedida al %s2_CivName!</Spanish>
 		<Russian>%s1 CityName &#242;&#238;&#240;&#227;&#238;&#226;&#224;&#235;&#241;&#255; &#241; %s2 CivName!!!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 </Civ4GameText>

@@ -12,7 +12,7 @@
 		<Italian>Nasce una nuova civilt&#224;</Italian>
 		<Spanish>Ha nacido una nueva civilizaci&#243;n</Spanish>
 		<Russian>&#205;&#238;&#226;&#224;&#255; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#255; &#240;&#238;&#230;&#228;&#224;&#229;&#242;&#241;&#255;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWCIV_MESSAGE2</Tag>
 		<English> empire?</English>
@@ -22,7 +22,7 @@
 		<Spanish>
 		</Spanish>
 		<Russian>&#232;&#236;&#239;&#229;&#240;&#232;&#255;?</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIPMESSAGE1</Tag>
 		<English>The following cities:[NEWLINE][NEWLINE]</English>
@@ -31,7 +31,7 @@
 		<Italian>Le seguenti citt&#224;:[NEWLINE][NEWLINE]</Italian>
 		<Spanish>Las ciudades de[NEWLINE][NEWLINE]</Spanish>
 		<Russian>&#209;&#235;&#229;&#228;&#243;&#254;&#249;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224;:[NEWLINE][NEWLINE]</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIPMESSAGE2</Tag>
 		<English>[NEWLINE]want to flip to a rising civilization. Our refusal may lead to a war and some of our troops may join it. Should we let them go?</English>
@@ -40,7 +40,7 @@
 		<Italian>[NEWLINE]vogliono passare a una nuova civilt&#224;. Il nostro rifiuto potrebbe portare alla guerra e alcune nostre truppe potrebbero unirsi a loro. Le lasciamo andare?</Italian>
 		<Spanish>[NEWLINE]quieren unirse a la incipiente civilizaci&#243;n. Una negativa por nuestra parte podr&#237;a provocar la guerra y parte de nuestras tropas podr&#237;an unirse a ella. &#191;Debemos permitir que se unan?</Spanish>
 		<Russian>[NEWLINE]&#245;&#238;&#242;&#232;&#242;&#229; &#249;&#229;&#235;&#234;&#237;&#243;&#242;&#252; &#234; &#226;&#238;&#231;&#240;&#224;&#241;&#242;&#224;&#254;&#249;&#229;&#233; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232;. &#205;&#224;&#248; &#238;&#242;&#234;&#224;&#231;, &#226;&#238;&#231;&#236;&#238;&#230;&#237;&#238;, &#239;&#240;&#232;&#226;&#238;&#228;&#232;&#242; &#234; &#226;&#238;&#233;&#237;&#229; &#232; &#237;&#229;&#234;&#238;&#242;&#238;&#240;&#251;&#229; &#232;&#231; &#237;&#224;&#248;&#232;&#245; &#241;&#238;&#235;&#228;&#224;&#242;, &#226;&#238;&#231;&#236;&#238;&#230;&#237;&#238;, &#239;&#240;&#232;&#241;&#238;&#229;&#228;&#232;&#237;&#255;&#254;&#242;&#241;&#255;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#238;&#231;&#226;&#238;&#235;&#255;&#242;&#252; &#232;&#236; &#239;&#238;&#233;&#242;&#232;?</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_AGREED</Tag>
 		<English>We agreed to the flip!</English>
@@ -49,7 +49,7 @@
 		<Italian>Siamo d'accordo sul passaggio!</Italian>
 		<Spanish>&#161;Hemos accedido a la cesi&#243;n!</Spanish>
 		<Russian>&#204;&#251; &#225;&#251;&#235;&#232; &#241;&#238;&#227;&#235;&#224;&#241;&#237;&#251; &#237;&#224; &#249;&#229;&#235;&#247;&#238;&#234;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_REFUSED</Tag>
 		<English>We refused the flip, this means war!</English>
@@ -58,7 +58,7 @@
 		<Italian>Abbiamo rifiutato il passaggio: ci&#242; significa guerra!</Italian>
 		<Spanish>Nos hemos negado a la cesi&#243;n, &#161;esto significa la guerra!</Spanish>
 		<Russian>&#204;&#251; &#238;&#242;&#234;&#224;&#231;&#224;&#235;&#232;&#241;&#252; &#238;&#242; &#249;&#229;&#235;&#247;&#234;&#224;, &#253;&#242;&#224; &#231;&#237;&#224;&#247;&#232;&#242; &#226;&#238;&#233;&#237;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_BETRAYAL</Tag>
 		<English>Some of our forces are joining the enemy to help their war of liberation!</English>
@@ -67,7 +67,7 @@
 		<Italian>Alcune delle nostre forze si uniscono al nemico per aiutarne la guerra di liberazione!</Italian>
 		<Spanish>&#161;Algunas de nuestras unidades se han unido al enemigo para luchar en su guerra de liberaci&#243;n!</Spanish>
 		<Russian>&#205;&#229;&#234;&#238;&#242;&#238;&#240;&#251;&#229; &#232;&#231; &#237;&#224;&#248;&#232;&#245; &#241;&#232;&#235; &#239;&#229;&#240;&#229;&#248;&#235;&#232; &#237;&#224; &#241;&#242;&#238;&#240;&#238;&#237;&#243; &#226;&#240;&#224;&#227;&#224;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#236;&#238;&#247;&#252; &#232;&#245; &#226;&#238;&#233;&#237;&#229; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#229;&#237;&#232;&#255;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_BETRAYAL_NEW</Tag>
 		<English>Some of our enemy's forces are joining us to help our war of liberation!</English>
@@ -76,7 +76,7 @@
 		<Italian>Alcune forze del nemico si uniscono a noi per aiutarci nella guerra di liberazione!</Italian>
 		<Spanish>&#161;Algunas de las unidades del enemigo se han unido a nosotros para apoyarnos en nuestra guerra de liberaci&#243;n!</Spanish>
 		<Russian>&#205;&#229;&#234;&#238;&#242;&#238;&#240;&#251;&#229; &#232;&#231; &#241;&#232;&#235; &#237;&#224;&#248;&#229;&#227;&#238; &#226;&#240;&#224;&#227;&#224; &#243;&#248;&#235;&#232; &#234; &#237;&#224;&#236;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#236;&#238;&#247;&#252; &#237;&#224;&#248;&#229;&#233; &#226;&#238;&#233;&#237;&#229; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#229;&#237;&#232;&#255;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CIV_IS_BORN</Tag>
 		<English>A new civilization is born: %s1_CityName</English>
@@ -85,7 +85,7 @@
 		<Italian>&#200; nata una nuova civilt&#224;: %s1_CityName</Italian>
 		<Spanish>Ha nacido una nueva civilizaci&#243;n: %s1_CityName</Spanish>
 		<Russian>&#205;&#238;&#226;&#224;&#255; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#255; &#240;&#238;&#230;&#228;&#224;&#229;&#242;&#241;&#255;: %s1_CityName</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INDEPENDENCE1</Tag>
 		<English></English>
@@ -94,7 +94,7 @@
 		<Italian>&#200; nata una nuova civilt&#224;: %s1_CityName</Italian>
 		<Spanish>Ha nacido una nueva civilizaci&#243;n: %s1_CityName</Spanish>
 		<Russian></Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INDEPENDENCE2</Tag>
 		<English>cities have declared independence from their foreign domination!</English>
@@ -103,7 +103,7 @@
 		<Italian>citt&#224; hanno dichiarato la propria indipendenza dal dominio straniero!</Italian>
 		<Spanish>ciudades han declarado su independencia del dominio extranjero.</Spanish>
 		<Russian>&#227;&#238;&#240;&#238;&#228;&#224; &#238;&#225;&#250;&#255;&#226;&#232;&#235;&#232; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252; &#238;&#242; &#232;&#245; &#231;&#224;&#240;&#243;&#225;&#229;&#230;&#237;&#238;&#227;&#238; &#239;&#240;&#229;&#232;&#236;&#243;&#249;&#229;&#241;&#242;&#226;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_TITLE</Tag>
 		<English>Independence!</English>
@@ -112,7 +112,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_HUMAN</Tag>
 		<English>The people of %s1_CivName are trying to regain their independence and rebuild their nation. Cities from our empire want to join them!</English>
@@ -121,7 +121,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_LETGO</Tag>
 		<English>A sign of weakness: Let them go, they contribute nothing to our glorious empire are not worth the trouble.</English>
@@ -130,7 +130,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_DONOTHING</Tag>
 		<English>Stretched too thin: We cannot deal with them right now. Let the local garrison best deal with the situation on their own.</English>
@@ -139,7 +139,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_CRACK</Tag>
 		<English>The whip: Let them feel the strength of our Empire, no one rebel against my rule!</English>
@@ -148,7 +148,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_BRIBE</Tag>
 		<English>The price of loyalty: Bribe the local lords, with them on our side we will not have to bother with the peasants. Bribe: </English>
@@ -157,7 +157,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_BOTH</Tag>
 		<English>Sticks and carrots: Do whatever it takes, but keep those cities loyal and subjugated.</English>
@@ -166,7 +166,7 @@
 		<Italian>Indipendenza!</Italian>
 		<Spanish>&#161;Independencia!</Spanish>
 		<Russian>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REBELLION_MESSAGE</Tag>
 		<English>cities have declared their independence from us and expelled our garrisons. Shall we leave them free?</English>
@@ -175,7 +175,7 @@
 		<Italian>citt&#224; hanno dichiarato la propria indipendenza, espellendo le nostre guarnigioni. Dobbiamo lasciarle libere?</Italian>
 		<Spanish>ciudades han declarado su independencia de nosotros y han expulsado a nuestras guarniciones. &#191;Debeos permitir su libertad?</Spanish>
 		<Russian>&#227;&#238;&#240;&#238;&#228;&#224; &#238;&#225;&#250;&#255;&#226;&#232;&#235;&#232; &#241;&#226;&#238;&#254; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252; &#238;&#242; &#237;&#224;&#241; &#232; &#226;&#251;&#227;&#237;&#224;&#235; &#237;&#224;&#248;&#232; &#227;&#224;&#240;&#237;&#232;&#231;&#238;&#237;&#251;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#238;&#241;&#242;&#224;&#226;&#232;&#242;&#252; &#232;&#245; &#241;&#226;&#238;&#225;&#238;&#228;&#237;&#238;?</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TITLE</Tag>
 		<English>Exile!</English>
@@ -184,7 +184,7 @@
 		<Italian>Esilio!</Italian>
 		<Spanish>&#161;Al exilio!</Spanish>
 		<Russian>&#200;&#231;&#227;&#237;&#224;&#237;&#232;&#229;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TEXT1</Tag>
 		<English>You have been captured by the</English>
@@ -193,7 +193,7 @@
 		<Italian>Sei stato catturato dai</Italian>
 		<Spanish>El</Spanish>
 		<Russian>&#194;&#251; &#225;&#251;&#235;&#232; &#231;&#224;&#245;&#226;&#224;&#247;&#229;&#237;&#251;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TEXT2</Tag>
 		<English>and exiled to the unimportant lands of</English>
@@ -202,7 +202,7 @@
 		<Italian>ed esiliato nelle insignificanti terre di</Italian>
 		<Spanish>os ha capturado y exiliado a las insignificantes tierras de</Spanish>
 		<Russian>&#232; &#241;&#238;&#241;&#235;&#224;&#237;&#251; &#234; &#236;&#224;&#235;&#238;&#231;&#237;&#224;&#247;&#224;&#249;&#232;&#236; &#231;&#229;&#236;&#235;&#255;&#236;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXILE_TEXT3</Tag>
 		<English>. You have a short period of time for retaking your capital and gain back your position.</English>
@@ -211,7 +211,7 @@
 		<Italian>. Hai un breve periodo di tempo per riprendere la tua capitale e riguadagnare la tua posizione.</Italian>
 		<Spanish>. Dispon&#233;is de un breve periodo de tiempo para recuperar vuestra capital y vuestra posici&#243;n.</Spanish>
 		<Russian>. &#194;&#251; &#232;&#236;&#229;&#229;&#242;&#229; &#234;&#238;&#240;&#238;&#242;&#234;&#232;&#233; &#239;&#229;&#240;&#232;&#238;&#228; &#226;&#240;&#229;&#236;&#229;&#237;&#232; &#226;&#231;&#255;&#242;&#232;&#229; &#238;&#225;&#240;&#224;&#242;&#237;&#238; &#226;&#224;&#248; &#234;&#224;&#239;&#232;&#242;&#224;&#235; &#232; &#239;&#240;&#232;&#238;&#225;&#240;&#229;&#242;&#224;&#229;&#242;&#229; &#237;&#224;&#231;&#224;&#228; &#226;&#224;&#248;&#243; &#239;&#238;&#231;&#232;&#246;&#232;&#254;.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TITLE</Tag>
 		<English>You have escaped!</English>
@@ -220,7 +220,7 @@
 		<Italian>Sei riuscito a fuggire!</Italian>
 		<Spanish>&#161;Hab&#233;is escapado!</Spanish>
 		<Russian>&#194;&#251; &#243;&#225;&#229;&#230;&#224;&#235;&#232;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TEXT1</Tag>
 		<English>You have escaped and regained control of </English>
@@ -229,7 +229,7 @@
 		<Italian>Sei riuscito a fuggire e a riguadagnare il controllo del territorio</Italian>
 		<Spanish>Hab&#233;is escapado y recuperado el control del territorio</Spanish>
 		<Russian>&#194;&#251; &#243;&#225;&#229;&#230;&#224;&#235;&#232; &#232; &#238;&#226;&#235;&#224;&#228;&#229;&#226;&#224;&#229;&#236;&#251;&#233; &#226;&#237;&#238;&#226;&#252; &#234;&#238;&#237;&#242;&#240;&#238;&#235;&#252;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESCAPE_TEXT2</Tag>
 		<English>territory. Now let's teach our enemies a lesson!</English>
@@ -238,7 +238,7 @@
 		<Italian>. Ora diamo una bella lezione ai nostri nemici!</Italian>
 		<Spanish>. &#161;D&#233;mosles una lecci&#243;n a nuestros enemigos!</Spanish>
 		<Russian>&#242;&#229;&#240;&#240;&#232;&#242;&#238;&#240;&#232;&#255;. &#209;&#229;&#233;&#247;&#224;&#241; &#228;&#224;&#226;&#224;&#233;&#242;&#229; &#239;&#240;&#229;&#239;&#238;&#228;&#224;&#226;&#224;&#242;&#252; &#237;&#224;&#248;&#232;&#236; &#226;&#240;&#224;&#227;&#224;&#236; &#243;&#240;&#238;&#234;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_CONTACT_NEWWORLD</Tag>
 		<English>Conquerors from a far away continent are invading our lands searching for wealth!</English>
@@ -247,7 +247,7 @@
 		<Italian>I conquistatori provenienti da un continente lontano invadono le nostre terre in cerca di ricchezza!</Italian>
 		<Spanish>&#161;Unos conquistadores de un continente lejano est&#225;n invadiendo nuestras tierras en busca de riquezas!</Spanish>
 		<Russian>&#199;&#224;&#226;&#238;&#229;&#226;&#224;&#242;&#229;&#235;&#232; &#228;&#224;&#235;&#229;&#234;&#238;-&#228;&#224;&#235;&#229;&#234;&#238; &#241; &#234;&#238;&#237;&#242;&#232;&#237;&#229;&#237;&#242;&#224; &#226;&#242;&#238;&#240;&#227;&#224;&#254;&#242;&#241;&#255; &#237;&#224;&#248;&#232; &#231;&#229;&#236;&#235;&#232;, &#232;&#249;&#243;&#249;&#232;&#229; &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_CONTACT_OLDWORLD</Tag>
 		<English>A group of our own adventurers has arrived in the new world searching for wealth!</English>
@@ -256,5 +256,5 @@
 		<Italian>Un gruppo di nostri avventurieri &#232; arrivato nel nuovo mondo in cerca di ricchezza!</Italian>
 		<Spanish>&#161;Uno de nuestros grupos de aventureros ha llegado a unas nuevas tierras en busca de riquezas!</Spanish>
 		<Russian>&#195;&#240;&#243;&#239;&#239;&#224; &#237;&#224;&#248;&#232;&#245; &#241;&#238;&#225;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#245; &#224;&#226;&#224;&#237;&#242;&#254;&#240;&#232;&#241;&#242;&#238;&#226; &#239;&#240;&#232;&#225;&#251;&#235;&#224; &#226; &#237;&#238;&#226;&#251;&#233; &#236;&#232;&#240;, &#232;&#249;&#243;&#249;&#232;&#233; &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#224;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 </Civ4GameText>

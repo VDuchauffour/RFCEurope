@@ -14,7 +14,7 @@
 		<Italian>[H1]Mercenari[\H1][PARAGRAPH:2]I mercenari sono soldati che combattono principalmente per un tornaconto privato, di solito senza considerazioni di ordine ideologico, nazionale, politico o morale. Per&#242; quando il termine viene utilizzato riferendosi a un soldato di un regolare esercito nazionale, &#232; considerato un insulto.[PARAGRAPH:2][PARAGRAPH:2]I mercenari sono stati impiegati in battaglia fin dai tempi dell'antico Egitto e di Cartagine fino al sedicesimo secolo, e tra l'altro includono i famosi Lanzichenecchi e la Guardia Svizzera. Nel gioco i mercenari possono essere assoldati solo fino alla scoperta del nazionalismo, che ha rivoluzionato la concezione degli eserciti e ha causato un rapido declino nell'utilizzo di truppe a pagamento.[PARAGRAPH:2]</Italian>
 		<Spanish>[H1]Mercenarios[\H1][PARAGRAPH:2]Los mercenarios son soldados a los que no les interesan las consideraciones ideol&#243;gicas, nacionales, pol&#237;ticas ni morales y que combaten fundamentalmente en busca de un beneficio propio. Sin embargo, cuando se utiliza este t&#233;rmino para referirse a un soldado de un ej&#233;rcito permanente, suele considerarse un insulto.[PARAGRAPH:2][PARAGRAPH:2]Los mercenarios han participado en guerras con regularidad desde la &#233;poca del antiguo Egipto y Cartago hasta el siglo XVI, como la famosa Guardia Suiza y los Lansquenetes. En el juego, solo se pueden contratar mercenarios hasta el descubrimiento del nacionalismo, que cambi&#243; la concepci&#243;n de los ej&#233;rcitos y provoc&#243; un r&#225;pido declive del empleo de mercenarios.[PARAGRAPH:2]</Spanish>
 		<Russian>[H1]Mercenaries[\H1][PARAGRAPH:2]Mercenaries are soldiers who fight primarily for private gain, usually with little regard for ideological, national, political, or moral considerations. However, when the term is used to refer to a soldier in a regular national army, it is usually considered an insult.[PARAGRAPH:2][PARAGRAPH:2]Mercenaries have seen regular deployment in battle since the time of Ancient Egypt and Carthage, up through the 16th century, including the famous Swiss Guard and the Landsknechts. In the game, Mercenaries can be hired only until the discovery of Nationalism, which changed the conception of armies and caused a rapid decline in Mercenary usage.[PARAGRAPH:2]</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_SCREEN_TITLE</Tag>
 		<English>Mercenary Manager</English>
@@ -23,7 +23,7 @@
 		<Italian>Gestione mercenari</Italian>
 		<Spanish>Gestor de mercenarios</Spanish>
 		<Russian>&#204;&#229;&#237;&#229;&#228;&#230;&#229;&#240; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_SCREEN_TITLE</Tag>
 		<English>Mercenaries</English>
@@ -32,7 +32,7 @@
 		<Italian>Mercenari</Italian>
 		<Spanish>Mercenarios</Spanish>
 		<Russian>&#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE</Tag>
 		<English>Mercenary Groups</English>
@@ -41,7 +41,7 @@
 		<Italian>Gruppi mercenari</Italian>
 		<Spanish>Grupos de mercenarios</Spanish>
 		<Russian>&#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE</Tag>
 		<English>Mercenary Contracts</English>
@@ -50,7 +50,7 @@
 		<Italian>Contratti mercenari</Italian>
 		<Spanish>Contratos de mercenarios</Spanish>
 		<Russian>&#202;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_MERCENARIES</Tag>
 		<English>Available Mercenaries</English>
@@ -59,7 +59,7 @@
 		<Italian>Mercenari disponibili</Italian>
 		<Spanish>Mercenarios disponibles</Spanish>
 		<Russian>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_MERCENARY_GROUPS</Tag>
 		<English>Available Mercenary Groups</English>
@@ -68,7 +68,7 @@
 		<Italian>Gruppi mercenari disponibili</Italian>
 		<Spanish>Grupos de mercenarios disponibles</Spanish>
 		<Russian>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITS_CONTRACTED_OUT</Tag>
 		<English>Units Contracted Out</English>
@@ -77,7 +77,7 @@
 		<Italian>Unit&#224; assegnate</Italian>
 		<Spanish>Unidades subcontratadas</Spanish>
 		<Russian>&#222;&#237;&#232;&#242;&#251; &#241; &#234;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#238;&#236;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HIRED_MERCENARIES</Tag>
 		<English>Hired Mercenaries</English>
@@ -86,7 +86,7 @@
 		<Italian>Mercenari assoldati</Italian>
 		<Spanish>Mercenarios contratados</Spanish>
 		<Russian>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HIRED_MERCENARY_GROUPS</Tag>
 		<English>Hired Mercenary Groups</English>
@@ -95,7 +95,7 @@
 		<Italian>Gruppi mercenari assoldati</Italian>
 		<Spanish>Grupos de mercenarios contratados</Spanish>
 		<Russian>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_UNITS</Tag>
 		<English>Available Units</English>
@@ -104,7 +104,7 @@
 		<Italian>Unit&#224; disponibili</Italian>
 		<Spanish>Unidades disponibles</Spanish>
 		<Russian>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_INFORMATION</Tag>
 		<English>Mercenary Information</English>
@@ -113,7 +113,7 @@
 		<Italian>Informazioni sui mercenari</Italian>
 		<Spanish>Informaci&#243;n de mercenarios</Spanish>
 		<Russian>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#229;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_GROUP_INFORMATION</Tag>
 		<English>Mercenary Group Information</English>
@@ -122,7 +122,7 @@
 		<Italian>Informazioni sui gruppi mercenari</Italian>
 		<Spanish>Informaci&#243;n del grupo de mercenarios</Spanish>
 		<Russian>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#227;&#240;&#243;&#239;&#239;&#229; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INFORMATION</Tag>
 		<English>Unit Information</English>
@@ -131,7 +131,7 @@
 		<Italian>Informazioni sulle unit&#224;</Italian>
 		<Spanish>Informaci&#243;n de la unidad</Spanish>
 		<Russian>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#254;&#237;&#232;&#242;&#229;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE_COST</Tag>
 		<English>Mercenary Maintenance Cost</English>
@@ -140,7 +140,7 @@
 		<Italian>Costo mantenimento mercenari</Italian>
 		<Spanish>Coste de mantenimiento de mercenarios</Spanish>
 		<Russian>&#209;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_CONTRACT_INCOME</Tag>
 		<English>Mercenary Contract Income</English>
@@ -149,7 +149,7 @@
 		<Italian>Entrata contratto mercenari</Italian>
 		<Spanish>Ingresos de contratos de mercenarios</Spanish>
 		<Russian>&#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#224;&#255; &#207;&#240;&#232;&#225;&#251;&#235;&#252; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SELFPRESERVATION1</Tag>
 		<English>Self Preservation I</English>
@@ -283,5 +283,5 @@
 		<Italian>Il nazionalismo ha cambiato la concezione degli eserciti: non c'&#232; pi&#249; posto per i mercenari!</Italian>
 		<Spanish>El nacionalismo ha cambiado la concepci&#243;n de los ej&#233;rcitos: &#161;los mercenarios ya no encajan en ellos!</Spanish>
 		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+		</TEXT>
 </Civ4GameText>
