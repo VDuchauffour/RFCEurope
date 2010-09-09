@@ -8,226 +8,82 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT</Tag>
 		<English>Salt</English>
-		<French>
-			<Text>Sel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Salz</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sal</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Sel</French>
+		<German>Salz</German>
+		<Italian>Sale</Italian>
+		<Spanish>Sal</Spanish>
 		<Russian>&#209;&#238;&#235;&#252;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATO</Tag>
 		<English>Potatoes</English>
-		<French>
-			<Text>Pommes de terre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kartoffeln</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Patate</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Papas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Pommes de terre</French>
+		<German>Kartoffeln</German>
+		<Italian>Patate</Italian>
+		<Spanish>Papas</Spanish>
 		<Russian>&#202;&#224;&#240;&#242;&#238;&#244;&#229;&#235;&#252;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COFFEE</Tag>
 		<English>Coffee</English>
-		<French>
-			<Text>Caf&#233;</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kaffee</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Caffe</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cafe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Caf&#233;</French>
+		<German>Kaffee</German>
+		<Italian>Caffe</Italian>
+		<Spanish>Cafe</Spanish>
 		<Russian>&#202;&#238;&#244;&#229;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR</Tag>
 		<English>Sulphur</English>
-		<French>
-			<Text>Soufre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Schwefel</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Zolfo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Azufre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Soufre</French>
+		<German>Schwefel</German>
+		<Italian>Zolfo</Italian>
+		<Spanish>Azufre</Spanish>
 		<Russian>&#209;&#229;&#240;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO</Tag>
 		<English>Tobacco</English>
-		<French>
-			<Text>Tabac</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Tabak</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Tobacco</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Tabaco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Tabac</French>
+		<German>Tabak</German>
+		<Italian>Tobacco</Italian>
+		<Spanish>Tabaco</Spanish>
 		<Russian>&#210;&#224;&#225;&#224;&#234;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BARLEY</Tag>
 		<English>Barley</English>
-		<French>
-			<Text>Orge</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gerste</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Orzo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cebada</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Orge</French>
+		<German>Gerste</German>
+		<Italian>Orzo</Italian>
+		<Spanish>Cebada</Spanish>
 		<Russian>&#223;&#247;&#236;&#229;&#237;&#252;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APPLE</Tag>
 		<English>Apples</English>
-		<French>
-			<Text>Pommes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>&#196;pfel</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Mele</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Manzanas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
+		<French>Pommes</French>
+		<German>&#196;pfel</German>
+		<Italian>Mele</Italian>
+		<Spanish>Manzanas</Spanish>
 		<Russian>&#223;&#225;&#235;&#238;&#234;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
 		<English>Olives</English>
-		<French>
-			<Text>Olives</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Oliven</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Olive</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Aceitunas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
+		<French>Olives</French>
+		<German>Oliven</German>
+		<Italian>Olive</Italian>
+		<Spanish>Aceitunas</Spanish>
 		<Russian>&#204;&#224;&#241;&#235;&#232;&#237;&#251;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEA</Tag>
 		<English>Tea</English>
-		<French>
-			<Text>Th&#233;</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Tee</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>T&#232;</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>T&#233;</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
+		<French>Th&#233;</French>
+		<German>Tee</German>
+		<Italian>T&#232;</Italian>
+		<Spanish>T&#233;</Spanish>
 		<Russian>&#215;&#224;&#233;</Russian>
 	</TEXT>
 	<TEXT>
@@ -238,7 +94,7 @@
 		<Italian>Legname</Italian>
 		<Spanish>Madera</Spanish>
 		<Russian>&#203;&#229;&#241;&#238;&#236;&#224;&#242;&#229;&#240;&#232;&#224;&#235;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONEY</Tag>
 		<English>Honey</English>
@@ -247,7 +103,7 @@
 		<Italian>Zucchero</Italian>
 		<Spanish>Miel</Spanish>
 		<Russian>&#204;&#229;&#228;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLAVES</Tag>
 		<English>Slaves</English>
@@ -256,7 +112,7 @@
 		<Italian>Schiavi</Italian>
 		<Spanish>Esclavos</Spanish>
 		<Russian>&#208;&#224;&#225;&#251;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ACCESS</Tag>
 		<English>Atlantic Access</English>
@@ -265,7 +121,7 @@
 		<Italian>Atlantic Access</Italian>
 		<Spanish>Atlantic Access</Spanish>
 		<Russian>&#192;&#242;&#235;&#224;&#237;&#242;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#196;&#238;&#241;&#242;&#243;&#239;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORTH_AMERICA_ACCESS</Tag>
 		<English>North America Access</English>
@@ -274,7 +130,7 @@
 		<Italian>North America Access</Italian>
 		<Spanish>North America Access</Spanish>
 		<Russian>North America Access</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOUTH_AMERICA_ACCESS</Tag>
 		<English>South America Access</English>
@@ -283,7 +139,7 @@
 		<Italian>South America Access</Italian>
 		<Spanish>South America Access</Spanish>
 		<Russian>South America Access</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EAST_ASIA_ACCESS</Tag>
 		<English>East Asia Access</English>
@@ -292,7 +148,7 @@
 		<Italian>East Asia Access</Italian>
 		<Spanish>East Asia Access</Spanish>
 		<Russian>East Asia Access</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RELIC</Tag>
 		<English>Relic</English>
@@ -301,7 +157,7 @@
 		<Italian>Reliquia</Italian>
 		<Spanish>Reliquia</Spanish>
 		<Russian>&#208;&#229;&#235;&#232;&#234;&#226;&#232;&#255;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<!-- ##### Terrain Bonuses - End ##### -->
 	<!-- BCM: New tag added 26.9.09 -->
 		<TEXT>
@@ -316,26 +172,10 @@
 	<TEXT>
 		<Tag>MOD_TXT_KEY_RESOURCE_COTTON</Tag>
 		<English>Cotton</English>
-		<French>
-			<Text>Coton</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Baumwolle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Cotone</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Algod&#243;n</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Coton</French>
+		<German>Baumwolle</German>
+		<Italian>Cotone</Italian>
+		<Spanish>Algod&#243;n</Spanish>
 		<Russian>&#194;&#224;&#242;&#224;</Russian>
 	</TEXT>
 	<TEXT>

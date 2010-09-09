@@ -13,7 +13,7 @@
 		<Italian>Un incendio ha devastato una foresta vicina alla citt&#224; %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>El fuego ha asolado un bosque cerca de la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Russian>&#206;&#227;&#238;&#237;&#252; &#225;&#243;&#248;&#229;&#226;&#224;&#235; &#247;&#229;&#240;&#229;&#231; &#235;&#229;&#241; &#226;&#238;&#231;&#235;&#229; %s1_civ_adjective &#227;&#238;&#240;&#238;&#228;&#224; %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CITY_RUINS</Tag>
 		<English>%s1_civ_adjective explorers have discovered valuable information buried in ruins near %s2_city.</English>
@@ -22,7 +22,7 @@
 		<Italian>Esploratori %s1:3_civ_adjective hanno scoperto preziose informazioni nascoste nelle rovine vicine a %s2_city.</Italian>
 		<Spanish>Exploradores %s1:3_civ_adjective han descubierto una valiosa informaci&#243;n enterrada en las ruinas cercanas a %s2_city.</Spanish>
 		<Russian>%s1_civ_adjective &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#242;&#229;&#235;&#232; &#238;&#225;&#237;&#224;&#240;&#243;&#230;&#232;&#235;&#232; &#246;&#229;&#237;&#237;&#243;&#254; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254; &#239;&#238;&#245;&#238;&#240;&#238;&#237;&#232;&#235; &#226; &#234;&#240;&#224;&#245;&#229; &#226;&#238;&#231;&#235;&#229; %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HAPPY_HUNTING</Tag>
 		<English>Surplus game harvested by hunters near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</English>
@@ -31,7 +31,7 @@
 		<Italian>L'abbondante selvaggina procurata dai cacciatori vicino alla citt&#224; %s1:2_civ_adjective di %s2_city ha causato un piccolo boom demografico.</Italian>
 		<Spanish>El excedente logrado por los cazadores cerca de la ciudad %s1:2_civ_adjective de %s2_city ha impulsado un peque&#241;o crecimiento de la poblaci&#243;n.</Spanish>
 		<Russian>Surplus game harvested by hunters near the %s1_civ_adjective city of %s2_city has fueled a minor population boom.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MOTHER_LODE</Tag>
 		<English>Gold miners near the %s1_civ_adjective city of %s2_city have struck the mother lode.</English>
@@ -40,7 +40,7 @@
 		<Italian>I minatori d'oro vicino alla citt&#224; %s1:2_civ_adjective di %s2_city hanno scoperto il filone principale.</Italian>
 		<Spanish>Los mineros de la ciudad %s1:2_civ_adjective de %s2_city han dado con el fil&#243;n principal de oro.</Spanish>
 		<Russian>Gold miners near the %s1_civ_adjective city of %s2_city have struck the mother lode.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WASHED_OUT</Tag>
 		<English>Floods have washed out some of the routes near the %s1_civ_adjective city of %s2_city.</English>
@@ -49,7 +49,7 @@
 		<Italian>Le inondazioni hanno distrutto alcune strade vicino alla citt&#224; %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>Las inundaciones han arrasado algunas de las rutas cercanas a la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Russian>Floods have washed out some of the routes near the %s1_civ_adjective city of %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AT_THE_SWORD</Tag>
 		<English>%s1_civ_adjective soldiers have rallied behind their heroes of the sword.</English>
@@ -58,7 +58,7 @@
 		<Italian>I soldati %s1:3_civ_adjective si sono riuniti attorno ai loro eroi guerrieri.</Italian>
 		<Spanish>Los soldados %s1:3_civ_adjective han cerrado filas alrededor de sus h&#233;roes de la espada.</Spanish>
 		<Russian>%s1_civ_adjective soldiers have rallied behind their heroes of the sword.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INSPIRED_MISSION</Tag>
 		<English>Inspired %s3_religion_adjective missionaries from the %s1_civ_adjective city of %s2_city have greatly expanded the influence of their religion!</English>
@@ -67,7 +67,7 @@
 		<Italian>Ispirati missionari %s3:3_religion_adjective dalla citt&#224; %s1:2_civ_adjective di %s2_city hanno largamente diffuso l'influenza della propria religione!</Italian>
 		<Spanish>Los inspirados misioneros %s3:3_religion_adjective de la ciudad %s1:2_civ_adjective de %s2_city han expandido mucho la influencia de su religi&#243;n.</Spanish>
 		<Russian>Inspired %s3_religion_adjective missionaries from the %s1_civ_adjective city of %s2_city have greatly expanded the influence of their religion!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_INSPIRED_MISSION_1</Tag>
 		<English>Inspired %s4_religion_adjective missionaries have spread their influence out of %s2_city. They now seek an audience with you, requesting your assistance in funding additional missions to the %s1_civ_adjective Empire.</English>
@@ -76,7 +76,7 @@
 		<Italian>Ispirati missionari %s4:3_religion_adjective hanno diffuso l'influenza della loro religione proveniente da %s2_city. Ora chiedono udienza presso di te, vorrebbero la tua assistenza per finanziare altre missioni nell'impero %s1_civ_adjective.</Italian>
 		<Spanish>Los inspirados misioneros %s4:3_religion_adjective han expandido mucho su influencia allende %s2_city. Ahora solicitan una audiencia con vos para pediros ayuda para financiar m&#225;s misiones en el imperio %s1:1_civ_adjective.</Spanish>
 		<Russian>Inspired %s4_religion_adjective missionaries have spread their influence out of %s2_city. They now seek an audience with you, requesting your assistance in funding additional missions to the %s1_civ_adjective Empire.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HYMNS_AND_SCULPTURES</Tag>
 		<English>Inspired by religious music and sculpture in %s2_city, a new Great Artist has emerged in the %s1_civ_adjective Empire.</English>
@@ -85,7 +85,7 @@
 		<Italian>Nell'impero %s1:1_civ_adjective &#232; emerso un nuovo Grande Artista, ispirato dalla musica e dalla scultura religiose a %s2_city.</Italian>
 		<Spanish>Inspirado por la m&#250;sica y las esculturas religiosas de %s2_city, ha aparecido un gran artista en el imperio %s1:1_civ_adjective.</Spanish>
 		<Russian>Inspired by religious music and sculpture in %s2_city, a new Great Artist has emerged in the %s1_civ_adjective Empire.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CARELESS_APPRENTICE</Tag>
 		<English>A fire has destroyed the Forge in the %s1_civ_adjective city of %s2_city.</English>
@@ -94,7 +94,7 @@
 		<Italian>Un incendio ha distrutto la Fucina nella citt&#224; %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>Un incendio ha destruido la fragua en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Russian>A fire has destroyed the Forge in the %s1_civ_adjective city of %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FAMINE_1</Tag>
 		<English>A dreadful harvest for our %s1_civ_adjective neighbors in the city of %s6_city just across the border has left its people starving. We may have a chance to gain favor with them if we provide humanitarian assistance from %s2_city.</English>
@@ -103,7 +103,7 @@
 		<Italian>Un raccolto disastroso sta facendo patire la fame ai nostri vicini %s1:3_civ_adjective nella citt&#224; di %s6_city, appena oltre confine. Potremmo guadagnarci il loro favore con degli aiuti umanitari da %s2_city.</Italian>
 		<Spanish>Una terrible cosecha de nuestros vecinos %s1:3_civ_adjective de la ciudad de %s6_city, justo al otro lado de la frontera, hace que se est&#233;n muriendo de hambre. Tenemos la posibilidad de ganarnos su favor si les proporcionamos ayuda humanitaria desde %s2_city.</Spanish>
 		<Russian>A dreadful harvest for our %s1_civ_adjective neighbors in the city of %s6_city just across the border has left its people starving. We may have a chance to gain favor with them if we provide humanitarian assistance from %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FAMINE_2</Tag>
 		<English>Famine has struck the city of %s6_city. Our people in %s2_city have enough food on hand to assist their %s1_civ_adjective neighbors. We stand ready to provide aid and comfort.</English>
@@ -112,7 +112,7 @@
 		<Italian>La carestia ha colpito la citt&#224; di %s6_city. La nostra gente a %s2_city ha abbastanza cibo per aiutare i vicini %s1:3_civ_adjective. Siamo pronti a fornire aiuto e conforto.</Italian>
 		<Spanish>La hambruna se ha cebado en la ciudad de %s6_city. Nuestras gentes de %s2_city tienen bastante comida a mano para ayudar a sus vecinos %s1:3_civ_adjective. Estamos listos para proporcionarles ayuda y consuelo.</Spanish>
 		<Russian>Famine has struck the city of %s6_city. Our people in %s2_city have enough food on hand to assist their %s1_civ_adjective neighbors. We stand ready to provide aid and comfort.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMINE_OTHER_2</Tag>
 		<English>The %s1_civ_adjective people in %s2_city have sent half their stored food to your city of %s4_city to fend off starvation caused by a poor local harvest. This humanitarian relief may represent a positive turning point in your relations.</English>
@@ -121,7 +121,7 @@
 		<Italian>La gente %s1:2_civ_adjective di %s2_city ha inviato met&#224; delle proprie scorte di cibo alla tua citt&#224; di %s4_city per allontanare la carestia causata da un cattivo raccolto. Questo aiuto umanitario potrebbe rappresentare un punto di svolta nelle relazioni con loro.</Italian>
 		<Spanish>El pueblo %s1:1_civ_adjective de %s2_city ha enviado la mitad de los alimentos que ten&#237;a almacenados a nuestra ciudad de %s4_city para paliar la hambruna causada por una mala cosecha en el lugar. Este acto humanitario bien puede representar un punto de quiebra positivo en nuestras relaciones.</Spanish>
 		<Russian>The %s1_civ_adjective people in %s2_city have sent half their stored food to your city of %s4_city to fend off starvation caused by a poor local harvest. This humanitarian relief may represent a positive turning point in your relations.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMINE_OTHER_3</Tag>
 		<English>The generous %s1_civ_adjective people in %s2_city have sent all of their food stores to your city of %s4_city to prevent famine caused by a poor local harvest. This humanitarian effort has brought your two peoples much closer together!</English>
@@ -130,7 +130,7 @@
 		<Italian>La generosa popolazione %s1:2_civ_adjective di %s2_city ha inviato l'intera scorta di cibo alla tua citt&#224; di %s4_city per scongiurare la carestia causata da un cattivo raccolto. Questo sforzo umanitario ha avvicinato molto le due popolazioni!</Italian>
 		<Spanish>Los generosos %s1:3_civ_adjective de %s2_city han enviado cuantos alimentos ten&#237;an almacenados a nuestra ciudad de %s4_city para paliar la hambruna causada por una mala cosecha en el lugar. Este generoso acto humanitario ha estrechado mucho m&#225;s los lazos entre nuestros dos pueblos.</Spanish>
 		<Russian>The generous %s1_civ_adjective people in %s2_city have sent all of their food stores to your city of %s4_city to prevent famine caused by a poor local harvest. This humanitarian effort has brought your two peoples much closer together!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT</Tag>
 		<English>A slave revolt has taken place in the %s1_civ_adjective city of %s2_city!</English>
@@ -139,7 +139,7 @@
 		<Italian>Una rivolta di schiavi &#232; scoppiata nella citt&#224; %s1:2_civ_adjective di %s2_city!</Italian>
 		<Spanish>&#161;Una rebeli&#243;n de esclavos ha tenido lugar en la ciudad %s1:2_civ_adjective de %s2_city!</Spanish>
 		<Russian>A slave revolt has taken place in the %s1_civ_adjective city of %s2_city!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BLESSED_SEA_DONE</Tag>
 		<English>%s4_religion_adjective leaders have bestowed grand rewards upon the %s1_civ_adjective people for completing the Quest of the Blessed Sea!</English>
@@ -148,7 +148,7 @@
 		<Italian>I leader %s4:3_religion_adjective hanno conferito grandi ricompense alla popolazione %s1:2_civ_adjective per essere riuscita nell'impresa del Mare Benedetto!</Italian>
 		<Spanish>Los l&#237;deres %s4:3_religion_adjective han concedido grandes recompensas al pueblo %s1:1_civ_adjective por haber completado la misi&#243;n "El bendito mar".</Spanish>
 		<Russian>%s4_religion_adjective leaders have bestowed grand rewards upon the %s1_civ_adjective people for completing the Quest of the Blessed Sea!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AIRLINER_CRASH</Tag>
 		<English>A %s4_civ_adjective passenger aircraft has crashed within %s1_civ_adjective territory. Neither side has provided any details of the incident.</English>
@@ -157,7 +157,7 @@
 		<Italian>Un aereo passeggeri %s4:3_civ_adjective &#232; precipitato in territorio %s1_civ_adjective. Nessuna delle parti ha fornito dettagli sull'incidente.</Italian>
 		<Spanish>Un avi&#243;n de pasajeros %s4:1_civ_adjective se ha estrellado en territorio %s1:1_civ_adjective. Ninguna parte ha proporcionado detalles del accidente.</Spanish>
 		<Russian>A %s4_civ_adjective passenger aircraft has crashed within %s1_civ_adjective territory. Neither side has provided any details of the incident.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_AIRLINER_CRASH_1</Tag>
 		<English>A %s1_civ_adjective passenger flight has crashed in our territory near %s2_city.</English>
@@ -166,7 +166,7 @@
 		<Italian>Un aereo passeggeri %s1:3_civ_adjective &#232; precipitato sul nostro territorio, vicino a %s2_city.</Italian>
 		<Spanish>Un vuelo de pasajeros %s1:1_civ_adjective se ha estrellado en nuestro territorio, cerca de %s2_city.</Spanish>
 		<Russian>A %s1_civ_adjective passenger flight has crashed in our territory near %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_OTHER_1</Tag>
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They have allowed unrestricted access to your recovery teams, building trust between your two nations.</English>
@@ -175,7 +175,7 @@
 		<Italian>Uno dei tuoi aerei passeggeri &#232; precipitato nel territorio %s1:1_civ_adjective. Hanno concesso il libero accesso alle tue squadre di soccorso, creando fiducia tra le due nazioni.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Se les ha concedido acceso total a nuestros equipos de rescate, lo que ha alimentado la confianza entre nuestras dos naciones.</Spanish>
 		<Russian>One of your passenger airliners has crashed in %s1_civ_adjective territory. They have allowed unrestricted access to your recovery teams, building trust between your two nations.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_OTHER_2</Tag>
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They seemed to be unsure how to react at first, but finally allowed your recovery teams access to the crash site.</English>
@@ -184,7 +184,7 @@
 		<Italian>Uno dei tuoi aerei passeggeri &#232; precipitato nel territorio %s1:1_civ_adjective. Sembravano insicuri su come reagire, all'inizio, ma poi hanno permesso alle tue squadre di soccorso di accedere al luogo dello schianto.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Al principio no sab&#237;an muy bien c&#243;mo reaccionar, pero finalmente han concedido acceso a nuestros equipos de rescate al lugar del siniestro.</Spanish>
 		<Russian>One of your passenger airliners has crashed in %s1_civ_adjective territory. They seemed to be unsure how to react at first, but finally allowed your recovery teams access to the crash site.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_AIRLINER_CRASH_OTHER_3</Tag>
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They are denying all access and have claimed the wreckage as their own. This outrage has angered your people and driven a diplomatic wedge between your two nations.</English>
@@ -193,7 +193,7 @@
 		<Italian>Uno dei tuoi aerei passeggeri &#232; precipitato nel territorio %s1:1_civ_adjective. Ti hanno negato l'accesso e hanno rivendicato come loro il relitto. Questo oltraggio ha incollerito il tuo popolo e creato un abisso diplomatico tra le due nazioni.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Nos deniegan cualquier derecho de acceso y se han apoderado de los restos. Este ultraje ha inflamado a nuestro pueblo y ha provocado un punto de quiebra en las relaciones diplom&#225;ticas entre nuestras dos naciones.</Spanish>
 		<Russian>One of your passenger airliners has crashed in %s1_civ_adjective territory. They are denying all access and have claimed the wreckage as their own. This outrage has angered your people and driven a diplomatic wedge between your two nations.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FARM_BANDITS</Tag>
 		<English>Bandits are wreaking havoc in %s1_civ_adjective farmlands.</English>
@@ -202,7 +202,7 @@
 		<Italian>I banditi stanno devastando i terreni agricoli %s1:3_civ_adjective.</Italian>
 		<Spanish>Los bandidos est&#225;n arrasando los cultivos %s1:3_civ_adjective.</Spanish>
 		<Russian>One of your passenger airliners has crashed in %s1_civ_adjective territory. They are denying all access and have claimed the wreckage as their own. This outrage has angered your people and driven a diplomatic wedge between your two nations.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FARM_BANDITS_AGAIN</Tag>
 		<English>The %s1_civ_adjective Empire continues to suffer a loss of food production due to banditry.</English>
@@ -211,7 +211,7 @@
 		<Italian>L'impero %s1:1_civ_adjective soffre di carenza di cibo a causa dei furti dei banditi.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective no deja de sufrir p&#233;rdidas en la producci&#243;n de alimentos debido al bandidaje.</Spanish>
 		<Russian>The %s1_civ_adjective Empire continues to suffer a loss of food production due to banditry.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_MOUNTAIN_DONE</Tag>
 		<English>The faithful %s3_religion_adjective people are inspired by the divine providence of the %s1_civ_adjective Empire for completing the Quest of the Holy Mountain!</English>
@@ -220,7 +220,7 @@
 		<Italian>Il fedele popolo %s3:1_religion_adjective &#232; ispirato dalla divina provvidenza dell'impero %s1_civ_adjective, ottenuta per aver completato l'impresa della Montagna Sacra!</Italian>
 		<Spanish>Los fieles %s3:3_religion_adjective est&#225;n inspirados por la divina providencia del imperio %s1:1_civ_adjective, que ha completado la misi&#243;n de la Monta&#241;a Sagrada.</Spanish>
 		<Russian>The faithful %s3_religion_adjective people are inspired by the divine providence of the %s1_civ_adjective Empire for completing the Quest of the Holy Mountain!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HORTICULTURE</Tag>
 		<English>%s1_civ_adjective horticulturists have harnessed rare local resources to produce remedies.</English>
@@ -229,7 +229,7 @@
 		<Italian>Gli orticultori %s1:3_civ_adjective hanno sfruttato rare risorse locali per produrre farmaci.</Italian>
 		<Spanish>Los horticultores %s1:3_civ_adjective han aprovechado extra&#241;os recursos del lugar para producir remedios.</Spanish>
 		<Russian>%s1_civ_adjective horticulturists have harnessed rare local resources to produce remedies.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWS_EVENT_HORTICULTURE_3</Tag>
 		<English>%s1_civ_adjective investments in horticulture have paid off! A new minor industry is thriving in %s2_city, boosting health and research.</English>
@@ -238,7 +238,7 @@
 		<Italian>Gli investimenti %s1:3_civ_adjective nell'orticultura stanno dando frutti! A %s2_city prospera una nuova industria minore, che incrementa salute e ricerca.</Italian>
 		<Spanish>Las inversiones %s1:4_civ_adjective en horticultura han valido la pena. Una nueva industria menor est&#225; prosperando en %s2_city, lo que impulsa la salud y la investigaci&#243;n.</Spanish>
 		<Russian>%s1_civ_adjective horticulturists have harnessed rare local resources to produce remedies.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FUGITIVE</Tag>
 		<English>%s1_civ_adjective authorities are rumored to have captured a fugitive fleeing from %s4_civ_adjective justice. No confirmation is available.</English>
@@ -247,7 +247,7 @@
 		<Italian>Si dice che le autorit&#224; %s1:2_civ_adjective abbiano catturato un uomo in fuga dalla giustizia %s4_civ_adjective. Non &#232; disponibile alcuna conferma.</Italian>
 		<Spanish>Se rumorea que las autoridades %s1:4_civ_adjective han capturado a un fugitivo que hu&#237;a de la justicia %s4:2_civ_adjective. No disponemos de confirmaci&#243;n.</Spanish>
 		<Russian>%s1_civ_adjective authorities are rumored to have captured a fugitive fleeing from %s4_civ_adjective justice. No confirmation is available.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FUGITIVE_1</Tag>
 		<English>A fugitive from justice, wanted for crimes in the %s1_civ_adjective Empire, has been discovered hiding out in our territory.</English>
@@ -256,7 +256,7 @@
 		<Italian>Nei nostri territori &#232; stato scoperto un fuggitivo, ricercato per i crimini commessi nell'impero %s1:1_civ_adjective.</Italian>
 		<Spanish>Hemos descubierto que en nuestro territorio se oculta un pr&#243;fugo de la justicia, buscado por delitos en el imperio %s1:1_civ_adjective.</Spanish>
 		<Russian>A fugitive from justice, wanted for crimes in the %s1_civ_adjective Empire, has been discovered hiding out in our territory.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FUGITIVE_2</Tag>
 		<English>An assassin wanted for slaying a %s1_civ_adjective official has been caught fleeing through our land.</English>
@@ -265,7 +265,7 @@
 		<Italian>&#200; stato catturato nei nostri territori un assassino, ricercato per l'omicidio di un funzionario %s1:1_civ_adjective.</Italian>
 		<Spanish>Hemos atrapado huyendo por nuestra tierra a un asesino buscado por matar a un funcionario %s1:1_civ_adjective.</Spanish>
 		<Russian>A fugitive from justice, wanted for crimes in the %s1_civ_adjective Empire, has been discovered hiding out in our territory.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_INFO_FUGITIVE_4</Tag>
 		<English>Our gesture of goodwill toward the %s1_civ_adjective Empire has angered %s6_player.</English>
@@ -274,7 +274,7 @@
 		<Italian>Il nostro gesto di benevolenza verso l'impero %s1:1_civ_adjective ha irritato %s6_player.</Italian>
 		<Spanish>Nuestro gesto de buena voluntad hacia el imperio %s1:1_civ_adjective ha enojado a %s6_player.</Spanish>
 		<Russian>Our gesture of goodwill toward the %s1_civ_adjective Empire has angered %s6_player.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_INFO_FUGITIVE_5</Tag>
 		<English>Word of our interrogation of the fugitive has leaked to %s3_civ_adjective authorities, angering them.</English>
@@ -283,7 +283,7 @@
 		<Italian>Voci dell'interrogatorio del fuggitivo sono arrivate alle autorit&#224; %s3:2_civ_adjective, facendole incollerire.</Italian>
 		<Spanish>El asunto de nuestro interrogatorio al pr&#243;fugo se ha filtrado a las autoridades %s3:4_civ_adjective y las ha enojado.</Spanish>
 		<Russian>Word of our interrogation of the fugitive has leaked to %s3_civ_adjective authorities, angering them.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PESTILENCE</Tag>
 		<English>Pestilence has struck %s1_civ_adjective agricultural lands.</English>
@@ -292,7 +292,7 @@
 		<Italian>La pestilenza ha colpito i territori agricoli %s1:3_civ_adjective.</Italian>
 		<Spanish>Una plaga ha asolado las tierras de cultivo %s1:4_civ_adjective.</Spanish>
 		<Russian>Word of our interrogation of the fugitive has leaked to %s3_civ_adjective authorities, angering them.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MARATHON</Tag>
 		<English>A %s1_civ_adjective soldier has run a great distance to warn of invasion, inspiring defenders all across their lands.</English>
@@ -301,7 +301,7 @@
 		<Italian>Un soldato %s1:1_civ_adjective ha coperto di corsa una grande distanza per avvertire di un'invasione, ispirando tutti i difensori del Paese.</Italian>
 		<Spanish>Un soldado %s1:1_civ_adjective ha recorrido una gran distancia para avisar de una invasi&#243;n, y ha inspirado a los defensores por todas sus tierras.</Spanish>
 		<Russian>A %s1_civ_adjective soldier has run a great distance to warn of invasion, inspiring defenders all across their lands.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FAUX_PAS</Tag>
 		<English>A faux pas commited by the %s1_civ_adjective ambassador has caused quite a stir in the %s4_civ_adjective Capital.</English>
@@ -310,7 +310,7 @@
 		<Italian>Una gaffe commessa dall'ambasciatore %s1:1_civ_adjective ha causato agitazione nella capitale %s4:2_civ_adjective.</Italian>
 		<Spanish>Un paso en falso dado por el embajador %s1:1_civ_adjective ha causado un gran revuelo en la capital %s4:2_civ_adjective.</Spanish>
 		<Russian>A %s1_civ_adjective soldier has run a great distance to warn of invasion, inspiring defenders all across their lands.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FAUX_PAS_1</Tag>
 		<English>Our ambassador to the %s1_civ_adjective Empire has committed a faux pas!</English>
@@ -319,7 +319,7 @@
 		<Italian>Il nostro ambasciatore presso l'impero %s1:1_civ_adjective ha commesso una gaffe!</Italian>
 		<Spanish>&#161;Nuestro embajador en el imperio %s1:1_civ_adjective ha dado un paso en falso!</Spanish>
 		<Russian>Our ambassador to the %s1_civ_adjective Empire has committed a faux pas!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAUX_PAS_OTHER_1</Tag>
 		<English>The %s1_civ_adjective ambassador has committed a faux pas. This insulting gaffe has adversely affected our relations with his country.</English>
@@ -328,7 +328,7 @@
 		<Italian>L'ambasciatore %s1:1_civ_adjective ha commesso una gaffe. L'episodio ha influenzato negativamente le nostre relazioni col suo Paese.</Italian>
 		<Spanish>El embajador %s1:1_civ_adjective ha dado un paso en falso. Esta ofensiva metedura de pata ha afectado negativamente a nuestras relaciones con su pa&#237;s.</Spanish>
 		<Russian>Our ambassador to the %s1_civ_adjective Empire has committed a faux pas!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_JOYOUS_WEDDING</Tag>
 		<English>A joyous marriage in the %s3_religion_adjective tradition has forged new bonds between %s1_civ_adjective and %s4_civ_adjective peoples, who both adore the new couple and are pleased with the behavior of the inlaws from the other nation.</English>
@@ -337,7 +337,7 @@
 		<Italian>Un felice matrimonio nella tradizione religiosa %s3:2_religion_adjective ha creato nuovi legami tra la popolazione %s1:2_civ_adjective e quella %s4:2_civ_adjective, che adorano la nuova coppia e sono compiaciute del comportamento dei suoceri dell'altra nazione.</Italian>
 		<Spanish>Un alegre matrimonio en la tradici&#243;n %s3:2_religion_adjective ha forjado nuevos v&#237;nculos entre los pueblos %s1:1_civ_adjective y %s4:1_civ_adjective, que adoran a la nueva pareja y est&#225;n encantados con el comportamiento de la familia de la otra naci&#243;n.</Spanish>
 		<Russian>Our ambassador to the %s1_civ_adjective Empire has committed a faux pas!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_1</Tag>
 		<English>Two prominent families, one from our people and one from the %s1_civ_adjective people, have forged an alliance through an arranged %s4_religion_adjective marriage.</English>
@@ -346,7 +346,7 @@
 		<Italian>Due importanti famiglie, una della nostra gente e una della popolazione %s1:2_civ_adjective, hanno forgiato un'alleanza attraverso un matrimonio %s4:1_religion_adjective.</Italian>
 		<Spanish>Dos familias eminentes, una de nuestro pueblo y otra del pueblo %s1:1_civ_adjective, han forjado una alianza mediante una boda %s4:2_religion_adjective concertada.</Spanish>
 		<Russian>Our ambassador to the %s1_civ_adjective Empire has committed a faux pas!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_2</Tag>
 		<English>One of our prominent young noble ladies has fallen in love with a %s1_civ_adjective nobleman and they are to be wed in the %s4_religion_adjective tradition.</English>
@@ -355,7 +355,7 @@
 		<Italian>Una delle nostre giovani e importanti nobili si &#232; innamorata di un giovane nobile a %s1_civ_adjective e si sposeranno nella tradizione %s4:2_religion_adjective.</Italian>
 		<Spanish>Una de nuestras damas de m&#225;s alta alcurnia se ha quedado prendada de un noble %s1:1_civ_adjective, y ambos van a casarse seg&#250;n la tradici&#243;n %s4:2_religion_adjective.</Spanish>
 		<Russian>One of our prominent young noble ladies has fallen in love with a %s1_civ_adjective nobleman and they are to be wed in the %s4_religion_adjective tradition.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_JOYOUS_WEDDING_3</Tag>
 		<English>A %s1_civ_adjective industrial heiress has received a marriage proposal from one of our prominent business tycoons. Their %s4_religion_adjective wedding will occur this year.</English>
@@ -364,7 +364,7 @@
 		<Italian>Un'ereditiera industriale %s1:2_civ_adjective ha ricevuto una proposta di matrimonio da uno dei nostri importanti magnati. Il loro matrimonio %s4_religion_adjective sar&#224; celebrato quest'anno.</Italian>
 		<Spanish>Uno de nuestros magnates ha pedido en matrimonio a la heredera de una familia industrial %s1:2_civ_adjective. La boda, que se celebrar&#225; seg&#250;n el rito %s4:1_religion_adjective, se espera para este mismo a&#241;o.</Spanish>
 		<Russian>One of our prominent young noble ladies has fallen in love with a %s1_civ_adjective nobleman and they are to be wed in the %s4_religion_adjective tradition.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_1</Tag>
 		<English>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn no protest from them, and in fact little interest at all. Some family members of the newlyweds are griping but the incident appears to have passed without much bitterness.</English>
@@ -373,7 +373,7 @@
 		<Italian>Un matrimonio %s5:1_religion_adjective tra uno dei nostri cittadini e una dell'impero %s1:1_civ_adjective non ha attirato alcuna protesta da parte loro e ben poco interesse. Alcuni familiari degli sposi novelli si sono azzuffati, ma l'incidente &#232; stato superato senza troppe amarezze.</Italian>
 		<Spanish>Una boda %s5:2_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective no ha suscitado protestas por parte de ese imperio, aunque tampoco ning&#250;n inter&#233;s. Algunos familiares de los reci&#233;n casados se han llevado las manos a la cabeza, pero el asunto ha transcurrido sin mayores incidentes.</Spanish>
 		<Russian>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn no protest from them, and in fact little interest at all. Some family members of the newlyweds are griping but the incident appears to have passed without much bitterness.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_2</Tag>
 		<English>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn a blessing from them with generous wedding gifts. Our people are pleased by this gesture.</English>
@@ -382,7 +382,7 @@
 		<Italian>Un matrimonio %s5:1_religion_adjective tra uno dei nostri cittadini e una dell'impero %s1:1_civ_adjective ha ottenuto da loro una benedizione e generosi doni nuziali. La nostra gente &#232; compiaciuta dal gesto.</Italian>
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido bendecido por ese imperio con generosos regalos de boda. Nuestro pueblo est&#225; complacido con ese gesto.</Spanish>
 		<Russian>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn a blessing from them with generous wedding gifts. Our people are pleased by this gesture.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_JOYOUS_WEDDING_OTHER_3</Tag>
 		<English>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has been honored by a national holiday, including outlandish wedding gifts and donations to our religious institutions. Our people are thrilled by this gesture.</English>
@@ -391,7 +391,7 @@
 		<Italian>Un matrimonio %s5:1_religion_adjective tra uno dei nostri cittadini e una dell'impero %s1:1_civ_adjective &#232; stato onorato con una festa nazionale, con tanto di esotico regalo nuziale e donazioni alle nostre istituzioni religiose. La nostra popolazione &#232; entusiasta del gesto.</Italian>
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido honrado con una fiesta nacional, incluyendo regalos de bodas incre&#237;bles y generosas donaciones a nuestras instituciones religiosas. Nuestro pueblo est&#225; emocionado con ese gesto.</Spanish>
 		<Russian>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has been honored by a national holiday, including outlandish wedding gifts and donations to our religious institutions. Our people are thrilled by this gesture.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD</Tag>
 		<English>Nobles from a %s4_civ_adjective family are angry with their new %s1_civ_adjective inlaws for holding a %s3_religion_adjective wedding against their wishes. This event has drawn great interest within these nations as feuding has broken out over the dispute.</English>
@@ -400,7 +400,7 @@
 		<Italian>I nobili di una famiglia %s4:2_civ_adjective sono adirati con i loro nuovi consuoceri %s1:3_civ_adjective per aver organizzato un matrimonio %s3_religion_adjective contro i loro desideri. Questo fatto ha attirato un grande interesse nelle due nazioni, tanto che per questo le due famiglie sono ora in lotta.</Italian>
 		<Spanish>Los nobles de una familia %s4:2_civ_adjective est&#225;n enojados con su nueva familia pol&#237;tica %s1:2_civ_adjective por haber celebrado una boda %s3:2_religion_adjective en contra de sus deseos. Este asunto ha suscitado un gran inter&#233;s entre ambas naciones, ya que la disputa se ha convertido en una cuesti&#243;n de honor.</Spanish>
 		<Russian>Nobles from a %s4_civ_adjective family are angry with their new %s1_civ_adjective inlaws for holding a %s3_religion_adjective wedding against their wishes. This event has drawn great interest within these nations as feuding has broken out over the dispute.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_1</Tag>
 		<English>A politically arranged marriage between one of our noble families and another %s1_civ_adjective family has collapsed over feuding about whether to hold the marriage in their tradition or to make it a %s4_religion_adjective wedding. Tensions are escalating.</English>
@@ -409,7 +409,7 @@
 		<Italian>Un matrimonio politico tra una delle nostre famiglie nobili e una famiglia nobile %s1:2_civ_adjective &#232; fallito per una disputa relativa alla celebrazione del matrimonio secondo le loro tradizioni oppure con rito %s4:1_religion_adjective. La tensione &#232; in aumento.</Italian>
 		<Spanish>Un matrimonio pol&#237;tico concertado entre una de nuestras familias nobles y otra %s1:2_civ_adjective se ha convertido en una cuesti&#243;n de honor por el problema de si se hab&#237;a de hacer seg&#250;n su tradici&#243;n o seg&#250;n el rito %s4:1_religion_adjective. Las tensiones van en aumento.</Spanish>
 		<Russian>Nobles from a %s4_civ_adjective family are angry with their new %s1_civ_adjective inlaws for holding a %s3_religion_adjective wedding against their wishes. This event has drawn great interest within these nations as feuding has broken out over the dispute.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_2</Tag>
 		<English>Two prominent families are feuding over their children, who eloped together against everybody else's wishes. %s1_civ_adjective leaders are particularly upset that the marriage was held in our %s4_religion_adjective tradition.</English>
@@ -418,7 +418,7 @@
 		<Italian>Due importanti famiglie si stanno scontrando a causa dei propri eredi, che si sono sposati contro la volont&#224; di tutti. I leader %s1:3_civ_adjective sono particolarmente irritati dal fatto che il matrimonio sia stato celebrato secondo la nostra tradizione %s4:2_religion_adjective.</Italian>
 		<Spanish>Dos familias eminentes est&#225;n enfrentadas por sus hijos, que se han fugado juntos para casarse contra el deseo de todos. Los l&#237;deres %s1:3_civ_adjective est&#225;n especialmente disgustados, ya que el matrimonio se celebr&#243; seg&#250;n nuestra tradici&#243;n %s4:2_religion_adjective.</Spanish>
 		<Russian>Two prominent families are feuding over their children, who eloped together against everybody else's wishes. %s1_civ_adjective leaders are particularly upset that the marriage was held in our %s4_religion_adjective tradition.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WEDDING_FEUD_3</Tag>
 		<English>An industrial heiress from the %s1_civ_adjective Empire has received a marriage proposal from one of our prominent business tycoons. The marriage is going forward, but the families on both sides are feuding over which religion should preside over the ceremony. The couple has decided on a %s4_religion_adjective wedding to the great annoyance of the bride's family.</English>
@@ -427,7 +427,7 @@
 		<Italian>Un'ereditiera industriale dell'impero %s1_civ_adjective ha ricevuto una proposta di matrimonio da uno dei nostri importanti magnati. Il matrimonio si far&#224;, ma le due famiglie si stanno scontrando su quale dovr&#224; essere la religione secondo cui celebrare la cerimonia. La coppia ha deciso per un matrimonio %s4:1_religion_adjective, con grande disappunto della famiglia della sposa.</Italian>
 		<Spanish>Uno de nuestros magnates ha pedido en matrimonio a la heredera de una familia industrial del imperio %s1:1_civ_adjective. La boda se celebrar&#225;, pero ambas familias se est&#225;n peleando por el rito religioso que ha de seguir la ceremonia. La pareja se ha decidido por una boda %s4:2_religion_adjective, para gran irritaci&#243;n de la familia de la novia.</Spanish>
 		<Russian>An industrial heiress from the %s1_civ_adjective Empire has received a marriage proposal from one of our prominent business tycoons. The marriage is going forward, but the families on both sides are feuding over which religion should preside over the ceremony. The couple has decided on a %s4_religion_adjective wedding to the great annoyance of the bride's family.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_1</Tag>
 		<English>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has angered our people. Our rivals have granted no special gifts or attention, though, so our people are merely grumbling and fuming.</English>
@@ -436,7 +436,7 @@
 		<Italian>Un matrimonio %s5:1_religion_adjective tra uno dei nostri cittadini e una dell'impero %s1_civ_adjective ha irritato il nostro popolo. I nostri rivali non hanno concesso alcuna attenzione o regalo speciale, quindi la nostra gente si limita a borbottare arrabbiata.</Italian>
 		<Spanish>Una boda %s5:2_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha enfurecido a nuestro pueblo. Pero nuestros rivales no les han hecho regalos o un caso especial, por lo que nuestra gente se limita a refunfu&#241;ar enojada.</Spanish>
 		<Russian>An industrial heiress from the %s1_civ_adjective Empire has received a marriage proposal from one of our prominent business tycoons. The marriage is going forward, but the families on both sides are feuding over which religion should preside over the ceremony. The couple has decided on a %s4_religion_adjective wedding to the great annoyance of the bride's family.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_2</Tag>
 		<English>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn our rivals' blessing with generous wedding gifts. Our people are outraged by this insult to our faith.</English>
@@ -445,7 +445,7 @@
 		<Italian>Un matrimonio %s5:1_religion_adjective tra uno dei nostri cittadini e una dell'impero %s1_civ_adjective ha ottenuto la benedizione dei nostri rivali e generosi doni nuziali. La nostra gente &#232; indignata da un tale insulto alla nostra fede.</Italian>
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido bendecido por nuestros rivales con generosos regalos de boda. El pueblo est&#225; ultrajado por este insulto a nuestra fe.</Spanish>
 		<Russian>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn our rivals' blessing with generous wedding gifts. Our people are outraged by this insult to our faith.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WEDDING_FEUD_OTHER_3</Tag>
 		<English>A %s1_religion_adjective wedding between one of our citizens and one from %s2_civ has been honored by a national holiday by our rivals, including outlandish wedding gifts and donations to their religious institutions. This insult against our religious traditions has outraged our populace. Should we declare a holy war upon the unbelievers?</English>
@@ -454,7 +454,7 @@
 		<Italian>Un matrimonio %s1:1_religion_adjective tra uno dei nostri cittadini e una del %s2_civ &#232; stato onorato con una festa nazionale da parte dei nostri rivali, con tanto di esotico regalo nuziale e donazioni alle loro istituzioni religiose. Questo insulto alle nostre tradizioni religiose ha fatto infuriare la popolazione. Dovremmo dichiarare guerra santa agli infedeli?</Italian>
 		<Spanish>Un matrimonio %s1:1_religion_adjective entre una de nuestras familias y otra del %s2_civ ha sido honrado con una fiesta nacional por nuestros rivales, incluidos regalos de bodas incre&#237;bles y generosas donaciones a sus instituciones religiosas. Este insulto a nuestras tradiciones religiosas ha indignado al populacho. &#191;Les declaramos la guerra santa a los infieles?</Spanish>
 		<Russian>A %s5_religion_adjective wedding between one of our citizens and one from the %s1_civ_adjective Empire has drawn our rivals' blessing with generous wedding gifts. Our people are outraged by this insult to our faith.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LEFT_AT_ALTAR</Tag>
 		<English>A collapsed politically arranged wedding and a jilted bride are at the center of new tensions between the %s4_civ_adjective and %s1_civ_adjective Empires.</English>
@@ -463,7 +463,7 @@
 		<Italian>Un matrimonio politico fallito e una sposa abbandonata sono alla base delle nuove tensioni tra gli imperi %s4:1_civ_adjective e %s1:1_civ_adjective.</Italian>
 		<Spanish>Una malograda boda pol&#237;tica concertada y una novia despechada est&#225;n en el centro de nuevas tensiones entre los imperios %s4:1_civ_adjective y %s1:1_civ_adjective.</Spanish>
 		<Russian>A collapsed politically arranged wedding and a jilted bride are at the center of new tensions between the %s4_civ_adjective and %s1_civ_adjective Empires.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_1</Tag>
 		<English>A politically arranged marriage between one of our noblemen and a woman from a noble %s1_civ_adjective family has collapsed into feuding as the groom backed out of the wedding on the wedding day.</English>
@@ -472,7 +472,7 @@
 		<Italian>Un matrimonio politico organizzato tra un nostro nobiluomo e una donna di una nobile famiglia %s1:2_civ_adjective si &#232; trasformato in una disputa a causa dello sposo che si &#232; ritirato il giorno del matrimonio.</Italian>
 		<Spanish>Un matrimonio pol&#237;tico concertado entre uno de nuestros nobles y una noble %s1:2_civ_adjective se ha convertido en una cuesti&#243;n de honor, pues el novio ha dejado plantado a la novia el d&#237;a de la boda.</Spanish>
 		<Russian>A politically arranged marriage between one of our noblemen and a woman from a noble %s1_civ_adjective family has collapsed into feuding as the groom backed out of the wedding on the wedding day.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LEFT_AT_ALTAR_3</Tag>
 		<English>An %s1_civ_adjective industrial heiress has been left at the altar by one of our prominent business tycoons, who had proposed marriage to her. The fiasco has outraged the families on both sides, who are now feuding over the collapsed marriage.</English>
@@ -481,7 +481,7 @@
 		<Italian>Un'ereditiera industriale %s1:2_civ_adjective &#232; stata abbandonata di fronte all'altare da uno dei nostri pi&#249; importanti magnati, che le aveva proposto il matrimonio. Il fiasco ha indignato entrambe le famiglie, che ora stanno litigando sul fallimento del matrimonio.</Italian>
 		<Spanish>Uno de nuestros magnates m&#225;s prominentes ha dejado plantada en el altar a la heredera de una familia industrial %s1:2_civ_adjective despu&#233;s de haber pedido su mano. El fiasco ha ultrajado a ambas familias, que ahora han convertido el fallido matrimonio en una cuesti&#243;n de honor.</Spanish>
 		<Russian>An %s1_civ_adjective industrial heiress has been left at the altar by one of our prominent business tycoons, who had proposed marriage to her. The fiasco has outraged the families on both sides, who are now feuding over the collapsed marriage.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPICY</Tag>
 		<English>A %s1_civ_adjective chef has identified a new and valuable type of spice.</English>
@@ -490,7 +490,7 @@
 		<Italian>Uno chef %s1:1_civ_adjective ha scoperto un nuovo e prezioso tipo di spezia.</Italian>
 		<Spanish>Un cocinero %s1:1_civ_adjective ha identificado un tipo de especia nuevo y valioso.</Spanish>
 		<Russian>An %s1_civ_adjective industrial heiress has been left at the altar by one of our prominent business tycoons, who had proposed marriage to her. The fiasco has outraged the families on both sides, who are now feuding over the collapsed marriage.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TORNADO_1</Tag>
 		<English>Vicious tornadoes carved a path of destruction through the %s1_civ_adjective Empire.</English>
@@ -499,7 +499,7 @@
 		<Italian>Dei terribili tornado hanno lasciato una scia di distruzione nell'impero %s1:1_civ_adjective.</Italian>
 		<Spanish>Unos tornados muy fuertes han dejado una estela de destrucci&#243;n a su paso por el imperio %s1:1_civ_adjective.</Spanish>
 		<Russian>An %s1_civ_adjective industrial heiress has been left at the altar by one of our prominent business tycoons, who had proposed marriage to her. The fiasco has outraged the families on both sides, who are now feuding over the collapsed marriage.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TORNADO_2</Tag>
 		<English>%s1_civ_adjective infrastructure was wiped out by a deadly thunderstorm and the violent twisters it spawned.</English>
@@ -508,7 +508,7 @@
 		<Italian>Un'infrastruttura %s1:2_civ_adjective &#232; stata spazzata via da una letale tempesta e dai violenti tornado che ha generato.</Italian>
 		<Spanish>Las infraestructuras %s1:4_civ_adjective han sido arrasadas por una violenta tormenta y los huracanes que esta gener&#243;.</Spanish>
 		<Russian>%s1_civ_adjective infrastructure was wiped out by a deadly thunderstorm and the violent twisters it spawned.</Russian>
-		<Japanese/><Chinese/></TEXT>
+		</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BABY_BOOM_1</Tag>
 		<English>%s1_civ_adjective soldiers and their wives are celebrating the end of war by creating a baby boom.</English>
@@ -517,7 +517,7 @@
 		<Italian>I soldati %s1:3_civ_adjective e le loro mogli celebrano la fine della guerra, creando un boom di nascite.</Italian>
 		<Spanish>Los soldados %s1:3_civ_adjective y sus mujeres est&#225;n celebrando el final de la guerra con un "baby boom".</Spanish>
 		<Russian>%s1_civ_adjective soldiers and their wives are celebrating the end of war by creating a baby boom.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BABY_BOOM_2</Tag>
 		<English>The %s1_civ_adjective population is growing rapidly as a post-war baby boom sweeps through their settlements.</English>
@@ -526,7 +526,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective &#232; in rapida crescita grazie al boom delle nascite che si &#232; verificato nei vari insediamenti.</Italian>
 		<Spanish>La poblaci&#243;n %s1:2_civ_adjective est&#225; creciendo r&#225;pidamente a medida que el "baby boom" posb&#233;lico recorre sus asentamientos.</Spanish>
 		<Russian>The %s1_civ_adjective population is growing rapidly as a post-war baby boom sweeps through their settlements.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARDS_TALE_1</Tag>
 		<English>A heartrending ballad written by an artist in %s2_city is inspiring cultural pride amongst the %s1_civ_adjective people.</English>
@@ -535,7 +535,7 @@
 		<Italian>Una canzone struggente, scritta da un artista a %s2_city ispira orgoglio culturale tra la popolazione %s1:2_civ_adjective.</Italian>
 		<Spanish>Una conmovedora balada compuesta por un artista de %s2_city est&#225; inspirando el orgullo cultural entre el pueblo %s1:1_civ_adjective.</Spanish>
 		<Russian>The %s1_civ_adjective population is growing rapidly as a post-war baby boom sweeps through their settlements.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARDS_TALE_2</Tag>
 		<English>A songwriter from %s2_city has gained local and national recognition, strengthening %s1_civ_adjective culture.</English>
@@ -544,7 +544,7 @@
 		<Italian>Un cantautore di %s2_city ha ottenuto successo locale e nazionale, rinforzando la cultura %s1:2_civ_adjective.</Italian>
 		<Spanish>Un compositor de %s2_city ha ganado reconocimiento regional y nacional al reforzar su cultura %s1:2_civ_adjective.</Spanish>
 		<Russian>A songwriter from %s2_city has gained local and national recognition, strengthening %s1_civ_adjective culture.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOOTERS</Tag>
 		<English>The %s4_civ_adjective city of %s5_city is suffering civil unrest. Riots and looting have broken out.</English>
@@ -553,7 +553,7 @@
 		<Italian>Nella citt&#224; %s4:2_civ_adjective di %s5_city ci sono disordini civili. Sono scoppiati tumulti e saccheggi.</Italian>
 		<Spanish>La ciudad %s4:2_civ_adjective de %s5_city sufre agitaci&#243;n civil. Han estallado los disturbios y el pillaje.</Spanish>
 		<Russian>The %s4_civ_adjective city of %s5_city is suffering civil unrest. Riots and looting have broken out.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LOOTERS_1</Tag>
 		<English>There is civil unrest near the %s1_civ_adjective city of %s6_city. Our scouts in the area tell us there may be an opportunity to aggravate the situation.</English>
@@ -562,7 +562,7 @@
 		<Italian>Ci sono disordini civili vicino alla citt&#224; %s1:2_civ_adjective di %s6_city. I nostri esploratori in zona dicono che ci sarebbe la possibilit&#224; di aggravare la situazione.</Italian>
 		<Spanish>Hay agitaci&#243;n civil cerca de la ciudad %s1:2_civ_adjective de %s6_city. Nuestros observadores en la zona dicen que hay posibilidades de que la situaci&#243;n empeore.</Spanish>
 		<Russian>There is civil unrest near the %s1_civ_adjective city of %s6_city. Our scouts in the area tell us there may be an opportunity to aggravate the situation.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LOOTERS_2</Tag>
 		<English>There are riots taking place near the %s1_civ_adjective city of %s6_city. Our agents stand ready to add fuel to these fires, to stir up additional trouble.</English>
@@ -571,7 +571,7 @@
 		<Italian>Sono scoppiate delle sommosse vicino alla citt&#224; %s1:2_civ_adjective di %s6_city. I nostri agenti sono pronti a ravvivare il fuoco dell'insurrezione, per causare ulteriori problemi.</Italian>
 		<Spanish>Unos disturbios est&#225;n teniendo lugar cerca de la ciudad %s1:2_civ_adjective de %s6_city. Nuestros agentes est&#225;n listos para echarle m&#225;s le&#241;a al fuego y aumentar as&#237; los problemas.</Spanish>
 		<Russian>There are riots taking place near the %s1_civ_adjective city of %s6_city. Our agents stand ready to add fuel to these fires, to stir up additional trouble.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_LOOTERS_OTHER_4</Tag>
 		<English>We have identified %s1_civ_adjective agents who are systematically and actively aggravating the situation in %s4_city!</English>
@@ -580,7 +580,7 @@
 		<Italian>Abbiamo identificato agenti %s1:3_civ_adjective che hanno sistematicamente e attivamente aggravato la situazione a %s4_city!</Italian>
 		<Spanish>&#161;Hemos descubierto a unos agentes %s1:3_civ_adjective que estaban agravando sistem&#225;tica y activamente la situaci&#243;n en %s4_city!</Spanish>
 		<Russian>We have identified %s1_civ_adjective agents who are systematically and actively aggravating the situation in %s4_city!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NUM_BUILDINGS_DESTROYED</Tag>
 		<English>%d1 %s2_civ_adjective [NUM1:building has:buildings have] been destroyed in %s3_city</English>
@@ -589,7 +589,7 @@
 		<Italian>%d1 [NUM1:edificio %s2:1_civ_adjective &#232; stato distrutto:edifici %s2:3_civ_adjective sono stati distrutti] a %s3_city</Italian>
 		<Spanish>[NUM1:Se ha destruido:Se han destruido] %d1 [NUM1:edificio:edificios] de la civilizaci&#243;n %s2:2_civ_adjective en %s3_city.</Spanish>
 		<Russian>%d1 %s2_civ_adjective [NUM1:building has:buildings have] been destroyed in %s3_city</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BROTHERS_IN_NEED</Tag>
 		<English>%s1_civ_adjective leaders have met with their %s4_civ_adjective %s3_religion_adjective brothers to discuss the possibility of sending them strategic resources to aid in their war effort.</English>
@@ -598,7 +598,7 @@
 		<Italian>I leader %s1:3_civ_adjective hanno incontrato i loro fratelli %s4:3_civ_adjective %s3:3_religion_adjective per discutere della possibilit&#224; di inviare loro risorse strategiche per aiutarli nello sforzo bellico.</Italian>
 		<Spanish>Los l&#237;deres %s1:3_civ_adjective se han reunido con sus hermanos %s3:3_religion_adjective %s4:3_civ_adjective para hablar de la posibilidad de enviarles recursos estrat&#233;gicos para ayudarles en la guerra.</Spanish>
 		<Russian>%s1_civ_adjective leaders have met with their %s4_civ_adjective %s3_religion_adjective brothers to discuss the possibility of sending them strategic resources to aid in their war effort.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BROTHERS_IN_NEED_1</Tag>
 		<English>Our brothers in the true %s4_religion_adjective faith who dwell in the %s1_civ_adjective Empire are at war. They lack for vital strategic resources that we have in abundance. This is our chance to come to their aid!</English>
@@ -607,7 +607,7 @@
 		<Italian>I nostri fratelli nella vera fede %s4:2_religion_adjective, che abitano nell'impero %s1:1_civ_adjective, sono in guerra. Mancano loro per&#242; le risorse strategiche vitali che noi abbiamo in abbondanza. Abbiamo la possibilit&#224; di aiutarli!</Italian>
 		<Spanish>Nuestros hermanos de la verdadera fe %s4:2_religion_adjective que viven en el imperio %s1:1_civ_adjective est&#225;n en guerra. Pero carecen de los recursos estrat&#233;gicos vitales que nosotros tenemos en abundancia. &#161;Es la oportunidad de acudir en su ayuda!</Spanish>
 		<Russian>%s1_civ_adjective leaders have met with their %s4_civ_adjective %s3_religion_adjective brothers to discuss the possibility of sending them strategic resources to aid in their war effort.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_2</Tag>
 		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT] to aid us in our war effort!</English>
@@ -616,7 +616,7 @@
 		<Italian>I nostri fratelli religiosi %s1:3_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]Rame[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Spanish>&#161;Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Cobre[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
 		<Russian>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT] to aid us in our war effort!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_3</Tag>
 		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT] to aid us in our war effort!</English>
@@ -625,7 +625,7 @@
 		<Italian>I nostri fratelli religiosi %s1:3_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]Ferro[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Spanish>&#161;Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Hierro[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
 		<Russian>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT] to aid us in our war effort!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_4</Tag>
 		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] to aid us in our war effort!</English>
@@ -634,7 +634,7 @@
 		<Italian>I nostri fratelli religiosi %s1:3_civ_adjective ci hanno donato dei [COLOR_HIGHLIGHT_TEXT]Cavalli[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Spanish>&#161;Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Caballos[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
 		<Russian>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] to aid us in our war effort!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_5</Tag>
 		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Ivory[COLOR_REVERT] to aid us in our war effort!</English>
@@ -643,7 +643,7 @@
 		<Italian>I nostri fratelli religiosi %s1:3_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]Avorio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Spanish>&#161;Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Marfil[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
 		<Russian>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Ivory[COLOR_REVERT] to aid us in our war effort!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_6</Tag>
 		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Oil[COLOR_REVERT] to aid us in our war effort!</English>
@@ -652,7 +652,7 @@
 		<Italian>I nostri fratelli religiosi %s1:3_civ_adjective ci hanno donato del [COLOR_HIGHLIGHT_TEXT]Petrolio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Spanish>&#161;Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Petr&#243;leo[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
 		<Russian>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Oil[COLOR_REVERT] to aid us in our war effort!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_OTHER_7</Tag>
 		<English>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] to aid us in our war effort!</English>
@@ -661,7 +661,7 @@
 		<Italian>I nostri fratelli religiosi %s1:3_civ_adjective ci hanno donato dell'[COLOR_HIGHLIGHT_TEXT]Uranio[COLOR_REVERT] per aiutarci nello sforzo bellico!</Italian>
 		<Spanish>&#161;Nuestros hermanos %s1:3_civ_adjective nos han obsequiado con [COLOR_HIGHLIGHT_TEXT]Uranio[COLOR_REVERT] para ayudarnos en la guerra!</Spanish>
 		<Russian>Our %s1_civ_adjective religious brothers have gifted us with [COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] to aid us in our war effort!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HURRICANE</Tag>
 		<English>The %s1_civ_adjective city of %s2_city took a direct hit from a powerful hurricane.</English>
@@ -670,7 +670,7 @@
 		<Italian>La citt&#224; %s1:2_civ_adjective di %s2_city &#232; stata colpita in pieno da un potente uragano.</Italian>
 		<Spanish>La ciudad %s1:2_civ_adjective de %s2_city ha sufridos los estragos directos de un fuerte hurac&#225;n.</Spanish>
 		<Russian>The %s1_civ_adjective city of %s2_city took a direct hit from a powerful hurricane.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CYCLONE</Tag>
 		<English>A massive cyclone has made landfall at the %s1_civ city of %s2_city, causing widespread wind and storm surge damage.</English>
@@ -679,7 +679,7 @@
 		<Italian>Un gigantesco ciclone ha colpito la citt&#224; %s1:2_civ_adjective di %s2_city, causando diffusi danni da vento e inondazioni.</Italian>
 		<Spanish>Un cicl&#243;n enorme ha ca&#237;do sobre la ciudad %s1:2_civ de %s2_city, lo que ha provocado fuertes rachas de vientos y grandes da&#241;os.</Spanish>
 		<Russian>A massive cyclone has made landfall at the %s1_civ city of %s2_city, causing widespread wind and storm surge damage.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TSUNAMI</Tag>
 		<English>A tsunami more than fifteen meters high has rolled over the %s1_civ_adjective city of %s2_city. The destruction is unprecedented in world history.</English>
@@ -688,7 +688,7 @@
 		<Italian>Uno tsunami di oltre quindici metri ha investito la citt&#224; %s1:2_civ_adjective di %s2_city. La distruzione &#232; senza precedenti storici.</Italian>
 		<Spanish>Un "tsunami" de m&#225;s de quince metros de altura ha anegado la ciudad %s1:2_civ_adjective de %s2_city, y ha provocado una destrucci&#243;n sin precedentes en los anales mundiales.</Spanish>
 		<Russian>A tsunami more than fifteen meters high has rolled over the %s1_civ_adjective city of %s2_city. The destruction is unprecedented in world history.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MONSOON</Tag>
 		<English>Monsoon flooding, more severe than usual for %s2_city, has visited disaster upon the %s1_civ_adjective people there.</English>
@@ -697,7 +697,7 @@
 		<Italian>Le inondazioni causate dai monsoni, pi&#249; violente del solito per %s2_city, hanno devastato la popolazione %s1:2_civ_adjective.</Italian>
 		<Spanish>Los aluviones del monz&#243;n, m&#225;s fuerte de lo habitual en %s2_city, han llevado el desastre al pueblo %s1:1_civ_adjective que habita ah&#237;.</Spanish>
 		<Russian>Monsoon flooding, more severe than usual for %s2_city, has visited disaster upon the %s1_civ_adjective people there.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BLIZZARD_1</Tag>
 		<English>Severe winter weather is plaguing the %s1_civ_adjective people near their city of %s2_city.</English>
@@ -706,7 +706,7 @@
 		<Italian>Un inverno molto duro affligge la popolazione %s1:2_civ_adjective vicino alla citt&#224; di %s2_city.</Italian>
 		<Spanish>La cruda estaci&#243;n invernal est&#225; azotando al pueblo %s1:1_civ_adjective en las inmediaciones de la ciudad de %s2_city.</Spanish>
 		<Russian>Severe winter weather is plaguing the %s1_civ_adjective people near their city of %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BLIZZARD_2</Tag>
 		<English>A blizzard has dumped disastrous quantities of snow upon a %s1_civ_adjective region near %s2_city.</English>
@@ -715,7 +715,7 @@
 		<Italian>Una tempesta di neve ha portato una quantit&#224; disastrosa di neve nella regione %s1:2_civ_adjective vicino a %s2_city.</Italian>
 		<Spanish>Una ventisca ha dejado desastrosas cantidades de nieve en una regi&#243;n %s1:2_civ_adjective cercana a la ciudad de %s2_city.</Spanish>
 		<Russian>A blizzard has dumped disastrous quantities of snow upon a %s1_civ_adjective region near %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_1</Tag>
 		<English>A volcanic eruption near %s2_city has devastated the countryside. Fortunately, the %s1_civ_adjective city itself was spared.</English>
@@ -724,7 +724,7 @@
 		<Italian>Un'eruzione vulcanica vicino a %s2_city ha devastato il territorio. Fortunatamente la citt&#224; %s1:2_civ_adjective &#232; stata risparmiata.</Italian>
 		<Spanish>La erupci&#243;n de un volc&#225;n cercano a %s2_city ha devastado el campo. Por suerte, la propia ciudad %s1:2_civ_adjective se ha salvado.</Spanish>
 		<Russian>A volcanic eruption near %s2_city has devastated the countryside. Fortunately, the %s1_civ_adjective city itself was spared.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_2</Tag>
 		<English>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</English>
@@ -733,7 +733,7 @@
 		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla citt&#224; %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>La tierra ha escupido lava y cenizas por un volc&#225;n que antes estaba inactivo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Russian>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DUSTBOWL</Tag>
 		<English>Excessive farming with poor techniques has led to soil erosion and a dustbowl effect in the %s1_civ_adjective Empire.</English>
@@ -742,7 +742,7 @@
 		<Italian>Una coltivazione eccessiva con tecniche non adeguate ha portato all'erosione del suolo e alla desertificazione nell'impero %s1:1_civ_adjective.</Italian>
 		<Spanish>Una agricultura intensiva con t&#233;cnicas inadecuadas ha llevado a la erosi&#243;n de la tierra y a la desertizaci&#243;n en el imperio %s1:1_civ_adjective.</Spanish>
 		<Russian>Excessive farming with poor techniques has led to soil erosion and a dustbowl effect in the %s1_civ_adjective Empire.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DUSTBOWL_CONT</Tag>
 		<English>%s1_civ_adjective farmers continue to suffer loss of their land due to ongoing dust storms sweeping across the plains.</English>
@@ -751,7 +751,7 @@
 		<Italian>Gli agricoltori %s1:3_civ_adjective continuano a perdere terra a causa delle continue tempeste di sabbia che spazzano le pianure.</Italian>
 		<Spanish>Los agricultores %s1:3_civ_adjective siguen sufriendo p&#233;rdidas de tierra debido a las crecientes tormentas de arena que azotan la llanura.</Spanish>
 		<Russian>%s1_civ_adjective farmers continue to suffer loss of their land due to ongoing dust storms sweeping across the plains.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PARROTS</Tag>
 		<English>%s1_civ_adjective merchants are now selling caged parrots as exotic pets.</English>
@@ -760,7 +760,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective vendono pappagalli in gabbia come animali esotici da compagnia.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n vendiendo Loros en jaulas como mascotas ex&#243;ticas.</Spanish>
 		<Russian>%s1_civ_adjective merchants are now selling caged parrots as exotic pets.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_JADE</Tag>
 		<English>%s1_civ_adjective merchants are now selling jade carvings in small quantities.</English>
@@ -769,7 +769,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective vendono piccole quantit&#224; di giada intagliata.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n vendiendo tallas de jade en peque&#241;as cantidades.</Spanish>
 		<Russian>%s1_civ_adjective merchants are now selling jade carvings in small quantities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BLACK_PEARLS</Tag>
 		<English>%s1_civ_adjective merchants are now selling black pearls in larger quantities.</English>
@@ -778,7 +778,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective vendono maggiori quantit&#224; di perle nere.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n vendiendo perlas negras en grandes cantidades.</Spanish>
 		<Russian>%s1_civ_adjective merchants are now selling black pearls in larger quantities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SALTPETER</Tag>
 		<English>%s1_civ_adjective merchants are now selling gunpowder in larger quantities.</English>
@@ -787,7 +787,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective vendono maggiori quantit&#224; di polvere da sparo.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n vendiendo p&#243;lvora en grandes cantidades.</Spanish>
 		<Russian>%s1_civ_adjective merchants are now selling gunpowder in larger quantities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CLUNKER_COAL</Tag>
 		<English>%s1_civ_adjective merchants are offering discounts on tons of their clunker coal, which is filled with impurities.</English>
@@ -796,7 +796,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective stanno facendo sconti sul loro carbone di scarto, che &#232; pieno di impurit&#224;.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n ofreciendo descuentos por la compra al por mayor de carb&#243;n de turba, que est&#225; lleno de impurezas.</Spanish>
 		<Russian>%s1_civ_adjective merchants are offering discounts on tons of their clunker coal, which is filled with impurities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SOUR_CRUDE</Tag>
 		<English>%s1_civ_adjective merchants are offering discounts on barrels of their sour crude oil, which is filled with impurities.</English>
@@ -805,7 +805,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective stanno facendo sconti sul loro petrolio grezzo, che &#232; pieno di impurit&#224;.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n ofreciendo descuentos por la compra al por mayor de crudo &#225;cido, que est&#225; lleno de impurezas.</Spanish>
 		<Russian>%s1_civ_adjective merchants are offering discounts on barrels of their sour crude oil, which is filled with impurities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SOUR_CRUDE_1</Tag>
 		<English>Sour crude? What a mess. Less valuable per barrel, but it still burns, right? Just deal with it.</English>
@@ -814,7 +814,7 @@
 		<Italian>Petrolio impuro? Che disastro. Ha un valore unitario pi&#249; basso, ma brucia comunque, no? Pensateci voi.</Italian>
 		<Spanish>&#191;Crudo &#225;cido? Qu&#233; desastre. Bueno, cada barril vale menos, pero sigue quemando, &#191;no? Tendremos que conformarnos.</Spanish>
 		<Russian>%s1_civ_adjective merchants are offering discounts on barrels of their sour crude oil, which is filled with impurities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TRUFFLES</Tag>
 		<English>%s1_civ_adjective people are bragging about their truffles, claiming they are the most delicious in the world.</English>
@@ -823,7 +823,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective si vanta dei propri tartufi, che decanta come i pi&#249; deliziosi al mondo.</Italian>
 		<Spanish>El pueblo %s1:1_civ_adjective se vanagloria de sus Trufas y dice que son las m&#225;s ricas del mundo.</Spanish>
 		<Russian>%s1_civ_adjective merchants are offering discounts on barrels of their sour crude oil, which is filled with impurities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_TURTLES</Tag>
 		<English>%s1_civ_adjective people are now harvesting sea turtles on an annual basis.</English>
@@ -832,7 +832,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective sta raccogliendo testuggini su base annuale.</Italian>
 		<Spanish>El pueblo %s1:1_civ_adjective est&#225; recolectando Tortugas marinas cada a&#241;o.</Spanish>
 		<Russian>%s1_civ_adjective merchants are offering discounts on barrels of their sour crude oil, which is filled with impurities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TIN</Tag>
 		<English>The %s1_civ_adjective Empire has become the world's leading producer of tin.</English>
@@ -841,7 +841,7 @@
 		<Italian>L'impero %s1:1_civ_adjective &#232; diventato il maggior produttore mondiale di stagno.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective se ha convertido en el primer productor mundial de esta&#241;o.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has become the world's leading producer of tin.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PRAIRIE_DOGS</Tag>
 		<English>%s1_civ_adjective merchants are now selling domesticated prairie dogs as exotic pets.</English>
@@ -850,7 +850,7 @@
 		<Italian>I mercanti %s1:3_civ_adjective vendono cani della prateria addomesticati come animali esotici da compagnia.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective est&#225;n vendiendo perros de las praderas domesticados como mascotas ex&#243;ticas.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has become the world's leading producer of tin.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ICE_SCULPTURE</Tag>
 		<English>A new art form involving the carving of large blocks of ice has been created in the icy tundra near the %s1_civ_adjective city of %s2_city.</English>
@@ -859,7 +859,7 @@
 		<Italian>Nella tundra ghiacciata vicino alla citt&#224; %s1:2_civ_adjective di %s2_city &#232; stata creata una nuova forma di arte in cui si scolpiscono grandi blocchi di ghiaccio.</Italian>
 		<Spanish>Una nueva forma de arte que supone la talla de grandes bloques de hielo ha aparecido en la tundra helada cercana a la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has become the world's leading producer of tin.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_APPLESEED</Tag>
 		<English>A %s1_civ_adjective folk hero has caused the creation of a new forest of apple trees.</English>
@@ -868,7 +868,7 @@
 		<Italian>Un eroe popolare %s1:1_civ_adjective ha ispirato la creazione di una nuova foresta di meli.</Italian>
 		<Spanish>Un h&#233;roe del pueblo %s1:1_civ_adjective ha creado una nueva arboleda de manzanos.</Spanish>
 		<Russian>A %s1_civ_adjective folk hero has caused the creation of a new forest of apple trees.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MINING_ACCIDENT</Tag>
 		<English>A tragic mining accident near the %s1_civ_adjective city of %s2_city has claimed the lives of hundreds of their miners.</English>
@@ -877,7 +877,7 @@
 		<Italian>Un tragico incidente minerario vicino alla citt&#224; %s1:2_civ_adjective di %s2_city ha tolto la vita a centinaia dei loro minatori.</Italian>
 		<Spanish>Un tr&#225;gico accidente en una mina cerca de la ciudad %s1:2_civ_adjective de %s2_city se ha cobrado la vida de cientos de mineros.</Spanish>
 		<Russian>A tragic mining accident near the %s1_civ_adjective city of %s2_city has claimed the lives of hundreds of their miners.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have made a technological breakthrough, rapidly advancing their progress.</English>
@@ -886,7 +886,7 @@
 		<Italian>Pare che i ricercatori %s1:3_civ_adjective abbiano fatto un'importante scoperta tecnologica, velocizzando il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:3_civ_adjective han conseguido un adelanto tecnol&#243;gico que les har&#225; avanzar r&#225;pidamente.</Spanish>
 		<Russian>%s1_civ_adjective researchers are rumored to have made a technological breakthrough, rapidly advancing their progress.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_2</Tag>
 		<English>Discoveries made by the %s1_civ_adjective Empire have boosted progress on their current research project.</English>
@@ -895,7 +895,7 @@
 		<Italian>Le scoperte fatte dall'impero %s1:1_civ_adjective hanno velocizzato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>Los descubrimientos realizados por el imperio %s1:1_civ_adjective han impulsado sus avances en el actual proyecto de investigaci&#243;n.</Spanish>
 		<Russian>Discoveries made by the %s1_civ_adjective Empire have boosted progress on their current research project.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have suffered a major setback, slowing their progress.</English>
@@ -904,7 +904,7 @@
 		<Italian>Pare che i ricercatori %s1:3_civ_adjective abbiano subito una battuta d'arresto, che ha rallentato il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:1_civ_adjective han sufrido un gran rev&#233;s que ha frenado sus avances.</Spanish>
 		<Russian>%s1_civ_adjective researchers are rumored to have suffered a major setback, slowing their progress.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_2</Tag>
 		<English>%s1_civ_adjective discoveries have turned out to be false! This dead end result has slowed their current research project.</English>
@@ -913,7 +913,7 @@
 		<Italian>Le scoperte %s1:4_civ_adjective si sono rivelate false! Questo vicolo cieco ha rallentato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>&#161;Los descubrimientos %s1:3_civ_adjective han resultado ser falsos! Este callej&#243;n sin salida ha entorpecido mucho su proyecto de investigaci&#243;n.</Spanish>
 		<Russian>%s1_civ_adjective discoveries have turned out to be false! This dead end result has slowed their current research project.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GREAT_DEPRESSION</Tag>
 		<English>Corporate fraud within %s6_corporation, headquartered in the %s1_civ_adjective Empire, has collapsed the company's stock price, taking the rest of the market down with it and triggering a global economic depression.</English>
@@ -922,7 +922,7 @@
 		<Italian>Una frode corporativa all'interno della %s6_corporation, che ha il proprio quartier generale nell'impero %s1:1_civ_adjective, ha fatto crollare il prezzo delle azioni della compagnia, che a loro volta hanno trascinato con s&#233; il mercato azionario, innescando una depressione economica globale.</Italian>
 		<Spanish>El fraude de %s6_corporation, con sede en el imperio %s1:1_civ_adjective, ha hecho bajar en picado la cotizaci&#243;n de sus acciones, ha arrastrado tras de s&#237; al resto del mercado y ha desencadenando una recesi&#243;n econ&#243;mica mundial.</Spanish>
 		<Russian>Corporate fraud within %s6_corporation, headquartered in the %s1_civ_adjective Empire, has collapsed the company's stock price, taking the rest of the market down with it and triggering a global economic depression.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BERMUDA_TRIANGLE</Tag>
 		<English>%s1_civ_adjective ships and planes have disappeared without a trace in the Bermuda Triangle!</English>
@@ -931,7 +931,7 @@
 		<Italian>Navi e aerei %s1:3_civ_adjective sono spariti senza lasciare traccia nel Triangolo delle Bermuda!</Italian>
 		<Spanish>&#161;En el Tri&#225;ngulo de las Bermudas han desaparecido barcos y aviones %s1:3_civ_adjective sin dejar ni rastro!</Spanish>
 		<Russian>%s1_civ_adjective ships and planes have disappeared without a trace in the Bermuda Triangle!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PATRON_OF_KNOWLEDGE_1</Tag>
 		<English>A patron of knowledge from the %s1_civ_adjective city of %s2_city has donated a cache of rare writings to the local Library.</English>
@@ -940,7 +940,7 @@
 		<Italian>Un mecenate della citt&#224; %s1:2_civ_adjective di %s2_city ha donato degli scritti rari alla biblioteca locale.</Italian>
 		<Spanish>Un mecenas de la cultura de la ciudad %s1:2_civ_adjective de %s2_city ha donado una colecci&#243;n de raros manuscritos a la biblioteca del lugar.</Spanish>
 		<Russian>A patron of knowledge from the %s1_civ_adjective city of %s2_city has donated a cache of rare writings to the local Library.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PATRON_OF_KNOWLEDGE_2</Tag>
 		<English>The Library in the %s1_civ_adjective city of %s2_city has received an influx of precious writings thanks to the generosity of a wealthy family.</English>
@@ -949,7 +949,7 @@
 		<Italian>La biblioteca nella citt&#224; %s1:2_civ_adjective di %s2_city ha ricevuto una serie di scritti rari grazie alla generosit&#224; di una famiglia facoltosa.</Italian>
 		<Spanish>La biblioteca de la ciudad %s1:2_civ_adjective de %s2_city ha recibido gran cantidad de valiosos manuscritos gracias a la generosidad de una familia acaudalada.</Spanish>
 		<Russian>A patron of knowledge from the %s1_civ_adjective city of %s2_city has donated a cache of rare writings to the local Library.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MASTER_SMITH</Tag>
 		<English>A grand master blacksmith has overseen improvements to the Forge in the %s1_civ_adjective city of %s2_city.</English>
@@ -958,7 +958,7 @@
 		<Italian>Un maestro fabbro ha sovrinteso ai miglioramenti della Fucina nella citt&#224; %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>Un gran maestro herrero ha supervisado las mejoras practicadas en la fragua de la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Russian>A grand master blacksmith has overseen improvements to the Forge in the %s1_civ_adjective city of %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RURAL_FARMERS_1</Tag>
 		<English>Enterprising %s1_civ_adjective grocers in %s2_city have struck a deal to import surplus food from rural farmers outside the normal range of city business.</English>
@@ -967,7 +967,7 @@
 		<Italian>Intraprendenti droghieri %s1:3_civ_adjective di %s2_city hanno raggiunto un accordo per l'importazione del cibo in eccesso dagli agricoltori normalmente al di fuori del raggio d'affari della citt&#224;.</Italian>
 		<Spanish>Los emprendedores colmados %s1:3_civ_adjective de %s2_city han cerrado un trato para aceptar los excedentes de alimentos de los campesinos que normalmente trabajan al margen de los negocios de la ciudad.</Spanish>
 		<Russian>Enterprising %s1_civ_adjective grocers in %s2_city have struck a deal to import surplus food from rural farmers outside the normal range of city business.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RURAL_FARMERS_2</Tag>
 		<English>The Grocer in the %s1_civ_adjective city of %s2_city is becoming renowned for its superior selection, quality and quantity of foodstuffs.</English>
@@ -976,7 +976,7 @@
 		<Italian>Il droghiere nella citt&#224; %s1:2_civ_adjective di %s2_city sta diventando famoso per l'assortimento, la qualit&#224; e la quantit&#224; superiori dei suoi generi alimentari.</Italian>
 		<Spanish>Los colmados de la ciudad %s1:2_civ_adjective de %s2_city se est&#225;n haciendo famosos por la calidad, la selecci&#243;n y la cantidad de sus v&#237;veres.</Spanish>
 		<Russian>The Grocer in the %s1_civ_adjective city of %s2_city is becoming renowned for its superior selection, quality and quantity of foodstuffs.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MONEY_CHANGERS_1</Tag>
 		<English>The Market in %s2_city has become renowned as a worldwide center of dealings in global currency. This is bolstering %s1_civ_adjective profits.</English>
@@ -985,7 +985,7 @@
 		<Italian>Il Mercato di %s2_city &#232; diventato famoso come centro mondiale di scambi di valuta. Ci&#242; aumenta i profitti %s1:3_civ_adjective.</Italian>
 		<Spanish>El mercado de %s2_city ha ganado renombre como centro mundial de intercambio de divisas. Esto est&#225; aumentando los beneficios de la civilizaci&#243;n %s1:2_civ_adjective.</Spanish>
 		<Russian>The Market in %s2_city has become renowned as a worldwide center of dealings in global currency. This is bolstering %s1_civ_adjective profits.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MONEY_CHANGERS_2</Tag>
 		<English>Money changers have flocked to the Market in the %s1_civ_adjective city of %s2_city, attracting all manner of customers in need of changing one nation's currency for another's.</English>
@@ -994,7 +994,7 @@
 		<Italian>I cambiavalute si sono raccolti nel Mercato nella citt&#224; %s1:2_civ_adjective di %s2_city, attirando ogni tipo di cliente che avesse bisogno di cambiare valuta.</Italian>
 		<Spanish>Los cambistas se han aglutinado en el mercado de la ciudad %s1:2_civ_adjective de %s2_city, y han atra&#237;do as&#237; a todo tipo de clientes que necesitan cambiar la moneda de una naci&#243;n por la de otra.</Spanish>
 		<Russian>Money changers have flocked to the Market in the %s1_civ_adjective city of %s2_city, attracting all manner of customers in need of changing one nation's currency for another's.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BOWYER</Tag>
 		<English>A master bowyer has developed techniques that improve the strength of all %s1_civ_adjective war bows.</English>
@@ -1003,7 +1003,7 @@
 		<Italian>Un artigiano, maestro nel creare gli archi, ha sviluppato delle tecniche che migliorano la forza di tutti gli archi da guerra %s1:3_civ_adjective.</Italian>
 		<Spanish>Un maestro arquero ha desarrollado unas t&#233;cnicas que aumentan la fuerza de todos los arcos de guerra %s1:3_civ_adjective.</Spanish>
 		<Russian>A master bowyer has developed techniques that improve the strength of all %s1_civ_adjective war bows.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HORSESHOE</Tag>
 		<English>A master smith has developed improved horseshoes, boosting the chance for %s1_civ_adjective mounted units to strike and then escape.</English>
@@ -1012,7 +1012,7 @@
 		<Italian>Un maestro fabbro ha sviluppato dei migliori ferri di cavallo, aumentando le probabilit&#224; delle unit&#224; montate %s1:4_civ_adjective di colpire e poi fuggire.</Italian>
 		<Spanish>Un maestro herrero ha desarrollado unas herraduras mejoradas, que aumentan las posibilidades de que las unidades montadas %s1:4_civ_adjective ataquen y escapen.</Spanish>
 		<Russian>A master bowyer has developed techniques that improve the strength of all %s1_civ_adjective war bows.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MOTOR_OIL</Tag>
 		<English>%s1_civ_adjective chemists have developed an advanced refinement process for motor oil.</English>
@@ -1021,7 +1021,7 @@
 		<Italian>I chimici %s1:3_civ_adjective chemists hanno sviluppato un processo avanzato per la raffinazione dell'olio motore.</Italian>
 		<Spanish>Los qu&#237;micos %s1:3_civ_adjective han desarrollado un proceso de refinado avanzado para el aceite de motores.</Spanish>
 		<Russian>%s1_civ_adjective chemists have developed an advanced refinement process for motor oil.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FEDERAL_RESERVE</Tag>
 		<English>%s1_civ_adjective economists have developed advanced economic theory pertaining to inflation costs.</English>
@@ -1030,7 +1030,7 @@
 		<Italian>Gli economisti %s1:3_civ_adjective hanno sviluppato una teoria economica avanzata riguardante i costi dell'inflazione.</Italian>
 		<Spanish>Los economistas %s1:3_civ_adjective han desarrollado una teor&#237;a econ&#243;mica avanzada relativa a los costes de la inflaci&#243;n.</Spanish>
 		<Russian>%s1_civ_adjective economists have developed advanced economic theory pertaining to inflation costs.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ELECTRIC_COMPANY</Tag>
 		<English>Motivated by freedom and quality of life in the %s1_civ_adjective Empire, the power company workers restore electricity outages rapidly, making the citizens there even happier.</English>
@@ -1039,7 +1039,7 @@
 		<Italian>Motivati dalla libert&#224; e dalla qualit&#224; della vita nell'impero %s1:1_civ_adjective, gli operai della compagnia elettrica ripristinano l'energia ancor pi&#249; velocemente, in caso di interruzioni, rendendo i cittadini ancor pi&#249; felici.</Italian>
 		<Spanish>Motivados por la libertad y la calidad de vida en el imperio %s1:1_civ_adjective, los trabajadores de la compa&#241;&#237;a el&#233;ctrica arreglan los apagones r&#225;pidamente, lo cual hace que los ciudadanos est&#233;n a&#250;n m&#225;s felices.</Spanish>
 		<Russian>Motivated by freedom and quality of life in the %s1_civ_adjective Empire, the power company workers restore electricity outages rapidly, making the citizens there even happier.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HINDENBERG</Tag>
 		<English>A hydrogen-filled %s1_civ_adjective airship has exploded and crashed. Their government is scrambling to prevent a reoccurrence.</English>
@@ -1048,7 +1048,7 @@
 		<Italian>Un velivolo %s1:1_civ_adjective pieno di idrogeno &#232; esploso ed &#232; precipitato. Il loro governo si sta affannando affinch&#233; ci&#242; non succeda di nuovo.</Italian>
 		<Spanish>Un dirigible %s1:1_civ_adjective llena de hidr&#243;geno ha explotado y se ha estrellado. Su gobierno se est&#225; afanando para impedir que algo as&#237; vuelva a ocurrir.</Spanish>
 		<Russian>A hydrogen-filled %s1_civ_adjective airship has exploded and crashed. Their government is scrambling to prevent a reoccurrence.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COMET_FRAGMENT</Tag>
 		<English>A comet fragment has struck the earth in a remote tundra region, obliterating a whole forest. %s1_civ_adjective scientists are scrambling like mad to learn more about potential threats posed to our planet by other rogue heavenly bodies: comets, asteroids, meteors, and whatever else may be lurking out there.</English>
@@ -1057,7 +1057,7 @@
 		<Italian>Il frammento di una cometa &#232; precipitato in una regione remota della tundra, distruggendo un'intera foresta. Gli scienziati %s1:3_civ_adjective stanno impazzendo per scoprire di pi&#249; sulle potenziali minacce per il nostro pianeta rappresentate da altri corpi celesti: comete, asteroidi, meteoriti e qualsiasi altra cosa si nasconda l&#224; fuori.</Italian>
 		<Spanish>Un fragmento de un cometa ha impactado contra la Tierra en una remota regi&#243;n de la Tundra, y ha arrasado todo un bosque. Los cient&#237;ficos %s1:3_civ_adjective se est&#225;n devanando los sesos para aprender m&#225;s de los peligros potenciales que presentan para nuestro planeta otros cuerpos celestes errantes: cometas, meteoritos, asteroides y lo que sea que pulule por ah&#237; fuera.</Spanish>
 		<Russian>A comet fragment has struck the earth in a remote tundra region, obliterating a whole forest. %s1_civ_adjective scientists are scrambling like mad to learn more about potential threats posed to our planet by other rogue heavenly bodies: comets, asteroids, meteors, and whatever else may be lurking out there.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SUBWAY</Tag>
 		<English>The %s1_civ_adjective metropolis of %s2_city has constructed a mass transit marvel: an underground railroad network. They are calling it the Subway.</English>
@@ -1066,7 +1066,7 @@
 		<Italian>La metropoli %s1:2_civ_adjective di %s2_city ha costruito una meraviglia per il trasporto di massa: una rete ferroviaria sotterranea. L'hanno chiamata Metropolitana.</Italian>
 		<Spanish>La metr&#243;polis %s1:2_civ_adjective de %s2_city ha construido una maravilla de los transportes p&#250;blicos: una red subterr&#225;nea de ferrocarriles. La han llamado "metropolitano" o "metro".</Spanish>
 		<Russian>The %s1_civ_adjective metropolis of %s2_city has constructed a mass transit marvel: an underground railroad network. They are calling it the Subway.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GOLD_RUSH_1</Tag>
 		<English>A gold rush has begun at the %s1_civ_adjective city of %s2_city. Fortune seekers from across the world travel there in hopes of getting rich quickly.</English>
@@ -1075,7 +1075,7 @@
 		<Italian>&#200; cominciata la corsa all'oro nella citt&#224; %s1:2_civ_adjective di %s2_city. Da tutto il mondo arrivano persone in cerca di fortuna e di rapida ricchezza.</Italian>
 		<Spanish>Se ha desatado la fiebre del oro en la ciudad %s1:2_civ_adjective de %s2_city. Los buscadores de oro de todo el mundo se han ido all&#237; con la esperanza de hacerse ricos r&#225;pidamente.</Spanish>
 		<Russian>A gold rush has begun at the %s1_civ_adjective city of %s2_city. Fortune seekers from across the world travel there in hopes of getting rich quickly.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GOLD_RUSH_2</Tag>
 		<English>The %s1_civ_adjective Empire is enjoying a population increase at %s2_city thanks to a gold rush bringing in prospectors and hopefuls.</English>
@@ -1084,7 +1084,7 @@
 		<Italian>L'impero %s1:1_civ_adjective vede un aumento della popolazione di %s2_city, grazie a una corsa all'oro che porta prospettori e gente piena di speranza.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective est&#225; disfrutando de un aumento de poblaci&#243;n en %s2_city gracias a la fiebre del oro que ha atra&#237;do a buscadores y optimistas.</Spanish>
 		<Russian>A gold rush has begun at the %s1_civ_adjective city of %s2_city. Fortune seekers from across the world travel there in hopes of getting rich quickly.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INFLUENZA</Tag>
 		<English>A deadly influenza epidemic has broken out amongst %s1_civ_adjective people, originating in the city of %s2_city.</English>
@@ -1093,7 +1093,7 @@
 		<Italian>Una letale epidemia di influenza, originata nella citt&#224; di %s2_city, &#232; scoppiata tra la popolazione %s1:2_civ_adjective.</Italian>
 		<Spanish>Una epidemia mortal de gripe, con origen en la ciudad de %s2_city, se ha declarado entre el pueblo %s1:1_civ_adjective.</Spanish>
 		<Russian>A deadly influenza epidemic has broken out amongst %s1_civ_adjective people, originating in the city of %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SOLO_FLIGHT</Tag>
 		<English>A daring %s1_civ_adjective pilot is the first to fly solo around the world, lifting spirits across the globe and winning admiration from all of humanity.</English>
@@ -1102,7 +1102,7 @@
 		<Italian>Un coraggioso pilota %s1:1_civ_adjective &#232; il primo a volare da solo intorno al mondo, elevando gli spiriti della popolazione mondiale e guadagnandosi l'ammirazione di tutta l'umanit&#224;.</Italian>
 		<Spanish>Un audaz piloto %s1:1_civ_adjective ha sido el primero en dar la vuelta al globo en solitario, ha inspirado a todo el mundo y se ha ganado la admiraci&#243;n de la humanidad.</Spanish>
 		<Russian>A daring %s1_civ_adjective pilot is the first to fly solo around the world, lifting spirits across the globe and winning admiration from all of humanity.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ANTELOPE</Tag>
 		<English>Antelope are thriving in %s1_civ_adjective territory well enough to serve as a new resource.</English>
@@ -1111,7 +1111,7 @@
 		<Italian>Le antilopi prosperano, nei territori %s1:3_civ_adjective, abbastanza da servire come nuova risorsa.</Italian>
 		<Spanish>Hay tantos ant&#237;lopes en el imperio %s1:1_civ_adjective que pueden servir como nueva fuente de alimento.</Spanish>
 		<Russian>Antelope are thriving in %s1_civ_adjective territory well enough to serve as a new resource.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WHALEOFATHING</Tag>
 		<English>A new source of Whales has been located off the %s1_civ_adjective coast.</English>
@@ -1120,7 +1120,7 @@
 		<Italian>&#200; stata localizzata una nuova fonte di balene davanti alla costa %s1:2_civ_adjective.</Italian>
 		<Spanish>Se ha localizado un nuevo caladero de ballenas en la costa %s1:2_civ_adjective.</Spanish>
 		<Russian>A new source of Whales has been located off the %s1_civ_adjective coast.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HIYOSILVER</Tag>
 		<English>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Silver ore.</English>
@@ -1129,7 +1129,7 @@
 		<Italian>I minatori %s1:3_civ_adjective si sono arricchiti con la scoperta di nuovi filoni di argento.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective se ha hecho rico con el descubrimiento de nuevos filones de plata.</Spanish>
 		<Russian>%s1_civ_adjective miners have struck it rich with the discovery of new veins of Silver ore.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WININGMONKS</Tag>
 		<English>%s1_civ_adjective monks who have grown their vinyards over the years are now producing Wines in significant quantities.</English>
@@ -1138,7 +1138,7 @@
 		<Italian>I monaci %s1:3_civ_adjective hanno coltivato per anni i propri vigneti e ora producono vini in quantit&#224; significative.</Italian>
 		<Spanish>Monjes %s1:3_civ_adjective que llevan a&#241;os cultivando vi&#241;as producen ahora vinos en cantidades significativas.</Spanish>
 		<Russian>%s1_civ_adjective monks who have grown their vinyards over the years are now producing Wines in significant quantities.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INDEPENDENTFILMS</Tag>
 		<English>%s1_civ_adjective filmmakers from %s2_city have managed to wrest control over a slice of the Hit Movies market.</English>
@@ -1147,7 +1147,7 @@
 		<Italian>Produttori indipendenti di film di %s2_city, nella civilt&#224; %s1:2_civ_adjective sono riusciti a ottenere il controllo di parte dell'industria cinematografica.</Italian>
 		<Spanish>Cineastas independientes de %s2_city, poblaci&#243;n del imperio %s1:1_civ_adjective, han logrado hacerse con el control de una parte del mercado de pel&#237;culas de &#233;xito.</Spanish>
 		<Russian>%s1_civ_adjective filmmakers from %s2_city have managed to wrest control over a slice of the Hit Movies market.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INTERSTATE</Tag>
 		<English>The %s1_civ_adjective Empire has begun construction of a modern national highway network that shall be the envy of the world.</English>
@@ -1156,7 +1156,7 @@
 		<Italian>L'impero %s1:1_civ_adjective ha avviato la costruzione di una moderna rete di autostrade, che verr&#224; invidiata da tutto il mondo.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective ha iniciado la construcci&#243;n de una red moderna de autopistas nacionales que ser&#225; la envidia del mundo.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has begun construction of a modern national highway network that shall be the envy of the world.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_EARTHDAY</Tag>
 		<English>The %s1_civ_adjective Empire has announced the first annual Earth Day, crusading for the cause of Environmentalism.</English>
@@ -1165,7 +1165,7 @@
 		<Italian>L'impero %s1:1_civ_adjective ha annunciato la prima, annuale, Festa della Terra, impegnandosi nella crociata per l'ambientalismo.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective ha anunciado el primer D&#237;a Anual de la Tierra como forma de abogar por el Ecologismo.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has announced the first annual Earth Day, crusading for the cause of Environmentalism.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FREEDOMCONCERT</Tag>
 		<English>The %s1_civ_adjective Empire has donated funds raised at a charity event to the cause of religious freedom.</English>
@@ -1174,7 +1174,7 @@
 		<Italian>L'impero %s1:1_civ_adjective ha donato i fondi raccolti con un evento di beneficenze alla causa della libert&#224; religiosa.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective ha donado los fondos reunidos en un acto ben&#233;fico a la causa de la libertad religiosa.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has donated funds raised at a charity event to the cause of religious freedom.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_AXE_HAFT_1</Tag>
 		<English>%s1_civ_adjective craftsmen have improved the design of their axe manufacturing. These are the finest axes in the world.</English>
@@ -1183,7 +1183,7 @@
 		<Italian>Gli artigiani %s1:3_civ_adjective hanno migliorato il progetto per la realizzazione di asce. Ora sono le migliori asce al mondo.</Italian>
 		<Spanish>Los artesanos %s1:3_civ_adjective han mejorado el dise&#241;o de su proceso de fabricaci&#243;n de hachas. &#201;stas son las mejores hachas del mundo.</Spanish>
 		<Russian>%s1_civ_adjective craftsmen have improved the design of their axe manufacturing. These are the finest axes in the world.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SMOKELESS_POWDER_1</Tag>
 		<English>%s1_civ_adjective weaponsmiths have invented smokeless powder, giving their musketmen a significant advantage.</English>
@@ -1192,7 +1192,7 @@
 		<Italian>Gli armaioli %s1:3_civ_adjective hanno inventato polvere da sparo senza fumo, dando ai loro soldati con moschetto un notevole vantaggio.</Italian>
 		<Spanish>Los forjadores de armas %s1:3_civ_adjective han inventado p&#243;lvora sin humo, lo que proporciona a sus mosquetes una importante ventaja.</Spanish>
 		<Russian>%s1_civ_adjective weaponsmiths have invented smokeless powder, giving their musketmen a significant advantage.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STRONGER_FITTINGS_1</Tag>
 		<English>%s1_civ_adjective Crossbow units are rumored to be carrying improved weapons. Specifics on how or why their bows are stronger remains a mystery.</English>
@@ -1201,7 +1201,7 @@
 		<Italian>Pare che i balestrieri %s1:3_civ_adjective abbiano armi migliorate. I motivi per cui le loro balestre risultino pi&#249; forti rimangono un mistero.</Italian>
 		<Spanish>Se rumorea que las unidades de ballesteros %s1:4_civ_adjective llevan armas mejoradas. Sigue siendo un misterio qu&#233; es exactamente lo que hace m&#225;s potentes sus ballestas.</Spanish>
 		<Russian>%s1_civ_adjective Crossbow units are rumored to be carrying improved weapons. Specifics on how or why their bows are stronger remains a mystery.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FIRING_PINS_1</Tag>
 		<English>%s1_civ_adjective Grenadier units have been issued more effective explosives: bombs that do not need a fuse.</English>
@@ -1210,7 +1210,7 @@
 		<Italian>I granatieri %s1:3_civ_adjective hanno ottenuto esplosivi pi&#249; efficaci: bombe che non hanno bisogno di miccia.</Italian>
 		<Spanish>Las unidades de granaderos %s1:4_civ_adjective han sido dotadas de explosivos m&#225;s eficaces: bombas que no requieren de mecha.</Spanish>
 		<Russian>%s1_civ_adjective Grenadier units have been issued more effective explosives: bombs that do not need a fuse.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RIFLED_CANNON_1</Tag>
 		<English>%s1_civ_adjective Cannon units can now shoot farther and more accurately thanks to improved barrel design.</English>
@@ -1219,7 +1219,7 @@
 		<Italian>I cannoni %s1:3_civ_adjective ora possono sparare pi&#249; lontano e con pi&#249; precisione, grazie a un nuovo tipo di canna.</Italian>
 		<Spanish>Ahora, las unidades de ca&#241;ones %s1:4_civ_adjective pueden disparar m&#225;s lejos y con mayor precisi&#243;n gracias a las mejoras en el dise&#241;o del ca&#241;&#243;n.</Spanish>
 		<Russian>%s1_civ_adjective Cannon units can now shoot farther and more accurately thanks to improved barrel design.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_METAL_DECKS_1</Tag>
 		<English>The %s1_civ_adjective Empire has halted production of aircraft carriers with wooden decks. Their decks are now made of steel.</English>
@@ -1228,7 +1228,7 @@
 		<Italian>L'impero %s1:1_civ_adjective ha terminato la produzione di portaerei con ponti in legno. I ponti ora sono fatti d'acciaio.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective ha interrumpido la producci&#243;n de portaaviones con cubiertas de madera. Ahora, sus cubiertas son de acero.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has halted production of aircraft carriers with wooden decks. Their decks are now made of steel.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LONG_RANGE_FIGHTERS_1</Tag>
 		<English>The %s1_civ_adjective Empire has developed a long range Fighter plane.</English>
@@ -1237,7 +1237,7 @@
 		<Italian>L'impero %s1:1_civ_adjective ha sviluppato un aereo da caccia a lungo raggio.</Italian>
 		<Spanish>El imperio %s1:1_civ_adjective ha desarrollado un avi&#243;n caza de largo alcance.</Spanish>
 		<Russian>The %s1_civ_adjective Empire has developed a long range Fighter plane.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HALBERD_1</Tag>
 		<English>%s1_civ_adjective Pikemen have begun using a new type of halberd, boosting their strength versus foot soldiers.</English>
@@ -1246,7 +1246,7 @@
 		<Italian>I picchieri %s1:3_civ_adjective hanno cominciato a usare un nuovo tipo di alabarda, che ne aumenta la forza contro la fanteria.</Italian>
 		<Spanish>Los piqueros %s1:3_civ_adjective han comenzado a usar un nuevo tipo de alabarda que aumenta su potencia respecto a los soldados de infanter&#237;a.</Spanish>
 		<Russian>%s1_civ_adjective Pikemen have begun using a new type of halberd, boosting their strength versus foot soldiers.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_REINFORCED_HULL_1</Tag>
 		<English>Rumors abound that %s1_civ_adjective shipmasters are doing extensive refitting work on their trireme fleet.</English>
@@ -1255,7 +1255,7 @@
 		<Italian>Pare che i capitani %s1:3_civ_adjective stiano facendo grossi lavori sulla loro flotta di triremi.</Italian>
 		<Spanish>Numerosos rumores apuntan a que los oficiales %s1:3_civ_adjective est&#225;n realizando amplios trabajos de mejora en su flota de trirremes.</Spanish>
 		<Russian>Rumors abound that %s1_civ_adjective shipmasters are doing extensive refitting work on their trireme fleet.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HEROIC_GESTURE_1</Tag>
 		<English>%s1_civ_adjective forces have unexpectedly shown mercy and compassion for our wounded, tending them on the battlefield and then returning the survivors safely to us.</English>
@@ -1264,7 +1264,7 @@
 		<Italian>Le forze %s1:4_civ_adjective hanno mostrato un'inaspettata compassione per i nostri feriti, curandoli sul campo di battaglia e restituendoci i sopravvissuti.</Italian>
 		<Spanish>Las fuerzas %s1:3_civ_adjective han mostrado piedad y compasi&#243;n por nuestros heridos de forma inesperada, atendi&#233;ndolos en el campo de batalla y luego devolvi&#233;ndonos a los supervivientes.</Spanish>
 		<Russian>%s1_civ_adjective forces have unexpectedly shown mercy and compassion for our wounded, tending them on the battlefield and then returning the survivors safely to us.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HEROIC_GESTURE_OTHER_3</Tag>
 		<English>A heroic gesture of mercy by your forces in regard to %s1_civ_adjective wounded has opened the door to a possible peace treaty. Do you wish to end the war?</English>
@@ -1273,7 +1273,7 @@
 		<Italian>Un eroico gesto di piet&#224; delle nostre forze nei confronti dei feriti %s1:3_civ_adjective ha aperto la porta a delle trattative per la pace. Vuoi porre fine alla guerra?</Italian>
 		<Spanish>Un heroico gesto de piedad con los heridos %s1:3_civ_adjective por parte de tus fuerzas ha abierto la puerta a un posible tratado de paz. &#191;Quieres terminar la guerra?</Spanish>
 		<Russian>%s1_civ_adjective forces have unexpectedly shown mercy and compassion for our wounded, tending them on the battlefield and then returning the survivors safely to us.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HEROIC_GESTURE_WORLD_2</Tag>
 		<English>A heroic gesture of mercy by the %s3_civ_adjective forces toward the %s1_civ_adjective wounded has brought an unexpected opportunity for peace. The two sides are at least pausing to consider the possibility.</English>
@@ -1282,7 +1282,7 @@
 		<Italian>Un eroico gesto di piet&#224; da parte delle forze %s3:4_civ_adjective verso i feriti %s1:3_civ_adjective ha creato un'inaspettata opportunit&#224; per la pace. Le due nazioni stanno quantomeno considerando la possibilit&#224;.</Italian>
 		<Spanish>Un heroico gesto de piedad con los heridos %s1:3_civ_adjective por parte de las fuerzas %s3:4_civ_adjective ha proporcionado una inesperada oportunidad de alcanzar la paz. Ambos bandos se han detenido para, al menos, considerar esta posibilidad.</Spanish>
 		<Russian>A heroic gesture of mercy by the %s3_civ_adjective forces toward the %s1_civ_adjective wounded has brought an unexpected opportunity for peace. The two sides are at least pausing to consider the possibility.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_MEDIATOR_OTHER_3</Tag>
 		<English>A great mediator has offered to arbitrate our grievance with the %s1_civ_adjective Empire. This opens the door to a possible peace treaty. Do you wish to end the war?</English>
@@ -1291,7 +1291,7 @@
 		<Italian>Un grande mediatore si &#232; offerto di arbitrare i nostri problemi con l'impero %s1:1_civ_adjective. Ci&#242; apre la porta a un possibile trattato di pace. Vuoi terminare la guerra?</Italian>
 		<Spanish>Un gran mediador se ha ofrecido a intervenir como &#225;rbitro en nuestra disputa con el imperio %s1:1_civ_adjective. Esto abre la puerta a un posible tratado de paz. &#191;Quieres terminar la guerra?</Spanish>
 		<Russian>A great mediator has offered to arbitrate our grievance with the %s1_civ_adjective Empire. This opens the door to a possible peace treaty. Do you wish to end the war?</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEDIATOR_WORLD_2</Tag>
 		<English>A great mediator has attempted to broker peace between the %s1_civ_adjective and %s3_adjective Empires!</English>
@@ -1300,7 +1300,7 @@
 		<Italian>Un grande mediatore ha negoziato la pace tra l'impero %s1:1_civ_adjective e quello %s3:1_adjective!</Italian>
 		<Spanish>Un gran mediador ha negociado la paz entre los imperios %s1:1_civ_adjective y %s3:1_civ_adjective!</Spanish>
 		<Russian>A great mediator has offered to arbitrate our grievance with the %s1_civ_adjective Empire. This opens the door to a possible peace treaty. Do you wish to end the war?</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FORTY_THIEVES_1</Tag>
 		<English>The legend of Forty Thieves is luring treasure hunters and adventure seekers to %s2_civ_adjective lands.</English>
@@ -1309,7 +1309,7 @@
 		<Italian>La leggenda dei Quaranta ladroni sta attirando cacciatori di tesori e avventurieri nelle terre %s2:4_civ_adjective.</Italian>
 		<Spanish>La leyenda de los Cuarenta Ladrones est&#225; atrayendo a cazatesoros y aventureros a las tierras %s2:4_civ_adjective.</Spanish>
 		<Russian>The legend of Forty Thieves is luring treasure hunters and adventure seekers to %s2_civ_adjective lands.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ANCIENT_TEXTS_1</Tag>
 		<English>In the sands of a %s2_civ_adjective desert, archaeologists have unearthed a cache of ancient texts.</English>
@@ -1318,7 +1318,7 @@
 		<Italian>Tra le sabbie di un deserto %s2:1_civ_adjective gli archeologi hanno scoperto un deposito di testi antichi.</Italian>
 		<Spanish>En las arenas de un desierto %s2:1_civ_adjective, los arque&#243;logos han desenterrado una colecci&#243;n de textos antiguos.</Spanish>
 		<Russian>In the sands of a %s2_civ_adjective desert, archaeologists have unearthed a cache of ancient texts.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WATERS_OF_LIFE_1</Tag>
 		<English>The Waters of Life, drawn from a certain oasis in %s2_civ_adjective lands, are rumored to be able to cure the sick and heal the injured.</English>
@@ -1327,7 +1327,7 @@
 		<Italian>Le Acque della vita, che sgorgano in un'oasi nelle terre %s2:4_civ_adjective, sembrano essere in grado di curare i malati e guarire i feriti.</Italian>
 		<Spanish>Seg&#250;n los rumores, las Aguas de la Vida, que se obtienen de cierto oasis de las tierras %s2:4_civ_adjective, tienen la capacidad de sanar a los enfermos y curar a los heridos.</Spanish>
 		<Russian>In the sands of a %s2_civ_adjective desert, archaeologists have unearthed a cache of ancient texts.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NEWS_IMPACT_CRATER_2</Tag>
 		<English>%s1_civ_adjective geologists have discovered a rich source of [COLOR_HIGHLIGHT_TEXT]Uranium[COLOR_REVERT] at what turned out to be a very large and ancient impact crater.</English>
@@ -1336,7 +1336,7 @@
 		<Italian>I geologi %s1:3_civ_adjective hanno scoperto una ricca fonte di [COLOR_HIGHLIGHT_TEXT]Uranio[COLOR_REVERT] presso quello che poi si &#232; scoperto essere un grande e antico cratere.</Italian>
 		<Spanish>Ge&#243;logos %s1:3_civ_adjective han descubierto una importante fuente de [COLOR_HIGHLIGHT_TEXT]Uranio[COLOR_REVERT] en lo que ha resultado ser un enorme cr&#225;ter dejado por un antiguo impacto.</Spanish>
 		<Russian>In the sands of a %s2_civ_adjective desert, archaeologists have unearthed a cache of ancient texts.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOLY_RITUAL</Tag>
 		<English>%s1_civ_adjective sales of incense are booming.</English>
@@ -1345,7 +1345,7 @@
 		<Italian>Le vendite %s1:4_civ_adjective di incenso stanno aumentando.</Italian>
 		<Spanish>Las ventas %s1:4_civ_adjective de incienso se est&#225;n disparando.</Spanish>
 		<Russian>%s1_civ_adjective sales of incense are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SECURITY_TAX</Tag>
 		<English>The well-protected %s1_civ_adjective citizens endure paying a Security Tax to help maintain their city walls and guards.</English>
@@ -1354,7 +1354,7 @@
 		<Italian>I cittadini %s1:3_civ_adjective, che sono ben protetti, accettano di pagare una tassa di sicurezza per mantenere mura e guardie della citt&#224;.</Italian>
 		<Spanish>Los ciudadanos %s1:3_civ_adjective est&#225;n bien protegidos. Soportan el pago de un impuesto de seguridad para contribuir al mantenimiento de las murallas y guardias de su ciudad.</Spanish>
 		<Russian>%s1_civ_adjective sales of incense are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LITERACY</Tag>
 		<English>The learned %s1_civ_adjective people enjoy a virtually universal literacy rate.</English>
@@ -1363,7 +1363,7 @@
 		<Italian>La colta popolazione %s1:2_civ_adjective gode di un altissimo grado di istruzione.</Italian>
 		<Spanish>El culto pueblo %s1_civ_adjective disfruta de una tasa de alfabetizaci&#243;n pr&#225;cticamente universal.</Spanish>
 		<Russian>The learned %s1_civ_adjective people enjoy a virtually universal literacy rate.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FARM_PLOWS</Tag>
 		<English>%s1_civ_adjective plow sales are booming.</English>
@@ -1372,7 +1372,7 @@
 		<Italian>Le vendite di aratri %s1:3_civ_adjective stanno aumentando.</Italian>
 		<Spanish>Las ventas de arados %s1:3_civ_adjective se est&#225;n disparando.</Spanish>
 		<Russian>%s1_civ_adjective plow sales are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STAINED_GLASS</Tag>
 		<English>%s1_civ_adjective stained glass sales are booming.</English>
@@ -1381,7 +1381,7 @@
 		<Italian>Le vendite di vetro colorato %s1:1_civ_adjective stanno aumentando.</Italian>
 		<Spanish>Las ventas de cristal tintado %s1:1_civ_adjective se est&#225;n disparando.</Spanish>
 		<Russian>%s1_civ_adjective plow sales are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MARBLE_STATUES</Tag>
 		<English>%s1_civ_adjective officials in %s2_city have lavishly decorated their public buildings with finely carved marble statues.</English>
@@ -1390,7 +1390,7 @@
 		<Italian>I funzionari %s1:3_civ_adjective a %s2_city hanno abbondantemente decorato gli edifici pubblici con statue di marmo finemente scolpite.</Italian>
 		<Spanish>Los funcionarios %s1:3_civ_adjective de %s2_city han decorado lujosamente sus edificios p&#250;blicos con estatuas de m&#225;rmol exquisitamente tallado.</Spanish>
 		<Russian>%s1_civ_adjective plow sales are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CRAB_CAKES</Tag>
 		<English>%s1_civ_adjective crab cake sales are booming.</English>
@@ -1399,7 +1399,7 @@
 		<Italian>Le vendite di tortini di granchio %s1:3_civ_adjective stanno aumentando.</Italian>
 		<Spanish>Las ventas de tartas de cangrejo %s1:4_civ_adjective se est&#225;n disparando.</Spanish>
 		<Russian>%s1_civ_adjective crab cake sales are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BOILERS</Tag>
 		<English>%s1_civ_adjective factories are benefitting from a new boiler design, providing a short term rise in their tax revenue.</English>
@@ -1408,7 +1408,7 @@
 		<Italian>Le fabbriche %s1:4_civ_adjective stanno utilizzando un nuovo tipo di caldaia, che ha portato a un incremento delle entrate del fisco a breve termine.</Italian>
 		<Spanish>Las f&#225;bricas %s1:4_civ_adjective se est&#225;n beneficiando de un nuevo dise&#241;o de caldera que aumenta su recaudaci&#243;n de impuestos a corto plazo.</Spanish>
 		<Russian>%s1_civ_adjective factories are benefitting from a new boiler design, providing a short term rise in their tax revenue.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PERSONAL_COMPUTERS</Tag>
 		<English>%s1_civ_adjective personal computers, manufactured in %s2_city, are selling in record numbers.</English>
@@ -1417,7 +1417,7 @@
 		<Italian>I personal computer %s1:3_civ_adjective, costruiti a %s2_city, vengono venduti in quantit&#224; record.</Italian>
 		<Spanish>Los ordenadores personales %s1:3_civ_adjective, fabricados en %s2_city, est&#225;n registrando r&#233;cords de ventas.</Spanish>
 		<Russian>%s1_civ_adjective factories are benefitting from a new boiler design, providing a short term rise in their tax revenue.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HAMBURGER_JOINT</Tag>
 		<English>%s1_civ_adjective entrepreneurs have invented the fast food hamburger joint. Thanks to radio advertising, this phenomenon is spreading rapidly.</English>
@@ -1426,7 +1426,7 @@
 		<Italian>Gli imprenditori %s1:3_civ_adjective hanno inventato il fast-food. Grazie alla pubblicit&#224; radiofonica il fenomeno si sta rapidamente espandendo.</Italian>
 		<Spanish>Los empresarios %s1:3_civ_adjective han inventado el restaurante de comida r&#225;pida. Gracias a la publicidad en la radio, este fen&#243;meno se est&#225; difundiendo r&#225;pidamente.</Spanish>
 		<Russian>%s1_civ_adjective entrepreneurs have invented the fast food hamburger joint. Thanks to radio advertising, this phenomenon is spreading rapidly.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
 		<English>%s1_civ_adjective citizens who are socially advanced have adopted imported %s4_civ_adjective tea as their beverage of choice.</English>
@@ -1435,7 +1435,7 @@
 		<Italian>I cittadini %s1:3_civ_adjective, socialmente avanzati, hanno adottato il t&#232; %s4:1_civ_adjective d'importazione come bevanda preferita.</Italian>
 		<Spanish>Los ciudadanos %s1:3_civ_adjective m&#225;s avanzados socialmente han adoptado el t&#233; %s4:1_civ_adjective de importaci&#243;n como bebida predilecta.</Spanish>
 		<Russian>%s1_civ_adjective citizens who are socially advanced have adopted imported %s4_civ_adjective tea as their beverage of choice.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TEA_1</Tag>
 		<English>Imported %s1_civ_adjective tea has become all the rage amongst our social elite.</English>
@@ -1444,7 +1444,7 @@
 		<Italian>Il t&#232; %s1:1_civ_adjective d'importazione &#232; il preferito dall'elite della nostra societ&#224;.</Italian>
 		<Spanish>El t&#233; %s1:1_civ_adjective de importaci&#243;n ha causado sensaci&#243;n entre los miembros de nuestra &#233;lite social.</Spanish>
 		<Russian>Imported %s1_civ_adjective tea has become all the rage amongst our social elite.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TEA_OTHER_1</Tag>
 		<English>Tea exports to %s1_civ_adjective customers have provided a nice boost to our relations.</English>
@@ -1453,7 +1453,7 @@
 		<Italian>Le esportazioni di t&#232; a clienti %s1:3_civ_adjective hanno migliorato le nostre relazioni.</Italian>
 		<Spanish>Las exportaciones de t&#233; a los clientes %s1:3_civ_adjective han mejorado notablemente nuestras relaciones.</Spanish>
 		<Russian>Tea exports to %s1_civ_adjective customers have provided a nice boost to our relations.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FASHION</Tag>
 		<English>Silk dresses manufactured in %s1_civ_adjective factories have become an extremely popular fashion choice across the region, due in part to radio advertising.</English>
@@ -1462,7 +1462,7 @@
 		<Italian>I vestiti di seta realizzati dalle aziende %s1:4_civ_adjective sono diventati molto di moda in tutta la regione, in parte grazie alla pubblicit&#224; radiofonica.</Italian>
 		<Spanish>Los vestidos de seda fabricados en las f&#225;bricas %s1:4_civ_adjective se han convertido en una opci&#243;n de vestuario muy popular en toda la regi&#243;n, en parte debido a la publicidad en la radio.</Spanish>
 		<Russian>Silk dresses manufactured in %s1_civ_adjective factories have become an extremely popular fashion choice across the region, due in part to radio advertising.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_THOROUGHBRED</Tag>
 		<English>Thoroughbred race horses raised by %s1_civ_adjective breeders have generated extra revenue for their treasury.</English>
@@ -1471,7 +1471,7 @@
 		<Italian>I purosangue da corsa degli allevatori %s1:3_civ_adjective hanno creato ulteriori entrate per il loro tesoro.</Italian>
 		<Spanish>Los caballos de carreras purasangres de los criadores %s1:3_civ_adjective han generado ingresos extra para su tesoro.</Spanish>
 		<Russian>Thoroughbred race horses raised by %s1_civ_adjective breeders have generated extra revenue for their treasury.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GIRLS_BEST_FRIEND</Tag>
 		<English>%s1_civ_adjective diamond ring sales are booming.</English>
@@ -1480,7 +1480,7 @@
 		<Italian>Le vendite di anelli di diamanti %s1:3_civ_adjective stanno aumentando.</Italian>
 		<Spanish>Las ventas de anillos de diamantes %s1:3_civ_adjective se est&#225;n disparando.</Spanish>
 		<Russian>%s1_civ_adjective diamond ring sales are booming.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BANANA_SPLIT</Tag>
 		<English>Invention of the banana split by a %s1_civ_adjective businessman has led to booming ice cream sales for their vendors.</English>
@@ -1489,7 +1489,7 @@
 		<Italian>L'invenzione della banana split da parte di un uomo d'affari %s1:1_civ_adjective ha portato a un aumento delle vendite di gelato in quella nazione.</Italian>
 		<Spanish>La invenci&#243;n del banana split, obra de un hombre de negocios %s1:1_civ_adjective, ha reportado a los vendedores de helados un gran aumento de ventas.</Spanish>
 		<Russian>Invention of the banana split by a %s1_civ_adjective businessman has led to booming ice cream sales for their vendors.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HORSE_WHISPERING_DONE</Tag>
 		<English>%s1_civ_adjective stable masters and horse trainers have completed the quest of Horse Whispering!</English>
@@ -1498,7 +1498,7 @@
 		<Italian>Gli allevatori %s1:3_civ_adjective sono riusciti a completare l'impresa di Sussurrare ai cavalli!</Italian>
 		<Spanish>&#161;Los encargados de los establos %s1:3_civ_adjective y sus adiestradores de caballos han cumplido la misi&#243;n "Susurradores de caballos"!</Spanish>
 		<Russian>Invention of the banana split by a %s1_civ_adjective businessman has led to booming ice cream sales for their vendors.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARBORMASTER_DONE</Tag>
 		<English>The seaworthy %s1_civ_adjective people have completed the quest of The Harbormaster!</English>
@@ -1507,7 +1507,7 @@
 		<Italian>Il popolo marinaro %s1:1_civ_adjective ha completato l'impresa dell'Armatore!</Italian>
 		<Spanish>Los %s1:3_civ_adjective han hecho gala de su pericia naval completando la misi&#243;n El pr&#225;ctico del puerto.</Spanish>
 		<Russian>The seaworthy %s1_civ_adjective people have completed the quest of The Harbormaster!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CLASSIC_LITERATURE_DONE</Tag>
 		<English>%s1_civ scholars have successfully recorded all of their oral traditions and stories in to a new compendium of literature, thereby completing the quest of Classic Literature!</English>
@@ -1516,7 +1516,7 @@
 		<Italian>Gli studiosi %s1:3_civ sono riusciti a registrare tutte le tradizioni orali e le storia in una nuova raccolta di letteratura, completando cos&#236; l'impresa della Letteratura classica!</Italian>
 		<Spanish>Eruditos del %s1_civ han logrado registrar todas sus tradiciones y relatos de transmisi&#243;n oral en un nuevo compendio literario, &#161;por lo que se ha cumplido la misi&#243;n Literatura cl&#225;sica!</Spanish>
 		<Russian>%s1_civ scholars have successfully recorded all of their oral traditions and stories in to a new compendium of literature, thereby completing the quest of Classic Literature!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MASTER_BLACKSMITH_DONE</Tag>
 		<English>The skilled %s1_civ_adjective metalworkers have completed the quest of The Master Blacksmith!</English>
@@ -1525,7 +1525,7 @@
 		<Italian>Gli abili fabbri %s1:3_civ_adjective hanno completato l'impresa del Maestro fabbro!</Italian>
 		<Spanish>&#161;Los h&#225;biles trabajadores del metal %s1:3_civ_adjective han completado la misi&#243;n El maestro herrero!</Spanish>
 		<Russian>%s1_civ scholars have successfully recorded all of their oral traditions and stories in to a new compendium of literature, thereby completing the quest of Classic Literature!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BEST_DEFENSE_DONE</Tag>
 		<English>The sturdy %s1_civ_adjective people have completed The Best Defense quest!</English>
@@ -1534,7 +1534,7 @@
 		<Italian>Il vigoroso popolo %s1:1_civ_adjective ha completato l'impresa della Miglior difesa!</Italian>
 		<Spanish>&#161;El robusto pueblo %s1:1_civ_adjective ha completado la misi&#243;n La mejor defensa!</Spanish>
 		<Russian>The sturdy %s1_civ_adjective people have completed The Best Defense quest!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPORTS_LEAGUE</Tag>
 		<English>Our cultural advisors believe that our nation could benefit from city-based sports franchises if we built enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support national sports leagues.[PARAGRAPH:1]Each major city would require its own facility in which its teams could play.</English>
@@ -1543,7 +1543,7 @@
 		<Italian>I nostri consiglieri culturali sostengono che la nostra nazione trarrebbe beneficio dalla presenza di squadre cittadine, se costruissimo abbastanza [COLOR_BUILDING_TEXT]Anfiteatri[COLOR_REVERT] da supportare campionati sportivi nazionali.[PARAGRAPH:1]Ogni grande citt&#224; avr&#224; bisogno del proprio impianto sportivo, in cui potranno giocare le sue squadre.</Italian>
 		<Spanish>Nuestros consejeros culturales creen que nuestra naci&#243;n podr&#237;a beneficiarse de franquicias deportivas con sede en una ciudad si construy&#233;semos suficientes [COLOR_BUILDING_TEXT]Anfiteatros[COLOR_REVERT] para dar apoyo a las ligas deportivas nacionales.[PARAGRAPH:1]Cada una de las principales ciudades deber&#237;a disponer de instalaciones propias donde los equipos pudiesen jugar.</Spanish>
 		<Russian>Our cultural advisors believe that our nation could benefit from city-based sports franchises if we built enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support national sports leagues.[PARAGRAPH:1]Each major city would require its own facility in which its teams could play.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPORTS_LEAGUE_1</Tag>
 		<English>National Sports League[PARAGRAPH:1]You are tasked by your cultural advisors to build enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support viable sports leagues.</English>
@@ -1552,7 +1552,7 @@
 		<Italian>Campionato nazionale[PARAGRAPH:1]Hai ricevuto il compito, dai tuoi consiglieri culturali, di costruire abbastanza [COLOR_BUILDING_TEXT]Anfiteatri[COLOR_REVERT] da supportare campionati sportivi nazionali.</Italian>
 		<Spanish>Liga deportiva nacional[PARAGRAPH:1]Los consejeros culturales han encargado la construcci&#243;n de suficientes [COLOR_BUILDING_TEXT]Anfiteatros[COLOR_REVERT] para dar apoyo a ligas deportivas viables.</Spanish>
 		<Russian>National Sports League[PARAGRAPH:1]You are tasked by your cultural advisors to build enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support viable sports leagues.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPORTS_LEAGUE_HELP_1</Tag>
 		<English>[PARAGRAPH:1]To complete this quest, you must build %d1 [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] in your cities.[PARAGRAPH:1]An additional reward option will be available if you control [COLOR_BUILDING_TEXT]%s2_building[COLOR_REVERT] if and when this quest is successfully completed.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you reach the Modern Era without having met the conditions.</English>
@@ -1561,7 +1561,7 @@
 		<Italian>[PARAGRAPH:1]Per completare l'impresa devi costruire %d1 [COLOR_BUILDING_TEXT]Anfiteatri[COLOR_REVERT] nelle tue citt&#224;.[PARAGRAPH:1]Se controlli [NUM2:il:la] [COLOR_BUILDING_TEXT]%s2_building[COLOR_REVERT] ti verr&#224; data un'ulteriore ricompensa, se e quando completerai l'impresa.[PARAGRAPH:1]Fallirai nell'impresa se un'altra civilt&#224; la completa per prima, o se raggiungerai l'era moderna senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misi&#243;n, deb&#233;is construir %d1 [COLOR_BUILDING_TEXT]Anfiteatros[COLOR_REVERT] en vuestras ciudades.[PARAGRAPH:1]Ser&#225; posible elegir una opci&#243;n de recompensa adicional si se ostenta el control [NUM2:del:de la:de los:de las] [COLOR_BUILDING_TEXT]%s2_building[COLOR_REVERT] siempre y cuando esta misi&#243;n se haya cumplido satisfactoriamente.[PARAGRAPH:1]Esta misi&#243;n fracasar&#225; si una civilizaci&#243;n rival la cumple antes o si se alcanza la era Moderna sin haber cumplido las condiciones.</Spanish>
 		<Russian>National Sports League[PARAGRAPH:1]You are tasked by your cultural advisors to build enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support viable sports leagues.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPORTS_LEAGUE_DONE</Tag>
 		<English>The %s1_civ_adjective cities have built enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to complete the National Sports League quest, strengthening their social fabric and their national identity.</English>
@@ -1570,7 +1570,7 @@
 		<Italian>Le citt&#224; %s1:4_civ_adjective hanno costruito abbastanza [COLOR_BUILDING_TEXT]Anfiteatri[COLOR_REVERT] per completare l'impresa del Campionato nazionale, rinforzando il tessuto sociale e l'identit&#224; nazionale.</Italian>
 		<Spanish>Las ciudades %s1:4_civ_adjective han construido suficientes [COLOR_BUILDING_TEXT]Anfiteatros[COLOR_REVERT] para completar la misi&#243;n Liga deportiva nacional, lo que fortalece su tejido social y su identidad nacional.</Spanish>
 		<Russian>The %s1_civ_adjective cities have built enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to complete the National Sports League quest, strengthening their social fabric and their national identity.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SPORTS_LEAGUE_DONE_1</Tag>
 		<English>Congratulations! You have met the goals of your sports entrepreneurs and built enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support viable leagues. Please choose a reward from among the benefits your new national pastimes can provide to you.</English>
@@ -1579,7 +1579,7 @@
 		<Italian>Congratulazioni! Hai raggiunto gli obiettivi dei tuoi consiglieri culturali, costruendo abbastanza [COLOR_BUILDING_TEXT]Anfiteatri[COLOR_REVERT] da supportare campionati nazionali. Scegli una ricompensa tra quelle messe a disposizione dai nuovi passatempi nazionali.</Italian>
 		<Spanish>&#161;Felicidades! Se han cumplido los objetivos de los empresarios y se han construido suficientes [COLOR_BUILDING_TEXT]Anfiteatros[COLOR_REVERT] para dar apoyo a ligas viables. Elegid una de las recompensas que vuestros nuevos pasatiempos nacionales pueden ofreceros.</Spanish>
 		<Russian>Congratulations! You have met the goals of your sports entrepreneurs and built enough [COLOR_BUILDING_TEXT]Amphitheatres[COLOR_REVERT] to support viable leagues. Please choose a reward from among the benefits your new national pastimes can provide to you.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CRUSADE</Tag>
 		<English>Our war against the %s1:2_civ_adjective continues. Our spiritual leaders cry out for us to wage a crusade to wrest control of %s6_city away from them.</English>
@@ -1588,7 +1588,7 @@
 		<Italian>La nostra guerra contro i nemici %s1:3_civ_adjective continua. I nostri leader spirituali chiedono a gran voce che promuoviamo una crociata per togliere al nemico il controllo di %s6_city.</Italian>
 		<Spanish>Nuestra guerra contra los %s1:2_civ_adjective contin&#250;a. Nuestros l&#237;deres espirituales suplican que libremos una cruzada para arrebatarles el control de %s6_city.</Spanish>
 		<Russian>Our war against the %s1:2_civ_adjective continues. Our spiritual leaders cry out for us to wage a crusade to wrest control of %s6_city away from them.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CRUSADE_DONE_1</Tag>
 		<English>Congratulations! Your Crusade to secure the sacred lands of %s2_city has wrested control of the city away from the %s1:2_civ_adjective! Please choose a reward from among the benefits that may accrue from the joy your people feel in this successful Crusade.</English>
@@ -1597,7 +1597,7 @@
 		<Italian>Congratulazioni! La crociata per conquistare le sacre terre di %s2_city ha tolto il controllo della citt&#224; ai nemici %s1:3_civ_adjective! Scegli una ricompensa tra i benefici derivati dalla gioia del tuo popolo per questa vittoriosa crociata.</Italian>
 		<Spanish>&#161;Felicidades! &#161;La cruzada para asegurar las tierras sagradas de %s2_city ha arrebatado a los %s1:2_civ_adjective el control de la ciudad! Elegid una de las recompensas resultantes del gozo popular que ha producido esta exitosa cruzada.</Spanish>
 		<Russian>Congratulations! Your Crusade to secure the sacred lands of %s2_city has wrested control of the city away from the %s1:2_civ_adjective! Please choose a reward from among the benefits that may accrue from the joy your people feel in this successful Crusade.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CRUSADE_DONE</Tag>
 		<English>%s1_civ_adjective armies have completed their Crusade, wresting control of the Holy City of %s2_city away from the %s4_civ_adjective people!</English>
@@ -1606,7 +1606,7 @@
 		<Italian>Gli eserciti %s1:3_civ_adjective hanno completato la crociata, sottraendo il controllo della Citt&#224; Santa di %s2_city al popolo %s4_civ_adjective!</Italian>
 		<Spanish>&#161;Los ej&#233;rcitos %s1:3_civ_adjective han completado su cruzada y han arrebatado a los %s4:3_civ_adjective el control de la ciudad santa!</Spanish>
 		<Russian>%s1_civ_adjective armies have completed their Crusade, wresting control of the Holy City of %s2_city away from the %s4_civ_adjective people!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MIRACLE</Tag>
 		<English>A miracle performed at the city wall in %s2_city is attracting %s3_religion_adjective pilgrims from far and wide.</English>
@@ -1615,7 +1615,7 @@
 		<Italian>Un miracolo accaduto al muro della citt&#224; di %s2_city sta attirando pellegrini %s3:3_religion_adjective da ogni dove.</Italian>
 		<Spanish>Un milagro realizado en la muralla de %s2_city est&#225; atrayendo a peregrinos %s3:3_religion_adjective de distintos y lejanos lugares.</Spanish>
 		<Russian>%s1_civ_adjective armies have completed their Crusade, wresting control of the Holy City of %s2_city away from the %s4_civ_adjective people!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FAVORITE_SON</Tag>
 		<English>A %s1_civ_adjective gladiator from %s2_city has become a local hero and an inspiration.</English>
@@ -1624,7 +1624,7 @@
 		<Italian>Un gladiatore %s1:1_civ_adjective di %s2_city &#232; diventato un eroe locale e motivo di ispirazione.</Italian>
 		<Spanish>Un gladiador %s1:1_civ_adjective de %s2_city se ha convertido en un h&#233;roe local y en una fuente de inspiraci&#243;n.</Spanish>
 		<Russian>A %s1_civ_adjective gladiator from %s2_city has become a local hero and an inspiration.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SECRET_KNOWLEDGE</Tag>
 		<English>A cache of ancient texts has been discovered hidden away in a %s1_civ_adjective monastery.</English>
@@ -1633,7 +1633,7 @@
 		<Italian>In un monastero %s1:1_civ_adjective &#232; stato scoperto un deposito di antichi testi.</Italian>
 		<Spanish>Una reserva de textos antiguos que estaba oculta en un monasterio %s1:1_civ_adjective ha sido descubierta.</Spanish>
 		<Russian>A cache of ancient texts has been discovered hidden away in a %s1_civ_adjective monastery.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CHILLY_FLIGHT</Tag>
 		<English>A pilot from %s2_city has inspired pride amongst the %s1_civ_adjective people by becoming the first to fly solo over the North Pole.</English>
@@ -1642,7 +1642,7 @@
 		<Italian>Un pilota di %s2_city ha inorgoglito la popolazione %s1:2_civ_adjective avendo sorvolato per primo il Polo Nord da solo.</Italian>
 		<Spanish>Un piloto de %s2_city ha despertado el orgullo del pueblo %s1:1_civ_adjective al convertirse en el primero en sobrevolar el Polo Norte en solitario.</Spanish>
 		<Russian>A pilot from %s2_city has inspired pride amongst the %s1_civ_adjective people by becoming the first to fly solo over the North Pole.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_EXPERIENCED_CAPTAIN</Tag>
 		<English>A retiring %s1_civ_adjective naval captain has pledged his expertise to assist the Drydock located in %s2_city.</English>
@@ -1651,7 +1651,7 @@
 		<Italian>Un capitano %s1:1_civ_adjective che sta andando in pensione ha offerto la propria esperienza per collaborare col cantiere navale di %s2_city.</Italian>
 		<Spanish>Un capit&#225;n naval %s1:1_civ_adjective retirado se ha ofrecido a colaborar con su experiencia en el astillero ubicado en %s2_city.</Spanish>
 		<Russian>A retiring %s1_civ_adjective naval captain has pledged his expertise to assist the Drydock located in %s2_city.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HERESY</Tag>
 		<English>The thoroughly religious %s1_civ_adjective state is dealing with an outbreak of heresy in some segments of its population.</English>
@@ -1660,7 +1660,7 @@
 		<Italian>Lo stato %s1:1_civ_adjective, altamente religioso, sta affrontando un'ondata di eresia in alcuni segmenti della propria popolazione.</Italian>
 		<Spanish>El estado %s1:1_civ_adjective, de profundas convicciones religiosas, se est&#225; ocupando de los brotes de herej&#237;a que han surgido en algunos segmentos de su poblaci&#243;n.</Spanish>
 		<Russian>The thoroughly religious %s1_civ_adjective state is dealing with an outbreak of heresy in some segments of its population.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PARTISANS</Tag>
 		<English>The %s1_civ_adjective people from the city of %s5_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</English>
@@ -1669,7 +1669,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective della citt&#224; di %s5_city ha visto bruciare le proprie case! Si sta sollevando contro i malvagi invasori %s4_civ_adjective, formando unit&#224; partigiane per combattere per la resistenza!</Italian>
 		<Spanish>&#161;Los %s1:3_civ_adjective de la ciudad de %s5_city han visto arder sus casas! &#161;Se est&#225;n levantando contra los malvados invasores %s4:3_civ_adjective, formando unidades de partisanos que se unen a la resistencia como milicianos!</Spanish>
 		<Russian>The %s1_civ_adjective people from the city of %s5_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PARTISANS_OTHER_1</Tag>
 		<English>%s1_civ_adjective citizens from the city we just razed are taking to the surrounding countryside to form Partisan resistance units!</English>
@@ -1678,7 +1678,7 @@
 		<Italian>I cittadini %s1:3_civ_adjective della citt&#224; che abbiamo appena razziato stanno fuggendo nelle campagne, per formare unit&#224; partigiane per la resistenza!</Italian>
 		<Spanish>&#161;Ciudadanos %s1:3_civ_adjective de la ciudad que acabamos de arrasar est&#225;n tomando la campi&#241;a de los alrededores para crear unidades de resistencia formadas por partisanos!</Spanish>
 		<Russian>The %s1_civ_adjective people from the city of %s5_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PARTISANS_OTHER_2</Tag>
 		<English>%s1_civ_adjective citizens from the city we just razed are fleeing toward their capital and are expected to form Partisan resistance units there!</English>
@@ -1687,7 +1687,7 @@
 		<Italian>I cittadini %s1:3_civ_adjective della citt&#224; che abbiamo appena razziato stanno fuggendo verso la propria capitale, dove crediamo formeranno unit&#224; partigiane!</Italian>
 		<Spanish>&#161;Ciudadanos %s1:3_civ_adjective de la ciudad que acabamos de arrasar huyen hacia su capital, donde se espera que creen unidades de resistencia formadas por partisanos!</Spanish>
 		<Russian>%s1_civ_adjective citizens from the city we just razed are fleeing toward their capital and are expected to form Partisan resistance units there!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_NEW_DYNASTY</Tag>
 		<English>The %s1_civ_adjective hereditary dynasty has died out. A new faction has claimed the throne and is off to a roaringly successful start.</English>
@@ -1696,7 +1696,7 @@
 		<Italian>La dinastia ereditaria %s1:1_civ_adjective si &#232; interrotta. Una nuova fazione ha rivendicato il trono e ha cominciato con un grande successo.</Italian>
 		<Spanish>La dinast&#237;a hereditaria %s1:2_civ_adjective se ha extinguido. Una nueva facci&#243;n ha reclamado el trono y se prepara para un estridente y exitoso inicio.</Spanish>
 		<Russian>The %s1_civ_adjective hereditary dynasty has died out. A new faction has claimed the throne and is off to a roaringly successful start.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TOO_CLOSE_TO_CALL</Tag>
 		<English>%s1_civ_adjective election results were so close, the courts had to rule on the vote-counting procedures to arrive at an outcome.</English>
@@ -1705,7 +1705,7 @@
 		<Italian>I risultati delle elezioni %s1:4_civ_adjective erano cos&#236; vicini che le corti hanno dovuto giudicare le procedure di spoglio per ottenere un risultato.</Italian>
 		<Spanish>Los resultados de las elecciones %s1:4_civ_adjective han sido tan similares entre s&#237;, que los tribunales han tenido que pronunciarse sobre los procedimientos de recuento de votos para validar uno de los resultados.</Spanish>
 		<Russian>%s1_civ_adjective election results were so close, the courts had to rule on the vote-counting procedures to arrive at an outcome.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CHARISMATIC</Tag>
 		<English>A charismatic %s1_civ_adjective dictator has risen to control the Party. This strong man is reshaping the government to suit his plans.</English>
@@ -1714,7 +1714,7 @@
 		<Italian>Un carismatico dittatore %s1:1_civ_adjective &#232; arrivato al controllo del partito. Questo forte uomo sta cambiando il governo secondo i propri piani.</Italian>
 		<Spanish>Un carism&#225;tico dictador %s1:1_civ_adjective se ha hecho con el control del partido. Este hombre fuerte est&#225; remodelando el gobierno para adaptarlo a sus planes.</Spanish>
 		<Russian>A charismatic %s1_civ_adjective dictator has risen to control the Party. This strong man is reshaping the government to suit his plans.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FRIENDLY_LOCALS_2</Tag>
 		<English>A wounded %s1_civ_adjective unit has received assistance from a small faction who resists the rule of their enemy.</English>
@@ -1723,7 +1723,7 @@
 		<Italian>Un'unit&#224; %s1:2_civ_adjective ferita ha ricevuto aiuto dai membri di una piccola fazione che resiste al governo del nemico.</Italian>
 		<Spanish>Una unidad %s1:2_civ_adjective herida ha recibido ayuda de una peque&#241;a facci&#243;n que se resiste al mandato del enemigo.</Spanish>
 		<Russian>A wounded %s1_civ_adjective unit has received assistance from a small faction who resists the rule of their enemy.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FRIENDLY_LOCALS_3</Tag>
 		<English>A pious tribe who believe in mercy have extended religious protection to a wounded unit of %s1_civ_adjective origin.</English>
@@ -1732,7 +1732,7 @@
 		<Italian>Una trib&#249; misericordiosa ha esteso la propria protezione religiosa a un'unit&#224; ferita di origine %s1:2_civ_adjective.</Italian>
 		<Spanish>Una devota tribu que cree en la misericordia ha proporcionado protecci&#243;n religiosa a una unidad herida de origen %s1:1_civ_adjective.</Spanish>
 		<Russian>A pious tribe who believe in mercy have extended religious protection to a wounded unit of %s1_civ_adjective origin.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREED_1</Tag>
 		<English>Our generals covet a source of [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] that lies within %s1_civ_adjective borders. Without it, we cannot properly train and equip our troops!</English>
@@ -1741,7 +1741,7 @@
 		<Italian>Ai nostri generali interessa una fonte di [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] che si trova entro i confini %s1:3_civ_adjective. Senza di essa non possiamo addestrare ed equipaggiare in modo adeguato le nostre truppe!</Italian>
 		<Spanish>Nuestros generales codician una fuente de [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] que se encuentra dentro de las fronteras %s1:4_civ_adjective. &#161;Sin este recurso, no podemos entrenar y equipar adecuadamente a nuestras tropas!</Spanish>
 		<Russian>Our generals covet a source of [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] that lies within %s1_civ_adjective borders. Without it, we cannot properly train and equip our troops!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREED_DONE_1</Tag>
 		<English>Congratulations! Your Greed is unmatched! You have managed to wrest control of the coveted %s1_civ_adjective [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] resource! Your generals are already expanding their military planning.</English>
@@ -1750,7 +1750,7 @@
 		<Italian>Congratulazioni! La tua avidit&#224; non ha pari! Sei riuscito a prendere il controllo della risorsa: [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] %s1:2_civ_adjective! I tuoi generali stanno gi&#224; facendo piani pi&#249; in grande.</Italian>
 		<Spanish>&#161;Felicidades! &#161;Tu avaricia no tiene par! &#161;Has logrado hacerte con el control [NUM9:del codiciado:de la codiciada:de los codiciados:de las codiciadas] [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT]! Vuestros generales ya est&#225;n ampliando sus planes militares.</Spanish>
 		<Russian>Congratulations! Your Greed is unmatched! You have managed to wrest control of the coveted %s1_civ_adjective [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] resource! Your generals are already expanding their military planning.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GREED_DONE</Tag>
 		<English>The %s1_civ_adjective army, in a purely greedy bid for strategic resources, have attacked the %s4:2_civ_adjective and seized control of resources they lacked within their own borders.</English>
@@ -1759,7 +1759,7 @@
 		<Italian>L'esercito %s1:1_civ_adjective, in un avido tentativo di recuperare risorse strategiche, ha attaccato i %s4:2_civ_adjective e preso il controllo di risorse che mancano all'interno dei loro confini.</Italian>
 		<Spanish>El ej&#233;rcito %s1:1_civ_adjective, en una codiciosa maniobra para hacerse con recursos estrat&#233;gicos, ha atacado a los %s4:3_civ_adjective y se ha apoderado de los recursos que no pose&#237;a dentro de sus propias fronteras.</Spanish>
 		<Russian>Congratulations! Your Greed is unmatched! You have managed to wrest control of the coveted %s1_civ_adjective [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] resource! Your generals are already expanding their military planning.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WAR_CHARIOTS_DONE</Tag>
 		<English>The %s1_civ_adjective people have trained the largest force of Chariot units. Advisors across the known world are panicking at the thought of their nation being ground under the thundering hooves and churning wheels of these mighty war machines.</English>
@@ -1768,7 +1768,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective ha addestrato la pi&#249; grande forza militare composta da bighe. I consiglieri di tutto il mondo si stanno lasciando prendere dal panico, al pensiero della propria nazione investita dagli zoccoli e dalle pesanti ruote di queste macchine da guerra.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de carros. Consejeros de todo el mundo conocido tiemblan ante la idea de que su naci&#243;n pueda ser aplastada por los cascos y ruedas de estas poderosas m&#225;quinas de guerra.</Spanish>
 		<Russian>Congratulations! Your Greed is unmatched! You have managed to wrest control of the coveted %s1_civ_adjective [COLOR_HIGHLIGHT_TEXT]%s9_resource[COLOR_REVERT] resource! Your generals are already expanding their military planning.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ELITE_SWORDS_DONE</Tag>
 		<English>The %s1_civ_adjective people have trained the largest force of Swordsman units. Advisors across the known world are wondering if their civilizations will survive long enough to see what lies beyond the sword.</English>
@@ -1777,7 +1777,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective ha addestrato la pi&#249; grande forza militare composta da spadaccini. I consiglieri di tutto il mondo si stanno chiedendo se le loro civilt&#224; riusciranno a vedere cosa c'&#232; al di l&#224; della spada.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de soldados con espada. Consejeros de todo el mundo conocido se preguntan si sus civilizaciones vivir&#225;n para ver qu&#233; hay m&#225;s all&#225; de la espada.</Spanish>
 		<Russian>The %s1_civ_adjective people have trained the largest force of Swordsman units. Advisors across the known world are wondering if their civilizations will survive long enough to see what lies beyond the sword.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WARSHIPS_DONE</Tag>
 		<English>The %s1_civ_adjective people have trained the largest fleet of warships. Advisors across the known world whisper of their fears that this fleet will dominate the seas for centuries to come.</English>
@@ -1786,7 +1786,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective ha costruito la pi&#249; grande flotta di navi da guerra. I consiglieri di tutto il mondo hanno paura che la flotta dominer&#224; i mari per i prossimi secoli.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor flota de barcos de guerra. Consejeros de todo el mundo conocido confiesan entre susurros su temor de que esta flota domine los mares durante los siglos venideros.</Spanish>
 		<Russian>The %s1_civ_adjective people have trained the largest fleet of warships. Advisors across the known world whisper of their fears that this fleet will dominate the seas for centuries to come.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GUNS_BUTTER_DONE</Tag>
 		<English>The %s1_civ_adjective people have trained the largest force of musket units. Advisors across the known world are panicking at the thought of their nation being ground under the thundering clatter and deadly terror of an endless hail of bullets.</English>
@@ -1795,7 +1795,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective ha addestrato la pi&#249; grande forza militare composta da soldati con moschetto. I consiglieri di tutto il mondo si stanno lasciando prendere dal panico, al pensiero della propria nazione investita da un'interminabile pioggia di proiettili.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de mosquetes. Consejeros de todo el mundo conocido tiemblan ante la idea de que su naci&#243;n pueda ser aplastada por el estr&#233;pito y el terror de una interminable lluvia de balas.</Spanish>
 		<Russian>The %s1_civ_adjective people have trained the largest force of musket units. Advisors across the known world are panicking at the thought of their nation being ground under the thundering clatter and deadly terror of an endless hail of bullets.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_NOBLE_KNIGHTS_DONE</Tag>
 		<English>The %s1_civ_adjective people have trained the largest force of knights. Advisors across the known world tremble at the thought of facing rows of lances powered by the thundering hooves of a full battle charge.</English>
@@ -1804,7 +1804,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective ha addestrato la pi&#249; grande forza militare composta da cavalieri. I consiglieri di tutto il mondo tremano al pensiero di affrontare le file di lance spinte da tonanti zoccoli di una carica di cavalleria.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de caballeros. Consejeros de todo el mundo conocido se estremecen al pensar en hileras de lanzas impulsadas por el atronador galope de una carga en plena batalla.</Spanish>
 		<Russian>The %s1_civ_adjective people have trained the largest force of musket units. Advisors across the known world are panicking at the thought of their nation being ground under the thundering clatter and deadly terror of an endless hail of bullets.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_OVERWHELM_DONE</Tag>
 		<English>The %s1_civ_adjective people have constructed what is by far the most deadly fleet of warships in the history of warfare. Their aircraft carrier battle group could crush anything that gets in its way.</English>
@@ -1813,7 +1813,7 @@
 		<Italian>La popolazione %s1:2_civ_adjective ha costruito la pi&#249; letale flotta di navi da guerra della storia. Il loro gruppo da battaglia con portaerei pu&#242; schiacciare qualsiasi cosa si metta sulla sua strada.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han construido la que es, con mucho, la m&#225;s letal flota de barcos de guerra de la historia b&#233;lica. Su grupo de portaaviones de combate podr&#237;a aplastar cualquier cosa que se cruzase en su camino.</Spanish>
 		<Russian>The %s1_civ_adjective people have constructed what is by far the most deadly fleet of warships in the history of warfare. Their aircraft carrier battle group could crush anything that gets in its way.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CORPORATE_EXPANSION_DONE</Tag>
 		<English>The %s1_civ_adjective people have completed the quest of Corporate Expansion. %s6_corporation profits expected to skyrocket.</English>
@@ -1822,7 +1822,7 @@
 		<Italian>Il popolo %s1:1_civ_adjective ha completato l'impresa dell'Espansione corporativa. I profitti della %s6_corporation saliranno alle stelle.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han completado la misi&#243;n Expansi&#243;n corporativa. Se espera que los beneficios de %s6_corporation suban como la espuma.</Spanish>
 		<Russian>The %s1_civ_adjective people have constructed what is by far the most deadly fleet of warships in the history of warfare. Their aircraft carrier battle group could crush anything that gets in its way.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HOSTILE_TAKEOVER_DONE</Tag>
 		<English>The %s1_civ_adjective people have completed the quest of Corporate Expansion. %s6_corporation profits expected to skyrocket.</English>
@@ -1831,7 +1831,7 @@
 		<Italian>Il popolo %s1:1_civ_adjective ha completato l'impresa dell'Espansione corporativa. I profitti della %s6_corporation saliranno alle stelle.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han completado la misi&#243;n Expansi&#243;n corporativa. Se espera que los beneficios de %s6_corporation suban como la espuma.</Spanish>
 		<Russian>The %s1_civ_adjective people have constructed what is by far the most deadly fleet of warships in the history of warfare. Their aircraft carrier battle group could crush anything that gets in its way.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CIV_GAME</Tag>
 		<English>The %s1_civ_adjective game designers have developed a new game of Civilization.</English>
@@ -1840,7 +1840,7 @@
 		<Italian>Progettisti di videogiochi %s1:3_civ_adjective hanno sviluppato un nuovo gioco chiamato Civilization.</Italian>
 		<Spanish>Los dise&#241;adores de juegos %s1_civ_adjective han desarrollado un nuevo juego de Civilization.</Spanish>
 		<Russian>The %s1_civ_adjective game designers have developed a new game of Civilization.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HEALING_PLANT</Tag>
 		<English>%s1_civ_adjective herbalists have discovered a plant that might result in better illness treatment.</English>
@@ -1849,7 +1849,7 @@
 		<Italian>Erboristi %s1:3_civ_adjective hanno scoperto una pianta che potrebbe risultare utile nella cura di alcune malattie.</Italian>
 		<Spanish>Boticarios %s1_civ_adjective han descubierto una planta que puede servir para un mejor tratamiento de enfermedades.</Spanish>
 		<Russian>%s1_civ_adjective herbalists have discovered a plant that might result in better illness treatment.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_GREAT_BEAST</Tag>
 		<English>%s1_civ_adjective hunters have discovered a great beast lurking near one of their camps.</English>
@@ -1858,7 +1858,7 @@
 		<Italian>Cacciatori %s1:3_civ_adjective hanno avvistato un grande animale appostato nei dintorni di un loro accampamento.</Italian>
 		<Spanish>Cazadores %s1_civ_adjective han descubierto una gran bestia acechando uno de sus campamentos.</Spanish>
 		<Russian>%s1_civ_adjective hunters have discovered a great beast lurking near one of their camps.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CONTROVERSIAL_PHILOSOPHER</Tag>
 		<English>A %s1_civ_adjective philosopher has stirred up controversy among the religious population.</English>
@@ -1867,7 +1867,7 @@
 		<Italian>Un filosofo %s1:1_civ_adjective ha scatenato una controversia tra i vari credenti.</Italian>
 		<Spanish>Un fil&#243;sofo %s1_civ_adjective ha levantado controversia entre la poblaci&#243;n religiosa.</Spanish>
 		<Russian>A %s1_civ_adjective philosopher has stirred up controversy among the religious population.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DEFECTING_AGENT</Tag>
 		<English>A high-ranking %s1_civ_adjective intelligence agent has defected to the %s4_civ_adjective government.</English>
@@ -1876,7 +1876,7 @@
 		<Italian>Un agente di grado elevato dell'intelligence %s1:2_civ_adjective ha defezionato ed &#232; passato al servizio del governo %s4:1_civ_adjective.</Italian>
 		<Spanish>Un agente de inteligencia %s1_civ_adjective de alto rango ha desertado al gobierno %s4_civ_adjective.</Spanish>
 		<Russian>A high-ranking %s1_civ_adjective intelligence agent has defected to the %s4_civ_adjective government.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DEFECTING_AGENT</Tag>
 		<English>One of our high-ranking intelligence agents has defected to the %s1_civ_adjective empire.</English>
@@ -1885,7 +1885,7 @@
 		<Italian>Uno dei nostri agenti dell'intelligence di grado elevato ha defezionato ed &#232; passato al servizio dell'impero %s1:1_civ_adjective</Italian>
 		<Spanish>Uno de nuestros agentes de inteligencia de alto rango ha desertado al imperio %s1_civ_adjective</Spanish>
 		<Russian>One of our high-ranking intelligence agents has defected to the %s1_civ_adjective empire.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPY_DISCOVERED</Tag>
 		<English>A %s4_civ_adjective infiltrator has been dicovered in the %s1_civ_adjective government.</English>
@@ -1894,7 +1894,7 @@
 		<Italian>Un infiltratore %s4:1_civ_adjective &#232; stato scoperto all'interno del governo %s1_civ_adjective</Italian>
 		<Spanish>Un infiltrado %s4_civ_adjective ha sido descubierto en el gobierno %s1_civ_adjective.</Spanish>
 		<Russian>One of our high-ranking intelligence agents has defected to the %s1_civ_adjective empire.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED</Tag>
 		<English>A %s1_civ_adjective spy is operating on a high level in our government! What should we do?</English>
@@ -1903,7 +1903,7 @@
 		<Italian>Una spia %s1:2_civ_adjective sta operando negli alti livelli del nostro governo.Cosa dobiamo fare?</Italian>
 		<Spanish>Un espia %s1_civ_adjective esta operando a alto nivel en nuestro gobierno! &#191;Qu&#233; debemos hacer?</Spanish>
 		<Russian>A %s1_civ_adjective spy is operating on a high level in our government! What should we do?</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_NUCLEAR_PROTEST</Tag>
 		<English>News reports indicate massive %s1_civ_adjective protests over the country's nuclear weapons stockpile.</English>
@@ -1912,7 +1912,7 @@
 		<Italian>Rapporti recenti mostrano massicce proteste di cittadini %s1:3_civ_adjective per l'arsenale nucleare della nazione.</Italian>
 		<Spanish>Las noticias indican protestas masivas en %s1_civ_adjective por la reserva nuclear del pais.</Spanish>
 		<Russian>News reports indicate massive %s1_civ_adjective protests over the country's nuclear weapons stockpile.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BETTER_COAL</Tag>
 		<English>%s1_civ_adjective scientists have developed better ways of processing coal fuel.</English>
@@ -1921,7 +1921,7 @@
 		<Italian>Scienziati %s1:3_civ_adjective hanno sviluppato metodi migliori per la lavorazione del combustibile derivante dal carbone.</Italian>
 		<Spanish>Cient&#237;ficos %s1_civ_adjective han descubierto mejores maneras de procesar carb&#243;n.</Spanish>
 		<Russian>%s1_civ_adjective scientists have developed better ways of processing coal fuel.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TOXCATL</Tag>
 		<English>The man who is Tezcatlipoca's likeness has escaped during this year's Toxcatl feast in the %s1_civ_adjective Empire.</English>
@@ -1930,7 +1930,7 @@
 		<Italian>L'uomo che ha le sembianze di Tezcalipoca &#232; scappato durante la celebrazione di quest'anno di Toxcatl nell'impero %s1:1_civ_adjective</Italian>
 		<Spanish>El hombre que es el favorito de Tezcatlipoca ha huido durante el festival Toxcatl en el imperio %s1_civ_adjective.</Spanish>
 		<Russian>The man who is Tezcatlipoca's likeness has escaped during this year's Toxcatl feast in the %s1_civ_adjective Empire.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PASTURE_BUILT</Tag>
 		<English>Industrious villagers have built a Pasture in %s1_civ_adjective lands.</English>
@@ -1939,7 +1939,7 @@
 		<Italian>Abitanti industriosi di un villaggio hanno costruito un Pascolo nelle terre %s1:4_civ_adjective</Italian>
 		<Spanish>Aldeanos laboriosos han hecho un pastizal en tierras de %s1_civ_adjective.</Spanish>
 		<Russian>Industrious villagers have built a Pasture in %s1_civ_adjective lands.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ROGUE_STATION</Tag>
 		<English>A rogue radio station in the %s1_civ_adjective city of %s2_city is broadcasting propaganda against the ruling party.</English>
@@ -1948,7 +1948,7 @@
 		<Italian>Una stazione radio dissidente nella citt&#224; %s1:2_civ_adjective di %s2_city sta diffondendo propaganda contro il partito al potere</Italian>
 		<Spanish>Una emisora pirata en la ciudad %s1_civ_adjective de %s2_city est&#225; emitiendo propaganda contra el partido gobernante.</Spanish>
 		<Russian>A rogue radio station in the %s1_civ_adjective city of %s2_city is broadcasting propaganda against the ruling party.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ANTIMONARCHISTS</Tag>
 		<English>%s1_civ_adjective antimonarchists are protesting, saying that the religious institutions don't have enough power compared to the King.</English>
@@ -1957,7 +1957,7 @@
 		<Italian>Gli antimonarchici %s1:3_civ_adjective stanno protestando, dicono che le istituzioni religiose non hanno abbastanza poteri rispetto al re.</Italian>
 		<Spanish>Antimon&#225;rquicos %s1_civ_adjective estan protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
 		<Russian>%s1_civ_adjective antimonarchists are protesting, saying that the religious institutions don't have enough power compared to the King.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_IMPEACHMENT</Tag>
 		<English>The %s1_civ_adjective President is facing impeachment.</English>
@@ -1966,5 +1966,5 @@
 		<Italian>Il Presidente %s1:1_civ_adjective &#232; stato messo sotto impeachment</Italian>
 		<Spanish>El presidente %s1_civ_adjective se enfrente a una moci&#243;n de censura.</Spanish>
 		<Russian>The %s1_civ_adjective President is facing impeachment.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 </Civ4GameText>

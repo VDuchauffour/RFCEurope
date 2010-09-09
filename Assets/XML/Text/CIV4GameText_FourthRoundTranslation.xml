@@ -10,7 +10,7 @@
 		<Italian>Per avere ulteriori dettagli consulta il Consigliere per gli interni (F2)</Italian>
 		<Spanish>Revisa el Consejero de Interior [F2] para obtener m&#225;s detalles.</Spanish>
 		<Russian>&#207;&#240;&#238;&#226;&#229;&#240;&#252;&#242;&#229; &#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#229;&#227;&#238; &#209;&#238;&#226;&#229;&#242;&#237;&#232;&#234;&#224; (F2) &#228;&#235;&#255; &#225;&#238;&#235;&#229;&#229; &#234;&#238;&#237;&#234;&#240;&#229;&#242;&#237;&#238;&#233; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_CHECKF8</Tag>
 		<English>Check the Victory Conditions (F8) for details</English>
@@ -19,7 +19,7 @@
 		<Italian>Per ulteriori dettagli consulta le Condizioni di vittoria (F8)</Italian>
 		<Spanish>Revisa las condiciones para la victoria [F8] para obtener m&#225;s detalles.</Spanish>
 		<Russian>&#207;&#240;&#238;&#226;&#229;&#240;&#252;&#242;&#229; &#211;&#241;&#235;&#238;&#226;&#232;&#255; &#207;&#238;&#225;&#229;&#228;&#251; (F8) &#228;&#235;&#255; &#225;&#238;&#235;&#229;&#229; &#234;&#238;&#237;&#234;&#240;&#229;&#242;&#237;&#238;&#233; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
 		<English>Historical goals accomplished:</English>
@@ -28,7 +28,7 @@
 		<Italian>Obiettivi storici raggiunti:</Italian>
 		<Spanish>Objetivos hist&#243;ricos conseguidos:</Spanish>
 		<Russian>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#231;&#224;&#226;&#229;&#240;&#248;&#229;&#237;&#237;&#251;&#229; &#246;&#229;&#235;&#232;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADING_TIME</Tag>
 		<English>(Estimated loading time:</English>
@@ -37,7 +37,7 @@
 		<Italian>(Tempo stimato di caricamento:</Italian>
 		<Spanish>(Tiempo estimado de carga:</Spanish>
 		<Russian>(&#206;&#246;&#229;&#237;&#232;&#226;&#224;&#254;&#242;, &#231;&#224;&#227;&#240;&#243;&#230;&#224;&#255; &#226;&#240;&#229;&#236;&#255;:</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINUTES</Tag>
 		<English>minutes)</English>
@@ -46,7 +46,7 @@
 		<Italian>minuti)</Italian>
 		<Spanish>minuto/s)</Spanish>
 		<Russian>&#236;&#232;&#237;&#243;&#242;&#251;)</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FLIP_TO_US</Tag>
 		<English>Cities in the area have joined our rising empire!</English>
@@ -55,7 +55,7 @@
 		<Italian>Le citt&#224; di questa regione si sono unite al nostro impero!</Italian>
 		<Spanish>&#161;Las ciudades de la zona se han unido a nuestro naciente imperio!</Spanish>
 		<Russian>&#195;&#238;&#240;&#238;&#228;&#224; &#238;&#225;&#235;&#224;&#241;&#242;&#232; &#239;&#240;&#232;&#241;&#238;&#229;&#228;&#232;&#237;&#232;&#235;&#232;&#241;&#252; &#226; &#237;&#224;&#248;&#243; &#226;&#238;&#231;&#240;&#224;&#241;&#242;&#224;&#254;&#249;&#243;&#254; &#232;&#236;&#239;&#229;&#240;&#232;&#254;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CONCEPT</Tag>
 		<English>RFC Concepts</English>
@@ -89,7 +89,7 @@
 		<Italian>Benvenuto a Rhye's and Fall</Italian>
 		<Spanish>Bienvenido a "Rhye's and Fall of Civilization"</Spanish>
 		<Russian>&#196;&#238;&#225;&#240;&#238; &#239;&#238;&#230;&#224;&#235;&#238;&#226;&#224;&#242;&#252; &#226; &#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#243;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RFCINTRO_PEDIA</Tag>
 		<English>[H1]Welcome to Rhye's and Fall of Civilization[\H1]
@@ -135,5 +135,5 @@
 [PARAGRAPH:2]&#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#224; - &#236;&#238;&#228;, &#234;&#238;&#242;&#238;&#240;&#251;&#233; &#239;&#240;&#238;&#232;&#241;&#245;&#238;&#228;&#232;&#242; &#238;&#242; &#208;&#212;&#214;. &#221;&#242;&#238; &#197;&#226;&#240;&#238;&#246;&#229;&#237;&#242;&#240;&#232;&#247;&#237;&#238; &#226; &#239;&#240;&#232;&#240;&#238;&#228;&#229;, &#238;&#245;&#226;&#224;&#242;&#251;&#226;&#224;&#229;&#242; &#239;&#229;&#240;&#232;&#238;&#228;&#251; &#241;&#240;&#229;&#228;&#237;&#232;&#245; &#226;&#229;&#234;&#238;&#226; &#232; &#208;&#229;&#237;&#229;&#241;&#241;&#224;&#237;&#241;&#237;&#251;&#245; &#197;&#226;&#240;&#238;&#239;&#251; &#238;&#242; 500AD &#234; 1800AD.
 [PARAGRAPH:2]&#207;&#238; &#235;&#254;&#225;&#238;&#236;&#243; &#228;&#240;&#243;&#227;&#238;&#233; &#226;&#238;&#239;&#240;&#238;&#241;&#243; &#226;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#239;&#238;&#241;&#229;&#242;&#232;&#242;&#252; &#238;&#244;&#232;&#246;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#241;&#224;&#233;&#242; (http://rhye.civfanatics.net), &#244;&#238;&#240;&#243;&#236; (http://forums.civfanatics.com/showthread.php?t=250322) &#232;&#235;&#232; wiki (http://wikirhye.wikidot.com/rhyes-of-europe).
 [PARAGRAPH:2]&#194;&#241;&#229; &#226; &#253;&#242;&#238;&#236; &#236;&#238;&#228;&#229; &#229;&#241;&#242;&#252; &#226; &#237;&#224;&#241;&#242;&#238;&#255;&#249;&#232;&#233; &#236;&#238;&#236;&#229;&#237;&#242; &#240;&#224;&#231;&#240;&#224;&#225;&#224;&#242;&#251;&#226;&#224;&#229;&#242;&#241;&#255; &#232; &#238;&#225;&#227;&#238;&#226;&#238;&#240;&#224;&#232;&#226;&#224;&#229;&#242;&#241;&#255;.</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 </Civ4GameText>
