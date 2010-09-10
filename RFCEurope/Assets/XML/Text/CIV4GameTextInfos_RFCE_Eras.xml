@@ -9,27 +9,27 @@
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Early Middle Ages</English>
 		<French>Haut Moyen &#194;ge</French>
-		<German>Early Middle Ages</German>
+		<German>Frühes Mittelalter</German>
 		<Italian>Early Middle Ages</Italian>
 		<Spanish>Early Middle Ages</Spanish>
 		<Russian>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>High Middle Ages</English>
 		<French>Moyen &#194;ge</French>
-		<German>High Middle Ages</German>
+		<German>Hochmittelalter</German>
 		<Italian>High Middle Ages</Italian>
 		<Spanish>High Middle Ages</Spanish>
 		<Russian>&#209;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
 		<English>Late Middle Ages</English>
 		<French>Bas Moyen &#194;ge</French>
-		<German>Late Middle Ages</German>
+		<German>Sp&#228;tmittelalter</German>
 		<Italian>Late Middle Ages</Italian>
 		<Spanish>Late Middle Ages</Spanish>
 		<Russian>&#207;&#238;&#231;&#228;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 </Civ4GameText>

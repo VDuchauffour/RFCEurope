@@ -9,146 +9,146 @@
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER</Tag>
 		<English>Knights Hospitaller</English>
 		<French>Ordre Hospitalier</French>
-		<German>Knights Hospitaller</German>
+		<German>Johanniterorden</German>
 		<Italian>Knights Hospitaller</Italian>
 		<Spanish>Caballeros Hospitalarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#251;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Ordre des Templiers</French>
-		<German>Knights Templar</German>
+		<German>Templerorden</German>
 		<Italian>Knights Templar</Italian>
 		<Spanish>Caballeros Templarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;&#251;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TEUTONIC_KNIGHTS</Tag>
 		<English>Teutonic Knights</English>
 		<French>Ordre Teutonique</French>
-		<German>Teutonic Knights</German>
+		<German>Deutscher Orden</German>
 		<Italian>Teutonic Knights</Italian>
 		<Spanish>Caballeros Teut&#243;nicos</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#229; &#208;&#251;&#246;&#224;&#240;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANSEATIC_LEAGUE</Tag>
 		<English>Hanseatic League</English>
 		<French>Hanse Germanique</French>
-		<German>Hanseatic League</German>
+		<German>Hanse</German>
 		<Italian>Hanseatic League</Italian>
 		<Spanish>Liga Hanse&#225;tica</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#224;&#255; &#203;&#232;&#227;&#224;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEDICI_BANKS</Tag>
 		<English>Medici Banks</English>
 		<French>Maison de M&#233;dicis</French>
-		<German>Medici Banks</German>
+		<German>Medici Bank</German>
 		<Italian>Medici Banks</Italian>
 		<Spanish>Bancos Medici</Spanish>
 		<Russian>&#193;&#224;&#237;&#234;&#232; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUGSBURG_FAMILIES</Tag>
 		<English>Augsburg Families</English>
 		<French>Famille Augsburg</French>
-		<German>Augsburg Families</German>
+		<German>Augsburger Familien</German>
 		<Italian>Augsburg Families</Italian>
 		<Spanish>Familias Augsburgo</Spanish>
 		<Russian>&#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#209;&#229;&#236;&#252;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BANK_OF_ST_GEORGE</Tag>
 		<English>Bank of St. George</English>
 		<French>Banque de St George</French>
-		<German>Bank of St. George</German>
+		<German>Bank von St. George</German>
 		<Italian>Bank of St. George</Italian>
 		<Spanish>Banco de S. Jorge</Spanish>
 		<Russian>&#193;&#224;&#237;&#234; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_1</Tag>
 		<English>Hospitaller Master</English>
 		<French>Maître Hospitalier</French>
-		<German>Hospitaller Master</German>
+		<German>Ordensmeister der Johanniter</German>
 		<Italian>Hospitaller Master</Italian>
 		<Spanish>Maestre Hospitalario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
 		<English>Templar Master</English>
 		<French>Maître Templiers</French>
-		<German>Templar Master</German>
+		<German>Ordensmeister der Templer</German>
 		<Italian>Templar Master</Italian>
 		<Spanish>Maestre Templario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_3</Tag>
 		<English>Teutonic Master</English>
 		<French>Maître Teutonique</French>
-		<German> Teutonic Master</German>
+		<German>Ordensmeister des Deutschordens</German>
 		<Italian>Teutonic Master</Italian>
 		<Spanish>Maestre Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_4</Tag>
 		<English>Hanseatic Executive</English>
 		<French>Cadre Hanse</French>
-		<German>Hanseatic Executive</German>
+		<German>Gesandter der Hanse</German>
 		<Italian>Hanseatic Executive</Italian>
 		<Spanish>Hanseatic Executive</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#232;&#233; &#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_5</Tag>
 		<English>Medici Executive</English>
 		<French>Cadre M&#233;dicis</French>
-		<German>Medici Executive</German>
+		<German>Gesandter der Medici</German>
 		<Italian>Medici Executive</Italian>
 		<Spanish>Mercader Medici</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_6</Tag>
 		<English>Augsburg Executive</English>
 		<French>Cadre Augsburg</French>
-		<German>Augsburg Executive</German>
+		<German>Gesandter der Augsburger Familien</German>
 		<Italian>Augsburg Executive</Italian>
 		<Spanish>Mercader Augsburgo</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_7</Tag>
 		<English>Bank of St. George Executive</English>
 		<French>Cadre de la Banque de St George</French>
-		<German>Bank of St. George Executive</German>
+		<German>Gesandter der Bank von St. George</German>
 		<Italian>Bank of St. George Executive</Italian>
 		<Spanish>Mercader del Banco de S. Jorge</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR</Tag>
 		<English>Knight Templar</English>
 		<French>Chevalier Templier</French>
-		<German>Knight Templar</German>
+		<German>Tempelritter</German>
 		<Italian>Knight Templar</Italian>
 		<Spanish>Caballero Templario</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC</Tag>
 		<English>Teutonic Knight</English>
 		<French>Chevalier Teutonique</French>
-		<German>Teutonic Knight</German>
+		<German>Deutschritter</German>
 		<Italian>Teutonic Knight</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Tag>
 		<English>[TAB]The Poor Fellow-Soldiers of Christ and of the Temple of Solomon (Latin: Pauperes Commilitones Christi Templique Solomonice), commonly known as the Knights Templar or the Order of the Temple, were among the most famous of the Western Christian military orders. The organizaton existed for approximately two centuries in the Middle Ages. It was founded in the aftermath of the First Crusade of 1096 to ensure the safety of the many Europeans who made the pilgrimage to Jerusalem after its conquest.</English>
@@ -209,7 +209,7 @@
 		<Tag>TXT_KEY_HANSEATIC_HELP</Tag>
 		<English>Can only be founded in coastal town.</English>
 		<French>Can only be founded in coastal town.</French>
-		<German>Can only be founded in coastal town.</German>
+		<German>Kann nur in einer K&#252;stestadt gegründet werden.</German>
 		<Italian>Can only be founded in coastal town.</Italian>
 		<Spanish>Can only be founded in coastal town.</Spanish>
 	</TEXT>

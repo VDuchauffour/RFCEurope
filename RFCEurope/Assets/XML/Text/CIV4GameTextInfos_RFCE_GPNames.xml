@@ -13,7 +13,7 @@
 		<Italian>Scholar</Italian>
 		<Spanish>Scholar</Spanish>
 		<Russian>&#211;&#247;&#229;&#237;&#251;&#233;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SCHOLAR</Tag>
 		<English>Great Scholar</English>
@@ -22,7 +22,7 @@
 		<Italian>Great Scholar</Italian>
 		<Spanish>Great Scholar</Spanish>
 		<Russian>&#194;&#229;&#235;&#232;&#234;&#232;&#233; &#211;&#247;&#229;&#237;&#251;&#233;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_THE_PIOUS</Tag>
 		<English>Robert the Pious</English>
@@ -31,7 +31,7 @@
 		<Italian>Robert the Pious</Italian>
 		<Spanish>Robert the Pious</Spanish>
 		<Russian>&#193;&#235;&#224;&#227;&#238;&#247;&#229;&#241;&#242;&#232;&#226;&#251;&#233; &#208;&#238;&#225;&#229;&#240;&#242;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_THOMAS_MAGISTER</Tag>
 		<English>Thomas Magister</English>
@@ -40,7 +40,7 @@
 		<Italian>Thomas Magister</Italian>
 		<Spanish>Thomas Magister</Spanish>
 		<Russian>&#210;&#238;&#236;&#224;&#241; &#204;&#224;&#227;&#232;&#241;&#242;&#229;&#240;</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JEANNE_D'ARC</Tag>
 		<English>Jeanne D'arc</English>
@@ -49,7 +49,7 @@
 		<Italian>Jeanne D'arc</Italian>
 		<Spanish>Jeanne D'arc</Spanish>
 		<Russian>Jeanne D'arc</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABD_ALLAH_IBN_SENA</Tag>
 		<English>Abd Allah Ibn Sena</English>
@@ -58,7 +58,7 @@
 		<Italian>Abd Allah Ibn Sena</Italian>
 		<Spanish>Abd Allah Ibn Sena</Spanish>
 		<Russian>Abd Allah Ibn Sena</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CLEMENT_OF_OHRID</Tag>
 		<English>Clement of Ohrid</English>
@@ -67,7 +67,7 @@
 		<Italian>Clement of Ohrid</Italian>
 		<Spanish>Clement of Ohrid</Spanish>
 		<Russian>Clement of Ohrid</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AL_MAIMONIDES</Tag>
 		<English>Al Maimonides</English>
@@ -76,7 +76,7 @@
 		<Italian>Al Maimonides</Italian>
 		<Spanish>Al Maimonides</Spanish>
 		<Russian>Al Maimonides</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IGNATIUS_LOYOLA</Tag>
 		<English>Ignatius Loyola</English>
@@ -85,7 +85,7 @@
 		<Italian>Ignatius Loyola</Italian>
 		<Spanish>Ignatius Loyola</Spanish>
 		<Russian>Ignatius Loyola</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GISBERTUS_VOETIS</Tag>
 		<English>Gisbertus Voetis</English>
@@ -94,7 +94,7 @@
 		<Italian>Gisbertus Voetis</Italian>
 		<Spanish>Gisbertus Voetis</Spanish>
 		<Russian>Gisbertus Voetis</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCESCO_PETRARCA</Tag>
 		<English>Francesco Petrarca</English>
@@ -103,7 +103,7 @@
 		<Italian>Francesco Petrarca</Italian>
 		<Spanish>Francesco Petrarca</Spanish>
 		<Russian>Francesco Petrarca</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_SVIATOSLAVICH</Tag>
 		<English>Vladimir Sviatoslavich</English>
@@ -112,7 +112,7 @@
 		<Italian>Vladimir Sviatoslavich</Italian>
 		<Spanish>Vladimir Sviatoslavich</Spanish>
 		<Russian>Vladimir Sviatoslavich</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MATHIUS_CORVINUS</Tag>
 		<English>Mathius Corvinus</English>
@@ -121,7 +121,7 @@
 		<Italian>Mathius Corvinus</Italian>
 		<Spanish>Mathius Corvinus</Spanish>
 		<Russian>Mathius Corvinus</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BARUCH_SPINOZA</Tag>
 		<English>Baruch Spinoza</English>
@@ -130,7 +130,7 @@
 		<Italian>Baruch Spinoza</Italian>
 		<Spanish>Baruch Spinoza</Spanish>
 		<Russian>Baruch Spinoza</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_AUGUSTINE</Tag>
 		<English>St. Augustine</English>
@@ -139,7 +139,7 @@
 		<Italian>St. Augustine</Italian>
 		<Spanish>St. Augustine</Spanish>
 		<Russian>St. Augustine</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_LUTHER</Tag>
 		<English>Martin Luther</English>
@@ -148,7 +148,7 @@
 		<Italian>Martin Luther</Italian>
 		<Spanish>Martin Luther</Spanish>
 		<Russian>Martin Luther</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHN_CANTIUS</Tag>
 		<English>John Cantius</English>
@@ -157,7 +157,7 @@
 		<Italian>John Cantius</Italian>
 		<Spanish>John Cantius</Spanish>
 		<Russian>John Cantius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDER_NEVSKY</Tag>
 		<English>Alexander Nevsky</English>
@@ -166,7 +166,7 @@
 		<Italian>Alexander Nevsky</Italian>
 		<Spanish>Alexander Nevsky</Spanish>
 		<Russian>Alexander Nevsky</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_THOMAS_BECKETT</Tag>
 		<English>St. Thomas Beckett</English>
@@ -175,7 +175,7 @@
 		<Italian>St. Thomas Beckett</Italian>
 		<Spanish>St. Thomas Beckett</Spanish>
 		<Russian>St. Thomas Beckett</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_URIEL_DA_COSTA</Tag>
 		<English>Uriel Da Costa</English>
@@ -184,7 +184,7 @@
 		<Italian>Uriel Da Costa</Italian>
 		<Spanish>Uriel Da Costa</Spanish>
 		<Russian>Uriel Da Costa</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_THOMAS_AQUINAS</Tag>
 		<English>St. Thomas Aquinas</English>
@@ -193,7 +193,7 @@
 		<Italian>St. Thomas Aquinas</Italian>
 		<Spanish>St. Thomas Aquinas</Spanish>
 		<Russian>St. Thomas Aquinas</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_WENCESLAUS</Tag>
 		<English>St. Wenceslaus</English>
@@ -202,7 +202,7 @@
 		<Italian>St. Wenceslaus</Italian>
 		<Spanish>St. Wenceslaus</Spanish>
 		<Russian>St. Wenceslaus</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BORIS_GODUNOV</Tag>
 		<English>Boris Godunov</English>
@@ -211,7 +211,7 @@
 		<Italian>Boris Godunov</Italian>
 		<Spanish>Boris Godunov</Spanish>
 		<Russian>Boris Godunov</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EMMANUEL_SWEDENBORG</Tag>
 		<English>Emmanuel Swedenborg</English>
@@ -220,7 +220,7 @@
 		<Italian>Emmanuel Swedenborg</Italian>
 		<Spanish>Emmanuel Swedenborg</Spanish>
 		<Russian>Emmanuel Swedenborg</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_DESIDERIUS_ERASMUS</Tag>
 		<English>Desiderius Erasmus</English>
@@ -229,7 +229,7 @@
 		<Italian>Desiderius Erasmus</Italian>
 		<Spanish>Desiderius Erasmus</Spanish>
 		<Russian>Desiderius Erasmus</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VOLTAIRE</Tag>
 		<English>Voltaire</English>
@@ -238,7 +238,7 @@
 		<Italian>Voltaire</Italian>
 		<Spanish>Voltaire</Spanish>
 		<Russian>Voltaire</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IBN_AL_HATHAM</Tag>
 		<English>Ibn Al Hatham</English>
@@ -247,7 +247,7 @@
 		<Italian>Ibn Al Hatham</Italian>
 		<Spanish>Ibn Al Hatham</Spanish>
 		<Russian>Ibn Al Hatham</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IMMANUEL_KANT</Tag>
 		<English>Immanuel Kant</English>
@@ -256,7 +256,7 @@
 		<Italian>Immanuel Kant</Italian>
 		<Spanish>Immanuel Kant</Spanish>
 		<Russian>Immanuel Kant</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SIR_THOMAS_MORE</Tag>
 		<English>Sir Thomas More</English>
@@ -265,7 +265,7 @@
 		<Italian>Sir Thomas More</Italian>
 		<Spanish>Sir Thomas More</Spanish>
 		<Russian>Sir Thomas More</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_VAN_EYCK</Tag>
 		<English>Jan Van Eyck</English>
@@ -274,7 +274,7 @@
 		<Italian>Jan Van Eyck</Italian>
 		<Spanish>Jan Van Eyck</Spanish>
 		<Russian>Jan Van Eyck</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_THEOPHANES</Tag>
 		<English>Theophanes</English>
@@ -283,7 +283,7 @@
 		<Italian>Theophanes</Italian>
 		<Spanish>Theophanes</Spanish>
 		<Russian>Theophanes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCOIS_RABELAIS</Tag>
 		<English>Francois Rabelais</English>
@@ -292,7 +292,7 @@
 		<Italian>Francois Rabelais</Italian>
 		<Spanish>Francois Rabelais</Spanish>
 		<Russian>Francois Rabelais</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_OMAR_KHAYYAM</Tag>
 		<English>Omar Khayyam</English>
@@ -301,7 +301,7 @@
 		<Italian>Omar Khayyam</Italian>
 		<Spanish>Omar Khayyam</Spanish>
 		<Russian>Omar Khayyam</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NAUM_OF_PRESLAV</Tag>
 		<English>Naum of Preslav</English>
@@ -310,7 +310,7 @@
 		<Italian>Naum of Preslav</Italian>
 		<Spanish>Naum of Preslav</Spanish>
 		<Russian>Naum of Preslav</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABU_IBN_TUFAIL</Tag>
 		<English>Abu Ibn Tufail</English>
@@ -319,7 +319,7 @@
 		<Italian>Abu Ibn Tufail</Italian>
 		<Spanish>Abu Ibn Tufail</Spanish>
 		<Russian>Abu Ibn Tufail</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MIGUEL_DE_CERVANTES</Tag>
 		<English>Miguel De Cervantes</English>
@@ -328,7 +328,7 @@
 		<Italian>Miguel De Cervantes</Italian>
 		<Spanish>Miguel De Cervantes</Spanish>
 		<Russian>Miguel De Cervantes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GUSTAVE_VIGELAND</Tag>
 		<English>Gustave Vigeland</English>
@@ -337,7 +337,7 @@
 		<Italian>Gustave Vigeland</Italian>
 		<Spanish>Gustave Vigeland</Spanish>
 		<Russian>Gustave Vigeland</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JACOBO_TINTORETTO</Tag>
 		<English>Jacobo Tintoretto</English>
@@ -346,7 +346,7 @@
 		<Italian>Jacobo Tintoretto</Italian>
 		<Spanish>Jacobo Tintoretto</Spanish>
 		<Russian>Jacobo Tintoretto</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAXIM_BEREZOVSKY</Tag>
 		<English>Maxim Berezovsky</English>
@@ -355,7 +355,7 @@
 		<Italian>Maxim Berezovsky</Italian>
 		<Spanish>Maxim Berezovsky</Spanish>
 		<Russian>Maxim Berezovsky</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_DANTE_ALIGHIERI</Tag>
 		<English>Dante Alighieri</English>
@@ -364,7 +364,7 @@
 		<Italian>Dante Alighieri</Italian>
 		<Spanish>Dante Alighieri</Spanish>
 		<Russian>Dante Alighieri</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALBRECHT_DURER</Tag>
 		<English>Albrecht Durer</English>
@@ -373,7 +373,7 @@
 		<Italian>Albrecht Durer</Italian>
 		<Spanish>Albrecht Durer</Spanish>
 		<Russian>Albrecht Durer</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HIERONIMUS_BOSCH</Tag>
 		<English>Hieronimus Bosch</English>
@@ -382,7 +382,7 @@
 		<Italian>Hieronimus Bosch</Italian>
 		<Spanish>Hieronimus Bosch</Spanish>
 		<Russian>Hieronimus Bosch</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREI_RUBLEV</Tag>
 		<English>Andrei Rublev</English>
@@ -391,7 +391,7 @@
 		<Italian>Andrei Rublev</Italian>
 		<Spanish>Andrei Rublev</Spanish>
 		<Russian>Andrei Rublev</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MICHAELANGELO</Tag>
 		<English>Michaelangelo</English>
@@ -400,7 +400,7 @@
 		<Italian>Michaelangelo</Italian>
 		<Spanish>Michaelangelo</Spanish>
 		<Russian>Michaelangelo</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEOFFREY_CHAUCER</Tag>
 		<English>Geoffrey Chaucer</English>
@@ -409,7 +409,7 @@
 		<Italian>Geoffrey Chaucer</Italian>
 		<Spanish>Geoffrey Chaucer</Spanish>
 		<Russian>Geoffrey Chaucer</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PETER_PAUL_RUBENS</Tag>
 		<English>Peter Paul Rubens</English>
@@ -418,7 +418,7 @@
 		<Italian>Peter Paul Rubens</Italian>
 		<Spanish>Peter Paul Rubens</Spanish>
 		<Russian>Peter Paul Rubens</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOSEPH_HAYDN</Tag>
 		<English>Joseph Haydn</English>
@@ -427,7 +427,7 @@
 		<Italian>Joseph Haydn</Italian>
 		<Spanish>Joseph Haydn</Spanish>
 		<Russian>Joseph Haydn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_WILLIAM_SHAKESPEARE</Tag>
 		<English>William Shakespeare</English>
@@ -436,7 +436,7 @@
 		<Italian>William Shakespeare</Italian>
 		<Spanish>William Shakespeare</Spanish>
 		<Russian>William Shakespeare</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JEAN_SIBELIUS</Tag>
 		<English>Jean Sibelius</English>
@@ -445,7 +445,7 @@
 		<Italian>Jean Sibelius</Italian>
 		<Spanish>Jean Sibelius</Spanish>
 		<Russian>Jean Sibelius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_VERMEER</Tag>
 		<English>Johannes Vermeer</English>
@@ -454,7 +454,7 @@
 		<Italian>Johannes Vermeer</Italian>
 		<Spanish>Johannes Vermeer</Spanish>
 		<Russian>Johannes Vermeer</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JACOBUS_VIDE</Tag>
 		<English>Jacobus Vide</English>
@@ -463,7 +463,7 @@
 		<Italian>Jacobus Vide</Italian>
 		<Spanish>Jacobus Vide</Spanish>
 		<Russian>Jacobus Vide</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ZAMAN_AL_HAMADHANI</Tag>
 		<English>Zaman Al Hamadhani</English>
@@ -472,7 +472,7 @@
 		<Italian>Zaman Al Hamadhani</Italian>
 		<Spanish>Zaman Al Hamadhani</Spanish>
 		<Russian>Zaman Al Hamadhani</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVAN_ALEXANDER</Tag>
 		<English>Ivan Alexander</English>
@@ -481,7 +481,7 @@
 		<Italian>Ivan Alexander</Italian>
 		<Spanish>Ivan Alexander</Spanish>
 		<Russian>Ivan Alexander</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABU_IBN_GUARSIYA</Tag>
 		<English>Abu Ibn Guarsiya</English>
@@ -490,7 +490,7 @@
 		<Italian>Abu Ibn Guarsiya</Italian>
 		<Spanish>Abu Ibn Guarsiya</Spanish>
 		<Russian>Abu Ibn Guarsiya</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_DIEGO_VELASQUEZ</Tag>
 		<English>Diego Velasquez</English>
@@ -499,7 +499,7 @@
 		<Italian>Diego Velasquez</Italian>
 		<Spanish>Diego Velasquez</Spanish>
 		<Russian>Diego Velasquez</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TIZIANO_VERCELLI</Tag>
 		<English>Tiziano Vercelli</English>
@@ -508,7 +508,7 @@
 		<Italian>Tiziano Vercelli</Italian>
 		<Spanish>Tiziano Vercelli</Spanish>
 		<Russian>Tiziano Vercelli</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HANS_HOLBEIN</Tag>
 		<English>Hans Holbein</English>
@@ -517,7 +517,7 @@
 		<Italian>Hans Holbein</Italian>
 		<Spanish>Hans Holbein</Spanish>
 		<Russian>Hans Holbein</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHAN_SEBASTIAN_BACH</Tag>
 		<English>Johan Sebastian Bach</English>
@@ -526,7 +526,7 @@
 		<Italian>Johan Sebastian Bach</Italian>
 		<Spanish>Johan Sebastian Bach</Spanish>
 		<Russian>Johan Sebastian Bach</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_KOCHANOWSKI</Tag>
 		<English>Jan Kochanowski</English>
@@ -535,7 +535,7 @@
 		<Italian>Jan Kochanowski</Italian>
 		<Spanish>Jan Kochanowski</Spanish>
 		<Russian>Jan Kochanowski</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHN_MILTON</Tag>
 		<English>John Milton</English>
@@ -544,7 +544,7 @@
 		<Italian>John Milton</Italian>
 		<Spanish>John Milton</Spanish>
 		<Russian>John Milton</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCISCO_ZUBARAN</Tag>
 		<English>Francisco Zubaran</English>
@@ -553,7 +553,7 @@
 		<Italian>Francisco Zubaran</Italian>
 		<Spanish>Francisco Zubaran</Spanish>
 		<Russian>Francisco Zubaran</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDRE_DUMAS</Tag>
 		<English>Alexandre Dumas</English>
@@ -562,7 +562,7 @@
 		<Italian>Alexandre Dumas</Italian>
 		<Spanish>Alexandre Dumas</Spanish>
 		<Russian>Alexandre Dumas</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VASILY_TEDIAKOVSKY</Tag>
 		<English>Vasily Tediakovsky</English>
@@ -571,7 +571,7 @@
 		<Italian>Vasily Tediakovsky</Italian>
 		<Spanish>Vasily Tediakovsky</Spanish>
 		<Russian>Vasily Tediakovsky</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANS_HALS</Tag>
 		<English>Frans Hals</English>
@@ -580,7 +580,7 @@
 		<Italian>Frans Hals</Italian>
 		<Spanish>Frans Hals</Spanish>
 		<Russian>Frans Hals</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_WOLFGANG_AMADEUS_MOZART</Tag>
 		<English>Wolfgang Amadeus Mozart</English>
@@ -589,7 +589,7 @@
 		<Italian>Wolfgang Amadeus Mozart</Italian>
 		<Spanish>Wolfgang Amadeus Mozart</Spanish>
 		<Russian>Wolfgang Amadeus Mozart</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GREGORY_CHONIADES</Tag>
 		<English>Gregory Choniades</English>
@@ -598,7 +598,7 @@
 		<Italian>Gregory Choniades</Italian>
 		<Spanish>Gregory Choniades</Spanish>
 		<Russian>Gregory Choniades</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_RENE_DESCARTES</Tag>
 		<English>Rene Descartes</English>
@@ -607,7 +607,7 @@
 		<Italian>Rene Descartes</Italian>
 		<Spanish>Rene Descartes</Spanish>
 		<Russian>Rene Descartes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IBN_AL_KHARIZMI</Tag>
 		<English>Ibn Al Kharizmi</English>
@@ -616,7 +616,7 @@
 		<Italian>Ibn Al Kharizmi</Italian>
 		<Spanish>Ibn Al Kharizmi</Spanish>
 		<Russian>Ibn Al Kharizmi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHN_EXARCH</Tag>
 		<English>John Exarch</English>
@@ -625,7 +625,7 @@
 		<Italian>John Exarch</Italian>
 		<Spanish>John Exarch</Spanish>
 		<Russian>John Exarch</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABU_AL_QASIM</Tag>
 		<English>Abu Al Qasim</English>
@@ -634,7 +634,7 @@
 		<Italian>Abu Al Qasim</Italian>
 		<Spanish>Abu Al Qasim</Spanish>
 		<Russian>Abu Al Qasim</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOSE_DE_ACOSTA</Tag>
 		<English>Jose De Acosta</English>
@@ -643,7 +643,7 @@
 		<Italian>Jose De Acosta</Italian>
 		<Spanish>Jose De Acosta</Spanish>
 		<Russian>Jose De Acosta</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TYCHO_BRAHE</Tag>
 		<English>Tycho Brahe</English>
@@ -652,7 +652,7 @@
 		<Italian>Tycho Brahe</Italian>
 		<Spanish>Tycho Brahe</Spanish>
 		<Russian>Tycho Brahe</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LEONARDO_DA_VINCI</Tag>
 		<English>Leonardo Da Vinci</English>
@@ -661,7 +661,7 @@
 		<Italian>Leonardo Da Vinci</Italian>
 		<Spanish>Leonardo Da Vinci</Spanish>
 		<Russian>Leonardo Da Vinci</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVAN_SHUVALOV</Tag>
 		<English>Ivan Shuvalov</English>
@@ -670,7 +670,7 @@
 		<Italian>Ivan Shuvalov</Italian>
 		<Spanish>Ivan Shuvalov</Spanish>
 		<Russian>Leonardo Da Vinci</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_KEPLER</Tag>
 		<English>Johannes Kepler</English>
@@ -679,7 +679,7 @@
 		<Italian>Johannes Kepler</Italian>
 		<Spanish>Johannes Kepler</Spanish>
 		<Russian>Johannes Kepler</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_GUTTENBERG</Tag>
 		<English>Johannes Guttenberg</English>
@@ -688,7 +688,7 @@
 		<Italian>Johannes Guttenberg</Italian>
 		<Spanish>Johannes Guttenberg</Spanish>
 		<Russian>Johannes Guttenberg</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NICOLAUS_COPERNICUS</Tag>
 		<English>Nicolaus Copernicus</English>
@@ -697,7 +697,7 @@
 		<Italian>Nicolaus Copernicus</Italian>
 		<Spanish>Nicolaus Copernicus</Spanish>
 		<Russian>Nicolaus Copernicus</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GALILEO_GALILEI</Tag>
 		<English>Galileo Galilei</English>
@@ -706,7 +706,7 @@
 		<Italian>Galileo Galilei</Italian>
 		<Spanish>Galileo Galilei</Spanish>
 		<Russian>Galileo Galilei</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABU_AL_BIRUNI</Tag>
 		<English>Abu Al Biruni</English>
@@ -715,7 +715,7 @@
 		<Italian>Abu Al Biruni</Italian>
 		<Spanish>Abu Al Biruni</Spanish>
 		<Russian>Abu Al Biruni</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_LOMONOSOV</Tag>
 		<English>Mikhail Lomonosov</English>
@@ -724,7 +724,7 @@
 		<Italian>Mikhail Lomonosov</Italian>
 		<Spanish>Mikhail Lomonosov</Spanish>
 		<Russian>Mikhail Lomonosov</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ISSAC_NEWTON</Tag>
 		<English>Issac Newton</English>
@@ -733,7 +733,7 @@
 		<Italian>Issac Newton</Italian>
 		<Spanish>Issac Newton</Spanish>
 		<Russian>Issac Newton</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GARCIA_DE_ORTA</Tag>
 		<English>Garcia De Orta</English>
@@ -742,7 +742,7 @@
 		<Italian>Garcia De Orta</Italian>
 		<Spanish>Garcia De Orta</Spanish>
 		<Russian>Garcia De Orta</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_WOLFGANG_LAZIUS</Tag>
 		<English>Wolfgang Lazius</English>
@@ -751,7 +751,7 @@
 		<Italian>Wolfgang Lazius</Italian>
 		<Spanish>Wolfgang Lazius</Spanish>
 		<Russian>Wolfgang Lazius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_QAZI_ZEDAH</Tag>
 		<English>Qazi Zedah</English>
@@ -760,7 +760,7 @@
 		<Italian>Qazi Zedah</Italian>
 		<Spanish>Qazi Zedah</Spanish>
 		<Russian>Qazi Zedah</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDERS_CELSIUS</Tag>
 		<English>Anders Celsius</English>
@@ -769,7 +769,7 @@
 		<Italian>Anders Celsius</Italian>
 		<Spanish>Anders Celsius</Spanish>
 		<Russian>Anders Celsius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHRISTIAN_HUYGENS</Tag>
 		<English>Christian Huygens</English>
@@ -778,7 +778,7 @@
 		<Italian>Christian Huygens</Italian>
 		<Spanish>Christian Huygens</Spanish>
 		<Russian>Christian Huygens</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEORGIUS_GEMISTUS</Tag>
 		<English>Georgius Gemistus</English>
@@ -787,7 +787,7 @@
 		<Italian>Georgius Gemistus</Italian>
 		<Spanish>Georgius Gemistus</Spanish>
 		<Russian>Georgius Gemistus</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANTOINE_LEVOISIER</Tag>
 		<English>Antoine Levoisier</English>
@@ -796,7 +796,7 @@
 		<Italian>Antoine Levoisier</Italian>
 		<Spanish>Antoine Levoisier</Spanish>
 		<Russian>Antoine Levoisier</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IBRAHIM_AL_ZARQALI</Tag>
 		<English>Ibrahim Al Zarqali</English>
@@ -805,7 +805,7 @@
 		<Italian>Ibrahim Al Zarqali</Italian>
 		<Spanish>Ibrahim Al Zarqali</Spanish>
 		<Russian>Ibrahim Al Zarqali</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GREGOR_TSAMBLAK</Tag>
 		<English>Gregor Tsamblak</English>
@@ -814,7 +814,7 @@
 		<Italian>Gregor Tsamblak</Italian>
 		<Spanish>Gregor Tsamblak</Spanish>
 		<Russian>Gregor Tsamblak</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BLASCO_DE_GARAY</Tag>
 		<English>Blasco De Garay</English>
@@ -823,7 +823,7 @@
 		<Italian>Blasco De Garay</Italian>
 		<Spanish>Blasco De Garay</Spanish>
 		<Russian>Blasco De Garay</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GUSTAV_VASA</Tag>
 		<English>Gustav Vasa</English>
@@ -832,7 +832,7 @@
 		<Italian>Gustav Vasa</Italian>
 		<Spanish>Gustav Vasa</Spanish>
 		<Russian>Gustav Vasa</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FILIPPO_BRUNNELLESCHI</Tag>
 		<English>Filippo Brunnelleschi</English>
@@ -841,7 +841,7 @@
 		<Italian>Filippo Brunnelleschi</Italian>
 		<Spanish>Filippo Brunnelleschi</Spanish>
 		<Russian>Filippo Brunnelleschi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GOTTFRIED_LEIBNITZ</Tag>
 		<English>Gottfried Leibnitz</English>
@@ -850,7 +850,7 @@
 		<Italian>Gottfried Leibnitz</Italian>
 		<Spanish>Gottfried Leibnitz</Spanish>
 		<Russian>Gottfried Leibnitz</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MICHAEL_SEDZIWJ</Tag>
 		<English>Michael Sedziwj</English>
@@ -859,7 +859,7 @@
 		<Italian>Michael Sedziwj</Italian>
 		<Spanish>Michael Sedziwj</Spanish>
 		<Russian>Michael Sedziwj</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LOUIS_PASTEUR</Tag>
 		<English>Louis Pasteur</English>
@@ -868,7 +868,7 @@
 		<Italian>Louis Pasteur</Italian>
 		<Spanish>Louis Pasteur</Spanish>
 		<Russian>Louis Pasteur</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCESCO_GRIMALDI</Tag>
 		<English>Francesco Grimaldi</English>
@@ -877,7 +877,7 @@
 		<Italian>Francesco Grimaldi</Italian>
 		<Spanish>Francesco Grimaldi</Spanish>
 		<Russian>Francesco Grimaldi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MICHAEL_FARADAY</Tag>
 		<English>Michael Faraday</English>
@@ -886,7 +886,7 @@
 		<Italian>Michael Faraday</Italian>
 		<Spanish>Michael Faraday</Spanish>
 		<Russian>Michael Faraday</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PEDRO_NUNES</Tag>
 		<English>Pedro Nunes</English>
@@ -895,7 +895,7 @@
 		<Italian>Pedro Nunes</Italian>
 		<Spanish>Pedro Nunes</Spanish>
 		<Russian>Pedro Nunes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEORG_TANNSTETTER</Tag>
 		<English>Georg Tannstetter</English>
@@ -904,7 +904,7 @@
 		<Italian>Georg Tannstetter</Italian>
 		<Spanish>Georg Tannstetter</Spanish>
 		<Russian>Georg Tannstetter</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_OKTAY_SANANOGLU</Tag>
 		<English>Oktay Sananoglu</English>
@@ -913,7 +913,7 @@
 		<Italian>Oktay Sananoglu</Italian>
 		<Spanish>Oktay Sananoglu</Spanish>
 		<Russian>Oktay Sananoglu</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHRISTOPHER_POLHEM</Tag>
 		<English>Christopher Polhem</English>
@@ -922,7 +922,7 @@
 		<Italian>Christopher Polhem</Italian>
 		<Spanish>Christopher Polhem</Spanish>
 		<Russian>Christopher Polhem</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHAN_DE_WITT</Tag>
 		<English>Johan De Witt</English>
@@ -931,7 +931,7 @@
 		<Italian>Johan De Witt</Italian>
 		<Spanish>Johan De Witt</Spanish>
 		<Russian>Johan De Witt</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SERGEI_STROGANOFF</Tag>
 		<English>Sergei Stroganoff</English>
@@ -940,7 +940,7 @@
 		<Italian>Sergei Stroganoff</Italian>
 		<Spanish>Sergei Stroganoff</Spanish>
 		<Russian>Sergei Stroganoff</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOSEPH_PRIESTLEY</Tag>
 		<English>Joseph Priestley</English>
@@ -949,7 +949,7 @@
 		<Italian>Joseph Priestley</Italian>
 		<Spanish>Joseph Priestley</Spanish>
 		<Russian>Joseph Priestley</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BERTRAND_DE_LA_BROQUIRE</Tag>
 		<English>Bertrand De La Broquire</English>
@@ -958,7 +958,7 @@
 		<Italian>Bertrand De La Broquire</Italian>
 		<Spanish>Bertrand De La Broquire</Spanish>
 		<Russian>Bertrand De La Broquire</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HIEROCLES_OF_ATHENS</Tag>
 		<English>Hierocles of Athens</English>
@@ -967,7 +967,7 @@
 		<Italian>Hierocles of Athens</Italian>
 		<Spanish>Hierocles of Athens</Spanish>
 		<Russian>Hierocles of Athens</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JACQUES_CARTIER</Tag>
 		<English>Jacques Cartier</English>
@@ -976,7 +976,7 @@
 		<Italian>Jacques Cartier</Italian>
 		<Spanish>Jacques Cartier</Spanish>
 		<Russian>Jacques Cartier</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AHMAD_IBN_FADLAN</Tag>
 		<English>Ahmad Ibn Fadlan</English>
@@ -985,7 +985,7 @@
 		<Italian>Ahmad Ibn Fadlan</Italian>
 		<Spanish>Ahmad Ibn Fadlan</Spanish>
 		<Russian>Ahmad Ibn Fadlan</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREY_DAMYANOV</Tag>
 		<English>Andrey Damyanov</English>
@@ -994,7 +994,7 @@
 		<Italian>Andrey Damyanov</Italian>
 		<Spanish>Andrey Damyanov</Spanish>
 		<Russian>Andrey Damyanov</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MOHAMMED_IBN_BATTUTA</Tag>
 		<English>Mohammed Ibn Battuta</English>
@@ -1003,7 +1003,7 @@
 		<Italian>Mohammed Ibn Battuta</Italian>
 		<Spanish>Mohammed Ibn Battuta</Spanish>
 		<Russian>Mohammed Ibn Battuta</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FERNANDO_DE_SOTO</Tag>
 		<English>Fernando De Soto</English>
@@ -1012,7 +1012,7 @@
 		<Italian>Fernando De Soto</Italian>
 		<Spanish>Fernando De Soto</Spanish>
 		<Russian>Fernando De Soto</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LEIF_ERICKSON</Tag>
 		<English>Leif Erickson</English>
@@ -1021,7 +1021,7 @@
 		<Italian>Leif Erickson</Italian>
 		<Spanish>Leif Erickson</Spanish>
 		<Russian>Leif Erickson</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARCO_POLO</Tag>
 		<English>Marco Polo</English>
@@ -1030,7 +1030,7 @@
 		<Italian>Marco Polo</Italian>
 		<Spanish>Marco Polo</Spanish>
 		<Russian>Marco Polo</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AFANASIJ_NIKITIN</Tag>
 		<English>Afanasij Nikitin</English>
@@ -1039,7 +1039,7 @@
 		<Italian>Afanasij Nikitin</Italian>
 		<Spanish>Afanasij Nikitin</Spanish>
 		<Russian>Afanasij Nikitin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SANDOR_CSOMA</Tag>
 		<English>Sandor Csoma</English>
@@ -1048,7 +1048,7 @@
 		<Italian>Sandor Csoma</Italian>
 		<Spanish>Sandor Csoma</Spanish>
 		<Russian>Sandor Csoma</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JACOB_FUGGER</Tag>
 		<English>Jacob Fugger</English>
@@ -1057,7 +1057,7 @@
 		<Italian>Jacob Fugger</Italian>
 		<Spanish>Jacob Fugger</Spanish>
 		<Russian>Jacob Fugger</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JANUSZ_RADZIWILL</Tag>
 		<English>Janusz Radziwill</English>
@@ -1066,7 +1066,7 @@
 		<Italian>Janusz Radziwill</Italian>
 		<Spanish>Janusz Radziwill</Spanish>
 		<Russian>Janusz Radziwill</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VITUS_BERING</Tag>
 		<English>Vitus Bering</English>
@@ -1075,7 +1075,7 @@
 		<Italian>Vitus Bering</Italian>
 		<Spanish>Vitus Bering</Spanish>
 		<Russian>Vitus Bering</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHRISTOBAL_COLON</Tag>
 		<English>Christobal Colon</English>
@@ -1084,7 +1084,7 @@
 		<Italian>Christobal Colon</Italian>
 		<Spanish>Christobal Colon</Spanish>
 		<Russian>Christobal Colon</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCIS_DRAKE</Tag>
 		<English>Francis Drake</English>
@@ -1093,7 +1093,7 @@
 		<Italian>Francis Drake</Italian>
 		<Spanish>Francis Drake</Spanish>
 		<Russian>Francis Drake</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VASCO_DA_GAMA</Tag>
 		<English>Vasco Da Gama</English>
@@ -1102,7 +1102,7 @@
 		<Italian>Vasco Da Gama</Italian>
 		<Spanish>Vasco Da Gama</Spanish>
 		<Russian>Vasco Da Gama</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JUSTUS_PERTHES</Tag>
 		<English>Justus Perthes</English>
@@ -1111,7 +1111,7 @@
 		<Italian>Justus Perthes</Italian>
 		<Spanish>Justus Perthes</Spanish>
 		<Russian>Justus Perthes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AYDIN_DOGAN</Tag>
 		<English>Aydin Dogan</English>
@@ -1120,7 +1120,7 @@
 		<Italian>Aydin Dogan</Italian>
 		<Spanish>Aydin Dogan</Spanish>
 		<Russian>Aydin Dogan</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ARVID_HORN</Tag>
 		<English>Arvid Horn</English>
@@ -1129,7 +1129,7 @@
 		<Italian>Arvid Horn</Italian>
 		<Spanish>Arvid Horn</Spanish>
 		<Russian>Arvid Horn</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANTONIE_VAN_DIEMAN</Tag>
 		<English>Antonie Van Dieman</English>
@@ -1138,7 +1138,7 @@
 		<Italian>Antonie Van Dieman</Italian>
 		<Spanish>Antonie Van Dieman</Spanish>
 		<Russian>Antonie Van Dieman</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SAMUEL_DE_CHAMPLAIN</Tag>
 		<English>Samuel De Champlain</English>
@@ -1147,7 +1147,7 @@
 		<Italian>Samuel De Champlain</Italian>
 		<Spanish>Samuel De Champlain</Spanish>
 		<Russian>Samuel De Champlain</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AHMAD_IBN_RUSTAH</Tag>
 		<English>Ahmad Ibn Rustah</English>
@@ -1156,7 +1156,7 @@
 		<Italian>Ahmad Ibn Rustah</Italian>
 		<Spanish>Ahmad Ibn Rustah</Spanish>
 		<Russian>Ahmad Ibn Rustah</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PONCE_DE_LEON</Tag>
 		<English>Ponce De Leon</English>
@@ -1165,7 +1165,7 @@
 		<Italian>Ponce De Leon</Italian>
 		<Spanish>Ponce De Leon</Spanish>
 		<Russian>Ponce De Leon</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANTONIO_GRIMALDI</Tag>
 		<English>Antonio Grimaldi</English>
@@ -1174,7 +1174,7 @@
 		<Italian>Antonio Grimaldi</Italian>
 		<Spanish>Antonio Grimaldi</Spanish>
 		<Russian>Antonio Grimaldi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HENRY_HUDSON</Tag>
 		<English>Henry Hudson</English>
@@ -1183,7 +1183,7 @@
 		<Italian>Henry Hudson</Italian>
 		<Spanish>Henry Hudson</Spanish>
 		<Russian>Henry Hudson</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BARTHOLOMEW_DIAZ</Tag>
 		<English>Bartholomew Diaz</English>
@@ -1192,7 +1192,7 @@
 		<Italian>Bartholomew Diaz</Italian>
 		<Spanish>Bartholomew Diaz</Spanish>
 		<Russian>Bartholomew Diaz</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MEHMET_ASIF_ERSOY</Tag>
 		<English>Mehmet Asif Ersoy</English>
@@ -1201,7 +1201,7 @@
 		<Italian>Mehmet Asif Ersoy</Italian>
 		<Spanish>Mehmet Asif Ersoy</Spanish>
 		<Russian>Mehmet Asif Ersoy</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GRIGORIJ_STROGANOFF</Tag>
 		<English>Grigorij Stroganoff</English>
@@ -1210,7 +1210,7 @@
 		<Italian>Grigorij Stroganoff</Italian>
 		<Spanish>Grigorij Stroganoff</Spanish>
 		<Russian>Grigorij Stroganoff</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABEL_TASMAN</Tag>
 		<English>Abel Tasman</English>
@@ -1219,7 +1219,7 @@
 		<Italian>Abel Tasman</Italian>
 		<Spanish>Abel Tasman</Spanish>
 		<Russian>Abel Tasman</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SIMON_STEVIN</Tag>
 		<English>Simon Stevin</English>
@@ -1228,7 +1228,7 @@
 		<Italian>Simon Stevin</Italian>
 		<Spanish>Simon Stevin</Spanish>
 		<Russian>Simon Stevin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANTHEMIUS_OF_TRALLES</Tag>
 		<English>Anthemius of Tralles</English>
@@ -1237,7 +1237,7 @@
 		<Italian>Anthemius of Tralles</Italian>
 		<Spanish>Anthemius of Tralles</Spanish>
 		<Russian>Anthemius of Tralles</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAURICE_DE_SULLY</Tag>
 		<English>Maurice De Sully</English>
@@ -1246,7 +1246,7 @@
 		<Italian>Maurice De Sully</Italian>
 		<Spanish>Maurice De Sully</Spanish>
 		<Russian>Maurice De Sully</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JABIR_IBN_HAYYAM</Tag>
 		<English>Jabir Ibn Hayyam</English>
@@ -1255,7 +1255,7 @@
 		<Italian>Jabir Ibn Hayyam</Italian>
 		<Spanish>Jabir Ibn Hayyam</Spanish>
 		<Russian>Jabir Ibn Hayyam</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KOLYU_FICHETO</Tag>
 		<English>Kolyu Ficheto</English>
@@ -1264,7 +1264,7 @@
 		<Italian>Kolyu Ficheto</Italian>
 		<Spanish>Kolyu Ficheto</Spanish>
 		<Russian>Kolyu Ficheto</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_QASIM_IBN_FIRNAS</Tag>
 		<English>Qasim Ibn Firnas</English>
@@ -1273,7 +1273,7 @@
 		<Italian>Qasim Ibn Firnas</Italian>
 		<Spanish>Qasim Ibn Firnas</Spanish>
 		<Russian>Qasim Ibn Firnas</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FELIZ_DE_AZARA</Tag>
 		<English>Feliz De Azara</English>
@@ -1282,7 +1282,7 @@
 		<Italian>Feliz De Azara</Italian>
 		<Spanish>Feliz De Azara</Spanish>
 		<Russian>Feliz De Azara</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVAR_GIAVER</Tag>
 		<English>Ivar Giaver</English>
@@ -1291,7 +1291,7 @@
 		<Italian>Ivar Giaver</Italian>
 		<Spanish>Ivar Giaver</Spanish>
 		<Russian>Ivar Giaver</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREA_PALLADIO</Tag>
 		<English>Andrea Palladio</English>
@@ -1300,7 +1300,7 @@
 		<Italian>Andrea Palladio</Italian>
 		<Spanish>Andrea Palladio</Spanish>
 		<Russian>Andrea Palladio</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VASILY_STASOV</Tag>
 		<English>Vasily Stasov</English>
@@ -1309,7 +1309,7 @@
 		<Italian>Vasily Stasov</Italian>
 		<Spanish>Vasily Stasov</Spanish>
 		<Russian>Vasily Stasov</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOZSEF_HILD</Tag>
 		<English>Jozsef Hild</English>
@@ -1318,7 +1318,7 @@
 		<Italian>Jozsef Hild</Italian>
 		<Spanish>Jozsef Hild</Spanish>
 		<Russian>Jozsef Hild</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PETER_VISCHER</Tag>
 		<English>Peter Vischer</English>
@@ -1327,7 +1327,7 @@
 		<Italian>Peter Vischer</Italian>
 		<Spanish>Peter Vischer</Spanish>
 		<Russian>Peter Vischer</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_STANISLAV_STASZIC</Tag>
 		<English>Stanislav Staszic</English>
@@ -1336,7 +1336,7 @@
 		<Italian>Stanislav Staszic</Italian>
 		<Spanish>Stanislav Staszic</Spanish>
 		<Russian>Stanislav Staszic</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_POSTNIAK_YAKOVLEV</Tag>
 		<English>Postniak Yakovlev</English>
@@ -1345,7 +1345,7 @@
 		<Italian>Postniak Yakovlev</Italian>
 		<Spanish>Postniak Yakovlev</Spanish>
 		<Russian>Postniak Yakovlev</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GIOVANNI_CASSINI</Tag>
 		<English>Giovanni Cassini</English>
@@ -1354,7 +1354,7 @@
 		<Italian>Giovanni Cassini</Italian>
 		<Spanish>Giovanni Cassini</Spanish>
 		<Russian>Giovanni Cassini</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHRISTOPHER_WREN</Tag>
 		<English>Christopher Wren</English>
@@ -1363,7 +1363,7 @@
 		<Italian>Christopher Wren</Italian>
 		<Spanish>Christopher Wren</Spanish>
 		<Russian>Christopher Wren</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MATEUS_FERNANDES</Tag>
 		<English>Mateus Fernandes</English>
@@ -1372,7 +1372,7 @@
 		<Italian>Mateus Fernandes</Italian>
 		<Spanish>Mateus Fernandes</Spanish>
 		<Russian>Mateus Fernandes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHAN_VON_HILDEBRANDT</Tag>
 		<English>Johan Von Hildebrandt</English>
@@ -1381,7 +1381,7 @@
 		<Italian>Johan Von Hildebrandt</Italian>
 		<Spanish>Johan Von Hildebrandt</Spanish>
 		<Russian>Johan Von Hildebrandt</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TEKEN_DERECI</Tag>
 		<English>Teken Dereci</English>
@@ -1390,7 +1390,7 @@
 		<Italian>Teken Dereci</Italian>
 		<Spanish>Teken Dereci</Spanish>
 		<Russian>Teken Dereci</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NICOMEDUS_TESSIN</Tag>
 		<English>Nicomedus Tessin</English>
@@ -1399,7 +1399,7 @@
 		<Italian>Nicomedus Tessin</Italian>
 		<Spanish>Nicomedus Tessin</Spanish>
 		<Russian>Nicomedus Tessin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HUGO_GROTIUS</Tag>
 		<English>Hugo Grotius</English>
@@ -1408,7 +1408,7 @@
 		<Italian>Hugo Grotius</Italian>
 		<Spanish>Hugo Grotius</Spanish>
 		<Russian>Hugo Grotius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARQUIS_DE_VAUBAN</Tag>
 		<English>Marquis De Vauban</English>
@@ -1417,7 +1417,7 @@
 		<Italian>Marquis De Vauban</Italian>
 		<Spanish>Marquis De Vauban</Spanish>
 		<Russian>Marquis De Vauban</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TAQI_AL_DIN</Tag>
 		<English>Taqi Al Din</English>
@@ -1426,7 +1426,7 @@
 		<Italian>Taqi Al Din</Italian>
 		<Spanish>Taqi Al Din</Spanish>
 		<Russian>Taqi Al Din</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GIACOMO_LEONE</Tag>
 		<English>Giacomo Leone</English>
@@ -1435,7 +1435,7 @@
 		<Italian>Giacomo Leone</Italian>
 		<Spanish>Giacomo Leone</Spanish>
 		<Russian>Giacomo Leone</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IMRE_STEINDAL</Tag>
 		<English>Imre Steindal</English>
@@ -1444,7 +1444,7 @@
 		<Italian>Imre Steindal</Italian>
 		<Spanish>Imre Steindal</Spanish>
 		<Russian>Imre Steindal</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ADAM_KOCHANSKI</Tag>
 		<English>Adam Kochanski</English>
@@ -1453,7 +1453,7 @@
 		<Italian>Adam Kochanski</Italian>
 		<Spanish>Adam Kochanski</Spanish>
 		<Russian>Adam Kochanski</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GALLEAZO_ALLESSI</Tag>
 		<English>Galleazo Allessi</English>
@@ -1462,7 +1462,7 @@
 		<Italian>Galleazo Allessi</Italian>
 		<Spanish>Galleazo Allessi</Spanish>
 		<Russian>Galleazo Allessi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_DIOGO_DA_BOITACA</Tag>
 		<English>Diogo Da Boitaca</English>
@@ -1471,7 +1471,7 @@
 		<Italian>Diogo Da Boitaca</Italian>
 		<Spanish>Diogo Da Boitaca</Spanish>
 		<Russian>Diogo Da Boitaca</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAKOB_PRANDTAUER</Tag>
 		<English>Jakob Prandtauer</English>
@@ -1480,7 +1480,7 @@
 		<Italian>Jakob Prandtauer</Italian>
 		<Spanish>Jakob Prandtauer</Spanish>
 		<Russian>Jakob Prandtauer</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ERWIN_VON_STEINBACH</Tag>
 		<English>Erwin Von Steinbach</English>
@@ -1489,7 +1489,7 @@
 		<Italian>Erwin Von Steinbach</Italian>
 		<Spanish>Erwin Von Steinbach</Spanish>
 		<Russian>Erwin Von Steinbach</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SVEN_HEDIN</Tag>
 		<English>Sven Hedin</English>
@@ -1498,7 +1498,7 @@
 		<Italian>Sven Hedin</Italian>
 		<Spanish>Sven Hedin</Spanish>
 		<Russian>Sven Hedin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CORNELIUS_DREBBEL</Tag>
 		<English>Cornelius Drebbel</English>
@@ -1507,7 +1507,7 @@
 		<Italian>Cornelius Drebbel</Italian>
 		<Spanish>Cornelius Drebbel</Spanish>
 		<Russian>Cornelius Drebbel</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BALDWIN_OF_JERUSALEM</Tag>
 		<English>Baldwin of Jerusalem</English>
@@ -1516,7 +1516,7 @@
 		<Italian>Baldwin of Jerusalem</Italian>
 		<Spanish>Baldwin of Jerusalem</Spanish>
 		<Russian>Baldwin of jerusalem</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BELISARIUS</Tag>
 		<English>Belisarius</English>
@@ -1525,7 +1525,7 @@
 		<Italian>Belisarius</Italian>
 		<Spanish>Belisarius</Spanish>
 		<Russian>Belisarius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHARLES_MARTEL</Tag>
 		<English>Charles Martel</English>
@@ -1534,7 +1534,7 @@
 		<Italian>Charles Martel</Italian>
 		<Spanish>Charles Martel</Spanish>
 		<Russian>Charles Martel</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KHALID_IBN_AL_WALID</Tag>
 		<English>Khalid Ibn Al Walid</English>
@@ -1543,7 +1543,7 @@
 		<Italian>Khalid Ibn Al Walid</Italian>
 		<Spanish>Khalid Ibn Al Walid</Spanish>
 		<Russian>Khalid Ibn Al Walid</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVAN_ASEN</Tag>
 		<English>Ivan Asen</English>
@@ -1552,7 +1552,7 @@
 		<Italian>Ivan Asen</Italian>
 		<Spanish>Ivan Asen</Spanish>
 		<Russian>Ivan Asen</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TARIK_IBN_ZIHAD</Tag>
 		<English>Tarik Ibn Zihad</English>
@@ -1561,7 +1561,7 @@
 		<Italian>Tarik Ibn Zihad</Italian>
 		<Spanish>Tarik Ibn Zihad</Spanish>
 		<Russian>Ivan Asen</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HERNAN_CORTES</Tag>
 		<English>Hernan Cortes</English>
@@ -1570,7 +1570,7 @@
 		<Italian>Hernan Cortes</Italian>
 		<Spanish>Hernan Cortes</Spanish>
 		<Russian>Hernan Cortes</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ERIC_BLOODAXE</Tag>
 		<English>Eric Bloodaxe</English>
@@ -1579,7 +1579,7 @@
 		<Italian>Eric Bloodaxe</Italian>
 		<Spanish>Eric Bloodaxe</Spanish>
 		<Russian>Eric Bloodaxe</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREA_GRITTI</Tag>
 		<English>Andrea Gritti</English>
@@ -1588,7 +1588,7 @@
 		<Italian>Andrea Gritti</Italian>
 		<Spanish>Andrea Gritti</Spanish>
 		<Russian>Andrea Gritti</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SVIATOSLAV_I</Tag>
 		<English>Sviatoslav I</English>
@@ -1597,7 +1597,7 @@
 		<Italian>Sviatoslav I</Italian>
 		<Spanish>Sviatoslav I</Spanish>
 		<Russian>Sviatoslav I</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JANOS_HUNYADI</Tag>
 		<English>Janos Hunyadi</English>
@@ -1606,7 +1606,7 @@
 		<Italian>Janos Hunyadi</Italian>
 		<Spanish>Janos Hunyadi</Spanish>
 		<Russian>Janos Hunyadi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEORGE_FREDERICK_WALDECK</Tag>
 		<English>George Frederick Waldeck</English>
@@ -1615,7 +1615,7 @@
 		<Italian>George Frederick Waldeck</Italian>
 		<Spanish>George Frederick Waldeck</Spanish>
 		<Russian>George Frederick Waldeck</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_STEFAN_BATORY</Tag>
 		<English>Stefan Batory</English>
@@ -1624,7 +1624,7 @@
 		<Italian>Stefan Batory</Italian>
 		<Spanish>Stefan Batory</Spanish>
 		<Russian>Stefan Batory</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_THE_BOLD</Tag>
 		<English>Vladimir the Bold</English>
@@ -1633,7 +1633,7 @@
 		<Italian>Vladimir the Bold</Italian>
 		<Spanish>Vladimir the Bold</Spanish>
 		<Russian>Vladimir the Bold</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREA_DORIA</Tag>
 		<English>Andrea Doria</English>
@@ -1642,7 +1642,7 @@
 		<Italian>Andrea Doria</Italian>
 		<Spanish>Andrea Doria</Spanish>
 		<Russian>Andrea Doria</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EDWARD_LONGSHANKS</Tag>
 		<English>Edward Longshanks</English>
@@ -1651,7 +1651,7 @@
 		<Italian>Edward Longshanks</Italian>
 		<Spanish>Edward Longshanks</Spanish>
 		<Russian>Edward Longshanks</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AFONSO_DE_ALBUQUERQUE</Tag>
 		<English>Afonso de Albuquerque</English>
@@ -1660,7 +1660,7 @@
 		<Italian>Afonso de Albuquerque</Italian>
 		<Spanish>Afonso de Albuquerque</Spanish>
 		<Russian>Afonso de Albuquerque</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EUGENE_VON_SAVOYEN</Tag>
 		<English>Eugene Von Savoyen</English>
@@ -1669,7 +1669,7 @@
 		<Italian>Eugene Von Savoyen</Italian>
 		<Spanish>Eugene Von Savoyen</Spanish>
 		<Russian>Eugene Von Savoyen</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ORHAN_GHAZI</Tag>
 		<English>Orhan Ghazi</English>
@@ -1678,7 +1678,7 @@
 		<Italian>Orhan Ghazi</Italian>
 		<Spanish>Orhan Ghazi</Spanish>
 		<Russian>Orhan Ghazi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_RICHARD_COEUR_DE_LION</Tag>
 		<English>Richard Coeur de Lion</English>
@@ -1687,7 +1687,7 @@
 		<Italian>Richard Coeur de Lion</Italian>
 		<Spanish>Richard Coeur de Lion</Spanish>
 		<Russian>Richard Coeur de Lion</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MICHIEL_DE_RUYTER</Tag>
 		<English>Michiel De Ruyter</English>
@@ -1696,7 +1696,7 @@
 		<Italian>Michiel De Ruyter</Italian>
 		<Spanish>Michiel De Ruyter</Spanish>
 		<Russian>Michiel De Ruyter</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHARLES_THE_BALD</Tag>
 		<English>Charles the Bald</English>
@@ -1705,7 +1705,7 @@
 		<Italian>Charles the Bald</Italian>
 		<Spanish>Charles the Bald</Spanish>
 		<Russian>Charles the Bald</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HERACLIUS</Tag>
 		<English>Heraclius</English>
@@ -1714,7 +1714,7 @@
 		<Italian>Heraclius</Italian>
 		<Spanish>Heraclius</Spanish>
 		<Russian>Heraclius</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HENRI_TURENNE</Tag>
 		<English>Henri Turenne</English>
@@ -1723,7 +1723,7 @@
 		<Italian>Henri Turenne</Italian>
 		<Spanish>Henri Turenne</Spanish>
 		<Russian>Henri Turenne</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AMIR_IBN_AL_AS</Tag>
 		<English>Amir Ibn Al As</English>
@@ -1732,7 +1732,7 @@
 		<Italian>Amir Ibn Al As</Italian>
 		<Spanish>Amir Ibn Al As</Spanish>
 		<Russian>Amir Ibn Al As</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAURICE_OF_NASSAU</Tag>
 		<English>Maurice of Nassau</English>
@@ -1741,7 +1741,7 @@
 		<Italian>Maurice of Nassau</Italian>
 		<Spanish>Maurice of Nassau</Spanish>
 		<Russian>Maurice of Nassau</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YUSUF_IBN_TASHFIN</Tag>
 		<English>Yusuf Ibn Tashfin</English>
@@ -1750,7 +1750,7 @@
 		<Italian>Yusuf Ibn Tashfin</Italian>
 		<Spanish>Yusuf Ibn Tashfin</Spanish>
 		<Russian>Yusuf Ibn Tashfin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GONZALO_DE_CORDOBA</Tag>
 		<English>Gonzalo De Cordoba</English>
@@ -1759,7 +1759,7 @@
 		<Italian>Gonzalo De Cordoba</Italian>
 		<Spanish>Gonzalo De Cordoba</Spanish>
 		<Russian>Gonzalo De Cordoba</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SWEYN_FORKBEARD</Tag>
 		<English>Sweyn Forkbeard</English>
@@ -1768,7 +1768,7 @@
 		<Italian>Sweyn Forkbeard</Italian>
 		<Spanish>Sweyn Forkbeard</Spanish>
 		<Russian>Sweyn Forkbeard</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SEBASTIANO_VENIER</Tag>
 		<English>Sebastiano Venier</English>
@@ -1777,7 +1777,7 @@
 		<Italian>Sebastiano Venier</Italian>
 		<Spanish>Sebastiano Venier</Spanish>
 		<Russian>Sebastiano Venier</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ROMAN_MSTISLAVICH</Tag>
 		<English>Roman Mstislavich</English>
@@ -1786,7 +1786,7 @@
 		<Italian>Roman Mstislavich</Italian>
 		<Spanish>Roman Mstislavich</Spanish>
 		<Russian>Roman Mstislavich</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PAL_KINIZSI</Tag>
 		<English>Pal Kinizsi</English>
@@ -1795,7 +1795,7 @@
 		<Italian>Pal Kinizsi</Italian>
 		<Spanish>Pal Kinizsi</Spanish>
 		<Russian>Pal Kinizsi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEBHARD_VON_BLUCHER</Tag>
 		<English>Gebhard Von Blucher</English>
@@ -1804,7 +1804,7 @@
 		<Italian>Gebhard Von Blucher</Italian>
 		<Spanish>Gebhard Von Blucher</Spanish>
 		<Russian>Gebhard Von Blucher</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SELIM_I</Tag>
 		<English>Selim I</English>
@@ -1813,7 +1813,7 @@
 		<Italian>Selim I</Italian>
 		<Spanish>Selim I</Spanish>
 		<Russian>Selim I</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_KUTUZOV</Tag>
 		<English>Mikhail Kutuzov</English>
@@ -1822,7 +1822,7 @@
 		<Italian>Mikhail Kutuzov</Italian>
 		<Spanish>Mikhail Kutuzov</Spanish>
 		<Russian>Mikhail Kutuzov</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AMBROGIO_SPINOLA</Tag>
 		<English>Ambrogio Spinola</English>
@@ -1831,7 +1831,7 @@
 		<Italian>Ambrogio Spinola</Italian>
 		<Spanish>Ambrogio Spinola</Spanish>
 		<Russian>Ambrogio Spinola</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_OLIVER_CROMWELL</Tag>
 		<English>Oliver Cromwell</English>
@@ -1840,7 +1840,7 @@
 		<Italian>Oliver Cromwell</Italian>
 		<Spanish>Oliver Cromwell</Spanish>
 		<Russian>Oliver Cromwell</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALBRECHT_VON_WALLENSTEIN</Tag>
 		<English>Albrecht Von Wallenstein</English>
@@ -1849,7 +1849,7 @@
 		<Italian>Albrecht Von Wallenstein</Italian>
 		<Spanish>Albrecht Von Wallenstein</Spanish>
 		<Russian>Albrecht Von Wallenstein</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LENNART_TORSTENSON</Tag>
 		<English>Lennart Torstenson</English>
@@ -1858,7 +1858,7 @@
 		<Italian>Lennart Torstenson</Italian>
 		<Spanish>Lennart Torstenson</Spanish>
 		<Russian>Lennart Torstenson</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAARTEN_TROMP</Tag>
 		<English>Maarten Tromp</English>
@@ -1867,7 +1867,7 @@
 		<Italian>Maarten Tromp</Italian>
 		<Spanish>Maarten Tromp</Spanish>
 		<Russian>Maarten Tromp</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_BREYDAL</Tag>
 		<English>Jan Breydal</English>
@@ -1876,7 +1876,7 @@
 		<Italian>Jan Breydal</Italian>
 		<Spanish>Jan Breydal</Spanish>
 		<Russian>Jan Breydal</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHN_KINNAMOS</Tag>
 		<English>John Kinnamos</English>
@@ -1885,7 +1885,7 @@
 		<Italian>John Kinnamos</Italian>
 		<Spanish>John Kinnamos</Spanish>
 		<Russian>John Kinnamos</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHEVALIER_D'EON</Tag>
 		<English>Chevalier D'eon</English>
@@ -1894,7 +1894,7 @@
 		<Italian>Chevalier D'eon</Italian>
 		<Spanish>Chevalier D'eon</Spanish>
 		<Russian>Chevalier D'eon</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HASSAN_IBN_SABAH</Tag>
 		<English>Hassan Ibn Sabah</English>
@@ -1903,7 +1903,7 @@
 		<Italian>Hassan Ibn Sabah</Italian>
 		<Spanish>Hassan Ibn Sabah</Spanish>
 		<Russian>Chevalier D'eon</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVANKO_OF_PRESLAV</Tag>
 		<English>Ivanko of Preslav</English>
@@ -1912,7 +1912,7 @@
 		<Italian>Ivanko of Preslav</Italian>
 		<Spanish>Ivanko of Preslav</Spanish>
 		<Russian>Ivanko of Preslav</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AHMAD_AL_TIFASHI</Tag>
 		<English>Ahmad Al Tifashi</English>
@@ -1921,7 +1921,7 @@
 		<Italian>Ahmad Al Tifashi</Italian>
 		<Spanish>Ahmad Al Tifashi</Spanish>
 		<Russian>Ahmad Al Tifashi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TORQUEMADA</Tag>
 		<English>Torquemada</English>
@@ -1930,7 +1930,7 @@
 		<Italian>Torquemada</Italian>
 		<Spanish>Torquemada</Spanish>
 		<Russian>Torquemada</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVAR_THE_BONELESS</Tag>
 		<English>Ivar the Boneless</English>
@@ -1939,7 +1939,7 @@
 		<Italian>Ivar the Boneless</Italian>
 		<Spanish>Ivar the Boneless</Spanish>
 		<Russian>Ivar the Boneless</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GIOVANNI_MANUCCI</Tag>
 		<English>Giovanni Manucci</English>
@@ -1948,7 +1948,7 @@
 		<Italian>Giovanni Manucci</Italian>
 		<Spanish>Giovanni Manucci</Spanish>
 		<Russian>Giovanni Manucci</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_COUNT_RAZUMOVSKY</Tag>
 		<English>Count Razumovsky</English>
@@ -1957,7 +1957,7 @@
 		<Italian>Count Razumovsky</Italian>
 		<Spanish>Count Razumovsky</Spanish>
 		<Russian>Count Razumovsky</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GASPAR_GRAZIANI</Tag>
 		<English>Gaspar Graziani</English>
@@ -1966,7 +1966,7 @@
 		<Italian>Gaspar Graziani</Italian>
 		<Spanish>Gaspar Graziani</Spanish>
 		<Russian>Gaspar Graziani</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PHILIP_OF_SWABIA</Tag>
 		<English>Philip of Swabia</English>
@@ -1975,7 +1975,7 @@
 		<Italian>Philip of Swabia</Italian>
 		<Spanish>Philip of Swabia</Spanish>
 		<Russian>Philip of Swabia</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JERZY_KULCZYCKI</Tag>
 		<English>Jerzy Kulczycki</English>
@@ -1984,7 +1984,7 @@
 		<Italian>Jerzy Kulczycki</Italian>
 		<Spanish>Jerzy Kulczycki</Spanish>
 		<Russian>Jerzy Kulczycki</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VASILY_DOLGORUKOV</Tag>
 		<English>Vasily Dolgorukov</English>
@@ -1993,7 +1993,7 @@
 		<Italian>Vasily Dolgorukov</Italian>
 		<Spanish>Vasily Dolgorukov</Spanish>
 		<Russian>Vasily Dolgorukov</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SINBALDO_FIESCHI</Tag>
 		<English>Sinbaldo Fieschi</English>
@@ -2002,7 +2002,7 @@
 		<Italian>Sinbaldo Fieschi</Italian>
 		<Spanish>Sinbaldo Fieschi</Spanish>
 		<Russian>Sinbaldo Fieschi</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCIS_BACON</Tag>
 		<English>Francis Bacon</English>
@@ -2011,7 +2011,7 @@
 		<Italian>Francis Bacon</Italian>
 		<Spanish>Francis Bacon</Spanish>
 		<Russian>Francis Bacon</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PERO_DA_COVILHA</Tag>
 		<English>Pero Da Covilha</English>
@@ -2020,7 +2020,7 @@
 		<Italian>Pero Da Covilha</Italian>
 		<Spanish>Pero Da Covilha</Spanish>
 		<Russian>Pero Da Covilha</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_ZIZKA</Tag>
 		<English>Jan Zizka</English>
@@ -2029,7 +2029,7 @@
 		<Italian>Jan Zizka</Italian>
 		<Spanish>Jan Zizka</Spanish>
 		<Russian>Jan Zizka</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HAYREDDIN</Tag>
 		<English>Hayreddin</English>
@@ -2038,7 +2038,7 @@
 		<Italian>Hayreddin</Italian>
 		<Spanish>Hayreddin</Spanish>
 		<Russian>Hayreddin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PER_BRAHE</Tag>
 		<English>Per Brahe</English>
@@ -2047,7 +2047,7 @@
 		<Italian>Per Brahe</Italian>
 		<Spanish>Per Brahe</Spanish>
 		<Russian>Hayreddin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_COEN</Tag>
 		<English>Jan Coen</English>
@@ -2056,7 +2056,7 @@
 		<Italian>Jan Coen</Italian>
 		<Spanish>Jan Coen</Spanish>
 		<Russian>Jan Coen</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PIETER_DE_CONNICK</Tag>
 		<English>Pieter De Connick</English>
@@ -2065,7 +2065,7 @@
 		<Italian>Pieter De Connick</Italian>
 		<Spanish>Pieter De Connick</Spanish>
 		<Russian>Pieter De Connick</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_THEODOSIUS_OF_NICEA</Tag>
 		<English>Theodosius of Nicea</English>
@@ -2074,7 +2074,7 @@
 		<Italian>Theodosius of Nicea</Italian>
 		<Spanish>Theodosius of Nicea</Spanish>
 		<Russian>Theodosius of Nicea</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_RASHID_AD_DIN_SINAN</Tag>
 		<English>Rashid Ad Din Sinan</English>
@@ -2083,7 +2083,7 @@
 		<Italian>Rashid Ad Din Sinan</Italian>
 		<Spanish>Rashid Ad Din Sinan</Spanish>
 		<Russian>Theodosius of Nicea</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ENRICO_DE_CANDIA</Tag>
 		<English>Enrico De Candia</English>
@@ -2092,7 +2092,7 @@
 		<Italian>Enrico De Candia</Italian>
 		<Spanish>Enrico De Candia</Spanish>
 		<Russian>Enrico De Candia</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SIMON_CAROCHE</Tag>
 		<English>Simon Caroche</English>
@@ -2101,7 +2101,7 @@
 		<Italian>Simon Caroche</Italian>
 		<Spanish>Simon Caroche</Spanish>
 		<Russian>Enrico De Candia</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_COUNT_RAZUMOVSKY</Tag>
 		<English>Count Razumovsky</English>
@@ -2110,7 +2110,7 @@
 		<Italian>Count Razumovsky</Italian>
 		<Spanish>Count Razumovsky</Spanish>
 		<Russian>Count Razumovsky</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IBRAHIM_AYA</Tag>
 		<English>Ibrahim Aya</English>
@@ -2119,7 +2119,7 @@
 		<Italian>Ibrahim Aya</Italian>
 		<Spanish>Ibrahim Aya</Spanish>
 		<Russian>Ibrahim Aya</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALONSO_DE_CONTRERAS</Tag>
 		<English>Alonso De Contreras</English>
@@ -2128,7 +2128,7 @@
 		<Italian>Alonso De Contreras</Italian>
 		<Spanish>Alonso De Contreras</Spanish>
 		<Russian>Alonso De Contreras</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BRITA_TOTT</Tag>
 		<English>Brita Tott</English>
@@ -2137,7 +2137,7 @@
 		<Italian>Brita Tott</Italian>
 		<Spanish>Brita Tott</Spanish>
 		<Russian>Brita Tott</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GIACOMO_CASANOVA</Tag>
 		<English>Giacomo Casanova</English>
@@ -2146,7 +2146,7 @@
 		<Italian>Giacomo Casanova</Italian>
 		<Spanish>Giacomo Casanova</Spanish>
 		<Russian>Giacomo Casanova</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_IVAN_SUSHANIN</Tag>
 		<English>Ivan Sushanin</English>
@@ -2155,7 +2155,7 @@
 		<Italian>Ivan Sushanin</Italian>
 		<Spanish>Ivan Sushanin</Spanish>
 		<Russian>Ivan Sushanin</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ZRINYA_MIKLOS</Tag>
 		<English>Zrinya Miklos</English>
@@ -2164,7 +2164,7 @@
 		<Italian>Zrinya Miklos</Italian>
 		<Spanish>Zrinya Miklos</Spanish>
 		<Russian>Zrinya Miklos</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KONRAD_OF_MASOVIA</Tag>
 		<English>Konrad of Masovia</English>
@@ -2173,7 +2173,7 @@
 		<Italian>Konrad of Masovia</Italian>
 		<Spanish>Konrad of Masovia</Spanish>
 		<Russian>Konrad of Masovia</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_DLUGOSZ</Tag>
 		<English>Jan Dlugosz</English>
@@ -2182,7 +2182,7 @@
 		<Italian>Jan Dlugosz</Italian>
 		<Spanish>Jan Dlugosz</Spanish>
 		<Russian>Jan Dlugosz</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDER_BEZBORODKO</Tag>
 		<English>Alexander Bezborodko</English>
@@ -2191,7 +2191,7 @@
 		<Italian>Alexander Bezborodko</Italian>
 		<Spanish>Alexander Bezborodko</Spanish>
 		<Russian>Alexander Bezborodko</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GIOVANNI_GUISTIANI</Tag>
 		<English>Giovanni Guistiani</English>
@@ -2200,7 +2200,7 @@
 		<Italian>Giovanni Guistiani</Italian>
 		<Spanish>Giovanni Guistiani</Spanish>
 		<Russian>Giovanni Guistiani</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FRANCIS_WALSINGHAM</Tag>
 		<English>Francis Walsingham</English>
@@ -2209,7 +2209,7 @@
 		<Italian>Francis Walsingham</Italian>
 		<Spanish>Francis Walsingham</Spanish>
 		<Russian>Francis Walsingham</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOAO_ESTEVES</Tag>
 		<English>Joao Esteves</English>
@@ -2218,7 +2218,7 @@
 		<Italian>Joao Esteves</Italian>
 		<Spanish>Joao Esteves</Spanish>
 		<Russian>Joao Esteves</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEORGE_VON_FRUNDSBERG</Tag>
 		<English>George Von Frundsberg</English>
@@ -2227,7 +2227,7 @@
 		<Italian>George Von Frundsberg</Italian>
 		<Spanish>George Von Frundsberg</Spanish>
 		<Russian>George Von Frundsberg</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TURGUT_REIS</Tag>
 		<English>Turgut Reis</English>
@@ -2236,7 +2236,7 @@
 		<Italian>Turgut Reis</Italian>
 		<Spanish>Turgut Reis</Spanish>
 		<Russian>Turgut Reis</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CORNELIUS_JOL</Tag>
 		<English>Cornelius Jol</English>
@@ -2245,7 +2245,7 @@
 		<Italian>Cornelius Jol</Italian>
 		<Spanish>Cornelius Jol</Spanish>
 		<Russian>Cornelius Jol</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_OMURTAG</Tag>
 		<English>Omurtag</English>
@@ -2254,7 +2254,7 @@
 		<Italian>Omurtag</Italian>
 		<Spanish>Omurtag</Spanish>
 		<Russian>Omurtag</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KRUM</Tag>
 		<English>Krum</English>
@@ -2263,7 +2263,8 @@
 		<Italian>Krum</Italian>
 		<Spanish>Krum</Spanish>
 		<Russian>Krum</Russian>
-		<Japanese/>Krum<Chinese/></TEXT>
+		<Japanese/>Krum<Chinese/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KALOYAN</Tag>
 		<English>Kaloyan</English>
@@ -2272,7 +2273,7 @@
 		<Italian>Kaloyan</Italian>
 		<Spanish>Kaloyan</Spanish>
 		<Russian>Kaloyan</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TELERIG</Tag>
 		<English>Telerig</English>
@@ -2281,7 +2282,7 @@
 		<Italian>Telerig</Italian>
 		<Spanish>Telerig</Spanish>
 		<Russian>Telerig</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_KIRIL</Tag>
 		<English>St. Kiril</English>
@@ -2290,7 +2291,7 @@
 		<Italian>St. Kiril</Italian>
 		<Spanish>St. Kiril</Spanish>
 		<Russian>St. Kiril</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_KLIMENT</Tag>
 		<English>St. Kliment</English>
@@ -2299,7 +2300,7 @@
 		<Italian>St. Kliment</Italian>
 		<Spanish>St. Kliment</Spanish>
 		<Russian>St. Kliment</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANREI_RUBLEV</Tag>
 		<English>Anrei Rublev</English>
@@ -2308,7 +2309,7 @@
 		<Italian>Anrei Rublev</Italian>
 		<Spanish>Anrei Rublev</Spanish>
 		<Russian>Anrei Rublev</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AFONSO_HENRIQUES</Tag>
 		<English>Afonso Henriques</English>
@@ -2317,5 +2318,5 @@
 		<Italian>Afonso Henriques</Italian>
 		<Spanish>Afonso Henriques</Spanish>
 		<Russian>Afonso Henriques</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 </Civ4GameText>

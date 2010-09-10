@@ -14,7 +14,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Katholizimus</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -39,7 +39,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Katholisch</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -64,7 +64,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Orthodoxie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -89,7 +89,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Orthodox</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -114,7 +114,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Protestantismus</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -139,7 +139,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Protestantisch</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -164,7 +164,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Islam</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -189,7 +189,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Islamisch</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -213,7 +213,7 @@
 		<Italian>The Reformation!</Italian>
 		<Spanish>The Reformation!</Spanish>
 		<Russian>&#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255;!</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
 		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (All our Catholic cities and buildings will be converted to the new religion.)</English>
@@ -222,7 +222,7 @@
 		<Italian>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
 		<Russian>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229; "&#207;&#229;&#247;&#224;&#242;&#224;&#254;&#249;&#229;&#233;&#241;&#255; &#207;&#240;&#229;&#241;&#241;&#251;" &#239;&#238;&#235;&#238;&#230;&#232;&#235;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#226;&#238;&#235;&#237;&#229; &#237;&#238;&#226;&#251;&#245; &#228;&#238;&#234;&#242;&#240;&#232;&#237;. &#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#229; &#246;&#229;&#240;&#234;&#226;&#232; &#238;&#239;&#239;&#238;&#237;&#232;&#240;&#243;&#254;&#242; &#226;&#235;&#224;&#241;&#242;&#232; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#228; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#232;&#236;&#232; &#228;&#229;&#235;&#224;&#236;&#232;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#253;&#242;&#243; &#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254;? (&#194;&#241;&#229; &#237;&#224;&#248;&#232; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#232; &#231;&#228;&#224;&#237;&#232;&#255; &#225;&#243;&#228;&#243;&#242; &#239;&#240;&#229;&#226;&#240;&#224;&#249;&#229;&#237;&#251; &#226; &#237;&#238;&#226;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;.)</Russian>
-		<Japanese/><Chinese/></TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_SCHISM</Tag>
 		<English>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</English>
@@ -231,7 +231,6 @@
 		<Italian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Italian>
 		<Spanish>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Spanish>
 		<Russian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_POINTS</Tag>
@@ -241,7 +240,6 @@
 		<Italian>Faith Points</Italian>
 		<Spanish>Faith Points</Spanish>
 		<Russian>Faith Points</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_COUNT</Tag>
@@ -251,7 +249,6 @@
 		<Italian>Prosecution Instability Countdown</Italian>
 		<Spanish>Prosecution Instability Countdown</Spanish>
 		<Russian>Prosecution Instability Countdown</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_INSTABILITY</Tag>
@@ -261,7 +258,6 @@
 		<Italian>Prosecution Instability:</Italian>
 		<Spanish>Prosecution Instability:</Spanish>
 		<Russian>Prosecution Instability:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_STABILITY</Tag>
@@ -271,7 +267,6 @@
 		<Italian>Stability:</Italian>
 		<Spanish>Stability:</Spanish>
 		<Russian>Stability:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_CIVIC</Tag>
@@ -281,7 +276,6 @@
 		<Italian>Civic Upkeep:</Italian>
 		<Spanish>Civic Upkeep:</Spanish>
 		<Russian>Civic Upkeep:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GROWTH</Tag>
@@ -291,7 +285,6 @@
 		<Italian>City Growth:</Italian>
 		<Spanish>City Growth:</Spanish>
 		<Russian>City Growth:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_UNITS</Tag>
@@ -301,7 +294,6 @@
 		<Italian>Unit Production Cost:</Italian>
 		<Spanish>Unit Production Cost:</Spanish>
 		<Russian>Unit Production Cost:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_SCIENCE</Tag>
@@ -311,7 +303,6 @@
 		<Italian>Tech Breaker Cost:</Italian>
 		<Spanish>Tech Breaker Cost:</Spanish>
 		<Russian>Tech Breaker Cost:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PRODUCTION</Tag>
@@ -321,7 +312,6 @@
 		<Italian>Wonder and Project Production Cost:</Italian>
 		<Spanish>Wonder and Project Production Cost:</Spanish>
 		<Russian>Wonder and Project Production Cost:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_DIPLOMACY</Tag>
@@ -331,7 +321,6 @@
 		<Italian>Diplomacy Boost:</Italian>
 		<Spanish>Diplomacy Boost:</Spanish>
 		<Russian>Diplomacy Boost:</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GIFT</Tag>
@@ -341,7 +330,6 @@
 		<Italian>You have received a gift of gold from the Pope</Italian>
 		<Spanish>You have received a gift of gold from the Pope</Spanish>
 		<Russian>You have received a gift of gold from the Pope</Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_BUILDING1</Tag>
@@ -351,7 +339,6 @@
 		<Italian>The Pope has built a </Italian>
 		<Spanish>The Pope has built a </Spanish>
 		<Russian>The Pope has built a </Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_BUILDING2</Tag>
@@ -361,7 +348,6 @@
 		<Italian> in your city of </Italian>
 		<Spanish> in your city of </Spanish>
 		<Russian> in your city of </Russian>
-		<Japanese/><Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_SAINT</Tag>
@@ -370,7 +356,5 @@
 		<German>Become a Saint and strengthen the Faith of your nation.</German>
 		<Italian>Become a Saint and strengthen the Faith of your nation.</Italian>
 		<Spanish>Become a Saint and strengthen the Faith of your nation.</Spanish>
-		<Russian>Become a Saint and strengthen the Faith of your nation.</Russian>
-		<Japanese/>Become a Saint and strengthen the Faith of your nation.<Chinese/>
 	</TEXT>
 </Civ4GameText>

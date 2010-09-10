@@ -39,7 +39,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Karthografie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -114,7 +114,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Steigbügel</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -139,7 +139,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Astrolab</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -164,7 +164,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Uhrmacherei</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -189,7 +189,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Religiöse Kunst</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -214,7 +214,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Architektur</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -314,7 +314,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Mönchstum</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -364,7 +364,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Wissen der Klassik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -414,7 +414,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Gewölbebau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -464,7 +464,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Hufschmied</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -489,7 +489,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Belagerungsmaschinen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -514,7 +514,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Hochöfen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -539,7 +539,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Gothische Architektur</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -564,7 +564,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Denkmalbau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -639,7 +639,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Alchemie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -664,7 +664,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>G&#246;ttliches Recht</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -714,7 +714,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Latiner Segel</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -739,7 +739,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Plattenpanzerung</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -789,7 +789,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Kräuterheilkunde</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -864,7 +864,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Dampfmaschinen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -939,7 +939,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Schiffsbau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1014,7 +1014,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Schirmherrschaft</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1114,7 +1114,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Öffentliches Bauwesen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1189,7 +1189,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Militärische Taktiken</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1214,7 +1214,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Handelsgesellschaften</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1239,7 +1239,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Arabisches Wissen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1289,7 +1289,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Arabische Medizin</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1389,7 +1389,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Sprengstoff</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1414,7 +1414,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Maschinenwerkzeug</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1514,8 +1514,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Tiefbau</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
@@ -1564,7 +1564,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Menschenrechte</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1589,7 +1589,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Kombinierte Waffengattungen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1614,7 +1614,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Industrielle Revolution</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1639,7 +1639,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Gutsherrschaft</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1664,7 +1664,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Vasallentum</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1689,7 +1689,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Rittertum</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1714,7 +1714,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Steinschloss</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1739,7 +1739,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Berufsarmee</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1764,7 +1764,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Vieleckige Festung</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1789,7 +1789,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Kunst der Renasissance</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1814,8 +1814,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Schiffsbau</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
@@ -1839,7 +1839,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Bronzeverarbeitung</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1864,8 +1864,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
-			<Gender>Female</Gender>
+			<Text>Kettenpanzer</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
@@ -1889,7 +1889,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mystik</Text>
+			<Text>Aristrokratie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
