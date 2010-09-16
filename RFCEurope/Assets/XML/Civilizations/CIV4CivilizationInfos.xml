@@ -2427,14 +2427,14 @@
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses>
@@ -2538,14 +2538,14 @@
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses/>
@@ -2647,14 +2647,14 @@
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses/>
@@ -2755,14 +2755,14 @@
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses/>
@@ -2863,14 +2863,14 @@
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses/>
@@ -3125,14 +3125,14 @@
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 					<UnitType>NONE</UnitType>
 				</Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
-        <Unit>
-          <UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-          <UnitType>NONE</UnitType>
-        </Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses/>
 			<FreeBuildingClasses/>
