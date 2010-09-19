@@ -340,7 +340,9 @@
 		<English>Paladin</English>
 		<French>Paladin</French>
 		<German>Paladin</German>
-		<Italian/><Spanish/><Russian>&#207;&#224;&#235;&#224;&#228;&#232;&#237;</Russian></TEXT>
+		<Italian>Paladino</Italian>
+		<Spanish>Paladín</Spanish>
+		<Russian>&#207;&#224;&#235;&#224;&#228;&#232;&#237;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULGARIAN_KONNIK</Tag>
 		<English>Konnik</English>
@@ -360,7 +362,9 @@
 		<English>Tercio</English>
 		<French>Tercio</French>
 		<German>Tercio</German>
-		<Italian/><Spanish/><Russian>&#210;&#229;&#240;&#246;&#232;&#238;</Russian></TEXT>
+		<Italian>Tercio</Italian>
+		<Spanish>Tercio</Spanish>
+		<Russian>&#210;&#229;&#240;&#246;&#232;&#238;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENICE_GALLEAS</Tag>
 		<English>Galleas</English>
@@ -396,7 +400,9 @@
 		<English>English Longbowman</English>
 		<French>Archer Long Anglais</French>
 		<German>Englischer Langbogensch&#252;tze</German>
-		<Italian/><Spanish/><Russian>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian></TEXT>
+		<Italian>Arciere con Arco Lungo Inglese</Italian>
+		<Spanish>Saetero Inglés</Spanish>
+		<Russian>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Tag>
 		<English>Knight of St. John's</English>
@@ -414,7 +420,9 @@
 		<English>Great Bombard</English>
 		<French>Grande Bombard</French>
 		<German>Gro&#223;e Bombarde</German>
-		<Italian/><Spanish/><Russian>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian></TEXT>
+		<Italian>Bombardare Grande</Italian>
+		<Spanish>Bombardean Gran</Spanish>
+		<Russian>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN</Tag>
 		<English>Karolin</English>
@@ -428,13 +436,17 @@
 		<English>Dutch Grenadier</English>
 		<French>Grenadier Hollandais</French>
 		<German>Holl&#228;ndischer Grenadier</German>
-	<Italian/><Spanish/><Russian>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Russian></TEXT>
+		<Italian>Olandese Grenadier</Italian>
+		<Spanish>Holandés Granaderos</Spanish>
+		<Russian>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGAL_FOOT_KNIGHT</Tag>
 		<English>Knight of Aviz</English>
 		<French>Chevalier de Aviz</French>
 		<German>Ritter von Avis</German>
-		<Italian/><Spanish/><Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#192;&#226;&#232;&#231;&#224;</Russian></TEXT>
+		<Italian>Cavaliere d'Aviz</Italian>
+		<Spanish>Caballero de Aviz</Spanish>
+		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#192;&#226;&#232;&#231;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_SCHOLAR</Tag>
 		<English>Great Scholar</English>
@@ -475,8 +487,10 @@
 		<Tag>TXT_KEY_UNIT_TAGMATA</Tag>
 		<English>Tagmata</English>
 		<French>Tagmata</French>
-		<German>Tagma</German>
-		<Italian/><Spanish/><Russian>&#210;&#224;&#227;&#236;&#224;&#242;&#224;</Russian></TEXT>
+		<German>Tagmata</German>
+		<Italian>Tagmata</Italian>
+		<Spanish>Tagmata</Spanish>
+		<Russian>&#210;&#224;&#227;&#236;&#224;&#242;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELJUK</Tag>
 		<English>Seljuk</English>
