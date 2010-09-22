@@ -165,7 +165,7 @@ tBlackSea = (78,24,99,39)
 tGenoaControl = (( 49, 22, 50, 25 ), ( 44, 32, 46, 34 ), ( 51, 36, 53, 38 ), ( 88, 11, 91, 13 ), ( 72, 10, 75, 10 ) ) #Sardinia, Marseilles, Milano, Cyprus, Crete 
 tEnglishControl = ((39, 61, 44, 67), (31,57,37,62), (37,55,40,57)) # Scotland, Ireland, Wales
 tPortugalControl = ((1,15,8,39),(7,0,27,24),(4,0,6,7)) # Islands, Africa x 2
-tNormanControl = ((39,47,46,50), (35,45,38,47), (36,38,41,44), (43,45,46,46)) # Bits of France
+tNormanControl = ((35,40,38,47), (39,46,45,50)) # Bits of France (redurced areas to 2, should be more easy to recognize now
 tAustrianControl = ( 58, 33, 70, 38 )
 tTurkishControl = (( 77, 14, 99, 26 ), ( 65, 14, 80, 29 ), (93, 0, 99, 17), (76, 0, 92, 4), ( 60, 33, 63, 41 ) ) # Constantinople Area and Anatolia, Balkans and Peloponnesian, Levant, Egypt, Vienna
 tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ),(59, 43, 90, 55) ) # Sweden, Finland/Estland and east Germany through Central Russia
@@ -620,30 +620,33 @@ class Victory:
 					self.setGoal( iNorse, 1, 0 )
 					
 		elif ( iPlayer == iVenecia and pVenecia.isAlive() ):
+                        # Zipzapzup: 1st Conquering Constantinople
+                        # 2nd Dalmatien + islands + rhodes
+                        # 3rd 10 luxus + san marco + marco polo
+                        if (iGameTurn <= i1200AD and self.getGoal( iVenecia, 0) == -1 ):
+                                pJPlot = gc.getMap().plot( con.iConstantinople[0], con.iConstantinople[1] )
+				if ( pJPlot.isCity()):
+					if ( pJPlot.getPlotCity().getOwner() == iVenecia ):
+						self.setGoal(iVenecia,0,1)
+					else:
+						self.setGoal(iVenecia,0,0)
 			
-			if ( iGameTurn <= i1419AD and self.getGoal( iVenecia, 0 ) == -1 ):
+			if ( iGameTurn <= i1500AD and self.getGoal( iVenecia, 1 ) == -1 ):
 				iDalmatia = gc.doesOwnCities( iVenecia, tVenecianControl[0][0], tVenecianControl[0][1], tVenecianControl[0][2], tVenecianControl[0][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[1][0], tVenecianControl[1][1], tVenecianControl[1][2], tVenecianControl[1][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[2][0], tVenecianControl[2][1], tVenecianControl[2][2], tVenecianControl[2][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[3][0], tVenecianControl[3][1], tVenecianControl[3][2], tVenecianControl[3][3] )
 				iGreece = gc.countOwnedCities( iVenecia, tVenecianControl[4][0], tVenecianControl[4][1], tVenecianControl[4][2], tVenecianControl[4][3] ) + gc.countOwnedCities( iVenecia, tVenecianControl[5][0], tVenecianControl[5][1], tVenecianControl[5][2], tVenecianControl[5][3] )
 				iCyprus = gc.countOwnedCities( iVenecia, tVenecianControl[6][0], tVenecianControl[6][1], tVenecianControl[6][2], tVenecianControl[6][3] )
 				iCrete = gc.countOwnedCities( iVenecia, tVenecianControl[7][0], tVenecianControl[7][1], tVenecianControl[7][2], tVenecianControl[7][3] )
-				if ( iDalmatia >= 40 and iGreece >= 1 and iCyprus >= 1 and iCrete >= 1 ):
-					self.setGoal( iVenecia, 0, 1 )
-			else:
-				if ( self.getGoal( iVenecia, 0 ) == -1 ):
-					self.setGoal( iVenecia, 0, 0 )
-					
-			if ( iGameTurn <= i1500AD and self.getGoal( iVenecia, 1 ) == -1 ):
 				iRhodes = gc.countOwnedCities( iVenecia, tVenecianControl[8][0], tVenecianControl[8][1], tVenecianControl[8][2], tVenecianControl[8][3] )
-				if ( iRhodes == 1 ):
+				if ( iDalmatia >= 40 and iGreece >= 1 and iCyprus >= 1 and iCrete >= 1 and iRhodes >= 1 ):
 					self.setGoal( iVenecia, 1, 1 )
 			else:
-				if ( self.getGoal( iVenecia, 1 ) == -1 ):
+				if ( self.getGoal( iVenecia, 0 ) == -1 ):
 					self.setGoal( iVenecia, 1, 0 )
 					
 			if ( self.getGoal( iVenecia, 2 ) == -1 ):
-				if ( iGameTurn <= i1570AD and self.getOwnedLuxes( pVenecia ) >= 8 ):
+				if ( iGameTurn <= i1500AD and self.getOwnedLuxes( pVenecia ) >= 10 and self.getWondersBuilt(iVenecia) == 2):
 					self.setGoal( iVenecia, 2, 1 )
-				elif ( iGameTurn == i1570AD ):
+				elif ( iGameTurn == i1500AD ):
 					self.setGoal( iVenecia, 2, 0 )
 					
 		elif ( iPlayer == iKiev and pKiev.isAlive() ):
@@ -1199,6 +1202,20 @@ class Victory:
 				if (pCordoba.isAlive()):
 					if (self.getGoal(iCordoba, 1) == -1):
 						self.setGoal(iCordoba,1,0)
+						
+                if (iBuilding == con.iMarcoPolo or iBuilding == con.iSanMarco):
+                        print("marcoPolo or SanMarco being built")
+                        if (iPlayer == iVenecia):
+                                if (pVenecia.isAlive)):
+                                        if (self.getGoal(iVenecia, 2) == -1):
+                                                iWondersBuilt = self.getWondersBuilt(iVenecia)
+                                                print("Venecia has:",iWondersBuilt,"Wonders")
+                                                self.setWondersBuilt(iVenecia, iWondersBuilt +1)
+                        else:
+                                if (pVenecia.isAlive()):
+                                        if (self.getGoal(iVenecia, 2) == -1):
+                                                self.setGoal(iVenecia,2,0)
+                
 
                             
         def onProjectBuilt(self, iPlayer, iProject):
