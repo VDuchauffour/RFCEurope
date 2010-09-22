@@ -342,29 +342,30 @@
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
 		<Russian>&#209;&#237;&#229;&#241;&#232;&#242;&#229; 10 &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian>
 	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>
-		<English>Control the Dalmatian coast and have a city in Greece, Crete and Cyprus by 1420AD</English>
-		<French>Contr&#244;ler la c&#244;te Dalmate et avoir une ville en Gr&#232;ce, Cr&#232;te et Chypre en 1420 ap.JC.</French>
-		<German>Kontrollieren Sie die dalmatische Küste und haben Sie eine Stadt in Griechenland, Kreta und Zypern bis zum Jahr 1420 n. Chr.</German>
-		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
-		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
-		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#196;&#224;&#235;&#236;&#224;&#242;&#241;&#234;&#232;&#236; &#239;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;&#236; &#232; &#232;&#236;&#229;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#226; &#234;&#238;&#237;&#242;&#232;&#237;&#229;&#237;&#242;&#224;&#235;&#252;&#237;&#238;&#233; &#195;&#240;&#229;&#246;&#232;&#232;, &#202;&#240;&#232;&#242;&#229; &#232; &#202;&#232;&#239;&#240;&#229; 1420AD</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UHV_VEN2</Tag>
-		<English>Conquer Rhodes by 1500AD</English>
+		<English>Conquer Constantinople by 1200AD</English>
 		<French>Conqu&#233;rir l'Ile de Rhodes en 1500 ap.JC.</French>
-		<German>Erobern Sie Rhodos bis zum Jahr 1500 n. Chr.</German>
+		<German>Erobern Sie Konstantinople bis zum Jahr 1200 n. Chr.</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
 		<Russian>&#199;&#224;&#226;&#238;&#254;&#233;&#242;&#229; &#208;&#238;&#228;&#238;&#241; 1500AD</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_VEN2</Tag>
+		<English>Control the Dalmatian coast and Rhodos and have a city in Greece, Crete and Cyprus by 1500AD</English>
+		<French>Contr&#244;ler la c&#244;te Dalmate et avoir une ville en Gr&#232;ce, Cr&#232;te et Chypre en 1500 ap.JC.</French>
+		<German>Kontrollieren Sie die dalmatische Küste und Rhodos und haben Sie eine Stadt in Griechenland, Kreta und Zypern bis zum Jahr 1500 n. Chr.</German>
+		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
+		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
+		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#196;&#224;&#235;&#236;&#224;&#242;&#241;&#234;&#232;&#236; &#239;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;&#236; &#232; &#232;&#236;&#229;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#226; &#234;&#238;&#237;&#242;&#232;&#237;&#229;&#237;&#242;&#224;&#235;&#252;&#237;&#238;&#233; &#195;&#240;&#229;&#246;&#232;&#232;, &#202;&#240;&#232;&#242;&#229; &#232; &#202;&#232;&#239;&#240;&#229; 1420AD</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
-		<English>Control 8 Luxury resources by 1570AD. </English>
-		<French>Avoir 8 resources Luxeuses en 1570 ap.JC.</French>
-		<German>Kontrollieren Sie 8 Luxusressourcen bis zum Jahr 1570 n. Chr.</German>
+		<English>Control 10 Luxury resources by 1500AD. </English>
+		<French>Avoir 10 resources Luxeuses en 1500 ap.JC.</French>
+		<German>Kontrollieren Sie 10 Luxusressourcen bis zum Jahr 1500 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
 		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; 8 &#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#236;&#232; &#240;&#229;&#241;&#243;&#240;&#241;&#224;&#236;&#232; 1570AD.</Russian>
