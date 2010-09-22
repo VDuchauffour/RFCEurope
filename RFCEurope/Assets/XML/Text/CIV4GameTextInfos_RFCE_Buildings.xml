@@ -20,7 +20,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_APOTHECARY</Tag>
 		<English>Apothecary</English>
-		<French>Apothicaire</French><German/><Italian/><Spanish/><Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian></TEXT>
+		<French>Apothicaire</French>
+		<German>Apotheke</German>
+		<Italian/><Spanish/><Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOLL_HOUSE</Tag>
 		<English>Toll House</English>
@@ -30,7 +32,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
 		<English>Wharf</English>
-		<French>Quai</French><German/><Italian/><Spanish/><Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian></TEXT>
+		<French>Quai</French>
+		<German>Anlegeplatz</German>
+		<Italian/><Spanish/><Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TANNERY</Tag>
 		<English>Tannery</English>
@@ -197,8 +201,7 @@
 		<German>[TAB]Folwarks sind riesigen polnischen Bauernh&#195;&#182;fen betrieben, die in der polnisch-litauischen Commonwealth aus dem 14. Jahrhundert in das 20. Jahrhundert. Sie wurden f&#195;&#188;r die Herstellung von einem &#195;&#156;berschuss von Lebensmitteln. Die erste folwarks wurden auf Kirche und Kloster im Besitz Gr&#195;&#188;nden, sondern wurden sp&#195;&#164;ter vom Adel und reichen Bauern. Die Schaffung von folwarks wurde durch eine wachsende Nachfrage nach Getreide und seiner hohen Gewinn. Folwark - auf der Grundlage Getreide exportieren war ein wichtiger Teil der Wirtschaft in der polnisch-litauischen Commonwealth.[PARAGRAPH: 1]Der R&#195;&#188;ckgang der Landwirtschaft Waren, die Preise in der Ende des 17. Jahrhunderts markiert den Beginn einer Krise f&#195;&#188;r die folwark &#195;&#164;hnliche Wirtschaft. Die edle Versuch zur Erh&#195;&#182;hung der Nutzung von folwarks nur schaden, die wirtschaftliche Krise. Bis zum 18. Jahrhundert, folwarks blieb die Grundlage f&#195;&#188;r die polnische edlen die wirtschaftliche und politische Macht. Nach der Abschaffung der Leibeigenschaft in Polen, folwarks verwendet Lohnarbeit. Folwarks abgeschafft wurden von der Volksrepublik Polen mit dem PKWN Dekret vom 6. September 1944 &#195;&#188;ber die Agrarreform.</German>
 		<Italian>[TAB]Folwarks sono gigante polacco aziende agricole che sono stati operati nel Polacco-Lituano dal 14 &#194;&#176; secolo in 20a. Essi sono stati utilizzati per la produzione di un surplus di cibo. Il primo folwarks sono stati creati sulla chiesa e del convento di propriet&#195;&#160; motivi, ma sono stati in seguito adottati dalla nobilt&#195;&#160; e ricchi contadini. La creazione di folwarks &#195;&#168; stata incentivata da una crescente domanda di cereali e il suo alto profitto. Folwark a base di grano di esportazione &#195;&#168; stato una parte importante dell 'economia di Stato polacco - lituano.[PARAGRAPH: 1]La caduta dei prezzi in agricoltura merci alla fine del 17 &#194;&#176; secolo ha segnato l'inizio di una crisi per il folwark connessi economia. Il nobile del tentativo di aumentare l'uso di folwarks solo male la crisi economica pi&#195;&#185;. Fino al 18 &#194;&#176; secolo, folwarks rimasti la base per la nobile polacco potere economico e politico. Dopo l'abolizione della serfdom in Polonia, folwarks utilizzati pagato lavoro. Folwarks sono state abolite dalla Repubblica popolare di Polonia con il PKWN decreto del 6 settembre 1944 sulla riforma agricola.</Italian>
 		<Spanish>[TAB]Folwarks son gigantes granjas polacas que fueron operados en la Comunidad de Polonia - Lituania desde el siglo 14 en la 20. Estos recursos se utilizaron para producir un excedente de alimentos. La primera folwarks se crearon en la iglesia y el monasterio de propiedad de motivos, pero luego fueron aprobadas por la nobleza y los campesinos ricos. La creaci&#195;&#179;n de folwarks fue impulsada por una creciente demanda de cereales y su alto beneficio. Folwark basado en la exportaci&#195;&#179;n de cereales es una parte importante de la econom&#195;&#173;a de la polaca y lituana ELA. [PARAGRAPH: 1]La ca&#195;&#173;da de los precios de los bienes en la agricultura a finales del siglo 17 marc&#195;&#179; el inicio de una crisis para la folwark relacionados con la econom&#195;&#173;a. El noble intento de aumentar la utilizaci&#195;&#179;n de folwarks s&#195;&#179;lo perjudican la crisis econ&#195;&#179;mica m&#195;&#161;s. Hasta el siglo 18, folwarks sigue siendo la base de nobles polacos del poder econ&#195;&#179;mico y pol&#195;&#173;tico. Despu&#233;s de la abolici&#195;&#179;n de la servidumbre de la gleba en Polonia, folwarks utilizados trabajo remunerado. Folwarks fueron abolidas por la Rep&#195;&#186;blica Popular de Polonia con la PKWN decreto de 6 de septiembre de 1944 sobre la reforma agr&#195;&#173;cola.</Spanish>
-		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH: 1]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>
-	</TEXT>
+		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH: 1]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_STOCK_EXCHANGE</Tag>
 		<English>Royal Exchange</English>
@@ -514,19 +517,19 @@
 		<Tag>TXT_KEY_BUILDING_COURTHOUSE_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
-		<German>>[ICON_BULLET] +1 Stabilit&#228;t</German>
+		<German>[ICON_BULLET] +1 Stabilit&#228;t</German>
 		<Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUNGEON_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
-		<German>>[ICON_BULLET] +1 Stabilit&#228;t</German>
+		<German>[ICON_BULLET] +1 Stabilit&#228;t</German>
 		<Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
-		<German>>[ICON_BULLET] +1 Stabilit&#228;t</German>
+		<German>[ICON_BULLET] +1 Stabilit&#228;t</German>
 		<Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
