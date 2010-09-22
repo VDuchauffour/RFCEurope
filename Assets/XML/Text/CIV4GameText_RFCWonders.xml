@@ -16,7 +16,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO</Tag>
 		<English>Marco Polo's Embassy</English>
-		<French>Embassade de Marco Polo</French><German/><Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian></TEXT>
+		<French>Embassade de Marco Polo</French>
+		<German>Marco Polos Botschaft</German>
+		<Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER</Tag>
 		<English>The Leaning Tower</English>
@@ -30,7 +32,7 @@
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS</Tag>
 		<English>The Gardens of Al Andalus</English>
 		<French>Les Jardins d'Al Andalus</French>
-		<German>Der Al Andalus Garten</German>
+		<German>Die G&#228;rten von Al Andalus</German>
 		<Italian>I giardini di Al Andalus</Italian>
 		<Spanish>Los Jardines del Generalife</Spanish>
 		<Russian>&#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;</Russian>
@@ -47,7 +49,7 @@
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_HELP</Tag>
 		<English>[ICON_BULLET]Allows to build [COLOR_BUILDING_TEXT]Farms[COLOR_REVERT] without Irrigation.</English>
 		<French>[ICON_BULLET]Permet de construire une [COLOR_BUILDING_TEXT]Ferme[COLOR_REVERT] sans l'Irrigation</French>
-		<German/>
+		<German>[ICON_BULLET]Erlaubt den Bau von [COLOR_BUILDING_TEXT]Bauernh&#246;fen[COLOR_REVERT] ohne Bew&#228;sserung</German>
 		<Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_PEDIA</Tag>
@@ -222,7 +224,7 @@
 		<Tag>TXT_KEY_BUILDING_THEODOSIAN_WALLS</Tag>
 		<English>Theodosian Walls</English>
 		<French>Mur Th&#233;odosien</French>
-		<German>Theodosianische Mauer</German>
+		<German>Theodosianischer Wall</German>
 		<Italian>Theodosian Walls</Italian>
 		<Spanish>Muralla Teodosiana</Spanish>
 		<Russian>&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251;</Russian>
@@ -241,7 +243,7 @@
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Tag>
 		<English>The Shrine of Uppsala</English>
 		<French>Le Sanctuaire d'Uppsala</French>
-		<German>Der Schrein von Uppsala</German>
+		<German>Schrein von Uppsala</German>
 		<Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_PEDIA</Tag>
@@ -356,7 +358,7 @@
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL</Tag>
 		<English>Golden Bull</English>
 		<French>Bulle d'Or</French>
-		<German>Goldene Bulle</German>
+		<German>Goldener Bulle</German>
 		<Italian/>
 		<Spanish>Bula Dorada</Spanish>
 		<Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Russian></TEXT>
@@ -920,12 +922,14 @@ Although the Polos were by no means the first Europeans to reach China overland,
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE</Tag>
 		<English>National Theatre</English>
-		<French>Th&#233;atre Nationale</French><German/><Italian/><Spanish/><Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Russian></TEXT>
+		<French>Th&#233;atre Nationale</French>
+		<German>Nationaltheather</German>
+		<Italian/><Spanish/><Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE</Tag>
 		<English>Summer Palace</English>
 		<French>Palais d'&#233;t&#233;</French>
-		<German>Nationaltheater</German>
+		<German>Sommerresidenz</German>
 		<Italian/><Spanish/><Russian>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Tag>
