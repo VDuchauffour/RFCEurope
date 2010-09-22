@@ -209,7 +209,7 @@
 		<Tag>TXT_KEY_REFORMATION_TITLE</Tag>
 		<English>The Reformation!</English>
 		<French>La R&#233;forme!</French>
-		<German>The Reformation!</German>
+		<German>Die Reformation!</German>
 		<Italian>The Reformation!</Italian>
 		<Spanish>The Reformation!</Spanish>
 		<Russian>&#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255;!</Russian>
@@ -227,7 +227,7 @@
 		<Tag>TXT_KEY_GREAT_SCHISM</Tag>
 		<English>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</English>
 		<French>Le Grand Schisme: Apr&#232; des ann&#233;es de discution, les Chr&#233;tiens Catholique et Orthodoxe ont finallement d&#233;cider de se separer en 2 religions rivales.</French>
-		<German>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</German>
+		<German>Das groﬂe Schisma: Nach vielen Jahren polistischer und dogmatischer Auseinandersetzung haben sich Katholische und Orthodoxe Christen in zwei rivalisierende Glaubensrichtungen aufgespalten.</German>
 		<Italian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Italian>
 		<Spanish>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Spanish>
 		<Russian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Russian>
@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_FAITH_POINTS</Tag>
 		<English>Faith Points</English>
 		<French>Points de la foi</French>
-		<German>Faith Points</German>
+		<German>Glaubenspunkte</German>
 		<Italian>Faith Points</Italian>
 		<Spanish>Faith Points</Spanish>
 		<Russian>Faith Points</Russian>
@@ -245,7 +245,7 @@
 		<Tag>TXT_KEY_FAITH_PROSECUTION_COUNT</Tag>
 		<English>Prosecution Instability Countdown</English>
 		<French>Compte &#224; rebours de la poursuite de l'Instabilit&#233;</French>
-		<German>Prosecution Instability Countdown</German>
+		<German>Countdown f&#252;r Instabilit&#228;t durch Inquisition</German>
 		<Italian>Prosecution Instability Countdown</Italian>
 		<Spanish>Prosecution Instability Countdown</Spanish>
 		<Russian>Prosecution Instability Countdown</Russian>
@@ -254,7 +254,7 @@
 		<Tag>TXT_KEY_FAITH_PROSECUTION_INSTABILITY</Tag>
 		<English>Prosecution Instability:</English>
 		<French>Poursuite de l'Instabilit&#233;:</French>
-		<German>Prosecution Instability:</German>
+		<German>Instabilit&#228;t durch Inquisition:</German>
 		<Italian>Prosecution Instability:</Italian>
 		<Spanish>Prosecution Instability:</Spanish>
 		<Russian>Prosecution Instability:</Russian>
@@ -263,7 +263,7 @@
 		<Tag>TXT_KEY_FAITH_STABILITY</Tag>
 		<English>Stability:</English>
 		<French>Stabilit&#233;:</French>
-		<German>Stability:</German>
+		<German>Stabilit&#228;t:</German>
 		<Italian>Stability:</Italian>
 		<Spanish>Stability:</Spanish>
 		<Russian>Stability:</Russian>
@@ -272,7 +272,7 @@
 		<Tag>TXT_KEY_FAITH_CIVIC</Tag>
 		<English>Civic Upkeep:</English>
 		<French>Entretient des Doctrines:</French>
-		<German>Civic Upkeep:</German>
+		<German>Staatsformunterhalt:</German>
 		<Italian>Civic Upkeep:</Italian>
 		<Spanish>Civic Upkeep:</Spanish>
 		<Russian>Civic Upkeep:</Russian>
@@ -281,7 +281,7 @@
 		<Tag>TXT_KEY_FAITH_GROWTH</Tag>
 		<English>City Growth:</English>
 		<French>Croissance Urbaine:</French>
-		<German>City Growth:</German>
+		<German>Stadtwachstum:</German>
 		<Italian>City Growth:</Italian>
 		<Spanish>City Growth:</Spanish>
 		<Russian>City Growth:</Russian>
@@ -290,7 +290,7 @@
 		<Tag>TXT_KEY_FAITH_UNITS</Tag>
 		<English>Unit Production Cost:</English>
 		<French>Co&#251;t de la Production d'Unit&#233;e:</French>
-		<German>Unit Production Cost:</German>
+		<German>Einheitenproduktion:</German>
 		<Italian>Unit Production Cost:</Italian>
 		<Spanish>Unit Production Cost:</Spanish>
 		<Russian>Unit Production Cost:</Russian>
@@ -299,7 +299,7 @@
 		<Tag>TXT_KEY_FAITH_SCIENCE</Tag>
 		<English>Tech Breaker Cost:</English>
 		<French>Co&#251;t de l'acc&#233;l&#233;ration des sciences:</French>
-		<German>Tech Breaker Cost:</German>
+		<German>Technologiekosten:</German>
 		<Italian>Tech Breaker Cost:</Italian>
 		<Spanish>Tech Breaker Cost:</Spanish>
 		<Russian>Tech Breaker Cost:</Russian>
@@ -308,7 +308,7 @@
 		<Tag>TXT_KEY_FAITH_PRODUCTION</Tag>
 		<English>Wonder and Project Production Cost:</English>
 		<French>Co&#251;t de la Production de Merveilles et Projets:</French>
-		<German>Wonder and Project Production Cost:</German>
+		<German>Wunder und Projekt Produktion:</German>
 		<Italian>Wonder and Project Production Cost:</Italian>
 		<Spanish>Wonder and Project Production Cost:</Spanish>
 		<Russian>Wonder and Project Production Cost:</Russian>
@@ -317,7 +317,7 @@
 		<Tag>TXT_KEY_FAITH_DIPLOMACY</Tag>
 		<English>Diplomacy Boost:</English>
 		<French>Hausse Diplomatique:</French>
-		<German>Diplomacy Boost:</German>
+		<German>Diplomatie Bonus:</German>
 		<Italian>Diplomacy Boost:</Italian>
 		<Spanish>Diplomacy Boost:</Spanish>
 		<Russian>Diplomacy Boost:</Russian>
@@ -326,7 +326,7 @@
 		<Tag>TXT_KEY_FAITH_GIFT</Tag>
 		<English>You have received a gift of gold from the Pope</English>
 		<French>Le Pape vous &#224; offert de l'or</French>
-		<German>You have received a gift of gold from the Pope</German>
+		<German>Sie haben ein Goldgeschenk vom Papst erhalten.</German>
 		<Italian>You have received a gift of gold from the Pope</Italian>
 		<Spanish>You have received a gift of gold from the Pope</Spanish>
 		<Russian>You have received a gift of gold from the Pope</Russian>
@@ -335,7 +335,7 @@
 		<Tag>TXT_KEY_FAITH_BUILDING1</Tag>
 		<English>The Pope has built a </English>
 		<French>Le Pape a construire un </French>
-		<German>The Pope has built a </German>
+		<German>Der Papst hat ein/e</German>
 		<Italian>The Pope has built a </Italian>
 		<Spanish>The Pope has built a </Spanish>
 		<Russian>The Pope has built a </Russian>
@@ -344,7 +344,7 @@
 		<Tag>TXT_KEY_FAITH_BUILDING2</Tag>
 		<English> in your city of </English>
 		<French> dans la ville de </French>
-		<German> in your city of </German>
+		<German> in euer Stadt </German>
 		<Italian> in your city of </Italian>
 		<Spanish> in your city of </Spanish>
 		<Russian> in your city of </Russian>
@@ -353,7 +353,7 @@
 		<Tag>TXT_KEY_FAITH_SAINT</Tag>
 		<English>Become a Saint and strengthen the Faith of your nation.</English>
 		<French>Devenir un saint et renforcer la foi de votre nation.</French>
-		<German>Become a Saint and strengthen the Faith of your nation.</German>
+		<German>Werdet ein Heiliger und st&#228;rkt den Glauben euer Zivilisation.</German>
 		<Italian>Become a Saint and strengthen the Faith of your nation.</Italian>
 		<Spanish>Become a Saint and strengthen the Faith of your nation.</Spanish>
 	</TEXT>
