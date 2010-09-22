@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_SPECIALIST_SCHOLAR</Tag>
 		<English>Scholar</English>
 		<French>Scientifique</French>
-		<German>Scholar</German>
+		<German>Gelehrter</German>
 		<Italian>Scholar</Italian>
 		<Spanish>Scholar</Spanish>
 		<Russian>&#211;&#247;&#229;&#237;&#251;&#233;</Russian>
@@ -18,7 +18,7 @@
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SCHOLAR</Tag>
 		<English>Great Scholar</English>
 		<French>Scientifique Illustre</French>
-		<German>Great Scholar</German>
+		<German>Groﬂer Gelehrter</German>
 		<Italian>Great Scholar</Italian>
 		<Spanish>Great Scholar</Spanish>
 		<Russian>&#194;&#229;&#235;&#232;&#234;&#232;&#233; &#211;&#247;&#229;&#237;&#251;&#233;</Russian>
@@ -27,7 +27,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_THE_PIOUS</Tag>
 		<English>Robert the Pious</English>
 		<French>Robert le Pieux</French>
-		<German>Robert the Pious</German>
+		<German>Robert der Fromme</German>
 		<Italian>Robert the Pious</Italian>
 		<Spanish>Robert the Pious</Spanish>
 		<Russian>&#193;&#235;&#224;&#227;&#238;&#247;&#229;&#241;&#242;&#232;&#226;&#251;&#233; &#208;&#238;&#225;&#229;&#240;&#242;</Russian>
@@ -963,7 +963,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_HIEROCLES_OF_ATHENS</Tag>
 		<English>Hierocles of Athens</English>
 		<French>Hierocles of Athens</French>
-		<German>Hierocles of Athens</German>
+		<German>Hierocles von Athen</German>
 		<Italian>Hierocles of Athens</Italian>
 		<Spanish>Hierocles of Athens</Spanish>
 		<Russian>Hierocles of Athens</Russian>
@@ -1233,7 +1233,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_ANTHEMIUS_OF_TRALLES</Tag>
 		<English>Anthemius of Tralles</English>
 		<French>Anthemius of Tralles</French>
-		<German>Anthemius of Tralles</German>
+		<German>Anthemius von Tralles</German>
 		<Italian>Anthemius of Tralles</Italian>
 		<Spanish>Anthemius of Tralles</Spanish>
 		<Russian>Anthemius of Tralles</Russian>
@@ -1512,7 +1512,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_BALDWIN_OF_JERUSALEM</Tag>
 		<English>Baldwin of Jerusalem</English>
 		<French>Baldwin of Jerusalem</French>
-		<German>Baldwin of Jerusalem</German>
+		<German>Baldwin von Jerusalem</German>
 		<Italian>Baldwin of Jerusalem</Italian>
 		<Spanish>Baldwin of Jerusalem</Spanish>
 		<Russian>Baldwin of jerusalem</Russian>
@@ -1629,7 +1629,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_THE_BOLD</Tag>
 		<English>Vladimir the Bold</English>
 		<French>Vladimir the Bold</French>
-		<German>Vladimir the Bold</German>
+		<German>Vladimir der Mutige</German>
 		<Italian>Vladimir the Bold</Italian>
 		<Spanish>Vladimir the Bold</Spanish>
 		<Russian>Vladimir the Bold</Russian>
@@ -1701,7 +1701,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_CHARLES_THE_BALD</Tag>
 		<English>Charles the Bald</English>
 		<French>Charles the Bald</French>
-		<German>Charles the Bald</German>
+		<German>Charles der Kahle</German>
 		<Italian>Charles the Bald</Italian>
 		<Spanish>Charles the Bald</Spanish>
 		<Russian>Charles the Bald</Russian>
@@ -1737,7 +1737,7 @@
 		<Tag>TXT_KEY_GREAT_PERSON_MAURICE_OF_NASSAU</Tag>
 		<English>Maurice of Nassau</English>
 		<French>Maurice of Nassau</French>
-		<German>Maurice of Nassau</German>
+		<German>Maurice von Nassau</German>
 		<Italian>Maurice of Nassau</Italian>
 		<Spanish>Maurice of Nassau</Spanish>
 		<Russian>Maurice of Nassau</Russian>
