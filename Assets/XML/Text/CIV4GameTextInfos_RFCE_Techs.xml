@@ -1189,7 +1189,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Militärische Taktiken</Text>
+			<Text>Militärwissenschaften</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1414,7 +1414,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Maschinenwerkzeug</Text>
+			<Text>Maschinenbau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1814,8 +1814,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Schiffsbau</Text>
-			<Gender>Male</Gender>
+			<Text>Hochseeschifffahrt</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
@@ -1864,7 +1864,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Kettenpanzer</Text>
+			<Text>Kettenpanzerung</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
