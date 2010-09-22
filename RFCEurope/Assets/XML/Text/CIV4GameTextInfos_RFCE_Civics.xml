@@ -226,7 +226,7 @@
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
 		<English>+1 stability for each colony founded.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>+1 Stabilität für jede gegründete Kolonie</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -351,7 +351,7 @@
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
 		<English>[ICON_BULLET]+1 stability point for each city outside the core area</English>
 		<French>[ICON_BULLET]+1 points de stabilit&#233; par ville fond&#233;e en dehors du coeur de l'Empire</French>
-		<German>[ICON_BULLET]+2 zus&#228;tzliche Stabilit&#228;tspunkte f&#252;r jede Stadt, die mindestens 15 Gel&#228;ndefelder von der Hauptstadt entfernt gegr&#252;ndet wurde</German>
+		<German>[ICON_BULLET]+2 zus&#228;tzliche Stabilit&#228;tspunkte f&#252;r jede Stadt außerhalb des Kerngebiets</German>
 		<Italian>[ICON_BULLET]+2 punti stabilit&#224; addizionali per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
 		<Spanish>[ICON_BULLET]+2 puntos de estabilidad adicionales por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
 		<Russian>[ICON_BULLET]+1 stability point for each city outside the core area</Russian>
@@ -906,12 +906,12 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Freie Marktwirtschaft</Text>
+			<Text>Grunddherrschaft</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Grunddherrschaft</Text>
+			<Text>Manorialism</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -956,12 +956,12 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Umweltschutz</Text>
+			<Text>Handelsrepublik</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Handelsrepublik</Text>
+			<TextMerchant Republic></Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -1100,7 +1100,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
 		<English>Adds stability for each colony founded</English>
-		<French/><German/><Italian/><Spanish/><Russian/></TEXT>
+		<French/>
+		<German>Stabilitätspunkte für jede errichtete Kolonie</German>
+		<Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
 		<English>Adds stability for each city outside the core area</English>
