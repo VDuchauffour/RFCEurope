@@ -13,7 +13,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Córdobaner:Die Córdobaner, den Córdobanern</Text>
+			<Text>Cordobaner:Die Cordobaner, den Cordobanern</Text>
 			<Gender>Male:Male:Male</Gender>
 			<Plural>1:1:1</Plural>
 		</German>
@@ -38,7 +38,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Córdoba</Text>
+			<Text>Cordoba</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -63,7 +63,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>
-			<Text>Córdobanisch:córdobanischen:córdobanische</Text>
+			<Text>Cordobanisch:cordobanischen:cordobanische</Text>
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
