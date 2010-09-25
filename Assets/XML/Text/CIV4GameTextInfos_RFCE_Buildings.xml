@@ -10,7 +10,9 @@
 		<English>Dungeon</English>
 		<French>Donjon</French>
 		<German>Kerker</German>
-		<Italian/><Spanish/><Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Italian>Prigione Sotterranea</Italian>
+		<Spanish>Mazmorra</Spanish>
+		<Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE</Tag>
 		<English>Archery Range</English>
@@ -362,9 +364,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU</Tag>
 		<English>Ch&#226;teau</English>
-		<French>Grand Château</French>
+		<French>Grand Ch&#226;teau</French>
 		<German>Ch&#226;teau</German>
-		<Italian/><Spanish/><Russian>&#199;&#224;&#236;&#238;&#234;</Russian></TEXT>
+		<Italian>Ch&#226;teau</Italian>
+		<Spanish>Ch&#226;teau</Spanish>
+		<Russian>&#199;&#224;&#236;&#238;&#234;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
 		<English>Infirmary</English>
