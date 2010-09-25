@@ -512,7 +512,9 @@
 		<English>Bazaar</English>
 		<French>Bazar</French>
 		<German>Bazar</German>
-		<Italian/><Spanish/><Russian>&#193;&#224;&#231;&#224;&#240;</Russian></TEXT>
+		<Italian>Bazar</Italian>
+		<Spanish>Bazar</Spanish>
+		<Russian>&#193;&#224;&#231;&#224;&#240;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
