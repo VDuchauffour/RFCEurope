@@ -137,10 +137,10 @@ class RFCEBalance:
 		gc.setProductionModifiers(iSweden,     50,  50, 100, 100 )
 		gc.setProductionModifiers(iDutch,     100,  50,  50,  50 )
 		gc.setProductionModifiers(iPope,      300, 200, 100, 150 )
-		gc.setProductionModifiers(iIndependent, 150, 100, 500, 250 )
-		gc.setProductionModifiers(iIndependent2, 150, 100, 500, 250 )
-		gc.setProductionModifiers(iIndependent3, 150, 100, 500, 250 )
-		gc.setProductionModifiers(iIndependent4, 150, 100, 500, 250 )
+		gc.setProductionModifiers(iIndependent, 170, 100, 400, 200 ) #The peaceful ones
+		gc.setProductionModifiers(iIndependent2, 170, 100, 400, 200 )
+		gc.setProductionModifiers(iIndependent3, 125, 100, 600, 300 ) #The warlike ones
+		gc.setProductionModifiers(iIndependent4, 125, 100, 600, 300 )
 		gc.setProductionModifiers(iBarbarian, 125, 100, 1000, 350 )
 
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
