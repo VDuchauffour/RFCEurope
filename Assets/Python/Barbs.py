@@ -155,6 +155,8 @@ class Barbs:
 		#Christians in Spain
 		if (iGameTurn >= con.i700AD and iGameTurn <= con.i880AD):
 			self.spawnUnits( iBarbarian, (24,32),(28,40), con.iAxeman, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (24,32),(28,40), con.iSpearman, 1 + iHandicap*2, iGameTurn,9,3,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (24,32),(28,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,6,5,utils.outerInvasion,1)
 		
 		#Berbers in North Africa
 		#if (iGameTurn >= con.i1000AD and iGameTurn < con.i1060AD):

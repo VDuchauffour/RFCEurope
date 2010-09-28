@@ -143,7 +143,7 @@ i1750AD = con.i1750AD
 # 3Miro: areas
 tBurgundyControl = (( 46, 40, 52, 53 ),(44, 33, 48,39))
 tByzantineControl = ( 68, 15, 99, 26 )
-tFrankControl = ((35,31,41,37),(44,33,48,42),(52,40,57,48),(49,31,57,37)) #Pyrenees, Rhone, W Germany, Northern Italy
+tFrankControl = ((35,31,41,35),(37,36,42,40),(44,33,48,42),(52,40,57,48),(49,31,57,37)) # Northeast Spain, Southwest France, Rhone, W Germany, Northern Italy
 tArabiaControl = ( (93, 0, 99, 17), (76, 0, 92, 4), (31, 0, 54, 21), (55, 0, 88, 9) ) # Levant and Allepo and Antioch, Egypt, Egypt and Libia, Algeria and Tunisia
 tBulgariaControl = ( 66, 23, 82, 32 )
 tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
@@ -470,7 +470,7 @@ class Victory:
 			if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
 				bEnoughCities = True
 				for region in tFrankControl:
-					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
+					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3], region[4])
 					if iCity < 2:
 						bEnoughCities = False
 				if bEnoughCities:
@@ -1206,7 +1206,7 @@ class Victory:
                 if (iBuilding == con.iMarcoPolo or iBuilding == con.iSanMarco):
                         print("marcoPolo or SanMarco being built")
                         if (iPlayer == iVenecia):
-                                if (pVenecia.isAlive)):
+                                if (pVenecia.isAlive()):
                                         if (self.getGoal(iVenecia, 2) == -1):
                                                 iWondersBuilt = self.getWondersBuilt(iVenecia)
                                                 print("Venecia has:",iWondersBuilt,"Wonders")
