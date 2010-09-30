@@ -146,7 +146,7 @@ tByzantineControl = ( 68, 15, 99, 26 )
 tFrankControl = ((35,31,41,35),(37,36,42,40),(44,33,48,42),(52,40,57,48),(49,31,57,37)) # Northeast Spain, Southwest France, Rhone, W Germany, Northern Italy
 tArabiaControl = ( (93, 0, 99, 17), (76, 0, 92, 4), (31, 0, 54, 21), (55, 0, 88, 9) ) # Levant and Allepo and Antioch, Egypt, Egypt and Libia, Algeria and Tunisia
 tBulgariaControl = ( 66, 23, 82, 32 )
-tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
+#tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
 tSpainControl = (( 20, 24, 35, 40 ),(36, 30, 41, 35)) # Iberia
 tSpainControl2 = ((15,14,48,23),(49,6,52,18),(49,22,50,29),(54,16,58,19),(59,19,64,27),(51,25,58,33),(49,43,58,39) ) # Africa x2, Islands (Corsica + Sardines), Sicily, Italy x3
 tNorseSettle = ( (35, 46, 46, 50 ), (39, 52, 45, 67 ), (35, 52, 38, 56 ), (31, 57, 37, 62 ), ( 0, 69, 4, 72 ), ( 54, 16, 58, 19)  ) # North France, Britain, Britain, Ireland, Iseland, Sicily
@@ -552,16 +552,22 @@ class Victory:
 				else:
 					self.setGoal( iCordoba, 0, 0 ) 
 		
-			if ( iGameTurn == i1300AD+1 and self.getGoal( iCordoba, 1) == -1 ):
+			if ( iGameTurn == i1101AD+1 and self.getGoal( iCordoba, 1) == -1 ):
 				self.setGoal( iCordoba, 1, 0 )
 			
-			#if ( iGameTurn == i1500AD and self.getGoal( iCordoba, 2 ) == -1 ):
-			#	self.setGoal( iCordoba, 2, 1 )
-			if ( iGameTurn == i1491AD and self.getGoal(iCordoba,2) == -1 ):
-				if (gc.countOwnedCities( iCordoba, tCordobaControl[0][0], tCordobaControl[0][1], tCordobaControl[0][2], tCordobaControl[0][3] ) >= 4 and gc.countOwnedCities( iCordoba, tCordobaControl[1][0], tCordobaControl[1][1], tCordobaControl[1][2], tCordobaControl[1][3] ) >= 4 ):
-					self.setGoal( iCordoba, 2, 1 )
-				else:
-					self.setGoal( iCordoba, 2, 0 )
+
+			if (iGameTurn == i1101AD):
+                                        print ("cordoba culture", pCordoba.countTotalCulture())
+                                        if (pCorodba.countTotalCulture() >= 7000):
+                                                self.setGoal( iCordoba, 2, 1 )
+                                        else:
+                                                self.setGoal( iCordoba, 2, 0 )
+
+			#if ( iGameTurn == i1491AD and self.getGoal(iCordoba,2) == -1 ):
+			#	if (gc.countOwnedCities( iCordoba, tCordobaControl[0][0], tCordobaControl[0][1], tCordobaControl[0][2], tCordobaControl[0][3] ) >= 4 and gc.countOwnedCities( iCordoba, tCordobaControl[1][0], tCordobaControl[1][1], tCordobaControl[1][2], tCordobaControl[1][3] ) >= 4 ):
+			#		self.setGoal( iCordoba, 2, 1 )
+			#	else:
+			#		self.setGoal( iCordoba, 2, 0 )
 
 								
 		elif ( iPlayer == iSpain and pSpain.isAlive() ):
