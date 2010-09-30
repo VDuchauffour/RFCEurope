@@ -308,9 +308,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN3</Tag>
-		<English>Build 6 Colonial Projects.</English>
+		<English>Have the most Colonial Projects in 1600AD.</English>
 		<French>Construire 6 Projets Coloniaux.</French>
-		<German>Errichten Sie 6 Kolonien</German>
+		<German>Besitzen Sie im Jahr 1600 n. Chr. am meisten Kolonien</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
@@ -345,7 +345,7 @@
 
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>
-		<English>Conquer Constantinople by 1200AD</English>
+		<English>Conquer Constantinople by 1200AD.</English>
 		<French>Conqu&#233;rir l'Ile de Rhodes en 1500 ap.JC.</French>
 		<German>Erobern Sie Konstantinople bis zum Jahr 1200 n. Chr.</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
@@ -354,7 +354,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
-		<English>Control the Dalmatian coast and Rhodos and have a city in Greece, Crete and Cyprus by 1500AD</English>
+		<English>Control the Dalmatian coast and Rhodos and have a city in Greece, Crete and Cyprus by 1500AD.</English>
 		<French>Contr&#244;ler la c&#244;te Dalmate et avoir une ville en Gr&#232;ce, Cr&#232;te et Chypre en 1500 ap.JC.</French>
 		<German>Kontrollieren Sie die dalmatische Küste und Rhodos und haben Sie eine Stadt in Griechenland, Kreta und Zypern bis zum Jahr 1500 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
@@ -363,9 +363,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
-		<English>Control 10 Luxury resources by 1500AD. </English>
+		<English>Build Marco Polo's Embassy and San Marco Basilica and control 10 Luxury resources by 1500AD.</English>
 		<French>Avoir 10 resources Luxeuses en 1500 ap.JC.</French>
-		<German>Kontrollieren Sie 10 Luxusressourcen bis zum Jahr 1500 n. Chr.</German>
+		<German>Bauen Sie Marco Polos Botschaft und den Markusdom und kontrollieren Sie 10 Luxusressourcen bis zum Jahr 1500 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
 		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; 8 &#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#236;&#232; &#240;&#229;&#241;&#243;&#240;&#241;&#224;&#236;&#232; 1570AD.</Russian>

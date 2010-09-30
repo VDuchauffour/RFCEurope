@@ -591,11 +591,22 @@ class Victory:
 				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[6][0], tSpainControl2[6][1], tSpainControl2[6][2], tSpainControl2[6][3] )  
 				if ( iCountCities >= 4 ):
 					self.setGoal( iSpain, 1, 1 )
-				
-		
-			if ( self.getGoal( iSpain, 2 ) == -1 ):
-				if ( self.getColonies( iSpain ) > 5 ):
+						
+			if ( iGameTurn == i1600AD and self.getGoal( iSpain, 2) == -1 ):
+				iColonies = self.getColonies( iSpain )
+				iMost = true
+				for iCiv in range( iNumPlayers ):
+					if ( iCiv != iSpain and self.getPlayer( iCiv ).isAlive() ):
+						if (self.getColonies(iCiv) => iColonies):
+							iMost = false
+				if ( iMost ):
 					self.setGoal( iSpain, 2, 1 )
+				else:
+					self.setGoal( iSpain, 2, 0 )
+		
+			#if ( self.getGoal( iSpain, 2 ) == -1 ):
+			#	if ( self.getColonies( iSpain ) > 5 ):
+			#		self.setGoal( iSpain, 2, 1 )
 					
 		elif ( iPlayer == iNorse and pNorse.isAlive() ):
 		
