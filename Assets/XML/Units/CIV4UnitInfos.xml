@@ -9165,7 +9165,16 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes/>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -9745,16 +9754,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -9832,8 +9832,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -9943,7 +9943,16 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes/>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<iFlankingStrength>100</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -10130,20 +10139,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
@@ -10225,8 +10221,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>-10</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -10343,10 +10339,6 @@
 				</FlankingStrike>
 				<FlankingStrike>
 					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -10532,20 +10524,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -10626,8 +10605,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -10737,16 +10716,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -10772,7 +10742,7 @@
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -10827,8 +10797,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -10938,16 +10908,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -11028,8 +10989,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>10</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -11139,16 +11100,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -11229,8 +11181,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -11340,16 +11292,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -11375,7 +11318,7 @@
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -11430,8 +11373,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -11546,16 +11489,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -11581,7 +11515,7 @@
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -11636,8 +11570,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -11747,16 +11681,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FIELD_ARTILLERY</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -11836,8 +11761,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -11942,16 +11867,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FIELD_ARTILLERY</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -12032,8 +11948,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -12151,16 +12067,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FIELD_ARTILLERY</FlankingStrikeUnitClass>
-					<iFlankingStrength>100</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -12241,8 +12148,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>100</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -18045,8 +17952,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>0</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>100</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
