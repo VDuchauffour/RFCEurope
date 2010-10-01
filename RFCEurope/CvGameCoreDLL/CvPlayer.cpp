@@ -31,6 +31,15 @@
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      05/09/09                                jdog5000      */
+/**                                                                                              */
+/** General AI                                                                                   */
+/*************************************************************************************************/
+#include "CvDLLFlagEntityIFaceBase.h"
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
 
 
 #include "CvRhyes.h" //Rhye
@@ -6632,7 +6641,19 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 
 	if (!isHuman())
 	{
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      02/04/09                                jdog5000      */
+/**                                                                                              */
+/**                                                                                              */
+/*************************************************************************************************/
+/*
 		if (GET_TEAM(getTeam()).hasMetHuman())
+*/
+		// Strange anti-human bias ...
+		if( GET_TEAM(getTeam()).getHasMetCivCount(true) > 0 )
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
 		{
 			iFreeUnits += getNumCities(); // XXX
 			iFreeMilitaryUnits += getNumCities(); // XXX
@@ -21053,7 +21074,10 @@ bool CvPlayer::canDefyResolution(VoteSourceTypes eVoteSource, const VoteSelectio
 	{
 		if (!::atWar(getTeam(), GET_PLAYER(kData.ePlayer).getTeam()))
 		{
-			return true;
+			if( !GET_TEAM(getTeam()).isAVassal() )
+			{
+				return true;
+			}
 		}
 	}
 	else if (GC.getVoteInfo(kData.eVote).isForcePeace())

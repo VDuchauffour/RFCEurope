@@ -52,7 +52,18 @@ public:
 	int AI_neededSeaWorkers();
 
 	bool AI_isDefended(int iExtra = 0);
-	bool AI_isAirDefended(int iExtra = 0);
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD							9/19/08		jdog5000		*/
+/**																				*/
+/**		Air AI																	*/
+/********************************************************************************/
+/* original BTS code
+	DllExport bool AI_isAirDefended(int iExtra = 0);
+*/
+	DllExport bool AI_isAirDefended(bool bCountLand = false, int iExtra = 0);
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
 	bool AI_isDanger();
 
 	int AI_neededDefenders();

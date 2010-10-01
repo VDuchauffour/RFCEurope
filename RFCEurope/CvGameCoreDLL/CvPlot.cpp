@@ -26,6 +26,15 @@
 #include "CvDLLPythonIFaceBase.h"
 #include "CvEventReporter.h"
 #include "CvRhyes.h" //Rhye
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
+/**                                                                                              */
+/** General AI                                                                                   */
+/*************************************************************************************************/
+#include "FAStarNode.h"
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
 
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
@@ -2955,6 +2964,168 @@ int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
 	return iCount;
 }
 
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      02/02/09                                jdog5000      */
+/**                                                                                              */
+/** General AI                                                                                   */
+/*************************************************************************************************/
+bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
+{
+	int iI;
+	CvPlot* pLoopPlot = NULL;
+	CvCity* pLoopCity = NULL;
+
+	FAssert(eAttackerTeam != NO_TEAM);
+
+	if( area()->getNumCities() == 0 )
+	{
+		return false;
+	}
+
+	// Imitate instatiation of irrigated finder, pIrrigatedFinder
+	// Can't mimic step finder initialization because it requires creation from the exe
+	std::vector<TeamTypes> teamVec;
+	teamVec.push_back(eAttackerTeam);
+	teamVec.push_back(NO_TEAM);
+	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
+
+	bool bFound = false;
+
+	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	{
+		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+
+		if (pLoopPlot != NULL)
+		{
+			if( pLoopPlot->area() == area() )
+			{
+				pLoopCity = pLoopPlot->getPlotCity();
+
+				if (pLoopCity != NULL)
+				{
+					if( bIgnoreBarb && (pLoopCity->isBarbarian() || GET_PLAYER(pLoopCity->getOwnerINLINE()).isMinorCiv()) )
+					{
+						continue;
+					}
+
+					if( GET_TEAM(eAttackerTeam).AI_getWarPlan(pLoopCity->getTeam()) != NO_WARPLAN )
+					{
+						bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), false, 0, true);
+
+						if( bFound )
+						{
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
+
+	return bFound;
+}
+
+bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer )
+{
+	int iI;
+	CvPlot* pLoopPlot = NULL;
+	CvCity* pLoopCity = NULL;
+
+	FAssert(eMoveTeam != NO_TEAM);
+
+	if( area()->getNumCities() == 0 )
+	{
+		return false;
+	}
+
+	if( (area()->getCitiesPerPlayer(eOtherPlayer) == 0) )
+	{
+		return false;
+	}
+
+	// Imitate instatiation of irrigated finder, pIrrigatedFinder
+	// Can't mimic step finder initialization because it requires creation from the exe
+	std::vector<TeamTypes> teamVec;
+	teamVec.push_back(eMoveTeam);
+	teamVec.push_back(GET_PLAYER(eOtherPlayer).getTeam());
+	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
+
+	bool bFound = false;
+
+	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	{
+		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+
+		if (pLoopPlot != NULL)
+		{
+			if( pLoopPlot->area() == area() )
+			{
+				pLoopCity = pLoopPlot->getPlotCity();
+
+				if (pLoopCity != NULL)
+				{
+					if( (pLoopCity->getOwnerINLINE() == eOtherPlayer) )
+					{
+						bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), false, 0, true);
+
+						if( bFound )
+						{
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
+
+	return bFound;
+}
+
+int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot )
+{
+	FAssert(eTeam != NO_TEAM);
+
+	if( pTargetPlot->area() != area() )
+	{
+		return false;
+	}
+
+	// Imitate instatiation of irrigated finder, pIrrigatedFinder
+	// Can't mimic step finder initialization because it requires creation from the exe
+	std::vector<TeamTypes> teamVec;
+	teamVec.push_back(eTeam);
+	teamVec.push_back(NO_TEAM);
+	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
+	FAStarNode* pNode;
+
+	int iPathDistance = -1;
+	gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE(), false, 0, true);
+
+	pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+
+	if (pNode != NULL)
+	{
+		iPathDistance = pNode->m_iData1;
+	}
+
+	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
+
+	return iPathDistance;
+}
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
+
 
 PlayerTypes CvPlot::calculateCulturalOwner() const
 {
@@ -3905,7 +4076,18 @@ CvArea* CvPlot::area() const
 }
 
 
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD						01/02/09		jdog5000		*/
+/**																				*/
+/**		General AI																*/
+/********************************************************************************/
+/* original BTS code
 CvArea* CvPlot::waterArea() const
+*/
+CvArea* CvPlot::waterArea(bool bNoImpassable) const
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/	
 {
 	CvArea* pBestArea;
 	CvPlot* pAdjacentPlot;
@@ -3927,7 +4109,18 @@ CvArea* CvPlot::waterArea() const
 
 		if (pAdjacentPlot != NULL)
 		{
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD						01/02/09		jdog5000		*/
+/**																				*/
+/**		General AI																*/
+/********************************************************************************/
+/* original BTS code
 			if (pAdjacentPlot->isWater())
+*/
+			if (pAdjacentPlot->isWater() && (!bNoImpassable || !(pAdjacentPlot->isImpassable())))
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
 			{
 				iValue = pAdjacentPlot->area()->getNumTiles();
 

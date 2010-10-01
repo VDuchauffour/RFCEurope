@@ -850,6 +850,12 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		return;
 	}
 
+/********************************************************************************/
+	/**		BETTER_BTS_AI_MOD						10/19/08	Roland J & jdog5000	*/
+	/**																				*/
+	/**		Combat mechanics														*/
+	/********************************************************************************/
+	/*
 	int iOurOdds = (100 * iOurStrength) / std::max(1, iTotalStrength);
 
 	int iOurRoundDamage = (pInterceptor->currInterceptionProbability() * GC.getDefineINT("MAX_INTERCEPTION_DAMAGE")) / 100;
@@ -859,10 +865,55 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		iTheirRoundDamage = std::max(GC.getDefineINT("MIN_INTERCEPTION_DAMAGE"), iTheirRoundDamage);
 	}
 
+	//original BTS code
 	int iTheirDamage = 0;
 	int iOurDamage = 0;
 
 	for (int iRound = 0; iRound < GC.getDefineINT("INTERCEPTION_MAX_ROUNDS"); ++iRound)
+	*/
+	// For air v air, more rounds and factor in strength for per round damage
+	int iOurOdds = (100 * iOurStrength) / std::max(1, iTotalStrength);
+	int iMaxRounds = 0;
+	int iOurRoundDamage = 0;
+	int iTheirRoundDamage = 0;
+
+	// Air v air is more like standard comabt
+	// Round damage in this case will now depend on strength and interception probability
+	if( GC.getDefineINT("BBAI_AIR_COMBAT") > 0 && (DOMAIN_AIR == pInterceptor->getDomainType() && DOMAIN_AIR == getDomainType()) )
+	{
+		int iBaseDamage = GC.getDefineINT("AIR_COMBAT_DAMAGE");
+		int iOurFirepower = ((airMaxCombatStr(pInterceptor) + iOurStrength + 1) / 2);
+		int iTheirFirepower = ((pInterceptor->airMaxCombatStr(this) + iTheirStrength + 1) / 2);
+
+		int iStrengthFactor = ((iOurFirepower + iTheirFirepower + 1) / 2);
+
+		int iTheirInterception = std::max(pInterceptor->maxInterceptionProbability(),2*GC.getDefineINT("MIN_INTERCEPTION_DAMAGE"));
+		int iOurInterception = std::max(maxInterceptionProbability(),2*GC.getDefineINT("MIN_INTERCEPTION_DAMAGE"));
+
+		iOurRoundDamage = std::max(1, ((iBaseDamage * (iTheirFirepower + iStrengthFactor) * iTheirInterception) / ((iOurFirepower + iStrengthFactor) * 100)));
+		iTheirRoundDamage = std::max(1, ((iBaseDamage * (iOurFirepower + iStrengthFactor) * iOurInterception) / ((iTheirFirepower + iStrengthFactor) * 100)));
+
+		iMaxRounds = 2*GC.getDefineINT("INTERCEPTION_MAX_ROUNDS") - 1;
+	}
+	else
+	{
+		iOurRoundDamage = (pInterceptor->currInterceptionProbability() * GC.getDefineINT("MAX_INTERCEPTION_DAMAGE")) / 100;
+		iTheirRoundDamage = (currInterceptionProbability() * GC.getDefineINT("MAX_INTERCEPTION_DAMAGE")) / 100;
+		if (getDomainType() == DOMAIN_AIR)
+		{
+			iTheirRoundDamage = std::max(GC.getDefineINT("MIN_INTERCEPTION_DAMAGE"), iTheirRoundDamage);
+		}
+
+		iMaxRounds = GC.getDefineINT("INTERCEPTION_MAX_ROUNDS");
+	}
+
+	int iTheirDamage = 0;
+	int iOurDamage = 0;
+
+	for (int iRound = 0; iRound < iMaxRounds; ++iRound)
+	/********************************************************************************/
+	/**		BETTER_BTS_AI_MOD						END								*/
+	/********************************************************************************/
 	{
 		if (GC.getGameINLINE().getSorenRandNum(100, "Air combat") < iOurOdds)
 		{
@@ -4766,29 +4817,62 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 
 	bool bOldTradeNet;
 	bool bChanged = false;
-
-	for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      06/01/09                                jdog5000      */
+/**                                                                                              */
+/** Bugfix                                                                                       */
+/*************************************************************************************************/
+	//gDLL->getFAStarIFace()->ForceReset(&GC.getStepFinder());
+	bool bValid = false;
+	for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
 	{
-		if (isEnemy((TeamTypes)iTeam))
+		for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
 		{
-			for (int i = -iBlockadeRange; i <= iBlockadeRange; ++i)
+			CvPlot* pLoopPlot = ::plotXY(getX_INLINE(), getY_INLINE(), i, j);
+
+			if (NULL != pLoopPlot && pLoopPlot->isWater() && pLoopPlot->area() == area())
 			{
-				for (int j = -iBlockadeRange; j <= iBlockadeRange; ++j)
+
+				int iPathDist = GC.getMapINLINE().calculatePathDistance(plot(),pLoopPlot);
+				
+				// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
+				// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable 
+				// circumstances.  The fix below is a hack to address the permanent one or two tile blockades which 
+				// would appear randomly, it should cause extra blockade clearing only very rarely.
+				/*
+				if( iPathDist > iBlockadeRange )
 				{
-					CvPlot* pLoopPlot = ::plotXY(getX_INLINE(), getY_INLINE(), i, j);
-
-					if (NULL != pLoopPlot && pLoopPlot->isWater() && pLoopPlot->area() == area())
+					// No blockading on other side of an isthmus
+					continue;
+				}
+				*/
+				
+				if( (iPathDist >= 0) && (iPathDist <= iBlockadeRange + 2) )
+				{
+					for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
 					{
-						if (!bChanged)
+						if (isEnemy((TeamTypes)iTeam))
 						{
-							bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
-						}
+							bValid = (iPathDist <= iBlockadeRange);
+							if( !bValid && (iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) == 1) )
+							{
+								bValid = true;
+							}
 
-						pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
+							if( bValid )
+							{
+								if (!bChanged)
+								{
+									bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
+								}
 
-						if (!bChanged)
-						{
-							bChanged = (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam));
+								pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
+
+								if (!bChanged)
+								{
+									bChanged = (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam));
+								}
+							}
 						}
 					}
 				}
@@ -4805,6 +4889,9 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 			GC.getGameINLINE().updatePlotGroups();
 		}
 	}
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
 }
 
 
@@ -8250,10 +8337,21 @@ int CvUnit::airMaxCombatStr(const CvUnit* pOther) const
 		iModifier += getKamikazePercent();
 	}
 
+	/********************************************************************************/
+	/**		BETTER_BTS_AI_MOD						8/16/08		DanF5771 & jdog5000	*/
+	/**																				*/
+	/**		Bugfix																	*/
+	/********************************************************************************/
+	/* original BTS code
 	if (getExtraCombatPercent() != 0)
 	{
 		iModifier += getExtraCombatPercent();
 	}
+	*/
+	// ExtraCombatPercent already counted above
+	/********************************************************************************/
+	/**		BETTER_BTS_AI_MOD						END								*/
+	/********************************************************************************/
 
 	if (NULL != pOther)
 	{
@@ -11898,17 +11996,36 @@ void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 
 				iCollateralDamage = (GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE") * (iCollateralStrength + iStrengthFactor)) / (iTheirStrength + iStrengthFactor);
 
-				iCollateralDamage *= 100 + getExtraCollateralDamage();
+				int iModifier = getUnitInfo().getCollateralDamage() > 0 ? (100 + getExtraCollateralDamage()) : getExtraCollateralDamage();
+				/********************************************************************************/
+				/**		BETTER_BTS_AI_MOD						8/16/08		DanF5771 & jdog5000	*/
+				/**																				*/
+				/**		Bugfix																	*/
+				/********************************************************************************/
+				//iModifier -= pBestUnit->getCollateralDamageProtection();
+				iModifier *= (100 - pBestUnit->getCollateralDamageProtection());
+				iModifier /= 100;
+				/********************************************************************************/
+				/**		BETTER_BTS_AI_MOD						END								*/
+				/********************************************************************************/
 
-				iCollateralDamage *= std::max(0, 100 - pBestUnit->getCollateralDamageProtection());
-				iCollateralDamage /= 100;
 
 				if (pCity != NULL)
 				{
-					iCollateralDamage *= 100 + pCity->getAirModifier();
-					iCollateralDamage /= 100;
+					/********************************************************************************/
+					/**		BETTER_BTS_AI_MOD						8/22/08		DanF5771 & jdog5000	*/
+					/**																				*/
+					/**		Bugfix																	*/
+					/********************************************************************************/
+					//iModifier += pCity->getAirModifier();
+					iModifier *= (100 + pCity->getAirModifier());
+					iModifier /= 100;
+					/********************************************************************************/
+					/**		BETTER_BTS_AI_MOD						END								*/
+					/********************************************************************************/
 				}
 
+				iCollateralDamage *= iModifier;
 				iCollateralDamage /= 100;
 
 				iCollateralDamage = std::max(0, iCollateralDamage);

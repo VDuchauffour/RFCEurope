@@ -1483,6 +1483,103 @@ void CvSelectionGroup::continueMission(int iSteps)
 					pTargetUnit = GET_PLAYER((PlayerTypes)headMissionQueueNode()->m_data.iData1).getUnit(headMissionQueueNode()->m_data.iData2);
 					if (pTargetUnit != NULL)
 					{
+						/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      12/07/08                                jdog5000      */
+/**                                                                                              */
+/** General AI                                                                                   */
+/*************************************************************************************************/
+						// Handling for mission to retrieve a unit
+						if( AI_getMissionAIType() == MISSIONAI_PICKUP )
+						{
+							if( !(pTargetUnit->getGroup()->isStranded()) || isFull() || (pTargetUnit->plot() == NULL) )
+							{
+								bDone = true;
+								bAction = false;
+								break;
+							}
+
+							CvPlot* pPickupPlot = NULL;
+							CvPlot* pAdjacentPlot = NULL;
+							int iPathTurns;
+							int iBestPathTurns = MAX_INT;
+
+							if( (pTargetUnit->plot()->isWater() || pTargetUnit->plot()->isFriendlyCity(*getHeadUnit(), true)) && generatePath(plot(), pTargetUnit->plot(), 0, false, &iPathTurns) )
+							{
+								pPickupPlot = pTargetUnit->plot();
+							}
+							else
+							{
+								for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+								{
+									pAdjacentPlot = plotDirection(pTargetUnit->plot()->getX_INLINE(), pTargetUnit->plot()->getY_INLINE(), ((DirectionTypes)iI));
+
+									if (pAdjacentPlot != NULL)
+									{
+										if( atPlot(pAdjacentPlot) )
+										{
+											pPickupPlot = pAdjacentPlot;
+											break;
+										}
+
+										if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
+										{
+											if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
+											{
+												if( iPathTurns < iBestPathTurns )
+												{
+													pPickupPlot = pAdjacentPlot;
+													iBestPathTurns = iPathTurns;
+												}
+											}
+										}
+									}
+								}
+							}
+
+							if( pPickupPlot != NULL )
+							{
+								if( atPlot(pPickupPlot) )
+								{
+									CLLNode<IDInfo>* pEntityNode;
+									CvUnit* pLoopUnit;
+
+									pEntityNode = headUnitNode();
+
+									while (pEntityNode != NULL)
+									{
+										pLoopUnit = ::getUnit(pEntityNode->m_data);
+										pEntityNode = nextUnitNode(pEntityNode);
+
+										if( !(pLoopUnit->isFull()) )
+										{
+											pTargetUnit->getGroup()->setRemoteTransportUnit(pLoopUnit);
+										}
+									}
+
+									bAction = true;
+									bDone = true;
+								}
+								else
+								{
+									if (groupPathTo(pPickupPlot->getX_INLINE(), pPickupPlot->getY_INLINE(), headMissionQueueNode()->m_data.iFlags))
+									{
+										bAction = true;
+									}
+									else
+									{
+										bDone = true;
+									}
+								}
+							}
+							else
+							{
+								bDone = true;
+							}
+							break;
+						}
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
 						if (AI_getMissionAIType() != MISSIONAI_SHADOW && AI_getMissionAIType() != MISSIONAI_GROUP)
 						{
 							if (!plot()->isOwned() || plot()->getOwnerINLINE() == getOwnerINLINE())
@@ -2612,6 +2709,167 @@ bool CvSelectionGroup::visibilityRange()
 	return iMaxRange;
 }
 
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      01/01/09                                jdog5000      */
+/**                                                                                              */
+/** General AI                                                                                   */
+/*************************************************************************************************/
+//
+// Approximate how many turns this group would take to reduce pCity's defense modifier to zero
+//
+int CvSelectionGroup::getBombardTurns(CvCity* pCity)
+{
+	bool bHasBomber = (area()->getNumAIUnits(getOwner(),UNITAI_ATTACK_AIR) > 0);
+	bool bIgnoreBuildingDefense = bHasBomber;
+	int iTotalBombardRate = (bHasBomber ? 16 : 0);
+
+	CLLNode<IDInfo>* pUnitNode = headUnitNode();
+	while (pUnitNode != NULL)
+	{
+		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = nextUnitNode(pUnitNode);
+
+		if( pLoopUnit->bombardRate() > 0 )
+		{
+			iTotalBombardRate += pLoopUnit->bombardRate();
+			bIgnoreBuildingDefense = (bIgnoreBuildingDefense || pLoopUnit->ignoreBuildingDefense());
+		}
+	}
+
+	int iBombardTurns = pCity->getDefenseModifier(bIgnoreBuildingDefense);
+	if( !bIgnoreBuildingDefense )
+	{
+		iBombardTurns *= 100;
+		iBombardTurns /= std::max(25, (100 - pCity->getBuildingBombardDefense()));
+	}
+	iBombardTurns /= std::max(8, iTotalBombardRate);
+
+	return iBombardTurns;
+}
+
+bool CvSelectionGroup::isStranded()
+{
+	if( getNumUnits() <= 0 )
+	{
+		return false;
+	}
+
+	if( plot() == NULL )
+	{
+		return false;
+	}
+
+	if( getDomainType() != DOMAIN_LAND )
+	{
+		return false;
+	}
+
+	if( (getActivityType() != ACTIVITY_AWAKE) && (getActivityType() != ACTIVITY_HOLD) )
+	{
+		return false;
+	}
+
+	if( AI_getMissionAIType() != NO_MISSIONAI )
+	{
+		return false;
+	}
+
+	if( getLengthMissionQueue() > 0 )
+	{
+		return false;;
+	}
+	
+	if( !canAllMove() )
+	{
+		return false;
+	}
+
+	if( getHeadUnit()->isCargo() )
+	{
+		return false;
+	}
+
+	if( plot()->area()->getNumUnrevealedTiles(getTeam()) > 0 )
+	{
+		if( (getHeadUnitAI() == UNITAI_ATTACK) || (getHeadUnitAI() == UNITAI_EXPLORE) )
+		{
+			return false;
+		}
+	}
+
+	int iBestValue;
+	if( (getHeadUnitAI() == UNITAI_SETTLE) && (GET_PLAYER(getOwner()).AI_getNumAreaCitySites(getArea(), iBestValue) > 0) )
+	{
+		return false;
+	}
+
+	if( plot()->area()->getCitiesPerPlayer(getOwner()) == 0 )
+	{
+		int iBestValue;
+		if( (plot()->area()->getNumAIUnits(getOwner(),UNITAI_SETTLE) > 0) && (GET_PLAYER(getOwner()).AI_getNumAreaCitySites(getArea(), iBestValue) > 0) )
+		{
+			return false;
+		}
+	}
+
+	if( plot()->area()->getNumCities() > 0 )
+	{
+		if( getHeadUnit()->AI_getUnitAIType() == UNITAI_SPY )
+		{
+			return false;
+		}
+
+		if( plot()->getImprovementType() != NO_IMPROVEMENT )
+		{
+			if( GC.getImprovementInfo(plot()->getImprovementType()).isActsAsCity() && canDefend() )
+			{
+				return false;
+			}
+		}
+
+		if( plot()->isCity() && (plot()->getOwner() == getOwner()) )
+		{
+			return false;
+		}
+
+		if( plot()->isHasPathToPlayerCity(getTeam(),getOwner()) )
+		{
+			return false;
+		}
+
+		if( plot()->isHasPathToEnemyCity(getTeam(), false) )
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+bool CvSelectionGroup::canMoveAllTerrain() const
+{
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
+
+	pUnitNode = headUnitNode();
+
+	while (pUnitNode != NULL)
+	{
+		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = nextUnitNode(pUnitNode);
+
+		if (!(pLoopUnit->canMoveAllTerrain()))
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
+
 void CvSelectionGroup::unloadAll()
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
@@ -3368,6 +3626,95 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit)
 }
 
 
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      12/01/08                                jdog5000      */
+/**                                                                                              */
+/** General AI                                                                                   */
+/*************************************************************************************************/
+// Function for loading stranded units onto an offshore transport
+void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
+{
+	// if we are loading
+	if (pTransportUnit != NULL)
+	{
+		CvUnit* pHeadUnit = getHeadUnit();
+		FAssertMsg(pHeadUnit != NULL, "non-zero group without head unit");
+		
+		int iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
+		
+		// if no space at all, give up
+		if (iCargoSpaceAvailable < 1)
+		{
+			return;
+		}
+
+		// if there is space, but not enough to fit whole group, then split us, and set on the new group
+		if (iCargoSpaceAvailable < getNumUnits())
+		{
+			CvSelectionGroup* pSplitGroup = splitGroup(iCargoSpaceAvailable);
+			if (pSplitGroup != NULL)
+			{
+				pSplitGroup->setRemoteTransportUnit(pTransportUnit);
+			}
+			return;
+		}
+		
+		FAssertMsg(iCargoSpaceAvailable >= getNumUnits(), "cargo size too small");
+
+		bool bLoadedOne;
+		do
+		{
+			bLoadedOne = false;
+
+			// loop over all the units on the plot, looping through this selection group did not work
+			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+			while (pUnitNode != NULL && !bLoadedOne)
+			{
+				CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = nextUnitNode(pUnitNode);
+				
+				if (pLoopUnit != NULL && pLoopUnit->getTransportUnit() != pTransportUnit && pLoopUnit->getOwnerINLINE() == pTransportUnit->getOwnerINLINE())
+				{
+					bool bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType());
+					if (bSpaceAvailable)
+					{
+						if( !(pLoopUnit->atPlot(pTransportUnit->plot())) )
+						{
+							// Putting a land unit on water automatically loads it
+							pLoopUnit->setXY(pTransportUnit->getX_INLINE(),pTransportUnit->getY_INLINE());
+						}
+
+						if( pLoopUnit->getTransportUnit() != pTransportUnit ) 
+						{
+							pLoopUnit->setTransportUnit(pTransportUnit);
+						}
+
+						bLoadedOne = true;
+					}
+				}
+			}
+		}
+		while (bLoadedOne);
+	}
+	// otherwise we are unloading
+	else
+	{
+		// loop over all the units, unloading them
+		CLLNode<IDInfo>* pUnitNode = headUnitNode();
+		while (pUnitNode != NULL)
+		{
+			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+			pUnitNode = nextUnitNode(pUnitNode);
+			
+			if (pLoopUnit != NULL)
+			{
+				// unload unit
+				pLoopUnit->setTransportUnit(NULL);
+			}
+		}
+	}
+}
+
 bool CvSelectionGroup::isAmphibPlot(const CvPlot* pPlot) const
 {
 	bool bFriendly = true;
@@ -3377,8 +3724,12 @@ bool CvSelectionGroup::isAmphibPlot(const CvPlot* pPlot) const
 		bFriendly = pPlot->isFriendlyCity(*pUnit, true);
 	}
 
-	return ((getDomainType() == DOMAIN_SEA) && pPlot->isCoastalLand() && !bFriendly);
+	return ((getDomainType() == DOMAIN_SEA) && pPlot->isCoastalLand() && !bFriendly && !canMoveAllTerrain());
 }
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
+
 
 
 // Returns true if attempted an amphib landing...
