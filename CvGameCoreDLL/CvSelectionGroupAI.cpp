@@ -78,17 +78,20 @@ void CvSelectionGroupAI::AI_separate()
 	}
 }
 
+v/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
+/**                                                                                              */
+/** General AI, Bugfix                                                                           */
+/*************************************************************************************************/
 void CvSelectionGroupAI::AI_seperateNonAI(UnitAITypes eUnitAI)
 {
 	CLLNode<IDInfo>* pEntityNode;
 	CvUnit* pLoopUnit;
 
 	pEntityNode = headUnitNode();
-	int iCounter = 0; //Rhye (loop fix)
+
 	while (pEntityNode != NULL)
 	{
-		iCounter++; //Rhye (fix)
-		if (iCounter > 20) break; //Rhye (fix)
 		pLoopUnit = ::getUnit(pEntityNode->m_data);
 		pEntityNode = nextUnitNode(pEntityNode);
 		if (pLoopUnit->AI_getUnitAIType() != eUnitAI)
@@ -109,23 +112,69 @@ void CvSelectionGroupAI::AI_seperateAI(UnitAITypes eUnitAI)
 
 	pEntityNode = headUnitNode();
 
-	int iCounter = 0; //Rhye (possible loop fix)
 	while (pEntityNode != NULL)
 	{
-		iCounter++; //Rhye (fix)
-		if (iCounter > 20) break; //Rhye (fix)
 		pLoopUnit = ::getUnit(pEntityNode->m_data);
 		pEntityNode = nextUnitNode(pEntityNode);
 		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
 		{
 			pLoopUnit->joinGroup(NULL);
-			if (plot()->getTeam() == getTeam())
+			// Was potential crash in use of plot() if group emptied
+			if (pLoopUnit->plot()->getTeam() == getTeam())
 			{
 				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
 			}
 		}
 	}
 }
+
+void CvSelectionGroupAI::AI_seperateImpassable()
+{
+	CLLNode<IDInfo>* pEntityNode;
+	CvUnit* pLoopUnit;
+	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+
+	pEntityNode = headUnitNode();
+
+	while (pEntityNode != NULL)
+	{
+		pLoopUnit = ::getUnit(pEntityNode->m_data);
+		pEntityNode = nextUnitNode(pEntityNode);
+		if( (kPlayer.AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0) )
+		{
+			pLoopUnit->joinGroup(NULL);
+			if (pLoopUnit->plot()->getTeam() == getTeam())
+			{
+				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
+			}
+		}
+	}
+}
+
+void CvSelectionGroupAI::AI_seperateEmptyTransports()
+{
+	CLLNode<IDInfo>* pEntityNode;
+	CvUnit* pLoopUnit;
+
+	pEntityNode = headUnitNode();
+
+	while (pEntityNode != NULL)
+	{
+		pLoopUnit = ::getUnit(pEntityNode->m_data);
+		pEntityNode = nextUnitNode(pEntityNode);
+		if ((pLoopUnit->AI_getUnitAIType() == UNITAI_ASSAULT_SEA) && (pLoopUnit->getCargo() == 0))
+		{
+			pLoopUnit->joinGroup(NULL);
+			if (pLoopUnit->plot()->getTeam() == getTeam())
+			{
+				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
+			}
+		}
+	}
+}
+/*************************************************************************************************/
+/** BETTER_BTS_AI_MOD                       END                                                  */
+/*************************************************************************************************/
 // Returns true if the group has become busy...
 bool CvSelectionGroupAI::AI_update()
 {
