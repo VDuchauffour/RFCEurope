@@ -9,4 +9,12 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 This is Beta 3. Changes since Beta 2:
 Major XML cleanup
 More Germanification
+Many typo fixes
+More translations
 Heavy update of the Balkan city name maps
+Better AI mod integrated
+Spanish colony UHV is edited
+Cordoban UHV's are changed
+Flanking attacks now activated
+Indies split in 2 groups (more cultured - more warlike)
+New UHV's for Venice
