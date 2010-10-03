@@ -142,21 +142,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK1</Tag>
-		<English>The Crusaders have chosen our beautiful city of</English>
-		<French>Les crois&#233;s ont choisi notre belle ville de</French>
-		<German>Die Kreuzfahrer haben unsere sch&#246;ne Stadt</German>
+		<English>The Crusaders under the %s1_civ_adjective leadership of %s2_name have chosen our beautiful city of %s3_city as their target. They will arrive in 3 Turns. </English>
+		<French>Les crois&#233;s ont choisi notre belle ville de %s3_city comme leur cible. Ils arriveront en 3 tours</French>
+		<German>Die Kreuzfahrer unter der %s1:2_civ_adjective Führung von %s2_name haben unsere sch&#246;ne Stadt %s3_city als Ziel ihres Kreuzzuges ausgewählt. Sie werden in 3 Runden eintreffen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#237;&#238;&#241;&#246;&#251; &#226;&#251;&#225;&#240;&#224;&#235;&#232; &#237;&#224;&#248; &#234;&#240;&#224;&#241;&#232;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK2</Tag>
-		<English>as their target. They will arrive in 3 turns.</English>
-		<French>comme leur cible. Ils arriveront en 3 tours.</French>
-		<German>als Ziel f&#252;r ihren Kreuzzug ausgewählt. Sie werden in 3 Runden eintreffen.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>&#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#241;&#226;&#238;&#229;&#233; &#246;&#229;&#235;&#232;. &#206;&#237;&#232; &#239;&#240;&#232;&#225;&#243;&#228;&#243;&#242; &#226; &#242;&#229;&#247;&#229;&#237;&#232;&#232; &#242;&#240;&#229;&#245; &#245;&#238;&#228;&#238;&#226;.</Russian>
+		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#237;&#238;&#241;&#246;&#251; &#226;&#251;&#225;&#240;&#224;&#235;&#232; &#237;&#224;&#248; &#234;&#240;&#224;&#241;&#232;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228; %s3_city &#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#241;&#226;&#238;&#229;&#233; &#246;&#229;&#235;&#232;. &#206;&#237;&#232; &#239;&#240;&#232;&#225;&#243;&#228;&#243;&#242; &#226; &#242;&#229;&#247;&#229;&#237;&#232;&#232; &#242;&#240;&#229;&#245; &#245;&#238;&#228;&#238;&#226;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DEVIATED</Tag>
@@ -168,31 +159,13 @@
 		<Russian>&#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#235; &#244;&#232;&#237;&#224;&#237;&#241;&#238;&#226;&#243;&#254; &#226;&#235;&#224;&#241;&#242;&#252;, &#247;&#242;&#238;&#225;&#251; &#226;&#231;&#255;&#242;&#252; &#239;&#238;&#228; &#234;&#238;&#237;&#242;&#240;&#238;&#235;&#252; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_START1</Tag>
-		<English>Crusaders are leaving under the leadership of</English>
+		<Tag>TXT_KEY_CRUSADE_START</Tag>
+		<English>Crusaders are leaving under the %s1_civ_adjective leadership of %s2_name to conquer the %s3_civ_adjective city of %s4_city in the name of their god.</English>
 		<French>Les Crois&#233;s sont laiss&#233; sous la direction de</French>
-		<German>Die Kreuzfahrer brechen unter der F&#252;hrung von</German>
+		<German>Die Kreuzfahrer brechen unter der %s1:2_civ_adjective F&#252;hrung von %s2_name auf um die %s3:3_civ_adjective Stadt %s4_city im Namen ihres Gottes zuerobern.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#237;&#238;&#241;&#246;&#251; &#238;&#242;&#239;&#240;&#224;&#226;&#235;&#255;&#254;&#242;&#241;&#255; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_START2</Tag>
-		<English>to conquer the city of</English>
-		<French>&#224; conquerir la ville de</French>
-		<German> auf um die Stadt</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>&#247;&#242;&#238;&#225;&#251; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#242;&#252; &#227;&#238;&#240;&#238;&#228;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_START3</Tag>
-		<English>in the name of their God.</English>
-		<French>au nom de leur Dieu.</French>
-		<German>im Namen ihres Gottes zu erobern.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>&#226; &#232;&#236;&#229;&#237;&#232; &#232;&#245; &#193;&#238;&#227;&#224;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_INIT_POPUP</Tag>
