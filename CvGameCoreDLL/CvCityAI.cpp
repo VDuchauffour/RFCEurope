@@ -795,7 +795,6 @@ void CvCityAI::AI_chooseProduction()
     
     int iExistingWorkers = kPlayer.AI_totalAreaUnitAIs(pArea, UNITAI_WORKER);
     int iNeededWorkers = kPlayer.AI_neededWorkers(pArea);
-    int iNeededSeaWorkers = (pWaterArea == NULL) ? 0 : AI_neededSeaWorkers();
 /*************************************************************************************************/
 /** BETTER_BTS_AI_MOD                      01/01/09                                jdog5000      */
 /**                                                                                              */
