@@ -470,7 +470,7 @@ class Victory:
 			if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
 				bEnoughCities = True
 				for region in tFrankControl:
-					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3], region[4])
+					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
 					if iCity < 2:
 						bEnoughCities = False
 				if bEnoughCities:
@@ -558,7 +558,7 @@ class Victory:
 
 			if (iGameTurn == i1101AD):
                                         print ("cordoba culture", pCordoba.countTotalCulture())
-                                        if (pCorodba.countTotalCulture() >= 7000):
+                                        if (pCordoba.countTotalCulture() >= 7000):
                                                 self.setGoal( iCordoba, 2, 1 )
                                         else:
                                                 self.setGoal( iCordoba, 2, 0 )
@@ -597,7 +597,7 @@ class Victory:
 				iMost = true
 				for iCiv in range( iNumPlayers ):
 					if ( iCiv != iSpain and self.getPlayer( iCiv ).isAlive() ):
-						if (self.getColonies(iCiv) => iColonies):
+						if (self.getColonies(iCiv) >= iColonies):
 							iMost = false
 				if ( iMost ):
 					self.setGoal( iSpain, 2, 1 )
