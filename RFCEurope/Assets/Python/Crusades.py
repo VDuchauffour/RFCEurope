@@ -235,8 +235,8 @@ class Crusades:
 				lTargetList.append( pPlayer.getCapitalCity().getName() + " (" + pPlayer.getCivilizationAdjective(0) + ")" )
 		self.showPopup( 7620, CyTranslator().getText("TXT_KEY_CRUSADE_CORRUPT", ()), CyTranslator().getText("TXT_KEY_CRUSADE_TARGET", ()), lTargetList )
 			
-	def underCrusadeAttackPopup( self, sCityName ):
-		sText = CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK1", ()) + " " + sCityName + " " + CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK2", ()) 
+	def underCrusadeAttackPopup( self, sCityName, iLeader ):
+		sText = CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK1", (gc.getPlayer(iLeader).getCivilizationAdjective(), gc.getPlayer(iLeader).getName(), sCityName))
 		self.showPopup( 7621, CyTranslator().getText("TXT_KEY_CRUSADE_ATTACK", ()), sText, (CyTranslator().getText("TXT_KEY_CRUSADE_OK", ()),) )
 	
 	def endCrusades(self):
@@ -248,7 +248,7 @@ class Crusades:
 		#print(" 3Miro Crusades ")
 		#self.informPopup()
 		
-		if ( iGameTurn == 160 ):
+		if ( iGameTurn == 160 ): #1080AD
 			self.setCrusadeInit( 0, -1 )
 		if ( iGameTurn >= 182 and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ):
 			self.setCrusadeInit( 1, -1 )
@@ -256,11 +256,11 @@ class Crusades:
 			self.setCrusadeInit( 2, -1 )
 		if ( iGameTurn >= 201 and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ):
 			self.setCrusadeInit( 3, -1 )
-		if ( iGameTurn >= 212 and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ):
+		if ( iGameTurn >= 212 and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): #1236AD
 			self.setCrusadeInit( 4, -1 )
 		
 		#if ( iGameTurn == 50 ): #debug
-		if ( iGameTurn == 133 ): # indulgances for the Reconquista given by the Catholic Church
+		if ( iGameTurn == 133 ): # indulgances for the Reconquista given by the Catholic Church 1000AD
 			self.setDCEnabled( True )
 			
 		if ( self.isDCEnabled() ):
@@ -321,7 +321,7 @@ class Crusades:
 					pVictim = gc.getPlayer( iVictim )
 					teamVictim = gc.getTeam( pVictim.getTeam() )
 					iVictimReligion = pVictim.getStateReligion()
-					if ( (iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy) or pJPlot.getPlotCity().getOwner() > con.iNumMajorPlayers ): # if the Victim is non-Catholic non-Orthodox
+					if ( (iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy) or (pJPlot.getPlotCity().getOwner() > con.iNumMajorPlayers) ): # if the Victim is non-Catholic non-Orthodox
 						bVassalOfImmune = False
 						for iPlayerMaster in range( con.iNumMajorPlayers ): # for all the players, check to see if the Vicitm is a Vassal of a Catholic or Orthodox player
 							pMaster = gc.getPlayer( iPlayerMaster )	    # they are immune from Crusades
@@ -333,7 +333,7 @@ class Crusades:
 						
 						if ( (not bVassalOfImmune) and (i == 0 or ( self.getCrusadeInit( i-1 ) > -1 and self.getCrusadeInit( i-1 ) + 8 < iGameTurn ) ) ):
 							self.setCrusadeInit( i, iGameTurn )
-							print( " Crusade Starting Turn ",iGameTurn )
+							print( "Crusade Starting Turn ",iGameTurn )
 								
 	def anyCatholic( self ):
 		for i in range( con.iNumPlayers ):
@@ -704,14 +704,13 @@ class Crusades:
 		pTargetCity = gc.getMap().plot( self.getTargetX(), self.getTargetY() ).getPlotCity()
 		iTargetPlayer = pTargetCity.getOwner()
 		if ( iTargetPlayer == iHuman ):
-			self.underCrusadeAttackPopup( pTargetCity.getName() )
-		
-		sCityName = cnm.lookupName(pTargetCity,con.iPope)
-		if ( sCityName == 'Unknown' ):
-			sCityName = cnm.lookupName(pTargetCity,iLeader)
-		sText = CyTranslator().getText("TXT_KEY_CRUSADE_START1", ()) + " " + gc.getPlayer( iLeader ).getName() + " " + CyTranslator().getText("TXT_KEY_CRUSADE_START2", ()) + " " + sCityName + " " + CyTranslator().getText("TXT_KEY_CRUSADE_START3", ())
-		#sText = CyTranslator().getText("TXT_KEY_CRUSADE_START1", ()) + " " + gc.getPlayer( iLeader ).getName() + " " + CyTranslator().getText("TXT_KEY_CRUSADE_START2", ()) + " " + cnm.lookupName(pTargetCity,con.iPope) + " " + CyTranslator().getText("TXT_KEY_CRUSADE_START3", ())
-		CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+			self.underCrusadeAttackPopup( pTargetCity.getName(), iLeader )
+		else: 
+                        sCityName = cnm.lookupName(pTargetCity,con.iPope)
+                        if ( sCityName == 'Unknown' ):
+                                sCityName = cnm.lookupName(pTargetCity,iLeader)
+                        sText = CyTranslator().getText("TXT_KEY_CRUSADE_START", (gc.getPlayer(iLeader).getCivilizationAdjectiveKey(), gc.getPlayer(iLeader).getName(), gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(), sCityName))
+                        CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 		
 		gc.getTeam( gc.getPlayer( iLeader ).getTeam() ).declareWar( gc.getPlayer( pTargetCity.getOwner() ).getTeam(), True, -1 )
 		
@@ -1027,7 +1026,7 @@ class Crusades:
 		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
 		if ( teamPlayer.isHasTech( con.iMilitaryTactics ) ):
 			return con.iCuirassier
-		if ( teamPlayer.isHasTech( con.iPlateArmor ) and teamPlayer.isHasTech( con.iChivalry ) ):
+		if ( teamPlayer.isHasTech( con.iChivalry ) ):
 			return con.iKnight
 		if ( teamPlayer.isHasTech( con.iFarriers ) and teamPlayer.isHasTech( con.iFeudalism ) ):
 			return con.iHeavyLancer
