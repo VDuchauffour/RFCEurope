@@ -492,9 +492,9 @@ class Victory:
 					if count < 1:
 						bBuildingGoal = False
 				if bBuildingGoal:
-					self.setGoal( iFrankia, 2, 1 ) 
+					self.setGoal( iFrankia, 1, 1 ) 
 				else:
-					self.setGoal( iFrankia, 2, 0 ) 
+					self.setGoal( iFrankia, 1, 0 ) 
 					
 			if ( self.getGoal( iFrankia, 2 ) == - 1 ):
 				if ( self.getColonies( iFrankia ) > 5 ):
