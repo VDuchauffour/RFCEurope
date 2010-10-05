@@ -1560,5 +1560,15 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Corporations/Grimaldi.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_STAR_FORT</Type>
+			<LSystem>LSYSTEM_HIGH_WALLS</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tall Wall/Tall_Wall_Civilopedia.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,4</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
