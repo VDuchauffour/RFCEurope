@@ -224,43 +224,35 @@ class RFCEBalance:
 		gc.setInitialBuilding( iSpain, con.iBarracks, True )
 
 		gc.setInitialBuilding( iMoscow, con.iGranary, True )
-		gc.setInitialBuilding( iMoscow, con.iHerbalist, True )
 		gc.setInitialBuilding( iMoscow, con.iBarracks, True )
 		gc.setInitialBuilding( iMoscow, con.iForge, True )
 		gc.setInitialBuilding( iMoscow, con.iMarket, True )
 		
 		gc.setInitialBuilding( iGenoa, con.iGranary, True )
-		gc.setInitialBuilding( iGenoa, con.iHerbalist, True )
 		gc.setInitialBuilding( iGenoa, con.iBarracks, True )
 		
 		gc.setInitialBuilding( iEngland, con.iGranary, True )
-		gc.setInitialBuilding( iEngland, con.iHerbalist, True )
 		gc.setInitialBuilding( iEngland, con.iBarracks, True )
 		
 		gc.setInitialBuilding( iPortugal, con.iGranary, True )
-		gc.setInitialBuilding( iPortugal, con.iHerbalist, True )
 		gc.setInitialBuilding( iPortugal, con.iBarracks, True )
 
 		gc.setInitialBuilding( iAustria, con.iGranary, True )
-		gc.setInitialBuilding( iAustria, con.iHerbalist, True )
 		gc.setInitialBuilding( iAustria, con.iBarracks, True )
 		
 		gc.setInitialBuilding( iTurkey, con.iGranary, True )
-		gc.setInitialBuilding( iTurkey, con.iHerbalist, True )
 		gc.setInitialBuilding( iTurkey, con.iBarracks, True )
 		gc.setInitialBuilding( iTurkey, con.iForge, True )
 		gc.setInitialBuilding( iTurkey, con.iHarbor, True )
 		gc.setInitialBuilding( iTurkey, con.iOttomanHammam, True )
 		
 		gc.setInitialBuilding( iSweden, con.iGranary, True )
-		gc.setInitialBuilding( iSweden, con.iHerbalist, True )
 		gc.setInitialBuilding( iSweden, con.iSwedishTennant, True )
 		gc.setInitialBuilding( iSweden, con.iForge, True )
 		gc.setInitialBuilding( iSweden, con.iHarbor, True )
 		gc.setInitialBuilding( iSweden, con.iAqueduct, True )
 
 		gc.setInitialBuilding( iDutch, con.iGranary, True )
-		gc.setInitialBuilding( iDutch, con.iHerbalist, True )
 		gc.setInitialBuilding( iDutch, con.iBarracks, True )
 		gc.setInitialBuilding( iDutch, con.iForge, True )
 		gc.setInitialBuilding( iDutch, con.iHarbor, True )
