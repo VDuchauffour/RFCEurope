@@ -663,7 +663,7 @@ class Stability:
                 iTempCitiesThreshold = 0
                 if (iBuilding == con.iPalace): #palace
                 	iTempCitiesThreshold -= 15 
-                elif ( iBuilding == con.iCourthouse or iBuilding == con.iHolyRomanRathaus or iBuilding == con.iKievVeche):
+                elif ( iBuilding == con.iCastle or iBuilding == con.iMoscowKremlin or iBuilding == con.iHungarianStronghold or iBuilding == con.iSpanishCitadel):
                 	iTempCitiesThreshold += 1
                 elif ( iBuilding == con.iManorHouse or iBuilding == con.iBurgundianChateau):
                 	iTempCitiesThreshold += 1
