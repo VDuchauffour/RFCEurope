@@ -46,16 +46,6 @@
 			<ProductionTraits/>
 			<Button>Art/Interface/Buttons/Buildings/Seminary.dds</Button>
 		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_SCRIPTORIUM</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_SCRIPTORIUM</Description>
-			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
-			<TechPrereq>TECH_ART</TechPrereq>
-			<TechPrereqAnyone>NONE</TechPrereqAnyone>
-			<bValid>1</bValid>
-			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/Scriptorium.dds</Button>
-		</SpecialBuildingInfo>
 		<SpecialBuildingInfo> <!-- Also a Maktab-->
 			<Type>SPECIALBUILDING_SCHOOL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_SCHOOL</Description>
