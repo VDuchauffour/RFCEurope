@@ -14,7 +14,7 @@ More translations
 Heavy update of the Balkan city name maps
 Spanish colony UHV is edited
 Cordoban UHV's are changed
-Flanking attacks now activated
+Flanking attacks now activated for light cavalry
 Indies split in 2 groups (more cultured - more warlike)
 New UHV's for Venice
 Changes to buildings (1) Reducing the number of individual buildings (2) Increasing the number of buildings that require other buildings. Some highlights -- castles, not courthouses, now give stability and are required for dungeons and archery ranges. Scriptorium is merged into Monastery. Toll house, grocer, herbalist are cut. Market becomes more about trade than money, the point is to make it more useful/common on its own.
