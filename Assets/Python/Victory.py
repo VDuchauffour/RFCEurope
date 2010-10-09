@@ -470,7 +470,7 @@ class Victory:
 			if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
 				bEnoughCities = True
 				for region in tFrankControl:
-					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
+					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3],region[4])
 					if iCity < 2:
 						bEnoughCities = False
 				if bEnoughCities:
