@@ -233,4 +233,8 @@
 		<German>Provinz Österreich</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Tag>
+		<English>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1459 - 1519[NEWLINE][PARAGRAPH:2]No pedia yet.</English>
+	</TEXT>
 </Civ4GameText>

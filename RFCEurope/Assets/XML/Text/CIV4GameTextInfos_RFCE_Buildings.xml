@@ -26,12 +26,6 @@
 		<German>Apotheke</German>
 		<Italian/><Spanish/><Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOLL_HOUSE</Tag>
-		<English>Toll House</English>
-		<French>Bureau de P&#233;age</French>
-		<German>Zollhaus</German>
-		<Italian/><Spanish/><Russian>&#196;&#238;&#236; &#209;&#225;&#238;&#240;&#224; &#205;&#224;&#235;&#238;&#227;&#238;&#226;</Russian></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
 		<English>Wharf</English>
 		<French>Quai</French>
@@ -55,12 +49,6 @@
 		<French>Salle de Confr&#233;rie</French>
 		<German>Gildenhaus</German>
 		<Italian/><Spanish/><Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SIEGE_WORKSHOP</Tag>
-		<English>Siege Workshop</English>
-		<French>Atelier de Si&#232;ge</French>
-		<German>Belagerungsworkshop</German>
-		<Italian/><Spanish/><Russian>&#214;&#229;&#245; &#239;&#238; &#238;&#241;&#224;&#228;&#237;&#251;&#236; &#238;&#240;&#243;&#228;&#232;&#255;&#236;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL</Tag>
 		<English>Arsenal</English>
@@ -134,12 +122,6 @@
 		<German>Orthodoxe Kathedrale</German>
 		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Tag>
-		<English>Hagia Sophia</English>
-		<French>Sainte Sophie</French>
-		<German>Hagia Sophia</German>
-		<Italian/><Spanish/><Russian>&#209;&#238;&#244;&#232;&#233;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
 		<English>Islamic Mosque</English>
 		<French>Mosqu&#233;e</French>
@@ -183,10 +165,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD</Tag>
-		<English>Stronghold</English>
-		<French>Place Forte</French>
-		<German>Festung</German>
-		<Italian/><Spanish/><Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian></TEXT>
+		<English>V&#233;gv&#225;r</English>
+		<French>V&#233;gv&#225;r</French>
+		<German>V&#233;gv&#225;r</German>
+		<Italian>V&#233;gv&#225;r</Italian>
+		<Spanish>V&#233;gv&#225;r</Spanish>
+		<Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK</Tag>
 		<English>Folwark</English>
@@ -221,7 +205,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
 		<English>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</English>
-		<French></French><German/><Italian/><Spanish/><Russian>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</Russian></TEXT>
+		<French>.</French>
+		<German/><Italian/><Spanish/><Russian>.</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT</Tag>
 		<English>Soldier Tennant</English>
@@ -283,12 +268,6 @@
 		<German>Landgut</German>
 		<Italian/><Spanish/><Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HERBALIST</Tag>
-		<English>Herbalist</English>
-		<French>Herboriste</French>
-		<German>Kr&#228;uterheiler</German>
-		<Italian/><Spanish/><Russian>&#209;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242; &#239;&#238; &#242;&#240;&#224;&#226;&#224;&#236;</Russian></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
 		<English>Pagan Shrine</English>
 		<French>Temple Pagan</French>
@@ -318,12 +297,6 @@
 		<French>Forge</French>
 		<German>Schmiede</German>
 		<Italian/><Spanish/><Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUILDERS_YARD</Tag>
-		<English>Builder's Yard</English>
-		<French>Cour de Construction</French>
-		<German>Bauhof</German>
-		<Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL</Tag>
 		<English>Textile Mill</English>
@@ -540,18 +513,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
 		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
-		<French>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</French> 
-		<German>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</German>
-		<Italian>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</Italian>
-		<Spanish>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</Spanish>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
 		<English>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
-		<French>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</French> 
-		<German>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</German>
-		<Italian>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Italian>
-		<Spanish>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</Spanish>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
@@ -732,14 +705,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TOLL_HOUSE_PEDIA</Tag>
-		<English>[TAB]A tollhouse or toll house is a building with accommodation for a toll collector, beside a tollgate on a toll road or canal. Many tollhouses were built by turnpike trusts in England, Wales and Scotland during the 18th and early 19th centuries. Those built in the early 1800s often had a distinctive bay front to give the pikeman a clear view of the road and to provide a display area for the tollboard. In 1840, according to the Turnpike Returns in Parliamentary Papers, there were over 5000 tollhouses operating in England. These were sold off in the 1880s when the turnpikes were closed. Many were demolished but several hundred have survived as domestic houses, with distinctive features of the old tollhouse still visible.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENOA_BANK</Tag>
 		<English>Genoan Bank</English>
 		<French>Banque Génoise</French>
@@ -760,4 +725,12 @@
 		<English>Royal Exchange</English>
 		<French>.</French>
 		<German/><Italian/><Spanish/><Russian/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Tag>
+		<English>[TAB]After the Turks conquered much of southern Hungary, a new defensive line inside the country was strongly needed. Out of castles, mansions, churches and monasteries a new defensive line was built with the efforts of the bondsmen of the surrounding area within a short time. A new system of castles was created, which began at the Adriatic Sea, ended at the lower Danube River and enclosed the area that was controlled by the Turks. The most important functions of these V&#233;gv&#225;rs were to defend the borders, secure the roads and the river crossings, the prevention of the enemy troop supplies and the security of the people and their goods in the surrounding area.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

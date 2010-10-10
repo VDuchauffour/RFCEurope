@@ -29,6 +29,34 @@
 		<Russian>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_ABU_BAKR_1</Tag>
+		<English>Silence! Or must I have your tongue cut out?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_ABU_BAKR_1</Tag>
+		<English>There will be no peace until you convert from your wicked ways.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_ABU_BAKR_1</Tag>
+		<English>You are my favorite infidel in the whole wide world, [CT_NAME]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_ABU_BAKR_1</Tag>
+		<English>What is it now, you swine-eating drunkard?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_ABU_BAKR_1</Tag>
+		<English>Allah is watching you, [CT_NAME]. He would approve if you did this good.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_ABU_BAKR_1</Tag>
+		<English>If you give this to me, [CT_NAME], there might be 72 virgins waiting to greet you in the afterlife!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_ABU_BAKR_1</Tag>
+		<English>Mighty [OUR_CIV_SHORT] will crush your kingdom of evil if you don't obey her commands!</English>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JOAN_1</Tag>
 		<English>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</English>
 		<French>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</French>
@@ -47,6 +75,34 @@
 		<Russian>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_MATTHIAS_1</Tag>
+		<English>I won't change a single word with you, [CT_NAME]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_MATTHIAS_1</Tag>
+		<English>No peace in this time between us!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MATTHIAS_1</Tag>
+		<English>God be with you, my friend [CT_NAME]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MATTHIAS_1</Tag>
+		<English>You dare to bother me, [CT_NAME]?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_MATTHIAS_1</Tag>
+		<English>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_MATTHIAS_1</Tag>
+		<English>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_MATTHIAS_1</Tag>
+		<English>You should try to keep me in good humour, [CT_NAME].</English>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BARBAROSSA_1</Tag>
 		<English>By my beard, your lands look easily conquered!</English>
 		<French>By my beard, your lands look easily conquered!</French>
@@ -63,6 +119,34 @@
 		<Italian>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Italian>
 		<Spanish>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Spanish>
 		<Russian>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_PHILIP_II_1</Tag>
+		<English>Speak of the devil and the devil appears... begone, [CT_NAME]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_PHILIP_II_1</Tag>
+		<English>Peace? Not impossible, but right now very improbable, [CT_NAME]. You still need to be taught a lesson!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_PHILIP_II_1</Tag>
+		<English>Good, good, [CT_NAME], I am glad you have come. Let us discuss our visions of glorious imperialism and colonization of the world!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_PHILIP_II_1</Tag>
+		<English>Time is money, [CT_NAME], and you're apparently wasting my time.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_PHILIP_II_1</Tag>
+		<English>The humble realm of [OUR_CIV_SHORT] have but one small request. I am quite sure you can handle it.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PHILIP_II_1</Tag>
+		<English>In times of need, kindness can be very valuable.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_PHILIP_II_1</Tag>
+		<English>[CT_NAME], it has been brought to my attention that you have something the [OUR_EMPIRE] needs. I am sure you are willing to help us here, or else I will send my armada. Mark my words, it will not fail this time!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOBIESKI_1</Tag>
@@ -162,6 +246,34 @@
 		<Italian>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</Italian>
 		<Spanish>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</Spanish>
 		<Russian>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_YAROSLAV_1</Tag>
+		<English>I do not speak to those who are disloyal to me! Go away I said!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_YAROSLAV_1</Tag>
+		<English>So, you want peace? No, you'll have to beat me first! Good luck, [CT_NAME]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_YAROSLAV_1</Tag>
+		<English>Oh, hello, [CT_NAME]! Welcome again to my glorious lands! Do you have any daughters my sons can marry?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_YAROSLAV_1</Tag>
+		<English>Speak faster, [CT_NAME], I have no time for the likes of you. My laws won't write themselves, you know!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_YAROSLAV_1</Tag>
+		<English>As a patron of learning, I'd like some help from you to educate my society. Do we have a deal?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_YAROSLAV_1</Tag>
+		<English>If you don't want to make me mad I suggest you give me this. You don't want to spoil our relations, do you?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_YAROSLAV_1</Tag>
+		<English>I suggest you give us this if you don't want to spend the rest of your life imprisoned like my brother...</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CASIMIR_1</Tag>
