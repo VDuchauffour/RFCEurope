@@ -6,6 +6,14 @@
 <!-- Game Text Objects -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
+		<Tag>TXT_KEY_WB_DESC</Tag>
+		<English>Large Map of Europe</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
 		<English>Forest</English>
 		<French>For&#234;t Dense</French>
