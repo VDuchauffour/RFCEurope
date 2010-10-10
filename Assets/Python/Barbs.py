@@ -229,7 +229,7 @@ class Barbs:
                 #barbs in the middle east
 		if (gc.getPlayer(con.iArabia).isAlive()):
                         if (iGameTurn>=con.i700AD and iGameTurn <= con.i1300AD ):
-                            if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(iFarriers)):
+                            if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(con.iFarriers)):
                                 self.spawnUnits( iBarbarian, (94,0),(99,3), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,12,3,utils.outerInvasion,1)
                             else:
                                 self.spawnUnits( iBarbarian, (94,0),(99,3), con.iArabiaGhazi, 1 + iHandicap*2, iGameTurn,10,2,utils.outerInvasion,1)
