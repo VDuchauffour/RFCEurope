@@ -470,7 +470,7 @@ class Victory:
 			if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
 				bEnoughCities = True
 				for region in tFrankControl:
-					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3],region[4])
+					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
 					if iCity < 2:
 						bEnoughCities = False
 				if bEnoughCities:
@@ -1194,13 +1194,13 @@ class Victory:
 		elif ( iPlayer == iGenoa ): # Buildings Goal 2
 			if ( pGenoa.isAlive() ):
 				if ( not self.getGenoaBanks() ):
-					if ( iBuilding == con.iGenoaMint ):
+					if ( iBuilding == con.iGenoaBank ):
 						iNumCities = pGenoa.getNumCities()
 						if ( iNumCities > 7 ): # if there are enough cities
 							iBankCounter = 0
 							for iCity in range(iNumCities):
 								pCity = pGenoa.getCity(iCity)
-                                        	                if (pCity.hasBuilding(con.iGenoaMint)):
+                                        	                if (pCity.hasBuilding(con.iGenoaBank)):
                                         	                	iBankCounter += 1
 							if ( iBankCounter >= 8 ):
 								self.setGenoaBanks( 1 )

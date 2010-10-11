@@ -2261,7 +2261,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
