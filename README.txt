@@ -19,9 +19,10 @@ Indies split in 2 groups (more cultured - more warlike)
 New UHV's for Venice
 Changes to buildings (1) Reducing the number of individual buildings (2) Increasing the number of buildings that require other buildings. Some highlights -- castles, not courthouses, now give stability and are required for dungeons and archery ranges. Scriptorium is merged into Monastery. Toll house, grocer, herbalist are cut. Market becomes more about trade than money, the point is to make it more useful/common on its own.
 Improved Barb spawning, needs testing, might be a bit over tuned
-Bug in Frankia UHV fixed
-Frankia UHV area increased
+Bug in Frankia UHV fixed and Frankia UHV area increased
 Crusade text now has additional information about which empires is the leader and which empire is the target.
 Added one AI mode for maceman
 New diplo texts for some leaders
 New texts for some leaders
+Moved map to PrivateMaps
+Turned on aggressive AI (not sure if this will do much)
