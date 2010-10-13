@@ -5936,7 +5936,7 @@
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Description>
-			<Civilopedia>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
@@ -10865,7 +10865,7 @@
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TEMPLAR</Description>
-			<Civilopedia>TXT_KEY_UNIT_TEMPLAR_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TEMPLAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
@@ -11057,7 +11057,7 @@
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TEUTONIC</Description>
-			<Civilopedia>TXT_KEY_UNIT_TEUTONIC_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TEUTONIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
@@ -15090,7 +15090,7 @@
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_CARRACK</Description>
-			<Civilopedia>TXT_KEY_UNIT_CARRACK_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_PORTUGAL_CARRACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CARRACK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>

@@ -24550,7 +24550,7 @@
 			<Description>TXT_KEY_BUILDING_STEPHANSDOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STEPHANSDOM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STEPHANSDOM_STRATEGY</Strategy>
-      <Help>TXT_KEY_BUILDING_STEPHANSDOM_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STEPHANSDOM_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STEPHANSDOM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STEPHANSDOM</MovieDefineTag>
@@ -24754,9 +24754,9 @@
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PATRONAGE</PrereqTech>
-      <TechTypes>
-        <PrereqTech>TECH_PUBLIC_WORKS</PrereqTech>
-      </TechTypes>
+			<TechTypes>
+				<PrereqTech>TECH_PUBLIC_WORKS</PrereqTech>
+			</TechTypes>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
 			<ProductionTraits/>
@@ -24873,12 +24873,12 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-      		<SpecialistCounts>
+      			<SpecialistCounts>
         			<SpecialistCount>
           				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
           				<iSpecialistCount>3</iSpecialistCount>
         			</SpecialistCount>
-      		</SpecialistCounts>
+      			</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
@@ -25269,13 +25269,13 @@
 			<DomainProductionModifiers/>
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
-      <BuildingClassNeededs>
-        <BuildingClassNeeded>
-          <BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
-          <bNeededInCity>1</bNeededInCity>
-        </BuildingClassNeeded>
-      </BuildingClassNeededs>
-      <SpecialistYieldChanges/>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -25317,10 +25317,10 @@
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
-      <PrereqBonuses>
-        <Bonus>BONUS_ACCESS</Bonus>
-      </PrereqBonuses>
-      <ProductionTraits/>
+			<PrereqBonuses>
+				<Bonus>BONUS_ACCESS</Bonus>
+			</PrereqBonuses>
+			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
@@ -25420,47 +25420,47 @@
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-	<CommerceModifiers>
-		<iCommerce>100</iCommerce>
-	</CommerceModifiers>
+			<CommerceModifiers>
+				<iCommerce>100</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
 			<SpecialistCounts>
-			  <SpecialistCount>
-			    <SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			    <iSpecialistCount>2</iSpecialistCount>
-			  </SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+					<iSpecialistCount>2</iSpecialistCount>
+				</SpecialistCount>
 			</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<BonusHealthChanges>
-			  <BonusHealthChange>
-			    <BonusType>BONUS_SUGAR</BonusType>
-			    <iHealthChange>2</iHealthChange>
-			  </BonusHealthChange>
-			  <BonusHealthChange>
-			    <BonusType>BONUS_SPICES</BonusType>
-			    <iHealthChange>2</iHealthChange>
-			  </BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_SUGAR</BonusType>
+					<iHealthChange>2</iHealthChange>
+				</BonusHealthChange>
+				<BonusHealthChange>
+					<BonusType>BONUS_SPICES</BonusType>
+					<iHealthChange>2</iHealthChange>
+				</BonusHealthChange>
 			</BonusHealthChanges>
 			<BonusHappinessChanges>
-			  <BonusHappinessChange>
-			    <BonusType>BONUS_TEA</BonusType>
-			    <iHappinessChange>1</iHappinessChange>
-			  </BonusHappinessChange>
-			  <BonusHappinessChange>
-			    <BonusType>BONUS_TOBACCO</BonusType>
-			    <iHappinessChange>1</iHappinessChange>
-			  </BonusHappinessChange>
-			  <BonusHappinessChange>
-			    <BonusType>BONUS_COFFEE</BonusType>
-			    <iHappinessChange>1</iHappinessChange>
-			  </BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_TEA</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
+				<BonusHappinessChange>
+					<BonusType>BONUS_COFFEE</BonusType>
+				<iHappinessChange>1</iHappinessChange>
+				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
@@ -25469,20 +25469,20 @@
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs>
-			  <BuildingClassNeeded>
-			    <BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-			    <bNeededInCity>1</bNeededInCity>
-			  </BuildingClassNeeded>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
-			  <Flavor>
-			    <FlavorType>FLAVOR_GOLD</FlavorType>
-			    <iFlavor>10</iFlavor>
-			  </Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
 			</Flavors>
 			<HotKey/>
 			<bAltDown>0</bAltDown>
@@ -25493,9 +25493,9 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-	  <bAllowIrrigation>0</bAllowIrrigation>
-    </BuildingInfo>
-    <BuildingInfo>
+	 		<bAllowIrrigation>0</bAllowIrrigation>
+		</BuildingInfo>
+		<BuildingInfo>
 			<!-- Copernicus Observatory-->
 			<BuildingClass>BUILDINGCLASS_COPERNICUS</BuildingClass>
 			<Type>BUILDING_COPERNICUS</Type>
@@ -25647,16 +25647,16 @@
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists>
-			  <ImprovementFreeSpecialist>
-			    <ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
-			    <iFreeSpecialistCount>1</iFreeSpecialistCount>
-			  </ImprovementFreeSpecialist>
+				<ImprovementFreeSpecialist>
+					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
 			<Flavors>
-			  <Flavor>
-			    <FlavorType>FLAVOR_SCIENCE</FlavorType>
-			    <iFlavor>10</iFlavor>
-			  </Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
 			</Flavors>
 			<HotKey/>
 			<bAltDown>0</bAltDown>
@@ -25667,9 +25667,9 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-	  <bAllowIrrigation>0</bAllowIrrigation>
-    </BuildingInfo>
-    <BuildingInfo>
+	  		<bAllowIrrigation>0</bAllowIrrigation>
+		</BuildingInfo>
+		<BuildingInfo>
 			<!-- Palazzo San Giorgio-->
 			<BuildingClass>BUILDINGCLASS_SAN_GIORGIO</BuildingClass>
 			<Type>BUILDING_SAN_GIORGIO</Type>
@@ -25819,10 +25819,10 @@
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers>
-			  <BonusProductionModifier>
-			    <BonusType>BONUS_MARBLE</BonusType>
-			    <iProductonModifier>100</iProductonModifier>
-			  </BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_MARBLE</BonusType>
+					<iProductonModifier>100</iProductonModifier>
+				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -25840,10 +25840,10 @@
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
-			  <Flavor>
-			    <FlavorType>FLAVOR_GROWTH</FlavorType>
-			    <iFlavor>10</iFlavor>
-			  </Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
 			</Flavors>
 			<HotKey/>
 			<bAltDown>0</bAltDown>
@@ -25854,9 +25854,9 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-	  <bAllowIrrigation>0</bAllowIrrigation>
-    </BuildingInfo>
-	<BuildingInfo> <!-- Westminster Abbey -->
+	 		<bAllowIrrigation>0</bAllowIrrigation>
+		</BuildingInfo>
+		<BuildingInfo> <!-- Westminster Abbey -->
 			<BuildingClass>BUILDINGCLASS_WESTMINSTER</BuildingClass>
 			<Type>BUILDING_WESTMINSTER</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -26019,12 +26019,12 @@
 			<DomainProductionModifiers/>
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
-    <BuildingClassNeededs>
-      <BuildingClassNeeded>
-        <BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
-        <bNeededInCity>1</bNeededInCity>
-      </BuildingClassNeeded>
-    </BuildingClassNeededs>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
@@ -26041,7 +26041,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
-	<BuildingInfo> <!-- Pressburg Castle -->
+		<BuildingInfo> <!-- Pressburg Castle -->
 			<BuildingClass>BUILDINGCLASS_PRESSBURG</BuildingClass>
 			<Type>BUILDING_PRESSBURG</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
