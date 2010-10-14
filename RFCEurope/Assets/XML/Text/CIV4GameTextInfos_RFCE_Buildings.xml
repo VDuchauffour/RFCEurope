@@ -718,13 +718,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
 		<English>Star Fort</English>
-		<French>.</French>
-		<German/><Italian/><Spanish/><Russian/></TEXT>
+		<French>Tracé à l'Italienne</French>
+		<German>Sternförmigen Festung</German>
+		<Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
 		<English>Royal Exchange</English>
-		<French>.</French>
-		<German/><Italian/><Spanish/><Russian/></TEXT>
+		<French>Bourse Royale</French>
+		<German>K&#246;nigliche B&#246;rse</German>
+		<Italian>Borsa Reale</Italian>
+		<Spanish>Bolsa Real</Spanish>
+		<Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Tag>
 		<English>[TAB]After the Turks conquered much of southern Hungary, a new defensive line inside the country was strongly needed. Out of castles, mansions, churches and monasteries a new defensive line was built with the efforts of the bondsmen of the surrounding area within a short time. A new system of castles was created, which began at the Adriatic Sea, ended at the lower Danube River and enclosed the area that was controlled by the Turks. The most important functions of these V&#233;gv&#225;rs were to defend the borders, secure the roads and the river crossings, the prevention of the enemy troop supplies and the security of the people and their goods in the surrounding area.</English>
