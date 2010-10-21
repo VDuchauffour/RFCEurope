@@ -251,4 +251,13 @@
 		<German>Provinz Frankreich</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JOAN</Tag>
+		<English>Joan of Arc</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>
