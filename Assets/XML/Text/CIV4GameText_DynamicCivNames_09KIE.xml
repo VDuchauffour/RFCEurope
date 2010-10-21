@@ -237,7 +237,7 @@
 		<Tag>TXT_KEY_LEADER_YAROSLAV_PEDIA</Tag>
 		<English>[H1]Yaroslav I the Wise[\H1][NEWLINE][BOLD]Grand Prince of Kievan Rus[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.988 - 1054[NEWLINE][PARAGRAPH:2]No pedia yet.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[H1]Jaroslaw I der Weise[\H1][NEWLINE][BOLD]Großfürst der Kiewer Rus[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 988 - 1054</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -266,7 +266,7 @@
 		<Tag>TXT_KEY_LEADER_YAROSLAV</Tag>
 		<English>Yaroslav</English>
 		<French/>
-		<German/>
+		<German>Jaroslaw</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>

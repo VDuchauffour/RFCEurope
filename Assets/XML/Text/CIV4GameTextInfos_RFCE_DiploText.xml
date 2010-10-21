@@ -5,7 +5,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUYUSUFYAQUB_1</Tag>
 		<English>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</English>
 		<French>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</French>
-		<German>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</German>
+		<German>Willkommen in der Wüste. Ich bin Abu Yusuf Yagub. Wir können Freunde oder Feinde sein.</German>
 		<Italian>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</Italian>
 		<Spanish>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</Spanish>
 		<Russian>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</Russian>
@@ -14,7 +14,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARIA_THERESA_1</Tag>
 		<English>While other nations go to war, we lucky Austria, we wed.</English>
 		<French>While other nations go to war, we lucky Austria, we wed.</French>
-		<German>While other nations go to war, we lucky Austria, we wed.</German>
+		<German>Während andere Nationen Krieg führen, heiraten wir Österreicher.</German>
 		<Italian>While other nations go to war, we lucky Austria, we wed.</Italian>
 		<Spanish>While other nations go to war, we lucky Austria, we wed.</Spanish>
 		<Russian>While other nations go to war, we lucky Austria, we wed.</Russian>
@@ -23,7 +23,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUBAKR_1</Tag>
 		<English>Assalamu alaikum. Allah will help him who moves in the way of Allah.</English>
 		<French>Assalamu alaikum. Allah will help him who moves in the way of Allah.</French>
-		<German>Assalamu alaikum. Allah will help him who moves in the way of Allah.</German>
+		<German>Assalamu alaikum. Allah wird dem helfen, der seinen Weg im Namen Allahs geht.</German>
 		<Italian>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Italian>
 		<Spanish>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Spanish>
 		<Russian>Assalamu alaikum. Allah will help him who moves in the way of Allah.</Russian>
@@ -32,7 +32,7 @@
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_ABU_BAKR_1</Tag>
 		<English>Silence! Or must I have your tongue cut out?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Schweigt! Oder muss ich euch die Zunge rausschneiden?</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -40,7 +40,7 @@
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_ABU_BAKR_1</Tag>
 		<English>There will be no peace until you convert from your wicked ways.</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Es wird keinen Frieden geben solange ihr diesen finsteren Weg geht.</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -48,7 +48,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_ABU_BAKR_1</Tag>
 		<English>You are my favorite infidel in the whole wide world, [CT_NAME]!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ihr seid mein liebster Ungläubiger auf der ganzen Welt, [CT_NAME]!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -56,7 +56,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_ABU_BAKR_1</Tag>
 		<English>What is it now, you swine-eating drunkard?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Was wollt ihr nun, ihr schweinefressender Trunkenbold?</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -64,7 +64,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_ABU_BAKR_1</Tag>
 		<English>Allah is watching you, [CT_NAME]. He would approve if you did this good.</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Allah sieht euch, [CT_NAME]. Er wird es gutheißen, wenn ihr dies tut.</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_ABU_BAKR_1</Tag>
 		<English>If you give this to me, [CT_NAME], there might be 72 virgins waiting to greet you in the afterlife!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Wenn ihr dies tut, [CT_NAME], könnten 72 Jungfrauen im Jenseits auf euch warten!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -80,7 +80,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_ABU_BAKR_1</Tag>
 		<English>Mighty [OUR_CIV_SHORT] will crush your kingdom of evil if you don't obey her commands!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Das mächtige [OUR_CIV_SHORT] wird euer Königkeich des Bösen vernichten, wenn ihr nicht meinem Befehl gehorcht!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -97,7 +97,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
 		<English>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</English>
 		<French>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</French>
-		<German>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</German>
+		<German>Willkommen Reisender. Ich bin Matthias Corvinus. Habt ihr irgendwelche Bücher für meine Bibliothek?</German>
 		<Italian>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Italian>
 		<Spanish>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Spanish>
 		<Russian>Welcome traveller. I am Matthias Corvinus. Do you have any books to contribute to my library?</Russian>
@@ -106,7 +106,7 @@
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_MATTHIAS_1</Tag>
 		<English>I won't change a single word with you, [CT_NAME]!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ich werde kein einziges Wort mit euch wechseln, [CT_Name]!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -114,7 +114,7 @@
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_MATTHIAS_1</Tag>
 		<English>No peace in this time between us!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Es ist kein Frieden zwischen uns möglich in diesen Zeiten!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -122,7 +122,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MATTHIAS_1</Tag>
 		<English>God be with you, my friend [CT_NAME]!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Möge Gott mit euch sein, mein Freund [CT_Name]!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -130,7 +130,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MATTHIAS_1</Tag>
 		<English>You dare to bother me, [CT_NAME]?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ihr wagt es mich anzusprechen, [CT_NAME]?</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -138,7 +138,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_MATTHIAS_1</Tag>
 		<English>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ich könnte ein wenig Hilfe gebrauchen, mein Freund [CT_NAME]. So ein Geschenk würde meine Stimmung erhellen!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -146,7 +146,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_MATTHIAS_1</Tag>
 		<English>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Bei Freundschaft zwischen Menschen geht es um das Teilen von Ressourcen, findet ihr nicht [CT_NAME]? </German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -154,7 +154,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_MATTHIAS_1</Tag>
 		<English>You should try to keep me in good humour, [CT_NAME].</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ihr solltet mich bei Laune halten, [CT_NAME].</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BARBAROSSA_1</Tag>
 		<English>By my beard, your lands look easily conquered!</English>
 		<French>By my beard, your lands look easily conquered!</French>
-		<German>By my beard, your lands look easily conquered!</German>
+		<German>Bei meinem Bart, eure Länderein sehen einfach zu erobern aus!</German>
 		<Italian>By my beard, your lands look easily conquered!</Italian>
 		<Spanish>By my beard, your lands look easily conquered!</Spanish>
 		<Russian>By my beard, your lands look easily conquered!</Russian>
@@ -180,7 +180,7 @@
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_PHILIP_II_1</Tag>
 		<English>Speak of the devil and the devil appears... begone, [CT_NAME]!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Wenn man vom Teufel spricht, da erscheint er ... verschwindet [CT_NAME]!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -188,7 +188,7 @@
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_PHILIP_II_1</Tag>
 		<English>Peace? Not impossible, but right now very improbable, [CT_NAME]. You still need to be taught a lesson!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Frieden? Nicht unmöglich, aber sehr unwahrscheinlich, [CT_NAME]. Ich werde euch eine Lektion erteilen!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -196,7 +196,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_PHILIP_II_1</Tag>
 		<English>Good, good, [CT_NAME], I am glad you have come. Let us discuss our visions of glorious imperialism and colonization of the world!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Gut, gut, [CT_NAME], I bin froh, dass ihr gekommen seid. Lasst uns über unsere Vision eines glorreichen Imperiums und der Kolonisation der Welt nachdenken!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -204,7 +204,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_PHILIP_II_1</Tag>
 		<English>Time is money, [CT_NAME], and you're apparently wasting my time.</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Zeit ist Geld, [CT_NAME], und ihr verschwendet gerade meine Zeit.</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -212,7 +212,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_PHILIP_II_1</Tag>
 		<English>The humble realm of [OUR_CIV_SHORT] have but one small request. I am quite sure you can handle it.</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Das ärmliche Reich von [OUR_CIV_SHORT] hat nur ein kleines Anliegen. Ich bin sicher, ihr seid so gütig.</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -220,7 +220,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_PHILIP_II_1</Tag>
 		<English>In times of need, kindness can be very valuable.</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>In Zeiten des Nots kann Güte sehr wertvoll sein.</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -228,7 +228,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_PHILIP_II_1</Tag>
 		<English>[CT_NAME], it has been brought to my attention that you have something the [OUR_EMPIRE] needs. I am sure you are willing to help us here, or else I will send my armada. Mark my words, it will not fail this time!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>[CT_NAME], es wurde mir zugetragen ihr habt etwas von Wert für [OUR_EMPIRE]. Ich bin sicher, ihr seid geneigt uns zu helfen, oder anderfalls werde ich meine Armada schicken. Hört auf meine Worte, ich werde dieses Mal nicht versagen. </German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -236,7 +236,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOBIESKI_1</Tag>
 		<English>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</English>
 		<French>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</French>
-		<German>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</German>
+		<German>Ich bin John III. Sobieski, durch die Gnade Gottes König von Polen, Großfürst von Litauen usw. Ihr dürft meine Hand küssen.</German>
 		<Italian>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</Italian>
 		<Spanish>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</Spanish>
 		<Russian>I am John III Sobieski, by the grace of God King of Poland, Grand Duke of Lithuania, etc. You may kiss my hand.</Russian>
@@ -245,7 +245,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHRISTIAN_IV_1</Tag>
 		<English>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</English>
 		<French>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</French>
-		<German>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</German>
+		<German>Willkommen an meinem Hof. Schnapp euch ein Getränk und schaut euch um. Wenn wir Freunde sind, werdet ihr vielleicht solange regieren wie ich.</German>
 		<Italian>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</Italian>
 		<Spanish>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</Spanish>
 		<Russian>Welcome to my court. Grab a drink and look around. If we are friends, perhaps you will reign as long as I will.</Russian>
@@ -254,7 +254,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WILLIAM_1</Tag>
 		<English>Well met friend. What shall we conquer today?</English>
 		<French>Well met friend. What shall we conquer today?</French>
-		<German>Well met friend. What shall we conquer today?</German>
+		<German>Seid gegrüßt Freund. Was sollen wir heute erobern?</German>
 		<Italian>Well met friend. What shall we conquer today?</Italian>
 		<Spanish>Well met friend. What shall we conquer today?</Spanish>
 		<Russian>Well met friend. What shall we conquer today?</Russian>
@@ -263,7 +263,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AFONSO_1</Tag>
 		<English>Portugal shall be free, for God is on my side. Whose side are you on?</English>
 		<French>Portugal shall be free, for God is on my side. Whose side are you on?</French>
-		<German>Portugal shall be free, for God is on my side. Whose side are you on?</German>
+		<German>Portugal soll frei sein, Gott ist auf meiner Seite. Auf wessen Seite seid ihr?</German>
 		<Italian>Portugal shall be free, for God is on my side. Whose side are you on?</Italian>
 		<Spanish>Portugal shall be free, for God is on my side. Whose side are you on?</Spanish>
 		<Russian>Portugal shall be free, for God is on my side. Whose side are you on?</Russian>
@@ -272,7 +272,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MAXIMILIAN_1</Tag>
 		<English>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</English>
 		<French>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</French>
-		<German>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</German>
+		<German>Ich bin Maximilian. Das Aufzählen meiner Titel würde den ganzen Tag dauern, lass uns stattdessen eine Tjost abhalten.</German>
 		<Italian>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</Italian>
 		<Spanish>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</Spanish>
 		<Russian>I am Maximilian. My titles would take all day. Let's have a good old joust instead.</Russian>
@@ -290,7 +290,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHARLES_V_1</Tag>
 		<English>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</English>
 		<French>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</French>
-		<German>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</German>
+		<German>Ah, fantastisch, ein neuer Feind zu zerquetschen! Vielleicht habt ihr von mir gehört, Philip der Kühne? Nein... nun, ihr solltet.</German>
 		<Italian>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Italian>
 		<Spanish>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Spanish>
 		<Russian>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Russian>
@@ -299,7 +299,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABDARRAHMAN_1</Tag>
 		<English>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</English>
 		<French>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</French>
-		<German>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</German>
+		<German>Ich habe nun über 50 Jahre in Sieg oder Frieden regiert; geliebt von meinen Leuten, gefürchtet von meinen Feinden und von meinen Verbündeten respektiert.</German>
 		<Italian>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Italian>
 		<Spanish>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Spanish>
 		<Russian>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Russian>
@@ -308,7 +308,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SIMONE_1</Tag>
 		<English>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</English>
 		<French>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</French>
-		<German>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</German>
+		<German>Ich bin Simone Boccanegra, erster Doge von Genua. Ihr sing nicht zufällig, oder?</German>
 		<Italian>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Italian>
 		<Spanish>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Spanish>
 		<Russian>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Russian>
@@ -335,7 +335,7 @@
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_YAROSLAV_1</Tag>
 		<English>I do not speak to those who are disloyal to me! Go away I said!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ich spreche nicht mit denjenigen, die mir gegenüber treulos sind. Geht weg, hab ich gesagt! </German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -343,7 +343,7 @@
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_YAROSLAV_1</Tag>
 		<English>So, you want peace? No, you'll have to beat me first! Good luck, [CT_NAME]!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ihr wollt also Frieden? Nein, ihr müsst mich erst besiegen! Viel Glück, [CT_NAME]!</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -351,7 +351,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_YAROSLAV_1</Tag>
 		<English>Oh, hello, [CT_NAME]! Welcome again to my glorious lands! Do you have any daughters my sons can marry?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Oh, Hallo [CT_NAME]! Willkommen in meinem glorreichen Land! Habt ihr irgendwelche Töchter die meine Söhne heiraten könnten?</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -359,7 +359,7 @@
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_YAROSLAV_1</Tag>
 		<English>Speak faster, [CT_NAME], I have no time for the likes of you. My laws won't write themselves, you know!</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Sprecht schneller,[CT_NAME]. Ich habe keine Zeit für euresgleichen. Meine Gesetze schreiben sich nicht von selbst, wisst ihr. </German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -367,7 +367,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_YAROSLAV_1</Tag>
 		<English>As a patron of learning, I'd like some help from you to educate my society. Do we have a deal?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Als Förderer des Wissen würde ich gerne diese Hilfe von euch in Anspruch nehmen um mein Volk zu auszubilden. Schlagt ihr ein?</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -375,7 +375,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_YAROSLAV_1</Tag>
 		<English>If you don't want to make me mad I suggest you give me this. You don't want to spoil our relations, do you?</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Wenn ihr mich nicht sauer machen wollt, dann schlage ich vor ihr gebt mir dies. Ihr wollt unsere Beziehungen nicht verderben, oder?</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -383,7 +383,7 @@
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_YAROSLAV_1</Tag>
 		<English>I suggest you give us this if you don't want to spend the rest of your life imprisoned like my brother...</English>
 		<French>Diplo text (not translated yet).</French>
-		<German>Diplo text (not translated yet).</German>
+		<German>Ich schlage vor ihr gebt uns dies, wenn ihr nicht den Rest eures Leben eingekerkert sein wollt wie mein Bruder...</German>
 		<Italian>Diplo text (not translated yet).</Italian>
 		<Spanish>Diplo text (not translated yet).</Spanish>
 	</TEXT>
@@ -391,7 +391,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CASIMIR_1</Tag>
 		<English>I am Casimir. Will you help me make Poland great?</English>
 		<French>I am Casimir. Will you help me make Poland great?</French>
-		<German>I am Casimir. Will you help me make Poland great?</German>
+		<German>Ich bin Casimir. Werdet ihr mir helfen Polen zu Größe zu verhelfen?</German>
 		<Italian>I am Casimir. Will you help me make Poland great?</Italian>
 		<Spanish>I am Casimir. Will you help me make Poland great?</Spanish>
 		<Russian>I am Casimir. Will you help me make Poland great?</Russian>
@@ -400,7 +400,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_1</Tag>
 		<English>The Lord God is my armor!</English>
 		<French>The Lord God is my armor!</French>
-		<German>The Lord God is my armor!</German>
+		<German>Gott ist mein Schild!</German>
 		<Italian>The Lord God is my armor!</Italian>
 		<Spanish>The Lord God is my armor!</Spanish>
 		<Russian>The Lord God is my armor!</Russian>
@@ -409,7 +409,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DANDOLO_1</Tag>
 		<English>I can see what you're up to, you know.</English>
 		<French>I can see what you're up to, you know.</French>
-		<German>I can see what you're up to, you know.</German>
+		<German>Ich weiß worauf ihr hinaus wollt, wisst ihr.</German>
 		<Italian>I can see what you're up to, you know.</Italian>
 		<Spanish>I can see what you're up to, you know.</Spanish>
 		<Russian>I can see what you're up to, you know.</Russian>
@@ -418,7 +418,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_THE_POPE_1</Tag>
 		<English>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</English>
 		<French>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</French>
-		<German>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</German>
+		<German>In nomine Patris, et Filii, et Spiritus Sancti. Willkommen, mein Kind.</German>
 		<Italian>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Italian>
 		<Spanish>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Spanish>
 		<Russian>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Russian>
@@ -427,7 +427,7 @@
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IVAN_IV_1</Tag>
 		<English>Two Romes have fallen and the third exists, and there will not be a fourth.</English>
 		<French>Two Romes have fallen and the third exists, and there will not be a fourth.</French>
-		<German>Two Romes have fallen and the third exists, and there will not be a fourth.</German>
+		<German>Zwei Roms sind gefallen und ein Drittes existiert, und es wird kein Viertes geben.</German>
 		<Italian>Two Romes have fallen and the third exists, and there will not be a fourth.</Italian>
 		<Spanish>Two Romes have fallen and the third exists, and there will not be a fourth.</Spanish>
 		<Russian>Two Romes have fallen and the third exists, and there will not be a fourth.</Russian>

@@ -32,7 +32,7 @@
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS</Tag>
 		<English>The Gardens of Al Andalus</English>
 		<French>Les Jardins d'Al Andalus</French>
-		<German>Die G&#228;rten von Al Andalus</German>
+		<German>Die G&#228;rten von Al-Andalus</German>
 		<Italian>I giardini di Al Andalus</Italian>
 		<Spanish>Los Jardines del Generalife</Spanish>
 		<Russian>&#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;</Russian>
@@ -180,10 +180,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL</Tag>
 		<English>St. Basil's Cathedral</English>
-		<Spanish>Catedral de San Basilio</Spanish>
 		<French>Cath&#233;drale de St Basil</French>
 		<German>Basilius-Kathedrale</German>
-		<Italian/><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian></TEXT>
+		<Italian/><Spanish>Catedral de San Basilio</Spanish><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO</Tag>
 		<English>San Marco Basilica</English>
@@ -375,7 +374,7 @@
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL</Tag>
 		<English>Tomb of Al Khalid</English>
 		<French>Tombe de Al-Khalid</French>
-		<German>Grabmal von Al Khalid</German>
+		<German>Grabmal von Al-Khalid</German>
 		<Italian/>
 		<Spanish>Tumba de Al Khalid</Spanish>
 		<Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian></TEXT>
