@@ -39,9 +39,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Katholisch</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
+			<Text>katholisch:katholischen:katholische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
 			<Text>Misticismo</Text>
@@ -89,9 +89,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Orthodox</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
+			<Text>orthodox:orthodoxen:orthdoxe</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
 			<Text>Misticismo</Text>
@@ -139,9 +139,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Protestantisch</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
+			<Text>protestantisch:protestantischen:protestantische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
 			<Text>Misticismo</Text>
@@ -189,9 +189,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Islamisch</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
+			<Text>islamisch:islamischen:islamische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
 			<Text>Misticismo</Text>

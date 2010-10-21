@@ -237,7 +237,7 @@
 		<Tag>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Tag>
 		<English>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1459 - 1519[NEWLINE][PARAGRAPH:2]No pedia yet.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[H1]Maximilian I.[\H1][NEWLINE][BOLD]Heiliger Römischer Kaiser[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1459-1519</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -245,7 +245,7 @@
 		<Tag>TXT_KEY_LEADER_MARIA_THERESA</Tag>
 		<English>Maria Theresa</English>
 		<French/>
-		<German/>
+		<German>Maria Theresa</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>
@@ -254,7 +254,7 @@
 		<Tag>TXT_KEY_LEADER_MAXIMILIAN</Tag>
 		<English>Maximilian I</English>
 		<French/>
-		<German/>
+		<German>Maximilian I.</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>

@@ -251,7 +251,7 @@
 		<Tag>TXT_KEY_LEADER_DANDOLO</Tag>
 		<English>Enrico Dandolo</English>
 		<French/>
-		<German/>
+		<German>Enrico Dandolo</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>
@@ -260,7 +260,7 @@
 		<Tag>TXT_KEY_LEADER_DANDOLO_PEDIA</Tag>
 		<English>[H1]Enrico Dandolo[\H1]
 [BOLD]Doge of Venice[\BOLD]
-[BOLD]Lived: [\BOLD] 1107? - 1205 AD
+[BOLD]Lived: [\BOLD] 1107 - 1205 AD
 
 
 	[BOLD]Background:[\BOLD]
@@ -269,7 +269,9 @@
 	Venice was the major financial backer of the Fourth Crusade, supplied the Crusaders' ships, and lent money to the Crusaders who became heavily indebted to Venice. Because of the crusaders' continued delays, provisions were also a problem for the enterprise.
 	Although they were supposed to be sailing to Egypt, Dandolo convinced them to stop at Zara, a port city on the Adriatic that was claimed both by Venice and by the Kingdom of Hungary. Dandolo encouraged the crusaders to attack the city which had rebelled from Venice. A small number of Crusaders refused to help; but the others realized that the conquest of the rebel town and subsequent wintering there was the only way to hold the faltering crusade together. Zara was besieged and captured on November 15, 1202.
 	Shortly afterwards, Alexius Angelus, son of the deposed Byzantine emperor Isaac II, arrived in that city. Dandolo agreed to go along with crusade leaders plan to place Alexius Angelus on the throne of the Byzantine Empire in return for Byzantine support of the crusade. This ultimately led to the conquest and sack of Constantinople on April 13, 1204, an event at which Dandolo was present and in which he played a directing role. The Catholic Crusaders then took permanent control of the Eastern Orthodox capital of Constantinople (or Byzantium) and established a Catholic state, the Latin Empire. Venice gained title to three-eighths of the Byzantine Empire as a result of the 4th Crusade. The Byzantine Empire was never again as powerful as it had been prior to the Fourth Crusade.</English>
-		<French></French><German/><Italian/><Spanish/><Russian>.</Russian></TEXT>
+		<French></French>
+		<German>[H1]Enrico Dandolo[\H1][NEWLINE][BOLD]Doge von Venedig[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1107 - 1205</German>
+		<Italian/><Spanish/><Russian>.</Russian></TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LORENZO_1</Tag>
 		<English>"Whoever wants to be happy, let him be so: about tomorrow there's no knowing." I am [OUR_NAME] of the [OUR_EMPIRE].</English>

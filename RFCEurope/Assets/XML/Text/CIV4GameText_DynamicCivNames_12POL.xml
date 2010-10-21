@@ -271,7 +271,7 @@
 		<Tag>TXT_KEY_LEADER_SOBIESKI</Tag>
 		<English>Jan Sobieski</English>
 		<French>Sobieski</French>
-		<German>Sobieski</German>
+		<German>Johann III. Sobieski</German>
 		<Italian>Sobieski</Italian>
 		<Spanish>Sobieski</Spanish>
 	</TEXT>
@@ -291,7 +291,7 @@
 [TAB]Upon reaching Vienna, he joined up with the Austrians and Germans. Sobieski planned to attack on the 13th of September, but he had noticed that the Turkish resistance was weak and ordered full attack on September 12, 1683. At 4:00 a.m. Sobieski's army of about 81,000 men attacked a Turkish army that numbered about 130,000. Sobieski charged with husaria forward and soon after the Turkish battle line was broken as the Turks scattered in confusion. At 5:30 p.m., Sobieski entered the deserted tent of Kara Mustafa and the battle of Vienna was over.
 [TAB]King Jan III Sobieski, nicknamed by the Turks the "Lion of Lechistan", and the last great king of Poland, died in Wilan, Poland on June 17, 1696. His wife, Maria Kasimira, died in 1716 in Blois, France and her body was returned to Poland. They are interred together in Wawel Castle, Krakow, Poland.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[H1]Johann III Sobieski[\H1][NEWLINE][BOLD]König von Polen[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1629 - 1696</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -299,7 +299,7 @@
 		<Tag>TXT_KEY_LEADER_CASIMIR</Tag>
 		<English>Casimir III</English>
 		<French/>
-		<German/>
+		<German>Kasimir III.</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>
