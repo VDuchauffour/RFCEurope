@@ -241,4 +241,22 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MARIA_THERESA</Tag>
+		<English>Maria Theresa</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAXIMILIAN</Tag>
+		<English>Maximilian I</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>

@@ -250,6 +250,15 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABDARRAHMAN</Tag>
+		<English>Abd-ar-Rahman III</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABDARRAHMAN_PEDIA</Tag>
 		<English>[H1]Abd-ar-Rahman III[\H1]
 [BOLD]Caliph of Cordoba[\BOLD]
@@ -268,5 +277,14 @@
 	Abd-ar-Rahman III. wurde 891 geboren, und wurde Kalif von Córdoba, als er zweiundzwanzig Jahre alt war. Während seiner Regentschaft bekriegte er erfolgreich sowohl die fatimidischen Araber als auch die christlichen Königreiche im Norden und verzeichnete bedeutende Landgewinne (große Teile der Iberischen Halbinsel und ein Teil des Maghrebs). Um in Nordafrika einzufallen, verstärkte er die Kordobanische Flotte und machte es zu einer starken Macht. Abd-ar-Rahman III. war auch bekannt für die Toleranz anderen Religionsgläubigen (Katholiken und Juden) gegenüber. Zudem war er ein Schutzherr der Wissenschaft und Künste. Spezifisch wurde sein Palast, die Medina Azahara, gebaut während seiner Herrschaft, nach dem ummayadisch-arabischen Palast in Damaskus modelliert. Er gab Geld aus, um die Bibliothek des Córdobas zu erweitern und machte die Stadt zu einem wichtigen intellektuellen Zentrum. Als er 961 starb hinterließ er das Kalifat des Córdobas am Gipfel seiner Höhe.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABUYUSUFYAQUB</Tag>
+		<English>Abu Yusuf Yaqub</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
 	</TEXT>
 </Civ4GameText>

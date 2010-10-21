@@ -253,4 +253,13 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>	
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GUSTAVUS</Tag>
+		<English>Gustav Vasa</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>

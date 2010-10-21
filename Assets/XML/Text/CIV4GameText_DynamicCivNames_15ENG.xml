@@ -249,4 +249,13 @@
 		<Spanish>Provincia de Inglaterra</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_WILLIAM</Tag>
+		<English>William the Conqueror</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>
