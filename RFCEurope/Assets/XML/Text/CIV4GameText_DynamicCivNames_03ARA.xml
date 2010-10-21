@@ -254,4 +254,13 @@
 		<Spanish>[H1]Abu Bakr as-Siddiq[\H1]</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABUBAKR</Tag>
+		<English>Abu Bakr</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>

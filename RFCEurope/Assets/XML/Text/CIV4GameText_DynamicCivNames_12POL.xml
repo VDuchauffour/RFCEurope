@@ -295,4 +295,13 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CASIMIR</Tag>
+		<English>Casimir III</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>

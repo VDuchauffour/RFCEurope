@@ -249,8 +249,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DANDOLO</Tag>
-		<English>Dandolo</English>
-		<French>Dandolo</French><German/><Italian/><Spanish/><Russian>&#196;&#224;&#237;&#228;&#238;&#235;&#238;</Russian></TEXT>
+		<English>Enrico Dandolo</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DANDOLO_PEDIA</Tag>
 		<English>[H1]Enrico Dandolo[\H1]

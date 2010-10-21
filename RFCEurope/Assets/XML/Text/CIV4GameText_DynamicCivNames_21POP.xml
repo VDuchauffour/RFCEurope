@@ -251,4 +251,13 @@
 		<Spanish>[H1]El Papa[\H1][NEWLINE][BOLD]Obispo de Roma[\BOLD][PARAGRAPH:2:1]En el siglo VII d. C., Roma se encontraba nominalmente sometida a la autoridad del Imperio Romano de oriente, con capital en Constantinopla. Los bizantinos, ya sea por debilidad o por desidia, no pudieron proteger a la ciudad de la creciente amenaza lombarda procedente del norte y, de este modo, poco a poco, la ciudad fue cayendo bajo la autoridad de su obispo cat&#243;lico (quien m&#225;s tarde recibir&#237;a el t&#237;tulo de "Papa"), el hombre m&#225;s rico y poderoso de la regi&#243;n. [PARAGRAPH:1]Empleando una mezcla de soborno, poder pol&#237;tico y diplomacia, los obispos de Roma hab&#237;an logrado mantener a raya a los b&#225;rbaros, pero la presi&#243;n de los lombardos estaba aumentando. Al ver que los bizantinos no pod&#237;an o no quer&#237;an prestar la ayuda que la ciudad necesitaba, los obispos tuvieron que buscarla en otra parte. El Papa Esteban II recurri&#243; a Pipino el Breve, un franco que acababa de reunificar todas las tierras de este pueblo. A cambio de la sanci&#243;n de la Iglesia a sus conquistas, Pipino invadi&#243; Italia y alej&#243; a los lombardos de las puertas de Roma. A continuaci&#243;n don&#243; al Papa gran parte de las tierras capturadas en las proximidades de Roma, lo que, adem&#225;s de incrementar enormemente sus posesiones, le permiti&#243; fundar los Estados Pontificios.[PARAGRAPH:1]De un solo golpe, el Papa hab&#237;a expulsado a los invasores y encontrado un poderoso contrapeso frente a la lejana Bizancio. La alianza entre la Iglesia y los carolingios se reforzar&#237;a a&#250;n m&#225;s en el a&#241;o 800 d. C., cuando el Papa Le&#243;n III coronara al hijo de Pipino, Carlomagno, como primer emperador del Sacro Imperio Romano.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_THE_POPE</Tag>
+		<English>The Pope</English>
+		<French>Le Pape<French>
+		<German>Der Papst<German>
+		<Italian>Il Papa<Italian>
+		<Spanish>El Papa<Spanish>
+		<Russian/>
+	</TEXT>
 </Civ4GameText>
