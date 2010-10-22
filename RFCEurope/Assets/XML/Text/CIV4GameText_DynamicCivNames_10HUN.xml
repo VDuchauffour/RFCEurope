@@ -248,7 +248,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MAGYAR_MATYAS</Tag>
 		<English>Matthias Corvinus</English>
-		<French>Matthias ler de Hongrie</French>
+		<French>Matthias Ier de Hongrie</French>
 		<German>Matthias Corvinus</German>
 		<Italian>Mattia Corvino</Italian>
 		<Spanish>Mat&#237;as Corvino</Spanish>
@@ -306,10 +306,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_STEPHEN</Tag>
 		<English>Istvan I</English>
-		<French/>
+		<French>&#201;tienne Ier</French>
 		<German>Stephan I.</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Stefano I</Italian>
+		<Spanish>Esteban I</Spanish>
 		<Russian/>
 	</TEXT>
 </Civ4GameText>

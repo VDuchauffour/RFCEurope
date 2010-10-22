@@ -252,10 +252,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABDARRAHMAN</Tag>
 		<English>Abd-ar-Rahman III</English>
-		<French/>
+		<French>Abd al-Rahman III</French>
 		<German>Abd ar-Rahman III.</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Abd al-Rahman III</Italian>
+		<Spanish>Abderram&#225;n III</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
@@ -280,11 +280,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABUYUSUFYAQUB</Tag>
-		<English>Abu Yusuf Yaqub</English>
-		<French/>
-		<German>Abu Yusuf Yaqub</German>
-		<Italian/>
-		<Spanish/>
+		<English>Abu Yaqub Yusuf</English>
+		<French>Abu Yaqub Yusuf</French>
+		<German>Abu Yaqub Yusuf I.</German>
+		<Italian>Abu Yaqub Yusuf</Italian>
+		<Spanish>Abu Yaqub Yusuf</Spanish>
 		<Russian/>
 	</TEXT>
 </Civ4GameText>

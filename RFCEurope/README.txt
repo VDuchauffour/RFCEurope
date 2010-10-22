@@ -9,3 +9,5 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 This is Beta 4. Changes since Beta 3:
 XML cleanup
 Many typo fixes
+Fixed bug that didn't allow you to play in other languages
+Leader names are translated

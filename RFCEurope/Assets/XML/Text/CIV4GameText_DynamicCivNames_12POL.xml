@@ -270,10 +270,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SOBIESKI</Tag>
 		<English>Jan Sobieski</English>
-		<French>Sobieski</French>
-		<German>Johann III. Sobieski</German>
-		<Italian>Sobieski</Italian>
-		<Spanish>Sobieski</Spanish>
+		<French>Jean Sobieski</French>
+		<German>Johann Sobieski</German>
+		<Italian>Giovanni Sobieski</Italian>
+		<Spanish>Juan Sobieski</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SOBIESKI_PEDIA</Tag>
@@ -298,10 +298,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CASIMIR</Tag>
 		<English>Casimir III</English>
-		<French/>
+		<French>Casimir III</French>
 		<German>Kasimir III.</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Casimiro III</Italian>
+		<Spanish>Casimiro III</Spanish>
 		<Russian/>
 	</TEXT>
 </Civ4GameText>
