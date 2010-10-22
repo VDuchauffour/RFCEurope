@@ -244,19 +244,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MARIA_THERESA</Tag>
 		<English>Maria Theresa</English>
-		<French/>
-		<German>Maria Theresa</German>
-		<Italian/>
-		<Spanish/>
+		<French>Marie-Th&#233;r&#232;se</French>
+		<German>Maria Theresia</German>
+		<Italian>Maria Teresa</Italian>
+		<Spanish>Mar&#237;a Teresa</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MAXIMILIAN</Tag>
 		<English>Maximilian I</English>
-		<French/>
+		<French>Maximilien Ier</French>
 		<German>Maximilian I.</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Massimiliano I</Italian>
+		<Spanish>Maximiliano I</Spanish>
 		<Russian/>
 	</TEXT>
 </Civ4GameText>

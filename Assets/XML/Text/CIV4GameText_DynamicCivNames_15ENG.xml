@@ -252,10 +252,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WILLIAM</Tag>
 		<English>William the Conqueror</English>
-		<French/>
+		<French>Guillaume le Conqu&#233;rant</French>
 		<German>Wilhelm der Eroberer</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Guglielmo il Conquistatore</Italian>
+		<Spanish>Guillermo el Conquistador</Spanish>
 		<Russian/>
 	</TEXT>
 </Civ4GameText>
