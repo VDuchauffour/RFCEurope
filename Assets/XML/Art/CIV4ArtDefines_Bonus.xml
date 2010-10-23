@@ -53,15 +53,6 @@
 			<FontButtonIndex>5</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OIL</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
-			<KFM>Art/Terrain/Resources/Oil/Oil.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Oil.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,15</Button>
-			<FontButtonIndex>6</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STONE</Type>
 			<fScale>0.7</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -357,7 +348,6 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/Timber.dds</Button>
 			<FontButtonIndex>42</FontButtonIndex>
 		</BonusArtInfo>
-		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COFFEE</Type>
 			<fScale>0.5</fScale>
@@ -367,6 +357,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/Coffee.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
+		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SLAVES</Type>
 			<fScale>0.5</fScale>
