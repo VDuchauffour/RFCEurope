@@ -234,14 +234,6 @@
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Tag>
-		<English>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1459 - 1519[NEWLINE][PARAGRAPH:2]No pedia yet.</English>
-		<French>.</French>
-		<German>[H1]Maximilian I.[\H1][NEWLINE][BOLD]Heiliger Römischer Kaiser[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1459-1519</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_LEADER_MARIA_THERESA</Tag>
 		<English>Maria Theresa</English>
 		<French>Marie-Th&#233;r&#232;se</French>
@@ -251,6 +243,20 @@
 		<Russian/>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_MARIA_THERESA_PEDIA</Tag>
+		<English>[H1]Maria Theresa[\H1]
+[BOLD]Only female ruleof the Habsburg Dominions, Last ruler of the House of Habsburg[\BOLD]
+[BOLD]Lived:[\BOLD] May 13, 1717 - November 29, 1780 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_MAXIMILIAN</Tag>
 		<English>Maximilian I</English>
 		<French>Maximilien Ier</French>
@@ -258,5 +264,17 @@
 		<Italian>Massimiliano I</Italian>
 		<Spanish>Maximiliano I</Spanish>
 		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Tag>
+		<English>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1459 - 1519
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
+		<French>.</French>
+		<German>[H1]Maximilian I.[\H1][NEWLINE][BOLD]Heiliger Römischer Kaiser[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1459-1519</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>
