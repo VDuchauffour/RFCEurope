@@ -270,4 +270,18 @@
 		<Spanish>Harald Hardrada</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HARALD_HARDRADA_PEDIA</Tag>
+		<English>[H1]Harald Hardrada[\H1]
+[BOLD]King of Norway[\BOLD]
+[BOLD]Lived:[\BOLD] 1015 - September 25, 1066 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

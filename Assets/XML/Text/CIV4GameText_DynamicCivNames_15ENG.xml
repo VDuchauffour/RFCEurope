@@ -258,4 +258,18 @@
 		<Spanish>Guillermo el Conquistador</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_WILLIAM_PEDIA</Tag>
+		<English>[H1]William the Conqueror[\H1]
+[BOLD]First Norman King of England, Duke of Normandy[\BOLD]
+[BOLD]Lived:[\BOLD] c.1028 - September 9, 1087 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

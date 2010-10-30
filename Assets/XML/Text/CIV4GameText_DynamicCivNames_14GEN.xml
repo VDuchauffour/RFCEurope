@@ -256,4 +256,18 @@
 		<Spanish>Sim&#243;n Boccanegra</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SIMONE_PEDIA</Tag>
+		<English>[H1]Simone Boccanegra[\H1]
+[BOLD]First Doge of Genoa[\BOLD]
+[BOLD]Lived:[\BOLD] ? - 1363 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

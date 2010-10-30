@@ -260,4 +260,18 @@
 		<Spanish>Juana de Arco</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JOAN_PEDIA</Tag>
+		<English>[H1]Joan of Arc[\H1]
+[BOLD]National Herione of France[\BOLD]
+[BOLD]Lived:[\BOLD] c.1412 - May 30, 1431 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>
