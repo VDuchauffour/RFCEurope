@@ -737,4 +737,77 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE_PEDIA</Tag>
+		<English>[TAB]A smokehouse is a building where meat or fish is cured with smoke. The finished product might be stored in the building, sometimes for a year or more.
+[TAB]Traditional smokehouses served both as meat smokers and to store the meats, often for groups and communities of people. Food preservation occurred by salt curing and extended cold smoking for two weeks or longer. Smokehouses were often secured to prevent animals and thieves from accessing the food.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TANNERY_PEDIA</Tag>
+		<English>[TAB]Tanning is the process of making leather, which does not easily decompose, from the skins of animals, which do. Often this uses tannin, an acidic chemical compound. Coloring may occur during tanning. A tannery is the term for a place where these skins are processed.
+[TAB]Tanning leather involves a process which permanently alters the protein structure of skin so that it cannot ever return to rawhide. Making rawhide does not require the use of tannin and is made simply by removing the flesh and fat and then the hair by way of soaking in an aqueous solution (often called liming when using lime and water or bucking when using wood ash (lye) and water), then scraping over a beam with a somewhat dull knife, and then leaving to dry, usually stretched on a frame so that it dries flat. The two aforementioned solutions for removing the hair also act to clean the fiber network of the skin and therefore allow penetration and action of the tanning agent.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL_PEDIA</Tag>
+		<English>[TAB]Textile manufacturing is a major industry. It is based in the conversion of three types of fibre into yarn, then fabric, then textiles. These are then fabricated into clothes or other artifacts. Cotton remains the most important natural fibre, so is treated in depth. There are many variable processes available at the spinning and fabric-forming stages coupled with the complexities of the finishing and colouration processes to the production of a wide ranges of products. There remains a large industry that uses hand techniques to achieve the same results.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WEAVER_PEDIA</Tag>
+		<English>[TAB]Weaving is a textile craft in which two distinct sets of yarns or threads, called the warp and the filling or weft (older woof), are interlaced to form a fabric or cloth. The warp threads run lengthways on the piece of cloth, and the weft runs across from side to side, across the bolt of cloth.
+[TAB]Cloth is woven on a loom, a device that holds the warp threads in place while filling threads are woven through them. Weft is an old English word meaning "that which is woven".
+[TAB]The way the warp and filling threads interlace with each other is called the weave. The majority of woven products are created with one of three basic weaves: plain weave, satin weave, or twill.
+[TAB]Woven cloth can be plain (in one colour or a simple pattern), or can be woven in decorative or artistic designs, including tapestries. Fabric in which the warp and/or weft is tie-dyed before weaving is called ikat.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CHURCH_PEDIA</Tag>
+		<English>[TAB]A church building is a building or structure whose primary purpose is to facilitate the meeting of a church. Originally, Jewish Christians met in synagogues, such as the Cenacle, and in one another's homes. As Christianity grew and became more accepted by governments, rooms and, eventually, entire buildings were set aside for the explicit purpose of Christian worship.
+[TAB]Traditional church buildings are often in the shape of a cross and frequently have a tower or dome. More modern church buildings have a variety of architectural styles and layouts; many buildings that were designed for other purposes have now been converted for church use, and, similarly, many original church buildings have been put to other uses.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_MONASTERY_PEDIA</Tag>
+		<English>[TAB]Monastery denotes the building, or complex of buildings, that houses a room reserved for prayer (e.g. an oratory) as well as the domestic quarters and workplace(s) of monastics, whether monks or nuns, and whether living in community or alone (hermits).
+[TAB]Monasteries may vary greatly in size - a small dwelling accommodating only a hermit, or in the case of communities anything from a single building housing only a one senior and two or three junior monks or nuns, to vast complexes and estates housing tens or hundreds.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
+		<English>[TAB]A mosque is a place of worship for followers of Islam. The word entered the English language most likely through French (mosquée), from Spanish (mezquita), from Berber (tamezgida), ultimately originating in Arabic: masjid. The Arabic word masjid literally means a place of prostration. The word "mosque" in English refers to all types of buildings dedicated for Islamic worship, although there is a distinction in Arabic between the smaller masjid dedicated for the daily five prayers and the larger masjid jami where the daily five prayers and the Friday congregation sermons are held with a high volume of attendence. The masjid jami also plays more roles such as teaching Qur'an and educating future imams.
+[TAB]The mosque serves as a place where Muslims can come together for salat (prayer) as well as a center for information, education, and dispute settlement. The Imam leads the prayer.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
+		<English>[TAB]In the Jewish Diaspora, a Jewish quarter is the area of a city traditionally inhabited by Jews. Jewish quarters, like the Jewish ghettos in Europe, were often the outgrowths of segregated ghettos instituted by the surrounding Christian authorities. A Yiddish term for a Jewish quarter or neighborhood is "Di yiddishe gas", or "The Jewish street". Many European and Middle Eastern cities once had a historical Jewish quarter and some still have it.
+[TAB]The Jewish ghettos existed because Jews were viewed as that they were foreigners due to their non-Christian beliefs in a Renaissance Christian environment. As a result, Jews were placed under strict regulations throughout many European cities. The character of ghettos has varied through times. In some cases, the ghetto was a Jewish quarter with a relatively affluent population (for instance the Jewish ghetto in Venice). In other cases, ghettos were places of terrible poverty and during periods of population growth, ghettos had narrow streets and tall, crowded houses. Residents had their own justice system. Around the ghetto stood walls that, during pogroms, were closed from inside to protect the community, but from the outside during Christmas, Pesach, and Easter Week to prevent the Jews from leaving during those times.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

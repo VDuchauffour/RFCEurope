@@ -46,7 +46,7 @@
 			<ProductionTraits/>
 			<Button>Art/Interface/Buttons/Buildings/Seminary.dds</Button>
 		</SpecialBuildingInfo>
-		<SpecialBuildingInfo> <!-- Also a Maktab-->
+		<SpecialBuildingInfo> <!-- Also a House of Wisdom-->
 			<Type>SPECIALBUILDING_SCHOOL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_SCHOOL</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
