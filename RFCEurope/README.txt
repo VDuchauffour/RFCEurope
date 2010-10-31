@@ -16,3 +16,4 @@ Infirmary has +10% heal rate
 Hungarian Végvár art is slightly changed
 Included shortcut (if you installed the mod porperly, the link works, otherwise it doesn't)
 Added basic information to leaders
+New text for some buildings
