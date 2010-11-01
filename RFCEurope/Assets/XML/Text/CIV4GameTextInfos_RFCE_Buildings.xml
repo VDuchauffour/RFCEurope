@@ -711,11 +711,6 @@
 		<German>Genuesische Bank</German>
 		<Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
-		<English>.</English>
-		<French>.</French>
-		<German/><Italian/><Spanish/><Russian/></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
 		<English>Star Fort</English>
 		<French>Tracé à l'Italienne</French>
@@ -805,6 +800,33 @@
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
 		<English>[TAB]In the Jewish Diaspora, a Jewish quarter is the area of a city traditionally inhabited by Jews. Jewish quarters, like the Jewish ghettos in Europe, were often the outgrowths of segregated ghettos instituted by the surrounding Christian authorities. A Yiddish term for a Jewish quarter or neighborhood is "Di yiddishe gas", or "The Jewish street". Many European and Middle Eastern cities once had a historical Jewish quarter and some still have it.
 [TAB]The Jewish ghettos existed because Jews were viewed as that they were foreigners due to their non-Christian beliefs in a Renaissance Christian environment. As a result, Jews were placed under strict regulations throughout many European cities. The character of ghettos has varied through times. In some cases, the ghetto was a Jewish quarter with a relatively affluent population (for instance the Jewish ghetto in Venice). In other cases, ghettos were places of terrible poverty and during periods of population growth, ghettos had narrow streets and tall, crowded houses. Residents had their own justice system. Around the ghetto stood walls that, during pogroms, were closed from inside to protect the community, but from the outside during Christmas, Pesach, and Easter Week to prevent the Jews from leaving during those times.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
+		<English>[TAB]A number of prominent Genoese families were involved in the establishment and governance of the Bank, including the Houses of Grimaldi and Serra. Unusually for its time, the Bank made use of a number of Jewish agents, including the Ghisolfi clan that managed certain possessions around the Black Sea.
+[TAB]The Bank was governed by four consuls who administered its finances and directed investments. Because the Republic's ruling oligarchs were normally prominent in Bank politics, it is often difficult to determine where the Bank's influence ended and the Republic's began.
+[TAB]Many of Genoa's overseas territories were governed either directly or indirectly by the Bank. In 1453 the Republic handed over governance of Corsica, Gazaria, and a number of other possessions to Bank officials, though over the course of the fifteenth century the Republic gradually reclaimed many of its territories from Bank control. The Taman peninsula remained in the control of the de Ghisolfi family, but the princes of that clan now reported to the Bank.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE_PEDIA</Tag>
+		<English>[TAB]An important technological innovation, bows were perhaps the first machines built to store energy slowly and then release it quickly. Bows and arrows have been in existence for 30,000 years. The original bows were made of springy wood - yew, bamboo, palm, and so forth. By 1300 BC, bows were made of composite material - wood, horn, and sinew. The first arrows were probably straight wooden sticks with one end sharpened and fire-hardened. Stone tips were added once man learned to sharpen flint.</English>
+		<French>[TAB]Importante innovation technique, l'arc est peut-&#234;tre le premier m&#233;canisme invent&#233; pour emmagasiner l'&#233;nergie et la lib&#233;rer d'un coup. Il existe depuis 30 000 ans et &#233;tait fabriqu&#233; &#224; l'origine avec du bois souple, comme l'if, le bambou ou le palmier. Vers 1 300 av. J.-C. apparaissent les arcs composites, con&#231;us avec du bois, de la corne et des tendons. Les premi&#232;res fl&#232;ches &#233;taient probablement des bouts de bois droits, dont une extr&#233;mit&#233; &#233;tait aiguis&#233;e et durcie au feu. Les pointes en pierre sont apparues une fois que l'homme a appris &#224; tailler le silex.</French>
+		<German>[TAB]B&#246;gen waren eine wichtige Erfindung, da sie erstmals die Speicherung und schnelle Freigabe kinetischer Energie erm&#246;glichten. Die ersten B&#246;gen entstanden vor etwa 30.000 Jahren aus elastischem Holz (Eibe, Bambus, Palme usw.). Um 1300 vor Christus entstanden B&#246;gen aus Verbundwerkstoffen, wie Holz, Horn und Sehnen. Die ersten Pfeile waren vermutlich angespitzte und im Feuer geh&#228;rtete &#196;ste. Als der Mensch schlie&#223;lich lernte, Feuerstein zu sch&#228;rfen, wurden die traditionellen Holzspitzen von Steinspitzen abgel&#246;st.r Zeit in Anspruch als die Ausbildung eines Bogensch&#252;tzen.</German>
+		<Italian>[TAB]L'arco rappresenta un'innovazione tecnologica importante, essendo il primo modello di &quot;macchinario&quot; in grado di incamerare energia lentamente per poi rilasciarla rapidamente. Archi e frecce esistono da più di 30.000 anni. I primi archi erano fatti con del legno molto elastico, come quello del tasso, del bambù e della palma. Nel 1300 a. C., gli archi erano realizzati con più materiali, come legno, corna e tendini animali. Le prime frecce erano probabilmente dei semplici legni con la punta affilata o temprata. Successivamente, quando l'uomo imparò la lavorazione della selce, le punte divennero in pietra.</Italian>
+		<Spanish>[TAB]El arco, importante innovaci&#243;n tecnol&#243;gica, seguramente fuera la primera m&#225;quina capaz de almacenar la energ&#237;a lentamente y liberarla r&#225;pidamente. Los arcos y las flechas existen desde hace 30.000 a&#241;os. Los primeros arcos estaban hechos de maderas el&#225;sticas: tejo, bamb&#250;, palma, etc. Desde el a&#241;o 1300 a. C., se fabricaban ya con materiales compuestos: madera, cuerno y tendones. Probablemente, las primeras flechas fueran astiles de madera con un extremo endurecido al fuego. Una vez que el hombre aprendi&#243; a afilar el s&#237;lex, se a&#241;adieron puntas de piedra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE_PEDIA</Tag>
+		<English>[TAB]A coffeehouse or coffee shop is an establishment which primarily serves prepared coffee or other hot beverages. It shares some of the characteristics of a bar, and some of the characteristics of a restaurant, but it is different from a cafeteria. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks. Many coffee houses in the Middle East, and in West Asian immigrant districts in the Western world, offer shisha (nargile in Turkish and Greek), flavored tobacco smoked through a hookah.
+[TAB]From a cultural standpoint, coffeehouses largely serve as centers of social interaction: the coffeehouse provides social members with a place to congregate, talk, write, read, entertain one another, or pass the time, whether individually or in small groups of 2 or 3.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
