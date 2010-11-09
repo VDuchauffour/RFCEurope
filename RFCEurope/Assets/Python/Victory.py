@@ -593,16 +593,31 @@ class Victory:
 					self.setGoal( iSpain, 1, 1 )
 						
 			if ( iGameTurn == i1600AD and self.getGoal( iSpain, 2) == -1 ):
-				iColonies = self.getColonies( iSpain )
-				iMost = true
-				for iCiv in range( iNumPlayers ):
-					if ( iCiv != iSpain and self.getPlayer( iCiv ).isAlive() ):
-						if (self.getColonies(iCiv) >= iColonies):
-							iMost = false
-				if ( iMost ):
+				print("Spain UHV test")
+				tOwnedColonies = []
+				for iLoopCiv in range( iNumMajorPlayers ):
+					print("Spain UHV Civ:", iLoopCiv)
+					if ( iLoopCiv != iSpain and self.getPlayer( iLoopCiv ).isAlive() ):
+						tOwnedColonies.append(self.getColonies(iLoopCiv))
+						print("Spain UHV colonies", iLoopCiv, self.getColonies(iLoopCiv))
+				if ( self.getColonies(iSpain) > max(tOwnedColonies) ):
 					self.setGoal( iSpain, 2, 1 )
+					print("spain UHV 2 positiv")
 				else:
 					self.setGoal( iSpain, 2, 0 )
+					print("spain UHV 2 negativ")
+
+			#if ( iGameTurn == i1600AD and self.getGoal( iSpain, 2 ) == -1 ):
+			# 	bSpainhasMost = True
+			# 	iColony = self.getColonies( iSpain )
+			#	for iLoopCiv in range( iNumMajorPlayers ):
+			#		if ( iLoopCiv != iSpain and self.getPlayer( iLoopCiv ).isAlive() ):
+			#			if ( self.getColonies( iLoopCiv ) >= iColony ):
+			#				bSpainhasMost = False
+			#	if ( bSpainhasMost ):
+			#		self.setGoal( iSpain, 2, 1 )
+			#	else:
+			#		self.setGoal( iSpain, 2, 0 )
 		
 			#if ( self.getGoal( iSpain, 2 ) == -1 ):
 			#	if ( self.getColonies( iSpain ) > 5 ):
@@ -640,13 +655,13 @@ class Victory:
                         # Zipzapzup: 1st Conquering Constantinople
                         # 2nd Dalmatien + islands + rhodes
                         # 3rd 10 luxus + san marco + marco polo
-                        if (iGameTurn <= i1200AD and self.getGoal( iVenecia, 0) == -1 ):
-                                pJPlot = gc.getMap().plot( con.iConstantinople[0], con.iConstantinople[1] )
+			if (iGameTurn <= i1200AD and self.getGoal( iVenecia, 0) == -1 ):
+				pJPlot = gc.getMap().plot( con.iConstantinople[0], con.iConstantinople[1] )
 				if ( pJPlot.isCity()):
 					if ( pJPlot.getPlotCity().getOwner() == iVenecia ):
 						self.setGoal(iVenecia,0,1)
-					else:
-						self.setGoal(iVenecia,0,0)
+			elif (self.getGoal( iVenecia, 0) == -1):
+				self.setGoal(iVenecia,0,0)
 			
 			if ( iGameTurn <= i1500AD and self.getGoal( iVenecia, 1 ) == -1 ):
 				iDalmatia = gc.doesOwnCities( iVenecia, tVenecianControl[0][0], tVenecianControl[0][1], tVenecianControl[0][2], tVenecianControl[0][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[1][0], tVenecianControl[1][1], tVenecianControl[1][2], tVenecianControl[1][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[2][0], tVenecianControl[2][1], tVenecianControl[2][2], tVenecianControl[2][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[3][0], tVenecianControl[3][1], tVenecianControl[3][2], tVenecianControl[3][3] )
@@ -1226,7 +1241,6 @@ class Victory:
                                 if (pVenecia.isAlive()):
                                         if (self.getGoal(iVenecia, 2) == -1):
                                                 iWondersBuilt = self.getWondersBuilt(iVenecia)
-                                                print("Venecia has:",iWondersBuilt,"Wonders")
                                                 self.setWondersBuilt(iVenecia, iWondersBuilt +1)
                         else:
                                 if (pVenecia.isAlive()):
