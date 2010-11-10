@@ -177,86 +177,86 @@ class Victory:
 ################################################   
 
 
-                def getGoal( self, i, j ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['lGoals'][i][j]
+        def getGoal( self, i, j ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['lGoals'][i][j]
 
-                def setGoal( self, i, j, iNewValue ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['lGoals'][i][j] = iNewValue
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setGoal( self, i, j, iNewValue ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['lGoals'][i][j] = iNewValue
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def getReligionFounded( self, iCiv ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['lReligionFounded'][iCiv]
+        def getReligionFounded( self, iCiv ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['lReligionFounded'][iCiv]
 
-                def setReligionFounded( self, iCiv, iNewValue ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['lReligionFounded'][iCiv] = iNewValue
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setReligionFounded( self, iCiv, iNewValue ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['lReligionFounded'][iCiv] = iNewValue
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def getWondersBuilt( self, iCiv ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['lWondersBuilt'][iCiv]
+        def getWondersBuilt( self, iCiv ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['lWondersBuilt'][iCiv]
 
-                def setWondersBuilt( self, iCiv, iNewValue ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['lWondersBuilt'][iCiv] = iNewValue
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setWondersBuilt( self, iCiv, iNewValue ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['lWondersBuilt'][iCiv] = iNewValue
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def get2OutOf3( self, iCiv ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['l2OutOf3'][iCiv]
+        def get2OutOf3( self, iCiv ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['l2OutOf3'][iCiv]
 
-                def set2OutOf3( self, iCiv, bNewValue ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['l2OutOf3'][iCiv] = bNewValue
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def set2OutOf3( self, iCiv, bNewValue ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['l2OutOf3'][iCiv] = bNewValue
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def getNorseRazed( self ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['iNorseRazed']
+        def getNorseRazed( self ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['iNorseRazed']
 
-                def setNorseRazed( self, iNewValue ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['iNorseRazed'] = iNewValue
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setNorseRazed( self, iNewValue ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['iNorseRazed'] = iNewValue
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 		
-                def getColonies( self, iCiv ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['lColonies'][iCiv]
+        def getColonies( self, iCiv ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['lColonies'][iCiv]
 		
-                def changeColonies( self, iCiv, iChange ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['lColonies'][iCiv] += iChange
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def changeColonies( self, iCiv, iChange ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['lColonies'][iCiv] += iChange
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def getGenoaBanks( self ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return (scriptDict['bGenoaBanks'] == 1)
+        def getGenoaBanks( self ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return (scriptDict['bGenoaBanks'] == 1)
 		
-                def setGenoaBanks( self, iChange ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['bGenoaBanks'] = iChange
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setGenoaBanks( self, iChange ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['bGenoaBanks'] = iChange
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def getGenoaCorporations( self ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['bGenoaCorps']
+        def getGenoaCorporations( self ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['bGenoaCorps']
 		
-                def setGenoaCorporations( self, iChange ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['bGenoaCorps'] = iChange
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setGenoaCorporations( self, iChange ):
+             scriptDict = pickle.loads( gc.getGame().getScriptData() )
+             scriptDict['bGenoaCorps'] = iChange
+             gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                def getCorporationsFounded( self ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    return scriptDict['bCorpsFounded']
+        def getCorporationsFounded( self ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            return scriptDict['bCorpsFounded']
 		
-                def setCorporationsFounded( self, iChange ):
-                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                    scriptDict['bCorpsFounded'] = iChange
-                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setCorporationsFounded( self, iChange ):
+            scriptDict = pickle.loads( gc.getGame().getScriptData() )
+            scriptDict['bCorpsFounded'] = iChange
+            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 
 #######################################
