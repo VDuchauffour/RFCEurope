@@ -2110,7 +2110,7 @@ class RiseAndFall:
                 if ( iCiv == iArabia ):
                         utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 7)
                 if ( iCiv == iBulgaria ):
-                        utils.makeUnit(con.iKonnik, iCiv, tPlot, 2)
+                        utils.makeUnit(con.iBulgarianKonnik, iCiv, tPlot, 2)
                 if ( iCiv == iCordoba ):
                         utils.makeUnit(con.iAxeman, iCiv, tPlot, 2)
                 if ( iCiv == iSpain ):
