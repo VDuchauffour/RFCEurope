@@ -480,17 +480,10 @@ class Victory:
 			
 
 			if (iGameTurn == i1101AD):
-                if (pCordoba.countTotalCulture() >= 7000):
-                    self.setGoal( iCordoba, 2, 1 )
-                else:
-                    self.setGoal( iCordoba, 2, 0 )
-
-			#if ( iGameTurn == i1491AD and self.getGoal(iCordoba,2) == -1 ):
-			#	if (gc.countOwnedCities( iCordoba, tCordobaControl[0][0], tCordobaControl[0][1], tCordobaControl[0][2], tCordobaControl[0][3] ) >= 4 and gc.countOwnedCities( iCordoba, tCordobaControl[1][0], tCordobaControl[1][1], tCordobaControl[1][2], tCordobaControl[1][3] ) >= 4 ):
-			#		self.setGoal( iCordoba, 2, 1 )
-			#	else:
-			#		self.setGoal( iCordoba, 2, 0 )
-
+              			if (pCordoba.countTotalCulture() >= 7000):
+                    			self.setGoal( iCordoba, 2, 1 )
+                		else:
+                    			self.setGoal( iCordoba, 2, 0 )
 								
 		elif ( iPlayer == iSpain and pSpain.isAlive() ):
 			
@@ -515,7 +508,7 @@ class Victory:
 					self.setGoal( iSpain, 1, 1 )
 						
 			if ( iGameTurn == i1600AD ):
-                iColony = self.getColonies( iSpain )
+               			iColony = self.getColonies( iSpain )
 				for iLoopCiv in range( iNumMajorPlayers ):
 					if ( iLoopCiv != iSpain and gc.getPlayer(iLoopCiv).isAlive() ):
 						if (self.getColonies(iLoopCiv) >= iColony ):
@@ -1034,7 +1027,7 @@ class Victory:
 					self.setGoal( iEngland, 2, 0 )
 
 
-            def onBuildingBuilt(self, iPlayer, iBuilding):
+	def onBuildingBuilt(self, iPlayer, iBuilding):
                 # 3Miro: everything is coded by me
                 if (not gc.getGame().isVictoryValid(7)): #7 == historical
                     return
