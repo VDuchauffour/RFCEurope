@@ -333,12 +333,6 @@ class AIWars:
                                         
 	    
         def forgetMemory(self, iTech, iPlayer):
-                if (iTech == con.iCommunism or iTech == con.iMassMedia):
-                        for iLoopCiv in range( iNumPlayers ):
-                                pPlayer = gc.getPlayer(iPlayer)
-                                if (pPlayer.AI_getMemoryCount(iLoopCiv,0) > 0):
-                                        pPlayer.AI_changeMemoryCount(iLoopCiv,0,-1)
-                                if (pPlayer.AI_getMemoryCount(iLoopCiv,1) > 0):
-                                        pPlayer.AI_changeMemoryCount(iLoopCiv,1,-1)
+                pass
 
 

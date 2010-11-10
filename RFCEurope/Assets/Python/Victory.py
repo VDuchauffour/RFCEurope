@@ -8,7 +8,6 @@ import Popup
 import cPickle as pickle
 import Consts as con
 import RFCUtils
-import Crusades as cru
 
 utils = RFCUtils.RFCUtils()
 
@@ -172,170 +171,94 @@ tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ),(59, 43, 90, 55) ) # S
 
 class Victory:
 
-     
+
 ##################################################
 ### Secure storage & retrieval of script data ###
 ################################################   
-		           
 
-        def getGoal( self, i, j ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lGoals'][i][j]
 
-        def setGoal( self, i, j, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lGoals'][i][j] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def getGoal( self, i, j ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['lGoals'][i][j]
 
-        def getReligionFounded( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lReligionFounded'][iCiv]
+                def setGoal( self, i, j, iNewValue ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['lGoals'][i][j] = iNewValue
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def setReligionFounded( self, iCiv, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lReligionFounded'][iCiv] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def getReligionFounded( self, iCiv ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['lReligionFounded'][iCiv]
 
-        def getEnslavedUnits( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iEnslavedUnits']
+                def setReligionFounded( self, iCiv, iNewValue ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['lReligionFounded'][iCiv] = iNewValue
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getRazedByMongols( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iRazedByMongols']
-            
-        def setRazedByMongols( self, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['iRazedByMongols'] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def getWondersBuilt( self, iCiv ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['lWondersBuilt'][iCiv]
 
-        def getEnglishEras( self, i ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lEnglishEras'][i]
+                def setWondersBuilt( self, iCiv, iNewValue ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['lWondersBuilt'][iCiv] = iNewValue
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def setEnglishEras( self, i, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lEnglishEras'][i] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def get2OutOf3( self, iCiv ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['l2OutOf3'][iCiv]
 
-        def getGreekTechs( self, i ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lGreekTechs'][i]
+                def set2OutOf3( self, iCiv, bNewValue ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['l2OutOf3'][iCiv] = bNewValue
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def setGreekTechs( self, i, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lGreekTechs'][i] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
-        def getWondersBuilt( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lWondersBuilt'][iCiv]
+                def getNorseRazed( self ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['iNorseRazed']
 
-        def setWondersBuilt( self, iCiv, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lWondersBuilt'][iCiv] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
-        def get2OutOf3( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['l2OutOf3'][iCiv]
-
-        def set2OutOf3( self, iCiv, bNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['l2OutOf3'][iCiv] = bNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        def getNumSinks( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iNumSinks']
-            
-        def setNumSinks( self, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['iNumSinks'] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        def getBabylonianTechs( self, i ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lBabylonianTechs'][i]
-
-        def setBabylonianTechs( self, i, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lBabylonianTechs'][i] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        def getMediterraneanColonies( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iMediterraneanColonies']
-            
-        def setMediterraneanColonies( self, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['iMediterraneanColonies'] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        def getPortugueseColonies( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iPortugueseColonies']
-            
-        def setPortugueseColonies( self, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['iPortugueseColonies'] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        def getNorseRazed( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iNorseRazed']
-
-        def setNorseRazed( self, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['iNorseRazed'] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        def getNewWorld( self, i ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lNewWorld'][i]
-
-        def setNewWorld( self, i, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lNewWorld'][i] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def setNorseRazed( self, iNewValue ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['iNorseRazed'] = iNewValue
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 		
-	def getColonies( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lColonies'][iCiv]
+                def getColonies( self, iCiv ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['lColonies'][iCiv]
 		
-	def changeColonies( self, iCiv, iChange ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lColonies'][iCiv] += iChange
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def changeColonies( self, iCiv, iChange ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['lColonies'][iCiv] += iChange
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-	def getGenoaBanks( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return (scriptDict['bGenoaBanks'] == 1)
+                def getGenoaBanks( self ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return (scriptDict['bGenoaBanks'] == 1)
 		
-	def setGenoaBanks( self, iChange ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['bGenoaBanks'] = iChange
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def setGenoaBanks( self, iChange ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['bGenoaBanks'] = iChange
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-	def getGenoaCorporations( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['bGenoaCorps']
+                def getGenoaCorporations( self ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['bGenoaCorps']
 		
-	def setGenoaCorporations( self, iChange ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['bGenoaCorps'] = iChange
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def setGenoaCorporations( self, iChange ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['bGenoaCorps'] = iChange
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-	def getCorporationsFounded( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['bCorpsFounded']
+                def getCorporationsFounded( self ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    return scriptDict['bCorpsFounded']
 		
-	def setCorporationsFounded( self, iChange ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['bCorpsFounded'] = iChange
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                def setCorporationsFounded( self, iChange ):
+                    scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                    scriptDict['bCorpsFounded'] = iChange
+                    gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-                
+
 #######################################
 ### Main methods (Event-Triggered) ###
 #####################################  
@@ -456,11 +379,11 @@ class Victory:
 					
 			if ( iGameTurn == i1500AD and self.getGoal( iByzantium, 2) == -1 ):
 				iGold = pByzantium.getGold()
-				iMost = true
+				iMost = True
 				for iCiv in range( iNumPlayers ):
 					if ( iCiv != iByzantium and gc.getPlayer( iCiv ).isAlive() ):
 						if (gc.getPlayer(iCiv).getGold() > iGold):
-							iMost = false
+							iMost = False
 				if ( iMost ):
 					self.setGoal( iByzantium, 2, 1 )
 				else:
@@ -557,11 +480,10 @@ class Victory:
 			
 
 			if (iGameTurn == i1101AD):
-                                        print ("cordoba culture", pCordoba.countTotalCulture())
-                                        if (pCordoba.countTotalCulture() >= 7000):
-                                                self.setGoal( iCordoba, 2, 1 )
-                                        else:
-                                                self.setGoal( iCordoba, 2, 0 )
+                if (pCordoba.countTotalCulture() >= 7000):
+                    self.setGoal( iCordoba, 2, 1 )
+                else:
+                    self.setGoal( iCordoba, 2, 0 )
 
 			#if ( iGameTurn == i1491AD and self.getGoal(iCordoba,2) == -1 ):
 			#	if (gc.countOwnedCities( iCordoba, tCordobaControl[0][0], tCordobaControl[0][1], tCordobaControl[0][2], tCordobaControl[0][3] ) >= 4 and gc.countOwnedCities( iCordoba, tCordobaControl[1][0], tCordobaControl[1][1], tCordobaControl[1][2], tCordobaControl[1][3] ) >= 4 ):
@@ -572,7 +494,7 @@ class Victory:
 								
 		elif ( iPlayer == iSpain and pSpain.isAlive() ):
 			
-			if ( iGameTurn == i1600AD and self.getGoal(iSpain, 0) == -1 ):
+			if ( iGameTurn == i1600AD ):
 				if ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3] ) == 11 ) and ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[1][0], tSpainControl[1][1], tSpainControl[1][2], tSpainControl[1][3] ) == 11 ):
 					if ( not gc.doesHaveOtherReligion(tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3], con.iCatholicism)):
 						self.setGoal( iSpain, 0, 1 )
@@ -592,36 +514,15 @@ class Victory:
 				if ( iCountCities >= 4 ):
 					self.setGoal( iSpain, 1, 1 )
 						
-			if ( iGameTurn == i1600AD and self.getGoal( iSpain, 2) == -1 ):
-				print("Spain UHV test")
-				tOwnedColonies = []
+			if ( iGameTurn == i1600AD ):
+                iColony = self.getColonies( iSpain )
 				for iLoopCiv in range( iNumMajorPlayers ):
-					print("Spain UHV Civ:", iLoopCiv)
-					if ( iLoopCiv != iSpain and self.getPlayer( iLoopCiv ).isAlive() ):
-						tOwnedColonies.append(self.getColonies(iLoopCiv))
-						print("Spain UHV colonies", iLoopCiv, self.getColonies(iLoopCiv))
-				if ( self.getColonies(iSpain) > max(tOwnedColonies) ):
-					self.setGoal( iSpain, 2, 1 )
-					print("spain UHV 2 positiv")
-				else:
-					self.setGoal( iSpain, 2, 0 )
-					print("spain UHV 2 negativ")
+					if ( iLoopCiv != iSpain and gc.getPlayer(iLoopCiv).isAlive() ):
+						if (self.getColonies(iLoopCiv) >= iColony ):
+							self.setGoal( iSpain, 2, 0 )
+							return
+				self.setGoal( iSpain, 2, 1 )
 
-			#if ( iGameTurn == i1600AD and self.getGoal( iSpain, 2 ) == -1 ):
-			# 	bSpainhasMost = True
-			# 	iColony = self.getColonies( iSpain )
-			#	for iLoopCiv in range( iNumMajorPlayers ):
-			#		if ( iLoopCiv != iSpain and self.getPlayer( iLoopCiv ).isAlive() ):
-			#			if ( self.getColonies( iLoopCiv ) >= iColony ):
-			#				bSpainhasMost = False
-			#	if ( bSpainhasMost ):
-			#		self.setGoal( iSpain, 2, 1 )
-			#	else:
-			#		self.setGoal( iSpain, 2, 0 )
-		
-			#if ( self.getGoal( iSpain, 2 ) == -1 ):
-			#	if ( self.getColonies( iSpain ) > 5 ):
-			#		self.setGoal( iSpain, 2, 1 )
 					
 		elif ( iPlayer == iNorse and pNorse.isAlive() ):
 		
@@ -682,7 +583,7 @@ class Victory:
 					self.setGoal( iVenecia, 2, 0 )
 					
 		elif ( iPlayer == iKiev and pKiev.isAlive() ):
-		  
+
 			if ( iGameTurn == i1300AD and self.getGoal( iKiev, 0 ) == - 1 ):
 				if ( self.getOwnedGrain( pKiev ) >= 10 ):
 					self.setGoal( iKiev, 0, 1 )
@@ -1051,12 +952,8 @@ class Victory:
 			if ( iIslands >= 3 and iAfrica >= 2 ):
 				self.setGoal( iPortugal, 0, 1 )
 		
-
-                                                
-                        
         def onReligionFounded(self, iReligion, iFounder):
 		pass
-
 
         def onCityAcquired(self, owner, playerType, bConquest):
         	# 3Miro: everything in this file si mine as well
@@ -1115,7 +1012,6 @@ class Victory:
 					else:
 						self.setNorseRazed(ioldrazed+1)
         	pass
-                                                
 
 
         def onTechAcquired(self, iTech, iPlayer):
@@ -1138,10 +1034,10 @@ class Victory:
 					self.setGoal( iEngland, 2, 0 )
 
 
-        def onBuildingBuilt(self, iPlayer, iBuilding):
-        	# 3Miro: everything is coded by me
-        	if (not gc.getGame().isVictoryValid(7)): #7 == historical
-                        return
+            def onBuildingBuilt(self, iPlayer, iBuilding):
+                # 3Miro: everything is coded by me
+                if (not gc.getGame().isVictoryValid(7)): #7 == historical
+                    return
 
 		iGameTurn = gc.getGame().getGameTurn()
 		

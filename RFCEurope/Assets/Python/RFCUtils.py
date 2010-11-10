@@ -734,7 +734,7 @@ class RFCUtils:
 
 		# Sedna17: makes garrison units based on new tech tree/units
                 if (gc.getTeam(pCiv.getTeam()).isHasTech(con.iNationalism) and gc.getTeam(pCiv.getTeam()).isHasTech(con.iMilitaryTactics)):
-                        iUnitType = con.iILineInfantry
+                        iUnitType = con.iLineInfantry
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iMatchlock)):
 			iUnitType = con.iMusketman       
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iGunpowder)):
