@@ -144,8 +144,8 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					    <BuildingType>BUILDINGCLASS_CASTLE</BuildingType>
-						<iHappinessChange>1</iHappinessChange>
+					<BuildingType>BUILDINGCLASS_CASTLE</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -519,10 +519,10 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-			  <iCommerce>0</iCommerce>
-			  <iCommerce>0</iCommerce>
-			  <iCommerce>0</iCommerce>
-			  <iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -1147,9 +1147,9 @@
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<!-- Rhye - end -->
 			<YieldModifiers>
-			  <iYield>0</iYield>
-			  <iYield>10</iYield>
-			  <iYield>10</iYield>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
+				<iYield>10</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
@@ -1530,9 +1530,9 @@
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<!-- Rhye - end -->
 			<YieldModifiers>
-			  <iYield>0</iYield>
-			  <iYield>0</iYield>
-			  <iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -1623,8 +1623,8 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					    <BuildingType>BUILDINGCLASS_PAGAN_SHRINE</BuildingType>
-						<iHappinessChange>1</iHappinessChange>
+					<BuildingType>BUILDINGCLASS_PAGAN_SHRINE</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
