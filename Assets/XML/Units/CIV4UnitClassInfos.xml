@@ -519,7 +519,7 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GALLEON</DefaultUnit>
 		</UnitClassInfo>
-        <UnitClassInfo>
+	<UnitClassInfo>
 			<Type>UNITCLASS_GUN_GALLEY</Type>
 			<Description>TXT_KEY_UNIT_GUN_GALLEY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>

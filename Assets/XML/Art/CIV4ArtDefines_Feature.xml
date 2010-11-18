@@ -490,11 +490,11 @@
 			<Button>,Art/Interface/Buttons/BaseTerrain/Marsh.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,2,2</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
-               		<FeatureArtPiece>
-                  		<ModelFile>Art/Terrain/Features/Floodplain/FloodPlain_baseALL.dds</ModelFile>
-                  		<Connections/>
-               		</FeatureArtPiece>
-            	</FeatureArtPieces> 
+			<FeatureArtPiece>
+			<ModelFile>Art/Terrain/Features/Floodplain/FloodPlain_baseALL.dds</ModelFile>
+				<Connections/>
+			</FeatureArtPiece>
+		</FeatureArtPieces> 
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/BaseTerrain/Marsh.dd</VarietyButton>
@@ -512,11 +512,11 @@
 			<Button>Art/Interface/Buttons/BaseTerrain/Marsh.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
-               		<FeatureArtPiece>
-                  		<ModelFile/>
-                  		<Connections/>
-               		</FeatureArtPiece>
-            	</FeatureArtPieces> 
+			<FeatureArtPiece>
+				<ModelFile/>
+				<Connections/>
+			</FeatureArtPiece>
+		</FeatureArtPieces> 
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/BaseTerrain/Marsh.dds</VarietyButton>

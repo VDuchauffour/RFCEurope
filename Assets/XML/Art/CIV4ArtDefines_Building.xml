@@ -1339,7 +1339,7 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Wonders/stephansdom.dds</Button>
 		</BuildingArtInfo>
-    		<BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAN_GIORGIO</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
