@@ -25,16 +25,6 @@ protected:
 
 public:
 
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						12/30/08		jdog5000		*/
-/**																				*/
-/**		     																	*/
-/********************************************************************************/
-	void resetPlotAndCityData( );
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
-
 	void addTeam(TeamTypes eTeam);																								// Exposed to Python
 	void shareItems(TeamTypes eTeam);
 	void shareCounters(TeamTypes eTeam);
@@ -75,17 +65,6 @@ public:
 	int getVassalCount(TeamTypes eTeam = NO_TEAM) const;
 	bool isAVassal() const;																							// Exposed to Python
 	bool canVassalRevolt(TeamTypes eMaster) const;
-
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/10/09                                jdog5000      */
-/**                                                                                              */
-/**                                                                                              */
-/*************************************************************************************************/
-	bool isMasterPlanningLandWar(CvArea* pArea);
-	bool isMasterPlanningSeaWar(CvArea* pArea);
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 
 	int getUnitClassMaking(UnitClassTypes eUnitClass) const;														// Exposed to Python
 	int getUnitClassCountPlusMaking(UnitClassTypes eIndex) const;												// Exposed to Python

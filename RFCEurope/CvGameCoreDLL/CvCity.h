@@ -252,19 +252,8 @@ public:
 	bool isConnectedTo(CvCity* pCity) const;															// Exposed to Python
 	 bool isConnectedToCapital(PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
 	int getArea() const;
-	 CvArea* area() const;	 // Exposed to Python
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/02/09                                jdog5000      */
-/**                                                                                              */
-/**                                                                                              */
-/*************************************************************************************************/
-	CvArea* waterArea(bool bNoImpassable = false) const;																			// Exposed to Python
-	CvArea* secondWaterArea() const;
-	CvArea* sharedWaterArea(CvCity* pCity) const;
-	bool isBlockaded() const;
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/																	// Exposed to Python
+	 CvArea* area() const;																						// Exposed to Python
+	CvArea* waterArea() const;																			// Exposed to Python
 
 	 CvPlot* getRallyPlot() const;																// Exposed to Python
 	void setRallyPlot(CvPlot* pPlot);

@@ -6625,36 +6625,7 @@ void CvGame::createBarbarianUnits()
 				if (iNeededBarbs > 0)
 				{
 					iNeededBarbs = ((iNeededBarbs / 4) + 1);
-					
-					/********************************************************************************/
-					/**		BETTER_BTS_AI_MOD						9/25/08				jdog5000	*/
-					/**																				*/
-					/**		Barbarian AI															*/
-					/********************************************************************************/
-					// Limit construction of barb ships based on player navies
-					// Keeps barb ship count in check in early game since generation is greatly increased for BTS 3.17
-					if( pLoopArea->isWater() )
-					{
-						int iPlayerSeaUnits = 0;
-						for( int iI = 0; iI < MAX_CIV_PLAYERS; iI++ )
-						{
-							if( GET_PLAYER((PlayerTypes)iI).isAlive() )
-							{
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ATTACK_SEA);
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_EXPLORE_SEA);
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_ASSAULT_SEA);
-								iPlayerSeaUnits += GET_PLAYER((PlayerTypes)iI).AI_totalWaterAreaUnitAIs(pLoopArea,UNITAI_SETTLER_SEA);
-							}
-						}
 
-						if( pLoopArea->getUnitsPerPlayer(BARBARIAN_PLAYER) > (iPlayerSeaUnits/3 + 1) )
-						{
-							iNeededBarbs = 0;
-						}
-					}
-					/********************************************************************************/
-					/**		BETTER_BTS_AI_MOD						END								*/
-					/********************************************************************************/
 					for (iI = 0; iI < iNeededBarbs; iI++)
 					{
 						pPlot = GC.getMapINLINE().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getDefineINT("MIN_BARBARIAN_STARTING_DISTANCE"));

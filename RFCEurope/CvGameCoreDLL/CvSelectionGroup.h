@@ -73,18 +73,6 @@ public:
 	bool canBombard(const CvPlot* pPlot);
 	bool visibilityRange();
 
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-	int getBombardTurns( CvCity* pCity );
-	bool isStranded();
-	bool canMoveAllTerrain() const;
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
-
 	void unloadAll();
 	bool alwaysInvisible() const;																																							// Exposed to Python
 	bool isInvisible(TeamTypes eTeam) const;																								// Exposed to Python
@@ -113,15 +101,6 @@ public:
 	bool groupRoadTo(int iX, int iY, int iFlags);
 	bool groupBuild(BuildTypes eBuild);
 	void setTransportUnit(CvUnit* pTransportUnit);
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      12/01/08                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-	void setRemoteTransportUnit(CvUnit* pTransportUnit);
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 
 	bool isAmphibPlot(const CvPlot* pPlot) const;																																		// Exposed to Python
 	bool groupAmphibMove(CvPlot* pPlot, int iFlags);
@@ -221,16 +200,6 @@ public:
 	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot) = 0;
 	virtual void AI_seperateNonAI(UnitAITypes eUnitAI) = 0;
 	virtual void AI_seperateAI(UnitAITypes eUnitAI) = 0;
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      06/02/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-	virtual void AI_seperateImpassable() = 0;
-	virtual void AI_seperateEmptyTransports() = 0;
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 	virtual bool AI_isFull() = 0;
 
 protected:

@@ -5204,82 +5204,11 @@ CvArea* CvCity::area() const
 }
 
 
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/02/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-CvArea* CvCity::waterArea(bool bNoImpassable) const
+CvArea* CvCity::waterArea() const
 {
-	return plot()->waterArea(bNoImpassable);
+	return plot()->waterArea();
 }
 
-// Expose plot function through city
-CvArea* CvCity::secondWaterArea() const
-{
-	return plot()->secondWaterArea();
-}
-
-// Find the largest water area shared by this city and other city, if any
-CvArea* CvCity::sharedWaterArea(CvCity* pOtherCity) const
-{
-	CvArea* pWaterArea = waterArea(true);
-	if( pWaterArea != NULL )
-	{
-		CvArea* pOtherWaterArea = pOtherCity->waterArea(true);
-		if( pOtherWaterArea != NULL )
-		{
-			if( pWaterArea == pOtherWaterArea )
-			{
-				return pWaterArea;
-			}
-			else
-			{
-				CvArea* pSecondWaterArea = secondWaterArea();
-				CvArea* pOtherSecondWaterArea = pOtherCity->secondWaterArea();
-
-				if( pSecondWaterArea != NULL && pSecondWaterArea == pOtherWaterArea )
-				{
-					return pSecondWaterArea;
-				}
-				else if( pOtherSecondWaterArea != NULL && pWaterArea == pOtherSecondWaterArea )
-				{
-					return pWaterArea;
-				}
-				else if( pSecondWaterArea != NULL && pOtherSecondWaterArea != NULL && pSecondWaterArea == pOtherSecondWaterArea )
-				{
-					return pSecondWaterArea;
-				}
-			}
-		}
-	}
-
-	return NULL;
-}
-
-bool CvCity::isBlockaded() const
-{
-	int iI;
-	CvPlot* pAdjacentPlot;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
-	{
-		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			if( pAdjacentPlot->getBlockadedCount(getTeam()) > 0 )
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
-}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 
 CvPlot* CvCity::getRallyPlot() const
 {
