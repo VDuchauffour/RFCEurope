@@ -108,31 +108,6 @@ void CvTeam::init(TeamTypes eID)
 	//--------------------------------
 	// Init other game data
 	AI_init();
-	/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                         12/30/08                             jdog5000      */
-/**                                                                                              */
-/**                                                                                              */
-/*************************************************************************************************/
-	if( GC.getGame().isFinalInitialized() )
-	{
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if( iI != getID() )
-			{
-				if( GET_TEAM((TeamTypes)iI).isMinorCiv() )
-				{
-					GET_TEAM((TeamTypes)iI).declareWar(getID(), false, WARPLAN_LIMITED);
-				}
-				if( GET_TEAM((TeamTypes)iI).isBarbarian() )
-				{
-					GET_TEAM((TeamTypes)iI).declareWar(getID(), false, WARPLAN_LIMITED);
-				}
-			}
-		}
-	}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 }
 
 
@@ -384,40 +359,6 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		AI_reset(false);
 	}
 }
-
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						12/30/08		jdog5000		*/
-/**																				*/
-/**		     																	*/
-/********************************************************************************/
-//
-// for clearing data stored in plots and cities for this team
-//
-void CvTeam::resetPlotAndCityData( )
-{
-	int iI;
-	CvPlot* pLoopPlot;
-	CvCity* pLoopCity;
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
-	{
-		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-		
-		pLoopPlot->setRevealedOwner(getID(), NO_PLAYER);
-		pLoopPlot->setRevealedImprovementType(getID(), NO_IMPROVEMENT);
-		pLoopPlot->setRevealedRouteType(getID(), NO_ROUTE);
-		pLoopPlot->setRevealed(getID(), false, false, getID(), true);
-
-		pLoopCity = pLoopPlot->getPlotCity();
-		if( pLoopCity != NULL )
-		{
-			pLoopCity->setRevealed(getID(), false);
-			pLoopCity->setEspionageVisibility(getID(), false, true);
-		}
-	}
-}
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
 
 
 void CvTeam::addTeam(TeamTypes eTeam)
@@ -2447,101 +2388,6 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 	return true;
 }
 
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/10/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-bool CvTeam::isMasterPlanningLandWar(CvArea* pArea)
-{
-	if( !isAVassal() )
-	{
-		return false;
-	}
-
-	if( (pArea->getAreaAIType(getID()) == AREAAI_OFFENSIVE) || (pArea->getAreaAIType(getID()) == AREAAI_DEFENSIVE) || (pArea->getAreaAIType(getID()) == AREAAI_MASSING) )
-	{
-		return true;
-	}
-
-	for( int iI = 0; iI < MAX_CIV_TEAMS; iI++ )
-	{
-		if( isVassal((TeamTypes)iI) )
-		{
-			if( GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0 )
-			{
-				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_MASSING) )
-				{
-					return true;
-				}
-				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
-				{
-					// Master has no presence here
-					if( (pArea->getNumCities() - countNumCitiesByArea(pArea)) > 2 )
-					{
-						return (GC.getGameINLINE().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
-					}
-				}
-			}
-			else if( GET_TEAM((TeamTypes)iI).isHuman() )
-			{
-				if( (pArea->getNumCities() - countNumCitiesByArea(pArea) - GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea)) > 2 )
-				{
-					return (GC.getGameINLINE().getSorenRandNum(5,"Vassal land war") == 0);
-				}
-			}
-
-			break;
-		}
-	}
-
-	return false;
-}
-
-bool CvTeam::isMasterPlanningSeaWar(CvArea* pArea)
-{
-	if( !isAVassal() )
-	{
-		return false;
-	}
-
-	if( (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT) || (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_MASSING) )
-	{
-		return true;
-	}
-
-	for( int iI = 0; iI < MAX_CIV_TEAMS; iI++ )
-	{
-		if( isVassal((TeamTypes)iI) )
-		{
-			if( GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0 )
-			{
-				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_MASSING) )
-				{
-					return (GC.getGameINLINE().getSorenRandNum((isCapitulated() ? 3 : 2),"Vassal sea war") == 0);
-				}
-				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
-				{
-					// Master has no presence here
-					return false;
-				}
-
-			}
-			else if( GET_TEAM((TeamTypes)iI).isHuman() )
-			{
-				return false;
-			}
-
-			break;
-		}
-	}
-
-	return false;
-}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
-
 
 int CvTeam::getUnitClassMaking(UnitClassTypes eUnitClass) const
 {
@@ -2767,19 +2613,7 @@ int CvTeam::countEnemyPowerByArea(CvArea* pArea) const
 		{
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getID())
 			{
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/11/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-/* original BTS code
 				if (isAtWar(GET_PLAYER((PlayerTypes)iI).getTeam()))
-*/
-				// Count planned wars as well
-				if (AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN)
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 				{
 					iCount += pArea->getPower((PlayerTypes)iI);
 				}

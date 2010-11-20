@@ -452,30 +452,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		return;
 	}
-	/********************************************************************************/
-	/**		BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
-	/**																				*/
-	/**		Gold AI																	*/
-	/********************************************************************************/
-	bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
-	int iStartingGold = getGold();
-	int iTargetGold = AI_goldTarget();
-	int iUpgradeBudget = (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
-
-	iUpgradeBudget = std::min(iUpgradeBudget, iStartingGold - (iTargetGold - iUpgradeBudget));
-
-	if( AI_isFinancialTrouble() )
-	{
-		iUpgradeBudget /= 3;
-	}
-
-	// Always willing to upgrade 1 unit if we have the money
-	iUpgradeBudget = std::max(iUpgradeBudget,1);
-
-	bool bUnderBudget = true;
-	/********************************************************************************/
-	/**		BETTER_BTS_AI_MOD						END								*/
-	/********************************************************************************/
 
 	CvPlot* pLastUpgradePlot = NULL;
 	for (iPass = 0; iPass < 4; iPass++)
@@ -514,47 +490,14 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				}
 				break;
 			case 2:
-				/********************************************************************************/
-				/**		BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
-				/**																				*/
-				/**		Gold AI																	*/
-				/********************************************************************************/
-				/* original BTS code
 				if (pLoopUnit->cargoSpace() > 0)
 				{
 					bValid = true;
 				}
-				*/
-				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
-
-				// Only normal transports
-				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->specialCargo() == NO_SPECIALUNIT) )
-				{
-					bValid = (bAnyWar || bUnderBudget);
-				}
-				// Also upgrade escort ships
-				if ( pLoopUnit->AI_getUnitAIType() == UNITAI_ESCORT_SEA )
-				{
-					bValid = (bAnyWar || bUnderBudget);
-				}
-				/********************************************************************************/
-				/**		BETTER_BTS_AI_MOD						END								*/
-				/********************************************************************************/
+				break;
 			case 3:
-				/********************************************************************************/
-				/**		BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
-				/**																				*/
-				/**		Gold AI																	*/
-				/********************************************************************************/
-				/* original BTS code
 				bValid = true;
-				*/
-				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
-
-				bValid = (bAnyWar || bUnderBudget);
-				/********************************************************************************/
-				/**		BETTER_BTS_AI_MOD						END								*/
-				/********************************************************************************/
+				break;
 			default:
 				FAssert(false);
 				break;
@@ -693,18 +636,7 @@ void CvPlayerAI::AI_doPeace()
 											}
 											else
 											{
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/22/09                                jdog5000      */
-/**                                                                                              */
-/** War Strategy AI                                                                              */
-/*************************************************************************************************/
-												if( GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_acceptSurrender(getTeam()) )
-												{
-													GC.getGameINLINE().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
-												}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
+												GC.getGameINLINE().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
 											}
 										}
 
@@ -1667,71 +1599,65 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity* pCity) const
 		}
 		break;
 	case COMMERCE_GOLD:
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      04/29/09                                jdog5000      */
-/**                                                                                              */
-/** Gold AI				                                                                         */
-/*************************************************************************************************/
-		if (getCommercePercent(COMMERCE_GOLD) > 70)
+		if (getCommercePercent(COMMERCE_GOLD) == 100)
 		{
 			//avoid strikes
-			if (getGoldPerTurn() < -getGold()/100)
+			if (getGoldPerTurn() < 0)
 			{
 				iWeight += 15;
 			}
 		}
-		else if (getCommercePercent(COMMERCE_GOLD) < 25)
+		else if (getCommercePercent(COMMERCE_GOLD) == 0)
 		{
 			//put more money towards other commerce types
-			if (getGoldPerTurn() > -getGold()/40)
+			if (getGoldPerTurn() > 0)
 			{
-				iWeight -= 25 - getCommercePercent(COMMERCE_GOLD);
+				iWeight -= 15;
 			}
 		}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 		break;
 	case COMMERCE_CULTURE:
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      04/29/09                                jdog5000      */
-/**                                                                                              */
-/** Bugfix, Cultural Victory AI                                                                  */
-/*************************************************************************************************/
-		// Adjustments for human player going for cultural victory (who won't have AI strategy set) 
-		// so that governors do smart things
+		// COMMERCE_CULTURE AIWeightPercent is 25% in default xml
+	
 		if (pCity != NULL)
 		{
-			if (pCity->getCultureTimes100(getID()) >= 100 * GC.getCultureLevelInfo((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1)).getSpeedThreshold(GC.getGameINLINE().getGameSpeedType()))
+			if (pCity->getCultureTimes100(getID()) >= 100 * GC.getGameINLINE().getCultureThreshold((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1)))
 			{
 				iWeight /= 50;
 			}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       04/29/09                                jdog5000      */
+/*                                                                                              */
+/* Poor behavior                                                                                */
+/************************************************************************************************/
+/* original bts code
+			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE3))
+*/
+			// Slider check works for detection of whether human player is going for cultural victory
 			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) > 80 )
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 			{
 				int iCultureRateRank = pCity->findCommerceRateRank(COMMERCE_CULTURE);
 				int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
 				
-				// if one of the currently best cities, then focus hard, *4 or more
+				// if one of the currently best cities, then focus hard, *4
 				if (iCultureRateRank <= iCulturalVictoryNumCultureCities)
 				{
-					iWeight *= (3 + iCultureRateRank);
+					iWeight *= 4;
 				}
 				// if one of the 3 close to the top, then still emphasize culture some, *2
 				else if (iCultureRateRank <= iCulturalVictoryNumCultureCities + 3)
 				{
 					iWeight *= 2;
 				}
-				else if (isHuman())
-				{
-					iWeight *= 2;
-				}
-
 			}
 			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2))
 			{
 				iWeight *= 3;
 			}
-			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) > 50)
+			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1))
 			{
 				iWeight *= 2;
 			}
@@ -1746,17 +1672,17 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity* pCity) const
 		// pCity == NULL
 		else
 		{
-			if (AI_isDoStrategy(AI_STRATEGY_CULTURE3) || getCommercePercent(COMMERCE_CULTURE) > 90 )
+			if (AI_isDoStrategy(AI_STRATEGY_CULTURE3))
 			{
 				iWeight *= 3;
 				iWeight /= 4;
 			}
-			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2) || getCommercePercent(COMMERCE_CULTURE) > 70 )
+			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE2))
 			{
 				iWeight *= 2;
-				iWeight /= 3;
-			}
-			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1) || getCommercePercent(COMMERCE_CULTURE) > 50 )
+			iWeight /= 3;
+		}
+			else if (AI_isDoStrategy(AI_STRATEGY_CULTURE1))
 			{
 				iWeight /= 2;
 			}
@@ -1765,21 +1691,12 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity* pCity) const
 				iWeight /= 3;
 			}
 		}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 		break;
 	case COMMERCE_ESPIONAGE:
 		{
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      04/29/09                                jdog5000      */
-/**                                                                                              */
-/** Espionage AI, Bugfix                                                                         */
-/*************************************************************************************************/
-			// Fixed bug where espionage weight set to 0 if winning all esp point races
-			// Smoothed out emphasis
-			int iEspBehindWeight = 0;
-			for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam)
+			int iEspMultiplier = 0;
+		//for (int iTeam = 0; iTeam < MAX_CIV_TEAMS; ++iTeam) //Rhye
+		for (int iTeam = 0; iTeam < NUM_MAJOR_PLAYERS; ++iTeam) //Rhye
 			{
 				CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iTeam);
 				if (kLoopTeam.isAlive() && iTeam != getTeam() && !kLoopTeam.isVassal(getTeam()) && !GET_TEAM(getTeam()).isVassal((TeamTypes)iTeam))
@@ -1787,45 +1704,15 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, CvCity* pCity) const
 					int iPointDiff = kLoopTeam.getEspionagePointsAgainstTeam(getTeam()) - GET_TEAM(getTeam()).getEspionagePointsAgainstTeam((TeamTypes)iTeam);
 					if (iPointDiff > 0)
 					{
-						iEspBehindWeight += 1;
-						if( GET_TEAM(getTeam()).AI_getAttitude((TeamTypes)iTeam) < ATTITUDE_CAUTIOUS )
-						{
-							iEspBehindWeight += 1;
-						}
+						iEspMultiplier += 1;
+						break;
 					}
 				}
 			}
-			
-			iWeight *= 2*iEspBehindWeight + (3*GET_TEAM(getTeam()).getHasMetCivCount(true))/4 + 1;
+			iEspMultiplier += (iEspMultiplier > 0) ? 3 : 0;
+			iWeight *= iEspMultiplier;
 			iWeight *= AI_getEspionageWeight();
-			iWeight /= GET_TEAM(getTeam()).getHasMetCivCount(true) + 1;
 			iWeight /= 100;
-
-			if( getCommercePercent(COMMERCE_ESPIONAGE) == 0 )
-			{
-				iWeight *= 2;
-				iWeight /= 3;
-			}
-			else if( isHuman() )
-			{
-				if( getCommercePercent(COMMERCE_ESPIONAGE) > 50 )
-				{
-					iWeight *= getCommercePercent(COMMERCE_ESPIONAGE);
-					iWeight /= 50;
-				}
-			}
-			else
-			{
-				// AI Espionage slider use maxed out at 20 percent
-				if( getCommercePercent(COMMERCE_ESPIONAGE) >= 20 )
-				{
-					iWeight *= 3;
-					iWeight /= 2;
-				}
-			}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 		}
 		break;
 		
@@ -2442,32 +2329,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			}
 			else
 			{
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      02/03/09                                jdog5000      */
-/**                                                                                              */
-/** Settler AI                                                                                   */
-/*************************************************************************************************/
-				iValue += 200;
-
-				// Push players to get more coastal cities so they can build navies
-				CvArea* pWaterArea = pPlot->waterArea(true);
-				if( pWaterArea != NULL )
-				{
-					iValue += 200;
-
-					if( GET_TEAM(getTeam()).AI_isWaterAreaRelevant(pWaterArea) )
-					{
-						iValue += 200;
-
-						if( (countNumCoastalCities() < (getNumCities()/4)) || (countNumCoastalCitiesByArea(pPlot->area()) == 0) )
-						{
-							iValue += 200;
-						}
-					}
-				}				
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
+				iValue += 400;
 			}
 		}
 		else
@@ -2491,7 +2353,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (pPlot->isRiver())
 	{
-		iValue += 60;
+		iValue += 40;
 	}
 
 	if (pPlot->isFreshWater())
@@ -3261,18 +3123,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		{
 			if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 			{
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      07/11/08                                jdog5000      */
-/**                                                                                              */
-/** War strategy AI                                                                              */
-/*************************************************************************************************/
-/* original code
 				iValue++;
-*/
-				iValue += std::min(4,std::max(1, AI_bonusVal(pLoopPlot->getBonusType(getTeam()))/10));
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 			}
 
 			if (pLoopPlot->getOwnerINLINE() == getID())

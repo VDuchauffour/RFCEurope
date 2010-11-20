@@ -150,20 +150,8 @@ bool isPotentialEnemy(TeamTypes eOurTeam, TeamTypes eTheirTeam)
 	{
 		return false;
 	}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      05/05/09                                jdog5000      */
-/**                                                                                              */
-/** Bugfix, General AI                                                                           */
-/*************************************************************************************************/
-/* original bts code
+
 	return (atWar(eOurTeam, eTheirTeam) || GET_TEAM(eOurTeam).AI_isSneakAttackReady(eTheirTeam));
-*/
-	// Fixes bug where AI would launch invasion while unable to declare war
-	// which caused units to be bumped once forced peace expired
-	return (atWar(eOurTeam, eTheirTeam) || (GET_TEAM(eOurTeam).AI_isSneakAttackReady(eTheirTeam) && GET_TEAM(eOurTeam).canDeclareWar(eTheirTeam)));
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 }
 
 CvCity* getCity(IDInfo city)
@@ -1207,30 +1195,6 @@ bool PUF_isFiniteRange(const CvUnit* pUnit, int iData1, int iData2)
 	return ((pUnit->getDomainType() != DOMAIN_AIR) || (pUnit->getUnitInfo().getAirRange() > 0));
 }
 
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      01/15/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-bool PUF_isAvailableUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2)
-{
-	return ((PUF_isUnitAITypeGroupie(pUnit,iData1,iData2)) && !(pUnit->isCargo()));
-}
-
-bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2)
-{
-	CvUnit* pGroupHead = pUnit->getGroup()->getHeadUnit();
-	return (PUF_isUnitAIType(pGroupHead,iData1,iData2));
-}
-
-bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iData2)
-{
-	return (PUF_isFiniteRange(pUnit,iData1,iData2) && ((GC.getGameINLINE().getGameTurn() - pUnit->getGameTurnCreated()) > 1));
-}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
-
 int potentialIrrigation(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
 	if (parent == NULL)
@@ -1458,65 +1422,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 							iCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 						}
 					}
-					/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
-/**                                                                                              */
-/** General AI                                                                                   */
-/*************************************************************************************************/
-					// Add additional cost for ending turn in or adjacent to enemy territory based on flags
-					if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_3)
-					{
-						if (pToPlot->isOwned() && ((GET_TEAM(pSelectionGroup->getHeadTeam()).AI_getWarPlan(pToPlot->getTeam()) != NO_WARPLAN) || (pToPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pToPlot))))
-						{
-							iCost *= 3;
-						}
-						else
-						{
-							CvPlot* pAdjacentPlot;
-							int iI;
-							for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
-							{
-								pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
-
-								if( pAdjacentPlot != NULL )
-								{
-									if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), pSelectionGroup->getHeadTeam()) || (pAdjacentPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pAdjacentPlot))))
-									{
-										iCost *= 3;
-										iCost /= 2;
-									}
-								}
-							}
-						}
-					}
-					else if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_2)
-					{
-						if (pToPlot->isOwned() && ((GET_TEAM(pSelectionGroup->getHeadTeam()).AI_getWarPlan(pToPlot->getTeam()) != NO_WARPLAN) || (pToPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pToPlot))))
-						{
-							iCost *= 2;
-						}
-						else
-						{
-							CvPlot* pAdjacentPlot;
-							int iI;
-							for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
-							{
-								pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
-								
-								if( pAdjacentPlot != NULL )
-								{
-									if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), pSelectionGroup->getHeadTeam()) || (pAdjacentPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pAdjacentPlot))))
-									{
-										iCost *= 4;
-										iCost /= 3;
-									}
-								}
-							}
-						}
-					}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD                       END                                                  */
-/*************************************************************************************************/
 				}
 				else
 				{
@@ -1803,113 +1708,13 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		return FALSE;
 	}
 
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD					12/12/08				jdog5000	*/
-/**																				*/
-/**		Bugfix																	*/
-/********************************************************************************/
-/* original BTS code
 	if (GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
 	{
 		return FALSE;
 	}
-*/
-	CvPlot* pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
-	if (pFromPlot->area() != pNewPlot->area())
-	{
-		return FALSE;
-	}
-
-	// Don't count diagonal hops across land isthmus
-	if (pFromPlot->isWater() && pNewPlot->isWater())
-	{
-		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
-		{
-			return FALSE;
-		}
-	}
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
 
 	return TRUE;
 }
-
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD					02/02/09				jdog5000	*/
-/**																				*/
-/**																				*/
-/********************************************************************************/
-// Find paths that a team's units could follow without declaring war
-int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
-{
-	CvPlot* pNewPlot;
-
-	if (parent == NULL)
-	{
-		return TRUE;
-	}
-
-	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
-
-	if (pNewPlot->isImpassable())
-	{
-		return FALSE;
-	}
-
-	CvPlot* pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
-	if (pFromPlot->area() != pNewPlot->area())
-	{
-		return FALSE;
-	}
-
-	// Don't count diagonal hops across land isthmus
-	if (pFromPlot->isWater() && pNewPlot->isWater())
-	{
-		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
-		{
-			return FALSE;
-		}
-	}
-
-	TeamTypes ePlotTeam = pNewPlot->getTeam();
-	std::vector<TeamTypes> teamVec = *((std::vector<TeamTypes> *)pointer);
-	TeamTypes eTeam = teamVec[0];
-	TeamTypes eTargetTeam = teamVec[1];
-	CvTeamAI& kTeam = GET_TEAM(eTeam);
-
-	if (ePlotTeam == NO_TEAM)
-	{
-		return TRUE;
-	}
-
-	if (ePlotTeam == eTargetTeam)
-	{
-		return TRUE;
-	}
-
-	if (kTeam.isFriendlyTerritory(ePlotTeam))
-	{
-		return TRUE;
-	}
-
-	if (kTeam.AI_getWarPlan(ePlotTeam) != NO_WARPLAN)
-	{
-		return TRUE;
-	}
-
-	if (kTeam.isOpenBorders(ePlotTeam))
-	{
-		return TRUE;
-	}
-
-
-
-	return FALSE;
-}
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
 
 
 int stepAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
