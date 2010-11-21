@@ -2014,7 +2014,7 @@
 			<Description>TXT_KEY_CIV_SWEDEN_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_SWEDEN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SWEDEN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_SWEDEN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_SWEDEN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1500AD</StartingYear>
 			<LoadingTime>45</LoadingTime>
