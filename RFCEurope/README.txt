@@ -18,3 +18,6 @@ Included shortcut (if you installed the mod porperly, the link works, otherwise 
 Added basic information to leaders
 New text for some buildings
 New movie for the Magna Carta
+Restored Arabian Longswordsman
+List of Civs show full name now
+Carracks can pillage
