@@ -21,3 +21,4 @@ New movie for the Magna Carta
 Restored Arabian Longswordsman
 List of Civs show full name now
 Carracks can pillage
+Shortcut to the Forum added
