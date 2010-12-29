@@ -495,34 +495,28 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
                 #        #tList.pop(5) #boudica
                 #        #tList.pop(0) #barbarian
                 #        pass
-                #if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
-                #        #tList.pop(36) #natives
-                #        #tList.pop(35) #independent2
-                #        #tList.pop(34) #independent
-                #        #tList.pop(33) #zulu
-                #        #tList.pop(31) #sumeria                        
-                #        #tList.pop(23) #nat.Am.
-                #        #tList.pop(19) #korea                  
-                #        #tList.pop(14) #hre
-                #        #tList.pop(6) #celts
-                #        #tList.pop(4) #byzantium
-                #        pass
+                if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
+                        tList.pop(25) #independent4
+                        tList.pop(24) #independent3                  
+                        tList.pop(23) #independent2
+                        tList.pop(22) #independent1
+                        tList.pop(21) #papal
+                        pass
                 #if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING): #all -3 because there aren't palaces in the list
                 #        #removed in CvPediaBuilding.py
                 #        pass
-                #if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
-                #        #tList.pop(83) #Hwacha
-                #        #tList.pop(71) #Cataphract  
-                #        #tList.pop(41) #Landsknecht
-                #        #tList.pop(38) #Impi
-                #        #tList.pop(33) #DogSoldier                          
-                #        #tList.pop(32) #Vulture
-                #        #tList.pop(28) #GallicWarrior
-                #        pass
-                #if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT):
-                #        #tList.pop(1) #water worked
-                #        #tList.pop(0) #land worked
-                #        pass
+                if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
+                        tList.pop(96) #Corsair
+                        tList.pop(95) #Seljuk
+                        tList.pop(94) #Tagmata
+                        tList.pop(93) #WelshLongbowman                          
+                        tList.pop(92) #Highlander
+                        tList.pop(91) #MongolKeshik
+                        pass
+                if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT):
+                        tList.pop(1) #water worked
+                        tList.pop(0) #land worked
+                        pass
                 #if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_TERRAIN):
                 #        #tList.pop(9) #marsh
                 #        #tList.pop(8) #hill
