@@ -8,6 +8,7 @@ import Popup
 import cPickle as pickle
 import Consts as con
 import RFCUtils
+import Crusades as cru
 
 utils = RFCUtils.RFCUtils()
 
@@ -171,94 +172,93 @@ tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ),(59, 43, 90, 55) ) # S
 
 class Victory:
 
-
+     
 ##################################################
 ### Secure storage & retrieval of script data ###
 ################################################   
 
-
         def getGoal( self, i, j ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['lGoals'][i][j]
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lGoals'][i][j]
 
         def setGoal( self, i, j, iNewValue ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['lGoals'][i][j] = iNewValue
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lGoals'][i][j] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getReligionFounded( self, iCiv ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['lReligionFounded'][iCiv]
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lReligionFounded'][iCiv]
 
         def setReligionFounded( self, iCiv, iNewValue ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['lReligionFounded'][iCiv] = iNewValue
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lReligionFounded'][iCiv] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                
         def getWondersBuilt( self, iCiv ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['lWondersBuilt'][iCiv]
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lWondersBuilt'][iCiv]
 
         def setWondersBuilt( self, iCiv, iNewValue ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['lWondersBuilt'][iCiv] = iNewValue
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lWondersBuilt'][iCiv] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                
         def get2OutOf3( self, iCiv ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['l2OutOf3'][iCiv]
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['l2OutOf3'][iCiv]
 
         def set2OutOf3( self, iCiv, bNewValue ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['l2OutOf3'][iCiv] = bNewValue
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['l2OutOf3'][iCiv] = bNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getNorseRazed( self ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['iNorseRazed']
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['iNorseRazed']
 
         def setNorseRazed( self, iNewValue ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['iNorseRazed'] = iNewValue
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-		
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['iNorseRazed'] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+
         def getColonies( self, iCiv ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['lColonies'][iCiv]
-		
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lColonies'][iCiv]
+
         def changeColonies( self, iCiv, iChange ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['lColonies'][iCiv] += iChange
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lColonies'][iCiv] += iChange
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getGenoaBanks( self ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return (scriptDict['bGenoaBanks'] == 1)
-		
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return (scriptDict['bGenoaBanks'] == 1)
+
         def setGenoaBanks( self, iChange ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['bGenoaBanks'] = iChange
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['bGenoaBanks'] = iChange
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getGenoaCorporations( self ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['bGenoaCorps']
-		
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['bGenoaCorps']
+
         def setGenoaCorporations( self, iChange ):
-             scriptDict = pickle.loads( gc.getGame().getScriptData() )
-             scriptDict['bGenoaCorps'] = iChange
-             gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['bGenoaCorps'] = iChange
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getCorporationsFounded( self ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            return scriptDict['bCorpsFounded']
-		
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['bCorpsFounded']
+
         def setCorporationsFounded( self, iChange ):
-            scriptDict = pickle.loads( gc.getGame().getScriptData() )
-            scriptDict['bCorpsFounded'] = iChange
-            gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['bCorpsFounded'] = iChange
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-
+                
 #######################################
 ### Main methods (Event-Triggered) ###
 #####################################  
@@ -332,571 +332,530 @@ class Victory:
         def checkPlayerTurn(self, iGameTurn, iPlayer):
 		# 3Miro: pretty much everything here is written by me, the victory check at the end is Rhye's, but the rest is mine
 		# Sedna: Made Burgundy and Frankis check that gc.doesOwnCities == 11 (previously just checked true, which would be satisfied with no cities)
-		if ( iPlayer == iBurgundy and pBurgundy.isAlive() ):
-			if ( iGameTurn == con.i1200AD and self.getGoal(iBurgundy, 0 ) == -1 ):
-				iBurgundyRhine = gc.doesOwnCities( iBurgundy, tBurgundyControl[0][0], tBurgundyControl[0][1], tBurgundyControl[0][2], tBurgundyControl[0][3] )
-				iBurgundyRhone = gc.doesOwnCities( iBurgundy, tBurgundyControl[1][0], tBurgundyControl[1][1], tBurgundyControl[1][2], tBurgundyControl[1][3] )
-				if (iBurgundyRhine == 11 and iBurgundyRhone == 11):
-					self.setGoal( iBurgundy, 0, 1 )
-				else:
-					self.setGoal( iBurgundy, 0, 0 )
-			if (iGameTurn == con.i1300AD and self.getGoal(iBurgundy, 1) == -1 ):
-				pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
-				if ( pJPlot.isCity()):
-					if ( pJPlot.getPlotCity().getOwner() == iBurgundy ):
-						self.setGoal(iBurgundy,1,1)
-					else:
-						self.setGoal(iBurgundy,1,0)
-					
-			#if ( iGameTurn == i1401AD and self.getGoal( iBurgundy, 1 ) == -1 ): #see onCityAquire
-			#	self.setGoal( iBurgundy, 1, 1 )
-			
-			if ( iGameTurn == i1470AD and self.getGoal( iBurgundy, 2 ) == -1 ):
-				tOwnedLuxes = []
-				tCompete = [pPortugal,pSpain,pEngland,pFrankia,pGenoa,pVenecia,pPope,pGermany,pNorse]
-				for pPlayer in tCompete:
-					if ( pPlayer.isAlive()):
-						tOwnedLuxes.append(self.getOwnedLuxes(pPlayer))
-				print("Owned Luxuries:", tOwnedLuxes)
-				if ( self.getOwnedLuxes( pBurgundy ) > max(tOwnedLuxes) ):
-					self.setGoal( iBurgundy, 2, 1 )
-				else:
-					self.setGoal( iBurgundy, 2, 0 )
+                if ( iPlayer == iBurgundy and pBurgundy.isAlive() ):
+                        if ( iGameTurn == con.i1200AD and self.getGoal(iBurgundy, 0 ) == -1 ):
+                                iBurgundyRhine = gc.doesOwnCities( iBurgundy, tBurgundyControl[0][0], tBurgundyControl[0][1], tBurgundyControl[0][2], tBurgundyControl[0][3] )
+                                iBurgundyRhone = gc.doesOwnCities( iBurgundy, tBurgundyControl[1][0], tBurgundyControl[1][1], tBurgundyControl[1][2], tBurgundyControl[1][3] )
+                                if (iBurgundyRhine == 11 and iBurgundyRhone == 11):
+                                        self.setGoal( iBurgundy, 0, 1 )
+                                else:
+                                        self.setGoal( iBurgundy, 0, 0 )
 
-		elif ( iPlayer == iByzantium and pByzantium.isAlive() ):
-			if ( iGameTurn == i1000AD and self.getGoal( iByzantium, 0) == -1 ):
-				if ( gc.isLargestCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.isTopCultureCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iByzantium ):
-					self.setGoal( iByzantium, 0, 1 )
-				else:
-					self.setGoal( iByzantium, 0, 0 )
-					
-			if ( iGameTurn == i1300AD and self.getGoal( iByzantium, 1) == -1 ):
-				iOwn = gc.doesOwnCities( iByzantium, tByzantineControl[0], tByzantineControl[1], tByzantineControl[2], tByzantineControl[3] )
-				if ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).isCity() and iOwn == 11 ):
-					self.setGoal( iByzantium, 1, 1 )
-				else:
-					self.setGoal( iByzantium, 1, 0 )
-					
-			if ( iGameTurn == i1500AD and self.getGoal( iByzantium, 2) == -1 ):
-				iGold = pByzantium.getGold()
-				iMost = True
-				for iCiv in range( iNumPlayers ):
-					if ( iCiv != iByzantium and gc.getPlayer( iCiv ).isAlive() ):
-						if (gc.getPlayer(iCiv).getGold() > iGold):
-							iMost = False
-				if ( iMost ):
-					self.setGoal( iByzantium, 2, 1 )
-				else:
-					self.setGoal( iByzantium, 2, 0 )
-		elif ( iPlayer == iFrankia and pFrankia.isAlive() ):
-			
-			if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
-				bEnoughCities = True
-				for region in tFrankControl:
-					iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
-					if iCity < 2:
-						bEnoughCities = False
-				if bEnoughCities:
-					self.setGoal(iFrankia, 0, 1)
-				else:
-					self.setGoal(iFrankia, 0, 0)
-			
-			if ( iGameTurn == con.i1401AD and self.getGoal( iFrankia, 1) == -1 ):
-				lBuildingList = [con.iNotreDame,con.iMonasteryOfCluny,con.iPalaisPapes,con.iFontainebleau,con.iKrakDesChevaliers]
-				iNumCities = pFrankia.getNumCities()
-				lBuildingCounter = [0,0,0,0,0]
-				for iCity in range(iNumCities):
-					pCity = pFrankia.getCity(iCity)
-					for index,building in enumerate(lBuildingList):
-						if (pCity.hasBuilding(building)):
-							lBuildingCounter[index] += 1
-				bBuildingGoal = True
-				for count in lBuildingCounter:
-					if count < 1:
-						bBuildingGoal = False
-				if bBuildingGoal:
-					self.setGoal( iFrankia, 1, 1 ) 
-				else:
-					self.setGoal( iFrankia, 1, 0 ) 
-					
-			if ( self.getGoal( iFrankia, 2 ) == - 1 ):
-				if ( self.getColonies( iFrankia ) > 5 ):
-					self.setGoal( iFrankia, 2, 1 )
+                        if (iGameTurn == con.i1300AD and self.getGoal(iBurgundy, 1) == -1 ):
+                                pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+                                if ( pJPlot.isCity()):
+                                        if ( pJPlot.getPlotCity().getOwner() == iBurgundy ):
+                                                self.setGoal(iBurgundy,1,1)
+                                        else:
+                                                self.setGoal(iBurgundy,1,0)
 
-		elif( iPlayer == iArabia and pArabia.isAlive() ):
+                        if ( iGameTurn == i1470AD and self.getGoal( iBurgundy, 2 ) == -1 ):
+                                tOwnedLuxes = []
+                                tCompete = [pPortugal,pSpain,pEngland,pFrankia,pGenoa,pVenecia,pPope,pGermany,pNorse]
+                                for pPlayer in tCompete:
+                                        if ( pPlayer.isAlive()):
+                                                tOwnedLuxes.append(self.getOwnedLuxes(pPlayer))
+                                if ( self.getOwnedLuxes( pBurgundy ) > max(tOwnedLuxes) ):
+                                        self.setGoal( iBurgundy, 2, 1 )
+                                else:
+                                        self.setGoal( iBurgundy, 2, 0 )
+
+                elif ( iPlayer == iByzantium and pByzantium.isAlive() ):
+                        if ( iGameTurn == i1000AD and self.getGoal( iByzantium, 0) == -1 ):
+                                if ( gc.isLargestCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.isTopCultureCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iByzantium ):
+                                        self.setGoal( iByzantium, 0, 1 )
+                                else:
+                                        self.setGoal( iByzantium, 0, 0 )
+					
+                        if ( iGameTurn == i1300AD and self.getGoal( iByzantium, 1) == -1 ):
+                                iOwn = gc.doesOwnCities( iByzantium, tByzantineControl[0], tByzantineControl[1], tByzantineControl[2], tByzantineControl[3] )
+                                if ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).isCity() and iOwn == 11 ):
+                                        self.setGoal( iByzantium, 1, 1 )
+                                else:
+                                        self.setGoal( iByzantium, 1, 0 )
+					
+                        if ( iGameTurn == i1500AD and self.getGoal( iByzantium, 2) == -1 ):
+                                iGold = pByzantium.getGold()
+                                bMost = True
+                                for iCiv in range( iNumPlayers ):
+                                        if ( iCiv != iByzantium and gc.getPlayer( iCiv ).isAlive() ):
+                                                if (gc.getPlayer(iCiv).getGold() > iGold):
+                                                        bMost = False
+                                if ( bMost ):
+                                        self.setGoal( iByzantium, 2, 1 )
+                                else:
+                                        self.setGoal( iByzantium, 2, 0 )
+
+                elif ( iPlayer == iFrankia and pFrankia.isAlive() ):
 			
-			if ( iGameTurn == i1000AD and self.getGoal( iArabia, 0) == -1 ):
-				iOwn = gc.doesOwnCities( iArabia, tArabiaControl[0][0], tArabiaControl[0][1], tArabiaControl[0][2], tArabiaControl[0][3] )
-				iOwn += gc.doesOwnCities( iArabia, tArabiaControl[1][0], tArabiaControl[1][1], tArabiaControl[1][2], tArabiaControl[1][3] )
-				if ( (iOwn % 10 > 0) and (iOwn / 10 == 2) ):
-					self.setGoal( iArabia, 0, 1 )
-				else:
-					self.setGoal( iArabia, 0, 0 )
+                        if ( iGameTurn == con.i840AD and self.getGoal( iFrankia, 0) == -1 ):
+                                bEnoughCities = True
+                                for region in tFrankControl:
+                                        iCity = gc.countOwnedCities(iFrankia, region[0],region[1],region[2],region[3])
+                                        if iCity < 2:
+                                                bEnoughCities = False
+                                if bEnoughCities:
+                                        self.setGoal(iFrankia, 0, 1)
+                                else:
+                                        self.setGoal(iFrankia, 0, 0)
+			
+                        if ( iGameTurn == con.i1401AD and self.getGoal( iFrankia, 1) == -1 ):
+                                lBuildingList = [con.iNotreDame,con.iMonasteryOfCluny,con.iPalaisPapes,con.iFontainebleau,con.iKrakDesChevaliers]
+                                iNumCities = pFrankia.getNumCities()
+                                lBuildingCounter = [0,0,0,0,0]
+                                for iCity in range(iNumCities):
+                                        pCity = pFrankia.getCity(iCity)
+                                        for index,building in enumerate(lBuildingList):
+                                                if (pCity.hasBuilding(building)):
+                                                        lBuildingCounter[index] += 1
+                                bBuildingGoal = True
+                                for count in lBuildingCounter:
+                                        if count < 1:
+                                                bBuildingGoal = False
+                                if bBuildingGoal:
+                                        self.setGoal( iFrankia, 1, 1 ) 
+                                else:
+                                        self.setGoal( iFrankia, 1, 0 ) 
+
+                        if ( self.getGoal( iFrankia, 2 ) == - 1 ):
+                                if ( self.getColonies( iFrankia ) > 5 ):
+                                        self.setGoal( iFrankia, 2, 1 )
+
+                elif( iPlayer == iArabia and pArabia.isAlive() ):
+			
+                        if ( iGameTurn == i1000AD and self.getGoal( iArabia, 0) == -1 ):
+							    # iOwn == 11, there cities and all the controled, iOwn == 10, there are no cities, iOwn == 0, there is a foreign city
+                                iOwn = gc.doesOwnCities( iArabia, tArabiaControl[0][0], tArabiaControl[0][1], tArabiaControl[0][2], tArabiaControl[0][3] )
+                                iOwn += gc.doesOwnCities( iArabia, tArabiaControl[1][0], tArabiaControl[1][1], tArabiaControl[1][2], tArabiaControl[1][3] )
+                                if ( (iOwn % 10 > 0) and (iOwn / 10 == 2) ):
+                                        self.setGoal( iArabia, 0, 1 )
+                                else:
+                                        self.setGoal( iArabia, 0, 0 )
 					
-			if ( self.getGoal(iArabia, 1) == -1 ):
-				perc = gc.getGame().calculateReligionPercent(con.iIslam)
-				if ( perc >= 25 ):
-					self.setGoal( iArabia, 1, 1 )
+                        if ( self.getGoal(iArabia, 1) == -1 ):
+                                iPerc = gc.getGame().calculateReligionPercent( con.iIslam )
+                                if ( iPerc >= 25 ):
+                                        self.setGoal( iArabia, 1, 1 )
 					
-			if ( iGameTurn == i1540AD and self.getGoal( iArabia, 2) == -1 ):
-				iOwn = gc.doesOwnCities( iArabia, tArabiaControl[2][0], tArabiaControl[2][1], tArabiaControl[2][2], tArabiaControl[2][3] )
-				iOwn += gc.doesOwnCities( iArabia, tArabiaControl[3][0], tArabiaControl[3][1], tArabiaControl[3][2], tArabiaControl[3][3] )
-				if ( (iOwn % 10 > 0) and (iOwn / 10 == 2) ):
-					self.setGoal( iArabia, 2, 1 )
-				else:
-					self.setGoal( iArabia, 2, 0 )
+                        if ( iGameTurn == i1540AD and self.getGoal( iArabia, 2) == -1 ):
+                                iOwn = gc.doesOwnCities( iArabia, tArabiaControl[2][0], tArabiaControl[2][1], tArabiaControl[2][2], tArabiaControl[2][3] )
+                                iOwn += gc.doesOwnCities( iArabia, tArabiaControl[3][0], tArabiaControl[3][1], tArabiaControl[3][2], tArabiaControl[3][3] )
+                                if ( (iOwn % 10 > 0) and (iOwn / 10 == 2) ):
+                                        self.setGoal( iArabia, 2, 1 )
+                                else:
+                                        self.setGoal( iArabia, 2, 0 )
 					
 
-		elif ( iPlayer == iBulgaria and pBulgaria.isAlive() ):
-			# 3Miro: check for the Bulgarian control
-			iOwn = True
-			if ( iGameTurn <= i1200AD and self.getGoal( iBulgaria, 1 ) == -1 ): #3Miro: teritory goal 1
-				iOwn = gc.doesOwnCities( iBulgaria, tBulgariaControl[0], tBulgariaControl[1], tBulgariaControl[2], tBulgariaControl[3] )
-				# iOwn == 11, there cities and all the controled, iOwn == 10, there are no cities, iOwn == 0, there is a foreign city
-                        	if ( iOwn == 11 ):
-                        		self.setGoal( iBulgaria, 1, 1 )
+                elif ( iPlayer == iBulgaria and pBulgaria.isAlive() ):
+
+                        if ( iGameTurn <= i1000AD and self.getGoal( iBulgaria, 1 ) == -1 ): #3Miro: teritory goal 1
+                                iOwn = gc.doesOwnCities( iBulgaria, tBulgariaControl[0], tBulgariaControl[1], tBulgariaControl[2], tBulgariaControl[3] )
+                                # iOwn == 11, there cities and all the controled, iOwn == 10, there are no cities, iOwn == 0, there is a foreign city
+                                if ( iOwn == 11 ):
+                                        self.setGoal( iBulgaria, 1, 1 )
                         else:
-                        	if ( self.getGoal( iBulgaria, 1 ) == -1 ):
-                        		self.setGoal( iBulgaria, 1, 0 )
+                                if ( self.getGoal( iBulgaria, 1 ) == -1 ):
+                                        self.setGoal( iBulgaria, 1, 0 )
                         		
                         if ( iGameTurn == i1401AD and self.getGoal( iBulgaria, 0 ) == -1 ): # see onCityAquire, if no cities lost so far
-                        	self.setGoal( iBulgaria, 0, 1 )
+                                self.setGoal( iBulgaria, 0, 1 )
 
-			if ( iGameTurn <= i1449AD and self.getGoal( iBulgaria, 2 ) == -1 and pBulgaria.getStateReligion() == con.iOrthodoxy and pBulgaria.getFaith() >= 50 ):
-				self.setGoal( iBulgaria, 2, 1 )
+                        if ( iGameTurn <= i1449AD and self.getGoal( iBulgaria, 2 ) == -1 and pBulgaria.getStateReligion() == con.iOrthodoxy and pBulgaria.getFaith() >= 50 ):
+                                self.setGoal( iBulgaria, 2, 1 )
                         	
                         if ( iGameTurn == i1449AD+1 and self.getGoal( iBulgaria, 2 ) == -1 ):
-                        	self.setGoal( iBulgaria, 2, 0 )
+                                self.setGoal( iBulgaria, 2, 0 )
                         	
-		elif ( iPlayer == iCordoba and pCordoba.isAlive() ):
-			if ( iGameTurn == i1000AD and self.getGoal( iCordoba, 0) == -1 ):
-				if ( gc.isLargestCity( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ) and gc.getMap().plot( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ).getPlotCity().getOwner() == iCordoba ):
-					self.setGoal( iCordoba, 0, 1 )
-				else:
-					self.setGoal( iCordoba, 0, 0 ) 
+                elif ( iPlayer == iCordoba and pCordoba.isAlive() ):
+                        if ( iGameTurn == i1000AD and self.getGoal( iCordoba, 0) == -1 ):
+                                if ( gc.isLargestCity( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ) and gc.getMap().plot( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ).getPlotCity().getOwner() == iCordoba ):
+                                        self.setGoal( iCordoba, 0, 1 )
+                                else:
+                                        self.setGoal( iCordoba, 0, 0 ) 
 		
-			if ( iGameTurn == i1101AD+1 and self.getGoal( iCordoba, 1) == -1 ):
-				self.setGoal( iCordoba, 1, 0 )
-			
+                        if ( iGameTurn == i1101AD+1 and self.getGoal( iCordoba, 1) == -1 ):
+                                self.setGoal( iCordoba, 1, 0 )
 
-			if (iGameTurn == i1101AD):
-              			if (pCordoba.countTotalCulture() >= 7000):
-                    			self.setGoal( iCordoba, 2, 1 )
-                		else:
-                    			self.setGoal( iCordoba, 2, 0 )
+                        if (iGameTurn == i1101AD):
+                                if (pCordoba.countTotalCulture() >= 7000):
+                                        self.setGoal( iCordoba, 2, 1 )
+                                else:
+                                        self.setGoal( iCordoba, 2, 0 )
 								
-		elif ( iPlayer == iSpain and pSpain.isAlive() ):
+                elif ( iPlayer == iSpain and pSpain.isAlive() ):
 			
-			if ( iGameTurn == i1600AD ):
-				if ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3] ) == 11 ) and ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[1][0], tSpainControl[1][1], tSpainControl[1][2], tSpainControl[1][3] ) == 11 ):
-					if ( not gc.doesHaveOtherReligion(tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3], con.iCatholicism)):
-						self.setGoal( iSpain, 0, 1 )
-					else:
-						self.setGoal( iSpain, 0, 0 )
-				else:
-					self.setGoal( iSpain, 0, 0 )
+                        if ( iGameTurn == i1600AD and self.getGoal(iSpain, 0) == -1 ):
+                                if ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3] ) == 11 ) and ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[1][0], tSpainControl[1][1], tSpainControl[1][2], tSpainControl[1][3] ) == 11 ):
+                                        if ( not gc.doesHaveOtherReligion(tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3], con.iCatholicism)):
+                                                self.setGoal( iSpain, 0, 1 )
+                                        else:
+                                                self.setGoal( iSpain, 0, 0 )
+                                else:
+                                        self.setGoal( iSpain, 0, 0 )
 			
-			if ( self.getGoal( iSpain, 1 ) == -1 ):
-				iCountCities  = gc.countOwnedCities( iSpain, tSpainControl2[0][0], tSpainControl2[0][1], tSpainControl2[0][2], tSpainControl2[0][3] )
-				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[1][0], tSpainControl2[1][1], tSpainControl2[1][2], tSpainControl2[1][3] ) 
-				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[2][0], tSpainControl2[2][1], tSpainControl2[2][2], tSpainControl2[2][3] ) 
-				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[3][0], tSpainControl2[3][1], tSpainControl2[3][2], tSpainControl2[3][3] ) 
-				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[4][0], tSpainControl2[4][1], tSpainControl2[4][2], tSpainControl2[4][3] ) 
-				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[5][0], tSpainControl2[5][1], tSpainControl2[5][2], tSpainControl2[5][3] ) 
-				iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[6][0], tSpainControl2[6][1], tSpainControl2[6][2], tSpainControl2[6][3] )  
-				if ( iCountCities >= 4 ):
-					self.setGoal( iSpain, 1, 1 )
+                        if ( self.getGoal( iSpain, 1 ) == -1 ):
+                                iCountCities  = gc.countOwnedCities( iSpain, tSpainControl2[0][0], tSpainControl2[0][1], tSpainControl2[0][2], tSpainControl2[0][3] )
+                                iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[1][0], tSpainControl2[1][1], tSpainControl2[1][2], tSpainControl2[1][3] ) 
+                                iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[2][0], tSpainControl2[2][1], tSpainControl2[2][2], tSpainControl2[2][3] ) 
+                                iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[3][0], tSpainControl2[3][1], tSpainControl2[3][2], tSpainControl2[3][3] ) 
+                                iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[4][0], tSpainControl2[4][1], tSpainControl2[4][2], tSpainControl2[4][3] ) 
+                                iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[5][0], tSpainControl2[5][1], tSpainControl2[5][2], tSpainControl2[5][3] ) 
+                                iCountCities += gc.countOwnedCities( iSpain, tSpainControl2[6][0], tSpainControl2[6][1], tSpainControl2[6][2], tSpainControl2[6][3] )  
+                                if ( iCountCities >= 4 ):
+                                        self.setGoal( iSpain, 1, 1 )
 						
-			if ( iGameTurn == i1600AD ):
-               			iColony = self.getColonies( iSpain )
-				for iLoopCiv in range( iNumMajorPlayers ):
-					if ( iLoopCiv != iSpain and gc.getPlayer(iLoopCiv).isAlive() ):
-						if (self.getColonies(iLoopCiv) >= iColony ):
-							self.setGoal( iSpain, 2, 0 )
-							return
-				self.setGoal( iSpain, 2, 1 )
+                        if ( iGameTurn == i1600AD and self.getGoal( iSpain, 2) == -1 ):
+                                iColonies = self.getColonies( iSpain )
+                                bMost = True
+                                for iCiv in range( iNumPlayers ):
+                                        if ( iCiv != iSpain and gc.getPlayer( iCiv ).isAlive() ):
+                                                if (self.getColonies(iCiv) >= iColonies):
+                                                        bMost = False
+                                if ( bMost ):
+                                        self.setGoal( iSpain, 2, 1 )
+                                else:
+                                        self.setGoal( iSpain, 2, 0 )
 
-					
-		elif ( iPlayer == iNorse and pNorse.isAlive() ):
-		
-			#if ( iGameTurn == i1000AD and self.getGoal( iNorse, 0 ) == -1 ):
-			#	iCount = gc.countOwnedCities( iNorse, tNorseSettle[1][0], tNorseSettle[1][1], tNorseSettle[1][2], tNorseSettle[1][3] ) + gc.countOwnedCities( iNorse, tNorseSettle[2][0], tNorseSettle[2][1], tNorseSettle[2][2], tNorseSettle[2][3] )
-			#	if ( iCount >= 3 ):
-			#		self.setGoal( iNorse, 0, 1 )
-			#	else:
-			#		self.setGoal( iNorse, 0, 0 )
+                elif ( iPlayer == iNorse and pNorse.isAlive() ):
 			
-			if ( iGameTurn <= con.i1050AD and self.getGoal( iNorse, 0 ) == -1 ):
-				iCitiesFrance = gc.countOwnedCities( iNorse, tNorseSettle[0][0], tNorseSettle[0][1], tNorseSettle[0][2], tNorseSettle[0][3] ) 
-				iCitiesBritain = gc.countOwnedCities( iNorse, tNorseSettle[1][0], tNorseSettle[1][1], tNorseSettle[1][2], tNorseSettle[1][3] ) + gc.countOwnedCities( iNorse, tNorseSettle[2][0], tNorseSettle[2][1], tNorseSettle[2][2], tNorseSettle[2][3] )
-				iCitiesIreland = gc.countOwnedCities( iNorse, tNorseSettle[3][0], tNorseSettle[3][1], tNorseSettle[3][2], tNorseSettle[3][3] )
-				iCitiesIceland = gc.countOwnedCities( iNorse, tNorseSettle[4][0], tNorseSettle[4][1], tNorseSettle[4][2], tNorseSettle[4][3] )
-				iCitiesSicily = gc.countOwnedCities( iNorse, tNorseSettle[5][0], tNorseSettle[5][1], tNorseSettle[5][2], tNorseSettle[5][3] )
-				if ( iCitiesFrance >0 and iCitiesBritain >0 and iCitiesIreland >0 and iCitiesIceland >0 and iCitiesSicily > 0):
-					self.setGoal( iNorse, 0, 1 )
+                        if ( iGameTurn <= con.i1050AD and self.getGoal( iNorse, 0 ) == -1 ):
+                                iCitiesFrance = gc.countOwnedCities( iNorse, tNorseSettle[0][0], tNorseSettle[0][1], tNorseSettle[0][2], tNorseSettle[0][3] ) 
+                                iCitiesBritain = gc.countOwnedCities( iNorse, tNorseSettle[1][0], tNorseSettle[1][1], tNorseSettle[1][2], tNorseSettle[1][3] ) + gc.countOwnedCities( iNorse, tNorseSettle[2][0], tNorseSettle[2][1], tNorseSettle[2][2], tNorseSettle[2][3] )
+                                iCitiesIreland = gc.countOwnedCities( iNorse, tNorseSettle[3][0], tNorseSettle[3][1], tNorseSettle[3][2], tNorseSettle[3][3] )
+                                iCitiesIceland = gc.countOwnedCities( iNorse, tNorseSettle[4][0], tNorseSettle[4][1], tNorseSettle[4][2], tNorseSettle[4][3] )
+                                iCitiesSicily = gc.countOwnedCities( iNorse, tNorseSettle[5][0], tNorseSettle[5][1], tNorseSettle[5][2], tNorseSettle[5][3] )
+                                if ( iCitiesFrance >0 and iCitiesBritain >0 and iCitiesIreland >0 and iCitiesIceland >0 and iCitiesSicily > 0):
+                                        self.setGoal( iNorse, 0, 1 )
 			
-			if (iGameTurn == con.i1050AD+1 and self.getGoal(iNorse,0) == -1):
-				self.setGoal( iNorse, 0, 0 )
+                        if (iGameTurn == con.i1050AD+1 and self.getGoal(iNorse,0) == -1):
+                                self.setGoal( iNorse, 0, 0 )
 
-			if (self.getGoal(iNorse,1) == -1):
-				if ( iGameTurn <= i1281AD):
-					if ( gc.canSeeAllTerrain( iNorse, con.iTerrainOcean ) ):
-						self.setGoal( iNorse, 1, 1 )
-				else:
-					self.setGoal( iNorse, 1, 0 )
+                        if (self.getGoal(iNorse,1) == -1):
+                                if ( iGameTurn <= i1281AD):
+                                        if ( gc.canSeeAllTerrain( iNorse, con.iTerrainOcean ) ):
+                                                self.setGoal( iNorse, 1, 1 )
+                                else:
+                                        self.setGoal( iNorse, 1, 0 )
 					
-		elif ( iPlayer == iVenecia and pVenecia.isAlive() ):
+                elif ( iPlayer == iVenecia and pVenecia.isAlive() ):
                         # Zipzapzup: 1st Conquering Constantinople
                         # 2nd Dalmatien + islands + rhodes
                         # 3rd 10 luxus + san marco + marco polo
-			if (iGameTurn <= i1200AD and self.getGoal( iVenecia, 0) == -1 ):
-				pJPlot = gc.getMap().plot( con.iConstantinople[0], con.iConstantinople[1] )
-				if ( pJPlot.isCity()):
-					if ( pJPlot.getPlotCity().getOwner() == iVenecia ):
-						self.setGoal(iVenecia,0,1)
-			elif (self.getGoal( iVenecia, 0) == -1):
-				self.setGoal(iVenecia,0,0)
-			
-			if ( iGameTurn <= i1500AD and self.getGoal( iVenecia, 1 ) == -1 ):
-				iDalmatia = gc.doesOwnCities( iVenecia, tVenecianControl[0][0], tVenecianControl[0][1], tVenecianControl[0][2], tVenecianControl[0][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[1][0], tVenecianControl[1][1], tVenecianControl[1][2], tVenecianControl[1][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[2][0], tVenecianControl[2][1], tVenecianControl[2][2], tVenecianControl[2][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[3][0], tVenecianControl[3][1], tVenecianControl[3][2], tVenecianControl[3][3] )
-				iGreece = gc.countOwnedCities( iVenecia, tVenecianControl[4][0], tVenecianControl[4][1], tVenecianControl[4][2], tVenecianControl[4][3] ) + gc.countOwnedCities( iVenecia, tVenecianControl[5][0], tVenecianControl[5][1], tVenecianControl[5][2], tVenecianControl[5][3] )
-				iCyprus = gc.countOwnedCities( iVenecia, tVenecianControl[6][0], tVenecianControl[6][1], tVenecianControl[6][2], tVenecianControl[6][3] )
-				iCrete = gc.countOwnedCities( iVenecia, tVenecianControl[7][0], tVenecianControl[7][1], tVenecianControl[7][2], tVenecianControl[7][3] )
-				iRhodes = gc.countOwnedCities( iVenecia, tVenecianControl[8][0], tVenecianControl[8][1], tVenecianControl[8][2], tVenecianControl[8][3] )
-				if ( iDalmatia >= 40 and iGreece >= 1 and iCyprus >= 1 and iCrete >= 1 and iRhodes >= 1 ):
-					self.setGoal( iVenecia, 1, 1 )
-			else:
-				if ( self.getGoal( iVenecia, 0 ) == -1 ):
-					self.setGoal( iVenecia, 1, 0 )
-					
-			if ( self.getGoal( iVenecia, 2 ) == -1 ):
-				if ( iGameTurn <= i1500AD and self.getOwnedLuxes( pVenecia ) >= 10 and self.getWondersBuilt(iVenecia) == 2):
-					self.setGoal( iVenecia, 2, 1 )
-				elif ( iGameTurn == i1500AD ):
-					self.setGoal( iVenecia, 2, 0 )
-					
-		elif ( iPlayer == iKiev and pKiev.isAlive() ):
+                        if (iGameTurn <= i1200AD and self.getGoal( iVenecia, 0) == -1 ):
+                                pPlot = gc.getMap().plot( con.iConstantinople[0], con.iConstantinople[1] )
+                                if ( pPlot.isCity()):
+                                        if ( pPlot.getPlotCity().getOwner() == iVenecia ):
+                                                self.setGoal(iVenecia,0,1)
+                                        else:
+                                                self.setGoal(iVenecia,0,0)
 
-			if ( iGameTurn == i1300AD and self.getGoal( iKiev, 0 ) == - 1 ):
-				if ( self.getOwnedGrain( pKiev ) >= 10 ):
-					self.setGoal( iKiev, 0, 1 )
-				else:
-					self.setGoal( iKiev, 0, 0 )
-			
-			if ( iGameTurn == i1350AD and self.getGoal( iKiev, 1 ) == - 1 ):
-				if ( gc.doesOwnCities( iKiev, tKievControl[0], tKievControl[1], tKievControl[2], tKievControl[3] ) == 11 ):
-					self.setGoal( iKiev, 1, 1 )
-				else:
-					self.setGoal( iKiev, 1, 0 )
+                        if ( iGameTurn <= i1500AD and self.getGoal( iVenecia, 1 ) == -1 ):
+                                iDalmatia = gc.doesOwnCities( iVenecia, tVenecianControl[0][0], tVenecianControl[0][1], tVenecianControl[0][2], tVenecianControl[0][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[1][0], tVenecianControl[1][1], tVenecianControl[1][2], tVenecianControl[1][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[2][0], tVenecianControl[2][1], tVenecianControl[2][2], tVenecianControl[2][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[3][0], tVenecianControl[3][1], tVenecianControl[3][2], tVenecianControl[3][3] )
+                                iGreece = gc.countOwnedCities( iVenecia, tVenecianControl[4][0], tVenecianControl[4][1], tVenecianControl[4][2], tVenecianControl[4][3] ) + gc.countOwnedCities( iVenecia, tVenecianControl[5][0], tVenecianControl[5][1], tVenecianControl[5][2], tVenecianControl[5][3] )
+                                iCyprus = gc.countOwnedCities( iVenecia, tVenecianControl[6][0], tVenecianControl[6][1], tVenecianControl[6][2], tVenecianControl[6][3] )
+                                iCrete = gc.countOwnedCities( iVenecia, tVenecianControl[7][0], tVenecianControl[7][1], tVenecianControl[7][2], tVenecianControl[7][3] )
+                                iRhodes = gc.countOwnedCities( iVenecia, tVenecianControl[8][0], tVenecianControl[8][1], tVenecianControl[8][2], tVenecianControl[8][3] )
+                                if ( iDalmatia >= 40 and iGreece >= 1 and iCyprus >= 1 and iCrete >= 1 and iRhodes >= 1 ):
+                                        self.setGoal( iVenecia, 1, 1 )
+                        else:
+                                if ( self.getGoal( iVenecia, 1 ) == -1 ):
+                                        self.setGoal( iVenecia, 1, 0 )
 					
-			if ( iGameTurn == i1431AD+1 and self.getGoal( iKiev, 2 ) == - 1):
-				self.setGoal( iKiev, 2, 0 )
+                        if ( self.getGoal( iVenecia, 2 ) == -1 ):
+                                if ( iGameTurn <= i1500AD and self.getOwnedLuxes( pVenecia ) >= 10 and self.getWondersBuilt(iVenecia) == 2):
+                                        self.setGoal( iVenecia, 2, 1 )
+                                elif ( iGameTurn == i1500AD+1 ):
+                                        self.setGoal( iVenecia, 2, 0 )
+					
+                elif ( iPlayer == iKiev and pKiev.isAlive() ):
+		  
+                        if ( iGameTurn == i1300AD and self.getGoal( iKiev, 0 ) == - 1 ):
+                                if ( self.getOwnedGrain( pKiev ) >= 10 ):
+                                        self.setGoal( iKiev, 0, 1 )
+                                else:
+                                        self.setGoal( iKiev, 0, 0 )
+			
+                        if ( iGameTurn == i1350AD and self.getGoal( iKiev, 1 ) == - 1 ):
+                                if ( gc.doesOwnCities( iKiev, tKievControl[0], tKievControl[1], tKievControl[2], tKievControl[3] ) == 11 ):
+                                        self.setGoal( iKiev, 1, 1 )
+                                else:
+                                        self.setGoal( iKiev, 1, 0 )
+					
+                        if ( iGameTurn == i1431AD+1 and self.getGoal( iKiev, 2 ) == - 1):
+                                self.setGoal( iKiev, 2, 0 )
 				
-		elif ( iPlayer == iHungary and pHungary.isAlive() ):
+                elif ( iPlayer == iHungary and pHungary.isAlive() ):
+
+                        if ( iGameTurn == i1491AD and self.getGoal( iHungary, 0 ) == -1 ):
+                                if ( gc.controlMostTeritory( iHungary, tHungarianControl[0], tHungarianControl[1], tHungarianControl[2], tHungarianControl[3] ) ):
+                                        self.setGoal( iHungary, 0, 1 )
+                                else:
+                                        self.setGoal( iHungary, 0, 0 )
 			
-			if ( iGameTurn == i1491AD and self.getGoal( iHungary, 0 ) == -1 ):
-				if ( gc.controlMostTeritory( iHungary, tHungarianControl[0], tHungarianControl[1], tHungarianControl[2], tHungarianControl[3] ) ):
-					self.setGoal( iHungary, 0, 1 )
-				else:
-					self.setGoal( iHungary, 0, 0 )
+                        if ( self.getGoal( iHungary, 1 ) == -1 ):
+                                iCivic = pHungary.getCivics(4)
+                                if ( iCivic == 24 ):
+                                        self.setGoal( iHungary, 1, 1 )
+                                else:
+                                        for iPlayer in range( iNumMajorPlayers ):
+                                                pPlayer = gc.getPlayer( iPlayer )
+                                                if ( pPlayer.isAlive() and pPlayer.getCivics(4) == 24 ):
+                                                        self.setGoal( iHungary, 1, 0 )
 			
-			if ( self.getGoal( iHungary, 1 ) == -1 ):
-				iCivic = pHungary.getCivics(4)
-				if ( iCivic == 24 ):
-					self.setGoal( iHungary, 1, 1 )
-				else:
-					for iPlayer in range( iNumMajorPlayers ):
-						pPlayer = gc.getPlayer( iPlayer )
-						if ( pPlayer.isAlive() and pPlayer.getCivics(4) == 24 ):
-							self.setGoal( iHungary, 1, 0 )
-			
-			if ( iGameTurn == i1526AD and self.getGoal( iHungary, 2 ) == -1 ):
-				iTurkeyCities = 0
-				for i in range( 5 ):				
-					iTurkeyCities += gc.countOwnedCities( iTurkey, tHungarianControl2[i][0], tHungarianControl2[i][1], tHungarianControl2[i][2], tHungarianControl2[i][3] ) 
-				if ( iTurkeyCities == 0 ):
-					self.setGoal( iHungary, 2, 1 )
-				else:
-					self.setGoal( iHungary, 2, 0 )
-			
+                        if ( iGameTurn == i1526AD and self.getGoal( iHungary, 2 ) == -1 ):
+                                iTurkeyCities = 0
+                                for i in range( 5 ):				
+                                        iTurkeyCities += gc.countOwnedCities( iTurkey, tHungarianControl2[i][0], tHungarianControl2[i][1], tHungarianControl2[i][2], tHungarianControl2[i][3] ) 
+                                if ( iTurkeyCities == 0 ):
+                                        self.setGoal( iHungary, 2, 1 )
+                                else:
+                                        self.setGoal( iHungary, 2, 0 )
+
+                elif ( iPlayer == iGermany and pGermany.isAlive() ):
+
+                        if ( iGameTurn == i1359AD and self.getGoal( iGermany, 0 ) == -1 ):
+                                if ( gc.doesOwnCities( iGermany, tGermanyControl[0], tGermanyControl[1], tGermanyControl[2], tGermanyControl[3] ) == 11 ):
+                                        self.setGoal( iGermany, 0, 1 )
+                                else:
+                                        self.setGoal( iGermany, 0, 0 )
+
+                        if ( iGameTurn == i1461AD and self.getGoal( iGermany, 1 ) == -1 ):
+                                iCount = 0
+                                for iVassal in range( iNumMajorPlayers ):
+                                        pVassal = gc.getPlayer( iVassal )
+                                        if ( iVassal != iGermany and pVassal.isAlive() ):
+                                                if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
+                                                        iCount += 1
 				
-		elif ( iPlayer == iGermany and pGermany.isAlive() ):
-			
-			if ( iGameTurn == i1359AD and self.getGoal( iGermany, 0 ) == -1 ):
-				if ( gc.doesOwnCities( iGermany, tGermanyControl[0], tGermanyControl[1], tGermanyControl[2], tGermanyControl[3] ) == 11 ):
-					self.setGoal( iGermany, 0, 1 )
-				else:
-					self.setGoal( iGermany, 0, 0 )
-					
-			if ( iGameTurn == i1461AD and self.getGoal( iGermany, 1 ) == -1 ):
-				iCount = 0
-				for iVassal in range( iNumMajorPlayers ):
-					pVassal = gc.getPlayer( iVassal )
-					if ( iVassal != iGermany and pVassal.isAlive() ):
-						if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
-							iCount += 1
+                                if ( iCount >= 3 ):
+                                        self.setGoal( iGermany, 1, 1 )
+                                else:
+                                        self.setGoal( iGermany, 1, 0 )
+
+                        if ( iGameTurn == i1540AD and self.getGoal( iGermany, 2 ) == -1 ):
+                                iGermanPower = teamGermany.getPower(False)
+                                bPower = True
+                                for iPlayer in range( iNumMajorPlayers ):
+                                        pPlayer = gc.getPlayer( iPlayer )
+                                        if ( pPlayer.isAlive() and gc.getTeam( pPlayer.getTeam() ).getPower(False) > iGermanPower ):
+                                                bPower = False
+                                if ( bPower ):
+                                        self.setGoal( iGermany, 2, 1 )
+                                else:
+                                        self.setGoal( iGermany, 2, 0 )
+
+                elif ( iPlayer == con.iPoland and pPoland.isAlive() ):
+
+                        if (iGameTurn == con.i1600AD and self.getGoal(iPoland,0) == -1 ): #Really 1600
+                                if (self.checkOwnedCoastalArea(iPoland, (tBaltic[0],tBaltic[1]), (tBaltic[2],tBaltic[3]), 1)):
+                                        if (self.checkOwnedCoastalArea(iPoland, (tBlackSea[0],tBlackSea[1]), (tBlackSea[2],tBlackSea[3]), 1)):
+                                                self.setGoal(iPoland, 0, 1)
+                                        else:
+                                                self.setGoal(iPoland, 0, 0)
+                                else:
+                                        self.setGoal(iPoland, 0, 0)
+                        #Really 1500 to 1520
+                        if ((iGameTurn >= con.i1500AD) and (iGameTurn <= con.i1520AD) and self.getGoal(iPoland,1) == -1 ):
+                                iAgriculturePolish = pPoland.calculateTotalYield(YieldTypes.YIELD_FOOD)
+                                bFood = True
+                                for iPlayer in range( iNumMajorPlayers ):
+                                        if ( gc.getPlayer( iPlayer ).calculateTotalYield(YieldTypes.YIELD_FOOD ) > iAgriculturePolish ):
+                                                bFood = False
+                                if (bFood):
+                                        self.setGoal(iPoland, 1, 1)
+
+                        if ( (iGameTurn == con.i1520AD+1) and self.getGoal(iPoland,1) == -1):
+                                self.setGoal(iPoland, 1, 0)
+
+                        #See onBuildingBuilt for 3rd goal
+
+                elif ( iPlayer == iMoscow and pMoscow.isAlive() ):
+
+                        if ( iGameTurn == i1482AD and self.getGoal( iMoscow, 0 ) == -1 ):
+                                if ( gc.countOwnedCities( con.iBarbarian, tMoscowControl[0], tMoscowControl[1], tMoscowControl[2], tMoscowControl[3] ) == 0 ):
+                                        self.setGoal( iMoscow, 0, 1 )
+                                else:
+                                        self.setGoal( iMoscow, 0, 0 )
 				
-				if ( iCount >= 3 ):
-					self.setGoal( iGermany, 1, 1 )
-				else:
-					self.setGoal( iGermany, 1, 0 )
+                        if ( iGameTurn == i1600AD and self.getGoal( iMoscow, 1 ) == -1 ):
+                                if ( pMoscow.getNumCities() >= 15 ):
+                                        self.setGoal( iMoscow, 1, 1 )
+                                else:
+                                        self.setGoal( iMoscow, 1, 0 )
 					
-			if ( iGameTurn == i1540AD and self.getGoal( iGermany, 2 ) == -1 ):
-				iGermanPower = teamGermany.getPower(False)
-				bPower = True
-				for iPlayer in range( iNumMajorPlayers ):
-					pPlayer = gc.getPlayer( iPlayer )
-					if ( pPlayer.isAlive() and gc.getTeam( pPlayer.getTeam() ).getPower(False) > iGermanPower ):
-						bPower = False
-						
-				if ( bPower ):
-					self.setGoal( iGermany, 2, 1 )
-				else:
-					self.setGoal( iGermany, 2, 0 )
+                        if ( self.getGoal( iMoscow, 2 ) == -1 ):
+                                if ( pMoscow.countOwnedBonuses( con.iAccess ) > 0 ):
+                                        self.setGoal( iMoscow, 2, 1 )
+                                elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
+                                        self.setGoal( iMoscow, 2, 1 )
 					
-		elif ( iPlayer == con.iPoland and pPoland.isAlive() ):
+                elif ( iPlayer == iGenoa and pGenoa.isAlive() ):
+
+                        if ( iGameTurn == i1540AD and self.getGoal( iGenoa, 0 ) == -1 ):
+                                iSardinia = gc.doesOwnCities( iGenoa, tGenoaControl[0][0], tGenoaControl[0][1], tGenoaControl[0][2], tGenoaControl[0][3] )
+                                iMarseilles = gc.doesOwnCities( iGenoa, tGenoaControl[1][0], tGenoaControl[1][1], tGenoaControl[1][2], tGenoaControl[1][3] )
+                                iMilano = gc.doesOwnCities( iGenoa, tGenoaControl[2][0], tGenoaControl[2][1], tGenoaControl[2][2], tGenoaControl[2][3] )
+                                iCyprus = gc.doesOwnCities( iGenoa, tGenoaControl[3][0], tGenoaControl[3][1], tGenoaControl[3][2], tGenoaControl[3][3] )
+                                iCrete = gc.doesOwnCities( iGenoa, tGenoaControl[4][0], tGenoaControl[4][1], tGenoaControl[4][2], tGenoaControl[4][3] )
+                                if ( iSardinia == 11 and iMarseilles > 9 and iMilano > 9 and iCyprus == 11 and iCrete == 11 ):
+                                        self.setGoal( iGenoa, 0, 1 )
+                                else:
+                                        self.setGoal( iGenoa, 0, 0 )
+
+                        # see cops and buildings for second UHV
+                        if ( self.getGoal( iGenoa, 1 ) == -1 and self.getGenoaBanks() >= 8 and self.getGenoaCorporations() >= 2 ):
+                                self.setGoal( iGenoa, 1, 1 )
+					
+                        if ( iGameTurn == i1640AD and self.getGoal( iGenoa, 2 ) == -1 ):
+                                iCount = 0
+                                for iPlayer in range( iNumMajorPlayers ):
+                                        if ( iPlayer != iGenoa and teamGenoa.isOpenBorders( iPlayer ) ):
+                                                iCount += 1
+                                if ( iCount >= 10 ):
+                                        self.setGoal( iGenoa, 2, 1 )
+                                else:
+                                        self.setGoal( iGenoa, 2, 0 )
+
+                elif ( iPlayer == iEngland and pEngland.isAlive() ):
 			
-			if (iGameTurn == con.i1600AD and self.getGoal(iPoland,0) == -1 ): #Really 1600
-				if (self.checkOwnedCoastalArea(iPoland, (tBaltic[0],tBaltic[1]), (tBaltic[2],tBaltic[3]), 1)):
-					if (self.checkOwnedCoastalArea(iPoland, (tBlackSea[0],tBlackSea[1]), (tBlackSea[2],tBlackSea[3]), 1)):
-						self.setGoal(iPoland, 0, 1)
-					else:
-						self.setGoal(iPoland, 0, 0)
-				else:
-					self.setGoal(iPoland, 0, 0)
-			#Really 1500 to 1520
-			if ((iGameTurn >= con.i1500AD) and (iGameTurn <= con.i1520AD) and self.getGoal(iPoland,1) == -1 ):
-				iAgriculturePolish = pPoland.calculateTotalYield(YieldTypes.YIELD_FOOD)
-				bFood = True
-				for iPlayer in range( iNumMajorPlayers ):
-					pPlayer = gc.getPlayer( iPlayer )
-					iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
-					if iAgriculture > iAgriculturePolish:
-						bFood = False
-				if (bFood):
-					self.setGoal(iPoland, 1, 1)
-			if ((iGameTurn > con.i1520AD) and self.getGoal(iPoland,1) == -1):
-					self.setGoal(iPoland, 1, 0)
-			#See onBuildingBuilt for 3rd goal
-							
+                        if ( iGameTurn == con.i1452AD and self.getGoal( iEngland, 0 ) == -1 ):
+                                tVicList = []
+                                iRegions = 0
+                                for tregion in tEnglishControl:
+                                        iVic = gc.doesOwnCities( iEngland, tregion[0], tregion[1], tregion[2], tregion[3] )
+                                        tVicList.append(iVic)
+                                        iRegions += 1
+
+                                for tregion in tNormanControl:
+                                        iVic = gc.doesOwnCities( iEngland, tregion[0], tregion[1], tregion[2], tregion[3] )
+                                        tVicList.append(iVic)
+                                        iRegions += 1
+
+                                if ( tVicList.count(11) == iRegions ):
+                                        self.setGoal( iEngland, 0, 1 )
+                                else:
+                                        self.setGoal( iEngland, 0, 0 )
+
+                        if ( self.getGoal( iEngland, 1 ) == -1 ):
+                                if ( self.getColonies( iEngland ) > 7 ):
+                                        self.setGoal( iEngland, 1, 1 )
 					
+                elif ( iPlayer == iPortugal and pPortugal.isAlive() ):
+
+                        if ( iGameTurn == i1640AD and self.getGoal( iPortugal, 1 ) == -1 ):
+                                self.setGoal( iPortugal, 1, 1 )
+
+                        if ( self.getGoal( iPortugal, 2 ) == -1 ):
+                                if ( self.getColonies( iPortugal) > 5 ):
+                                        self.setGoal( iPortugal, 2, 1 )
 				
-		elif ( iPlayer == iMoscow and pMoscow.isAlive() ):
+                elif ( iPlayer == iAustria and pAustria.isAlive() ):
+
+                        if ( iGameTurn == i1600AD and self.getGoal( iAustria, 0 ) == -1 ):
+                                if ( gc.doesOwnCities( iAustria, tAustrianControl[0], tAustrianControl[1], tAustrianControl[2], tAustrianControl[3] ) == 11 ):
+                                        self.setGoal( iAustria, 0, 1 )
+                                else:
+                                        self.setGoal( iAustria, 0, 0 )
+
+                        if ( iGameTurn == i1700AD and self.getGoal( iAustria, 1 ) == -1 ):
+                                iCount = 0
+                                for iPlayer in range( iNumMajorPlayers ):
+                                        pPlayer = gc.getPlayer( iPlayer )
+                                        if ( iPlayer != iAustria and pPlayer.isAlive() ):
+                                                if ( gc.getTeam( pPlayer.getTeam() ).isVassal( iAustria ) ):
+                                                        iCount += 1
+
+                                if ( iCount >= 3 ):
+                                        self.setGoal( iAustria, 1, 1 )
+                                else:
+                                        self.setGoal( iAustria, 1, 0 )
+					
+                        if ( iGameTurn == i1750AD and self.getGoal( iAustria, 2 ) == -1 ):
+                                iCount = 0
+                                for iPlayer in range( iNumMajorPlayers ):
+                                        if ( iPlayer != iAustria and teamAustria.isDefensivePact( iPlayer ) ):
+                                                iCount += 1
+
+                                if ( iCount >= 2 ):
+                                        self.setGoal( iAustria, 2, 1 )
+                                else:
+                                        self.setGoal( iAustria, 2, 0 )
+
+                elif ( iPlayer == iTurkey and pTurkey.isAlive() ):
 			
-			#if ( iGameTurn == i1401AD and self.getGoal( iMoscow, 0 ) == -1 ):
-			#	self.setGoal( iMoscow, 0, 1 )
-			if ( iGameTurn == i1482AD and self.getGoal( iMoscow, 0 ) == -1 ):
-				if ( gc.countOwnedCities( con.iBarbarian, tMoscowControl[0], tMoscowControl[1], tMoscowControl[2], tMoscowControl[3] ) == 0 ):
-					self.setGoal( iMoscow, 0, 1 )
-				else:
-					self.setGoal( iMoscow, 0, 0 )
-				
-			if ( iGameTurn == i1600AD and self.getGoal( iMoscow, 1 ) == -1 ):
-				if ( pMoscow.getNumCities() >= 15 ):
-					self.setGoal( iMoscow, 1, 1 )
-				else:
-					self.setGoal( iMoscow, 1, 0 )
-					
-			if ( self.getGoal( iMoscow, 2 ) == -1 ):
-				if ( pMoscow.countOwnedBonuses( con.iAccess ) > 0 ):
-					self.setGoal( iMoscow, 2, 1 )
-				elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
-					self.setGoal( iMoscow, 2, 1 )
-					
-		elif ( iPlayer == iGenoa and pGenoa.isAlive() ):
-			
-			if ( iGameTurn == i1540AD and self.getGoal( iGenoa, 0 ) == -1 ):
-				iSardinia = gc.doesOwnCities( iGenoa, tGenoaControl[0][0], tGenoaControl[0][1], tGenoaControl[0][2], tGenoaControl[0][3] )
-				iMarseilles = gc.doesOwnCities( iGenoa, tGenoaControl[1][0], tGenoaControl[1][1], tGenoaControl[1][2], tGenoaControl[1][3] )
-				iMilano = gc.doesOwnCities( iGenoa, tGenoaControl[2][0], tGenoaControl[2][1], tGenoaControl[2][2], tGenoaControl[2][3] )
-				iCyprus = gc.doesOwnCities( iGenoa, tGenoaControl[3][0], tGenoaControl[3][1], tGenoaControl[3][2], tGenoaControl[3][3] )
-				iCrete = gc.doesOwnCities( iGenoa, tGenoaControl[4][0], tGenoaControl[4][1], tGenoaControl[4][2], tGenoaControl[4][3] )
-				if ( iSardinia == 11 and iMarseilles > 9 and iMilano > 9 and iCyprus == 11 and iCrete == 11 ):
-					self.setGoal( iGenoa, 0, 1 )
-				else:
-					self.setGoal( iGenoa, 0, 0 )
-					
-			# see cops and buildings for second UHV
-			if ( self.getGoal( iGenoa, 1 ) == -1 and self.getGenoaBanks() and self.getGenoaCorporations() >= 2 ):
-				self.setGoal( iGenoa, 1, 1 )
-					
-			if ( iGameTurn == i1640AD and self.getGoal( iGenoa, 2 ) == -1 ):
-				iCount = 0
-				for iPlayer in range( iNumMajorPlayers ):
-					if ( iPlayer != iGenoa and teamGenoa.isOpenBorders( iPlayer ) ):
-						iCount += 1
-				
-				if ( iCount >= 10 ):
-					self.setGoal( iGenoa, 2, 1 )
-				else:
-					self.setGoal( iGenoa, 2, 0 )
-					
-		elif ( iPlayer == iEngland and pEngland.isAlive() ):
-			
-			if ( iGameTurn == con.i1452AD and self.getGoal( iEngland, 0 ) == -1 ):
-				tVicList = []
-				iRegions = 0
-				for tregion in tEnglishControl:
-					iVic = gc.doesOwnCities( iEngland, tregion[0], tregion[1], tregion[2], tregion[3] )
-					tVicList.append(iVic)
-					iRegions += 1
-				for tregion in tNormanControl:
-					iVic = gc.doesOwnCities( iEngland, tregion[0], tregion[1], tregion[2], tregion[3] )
-					tVicList.append(iVic)
-					iRegions += 1
-				#print("Number of Regions",iRegions)
-				#print("VicList",tVicList)
-				if ( tVicList.count(11) == iRegions):
-					self.setGoal( iEngland, 0, 1 )
-				else:
-					self.setGoal( iEngland, 0, 0 )
-					
-			if ( self.getGoal( iEngland, 1 ) == -1 ):
-				if ( self.getColonies( iEngland ) > 7 ):
-					self.setGoal( iEngland, 1, 1 )
-					
-		elif ( iPlayer == iPortugal and pPortugal.isAlive() ):
-			
-			#if ( iGameTurn == i1600AD and self.getGoal( iPortugal, 0 ) == -1 ):
-			#	if ( pSpain.isAlive() ):
-			#		if ( pPortugal.getGold() < pSpain.getGold() ):
-			#			self.setGoal( iPortugal, 0, 0 )
-			#		else:
-			#			iTSpain = 0
-			#			iTPortugal = 0
-			#			for iTech in range( con.iNumTechs ):
-			#				if ( teamSpain.isHasTech( iTech ) ):
-			#					iTSpain += 1
-			#				if ( teamPortugal.isHasTech( iTech ) ):
-			#					iTPortugal += 1
-			#			
-			#			if ( iTPortugal > iTSpain ):
-			#				self.setGoal( iPortugal, 0, 1 )
-			#			else:
-			#				self.setGoal( iPortugal, 0, 0 )
-			#				
-			#	else:
-			#		self.setGoal( iPortugal, 0, 1 )
-					
-			if ( iGameTurn == i1640AD and self.getGoal( iPortugal, 1 ) == -1 ):
-				self.setGoal( iPortugal, 1, 1 )
-				
-			if ( self.getGoal( iPortugal, 2 ) == -1 ):
-				if ( self.getColonies( iPortugal) > 5 ):
-					self.setGoal( iPortugal, 2, 1 )
-				
-		elif ( iPlayer == iAustria and pAustria.isAlive() ):
-			
-			if ( iGameTurn == i1600AD and self.getGoal( iAustria, 0 ) == -1 ):
-				if ( gc.doesOwnCities( iAustria, tAustrianControl[0], tAustrianControl[1], tAustrianControl[2], tAustrianControl[3] ) == 11 ):
-					self.setGoal( iAustria, 0, 1 )
-				else:
-					self.setGoal( iAustria, 0, 0 )
-			
-			if ( iGameTurn == i1700AD and self.getGoal( iAustria, 1 ) == -1 ):
-				iCount = 0
-				for iPlayer in range( iNumMajorPlayers ):
-					pPlayer = gc.getPlayer( iPlayer )
-					if ( iPlayer != iAustria and pPlayer.isAlive() ):
-						if ( gc.getTeam( pPlayer.getTeam() ).isVassal( iAustria ) ):
-							iCount += 1
-				
-				if ( iCount >= 3 ):
-					self.setGoal( iAustria, 1, 1 )
-				else:
-					self.setGoal( iAustria, 1, 0 )
-					
-			if ( iGameTurn == i1750AD and self.getGoal( iAustria, 2 ) == -1 ):
-				iCount = 0
-				for iPlayer in range( iNumMajorPlayers ):
-					if ( iPlayer != iAustria and teamAustria.isDefensivePact( iPlayer ) ):
-						iCount += 1
-				
-				if ( iCount >= 2 ):
-					self.setGoal( iAustria, 2, 1 )
-				else:
-					self.setGoal( iAustria, 2, 0 )
-			
-		elif ( iPlayer == iTurkey and pTurkey.isAlive() ):
-			
-			if ( iGameTurn == i1520AD and self.getGoal( iTurkey, 0 ) == -1 ):
-				if ( gc.doesOwnCities( iTurkey, tTurkishControl[0][0], tTurkishControl[0][1], tTurkishControl[0][2], tTurkishControl[0][3] ) == 11 ):
-					self.setGoal( iTurkey, 0, 1 )
-				else:
-					self.setGoal( iTurkey, 0, 0 )
-					
-			if ( iGameTurn == i1620AD and self.getGoal( iTurkey, 1 ) == -1 ):
-				if ( gc.doesOwnCities( iTurkey, tTurkishControl[1][0], tTurkishControl[1][1], tTurkishControl[1][2], tTurkishControl[1][3] ) == 11 ):
-					self.setGoal( iTurkey, 1, 1 )
-				else:
-					self.setGoal( iTurkey, 1, 0 )
-					
-			if ( iGameTurn <= i1700AD and self.getGoal( iTurkey, 2 ) == -1 ):
-				iLevant = gc.doesOwnCities( iTurkey, tTurkishControl[2][0], tTurkishControl[2][1], tTurkishControl[2][2], tTurkishControl[2][3] )
-				iEgypt  = gc.doesOwnCities( iTurkey, tTurkishControl[3][0], tTurkishControl[3][1], tTurkishControl[3][2], tTurkishControl[3][3] )
-				iVienna = gc.doesOwnCities( iTurkey, tTurkishControl[4][0], tTurkishControl[4][1], tTurkishControl[4][2], tTurkishControl[4][3] )
-				if ( iLevant == 11 and iEgypt == 11 and iVienna == 11 ):
-					self.setGoal( iTurkey, 2, 1 )
-			else:
-				if ( self.getGoal( iTurkey, 2 ) == -1 ):
-					self.setGoal( iTurkey, 2, 0 )
-					
-		elif ( iPlayer == iSweden and pSweden.isAlive() ):
-			
-			if ( iGameTurn == i1600AD and self.getGoal( iSweden, 0 ) == -1 ):
-				iSwedenC  = gc.doesOwnCities( iSweden, tSwedishControl[0][0], tSwedishControl[0][1], tSwedishControl[0][2], tSwedishControl[0][3] )
-				iFinland = gc.doesOwnCities( iSweden, tSwedishControl[1][0], tSwedishControl[1][1], tSwedishControl[1][2], tSwedishControl[1][3] )
-				if ( iSwedenC == 11 and iFinland == 11 ):
-					self.setGoal( iSweden, 0, 1 )
-				else:
-					self.setGoal( iSweden, 0, 0 )
-					
-			if ( iGameTurn == i1700AD and self.getGoal( iSweden, 1 ) == -1 ):
-				self.setGoal( iSweden, 1, 1 )
-				
-			
-			if ( iGameTurn == i1750AD and self.getGoal( iSweden, 2 ) == -1 ):
-				iCitiesPoland = gc.countOwnedCities( iSweden, tSwedishControl[2][0], tSwedishControl[2][1], tSwedishControl[2][2], tSwedishControl[2][3] ) 
-				if ( iCitiesPoland >= 5 ):
-					self.setGoal( iSweden, 2, 1 )
-				else:
-					self.setGoal( iSweden, 2, 0 )
-					
-		elif ( iPlayer == iDutch and pDutch.isAlive() ):
-			
-			if ( iGameTurn == i1640AD and self.getGoal( iDutch, 0 ) == - 1 ):
-				iCount = 0
-				for iPlayer in range( iNumMajorPlayers ):
-					if ( iPlayer != iDutch and teamDutch.isOpenBorders( iPlayer ) ):
-						iCount += 1
-				
-				if ( iCount >= 10 ):
-					self.setGoal( iDutch, 0, 1 )
-				else:
-					self.setGoal( iDutch, 0, 0 )
-					
-			if ( iGameTurn <= i1750AD and self.getGoal( iDutch, 1 ) == - 1 ):
-				pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
-				if ( pPlot.isCity() ):
-					iGMerchant = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_MERCHANT")
-					if ( pPlot.getPlotCity().getFreeSpecialistCount(iGMerchant) >= 5 ):
-						self.setGoal( iDutch, 1, 1 )
-			else:
-				if ( self.getGoal( iDutch, 1 ) == - 1 ):
-					self.setGoal( iDutch, 1, 0 )
-						
-			
-			if ( self.getGoal( iDutch, 2 ) == -1 ):
-				if ( self.getColonies( iDutch ) > 3 ):
-					self.setGoal( iDutch, 2, 1 )
-					
-					
-					
+                        if ( iGameTurn == i1520AD and self.getGoal( iTurkey, 0 ) == -1 ):
+                                if ( gc.doesOwnCities( iTurkey, tTurkishControl[0][0], tTurkishControl[0][1], tTurkishControl[0][2], tTurkishControl[0][3] ) == 11 ):
+                                        self.setGoal( iTurkey, 0, 1 )
+                                else:
+                                        self.setGoal( iTurkey, 0, 0 )
+
+                        if ( iGameTurn == i1620AD and self.getGoal( iTurkey, 1 ) == -1 ):
+                                if ( gc.doesOwnCities( iTurkey, tTurkishControl[1][0], tTurkishControl[1][1], tTurkishControl[1][2], tTurkishControl[1][3] ) == 11 ):
+                                        self.setGoal( iTurkey, 1, 1 )
+                                else:
+                                        self.setGoal( iTurkey, 1, 0 )
+
+                        if ( iGameTurn <= i1700AD and self.getGoal( iTurkey, 2 ) == -1 ):
+                                iLevant = gc.doesOwnCities( iTurkey, tTurkishControl[2][0], tTurkishControl[2][1], tTurkishControl[2][2], tTurkishControl[2][3] )
+                                iEgypt  = gc.doesOwnCities( iTurkey, tTurkishControl[3][0], tTurkishControl[3][1], tTurkishControl[3][2], tTurkishControl[3][3] )
+                                iVienna = gc.doesOwnCities( iTurkey, tTurkishControl[4][0], tTurkishControl[4][1], tTurkishControl[4][2], tTurkishControl[4][3] )
+                                if ( iLevant == 11 and iEgypt == 11 and iVienna == 11 ):
+                                        self.setGoal( iTurkey, 2, 1 )
+                        else:
+                                if ( self.getGoal( iTurkey, 2 ) == -1 ):
+                                        self.setGoal( iTurkey, 2, 0 )
+
+                elif ( iPlayer == iSweden and pSweden.isAlive() ):
+
+                        if ( iGameTurn == i1600AD and self.getGoal( iSweden, 0 ) == -1 ):
+                                iSwedenC  = gc.doesOwnCities( iSweden, tSwedishControl[0][0], tSwedishControl[0][1], tSwedishControl[0][2], tSwedishControl[0][3] )
+                                iFinland = gc.doesOwnCities( iSweden, tSwedishControl[1][0], tSwedishControl[1][1], tSwedishControl[1][2], tSwedishControl[1][3] )
+                                if ( iSwedenC == 11 and iFinland == 11 ):
+                                        self.setGoal( iSweden, 0, 1 )
+                                else:
+                                        self.setGoal( iSweden, 0, 0 )
+
+                        if ( iGameTurn == i1700AD and self.getGoal( iSweden, 1 ) == -1 ):
+                                self.setGoal( iSweden, 1, 1 )
+
+                        if ( iGameTurn == i1750AD and self.getGoal( iSweden, 2 ) == -1 ):
+                                iCitiesPoland = gc.countOwnedCities( iSweden, tSwedishControl[2][0], tSwedishControl[2][1], tSwedishControl[2][2], tSwedishControl[2][3] ) 
+                                if ( iCitiesPoland >= 5 ):
+                                        self.setGoal( iSweden, 2, 1 )
+                                else:
+                                        self.setGoal( iSweden, 2, 0 )
+
+                elif ( iPlayer == iDutch and pDutch.isAlive() ):
+
+                        if ( iGameTurn == i1640AD and self.getGoal( iDutch, 0 ) == - 1 ):
+                                iCount = 0
+                                for iPlayer in range( iNumMajorPlayers ):
+                                        if ( iPlayer != iDutch and teamDutch.isOpenBorders( iPlayer ) ):
+                                                iCount += 1
+
+                                if ( iCount >= 10 ):
+                                        self.setGoal( iDutch, 0, 1 )
+                                else:
+                                        self.setGoal( iDutch, 0, 0 )
+
+                        if ( iGameTurn <= i1750AD and self.getGoal( iDutch, 1 ) == - 1 ):
+                                pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
+                                if ( pPlot.isCity() ):
+                                        iGMerchant = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_MERCHANT")
+                                        if ( pPlot.getPlotCity().getFreeSpecialistCount(iGMerchant) >= 5 ):
+                                                self.setGoal( iDutch, 1, 1 )
+                        else:
+                                if ( self.getGoal( iDutch, 1 ) == - 1 ):
+                                        self.setGoal( iDutch, 1, 0 )
+
+                        if ( self.getGoal( iDutch, 2 ) == -1 ):
+                                if ( self.getColonies( iDutch ) > 3 ):
+                                        self.setGoal( iDutch, 2, 1 )
+
                 #generic checks
                 pPlayer = gc.getPlayer(iPlayer)
                 if (pPlayer.isAlive() and iPlayer < iNumMajorPlayers):
-                    
-                        if (self.get2OutOf3(iPlayer) == False):                              
+                        if (self.get2OutOf3(iPlayer) == False):
                                 if (utils.countAchievedGoals(iPlayer) == 2):
                                         #intermediate bonus
                                         self.set2OutOf3(iPlayer, True)
@@ -906,7 +865,6 @@ class Victory:
                                                 capital.setHasRealBuilding(con.iTriumphalArch, True)
                                                 if (pPlayer.isHuman()):
                                                         CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_VICTORY_INTERMEDIATE", ()), "", 0, "", ColorTypes(con.iPurple), -1, -1, True, True)
-                                                        
                                                         for iCiv in range(iNumPlayers):
                                                                 if (iCiv != iPlayer):
                                                                         pCiv = gc.getPlayer(iCiv)
@@ -928,204 +886,164 @@ class Victory:
                                                                                         iWarCounter += 1
                                                                                         if (iWarCounter == 2):
                                                                                                 break
-                                
-
-                        if (gc.getGame().getWinner() == -1):                              
-                                if (self.getGoal(iPlayer, 0) == 1 and self.getGoal(iPlayer, 1) == 1 and self.getGoal(iPlayer, 2) == 1):
-                                        gc.getGame().setWinner(iPlayer, 7) #Historical Victory
 
 
+                if (gc.getGame().getWinner() == -1):
+                        if (self.getGoal(iPlayer, 0) == 1 and self.getGoal(iPlayer, 1) == 1 and self.getGoal(iPlayer, 2) == 1):
+                                gc.getGame().setWinner(iPlayer, 7) #Historical Victory
 
 
         def onCityBuilt(self, city, iPlayer): #see onCityBuilt in CvRFCEventHandler
-		if ( iPlayer == iPortugal and self.getGoal( iPortugal, 0 ) == -1 ):
-			iIslands = gc.countOwnedCities( iPortugal, tPortugalControl[0][0], tPortugalControl[0][1], tPortugalControl[0][2], tPortugalControl[0][3] )
-			iAfrica  = gc.countOwnedCities( iPortugal, tPortugalControl[1][0], tPortugalControl[1][1], tPortugalControl[1][2], tPortugalControl[1][3] ) 
-			iAfrica += gc.countOwnedCities( iPortugal, tPortugalControl[2][0], tPortugalControl[2][1], tPortugalControl[2][2], tPortugalControl[2][3] )  
-			if ( iIslands >= 3 and iAfrica >= 2 ):
-				self.setGoal( iPortugal, 0, 1 )
-		
+                if ( iPlayer == iPortugal and self.getGoal( iPortugal, 0 ) == -1 ):
+                        iIslands = gc.countOwnedCities( iPortugal, tPortugalControl[0][0], tPortugalControl[0][1], tPortugalControl[0][2], tPortugalControl[0][3] )
+                        iAfrica  = gc.countOwnedCities( iPortugal, tPortugalControl[1][0], tPortugalControl[1][1], tPortugalControl[1][2], tPortugalControl[1][3] ) 
+                        iAfrica += gc.countOwnedCities( iPortugal, tPortugalControl[2][0], tPortugalControl[2][1], tPortugalControl[2][2], tPortugalControl[2][3] )  
+                        if ( iIslands >= 3 and iAfrica >= 2 ):
+                                self.setGoal( iPortugal, 0, 1 )
+
         def onReligionFounded(self, iReligion, iFounder):
-		pass
+                pass
+
 
         def onCityAcquired(self, owner, playerType, bConquest):
-        	# 3Miro: everything in this file si mine as well
-        	if (not gc.getGame().isVictoryValid(7)): #7 == historical
-			return
-		
-	        iPlayer = owner
+                # 3Miro: everything in this file si mine as well
+                if (not gc.getGame().isVictoryValid(7)): #7 == historical
+                        return
+
+                iPlayer = owner
                 iGameTurn = gc.getGame().getGameTurn()
-        
-		if (iPlayer == iBulgaria): # 3Miro: 0th Bulgarian goal, no lost city
+
+                if (iPlayer == iBulgaria): # 3Miro: 0th Bulgarian goal, no lost city
                         if (pBulgaria.isAlive()):
                                 if (bConquest):
                                         if (self.getGoal(iBulgaria, 0) == -1):
-                                        	if (playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
+                                                if (playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
                                                         self.setGoal(iBulgaria, 0, 0)
                 elif (iPlayer == iBurgundy):
-                	if ( pBurgundy.isAlive()):
-                		if (bConquest):
-                			if ( self.getGoal(iBurgundy, 1) == -1 ):
-                				if(playerType == iGermany or playerType == iFrankia ):
-                					self.setGoal(iBurgundy,1,0 )
-                					
-                					
+                        if ( pBurgundy.isAlive()):
+                                if (bConquest):
+                                        if ( self.getGoal(iBurgundy, 1) == -1 ):
+                                                if(playerType == iGermany or playerType == iFrankia ):
+                                                        self.setGoal(iBurgundy,1,0 )
+
                 elif ( iPlayer == iMoscow ):
-                	if ( pMoscow.isAlive() ):
-                		if ( bConquest ):
-                			if ( self.getGoal( iMoscow, 0 ) == -1 ):
-                				if ( playerType == iBarbarian ):
-                					self.setGoal( iMoscow, 0, 0 )
-                					
+                        if ( pMoscow.isAlive() ):
+                                if ( bConquest ):
+                                        if ( self.getGoal( iMoscow, 0 ) == -1 ):
+                                                if ( playerType == iBarbarian ):
+                                                        self.setGoal( iMoscow, 0, 0 )
+
                 elif ( iPlayer == iPortugal ):
-                	if ( pPortugal.isAlive() ):
-                		if ( bConquest ):
-                			if ( self.getGoal( iPortugal, 1 ) == -1 ):
-                				self.setGoal( iPortugal, 1, 0 )
-                				
+                        if ( pPortugal.isAlive() ):
+                                if ( bConquest ):
+                                        if ( self.getGoal( iPortugal, 1 ) == -1 ):
+                                                self.setGoal( iPortugal, 1, 0 )
+
                 elif ( iPlayer == iSweden ):
-                	if ( pSweden.isAlive() ):
-                		if ( bConquest ):
-                			if ( self.getGoal( iSweden, 1 ) == -1 ):
-                				if ( playerType == iMoscow or playerType == iPoland ):
-                					self.setGoal( iSweden, 1, 0 )
-               
-       
+                        if ( pSweden.isAlive() ):
+                                if ( bConquest ):
+                                        if ( self.getGoal( iSweden, 1 ) == -1 ):
+                                                if ( playerType == iMoscow or playerType == iPoland ):
+                                                        self.setGoal( iSweden, 1, 0 )
 
-
-        def onCityRazed(self, iPlayer):
-        	print("City Razed",iPlayer)
-		if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
+        def onCityRazed(self, iPlayer,city):
+                if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
                         if (pNorse.isAlive()):
-				if (self.getGoal(iNorse,2) == -1):
-					ioldrazed = self.getNorseRazed()
-					print("Norse Cities Razed =",ioldrazed)
-					if (ioldrazed >= 9):
-						self.setGoal(iNorse,2,1)
-					else:
-						self.setNorseRazed(ioldrazed+1)
-        	pass
+                                if (self.getGoal(iNorse,2) == -1):
+                                        iVictim = city.iOwner()
+                                        if ( iVictim < iNumPlayers ):
+                                                ioldrazed = self.getNorseRazed()
+                                                if (ioldrazed >= 9):
+                                                        self.setGoal(iNorse,2,1)
+                                                else:
+                                                        self.setNorseRazed(ioldrazed+1)
 
 
         def onTechAcquired(self, iTech, iPlayer):
-        	if (not gc.getGame().isVictoryValid(7)): #7 == historical
+                if (not gc.getGame().isVictoryValid(7)): #7 == historical
                         return
-        
-        	#if ( iTech == con.iScientificMethod ):
-        	#	if ( iPlayer == iCordoba ):
-        	#		if ( self.getGoal( iCordoba, 2 ) == -1 ):
-        	#			self.setGoal( iCordoba, 2, 1 )
-        	#	else:
-        	#		if ( self.getGoal( iCordoba, 2 ) == -1 ):
-        	#			self.setGoal( iCordoba, 2, 0 )
-		if ( iTech == con.iIndustrialTech ):
-			if ( iPlayer == iEngland ):
-				if ( self.getGoal( iEngland, 2 ) == -1 ):
-					self.setGoal( iEngland, 2, 1 )
-			else:
-				if ( self.getGoal( iEngland, 2 ) == -1 ):
-					self.setGoal( iEngland, 2, 0 )
 
+                if ( iTech == con.iIndustrialTech ):
+                        if ( iPlayer == iEngland ):
+                                if ( self.getGoal( iEngland, 2 ) == -1 ):
+                                        self.setGoal( iEngland, 2, 1 )
+                        else:
+                                if ( self.getGoal( iEngland, 2 ) == -1 ):
+                                        self.setGoal( iEngland, 2, 0 )
 
-	def onBuildingBuilt(self, iPlayer, iBuilding):
+        def onBuildingBuilt(self, iPlayer, iBuilding):
                 # 3Miro: everything is coded by me
                 if (not gc.getGame().isVictoryValid(7)): #7 == historical
-                    return
+                        return
 
-		iGameTurn = gc.getGame().getGameTurn()
-		
-		#if ( iPlayer == iBulgaria ): # Buildings Goal 2
-		#	if ( pBulgaria.isAlive() ):
-		#		if (self.getGoal(iBulgaria, 2) == -1):
-		#			if ( iGameTurn <= i1600AD ):
-		#				if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral or iBuilding == con.iOrthodoxScriptorium ):
-		#					iNumCities = pBulgaria.getNumCities()
-		#					if ( iNumCities > 7 ): # if there are enough cities
-		#						iCathedralCounter = 0
-		#						iMonasteryCounter = 0
-		#						iLibraryCounter = 0
-		#						for iCity in range(iNumCities):
-		#							pCity = pBulgaria.getCity(iCity)
-                #                        	                        if (pCity.hasBuilding(con.iOrthodoxCathedral)):
-                #                        	                                iCathedralCounter += 1
-                #                        	                        if (pCity.hasBuilding(con.iOrthodoxMonastery)):
-                #                        	                                iMonasteryCounter += 1
-                #                        	                        if (pCity.hasBuilding(con.iOrthodoxScriptorium)):
-                #                        	                                iLibraryCounter += 1
-                #                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 and iLibraryCounter >= 8 ):
-                #                        	                	self.setGoal( iBulgaria, 2, 1 )
-                
-                
-                #elif ( iPlayer == iKiev ):
-		if ( iPlayer == iKiev ):
-                	if ( pKiev.isAlive() ):
-                		if ( self.getGoal( iKiev, 2 ) == -1 ):
-                			if ( iGameTurn <= i1600AD ):
-                				if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral ):
-							iNumCities = pKiev.getNumCities()
-							if ( iNumCities > 7 ): # if there are enough cities
-								iCathedralCounter = 0
-								iMonasteryCounter = 0
-								for iCity in range(iNumCities):
-									pCity = pKiev.getCity(iCity)
-                                        	                        if (pCity.hasBuilding(con.iOrthodoxCathedral)):
-                                        	                                iCathedralCounter += 1
-                                        	                        if (pCity.hasBuilding(con.iOrthodoxMonastery)):
-                                        	                                iMonasteryCounter += 1
-                                        	                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
-                                        	                	self.setGoal( iKiev, 2, 1 ) 
+                iGameTurn = gc.getGame().getGameTurn()
+
+                if ( iPlayer == iKiev ):
+                        if ( pKiev.isAlive() ):
+                                if ( self.getGoal( iKiev, 2 ) == -1 ):
+                                        if ( iGameTurn <= i1600AD ):
+                                                if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral ):
+                                                        iNumCities = pKiev.getNumCities()
+                                                        if ( iNumCities > 7 ): # if there are enough cities
+                                                                iCathedralCounter = 0
+                                                                iMonasteryCounter = 0
+                                                                for iCity in range(iNumCities):
+                                                                        pCity = pKiev.getCity(iCity)
+                                                                        if (pCity.hasBuilding(con.iOrthodoxCathedral)):
+                                                                                iCathedralCounter += 1
+                                                                        if (pCity.hasBuilding(con.iOrthodoxMonastery)):
+                                                                                iMonasteryCounter += 1
+                                                                        if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
+                                                                                self.setGoal( iKiev, 2, 1 ) 
                 # Sedna17: Polish UHV changed again                 	                	
-		elif ( iPlayer == iPoland ):
-			if ( pPoland.isAlive() ):
-				if ( self.getGoal( iPoland, 2 ) == -1 ):
-					lBuildingList = [con.iCatholicCathedral,con.iOrthodoxCathedral,con.iProtestantCathedral,con.iJewishQuarter]
-					if ( iBuilding in lBuildingList):
-						iNumCities = pPoland.getNumCities()
-						lBuildingCounter = [0,0,0,0]
-						lBuildingGoal = [3,3,2,2]
-						for iCity in range(iNumCities):
-							pCity = pPoland.getCity(iCity)
-							for index,building in enumerate(lBuildingList):
-								if (pCity.hasBuilding(building)):
-									lBuildingCounter[index] += 1
-						bBuildingGoal = True
-						for count,goal in zip(lBuildingCounter,lBuildingGoal):
-							if count < goal:
-								bBuildingGoal = False
-						if bBuildingGoal:
-							self.setGoal( iPoland, 2, 1 ) 
+                elif ( iPlayer == iPoland ):
+                        if ( pPoland.isAlive() ):
+                                if ( self.getGoal( iPoland, 2 ) == -1 ):
+                                        lBuildingList = [con.iCatholicCathedral,con.iOrthodoxCathedral,con.iProtestantCathedral,con.iJewishQuarter]
+                                        if ( iBuilding in lBuildingList):
+                                                iNumCities = pPoland.getNumCities()
+                                                lBuildingCounter = [0,0,0,0]
+                                                lBuildingGoal = [3,3,2,2]
+                                                for iCity in range(iNumCities):
+                                                        pCity = pPoland.getCity(iCity)
+                                                        for index,building in enumerate(lBuildingList):
+                                                                if (pCity.hasBuilding(building)):
+                                                                        lBuildingCounter[index] += 1
+                                                bBuildingGoal = True
+                                                for count,goal in zip(lBuildingCounter,lBuildingGoal):
+                                                        if ( count < goal ):
+                                                                bBuildingGoal = False
+                                                if ( bBuildingGoal ):
+                                                        self.setGoal( iPoland, 2, 1 ) 
 
-		elif ( iPlayer == iGenoa ): # Buildings Goal 2
-			if ( pGenoa.isAlive() ):
-				if ( not self.getGenoaBanks() ):
-					if ( iBuilding == con.iGenoaBank ):
-						iNumCities = pGenoa.getNumCities()
-						if ( iNumCities > 7 ): # if there are enough cities
-							iBankCounter = 0
-							for iCity in range(iNumCities):
-								pCity = pGenoa.getCity(iCity)
-                                        	                if (pCity.hasBuilding(con.iGenoaBank)):
-                                        	                	iBankCounter += 1
-							if ( iBankCounter >= 8 ):
-								self.setGenoaBanks( 1 )
+                elif ( iPlayer == iGenoa ): # Buildings Goal 2
+                        if ( pGenoa.isAlive() ):
+                                if ( not self.getGenoaBanks() ):
+                                        if ( iBuilding == con.iGenoaBank ):
+                                                iNumCities = pGenoa.getNumCities()
+                                                if ( iNumCities > 7 ): # if there are enough cities
+                                                        iBankCounter = 0
+                                                        for iCity in range(iNumCities):
+                                                                pCity = pGenoa.getCity(iCity)
+                                                                if (pCity.hasBuilding(con.iGenoaBank)):
+                                                                        iBankCounter += 1
+                                                        if ( iBankCounter >= 8 ):
+                                                                self.setGenoaBanks( 1 )
 
-		if (iBuilding == con.iLaMezquita or iBuilding == con.iAlhambra or iBuilding == con.iGardensAlAndalus):
-			print("I see a wonder being built")
-			if (iPlayer == iCordoba):
-				if (pCordoba.isAlive()):
-					if (self.getGoal(iCordoba, 1) == -1):
-						iWondersBuilt = self.getWondersBuilt(iCordoba)
-						print("Cordoba has:",iWondersBuilt,"Wonders")
-						self.setWondersBuilt(iCordoba, iWondersBuilt + 1)
-						if (iWondersBuilt == 2):                                    
-							self.setGoal(iCordoba, 1, 1)
-			else:
-				if (pCordoba.isAlive()):
-					if (self.getGoal(iCordoba, 1) == -1):
-						self.setGoal(iCordoba,1,0)
-						
+                if (iBuilding == con.iLaMezquita or iBuilding == con.iAlhambra or iBuilding == con.iGardensAlAndalus):
+                        if (iPlayer == iCordoba):
+                                if (pCordoba.isAlive()):
+                                        if (self.getGoal(iCordoba, 1) == -1):
+                                                iWondersBuilt = self.getWondersBuilt(iCordoba)
+                                                self.setWondersBuilt(iCordoba, iWondersBuilt + 1)
+                                                if (iWondersBuilt == 2):                                    
+                                                        self.setGoal(iCordoba, 1, 1)
+                        else:
+                                if (pCordoba.isAlive()):
+                                        if (self.getGoal(iCordoba, 1) == -1):
+                                                self.setGoal(iCordoba,1,0)
+
                 if (iBuilding == con.iMarcoPolo or iBuilding == con.iSanMarco):
-                        print("marcoPolo or SanMarco being built")
                         if (iPlayer == iVenecia):
                                 if (pVenecia.isAlive()):
                                         if (self.getGoal(iVenecia, 2) == -1):
@@ -1135,63 +1053,57 @@ class Victory:
                                 if (pVenecia.isAlive()):
                                         if (self.getGoal(iVenecia, 2) == -1):
                                                 self.setGoal(iVenecia,2,0)
-                
 
-                            
         def onProjectBuilt(self, iPlayer, iProject):
-		if ( self.isProjectAColony( iProject )):
-			self.changeColonies( iPlayer, 1 )
+                if ( self.isProjectAColony( iProject )):
+                        self.changeColonies( iPlayer, 1 )
 
-	def onCorporationFounded(self, iPlayer ):
-		self.setCorporationsFounded( self.getCorporationsFounded() + 1 )
-		if ( iPlayer == iGenoa ):
-			self.setGenoaCorporations( self.getGenoaCorporations() + 1 )
-		if ( self.getCorporationsFounded() == 7 and self.getGenoaCorporations() < 2 ):
-			self.setGoal( iGenoa, 1, 0 )	
-
+        def onCorporationFounded(self, iPlayer ):
+                self.setCorporationsFounded( self.getCorporationsFounded() + 1 )
+                if ( iPlayer == iGenoa ):
+                        self.setGenoaCorporations( self.getGenoaCorporations() + 1 )
+                if ( self.getCorporationsFounded() == 7 and self.getGenoaCorporations() < 2 ):
+                        self.setGoal( iGenoa, 1, 0 )	
 
         def onCombatResult(self, argsList):
-		pass
-                                        
-
+                pass
 
         def calculateTopCityCulture(self, x, y):
                 pass
 
-
         def calculateTopCityPopulation(self, x, y):
                 pass
 
-	def getOwnedLuxes( self, pPlayer ):
-		iCount = 0
-		iCount += pPlayer.countOwnedBonuses( con.iSheep )
-		iCount += pPlayer.countOwnedBonuses( con.iDye )
-		iCount += pPlayer.countOwnedBonuses( con.iFur )
-		iCount += pPlayer.countOwnedBonuses( con.iGems )
-		iCount += pPlayer.countOwnedBonuses( con.iGold )
-		iCount += pPlayer.countOwnedBonuses( con.iIncense )
-		iCount += pPlayer.countOwnedBonuses( con.iIvory )
-		iCount += pPlayer.countOwnedBonuses( con.iSilk )
-		iCount += pPlayer.countOwnedBonuses( con.iSilver )
-		iCount += pPlayer.countOwnedBonuses( con.iSpices )
-		iCount += pPlayer.countOwnedBonuses( con.iWine )
-		iCount += pPlayer.countOwnedBonuses( con.iHoney )
-		iCount += pPlayer.countOwnedBonuses( con.iWhale )
-		iCount += pPlayer.countOwnedBonuses( con.iRelic )
-		iCount += pPlayer.countOwnedBonuses( con.iCotton )
-		iCount += pPlayer.countOwnedBonuses( con.iCoffee )
-		iCount += pPlayer.countOwnedBonuses( con.iTea )
-		iCount += pPlayer.countOwnedBonuses( con.iTobacco )
-		return iCount
+        def getOwnedLuxes( self, pPlayer ):
+                iCount = 0
+                iCount += pPlayer.countOwnedBonuses( con.iSheep )
+                iCount += pPlayer.countOwnedBonuses( con.iDye )
+                iCount += pPlayer.countOwnedBonuses( con.iFur )
+                iCount += pPlayer.countOwnedBonuses( con.iGems )
+                iCount += pPlayer.countOwnedBonuses( con.iGold )
+                iCount += pPlayer.countOwnedBonuses( con.iIncense )
+                iCount += pPlayer.countOwnedBonuses( con.iIvory )
+                iCount += pPlayer.countOwnedBonuses( con.iSilk )
+                iCount += pPlayer.countOwnedBonuses( con.iSilver )
+                iCount += pPlayer.countOwnedBonuses( con.iSpices )
+                iCount += pPlayer.countOwnedBonuses( con.iWine )
+                iCount += pPlayer.countOwnedBonuses( con.iHoney )
+                iCount += pPlayer.countOwnedBonuses( con.iWhale )
+                iCount += pPlayer.countOwnedBonuses( con.iRelic )
+                iCount += pPlayer.countOwnedBonuses( con.iCotton )
+                iCount += pPlayer.countOwnedBonuses( con.iCoffee )
+                iCount += pPlayer.countOwnedBonuses( con.iTea )
+                iCount += pPlayer.countOwnedBonuses( con.iTobacco )
+                return iCount
 
-	def getOwnedGrain( self, pPlayer ):
-		iCount = 0
-		iCount += pPlayer.countOwnedBonuses( con.iWheat )
-		iCount += pPlayer.countOwnedBonuses( con.iBarley )
-		return iCount
+        def getOwnedGrain( self, pPlayer ):
+                iCount = 0
+                iCount += pPlayer.countOwnedBonuses( con.iWheat )
+                iCount += pPlayer.countOwnedBonuses( con.iBarley )
+                return iCount
 
-	def isProjectAColony( self, iProject ):
-		if (iProject >= con.iNumNotColonies): 
-			return True
-		else:
-			return False
+        def isProjectAColony( self, iProject ):
+                if (iProject >= con.iNumNotColonies): 
+                        return True
+                else:
+                        return False

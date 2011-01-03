@@ -34,47 +34,47 @@
 			<Type>ART_DEF_MOVIE_PALAIS_PAPES</Type>
 			<Path>Art/Movies/Wonders/Ppapes.dds</Path>
 		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_PRESSBURG</Type>
-			<Path>Art/Movies/Wonders/Pressburg.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_WESTMINSTER</Type>
-			<Path>Art/Movies/Wonders/Westminster.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SAN_GIORGIO</Type>
-			<Path>Art/Movies/Wonders/SanGiorgio.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_COPERNICUS</Type>
-			<Path>Art/Movies/Wonders/Copernicus.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_BEURS</Type>
-			<Path>Art/Movies/Wonders/Amdam_Beurs.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_RIBEIRA</Type>
- 			<Path>Art/Movies/Wonders/Ribeira.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_IMPERIAL_DIET</Type>
-			<Path>Art/Movies/Wonders/Diet.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_FONTAINEBLEAU</Type>
-			<Path>Art/Movies/Wonders/Fontainebleau.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_BIBLIOTHECA_CORVINIANA</Type>
-			<Path>Art/Movies/Wonders/Bibliotheca.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_STEPHANSDOM</Type>
-			<Path>Art/Movies/Wonders/Stephansdom.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_PRESSBURG</Type>
+      <Path>Art/Movies/Wonders/Pressburg.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_WESTMINSTER</Type>
+      <Path>Art/Movies/Wonders/Westminster.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_SAN_GIORGIO</Type>
+      <Path>Art/Movies/Wonders/SanGiorgio.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_COPERNICUS</Type>
+      <Path>Art/Movies/Wonders/Copernicus.bik</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_BEURS</Type>
+      <Path>Art/Movies/Wonders/Amdam_Beurs.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_RIBEIRA</Type>
+      <Path>Art/Movies/Wonders/Ribeira.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_IMPERIAL_DIET</Type>
+      <Path>Art/Movies/Wonders/Diet.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_FONTAINEBLEAU</Type>
+      <Path>Art/Movies/Wonders/Fontainebleau.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_BIBLIOTHECA_CORVINIANA</Type>
+      <Path>Art/Movies/Wonders/Bibliotheca.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
+      <Type>ART_DEF_MOVIE_STEPHANSDOM</Type>
+      <Path>Art/Movies/Wonders/Stephansdom.dds</Path>
+    </MovieArtInfo>
+    <MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAN_MARCO</Type>
 			<Path>Art/Movies/Wonders/San_Marco.dds</Path>
 		</MovieArtInfo>
@@ -190,7 +190,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MAGNA_CARTA</Type>
-			<Path>Art/Movies/Wonders/MagnaCarta.bik</Path>
+			<Path>Art/Movies/Wonders/Magna_Carta.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_LA_MEZQUITA</Type>

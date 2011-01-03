@@ -1620,7 +1620,7 @@
 			<TerrainDefenses/>
 			<FeatureAttacks/>
 			<FeatureDefenses>
-			<FeatureDefense>
+				<FeatureDefense>
 					<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
@@ -4082,6 +4082,7 @@
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds</Button>
-		</PromotionInfo>
+		</PromotionInfo>		
+		<!-- Mercenaries End   -->
 	</PromotionInfos>
 </Civ4PromotionInfos>

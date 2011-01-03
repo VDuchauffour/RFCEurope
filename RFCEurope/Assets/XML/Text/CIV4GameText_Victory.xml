@@ -164,12 +164,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL2</Tag>
-		<English>Own every city in Moesia, Thracia and Macedonia (incl. Constantinople) by 1200AD. </English>
-		<French>Avoir chaque ville en M&#233;sie, la Thrace et la Mac&#233;doine (y compris Constantinople) en 1200 ap.JC.</French>
-		<German>Bringen Sie alle St&#228;dte in M&#246;sien, Thrakien und Mazedonien (inkl. Konstantinople) bis zum Jahr 1200 n. Chr. unter Ihre Kontrolle</German>
+		<English>Own every city in Moesia, Thracia and Macedonia (incl. Constantinople) by 1000AD. </English>
+		<French>Avoir chaque ville en M&#233;sie, la Thrace et la Mac&#233;doine (y compris Constantinople) en 1000 ap.JC.</French>
+		<German>Bringen Sie alle St&#228;dte in M&#246;sien, Thrakien und Mazedonien (inkl. Konstantinople) bis zum Jahr 1000 n. Chr. unter Ihre Kontrolle</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
 		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
-		<Russian>&#209;&#238;&#225;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#233; &#234;&#224;&#230;&#228;&#251;&#233; &#227;&#238;&#240;&#238;&#228; &#226; &#204;&#229;&#231;&#232;&#232;, &#210;&#224;&#246;&#232;&#255; &#232; &#204;&#224;&#234;&#229;&#228;&#238;&#237;&#232;&#255; (incl. &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#252;) 1200AD.</Russian>
+		<Russian>&#209;&#238;&#225;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#233; &#234;&#224;&#230;&#228;&#251;&#233; &#227;&#238;&#240;&#238;&#228; &#226; &#204;&#229;&#231;&#232;&#232;, &#210;&#224;&#246;&#232;&#255; &#232; &#204;&#224;&#234;&#229;&#228;&#238;&#237;&#232;&#255; (incl. &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#252;) 1000AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
@@ -335,12 +335,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
-		<English>Raze 10 cities.</English>
-		<French>Raser 10 villes.</French>
-		<German>Zerst&#246;ren sie mindestens 10 St&#228;dte</German>
+		<English>Raze 10 cities. (Independents don't count)</English>
+		<French>Raser 10 villes. (Independents don't count)</French>
+		<German>Zerst&#246;ren sie mindestens 10 St&#228;dte (Independents don't count)</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
-		<Russian>&#209;&#237;&#229;&#241;&#232;&#242;&#229; 10 &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian>
+		<Russian>&#209;&#237;&#229;&#241;&#232;&#242;&#229; 10 &#227;&#238;&#240;&#238;&#228;&#238;&#226;. (Independents don't count)</Russian>
 	</TEXT>
 
 	<TEXT>

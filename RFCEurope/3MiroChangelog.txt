@@ -1,0 +1,21 @@
+This file is for me to keep track of things. I may merge it with README later:
+
+Done:
+- Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
+- Fixed Reformation bug, now checking for the correct buildings (CatholicScriptorium is no more)
+- Changed Bulgarian UHV to conquer Constantinople by 1000AD (it is doable and more challenging then 1200AD)
+- Changed Norce UHV to not count Independent cities
+- Reduced the Cuman barbarians near Hungary, two lancers can easily take a city guarded even by two archers
+- Add protestant missionary to the Dutch start (guarantess they are Protestant and helps them with the Faith Points)
+- Redone identation of the UHV code, Python is very sensitive towards identations, should probably do it again
+- Completely negate the Theodosian Walls after the discovery of Gunpowder (by anyone), Turkey still doesn't take Constantinople
+- Fixed a very nasty semi-random bug cousing the old civs to kick a new civ out of the new civs' core area. The fix may cause the entire thing to run much slower, please report.
+- English AI is too incompetent to capture Dublin, not the AI (and AI only) can cheat to do that (unless this conflicts with a major player)
+- Crusader bug allowing you to avoid a Crusade if you put units surrounding Jerusalem (can no longer do that)
+
+TODO:
+- Rebalance Turkey, Hungary, Netherlands, Poland
+- change Turkey UP (???) and remove the defensive bonuses from Constantinople
+- make Religions hate each other even more
+- Rebalance tech speed and starting techs
+

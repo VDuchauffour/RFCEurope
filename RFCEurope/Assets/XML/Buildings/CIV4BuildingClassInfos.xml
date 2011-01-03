@@ -6,8 +6,7 @@
 <!-- Building Class Infos -->
 <Civ4BuildingClassInfos xmlns="x-schema:CIV4BuildingsSchema.xml">
 	<BuildingClassInfos>
-
-	<!--******************* GENERIC BUILDINGS START *******************-->
+		<!--******************* GENERIC BUILDINGS START *******************-->
 		<BuildingClassInfo><!-- WALLS -->
 			<Type>BUILDINGCLASS_WALLS</Type>
 			<Description>TXT_KEY_BUILDING_WALLS</Description>
@@ -536,9 +535,9 @@
 			<DefaultBuilding>BUILDING_PLAGUE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-	<!--******************* GENERIC BUILDINGS END *******************-->
+		<!--******************* GENERIC BUILDINGS END *******************-->
 
-	<!--******************* RELIGIOUS BUILDINGS START *******************-->
+		<!--******************* RELIGIOUS BUILDINGS START *******************-->
 		<BuildingClassInfo><!-- PAGAN_SHRINE -->
 			<Type>BUILDINGCLASS_PAGAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_PAGAN_SHRINE</Description>
@@ -899,8 +898,9 @@
 			<DefaultBuilding>BUILDING_ORTHODOX_SHRINE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-	<!--******************* RELIGIOUS BUILDINGS END *******************-->
-	<!--******************* NATIONAL WONDERS START *******************-->
+		<!--******************* RELIGIOUS BUILDINGS END *******************-->
+
+		<!--******************* NATIONAL WONDERS START *******************-->
 		<BuildingClassInfo><!-- PALACE -->
 			<Type>BUILDINGCLASS_PALACE</Type>
 			<Description>TXT_KEY_BUILDING_PALACE</Description>
@@ -998,8 +998,9 @@
 			<DefaultBuilding>BUILDING_HEROIC_EPIC</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-	<!--******************* NATIONAL WONDERS END *******************-->
-	<!--******************* WONDERS START *******************-->
+		<!--******************* NATIONAL WONDERS END *******************-->
+
+		<!--******************* WONDERS START *******************-->
 		<BuildingClassInfo><!-- SAN_MARCO -->
 			<Type>BUILDINGCLASS_SAN_MARCO</Type>
 			<Description>TXT_KEY_BUILDING_SAN_MARCO</Description>
@@ -1398,7 +1399,8 @@
 			<DefaultBuilding>BUILDING_FONTAINEBLEAU</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- IMPERIAL_DIET -->
+		<BuildingClassInfo>
+			<!-- IMPERIAL_DIET -->
 			<Type>BUILDINGCLASS_IMPERIAL_DIET</Type>
 			<Description>TXT_KEY_BUILDING_IMPERIAL_DIET</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1410,7 +1412,8 @@
 			<DefaultBuilding>BUILDING_IMPERIAL_DIET</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- AMSTERDAM BEURS -->
+		<BuildingClassInfo>
+			<!-- AMSTERDAM BEURS -->
 			<Type>BUILDINGCLASS_BEURS</Type>
 			<Description>TXT_KEY_BUILDING_BEURS</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1422,7 +1425,8 @@
 			<DefaultBuilding>BUILDING_BEURS</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- COPERNICUS OBSERVATORY -->
+		<BuildingClassInfo>
+			<!-- COPERNICUS OBSERVATORY -->
 			<Type>BUILDINGCLASS_COPERNICUS</Type>
 			<Description>TXT_KEY_BUILDING_COPERNICUS</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1434,7 +1438,8 @@
 			<DefaultBuilding>BUILDING_COPERNICUS</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- SAN GIORGIO -->
+		<BuildingClassInfo>
+			<!-- SAN GIORGIO -->
 			<Type>BUILDINGCLASS_SAN_GIORGIO</Type>
 			<Description>TXT_KEY_BUILDING_SAN_GIORGIO</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1446,7 +1451,8 @@
 			<DefaultBuilding>BUILDING_SAN_GIORGIO</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- WESTMINSTER -->
+		<BuildingClassInfo>
+			<!-- WESTMINSTER -->
 			<Type>BUILDINGCLASS_WESTMINSTER</Type>
 			<Description>TXT_KEY_BUILDING_WESTMINSTER</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1459,7 +1465,8 @@
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_PRESSBURG</Type><!-- PRESSBURG CASTLE -->
+			<!-- PRESSBURG CASTLE -->
+			<Type>BUILDINGCLASS_PRESSBURG</Type>
 			<Description>TXT_KEY_BUILDING_PRESSBURG</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1470,8 +1477,9 @@
 			<DefaultBuilding>BUILDING_PRESSBURG</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-	<!--******************* WONDERS END *******************-->
-	<!--******************* CORPORATIONS START *******************-->
+		<!--******************* WONDERS END *******************-->
+
+		<!--******************* CORPORATIONS START *******************-->
 		<BuildingClassInfo><!-- CORPORATION_1 -->
 			<Type>BUILDINGCLASS_CORPORATION_1</Type>
 			<Description>TXT_KEY_CORPORATION_1</Description>
@@ -1556,6 +1564,6 @@
 			<DefaultBuilding>BUILDING_CORPORATION_7</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-	<!--******************* CORPORATIONS END *******************-->
+		<!--******************* CORPORATIONS END *******************-->
 	</BuildingClassInfos>
 </Civ4BuildingClassInfos>

@@ -1705,7 +1705,7 @@ class CvMainInterface:
 					
 					# Using an Inquisitor
 					if (iUnitInquisitor == pUnit.getUnitType()):
-						
+
 						pPlot = CyMap().plot(pUnit.getX(), pUnit.getY())
 						
 						# Plot is a city

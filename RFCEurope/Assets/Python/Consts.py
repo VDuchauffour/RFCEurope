@@ -1042,10 +1042,10 @@ iKnight= 55
 iTemplar= 56
 iTeutonic= 57
 iMoscowBoyar= 58
-iPolishWingedHussar= 59
-iBurgundianPaladin= 60
-iCuirassier= 61
-iAustrianKurassier= 62
+iBurgundianPaladin= 59
+iCuirassier= 60
+iAustrianKurassier= 61
+iPolishWingedHussar= 62
 iKievDruzhina= 63
 iCatapult= 64
 iTrebuchet= 65
@@ -1079,7 +1079,6 @@ iHighlander= 92
 iWelshLongbowman= 93
 iTagmata= 94
 iSeljuk= 95
-
 iCorsair=96
 
 iProsecutorClass = 62
@@ -1292,7 +1291,7 @@ iEastIndiaCompany = 0
 iWestIndiaCompany = 1
 iEncyclopedie = 2
 iNumNotColonies = 3
-iNumTotalColonies = 15
+iNumTotalColonies = 24
 
 #Eras
 

@@ -313,7 +313,7 @@ class CvRFCEventHandler:
                 city, iPlayer = argsList
 
                 self.sta.onCityRazed(city.getOwner(),iPlayer,city)
-                self.vic.onCityRazed(iPlayer)
+                self.vic.onCityRazed(iPlayer,city)
 		
                 #if (iPlayer == con.iMongolia):
                 #        self.up.setLatestRazeData(0, gc.getGame().getGameTurn())
@@ -735,8 +735,12 @@ class CvRFCEventHandler:
                 if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
                         self.sta.onTechAcquired(argsList[0], argsList[2])
 
-                        #if (gc.getGame().getGameTurn() > con.i1700AD):
-                        #        self.aiw.forgetMemory(argsList[0], argsList[2])
+		# 3Miro: as soon as someone discovers the Gunpowder, the Theodosian walls will disapear from Constantinople
+		#  this will make the city much easier to conquer by the Ottomans
+		if ( argsList[0] == con.iGunpowder ):
+			pCity = gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1]).getPlotCity()
+			if ( pCity.hasBuilding( con.iTheodosianWalls ) ):
+				pCity.setHasRealBuilding(con.iTheodosianWalls, False)
 
 		# 3Miro: no congress
                 #if (gc.getGame().getGameTurn() > con.i1000AD):

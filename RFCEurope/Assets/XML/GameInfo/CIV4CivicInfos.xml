@@ -1937,7 +1937,7 @@
 			<Description>TXT_KEY_CIVIC_SUBJUGATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SUBJUGATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SUBJUGATION_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/subjugation.dds</Button>
+			<Button>,Art/Interface/Buttons/Civics/subjugation.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,2,4</Button>
 			<TechPrereq>NONE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -2008,7 +2008,7 @@
 			<Description>TXT_KEY_CIVIC_VASSALAGE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_VASSALAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/viceroyalty.dds</Button>
+			<Button>,Art/Interface/Buttons/Civics/viceroyalty.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,3,4</Button>
 			<TechPrereq>TECH_VASSALAGE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -2079,7 +2079,7 @@
 			<Description>TXT_KEY_CIVIC_IMPERIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/resettlement.dds</Button>
+			<Button>,Art/Interface/Buttons/Civics/resettlement.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,4</Button>
 			<TechPrereq>TECH_BANKING</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -2150,7 +2150,7 @@
 			<Description>TXT_KEY_CIVIC_OCCUPATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_OCCUPATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_OCCUPATION_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/occupation.dds</Button>
+			<Button>,Art/Interface/Buttons/Civics/occupation.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,5,4</Button>
 			<TechPrereq>TECH_MILITARY_TRADITION</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
@@ -2222,7 +2222,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_COLONIALISM_HELP</Help>
-			<Button>Art/Interface/Buttons/Civics/commonwealth.dds</Button>
+			<Button>,Art/Interface/Buttons/Civics/commonwealth.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,4</Button>
 			<TechPrereq>TECH_ASTRONOMY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
