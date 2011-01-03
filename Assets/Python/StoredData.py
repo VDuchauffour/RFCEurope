@@ -105,7 +105,6 @@ class StoredData:
                                     'iEnslavedUnits': 0,
                                     'iRazedByMongols': 0,
                                     'lEnglishEras': [-1, -1],
-                                    'lGreekTechs': [-1, -1, -1],
                                     'lNewWorld': [-1, -1], #first founded; circumnavigated (still unused)
                                     'iNumSinks': 0,
                                     'lBabylonianTechs': [-1, -1, -1],    

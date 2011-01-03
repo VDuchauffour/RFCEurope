@@ -321,7 +321,7 @@ class Crusades:
 					pVictim = gc.getPlayer( iVictim )
 					teamVictim = gc.getTeam( pVictim.getTeam() )
 					iVictimReligion = pVictim.getStateReligion()
-					if ( (iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy) or (pJPlot.getPlotCity().getOwner() >= con.iNumMajorPlayers) ): # if the Victim is non-Catholic non-Orthodox
+					if ( (iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy) or (pJPlot.getPlotCity().getOwner() > con.iNumMajorPlayers) ): # if the Victim is non-Catholic non-Orthodox
 						bVassalOfImmune = False
 						for iPlayerMaster in range( con.iNumMajorPlayers ): # for all the players, check to see if the Vicitm is a Vassal of a Catholic or Orthodox player
 							pMaster = gc.getPlayer( iPlayerMaster )	    # they are immune from Crusades
@@ -757,7 +757,7 @@ class Crusades:
 						if ( pPlot.isHills or pPlot.isFlatlands() ):
 							iN = pPlot.getNumUnits()
 							for i in range( iN ):
-								pPlot.getUnit( i ).kill( False, iBarbarian )
+								pPlot.getUnit( i ).kill( False, con.iBarbarian )
 								iChosenX = iX
 								iChosenY = iY
 			

@@ -464,10 +464,6 @@ class Religions:
                         #iRandNum = gc.getSorenRandNum(100, 'Reformation of a City')
                         if (pCity.getPopulation() > iKeepCatholicismBound ):
                                 pCity.setHasReligion(con.iProtestantism,True,True,False)
-                                if(pCity.hasBuilding(con.iCatholicReliquary) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicReliquary, False)
-                                if(pCity.hasBuilding(con.iCatholicScriptorium) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicScriptorium, False)
                                 if(pCity.hasBuilding(con.iCatholicChapel) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
                                         pCity.setHasRealBuilding(con.iCatholicChapel, False)
                                         pCity.setHasRealBuilding(con.iProtestantChapel, True)
@@ -481,6 +477,8 @@ class Religions:
                                         iFaith += 1
                                 if(pCity.hasBuilding(con.iCatholicCathedral) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
                                         pCity.setHasRealBuilding(con.iCatholicCathedral, False)
+					if ( pCity.hasBuilding(con.iCatholicReliquary) ):
+						pCity.setHasRealBuilding(con.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
                                         pCity.setHasRealBuilding(con.iProtestantCathedral, True)
                                         iFaith += 1
                         elif ( bForceConvertSmall or gc.getGame().getSorenRandNum(100, 'Reformation of a City') < lReformationMatrix[pCity.getOwner()] ):
@@ -488,8 +486,6 @@ class Religions:
                                 iFaith += 1
                                 if(pCity.hasBuilding(con.iCatholicReliquary)):
                                         pCity.setHasRealBuilding(con.iCatholicReliquary, False)
-                                if(pCity.hasBuilding(con.iCatholicScriptorium)):
-                                        pCity.setHasRealBuilding(con.iCatholicScriptorium, False)
                                 if(pCity.hasBuilding(con.iCatholicChapel)):
                                         pCity.setHasRealBuilding(con.iCatholicChapel, False)
                                         pCity.setHasRealBuilding(con.iProtestantChapel, True)

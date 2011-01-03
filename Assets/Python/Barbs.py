@@ -191,7 +191,7 @@ class Barbs:
 
 		#Pechenegs and Cumans in Northern Balkans
 		if (iGameTurn >= con.i940AD and iGameTurn < con.i1160AD):
-			self.spawnUnits( iBarbarian, (66,33),(78,43), con.iLancer, 2 + iHandicap*2, iGameTurn,4,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (66,33),(78,43), con.iLancer, 1 + iHandicap*2, iGameTurn,6,1,utils.outerInvasion,1)
 		
 		#Vikings on ships 
 		if (gc.getPlayer(con.iNorse).isHuman()): #Humans can properly go viking without help

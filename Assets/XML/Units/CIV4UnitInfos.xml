@@ -2691,9 +2691,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-			</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 			</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -2865,9 +2865,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -3039,9 +3039,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -3222,9 +3222,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -3421,9 +3421,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -3621,9 +3621,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -3821,9 +3821,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -4018,9 +4018,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -4210,9 +4210,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -4419,9 +4419,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -4619,9 +4619,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -4819,9 +4819,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -5228,9 +5228,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -5445,9 +5445,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>0</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>0</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -5650,9 +5650,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -5849,9 +5849,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -6045,9 +6045,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -6258,9 +6258,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -6462,9 +6462,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -6665,9 +6665,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -6864,9 +6864,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -7056,9 +7056,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -7247,9 +7247,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -7438,9 +7438,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -7633,9 +7633,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-						<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -8023,9 +8023,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -8219,9 +8219,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -8415,9 +8415,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -8624,9 +8624,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -8831,9 +8831,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -9040,9 +9040,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -9238,9 +9238,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -9434,9 +9434,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -9629,9 +9629,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -9818,9 +9818,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -10014,9 +10014,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -10207,9 +10207,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -10399,9 +10399,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -10591,9 +10591,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -10783,9 +10783,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -10975,9 +10975,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -11167,9 +11167,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -11359,9 +11359,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -11556,9 +11556,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -11747,9 +11747,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -11934,9 +11934,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -12134,9 +12134,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -12346,9 +12346,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -12529,9 +12529,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -12713,9 +12713,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -12906,9 +12906,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -13099,9 +13099,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -13291,9 +13291,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -13478,9 +13478,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -13732,7 +13732,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_WORKBOAT</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_WORKBOAT_MODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -15103,7 +15103,7 @@
 			<bMilitaryHappiness>0</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
+			<bPillage>0</bPillage>
 			<bSpy>0</bSpy>
 			<bSabotage>0</bSabotage>
 			<bDestroy>0</bDestroy>
@@ -15964,9 +15964,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -16144,9 +16144,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -16591,9 +16591,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -16647,7 +16647,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_ARTIST</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_ARTIST</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_ARTIST_MODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -16823,9 +16823,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -16879,7 +16879,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_SCIENTIST</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_SCIENTIST</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_SCIENTIST_MODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -17056,9 +17056,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -17112,7 +17112,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_MERCHANT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_MERCHANT</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_MERCHANT_MODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -17275,9 +17275,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -17331,7 +17331,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_ENGINEER</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_ENGINEER</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_ENGINEER_MODERN</LateArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -17506,9 +17506,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -17562,7 +17562,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_WARLORD_ANCIENT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_WARLORD</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_WARLORD_MODERN</LateArtDefineTag>
 					<MiddleArtDefineTag>ART_DEF_UNIT_WARLORD_MEDIEVAL</MiddleArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
@@ -17741,9 +17741,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -17938,9 +17938,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -18130,9 +18130,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -18327,9 +18327,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-    				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
@@ -18705,9 +18705,9 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-				</FeatureImpassable>
+       				<FeatureType>FEATURE_MUD</FeatureType>
+       				<bFeatureImpassable>1</bFeatureImpassable>
+ 				</FeatureImpassable>
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>

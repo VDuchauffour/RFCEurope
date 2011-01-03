@@ -14063,7 +14063,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARABIAN_MADRASSA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_MADRASSA</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -17614,7 +17614,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
-			<ObsoleteTech></ObsoleteTech>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
@@ -24873,12 +24873,12 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iSpecialistCount>3</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
+      		<SpecialistCounts>
+        		<SpecialistCount>
+          			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+          			<iSpecialistCount>3</iSpecialistCount>
+        		</SpecialistCount>
+      		</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
@@ -25459,7 +25459,7 @@
 				</BonusHappinessChange>
 				<BonusHappinessChange>
 					<BonusType>BONUS_COFFEE</BonusType>
-				<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<BonusProductionModifiers/>
@@ -25493,7 +25493,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-	 		<bAllowIrrigation>0</bAllowIrrigation>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Copernicus Observatory-->
@@ -25853,7 +25853,7 @@
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
-	 		<bAllowIrrigation>0</bAllowIrrigation>
+			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Westminster Abbey -->
 			<BuildingClass>BUILDINGCLASS_WESTMINSTER</BuildingClass>
@@ -26229,7 +26229,8 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
-	<!--******************THESE ALWAYS AT THE END***********************-->
+    <!--******************THESE ALWAYS AT THE END***********************-->
+
 		<BuildingInfo> <!--National Epic-->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
 			<Type>BUILDING_NATIONAL_EPIC</Type>

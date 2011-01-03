@@ -409,7 +409,6 @@ class Stability:
                         iProduction = pPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
                         iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
                         iIndustry = iProduction + iAgriculture
-                        iPopulation = pPlayer.getRealPopulation() / 1000
                         iPopNum = pPlayer.getTotalPopulation()
                         iNumCities = pPlayer.getNumCities()
                         iExpProd16 = 68
@@ -616,6 +615,7 @@ class Stability:
 
         def onCityRazed(self, iOwner, playerType, city):
             	#Sedna17: Not sure what difference between iOwner and playerType is here
+		#3Miro: iOwner owns the city (victim) and playerType conquers the city (pillager)
                 if (iOwner < con.iNumPlayers):      
                         self.setParameter(iOwner, iParExpansionE, True, - 3)
                         self.setStability(iOwner, self.getStability(iOwner) - 3 )
@@ -771,7 +771,21 @@ class Stability:
                                                                 utils.killAndFragmentCiv(iPlayer, False, True)
                                                                 self.setStability(iPlayer, -15)
                                                 return
-
+                
+                #3Miro: Turkey hack, upon their spawn, hit Byzantium and Bulgaria really hard
+                if ( iGameTurn == con.tBirth[con.iTurkey]+1 ):
+                        if ( gc.getPlayer(con.iByzantium).isAlive() ):
+                                if ( utils.getHumanID() == con.iByzantium ):
+                                        self.setStability(con.iByzantium, self.getStability(con.iByzantium)-5)
+                                else:
+                                        #print(" 3Miro: Punish Byzantium ")
+                                        self.setStability(con.iByzantium, self.getStability(con.iByzantium)-20)
+                        if ( gc.getPlayer(con.iBulgaria).isAlive() ):
+                                if ( utils.getHumanID() == con.iBulgaria ):
+                                        self.setStability(con.iBulgaria, self.getStability(con.iBulgaria)-20)
+                                else:
+                                        #print(" 3Miro: Punish Bulgaria ")
+                                        self.setStability(con.iBulgaria, self.getStability(con.iBulgaria)-30)
 
 
 	def printStability(self, iPlayer, tBaseStability1, tBaseStability3, tPermStability ):

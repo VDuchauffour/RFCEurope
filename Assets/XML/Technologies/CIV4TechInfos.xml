@@ -1711,7 +1711,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_ASTROLABE</PrereqTech>
+			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs/>
 			<Quote>TXT_KEY_TECH_EU_LATEEN_SAILS_QUOTE</Quote>
@@ -4139,7 +4139,7 @@
 				<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
+			<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
 				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EU_SCIENTIFIC_METHOD_QUOTE</Quote>

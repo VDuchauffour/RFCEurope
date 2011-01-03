@@ -558,8 +558,8 @@ class RiseAndFall:
                 iHuman = utils.getHumanID()
                 iRebelCiv = self.getRebelCiv()
                 iChoice = popupReturn.getButtonClicked()
-		lCityList = self.getRebelCities()
-		iNumCities = len( lCityList )
+                lCityList = self.getRebelCities()
+                iNumCities = len( lCityList )
                 if ( iChoice == 1 ):
                         lList = self.getRebelSuppress()
                         lList[iHuman] = 2 # let go + war
@@ -900,7 +900,19 @@ class RiseAndFall:
                         else:
                                 if (iGameTurn >= tLateLeaders[iPlayer][1]):
                                         self.switchLateLeaders(iPlayer, 0)
-            
+                
+                # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
+                #        if in 1300AD Dublin is still Barbarian, it will flip to England
+                if ( iGameTurn == con.i1300AD and utils.getHumanID() != iEngland and iPlayer == iEngland and pEngland.isAlive() ):
+                        pPlot = gc.getMap().plot( 36, 58 )
+                        if ( pPlot.isCity() ):
+                                if ( pPlot.getPlotCity().getOwner() == con.iBarbarian ):
+                                        pDublin = pPlot.getPlotCity()
+                                        utils.cultureManager((pDublin.getX(),pDublin.getY()), 50, iEngland, iBarbarian, False, True, True)
+                                        utils.flipUnitsInCityBefore((pDublin.getX(),pDublin.getY()), iEngland, iBarbarian)                            
+                                        self.setTempFlippingCity((pDublin.getX(),pDublin.getY()))
+                                        utils.flipCity((pDublin.getX(),pDublin.getY()), 0, 0, iEngland, [iBarbarian])   #by trade because by conquest may raze the city
+                                        utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iEngland)
                     #print( " 3Miro: Called for - ",iPlayer," on turn ",iGameTurn )
                     #utils.setLastTurnAlive( iPlayer, iGameTurn )
 
@@ -1611,6 +1623,7 @@ class RiseAndFall:
                                                         for iLoopCiv in range(iNumTotalPlayers+1): #Barbarians as well
                                                                 if (iCiv != iLoopCiv):
                                                                         pCurrent.setCulture(iLoopCiv, 0, True)
+                                                        #pCurrent.setCulture(iCiv,10,True)
                                                         pCurrent.setOwner(-1)
                                         self.birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight)
                                 else:                                
@@ -1825,6 +1838,7 @@ class RiseAndFall:
                         
         def birthInForeignBorders(self, iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight):
                 
+                print( " 3Miro: Birth in Foreign Land: ",iCiv,tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight)
                 iNumAICitiesConverted, iNumHumanCitiesToConvert = self.convertSurroundingCities(iCiv, tTopLeft, tBottomRight)
                 self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
 
@@ -1917,7 +1931,7 @@ class RiseAndFall:
                                 loopCity = cityList[i]
                                 loopX = loopCity.getX()
                                 loopY = loopCity.getY()
-                                print ("cityList", loopCity.getName(), (loopX, loopY))
+                                #print ("cityList", loopCity.getName(), (loopX, loopY))
                                 iHuman = utils.getHumanID()
                                 iOwner = loopCity.getOwner()
                                 iCultureChange = 0 #if 0, no flip; if > 0, flip will occur with the value as variable for utils.CultureManager()
@@ -1951,7 +1965,8 @@ class RiseAndFall:
                                                 iCultureChange = 50
                                                 if (gc.getGame().getGameTurn() <= con.tBirth[iCiv] + 5): #if we're during a birth
                                                         rndNum = gc.getGame().getSorenRandNum(100, 'odds')
-                                                        if (rndNum >= tAIStopBirthThreshold[iOwner]):
+                                                        #3Miro: I don't know why the iOwner check is needed below, but the module crashes sometimes
+                                                        if ((iOwner>-1)and(iOwner<iNumMajorPlayers)and(rndNum >= tAIStopBirthThreshold[iOwner])):
                                                                 print (iOwner, "stops birth", iCiv, "rndNum:", rndNum, "threshold:", tAIStopBirthThreshold[iOwner])
                                                                 if (not gc.getTeam(gc.getPlayer(iOwner).getTeam()).isAtWar(iCiv)):                                                                        
                                                                         gc.getTeam(gc.getPlayer(iOwner).getTeam()).declareWar(iCiv, False, -1)
@@ -2282,8 +2297,10 @@ class RiseAndFall:
                                 utils.makeUnit(con.iCarrack, iCiv, tSeaPlot, 1 )
                                 utils.makeUnit(con.iGalleon, iCiv, tSeaPlot, 1 )
                 if (iCiv == iDutch):
+                        #print(" 3Miro: make Dutch Units in Plot ",tPlot )
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(con.iMusketman, iCiv, tPlot, 6)
+			utils.makeUnit(con.iProtestantMissionary, iCiv, tPlot, 1)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
                                 utils.makeUnit(con.iWorkboat, iCiv, tSeaPlot, 2 )
@@ -2324,7 +2341,7 @@ class RiseAndFall:
 			utils.makeUnit(con.iSettler, iCiv, tPlot, 1)
 			utils.makeUnit(con.iMaceman, iCiv, tPlot, 2)
 			utils.makeUnit(con.iKnight, iCiv, tPlot, 3)
-			utils.makeUnit(con.iTurkeyGreatBombard, iCiv, tPlot, 1)
+			utils.makeUnit(con.iTurkeyGreatBombard, iCiv, tPlot, 4)
 			utils.makeUnit(con.iIslamicMissionary, iCiv, tPlot, 2)
 
 
