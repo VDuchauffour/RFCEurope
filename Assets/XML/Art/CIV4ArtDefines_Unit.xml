@@ -1365,13 +1365,13 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BULGARIAN_KONNIK</Type>
 			<Button>Art/Interface/Buttons/Units/Konnik.dds</Button>
-			<fScale>0.42</fScale>
+			<fScale>0.43</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/BulgarianKonnik/Horseman_Eurasian.nif</NIF>
-			<KFM>Art/Units/BulgarianKonnik/Horseman_Eurasian.kfm</KFM>
-			<SHADERNIF>Art/Units/BulgarianKonnik/Horseman_Eurasian_fx.nif</SHADERNIF>
+			<NIF>Art/Units/Bagatur/MongelKeshik.nif</NIF>
+			<KFM>Art/Units/Unique/Mongol/Keshik/MongelKeshik.kfm</KFM>
+			<SHADERNIF>Art/Units/Bagatur/MongelKeshik_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
 				<ShadowAttachNode>HorseBip Spine1</ShadowAttachNode>
@@ -1380,13 +1380,11 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_BULGARIA_KONNIK_SELECT</SelectionSound>
-			<ActionSound>AS3D_BULGARIA_KONNIK_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_KNIGHT</Type>
