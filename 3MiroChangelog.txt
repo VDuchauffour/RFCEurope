@@ -5,6 +5,8 @@ Done: for BETA 5
 - Fixed the Papal Culture Bug
 - Fixed Venetian UHV
 - Moved Hungarian and Kievan starting turns, with no conflict with Cordoba, we can use more historical dates (note on the bug of one extra autoturn)
+- Added info for Stability, Faith, GP and GG
+- Removed the exile mechanics
 
 Done: for BETA 4
 - Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
@@ -25,3 +27,5 @@ TODO:
 - make Religions hate each other even more
 - Rebalance tech speed and starting techs
 - Autorun gets one extra turn sometimes
+- Protestant gets founded in Rome
+- Look into pre-defined religions
