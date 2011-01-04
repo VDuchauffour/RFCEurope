@@ -1,6 +1,12 @@
 This file is for me to keep track of things. I may merge it with README later:
 
-Done:
+Done: for BETA 5
+- added merijn_v1 XML modifications, some unit abilities and removing old and unused XML entries
+- Fixed the Papal Culture Bug
+- Fixed Venetian UHV
+- Moved Hungarian and Kievan starting turns, with no conflict with Cordoba, we can use more historical dates (note on the bug of one extra autoturn)
+
+Done: for BETA 4
 - Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
 - Fixed Reformation bug, now checking for the correct buildings (CatholicScriptorium is no more)
 - Changed Bulgarian UHV to conquer Constantinople by 1000AD (it is doable and more challenging then 1200AD)
@@ -18,4 +24,4 @@ TODO:
 - change Turkey UP (???) and remove the defensive bonuses from Constantinople
 - make Religions hate each other even more
 - Rebalance tech speed and starting techs
-
+- Autorun gets one extra turn sometimes
