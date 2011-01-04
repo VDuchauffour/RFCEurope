@@ -1279,7 +1279,7 @@
 			<Adjective>TXT_KEY_CIV_HUNGARY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_HUNGARY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>900AD</StartingYear>
+			<StartingYear>895AD</StartingYear>
 			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_HUN</UP1>
 			<UP2>TXT_KEY_UP_HUN2</UP2>
@@ -1393,7 +1393,7 @@
 			<Adjective>TXT_KEY_CIV_KIEV_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_KIEV_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>880AD</StartingYear>
+			<StartingYear>864AD</StartingYear>
 			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_KIE</UP1>
 			<UP2>TXT_KEY_UP_KIE2</UP2>

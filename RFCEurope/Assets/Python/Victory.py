@@ -542,12 +542,13 @@ class Victory:
                         # 2nd Dalmatien + islands + rhodes
                         # 3rd 10 luxus + san marco + marco polo
                         if (iGameTurn <= i1200AD and self.getGoal( iVenecia, 0) == -1 ):
-                                pPlot = gc.getMap().plot( con.iConstantinople[0], con.iConstantinople[1] )
+                                pPlot = gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] )
                                 if ( pPlot.isCity()):
                                         if ( pPlot.getPlotCity().getOwner() == iVenecia ):
                                                 self.setGoal(iVenecia,0,1)
-                                        else:
-                                                self.setGoal(iVenecia,0,0)
+                        else:
+                                if ( self.getGoal( iVenecia, 0) == -1 ):
+                                        self.setGoal(iVenecia, 0, 0)
 
                         if ( iGameTurn <= i1500AD and self.getGoal( iVenecia, 1 ) == -1 ):
                                 iDalmatia = gc.doesOwnCities( iVenecia, tVenecianControl[0][0], tVenecianControl[0][1], tVenecianControl[0][2], tVenecianControl[0][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[1][0], tVenecianControl[1][1], tVenecianControl[1][2], tVenecianControl[1][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[2][0], tVenecianControl[2][1], tVenecianControl[2][2], tVenecianControl[2][3] ) + gc.doesOwnCities( iVenecia, tVenecianControl[3][0], tVenecianControl[3][1], tVenecianControl[3][2], tVenecianControl[3][3] )
