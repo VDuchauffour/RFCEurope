@@ -1987,6 +1987,85 @@ class CvMainInterface:
 				screen.setLabel( "GoldText", "Background", szText, CvUtil.FONT_LEFT_JUSTIFY, 12, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 				screen.show( "GoldText" )
 				
+                                # 3Miro: Show stability string from edead: start stability icon
+                                iCount += 1
+                                if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() >= con.tBirth[ePlayer] ):
+                                        iStability = utils.getStability(ePlayer)
+                                        szStabilityButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR))
+                                        if (iStability < -40):
+                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
+                                        elif (iStability >= -40 and iStability < -20):
+                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
+                                        elif (iStability >= -20 and iStability < 0):
+                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
+                                        elif (iStability >= 0 and iStability < 20):
+                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
+                                        elif (iStability >= 20 and iStability < 40):
+                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
+                                        elif (iStability >= 40):
+                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
+                                        if iStability > 0:
+                                                szStabilityNum = "+%d" %(iStability)
+                                        else:
+                                                szStabilityNum = "%d" %(iStability)
+                                        szStabilityText = ": %s (%s)" %(szTempBuffer, szStabilityNum)
+                                        screen.setLabel("StabilityButton", "Background", szStabilityButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                        screen.setLabel("StabilityText", "Background", szStabilityText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                        screen.show("StabilityButton")
+                                        screen.show("StabilityText")
+                                        iCount += 1
+                                else:
+                                        screen.hide("StabilityButton")
+                                        screen.hide("StabilityText")
+                                # edead: end
+                                
+                                # edead: start piety
+                                iFaithPoints = gc.getPlayer(ePlayer).getFaith()
+                                if iFaithPoints >= 0 and gc.getPlayer(ePlayer).getStateReligion() >= 0 and not CyInterface().isCityScreenUp():
+                                        szFaithButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.RELIGION_CHAR))
+                                        #szPietyText = ": %s (%d)" %(utils.getFavorLevelText(ePlayer), iPiety)
+                                        szFaithText = ": " + localText.getText("TXT_KEY_FAITH_POINTS",()) + (" (%i) " %iFaithPoints )
+                                        #screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
+                                        #screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
+                                        screen.setLabel("FaithButton", "Background", szFaithButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                        screen.setLabel("FaithText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                        screen.show("FaithButton")
+                                        screen.show("FaithText")
+                                        iCount += 1
+                                else:
+                                        screen.hide("FaithButton")
+                                        screen.hide("FaithText")
+                                # edead: end
+				
+                                # edead: start GP info text by NeverMind 2/2
+                                pGreatPersonCity, iGPTurns = self.getnextGPCity()
+                                if not CyInterface().isCityScreenUp() and iGPTurns < 10000000 and pGreatPersonCity:
+                                        eGPInfoButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR))
+                                        eGPInfoText = ": " + pGreatPersonCity.getName() + " (%d)" %(iGPTurns)
+                                        screen.setLabel( "GPInfoButton", "Background", eGPInfoButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                                        screen.setLabel( "GPInfoText", "Background", eGPInfoText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                                        screen.setHitTest( "GPInfoButton", HitTestTypes.HITTEST_NOHIT )
+                                        screen.show( "GPInfoButton" )
+                                        screen.show( "GPInfoText" )
+                                        iCount += 1
+                                else:	
+                                        screen.hide( "GPInfoButton" )
+                                        screen.hide( "GPInfoText" )
+
+                                if not CyInterface().isCityScreenUp() and gc.getPlayer(ePlayer).getCombatExperience() > 0:
+                                        eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
+                                        eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(true))
+                                        screen.setLabel( "CombatXPButton", "Background", eCombatXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                                        screen.setLabel( "CombatXPText", "Background", eCombatXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                                        screen.setHitTest( "CombatXPButton", HitTestTypes.HITTEST_NOHIT )
+                                        screen.show( "CombatXPButton" )
+                                        screen.show( "CombatXPText" )
+                                        iCount += 1
+                                else:
+                                        screen.hide( "CombatXPButton" )
+                                        screen.hide( "CombatXPText" )
+                                # edead: end
+                                
 				if (((gc.getPlayer(ePlayer).calculateGoldRate() != 0) and not (gc.getPlayer(ePlayer).isAnarchy())) or (gc.getPlayer(ePlayer).getGold() != 0)):
 					screen.show( "GoldText" )
 
@@ -3487,4 +3566,25 @@ class CvMainInterface:
 	def update(self, fDelta):
 		return
 
+        # 3Miro: Show GP string from edead: start code from Main Interface Mod (Impaler)
+        def getnextGPCity( self ):
+	
+                iFastestPerson = 10000000
+                iGPTurns = 0
+                pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
+                iGPNext = pPlayer.greatPeopleThreshold(false)
+                pFastestCity = CyInterface().getHeadSelectedCity()
 
+                for icity in range(pPlayer.getNumCities()):
+                        pCity = pPlayer.getCity(icity)
+                        if (pCity):
+                                iGPRate = pCity.getGreatPeopleRate()
+                                if (iGPRate > 0):
+                                        iGPNow = pCity.getGreatPeopleProgress()
+                                        iGPTurns = (iGPNext - iGPNow + iGPRate - 1) / iGPRate
+                                        if (iGPTurns < iFastestPerson):
+                                                iFastestPerson = iGPTurns
+                                                pFastestCity = pCity
+
+                return (pFastestCity, iFastestPerson)
+        # edead: end

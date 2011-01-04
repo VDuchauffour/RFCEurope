@@ -255,14 +255,15 @@ class CvRFCEventHandler:
 
                 self.sta.onCityAcquired(owner,playerType,city,bConquest,bTrade)
 
-                if (bConquest):
-                        #self.rnf.collapseCapitals(owner, city, playerType)
-                        if (owner == utils.getHumanID() and playerType != con.iBarbarian):
-                                self.rnf.collapseHuman(owner, city, playerType)
-                        #print ("exile data:", self.rnf.getExileData(0), city.getX(), self.rnf.getExileData(1), city.getY(), self.rnf.getExileData(2))
-                        if (self.rnf.getExileData(0) == city.getX() and self.rnf.getExileData(1) == city.getY()):
-                                if (playerType == utils.getHumanID() and self.rnf.getExileData(2) != -1):
-                                        self.rnf.escape(city)
+                # 3Miro: Remove exile mechanics, if you are human and you lose your capital, might as well load a new game
+                #if (bConquest):
+                #        #self.rnf.collapseCapitals(owner, city, playerType)
+                #        if (owner == utils.getHumanID() and playerType != con.iBarbarian):
+                #                self.rnf.collapseHuman(owner, city, playerType)
+                #        #print ("exile data:", self.rnf.getExileData(0), city.getX(), self.rnf.getExileData(1), city.getY(), self.rnf.getExileData(2))
+                #        if (self.rnf.getExileData(0) == city.getX() and self.rnf.getExileData(1) == city.getY()):
+                #                if (playerType == utils.getHumanID() and self.rnf.getExileData(2) != -1):
+                #                        self.rnf.escape(city)
 
 		# 3Miro: Jerusalem's Golden Age Insentive
 		pPlayer = gc.getPlayer(playerType)
