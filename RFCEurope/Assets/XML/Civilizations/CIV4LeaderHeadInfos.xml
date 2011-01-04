@@ -202,7 +202,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_ABUYUSUFYAQUB</Type>
-			<Description>Abu Yusuf Yaqub</Description>
+			<Description>TXT_KEY_LEADER_ABUYUSUFYAQUB</Description>
 			<Civilopedia>TXT_KEY_LEADER_ABUYUSUFYAQUB_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_ABUYUSUFYAQUB</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -739,7 +739,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_MARIA_THERESA</Type>
-			<Description>Maria Theresa</Description>
+			<Description>TXT_KEY_LEADER_MARIA_THERESA</Description>
 			<Civilopedia>TXT_KEY_LEADER_MARIA_THERESA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_MARIA_THERESA</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
@@ -1286,7 +1286,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_ABUBAKR</Type>
-			<Description>Abu Bakr</Description>
+			<Description>TXT_KEY_LEADER_ABUBAKR</Description>
 			<Civilopedia>TXT_KEY_LEADER_ABUBAKR_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_ABUBAKR</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
@@ -1826,7 +1826,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_JOAN</Type>
-			<Description>Joan of Arc</Description>
+			<Description>TXT_KEY_LEADER_JOAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_JOAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_JOAN</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
@@ -6191,7 +6191,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_WILLIAM</Type>
-			<Description>William the Conqueror</Description>
+			<Description>TXT_KEY_LEADER_WILLIAM</Description>
 			<Civilopedia>TXT_KEY_LEADER_WILLIAM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_WILLIAM</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -8345,7 +8345,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_MAXIMILIAN</Type>
-			<Description>Maximilian I</Description>
+			<Description>TXT_KEY_LEADER_MAXIMILIAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_MAXIMILIAN</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -8913,7 +8913,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_SIMEON</Type>
-			<Description>Simeon</Description>
+			<Description>TXT_KEY_LEADER_SIMEON</Description>
 			<Civilopedia>TXT_KEY_LEADER_SIMEON_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_SIMEON</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
@@ -9462,7 +9462,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_CHARLES_V</Type>
-			<Description>Phillip the Bold</Description>
+			<Description>TXT_KEY_LEADER_CHARLES_V</Description>
 			<Civilopedia>TXT_KEY_LEADER_CHARLES_V_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_CHARLES_V</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -10011,7 +10011,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_JUSTINIAN</Type>
-			<Description>Justinian</Description>
+			<Description>TXT_KEY_LEADER_JUSTINIAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_JUSTINIAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_JUSTINIAN</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
@@ -10551,7 +10551,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_ABDARRAHMAN</Type>
-			<Description>Abd-ar-Rahman III</Description>
+			<Description>TXT_KEY_LEADER_ABDARRAHMAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_ABDARRAHMAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_ABDARRAHMAN</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -11102,7 +11102,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_WILLEM_VAN_ORANJE</Type>
-			<Description>Willem van Oranje</Description>
+			<Description>TXT_KEY_LEADER_WILLEM_VAN_ORANJE</Description>
 			<Civilopedia>TXT_KEY_LEADER_WILLEM_VAN_ORANJE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_WILLEM_VAN_ORANJE</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -11671,7 +11671,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_ELIZABETH</Type>
-			<Description>Elizabeth</Description>
+			<Description>TXT_KEY_LEADER_ELIZABETH</Description>
 			<Civilopedia>TXT_KEY_LEADER_ELIZABETH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_ELIZABETH</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -12220,7 +12220,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_LOUIS_XIV</Type>
-			<Description>Louis XIV</Description>
+			<Description>TXT_KEY_LEADER_LOUISXIV</Description>
 			<Civilopedia>TXT_KEY_LEADER_LOUISXIV_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_LOUIS_XIV</ArtDefineTag>
 			<iWonderConstructRand>50</iWonderConstructRand>
@@ -12760,7 +12760,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_SIMONE</Type>
-			<Description>Simone Boccanegra</Description>
+			<Description>TXT_KEY_LEADER_SIMONE</Description>
 			<Civilopedia>TXT_KEY_LEADER_SIMONE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_SIMONE</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -13297,7 +13297,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_FREDERICK</Type>
-			<Description>Frederick</Description>
+			<Description>TXT_KEY_LEADER_FREDERICK</Description>
 			<Civilopedia>TXT_KEY_LEADER_FREDERICK_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_FREDERICK</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -13844,7 +13844,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_STEPHEN</Type>
-			<Description>Istvan I</Description>
+			<Description>TXT_KEY_LEADER_STEPHEN</Description>
 			<Civilopedia>TXT_KEY_LEADER_ISTVAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_STEPHEN</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -14400,7 +14400,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_YAROSLAV</Type>
-			<Description>Yaroslav</Description>
+			<Description>TXT_KEY_LEADER_YAROSLAV</Description>
 			<Civilopedia>TXT_KEY_LEADER_YAROSLAV_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_YAROSLAV</ArtDefineTag>
 			<iWonderConstructRand>15</iWonderConstructRand>
@@ -14940,7 +14940,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_PETER</Type>
-			<Description>Peter I</Description>
+			<Description>TXT_KEY_LEADER_PETER</Description>
 			<Civilopedia>TXT_KEY_LEADER_PETER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_PETER</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
@@ -15496,7 +15496,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_CASIMIR</Type>
-			<Description>Casimir III</Description>
+			<Description>TXT_KEY_LEADER_CASIMIR</Description>
 			<Civilopedia>TXT_KEY_LEADER_CASIMIR_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_CASIMIR</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
@@ -16052,7 +16052,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_JOAO</Type>
-			<Description>Joao</Description>
+			<Description>TXT_KEY_LEADER_JOAO</Description>
 			<Civilopedia>TXT_KEY_LEADER_JOAO_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_JOAO</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -16601,7 +16601,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_ISABELLA</Type>
-			<Description>Isabella</Description>
+			<Description>TXT_KEY_LEADER_ISABELLA</Description>
 			<Civilopedia>TXT_KEY_LEADER_ISABELLA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_ISABELLA</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -17158,7 +17158,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_GUSTAVUS</Type>
-			<Description>Gustav Vasa</Description>
+			<Description>TXT_KEY_LEADER_GUSTAVUS</Description>
 			<Civilopedia>TXT_KEY_LEADER_GUSTAVUS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_GUSTAV</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
@@ -17698,7 +17698,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_SULEIMAN</Type>
-			<Description>Suleiman</Description>
+			<Description>TXT_KEY_LEADER_SULEIMAN</Description>
 			<Civilopedia>TXT_KEY_LEADER_SULEIMAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_SULEIMAN</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
@@ -18261,7 +18261,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_DANDOLO</Type>
-			<Description>Enrico Dandolo</Description>
+			<Description>TXT_KEY_LEADER_DANDOLO</Description>
 			<Civilopedia>TXT_KEY_LEADER_DANDOLO_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_DANDOLO</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -18794,7 +18794,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_THE_POPE</Type>
-			<Description>The Pope</Description>
+			<Description>TXT_KEY_LEADER_THE_POPE</Description>
 			<Civilopedia>TXT_KEY_LEADER_THE_POPE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_POPE</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
@@ -19331,7 +19331,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_HARALD_HARDRADA</Type>
-			<Description>Harald Hardrada</Description>
+			<Description>TXT_KEY_LEADER_HARALD_HARDRADA</Description>
 			<Civilopedia>TXT_KEY_LEADER_HARALD_HARDRADA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_HARALD_HARDRADA</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>

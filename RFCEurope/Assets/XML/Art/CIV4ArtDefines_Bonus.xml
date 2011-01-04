@@ -53,15 +53,6 @@
 			<FontButtonIndex>5</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OIL</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
-			<KFM>Art/Terrain/Resources/Oil/Oil.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Oil.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,15</Button>
-			<FontButtonIndex>6</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STONE</Type>
 			<fScale>0.7</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -286,6 +277,24 @@
 			<FontButtonIndex>19</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_OLIVES</Type>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>1.6</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
+			<FontButtonIndex>33</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_RELIC</Type>
+			<fScale>0.1</fScale>
+			<fInterfaceScale>1.6</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/WorldBuilder/Relic.dds</Button>
+			<FontButtonIndex>34</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COTTON</Type>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.6</fInterfaceScale>
@@ -357,7 +366,6 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/Timber.dds</Button>
 			<FontButtonIndex>42</FontButtonIndex>
 		</BonusArtInfo>
-		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COFFEE</Type>
 			<fScale>0.5</fScale>
@@ -367,6 +375,7 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/Coffee.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
+		 <!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SLAVES</Type>
 			<fScale>0.5</fScale>
@@ -395,15 +404,6 @@
 			<FontButtonIndex>46</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OLIVES</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
-			<FontButtonIndex>37</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_ACCESS</Type>
 			<fScale>0.1</fScale>
 			<fInterfaceScale>1.6</fInterfaceScale>
@@ -411,69 +411,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/WorldBuilder/Access.dds</Button>
 			<FontButtonIndex>47</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RELIC</Type>
-			<fScale>0.1</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/WorldBuilder/Relic.dds</Button>
-			<FontButtonIndex>34</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OLIVES</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Spices.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
-			<FontButtonIndex>33</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VICTORY_BLUE</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Obelisk Marker/Obelisk_marker_blue.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Music.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,13</Button>
-			<FontButtonIndex>38</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VICTORY_PURPLE</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Obelisk Marker/Obelisk_marker_purple.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Music.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,13</Button>
-			<FontButtonIndex>39</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VICTORY_RED</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Obelisk Marker/Obelisk_marker_red.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Music.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,4,13</Button>
-			<FontButtonIndex>40</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VICTORY_YELLOW</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Obelisk Marker/Obelisk_marker_yellow.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Music.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,13</Button>
-			<FontButtonIndex>41</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VICTORY_GREEN</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Obelisk Marker/Obelisk_marker_green.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Music.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,13</Button>
-			<FontButtonIndex>42</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>
 </Civ4ArtDefines>

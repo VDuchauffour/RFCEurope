@@ -14063,7 +14063,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_MADRASSA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ARABIAN_MADRASSA</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -26230,7 +26230,6 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 		</BuildingInfo>
     <!--******************THESE ALWAYS AT THE END***********************-->
-
 		<BuildingInfo> <!--National Epic-->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
 			<Type>BUILDING_NATIONAL_EPIC</Type>
