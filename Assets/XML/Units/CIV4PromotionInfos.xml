@@ -4082,7 +4082,6 @@
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds</Button>
-		</PromotionInfo>		
-		<!-- Mercenaries End   -->
+		</PromotionInfo>
 	</PromotionInfos>
 </Civ4PromotionInfos>

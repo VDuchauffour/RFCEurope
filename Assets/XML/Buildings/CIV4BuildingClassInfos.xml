@@ -1399,8 +1399,7 @@
 			<DefaultBuilding>BUILDING_FONTAINEBLEAU</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<!-- IMPERIAL_DIET -->
+		<BuildingClassInfo><!-- IMPERIAL_DIET -->
 			<Type>BUILDINGCLASS_IMPERIAL_DIET</Type>
 			<Description>TXT_KEY_BUILDING_IMPERIAL_DIET</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1412,8 +1411,7 @@
 			<DefaultBuilding>BUILDING_IMPERIAL_DIET</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<!-- AMSTERDAM BEURS -->
+		<BuildingClassInfo><!-- AMSTERDAM BEURS -->
 			<Type>BUILDINGCLASS_BEURS</Type>
 			<Description>TXT_KEY_BUILDING_BEURS</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1425,8 +1423,7 @@
 			<DefaultBuilding>BUILDING_BEURS</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<!-- COPERNICUS OBSERVATORY -->
+		<BuildingClassInfo><!-- COPERNICUS OBSERVATORY -->
 			<Type>BUILDINGCLASS_COPERNICUS</Type>
 			<Description>TXT_KEY_BUILDING_COPERNICUS</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1438,8 +1435,7 @@
 			<DefaultBuilding>BUILDING_COPERNICUS</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<!-- SAN GIORGIO -->
+		<BuildingClassInfo><!-- SAN GIORGIO -->
 			<Type>BUILDINGCLASS_SAN_GIORGIO</Type>
 			<Description>TXT_KEY_BUILDING_SAN_GIORGIO</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1451,8 +1447,7 @@
 			<DefaultBuilding>BUILDING_SAN_GIORGIO</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<!-- WESTMINSTER -->
+		<BuildingClassInfo><!-- WESTMINSTER -->
 			<Type>BUILDINGCLASS_WESTMINSTER</Type>
 			<Description>TXT_KEY_BUILDING_WESTMINSTER</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1464,8 +1459,7 @@
 			<DefaultBuilding>BUILDING_WESTMINSTER</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<!-- PRESSBURG CASTLE -->
+		<BuildingClassInfo><!-- PRESSBURG CASTLE -->
 			<Type>BUILDINGCLASS_PRESSBURG</Type>
 			<Description>TXT_KEY_BUILDING_PRESSBURG</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
