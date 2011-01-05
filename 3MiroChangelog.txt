@@ -7,6 +7,12 @@ Done: for BETA 5
 - Moved Hungarian and Kievan starting turns, with no conflict with Cordoba, we can use more historical dates (note on the bug of one extra autoturn)
 - Added info for Stability, Faith, GP and GG
 - Removed the exile mechanics
+- Nerf to the Barbarians around Frankia, they were ridiculously many
+- Changed the Bulgarian Konnik to more appropriate early Lancer, Bulgaria now gets fewer Konniks on spawn (looks balanced)
+- Cordoba and Turkey now start Muslim, the Dutch start Protestant
+- Moved the Autorun constants to Python (now we don't have to worry about strange bugs if we change the unit XML files, just keep Python in sync)
+- Updated small region on the map in the middle of the desert, has to do with the Autorun so "don't touch"
+- Get a speedup the hack on the semi-random bugfix from Beta 4 (look below)
 
 Done: for BETA 4
 - Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
@@ -29,3 +35,4 @@ TODO:
 - Autorun gets one extra turn sometimes
 - Protestant gets founded in Rome
 - Look into pre-defined religions
+- Expose the Civ names code to Python
