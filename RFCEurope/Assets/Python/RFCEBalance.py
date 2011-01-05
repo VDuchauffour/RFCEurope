@@ -608,6 +608,8 @@ class RFCEBalance:
 		gc.setSaintParameters( con.iProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
 		gc.setPapalPlayer( iPope, con.iCatholicism )
+
+		gc.setAutorunHack( con.iCatapult, 32, 0 ) # Autorun hack
 		
 		
 		for iCiv in range( iNumPlayers ):

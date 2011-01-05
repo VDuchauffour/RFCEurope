@@ -143,9 +143,9 @@ class Barbs:
 		#Germanic Barbarians throughout Western Europe (France, Germany)
 		if (iGameTurn < con.i800AD):
 			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iAxeman, 1 + iHandicap*2, iGameTurn,10,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iSpearman, 1 + iHandicap*2, iGameTurn,15,0,utils.outerInvasion,1)
-		if (iGameTurn >= con.i800AD and iGameTurn <= con.i1000AD):
-			self.spawnUnits( iBarbarian, (45,45),(62,55), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
+			#self.spawnUnits( iBarbarian, (45,45),(62,55), con.iSpearman, 1 + iHandicap*2, iGameTurn,15,0,utils.outerInvasion,1)
+		#if (iGameTurn >= con.i800AD and iGameTurn <= con.i1000AD):
+		#	self.spawnUnits( iBarbarian, (45,45),(62,55), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
 		if (iGameTurn < con.i770AD):
                         self.spawnUnits( iBarbarian, (45,45),(62,55), con.iAxeman, 1 + iHandicap*2, iGameTurn,12,6,utils.outerInvasion,1)
 
@@ -286,7 +286,7 @@ class Barbs:
 		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, con.iArcher, 2)
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, con.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 3, con.iArcher, 1)
+		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, con.iArcher, 1)
 		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, con.iArcher, 1)
 		self.foundCity(iIndependent4, lCalais, "Calais", iGameTurn, 1, con.iCrossbowman, 2)
