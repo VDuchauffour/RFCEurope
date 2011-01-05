@@ -2214,7 +2214,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_CLASSICAL</Era>
-			<FirstFreeUnitClass>NONE</FirstFreeUnitClass>
+			<FirstFreeUnitClass>UNITCLASS_SCIENTIST</FirstFreeUnitClass>
 			<iFeatureProductionModifier>0</iFeatureProductionModifier>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iTradeRoutes>0</iTradeRoutes>
