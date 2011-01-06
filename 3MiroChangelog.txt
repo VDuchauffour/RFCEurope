@@ -13,6 +13,17 @@ Done: for BETA 5
 - Moved the Autorun constants to Python (now we don't have to worry about strange bugs if we change the unit XML files, just keep Python in sync)
 - Updated small region on the map in the middle of the desert, has to do with the Autorun so "don't touch"
 - Get a speedup the hack on the semi-random bugfix from Beta 4 (look below)
+- Move University to Philosophy, Education gives a free GS
+- National University goes to Paper
+- Brewery: +1 Happy, Happyness with berley, (removed one person scientist, I didn't realize we had that with the Monasteries), lowered cost
+- Change the Smokeshouse to give health from meat and fish, changed the cost of building it
+- Guild hall gives an engineer, an engeneer slot and a merchant slot
+- Removed Stability bonus from the Dungeon
+- Cordoba, Turkey and the Dutch start with their religions already set
+- Updated main menu music (much better quality)
+- Market gives only one Merchant slot
+- Inn gives +2 esp, 10% gold with wine, -10 war worry and 1 spy slot
+- Many wonders and Monasteries now require a specific state religion (as opposed to a religion being in the city)
 
 Done: for BETA 4
 - Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
@@ -34,5 +45,11 @@ TODO:
 - Rebalance tech speed and starting techs
 - Autorun gets one extra turn sometimes
 - Protestant gets founded in Rome
-- Look into pre-defined religions
 - Expose the Civ names code to Python
+- Tie Manor House to Frankia's UHV
+- Need a cheap attacking unit for when you lack resources (maybe)
+- Get the Round Church to give couple of mounted Units
+- Let Hungary and Kiev star with Horse Archers
+- Remove the Skirmisher, leave Mounted Segant for the west + HA for the eastern Civs
+- French Manor House: Capitulary De Villis
+- Missionaries and Organized Religion
