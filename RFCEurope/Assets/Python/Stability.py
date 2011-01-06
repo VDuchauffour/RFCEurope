@@ -667,8 +667,8 @@ class Stability:
                 	iTempCitiesThreshold += 1
                 elif ( iBuilding == con.iManorHouse or iBuilding == con.iBurgundianChateau):
                 	iTempCitiesThreshold += 1
-                elif ( iBuilding == con.iDungeon):
-                	iTempCitiesThreshold += 1
+                #elif ( iBuilding == con.iDungeon): # 3Miro: Dungeon no longer gives stability
+                #	iTempCitiesThreshold += 1
                 elif ( iBuilding == con.iNightWatch):
                 	iTempCitiesThreshold += 1
 		elif (iBuilding == con.iEscorial):
