@@ -17,3 +17,5 @@ Moved starting dates for Hungary and Kiev
 Split up FPK
 New Art for Bulgarian Konnik
 Building overhaul
+Fixed bug with crusades that was preventing crusades from happening when the Arabs are human. 
+Info tags for Corporation Knights and Infirmary

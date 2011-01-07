@@ -1098,7 +1098,7 @@
 			<Description>TXT_KEY_BUILDING_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CASTLE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CASTLE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CASTLE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -1294,7 +1294,7 @@
 			<Description>TXT_KEY_BUILDING_KREMLIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KREMLIN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KREMLIN_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CASTLE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KREMLIN</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -1495,7 +1495,7 @@
 			<Description>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CASTLE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUNGARIAN_STRONGHOLD</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -1691,7 +1691,7 @@
 			<Description>TXT_KEY_BUILDING_SPANISH_CITADEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPANISH_CITADEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPANISH_CITADEL_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_CASTLE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPANISH_CITADEL</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -8027,7 +8027,8 @@
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
-			</BonusCommerceModifiers>			<ImprovementFreeSpecialists/>
+			</BonusCommerceModifiers>
+			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -8190,10 +8191,6 @@
 				</BonusHealthChange>
 				<BonusHealthChange>
 					<BonusType>BONUS_COW</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
-					<BonusType>BONUS_FISH</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -10320,7 +10317,7 @@
 			<Description>TXT_KEY_BUILDING_NIGHT_WATCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIGHT_WATCH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NIGHT_WATCH_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_NIGHT_WATCH_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NIGHT_WATCH</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -11245,7 +11242,7 @@
 			<Description>TXT_KEY_BUILDING_MANOR_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANOR_HOUSE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_MANOR_HOUSE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANOR_HOUSE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -11426,7 +11423,7 @@
 			<Description>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_MANOR_HOUSE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURGUNDIAN_CHATEAU</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -11607,6 +11604,7 @@
 			<Description>TXT_KEY_BUILDING_INFIRMARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INFIRMARY_STRATEGY</Strategy>
+			<Help>TXT_KEY_KNIGHT_HOSPITALLER_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFIRMARY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
