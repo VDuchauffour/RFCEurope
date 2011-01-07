@@ -236,7 +236,7 @@ class Crusades:
 		self.showPopup( 7620, CyTranslator().getText("TXT_KEY_CRUSADE_CORRUPT", ()), CyTranslator().getText("TXT_KEY_CRUSADE_TARGET", ()), lTargetList )
 			
 	def underCrusadeAttackPopup( self, sCityName, iLeader ):
-		sText = CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK1", (gc.getPlayer(iLeader).getCivilizationAdjective(), gc.getPlayer(iLeader).getName(), sCityName))
+		sText = CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK1", (gc.getPlayer(iLeader).getCivilizationAdjective(0), gc.getPlayer(iLeader).getName(), sCityName))
 		self.showPopup( 7621, CyTranslator().getText("TXT_KEY_CRUSADE_ATTACK", ()), sText, (CyTranslator().getText("TXT_KEY_CRUSADE_OK", ()),) )
 	
 	def endCrusades(self):
