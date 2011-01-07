@@ -24,6 +24,8 @@ Done: for BETA 5
 - Market gives only one Merchant slot
 - Inn gives +2 esp, 10% gold with wine, -10 war worry and 1 spy slot
 - Many wonders and Monasteries now require a specific state religion (as opposed to a religion being in the city)
+- Changed the Manor House to give money early on
+- Early Lancers and Heavy Lancers are somewhat OP, rased the cost of tech and construction
 
 Done: for BETA 4
 - Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
@@ -52,4 +54,4 @@ TODO:
 - Let Hungary and Kiev star with Horse Archers
 - Remove the Skirmisher, leave Mounted Segant for the west + HA for the eastern Civs
 - French Manor House: Capitulary De Villis
-- Missionaries and Organized Religion
+- No unhappyness from non-state religion doesn't work with Religious Law Civic
