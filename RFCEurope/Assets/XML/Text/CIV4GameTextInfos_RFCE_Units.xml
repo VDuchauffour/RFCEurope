@@ -503,4 +503,28 @@
 		<French>Corsaire</French>
 		<German>Kosar</German>
 		<Italian/><Spanish/><Russian/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KNIGHT_HOSPITALLER_HELP</Tag>
+		<English>[ICON_BULLET]Requires Knights Hospitallers present in the city</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KNIGHT_TEMPLAR_HELP</Tag>
+		<English>[ICON_BULLET]Requires Knights Templar present in the city</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TEUTONIC_KNIGHTS_HELP</Tag>
+		<English>[ICON_BULLET]Requires Teutonic Knights present in the city</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>
