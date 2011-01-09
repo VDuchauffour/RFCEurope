@@ -509,7 +509,7 @@
 		<English>Stephansdom</English>
 		<French>Cath&#233;drale Saint-&#201;tienne de Vienne</French>
 		<German>Stephansdom</German>
-		<Italian/>
+		<Italian>Stephansdom</Italian>
 		<Spanish>Stephansdom</Spanish>
 		<Russian/>
 	</TEXT>
@@ -540,7 +540,7 @@
 		<English>Bibliotheca Corviniana</English>
 		<French>Bibliotheca Corviniana</French>
 		<German>Bibliotheca Corviniana</German>
-		<Italian/>
+		<Italian>Biblioteca Corviniana</Italian>
 		<Spanish>Biblioteca Corviniana</Spanish>
 		<Russian/>
 	</TEXT>
@@ -554,11 +554,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FONTAINEBLEAU</Tag>
-		<English>Ch&#226;teau de Fontainebleau</English>
-		<French>Ch&#226;teau de Fontainebleau</French>
+		<English>Chateau de Fontainebleau</English>
+		<French>Chateau de Fontainebleau</French>
 		<German>Schloss Fontainebleau</German>
-		<Italian/>
-		<Spanish>Ch&#226;teau de Fontainebleau</Spanish>
+		<Italian>Chateau de Fontainebleau</Italian>
+		<Spanish>Chateau de Fontainebleau</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>

@@ -165,11 +165,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD</Tag>
-		<English>V&#233;gv&#225;r</English>
-		<French>V&#233;gv&#225;r</French>
-		<German>V&#233;gv&#225;r</German>
-		<Italian>V&#233;gv&#225;r</Italian>
-		<Spanish>V&#233;gv&#225;r</Spanish>
+		<English>Vegvar</English>
+		<French>Vegvar</French>
+		<German>Vegvar</German>
+		<Italian>Vegvar</Italian>
+		<Spanish>Vegvar</Spanish>
 		<Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK</Tag>
@@ -336,11 +336,11 @@
 		<Spanish/><Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU</Tag>
-		<English>Ch&#226;teau</English>
-		<French>Grand Ch&#226;teau</French>
-		<German>Ch&#226;teau</German>
-		<Italian>Ch&#226;teau</Italian>
-		<Spanish>Ch&#226;teau</Spanish>
+		<English>Chateau</English>
+		<French>Grand Chateau</French>
+		<German>Chateau</German>
+		<Italian>Chateau</Italian>
+		<Spanish>Chateau</Spanish>
 		<Russian>&#199;&#224;&#236;&#238;&#234;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
@@ -494,8 +494,11 @@
 		<French>[ICON_BULLET] +1 Stabilit&#233;</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Tag>
-		<English>[ICON_BULLET] +1 Stability, +2 Gold with Manorialism</English>
-		<French>[ICON_BULLET] +1 Stabilit&#233;, +2 Gold with Manorialism</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, +2 Gold with Manorialism</Russian></TEXT>
+		<English>[ICON_BULLET] +1 Stability
+[ICON_BULLET] +2 Gold with Manorialism</English>
+		<French>[ICON_BULLET] +1 Stabilit&#233;
+[ICON_BULLET] +2 Gold with Manorialism</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;
+[ICON_BULLET] +2 Gold with Manorialism</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
 		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
