@@ -1312,6 +1312,9 @@ iImprovementHamlet = 19
 iImprovementVillage = 20
 iImprovementTown = 21
 
+# Civics
+iManorialism = 16
+
 #feature & terrain
 
 iIce = 0

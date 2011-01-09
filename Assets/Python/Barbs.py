@@ -125,19 +125,19 @@ class Barbs:
                 
 		#Mediterranean Pirates (Light before 1500,then heavy for rest of game)
 		if ( iGameTurn >= con.i960AD and iGameTurn < con.i1401AD):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iWarGalley, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 0)
+			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iWarGalley, 1, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 1)
 		
 		if ( iGameTurn >= con.i1401AD ):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCorsair, 1, 0, 0, iGameTurn, 5,3, utils.outerSeaSpawn, 0)
+			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCorsair, 1, 0, 0, iGameTurn, 5,3, utils.outerSeaSpawn, 1)
 			
 		#if ( iGameTurn >= con.i1401AD ):
-		#	self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCara, 1, 0, 0, iGameTurn, 10, 7, utils.outerSeaSpawn, 0)
+		#	self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCara, 1, 0, 0, iGameTurn, 10, 7, utils.outerSeaSpawn, 1)
 
 		if ( iGameTurn >= con.i1200AD and iGameTurn < con.i1500AD):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCogge, 1, con.iSwordsman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 0)
+			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iCogge, 1, con.iSwordsman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 1)
 
 		if ( iGameTurn >= con.i1500AD ):
-			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iGalleon, 1, con.iMusketman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 0)
+			self.spawnPirate( iBarbarian, (9,15), (55,33), con.iGalleon, 1, con.iMusketman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 1)
 
 		
 		#Germanic Barbarians throughout Western Europe (France, Germany)
@@ -187,11 +187,11 @@ class Barbs:
 		if (iGameTurn >= con.i800AD and iGameTurn < con.i940AD):
 			self.spawnUnits( iBarbarian, (88,31),(99,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1)
 		if (iGameTurn >= con.i940AD and iGameTurn < con.i1000AD):
-			self.spawnUnits( iBarbarian, (88,31),(99,40), con.iLancer, 1 + iHandicap*2, iGameTurn,5,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (88,31),(99,40), con.iHorseArcher, 1 + iHandicap*2, iGameTurn,5,1,utils.outerInvasion,1)
 
 		#Pechenegs and Cumans in Northern Balkans
 		if (iGameTurn >= con.i940AD and iGameTurn < con.i1160AD):
-			self.spawnUnits( iBarbarian, (66,33),(78,43), con.iLancer, 1 + iHandicap*2, iGameTurn,6,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (66,33),(78,43), con.iHorseArcher, 2 + iHandicap*2, iGameTurn,6,1,utils.outerInvasion,1)
 		
 		#Vikings on ships 
 		if (gc.getPlayer(con.iNorse).isHuman()): #Humans can properly go viking without help
@@ -202,8 +202,8 @@ class Barbs:
 		#Scots and Welsh to keep England busy
 		if (iGameTurn>=con.i1000AD and iGameTurn < con.i1060AD):
 			#Scots
-			self.spawnUnits( iBarbarian, (39,62),(44,66), con.iAxeman, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (39,62),(44,66), con.iSpearman, 2 + iHandicap*2, iGameTurn,4,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (39,62),(44,66), con.iAxeman, 2 + iHandicap*2, iGameTurn,8,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (39,62),(44,66), con.iSpearman, 2 + iHandicap*2, iGameTurn,8,0,utils.outerInvasion,1)
 		if (gc.getPlayer(con.iEngland).isHuman()): #anti-exploit
 			if (iGameTurn >= con.i1060AD and iGameTurn < con.i1320AD):
 				self.spawnUnits( iBarbarian, (39,62),(44,66), con.iHighlander, 1 + iHandicap*2, iGameTurn,13,0,utils.outerInvasion,1)

@@ -2120,9 +2120,8 @@ class RiseAndFall:
                 if (iCiv == iHungary):
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 3)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
-                        utils.makeUnit(con.iAxeman, iCiv, tPlot, 1)
                         utils.makeUnit(con.iGuisarme, iCiv, tPlot, 1)
-                        utils.makeUnit(con.iSwordsman, iCiv, tPlot, 1)
+                        utils.makeUnit(con.iHorseArcher, iCiv, tPlot, 3)
                 if (iCiv == iGermany):
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
