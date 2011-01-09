@@ -8525,7 +8525,7 @@
 			<bFound>0</bFound>
 			<bGoldenAge>0</bGoldenAge>
 			<bInvisible>0</bInvisible>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
+			<bFirstStrikeImmune>0</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
 			<bCanMoveImpassable>0</bCanMoveImpassable>
@@ -8617,7 +8617,7 @@
 			<iAirCombatLimit>0</iAirCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iFirstStrikes>2</iFirstStrikes>
+			<iFirstStrikes>0</iFirstStrikes>
 			<iChanceFirstStrikes>0</iChanceFirstStrikes>
 			<iInterceptionProbability>0</iInterceptionProbability>
 			<iEvasionProbability>0</iEvasionProbability>
@@ -8894,7 +8894,7 @@
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Hungarian Huzar-->
-			<Class>UNITCLASS_HORSE_ARCHER</Class>
+			<Class>UNITCLASS_HEAVY_LANCER</Class>
 			<Type>UNIT_HUNGARIAN_LANCER</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
@@ -8989,11 +8989,9 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_FARRIERS</PrereqTech>
+			<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-				<PrereqTech>NONE</PrereqTech>
-				<PrereqTech>NONE</PrereqTech>
+				<PrereqTech>TECH_FARRIERS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses/>
@@ -10148,9 +10146,9 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_FARRIERS</PrereqTech>
+			<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
+				<PrereqTech>TECH_FARRIERS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -10527,9 +10525,9 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_FARRIERS</PrereqTech>
+			<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
+				<PrereqTech>TECH_FARRIERS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -12282,9 +12280,9 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_FARRIERS</PrereqTech>
+			<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
+				<PrereqTech>TECH_FARRIERS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>

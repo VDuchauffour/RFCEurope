@@ -1340,7 +1340,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitClassType>UNITCLASS_HEAVY_LANCER</UnitClassType>
 					<UnitType>UNIT_HUNGARIAN_LANCER</UnitType>
 				</Unit>
 				<Unit>

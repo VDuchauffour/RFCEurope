@@ -1,5 +1,14 @@
 This file is for me to keep track of things. I may merge it with README later:
 
+Done: for BETA 6
+- merijn_v1 updates some text on the new Manor House/Civic
+- fixed Hungarian spawn units (2 Axes, 3 Horse Archers)
+- fixed Hungarian UU, now it accurately replaces the Heavy Lancer
+- removed the Congress.py file, it wasn't used at all
+- removed the first strikes from the Konnik
+- moved the Heavy Lancer Icon to Blast Furnace
+- Blast Furnace now requires Feudalism
+
 Done: for BETA 5
 - added merijn_v1 XML modifications, some unit abilities and removing old and unused XML entries
 - Fixed the Papal Culture Bug
