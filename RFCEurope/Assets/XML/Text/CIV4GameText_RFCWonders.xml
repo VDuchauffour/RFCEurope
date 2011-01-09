@@ -396,7 +396,7 @@
 		<Russian>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BROTHERS_AT_WAR</Tag>
-		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith.</English>
+		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith, diplomatic penalty agains nations with the same religion.</English>
 		<French>[ICON_BULLET]Pas de m&#233;contement pour les guerres contre les fr&#232;res de foi.</French>
 		<German>[ICON_BULLET]Keine Unzufriedenheit wenn ihr gegen Glaubensbr&#252;der k&#228;mpft</German>
 		<Italian/><Spanish/><Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Russian></TEXT>

@@ -7,25 +7,40 @@ Done: for BETA 5
 - Moved Hungarian and Kievan starting turns, with no conflict with Cordoba, we can use more historical dates (note on the bug of one extra autoturn)
 - Added info for Stability, Faith, GP and GG
 - Removed the exile mechanics
-- Nerf to the Barbarians around Frankia, they were ridiculously many
+- Nerf to the Barbarians around Frankia, to many to allow you to grow
 - Changed the Bulgarian Konnik to more appropriate early Lancer, Bulgaria now gets fewer Konniks on spawn (looks balanced)
 - Cordoba and Turkey now start Muslim, the Dutch start Protestant
-- Moved the Autorun constants to Python (now we don't have to worry about strange bugs if we change the unit XML files, just keep Python in sync)
+- Moved the Autorun constants to Python (now we don't have to worry about strange bugs like fighting barbs or meeting other nations before you spawn, if we change the unit XML files, just keep Python in sync)
 - Updated small region on the map in the middle of the desert, has to do with the Autorun so "don't touch"
 - Get a speedup the hack on the semi-random bugfix from Beta 4 (look below)
 - Move University to Philosophy, Education gives a free GS
 - National University goes to Paper
 - Brewery: +1 Happy, Happyness with berley, (removed one person scientist, I didn't realize we had that with the Monasteries), lowered cost
-- Change the Smokeshouse to give health from meat and fish, changed the cost of building it
+- Change the Smokeshouse to give health from meat, changed the cost of building it
 - Guild hall gives an engineer, an engeneer slot and a merchant slot
 - Removed Stability bonus from the Dungeon
 - Cordoba, Turkey and the Dutch start with their religions already set
 - Updated main menu music (much better quality)
 - Market gives only one Merchant slot
 - Inn gives +2 esp, 10% gold with wine, -10 war worry and 1 spy slot
-- Many wonders and Monasteries now require a specific state religion (as opposed to a religion being in the city)
+- Many wonders now require a specific state religion (as opposed to a religion being in the city)
 - Changed the Manor House to give money early on
+- Manor house gives +2 gold only with Manorialism (the AI is "aware" of that)
 - Early Lancers and Heavy Lancers are somewhat OP, rased the cost of tech and construction
+- Mounted Sergeants and Horse Archers come with Stirrup
+- Lancers reuire Farriers, Heavy Lancers require Blast Furnace
+- The cost of early mounted units has increased
+- Hungarian Huszars are not lighter version of Heavy Cavalry, they don't require Iron, they are a bit cheaper, strength reduced to 9 (very few units have bonus vs light-cavalry)
+- Hungary starts with 3 Horse Archers (in place of a Swordsman and an Axeman)
+- Ghazi are the same as before (didn't want to mess up Arabia)
+- Druzjina and Cataphrac also require Blast Furnace and have their cost increased
+- The strength of Pistoler increased to 12
+- Chateau moved as Frankia's UB, Salon moved to Burgundy (we probably need something completely different for Burgundy, I think Brewery -> Winery for Burgundian wine)
+- Chateau bonus changed to +2 hammers (Frankia can really use the boost early on)
+- Brothers in Faith bonus (i.e. Round Church) gives you penalty to diplomacy with people form the same faith (keep Orthodox fighting each other, as they were historically)
+- Civs without state religion (i.e. Pagans) suffee diplomatic penalty from players with State Religion
+- Turkey should finally be getting Constantinople
+- Changed the AI flags for the Mediterranean pirates to act more like the Vikings
 
 Done: for BETA 4
 - Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
@@ -42,16 +57,11 @@ Done: for BETA 4
 
 TODO:
 - Rebalance Turkey, Hungary, Netherlands, Poland
-- change Turkey UP (???) and remove the defensive bonuses from Constantinople
 - make Religions hate each other even more
 - Rebalance tech speed and starting techs
 - Autorun gets one extra turn sometimes
 - Protestant gets founded in Rome
 - Expose the Civ names code to Python
-- Tie Manor House to Frankia's UHV
-- Need a cheap attacking unit for when you lack resources (maybe)
 - Get the Round Church to give couple of mounted Units
-- Let Hungary and Kiev star with Horse Archers
-- Remove the Skirmisher, leave Mounted Segant for the west + HA for the eastern Civs
 - French Manor House: Capitulary De Villis
 - No unhappyness from non-state religion doesn't work with Religious Law Civic

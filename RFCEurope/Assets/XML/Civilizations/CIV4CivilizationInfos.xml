@@ -409,8 +409,8 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_MANOR_HOUSE</BuildingClassType>
-					<BuildingType>BUILDING_BURGUNDIAN_CHATEAU</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_OBSERVATORY</BuildingClassType>
+					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
@@ -963,8 +963,8 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_OBSERVATORY</BuildingClassType>
-					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_MANOR_HOUSE</BuildingClassType>
+					<BuildingType>BUILDING_BURGUNDIAN_CHATEAU</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>

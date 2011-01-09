@@ -570,7 +570,18 @@ class RFCEBalance:
 		gc.setBuildingPref( iPope, con.iSistineChapel, 20 )
 
 		self.postAreas()
-		
+
+		# Manor House + Manorism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
+		gc.setBuildingCivicCommerseCombo1( con.iManorHouse + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+		gc.setBuildingCivicCommerseCombo2( con.iBurgundianChateau + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+		gc.setBuildingCivicCommerseCombo3(-1)
+
+		# 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
+		#  it will also indeed boost Ottoman's odds, but only by about 60 percent (maybe even less)
+		#   works only for AI vs AI, Humans are excempts of this rule
+		#gc.setPsychoAICheat( iBulgaria, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ); # This is for testing only
+		gc.setPsychoAICheat( iTurkey, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] );		
+
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE
 		gc.setSizeNPlayers( con.iMapMaxX, con.iMapMaxY, iNumPlayers, iNumTotalPlayers, con.iNumTechs, con.iNumBuildingsPlague, con.iNumReligions )
