@@ -224,9 +224,9 @@
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
-		<English>+1 stability for each colony founded.</English>
+		<English>[ICON_BULLET]+1 stability for each colony founded.</English>
 		<French>.</French>
-		<German>+1 Stabilität für jede gegründete Kolonie</German>
+		<German>[ICON_BULLET]+1 Stabilität für jede gegründete Kolonie</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
@@ -921,6 +921,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#204;&#224;&#237;&#238;&#240;&#224;&#235;&#232;&#231;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
+		<English>[ICON_BULLET]+2 Gold for Manor House.</English>
+		<French>.</French>
+		<German>[ICON_BULLET]+2 Gold for Manor House.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MARKETS</Tag>

@@ -1242,6 +1242,7 @@
 			<Description>TXT_KEY_CIVIC_MANORIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_MANORIALISM_HELP</Help>
 			<Button>Art/Interface/Buttons/Civics/Manorialism.dds</Button>
 			<TechPrereq>TECH_MANORIALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
