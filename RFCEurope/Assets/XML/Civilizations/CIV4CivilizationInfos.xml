@@ -1295,41 +1295,34 @@
 			<DefaultPlayerColor>PLAYERCOLOR_BROWN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_HUNGARY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_HUNGARIAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_UTICA</City>
-				<City>Thapsus</City>
-				<City>TXT_KEY_CITY_NAME_KERKOUANE</City>				
-				<City>TXT_KEY_CITY_NAME_SICCA</City>
-				<City>TXT_KEY_CITY_NAME_HADRUMETUM</City>
-				<City>TXT_KEY_CITY_NAME_THAENAE</City>
-				<City>TXT_KEY_CITY_NAME_MALACA</City>
-				<City>TXT_KEY_CITY_NAME_SEXI</City>
-				<City>TXT_KEY_CITY_NAME_BARIA</City>
-				<City>TXT_KEY_CITY_NAME_CARMONA</City>
-				<City>TXT_KEY_CITY_NAME_ONOBA</City>
-				<City>TXT_KEY_CITY_NAME_IBROSSIM</City>
-				<City>TXT_KEY_CITY_NAME_SARIM_BATIM</City>
-				<City>TXT_KEY_CITY_NAME_TIPASA</City>
-				<City>TXT_KEY_CITY_NAME_SIGA</City>
-				<City>TXT_KEY_CITY_NAME_MOGADOR</City>
-				<City>TXT_KEY_CITY_NAME_MOTYA</City>
-				<City>TXT_KEY_CITY_NAME_SOLUS</City>
-				<City>TXT_KEY_CITY_NAME_LILYBAEUM</City>
-				<City>TXT_KEY_CITY_NAME_NORA</City>
-				<City>TXT_KEY_CITY_NAME_BITHIA</City>
-				<City>TXT_KEY_CITY_NAME_SULCIS</City>
-				<City>TXT_KEY_CITY_NAME_THARROS</City>
-				<City>TXT_KEY_CITY_NAME_OLBIA</City>
-				<City>TXT_KEY_CITY_NAME_MELITA</City>
-				<City>TXT_KEY_CITY_NAME_KOSSYRA</City>
-				<City>Abyla</City>
-				<City>Lpqy Parva</City>
-				<City>Toscanos</City>
-				<City>Hippo Diarrhytus</City>
+				<City>Visegrad</City>
+				<City>Kecskemet</City>				
+				<City>Gyor</City>
+				<City>Csongrad</City>
+				<City>Fogaras</City>
+				<City>Szigetvar</City>
+				<City>Mako</City>
+				<City>Bacs</City>
+				<City>Zemplen</City>
+				<City>Kaposvar</City>
+				<City>Zalavar</City>
+				<City>Borsod</City>
+				<City>Somogyvar</City>
+				<City>Valkovar</City>
+				<City>Csanad</City>
+				<City>Cegled</City>
+				<City>Szatmar</City>
+				<City>Ujvidek</City>
+				<City>Zenta</City>
+				<City>Tihany</City>
+				<City>Torda</City>
+				<City>Szentes</City>
+				<City>Bihar</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
