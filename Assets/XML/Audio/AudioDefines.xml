@@ -1577,6 +1577,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_AMB_SUN_AMB_BED_LP</SoundID>
+			<Filename>Sounds/Ambient/SunAmbBedLp</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_AMB_JUNGLELOOP</SoundID>
 			<Filename>Sounds/Ambient/JungleBedLp</Filename>
 			<LoadType>STREAMED</LoadType>
