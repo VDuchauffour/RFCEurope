@@ -1444,6 +1444,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>DIPLO_RAGNAR_EARLY</SoundID>
+			<Filename>Sounds/Diplomacy/Ragnar_Early</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>DIPLO_RAGNAR_MIDDLE</SoundID>
 			<Filename>Sounds/Diplomacy/Ragnar_Middle</Filename>
 			<LoadType>STREAMED</LoadType>
