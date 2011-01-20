@@ -249,13 +249,13 @@
 		<Spanish>Provincia de Inglaterra</Spanish>
 		<Russian/>
 	</TEXT>
-	<TEXT>
+        <TEXT>
 		<Tag>TXT_KEY_LEADER_WILLIAM</Tag>
-		<English>William the Conqueror</English>
-		<French>Guillaume le Conqu&#233;rant</French>
-		<German>Wilhelm der Eroberer</German>
-		<Italian>Guglielmo il Conquistatore</Italian>
-		<Spanish>Guillermo el Conquistador</Spanish>
+		<English>William I</English>
+		<French>Guillaume Ier</French>
+		<German>Wilhelm I.</German>
+		<Italian>Guglielmo I</Italian>
+		<Spanish>Guillermo I</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
