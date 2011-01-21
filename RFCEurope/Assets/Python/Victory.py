@@ -704,7 +704,7 @@ class Victory:
                                         self.setGoal( iGenoa, 0, 0 )
 
                         # see cops and buildings for second UHV
-                        if ( self.getGoal( iGenoa, 1 ) == -1 and self.getGenoaBanks() >= 8 and self.getGenoaCorporations() >= 2 ):
+                        if ( self.getGoal( iGenoa, 1 ) == -1 and self.getGenoaBanks() and self.getGenoaCorporations() >= 2 ):
                                 self.setGoal( iGenoa, 1, 1 )
 					
                         if ( iGameTurn == i1640AD and self.getGoal( iGenoa, 2 ) == -1 ):
