@@ -432,7 +432,9 @@ class RFCEBalance:
 		gc.setUP( iSweden, iUP_PromotionI, con.iPromotionFormation )
 		
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
-		
+
+		gc.setUP( iPope, iUP_Emperor, 1 )
+
 		# GlobalWarming
 		gc.setGlobalWarming( False )
 		
@@ -573,7 +575,7 @@ class RFCEBalance:
 
 		# Manor House + Manorism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
 		gc.setBuildingCivicCommerseCombo1( con.iManorHouse + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
-		gc.setBuildingCivicCommerseCombo2( con.iBurgundianChateau + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+		gc.setBuildingCivicCommerseCombo2( con.iFrenchChateau + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
 		gc.setBuildingCivicCommerseCombo3(-1)
 
 		# 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate

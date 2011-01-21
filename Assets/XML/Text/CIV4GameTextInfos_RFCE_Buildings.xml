@@ -285,6 +285,12 @@
 		<French>Brasserie</French>
 		<German>Brauerei</German>
 		<Italian/><Spanish/><Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY</Tag>
+		<English>Winery</English>
+		<French>Winery</French>
+		<German>Winery</German>
+		<Italian/><Spanish/><Russian>Winery</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA</Tag>
 		<English>Noria</English>
@@ -335,7 +341,7 @@
 		<Italian/>
 		<Spanish/><Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU</Tag>
+		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU</Tag>
 		<English>Chateau</English>
 		<French>Grand Chateau</French>
 		<German>Chateau</German>
@@ -525,6 +531,14 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_PEDIA</Tag>
+		<English>[TAB] The Burgundians were big on wine.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
 		<English>[TAB]Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.
 [TAB]Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.
@@ -677,7 +691,7 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_CHATEAU_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU_PEDIA</Tag>
 		<English>[TAB]A château is a manor house or residence of the lord of the manor or a country house of nobility or gentry, with or without fortifications, originally-and still most frequently-in French-speaking regions. Where clarification is needed, a fortified château (that is, a castle) is called a château fort, such as Château fort de Roquetaillade. Care should be taken when translating the word château into English. It is not used in the same way as "castle", and most châteaux are described in English as "palaces" or "country houses" rather than "castles". For example, the Château de Versailles is so called because it was located in the countryside when it was built, but it does not bear any resemblance to a castle, so it is usually known in English as the Palace of Versailles.</English>
 		<French>.</French>
 		<German>.</German>
