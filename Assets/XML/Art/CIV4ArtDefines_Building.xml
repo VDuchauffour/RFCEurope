@@ -489,16 +489,6 @@
 			<Button>,Art/Interface/Buttons/Buildings/Observatory.dds,Art/Interface/Buttons/Buildings_Atlas.dds,2,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FRENCH_SALON</Type>
-			<LSystem>LSYSTEM_2x1</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.5</fScale>
-			<fInterfaceScale>0.67</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/French Salon/french_salon.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Observatory.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,2</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THEATRE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -1498,6 +1488,16 @@
 			<NIF>Art/Structures/Buildings/Tall Wall/Tall_Wall_Civilopedia.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,4</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BURGUNDY_WINERY</Type>
+			<LSystem>LSYSTEM_2x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.85</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Winery/winery.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Builds/BuildWinery.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,8</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

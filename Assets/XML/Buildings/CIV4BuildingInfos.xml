@@ -7469,7 +7469,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_SALON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BURGUNDY_WINERY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
