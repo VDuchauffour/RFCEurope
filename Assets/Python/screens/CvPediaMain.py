@@ -511,7 +511,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
                 #        #tList.pop(49) #wang kon
                 #        #tList.pop(43) #sitt.b.
                 #        #tList.pop(42) #shaka   
-                #        ##tList.pop(25) #justinian 
+                #        #tList.pop(25) #justinian 
                 #        #tList.pop(20) #hatshepsut
                 #        #tList.pop(17) #gilgamesh
                 #        #tList.pop(8) #charlemagne

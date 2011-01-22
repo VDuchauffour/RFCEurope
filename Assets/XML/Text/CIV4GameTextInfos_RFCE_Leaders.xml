@@ -581,7 +581,7 @@
 		<Tag>TXT_KEY_LEADER_AFONSO_PEDIA</Tag>
 		<English>[H1]Afonso Henriques[\H1]
 [BOLD]First King of Portugal[\BOLD]
-[BOLD]Lived:[\BOLD] July 25, 1109 - December 6, 1189
+[BOLD]Lived:[\BOLD] July 25, 1109 - December 6, 1189 AD
 
 
 	[BOLD]Background:[\BOLD]
@@ -677,14 +677,18 @@
 		<Tag>TXT_KEY_LEADER_GEORGE_III</Tag>
 		<English>George III</English>
 		<French>George III</French>
-		<German>George III</German>
-		<Italian>George III</Italian>
-		<Spanish>George III</Spanish>
+		<German>Georg III.</German>
+		<Italian>Giorgio III</Italian>
+		<Spanish>Jorge III</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GEORGE_III_PEDIA</Tag>
-		<English>not yet</English>
+		<English>[H1]George III[\H1][NEWLINE][BOLD]King of Great Brittain, King of Ireland[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] June 4, 1738 - January 29, 1820 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
 		<French>not yet</French>
 		<German>not yet</German>
 		<Italian>not yet</Italian>
@@ -702,7 +706,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HAAKON_IV_PEDIA</Tag>
-		<English>not yet</English>
+		<English>[H1]Haakon Haakonson[\H1][NEWLINE][BOLD]King of Norway[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1217 - 1263 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
 		<French>not yet</French>
 		<German>not yet</German>
 		<Italian>not yet</Italian>
@@ -712,15 +720,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MARIA_II</Tag>
 		<English>Maria II</English>
-		<French>Maria II</French>
-		<German>Maria II</German>
+		<French>Marie II</French>
+		<German>Maria II.</German>
 		<Italian>Maria II</Italian>
 		<Spanish>Maria II</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MARIA_II_PEDIA</Tag>
-		<English>not yet</English>
+		<English>[H1]Maria II[\H1][NEWLINE][BOLD]Queen regnant  of Portugal[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] April 4, 1819 - November 15, 1853 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
 		<French>not yet</French>
 		<German>not yet</German>
 		<Italian>not yet</Italian>
@@ -738,7 +750,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ANDREA_DANDOLO_PEDIA</Tag>
-		<English>not yet</English>
+		<English>[H1]Andrea Dandolo[\H1][NEWLINE][BOLD]54th Doge of Venice[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1306 - September 7, 1354 AD
+
+
+	[BOLD]Background:[\BOLD]
+	No background yet.</English>
 		<French>not yet</French>
 		<German>not yet</German>
 		<Italian>not yet</Italian>

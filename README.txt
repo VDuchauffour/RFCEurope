@@ -20,3 +20,5 @@ Building overhaul
 Fixed bug with crusades that was preventing crusades from happening when the Arabs are human. 
 Info tags for Corporation Knights and Infirmary
 New Diplo music
+Removed Barbarian leaderhead from the civilopedia
+Basic information for the leaderheads (english only)
