@@ -61,6 +61,7 @@ iUP_LandStability = con.iUP_LandStability
 iUP_Discovery = con.iUP_Discovery
 iUP_EndlessLand = con.iUP_EndlessLand
 iUP_ForeignSea = con.iUP_ForeignSea
+iUP_Pious = con.iUP_Pious
 
 iFP_Stability = con.iFP_Stability		
 iFP_Civic = con.iFP_Civic			
@@ -119,7 +120,7 @@ class RFCEBalance:
 		gc.setProductionModifiers(iByzantium, 200, 200, 200, 250 )
 		gc.setProductionModifiers(iFrankia,   125, 110, 125, 125 )
 		gc.setProductionModifiers(iArabia,    125, 125, 150, 250 )
-		gc.setProductionModifiers(iBulgaria,  125, 125, 125, 150 )
+		gc.setProductionModifiers(iBulgaria,  125, 125, 125, 160 )
 		gc.setProductionModifiers(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiers(iSpain,     100, 100, 100, 120 )
 		gc.setProductionModifiers(iNorse,     100, 100, 100, 100 )
@@ -321,6 +322,7 @@ class RFCEBalance:
 		gc.setTechPreferenceAI(iBulgaria,con.iBronzeCasting,200)				
 		gc.setTechPreferenceAI(iGermany,con.iPrintingPress,200)
 		gc.setTechPreferenceAI(iEngland,con.iPrintingPress,150)
+		gc.setTechPreferenceAI(iPope,con.iPrintingPress,10) # Pope shouldn't want this
 
 		gc.setTechPreferenceAI(iSpain,con.iAstronomy,200)
 		gc.setTechPreferenceAI(iPortugal,con.iAstronomy,200)
@@ -381,6 +383,7 @@ class RFCEBalance:
 		# iUP_Discoveru, iParameter = ColonyStart * 1000000 + ColonyEnd * 1000 + iModifier modifies the cost assosiated with all projects (iCost *= iModifier; iCost /= 100 )
 		# iUP_EndlessLand, iParameter = percent change (i.e. upkeep *= iParameter, upkeep /= 100 )
 		# iUP_ForeignSea, use iParameter = 1
+		# iUP_Pious, whenever changeFaith( x ) is called, x is multiplied by iParameter
 		
 		gc.setUP( iBurgundy, iUP_Happiness, 1 )
 		gc.setUP( iBurgundy, iUP_PerCityCommerce, 200)
@@ -392,8 +395,8 @@ class RFCEBalance:
 		
 		gc.setUP( iArabia, iUP_Faith, 1 )
 		
-		gc.setUP( iBulgaria, iUP_NoResistance, 0 )
-		
+		gc.setUP( iBulgaria, iUP_NoResistance, 0 )		
+
 		gc.setUP( iCordoba, iUP_PromotionI, con.iPromotionMedicI )
 		
 		gc.setUP( iSpain, iUP_Inquisition, 1 )
@@ -432,6 +435,7 @@ class RFCEBalance:
 		gc.setUP( iSweden, iUP_PromotionI, con.iPromotionFormation )
 		
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
+		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little (not enouth cities)
 
 		gc.setUP( iPope, iUP_Emperor, 1 )
 
@@ -452,8 +456,9 @@ class RFCEBalance:
 		gc.setHoliestCity( con.iJerusalem[0], con.iJerusalem[1] )
 		
 		# 3Miro: Faith Points benefits
-		# gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter )
+		# gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )
 		# 	note that for powers iParameter = -1 means that this religion doesn't have this power (-1 is the default)
+		#	iCap sets a cap for the maximum number of FP a religion can have (per player) Can be adjusted per Player
 		#
 		# iFP_Stability: stability += iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of a stability point
@@ -474,18 +479,18 @@ class RFCEBalance:
 		# iFP_Displomacy: iAttitude += 	iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of an attitude point
 		
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 35 )
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Civic, 66 )
+		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 35, 60 )
+		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Civic, 66, 60 )
 		
-		gc.setReligionBenefit( con.iIslam, con.iFP_Growth, 50 )
-		gc.setReligionBenefit( con.iIslam, con.iFP_Units, 50 )
+		gc.setReligionBenefit( con.iIslam, con.iFP_Growth, 50, 60 )
+		gc.setReligionBenefit( con.iIslam, con.iFP_Units, 50, 60 )
 		
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Science, 50 )
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Production, 50 )
+		gc.setReligionBenefit( con.iProtestantism, con.iFP_Science, 50, 60 )
+		gc.setReligionBenefit( con.iProtestantism, con.iFP_Production, 50, 60 )
 		
-		gc.setReligionBenefit( con.iCatholicism, con.iFP_Displomacy, 10 )
-		gc.setReligionBenefit( con.iIslam, con.iFP_Displomacy, 10 )
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Displomacy, 10 )
+		gc.setReligionBenefit( con.iCatholicism, con.iFP_Displomacy, 10, 60 )
+		gc.setReligionBenefit( con.iIslam, con.iFP_Displomacy, 10, 60 )
+		gc.setReligionBenefit( con.iProtestantism, con.iFP_Displomacy, 10, 60 )
 
 		# every nation gets a land tile that is normally impassible and now pass through it
 		gc.setStrategicTile( iVenecia, 56, 35 )
@@ -582,7 +587,15 @@ class RFCEBalance:
 		#  it will also indeed boost Ottoman's odds, but only by about 60 percent (maybe even less)
 		#   works only for AI vs AI, Humans are excempts of this rule
 		#gc.setPsychoAICheat( iBulgaria, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ); # This is for testing only
-		gc.setPsychoAICheat( iTurkey, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] );		
+		gc.setPsychoAICheat( iTurkey, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] )
+
+		# 3Miro: be very careful here, this can really mess the AI
+		#        this works only for AI vs AI, if either player is Human, this is ignored
+		#        setHistoricalEnemyAICheat( iAttacker, iDefender, 10 ) gives the attacker +10% bonus, when attacking units belonging to the defender
+		#        none of the AI players is "aware" of the modification, if you make it too big, then the AI will act really stupid (even for an AI)
+		#        this should be "last" resot solution, other methods are always preferable
+		gc.setHistoricalEnemyAICheat( iTurkey, iBulgaria,  10 )
+		gc.setHistoricalEnemyAICheat( iBulgaria, iTurkey, -10 )
 
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE

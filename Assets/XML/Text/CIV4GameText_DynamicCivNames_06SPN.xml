@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SPAIN_DESC</Tag>
-		<English>The Spanish</English>
-		<French>
-			<Text>Les Espagnols</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Spanier:Die Spanier:den Spaniern</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Gli Spagnoli</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Espa&#241;oles</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#200;&#241;&#239;&#224;&#237;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SPAIN_SHORT_DESC</Tag>
-		<English>Spain</English>
-		<French>
-			<Text>Espagne</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Spanien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>La Spagna:la Spagna:della Spagna:di Spagna</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Espa&#241;a</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#200;&#241;&#239;&#224;&#237;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SPAIN_ADJECTIVE</Tag>
-		<English>Spanish</English>
-		<French>
-			<Text>espagnol:espagnole:espagnols:espagnoles</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Spanisch:spanischen:spanische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Spagnolo:Spagnola:Spagnoli:Spagnole</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>espa&#241;ol:espa&#241;ola:espa&#241;oles:espa&#241;olas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#200;&#241;&#239;&#224;&#237;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN00</Tag>
 		<English>Asturian Peoples</English>
@@ -262,30 +187,5 @@
 		<Italian>Provincia di Hispani</Italian>
 		<Spanish>Provincia de Hispania</Spanish>
 		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_PHILIP_II</Tag>
-		<English>Philip II</English>
-		<French>Philippe II d'Espagne</French>
-		<German>Philipp II.</German>
-		<Italian>Filippo II di Spagna</Italian>
-		<Spanish>Felipe II de España</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_PHILIP_II_PEDIA</Tag>
-		<English>[H1]Philip II[\H1]
-[BOLD]King of Spain[\BOLD]
-[BOLD]Lived: [\BOLD]May 21, 1527 - September 13, 1598
-
-
-	[BOLD]Background:[\BOLD]
-	Philip II was King of Spain from 1556 until 1598; King of Naples from 1554 until 1598; king consort of England, as husband of Mary I, from 1554 to 1558; lord of the Seventeen Provinces from 1556 until 1581, holding various titles for the individual territories, such as duke or count; and King of Portugal and the Algarves as Philip I from 1580. He also ruled a vast empire in the Americas, including New Spain and Peru.
-[TAB]Philip's policies were determined by a combination of Catholic fervour and dynastic self-interest. He found himself by default the chief defender of Catholic Europe, both against the Ottoman Turks and against the forces of the Protestant Reformation. He never relented from his war against heresy, preferring to fight on every front at whatever cost rather than countenance heterodoxy within his territories. These territories included his patrimony in the Netherlands, where the Protestant heresy had taken deep root. Following the Revolt of the Netherlands in 1568, Philip waged a long war for control of the Netherlands, which dragged in the English and the French and lasted for the rest of his life. In 1588, the Spanish armada was destroyed by a tempest off the southern cost of Ireland, thus thwarting his planned invasion of England. Concerned with the Muslim threat in the Mediterranean, Philip achieved a decisive victory against the Turks at the Lepanto in 1571, where the fleet of the Holy League was commanded by his illegitimate brother John of Austria. He also successfully secured his succession to the throne of Portugal in 1580.
-[TAB]After basing himself in the Netherlands in the early years of his reign, Philip returned to the peninsula in 1559 and never left it again. Unlike his father, Charles V, Philip was thoroughly Spanish, a native speaker who chose to rule from Spain rather than to travel constantly around his states. Although sometimes described as an absolute monarch, Philip faced many constitutional constraints on his authority. Spain was not a single monarchy with one legal system but a federation of separate realms, each jealously guarding its own rights against those of the Crown of Castile. In practice, Philip often found his authority overruled by local assemblies, and his word was less authoritarian than British or French historians have always tried to characterize. The Kingdom of Aragon, where Philip was obliged to put down a rebellion in 1591–1592, was particularly unruly. He also grappled with the intractable problem of the large Morisco population in Spain, persuaded to convert to Christianity by his predecessors. In 1568, a Morisco Revolt broke out in the southern province of Granada in defiance of attempts to suppress Moorish customs, and Philip wisely decided the expulsion of the Moriscos from Granada and their dispersal to other provinces.
-[TAB]Despite its immense dominions, Spain itself was an arid country with a sparse population that yielded a limited income to the crown. Philip faced major difficulties in raising taxes, the collection of which was largely farmed out to local lords. He was able to finance his military campaigns not only by taxing the local resources of his empire, but also the flow of income from the New World proved vital to his militant foreign policy. His exchequer several times was able to avoid bankruptcy. Philip's reign saw an extraordinary flourishing of cultural excellence in Spain, part of what is called the Golden Age, creating a lasting legacy in literature, music, and the visual arts.</English>
-		<French>.</French>
-		<German>[H1]Philipp II.[\H1][NEWLINE][BOLD]König von Spanien[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 21. Mai 1527 - 13. September 1598</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>

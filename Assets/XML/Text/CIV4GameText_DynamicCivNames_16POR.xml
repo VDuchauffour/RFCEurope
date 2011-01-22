@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PORTUGAL_DESC</Tag>
-		<English>The Portuguese</English>
-		<French>
-			<Text>Les Portugais</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Portugiesen:Die Portugiesen:den Portugiesen</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Persiani</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Persas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#252;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PORTUGAL_SHORT_DESC</Tag>
-		<English>Portugal</English>
-		<French>
-			<Text>Portugal</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Portugal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Portogallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Portugal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Tag>
-		<English>Portuguese</English>
-		<French>
-			<Text>portugais:portugaise:portugais:portugaises</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Portugiesisch:portugiesischen:portugiesische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>portoghese:portoghesi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>portugu&#233;s:portuguesa:portugueses:portuguesas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#252;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR00</Tag>
 		<English>Lusitanian Peoples</English>
@@ -248,32 +173,5 @@
 		<French>Province du Portugal</French>
 		<German>Provinz Portugal</German>
 		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_AFONSO</Tag>
-		<English>Afonso Henriques</English>
-		<French>Alphonse Henriques</French>
-		<German>Afonso Henriques</German>
-		<Italian>Alfonso Henriques</Italian>
-		<Spanish>Alfonso Henriques</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_AFONSO_PEDIA</Tag>
-		<English>[H1]Afonso Henriques[\H1]
-[BOLD]First King of Portugal[\BOLD]
-[BOLD]Lived:[\BOLD] July 25, 1109 - December 6, 1189
-
-
-	[BOLD]Background:[\BOLD]
-	Afonso I of Portugal, more commonly known as Afonso Henriques and also known as the Conqueror (o Conquistador), was the first King of Portugal, declaring his independence from Leon. He fought several successful campaigns against the Moors and, on July 26, 1139, he obtained an overwhelming victory in the Battle of Ourique, and straight after was unanimously proclaimed King of Portugal by his soldiers. This meant that Portugal was no longer a vassal county of Leon-Castile, but an independent kingdom in its own right. Next, he assembled the first assembly of the estates-general at Lamego, where he was given the crown from the archbishop of Braga, to confirm the independence.
-[TAB]Independence, however, was not a thing a land could choose on its own. Portugal still had to be acknowledged by the neighbouring lands and, most importantly, by the Roman Catholic Church and the Pope. Afonso wedded Mafalda of Savoy, daughter of Count Amadeo III of Savoy, and sent Ambassadors to Rome to negotiate with the Pope. In Portugal, he built several monasteries and convents and bestowed important privileges to religious orders. In 1143, he wrote to Pope Innocent II to declare himself and the kingdom servants of the Church, swearing to pursue driving the Moors out of the Iberian peninsula. Bypassing any king of Castile or Leon. Afonso declared himself the direct liegeman of the Papacy. Thus, Afonso continued to distinguish himself by his exploits against the Moors, from whom he wrested Santar&#233;m and Lisbon in 1147. He also conquered an important part of the land south of the Tagus River, although this was lost again to the Moors in the following years.
-[TAB]Meanwhile, King Alfonso VII of Castile (Afonso's cousin) regarded the independent ruler of Portugal as nothing but a rebel. Conflict between the two was constant and bitter in the following years. Afonso became involved in a war, taking the side of the Aragonese king, an enemy of Castile. To ensure the alliance, his son Sancho was engaged to Dulce Berenguer, sister of the Count of Barcelona, and princess of Aragon. Finally, in 1143, the Treaty of Zamora established peace between the cousins and the recognition by the Kingdom of Castile and Leon that Portugal was an independent kingdom.
-[TAB]In 1179 the privileges and favours given to the Roman Catholic Church were compensated. In the papal bull "Manifestis Probatum", Pope Alexander III acknowledged Afonso as King and Portugal as an independent land with the right to conquer lands from the Moors. With this papal blessing, Portugal was at last secured as a country and safe from any Castilian attempts of annexation.
-[TAB]In 1184, in spite of his great age, he had still sufficient energy to relieve his son Sancho, who was besieged in Santar&#233;m by the Moors. He died shortly after, in 1185.
-[TAB]The Portuguese revere him as a hero, both on account of his personal character and as the founder òf their nation.</English>
-		<French>.</French>
-		<German>[H1]Afonso Henriques[\H1][NEWLINE][BOLD]Erster König von Portugal[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 25. Juli 1109 - 6. Dezember 1189</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>

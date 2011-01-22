@@ -76,8 +76,8 @@ lCivBioNewWorld = []
 
 
 #for Victory and the handler
-tAmericasTL = (3, 0)
-tAmericasBR = (43, 63)
+#tAmericasTL = (3, 0)
+#tAmericasBR = (43, 63)
 
 
 #for messages
@@ -184,17 +184,17 @@ tBirth = (
 
 
 tYear = (
-("844", "TXT_KEY_AD"),
+("840", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("632", "TXT_KEY_AD"),
-("640", "TXT_KEY_AD"),
-("700", "TXT_KEY_AD"),
+("680", "TXT_KEY_AD"),
+("712", "TXT_KEY_AD"),
 ("909", "TXT_KEY_AD"),
 ("770", "TXT_KEY_AD"),
 ("800", "TXT_KEY_AD"),
-("880", "TXT_KEY_AD"),
-("900", "TXT_KEY_AD"),
+("864", "TXT_KEY_AD"),
+("895", "TXT_KEY_AD"),
 ("852", "TXT_KEY_AD"),
 ("970", "TXT_KEY_AD"),
 ("1323", "TXT_KEY_AD"),
@@ -431,7 +431,7 @@ tCoreAreasTL = ( #Core Area is initial spawn location, and also important for st
 (52,40),   #Germany
 (64,44),   #Poland
 (80,52),   #Moscow
-(50,27),   #Genoa
+(49,27),   #Genoa
 (38,48),   #England
 (21,29),   #Portugal
 (58,37),   #Austria
@@ -1355,81 +1355,81 @@ iImmunity = 20
 
 
 
-#leaders
-iBarbarianLeader=0 #Do NOT name this iBarbarian.  Very bad.
-iAbuYusufYaqub=1
-iMaria_Theresa=2
-iAbuBakr=3
-iJoan=4
-iMatthias=5
-iBarbarossa=6
-iCatherine=7
-iCharlemagne=8
-iPhilip_Ii=9
-iSobieski=10
-iChristian_Iv=11
-iWilliam=12
-iAfonso=13
-iMehmed=14
-iSaladin=15
-iMaximilian=16
-iSimeon=17
-iCharles_V=18
-iJustinian=19
-iAbdarRahman=20
-iWillem_Van_Oranje=21
-iElizabeth=22
-iLouis_Xiv=23
-iSimone=24
-iFrederick=25
-iStephen=26
-iYaroslav=27
-iPeter=28
-iCasimir=29
-iJoao=30
-iIsabella=31
-iGustavus=32
-iSuleiman=33
-iDandolo=34
-iThe_Pope=35
-iHarald_Hardrada=36
-iIvan_Iv=37
+#Leaders
+iLeaderBarbarian = 0	#Do NOT name this iBarbarian.  Very bad.	#Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it (AbsintheRed - Beta 6)
+iAbuYusufYaqub = 1
+iMaria_Theresa = 2
+iAbuBakr = 3
+iJoan = 4
+iMatthias = 5
+iBarbarossa = 6
+iCatherine = 7
+iCharlemagne = 8
+iPhilip_Ii = 9
+iSobieski = 10
+iChristian_Iv = 11
+iWilliam = 12
+iAfonso = 13
+iMehmed = 14
+iSaladin = 15
+iMaximilian = 16
+iSimeon = 17
+iCharles_V = 18
+iJustinian = 19
+iAbdarRahman = 20
+iWillem_Van_Oranje = 21
+iElizabeth = 22
+iLouis_Xiv = 23
+iSimone = 24
+iFrederick = 25
+iStephen = 26
+iYaroslav = 27
+iPeter = 28
+iCasimir = 29
+iJoao = 30
+iIsabella = 31
+iGustavus = 32
+iSuleiman = 33
+iDandolo = 34
+iThe_Pope = 35
+iHarald_Hardrada = 36
+iIvan_Iv = 37
+iGeorge_Iii = 38
+iMaria_Ii = 39
+iAndrea_Dandolo = 40
+iHaakon_Iv = 41
 
-# 3Miro - for late Roman Justinian in, should not be used in RFCE
-#if (gc.getPlayer(0).isPlayable()): #late start condition
-#        tRomanLateLeaders = (iAugustus, i50AD, 5, 2, iJustinian, i1000AD, 10, 3)
-#else: 
-#        tRomanLateLeaders = (iAugustus, i50AD, 5, 2)
 
-tLeaders = (
+tLeaders = (		#First has to be the primary leader (the one that appaers on the civ selection screen). Can be changed in the WB file (AbsintheRed)
 (iCharles_V,),
 (iJustinian,),
-(iCharlemagne,iJoan,iLouis_Xiv),
-(iAbuBakr,iSaladin),
+(iCharlemagne, iJoan, iLouis_Xiv),
+(iAbuBakr, iSaladin),
 (iSimeon,),
-(iAbdarRahman,iAbuYusufYaqub),
-(iIsabella,iPhilip_Ii),
-(iHarald_Hardrada,iChristian_Iv),
-(iDandolo,),
+(iAbdarRahman, iAbuYusufYaqub),
+(iIsabella, iPhilip_Ii),
+(iHarald_Hardrada, iHaakon_Iv, iChristian_Iv),
+(iDandolo, iAndrea_Dandolo),
 (iYaroslav,),
-(iStephen,iMatthias),
-(iBarbarossa,iFrederick,),
-(iCasimir,iSobieski),
-(iIvan_Iv,iPeter,iCatherine),
+(iStephen, iMatthias),
+(iBarbarossa, iFrederick),
+(iCasimir, iSobieski),
+(iIvan_Iv, iPeter, iCatherine),		#Don't change back the order of Peter and Ivan. Right now Ivan is the primary leader. Was needed for leader switching (AbsintheRed - Beta 6)
 (iSimone,),
-(iWilliam,iElizabeth,),
-(iAfonso,iJoao,),
-(iMaximilian,iMaria_Theresa),
-(iMehmed,iSuleiman,),
+(iWilliam, iElizabeth, iGeorge_Iii),
+(iAfonso, iJoao, iMaria_Ii),
+(iMaximilian, iMaria_Theresa),
+(iMehmed, iSuleiman),
 (iGustavus,),
 (iWillem_Van_Oranje,),
 (iThe_Pope,)
 )
 
-tEarlyLeaders = (
+
+tEarlyLeaders = (		#Don't have to be the same as the primary leader (AbsintheRed)
 (iCharles_V),
 (iJustinian),
-(iJoan),
+(iCharlemagne),
 (iAbuBakr),
 (iSimeon),
 (iAbdarRahman),
@@ -1440,7 +1440,7 @@ tEarlyLeaders = (
 (iStephen),
 (iBarbarossa),
 (iCasimir),
-(iPeter),
+(iIvan_Iv),
 (iSimone),
 (iWilliam),
 (iAfonso),
@@ -1452,29 +1452,29 @@ tEarlyLeaders = (
 )
 
 
-tLateLeaders = ( #all up to 300 turns earlier because the switch is triggered after a few years
+tLateLeaders = (		#All switch dates up to 200 years earlier because the switch is triggered after a few years (date, percentage, era)
 (iCharles_V,),
 (iJustinian,),
-(iLouis_Xiv,i1452AD,25,3),
-(iSaladin,i1160AD,25,2),
+(iJoan, i1160AD, 10, 2, iLouis_Xiv, i1452AD, 25, 3),
+(iSaladin, i1160AD, 25, 2),
 (iSimeon,),
-(iAbuYusufYaqub,i1101AD,10,2),
-(iPhilip_Ii,i1520AD,10,3),
-(iChristian_Iv,i1520AD,5,3),
-(iDandolo,),
+(iAbuYusufYaqub, i1101AD, 10, 2),
+(iPhilip_Ii, i1520AD, 10, 3),
+(iHaakon_Iv, i1160AD, 25, 2, iChristian_Iv, i1520AD, 5, 3),
+(iAndrea_Dandolo, i1200AD, 10, 2),
 (iYaroslav,),
-(iMatthias,i1452AD,5,3),
-(iFrederick,i1520AD,5,3),
-(iSobieski,i1570AD,10,3),
-(iCatherine,i1700AD,25,3),
+(iMatthias, i1452AD, 5, 3),
+(iFrederick, i1520AD, 5, 3),
+(iSobieski, i1570AD, 10, 3),
+(iPeter, i1570AD, 10, 3, iCatherine, i1700AD, 25, 3),
 (iSimone,),
-(iElizabeth,i1452AD,10,3),
-(iJoao,i1419AD,10,3),
-(iMaria_Theresa,i1700AD,25,3),
-(iSuleiman,i1520AD,15,3),
+(iElizabeth, i1452AD, 10, 3, iGeorge_Iii, i1700AD, 10, 3),
+(iJoao, i1419AD, 10, 3, iMaria_Ii, i1700AD, 10, 3),
+(iMaria_Theresa, i1700AD, 25, 3),
+(iSuleiman, i1520AD, 15, 3),
 (iGustavus,),
 (iWillem_Van_Oranje,),
-(iThe_Pope)
+(iThe_Pope,)
 )
 
 
@@ -1533,6 +1533,7 @@ iUP_LandStability = 19		# no penalty from owning unstable land (Python only)
 iUP_Discovery = 20		# lower cost of a block of projects
 iUP_EndlessLand = 21		# lower civic cost assosiated with cities
 iUP_ForeignSea = 22		# allows the ships to enter foreign sea territory (Dutch UP from RFC)
+iUP_Pious = 23			# increase the gain (and loss) of Faith Points
 
 iFP_Stability = 0		# stability bonus
 iFP_Civic = 1			# lower civic upkeep

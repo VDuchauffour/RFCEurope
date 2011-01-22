@@ -175,7 +175,7 @@ EndPlayer
 BeginPlayer
 	Team=8
 	LeaderType=LEADER_DANDOLO
-	CivType=CIVILIZATION_VENECIA
+	CivType=CIVILIZATION_VENEZIA
 	PlayableCiv=1             
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MERCHANT_REPUBLIC
 	Handicap=HANDICAP_PRINCE

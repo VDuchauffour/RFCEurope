@@ -4839,8 +4839,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_DIPLO_MATTHIAS_EARLY</ScriptID>
-		<SoundID>DIPLO_MATTHIAS_EARLY</SoundID>
+		<ScriptID>AS2D_DIPLO_POPE_EARLY</ScriptID>
+		<SoundID>DIPLO_POPE_EARLY</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
 		<iMinVolume>75</iMinVolume>
 		<iMaxVolume>75</iMaxVolume>
@@ -4862,8 +4862,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_DIPLO_MATTHIAS_MIDDLE</ScriptID>
-		<SoundID>DIPLO_MATTHIAS_MIDDLE</SoundID>
+		<ScriptID>AS2D_DIPLO_POPE_MIDDLE</ScriptID>
+		<SoundID>DIPLO_POPE_MIDDLE</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
 		<iMinVolume>75</iMinVolume>
 		<iMaxVolume>75</iMaxVolume>
@@ -4885,8 +4885,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_DIPLO_MATTHIAS_LATE</ScriptID>
-		<SoundID>DIPLO_MATTHIAS_LATE</SoundID>
+		<ScriptID>AS2D_DIPLO_POPE_LATE</ScriptID>
+		<SoundID>DIPLO_POPE_LATE</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
 		<iMinVolume>75</iMinVolume>
 		<iMaxVolume>75</iMaxVolume>

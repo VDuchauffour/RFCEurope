@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_VENECIA_DESC</Tag>
-		<English>The Venetians</English>
-		<French>
-			<Text>Les V&#233;nitiens</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Venezianer:Die Venezianer:den Venezianern</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Persiani</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Persas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#194;&#229;&#237;&#229;&#246;&#232;&#224;&#237;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_VENECIA_SHORT_DESC</Tag>
-		<English>Venezia</English>
-		<French>
-			<Text>Venise</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Venedig</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#194;&#229;&#237;&#229;&#246;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_VENECIA_ADJECTIVE</Tag>
-		<English>Venetian</English>
-		<French>
-			<Text>v&#233;nitien:v&#233;nitienne:v&#233;nitiens:v&#233;nitiennes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Venezianisch:venezianischen:venezianische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#194;&#229;&#237;&#229;&#246;&#232;&#224;&#237;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN00</Tag>
 		<English>Venetian Peoples</English>
@@ -233,52 +158,5 @@
 		<French>Province de Veneto</French>
 		<German>Provinz Veneto</German>
 		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_VENECIA_PEDIA</Tag>
-		<English>[TAB]The city of Venice originated as a collection of lagoon communities banded together for mutual defence from the Lombards as the power of the Byzantine Empire dwindled in northern Italy in the late seventh century. Sometime in the first decades of the eighth century, the people of the lagoon elected their first leader Ursus, who was confirmed by Byzantium and given the titles of hypatus and dux. He was the first historical Doge of Venice. 
-[TAB]During the reign of the Participazio, Venice grew into its modern form. Though Heraclean by birth, Agnello, first doge of the family, was an early immigrant to Rialto and his dogeship was marked by the expansion of Venice towards the sea via the construction of bridges, canals, bulwarks, fortifications, and stone buildings. Agnello was succeeded by his son Giustiniano, who brought the body of Saint Mark the Evangelist to Venice from Alexandria and made him the patron saint of Venice. During the reign of the successor of the Participazio, Pietro Tradonico, Venice began to establish its military might which would influence many a later crusade and dominate the Adriatic for centuries.
-[TAB]In the High Middle Ages, Venice became extremely wealthy through its control of trade between Europe and the Levant, and began to expand into the Adriatic Sea and beyond. Venice was involved in the Crusades almost from the very beginning; Venetian ships assisted in capturing the coastal cities of Syria after the First Crusade, and in 1123 they were granted virtual autonomy in the Kingdom of Jerusalem through the Pactum Warmundi. In the 12th century the Venetians also gained extensive trading privileges in the Byzantine Empire and their ships often provided the Empire with a navy. The Venetian fleet was crucial to the transportation of the Fourth Crusade, but when the crusaders could not pay for the ships, the fleet was directed against Zara, a city on the Adriatic formerly under Venetian control. The crusade was then diverted to Constantinople, which was sacked in 1204. As a result of the partition of the Byzantine Empire which followed, Venice gained a great deal of territory in the Aegean Sea, including the islands of Crete and Euboea. Later, in 1489, the island of Cyprus, previously a crusader state, was annexed to Venice.
-[TAB]In the early fifteenth century, the Venetians also began to expand in Italy, as well as along the Dalmatian coast from Istria to Albania. By 1410, Venice had taken over most of Venetia, including such important cities as Verona and Padua.
-[TAB]In 1499 Venice allied itself with France against Milan, gaining Cremona. In the same year the Ottoman sultan moved to attack Lepanto by land, and sent a large fleet to support his offensive by sea. Antonio Grimani, more a businessman than a sailor, was defeated in the sea battle of Zonchio. Preferring peace to total war against the Turks, Venice surrendered the bases of Lepanto, Modon and Coron.
-[TAB]Venice's attention was diverted from her usual maritime position by the delicate situation in northern Italy. Eager to take some of Venice's lands, all neighbouring powers joined in the League of Cambrai in 1508, under the leadership of Pope Julius II. The pope wanted Romagna, emperor Maximilian I Friuli and Veneto, Spain the Apulian ports, the king of France Cremona, the king of Hungary Dalmatia, and each of the others some part. The offensive against the huge army enlisted by Venice was launched from France. On 14 May 1509 Venice was crushingly defeated at the battle of Agnadello, in the Ghiara d'Adda, marking one of the most delicate points of the entire Venetian history. French and imperial troops were occupying the Veneto, but Venice managed to extricate herself through diplomatic efforts. The Apulian ports were ceded in order to come to terms with Spain, and pope Julius II soon recognized the danger brought by the eventual destruction of Venice (then the only Italian power able to face national states like France or the Ottomans). Andrea Gritti recaptured Padua in July 1509, successfully defending it against the besieging imperial troops. Spain and the pope broke off their alliance with France, and Venice regained Brescia and Verona. After seven years of ruinous war, the Serenissima regained her mainland dominions up to the Adda. Although the defeat had turned into a victory, the events of 1509 marked the end of the Venetian expansion.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_DANDOLO</Tag>
-		<English>Enrico Dandolo</English>
-		<French>Enrico Dandolo</French>
-		<German>Enrico Dandolo</German>
-		<Italian>Enrico Dandolo</Italian>
-		<Spanish>Enrico Dandolo</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_DANDOLO_PEDIA</Tag>
-		<English>[H1]Enrico Dandolo[\H1]
-[BOLD]Doge of Venice[\BOLD]
-[BOLD]Lived: [\BOLD] 1107 - 1205 AD
-
-
-	[BOLD]Background:[\BOLD]
-	He is remembered primarily for his role in the Fourth Crusade which ultimately conquered Constantinople and ended (for a time) the Byzantine Empire.
-	He became the 39th Doge of Venice on 1 January 1193, Dandolo was already old and blind, but deeply ambitious, and displayed tremendous mental and (for his age) physical strength. He was at least in his seventies when he became Doge. Some accounts say he was already 85 years old when he became Doge. His remarkable deeds over the next eleven years bring that age into question, however. Others have hypothesized that he may have been in his mid-70s when he became Venice's leader.In 1202 the knights of the Fourth Crusade were stranded in Venice, unable to pay for the ships they had commissioned after far fewer troops arrived than expected. Dandolo developed a plan that allowed the crusaders' debt to be suspended if they assisted the Venetians in restoring nearby Zara to Venetian control. At an emotional and rousing ceremony in San Marco di Venezia, Dandolo "took the cross" (committed himself to crusading) and was soon joined by thousands of other Venetians. Dandolo became an important leader of the crusade.
-	Venice was the major financial backer of the Fourth Crusade, supplied the Crusaders' ships, and lent money to the Crusaders who became heavily indebted to Venice. Because of the crusaders' continued delays, provisions were also a problem for the enterprise.
-	Although they were supposed to be sailing to Egypt, Dandolo convinced them to stop at Zara, a port city on the Adriatic that was claimed both by Venice and by the Kingdom of Hungary. Dandolo encouraged the crusaders to attack the city which had rebelled from Venice. A small number of Crusaders refused to help; but the others realized that the conquest of the rebel town and subsequent wintering there was the only way to hold the faltering crusade together. Zara was besieged and captured on November 15, 1202.
-	Shortly afterwards, Alexius Angelus, son of the deposed Byzantine emperor Isaac II, arrived in that city. Dandolo agreed to go along with crusade leaders plan to place Alexius Angelus on the throne of the Byzantine Empire in return for Byzantine support of the crusade. This ultimately led to the conquest and sack of Constantinople on April 13, 1204, an event at which Dandolo was present and in which he played a directing role. The Catholic Crusaders then took permanent control of the Eastern Orthodox capital of Constantinople (or Byzantium) and established a Catholic state, the Latin Empire. Venice gained title to three-eighths of the Byzantine Empire as a result of the 4th Crusade. The Byzantine Empire was never again as powerful as it had been prior to the Fourth Crusade.</English>
-		<French></French>
-		<German>[H1]Enrico Dandolo[\H1][NEWLINE][BOLD]Doge von Venedig[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1107 - 1205</German>
-		<Italian/><Spanish/><Russian>.</Russian></TEXT>
-	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LORENZO_1</Tag>
-		<English>"Whoever wants to be happy, let him be so: about tomorrow there's no knowing." I am [OUR_NAME] of the [OUR_EMPIRE].</English>
-		<French>"Celui qui veut &#234;tre heureux, qu'il en soit ainsi." Je suis [OUR_NAME] du [OUR_EMPIRE].</French>
-		<German>"Whoever wants to be happy, let him be so: about tomorrow there's no knowing." I am [OUR_NAME] of the [OUR_EMPIRE].</German>
-		<Italian>"Whoever wants to be happy, let him be so: about tomorrow there's no knowing." I am [OUR_NAME] of the [OUR_EMPIRE].</Italian>
-		<Spanish>"Whoever wants to be happy, let him be so: about tomorrow there's no knowing." I am [OUR_NAME] of the [OUR_EMPIRE].</Spanish>
-		<Russian>"&#202;&#242;&#238; &#225;&#251; &#237;&#232; &#245;&#238;&#242;&#229;&#235; &#225;&#251;&#242;&#252; &#241;&#247;&#224;&#241;&#242;&#235;&#232;&#226;&#251;&#236;, &#239;&#238;&#231;&#226;&#238;&#235;&#255;&#254;&#242; &#229;&#236;&#243; &#225;&#251;&#242;&#252; &#242;&#224;&#234;: &#238; &#231;&#224;&#226;&#242;&#240;&#224;&#248;&#237;&#229;&#236; &#237;&#229;&#242; &#237;&#232;&#234;&#224;&#234;&#238;&#227;&#238; &#231;&#237;&#224;&#237;&#232;&#255;." &#223; &#229;&#241;&#242;&#252; [OUR_NAME] [OUR_EMPIRE].</Russian>
 	</TEXT>
 </Civ4GameText>

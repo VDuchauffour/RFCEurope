@@ -10216,14 +10216,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_MAGYAR_INTRO</SoundID>
-			<Filename>Sounds/Soundtrack/magyar_intro</Filename>
+			<Filename>Sounds/Diplomacy/magyar_intro</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_MAGYAR_THEME</SoundID>
-			<Filename>Sounds/Soundtrack/magyar_theme</Filename>
+			<Filename>Sounds/Diplomacy/magyar_theme</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -10292,22 +10292,22 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>DIPLO_MATTHIAS_EARLY</SoundID>
-			<Filename>Sounds/Diplomacy/Matthias_Early</Filename>
+			<SoundID>DIPLO_POPE_EARLY</SoundID>
+			<Filename>Sounds/Diplomacy/Pope_Early</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>DIPLO_MATTHIAS_MIDDLE</SoundID>
-			<Filename>Sounds/Diplomacy/Matthias_Middle</Filename>
+			<SoundID>DIPLO_POPE_MIDDLE</SoundID>
+			<Filename>Sounds/Diplomacy/Pope_Middle</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>DIPLO_MATTHIAS_LATE</SoundID>
-			<Filename>Sounds/Diplomacy/Matthias_Late</Filename>
+			<SoundID>DIPLO_POPE_LATE</SoundID>
+			<Filename>Sounds/Diplomacy/Pope_Late</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

@@ -211,9 +211,9 @@
 				<StyleUnit>
 					<UnitType>UNIT_HUSSAR</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_HUSSAR_CAVALRY</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_HUSSAR_CAVALRY</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_HUSSAR_CAVALRY</LateArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_HUSSAR_CAVALRY_HUNGARIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_HUSSAR_CAVALRY_HUNGARIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_HUSSAR_CAVALRY_HUNGARIAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 			</StyleUnits>

@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GERMANY_DESC</Tag>
-		<English>The Germans</English>
-		<French>
-			<Text>Les Allemands</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Deutsche:Die Deutschen:den Deutschen</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Tedeschi</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Alemanes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#205;&#229;&#236;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GERMANY_SHORT_DESC</Tag>
-		<English>Germany</English>
-		<French>
-			<Text>Allemagne</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Deutschland</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>La Germania:la Germania:della Germania:di Germania</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Alemania</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#195;&#229;&#240;&#236;&#224;&#237;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GERMANY_ADJECTIVE</Tag>
-		<English>German</English>
-		<French>
-			<Text>allemand:allemande:allemands:allemandes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Deutsch:deutschen:deutsche</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Tedesco:Tedesca:Tedeschi:Tedesche</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>alem&#225;n:alemana:alemanes:alemanas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#205;&#229;&#236;&#229;&#246;&#234;&#232;&#233; </Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER00</Tag>
 		<English>Germanic Peoples</English>
@@ -246,27 +171,5 @@
 		<Italian>Provincia di Germania</Italian>
 		<Spanish>Provincia de Germania</Spanish>
 		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_BARBAROSSA</Tag>
-		<English>Frederick Barbarossa</English>
-		<French>Frédéric Barberousse</French>
-		<German>Friedrich Barbarossa</German>
-		<Italian>Frederico Barbarossa</Italian>
-		<Spanish>Frederico Barbarroja</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_BARBAROSSA_PEDIA</Tag>
-		<English>[H1]Frederick Barbarossa[\H1]
-[BOLD]Holy Roman Emperor[\BOLD]
-[BOLD]Lived:[\BOLD] 1122-1190
-
-
-	[BOLD]Background:[\BOLD]	
-	Frederick Barbossa was was the elected King of Germany at Frankfurt on 4 March 1152 and crowned in Aachen on 9 March, crowned King of Italy at Pavia in 1154, and finally crowned Holy Roman Emperor by Pope Adrian IV on 18 June 1155. He was crowned King of Burgundy at Arles on 30 June 1178. Before his royal election, he was by inheritance Duke of Swabia (1147-1152, as Frederick III). He was the son of Duke Frederick II of the Hohenstaufen dynasty. His mother was Judith, daughter of Henry IX, Duke of Bavaria, from the rival House of Welf, and Frederick therefore descended from Germany's two leading families, making him an acceptable choice for the Empire's prince-electors.</English>
-		<French>[H1]Friedrich Barbarossa[\H1][NEWLINE][BOLD]Heiliger Römischer Kaiser[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 1122-1190</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>

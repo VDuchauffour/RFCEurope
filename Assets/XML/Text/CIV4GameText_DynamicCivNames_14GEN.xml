@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GENOA_DESC</Tag>
-		<English>The Genoans</English>
-		<French>
-			<Text>Les G&#233;nois</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Genuaner:Die Genuaner:den Genuanern</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Persiani</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Persas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#195;&#229;&#237;&#243;&#233;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GENOA_SHORT_DESC</Tag>
-		<English>Genoa</English>
-		<French>
-			<Text>G&#234;nes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Genua</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#195;&#229;&#237;&#243;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GENOA_ADJECTIVE</Tag>
-		<English>Genoan</English>
-		<French>
-			<Text>g&#233;nois:g&#233;noise:g&#233;nois:g&#233;noises</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Genuanisch:genuanischen:genuanische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#195;&#229;&#237;&#243;&#233;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN00</Tag>
 		<English>Genoese Peoples</English>
@@ -232,42 +157,5 @@
 		<French>Province de Ligurie</French>
 		<German>Provinz Ligurien</German>
 		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_GENOA_PEDIA</Tag>
-		<English>[TAB]The Republic initially came into existence in the early 11th century, when Genoa became a self-governing commune within the old Regnum Italicum. In its early centuries, Genoa was an important trading city, like Venice. Genoa started her expansion during the Crusades: the Republic granted her fleet for the transportations and gained many settlements on the Middle East and favored commercial treaties. During 13th century the Republic of Genoa was allied with the Byzantine Empire of Nicaea, which received Genoese help to regain Constantinople in 1261. The alliance permitted a great commercial expansion on the Empire and also the conquest of many isles and settlements on the Aegean Sea (the most important was the isle of Chios which was lost only in 1566). In the same century the Republic conquered important trading interests throughout the Black Sea, where Genoa controlled many settlements on Crimea. In the west Mediterranean the principal rival to Genoa was Pisa, which was ultimately defeated in the naval Battle of Meloria (1284), gaining the island of Corsica from it in the late 13th century and later the control of the north-west of Sardinia, where Genoese families gained territories. In the contest between the Angevins and the Aragonese for control of Sicily after the Sicilian Vespers of 1283, Genoese merchants luckily chose to support Aragon, the winning side, and moved into the Sicilian economy with energy, lending money to the ruling class, organizing and controlling the production of sugar and silks and monopolizing the export of Sicilian grain, on which Genoa depended, situated by nature with no grain-growing contado to support its population, but which the Maghreb also required. In exchange, Genoa received African gold.
-[TAB]As a result of the economic retrenchment Europe in the late 14th century, as well as its long war with Venice, which culminated in its defeat at Chioggia (1380), Genoa went into a decline. The rising Ottoman power cut into the Genoese emporia in the Aegean, and the Black Sea trade was squeezed off. 
-[TAB]Genoa was ultimately occupied by the French or the Milanese for much of the period. From 1499 to 1528, the Republic reached its nadir, being under nearly continual French occupation. The Spanish, with their intramural allies, the "old nobility" entrenched in the mountain fastnesses behind Genoa, captured the city on May 30, 1522 and subjected the city to a merciless pillage. When the great admiral Andrea Doria of the powerful Doria family allied with the Emperor Charles V to oust the French and restore Genoa's independence, a renewed prospect opened: 1528 marks the first loan from Genoese banks to Charles.
-[TAB]Thereafter, Genoa underwent something of a revival as a junior associate of the Spanish Empire, with Genoese bankers, in particular, financing many of the Spanish crown's foreign endeavors from their counting houses in Seville. The decline of Spain in the 17th century brought also the renewed decline of Genoa, and the Spanish crown's frequent bankruptcies, in particular, ruined many of Genoa's merchant houses.</English>
-		<French>.</French>
-		<German>[TAB] Die Republik entstand am Anfang am Anfang des 11. Jahrhunderts, als Genua eine selbstverwaltete Kommune innerhalb des alten Regnum Italicum wurde. In seinen frühen Jahrhunderten war Genua, wie Venedig, eine wichtige Handelsstadt. Genua begann während der Kreuzzüge zu expandieren: Die Republik gewährte ihre Flotte für die Transporte und gewann viele Ansiedlungen im Nahen Osten und begünstigte Handelsverträge. Während des 13. Jahrhunderts verbündete sich die Republik Genua mit dem Byzantinischen Reich von Nicaea, das Genuanische Hilfe erhielt, um Konstantinopel 1261 zurückzuerobern. Das Bündnis erlaubte eine große kommerzielle Expansion auf das Reich und auch die Eroberung vieler Inseln und Siedlungen im Ägäischen Meer (die wichtigste war die Insel von Chios, die nur 1566 verloren wurde). In demselben Jahrhundert eroberte die Republik wichtige Handelsbeteiligungen überall im Schwarzen Meer, wo Genua viele Siedlungen auf Krim kontrollierte. Im westlichen Mittelmeer war der Hauptrivale für Genua Pisa, das in der Seeschlacht von Meloria (1284) schließlich besiegt wurde. Davon wurde die Insel Korsika gegen Ende des 13. Jahrhunderts und später die Kontrolle über den Nordwestens Sardiniens gewonnen, wo genuesische Familien Territorien gewannen. Im Streit zwischen dem Haus Anjou und Aragon um die Kontrolle Siziliens nach der Sizilianischen Vesper von 1283 beschlossen genuesische Großhändler glücklicherweise, Aragon, die Gewinner-Seite, zu unterstützen, und zogen mit Energie in die sizilianische Wirtschaft: Sie liehen der herrschenden Klasse Geld, organisierten und steuerten die Produktion von Zucker und Seiden und monopolisierten den Export des sizilianischen Korns um, von dem Genua abhängig war, aber den der Maghreb auch verlangte. Im Austausch erhielt Genua afrikanisches Gold.
-[TAB]Infolge der Wirtschaftseinschränkung in Europa gegen Ende des 14. Jahrhunderts, sowie Genuas langen Krieges mit Venedig, der mit seiner Niederlage bei Chioggia (1380) endete, trat für Genua ein Niedergang ein. Die aufsteigende osmanische Macht schränkte die genuesischen Handelszentren in der Ägäis ein, und der Schwarzmeerhandel wurde abgedrückt. 
-[TAB] Genua wurde schließlich den großen Teil dieser Periode von den Franzosen oder den Mailändern besetzt. Von 1499 bis 1528 erreichte die Republik seinen Tiefstpunkt und war unter fast durchgängiger französischer Besatzung. Die Spanier, mit ihren intramuralen Verbündeten, der "alte Adel", der sich in den Bergfestungen hinter Genua verschanzt hatte, gewannen die Stadt am 30. Mai 1522 und unterwarfen die Stadt einer gnadenlosen Plünderung. Als sich der große Admiral Andrea Doria der mächtigen Familie Doria mit Kaiser Karl V. verbündete, um die Franzosen zu vertreiben und Genuas Unabhängigkeit wieder herzustellen, öffnete sich eine erneuerte Aussicht: 1528 kennzeichnet das erste Darlehen von genuesischen Banken an Charles.
-[TAB] Danach erlebte Genua eine Art Wiederbelebung als ein jüngerer Partner des spanischen Reiches mit genuesischen Bankiers und finanzierte insbesondere viele Auslandsunternehmungen der Spanischen Krone von ihren Kontoren in Sevilla aus. Der Niedergang Spaniens im 17. Jahrhundert brachte auch den erneuerten Niedergang Genuas, und die häufigen Bankrotte der Spanischen Krone insbesondere zerstörten viele der Handelshäuser Genuas.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_SIMONE</Tag>
-		<English>Simone Boccanegra</English>
-		<French>Simone Boccanegra</French>
-		<German>Simone Boccanegra</German>
-		<Italian>Simone Boccanegra</Italian>
-		<Spanish>Sim&#243;n Boccanegra</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_SIMONE_PEDIA</Tag>
-		<English>[H1]Simone Boccanegra[\H1]
-[BOLD]First Doge of Genoa[\BOLD]
-[BOLD]Lived:[\BOLD] ? - 1363 AD
-
-
-	[BOLD]Background:[\BOLD]
-	No background yet.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>
