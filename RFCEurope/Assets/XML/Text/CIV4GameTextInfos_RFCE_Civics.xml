@@ -1106,6 +1106,31 @@
 		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
+		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
+		<French>
+			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Allows contruction of non-State Religion Buildings and Wonders</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
 		<English>Adds stability for each colony founded</English>
 		<French/>

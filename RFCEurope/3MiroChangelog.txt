@@ -19,6 +19,10 @@ Done: for BETA 6
 - Added AI cheat code, now some players get bonus for AI to AI battles. We can use that to boost some Ai players and get more historic game (like Ottomans vs Byzantium and Bulgaria)
 - Dutch gets a "hidden" buff on the Faith Points, with only couple of cities, they can never accumulate enough
 - lots of leaderhead and XML text changes from AbsintheRed
+- merijn_v1 updates pedia (and Barb leader no longer shows)
+- merijn_v1 updates art for Burgundian Winery
+- Free Religion now allows construction of Cathedrals and Wonders from all religions
+- The Brothers at War property only affects Orthodox players (or playes associated with the Round Church's State Religion tag)
 - Bugfix - Manor House used to not give Stability
 - Bugfix - Spanish UP now gives Espionage points
 - Bugfix - Genoa Bank and Corp UHV
@@ -96,8 +100,6 @@ TODO:
 - Great Generals leaving for the Crusade?
 - Fix Bad Byzantine stability early on
 - Fix Ottoman bad stability with expansion
-- Change the date Joan becomes ruler of France?
 - Norse UHV bug?
 - Change the French and Burgundian UHV
 - Check Genoa 1st Turn culture bug
-- Update starting year bug in Python screen

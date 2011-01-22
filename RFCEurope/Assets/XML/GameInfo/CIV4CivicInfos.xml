@@ -61,6 +61,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -132,6 +133,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -208,6 +210,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -283,6 +286,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -368,6 +372,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -443,6 +448,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -514,6 +520,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -590,6 +597,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers>
@@ -665,6 +673,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -746,6 +755,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -821,6 +831,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -892,6 +903,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -972,6 +984,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1052,6 +1065,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1145,6 +1159,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -1220,6 +1235,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1292,6 +1308,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1377,6 +1394,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1453,6 +1471,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1529,6 +1548,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -1612,6 +1632,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1688,6 +1709,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1759,6 +1781,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1835,6 +1858,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1911,6 +1935,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>1</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1987,6 +2012,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2058,6 +2084,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2129,6 +2156,7 @@
 			<bStabilityFoundBonus>1</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2200,6 +2228,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>1</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2272,6 +2301,7 @@
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
