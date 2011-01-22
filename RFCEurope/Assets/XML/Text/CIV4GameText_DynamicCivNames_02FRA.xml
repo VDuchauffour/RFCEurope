@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_FRANKIA_DESC</Tag>
-		<English>The French</English>
-		<French>
-			<Text>Les Fran&#231;ais</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Franzosen:Die Franzosen:den Franzosen</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Francesi</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Franc&#233;ses</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#212;&#240;&#224;&#237;&#246;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_FRANKIA_SHORT_DESC</Tag>
-		<English>France</English>
-		<French>
-			<Text>Fran&#231;ais</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Frankreich</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>La Francia:la Francia:della Francia:di Francia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Francia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#212;&#240;&#224;&#237;&#246;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_FRANKIA_ADJECTIVE</Tag>
-		<English>French</English>
-		<French>
-			<Text>Fran&#231;ais</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Franz&#246;sisch:franz&#246;sischen:franz&#246;sische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Francese:Francese:Francesi:Francesi</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>franc&#233;s:francesa:franceses:francesas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#212;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA00</Tag>
 		<English>Frankish Peoples</English>
@@ -250,28 +175,5 @@
 		<French>Province de France</French>
 		<German>Provinz Frankreich</German>
 		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_JOAN</Tag>
-		<English>Joan of Arc</English>
-		<French>Jeanne d'Arc</French>
-		<German>Johanna von Orléans</German>
-		<Italian>Giovanna d'Arco</Italian>
-		<Spanish>Juana de Arco</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_JOAN_PEDIA</Tag>
-		<English>[H1]Joan of Arc[\H1]
-[BOLD]National Herione of France[\BOLD]
-[BOLD]Lived:[\BOLD] c.1412 - May 30, 1431 AD
-
-
-	[BOLD]Background:[\BOLD]
-	No background yet.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -1141,7 +1141,7 @@ class RFCUtils:
 			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
 			pPlayer.changeProsecutionCount( 10 )
 		
-		pPlayer.changeFaith( 1 )
+		#pPlayer.changeFaith( 1 ) # this is done in C++ now
 		
 	def saint( self, iOwner, iUnitID ):
 		# 3Miro: kill the Saint :), just make it so he cannot be used for other purposes

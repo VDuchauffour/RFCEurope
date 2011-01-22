@@ -880,17 +880,18 @@ class RiseAndFall:
 
         def checkPlayerTurn(self, iGameTurn, iPlayer):
                 #switch leader on first anarchy if early leader is different from primary one, and in a late game anarchy period to a late leader              
-                if (len(tLeaders[iPlayer]) > 1):
-                        if (tEarlyLeaders[iPlayer] != tLeaders[iPlayer][0]):
-                                if (iGameTurn > tBirth[iPlayer]+3 and iGameTurn < tBirth[iPlayer]+50):
-                                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                        
-                                                gc.getPlayer(iPlayer).setLeader(tLeaders[iPlayer][0])
-                                                print ("leader early switch:", tLeaders[iPlayer][0], "in civ", iPlayer)                        
-                        elif (iGameTurn >= tLateLeaders[iPlayer][1]):
-                                if (tLateLeaders[iPlayer][0] != tLeaders[iPlayer][0]):   
-                                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                                                                     
-                                                gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
-                                                print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer) 
+                #if (len(tLeaders[iPlayer]) > 1):
+                #        if (tEarlyLeaders[iPlayer] != tLeaders[iPlayer][0]):
+                #                if (iGameTurn > tBirth[iPlayer]+3 and iGameTurn < tBirth[iPlayer]+50):
+                #                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                        
+                #                                gc.getPlayer(iPlayer).setLeader(tLeaders[iPlayer][0])
+                #                                print ("leader early switch:", tLeaders[iPlayer][0], "in civ", iPlayer)                        
+                #        elif (iGameTurn >= tLateLeaders[iPlayer][1]):
+                #                if (tLateLeaders[iPlayer][0] != tLeaders[iPlayer][0]):   
+                #                        if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):                                                                                     
+                #                                gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
+                #                                print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer) 
+
                 if (len(tLeaders[iPlayer]) > 1):
                         if (len(tLateLeaders[iPlayer]) > 5):
                                 if (iGameTurn >= tLateLeaders[iPlayer][5]):
@@ -2434,12 +2435,11 @@ class RiseAndFall:
                         teamSpain.setHasTech( con.iAristocracy, True, iCiv, False, False )
                 
                 if ( iCiv == iNorse ):
+                        for iTech in range( con.iStirrup ):
+                                teamNorse.setHasTech( iTech, True, iCiv, False, False )       
                         teamNorse.setHasTech( con.iVassalage, True, iCiv, False, False )
-                        teamNorse.setHasTech( con.iCalendar, True, iCiv, False, False )
+                        teamNorse.setHasTech( con.iTheology, False, iCiv, False, False )
                         teamNorse.setHasTech( con.iAstrolabe, True, iCiv, False, False )
-                        teamNorse.setHasTech( con.iArchitecture, True, iCiv, False, False )
-                        teamNorse.setHasTech( con.iManorialism, True, iCiv, False, False )
-                        teamNorse.setHasTech( con.iBronzeCasting, True, iCiv, False, False )
 
                 
                 if ( iCiv == iVenecia ):

@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PAPAL_DESC</Tag>
-		<English>The Pope</English>
-		<French>
-			<Text>Le Pape</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Papst:Der Papst:den Papst</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Persiani</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Persas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#207;&#224;&#239;&#241;&#234;&#238;&#229; &#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PAPAL_SHORT_DESC</Tag>
-		<English>Rome</English>
-		<French>
-			<Text>Rome</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Rom</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#194;&#224;&#242;&#232;&#234;&#224;&#237;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PAPAL_ADJECTIVE</Tag>
-		<English>Papal</English>
-		<French>
-			<Text>pape:pape:papes:papes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Päpstlich:päpstlichen:päpstliche</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#207;&#224;&#239;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POP00</Tag>
 		<English>Papal Peoples</English>
@@ -232,32 +157,5 @@
 		<French>Province du Pape</French>
 		<German>Päpstliche Provinzen</German>
 		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PAPAL_PEDIA</Tag>
-		<English>[TAB]The Papal States emerged from the ashes of the Western Roman Empire. As Christianity grew, wealthy Roman patrons donated large tracts of land to the Church, and soon the Bishop of Rome (the title of "Pope" was not instituted until later) was the largest landholder in Italy, giving him a good deal of economic and political power in the region, along with his growing spiritual might. During the sixth century AD, the Eastern Roman Empire (based in Constantinople), launched a reconquest of Italy, taking much of the southern part of the peninsula. They took Rome as well, but proved unable to protect her from the growing Lombardian menace to the north.[PARAGRAPH:1]Thus the protection of Rome largely devolved upon the Bishop of Rome, by then the most powerful person in the region. Of necessity he had to raise armies and build fortifications to defend the Holy City from the Lombards, who were tightening their stranglehold on Rome. Over time the Bishops began to chafe under Constantinople's rule and sought to become fully independent from the Eastern Empire.[PARAGRAPH:1]The Popes found their champion in Pepin the Short, who in return for Pope Stephen II's support of his deposing the last of the Merovingian kings and assuming control of all of the Frankish lands, invaded Italy and drove the Lombardians from the areas around Rome. He gave these liberated lands to the Pope, officially creating the Papal States.[PARAGRAPH:1]The Papal States would exist for another ten centuries. It was finally dismantled during the Italian unification struggles which took place in the 1860s and '70s.</English>
-		<French>[TAB]Les Etats pontificaux furent cr&#233;&#233;s sur les cendres de l'Empire romain d'Occident. A mesure que le christianisme se d&#233;veloppait, de riches bienfaiteurs romains firent don de grands territoires &#224; l'Eglise et l'&#233;v&#234;que de Rome (le titre de pape fut cr&#233;&#233; plus tard) devint rapidement le plus grand propri&#233;taire terrien d'Italie, ce qui lui conf&#233;ra un pouvoir politique et &#233;conomique important dans la r&#233;gion, en plus de son pouvoir spirituel grandissant. Au cours du VIe si&#232;cle, l'Empire romain d'Orient (gouvern&#233; de Constantinople) tenta de reconqu&#233;rir l'Italie. Il reprit une grande partie du Sud de la p&#233;ninsule, ainsi que Rome, mais ne parvint pas &#224; prot&#233;ger cette derni&#232;re de la menace lombarde grandissante.[PARAGRAPH:1]La d&#233;fense de Rome revint donc en grande partie &#224; l'&#233;v&#234;que de Rome, alors la plus puissante personne de la r&#233;gion. Par n&#233;cessit&#233;, il fit lever des arm&#233;es et &#233;riger des fortifications pour d&#233;fendre la ville sainte contre les Lombards, qui renfor&#231;aient leur pr&#233;sence autour de Rome. Avec le temps, les &#233;v&#234;ques se lass&#232;rent de la domination de Constantinople et cherch&#232;rent &#224; gagner une ind&#233;pendance totale vis-&#224;-vis de l'Empire d'Orient.[PARAGRAPH:1]Les papes trouv&#232;rent un soutien en la personne de P&#233;pin le Bref qui, s'&#233;tant assur&#233; le consentement du pape Etienne II pour d&#233;poser le dernier roi m&#233;rovingien et prendre le contr&#244;le de tous les territoires francs, envahit l'Italie et repoussa les Lombards loin de Rome. Il restitua ces territoires lib&#233;r&#233;s au pape, ce qui donna lieu &#224; la cr&#233;ation officielle des Etats pontificaux.[PARAGRAPH:1]Les Etats pontificaux continu&#232;rent d'exister pendant encore dix si&#232;cles. Ils furent finalement d&#233;mantel&#233;s durant les luttes de l'unification italienne dans les ann&#233;es 1860 et 1870.</French>
-		<German>[TAB]Der Kirchenstaat stieg aus der Asche des Westr&#246;mischen Reiches empor. Als das Christentum sich immer weiter verbreitete, vermachten reiche r&#246;mische G&#246;nner der Kirche gro&#223;z&#252;gige L&#228;ndereien. Recht bald unterstand dem Bischof von Rom - die Bezeichnung "Papst" wurde erst sp&#228;ter eingef&#252;hrt - der gr&#246;&#223;te Landbesitz in Italien, was ihm einen nicht geringen &#246;konomischen und politischen Einfluss in der Region sicherte, zus&#228;tzlich zu seiner wachsenden spirituellen Macht. W&#228;hrend des 6. Jahrhunderts nach Christus startete das Ostr&#246;mische Reich, das in Konstantinopel verankert war, eine Wiedereroberung Italiens und nahm gro&#223;e Bereiche des s&#252;dlichen Teils der Halbinsel ein. Auch Rom wurde eingenommen, die Truppen erwiesen sich jedoch als nicht in der Lage, die Stadt gegen die wachsenden Gefahr durch die Lombardei im Norden zu verteidigen.[PARAGRAPH:1]So war es am Bischof von Rom, zu dieser Zeit die m&#228;chtigste Person der Region, sich um den Schutz der Stadt zu k&#252;mmern. Aus reiner Not heraus musste er Armeen aufbauen und Befestigungen errichten, um die Heilige Stadt gegen die Langobarden zu verteidigen, die den Belagerungsring um Rom immer enger zogen. Mit der Zeit &#228;rgerten sich die Bisch&#246;fe jedoch zunehmend &#252;ber die Herrschaft Konstantinopels und sie trachteten nach der vollst&#228;ndigen Unabh&#228;ngigkeit vom Ostr&#246;mischen Reich.[PARAGRAPH:1]Hilfe kam in Gestalt von Pippin dem Kurzen. Nicht zuletzt auch aus Dankbarkeit f&#252;r die Unterst&#252;tzung des Papstes Stephans II. bei der Absetzung des letzten Merowinger-K&#246;nigs und der &#220;bernahme der Alleinherrschaft &#252;ber das Frankenreich sicherte, fiel er in Italien ein und vertrieb die Langobarden aus den Gebieten um Rom herum. Die befreiten L&#228;ndereien &#252;berlie&#223; er dem Papst und errichtete so den offiziellen Kirchenstaat.[PARAGRAPH:1]Der Kirchenstaat existierte 10 weitere Jahrhunderte, wurde jedoch letztendlich in den 1860er und -70er Jahren demontiert und in den italienischen Nationalstaat eingegliedert.</German>
-		<Italian>[TAB]Lo Stato Pontificio emerse dalle ceneri dell'Impero Romano d'Occidente. Con la crescita della cristianit&#224;, i facoltosi patroni romani donarono grandi appezzamenti di terreno alla Chiesa e ben presto il vescovo di Roma (il titolo "papa" non fu istituito se non pi&#249; tardi) fu il pi&#249; grande proprietario terriero d'Italia; ci&#242; gli diede un bel po' di potere politico ed economico nella regione, a fianco del sempre crescente potere spirituale. Durante il sesto secolo d.C., l'Impero Romano d'Oriente (basato a Costantinopoli) avvi&#242; la riconquista dell'Italia, occupando gran parte del sud della penisola. Riusc&#236; anche a riprendersi Roma, ma si rivel&#242; incapace di proteggerla dalla crescente minaccia longobarda proveniente da nord.[PARAGRAPH:1]Per questo la protezione di Roma ricadde sul vescovo della citt&#224;, che era ormai la persona pi&#249; potente nella regione. Fu costretto per necessit&#224; a radunare eserciti ed edificare fortezze, per difendere la Citt&#224; Santa dai Longobardi, che stavano chiudendo la morsa su Roma. Col tempo i vescovi diventarono insofferenti del governo di Costantinopoli e cercarono di diventare del tutto indipendenti dall'Impero Romano d'Oriente.[PARAGRAPH:1]I papi trovarono il proprio difensore in Pipino il Breve che invase l'Italia e cacci&#242; i Longobardi dalle zone attorno a Roma, a patto che papa Stefano II approvasse la deposizione dell'ultimo dei re merovingi e l'assunzione del comando di tutte le terre che erano state dei Franchi. Poi don&#242; le terre liberate al papa, creando ufficialmente lo Stato Pontificio.[PARAGRAPH:1]Lo Stato Pontificio sarebbe esistito per altri dieci secoli. Venne smantellato durante gli scontri per l'unit&#224; d'Italia, tra il 1860 e il 1870.</Italian>
-		<Spanish>[TAB]Los Estados Pontificios surgieron de las cenizas del Imperio Romano de occidente. Con el crecimiento del cristianismo, grandes terratenientes romanos empezaron a realizar importantes donaciones de tierra a la Iglesia y, al poco tiempo, el obispo de Roma (el t&#237;tulo de "Papa" no se instituir&#237;a hasta m&#225;s adelante) era el propietario m&#225;s importante de toda Italia, lo que le permiti&#243; sumar un poder pol&#237;tico y econ&#243;mico considerable a su creciente poder espiritual. Durante el siglo VI d. C., el Imperio Romano de oriente (con capital en Constantinopla), se embarc&#243; en la reconquista de Italia, y lleg&#243; a apoderarse de buena parte del sur de la pen&#237;nsula. En un momento determinado llegaron tambi&#233;n a tomar Roma, pero fueron incapaces de defenderla frente al creciente poder de los lombardos, en el norte.[PARAGRAPH:1]De este modo, la protecci&#243;n de la ciudad fue recayendo cada vez m&#225;s en las manos del obispo de Roma, a la saz&#243;n el hombre m&#225;s poderoso de la regi&#243;n. Haciendo de la necesidad virtud, empez&#243; a reclutar ej&#233;rcitos y a levantar fortificaciones para defender la ciudad de los lombardos, cuya amenaza estaba cada vez m&#225;s pr&#243;xima. Poco a poco, los romanos se sacudieron de encima la autoridad de Constantinopla y del Imperio Romano de oriente.[PARAGRAPH:1]En este proceso, los Papas encontraron a su campe&#243;n en la persona de Pipino el Breve, quien, a cambio de la sanci&#243;n del Papa Esteban II al derrocamiento del &#250;ltimo rey merovingio y la conquista de todas sus tierras, invadi&#243; Italia y expuls&#243; a los lombardos de las regiones cercanas a Roma. Pipino entreg&#243; las tierras liberadas al Papa y, de este modo, se crearon oficialmente los Estados Pontificios.[PARAGRAPH:1]Los Estados Pontificios perdurar&#237;an diez siglos. No desaparecer&#237;an del todo hasta las guerras de unificaci&#243;n de Italia, que tuvieron lugar entre las d&#233;cadas de 1860 y 1870.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_THE_POPE_PEDIA</Tag>
-		<English>[H1]The Pope[\H1][NEWLINE][BOLD]Bishop of Rome[\BOLD][PARAGRAPH:2:1]In the seventh century AD, Rome was under the nominal control of the Eastern Roman Empire, based in Constantinople. The Byzantines were unable or unwilling to protect the city from the growing Lombardian menace to the north, and more or less by default control of the city fell to the Catholic Bishop of Rome (who would later be titled "Pope"), the richest and most powerful man in the region. [PARAGRAPH:1]Using a cunning mixture of bribery as well as political and diplomatic power the Bishops had managed to keep the barbarians from the city, but the Lombardian pressure was increasing. Failing to get adequate aid from the Byzantines, the Bishops were forced to seek protection elsewhere. Pope Stephen II turned to Pepin the Short, a Frankish king who had just reunited the Frankish states. In exchange for the Church's sanction to Pepin's conquests, Pepin invaded Italy and drove the Lombards from Rome's gates. He also donated much of the captured land surrounding Rome to the Pope, greatly increasing the size of the Pope's holdings and creating the Papal States.[PARAGRAPH:1]In one stroke, the Pope had driven off the invaders and found a powerful counter to far-away Byzantine. The alliance between the Church and the Carolingians would be further cemented in 800 AD, when Pope Leo III crowned Pepin's son, Charlemagne, the first Emperor of the Holy Roman Empire.</English>
-		<French>[H1]Le Pape[\H1][NEWLINE][BOLD]Ev&#234;que de Rome[\BOLD][PARAGRAPH:2:1]Au VIIe si&#232;cle, Rome &#233;tait symboliquement sous le contr&#244;le de l'Empire romain d'Orient, gouvern&#233; de Constantinople. Les Byzantins n'&#233;taient pas en mesure ? ou ne voulaient pas ? prot&#233;ger la ville de la menace grandissante que repr&#233;sentaient les Lombards au nord et Rome se trouva plac&#233;e sous l'autorit&#233; de son &#233;v&#234;que catholique (qui recevra plus tard le titre de "pape"), l'homme le plus puissant et le plus riche de la r&#233;gion.[PARAGRAPH:1]En m&#234;lant habilement la corruption aux manoeuvres politiques et diplomatiques, les &#233;v&#234;ques de Rome avaient r&#233;ussi &#224; tenir les barbares &#224; l'&#233;cart de la ville, mais les Lombards renfor&#231;aient leur pr&#233;sence. Comme les Byzantins ne leur apportaient pas l'aide n&#233;cessaire, les &#233;v&#234;ques furent oblig&#233;s d'aller chercher une protection ailleurs. Le pape Etienne II fit appel &#224; P&#233;pin le Bref, un roi franc qui venait de r&#233;unir les territoires francs. En &#233;change du consentement de l'Eglise pour ses conqu&#234;tes, P&#233;pin envahit l'Italie, chassa les Lombards arriv&#233;s aux portes de Rome et restitua au pape une grande partie des terres conquises autour de Rome. Il augmenta ainsi consid&#233;rablement les terres du pape et donna naissance aux Etats pontificaux.[PARAGRAPH:1]D'un seul coup, le pape avait repouss&#233; les envahisseurs et trouv&#233; un puissant rempart contre les Byzantins. L'alliance entre l'Eglise et les Carolingiens fut renforc&#233;e en 800 quand le pape L&#233;on III couronna Charlemagne, fils de P&#233;pin, premier empereur du Saint Empire romain.</French>
-		<German>[H1]Der Papst[\H1][NEWLINE][BOLD]Bischof von Rom[\BOLD][PARAGRAPH:2:1]Im 7. Jahrhundert n. Chr. stand Rom unter der Vorherrschaft des Ostr&#246;mischen Reiches, dessen Zentrum Konstantinopel war. Die Byzantiner waren nicht in der Lage oder willens, die Stadt vor der wachsenden Bedrohung durch die Langobarden im Norden zu besch&#252;tzen, und so fiel durch dieses Vers&#228;umnis die Kontrolle &#252;ber die Stadt an den katholischen Bischof von Rom, der sp&#228;ter den Titel Papst verliehen bekam und der reichste und m&#228;chtigste Mann der Region war.[PARAGRAPH:1] Durch eine geschickte Mischung aus Bestechung und politischer wie diplomatischer Macht konnten die Bisch&#246;fe die Barbaren aus der Stadt fernhalten, doch der Druck der Langobarden stieg stetig. Da von den Byzantinern keine ad&#228;quate Hilfe zu erwarten war, mussten sich die Bisch&#246;fe anderweitig um Hilfe bem&#252;hen. Papst Stephan II. wandte sich an Pippin den Kurzen, einen Frankenk&#246;nig, der erst kurz zuvor die fr&#228;nkischen Territorien vereint hatte. Als Gegenleistung f&#252;r die kirchliche Unterst&#252;tzung seiner Eroberungen, fiel Pippin in Italien ein und vertrieb die Langobarden, die bereits vor den Toren Roms standen. Er vermachte auch einen Gro&#223;teil der eingenommenen L&#228;ndereien um Rom dem Papst, wodurch er den kirchlichen Grundbesitz erheblich steigerte und die Grundlagen f&#252;r den Kirchenstaat legte.[PARAGRAPH:1]Mit einem Schlag hatte der Papst die Eindringlinge in die Flucht schlagen und gleichzeitig ein m&#228;chtiges Gegengewicht zum fernen Byzanz gefunden. Die Allianz zwischen der Kirche und den Karolingern wurde im Jahre 800 n. Chr. weiter gefestigt, als Papst Leo III. Pippins Sohn, Karl den Gro&#223;en, zum ersten Kaiser des Heiligen R&#246;mischen Reiches kr&#246;nte.</German>
-		<Italian>[H1]Il Papa[\H1][NEWLINE][BOLD]Il vescovo di Roma[\BOLD][PARAGRAPH:2:1]Durante il settimo secolo d.C. Roma era sotto il controllo nominale dell'Impero Romano d'Oriente, basato a Costantinopoli. I Bizantini erano incapaci o non intenzionati a proteggere la citt&#224; dalla crescente minaccia longobarda, a nord, e pi&#249; o meno automaticamente il controllo della citt&#224; ricadde sul vescovo cattolico di Roma (che pi&#249; tardi verr&#224; chiamato "papa"), il pi&#249; ricco e potente uomo della regione. [PARAGRAPH:1]Usando un'abile combinazione di corruzione e potere diplomatico e politico i vescovi erano riusciti a mantenere i barbari lontani dalla citt&#224;, ma la pressione longobarda stava aumentando. Incapaci di ottenere aiuti adeguati da Bisanzio, i vescovi furono costretti a cercare protezione altrove. Papa Stefano II si rivolse a Pipino il Breve, un re che aveva appena riunito gli Stati franchi. In cambio della ratifica delle sue conquiste da parte della chiesa, Pipino invase l'Italia e cacci&#242; i Longobardi dalle porte di Roma. Don&#242; anche gran parte dei territori catturati attorno a Roma al papa, aumentando di molto la dimensione dei possedimenti papali e creando lo Stato Pontificio.[PARAGRAPH:1]In un colpo solo il papa aveva cacciato gli invasori e trovato un potente alleato contro la lontana Bisanzio. L'alleanza tra la chiesa e i Carolingi sarebbe stata ulteriormente cementata nell'800 d.C., quando papa Leone III incoron&#242; il figlio di Pipino, Carlo Magno, primo imperatore del Sacro Romano Impero.</Italian>
-		<Spanish>[H1]El Papa[\H1][NEWLINE][BOLD]Obispo de Roma[\BOLD][PARAGRAPH:2:1]En el siglo VII d. C., Roma se encontraba nominalmente sometida a la autoridad del Imperio Romano de oriente, con capital en Constantinopla. Los bizantinos, ya sea por debilidad o por desidia, no pudieron proteger a la ciudad de la creciente amenaza lombarda procedente del norte y, de este modo, poco a poco, la ciudad fue cayendo bajo la autoridad de su obispo cat&#243;lico (quien m&#225;s tarde recibir&#237;a el t&#237;tulo de "Papa"), el hombre m&#225;s rico y poderoso de la regi&#243;n. [PARAGRAPH:1]Empleando una mezcla de soborno, poder pol&#237;tico y diplomacia, los obispos de Roma hab&#237;an logrado mantener a raya a los b&#225;rbaros, pero la presi&#243;n de los lombardos estaba aumentando. Al ver que los bizantinos no pod&#237;an o no quer&#237;an prestar la ayuda que la ciudad necesitaba, los obispos tuvieron que buscarla en otra parte. El Papa Esteban II recurri&#243; a Pipino el Breve, un franco que acababa de reunificar todas las tierras de este pueblo. A cambio de la sanci&#243;n de la Iglesia a sus conquistas, Pipino invadi&#243; Italia y alej&#243; a los lombardos de las puertas de Roma. A continuaci&#243;n don&#243; al Papa gran parte de las tierras capturadas en las proximidades de Roma, lo que, adem&#225;s de incrementar enormemente sus posesiones, le permiti&#243; fundar los Estados Pontificios.[PARAGRAPH:1]De un solo golpe, el Papa hab&#237;a expulsado a los invasores y encontrado un poderoso contrapeso frente a la lejana Bizancio. La alianza entre la Iglesia y los carolingios se reforzar&#237;a a&#250;n m&#225;s en el a&#241;o 800 d. C., cuando el Papa Le&#243;n III coronara al hijo de Pipino, Carlomagno, como primer emperador del Sacro Imperio Romano.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_THE_POPE</Tag>
-		<English>The Pope</English>
-		<French>Le Pape</French>
-		<German>Der Papst</German>
-		<Italian>Il Papa</Italian>
-		<Spanish>El Papa</Spanish>
-		<Russian/>
 	</TEXT>
 </Civ4GameText>

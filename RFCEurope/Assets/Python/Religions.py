@@ -34,6 +34,13 @@ tMainzBR = (56,55)
 tPolandTL = (64,43)
 tPolandBR = (78,57)
 
+### Religious Buildings that give Faith Points ###
+tCatholicBuildings = [ con.iCatholicTemple, con.iCatholicMonastery, con.iCatholicCathedral ]
+tOrthodoxBuildings = [ con.iOrthodoxTemple, con.iOrthodoxMonastery, con.iOrthodoxCathedral ]
+tProtestantBuildings = [ con.iProtestantTemple, con.iProtestantSchool, con.iProtestantCathedral ]
+tIslamicBuildings = [ con.iIslamicTemple, con.iIslamicCathedral, con.iIslamicMadrassa ]
+tReligiousWonders = [ con.iMonasteryOfCluny, con.iImperialDiet, con.iKrakDesChevaliers, con.iNotreDame, con.iPalaisPapes, con.iStBasil, con.iSophiaKiev, con.iDomeRock, con.iRoundChurch, con.iWestminster ]
+
 
 ### Reformation Begin ###       
 #Matrix determines how likely the AI is to switch to Protestantism                                                               
@@ -274,14 +281,26 @@ class Religions:
 	def onBuildingBuild(seld, iPlayer, iBuilding ):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
-		if ( iStateReligion == con.iCatholicism and ( iBuilding == con.iCatholicTemple or iBuilding == con.iCatholicMonastery or iBuilding == con.iCatholicCathedral ) ):
+		if ( iStateReligion == con.iCatholicism and ( iBuilding in tCatholicBuildings ) ):
 			pPlayer.changeFaith( 1 )
-		if ( iStateReligion == con.iOrthodoxy and ( iBuilding == con.iOrthodoxTemple or iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral ) ):
+			if ( iBuilding == con.iCatholicCathedral ):
+				pPlayer.changeFaith( 2 )
+		if ( iStateReligion == con.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
 			pPlayer.changeFaith( 1 )
-		if ( iStateReligion == con.iIslam and ( iBuilding == con.iIslamicTemple or iBuilding == con.iIslamicCathedral or iBuilding == con.iIslamicMadrassa ) ):
+			if ( iBuilding == con.iOrthodoxCathedral ):
+				pPlayer.changeFaith( 2 )
+		if ( iStateReligion == con.iIslam and ( iBuilding in tIslamicBuildings  ) ):
 			pPlayer.changeFaith( 1 )
-		if ( iStateReligion == con.iProtestantism and ( iBuilding == con.iProtestantTemple or iBuilding == con.iProtestantCathedral or iBuilding == con.iProtestantSchool ) ):
+			if ( iBuilding == con.iIslamicCathedral ):
+				pPlayer.changeFaith( 2 )
+		if ( iStateReligion == con.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
 			pPlayer.changeFaith( 1 )
+			if ( iBuilding == con.iProtestantCathedral ):
+				pPlayer.changeFaith( 2 )
+		if ( iBuilding in tReligiousWonders ):
+			pPlayer.changeFaith( 3 )
+		if ( iStateReligion != con.iJudaism and iBuilding == con.iTempleMount ):
+			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
 
         def selectRandomCityCiv(self, iCiv):
                 if (gc.getPlayer(iCiv).isAlive()):

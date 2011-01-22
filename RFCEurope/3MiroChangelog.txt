@@ -11,10 +11,21 @@ Done: for BETA 6
 - Blast Furnace now requires Feudalism
 - The Pope no longer collapses due to bad stability
 - Changes Burgundian UB to Winery (extra culture, extra health from Wine), art has not been changed
+- Various Religious wonders now give Faith points
+- Increaded the FP bonus form Cathedrals to 3
+- Increased the requirement for Bulgarian UHV to 60 points
+- Faith points are capped at 60, can be adjusted for every individual religion
+- Pope AI now avoids the Printing Press
+- Added AI cheat code, now some players get bonus for AI to AI battles. We can use that to boost some Ai players and get more historic game (like Ottomans vs Byzantium and Bulgaria)
+- Dutch gets a "hidden" buff on the Faith Points, with only couple of cities, they can never accumulate enough
+- lots of leaderhead and XML text changes from AbsintheRed
 - Bugfix - Manor House used to not give Stability
 - Bugfix - Spanish UP now gives Espionage points
 - Bugfix - Genoa Bank and Corp UHV
-
+- Bugfix - Human now gets only +1 Faith from prosecuting (the AI gets +1, Human used to get +2)
+- Bugfix - Norse get Manorialism as a starting tech
+- Bugfix - French leaders now follow correctly Charlemagne, Joan, Jouis
+- Bugfix - Updated the starting years on the autorun Popup screen (Bulgaria, Hungary, Kiev and Cordoba were off)
 
 Done: for BETA 5
 - added merijn_v1 XML modifications, some unit abilities and removing old and unused XML entries
@@ -76,10 +87,8 @@ TODO:
 - make Religions hate each other even more
 - Rebalance tech speed and starting techs
 - Autorun gets one extra turn sometimes
-- Protestant gets founded in Rome
 - Expose the Civ names code to Python
 - Get the Round Church to give couple of mounted Units
-- French Manor House: Capitulary De Villis
 - No unhappyness from non-state religion doesn't work with Religious Law Civic
 - Check resources around Venice
 - Maybe nerf the Manor House
@@ -87,7 +96,8 @@ TODO:
 - Great Generals leaving for the Crusade?
 - Fix Bad Byzantine stability early on
 - Fix Ottoman bad stability with expansion
-- Make histroical enemies code to help the AI
 - Change the date Joan becomes ruler of France?
 - Norse UHV bug?
 - Change the French and Burgundian UHV
+- Check Genoa 1st Turn culture bug
+- Update starting year bug in Python screen

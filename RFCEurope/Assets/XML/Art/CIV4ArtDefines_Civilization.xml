@@ -127,7 +127,7 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_VENECIA</Type>
+			<Type>ART_DEF_CIVILIZATION_VENEZIA</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Venice.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Venice.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>

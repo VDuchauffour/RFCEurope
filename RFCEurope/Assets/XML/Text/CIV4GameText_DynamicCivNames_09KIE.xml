@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_KIEV_DESC</Tag>
-		<English>The Kievans</English>
-		<French>
-			<Text>Les Kievs</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Kiewer:Die Kiewer:den Kiewern</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>I Persiani</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Persas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#202;&#232;&#229;&#226;&#235;&#255;&#237;&#229;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_KIEV_SHORT_DESC</Tag>
-		<English>Kievan Rus</English>
-		<French>
-			<Text>Kiev</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Kiewer Rus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#202;&#232;&#229;&#226;&#241;&#234;&#224;&#255; &#208;&#243;&#241;&#252;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_KIEV_ADJECTIVE</Tag>
-		<English>Kievan</English>
-		<French>
-			<Text>kiev:kiev:kievs:kievs</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Kiewisch:kiewer:kiewer</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>persiano:persiana:persiani:persiane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#202;&#232;&#229;&#226;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE00</Tag>
 		<English>Kievan Peoples</English>
@@ -232,47 +157,5 @@
 		<French>Province de Kiev</French>
 		<German>Provinz Kiew</German>
 		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_YAROSLAV_PEDIA</Tag>
-		<English>[H1]Yaroslav I the Wise[\H1][NEWLINE][BOLD]Grand Prince of Kievan Rus[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c.988 - 1054
-
-
-	[BOLD]Background:[\BOLD]
-	No background yet.</English>
-		<French>.</French>
-		<German>[H1]Jaroslaw I der Weise[\H1][NEWLINE][BOLD]Großfürst der Kiewer Rus[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 988 - 1054</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_KIEV_PEDIA</Tag>
-		<English>[TAB]The Rus people probably dominated what is now northwestern Russia since the eighth century. In the early ninth they became loosely organized under the Rus Khaganate, which may be regarded as a predecessor state to the Kievan Rus. According to the Primary Chronicle, the earliest chronicle of Kievan Rus, a Varangian named Rurik first established himself in Novgorod in about 860 before moving south and extending his authority to Kiev. 
-[TAB]These Varangians settled in Ladoga, then moved southward to Novgorod eventually reaching Kiev, putting an end to the Khazars' collecting tribute from Kievans. The Kievan Rus was founded by prince Oleg about 880. During the next thirty-five years, Oleg and his warriors subdued the various Eastern Slavic and Finnic tribes. In 907, Oleg led an attack against Constantinople, and in 911 he signed a commercial treaty with the Byzantine Empire as an equal partner. The new Kievan state prospered because it had an abundant supply of furs, beeswax, and honey for export and because it controlled three main trade routes of Eastern Europe: the Volga trade route from the Baltic Sea to the Orient, the Dnieper trade route from the Baltic Sea to the Black Sea, and the trade route from the Khazars to the Germans.
-[TAB]By the reign of Svyatoslav (945-972) Kievan rulers had adopted Slavic religion and names, but their druzhina still consisted primarily of Scandinavians. Svyatoslav's military conquests were astonishing: he dealt lethal blows to two of his strongest neighbours, Khazaria and the Bulgarian Empire, which collapsed soon after his raids.
-[TAB]The region of Kiev dominated the state of Kievan Rus for the next two centuries. The grand prince of Kiev controlled the lands around the city, and his theoretically subordinate relatives ruled in other cities and paid him tribute. The zenith of the state's power came during the reigns of Prince Vladimir the Great (980-1015) and Prince Yaroslav the Wise (1019-1054). Both rulers continued the steady expansion of Kievan Rus that had begun under Oleg.
-[TAB]Vladimir rose to power in Kiev after the death of his father Sviatoslav I in 972 and after defeating his half-brother Yaropolk in 980. As Prince of Kiev, Vladimir's most notable achievement was the Christianization of Kievan Rus, a process that began in 988.
-[TAB]Kievan Rus was not able to maintain its position as a powerful and prosperous state, in part because of the amalgamation of disparate lands under the control of a ruling clan. As the members of that clan became more numerous, they identified themselves with regional interests rather than with the larger patrimony. Thus, the princes fought among themselves, frequently forming alliances with outside groups such as the Polovtsians, Poles, and Hungarians. During the years from 1054 to 1224 no fewer than 64 principalities had a more or less ephemeral existence, 293 princes put forward succession claims, and their disputes led to 83 civil wars.
-[TAB]The Crusades brought a shift in European trade routes that accelerated the decline of Kievan Rus. In 1204 the forces of the Fourth Crusade sacked Constantinople, making the Dnieper trade route marginal. As it declined, Kievan Rus splintered into many principalities and several large regional centers. The three most powerful of them were the Halych-Volhynia (eventually conquered by Poland and Lithuania), Novgorod Republic (later incorporated into Muscovy) and Vladimir-Suzdal, which gradually evolved into the Grand Duchy of Moscow.</English>
-		<French>.</French>
-		<German>[TAB]Das Volk der Rus beherrschten seit dem achten Jahrhundert wahrscheinlich das, was jetzt das nordwestliche Russland ist. Im frühen neunten Jahrhundert wurden sie lose organisiert unter dem Khanat der Rus, der als ein Vorgänger-Staat der Kiewer Rus betrachtet werden kann. Gemäß der Primären Chronik, der frühsten Chronik der Kiewer Rus, setzte sich ungefähr 860 zuerst ein Waräger mit dem Namen Rurik in Novgorod, bevor er seine Autorität südlich nach Kiew ausweitete. 
-[TAB]Diese Waräger siedelten in Ladoga, zogen dann südwärts nach Novgorod und erreichten schließlich Kiew, den Chasaren, die von den Kiewern Tribut forderten, ein Ende setzend. Die Kiewer Rus wurde von Prinz Oleg ungefähr 880 gegründet. Während der nächsten fünfunddreißig Jahre unterwarfen Oleg und seine Krieger die zahlreichen östlichen finnischen und slawischen Stämme. 907 führte Oleg einen Angriff gegen Konstantinopel, und 911 unterzeichnete er als ein gleichwertiger Partner einen kommerziellen Vertrag mit dem Byzantinischen Reich. Der neue Kiewer Staat gedieh, weil er einen reichen Bestand an Pelzen, Bienenwachs und Honig für den Export hatte, und weil er drei Haupthandelswege Osteuropas kontrollierte: Der Wolga Handelsweg von der Ostsee zum Orient, den Dnjeper-Handelsweg von der Ostsee zum Schwarzen Meer, und den Handelsweg von den Chasaren zu den Deutschen.
-[TAB]Bis zur Herrschaft Swjatoslaws (945-972) hatten die Kiewer Führer die slawische Religion und slawische Namen angenommen, aber ihre Druschina (persönliches Heergefolge eines russischen Fürsten) bestand noch in erster Linie aus Skandinaviern. Die Eroberungen Swjatoslaws waren erstaunlich: Er fügte zwei seiner stärksten Nachbarn (das chasarische und das bulgarische Reich, das bald nach seinen Überfällen zusammenbrach) tödliche Schläge zu.
-[TAB]Das Gebiet Kiews beherrschte den Staat der Kiewer Rus für die nächsten zwei Jahrhunderte. Der Großfürst Kiews kontrollierte die Länder um die Stadt, und seine theoretisch untergeordneten Verwandten herrschten in anderen Städten und zahlten ihm Tribut.Der Zenit der Macht des Staates kam während der Herrschaft von Fürst Wladimir dem Großen (980-1015) und Fürst Yaroslav des Weisen (1019-1054). Beide Herrscher setzten die stetige Expansion der Kiewer Rus fort, die unter Oleg begonnen hatte.
-[TAB]Wladimir kam in Kiew an die Macht nach dem Tod seines Vaters Swjatoslaw I. 972 und nachdem er seinen Halbbruders Yaropolk 980 besiegte. Als Fürst Kiews war die bemerkenswerteste Errungenschaft Wladimirs die Christianisierung der Kiewer Rus, was 988 begann.
-[TAB]Die Kiewer Rus war nicht im Stande, seine Position als ein starker und wohlhabender Staat aufrecht zu erhalten, zum Teil aufgrund des Zusammenschlusses von ganz verschiedenen Ländern unter der Kontrolle eines herrschenden Klans. Als die Mitglieder dieses Klans zahlreicher wurden, identifizierten diese sich eher mit Regionalinteressen als mit dem größeren Erbgut.
-[TAB]So bekämpften die Fürsten sich gegenseitig, oftmals Bündnisse mit äußeren Gruppen wie die Kyptschaken, die Polen, und die Ungarn eingehend. Von 1054 bis 1224 hatten nicht weniger als 64 Fürstentümer eine mehr oder weniger kurzlebige Existenz, 293 Fürsten brachten Erbansprüche vor und ihre Konflikte führten zu 83 Bürgerkriegen.
-[TAB]Die Kreuzzüge führten zu einer Verschiebung der europäischen Handelswege, die den Niedergang der Kiewer Rus beschleunigten. 1204 nahmen die Kräfte des Vierten Kreuzzugs Konstantinopel ein und machten den Dnjeper-Handel marginal. Als der Handel abnahm, zersplitterte die Kiewer Rus in viele Fürstentümer und mehrere große Regionalzentren. Die drei stärksten waren unter ihnen Halytsch-Wolhynien (schließlich erobert von Polen und Litauen), die Republik Novgorod (später eingegliedert in das Großfürstentum Moskau) und das Fürstentum Wladimir-Susdal, das sich allmählich zum Großfürstentum Moskau entwickelte.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_YAROSLAV</Tag>
-		<English>Yaroslav</English>
-		<French>Iaroslav</French>
-		<German>Jaroslaw</German>
-		<Italian>Jaroslav</Italian>
-		<Spanish>Yaroslav</Spanish>
-		<Russian/>
 	</TEXT>
 </Civ4GameText>

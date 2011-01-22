@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ENGLAND_DESC</Tag>
-		<English>The English</English>
-		<French>
-			<Text>Les Anglais</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Engl&#228;nder:Die Engl&#228;nder:den Engl&#228;ndern</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Gli Inglesi</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Ingl&#233;ses</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#192;&#237;&#227;&#235;&#232;&#247;&#224;&#237;&#229;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ENGLAND_SHORT_DESC</Tag>
-		<English>England</English>
-		<French>
-			<Text>Angleterre</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>England</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>L'Inghilterra:l'Inghilterra:dell'Inghilterra:d'Inghilterra</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Inglaterra</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#192;&#237;&#227;&#235;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Tag>
-		<English>English</English>
-		<French>
-			<Text>anglais:anglaise:anglaises:anglaises</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Englisch:englischen:englische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Inglese:Inglese:Inglesi:Inglesi</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>ingl&#233;s:inglesa:ingleses:inglesas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG00</Tag>
 		<English>Anglo-Saxon Peoples</English>
@@ -248,28 +173,5 @@
 		<Italian>Provincia d'Inghilterra</Italian>
 		<Spanish>Provincia de Inglaterra</Spanish>
 		<Russian/>
-	</TEXT>
-        <TEXT>
-		<Tag>TXT_KEY_LEADER_WILLIAM</Tag>
-		<English>William I</English>
-		<French>Guillaume Ier</French>
-		<German>Wilhelm I.</German>
-		<Italian>Guglielmo I</Italian>
-		<Spanish>Guillermo I</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_WILLIAM_PEDIA</Tag>
-		<English>[H1]William the Conqueror[\H1]
-[BOLD]First Norman King of England, Duke of Normandy[\BOLD]
-[BOLD]Lived:[\BOLD] c.1028 - September 9, 1087 AD
-
-
-	[BOLD]Background:[\BOLD]
-	No background yet.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
 	</TEXT>
 </Civ4GameText>

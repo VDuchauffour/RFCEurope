@@ -8893,7 +8893,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!--Hungarian Huzar-->
+		<UnitInfo> <!--Hungarian Huszar-->
 			<Class>UNITCLASS_HEAVY_LANCER</Class>
 			<Type>UNIT_HUNGARIAN_LANCER</Type>
 			<UniqueNames/>

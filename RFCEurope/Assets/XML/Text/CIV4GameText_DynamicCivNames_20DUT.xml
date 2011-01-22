@@ -2,83 +2,8 @@
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Dynamic Civ Names - Game Text -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_CIV_DUTCH_DESC</Tag>
-		<English>The Dutch</English>
-		<French>
-			<Text>Les Hollandais</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Holländer:Die Holländer:den Holländern</Text>
-			<Gender>Male:Male:Male</Gender>
-			<Plural>1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Gli Olandesi</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Los Holand&#233;ses</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#195;&#238;&#235;&#235;&#224;&#237;&#228;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_DUTCH_SHORT_DESC</Tag>
-		<English>Netherlands</English>
-		<French>
-			<Text>Pays-Bas</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Niederlande</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Olanda</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Holanda</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_DUTCH_ADJECTIVE</Tag>
-		<English>Dutch</English>
-		<French>
-			<Text>hollandais:hollandaise:hollandais:hollandaises</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>
-			<Text>Holl&#228;ndisch:holl&#228;ndischen:holl&#228;ndische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>olandese:olandesi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>holand&#233;s:holandesa:holandeses:holandesas</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>&#195;&#238;&#235;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
 		<English>Batavian Peoples</English>

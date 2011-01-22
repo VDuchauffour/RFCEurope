@@ -4304,7 +4304,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HUNGARIAN_LANCER</Type>
-			<Button>Art/Interface/Buttons/Units/Lancer.dds</Button>
+			<Button>Art/Units/hungarian huszar/huszarbutton.dds</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4351,8 +4351,8 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HUSSAR_CAVALRY</Type>
-			<Button>Art/Interface/Buttons/Units/Hussar.dds</Button>
+			<Type>ART_DEF_UNIT_HUSSAR_CAVALRY_HUNGARIAN</Type>
+			<Button>Art/Units/hungarian hussar cavalry/button_huszar.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>

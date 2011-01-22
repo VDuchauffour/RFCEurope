@@ -681,7 +681,7 @@
 			<Description>TXT_KEY_CIV_DUTCH_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_DUTCH_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_DUTCH_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NETHERLANDS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_DUTCH_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1580AD</StartingYear>
 			<LoadingTime>60</LoadingTime>
@@ -904,6 +904,10 @@
 					<LeaderName>LEADER_ELIZABETH</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_GEORGE_III</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ENGLAND_SELECT</CivilizationSelectionSound>
@@ -914,7 +918,7 @@
 			<Description>TXT_KEY_CIV_FRANKIA_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_FRANKIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_FRANKIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_FRANCE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_FRANKIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
 			<LoadingTime>0</LoadingTime>
@@ -1580,7 +1584,7 @@
 			<Description>TXT_KEY_CIV_NORSE_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_NORSE_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NORSE_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_NORSE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_NORSE_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>770AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
@@ -1672,6 +1676,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_HARALD_HARDRADA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HAAKON_IV</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>
@@ -1894,6 +1902,10 @@
 					<LeaderName>LEADER_JOAO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_MARIA_II</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
@@ -2111,7 +2123,7 @@
 			<Description>TXT_KEY_CIV_TURKEY_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_TURKEY_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_TURKEY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_OTTOMAN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_TURKEY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1300AD</StartingYear>
 			<LoadingTime>30</LoadingTime>
@@ -2217,11 +2229,11 @@
 			<CivilizationActionSound>AS3D_OTTOMAN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_VENECIA</Type>
-			<Description>TXT_KEY_CIV_VENECIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_VENECIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_VENECIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_VENECIA_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_VENEZIA</Type>
+			<Description>TXT_KEY_CIV_VENEZIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_VENEZIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_VENEZIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_VENEZIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>800AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
@@ -2238,7 +2250,7 @@
 			<!-- 3Miro End Update -->
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_VENETIAN_RED_AND_WHITE</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_VENECIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_VENEZIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -2333,6 +2345,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_DANDOLO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ANDREA_DANDOLO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2929,7 +2945,6 @@
 				<City>TXT_KEY_CITY_NAME_VANDAL</City>
 				<City>TXT_KEY_CITY_NAME_GOTH</City>
 				<City>TXT_KEY_CITY_NAME_ANGLE</City>
-				<City>TXT_KEY_CITY_NAME_MAGYAR</City>
 				<City>TXT_KEY_CITY_NAME_KHAZAK</City>
 				<City>TXT_KEY_CITY_NAME_BULGAR</City>
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
@@ -3056,7 +3071,6 @@
 				<City>TXT_KEY_CITY_NAME_VANDAL</City>
 				<City>TXT_KEY_CITY_NAME_GOTH</City>
 				<City>TXT_KEY_CITY_NAME_ANGLE</City>
-				<City>TXT_KEY_CITY_NAME_MAGYAR</City>
 				<City>TXT_KEY_CITY_NAME_KHAZAK</City>
 				<City>TXT_KEY_CITY_NAME_BULGAR</City>
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>

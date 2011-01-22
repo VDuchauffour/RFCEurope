@@ -460,7 +460,7 @@ class Victory:
                         if ( iGameTurn == i1401AD and self.getGoal( iBulgaria, 0 ) == -1 ): # see onCityAquire, if no cities lost so far
                                 self.setGoal( iBulgaria, 0, 1 )
 
-                        if ( iGameTurn <= i1449AD and self.getGoal( iBulgaria, 2 ) == -1 and pBulgaria.getStateReligion() == con.iOrthodoxy and pBulgaria.getFaith() >= 50 ):
+                        if ( iGameTurn <= i1449AD and self.getGoal( iBulgaria, 2 ) == -1 and pBulgaria.getStateReligion() == con.iOrthodoxy and pBulgaria.getFaith() >= 60 ):
                                 self.setGoal( iBulgaria, 2, 1 )
                         	
                         if ( iGameTurn == i1449AD+1 and self.getGoal( iBulgaria, 2 ) == -1 ):
