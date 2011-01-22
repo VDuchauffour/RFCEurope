@@ -22,3 +22,4 @@ Info tags for Corporation Knights and Infirmary
 New Diplo music
 Removed Barbarian leaderhead from the civilopedia
 Basic information for the leaderheads (english only)
+New art for the Burgundian Winery
