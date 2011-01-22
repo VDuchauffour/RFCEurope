@@ -9,9 +9,6 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 This is Beta 5. Changes since Beta 4:
 Art cleanup
 XML cleanup
-New movie for the Magna Carta
-Restored Arabian Longswordsman art
-Fixed Papal Culture bug
 Fixed Venetian UHV
 Moved starting dates for Hungary and Kiev 
 Split up FPK
@@ -23,3 +20,4 @@ New Diplo music
 Removed Barbarian leaderhead from the civilopedia
 Basic information for the leaderheads (english only)
 New art for the Burgundian Winery
+New pedia texts for several things
