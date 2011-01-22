@@ -1110,23 +1110,15 @@
 		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
 		<French>
 			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
 		</French>
 		<German>
 			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
 		</German>
 		<Italian>
 			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
 			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Allows contruction of non-State Religion Buildings and Wonders</Russian>
 	</TEXT>
