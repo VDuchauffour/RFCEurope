@@ -681,6 +681,7 @@
 	<ElementType name="bStabilityFoundBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityConquestBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityCommerceBonus" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAllowNonStateReligionBuildings" content="textOnly" dt:type="boolean"/>
 	<!-- Rhye - end -->
 	<ElementType name="Upkeep" content="textOnly"/>
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
@@ -823,6 +824,7 @@
 		<element type="bStabilityFoundBonus"/>
 		<element type="bStabilityConquestBonus"/>
 		<element type="bStabilityCommerceBonus"/>
+		<element type="bAllowNonStateReligionBuildings"/>
 		<!-- Rhye - end -->
 		<element type="YieldModifiers"/>
 		<element type="CapitalYieldModifiers"/>
