@@ -23,6 +23,12 @@ Done: for BETA 6
 - merijn_v1 updates art for Burgundian Winery
 - Free Religion now allows construction of Cathedrals and Wonders from all religions
 - The Brothers at War property only affects Orthodox players (or playes associated with the Round Church's State Religion tag)
+- FP capped at 100, bonuses reduces, saints give 10FP, wonders and cathedrals give 4 and 6 FP respectively
+- Changed Kiev UHV, Religious buildings have to be build by 1250AD and instead of the Grain, one has to produce 20,000 food by 1300AD
+- Changes France second UHV, instead of wonders, they have to conquer Jerusalem. Otherwise, you get the same 2nd and 3d UHV, just build like crazy.
+- Changes Burgundy UHV, they have to produce 10,000 culture, culture-bombs don't count (probably needs balancing)
+- Added feedback on the UHV progress for Arabia, Burgundy, Norse and Kiev (will add more later)
+- Merged some code in the C++ to speed things up (thanks to Sephi and Edead)
 - Bugfix - Manor House used to not give Stability
 - Bugfix - Spanish UP now gives Espionage points
 - Bugfix - Genoa Bank and Corp UHV
@@ -30,6 +36,8 @@ Done: for BETA 6
 - Bugfix - Norse get Manorialism as a starting tech
 - Bugfix - French leaders now follow correctly Charlemagne, Joan, Jouis
 - Bugfix - Updated the starting years on the autorun Popup screen (Bulgaria, Hungary, Kiev and Cordoba were off)
+- Bugfix - it was that Burgundy loses an UHV if they lose a city to France or Germany, this was leftover from an older UHV
+- Bugfix - Norse city razing UHV works now
 
 Done: for BETA 5
 - added merijn_v1 XML modifications, some unit abilities and removing old and unused XML entries
@@ -100,6 +108,5 @@ TODO:
 - Great Generals leaving for the Crusade?
 - Fix Bad Byzantine stability early on
 - Fix Ottoman bad stability with expansion
-- Norse UHV bug?
-- Change the French and Burgundian UHV
 - Check Genoa 1st Turn culture bug
+- EDEAD: You might also want to merge the parts of Better BTS AI that are in SoI, the change in plot danger calculations is also a huge speed boost. Workers, settlers etc. only need to know if danger is >0 and BTS normally counts all the units nearby, so most of the calculations are in vain, and BBAI fixes that.

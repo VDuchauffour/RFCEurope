@@ -284,21 +284,21 @@ class Religions:
 		if ( iStateReligion == con.iCatholicism and ( iBuilding in tCatholicBuildings ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == con.iCatholicCathedral ):
-				pPlayer.changeFaith( 2 )
+				pPlayer.changeFaith( 3 )
 		if ( iStateReligion == con.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == con.iOrthodoxCathedral ):
-				pPlayer.changeFaith( 2 )
+				pPlayer.changeFaith( 3 )
 		if ( iStateReligion == con.iIslam and ( iBuilding in tIslamicBuildings  ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == con.iIslamicCathedral ):
-				pPlayer.changeFaith( 2 )
+				pPlayer.changeFaith( 3 )
 		if ( iStateReligion == con.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == con.iProtestantCathedral ):
-				pPlayer.changeFaith( 2 )
+				pPlayer.changeFaith( 3 )
 		if ( iBuilding in tReligiousWonders ):
-			pPlayer.changeFaith( 3 )
+			pPlayer.changeFaith( 6 )
 		if ( iStateReligion != con.iJudaism and iBuilding == con.iTempleMount ):
 			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
 

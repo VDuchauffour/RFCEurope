@@ -479,18 +479,18 @@ class RFCEBalance:
 		# iFP_Displomacy: iAttitude += 	iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of an attitude point
 		
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 35, 60 )
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Civic, 66, 60 )
+		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 20, 100 )
+		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Civic, 50, 100 )
 		
-		gc.setReligionBenefit( con.iIslam, con.iFP_Growth, 50, 60 )
-		gc.setReligionBenefit( con.iIslam, con.iFP_Units, 50, 60 )
+		gc.setReligionBenefit( con.iIslam, con.iFP_Growth, 50, 100 )
+		gc.setReligionBenefit( con.iIslam, con.iFP_Units, 50, 100 )
 		
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Science, 50, 60 )
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Production, 50, 60 )
+		gc.setReligionBenefit( con.iProtestantism, con.iFP_Science, 30, 100 )
+		gc.setReligionBenefit( con.iProtestantism, con.iFP_Production, 30, 100 )
 		
-		gc.setReligionBenefit( con.iCatholicism, con.iFP_Displomacy, 10, 60 )
-		gc.setReligionBenefit( con.iIslam, con.iFP_Displomacy, 10, 60 )
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Displomacy, 10, 60 )
+		gc.setReligionBenefit( con.iCatholicism, con.iFP_Displomacy, 6, 100 )
+		gc.setReligionBenefit( con.iIslam, con.iFP_Displomacy, 10, 100 )
+		gc.setReligionBenefit( con.iProtestantism, con.iFP_Displomacy, 6, 100 )
 
 		# every nation gets a land tile that is normally impassible and now pass through it
 		gc.setStrategicTile( iVenecia, 56, 35 )

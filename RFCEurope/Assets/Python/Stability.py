@@ -183,8 +183,9 @@ class Stability:
 			self.setParameter(utils.getHumanID(), iParExpansionE, False, 5) 
                 elif (iHandicap == 2):
                         self.setStability(utils.getHumanID(), -10)
-			self.setParameter(utils.getHumanID(), iParExpansionE, False, -10) 
-
+			self.setParameter(utils.getHumanID(), iParExpansionE, False, -10)
+                # 3Miro: give 10pnts Stability bonus to Byzantium on start
+                self.setStability(con.iByzantium, self.getStability( con.iByzantium + 10 ) )
 
 
         def checkTurn(self, iGameTurn):
