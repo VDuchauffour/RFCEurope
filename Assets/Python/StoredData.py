@@ -109,6 +109,8 @@ class StoredData:
                                     'iNumSinks': 0,
                                     'lBabylonianTechs': [-1, -1, -1],    
 				    'lColonies':[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+				    'iKievFood': 0,
+				    'iBurgundyCulture': 0,
                                     #'iMediterraneanColonies': 0,
                                     'iPortugueseColonies': 0,
 				    'iNorseRazed':0,

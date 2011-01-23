@@ -109,6 +109,7 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 i1000AD = con.i1000AD
 i1101AD = con.i1101AD
 i1200AD = con.i1200AD
+i1248AD = con.i1248AD
 i1281AD = con.i1281AD
 i1300AD = con.i1300AD
 i1350AD = con.i1350AD
@@ -220,6 +221,24 @@ class Victory:
         def setNorseRazed( self, iNewValue ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['iNorseRazed'] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+
+        def getKievFood( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['iKievFood']
+
+        def setKievFood( self, iNewValue ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['iKievFood'] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+
+        def getBurgundyCulture( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['iBurgundyCulture']
+
+        def setBurgundyCulture( self, iNewValue ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['iBurgundyCulture'] = iNewValue
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getColonies( self, iCiv ):
@@ -341,13 +360,25 @@ class Victory:
                                 else:
                                         self.setGoal( iBurgundy, 0, 0 )
 
-                        if (iGameTurn == con.i1300AD and self.getGoal(iBurgundy, 1) == -1 ):
-                                pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
-                                if ( pJPlot.isCity()):
-                                        if ( pJPlot.getPlotCity().getOwner() == iBurgundy ):
-                                                self.setGoal(iBurgundy,1,1)
-                                        else:
-                                                self.setGoal(iBurgundy,1,0)
+                        #if (iGameTurn == con.i1300AD and self.getGoal(iBurgundy, 1) == -1 ):
+                        #        pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+                        #        if ( pJPlot.isCity()):
+                        #                if ( pJPlot.getPlotCity().getOwner() == iBurgundy ):
+                        #                        self.setGoal(iBurgundy,1,1)
+                        #                else:
+                        #                        self.setGoal(iBurgundy,1,0)
+                        
+                        if ( iGameTurn <= i1300AD and self.getGoal( iBurgundy, 1 ) == -1 ):
+                                iCulture = self.getBurgundyCulture() + pBurgundy.countCultureProduced()
+                                #print(" Kiev Food: ",iFood)
+                                if ( iCulture > 10000 ):
+                                        self.setGoal( iBurgundy, 0, 1 )
+                                else:
+                                        self.setBurgundyCulture( iCulture )
+                                        
+                        if ( iGameTurn == i1300AD + 1 and self.getGoal( iBurgundy, 1 ) == -1 ):
+                                self.setGoal( iBurgundy, 1, 0 )
+
 
                         if ( iGameTurn == i1470AD and self.getGoal( iBurgundy, 2 ) == -1 ):
                                 tOwnedLuxes = []
@@ -398,24 +429,34 @@ class Victory:
                                         self.setGoal(iFrankia, 0, 1)
                                 else:
                                         self.setGoal(iFrankia, 0, 0)
-			
-                        if ( iGameTurn == con.i1401AD and self.getGoal( iFrankia, 1) == -1 ):
-                                lBuildingList = [con.iNotreDame,con.iMonasteryOfCluny,con.iPalaisPapes,con.iFontainebleau,con.iKrakDesChevaliers]
-                                iNumCities = pFrankia.getNumCities()
-                                lBuildingCounter = [0,0,0,0,0]
-                                for iCity in range(iNumCities):
-                                        pCity = pFrankia.getCity(iCity)
-                                        for index,building in enumerate(lBuildingList):
-                                                if (pCity.hasBuilding(building)):
-                                                        lBuildingCounter[index] += 1
-                                bBuildingGoal = True
-                                for count in lBuildingCounter:
-                                        if count < 1:
-                                                bBuildingGoal = False
-                                if bBuildingGoal:
-                                        self.setGoal( iFrankia, 1, 1 ) 
+
+                        if (iGameTurn == con.i1300AD and self.getGoal(iFrankia, 1) == -1 ):
+                                pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+                                if ( pJPlot.isCity()):
+                                        if ( pJPlot.getPlotCity().getOwner() == iFrankia ):
+                                                self.setGoal(iFrankia,1,1)
+                                        else:
+                                                self.setGoal(iFrankia,1,0)
                                 else:
-                                        self.setGoal( iFrankia, 1, 0 ) 
+                                        self.setGoal(iFrankia,1,0)
+
+#                        if ( iGameTurn == con.i1401AD and self.getGoal( iFrankia, 1) == -1 ):
+#                                lBuildingList = [con.iNotreDame,con.iMonasteryOfCluny,con.iPalaisPapes,con.iFontainebleau,con.iKrakDesChevaliers]
+#                                iNumCities = pFrankia.getNumCities()
+#                                lBuildingCounter = [0,0,0,0,0]
+#                                for iCity in range(iNumCities):
+#                                        pCity = pFrankia.getCity(iCity)
+#                                        for index,building in enumerate(lBuildingList):
+#                                                if (pCity.hasBuilding(building)):
+#                                                        lBuildingCounter[index] += 1
+#                                bBuildingGoal = True
+#                                for count in lBuildingCounter:
+#                                        if count < 1:
+#                                                bBuildingGoal = False
+#                                if bBuildingGoal:
+#                                       self.setGoal( iFrankia, 1, 1 ) 
+#                               else:
+#                                        self.setGoal( iFrankia, 1, 0 )
 
                         if ( self.getGoal( iFrankia, 2 ) == - 1 ):
                                 if ( self.getColonies( iFrankia ) > 5 ):
@@ -570,11 +611,22 @@ class Victory:
 					
                 elif ( iPlayer == iKiev and pKiev.isAlive() ):
 		  
-                        if ( iGameTurn == i1300AD and self.getGoal( iKiev, 0 ) == - 1 ):
-                                if ( self.getOwnedGrain( pKiev ) >= 10 ):
+                        #if ( iGameTurn == i1300AD and self.getGoal( iKiev, 0 ) == - 1 ):
+                        #        if ( self.getOwnedGrain( pKiev ) >= 10 ):
+                        #                self.setGoal( iKiev, 0, 1 )
+                        #        else:
+                        #                self.setGoal( iKiev, 0, 0 )
+
+                        if ( iGameTurn <= i1300AD and self.getGoal( iKiev, 0 ) == -1 ):
+                                iFood = self.getKievFood() + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
+                                #print(" Kiev Food: ",iFood)
+                                if ( iFood > 20000 ):
                                         self.setGoal( iKiev, 0, 1 )
                                 else:
-                                        self.setGoal( iKiev, 0, 0 )
+                                        self.setKievFood( iFood )
+
+                        if ( iGameTurn == i1300AD + 1 and self.getGoal( iKiev, 0 ) == -1 ):
+                                self.setGoal( iKiev, 0, 0 )
 			
                         if ( iGameTurn == i1350AD and self.getGoal( iKiev, 1 ) == - 1 ):
                                 if ( gc.doesOwnCities( iKiev, tKievControl[0], tKievControl[1], tKievControl[2], tKievControl[3] ) == 11 ):
@@ -582,7 +634,7 @@ class Victory:
                                 else:
                                         self.setGoal( iKiev, 1, 0 )
 					
-                        if ( iGameTurn == i1431AD+1 and self.getGoal( iKiev, 2 ) == - 1):
+                        if ( iGameTurn == i1248AD+1 and self.getGoal( iKiev, 2 ) == - 1):
                                 self.setGoal( iKiev, 2, 0 )
 				
                 elif ( iPlayer == iHungary and pHungary.isAlive() ):
@@ -920,12 +972,6 @@ class Victory:
                                         if (self.getGoal(iBulgaria, 0) == -1):
                                                 if (playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
                                                         self.setGoal(iBulgaria, 0, 0)
-                elif (iPlayer == iBurgundy):
-                        if ( pBurgundy.isAlive()):
-                                if (bConquest):
-                                        if ( self.getGoal(iBurgundy, 1) == -1 ):
-                                                if(playerType == iGermany or playerType == iFrankia ):
-                                                        self.setGoal(iBurgundy,1,0 )
 
                 elif ( iPlayer == iMoscow ):
                         if ( pMoscow.isAlive() ):
@@ -951,7 +997,7 @@ class Victory:
                 if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
                         if (pNorse.isAlive()):
                                 if (self.getGoal(iNorse,2) == -1):
-                                        iVictim = city.iOwner()
+                                        iVictim = city.getOwner()
                                         if ( iVictim < iNumPlayers ):
                                                 ioldrazed = self.getNorseRazed()
                                                 if (ioldrazed >= 9):
@@ -982,20 +1028,19 @@ class Victory:
                 if ( iPlayer == iKiev ):
                         if ( pKiev.isAlive() ):
                                 if ( self.getGoal( iKiev, 2 ) == -1 ):
-                                        if ( iGameTurn <= i1600AD ):
-                                                if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral ):
-                                                        iNumCities = pKiev.getNumCities()
-                                                        if ( iNumCities > 7 ): # if there are enough cities
-                                                                iCathedralCounter = 0
-                                                                iMonasteryCounter = 0
-                                                                for iCity in range(iNumCities):
-                                                                        pCity = pKiev.getCity(iCity)
-                                                                        if (pCity.hasBuilding(con.iOrthodoxCathedral)):
-                                                                                iCathedralCounter += 1
-                                                                        if (pCity.hasBuilding(con.iOrthodoxMonastery)):
-                                                                                iMonasteryCounter += 1
-                                                                        if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
-                                                                                self.setGoal( iKiev, 2, 1 ) 
+                                        if ( iBuilding == con.iOrthodoxMonastery or iBuilding == con.iOrthodoxCathedral ):
+                                                iNumCities = pKiev.getNumCities()
+                                                if ( iNumCities > 7 ): # if there are enough cities
+                                                        iCathedralCounter = 0
+                                                        iMonasteryCounter = 0
+                                                        for iCity in range(iNumCities):
+                                                                pCity = pKiev.getCity(iCity)
+                                                                if (pCity.hasBuilding(con.iOrthodoxCathedral)):
+                                                                        iCathedralCounter += 1
+                                                                if (pCity.hasBuilding(con.iOrthodoxMonastery)):
+                                                                        iMonasteryCounter += 1
+                                                                if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
+                                                                        self.setGoal( iKiev, 2, 1 ) 
                 # Sedna17: Polish UHV changed again                 	                	
                 elif ( iPlayer == iPoland ):
                         if ( pPoland.isAlive() ):

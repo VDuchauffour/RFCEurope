@@ -248,6 +248,39 @@ class RFCUtils:
                                 iCol += 1
                 return tCol[iCol]
 
+        # 3Miro: BEGIN Utilities for the extra UHV info
+        def getBurgundyCulture( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                if ( scriptDict['lGoals'][con.iBurgundy][1] == -1 ):
+                        return scriptDict['iBurgundyCulture']
+                else:
+                        return -1
+                        
+        def getArabianInfluence( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                if ( scriptDict['lGoals'][con.iArabia][1] == -1 ):
+                        return gc.getGame().calculateReligionPercent( con.iIslam )
+                else:
+                        return -1
+                        
+        def getNorseRazed( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                if ( scriptDict['lGoals'][con.iNorse][1] == -1 ):
+                        return scriptDict['iNorseRazed']
+                else:
+                        return -1
+                        
+        def getKievFood( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                if ( scriptDict['lGoals'][con.iKiev][0] == -1 ):
+                        return scriptDict['iKievFood']
+                else:
+                        return -1
+                        
+        
+
+        # 3Miro: END Utilities
+
             
         #Plague
         def getRandomCity(self, iPlayer):
