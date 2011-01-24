@@ -288,9 +288,11 @@
         <TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY</Tag>
 		<English>Winery</English>
-		<French>Winery</French>
-		<German>Winery</German>
-		<Italian/><Spanish/><Russian>Winery</Russian></TEXT>
+		<French>Entreprise vinicole</French>
+		<German>Kellerei</German>
+		<Italian>Cantina</Italian>
+		<Spanish>Bodega</Spanish>
+		<Russian>Winery</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA</Tag>
 		<English>Noria</English>
