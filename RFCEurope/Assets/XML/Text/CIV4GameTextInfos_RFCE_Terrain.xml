@@ -97,4 +97,28 @@
 		<Italian>Clear [LINK=FEATURE_MUD]Mud[\LINK]</Italian>
 		<Spanish>Clear [LINK=FEATURE_MUD]Mud[\LINK]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_WINERY</Tag>
+		<English>Vineyard</English>
+		<French>
+			<Text>Exploitation vinicole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Weingut</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Azienda vinicola:Aziende vinicole</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bodega:Bodegas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
 </Civ4GameText>

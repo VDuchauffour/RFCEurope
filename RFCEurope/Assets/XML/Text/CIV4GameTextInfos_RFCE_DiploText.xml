@@ -487,11 +487,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IVAN_IV_1</Tag>
-		<English>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the {OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</English>
-		<French>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the {OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</French>
-		<German>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the {OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</German>
-		<Italian>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the {OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</Italian>
-		<Spanish>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the {OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</Spanish>
+		<English>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the [OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</English>
+		<French>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the [OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</French>
+		<German>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the [OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</German>
+		<Italian>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the [OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</Italian>
+		<Spanish>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the [OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IVAN_IV_2</Tag>
