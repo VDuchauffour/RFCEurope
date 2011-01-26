@@ -13261,7 +13261,7 @@
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
 			<Type>BUILDING_ISLAMIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Description>
+			<Description>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -13623,7 +13623,7 @@
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ISLAMIC_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Description>
+			<Description>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>

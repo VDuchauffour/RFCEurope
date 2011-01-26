@@ -18,133 +18,161 @@
 		<English>Archery Range</English>
 		<French>Atelier de Tir &#224; l'Arc</French>
 		<German>Bogenschie&#223;anlage</German>
-		<Italian/><Spanish/><Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian></TEXT>
+		<Italian>Gamma di tiro con l'arco</Italian>
+		<Spanish>Gama de tiro al arco</Spanish>
+		<Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_APOTHECARY</Tag>
 		<English>Apothecary</English>
 		<French>Apothicaire</French>
 		<German>Apotheke</German>
-		<Italian/><Spanish/><Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian></TEXT>
+		<Italian>Farmacista</Italian>
+		<Spanish>Boticario</Spanish>
+		<Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
 		<English>Wharf</English>
 		<French>Quai</French>
 		<German>Anlegeplatz</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian></TEXT>
+		<Italian>Molo</Italian>
+		<Spanish>Muelle</Spanish>
+		<Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TANNERY</Tag>
 		<English>Tannery</English>
 		<French>Tannerie</French>
 		<German>Gerberei</German>
-		<Italian/><Spanish/><Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
+		<Italian>Conceria</Italian>
+		<Spanish>Curtiduría</Spanish>
+		<Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH</Tag>
 		<English>Night Watch</English>
 		<French>Veille de nuit</French>
 		<German>Nachtwache</German>
-		<Italian/><Spanish/><Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian></TEXT>
+		<Italian>Orologio di notte</Italian>
+		<Spanish>Reloj de noche</Spanish>
+		<Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL</Tag>
 		<English>Guild Hall</English>
 		<French>Salle de Confr&#233;rie</French>
 		<German>Gildenhaus</German>
-		<Italian/><Spanish/><Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian></TEXT>
+		<Italian>Atrio di corporazione</Italian>
+		<Spanish>Vestíbulo de gremio</Spanish>
+		<Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL</Tag>
 		<English>Arsenal</English>
 		<French>Arsenale</French>
 		<German>Arsenal</German>
-		<Italian/><Spanish/><Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian></TEXT>
+		<Italian>Arsenale</Italian>
+		<Spanish>Arsenal</Spanish>
+		<Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Tag>
 		<English>Protestant Church</English>
 		<French>Eglise Protestante</French>
 		<German>Protestantische Kirche</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
+		<Italian>Chiesa protestante</Italian>
+		<Spanish>Iglesia protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_MONASTERY</Tag>
 		<English>Protestant Monastery</English>
 		<French>Monast&#232;re Protestant</French>
 		<German>Protestantisches Kloster</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
+		<Italian>Monastero protestante</Italian>
+		<Spanish>Monasterio protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL</Tag>
 		<English>Protestant Cathedral</English>
 		<French>Cath&#233;drale Protestante</French>
 		<German>Protestantische Kathedrale</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
+		<Italian>Cattedrale protestante</Italian>
+		<Spanish>Catedral protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE</Tag>
 		<English>All Saints' Church</English>
 		<French>Eglise de Tous les Saints</French>
 		<German>Allerheiligenkirche</German>
-		<Italian/><Spanish/><Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian></TEXT>
+		<Italian>La Chiesa di tutta i santi</Italian>
+		<Spanish>Iglesia de todas las santos</Spanish>
+		<Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>
 		<English>Catholic Church</English>
 		<French>Eglise Catholique</French>
 		<German>Katholische Kirche</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
+		<Italian>Chiesa cattolica</Italian>
+		<Spanish>Iglesia Católica</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_MONASTERY</Tag>
 		<English>Catholic Monastery</English>
 		<French>Monast&#232;re Catholique</French>
 		<German>Katholisches Kloster</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
+		<Italian>Monastero cattolico</Italian>
+		<Spanish>Monasterio católico</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL</Tag>
 		<English>Catholic Cathedral</English>
 		<French>Cath&#233;drale Catholique</French>
 		<German>Katholische Kathedrale</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
+		<Italian>Cattedrale cattolica</Italian>
+		<Spanish>Catedral católica</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Tag>
 		<English>St. Peter's Basilica</English>
 		<French>Basilique St Pierre</French>
 		<German>Petersdom</German>
-		<Italian/><Spanish/><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Russian></TEXT>
+		<Italian>Basilica di San Pietro</Italian>
+		<Spanish>Basílica de San Pedro</Spanish>
+		<Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Tag>
 		<English>Orthodox Church</English>
 		<French>Eglise Orthodoxe</French>
 		<German>Orthodoxe Kirche</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
+		<Italian>Chiesa ortodossa</Italian>
+		<Spanish>Iglesia ortodoxa</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_MONASTERY</Tag>
 		<English>Orthodox Monastery</English>
 		<French>Monast&#232;re Orthodoxe</French>
 		<German>Orthodoxes Kloster</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
+		<Italian>Monastero ortodosso</Italian>
+		<Spanish>Monasterio ortodoxo</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL</Tag>
 		<English>Orthodox Cathedral</English>
 		<French>Cath&#233;drale Orthodoxe</French>
 		<German>Orthodoxe Kathedrale</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
+		<Italian>Cattedrale ortodossa</Italian>
+		<Spanish>Catedral ortodoxa</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
-		<English>Islamic Mosque</English>
-		<French>Mosqu&#233;e</French>
-		<German>Islamische Moschee</German>
-		<Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_MONASTERY</Tag>
-		<English>Islamic Monastery</English>
-		<French>Monast&#232;re Islamique</French>
-		<German>Islamisches Kloster</German>
-		<Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Tag>
 		<English>Islamic Grand Mosque</English>
 		<French>Grande Mosqu&#233;e</French>
 		<German>Islamische Gro&#223;moschee</German>
-		<Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#195;&#240;&#224;&#237;&#228;&#232;&#238;&#231;&#237;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian></TEXT>
+		<Italian>Grande Moschea islamica</Italian>
+		<Spanish>Gran Mezquita islámica</Spanish>
+		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#195;&#240;&#224;&#237;&#228;&#232;&#238;&#231;&#237;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
 		<English>Bulgarian Stan</English>
 		<French>Stan Bulgare</French>
 		<German>Bulgarische Stallung</German>
-		<Italian/><Spanish/><Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233; &#209;&#242;&#253;&#237;</Russian></TEXT>
+		<Italian>Stan Bulgaro</Italian>
+		<Spanish>Stan Búlgaro</Spanish>
+		<Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233; &#209;&#242;&#253;&#237;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KIEV_VECHE</Tag>
 		<English>Veche Hall</English>
@@ -201,7 +229,9 @@
 		<English>Opera House</English>
 		<French>Salle d'Op&#233;ra</French>
 		<German>Opernhaus</German>
-		<Italian/><Spanish/><Russian>&#196;&#238;&#236; &#206;&#239;&#229;&#240;&#251;</Russian></TEXT>
+		<Italian>Teatri d'opera</Italian>
+		<Spanish>Teatro de ópera</Spanish>
+		<Russian>&#196;&#238;&#236; &#206;&#239;&#229;&#240;&#251;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
 		<English>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</English>
@@ -212,7 +242,9 @@
 		<English>Soldier Tennant</English>
 		<French>Soldat Tennant</French>
 		<German>Soldaten Tennant</German>
-		<Italian/><Spanish/><Russian>&#209;&#238;&#235;&#228;&#224;&#242; &#210;&#229;&#237;&#237;&#224;&#237;&#242;</Russian></TEXT>
+		<Italian>Tennant di soldato</Italian>
+		<Spanish>Tennant Soldado</Spanish>
+		<Russian>&#209;&#238;&#235;&#228;&#224;&#242; &#210;&#229;&#237;&#237;&#224;&#237;&#242;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
 		<English>[ICON_BULLET]Damages enemy units in the area.</English>
@@ -236,55 +268,73 @@
 		<English>[ICON_BULLET]Provides %D1_Mod </English>
 		<French>[ICON_BULLET]Fournit %D1_Mod </French>
 		<German>[ICON_BULLET]Liefert %D1_Mod </German>
-		<Italian/><Spanish/><Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian></TEXT>
+		<Italian>[ICON_BULLET]Fornisce %D1_Mod </Italian>
+		<Spanish>[ICON_BULLET]Proporciona %D1_Mod </Spanish>
+		<Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
 		<English>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </English>
 		<French>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </French>
 		<German>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </German>
-		<Italian/><Spanish/><Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian></TEXT>
+		<Italian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Italian>
+		<Spanish>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Spanish>
+		<Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
 		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
 		<French>[ICON_BULLET]Requiert [LINK=literal]%s1_Bonus[\LINK] </French>
 		<German>[ICON_BULLET]Benötigt [LINK=literal]%s1_Bonus [\LINK] </German>
-		<Italian/><Spanish/><Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian></TEXT>
+		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
+		<Spanish>[ICON_BULLET]Requiere  [LINK=literal]%s1_Bonus [\LINK] </Spanish>
+		<Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
 		<English> [SPACE] (%D1_Mod) </English>
 		<French> [SPACE] (%D1_Mod) </French>
 		<German> [SPACE] (%D1_Mod) </German>
-		<Italian/><Spanish/><Russian>[SPACE] (%D1_Mod)</Russian></TEXT>
+		<Italian> [SPACE] (%D1_Mod) </Italian>
+		<Spanish> [SPACE] (%D1_Mod) </Spanish>
+		<Russian>[SPACE] (%D1_Mod)</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN</Tag>
 		<English>Inn</English>
 		<French>Auberge</French>
 		<German>Wirtshaus</German>
-		<Italian/><Spanish/><Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Italian>Albergo</Italian>
+		<Spanish>Posada</Spanish>
+		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
 		<English>Manor House</English>
 		<French>Château</French>
 		<German>Landgut</German>
-		<Italian/><Spanish/><Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian></TEXT>
+		<Italian>Casa di residenza</Italian>
+		<Spanish>Casa solariega</Spanish>
+		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
 		<English>Pagan Shrine</English>
 		<French>Temple Pagan</French>
 		<German>Heidnischer Schrein</German>
-		<Italian/><Spanish/><Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#226;&#255;&#242;&#251;&#237;&#255;</Russian></TEXT>
+		<Italian>Santuario pagano</Italian>
+		<Spanish>Relicario pagano</Spanish>
+		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#226;&#255;&#242;&#251;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
 		<English>Weaver</English>
 		<French>Tisserie</French>
 		<German>Weberei</German>
-		<Italian/><Spanish/><Russian>&#210;&#234;&#224;&#247;</Russian></TEXT>
+		<Italian>Tessitore</Italian>
+		<Spanish>Tejedor</Spanish>
+		<Russian>&#210;&#234;&#224;&#247;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY</Tag>
 		<English>Brewery</English>
 		<French>Brasserie</French>
 		<German>Brauerei</German>
-		<Italian/><Spanish/><Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
+		<Italian>Birrificio</Italian>
+		<Spanish>Cervecería</Spanish>
+		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
         <TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY</Tag>
 		<English>Winery</English>
@@ -298,50 +348,65 @@
 		<English>Noria</English>
 		<French>Noria</French>
 		<German>Noria</German>
-		<Italian/><Spanish/><Russian>&#205;&#238;&#240;&#232;&#255;</Russian></TEXT>
+		<Italian>Noria</Italian>
+		<Spanish>Noria</Spanish>
+		<Russian>&#205;&#238;&#240;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORGE</Tag>
 		<English>Blacksmith</English>
 		<French>Forge</French>
 		<German>Schmiede</German>
-		<Italian/><Spanish/><Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian></TEXT>
+		<Italian>Fabbro</Italian>
+		<Spanish>Herrero</Spanish>
+		<Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL</Tag>
 		<English>Textile Mill</English>
 		<French>Usine de Textille</French>
 		<German>Tuchfabrik</German>
-		<Italian/><Spanish/><Russian>&#210;&#229;&#234;&#241;&#242;&#232;&#235;&#252;&#237;&#224;&#255; &#204;&#229;&#235;&#252;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Italian>Fabbrica tessile</Italian>
+		<Spanish>Manufactura textil</Spanish>
+		<Russian>&#210;&#229;&#234;&#241;&#242;&#232;&#235;&#252;&#237;&#224;&#255; &#204;&#229;&#235;&#252;&#237;&#232;&#246;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER</Tag>
 		<English>Jeweler</English>
 		<French>Bijoutier</French>
 		<German>Juwellier</German>
-		<Italian/><Spanish/><Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian></TEXT>
+		<Italian>Gioielleria</Italian>
+		<Spanish>Joyería</Spanish>
+		<Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE</Tag>
 		<English>Smokehouse</English>
 		<French>Fumoir</French>
 		<German>R&#228;ucherei</German>
-		<Italian/><Spanish/><Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Italian>Affumicatoio</Italian>
+		<Spanish>Ahumadero</Spanish>
+		<Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_STORE</Tag>
 		<English>Luxury Store</English>
 		<French>Magasin de Luxe</French>
 		<German>Luxusgesch&#228;ft</German>
-		<Italian/><Spanish/><Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian></TEXT>
+		<Italian>Negozio di lussuria</Italian>
+		<Spanish>Tienda de lujo</Spanish>
+		<Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAREHOUSE</Tag>
 		<English>Warehouse</English>
 		<French>Entrep&#244;t</French>
 		<German>Warenhaus</German>
-		<Italian/><Spanish/><Russian>&#209;&#234;&#235;&#224;&#228;</Russian></TEXT>
+		<Italian>Magazzino</Italian>
+		<Spanish>Almacén</Spanish>
+		<Russian>&#209;&#234;&#235;&#224;&#228;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE</Tag>
 		<English>Coffee House</English>
 		<French>Caf&#233;</French>
 		<German>Kaffeehaus</German>
-		<Italian/>
-		<Spanish/><Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian></TEXT>
+		<Italian>Caffè</Italian>
+		<Spanish>Café</Spanish>
+		<Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU</Tag>
 		<English>Chateau</English>
@@ -355,139 +420,185 @@
 		<English>Infirmary</English>
 		<French>Infirmerie</French>
 		<German>Spital</German>
-		<Italian/><Spanish/><Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian></TEXT>
+		<Italian>Infermeria</Italian>
+		<Spanish>Enfermería</Spanish>
+		<Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER</Tag>
 		<English>Jewish Quarter</English>
 		<French>Quartier Juif</French>
 		<German>J&#252;disches Viertel</German>
-		<Italian/><Spanish/><Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian></TEXT>
+		<Italian>Quarto ebreo</Italian>
+		<Spanish>Cuarto judío</Spanish>
+		<Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SCHOOL</Tag>
 		<English>Protestant Church School</English>
 		<French>Ecole Protestante</French>
 		<German>Protestantische Hochschule</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Italian>Scuola di Chiesa protestante</Italian>
+		<Spanish>Colegio religioso protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY</Tag>
 		<English>Protestant Seminary</English>
 		<French>S&#233;minaire Protestant</French>
 		<German>Protestantisches Seminar</German>
-		<German/><Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Italian>Seminario protestante</Italian>
+		<Spanish>Seminario protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL</Tag>
 		<English>Protestant Belfry</English>
 		<French>B&#233;froi Protestant</French>
 		<German>Protestantischer Glockenturm</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Italian>Campanile protestante</Italian>
+		<Spanish>Campanario protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL</Tag>
 		<English>Islamic Minaret</English>
 		<French>Minaret Islamique</French>
 		<German>Islamischer Minarett</German>
-		<Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#237;&#224;&#240;&#229;&#242;</Russian></TEXT>
+		<Italian>Minareto islamico</Italian>
+		<Spanish>Minarete islámico</Spanish>
+		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#237;&#224;&#240;&#229;&#242;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL</Tag>
 		<English>House of Wisdom</English>
 		<French>Maison de la Sagesse</French>
 		<German>Haus der Weisheit</German>
-		<Italian/><Spanish/><Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian></TEXT>
+		<Italian>La casa di Saggezza</Italian>
+		<Spanish>La casa de Sabiduría</Spanish>
+		<Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA</Tag>
 		<English>Islamic Madrassa</English>
 		<French>Madrassa Islamique</French>
 		<German>Islamisches Madrasa</German>
-		<Italian/><Spanish/><Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian></TEXT>
+		<Italian>Madrassa Islamico</Italian>
+		<Spanish>Madraza isl&#225;mico</Spanish>
+		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL</Tag>
 		<English>Catholic Belfry</English>
 		<French>B&#233;froi Catholique</French>
 		<German>Katholischer Glockenturm</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Italian>Campanile cattolico</Italian>
+		<Spanish>Campanario católico</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY</Tag>
 		<English>Catholic Reliquary</English>
 		<French>Relique Catholique</French>
 		<German>Katholischer Reliquienschrein</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Italian>Catholic reliquary</Italian>
+		<Spanish>Relicario católico</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL</Tag>
 		<English>Catholic Cathedral School</English>
 		<French>Grande Ecole Catholique</French>
 		<German>Katholische Hochschule</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Italian>Scuola di Cattedrale cattolica</Italian>
+		<Spanish>Escuela Catedral católica</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM</Tag>
 		<English>Catholic Scriptorium</English>
 		<French>Scriptorium Catholique</French>
 		<German>Katholisches Scriptorium</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
+		<Italian>Centro scrittorio cattolico</Italian>
+		<Spanish>Scriptorium católico</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY</Tag>
 		<English>Catholic Seminary</English>
 		<French>S&#233;minaire Catholique</French>
 		<German>Katholisches Seminar</German>
-		<Italian/><Spanish/><Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Italian>Seminario cattolico</Italian>
+		<Spanish>Seminario católico</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL</Tag>
 		<English>Orthodox Belfry</English>
 		<French>B&#233;froi Orthodoxe</French>
 		<German>Orthodoxer Glockenturm</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Italian>Campanile ortodosso</Italian>
+		<Spanish>Campanario ortodoxo</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY</Tag>
 		<English>Orthodox Reliquary</English>
 		<French>Relique Orthodoxe</French>
 		<German>Orthodoxer Reliquienschrein</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Italian>Reliquario ortodosso</Italian>
+		<Spanish>Relicario ortodoxo</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL</Tag>
 		<English>Orthodox Cathedral School</English>
 		<French>Grande Ecole Orthodoxe</French>
 		<German>Orthodoxe Hochschule</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Italian>Scuola di Cattedrale ortodossa</Italian>
+		<Spanish>Escuela Catedral ortodoxa</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM</Tag>
 		<English>Orthodox Scriptorium</English>
 		<French>Scriptorium Orthodoxe</French>
 		<German>Orthodoxes Scriptorium</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
+		<Italian>Scriptorium ortodosso</Italian>
+		<Spanish>Scriptorium ortodoxo</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY</Tag>
 		<English>Orthodox Seminary</English>
 		<French>S&#233;minaire Orthodoxe</French>
 		<German>Orthodoxes Seminar</German>
-		<Italian/><Spanish/><Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Italian>Seminario ortodosso</Italian>
+		<Spanish>Seminario ortodoxo</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SEMINARY</Tag>
 		<English>Seminary</English>
 		<French>S&#233;minaire</French>
 		<German>Seminar</German>
-		<Italian/><Spanish/><Russian>&#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Italian>Seminario</Italian>
+		<Spanish>Seminario</Spanish>
+		<Russian>&#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SCHOOL</Tag>
 		<English>Religious School</English>
 		<French>Ecole Religieuse</French>
 		<German>Relig&#246;se Schule</German>
-		<Italian/><Spanish/><Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Italian>Scuola religiosa</Italian>
+		<Spanish>Escuela religiosa</Spanish>
+		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_CHAPEL</Tag>
 		<English>Belfry</English>
 		<French>B&#233;froi</French>
 		<German>Glockenturm</German>
-		<Italian/><Spanish/><Russian>&#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Italian>Campanile</Italian>
+		<Spanish>Campanario</Spanish>
+		<Russian>&#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_RELIQUARY</Tag>
 		<English>Reliquary</English>
-		<French>Relique</French>
+		<French>Reliquaire</French>
 		<German>Reliquienschrein</German>
-		<Italian/><Spanish/><Russian>&#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Italian>Reliquiario</Italian>
+		<Spanish>Relicario</Spanish>
+		<Russian>&#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SCRIPTORIUM</Tag>
 		<English>Scriptorium</English>
 		<French>Scriptorium</French>
 		<German>Scriptorium</German>
-		<Italian/><Spanish/><Russian>&#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
+		<Italian>Centro scrittorio</Italian>
+		<Spanish>Scriptorium</Spanish>
+		<Russian>&#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN</Tag>
 		<English>Bazaar</English>
@@ -714,13 +825,17 @@
 		<English>Genoan Bank</English>
 		<French>Banque Génoise</French>
 		<German>Genuesische Bank</German>
-		<Italian/><Spanish/><Russian/></TEXT>
+		<Italian>Banca di Genoan</Italian>
+		<Spanish>Banco de Genoan</Spanish>
+		<Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
 		<English>Star Fort</English>
 		<French>Tracé à l'Italienne</French>
 		<German>Sternförmige Festung</German>
-		<Italian/><Spanish/><Russian/></TEXT>
+		<Italian>Fortificazione alla stella</Italian>
+		<Spanish>Estrelle Fuerte</Spanish>
+		<Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
 		<English>Royal Exchange</English>

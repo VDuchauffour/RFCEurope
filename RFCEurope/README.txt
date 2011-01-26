@@ -9,3 +9,4 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 This is Beta 7. Changes since Beta 6:
 Fixed first contact diplo text of Ivan IV bug
 Renamed Winery improvement to Vineyard
+Almost all (exept pedia and a few other things) are translated into the 5 standard languages
