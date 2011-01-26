@@ -19,12 +19,12 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Cattolicità</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Catolicismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -69,12 +69,12 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Ortodossia</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Orthodoxia</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -119,12 +119,12 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Protestantesimo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Protestantismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -169,12 +169,12 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
+			<Text>Islamismo:Islamica</Text>
+			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Misticismo</Text>
+			<Text>Islamismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -210,8 +210,8 @@
 		<English>The Reformation!</English>
 		<French>La R&#233;forme!</French>
 		<German>Die Reformation!</German>
-		<Italian>The Reformation!</Italian>
-		<Spanish>The Reformation!</Spanish>
+		<Italian>La Riforma!</Italian>
+		<Spanish>La Reforma!</Spanish>
 		<Russian>&#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255;!</Russian>
 	</TEXT>
 	<TEXT>
@@ -237,8 +237,8 @@
 		<English>Faith Points</English>
 		<French>Points de la foi</French>
 		<German>Glaubenspunkte</German>
-		<Italian>Faith Points</Italian>
-		<Spanish>Faith Points</Spanish>
+		<Italian>Punti Fede</Italian>
+		<Spanish>Puntos Fe</Spanish>
 		<Russian>Faith Points</Russian>
 	</TEXT>
 	<TEXT>
@@ -264,8 +264,8 @@
 		<English>Stability:</English>
 		<French>Stabilit&#233;:</French>
 		<German>Stabilit&#228;t:</German>
-		<Italian>Stability:</Italian>
-		<Spanish>Stability:</Spanish>
+		<Italian>Stabilit&#224;:</Italian>
+		<Spanish>Estabilidad:</Spanish>
 		<Russian>Stability:</Russian>
 	</TEXT>
 	<TEXT>

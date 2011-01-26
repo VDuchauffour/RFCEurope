@@ -10,7 +10,7 @@
 		<English>Knights Hospitaller</English>
 		<French>Ordre Hospitalier</French>
 		<German>Johanniterorden</German>
-		<Italian>Knights Hospitaller</Italian>
+		<Italian>Cavalieri Ospitalieri</Italian>
 		<Spanish>Caballeros Hospitalarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#251;</Russian>
 	</TEXT>
@@ -19,7 +19,7 @@
 		<English>Knights Templar</English>
 		<French>Ordre des Templiers</French>
 		<German>Templerorden</German>
-		<Italian>Knights Templar</Italian>
+		<Italian>Cavalieri Templari</Italian>
 		<Spanish>Caballeros Templarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;&#251;</Russian>
 	</TEXT>
@@ -28,8 +28,8 @@
 		<English>Teutonic Knights</English>
 		<French>Ordre Teutonique</French>
 		<German>Deutscher Orden</German>
-		<Italian>Teutonic Knights</Italian>
-		<Spanish>Caballeros Teut&#243;nicos</Spanish>
+		<Italian>Ordine Teutonico</Italian>
+		<Spanish>Caballeros Teut&#243;nica</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#229; &#208;&#251;&#246;&#224;&#240;&#232;</Russian>
 	</TEXT>
 	<TEXT>
@@ -37,7 +37,7 @@
 		<English>Hanseatic League</English>
 		<French>Hanse Germanique</French>
 		<German>Hanse</German>
-		<Italian>Hanseatic League</Italian>
+		<Italian>Lega Anseatica</Italian>
 		<Spanish>Liga Hanse&#225;tica</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#224;&#255; &#203;&#232;&#227;&#224;</Russian>
 	</TEXT>
@@ -46,7 +46,7 @@
 		<English>Medici Banks</English>
 		<French>Maison de M&#233;dicis</French>
 		<German>Medici Bank</German>
-		<Italian>Medici Banks</Italian>
+		<Italian>Banco dei Medici</Italian>
 		<Spanish>Bancos Medici</Spanish>
 		<Russian>&#193;&#224;&#237;&#234;&#232; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
 	</TEXT>
@@ -55,7 +55,7 @@
 		<English>Augsburg Families</English>
 		<French>Famille Augsburg</French>
 		<German>Augsburger Familien</German>
-		<Italian>Augsburg Families</Italian>
+		<Italian>Famiglie di augusta</Italian>
 		<Spanish>Familias Augsburgo</Spanish>
 		<Russian>&#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#209;&#229;&#236;&#252;&#232;</Russian>
 	</TEXT>
@@ -64,7 +64,7 @@
 		<English>Bank of St. George</English>
 		<French>Banque de St George</French>
 		<German>Bank von St. George</German>
-		<Italian>Bank of St. George</Italian>
+		<Italian>Banco di San Giorgio</Italian>
 		<Spanish>Banco de S. Jorge</Spanish>
 		<Russian>&#193;&#224;&#237;&#234; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
 	</TEXT>
@@ -73,7 +73,7 @@
 		<English>Hospitaller Master</English>
 		<French>Maître Hospitalier</French>
 		<German>Ordensmeister der Johanniter</German>
-		<Italian>Hospitaller Master</Italian>
+		<Italian>Padrone di Hospitaller</Italian>
 		<Spanish>Maestre Hospitalario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Russian>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>Templar Master</English>
 		<French>Maître Templiers</French>
 		<German>Ordensmeister der Templer</German>
-		<Italian>Templar Master</Italian>
+		<Italian>Padrone di Templare</Italian>
 		<Spanish>Maestre Templario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
 	</TEXT>
@@ -91,7 +91,7 @@
 		<English>Teutonic Master</English>
 		<French>Maître Teutonique</French>
 		<German>Ordensmeister des Deutschordens</German>
-		<Italian>Teutonic Master</Italian>
+		<Italian>Padrone Teutonico</Italian>
 		<Spanish>Maestre Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Russian>
 	</TEXT>
@@ -100,8 +100,8 @@
 		<English>Hanseatic Executive</English>
 		<French>Cadre Hanse</French>
 		<German>Gesandter der Hanse</German>
-		<Italian>Hanseatic Executive</Italian>
-		<Spanish>Hanseatic Executive</Spanish>
+		<Italian>Dirigente di Hanseatic</Italian>
+		<Spanish>Mercader Hanseático</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#232;&#233; &#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;</Russian>
 	</TEXT>
 	<TEXT>
@@ -109,7 +109,7 @@
 		<English>Medici Executive</English>
 		<French>Cadre M&#233;dicis</French>
 		<German>Gesandter der Medici</German>
-		<Italian>Medici Executive</Italian>
+		<Italian>Dirigente di Medici</Italian>
 		<Spanish>Mercader Medici</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
 	</TEXT>
@@ -118,7 +118,7 @@
 		<English>Augsburg Executive</English>
 		<French>Cadre Augsburg</French>
 		<German>Gesandter der Augsburger Familien</German>
-		<Italian>Augsburg Executive</Italian>
+		<Italian>Dirigente di Augusta</Italian>
 		<Spanish>Mercader Augsburgo</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Russian>
 	</TEXT>
@@ -127,16 +127,25 @@
 		<English>Bank of St. George Executive</English>
 		<French>Cadre de la Banque de St George</French>
 		<German>Gesandter der Bank von St. George</German>
-		<Italian>Bank of St. George Executive</Italian>
+		<Italian>Dirigente di Banca di San Giorgio</Italian>
 		<Spanish>Mercader del Banco de S. Jorge</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Tag>
+		<English>Knight of St. John's</English>
+		<French>Chevalier Saint Jean</French>
+		<German>Ritter der Johanniter</German>
+		<Italian>Cavaliere di San Giovanni</Italian>
+		<Spanish>Caballero de San Juan</Spanish>
+		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR</Tag>
-		<English>Knight Templar</English>
+		<English>Templar Knight</English>
 		<French>Chevalier Templier</French>
 		<German>Tempelritter</German>
-		<Italian>Knight Templar</Italian>
+		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Caballero Templario</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
 	</TEXT>
@@ -145,7 +154,7 @@
 		<English>Teutonic Knight</English>
 		<French>Chevalier Teutonique</French>
 		<German>Deutschritter</German>
-		<Italian>Teutonic Knight</Italian>
+		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Russian>
 	</TEXT>

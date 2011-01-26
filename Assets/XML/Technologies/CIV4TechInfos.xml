@@ -652,7 +652,7 @@
 		</TechInfo>
 		<TechInfo><!--VASSALAGE-->
 			<Type>TECH_VASSALAGE</Type>
-			<Description>TXT_KEY_TECH_VASSALAGE</Description>
+			<Description>TXT_KEY_CIVIC_VASSALAGE</Description>
 			<Civilopedia>TXT_KEY_TECH_EU_VASSALAGE_PEDIA</Civilopedia>
 			<Help/>
 			<Strategy>TXT_KEY_TECH_VASSALAGE_STRATEGY</Strategy>
