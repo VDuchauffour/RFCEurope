@@ -392,6 +392,8 @@ class RFCUtils:
         #RiseAndFall, Religions, Congresses, UniquePowers
         def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
+                #if ( tCoords[0] < 0 or tCoords[0] >= con.iMapMaxX or tCoords[1] < 0 or tCoords[1] >= con.iMapMaxY ):
+                #        print(" MAKING UNIT OFF THE FACE OF EUROPE: ",tCoords )
                 for i in range(iNum):
                         player = gc.getPlayer(iPlayer)
                         player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
@@ -425,13 +427,14 @@ class RFCUtils:
         #RiseAndFall
         def flipUnitsInCityAfter(self, tCityPlot, iCiv):
                 #moves new units back in their place
-                print ("tCityPlot After", tCityPlot)
+                #print ("tCityPlot After", tCityPlot)
                 tempPlot = gc.getMap().plot(0,72)
                 if (tempPlot.getNumUnits() != 0):
                         iNumUnitsInAPlot = tempPlot.getNumUnits()
                         #print ("iNumUnitsInAPlot", iNumUnitsInAPlot)                        
                         for i in range(iNumUnitsInAPlot):
                                 unit = tempPlot.getUnit(0)
+                                #print("  3Miro Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                                 unit.setXYOld(tCityPlot[0],tCityPlot[1])
                 #cover plots revealed
                 #gc.getMap().plot(0, 67).setRevealed(iCiv, False, True, -1);
@@ -475,8 +478,16 @@ class RFCUtils:
                 If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
                 Settlers aren't created.
                 If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
-                for x in range(tTopLeft[0], tBottomRight[0]+1):
-                        for y in range(tTopLeft[1], tBottomRight[1]+1):
+                # 3Miro: begin - ARGHHHHHHHHHHHHHHHHHHH
+                # if a city is flipped that is at the edge of the map, then this will get called for (x,y) > map_size leaving Units off the edge of the screen
+                # basically units will be falling off the edge of the map without kill(...), so next time the Unit is accessed and called for plot() the game crashes
+                ttTopLeft0 = max( tTopLeft[0], 0 )
+                ttBottomRight0 = min( tBottomRight[0], con.iMapMaxX-1 )
+                ttTopLeft1 = max( tTopLeft[1], 0 )
+                ttBottomRight1 = min( tBottomRight[1], con.iMapMaxY-1 )
+                # 3Miro: end - ARGHHHHHHHHHHHHHHHHHHH
+                for x in range(ttTopLeft0, ttBottomRight0+1):
+                        for y in range(ttTopLeft1, ttBottomRight1+1):
                                 killPlot = gc.getMap().plot(x,y)
                                 iNumUnitsInAPlot = killPlot.getNumUnits()
                                 if (iNumUnitsInAPlot):
@@ -509,6 +520,7 @@ class RFCUtils:
                                                         iNumUnitsInAPlot = tempPlot.getNumUnits()
                                                         for i in range(iNumUnitsInAPlot):
                                                                 unit = tempPlot.getUnit(0)
+                                                                #print("  3Miro 1 Unit Type and Owner plot ",unit.getID(),unit.getUnitType(),"  ",unit.getOwner(),x,y )
                                                                 unit.setXYOld(x,y)
                                                         iCiv = iNewOwner
                                                         if (bRevealedZero == False):
@@ -727,6 +739,7 @@ class RFCUtils:
                         for i in range(iNumUnitsInAPlot):                        
                                 unit = plotCity.getUnit(j)
                                 if (unit.getDomainType() == 2): #land unit
+                                        #print("  3Miro 2 Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                                         unit.setXYOld(tDestination[0], tDestination[1])
                                 else:
                                         j = j + 1
@@ -753,6 +766,7 @@ class RFCUtils:
                         for i in range(iNumUnitsInAPlot):
                                 unit = plotCity.getUnit(j)
                                 if (unit.getDomainType() == 0): #sea unit
+                                        #print("  3Miro 3 Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                                         unit.setXYOld(tDestination[0], tDestination[1])
                                 else:
                                         j = j + 1
@@ -794,7 +808,8 @@ class RFCUtils:
                         self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
                         self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv]) #by trade because by conquest may raze the city
                         #pyCity.GetCy().setHasRealBuilding(con.iPlague, False)  #buggy
-                self.flipUnitsInArea([0,0], [123,67], iNewCiv, iCiv, False, True)
+                self.flipUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iNewCiv, iCiv, False, True)
+                #self.flipUnitsInArea([0,0], [123,67], iNewCiv, iCiv, False, True)
                 #self.killUnitsInArea([0,0], [123,67], iNewCiv, iCiv) ?
                 #if (iCiv < iNumMajorPlayers):
                 #        self.clearEmbassies(iCiv)

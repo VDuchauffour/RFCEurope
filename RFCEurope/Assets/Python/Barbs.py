@@ -245,15 +245,15 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (97,20),(99,26), con.iAxeman, 1 + iHandicap*2, iGameTurn,14,2,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (97,20),(99,26), con.iSpearman, 1 + iHandicap*2, iGameTurn,16,6,utils.outerInvasion,1)
 		
-		#Seljuks 1070
-		if (iGameTurn>=con.i1050AD and iGameTurn < con.i1089AD):
+		#Seljuks 1067
+		if (iGameTurn>=con.i1067AD and iGameTurn < con.i1089AD):
 			#Middle East
 			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 5 + iHandicap*2, iGameTurn,1,0,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (90,15),(99,28), con.iSeljuk, 5 + iHandicap*2, iGameTurn,1,1,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (95,0),(99,15), con.iSeljuk, 5 + iHandicap*2, iGameTurn,1,1,utils.outerInvasion,1)
 
 		#Mongols! 1250
-		if (iGameTurn >=con.i1236AD and iGameTurn < con.i1284AD):
+		if (iGameTurn >=con.i1236AD and iGameTurn < con.i1288AD):
 			if iHandicap == 1: #Sedna17: Making mongols too weak in viceroy makes AI Kiev a super-power.
 				iExtra = 1
 			else:

@@ -248,19 +248,19 @@ class Crusades:
 		#print(" 3Miro Crusades ")
 		#self.informPopup()
 		
-		if ( iGameTurn == 160 ): #1080AD
+		if ( iGameTurn == con.i1099AD - 6 ): #1080AD to arrive 1099AD
 			self.setCrusadeInit( 0, -1 )
-		if ( iGameTurn >= 182 and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ):
+		if ( iGameTurn >= con.i1147AD - 6 and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ): # to arrive 1147AD
 			self.setCrusadeInit( 1, -1 )
-		if ( iGameTurn >= 195 and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ):
+		if ( iGameTurn >= con.i1187AD - 6 and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ): # to arrive 1187AD
 			self.setCrusadeInit( 2, -1 )
-		if ( iGameTurn >= 201 and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ):
+		if ( iGameTurn >= con.i1202AD - 6 and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ): # to arrive 1202AD
 			self.setCrusadeInit( 3, -1 )
-		if ( iGameTurn >= 212 and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): #1236AD
+		if ( iGameTurn >= con.i1229AD - 6 and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): # to arrive 1229AD
 			self.setCrusadeInit( 4, -1 )
 		
 		#if ( iGameTurn == 50 ): #debug
-		if ( iGameTurn == 133 ): # indulgances for the Reconquista given by the Catholic Church 1000AD
+		if ( iGameTurn == con.i1000AD ): # indulgances for the Reconquista given by the Catholic Church 1000AD
 			self.setDCEnabled( True )
 			
 		if ( self.isDCEnabled() ):

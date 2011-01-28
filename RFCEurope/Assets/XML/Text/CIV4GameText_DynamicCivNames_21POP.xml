@@ -158,4 +158,11 @@
 		<German>Päpstliche Provinzen</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MIRO_TEST</Tag>
+		<English>Christian Kingdom</English>
+		<French>Christian Kingdom</French>
+		<German>Christian Kingdom</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
 </Civ4GameText>

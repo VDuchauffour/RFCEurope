@@ -497,7 +497,7 @@ class MercenaryUtils:
 			if(iUnitType != -1):
 
                                 #Rhye - start bugfix
-				# Create the mercenary unit
+				# Create the mercenary unit # 3Miro: change this from 20,0 to 30,0 and add some mountains
 				tmpUnit = barbarianPlayer.initUnit(iUnitType, 20, 0, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 ##				plot = barbarianPlayer.getStartingPlot()
@@ -529,22 +529,22 @@ class MercenaryUtils:
 				# mercenary
 				tmpUnit.kill(false,PlayerTypes.NO_PLAYER)
 
-				#Rhye - start
-                                gc.getMap().plot(20, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(20, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(21, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(21, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(19, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(19, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(22, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(22, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(22, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(21, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(20, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(18, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(18, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(18, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
-                                gc.getMap().plot(18, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				#Rhye - start # 3Miro: we don't need to hide anything here (I think)
+                                #gc.getMap().plot(20, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(20, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(21, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(21, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(19, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(19, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(22, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(22, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(22, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(21, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(20, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(18, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(18, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(18, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+                                #gc.getMap().plot(18, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
                                 #Rhye - end
 
 
