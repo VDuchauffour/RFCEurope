@@ -525,7 +525,7 @@ class CvRFCEventHandler:
                 self.aiw.checkTurn(iGameTurn)
                 #self.cong.checkTurn(iGameTurn) # 3Miro: no congress
                 self.pla.checkTurn(iGameTurn)
-                #self.vic.checkTurn(iGameTurn) #3Miro: Test For Speed
+                self.vic.checkTurn(iGameTurn) #3Miro: Test For Speed
                 self.sta.checkTurn(iGameTurn)
                 #self.com.checkTurn(iGameTurn) # 3Miro: no communication problem 
                 self.crusade.checkTurn(iGameTurn)
