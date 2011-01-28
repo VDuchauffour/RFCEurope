@@ -21,6 +21,34 @@
 	<ElementType name="SituationCulture" content="textOnly"/>
 	<ElementType name="SituationGrowth" content="textOnly"/>
 	<ElementType name="SituationStart" content="textOnly"/>
+        <!-- 3Miro Dynamic Civilization Names -->
+        <ElementType name="DCNConditionCivic" content="textOnly"/>
+        <ElementType name="DCNConditionOrCivic1" content="textOnly"/>
+        <ElementType name="DCNConditionOrCivic2" content="textOnly"/>
+        <ElementType name="DCNConditionReligion" content="textOnly"/>
+        <ElementType name="DCNConditionNotReligion" content="textOnly"/>
+        <ElementType name="DCNConditionVassalOf" content="textOnly"/>
+        <ElementType name="DCNConditionGenericVassal" content="textOnly" dt:type="int"/>
+        <ElementType name="DCNConditionMasterlOf" content="textOnly"/>
+        <ElementType name="DCNConditionGenericMasterl" content="textOnly" dt:type="int"/>
+        <ElementType name="DCNConditionAfterTurn" content="textOnly" dt:type="int"/>
+        <ElementType name="DCNName" content="textOnly"/>
+        <ElementType name="DCNCondition" content="eltOnly">
+		<element type="DCNConditionCivic"/>
+                <element type="DCNConditionOrCivic1"/>
+                <element type="DCNConditionOrCivic2"/>
+		<element type="DCNConditionReligion"/>
+                <element type="DCNConditionNotReligion"/>
+                <element type="DCNConditionVassalOf"/>
+                <element type="DCNConditionGenericVassal"/>
+                <element type="DCNConditionMasterlOf"/>
+                <element type="DCNConditionGenericMasterl"/>
+                <element type="DCNConditionAfterTurn"/>
+                <element type="DCNName"/>
+        </ElementType>
+        <ElementType name="DCNConditions" content="eltOnly">
+                <element type="DCNCondition" minOccurs="0" maxOccurs="*"/>
+        </ElementType>
 	<!-- 3Miro End Update -->
 	<ElementType name="iWonderConstructRand" content="textOnly" dt:type="int"/>
 	<ElementType name="iBaseAttitude" content="textOnly" dt:type="int"/>
@@ -463,6 +491,7 @@
 		<element type="SituationCulture"/>
 		<element type="SituationGrowth"/>
 		<element type="SituationStart"/>
+                <element type="DCNConditions"/>
 		<!-- 3Miro End Update -->
 		<element type="DefaultPlayerColor"/>
 		<element type="ArtDefineTag"/>

@@ -6,7 +6,20 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 
 
-This is Beta 7. Changes since Beta 6:
-Fixed first contact diplo text of Ivan IV bug
-Renamed Winery improvement to Vineyard
-Almost all (exept pedia and a few other things) are translated into the 5 standard languages
+This is Beta 5. Changes since Beta 4:
+Art cleanup
+XML cleanup
+New movie for the Magna Carta
+Restored Arabian Longswordsman art
+Fixed Papal Culture bug
+Fixed Venetian UHV
+Moved starting dates for Hungary and Kiev 
+Split up FPK
+New Art for Bulgarian Konnik and ethnic unit style for Hungary
+Building overhaul
+Fixed bug with crusades that was preventing crusades from happening when the Arabs are human. 
+Info tags for Corporation Knights and Infirmary
+New Diplo music
+Removed Barbarian leaderhead from the civilopedia
+Basic information for the leaderheads (english only)
+New art for the Burgundian Winery
