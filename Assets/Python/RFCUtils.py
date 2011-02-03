@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import Consts as con
+import XMLConsts as xml
 import cPickle as pickle
 
 # globals
@@ -18,9 +19,9 @@ iIndependent2 = con.iIndependent2
 iNumTotalPlayers = con.iNumTotalPlayers
 iBarbarian = con.iBarbarian
 
-iSettler = con.iSettler
+iSettler = xml.iSettler
 
-iNumBuildingsPlague = con.iNumBuildingsPlague
+iNumBuildingsPlague = xml.iNumBuildingsPlague
 
 tCol = (
 '255,255,255',
@@ -259,7 +260,7 @@ class RFCUtils:
         def getArabianInfluence( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 if ( scriptDict['lGoals'][con.iArabia][1] == -1 ):
-                        return gc.getGame().calculateReligionPercent( con.iIslam )
+                        return gc.getGame().calculateReligionPercent( xml.iIslam )
                 else:
                         return -1
                         
@@ -307,7 +308,7 @@ class RFCUtils:
                         if (not gc.getPlayer(unit.getOwner()).isHuman()):
                                 return False            
                 iUnitType = unit.getUnitType()
-                if (iUnitType >= con.iProphet ):
+                if (iUnitType >= xml.iProphet ):
                         return False
                 return True
 
@@ -384,7 +385,7 @@ class RFCUtils:
 
         #RiseAndFall
         def updateMinorTechs( self, iMinorCiv, iMajorCiv):                
-                for t in range(con.iNumTechs):
+                for t in range(xml.iNumTechs):
                         if (gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t)):
                                     gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(t, True, iMinorCiv, False, False)
 
@@ -419,7 +420,7 @@ class RFCUtils:
                         unitType = unit.getUnitType()
                         if (unit.getOwner() == iOldOwner):
                                 unit.kill(False, con.iBarbarian)
-                                if (iNewOwner < con.iNumActivePlayers or unitType > con.iSettler):
+                                if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler):
                                 	# 3Miro: 0, 72 change, see below
                                         self.makeUnit(unitType, iNewOwner, [0, 72], 1)
                         else:
@@ -603,7 +604,7 @@ class RFCUtils:
 
                 #halve barbarian culture in a broader area
                 if (bBarbarian2x2Decay or bBarbarian2x2Conversion):
-                        if (iNewOwner != con.iBarbarian and iNewOwner != con.iIndependent and iNewOwner != con.iIndependent2):
+                        if (iNewOwner != con.iBarbarian and iNewOwner != con.iIndependent and iNewOwner != con.iIndependent2 and iNewOwner != con.iIndependent3 and iNewOwner != con.iIndependent4):
                                 for x in range(tCityPlot[0]-2, tCityPlot[0]+3):        # from x-2 to x+2
                                         for y in range(tCityPlot[1]-2, tCityPlot[1]+3):	# from y-2 to y+2                                
                                                 iPlotBarbCulture = gc.getMap().plot(x, y).getCulture(con.iBarbarian)
@@ -780,20 +781,20 @@ class RFCUtils:
                 pCiv = gc.getPlayer(iNewOwner)
 
 		# Sedna17: makes garrison units based on new tech tree/units
-                if (gc.getTeam(pCiv.getTeam()).isHasTech(con.iNationalism) and gc.getTeam(pCiv.getTeam()).isHasTech(con.iMilitaryTactics)):
-                        iUnitType = con.iLineInfantry
-                elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iMatchlock)):
-			iUnitType = con.iMusketman       
-                elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iGunpowder)):
-			iUnitType = con.iArquebusier
-                elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iMilitaryTradition)):
-			iUnitType = con.iArquebusier
-                elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iClockmaking)):
-			iUnitType = con.iArbalest
-		elif (gc.getTeam(pCiv.getTeam()).isHasTech(con.iMachinery)):
-			iUnitType = con.iCrossbowman
+                if (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iNationalism) and gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMilitaryTactics)):
+                        iUnitType = xml.iLineInfantry
+                elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMatchlock)):
+			iUnitType = xml.iMusketman       
+                elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iGunpowder)):
+			iUnitType = xml.iArquebusier
+                elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMilitaryTradition)):
+			iUnitType = xml.iArquebusier
+                elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iClockmaking)):
+			iUnitType = xml.iArbalest
+		elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMachinery)):
+			iUnitType = xml.iCrossbowman
                 else:
-                        iUnitType = con.iArcher
+                        iUnitType = xml.iArcher
 
                 self.makeUnit(iUnitType, iNewOwner, [tCityPlot[0], tCityPlot[1]], iNumUnits)
 
@@ -913,8 +914,8 @@ class RFCUtils:
 
         def clearPlague(self, iCiv):
                 for pyCity in PyPlayer(iCiv).getCityList():
-                        if (pyCity.GetCy().hasBuilding(con.iPlague)):
-                                pyCity.GetCy().setHasRealBuilding(con.iPlague, False)
+                        if (pyCity.GetCy().hasBuilding(xml.iPlague)):
+                                pyCity.GetCy().setHasRealBuilding(xml.iPlague, False)
 
 
 
@@ -959,7 +960,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
+                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         if (pCurrent.countTotalCulture() == 0 ):
                                                 # this is a good plot, so paint it and continue search
@@ -974,7 +975,7 @@ class RFCUtils:
                 bPaint = True
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-                if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == con.iCoast):
+                if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == xml.iCoast):
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                 iClean = 0
                                 for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
@@ -994,7 +995,7 @@ class RFCUtils:
                 bPaint = True
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-                if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == con.iCoast):
+                if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == xml.iCoast):
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                 if (pCurrent.countTotalCulture() == 0 ):
                                         iClean = 0
@@ -1017,7 +1018,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
+                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         iClean = 0
                                         for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
@@ -1039,7 +1040,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
+                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                             # this is a good plot, so paint it and continue search
                                             return (None, bPaint, bContinue)
@@ -1053,7 +1054,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
+                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         iClean = 0
                                         for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
@@ -1078,7 +1079,7 @@ class RFCUtils:
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
                         if ( not pCurrent.isImpassable()):
                                 if ( not pCurrent.isUnit() ):
-                                        if (pCurrent.getTerrainType() != con.iDesert) and (pCurrent.getTerrainType() != con.iTundra) and (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
+                                        if (pCurrent.getTerrainType() != xml.iDesert) and (pCurrent.getTerrainType() != xml.iTundra) and (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                                 if (pCurrent.countTotalCulture() == 0 ):
                                                         # this is a good plot, so paint it and continue search
                                                         return (None, bPaint, bContinue)
@@ -1118,7 +1119,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != con.iMarsh) and (pCurrent.getFeatureType() != con.iJungle):
+                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                             if (pCurrent.getOwner() == argsList ):
                                                     # this is a good plot, so paint it and continue search

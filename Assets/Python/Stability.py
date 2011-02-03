@@ -6,8 +6,12 @@ import PyHelpers
 import Popup
 import cPickle as pickle
 import Consts as con
+import XMLConsts as xml
+import RFCEStability
 import RFCUtils
 utils = RFCUtils.RFCUtils()
+
+import RFCEStability
 
 # globals
 gc = CyGlobalContext()
@@ -186,9 +190,12 @@ class Stability:
 			self.setParameter(utils.getHumanID(), iParExpansionE, False, -10)
                 # 3Miro: give 10pnts Stability bonus to Byzantium on start
                 self.setStability(con.iByzantium, self.getStability( con.iByzantium + 10 ) )
+                self.rfcestab = RFCEStability.RFCEStability()
+                self.rfcestab.setup()
 
 
         def checkTurn(self, iGameTurn):
+                self.rfcestab.checkTurn(iGameTurn)
         	if (iGameTurn % 21 == 0):
 	       		self.continentsNormalization(iGameTurn)
                 if (iGameTurn % 6 == 0): #3 is too short to detect any change; must be a multiple of 3 anyway
@@ -212,6 +219,7 @@ class Stability:
 
 
         def updateBaseStability(self, iGameTurn, iPlayer): #Base stability is temporary (i.e. turn-based) stability
+                self.rfcestab.updateBaseStability(iGameTurn, iPlayer)
 
                 pPlayer = gc.getPlayer(iPlayer)
                 teamPlayer = gc.getTeam(pPlayer.getTeam())
@@ -534,7 +542,7 @@ class Stability:
 	
 
         def onCityBuilt(self, iPlayer, x, y):
-
+                self.rfcestab.onCityBuilt(iPlayer, x, y)
                 iTempExpansion = 0
                 iGameTurn = gc.getGame().getGameTurn()
                 if (iGameTurn <= con.tBirth[iPlayer] + 20):
@@ -551,17 +559,19 @@ class Stability:
 		#		iTempExpansion += 2
                 self.setParameter(iPlayer, iParExpansionE, True, iTempExpansion) 
                 self.setStability(iPlayer, self.getStability(iPlayer) + iTempExpansion )
-                             
-
+                
 
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
+                self.rfcestab.onCityAcquired(owner, playerType, city, bConquest, bTrade)
+                #print(" Provinces, city Aquired by owner: ",owner,"  in Province: ",city.getProvince() )
+                
                 iGameTurn = gc.getGame().getGameTurn()
                 #playerType is the new owner and gains stability, while old owner (owner) loses 
 
-		if (city.hasBuilding(con.iEscorial)):
+		if (city.hasBuilding(xml.iEscorial)):
 			self.setHasEscorial(playerType,1)
 			self.setHasEscorial(owner,0)
-		if (city.hasBuilding(con.iStephansdom)):
+		if (city.hasBuilding(xml.iStephansdom)):
 			self.setHasStephansdom(playerType,1)
 			self.setHasStephansdom(owner,0)
 
@@ -615,6 +625,7 @@ class Stability:
 
 
         def onCityRazed(self, iOwner, playerType, city):
+                self.rfcestab.onCityRazed(iOwner, playerType, city)
             	#Sedna17: Not sure what difference between iOwner and playerType is here
 		#3Miro: iOwner owns the city (victim) and playerType conquers the city (pillager)
                 if (iOwner < con.iNumPlayers):      
@@ -632,6 +643,7 @@ class Stability:
 
                                                 
         def onImprovementDestroyed(self, owner):
+                self.rfcestab.onImprovementDestroyed(owner)
 
                 if (owner < con.iNumPlayers and owner >= 0):
 	                iTempExpansionThreshold = -1                
@@ -641,44 +653,46 @@ class Stability:
 
 
         def onTechAcquired(self, iTech, iPlayer):
-        	if (iTech == con.iBronzeCasting or
-        	iTech == con.iStirrup or
-        	iTech == con.iChainMail or
-        	iTech == con.iMachinery or
-        	iTech == con.iFarriers):
+                self.rfcestab.onTechAcquired(iTech, iPlayer)
+        	if (iTech == xml.iBronzeCasting or
+        	iTech == xml.iStirrup or
+        	iTech == xml.iChainMail or
+        	iTech == xml.iMachinery or
+        	iTech == xml.iFarriers):
 			self.setParameter(iPlayer, iParEconomyE, True, -2)
 			self.setStability(iPlayer, self.getStability(iPlayer)-2)
-        	elif (iTech == con.iMonasticism or
-        	iTech == con.iAstrolabe or
-        	iTech == con.iHerbalMedicine or
-        	iTech == con.iArt or
-        	iTech == con.iVaultedArches or 
-        	iTech == con.iMusic):
+        	elif (iTech == xml.iMonasticism or
+        	iTech == xml.iAstrolabe or
+        	iTech == xml.iHerbalMedicine or
+        	iTech == xml.iArt or
+        	iTech == xml.iVaultedArches or 
+        	iTech == xml.iMusic):
 			self.setParameter(iPlayer, iParEconomyE, True, 1)
 			self.setStability(iPlayer, self.getStability(iPlayer)+1)
         	pass
 
 
         def onBuildingBuilt(self, iPlayer, iBuilding, city):
+                self.rfcestab.onBuildingBuilt(iPlayer, iBuilding, city)
 		# 3Miro: some buildings give and others take stability
                 iTempCitiesThreshold = 0
-                if (iBuilding == con.iPalace): #palace
+                if (iBuilding == xml.iPalace): #palace
                 	iTempCitiesThreshold -= 15 
-                elif ( iBuilding == con.iCastle or iBuilding == con.iMoscowKremlin or iBuilding == con.iHungarianStronghold or iBuilding == con.iSpanishCitadel):
+                elif ( iBuilding == xml.iCastle or iBuilding == xml.iMoscowKremlin or iBuilding == xml.iHungarianStronghold or iBuilding == xml.iSpanishCitadel):
                 	iTempCitiesThreshold += 1
-                elif ( iBuilding == con.iManorHouse or iBuilding == con.iFrenchChateau):
+                elif ( iBuilding == xml.iManorHouse or iBuilding == xml.iFrenchChateau):
                 	iTempCitiesThreshold += 1
-                #elif ( iBuilding == con.iDungeon): # 3Miro: Dungeon no longer gives stability
+                #elif ( iBuilding == xml.iDungeon): # 3Miro: Dungeon no longer gives stability
                 #	iTempCitiesThreshold += 1
-                elif ( iBuilding == con.iNightWatch):
+                elif ( iBuilding == xml.iNightWatch):
                 	iTempCitiesThreshold += 1
-		elif (iBuilding == con.iEscorial):
+		elif (iBuilding == xml.iEscorial):
 			self.setHasEscorial(iPlayer,1)
-		elif (iBuilding == con.iStephansdom):
+		elif (iBuilding == xml.iStephansdom):
 			self.setHasStephansdom(iPlayer,1)
 
 		# JediClemente: the +2 per wonder was obsolete, a bunch of wonders were added after Tomb of Al Khalid
-		if (iBuilding >= con.iSistineChapel and iBuilding <= con.iPressburg): #+2 per wonder
+		if (iBuilding >= xml.iSistineChapel and iBuilding <= xml.iPressburg): #+2 per wonder
 			iTempCitiesThreshold +=2
                 self.setParameter(iPlayer, iParCitiesE, True, iTempCitiesThreshold)
                 self.setStability(iPlayer, self.getStability(iPlayer)+iTempCitiesThreshold)
@@ -688,16 +702,17 @@ class Stability:
 
                             
         def onProjectBuilt(self, iPlayer, iProject):
+                self.rfcestab.onProjectBuilt(iPlayer,iProject)
                 pPlayer = gc.getPlayer(iPlayer)
                 iCivic5 = pPlayer.getCivics(5)
                 
                 if (iCivic5 == 29): #If civ is in Colonialism
-                        if (iProject >= con.iNumNotColonies):
+                        if (iProject >= xml.iNumNotColonies):
                                 iExpansionBoost = 1
                                 self.setParameter(iPlayer,iParExpansionE, True, iExpansionBoost)
                                 self.setStability(iPlayer, self.getStability(iPlayer)+iExpansionBoost)
 
-                #if (iProject <= con.iApolloProgram ): #no SS parts
+                #if (iProject <= xml.iApolloProgram ): #no SS parts
                 #        self.setStability(iPlayer, self.getStability(iPlayer) + 1 )
                 #        self.setParameter(iPlayer, iParCitiesE, True, 2)
                                 print("Stability - project built", iPlayer)
@@ -706,6 +721,7 @@ class Stability:
 
 
         def onCombatResult(self, argsList):
+                self.rfcestab.onCombatResult(argsList)
 
                 pWinningUnit,pLosingUnit = argsList
                 iWinningPlayer = pWinningUnit.getOwner()
@@ -728,6 +744,7 @@ class Stability:
 
 
         def onCorporationFounded(self, iPlayer):
+                self.rfcestab.onCorporationFounded(iPlayer)
 		self.setParameter(iPlayer, iParCitiesE, True, -2)
                 self.setStability(iPlayer, self.getStability(iPlayer) - 2 )
                 #print("Stability - onCorporationFounded", iPlayer)
@@ -749,6 +766,7 @@ class Stability:
 
        	
         def checkImplosion(self, iGameTurn):
+                self.rfcestab.checkImplosion(iGameTurn)
     
                 if (iGameTurn > 10 and iGameTurn % 8 == 5):
                         for iPlayer in range(iNumPlayers):
@@ -760,7 +778,7 @@ class Stability:
                                                         if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
                                                                 CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + \
                                                                                                     CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
-                                                        #if (iGameTurn < con.i1000AD):
+                                                        #if (iGameTurn < xml.i1000AD):
                                                         # 3Miro: fragments to indeps and barbs, after some year just indeps
                                                         #utils.killAndFragmentCiv(iPlayer, iIndependent, iIndependent2, -1, False)
                                                         utils.killAndFragmentCiv(iPlayer, False, False)

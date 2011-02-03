@@ -39,6 +39,7 @@
 			<FreeBonuses/>
 			<PProjects/>
 			<PBonus>NONE</PBonus>
+                        <bIsColony>0</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_EAST_INDIA_COMPANY</MovieDefineTag>
 		</ProjectInfo>
@@ -74,6 +75,7 @@
 			<FreeBonuses/>
 			<PProjects/>
 			<PBonus>NONE</PBonus>
+                        <bIsColony>0</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_WEST_INDIA_COMPANY</MovieDefineTag>
 		</ProjectInfo>
@@ -104,6 +106,7 @@
 			<FreeBonuses/>
 			<PProjects/>
 			<PBonus>NONE</PBonus>
+                        <bIsColony>0</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIE</MovieDefineTag>
 		</ProjectInfo>
@@ -148,6 +151,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_GOLD_COAST</MovieDefineTag>
 		</ProjectInfo>
@@ -192,6 +196,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_IVORY_COAST</MovieDefineTag>
 		</ProjectInfo>
@@ -246,6 +251,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CUBA</MovieDefineTag>
 		</ProjectInfo>
@@ -305,6 +311,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_BRAZIL</MovieDefineTag>
 		</ProjectInfo>
@@ -360,6 +367,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_HUDSON</MovieDefineTag>
 		</ProjectInfo>
@@ -419,6 +427,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_VIRGINIA</MovieDefineTag>
 		</ProjectInfo>
@@ -465,6 +474,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CHINA</MovieDefineTag>
 		</ProjectInfo>
@@ -520,6 +530,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_INDIA</MovieDefineTag>
 		</ProjectInfo>
@@ -575,6 +586,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_EAST_INDIES</MovieDefineTag>
 		</ProjectInfo>
@@ -634,6 +646,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_MALAYA</MovieDefineTag>
 		</ProjectInfo>
@@ -684,6 +697,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPE_TOWN</MovieDefineTag>
 		</ProjectInfo>
@@ -723,6 +737,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_EAST_AFRICA</MovieDefineTag>
 		</ProjectInfo>
@@ -766,6 +781,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_AZTEC_CONQUEST</MovieDefineTag>
 		</ProjectInfo>
@@ -809,6 +825,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_INCA_CONQUEST</MovieDefineTag>
 		</ProjectInfo>
@@ -857,6 +874,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_HISPANIOLA</MovieDefineTag>
 		</ProjectInfo>
@@ -914,6 +932,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_QUEBEC</MovieDefineTag>
 		</ProjectInfo>
@@ -971,6 +990,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_NEW_ENGLAND</MovieDefineTag>
 		</ProjectInfo>
@@ -1028,6 +1048,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_JAMAICA</MovieDefineTag>
 		</ProjectInfo>
@@ -1080,6 +1101,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_PANAMA</MovieDefineTag>
 		</ProjectInfo>
@@ -1141,6 +1163,7 @@
 				</PProject>
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_LOUISIANA</MovieDefineTag>
 		</ProjectInfo>
@@ -1193,6 +1216,7 @@
 			</FreeBonuses>
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_PHILLIPPINES</MovieDefineTag>
 		</ProjectInfo>

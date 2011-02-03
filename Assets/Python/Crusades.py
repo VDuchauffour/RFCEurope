@@ -7,6 +7,7 @@ import Popup
 import cPickle as pickle
 import RFCUtils
 import Consts as con
+import XMLConsts as xml
 import RFCEMaps as rfceMaps
 import CityNameManager
 
@@ -18,10 +19,10 @@ cnm = CityNameManager.CityNameManager()
 
 iNumCrusades = con.iNumCrusades
 iJerusalem = con.iJerusalem
-iCatholicism = con.iCatholicism
-iOrthodoxy = con.iOrthodoxy
-iIslam = con.iIslam
-iNumReligions = con.iNumReligions
+iCatholicism = xml.iCatholicism
+iOrthodoxy = xml.iOrthodoxy
+iIslam = xml.iIslam
+iNumReligions = xml.iNumReligions
 
 class Crusades:
 	
@@ -248,19 +249,19 @@ class Crusades:
 		#print(" 3Miro Crusades ")
 		#self.informPopup()
 		
-		if ( iGameTurn == con.i1099AD - 6 ): #1080AD to arrive 1099AD
+		if ( iGameTurn == xml.i1099AD - 6 ): #1080AD to arrive 1099AD
 			self.setCrusadeInit( 0, -1 )
-		if ( iGameTurn >= con.i1147AD - 6 and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ): # to arrive 1147AD
+		if ( iGameTurn >= xml.i1147AD - 6 and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ): # to arrive 1147AD
 			self.setCrusadeInit( 1, -1 )
-		if ( iGameTurn >= con.i1187AD - 6 and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ): # to arrive 1187AD
+		if ( iGameTurn >= xml.i1187AD - 6 and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ): # to arrive 1187AD
 			self.setCrusadeInit( 2, -1 )
-		if ( iGameTurn >= con.i1202AD - 6 and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ): # to arrive 1202AD
+		if ( iGameTurn >= xml.i1202AD - 6 and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ): # to arrive 1202AD
 			self.setCrusadeInit( 3, -1 )
-		if ( iGameTurn >= con.i1229AD - 6 and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): # to arrive 1229AD
+		if ( iGameTurn >= xml.i1229AD - 6 and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): # to arrive 1229AD
 			self.setCrusadeInit( 4, -1 )
 		
 		#if ( iGameTurn == 50 ): #debug
-		if ( iGameTurn == con.i1000AD ): # indulgances for the Reconquista given by the Catholic Church 1000AD
+		if ( iGameTurn == xml.i1000AD ): # indulgances for the Reconquista given by the Catholic Church 1000AD
 			self.setDCEnabled( True )
 			
 		if ( self.isDCEnabled() ):
@@ -560,26 +561,26 @@ class Crusades:
 		pUnit.kill( 0, -1 )
 				
 	def unitProbability( self, iUnitType ):
-		if ( iUnitType == con.iArcher or iUnitType == con.iCrossbowman or iUnitType == con.iArbalest or iUnitType == con.iGenoaBalestrieri or iUnitType == con.iLongbowman or iUnitType == con.iEnglishLongbowman or iUnitType == con.iPortugalFootKnight ):
+		if ( iUnitType == xml.iArcher or iUnitType == xml.iCrossbowman or iUnitType == xml.iArbalest or iUnitType == xml.iGenoaBalestrieri or iUnitType == xml.iLongbowman or iUnitType == xml.iEnglishLongbowman or iUnitType == xml.iPortugalFootKnight ):
 			return 33
-		if ( iUnitType == con.iHungarianLancer or iUnitType == con.iLancer or iUnitType == con.iCordobanBerber or iUnitType == con.iHeavyLancer or iUnitType == con.iArabiaGhazi or iUnitType == con.iByzantineCataphract or iUnitType == con.iKnight or iUnitType == con.iMoscowBoyar or iUnitType == con.iPolishWingedHussar or iUnitType == con.iBurgundianPaladin ):
+		if ( iUnitType == xml.iHungarianLancer or iUnitType == xml.iLancer or iUnitType == xml.iCordobanBerber or iUnitType == xml.iHeavyLancer or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iPolishWingedHussar or iUnitType == xml.iBurgundianPaladin ):
 			return 66
-		if ( iUnitType == con.iTemplar or iUnitType == con.iTeutonic ):
+		if ( iUnitType == xml.iTemplar or iUnitType == xml.iTeutonic ):
 			return 90
-		if ( iUnitType < con.iArcher or iUnitType > con.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Tagmata do not go
+		if ( iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Tagmata do not go
 			return -1
 		return 50
 		
 	def unitCrusadeCategory( self, iUnitType ):
-		if ( iUnitType == con.iTemplar ):
+		if ( iUnitType == xml.iTemplar ):
 			return 0
-		if ( iUnitType == con.iTeutonic ):
+		if ( iUnitType == xml.iTeutonic ):
 			return 1
-		if ( iUnitType == con.iKnight or iUnitType == con.iMoscowBoyar or iUnitType == con.iPolishWingedHussar or iUnitType == con.iBurgundianPaladin ):
+		if ( iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iPolishWingedHussar or iUnitType == xml.iBurgundianPaladin ):
 			return 2
-		if ( iUnitType == con.iHeavyLancer or iUnitType == con.iArabiaGhazi or iUnitType == con.iByzantineCataphract or iUnitType == con.iKievDruzhina ):
+		if ( iUnitType == xml.iHeavyLancer or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKievDruzhina ):
 			return 3
-		if ( iUnitType == con.iCatapult or iUnitType == con.iTrebuchet ):
+		if ( iUnitType == xml.iCatapult or iUnitType == xml.iTrebuchet ):
 			return 4
 		return 5
 					
@@ -773,13 +774,13 @@ class Crusades:
 		
 	def crusadeMakeUnits( self, tPlot ):
 		iLeader = self.getLeader()
-		self.makeUnit( con.iLancer, iLeader, tPlot, 1 )
-		self.makeUnit( con.iKnight, iLeader, tPlot, 1 )
-		self.makeUnit( con.iLongSwordsman, iLeader, tPlot, 1 )
-		self.makeUnit( con.iSpearman, iLeader, tPlot, 1 )
-		self.makeUnit( con.iGuisarme, iLeader, tPlot, 1 )
-		self.makeUnit( con.iCatapult, iLeader, tPlot, 2 )
-		self.makeUnit( con.iTrebuchet, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iSpearman, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iGuisarme, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iCatapult, iLeader, tPlot, 2 )
+		self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
 
 		#print( " Crusade has Power ", self.getCrusadePower() )
 		
@@ -798,45 +799,45 @@ class Crusades:
 			iRougeModifier = 2
 			
 		if ( self.getSelectedUnit( 0 ) > 0 ):
-			self.makeUnit( con.iTemplar, iLeader, tPlot, self.getSelectedUnit( 0 ) / iRougeModifier  )
+			self.makeUnit( xml.iTemplar, iLeader, tPlot, self.getSelectedUnit( 0 ) / iRougeModifier  )
 		if ( self.getSelectedUnit( 1 ) > 0 ):
-			self.makeUnit( con.iTeutonic, iLeader, tPlot, self.getSelectedUnit( 1 ) / iRougeModifier  )
+			self.makeUnit( xml.iTeutonic, iLeader, tPlot, self.getSelectedUnit( 1 ) / iRougeModifier  )
 		if ( self.getSelectedUnit( 2 ) > 0 ):
 			if ( iLeader == con.iBurgundy ):
-				self.makeUnit( con.iBurgundianPaladin, iLeader, tPlot, self.getSelectedUnit( 2 ) / iRougeModifier  )
+				self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, self.getSelectedUnit( 2 ) / iRougeModifier  )
 			else:
-				self.makeUnit( con.iKnight, iLeader, tPlot, self.getSelectedUnit( 2 ) / iRougeModifier  )
+				self.makeUnit( xml.iKnight, iLeader, tPlot, self.getSelectedUnit( 2 ) / iRougeModifier  )
 		if ( self.getSelectedUnit( 3 ) > 0 ):
-			self.makeUnit( con.iHeavyLancer, iLeader, tPlot, self.getSelectedUnit( 3 ) / iRougeModifier  )
+			self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, self.getSelectedUnit( 3 ) / iRougeModifier  )
 		if ( self.getSelectedUnit( 4 ) > 0 ):
-			self.makeUnit( con.iCatapult, iLeader, tPlot, self.getSelectedUnit( 4 ) / iRougeModifier  )
+			self.makeUnit( xml.iCatapult, iLeader, tPlot, self.getSelectedUnit( 4 ) / iRougeModifier  )
 			if ( self.getSelectedUnit( 4 ) > 3 ):
-				self.makeUnit( con.iTrebuchet, iLeader, tPlot, self.getSelectedUnit( 4 ) / iRougeModifier  )
+				self.makeUnit( xml.iTrebuchet, iLeader, tPlot, self.getSelectedUnit( 4 ) / iRougeModifier  )
 		if ( self.getSelectedUnit( 5 ) > 0 ):
-			self.makeUnit( con.iLongSwordsman, iLeader, tPlot, self.getSelectedUnit( 5 ) / (10*iRougeModifier) )
-			self.makeUnit( con.iGuisarme, iLeader, tPlot, self.getSelectedUnit( 5 ) / (10*iRougeModifier)  )
+			self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, self.getSelectedUnit( 5 ) / (10*iRougeModifier) )
+			self.makeUnit( xml.iGuisarme, iLeader, tPlot, self.getSelectedUnit( 5 ) / (10*iRougeModifier)  )
 			
 
 		#if ( self.getCrusadePower() >  20 ):
-		#	self.makeUnit( con.iLongSwordsman, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
 	
 		#if ( self.getCrusadePower() > 40 ):
-		#	self.makeUnit( con.iLongSwordsman, iLeader, tPlot, 1 )
-		#	self.makeUnit( con.iCatapult, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iCatapult, iLeader, tPlot, 1 )
 			
 		#if ( self.getCrusadePower() > 50 ):
-		#	self.makeUnit( con.iLancer, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
 		#	
 		#if ( self.getCrusadePower() > 60 ):
-		#	#self.makeUnit( con.iLancer, iLeader, tPlot, 1 )
-		#	self.makeUnit( con.iTrebuchet, iLeader, tPlot, 1 )
+		#	#self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
 			
 		#if ( self.getCrusadePower() > 70 ):
-		#	self.makeUnit( con.iLancer, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
  
 		#if ( self.getCrusadePower() > 90 ):
-		#	self.makeUnit( con.iKnight, iLeader, tPlot, 1 )
-		#	self.makeUnit( con.iTrebuchet, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
+		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
 		
 	def success( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
@@ -1012,26 +1013,26 @@ class Crusades:
 					
 	def getDCBestInfantry( self, iPlayer ):
 		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
-		if ( teamPlayer.isHasTech( con.iNationalism ) and teamPlayer.isHasTech( con.iChemistry ) ):
-			return con.iGrenadier
-		if ( teamPlayer.isHasTech( con.iCivilService ) and teamPlayer.isHasTech( con.iMachinery ) ):
-			return con.iMaceman
-		if ( teamPlayer.isHasTech( con.iBlastFurnace ) ):
-			return con.iLongSwordsman
-		if ( teamPlayer.isHasTech( con.iChainMail ) ):
-			return con.iSwordsman
-		return con.iAxeman
+		if ( teamPlayer.isHasTech( xml.iNationalism ) and teamPlayer.isHasTech( xml.iChemistry ) ):
+			return xml.iGrenadier
+		if ( teamPlayer.isHasTech( xml.iCivilService ) and teamPlayer.isHasTech( xml.iMachinery ) ):
+			return xml.iMaceman
+		if ( teamPlayer.isHasTech( xml.iBlastFurnace ) ):
+			return xml.iLongSwordsman
+		if ( teamPlayer.isHasTech( xml.iChainMail ) ):
+			return xml.iSwordsman
+		return xml.iAxeman
 		
 	def getDCBestCavalry( self, iPlayer ):
 		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
-		if ( teamPlayer.isHasTech( con.iMilitaryTactics ) ):
-			return con.iCuirassier
-		if ( teamPlayer.isHasTech( con.iChivalry ) ):
-			return con.iKnight
-		if ( teamPlayer.isHasTech( con.iFarriers ) and teamPlayer.isHasTech( con.iFeudalism ) ):
-			return con.iHeavyLancer
-		if ( teamPlayer.isHasTech( con.iManorialism ) and teamPlayer.isHasTech( con.iStirrup ) ):
-			return con.iLancer
-		return con.iScout
+		if ( teamPlayer.isHasTech( xml.iMilitaryTactics ) ):
+			return xml.iCuirassier
+		if ( teamPlayer.isHasTech( xml.iChivalry ) ):
+			return xml.iKnight
+		if ( teamPlayer.isHasTech( xml.iFarriers ) and teamPlayer.isHasTech( xml.iFeudalism ) ):
+			return xml.iHeavyLancer
+		if ( teamPlayer.isHasTech( xml.iManorialism ) and teamPlayer.isHasTech( xml.iStirrup ) ):
+			return xml.iLancer
+		return xml.iScout
 		
 		

@@ -41,6 +41,9 @@ class CvVictoryScreen:
 		self.UN_RESOLUTION_TAB_ID = "VotingTabWidget"
 		self.UN_MEMBERS_TAB_ID = "MembersTabWidget"
 		self.SPACESHIP_SCREEN_BUTTON = 1234
+                self.UHV1_ID = "UHVCondition1" # 3Miro: UHV condition 1
+                self.UHV2_ID = "UHVCondition2"
+                self.UHV3_ID = "UHVCondition3"
 		
 		self.Z_BACKGROUND = -6.1
 		self.Z_CONTROLS = self.Z_BACKGROUND - 0.2
@@ -58,7 +61,7 @@ class CvVictoryScreen:
 		self.X_AREA = 10
 		self.Y_AREA = 60
 		self.W_AREA = 1010
-		self.H_AREA = 650
+		self.H_AREA = 270
 		
 		# 3Miro: resize the table to fit the long strings of UHVs (same idea as RFC 1.186
 		#self.TABLE_WIDTH_0 = 350
@@ -94,6 +97,21 @@ class CvVictoryScreen:
 		self.bVoteTab = False
 
 		self.iScreen = VICTORY_CONDITION_SCREEN
+                
+                self.X_UHV1 = 10
+                self.Y_UHV1 = 350
+                self.W_UHV1 = 1010
+                self.H_UHV1 = 110
+                
+                self.X_UHV2 = 10
+                self.Y_UHV2 = 470
+                self.W_UHV2 = 1010
+                self.H_UHV2 = 110
+                
+                self.X_UHV3 = 10
+                self.Y_UHV3 = 590
+                self.W_UHV3 = 1010
+                self.H_UHV3 = 110
 						
 	def getScreen(self):
 		return CyGInterfaceScreen(self.SCREEN_NAME, self.screenId)
@@ -503,17 +521,18 @@ class CvVictoryScreen:
 		
 		for iLoopVC in range(gc.getNumVictoryInfos()):
 			victory = gc.getVictoryInfo(iLoopVC)
-			if gc.getGame().isVictoryValid(iLoopVC):
+			if (gc.getGame().isVictoryValid(iLoopVC) and (iLoopVC != 7) and (iLoopVC != 6)): # 3Miro: Changes to the Victory screen
 				
 				iNumRows = screen.getTableNumRows(szTable)
-				szVictoryType = u"<font=4b>" + victory.getDescription().upper() + u"</font>"
-				if (victory.isEndScore() and (gc.getGame().getMaxTurns() > gc.getGame().getElapsedGameTurns())):
-					szVictoryType += "    (" + localText.getText("TXT_KEY_MISC_TURNS_LEFT", (gc.getGame().getMaxTurns() - gc.getGame().getElapsedGameTurns(), )) + ")"
+                                
+                                szVictoryType = u"<font=4b>" + victory.getDescription().upper() + u"</font>"
+                                if (victory.isEndScore() and (gc.getGame().getMaxTurns() > gc.getGame().getElapsedGameTurns())):
+                                        szVictoryType += "    (" + localText.getText("TXT_KEY_MISC_TURNS_LEFT", (gc.getGame().getMaxTurns() - gc.getGame().getElapsedGameTurns(), )) + ")"
 
-				iVictoryTitleRow = iNumRows - 1
-				screen.setTableText(szTable, 0, iVictoryTitleRow, szVictoryType, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                iVictoryTitleRow = iNumRows - 1
+                                screen.setTableText(szTable, 0, iVictoryTitleRow, szVictoryType, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                        
 				bSpaceshipFound = False
-					
 				bEntriesFound = False
 				
 				if (victory.isTargetScore() and gc.getGame().getTargetScore() != 0):
@@ -788,9 +807,11 @@ class CvVictoryScreen:
                                         bEntriesFound = True
                                 #Rhye - end
 					
-				if (bEntriesFound):
+				if (bEntriesFound and (iLoopVC < 4)): # 3Miro: last one appends 2 rows
 					screen.appendTableRow(szTable)
 					screen.appendTableRow(szTable)
+                                        
+                self.drawCleanerVictoryConditions()
 
 		# civ picker dropdown
 		if (CyGame().isDebugMode()):
@@ -872,3 +893,73 @@ class CvVictoryScreen:
 
 	def update(self, fDelta):
 		return
+                
+        def drawCleanerVictoryConditions(self):
+                screen = self.getScreen()
+		pPlayer = gc.getPlayer(self.iActivePlayer)
+                
+                # 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode strin
+                #        just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
+                
+                # UHV 1
+                iGoal = utils.getGoal( self.iActivePlayer, 0 )
+                if ( iGoal == -1 ):
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                elif ( iGoal == 0 ):
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),()))
+                else:
+                        #sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),()))
+                        
+                szUHV1Area = self.UHV1_ID
+                screen.addPanel(self.UHV1_ID, "", "", True, True, self.X_UHV1, self.Y_UHV1, self.W_UHV1, self.H_UHV1, PanelStyles.PANEL_STYLE_MAIN)
+
+                #sString = localText.getText("TXT_KEY_ICON_BULLET",()) + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                #sString = sString + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+7, self.Y_UHV1+15, self.W_UHV1-10, self.H_UHV1-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                
+                # UHV 2
+                iGoal = utils.getGoal( self.iActivePlayer, 1 )
+                if ( iGoal == -1 ):
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
+                elif ( iGoal == 0 ):
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),()))
+                else:
+                        #sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),()))
+                        
+                szUHV2Area = self.UHV2_ID
+                screen.addPanel(self.UHV2_ID, "", "", True, True, self.X_UHV2, self.Y_UHV2, self.W_UHV2, self.H_UHV2, PanelStyles.PANEL_STYLE_MAIN)
+
+                #sString = localText.getText("TXT_KEY_ICON_BULLET",()) + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
+                #sString = sString + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
+                screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+7, self.Y_UHV2+15, self.W_UHV2-10, self.H_UHV2-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                
+                # UHV 3
+                iGoal = utils.getGoal( self.iActivePlayer, 2 )
+                if ( iGoal == -1 ):
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
+                elif ( iGoal == 0 ):
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
+                else:
+                        #sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
+                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
+                
+                szUHV3Area = self.UHV3_ID
+                screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
+
+                #sString = localText.getText("TXT_KEY_ICON_BULLET",()) + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
+                #sString = sString + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
+		#sString = sString + u"[<color=255,0,0>%s</color>]" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
+                screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+7, self.Y_UHV3+15, self.W_UHV3-10, self.H_UHV3-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                
+                
+                #self.X_UHV2 = 10
+                #self.Y_UHV2 = 450
+                #self.W_UHV2 = 1010
+                #self.H_UHV2 = 100
+                
+                #self.X_UHV3 = 10
+                #self.Y_UHV3 = 600
+                #self.W_UHV3 = 1010
+                #self.H_UHV3 = 100

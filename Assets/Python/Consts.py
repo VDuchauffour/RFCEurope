@@ -1,10 +1,11 @@
 # Rhye's and Fall of Civilization - Constants
 
-
 # globals
 
 #from CvPythonExtensions import *
 #gc = CyGlobalContext()
+
+import XMLConsts as xml
 
 l0Array =       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # 3Miro for stability, counts the cities for each player
 l0ArrayActive = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -16,7 +17,7 @@ lm1Array =      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 iMapMaxX = 100
 iMapMaxY = 73
 
-# initialise player variables to player IDs from WBS
+# initialise player variables to player IDs from WBS (this is the only part of the XML that will stay here)
 iBurgundy = 0
 iByzantium = 1
 iFrankia = 2
@@ -183,8 +184,8 @@ tBirth = (
 ) # 3Miro: tBirth should finish with zeros for all minor civs (indeps, barbs and celts in original RFC)
 
 
-tYear = (
-("840", "TXT_KEY_AD"),
+tYear = ( # for Dawn of Man starting screen
+("844", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("632", "TXT_KEY_AD"),
@@ -207,104 +208,6 @@ tYear = (
 ("1580", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD")
 )
-
-# 3Miro: wrong order. Use order as in the WB
-tGoals = (
-("TXT_KEY_UHV_BUR1", "TXT_KEY_UHV_BUR2", "TXT_KEY_UHV_BUR3"),
-("TXT_KEY_UHV_BYZ1", "TXT_KEY_UHV_BYZ2", "TXT_KEY_UHV_BYZ3"),
-("TXT_KEY_UHV_FRA1", "TXT_KEY_UHV_FRA2", "TXT_KEY_UHV_FRA3"),
-("TXT_KEY_UHV_ARA1", "TXT_KEY_UHV_ARA2", "TXT_KEY_UHV_ARA3"),
-("TXT_KEY_UHV_BUL1", "TXT_KEY_UHV_BUL2", "TXT_KEY_UHV_BUL3"),
-("TXT_KEY_UHV_COR1", "TXT_KEY_UHV_COR2", "TXT_KEY_UHV_COR3"),
-("TXT_KEY_UHV_SPN1", "TXT_KEY_UHV_SPN2", "TXT_KEY_UHV_SPN3"),
-("TXT_KEY_UHV_NOR1", "TXT_KEY_UHV_NOR2", "TXT_KEY_UHV_NOR3"),
-("TXT_KEY_UHV_VEN1", "TXT_KEY_UHV_VEN2", "TXT_KEY_UHV_VEN3"),
-("TXT_KEY_UHV_KIE1", "TXT_KEY_UHV_KIE2", "TXT_KEY_UHV_KIE3"),
-("TXT_KEY_UHV_HUN1", "TXT_KEY_UHV_HUN2", "TXT_KEY_UHV_HUN3"),
-("TXT_KEY_UHV_GER1", "TXT_KEY_UHV_GER2", "TXT_KEY_UHV_GER3"),
-("TXT_KEY_UHV_POL1", "TXT_KEY_UHV_POL2", "TXT_KEY_UHV_POL3"),
-("TXT_KEY_UHV_MOS1", "TXT_KEY_UHV_MOS2", "TXT_KEY_UHV_MOS3"),
-("TXT_KEY_UHV_GEN1", "TXT_KEY_UHV_GEN2", "TXT_KEY_UHV_GEN3"),
-("TXT_KEY_UHV_ENG1", "TXT_KEY_UHV_ENG2", "TXT_KEY_UHV_ENG3"),
-("TXT_KEY_UHV_POR1", "TXT_KEY_UHV_POR2", "TXT_KEY_UHV_POR3"),
-("TXT_KEY_UHV_AUS1", "TXT_KEY_UHV_AUS2", "TXT_KEY_UHV_AUS3"),
-("TXT_KEY_UHV_TUR1", "TXT_KEY_UHV_TUR2", "TXT_KEY_UHV_TUR3"),
-("TXT_KEY_UHV_SWE1", "TXT_KEY_UHV_SWE2", "TXT_KEY_UHV_SWE3"),
-("TXT_KEY_UHV_DUT1", "TXT_KEY_UHV_DUT2", "TXT_KEY_UHV_DUT3"),
-("TXT_KEY_UHV_POP1", "TXT_KEY_UHV_POP2", "TXT_KEY_UHV_POP3")
-)
-
-
-# date waypoints
-# 3Miro: important years
-i500AD = 0
-i632AD = 33
-i640AD = 35
-i700AD = 50
-i712AD = 53
-i720AD = 55
-i770AD = 68
-i800AD = 75
-i840AD = 85
-i844AD = 86
-i880AD = 95
-i900AD = 100
-i940AD = 113
-i960AD = 120
-i970AD = 123
-i1000AD =133 # Start of the Defensive Crusades
-i1020AD =140
-i1050AD =150
-i1053AD =151
-i1060AD =153 # First Crusade gets called
-i1067AD =156
-i1080AD =160
-i1089AD =163
-i1099AD =166 # First Crusade to arrive
-i1101AD =167
-i1147AD =183 # Second Crusade to arrive
-i1160AD =187
-i1187AD =195 # Third Crusade to arrive
-i1200AD =200
-i1202AD =201 # Fourth Crusade to arrive
-i1229AD =210 # Fifth Crusade to arrive
-i1236AD =212 # Start of the Mongol invasion
-i1248AD =216
-i1281AD =227
-i1284AD =228
-i1288AD =230 # End of the fist wave of Mongols
-i1300AD =233
-i1320AD =240
-i1350AD =250
-i1359AD =253
-i1401AD =267
-i1419AD =273
-i1431AD =277
-i1449AD =283
-i1452AD =284 # End of the Hundred Years war
-i1461AD =287
-i1470AD =290
-i1482AD =294
-i1491AD =297
-i1500AD =300
-i1520AD =310
-i1526AD =313
-i1540AD =320
-i1570AD =335
-i1580AD =340
-i1600AD =350
-i1620AD =360
-i1640AD =370
-i1650AD =375
-i1660AD =380
-i1670AD =385
-i1680AD =390
-i1700AD =400
-i1730AD =430
-i1750AD =450
-
-
-
 
 
 # starting locations coordinates
@@ -499,8 +402,6 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 (), #Dutch
 ()  #Pope
 )
-
-
 
 #normal areas
 
@@ -859,16 +760,6 @@ tPatienceThreshold = (
 ) 
 
 
-
-
-# initialise religion variables to religion indices from XML
-iProtestantism = 0
-iIslam = 1
-iCatholicism = 2
-iOrthodoxy = 3
-iJudaism = 4
-iNumReligions = 5
-
 # religion spread modifiers:
 tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (150,  20, 150,  70,  10), #Burgundy
@@ -900,443 +791,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 ( 20,  20,  20,  20,  10)  #Barb
 )
 
-# initialise tech variables to unit indices from XML
 
-#Early
-iCalendar=0
-iArchitecture=1
-iBronzeCasting=2
-iTheology=3
-iManorialism=4
-iStirrup=5
-iEngineering=6
-iChainMail=7
-iArt=8
-iMonasticism=9
-iVassalage=10
-iAstrolabe=11
-iMachinery=12
-iVaultedArches=13
-iMusic=14
-iHerbalMedicine=15
-iFeudalism=16
-iFarriers=17
-#High
-iMapMaking=18
-iBlastFurnace=19
-iSiegeEngines=20
-iGothicArchitecture=21
-iLiterature=22
-iCodeOfLaws=23
-iAristocracy=24
-iLateenSails=25
-iPlateArmor=26
-iMonumentBuilding=27
-iClassicalKnowledge=28
-iAlchemy=29
-iCivilService=30
-iClockmaking=31
-iPhilosophy=32
-iEducation=33
-iGuilds=34
-iChivalry=35
-#Late
-iOptics=36
-iReplaceableParts=37
-iPatronage=38
-iGunpowder=39
-iBanking=40
-iMilitaryTradition=41
-iShipbuilding=42
-iDrama=43
-iDivineRight=44
-iChemistry=45
-iPaper=46
-iProfessionalArmy=47
-iPrintingPress=48
-iPublicWorks=49
-iMatchlock=50
-iArabicKnowledge=51
-#Renaissance
-iAstronomy=52
-iSteamEngines=53
-iConstitution=54
-iPolygonalFort=55
-iArabicMedicine=56
-iRenaissanceArt=57
-iNationalism=58
-iLiberalism=59
-iScientificMethod=60
-iMilitaryTactics=61
-iNavalArchitecture=62
-iCivilEngineering=63
-iRightOfMan=64
-iEconomics=65
-iPhysics=66
-iBiology=67
-iCombinedArms=68
-iTradingCompanies=69
-iMachineTools=70
-iFreeMarket=71
-iExplosives=72
-iMedicine=73
-iIndustrialTech=74
-
-iNumTechs = 75
-iFutureTech = 74
-
-iNumTechsFuture = 1
-
-
-# initialise unit variables to unit indices from XML
-
-iLion= 0
-iBear= 1
-iPanther= 2
-iWolf= 3
-iSettler= 4
-iWorker= 5
-iExecutive1= 6
-iExecutive2= 7
-iExecutive3= 8
-iExecutive4= 9
-iExecutive5= 10
-iExecutive6= 11
-iExecutive7= 12
-iCatholicMissionary= 13
-iOrthodoxMissionary= 14
-iProtestantMissionary= 15
-iIslamicMissionary= 16
-iArcher= 17
-iCrossbowman= 18
-iArbalest= 19
-iGenoaBalestrieri= 20
-iLongbowman= 21
-iEnglishLongbowman= 22
-iSpearman= 23
-iGuisarme= 24
-iPikeman= 25
-iHolyRomanLandsknecht= 26
-iAxeman= 27
-iVikingBeserker= 28
-iSwordsman= 29
-iLongSwordsman= 30
-iKnightofStJohns= 31
-iMaceman= 32
-iPortugalFootKnight= 33
-iGrenadier= 34
-iNetherlandsGrenadier= 35
-iArquebusier= 36
-iMusketman= 37
-iSwedishKarolin= 38
-iSpanishTercio= 39
-iFrenchMusketeer= 40
-iLineInfantry= 41
-iDragoon= 42
-iScout= 43
-iBulgarianKonnik= 44
-iHorseArcher= 45
-iHungarianLancer= 46
-iMountedInfantry= 47
-iPistolier= 48
-iHussar= 49
-iLancer= 50
-iCordobanBerber= 51
-iHeavyLancer= 52
-iArabiaGhazi= 53
-iByzantineCataphract= 54
-iKnight= 55
-iTemplar= 56
-iTeutonic= 57
-iMoscowBoyar= 58
-iBurgundianPaladin= 59
-iCuirassier= 60
-iAustrianKurassier= 61
-iPolishWingedHussar= 62
-iKievDruzhina= 63
-iCatapult= 64
-iTrebuchet= 65
-iBombard= 66
-iTurkeyGreatBombard= 67
-iCannon= 68
-iFieldArtillery= 69
-iWorkboat= 70
-iGalley= 71
-iCogge= 72
-iHolk= 73
-iGalleon= 74
-iWarGalley= 75
-iGunGalley=76
-iVeniceGalleas= 77
-iCarrack= 78
-iFrigate= 79
-iCaravel= 80
-iPrivateer= 81
-iSpy= 82
-iProsecutor= 83
-iProphet= 84
-iArtist= 85
-iScientist= 86
-iMerchant= 87
-iEngineer= 88
-iGreatGeneral= 89
-iGreatSpy= 90
-iMongolKeshik= 91
-iHighlander= 92
-iWelshLongbowman= 93
-iTagmata= 94
-iSeljuk= 95
-iCorsair=96
-
-iProsecutorClass = 62
-
-
-
-# initialise bonuses variables to bonuses IDs from WBSinulAi
-iRelic = 0 #This is actually the relic bonus, sorry
-iCoal = 1
-iCopper = 2
-iHorse = 3
-iIron = 4
-iMarble = 5
-iStone = 6
-iBanana = 7
-iClam = 8
-iCorn = 9
-iCow = 10
-iCrab = 11
-iDeer = 12
-iFish = 13
-iPig = 14
-iRice = 15
-iSheep = 16
-iWheat = 17
-iDye = 18
-iFur = 19
-iGems = 20
-iGold = 21
-iIncense = 22
-iIvory = 23
-iSilk = 24
-iSilver = 25
-iSpices = 26
-iSugar = 27
-iWine = 28
-iWhale = 29
-iCotton = 30
-iApple = 31
-iBarley = 32
-iHoney = 33
-iPotato = 34
-iSalt = 35
-iSulphur = 36
-iTimber = 37
-iCoffee = 38
-iSlaves = 39
-iTea = 40
-iTobacco = 41
-iOlives = 42
-iAccess = 43
-iNorthAccess = 44
-iSouthAccess = 45
-iAsiaAccess = 46
-
-#Buildings
-
-iPalace=0
-iGreatPalace=1
-iSummerPalace=1
-iRoyalAcademy=2
-iVersailles=3
-iWalls=4
-iStarFort=5
-iCastle=6
-iMoscowKremlin=7
-iHungarianStronghold=8
-iSpanishCitadel=9
-iBarracks=10
-iSwedishTennant=11
-iArcheryRange=12
-iStable=13
-iBulgarianStan=14
-iGranary=15
-iCordobanNoria=16
-iPolishFolwark=17
-iAqueduct=18
-iOttomanHammam=19
-iLighthouse=20
-iVikingTradingPost=21
-iWharf=22
-iHarbor=23
-iCustomHouse=24
-iPortugalFeitoria=25
-iDrydock=26
-iVeniceArsenal=27
-iForge=28
-iGuildHall=29
-iTextileMill=30
-iTowerLondon=31
-iUniversity=32
-iObservatory=33
-iHospital=34
-iTheatre=35
-iByzantineHippodrome=36
-iAustrianOperaHouse=37
-iMarket=38
-iArabicCaravan=39
-iBrewery=40
-iBurgundianWinery=41
-iJeweler=42
-iWeaver=43
-iSmokehouse=44
-iTannery=45
-iLuxuryStore=46
-iWarehouse=47
-iApothecary=48
-iBank=49
-iGenoaBank=50
-iEnglishStockExchange=51
-iCourthouse=52
-iKievVeche=53
-iHolyRomanRathaus=54
-iDungeon=55
-iNightWatch=56
-iLevee=57
-iNetherlandsDike=58
-iInn=59
-iCoffeeHouse=60
-iManorHouse=61
-iFrenchChateau=62
-iInfirmary=63
-iPaganShrine=64
-iJewishQuarter=65
-iProtestantTemple=66
-iProtestantSchool=67
-iProtestantCathedral=68
-iProtestantChapel=69
-iProtestantSeminary=70
-iProtestantShrine=71
-iIslamicTemple=72
-iIslamicChapel=73
-iIslamicCathedral=74
-iIslamicSchool=75
-iIslamicMadrassa=76
-iIslamicShrine=77
-iCatholicTemple=78
-iCatholicCathedral=79
-iCatholicChapel=80
-iCatholicReliquary=81
-iCatholicMonastery=82
-iCatholicSeminary=83
-iCatholicShrine=84
-iOrthodoxTemple=85
-iOrthodoxCathedral=86
-iOrthodoxChapel=87
-iOrthodoxReliquary=88
-iOrthodoxMonastery=89
-iOrthodoxSeminary=90
-iOrthodoxShrine=91
-iSistineChapel=92
-iNotreDame=93
-iLeaningTower=94
-iTheodosianWalls=95
-iTopkapiPalace=96
-iShrineOfUppsala=97
-iNationalTheatre=98
-iHermitage=99
-iOxfordUniversity=100
-iHeroicEpic=101
-iAlhambra=102
-iKrakDesChevaliers=103
-iSanMarco=104
-iLaMezquita=105
-iStBasil=106
-iMagnaCarta=107
-iSophiaKiev=108
-iDomeRock=109
-iBrandenburgGate=110
-iRibeira=111
-iMonasteryOfCluny=112
-iRoundChurch=113
-iCorporation1=114
-iCorporation2=115
-iCorporation3=116
-iCorporation4=117
-iCorporation5=118
-iCorporation6=119
-iCorporation7=120
-iLeonardosWorkshop=121
-iGardensAlAndalus=122
-iMagellansVoyage=123
-iMarcoPolo=124
-iEscorial=125
-iTempleMount=126
-iBelemTower=127
-iGoldenBull=128
-iKalmarCastle=129
-iPalaisPapes=130
-iTombKhal=131
-iStephansdom=132
-iBibliothecaCorviniana=133
-iFontainebleau=134
-iImperialDiet=135
-iBeurs=136
-iCopernicus=137
-iSanGiorgio=138
-iWestminster=139
-iPressburg=140
-iNationalEpic=141
-iTriumphalArch = 141#Should be same number as National Epic
-iNumBuildings = 142#Should equal iPlague
-iPlague = 142
-iNumBuildingsPlague = 143
-iNumCorporations = 7 # to mark Genoa's UHV as false
-
-#Projects
-
-iEastIndiaCompany = 0
-iWestIndiaCompany = 1
-iEncyclopedie = 2
-iNumNotColonies = 3
-iNumTotalColonies = 24
-
-#Eras
-
-iAncient = 0
-iClassical = 1
-iMedieval = 2
-iRenaissance = 3
-iIndustrial = 4
-iModern = 5
-iFuture = 6
-
-
-#Improvements
-
-iImprovementWorkshop = 8
-iImprovementCottage = 18
-iImprovementHamlet = 19
-iImprovementVillage = 20
-iImprovementTown = 21
-
-# Civics
-iManorialism = 16
-
-#feature & terrain
-
-iIce = 0
-iJungle = 1
-iDenseForest = 2
-iOasis = 3
-iFloodPlains = 4
-iForest = 5
-iFallout = 6
-iMud = 7
-
-iDesert = 3
-iTundra = 4
-iCoast = 7
-iMarsh = 9
 
 
 
@@ -1361,137 +816,85 @@ iNumStabilityParameters = 13
 iImmunity = 20
 
 
-
-#Leaders
-iLeaderBarbarian = 0	#Do NOT name this iBarbarian.  Very bad.	#Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it (AbsintheRed - Beta 6)
-iAbuYusufYaqub = 1
-iMaria_Theresa = 2
-iAbuBakr = 3
-iJoan = 4
-iMatthias = 5
-iBarbarossa = 6
-iCatherine = 7
-iCharlemagne = 8
-iPhilip_Ii = 9
-iSobieski = 10
-iChristian_Iv = 11
-iWilliam = 12
-iAfonso = 13
-iMehmed = 14
-iSaladin = 15
-iMaximilian = 16
-iSimeon = 17
-iCharles_V = 18
-iJustinian = 19
-iAbdarRahman = 20
-iWillem_Van_Oranje = 21
-iElizabeth = 22
-iLouis_Xiv = 23
-iSimone = 24
-iFrederick = 25
-iStephen = 26
-iYaroslav = 27
-iPeter = 28
-iCasimir = 29
-iJoao = 30
-iIsabella = 31
-iGustavus = 32
-iSuleiman = 33
-iDandolo = 34
-iThe_Pope = 35
-iHarald_Hardrada = 36
-iIvan_Iv = 37
-iGeorge_Iii = 38
-iMaria_Ii = 39
-iAndrea_Dandolo = 40
-iHaakon_Iv = 41
-
-
 tLeaders = (		#First has to be the primary leader (the one that appaers on the civ selection screen). Can be changed in the WB file (AbsintheRed)
-(iCharles_V,),
-(iJustinian,),
-(iCharlemagne, iJoan, iLouis_Xiv),
-(iAbuBakr, iSaladin),
-(iSimeon,),
-(iAbdarRahman, iAbuYusufYaqub),
-(iIsabella, iPhilip_Ii),
-(iHarald_Hardrada, iHaakon_Iv, iChristian_Iv),
-(iDandolo, iAndrea_Dandolo),
-(iYaroslav,),
-(iStephen, iMatthias),
-(iBarbarossa, iFrederick),
-(iCasimir, iSobieski),
-(iIvan_Iv, iPeter, iCatherine),		#Don't change back the order of Peter and Ivan. Right now Ivan is the primary leader. Was needed for leader switching (AbsintheRed - Beta 6)
-(iSimone,),
-(iWilliam, iElizabeth, iGeorge_Iii),
-(iAfonso, iJoao, iMaria_Ii),
-(iMaximilian, iMaria_Theresa),
-(iMehmed, iSuleiman),
-(iGustavus,),
-(iWillem_Van_Oranje,),
-(iThe_Pope,)
+(xml.iCharles_V,),
+(xml.iJustinian,),
+(xml.iCharlemagne, xml.iJoan, xml.iLouis_Xiv),
+(xml.iAbuBakr, xml.iSaladin),
+(xml.iSimeon,),
+(xml.iAbdarRahman, xml.iAbuYusufYaqub),
+(xml.iIsabella, xml.iPhilip_Ii),
+(xml.iHarald_Hardrada, xml.iHaakon_Iv, xml.iChristian_Iv),
+(xml.iDandolo, xml.iAndrea_Dandolo),
+(xml.iYaroslav,),
+(xml.iStephen, xml.iMatthias),
+(xml.iBarbarossa, xml.iFrederick),
+(xml.iCasimir, xml.iSobieski),
+(xml.iIvan_Iv, xml.iPeter, xml.iCatherine),		#Don't change back the order of Peter and Ivan. Right now Ivan is the primary leader. Was needed for leader switching (AbsintheRed - Beta 6)
+(xml.iSimone,),
+(xml.iWilliam, xml.iElizabeth,xml.iGeorge_Iii),
+(xml.iAfonso, xml.iJoao, xml.iMaria_Ii),
+(xml.iMaximilian, xml.iMaria_Theresa),
+(xml.iMehmed, xml.iSuleiman),
+(xml.iGustavus,),
+(xml.iWillem_Van_Oranje,),
+(xml.iThe_Pope,)
 )
 
 
 tEarlyLeaders = (		#Don't have to be the same as the primary leader (AbsintheRed)
-(iCharles_V),
-(iJustinian),
-(iCharlemagne),
-(iAbuBakr),
-(iSimeon),
-(iAbdarRahman),
-(iIsabella),
-(iHarald_Hardrada),
-(iDandolo),
-(iYaroslav),
-(iStephen),
-(iBarbarossa),
-(iCasimir),
-(iIvan_Iv),
-(iSimone),
-(iWilliam),
-(iAfonso),
-(iMaximilian),
-(iMehmed),
-(iGustavus),
-(iWillem_Van_Oranje),
-(iThe_Pope)
+(xml.iCharles_V),
+(xml.iJustinian),
+(xml.iCharlemagne),
+(xml.iAbuBakr),
+(xml.iSimeon),
+(xml.iAbdarRahman),
+(xml.iIsabella),
+(xml.iHarald_Hardrada),
+(xml.iDandolo),
+(xml.iYaroslav),
+(xml.iStephen),
+(xml.iBarbarossa),
+(xml.iCasimir),
+(xml.iIvan_Iv),
+(xml.iSimone),
+(xml.iWilliam),
+(xml.iAfonso),
+(xml.iMaximilian),
+(xml.iMehmed),
+(xml.iGustavus),
+(xml.iWillem_Van_Oranje),
+(xml.iThe_Pope)
 )
 
 
 tLateLeaders = (		#All switch dates up to 200 years earlier because the switch is triggered after a few years (date, percentage, era)
-(iCharles_V,),
-(iJustinian,),
-(iJoan, i1160AD, 10, 2, iLouis_Xiv, i1452AD, 25, 3),
-(iSaladin, i1160AD, 25, 2),
-(iSimeon,),
-(iAbuYusufYaqub, i1101AD, 10, 2),
-(iPhilip_Ii, i1520AD, 10, 3),
-(iHaakon_Iv, i1160AD, 25, 2, iChristian_Iv, i1520AD, 5, 3),
-(iAndrea_Dandolo, i1200AD, 10, 2),
-(iYaroslav,),
-(iMatthias, i1452AD, 5, 3),
-(iFrederick, i1520AD, 5, 3),
-(iSobieski, i1570AD, 10, 3),
-(iPeter, i1570AD, 10, 3, iCatherine, i1700AD, 25, 3),
-(iSimone,),
-(iElizabeth, i1452AD, 10, 3, iGeorge_Iii, i1700AD, 10, 3),
-(iJoao, i1419AD, 10, 3, iMaria_Ii, i1700AD, 10, 3),
-(iMaria_Theresa, i1700AD, 25, 3),
-(iSuleiman, i1520AD, 15, 3),
-(iGustavus,),
-(iWillem_Van_Oranje,),
-(iThe_Pope,)
+(xml.iCharles_V,),
+(xml.iJustinian,),
+(xml.iJoan, xml.i1160AD, 10, 2, xml.iLouis_Xiv, xml.i1452AD, 25, 3),
+(xml.iSaladin, xml.i1160AD, 25, 2),
+(xml.iSimeon,),
+(xml.iAbuYusufYaqub, xml.i1101AD, 10, 2),
+(xml.iPhilip_Ii, xml.i1520AD, 10, 3),
+(xml.iHaakon_Iv, xml.i1160AD, 25, 2, xml.iChristian_Iv, xml.i1520AD, 5, 3),
+(xml.iAndrea_Dandolo, xml.i1200AD, 10, 2),
+(xml.iYaroslav,),
+(xml.iMatthias, xml.i1452AD, 5, 3),
+(xml.iFrederick, xml.i1520AD, 5, 3),
+(xml.iSobieski, xml.i1570AD, 10, 3),
+(xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
+(xml.iSimone,),
+(xml.iElizabeth, xml.i1452AD, 10, 3, xml.iGeorge_Iii, xml.i1700AD, 10, 3),
+(xml.iJoao, xml.i1419AD, 10, 3, xml.iMaria_Ii, xml.i1700AD, 10, 3),
+(xml.iMaria_Theresa, xml.i1700AD, 25, 3),
+(xml.iSuleiman, xml.i1520AD, 15, 3),
+(xml.iGustavus,),
+(xml.iWillem_Van_Oranje,),
+(xml.iThe_Pope,)
 )
 
 
-iPromotionFormation = 7
-iPromotionMedicI = 13
 
-iTerrainOcean = 8
-
-iCivicRepublic = 4
-iCivicMerchantRepublic = 19
 
 # 3Miro: UP begins here
 #iUP_Culture = 0
@@ -1557,3 +960,8 @@ iSaintBenefit = 10		# number of Faith points generated by a saint
 iNumCrusades = 5
 iJerusalem = ( 94, 6 )
 
+
+# Province States
+iProvinceOwn = 5      # own every tile
+iProvinceConquer = 4  # own every city (capture or settle) or own every tile
+iProvinceDominate = 3 # 2*sum of population + owned tiles is more for you than the sum total of everyone else (true if conquer is true)

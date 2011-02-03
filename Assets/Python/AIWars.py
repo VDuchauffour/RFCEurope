@@ -6,6 +6,7 @@ import PyHelpers        # LOQ
 import Popup
 import cPickle as pickle        	# LOQ 2005-10-12
 import Consts as con
+import XMLConsts as xml
 import RFCUtils
 import RFCEMaps as rfcemaps
 
@@ -17,7 +18,7 @@ utils = RFCUtils.RFCUtils()
 ### Constants ###
 
 
-iStartTurn = con.i500AD
+iStartTurn = xml.i500AD
 iMinIntervalEarly = 15
 iMaxIntervalEarly = 30
 iMinIntervalLate = 40
