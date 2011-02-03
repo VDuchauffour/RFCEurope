@@ -787,6 +787,8 @@ void CvPlot::updateCenterUnit()
 void CvPlot::verifyUnitValidPlot()
 {
 	PROFILE_FUNC();
+
+	//GC.getGameINLINE().logMsg("  DEBUG Plot Verify (owner - X,Y - Turn) %d  - %d  %d - %d",getOwner(),getX(),getY(), GC.getGameINLINE().getGameTurn() );
 	
 	std::vector<CvUnit*> aUnits;
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
@@ -5216,6 +5218,7 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 FeatureTypes CvPlot::getFeatureType() const
 {
+	//GC.getGameINLINE().logMsg("CvPlot getFeatureType HERE 1 " ); // 3Miro: don't do this, creates a log in size a few GB
 	return (FeatureTypes)m_eFeatureType;
 }
 
@@ -6491,16 +6494,53 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 		// 3MiroPAPAL: pope's culture is restricted close to ROME
 		if ( eIndex == PAPAL_PLAYER ){
-			CvCity *pCity = GET_PLAYER(eIndex).getCapitalCity();
-			if ( (pCity != NULL) && ((abs( getX() - pCity ->getX() ) > 2) || ( abs( getY() - pCity ->getY() ) > 2 ) || (abs( getX() - pCity ->getX() ) + abs( getY() - pCity ->getY() ) > 3) ) ){
+			//GC.getGameINLINE().logMsg("   In Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+			CvCity *pPopeCity = GET_PLAYER(eIndex).getCapitalCity();
+			//if ( pPopeCity == NULL ){
+			//	GC.getGameINLINE().logMsg("   In Papal - NULL City %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+			//}else{
+			//	GC.getGameINLINE().logMsg("   In Papal - Plot - City %d %d %d %d  ",getX_INLINE(),getY_INLINE(),pPopeCity ->getX(),pPopeCity ->getY()); //Rhye and 3Miro
+			//};
+			if ( (pPopeCity != NULL) && ((abs( getX_INLINE() - pPopeCity ->getX() ) > 2) || ( abs( getY_INLINE() - pPopeCity ->getY() ) > 2 ) || (abs( getX() - pPopeCity ->getX() ) + abs( getY() - pPopeCity ->getY() ) > 3) ) ){
+				//GC.getGameINLINE().logMsg("   In Papal - Null culture %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+				//GC.getGameINLINE().logMsg("   In Papal - Null results %d %d %d ",abs( getX_INLINE() - pPopeCity ->getX() ),abs( getX_INLINE() - pPopeCity ->getY() ),abs( getX() - pPopeCity ->getX() ) + abs( getY() - pPopeCity ->getY() )); //Rhye and 3Miro
 				m_aiCulture[eIndex] = 0;
 			}else{
+				//GC.getGameINLINE().logMsg("   In Papal - Add culture %d %d ",abs( getX_INLINE() - pPopeCity ->getX() ),getY_INLINE()); //Rhye and 3Miro
 				m_aiCulture[eIndex] = iNewValue;
 			};
 		}else{
-			m_aiCulture[eIndex] = iNewValue;
+			//GC.getGameINLINE().logMsg("   Not in Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+			// 3Miro: Nasty bug expelling units from territory on flip, 
+			//			now if a plot is in somone's core, nobody gets culture there for 3 turns after spawn
+			if ( withinSpawnDate ){
+				if ( (eIndex >= NUM_MAJOR_PLAYERS) || ( !MiroBelongToCore(eIndex,getX_INLINE(),getX_INLINE()) ) ){
+					int iI;
+					bool inBirthAndCore = false;
+					for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
+						if ( (startingTurn[iI]>=GC.getGameINLINE().getGameTurn()) && (startingTurn[iI]<=GC.getGameINLINE().getGameTurn()+3) && (getSettlersMaps( iI, getX_INLINE(), getX_INLINE(), NULL ) > 600) ){
+							inBirthAndCore = true;
+							break;
+						}
+					};
+					if ( inBirthAndCore ){
+						m_aiCulture[eIndex] = 0;
+					}else{
+						m_aiCulture[eIndex] = iNewValue;
+					};
+				}else{
+					m_aiCulture[eIndex] = iNewValue;
+				};
+			}else{
+				m_aiCulture[eIndex] = iNewValue;
+			};
 		};
+		// 3MiroPAPAL: end of section
 		//m_aiCulture[eIndex] = iNewValue;
+
+		
+		
+
 		
 		//GC.getGameINLINE().logMsg("  plot  6");
 		FAssert(getCulture(eIndex) >= 0);
@@ -7442,8 +7482,10 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 
 		if (isRevealed(eTeam, false))
 		{
+			// 3Miro: SPEEDTWEAK: maybe we are not calling this one ever
 			// ONEVENT - PlotRevealed
-			CvEventReporter::getInstance().plotRevealed(this, eTeam);
+			//CvEventReporter::getInstance().plotRevealed(this, eTeam);
+			// 3Miro: end
 		}
 	}
 

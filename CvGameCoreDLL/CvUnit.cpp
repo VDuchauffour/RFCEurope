@@ -286,7 +286,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	AI_init(eUnitAI);
 
 	//GC.getGameINLINE().logMsg("   --- Init 14 with ");
-	CvEventReporter::getInstance().unitCreated(this);
+	// 3Miro: SPEEDTWEAK: more Python
+	//CvEventReporter::getInstance().unitCreated(this);
 	//GC.getGameINLINE().logMsg("   --- Init 15 with ");
 }
 
@@ -554,6 +555,7 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
 
 	if (ePlayer != NO_PLAYER)
 	{
+		// 3Miro: this is used for Mercenaries
 		CvEventReporter::getInstance().unitKilled(this, ePlayer);
 
 		if (NO_UNIT != getLeaderUnitType())
@@ -653,6 +655,7 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
 	eCaptureUnitType = ((eCapturingPlayer != NO_PLAYER) ? getCaptureUnitType(GET_PLAYER(eCapturingPlayer).getCivilizationType()) : NO_UNIT);
 
 	setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
+	//GC.getGameINLINE().logMsg(" BUT WE ARE KILLING THE UNIT" ); // 3Miro
 
 	joinGroup(NULL, false, false);
 
@@ -707,50 +710,76 @@ void CvUnit::NotifyEntity(MissionTypes eMission)
 
 void CvUnit::doTurn()
 {
+
+	//if ( (getX_INLINE() < 0) || ( getX_INLINE() >= EARTH_X ) || (getY_INLINE() < 0) || ( getY_INLINE() >= EARTH_Y ) ){
+	//	GC.getGameINLINE().logMsg("CvUnit doTurn FALLEN OFF THE FACE OF THE EARTH %d %d %d ",INVALID_PLOT_COORD,getUnitType(),getOwner() ); // 3Miro
+		//this ->kill(false);
+	//};
+
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 1 " ); // 3Miro
 	PROFILE("CvUnit::doTurn()")
 
 	FAssertMsg(!isDead(), "isDead did not return false as expected");
 	FAssertMsg(getGroup() != NULL, "getGroup() is not expected to be equal with NULL");
 
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 2 " ); // 3Miro
 	testPromotionReady();
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 3 " ); // 3Miro
 
 	if (isBlockading())
 	{
+		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 4 " ); // 3Miro
 		collectBlockadeGold();
 	}
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 5 " ); // 3Miro
 
 	if (isSpy() && isIntruding() && !isCargo())
 	{
+		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 6 " ); // 3Miro
 		TeamTypes eTeam = plot()->getTeam();
 		if (NO_TEAM != eTeam)
 		{
+			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 7 " ); // 3Miro
 			if (GET_TEAM(getTeam()).isOpenBorders(eTeam))
 			{
+				//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 8 " ); // 3Miro
 				testSpyIntercepted(plot()->getOwnerINLINE(), GC.getDefineINT("ESPIONAGE_SPY_NO_INTRUDE_INTERCEPT_MOD"));
 			}
 			else
 			{
+				//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 9 %d %d %d",getX_INLINE(),getY_INLINE(),getUnitType() ); // 3Miro
 				testSpyIntercepted(plot()->getOwnerINLINE(), GC.getDefineINT("ESPIONAGE_SPY_INTERCEPT_MOD"));
 			}
 		}
 	}
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 10 " ); // 3Miro
 
 	if (baseCombatStr() > 0)
 	{
+		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 11 %d %d %d %d %d",getID(),getOwner(),getX_INLINE(),getY_INLINE(),getUnitType() ); // 3Miro
+		//CvPlot *pPlot = plot();
+		//FeatureTypes eFeature = ( pPlot == NULL ) ? NO_FEATURE : plot()->getFeatureType();
 		FeatureTypes eFeature = plot()->getFeatureType();
+
+		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 11.1 " ); // 3Miro
 		if (NO_FEATURE != eFeature)
 		{
+			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 12 " ); // 3Miro
 			if (0 != GC.getFeatureInfo(eFeature).getTurnDamage())
 			{
+				//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 13 " ); // 3Miro
 				changeDamage(GC.getFeatureInfo(eFeature).getTurnDamage(), NO_PLAYER);
 			}
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 14 " ); // 3Miro
 	if (hasMoved())
 	{
+		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 15 " ); // 3Miro
 		if (isAlwaysHeal())
 		{
+			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 16 " ); // 3Miro
 			doHeal();
 		}
 	}
@@ -758,23 +787,31 @@ void CvUnit::doTurn()
 	{
 		if (isHurt())
 		{
+			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 17 " ); // 3Miro
 			doHeal();
 		}
 
+		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 18 " ); // 3Miro
 		if (!isCargo())
 		{
+			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 19 " ); // 3Miro
 			changeFortifyTurns(1);
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 20 " ); // 3Miro
 	changeImmobileTimer(-1);
 
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 21 " ); // 3Miro
 	setMadeAttack(false);
 	setMadeInterception(false);
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 22 " ); // 3Miro
 
 	setReconPlot(NULL);
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 23 " ); // 3Miro
 
 	setMoves(0);
+	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 24 " ); // 3Miro
 }
 
 
@@ -2869,6 +2906,8 @@ bool CvUnit::jumpToNearestValidPlot()
 	int iValue;
 	int iBestValue;
 	int iI;
+
+	//GC.getGameINLINE().logMsg("  DEBUG Jumping %d ",getOwner() );
 
 	FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
 	FAssertMsg(!isFighting(), "isFighting did not return false as expected");
@@ -8548,7 +8587,14 @@ int CvUnit::experienceNeeded() const
 	argsList.add(getLevel());	// pass in the units level
 	argsList.add(getOwnerINLINE());	// pass in the units 
 
-	gDLL->getPythonIFace()->callFunction(PYGameModule, "getExperienceNeeded", argsList.makeFunctionArgs(),&lExperienceNeeded);
+	// 3Miro: SPEEDTWEAK (Block Python) Sephi                                               	            	//gDLL->getPythonIFace()->callFunction(PYGameModule, "getExperienceNeeded", argsList.makeFunctionArgs(),&lExperienceNeeded);
+	//this code follow the same logic as the one in cvgameutils.py 
+	lExperienceNeeded = getLevel()*getLevel() + 1;	int	iModifier = GET_PLAYER(getOwnerINLINE()).getLevelExperienceModifier();
+	if (0 != iModifier)
+	{
+		lExperienceNeeded += (lExperienceNeeded * iModifier + 99) / 100;   // ROUND UP
+	}			
+	// 3Miro: end
 
 	iExperienceNeeded = (int)lExperienceNeeded;
 
@@ -9747,8 +9793,19 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	PROFILE_END();}
 	// Sanguo Mod Performance, end
 
+	/*if ( (getX_INLINE() == INVALID_PLOT_COORD)||(getY_INLINE() == INVALID_PLOT_COORD) ){
+		GC.getGameINLINE().logMsg("player UNIT HAS FALLEN HERE %d %d ",getUnitType(),getOwner()); // 3Miro
+		if ( pOldPlot != NULL ){
+			GC.getGameINLINE().logMsg("player OLD Plot is %d %d ",pOldPlot->getX(),pOldPlot->getY() ); // 3Miro
+		}else{
+			GC.getGameINLINE().logMsg("player OLD Plot is NULL"); // 3Miro
+		};
+	};*/
+
 	// report event to Python, along with some other key state
-	CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
+	// 3Miro: SPEEDTWEAK more Python
+	//CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
+	// 3Miro: end
 }
 
 
@@ -12616,6 +12673,21 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 			iTheirOdds =  std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iTheirOdds);
 		}
 	}
+
+	// 3MiroAICheat: make iTheirOdds to allow Ottomans to crush Byzantine defnese in Constantinople
+	if ( (getOwnerINLINE() == psychoAI_player) && (pPlot -> getX() == psychoAI_x) && (pPlot -> getY() == psychoAI_y) ){
+		if ( pPlot ->isCity() ){
+			if ( !( (int)pPlot ->getPlotCity() ->getOwner() == (int) this->getOwnerINLINE() ) && ( !GET_PLAYER(pPlot ->getPlotCity() ->getOwner() ).isHuman() ) ){
+				iTheirOdds = 40;
+				//GC.getGameINLINE().logMsg(" Psycho AI Odds "); // 3Miro
+			};
+		};
+	};
+
+	// 3Miro: historical Enemies
+	if ( !GET_PLAYER(getOwnerINLINE()).isHuman() && !GET_PLAYER(kDefender.getOwnerINLINE()).isHuman() ){
+		iTheirOdds -= historicalEnemyAIcheat[getOwnerINLINE()*NUM_ALL_PLAYERS_B + kDefender.getOwnerINLINE()];
+	};
 
 	int iStrengthFactor = ((iOurFirepower + iTheirFirepower + 1) / 2);
 

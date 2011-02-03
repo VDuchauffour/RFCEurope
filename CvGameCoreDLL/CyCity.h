@@ -490,6 +490,9 @@ public:
 	bool canPurgeReligion();
 	void doPurgeReligions();
 
+	// 3MiroProvinces
+	int getProvince();
+
 private:
 	CvCity* m_pCity;
 };

@@ -11,7 +11,7 @@ int *turnPlayed = NULL;
 int *civSpreadFactor = NULL;
 
 // (dynamic civ names - not jdog's)
-wchar civDynamicNames[22][22][19]  = {
+/*wchar civDynamicNames[22][22][19]  = {
 //				//people		monarchy				monarchy ext		monarchy mod		monarchy ext mod		republic			communism			fascism				islam monarchy		islam republic			vas. Byzantium			vas. Frankia		  vas. Arabia/Cordoba		vas. Spain			vas. Norse/Sweden		vas. Venice			vas. Moscow/Kiev		vas. Germany			vas. England		vas. Austria		vas. Turkey				Vassal generic					
 //Burgundy
 	{	 L"TXT_KEY_DN_BUR00", L"TXT_KEY_DN_BUR01", L"TXT_KEY_DN_BUR02", L"TXT_KEY_DN_BUR03",  L"TXT_KEY_DN_BUR04",  L"TXT_KEY_DN_BUR05",  L"TXT_KEY_DN_BUR06",  L"TXT_KEY_DN_BUR07",  L"TXT_KEY_DN_BUR08",  L"TXT_KEY_DN_BUR09",  L"TXT_KEY_DN_BUR10",  L"TXT_KEY_DN_BUR11",  L"TXT_KEY_DN_BUR12",  L"TXT_KEY_DN_BUR13",  L"TXT_KEY_DN_BUR14",  L"TXT_KEY_DN_BUR15",  L"TXT_KEY_DN_BUR16",  L"TXT_KEY_DN_BUR17",  L"TXT_KEY_DN_BUR18",  L"TXT_KEY_DN_BUR19",  L"TXT_KEY_DN_BUR20",  L"TXT_KEY_DN_BUR21" },
@@ -62,7 +62,7 @@ int civDynamicNamesFlag[22] = 	{	 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
 //									BUR BYZ	FRA ARA BUL COR SPN NOR VEN KIE HUN GER POL MOS GEN ENG POR AUS TUR SWE DUT POP
 // 1 = REL, 0 = GOV
 
-int civDynamicNamesEraThreshold[22] = { 2,  3,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 2 };
+int civDynamicNamesEraThreshold[22] = { 2,  3,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 2 };*/
 
 int *settlersMaps = NULL;
 int *warsMaps = NULL;
@@ -89,6 +89,8 @@ int HOLIEST_CITY_Y = -1;
 
 int *UniquePowers = NULL;
 int *FaithPowers = NULL;
+
+int *FaithPointsCap = NULL;
 
 // 3Miro: export balance factors
 // actual values are set in via Python
@@ -158,6 +160,45 @@ int *StrategicTileY = NULL;
 
 int * colonyAIModifier = NULL;
 
+int psychoAI_x = -2; 
+int psychoAI_y = -2;
+int psychoAI_player = -2;
+
+int *historicalEnemyAIcheat = NULL;
+
+// this is a more elegant solution to the bug in the culture of CvPlot (although it is still a hack)
+// once a turn we will check if we are within 3 turns of someone's spawn, if so, then set withinSpawnDate = true
+// and then only check that in CvPlot. We will set withinSpawnDate in CvGame.cpp
+bool withinSpawnDate = false; 
+
+// 3Miro: Autorun hack
+int iAutorunUnit;
+int iAutorunX;
+int iAutorunY;
+
+// 3Miro: Commerse from Building + Civic
+int iCivicBuildingCommerse1 = -1;
+int iCivicBuildingCommerse2 = -1;
+int iCivicBuildingCommerse3 = -1;
+
+// 3MiroTimeline: set the timeline for technologies
+int *timelineTechDates;
+int timelineTechPenaltyTop = 0;
+int timelineTechPenaltyBottom = 1;
+int timelineTechPenaltyCap = 0;
+int timelineTechBuffTop = 0;
+int timelineTechBuffBottom = 1;
+int timelineTechBuffCap = 0;
+
+int *provinceMap = NULL;
+int *provinceSizeList = NULL;
+int **provinceTileList = NULL;
+int provinceToColor = 0;
+
+int iNumProvinceTypes; // how many type of provinces are there
+int *iSettlerValuesPerProvinceType = NULL; // how do settlers value tiles from the specific province (AI purposes)
+int *iWarValuesPerProvinceType = NULL; // how do you consider attacking a specific province (AI purposes)
+
 bool MiroBelongToCore( int iCiv, int x, int y ){
 	if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
 		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
@@ -186,7 +227,9 @@ int getSettlersMaps( int iCiv, int y, int x, char * w ){
 			//return settlersMaps[iCiv][y][x];
 			return settlersMaps[ iCiv * SETTLER_OFFSET + y * EARTH_X + x ];
 		}else{
-			GC.getGameINLINE().logMsg(w);
+			if ( w != NULL ){
+				GC.getGameINLINE().logMsg(w);
+			};
 			return 20;
 		};
 	};
