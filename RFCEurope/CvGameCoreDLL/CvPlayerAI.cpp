@@ -439,6 +439,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	bool bValid;
 	int iPass;
 	int iLoop;
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 1 %d", getID()); // 3Miro
 
 	if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
 	{
@@ -453,6 +454,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		return;
 	}
 
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 2 %d", getID()); // 3Miro
 	CvPlot* pLastUpgradePlot = NULL;
 	for (iPass = 0; iPass < 4; iPass++)
 	{
@@ -464,12 +466,14 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			switch (iPass)
 			{
 			case 0:
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 3 %d", getID()); // 3Miro
 				if (AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0)
 				{
 					bValid = true;
 				}
 				break;
 			case 1:
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 4 %d", getID()); // 3Miro
 				pUnitPlot = pLoopUnit->plot();
 				if (pUnitPlot->isCity())
 				{
@@ -490,12 +494,14 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				}
 				break;
 			case 2:
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 5 %d", getID()); // 3Miro
 				if (pLoopUnit->cargoSpace() > 0)
 				{
 					bValid = true;
 				}
 				break;
 			case 3:
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 6 %d", getID()); // 3Miro
 				bValid = true;
 				break;
 			default:
@@ -505,6 +511,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 			if (bValid)
 			{
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 7 %d", getID()); // 3Miro
 				bool bKilled = false;
 				if (!bNoDisband)
 				{
@@ -524,8 +531,10 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 								{
 									if ((calculateUnitCost() > 0) && (AI_getPlotDanger( pLoopUnit->plot(), 2, false) == 0))
 									{
+										//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 8 %d", getID()); // 3Miro
 										if ((pLoopUnit->getDomainType() != DOMAIN_LAND) || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, getID()) > 1)
 										{
+											//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 9 %d", getID()); // 3Miro
 										pLoopUnit->kill(false);
 										bKilled = true;
 										pLastUpgradePlot = NULL;
@@ -538,16 +547,20 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				}
 				if (!bKilled)
 				{
+					//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 10 %d", getID()); // 3Miro
 					pLoopUnit->AI_upgrade(); // CAN DELETE UNIT!!!
 				}
 			}
 		}
 	}
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 11 %d", getID()); // 3Miro
 
 	if (isBarbarian())
 	{
+		//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 12 %d", getID()); // 3Miro
 		return;
 	}
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 13 %d", getID()); // 3Miro
 }
 
 
@@ -1089,10 +1102,12 @@ void CvPlayerAI::AI_unitUpdate()
 
 	if (!hasBusyUnit())
 	{
+		//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 1 "); // 3Miro
 		pCurrUnitNode = headGroupCycleNode();
 
 		while (pCurrUnitNode != NULL)
 		{
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 2 "); // 3Miro
 			pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 			pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
@@ -1108,6 +1123,7 @@ void CvPlayerAI::AI_unitUpdate()
 
 		if (isHuman())
 		{
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 3 "); // 3Miro
 			pCurrUnitNode = headGroupCycleNode();
 
 			while (pCurrUnitNode != NULL)
@@ -1123,6 +1139,7 @@ void CvPlayerAI::AI_unitUpdate()
 		}
 		else
 		{
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 4 "); // 3Miro
 			tempGroupCycle.clear();
 			finalGroupCycle.clear();
 
@@ -1138,6 +1155,7 @@ void CvPlayerAI::AI_unitUpdate()
 
 			while (tempGroupCycle.getLength() > 0)
 			{
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 5 "); // 3Miro
 				pCurrUnitNode = tempGroupCycle.head();
 
 				while (pCurrUnitNode != NULL)
@@ -1160,23 +1178,31 @@ void CvPlayerAI::AI_unitUpdate()
 			}
 
 			pCurrUnitNode = finalGroupCycle.head();
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 6 "); // 3Miro
 
 			while (pCurrUnitNode != NULL)
 			{
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7 "); // 3Miro
 				pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.1 "); // 3Miro
 
 				if (NULL != pLoopSelectionGroup)  // group might have been killed by a previous group update
 				{
+					//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.2 "); // 3Miro
 					if (pLoopSelectionGroup->AI_update())
 					{
+						//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.3 "); // 3Miro
 						break; // pointers could become invalid...
 					}
 				}
 
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.4 "); // 3Miro
 				pCurrUnitNode = finalGroupCycle.next(pCurrUnitNode);
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.5 "); // 3Miro
 			}
 		}
 	}
+	//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 8 "); // 3Miro
 }
 
 
@@ -2935,7 +2961,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 	}*/ //Rhye
 
-	//Rhye - start
+	//Rhye - start // 3Miro: Useful for settling cities
 	int tempX = pPlot->getX_INLINE();
 	int tempY = pPlot->getY_INLINE();
 
@@ -5766,6 +5792,11 @@ int CvPlayerAI::AI_getSameReligionAttitude(PlayerTypes ePlayer) const
 		};
 	};
 
+	// 3MiroBuildings: If they can fight with each other, then they get no diplo boost
+	if ( GET_PLAYER(getID()).canFightBrothers() || GET_PLAYER(ePlayer).canFightBrothers() ){
+		iAttitude = 0;
+	};
+
 	//iAttitude += AI_getFaithAttitude( ePlayer );
 
 	//Rhye - start
@@ -5804,6 +5835,11 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 		}
 	}
 
+	// 3Miro: No religion means different pre-Christian Pagan believes, nobody likes Pagans
+	if ( ((getStateReligion() == NO_RELIGION) && (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION)) || ((getStateReligion() != NO_RELIGION) && (GET_PLAYER(ePlayer).getStateReligion() == NO_RELIGION)) ){
+		iAttitude = -1;
+	};
+
 	// 3MiroSchism: if before the schism date, the two don't hate each other
 	//GC.getGameINLINE().logMsg("  Schism: Players (%d,%d),  religions (%d,%d), turn %d",getID(),ePlayer,getStateReligion(),GET_PLAYER(ePlayer).getStateReligion(),GC.getGameINLINE().getGameTurn() );
 	//GC.getGameINLINE().logMsg("  Schism: A, B, Year = %d %d %d ",SCHISM_A, SCHISM_B, SCHISM_YEAR );
@@ -5812,6 +5848,13 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 			((getStateReligion() == SCHISM_B) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_A)) ){
 				//GC.getGameINLINE().logMsg(" Still Friends ");
 				iAttitude = 0;
+		};
+	};
+
+	// 3MiroBuildings: If they can fight with each other, then they get -1 diplo penalty
+	if ((getStateReligion() != NO_RELIGION) && (getStateReligion() == GET_PLAYER(ePlayer).getStateReligion())){
+		if ( GET_PLAYER(getID()).canFightBrothers() || GET_PLAYER(ePlayer).canFightBrothers() ){
+			iAttitude = -1;
 		};
 	};
 
@@ -10609,9 +10652,14 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 	int iValue = GC.getGameINLINE().countReligionLevels(eReligion);
 
 	// 3MiroFaith: let the AI be aware of the Faith Points Accumulated
+	//             also, add extra points for the UP_FAITH + current state religion
 	if ( getStateReligion() == eReligion ){
-		iValue += getFaith();
+		iValue += 5*getFaith();
+		if ( (UniquePowers[getID()* UP_TOTAL_NUM + UP_FAITH] > -1) ){
+			iValue += 20;
+		};	
 	};
+	// 3MiroFaith: end
 
 	int iLoop;
 	CvCity* pLoopCity;
@@ -10648,13 +10696,13 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 		}
 
 		// 3MiroAI: estimate the potential of the religion, mainly consider it together with the Faith UP
-			if ( (UniquePowers[getID()* UP_TOTAL_NUM + UP_FAITH] > -1) ){
-				iCommerceCount += MAX_COM_SHRINE;
-			};
-			iValue += 5;
+			
 		// 3MiroAI: end
 
 
+			// 3MiroAI: we do get the commerse anyways, so put lesser value to it
+			iCommerceCount = std::max( iCommerceCount, MAX_COM_SHRINE );
+			iCommerceCount /= 3;
 			if (bOurHolyCity)
 		{
 			iValue *= (3 + iCommerceCount);

@@ -731,6 +731,8 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 			for ( k=0; k<iMaxX; k++ ) settlersMaps[i][j][k] = 20;
 		};
 	};*/
+	provinceMap = new int[EARTH_X* EARTH_Y];
+	for( i=0; i<EARTH_X* EARTH_Y; i++ ){ provinceMap[i] = MAX_NUM_PROVINCES+1; }; // no provinces
 	settlersMaps = new int[NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y ];
 	for( i=0; i<NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y; i++ ) settlersMaps[i] = 20;
 	warsMaps = new int[NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y ];
@@ -825,6 +827,9 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	FaithPowers = new int[ NUM_RELIGIONS * FP_TOTAL_NUM ];
 	for ( int i=0; i< NUM_RELIGIONS * FP_TOTAL_NUM; i++ ) FaithPowers[i] = -1;
 
+	FaithPointsCap = new int[NUM_RELIGIONS];
+	for( int i=0; i<NUM_RELIGIONS; i++ ) FaithPointsCap[i] = 100; // 3Miro: this is probably too high, it will be overwritten anyway
+
 	startingWorkers = new int[ NUM_ALL_PLAYERS_B ];
 	for ( int i=0; i< NUM_ALL_PLAYERS_B; i++ ) startingWorkers[i] = 0;
 
@@ -837,6 +842,11 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 
 	buildingPrefs = new int[ NUM_ALL_PLAYERS_B * NUM_BUILDINGS ];
 	for ( int i=0; i < NUM_ALL_PLAYERS_B * NUM_BUILDINGS; i++ ){ buildingPrefs[i] = 0; }
+
+	historicalEnemyAIcheat = new int[ NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B ];
+	for( int i=0; i < NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B; i++ ){ historicalEnemyAIcheat[i] = 0; };
+
+	timelineTechDates = new int[ MAX_NUM_TECHS ]; for( int i=0; i< MAX_NUM_TECHS; i++ ){ timelineTechDates[i] = 0; };
 };
 
 void CyGlobalContext::setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop ){
@@ -1032,8 +1042,9 @@ void CyGlobalContext::setColonyAIModifier( int iCiv, int iModifier ){
 	colonyAIModifier[iCiv] = iModifier;
 };
 
-void CyGlobalContext::setReligionBenefit( int iReligion, int iBenefit, int iParameter ){
+void CyGlobalContext::setReligionBenefit( int iReligion, int iBenefit, int iParameter, int iCap ){
 	FaithPowers[ iReligion * FP_TOTAL_NUM + iBenefit ] = iParameter;
+	FaithPointsCap[iReligion] = iCap;
 };
 
 void CyGlobalContext::setSchism( int iReligionA, int iReligionB, int iTurn ){
@@ -1066,4 +1077,80 @@ void CyGlobalContext::setFastTerrain( int iFastTerrain ){
 
 void CyGlobalContext::setBuildingPref( int iCiv, int iBuilding, int iPref ){
 	buildingPrefs[ iCiv * NUM_BUILDINGS + iBuilding ] = iPref;
+};
+
+void CyGlobalContext::setAutorunHack( int iUnit, int iX, int iY ){
+	iAutorunUnit = iUnit;
+	iAutorunX = iX;
+	iAutorunY = iY;
+};
+
+void CyGlobalContext::setBuildingCivicCommerseCombo1( int iCode ){
+	iCivicBuildingCommerse1 = iCode;
+};
+void CyGlobalContext::setBuildingCivicCommerseCombo2( int iCode ){
+	iCivicBuildingCommerse2 = iCode;
+};
+void CyGlobalContext::setBuildingCivicCommerseCombo3( int iCode ){
+	iCivicBuildingCommerse3 = iCode;
+};
+
+void CyGlobalContext::setPsychoAICheat( int iPlayer, int iX, int iY ){
+	psychoAI_x = iX; 
+	psychoAI_y = iY;
+	psychoAI_player = iPlayer;
+};
+
+void CyGlobalContext::setHistoricalEnemyAICheat( int iAttacker, int iDefender, int iChange ){
+	historicalEnemyAIcheat[ iAttacker * NUM_ALL_PLAYERS_B + iDefender ] = iChange;
+};
+
+void CyGlobalContext::setTimelineTechModifiers( int iTPTop, int iTPBottom, int iTPCap, int iTBTop, int iTBBottom, int iTBCap ){
+	timelineTechPenaltyTop = iTPTop;
+	timelineTechPenaltyBottom = iTPBottom;
+	timelineTechPenaltyCap = iTPCap;
+	timelineTechBuffTop = iTBTop;
+	timelineTechBuffBottom = iTBBottom;
+	timelineTechBuffCap = iTBCap;
+};
+
+void CyGlobalContext::setTimelineTechDateForTech( int iTech, int iTurn ){
+	timelineTechDates[iTech] = iTurn;
+};
+
+void CyGlobalContext::setProvince( int iX, int iY, int iProvince ){ // set the province at tile (iX,iY)
+	provinceMap[iY * EARTH_X + iX ] = iProvince;
+};
+
+void CyGlobalContext::createProvinceCrossreferenceList(){ // call this after setting all provinces
+	int i, j, prov;
+	provinceSizeList = new int[MAX_NUM_PROVINCES+1];
+	for( i=0; i<MAX_NUM_PROVINCES+1; i++ ){
+		provinceSizeList[i] = 0;
+	};
+	for( i=0; i<EARTH_Y; i++ ){
+		for( j=0; j<EARTH_X; j++ ){
+			provinceSizeList[provinceMap[ i * EARTH_X + j ]]++;
+		};
+	};
+	provinceSizeList[MAX_NUM_PROVINCES] = 0; // last province is "no" province with no size
+	provinceTileList = new int*[MAX_NUM_PROVINCES+1];
+	for( i=0; i<MAX_NUM_PROVINCES; i++ ){
+		provinceTileList[i] = new int[ 2*provinceSizeList[i] ];
+	};
+	provinceTileList[MAX_NUM_PROVINCES] = NULL;
+	for( i=0; i<MAX_NUM_PROVINCES+1; i++ ){
+		provinceSizeList[i] = 0;
+	};
+	for( i=0; i<EARTH_Y; i++ ){
+		for( j=0; j<EARTH_X; j++ ){
+			prov = provinceMap[ i * EARTH_X + j ];
+			if ( prov < MAX_NUM_PROVINCES ){
+				provinceTileList[prov][ 2*provinceSizeList[prov] ] = j; // save the x value
+				provinceTileList[prov][ 2*provinceSizeList[prov]+1 ] = i; // save the y value
+				provinceSizeList[prov]++;
+			};
+		};
+	};
+	provinceSizeList[MAX_NUM_PROVINCES] = 0; // just in case
 };

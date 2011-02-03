@@ -467,9 +467,34 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		//.def("getFaithStability", &CyPlayer::getFaithStability, "int getFaithStability()")
 		.def("getFaithBenefit", &CyPlayer::getFaithBenefit, "int getFaithBenefit( int iFaithPower )")
 		.def("isFaithBenefit", &CyPlayer::isFaithBenefit, "bool isFaithBenefit( int iFaithPower )")
-		
+
+		.def("countCultureProduced", &CyPlayer::countCultureProduced, "int countCultureProduced()")
+
+		.def("setUHV", &CyPlayer::setUHV, "void ( int iUHV, int iValue )")
+		.def("getUHV", &CyPlayer::getUHV, "int ( int iUHV )")
+		.def("setUHVCounter", &CyPlayer::setUHVCounter, "void ( int iUHV, int iValue )")
+		.def("getUHVCounter", &CyPlayer::getUHVCounter, "int ( int iUHV )")
+		.def("setUHV2of3", &CyPlayer::setUHV2of3, "void ( bool bNewValue )")
+		.def("getUHV2of3", &CyPlayer::getUHV2of3, "bool getUHV2of3()")
+		.def("getUHVDescription", &CyPlayer::getUHVDescription, "str ( int )")
+
+		.def("setProvinceType", &CyPlayer::setProvinceType, "void ( int, int )")
+		.def("getProvinceType", &CyPlayer::getProvinceType, "int ( int )")
+		.def("getProvinceCurrentState", &CyPlayer::getProvinceCurrentState, "int ( int )")
+		.def("getProvinceCityCount", &CyPlayer::getProvinceCityCount, "int ( int )")
+
+		// 3MiroStability
+		.def("getStabilityBase", &CyPlayer::getStabilityBase, "int ( int )")
+		.def("changeStabilityBase", &CyPlayer::changeStabilityBase, "void ( int, int )")
+		.def("getStabilityVary", &CyPlayer::getStabilityVary, "int ( int )")
+		.def("setStabilityVary", &CyPlayer::setStabilityVary, "void ( int, int )")
+		.def("getStabilitySwing", &CyPlayer::getStabilitySwing, "int ( )")
+		.def("setStabilitySwing", &CyPlayer::setStabilitySwing, "void ( int )")
+		.def("getStability", &CyPlayer::getStability, "int ( )")
+		.def("getWarPeaceChange", &CyPlayer::getWarPeaceChange, "int ( )")
+
+		// 3MiroColonies
+		.def("getNumColonies", &CyPlayer::getNumColonies, "int ( )")
+		.def("setNumColonies", &CyPlayer::setNumColonies, "void ( int )")
 		;
-}
-
-
-	
+};

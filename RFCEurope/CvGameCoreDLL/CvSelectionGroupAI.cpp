@@ -138,6 +138,7 @@ bool CvSelectionGroupAI::AI_update()
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
+	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 1 "); // 3Miro
 	if (!AI_isControlled())
 	{
 		return false;
@@ -164,9 +165,11 @@ bool CvSelectionGroupAI::AI_update()
 
 	bDead = false;
 	
+	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2 "); // 3Miro
 	bool bFailedAlreadyFighting = false;
 	while ((m_bGroupAttack && !bFailedAlreadyFighting) || readyToMove())
 	{
+		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.1 "); // 3Miro
 		iTempHack++;
 		if (iTempHack > 100)
 		{
@@ -189,32 +192,44 @@ bool CvSelectionGroupAI::AI_update()
 			break;
 		}
 
+		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2 "); // 3Miro
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
-		{			
+		{
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.1 "); // 3Miro
 			m_bGroupAttack = false;
 
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.2 "); // 3Miro
 			groupAttack(m_iGroupAttackX, m_iGroupAttackY, MOVE_DIRECT_ATTACK, bFailedAlreadyFighting);
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.3 "); // 3Miro
 		}
 		// else pick AI action
 		else
 		{
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.4 "); // 3Miro
 			CvUnit* pHeadUnit = getHeadUnit();
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.5 "); // 3Miro
 
 			if (pHeadUnit == NULL || pHeadUnit->isDelayedDeath())
 			{
+				//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.6 "); // 3Miro
 				break;
 			}
 
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.7 "); // 3Miro
 			resetPath();
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.8 "); // 3Miro
 
 			if (pHeadUnit->AI_update())
 			{
 				// AI_update returns true when we should abort the loop and wait until next slice
+				//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.9 "); // 3Miro
 				break;
 			}
+			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.10 "); // 3Miro
 		}
 
+		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.3 "); // 3Miro
 		if (doDelayedDeath())
 		{
 			bDead = true;
@@ -223,6 +238,7 @@ bool CvSelectionGroupAI::AI_update()
 
 		// if no longer group attacking, and force separate is true, then bail, decide what to do after group is split up
 		// (UnitAI of head unit may have changed)
+		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.4 "); // 3Miro
 		if (!m_bGroupAttack && AI_isForceSeparate())
 		{
 			AI_separate();	// pointers could become invalid...
@@ -230,6 +246,7 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 3 "); // 3Miro
 	if (!bDead)
 	{
 		if (!isHuman())
@@ -274,6 +291,7 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 4 "); // 3Miro
 	if (bDead)
 	{
 		return true;
@@ -667,8 +685,10 @@ MissionAITypes CvSelectionGroupAI::AI_getMissionAIType()
 
 void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit)
 {
+	//GC.getGameINLINE().logMsg(" set mission AI Here 1 "); // 3Miro
 	m_eMissionAIType = eNewMissionAI;
 
+	//GC.getGameINLINE().logMsg(" set mission AI Here 2 "); // 3Miro
 	if (pNewPlot != NULL)
 	{
 		m_iMissionAIX = pNewPlot->getX_INLINE();
@@ -680,6 +700,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 		m_iMissionAIY = INVALID_PLOT_COORD;
 	}
 
+	//GC.getGameINLINE().logMsg(" set mission AI Here 3 "); // 3Miro
 	if (pNewUnit != NULL)
 	{
 		m_missionAIUnit = pNewUnit->getIDInfo();
@@ -688,6 +709,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* p
 	{
 		m_missionAIUnit.reset();
 	}
+	//GC.getGameINLINE().logMsg(" set mission AI Here 4 "); // 3Miro
 }
 
 

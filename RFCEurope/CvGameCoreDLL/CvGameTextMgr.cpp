@@ -2163,6 +2163,29 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	bAlt = gDLL->altKey();
 	bCtrl = gDLL->ctrlKey();
 	
+	// 3MiroProvince: ToColor
+	if ( bCtrl && (pPlot != NULL) ){
+		provinceToColor = provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ];
+		if ( (provinceToColor < 0) || (provinceToColor>MAX_NUM_PROVINCES) ){
+			provinceToColor = 0;
+		};
+		GC.getGameINLINE().updateColoredPlots();
+	};
+	if ( (!bCtrl) && (provinceToColor > -1) && (provinceToColor<MAX_NUM_PROVINCES) ){
+		provinceToColor = -1;
+		GC.getGameINLINE().updateColoredPlots();
+	};
+	// set Plot Province text
+	//szBuffer.append( gDLL->getText("TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1", kProject.getFreeBonus( (BonusTypes) iI ) ) );
+	//szBuffer.append( gDLL->getText("TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide() ));
+	if ( (provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ]>-1) && (provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ]<MAX_NUM_PROVINCES) ){
+		szString.append( gDLL->getText("TXT_KEY_PROVINCE_TILE_HELP") );
+		szTempBuffer.Format(L"TXT_KEY_PROVINCE_NAME_%d",provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ]);
+		szString.append( gDLL->getText(szTempBuffer.GetCString() ) );
+		szString.append( NEWLINE );
+	};
+	// 3MiroProvince: end
+
 	if (bCtrl && (gDLL->getChtLvl() > 0))
 	{
 		if (bShift && pPlot->headUnitNode() != NULL)
@@ -2817,6 +2840,13 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	}
 	else
 	{
+		// 3MiroProvince: ToColor
+		//provinceToColor = provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ];
+		//if ( (provinceToColor < 0) || (provinceToColor>MAX_NUM_PROVINCES) ){
+		//	provinceToColor = 0;
+		//};
+		// 3MiroProvince: end
+
 		eRevealOwner = pPlot->getRevealedOwner(GC.getGameINLINE().getActiveTeam(), true);
 
 		if (eRevealOwner != NO_PLAYER)
@@ -4952,6 +4982,14 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_ECONOMY_BONUS"));
 	}
+
+	// 3MiroCivic: Allow Non-State Religion Buildings
+	if (GC.getCivicInfo(eCivic).isAllowNonStateReligionBuildings() )
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS"));
+	};
+
 	//Rhye - end 6th
 
 	//	Yield Modifiers
@@ -5076,7 +5114,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//Rhye - start stability
-	if (eCivic == 4) //univ. suff
+	// 3Miro: we don't need this
+	/*if (eCivic == 4) //univ. suff
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_DEMOCRACY"));
@@ -5090,7 +5129,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_POST_COMMUNISM"));
-	}
+	}*/
 	//Rhye - end stability
 
 	if (!CvWString(GC.getCivicInfo(eCivic).getHelp()).empty())

@@ -3441,6 +3441,17 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
                     }
 		        }
 		    }
+
+			// 3Miro: Building Civic combo
+			if ( (iCivicBuildingCommerse1 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse1 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse1/1000)%100))) ){
+				iValue += ((iCivicBuildingCommerse1 / 100000) %10) + ((iCivicBuildingCommerse1 / 1000000) %10) + ((iCivicBuildingCommerse1 / 10000000) %10) + ((iCivicBuildingCommerse1 / 100000000) %10);
+			};
+			if ( (iCivicBuildingCommerse2 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse2 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse2/1000)%100))) ){
+				iValue += ((iCivicBuildingCommerse2 / 100000) %10) + ((iCivicBuildingCommerse2 / 1000000) %10) + ((iCivicBuildingCommerse2 / 10000000) %10) + ((iCivicBuildingCommerse2 / 100000000) %10);
+			};
+			if ( (iCivicBuildingCommerse3 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse3 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse3/1000)%100))) ){
+				iValue += ((iCivicBuildingCommerse3 / 100000) %10) + ((iCivicBuildingCommerse3 / 1000000) %10) + ((iCivicBuildingCommerse3 / 10000000) %10) + ((iCivicBuildingCommerse3 / 100000000) %10);
+			};
 		    
 			if ((iFocusFlags & BUILDINGFOCUS_DEFENSE) || (iPass > 0))
 			{
@@ -5404,6 +5415,8 @@ void CvCityAI::AI_updateRouteToCity()
 	iBestValue = MAX_INT;
 	pBestCity = NULL;
 
+	// 3Miro: From SPEEDTWEAK, this makes the AI think which way to connect. If the city is already connected to capital
+	//        then make another random connection. Should work fine.
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
@@ -5414,7 +5427,7 @@ void CvCityAI::AI_updateRouteToCity()
 				{
 					if (pLoopCity->area() == area())
 					{
-						if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, getOwnerINLINE(), true)))
+						/*if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, getOwnerINLINE(), true)))
 						{
 							iValue = plotDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
 
@@ -5423,12 +5436,20 @@ void CvCityAI::AI_updateRouteToCity()
 								iBestValue = iValue;
 								pBestCity = pLoopCity;
 							}
+						}*/
+
+						iValue = GC.getGameINLINE().getSorenRandNum(10000, "Trade Route");
+                        if (iValue < iBestValue)
+						{
+                            iBestValue = iValue;
+                            pBestCity = pLoopCity;
 						}
 					}
 				}
 			}
 		}
 	}
+
 
 	if (pBestCity != NULL)
 	{
