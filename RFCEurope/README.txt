@@ -5,7 +5,6 @@ The mod is now in beta testing. We are looking for feedback on the gameplay expe
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
 
 
-
 This is Beta 5. Changes since Beta 4:
 Art cleanup
 XML cleanup
