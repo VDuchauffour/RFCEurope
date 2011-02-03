@@ -6,6 +6,7 @@ import ScreenInput
 import CvScreenEnums
 import CvScreensInterface
 import Consts as con #Rhye
+import XMLConsts as xml
 
 PIXEL_INCREMENT = 7
 BOX_INCREMENT_WIDTH = 27 # Used to be 33 #Should be a multiple of 3...
@@ -220,7 +221,7 @@ class CvTechChooser:
 					#	szBuildingButton = "Building" + str(j)
 					#	screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
 					#	fX += X_INCREMENT 
-                                        if (eLoopBuilding < con.iNumBuildingsPlague or eLoopBuilding == con.iNumBuildingsPlague + self.iCivSelected):
+                                        if (eLoopBuilding < xml.iNumBuildingsPlague or eLoopBuilding == xml.iNumBuildingsPlague + self.iCivSelected):
                                                 if (gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i):
                                                         szBuildingButton = "Building" + str(j)
                                                         screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )

@@ -5,6 +5,7 @@ import CvUtil
 import PyHelpers  
 import Popup
 import Consts as con
+import XMLConsts as xml
 
 # globals
 gc = CyGlobalContext()
@@ -15,18 +16,18 @@ PyPlayer = PyHelpers.PyPlayer
 class Resources:
        	
         def checkTurn(self, iGameTurn):
-		if (iGameTurn == con.i1000AD):
-			gc.getMap().plot(35, 29).setBonusType(con.iRice) #Rice in Iberia
-			gc.getMap().plot(86, 2).setBonusType(con.iRice)  #Rice in Middle East
-		if (iGameTurn == con.i1500AD):
-			gc.getMap().plot(54, 35).setBonusType(con.iRice) #Rice in Italy?
-		if (iGameTurn == con.i1580AD): #1580
-			gc.getMap().plot(35, 58).setBonusType(con.iPotato) #Potatoes in Ireland
-			gc.getMap().plot(37, 60).setBonusType(con.iPotato)
-			gc.getMap().plot(68, 49).setBonusType(con.iPotato) #Poland
-			gc.getMap().plot(59, 53).setBonusType(con.iPotato) #Northern Germany
-		if (iGameTurn == con.i1680AD):
-			gc.getMap().plot(59, 61).setBonusType(con.iAccess) #Atlantic Access in Scandinavia
+		if (iGameTurn == xml.i1000AD):
+			gc.getMap().plot(35, 29).setBonusType(xml.iRice) #Rice in Iberia
+			gc.getMap().plot(86, 2).setBonusType(xml.iRice)  #Rice in Middle East
+		if (iGameTurn == xml.i1500AD):
+			gc.getMap().plot(54, 35).setBonusType(xml.iRice) #Rice in Italy?
+		if (iGameTurn == xml.i1580AD): #1580
+			gc.getMap().plot(35, 58).setBonusType(xml.iPotato) #Potatoes in Ireland
+			gc.getMap().plot(37, 60).setBonusType(xml.iPotato)
+			gc.getMap().plot(68, 49).setBonusType(xml.iPotato) #Poland
+			gc.getMap().plot(59, 53).setBonusType(xml.iPotato) #Northern Germany
+		if (iGameTurn == xml.i1680AD):
+			gc.getMap().plot(59, 61).setBonusType(xml.iAccess) #Atlantic Access in Scandinavia
 
 		# 3Miro: resources appear
                 #if (iGameTurn == 5): #otherwise it's picked by Portugal at the beginning

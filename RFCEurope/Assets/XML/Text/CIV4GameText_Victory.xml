@@ -182,12 +182,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA1</Tag>
-		<English>Have 2 cities in each of the Rhone Valley, West Germany, Northern Italy, south and north of the Pyrenees in 840 AD</English>
-		<French>Have 2 cities in each of the Rhone Valley, West Germany, Northern Italy, south and north of the Pyrenees in 840 AD</French>
-		<German>Besitzen Sie im Jahr 840 n. Chr. je 2 Städte nördlich und südlich der Pyrenäen, im Rhonetal, in Westdeutschland und Norditalien</German>
-		<Italian>Have 2 cities in each of the Rhone Valley, West Germany, Northern Italy, south and north of the Pyrenees in 840 AD</Italian>
-		<Spanish>Have 2 cities in each of the Rhone Valley, West Germany, Northern Italy, south and north of the Pyrenees in 840 AD</Spanish>
-		<Russian>Have 2 cities in each of the Rhone Valley, West Germany, Northern Italy, south and north of the Pyrenees in 840 AD</Russian>
+		<English>Empire of the West: Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</English>
+		<French>Empire of the West: Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</French>
+		<German>Empire of the West: Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</German>
+		<Italian>Empire of the West: Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</Italian>
+		<Spanish>Empire of the West: Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</Spanish>
+		<Russian>Empire of the West: Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</Russian>
 	</TEXT>
 	<!--<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
@@ -200,21 +200,21 @@
 	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
-		<English>Capture Jerusalem in 1300 AD.</English>
-		<French>Capturer J&#233;rusalem en 1300 ap.JC.</French>
-		<German>Erobern Sie bis zum Jahr 1300 n. Chr. Jerusaleme</German>
-		<Italian>Capture Jerusalem in 1300 AD.</Italian>
-		<Spanish>Capture Jerusalem in 1300 AD.</Spanish>
-		<Russian>&#199;&#224;&#245;&#226;&#224;&#242;&#232;&#242;&#229; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#226; 1300 AD.</Russian>
+		<English>Empire of the Holy Land: Conquer Jerusalem in 1300AD.</English>
+		<French>Empire of the Holy Land: Capturer J&#233;rusalem en 1300 ap.JC.</French>
+		<German>Empire of the Holy Land: Erobern Sie bis zum Jahr 1300 n. Chr. Jerusaleme</German>
+		<Italian>Empire of the Holy Land: Capture Jerusalem in 1300 AD.</Italian>
+		<Spanish>Empire of the Holy Land: Capture Jerusalem in 1300 AD.</Spanish>
+		<Russian>Empire of the Holy Land: &#199;&#224;&#245;&#226;&#224;&#242;&#232;&#242;&#229; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#226; 1300 AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA3</Tag>
-		<English>Build 6 Colonial Projects.</English>
-		<French>Construire 6 Projets Coloniaux.</French>
-		<German>Errichten Sie 6 Kolonien</German>
-		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
-		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
+		<English>Empire of the World: Build 6 Colonial Projects.</English>
+		<French>Empire of the World: Construire 6 Projets Coloniaux.</French>
+		<German>Empire of the World: Errichten Sie 6 Kolonien</German>
+		<Italian>Empire of the World: Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
+		<Spanish>Empire of the World: Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
+		<Russian>Empire of the World: &#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>

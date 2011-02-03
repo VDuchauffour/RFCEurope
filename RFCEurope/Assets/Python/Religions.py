@@ -6,6 +6,7 @@ import PyHelpers
 import Popup
 import cPickle as pickle        	
 import Consts as con
+import XMLConsts as xml
 import RFCUtils
 
 # globals
@@ -35,11 +36,11 @@ tPolandTL = (64,43)
 tPolandBR = (78,57)
 
 ### Religious Buildings that give Faith Points ###
-tCatholicBuildings = [ con.iCatholicTemple, con.iCatholicMonastery, con.iCatholicCathedral ]
-tOrthodoxBuildings = [ con.iOrthodoxTemple, con.iOrthodoxMonastery, con.iOrthodoxCathedral ]
-tProtestantBuildings = [ con.iProtestantTemple, con.iProtestantSchool, con.iProtestantCathedral ]
-tIslamicBuildings = [ con.iIslamicTemple, con.iIslamicCathedral, con.iIslamicMadrassa ]
-tReligiousWonders = [ con.iMonasteryOfCluny, con.iImperialDiet, con.iKrakDesChevaliers, con.iNotreDame, con.iPalaisPapes, con.iStBasil, con.iSophiaKiev, con.iDomeRock, con.iRoundChurch, con.iWestminster ]
+tCatholicBuildings = [ xml.iCatholicTemple, xml.iCatholicMonastery, xml.iCatholicCathedral ]
+tOrthodoxBuildings = [ xml.iOrthodoxTemple, xml.iOrthodoxMonastery, xml.iOrthodoxCathedral ]
+tProtestantBuildings = [ xml.iProtestantTemple, xml.iProtestantSchool, xml.iProtestantCathedral ]
+tIslamicBuildings = [ xml.iIslamicTemple, xml.iIslamicCathedral, xml.iIslamicMadrassa ]
+tReligiousWonders = [ xml.iMonasteryOfCluny, xml.iImperialDiet, xml.iKrakDesChevaliers, xml.iNotreDame, xml.iPalaisPapes, xml.iStBasil, xml.iSophiaKiev, xml.iDomeRock, xml.iRoundChurch, xml.iWestminster ]
 
 
 ### Reformation Begin ###       
@@ -149,27 +150,27 @@ class Religions:
        	
         def checkTurn(self, iGameTurn):
 		# Sedna17: Spreading Judaism in a somewhat deterministic way
-		if (iGameTurn == con.i700AD-2):
+		if (iGameTurn == xml.i700AD-2):
 			#Spread Judaism to Toledo
-			utils.spreadJews(tToledo,con.iJudaism)
-		if (iGameTurn == con.i900AD):
+			utils.spreadJews(tToledo,xml.iJudaism)
+		if (iGameTurn == xml.i900AD):
 			#Spread Judaism to another town or two in Spain
 			tCity = self.selectRandomCityArea(tSpainTL,tSpainBR)
-			utils.spreadJews(tCity,con.iJudaism)
-		if (iGameTurn == con.i1000AD):
+			utils.spreadJews(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1000AD):
 			#Spread Judaism to a city in France/Germany
 			tCity = self.selectRandomCityArea(tMainzTL,tMainzBR)
-			utils.spreadJews(tCity,con.iJudaism)
-		if (iGameTurn == con.i1101AD):
+			utils.spreadJews(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1101AD):
 			#Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
-			utils.spreadJews(tCity,con.iJudaism)
-		if (iGameTurn == con.i1200AD):
+			utils.spreadJews(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1200AD):
 			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
-			utils.spreadJews(tCity,con.iJudaism)
-		if (iGameTurn == con.i1401AD):
+			utils.spreadJews(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1401AD):
 			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
-			utils.spreadJews(tCity,con.iJudaism)
+			utils.spreadJews(tCity,xml.iJudaism)
 		
                	
                	#for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
@@ -184,7 +185,7 @@ class Religions:
                	
                	# 3Miro: Catholic Benefits from the Pope
                	# the Pope gifts gold every 3 turns
-               	if ( iGameTurn > con.i1053AD ):
+               	if ( iGameTurn > xml.i1053AD ):
                		iDivBy = 7
                	else:
                		iDivBy = 17
@@ -195,7 +196,7 @@ class Religions:
 	               		iCatholicFaith = 0
         	       		for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
         	       			pPlayer = gc.getPlayer( i )
-        	       			if ( pPlayer.getStateReligion() == con.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+        	       			if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
         	       				iCatholicFaith += pPlayer.getFaith()
         	       		if ( iCatholicFaith > 0 ):
         	       			iCatholicFaith += iCatholicFaith / 10 + 1
@@ -206,7 +207,7 @@ class Religions:
 	        	       		iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'random Pope gold gift')
         		       		for i in range( iNumPlayers - 1 ):
         		       			pPlayer = gc.getPlayer( i )
-        		       			if ( pPlayer.getStateReligion() == con.iCatholicism  and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+        		       			if ( pPlayer.getStateReligion() == xml.iCatholicism  and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
 			               			iRandomNum -= pPlayer.getFaith()
 			               			if ( iRandomNum <= 0 ):
 			               				#print(" The Pope gifts 50 gold to ",i )
@@ -226,26 +227,26 @@ class Religions:
 				iCatholicFaith = 0
         		        for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
         		       		pPlayer = gc.getPlayer( i )
-        		       		if ( pPlayer.getStateReligion() == con.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+        		       		if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
         		       			#iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude( i )
         		       			iCatholicFaith += max( 0, pPope.AI_getAttitude( i ) )
         		       	#print(" Catholic Faith: ",iCatholicFaith)
         		       	if ( iCatholicFaith > 0 ):
         		       		iCatholicFaith += iCatholicFaith / 5 + 1
         		       		if ( gc.getGame().getSorenRandNum(2, 'random Catholic BuildingType') % 2 == 0 ):
-        		       			iCatholicBuilding = con.iCatholicTemple
+        		       			iCatholicBuilding = xml.iCatholicTemple
         		       		else:
-        		       			iCatholicBuilding = con.iCatholicMonastery
+        		       			iCatholicBuilding = xml.iCatholicMonastery
         			       	iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'random Pope Building Build')
         		       		#print(" 3Miro Pope Builds " )
         		       		for i in range( iNumPlayers - 1 ):
         			       		pPlayer = gc.getPlayer( i )
-        			       		if ( pPlayer.getStateReligion() == con.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+        			       		if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
 				        		#iRandomNum -= pPlayer.getFaith() + pPope.AI_getAttitude( i )
 				        		iRandomNum -= max( 0, pPope.AI_getAttitude( i ) )
 				               		if ( iRandomNum <= 0 ):
 				               			#print(" The Pope Builds ",iCatholicBuilding," for ",i )
-				               			self.buildInRandomCity( i, iCatholicBuilding, con.iCatholicism )
+				               			self.buildInRandomCity( i, iCatholicBuilding, xml.iCatholicism )
 			               				break
         ##Reformation code
 		if (self.getReformationActive() == True):
@@ -281,25 +282,25 @@ class Religions:
 	def onBuildingBuild(seld, iPlayer, iBuilding ):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
-		if ( iStateReligion == con.iCatholicism and ( iBuilding in tCatholicBuildings ) ):
+		if ( iStateReligion == xml.iCatholicism and ( iBuilding in tCatholicBuildings ) ):
 			pPlayer.changeFaith( 1 )
-			if ( iBuilding == con.iCatholicCathedral ):
+			if ( iBuilding == xml.iCatholicCathedral ):
 				pPlayer.changeFaith( 3 )
-		if ( iStateReligion == con.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
+		if ( iStateReligion == xml.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
 			pPlayer.changeFaith( 1 )
-			if ( iBuilding == con.iOrthodoxCathedral ):
+			if ( iBuilding == xml.iOrthodoxCathedral ):
 				pPlayer.changeFaith( 3 )
-		if ( iStateReligion == con.iIslam and ( iBuilding in tIslamicBuildings  ) ):
+		if ( iStateReligion == xml.iIslam and ( iBuilding in tIslamicBuildings  ) ):
 			pPlayer.changeFaith( 1 )
-			if ( iBuilding == con.iIslamicCathedral ):
+			if ( iBuilding == xml.iIslamicCathedral ):
 				pPlayer.changeFaith( 3 )
-		if ( iStateReligion == con.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
+		if ( iStateReligion == xml.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
 			pPlayer.changeFaith( 1 )
-			if ( iBuilding == con.iProtestantCathedral ):
+			if ( iBuilding == xml.iProtestantCathedral ):
 				pPlayer.changeFaith( 3 )
 		if ( iBuilding in tReligiousWonders ):
 			pPlayer.changeFaith( 6 )
-		if ( iStateReligion != con.iJudaism and iBuilding == con.iTempleMount ):
+		if ( iStateReligion != xml.iJudaism and iBuilding == xml.iTempleMount ):
 			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
 
         def selectRandomCityCiv(self, iCiv):
@@ -416,11 +417,11 @@ class Religions:
                         self.reformationno(iHuman)
 
         def onTechAcquired(self, iTech, iPlayer):
-                if (iTech == con.iPrintingPress):
-                        if (gc.getPlayer(iPlayer).getStateReligion() == con.iCatholicism):
-                                if (not gc.getGame().isReligionFounded(con.iProtestantism)):
-                                        gc.getPlayer(iPlayer).foundReligion(con.iProtestantism,con.iProtestantism,false)
-                                        gc.getGame().getHolyCity(con.iProtestantism).setNumRealBuilding(con.iProtestantShrine,1)
+                if (iTech == xml.iPrintingPress):
+                        if (gc.getPlayer(iPlayer).getStateReligion() == xml.iCatholicism):
+                                if (not gc.getGame().isReligionFounded(xml.iProtestantism)):
+                                        gc.getPlayer(iPlayer).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
+                                        gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
                                         self.setReformationActive(True)
                                         self.reformationchoice(iPlayer)
                                         self.reformationOther(con.iIndependent)
@@ -439,7 +440,7 @@ class Religions:
                 if(self.getReformationHitMatrix(iCiv) == 1):
                         #print( " Chosen civ eligible for Reformation")
                         pPlayer = gc.getPlayer( iCiv )
-                        if ( pPlayer.isAlive() and pPlayer.getStateReligion() == con.iCatholicism ):
+                        if ( pPlayer.isAlive() and pPlayer.getStateReligion() == xml.iCatholicism ):
                                 self.reformationchoice(iCiv)
                         #        print( "Catholic choice:", iCiv )
                         else:
@@ -459,7 +460,7 @@ class Religions:
                 cityList = PyPlayer(iCiv).getCityList()
                 iChanged = False
                 for city in cityList:
-                        if(city.city.isHasReligion(con.iCatholicism)):
+                        if(city.city.isHasReligion(xml.iCatholicism)):
                                 iDummy = self.reformationReformCity( city.city, 11, False )
                                 
                 
@@ -479,71 +480,71 @@ class Religions:
                                 
         def reformationReformCity( self, pCity, iKeepCatholicismBound, bForceConvertSmall ):
                 iFaith = 0
-                if(pCity.isHasReligion(con.iCatholicism)):
+                if(pCity.isHasReligion(xml.iCatholicism)):
                         #iRandNum = gc.getSorenRandNum(100, 'Reformation of a City')
                         if (pCity.getPopulation() > iKeepCatholicismBound ):
-                                pCity.setHasReligion(con.iProtestantism,True,True,False)
-                                if(pCity.hasBuilding(con.iCatholicChapel) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicChapel, False)
-                                        pCity.setHasRealBuilding(con.iProtestantChapel, True)
-                                if(pCity.hasBuilding(con.iCatholicTemple) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicTemple, False)
-                                        pCity.setHasRealBuilding(con.iProtestantTemple, True)
+                                pCity.setHasReligion(xml.iProtestantism,True,True,False)
+                                if(pCity.hasBuilding(xml.iCatholicChapel) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
+                                        pCity.setHasRealBuilding(xml.iCatholicChapel, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantChapel, True)
+                                if(pCity.hasBuilding(xml.iCatholicTemple) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
+                                        pCity.setHasRealBuilding(xml.iCatholicTemple, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantTemple, True)
                                         iFaith += 1
-                                if(pCity.hasBuilding(con.iCatholicMonastery) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicMonastery, False)
-                                        pCity.setHasRealBuilding(con.iProtestantSeminary, True)
+                                if(pCity.hasBuilding(xml.iCatholicMonastery) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
+                                        pCity.setHasRealBuilding(xml.iCatholicMonastery, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantSeminary, True)
                                         iFaith += 1
-                                if(pCity.hasBuilding(con.iCatholicCathedral) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
-                                        pCity.setHasRealBuilding(con.iCatholicCathedral, False)
-					if ( pCity.hasBuilding(con.iCatholicReliquary) ):
-						pCity.setHasRealBuilding(con.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
-                                        pCity.setHasRealBuilding(con.iProtestantCathedral, True)
+                                if(pCity.hasBuilding(xml.iCatholicCathedral) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
+                                        pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
+					if ( pCity.hasBuilding(xml.iCatholicReliquary) ):
+						pCity.setHasRealBuilding(xml.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
+                                        pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
                                         iFaith += 1
                         elif ( bForceConvertSmall or gc.getGame().getSorenRandNum(100, 'Reformation of a City') < lReformationMatrix[pCity.getOwner()] ):
-                                pCity.setHasReligion(con.iProtestantism,True,True,False)
+                                pCity.setHasReligion(xml.iProtestantism,True,True,False)
                                 iFaith += 1
-                                if(pCity.hasBuilding(con.iCatholicReliquary)):
-                                        pCity.setHasRealBuilding(con.iCatholicReliquary, False)
-                                if(pCity.hasBuilding(con.iCatholicChapel)):
-                                        pCity.setHasRealBuilding(con.iCatholicChapel, False)
-                                        pCity.setHasRealBuilding(con.iProtestantChapel, True)
-                                if(pCity.hasBuilding(con.iCatholicTemple)):
-                                        pCity.setHasRealBuilding(con.iCatholicTemple, False)
-                                        pCity.setHasRealBuilding(con.iProtestantTemple, True)
+                                if(pCity.hasBuilding(xml.iCatholicReliquary)):
+                                        pCity.setHasRealBuilding(xml.iCatholicReliquary, False)
+                                if(pCity.hasBuilding(xml.iCatholicChapel)):
+                                        pCity.setHasRealBuilding(xml.iCatholicChapel, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantChapel, True)
+                                if(pCity.hasBuilding(xml.iCatholicTemple)):
+                                        pCity.setHasRealBuilding(xml.iCatholicTemple, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantTemple, True)
                                         iFaith += 1
-                                if(pCity.hasBuilding(con.iCatholicMonastery)):
-                                        pCity.setHasRealBuilding(con.iCatholicMonastery, False)
-                                        pCity.setHasRealBuilding(con.iProtestantSeminary, True)
+                                if(pCity.hasBuilding(xml.iCatholicMonastery)):
+                                        pCity.setHasRealBuilding(xml.iCatholicMonastery, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantSeminary, True)
                                         iFaith += 1
-                                if(pCity.hasBuilding(con.iCatholicCathedral)):
-                                        pCity.setHasRealBuilding(con.iCatholicCathedral, False)
-                                        pCity.setHasRealBuilding(con.iProtestantCathedral, True)
+                                if(pCity.hasBuilding(xml.iCatholicCathedral)):
+                                        pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
+                                        pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
                                         iFaith += 1
-                                pCity.setHasReligion(con.iCatholicism,False,False,False)
+                                pCity.setHasReligion(xml.iCatholicism,False,False,False)
                 return iFaith
 
         def reformationyes(self, iCiv):
                 cityList = PyPlayer(iCiv).getCityList()
                 iFaith = 0
                 for city in cityList:
-                        if(city.city.isHasReligion(con.iCatholicism)):
+                        if(city.city.isHasReligion(xml.iCatholicism)):
                                 iFaith += self.reformationReformCity( city.city, 7, True )
 
                 pPlayer = gc.getPlayer(iCiv)
                 #iStateReligion = pPlayer.getStateReligion()
-                #if (pPlayer.getStateReligion() == con.iCatholicism):
-                pPlayer.setLastStateReligion(con.iProtestantism)
+                #if (pPlayer.getStateReligion() == xml.iCatholicism):
+                pPlayer.setLastStateReligion(xml.iProtestantism)
                 pPlayer.setFaith( iFaith )
 
         def reformationno(self, iCiv):
                 cityList = PyPlayer(iCiv).getCityList()
                 iLostFaith = 0
                 for city in cityList:
-                        if(city.city.isHasReligion(con.iCatholicism)):
+                        if(city.city.isHasReligion(xml.iCatholicism)):
                                 rndnum = gc.getGame().getSorenRandNum(100, 'ReformationAnyway')
                                 if(rndnum <= lReformationMatrix[iCiv]):
-                                        city.city.setHasReligion(con.iProtestantism, True, False, False)
+                                        city.city.setHasReligion(xml.iProtestantism, True, False, False)
                                         iLostFaith += 1
                                         #iLostFaith += self.reformationReformCity( city.city, 9, False )
                 gc.getPlayer(iCiv).changeFaith( - min( gc.getPlayer(iCiv).getFaith(), iLostFaith ) )

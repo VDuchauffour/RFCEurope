@@ -1,10 +1,5 @@
 This file is for me to keep track of things. I may merge it with README later:
 
-Done: for BETA 7
-- Updated the dynamic Civ names, not the C++ is clean from hardcoded Civilizations, we can change/move them from Python and XML alone, dynamic names are more flexible now (will improve more later)
-- Updated Crusaders and some Barb spawn dates to match the RFCE-Timeline (we are just starting with the timeline)
-- Bugfix - nasty bug givein CTD when a city next to the map edge flips
-
 Done: for BETA 6
 - merijn_v1 updates some text on the new Manor House/Civic
 - art and text changes by merijn_v1

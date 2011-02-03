@@ -5,6 +5,7 @@ import CvUtil
 import PyHelpers
 import Popup
 import Consts as con
+import XMLConsts as xml
 
 import RFCEMaps as rfcemaps
 

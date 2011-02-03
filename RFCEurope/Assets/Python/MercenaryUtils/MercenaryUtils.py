@@ -19,6 +19,7 @@ import math
 import cPickle as pickle
 
 import Consts as con #Rhye
+import XMLConsts as xml
 import RFCUtils #Rhye
 
 ################# SD-UTILITY-PACK ###################
@@ -762,11 +763,11 @@ class MercenaryUtils:
                         #Rhye - end
 
                         #Rhye - start (no anti-... before correct era)
-                        if ((i == 7 or i == 24 or i == 34) and gc.getActivePlayer().getCurrentEra() < con.iRenaissance):
+                        if ((i == 7 or i == 24 or i == 34) and gc.getActivePlayer().getCurrentEra() < xml.iRenaissance):
                                 bEraMatch = false
-                        if (i == 10 and gc.getActivePlayer().getCurrentEra() < con.iIndustrial):
+                        if (i == 10 and gc.getActivePlayer().getCurrentEra() < xml.iIndustrial):
                                 bEraMatch = false
-                        if (i == 9 and gc.getActivePlayer().getCurrentEra() < con.iClassical):
+                        if (i == 9 and gc.getActivePlayer().getCurrentEra() < xml.iClassical):
                                 bEraMatch = false
                         #Rhye - end	
 				

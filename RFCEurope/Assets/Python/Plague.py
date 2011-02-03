@@ -7,6 +7,7 @@ import PyHelpers
 import Popup
 import cPickle as pickle
 import Consts as con
+import XMLConsts as xml
 import RFCUtils
 utils = RFCUtils.RFCUtils()
 
@@ -22,7 +23,7 @@ iNumTotalPlayers = con.iNumTotalPlayers
 iBarbarian = con.iBarbarian
 iNumTotalPlayersB = con.iNumTotalPlayersB
 
-iPlague = con.iPlague
+iPlague = xml.iPlague
 
 #Sedna17: Black Death is now set to be especially severe.
 iDuration = 6
@@ -215,12 +216,12 @@ class Plague:
                                 if ( x>=0 and x<con.iMapMaxX and y>=0 and y<con.iMapMaxY ):
                                         pCurrent = gc.getMap().plot( x, y )                
                                         iImprovement = pCurrent.getImprovementType()
-                                        if (iImprovement == con.iImprovementHamlet):
-                                                pCurrent.setImprovementType(con.iImprovementCottage)
-                                        if (iImprovement == con.iImprovementVillage):
-                                                pCurrent.setImprovementType(con.iImprovementHamlet)
-                                        if (iImprovement == con.iImprovementTown):
-                                                pCurrent.setImprovementType(con.iImprovementVillage)
+                                        if (iImprovement == xml.iImprovementHamlet):
+                                                pCurrent.setImprovementType(xml.iImprovementCottage)
+                                        if (iImprovement == xml.iImprovementVillage):
+                                                pCurrent.setImprovementType(xml.iImprovementHamlet)
+                                        if (iImprovement == xml.iImprovementTown):
+                                                pCurrent.setImprovementType(xml.iImprovementVillage)
                                         
                 self.killUnitsByPlague(city, gc.getMap().plot( city.getX(), city.getY() ) , 0, 120, 0)     
 

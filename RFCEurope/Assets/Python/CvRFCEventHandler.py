@@ -19,7 +19,8 @@ import CityNameManager
 import UniquePowers     
 import AIWars           
 #import Congresses
-import Consts as con 
+import Consts as con
+import XMLConsts as xml
 import RFCUtils
 utils = RFCUtils.RFCUtils()
 import CvScreenEnums #Mercenaries, Rhye
@@ -267,7 +268,7 @@ class CvRFCEventHandler:
 
 		# 3Miro: Jerusalem's Golden Age Insentive
 		pPlayer = gc.getPlayer(playerType)
-		if ( pPlayer.getStateReligion() == con.iCatholicism ):
+		if ( pPlayer.getStateReligion() == xml.iCatholicism ):
 			if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
 				self.crusade.success( playerType )
 
@@ -280,19 +281,19 @@ class CvRFCEventHandler:
 			lCities = PyPlayer( iNewOwner).getCityList( )
 			for iCity in range(len(lCities)):
 				pCity = gc.getPlayer( iNewOwner ).getCity( lCities[ iCity ].getID( ) )
-				if(pCity.isHasRealBuilding(con.iKrakDesChevaliers)):
+				if(pCity.isHasRealBuilding(xml.iKrakDesChevaliers)):
 					bKrak = true
 				
 		if bKrak:
-			city.setHasRealBuilding(con.iWalls, True)
+			city.setHasRealBuilding(xml.iWalls, True)
 			if iNewOwner == con.iSpain:
-				city.setHasRealBuilding(con.iSpanishCitadel, True)
+				city.setHasRealBuilding(xml.iSpanishCitadel, True)
 			elif iNewOwner == con.iMoscow:
-				city.setHasRealBuilding(con.iMoscowKremlin, True)
+				city.setHasRealBuilding(xml.iMoscowKremlin, True)
 			elif iNewOwner == con.iHungary:
-				city.setHasRealBuilding(con.iHungarianStronghold, True)
+				city.setHasRealBuilding(xml.iHungarianStronghold, True)
 			else:
-				city.setHasRealBuilding(con.iCastle, True)
+				city.setHasRealBuilding(xml.iCastle, True)
 
 		# End Krak des Chevaliers
 				
@@ -418,19 +419,19 @@ class CvRFCEventHandler:
         	lCities = PyPlayer( iFounder ).getCityList( )
         	for iCity in range( len( lCities ) ):
         		pCity = gc.getPlayer( iFounder ).getCity( lCities[ iCity ].getID( ) )
-        		if ( pCity.isHolyCityByType( iReligion ) and iReligion <> con.iJudaism): #Sedna -- ProtestantShrine is now starting point for consistency with Religion.xml, Judaism is special
+        		if ( pCity.isHolyCityByType( iReligion ) and iReligion <> xml.iJudaism): #Sedna -- ProtestantShrine is now starting point for consistency with Religion.xml, Judaism is special
         			if (iReligion == 0):
-					iTemple = con.iProtestantTemple
-					iShrine = con.iProtestantShrine
+					iTemple = xml.iProtestantTemple
+					iShrine = xml.iProtestantShrine
 				if (iReligion == 1):
-					iTemple = con.iIslamicTemple
-					iShrine = con.iIslamicShrine
+					iTemple = xml.iIslamicTemple
+					iShrine = xml.iIslamicShrine
 				if (iReligion == 2):
-					iTemple = con.iCatholicTemple
-					iShrine = con.iCatholicShrine
+					iTemple = xml.iCatholicTemple
+					iShrine = xml.iCatholicShrine
 				if (iReligion == 3):
-					iTemple = con.iOrthodoxTemple
-					iShrine = con.iOrthodoxShrine
+					iTemple = xml.iOrthodoxTemple
+					iShrine = xml.iOrthodoxShrine
 				if ( not pCity.isHasRealBuilding(iShrine) ):
         				pCity.setHasRealBuilding(iShrine, True )
         			if ( not pCity.isHasRealBuilding(iTemple) ):
@@ -442,7 +443,7 @@ class CvRFCEventHandler:
                         self.sta.onReligionFounded(iFounder)
                         
                 # 3MiroCrusade: end Crusades for the Holy Land after the Reformation
-                if (iReligion == con.iProtestantism ):
+                if (iReligion == xml.iProtestantism ):
                 	self.crusade.endCrusades()
 
 	def onCorporationFounded(self, argsList):
@@ -502,7 +503,7 @@ class CvRFCEventHandler:
         def onBeginGameTurn(self, argsList):
                 iGameTurn = argsList[0]
 
-		if ( iGameTurn == con.i1053AD ):
+		if ( iGameTurn == xml.i1053AD ):
 			iHuman = utils.getHumanID()
 			sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
 			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)

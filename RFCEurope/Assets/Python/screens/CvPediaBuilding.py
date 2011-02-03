@@ -337,7 +337,7 @@ class CvPediaBuilding:
 				#listBuildings.append(iBuilding)
 				#iCount += 1
 				# 3Miro: Plague not appear as building
-				if (iBuilding != con.iPlague):
+				if (iBuilding != xmliPlague):
 					listBuildings.append(iBuilding)
 					iCount += 1
 				#Rhye - end

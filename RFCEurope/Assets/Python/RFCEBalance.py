@@ -1,6 +1,7 @@
 # RFC Europe, balancing modifiers are placed here
 from CvPythonExtensions import *
 import Consts as con
+import XMLConsts as xml
 import RFCEMaps as rfcemaps
 
 gc = CyGlobalContext()	# LOQ
@@ -76,6 +77,8 @@ class RFCEBalance:
 	def setBalanceParameters( self ):
 	
 		self.preMapsNSizes()
+                
+                self.setTechTimeline() # Timeline for correct tech three
 		
 		# 3Miro: consolidate several modifiers into fewer calls, makes it more structured. Each modfier works as described below.
 		
@@ -222,46 +225,46 @@ class RFCEBalance:
 		
 		#gc.setInitialBuilding( iSpain, con.iGranary, True )
 		#gc.setInitialBuilding( iSpain, con.iHerbalist, True )
-		gc.setInitialBuilding( iSpain, con.iBarracks, True )
+		gc.setInitialBuilding( iSpain, xml.iBarracks, True )
 
-		gc.setInitialBuilding( iMoscow, con.iGranary, True )
-		gc.setInitialBuilding( iMoscow, con.iBarracks, True )
-		gc.setInitialBuilding( iMoscow, con.iForge, True )
-		gc.setInitialBuilding( iMoscow, con.iMarket, True )
+		gc.setInitialBuilding( iMoscow, xml.iGranary, True )
+		gc.setInitialBuilding( iMoscow, xml.iBarracks, True )
+		gc.setInitialBuilding( iMoscow, xml.iForge, True )
+		gc.setInitialBuilding( iMoscow, xml.iMarket, True )
 		
-		gc.setInitialBuilding( iGenoa, con.iGranary, True )
-		gc.setInitialBuilding( iGenoa, con.iBarracks, True )
+		gc.setInitialBuilding( iGenoa, xml.iGranary, True )
+		gc.setInitialBuilding( iGenoa, xml.iBarracks, True )
 		
-		gc.setInitialBuilding( iEngland, con.iGranary, True )
-		gc.setInitialBuilding( iEngland, con.iBarracks, True )
+		gc.setInitialBuilding( iEngland, xml.iGranary, True )
+		gc.setInitialBuilding( iEngland, xml.iBarracks, True )
 		
-		gc.setInitialBuilding( iPortugal, con.iGranary, True )
-		gc.setInitialBuilding( iPortugal, con.iBarracks, True )
+		gc.setInitialBuilding( iPortugal, xml.iGranary, True )
+		gc.setInitialBuilding( iPortugal, xml.iBarracks, True )
 
-		gc.setInitialBuilding( iAustria, con.iGranary, True )
-		gc.setInitialBuilding( iAustria, con.iBarracks, True )
+		gc.setInitialBuilding( iAustria, xml.iGranary, True )
+		gc.setInitialBuilding( iAustria, xml.iBarracks, True )
 		
-		gc.setInitialBuilding( iTurkey, con.iGranary, True )
-		gc.setInitialBuilding( iTurkey, con.iBarracks, True )
-		gc.setInitialBuilding( iTurkey, con.iForge, True )
-		gc.setInitialBuilding( iTurkey, con.iHarbor, True )
-		gc.setInitialBuilding( iTurkey, con.iOttomanHammam, True )
+		gc.setInitialBuilding( iTurkey, xml.iGranary, True )
+		gc.setInitialBuilding( iTurkey, xml.iBarracks, True )
+		gc.setInitialBuilding( iTurkey, xml.iForge, True )
+		gc.setInitialBuilding( iTurkey, xml.iHarbor, True )
+		gc.setInitialBuilding( iTurkey, xml.iOttomanHammam, True )
 		
-		gc.setInitialBuilding( iSweden, con.iGranary, True )
-		gc.setInitialBuilding( iSweden, con.iSwedishTennant, True )
-		gc.setInitialBuilding( iSweden, con.iForge, True )
-		gc.setInitialBuilding( iSweden, con.iHarbor, True )
-		gc.setInitialBuilding( iSweden, con.iAqueduct, True )
+		gc.setInitialBuilding( iSweden, xml.iGranary, True )
+		gc.setInitialBuilding( iSweden, xml.iSwedishTennant, True )
+		gc.setInitialBuilding( iSweden, xml.iForge, True )
+		gc.setInitialBuilding( iSweden, xml.iHarbor, True )
+		gc.setInitialBuilding( iSweden, xml.iAqueduct, True )
 
-		gc.setInitialBuilding( iDutch, con.iGranary, True )
-		gc.setInitialBuilding( iDutch, con.iBarracks, True )
-		gc.setInitialBuilding( iDutch, con.iForge, True )
-		gc.setInitialBuilding( iDutch, con.iHarbor, True )
-		gc.setInitialBuilding( iDutch, con.iAqueduct, True )
-		gc.setInitialBuilding( iDutch, con.iMarket, True )
-		gc.setInitialBuilding( iDutch, con.iLighthouse, True )
-		gc.setInitialBuilding( iDutch, con.iTheatre, True )
-		gc.setInitialBuilding( iDutch, con.iSmokehouse, True )
+		gc.setInitialBuilding( iDutch, xml.iGranary, True )
+		gc.setInitialBuilding( iDutch, xml.iBarracks, True )
+		gc.setInitialBuilding( iDutch, xml.iForge, True )
+		gc.setInitialBuilding( iDutch, xml.iHarbor, True )
+		gc.setInitialBuilding( iDutch, xml.iAqueduct, True )
+		gc.setInitialBuilding( iDutch, xml.iMarket, True )
+		gc.setInitialBuilding( iDutch, xml.iLighthouse, True )
+		gc.setInitialBuilding( iDutch, xml.iTheatre, True )
+		gc.setInitialBuilding( iDutch, xml.iSmokehouse, True )
 		
 		####### AI Modifiers
 		#3Miro: setCityClusterAI(iCiv,iTop,iBottom,iMinus) for each AI civilization (set them for all, but only the AI make difference)
@@ -319,13 +322,13 @@ class RFCEBalance:
 		# low percent makes the tech less desirable
 		#gc.setTechPreferenceAI(iByzantium,1,200)
 		#gc.setTechPreferenceAI(iFrankia,1,200)
-		gc.setTechPreferenceAI(iBulgaria,con.iBronzeCasting,200)				
-		gc.setTechPreferenceAI(iGermany,con.iPrintingPress,200)
-		gc.setTechPreferenceAI(iEngland,con.iPrintingPress,150)
-		gc.setTechPreferenceAI(iPope,con.iPrintingPress,10) # Pope shouldn't want this
+		gc.setTechPreferenceAI(iBulgaria,xml.iBronzeCasting,200)				
+		gc.setTechPreferenceAI(iGermany,xml.iPrintingPress,200)
+		gc.setTechPreferenceAI(iEngland,xml.iPrintingPress,150)
+		gc.setTechPreferenceAI(iPope,xml.iPrintingPress,10) # Pope shouldn't want this
 
-		gc.setTechPreferenceAI(iSpain,con.iAstronomy,200)
-		gc.setTechPreferenceAI(iPortugal,con.iAstronomy,200)
+		gc.setTechPreferenceAI(iSpain,xml.iAstronomy,200)
+		gc.setTechPreferenceAI(iPortugal,xml.iAstronomy,200)
 		
 		#3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
 		# + means they will like each other - they will hate each other.
@@ -397,15 +400,15 @@ class RFCEBalance:
 		
 		gc.setUP( iBulgaria, iUP_NoResistance, 0 )		
 
-		gc.setUP( iCordoba, iUP_PromotionI, con.iPromotionMedicI )
+		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedicI )
 		
 		gc.setUP( iSpain, iUP_Inquisition, 1 )
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
 		
-		gc.setUP( iNorse, iUP_CanEnterTerrain, con.iTerrainOcean )
+		gc.setUP( iNorse, iUP_CanEnterTerrain, xml.iTerrainOcean )
 
 		#JediClemente: changed to only Merchant Republic
-		gc.setUP( iVenecia, iUP_EnableCivic, 100* con.iCivicMerchantRepublic ) # before + con.iCivicRepublic
+		gc.setUP( iVenecia, iUP_EnableCivic, 100* xml.iCivicMerchantRepublic ) # before + con.iCivicRepublic
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
 		
 		gc.setUP( iKiev, iUP_CityTileYield, 100000 * 2 )
@@ -413,7 +416,7 @@ class RFCEBalance:
 		gc.setUP( iHungary, iUP_Happiness, 1 )
 		gc.setUP( iHungary, iUP_CulturalTolerance, 0 )
 		
-		gc.setUP( iGermany, iUP_UnitProduction, con.iGunpowder * 100 + 75 )
+		gc.setUP( iGermany, iUP_UnitProduction, xml.iGunpowder * 100 + 75 )
 		
 		gc.setUP( iPoland, iUP_ReligiousTolerance, 0 )
 		
@@ -422,9 +425,9 @@ class RFCEBalance:
 		
 		gc.setUP( iGenoa, iUP_Mercenaries, 1 )
 		
-		gc.setUP( iEngland, iUP_ImprovementBonus, con.iImprovementWorkshop * 1000000 + 200 )
+		gc.setUP( iEngland, iUP_ImprovementBonus, xml.iImprovementWorkshop * 1000000 + 200 )
 		
-		gc.setUP( iPortugal, iUP_Discovery, con.iNumNotColonies * 1000000 + (con.iNumTotalColonies-1) * 1000 + 60 );
+		gc.setUP( iPortugal, iUP_Discovery, xml.iNumNotColonies * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 60 );
 		
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
@@ -432,7 +435,7 @@ class RFCEBalance:
 				
 		gc.setUP( iTurkey, iUP_Conscription, 330 )
 		
-		gc.setUP( iSweden, iUP_PromotionI, con.iPromotionFormation )
+		gc.setUP( iSweden, iUP_PromotionI, xml.iPromotionFormation )
 		
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
 		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little (not enouth cities)
@@ -443,15 +446,15 @@ class RFCEBalance:
 		gc.setGlobalWarming( False )
 		
 		# Set FastTerrain (i.e. double movement over ocean)
-		gc.setFastTerrain( con.iTerrainOcean )
+		gc.setFastTerrain( xml.iTerrainOcean )
 		
 		# set religious spread factors
 		for iCiv in range( iNumTotalPlayers + 1 ): # include barbs
-			for iRel in range( con.iNumReligions ):
+			for iRel in range( xml.iNumReligions ):
 				gc.setReligionSpread( iCiv, iRel, con.tReligionSpreadFactor[iCiv][iRel] )
 				
 		# set the religions and year of the great schism
-		gc.setSchism( con.iCatholicism, con.iOrthodoxy, con.i1053AD )
+		gc.setSchism( xml.iCatholicism, xml.iOrthodoxy, xml.i1053AD )
 
 		gc.setHoliestCity( con.iJerusalem[0], con.iJerusalem[1] )
 		
@@ -479,18 +482,18 @@ class RFCEBalance:
 		# iFP_Displomacy: iAttitude += 	iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of an attitude point
 		
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Stability, 20, 100 )
-		gc.setReligionBenefit( con.iOrthodoxy, con.iFP_Civic, 50, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 20, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Civic, 50, 100 )
 		
-		gc.setReligionBenefit( con.iIslam, con.iFP_Growth, 50, 100 )
-		gc.setReligionBenefit( con.iIslam, con.iFP_Units, 50, 100 )
+		gc.setReligionBenefit( xml.iIslam, con.iFP_Growth, 50, 100 )
+		gc.setReligionBenefit( xml.iIslam, con.iFP_Units, 50, 100 )
 		
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Science, 30, 100 )
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Production, 30, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Science, 30, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Production, 30, 100 )
 		
-		gc.setReligionBenefit( con.iCatholicism, con.iFP_Displomacy, 6, 100 )
-		gc.setReligionBenefit( con.iIslam, con.iFP_Displomacy, 10, 100 )
-		gc.setReligionBenefit( con.iProtestantism, con.iFP_Displomacy, 6, 100 )
+		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 6, 100 )
+		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 10, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 6, 100 )
 
 		# every nation gets a land tile that is normally impassible and now pass through it
 		gc.setStrategicTile( iVenecia, 56, 35 )
@@ -501,86 +504,86 @@ class RFCEBalance:
 		# use values -10 for very unlikely, 0 for default neutral and positive for desirable
 		# values less than -10 might not work, above 10 should be fine
 		
-		gc.setBuildingPref( iBurgundy, con.iMonasteryOfCluny, 20 )
+		gc.setBuildingPref( iBurgundy, xml.iMonasteryOfCluny, 20 )
 		
-		gc.setBuildingPref( iByzantium, con.iRoundChurch, -3 )
-		gc.setBuildingPref( iByzantium, con.iGoldenBull, -3 )
+		gc.setBuildingPref( iByzantium, xml.iRoundChurch, -3 )
+		gc.setBuildingPref( iByzantium, xml.iGoldenBull, -3 )
 		
-		gc.setBuildingPref( iFrankia, con.iNotreDame, 20 )
-		gc.setBuildingPref( iFrankia, con.iVersailles, 10 )
-		gc.setBuildingPref( iFrankia, con.iFontainebleau, 10 )
+		gc.setBuildingPref( iFrankia, xml.iNotreDame, 20 )
+		gc.setBuildingPref( iFrankia, xml.iVersailles, 10 )
+		gc.setBuildingPref( iFrankia, xml.iFontainebleau, 10 )
 		
-		gc.setBuildingPref( iArabia, con.iDomeRock, 10 )
-		gc.setBuildingPref( iArabia, con.iTombKhal, 20 )
-		gc.setBuildingPref( iArabia, con.iNotreDame, -3 )
-		gc.setBuildingPref( iArabia, con.iSistineChapel, -3 )
-		gc.setBuildingPref( iArabia, con.iKrakDesChevaliers, -3 )
-		gc.setBuildingPref( iArabia, con.iGoldenBull, -3 )
-		gc.setBuildingPref( iArabia, con.iCopernicus, -3 )
+		gc.setBuildingPref( iArabia, xml.iDomeRock, 10 )
+		gc.setBuildingPref( iArabia, xml.iTombKhal, 20 )
+		gc.setBuildingPref( iArabia, xml.iNotreDame, -3 )
+		gc.setBuildingPref( iArabia, xml.iSistineChapel, -3 )
+		gc.setBuildingPref( iArabia, xml.iKrakDesChevaliers, -3 )
+		gc.setBuildingPref( iArabia, xml.iGoldenBull, -3 )
+		gc.setBuildingPref( iArabia, xml.iCopernicus, -3 )
 		
-		gc.setBuildingPref( iBulgaria, con.iRoundChurch, 20 )
+		gc.setBuildingPref( iBulgaria, xml.iRoundChurch, 20 )
 		
-		gc.setBuildingPref( iCordoba, con.iGardensAlAndalus, 20 )
-		gc.setBuildingPref( iCordoba, con.iLaMezquita, 20 )
-		gc.setBuildingPref( iCordoba, con.iAlhambra, 20 )
-		gc.setBuildingPref( iCordoba, con.iDomeRock, 10 )
-		gc.setBuildingPref( iCordoba, con.iNotreDame, -3 )
-		gc.setBuildingPref( iArabia, con.iSistineChapel, -3 )
-		gc.setBuildingPref( iCordoba, con.iKrakDesChevaliers, -3 )
-		gc.setBuildingPref( iCordoba, con.iGoldenBull, -3 )
+		gc.setBuildingPref( iCordoba, xml.iGardensAlAndalus, 20 )
+		gc.setBuildingPref( iCordoba, xml.iLaMezquita, 20 )
+		gc.setBuildingPref( iCordoba, xml.iAlhambra, 20 )
+		gc.setBuildingPref( iCordoba, xml.iDomeRock, 10 )
+		gc.setBuildingPref( iCordoba, xml.iNotreDame, -3 )
+		gc.setBuildingPref( iArabia, xml.iSistineChapel, -3 )
+		gc.setBuildingPref( iCordoba, xml.iKrakDesChevaliers, -3 )
+		gc.setBuildingPref( iCordoba, xml.iGoldenBull, -3 )
 		
-		gc.setBuildingPref( iSpain, con.iEscorial, 20 )
-		gc.setBuildingPref( iSpain, con.iMagellansVoyage, 10 )
+		gc.setBuildingPref( iSpain, xml.iEscorial, 20 )
+		gc.setBuildingPref( iSpain, xml.iMagellansVoyage, 10 )
 		
-		gc.setBuildingPref( iNorse, con.iShrineOfUppsala, 20 )
-		gc.setBuildingPref( iNorse, con.iKalmarCastle, 10 )
+		gc.setBuildingPref( iNorse, xml.iShrineOfUppsala, 20 )
+		gc.setBuildingPref( iNorse, xml.iKalmarCastle, 10 )
 		
-		gc.setBuildingPref( iVenecia, con.iMarcoPolo, 10 )
-		gc.setBuildingPref( iVenecia, con.iSanMarco, 10 )
-		gc.setBuildingPref( iVenecia, con.iLeonardosWorkshop, 5 )
+		gc.setBuildingPref( iVenecia, xml.iMarcoPolo, 10 )
+		gc.setBuildingPref( iVenecia, xml.iSanMarco, 10 )
+		gc.setBuildingPref( iVenecia, xml.iLeonardosWorkshop, 5 )
 		
-		gc.setBuildingPref( iKiev, con.iSophiaKiev, 20 )
+		gc.setBuildingPref( iKiev, xml.iSophiaKiev, 20 )
 		
-		gc.setBuildingPref( iHungary, con.iGoldenBull, 20 )
-		gc.setBuildingPref( iHungary, con.iBibliothecaCorviniana, 10 )
+		gc.setBuildingPref( iHungary, xml.iGoldenBull, 20 )
+		gc.setBuildingPref( iHungary, xml.iBibliothecaCorviniana, 10 )
 
-		gc.setBuildingPref( iGermany, con.iBrandenburgGate, 20 )
-		gc.setBuildingPref( iGermany, con.iImperialDiet, 10 )
-		gc.setBuildingPref( iGermany, con.iCopernicus, 5 )
+		gc.setBuildingPref( iGermany, xml.iBrandenburgGate, 20 )
+		gc.setBuildingPref( iGermany, xml.iImperialDiet, 10 )
+		gc.setBuildingPref( iGermany, xml.iCopernicus, 5 )
 		
-		gc.setBuildingPref( iPoland, con.iPressburg, 20 )
-		gc.setBuildingPref( iPoland, con.iCopernicus, 5 )
-		gc.setBuildingPref( iPoland, con.iGoldenBull, 5 )
-		gc.setBuildingPref( iPoland, con.iTempleMount, 5 )
+		gc.setBuildingPref( iPoland, xml.iPressburg, 20 )
+		gc.setBuildingPref( iPoland, xml.iCopernicus, 5 )
+		gc.setBuildingPref( iPoland, xml.iGoldenBull, 5 )
+		gc.setBuildingPref( iPoland, xml.iTempleMount, 5 )
 		
-		gc.setBuildingPref( iMoscow, con.iStBasil, 20 )
+		gc.setBuildingPref( iMoscow, xml.iStBasil, 20 )
 		
-		gc.setBuildingPref( iGenoa, con.iSanGiorgio, 20 )
-		gc.setBuildingPref( iGenoa, con.iLeonardosWorkshop, 5 )
+		gc.setBuildingPref( iGenoa, xml.iSanGiorgio, 20 )
+		gc.setBuildingPref( iGenoa, xml.iLeonardosWorkshop, 5 )
 		
-		gc.setBuildingPref( iEngland, con.iMagnaCarta, 20 )
-		gc.setBuildingPref( iEngland, con.iWestminster, 10 )
+		gc.setBuildingPref( iEngland, xml.iMagnaCarta, 20 )
+		gc.setBuildingPref( iEngland, xml.iWestminster, 10 )
 		#JediClemente: Tower of London is a national wonder!
 		
-		gc.setBuildingPref( iPortugal, con.iBelemTower, 20 )
-		gc.setBuildingPref( iPortugal, con.iRibeira, 20 )
+		gc.setBuildingPref( iPortugal, xml.iBelemTower, 20 )
+		gc.setBuildingPref( iPortugal, xml.iRibeira, 20 )
 		
-		gc.setBuildingPref( iAustria, con.iStephansdom, 20 )
+		gc.setBuildingPref( iAustria, xml.iStephansdom, 20 )
 		
-		gc.setBuildingPref( iTurkey, con.iTopkapiPalace, 20 )
+		gc.setBuildingPref( iTurkey, xml.iTopkapiPalace, 20 )
 		
-		gc.setBuildingPref( iSweden, con.iKalmarCastle, 20 )
+		gc.setBuildingPref( iSweden, xml.iKalmarCastle, 20 )
 		
-		gc.setBuildingPref( iDutch, con.iBeurs, 20 )
+		gc.setBuildingPref( iDutch, xml.iBeurs, 20 )
 		
-		gc.setBuildingPref( iPope, con.iNotreDame, 20 )
-		gc.setBuildingPref( iPope, con.iSistineChapel, 20 )
+		gc.setBuildingPref( iPope, xml.iNotreDame, 20 )
+		gc.setBuildingPref( iPope, xml.iSistineChapel, 20 )
 
 		self.postAreas()
 
 		# Manor House + Manorism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
-		gc.setBuildingCivicCommerseCombo1( con.iManorHouse + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
-		gc.setBuildingCivicCommerseCombo2( con.iFrenchChateau + 1000 * con.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+		gc.setBuildingCivicCommerseCombo1( xml.iManorHouse + 1000 * xml.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+		gc.setBuildingCivicCommerseCombo2( xml.iFrenchChateau + 1000 * xml.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
 		gc.setBuildingCivicCommerseCombo3(-1)
 
 		# 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
@@ -596,19 +599,110 @@ class RFCEBalance:
 		#        this should be "last" resot solution, other methods are always preferable
 		gc.setHistoricalEnemyAICheat( iTurkey, iBulgaria,  10 )
 		gc.setHistoricalEnemyAICheat( iBulgaria, iTurkey, -10 )
+                
+        def setTechTimeline( self ):
+                gc.setTimelineTechModifiers( 9, 25, -50, 3, 100, 50 ) # go between 10 times slower and 4 times faster
+                # formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
+                # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
+                # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
+                # gc.setTimelineTechDateForTech( iTech, iTurn )
+                gc.setTimelineTechDateForTech( xml.iCalendar, 0 )
+                gc.setTimelineTechDateForTech( xml.iArchitecture, 30 )
+                gc.setTimelineTechDateForTech( xml.iBronzeCasting, 15 )
+                gc.setTimelineTechDateForTech( xml.iTheology, 10 )
+                gc.setTimelineTechDateForTech( xml.iManorialism, 5 )
+                gc.setTimelineTechDateForTech( xml.iStirrup, xml.i600AD )
+                gc.setTimelineTechDateForTech( xml.iEngineering, 55 ) #teir 2
+                gc.setTimelineTechDateForTech( xml.iChainMail, 43 )
+                gc.setTimelineTechDateForTech( xml.iArt, 38 )
+                gc.setTimelineTechDateForTech( xml.iMonasticism, 50 )
+                gc.setTimelineTechDateForTech( xml.iVassalage, 60 )
+                gc.setTimelineTechDateForTech( xml.iAstrolabe, 76 ) # teir 3
+                gc.setTimelineTechDateForTech( xml.iMachinery, 76 )
+                gc.setTimelineTechDateForTech( xml.iVaultedArches, 90 ) # 
+                gc.setTimelineTechDateForTech( xml.iMusic, 80 )
+                gc.setTimelineTechDateForTech( xml.iHerbalMedicine, 95 )
+                gc.setTimelineTechDateForTech( xml.iFeudalism, xml.i778AD ) # Feudalism
+                gc.setTimelineTechDateForTech( xml.iFarriers, 100 )
+                gc.setTimelineTechDateForTech( xml.iMapMaking, 114 ) # teir 4 
+                gc.setTimelineTechDateForTech( xml.iBlastFurnace, 120 )
+                gc.setTimelineTechDateForTech( xml.iSiegeEngines, xml.i1097AD ) #trebuchets
+                gc.setTimelineTechDateForTech( xml.iGothicArchitecture, 130 ) # 12th century
+                gc.setTimelineTechDateForTech( xml.iLiterature, 145 )
+                gc.setTimelineTechDateForTech( xml.iCodeOfLaws, 120 )
+                gc.setTimelineTechDateForTech( xml.iAristocracy, 135 )
+                gc.setTimelineTechDateForTech( xml.iLateenSails, 140 ) # teir 5
+                gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # Late 1200s, By the 14th century, plate armour was commonly used to supplement mail.
+                gc.setTimelineTechDateForTech( xml.iMonumentBuilding, 180 )
+                gc.setTimelineTechDateForTech( xml.iClassicalKnowledge, 175 )
+                gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1003AD )
+                gc.setTimelineTechDateForTech( xml.iCivilService, 190 ) # teir 6
+                gc.setTimelineTechDateForTech( xml.iClockmaking, 200 )
+                gc.setTimelineTechDateForTech( xml.iPhilosophy, 215 )
+                gc.setTimelineTechDateForTech( xml.iEducation, 220 )
+                gc.setTimelineTechDateForTech( xml.iGuilds, 200 )
+                gc.setTimelineTechDateForTech( xml.iChivalry, 210 )
+                gc.setTimelineTechDateForTech( xml.iOptics, 228 ) # teir 7
+                gc.setTimelineTechDateForTech( xml.iReplaceableParts, 250 )
+                gc.setTimelineTechDateForTech( xml.iGunpowder, xml.i1300AD )
+                gc.setTimelineTechDateForTech( xml.iBanking, 240 )
+                gc.setTimelineTechDateForTech( xml.iMilitaryTradition, 260 )
+                gc.setTimelineTechDateForTech( xml.iShipbuilding, 275 ) # teir 8
+                gc.setTimelineTechDateForTech( xml.iDrama, 270 )
+                gc.setTimelineTechDateForTech( xml.iDivineRight, 266 )
+                gc.setTimelineTechDateForTech( xml.iChemistry, 280 )
+                gc.setTimelineTechDateForTech( xml.iPaper, 290 )
+                gc.setTimelineTechDateForTech( xml.iProfessionalArmy, 295 )
+                gc.setTimelineTechDateForTech( xml.iPrintingPress, xml.i1517AD ) # teir 9 turn 304
+                gc.setTimelineTechDateForTech( xml.iPublicWorks, 310 )
+                gc.setTimelineTechDateForTech( xml.iMatchlock, xml.i1500AD )
+                gc.setTimelineTechDateForTech( xml.iArabicKnowledge, xml.i1491AD ) # fall of Granada
+                gc.setTimelineTechDateForTech( xml.iAstronomy, xml.i1514AD ) # teir 10 Copernicus
+                gc.setTimelineTechDateForTech( xml.iSteamEngines, xml.i1690AD ) # first steam engine
+                gc.setTimelineTechDateForTech( xml.iConstitution, 375 )
+                gc.setTimelineTechDateForTech( xml.iPolygonalFort, 370 )
+                gc.setTimelineTechDateForTech( xml.iArabicMedicine, 342 )
+                gc.setTimelineTechDateForTech( xml.iRenaissanceArt, xml.i1540AD ) # teir 11, 1541
+                gc.setTimelineTechDateForTech( xml.iNationalism, 380 )
+                gc.setTimelineTechDateForTech( xml.iLiberalism, 400 )
+                gc.setTimelineTechDateForTech( xml.iScientificMethod, xml.i1623AD ) # Galileo 
+                gc.setTimelineTechDateForTech( xml.iMilitaryTactics, 410 )
+                gc.setTimelineTechDateForTech( xml.iNavalArchitecture, 385 ) # teir 12
+                gc.setTimelineTechDateForTech( xml.iCivilEngineering, 395 )
+                gc.setTimelineTechDateForTech( xml.iRightOfMan, 460 )
+                gc.setTimelineTechDateForTech( xml.iEconomics, 435 )
+                gc.setTimelineTechDateForTech( xml.iPhysics, xml.i1687AD )
+                gc.setTimelineTechDateForTech( xml.iBiology, 440 )
+                gc.setTimelineTechDateForTech( xml.iCombinedArms, 430 )
+                gc.setTimelineTechDateForTech( xml.iTradingCompanies, xml.i1600AD ) # teir 13 TradingCompanies turn 325
+                gc.setTimelineTechDateForTech( xml.iMachineTools, 450 )
+                gc.setTimelineTechDateForTech( xml.iFreeMarket, 450 )
+                gc.setTimelineTechDateForTech( xml.iExplosives, 460 )
+                gc.setTimelineTechDateForTech( xml.iMedicine, 458 )
+                gc.setTimelineTechDateForTech( xml.iIndustrialTech, xml.i1800AD )
+                
 
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE
-		gc.setSizeNPlayers( con.iMapMaxX, con.iMapMaxY, iNumPlayers, iNumTotalPlayers, con.iNumTechs, con.iNumBuildingsPlague, con.iNumReligions )
-		for i in range( iNumPlayers ):
-			for y in range( con.iMapMaxY ):
-				for x in range( con.iMapMaxX ):
-					gc.setSettlersMap( i, y, x, rfcemaps.tSettlersMaps[i][y][x] )
-					gc.setWarsMap( i, y, x, rfcemaps.tWarsMaps[i][y][x] )
+                gc.setSizeNPlayers( con.iMapMaxX, con.iMapMaxY, iNumPlayers, iNumTotalPlayers, xml.iNumTechs, xml.iNumBuildingsPlague, xml.iNumReligions )
+                for i in range( iNumPlayers ):
+                        for y in range( con.iMapMaxY ):
+                                for x in range( con.iMapMaxX ):
+                                        gc.setSettlersMap( i, y, x, rfcemaps.tSettlersMaps[i][y][x] )
+                                        gc.setWarsMap( i, y, x, rfcemaps.tWarsMaps[i][y][x] )
 	
-		# birth turns for the players, do not change this loop
-		for i in range( iNumTotalPlayers ):
-			gc.setStartingTurn( i, con.tBirth[i] )	
+                for y in range( con.iMapMaxY ):
+                        for x in range( con.iMapMaxX ):
+                                if ( rfcemaps.tProinceMap[y][x] > -1 ): 
+                                        # "no province" of ocean is settled different than -1, set only non-negative values, 
+                                        # the C++ map is initialized to "no-province" by setSizeNPlayers(...)
+                                        # "no-province" is returned as -1 via the Cy interface
+                                        gc.setProvince( x, y, rfcemaps.tProinceMap[y][x] )
+                gc.createProvinceCrossreferenceList() # make sure to call this AFTER setting all the Province entries
+        
+                # birth turns for the players, do not change this loop
+                for i in range( iNumTotalPlayers ):
+                        gc.setStartingTurn( i, con.tBirth[i] )	
 			
 	def postAreas( self ):
 		#3Miro: DO NOT CHANGE THIS CODE
@@ -630,12 +724,12 @@ class RFCEBalance:
 			for iEx in range( iCNE ):
 				gc.addNormalException( iCiv, con.tNormalAreasSubtract[iCiv][iEx][0], con.tNormalAreasSubtract[iCiv][iEx][1] )
 				
-		gc.setProsecutorReligions( con.iProsecutor, con.iProsecutorClass )
-		gc.setSaintParameters( con.iProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
+		gc.setProsecutorReligions( xml.iProsecutor, xml.iProsecutorClass )
+		gc.setSaintParameters( xml.iProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
-		gc.setPapalPlayer( iPope, con.iCatholicism )
+		gc.setPapalPlayer( iPope, xml.iCatholicism )
 
-		gc.setAutorunHack( con.iCatapult, 32, 0 ) # Autorun hack
+		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack
 		
 		
 		for iCiv in range( iNumPlayers ):
