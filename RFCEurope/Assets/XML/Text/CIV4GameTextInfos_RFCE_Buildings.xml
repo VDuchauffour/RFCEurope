@@ -960,4 +960,20 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP</Tag>
+		<English>Vaivadija</English>
+		<French>Vaivadija</French>
+		<German>Vaivadija</German>
+		<Italian>Vaivadija</Italian>
+		<Spanish>Vaivadija</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP_PEDIA</Tag>
+		<English>[TAB]A voivodeship, also spelled voivodship, voivodina or vojvodina, is a type of administrative division dating to medieval Poland, Romania, Hungary, Lithuania, Latvia, Russia and Serbia (see Vojvodina), ruled by a voivode (wojewoda, voivod). The voivode (literally, "leader of warriors", equivalent to Dux Exercituum or Herzog) was originally the military commander next to the ruler.[PARAGRAPH:1]Contemporarily, the term (or its variant spelling voivodship) is used for the województwa (preferably translated as "provinces") of Poland, of which there are currently 16. There is also an autonomous province of Vojvodina in Serbia.[PARAGRAPH:1]The word "voivodeship" appears in some of the larger English dictionaries, such as the OED and Webster's Third New International Dictionary, though it is not in common usage. Depending on the context, historic voivodeships may also be referred to as "duchies," "provinces," "palatinates," "administrative districts" or "regions."</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>

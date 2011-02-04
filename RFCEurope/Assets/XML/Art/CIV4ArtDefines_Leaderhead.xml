@@ -342,5 +342,21 @@
 			<NoShaderNIF>Art/Leaderheads/Haakon_IV/Haakonson.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Haakon_IV/peter_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MINDAUGAS</Type>
+			<Button>Art/Leaderheads/Mindaugas/Btn_LH_Mindaugas.dds</Button>
+			<NIF>Art/Leaderheads/Mindaugas/Mindaugas.nif</NIF>
+			<KFM>Art/Leaderheads/Mindaugas/hannibal.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Mindaugas/Mindaugas.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Mindaugas/hannibal_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_VYTAUTAS</Type>
+			<Button>Art/Leaderheads/Vytautas/Btn_LH_Vytautas.dds</Button>
+			<NIF>Art/Leaderheads/Vytautas/Vytautas.nif</NIF>
+			<KFM>Art/Leaderheads/Vytautas/ragnar_lodbrok.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Vytautas/Vytautas.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Vytautas/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>
