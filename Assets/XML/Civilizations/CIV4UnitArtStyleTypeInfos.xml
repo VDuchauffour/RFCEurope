@@ -609,6 +609,14 @@
 						<MiddleArtDefineTag>ART_DEF_UNIT_HORSEMAN_EURASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_GREAT_GENERAL</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_GENERAL_RUSSIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_GENERAL_RUSSIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_GENERAL_RUSSIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>

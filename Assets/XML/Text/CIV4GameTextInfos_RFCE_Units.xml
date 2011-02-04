@@ -498,6 +498,14 @@
 		<German>Kosar</German>
 		<Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_LITHUANIA_BAJORAS</Tag>
+		<English>Bajoras</English>
+		<French>Bajoras</French>
+		<German>Bajoras</German>
+		<Italian>Bajoras</Italian>
+		<Spanish>Bajoras</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHT_HOSPITALLER_HELP</Tag>
 		<English>[ICON_BULLET]Requires Knights Hospitallers present in the city</English>
 		<French>.</French>

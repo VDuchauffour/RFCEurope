@@ -1142,5 +1142,12 @@
 			<fBlue>0.75</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_LITHUANIAN_RED</Type>
+			<fRed>.93</fRed>
+			<fGreen>.11</fGreen>
+			<fBlue>.14</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>
