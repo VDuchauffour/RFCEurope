@@ -194,6 +194,24 @@
 		<Russian>&#207;&#240;&#232;&#226;&#238;&#228;&#232;&#242;&#229; 2 &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#251;&#245; &#239;&#240;&#238;&#228;&#238;&#226;&#238;&#235;&#252;&#241;&#242;&#226;&#232;&#255; &#231;&#224; &#227;&#238;&#240;&#238;&#228;.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UP_LIT</Tag>
+		<English>UP1:</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_LIT2</Tag>
+		<English>UP2.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_HUN</Tag>
 		<English>The Power of Tolerance:</English>
 		<French>Le Pouvoir de la Tol&#233;rance :</French>

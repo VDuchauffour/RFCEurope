@@ -407,6 +407,33 @@
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 2 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#241;&#238;&#225;&#238;&#240;&#224; &#232; 8 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#236;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#229;&#233; 1250AD.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_LIT1</Tag>
+		<English>UHV1</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_LIT2</Tag>
+		<English>UHV2</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_LIT3</Tag>
+		<English>UHV3</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
 		<English>Control the most territory in Europe in 1490AD.</English>
 		<French>Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
