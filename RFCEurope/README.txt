@@ -6,7 +6,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 
 
-This is Beta 5. Changes since Beta 4:
+This is Beta 7. Changes since Beta 6:
 Art cleanup
 XML cleanup
 New movie for the Magna Carta
@@ -23,3 +23,4 @@ New Diplo music
 Removed Barbarian leaderhead from the civilopedia
 Basic information for the leaderheads (english only)
 New art for the Burgundian Winery
+Lithuania added

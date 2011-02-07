@@ -480,20 +480,20 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		
 		# 3Miro: merijnv1 removed the Indy and Pope form the Civ list, maybe the Pope should be there
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
-			tList.pop(25) #independent4
-			tList.pop(24) #independent3                  
-			tList.pop(23) #independent2
-			tList.pop(22) #independent1
+			tList.pop(26) #independent4
+			tList.pop(25) #independent3                  
+			tList.pop(24) #independent2
+			tList.pop(23) #independent1
 			#tList.pop(21) #papal
-			
+
 		# 3Miro: merijnv1 removed the Corsair, Seljuk, Tagmata, WeshLongbowman, Highlander, Keshik
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
-			tList.pop(96) #Corsair
-			tList.pop(95) #Seljuk
-			tList.pop(94) #Tagmata
-			tList.pop(93) #WelshLongbowman                          
-			tList.pop(92) #Highlander
-			tList.pop(91) #MongolKeshik
+			tList.pop(97) #Corsair
+			tList.pop(96) #Seljuk
+			tList.pop(95) #Tagmata
+			tList.pop(94) #WelshLongbowman                          
+			tList.pop(93) #Highlander
+			tList.pop(92) #MongolKeshik
 
 		# 3Miro: merijnv1 removed the worked Access?
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT):
