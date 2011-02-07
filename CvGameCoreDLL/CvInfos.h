@@ -1397,12 +1397,8 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	bool isAllowNonStateReligionBuildings() const; // 3MiroCivic: Allow non state religion buildings
-
 //---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 protected:
-
-	bool m_bAllowNonStateReligionBuildings; // 3MiroCivic: Allow non state religion buildings
 
 	int m_iCivicOptionType;
 	int m_iAnarchyLength;
@@ -2254,20 +2250,6 @@ public:
 	DllExport const wchar* getSStart() const;				// Exposed to Python
 	std::wstring pyGetSStart() { return getSStart(); }				// Exposed to Python
 
-	// 3MiroDCN
-	int getDCNNumber() const;
-	//DllExport const TCHAR* getDCNName( int iIndex ) const;
-	DllExport const wchar* getDCNName( int iIndex ) const;
-	int getDCNCondReligion( int iIndex ) const;
-	int getDCNCondNotReligion( int iIndex ) const;
-	int getDCNCondCivic( int iIndex ) const;
-	int getDCNCondOrCivic1( int iIndex ) const;
-	int getDCNCondOrCivic2( int iIndex ) const;
-	int getDCNCondVassalOf( int iIndex ) const;
-	int getDCNCondGenericVassal( int iIndex ) const;
-	int getDCNCondMasterOf( int iIndex ) const;
-	int getDCNCondGenericMaster( int iIndex ) const;
-	int getDCNCondAfterTurn( int iIndex ) const;
 
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 
@@ -2303,22 +2285,6 @@ protected:
 	CvWString m_szGrowth;
 	CvWString m_szStartingSituation;
 
-	// 3MiroDCN
-	int m_iNumDCNConditions;
-	int *m_piDCNReligions;
-	int *m_piDCNNotReligions;
-	int *m_piDCNCicivc;
-	int *m_piDCNOrCicivc1;
-	int *m_piDCNOrCicivc2;
-	int *m_piDCNVassalOf;
-	int *m_piDCNGenericVassal;
-	int *m_piDCNMasterOf;
-	int *m_piDCNGenericMaster;
-	int *m_piDCNAfterTurn;
-	CvWString* m_pszDCNName;
-	
-	CvString* m_pszDCNTempMasterOf;
-	CvString* m_pszDCNTempVassalOf;
 
 	// Arrays
 
@@ -4071,7 +4037,7 @@ public:
 	int getFreeBonus( BonusTypes eBonus ); // will expose to Python
 	int getPrereqProject( ProjectTypes eProject ); // will expose to Python (eventually)
 	int getPrereqBonus(); // (eventually)
-	bool getIsColony();
+
 
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 protected:
@@ -4090,7 +4056,6 @@ protected:
 	int m_iSuccessRate;
 
 	int m_iPrereqBonus; // 3MiroProjects
-	int m_bIsColony; // 3MiroProjects: is this project a colony
 
 	bool m_bSpaceship;
 	bool m_bAllowsNukes;

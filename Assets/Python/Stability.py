@@ -318,7 +318,7 @@ class Stability:
 					iNewBaseCivicStability +=5
 			if(iCivic0 == 2 or iCivic0 == 3): #JediClemente: Stephansdom gives +2 stability for having a non-feudal monarchy
 				if (self.getHasStephansdom(iPlayer) == 1):
-					iNewBaseCivicStability +=2;
+					iNewBaseCivicStability +=2
 			if (iCivic0 == 3 or iCivic0 == 4): #Limited Monarchy and Republics both like enlightened civics
 				if (iCivic1 == 9): #Common Law
 					iNewBaseCivicStability +=2

@@ -1110,10 +1110,8 @@ void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 //Rhye - start
 void CyUnit::setXYOld(int iX, int iY)
 {
-	if (m_pUnit){
-		//GC.getGameINLINE().logMsg(" Call by Rhye %d %d  %d ",getID(),getUnitType(),getOwner());
+	if (m_pUnit)
 		return m_pUnit->setXY(iX, iY);
-	};
 }
 //Rhye - end
 

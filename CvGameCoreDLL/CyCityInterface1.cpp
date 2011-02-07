@@ -478,6 +478,5 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		// 3Miro: New functions
 		.def("canPurgeReligion", &CyCity::canPurgeReligion, "bool ()")
 		.def("doPurgeReligions", &CyCity::doPurgeReligions, "void ()")
-		.def("getProvince", &CyCity::getProvince, "int ()")
 		;
 }

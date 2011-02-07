@@ -30,6 +30,7 @@ import Plague
 #import Communications
 import Crusades  
 import RFCEMaps as rfcemaps      
+import ProvinceManager
         
 gc = CyGlobalContext()        
 #iBetrayalCheaters = 15
@@ -53,6 +54,7 @@ iMoscow = con.iMoscow
 iGenoa = con.iGenoa
 iEngland = con.iEngland
 iPortugal = con.iPortugal
+iLithuania = con.iLithuania
 iAustria = con.iAustria
 iTurkey = con.iTurkey
 iSweden = con.iSweden
@@ -165,6 +167,7 @@ class CvRFCEventHandler:
                
                 self.eventManager = eventManager
 
+                self.pm = ProvinceManager.ProvinceManager()
                 self.data = StoredData.StoredData()
                 self.rnf = RiseAndFall.RiseAndFall()
                 self.barb = Barbs.Barbs()
@@ -213,6 +216,7 @@ class CvRFCEventHandler:
 
         def onGameStart(self, argsList):
                 'Called at the start of the game'
+                self.pm.setup()
                 self.data.setupScriptData()
                 self.rnf.setup()
                 self.rel.setup()
@@ -239,9 +243,11 @@ class CvRFCEventHandler:
                 #'City Acquired'
                 owner,playerType,city,bConquest,bTrade = argsList
                 #CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
-                if ( owner >= con.iNumMajorPlayers and playerType < con.iNumMajorPlayers and rfcemaps.tWarsMaps[playerType][con.iMapMaxY-city.getY()-1][city.getX()] == 0 ):
-                	print("  3Miro - Special City Captured: ")
-                	print("  Params: ",owner,playerType,bConquest,bTrade)
+                #if ( owner >= con.iNumMajorPlayers and playerType < con.iNumMajorPlayers and rfcemaps.tWarsMaps[playerType][con.iMapMaxY-city.getY()-1][city.getX()] == 0 ):
+                #	print("  3Miro - Special City Captured: ")
+                #	print("  Params: ",owner,playerType,bConquest,bTrade)
+                
+                self.pm.onCityAcquired(owner,playerType,city,bConquest,bTrade)
                 	
                 self.cnm.renameCities(city, playerType)
                 
@@ -314,6 +320,8 @@ class CvRFCEventHandler:
                 #'City Razed'
                 city, iPlayer = argsList
 
+                self.pm.onCityRazed(city.getOwner(),iPlayer,city)
+
                 self.sta.onCityRazed(city.getOwner(),iPlayer,city)
                 self.vic.onCityRazed(iPlayer,city)
 		
@@ -343,6 +351,8 @@ class CvRFCEventHandler:
                 city = argsList[0]
                 
                 iOwner = city.getOwner()
+                
+                self.pm.onCityBuilt(iOwner, city.getX(), city.getY() )
                 
                 if (iOwner < con.iNumActivePlayers): 
                         self.cnm.assignName(city)
@@ -526,7 +536,7 @@ class CvRFCEventHandler:
                 self.aiw.checkTurn(iGameTurn)
                 #self.cong.checkTurn(iGameTurn) # 3Miro: no congress
                 self.pla.checkTurn(iGameTurn)
-                self.vic.checkTurn(iGameTurn) #3Miro: Test For Speed
+                self.vic.checkTurn(iGameTurn)
                 self.sta.checkTurn(iGameTurn)
                 #self.com.checkTurn(iGameTurn) # 3Miro: no communication problem 
                 self.crusade.checkTurn(iGameTurn)

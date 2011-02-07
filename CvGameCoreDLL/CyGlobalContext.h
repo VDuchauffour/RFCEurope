@@ -400,7 +400,7 @@ public:
 	void setHoliestCity( int iCityX, int iCityY );
 
 	// 3MiroFaith: set religious benefits from Faith
-	void setReligionBenefit( int iReligion, int iBenefit, int iParameter, int iCap );
+	void setReligionBenefit( int iReligion, int iBenefit, int iParameter );
 
 	// 3Miro: set starting workers
 	void setStartingWorkers( int iCiv, int iWorkers );
@@ -416,27 +416,6 @@ public:
 
 	// 3Miro: set building preference
 	void setBuildingPref( int iCiv, int iBuilding, int iPref );
-
-	// 3Miro: set Autorun Hack
-	void setAutorunHack( int iUnit, int iX, int iY );
-
-	// 3Miro: set Building + Civic combo
-	void setBuildingCivicCommerseCombo1( int iCode );
-	void setBuildingCivicCommerseCombo2( int iCode );
-	void setBuildingCivicCommerseCombo3( int iCode );
-
-	// 3Miro: Psycho AI cheat, this gives a AI player gratiinsentive to attack a city at X, Y and it greatly improves the odds of success
-	void setPsychoAICheat( int iPlayer, int iX, int iY );
-
-	// 3Miro: set historical enemy AI cheat
-	void setHistoricalEnemyAICheat( int iAttacker, int iDefender, int iChange );
-
-	// 3Miro: set timeline Tech modifiers, strong gain and penalty for teching out of historical order
-	void setTimelineTechModifiers( int iTPTop, int iTPBottom, int iTPCap, int iTBTop, int iTBBottom, int iTBCap );
-	void setTimelineTechDateForTech( int iTech, int iTurn );
-
-	void setProvince( int iX, int iY, int iProvince ); // set the province at tile (iX,iY)
-	void createProvinceCrossreferenceList(); // call this after setting all provinces
 
 };
 

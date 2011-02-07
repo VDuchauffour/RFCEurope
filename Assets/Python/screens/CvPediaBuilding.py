@@ -13,6 +13,7 @@ import ScreenInput
 import CvScreenEnums
 import string
 import Consts as con #Rhye
+import XMLConsts as xml #3Miro
 
 # globals
 gc = CyGlobalContext()
@@ -337,7 +338,7 @@ class CvPediaBuilding:
 				#listBuildings.append(iBuilding)
 				#iCount += 1
 				# 3Miro: Plague not appear as building
-				if (iBuilding != xmliPlague):
+				if (iBuilding != xml.iPlague):
 					listBuildings.append(iBuilding)
 					iCount += 1
 				#Rhye - end

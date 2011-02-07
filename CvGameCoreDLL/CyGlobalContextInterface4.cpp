@@ -246,7 +246,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setSchism", &CyGlobalContext::setSchism, "void ( int iReligionA, int iReligionB, int iTurn )") // 3Miro
 
 		// Faith Powers Parameters
-		.def("setReligionBenefit", &CyGlobalContext::setReligionBenefit, "void ( int iReligion, int iBenefit, int iParameter, iCap )") // 3Miro
+		.def("setReligionBenefit", &CyGlobalContext::setReligionBenefit, "void ( int iReligion, int iBenefit, int iParameter )") // 3Miro
 
 		// set Holiest City
 		.def("setHoliestCity", &CyGlobalContext::setHoliestCity, "void ( int iCityX, int iCityY )") // 3Miro
@@ -265,27 +265,5 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		// set AI building prefs
 		.def("setBuildingPref", &CyGlobalContext::setBuildingPref, "void ( int iCiv, int iBuilding, int iPref )") // 3Miro
-
-		// 3Miro: set Autorun Hack
-		.def("setAutorunHack", &CyGlobalContext::setAutorunHack, "void ( int iUnit, int iX, int iY )") // 3Miro
-
-		// 3Miro: set Building + Civic combo
-		.def("setBuildingCivicCommerseCombo1", &CyGlobalContext::setBuildingCivicCommerseCombo1, "void ( int iCode )") // 3Miro
-		.def("setBuildingCivicCommerseCombo2", &CyGlobalContext::setBuildingCivicCommerseCombo2, "void ( int iCode )") // 3Miro
-		.def("setBuildingCivicCommerseCombo3", &CyGlobalContext::setBuildingCivicCommerseCombo3, "void ( int iCode )") // 3Miro
-
-		// 3Miro: Psycho AI cheat, this gives a AI player gratiinsentive to attack a city at X, Y and it greatly improves the odds of success
-		.def("setPsychoAICheat", &CyGlobalContext::setPsychoAICheat, "void ( int iPlayer, int iX, int iY )") // 3Miro
-
-		// 3Miro: on AI to AI battles, this gives a iChange chnage to the attack.defense odds
-		.def("setHistoricalEnemyAICheat", &CyGlobalContext::setHistoricalEnemyAICheat, "void ( int iAttacker, int iDefender, int iChange )") // 3Miro
-
-		// tech Timeline modifiers
-		.def("setTimelineTechModifiers", &CyGlobalContext::setTimelineTechModifiers, "void ( int iTPTop, int iTPBottom, int iTPCap, int iTBTop, int iTBBottom, int iTBCap )") // 3Miro
-		.def("setTimelineTechDateForTech", &CyGlobalContext::setTimelineTechDateForTech, "void ( int iTech, int iTurn )") // 3Miro
-
-		// 3MiroProvinces
-		.def("setProvince", &CyGlobalContext::setProvince, "void ( int iX, int iY, int iProvince )")
-		.def("createProvinceCrossreferenceList", &CyGlobalContext::createProvinceCrossreferenceList, "void ()")
 		;
 }

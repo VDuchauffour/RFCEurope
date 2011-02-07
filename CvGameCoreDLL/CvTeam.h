@@ -381,9 +381,6 @@ public:
 	int getTrainVassalUU() const;
 	void setTrainVassalUU( int iNewVal );
 
-	// 3MiroTimeline: get the research without a timeline modifier
-	int getResearchCostUntimely(TechTypes eTech) const;
-
 protected:
 
 	// 3Miro: Vassal UU

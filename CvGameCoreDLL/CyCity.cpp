@@ -2310,7 +2310,3 @@ void CyCity::doPurgeReligions(){
 		m_pCity ->doPurgeReligions();
 	};
 };
-
-int CyCity::getProvince(){
-	return m_pCity ->getProvince();
-};

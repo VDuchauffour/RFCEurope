@@ -189,7 +189,7 @@ class Religions:
                		iDivBy = 7
                	else:
                		iDivBy = 17
-               	if ( iGameTurn % iDivBy == 3 ):
+               	if ( iGameTurn >= xml.i752AD and iGameTurn % iDivBy == 3 ):
                		pPope = gc.getPlayer( con.iPope )
                		teamPope = gc.getTeam( pPope.getTeam() )
                		if ( pPope.getGold() > 100 ):
@@ -219,7 +219,7 @@ class Religions:
 		               					break
 
 		# free religious building every 6 turns
-		if ( iGameTurn > 66 ): # 66 = 800AD, the crouning of Charlemagne
+		if ( iGameTurn > xml.i800AD ): # 66 = 800AD, the crouning of Charlemagne
 			if ( iGameTurn % 11 == 3 ):
 				#print(" 3Miro Pope Builds " )
 				pPope = gc.getPlayer( con.iPope )

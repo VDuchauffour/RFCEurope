@@ -152,7 +152,6 @@ void CvSelectionGroup::doTurn()
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
-	//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 1 " ); // 3Miro
 	if (getNumUnits() > 0)
 	{
 		bool bHurt = false;
@@ -164,9 +163,7 @@ void CvSelectionGroup::doTurn()
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = nextUnitNode(pUnitNode);
 
-			//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 2 " ); // 3Miro
 			pLoopUnit->doTurn();
-			//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 3 " ); // 3Miro
 
 			if (pLoopUnit->isHurt())
 			{
@@ -185,7 +182,6 @@ void CvSelectionGroup::doTurn()
 		{
 			setActivityType(ACTIVITY_AWAKE);
 		}
-		//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 4 " ); // 3Miro
 
 		if (AI_isControlled())
 		{
@@ -216,7 +212,6 @@ void CvSelectionGroup::doTurn()
 			}
 		}
 
-		//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 5 " ); // 3Miro
 		if (isHuman())
 		{
 			if (GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
@@ -253,9 +248,7 @@ void CvSelectionGroup::doTurn()
 		}
 	}
 
-	//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 6 " ); // 3Miro
 	doDelayedDeath();
-	//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 7 " ); // 3Miro
 }
 
 bool CvSelectionGroup::showMoves() const
@@ -422,7 +415,6 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
-	//GC.getGameINLINE().logMsg(" push_mission Here 1 "); // 3Miro
 	if (!bAppend)
 	{
 		if (isBusy())
@@ -433,12 +425,10 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 		clearMissionQueue();
 	}
 
-	//GC.getGameINLINE().logMsg(" push_mission Here 2 "); // 3Miro
 	if (bManual)
 	{
 		setAutomateType(NO_AUTOMATE);
 	}
-	//GC.getGameINLINE().logMsg(" push_mission Here 3 "); // 3Miro
 
 	mission.eMissionType = eMission;
 	mission.iData1 = iData1;
@@ -446,13 +436,10 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 	mission.iFlags = iFlags;
 	mission.iPushTurn = GC.getGameINLINE().getGameTurn();
 
-	//GC.getGameINLINE().logMsg(" push_mission Here 4 "); // 3Miro
 	AI_setMissionAI(eMissionAI, pMissionAIPlot, pMissionAIUnit);
-	//GC.getGameINLINE().logMsg(" push_mission Here 4.1 "); // 3Miro
 
 	insertAtEndMissionQueue(mission, !bAppend);
 
-	//GC.getGameINLINE().logMsg(" push_mission Here 5 "); // 3Miro
 	if (bManual)
 	{
 		if (getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
@@ -471,9 +458,7 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 //Speed: End Modify
 		//Rhye - end
 
-		//GC.getGameINLINE().logMsg(" push_mission Here 6 "); // 3Miro
 		doDelayedDeath();
-		//GC.getGameINLINE().logMsg(" push_mission Here 7 "); // 3Miro
 	}
 }
 
@@ -3050,21 +3035,19 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 						bAttack = true;
 
-						// 3Miro: SPEEDTWEAK more Python
-						//CySelectionGroup* pyGroup = new CySelectionGroup(this);
-						//CyPlot* pyPlot = new CyPlot(pDestPlot);
-						//CyArgsList argsList;
-						//argsList.add(gDLL->getPythonIFace()->makePythonObject(pyGroup));	// pass in Selection Group class
-						//argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in Plot class
-						//long lResult=0;
-						//gDLL->getPythonIFace()->callFunction(PYGameModule, "doCombat", argsList.makeFunctionArgs(), &lResult);
-						//delete pyGroup;	// python fxn must not hold on to this pointer 
-						//delete pyPlot;	// python fxn must not hold on to this pointer 
-						//if (lResult == 1)
-						//{
-						//	break;
-						//}
-						// 3Miro: end
+						CySelectionGroup* pyGroup = new CySelectionGroup(this);
+						CyPlot* pyPlot = new CyPlot(pDestPlot);
+						CyArgsList argsList;
+						argsList.add(gDLL->getPythonIFace()->makePythonObject(pyGroup));	// pass in Selection Group class
+						argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in Plot class
+						long lResult=0;
+						gDLL->getPythonIFace()->callFunction(PYGameModule, "doCombat", argsList.makeFunctionArgs(), &lResult);
+						delete pyGroup;	// python fxn must not hold on to this pointer 
+						delete pyPlot;	// python fxn must not hold on to this pointer 
+						if (lResult == 1)
+						{
+							break;
+						}
 
 						if (getNumUnits() > 1)
 						{

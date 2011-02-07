@@ -36,6 +36,7 @@ iKiev = con.iKiev
 iHungary = con.iHungary
 iGermany = con.iGermany
 iPoland = con.iPoland
+iLithuania = con.iLithuania
 iMoscow = con.iMoscow
 iGenoa = con.iGenoa
 iEngland = con.iEngland
@@ -67,6 +68,7 @@ pKiev = gc.getPlayer(iKiev)
 pHungary = gc.getPlayer(iHungary)
 pGermany = gc.getPlayer(iGermany)
 pPoland = gc.getPlayer(iPoland)
+pLithuania = gc.getPlayer(iLithuania)
 pMoscow = gc.getPlayer(iMoscow)
 pGenoa = gc.getPlayer(iGenoa)
 pEngland = gc.getPlayer(iEngland)
@@ -94,6 +96,7 @@ teamKiev = gc.getTeam(pKiev.getTeam())
 teamHungary = gc.getTeam(pHungary.getTeam())
 teamGermany = gc.getTeam(pGermany.getTeam())
 teamPoland = gc.getTeam(pPoland.getTeam())
+teamLithuania = gc.getTeam(pLithuania.getTeam())
 teamMoscow = gc.getTeam(pMoscow.getTeam())
 teamGenoa = gc.getTeam(pGenoa.getTeam())
 teamEngland = gc.getTeam(pEngland.getTeam())
@@ -146,7 +149,6 @@ i1750AD = xml.i1750AD
 tBurgundyControl = (( 46, 40, 52, 53 ),(44, 33, 48,39))
 tByzantineControl = ( 68, 15, 99, 26 )
 #tFrankControl = ((35,31,41,35),(37,36,42,40),(44,33,48,42),(52,40,57,48),(49,31,57,37)) # Northeast Spain, Southwest France, Rhone, W Germany, Northern Italy
-tFrankControl = [ 41, 43, 6, 70, 72, 14, 15, 16, 17, 13, 12 ]
 tArabiaControl = ( (93, 0, 99, 17), (76, 0, 92, 4), (31, 0, 54, 21), (55, 0, 88, 9) ) # Levant and Allepo and Antioch, Egypt, Egypt and Libia, Algeria and Tunisia
 tBulgariaControl = ( 66, 23, 82, 32 )
 #tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
@@ -173,8 +175,37 @@ tAustrianControl = ( 58, 33, 70, 38 )
 tTurkishControl = (( 77, 14, 99, 26 ), ( 65, 14, 80, 29 ), (93, 0, 99, 17), (76, 0, 92, 4), ( 60, 33, 63, 41 ) ) # Constantinople Area and Anatolia, Balkans and Peloponnesian, Levant, Egypt, Vienna
 tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ),(59, 43, 90, 55) ) # Sweden, Finland/Estland and east Germany through Central Russia
 
+# ------------------- NEW UHV CONDITIONS
+tFrankControl = [ 41, 43, 6, 70, 72, 14, 15, 16, 17, 13, 12 ] # Update this with the Province keys
+tBurgundyOutrank = [ iFrankia, iEngland, iGermany ]
+
+
 class Victory:
 
+        def __init__(self ):
+                self.switchConditionsPerCiv = { iByzantium : self.checkByzantium,
+                                                iFrankia : self.checkFrankia,
+                                                iArabia : self.checkArabia,
+                                                iBulgaria : self.checkBulgaria,
+                                                iCordoba : self.checkCordoba,
+                                                iNorse : self.checkNorse,
+                                                iVenecia : self.checkVenecia,
+                                                iBurgundy : self.checkBurgundy,
+                                                iGermany : self.checkGermany,
+                                                iKiev : self.checkKiev,
+                                                iHungary : self.checkHungary,
+                                                iSpain : self.checkSpain,
+                                                iPoland : self.checkPoland,
+                                                iGenoa : self.checkGenoa,
+                                                iEngland : self.checkEngland,
+                                                iPortugal : self.checkPortugal,
+                                                iLithuania : self.checkLithuania,
+                                                iAustria : self.checkAustria,
+                                                iTurkey : self.checkTurkey,
+                                                iMoscow : self.checkMoscow,
+                                                iSweden : self.checkSweden,
+                                                iDutch : self.checkDutch,
+                                                }
      
 ##################################################
 ### Secure storage & retrieval of script data ###
@@ -353,6 +384,10 @@ class Victory:
         def checkPlayerTurn(self, iGameTurn, iPlayer):
 		# 3Miro: pretty much everything here is written by me, the victory check at the end is Rhye's, but the rest is mine
 		# Sedna: Made Burgundy and Frankis check that gc.doesOwnCities == 11 (previously just checked true, which would be satisfied with no cities)
+                pPlayer = gc.getPlayer(iPlayer)
+                if ( iPlayer < iPope and pPlayer.isAlive() ): # don't count the Pope
+                        self.switchConditionsPerCiv[iPlayer](iGameTurn)
+                        
                 if ( iPlayer == iBurgundy and pBurgundy.isAlive() ):
                         if ( iGameTurn == xml.i1200AD and self.getGoal(iBurgundy, 0 ) == -1 ):
                                 iBurgundyRhine = gc.doesOwnCities( iBurgundy, tBurgundyControl[0][0], tBurgundyControl[0][1], tBurgundyControl[0][2], tBurgundyControl[0][3] )
@@ -1170,3 +1205,170 @@ class Victory:
                         return True
                 else:
                         return False
+
+        def checkByzantium( self, iGameTurn ):
+                if ( iGameTurn == xml.i1025AD and pByzantium.getUHV( 0 ) == -1 ):
+                        if ( gc.isLargestCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.isTopCultureCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iByzantium ):
+                                pByzantium.setUHV( 0, 1 )
+                        else:
+                                pByzantium.setUHV( 0, 0 )
+                
+                # 3Miro: Control Asia Minor and Greece in xml.i1282AD
+                
+                if ( iGameTurn == xml.i1453AD and pByzantium.getUHV( 2 ) == -1 ):
+                        iGold = pByzantium.getGold()
+                        bMost = True
+                        for iCiv in range( iNumPlayers ):
+                                if ( iCiv != iByzantium and gc.getPlayer( iCiv ).isAlive() ):
+                                        if (gc.getPlayer(iCiv).getGold() > iGold):
+                                                bMost = False
+                        if ( bMost ):
+                                self.setGoal( iByzantium, 2, 1 )
+                        else:
+                                self.setGoal( iByzantium, 2, 0 )
+                
+        def checkFrankia( self, iGameTurn ):
+                if ( iGameTurn <= xml.i840AD and pFrankia.getUHV(0) == -1 ):
+                        bCharlemagneEmpire = True
+                        for iProv in tFrankControl:
+                                iHave = pFrankia.getProvinceCurrentState( iProv )
+                                if ( iHave < con.iProvinceConquer ):
+                                        bCharlemagneEmpire = False
+                        if ( bCharlemagneEmpire ):
+                                pFrankia.setUHV( 0, 1 )
+                        elif ( iGameTurn == xml.i840AD ):
+                                pFrankia.setUHV( 0, 0 )
+                                
+                if (iGameTurn == xml.i1291AD and self.getGoal(iFrankia, 1) == -1 ):
+                        pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+                        if ( pJPlot.isCity()):
+                                if ( pJPlot.getPlotCity().getOwner() == iFrankia ):
+                                        pFrankia.setUHV( 1, 1 )
+                                else:
+                                        pFrankia.setUHV( 1, 0 )
+                        else:
+                                pFrankia.setUHV( 1, 0 )
+                                
+                if ( pFrankia.getUHV( 2 ) == -1 ):
+                        if ( pFrankia.getNumColonies() > 5 ):
+                                pFrankia.setUHV( 2, 1 )
+                
+        def checkArabia( self, iGameTurn ):
+                # conquest by i955AD Egypt to Asia Minor UHV 0
+                # conquest of Oran to Asia Minor (including defeat the Crusaders) i1291AD UHV 1
+                if ( pArabia.getUHV( 2 ) == -1 ):
+                        iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
+                        if ( iPerc >= 25 ):
+                                pArabia.setUHV( 2, 1 )
+                
+        def checkBulgaria( self, iGameTurn ):
+                pass
+                
+        def checkCordoba( self, iGameTurn ):
+                # largest city 961AD
+                # wonder UHV 1309AD
+                # Islamize Iberia: 1492AD
+                pass
+                
+        def checkNorse( self, iGameTurn ):
+                # Exploration UHV 1009AD
+                # Settle/Conquer by 1061AD
+                pass
+                
+        def checkVenecia( self, iGameTurn ):
+                # conquer dalmatian coast by 1004AD (Arsenal) or (1320 second Arsenal, largest Navy?)
+                # conquer Constantinople by 1204AD
+                # one colony project
+                pass
+                
+        def checkBurgundy( self, iGameTurn ):
+                if ( iGameTurn == xml.i1200AD and pBurgundy.getUHV(0) == -1 ):
+                        iBurgundyRhine = gc.doesOwnCities( iBurgundy, tBurgundyControl[0][0], tBurgundyControl[0][1], tBurgundyControl[0][2], tBurgundyControl[0][3] )
+                        iBurgundyRhone = gc.doesOwnCities( iBurgundy, tBurgundyControl[1][0], tBurgundyControl[1][1], tBurgundyControl[1][2], tBurgundyControl[1][3] )
+                        if (iBurgundyRhine == 11 and iBurgundyRhone == 11):
+                                pBurgundy.setUHV( 0, 1 )
+                        else:
+                                pBurgundy.setUHV( 0, 0 )
+                        
+                iCulture =pBurgundy.getUHVCounter(1) + pBurgundy.countCultureProduced() # 3Miro: testing, move it below later
+                pBurgundy.setUHVCounter(1, iCulture)
+                if ( iGameTurn <= xml.i1336AD and pBurgundy.getUHV(1) == -1 ):
+                        if ( iCulture > 10000 ):
+                                pBurgundy.setUHV( 1, 1 )
+                        else:
+                                if ( iGameTurn == xml.i1336AD ):
+                                        pBurgundy.setUHV( 1, 0 )
+                
+                if ( iGameTurn == xml.i1473AD and pBurgundy.getUHV(2) == -1 ):
+                        iBurgundyRank = gc.getGame().getTeamRank(iBurgundy)
+                        bIsOnTop = True
+                        for iTestPlayer in tBurgundyOutrank:
+                                if ( gc.getGame().getTeamRank(iTestPlayer) > iBurgundyRank ):
+                                        bIsOnTop = False
+                                        break
+                        if ( bIsOnTop ):
+                                pBurgundy.setUHV( 2, 1 )
+                        else:
+                                pBurgundy.setUHV( 2, 0 )
+                
+        def checkGermany( self, iGameTurn ):
+                # Have most Catholic FP in 1077 (Walk to Canossa)
+                # Have vassals (Hapsburg)
+                # Start the reformation
+                pass
+                
+        def checkKiev( self, iGameTurn ):
+                # Food
+                # Territory Moldova to Kuban
+                # Survive the Mongols
+                pass
+                
+        def checkHungary( self, iGameTurn ):
+                pass
+                
+        def checkSpain( self, iGameTurn ):
+                # reconquista (no muslims in Iberia)
+                # many colonies
+                # purge protestants
+                pass
+                
+        def checkPoland( self, iGameTurn ):
+                # dont lose cities until or conquer Russia? 1772 alt. Vassalize Russia, Germany or Austrie
+                pass
+                
+        def checkGenoa( self, iGameTurn ):
+                pass
+                
+        def checkEngland( self, iGameTurn ):
+                # 100 years war, conquer France
+                # Colonies
+                # Industrial revolution
+                pass
+                
+        def checkPortugal( self, iGameTurn ):
+                # be the first to Build a colonial project
+                pass
+                
+        def checkLithuania( self, iGameTurn ):
+                # be the first to Build a colonial project
+                pass
+                
+        def checkAustria( self, iGameTurn ):
+                pass
+                
+        def checkTurkey( self, iGameTurn ):
+                # conquer the Balkans (1453), Middle East (1517) and Austria (1683)
+                pass
+                
+        def checkMoscow( self, iGameTurn ):
+                # Free eastern Europe from the Mongols
+                # Get huge land (20%)
+                # get Warm water
+                pass
+                
+        def checkSweden( self, iGameTurn ):
+                pass
+                
+        def checkDutch( self, iGameTurn ):
+                pass
+                

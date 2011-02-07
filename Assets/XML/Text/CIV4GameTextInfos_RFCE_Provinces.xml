@@ -16,7 +16,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_0</Tag>
-		<English>Province_0</English>
+		<English>Galicia</English>
 		<French>Province_0</French>
 		<German>Province_0</German>
 		<Italian>Province_0</Italian>
@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_1</Tag>
-		<English>Province_1</English>
+		<English>Castile</English>
 		<French>Province_1</French>
 		<German>Province_1</German>
 		<Italian>Province_1</Italian>
@@ -43,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_3</Tag>
-		<English>Province_3</English>
+		<English>Leon</English>
 		<French>Province_3</French>
 		<German>Province_3</German>
 		<Italian>Province_3</Italian>
@@ -52,7 +52,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_4</Tag>
-		<English>Province_4</English>
+		<English>Lusitania</English>
 		<French>Province_4</French>
 		<German>Province_4</German>
 		<Italian>Province_4</Italian>
@@ -70,7 +70,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_6</Tag>
-		<English>Province_6</English>
+		<English>Catalonia</English>
 		<French>Province_6</French>
 		<German>Province_6</German>
 		<Italian>Province_6</Italian>
@@ -79,7 +79,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_7</Tag>
-		<English>Province_7</English>
+		<English>Aragon</English>
 		<French>Province_7</French>
 		<German>Province_7</German>
 		<Italian>Province_7</Italian>
@@ -88,7 +88,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_8</Tag>
-		<English>Province_8</English>
+		<English>Valencia</English>
 		<French>Province_8</French>
 		<German>Province_8</German>
 		<Italian>Province_8</Italian>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_9</Tag>
-		<English>Province_9</English>
+		<English>Andalusia</English>
 		<French>Province_9</French>
 		<German>Province_9</German>
 		<Italian>Province_9</Italian>
@@ -106,7 +106,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_10</Tag>
-		<English>Province_10</English>
+		<English>Bretagne</English>
 		<French>Province_10</French>
 		<German>Province_10</German>
 		<Italian>Province_10</Italian>
@@ -115,7 +115,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_11</Tag>
-		<English>Province_11</English>
+		<English>Normandy</English>
 		<French>Province_11</French>
 		<German>Province_11</German>
 		<Italian>Province_11</Italian>
@@ -124,7 +124,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_12</Tag>
-		<English>Province_12</English>
+		<English>Aquitania</English>
 		<French>Province_12</French>
 		<German>Province_12</German>
 		<Italian>Province_12</Italian>
@@ -133,7 +133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_13</Tag>
-		<English>Province_13</English>
+		<English>Ile-de-France</English>
 		<French>Province_13</French>
 		<German>Province_13</German>
 		<Italian>Province_13</Italian>
@@ -142,7 +142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_14</Tag>
-		<English>Province_14</English>
+		<English>Provence</English>
 		<French>Province_14</French>
 		<German>Province_14</German>
 		<Italian>Province_14</Italian>
@@ -151,7 +151,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_15</Tag>
-		<English>Province_15</English>
+		<English>Burgundy</English>
 		<French>Province_15</French>
 		<German>Province_15</German>
 		<Italian>Province_15</Italian>
@@ -160,7 +160,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_16</Tag>
-		<English>Province_16</English>
+		<English>Orleans</English>
 		<French>Province_16</French>
 		<German>Province_16</German>
 		<Italian>Province_16</Italian>
@@ -169,7 +169,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_17</Tag>
-		<English>Province_17</English>
+		<English>Champagne</English>
 		<French>Province_17</French>
 		<German>Province_17</German>
 		<Italian>Province_17</Italian>
@@ -178,7 +178,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_18</Tag>
-		<English>Province_18</English>
+		<English>Flanders</English>
 		<French>Province_18</French>
 		<German>Province_18</German>
 		<Italian>Province_18</Italian>
@@ -187,7 +187,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_19</Tag>
-		<English>Province_19</English>
+		<English>Netherlands</English>
 		<French>Province_19</French>
 		<German>Province_19</German>
 		<Italian>Province_19</Italian>
@@ -196,7 +196,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_20</Tag>
-		<English>Province_20</English>
+		<English>London</English>
 		<French>Province_20</French>
 		<German>Province_20</German>
 		<Italian>Province_20</Italian>
@@ -205,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_21</Tag>
-		<English>Province_21</English>
+		<English>Wessex</English>
 		<French>Province_21</French>
 		<German>Province_21</German>
 		<Italian>Province_21</Italian>
@@ -214,7 +214,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_22</Tag>
-		<English>Province_22</English>
+		<English>Wales</English>
 		<French>Province_22</French>
 		<German>Province_22</German>
 		<Italian>Province_22</Italian>
@@ -223,7 +223,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_23</Tag>
-		<English>Province_23</English>
+		<English>Scotland</English>
 		<French>Province_23</French>
 		<German>Province_23</German>
 		<Italian>Province_23</Italian>
@@ -232,7 +232,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_24</Tag>
-		<English>Province_24</English>
+		<English>Ireland</English>
 		<French>Province_24</French>
 		<German>Province_24</German>
 		<Italian>Province_24</Italian>
@@ -241,7 +241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_25</Tag>
-		<English>Province_25</English>
+		<English>Midlands</English>
 		<French>Province_25</French>
 		<German>Province_25</German>
 		<Italian>Province_25</Italian>
@@ -250,7 +250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_26</Tag>
-		<English>Province_26</English>
+		<English>East Anglia</English>
 		<French>Province_26</French>
 		<German>Province_26</German>
 		<Italian>Province_26</Italian>
@@ -259,7 +259,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_27</Tag>
-		<English>Province_27</English>
+		<English>Northumbria</English>
 		<French>Province_27</French>
 		<German>Province_27</German>
 		<Italian>Province_27</Italian>
@@ -268,7 +268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_28</Tag>
-		<English>Province_28</English>
+		<English>Iceland</English>
 		<French>Province_28</French>
 		<German>Province_28</German>
 		<Italian>Province_28</Italian>
@@ -286,7 +286,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_30</Tag>
-		<English>Province_30</English>
+		<English>Denmark</English>
 		<French>Province_30</French>
 		<German>Province_30</German>
 		<Italian>Province_30</Italian>
@@ -295,7 +295,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_31</Tag>
-		<English>Province_31</English>
+		<English>Finland</English>
 		<French>Province_31</French>
 		<German>Province_31</German>
 		<Italian>Province_31</Italian>
@@ -304,7 +304,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_32</Tag>
-		<English>Province_32</English>
+		<English>Norway</English>
 		<French>Province_32</French>
 		<German>Province_32</German>
 		<Italian>Province_32</Italian>
@@ -313,7 +313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_33</Tag>
-		<English>Province_33</English>
+		<English>Vestfold</English>
 		<French>Province_33</French>
 		<German>Province_33</German>
 		<Italian>Province_33</Italian>
@@ -322,7 +322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_34</Tag>
-		<English>Province_34</English>
+		<English>Gotaland</English>
 		<French>Province_34</French>
 		<German>Province_34</German>
 		<Italian>Province_34</Italian>
@@ -331,7 +331,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_35</Tag>
-		<English>Province_35</English>
+		<English>Svealand</English>
 		<French>Province_35</French>
 		<German>Province_35</German>
 		<Italian>Province_35</Italian>
@@ -340,7 +340,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_36</Tag>
-		<English>Province_36</English>
+		<English>Norrland</English>
 		<French>Province_36</French>
 		<German>Province_36</German>
 		<Italian>Province_36</Italian>
@@ -349,7 +349,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_37</Tag>
-		<English>Province_37</English>
+		<English>Oppland</English>
 		<French>Province_37</French>
 		<German>Province_37</German>
 		<Italian>Province_37</Italian>
@@ -376,7 +376,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_40</Tag>
-		<English>Province_40</English>
+		<English>Swabia</English>
 		<French>Province_40</French>
 		<German>Province_40</German>
 		<Italian>Province_40</Italian>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_41</Tag>
-		<English>Province_41</English>
+		<English>Bavaria</English>
 		<French>Province_41</French>
 		<German>Province_41</German>
 		<Italian>Province_41</Italian>
@@ -394,7 +394,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_42</Tag>
-		<English>Province_42</English>
+		<English>Bohemia</English>
 		<French>Province_42</French>
 		<German>Province_42</German>
 		<Italian>Province_42</Italian>
@@ -403,7 +403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_43</Tag>
-		<English>Province_43</English>
+		<English>Saxony</English>
 		<French>Province_43</French>
 		<German>Province_43</German>
 		<Italian>Province_43</Italian>
@@ -412,7 +412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_44</Tag>
-		<English>Province_44</English>
+		<English>Lorraine</English>
 		<French>Province_44</French>
 		<German>Province_44</German>
 		<Italian>Province_44</Italian>
@@ -421,7 +421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_45</Tag>
-		<English>Province_45</English>
+		<English>Franconia</English>
 		<French>Province_45</French>
 		<German>Province_45</German>
 		<Italian>Province_45</Italian>
@@ -430,7 +430,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_46</Tag>
-		<English>Province_46</English>
+		<English>Brandenburg</English>
 		<French>Province_46</French>
 		<German>Province_46</German>
 		<Italian>Province_46</Italian>
@@ -439,7 +439,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_47</Tag>
-		<English>Province_47</English>
+		<English>Tyrol</English>
 		<French>Province_47</French>
 		<German>Province_47</German>
 		<Italian>Province_47</Italian>
@@ -466,7 +466,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_50</Tag>
-		<English>Province_50</English>
+		<English>Pomerania</English>
 		<French>Province_50</French>
 		<German>Province_50</German>
 		<Italian>Province_50</Italian>
@@ -475,7 +475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_51</Tag>
-		<English>Province_51</English>
+		<English>Galicia</English>
 		<French>Province_51</French>
 		<German>Province_51</German>
 		<Italian>Province_51</Italian>
@@ -484,7 +484,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_52</Tag>
-		<English>Province_52</English>
+		<English>Greater Poland</English>
 		<French>Province_52</French>
 		<German>Province_52</German>
 		<Italian>Province_52</Italian>
@@ -493,7 +493,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_53</Tag>
-		<English>Province_53</English>
+		<English>Masovia</English>
 		<French>Province_53</French>
 		<German>Province_53</German>
 		<Italian>Province_53</Italian>
@@ -502,7 +502,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_54</Tag>
-		<English>Province_54</English>
+		<English>Lesser Poland</English>
 		<French>Province_54</French>
 		<German>Province_54</German>
 		<Italian>Province_54</Italian>
@@ -511,7 +511,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_55</Tag>
-		<English>Province_55</English>
+		<English>Suvalkija</English>
 		<French>Province_55</French>
 		<German>Province_55</German>
 		<Italian>Province_55</Italian>
@@ -520,7 +520,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_56</Tag>
-		<English>Province_56</English>
+		<English>Lithuania</English>
 		<French>Province_56</French>
 		<German>Province_56</German>
 		<Italian>Province_56</Italian>
@@ -529,7 +529,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_57</Tag>
-		<English>Province_57</English>
+		<English>Livonia</English>
 		<French>Province_57</French>
 		<German>Province_57</German>
 		<Italian>Province_57</Italian>
@@ -538,7 +538,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_58</Tag>
-		<English>Province_58</English>
+		<English>Estonia</English>
 		<French>Province_58</French>
 		<German>Province_58</German>
 		<Italian>Province_58</Italian>
@@ -556,7 +556,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_60</Tag>
-		<English>Province_60</English>
+		<English>Carinthia</English>
 		<French>Province_60</French>
 		<German>Province_60</German>
 		<Italian>Province_60</Italian>
@@ -565,7 +565,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_61</Tag>
-		<English>Province_61</English>
+		<English>Austria</English>
 		<French>Province_61</French>
 		<German>Province_61</German>
 		<Italian>Province_61</Italian>
@@ -574,7 +574,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_62</Tag>
-		<English>Province_62</English>
+		<English>Slavonia</English>
 		<French>Province_62</French>
 		<German>Province_62</German>
 		<Italian>Province_62</Italian>
@@ -583,7 +583,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_63</Tag>
-		<English>Province_63</English>
+		<English>Salzburg</English>
 		<French>Province_63</French>
 		<German>Province_63</German>
 		<Italian>Province_63</Italian>
@@ -592,7 +592,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_64</Tag>
-		<English>Province_64</English>
+		<English>Transylvania</English>
 		<French>Province_64</French>
 		<German>Province_64</German>
 		<Italian>Province_64</Italian>
@@ -601,7 +601,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_65</Tag>
-		<English>Province_65</English>
+		<English>Hungary</English>
 		<French>Province_65</French>
 		<German>Province_65</German>
 		<Italian>Province_65</Italian>
@@ -610,7 +610,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_66</Tag>
-		<English>Province_66</English>
+		<English>Moravia</English>
 		<French>Province_66</French>
 		<German>Province_66</German>
 		<Italian>Province_66</Italian>
@@ -619,7 +619,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_67</Tag>
-		<English>Province_67</English>
+		<English>Silesia</English>
 		<French>Province_67</French>
 		<German>Province_67</German>
 		<Italian>Province_67</Italian>
@@ -628,7 +628,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_68</Tag>
-		<English>Province_68</English>
+		<English>Pannonia</English>
 		<French>Province_68</French>
 		<German>Province_68</German>
 		<Italian>Province_68</Italian>
@@ -637,7 +637,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_69</Tag>
-		<English>Province_69</English>
+		<English>Upper Hungary</English>
 		<French>Province_69</French>
 		<German>Province_69</German>
 		<Italian>Province_69</Italian>
@@ -646,7 +646,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_70</Tag>
-		<English>Province_70</English>
+		<English>Lombardy</English>
 		<French>Province_70</French>
 		<German>Province_70</German>
 		<Italian>Province_70</Italian>
@@ -655,7 +655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_71</Tag>
-		<English>Province_71</English>
+		<English>Verona</English>
 		<French>Province_71</French>
 		<German>Province_71</German>
 		<Italian>Province_71</Italian>
@@ -664,7 +664,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_72</Tag>
-		<English>Province_72</English>
+		<English>Tuscany</English>
 		<French>Province_72</French>
 		<German>Province_72</German>
 		<Italian>Province_72</Italian>
@@ -673,7 +673,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_73</Tag>
-		<English>Province_73</English>
+		<English>Latium</English>
 		<French>Province_73</French>
 		<German>Province_73</German>
 		<Italian>Province_73</Italian>
@@ -682,7 +682,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_74</Tag>
-		<English>Province_74</English>
+		<English>Calabria</English>
 		<French>Province_74</French>
 		<German>Province_74</German>
 		<Italian>Province_74</Italian>
@@ -691,7 +691,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_75</Tag>
-		<English>Province_75</English>
+		<English>Apulia</English>
 		<French>Province_75</French>
 		<German>Province_75</German>
 		<Italian>Province_75</Italian>
@@ -700,7 +700,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_76</Tag>
-		<English>Province_76</English>
+		<English>Illyria</English>
 		<French>Province_76</French>
 		<German>Province_76</German>
 		<Italian>Province_76</Italian>
@@ -709,7 +709,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_77</Tag>
-		<English>Province_77</English>
+		<English>Malta</English>
 		<French>Province_77</French>
 		<German>Province_77</German>
 		<Italian>Province_77</Italian>
@@ -718,7 +718,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_78</Tag>
-		<English>Province_78</English>
+		<English>Dalmatia</English>
 		<French>Province_78</French>
 		<German>Province_78</German>
 		<Italian>Province_78</Italian>
@@ -736,7 +736,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_80</Tag>
-		<English>Province_80</English>
+		<English>Moesia</English>
 		<French>Province_80</French>
 		<German>Province_80</German>
 		<Italian>Province_80</Italian>
@@ -745,7 +745,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_81</Tag>
-		<English>Province_81</English>
+		<English>Constantinople</English>
 		<French>Province_81</French>
 		<German>Province_81</German>
 		<Italian>Province_81</Italian>
@@ -754,7 +754,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_82</Tag>
-		<English>Province_82</English>
+		<English>Thrace</English>
 		<French>Province_82</French>
 		<German>Province_82</German>
 		<Italian>Province_82</Italian>
@@ -763,7 +763,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_83</Tag>
-		<English>Province_83</English>
+		<English>Thessaly</English>
 		<French>Province_83</French>
 		<German>Province_83</German>
 		<Italian>Province_83</Italian>
@@ -772,7 +772,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_84</Tag>
-		<English>Province_84</English>
+		<English>Macedonia</English>
 		<French>Province_84</French>
 		<German>Province_84</German>
 		<Italian>Province_84</Italian>
@@ -781,7 +781,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_85</Tag>
-		<English>Province_85</English>
+		<English>Serbia</English>
 		<French>Province_85</French>
 		<German>Province_85</German>
 		<Italian>Province_85</Italian>
@@ -790,7 +790,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_86</Tag>
-		<English>Province_86</English>
+		<English>Croatia</English>
 		<French>Province_86</French>
 		<German>Province_86</German>
 		<Italian>Province_86</Italian>
@@ -799,7 +799,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_87</Tag>
-		<English>Province_87</English>
+		<English>Epirus</English>
 		<French>Province_87</French>
 		<German>Province_87</German>
 		<Italian>Province_87</Italian>
@@ -808,7 +808,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_88</Tag>
-		<English>Province_88</English>
+		<English>Morea</English>
 		<French>Province_88</French>
 		<German>Province_88</German>
 		<Italian>Province_88</Italian>
@@ -817,7 +817,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_89</Tag>
-		<English>Province_89</English>
+		<English>Wallachia</English>
 		<French>Province_89</French>
 		<German>Province_89</German>
 		<Italian>Province_89</Italian>
@@ -826,7 +826,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_90</Tag>
-		<English>Province_90</English>
+		<English>Jerusalem</English>
 		<French>Province_90</French>
 		<German>Province_90</German>
 		<Italian>Province_90</Italian>
@@ -835,7 +835,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_91</Tag>
-		<English>Province_91</English>
+		<English>Paphlagonia</English>
 		<French>Province_91</French>
 		<German>Province_91</German>
 		<Italian>Province_91</Italian>
@@ -844,7 +844,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_92</Tag>
-		<English>Province_92</English>
+		<English>Opsikion</English>
 		<French>Province_92</French>
 		<German>Province_92</German>
 		<Italian>Province_92</Italian>
@@ -853,7 +853,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_93</Tag>
-		<English>Province_93</English>
+		<English>Thrakesion</English>
 		<French>Province_93</French>
 		<German>Province_93</German>
 		<Italian>Province_93</Italian>
@@ -862,7 +862,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_94</Tag>
-		<English>Province_94</English>
+		<English>Cilicia</English>
 		<French>Province_94</French>
 		<German>Province_94</German>
 		<Italian>Province_94</Italian>
@@ -871,7 +871,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_95</Tag>
-		<English>Province_95</English>
+		<English>Anatolikon</English>
 		<French>Province_95</French>
 		<German>Province_95</German>
 		<Italian>Province_95</Italian>
@@ -880,7 +880,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_96</Tag>
-		<English>Province_96</English>
+		<English>Armeniakon</English>
 		<French>Province_96</French>
 		<German>Province_96</German>
 		<Italian>Province_96</Italian>
@@ -889,7 +889,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_97</Tag>
-		<English>Province_97</English>
+		<English>Charsiadon</English>
 		<French>Province_97</French>
 		<German>Province_97</German>
 		<Italian>Province_97</Italian>
@@ -898,7 +898,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_98</Tag>
-		<English>Province_98</English>
+		<English>Colonea</English>
 		<French>Province_98</French>
 		<German>Province_98</German>
 		<Italian>Province_98</Italian>
@@ -907,7 +907,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_99</Tag>
-		<English>Province_99</English>
+		<English>Antiochia</English>
 		<French>Province_99</French>
 		<German>Province_99</German>
 		<Italian>Province_99</Italian>
@@ -916,7 +916,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_100</Tag>
-		<English>Province_100</English>
+		<English>Syria</English>
 		<French>Province_100</French>
 		<German>Province_100</German>
 		<Italian>Province_100</Italian>
@@ -925,7 +925,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_101</Tag>
-		<English>Province_101</English>
+		<English>Galilee</English>
 		<French>Province_101</French>
 		<German>Province_101</German>
 		<Italian>Province_101</Italian>
@@ -934,7 +934,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_102</Tag>
-		<English>Province_102</English>
+		<English>Arabia</English>
 		<French>Province_102</French>
 		<German>Province_102</German>
 		<Italian>Province_102</Italian>
@@ -943,7 +943,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_103</Tag>
-		<English>Province_103</English>
+		<English>Egypt</English>
 		<French>Province_103</French>
 		<German>Province_103</German>
 		<Italian>Province_103</Italian>
@@ -952,7 +952,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_104</Tag>
-		<English>Province_104</English>
+		<English>Benghazi</English>
 		<French>Province_104</French>
 		<German>Province_104</German>
 		<Italian>Province_104</Italian>
@@ -961,7 +961,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_105</Tag>
-		<English>Province_105</English>
+		<English>Lybia</English>
 		<French>Province_105</French>
 		<German>Province_105</German>
 		<Italian>Province_105</Italian>
@@ -970,7 +970,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_106</Tag>
-		<English>Province_106</English>
+		<English>Tunisia</English>
 		<French>Province_106</French>
 		<German>Province_106</German>
 		<Italian>Province_106</Italian>
@@ -979,7 +979,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_107</Tag>
-		<English>Province_107</English>
+		<English>Algiers</English>
 		<French>Province_107</French>
 		<German>Province_107</German>
 		<Italian>Province_107</Italian>
@@ -988,7 +988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_108</Tag>
-		<English>Province_108</English>
+		<English>Tetouan</English>
 		<French>Province_108</French>
 		<German>Province_108</German>
 		<Italian>Province_108</Italian>
@@ -997,7 +997,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_109</Tag>
-		<English>Province_109</English>
+		<English>Oran</English>
 		<French>Province_109</French>
 		<German>Province_109</German>
 		<Italian>Province_109</Italian>
@@ -1006,7 +1006,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_110</Tag>
-		<English>Province_110</English>
+		<English>Sicily</English>
 		<French>Province_110</French>
 		<German>Province_110</German>
 		<Italian>Province_110</Italian>
@@ -1015,7 +1015,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_111</Tag>
-		<English>Province_111</English>
+		<English>Crete</English>
 		<French>Province_111</French>
 		<German>Province_111</German>
 		<Italian>Province_111</Italian>
@@ -1024,7 +1024,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_112</Tag>
-		<English>Province_112</English>
+		<English>Cyprus</English>
 		<French>Province_112</French>
 		<German>Province_112</German>
 		<Italian>Province_112</Italian>
@@ -1033,7 +1033,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_113</Tag>
-		<English>Province_113</English>
+		<English>Rhodes</English>
 		<French>Province_113</French>
 		<German>Province_113</German>
 		<Italian>Province_113</Italian>
@@ -1042,7 +1042,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_114</Tag>
-		<English>Province_114</English>
+		<English>Corsica</English>
 		<French>Province_114</French>
 		<German>Province_114</German>
 		<Italian>Province_114</Italian>
@@ -1051,7 +1051,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_115</Tag>
-		<English>Province_115</English>
+		<English>Sardinia</English>
 		<French>Province_115</French>
 		<German>Province_115</German>
 		<Italian>Province_115</Italian>
@@ -1060,7 +1060,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_116</Tag>
-		<English>Province_116</English>
+		<English>Balears</English>
 		<French>Province_116</French>
 		<German>Province_116</German>
 		<Italian>Province_116</Italian>
@@ -1069,7 +1069,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_117</Tag>
-		<English>Province_117</English>
+		<English>Canaries</English>
 		<French>Province_117</French>
 		<German>Province_117</German>
 		<Italian>Province_117</Italian>
@@ -1078,7 +1078,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_118</Tag>
-		<English>Province_118</English>
+		<English>Azores</English>
 		<French>Province_118</French>
 		<German>Province_118</German>
 		<Italian>Province_118</Italian>
@@ -1087,7 +1087,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_119</Tag>
-		<English>Province_119</English>
+		<English>Morocco</English>
 		<French>Province_119</French>
 		<German>Province_119</German>
 		<Italian>Province_119</Italian>
@@ -1096,7 +1096,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_120</Tag>
-		<English>Province_120</English>
+		<English>Moldova</English>
 		<French>Province_120</French>
 		<German>Province_120</German>
 		<Italian>Province_120</Italian>
@@ -1105,7 +1105,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_121</Tag>
-		<English>Province_121</English>
+		<English>Crimea</English>
 		<French>Province_121</French>
 		<German>Province_121</German>
 		<Italian>Province_121</Italian>
@@ -1114,7 +1114,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_122</Tag>
-		<English>Province_122</English>
+		<English>Novgorod</English>
 		<French>Province_122</French>
 		<German>Province_122</German>
 		<Italian>Province_122</Italian>
@@ -1123,7 +1123,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_123</Tag>
-		<English>Province_123</English>
+		<English>Kuban</English>
 		<French>Province_123</French>
 		<German>Province_123</German>
 		<Italian>Province_123</Italian>
@@ -1132,7 +1132,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_124</Tag>
-		<English>Province_124</English>
+		<English>Zaporizhia</English>
 		<French>Province_124</French>
 		<German>Province_124</German>
 		<Italian>Province_124</Italian>
@@ -1141,7 +1141,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_125</Tag>
-		<English>Province_125</English>
+		<English>Rostov</English>
 		<French>Province_125</French>
 		<German>Province_125</German>
 		<Italian>Province_125</Italian>
@@ -1150,7 +1150,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_126</Tag>
-		<English>Province_126</English>
+		<English>Moscow</English>
 		<French>Province_126</French>
 		<German>Province_126</German>
 		<Italian>Province_126</Italian>
@@ -1159,7 +1159,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_127</Tag>
-		<English>Province_127</English>
+		<English>Vologda</English>
 		<French>Province_127</French>
 		<German>Province_127</German>
 		<Italian>Province_127</Italian>
@@ -1168,7 +1168,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_128</Tag>
-		<English>Province_128</English>
+		<English>Smolensk</English>
 		<French>Province_128</French>
 		<German>Province_128</German>
 		<Italian>Province_128</Italian>
@@ -1177,7 +1177,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_129</Tag>
-		<English>Province_129</English>
+		<English>Polotsk</English>
 		<French>Province_129</French>
 		<German>Province_129</German>
 		<Italian>Province_129</Italian>
@@ -1186,7 +1186,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_130</Tag>
-		<English>Province_130</English>
+		<English>Murom</English>
 		<French>Province_130</French>
 		<German>Province_130</German>
 		<Italian>Province_130</Italian>
@@ -1195,7 +1195,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_131</Tag>
-		<English>Province_131</English>
+		<English>Chernigov</English>
 		<French>Province_131</French>
 		<German>Province_131</German>
 		<Italian>Province_131</Italian>
@@ -1204,7 +1204,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_132</Tag>
-		<English>Province_132</English>
+		<English>Pereyaslavl</English>
 		<French>Province_132</French>
 		<German>Province_132</German>
 		<Italian>Province_132</Italian>
@@ -1213,7 +1213,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_133</Tag>
-		<English>Province_133</English>
+		<English>Sloboda</English>
 		<French>Province_133</French>
 		<German>Province_133</German>
 		<Italian>Province_133</Italian>
@@ -1222,7 +1222,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_134</Tag>
-		<English>Province_134</English>
+		<English>Donets</English>
 		<French>Province_134</French>
 		<German>Province_134</German>
 		<Italian>Province_134</Italian>
@@ -1231,7 +1231,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_135</Tag>
-		<English>Province_135</English>
+		<English>Kiev</English>
 		<French>Province_135</French>
 		<German>Province_135</German>
 		<Italian>Province_135</Italian>
@@ -1240,7 +1240,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_136</Tag>
-		<English>Province_136</English>
+		<English>Podolia</English>
 		<French>Province_136</French>
 		<German>Province_136</German>
 		<Italian>Province_136</Italian>
@@ -1249,7 +1249,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_137</Tag>
-		<English>Province_137</English>
+		<English>White Rus</English>
 		<French>Province_137</French>
 		<German>Province_137</German>
 		<Italian>Province_137</Italian>
@@ -1258,7 +1258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_138</Tag>
-		<English>Province_138</English>
+		<English>Brest</English>
 		<French>Province_138</French>
 		<German>Province_138</German>
 		<Italian>Province_138</Italian>
@@ -1267,7 +1267,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_139</Tag>
-		<English>Province_139</English>
+		<English>Simbirsk</English>
 		<French>Province_139</French>
 		<German>Province_139</German>
 		<Italian>Province_139</Italian>
@@ -1276,7 +1276,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_140</Tag>
-		<English>Province_140</English>
+		<English>Nizhny Novgorod</English>
 		<French>Province_140</French>
 		<German>Province_140</German>
 		<Italian>Province_140</Italian>
@@ -1285,7 +1285,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_141</Tag>
-		<English>Province_141</English>
+		<English>Karelia</English>
 		<French>Province_141</French>
 		<German>Province_141</German>
 		<Italian>Province_141</Italian>
@@ -1294,7 +1294,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_142</Tag>
-		<English>Province_142</English>
+		<English>Volhynia</English>
 		<French>Province_142</French>
 		<German>Province_142</German>
 		<Italian>Province_142</Italian>
@@ -1303,7 +1303,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_143</Tag>
-		<English>Province_143</English>
+		<English>Bosnia</English>
 		<French>Province_143</French>
 		<German>Province_143</German>
 		<Italian>Province_143</Italian>
@@ -1312,7 +1312,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_144</Tag>
-		<English>Province_144</English>
+		<English>Thessaloniki</English>
 		<French>Province_144</French>
 		<German>Province_144</German>
 		<Italian>Province_144</Italian>
@@ -1321,7 +1321,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_145</Tag>
-		<English>Province_145</English>
+		<English>Marrakesh</English>
 		<French>Province_145</French>
 		<German>Province_145</German>
 		<Italian>Province_145</Italian>

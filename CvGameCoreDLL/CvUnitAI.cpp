@@ -97,7 +97,6 @@ bool CvUnitAI::AI_update()
 
 	// 3MiroAI: decide how the AI would do with a prosecutor
 	//GC.getGameINLINE().logMsg("   Unit AI "); 
-	//GC.getGameINLINE().logMsg("   Start Prosecutions ");
 	if ( getUnitType() == UNIT_PROSECUTOR ){
 		//GC.getGameINLINE().logMsg("   PROSECUTOR ");
 		//if ( GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)24) ){
@@ -158,13 +157,11 @@ bool CvUnitAI::AI_update()
 			return false;
 		};
 	};
-	//GC.getGameINLINE().logMsg("   End Prosecutions ");
 	// 3MiroAI: end of the prosecutions
 
 
 
 
-	//GC.getGameINLINE().logMsg("   AI_Update() Domain Land start");
 	if (getDomainType() == DOMAIN_LAND)
 	{
 		if (plot()->isWater() && !canMoveAllTerrain())
@@ -186,7 +183,6 @@ bool CvUnitAI::AI_update()
 			}
 		}
 	}
-	//GC.getGameINLINE().logMsg("   AI_Update() Domain Land end");
 
 	if (AI_afterAttack())
 	{
@@ -312,12 +308,9 @@ bool CvUnitAI::AI_update()
 			//if (isBarbarian() || (GET_PLAYER(getOwnerINLINE()).isMinorCiv() && getOwnerINLINE() != INDEPENDENT && getOwnerINLINE() != INDEPENDENT2))
 			//if (isBarbarian() || (GET_PLAYER(getOwnerINLINE()).isMinorCiv() && !isIndep( getOwnerINLINE() )  ))
 			// 3Miro: there are no minor civs that are not indeps (i.e. CELCIA)
-			//GC.getGameINLINE().logMsg("   AI_Update() Barbs start");
 			if ( isBarbarian() )
 			{
-				//GC.getGameINLINE().logMsg("   AI_Update() Barbs Here 1");
 				AI_barbAttackMove();
-				//GC.getGameINLINE().logMsg("   AI_Update() Barbs Here 2");
 			}
 			else
 			{
@@ -325,14 +318,11 @@ bool CvUnitAI::AI_update()
 				/*if ( getX() == 52 && getY() == 42 ){
 					//GC.getGameINLINE().logMsg(" Unit at coordinates: %d",getUnitType() );
 				};*/
-				//GC.getGameINLINE().logMsg("   AI_Update() Barbs Here 3");
 				AI_attackMove();
-				//GC.getGameINLINE().logMsg("   AI_Update() Barbs Here 4");
 				/*if ( getX() == 52 && getY() == 42 ){
 					//GC.getGameINLINE().logMsg(" Unit at coordinates after attack: ",getUnitType() );
 				};*/
 			}
-			//GC.getGameINLINE().logMsg("   AI_Update() Barbs end ");
 			break;
 
 		case UNITAI_ATTACK_CITY:
@@ -1941,10 +1931,8 @@ void CvUnitAI::AI_barbAttackMove()
 void CvUnitAI::AI_attackMove()
 {
 	PROFILE_FUNC();
-	//GC.getGameINLINE().logMsg(" AI_UNIT_ATTACK %d %d",getX(),getY() ); // 3Miro
 	bool bDanger = (GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 3) > 0);
 	{
-		//GC.getGameINLINE().logMsg(" AI_UNIT_ATTACK In"); // 3Miro
 		PROFILE("CvUnitAI::AI_attackMove() 1");
 
 		if (AI_guardCity(true))
@@ -1981,7 +1969,7 @@ void CvUnitAI::AI_attackMove()
 		}
 
 		//if ( getX() == 52 && getY() == 42 ){
-			//GC.getGameINLINE().logMsg(" before the first city attack ");
+		//	GC.getGameINLINE().logMsg(" before the first city attack ");
 		//};
 		//join any city attacks in progress
 		if (plot()->getOwnerINLINE() != getOwnerINLINE())
@@ -1992,7 +1980,7 @@ void CvUnitAI::AI_attackMove()
 			}
 		}
 		//if ( getX() == 52 && getY() == 42 ){
-			//GC.getGameINLINE().logMsg(" after the first city attack ");
+		//	GC.getGameINLINE().logMsg(" after the first city attack ");
 		//};
 		
 		AreaAITypes eAreaAIType = area()->getAreaAIType(getTeam());
@@ -2010,20 +1998,17 @@ void CvUnitAI::AI_attackMove()
             }
         }
 		//if ( getX() == 52 && getY() == 42 ){
-			//GC.getGameINLINE().logMsg(" here 1 ");
+		//	GC.getGameINLINE().logMsg(" here 1 ");
 		//};
 		
 		if (bDanger)
 		{
-			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 1.1 ");
-			//};
 			if (AI_cityAttack(1, 55))
 			{
 				return;
 			}
 			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.1 ");
+			//	GC.getGameINLINE().logMsg(" here 2.1 ");
 			//};
 
 			if (AI_anyAttack(1, 65))
@@ -2031,7 +2016,7 @@ void CvUnitAI::AI_attackMove()
 				return;
 			}
 			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.2 ");
+			//	GC.getGameINLINE().logMsg(" here 2.2 ");
 			//};
 
 			if (collateralDamage() > 0)
@@ -2042,7 +2027,7 @@ void CvUnitAI::AI_attackMove()
 				}
 			}
 			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.3 ");
+			//	GC.getGameINLINE().logMsg(" here 2.3 ");
 			//};
 		}
 
@@ -2083,7 +2068,7 @@ void CvUnitAI::AI_attackMove()
 				return;
 			}
 			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.4 ");
+			//	GC.getGameINLINE().logMsg(" here 2.4 ");
 			//};
 
 			if (AI_cityAttack(1, 35))
@@ -2091,7 +2076,7 @@ void CvUnitAI::AI_attackMove()
 				return;
 			}
 			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.5 ");
+			//	GC.getGameINLINE().logMsg(" here 2.5 ");
 			//};
 
 			if (AI_anyAttack(1, 45))
@@ -2099,7 +2084,7 @@ void CvUnitAI::AI_attackMove()
 				return;
 			}
 			//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.6 ");
+			//	GC.getGameINLINE().logMsg(" here 2.6 ");
 			//};
 
 			if (AI_pillageRange(3, 20))
@@ -2118,7 +2103,7 @@ void CvUnitAI::AI_attackMove()
 			return;
 		}
 		//if ( getX() == 52 && getY() == 42 ){
-				//GC.getGameINLINE().logMsg(" here 2.7 ");
+		//		GC.getGameINLINE().logMsg(" here 2.7 ");
 		//};
 
 		if (AI_anyAttack(1, 70))
@@ -2127,7 +2112,7 @@ void CvUnitAI::AI_attackMove()
 		}
 	}
 		//if ( getX() == 52 && getY() == 42 ){
-			//GC.getGameINLINE().logMsg(" here 2 ");
+		//	GC.getGameINLINE().logMsg(" here 2 ");
 		//};
 
 	{
@@ -2202,7 +2187,6 @@ void CvUnitAI::AI_attackMove()
 				}
 			}*/
 			// 3Miro: more indy stuff
-			//GC.getGameINLINE().logMsg(" AI_Attack Move Here 11 "); // 3Miro
 			if ( INDEP_START > -1 ){
 				int i;
 				for ( i=INDEP_START; i<=INDEP_END; i++ ){
@@ -2213,7 +2197,6 @@ void CvUnitAI::AI_attackMove()
 					};
 				};
 			};
-			//GC.getGameINLINE().logMsg(" AI_Attack Move Here 12 "); // 3Miro
 			/*if (area()->getCitiesPerPlayer((PlayerTypes)INDEPENDENT) > 0)
 			{
 				if (AI_targetMinorCity(INDEPENDENT))
@@ -11459,7 +11442,6 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 
 	FAssert(canMove());
 
-	//GC.getGameINLINE().logMsg(" AI_cityAttack Here 1 "); // 3Miro
 	if (bFollow)
 	{
 		iSearchRange = 1;
@@ -11468,7 +11450,6 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 	{
 		iSearchRange = AI_searchRange(iRange);
 	}
-	//GC.getGameINLINE().logMsg(" AI_cityAttack Here 2 "); // 3Miro
 
 	iBestValue = 0;
 	pBestPlot = NULL;
@@ -11477,7 +11458,6 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 	{
 		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
 		{
-			//GC.getGameINLINE().logMsg(" AI_cityAttack Here 3  %d  %d ",iDX,iDY); // 3Miro
 			pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
 
 			if (pLoopPlot != NULL)
@@ -11492,37 +11472,22 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 							{
 								iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
 								// 3MiroAI: don't attack Barb and Indy cities outside the War Map
-								//GC.getGameINLINE().logMsg(" AI_cityAttack Here 4 "); // 3Miro
 								if ( pLoopPlot ->isCity() ){
-									//GC.getGameINLINE().logMsg(" AI_cityAttack Here 5 "); // 3Miro
 									if ( getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
-										//GC.getGameINLINE().logMsg(" AI_cityAttack Here 6 "); // 3Miro
 										if ( warsMaps[ getOwnerINLINE() * SETTLER_OFFSET + (EARTH_Y - pLoopPlot ->getY() - 1) * EARTH_X + pLoopPlot ->getX() ] == 0 ){
-											//GC.getGameINLINE().logMsg(" AI_cityAttack Here 7 "); // 3Miro
 											iValue = 0;
-										};
-									};
-									// 3MiroAI: Phyco AI, this should make AI Turkey tink it has 90 percent odds of capturing AI Constantinople, see also getDefenderCombatValues in CvUnit
-									if ( ( psychoAI_player == getOwnerINLINE() ) && ( pLoopPlot ->getX() == psychoAI_x ) && ( pLoopPlot ->getY() == psychoAI_y ) ){
-										//if ( (pLoopPlot ->getPlotCity() ->getOwner() != getOwenerINLINE() ) && ( !GET_PLAYER(pLoopPlot ->getPlotCity() ->getOwner() ).isHuman() ) ){
-										if ( !( (int)pLoopPlot ->getPlotCity() ->getOwner() == (int) this->getOwnerINLINE() ) && ( !GET_PLAYER(pLoopPlot ->getPlotCity() ->getOwner() ).isHuman() ) ){
-											iValue = 90;
-											//GC.getGameINLINE().logMsg(" Psycho AI Attack "); // 3Miro
 										};
 									};
 								};
 
 
-								//GC.getGameINLINE().logMsg(" AI_cityAttack Here 8 "); // 3Miro
 								if (iValue >= AI_finalOddsThreshold(pLoopPlot, iOddsThreshold))
 								{
 									if (iValue > iBestValue)
 									{
-										//GC.getGameINLINE().logMsg(" AI_cityAttack Here 9 "); // 3Miro
 										iBestValue = iValue;
 										pBestPlot = ((bFollow) ? pLoopPlot : getPathEndTurnPlot());
 										FAssert(!atPlot(pBestPlot));
-										//GC.getGameINLINE().logMsg(" AI_cityAttack Here 10 "); // 3Miro
 									}
 								}
 							}
@@ -11533,17 +11498,12 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 		}
 	}
 
-	//GC.getGameINLINE().logMsg(" AI_cityAttack Here 11 "); // 3Miro
 	if (pBestPlot != NULL)
 	{
 		FAssert(!atPlot(pBestPlot));
-		//GC.getGameINLINE().logMsg(" AI_cityAttack Here 11.1 "); // 3Miro
-		//GC.getGameINLINE().logMsg(" AI_cityAttack Here 11.2  %d  %d ",pBestPlot->getX_INLINE(),pBestPlot->getY_INLINE()); // 3Miro
 		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), ((bFollow) ? MOVE_DIRECT_ATTACK : 0));
-		//GC.getGameINLINE().logMsg(" AI_cityAttack Here 11.3 "); // 3Miro
 		return true;
 	}
-	//GC.getGameINLINE().logMsg(" AI_cityAttack Here 12 "); // 3Miro
 
 	return false;
 }

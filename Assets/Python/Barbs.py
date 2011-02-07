@@ -210,7 +210,7 @@ class Barbs:
 				self.spawnUnits( iBarbarian, (39,62),(44,66), xml.iHighlander, 1 + iHandicap*2, iGameTurn,13,0,utils.outerInvasion,1)
 			if (iGameTurn >= xml.i1320AD and iGameTurn < xml.i1500AD):
 				self.spawnUnits( iBarbarian, (39,64),(44,67), xml.iHighlander, 1 + iHandicap*2, iGameTurn,19,0,utils.outerInvasion,1)
-			if (iGameTurn>=con.i1060AD and iGameTurn < xml.i1160AD):
+			if (iGameTurn>=xml.i1060AD and iGameTurn < xml.i1160AD):
 				#Welsh
 				self.spawnUnits( iBarbarian, (37,55),(39,57), xml.iWelshLongbowman, 1 + iHandicap*2, iGameTurn,13,1,utils.outerInvasion,1)
 		else:

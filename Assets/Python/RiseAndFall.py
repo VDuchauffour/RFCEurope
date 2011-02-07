@@ -49,6 +49,7 @@ iMoscow = con.iMoscow
 iGenoa = con.iGenoa
 iEngland = con.iEngland
 iPortugal = con.iPortugal
+iLithuania = con.iLithuania
 iAustria = con.iAustria
 iTurkey = con.iTurkey
 iSweden = con.iSweden
@@ -82,6 +83,7 @@ pMoscow = gc.getPlayer(iMoscow)
 pGenoa = gc.getPlayer(iGenoa)
 pEngland = gc.getPlayer(iEngland)
 pPortugal = gc.getPlayer(iPortugal)
+pLithuania = gc.getPlayer(iLithuania)
 pAustria = gc.getPlayer(iAustria)
 pTurkey = gc.getPlayer(iTurkey)
 pSweden = gc.getPlayer(iSweden)
@@ -110,6 +112,7 @@ teamMoscow = gc.getTeam(pMoscow.getTeam())
 teamGenoa = gc.getTeam(pGenoa.getTeam())
 teamEngland = gc.getTeam(pEngland.getTeam())
 teamPortugal = gc.getTeam(pPortugal.getTeam())
+teamLithuania = gc.getTeam(pLithuania.getTeam())
 teamAustria = gc.getTeam(pAustria.getTeam())
 teamTurkey = gc.getTeam(pTurkey.getTeam())
 teamSweden = gc.getTeam(pSweden.getTeam())
@@ -2056,6 +2059,8 @@ class RiseAndFall:
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iPortugal ):
                         utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
+                if ( iCiv == iLithuania ):
+                        utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 4)
                 if ( iCiv == iAustria ):
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
                 if ( iCiv == iTurkey ):
@@ -2174,6 +2179,12 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
+                if (iCiv == iLithuania):
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 3)
+                        #utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
                 if (iCiv == iAustria):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
@@ -2336,6 +2347,10 @@ class RiseAndFall:
                 if ( pPortugal.isHuman() and tBirth[iPortugal] > 0 ):
                         utils.makeUnit(iSettler, iPortugal, tCapitals[iPortugal], 1)
                         utils.makeUnit(xml.iSwordsman, iPortugal, tCapitals[iPortugal], 1)
+                        
+                if ( pLithuania.isHuman() and tBirth[iLithuania] > 0 ):
+                        utils.makeUnit(iSettler, iLithuania, tCapitals[iLithuania], 1)
+                        utils.makeUnit(xml.iSwordsman, iLithuania, tCapitals[iLithuania], 1)
 
                 if ( pAustria.isHuman() and tBirth[iAustria] > 0 ):
                         utils.makeUnit(iSettler, iAustria, tCapitals[iAustria], 1)
@@ -2589,6 +2604,15 @@ class RiseAndFall:
                         teamPortugal.setHasTech( xml.iMapMaking, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iAristocracy, True, iCiv, False, False )
 
+                
+                if ( iCiv == iLithuania ):
+                        for iTech in range( xml.iFarriers + 1 ):
+                                teamLithuania.setHasTech( iTech, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
+                        #teamLithuania.setHasTech( xml.iChivalry, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iAristocracy, True, iCiv, False, False )
                         
                 if ( iCiv == iAustria ):
                         for iTech in range( xml.iFarriers + 1 ):
@@ -2687,6 +2711,11 @@ class RiseAndFall:
                                 teamPoland.meet( pGermany.getTeam(), True )
                         if ( pHungary.isAlive() and ( not teamPoland.isHasMet( pHungary.getTeam() ) ) ):
                                 teamPoland.meet( pHungary.getTeam(), True )
+                if ( iCiv == iLithuania):
+                        if ( pPoland.isAlive() and ( not teamLithuania.isHasMet( pPoland.getTeam() ) ) ):
+                                teamLithuania.meet( pPoland.getTeam(), True )
+                        if ( pKiev.isAlive() and ( not teamLithuania.isHasMet( pKiev.getTeam() ) ) ):
+                                teamLithuania.meet( pKiev.getTeam(), True )
                 if ( iCiv == iMoscow ):
                         if ( pByzantium.isAlive() and ( not teamMoscow.isHasMet( pByzantium.getTeam() ) ) ):
                                 teamMoscow.meet( pByzantium.getTeam(), True )
