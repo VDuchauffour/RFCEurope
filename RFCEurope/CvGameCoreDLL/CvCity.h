@@ -955,9 +955,6 @@ public:
 	// 3Miro: for Crusader purposes
 	int getVotingPower( ReligionTypes eReligion );
 
-	// 3MiroProvinces
-	int getProvince();
-
 protected:
 
 	// 3Miro: damage enemy stuff

@@ -17,52 +17,77 @@ lm1Array =      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 iMapMaxX = 100
 iMapMaxY = 73
 
+#### Chronological order
+# Byzantium   i500AD
+# France      i500AD
+# Arabia      i635AD
+# Bulgaria    i680AD
+# Cordoba     i711AD
+# Norse       i780AD
+# Venice      i810AD
+# Burgundy    i843AD
+# Germany     i858AD
+# Kiev        i880AD
+# Hungary     i895AD
+# Spain       i910AD
+# Poland      i966AD
+# Genoa       i1016AD
+# England     i1066AD
+# Portugal    i1139AD
+# Austria     i1282AD
+# Turkey      i1299AD
+# Moscow      i1380AD
+# Sweden      i1523AD
+# Dutch       i1581AD
+# Pope - keep him last
+
 # initialise player variables to player IDs from WBS (this is the only part of the XML that will stay here)
-iBurgundy = 0
-iByzantium = 1
-iFrankia = 2
-iArabia = 3
-iBulgaria = 4
-iCordoba = 5
-iSpain = 6
-iNorse = 7
-iVenecia = 8
+iByzantium = 0
+iFrankia = 1
+iArabia = 2
+iBulgaria = 3
+iCordoba = 4
+iNorse = 5
+iVenecia = 6
+iBurgundy = 7
+iGermany = 8
 iKiev = 9
 iHungary = 10
-iGermany = 11
+iSpain = 11
 iPoland = 12
-iMoscow = 13
-iGenoa = 14
-iEngland = 15
-iPortugal = 16
+iGenoa = 13
+iEngland = 14
+iPortugal = 15
+iLithuania = 16
 iAustria = 17
 iTurkey = 18
-iSweden = 19
-iDutch = 20
-iPope = 21
-iNumPlayers = 22
-iNumMajorPlayers = 22
-iNumActivePlayers = 22
-iIndependent = 22
-iIndependent2 = 23
-iIndependent3 = 24
-iIndependent4 = 25
-iNumTotalPlayers = 26
-iBarbarian = 26
-iNumTotalPlayersB = 27
+iMoscow = 19
+iSweden = 20
+iDutch = 21
+iPope = 22
+iNumPlayers = 23
+iNumMajorPlayers = 23
+iNumActivePlayers = 23
+iIndependent = 23
+iIndependent2 = 24
+iIndependent3 = 25
+iIndependent4 = 26
+iNumTotalPlayers = 27
+iBarbarian = 27
+iNumTotalPlayersB = 28
 
 iIndepStart = iIndependent # creates a block of independent civs
 iIndepEnd = iIndependent4
 
 #for Congresses and Victory
-lCivGroups = [[iByzantium,iBulgaria,iKiev,iMoscow],  		#Eastern
+lCivGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],  		#Eastern
 		[iBurgundy,iHungary,iGermany,iPoland,iAustria],	#Central
 		[iFrankia,iSpain,iEngland,iPortugal,iDutch],	#Atlantic
 		[iArabia,iCordoba,iTurkey],			#Islamic
 		[iGenoa,iVenecia, iPope],		 		#Italian
 		[iNorse,iSweden]] 				#Scandinavian
 
-lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iMoscow],  #Eastern
+lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],  #Eastern
 			[iBurgundy,iHungary,iGermany,iPoland,iAustria],  		#Central
 			[iFrankia,iSpain,iEngland,iPortugal,iDutch], 		#Atlantic
 			[iArabia,iCordoba,iTurkey],		#Islamic
@@ -70,7 +95,7 @@ lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iMoscow],  #Eastern
 			[iNorse,iSweden]]		#Norse
 
 lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iSpain, iCordoba, iNorse, iVenecia, iKiev, iHungary, \
-		   iGermany, iPoland, iMoscow, iGenoa, iEngland, iPortugal, iAustria, iTurkey, iSweden, iDutch, iPope, \
+		   iGermany, iPoland, iMoscow, iGenoa, iEngland, iPortugal, iLithuania, iAustria, iTurkey, iSweden, iDutch, iPope, \
                    iIndependent, iIndependent2, iBarbarian]
                    
 lCivBioNewWorld = []
@@ -100,25 +125,26 @@ iLime = 100
 
 #neighbours
 lNeighbours = [
-[iFrankia,iDutch,iGermany], #Burgundy
 [iBulgaria,iArabia], #Byzantium
 [iBurgundy,iEngland], #Frankia
 [iByzantium], 		#Arabia
 [iByzantium,iHungary,iKiev], #Bulgaria
 [iSpain,iPortugal], 	#Cordoba
-[iCordoba,iPortugal], 	#Spain
 [iSweden],  		#Norse
 [iGenoa,iGermany,iAustria,iHungary,iPope],  #Venecia
+[iFrankia,iDutch,iGermany], #Burgundy
+[iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary],  #Germany
 [iBulgaria,iMoscow,iPoland],  		#Kiev
 [iBulgaria,iVenecia,iPoland,iGermany,iAustria],  		#Hungary
-[iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary],  #Germany
+[iCordoba,iPortugal], 	#Spain
 [iGermany,iAustria,iHungary,iKiev,iMoscow],  			#Poland
-[iKiev,iPoland],  		#Moscow
 [iGermany,iVenecia,iBurgundy,iPope],  #Genoa
 [iFrankia,iDutch],  		#England
 [iSpain,iCordoba],  		#Portugal
+[iKiev,iPoland],  		#Lithuania
 [iGermany,iHungary,iPoland,iVenecia],  	#Austria
 [iByzantium,iArabia],  			#Turkey
+[iKiev,iPoland],  		#Moscow
 [iNorse],  				#Sweden
 [iGermany,iEngland,iBurgundy],   	#Dutch
 [iVenecia, iGenoa]			#Pope
@@ -126,55 +152,55 @@ lNeighbours = [
 
 #for stability hit on spawn
 lOlderNeighbours = [
-[iFrankia], #Burgundy
 [], #Byzantium
 [], #Frankia
 [iByzantium], #Arabia
 [iByzantium], #Bulgaria
 [], #Cordoba
-[iCordoba], #Spain
 [], #Norse
 [iCordoba], #Venecia
+[], #Burgundy
+[], #Germany
 [iBulgaria], #Kiev
 [iBulgaria], #Hungary
-[iHungary,iVenecia], #Germany
+[iCordoba], #Spain
 [iGermany,iKiev], #Poland
-[iKiev,iPoland], #Moscow
 [iVenecia,iGermany,iCordoba], #Genoa
 [iFrankia], #England
 [iSpain,iCordoba], #Portugal
+[iPoland], #Portugal
 [iGermany,iHungary,iVenecia,iGenoa], #Austria
 [iByzantium,iBulgaria,iCordoba,iArabia], #Turkey
+[iKiev,iPoland], #Moscow
 [iNorse,iPoland,iMoscow], #Sweden
 [iGermany,iFrankia],  #Dutch
 [] #Pope
 ]
 
-
-
 # civ birth dates
 tBirth = (
-86, #843AD Burgundy
-0,  #500AD Byzantium
-0,  #500AD Frankia
-33, #632AD Arabia
-45, #680AD Bulgaria
-53, #712AD Cordoba
-104, #720AD Spain => 1083 (161) => 909
-68, #770AD Norse
-75, #800AD Venecia
-91, #864AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
-98, #896AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
-88, # 843AD Germany
-123,#970AD Poland
-241,#1000AD Moscow => 1323
-140,# 140 normally 1020AD Genoa
-153,# 153 normally 1060AD England
-167,#1100AD Portugal
-187,#1160AD Austria
-233,#1300AD Turkey - 233 is normal time
-300,#1500AD Sweden
-340,#1580AD Dutch 340 is normal time
+xml.i500AD,  #500AD Byzantium
+xml.i500AD,  #500AD Frankia
+xml.i635AD, #632AD Arabia
+xml.i680AD, #680AD Bulgaria
+xml.i711AD, #712AD Cordoba
+xml.i780AD, #780AD Norse
+xml.i810AD, #800AD Venecia
+xml.i843AD, #843AD Burgundy
+xml.i858AD, # 843AD Germany
+xml.i880AD, #864AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
+xml.i895AD, #896AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
+xml.i910AD, #910AD Spain
+xml.i966AD, #966AD Poland
+xml.i1016AD,# 140 normally 1020AD Genoa
+xml.i1066AD,# 155 normally 1066AD England
+xml.i1139AD,#1100AD Portugal
+xml.i1236AD,#1236AD Lithuania
+xml.i1282AD,#1282AD Austria
+xml.i1299AD,#1299AD Turkey - 233 is normal time
+xml.i1380AD,#1000AD Moscow => 1323 (260)
+xml.i1523AD,#1523AD Sweden
+xml.i1581AD,#1580AD Dutch 340 is normal time
 0,	#Pope
 0,
 0,
@@ -185,79 +211,79 @@ tBirth = (
 
 
 tYear = ( # for Dawn of Man starting screen
-("844", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
-("632", "TXT_KEY_AD"),
+("635", "TXT_KEY_AD"),
 ("680", "TXT_KEY_AD"),
-("712", "TXT_KEY_AD"),
-("909", "TXT_KEY_AD"),
-("770", "TXT_KEY_AD"),
-("800", "TXT_KEY_AD"),
-("864", "TXT_KEY_AD"),
+("711", "TXT_KEY_AD"),
+("780", "TXT_KEY_AD"),
+("810", "TXT_KEY_AD"),
+("843", "TXT_KEY_AD"),
+("858", "TXT_KEY_AD"),
+("880", "TXT_KEY_AD"),
 ("895", "TXT_KEY_AD"),
-("852", "TXT_KEY_AD"),
-("970", "TXT_KEY_AD"),
-("1323", "TXT_KEY_AD"),
-("1020", "TXT_KEY_AD"),
-("1060", "TXT_KEY_AD"),
-("1100", "TXT_KEY_AD"),
-("1160", "TXT_KEY_AD"),
-("1300", "TXT_KEY_AD"),
-("1500", "TXT_KEY_AD"),
-("1580", "TXT_KEY_AD"),
+("910", "TXT_KEY_AD"),
+("966", "TXT_KEY_AD"),
+("1016", "TXT_KEY_AD"),
+("1066", "TXT_KEY_AD"),
+("1139", "TXT_KEY_AD"),
+("1236", "TXT_KEY_AD"),
+("1282", "TXT_KEY_AD"),
+("1299", "TXT_KEY_AD"),
+("1380", "TXT_KEY_AD"),
+("1523", "TXT_KEY_AD"),
+("1581", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD")
 )
 
-
 # starting locations coordinates
 tCapitals = (
-(47, 41), #tBurgundy
 (81, 25), #tConstantinople, Byzantium
 (44, 46), #tFrance
 (97, 13), #tDamascus, Arabia
 (77, 30), #tPreslav, Bulgaria
 (28, 28), #tCordoba
-(28, 37), #tLeon, Spain
-#(31, 33), #tMadrid, Spain
-#(28, 32), #tToledo, Spain
 (59, 57), #tNorse
-(57, 34), #tVenecia
+(56, 35), #tVenecia
+(47, 41), #tBurgundy
+(54, 46), #tGermany
 (86, 42), #tKiev
 (67, 37), #tHungary
-(54, 46), #tGermany
+(28, 37), #tLeon, Spain
 (65, 48), #tPoland
-(88, 56), #tMoscow
 (50, 34), #tGenoa
 (43, 53), #tLondon, England
 (22, 31), #tLisboa, Portugal
+(74, 53), #Lithuania
 (63, 39), #tAustria
 (79, 22), #tTurkey
+(88, 56), #tMoscow
 (67, 64), #tSweden
 (49, 52), #tDutch
 (56, 27)  #Rome
 ) 
 
 tStartingWorkers = (
-2, #tBurgundy
 0, #tByzantium
 0, #tFrance
 2, #tArabia
 2, #tBulgaria
 2, #tCordoba
-3, #tSpain
 2, #tNorse
 3, #tVenecia
+2, #tBurgundy
+3, #tGermany
 3, #tKiev
 3, #tHungary
-3, #tGermany
+3, #tSpain
 3, #tPoland
-4, #tMoscow
 3, #tGenoa
 3, #tEngland
 3, #tPortugal
+3, #tLithuania
 4, #tAustria
 4, #tTurkey
+4, #tMoscow
 4, #tSweden
 4, #tDutch
 0  #tRome
@@ -284,9 +310,9 @@ tReserveCapitals = (
 (), 
 (), 
 (), 
-(), #((57, 52), (56, 52), (58, 53)), #tAmsterdam
+(),
 (), 
-(), #((49, 42), (49, 44)) #tLisboa
+(),
 (),
 (),
 (),
@@ -295,25 +321,26 @@ tReserveCapitals = (
 )
 
 tNewCapitals = (  #for RiseAndFall
-((47, 41),(47, 41)), #tBurgundy -- Dijon
 ((81, 25), (81, 25)), #tConstantinople, Byzantium
 ((44, 46),(44, 46)), #tFrance -- Pairs
 ((85, 4), (84,3),(85,3)), #Arabia --> Alexandria (best Egyption city)
 ((77, 30),(77, 30)), #tPreslav, Bulgaria
 ((18, 14),(17, 14)), #tCordoba --> Marrakesh
-((28,32),(28,31),(28,33),(27,31)), #Spain --> Toledo (like Madrid)
 ((59, 57),(59, 57)), #tNorse
-((57, 34),(57, 34)), #tVenecia
+((56, 35),(56, 35)), #tVenecia
+((47, 41),(47, 41)), #tBurgundy -- Dijon
+((61, 49),(60, 48),(61,48),(62,48)), #tGermany --> Berlin
 ((86, 42),(86, 42)), #tKiev
 ((67, 37),(67, 37)), #tHungary
-((61, 49),(60, 48),(61,48),(62,48)), #tGermany --> Berlin
+((28,32),(28,31),(28,33),(27,31)), #Spain --> Toledo (like Madrid)
 ((65, 48),(65, 48)), #tPoland
-((88, 56),(88, 56)), #tMoscow
 ((50, 34),(50, 34)), #tGenoa
 ((43, 53),(43, 53)), #tLondon, England
 ((22, 31),(22, 31)), #tLisboa, Portugal
+((74, 53),(74, 53)), #tLisboa, Portugal
 ((63, 39),(63, 39)), #tAustria
 ((79, 22),(79, 22)), #tTurkey
+((88, 56),(88, 56)), #tMoscow
 ((67, 64),(67, 64)), #tSweden
 ((49, 52),(49, 52)), #tDutch
 ((56, 27),(56, 27))  #Rome
@@ -327,50 +354,52 @@ tNewCapitals = (  #for RiseAndFall
 #	Also Broader Area
 
 tCoreAreasTL = ( #Core Area is initial spawn location, and also important for stability
-(44,33),   #Burgundy
 (66,14),   #Byzantium
 (42,42),   #Franks
-(93,1),   #Arabs
+(93,1),    #Arabs
 (74,28),   #Bulgaria
 (25,18),   #Cordoba
-(25,34),   #Spain
 (54,56),   #Norse
 (56,33),   #Venice
+(44,33),   #Burgundy
+(52,40),   #Germany
 (80,37),   #Kiev
 (65,34),   #Hungary
-(52,40),   #Germany
+(25,34),   #Spain
 (64,44),   #Poland
-(80,52),   #Moscow
 (49,27),   #Genoa
 (38,48),   #England
 (21,29),   #Portugal
+(69,48),   #Lithuania
 (58,37),   #Austria
 (76,16),   #Turks
+(80,52),   #Moscow
 (60,59),   #Sweden
 (47,49),   #Netherlands
 (54,25)	   #Pope
 ) 
 
 tCoreAreasBR = (
-(48,42),   #Burgundy
 (84,26),   #Byzantium
 (46,47),   #Franks
 (99,15),   #Arabs
 (84,36),   #Bulgaria
 (35,32),   #Cordoba
-(33,40),   #Spain
 (59,65),   #Norse
 (61,36),   #Venice
+(48,42),   #Burgundy
+(57,48),   #Germany
 (91,48),   #Kiev
 (71,39),   #Hungary
-(57,48),   #Germany
+(33,40),   #Spain
 (75,50),   #Poland
-(95,68),   #Moscow
 (53,35),   #Genoa
 (45,58),   #England
 (24,35),   #Portugal
+(78,59),   #Lithuania
 (64,43),   #Austria
 (84,22),   #Turks
+(95,68),   #Moscow
 (67,71),   #Sweden
 (52,57),   #Netherlands
 (58,29)	   #Pope
@@ -378,26 +407,27 @@ tCoreAreasBR = (
 
 
 tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in spawn.
-(), #Burgundy 
 (), #Byzantium
 (), #Frankia
 (), #Arabia
 (), #Bulgaria
 ((24, 23), (24, 22), (24, 21), (24, 20), (24, 19), (23, 22), (23, 21), (23, 20)), #Cordoba
-(), #Spain
 (), #Norse
 (), #Venecia 
+(), #Burgundy 
+(), #Germany
 (), #Kiev
 (), #Hungary
-(), #Germany
+(), #Spain
 (), #Poland
-(), #Moscow
 (), #Genoa
 ((39, 47), (40, 47), (41, 47)), #England
 ((20, 29), (22, 28), (23, 28), (24, 36), (24, 37)), #Portugal
+(), #Lithuania
 #(), #Austria
 ((59, 37), (60, 37), (64, 37), (59, 44), (60, 44), (62, 44), (61, 44)), #Austria
 ((75,23),(75,24),(75,25),(75,26),(75,27),(76,23),(76,24),(76,25),(76,26),(76,27),(77,23),(77,24),(77,25),(77,26),(77,27),(78,23),(78,24),(78,25),(78,26),(78,27)), #Turkey
+(), #Moscow
 (), #Sweden
 (), #Dutch
 ()  #Pope
@@ -406,50 +436,52 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 #normal areas
 
 tNormalAreasTL = ( #These areas are typically used for resurrection. Also used in stability and (maybe) for victory conditions
-(45,33),   #Burgundy
 (66,14),   #Byzantium
 (35,34),   #Franks
-(48,1),   #Arabs
+(48,1),    #Arabs
 (73,28),   #Bulgaria
 (16,13),   #Cordoba
-(24,25),   #Spain
 (53,56),   #Norse
 (56,33),   #Venice
+(45,33),   #Burgundy
+(52,44),   #Germany
 (80,36),   #Kiev
 (66,34),   #Hungary
-(52,44),   #Germany
+(24,25),   #Spain
 (64,43),   #Poland
-(80,47),   #Moscow
 (49,22),   #Genoa
 (35,52),   #England
 (20,28),   #Portugal
+(68,45),   #Lithuania
 (58,37),   #Austria
 (76,13),   #Turks
+(80,47),   #Moscow
 (60,58),   #Sweden
 (48,50),   #Netherlands
 (54,25)	   #Pope
 ) 
 
 tNormalAreasBR = (
-(49,44),   #Burgundy
 (76,24),   #Byzantium
 (44,49),   #Franks
 (98,13),   #Arabs
 (80,32),   #Bulgaria
 (30,24),   #Cordoba
-(41,40),   #Spain
 (59,71),   #Norse
 (61,36),   #Venice
+(49,44),   #Burgundy
+(63,54),   #Germany
 (97,43),   #Kiev
 (78,40),   #Hungary
-(63,54),   #Germany
+(41,40),   #Spain
 (78,57),   #Poland
-(98,71),   #Moscow
 (52,35),   #Genoa
 (45,67),   #England
 (25,36),   #Portugal
+(82,64),   #Lithuania
 (65,42),   #Austria
 (98,27),   #Turks
+(98,71),   #Moscow
 (69,71),   #Sweden
 (51,54),   #Netherlands
 (58,29)	   #Pope
@@ -457,25 +489,26 @@ tNormalAreasBR = (
 
 
 tNormalAreasSubtract = (  #These are squares subtracted from normal areas
-((49, 34), (49, 35),(49, 33)), #Burgundy
 (), #Byzantium
 ((35, 34), (36, 34), (37, 34), (38, 34), (35, 35), (36, 35), (37, 35), (35, 36), (35, 37)), #Frankia
 ((58,12),(72,10),(73,10),(74,10),(75,10),(78,11),(79,12),(88,11),(88,12),(89,11),(89,12),(90,12),(91,13)), #Arabia
 (), #Bulgaria
 (), #Cordoba
-((35, 40), (36, 40), (37, 40), (38, 40), (39, 40), (40, 40), (41, 39), (41, 40), (40, 39), (39, 39), (38, 39), (37, 39), (36, 39), (35, 39), (35, 38), (36, 38), (37, 38), (38, 38), (39, 38), (40, 38), (41, 38), (37, 37), (36, 37), (38, 37), (39, 37), (40, 37), (41, 37), (41, 36), (40, 36), (39, 36), (38, 36), (37, 36), (36, 36), (38, 35), (39, 35), (40, 35), (41, 35), (41, 34), (40, 34), (39, 34), (24, 36), (24, 35), (24, 34), (24, 33), (24, 32), (24, 31), (25, 36), (25, 35), (25, 34)), #Spain
 (), #Norse
 (), #Venecia 
+((49, 34), (49, 35),(49, 33)), #Burgundy
+(), #Germany
 (), #Kiev
 (), #Hungary
-(), #Germany
+((35, 40), (36, 40), (37, 40), (38, 40), (39, 40), (40, 40), (41, 39), (41, 40), (40, 39), (39, 39), (38, 39), (37, 39), (36, 39), (35, 39), (35, 38), (36, 38), (37, 38), (38, 38), (39, 38), (40, 38), (41, 38), (37, 37), (36, 37), (38, 37), (39, 37), (40, 37), (41, 37), (41, 36), (40, 36), (39, 36), (38, 36), (37, 36), (36, 36), (38, 35), (39, 35), (40, 35), (41, 35), (41, 34), (40, 34), (39, 34), (24, 36), (24, 35), (24, 34), (24, 33), (24, 32), (24, 31), (25, 36), (25, 35), (25, 34)), #Spain
 (), #Poland
-(), #Moscow
 (), #Genoa
 ((35, 57), (35, 58), (36, 58), (35, 59), (36, 59)), #England
 ((24, 28), (25, 28), (24, 29), (25, 29), (24, 30), (25, 30), (25, 31), (25, 32), (25, 33)), #Portugal
+(), #Lithuania
 (), #Austria
 (), #Turkey
+(), #Moscow
 (), #Sweden
 (), #Dutch
 ()
@@ -486,50 +519,52 @@ tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 # 3Miro: see core area comment 
 # Sedna17: Currently unused?
 tBroaderAreasTL = (
-(42, 36), #Burgundy
 (68, 14), #Byzantium
 (39, 41), #France
 (92,  7), #Arabia
 (71, 28), #Bulgaria
 (24, 23), #Cordoba
-(23, 31), #Spain
 (52, 53), #Norse
 (52, 29), #tVenecia
+(42, 36), #Burgundy
+(49, 41), #tGermany
 (81, 37), #tKiev
 (64, 27), #tHungary
-(49, 41), #tGermany
+(23, 31), #Spain
 (64, 42), #tPoland
-(83, 51), #tMoscow
 (45, 29), #tGenoa
 (38, 49), #tLondon, England
 (17, 27), #tLisboa, Portugal
+(68, 45), #Lithuania
 (56, 35), #tAustria
 (83, 17), #tTurkey
+(83, 51), #tMoscow
 (62, 59), #tSweden
 (44, 47), #tDutch
 (54, 25)  #Pope
 )
 
 tBroaderAreasBR = (
-(52, 46), #Burgundy
 (83, 27), #Byzantium
 (49, 51), #France
 (99, 15), #Arabia
 (80, 31), #Bulgaria
 (34, 33), #Cordoba
-(33, 41), #Spain
 (62, 63), #Norse
 (62, 39), #tVenecia
+(52, 46), #Burgundy
+(58, 51), #tGermany
 (91, 47), #tKiev
 (74, 37), #tHungary
-(58, 51), #tGermany
+(33, 41), #Spain
 (74, 52), #tPoland
-(93, 61), #tMoscow
 (55, 39), #tGenoa
 (48, 59), #tLondon, England
 (27, 37), #tLisboa, Portugal
+(82, 64),   #Lithuania
 (66, 45), #tAustria
 (93, 27), #tTurkey
+(93, 61), #tMoscow
 (72, 69), #tSweden
 (54, 57), #tDutch
 (58, 29)  #Pope
@@ -537,25 +572,26 @@ tBroaderAreasBR = (
 
 # visiable areas:
 tVisible = (
-( (35,31,52,51),(49,26,59,38), ), # Burgundy
 ( (64,0,99,34),(49,1,63,38),(24,17,48,36), ), # Byzantium
 ( (35,31,52,51),(49,26,59,38), ), # France
 ( (79,0,89,6),(90,0,99,22), ), # Arabia
 ( (69,24,81,31),(79,31,99,41), ), # Bulgaria
 ( (14,17,39,33),(40,0,59,20),(60,0,95,7), ), # Cordoba
-( (20,23,36,41),(37,30,48,50),(49,26,59,38), ), # Spain
 ( (52,55,68,66), ), # Norse
 ( (47,14,59,38),(60,18,63,35),(64,18,68,29), ), # Venice
+( (35,31,52,51),(49,26,59,38), ), # Burgundy
+( (35,33,48,51),(49,27,63,55), ), # Germany
 ( (77,24,82,42),(83,31,99,46), ), # Kiev
 ( (58,31,82,43), ), # Hungary
-( (35,33,48,51),(49,27,63,55), ), # Germany
+( (20,23,36,41),(37,30,48,50),(49,26,59,38), ), # Spain
 ( (57,36,76,55),(77,40,99,46), ), # Poland
-( (70,33,99,58),(74,59,99,69), ), # Moscow
 ( (33,20,63,37),(64,9,82,28), ), # Genoa
 ( (30,51,46,68),(35,46,46,50), ), # England
 ( (18,23,36,42), ), # Portugal
+( (57,36,76,55),(77,40,99,46),(70,33,99,58), ), # Lithuania
 ( (35,33,48,51),(49,27,63,55), ), # Austria
 ( (77,14,99,27),(93,5,99,13), ), # Turkey
+( (70,33,99,58),(74,59,99,69), ), # Moscow
 ( (52,53,74,72), ), # Sweden
 ( (42,42,65,66), ), # Dutch
 ( (39,12,73,44), ), # Pope
@@ -564,53 +600,55 @@ tVisible = (
 
 # 3Miro: Initial Wars, note only the upper triangle of the array is valid, the lower should be all zeros
 tWarAtSpawn = (
-#Bur Byz Fra Ara Bul Cor Spa Nor Ven Kie Hun Ger Pol Mos Gen Eng Por Aus Tur Swe Dut Pop In1 In2 In3 In4
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Bur
-( 0,  0,  0, 90, 90,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0,  0, ), #Byz
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Fra
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0, ), #Ara
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Bul
-( 0,  0,  0,  0,  0,  0, 80,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Cor
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Spa
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Nor
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Ven
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Kie
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Hun
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Ger
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Pol
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Mos
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Gen
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Eng
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Por
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Aus
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 50, 50, 50, 50, ), #Tur
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Swe
-( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
+#Bur Byz Fra Ara Bul Cor Spa Nor Ven Kie Hun Ger Pol Mos Gen Eng Por Lit Aus Tur Swe Dut Pop In1 In2 In3 In4
+( 0,  0,  0, 90, 90,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0,  0, ), #Byz
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Fra
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0, ), #Ara
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Bul
+( 0,  0,  0,  0,  0,  0, 80,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Cor
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Nor
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Ven
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Bur
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Ger
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Kie
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Hun
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Spa
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Pol
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Gen
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Eng
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Por
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Lit
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Aus
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 50, 50, 50, 50, ), #Tur
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Mos
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Swe
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 )
 
 iMercPromotion = 48
 
 #Mercenaries. Higher number = less likely to hire
 tHire = (
-10, #Burgundy
 10, #Byzantium
 30, #Frankia
 50, #Arabia
 10, #Bulgaria 
 50, #Cordoba
-40, #Spain
 10, #Norse
 30, #Venecia
+10, #Burgundy
+70, #Germany
 40, #Kiev
 10, #Hungary
-70, #Germany
+40, #Spain
 60, #Poland
-60, #Moscow
 30, #Genoa
 70, #England
 40, #Portugal
+20, #Lithuania
 20, #Austria
 80, #Turkey
+60, #Moscow
 40, #Sweden
 30, #Dutch
 80, #Pope
@@ -624,25 +662,26 @@ tHire = (
 
 #AIWars
 tAggressionLevel = (
-0, #Burgundy
 1, #Byzantium
 1, #Frankia
 2, #Arabia
 2, #Bulgaria
 1, #Cordoba
-2, #Spain
 2, #Norse
 0, #Venecia
+0, #Burgundy
+1, #Germany
 1, #Kiev
 2, #Hungary
-1, #Germany
+2, #Spain
 0, #Poland
-1, #Moscow
 0, #Genoa
 1, #England
 2, #Portugal
+1, #Lithuania
 1, #Austria
 2, #Turkey
+1, #Moscow
 2, #Sweden
 0, #Dutch
 0  #Pope
@@ -651,25 +690,26 @@ tAggressionLevel = (
 
 #war during rise of new civs higher number means less war
 tAIStopBirthThreshold = (
-    20, #Burgundy
     30, #Byzantium
     60, #Frankia
     50, #Arabia
     70, #Bulgaria
     10, #Cordoba
-    80, #Spain
     70, #Norse
     30, #Venecia
+    20, #Burgundy
+    80, #Germany
     80, #Kiev
     80, #Hungary
-    80, #Germany
+    80, #Spain
     40, #Poland
-    70, #Moscow
     40, #Genoa
     80, #England
     30, #Portugal
+    40, #Lithuania
     30, #Austria
     80, #Turkey
+    70, #Moscow
     60, #Sweden
     20, #Dutch
     20,  #Pope
@@ -683,25 +723,26 @@ tAIStopBirthThreshold = (
 
 #RiseAndFall. This is one place to tune frequency of resurrections.
 tResurrectionProb = (
-10, #Burgundy
 40, #Byzantium
 80, #Frankia
 60, #Arabia
 30, #Bulgaria
 50, #Cordoba
-80, #Spain
 60, #Norse
 20, #Venecia
+10, #Burgundy
+70, #Germany
 50, #Kiev
 50, #Hungary
-70, #Germany
+80, #Spain
 60, #Poland
-80, #Moscow
 10, #Genoa
 70, #England
 60, #Portugal
+40, #Lithuania
 70, #Austria
 60, #Turkey
+80, #Moscow
 70, #Sweden
 60, #Dutch
 90  #Pope
@@ -709,52 +750,54 @@ tResurrectionProb = (
 
 #Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
 tRespawnTime = (
-245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
 999, #Byzantium -- no special respawn
 350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line. 
 190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders 
 195, #Bulgaria 1185 -- Second Bulgarian empire
 174, #Cordoba 1122 -- Almohads, better timing than Almoravids
-290, #Spain 1467 -- Union of Castile/Aragon and ready for colonies
 265, #Norse 1395 -- Kalmar Union
 999, #Venecia -- no special respawn
+245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
+401, #Germany 1701 -- Prussia
 999, #Kiev -- no special respawn
 999, #Hungary -- no special respawn
-401, #Germany 1701 -- Prussia
+290, #Spain 1467 -- Union of Castile/Aragon and ready for colonies
 999, #Poland -- no special respawn
-999, #Moscow -- no special respawn
 999, #Genoa -- no special respawn
 380, #England 1660 -- Restoration of Monarchy (also leading up to Scottish Union)
 267, #Portugal 1400 -- Make sure Portugal is around for colonies
+999, #Lithuania -- no special respawn
 313, #Austria 1526 -- Battle of Mohacs, Habsburgs take over Hungary
 294, #Turkey 1482 -- End of Mehmed II conquest. 
+999, #Moscow -- no special respawn
 999, #Sweden -- no special respawn
 999, #Dutch -- no special respawn
 999  #Pope -- no special respawn
 )
 
 
-#Congresses.
+#Congresses. # 3Miro: there is no congress, maybe I should remove this
 tPatienceThreshold = (
-30, #Burgundy
 30, #Byzantium
 30, #Frankia
 30, #Arabia
 30, #Bulgaria
 30, #Cordoba
-30, #Spain
 30, #Norse
 30, #Venecia
+30, #Burgundy
+30, #Germany
 30, #Kiev
 30, #Hungary
-30, #Germany
+30, #Spain
 30, #Poland
-30, #Moscow
 30, #Genoa
 30, #England
 30, #Portugal
+30, #Lithuania
 30, #Austria
 30, #Turkey
+30, #Moscow
 30, #Sweden
 30  #Dutch
 ) 
@@ -762,25 +805,26 @@ tPatienceThreshold = (
 
 # religion spread modifiers:
 tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
-(150,  20, 150,  70,  10), #Burgundy
 (100,  50,  70, 150,  10), #Byzantium
 (150,  20, 250,  70,  10), #France
 ( 20, 350,  50,  10,  10), #Arabia
 (100,  50, 100, 350,  10), #Bulgaria
 ( 50, 250, 100,  20,  10), #Cordoba
-(100,  20, 200,  20,  10), #Spain
 (250,  50, 100, 150,  10), #Norse
 ( 90,  50, 200,  30,  10), #tVenecia
+(150,  20, 150,  70,  10), #Burgundy
+(450,  20, 250,  20,  10), #tGermany
 ( 90,  90,  90, 250,  10), #tKiev
 (250,  80, 150, 100,  10), #tHungary
-(450,  20, 250,  20,  10), #tGermany
+(100,  20, 200,  20,  10), #Spain
 (200, 100, 400, 200,  10), #tPoland
-(100,  20, 100, 250,  10), #tMoscow
 (190,  50, 250,  30,  10), #tGenoa
 (450,  20, 100,  20,  10), #tEngland
 (200,  80, 250,  20,  10), #tPortugal
+(80,   80,  80,  80,  80), #tLithuania
 (200,  20, 250,  20,  10), #tAustria
 ( 20, 350,  80,  80,  10), #tTurkey
+(100,  20, 100, 250,  10), #tMoscow
 (550,  20, 100, 100,  10), #tSweden
 (550,  20,  90,  20,  10), #tDutch
 ( 10,  20, 500,  10,  10), #Pope
@@ -817,25 +861,26 @@ iImmunity = 20
 
 
 tLeaders = (		#First has to be the primary leader (the one that appaers on the civ selection screen). Can be changed in the WB file (AbsintheRed)
-(xml.iCharles_V,),
 (xml.iJustinian,),
 (xml.iCharlemagne, xml.iJoan, xml.iLouis_Xiv),
 (xml.iAbuBakr, xml.iSaladin),
 (xml.iSimeon,),
 (xml.iAbdarRahman, xml.iAbuYusufYaqub),
-(xml.iIsabella, xml.iPhilip_Ii),
 (xml.iHarald_Hardrada, xml.iHaakon_Iv, xml.iChristian_Iv),
 (xml.iDandolo, xml.iAndrea_Dandolo),
+(xml.iCharles_V,),
+(xml.iBarbarossa, xml.iFrederick),
 (xml.iYaroslav,),
 (xml.iStephen, xml.iMatthias),
-(xml.iBarbarossa, xml.iFrederick),
+(xml.iIsabella, xml.iPhilip_Ii),
 (xml.iCasimir, xml.iSobieski),
-(xml.iIvan_Iv, xml.iPeter, xml.iCatherine),		#Don't change back the order of Peter and Ivan. Right now Ivan is the primary leader. Was needed for leader switching (AbsintheRed - Beta 6)
 (xml.iSimone,),
 (xml.iWilliam, xml.iElizabeth,xml.iGeorge_Iii),
 (xml.iAfonso, xml.iJoao, xml.iMaria_Ii),
+(xml.iMindaugas,xml.iVytautas),
 (xml.iMaximilian, xml.iMaria_Theresa),
 (xml.iMehmed, xml.iSuleiman),
+(xml.iIvan_Iv, xml.iPeter, xml.iCatherine),		#Don't change back the order of Peter and Ivan. Right now Ivan is the primary leader. Was needed for leader switching (AbsintheRed - Beta 6)
 (xml.iGustavus,),
 (xml.iWillem_Van_Oranje,),
 (xml.iThe_Pope,)
@@ -843,25 +888,26 @@ tLeaders = (		#First has to be the primary leader (the one that appaers on the c
 
 
 tEarlyLeaders = (		#Don't have to be the same as the primary leader (AbsintheRed)
-(xml.iCharles_V),
 (xml.iJustinian),
 (xml.iCharlemagne),
 (xml.iAbuBakr),
 (xml.iSimeon),
 (xml.iAbdarRahman),
-(xml.iIsabella),
 (xml.iHarald_Hardrada),
 (xml.iDandolo),
+(xml.iCharles_V),
+(xml.iBarbarossa),
 (xml.iYaroslav),
 (xml.iStephen),
-(xml.iBarbarossa),
+(xml.iIsabella),
 (xml.iCasimir),
-(xml.iIvan_Iv),
 (xml.iSimone),
 (xml.iWilliam),
 (xml.iAfonso),
+(xml.iMindaugas),
 (xml.iMaximilian),
 (xml.iMehmed),
+(xml.iIvan_Iv),
 (xml.iGustavus),
 (xml.iWillem_Van_Oranje),
 (xml.iThe_Pope)
@@ -869,25 +915,26 @@ tEarlyLeaders = (		#Don't have to be the same as the primary leader (AbsintheRed
 
 
 tLateLeaders = (		#All switch dates up to 200 years earlier because the switch is triggered after a few years (date, percentage, era)
-(xml.iCharles_V,),
 (xml.iJustinian,),
 (xml.iJoan, xml.i1160AD, 10, 2, xml.iLouis_Xiv, xml.i1452AD, 25, 3),
 (xml.iSaladin, xml.i1160AD, 25, 2),
 (xml.iSimeon,),
 (xml.iAbuYusufYaqub, xml.i1101AD, 10, 2),
-(xml.iPhilip_Ii, xml.i1520AD, 10, 3),
 (xml.iHaakon_Iv, xml.i1160AD, 25, 2, xml.iChristian_Iv, xml.i1520AD, 5, 3),
 (xml.iAndrea_Dandolo, xml.i1200AD, 10, 2),
+(xml.iCharles_V,),
+(xml.iFrederick, xml.i1520AD, 5, 3),
 (xml.iYaroslav,),
 (xml.iMatthias, xml.i1452AD, 5, 3),
-(xml.iFrederick, xml.i1520AD, 5, 3),
+(xml.iPhilip_Ii, xml.i1520AD, 10, 3),
 (xml.iSobieski, xml.i1570AD, 10, 3),
-(xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
 (xml.iSimone,),
 (xml.iElizabeth, xml.i1452AD, 10, 3, xml.iGeorge_Iii, xml.i1700AD, 10, 3),
 (xml.iJoao, xml.i1419AD, 10, 3, xml.iMaria_Ii, xml.i1700AD, 10, 3),
+(xml.iVytautas,xml.i1377AD,10,3),
 (xml.iMaria_Theresa, xml.i1700AD, 25, 3),
 (xml.iSuleiman, xml.i1520AD, 15, 3),
+(xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
 (xml.iGustavus,),
 (xml.iWillem_Van_Oranje,),
 (xml.iThe_Pope,)
@@ -965,3 +1012,17 @@ iJerusalem = ( 94, 6 )
 iProvinceOwn = 5      # own every tile
 iProvinceConquer = 4  # own every city (capture or settle) or own every tile
 iProvinceDominate = 3 # 2*sum of population + owned tiles is more for you than the sum total of everyone else (true if conquer is true)
+iProvinceLost = 2     # you have no cities and others have cities in it
+
+# ProvinceTypes
+iProvinceNone      = 0 # this is the default, use it for everything too far away to be considered
+iProvinceDesired   = 1 # for AI purposes, same as outer, just lower aggession flag
+iProvinceOuter     = 2 # small stability hit on owning
+iProvincePotential = 3 # changes to Home or Natural as soon as conquered
+iProvinceNatural   = 4 # stable, small penalty for not conquering it
+iProvinceCore      = 5 # stable, large penalty for not conquering it
+iNumProvinceTypes  = 6      
+
+# special parameters
+iIsHasStephansdom = 0 # special parameter
+iIsHasEscorial    = 1 # special parameter

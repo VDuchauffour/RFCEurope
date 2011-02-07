@@ -776,8 +776,7 @@ int CvTeamAI::AI_calculateCapitalProximity(TeamTypes eTeam) const
 	CvCity* pTheirCapitalCity;
 	int iTotalDistance;
 	int iCount;
-	//int iI, iJ;
-	int iJ;
+	int iI, iJ;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
@@ -996,7 +995,7 @@ int CvTeamAI::AI_getAttitudeVal(TeamTypes eTeam, bool bForced) const
 {
 	int iAttitudeVal;
 	int iCount;
-	//int iI, iJ;
+	int iI, iJ;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
@@ -1068,7 +1067,7 @@ int CvTeamAI::AI_getMemoryCount(TeamTypes eTeam, MemoryTypes eMemory) const
 {
 	int iMemoryCount;
 	int iCount;
-	//int iI, iJ;
+	int iI, iJ;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
@@ -1827,7 +1826,7 @@ DenialTypes CvTeamAI::AI_mapTrade(TeamTypes eTeam) const
 	PROFILE_FUNC();
 
 	AttitudeTypes eAttitude;
-	//int iI;
+	int iI;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
@@ -2548,7 +2547,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 	AttitudeTypes eAttitude;
 	AttitudeTypes eAttitudeThem;
 	bool bLandTarget;
-	//int iI;
+	int iI;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 	FAssertMsg(eWarTeam != getID(), "shouldn't call this function on ourselves");
@@ -2703,7 +2702,7 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 	PROFILE_FUNC();
 
 	AttitudeTypes eAttitude;
-	//int iI;
+	int iI;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
@@ -3041,7 +3040,7 @@ DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 	PROFILE_FUNC();
 
 	AttitudeTypes eAttitude;
-	//int iI;
+	int iI;
 
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
@@ -3443,7 +3442,7 @@ bool CvTeamAI::AI_isSneakAttackReady(TeamTypes eIndex) const
 
 void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar)
 {
-	//int iI;
+	int iI;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -3622,7 +3621,7 @@ int CvTeamAI::AI_noTechTradeThreshold() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3671,7 +3670,7 @@ int CvTeamAI::AI_techTradeKnownPercent() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3719,7 +3718,7 @@ int CvTeamAI::AI_maxWarRand() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3767,7 +3766,7 @@ int CvTeamAI::AI_maxWarNearbyPowerRatio() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3815,7 +3814,7 @@ int CvTeamAI::AI_maxWarDistantPowerRatio() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3863,7 +3862,7 @@ int CvTeamAI::AI_maxWarMinAdjacentLandPercent() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3911,7 +3910,7 @@ int CvTeamAI::AI_limitedWarRand() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -3959,7 +3958,7 @@ int CvTeamAI::AI_limitedWarPowerRatio() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -4008,7 +4007,7 @@ int CvTeamAI::AI_dogpileWarRand() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -4056,7 +4055,7 @@ int CvTeamAI::AI_makePeaceRand() const
 {
 	int iRand;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iRand = 0;
 	iCount = 0;
@@ -4105,7 +4104,7 @@ int CvTeamAI::AI_noWarAttitudeProb(AttitudeTypes eAttitude) const
 {
 	int iProb;
 	int iCount;
-	//int iI;
+	int iI;
 
 	iProb = 0;
 	iCount = 0;
