@@ -13,6 +13,8 @@ import string
 import CvUtil
 import ScreenInput
 
+import XMLConsts as xml
+
 PyPlayer = PyHelpers.PyPlayer
 PyCity = PyHelpers.PyCity
 
@@ -421,6 +423,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 	def placeLeaders(self):
 	
 		tList = self.getSortedList( gc.getNumLeaderHeadInfos(), gc.getLeaderHeadInfo )
+		tList.pop(xml.iLeaderBarbarian)
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER, gc.getLeaderHeadInfo)
 
 			

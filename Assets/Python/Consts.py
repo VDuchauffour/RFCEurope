@@ -337,7 +337,7 @@ tNewCapitals = (  #for RiseAndFall
 ((50, 34),(50, 34)), #tGenoa
 ((43, 53),(43, 53)), #tLondon, England
 ((22, 31),(22, 31)), #tLisboa, Portugal
-((74, 53),(74, 53)), #tLisboa, Portugal
+((74, 53),(74, 53)), #Lithuania
 ((63, 39),(63, 39)), #tAustria
 ((79, 22),(79, 22)), #tTurkey
 ((88, 56),(88, 56)), #tMoscow
@@ -370,7 +370,7 @@ tCoreAreasTL = ( #Core Area is initial spawn location, and also important for st
 (49,27),   #Genoa
 (38,48),   #England
 (21,29),   #Portugal
-(69,48),   #Lithuania
+(71,48),   #Lithuania
 (58,37),   #Austria
 (76,16),   #Turks
 (80,52),   #Moscow
@@ -991,6 +991,8 @@ iUP_Discovery = 20		# lower cost of a block of projects
 iUP_EndlessLand = 21		# lower civic cost assosiated with cities
 iUP_ForeignSea = 22		# allows the ships to enter foreign sea territory (Dutch UP from RFC)
 iUP_Pious = 23			# increase the gain (and loss) of Faith Points
+iUP_PaganCulture = 24           # give bonus to culure if no state religion is present
+iUP_PaganHappy = 25             # give bonus to happyness if no state religion is present
 
 iFP_Stability = 0		# stability bonus
 iFP_Civic = 1			# lower civic upkeep
