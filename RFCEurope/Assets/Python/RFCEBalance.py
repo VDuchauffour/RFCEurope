@@ -64,6 +64,8 @@ iUP_Discovery = con.iUP_Discovery
 iUP_EndlessLand = con.iUP_EndlessLand
 iUP_ForeignSea = con.iUP_ForeignSea
 iUP_Pious = con.iUP_Pious
+iUP_PaganCulture = con.iUP_PaganCulture
+iUP_PaganHappy = con.iUP_PaganHappy
 
 iFP_Stability = con.iFP_Stability		
 iFP_Civic = con.iFP_Civic			
@@ -496,6 +498,9 @@ class RFCEBalance:
 		gc.setUP( iGermany, iUP_UnitProduction, xml.iGunpowder * 100 + 75 )
 		
 		gc.setUP( iPoland, iUP_ReligiousTolerance, 0 )
+                
+                gc.setUP( iLithuania, iUP_PaganCulture, 200 )
+                gc.setUP( iLithuania, iUP_PaganHappy, 1 )
 		
 		gc.setSupportModifiersAI(iMoscow, 10, 100, 25, 12, 100 )
                 gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
