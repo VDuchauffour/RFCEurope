@@ -24,3 +24,4 @@ Removed Barbarian leaderhead from the civilopedia
 Basic information for the leaderheads (english only)
 New art for the Burgundian Winery
 Lithuania added
+Forbidden some units to become a mercenary

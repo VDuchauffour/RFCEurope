@@ -889,9 +889,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
-		<English>[ICON_BULLET]+2 Gold for Manor House.</English>
+		<English>[ICON_BULLET]+2[ICON_GOLD] for Manor House.</English>
 		<French>.</French>
-		<German>[ICON_BULLET]+2 Gold for Manor House.</German>
+		<German>[ICON_BULLET]+2[ICON_GOLD] for Manor House.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
