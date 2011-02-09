@@ -1143,11 +1143,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_AFONSO_1</Tag>
-		<English>I thought we banished all your people from [OUR_CIV_SHORT]. What are doing here?</English>
-		<French>I thought we banished all your people from [OUR_CIV_SHORT]. What are doing here?</French>
-		<German>I thought we banished all your people from [OUR_CIV_SHORT]. What are doing here?</German>
-		<Italian>I thought we banished all your people from [OUR_CIV_SHORT]. What are doing here?</Italian>
-		<Spanish>I thought we banished all your people from [OUR_CIV_SHORT]. What are doing here?</Spanish>
+		<English>I thought we banished all your people from [OUR_CIV_SHORT]. What are you doing here?</English>
+		<French>I thought we banished all your people from [OUR_CIV_SHORT]. What are you doing here?</French>
+		<German>I thought we banished all your people from [OUR_CIV_SHORT]. What are you doing here?</German>
+		<Italian>I thought we banished all your people from [OUR_CIV_SHORT]. What are you doing here?</Italian>
+		<Spanish>I thought we banished all your people from [OUR_CIV_SHORT]. What are you doing here?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_AFONSO_2</Tag>
@@ -1247,6 +1247,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_1</Tag>
+		<English>Hail and well met, [CT_NAME]! I am [OUR_NAME], ruler of the glorious [OUR_CIV_SHORT].  So tell me: does [CT_CIV_SHORT] have a lot of rich and unprotected coastal cities, or what?</English>
+		<French>Bonjour, [CT_NAME], c'est un vrai plaisir ! Je suis [OUR_NAME], chef des glorieux [OUR_CIV_SHORT]. Dites-moi : est-ce que [CT_CIV_SHORT] dispose de nombreuses villes c&#244;ti&#232;res riches et faiblement prot&#233;g&#233;es ?</French>
+		<German>Tag auch, [CT_NAME]! Ich bin [OUR_NAME], Staatsoberhaupt des ruhmreichen Volkes von [OUR_CIV_SHORT]. Nun, dann erz&#228;hlt mal: Besitzt Ihr vielleicht ein paar reiche, schutzlose K&#252;stenst&#228;dte?</German>
+		<Italian>Salute a te, [CT_NAME]! Io sono [OUR_NAME], glorioso sovrano [OUR_CIV_ADJ]. Parliamo, dunque: [CT_CIV_SHORT] ha molte citt&#224; costiere ricche e poco protette, vero?</Italian>
+		<Spanish>Saludos y bienaventuranzas, [CT_NAME]. Soy [OUR_NAME], dirigente de la gloriosa tierra de [OUR_CIV_SHORT].  Decidme, &#191;tiene o no [CT_CIV_SHORT] muchas ciudades costeras pr&#243;speras e indefensas?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_2</Tag>
 		<English>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</English>
 		<French>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</French>
 		<German>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</German>
@@ -1254,7 +1262,7 @@
 		<Spanish>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_2</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_3</Tag>
 		<English>Hail, [CT_NAME]! Do you follow the real warrior's way?</English>
 		<French>Hail, [CT_NAME]! Do you follow the real warrior's way?</French>
 		<German>Hail, [CT_NAME]! Do you follow the real warrior's way?</German>
