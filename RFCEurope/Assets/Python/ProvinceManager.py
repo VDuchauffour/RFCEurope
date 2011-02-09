@@ -84,7 +84,7 @@ iNumProvinceTypes  = con.iNumProvinceTypes
 ############ Lists of all the provinces for each Civ ###################
 tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Illyria,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Antiochia,xml.iP_Galilee,xml.iP_Jerusalem,xml.iP_Egypt]
 tByzantiumNorm = []
-tByzantiumOuter = []
+tByzantiumOuter = [xml.iP_Moesia,xml.iP_Serbia]
 tByzantiumPot2Core = []
 tByzantiumPot2Norm = []
 tByzantiumDesire = []
@@ -128,7 +128,7 @@ tVeniceCore = []
 tVeniceNorm = []
 tVeniceOuter = [xml.iP_Illyria,xml.iP_Epirus,xml.iP_Morea,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Constantinople]
 tVenicePot2Core = [xml.iP_Verona,xml.iP_Dalmatia]
-tVenicePot2Norm = [xml.iP_Carinthia,xml.iP_Tuscany]
+tVenicePot2Norm = [xml.iP_Carinthia,xml.iP_Tuscany,xml.iP_Croatia]
 tVeniceDesire = []
 
 tBurgundyCore = []
@@ -140,23 +140,23 @@ tBurgundyDesire = []
 
 tGermanyCore = []
 tGermanyNorm = []
-tGermanyOuter = []
-tGermanyPot2Core = []
-tGermanyPot2Norm = []
+tGermanyOuter = [xml.iP_Netherlands,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Burgundy,xml.iP_Lombardy,xml.iP_Verona,xml.iP_Tuscany,xml.iP_Austria,xml.iP_Salzburg,xml.iP_Moravia,xml.iP_Silesia,xml.iP_GreaterPoland,xml.iP_Pomerania]
+tGermanyPot2Core = [xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Brandenburg,xml.iP_Saxony]
+tGermanyPot2Norm = [xml.iP_Bohemia,xml.iP_Tyrol]
 tGermanyDesire = []
 
 tKievCore = []
 tKievNorm = []
-tKievOuter = []
-tKievPot2Core = []
-tKievPot2Norm = []
-tKievDesire = []
+tKievOuter = [xml.iP_WhiteRus,xml.iP_Kuban,xml.iP_Donets,xml.iP_Simbirsk,xml.iP_Chernigov]
+tKievPot2Core = [xml.iP_Kiev,xml.iP_Moldova,xml.iP_Podolia,xml.iP_Pereyaslavl,xml.iP_Zaporizhia,xml.iP_Sloboda]
+tKievPot2Norm = [xml.iP_Crimea,xml.iP_Volhynia]
+tKievDesire = [xml.iP_Wallachia,xml.iP_Moesia]
 
 tHungaryCore = []
 tHungaryNorm = []
-tHungaryOuter = []
-tHungaryPot2Core = []
-tHungaryPot2Norm = []
+tHungaryOuter = [xml.iP_Salzburg,xml.iP_Croatia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Wallachia,xml.iP_Galicia,xml.iP_Bohemia,xml.iP_Silesia]
+tHungaryPot2Core = [xml.iP_Hungary,xml.iP_UpperHungary,xml.iP_Pannonia]
+tHungaryPot2Norm = [xml.iP_Transylvania,xml.iP_Austria,xml.iP_Slavonia,xml.iP_Moravia]
 tHungaryDesire = []
 
 tSpainCore = []
@@ -168,21 +168,21 @@ tSpainDesire = []
 
 tPolandCore = []
 tPolandNorm = []
-tPolandOuter = []
-tPolandPot2Core = []
-tPolandPot2Norm = []
+tPolandOuter = [xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Lithuania,xml.iP_Polotsk,xml.iP_WhiteRus,xml.iP_Livonia,xml.iP_Volhynia,xml.iP_Podolia]
+tPolandPot2Core = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Brest]
+tPolandPot2Norm = [xml.iP_Silesia,xml.iP_Suvalkija,xml.iP_Galicia]
 tPolandDesire = []
 
 tGenoaCore = []
 tGenoaNorm = []
-tGenoaOuter = []
-tGenoaPot2Core = []
-tGenoaPot2Norm = []
+tGenoaOuter = [xml.iP_Tunisia,xml.iP_Constantinople,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Cyprus,xml.iP_Crimea,xml.iP_Morea]
+tGenoaPot2Core = [xml.iP_Lombardy,xml.iP_Tuscany,xml.iP_Corsica,xml.iP_Sardinia]
+tGenoaPot2Norm = [xml.iP_Sicily]
 tGenoaDesire = []
 
 tEnglandCore = []
 tEnglandNorm = []
-tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne]
+tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne,xml.iP_Aquitania,xml.iP_Flanders]
 tEnglandPot2Core = [xml.iP_London,xml.iP_EastAnglia,xml.iP_Midlands,xml.iP_Northumbria,xml.iP_Wessex,xml.iP_Wales]
 tEnglandPot2Norm = [xml.iP_Scotland,xml.iP_Ireland,xml.iP_Normandy]
 tEnglandDesire = []
@@ -194,32 +194,39 @@ tPortugalPot2Core = [xml.iP_Lusitania]
 tPortugalPot2Norm = [xml.iP_Canaries,xml.iP_Azores]
 tPortugalDesire = []
 
+tLithuaniaCore = []
+tLithuaniaNorm = []
+tLithuaniaOuter = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Masovia,xml.iP_Galicia,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda,xml.iP_Chernigov,xml.iP_Smolensk,xml.iP_Estonia]
+tLithuaniaPot2Core = [xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Polotsk]
+tLithuaniaPot2Norm = [xml.iP_Suvalkija,xml.iP_Novgorod,xml.iP_WhiteRus]
+tLithuaniaDesire = []
+
 tAustriaCore = []
-tAustriaNorm = []
-tAustriaOuter = []
-tAustriaPot2Core = []
+tAustriaNorm = [xml.iP_Verona,xml.iP_UpperHungary,xml.iP_Hungary,xml.iP_Galicia,xml.iP_Transylvania,xml.iP_Croatia]
+tAustriaOuter = [xml.iP_Austria,xml.iP_Salzburg,xml.iP_Carinthia]
+tAustriaPot2Core = [xml.iP_Tyrol,xml.iP_Moravia]
 tAustriaPot2Norm = []
 tAustriaDesire = []
 
 tTurkeyCore = []
 tTurkeyNorm = []
-tTurkeyOuter = []
-tTurkeyPot2Core = []
-tTurkeyPot2Norm = []
+tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Illyria,xml.iP_Serbia,xml.iP_Moesia,xml.iP_Hungary,xml.iP_Croatia,xml.iP_Bosnia,xml.iP_Slavonia,xml.iP_Transylvania,xml.iP_Pannonia,xml.iP_Moldova]
+tTurkeyPot2Core = [xml.iP_Opsikion,xml.iP_Thrakesion,xml.iP_Paphlagonia,xml.iP_Anatolikon,xml.iP_Cilicia,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Constantinople,xml.iP_Thrace,]
+tTurkeyPot2Norm = [xml.iP_Antiochia,xml.iP_Syria,xml.iP_Galilee,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki]
 tTurkeyDesire = []
 
 tMoscowCore = []
 tMoscowNorm = []
-tMoscowOuter = []
-tMoscowPot2Core = []
-tMoscowPot2Norm = []
+tMoscowOuter = [xml.iP_Zaporizhia,xml.iP_Crimea,xml.iP_Moldova,xml.iP_Galicia,xml.iP_Wallachia,xml.iP_Kuban,xml.iP_Brest,xml.iP_Polotsk,xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Estonia,xml.iP_Finland,xml.iP_Pomerania,xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Suvalkija]
+tMoscowPot2Core = [xml.iP_Moscow,xml.iP_Murom,xml.iP_NizhnyNovgorod,xml.iP_Rostov,xml.iP_Vologda,xml.iP_Karelia,xml.iP_Smolensk,xml.iP_Chernigov,xml.iP_Simbirsk]
+tMoscowPot2Norm = [xml.iP_Novgorod,xml.iP_Kiev,xml.iP_WhiteRus,xml.iP_Volhynia,xml.iP_Donets,xml.iP_Pereyaslavl,xml.iP_Sloboda]
 tMoscowDesire = []
 
 tSwedenCore = []
 tSwedenNorm = []
-tSwedenOuter = []
-tSwedenPot2Core = []
-tSwedenPot2Norm = []
+tSwedenOuter = [xml.iP_Denmark,xml.iP_Pomerania]
+tSwedenPot2Core = [xml.iP_Gotaland,xml.iP_Norrland,xml.iP_Svealand,]
+tSwedenPot2Norm = [xml.iP_Finland,xml.iP_Norway,xml.iP_Vestfold]
 tSwedenDesire = []
 
 tDutchCore = []
@@ -248,6 +255,7 @@ class ProvinceManager:
                                         iGenoa : tGenoaCore,
                                         iEngland : tEnglandCore,
                                         iPortugal : tPortugalCore,
+                                        iLithuania : tLithuaniaCore,
                                         iAustria : tAustriaCore,
                                         iTurkey : tTurkeyCore,
                                         iMoscow : tMoscowCore,
@@ -270,6 +278,7 @@ class ProvinceManager:
                                         iGenoa : tGenoaNorm,
                                         iEngland : tEnglandNorm,
                                         iPortugal : tPortugalNorm,
+                                        iLithuania : tLithuaniaNorm,
                                         iAustria : tAustriaNorm,
                                         iTurkey : tTurkeyNorm,
                                         iMoscow : tMoscowNorm,
@@ -292,6 +301,7 @@ class ProvinceManager:
                                         iGenoa : tGenoaOuter,
                                         iEngland : tEnglandOuter,
                                         iPortugal : tPortugalOuter,
+                                        iLithuania : tLithuaniaOuter,
                                         iAustria : tAustriaOuter,
                                         iTurkey : tTurkeyOuter,
                                         iMoscow : tMoscowOuter,
@@ -314,6 +324,7 @@ class ProvinceManager:
                                         iGenoa : tGenoaPot2Core,
                                         iEngland : tEnglandPot2Core,
                                         iPortugal : tPortugalPot2Core,
+                                        iLithuania : tLithuaniaPot2Core,
                                         iAustria : tAustriaPot2Core,
                                         iTurkey : tTurkeyPot2Core,
                                         iMoscow : tMoscowPot2Core,
@@ -336,6 +347,7 @@ class ProvinceManager:
                                         iGenoa : tGenoaPot2Norm,
                                         iEngland : tEnglandPot2Norm,
                                         iPortugal : tPortugalPot2Norm,
+                                        iLithuania : tLithuaniaPot2Norm,
                                         iAustria : tAustriaPot2Norm,
                                         iTurkey : tTurkeyPot2Norm,
                                         iMoscow : tMoscowPot2Norm,
@@ -358,24 +370,77 @@ class ProvinceManager:
                                         iGenoa : tGenoaDesire,
                                         iEngland : tEnglandDesire,
                                         iPortugal : tPortugalDesire,
+                                        iLithuania : tLithuaniaDesire,
                                         iAustria : tAustriaDesire,
                                         iTurkey : tTurkeyDesire,
                                         iMoscow : tMoscowDesire,
                                         iSweden : tSwedenDesire,
                                         iDutch : tDutchDesire,
                                         }
+                self.tpPlayerList = {   iByzantium : pByzantium,
+                                        iFrankia : pFrankia,
+                                        iArabia : pArabia,
+                                        iBulgaria : pBulgaria,
+                                        iCordoba : pCordoba,
+                                        iNorse : pNorse,
+                                        iVenecia : pVenecia,
+                                        iBurgundy : pBurgundy,
+                                        iGermany : pGermany,
+                                        iKiev : pKiev,
+                                        iHungary : pHungary,
+                                        iSpain : pSpain,
+                                        iPoland : pPoland,
+                                        iGenoa : pGenoa,
+                                        iEngland : pEngland,
+                                        iPortugal : pPortugal,
+                                        iLithuania : pLithuania,
+                                        iAustria : pAustria,
+                                        iTurkey : pTurkey,
+                                        iMoscow : pMoscow,
+                                        iSweden : pSweden,
+                                        iDutch : pDutch,
+                                        }
         
         def setup( self ):
                 # set the initial situation for all players
-                pass
+                for iPlayer in range( con.iNumPlayers -1 ): # this discounts the Pope
+                        pPlayer = self.tpPlayerList[iPlayer]
+                        for iProv in self.tCoreProvinces[iPlayer]:
+                                pPlayer.setProvinceType( iProv, iProvinceCore )
+                        for iProv in self.tNormProvinces[iPlayer]:
+                                pPlayer.setProvinceType( iProv, iProvinceNatural)
+                        for iProv in self.tOuterProvinces[iPlayer]:
+                                pPlayer.setProvinceType( iProv, iProvinceOuter )
+                        for iProv in self.tPot2CoreProvinces[iPlayer]:
+                                pPlayer.setProvinceType( iProv, iProvincePotential )
+                        for iProv in self.tPot2NormProvinces[iPlayer]:
+                                pPlayer.setProvinceType( iProv, iProvincePotential )
+                        for iProv in self.tDesireProvinces[iPlayer]:
+                                pPlayer.setProvinceType( iProv, iProvinceDesired )
 
         def onCityBuilt(self, iPlayer, x, y):
                 #print(" ProvinceManager Build")
-                pass
+                if ( iPlayer >= con.iNumPlayers -1 ):
+                        return
+                pPlayer = self.tpPlayerList[iPlayer]
+                iProv = rfcemaps.tProinceMap[y][x]
+                if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
+                        if ( iProv in self.tPot2NormProvinces[iPlayer] ):
+                                pPlayer.setProvinceType( iProv, iProvinceCore )
+                        if ( iProv in self.tPot2CoreProvinces[iPlayer] ):
+                                pPlayer.setProvinceType( iProv, iProvinceNatural )
+                
                 
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
-                #print(" ProvinceManager Won")
-                pass
+                if ( playerType >= con.iNumPlayers -1 ):
+                        return
+                pPlayer = self.tpPlayerList[playerType]
+                iProv = city.getProvince()
+                if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
+                        if ( iProv in self.tPot2NormProvinces[playerType] ):
+                                pPlayer.setProvinceType( iProv, iProvinceCore )
+                        if ( iProv in self.tPot2CoreProvinces[playerType] ):
+                                pPlayer.setProvinceType( iProv, iProvinceNatural )
         
         def onCityRazed(self, iOwner, playerType, city):
                 #print(" ProvinceManager Razed")
