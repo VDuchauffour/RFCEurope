@@ -14,7 +14,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Katholizimus</Text>
+			<Text>Katholizismus</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -54,6 +54,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_CATHOLICISM_PEDIA</Tag>
+		<English>[TAB]Catholicism is one of the three major divisions (Catholicism, Orthodoxy, and Protestantism) within Christianity. Catholicism and Orthodoxy got officially separated after many years of debates and arguments in the Great Schism in 1054[PARAGRAPH:2]Catholicism is a broad term for the body of the Catholic faith, its theologies and doctrines, its liturgical, ethical, spiritual, and behavioral characteristics, as well as a religious people as a whole.[PARAGRAPH:2]For many the term usually refers to Christians and churches belonging to the Roman Catholic Church in full communion with the Holy See. For others it refers to the churches of the first millennium, including, besides the Roman Catholic Church, the Eastern Orthodox Church, the Oriental Orthodox Church, and the Assyrian Church of the East. And for others again it refers to "adhering to the catholic faith as it has been inherited from the earliest Christians ... seeking to restore the faith and order of the primitive church", as claimed by the Anglican Communion and the Reformation and post-Reformation churches.[PARAGRAPH:2]The Catholic claim of continuity is based on, among other factors, Apostolic succession, especially in conjunction with adherence to the Nicene Creed. In the sense of indicating historical continuity of faith and practice, the term "catholicism" is at times employed to mark a contrast to Protestantism, which tends to look solely to the Bible as interpreted on the principles of the 16th-century Protestant Reformation as its ultimate standard.</English>
+		<French>[TAB]Le catholicisme est une confession du christianisme représentée par l'Église catholique et ses institutions. Les dogmes et les préceptes du catholicisme se fondent sur l'Ancien et le Nouveau Testament. En tant que religion chrétienne, elle se fonde sur la vie et les enseignements de la vie de Jésus-Christ ou Jésus de Nazareth. C'est donc une église eucharistique qui croit en la présence de Jésus-Christ lors de la sainte communion. L'élaboration de cette Église repose sur l'enseignement des Pcres de l'Église et sur les différents conciles scuméniques tels que le concile de Trente (1545-1563), le concile Vatican I (1870) et le concile Vatican II (1962-1965). Pour les catholiques, tant l'écriture que la tradition doivent etre enseignées et vénérées.[PARAGRAPH:2]L'Église catholique se caractérise par la reconnaissance de l'autorité du pape, éveque de Rome et successeur de saint Pierre. Cette branche du christianisme regroupe l'Église catholique occidentale de rite latin et les Églises catholiques orientales.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY</Tag>
@@ -106,6 +115,15 @@
 		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_RELIGION_ORTHODOXY_PEDIA</Tag>
+		<English>[TAB]Orthodoxy is one of the three major divisions (Catholicism, Orthodoxy, and Protestantism) within Christianity. Catholicism and Orthodoxy got officially separated after many years of debates and arguments in the Great Schism in 1054[PARAGRAPH:2]In classical Christian usage, the term orthodox refers to a set of doctrines which gained prominence in the 4th century AD. The Roman Emperor Constantine I initiated a series of ecumenical councils to try to standardize what was by then, not a necessarily homogeneous religion in terms of theology. The most significant of these early debates was that between the Homoousian doctrine of Athanasius and Eustathius (Trinitarianism) and the Heteroousian doctrine of Arius and Eusebius (Arianism).[PARAGRAPH:2]The Homoousian doctrine gradually won out in the Roman Church and came to be referred to as orthodoxy in most Christian contexts, since this became the viewpoint of the majority (although, of course, many non-Trinitarian Christians still object to this terminology). Following the Great Schism, both the Western and Eastern churches continued to consider themselves uniquely orthodox and catholic. Over time the Western church gradually identified itself more with the "Catholic" label and Westerners gradually associated the "Orthodox" label more with the Eastern church (in some other languages the "Catholic" label is not necessarily identified with the Western church). In addition to the Eastern Orthodox Church, there also exists a separate Oriental Orthodox communion, as well as other smaller communions that are commonly associated with the "Orthodox" label.[PARAGRAPH:2]The Eastern Orthodox Church uses the original form of the Nicene Creed created at the First Council of Constantinople in 381, in contrast to the Roman Catholic church, which uses the Nicene creed with the addition of the phrase 'and the Son' (see Filioque clause). This change is one of many causes for the Great Schism formalized in 1054 by simultaneous proclamations of "Anathema" from the leadership of the Orthodox Churches in the East and the Bishop of Rome (Pope) in the West. This emphasis on the use of the original "creed" is shared today by all Eastern Orthodox Christians.[PARAGRAPH:2]The Orthodox Church is composed of several self-governing ecclesial bodies, each geographically and nationally distinct but theologically unified. Each self-governing (or autocephalous) body, often but not always encompassing a nation, is shepherded by a synod of bishops whose duty, among other things, is to preserve and teach the Apostolic and patristic traditions and related church practices. As in the Roman Catholic Church, Anglican Church, Assyrian Church of the East, Oriental Orthodoxy and some other churches, Orthodox bishops trace their lineage back to the Apostles through the process of Apostolic Succession.</English>
+		<French>[TAB]L'orthodoxie ou christianisme orthodoxe descend en droite ligne des premicres communautés chrétiennes fondées par les apôtres de Jésus dans les provinces orientales de l'Empire romain et comptant quelque 350 millions de fidcles. Elle est organisée en de nombreuses Églises territoriales (et non nationales) qui forment ensemble l'« Église orthodoxe » ou « Communion orthodoxe » fidcle r la théologie des sept conciles du premier millénaire chrétien et au droit canon qui en découle. Jusqu'au schisme de 1054, les Églises d'Occident (Église catholique comprise) furent elles aussi orthodoxes, c'est-r-dire conformes r la théologie et au droit canon des sept conciles du premier millénaire.[PARAGRAPH:2]Les Églises fidcles aux sept conciles, donc orthodoxes, sont présentes dans l'antique zone de culture grecque, c'est-r-dire dans la zone orientale du bassin de la Méditerranée, Palestine, Liban, Égypte, Turquie, Irak, Syrie, Éthiopie, Arménie, Soudan, voir (Portail:Chrétiens d'Orient) . Ces Églises sont aussi concentrées dans les zones de peuplement slave (Russie, Ukraine, Biélorussie, Bulgarie, Serbie, Monténégro, Macédoine) ainsi qu'en Géorgie, en Roumanie et bien sur en Grcce. Elles sont réparties dans le monde entier au travers de la diaspora des communautés d'origine et par le biais de convertis. Ce groupe d'Églises (ou plutôt : ces Églises en inter-communion) partage une compréhension, un enseignement et des offices suivant le rite de l'Empire romain d'orient 1et se considcrent comme faisant partie d'une seule et meme Église. La Bible et la Liturgie sont lues dans les langues nationales actuelles ou anciennes (araméen, arménien classique, grec ancien, vieux-slave).</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM</Tag>
 		<English>Protestantism</English>
 		<French>
@@ -154,6 +172,15 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_PROTESTANTISM_PEDIA</Tag>
+		<English>[TAB]Protestantism is one of the three major divisions (Catholicism, Orthodoxy, and Protestantism) within Christianity. It is a movement that began in northern Europe in the early 16th century as a reaction against medieval Roman Catholic doctrines and practices.[PARAGRAPH:2]The doctrines of the various Protestant denominations and non-denominations vary, but most non-denominational doctrines include justification by grace through faith and not through works, known as Sola Fide, the priesthood of all believers, and the Bible as the ultimate authority in matters of faith and order, known as Sola Scriptura, which is Latin for 'by scripture alone'.[PARAGRAPH:2]In the 16th century the followers of Martin Luther established the evangelical churches of Germany and Scandinavia. Reformed churches in Switzerland were established by John Calvin and more radical reformers such as Huldrych Zwingli. Thomas Cranmer reformed the Church of England and later John Knox established a more radical Calvinist communion in the Church of Scotland.</English>
+		<French>[TAB]Le protestantisme ou le christianisme protestant regroupe l'ensemble des courants religieux chrétiens sortis du catholicisme qui ont pris naissance en Europe lors de la Réforme sous l'impulsion de théologiens tels que Martin Luther, Jean Calvin, Jan Hus, Ulrich Zwingli et bien d'autres.[PARAGRAPH:2]On compte vingt-six unions d'églises au sein de la seule fédération protestante de France.1 Le terme protestant est utilisé pour la premicre fois en 1529, quand les seigneurs et les villes qui suivaient la doctrine de Martin Luther se sont déclarés contre les décisions prises par la dicte impériale r Spire r majorité catholique.[PARAGRAPH:2]Les protestants français, d'abord appelés « luthériens » au début par leurs adversaires, seront ensuite nommés par dérision « huguenots », puis « religionnaires ». Il s'agit de l'abréviation de « ceux de la Religion prétendue réformée », appellation officielle du protestantisme dans les actes royaux.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ISLAM</Tag>

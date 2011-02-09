@@ -361,7 +361,7 @@
 			<Civilopedia>TXT_KEY_CIV_AUSTRIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1160AD</StartingYear>
-			<LoadingTime>25</LoadingTime>
+			<LoadingTime>20</LoadingTime>
 			<UP1>TXT_KEY_UP_AUS</UP1>
 			<UP2>TXT_KEY_UP_AUS2</UP2>
 			<UHV1>TXT_KEY_UHV_AUS1</UHV1>
@@ -2547,7 +2547,7 @@
 			<Civilopedia>TXT_KEY_CIV_ENGLAND_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1060AD</StartingYear>
-			<LoadingTime>20</LoadingTime>
+			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_ENG</UP1>
 			<UP2>TXT_KEY_UP_ENG2</UP2>
 			<UHV1>TXT_KEY_UHV_ENG1</UHV1>
@@ -3645,7 +3645,7 @@
 			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>852AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_GER</UP1>
 			<UP2>TXT_KEY_UP_GER2</UP2>
 			<UHV1>TXT_KEY_UHV_GER1</UHV1>
@@ -4023,7 +4023,7 @@
 			<Civilopedia>TXT_KEY_CIV_HUNGARY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>895AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_HUN</UP1>
 			<UP2>TXT_KEY_UP_HUN2</UP2>
 			<UHV1>TXT_KEY_UHV_HUN1</UHV1>
@@ -4379,7 +4379,7 @@
 			<Civilopedia>TXT_KEY_CIV_KIEV_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>864AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_KIE</UP1>
 			<UP2>TXT_KEY_UP_KIE2</UP2>
 			<UHV1>TXT_KEY_UHV_KIE1</UHV1>
@@ -5073,7 +5073,7 @@
 			<Civilopedia>TXT_KEY_CIV_NORSE_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>770AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_NOR</UP1>
 			<UP2>TXT_KEY_UP_NOR2</UP2>
 			<UHV1>TXT_KEY_UHV_NOR1</UHV1>
@@ -5781,7 +5781,7 @@
 			<Civilopedia>TXT_KEY_CIV_PORTUGAL_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1100AD</StartingYear>
-			<LoadingTime>25</LoadingTime>
+			<LoadingTime>20</LoadingTime>
 			<UP1>TXT_KEY_UP_POR</UP1>
 			<UP2>TXT_KEY_UP_POR2</UP2>
 			<UHV1>TXT_KEY_UHV_POR1</UHV1>
@@ -6152,7 +6152,7 @@
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>909AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_SPN</UP1>
 			<UP2>TXT_KEY_UP_SPN2</UP2>
 			<UHV1>TXT_KEY_UHV_SPN1</UHV1>
@@ -6504,7 +6504,7 @@
 			<Civilopedia>TXT_KEY_CIV_SWEDEN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1500AD</StartingYear>
-			<LoadingTime>45</LoadingTime>
+			<LoadingTime>50</LoadingTime>
 			<UP1>TXT_KEY_UP_SWE</UP1>
 			<UP2>TXT_KEY_UP_SWE2</UP2>
 			<UHV1>TXT_KEY_UHV_SWE1</UHV1>
@@ -7216,7 +7216,7 @@
 			<Civilopedia>TXT_KEY_CIV_VENEZIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>800AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_VEN</UP1>
 			<UP2>TXT_KEY_UP_VEN2</UP2>
 			<UHV1>TXT_KEY_UHV_VEN1</UHV1>
@@ -7593,7 +7593,7 @@
 			<Civilopedia>TXT_KEY_CIV_LITHUANIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1236AD</StartingYear>
-			<LoadingTime>20</LoadingTime>
+			<LoadingTime>25</LoadingTime>
 			<UP1>TXT_KEY_UP_LIT</UP1>
 			<UP2>TXT_KEY_UP_LIT2</UP2>
 			<UHV1>TXT_KEY_UHV_LIT1</UHV1>
