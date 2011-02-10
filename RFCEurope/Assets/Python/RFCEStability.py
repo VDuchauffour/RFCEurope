@@ -8,6 +8,7 @@ import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
+import RFCEMaps as rfcemaps
 utils = RFCUtils.RFCUtils()
 
 # globals
@@ -27,7 +28,7 @@ iCathegoryCivics = 1
 iCathegoryEconomy = 2
 iCathegoryExpansion = 3
 
-
+tStabilityPenalty = ( -3, -1, -1, 0, 0, 0 )
 
 class RFCEStability:
 
@@ -115,13 +116,14 @@ class RFCEStability:
                         
                         
                 if ( iGameTurn % 6 == 1 ):
-                        szShortName = cyPlayer.getCivilizationShortDescription()
+                        #szShortName = cyPlayer.getCivilizationShortDescription()
                         print(" Turn: ",iGameTurn)
                         print " ---------------- New Stability For " + cyPlayer.getCivilizationShortDescription()
-                        print("  ",szShortName," Stability : ",pPlayer.getStability() )
+                        print("                  Stability : ",pPlayer.getStability() )
                         print("                  Cities    : ",pPlayer.getStabilityBase( iCathegoryCities ) + pPlayer.getStabilityVary( iCathegoryCities ))
                         print("                  Civics    : ",pPlayer.getStabilityBase( iCathegoryCivics ) + pPlayer.getStabilityVary( iCathegoryCivics ))
                         print("                  Economy   : ",pPlayer.getStabilityBase( iCathegoryEconomy ) + pPlayer.getStabilityVary( iCathegoryEconomy ) )
+                        print("                  Expansion : ",pPlayer.getStabilityBase( iCathegoryExpansion ) + pPlayer.getStabilityVary( iCathegoryExpansion ) )
                         print("                  Swing     : ",pPlayer.getStabilitySwing() )
 
                 
@@ -139,7 +141,14 @@ class RFCEStability:
 
         def onCityBuilt(self, iPlayer, x, y):
                 self.recalcCivicCombos(iPlayer)
-                pass
+                iProv = rfcemaps.tProinceMap[y][x]
+                pPlayer = gc.getPlayer( iPlayer )
+                if ( pPlayer.getProvinceType( iProv ) >= con.iProvinceNatural ):
+                        pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
+                else:
+                        pPlayer.changeStabilityBase( iCathegoryExpansion, -1 )
+                self.recalcEpansion( pPlayer )
+                
                 
 
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
@@ -150,8 +159,23 @@ class RFCEStability:
 			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                 self.recalcCivicCombos(playerType)
-                
-                pass
+                self.recalcCivicCombos(owner)
+                iProv = city.getProvince()
+                pOwner = gc.getPlayer( owner )
+                pConq = gc.getPlayer( playerType )
+                iProvOwnerType = pOwner.getProvinceType( iProv )
+                iProvConqType = pConq.getProvinceType( iProv )
+                if ( iProvOwnerType >= con.iProvinceNatural ):
+                        pOwner.changeStabilityBase( iCathegoryExpansion, -3 )
+                        pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 3 )
+                if ( iProvConqType >= con.iProvinceNatural ):
+                        pConq.changeStabilityBase( iCathegoryExpansion, 1 )
+                        pConq.setStabilitySwing( pConq.getStabilitySwing() + 3 )
+                if ( pConq.getCivics(5) == 28 ):
+                        pConq.changeStabilityBase( iCathegoryExpansion, 1 )
+                self.recalcEpansion( pOwner )
+                self.recalcEpansion( pConq )
+
 
         def onCityRazed(self, iOwner, playerType, city):
             	#Sedna17: Not sure what difference between iOwner and playerType is here
@@ -163,11 +187,15 @@ class RFCEStability:
 			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                 self.recalcCivicCombos(playerType)
-                pass
+                gc.getPlayer( playerType ).changeStabilityBase( iCathegoryExpansion, -1 )
+                gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -2 )
+                self.recalcEpansion( gc.getPlayer( playerType ) )
+
 
                                                 
         def onImprovementDestroyed(self, owner):
-                pass
+                pPlayer = gc.getPlayer( owner )
+                pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 2 )
 
 
         def onTechAcquired(self, iTech, iPlayer):
@@ -430,3 +458,22 @@ class RFCEStability:
                 iFinancialStability = min( max( ( iFinances - iInflation + iImports + iExports )/iPopNum + iProductionPenalty,  -4 ), 4 )
                 pPlayer.setStabilityVary( iCathegoryEconomy, iFinancialStability + iIndustrialStability )
                 
+        def recalcEpansion( self, pPlayer ):
+                apCityList = PyPlayer(pPlayer.getID()).getCityList()
+                iExpStability = 0
+                iCivic5 = pPlayer.getCivics(5)
+                for pLoopCity in apCityList:
+                        pCity = pLoopCity.GetCy()
+                        iProvType = pPlayer.getProvinceType( pCity.getProvince() )
+                        iExpStability += tStabilityPenalty[ iProvType ]
+                        if ( iCivic5 == 27 and iProvType <= con.iProvinceOuter ): # Imperialism
+                                iExpStability += 1
+                iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceCore )
+                iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural )
+                pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )
+                if ( pPlayer.getMaster() > -1 ):
+                        iExpStability += 8
+                if ( iCivic5 == 26 ):
+                        iExpStability += 3*pPlayer.countVassals()
+                else:
+                        iExpStability += pPlayer.countVassals()
