@@ -32,7 +32,6 @@ TODO:
 		Add food near Dijon
 		Nasty Dutch bug
 		Fix Dutch getting overwhelmed by German culture (even a city flips away form the player)
-MV1		Remove Barbarian leaderhead from the civilopedia
 MV1		General XML updates, removing unused XML parts
 		Faith point bonuses to be based on average faith, not total faith
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
@@ -62,7 +61,7 @@ Changes for Beta 7:
 		Started the process of connecting all UHVs to the RFCE timeline
 		Moved venetian starting position
 		Updates to the CivGameCoreDLL's code
-		Civilopedia hides units, independent civs
+		Civilopedia hides units, independent civs, barbarian LH and some other things
 		Forbidden some units to become a mercenary
 		Added complete changelog - please use this detailed form from now on
 	
