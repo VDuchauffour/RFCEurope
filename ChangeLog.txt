@@ -44,6 +44,7 @@ AR		Update hungarian settler map
 		Readd apples and citrus as a food resource (with no health bonus)
 		Custom Events?
 		Minor Civs?
+		Turn Burgundian Winery art 180 degrees
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -78,6 +79,7 @@ Changes for Beta 7:
 	
 	Balance:
 		Apothecary cost increased
+		Reduced speed of the French Musketeer to 1
 	
 	Bugfixes:
 		!!!NOTE!!! Due to the large amount of major changes, there will be a large number of new bugs introduced in this version	
