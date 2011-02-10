@@ -8032,7 +8032,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>2</iMoves>
+			<iMoves>1</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
