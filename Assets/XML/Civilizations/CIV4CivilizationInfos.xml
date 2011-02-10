@@ -14,7 +14,7 @@
 			<Civilopedia>TXT_KEY_CIV_ARABIA_PEDIA</Civilopedia>
 			<!-- Rhye -->
 			<!-- 3Miro Begin Update -->
-			<StartingYear>632AD</StartingYear>
+			<StartingYear>635AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_ARA</UP1>
 			<UP2>TXT_KEY_UP_ARA2</UP2>
@@ -360,7 +360,7 @@
 			<Adjective>TXT_KEY_CIV_AUSTRIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_AUSTRIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1160AD</StartingYear>
+			<StartingYear>1282AD</StartingYear>
 			<LoadingTime>20</LoadingTime>
 			<UP1>TXT_KEY_UP_AUS</UP1>
 			<UP2>TXT_KEY_UP_AUS2</UP2>
@@ -1105,7 +1105,7 @@
 			<Adjective>TXT_KEY_CIV_BURGUNDY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BURGUNDY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>840AD</StartingYear>
+			<StartingYear>843AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_BUR</UP1>
 			<UP2>TXT_KEY_UP_BUR2</UP2>
@@ -1826,7 +1826,7 @@
 			<Adjective>TXT_KEY_CIV_CORDOBA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CORDOBA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>712AD</StartingYear>
+			<StartingYear>711AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_COR</UP1>
 			<UP2>TXT_KEY_UP_COR2</UP2>
@@ -2173,7 +2173,7 @@
 			<Adjective>TXT_KEY_CIV_DUTCH_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_DUTCH_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1580AD</StartingYear>
+			<StartingYear>1581AD</StartingYear>
 			<LoadingTime>60</LoadingTime>
 			<UP1>TXT_KEY_UP_DUT</UP1>
 			<UP2>TXT_KEY_UP_DUT2</UP2>
@@ -2542,7 +2542,7 @@
 			<Adjective>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ENGLAND_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1060AD</StartingYear>
+			<StartingYear>1066AD</StartingYear>
 			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_ENG</UP1>
 			<UP2>TXT_KEY_UP_ENG2</UP2>
@@ -3267,7 +3267,7 @@
 			<Adjective>TXT_KEY_CIV_GENOA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GENOA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1020AD</StartingYear>
+			<StartingYear>1016AD</StartingYear>
 			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_GEN</UP1>
 			<UP2>TXT_KEY_UP_GEN2</UP2>
@@ -3640,7 +3640,7 @@
 			<Adjective>TXT_KEY_CIV_GERMANY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>852AD</StartingYear>
+			<StartingYear>858AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_GER</UP1>
 			<UP2>TXT_KEY_UP_GER2</UP2>
@@ -4374,7 +4374,7 @@
 			<Adjective>TXT_KEY_CIV_KIEV_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_KIEV_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>864AD</StartingYear>
+			<StartingYear>880AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_KIE</UP1>
 			<UP2>TXT_KEY_UP_KIE2</UP2>
@@ -4717,7 +4717,7 @@
 			<Adjective>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MOSCOW_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1323AD</StartingYear>
+			<StartingYear>1380AD</StartingYear>
 			<LoadingTime>30</LoadingTime>
 			<UP1>TXT_KEY_UP_MOS</UP1>
 			<UP2>TXT_KEY_UP_MOS2</UP2>
@@ -5068,7 +5068,7 @@
 			<Adjective>TXT_KEY_CIV_NORSE_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NORSE_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>770AD</StartingYear>
+			<StartingYear>780AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_NOR</UP1>
 			<UP2>TXT_KEY_UP_NOR2</UP2>
@@ -5429,7 +5429,7 @@
 			<Adjective>TXT_KEY_CIV_POLAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_POLAND_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>970AD</StartingYear>
+			<StartingYear>966AD</StartingYear>
 			<LoadingTime>15</LoadingTime>
 			<UP1>TXT_KEY_UP_POL</UP1>
 			<UP2>TXT_KEY_UP_POL2</UP2>
@@ -5776,7 +5776,7 @@
 			<Adjective>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PORTUGAL_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1100AD</StartingYear>
+			<StartingYear>1139AD</StartingYear>
 			<LoadingTime>20</LoadingTime>
 			<UP1>TXT_KEY_UP_POR</UP1>
 			<UP2>TXT_KEY_UP_POR2</UP2>
@@ -6147,7 +6147,7 @@
 			<Adjective>TXT_KEY_CIV_SPAIN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>909AD</StartingYear>
+			<StartingYear>910AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_SPN</UP1>
 			<UP2>TXT_KEY_UP_SPN2</UP2>
@@ -6499,7 +6499,7 @@
 			<Adjective>TXT_KEY_CIV_SWEDEN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SWEDEN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1500AD</StartingYear>
+			<StartingYear>1523AD</StartingYear>
 			<LoadingTime>50</LoadingTime>
 			<UP1>TXT_KEY_UP_SWE</UP1>
 			<UP2>TXT_KEY_UP_SWE2</UP2>
@@ -6852,7 +6852,7 @@
 			<Adjective>TXT_KEY_CIV_TURKEY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_TURKEY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1300AD</StartingYear>
+			<StartingYear>1299AD</StartingYear>
 			<LoadingTime>30</LoadingTime>
 			<UP1>TXT_KEY_UP_TUR</UP1>
 			<UP2>TXT_KEY_UP_TUR2</UP2>
@@ -7211,7 +7211,7 @@
 			<Adjective>TXT_KEY_CIV_VENEZIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_VENEZIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>800AD</StartingYear>
+			<StartingYear>810AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_VEN</UP1>
 			<UP2>TXT_KEY_UP_VEN2</UP2>
