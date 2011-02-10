@@ -12,33 +12,39 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 
 TODO:
+(3M, MV1, AR - you can put this in the beginning of the line if you are working on that)
 	
-	Rebalance Turkey, Hungary, Netherlands, Poland
-	make Religions hate each other even more
-	Rebalance tech speed and starting techs
-	Autorun gets one extra turn sometimes
-	Expose the Civ names code to Python
-	Get the Round Church to give couple of mounted Units
-	No unhappyness from non-state religion doesn't work with Religious Law Civic
-	Check resources around Venice
-	Maybe nerf the Manor House
-	Early Culture?
-	Great Generals leaving for the Crusade?
-	Fix Bad Byzantine stability early on
-	Fix Ottoman bad stability with expansion
-	Check Genoa 1st Turn culture bug
-	EDEAD: You might also want to merge the parts of Better BTS AI that are in SoI, the change in plot danger calculations is also a huge speed boost. Workers, settlers etc. only need to know if danger is >0 and BTS normally counts all the units nearby, so most of the calculations are in vain, and BBAI fixes that.
-	Check Burgundy spawn data
-	Add food near Dijon
-	Nasty Dutch bug
-	Fix Dutch getting overwhelmed by German culture (even a city flips away form the player)
-	Remove Barbarian leaderhead from the civilopedia
-	Faith point bonuses to be based on average faith, not total faith
-	LH update: update Mindaugas, Vytautas, add Margaret, Ivan Asev
-	Custom DiploMusic for Bulgaria (Simeon, Ivan Asev), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
-	Readd apples and citrus as only food resource (no health bonus)?
-	Custom Events?
-	Minor Civs?
+		Rebalance Turkey, Hungary, Netherlands, Poland
+		make Religions hate each other even more
+		Rebalance tech speed and starting techs
+		Autorun gets one extra turn sometimes
+		Expose the Civ names code to Python
+		Get the Round Church to give couple of mounted Units
+		No unhappyness from non-state religion doesn't work with Religious Law Civic
+		Maybe nerf the Manor House
+		Early Culture?
+		Great Generals leaving for the Crusade?
+		Fix Bad Byzantine stability early on
+		Fix Ottoman bad stability with expansion
+		Check Genoa 1st Turn culture bug
+		EDEAD: You might also want to merge the parts of Better BTS AI that are in SoI, the change in plot danger calculations is also a huge speed boost. Workers, settlers etc. only need to know if danger is >0 and BTS normally counts all the units nearby, so most of the calculations are in vain, and BBAI fixes that.
+		Check Burgundy spawn data
+		Add food near Dijon
+		Nasty Dutch bug
+		Fix Dutch getting overwhelmed by German culture (even a city flips away form the player)
+MV1		Remove Barbarian leaderhead from the civilopedia
+MV1		General XML updates, removing unused XML parts
+		Faith point bonuses to be based on average faith, not total faith
+		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
+AR		Fix a couple province names, update a few provinces
+AR		Big overhaul to the map, especially in the Balkans, Carpathian Basin, Iberian Peninsula, Lithuania
+AR		LH update: update Mindaugas, Vytautas, add Margaret, Ivan Asev
+AR		Update hungarian settler map
+		General overhaul to ALL the leader personalities
+		Custom DiploMusic for Bulgaria (Simeon, Ivan Asev), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
+		Readd apples and citrus as a food resource (with no health bonus)
+		Custom Events?
+		Minor Civs?
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -47,10 +53,10 @@ Changes for Beta 7:
 	Major changes:
 		Introduction of the new province system
 		New stability system based on provinces
-		Lithuania added
+		Added Lithuania as playable civ
 		Research overhaul, connecting techs to the RFCE timeline
 		Speed tweaks
-		Moved starting date of Moscow to 1383, Austria to 1282
+		Moved starting date of Moscow to 1380, Austria to 1282, Portugal to 1139
 		
 	Minor changes:	
 		Started the process of connecting all UHVs to the RFCE timeline
@@ -61,11 +67,12 @@ Changes for Beta 7:
 		Added complete changelog - please use this detailed form from now on
 	
 	XML updates:
-		XML entries for missing leaders, religions
+		Added missing XML entries for religions and for a couple leaders
 		RRRaskolnikov's french translations
 		Added Gold icon in text for Manoralism
 		Deleted unused info from a few files
 		Renamed Winery improvement to Vineyard
+		Adjusted all starting dates in the XML
 		
 	Art updates:	
 		Ethnic russian Great General
@@ -74,7 +81,7 @@ Changes for Beta 7:
 		Apothecary cost increased
 	
 	Bugfixes:
-	
+		!!!NOTE!!! Due to the large amount of major changes, there will be a large number of new bugs introduced in this version	
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
@@ -99,9 +106,8 @@ Changes for BETA 6:
 	Added AI cheat code, now some players get bonus for AI to AI battles. We can use that to boost some Ai players and get more historic game (like Ottomans vs Byzantium and Bulgaria)
 	Dutch gets a "hidden" buff on the Faith Points, with only couple of cities, they can never accumulate enough
 	Lots of XML text changes from AbsintheRed
-	Leader updates: added Maria, Haakon, Andrea Dandolo, George III
+	Leader art updates, added Maria II, Haakon IV, Andrea Dandolo, George III
 	Fixed leader cycling for all civs
-	merijn_v1 updates pedia (and Barb leader no longer shows)
 	New art for Burgundian Winery
 	New Diplo music for many leaders
 	Basic information for the leaderheads (english only)
@@ -123,7 +129,7 @@ Changes for BETA 6:
 	Bugfix - it was that Burgundy loses an UHV if they lose a city to France or Germany, this was leftover from an older UHV
 	Bugfix - Norse city razing UHV works now
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for BETA 5:
 (released: 2011.01.09.)
@@ -180,7 +186,7 @@ Changes for BETA 5:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for BETA 4:
-(released: 2011.12.29.)
+(released: 2010.12.29.)
 
 	Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
 	Fixed Reformation bug, now checking for the correct buildings (CatholicScriptorium is no more)

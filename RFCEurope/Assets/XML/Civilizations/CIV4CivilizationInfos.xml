@@ -361,7 +361,7 @@
 			<Civilopedia>TXT_KEY_CIV_AUSTRIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1282AD</StartingYear>
-			<LoadingTime>20</LoadingTime>
+			<LoadingTime>30</LoadingTime>
 			<UP1>TXT_KEY_UP_AUS</UP1>
 			<UP2>TXT_KEY_UP_AUS2</UP2>
 			<UHV1>TXT_KEY_UHV_AUS1</UHV1>
@@ -2174,7 +2174,7 @@
 			<Civilopedia>TXT_KEY_CIV_DUTCH_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1581AD</StartingYear>
-			<LoadingTime>60</LoadingTime>
+			<LoadingTime>70</LoadingTime>
 			<UP1>TXT_KEY_UP_DUT</UP1>
 			<UP2>TXT_KEY_UP_DUT2</UP2>
 			<UHV1>TXT_KEY_UHV_DUT1</UHV1>
@@ -4718,7 +4718,7 @@
 			<Civilopedia>TXT_KEY_CIV_MOSCOW_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1380AD</StartingYear>
-			<LoadingTime>30</LoadingTime>
+			<LoadingTime>40</LoadingTime>
 			<UP1>TXT_KEY_UP_MOS</UP1>
 			<UP2>TXT_KEY_UP_MOS2</UP2>
 			<UHV1>TXT_KEY_UHV_MOS1</UHV1>
@@ -6500,7 +6500,7 @@
 			<Civilopedia>TXT_KEY_CIV_SWEDEN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1523AD</StartingYear>
-			<LoadingTime>50</LoadingTime>
+			<LoadingTime>60</LoadingTime>
 			<UP1>TXT_KEY_UP_SWE</UP1>
 			<UP2>TXT_KEY_UP_SWE2</UP2>
 			<UHV1>TXT_KEY_UHV_SWE1</UHV1>
