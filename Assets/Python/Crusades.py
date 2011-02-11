@@ -774,8 +774,8 @@ class Crusades:
 		
 	def crusadeMakeUnits( self, tPlot ):
 		iLeader = self.getLeader()
-		self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-		self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
+		self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 2 )
+		self.makeUnit( xml.iKnight, iLeader, tPlot, 3 )
 		self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
 		self.makeUnit( xml.iSpearman, iLeader, tPlot, 1 )
 		self.makeUnit( xml.iGuisarme, iLeader, tPlot, 1 )

@@ -7,6 +7,7 @@ import Popup
 import cPickle as pickle                # LOQ 2005-10-12
 import CvTranslator
 import RFCUtils
+import ProvinceManager # manage provinces here to link to spawn/rebirth
 import Consts as con
 import XMLConsts as xml
 
@@ -159,6 +160,9 @@ tLateLeaders = con.tLateLeaders
 
 class RiseAndFall:
 
+        def __init__(self):
+                self.pm = ProvinceManager.ProvinceManager()
+                # Init the Province Manager
 
 ##################################################
 ### Secure storage & retrieval of script data ###
@@ -624,6 +628,8 @@ class RiseAndFall:
 #####################################  
 
         def setup(self):            
+                
+                self.pm.setup()
 
                 #self.setupBirthTurnModifiers() (causes a crash on civ switch)
 
@@ -693,16 +699,28 @@ class RiseAndFall:
 
                 # 3Miro: only the very first civ in the WB file
 		# Sedna17: Not wanted when Burgundy spawns late?
-                if (pBurgundy.isHuman()):
-                        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
-                        unit = plotBurgundy.getUnit(0)
-                        unit.centerCamera()
+                # 3Miro: I don't know what the point of this is, I think it has to do with the first nation spawning with no units
+                #       coded in the WB, lets remove it to see what breaks
+                #if (pBurgundy.isHuman()):
+                #        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
+                #        unit = plotBurgundy.getUnit(0)
+                #        unit.centerCamera()
                 #center camera on Egyptian units
                 #if (pEgypt.isHuman()):
                 #        plotEgypt = gc.getMap().plot(tCapitals[iEgypt][0], tCapitals[iEgypt][1])   
                 #        unit = plotEgypt.getUnit(0)
                 #        unit.centerCamera()
                 #        #print (unit)
+                
+        ### 3Miro Province Related Functions ###
+        def onCityBuilt(self, iPlayer, x, y):
+                self.pm.onCityBuilt(iPlayer, x, y)
+                
+        def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
+                self.pm.onCityAcquired(owner, playerType, city, bConquest, bTrade)
+
+        def onCityRazed(self, iOwner, playerType, city):
+                self.pm.onCityRazed(iOwner, playerType, city)
 
 
         def clear600ADChina(self):
@@ -1083,7 +1101,7 @@ class RiseAndFall:
 
                 
 
-        def secession(self, iGameTurn):
+        def secession(self, iGameTurn): # 3Miro secession - check every 5 turns
             
                 iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
                 for j in range(iRndnum, iRndnum + iNumPlayers):
@@ -2078,6 +2096,8 @@ class RiseAndFall:
 
 
         def createStartingUnits( self, iCiv, tPlot ):
+                # set the provinces
+                self.pm.onSpawn( iCiv )
                 # Change here to make later starting civs work
 		if (iCiv == iBurgundy):
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2282,7 +2302,7 @@ class RiseAndFall:
                 self.showArea(iPope)
 
 		if ( pBurgundy.isHuman() and tBirth[iBurgundy] > 0 ):
-                        # 3Miro: prohibit contact on turn 0
+                        # 3Miro: prohibit contact on turn 0 (with the Chronological spawn order this should not be needed)
                         tBurgundyStart = ( tCapitals[iBurgundy][0]+2, tCapitals[iBurgundy][1] )
 			utils.makeUnit(iSettler, iBurgundy, tCapitals[iBurgundy], 1)
 			utils.makeUnit(xml.iArcher, iBurgundy, tCapitals[iBurgundy], 1)

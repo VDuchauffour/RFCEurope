@@ -18,17 +18,13 @@ TODO:
 		make Religions hate each other even more
 		Rebalance tech speed and starting techs
 		Autorun gets one extra turn sometimes
-		Expose the Civ names code to Python
 		Get the Round Church to give couple of mounted Units
 		No unhappyness from non-state religion doesn't work with Religious Law Civic
-		Maybe nerf the Manor House
-		Early Culture?
 		Great Generals leaving for the Crusade?
 		Fix Bad Byzantine stability early on
 		Fix Ottoman bad stability with expansion
 		Check Genoa 1st Turn culture bug
 		EDEAD: You might also want to merge the parts of Better BTS AI that are in SoI, the change in plot danger calculations is also a huge speed boost. Workers, settlers etc. only need to know if danger is >0 and BTS normally counts all the units nearby, so most of the calculations are in vain, and BBAI fixes that.
-		Check Burgundy spawn data
 		Add food near Dijon
 		Nasty Dutch bug
 		Fix Dutch getting overwhelmed by German culture (even a city flips away form the player)

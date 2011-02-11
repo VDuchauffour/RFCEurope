@@ -611,7 +611,7 @@ iVytautas = 43
 
 ###################### PROVINCES #######################################
 #Iberia 0+
-iP_Galicia = 0
+iP_GaliciaSpain = 0
 iP_Castile = 1 # La Mancha
 ##########################
 iP_Leon = 3
@@ -667,7 +667,7 @@ iP_Tyrol = 47
 
 # Poland 50+
 iP_Pomerania = 50
-iP_Galicia = 51
+iP_GaliciaPoland = 51
 iP_GreaterPoland = 52
 iP_Masovia = 53
 iP_LesserPoland = 54
