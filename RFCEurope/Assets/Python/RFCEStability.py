@@ -50,7 +50,7 @@ class RFCEStability:
                                 pPlayer.changeStabilityBase( iCath, - pPlayer.getStabilityBase( iCath ) )
                                 pPlayer.setStabilityVary( iCath, 0 )
                                 pPlayer.setStabilitySwing( 0 )
-
+                gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 10 ) # to account for the cities build in the WB
 
         def checkTurn(self, iGameTurn):
                 print "3Miro NewStability Check Turn"

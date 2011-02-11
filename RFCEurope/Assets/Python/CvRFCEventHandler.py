@@ -30,7 +30,6 @@ import Plague
 #import Communications
 import Crusades  
 import RFCEMaps as rfcemaps      
-import ProvinceManager
         
 gc = CyGlobalContext()        
 #iBetrayalCheaters = 15
@@ -167,7 +166,7 @@ class CvRFCEventHandler:
                
                 self.eventManager = eventManager
 
-                self.pm = ProvinceManager.ProvinceManager()
+                
                 self.data = StoredData.StoredData()
                 self.rnf = RiseAndFall.RiseAndFall()
                 self.barb = Barbs.Barbs()
@@ -216,7 +215,7 @@ class CvRFCEventHandler:
 
         def onGameStart(self, argsList):
                 'Called at the start of the game'
-                self.pm.setup()
+                #self.pm.setup()
                 self.data.setupScriptData()
                 self.rnf.setup()
                 self.rel.setup()
@@ -247,7 +246,7 @@ class CvRFCEventHandler:
                 #	print("  3Miro - Special City Captured: ")
                 #	print("  Params: ",owner,playerType,bConquest,bTrade)
                 
-                self.pm.onCityAcquired(owner,playerType,city,bConquest,bTrade)
+                self.rnf.onCityAcquired(owner,playerType,city,bConquest,bTrade)
                 	
                 self.cnm.renameCities(city, playerType)
                 
@@ -320,7 +319,7 @@ class CvRFCEventHandler:
                 #'City Razed'
                 city, iPlayer = argsList
 
-                self.pm.onCityRazed(city.getOwner(),iPlayer,city)
+                self.rnf.onCityRazed(city.getOwner(),iPlayer,city)
 
                 self.sta.onCityRazed(city.getOwner(),iPlayer,city)
                 self.vic.onCityRazed(iPlayer,city)
@@ -352,7 +351,7 @@ class CvRFCEventHandler:
                 
                 iOwner = city.getOwner()
                 
-                self.pm.onCityBuilt(iOwner, city.getX(), city.getY() )
+                self.rnf.onCityBuilt(iOwner, city.getX(), city.getY() )
                 
                 if (iOwner < con.iNumActivePlayers): 
                         self.cnm.assignName(city)

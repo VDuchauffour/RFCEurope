@@ -579,7 +579,7 @@ class Victory:
 			
                         if ( iGameTurn == i1600AD and self.getGoal(iSpain, 0) == -1 ):
                                 if ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3] ) == 11 ) and ( gc.doesOwnOrVassalCities( iSpain, tSpainControl[1][0], tSpainControl[1][1], tSpainControl[1][2], tSpainControl[1][3] ) == 11 ):
-                                        if ( not gc.doesHaveOtherReligion(tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3], con.iCatholicism)):
+                                        if ( not gc.doesHaveOtherReligion(tSpainControl[0][0], tSpainControl[0][1], tSpainControl[0][2], tSpainControl[0][3], xml.iCatholicism)):
                                                 self.setGoal( iSpain, 0, 1 )
                                         else:
                                                 self.setGoal( iSpain, 0, 0 )

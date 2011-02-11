@@ -823,7 +823,7 @@ class RFCEBalance:
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
 		gc.setPapalPlayer( iPope, xml.iCatholicism )
 
-		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack
+		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack, sync with RNF module
 		
 		
 		for iCiv in range( iNumPlayers ):

@@ -67,6 +67,7 @@ pDutch = gc.getPlayer(iDutch)
 pPope = gc.getPlayer(iPope)
 
 # Province States
+iProvinceNone = con.iProvinceNone
 iProvinceOwn = con.iProvinceOwn           
 iProvinceConquer = con.iProvinceConquer  
 iProvinceDominate = con.iProvinceDominate 
@@ -91,7 +92,7 @@ tByzantiumDesire = []
 
 tFranceCore = []
 tFranceNorm = []
-tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Lorraine]
+tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Lorraine,xml.iP_Bavaria,xml.iP_Saxony]
 tFrancePot2Core = [xml.iP_IleDeFrance,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Bretagne]
 tFrancePot2Norm = [xml.iP_Normandy,xml.iP_Provence,xml.iP_Flanders]
 tFranceDesire = []
@@ -154,7 +155,7 @@ tKievDesire = [xml.iP_Wallachia,xml.iP_Moesia]
 
 tHungaryCore = []
 tHungaryNorm = []
-tHungaryOuter = [xml.iP_Salzburg,xml.iP_Croatia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Wallachia,xml.iP_Galicia,xml.iP_Bohemia,xml.iP_Silesia]
+tHungaryOuter = [xml.iP_Salzburg,xml.iP_Croatia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Wallachia,xml.iP_GaliciaPoland,xml.iP_Bohemia,xml.iP_Silesia]
 tHungaryPot2Core = [xml.iP_Hungary,xml.iP_UpperHungary,xml.iP_Pannonia]
 tHungaryPot2Norm = [xml.iP_Transylvania,xml.iP_Austria,xml.iP_Slavonia,xml.iP_Moravia]
 tHungaryDesire = []
@@ -162,7 +163,7 @@ tHungaryDesire = []
 tSpainCore = []
 tSpainNorm = []
 tSpainOuter = [xml.iP_Lusitania,xml.iP_Aquitania,xml.iP_Tetouan,xml.iP_Provence,xml.iP_Balears,xml.iP_Oran,xml.iP_Sardinia,xml.iP_Corsica,xml.iP_Netherlands]
-tSpainPot2Core = [xml.iP_Leon,xml.iP_Galicia,xml.iP_Aragon,xml.iP_Valencia]
+tSpainPot2Core = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Valencia]
 tSpainPot2Norm = [xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia]
 tSpainDesire = []
 
@@ -170,7 +171,7 @@ tPolandCore = []
 tPolandNorm = []
 tPolandOuter = [xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Lithuania,xml.iP_Polotsk,xml.iP_WhiteRus,xml.iP_Livonia,xml.iP_Volhynia,xml.iP_Podolia]
 tPolandPot2Core = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Brest]
-tPolandPot2Norm = [xml.iP_Silesia,xml.iP_Suvalkija,xml.iP_Galicia]
+tPolandPot2Norm = [xml.iP_Silesia,xml.iP_Suvalkija,xml.iP_GaliciaPoland]
 tPolandDesire = []
 
 tGenoaCore = []
@@ -196,14 +197,14 @@ tPortugalDesire = []
 
 tLithuaniaCore = []
 tLithuaniaNorm = []
-tLithuaniaOuter = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Masovia,xml.iP_Galicia,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda,xml.iP_Chernigov,xml.iP_Smolensk,xml.iP_Estonia]
+tLithuaniaOuter = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Masovia,xml.iP_GaliciaPoland,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda,xml.iP_Chernigov,xml.iP_Smolensk,xml.iP_Estonia]
 tLithuaniaPot2Core = [xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Polotsk]
 tLithuaniaPot2Norm = [xml.iP_Suvalkija,xml.iP_Novgorod,xml.iP_WhiteRus]
 tLithuaniaDesire = []
 
 tAustriaCore = []
 tAustriaNorm = []
-tAustriaOuter = [xml.iP_Verona,xml.iP_Pannonia,xml.iP_UpperHungary,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Croatia,xml.iP_Slavonia,xml.iP_Silesia,xml.iP_Galicia]
+tAustriaOuter = [xml.iP_Verona,xml.iP_Pannonia,xml.iP_UpperHungary,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Croatia,xml.iP_Slavonia,xml.iP_Silesia,xml.iP_GaliciaPoland]
 tAustriaPot2Core = [xml.iP_Austria,xml.iP_Salzburg,xml.iP_Carinthia]
 tAustriaPot2Norm = [xml.iP_Tyrol,xml.iP_Bohemia,xml.iP_Moravia]
 tAustriaDesire = []
@@ -217,7 +218,7 @@ tTurkeyDesire = []
 
 tMoscowCore = []
 tMoscowNorm = []
-tMoscowOuter = [xml.iP_Zaporizhia,xml.iP_Crimea,xml.iP_Moldova,xml.iP_Galicia,xml.iP_Wallachia,xml.iP_Kuban,xml.iP_Brest,xml.iP_Polotsk,xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Estonia,xml.iP_Finland,xml.iP_Pomerania,xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Suvalkija]
+tMoscowOuter = [xml.iP_Zaporizhia,xml.iP_Crimea,xml.iP_Moldova,xml.iP_GaliciaPoland,xml.iP_Wallachia,xml.iP_Kuban,xml.iP_Brest,xml.iP_Polotsk,xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Estonia,xml.iP_Finland,xml.iP_Pomerania,xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Suvalkija]
 tMoscowPot2Core = [xml.iP_Moscow,xml.iP_Murom,xml.iP_NizhnyNovgorod,xml.iP_Rostov,xml.iP_Vologda,xml.iP_Karelia,xml.iP_Smolensk,xml.iP_Chernigov,xml.iP_Simbirsk]
 tMoscowPot2Norm = [xml.iP_Novgorod,xml.iP_Kiev,xml.iP_WhiteRus,xml.iP_Volhynia,xml.iP_Donets,xml.iP_Pereyaslavl,xml.iP_Sloboda]
 tMoscowDesire = []
@@ -446,4 +447,30 @@ class ProvinceManager:
                 #print(" ProvinceManager Razed")
                 pass
         
-
+        def onSpawn( self, iPlayer ):
+                # when a new nations spawns, old nation should lose some of their provinces
+                if ( iPlayer == iArabia ):
+                        pByzantium.setProvinceType( xml.iP_Syria, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Arabia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Egypt, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Galilee, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Jerusalem, iProvinceOuter )
+                elif ( iPlayer == iBulgaria ):
+                        pByzantium.setProvinceType( xml.iP_Thrace, iProvinceOuter )
+                elif ( iPlayer == iGermany ):
+                        pFrankia.setProvinceType( xml.iP_Bavaria, iProvinceNone )
+                        pFrankia.setProvinceType( xml.iP_Saxony, iProvinceNone )
+                elif ( iPlayer == iAustria ):
+                        pHungary.setProvinceType( xml.iP_Austria, iProvinceOuter ) # maybe others
+                elif ( iPlayer == iTurkey ):
+                        pByzantium.setProvinceType( xml.iP_Opsikion, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Thrakesion, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Anatolikon, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Charsiadon, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Armeniakon, iProvinceOuter )
+                elif ( iPlayer == iSweden ):
+                        pNorse.setProvinceType( xml.iP_Norrland, iProvinceOuter )
+                        pNorse.setProvinceType( xml.iP_Svealand, iProvinceOuter )
+                        pNorse.setProvinceType( xml.iP_Gotaland, iProvinceOuter )
