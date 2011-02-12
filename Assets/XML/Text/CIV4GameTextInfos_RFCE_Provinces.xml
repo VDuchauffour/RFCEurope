@@ -9,28 +9,28 @@
 		<Tag>TXT_KEY_PROVINCE_TILE_HELP</Tag>
 		<English>Province: </English>
 		<French>Province: </French>
-		<German>Province: </German>
-		<Italian>Province: </Italian>
-		<Spanish>Province: </Spanish>
+		<German>Provinz: </German>
+		<Italian>Provincia: </Italian>
+		<Spanish>Provincia: </Spanish>
 		<Russian>Province: </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_STABILITY_HELP</Tag>
 		<English>Stability: </English>
-		<French>Stability: </French>
-		<German>Stability: </German>
-		<Italian>Stability: </Italian>
-		<Spanish>Stability: </Spanish>
-		<Russian>Stability: </Russian>
+		<French>Stabilit&#233;: </French>
+		<German>Stabilit&#228;t: </German>
+		<Italian>Stabilit&#224;: </Italian>
+		<Spanish>Estabilidad: </Spanish>
+		<Russian>&#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;: </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_0</Tag>
 		<English>Unstable</English>
-		<French>Unstable</French>
-		<German>Unstable</German>
-		<Italian>Unstable</Italian>
-		<Spanish>Unstable</Spanish>
-		<Russian>Unstable</Russian>
+		<French>Instable</French>
+		<German>Instabil</German>
+		<Italian>Instabile</Italian>
+		<Spanish>Inestable</Spanish>
+		<Russian>&#205;&#229;&#241;&#242;&#238;&#233;&#234;&#232;&#233;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_1</Tag>
@@ -53,29 +53,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_3</Tag>
 		<English>Solid</English>
-		<French>Solid</French>
-		<German>Solid</German>
-		<Italian>Solid</Italian>
-		<Spanish>Solid</Spanish>
-		<Russian>Solid</Russian>
+		<French>Solide</French>
+		<German>Solide</German>
+		<Italian>Solido</Italian>
+		<Spanish>S&#243;lida</Spanish>
+		<Russian>&#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_4</Tag>
 		<English>Solid</English>
-		<French>Solid</French>
-		<German>Solid</German>
-		<Italian>Solid</Italian>
-		<Spanish>Solid</Spanish>
-		<Russian>Solid</Russian>
+		<French>Solide</French>
+		<German>Solide</German>
+		<Italian>Solido</Italian>
+		<Spanish>S&#243;lida</Spanish>
+		<Russian>&#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_5</Tag>
 		<English>Solid</English>
-		<French>Solid</French>
-		<German>Solid</German>
-		<Italian>Solid</Italian>
-		<Spanish>Solid</Spanish>
-		<Russian>Solid</Russian>
+		<French>Solide</French>
+		<German>Solide</German>
+		<Italian>Solido</Italian>
+		<Spanish>S&#243;lida</Spanish>
+		<Russian>&#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_0</Tag>

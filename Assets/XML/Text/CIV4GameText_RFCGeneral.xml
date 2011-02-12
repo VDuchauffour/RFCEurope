@@ -67,56 +67,6 @@
 		<Russian>&#194;&#232;&#246;&#229;-&#234;&#238;&#240;&#238;&#235;&#252;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_</Tag>
-		<English>Marsh</English>
-		<French>
-			<Text>Mar&#233;cage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sumpf</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Palude</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ci&#233;naga</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#193;&#238;&#235;&#238;&#242;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SWAMP_PEDIA</Tag>
-		<English>Swamp</English>
-		<French>
-			<Text>Marais</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Moor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pantano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pantano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#193;&#238;&#235;&#238;&#242;&#237;&#251;&#233;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_STARTING_YEAR</Tag>
 		<English>Starting year</English>
 		<French>Ann&#233;e de d&#233;part</French>
@@ -277,51 +227,6 @@
 		<Italian>Promozione gratuita: (%s1)</Italian>
 		<Spanish>Ascenso gratis: (%s1)</Spanish>
 		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#207;&#240;&#238;&#234;&#224;&#247;&#234;&#224;: (%s1)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_RENAISSANCE</Tag>
-		<English>Renaissance Age</English>
-		<French>Renaissance</French>
-		<German>Renaissance</German>
-		<Italian>Et&#224; rinascimentale</Italian>
-		<Spanish>Renacimiento</Spanish>
-		<Russian>&#221;&#239;&#238;&#245;&#224; &#194;&#238;&#231;&#240;&#238;&#230;&#228;&#229;&#237;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
-		<English>Medieval Age</English>
-		<French>Age M&#233;di&#233;val</French>
-		<German>Mittelalter</German>
-		<Italian>Et&#224; medievale</Italian>
-		<Spanish>Edad Media</Spanish>
-		<Russian>&#209;&#240;&#229;&#228;&#237;&#229;&#226;&#229;&#234;&#238;&#226;&#252;&#229;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_IRON</Tag>
-		<English>Iron Age</English>
-		<French>Age de Fer</French>
-		<German>Eisenzeit</German>
-		<Italian>Et&#224; del ferro</Italian>
-		<Spanish>Edad de Hierro</Spanish>
-		<Russian>&#198;&#229;&#235;&#229;&#231;&#237;&#251;&#233; &#194;&#229;&#234;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_BRONZE</Tag>
-		<English>Bronze Age</English>
-		<French>Age de Bronze</French>
-		<German>Bronzezeit</German>
-		<Italian>Et&#224; del bronzo</Italian>
-		<Spanish>Edad de Bronce</Spanish>
-		<Russian>&#193;&#240;&#238;&#237;&#231;&#238;&#226;&#251;&#233; &#194;&#229;&#234;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_STONE</Tag>
-		<English>Stone Age</English>
-		<French>Age de Pierre</French>
-		<German>Steinzeit</German>
-		<Italian>Eta della pietra</Italian>
-		<Spanish>Edad de Piedra</Spanish>
-		<Russian>&#202;&#224;&#236;&#229;&#237;&#237;&#251;&#233; &#194;&#229;&#234;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVEGAME_TURN</Tag>
