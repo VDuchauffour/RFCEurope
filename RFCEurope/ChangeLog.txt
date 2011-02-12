@@ -43,6 +43,8 @@ AR		Update hungarian settler map
 		Turn Burgundian Winery art 180 degrees
 		Add a LeaderHeadInfos.xml.light file
 		Dynamic Civ Names for Lithuania
+MV1		Python UP's cleanup
+MV1		Translate the province names (after they province system is finished)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,6 +74,7 @@ Changes for Beta 7:
 		Renamed Winery improvement to Vineyard
 		Adjusted all starting dates in the XML
 		Many textfixes
+		Many translations
 		
 	Art updates:	
 		Ethnic russian Great General

@@ -255,6 +255,7 @@ class UniquePowers:
 
 
 
+#merijn_v1: cleanup
 ##------------------RUSSIAN U.P.-------------------
 
         #def russianUP(self):
@@ -278,6 +279,7 @@ class UniquePowers:
 
 
 
+#merijn_v1: cleanup
 ##------------------TURKISH U.P.-------------------
 
 
@@ -298,7 +300,7 @@ class UniquePowers:
 
                                 
 
-
+#merijn_v1: cleanup
 ##------------------MONGOLIAN U.P.-------------------
 
         #def setMongolAI(self):
@@ -404,7 +406,7 @@ class UniquePowers:
 
 
 
-
+#merijn_v1: cleanup
 ##------------------AMERICAN U.P.-------------------
 
         #def americanUP(self):
