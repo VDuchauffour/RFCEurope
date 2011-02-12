@@ -71,6 +71,7 @@ Changes for Beta 7:
 		Deleted unused info from a few files
 		Renamed Winery improvement to Vineyard
 		Adjusted all starting dates in the XML
+		Many textfixes
 		
 	Art updates:	
 		Ethnic russian Great General
