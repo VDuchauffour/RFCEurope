@@ -33,7 +33,7 @@ MV1		General XML updates, removing unused XML parts
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
 AR		Fix a couple province names, update a few provinces
 AR		Big overhaul to the map, especially in the Balkans, Carpathian Basin, Iberian Peninsula, Lithuania
-AR		LH update: update Mindaugas, Vytautas, add Margaret, Ivan Asev
+AR		LHs: update Barbarossa, Mindaugas, Vytautas; add Margaret, Ivan Asev, Karl XII/Gustav Adolph
 AR		Update hungarian settler map
 		General overhaul to ALL the leader personalities
 		Custom DiploMusic for Bulgaria (Simeon, Ivan Asev), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
@@ -41,6 +41,8 @@ AR		Update hungarian settler map
 		Custom Events?
 		Minor Civs?
 		Turn Burgundian Winery art 180 degrees
+		Add a LeaderHeadInfos.xml.light file
+		Dynamic Civ Names for Lithuania
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -74,8 +76,9 @@ Changes for Beta 7:
 		Ethnic russian Great General
 	
 	Balance:
-		Apothecary cost increased
+		Apothecary cost increased to 100
 		Reduced speed of the French Musketeer to 1
+		Stronger crusades
 	
 	Bugfixes:
 		!!!NOTE!!! Due to the large amount of major changes, there will be a large number of new bugs introduced in this version	
@@ -185,7 +188,7 @@ Changes for BETA 5:
 Changes for BETA 4:
 (released: 2010.12.29.)
 
-	Synced Units (fixed Polish Pladin bug), Projects (fixed Portugal UP bug)
+	Synced Units (fixed Polish Paladin bug), Projects (fixed Portugal UP bug)
 	Fixed Reformation bug, now checking for the correct buildings (CatholicScriptorium is no more)
 	Changed Bulgarian UHV to conquer Constantinople by 1000AD (it is doable and more challenging then 1200AD)
 	Changed Norce UHV to not count Independent cities
@@ -507,7 +510,7 @@ Changes for Alpha 7:
   Fixed bug with Arab UU   
   
   
-Changes for Beta 6:
+Changes for Alpha 6:
 
 Fixed Venician bug not allowing them to declare war to Independents
 Fixed a bug with the Crusaders conqering Jerusalem
