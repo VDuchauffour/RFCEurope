@@ -801,6 +801,16 @@ class Victory:
                 #                pBurgundy.setUHV( 0, 1 )
                 #        else:
                 #                pBurgundy.setUHV( 0, 0 )
+                if ( iGameTurn == xml.i1376AD and pBurgundy.getUHV( 0 ) == -1 ):
+                        bOwn = True
+                        for iProv in tBurgundyControl:
+                                if ( pBurgundy.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
+                                        bOwn = False
+                                        break
+                        if ( bOwn ):
+                                pBurgundy.setUHV( 0, 1 )
+                        else:
+                                pBurgundy.setUHV( 0, 0 )
                         
                 iCulture =pBurgundy.getUHVCounter(1) + pBurgundy.countCultureProduced() # 3Miro: testing, move it below later
                 pBurgundy.setUHVCounter(1, iCulture)
@@ -827,7 +837,41 @@ class Victory:
                 # Have most Catholic FP in 1077 (Walk to Canossa)
                 # Have vassals (Hapsburg)
                 # Start the reformation
-                pass
+                if ( iGameTurn == xml.i1359AD and pGermany.getUHV( 0 ) == -1 ):
+                        bOwn = True
+                        for iProv in tGermanyControl:
+                                if ( pGermany.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
+                                        bOwn = False
+                                        break
+                        if ( bOwn ):
+                                pGermany.setUHV( 0, 1 )
+                        else:
+                                pGermany.setUHV( 0, 0 )
+
+                if ( iGameTurn == xml.i1461AD and pGermany.getUHV( 1 ) == -1 ):
+                        iCount = 0
+                        for iVassal in range( iNumMajorPlayers ):
+                                pVassal = gc.getPlayer( iVassal )
+                                if ( iVassal != iGermany and pVassal.isAlive() ):
+                                        if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
+                                                iCount += 1
+                        
+                        if ( iCount >= 3 ):
+                                pGermany.setUHV( 1, 1 )
+                        else:
+                                pGermany.setUHV( 1, 0 )
+
+                if ( iGameTurn == xml.i1540AD and pGermany.getUHV( 2 ) == -1 ):
+                        iGermanPower = teamGermany.getPower(False)
+                        bPower = True
+                        for iPlayer in range( iNumMajorPlayers ):
+                                pPlayer = gc.getPlayer( iPlayer )
+                                if ( pPlayer.isAlive() and gc.getTeam( pPlayer.getTeam() ).getPower(False) > iGermanPower ):
+                                        bPower = False
+                        if ( bPower ):
+                                pGermany.setUHV( 2, 1 )
+                        else:
+                                pGermany.setUHV( 2, 0 )
                 
         def checkKiev( self, iGameTurn ):
                 iFood = pKiev.getUHVCounter( 0 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
