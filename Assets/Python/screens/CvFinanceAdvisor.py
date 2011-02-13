@@ -128,9 +128,9 @@ class CvFinanceAdvisor:
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
                 elif (iStability >= 0 and iStability < 5):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                elif (iStability >= 10 and iStability < 20):
+                elif (iStability >= 5 and iStability < 10):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                elif (iStability >= 20):
+                elif (iStability >= 10):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
 
                 if (gc.getPlayer(ePlayer).isHuman()):
@@ -415,10 +415,20 @@ class CvFinanceAdvisor:
                         
         def printText(self, ePlayer, iCathegory, panel, x, y, z ):
         	#3Miro: print stuff
-        	if (gc.getPlayer(ePlayer).isHuman()):
+                pPlayer = gc.getPlayer(ePlayer)
+        	if (pPlayer.isHuman()):
         		#sString = utils.getParString( ePlayer, iCathegory )
-                        sString = ""
+                        if ( iCathegory == iCathegoryCities ):
+                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCities ), pPlayer.getStabilityVary( iCathegoryCities ) )
+                        elif ( iCathegory == iCathegoryCivics ):
+                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCivics ), pPlayer.getStabilityVary( iCathegoryCivics ) )
+                        elif ( iCathegory == iCathegoryEconomy ):
+                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryEconomy ), pPlayer.getStabilityVary( iCathegoryEconomy ) )
+                        elif ( iCathegory == iCathegoryExpansion ):
+                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryExpansion ), pPlayer.getStabilityVary( iCathegoryExpansion ) )
+                        else:
+                                sString = ""
+                        #sString = ""
         		#print( " 3Miro: sString ",sString )
         		self.getScreen().setLabel(panel,"Background", sString, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 	#Rhye - end
-        
