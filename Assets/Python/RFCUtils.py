@@ -901,13 +901,6 @@ class RFCUtils:
                 
         def resetUHV(self, iPlayer):
                 if (iPlayer < iNumMajorPlayers):
-                        if (self.getGoal(iPlayer, 0) == -1):
-                                self.setGoal(iPlayer, 0, 0)
-                        if (self.getGoal(iPlayer, 1) == -1):
-                                self.setGoal(iPlayer, 1, 0)
-                        if (self.getGoal(iPlayer, 2) == -1):
-                                self.setGoal(iPlayer, 2, 0)
-                if (iPlayer < iNumMajorPlayers):
                         pPlayer = gc.getPlayer( iPlayer )
                         if ( pPlayer.getUHV( 0 ) == -1 ):
                                 pPlayer.setUHV( 0, 0 )

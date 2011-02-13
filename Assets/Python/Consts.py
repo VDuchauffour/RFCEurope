@@ -1028,3 +1028,9 @@ iNumProvinceTypes  = 6
 # special parameters
 iIsHasStephansdom = 0 # special parameter
 iIsHasEscorial    = 1 # special parameter
+
+# Stability Cathegories
+iCathegoryCities = 0
+iCathegoryCivics = 1
+iCathegoryEconomy = 2
+iCathegoryExpansion = 3
