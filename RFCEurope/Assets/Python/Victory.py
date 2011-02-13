@@ -295,14 +295,14 @@ class Victory:
                 #scriptDict['bGenoaCorps'] = iChange
                 #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        #def getCorporationsFounded( self ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['bCorpsFounded']
+        def getCorporationsFounded( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['bCorpsFounded']
 
-        #def setCorporationsFounded( self, iChange ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['bCorpsFounded'] = iChange
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        def setCorporationsFounded( self, iChange ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['bCorpsFounded'] = iChange
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
                 
 #######################################
@@ -522,8 +522,7 @@ class Victory:
                                                 iCathedralCounter += 1
                                         if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
                                                 pKiev.setUHV( 2, 1 )
-                                        pKiev.getUHVCounter( 2, 100 * iMonasteryCounter + iCathedralCounter
-                                         )
+                                        pKiev.setUHVCounter( 2, 100 * iMonasteryCounter + iCathedralCounter )
                 # Sedna17: Polish UHV changed again                 	                	
                 elif ( iPlayer == iPoland ):
                         if ( pPoland.isAlive() and pPoland.getUHV( 2 ) == -1 ):

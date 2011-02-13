@@ -5,6 +5,7 @@ import PyHelpers
 import CvUtil
 import ScreenInput
 import CvScreenEnums
+import Consts as con
 
 # < Mercenaries Start >
 import MercenaryUtils
@@ -22,10 +23,10 @@ localText = CyTranslator()
 objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 # < Mercenaries End >
 
-iCathegoryCities = 0
-iCathegoryCivics = 1
-iCathegoryEconomy = 2
-iCathegoryExpansion = 3
+iCathegoryCities = con.iCathegoryCities
+iCathegoryCivics = con.iCathegoryCivics
+iCathegoryEconomy = con.iCathegoryEconomy
+iCathegoryExpansion = con.iCathegoryExpansion
 
 class CvFinanceAdvisor:
 

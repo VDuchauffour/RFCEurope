@@ -26,10 +26,10 @@ iNumTotalPlayers = con.iNumTotalPlayers
 iBarbarian = con.iBarbarian
 tCapitals = con.tCapitals
 
-iCathegoryCities = 0
-iCathegoryCivics = 1
-iCathegoryEconomy = 2
-iCathegoryExpansion = 3
+iCathegoryCities = con.iCathegoryCities
+iCathegoryCivics = con.iCathegoryCivics
+iCathegoryEconomy = con.iCathegoryEconomy
+iCathegoryExpansion = con.iCathegoryExpansion
 
 tStabilityPenalty = ( -3, -1, -1, 0, 0, 0 )
 
@@ -354,6 +354,7 @@ class Stability:
                         iCityStability += max( iHappyStability, -2 ) + iHealthStability # AI keeps very unhappy cities
                         iCityStability += max( iReligionStability + iHurryStability, -3 )+ max( iCultureStability, -3 )
                         iCityStability = min( max( iCityStability, -5 ), 5 )
+                iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
                 print(" City Stability for: ",iPlayer," Caths: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
                 pPlayer.setStabilityVary( iCathegoryCities, iCityStability)
 

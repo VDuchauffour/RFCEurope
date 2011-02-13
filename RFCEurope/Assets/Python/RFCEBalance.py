@@ -565,7 +565,7 @@ class RFCEBalance:
 		# iFP_Displomacy: iAttitude += 	iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of an attitude point
 		
-		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 20, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 8, 100 )
 		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Civic, 50, 100 )
 		
 		gc.setReligionBenefit( xml.iIslam, con.iFP_Growth, 50, 100 )
