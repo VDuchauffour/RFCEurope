@@ -1,26 +1,5 @@
 # Rhye's and Fall of Civilization - (a part of) Unique Powers
 
-#Egypt in CvPlayer::canDoCivics() and in WBS
-#India in CvPlayer::updateMaxAnarchyTurns()
-#China (and England before the change) in CvPlayer::getProductionNeeded()
-#Babylonia in CvPlayer.cpp::acquireCity()
-#Greece CvCity:getGreatPeopleRate()
-#Carthage in MercenaryUtils.py and CvMercenarymanager.py
-#Persia (USED TO BE in CvHandicapInfo::getDistanceMaintenancePercentByID(); THEN in RiseAndFall.py, collapseCapitals()), NOW in Stability.py, onCityAcquired()
-#Rome in CvPlot::movementCost()
-#Japan, Spain and England in CvUnit::init(). Turkey used to be there as well
-#Ethiopia in Congresses.py (USED TO BE in CvUnit::init() and CvUnit::upgrade())
-#Maya in CvHandicapInfo::getResearchPercentByID()
-#Khmer in CvUnit::canMoveInto()
-#Germany (USED TO BE IN in CvUnit::init(), CvUnit::upgrade() and CvUnitAI::AI_pillageValue()); NOW IN CvUnit::upgradePrice()
-#France in CvPlayerAI::AI_getAttitudeVal() and in Congresses.py
-#Netherlands in CvUnit::canEnterTerritory()
-#Mali in CvPlot::calculateYield() and Stability.py and CvInfos.cpp (CvHandicapInfo::getResearchPercentByID())
-#Portugal in CvUnit::init()
-#Inca in CvPlot::calculateNatureYield()
-#Mongolia (USED TO BE IN in CvUnit::pillage()); now HERE and in CvRFCEventHandler.py (in OnCityRazed() and BeginPlayerTurn())
-#Turkey HERE + in CvPlayer::canRazeCity()
-#America HERE + in CvCity::getCulturePercentAnger()
 
 #Emperor is in RiseAndFall in the collapse and scession functions, RFCUtils.collapseImmune and stability
 #Khan is in c++ CvPlayer.cpp::acquireCity()

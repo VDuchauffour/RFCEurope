@@ -646,24 +646,7 @@ class RiseAndFall:
 
 		#Sedna17 Respawn setup special respawn turns
 		self.setupRespawnTurns()
-                # initial Gold and Stability modifyers
-                #if (not gc.getPlayer(0).isPlayable()): #late start condition
-                #        self.assign600ADTechs()
-                #        pChina.changeGold(300)
-                #        pJapan.changeGold(150)
-                #        pIndependent.changeGold(100)
-                #        pIndependent2.changeGold(100)
-                #        pNative.changeGold(300)
-                #        pCeltia.changeGold(500)
-                #        utils.setStability(iVikings, utils.getStability(iVikings) + 2)
-                #        utils.setStability(iChina, utils.getStability(iChina) + 3)
-                #        utils.setStability(iJapan, utils.getStability(iJapan) + 4)
-                #else:
-                #        utils.setStability(iChina, utils.getStability(iChina) + 2)
-                #        utils.setStability(iIndia, utils.getStability(iIndia) + 2)
-                #        pIndependent.changeGold(50)
-                #        pIndependent2.changeGold(50)
-                #        pNative.changeGold(100)
+
                 
                 
                                
@@ -685,6 +668,7 @@ class RiseAndFall:
                 pGenoa.changeGold(400)
                 pEngland.changeGold(400)
                 pPortugal.changeGold(450)
+                pLithuania.changeGold(600)
                 pAustria.changeGold(700)
                 pTurkey.changeGold(1000)
                 pSweden.changeGold(1000)
@@ -705,12 +689,7 @@ class RiseAndFall:
                 #        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
                 #        unit = plotBurgundy.getUnit(0)
                 #        unit.centerCamera()
-                #center camera on Egyptian units
-                #if (pEgypt.isHuman()):
-                #        plotEgypt = gc.getMap().plot(tCapitals[iEgypt][0], tCapitals[iEgypt][1])   
-                #        unit = plotEgypt.getUnit(0)
-                #        unit.centerCamera()
-                #        #print (unit)
+
                 
         ### 3Miro Province Related Functions ###
         def onCityBuilt(self, iPlayer, x, y):
@@ -2053,10 +2032,6 @@ class RiseAndFall:
                 if ( iCiv == iDutch ):
                         utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)                       
                 # 3Miro: on war declaration (Greece gets 4! Phalanx!)
-                #if (iCiv == iAmerica):
-                #        utils.makeUnit(xml.iPikeman, iCiv, tPlot, 3)
-                #        utils.makeUnit(xml.iMusketman, iCiv, tPlot, 3)
-                #        utils.makeUnit(xml.iCannon, iCiv, tPlot, 3)
                 pass
 
 
@@ -2210,15 +2185,6 @@ class RiseAndFall:
                 self.showArea(iCiv)
                 self.initContact(iCiv)
                 # 3Miro: create units on spawn
-                #if (iCiv == iGreece):
-                #        utils.makeUnit(con.iSettler, iCiv, tPlot, 1)
-                #        utils.makeUnit(con.iWarrior, iCiv, tPlot, 2)
-                #        utils.makeUnit(con.iGreekPhalanx, iCiv, tPlot, 2) #3
-                #        tSeaPlot = self.findSeaPlots(tPlot, 1)
-                #        if (tSeaPlot):
-                #                #utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 1)
-                #                pGreece.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
-                #                utils.makeUnit(con.iSettler, iCiv, tSeaPlot, 1)
                 pass
                         
 
@@ -2354,10 +2320,6 @@ class RiseAndFall:
                         utils.makeUnit(iSettler, iDutch, tCapitals[iDutch], 1)
                         utils.makeUnit(xml.iMaceman, iDutch, tCapitals[iDutch], 1)
 
-
-                #if ( pGreece.isHuman() ):
-                #    utils.makeUnit(iSettler, iGreece, tCapitals[iGreece], 1)
-                #    utils.makeUnit(iScout, iGreece, tCapitals[iGreece], 1)
                 
 
 

@@ -43,7 +43,7 @@ AR		Update hungarian settler map
 		Turn Burgundian Winery art 180 degrees
 		Add a LeaderHeadInfos.xml.light file
 		Dynamic Civ Names for Lithuania
-MV1		Python UP's cleanup
+MV1		Python cleanup
 MV1		Translate the province names (after they province system is finished)
 MV1		Give "Unique names" to the UHV
 
@@ -66,6 +66,8 @@ Changes for Beta 7:
 		Civilopedia hides units, independent civs, barbarian LH and some other things
 		Forbidden some units to become a mercenary
 		Added complete changelog - please use this detailed form from now on
+		Python code that is used in RFC but not in RFCE is removed
+		Lithuania recieves some gold at spawn
 	
 	XML updates:
 		Added missing XML entries for religions and for a couple leaders
@@ -79,6 +81,7 @@ Changes for Beta 7:
 		
 	Art updates:	
 		Ethnic russian Great General
+		Better looking buttons (and a smaller size of the FPK)
 	
 	Balance:
 		Apothecary cost increased to 100
