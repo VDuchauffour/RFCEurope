@@ -147,14 +147,14 @@ class RFCEBalance:
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
 		gc.setProductionModifiersAI(iBurgundy,  110, 110, 120, 130 )
 		gc.setProductionModifiersHu(iBurgundy,  110, 110, 120, 130 )
-		gc.setProductionModifiersAI(iByzantium, 200, 200, 200, 250 )
-		gc.setProductionModifiersHu(iByzantium, 200, 200, 200, 250 )
+		gc.setProductionModifiersAI(iByzantium, 200, 150, 200, 200 )
+		gc.setProductionModifiersHu(iByzantium, 200, 150, 200, 200 )
 		gc.setProductionModifiersAI(iFrankia,   125, 110, 125, 125 )
 		gc.setProductionModifiersHu(iFrankia,   125, 110, 125, 125 )
 		gc.setProductionModifiersAI(iArabia,    125, 125, 150, 250 )
 		gc.setProductionModifiersHu(iArabia,    125, 125, 150, 250 )
-		gc.setProductionModifiersAI(iBulgaria,  125, 125, 125, 160 )
-		gc.setProductionModifiersHu(iBulgaria,  125, 125, 125, 160 )
+		gc.setProductionModifiersAI(iBulgaria,  125, 100, 125, 160 )
+		gc.setProductionModifiersHu(iBulgaria,  125, 100, 125, 160 )
 		gc.setProductionModifiersAI(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiersHu(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiersAI(iSpain,     100, 100, 100, 120 )
@@ -681,6 +681,9 @@ class RFCEBalance:
 		#        this should be "last" resot solution, other methods are always preferable
 		gc.setHistoricalEnemyAICheat( iTurkey, iBulgaria,  10 )
 		gc.setHistoricalEnemyAICheat( iBulgaria, iTurkey, -10 )
+                
+                gc.setHistoricalEnemyAICheat( iSpain, iCordoba,  10 )
+		gc.setHistoricalEnemyAICheat( iCordoba, iSpain, -10 )
                 
                 # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
                 #        second parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions

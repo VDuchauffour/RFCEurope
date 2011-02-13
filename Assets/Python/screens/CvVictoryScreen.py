@@ -792,19 +792,19 @@ class CvVictoryScreen:
 							iRow = screen.appendTableRow(szTable)
 					bEntriesFound = True
 					
-                                #Rhye - start
-                                if (iLoopVC == 7):
-                                        for i in range(3):
-                                                iRow = screen.appendTableRow(szTable)
-                                                screen.setTableText(szTable, 0, iRow, localText.getText(con.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                if (utils.getGoal(self.iActivePlayer, i) == 1):       
-                                                        screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                elif (utils.getGoal(self.iActivePlayer, i) == 0):       
-                                                        screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NO", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                else:       
-                                                        screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NOTYET", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                        bEntriesFound = True
+                                #Rhye - start # 3Miro: this should never get called
+                                #if (iLoopVC == 7):
+                                        #for i in range(3):
+                                                #iRow = screen.appendTableRow(szTable)
+                                                #screen.setTableText(szTable, 0, iRow, localText.getText(con.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                                #screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                                #if (utils.getGoal(self.iActivePlayer, i) == 1):       
+                                                        #screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                                #elif (utils.getGoal(self.iActivePlayer, i) == 0):       
+                                                        #screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NO", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                                #else:       
+                                                        #screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NOTYET", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                        #bEntriesFound = True
                                 #Rhye - end
 					
 				if (bEntriesFound and (iLoopVC < 4)): # 3Miro: last one appends 2 rows
@@ -902,7 +902,7 @@ class CvVictoryScreen:
                 #        just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
                 
                 # UHV 1
-                iGoal = utils.getGoal( self.iActivePlayer, 0 )
+                iGoal = pPlayer.getUHV( 0 )
                 if ( iGoal == -1 ):
                         sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
                 elif ( iGoal == 0 ):
@@ -919,7 +919,7 @@ class CvVictoryScreen:
                 screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+7, self.Y_UHV1+15, self.W_UHV1-10, self.H_UHV1-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 
                 # UHV 2
-                iGoal = utils.getGoal( self.iActivePlayer, 1 )
+                iGoal = pPlayer.getUHV( 1 )
                 if ( iGoal == -1 ):
                         sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
                 elif ( iGoal == 0 ):
@@ -936,7 +936,7 @@ class CvVictoryScreen:
                 screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+7, self.Y_UHV2+15, self.W_UHV2-10, self.H_UHV2-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 
                 # UHV 3
-                iGoal = utils.getGoal( self.iActivePlayer, 2 )
+                iGoal = pPlayer.getUHV( 2 )
                 if ( iGoal == -1 ):
                         sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
                 elif ( iGoal == 0 ):

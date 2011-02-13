@@ -723,7 +723,7 @@ tAIStopBirthThreshold = (
 
 #RiseAndFall. This is one place to tune frequency of resurrections.
 tResurrectionProb = (
-40, #Byzantium
+20, #Byzantium
 80, #Frankia
 60, #Arabia
 30, #Bulgaria
@@ -732,7 +732,7 @@ tResurrectionProb = (
 20, #Venecia
 10, #Burgundy
 70, #Germany
-50, #Kiev
+20, #Kiev
 50, #Hungary
 80, #Spain
 60, #Poland

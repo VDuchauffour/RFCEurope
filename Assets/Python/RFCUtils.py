@@ -42,14 +42,14 @@ class RFCUtils:
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         #Victory
-        def getGoal( self, i, j ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lGoals'][i][j]
+        #def getGoal( self, i, j ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #return scriptDict['lGoals'][i][j]
 
-        def setGoal( self, i, j, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lGoals'][i][j] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #def setGoal( self, i, j, iNewValue ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['lGoals'][i][j] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         #Stability
         
@@ -63,49 +63,48 @@ class RFCUtils:
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) ) 
 
         def getStability( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lStability'][iCiv]
+                return gc.getPlayer( iCiv ).getStability()
 
-        def setStability( self, iCiv, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lStability'][iCiv] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #def setStability( self, iCiv, iNewValue ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['lStability'][iCiv] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getBaseStabilityLastTurn( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lBaseStabilityLastTurn'][iCiv]
+        #def getBaseStabilityLastTurn( self, iCiv ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #return scriptDict['lBaseStabilityLastTurn'][iCiv]
 
-        def setBaseStabilityLastTurn( self, iCiv, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lBaseStabilityLastTurn'][iCiv] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #def setBaseStabilityLastTurn( self, iCiv, iNewValue ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['lBaseStabilityLastTurn'][iCiv] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getStabilityParameters( self, iCiv, iParameter ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lStabilityParameters'][iCiv][iParameter]
+        #def getStabilityParameters( self, iCiv, iParameter ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #return scriptDict['lStabilityParameters'][iCiv][iParameter]
 
-        def setStabilityParameters( self, iCiv,iParameter, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lStabilityParameters'][iCiv][iParameter] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #def setStabilityParameters( self, iCiv,iParameter, iNewValue ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['lStabilityParameters'][iCiv][iParameter] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getGreatDepressionCountdown( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lGreatDepressionCountdown'][iCiv]
+        #def getGreatDepressionCountdown( self, iCiv ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #return scriptDict['lGreatDepressionCountdown'][iCiv]
 
-        def setGreatDepressionCountdown( self, iCiv, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lGreatDepressionCountdown'][iCiv] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #def setGreatDepressionCountdown( self, iCiv, iNewValue ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['lGreatDepressionCountdown'][iCiv] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
                                 
-        def getLastRecordedStabilityStuff( self, iParameter ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lLastRecordedStabilityStuff'][iParameter]
+        #def getLastRecordedStabilityStuff( self, iParameter ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #return scriptDict['lLastRecordedStabilityStuff'][iParameter]
 
-        def setLastRecordedStabilityStuff( self, iParameter, iNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lLastRecordedStabilityStuff'][iParameter] = iNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #def setLastRecordedStabilityStuff( self, iParameter, iNewValue ):
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['lLastRecordedStabilityStuff'][iParameter] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
                 
         def getProsecutionCount( self, iCiv ):
         	#scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -136,105 +135,106 @@ class RFCUtils:
 #######################################
 
         #Stability, RiseNFall, CvFinanceAdvisor
-        def setParameter(self, iPlayer, iParameter, bPreviousAmount, iAmount):
-		if (bPreviousAmount):
-		        self.setStabilityParameters(iPlayer, iParameter, self.getStabilityParameters(iPlayer,iParameter) + iAmount)
-		else:
-		        self.setStabilityParameters(iPlayer, iParameter, 0 + iAmount)
+        #def setParameter(self, iPlayer, iParameter, bPreviousAmount, iAmount):
+		#if (bPreviousAmount):
+		        #self.setStabilityParameters(iPlayer, iParameter, self.getStabilityParameters(iPlayer,iParameter) + iAmount)
+		#else:
+		        #self.setStabilityParameters(iPlayer, iParameter, 0 + iAmount)
         
-        # 3Miro: for numbers in the stability screen
-	def getParString( self, iPlayer, iCathegory ):
-		if ( gc.getPlayer(iPlayer).isHuman()):
-			if ( iCathegory == 0 ):
-				sString = "%i | %i" %( self.getStabilityParameters(iPlayer, con.iParCitiesE), self.getStabilityParameters(iPlayer,con.iParCities3) )
-			elif ( iCathegory == 1 ):
-				sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParCivicsE), self.getStabilityParameters(iPlayer, con.iParCivics3), self.getStabilityParameters(iPlayer, con.iParCivics1) )
-			elif ( iCathegory == 2 ):
-				sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParEconomyE), self.getStabilityParameters(iPlayer, con.iParEconomy3), self.getStabilityParameters(iPlayer, con.iParEconomy1) )
-			elif ( iCathegory == 3 ):
-				sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParExpansionE), self.getStabilityParameters(iPlayer, con.iParExpansion3), self.getStabilityParameters(iPlayer, con.iParExpansion1) )
-			elif ( iCathegory == 4 ):
-				sString = "%i | %i" %(self.getStabilityParameters(iPlayer, con.iParDiplomacyE), self.getStabilityParameters(iPlayer, con.iParDiplomacy3) )
-			else:
-				sString = ""
-		else:
-			sString = ""
-		return sString
+        ## 3Miro: for numbers in the stability screen
+	#def getParString( self, iPlayer, iCathegory ):
+		#if ( gc.getPlayer(iPlayer).isHuman()):
+			#if ( iCathegory == 0 ):
+				#sString = "%i | %i" %( self.getStabilityParameters(iPlayer, con.iParCitiesE), self.getStabilityParameters(iPlayer,con.iParCities3) )
+			#elif ( iCathegory == 1 ):
+				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParCivicsE), self.getStabilityParameters(iPlayer, con.iParCivics3), self.getStabilityParameters(iPlayer, con.iParCivics1) )
+			#elif ( iCathegory == 2 ):
+				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParEconomyE), self.getStabilityParameters(iPlayer, con.iParEconomy3), self.getStabilityParameters(iPlayer, con.iParEconomy1) )
+			#elif ( iCathegory == 3 ):
+				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParExpansionE), self.getStabilityParameters(iPlayer, con.iParExpansion3), self.getStabilityParameters(iPlayer, con.iParExpansion1) )
+			#elif ( iCathegory == 4 ):
+				#sString = "%i | %i" %(self.getStabilityParameters(iPlayer, con.iParDiplomacyE), self.getStabilityParameters(iPlayer, con.iParDiplomacy3) )
+			#else:
+				#sString = ""
+		#else:
+			#sString = ""
+		#return sString
 
-        #CvFinanceAdvisor 
-        def getParCities(self,iCiv):
-            if (self.getStabilityParameters(iCiv,con.iParCitiesE) > 7):
-                    return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-            elif (self.getStabilityParameters(iCiv, con.iParCitiesE) < -7):
-                    return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-            else:
-                    return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
+        ##CvFinanceAdvisor 
+        #def getParCities(self,iCiv):
+            #if (self.getStabilityParameters(iCiv,con.iParCitiesE) > 7):
+                    #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
+            #elif (self.getStabilityParameters(iCiv, con.iParCitiesE) < -7):
+                    #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
+            #else:
+                    #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
 
-        def getParCivics(self,iCiv):
-            if (self.getStabilityParameters(iCiv, con.iParCivicsE) > 7):
-                    return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-            elif (self.getStabilityParameters(iCiv, con.iParCivicsE) < -7):
-                    return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-            else:
-                    return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
+        #def getParCivics(self,iCiv):
+            #if (self.getStabilityParameters(iCiv, con.iParCivicsE) > 7):
+                    #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
+            #elif (self.getStabilityParameters(iCiv, con.iParCivicsE) < -7):
+                    #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
+            #else:
+                    #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
 
-        def getParDiplomacy(self,iCiv):
-            if (self.getStabilityParameters(iCiv, con.iParDiplomacyE) > 7):
-                    return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-            elif (self.getStabilityParameters(iCiv, con.iParDiplomacyE) < -7):
-                    return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-            else:
-                    return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
+        #def getParDiplomacy(self,iCiv):
+            #if (self.getStabilityParameters(iCiv, con.iParDiplomacyE) > 7):
+                    #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
+            #elif (self.getStabilityParameters(iCiv, con.iParDiplomacyE) < -7):
+                    #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
+            #else:
+                    #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
 
                 
-        def getParEconomy(self, iCiv):
-            #print ("ECO", self.getStabilityParameters(con.iParEconomy3), self.getStabilityParameters(con.iParEconomy1), self.getStabilityParameters(con.iParEconomyE))
-            if (self.getStabilityParameters(iCiv, con.iParEconomyE) > 7):
-                    return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-            elif (self.getStabilityParameters(iCiv, con.iParEconomyE) < -7):
-                    return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-            else:
-                    return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
+        #def getParEconomy(self, iCiv):
+            ##print ("ECO", self.getStabilityParameters(con.iParEconomy3), self.getStabilityParameters(con.iParEconomy1), self.getStabilityParameters(con.iParEconomyE))
+            #if (self.getStabilityParameters(iCiv, con.iParEconomyE) > 7):
+                    #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
+            #elif (self.getStabilityParameters(iCiv, con.iParEconomyE) < -7):
+                    #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
+            #else:
+                    #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
                 
-        def getParExpansion(self, iCiv):
-            if (self.getStabilityParameters(iCiv, con.iParExpansionE) > 7):
-                    return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-            elif (self.getStabilityParameters(iCiv, con.iParExpansionE) < -7):
-                    return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-            else:
-                    return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
+        #def getParExpansion(self, iCiv):
+            #if (self.getStabilityParameters(iCiv, con.iParExpansionE) > 7):
+                    #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
+            #elif (self.getStabilityParameters(iCiv, con.iParExpansionE) < -7):
+                    #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
+            #else:
+                    #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
 
-        def getArrow(self, iParameter):
-            if (iParameter == 0):
-                    if (self.getStability(self.getHumanID()) >= self.getLastRecordedStabilityStuff(iParameter) + 6):
-                            return 1
-                    elif (self.getStability(self.getHumanID()) <= self.getLastRecordedStabilityStuff(iParameter) - 6):
-                            return -1
-                    else:
-                            return 0
-            else:
-                    if (iParameter == 1):
-                            iNewValue = self.getParCities()
-                    elif (iParameter == 2):
-                            iNewValue = self.getParCivics()
-                    elif (iParameter == 3):
-                            iNewValue = self.getParEconomy()
-                    elif (iParameter == 4):
-                            iNewValue = self.getParExpansion()
-                    elif (iParameter == 5):
-                            iNewValue = self.getParDiplomacy()
-                    if (iNewValue >= self.getLastRecordedStabilityStuff(iParameter) + 4):
-                            return 1
-                    elif (iNewValue <= self.getLastRecordedStabilityStuff(iParameter) - 4):
-                            return -1
-                    else:
-                            return 0
+        #def getArrow(self, iParameter):
+            #if (iParameter == 0):
+                    #if (self.getStability(self.getHumanID()) >= self.getLastRecordedStabilityStuff(iParameter) + 6):
+                            #return 1
+                    #elif (self.getStability(self.getHumanID()) <= self.getLastRecordedStabilityStuff(iParameter) - 6):
+                            #return -1
+                    #else:
+                            #return 0
+            #else:
+                    #if (iParameter == 1):
+                            #iNewValue = self.getParCities()
+                    #elif (iParameter == 2):
+                            #iNewValue = self.getParCivics()
+                    #elif (iParameter == 3):
+                            #iNewValue = self.getParEconomy()
+                    #elif (iParameter == 4):
+                            #iNewValue = self.getParExpansion()
+                    #elif (iParameter == 5):
+                            #iNewValue = self.getParDiplomacy()
+                    #if (iNewValue >= self.getLastRecordedStabilityStuff(iParameter) + 4):
+                            #return 1
+                    #elif (iNewValue <= self.getLastRecordedStabilityStuff(iParameter) - 4):
+                            #return -1
+                    #else:
+                            #return 0
 
         #Victory
         def countAchievedGoals(self, iPlayer):
+                pPlayer = gc.getPlayer( iPlayer )
                 iResult = 0
                 for j in range(3):                        
-                        iTemp = self.getGoal(iPlayer, j)
+                        iTemp = pPlayer.getUHV( j )
                         if (iTemp < 0):
                                 iTemp = 0
                         iResult += iTemp
@@ -243,40 +243,45 @@ class RFCUtils:
                 return iResult
                 
         def getGoalsColor(self, iPlayer): #by CyberChrist
+                pPlayer = gc.getPlayer( iPlayer )
                 iCol = 0
                 for j in range(3):
-                        if (self.getGoal(iPlayer, j) == 0):
+                        if (pPlayer.getUHV( j ) == 0):
                                 iCol += 1
                 return tCol[iCol]
 
         # 3Miro: BEGIN Utilities for the extra UHV info
         def getBurgundyCulture( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                if ( scriptDict['lGoals'][con.iBurgundy][1] == -1 ):
-                        return scriptDict['iBurgundyCulture']
-                else:
-                        return -1
+                return 0
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #if ( scriptDict['lGoals'][con.iBurgundy][1] == -1 ):
+                #        return scriptDict['iBurgundyCulture']
+                #else:
+                #        return -1
                         
         def getArabianInfluence( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                if ( scriptDict['lGoals'][con.iArabia][1] == -1 ):
-                        return gc.getGame().calculateReligionPercent( xml.iIslam )
-                else:
-                        return -1
+                return 0
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #if ( scriptDict['lGoals'][con.iArabia][1] == -1 ):
+                #        return gc.getGame().calculateReligionPercent( xml.iIslam )
+                #else:
+                #        return -1
                         
         def getNorseRazed( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                if ( scriptDict['lGoals'][con.iNorse][1] == -1 ):
-                        return scriptDict['iNorseRazed']
-                else:
-                        return -1
+                return 0
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #if ( scriptDict['lGoals'][con.iNorse][1] == -1 ):
+                #        return scriptDict['iNorseRazed']
+                #else:
+                #        return -1
                         
         def getKievFood( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                if ( scriptDict['lGoals'][con.iKiev][0] == -1 ):
-                        return scriptDict['iKievFood']
-                else:
-                        return -1
+                return 0
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #if ( scriptDict['lGoals'][con.iKiev][0] == -1 ):
+                #        return scriptDict['iKievFood']
+                #else:
+                #        return -1
                         
         
 
