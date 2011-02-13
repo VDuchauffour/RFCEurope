@@ -22,6 +22,11 @@ localText = CyTranslator()
 objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 # < Mercenaries End >
 
+iCathegoryCities = 0
+iCathegoryCivics = 1
+iCathegoryEconomy = 2
+iCathegoryExpansion = 3
+
 class CvFinanceAdvisor:
 
 	def __init__(self):
@@ -114,18 +119,18 @@ class CvFinanceAdvisor:
 
 		ePlayer = self.iActiveLeader #Rhye
 		#Rhye - start
-		iStability = utils.getStability(ePlayer)
-                if (iStability < -40):
+		iStability = player.getStability()
+                if (iStability < -15):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                elif (iStability >= -40 and iStability < -20):
+                elif (iStability >= -15 and iStability < -5):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                elif (iStability >= -20 and iStability < 0):
+                elif (iStability >= -5 and iStability < 0):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                elif (iStability >= 0 and iStability < 20):
+                elif (iStability >= 0 and iStability < 5):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                elif (iStability >= 20 and iStability < 40):
+                elif (iStability >= 10 and iStability < 20):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                elif (iStability >= 40):
+                elif (iStability >= 20):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
 
                 if (gc.getPlayer(ePlayer).isHuman()):
@@ -176,14 +181,14 @@ class CvFinanceAdvisor:
 		szParametersPanel1 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel1, u"", "", True, True, self.X_PARAMETERS1, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_CITIES", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		iParameter1 = utils.getParCities(ePlayer)
-                if (iParameter1 <= -30):
+		iParameter1 = player.getStabilityVary( iCathegoryCities ) + player.getStabilityBase( iCathegoryCities )
+                if (iParameter1 <= -6):
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter1 <= -10):
+                elif (iParameter1 <= -2):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter1 < 30):
+                elif (iParameter1 < 3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter1 < 60):
+                elif (iParameter1 < 6):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 else:
                         self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -193,12 +198,12 @@ class CvFinanceAdvisor:
 		szParametersPanel2 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel2, u"", "", True, True, self.X_PARAMETERS2, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_CIVICS", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		iParameter2 = utils.getParCivics(ePlayer)
-                if (iParameter2 <= -50):
+		iParameter2 = player.getStabilityVary( iCathegoryCivics ) + player.getStabilityBase( iCathegoryCivics )
+                if (iParameter2 <= -6):
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter2 <= -25):
+                elif (iParameter2 <= -2):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter2 <= 0):
+                elif (iParameter2 <= 3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 elif (iParameter2 <= 5):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -210,14 +215,14 @@ class CvFinanceAdvisor:
 		szParametersPanel3 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel3, u"", "", True, True, self.X_PARAMETERS3, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_ECONOMY", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		iParameter3 = utils.getParEconomy(ePlayer)
-                if (iParameter3 <= -40):
+		iParameter3 = player.getStabilityVary( iCathegoryEconomy ) + player.getStabilityBase( iCathegoryEconomy )
+                if (iParameter3 <= -7):
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter3 <= -15):
+                elif (iParameter3 <= -3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter3 < 8):
+                elif (iParameter3 < 3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter3 < 16):
+                elif (iParameter3 < 6):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 else:
                         self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -227,14 +232,14 @@ class CvFinanceAdvisor:
 		szParametersPanel4 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel4, u"", "", True, True, self.X_PARAMETERS4, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_EXPANSION", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		iParameter4 = utils.getParExpansion(ePlayer)
-                if (iParameter4 <= -40):
+		iParameter4 = player.getStabilityVary( iCathegoryExpansion ) + player.getStabilityBase( iCathegoryExpansion )
+                if (iParameter4 <= -8):
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 <= -15):
+                elif (iParameter4 <= -3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 < 15):
+                elif (iParameter4 < 0 ):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 < 40):
+                elif (iParameter4 < 10):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 else:
                         self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -244,7 +249,7 @@ class CvFinanceAdvisor:
 		szParametersPanel5 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel5, u"", "", True, True, self.X_PARAMETERS5, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_FOREIGN", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                iParameter5 = utils.getParDiplomacy(ePlayer)
+                iParameter5 = 0
                 if (iParameter5 <= -16):
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 elif (iParameter5 <= -8):
@@ -411,7 +416,8 @@ class CvFinanceAdvisor:
         def printText(self, ePlayer, iCathegory, panel, x, y, z ):
         	#3Miro: print stuff
         	if (gc.getPlayer(ePlayer).isHuman()):
-        		sString = utils.getParString( ePlayer, iCathegory )
+        		#sString = utils.getParString( ePlayer, iCathegory )
+                        sString = ""
         		#print( " 3Miro: sString ",sString )
         		self.getScreen().setLabel(panel,"Background", sString, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 	#Rhye - end

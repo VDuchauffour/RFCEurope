@@ -46,25 +46,26 @@ tReligiousWonders = [ xml.iMonasteryOfCluny, xml.iImperialDiet, xml.iKrakDesChev
 ### Reformation Begin ###       
 #Matrix determines how likely the AI is to switch to Protestantism                                                               
 lReformationMatrix = [
-50, #Burgundy
 10, #Byzantium
 40, #France
 10, #Arabia
 30, #Bulgaria
 10, #Cordoba
-10, #Spain
 80, #Norse
 30, #Venecia
+50, #Burgundy
+90, #Germany
 20, #Kiev
 50, #Hungary
-90, #Germany
+10, #Spain
 30, #Poland
-10, #Moscow
 30, #Genoa
 80, #England
 30, #Portugal
+30, #Lithuania
 50, #Austria
 10, #Turkey
+10, #Moscow
 90, #Sweden
 90, #Dutch
 0,  #Rome
@@ -77,25 +78,26 @@ lReformationMatrix = [
 
 #Reformation neighbours spread reformation choice to each other
 lReformationNeighbours = [
-[con.iFrankia,con.iGermany,con.iGenoa,con.iDutch], #Burgundy
 [con.iArabia,con.iBulgaria,con.iTurkey], #Byzantium
 [con.iBurgundy,con.iSpain,con.iGermany,con.iGenoa,con.iEngland,con.iDutch], #Frankia
 [con.iByzantium,con.iCordoba,con.iTurkey], 		#Arabia
 [con.iByzantium,con.iKiev,con.iHungary,con.iTurkey], #Bulgaria
 [con.iArabia,con.iSpain,con.iPortugal], 	#Cordoba
-[con.iFrankia,con.iCordoba,con.iPortugal], 	#Spain
 [con.iGermany,con.iSweden],  		#Norse
 [con.iGenoa,con.iGermany,con.iAustria,con.iHungary,con.iPope],  #Venecia
-[con.iBulgaria,con.iHungary,con.iPoland,con.iMoscow],  		#Kiev
-[con.iBulgaria,con.iVenecia,con.iKiev,con.iGermany,con.iPoland,con.iAustria,con.iTurkey],  		#Hungary
+[con.iFrankia,con.iGermany,con.iGenoa,con.iDutch], #Burgundy
 [con.iBurgundy,con.iFrankia,con.iNorse,con.iVenecia,con.iHungary,con.iPoland,con.iGenoa,con.iAustria,con.iDutch],  #Germany
-[con.iKiev,con.iHungary,con.iGermany,con.iMoscow,con.iAustria],  			#Poland
-[con.iKiev,con.iPoland,con.iSweden],  		#Moscow
+[con.iBulgaria,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania],  		#Kiev
+[con.iBulgaria,con.iVenecia,con.iKiev,con.iGermany,con.iPoland,con.iAustria,con.iTurkey],  #Hungary
+[con.iFrankia,con.iCordoba,con.iPortugal], 	#Spain
+[con.iKiev,con.iHungary,con.iGermany,con.iMoscow,con.iAustria,con.iLithuania],  			#Poland
 [con.iBurgundy,con.iFrankia,con.iVenecia,con.iGermany,con.iPope],  #Genoa
 [con.iFrankia,con.iDutch],  		#England
 [con.iSpain,con.iCordoba],  		#Portugal
+[con.iKiev,con.iMoscow,con.iAustria,con.iPoland],  	#Lithuania
 [con.iVenecia,con.iHungary,con.iGermany,con.iPoland],  	#Austria
-[con.iByzantium,con.iArabia,con.iBulgaria,con.iHungary],  			#Turkey
+[con.iByzantium,con.iArabia,con.iBulgaria,con.iHungary],  	#Turkey
+[con.iKiev,con.iPoland,con.iSweden,con.iLithuania],  		#Moscow
 [con.iNorse,con.iMoscow],  				#Sweden
 [con.iBurgundy,con.iFrankia,con.iGermany,con.iEngland],   	#Dutch
 [con.iVenecia,con.iGenoa]			#Pope
@@ -250,14 +252,14 @@ class Religions:
 			               				break
         ##Reformation code
 		if (self.getReformationActive() == True):
-				#print( " Reformation #1 " )
+			#print( " Reformation #1 " )
+			self.reformationArrayChoice()
+			if (self.getReformationActive() == True):
+				#print( " Reformation #2 " )
 				self.reformationArrayChoice()
 				if (self.getReformationActive() == True):
-						#print( " Reformation #2 " )
-						self.reformationArrayChoice()
-						if (self.getReformationActive() == True):
-								#print( " Reformation #3 " )
-								self.reformationArrayChoice()
+					#print( " Reformation #3 " )
+					self.reformationArrayChoice()
 
         def foundReligion(self, tPlot, iReligion):
                 if (tPlot != False):
@@ -435,7 +437,10 @@ class Religions:
                                                         self.setReformationHitMatrix(iCiv,1)
 
         def reformationArrayChoice(self):
+                # 3Miro: this should be fixed, recusrion and Python don't go well together
                 iCiv = gc.getGame().getSorenRandNum(iNumPlayers, 'Civ chosen for reformation')
+                while ( self.getReformationHitMatrix(iCiv) != 1 ):
+                        iCiv = gc.getGame().getSorenRandNum(iNumPlayers, 'Civ chosen for reformation')
                 #print( " Chosen civ:", iCiv )
                 if(self.getReformationHitMatrix(iCiv) == 1):
                         #print( " Chosen civ eligible for Reformation")

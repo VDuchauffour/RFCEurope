@@ -83,30 +83,30 @@ iProvinceCore      = con.iProvinceCore
 iNumProvinceTypes  = con.iNumProvinceTypes 
 
 ############ Lists of all the provinces for each Civ ###################
-tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Illyria,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Antiochia,xml.iP_Galilee,xml.iP_Jerusalem,xml.iP_Egypt]
+tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Antiochia,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt]
 tByzantiumNorm = []
-tByzantiumOuter = [xml.iP_Moesia,xml.iP_Serbia]
+tByzantiumOuter = [xml.iP_Moesia,xml.iP_Serbia,xml.iP_Cyrenaica]
 tByzantiumPot2Core = []
 tByzantiumPot2Norm = []
 tByzantiumDesire = []
 
 tFranceCore = []
 tFranceNorm = []
-tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Lorraine,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Franconia,xml.iP_Saxony,xml.iP_Burgundy,xml.iP_Lombardy]
+tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Lorraine,xml.iP_Bavaria,xml.iP_Saxony,xml.iP_Swabia,xml.iP_Franconia,xml.iP_Lombardy]
 tFrancePot2Core = [xml.iP_IleDeFrance,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Bretagne]
-tFrancePot2Norm = [xml.iP_Normandy,xml.iP_Provence,xml.iP_Flanders]
+tFrancePot2Norm = [xml.iP_Normandy,xml.iP_Provence,xml.iP_Flanders,xml.iP_Burgundy]
 tFranceDesire = []
 
 tArabiaCore = []
 tArabiaNorm = []
-tArabiaOuter = [xml.iP_Tunisia,xml.iP_Algiers,xml.iP_Oran,xml.iP_Lybia,xml.iP_Sicily]
-tArabiaPot2Core = [xml.iP_Syria,xml.iP_Galilee,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia]
-tArabiaPot2Norm = [xml.iP_Benghazi,xml.iP_Antiochia]
+tArabiaOuter = [xml.iP_Ifriqiya,xml.iP_Algiers,xml.iP_Oran,xml.iP_Tripolitania,xml.iP_Sicily]
+tArabiaPot2Core = [xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia]
+tArabiaPot2Norm = [xml.iP_Antiochia,xml.iP_Cyrenaica]
 tArabiaDesire = []
 
 tBulgariaCore = []
 tBulgariaNorm = []
-tBulgariaOuter = [xml.iP_Serbia,xml.iP_Epirus,xml.iP_Thessaloniki,xml.iP_Illyria,xml.iP_Constantinople]
+tBulgariaOuter = [xml.iP_Serbia,xml.iP_Epirus,xml.iP_Thessaloniki,xml.iP_Arberia,xml.iP_Constantinople]
 tBulgariaPot2Core = [xml.iP_Moesia,xml.iP_Macedonia]
 tBulgariaPot2Norm = [xml.iP_Thrace,xml.iP_Wallachia]
 tBulgariaDesire = []
@@ -127,7 +127,7 @@ tNorseDesire = []
 
 tVeniceCore = []
 tVeniceNorm = []
-tVeniceOuter = [xml.iP_Illyria,xml.iP_Epirus,xml.iP_Morea,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Constantinople]
+tVeniceOuter = [xml.iP_Arberia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Constantinople]
 tVenicePot2Core = [xml.iP_Verona,xml.iP_Dalmatia]
 tVenicePot2Norm = [xml.iP_Carinthia,xml.iP_Tuscany,xml.iP_Croatia,xml.iP_Tyrol]
 tVeniceDesire = []
@@ -164,7 +164,7 @@ tSpainCore = []
 tSpainNorm = []
 tSpainOuter = [xml.iP_Lusitania,xml.iP_Aquitania,xml.iP_Tetouan,xml.iP_Provence,xml.iP_Balears,xml.iP_Oran,xml.iP_Sardinia,xml.iP_Corsica,xml.iP_Netherlands]
 tSpainPot2Core = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon]
-tSpainPot2Norm = [xml.iP_Catalonia,xml.iP_Valencia,xml.iP_Castile,xml.iP_Andalusia]
+tSpainPot2Norm = [xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia]
 tSpainDesire = []
 
 tPolandCore = []
@@ -176,16 +176,16 @@ tPolandDesire = []
 
 tGenoaCore = []
 tGenoaNorm = []
-tGenoaOuter = [xml.iP_Tunisia,xml.iP_Constantinople,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Cyprus,xml.iP_Crimea,xml.iP_Morea]
+tGenoaOuter = [xml.iP_Ifriqiya,xml.iP_Constantinople,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Cyprus,xml.iP_Crimea,xml.iP_Morea]
 tGenoaPot2Core = [xml.iP_Lombardy,xml.iP_Tuscany,xml.iP_Corsica,xml.iP_Sardinia]
 tGenoaPot2Norm = [xml.iP_Sicily]
 tGenoaDesire = []
 
 tEnglandCore = []
 tEnglandNorm = []
-tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Iceland]
+tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Iceland,xml.iP_Normandy]
 tEnglandPot2Core = [xml.iP_London,xml.iP_EastAnglia,xml.iP_Midlands,xml.iP_Northumbria,xml.iP_Wessex,xml.iP_Wales]
-tEnglandPot2Norm = [xml.iP_Scotland,xml.iP_Ireland,xml.iP_Normandy]
+tEnglandPot2Norm = [xml.iP_Scotland,xml.iP_Ireland]
 tEnglandDesire = []
 
 tPortugalCore = []
@@ -211,9 +211,9 @@ tAustriaDesire = []
 
 tTurkeyCore = []
 tTurkeyNorm = []
-tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Illyria,xml.iP_Serbia,xml.iP_Moesia,xml.iP_Hungary,xml.iP_Croatia,xml.iP_Bosnia,xml.iP_Slavonia,xml.iP_Transylvania,xml.iP_Pannonia,xml.iP_Moldova]
+tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Serbia,xml.iP_Moesia,xml.iP_Hungary,xml.iP_Croatia,xml.iP_Bosnia,xml.iP_Slavonia,xml.iP_Transylvania,xml.iP_Pannonia,xml.iP_Moldova]
 tTurkeyPot2Core = [xml.iP_Opsikion,xml.iP_Thrakesion,xml.iP_Paphlagonia,xml.iP_Anatolikon,xml.iP_Cilicia,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Constantinople,xml.iP_Thrace,]
-tTurkeyPot2Norm = [xml.iP_Antiochia,xml.iP_Syria,xml.iP_Galilee,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki]
+tTurkeyPot2Norm = [xml.iP_Antiochia,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki]
 tTurkeyDesire = []
 
 tMoscowCore = []
@@ -227,7 +227,7 @@ tSwedenCore = []
 tSwedenNorm = []
 tSwedenOuter = [xml.iP_Denmark,xml.iP_Pomerania]
 tSwedenPot2Core = [xml.iP_Gotaland,xml.iP_Norrland,xml.iP_Svealand,]
-tSwedenPot2Norm = [xml.iP_Finland,xml.iP_Norway,xml.iP_Oppland,xml.iP_Vestfold]
+tSwedenPot2Norm = [xml.iP_Finland,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Oppland]
 tSwedenDesire = []
 
 tDutchCore = []
@@ -454,15 +454,26 @@ class ProvinceManager:
                         pByzantium.setProvinceType( xml.iP_Arabia, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Egypt, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceOuter )
-                        pByzantium.setProvinceType( xml.iP_Galilee, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Lebanon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Jerusalem, iProvinceOuter )
                 elif ( iPlayer == iBulgaria ):
                         pByzantium.setProvinceType( xml.iP_Thrace, iProvinceOuter )
+                elif ( iPlayer == iBurgundy ):
+                        pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential )
+                        pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential )
                 elif ( iPlayer == iGermany ):
-                        pFrankia.setProvinceType( xml.iP_Bavaria, iProvinceNone ) # add here Swabia, Franconia, Burgundy, Lombardy
+                        pFrankia.setProvinceType( xml.iP_Bavaria, iProvinceNone )
                         pFrankia.setProvinceType( xml.iP_Saxony, iProvinceNone )
+                        pFrankia.setProvinceType( xml.iP_Swabia, iProvinceNone )
+                        pFrankia.setProvinceType( xml.iP_Franconia, iProvinceOuter )
+                        pFrankia.setProvinceType( xml.iP_Lombardy, iProvinceOuter )
+                elif ( iPlayer == iSpain ):
+                        pCordoba.setProvinceType( xml.iP_Castile, iProvinceOuter )
+                elif ( iPlayer == iEngland ):
+                        pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential )
                 elif ( iPlayer == iAustria ):
-                        pHungary.setProvinceType( xml.iP_Austria, iProvinceOuter ) # add Moravia, maybe some others
+                        pHungary.setProvinceType( xml.iP_Austria, iProvinceOuter ) # maybe others
+                        pHungary.setProvinceType( xml.iP_Moravia, iProvinceOuter )
                 elif ( iPlayer == iTurkey ):
                         pByzantium.setProvinceType( xml.iP_Opsikion, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Thrakesion, iProvinceOuter )

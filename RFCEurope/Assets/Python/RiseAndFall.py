@@ -796,45 +796,6 @@ class RiseAndFall:
                         #        utils.updateMinorTechs(iIndependent, iBarbarian)
                         #if (pIndependent2.isAlive()):                                  
                         #        utils.updateMinorTechs(iIndependent2, iBarbarian)
-
-                #Colonists
-                # 3Miro: not sure what this does, Conquistadors?
-                #if (iGameTurn >= (con.i1350AD + 5 + self.getColonistsAlreadyGiven(iSpain)*6)) and (iGameTurn <= con.i1918AD):
-                #        self.giveColonists(iSpain, tBroaderAreasTL[iSpain], tBroaderAreasBR[iSpain])
-                #if (iGameTurn >= (con.i1450AD + 5 + self.getColonistsAlreadyGiven(iEngland)*6)) and (iGameTurn <= con.i1918AD):
-                #        self.giveColonists(iEngland, tBroaderAreasTL[iEngland], tBroaderAreasBR[iEngland])
-                #if (iGameTurn >= (con.i1450AD + 5 + self.getColonistsAlreadyGiven(iFrance)*6)) and (iGameTurn <= con.i1918AD):
-                #        self.giveColonists(iFrance, tBroaderAreasTL[iFrance], tBroaderAreasBR[iFrance])
-                #if (iGameTurn >= (con.i1350AD + 5 + self.getColonistsAlreadyGiven(iPortugal)*6)) and (iGameTurn <= con.i1918AD):
-                #        self.giveColonists(iPortugal, tNormalAreasTL[iPortugal], tNormalAreasBR[iPortugal])
-                #if (iGameTurn >= (con.i1450AD + 5 + self.getColonistsAlreadyGiven(iHolland)*6)) and (iGameTurn <= con.i1918AD):
-                #        self.giveColonists(iHolland, tNormalAreasTL[iHolland], tNormalAreasBR[iHolland])
-                        
-                #birth of civs
-##                if (gc.getPlayer(0).isPlayable()): #late start condition
-##                        self.initBirth(iGameTurn, con.tBirth[iGreece], iGreece)
-##                        self.initBirth(iGameTurn, con.tBirth[iPersia], iPersia)    
-##                        self.initBirth(iGameTurn, con.tBirth[iCarthage], iCarthage)
-##                        self.initBirth(iGameTurn, con.tBirth[iRome], iRome)
-##                        self.initBirth(iGameTurn, con.tBirth[iJapan], iJapan)
-##                        self.initBirth(iGameTurn, con.tBirth[iEthiopia], iEthiopia)
-##                        self.initBirth(iGameTurn, con.tBirth[iMaya], iMaya)
-##                        self.initBirth(iGameTurn, con.tBirth[iVikings], iVikings)
-##                        self.initBirth(iGameTurn, con.tBirth[iArabia], iArabia)
-##                self.initBirth(iGameTurn, con.tBirth[iKhmer], iKhmer)
-##                self.initBirth(iGameTurn, con.tBirth[iSpain], iSpain)
-##                self.initBirth(iGameTurn, con.tBirth[iFrance], iFrance)
-##                self.initBirth(iGameTurn, con.tBirth[iEngland], iEngland)
-##                self.initBirth(iGameTurn, con.tBirth[iGermany], iGermany)
-##                self.initBirth(iGameTurn, con.tBirth[iRussia], iRussia)
-##                self.initBirth(iGameTurn, con.tBirth[iNetherlands], iNetherlands)
-##                self.initBirth(iGameTurn, con.tBirth[iMali], iMali)
-##                self.initBirth(iGameTurn, con.tBirth[iTurkey], iTurkey)
-##                self.initBirth(iGameTurn, con.tBirth[iPortugal], iPortugal)
-##                self.initBirth(iGameTurn, con.tBirth[iInca], iInca)
-##                self.initBirth(iGameTurn, con.tBirth[iMongolia], iMongolia)
-##                self.initBirth(iGameTurn, con.tBirth[iAztecs], iAztecs)
-##                self.initBirth(iGameTurn, con.tBirth[iAmerica], iAmerica)
                         
                 #if (gc.getPlayer(0).isPlayable()):
                 #        iFirstSpawn = iGreece
@@ -882,7 +843,7 @@ class RiseAndFall:
                 # Sedna: This is one place to control the frequency of resurrection.
                 # Generally we want to allow Kiev, Bulgaria, Cordoba, Burgundy, Byzantium at least to be dead in late game without respawning.
                 iNumDeadCivs1 = 12 #5 in vanilla, 8 in warlords (that includes native and celt)
-                iNumDeadCivs2 = 6 #3 in vanilla, 6 in Warlords: here we must count natives and celts as dead too
+                iNumDeadCivs2 = 8 #3 in vanilla, 6 in Warlords: here we must count natives and celts as dead too
                 #if (not gc.getPlayer(0).isPlayable()):  #late start condition
                 #        iNumDeadCivs1 -= 2
                 #        iNumDeadCivs2 -= 2
@@ -1107,9 +1068,11 @@ class RiseAndFall:
                 for j in range(iRndnum, iRndnum + iNumPlayers):
                         iPlayer = j % iNumPlayers
                         #print(" 3Miro: player ",iPlayer)
-                        if (gc.getPlayer(iPlayer).isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
+                        pPlayer = gc.getPlayer(iPlayer)
+                        if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
                                 #if (utils.getStability(iPlayer) >= -40 and utils.getStability(iPlayer) < -20): #secession
-                                if (utils.getStability(iPlayer) < -20): #secession, 3Miro: do regarless of how low stability is
+                                #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
+                                if (pPlayer.getStability() < -5): #secession, 3Miro: do regarless of how low stability is
 
                                         #print("3Miro: unstable")
                                         cityList = []
@@ -1120,26 +1083,27 @@ class RiseAndFall:
 
                                                 if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))):
                                                         # 3MiroUP: Emperor
-                                                        if (gc.getPlayer(iPlayer).getNumCities() > 0): #this check is needed, otherwise game crashes
+                                                        if (pPlayer.getNumCities() > 0): #this check is needed, otherwise game crashes
                                                                 capital = gc.getPlayer(iPlayer).getCapitalCity()
                                                                 iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
                                                                 if (iDistance > 3):                                                                                               
                                                             
-                                                                        if (city.angryPopulation(0) > 0 or \
+                                                                        if (pPlayer.getProvinceType( city.getProvince() ) < con.iProvinceNatural or \
+                                                                            city.angryPopulation(0) > 0 or \
                                                                             city.healthRate(False, 0) < 0 or \
                                                                             city.getReligionBadHappiness() > 0 or \
                                                                             city.getLargestCityHappiness() < 0 or \
                                                                             city.getHurryAngerModifier() > 0 or \
-                                                                            city.getNoMilitaryPercentAnger() > 0 or \
-                                                                            city.getWarWearinessPercentAnger() > 0):
-                                                                                cityList.append(city)
-                                                                                continue
+                                                                            city.getNoMilitaryPercentAnger() > 0 ):
+                                                                                if ( gc.getGame().getSorenRandNum(100, 'city secession') > - 10 * pPlayer.getStability() ):
+                                                                                        cityList.append(city)
+                                                                                        continue
                                                                         
-                                                                        for iLoop in range(iNumTotalPlayers+1):
-                                                                                if (iLoop != iPlayer):
-                                                                                        if (pCurrent.getCulture(iLoop) > 0):
-                                                                                                cityList.append(city)
-                                                                                                break
+                                                                        #for iLoop in range(iNumTotalPlayers+1):
+                                                                        #        if (iLoop != iPlayer):
+                                                                        #                if (pCurrent.getCulture(iLoop) > 0):
+                                                                        #                        cityList.append(city)
+                                                                        #                        break
 
                                         if (len(cityList)):
                                                 #iNewCiv = iIndependent
@@ -1212,12 +1176,13 @@ class RiseAndFall:
                                                                         #print (iDeadCiv, pCurrent.getPlotCity().getName(), pCurrent.getPlotCity().getOwner(), "1", cityList)
                                                                 else:
                                                                         iMinNumCitiesOwner = 3
-                                                                        iOwnerStability = utils.getStability(iOwner)
+                                                                        #iOwnerStability = utils.getStability(iOwner)
+                                                                        iOwnerStability = gc.getPlayer(iOwner).getStability()
                                                                         if (not gc.getPlayer(iOwner).isHuman()):
                                                                                 iMinNumCitiesOwner = 2
-                                                                                iOwnerStability -= 20
+                                                                                iOwnerStability -= 8
                                                                         if (gc.getPlayer(iOwner).getNumCities() >= iMinNumCitiesOwner):
-                                                                                if (iOwnerStability < -20):
+                                                                                if (iOwnerStability < -8):
                                                                                         if (not city.isWeLoveTheKingDay() and not city.isCapital()):
                                                                                                         cityList.append(pCurrent.getPlotCity())
                                                                                                         #print (iDeadCiv, pCurrent.getPlotCity().getName(), pCurrent.getPlotCity().getOwner(), "2", cityList)
@@ -1236,7 +1201,7 @@ class RiseAndFall:
                                                                                                                 city.getWarWearinessPercentAnger() > 0):
                                                                                                                         cityList.append(pCurrent.getPlotCity())
                                                                                                                         #print (iDeadCiv, pCurrent.getPlotCity().getName(), pCurrent.getPlotCity().getOwner(), "3", cityList)
-                                                                                if (iOwnerStability < 20):
+                                                                                if (iOwnerStability < 10):
                                                                                                 if (city.getX() == tCapitals[iDeadCiv][0] and city.getY() == tCapitals[iDeadCiv][1]):
                                                                                                         if (pCurrent.getPlotCity() not in cityList):
                                                                                                                 cityList.append(pCurrent.getPlotCity())
@@ -2664,16 +2629,17 @@ class RiseAndFall:
                 self.hitNeighboursStability(iCiv)
 
         def hitNeighboursStability( self, iCiv ):
+                # 3Miro: Stability on Spawn
                 if (len(con.lOlderNeighbours[iCiv]) > 0):
                 #        print "Got inside hitStability!!!"
                         bHuman = False
-                        for iLoop in con.lOlderNeighbours[iCiv]:
-                                if (gc.getPlayer(iLoop).isAlive()):
-                                #        print("iLoop =",iLoop)
-                                        if (iLoop == utils.getHumanID()):
-                                                bHuman = True
-                                        utils.setStabilityParameters(iLoop, con.iParDiplomacyE, utils.getStabilityParameters(iLoop, con.iParDiplomacyE)-5)
-                                        utils.setStability(iLoop, utils.getStability(iLoop)-5)
+                        #for iLoop in con.lOlderNeighbours[iCiv]:
+                                #if (gc.getPlayer(iLoop).isAlive()):
+                                ##        print("iLoop =",iLoop)
+                                        #if (iLoop == utils.getHumanID()):
+                                                #bHuman = True
+                                        #utils.setStabilityParameters(iLoop, con.iParDiplomacyE, utils.getStabilityParameters(iLoop, con.iParDiplomacyE)-5)
+                                        #utils.setStability(iLoop, utils.getStability(iLoop)-5)
 
         def showRect( self, iCiv, iXs, iYs, iXe, iYe ):
                 for iX in range( iXs, iXe + 1 ):

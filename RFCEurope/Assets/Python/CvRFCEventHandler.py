@@ -399,7 +399,7 @@ class CvRFCEventHandler:
 
         def onCombatResult(self, argsList):
                 #self.up.aztecUP(argsList)
-                self.vic.onCombatResult(argsList)
+                #self.vic.onCombatResult(argsList)
                 self.sta.onCombatResult(argsList)
 
 
@@ -484,6 +484,7 @@ class CvRFCEventHandler:
                 self.vic.onProjectBuilt(city.getOwner(), iProjectType)
                 if (city.getOwner() < con.iNumPlayers):
                         self.sta.onProjectBuilt(city.getOwner(), iProjectType)
+                        
 	def onUnitPillage(self, argsList):
 		print ("Improvement Destroyed")
 		pUnit, iImprovement, iRoute, iOwner = argsList
@@ -492,7 +493,7 @@ class CvRFCEventHandler:
 		pPlot = CyMap().plot(iPlotX, iPlotY)
 		if (pPlot.countTotalCulture() == 0 ):
 			print("No culture, so bard/indy satisfied")
-			if (iImprovement >= con.iImprovementCottage and iImprovement <= con.iImprovementTown):
+			if (iImprovement >= xml.iImprovementCottage and iImprovement <= xml.iImprovementTown):
 				print ("Improve Type Satisfied")
 				self.barb.onImprovementDestroyed(iPlotX,iPlotY)
 
