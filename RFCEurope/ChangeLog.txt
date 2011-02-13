@@ -45,6 +45,7 @@ AR		Update hungarian settler map
 		Dynamic Civ Names for Lithuania
 MV1		Python UP's cleanup
 MV1		Translate the province names (after they province system is finished)
+		Give "Unique names" to the UHV
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
