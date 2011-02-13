@@ -1124,9 +1124,9 @@ class RiseAndFall:
                                                 utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
                                                 #print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
 						#Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
-                                                utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
-                                                
-                                                utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+                                                #utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+                                                #utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+                                                pPlayer.changeStabilityBase( iCathegoryExpansion, 2 )
 
                                         return #just 1 secession per turn
 
