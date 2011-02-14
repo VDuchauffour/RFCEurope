@@ -988,7 +988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_101</Tag>
-		<English>Galilee</English>
+		<English>Lebanon</English>
 		<French>Province_101</French>
 		<German>Province_101</German>
 		<Italian>Province_101</Italian>
@@ -1015,7 +1015,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_104</Tag>
-		<English>Benghazi</English>
+		<English>Cyrenaica</English>
 		<French>Province_104</French>
 		<German>Province_104</German>
 		<Italian>Province_104</Italian>
@@ -1024,7 +1024,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_105</Tag>
-		<English>Lybia</English>
+		<English>Tripolitania</English>
 		<French>Province_105</French>
 		<German>Province_105</German>
 		<Italian>Province_105</Italian>
@@ -1033,7 +1033,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_106</Tag>
-		<English>Tunisia</English>
+		<English>Ifriqiya</English>
 		<French>Province_106</French>
 		<German>Province_106</German>
 		<Italian>Province_106</Italian>
