@@ -41,10 +41,12 @@ AR		Update hungarian settler map
 		Custom Events?
 		Minor Civs?
 		Turn Burgundian Winery art 180 degrees
+		Lower La Mezquita to the ground
 		Add a LeaderHeadInfos.xml.light file
 		Dynamic Civ Names for Lithuania
 MV1		Translate the province names (after they province system is finished)
 MV1		Give "Unique names" to the UHV
+MV1		Merge in the remaning civilopedia texts
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
