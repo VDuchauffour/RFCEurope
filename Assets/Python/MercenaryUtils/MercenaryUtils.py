@@ -547,7 +547,7 @@ class MercenaryUtils:
 
                                 #Rhye - start bugfix
 				# Create the mercenary unit # 3Miro: change this from 20,0 to 30,0 and add some mountains
-				tmpUnit = barbarianPlayer.initUnit(iUnitType, 20, 0, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				tmpUnit = barbarianPlayer.initUnit(iUnitType, 30, 0, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 ##				plot = barbarianPlayer.getStartingPlot()
 ##							
@@ -594,6 +594,12 @@ class MercenaryUtils:
                                 #gc.getMap().plot(18, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
                                 #gc.getMap().plot(18, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
                                 #gc.getMap().plot(18, 2).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				gc.getMap().plot(29, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				gc.getMap().plot(30, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				gc.getMap().plot(31, 0).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				gc.getMap().plot(29, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				gc.getMap().plot(30, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
+				gc.getMap().plot(31, 1).setRevealed(gc.getGame().getActivePlayer(), False, True, -1);
                                 #Rhye - end
 
 
