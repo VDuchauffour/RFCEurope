@@ -209,7 +209,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
-		<English>Control the Rhine and Rhone valleys (Mediterranean to the North Sea) in 1200AD</English>
+		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Control the Rhine and Rhone valleys (Mediterranean to the North Sea) in 1200AD</English>
 		<French>Contr&#244;ler la vall&#233;e du Rh&#244;ne et du Rhin en 1200 ap.JC.</French>
 		<German>Kontrollieren Sie im Jahr 1200 n. Chr. das Rhein- und Rhonetal (vom Mittelmeer bis zur Nordsee)</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
@@ -281,7 +281,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR3</Tag>
-		<English>[COLOR_YELLOW]Fitna:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</English>
+		<English>[COLOR_YELLOW]Jihad:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</English>
 		<French>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</French>
 		<German>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</German>
 		<Italian>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Italian>
@@ -426,7 +426,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
-		<English>Control the most territory in Europe in 1490AD.</English>
+		<English>[COLOR_YELLOW]Fekete Sereg:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</English>
 		<French>Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
 		<German>Kontrollieren Sie das gr&#246;ﬂte Gebiet in Europa im Jahr 1490 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
@@ -435,7 +435,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN2</Tag>
-		<English>Be the first to adopt Free Religion.</English>
+		<English>[COLOR_YELLOW]Edict of Turda:[COLOR_REVERT] Be the first to adopt Free Religion.</English>
 		<French>Etre le premier &#224; adopter la Libert&#233; de Culte.</French>
 		<German>Nehmen Sie als erste Zivilisation die Staatform Religionsfreiheit an</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
@@ -453,7 +453,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
-		<English>Control the east bank of the Rhine in 1360AD.</English>
+		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control the east bank of the Rhine in 1360AD.</English>
 		<French>Contr&#244;ler la rive est du Rhin en 1360 ap.JC.</French>
 		<German>Kontrollieren Sie das &#246;stliche Rheinufer im Jahr 1360 n.Chr.</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
@@ -471,7 +471,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>Have the largest army in Europe in 1540AD.</English>
+		<English>[COLOR_YELLOW]Everybody hires Landsknecht Mercenaries:[COLOR_REVERT] Have the largest army in Europe in 1540AD.</English>
 		<French>Avoir la plus grande arm&#233;e d'Europe en 1540 ap.JC.</French>
 		<German>Befehligen Sie die gr&#246;&#223;te Armee in Europa im Jahr 1540 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -579,7 +579,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
-		<English>Be the first to enter the Industrial age.</English>
+		<English>[COLOR_YELLOW]The inventors of everything:[COLOR_REVERT] Be the first to enter the Industrial age.</English>
 		<French>Etre la premiere civilisation &#224; entrer dans l'Age Industrielle.</French>
 		<German>Erreichen Sie als erste Zivilisation das industrielle Zeitalter</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -588,7 +588,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR1</Tag>
-		<English>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</English>
+		<English>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</English>
 		<French>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</French>
 		<German>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</German>
 		<Italian>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Italian>
@@ -597,7 +597,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR2</Tag>
-		<English>Do not lose a city before 1640AD.</English>
+		<English>[COLOR_YELLOW]Defense:[COLOR_REVERT] Do not lose a city before 1640AD.</English>
 		<French>Ne perdre aucune ville avant 1640 ap.JC.</French>
 		<German>Verlieren Sie keine Stadt vor 1640 n. Chr.</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
@@ -606,7 +606,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR3</Tag>
-		<English>Build 6 Colonial Projects.</English>
+		<English>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 6 Colonial Projects.</English>
 		<French>Construire 6 Projets Coloniaux.</French>
 		<German>Errichten Sie 6 Kolonien</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -615,7 +615,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
-		<English>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
+		<English>[COLOR_YELLOW]Austrian Habsburg rule:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
 		<French>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</French>
 		<German>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</German>
 		<Italian>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Italian>
@@ -633,7 +633,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS3</Tag>
-		<English>Have 2 Defensive Alliances in 1750AD.</English>
+		<English>[COLOR_YELLOW]Habsburg Alliances:[COLOR_REVERT] Have 2 Defensive Alliances in 1750AD.</English>
 		<French>Avoir 2 pactes de d&#233;fense en 1750 ap.JC.</French>
 		<German>Schlieﬂen Sie bis zum Jahr 1750 n. Chr. 2 Defensivallianzen</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>

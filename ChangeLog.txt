@@ -43,9 +43,26 @@ AR		Update hungarian settler map
 		Turn Burgundian Winery art 180 degrees
 		Add a LeaderHeadInfos.xml.light file
 		Dynamic Civ Names for Lithuania
-MV1		Python UP's cleanup
 MV1		Translate the province names (after they province system is finished)
-		Give "Unique names" to the UHV
+MV1		Give "Unique names" to the UHV
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for Beta 8:
+
+	Major changes:
+
+	Minor changes:
+
+	Bugfixes:
+		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
+
+	XML updates:
+		Updated unique UHV names
+
+	Art updates:
+
+	Balance:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -66,6 +83,7 @@ Changes for Beta 7:
 		Civilopedia hides units, independent civs, barbarian LH and some other things
 		Forbidden some units to become a mercenary
 		Added complete changelog - please use this detailed form from now on
+		Unique name for each UHV (not complete)
 	
 	XML updates:
 		Added missing XML entries for religions and for a couple leaders

@@ -16,7 +16,7 @@
 	<EraInfos>
 		<EraInfo>
 			<Type>ERA_ANCIENT</Type>
-			<Description>TXT_KEY_ERA_ANCIENT</Description>
+			<Description>TXT_KEY_AGE_ANCIENT</Description>
 			<Strategy>TXT_KEY_ERA_ANCIENT_STRATEGY</Strategy>
 			<bNoGoodies>0</bNoGoodies>
 			<bNoAnimals>0</bNoAnimals>
@@ -68,7 +68,7 @@
 		</EraInfo>
 		<EraInfo>
 			<Type>ERA_CLASSICAL</Type>
-			<Description>TXT_KEY_ERA_CLASSICAL</Description>
+			<Description>TXT_KEY_AGE_CLASSICAL</Description>
 			<Strategy>TXT_KEY_ERA_CLASSICAL_STRATEGY</Strategy>
 			<bNoGoodies>0</bNoGoodies>
 			<bNoAnimals>1</bNoAnimals>
@@ -135,7 +135,7 @@
 		</EraInfo>
 		<EraInfo>
 			<Type>ERA_MEDIEVAL</Type>
-			<Description>TXT_KEY_ERA_MEDIEVAL</Description>
+			<Description>TXT_KEY_AGE_MEDIEVAL</Description>
 			<Strategy>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Strategy>
 			<bNoGoodies>1</bNoGoodies>
 			<bNoAnimals>1</bNoAnimals>
