@@ -440,7 +440,7 @@ class Victory:
                                         iIslands += 1
                                 else:
                                         iAfrica += 1
-                                if ( iIsland >= 3 and iAfrica >= 2 ):
+                                if ( iIslands >= 3 and iAfrica >= 2 ):
                                         pPortugal.setUHV( 0, 1 )
                                 pPortugal.setUHVCounter( 0, iAfrica * 100 + iIslands )
 
@@ -666,7 +666,7 @@ class Victory:
                         elif ( iGameTurn == xml.i840AD ):
                                 pFrankia.setUHV( 0, 0 )
                                 
-                if (iGameTurn == xml.i1291AD and self.getGoal(iFrankia, 1) == -1 ):
+                if (iGameTurn == xml.i1291AD and pFrankia.getUHV(1) == -1 ):
                         pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
                         if ( pJPlot.isCity()):
                                 if ( pJPlot.getPlotCity().getOwner() == iFrankia ):
@@ -727,7 +727,7 @@ class Victory:
                         elif ( iGameTurn == xml.i1259AD ):
                                 pBulgaria.setUHV( 1, 0 )
                                 
-                if ( iGameTurn == xml.i1393AD and pBulgaria.setUHV( 2 ) == -1 ):
+                if ( iGameTurn == xml.i1393AD and pBulgaria.getUHV( 2 ) == -1 ):
                         pBulgaria.setUHV( 2, 1 )
                 
         def checkCordoba( self, iGameTurn ):
@@ -1036,10 +1036,10 @@ class Victory:
                                 pPortugal.setUHV( 2, 1 )
                 
         def checkLithuania( self, iGameTurn ):
-                iCulture = pLithuania.getUHVCounter(1) + pLithuania.countCultureProduced() # 3Miro: testing, move it below later
-                pLithuania.setUHVCounter(1, iCulture)
+                iCulture = pLithuania.getUHVCounter(0) + pLithuania.countCultureProduced() # 3Miro: testing, move it below later
+                pLithuania.setUHVCounter(0, iCulture)
                 if ( iGameTurn <= xml.i1386AD and pLithuania.getUHV( 0 ) == -1 ):
-                        if ( pLithuania.getStateReligion() == -1 ):
+                        if ( pLithuania.getStateReligion() != -1 ):
                                 pLithuania.setUHV( 0, 0 )
                         elif ( iCulture >= 4000 ):
                                 pLithuania.setUHV( 0, 1 )

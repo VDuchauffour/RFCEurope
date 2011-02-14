@@ -31,6 +31,8 @@ iCathegoryCivics = con.iCathegoryCivics
 iCathegoryEconomy = con.iCathegoryEconomy
 iCathegoryExpansion = con.iCathegoryExpansion
 
+tCapitals = con.tCapitals
+
 tStabilityPenalty = ( -3, -1, -1, 0, 0, 0 )
 
 class Stability:
@@ -43,6 +45,7 @@ class Stability:
                                 pPlayer.setStabilityVary( iCath, 0 )
                         pPlayer.setStabilitySwing( 0 )
                 gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 10 ) # to account for the cities build in the WB
+                gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
                 
         def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
                 pPlayer = gc.getPlayer( iPlayer )
@@ -97,7 +100,7 @@ class Stability:
                 if ( pPlayer.getAnarchyTurns() != 0 ):
                         self.recalcCivicCombos(iPlayer)
                         if ( pPlayer.isHuman() ):
-                                pPlayer.changeStabilityBase( iCathegoryCivics, -4 )
+                                pPlayer.changeStabilityBase( iCathegoryCivics, -3 )
                         else:
                                 pPlayer.changeStabilityBase( iCathegoryCivics, -2 ) # the AI is largely unaware of Stability issues
                         pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 8  )
@@ -111,8 +114,8 @@ class Stability:
                         
                 self.recalcCity( iPlayer ) # update city stability
                 
-                if ( iGameTurn % 6 == 1 ):
-                        self.printStability( iGameTurn, iPlayer )
+                #if ( iGameTurn % 6 == 1 ):
+                #        self.printStability( iGameTurn, iPlayer )
                 
         
         def continentsNormalization(self, iGameTurn): #Sedna17
@@ -160,11 +163,13 @@ class Stability:
                         pConq.setStabilitySwing( pConq.getStabilitySwing() + 3 )
                 if ( pConq.getCivics(5) == 28 ):
                         pConq.changeStabilityBase( iCathegoryExpansion, 1 )
-                if ( playerType == con.iTurkey ): # lazy version of an UP
+                if ( playerType == con.iTurkey and pConq.getStability() < 3 ): # lazy version of an UP
                         pConq.changeStabilityBase( iCathegoryExpansion, 1 )
                 self.recalcEpansion( pOwner )
                 self.recalcEpansion( pConq )
-
+                if (owner < iNumPlayers and city.getX() == tCapitals[owner][0] and city.getY() == tCapitals[owner][1]):
+                        pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
+                        pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10  )
 
         def onCityRazed(self, iOwner, playerType, city):
             	#Sedna17: Not sure what difference between iOwner and playerType is here
@@ -215,6 +220,11 @@ class Stability:
 			gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasEscorial, 1 )
 		elif (iBuilding == xml.iStephansdom):
 			gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+                elif (iBuilding == xml.iPalace):
+                        #print(" Capital Changed",iPlayer)
+                        pPlayer= gc.getPlayer( iPlayer )
+                        pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
+                        pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 5  )
 
         def onProjectBuilt(self, iPlayer, iProject):
                 pPlayer = gc.getPlayer(iPlayer)
@@ -275,7 +285,9 @@ class Stability:
                                                                 CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
                                                                 #utils.killAndFragmentCiv(iPlayer, iIndependent, iIndependent2, -1, True)
                                                                 utils.killAndFragmentCiv(iPlayer, False, True)
-                                                                self.setStability(iPlayer, -15)
+                                                                #self.setStability(iPlayer, -15)
+                                                                self.zeroStability( iPlayer )
+                                                                pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
 
 
 	def printStability(self, iGameTurn, iPlayer ):
@@ -348,8 +360,8 @@ class Stability:
                 # Humans are far more competent then the AI, so give the AI a small boost
                 if ( pPlayer.isHuman() ):
                         iCityStability += iHappyStability + iHealthStability + iReligionStability + iHurryStability + iCultureStability
-                        iCityStability += max( iMilitaryStability + iWarWStability, -4 )
-                        iCityStability = min( max( iCityStability, -10 ), 8 )
+                        iCityStability += max( iMilitaryStability + iWarWStability, -2 )
+                        iCityStability = min( max( iCityStability, -6 ), 8 )
                 else:
                         iCityStability += max( iHappyStability, -2 ) + iHealthStability # AI keeps very unhappy cities
                         iCityStability += max( iReligionStability + iHurryStability, -3 )+ max( iCultureStability, -3 )
@@ -503,9 +515,8 @@ class Stability:
                 else:
                         iExpStability += pPlayer.countVassals()
                 iNumCities = pPlayer.getNumCities()
+                iPlayer = pPlayer.getID()
+                if ( iPlayer == con.iTurkey or iPlayer == con.iMoscow ): # five free cities for those two
+                        iNumCities = max( 0, iNumCities - 5 )
                 iExpStability -= iNumCities*iNumCities / 40 
                 pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )
-
-			
-
-

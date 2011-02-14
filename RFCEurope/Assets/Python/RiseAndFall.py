@@ -646,9 +646,6 @@ class RiseAndFall:
 
 		#Sedna17 Respawn setup special respawn turns
 		self.setupRespawnTurns()
-
-                
-                
                                
                 # set starting gold
                 pBurgundy.changeGold( 250 )
@@ -664,11 +661,11 @@ class RiseAndFall:
                 pHungary.changeGold(300)
                 pGermany.changeGold(300)
                 pPoland.changeGold(300)
+                pLithuania.changeGold(400)
                 pMoscow.changeGold(400)
                 pGenoa.changeGold(400)
                 pEngland.changeGold(400)
                 pPortugal.changeGold(450)
-                pLithuania.changeGold(600)
                 pAustria.changeGold(700)
                 pTurkey.changeGold(1000)
                 pSweden.changeGold(1000)
@@ -689,7 +686,12 @@ class RiseAndFall:
                 #        plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])   
                 #        unit = plotBurgundy.getUnit(0)
                 #        unit.centerCamera()
-
+                #center camera on Egyptian units
+                #if (pEgypt.isHuman()):
+                #        plotEgypt = gc.getMap().plot(tCapitals[iEgypt][0], tCapitals[iEgypt][1])   
+                #        unit = plotEgypt.getUnit(0)
+                #        unit.centerCamera()
+                #        #print (unit)
                 
         ### 3Miro Province Related Functions ###
         def onCityBuilt(self, iPlayer, x, y):
@@ -1051,7 +1053,8 @@ class RiseAndFall:
                         if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
                                 #if (utils.getStability(iPlayer) >= -40 and utils.getStability(iPlayer) < -20): #secession
                                 #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
-                                if (pPlayer.getStability() < -5): #secession, 3Miro: do regarless of how low stability is
+                                iStability = pPlayer.getStability()
+                                if ( ( iStability < -5) or (gc.getGame().getSorenRandNum(20, 'do the check for city secession') < -iStability) ): #secession, 3Miro: do regarless of how low stability is
 
                                         #print("3Miro: unstable")
                                         cityList = []
@@ -1374,10 +1377,14 @@ class RiseAndFall:
                         gc.getTeam(gc.getPlayer(iHuman).getTeam()).declareWar(iDeadCiv, False, -1)
                 else:
                         gc.getTeam(gc.getPlayer(iHuman).getTeam()).makePeace(iDeadCiv)
-                utils.setBaseStabilityLastTurn(iDeadCiv, 0)
-                utils.zeroStability(iDeadCiv)
-                utils.setParameter(iDeadCiv,con.iParExpansionE,False,10)
-                utils.setStability(iDeadCiv, 15) ##the new civs start as slightly stable
+                #utils.setBaseStabilityLastTurn(iDeadCiv, 0)
+                #utils.zeroStability(iDeadCiv)
+                ##tils.setParameter(iDeadCiv,con.iParExpansionE,False,10)
+                #utils.setStability(iDeadCiv, 15) ##the new civs start as slightly stable
+                pDeadCiv.changeStabilityBase( con.iCathegoryCities, -pDeadCiv.getStabilityBase( con.iCathegoryCities ) )
+                pDeadCiv.changeStabilityBase( con.iCathegoryCivics, -pDeadCiv.getStabilityBase( con.iCathegoryCivics ) )
+                pDeadCiv.changeStabilityBase( con.iCathegoryEconomy, -pDeadCiv.getStabilityBase( con.iCathegoryEconomy ) )
+                pDeadCiv.changeStabilityBase( con.iCathegoryExpansion, 3-pDeadCiv.getStabilityBase( con.iCathegoryExpansion ) )
                 utils.setPlagueCountdown(iDeadCiv, -10)
                 utils.clearPlague(iDeadCiv)                                
                 self.convertBackCulture(iDeadCiv)
@@ -2031,8 +2038,6 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSwedishKarolin, iCiv, tPlot, 4)
                 if ( iCiv == iDutch ):
                         utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)                       
-                # 3Miro: on war declaration (Greece gets 4! Phalanx!)
-                pass
 
 
         def createStartingUnits( self, iCiv, tPlot ):
@@ -2040,7 +2045,7 @@ class RiseAndFall:
                 self.pm.onSpawn( iCiv )
                 # Change here to make later starting civs work
 		if (iCiv == iBurgundy):
-			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                 if (iCiv == iArabia):
@@ -2184,9 +2189,6 @@ class RiseAndFall:
 
                 self.showArea(iCiv)
                 self.initContact(iCiv)
-                # 3Miro: create units on spawn
-                pass
-                        
 
                                 
         def createStartingWorkers( self, iCiv, tPlot ):
@@ -2319,9 +2321,6 @@ class RiseAndFall:
                 if ( pDutch.isHuman() and tBirth[iDutch] > 0 ):
                         utils.makeUnit(iSettler, iDutch, tCapitals[iDutch], 1)
                         utils.makeUnit(xml.iMaceman, iDutch, tCapitals[iDutch], 1)
-
-                
-
 
 
         def assign600ADTechs( self ):
