@@ -381,7 +381,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
-		<English>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</English>
+		<English>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</English>
 		<French>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</French>
 		<German>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</German>
 		<Italian>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Italian>
@@ -390,7 +390,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE3</Tag>
-		<English>Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</English>
+		<English>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</English>
 		<French>Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1250 ap.JC.</French>
 		<German>Bauen Sie 3 orthodoxe Kathedralen und 8 orthodoxe Kl&#246;ster bis zum Jahr 1250 n. Chr.</German>
 		<Italian>Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Italian>
@@ -480,7 +480,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
-		<English>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</English>
+		<English>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</English>
 		<French>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</French>
 		<German>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</German>
 		<Italian>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</Italian>
