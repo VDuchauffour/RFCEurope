@@ -59,6 +59,8 @@ Changes for Beta 8:
 	Bugfixes:
 		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
 		Fixed the Venetian UHV (no longer requires conques of Morea)
+		Fixed a Venetian Stability Bug, they no longer start with Feudal Law (which is incompatible with Merchant Republic)
+		Fixed a bug allowing Crusaders to spawn for dead players
 
 	XML updates:
 		Updated unique UHV names
@@ -66,6 +68,7 @@ Changes for Beta 8:
 	Art updates:
 
 	Balance:
+		Nerfed Byzantine Stability
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

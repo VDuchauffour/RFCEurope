@@ -774,6 +774,8 @@ class Crusades:
 		
 	def crusadeMakeUnits( self, tPlot ):
 		iLeader = self.getLeader()
+                if ( not gc.getPlayer( iLeader ).isAlive() ):
+                        return
 		self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 2 )
 		self.makeUnit( xml.iKnight, iLeader, tPlot, 3 )
 		self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
