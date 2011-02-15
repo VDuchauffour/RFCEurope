@@ -614,10 +614,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability
-[ICON_BULLET] +2 Gold with Manorialism</English>
+[ICON_BULLET] +2 [ICON_GOLD] with Manorialism</English>
 		<French>[ICON_BULLET] +1 Stabilit&#233;
-[ICON_BULLET] +2 Gold with Manorialism</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;
-[ICON_BULLET] +2 Gold with Manorialism</Russian></TEXT>
+[ICON_BULLET] +2 [ICON_GOLD] with Manorialism</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;
+[ICON_BULLET] +2 [ICON_GOLD] with Manorialism</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
 		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>

@@ -66,6 +66,7 @@ Changes for Beta 8:
 		Updated unique UHV names
 
 	Art updates:
+		Gold icon instead of text in the pedia of Manor House
 
 	Balance:
 		Nerfed Byzantine Stability
