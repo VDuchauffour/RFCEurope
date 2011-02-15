@@ -58,6 +58,7 @@ Changes for Beta 8:
 
 	Bugfixes:
 		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
+		Fixed the Venetian UHV (no longer requires conques of Morea)
 
 	XML updates:
 		Updated unique UHV names
