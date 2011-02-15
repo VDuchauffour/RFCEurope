@@ -58,7 +58,7 @@ Changes for Beta 8:
 
 	Bugfixes:
 		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
-		Fixed the Venetian UHV (no longer requires conques of Morea)
+		Fixed the Venetian UHV (no longer requires conquest of Morea)
 		Fixed a Venetian Stability Bug, they no longer start with Feudal Law (which is incompatible with Merchant Republic)
 		Fixed a bug allowing Crusaders to spawn for dead players
 
@@ -74,6 +74,7 @@ Changes for Beta 8:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 7:
+(released: 2011.02.14)
 
 	Major changes:
 		Introduction of the new province system
@@ -178,7 +179,7 @@ Changes for BETA 5:
 	Get a speedup the hack on the semi-random bugfix from Beta 4 (look below)
 	Move University to Philosophy, Education gives a free GS
 	National University goes to Paper
-	Brewery: +1 Happy, Happyness with berley, (removed one person scientist, I didn't realize we had that with the Monasteries), lowered cost	
+	Brewery: +1 Happy, Happyness with barley, (removed one person scientist, I didn't realize we had that with the Monasteries), lowered cost	
 	Change the Smokeshouse to give health from meat, changed the cost of building it
 	Guild hall gives an engineer, an engineer slot and a merchant slot
 	Removed Stability bonus from the Dungeon
