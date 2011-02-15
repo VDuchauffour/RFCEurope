@@ -44,7 +44,7 @@ class Stability:
                                 pPlayer.changeStabilityBase( iCath, - pPlayer.getStabilityBase( iCath ) )
                                 pPlayer.setStabilityVary( iCath, 0 )
                         pPlayer.setStabilitySwing( 0 )
-                gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 10 ) # to account for the cities build in the WB
+                gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 5 ) # to account for the cities build in the WB
                 gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
                 
         def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
