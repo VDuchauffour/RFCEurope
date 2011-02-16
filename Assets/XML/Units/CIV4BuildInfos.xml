@@ -568,7 +568,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/BaseTerrain/Marsh.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,2,2</Button>
+			<Button>Art/Interface/Buttons/BaseTerrain/marsh.dds</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>

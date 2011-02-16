@@ -118,4 +118,12 @@
 		<Italian>Chiarire il [LINK=FEATURE_MUD]Fango[\LINK]</Italian>
 		<Spanish>Vacíe [LINK=FEATURE_MUD]Barro[\LINK]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_WINERY</Tag>
+		<English>Build a [LINK=IMPROVEMENT_WINERY]Vineyard[\LINK]</English>
+		<French>construire une [LINK=IMPROVEMENT_WINERY]exploitation vinicole[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
+		<Italian>Costruire un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
+	</TEXT>
 </Civ4GameText>
