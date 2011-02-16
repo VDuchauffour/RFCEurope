@@ -61,6 +61,7 @@ Changes for Beta 8:
 		Fixed the Venetian UHV (no longer requires conquest of Morea)
 		Fixed a Venetian Stability Bug, they no longer start with Feudal Law (which is incompatible with Merchant Republic)
 		Fixed a bug allowing Crusaders to spawn for dead players
+		Fixed a bug preventing the Human from getting production/research benefits/boosts
 
 	XML updates:
 		Updated unique UHV names
