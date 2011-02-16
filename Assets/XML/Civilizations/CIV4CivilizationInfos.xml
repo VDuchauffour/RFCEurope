@@ -1093,6 +1093,10 @@
 					<LeaderName>LEADER_SIMEON</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_IVAN_ASEN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BULGARIA_SELECT</CivilizationSelectionSound>
@@ -6838,6 +6842,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_GUSTAVUS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_KARL_XII</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

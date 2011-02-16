@@ -56,11 +56,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_BARBAROSSA</Type>
-			<Button>Art/Leaderheads/Barbarossa/BarbarossaButton.dds</Button>
-			<NIF>Art/Leaderheads/Barbarossa/Kylorin.nif</NIF>
-			<KFM>Art/Leaderheads/Barbarossa/george_washington.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Barbarossa/Kylorin_noshader.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Barbarossa/washington_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Barbarossa/barbarossa_btn.dds</Button>
+			<NIF>Art/Leaderheads/Barbarossa/Cunne_Shote.nif</NIF>
+			<KFM>Art/Leaderheads/Barbarossa/Cunne_Shote.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Barbarossa/Cunne_Shote.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Barbarossa/Cunne_Shote_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_CATHERINE</Type>
@@ -344,19 +344,35 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_MINDAUGAS</Type>
-			<Button>Art/Leaderheads/Mindaugas/Btn_LH_Mindaugas.dds</Button>
-			<NIF>Art/Leaderheads/Mindaugas/Mindaugas.nif</NIF>
+			<Button>Art/Leaderheads/Mindaugas/Btn_Mindaugas.dds</Button>
+			<NIF>Art/Leaderheads/Mindaugas/hannibal.nif</NIF>
 			<KFM>Art/Leaderheads/Mindaugas/hannibal.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Mindaugas/Mindaugas.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Mindaugas/hannibal_BG.kfm</BackgroundKFM>
+			<NoShaderNIF>Art/Leaderheads/Mindaugas/hannibal_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Mindaugas/hannibal_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_VYTAUTAS</Type>
-			<Button>Art/Leaderheads/Vytautas/Btn_LH_Vytautas.dds</Button>
-			<NIF>Art/Leaderheads/Vytautas/Vytautas.nif</NIF>
-			<KFM>Art/Leaderheads/Vytautas/ragnar_lodbrok.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Vytautas/Vytautas.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Vytautas/Ragnar_BG.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Vytautas/Btn_Vytautas.dds</Button>
+			<NIF>Art/Leaderheads/Vytautas/alexander.nif</NIF>
+			<KFM>Art/Leaderheads/Vytautas/alexander.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Vytautas/alexander.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Vytautas/alexander_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_KARL_XII</Type>
+			<Button>Art/Leaderheads/Karl_XII/btn_karl_xii.dds</Button>
+			<NIF>Art/Leaderheads/Karl_XII/george_washington.nif</NIF>
+			<KFM>Art/Leaderheads/Karl_XII/george_washington.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Karl_XII/george_washington_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Karl_XII/washington_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_IVAN_ASEN</Type>
+			<Button>Art/Leaderheads/Ivan_Asev/Btn_Ivan_Asev.dds</Button>
+			<NIF>Art/Leaderheads/Ivan_Asev/putin.nif</NIF>
+			<KFM>Art/Leaderheads/Ivan_Asev/putin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ivan_Asev/putin.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ivan_Asev/putin_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

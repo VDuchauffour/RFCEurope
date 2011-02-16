@@ -627,6 +627,10 @@ iAndrea_Dandolo = 40
 iHaakon_Iv = 41
 iMindaugas = 42
 iVytautas = 43
+iKarl_Xii = 44
+iIvan_Asen = 45
+
+
 
 ###################### PROVINCES #######################################
 #Iberia 0+

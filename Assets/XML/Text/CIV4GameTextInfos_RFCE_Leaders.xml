@@ -1153,6 +1153,38 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_KARL_XII</Tag>
+		<English>Karl XII</English>
+		<French>Karl XII</French>
+		<German>Karl XII</German>
+		<Italian>Karl XII</Italian>
+		<Spanish>Karl XII</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KARL_XII_PEDIA</Tag>
+		<English>[H1]Karl XII[\H1][NEWLINE][BOLD]King of Sweden[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] June 17, 1682 - November 30, 1718 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]No BG yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_IVAN_ASEN</Tag>
+		<English>Ivan Asen</English>
+		<French>Ivan Asen</French>
+		<German>Ivan Asen</German>
+		<Italian>Ivan Asen</Italian>
+		<Spanish>Ivan Asen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_IVAN_ASEN_PEDIA</Tag>
+		<English>[H1]Ivan Asen II[\H1][NEWLINE][BOLD]Tsar of the Second Bulgarian Empire[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c. 1180 - June 24, 1241 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]No BG yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_INDEPENDENT</Tag>
 		<English>Independent Leader</English>
 		<French>
