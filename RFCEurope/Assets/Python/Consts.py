@@ -837,8 +837,6 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 
 
 
-
-
 #Stability Parameters
 
 iParCities3 = 0
@@ -856,15 +854,17 @@ iParExpansion1 = 11
 iParExpansionE = 12
 iNumStabilityParameters = 13
 
+
 #Plague
 iImmunity = 20
+
 
 
 tLeaders = (		#First has to be the primary leader (the one that appaers on the civ selection screen). Can be changed in the WB file (AbsintheRed)
 (xml.iJustinian,),
 (xml.iCharlemagne, xml.iJoan, xml.iLouis_Xiv),
 (xml.iAbuBakr, xml.iSaladin),
-(xml.iSimeon,),
+(xml.iSimeon, xml.iIvan_Asen),
 (xml.iAbdarRahman, xml.iAbuYusufYaqub),
 (xml.iHarald_Hardrada, xml.iHaakon_Iv, xml.iChristian_Iv),
 (xml.iDandolo, xml.iAndrea_Dandolo),
@@ -875,13 +875,13 @@ tLeaders = (		#First has to be the primary leader (the one that appaers on the c
 (xml.iIsabella, xml.iPhilip_Ii),
 (xml.iCasimir, xml.iSobieski),
 (xml.iSimone,),
-(xml.iWilliam, xml.iElizabeth,xml.iGeorge_Iii),
+(xml.iWilliam, xml.iElizabeth, xml.iGeorge_Iii),
 (xml.iAfonso, xml.iJoao, xml.iMaria_Ii),
-(xml.iMindaugas,xml.iVytautas),
+(xml.iMindaugas, xml.iVytautas),
 (xml.iMaximilian, xml.iMaria_Theresa),
 (xml.iMehmed, xml.iSuleiman),
 (xml.iIvan_Iv, xml.iPeter, xml.iCatherine),		#Don't change back the order of Peter and Ivan. Right now Ivan is the primary leader. Was needed for leader switching (AbsintheRed - Beta 6)
-(xml.iGustavus,),
+(xml.iGustavus, xml.iKarl_Xii),
 (xml.iWillem_Van_Oranje,),
 (xml.iThe_Pope,)
 )
@@ -918,7 +918,7 @@ tLateLeaders = (		#All switch dates up to 200 years earlier because the switch i
 (xml.iJustinian,),
 (xml.iJoan, xml.i1160AD, 10, 2, xml.iLouis_Xiv, xml.i1452AD, 25, 3),
 (xml.iSaladin, xml.i1160AD, 25, 2),
-(xml.iSimeon,),
+(xml.iIvan_Asen, xml.i1101AD, 10, 2),
 (xml.iAbuYusufYaqub, xml.i1101AD, 10, 2),
 (xml.iHaakon_Iv, xml.i1160AD, 25, 2, xml.iChristian_Iv, xml.i1520AD, 5, 3),
 (xml.iAndrea_Dandolo, xml.i1200AD, 10, 2),
@@ -935,11 +935,10 @@ tLateLeaders = (		#All switch dates up to 200 years earlier because the switch i
 (xml.iMaria_Theresa, xml.i1700AD, 25, 3),
 (xml.iSuleiman, xml.i1520AD, 15, 3),
 (xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
-(xml.iGustavus,),
+(xml.iKarl_Xii, xml.i1570AD, 10, 3),
 (xml.iWillem_Van_Oranje,),
 (xml.iThe_Pope,)
 )
-
 
 
 

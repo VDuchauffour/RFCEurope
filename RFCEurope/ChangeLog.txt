@@ -33,9 +33,12 @@ MV1		General XML updates, removing unused XML parts
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
 AR		Fix a couple province names, update a few provinces
 AR		Big overhaul to the map, especially in the Balkans, Carpathian Basin, Iberian Peninsula, Lithuania
-AR		LHs: update Barbarossa, Mindaugas, Vytautas; add Margaret, Ivan Asev, Karl XII/Gustav Adolph
+AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Bulgarian leader
 AR		Update hungarian settler map
+AR		Switch hungarian order and select sounds
+AR		Update xml entry for Hungary, Moscow, Norse
 		General overhaul to ALL the leader personalities
+		Civ specific Great People names
 		Custom DiploMusic for Bulgaria (Simeon, Ivan Asev), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
 		Readd apples and citrus as a food resource (with no health bonus)
 		Custom Events?
@@ -44,7 +47,8 @@ AR		Update hungarian settler map
 		Lower La Mezquita to the ground
 		Add a LeaderHeadInfos.xml.light file
 		Dynamic Civ Names for Lithuania
-MV1		Translate the province names (after they province system is finished)
+MV1		Python cleanup
+MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 
@@ -52,16 +56,7 @@ MV1		Merge in the remaning civilopedia texts
 
 Changes for Beta 8:
 
-	Major changes:
-
-	Minor changes:
-
-	Bugfixes:
-		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
-		Fixed the Venetian UHV (no longer requires conquest of Morea)
-		Fixed a Venetian Stability Bug, they no longer start with Feudal Law (which is incompatible with Merchant Republic)
-		Fixed a bug allowing Crusaders to spawn for dead players
-		Fixed a bug preventing the Human from getting production/research benefits/boosts
+	General changes:
 
 	XML updates:
 		Updated unique UHV names
@@ -70,14 +65,23 @@ Changes for Beta 8:
 	Art updates:
 		Gold icon instead of text in the pedia of Manor House
 		"Remove Mud" worker action shows proper button
+		New LHs: Ivan Asen II for Bulgaria, Karl XII for Sweden
+		LH update: Barbarossa, Mindaugas, Vytautas
 
 	Balance:
 		Nerfed Byzantine Stability
+		
+	Bugfixes:
+		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
+		Fixed the Venetian UHV (no longer requires conquest of Morea)
+		Fixed a Venetian Stability Bug, they no longer start with Feudal Law (which is incompatible with Merchant Republic)
+		Fixed a bug allowing Crusaders to spawn for dead players
+		Fixed a bug preventing the Human from getting production/research benefits/boosts	
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 7:
-(released: 2011.02.14)
+(released: 2011.02.14.)
 
 	Major changes:
 		Introduction of the new province system
@@ -94,6 +98,7 @@ Changes for Beta 7:
 		Civilopedia hides units, independent civs, barbarian LH and some other things
 		Forbidden some units to become a mercenary
 		Added complete changelog - please use this detailed form from now on
+		Python code that is used in RFC but not in RFCE is removed
 		Unique name for each UHV (not complete)
 	
 	XML updates:
@@ -108,11 +113,13 @@ Changes for Beta 7:
 		
 	Art updates:	
 		Ethnic russian Great General
+		Better looking buttons (and a smaller size of the FPK)
 	
 	Balance:
 		Apothecary cost increased to 100
 		Reduced speed of the French Musketeer to 1
 		Stronger crusades
+		Lithuania receives gold at spawn
 	
 	Bugfixes:
 		!!!NOTE!!! Due to the large amount of major changes, there will be a large number of new bugs introduced in this version	
