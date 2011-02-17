@@ -62,6 +62,7 @@ Changes for Beta 8:
 		Updated unique UHV names
 		"Build Vineyard" instead of "Build Winery" when you build the Vineyard improvement
 		German territory UHV has proper description
+		Proper date for Cordoban 2nd UHV in the pedia
 
 	Art updates:
 		Gold icon instead of text in the pedia of Manor House
