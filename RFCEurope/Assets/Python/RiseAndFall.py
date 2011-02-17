@@ -1069,8 +1069,8 @@ class RiseAndFall:
                                                                 capital = gc.getPlayer(iPlayer).getCapitalCity()
                                                                 iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
                                                                 if (iDistance > 3):                                                                                               
-                                                            
-                                                                        if (pPlayer.getProvinceType( city.getProvince() ) < con.iProvinceNatural or \
+                                                                        iProvType = pPlayer.getProvinceType( city.getProvince() )
+                                                                        if ( iProvType < con.iProvinceNatural or \
                                                                             city.angryPopulation(0) > 0 or \
                                                                             city.healthRate(False, 0) < 0 or \
                                                                             city.getReligionBadHappiness() > 0 or \
@@ -1079,6 +1079,18 @@ class RiseAndFall:
                                                                             city.getNoMilitaryPercentAnger() > 0 ):
                                                                                 if ( gc.getGame().getSorenRandNum(100, 'city secession') > - 10 * pPlayer.getStability() ):
                                                                                         cityList.append(city)
+                                                                                        # 3MiroProvinces: outer and none provices have much higher probability of flipping
+                                                                                        if ( iProvType == con.iProvinceNone ):
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
+                                                                                        if ( iProvType == con.iProvinceNatural ):
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
+                                                                                                cityList.append(city)
                                                                                         continue
                                                                         
                                                                         #for iLoop in range(iNumTotalPlayers+1):
