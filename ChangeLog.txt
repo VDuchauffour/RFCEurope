@@ -83,6 +83,7 @@ Changes for Beta 8:
 		Fixed a bug preventing the Human from getting production/research benefits/boosts	
 		Fixed a bug allowing Venetian units to enter Venice even when it is conquered by other players
 		Fixed a bug pushing Crusades outside of spawn location due to slip of the target city, Crusaders now declare war to the new owner of the city
+		Fixed TXT_KEY_GREAT_GENERAL_FREDERICK_BARBAROSSA
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
