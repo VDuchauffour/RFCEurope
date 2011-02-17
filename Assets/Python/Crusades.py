@@ -725,7 +725,13 @@ class Crusades:
 		iTY = self.getTargetY()
 		iChosenX = -1
 		iChosenY = -1
-		#print("Target:", iTX, iTY)
+                
+                # if the leader has been destroyed, calcel the crusade
+                iLeader = self.getLeader()
+                if ( not gc.getPlayer( iLeader ).isAlive() ):
+                        return
+		
+                # if in the mean time Jerusalem has been captured by am Orthodox or Catholic player (and target is Jerusalem), cancel the Crusade
 		if ( iTX == iJerusalem[0] and iTY == iJerusalem[1] ): # if the Terget is Jerusalem
 			pPlot = gc.getMap().plot( iJerusalem[0], iJerusalem[1] )
 			if ( pPlot.isCity() ): # and it is still there
@@ -734,7 +740,20 @@ class Crusades:
 					iReligion = gc.getPlayer( iVictim ).getStateReligion()
 					if ( iReligion == iCatholicism or iReligion == iOrthodoxy ): # now controlled by Orthodox or Catholic (i.e. change of Religion)
 						return
-				
+			
+                # if not at war with the owener of the city, declare war
+                pPlot = gc.getMap().plot( iTX, iTY )
+                if ( pPlot.isCity() ):
+                        iVictim = pPlot.getPlotCity().getOwner()
+                        if ( iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != xml.iCatholicism ):
+                                teamLeader = gc.getTeam( gc.getPlayer(iLeader).getTeam() )
+                                iTeamVictim = gc.getTeam( gc.getPlayer(iVictim).getTeam() ).getID()
+                                if ( not teamLeader.isAtWar( iTeamVictim ) ):
+                                        if ( teamLeader.canDeclareWar( iTeamVictim ) ):
+                                                teamLeader.declareWar(iTeamVictim, True, -1)
+                                        else:
+                                                # we cannot declare war to the current owner of the target city
+                                                return
 
 		for y in range( 3 ):
 			for x in range( 3 ):
@@ -774,8 +793,7 @@ class Crusades:
 		
 	def crusadeMakeUnits( self, tPlot ):
 		iLeader = self.getLeader()
-                if ( not gc.getPlayer( iLeader ).isAlive() ):
-                        return
+
 		self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 2 )
 		self.makeUnit( xml.iKnight, iLeader, tPlot, 3 )
 		self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )

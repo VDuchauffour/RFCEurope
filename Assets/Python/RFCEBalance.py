@@ -579,7 +579,7 @@ class RFCEBalance:
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 6, 100 )
 
 		# every nation gets a land tile that is normally impassible and now pass through it
-		gc.setStrategicTile( iVenecia, 56, 35 )
+		#gc.setStrategicTile( iVenecia, 56, 35 )
 		
 		# set AI modifiers for preffered buildings (it is possible that it works only for wonders)
 		# gc.setBuildingPref( iFrankia, con.iNotreDame, 10 )
