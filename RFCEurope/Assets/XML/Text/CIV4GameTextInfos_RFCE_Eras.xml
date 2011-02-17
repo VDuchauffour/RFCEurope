@@ -6,7 +6,7 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_AGE_ANCIENT</Tag>
+		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Early Middle Ages</English>
 		<French>Haut Moyen &#194;ge</French>
 		<German>Frühes Mittelalter</German>
@@ -15,7 +15,7 @@
 		<Russian>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AGE_CLASSICAL</Tag>
+		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>High Middle Ages</English>
 		<French>Moyen &#194;ge</French>
 		<German>Hochmittelalter</German>
@@ -24,12 +24,21 @@
 		<Russian>&#209;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
+		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
 		<English>Late Middle Ages</English>
 		<French>Bas Moyen &#194;ge</French>
 		<German>Sp&#228;tmittelalter</German>
 		<Italian>Basso Medioevo</Italian>
 		<Spanish>Baja Edad Media</Spanish>
 		<Russian>&#207;&#238;&#231;&#228;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
+		<English>Early Middle Ages</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Russian>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
 	</TEXT>
 </Civ4GameText>
