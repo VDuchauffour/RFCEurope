@@ -33,13 +33,13 @@ MV1		General XML updates, removing unused XML parts
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
 AR		Fix a couple province names, update a few provinces
 AR		Big overhaul to the map, especially in the Balkans, Carpathian Basin, Iberian Peninsula, Lithuania
-AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Bulgarian leader
+AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Byzantine leader
 AR		Update hungarian settler map
 AR		Switch hungarian order and select sounds
 AR		Update xml entry for Hungary, Moscow, Norse
 		General overhaul to ALL the leader personalities
 		Civ specific Great People names
-		Custom DiploMusic for Bulgaria (Simeon, Ivan Asev), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
+		Custom DiploMusic for Bulgaria (Simeon, Ivan Asen), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
 		Readd apples and citrus as a food resource (with no health bonus)
 		Custom Events?
 		Minor Civs?
@@ -57,6 +57,7 @@ MV1		Merge in the remaning civilopedia texts
 Changes for Beta 8:
 
 	General changes:
+		revised map of Balkans, Greece, Carpathian-basin, Lithuania
 
 	XML updates:
 		Updated unique UHV names

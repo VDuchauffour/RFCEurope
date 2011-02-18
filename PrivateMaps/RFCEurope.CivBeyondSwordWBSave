@@ -15831,7 +15831,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=65
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=0
 EndPlot
 BeginPlot
@@ -16249,7 +16249,7 @@ EndPlot
 BeginPlot
 	x=41,y=66
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=0
 EndPlot
 BeginPlot
@@ -21769,8 +21769,10 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=35
+	RiverNSDirection=2
 	isNOfRiver
 	RiverWEDirection=1
+	isWOfRiver
 	BonusType=BONUS_WHEAT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -21895,8 +21897,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=55
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=56
@@ -22243,6 +22245,8 @@ EndPlot
 BeginPlot
 	x=56,y=36
 	RiverNSDirection=2
+	isNOfRiver
+	RiverWEDirection=1
 	isWOfRiver
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -22655,6 +22659,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=33
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23078,7 +23083,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=33
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24748,12 +24752,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=28
-	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=62,y=29
+	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24774,6 +24778,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=32
+	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -25652,14 +25657,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=36
-	FeatureType=FEATURE_MUD, FeatureVariety=0
-	TerrainType=TERRAIN_MARSH
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=64,y=37
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	BonusType=BONUS_WINE
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=64,y=38
@@ -25677,7 +25682,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=40
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -25699,7 +25704,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=44
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -26017,8 +26022,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=28
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=29
@@ -26064,8 +26070,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=35
+	BonusType=BONUS_COW
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26085,18 +26092,24 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=39
+	RiverNSDirection=2
 	isNOfRiver
 	RiverWEDirection=1
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=40
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=41
+	RiverNSDirection=2
+	isWOfRiver
 	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -26109,14 +26122,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=43
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=44
 	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_GRASS
@@ -26429,14 +26442,14 @@ BeginPlot
 	x=66,y=26
 	RiverNSDirection=2
 	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=27
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=28
@@ -26494,9 +26507,8 @@ BeginPlot
 	x=66,y=35
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=66,y=36
@@ -26538,18 +26550,21 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=41
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=66,y=42
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
+	x=66,y=42
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
+EndPlot
+BeginPlot
 	x=66,y=43
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -26815,8 +26830,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=17
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=67,y=18
@@ -26861,11 +26876,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=25
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=67,y=26
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -26925,7 +26944,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=35
-	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_HORSE
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26947,8 +26967,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=39
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=67,y=40
@@ -26965,9 +26986,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=42
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=67,y=43
@@ -27286,6 +27309,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=25
+	BonusType=BONUS_SILVER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -27293,6 +27317,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=26
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -27354,7 +27379,6 @@ BeginPlot
 	x=68,y=35
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -27362,6 +27386,7 @@ BeginPlot
 	x=68,y=36
 	RiverNSDirection=2
 	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -27387,12 +27412,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=41
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=68,y=42
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -27705,13 +27733,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=23
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=69,y=24
-	BonusType=BONUS_SILVER
+	ImprovementType=IMPROVEMENT_CITY_RUINS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -27719,8 +27746,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=25
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=0
 EndPlot
 BeginPlot
 	x=69,y=26
@@ -27734,22 +27762,30 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=28
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=29
+	RiverNSDirection=0
+	isWOfRiver
 	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=69,y=30
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=31
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -27763,8 +27799,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=33
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=69,y=34
@@ -27775,6 +27812,7 @@ BeginPlot
 	x=69,y=35
 	isNOfRiver
 	RiverWEDirection=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=0 
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -27796,21 +27834,28 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=38
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=39
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=69,y=40
-	TerrainType=TERRAIN_PLAINS
+	RiverNSDirection=2
+	isWOfRiver
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=41
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -27823,7 +27868,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=43
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -28130,8 +28175,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=23
-	RiverNSDirection=2
-	isWOfRiver
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -28142,30 +28185,39 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_SHEEP
-	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=70,y=25
-	BonusType=BONUS_WINE
+	isNOfRiver
+	RiverWEDirection=1
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=26
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	BonusType=BONUS_SULPHUR
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=70,y=27
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=70,y=28
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -28187,7 +28239,7 @@ BeginPlot
 	isWOfRiver
 	ImprovementType=IMPROVEMENT_CITY_RUINS
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=70,y=32
@@ -28203,7 +28255,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=34
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28215,12 +28267,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=36
-	FeatureType=FEATURE_MUD, FeatureVariety=0
-	TerrainType=TERRAIN_MARSH
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=37
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28248,9 +28301,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=41
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=70,y=42
@@ -28326,7 +28379,7 @@ BeginPlot
 	x=70,y=53
 	BonusType=BONUS_DYE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28339,7 +28392,7 @@ EndPlot
 BeginPlot
 	x=70,y=55
 	BonusType=BONUS_GEMS
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28358,7 +28411,7 @@ BeginPlot
 	x=70,y=58
 	BonusType=BONUS_TIMBER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28571,6 +28624,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=22
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -28579,23 +28634,23 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=23
-	isNOfRiver
-	RiverWEDirection=1
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=71,y=24
+	isNOfRiver
+	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=71,y=25
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
@@ -28603,44 +28658,36 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=26
-	RiverNSDirection=0
-	isWOfRiver
-	ImprovementType=IMPROVEMENT_VILLAGE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=27
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=71,y=28
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=71,y=29
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=71,y=30
-	RiverNSDirection=0
+	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=71,y=31
@@ -28680,6 +28727,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=37
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -28694,6 +28742,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -28704,13 +28753,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=41
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=71,y=42
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -28789,25 +28838,24 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=55
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=56
 	BonusType=BONUS_DEER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=57
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=58
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
@@ -28947,14 +28995,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=9
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=72,y=10
-	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=72,y=11
@@ -28968,16 +29015,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=13
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=72,y=14
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=15
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,
@@ -29028,8 +29078,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=22
-	RiverNSDirection=2
-	isWOfRiver
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -29073,8 +29121,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=23
-	isNOfRiver
-	RiverWEDirection=1
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,
@@ -29094,16 +29141,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=26
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	RouteType=ROUTE_ROAD
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=72,y=27
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	ImprovementType=IMPROVEMENT_VILLAGE
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=72,y=28
@@ -29118,14 +29166,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=30
+	isNOfRiver
+	RiverWEDirection=1
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=31
-	isNOfRiver
-	RiverWEDirection=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -29142,6 +29190,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=34
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29169,34 +29218,33 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=39
-	FeatureType=FEATURE_MUD, FeatureVariety=0
-	TerrainType=TERRAIN_MARSH
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=40
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_GOLD
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=72,y=41
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
-EndPlot
-BeginPlot
-	x=72,y=42
+	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
+	x=72,y=42
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=0
+EndPlot
+BeginPlot
 	x=72,y=43
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -29261,8 +29309,7 @@ BeginPlot
 	x=72,y=53
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29274,7 +29321,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=55
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29285,7 +29332,7 @@ EndPlot
 BeginPlot
 	x=72,y=57
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29421,14 +29468,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=9
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=73,y=10
-	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=73,y=11
@@ -29447,9 +29494,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=14
-	BonusType=BONUS_WINE
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=73,y=15
@@ -29459,8 +29505,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=16
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -29546,7 +29592,7 @@ BeginPlot
 	x=73,y=25
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=0
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -29570,7 +29616,7 @@ BeginPlot
 	x=73,y=28
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=73,y=29
@@ -29579,20 +29625,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=30
+	isNOfRiver
+	RiverWEDirection=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=31
-	isNOfRiver
-	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=32
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29642,16 +29687,15 @@ BeginPlot
 	x=73,y=40
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
-EndPlot
-BeginPlot
-	x=73,y=41
-	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
+EndPlot
+BeginPlot
+	x=73,y=41
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=0
 EndPlot
 BeginPlot
 	x=73,y=42
@@ -29730,12 +29774,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=53
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_BARLEY
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=54
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29746,12 +29791,12 @@ EndPlot
 BeginPlot
 	x=73,y=56
 	BonusType=BONUS_HONEY
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=57
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29774,12 +29819,12 @@ EndPlot
 BeginPlot
 	x=73,y=61
 	BonusType=BONUS_GEMS
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=62
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29896,9 +29941,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=10
-	BonusType=BONUS_OLIVES
-	ImprovementType=IMPROVEMENT_VILLAGE
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_SALT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29929,8 +29973,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=16
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -30002,7 +30046,7 @@ BeginPlot
 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=0
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -30019,25 +30063,35 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=30
+	RiverNSDirection=2
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=31
-	isNOfRiver
-	RiverWEDirection=1
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=32
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=74,y=33
+	RiverNSDirection=2
+	isWOfRiver
+	BonusType=BONUS_SILVER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -30083,13 +30137,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=40
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	BonusType=BONUS_DEER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=74,y=41
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -30163,66 +30218,67 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	FeatureType=FEATURE_MUD, FeatureVariety=0
+	TerrainType=TERRAIN_MARSH
+	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=53
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=74,y=54
-	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=55
-	TerrainType=TERRAIN_MOORLAND
+	BonusType=BONUS_HORSE
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=56
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=57
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=58
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=59
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=60
-	TerrainType=TERRAIN_MOORLAND
+	BonusType=BONUS_COW
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=61
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=62
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30335,8 +30391,10 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=10
-	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	ImprovementType=IMPROVEMENT_TOWN
+	BonusType=BONUS_OLIVES
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=11
@@ -30372,8 +30430,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=17
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -30390,7 +30448,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=20
-	TerrainType=TERRAIN_OCEAN
+	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,
 EndPlot
@@ -30414,8 +30472,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=24
-	RiverNSDirection=2
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -30423,8 +30479,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=25
-	RiverNSDirection=2
-	isWOfRiver
 	BonusType=BONUS_IRON
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -30445,14 +30499,14 @@ BeginPlot
 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=75,y=28
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -30462,44 +30516,47 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=30
+	isNOfRiver
+	RiverWEDirection=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=31
-	isNOfRiver
-	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=75,y=32
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=75,y=33
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
+	x=75,y=33
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
+EndPlot
+BeginPlot
 	x=75,y=34
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=75,y=35
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=36
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30517,6 +30574,8 @@ BeginPlot
 	x=75,y=39
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_GOLD
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -30524,10 +30583,11 @@ BeginPlot
 	x=75,y=40
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=75,y=41
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -30540,7 +30600,6 @@ BeginPlot
 	x=75,y=43
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -30607,6 +30666,7 @@ BeginPlot
 	x=75,y=53
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -30623,15 +30683,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=56
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=57
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -30642,8 +30702,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=59
-	BonusType=BONUS_IRON
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -30776,8 +30837,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=10
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=76,y=11
@@ -30851,12 +30912,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=24
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=76,y=25
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,
@@ -30864,7 +30929,7 @@ EndPlot
 BeginPlot
 	x=76,y=26
 	isNOfRiver
-	RiverWEDirection=3
+	RiverWEDirection=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -30897,7 +30962,7 @@ EndPlot
 BeginPlot
 	x=76,y=27
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -30914,20 +30979,22 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=30
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=31
-	isNOfRiver
-	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=32
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -30939,12 +31006,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=34
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=76,y=35
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -30961,12 +31031,12 @@ EndPlot
 BeginPlot
 	x=76,y=37
 	BonusType=BONUS_SALT
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=76,y=38
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -31080,7 +31150,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=55
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31093,13 +31163,14 @@ BeginPlot
 	x=76,y=57
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_MOORLAND
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=58
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31328,17 +31399,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=26
-	isNOfRiver
-	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=77,y=27
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -31380,7 +31450,7 @@ EndPlot
 BeginPlot
 	x=77,y=34
 	BonusType=BONUS_DEER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -31423,11 +31493,13 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	BonusType=BONUS_COPPER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=77,y=41
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -31510,13 +31582,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=55
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=77,y=56
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31524,7 +31596,7 @@ BeginPlot
 	x=77,y=57
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31785,7 +31857,7 @@ BeginPlot
 	x=78,y=28
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -32248,8 +32320,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=27
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -32303,13 +32375,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=35
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=79,y=36
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
