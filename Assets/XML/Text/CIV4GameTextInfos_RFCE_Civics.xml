@@ -339,60 +339,6 @@
 		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#238;&#247;&#234;&#238;&#226;  &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#238;&#233; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#239;&#238;&#228; &#231;&#224;&#237;&#255;&#242;&#232;&#229;&#236;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMERCE_BONUS</Tag>
-		<English></English>
-		<French></French>
-		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch eine geringe Anzahl gehandelter Ressourcen</German>
-		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di scarso commercio di risorse.</Italian>
-		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por baja cantidad de recursos intercambiados</Spanish>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ECONOMY_BONUS</Tag>
-		<English></English>
-		<French></French>
-		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch schlechte Wirtschaftslage</German>
-		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di scarsa economia.</Italian>
-		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por econom&#237;a d&#233;bil</Spanish>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DEPRESSION</Tag>
-		<English></English>
-		<French></French>
-		<German>[ICON_BULLET]Risiko einer Gro&#223;en Depression</German>
-		<Italian>[ICON_BULLET]Rischio di Grande Depressione.</Italian>
-		<Spanish>[ICON_BULLET]Riesgo de Gran Depresi&#243;n</Spanish>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_POST_COMMUNISM</Tag>
-		<English></English>
-		<French></French>
-		<German>[ICON_BULLET]Post-kommunistische Krise im Falle eines Wirtschaftssystemwechsels</German>
-		<Italian>[ICON_BULLET]Crisi post-comunista in caso di cambio di sistema economico.</Italian>
-		<Spanish>[ICON_BULLET]Crisis post-comunista en caso de cambio de sistema econ&#243;mico</Spanish>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DEMOCRACY</Tag>
-		<English></English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_SUBJUGATION_STRATEGY</Tag>
-		<English></English>
-		<French></French>
-		<German/>
-		<Italian/>
-		<Spanish/>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Tag>
 		<English>Adds a Stability Points bonus for each vassal</English>
 		<French>Ajoute un bonus de points de stabilit&#233; par vassal</French>
