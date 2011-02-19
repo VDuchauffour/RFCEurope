@@ -51,6 +51,7 @@ MV1		Python cleanup
 MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
+MV1		Do XML things for the Civic overhaul
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -76,6 +77,7 @@ Changes for Beta 8:
 		Germany UHV no longer requires conquest of Bohemia (we should probably redo the entire thing)
 		Cities in outer and none provinces are more likely to declare independence (whether a city declares independence has the same odds, the change is in which city)
 		Independent players now have no state religion, making the AI hate them more and losing the "fighting brothers in faith" penalty
+		Islamic Madrassa has equal features to the Christian Monasteries
 		
 	Bugfixes:
 		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
