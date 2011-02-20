@@ -684,6 +684,9 @@
 	<ElementType name="bStabilityConquestBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityCommerceBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowNonStateReligionBuildings" content="textOnly" dt:type="boolean"/>
+        <ElementType name="iCivicGoldBuildingClass" content="textOnly"/>
+        <ElementType name="iCivicGoldGoldAmount" content="textOnly" dt:type="int"/>
+        <ElementType name="iUnitProductionBoost" content="textOnly" dt:type="int"/>
 	<!-- Rhye - end -->
 	<ElementType name="Upkeep" content="textOnly"/>
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
@@ -827,6 +830,9 @@
 		<element type="bStabilityConquestBonus"/>
 		<element type="bStabilityCommerceBonus"/>
 		<element type="bAllowNonStateReligionBuildings"/>
+                <element type="iCivicGoldBuildingClass"/>
+                <element type="iCivicGoldGoldAmount"/>
+                <element type="iUnitProductionBoost"/>
 		<!-- Rhye - end -->
 		<element type="YieldModifiers"/>
 		<element type="CapitalYieldModifiers"/>
