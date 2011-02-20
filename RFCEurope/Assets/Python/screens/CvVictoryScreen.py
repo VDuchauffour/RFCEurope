@@ -6,8 +6,10 @@ import ScreenInput
 import PyHelpers
 import time
 import Consts as con #Rhye
-import cPickle as pickle #Rhye
+#import cPickle as pickle #Rhye
 import RFCUtils #Rhye
+import Victory as vic
+import Consts as con
 
 PyPlayer = PyHelpers.PyPlayer
 
@@ -101,17 +103,17 @@ class CvVictoryScreen:
                 self.X_UHV1 = 10
                 self.Y_UHV1 = 350
                 self.W_UHV1 = 1010
-                self.H_UHV1 = 110
+                self.H_UHV1 = 120
                 
                 self.X_UHV2 = 10
                 self.Y_UHV2 = 470
                 self.W_UHV2 = 1010
-                self.H_UHV2 = 110
+                self.H_UHV2 = 120
                 
                 self.X_UHV3 = 10
                 self.Y_UHV3 = 590
                 self.W_UHV3 = 1010
-                self.H_UHV3 = 110
+                self.H_UHV3 = 120
 						
 	def getScreen(self):
 		return CyGInterfaceScreen(self.SCREEN_NAME, self.screenId)
@@ -914,10 +916,55 @@ class CvVictoryScreen:
                 szUHV1Area = self.UHV1_ID
                 screen.addPanel(self.UHV1_ID, "", "", True, True, self.X_UHV1, self.Y_UHV1, self.W_UHV1, self.H_UHV1, PanelStyles.PANEL_STYLE_MAIN)
 
-                #sString = localText.getText("TXT_KEY_ICON_BULLET",()) + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-                #sString = sString + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-                screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+7, self.Y_UHV1+15, self.W_UHV1-10, self.H_UHV1-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # 3Miro: Add verbose information about the UHV Conditions: Condition 0
+                bListProvs = False
+                if ( self.iActivePlayer == con.iFrankia ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tFrankControl
+                elif ( self.iActivePlayer == con.iArabia ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tArabiaControlI
+                elif ( self.iActivePlayer == con.iBulgaria ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tBulgariaControl
+                elif ( self.iActivePlayer == con.iVenecia ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tVenetianControl
+                elif ( self.iActivePlayer == con.iBurgundy ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tBurgundyControl
+                elif ( self.iActivePlayer == con.iGermany ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tGermanyControl
+                elif ( self.iActivePlayer == con.iEngland ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tEnglandControl
+                elif ( self.iActivePlayer == con.iGenoa ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tGenoaControl
+                elif ( self.iActivePlayer == con.iAustria ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tAustriaControl
+                elif ( self.iActivePlayer == con.iTurkey ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tOttomanControlI
+                        
+                if ( bListProvs ):
+                        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
+                        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+                        for iProv in tProvsToCheck:
+                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
+                                sProvName = localText.getText(sProvName,())
+                                localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                                iHave = pPlayer.getProvinceCurrentState( iProv )
+                                if ( iHave < con.iProvinceConquer ):
+                                        sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
+                                else:
+                                        sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+                        sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
                 
+                screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+7, self.Y_UHV1+15, self.W_UHV1-10, self.H_UHV1-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                                        
                 # UHV 2
                 iGoal = pPlayer.getUHV( 1 )
                 if ( iGoal == -1 ):
@@ -931,8 +978,40 @@ class CvVictoryScreen:
                 szUHV2Area = self.UHV2_ID
                 screen.addPanel(self.UHV2_ID, "", "", True, True, self.X_UHV2, self.Y_UHV2, self.W_UHV2, self.H_UHV2, PanelStyles.PANEL_STYLE_MAIN)
 
-                #sString = localText.getText("TXT_KEY_ICON_BULLET",()) + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
-                #sString = sString + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
+                bListProvs = False
+                if ( self.iActivePlayer == con.iByzantium ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tByzantumControl
+                elif ( self.iActivePlayer == con.iArabia ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tArabiaControlII
+                elif ( self.iActivePlayer == con.iKiev ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tKievControl
+                elif ( self.iActivePlayer == con.iLithuania ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tLithuaniaControl
+                elif ( self.iActivePlayer == con.iNorse ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tNorseControl
+                elif ( self.iActivePlayer == con.iTurkey ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tOttomanControlII
+
+                if ( bListProvs ):
+                        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
+                        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+                        for iProv in tProvsToCheck:
+                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
+                                sProvName = localText.getText(sProvName,())
+                                localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                                iHave = pPlayer.getProvinceCurrentState( iProv )
+                                if ( iHave < con.iProvinceConquer ):
+                                        sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
+                                else:
+                                        sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+                        sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+                
                 screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+7, self.Y_UHV2+15, self.W_UHV2-10, self.H_UHV2-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 
                 # UHV 3
@@ -948,18 +1027,24 @@ class CvVictoryScreen:
                 szUHV3Area = self.UHV3_ID
                 screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
 
-                #sString = localText.getText("TXT_KEY_ICON_BULLET",()) + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
-                #sString = sString + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
-		#sString = sString + u"[<color=255,0,0>%s</color>]" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
+                bListProvs = False
+                if ( self.iActivePlayer == con.iTurkey ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tOttomanControlIII
+                        
+                if ( bListProvs ):
+                        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
+                        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+                        for iProv in tProvsToCheck:
+                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
+                                sProvName = localText.getText(sProvName,())
+                                localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                                iHave = pPlayer.getProvinceCurrentState( iProv )
+                                if ( iHave < con.iProvinceConquer ):
+                                        sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
+                                else:
+                                        sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+                        sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+
                 screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+7, self.Y_UHV3+15, self.W_UHV3-10, self.H_UHV3-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 
-                
-                #self.X_UHV2 = 10
-                #self.Y_UHV2 = 450
-                #self.W_UHV2 = 1010
-                #self.H_UHV2 = 100
-                
-                #self.X_UHV3 = 10
-                #self.Y_UHV3 = 600
-                #self.W_UHV3 = 1010
-                #self.H_UHV3 = 100

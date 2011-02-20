@@ -2081,7 +2081,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCatapult, iCiv, tPlot, 1)
                 if (iCiv == iNorse):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
@@ -2090,6 +2090,8 @@ class RiseAndFall:
                                 #utils.makeUnit(xml.iGalley, iCiv, tSeaPlot, 1 )
                                 #utils.makeUnit(xml.iWarGalley, iCiv, tSeaPlot, 1 )
                                 pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1 )
                                 utils.makeUnit(xml.iArcher, iCiv, tSeaPlot, 1 )
@@ -2167,7 +2169,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
                 if (iCiv == iTurkey):
@@ -2580,6 +2582,12 @@ class RiseAndFall:
                         teamAustria.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
                         teamAustria.setHasTech( xml.iChivalry, True, iCiv, False, False )
                         teamAustria.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iAlchemy, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iCivilService, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iGuilds, True, iCiv, False, False )
 
                         
                 if ( iCiv == iTurkey ):

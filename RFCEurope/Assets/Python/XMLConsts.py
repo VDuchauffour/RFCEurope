@@ -664,9 +664,9 @@ iP_Wessex = 21
 iP_Wales = 22
 iP_Scotland = 23
 iP_Ireland = 24
-iP_Midlands = 25
+iP_Yorkshire = 25
 iP_EastAnglia = 26
-iP_Northumbria = 27
+#iP_Northumbria = 27
 iP_Iceland = 28
 
 # Scandinavia 30+ inc Denmark

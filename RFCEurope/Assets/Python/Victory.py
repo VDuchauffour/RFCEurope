@@ -147,7 +147,7 @@ tArabiaControlII = [ xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrena
 tBulgariaControl = [ xml.iP_Constantinople, xml.iP_Thessaloniki, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia ]
 tCordobaWonders = [ xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus ]
 tCordobaIslamize = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
-tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Midlands, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Crimea ]
+tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Yorkshire, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Crimea ]
 #tVenetianControl = [ xml.iP_Morea, xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Crete, xml.iP_Cyprus ]
 tVenetianControl = [ xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Arberia ]
 tBurgundyControl = [ xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine ]
@@ -158,7 +158,7 @@ tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thes
 tSpainConvert = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
 tPolishControl = [ xml.iP_Bohemia, xml.iP_Moravia, xml.iP_UpperHungary, xml.iP_Hungary, xml.iP_Lithuania, xml.iP_Brest, xml.iP_Podolia, xml.iP_Kiev ]
 tGenoaControl = [ xml.iP_Lombardy, xml.iP_Sardinia, xml.iP_Cyprus, xml.iP_Crete ]
-tEnglandControl = [ xml.iP_London, xml.iP_Wales, xml.iP_Wessex, xml.iP_Scotland, xml.iP_EastAnglia, xml.iP_Midlands, xml.iP_Northumbria, xml.iP_Ireland, xml.iP_Normandy, xml.iP_Bretagne, xml.iP_IleDeFrance, xml.iP_Aquitania, xml.iP_Orleans ]
+tEnglandControl = [ xml.iP_London, xml.iP_Wales, xml.iP_Wessex, xml.iP_Scotland, xml.iP_EastAnglia, xml.iP_Yorkshire, xml.iP_Ireland, xml.iP_Normandy, xml.iP_Bretagne, xml.iP_IleDeFrance, xml.iP_Aquitania, xml.iP_Orleans ]
 tPortugalControlI = [ xml.iP_Azores, xml.iP_Canaries ]
 tPortugalControlII = [ xml.iP_Morocco, xml.iP_Tetouan, xml.iP_Oran ]
 tLithuaniaControl = [ xml.iP_Lithuania, xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_Suvalkija, xml.iP_Livonia, xml.iP_Novgorod, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_WhiteRus, xml.iP_Pereyaslavl, xml.iP_Kiev, xml.iP_GaliciaPoland, xml.iP_Sloboda ]
@@ -203,97 +203,7 @@ class Victory:
      
 ##################################################
 ### Secure storage & retrieval of script data ###
-################################################   
-
-        #def getGoal( self, i, j ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['lGoals'][i][j]
-
-        #def setGoal( self, i, j, iNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['lGoals'][i][j] = iNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getReligionFounded( self, iCiv ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['lReligionFounded'][iCiv]
-
-        #def setReligionFounded( self, iCiv, iNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['lReligionFounded'][iCiv] = iNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
-        #def getWondersBuilt( self, iCiv ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['lWondersBuilt'][iCiv]
-
-        #def setWondersBuilt( self, iCiv, iNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['lWondersBuilt'][iCiv] = iNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
-        #def get2OutOf3( self, iCiv ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['l2OutOf3'][iCiv]
-
-        #def set2OutOf3( self, iCiv, bNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['l2OutOf3'][iCiv] = bNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getNorseRazed( self ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['iNorseRazed']
-
-        #def setNorseRazed( self, iNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['iNorseRazed'] = iNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getKievFood( self ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['iKievFood']
-
-        #def setKievFood( self, iNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['iKievFood'] = iNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getBurgundyCulture( self ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['iBurgundyCulture']
-
-        #def setBurgundyCulture( self, iNewValue ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['iBurgundyCulture'] = iNewValue
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getColonies( self, iCiv ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['lColonies'][iCiv]
-
-        #def changeColonies( self, iCiv, iChange ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['lColonies'][iCiv] += iChange
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getGenoaBanks( self ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return (scriptDict['bGenoaBanks'] == 1)
-
-        #def setGenoaBanks( self, iChange ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['bGenoaBanks'] = iChange
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
-        #def getGenoaCorporations( self ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #return scriptDict['bGenoaCorps']
-
-        #def setGenoaCorporations( self, iChange ):
-                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                #scriptDict['bGenoaCorps'] = iChange
-                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+################################################
 
         def getCorporationsFounded( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -488,7 +398,7 @@ class Victory:
                                                 #self.setNorseRazed(ioldrazed+1)
                                         iRazed = pNorse.getUHVCounter( 2 ) + 1
                                         pNorse.setUHVCounter( 2, iRazed )
-                                        if ( iRazed >= 10 ):
+                                        if ( iRazed >= 6 ):
                                                 pNorse.setUHV( 2, 1 )
 
 

@@ -127,11 +127,11 @@ class CvFinanceAdvisor:
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
                 elif (iStability >= -5 and iStability < 0):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                elif (iStability >= 0 and iStability < 5):
+                elif (iStability >= 0 and iStability < 8):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                elif (iStability >= 5 and iStability < 10):
+                elif (iStability >= 8 and iStability < 15):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                elif (iStability >= 10):
+                elif (iStability >= 15):
                         szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
 
                 if (gc.getPlayer(ePlayer).isHuman()):
