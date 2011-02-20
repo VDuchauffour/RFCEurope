@@ -36170,8 +36170,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=24
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -37050,21 +37049,21 @@ EndPlot
 BeginPlot
 	x=88,y=18
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=88,y=19
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_SALT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=88,y=20
-	BonusType=BONUS_SULPHUR
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -37518,7 +37517,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=19
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_PLAINS
 	PlotType=3
 	TeamReveal=0,
 EndPlot
@@ -37547,7 +37546,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -37559,6 +37557,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=25
+	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -37997,6 +37996,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=23
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -42323,8 +42323,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=26
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
