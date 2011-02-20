@@ -59,6 +59,7 @@ Changes for Beta 9:
 		
 		General changes:
 			A few small fixes to the map
+			Added salt to Anatolia, removed deers
 			
 		XML updates:
 
@@ -72,7 +73,7 @@ Changes for Beta 9:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 8:
-(released: 2011.02.21.)
+(released: 2011.02.20.)
 
 	General changes:
 		Revised map of Balkans, Greece, Carpathian-basin, Lithuania
@@ -81,7 +82,7 @@ Changes for Beta 8:
 		Tech cannot be traded for 20 turns after its historic date
 		
 	XML updates:
-		Updated unique UHV names
+		Updated unique names for the UHVs
 		"Build Vineyard" instead of "Build Winery" when you build the Vineyard improvement
 		German territory UHV has proper description
 		Proper date for Cordoban 2nd UHV in the pedia
