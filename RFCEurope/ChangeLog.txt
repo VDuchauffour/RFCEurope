@@ -55,11 +55,31 @@ MV1		Do XML things for the Civic overhaul
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Changes for Beta 9:
+		
+		General changes:
+			A few small fixes to the map
+			
+		XML updates:
+
+		Art updates:
+
+		Balance:
+		
+		Bugfixes:
+		
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Changes for Beta 8:
+(released: 2011.02.21.)
 
 	General changes:
-		revised map of Balkans, Greece, Carpathian-basin, Lithuania
-
+		Revised map of Balkans, Greece, Carpathian-basin, Lithuania
+		Lithuanian AI is now aware of the Pagan UP and will not instantly flip to a religion
+		Adjusted Poland War and Settler maps
+		Tech cannot be traded for 20 turns after its historic date
+		
 	XML updates:
 		Updated unique UHV names
 		"Build Vineyard" instead of "Build Winery" when you build the Vineyard improvement
@@ -80,7 +100,7 @@ Changes for Beta 8:
 		Cities in outer and none provinces are more likely to declare independence (whether a city declares independence has the same odds, the change is in which city)
 		Independent players now have no state religion, making the AI hate them more and losing the "fighting brothers in faith" penalty
 		Islamic Madrassa has equal features to the Christian Monasteries
-		Boost of stability for small Empires (they canno build many buildings)
+		Boost of stability for small Empires (they cannot build many buildings)
 		Norse no longer get stability penalty for razing cities
 		Norse get 2 more Galleys at the start (go explore early)
 		Norse now need to raze only 6 cities (10 is a lot, since Independents don't count)
@@ -90,11 +110,8 @@ Changes for Beta 8:
 		Buffed Portugal and Dutch colony production speed
 		Portugal UP now covers Trading Companies as well as colonies
 		Increased the cost for Guisarmier, it is very cheap and the AI makes tons of them. Also, since the mounted units got nerfed, we don't need so many of those.
-		Tech cannot be traded for 20 turns after its historic date
-		Tech cost would be lowered less after the histroic date
-		Lithuanian AI is now aware of the Pagan UP and will not instantly flip to a religion
-		Added more starting techs and units to Austria to balance their leter start
-		Adjusted Poland War and Settler maps
+		Added more starting techs and units to Austria to balance their later start
+		Tech cost would be lowered less after the historic date
 		
 	Bugfixes:
 		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
