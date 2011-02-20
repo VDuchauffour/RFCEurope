@@ -142,7 +142,7 @@ tBurgundyDesire = []
 tGermanyCore = []
 tGermanyNorm = []
 tGermanyOuter = [xml.iP_Netherlands,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Burgundy,xml.iP_Lombardy,xml.iP_Verona,xml.iP_Tuscany,xml.iP_Austria,xml.iP_Salzburg,xml.iP_Moravia,xml.iP_Silesia,xml.iP_GreaterPoland,xml.iP_Pomerania]
-tGermanyPot2Core = [xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Brandenburg,xml.iP_Saxony]
+tGermanyPot2Core = [xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Brandenburg,xml.iP_Saxony,xml.iP_Lorraine]
 tGermanyPot2Norm = [xml.iP_Bohemia,xml.iP_Tyrol]
 tGermanyDesire = []
 

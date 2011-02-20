@@ -70,8 +70,10 @@ Changes for Beta 9:
 			Byzantine Lancer has proper button
 
 		Balance:
+			Germany get Lorraine as a "Solid" Province
 		
 		Bugfixes:
+			Fixed: Norse no longer lose stability when capturing cities
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
