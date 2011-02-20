@@ -7,12 +7,11 @@ import Popup
 #import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
-import RFCEStability
+#import RFCEStability
 import RFCUtils
 import RFCEMaps as rfcemaps
 utils = RFCUtils.RFCUtils()
 
-import RFCEStability
 
 # globals
 gc = CyGlobalContext()
@@ -99,10 +98,12 @@ class Stability:
                 
                 if ( pPlayer.getAnarchyTurns() != 0 ):
                         self.recalcCivicCombos(iPlayer)
+                        iNumCities = pPlayer.getNumCities()
                         if ( pPlayer.isHuman() ):
-                                pPlayer.changeStabilityBase( iCathegoryCivics, -3 )
+                                pPlayer.changeStabilityBase( iCathegoryCivics, max( -3, -iNumCities / 3 ) )
                         else:
-                                pPlayer.changeStabilityBase( iCathegoryCivics, -2 ) # the AI is largely unaware of Stability issues
+                                pPlayer.changeStabilityBase( iCathegoryCivics, max( -2, -iNumCities / 3 ) ) # the AI is largely unaware of Stability issues
+                        
                         pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 8  )
                 
                 if ( pPlayer.getWarPeaceChange() == -1 ): # we have been involved in a war since last turn
@@ -137,6 +138,8 @@ class Stability:
                         pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
                 else:
                         pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
+                if ( pPlayer.getNumCities() < 5 ): # early boost to small Empires
+                        pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
                 self.recalcEpansion( pPlayer )
                 
                 
@@ -170,7 +173,9 @@ class Stability:
                 if (owner < iNumPlayers and city.getX() == tCapitals[owner][0] and city.getY() == tCapitals[owner][1]):
                         pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
                         pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10  )
-
+                        if ( gc.hasUP(owner,con.iUP_Emperor) ):
+                                pOwner.changeStabilityBase( iCathegoryExpansion, -10 ) # If Byzantium loses Constantinople, they should collapse
+                                
         def onCityRazed(self, iOwner, playerType, city):
             	#Sedna17: Not sure what difference between iOwner and playerType is here
 		#3Miro: iOwner owns the city (victim) and playerType conquers the city (pillager)
@@ -181,7 +186,8 @@ class Stability:
 			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                 self.recalcCivicCombos(playerType)
-                gc.getPlayer( playerType ).changeStabilityBase( iCathegoryExpansion, -1 )
+                if ( playerType != con.iNorse ):
+                        gc.getPlayer( playerType ).changeStabilityBase( iCathegoryExpansion, -1 )
                 gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -2 )
                 self.recalcEpansion( gc.getPlayer( playerType ) )
 

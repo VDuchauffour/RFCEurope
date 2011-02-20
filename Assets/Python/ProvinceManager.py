@@ -120,7 +120,7 @@ tCordobaDesire = []
 
 tNorseCore = []
 tNorseNorm = []
-tNorseOuter = [xml.iP_Scotland,xml.iP_Northumbria,xml.iP_Midlands,xml.iP_Novgorod,xml.iP_Crimea,xml.iP_Sicily]
+tNorseOuter = [xml.iP_Scotland,xml.iP_Yorkshire,xml.iP_Novgorod,xml.iP_Crimea,xml.iP_Sicily,xml.iP_Ireland]
 tNorsePot2Core = [xml.iP_Denmark,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Oppland,xml.iP_Norrland]
 tNorsePot2Norm = [xml.iP_Normandy,xml.iP_Iceland]
 tNorseDesire = []
@@ -184,13 +184,13 @@ tGenoaDesire = []
 tEnglandCore = []
 tEnglandNorm = []
 tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Iceland,xml.iP_Normandy]
-tEnglandPot2Core = [xml.iP_London,xml.iP_EastAnglia,xml.iP_Midlands,xml.iP_Northumbria,xml.iP_Wessex,xml.iP_Wales]
+tEnglandPot2Core = [xml.iP_London,xml.iP_EastAnglia,xml.iP_Yorkshire,xml.iP_Wessex,xml.iP_Wales]
 tEnglandPot2Norm = [xml.iP_Scotland,xml.iP_Ireland]
 tEnglandDesire = []
 
 tPortugalCore = []
 tPortugalNorm = []
-tPortugalOuter = [xml.iP_Morocco,xml.iP_Tetouan]
+tPortugalOuter = [xml.iP_Morocco,xml.iP_Tetouan,xml.iP_Andalusia,xml.iP_Castile,xml.iP_Leon,xml.iP_GaliciaSpain]
 tPortugalPot2Core = [xml.iP_Lusitania]
 tPortugalPot2Norm = [xml.iP_Canaries,xml.iP_Azores]
 tPortugalDesire = []
@@ -452,10 +452,12 @@ class ProvinceManager:
                 if ( iPlayer == iArabia ):
                         pByzantium.setProvinceType( xml.iP_Syria, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Arabia, iProvinceOuter )
-                        pByzantium.setProvinceType( xml.iP_Egypt, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Egypt, iProvinceNone )
                         pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Lebanon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Jerusalem, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Charsiadon, iProvinceOuter )
                 elif ( iPlayer == iBulgaria ):
                         pByzantium.setProvinceType( xml.iP_Thrace, iProvinceOuter )
                 elif ( iPlayer == iBurgundy ):

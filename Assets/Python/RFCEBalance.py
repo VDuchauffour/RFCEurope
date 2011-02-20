@@ -147,14 +147,14 @@ class RFCEBalance:
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
 		gc.setProductionModifiersAI(iBurgundy,  110, 110, 120, 130 )
 		gc.setProductionModifiersHu(iBurgundy,  110, 110, 120, 130 )
-		gc.setProductionModifiersAI(iByzantium, 220, 150, 200, 300 )
-		gc.setProductionModifiersHu(iByzantium, 220, 150, 200, 300 )
+		gc.setProductionModifiersAI(iByzantium, 220, 150, 200, 350 )
+		gc.setProductionModifiersHu(iByzantium, 220, 150, 200, 350 )
 		gc.setProductionModifiersAI(iFrankia,   125, 110, 125, 125 )
 		gc.setProductionModifiersHu(iFrankia,   125, 110, 125, 125 )
 		gc.setProductionModifiersAI(iArabia,    125, 125, 150, 250 )
 		gc.setProductionModifiersHu(iArabia,    125, 125, 150, 250 )
-		gc.setProductionModifiersAI(iBulgaria,  125, 100, 125, 160 )
-		gc.setProductionModifiersHu(iBulgaria,  125, 100, 125, 160 )
+		gc.setProductionModifiersAI(iBulgaria,  125, 100, 125, 150 )
+		gc.setProductionModifiersHu(iBulgaria,  125, 100, 125, 150 )
 		gc.setProductionModifiersAI(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiersHu(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiersAI(iSpain,     100, 100, 100, 120 )
@@ -179,16 +179,16 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iEngland,   100, 100, 100, 100 )
 		gc.setProductionModifiersAI(iPortugal,  100, 100, 100, 100 )
 		gc.setProductionModifiersHu(iPortugal,  100, 100, 100, 100 )
-                gc.setProductionModifiersAI(iLithuania, 100, 160, 140, 140 )
-		gc.setProductionModifiersHu(iLithuania, 100, 160, 140, 140 )
+                gc.setProductionModifiersAI(iLithuania, 100, 150, 140, 100 )
+		gc.setProductionModifiersHu(iLithuania, 100, 150, 140, 100 )
 		gc.setProductionModifiersAI(iAustria,    60,  75, 100,  75 )
 		gc.setProductionModifiersHu(iAustria,    60,  75, 100,  75 )
 		gc.setProductionModifiersAI(iTurkey,     40,  75, 100,  90 )
 		gc.setProductionModifiersHu(iTurkey,     40,  75, 100,  90 )
-		gc.setProductionModifiersAI(iSweden,     50,  50, 100, 100 )
-		gc.setProductionModifiersHu(iSweden,     50,  50, 100, 100 )
-		gc.setProductionModifiersAI(iDutch,     100,  50,  50,  50 )
-		gc.setProductionModifiersHu(iDutch,     100,  50,  50,  50 )
+		gc.setProductionModifiersAI(iSweden,     50,  50, 100,  80 )
+		gc.setProductionModifiersHu(iSweden,     50,  50, 100,  80 )
+		gc.setProductionModifiersAI(iDutch,     100,  50,  30,  40 )
+		gc.setProductionModifiersHu(iDutch,     100,  50,  30,  40 )
 		gc.setProductionModifiersAI(iPope,      300, 200, 100, 150 )
 		gc.setProductionModifiersAI(iIndependent, 170, 100, 400, 200 ) #The peaceful ones
 		gc.setProductionModifiersAI(iIndependent2, 170, 100, 400, 200 )
@@ -200,8 +200,8 @@ class RFCEBalance:
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
 		gc.setSupportModifiersAI(iBurgundy,      10, 150,  80,  75, 110 )
 		gc.setSupportModifiersHu(iBurgundy,      10, 150,  80,  75, 110 )
-		gc.setSupportModifiersAI(iByzantium,     10, 100,  10,  10, 100 )
-		gc.setSupportModifiersHu(iByzantium,     10, 100,  10,  10, 100 )
+		gc.setSupportModifiersAI(iByzantium,     30, 150,  10,  10, 120 )
+		gc.setSupportModifiersHu(iByzantium,     30, 150,  10,  10, 120 )
 		gc.setSupportModifiersAI(iFrankia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iFrankia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iArabia,        10, 100,  50,  15, 120 )
@@ -240,8 +240,8 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iTurkey,        10,  25,  10,  10, 100 )
 		gc.setSupportModifiersAI(iSweden,        10,  75,  50,  10, 100 )
 		gc.setSupportModifiersHu(iSweden,        10,  75,  50,  10, 100 )
-		gc.setSupportModifiersAI(iDutch,         10, 150, 200, 200, 100 )
-		gc.setSupportModifiersHu(iDutch,         10, 150, 200, 200, 100 )
+		gc.setSupportModifiersAI(iDutch,         10,  50, 200, 200, 100 )
+		gc.setSupportModifiersHu(iDutch,         10,  50, 200, 200, 100 )
 		gc.setSupportModifiersAI(iPope,          10, 200,  50,  25, 100 )
 		gc.setSupportModifiersAI(iIndependent,   10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent2,  10, 100,  10,  20, 100 )
@@ -510,7 +510,8 @@ class RFCEBalance:
 		
 		gc.setUP( iEngland, iUP_ImprovementBonus, xml.iImprovementWorkshop * 1000000 + 200 )
 		
-		gc.setUP( iPortugal, iUP_Discovery, xml.iNumNotColonies * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 60 );
+                # Speedup East/West India Trading Companies
+		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 40 );
 		
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
@@ -522,6 +523,7 @@ class RFCEBalance:
 		
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
 		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little (not enouth cities)
+                gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
 
 		gc.setUP( iPope, iUP_Emperor, 1 )
 
@@ -695,7 +697,7 @@ class RFCEBalance:
 		self.postAreas()
                 
         def setTechTimeline( self ):
-                gc.setTimelineTechModifiers( 9, 25, -50, 3, 100, 50 ) # go between 10 times slower and 4 times faster
+                gc.setTimelineTechModifiers( 9, 25, -50, 1, 100, 50 ) # go between 10 times slower and 4 times faster
                 # formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
                 # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
                 # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100

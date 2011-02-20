@@ -209,30 +209,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
-		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Control the Rhine and Rhone valleys (Mediterranean to the North Sea) in 1200AD</English>
-		<French>Contr&#244;ler la vall&#233;e du Rh&#244;ne et du Rhin en 1200 ap.JC.</French>
-		<German>Kontrollieren Sie im Jahr 1200 n. Chr. das Rhein- und Rhonetal (vom Mittelmeer bis zur Nordsee)</German>
-		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
-		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
-		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#208;&#224;&#233;&#237;&#238;&#236; &#232; &#208;&#238;&#237;&#238;&#236; &#228;&#238;&#235;&#232;&#237;&#224;&#236;&#232; (&#209;&#240;&#229;&#228;&#232;&#231;&#229;&#236;&#237;&#238;&#229; &#236;&#238;&#240;&#229; &#234; &#209;&#229;&#226;&#229;&#240;&#237;&#238;&#236;&#243; &#204;&#238;&#240;&#254;) &#226; 1200AD</Russian>
+		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</English>
+		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</French>
+		<German>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</German>
+		<Italian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR2</Tag>
-		<English>Produce 10,000 culture points by 1300AD. (Great Artists don't count)</English>
-		<French>Produce 10,000 culture points by 1300AD. (Great Artists don't count)</French>
-		<German>Produce 10,000 culture points by 1300AD. (Great Artists don't count)</German>
-		<Italian>Produce 10,000 culture points by 1300AD. (Great Artists don't count)</Italian>
-		<Spanish>Produce 10,000 culture points by 1300AD. (Great Artists don't count)</Spanish>
-		<Russian>Produce 10,000 culture points by 1300AD. (Great Artists don't count)</Russian>
+		<English>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</English>
+		<French>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</French>
+		<German>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</German>
+		<Italian>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Italian>
+		<Spanish>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Spanish>
+		<Russian>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
-		<English>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Control more luxury resources in 1470AD than anyone else in Western Europe (Portugal, Spain, France, England, Genoa, Norse, Germany, Pope, Venice).</English>
-		<French>Avoir le plus de resources luxeuses en 1470 ap. JC que les autres Civilisation Occidentale (Portugal, Espagne, France, Angleterre, G&#234;ne, Scandinavie, Allemagne, Etat Pontificaux, Venise).</French>
-		<German>Kontrollieren Sie im Jahr 1470 n. Chr. mehr Luxusressourcen als jede westeurop&#228;ische Zivilisation</German>
-		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
-		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
-		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#225;&#238;&#235;&#252;&#248;&#232;&#236;&#232; &#240;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#236;&#232; &#240;&#229;&#241;&#243;&#240;&#241;&#224;&#236;&#232; &#226; 1470AD, &#247;&#229;&#236; &#234;&#242;&#238;-&#235;&#232;&#225;&#238; &#234;&#240;&#238;&#236;&#229; &#226; &#199;&#224;&#239;&#224;&#228;&#237;&#238;&#233; &#197;&#226;&#240;&#238;&#239;&#229; (&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#232;&#255;, &#200;&#241;&#239;&#224;&#237;&#232;&#255;, &#212;&#240;&#224;&#237;&#246;&#232;&#255;, &#192;&#237;&#227;&#235;&#232;&#255;, &#195;&#229;&#237;&#243;&#255;, &#205;&#238;&#240;&#226;&#229;&#227;&#232;&#255;, &#195;&#229;&#240;&#236;&#224;&#237;&#232;&#255;, &#207;&#224;&#239;&#241;&#242;&#226;&#238;, &#194;&#229;&#237;&#229;&#246;&#232;&#255;).</Russian>
+		<English>Have higher score than France, England and Germany in 1473AD.</English>
+		<French>Have higher score than France, England and Germany in 1473AD.</French>
+		<German>Have higher score than France, England and Germany in 1473AD.</German>
+		<Italian>Have higher score than France, England and Germany in 1473AD.</Italian>
+		<Spanish>Have higher score than France, England and Germany in 1473AD.</Spanish>
+		<Russian>Have higher score than France, England and Germany in 1473AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA1</Tag>
@@ -326,16 +326,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
-		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, English Midlands, Normandy, Iceland, Crimea and Sicily by 1061AD.</English>
-		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, English Midlands, Normandy, Iceland, Crimea and Sicily by 1061AD.</French>
-		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, English Midlands, Normandy, Iceland, Crimea and Sicily by 1061AD.</German>
-		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, English Midlands, Normandy, Iceland, Crimea and Sicily by 1061AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, English Midlands, Normandy, Iceland, Crimea and Sicily by 1061AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, English Midlands, Normandy, Iceland, Crimea and Sicily by 1061AD.</Russian>
+		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</English>
+		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</French>
+		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</German>
+		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
-		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 10 cities. (Independents don't count)</English>
+		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents don't count)</English>
 		<French>Raser 10 villes. (Independents don't count)</French>
 		<German>Zerst&#246;ren sie mindestens 10 St&#228;dte (Independents don't count)</German>
 		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 10 cities. (Independents don't count)</Italian>
@@ -561,12 +561,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG1</Tag>
-		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Midlands, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
-		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Midlands, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
-		<German>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Midlands, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</German>
-		<Italian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Midlands, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Midlands, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.)</Spanish>
-		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Midlands, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
+		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
+		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
+		<German>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</German>
+		<Italian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.)</Spanish>
+		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>
@@ -769,5 +769,32 @@
 		<Spanish>Food</Spanish>
 		<Russian>Food</Russian>
 	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_UHV_COLONIES</Tag>
+		<English>Colonies</English>
+		<French>Colonies</French>
+		<German>Colonies</German>
+		<Italian>Colonies</Italian>
+		<Spanish>Colonies</Spanish>
+		<Russian>Colonies</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CONQUERED</Tag>
+		<English>Conquered</English>
+		<French>Conquered</French>
+		<German>Conquered</German>
+		<Italian>Conquered</Italian>
+		<Spanish>Conquered</Spanish>
+		<Russian>Conquered</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NOT_YET</Tag>
+		<English>Not Yet</English>
+		<French>Not Yet</French>
+		<German>Not Yet</German>
+		<Italian>Not Yet</Italian>
+		<Spanish>Not Yet</Spanish>
+		<Russian>Not Yet</Russian>
+	</TEXT>
 </Civ4GameText>
 

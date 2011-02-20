@@ -71,6 +71,8 @@ Changes for Beta 8:
 		"Remove Mud" worker action shows proper button
 		New LHs: Ivan Asen II for Bulgaria, Karl XII for Sweden
 		LH update: Barbarossa, Mindaugas, Vytautas
+		Return of the UHV Counters, they should be working again
+		Upgrade to the Victory screen, now players can see won/lost provinces
 
 	Balance:
 		Nerfed Byzantine Stability
@@ -78,16 +80,32 @@ Changes for Beta 8:
 		Cities in outer and none provinces are more likely to declare independence (whether a city declares independence has the same odds, the change is in which city)
 		Independent players now have no state religion, making the AI hate them more and losing the "fighting brothers in faith" penalty
 		Islamic Madrassa has equal features to the Christian Monasteries
+		Boost of stability for small Empires (they canno build many buildings)
+		Norse no longer get stability penalty for razing cities
+		Norse get 2 more Galleys at the start (go explore early)
+		Norse now need to raze only 6 cities (10 is a lot, since Independents don't count)
+		Merged provinces in England, otherwise they have to build too many cities to cover them all
+		Moved Horses around Preslav, the AI sees that the plot is close to Byzantine territory and doesn't connect them
+		Added a roads around the Russian rivers to let units move faster (better River Trade)
+		Buffed Portugal and Dutch colony production speed
+		Portugal UP now covers Trading Companies as well as colonies
+		Increased the cost for Guisarmier, it is very cheap and the AI makes tons of them. Also, since the mounted units got nerfed, we don't need so many of those.
+		Tech cannot be traded for 20 turns after its historic date
+		Tech cost would be lowered less after the histroic date
+		Lithuanian AI is now aware of the Pagan UP and will not instantly flip to a religion
+		Added more starting techs and units to Austria to balance their leter start
+		Adjusted Poland War and Settler maps
 		
 	Bugfixes:
 		TEXT_KEY_AGE_MEDIEVAL bug in the religion and corporation infoscreen
 		Fixed the Venetian UHV (no longer requires conquest of Morea)
 		Fixed a Venetian Stability Bug, they no longer start with Feudal Law (which is incompatible with Merchant Republic)
 		Fixed a bug allowing Crusaders to spawn for dead players
-		Fixed a bug preventing the Human from getting production/research benefits/boosts	
+		Fixed a bug preventing the Human from getting production/research benefits/penalties	
 		Fixed a bug allowing Venetian units to enter Venice even when it is conquered by other players
 		Fixed a bug pushing Crusades outside of spawn location due to slip of the target city, Crusaders now declare war to the new owner of the city
 		Fixed TXT_KEY_GREAT_GENERAL_FREDERICK_BARBAROSSA
+		Fixed techs turns left would often be one turn off
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

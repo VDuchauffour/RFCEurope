@@ -8,6 +8,7 @@ import CvEventInterface
 import time
 
 import Consts as con #Rhye
+import XMLConsts as xml
 import RFCUtils #Rhye
 
 # < Mercenaries Start >
@@ -1949,8 +1950,9 @@ class CvMainInterface:
 
 		if ( CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY  and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_ADVANCED_START):
 
+                        pPlayer = gc.getPlayer(ePlayer)
 			# Percent of commerce
-			if (gc.getPlayer(ePlayer).isAlive()):
+			if (pPlayer.isAlive()):
 				iCount = 0
 				for iI in range( CommerceTypes.NUM_COMMERCE_TYPES ):
 					eCommerce = (iI + 1) % CommerceTypes.NUM_COMMERCE_TYPES
@@ -1972,7 +1974,7 @@ class CvMainInterface:
 			screen.setLabel( "TimeText", "Background", g_szTimeText, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 56, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 			screen.show( "TimeText" )
 			
-			if (gc.getPlayer(ePlayer).isAlive()):
+			if (pPlayer.isAlive()):
 			
 				
 				#szText = gc.getEraInfo(gc.getPlayer(ePlayer).getCurrentEra()).getDescription()
@@ -1991,19 +1993,19 @@ class CvMainInterface:
                                 iCount += 1
                                 if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() >= con.tBirth[ePlayer] ):
                                         #iStability = utils.getStability(ePlayer)
-                                        iStability = gc.getPlayer(ePlayer).getStability()
+                                        iStability = pPlayer.getStability()
                                         szStabilityButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR))
-                                        if (iStability < -40):
+                                        if (iStability < -15):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                                        elif (iStability >= -40 and iStability < -20):
+                                        elif (iStability >= -15 and iStability < -5):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                                        elif (iStability >= -20 and iStability < 0):
+                                        elif (iStability >= -5 and iStability < 0):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                                        elif (iStability >= 0 and iStability < 20):
+                                        elif (iStability >= 0 and iStability < 8):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                                        elif (iStability >= 20 and iStability < 40):
+                                        elif (iStability >= 8 and iStability < 15):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                                        elif (iStability >= 40):
+                                        elif (iStability >= 15):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
                                         if iStability > 0:
                                                 szStabilityNum = "+%d" %(iStability)
@@ -2021,7 +2023,7 @@ class CvMainInterface:
                                 # edead: end
                                 
                                 # edead: start piety
-                                iFaithPoints = gc.getPlayer(ePlayer).getFaith()
+                                iFaithPoints = pPlayer.getFaith()
                                 if iFaithPoints >= 0 and gc.getPlayer(ePlayer).getStateReligion() >= 0 and not CyInterface().isCityScreenUp():
                                         szFaithButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.RELIGION_CHAR))
                                         #szPietyText = ": %s (%d)" %(utils.getFavorLevelText(ePlayer), iPiety)
@@ -2069,8 +2071,9 @@ class CvMainInterface:
                                 
                                 # 3Miro: Show UHV info on the screen
                                 if ( ePlayer == con.iBurgundy ):
-                                        iBurgundyCulture = utils.getBurgundyCulture()
-                                        if ( not CyInterface().isCityScreenUp() and iBurgundyCulture > -1 ):
+                                        #iBurgundyCulture = utils.getBurgundyCulture()
+                                        iBurgundyCulture = pPlayer.getUHVCounter( 1 )
+                                        if ( not CyInterface().isCityScreenUp() ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2083,8 +2086,9 @@ class CvMainInterface:
                                                 screen.hide( "UHVText" )
                                                 
                                 elif ( ePlayer == con.iArabia ):
-                                        iIslamInfluence = utils.getArabianInfluence()
-                                        if ( not CyInterface().isCityScreenUp() and iIslamInfluence > -1 ):
+                                        #iIslamInfluence = utils.getArabianInfluence()
+                                        iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
+                                        if ( not CyInterface().isCityScreenUp() ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_ISLAM",()) + (" (%i) " %iIslamInfluence )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2097,8 +2101,9 @@ class CvMainInterface:
                                                 screen.hide( "UHVText" )
                                                 
                                 elif ( ePlayer == con.iNorse ):
-                                        iNorseRaized = utils.getNorseRazed()
-                                        if ( not CyInterface().isCityScreenUp() and iNorseRaized > -1 ):
+                                        #iNorseRaized = utils.getNorseRazed()
+                                        iNorseRaized = pPlayer.getUHVCounter( 2 )
+                                        if ( not CyInterface().isCityScreenUp() ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CITIES",()) + (" (%i) " %iNorseRaized )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2111,10 +2116,27 @@ class CvMainInterface:
                                                 screen.hide( "UHVText" )
                                                 
                                 elif ( ePlayer == con.iKiev ):
-                                        iKievFood = utils.getKievFood()
-                                        if ( not CyInterface().isCityScreenUp() and iKievFood > -1 ):
+                                        #iKievFood = utils.getKievFood()
+                                        iKievFood = pPlayer.getUHVCounter( 2 )
+                                        if ( not CyInterface().isCityScreenUp() ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
+                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.show("UHVButton")
+                                                screen.show("UHVText")
+                                                iCount += 1
+                                        else:
+                                                screen.hide( "UHVButton" )
+                                                screen.hide( "UHVText" )
+                                elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch ):
+                                        if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
+                                                iColonies = pPlayer.getNumColonies()
+                                        else:
+                                                iColonies = -1
+                                        if ( not CyInterface().isCityScreenUp() and iColonies > -1 ):
+                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_COLONIES",()) + (" (%i) " %iColonies )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.show("UHVButton")
