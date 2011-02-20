@@ -52,6 +52,7 @@ MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		Do XML things for the Civic overhaul
+MV1		Add ethnic Russian Great Merchant
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,8 +63,10 @@ Changes for Beta 9:
 			Added salt to Anatolia, removed deers
 			
 		XML updates:
+			XML cleanup (unused lines of code are removed)
 
 		Art updates:
+			Byzantine Lancer has proper button
 
 		Balance:
 		
