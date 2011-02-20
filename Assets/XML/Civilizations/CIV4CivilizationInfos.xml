@@ -223,8 +223,8 @@
                                         <DCNName>TXT_KEY_DN_ARA21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -249,8 +249,8 @@
                                         <DCNName>TXT_KEY_DN_ARA08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -569,8 +569,8 @@
                                         <DCNName>TXT_KEY_DN_AUS21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -595,8 +595,8 @@
                                         <DCNName>TXT_KEY_DN_AUS08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -947,8 +947,8 @@
                                         <DCNName>TXT_KEY_DN_BUL21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -973,8 +973,8 @@
                                         <DCNName>TXT_KEY_DN_BUL08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -1318,8 +1318,8 @@
                                         <DCNName>TXT_KEY_DN_BUR21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -1344,8 +1344,8 @@
                                         <DCNName>TXT_KEY_DN_BUR08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -1669,8 +1669,8 @@
                                         <DCNName>TXT_KEY_DN_BYZ21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -1695,8 +1695,8 @@
                                         <DCNName>TXT_KEY_DN_BYZ08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -2039,8 +2039,8 @@
                                         <DCNName>TXT_KEY_DN_COR21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -2065,8 +2065,8 @@
                                         <DCNName>TXT_KEY_DN_COR08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -2386,8 +2386,8 @@
                                         <DCNName>TXT_KEY_DN_DUT21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -2412,8 +2412,8 @@
                                         <DCNName>TXT_KEY_DN_DUT08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -2524,7 +2524,7 @@
 				<CivicType>CIVIC_LIMITED_MONARCHY</CivicType>
 				<CivicType>CIVIC_BUREAUCRACY</CivicType>
 				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
-				<CivicType>CIVIC_MARKETS</CivicType>
+				<CivicType>CIVIC_TRADE_ECONOMY</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
@@ -2755,8 +2755,8 @@
                                         <DCNName>TXT_KEY_DN_ENG21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -2781,8 +2781,8 @@
                                         <DCNName>TXT_KEY_DN_ENG08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -3121,8 +3121,8 @@
                                         <DCNName>TXT_KEY_DN_FRA21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -3147,8 +3147,8 @@
                                         <DCNName>TXT_KEY_DN_FRA08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -3480,8 +3480,8 @@
                                         <DCNName>TXT_KEY_DN_GEN21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -3506,8 +3506,8 @@
                                         <DCNName>TXT_KEY_DN_GEN08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -3853,8 +3853,8 @@
                                         <DCNName>TXT_KEY_DN_GER21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -3879,8 +3879,8 @@
                                         <DCNName>TXT_KEY_DN_GER08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -4231,8 +4231,8 @@
                                         <DCNName>TXT_KEY_DN_HUN21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -4257,8 +4257,8 @@
                                         <DCNName>TXT_KEY_DN_HUN08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -4587,8 +4587,8 @@
                                         <DCNName>TXT_KEY_DN_KIE21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -4613,8 +4613,8 @@
                                         <DCNName>TXT_KEY_DN_KIE08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -4930,8 +4930,8 @@
                                         <DCNName>TXT_KEY_DN_MOS21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -4956,8 +4956,8 @@
                                         <DCNName>TXT_KEY_DN_MOS08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -5281,8 +5281,8 @@
                                         <DCNName>TXT_KEY_DN_NOR21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -5307,8 +5307,8 @@
                                         <DCNName>TXT_KEY_DN_NOR08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -5642,8 +5642,8 @@
                                         <DCNName>TXT_KEY_DN_POL21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -5668,8 +5668,8 @@
                                         <DCNName>TXT_KEY_DN_POL08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -5989,8 +5989,8 @@
                                         <DCNName>TXT_KEY_DN_POR21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -6015,8 +6015,8 @@
                                         <DCNName>TXT_KEY_DN_POR08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -6360,8 +6360,8 @@
                                         <DCNName>TXT_KEY_DN_SPN21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -6386,8 +6386,8 @@
                                         <DCNName>TXT_KEY_DN_SPN08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -6712,8 +6712,8 @@
                                         <DCNName>TXT_KEY_DN_SWE21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -6738,8 +6738,8 @@
                                         <DCNName>TXT_KEY_DN_SWE08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -7069,8 +7069,8 @@
                                         <DCNName>TXT_KEY_DN_TUR21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -7095,8 +7095,8 @@
                                         <DCNName>TXT_KEY_DN_TUR08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -7428,8 +7428,8 @@
                                         <DCNName>TXT_KEY_DN_VEN21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -7454,8 +7454,8 @@
                                         <DCNName>TXT_KEY_DN_VEN08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -7805,8 +7805,8 @@
                                         <DCNName>TXT_KEY_DN_LIT21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -7831,8 +7831,8 @@
                                         <DCNName>TXT_KEY_DN_LIT08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -8158,8 +8158,8 @@
                                         <DCNName>TXT_KEY_DN_POP21</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
@@ -8184,8 +8184,8 @@
                                         <DCNName>TXT_KEY_DN_POP08</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
-                                        <DCNConditionCivic>CIVIC_REPUBLIC</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>CIVIC_MERCHANT_REPUBLIC</DCNConditionOrCivic1>
+                                        <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>

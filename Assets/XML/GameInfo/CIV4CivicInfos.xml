@@ -6,7 +6,7 @@
 	<!-- -->
 	<!-- Civic Infos -->
 	<CivicInfos>
-		<CivicInfo> <!-- Despotism-->
+		<CivicInfo> <!-- Despotism -->
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_DESPOTISM</Type>
 			<Description>TXT_KEY_CIVIC_DESPOTISM</Description>
@@ -62,6 +62,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -134,6 +137,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -146,7 +152,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_CASTLE</BuildingType>
+					<BuildingType>BUILDINGCLASS_BARRACKS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -167,7 +173,7 @@
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
@@ -186,7 +192,7 @@
 			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
-			<iMaxConscript>0</iMaxConscript>
+			<iMaxConscript>2</iMaxConscript>
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
@@ -211,21 +217,30 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>25</iCommerce>
+			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
-			<SpecialistExtraCommerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-			</SpecialistExtraCommerces>
+			<SpecialistExtraCommerces/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_CASTLE</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -287,6 +302,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -317,14 +335,14 @@
 			</ImprovementYieldChanges>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_KING</WeLoveTheKing>
 		</CivicInfo>
-		<CivicInfo> <!-- Republic -->
+		<CivicInfo> <!-- Merchant Republic -->
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
-			<Type>CIVIC_REPUBLIC</Type>
-			<Description>TXT_KEY_CIVIC_REPUBLIC</Description>
-			<Civilopedia>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_REPUBLIC_STRATEGY</Strategy>
-			<Button>,Art/Interface/Buttons/Civics/Universal_Sufferage.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,8,3</Button>
-			<TechPrereq>TECH_LIBERALISM</TechPrereq>
+			<Type>CIVIC_MERCHANT_REPUBLIC</Type>
+			<Description>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Description>
+			<Civilopedia>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Strategy>
+			<Button>Art/Interface/Buttons/Civics/MerchantRepublic.dds</Button>
+			<TechPrereq>TECH_SHIPBUILDING</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -334,7 +352,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -352,8 +370,8 @@
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
-			<iLargestCityHappiness>3</iLargestCityHappiness>
-			<iWarWearinessModifier>0</iWarWearinessModifier>
+			<iLargestCityHappiness>0</iLargestCityHappiness>
+			<iWarWearinessModifier>100</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
@@ -373,17 +391,24 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers/>
-			<CapitalCommerceModifiers/>
-			<SpecialistExtraCommerces>
+			<CommerceModifiers>
+				<iCommerce>25</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-			</SpecialistExtraCommerces>
+			</CommerceModifiers>
+			<CapitalCommerceModifiers>
+				<iYield>25</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</CapitalCommerceModifiers>
+			<SpecialistExtraCommerces/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -391,7 +416,7 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_PRIME_MINISTER</WeLoveTheKing>
+			<WeLoveTheKing/>
 		</CivicInfo>
 		<CivicInfo> <!-- Tribal Law-->
 			<CivicOptionType>CIVICOPTION_LEGAL</CivicOptionType>
@@ -449,6 +474,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -480,7 +508,7 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>-50</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
@@ -496,7 +524,7 @@
 			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
-			<iMaxConscript>2</iMaxConscript>
+			<iMaxConscript>0</iMaxConscript>
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
@@ -521,16 +549,14 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>20</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -598,6 +624,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers>
@@ -618,7 +647,7 @@
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
-		<CivicInfo> <!-- Religious Law-->
+		<CivicInfo> <!-- Religious Law -->
 			<CivicOptionType>CIVICOPTION_LEGAL</CivicOptionType>
 			<Type>CIVIC_RELIGIOUS_LAW</Type>
 			<Description>TXT_KEY_CIVIC_RELIGIOUS_LAW</Description>
@@ -632,7 +661,91 @@
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
-			<iStateReligionGreatPeopleRateModifier>50</iStateReligionGreatPeopleRateModifier>
+			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
+			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iExtraHealth>0</iExtraHealth>
+			<iFreeExperience>0</iFreeExperience>
+			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
+			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
+			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iBaseFreeUnits>0</iBaseFreeUnits>
+			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
+			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
+			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
+			<iGoldPerUnit>0</iGoldPerUnit>
+			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
+			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
+			<iMaxConscript>0</iMaxConscript>
+			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
+			<iExpInBorderModifier>0</iExpInBorderModifier>
+			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
+			<iLargestCityHappiness>0</iLargestCityHappiness>
+			<iWarWearinessModifier>-25</iWarWearinessModifier>
+			<iFreeSpecialist>0</iFreeSpecialist>
+			<iTradeRoutes>0</iTradeRoutes>
+			<bNoForeignTrade>0</bNoForeignTrade>
+			<bNoCorporations>0</bNoCorporations>
+			<bNoForeignCorporations>0</bNoForeignCorporations>
+			<iCivicPercentAnger>0</iCivicPercentAnger>
+			<bStateReligion>0</bStateReligion>
+			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
+			<iStateReligionHappiness>0</iStateReligionHappiness>
+			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
+			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
+			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<!-- Rhye - start -->
+			<bStabilityVassalBonus>0</bStabilityVassalBonus>
+			<bStabilityFoundBonus>0</bStabilityFoundBonus>
+			<bStabilityConquestBonus>0</bStabilityConquestBonus>
+			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<!-- Rhye - end -->
+			<YieldModifiers/>
+			<CapitalYieldModifiers/>
+			<TradeYieldModifiers/>
+			<CommerceModifiers/>
+			<CapitalCommerceModifiers/>
+			<SpecialistExtraCommerces>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</SpecialistExtraCommerces>
+			<Hurrys/>
+			<SpecialBuildingNotRequireds>
+				<SpecialBuildingNotRequired>
+					<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
+					<bNotRequired>1</bNotRequired>
+				</SpecialBuildingNotRequired>
+			</SpecialBuildingNotRequireds>
+			<SpecialistValids/>
+			<BuildingHappinessChanges/>
+			<BuildingHealthChanges/>
+			<FeatureHappinessChanges/>
+			<ImprovementYieldChanges/>
+			<WeLoveTheKing/>
+		</CivicInfo>
+		<CivicInfo> <!-- Common Law-->
+			<CivicOptionType>CIVICOPTION_LEGAL</CivicOptionType>
+			<Type>CIVIC_COMMON_LAW</Type>
+			<Description>TXT_KEY_CIVIC_COMMON_LAW</Description>
+			<Civilopedia>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Strategy>
+			<Button>Art/Interface/Buttons/Civics/CommonLaw.dds</Button>
+			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
+			<iAnarchyLength>1</iAnarchyLength>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
+			<iAIWeight>0</iAIWeight>
+			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -660,89 +773,7 @@
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
-			<iCivicPercentAnger>0</iCivicPercentAnger>
-			<bStateReligion>0</bStateReligion>
-			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
-			<iStateReligionHappiness>0</iStateReligionHappiness>
-			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
-			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
-			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
-			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<!-- Rhye - start -->
-			<bStabilityVassalBonus>0</bStabilityVassalBonus>
-			<bStabilityFoundBonus>0</bStabilityFoundBonus>
-			<bStabilityConquestBonus>0</bStabilityConquestBonus>
-			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
-			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-			<!-- Rhye - end -->
-			<YieldModifiers/>
-			<CapitalYieldModifiers/>
-			<TradeYieldModifiers/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
-			<CapitalCommerceModifiers/>
-			<SpecialistExtraCommerces/>
-			<Hurrys/>
-			<SpecialBuildingNotRequireds/>
-			<SpecialistValids>
-				<SpecialistValid>
-					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
-					<bValid>1</bValid>
-				</SpecialistValid>
-			</SpecialistValids>
-			<BuildingHappinessChanges/>
-			<BuildingHealthChanges/>
-			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges/>
-			<WeLoveTheKing/>
-		</CivicInfo>
-		<CivicInfo> <!-- Common Law-->
-			<CivicOptionType>CIVICOPTION_LEGAL</CivicOptionType>
-			<Type>CIVIC_COMMON_LAW</Type>
-			<Description>TXT_KEY_CIVIC_COMMON_LAW</Description>
-			<Civilopedia>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/CommonLaw.dds</Button>
-			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
-			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>
-			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
-			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
-			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iExtraHealth>0</iExtraHealth>
-			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<iBaseFreeUnits>0</iBaseFreeUnits>
-			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
-			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>0</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>1</iGoldPerMilitaryUnit>
-			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
-			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
-			<iMaxConscript>0</iMaxConscript>
-			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
-			<iExpInBorderModifier>0</iExpInBorderModifier>
-			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
-			<iLargestCityHappiness>0</iLargestCityHappiness>
-			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>0</iTradeRoutes>
-			<bNoForeignTrade>0</bNoForeignTrade>
-			<bNoCorporations>0</bNoCorporations>
-			<bNoForeignCorporations>0</bNoForeignCorporations>
-			<iCivicPercentAnger>0</iCivicPercentAnger>
+			<iCivicPercentAnger>400</iCivicPercentAnger>
 			<bStateReligion>0</bStateReligion>
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -756,6 +787,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -763,7 +797,7 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>100</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -832,6 +866,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -904,6 +941,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -936,7 +976,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Civics/FreePeasant.dds</Button>
-			<TechPrereq>TECH_EDUCATION</TechPrereq>
+			<TechPrereq>TECH_PRINTING_PRESS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -949,8 +989,8 @@
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-			<iImprovementUpgradeRateModifier>100</iImprovementUpgradeRateModifier>
+			<iWorkerSpeedModifier>100</iWorkerSpeedModifier>
+			<iImprovementUpgradeRateModifier>50</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iBaseFreeUnits>0</iBaseFreeUnits>
 			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
@@ -985,6 +1025,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -998,16 +1041,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-			</ImprovementYieldChanges>
+			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
 		<CivicInfo> <!-- Apprenticeship-->
@@ -1066,6 +1100,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1095,6 +1132,22 @@
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
+					<ImprovementYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</ImprovementYields>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
+					<ImprovementYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</ImprovementYields>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_WATERMILL</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1141,12 +1194,12 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>0</iFreeSpecialist>
+			<iFreeSpecialist>2</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
-			<iCivicPercentAnger>200</iCivicPercentAnger>
+			<iCivicPercentAnger>0</iCivicPercentAnger>
 			<bStateReligion>0</bStateReligion>
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -1160,12 +1213,11 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
-			</YieldModifiers>
+			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers/>
@@ -1236,6 +1288,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1258,7 +1313,6 @@
 			<Description>TXT_KEY_CIVIC_MANORIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Strategy>
-			<Help>TXT_KEY_CIVIC_MANORIALISM_HELP</Help>
 			<Button>Art/Interface/Buttons/Civics/Manorialism.dds</Button>
 			<TechPrereq>TECH_MANORIALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1309,16 +1363,14 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>BUILDINGCLASS_MANOR_HOUSE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>2</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -1339,12 +1391,12 @@
 			</ImprovementYieldChanges>
 			<WeLoveTheKing/>
 		</CivicInfo>
-		<CivicInfo> <!-- Market Economy -->
+		<CivicInfo> <!-- Trade Economy -->
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
-			<Type>CIVIC_MARKETS</Type>
-			<Description>TXT_KEY_CIVIC_MARKETS</Description>
-			<Civilopedia>TXT_KEY_CIVIC_MARKETS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_MARKETS_STRATEGY</Strategy>
+			<Type>CIVIC_TRADE_ECONOMY</Type>
+			<Description>TXT_KEY_CIVIC_TRADE_ECONOMY</Description>
+			<Civilopedia>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_TRADE_ECONOMY_STRATEGY</Strategy>
 			<Button>,Art/Interface/Buttons/Civics/State_Property.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,5,3</Button>
 			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1356,7 +1408,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -1395,18 +1447,95 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<Hurrys/>
+			<SpecialBuildingNotRequireds/>
+			<SpecialistValids/>
+			<BuildingHappinessChanges/>
+			<BuildingHealthChanges/>
+			<FeatureHappinessChanges/>
+			<ImprovementYieldChanges/>
+			<WeLoveTheKing/>
+		</CivicInfo>
+		<CivicInfo> <!-- Guilds -->
+			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
+			<Type>CIVIC_GUILDS</Type>
+			<Description>TXT_KEY_TECH_GUILDS</Description>
+			<Civilopedia>TXT_KEY_CIVIC_GUILDS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_GUILDS_STRATEGY</Strategy>
+			<Button>,Art/Interface/Buttons/TechTree/Guilds.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,4</Button>
+			<TechPrereq>TECH_GUILDS</TechPrereq>
+			<iAnarchyLength>1</iAnarchyLength>
+			<Upkeep>UPKEEP_HIGH</Upkeep>
+			<iAIWeight>0</iAIWeight>
+			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
+			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iExtraHealth>0</iExtraHealth>
+			<iFreeExperience>0</iFreeExperience>
+			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
+			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
+			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iBaseFreeUnits>0</iBaseFreeUnits>
+			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
+			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
+			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
+			<iGoldPerUnit>0</iGoldPerUnit>
+			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
+			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
+			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
+			<iMaxConscript>0</iMaxConscript>
+			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
+			<iExpInBorderModifier>0</iExpInBorderModifier>
+			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
+			<iLargestCityHappiness>0</iLargestCityHappiness>
+			<iWarWearinessModifier>0</iWarWearinessModifier>
+			<iFreeSpecialist>0</iFreeSpecialist>
+			<iTradeRoutes>0</iTradeRoutes>
+			<bNoForeignTrade>0</bNoForeignTrade>
+			<bNoCorporations>0</bNoCorporations>
+			<bNoForeignCorporations>0</bNoForeignCorporations>
+			<iCivicPercentAnger>0</iCivicPercentAnger>
+			<bStateReligion>0</bStateReligion>
+			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
+			<iStateReligionHappiness>0</iStateReligionHappiness>
+			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
+			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
+			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<!-- Rhye - start -->
+			<bStabilityVassalBonus>0</bStabilityVassalBonus>
+			<bStabilityFoundBonus>0</bStabilityFoundBonus>
+			<bStabilityConquestBonus>0</bStabilityConquestBonus>
+			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
+			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<!-- Rhye - end -->
+			<YieldModifiers/>
+			<CapitalYieldModifiers/>
+			<TradeYieldModifiers/>
+			<CommerceModifiers/>
+			<CapitalCommerceModifiers/>
+			<SpecialistExtraCommerces>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+			</SpecialistExtraCommerces>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1453,7 +1582,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>1</iFreeSpecialist>
+			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>1</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
@@ -1472,16 +1601,14 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -1490,91 +1617,16 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges/>
-			<WeLoveTheKing/>
-		</CivicInfo>
-		<CivicInfo> <!-- Merchant Republic-->
-			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
-			<Type>CIVIC_MERCHANT_REPUBLIC</Type>
-			<Description>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Description>
-			<Civilopedia>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Strategy>
-			<Button>Art/Interface/Buttons/Civics/MerchantRepublic.dds</Button>
-			<TechPrereq>TECH_SHIPBUILDING</TechPrereq>
-			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_HIGH</Upkeep>
-			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
-			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
-			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>-50</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
-			<iExtraHealth>0</iExtraHealth>
-			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<iBaseFreeUnits>0</iBaseFreeUnits>
-			<iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
-			<iFreeUnitsPopulationPercent>0</iFreeUnitsPopulationPercent>
-			<iFreeMilitaryUnitsPopulationPercent>0</iFreeMilitaryUnitsPopulationPercent>
-			<iGoldPerUnit>1</iGoldPerUnit>
-			<iGoldPerMilitaryUnit>0</iGoldPerMilitaryUnit>
-			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
-			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
-			<iMaxConscript>0</iMaxConscript>
-			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
-			<iExpInBorderModifier>0</iExpInBorderModifier>
-			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
-			<iLargestCityHappiness>0</iLargestCityHappiness>
-			<iWarWearinessModifier>100</iWarWearinessModifier>
-			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>0</iTradeRoutes>
-			<bNoForeignTrade>0</bNoForeignTrade>
-			<bNoCorporations>0</bNoCorporations>
-			<bNoForeignCorporations>0</bNoForeignCorporations>
-			<iCivicPercentAnger>0</iCivicPercentAnger>
-			<bStateReligion>0</bStateReligion>
-			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
-			<iStateReligionHappiness>0</iStateReligionHappiness>
-			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
-			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
-			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
-			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<!-- Rhye - start -->
-			<bStabilityVassalBonus>0</bStabilityVassalBonus>
-			<bStabilityFoundBonus>0</bStabilityFoundBonus>
-			<bStabilityConquestBonus>0</bStabilityConquestBonus>
-			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
-			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-			<!-- Rhye - end -->
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-			</YieldModifiers>
-			<CapitalYieldModifiers/>
-			<TradeYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-			</TradeYieldModifiers>
-			<CommerceModifiers/>
-			<CapitalCommerceModifiers>
-				<iYield>50</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-			</CapitalCommerceModifiers>
-			<SpecialistExtraCommerces/>
-			<Hurrys/>
-			<SpecialBuildingNotRequireds/>
-			<SpecialistValids/>
-			<BuildingHappinessChanges/>
-			<BuildingHealthChanges/>
-			<FeatureHappinessChanges/>
-			<ImprovementYieldChanges/>
+			<ImprovementYieldChanges>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
+					<ImprovementYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</ImprovementYields>
+				</ImprovementYieldChange>
+			</ImprovementYieldChanges>
 			<WeLoveTheKing/>
 		</CivicInfo>
 		<CivicInfo> <!-- Paganism-->
@@ -1620,7 +1672,7 @@
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
 			<iCivicPercentAnger>0</iCivicPercentAnger>
-			<bStateReligion>1</bStateReligion>
+			<bStateReligion>0</bStateReligion>
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
@@ -1633,6 +1685,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1701,8 +1756,8 @@
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
-			<iStateReligionUnitProductionModifier>25</iStateReligionUnitProductionModifier>
-			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
+			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionBuildingProductionModifier>25</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<!-- Rhye - start -->
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
@@ -1710,6 +1765,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1773,25 +1831,23 @@
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
-			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
+			<iStateReligionUnitProductionModifier>25</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
-			<iStateReligionFreeExperience>3</iStateReligionFreeExperience>
+			<iStateReligionFreeExperience>2</iStateReligionFreeExperience>
 			<!-- Rhye - start -->
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -1817,7 +1873,7 @@
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
-			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
+			<iStateReligionGreatPeopleRateModifier>100</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -1851,7 +1907,7 @@
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iNonStateReligionHappiness>0</iNonStateReligionHappiness>
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
-			<iStateReligionBuildingProductionModifier>25</iStateReligionBuildingProductionModifier>
+			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<!-- Rhye - start -->
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
@@ -1859,6 +1915,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1867,13 +1926,13 @@
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
-			<SpecialBuildingNotRequireds>
-				<SpecialBuildingNotRequired>
-					<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
-					<bNotRequired>1</bNotRequired>
-				</SpecialBuildingNotRequired>
-			</SpecialBuildingNotRequireds>
-			<SpecialistValids/>
+			<SpecialBuildingNotRequireds/>
+			<SpecialistValids>
+				<SpecialistValid>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<bValid>1</bValid>
+				</SpecialistValid>
+			</SpecialistValids>
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
@@ -1936,6 +1995,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>1</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2013,6 +2075,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2085,6 +2150,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2157,6 +2225,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2229,6 +2300,9 @@
 			<bStabilityConquestBonus>1</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2302,6 +2376,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
+                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>

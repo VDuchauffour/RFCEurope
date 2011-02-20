@@ -95,8 +95,8 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MARKETS_PEDIA</Tag>
-		<English>[TAB]A market economy allows the "market forces" of private supply and demand to determine prices of goods and services. Prices depend on both simple factors, like tastes and preferences for different kinds of products, and more complex factors, like expectations about future market conditions. Such an economy is dynamic and usually more efficient than economies that prioritise stability.[PARAGRAPH:2]Feudal economies were not market economies, because prices for labour were often set by law, and estates were often self-contained. Effective market institutions became more common as states brought down internal trade barriers and introduced standard weights and measures. Even so, markets were easily disrupted by currency shocks, like seignoirage and the Spanish discoveries of New World gold, and by bubbles like the Dutch tulip mania.</English>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Tag>
+		<English>[TAB]No Pedia yet.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -834,16 +834,8 @@
 		<Russian>&#204;&#224;&#237;&#238;&#240;&#224;&#235;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
-		<English>[ICON_BULLET]+2[ICON_GOLD] for Manor House.</English>
-		<French>.</French>
-		<German>[ICON_BULLET]+2[ICON_GOLD] for Manor House.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MARKETS</Tag>
-		<English>Market Economy</English>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY</Tag>
+		<English>Trade Economy</English>
 		<French>
 			<Text>Économie de marché</Text>
 			<Gender>Female</Gender>
@@ -1017,6 +1009,24 @@
 		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
+		<English>No Pedia yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
 		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
 		<French>
@@ -1055,4 +1065,36 @@
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
 		<English>+1 production from farms, slower growth for cottages and great people</English>
 		<French/><German/><Italian/><Spanish/><Russian/></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1</Tag>
+		<English>[ICON_BULLET] %D1_Mod [ICON_GOLD] </English>
+		<French>[ICON_BULLET] %D1_Mod [ICON_GOLD] </French>
+		<German>[ICON_BULLET] %D1_Mod [ICON_GOLD] </German>
+		<Italian>[ICON_BULLET] %D1_Mod [ICON_GOLD] </Italian>
+		<Spanish>[ICON_BULLET] %D1_Mod [ICON_GOLD] </Spanish>
+		<Russian>[ICON_BULLET] %D1_Mod [ICON_GOLD] </Russian></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO2</Tag>
+		<English>for [LINK=literal]%s1_Building[\LINK]</English>
+		<French>for [LINK=literal]%s1_Building[\LINK]</French>
+		<German>for [LINK=literal]%s1_Building[\LINK]</German>
+		<Italian>for [LINK=literal]%s1_Building[\LINK]</Italian>
+		<Spanish>for [LINK=literal]%s1_Building[\LINK]</Spanish>
+		<Russian>for [LINK=literal]%s1_Building[\LINK]</Russian></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER</Tag>
+		<English>[ICON_BULLET] %D1_Mod Unit Production</English>
+		<French>[ICON_BULLET] %D1_Mod Unit Production</French>
+		<German>[ICON_BULLET] %D1_Mod Unit Production</German>
+		<Italian>[ICON_BULLET] %D1_Mod Unit Production</Italian>
+		<Spanish>[ICON_BULLET] %D1_Mod Unit Production</Spanish>
+		<Russian>[ICON_BULLET] %D1_Mod Unit Production</Russian></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
+		<English>%D1_Mod from Civics</English>
+		<French>%D1_Mod from Civics</French>
+		<German>%D1_Mod from Civics</German>
+		<Italian>%D1_Mod from Civics</Italian>
+		<Spanish>%D1_Mod from Civics</Spanish>
+		<Russian>%D1_Mod from Civics</Russian></TEXT>
 </Civ4GameText>
