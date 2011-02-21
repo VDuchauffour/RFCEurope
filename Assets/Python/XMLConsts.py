@@ -556,9 +556,38 @@ iImprovementVillage = 20
 iImprovementTown = 21
 
 # Civics
-iManorialism = 16
-iCivicRepublic = 4
-iCivicMerchantRepublic = 19
+#iManorialism = 16
+#iCivicRepublic = 4
+iCivicDespotism = 0
+iCivicFeudalMonarchy = 1
+iCivicDivineMonarchy = 2
+iCivicLimitedMonarchy = 3
+iCivicMerchantRepublic = 4
+iCivicTibalLaw = 5
+iCivicFeudalLaw = 6
+iCivicBureaucracy = 7
+iCivicReligiousLaw = 8
+iCivicCommonLaw = 9
+iCivicTribalism = 10
+iCivicSerfdom = 11
+iCivicFreePeasantry = 12
+iCivicApprenticeship = 13
+iCivicFreeLabor = 14
+iCivicDecentralization = 15
+iCivicManorialism = 16
+iCivicTradeEconomy = 17
+iCivicGuilds = 18
+iCivicMercantilism = 19
+iCivicPaganism = 20
+iCivicStateReligion = 21
+iCivicTheocracy = 22
+iCivicOrganizedReligion = 23
+iCivicFreeReligion = 24
+iCivicSubjugation = 25
+iCivicVassalage = 26
+iCivicImperialism = 27
+iCivicOccupation = 28
+iCivicColonialism = 29
 
 iTerrainOcean = 8
 
