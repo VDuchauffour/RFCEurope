@@ -1083,12 +1083,12 @@
 		<Russian>for [LINK=literal]%s1_Building[\LINK]</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER</Tag>
-		<English>[ICON_BULLET] %D1_Mod Unit Production</English>
-		<French>[ICON_BULLET] %D1_Mod Unit Production</French>
-		<German>[ICON_BULLET] %D1_Mod Unit Production</German>
-		<Italian>[ICON_BULLET] %D1_Mod Unit Production</Italian>
-		<Spanish>[ICON_BULLET] %D1_Mod Unit Production</Spanish>
-		<Russian>[ICON_BULLET] %D1_Mod Unit Production</Russian></TEXT>
+		<English>[ICON_BULLET]%D1_Mod% Unit Production</English>
+		<French>[ICON_BULLET]%D1_Mod% Unit Production</French>
+		<German>[ICON_BULLET]%D1_Mod% Unit Production</German>
+		<Italian>[ICON_BULLET]%D1_Mod% Unit Production</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod% Unit Production</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod% Unit Production</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
 		<English>%D1_Mod from Civics</English>

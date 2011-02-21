@@ -1155,10 +1155,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KARL_XII</Tag>
 		<English>Karl XII</English>
-		<French>Karl XII</French>
+		<French>Charles XII</French>
 		<German>Karl XII</German>
-		<Italian>Karl XII</Italian>
-		<Spanish>Karl XII</Spanish>
+		<Italian>Carlo XII</Italian>
+		<Spanish>Carlos XII</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KARL_XII_PEDIA</Tag>
@@ -1172,7 +1172,7 @@
 		<Tag>TXT_KEY_LEADER_IVAN_ASEN</Tag>
 		<English>Ivan Asen</English>
 		<French>Ivan Asen</French>
-		<German>Ivan Asen</German>
+		<German>Iwan Asen</German>
 		<Italian>Ivan Asen</Italian>
 		<Spanish>Ivan Asen</Spanish>
 	</TEXT>

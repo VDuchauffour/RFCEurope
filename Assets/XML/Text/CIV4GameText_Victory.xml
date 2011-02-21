@@ -308,12 +308,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN3</Tag>
-		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three citeis from Protestant nations or allow no Protestant nations in 1588AD.</English>
-		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three citeis from Protestant nations or allow no Protestant nations in 1588AD.</French>
-		<German>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three citeis from Protestant nations or allow no Protestant nations in 1588AD.</German>
-		<Italian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three citeis from Protestant nations or allow no Protestant nations in 1588AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three citeis from Protestant nations or allow no Protestant nations in 1588AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three citeis from Protestant nations or allow no Protestant nations in 1588AD.</Russian>
+		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</English>
+		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</French>
+		<German>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</German>
+		<Italian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
@@ -354,7 +354,7 @@
 	<TEXT>
 
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
-		<English>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conqer Constantinople by 1204AD.</English>
+		<English>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</English>
 		<French>Conquer Constantinople by 1204AD.</French>
 		<German>Erobern Sie Konstantinople bis zum Jahr 1204 n. Chr.</German>
 		<Italian>Conquer Constantinople by 1204AD.</Italian>
@@ -399,7 +399,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT1</Tag>
-		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without delaring state religion before 1386AD</English>
+		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</English>
 		<French>Accumulate 4000 Culture points without delaring state religion before 1386AD</French>
 		<German>Accumulate 4000 Culture points without delaring state religion before 1386AD</German>
 		<Italian>Accumulate 4000 Culture points without delaring state religion before 1386AD</Italian>
@@ -444,7 +444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN3</Tag>
-		<English>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dlamatia and Croatia in 1444AD.</English>
+		<English>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</English>
 		<French>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dlamatia and Croatia in 1444AD.</French>
 		<German>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dlamatia and Croatia in 1444AD.</German>
 		<Italian>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dlamatia and Croatia in 1444AD.</Italian>
@@ -507,21 +507,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>
-		<English>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</English>
-		<French>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</French>
-		<German>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</German>
-		<Italian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Russian>
+		<English>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</English>
+		<French>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</French>
+		<German>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</German>
+		<Italian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS2</Tag>
-		<English>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] get 20% of the land.</English>
-		<French>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] get 20% of the land.</French>
-		<German>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] get 20% of the land.</German>
-		<Italian>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] get 20% of the land.</Italian>
-		<Spanish>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] get 20% of the land.</Spanish>
-		<Russian>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] get 20% of the land.</Russian>
+		<English>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</English>
+		<French>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</French>
+		<German>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</German>
+		<Italian>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</Italian>
+		<Spanish>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</Spanish>
+		<Russian>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</Russian>
 	</TEXT>
  	<TEXT>
  		<Tag>TXT_KEY_UHV_MOS3</Tag>
@@ -552,7 +552,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN3</Tag>
-		<English>Open borders with 10 other civs in 1640AD.</English>
+		<English>Have open borders with 10 other civs in 1640AD.</English>
 		<French>Avoir 10 accord de Libre Passage en 1640 ap.JC.</French>
 		<German>Schlieﬂen Sie bis zum Jahr 1640 n. Chr. Offene-Grenzen-Abkommen mit 10 anderen Zivilisationen</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
