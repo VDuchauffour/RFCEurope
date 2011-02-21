@@ -4078,7 +4078,7 @@
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
-			<FavoriteReligion>NONE</FavoriteReligion>
+			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
 			<!-- Rhye -->
 			<Traits/>
 			<Flavors>
@@ -7876,7 +7876,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
-			<FavoriteReligion>NONE</FavoriteReligion>
+			<FavoriteReligion>RELIGION_ISLAM</FavoriteReligion>
 			<!-- Rhye -->
 			<Traits/>
 			<Flavors>
@@ -13370,7 +13370,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteReligion>RELIGION_PROTESTANTISM</FavoriteReligion>
 			<!-- Rhye -->
 			<Traits/>
 			<Flavors>
@@ -14472,7 +14472,7 @@
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
-			<FavoriteReligion>NONE</FavoriteReligion>
+			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>
 			<!-- Rhye -->
 			<Traits/>
 			<Flavors>
@@ -19396,7 +19396,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
-			<FavoriteReligion>NONE</FavoriteReligion>
+			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
 			<!-- Rhye -->
 			<Traits/>
 			<Flavors>
@@ -23212,7 +23212,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<!-- Rhye -->
 			<Traits/>
 			<Flavors>
