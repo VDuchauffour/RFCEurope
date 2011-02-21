@@ -1601,8 +1601,8 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+                        <iCivicGoldBuildingClass>BUILDINGCLASS_MARKET</iCivicGoldBuildingClass>
+                        <iCivicGoldGoldAmount>5</iCivicGoldGoldAmount>
                         <iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>

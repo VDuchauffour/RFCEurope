@@ -377,7 +377,7 @@ class Stability:
                         iCityStability += max( iReligionStability + iHurryStability, -3 )+ max( iCultureStability, -3 )
                         iCityStability = min( max( iCityStability, -5 ), 5 )
                 iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
-                print(" City Stability for: ",iPlayer," Caths: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
+                #print(" City Stability for: ",iPlayer," Caths: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
                 pPlayer.setStabilityVary( iCathegoryCities, iCityStability)
 
 	def recalcCivicCombos(self, iPlayer):
@@ -391,58 +391,62 @@ class Stability:
                 iCivic5 = pPlayer.getCivics(5)
                 
                 iCivicCombo = 0
-                if (iCivic3 == 19): #Merchant Republic doesn't require Republic since they are different tiers
-                        if (iCivic1 == 6): #Incompatible with Feudal Law (Venice likes this one)
-				iCivicCombo -= 5
-                if (iCivic0 == 2): #Divine Monarchy should have an appropriate religious civic
-			if (iCivic4 == 20): #Paganism
+                if (iCivic3 == xml.iCivicMerchantRepublic):
+                        if (iCivic1 == xml.iCivicFeudalLaw): #Incompatible with Feudal Law (Venice likes this one)
+				iCivicCombo -= 4
+                        if (iCivic3 == xml.iCivicTradeEconomy):
+                                iCivicCombo += 3
+                if (iCivic0 == xml.iCivicDivineMonarchy): #Divine Monarchy should have an appropriate religious civic
+			if (iCivic4 == xml.iCivicDivineMonarchy): #Paganism
 				iCivicCombo -=4
-			if (iCivic4 == 22): #Theocracy
+			if (iCivic4 == xml.iCivicTheocracy): #Theocracy
+				iCivicCombo +=3
+			if (iCivic4 == xml.iCivicStateReligion): #State Religion
 				iCivicCombo +=2
-			if (iCivic4 == 23): #State Religion
+			if (iCivic4 == xml.iCivicFreeReligion): #Free Religion
+				iCivicCombo -=5
+			if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law
 				iCivicCombo +=2
-			if (iCivic4 == 24): #Free Religion
-				iCivicCombo -=6
-			if (iCivic1 == 8): #Religious Law
-				iCivicCombo +=4
                 if ( pPlayer.getPicklefreeParameter( con.iIsHasStephansdom ) == 1 ):
                         #if (self.getHasStephansdom(iPlayer) == 1):
-                        if(iCivic0 == 2 or iCivic0 == 3):
+                        if(iCivic0 == xml.iCivicFeudalMonarchy or iCivic0 == xml.iCivicDivineMonarchy or iCivic0 == xml.iCivicLimitedMonarchy):
 					iCivicCombo +=2
-                if (iCivic0 == 3 or iCivic0 == 4): #Limited Monarchy and Republics both like enlightened civics
-                        if (iCivic1 == 9): #Common Law
-                                iCivicCombo +=2
-                        if (iCivic2 == 12 or iCivic2 == 14): #Free Peasantry or free labor
+                if (iCivic0 == xml.iCivicLimitedMonarchy or iCivic0 == xml.iCivicMerchantRepublic): #Limited Monarchy and Republics both like enlightened civics
+                        if (iCivic1 == xml.iCivicCommonLaw): #Common Law
                                 iCivicCombo +=3
-                if (iCivic1 == 6): #Feudal law works well with...
-                        if (iCivic2 == 11): # Serfdom
+                        if (iCivic2 == xml.iCivicFreePeasantry or iCivic2 == xml.iCivicFreeLabor): #Free Peasantry or free labor
+                                iCivicCombo +=3
+                if (iCivic1 == xml.iCivicFeudalLaw): #Feudal law works well with...
+                        if (iCivic2 == xml.iCivicSerfdom): # Serfdom
                                 iCivicCombo +=1
-                        if (iCivic3 == 16): #Manorialism
+                        if (iCivic3 == xml.iCivicManorialism): #Manorialism
                                 iCivicCombo +=1
-                        if (iCivic2 == 12): #but poorly with uppity free peasants
-                                iCivicCombo -=5
-                if (iCivic2 == 11 and iCivic3 == 16): #Serfdom and Manorialism go together
+                        if (iCivic0 == xml.iCivicFeudalMonarchy ):
+                                iCivicCombo +=1
+                        if (iCivic2 == xml.iCivicFreePeasantry): #but poorly with uppity free peasants
+                                iCivicCombo -=4
+                if (iCivic2 == xml.iCivicSerfdom and iCivic3 == xml.iCivicManorialism): #Serfdom and Manorialism go together
                         iCivicCombo +=2
-                if (iCivic1 == 8): #Religious Law 
-                        if (iCivic4 == 20 or iCivic4 == 24): #Dislikes Paganism or Free Religion
-                                iCivicCombo -=6
-                        if (iCivic4 == 22): #Favors theocracy
-                                iCivicCombo +=4
-                if (iCivic1 == 9): #Common Law 
-                        if (iCivic2 == 14): #likes Free labor
-                                iCivicCombo +=4
-                        if (iCivic4 == 22): #dislikes theocracy
-                                iCivicCombo -=7
-                if (iCivic2 == 13 and iCivic3 == 18): #Apprenticeship
+                if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law 
+                        if (iCivic4 == xml.iCivicPaganism or iCivic4 == xml.iCivicFreeReligion): #Dislikes Paganism or Free Religion
+                                iCivicCombo -=5
+                        if (iCivic4 == xml.iCivicTheocracy): #Favors theocracy
+                                iCivicCombo +=3
+                if (iCivic1 == xml.iCivicCommonLaw): #Common Law 
+                        if (iCivic2 == xml.iCivicFreeLabor): #likes Free labor
+                                iCivicCombo +=3
+                        if (iCivic4 == xml.iCivicTheocracy): #dislikes theocracy
+                                iCivicCombo -=4
+                if (iCivic2 == xml.iCivicApprenticeship and iCivic3 == xml.iCivicGuilds): #Apprenticeship and Guilds
                         iCivicCombo +=3
-                if (iCivic1 == 7): #Bureaucracy 
+                if (iCivic1 == xml.iCivicBureaucracy): #Bureaucracy 
                         if (pPlayer.getNumCities() <= 5):
                                 iCivicCombo += 4
                         elif ( pPlayer.isHuman() ):
                                 iCivicCombo += max(-6,(5 - pPlayer.getNumCities()))
                         else:
                                 iCivicCombo += max(-2,(5 - pPlayer.getNumCities())) # Turkish and Moscow AI think this is a good civic???
-                if (iCivic0 == 4): #Merchant Republic city cap (like Republic from RFC)
+                if (iCivic0 == xml.iCivicMerchantRepublic): #Merchant Republic city cap (like Republic from RFC)
                         iCivicCombo += max(-4,(3 - pPlayer.getNumCities()))
                 # TODO: boost for stability depending on the current stability
                 #if (iCivic0 == 2): #Divine Monarchy
@@ -503,7 +507,7 @@ class Stability:
                 iIndustrialStability = min( max( 2 * ( 2 * iAgriculture + iProduction ) / iPopNum - 13, -3 ), 3 )
                 iFinancialPowerPerCity = ( iFinances - iInflation + iImports + iExports ) / iNumCities
                 iFinancialStability = min( max( ( iFinances - iInflation + iImports + iExports )/iPopNum + iProductionPenalty,  -4 ), 4 )
-                print(" Civilization: ",pPlayer.getID(),"  ",iFinancialStability,iIndustrialStability )
+                #print(" Civilization: ",pPlayer.getID(),"  ",iFinancialStability,iIndustrialStability )
                 pPlayer.setStabilityVary( iCathegoryEconomy, iFinancialStability + iIndustrialStability )
                 
         def recalcEpansion( self, pPlayer ):

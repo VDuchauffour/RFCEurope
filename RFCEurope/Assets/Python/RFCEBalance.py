@@ -487,7 +487,7 @@ class RFCEBalance:
 		gc.setUP( iNorse, iUP_CanEnterTerrain, xml.iTerrainOcean )
 
 		#JediClemente: changed to only Merchant Republic
-		gc.setUP( iVenecia, iUP_EnableCivic, 100* xml.iCivicMerchantRepublic ) # before + con.iCivicRepublic
+		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic ) # before + con.iCivicRepublic
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
 		
 		gc.setUP( iKiev, iUP_CityTileYield, 100000 * 2 )
