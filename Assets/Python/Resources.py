@@ -26,6 +26,7 @@ class Resources:
 			gc.getMap().plot(37, 60).setBonusType(xml.iPotato)
 			gc.getMap().plot(68, 49).setBonusType(xml.iPotato) #Poland
 			gc.getMap().plot(59, 53).setBonusType(xml.iPotato) #Northern Germany
+                        gc.getMap().plot(49, 54).setBonusType(xml.iAccess) #Dutch AA
 		if (iGameTurn == xml.i1680AD):
 			gc.getMap().plot(59, 61).setBonusType(xml.iAccess) #Atlantic Access in Scandinavia
 

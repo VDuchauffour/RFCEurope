@@ -73,9 +73,13 @@ Changes for Beta 9:
 
 		Balance:
 			Germany get Lorraine as a "Solid" Province
+			Spain gets the Canaries as "OK" stability
+			Genoa gets Malta
 		
 		Bugfixes:
 			Fixed: Norse no longer lose stability when capturing cities
+			Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
+			Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
