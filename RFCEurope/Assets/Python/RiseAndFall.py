@@ -1801,6 +1801,7 @@ class RiseAndFall:
                                 pCurrent = gc.getMap().plot( x, y )
                                 if ( pCurrent.isCity()):
                                         if (pCurrent.getPlotCity().getOwner() != iCiv):
+                                                #print ("append", x,y)
                                                 cityList.append(pCurrent.getPlotCity())
 
                 #Exceptions
@@ -1809,7 +1810,8 @@ class RiseAndFall:
                                 pCurrent = gc.getMap().plot( tExceptions[iCiv][j][0], tExceptions[iCiv][j][1] )
                                 if ( pCurrent.isCity()):
                                         if (pCurrent.getPlotCity().getOwner() != iCiv):
-                                                print ("append", pCurrent)
+                                                #print ("append e1", pCurrent.getPlotCity().getX(),pCurrent.getPlotCity().getY())
+                                                #print ("append e2", tExceptions[iCiv][j][0], tExceptions[iCiv][j][1])
                                                 cityList.append(pCurrent.getPlotCity())
 
                 print ("Birth", iCiv)
@@ -1826,6 +1828,8 @@ class RiseAndFall:
                                 iOwner = loopCity.getOwner()
                                 iCultureChange = 0 #if 0, no flip; if > 0, flip will occur with the value as variable for utils.CultureManager()
                                 
+                                #print(" Random Crash: which Owner for the city: ",iOwner)
+                                #print(" Random Crash: which Owner for the city: ",loopX,loopY)
                                 #case 1: barbarian/independent city
                                 #if (iOwner == iBarbarian or iOwner == iIndependent or iOwner == iIndependent2 ):
                                 if (iOwner == iBarbarian or utils.isIndep( iOwner ) ):
@@ -1849,7 +1853,8 @@ class RiseAndFall:
                                                 #iConvertedCitiesCount += 1
                                                 #self.flipPopup(iCiv, tTopLeft, tBottomRight)
                                 #case 3: other
-                                elif (not loopCity.isCapital()):   #utils.debugTextPopup( 'OTHER' )                                
+                                elif (not loopCity.isCapital()): # 3Miro: this keeps crashing in the C++, makes no sense
+                                #elif ( True ):   #utils.debugTextPopup( 'OTHER' ) 
                                         if (iConvertedCitiesCount < 6): #there won't be more than 5 flips in the area
                                                 #utils.debugTextPopup( 'iConvertedCities OK' )
                                                 iCultureChange = 50
