@@ -67,6 +67,7 @@ Changes for Beta 9:
 			New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
 			Fixed many typos
 			Some leaders prefer a certain religion
+			Some objects are translated
 
 		Art updates:
 			Byzantine Lancer has proper button

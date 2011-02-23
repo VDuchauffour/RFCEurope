@@ -16900,7 +16900,7 @@
 			<DefaultUnitAI>UNITAI_SCIENTIST</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_GREAT_SCHOLAR</Description>
+			<Description>TXT_KEY_SPECIALIST_GREAT_SCHOLAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_SCIENTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
