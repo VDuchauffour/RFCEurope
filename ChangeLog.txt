@@ -51,36 +51,36 @@ MV1		Python cleanup
 MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
-MV1		Do XML things for the Civic overhaul
 MV1		Add ethnic Russian Great Merchant
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 9:
 		
-		General changes:
-			A few small fixes to the map
-			Added salt to Anatolia, removed deers
+	General changes:
+		A few small fixes to the map
+		Added salt to Anatolia, removed deers
+		New civic system
 			
-		XML updates:
-			XML cleanup (unused lines of code are removed)
-			New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
-			Fixed many typos
-			Some leaders prefer a certain religion
-			Some objects are translated
+	XML updates:
+		XML cleanup (unused lines of code are removed)
+		New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
+		Fixed many typos
+		Some leaders prefer a certain religion
+		Some objects are translated
 
-		Art updates:
-			Byzantine Lancer has proper button
+	Art updates:
+		Byzantine Lancer has proper button
 
-		Balance:
-			Germany get Lorraine as a "Solid" Province
-			Spain gets the Canaries as "OK" stability
-			Genoa gets Malta
+	Balance:
+		Germany get Lorraine as a "Solid" Province
+		Spain gets the Canaries as "OK" stability
+		Genoa gets Malta
 		
-		Bugfixes:
-			Fixed: Norse no longer lose stability when capturing cities
-			Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
-			Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
+	Bugfixes:
+		Fixed: Norse no longer lose stability when capturing cities
+		Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
+		Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
