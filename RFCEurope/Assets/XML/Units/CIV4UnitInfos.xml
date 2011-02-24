@@ -15274,7 +15274,7 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_CARRACK</Description>
+			<Description>TXT_KEY_UNIT_PORTUGAL_CARRACK</Description>
 			<Civilopedia>TXT_KEY_UNIT_PORTUGAL_CARRACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CARRACK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
