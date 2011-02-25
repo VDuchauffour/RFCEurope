@@ -32,6 +32,9 @@
         <ElementType name="DCNConditionMasterlOf" content="textOnly"/>
         <ElementType name="DCNConditionGenericMasterl" content="textOnly" dt:type="int"/>
         <ElementType name="DCNConditionAfterTurn" content="textOnly" dt:type="int"/>
+        <ElementType name="DCNConditionConqNumOfProvincesOfTypeType" content="textOnly" dt:type="int"/>
+        <ElementType name="DCNConditionConqNumOfProvincesOfTypeNum" content="textOnly" dt:type="int"/>
+        <ElementType name="DCNConditionConqASpecificProvince" content="textOnly" dt:type="int"/>
         <ElementType name="DCNName" content="textOnly"/>
         <ElementType name="DCNCondition" content="eltOnly">
 		<element type="DCNConditionCivic"/>
@@ -44,6 +47,9 @@
                 <element type="DCNConditionMasterlOf"/>
                 <element type="DCNConditionGenericMasterl"/>
                 <element type="DCNConditionAfterTurn"/>
+                <element type="DCNConditionConqNumOfProvincesOfTypeType"/>
+                <element type="DCNConditionConqNumOfProvincesOfTypeNum"/>
+                <element type="DCNConditionConqASpecificProvince"/>
                 <element type="DCNName"/>
         </ElementType>
         <ElementType name="DCNConditions" content="eltOnly">
