@@ -68,6 +68,9 @@ Changes for Beta 9:
 		Fixed many typos
 		Some leaders prefer a certain religion
 		Some objects are translated
+		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
+				For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
+				For Asutria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)
 
 	Art updates:
 		Byzantine Lancer has proper button
@@ -81,6 +84,8 @@ Changes for Beta 9:
 		Fixed: Norse no longer lose stability when capturing cities
 		Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
 		Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
+		Fixed: A Firaxis bug, upon capturing an enemy city, units from the defending player can enter the city after the city has been captured
+		       added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
