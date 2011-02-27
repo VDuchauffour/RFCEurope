@@ -993,6 +993,10 @@ iUP_ForeignSea = 22		# allows the ships to enter foreign sea territory (Dutch UP
 iUP_Pious = 23			# increase the gain (and loss) of Faith Points
 iUP_PaganCulture = 24           # give bonus to culure if no state religion is present
 iUP_PaganHappy = 25             # give bonus to happyness if no state religion is present
+iUP_StabilityConquestBoost = 26 # if stability is < 0, then get +1 stability on Conquest
+iUP_StabilitySettler = 27       # don't lose stability from founding cities in Outer and None Provinces
+iUP_StabilityPlaceholder1 = 28  # don't lose stability from founding cities in Outer and None Provinces
+iUP_StabilityPlaceholder1 = 29  # don't lose stability from founding cities in Outer and None Provinces
 
 iFP_Stability = 0		# stability bonus
 iFP_Civic = 1			# lower civic upkeep

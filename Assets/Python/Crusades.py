@@ -704,7 +704,12 @@ class Crusades:
 		iLeader = self.getLeader()
 		pTargetCity = gc.getMap().plot( self.getTargetX(), self.getTargetY() ).getPlotCity()
 		iTargetPlayer = pTargetCity.getOwner()
-		if ( iTargetPlayer == iHuman ):
+                # Jerusalem can change ownership during the voting
+                if ( gc.getPlayer( iTargetPlayer ).getStateReligion() == xml.iCatholicism ):
+                        self.setLeader( -1 )
+                        self.returnCrusaders()
+                        return
+                if ( iTargetPlayer == iHuman ):
 			self.underCrusadeAttackPopup( pTargetCity.getName(), iLeader )
 		else: 
                         sCityName = cnm.lookupName(pTargetCity,con.iPope)
@@ -726,9 +731,10 @@ class Crusades:
 		iChosenX = -1
 		iChosenY = -1
                 
-                # if the leader has been destroyed, calcel the crusade
+                # if the leader has been destroyed, cancel the crusade
                 iLeader = self.getLeader()
-                if ( not gc.getPlayer( iLeader ).isAlive() ):
+                if ( (iLeader>-1) and (not gc.getPlayer( iLeader ).isAlive()) ):
+                        self.returnCrusaders()
                         return
 		
                 # if in the mean time Jerusalem has been captured by am Orthodox or Catholic player (and target is Jerusalem), cancel the Crusade

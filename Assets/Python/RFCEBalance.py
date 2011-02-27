@@ -66,6 +66,8 @@ iUP_ForeignSea = con.iUP_ForeignSea
 iUP_Pious = con.iUP_Pious
 iUP_PaganCulture = con.iUP_PaganCulture
 iUP_PaganHappy = con.iUP_PaganHappy
+iUP_StabilityConquestBoost = con.iUP_StabilityConquestBoost
+iUP_StabilitySettler = con.iUP_StabilitySettler
 
 iFP_Stability = con.iFP_Stability		
 iFP_Civic = con.iFP_Civic			
@@ -485,6 +487,7 @@ class RFCEBalance:
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
 		
 		gc.setUP( iNorse, iUP_CanEnterTerrain, xml.iTerrainOcean )
+                gc.setUP( iNorse, iUP_StabilitySettler, 1 )
 
 		#JediClemente: changed to only Merchant Republic
 		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic ) # before + con.iCivicRepublic
@@ -512,12 +515,14 @@ class RFCEBalance:
 		
                 # Speedup East/West India Trading Companies
 		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 40 );
+                gc.setUP( iPortugal, iUP_StabilitySettler, 1 )
 		
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
 				gc.setDiplomacyModifiers( i, iAustria, +4 )
 				
 		gc.setUP( iTurkey, iUP_Conscription, 330 )
+                gc.setUP( iTurkey, iUP_StabilityConquestBoost, 1 )
 		
 		gc.setUP( iSweden, iUP_PromotionI, xml.iPromotionFormation )
 		
@@ -694,6 +699,14 @@ class RFCEBalance:
                 #        the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
                 gc.setVassalagaeCondition( iCordoba, iArabia, 1, con.iProvinceDesired )
                 gc.setVassalagaeCondition( iArabia, iCordoba, 1, con.iProvinceDesired )
+                
+                # How much culture should we get into a province of this type, ignoe the war and settler values (0,0)
+                gc.setProvinceTypeParams( con.iProvinceNone, 0, 0, 2, 3 ) # 2/3 culture 
+                gc.setProvinceTypeParams( con.iProvinceDesired, 0, 0, 1, 2 ) # this is not used
+                gc.setProvinceTypeParams( con.iProvinceOuter, 0, 0, 1, 1 ) # no change to culture 
+                gc.setProvinceTypeParams( con.iProvincePotential, 0, 0, 1, 1 ) # same as outer culture 
+                gc.setProvinceTypeParams( con.iProvinceNatural, 0, 0, 2, 1 ) # double-culture 
+                gc.setProvinceTypeParams( con.iProvinceCore, 0, 0, 2, 1 ) # double-culture 
 
 		self.postAreas()
                 

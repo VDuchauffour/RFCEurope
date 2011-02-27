@@ -2393,7 +2393,7 @@
 			<Civilopedia>TXT_KEY_BONUS_ACCESS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ACCESS</ArtDefineTag>
-			<TechReveal>TECH_ASTRONOMY</TechReveal>
+			<TechReveal>TECH_ASTROLABE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<YieldChanges>

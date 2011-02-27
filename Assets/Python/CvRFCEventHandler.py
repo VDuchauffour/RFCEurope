@@ -272,9 +272,9 @@ class CvRFCEventHandler:
                 #                        self.rnf.escape(city)
 
 		# 3Miro: Jerusalem's Golden Age Insentive
-		pPlayer = gc.getPlayer(playerType)
-		if ( pPlayer.getStateReligion() == xml.iCatholicism ):
-			if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
+                if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
+                        pPlayer = gc.getPlayer(playerType)
+                        if ( pPlayer.getStateReligion() == xml.iCatholicism ):
 				self.crusade.success( playerType )
 
 		#Sedna17, added code for Krak des Chevaliers
@@ -740,6 +740,7 @@ class CvRFCEventHandler:
                 #            iPlayer == con.iBabylonia):                            
                 #                self.vic.onTechAcquired(argsList[0], argsList[2])		
                 self.vic.onTechAcquired(argsList[0], argsList[2])
+                self.res.onTechAcquired(argsList[0], argsList[2])
                                 
                 if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
                         self.rel.onTechAcquired(argsList[0], argsList[2])

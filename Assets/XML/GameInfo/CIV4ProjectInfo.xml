@@ -40,6 +40,7 @@
 			<PProjects/>
 			<PBonus>NONE</PBonus>
                         <bIsColony>0</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_EAST_INDIA_COMPANY</MovieDefineTag>
 		</ProjectInfo>
@@ -76,6 +77,7 @@
 			<PProjects/>
 			<PBonus>NONE</PBonus>
                         <bIsColony>0</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_WEST_INDIA_COMPANY</MovieDefineTag>
 		</ProjectInfo>
@@ -107,8 +109,54 @@
 			<PProjects/>
 			<PBonus>NONE</PBonus>
                         <bIsColony>0</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIE</MovieDefineTag>
+		</ProjectInfo>
+		<ProjectInfo>
+			<Type>PROJECT_VINLAND</Type>
+			<Description>TXT_KEY_PROJECT_VINLAND</Description>
+			<Civilopedia>TXT_KEY_PROJECT_VINLAND_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROJECT_VINLAND_STRATEGY</Strategy>
+			<VictoryPrereq>NONE</VictoryPrereq>
+			<TechPrereq>TECH_ASTROLABE</TechPrereq>
+			<AnyonePrereqProject>NONE</AnyonePrereqProject>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iCost>100</iCost>
+			<iNukeInterception>0</iNukeInterception>
+			<iTechShare>0</iTechShare>
+			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
+			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
+			<bSpaceship>0</bSpaceship>
+			<bAllowsNukes>0</bAllowsNukes>
+			<Button>Art/Interface/Buttons/Colonies/GoldCoast.dds</Button>
+			<PrereqProjects/>
+			<VictoryThresholds/>
+			<VictoryMinThresholds/>
+			<iVictoryDelayPercent>0</iVictoryDelayPercent>
+			<iSuccessRate>0</iSuccessRate>
+			<BonusProductionModifiers/>
+			<FreeBonuses>
+				<FreeBonus>
+					<FreeBonusType>BONUS_FUR</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_TOBACCO</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_NORTH_AMERICA_ACCESS</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+			</FreeBonuses>
+			<PProjects/>
+			<PBonus>BONUS_ACCESS</PBonus>
+                        <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>150</iCannotBeBuildAfterTurn>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_GOLD_COAST</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_GOLD_COAST</Type>
@@ -152,6 +200,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_GOLD_COAST</MovieDefineTag>
 		</ProjectInfo>
@@ -197,6 +246,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_IVORY_COAST</MovieDefineTag>
 		</ProjectInfo>
@@ -252,6 +302,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CUBA</MovieDefineTag>
 		</ProjectInfo>
@@ -312,6 +363,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_BRAZIL</MovieDefineTag>
 		</ProjectInfo>
@@ -368,6 +420,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_HUDSON</MovieDefineTag>
 		</ProjectInfo>
@@ -428,6 +481,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_VIRGINIA</MovieDefineTag>
 		</ProjectInfo>
@@ -475,6 +529,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CHINA</MovieDefineTag>
 		</ProjectInfo>
@@ -531,6 +586,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_INDIA</MovieDefineTag>
 		</ProjectInfo>
@@ -587,6 +643,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_EAST_INDIES</MovieDefineTag>
 		</ProjectInfo>
@@ -647,6 +704,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_MALAYA</MovieDefineTag>
 		</ProjectInfo>
@@ -698,6 +756,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPE_TOWN</MovieDefineTag>
 		</ProjectInfo>
@@ -738,6 +797,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_EAST_AFRICA</MovieDefineTag>
 		</ProjectInfo>
@@ -782,6 +842,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_AZTEC_CONQUEST</MovieDefineTag>
 		</ProjectInfo>
@@ -826,6 +887,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_INCA_CONQUEST</MovieDefineTag>
 		</ProjectInfo>
@@ -875,6 +937,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_HISPANIOLA</MovieDefineTag>
 		</ProjectInfo>
@@ -933,6 +996,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_QUEBEC</MovieDefineTag>
 		</ProjectInfo>
@@ -991,6 +1055,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_NEW_ENGLAND</MovieDefineTag>
 		</ProjectInfo>
@@ -1049,6 +1114,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_JAMAICA</MovieDefineTag>
 		</ProjectInfo>
@@ -1102,6 +1168,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_PANAMA</MovieDefineTag>
 		</ProjectInfo>
@@ -1164,6 +1231,7 @@
 			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_LOUISIANA</MovieDefineTag>
 		</ProjectInfo>
@@ -1217,6 +1285,7 @@
 			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_PHILLIPPINES</MovieDefineTag>
 		</ProjectInfo>

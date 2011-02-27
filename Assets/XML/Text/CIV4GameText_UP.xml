@@ -312,12 +312,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG2</Tag>
-		<English>Workshops give +1 hammer.</English>
-		<French>Atelier ont +1 Marteaux.</French>
-		<German>Werkst&#252;tten geben +1 Produktion</German>
-		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
-		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
-		<Russian>&#214;&#229;&#245;&#224; &#228;&#224;&#254;&#242; +1 &#236;&#238;&#235;&#238;&#242;&#238;&#234;.</Russian>
+		<English>Workshops give +2 hammer.</English>
+		<French>Atelier ont +2 Marteaux.</French>
+		<German>Werkst&#252;tten geben +2 Produktion</German>
+		<Italian>Workshops give +2 hammer.</Italian>
+		<Spanish>Workshops give +2 hammer.</Spanish>
+		<Russian>&#214;&#229;&#245;&#224; &#228;&#224;&#254;&#242; +2 &#236;&#238;&#235;&#238;&#242;&#238;&#234;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR</Tag>

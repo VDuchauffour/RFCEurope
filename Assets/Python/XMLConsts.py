@@ -534,7 +534,7 @@ iEastIndiaCompany = 0
 iWestIndiaCompany = 1
 iEncyclopedie = 2
 iNumNotColonies = 3
-iNumTotalColonies = 24
+iNumTotalColonies = 25
 
 #Eras
 
