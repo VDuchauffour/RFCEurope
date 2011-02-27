@@ -1019,7 +1019,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT] </English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT] </English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1028,7 +1028,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Theocracy, State Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Theocracy, State Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1037,7 +1037,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1046,7 +1046,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1055,7 +1055,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1064,7 +1064,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1073,7 +1073,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1082,7 +1082,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1091,7 +1091,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Limited Monarchy, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1100,7 +1100,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1109,7 +1109,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Limited Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1118,7 +1118,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1127,7 +1127,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Limited Monarchy, Common Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Common Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1136,7 +1136,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1145,7 +1145,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1154,7 +1154,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1163,7 +1163,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
-		<English>Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1172,7 +1172,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1181,7 +1181,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1190,7 +1190,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1199,7 +1199,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
-		<English>Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -1208,7 +1208,7 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
-		<English>Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
