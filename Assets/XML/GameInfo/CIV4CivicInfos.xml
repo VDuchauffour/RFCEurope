@@ -89,7 +89,7 @@
 			<Strategy>TXT_KEY_CIVIC_FEUDAL_MONARHCY</Strategy>
 			<Help>TXT_KEY_CIVIC_FEUDAL_MONARHCY_HELP</Help>
 			<Button>Art/Interface/Buttons/Civics/Electorate.dds</Button>
-			<TechPrereq>TECH_VASSALAGE</TechPrereq>
+			<TechPrereq>TECH_FEUDALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -901,7 +901,7 @@
 			<Strategy>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Strategy>
                         <Help>TXT_KEY_CIVIC_SERFDOM_HELP</Help>
 			<Button>,Art/Interface/Buttons/Civics/Serfdom.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,7,2</Button>
-			<TechPrereq>TECH_FEUDALISM</TechPrereq>
+			<TechPrereq>TECH_VASSALAGE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -1062,7 +1062,7 @@
 			<Strategy>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Strategy>
                         <Help>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Help>
 			<Button>Art/Interface/Buttons/Civics/Apprenticeship.dds</Button>
-			<TechPrereq>TECH_GUILDS</TechPrereq>
+			<TechPrereq>TECH_EDUCATION</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
