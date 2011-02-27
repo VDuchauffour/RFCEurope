@@ -61,6 +61,7 @@ Changes for Beta 9:
 		A few small fixes to the map
 		Added salt to Anatolia, removed deers
 		New civic system
+		Changed Norse UHV 1: now we have to build Vinland colony
 			
 	XML updates:
 		XML cleanup (unused lines of code are removed)
@@ -71,6 +72,13 @@ Changes for Beta 9:
 		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
 				For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
 				For Asutria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)
+		Updated the text for the Expansion civics
+		The English UP is now correctly listed as +2 hammer from Workshop
+		Workshops can now be build on Moorland (makes English UP more powerful)
+		Added new Colony: Vinland
+		Colonies become obsolete after some date
+		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
+		Added test showing infor for the Civic combo Stability boost/penalty
 
 	Art updates:
 		Byzantine Lancer has proper button
@@ -79,13 +87,24 @@ Changes for Beta 9:
 		Germany get Lorraine as a "Solid" Province
 		Spain gets the Canaries as "OK" stability
 		Genoa gets Malta
+		Added direct stability bonus for Golden Age, before it was only implicid via the boost of Economy
+		Atlantic Access start on the map only in Iceland, then it disapears completely after 1050AD
+		Atlantic Access is then added dynamically as different nations discover Astronomy (Gibraltar AA is added when any nation discovers Astronomy)
+		Culture output depends on the province type, lower culture for Unstable and higher culture for Solid
+		Adjusted Merchant Republic number of cities penalty, should help the AI
+		Wheat added to Dijon
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
+		Fixed: Players no longer get double-hits from razing cities
 		Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
 		Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
 		Fixed: A Firaxis bug, upon capturing an enemy city, units from the defending player can enter the city after the city has been captured
 		       added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
+		Fixed: Crusade dets canceled if a Catholic captures Jerusalem during the voting
+		Fixed: Crusaders "return" properly from a canceled Crusade (you can change religion again)
+		Fixed: Jerusalem is added to the Arabian UHV territory
+		Fixed: French UP now works
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------

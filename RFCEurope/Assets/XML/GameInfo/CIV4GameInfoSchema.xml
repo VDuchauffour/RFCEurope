@@ -556,6 +556,7 @@
 	</ElementType>
 	<ElementType name="PBonus" content="textOnly"/>
         <ElementType name="bIsColony" content="textOnly" dt:type="int"/>
+	<ElementType name="iCannotBeBuildAfterTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="ProjectInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="Description"/>
@@ -584,6 +585,7 @@
 		<element type="PProjects"/>
 		<element type="PBonus"/>
                 <element type="bIsColony"/>
+		<element type="iCannotBeBuildAfterTurn"/>
 		<element type="CreateSound"/>
 		<element type="MovieDefineTag"/>
 	</ElementType>

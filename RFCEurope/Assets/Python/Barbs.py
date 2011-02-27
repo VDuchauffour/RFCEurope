@@ -287,6 +287,7 @@ class Barbs:
 		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2)
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1)
                 self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2) # 3Miro add Lyon to flip to Burgundy
+                self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1)
 		self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2)
 		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 1)
 		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1)

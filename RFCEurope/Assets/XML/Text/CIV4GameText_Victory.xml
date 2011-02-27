@@ -317,12 +317,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
-		<English>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Reveal all ocean tiles by 1009AD.</English>
-		<French>D&#233;couvrir toute les cases d'oc&#233;an en 1280 ap.JC.</French>
-		<German>Decken Sie alle Ozeanfelder bis zum Jahr 1280 n. Chr. auf</German>
-		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
-		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
-		<Russian>&#206;&#242;&#234;&#240;&#238;&#233;&#242;&#229; &#226;&#241;&#229; &#238;&#234;&#229;&#224;&#237;&#241;&#234;&#232;&#229; &#234;&#235;&#229;&#242;&#234;&#232; &#234; 1280AD.</Russian>
+		<English>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</English>
+		<French>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</French>
+		<German>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</German>
+		<Italian>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
@@ -335,12 +335,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
-		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents don't count)</English>
-		<French>Raser 10 villes. (Independents don't count)</French>
-		<German>Zerst&#246;ren sie mindestens 10 St&#228;dte (Independents don't count)</German>
-		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 10 cities. (Independents don't count)</Italian>
-		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 10 cities. (Independents don't count)</Spanish>
-		<Russian>&#209;&#237;&#229;&#241;&#232;&#242;&#229; 10 &#227;&#238;&#240;&#238;&#228;&#238;&#226;. (Independents don't count)</Russian>
+		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents and Barbarians don't count)</English>
+		<French>Raser 6 villes. (Independents and Barbarians don't count)</French>
+		<German>Zerst&#246;ren sie mindestens 6 St&#228;dte (Independents and Barbarians don't count)</German>
+		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents and Barbarians don't count)</Italian>
+		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents and Barbarians don't count)</Spanish>
+		<Russian>&#209;&#237;&#229;&#241;&#232;&#242;&#229; 6 &#227;&#238;&#240;&#238;&#228;&#238;&#226;. (Independents and Barbarians don't count)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>

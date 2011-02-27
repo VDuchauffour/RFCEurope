@@ -268,12 +268,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION</Tag>
-		<English>Occupation</English>
-		<French>Occupation</French>
-		<German>Besatzung</German>
-		<Italian>Occupazione</Italian>
-		<Spanish>Ocupaci&#243;n</Spanish>
-		<Russian>&#199;&#224;&#237;&#255;&#242;&#232;&#229;</Russian>
+		<English>Militarism</English>
+		<French>Militarism</French>
+		<German>Militarism</German>
+		<Italian>Militarism</Italian>
+		<Spanish>Militarism</Spanish>
+		<Russian>Militarism</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION_PEDIA</Tag>
@@ -295,39 +295,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS</Tag>
-		<English>[ICON_BULLET]+4 Stability Points for each vassal</English>
-		<French>[ICON_BULLET]+4 points de stabilit&#233; par vassal</French>
-		<German>[ICON_BULLET]+4 Stabilit&#228;tspunkte f&#252;r jeden Vasallen</German>
-		<Italian>[ICON_BULLET]+4 punti stabilit&#224; per ogni vassallo.</Italian>
-		<Spanish>[ICON_BULLET]+4 puntos de estabilidad por cada vasallo</Spanish>
-		<Russian>[ICON_BULLET]+4 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
+		<English>[ICON_BULLET]+3 Stability Points for each vassal</English>
+		<French>[ICON_BULLET]+3 points de stabilit&#233; par vassal</French>
+		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden Vasallen</German>
+		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni vassallo.</Italian>
+		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada vasallo</Spanish>
+		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
 		</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS_VANILLA</Tag>
-		<English>[ICON_BULLET]+4 Stability Points for each civilization starting point controlled</English>
-		<French>[ICON_BULLET]+4 points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
-		<German>[ICON_BULLET]+4 Stabilit&#228;tspunkte f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
-		<Italian>[ICON_BULLET]+4 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
-		<Spanish>[ICON_BULLET]+4 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Russian>[ICON_BULLET]+4 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, &#232;&#225;&#238; &#234;&#224;&#230;&#228;&#251;&#233; &#232;&#241;&#245;&#238;&#228;&#237;&#251;&#233; &#239;&#243;&#237;&#234;&#242; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#235;&#241;&#255;</Russian>
+		<English>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</English>
+		<French>[ICON_BULLET]+3 points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
+		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
+		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
+		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
+		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, &#232;&#225;&#238; &#234;&#224;&#230;&#228;&#251;&#233; &#232;&#241;&#245;&#238;&#228;&#237;&#251;&#233; &#239;&#243;&#237;&#234;&#242; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#235;&#241;&#255;</Russian>
 		</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
-		<English>[ICON_BULLET]+1 stability point for each city outside the core area</English>
-		<French>[ICON_BULLET]+1 points de stabilit&#233; par ville fond&#233;e en dehors du coeur de l'Empire</French>
-		<German>[ICON_BULLET]+2 zus&#228;tzliche Stabilit&#228;tspunkte f&#252;r jede Stadt auﬂerhalb des Kerngebiets</German>
-		<Italian>[ICON_BULLET]+2 punti stabilit&#224; addizionali per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
-		<Spanish>[ICON_BULLET]+2 puntos de estabilidad adicionales por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
-		<Russian>[ICON_BULLET]+1 stability point for each city outside the core area</Russian>
+		<English>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</English>
+		<French>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</French>
+		<German>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</German>
+		<Italian>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</Italian>
+		<Spanish>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</Spanish>
+		<Russian>[ICON_BULLET]+1 stability point for each city in a less than Solid Province.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CONQUEST_BONUS</Tag>
-		<English>[ICON_BULLET]+2 additional Stability Points on city conquest</English>
-		<French>[ICON_BULLET]+2 points de stabilit&#233; &#224; la conqu&#234;te d'une ville</French>
-		<German>[ICON_BULLET]+2 zus&#228;tzliche Stabilit&#228;tspunkte bei Stadteroberung</German>
-		<Italian>[ICON_BULLET]+2 punti stabilit&#224; addizionali conquistando una citt&#224;.</Italian>
-		<Spanish>[ICON_BULLET]+2 puntos de estabilidad adicionales por conquista de ciudad</Spanish>
-		<Russian>[ICON_BULLET]+2 &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;</Russian>
+		<English>[ICON_BULLET]+1 additional Stability Points on city conquest</English>
+		<French>[ICON_BULLET]+1 points de stabilit&#233; &#224; la conqu&#234;te d'une ville</French>
+		<German>[ICON_BULLET]+1 zus&#228;tzliche Stabilit&#228;tspunkte bei Stadteroberung</German>
+		<Italian>[ICON_BULLET]+1 punti stabilit&#224; addizionali conquistando una citt&#224;.</Italian>
+		<Spanish>[ICON_BULLET]+1 puntos de estabilidad adicionales por conquista de ciudad</Spanish>
+		<Russian>[ICON_BULLET]+1 &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION_BONUS</Tag>
@@ -1011,6 +1011,204 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
 		<English>No Pedia yet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT] </English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Theocracy, State Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Limited Monarchy, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Limited Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Limited Monarchy, Common Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
+		<English>Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
+		<English>Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
+		<English>Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

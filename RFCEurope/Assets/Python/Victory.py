@@ -663,10 +663,15 @@ class Victory:
 
                 
         def checkNorse( self, iGameTurn ):
-                if ( iGameTurn == xml.i1009AD and pNorse.getUHV( 0 ) == -1 ):
-                        if ( gc.canSeeAllTerrain( iNorse, xml.iTerrainOcean ) ):
+                #if ( iGameTurn == xml.i1009AD and pNorse.getUHV( 0 ) == -1 ):
+                #        if ( gc.canSeeAllTerrain( iNorse, xml.iTerrainOcean ) ):
+                #                pNorse.setUHV( 0, 1 )
+                #        else:
+                #                pNorse.setUHV( 0, 0 )
+                if ( iGameTurn <= xml.i1009AD+1 and pNorse.getUHV( 0 ) == -1 ): # there is one turn delay between Building and this function being called
+                        if ( pNorse.getNumColonies() >= 1 ):
                                 pNorse.setUHV( 0, 1 )
-                        else:
+                        elif ( iGameTurn == xml.i1009AD+1 ):
                                 pNorse.setUHV( 0, 0 )
                 
 
