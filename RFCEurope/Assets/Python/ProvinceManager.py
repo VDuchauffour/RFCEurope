@@ -87,7 +87,7 @@ tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_The
 tByzantiumNorm = []
 tByzantiumOuter = [xml.iP_Moesia,xml.iP_Serbia,xml.iP_Cyrenaica]
 tByzantiumPot2Core = []
-tByzantiumPot2Norm = []
+tByzantiumPot2Norm = [xml.iP_Cyprus,xml.iP_Crete,xml.iP_Rhodes]
 tByzantiumDesire = []
 
 tFranceCore = []

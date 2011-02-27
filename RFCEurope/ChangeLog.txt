@@ -95,6 +95,10 @@ Changes for Beta 9:
 		Culture output depends on the province type, lower culture for Unstable and higher culture for Solid
 		Adjusted Merchant Republic number of cities penalty, should help the AI
 		Wheat added to Dijon
+		Changed the map area near Cyprus and southern Greece
+		Byzantium now gets Cyprus, Rhodes and Crete as solid provinces
+		Serfdom becomes available with Vassalage and Feudal Monarchy with Feudalism
+		Apprenticeship becomes available with Education
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
@@ -108,6 +112,7 @@ Changes for Beta 9:
 		Fixed: Crusaders "return" properly from a canceled Crusade (you can change religion again)
 		Fixed: Jerusalem is added to the Arabian UHV territory
 		Fixed: French UP now works
+		Fixed: Third Dutch UHV works now
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------

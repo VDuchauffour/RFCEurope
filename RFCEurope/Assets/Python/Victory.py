@@ -1126,5 +1126,5 @@ class Victory:
 
                 if ( pDutch.getUHV( 2 ) == -1 ):
                         if ( pDutch.getNumColonies() > 3 ):
-                                pDutch.setUHV( 2, 0 )
+                                pDutch.setUHV( 2, 1 )
                 
