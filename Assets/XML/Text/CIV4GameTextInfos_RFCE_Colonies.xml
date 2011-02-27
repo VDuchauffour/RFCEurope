@@ -189,7 +189,7 @@
 		<Spanish>Guinea</Spanish>
 		<Russian>Guinea</Russian></TEXT>	
 	<TEXT>
-		<Tag>PROJECT_VINLAND</Tag>
+		<Tag>TXT_KEY_PROJECT_VINLAND</Tag>
 		<English>Vinland</English>
 		<French>Vinland</French>
 		<German>Vinland</German>
@@ -502,6 +502,14 @@ The earliest companies were formed under Royal charters granted to the Virginia 
 		<English>[TAB]The 7100 islands of the Philippines in the western Pacific Ocean were originally inhabited by a mixture of indigenous peoples who traded with the Malay archipelago from 700AD, adopting influences from Hinduism and Buddhism. There was no unifying state in the area though groups of islands were governed by various Rajahs who increasingly came under the influence of Arab traders and missionaries and they largely adopted Islam by the end of the 15thC.. The first European contact came in 1521, when the Spanish explorer, Ferdinand Magellan, arrived at Samar and Leyte and claimed the islands for Spain. Colonization began in 1565 when Miguel Lopez de Legazpi arrived from Mexico and founded the first European settlement on Cebu.
 [TAB]In 1571 the Spanish occupied much of the Philippines and established Manila as the capital of the Spanish East Indies, naming their colony after King Philip II which was governed as a territory of the Vice-Royalty of New Spain from 1565 to 1821. The fragmented nature of the islands made them easy to occupy and political unification was achieved, with the exception of the Sultanate of Mindanao and remote highland villages in Luzon by the mid-17thC.. The Spanish introduced elements of Western civilization including the code of law, printing, silver coinage, the Gregorian calendar and Christianity, as well as food resources from Latin America like maize, pineapple, the potato, vanilla and chocolate.
 [TAB]The Manilla galleons, which linked the Philippines with Acapulco, loaded spices, textiles, and fruit in return for silver bullion, arms and colonists from Mexico. The Spanish military fought various indigenous revolts and incursions from the Dutch and English as Jesuit missionaries converted most of the lowland population and established public schooling in the Spanish language. The Philipppines was never profitable as a colony during the early years of Spanish rule and a long war against the Dutch and its own Muslim inhabitants nearly bankrupted the colonial treasury, though later attempts at establishing a plantation economy based on rice, coffee, fruit and other foodstuffs brought relative prosperity by the 19thC..</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_VINLAND_PEDIA</Tag>
+		<English>[TAB]No pedia yet.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

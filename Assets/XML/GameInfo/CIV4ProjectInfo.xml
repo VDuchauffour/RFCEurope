@@ -156,7 +156,7 @@
                         <bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>150</iCannotBeBuildAfterTurn>
 			<CreateSound/>
-			<MovieDefineTag>ART_DEF_MOVIE_GOLD_COAST</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VINLAND</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_GOLD_COAST</Type>

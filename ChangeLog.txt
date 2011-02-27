@@ -28,7 +28,6 @@ TODO:
 		Add food near Dijon
 		Nasty Dutch bug
 		Fix Dutch getting overwhelmed by German culture (even a city flips away form the player)
-MV1		General XML updates, removing unused XML parts
 		Faith point bonuses to be based on average faith, not total faith
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
 AR		Fix a couple province names, update a few provinces
@@ -52,6 +51,8 @@ MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		Add ethnic Russian Great Merchant
+MV1		Button for Vinland
+MV1		General XML updates, removing unused XML parts
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -70,8 +71,8 @@ Changes for Beta 9:
 		Some leaders prefer a certain religion
 		Some objects are translated
 		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
-				For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
-				For Asutria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)
+		For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
+		For Asutria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)
 		Updated the text for the Expansion civics
 		The English UP is now correctly listed as +2 hammer from Workshop
 		Workshops can now be build on Moorland (makes English UP more powerful)
@@ -82,6 +83,7 @@ Changes for Beta 9:
 
 	Art updates:
 		Byzantine Lancer has proper button
+		Some wonder "movies" (read pictures) have a much smaller size
 
 	Balance:
 		Germany get Lorraine as a "Solid" Province
@@ -100,7 +102,8 @@ Changes for Beta 9:
 		Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
 		Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
 		Fixed: A Firaxis bug, upon capturing an enemy city, units from the defending player can enter the city after the city has been captured
-		       added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
+		added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
+		Bug Fix: Jerusalem was missing from 2nd Arab UHV
 		Fixed: Crusade dets canceled if a Catholic captures Jerusalem during the voting
 		Fixed: Crusaders "return" properly from a canceled Crusade (you can change religion again)
 		Fixed: Jerusalem is added to the Arabian UHV territory

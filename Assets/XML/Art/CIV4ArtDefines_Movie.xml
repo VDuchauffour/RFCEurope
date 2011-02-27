@@ -329,6 +329,10 @@
 			<Path>Art/Movies/Wonders/Quebec.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VINLAND</Type>
+			<Path>Art/Movies/Wonders/Vinland.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ENCYCLOPEDIE</Type>
 			<Path>Art/Movies/Wonders/encyclopedie.dds</Path>
 		</MovieArtInfo>
