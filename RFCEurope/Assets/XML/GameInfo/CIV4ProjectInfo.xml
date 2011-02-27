@@ -130,7 +130,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Colonies/GoldCoast.dds</Button>
+			<Button>Art/Interface/Buttons/Colonies/Vinland.dds</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
