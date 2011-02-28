@@ -37,6 +37,7 @@ BeginTeam
 	ContactWithTeam=22
 	AtWar=3
 	AtWar=4
+	AtWar=19
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -61,6 +62,7 @@ BeginTeam
 	TeamID=4
 	ContactWithTeam=4
 	AtWar=0
+	AtWar=6
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -71,6 +73,7 @@ EndTeam
 BeginTeam
 	TeamID=6
 	ContactWithTeam=6
+	AtWar=4
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -136,6 +139,7 @@ EndTeam
 BeginTeam
 	TeamID=19
 	ContactWithTeam=19
+	AtWar=0
 	AtWar=2
 	RevealMap=0
 EndTeam
@@ -360,10 +364,10 @@ BeginPlayer
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
+	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MERCHANT_REPUBLIC
+	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
 	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
@@ -753,7 +757,7 @@ BeginPlayer
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_LIMITED_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MARKETS
+	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
 	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
@@ -899,7 +903,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3276
+	num signs written=3279
 	Randomize Resources=false
 EndMap
 
@@ -1987,6 +1991,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=69
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3111,10 +3116,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=0
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3479,9 +3481,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=0
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -3850,16 +3849,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=0
-	isNOfRiver
-	RiverWEDirection=3
-	BonusType=BONUS_SPICES
-	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=8,y=1
-	BonusType=BONUS_GOLD
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -4222,9 +4216,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=0
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -4590,8 +4581,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=0
-	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8420,7 +8410,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=31
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9512,7 +9501,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=23
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9617,7 +9605,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=41
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9930,7 +9917,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=27
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,
@@ -9970,6 +9956,7 @@ BeginPlot
 	x=24,y=32
 	RiverNSDirection=0
 	isWOfRiver
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
@@ -14159,7 +14146,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=50
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15040,7 +15026,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=54
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -15395,7 +15380,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=42
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=1,
@@ -18233,7 +18217,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=1
-	BonusType=BONUS_GEMS
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -18522,6 +18505,55 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
+	BeginUnit
+		UnitType=UNIT_AXEMAN, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_COUNTER
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CATHOLIC_MISSIONARY, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_MISSIONARY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_WORKER
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_SETTLE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER, UnitOwner=1
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_SETTLE
+	EndUnit
 	TeamReveal=1,
 EndPlot
 BeginPlot
@@ -18683,7 +18715,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=2
-	BonusType=BONUS_GOLD
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -19350,6 +19381,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=40
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=1,22,
@@ -35296,7 +35328,6 @@ EndPlot
 BeginPlot
 	x=80,y=32
 	BonusType=BONUS_DYE
-	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=0,
@@ -35305,6 +35336,7 @@ BeginPlot
 	x=80,y=33
 	RiverNSDirection=2
 	isWOfRiver
+	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 	TeamReveal=0,
@@ -38254,8 +38286,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=24
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
@@ -39165,21 +39196,21 @@ EndPlot
 BeginPlot
 	x=88,y=18
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=88,y=19
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_SALT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
 	x=88,y=20
-	BonusType=BONUS_SULPHUR
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -39649,8 +39680,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=19
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_PLAINS
+	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -39680,7 +39711,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
@@ -39693,6 +39723,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=25
+	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -40149,6 +40180,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=23
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
@@ -44628,8 +44660,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=26
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
@@ -45426,12 +45457,6 @@ EndSign
 BeginSign
 	plotX=72
 	plotY=15
-	playerType=-1
-	caption=88
-EndSign
-BeginSign
-	plotX=73
-	plotY=14
 	playerType=-1
 	caption=88
 EndSign
@@ -48818,12 +48843,6 @@ BeginSign
 	plotY=52
 	playerType=-1
 	caption=19
-EndSign
-BeginSign
-	plotX=72
-	plotY=10
-	playerType=-1
-	caption=111
 EndSign
 BeginSign
 	plotX=73
@@ -62644,12 +62663,6 @@ BeginSign
 	caption=83
 EndSign
 BeginSign
-	plotX=74
-	plotY=16
-	playerType=-1
-	caption=83
-EndSign
-BeginSign
 	plotX=75
 	plotY=15
 	playerType=-1
@@ -64580,4 +64593,40 @@ BeginSign
 	plotY=22
 	playerType=-1
 	caption=76
+EndSign
+BeginSign
+	plotX=67
+	plotY=17
+	playerType=-1
+	caption=87
+EndSign
+BeginSign
+	plotX=75
+	plotY=17
+	playerType=-1
+	caption=83
+EndSign
+BeginSign
+	plotX=72
+	plotY=14
+	playerType=-1
+	caption=88
+EndSign
+BeginSign
+	plotX=73
+	plotY=16
+	playerType=-1
+	caption=88
+EndSign
+BeginSign
+	plotX=72
+	plotY=13
+	playerType=-1
+	caption=88
+EndSign
+BeginSign
+	plotX=76
+	plotY=10
+	playerType=-1
+	caption=111
 EndSign

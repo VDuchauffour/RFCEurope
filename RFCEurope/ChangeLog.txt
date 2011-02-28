@@ -99,6 +99,10 @@ Changes for Beta 9:
 		Byzantium now gets Cyprus, Rhodes and Crete as solid provinces
 		Serfdom becomes available with Vassalage and Feudal Monarchy with Feudalism
 		Apprenticeship becomes available with Education
+		Added Literature, Classical Knowledge, Monument Building, Philosophy, Education
+		Many of the Indy cities start with one religion or another
+		Increased the strength of the Seljuks to 13 (they are Heavy Cavalry and many units get bonuses vs Heavy Cavalry)
+		Ottomans get 20 faith points on start, this should prevernt the AI from converting away from Islam (still not working)
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
@@ -106,13 +110,14 @@ Changes for Beta 9:
 		Fixed: Austrian spawn had tiles that were double-counted resulting in crashing when cities had to flip twice
 		Fixed: An autorun bug that deviated from Rhye's code, now we do exactly what he does, but I still don't understand everything about it
 		Fixed: A Firaxis bug, upon capturing an enemy city, units from the defending player can enter the city after the city has been captured
-		added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
-		Bug Fix: Jerusalem was missing from 2nd Arab UHV
+			added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
+		Fixed: Jerusalem was missing from 2nd Arab UHV
 		Fixed: Crusade dets canceled if a Catholic captures Jerusalem during the voting
 		Fixed: Crusaders "return" properly from a canceled Crusade (you can change religion again)
 		Fixed: Jerusalem is added to the Arabian UHV territory
 		Fixed: French UP now works
 		Fixed: Third Dutch UHV works now
+		Fixed: Seljuks were broken, they were not spread out geographically (there were some issues with the code)
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------

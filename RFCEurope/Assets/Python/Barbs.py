@@ -249,9 +249,9 @@ class Barbs:
 		#Seljuks 1067
 		if (iGameTurn>=xml.i1067AD and iGameTurn < xml.i1089AD):
 			#Middle East
-			self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,1,0,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,1,1,utils.outerInvasion,1)
-			self.spawnUnits( iBarbarian, (95,0),(99,15), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,1,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,3,0,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (95,0),(99,15), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,3,2,utils.outerInvasion,1)
 
 		#Mongols! 1250
 		if (iGameTurn >=xml.i1236AD and iGameTurn < xml.i1288AD):
@@ -269,7 +269,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (89,46),(99,56), xml.iMongolKeshik, 3 + iExtra*2, iGameTurn,4,0,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (89,46),(99,56), xml.iMongolKeshik, 3 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 			#Middle East
-			self.spawnUnits( iBarbarian, (94,15),(99,26), xml.iMongolKeshik, 3 + iExtra*2, iGameTurn,4,2,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (94,15),(99,26), xml.iMongolKeshik, 3 + iExtra*2, iGameTurn,3,2,utils.outerInvasion,1)
 			#self.spawnUnits( iBarbarian, (94,15),(99,26), xml.iMongolKeshik, 1 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,0)
 
 		#Mongols, the return! (aka Tamerlane)
@@ -282,58 +282,58 @@ class Barbs:
 		
 		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
         # 3Miro Barbarian and Independent city spawn and barbarian invasions go here. Check with original RFC file for details
-		self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, xml.iCrossbowman, 2) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
-		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2) #UnitOwner = 22 -> iIndy2 
-		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1)
-                self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2) # 3Miro add Lyon to flip to Burgundy
-                self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 1)
-		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent4, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent2, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1)
-		self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2)
-		self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1)
-		self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2)
-		self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1) 
-		self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1)
-		self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 1)
-		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1) #Start with Orthodoxy and a Harbor?
-		self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iBarbarian, lRiga, "Riga", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2)
-		self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iIndependent4, lKharkov, "Kharkov", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iCrossbowman, 1)
-		self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, xml.iCrossbowman, 1)
-		self.foundCity(iBarbarian, lKazan, "Bulgar", iGameTurn, 1, xml.iCrossbowman, 1)
-		self.foundCity(iIndependent3, lYaroslavl, "Yaroslavl", iGameTurn, 1, xml.iCrossbowman, 1)
-		self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, xml.iCrossbowman, 1)
-		self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, xml.iCrossbowman, 2)
-		self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2)
-		self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2)
-		self.foundCity(iIndependent2, lGroningen, "Groningen", iGameTurn, 1, xml.iCrossbowman, 2)
+		self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, xml.iCrossbowman, 2, -1) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
+		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1) #UnitOwner = 22 -> iIndy2 
+		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism)
+		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
+                self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism) # 3Miro add Lyon to flip to Burgundy
+                self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
+		self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent4, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
+		self.foundCity(iIndependent2, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism)
+		self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism)
+		self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism)
+		self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism)
+		self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1) 
+		self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1, -1)
+		self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
+		self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, xml.iArcher, 2, -1)
+		self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy) #Start with Orthodoxy and a Harbor?
+		self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1)
+		self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 2, -1)
+		self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism)
+		self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1)
+		self.foundCity(iBarbarian, lRiga, "Riga", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1)
+		self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism)
+		self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism)
+		self.foundCity(iIndependent4, lKharkov, "Kharkov", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism)
+		self.foundCity(iBarbarian, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iCrossbowman, 1, -1)
+		self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, xml.iCrossbowman, 1, -1)
+		self.foundCity(iBarbarian, lKazan, "Bulgar", iGameTurn, 1, xml.iCrossbowman, 1, -1)
+		self.foundCity(iIndependent3, lYaroslavl, "Yaroslavl", iGameTurn, 1, xml.iCrossbowman, 1, -1)
+		self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, xml.iCrossbowman, 1, -1)
+		self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, xml.iCrossbowman, 2, -1)
+		self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2, -1)
+		self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1)
+		self.foundCity(iIndependent2, lGroningen, "Groningen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism)
 
 
         def getCity(self, tCoords): #by LOQ
                 'Returns a city at coordinates tCoords.'
                 return CyGlobalContext().getMap().plot(tCoords[0], tCoords[1]).getPlotCity()
 
-        def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits):
+        def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits,iReligion):
                 if ((iTurn == lCity[2] + lCity[3]) and (lCity[3]<10)):
                         #print self.checkRegion(tUr)
                         bResult, lCity[3] = self.checkRegion(lCity)
@@ -345,6 +345,8 @@ class Barbs:
                                         self.getCity((lCity[0], lCity[1])).setPopulation(iPopulation)
                                 if (iNumUnits > 0):
                                         self.makeUnit(iUnitType, iCiv, (lCity[0], lCity[1]), iNumUnits, 0)
+                                if ( iReligion > -1 ):
+                                        self.getCity((lCity[0], lCity[1])).setHasReligion(iReligion, True, True, False)
                                 return True
                         if (bResult == False) and (lCity[3] == -1):
                                 return False
