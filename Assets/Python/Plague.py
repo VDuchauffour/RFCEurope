@@ -315,7 +315,7 @@ class Plague:
                                                                 if (self.getPlagueCountdown(iPlayer) > 2): #don't spread the last turns
                                                                         #print(" more than 2 turns ")
                                                                         if (self.isVulnerable(pCurrent.getOwner(), -100)):
-                                                                                print(" Vulnerable ")
+                                                                                #print(" Vulnerable ")
                                                                                 self.spreadPlague(pCurrent.getOwner())
                                                                                 self.infectCitiesNear(pCurrent.getOwner(), x, y)
                                                         else:

@@ -26,7 +26,7 @@ iIndependent2 = con.iIndependent2
 
 # initialise coordinates
 
-tToledo = (27,31)
+tToledo = (28,32)
 tAugsburg = (56,41)
 tSpainTL = (20,24)
 tSpainBR = (35,40)
@@ -148,6 +148,7 @@ class Religions:
 #####################################  
 
         def setup(self):
+                gc.getPlayer(con.iTurkey).changeFaith( 20 )
                 self.setSeed()
        	
         def checkTurn(self, iGameTurn):

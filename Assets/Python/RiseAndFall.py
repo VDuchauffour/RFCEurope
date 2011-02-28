@@ -2593,6 +2593,11 @@ class RiseAndFall:
                         teamAustria.setHasTech( xml.iCivilService, True, iCiv, False, False )
                         teamAustria.setHasTech( xml.iLateenSails, True, iCiv, False, False )
                         teamAustria.setHasTech( xml.iGuilds, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iLiterature, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iClassicalKnowledge, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iMonumentBuilding, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iPhilosophy, True, iCiv, False, False )
+                        teamAustria.setHasTech( xml.iEducation, True, iCiv, False, False )
 
                         
                 if ( iCiv == iTurkey ):

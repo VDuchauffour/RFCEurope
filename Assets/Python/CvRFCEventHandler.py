@@ -594,7 +594,7 @@ class CvRFCEventHandler:
 
 
         def onBeginPlayerTurn(self, argsList):        
-        	print( " in Begin Player Turn ")
+        	#print( " in Begin Player Turn ")
                 iGameTurn, iPlayer = argsList                
 
                 #print ("PLAYER", iPlayer)
@@ -664,7 +664,7 @@ class CvRFCEventHandler:
                         # Place any mercenaries that might be ready to be placed.
                         objMercenaryUtils.placeMercenaries(iPlayer)
                 #print ("PLAYER FINE", iPlayer)
-                print( " out Begin Player Turn ",iGameTurn, iPlayer )
+                #print( " out Begin Player Turn ",iGameTurn, iPlayer )
                 
                 # 3Miro: decrease the prosecution count
                 #iProsecutionCount = utils.getProsecutionCount( iPlayer )
