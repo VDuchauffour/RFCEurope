@@ -103,6 +103,9 @@ Changes for Beta 9:
 		Many of the Indy cities start with one religion or another
 		Increased the strength of the Seljuks to 13 (they are Heavy Cavalry and many units get bonuses vs Heavy Cavalry)
 		Ottomans get 20 faith points on start, this should prevernt the AI from converting away from Islam (still not working)
+		Moved Militarism to Farriers (Vassalagae was the only early expansion civic and it is not that good)
+		Moved Mercantilism to Paper (Banking is too early)
+		Increased Free Peasantry cottage growth bonus to 100%, otherwise the Improvements don't have enough time to grow inbetween Plagues
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
