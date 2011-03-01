@@ -16969,7 +16969,7 @@
 			<Type>BUILDING_ORTHODOX_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HAGIA_SOPHIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_HAGIA_SOPHIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORTHODOX_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAGIA_SOPHIA</ArtDefineTag>
