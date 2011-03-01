@@ -13,7 +13,7 @@
 			<Civilopedia>TXT_KEY_RELIGION_PROTESTANTISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_INDUSTRIAL_TECH</TechPrereq>
 			<FreeUnitClass>UNITCLASS_PROTESTANT_MISSIONARY</FreeUnitClass>
-			<iFreeUnits>1</iFreeUnits>
+			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>100</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
@@ -46,7 +46,7 @@
 			<Civilopedia>TXT_KEY_RELIGION_ISLAM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ISLAMIC_MISSIONARY</FreeUnitClass>
-			<iFreeUnits>1</iFreeUnits>
+			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>150</iSpreadFactor> <!-- Rhye -->
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
@@ -79,7 +79,7 @@
 			<Civilopedia>TXT_KEY_RELIGION_CATHOLICISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CATHOLIC_MISSIONARY</FreeUnitClass>
-			<iFreeUnits>1</iFreeUnits>
+			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>100</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
@@ -112,7 +112,7 @@
 			<Civilopedia>TXT_KEY_RELIGION_ORTHODOXY_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CLASSICAL_KNOWLEDGE</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ORTHODOX_MISSIONARY</FreeUnitClass>
-			<iFreeUnits>1</iFreeUnits>
+			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>100</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
@@ -156,12 +156,12 @@
 				<iHolyCityCommerce>0</iHolyCityCommerce>
 				<iHolyCityCommerce>0</iHolyCityCommerce>
 				<!-- Rhye -->
-				<iHolyCityCommerce>0</iHolyCityCommerce>
+				<iHolyCityCommerce>3</iHolyCityCommerce>
 			</HolyCityCommerces>
 			<StateReligionCommerces>
 				<iStateReligionCommerce>0</iStateReligionCommerce>
 				<iStateReligionCommerce>0</iStateReligionCommerce>
-				<iStateReligionCommerce>0</iStateReligionCommerce>
+				<iStateReligionCommerce>1</iStateReligionCommerce>
 			</StateReligionCommerces>
 			<Button>Art/Interface/Buttons/Religions/Jewish.dds</Button>
 			<!-- Rhye -->

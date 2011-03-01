@@ -12315,7 +12315,7 @@
 			<Type>BUILDING_PROTESTANT_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_CHURCH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROTESTANT_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTESTANT_TEMPLE</ArtDefineTag>
@@ -12503,7 +12503,7 @@
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_PROTESTANTISM</ReligionType>
-			<StateReligion>RELIGION_PROTESTANTISM</StateReligion>
+			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
@@ -12702,7 +12702,7 @@
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_PROTESTANTISM</ReligionType>
 			<StateReligion>RELIGION_PROTESTANTISM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -13264,7 +13264,7 @@
 			<ReligionType>RELIGION_PROTESTANTISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>RELIGION_PROTESTANTISM</GlobalReligionCommerce>
@@ -13273,7 +13273,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -13444,7 +13444,7 @@
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
 			<Type>BUILDING_ISLAMIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Description>
+			<Description>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -13806,7 +13806,7 @@
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ISLAMIC_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Description>
+			<Description>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -13815,7 +13815,7 @@
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -14194,8 +14194,8 @@
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
-			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<StateReligion>NONE</StateReligion>
+			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -14205,7 +14205,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -14384,7 +14384,7 @@
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>RELIGION_ISLAM</GlobalReligionCommerce>
@@ -14393,7 +14393,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -14565,7 +14565,7 @@
 			<Type>BUILDING_CATHOLIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_CHURCH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CATHOLIC_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CATHOLIC_TEMPLE</ArtDefineTag>
@@ -14754,7 +14754,7 @@
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -15131,7 +15131,7 @@
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -15672,8 +15672,8 @@
 			<Type>BUILDING_CATHOLIC_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_APOSTOLIC_PALACE</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_APOSTOLIC_PALACE_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CATHOLIC_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_APOSTOLIC_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_APOSTOLIC_PALACE</MovieDefineTag>
@@ -15681,7 +15681,7 @@
 			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>RELIGION_CATHOLICISM</GlobalReligionCommerce>
@@ -15690,7 +15690,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -15862,7 +15862,7 @@
 			<Type>BUILDING_ORTHODOX_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_CHURCH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORTHODOX_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORTHODOX_TEMPLE</ArtDefineTag>
@@ -16051,7 +16051,7 @@
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
 			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -16428,7 +16428,7 @@
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
 			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -16968,9 +16968,9 @@
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SHRINE</BuildingClass>
 			<Type>BUILDING_ORTHODOX_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_HAGIA_SOPHIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HAGIA_SOPHIA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HAGIA_SOPHIA_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ORTHODOX_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HAGIA_SOPHIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HAGIA_SOPHIA</MovieDefineTag>
@@ -16978,7 +16978,7 @@
 			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>RELIGION_ORTHODOXY</GlobalReligionCommerce>
@@ -16987,7 +16987,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_CLASSICAL_KNOWLEDGE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>

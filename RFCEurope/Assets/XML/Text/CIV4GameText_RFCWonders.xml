@@ -5,6 +5,104 @@
 <!-- Game Text - Unit Upgrades for Civilopedia -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Tag>
+		<English>St. Peter's Basilica</English>
+		<French>Basilique St Pierre</French>
+		<German>Petersdom</German>
+		<Italian>Basilica di San Pietro</Italian>
+		<Spanish>Basílica de San Pedro</Spanish>
+		<Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Tag>
+		<English>[TAB]St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:2]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Tag>
+		<English>The Hagia Sophia</English>
+		<French>
+			<Text>Sainte-Sophie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hagia Sophia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santa Sofia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santa Sof&#237;a:Santas Sof&#237;as</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Tag>
+		<English>[TAB]The Hagia Sophia, or "Church of the Holy Wisdom," was constructed in 530 AD as a Greek Orthodox church. Standing in Istanbul (originally Constantinople), Turkey, it is a beautiful and ornate structure, built of stone and marble, and topped by a golden dome measuring over 100 feet in diameter. An extremely difficult engineering challenge for the time, the dome has collapsed several times during its existence. Four graceful towers stand at the corners of the building. [PARAGRAPH:2]The interior of the Hagia Sophia is a marvelous space of columns and arches extending up to the dome, which appears almost to float atop the building. The interior was sheathed in colored marble and golden mosaics depicting biblical scenes and images of Christian saints. [PARAGRAPH:2]In 1453 Constantinople was captured by the Ottoman Turks, and the Hagia Sophia was converted into a mosque. Human images are not welcome in mosques, and many of the mosaics were covered with plaster. [PARAGRAPH:2]In 1934, Turkish President Kemal Ataturk turned the building into a museum. In recent years some restoration work has been done on the Hagia Sophia, and a few of the mosaics have been uncovered. Despite the ravages of time, the Hagia Sophia remains universally acknowledged as one of the most beautiful buildings in the world.</English>
+		<French>[TAB]La basilique Sainte-Sophie, ou "Eglise de la Sagesse Divine", a &#233;t&#233; construite en 530 ap. J.-C. pour servir d'&#233;glise grecque orthodoxe. Situ&#233;e &#224; Istanbul (l'ancienne Constantinople) en Turquie, il s'agit d'un &#233;difice magnifique, richement orn&#233;, construit en pierres et en marbre et surmont&#233; d'une coupole dor&#233;e mesurant 31 m de diam&#232;tre. Celle-ci, qui repr&#233;sentait &#224; l'&#233;poque un d&#233;fi d'ing&#233;nierie extr&#234;mement complexe, s'est effondr&#233;e &#224; plusieurs reprises au cours de son existence. Quatre gracieuses tours sont &#233;rig&#233;es aux angles de l'&#233;difice. [PARAGRAPH:2]Dans la basilique s'&#233;tend un splendide espace de colonnades et d'arches s'&#233;levant jusqu'&#224; la coupole, qui semble presque flotter en haut du b&#226;timent. L'int&#233;rieur est recouvert de marbre de couleur et de mosa&#239;ques dor&#233;es repr&#233;sentant des sc&#232;nes bibliques et des images de saints chr&#233;tiens. [PARAGRAPH:2]En 1453, les Ottomans turcs s'empar&#232;rent de Constantinople et la basilique fut convertie en mosqu&#233;e. Les repr&#233;sentations humaines n'&#233;tant pas autoris&#233;es dans les mosqu&#233;es, de nombreuses mosa&#239;ques furent recouvertes de pl&#226;tre. [PARAGRAPH:2]En 1934, le pr&#233;sident turc Kemal Atat&#252;rk transforma l'&#233;difice en mus&#233;e. Au cours des ann&#233;es pass&#233;es, la basilique Sainte-Sophie fit l'objet de travaux de restauration et certaines mosa&#239;ques furent nettoy&#233;es du pl&#226;tre qui les recouvrait. En d&#233;pit des ravages du temps, elle est aujourd'hui universellement reconnue comme l'un des plus beaux &#233;difices au monde.</French>
+		<German>[TAB]Die Hagia Sophia, oder "Kirche der heiligen Weisheit", wurde 530 nach Christus als griechisch-orthodoxe Kirche gebaut. Das kunstvolle Marmorgeb&#228;ude im t&#252;rkischen Istanbul (dem ehemaligen Konstantinopel) wird von einer 56 Meter hohen Kuppel gekr&#246;nt. Die Kuppel (seinerzeit ein technisches Wunderwerk) ist seit ihrem Bau bereits mehrmals eingest&#252;rzt. An den Ecken des Geb&#228;udes stehen vier Minarette. [PARAGRAPH:2]Das Innere der Hagia Sophia besteht aus S&#228;ulen und B&#246;gen, die sich bis zur scheinbar schwebenden Kuppel erstrecken. Die W&#228;nde zierten Marmor- und Goldmosaike biblischer Szenen und christlicher Heiliger. [PARAGRAPH:2]Seit die Ottomanen Konstantinopel im Jahr 1453 eroberten, ist die Hagia Sophia eine Moschee. In der Folgezeit wurden die Mosaike innerhalb der Kirche wegen des Bilderverbotes im Islam unter Putz gelegt. [PARAGRAPH:2]1934 erkl&#228;rte der t&#252;rkische Pr&#228;sident Kemal Atat&#252;rk das Geb&#228;ude zum Museum. In den letzten Jahren wurden im Rahmen der Restaurierung der Hagia Sophia einige Mosaike freigelegt. Trotz der Verw&#252;stungen im Laufe der Jahrhunderte gilt die Hagia Sophia bis heute als eines der sch&#246;nsten Geb&#228;ude der Welt.</German>
+		<Italian>[TAB]La basilica di Santa Sofia o "chiesa della sacra saggezza" fu eretta nel 530 d. C. come chiesa Greca Ortodossa e si trova in Turchia, nell'attuale Istanbul (un tempo Costantinopoli): si tratta di una struttura meravigliosa e decorata finemente, realizzata in marmo e pietra, in cima una cupola d'oro di 30 metri di diametro. Per l'epoca, fu un'opera di ingegneria senza precedenti anche se la cupola croll&#242; diverse volte durante la sua esistenza. Ai quattro angoli della basilica si trovano altrettante raffinate torri. [PARAGRAPH:2]L'interno della basilica di Santa Sofia &#232; uno spazio occupato da archi e colonne che si estendono fino alla cupola che sembra quasi fluttuare in cima all'edificio. Gli interni sono rivestiti in marmo e mosaici dorati che descrivono scene bibliche e immagini di santi Cristiani. [PARAGRAPH:2]Nel 1453, Costantinopoli venne conquistata dai Turchi Ottomani e la basilica di Santa Sofia venne convertita in una moschea: l'iconografia umana non era pi&#249; gradita e i mosaici vennero ricoperti con intonaci. [PARAGRAPH:2]Nel 1934, il presidente Turco Kemal Ataturk trasform&#242; il palazzo in un museo: negli ultimi anni, la basilica ha ricevuto diverse opere di restauro e sono stati scoperti diversi mosaici. Malgrado il passare del tempo, Santa Sofia &#232; universalmente noto come uno degli edifici pi&#249; affascinanti del mondo.</Italian>
+		<Spanish>[TAB]Santa Sof&#237;a, o la "iglesia de la Santa Sabidur&#237;a", fue construida en el 530 d. C. como iglesia de los ortodoxos griegos. Levantada en Estambul (antes Constantinopla), Turqu&#237;a, es un edificio bello y decorado construido de m&#225;rmol y piedra y coronado por una c&#250;pula de oro que mide unos treinta metros de di&#225;metro. La c&#250;pula, un reto muy dif&#237;cil para la arquitectura de la &#233;poca, se ha derrumbado varias veces durante su vida. Cuatro torres esbeltas se levantan en cada esquina del edificio. [PARAGRAPH:2]El interior de Santa Sof&#237;a es un espacio maravilloso de columnas y arcos que se extienden hasta la b&#243;veda, ofreciendo la impresi&#243;n de flotar encima del edificio. El interior est&#225; revestido de m&#225;rmol de colores y mosaicos de oro que representan escenas e im&#225;genes b&#237;blicas de los santos cristianos. [PARAGRAPH:2]En 1453, Constantinopla fue capturada por los turcos otomanos, y Santa Sof&#237;a se convirti&#243; en una mezquita. Las representaciones humanas no son bien vistas en las mezquitas y muchos de los mosaicos fueron cubiertos con yeso. [PARAGRAPH:2]En 1934, el presidente turco Kemal Ataturk convirti&#243; el edificio en un museo. Hace pocos a&#241;os se llevaron a cabo algunas restauraciones en Santa Sof&#237;a y se recuperaron unos cuantos mosaicos. Pese a los estragos del tiempo, sigue siendo reconocida universalmente como uno de los edificios m&#225;s bellos del mundo.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE</Tag>
+		<English>All Saints' Church</English>
+		<French>Eglise de Tous les Saints</French>
+		<German>Allerheiligenkirche</German>
+		<Italian>La Chiesa di tutta i santi</Italian>
+		<Spanish>Iglesia de todas las santos</Spanish>
+		<Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE_PEDIA</Tag>
+		<English>[TAB]All Saints' Church, commonly referred to as Schlosskirche, meaning "Castle Church" - to distinguish it from the "town church", the Stadtkirche of St. Mary - and sometimes known as the Reformation Memorial Church, is a Lutheran church in Lutherstadt Wittenberg, Germany. It has been called "the most famous building in Wittenberg", as the site where The Ninety-Five Theses were posted by Martin Luther on October 31, 1517, the act that has been called the start of the Protestant Reformation.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
+		<English>The Masjid al-Haram</English>
+		<French>
+			<Text>Al-Masjid al-Haraam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Masjid al-Haram</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Il Masjid al-Haram</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mezquita al-Haram</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Tag>
+		<English>[TAB]The Masjid al-Haram is an Islamic mosque in the center of the holy city of Mecca, which is located in western Saudi Arabia. The mosque contains the Kaaba, an ancient cube-shaped building which is said to have been built by the Prophet Ibrahim (Abraham) and his son, Ishmael, at the orders of Allah, and which is believed to be the holiest place on Earth. The Kaaba in turn houses the "Black Stone," which it is said has fallen from heaven and has the power to cleanse worshippers of their sins. [PARAGRAPH:2]The Kaaba has always been revered as a holy place. Before the rise of Islam, the Kaaba was filled with idols, and Arabs from miles around came to worship there. Upon his return from exile, the Prophet Muhammad smashed the idols and rededicated the mosque to Allah and Islam. It has remained an Islamic holy place ever since and non-Muslims are forbidden to enter Mecca. [PARAGRAPH:2]The Masjid al-Haram is the focal point of the "hajj," a religious pilgrimage to Mecca required of all able-bodied Muslims (at least according to the Sunni sect). Every year during the holy month of Dhu'l-Hijjah, upwards of three million people visit the holy city and the most holy mosque within, thus fulfilling one of the "five pillars of Islam." The mosque has been enlarged and modernized to handle the extraordinary influx of faithful, but both the city and the mosque can barely handle the traffic. [PARAGRAPH:2]The mosque is in the form of a huge sprawling building surrounding a mighty courtyard with the Kaaba in the center. The building is extraordinarily beautiful and constructed of marble and porcelain and gold and bedecked with graceful minarets (towers). The interior is a wonder of columned halls filled with tapestries and other marvelous decorations. The courtyard itself is paved with marble. Truly a magnificent place of worship, Masjid al-Haram is said by some to surpass the Taj Mahal in glory and wonder.</English>
+		<French>[TAB]La mosqu&#233;e al-Masjid al-Haraam est une mosqu&#233;e islamique situ&#233;e au centre de la ville sainte de La Mecque qui se trouve dans l'ouest de l'Arabie saoudite. La mosqu&#233;e comporte la Kaba, un &#233;difice cubique antique que l'on dit construit par le proph&#232;te Abraham et son fils Isma&#235;l sur les ordres de Allah, et qui est consid&#233;r&#233; comme le lieu le plus saint du monde. La Kaba renferme la "Pierre noire", qui serait tomb&#233;e du ciel et qui aurait le pouvoir de purifier les fid&#232;les de leurs p&#233;ch&#233;s. [PARAGRAPH:2]La Kaba a toujours &#233;t&#233; v&#233;n&#233;r&#233;e comme un lieu saint. Avant l'av&#232;nement de l'Islam, la Kaba &#233;tait consacr&#233;e &#224; de nombreuses idoles et les Arabes des alentours faisaient des kilom&#232;tres pour venir les v&#233;n&#233;rer. A son retour d'exil, le proph&#232;te Mahomet an&#233;antit les idoles et consacra &#224; nouveau la mosqu&#233;e &#224; Allah et &#224; l'Islam. Elle est depuis toujours rest&#233;e un lieu saint et les non-musulmans ont interdiction d'entrer &#224; La Mecque. [PARAGRAPH:2]La mosqu&#233;e al-Masjid al-Haraam est le point de convergence du "hadjdj", le p&#232;lerinage religieux &#224; La Mecque que tous les musulmans en bonne sant&#233; doivent faire (au moins une fois selon les Sunnites). Chaque ann&#233;e, durant le mois saint de Dhu l-hidjdja, plus de trois millions de fid&#232;les visitent la ville sainte et la Mosqu&#233;e tr&#232;s sainte qui s'y trouve, accomplissant ainsi l'un des "cinq piliers de l'Islam". La mosqu&#233;e a &#233;t&#233; &#233;largie et modernis&#233;e pour faire face &#224; l'extraordinaire affluence de fid&#232;les, mais ni la ville, ni la mosqu&#233;e n'y parviennent v&#233;ritablement. [PARAGRAPH:2]La mosqu&#233;e a la forme d'un immense &#233;difice qui s'&#233;tend sur un vaste territoire et surmonte une imposante cour au centre de laquelle se trouve la Kaba. L'&#233;difice est somptueux, construit en marbre, or et porcelaine et orn&#233; de gracieux minarets (tours). L'int&#233;rieur est une merveille de pi&#232;ces &#224; colonnades qui regorgent de tapisseries et autres sublimes d&#233;corations. La cour elle-m&#234;me est pav&#233;e de marbre. La mosqu&#233;e al-Masjid al-Haraam est un lieu de culte magnifique ; certains disent m&#234;me qu'elle d&#233;passe le Taj Mahal en splendeur et en merveille.</French>
+		<German>[TAB]Die Masjid al-Haram ist eine Moschee in der heiligen Stadt Mekka im Westen Saudi-Arabiens. In der Moschee befindet sich die Kaaba. Im Islam gelten Abraham und Ismael als die urspr&#252;nglichen Erbauer der Kaaba. Nicht zuletzt deshalb ist diese der heiligste Ort des Islam. In die s&#252;dlichen Ecke sind die Bruchst&#252;cke des "schwarzen Steins" eingemauert. [PARAGRAPH:2]Bereits in vormuslimischer Zeit wurde die Kaaba von arabischen St&#228;mmen als Heiligtum verehrt. Seit 632 ist sie allerdings ein rein islamisches Heiligtum. Aus diesem Grund d&#252;rfen Mekka ausschlie&#223;lich Muslime betreten. [PARAGRAPH:2]Die Masjid al-Haram ist das Ziel des "Haddsch", einer islamischen Pilgerfahrt nach Mekka. Diese z&#228;hlt zu den f&#252;nf S&#228;ulen des Islam und findet Jahr f&#252;r Jahr im Monat Dhu al-hijja statt. Jeder freie Muslim, der es sich leisten kann, ist verpflichtet, einmal im Leben nach Mekka zu pilgern. Nicht zuletzt deshalb str&#246;men j&#228;hrlich mehr als drei Millionen Menschen in die heilige Stadt. Die Moschee selbst wurde inzwischen vergr&#246;&#223;ert und modernisiert, um dem Ansturm der Gl&#228;ubigen standzuhalten. Trotzdem k&#246;nnen Stadt und Moschee die Pilgermassen kaum noch bew&#228;ltigen. [PARAGRAPH:2]Die Moschee ist ein langes Geb&#228;ude mit einem riesigen Innenhof, in dessen Mitte sich die Kabaa befindet. Das Geb&#228;ude selbst wurde aus Marmor, Porzellan und Gold errichtet und mit Minaretten verziert. Der Innenhof ist mit Marmor verkleidet. Die Masjid al-Haram ist eine pr&#228;chtige Gebetsst&#228;tte, die selbst den Glanz des Taj Mahal &#252;bertreffen soll.</German>
+		<Italian>[TAB]La Masjid al-Haram &#232; una moschea Islamica situata al centro della Mecca, che si trova nell'Arabia Saudita occidentale. La moschea contiene la Kaaba, un antico edificio a forma di cubo che si dice si stato costruito dal profeta Abramo e da suo figlio Ismaele su ordine di Allah, ed &#232; considerato uno dei luoghi pi&#249; sacri del mondo. La Kaaba ospita la "pietra nera" che si dice sia caduta dal cielo e sia in grado di purificare i fedeli dal peccato. [PARAGRAPH:2]La Kaaba &#232; sempre stata considerata un luogo sacro: prima dell'avvento dell'Islam, la Kaaba era piena di idoli e gli Arabi venivano anche da molto lontano per adorarli. Al suo ritorno dall'esilio, il profeta Maometto distrusse gli idoli e dedic&#242; il luogo ad Allah e all'Islam. &#200; il luogo di culto pi&#249; antico della religione Islamica e ai fedeli di altre dottrine &#232; vietato l'ingresso alla Mecca. [PARAGRAPH:2]Il  Masjid al-Haram &#232; il centro dell'"hajj", il pellegrinaggio che ogni Musulmano deve fare almeno una volta nella vita (almeno stando a quanto dice la setta Sunnita). Ogni anno, durante il mese sacro del Dhu'l-Hijjah, circa tre milioni di persone visitano la citt&#224; e la pi&#249; sacra delle moschee al suo interno, realizzando il quinto dei "pilastri dell'Islam". La moschea &#232; stata ingrandita e modernizzata per poter affrontare lo straordinario afflusso di fedeli, ma sia la citt&#224; che l'edificio sono a malapena in grado di gestire la situazione. [PARAGRAPH:2]La moschea &#232; un edificio molto ampio che circonda un grande cortile nel mezzo del quale si trova la Kaaba. L'edificio &#232; di una bellezza straordinaria, realizzato in marmo e porcellana, ornato con minareti rifiniti in oro. All'interno si trovano dei colonnati suggestivi ricchi di arazzi e altre meravigliose decorazioni. Il cortile stesso &#232; pavimentato in marmo: il Masjid al-Haram &#232; un luogo di culto assolutamente sensazionale e alcuni dicono che superi addirittura la gloria e la bellezza del Taj Mahal.</Italian>
+		<Spanish>[TAB]La Masjid al-Haram es una mezquita isl&#225;mica enclavada en el centro de la ciudad santa de La Meca, situada a su vez en la regi&#243;n occidental de Arabia Saudita. La mezquita contiene la Kaaba, un antiguo edificio de forma c&#250;bica cuya construcci&#243;n se atribuye al profeta Ibrahim (Abraham) y a su hijo Ismael, por orden de Al&#225;, y que se considera el lugar m&#225;s sagrado de la tierra. A su vez, la Kaaba contiene la "piedra negra" que, seg&#250;n se dice, cay&#243; de los cielos y posee el poder de purificar a los pecadores. [PARAGRAPH:2]La Kaaba siempre ha sido objeto de reverencia. Antes de la aparici&#243;n del Islam, estaba llena de &#237;dolos, y los &#225;rabes acud&#237;an desde muchos kil&#243;metros para orar. Tras su regreso del exilio, el profeta Mahoma destruy&#243; los &#237;dolos y consagr&#243; la mezquita a Al&#225; y al Islam. Desde entonces se ha convertido en un lugar sagrado para los musulmanes, y quienes no profesan la religi&#243;n tienen prohibido el acceso a La Meca. [PARAGRAPH:2]La Masjid al-Haram es el punto focal de la "hajj," la peregrinaci&#243;n religiosa a La Meca que es preceptiva para todos los musulmanes en buen estado de salud (al menos en el seno de la secta sun&#237;). Todos los a&#241;os, en el mes sagrado de Dhu'l-Hijjah, hasta tres millones de personas visitan la ciudad santa y la m&#225;s santa mezquita de su interior, con lo que cumplen con uno de los "cinco pilares del Islam." La mezquita ha sido reformada y modernizada para poder hacer frente a la extraordinaria afluencia de fieles, pero lo cierto es que tanto la ciudad como la mezquita solo lo consiguen a duras penas. [PARAGRAPH:2]La mezquita tiene la forma de un enorme edificio construido alrededor de un inmenso patio en cuyo centro est&#225; la Kaaba. El edificio, construido de m&#225;rmol, porcelana y oro y coronado por gr&#225;ciles minaretes, es extraordinariamente hermoso. El interior es una maravillosa sala de columnas, llena de tapices y otras decoraciones de gran belleza. El patio est&#225; pavimentado de m&#225;rmol. Un maravilloso lugar de culto, la Masjid al-Haram es para algunos superior al Taj Mahal en gloria y maravilla.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Tag>
 		<English>[TAB]A triumphal arch is a structure in the shape of a monumental archway, usually built to celebrate a victory in war. The arch is invariably a free-standing structure, quite separate from city gates or walls. In its simplest form a triumphal arch consists of two pillars connected by an arch, crowned with a superstructure or attic on which a statue or commemorative inscriptions might be mounted. More elaborate triumphal arches have flanking subsidiary archways, typically a pair. Famous arches include the Arch of Titus in Rome and the Arc de Triomphe in Paris.</English>
 		<French>[TAB]Un arc de triomphe est un ouvrage en forme d'arche monumentale, g&#233;n&#233;ralement construit pour c&#233;l&#233;brer une victoire &#224; la guerre. L'arc est toujours une structure ind&#233;pendante, &#224; l'&#233;cart des portes et des remparts de la ville. Dans sa forme la plus simple, l'arc de triomphe se compose de deux piliers reli&#233;s par un arc et surmont&#233;s d'un entablement ou d'un attique sur lequel peuvent &#234;tre ajout&#233;es une statue ou des inscriptions comm&#233;moratives. Les arcs de triomphe plus &#233;labor&#233;s comportent des arches secondaires - g&#233;n&#233;ralement au nombre de deux - sur les c&#244;t&#233;s. Parmi les arcs de triomphes les plus c&#233;l&#232;bres, on trouve l'Arc de Titus &#224; Rome et l'Arc de triomphe de l'Etoile &#224; Paris.</French>
@@ -18,7 +116,18 @@
 		<English>Marco Polo's Embassy</English>
 		<French>Embassade de Marco Polo</French>
 		<German>Marco Polos Botschaft</German>
-		<Italian/><Spanish/><Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian></TEXT>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Tag>
+		<English>[TAB]Marco Polo (1254-1324) was a Venetian trader and explorer who, together with his father Niccolo and his uncle Maffeo, was one of the first Westerners to travel the Silk Road to China (which he called Cathay) and visited the Great Khan of the Mongol Empire, Kublai Khan (grandson of Genghis Khan). His travels are written down in Il Milione ("The Million" or The Travels of Marco Polo).[PARAGRAPH:2]Although the Polos were by no means the first Europeans to reach China overland, thanks to Marco's book their trip was the first to be widely known, and the best-documented until then. Marco Polo's description of the Far East and its riches inspired Christopher Columbus's decision to try to reach those lands by a western route. A heavily annotated copy of Polo's book was among the belongings of Columbus.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER</Tag>
 		<English>The Leaning Tower</English>
@@ -497,14 +606,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_APOSTOLIC_PALACE</Tag>
-		<English>[TAB]St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:2]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM</Tag>
 		<English>Stephansdom</English>
 		<French>Cath&#233;drale Saint-&#201;tienne de Vienne</French>
@@ -672,14 +773,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE_PEDIA</Tag>
-		<English>[TAB]All Saints' Church, commonly referred to as Schlosskirche, meaning "Castle Church" - to distinguish it from the "town church", the Stadtkirche of St. Mary - and sometimes known as the Reformation Memorial Church, is a Lutheran church in Lutherstadt Wittenberg, Germany. It has been called "the most famous building in Wittenberg", as the site where The Ninety-Five Theses were posted by Martin Luther on October 31, 1517, the act that has been called the start of the Protestant Reformation.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 	<Tag>TXT_KEY_BUILDING_GOLDEN_BULL_PEDIA</Tag>
 		<English>[TAB]The Golden Bull of 1222 was a golden bull, or edict, issued by King Andrew II of Hungary. The law established the rights of Hungary's noblemen, including the right to disobey the King when he acted contrary to law (jus resistendi). The nobles and the church were freed from all taxes and could not be forced to go to war outside of Hungary and were not obligated to finance it. This was also a historically important document because it set down the principles of equality for all of the nation's nobility. Seven copies of the edict were created, one for each of the following institutions: to the Pope, to the Knights Templar, to the Knights Hospitaller, to the Hungarian king itself, to the chapters of Esztergom and Kalocsa and to the palatine.[PARAGRAPH:2]The charter's creation was influenced by the emergence of a nobility middle class, unusual in the nation's feudal system. As a regular gesture of generosity, King Andrew often donated property to particularly faithful servants, who thereafter gained new economic and class power. With the nation's class system and economic state changing, King Andrew found himself coerced into decreeing the Golden Bull of 1222 to calm the waters between hereditary nobles and the budding middle class nobility.[PARAGRAPH:2]The Golden Bull is often compared to the Magna Carta; the Bull was the first constitutional document of the nation of Hungary, while the Magna Carta was the first constitutional charter of the nation of England.</English>
 		<French>.</French>
@@ -730,14 +823,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_ACADEMY_PEDIA</Tag>
 		<English>[TAB]In Florence, the Medici established the Accademia di Belle Arti Firenze in 1563, the first of the more formally organised art academies that gradually displaced the medieval artists' guilds, usually known as the Guild of Saint Luke, as the bodies responsible for training and often regulating artists, a change with great implications for the development of art, leading to the styles known as Academic art. The private academy set up later in the century in Bologna by the Carracci brothers was also extremely influential, and with the Accademia di San Luca of Rome (founded 1593) helped to confirm the use of the term for these institutions.[PARAGRAPH:2]The Acad&#233;mie de peinture et de sculpture in Paris, established by the monarchy in 1648 (later renamed) was the most significant of the artistic academies, running the famous Salon exhibitions from 1725. Artistic academies were established all over Europe by the end of the 18th century, and many, like the Royal Academy in London (founded 1768) still run art schools and hold large exhibitions, although their influence on taste greatly declined from the late 19th century.[PARAGRAPH:2]A fundamental feature of academic discipline in the artistic academies was regular practice in making accurate drawings from antiquities, or from casts of antiquities, on the one hand, and on the other, in deriving inspiration from the other fount, the human form. Students assembled in sessions drawing the draped and undraped human form, and such drawings, which survive in the tens of thousands from the 17th through the 19th century, are termed acad&#233;mies in French.[PARAGRAPH:2]Similar institutions were often established for other arts; Paris had the Acad&#233;mie Royale de Musique from 1669, and the Acad&#233;mie d'architecture from 1671.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Tag>
-		<English>[TAB]Marco Polo (1254-1324) was a Venetian trader and explorer who, together with his father Niccolo and his uncle Maffeo, was one of the first Westerners to travel the Silk Road to China (which he called Cathay) and visited the Great Khan of the Mongol Empire, Kublai Khan (grandson of Genghis Khan). His travels are written down in Il Milione ("The Million" or The Travels of Marco Polo).[PARAGRAPH:2]Although the Polos were by no means the first Europeans to reach China overland, thanks to Marco's book their trip was the first to be widely known, and the best-documented until then. Marco Polo's description of the Far East and its riches inspired Christopher Columbus's decision to try to reach those lands by a western route. A heavily annotated copy of Polo's book was among the belongings of Columbus.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
