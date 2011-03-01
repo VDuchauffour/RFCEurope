@@ -65,8 +65,8 @@ Changes for Beta 9:
 		Added new Colony: Vinland
 		Colonies become obsolete after some date
 		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
-		Changed Norse UHV 1: now we have to build Vinland colony
-		Cathedrals now really need state religion
+		Changed Norse UHV 1: now you have to build Vinland colony
+		Cathedrals now realy need state religion
 		
 	Map and province changes:
 		A few small fixes to the map after the updates of Beta 8
@@ -96,6 +96,7 @@ Changes for Beta 9:
 		Byzantine Lancer has proper button
 		Some wonder "movies" (read pictures) have a much smaller size
 		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
+		Hungarian Pikeman has the proper button
 
 	Balance:
 		Added direct stability bonus for Golden Age, before it was only implicid via the boost of Economy
@@ -120,6 +121,7 @@ Changes for Beta 9:
 		Defensive Crusades now "cost" less Faith Points, strength is also adjusted for the new buildings/saints giving more faith (this should have been done some time ago)
 		Small boost for the defensive Crusade when you have less than 6 cities (i.e. you need a bit more help)
 		Added more starting techs to Lithuania
+		Judaism now also adds culture like all the other religions
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
@@ -136,7 +138,7 @@ Changes for Beta 9:
 		Fixed: Third Dutch UHV works now
 		Fixed: Seljuks were broken, they were not spread out geographically (there were some issues with the code)
 		Fixed: the starting techs for Portugal skipped Lateen Sails and went to Carthography directly, now there is no break
-		Judaism now also adds culture like all the other religions
+		Fixed: TXT_KEY_GREAT_PERSON_PETER_II
 				
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
