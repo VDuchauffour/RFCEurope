@@ -22,30 +22,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Tag>
-		<English>The Hagia Sophia</English>
-		<French>
-			<Text>Sainte-Sophie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Hagia Sophia</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Santa Sofia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Santa Sof&#237;a:Santas Sof&#237;as</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Tag>
 		<English>[TAB]The Hagia Sophia, or "Church of the Holy Wisdom," was constructed in 530 AD as a Greek Orthodox church. Standing in Istanbul (originally Constantinople), Turkey, it is a beautiful and ornate structure, built of stone and marble, and topped by a golden dome measuring over 100 feet in diameter. An extremely difficult engineering challenge for the time, the dome has collapsed several times during its existence. Four graceful towers stand at the corners of the building. [PARAGRAPH:2]The interior of the Hagia Sophia is a marvelous space of columns and arches extending up to the dome, which appears almost to float atop the building. The interior was sheathed in colored marble and golden mosaics depicting biblical scenes and images of Christian saints. [PARAGRAPH:2]In 1453 Constantinople was captured by the Ottoman Turks, and the Hagia Sophia was converted into a mosque. Human images are not welcome in mosques, and many of the mosaics were covered with plaster. [PARAGRAPH:2]In 1934, Turkish President Kemal Ataturk turned the building into a museum. In recent years some restoration work has been done on the Hagia Sophia, and a few of the mosaics have been uncovered. Despite the ravages of time, the Hagia Sophia remains universally acknowledged as one of the most beautiful buildings in the world.</English>
 		<French>[TAB]La basilique Sainte-Sophie, ou "Eglise de la Sagesse Divine", a &#233;t&#233; construite en 530 ap. J.-C. pour servir d'&#233;glise grecque orthodoxe. Situ&#233;e &#224; Istanbul (l'ancienne Constantinople) en Turquie, il s'agit d'un &#233;difice magnifique, richement orn&#233;, construit en pierres et en marbre et surmont&#233; d'une coupole dor&#233;e mesurant 31 m de diam&#232;tre. Celle-ci, qui repr&#233;sentait &#224; l'&#233;poque un d&#233;fi d'ing&#233;nierie extr&#234;mement complexe, s'est effondr&#233;e &#224; plusieurs reprises au cours de son existence. Quatre gracieuses tours sont &#233;rig&#233;es aux angles de l'&#233;difice. [PARAGRAPH:2]Dans la basilique s'&#233;tend un splendide espace de colonnades et d'arches s'&#233;levant jusqu'&#224; la coupole, qui semble presque flotter en haut du b&#226;timent. L'int&#233;rieur est recouvert de marbre de couleur et de mosa&#239;ques dor&#233;es repr&#233;sentant des sc&#232;nes bibliques et des images de saints chr&#233;tiens. [PARAGRAPH:2]En 1453, les Ottomans turcs s'empar&#232;rent de Constantinople et la basilique fut convertie en mosqu&#233;e. Les repr&#233;sentations humaines n'&#233;tant pas autoris&#233;es dans les mosqu&#233;es, de nombreuses mosa&#239;ques furent recouvertes de pl&#226;tre. [PARAGRAPH:2]En 1934, le pr&#233;sident turc Kemal Atat&#252;rk transforma l'&#233;difice en mus&#233;e. Au cours des ann&#233;es pass&#233;es, la basilique Sainte-Sophie fit l'objet de travaux de restauration et certaines mosa&#239;ques furent nettoy&#233;es du pl&#226;tre qui les recouvrait. En d&#233;pit des ravages du temps, elle est aujourd'hui universellement reconnue comme l'un des plus beaux &#233;difices au monde.</French>
@@ -69,30 +45,6 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
-		<English>The Masjid al-Haram</English>
-		<French>
-			<Text>Al-Masjid al-Haraam</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Masjid al-Haram</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Il Masjid al-Haram</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mezquita al-Haram</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Tag>

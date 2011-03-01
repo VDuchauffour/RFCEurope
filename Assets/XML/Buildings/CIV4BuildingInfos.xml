@@ -16968,7 +16968,7 @@
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SHRINE</BuildingClass>
 			<Type>BUILDING_ORTHODOX_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Description>
+			<Description>TXT_KEY_BUILDING_HAGIA_SOPHIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORTHODOX_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
