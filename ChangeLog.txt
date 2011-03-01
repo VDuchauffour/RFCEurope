@@ -59,28 +59,38 @@ MV1		General XML updates, removing unused XML parts
 Changes for Beta 9:
 		
 	General changes:
-		A few small fixes to the map
-		Added salt to Anatolia, removed deers
 		New civic system
-		Changed Norse UHV 1: now we have to build Vinland colony
-			
-	XML updates:
-		XML cleanup (unused lines of code are removed)
-		New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
-		Fixed many typos
-		Some leaders prefer a certain religion
-		Some objects are translated
-		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
-		For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
-		For Asutria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)
-		Updated the text for the Expansion civics
-		The English UP is now correctly listed as +2 hammer from Workshop
 		Workshops can now be build on Moorland (makes English UP more powerful)
+		Added favourite religion to some of the leaders
 		Added new Colony: Vinland
 		Colonies become obsolete after some date
 		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
-		Added test showing infor for the Civic combo Stability boost/penalty
-		Added condition for the Dynamic Names for the case when the player has respawned (note XML value of 0 passes regardless whether the playe has respawned)
+		Changed Norse UHV 1: now we have to build Vinland colony
+		Cathedrals now really need state religion
+		
+	Map and province changes:
+		A few small fixes to the map after the updates of Beta 8
+		Added salt to Anatolia, removed deers
+		Germany get Lorraine as a "Solid" Province
+		Spain gets the Canaries as "OK" stability
+		Genoa gets Malta
+		Wheat added to Dijon
+		Changed the map area and the provinces near Cyprus and southern Greece
+		Byzantium now gets Cyprus, Rhodes and Crete as solid provinces
+		Cordoba gets Oran as OK Province
+	
+	XML updates:
+		XML cleanup (unused lines of code are removed, many typos fixed)
+		New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
+		Some objects are translated
+		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
+		For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
+		For Austria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)
+		Updated the text for the Expansion civics
+		The English UP is now correctly listed as +2 hammer from Workshop
+		Added text showing info for the Civic combo Stability boost/penalty
+		Added condition for the Dynamic Names for the case when the player has respawned (note XML value of 0 passes regardless whether the player has respawned)
+		Many small xml updates regarding religious buildings
 
 	Art updates:
 		Byzantine Lancer has proper button
@@ -88,27 +98,20 @@ Changes for Beta 9:
 		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
 
 	Balance:
-		Germany get Lorraine as a "Solid" Province
-		Spain gets the Canaries as "OK" stability
-		Genoa gets Malta
 		Added direct stability bonus for Golden Age, before it was only implicid via the boost of Economy
 		Atlantic Access start on the map only in Iceland, then it disapears completely after 1050AD
 		Atlantic Access is then added dynamically as different nations discover Astronomy (Gibraltar AA is added when any nation discovers Astronomy)
 		Culture output depends on the province type, lower culture for Unstable and higher culture for Solid
 		Adjusted Merchant Republic number of cities penalty, should help the AI
-		Wheat added to Dijon
-		Changed the map area near Cyprus and southern Greece
-		Byzantium now gets Cyprus, Rhodes and Crete as solid provinces
 		Serfdom becomes available with Vassalage and Feudal Monarchy with Feudalism
 		Apprenticeship becomes available with Education
-		Added Literature, Classical Knowledge, Monument Building, Philosophy, Education
-		Many of the Indy cities start with one religion or another
+		Added Literature, Classical Knowledge, Monument Building, Philosophy, Education as Austrian starting techs
+		Many of the Indy cities got a religion on start
 		Increased the strength of the Seljuks to 13 (they are Heavy Cavalry and many units get bonuses vs Heavy Cavalry)
 		Ottomans get 20 faith points on start, this should prevernt the AI from converting away from Islam (still not working)
 		Moved Militarism to Farriers (Vassalagae was the only early expansion civic and it is not that good)
 		Moved Mercantilism to Paper (Banking is too early)
 		Increased Free Peasantry cottage growth bonus to 100%, otherwise the Improvements don't have enough time to grow inbetween Plagues
-		Cordoba gets Oran as OK Province
 		Portuguese Fetoria now replaces Harbor, gives +1 commerce from water tiles
 		Removed Horse Archer barbarians from Iberia, overall the Barbs were a bit OP
 		Turkey more likely to start at war with Bulgaria
@@ -133,8 +136,8 @@ Changes for Beta 9:
 		Fixed: Third Dutch UHV works now
 		Fixed: Seljuks were broken, they were not spread out geographically (there were some issues with the code)
 		Fixed: the starting techs for Portugal skipped Lateen Sails and went to Carthography directly, now there is no break
-		
-		
+		Judaism now also adds culture like all the other religions
+				
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 8:

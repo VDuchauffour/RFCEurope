@@ -70,102 +70,6 @@
 		<Spanish>Arsenal</Spanish>
 		<Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Tag>
-		<English>Protestant Church</English>
-		<French>Eglise Protestante</French>
-		<German>Protestantische Kirche</German>
-		<Italian>Chiesa protestante</Italian>
-		<Spanish>Iglesia protestante</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_MONASTERY</Tag>
-		<English>Protestant Monastery</English>
-		<French>Monast&#232;re Protestant</French>
-		<German>Protestantisches Kloster</German>
-		<Italian>Monastero protestante</Italian>
-		<Spanish>Monasterio protestante</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL</Tag>
-		<English>Protestant Cathedral</English>
-		<French>Cath&#233;drale Protestante</French>
-		<German>Protestantische Kathedrale</German>
-		<Italian>Cattedrale protestante</Italian>
-		<Spanish>Catedral protestante</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE</Tag>
-		<English>All Saints' Church</English>
-		<French>Eglise de Tous les Saints</French>
-		<German>Allerheiligenkirche</German>
-		<Italian>La Chiesa di tutta i santi</Italian>
-		<Spanish>Iglesia de todas las santos</Spanish>
-		<Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>
-		<English>Catholic Church</English>
-		<French>Eglise Catholique</French>
-		<German>Katholische Kirche</German>
-		<Italian>Chiesa cattolica</Italian>
-		<Spanish>Iglesia Católica</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_MONASTERY</Tag>
-		<English>Catholic Monastery</English>
-		<French>Monast&#232;re Catholique</French>
-		<German>Katholisches Kloster</German>
-		<Italian>Monastero cattolico</Italian>
-		<Spanish>Monasterio católico</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL</Tag>
-		<English>Catholic Cathedral</English>
-		<French>Cath&#233;drale Catholique</French>
-		<German>Katholische Kathedrale</German>
-		<Italian>Cattedrale cattolica</Italian>
-		<Spanish>Catedral católica</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Tag>
-		<English>St. Peter's Basilica</English>
-		<French>Basilique St Pierre</French>
-		<German>Petersdom</German>
-		<Italian>Basilica di San Pietro</Italian>
-		<Spanish>Basílica de San Pedro</Spanish>
-		<Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Tag>
-		<English>Orthodox Church</English>
-		<French>Eglise Orthodoxe</French>
-		<German>Orthodoxe Kirche</German>
-		<Italian>Chiesa ortodossa</Italian>
-		<Spanish>Iglesia ortodoxa</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_MONASTERY</Tag>
-		<English>Orthodox Monastery</English>
-		<French>Monast&#232;re Orthodoxe</French>
-		<German>Orthodoxes Kloster</German>
-		<Italian>Monastero ortodosso</Italian>
-		<Spanish>Monasterio ortodoxo</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL</Tag>
-		<English>Orthodox Cathedral</English>
-		<French>Cath&#233;drale Orthodoxe</French>
-		<German>Orthodoxe Kathedrale</German>
-		<Italian>Cattedrale ortodossa</Italian>
-		<Spanish>Catedral ortodoxa</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#209;&#238;&#225;&#238;&#240;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Tag>
-		<English>Islamic Grand Mosque</English>
-		<French>Grande Mosqu&#233;e</French>
-		<German>Islamische Gro&#223;moschee</German>
-		<Italian>Grande Moschea islamica</Italian>
-		<Spanish>Gran Mezquita islámica</Spanish>
-		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#195;&#240;&#224;&#237;&#228;&#232;&#238;&#231;&#237;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
 		<English>Bulgarian Stan</English>
 		<French>Stan Bulgare</French>
@@ -312,14 +216,6 @@
 		<Spanish>Casa solariega</Spanish>
 		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian></TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
-		<English>Pagan Shrine</English>
-		<French>Temple Pagan</French>
-		<German>Heidnischer Schrein</German>
-		<Italian>Santuario pagano</Italian>
-		<Spanish>Relicario pagano</Spanish>
-		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#226;&#255;&#242;&#251;&#237;&#255;</Russian></TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
 		<English>Weaver</English>
 		<French>Tisserie</French>
@@ -424,37 +320,47 @@
 		<Spanish>Enfermería</Spanish>
 		<Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian></TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
+		<English>Pagan Shrine</English>
+		<French>Temple Pagan</French>
+		<German>Heidnischer Schrein</German>
+		<Italian>Santuario pagano</Italian>
+		<Spanish>Relicario pagano</Spanish>
+		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#226;&#255;&#242;&#251;&#237;&#255;</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER</Tag>
 		<English>Jewish Quarter</English>
 		<French>Quartier Juif</French>
 		<German>J&#252;disches Viertel</German>
 		<Italian>Quarto ebreo</Italian>
 		<Spanish>Cuarto judío</Spanish>
-		<Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian></TEXT>
+		<Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_SCHOOL</Tag>
-		<English>Protestant Church School</English>
-		<French>Ecole Protestante</French>
-		<German>Protestantische Hochschule</German>
-		<Italian>Scuola di Chiesa protestante</Italian>
-		<Spanish>Colegio religioso protestante</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY</Tag>
-		<English>Protestant Seminary</English>
-		<French>S&#233;minaire Protestant</French>
-		<German>Protestantisches Seminar</German>
-		<Italian>Seminario protestante</Italian>
-		<Spanish>Seminario protestante</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL</Tag>
-		<English>Protestant Belfry</English>
-		<French>B&#233;froi Protestant</French>
-		<German>Protestantischer Glockenturm</German>
-		<Italian>Campanile protestante</Italian>
-		<Spanish>Campanario protestante</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
+		<English>Islamic Mosque</English>
+		<French>
+			<Text>Mosqu&#233;e</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Islamische Moschee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Moschea Islamica:Moschee Islamiche</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mezquita isl&#225;mica:Mezquitas isl&#225;micas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL</Tag>
 		<English>Islamic Minaret</English>
@@ -462,15 +368,8 @@
 		<German>Islamischer Minarett</German>
 		<Italian>Minareto islamico</Italian>
 		<Spanish>Minarete islámico</Spanish>
-		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#237;&#224;&#240;&#229;&#242;</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL</Tag>
-		<English>House of Wisdom</English>
-		<French>Maison de la Sagesse</French>
-		<German>Haus der Weisheit</German>
-		<Italian>La casa di Saggezza</Italian>
-		<Spanish>La casa de Sabiduría</Spanish>
-		<Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian></TEXT>
+		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#237;&#224;&#240;&#229;&#242;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA</Tag>
 		<English>Islamic Madrassa</English>
@@ -478,7 +377,35 @@
 		<German>Islamisches Madrasa</German>
 		<Italian>Madrassa Islamico</Italian>
 		<Spanish>Madraza isl&#225;mico</Spanish>
-		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian></TEXT>
+		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
+		<English>Islamic Grand Mosque</English>
+		<French>Grande Mosqu&#233;e</French>
+		<German>Islamische Gro&#223;moschee</German>
+		<Italian>Grande Moschea islamica</Italian>
+		<Spanish>Gran Mezquita islámica</Spanish>
+		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#195;&#240;&#224;&#237;&#228;&#232;&#238;&#231;&#237;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL</Tag>
+		<English>House of Wisdom</English>
+		<French>Maison de la Sagesse</French>
+		<German>Haus der Weisheit</German>
+		<Italian>La casa di Saggezza</Italian>
+		<Spanish>La casa de Sabiduría</Spanish>
+		<Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>
+		<English>Catholic Church</English>
+		<French>Eglise Catholique</French>
+		<German>Katholische Kirche</German>
+		<Italian>Chiesa cattolica</Italian>
+		<Spanish>Iglesia Católica</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL</Tag>
 		<English>Catholic Belfry</English>
@@ -486,7 +413,26 @@
 		<German>Katholischer Glockenturm</German>
 		<Italian>Campanile cattolico</Italian>
 		<Spanish>Campanario católico</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_MONASTERY</Tag>
+		<English>Catholic Monastery</English>
+		<French>Monast&#232;re Catholique</French>
+		<German>Katholisches Kloster</German>
+		<Italian>Monastero cattolico</Italian>
+		<Spanish>Monasterio católico</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL</Tag>
+		<English>Catholic Cathedral</English>
+		<French>Cath&#233;drale Catholique</French>
+		<German>Katholische Kathedrale</German>
+		<Italian>Cattedrale cattolica</Italian>
+		<Spanish>Catedral católica</Spanish>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY</Tag>
 		<English>Catholic Reliquary</English>
@@ -494,7 +440,8 @@
 		<German>Katholischer Reliquienschrein</German>
 		<Italian>Catholic reliquary</Italian>
 		<Spanish>Relicario católico</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL</Tag>
 		<English>Catholic Cathedral School</English>
@@ -502,7 +449,8 @@
 		<German>Katholische Hochschule</German>
 		<Italian>Scuola di Cattedrale cattolica</Italian>
 		<Spanish>Escuela Catedral católica</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM</Tag>
 		<English>Catholic Scriptorium</English>
@@ -510,7 +458,8 @@
 		<German>Katholisches Scriptorium</German>
 		<Italian>Centro scrittorio cattolico</Italian>
 		<Spanish>Scriptorium católico</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY</Tag>
 		<English>Catholic Seminary</English>
@@ -518,7 +467,17 @@
 		<German>Katholisches Seminar</German>
 		<Italian>Seminario cattolico</Italian>
 		<Spanish>Seminario católico</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Tag>
+		<English>Orthodox Church</English>
+		<French>Eglise Orthodoxe</French>
+		<German>Orthodoxe Kirche</German>
+		<Italian>Chiesa ortodossa</Italian>
+		<Spanish>Iglesia ortodoxa</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL</Tag>
 		<English>Orthodox Belfry</English>
@@ -526,7 +485,26 @@
 		<German>Orthodoxer Glockenturm</German>
 		<Italian>Campanile ortodosso</Italian>
 		<Spanish>Campanario ortodoxo</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_MONASTERY</Tag>
+		<English>Orthodox Monastery</English>
+		<French>Monast&#232;re Orthodoxe</French>
+		<German>Orthodoxes Kloster</German>
+		<Italian>Monastero ortodosso</Italian>
+		<Spanish>Monasterio ortodoxo</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL</Tag>
+		<English>Orthodox Cathedral</English>
+		<French>Cath&#233;drale Orthodoxe</French>
+		<German>Orthodoxe Kathedrale</German>
+		<Italian>Cattedrale ortodossa</Italian>
+		<Spanish>Catedral ortodoxa</Spanish>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#209;&#238;&#225;&#238;&#240;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY</Tag>
 		<English>Orthodox Reliquary</English>
@@ -534,7 +512,8 @@
 		<German>Orthodoxer Reliquienschrein</German>
 		<Italian>Reliquario ortodosso</Italian>
 		<Spanish>Relicario ortodoxo</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL</Tag>
 		<English>Orthodox Cathedral School</English>
@@ -542,7 +521,8 @@
 		<German>Orthodoxe Hochschule</German>
 		<Italian>Scuola di Cattedrale ortodossa</Italian>
 		<Spanish>Escuela Catedral ortodoxa</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#202;&#224;&#244;&#229;&#228;&#240;&#224;&#235;&#252;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM</Tag>
 		<English>Orthodox Scriptorium</English>
@@ -550,7 +530,8 @@
 		<German>Orthodoxes Scriptorium</German>
 		<Italian>Scriptorium ortodosso</Italian>
 		<Spanish>Scriptorium ortodoxo</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#238;&#229; &#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY</Tag>
 		<English>Orthodox Seminary</English>
@@ -558,23 +539,62 @@
 		<German>Orthodoxes Seminar</German>
 		<Italian>Seminario ortodosso</Italian>
 		<Spanish>Seminario ortodoxo</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALBUILDING_SEMINARY</Tag>
-		<English>Seminary</English>
-		<French>S&#233;minaire</French>
-		<German>Seminar</German>
-		<Italian>Seminario</Italian>
-		<Spanish>Seminario</Spanish>
-		<Russian>&#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian></TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Tag>
+		<English>Protestant Church</English>
+		<French>Eglise Protestante</French>
+		<German>Protestantische Kirche</German>
+		<Italian>Chiesa protestante</Italian>
+		<Spanish>Iglesia protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252;</Russian>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALBUILDING_SCHOOL</Tag>
-		<English>Religious School</English>
-		<French>Ecole Religieuse</French>
-		<German>Relig&#246;se Schule</German>
-		<Italian>Scuola religiosa</Italian>
-		<Spanish>Escuela religiosa</Spanish>
-		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian></TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL</Tag>
+		<English>Protestant Belfry</English>
+		<French>B&#233;froi Protestant</French>
+		<German>Protestantischer Glockenturm</German>
+		<Italian>Campanile protestante</Italian>
+		<Spanish>Campanario protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_MONASTERY</Tag>
+		<English>Protestant Monastery</English>
+		<French>Monast&#232;re Protestant</French>
+		<German>Protestantisches Kloster</German>
+		<Italian>Monastero protestante</Italian>
+		<Spanish>Monasterio protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL</Tag>
+		<English>Protestant Cathedral</English>
+		<French>Cath&#233;drale Protestante</French>
+		<German>Protestantische Kathedrale</German>
+		<Italian>Cattedrale protestante</Italian>
+		<Spanish>Catedral protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#209;&#238;&#225;&#238;&#240;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SCHOOL</Tag>
+		<English>Protestant Church School</English>
+		<French>Ecole Protestante</French>
+		<German>Protestantische Hochschule</German>
+		<Italian>Scuola di Chiesa protestante</Italian>
+		<Spanish>Colegio religioso protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY</Tag>
+		<English>Protestant Seminary</English>
+		<French>S&#233;minaire Protestant</French>
+		<German>Protestantisches Seminar</German>
+		<Italian>Seminario protestante</Italian>
+		<Spanish>Seminario protestante</Spanish>
+		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_CHAPEL</Tag>
 		<English>Belfry</English>
@@ -582,7 +602,8 @@
 		<German>Glockenturm</German>
 		<Italian>Campanile</Italian>
 		<Spanish>Campanario</Spanish>
-		<Russian>&#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Russian>&#202;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_RELIQUARY</Tag>
 		<English>Reliquary</English>
@@ -590,7 +611,26 @@
 		<German>Reliquienschrein</German>
 		<Italian>Reliquiario</Italian>
 		<Spanish>Relicario</Spanish>
-		<Russian>&#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Russian>&#195;&#240;&#238;&#225;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_SCHOOL</Tag>
+		<English>Religious School</English>
+		<French>Ecole Religieuse</French>
+		<German>Relig&#246;se Schule</German>
+		<Italian>Scuola religiosa</Italian>
+		<Spanish>Escuela religiosa</Spanish>
+		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#224;&#255; &#216;&#234;&#238;&#235;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALBUILDING_SEMINARY</Tag>
+		<English>Seminary</English>
+		<French>S&#233;minaire</French>
+		<German>Seminar</German>
+		<Italian>Seminario</Italian>
+		<Spanish>Seminario</Spanish>
+		<Russian>&#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SCRIPTORIUM</Tag>
 		<English>Scriptorium</English>
@@ -598,7 +638,8 @@
 		<German>Scriptorium</German>
 		<Italian>Centro scrittorio</Italian>
 		<Spanish>Scriptorium</Spanish>
-		<Russian>&#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian></TEXT>
+		<Russian>&#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN</Tag>
 		<English>Bazaar</English>
@@ -606,15 +647,26 @@
 		<German>Bazar</German>
 		<Italian>Bazar</Italian>
 		<Spanish>Bazar</Spanish>
-		<Russian>&#193;&#224;&#231;&#224;&#240;</Russian></TEXT>
+		<Russian>&#193;&#224;&#231;&#224;&#240;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
-		<French>[ICON_BULLET] +1 Stabilit&#233;</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian></TEXT>
+		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Tag>
 		<English>[ICON_BULLET] +1 Stability</English>
-		<French>[ICON_BULLET] +1 Stabilit&#233;</French><German/><Italian/><Spanish/><Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian></TEXT>
+		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
 		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
@@ -701,14 +753,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
-		<English>[TAB]A "madrassa" is an Arabic institute of higher learning, usually religious in nature. The earliest madrasses were formed in Islamic mosques, where scholars gathered to study and debate religious and secular issues of the day. Over time students would come to study with the most learned scholars; the most popular teachers often had to construct separate buildings to hold their growing student population.[NEWLINE][NEWLINE]At the madrassas the students would learn to read and write and study religious doctrine, history and law. Some madrassas also taught logic, world history, foreign language, mathematics, art and science. Since state-run colleges and universities did not appear until later in history, the madrassas were critical centers of learning in many early Arabic cities.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
 		<English>[TAB]Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
 		<French>.</French>
@@ -736,8 +780,50 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Tag>
+		<English>[TAB]Paganism (from Latin paganus, meaning "country dweller, rustic") is a word used to refer to various religions and religious beliefs from across the world. It is a term which, from a Western perspective, has modern connotations of spiritualist, animistic or shamanic practices or beliefs of any folk religion, and of historical and contemporary polytheistic religions in particular.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
+		<English>[TAB]In the Jewish Diaspora, a Jewish quarter is the area of a city traditionally inhabited by Jews. Jewish quarters, like the Jewish ghettos in Europe, were often the outgrowths of segregated ghettos instituted by the surrounding Christian authorities. A Yiddish term for a Jewish quarter or neighborhood is "Di yiddishe gas", or "The Jewish street". Many European and Middle Eastern cities once had a historical Jewish quarter and some still have it.
+[TAB]The Jewish ghettos existed because Jews were viewed as that they were foreigners due to their non-Christian beliefs in a Renaissance Christian environment. As a result, Jews were placed under strict regulations throughout many European cities. The character of ghettos has varied through times. In some cases, the ghetto was a Jewish quarter with a relatively affluent population (for instance the Jewish ghetto in Venice). In other cases, ghettos were places of terrible poverty and during periods of population growth, ghettos had narrow streets and tall, crowded houses. Residents had their own justice system. Around the ghetto stood walls that, during pogroms, were closed from inside to protect the community, but from the outside during Christmas, Pesach, and Easter Week to prevent the Jews from leaving during those times.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
+		<English>[TAB]A mosque is a place of worship for followers of Islam. The word entered the English language most likely through French (mosquée), from Spanish (mezquita), from Berber (tamezgida), ultimately originating in Arabic: masjid. The Arabic word masjid literally means a place of prostration. The word "mosque" in English refers to all types of buildings dedicated for Islamic worship, although there is a distinction in Arabic between the smaller masjid dedicated for the daily five prayers and the larger masjid jami where the daily five prayers and the Friday congregation sermons are held with a high volume of attendence. The masjid jami also plays more roles such as teaching Qur'an and educating future imams.
+[TAB]The mosque serves as a place where Muslims can come together for salat (prayer) as well as a center for information, education, and dispute settlement. The Imam leads the prayer.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
 		<English>[TAB]Minarets are distinctive architectural features of Islamic mosques. Minarets are generally tall spires with onion-shaped crowns, usually either free standing or much taller than any surrounding support structure. As well as providing a visual cue to a Muslim community, the main function of the minaret is to provide a vantage point from which the muezzin can call out the adhan, calling the faithful to prayer.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
+		<English>[TAB]A "madrassa" is an Arabic institute of higher learning, usually religious in nature. The earliest madrasses were formed in Islamic mosques, where scholars gathered to study and debate religious and secular issues of the day. Over time students would come to study with the most learned scholars; the most popular teachers often had to construct separate buildings to hold their growing student population.[NEWLINE][NEWLINE]At the madrassas the students would learn to read and write and study religious doctrine, history and law. Some madrassas also taught logic, world history, foreign language, mathematics, art and science. Since state-run colleges and universities did not appear until later in history, the madrassas were critical centers of learning in many early Arabic cities.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
+		<English>[TAB]"Great Mosque" refers to a large mosque, resembling a Christian cathedral in size and significance. Examples of such mosques include the Grand Mosque of Damascus, the Great Mosque of Algiers or the Sultan Ahmed Mosque of Istanbul.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -753,25 +839,9 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
-		<English>[TAB]"Great Mosque" refers to a large mosque, resembling a Christian cathedral in size and significance. Examples of such mosques include the Grand Mosque of Damascus, the Great Mosque of Algiers or the Sultan Ahmed Mosque of Istanbul.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CATHEDRAL_PEDIA</Tag>
-		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SCRIPTORIUM_PEDIA</Tag>
-		<English>[TAB]Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
-[TAB]When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Tag>
+		<English>[TAB]A temple is a building or structure whose primary purpose is to facilitate the meeting of a church. Originally, Jewish Christians met in synagogues, such as the Cenacle, and in one another's homes. As Christianity grew and became more accepted by governments, rooms and, eventually, entire buildings were set aside for the explicit purpose of Christian worship.
+[TAB]Traditional church buildings are often in the shape of a cross and frequently have a tower or dome. More modern church buildings have a variety of architectural styles and layouts; many buildings that were designed for other purposes have now been converted for church use, and, similarly, many original church buildings have been put to other uses.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -786,8 +856,34 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_MONASTERY_PEDIA</Tag>
+		<English>[TAB]Monastery denotes the building, or complex of buildings, that houses a room reserved for prayer (e.g. an oratory) as well as the domestic quarters and workplace(s) of monastics, whether monks or nuns, and whether living in community or alone (hermits).
+[TAB]Monasteries may vary greatly in size - a small dwelling accommodating only a hermit, or in the case of communities anything from a single building housing only a one senior and two or three junior monks or nuns, to vast complexes and estates housing tens or hundreds.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CATHEDRAL_PEDIA</Tag>
+		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_RELIQUARY_PEDIA</Tag>
 		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SCRIPTORIUM_PEDIA</Tag>
+		<English>[TAB]Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
+[TAB]When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -888,42 +984,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CHURCH_PEDIA</Tag>
-		<English>[TAB]A church building is a building or structure whose primary purpose is to facilitate the meeting of a church. Originally, Jewish Christians met in synagogues, such as the Cenacle, and in one another's homes. As Christianity grew and became more accepted by governments, rooms and, eventually, entire buildings were set aside for the explicit purpose of Christian worship.
-[TAB]Traditional church buildings are often in the shape of a cross and frequently have a tower or dome. More modern church buildings have a variety of architectural styles and layouts; many buildings that were designed for other purposes have now been converted for church use, and, similarly, many original church buildings have been put to other uses.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_MONASTERY_PEDIA</Tag>
-		<English>[TAB]Monastery denotes the building, or complex of buildings, that houses a room reserved for prayer (e.g. an oratory) as well as the domestic quarters and workplace(s) of monastics, whether monks or nuns, and whether living in community or alone (hermits).
-[TAB]Monasteries may vary greatly in size - a small dwelling accommodating only a hermit, or in the case of communities anything from a single building housing only a one senior and two or three junior monks or nuns, to vast complexes and estates housing tens or hundreds.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
-		<English>[TAB]A mosque is a place of worship for followers of Islam. The word entered the English language most likely through French (mosquée), from Spanish (mezquita), from Berber (tamezgida), ultimately originating in Arabic: masjid. The Arabic word masjid literally means a place of prostration. The word "mosque" in English refers to all types of buildings dedicated for Islamic worship, although there is a distinction in Arabic between the smaller masjid dedicated for the daily five prayers and the larger masjid jami where the daily five prayers and the Friday congregation sermons are held with a high volume of attendence. The masjid jami also plays more roles such as teaching Qur'an and educating future imams.
-[TAB]The mosque serves as a place where Muslims can come together for salat (prayer) as well as a center for information, education, and dispute settlement. The Imam leads the prayer.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
-		<English>[TAB]In the Jewish Diaspora, a Jewish quarter is the area of a city traditionally inhabited by Jews. Jewish quarters, like the Jewish ghettos in Europe, were often the outgrowths of segregated ghettos instituted by the surrounding Christian authorities. A Yiddish term for a Jewish quarter or neighborhood is "Di yiddishe gas", or "The Jewish street". Many European and Middle Eastern cities once had a historical Jewish quarter and some still have it.
-[TAB]The Jewish ghettos existed because Jews were viewed as that they were foreigners due to their non-Christian beliefs in a Renaissance Christian environment. As a result, Jews were placed under strict regulations throughout many European cities. The character of ghettos has varied through times. In some cases, the ghetto was a Jewish quarter with a relatively affluent population (for instance the Jewish ghetto in Venice). In other cases, ghettos were places of terrible poverty and during periods of population growth, ghettos had narrow streets and tall, crowded houses. Residents had their own justice system. Around the ghetto stood walls that, during pogroms, were closed from inside to protect the community, but from the outside during Christmas, Pesach, and Easter Week to prevent the Jews from leaving during those times.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
 		<English>[TAB]A number of prominent Genoese families were involved in the establishment and governance of the Bank, including the Houses of Grimaldi and Serra. Unusually for its time, the Bank made use of a number of Jewish agents, including the Ghisolfi clan that managed certain possessions around the Black Sea.
 [TAB]The Bank was governed by four consuls who administered its finances and directed investments. Because the Republic's ruling oligarchs were normally prominent in Bank politics, it is often difficult to determine where the Bank's influence ended and the Republic's began.
@@ -945,14 +1005,6 @@
 		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE_PEDIA</Tag>
 		<English>[TAB]A coffeehouse or coffee shop is an establishment which primarily serves prepared coffee or other hot beverages. It shares some of the characteristics of a bar, and some of the characteristics of a restaurant, but it is different from a cafeteria. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks. Many coffee houses in the Middle East, and in West Asian immigrant districts in the Western world, offer shisha (nargile in Turkish and Greek), flavored tobacco smoked through a hookah.
 [TAB]From a cultural standpoint, coffeehouses largely serve as centers of social interaction: the coffeehouse provides social members with a place to congregate, talk, write, read, entertain one another, or pass the time, whether individually or in small groups of 2 or 3.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Tag>
-		<English>[TAB]Paganism (from Latin paganus, meaning "country dweller, rustic") is a word used to refer to various religions and religious beliefs from across the world. It is a term which, from a Western perspective, has modern connotations of spiritualist, animistic or shamanic practices or beliefs of any folk religion, and of historical and contemporary polytheistic religions in particular.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
