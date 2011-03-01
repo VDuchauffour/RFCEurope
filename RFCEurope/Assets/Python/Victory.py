@@ -946,6 +946,9 @@ class Victory:
                 pass
                 
         def checkPortugal( self, iGameTurn ):
+                if ( iGameTurn == xml.i1640AD and pPortugal.getUHV( 1 ) == -1 ):
+                        pPortugal.setUHV( 1, 1 )
+                
                 if ( pPortugal.getUHV( 2 ) == -1 ):
                         if ( pPortugal.getNumColonies() >= 6 ):
                                 pPortugal.setUHV( 2, 1 )

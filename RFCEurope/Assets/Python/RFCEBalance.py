@@ -734,15 +734,15 @@ class RFCEBalance:
                 gc.setTimelineTechDateForTech( xml.iHerbalMedicine, 95 )
                 gc.setTimelineTechDateForTech( xml.iFeudalism, xml.i778AD ) # Feudalism
                 gc.setTimelineTechDateForTech( xml.iFarriers, 100 )
-                gc.setTimelineTechDateForTech( xml.iMapMaking, 114 ) # teir 4 
-                gc.setTimelineTechDateForTech( xml.iBlastFurnace, 120 )
+                gc.setTimelineTechDateForTech( xml.iMapMaking, 145 )  # this is tier 5
+                gc.setTimelineTechDateForTech( xml.iBlastFurnace, 120 )# teir 4
                 gc.setTimelineTechDateForTech( xml.iSiegeEngines, xml.i1097AD ) #trebuchets
                 gc.setTimelineTechDateForTech( xml.iGothicArchitecture, 130 ) # 12th century
                 gc.setTimelineTechDateForTech( xml.iLiterature, 145 )
                 gc.setTimelineTechDateForTech( xml.iCodeOfLaws, 120 )
                 gc.setTimelineTechDateForTech( xml.iAristocracy, 135 )
-                gc.setTimelineTechDateForTech( xml.iLateenSails, 140 ) # teir 5
-                gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # Late 1200s, By the 14th century, plate armour was commonly used to supplement mail.
+                gc.setTimelineTechDateForTech( xml.iLateenSails, 125 ) # actually this is tier 4
+                gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # teir 5: Late 1200s, By the 14th century, plate armour was commonly used to supplement mail.
                 gc.setTimelineTechDateForTech( xml.iMonumentBuilding, 180 )
                 gc.setTimelineTechDateForTech( xml.iClassicalKnowledge, 175 )
                 gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1003AD )

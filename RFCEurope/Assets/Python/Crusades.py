@@ -24,6 +24,7 @@ iOrthodoxy = xml.iOrthodoxy
 iIslam = xml.iIslam
 iNumReligions = xml.iNumReligions
 
+
 class Crusades:
 	
 ###############
@@ -998,7 +999,7 @@ class Crusades:
 			sText = CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE", ()) + " " + pPlayer.getName()
 			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 		self.makeDCUnits( iPlayer )
-		pPlayer.changeFaith( - min( 5, pPlayer.getFaith() ) )	
+		pPlayer.changeFaith( - min( 2, pPlayer.getFaith() ) )	
 		
 	def eventApply7625( self, popupReturn ):
 		iDecision = popupReturn.getButtonClicked()
@@ -1006,7 +1007,7 @@ class Crusades:
 		pHuman = gc.getPlayer( iHuman )
 		if ( iDecision == 0 ):
 			self.makeDCUnits( iHuman )
-			pHuman.changeFaith( - min( 5, pHuman.getFaith() ) )
+			pHuman.changeFaith( - min( 2, pHuman.getFaith() ) )
 		else:
 			#pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
 			pass
@@ -1023,13 +1024,15 @@ class Crusades:
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 4 ):
+                if ( pPlayer.getNumCities() < 6 ): # smaller Empires need a bit more help
+                        pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+		if ( iFaith > 6 ):
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 9 ):
+		if ( iFaith > 12 ):
 			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 19 ):	
+		if ( iFaith > 18 ):	
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 29 ):
+		if ( iFaith > 36 ):
 			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		# 2 extra cavalry for the AI, it is dumb anyway

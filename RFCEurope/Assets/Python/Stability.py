@@ -46,6 +46,9 @@ class Stability:
                 gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 5 ) # to account for the cities build in the WB
                 if ( not gc.getPlayer( con.iFrankia ).isHuman() ):
                         gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
+                iHandicap = gc.getGame().getHandicapType()
+                if (iHandicap == 0):
+                        gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 8 )
                 
         def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
                 pPlayer = gc.getPlayer( iPlayer )

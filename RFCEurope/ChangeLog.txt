@@ -80,10 +80,12 @@ Changes for Beta 9:
 		Colonies become obsolete after some date
 		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
 		Added test showing infor for the Civic combo Stability boost/penalty
+		Added condition for the Dynamic Names for the case when the player has respawned (note XML value of 0 passes regardless whether the playe has respawned)
 
 	Art updates:
 		Byzantine Lancer has proper button
 		Some wonder "movies" (read pictures) have a much smaller size
+		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
 
 	Balance:
 		Germany get Lorraine as a "Solid" Province
@@ -106,6 +108,15 @@ Changes for Beta 9:
 		Moved Militarism to Farriers (Vassalagae was the only early expansion civic and it is not that good)
 		Moved Mercantilism to Paper (Banking is too early)
 		Increased Free Peasantry cottage growth bonus to 100%, otherwise the Improvements don't have enough time to grow inbetween Plagues
+		Cordoba gets Oran as OK Province
+		Portuguese Fetoria now replaces Harbor, gives +1 commerce from water tiles
+		Removed Horse Archer barbarians from Iberia, overall the Barbs were a bit OP
+		Turkey more likely to start at war with Bulgaria
+		On lower then Monarch difficulty, the human gets +8 stability points
+		Update Portugal Wars Map to include Cordoba with very low priority, thus they can benefit from a Defensive Crusade
+		Defensive Crusades now "cost" less Faith Points, strength is also adjusted for the new buildings/saints giving more faith (this should have been done some time ago)
+		Small boost for the defensive Crusade when you have less than 6 cities (i.e. you need a bit more help)
+		Added more starting techs to Lithuania
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
@@ -121,6 +132,7 @@ Changes for Beta 9:
 		Fixed: French UP now works
 		Fixed: Third Dutch UHV works now
 		Fixed: Seljuks were broken, they were not spread out geographically (there were some issues with the code)
+		Fixed: the starting techs for Portugal skipped Lateen Sails and went to Carthography directly, now there is no break
 		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------

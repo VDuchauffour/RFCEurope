@@ -1261,6 +1261,9 @@ class RiseAndFall:
         
                 pDeadCiv = gc.getPlayer(iDeadCiv)
                 teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
+                
+                # 3Miro: set respawned
+                pDeadCiv.setRespawned( True )
         
                 if (len(tLeaders[iDeadCiv]) > 1):
                         iLen = len(tLeaders[iDeadCiv])
@@ -2566,6 +2569,7 @@ class RiseAndFall:
                         teamPortugal.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iLiterature, True, iCiv, False, False )
+                        teamPortugal.setHasTech( xml.iLateenSails, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iMapMaking, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iAristocracy, True, iCiv, False, False )
 
@@ -2578,6 +2582,15 @@ class RiseAndFall:
                         teamLithuania.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
                         #teamLithuania.setHasTech( xml.iChivalry, True, iCiv, False, False )
                         teamLithuania.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iCivilService, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iLiterature, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iAlchemy, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iClassicalKnowledge, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iMonumentBuilding, True, iCiv, False, False )
+                        teamLithuania.setHasTech( xml.iCivilService, True, iCiv, False, False )
                         
                 if ( iCiv == iAustria ):
                         for iTech in range( xml.iFarriers + 1 ):
