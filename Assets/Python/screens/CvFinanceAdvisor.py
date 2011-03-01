@@ -249,15 +249,15 @@ class CvFinanceAdvisor:
 
 		szParametersPanel5 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel5, u"", "", True, True, self.X_PARAMETERS5, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
-		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_FOREIGN", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_SWING", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
                 iParameter5 = 0
-                if (iParameter5 <= -16):
+                if (iParameter5 <= -8):
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 <= -8):
+                elif (iParameter5 <= -3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 < 8):
+                elif (iParameter5 < 0):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 < 16):
+                elif (iParameter5 < 10):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 else:
                         self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -420,15 +420,15 @@ class CvFinanceAdvisor:
         	if (pPlayer.isHuman()):
         		#sString = utils.getParString( ePlayer, iCathegory )
                         if ( iCathegory == iCathegoryCities ):
-                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCities ), pPlayer.getStabilityVary( iCathegoryCities ) )
+                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCities ), pPlayer.getStabilityVary( iCathegoryCities ) )
                         elif ( iCathegory == iCathegoryCivics ):
-                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCivics ), pPlayer.getStabilityVary( iCathegoryCivics ) )
+                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCivics ), pPlayer.getStabilityVary( iCathegoryCivics ) )
                         elif ( iCathegory == iCathegoryEconomy ):
-                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryEconomy ), pPlayer.getStabilityVary( iCathegoryEconomy ) )
+                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryEconomy ), pPlayer.getStabilityVary( iCathegoryEconomy ) )
                         elif ( iCathegory == iCathegoryExpansion ):
-                                sString = sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryExpansion ), pPlayer.getStabilityVary( iCathegoryExpansion ) )
+                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryExpansion ), pPlayer.getStabilityVary( iCathegoryExpansion ) )
                         else:
-                                sString = ""
+                                sString = "%i" %( pPlayer.getStabilitySwing() )
                         #sString = ""
         		#print( " 3Miro: sString ",sString )
         		self.getScreen().setLabel(panel,"Background", sString, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )

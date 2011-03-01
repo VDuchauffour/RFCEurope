@@ -113,7 +113,7 @@ tBulgariaDesire = []
 
 tCordobaCore = []
 tCordobaNorm = []
-tCordobaOuter = [xml.iP_Leon,xml.iP_Lusitania,xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Marrakesh]
+tCordobaOuter = [xml.iP_Leon,xml.iP_Lusitania,xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Marrakesh,xml.iP_Oran]
 tCordobaPot2Core = [xml.iP_Andalusia,xml.iP_Valencia,xml.iP_Castile,xml.iP_Tetouan,xml.iP_Morocco]
 tCordobaPot2Norm = []
 tCordobaDesire = []

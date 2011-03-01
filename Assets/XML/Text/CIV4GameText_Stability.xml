@@ -192,4 +192,13 @@
 		<Spanish>EXPANSI&#211;N</Spanish>
 		<Russian>&#208;&#192;&#209;&#216;&#200;&#208;&#197;&#205;&#200;&#197;</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_PARAMETER_SWING</Tag>
+		<English>SWING</English>
+		<French>SWING</French>
+		<German>SWING</German>
+		<Italian>SWING</Italian>
+		<Spanish>SWING</Spanish>
+		<Russian>SWING</Russian>
+	</TEXT>
 </Civ4GameText>
