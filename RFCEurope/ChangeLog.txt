@@ -50,8 +50,6 @@ MV1		Python cleanup
 MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
-MV1		Add ethnic Russian Great Merchant
-MV1		Button for Vinland
 MV1		General XML updates, removing unused XML parts
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -97,6 +95,7 @@ Changes for Beta 9:
 		Some wonder "movies" (read pictures) have a much smaller size
 		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
 		Hungarian Pikeman has the proper button
+		Ethnic unit art for Russian Great Merchant
 
 	Balance:
 		Added direct stability bonus for Golden Age, before it was only implicid via the boost of Economy

@@ -5303,6 +5303,30 @@
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MERCHANT_RUSSIAN</Type>
+			<Button>,Art/Interface/Buttons/Units/GreatTycoon.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,4</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Rus Great Merchant/RusGreatMerchant.nif</NIF>
+			<KFM>Art/Units/GreatPeople/Merchant/GreatMerchantAncient.kfm</KFM>
+			<SHADERNIF>Art/Units/Rus Great Merchant/RusGreatMerchant.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/GreatMerchantShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+		</UnitArtInfo>
 		
 		<!-- ARTSTYLE_ARABIAN -->
 

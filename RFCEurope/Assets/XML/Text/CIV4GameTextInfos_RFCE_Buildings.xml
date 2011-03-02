@@ -338,30 +338,6 @@
 		<Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
-		<English>Islamic Mosque</English>
-		<French>
-			<Text>Mosqu&#233;e</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Islamische Moschee</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Moschea Islamica:Moschee Islamiche</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mezquita isl&#225;mica:Mezquitas isl&#225;micas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL</Tag>
 		<English>Islamic Minaret</English>
 		<French>Minaret Islamique</French>
@@ -380,7 +356,7 @@
 		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Tag>
 		<English>Islamic Grand Mosque</English>
 		<French>Grande Mosqu&#233;e</French>
 		<German>Islamische Gro&#223;moschee</German>
