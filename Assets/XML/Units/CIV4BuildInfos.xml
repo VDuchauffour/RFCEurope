@@ -528,7 +528,7 @@
 			<Type>BUILD_COLONIAL_TRADE</Type>
 			<Description>TXT_KEY_BUILD_COLONIAL_TRADE</Description>
 			<Help/>
-			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
+			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
