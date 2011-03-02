@@ -213,26 +213,15 @@
 		<HintInfo>
 			<Description>TXT_KEY_HINT_1</Description>
 		</HintInfo>
-		<!-- Rhye - start -->
-		<!--
-		<HintInfo>
-			<Description>TXT_KEY_HINT_2</Description>
-		</HintInfo>
-		-->
-		<!-- Rhye - end -->
 		<HintInfo>
 			<Description>TXT_KEY_HINT_3</Description>
 		</HintInfo>
 		<HintInfo>
 			<Description>TXT_KEY_HINT_4</Description>
 		</HintInfo>
-		<!-- Rhye - start -->
-		<!--
 		<HintInfo>
 			<Description>TXT_KEY_HINT_5</Description>
 		</HintInfo>
-		-->
-		<!-- Rhye - end -->
 		<HintInfo>
 			<Description>TXT_KEY_HINT_6</Description>
 		</HintInfo>
@@ -247,9 +236,6 @@
 		</HintInfo>
 		<HintInfo>
 			<Description>TXT_KEY_HINT_10</Description>
-		</HintInfo>
-		<HintInfo>
-			<Description>TXT_KEY_HINT_11</Description>
 		</HintInfo>
 		<HintInfo>
 			<Description>TXT_KEY_HINT_12</Description>
@@ -359,6 +345,9 @@
 		</HintInfo>
 		<HintInfo>
 			<Description>TXT_KEY_HINT_47</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_48</Description>
 		</HintInfo>
 	</HintInfos>
 </Civ4Hints>

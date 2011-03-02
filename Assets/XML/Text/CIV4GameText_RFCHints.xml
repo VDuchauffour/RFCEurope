@@ -15,15 +15,6 @@
 		<Russian>&#215;&#242;&#238;&#225;&#251; &#237;&#224;&#237;&#255;&#242;&#252; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#224;, &#249;&#229;&#235;&#234;&#224;&#254;&#242; &#239;&#238; &#232;&#234;&#238;&#237;&#229; "&#210;&#238;&#239;&#238;&#240;" &#226; &#226;&#229;&#240;&#245;&#237;&#229;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229; &#240;&#243;&#234;&#232; &#235;&#229;&#226;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#251; &#253;&#234;&#240;&#224;&#237;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HINT_2</Tag>
-		<English>Rhye's and Fall of Civilization is one of the official mods included in Beyond the Sword expansion</English>
-		<French>Rhye's of Civilization pour Civilization III a &#233;t&#233; t&#233;l&#233;charg&#233; 25 000 fois en 2005.</French>
-		<German>Rhye's of Civilization f&#233;r Civilization III wurde im Jahr 2005 25.000 Mal heruntergeladen.</German>
-		<Italian>Rhye's of Civilization per Civilization III ha raggiunto i 25.000 download nel 2005.</Italian>
-		<Spanish>El mod de Rhye para Civilization III fue descargado m&#225;s de 25.000 veces en 2005.</Spanish>
-		<Russian>&#208;&#212;&#214; - &#253;&#242;&#238;, &#247;&#242;&#238; &#238;&#228;&#232;&#237; &#232;&#231; &#238;&#244;&#232;&#246;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#236;&#238;&#228;&#238;&#226; &#226;&#234;&#235;&#254;&#247;&#224;&#255; &#193;&#210;&#209;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HINT_3</Tag>
 		<English>Combining more oppressive civics with more liberal onses will result in a stability penalty</English>
 		<French>Si vous passez d'une doctrine autoritaire &#233; la d&#233;mocratie, votre empire conna&#233;tra une p&#233;riode d'instabilit&#233;.</French>
@@ -94,15 +85,6 @@
 		<Italian>Le miriadi (che significa 10.000) vengono comunemente usate nel sistema di numerazione cinese.</Italian>
 		<Spanish>Las mir&#237;adas (que equivalen a 10.000) se utilizan con frecuencia en el sistema de numeraci&#243;n chino.</Spanish>
 		<Russian>&#223;&#237;&#251;&#247;&#224;&#240;&#251; &#225;&#251;&#235;&#232; &#253;&#235;&#232;&#242;&#237;&#238;&#233; &#238;&#245;&#240;&#224;&#237;&#238;&#233; &#206;&#242;&#242;&#238;&#236;&#224;&#237;&#241;&#234;&#232;&#245; &#209;&#243;&#235;&#242;&#224;&#237;&#238;&#226; &#232; &#231;&#224;&#249;&#232;&#249;&#224;&#235;&#232; &#238;&#242; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#227;&#238; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#241;&#229;&#235;&#229;&#237;&#232;&#255; &#226; &#200;&#236;&#239;&#229;&#240;&#232;&#232;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_11</Tag>
-		<English>"Entente" is the French word for diplomatic understanding</English>
-		<French>"Entente" est un terme utilis&#233; pour parler des accords diplomatiques.</French>
-		<German>"Entente" ist das franz&#233;sische Wort f&#233;r diplomatisches Einverst&#233;ndnis.</German>
-		<Italian>"Entente" &#232; la parola francese che indica l'intesa diplomatica.</Italian>
-		<Spanish>"Entente" es un galicismo que significa acuerdo entre pa&#237;ses.</Spanish>
-		<Russian>"Entente"  - &#244;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#238;&#229; &#241;&#235;&#238;&#226;&#238; &#228;&#235;&#255; &#228;&#232;&#239;&#235;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#238;&#227;&#238; &#239;&#238;&#237;&#232;&#236;&#224;&#237;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_13</Tag>
@@ -407,12 +389,22 @@
 		<French>Si vous &#234;tes trop fatigu&#233; pour continuer, il y a toujours le caf&#233;...</French>
 		<German>Wenn Sie müde sind, um weiter spielen, es gibt immer Kaffee...</German>
 		<Italian>Se siete stanchi di continuare a giocare, c'è sempre il caffè...</Italian>
-		<Spanish>Si usted está cansado de seguir jugando, siempre hay café...</Spanish></TEXT>
+		<Spanish>Si usted está cansado de seguir jugando, siempre hay café...</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_47</Tag>
 		<English>Snacks are good in moderation.</English>
 		<French>Les en-cas sont &#224; consommer avec mod&#233;ration.</French>
 		<German>Snacks in Ma&#223;en sind gut!</German>
 		<Italian>Spuntini sono buone con moderazione.</Italian>
-		<Spanish>Las meriendas son buenas en la moderación.</Spanish></TEXT>
+		<Spanish>Las meriendas son buenas en la moderación.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_48</Tag>
+		<English>Press the "Ctrl" key and hoover over the tile to see which Province it is.</English>
+		<French>.</French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
 </Civ4GameText>
