@@ -63,7 +63,7 @@ Changes for Beta 9:
 		Added new Colony: Vinland
 		Colonies become obsolete after some date
 		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
-		Changed Norse UHV 1: now you have to build Vinland colony
+		Changed Norse UHV 1: now you have to build the Vinland colony
 		Cathedrals now realy need state religion
 		Some Hints are added (when you load a game)
 		
@@ -80,6 +80,7 @@ Changes for Beta 9:
 	
 	XML updates:
 		XML cleanup (unused lines of code are removed, many typos fixed)
+		Python cleanup (unused lines of code are removed)
 		New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
 		Some objects are translated
 		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
@@ -89,13 +90,12 @@ Changes for Beta 9:
 		The English UP is now correctly listed as +2 hammer from Workshop
 		Added text showing info for the Civic combo Stability boost/penalty
 		Added condition for the Dynamic Names for the case when the player has respawned (note XML value of 0 passes regardless whether the player has respawned)
-		Many small xml updates regarding religious buildings
+		Many small XML updates regarding religious buildings
 
 	Art updates:
-		Byzantine Lancer has proper button
+		Byzantine Lancer and Hungarian Pikeman hav proper button
 		Some wonder "movies" (read pictures) have a much smaller size
 		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
-		Hungarian Pikeman has the proper button
 		Ethnic unit art for Russian Great Merchant
 
 	Balance:
@@ -103,14 +103,14 @@ Changes for Beta 9:
 		Atlantic Access start on the map only in Iceland, then it disapears completely after 1050AD
 		Atlantic Access is then added dynamically as different nations discover Astronomy (Gibraltar AA is added when any nation discovers Astronomy)
 		Culture output depends on the province type, lower culture for Unstable and higher culture for Solid
-		Adjusted Merchant Republic number of cities penalty, should help the AI
+		Adjusted Merchant Republic number of cities penalty, it should help the AI
 		Serfdom becomes available with Vassalage and Feudal Monarchy with Feudalism
 		Apprenticeship becomes available with Education
 		Added Literature, Classical Knowledge, Monument Building, Philosophy, Education as Austrian starting techs
 		Many of the Indy cities got a religion on start
 		Increased the strength of the Seljuks to 13 (they are Heavy Cavalry and many units get bonuses vs Heavy Cavalry)
 		Ottomans get 20 faith points on start, this should prevernt the AI from converting away from Islam (still not working)
-		Moved Militarism to Farriers (Vassalagae was the only early expansion civic and it is not that good)
+		Moved Militarism to Farriers (Vassalage was the only early expansion civic and it is not that good)
 		Moved Mercantilism to Paper (Banking is too early)
 		Increased Free Peasantry cottage growth bonus to 100%, otherwise the Improvements don't have enough time to grow inbetween Plagues
 		Portuguese Fetoria now replaces Harbor, gives +1 commerce from water tiles
@@ -131,7 +131,7 @@ Changes for Beta 9:
 		Fixed: A Firaxis bug, upon capturing an enemy city, units from the defending player can enter the city after the city has been captured
 			added an extra call to CvPlot::verifyUnitValidPlot() at the end of CvUnit::setXY(), the new code is marked by //3MiroBugfix
 		Fixed: Jerusalem was missing from 2nd Arab UHV
-		Fixed: Crusade dets canceled if a Catholic captures Jerusalem during the voting
+		Fixed: Crusade gets canceled if a Catholic captures Jerusalem during the voting
 		Fixed: Crusaders "return" properly from a canceled Crusade (you can change religion again)
 		Fixed: Jerusalem is added to the Arabian UHV territory
 		Fixed: French UP now works
