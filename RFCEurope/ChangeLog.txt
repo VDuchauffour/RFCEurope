@@ -65,6 +65,7 @@ Changes for Beta 9:
 		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
 		Changed Norse UHV 1: now you have to build Vinland colony
 		Cathedrals now realy need state religion
+		Some Hints are added (when you load a game)
 		
 	Map and province changes:
 		A few small fixes to the map after the updates of Beta 8
