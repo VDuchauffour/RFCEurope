@@ -99,6 +99,7 @@ Changes for Beta 9:
 		Some wonder "movies" (read pictures) have a much smaller size
 		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
 		Ethnic unit art for Russian Great Merchant
+		Walrus art for Ivory
 
 	Balance:
 		Added direct stability bonus for Golden Age, before it was only implicid via the boost of Economy
