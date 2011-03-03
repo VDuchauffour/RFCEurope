@@ -111,10 +111,10 @@
 			<Type>ART_DEF_BONUS_IVORY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Elephant/Elephant.nif</NIF>
-			<KFM>Art/Terrain/Resources/Elephant/Elephant.kfm</KFM>
-			<SHADERNIF>Art/Terrain/Resources/Elephant/Elephant_FX.nif</SHADERNIF>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Ivory.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,13</Button>
+			<NIF>Art/Terrain/Resources/Walrus/Sea_Lions.nif</NIF>
+			<KFM>Art/Terrain/Resources/Walrus/Sea_Lions.kfm</KFM>
+			<SHADERNIF>Art/Terrain/Resources/Walrus/Sea_Lions_fx.nif</SHADERNIF>
+			<Button>Art/Interface/Buttons/WorldBuilder/Walrus.dds</Button>
 			<FontButtonIndex>25</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
