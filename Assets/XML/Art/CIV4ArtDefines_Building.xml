@@ -639,16 +639,6 @@
 			<Button>,Art/Interface/Buttons/Buildings/Castle.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GROCER</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>2.3</fScale>
-			<fInterfaceScale>0.87</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Grocer/Grocer.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Market.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,3</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -939,7 +929,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Catholic Belfry.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-		<Type>ART_DEF_BUILDING_CATHOLIC_SCHOOL</Type>
+			<Type>ART_DEF_BUILDING_CATHOLIC_SCHOOL</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.7</fScale>
