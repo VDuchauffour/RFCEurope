@@ -25,7 +25,7 @@ TODO:
 		Fix Ottoman bad stability with expansion
 		Check Genoa 1st Turn culture bug
 		EDEAD: You might also want to merge the parts of Better BTS AI that are in SoI, the change in plot danger calculations is also a huge speed boost. Workers, settlers etc. only need to know if danger is >0 and BTS normally counts all the units nearby, so most of the calculations are in vain, and BBAI fixes that.
-		Add food near Dijon
+		Add food near Dijon - (partly done with the wheat)
 		Nasty Dutch bug
 		Fix Dutch getting overwhelmed by German culture (even a city flips away form the player)
 		Faith point bonuses to be based on average faith, not total faith
