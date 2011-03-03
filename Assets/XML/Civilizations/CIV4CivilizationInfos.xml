@@ -2228,6 +2228,57 @@
                                         <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
+                                        <DCNConditionNotReligion>RELIGION_ISLAM</DCNConditionNotReligion>
+                                        <DCNConditionVassalOf>NONE</DCNConditionVassalOf>
+                                        <DCNConditionGenericVassal>0</DCNConditionGenericVassal>
+                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+                                        <DCNConditionHasRespawned>1</DCNConditionHasRespawned>
+                                        <DCNName>TXT_KEY_DN_RESPAWNED_DEFAULT_NONMUSLIM</DCNName>
+                                </DCNCondition>
+                                <DCNCondition>
+                                        <DCNConditionCivic>NONE</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+                                        <DCNConditionReligion>RELIGION_ISLAM</DCNConditionReligion>
+                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+                                        <DCNConditionVassalOf>NONE</DCNConditionVassalOf>
+                                        <DCNConditionGenericVassal>0</DCNConditionGenericVassal>
+                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+                                        <DCNConditionHasRespawned>1</DCNConditionHasRespawned>
+                                        <DCNName>TXT_KEY_DN_RESPAWNED_DEFAULT_MUSLIM</DCNName>
+                                </DCNCondition>
+                                <DCNCondition>
+                                        <DCNConditionCivic>NONE</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+                                        <DCNConditionReligion>NONE</DCNConditionReligion>
+                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+                                        <DCNConditionVassalOf>NONE</DCNConditionVassalOf>
+                                        <DCNConditionGenericVassal>0</DCNConditionGenericVassal>
+                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+                                        <DCNConditionHasRespawned>1</DCNConditionHasRespawned>
+                                        <DCNName>TXT_KEY_DN_RESPAWNED_DEFAULT_MUSLIM</DCNName>
+                                </DCNCondition>
+                                <DCNCondition>
+                                        <DCNConditionCivic>NONE</DCNConditionCivic>
+                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+                                        <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>CIVILIZATION_BYZANTIUM</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>

@@ -710,7 +710,7 @@ class RiseAndFall:
 	#Sedna17 Respawn 
 	def setupRespawnTurns(self):
 		for iCiv in range(iNumMajorPlayers):
-			self.setRespawnTurn(iCiv, con.tRespawnTime[iCiv]+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier') - 10)+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier2') - 10)) #bell-curve-like spawns within +/- 10 turns of desired turn
+			self.setRespawnTurn(iCiv, con.tRespawnTime[iCiv]+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier') - 10)+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier2') - 10)) #bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
 			
 		
         def setupBirthTurnModifiers(self):
@@ -836,9 +836,10 @@ class RiseAndFall:
                                 self.resurrection(iGameTurn, -1)
 
 		lRespawnTurns = self.getAllRespawnTurns()
-		print(lRespawnTurns)
+		print("Special Respawn Turns ",lRespawnTurns)
 		if iGameTurn in lRespawnTurns:
 			iCiv = lRespawnTurns.index(iGameTurn)#Lookup index for 
+                        print("Special Respawn For Player: ",iCiv)
 			if iCiv < iNumMajorPlayers and iCiv > 0:
 				self.resurrection(iGameTurn,iCiv)
                 
@@ -1137,7 +1138,11 @@ class RiseAndFall:
                         #self.resurectCiv( iDeadCiv )
                                 
         def findCivToResurect( self, iGameTurn , bSpecialRespawn, iDeadCiv):
-                iMinNumCities = 2
+                print("Looking up a civ to resurect, iDeadCiv: ",iDeadCiv)
+                if ( bSpecialRespawn ):
+                        iMinNumCities = 1
+                else:
+                        iMinNumCities = 2
         
                 iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
                 cityList = []
@@ -1164,6 +1169,7 @@ class RiseAndFall:
                                                         pCurrent = gc.getMap().plot( x, y )
                                                         if ( pCurrent.isCity()):
                                                                 city = pCurrent.getPlotCity()
+                                                                print("Considering city at: (x,y) ",x,y)
                                                                 iOwner = city.getOwner()
                                                                 if (iOwner >= iNumActivePlayers): #if (iOwner == iBarbarian or iOwner == iIndependent or iOwner == iIndependent2): #remove in vanilla
                                                                         cityList.append(pCurrent.getPlotCity())
@@ -1174,9 +1180,9 @@ class RiseAndFall:
                                                                         iOwnerStability = gc.getPlayer(iOwner).getStability()
                                                                         if (not gc.getPlayer(iOwner).isHuman()):
                                                                                 iMinNumCitiesOwner = 2
-                                                                                iOwnerStability -= 8
+                                                                                iOwnerStability -= 5
                                                                         if (gc.getPlayer(iOwner).getNumCities() >= iMinNumCitiesOwner):
-                                                                                if (iOwnerStability < -8):
+                                                                                if (iOwnerStability < -5):
                                                                                         if (not city.isWeLoveTheKingDay() and not city.isCapital()):
                                                                                                         cityList.append(pCurrent.getPlotCity())
                                                                                                         #print (iDeadCiv, pCurrent.getPlotCity().getName(), pCurrent.getPlotCity().getOwner(), "2", cityList)
@@ -1195,7 +1201,7 @@ class RiseAndFall:
                                                                                                                 city.getWarWearinessPercentAnger() > 0):
                                                                                                                         cityList.append(pCurrent.getPlotCity())
                                                                                                                         #print (iDeadCiv, pCurrent.getPlotCity().getName(), pCurrent.getPlotCity().getOwner(), "3", cityList)
-                                                                                if (iOwnerStability < 10):
+                                                                                if ( (not bSpecialRespawn) and (iOwnerStability < 10) ):
                                                                                                 if (city.getX() == tCapitals[iDeadCiv][0] and city.getY() == tCapitals[iDeadCiv][1]):
                                                                                                         if (pCurrent.getPlotCity() not in cityList):
                                                                                                                 cityList.append(pCurrent.getPlotCity())
@@ -1351,38 +1357,39 @@ class RiseAndFall:
                                                         teamDeadCiv.setHasTech(t, True, iDeadCiv, False, False)
 
                 for t in range(xml.iNumTechs):
-                        if (teamBarbarian.isHasTech(t) or teamIndependent.isHasTech(t) or teamIndependent2.isHasTech(t)): #remove indep in vanilla
+                        if (teamBarbarian.isHasTech(t) or teamIndependent.isHasTech(t) or teamIndependent2.isHasTech(t) or teamIndependent3.isHasTech(t) or teamIndependent4.isHasTech(t)): #remove indep in vanilla
                                 teamDeadCiv.setHasTech(t, True, iDeadCiv, False, False)
 
                 self.moveBackCapital(iDeadCiv)
 
                 #add former colonies that are still free
+                # 3Miro: no need, we don't have "colonies", this causes trouble with Cordoba's special respawn, getting cities back from Iberia
                 colonyList = []
-                for iIndCiv in range(iNumTotalPlayers+1): #barbarians too
-                        if (iIndCiv >= iNumActivePlayers):
-                                if (gc.getPlayer(iIndCiv).isAlive()):
-                                        apCityList = PyPlayer(iIndCiv).getCityList()
-                                        for pCity in apCityList:
-                                                indepCity = pCity.GetCy()                                                                
-                                                if (indepCity.getOriginalOwner() == iDeadCiv):
-                                                        print ("colony:", indepCity.getName(), indepCity.getOriginalOwner())
-                                                        indX = indepCity.getX()
-                                                        indY = indepCity.getY()
-							lCitySpot = ( indX, indY );
-                                                        if (gc.getPlayer(iDeadCiv).getSettlersMaps( con.iMapMaxY-indY-1, indX ) >= 90):
-                                                                if ((lCitySpot not in lCityList) and indepCity not in colonyList):
-                                                                        colonyList.append(indepCity)
-                if (len(colonyList) > 0):
-                        for k in range(len(colonyList)):
-                                print ("INDEPENDENCE: ", colonyList[k].getName())   
-                                iOwner = colonyList[k].getOwner()
-                                utils.cultureManager((colonyList[k].getX(),colonyList[k].getY()), 100, iDeadCiv, iOwner, False, True, True)
-                                utils.flipUnitsInCityBefore((colonyList[k].getX(),colonyList[k].getY()), iDeadCiv, iOwner)
-                                self.setTempFlippingCity((colonyList[k].getX(),colonyList[k].getY()))
-                                utils.flipCity((colonyList[k].getX(),colonyList[k].getY()), 0, 0, iDeadCiv, [iOwner])
-                                tCoords = self.getTempFlippingCity()
-                                utils.flipUnitsInCityAfter(tCoords, iOwner)
-                                utils.flipUnitsInArea((tCoords[0]-2, tCoords[1]-2), (tCoords[0]+2, tCoords[1]+2), iDeadCiv, iOwner, True, False)
+                #for iIndCiv in range(iNumTotalPlayers+1): #barbarians too
+                #        if (iIndCiv >= iNumActivePlayers):
+                #                if (gc.getPlayer(iIndCiv).isAlive()):
+                #                        apCityList = PyPlayer(iIndCiv).getCityList()
+                #                        for pCity in apCityList:
+                #                                indepCity = pCity.GetCy()                                                                
+                #                                if (indepCity.getOriginalOwner() == iDeadCiv):
+                #                                        print ("colony:", indepCity.getName(), indepCity.getOriginalOwner())
+                #                                        indX = indepCity.getX()
+                #                                        indY = indepCity.getY()
+                #                                        lCitySpot = ( indX, indY );
+                #                                        if (gc.getPlayer(iDeadCiv).getSettlersMaps( con.iMapMaxY-indY-1, indX ) >= 90):
+                #                                                if ((lCitySpot not in lCityList) and indepCity not in colonyList):
+                #                                                        colonyList.append(indepCity)
+                #if (len(colonyList) > 0):
+                #        for k in range(len(colonyList)):
+                #                print ("INDEPENDENCE: ", colonyList[k].getName())   
+                #                iOwner = colonyList[k].getOwner()
+                #                utils.cultureManager((colonyList[k].getX(),colonyList[k].getY()), 100, iDeadCiv, iOwner, False, True, True)
+                #                utils.flipUnitsInCityBefore((colonyList[k].getX(),colonyList[k].getY()), iDeadCiv, iOwner)
+                #                self.setTempFlippingCity((colonyList[k].getX(),colonyList[k].getY()))
+                #                utils.flipCity((colonyList[k].getX(),colonyList[k].getY()), 0, 0, iDeadCiv, [iOwner])
+                #                tCoords = self.getTempFlippingCity()
+                #                utils.flipUnitsInCityAfter(tCoords, iOwner)
+                #                utils.flipUnitsInArea((tCoords[0]-2, tCoords[1]-2), (tCoords[0]+2, tCoords[1]+2), iDeadCiv, iOwner, True, False)
                                 
                 CyInterface().addMessage(iHuman, True, con.iDuration, \
                                         (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
@@ -1403,6 +1410,9 @@ class RiseAndFall:
                 utils.setPlagueCountdown(iDeadCiv, -10)
                 utils.clearPlague(iDeadCiv)                                
                 self.convertBackCulture(iDeadCiv)
+                
+                self.pm.onRespawn( iDeadCiv ) # 3Miro: for Cordoba's new provinces
+                gc.getPlayer( iDeadCiv ).setRespawned( True )
                 return
 
         def moveBackCapital(self, iCiv):
@@ -2068,6 +2078,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
                 if (iCiv == iArabia):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2084,7 +2095,7 @@ class RiseAndFall:
                 if (iCiv == iSpain):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCatapult, iCiv, tPlot, 1)
@@ -2145,6 +2156,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
                                 pGenoa.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2158,6 +2170,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
 			tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
 				pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2167,6 +2180,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                 if (iCiv == iLithuania):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2180,6 +2194,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
                 if (iCiv == iTurkey):
                         utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)

@@ -446,6 +446,17 @@ class ProvinceManager:
         def onCityRazed(self, iOwner, playerType, city):
                 #print(" ProvinceManager Razed")
                 pass
+                
+        def onRespawn(self, iPlayer ):
+                if ( iPlayer == iCordoba ):
+                        for iProv in range( xml.iP_MaxNumberOfProvinces ):
+                                pCordoba.setProvinceType( iProv, iProvinceNone )
+                        pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
+                        pCordoba.setProvinceType( xml.iP_Algiers, iProvinceNatural )
+                        pCordoba.setProvinceType( xml.iP_Oran, iProvinceOuter )
+                        pCordoba.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
+                        pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
+                        pCordoba.setProvinceType( xml.iP_Morocco, iProvinceOuter )
         
         def onSpawn( self, iPlayer ):
                 # when a new nations spawns, old nation should lose some of their provinces

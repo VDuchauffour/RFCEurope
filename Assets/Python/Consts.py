@@ -441,7 +441,7 @@ tNormalAreasTL = ( #These areas are typically used for resurrection. Also used i
 (35,34),   #Franks
 (48,1),    #Arabs
 (73,28),   #Bulgaria
-(16,13),   #Cordoba
+(44,9),   #Cordoba
 (53,56),   #Norse
 (56,33),   #Venice
 (45,33),   #Burgundy
@@ -467,7 +467,7 @@ tNormalAreasBR = (
 (44,49),   #Franks
 (98,13),   #Arabs
 (80,32),   #Bulgaria
-(30,24),   #Cordoba
+(52,20),   #Cordoba
 (59,71),   #Norse
 (61,36),   #Venice
 (49,44),   #Burgundy
@@ -755,7 +755,8 @@ tRespawnTime = (
 350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line. 
 190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders 
 195, #Bulgaria 1185 -- Second Bulgarian empire
-174, #Cordoba 1122 -- Almohads, better timing than Almoravids
+#174, #Cordoba 1122 -- Almohads, better timing than Almoravids
+215, # 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia
 265, #Norse 1395 -- Kalmar Union
 999, #Venecia -- no special respawn
 245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy

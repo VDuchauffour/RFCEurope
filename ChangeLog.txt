@@ -66,6 +66,7 @@ Changes for Beta 9:
 		Changed Norse UHV 1: now you have to build the Vinland colony
 		Cathedrals now realy need state religion
 		Some Hints are added (when you load a game)
+		Player number 4 (Cordoba) respawns as Hafsid Caliphate, effectively adding a new player in North Africa (need to work on the spread of Islam in NA)
 		
 	Map and province changes:
 		A few small fixes to the map after the updates of Beta 8
@@ -122,6 +123,7 @@ Changes for Beta 9:
 		Small boost for the defensive Crusade when you have less than 6 cities (i.e. you need a bit more help)
 		Added more starting techs to Lithuania
 		Judaism now also adds culture like all the other religions
+		Added Missionaries for many "historic" nations, sometimes one has to wait way too long for a religion (like England)
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
@@ -139,6 +141,8 @@ Changes for Beta 9:
 		Fixed: Seljuks were broken, they were not spread out geographically (there were some issues with the code)
 		Fixed: the starting techs for Portugal skipped Lateen Sails and went to Carthography directly, now there is no break
 		Fixed: TXT_KEY_GREAT_PERSON_PETER_II
+		Fixed: Portugal settlers map did not include West Africa and the Atlantic Islands
+		Fixed: The Defensive Crusades were totally broken, they should work now (needed to add Defensive Provinces for the traditionally non-Catholic Players)
 				
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

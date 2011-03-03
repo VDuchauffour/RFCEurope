@@ -830,3 +830,5 @@ iP_Volhynia = 142
 iP_Bosnia = 143
 iP_Thessaloniki = 144
 iP_Marrakesh = 145
+
+iP_MaxNumberOfProvinces = 150
