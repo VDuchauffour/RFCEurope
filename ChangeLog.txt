@@ -67,6 +67,7 @@ Changes for Beta 9:
 		Cathedrals now realy need state religion
 		Some Hints are added (when you load a game)
 		Player number 4 (Cordoba) respawns as Hafsid Caliphate, effectively adding a new player in North Africa (need to work on the spread of Islam in NA)
+		Trading over ocean is possible with Astrolable (to help the Norse with their UHV)
 		
 	Map and province changes:
 		A few small fixes to the map after the updates of Beta 8
