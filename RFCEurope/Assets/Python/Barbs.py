@@ -86,7 +86,7 @@ lTver = [85,60,240,0] #900 AD
 lSmolensk = [85,53,240,0] #900 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
 lMus = [99,21,153,0] #1060 AD
-lPalermo = [55,19,2,0]
+lPalermo = [55,19,2,0] # 500 AD
 lGroningen = [52,54,150,0] #1050 AD
 
 #handicap level modifier
@@ -282,7 +282,7 @@ class Barbs:
 		
 		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
         # 3Miro Barbarian and Independent city spawn and barbarian invasions go here. Check with original RFC file for details
-		self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, xml.iCrossbowman, 2, -1) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
+		self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
 		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1) #UnitOwner = 22 -> iIndy2 
 		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism)
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)

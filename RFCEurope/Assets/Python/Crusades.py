@@ -24,6 +24,35 @@ iOrthodoxy = xml.iOrthodoxy
 iIslam = xml.iIslam
 iNumReligions = xml.iNumReligions
 
+ProvMap = rfceMaps.tProinceMap
+
+# tDefensiveCrusadeMap, can call DC, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
+tDefensiveCrusadeMap = [
+[], #tByzantium
+[xml.iP_IleDeFrance,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Bretagne,xml.iP_Normandy,xml.iP_Provence,xml.iP_Flanders,xml.iP_Burgundy], #tFrance
+[], #tArabia
+[], #tBulgaria
+[xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia], #tCordoba (for consistency)
+[], #tNorse
+[xml.iP_Verona, xml.iP_Tuscany, xml.iP_Carinthia, xml.iP_Dalmatia], #tVenecia
+[xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine], #tBurgundy
+[xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Bavaria, xml.iP_Saxony, xml.iP_Franconia, xml.iP_Flanders, xml.iP_Brandenburg, xml.iP_Bohemia], #tGermany
+[], #tKiev
+[xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Pannonia, xml.iP_Austria], #tHungary
+[xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia], #tSpain
+[xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Silesia, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_GaliciaPoland], #tPoland
+[xml.iP_Lombardy, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Tuscany], #tGenoa
+[], #tEngland
+[xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia], #tPortugal
+[], #tLithuania
+[xml.iP_Austria, xml.iP_Salzburg, xml.iP_Tyrol, xml.iP_Bohemia, xml.iP_Moravia], #tAustria
+[], #tTurkey
+[], #tMoscow
+[], #tSweden
+[], #tDutch
+[] #tRome
+];
+
 
 class Crusades:
 	
@@ -889,11 +918,13 @@ class Crusades:
                         utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
 	
 	def doDC( self, iGameTurn ):
-		if ( iGameTurn < self.getDCLast() + 20 ): # wait 20 turns between DC (Defensive Crusades)
+                #print(" DC Check 1",iGameTurn,self.getDCLast())
+		if ( iGameTurn < self.getDCLast() + 15 ): # wait 20 turns between DC (Defensive Crusades)
 			return
 		lPotentials = []
-		if ( iGameTurn % 3 != gc.getGame().getSorenRandNum(3, 'roll to see if we should DC')  ): # otherwise every turn gets too much to check
-			return
+		#if ( iGameTurn % 3 != gc.getGame().getSorenRandNum(3, 'roll to see if we should DC')  ): # otherwise every turn gets too much to check
+		#	return
+                #print(" DC Check")
 		for iPlayer in range( con.iNumPlayers - 1 ): # everyone except the Pope
 			if ( self.canDC( iPlayer, iGameTurn ) ):
 				lPotentials.append( iPlayer )
@@ -913,9 +944,10 @@ class Crusades:
 				for i in range( len(lPotentials) ):
 					pPlayer = gc.getPlayer( lPotentials[i] )
 					iRandNum -= pPlayer.getFaith() + pPope.AI_getAttitude( lPotentials[i] )
-					if ( iRandNum < 0 ):
+					if ( iRandNum <= 0 ):
 						iChosen = lPotentials[i]
 						break
+                #print(" DC Chosen ",iChosen)
 		if ( iChosen > -1 ):
 			iHuman = utils.getHumanID()
 			if ( iChosen == iHuman ):
@@ -927,12 +959,13 @@ class Crusades:
 				
 				
 	def canDC( self, iPlayer, iGameTurn ):
+                #print(" DC Chech for player ",iPlayer,iGameTurn)
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( (iGameTurn < con.tBirth[iPlayer]+5) or (not pPlayer.isAlive()) or pPlayer.getStateReligion() != iCatholicism ): 
 		# only born, flipped and living Catholics can DC
 			return False
 		teamPlayer = gc.getTeam( pPlayer.getTeam() )
-		if ( not teamPlayer.isOpenBorders( con.iPope ) ):
+		if ( not teamPlayer.isOpenBorders( gc.getPlayer( con.iPope ).getTeam() ) ):
 			return False
 		#print( " Check to see if player can apply for DC ",iPlayer )
 		#for iX in range( con.tNormalAreasTL[iPlayer][0], con.tNormalAreasBR[iPlayer][0] +1 ):
@@ -959,16 +992,41 @@ class Crusades:
 		#									iGuardianReligion = pPotentialGuardian.getStateReligion()
 		#									if ( iGuardianReligion != iCatholicism and iGuardianReligion != iOrthodoxy ):
 		#										return True
-		for iEnemy in range( con.iNumPlayers ):
+		#for iEnemy in range( con.iNumPlayers ):
+		#	pEnemy = gc.getPlayer( iEnemy )
+		#	if ( teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 < iGameTurn ):
+		#		iEnemyReligion = pEnemy.getStateReligion()
+		#		print( " Crusade condition war meet: ",iEnemy,iEnemyReligion )
+		#		if ( iEnemyReligion != iCatholicism and iEnemyReligion != iOrthodoxy ):
+		#			print( " Crusade condition Enemy Religion Meet: " )
+		#			for pyCity in PyPlayer(iEnemy).getCityList():
+		#				pCity = pyCity.GetCy()
+		#				if ( rfceMaps.tWarsMaps[iPlayer][con.iMapMaxY-1-pCity.getY()][pCity.getX()] > 0 ):
+		#					print( " Crusade War map condition meat: ",pCity.getName() )
+		#					teamEnemy = gc.getTeam( pEnemy.getTeam() )
+		#					bSafe = False
+		#					for iPotentialGuardian in range ( con.iNumPlayers ):
+		#						pPotentialGuardian = gc.getPlayer( iPotentialGuardian )
+		#						#print( " Crusade potential guardian: ",iPotentialGuardian )
+		#						if ( pPotentialGuardian.isAlive() and iPotentialGuardian != iEnemy and teamEnemy.isVassal( pPotentialGuardian.getTeam() ) ):
+		#							iGuardianReligion = pPotentialGuardian.getStateReligion()
+		#							#print( " Crusade has a guardian ",iGuardianReligion )
+		#							if ( iGuardianReligion == iCatholicism or iGuardianReligion == iOrthodoxy ):
+		#								#print( " Crusade guardian saves " )
+		#								bSafe = True
+		#					if ( not bSafe ):
+		#						return True
+                tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
+                for iEnemy in range( con.iNumPlayers ):
 			pEnemy = gc.getPlayer( iEnemy )
-			if ( teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 > iGameTurn ):
+			if ( teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 < iGameTurn ):
 				iEnemyReligion = pEnemy.getStateReligion()
 				#print( " Crusade condition war meet: ",iEnemy,iEnemyReligion )
 				if ( iEnemyReligion != iCatholicism and iEnemyReligion != iOrthodoxy ):
 					#print( " Crusade condition Enemy Religion Meet: " )
 					for pyCity in PyPlayer(iEnemy).getCityList():
 						pCity = pyCity.GetCy()
-						if ( rfceMaps.tWarsMaps[iPlayer][con.iMapMaxY-1-pCity.getY()][pCity.getX()] > 0 ):
+						if ( ProvMap[pCity.getY()][pCity.getX()] in tPlayerDCMap ):
 							#print( " Crusade War map condition meat: ",pCity.getName() )
 							teamEnemy = gc.getTeam( pEnemy.getTeam() )
 							bSafe = False

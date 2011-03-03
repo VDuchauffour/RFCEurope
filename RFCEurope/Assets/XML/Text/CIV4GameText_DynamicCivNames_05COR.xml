@@ -160,4 +160,18 @@
 		<German>Provinz Andalusien</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_MUSLIM</Tag>
+		<English>Hafsid Caliphate</English>
+		<French>Hafsid Caliphate</French>
+		<German>Hafsid Caliphate</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_NONMUSLIM</Tag>
+		<English>Hafsid Kingdom</English>
+		<French>Hafsid Kingdom</French>
+		<German>Hafsid Kingdom</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
 </Civ4GameText>
