@@ -1220,7 +1220,7 @@ class RFCUtils:
 		if (tPlot != False):
                         plot = gc.getMap().plot( tPlot[0], tPlot[1] )                
                         if (not plot.getPlotCity().isNone()):
-				plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism into this city
+				plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
                                 return True
                         else:
                                 return False

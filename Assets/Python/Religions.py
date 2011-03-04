@@ -8,6 +8,7 @@ import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
+import RFCEMaps as rfcemaps
 
 # globals
 gc = CyGlobalContext()
@@ -105,6 +106,14 @@ lReformationNeighbours = [
 ### Reformation End ###    
 
 
+### Regions to spread religion ###
+tProvinceMap = rfcemaps.tProinceMap
+tSpain = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia]
+tPoland = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_Silesia,xml.iP_Suvalkija,xml.iP_Brest,xml.iP_Pomerania]
+tGermany = [xml.iP_Lorraine,xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia]
+tWestAfrica = [xml.iP_Tetouan,xml.iP_Morocco,xml.iP_Marrakesh,xml.iP_Oran]
+tNorthAfrica = [xml.iP_Algiers,xml.iP_Ifriqiya,xml.iP_Tripolitania,xml.iP_Cyrenaica]
+
 class Religions:
 
 ##################################################
@@ -156,23 +165,36 @@ class Religions:
 		if (iGameTurn == xml.i700AD-2):
 			#Spread Judaism to Toledo
 			utils.spreadJews(tToledo,xml.iJudaism)
+                        tCity = self.selectRandomCityArea(tNorthAfrica)
+			utils.spreadJews(tCity,xml.iIslam)
+                        tCity = self.selectRandomCityArea(tNorthAfrica)
+			utils.spreadJews(tCity,xml.iIslam)
+                if (iGameTurn == xml.i700AD+2):
+			#Spread Judaism to Toledo
+			tCity = self.selectRandomCityArea(tWestAfrica)
+			utils.spreadJews(tCity,xml.iIslam)
+                        tCity = self.selectRandomCityArea(tWestAfrica)
+			utils.spreadJews(tCity,xml.iJudaism)
+
 		if (iGameTurn == xml.i900AD):
 			#Spread Judaism to another town or two in Spain
-			tCity = self.selectRandomCityArea(tSpainTL,tSpainBR)
+			tCity = self.selectRandomCityArea(tSpain)
 			utils.spreadJews(tCity,xml.iJudaism)
 		if (iGameTurn == xml.i1000AD):
 			#Spread Judaism to a city in France/Germany
-			tCity = self.selectRandomCityArea(tMainzTL,tMainzBR)
+			tCity = self.selectRandomCityArea(tGermany)
 			utils.spreadJews(tCity,xml.iJudaism)
+                        tCity = self.selectRandomCityArea(tNorthAfrica)
+			utils.spreadJews(tCity,xml.iIslam)
 		if (iGameTurn == xml.i1101AD):
 			#Spread Judaism to a couple towns in Poland
-			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
+			tCity = self.selectRandomCityArea(tPoland)
 			utils.spreadJews(tCity,xml.iJudaism)
 		if (iGameTurn == xml.i1200AD):
-			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
+			tCity = self.selectRandomCityArea(tPoland)
 			utils.spreadJews(tCity,xml.iJudaism)
 		if (iGameTurn == xml.i1401AD):
-			tCity = self.selectRandomCityArea(tPolandTL,tPolandBR)
+			tCity = self.selectRandomCityArea(tPoland)
 			utils.spreadJews(tCity,xml.iJudaism)
 		
                	
@@ -317,13 +339,14 @@ class Religions:
                 return False
             
 
-        def selectRandomCityArea(self, tTopLeft, tBottomRight):
+        def selectRandomCityArea(self, tProvinces):
                 cityList = []
-                for x in range(tTopLeft[0], tBottomRight[0]+1):
-                        for y in range(tTopLeft[1], tBottomRight[1]+1):
-                                pCurrent = gc.getMap().plot( x, y )
-                                if ( pCurrent.isCity()):
-                                        cityList.append(pCurrent.getPlotCity())
+                for x in range( con.iMapMaxX ):
+                        for y in range( con.iMapMaxY ):
+                                if ( tProvinceMap[y][x] in tProvinces ):
+                                        pCurrent = gc.getMap().plot( x, y )
+                                        if ( pCurrent.isCity()):
+                                                cityList.append(pCurrent.getPlotCity())
                 if (cityList):
                         iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
                         city = cityList[iCity]
