@@ -260,82 +260,82 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_20</Tag>
 		<English>London</English>
-		<French>Province_20</French>
-		<German>Province_20</German>
-		<Italian>Province_20</Italian>
-		<Spanish>Province_20</Spanish>
+		<French>Londres</French>
+		<German>London</German>
+		<Italian>Londra</Italian>
+		<Spanish>Londres</Spanish>
 		<Russian>London</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_21</Tag>
 		<English>Wessex</English>
-		<French>Province_21</French>
-		<German>Province_21</German>
-		<Italian>Province_21</Italian>
-		<Spanish>Province_21</Spanish>
+		<French>Wessex</French>
+		<German>Wessex</German>
+		<Italian>Wessex</Italian>
+		<Spanish>Wessex</Spanish>
 		<Russian>Wessex</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_22</Tag>
 		<English>Wales</English>
-		<French>Province_22</French>
-		<German>Province_22</German>
-		<Italian>Province_22</Italian>
-		<Spanish>Province_22</Spanish>
+		<French>Galles</French>
+		<German>Wales</German>
+		<Italian>Galles</Italian>
+		<Spanish>Galles</Spanish>
 		<Russian>Wales</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_23</Tag>
 		<English>Scotland</English>
-		<French>Province_23</French>
-		<German>Province_23</German>
-		<Italian>Province_23</Italian>
-		<Spanish>Province_23</Spanish>
+		<French>Ecosse</French>
+		<German>Schottland</German>
+		<Italian>Scozia</Italian>
+		<Spanish>Escocia</Spanish>
 		<Russian>Scotland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_24</Tag>
 		<English>Ireland</English>
-		<French>Province_24</French>
-		<German>Province_24</German>
-		<Italian>Province_24</Italian>
-		<Spanish>Province_24</Spanish>
+		<French>Irlande</French>
+		<German>Irland</German>
+		<Italian>Irlanda</Italian>
+		<Spanish>Irlanda</Spanish>
 		<Russian>Ireland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_25</Tag>
 		<English>Yorkshire</English>
-		<French>Province_25</French>
-		<German>Province_25</German>
-		<Italian>Province_25</Italian>
-		<Spanish>Province_25</Spanish>
+		<French>Yorkshire</French>
+		<German>Yorkshire</German>
+		<Italian>Yorkshire</Italian>
+		<Spanish>Yorkshire</Spanish>
 		<Russian>Yorkshire</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_26</Tag>
 		<English>East Anglia</English>
-		<French>Province_26</French>
-		<German>Province_26</German>
-		<Italian>Province_26</Italian>
-		<Spanish>Province_26</Spanish>
+		<French>Est_Anglie</French>
+		<German>East Anglia</German>
+		<Italian>Anglia Orientale</Italian>
+		<Spanish>Anglia Oriental</Spanish>
 		<Russian>East Anglia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_27</Tag>
 		<English>Northumbria</English>
-		<French>Province_27</French>
-		<German>Province_27</German>
-		<Italian>Province_27</Italian>
-		<Spanish>Province_27</Spanish>
+		<French>Northumbrie</French>
+		<German>Northumbria</German>
+		<Italian>Northumbria</Italian>
+		<Spanish>Northumbria</Spanish>
 		<Russian>Northumbria</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_28</Tag>
 		<English>Iceland</English>
-		<French>Province_28</French>
-		<German>Province_28</German>
-		<Italian>Province_28</Italian>
-		<Spanish>Province_28</Spanish>
+		<French>Islande</French>
+		<German>Island</German>
+		<Italian>Islanda</Italian>
+		<Spanish>Eslandia</Spanish>
 		<Russian>Iceland</Russian>
 	</TEXT>
 	<TEXT>
@@ -350,74 +350,74 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_30</Tag>
 		<English>Denmark</English>
-		<French>Province_30</French>
-		<German>Province_30</German>
-		<Italian>Province_30</Italian>
-		<Spanish>Province_30</Spanish>
+		<French>Danemark</French>
+		<German>Danemark</German>
+		<Italian>Danimarca</Italian>
+		<Spanish>Dinamarca</Spanish>
 		<Russian>Denmark</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_31</Tag>
 		<English>Finland</English>
-		<French>Province_31</French>
-		<German>Province_31</German>
-		<Italian>Province_31</Italian>
-		<Spanish>Province_31</Spanish>
-		<Russian>Province_31</Russian>
+		<French>Finlande</French>
+		<German>Finland</German>
+		<Italian>Finlandia</Italian>
+		<Spanish>Finlandia</Spanish>
+		<Russian>Finland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_32</Tag>
 		<English>Norway</English>
-		<French>Province_32</French>
-		<German>Province_32</German>
-		<Italian>Province_32</Italian>
-		<Spanish>Province_32</Spanish>
-		<Russian>Province_32</Russian>
+		<French>Norvege</French>
+		<German>Norwegen</German>
+		<Italian>Norvegia</Italian>
+		<Spanish>Noruega</Spanish>
+		<Russian>Norway</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_33</Tag>
 		<English>Vestfold</English>
-		<French>Province_33</French>
-		<German>Province_33</German>
-		<Italian>Province_33</Italian>
-		<Spanish>Province_33</Spanish>
-		<Russian>Province_33</Russian>
+		<French>Vestfold</French>
+		<German>Vestfold</German>
+		<Italian>Vestfold</Italian>
+		<Spanish>Vestfold</Spanish>
+		<Russian>Vestfold</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_34</Tag>
 		<English>Gotaland</English>
-		<French>Province_34</French>
-		<German>Province_34</German>
-		<Italian>Province_34</Italian>
-		<Spanish>Province_34</Spanish>
-		<Russian>Province_34</Russian>
+		<French>Gotaland</French>
+		<German>Gotaland</German>
+		<Italian>Gotaland</Italian>
+		<Spanish>Gotaland</Spanish>
+		<Russian>Gotaland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_35</Tag>
 		<English>Svealand</English>
-		<French>Province_35</French>
-		<German>Province_35</German>
-		<Italian>Province_35</Italian>
-		<Spanish>Province_35</Spanish>
-		<Russian>Province_35</Russian>
+		<French>Svealand</French>
+		<German>Svealand</German>
+		<Italian>Svealand</Italian>
+		<Spanish>Svealand</Spanish>
+		<Russian>Svealand</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_36</Tag>
 		<English>Norrland</English>
-		<French>Province_36</French>
-		<German>Province_36</German>
-		<Italian>Province_36</Italian>
-		<Spanish>Province_36</Spanish>
-		<Russian>Province_36</Russian>
+		<French>Norrland</French>
+		<German>Norrland</German>
+		<Italian>Norrland</Italian>
+		<Spanish>Norrland</Spanish>
+		<Russian>Norrland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_37</Tag>
 		<English>Oppland</English>
-		<French>Province_37</French>
-		<German>Province_37</German>
-		<Italian>Province_37</Italian>
-		<Spanish>Province_37</Spanish>
-		<Russian>Province_37</Russian>
+		<French>Oppland</French>
+		<German>Oppland</German>
+		<Italian>Oppland</Italian>
+		<Spanish>Oppland</Spanish>
+		<Russian>Oppland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_38</Tag>
@@ -440,74 +440,74 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_40</Tag>
 		<English>Swabia</English>
-		<French>Province_40</French>
-		<German>Province_40</German>
-		<Italian>Province_40</Italian>
-		<Spanish>Province_40</Spanish>
-		<Russian>Province_40</Russian>
+		<French>Souabe</French>
+		<German>Schwaben</German>
+		<Italian>Svevia</Italian>
+		<Spanish>Suabia</Spanish>
+		<Russian>Swabia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_41</Tag>
 		<English>Bavaria</English>
-		<French>Province_41</French>
-		<German>Province_41</German>
-		<Italian>Province_41</Italian>
-		<Spanish>Province_41</Spanish>
-		<Russian>Province_41</Russian>
+		<French>Baviere</French>
+		<German>Bayern</German>
+		<Italian>Vaviera</Italian>
+		<Spanish>Baviera</Spanish>
+		<Russian>Bavaria</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_42</Tag>
 		<English>Bohemia</English>
-		<French>Province_42</French>
-		<German>Province_42</German>
-		<Italian>Province_42</Italian>
-		<Spanish>Province_42</Spanish>
-		<Russian>Province_42</Russian>
+		<French>Boheme</French>
+		<German>Bohmen</German>
+		<Italian>Boemia</Italian>
+		<Spanish>Bohemia</Spanish>
+		<Russian>Bohemia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_43</Tag>
 		<English>Saxony</English>
-		<French>Province_43</French>
-		<German>Province_43</German>
-		<Italian>Province_43</Italian>
-		<Spanish>Province_43</Spanish>
-		<Russian>Province_43</Russian>
+		<French>Saxe</French>
+		<German>Sachsen</German>
+		<Italian>Sassonia</Italian>
+		<Spanish>Sajonia</Spanish>
+		<Russian>Saxony</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_44</Tag>
 		<English>Lorraine</English>
-		<French>Province_44</French>
-		<German>Province_44</German>
-		<Italian>Province_44</Italian>
-		<Spanish>Province_44</Spanish>
-		<Russian>Province_44</Russian>
+		<French>Lorraine</French>
+		<German>Lothringen</German>
+		<Italian>Lorena</Italian>
+		<Spanish>Lorena</Spanish>
+		<Russian>Lorraine</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_45</Tag>
 		<English>Franconia</English>
-		<French>Province_45</French>
-		<German>Province_45</German>
-		<Italian>Province_45</Italian>
-		<Spanish>Province_45</Spanish>
-		<Russian>Province_45</Russian>
+		<French>Franconie</French>
+		<German>Franken</German>
+		<Italian>Franconia</Italian>
+		<Spanish>Franconia</Spanish>
+		<Russian>Franconia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_46</Tag>
 		<English>Brandenburg</English>
-		<French>Province_46</French>
-		<German>Province_46</German>
-		<Italian>Province_46</Italian>
-		<Spanish>Province_46</Spanish>
-		<Russian>Province_46</Russian>
+		<French>Brandebourg</French>
+		<German>Brandenburg</German>
+		<Italian>Brandeburgo</Italian>
+		<Spanish>Brandeburgo</Spanish>
+		<Russian>Brandenburg</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_47</Tag>
 		<English>Tyrol</English>
-		<French>Province_47</French>
-		<German>Province_47</German>
-		<Italian>Province_47</Italian>
-		<Spanish>Province_47</Spanish>
-		<Russian>Province_47</Russian>
+		<French>Tyrol</French>
+		<German>Tirol</German>
+		<Italian>Tirolo</Italian>
+		<Spanish>Tirol</Spanish>
+		<Russian>Tyrol</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_48</Tag>
@@ -530,83 +530,83 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_50</Tag>
 		<English>Pomerania</English>
-		<French>Province_50</French>
-		<German>Province_50</German>
-		<Italian>Province_50</Italian>
-		<Spanish>Province_50</Spanish>
-		<Russian>Province_50</Russian>
+		<French>Pomeranie</French>
+		<German>Pommern</German>
+		<Italian>Pomerania</Italian>
+		<Spanish>Pomerania</Spanish>
+		<Russian>Pomerania</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_51</Tag>
 		<English>Galicia</English>
-		<French>Province_51</French>
-		<German>Province_51</German>
-		<Italian>Province_51</Italian>
-		<Spanish>Province_51</Spanish>
-		<Russian>Province_51</Russian>
+		<French>Galicie</French>
+		<German>Galizien</German>
+		<Italian>Galizia</Italian>
+		<Spanish>Galitzia</Spanish>
+		<Russian>Galicia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_52</Tag>
 		<English>Greater Poland</English>
-		<French>Province_52</French>
-		<German>Province_52</German>
-		<Italian>Province_52</Italian>
-		<Spanish>Province_52</Spanish>
-		<Russian>Province_52</Russian>
+		<French>Grande Pologne</French>
+		<German>Groﬂpolen</German>
+		<Italian>Grande Polonia</Italian>
+		<Spanish>Gran Polonia</Spanish>
+		<Russian>Greater Poland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_53</Tag>
 		<English>Masovia</English>
-		<French>Province_53</French>
-		<German>Province_53</German>
-		<Italian>Province_53</Italian>
-		<Spanish>Province_53</Spanish>
-		<Russian>Province_53</Russian>
+		<French>Mazovie</French>
+		<German>Masowien</German>
+		<Italian>Masovia</Italian>
+		<Spanish>Mazovia</Spanish>
+		<Russian>Masovia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_54</Tag>
 		<English>Lesser Poland</English>
-		<French>Province_54</French>
-		<German>Province_54</German>
-		<Italian>Province_54</Italian>
-		<Spanish>Province_54</Spanish>
-		<Russian>Province_54</Russian>
+		<French>Petite-Pologne</French>
+		<German>Kleinpolen</German>
+		<Italian>Piccola Polonia</Italian>
+		<Spanish>Menor Polonia</Spanish>
+		<Russian>Lesser Poland</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_55</Tag>
 		<English>Suvalkija</English>
-		<French>Province_55</French>
-		<German>Province_55</German>
-		<Italian>Province_55</Italian>
-		<Spanish>Province_55</Spanish>
-		<Russian>Province_55</Russian>
+		<French>Sudovie</French>
+		<German>Suvalkija</German>
+		<Italian>Sudovia</Italian>
+		<Spanish>Suvalkija</Spanish>
+		<Russian>Suvalkija</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_56</Tag>
 		<English>Lithuania</English>
-		<French>Province_56</French>
-		<German>Province_56</German>
-		<Italian>Province_56</Italian>
-		<Spanish>Province_56</Spanish>
-		<Russian>Province_56</Russian>
+		<French>Lituanie</French>
+		<German>Litauen</German>
+		<Italian>Lituania</Italian>
+		<Spanish>Lituania</Spanish>
+		<Russian>Lithuania</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_57</Tag>
 		<English>Livonia</English>
-		<French>Province_57</French>
-		<German>Province_57</German>
-		<Italian>Province_57</Italian>
-		<Spanish>Province_57</Spanish>
-		<Russian>Province_57</Russian>
+		<French>Livonie</French>
+		<German>Livland</German>
+		<Italian>Livonia</Italian>
+		<Spanish>Livonia</Spanish>
+		<Russian>Livonia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_58</Tag>
 		<English>Estonia</English>
-		<French>Province_58</French>
-		<German>Province_58</German>
-		<Italian>Province_58</Italian>
-		<Spanish>Province_58</Spanish>
-		<Russian>Province_58</Russian>
+		<French>Estonie</French>
+		<German>Estland</German>
+		<Italian>Estonia</Italian>
+		<Spanish>Estonia</Spanish>
+		<Russian>Estonia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_59</Tag>
