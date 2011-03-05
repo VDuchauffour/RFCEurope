@@ -77,7 +77,7 @@ Changes for Beta 9:
 		XML cleanup (unused lines of code are removed, many typos fixed)
 		Python cleanup (unused lines of code are removed)
 		New XML entries for Units Production boost and Building + Civic combo (with text and AI awareness, text could probably be improved)
-		Some objects are translated
+		Some objects are translated, a part of the Province names are translated
 		Updated the code for city names, now we can ask for the condition "conquers a number of provinces of given type" and "has conquered specific province"
 		For the "Empire" condition DCNConditionConqNumOfProvincesOfTypeType should be 2 for None, Desired and Outer, DCNConditionConqNumOfProvincesOfTypeNum should be 1 or 2
 		For Austria-Hungary, for Austria, DCNConditionConqASpecificProvince should hold the number for province Hungary (see XMLConsts.py for a list)

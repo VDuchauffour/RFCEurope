@@ -24506,7 +24506,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
 			</TechTypes>
