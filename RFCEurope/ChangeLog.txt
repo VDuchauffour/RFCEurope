@@ -122,6 +122,7 @@ Changes for Beta 9:
 		Cities with population 1 have only 40 percent chance to autoraze
 		Poland no longer builds Prosecutors
 		Islam now spreads through North Africa
+		Longbowmans require Chivalry (instead of Military tradition), Tomb of Al Khalid requires Military Tradition (instead of Chivalry), Maceman recieve a bonus vs. Polearm (instead of Heavy Cavalry)
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities

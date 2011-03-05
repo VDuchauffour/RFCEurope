@@ -620,173 +620,173 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_60</Tag>
 		<English>Carinthia</English>
-		<French>Province_60</French>
-		<German>Province_60</German>
-		<Italian>Province_60</Italian>
-		<Spanish>Province_60</Spanish>
-		<Russian>Province_60</Russian>
+		<French>Carinthie</French>
+		<German>Karnten</German>
+		<Italian>Carinzia</Italian>
+		<Spanish>Carintia</Spanish>
+		<Russian>Carinthia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_61</Tag>
 		<English>Austria</English>
-		<French>Province_61</French>
-		<German>Province_61</German>
-		<Italian>Province_61</Italian>
-		<Spanish>Province_61</Spanish>
-		<Russian>Province_61</Russian>
+		<French>Autriche</French>
+		<German>Osterreich</German>
+		<Italian>Austria</Italian>
+		<Spanish>Austria</Spanish>
+		<Russian>Austria</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_62</Tag>
 		<English>Slavonia</English>
-		<French>Province_62</French>
-		<German>Province_62</German>
-		<Italian>Province_62</Italian>
-		<Spanish>Province_62</Spanish>
-		<Russian>Province_62</Russian>
+		<French>Slavonie</French>
+		<German>Slawonien</German>
+		<Italian>Slavonia</Italian>
+		<Spanish>Eslavonia</Spanish>
+		<Russian>Slavonia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_63</Tag>
 		<English>Salzburg</English>
-		<French>Province_63</French>
-		<German>Province_63</German>
-		<Italian>Province_63</Italian>
-		<Spanish>Province_63</Spanish>
-		<Russian>Province_63</Russian>
+		<French>Salzbourg</French>
+		<German>Salzburg</German>
+		<Italian>Salishurghese</Italian>
+		<Spanish>Salzburgo</Spanish>
+		<Russian>Salzburg</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_64</Tag>
 		<English>Transylvania</English>
-		<French>Province_64</French>
-		<German>Province_64</German>
-		<Italian>Province_64</Italian>
-		<Spanish>Province_64</Spanish>
-		<Russian>Province_64</Russian>
+		<French>Transylvanie</French>
+		<German>Siebenburgen</German>
+		<Italian>Transilvania</Italian>
+		<Spanish>Transilvania</Spanish>
+		<Russian>Transylvania</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_65</Tag>
 		<English>Hungary</English>
-		<French>Province_65</French>
-		<German>Province_65</German>
-		<Italian>Province_65</Italian>
-		<Spanish>Province_65</Spanish>
-		<Russian>Province_65</Russian>
+		<French>Hongrie</French>
+		<German>Ungarn</German>
+		<Italian>Ungheria</Italian>
+		<Spanish>Hungario</Spanish>
+		<Russian>Hungary</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_66</Tag>
 		<English>Moravia</English>
-		<French>Province_66</French>
-		<German>Province_66</German>
-		<Italian>Province_66</Italian>
-		<Spanish>Province_66</Spanish>
-		<Russian>Province_66</Russian>
+		<French>Moravie</French>
+		<German>Mahren</German>
+		<Italian>Moravia</Italian>
+		<Spanish>Moravia</Spanish>
+		<Russian>Moravia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_67</Tag>
 		<English>Silesia</English>
-		<French>Province_67</French>
-		<German>Province_67</German>
-		<Italian>Province_67</Italian>
-		<Spanish>Province_67</Spanish>
-		<Russian>Province_67</Russian>
+		<French>Silesie</French>
+		<German>Schlesien</German>
+		<Italian>Slesia</Italian>
+		<Spanish>Silesia</Spanish>
+		<Russian>Silesia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_68</Tag>
 		<English>Pannonia</English>
-		<French>Province_68</French>
-		<German>Province_68</German>
-		<Italian>Province_68</Italian>
-		<Spanish>Province_68</Spanish>
-		<Russian>Province_68</Russian>
+		<French>Pannonie</French>
+		<German>Pannonien</German>
+		<Italian>Pannonia</Italian>
+		<Spanish>Panonia</Spanish>
+		<Russian>Pannonia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_69</Tag>
 		<English>Upper Hungary</English>
-		<French>Province_69</French>
-		<German>Province_69</German>
-		<Italian>Province_69</Italian>
-		<Spanish>Province_69</Spanish>
-		<Russian>Province_69</Russian>
+		<French>Honrie Superieure</French>
+		<German>Oberungarn</German>
+		<Italian>Alta Ungheria</Italian>
+		<Spanish>Hungario Superior</Spanish>
+		<Russian>Upper Hungary</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_70</Tag>
 		<English>Lombardy</English>
-		<French>Province_70</French>
-		<German>Province_70</German>
-		<Italian>Province_70</Italian>
-		<Spanish>Province_70</Spanish>
-		<Russian>Province_70</Russian>
+		<French>Lombardie</French>
+		<German>Bombardei</German>
+		<Italian>Lombardia</Italian>
+		<Spanish>Lombardia</Spanish>
+		<Russian>Lombardy</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_71</Tag>
 		<English>Verona</English>
-		<French>Province_71</French>
-		<German>Province_71</German>
-		<Italian>Province_71</Italian>
-		<Spanish>Province_71</Spanish>
-		<Russian>Province_71</Russian>
+		<French>Verone</French>
+		<German>Verona</German>
+		<Italian>Verona</Italian>
+		<Spanish>Verona</Spanish>
+		<Russian>Verona</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_72</Tag>
 		<English>Tuscany</English>
-		<French>Province_72</French>
-		<German>Province_72</German>
-		<Italian>Province_72</Italian>
-		<Spanish>Province_72</Spanish>
-		<Russian>Province_72</Russian>
+		<French>Toscane</French>
+		<German>Toskana</German>
+		<Italian>Toscana</Italian>
+		<Spanish>Toscana</Spanish>
+		<Russian>Tuscany</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_73</Tag>
 		<English>Latium</English>
-		<French>Province_73</French>
-		<German>Province_73</German>
-		<Italian>Province_73</Italian>
-		<Spanish>Province_73</Spanish>
-		<Russian>Province_73</Russian>
+		<French>Latium</French>
+		<German>Latium</German>
+		<Italian>Latium</Italian>
+		<Spanish>Latium</Spanish>
+		<Russian>Latium</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_74</Tag>
 		<English>Calabria</English>
-		<French>Province_74</French>
-		<German>Province_74</German>
-		<Italian>Province_74</Italian>
-		<Spanish>Province_74</Spanish>
-		<Russian>Province_74</Russian>
+		<French>Calabre</French>
+		<German>Kalabrien</German>
+		<Italian>Calabria</Italian>
+		<Spanish>Calabria</Spanish>
+		<Russian>Calabria</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_75</Tag>
 		<English>Apulia</English>
-		<French>Province_75</French>
-		<German>Province_75</German>
-		<Italian>Province_75</Italian>
-		<Spanish>Province_75</Spanish>
-		<Russian>Province_75</Russian>
+		<French>Pouilles</French>
+		<German>Apulien</German>
+		<Italian>Puglia</Italian>
+		<Spanish>Apulia</Spanish>
+		<Russian>Apulia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_76</Tag>
 		<English>Arberia</English>
-		<French>Province_76</French>
-		<German>Province_76</German>
-		<Italian>Province_76</Italian>
-		<Spanish>Province_76</Spanish>
-		<Russian>Province_76</Russian>
+		<French>Arberia</French>
+		<German>Arberia</German>
+		<Italian>Arberia</Italian>
+		<Spanish>Arberia</Spanish>
+		<Russian>Arberia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_77</Tag>
 		<English>Malta</English>
-		<French>Province_77</French>
-		<German>Province_77</German>
-		<Italian>Province_77</Italian>
-		<Spanish>Province_77</Spanish>
-		<Russian>Province_77</Russian>
+		<French>Malte</French>
+		<German>Malta</German>
+		<Italian>Malta</Italian>
+		<Spanish>Malta</Spanish>
+		<Russian>Malta</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_78</Tag>
 		<English>Dalmatia</English>
-		<French>Province_78</French>
-		<German>Province_78</German>
-		<Italian>Province_78</Italian>
-		<Spanish>Province_78</Spanish>
-		<Russian>Province_78</Russian>
+		<French>Dalmatie</French>
+		<German>Dalmatien</German>
+		<Italian>Dalmazia</Italian>
+		<Spanish>Dalmacia</Spanish>
+		<Russian>Dalmatia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_79</Tag>
