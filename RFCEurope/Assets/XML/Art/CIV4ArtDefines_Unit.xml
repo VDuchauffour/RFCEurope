@@ -4603,7 +4603,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_PRONOIAR</Type>
-			<Button>,Art/Interface/Buttons/Units/Keshik.dds,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,1</Button>
+			<Button>,Art/Interface/Buttons/Units/Knight.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>

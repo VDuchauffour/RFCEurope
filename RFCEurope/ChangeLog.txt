@@ -88,7 +88,7 @@ Changes for Beta 9:
 		Many small XML updates regarding religious buildings
 
 	Art updates:
-		Byzantine Lancer and Hungarian Pikeman hav proper button
+		Byzantine Lancer, Byzantine Knight and Hungarian Pikeman have proper button
 		Some wonder "movies" (read pictures) have a much smaller size
 		In the Financial Screen, the Foreign Stability section shows the "hidden" fifth stablity cathegory: Swing, that always resets rapidly to zero
 		Ethnic unit art for Russian Great Merchant
