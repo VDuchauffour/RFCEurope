@@ -229,7 +229,7 @@ tYear = ( # for Dawn of Man starting screen
 ("1139", "TXT_KEY_AD"),
 ("1236", "TXT_KEY_AD"),
 ("1282", "TXT_KEY_AD"),
-("1299", "TXT_KEY_AD"),
+("1359", "TXT_KEY_AD"),
 ("1380", "TXT_KEY_AD"),
 ("1523", "TXT_KEY_AD"),
 ("1581", "TXT_KEY_AD"),

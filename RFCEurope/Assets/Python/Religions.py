@@ -213,7 +213,7 @@ class Religions:
 			tCity = self.selectRandomCityArea(tPoland)
                         self.spreadReligion(tCity,xml.iJudaism)
 			#utils.spreadJews(tCity,xml.iJudaism)
-                if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1359AD and iGameTurn % 10 == 4):
+                if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1359AD and iGameTurn % 3 == 0):
                         tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
                         self.spreadReligion(tCity,xml.iIslam)
                         
@@ -674,7 +674,7 @@ class Religions:
                         pPlayer.initUnit(xml.iProsecutor, iX, iY, UnitAITypes.UNITAI_MISSIONARY, DirectionTypes.DIRECTION_SOUTH)
                 for iNbr in range( len( lReformationNeighbours[iPlayer] ) ):
                         pNbr = gc.getPlayer( lReformationNeighbours[iPlayer][iNbr] )
-                        if ( pNbr.getStateReligion() == xml.iProtestantism ):
+                        if ( pNbr.isAlive() and pNbr.getStateReligion() == xml.iProtestantism ):
                                 pNCapital = pNbr.getCapitalCity()
                                 iX = pNCapital.getX()
                                 iY = pNCapital.getY()

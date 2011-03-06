@@ -130,6 +130,7 @@ Changes for Beta 9:
 		Small tech boost to Portugal
 		Lowered German tech rate, they had it at a level for a later civ
 		Moved the Ottoman start date so that they flip Adrianopolis at a historically accurate date
+		Spanish agression increased, Isabella is less pious and more violent
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities

@@ -699,6 +699,17 @@ class RiseAndFall:
                 
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
                 self.pm.onCityAcquired(owner, playerType, city, bConquest, bTrade)
+                if ( playerType == iTurkey ):
+                        if ( city.getX() == tCapitals[iByzantium][0] and city.getY() == tCapitals[iByzantium][1] ):
+                                apCityList = PyPlayer(playerType).getCityList()
+                                for pCity in apCityList:
+                                        loopCity = pCity.GetCy()
+                                        if (loopCity != city):
+                                                loopCity.setHasRealBuilding((xml.iPalace), False)
+                                city.setHasRealBuilding((xml.iPalace), True)
+                                if ( pTurkey.getStateReligion() == xml.iIslam ):
+                                        city.setHasReligion(xml.iIslam,1,0,0)
+                                
 
         def onCityRazed(self, iOwner, playerType, city):
                 self.pm.onCityRazed(iOwner, playerType, city)
@@ -706,6 +717,7 @@ class RiseAndFall:
 
         def clear600ADChina(self):
                 pass
+        
         
 	#Sedna17 Respawn 
 	def setupRespawnTurns(self):

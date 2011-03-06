@@ -16617,7 +16617,7 @@
 			<!-- Rhye -->
 			<iRazeCityProb>40</iRazeCityProb>
 			<iBuildUnitProb>25</iBuildUnitProb>
-			<iBaseAttackOddsChange>0</iBaseAttackOddsChange>
+			<iBaseAttackOddsChange>4</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
 			<iWorseRankDifferenceAttitudeChange>-1</iWorseRankDifferenceAttitudeChange>
 			<iBetterRankDifferenceAttitudeChange>1</iBetterRankDifferenceAttitudeChange>
@@ -16673,11 +16673,11 @@
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>5</iFlavor>
+					<iFlavor>3</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>3</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<ContactRands>
