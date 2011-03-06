@@ -23,10 +23,9 @@ TODO:
 		Add food near Dijon - (partly done with the wheat)
 		Faith point bonuses to be based on average faith, not total faith
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
-AR		Update/further improve the map in the german area, Iberian Peninsula, Lithuania
+AR		Update/further improve the map in the german area, Iberian Peninsula, Lithuania, make Anatolia less fertile
 AR		LHs: update Barbarossa, Simone, Isabella; maybe add Margaret, Gustav Adolph, second Byzantine leader
 AR		Update hungarian, austrian, polish, venetian settler maps
-AR		Switch hungarian order and select sounds
 AR		Update xml entry for Hungary, Moscow, Norse, add entry to the new leaders
 AR		General overhaul to ALL the leader personalities
 AR		Civ specific Great People names
@@ -151,6 +150,7 @@ Changes for Beta 9:
 		Fixed: Spanish 3d UHV should work now
 		Fixed: if Protestantism has not been founded by the time the Dutch spawn, then the Dutch properly found Protestantism
 		Fixed: Portugal UP now applies to both Trading Companies as opposed to one company and the Encyclopedia project
+		Switched hungarian order and select sounds
 				
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
