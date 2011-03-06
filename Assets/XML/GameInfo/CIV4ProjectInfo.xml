@@ -8,6 +8,38 @@
 <Civ4ProjectInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
 	<ProjectInfos>
 		<ProjectInfo>
+			<Type>PROJECT_ENCYCLOPEDIE</Type>
+			<Description>TXT_KEY_PROJECT_ENCYCLOPEDIE</Description>
+			<Civilopedia>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROJECT_ENCYCLOPEDIE_STRATEGY</Strategy>
+			<VictoryPrereq>NONE</VictoryPrereq>
+			<TechPrereq>TECH_RIGHT_OF_MAN</TechPrereq>
+			<AnyonePrereqProject>NONE</AnyonePrereqProject>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iCost>500</iCost>
+			<iNukeInterception>0</iNukeInterception>
+			<iTechShare>2</iTechShare>
+			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
+			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
+			<bSpaceship>0</bSpaceship>
+			<bAllowsNukes>0</bAllowsNukes>
+			<Button>Art/Interface/Buttons/Wonders/encyclopedie_BTN.dds</Button>
+			<PrereqProjects/>
+			<VictoryThresholds/>
+			<VictoryMinThresholds/>
+			<iVictoryDelayPercent>0</iVictoryDelayPercent>
+			<iSuccessRate>0</iSuccessRate>
+			<BonusProductionModifiers/>
+			<FreeBonuses/>
+			<PProjects/>
+			<PBonus>NONE</PBonus>
+                        <bIsColony>0</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIE</MovieDefineTag>
+		</ProjectInfo>
+		<ProjectInfo>
 			<Type>PROJECT_EAST_INDIA_COMPANY</Type>
 			<Description>TXT_KEY_PROJECT_EAST_INDIA_COMPANY</Description>
 			<Civilopedia>TXT_KEY_PROJECT_EAST_INDIA_COMPANY_PEDIA</Civilopedia>
@@ -80,38 +112,6 @@
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_WEST_INDIA_COMPANY</MovieDefineTag>
-		</ProjectInfo>
-		<ProjectInfo>
-			<Type>PROJECT_ENCYCLOPEDIE</Type>
-			<Description>TXT_KEY_PROJECT_ENCYCLOPEDIE</Description>
-			<Civilopedia>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_ENCYCLOPEDIE_STRATEGY</Strategy>
-			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_RIGHT_OF_MAN</TechPrereq>
-			<AnyonePrereqProject>NONE</AnyonePrereqProject>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iCost>500</iCost>
-			<iNukeInterception>0</iNukeInterception>
-			<iTechShare>2</iTechShare>
-			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
-			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
-			<bSpaceship>0</bSpaceship>
-			<bAllowsNukes>0</bAllowsNukes>
-			<Button>Art/Interface/Buttons/Wonders/encyclopedie_BTN.dds</Button>
-			<PrereqProjects/>
-			<VictoryThresholds/>
-			<VictoryMinThresholds/>
-			<iVictoryDelayPercent>0</iVictoryDelayPercent>
-			<iSuccessRate>0</iSuccessRate>
-			<BonusProductionModifiers/>
-			<FreeBonuses/>
-			<PProjects/>
-			<PBonus>NONE</PBonus>
-                        <bIsColony>0</bIsColony>
-			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
-			<CreateSound/>
-			<MovieDefineTag>ART_DEF_MOVIE_ENCYCLOPEDIE</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
 			<Type>PROJECT_VINLAND</Type>

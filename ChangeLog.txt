@@ -61,6 +61,7 @@ Changes for Beta 9:
 		Some Hints are added (when you load a game)
 		Player number 4 (Cordoba) respawns as Hafsid Caliphate, effectively adding a new player in North Africa (need to work on the spread of Islam in NA)
 		Trading over ocean is possible with Astrolable (to help the Norse with their UHV)
+		Added Reformation event, after all players hae made a choice on Reformation, the remaining Catholics can choose between free Prosecutros or free Stability boost (diplomacy and faith points adjustments to come later)
 		
 	Map and province changes:
 		A few small fixes to the map after the updates of Beta 8
@@ -123,6 +124,10 @@ Changes for Beta 9:
 		Poland no longer builds Prosecutors
 		Islam now spreads through North Africa
 		Longbowmans require Chivalry (instead of Military tradition), Tomb of Al Khalid requires Military Tradition (instead of Chivalry), Maceman recieve a bonus vs. Polearm (instead of Heavy Cavalry)
+		Adjusted Longbowman and Maceman and the bonuses that they provide
+		Small tech boost to Portugal
+		Lowered German tech rate, they had it at a level for a later civ
+		Moved the Ottoman start date so that they flip Adrianopolis at a historically accurate date
 		
 	Bugfixes:
 		Fixed: Norse no longer lose stability when capturing cities
@@ -142,6 +147,9 @@ Changes for Beta 9:
 		Fixed: TXT_KEY_GREAT_PERSON_PETER_II
 		Fixed: Portugal settlers map did not include West Africa and the Atlantic Islands
 		Fixed: The Defensive Crusades were totally broken, they should work now (needed to add Defensive Provinces for the traditionally non-Catholic Players)
+		Fixed: Spanish 3d UHV should work now
+		Fixed: if Protestantism has not been founded by the time the Dutch spawn, then the Dutch properly found Protestantism
+		Fixed: Portugal UP now applies to both Trading Companies as opposed to one company and the Encyclopedia project
 				
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

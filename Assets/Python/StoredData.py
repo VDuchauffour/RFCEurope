@@ -43,6 +43,7 @@ class StoredData:
                                     'iSeed': -1,
                                     'bReformationActive': False,
                                     'lReformationHitMatrix': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                    'bCounterReformationActive': False,
                                     #------------AIWars
                                     'lAttackingCivsArray': [0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0],
                                     'iNextTurnAIWar': -1,

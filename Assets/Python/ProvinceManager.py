@@ -448,7 +448,22 @@ class ProvinceManager:
                 pass
                 
         def onRespawn(self, iPlayer ):
-                if ( iPlayer == iCordoba ):
+                if ( iPlayer == iArabia ):
+                        for iProv in range( xml.iP_MaxNumberOfProvinces ):
+                                pArabia.setProvinceType( iProv, iProvinceNone )
+                        for iProv in self.tCoreProvinces[iPlayer]:
+                                pArabia.setProvinceType( iProv, iProvinceCore )
+                        for iProv in self.tNormProvinces[iPlayer]:
+                                pArabia.setProvinceType( iProv, iProvinceNatural)
+                        for iProv in self.tOuterProvinces[iPlayer]:
+                                pArabia.setProvinceType( iProv, iProvinceOuter )
+                        for iProv in self.tPot2CoreProvinces[iPlayer]:
+                                pArabia.setProvinceType( iProv, iProvincePotential )
+                        for iProv in self.tPot2NormProvinces[iPlayer]:
+                                pArabia.setProvinceType( iProv, iProvincePotential )
+                        for iProv in self.tDesireProvinces[iPlayer]:
+                                pArabia.setProvinceType( iProv, iProvinceDesired )
+                elif ( iPlayer == iCordoba ):
                         for iProv in range( xml.iP_MaxNumberOfProvinces ):
                                 pCordoba.setProvinceType( iProv, iProvinceNone )
                         pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )

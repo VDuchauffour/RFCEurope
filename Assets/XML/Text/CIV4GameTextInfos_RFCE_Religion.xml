@@ -251,6 +251,60 @@
 		<Russian>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229; "&#207;&#229;&#247;&#224;&#242;&#224;&#254;&#249;&#229;&#233;&#241;&#255; &#207;&#240;&#229;&#241;&#241;&#251;" &#239;&#238;&#235;&#238;&#230;&#232;&#235;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#226;&#238;&#235;&#237;&#229; &#237;&#238;&#226;&#251;&#245; &#228;&#238;&#234;&#242;&#240;&#232;&#237;. &#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#229; &#246;&#229;&#240;&#234;&#226;&#232; &#238;&#239;&#239;&#238;&#237;&#232;&#240;&#243;&#254;&#242; &#226;&#235;&#224;&#241;&#242;&#232; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#228; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#232;&#236;&#232; &#228;&#229;&#235;&#224;&#236;&#232;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#253;&#242;&#243; &#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254;? (&#194;&#241;&#229; &#237;&#224;&#248;&#232; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#232; &#231;&#228;&#224;&#237;&#232;&#255; &#225;&#243;&#228;&#243;&#242; &#239;&#240;&#229;&#226;&#240;&#224;&#249;&#229;&#237;&#251; &#226; &#237;&#238;&#226;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;.)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COUNTER_REFORMATION_TITLE</Tag>
+		<English>The Counter-Reformation!</English>
+		<French>The Counter-Reformation!</French>
+		<German>The Counter-Reformation!</German>
+		<Italian>The Counter-Reformation!</Italian>
+		<Spanish>The Counter-Reformation!</Spanish>
+		<Russian>The Counter-Reformation!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE</Tag>
+		<English>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</English>
+		<French>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</French>
+		<German>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</German>
+		<Italian>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</Italian>
+		<Spanish>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</Spanish>
+		<Russian>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1</Tag>
+		<English>We should help our Holy Father expel the heretics and restore unity to the Church. (get </English>
+		<French>We should help our Holy Father expel the heretics and restore unity to the Church. (get </French>
+		<German>We should help our Holy Father expel the heretics and restore unity to the Church. (get </German>
+		<Italian>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Italian>
+		<Spanish>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Spanish>
+		<Russian>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2</Tag>
+		<English> Prosecutors)</English>
+		<French> Prosecutors)</French>
+		<German> Prosecutors)</German>
+		<Italian> Prosecutors)</Italian>
+		<Spanish> Prosecutors)</Spanish>
+		<Russian> Prosecutors)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1</Tag>
+		<English>We should be tolerant to our brothers and sisters as misguided as they can be. (get </English>
+		<French>We should be tolerant to our brothers and sisters as misguided as they can be. (get </French>
+		<German>We should be tolerant to our brothers and sisters as misguided as they can be. (get </German>
+		<Italian>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Italian>
+		<Spanish>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Spanish>
+		<Russian>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2</Tag>
+		<English> Stability)</English>
+		<French> Stability)</French>
+		<German> Stability)</German>
+		<Italian> Stability)</Italian>
+		<Spanish> Stability)</Spanish>
+		<Russian> Stability)</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_SCHISM</Tag>
 		<English>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</English>
 		<French>Le Grand Schisme: Apr&#232; des ann&#233;es de discution, les Chr&#233;tiens Catholique et Orthodoxe ont finallement d&#233;cider de se separer en 2 religions rivales.</French>

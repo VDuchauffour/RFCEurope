@@ -197,7 +197,7 @@ xml.i1066AD,# 155 normally 1066AD England
 xml.i1139AD,#1100AD Portugal
 xml.i1236AD,#1236AD Lithuania
 xml.i1282AD,#1282AD Austria
-xml.i1299AD,#1299AD Turkey - 233 is normal time
+xml.i1359AD,#1299AD Turkey - 233 is normal time (Conquest of Adrianopolis)
 xml.i1380AD,#1000AD Moscow => 1323 (260)
 xml.i1523AD,#1523AD Sweden
 xml.i1581AD,#1580AD Dutch 340 is normal time

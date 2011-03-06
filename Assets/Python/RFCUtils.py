@@ -1225,7 +1225,7 @@ class RFCUtils:
                         else:
                                 return False
 
-                return False		
+                return False
 	
 			
 	def isIndep( self, iCiv ):

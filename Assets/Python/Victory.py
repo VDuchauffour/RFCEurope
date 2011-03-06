@@ -381,7 +381,7 @@ class Victory:
                                         if ( playerType == iMoscow or playerType == iPoland ):
                                                 pSweden.setUHV( 1, 0 )
                 if ( playerType == iSpain ):
-                        if ( gc.getPlayer( playerType ).getStateReligion() == xml.iProtestantism ):
+                        if ( gc.getPlayer( owner ).getStateReligion() == xml.iProtestantism ):
                                 iConqueredCities = pSpain.getUHVCounter( 2 ) + 1
                                 pSpain.setUHVCounter( 2, iConqueredCities )
                                 if ( pSpain.getUHV( 2 ) == - 1 and iConqueredCities >= 3 ):

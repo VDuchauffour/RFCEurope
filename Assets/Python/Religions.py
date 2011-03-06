@@ -113,6 +113,7 @@ tPoland = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_Silesi
 tGermany = [xml.iP_Lorraine,xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia]
 tWestAfrica = [xml.iP_Tetouan,xml.iP_Morocco,xml.iP_Marrakesh,xml.iP_Oran]
 tNorthAfrica = [xml.iP_Algiers,xml.iP_Ifriqiya,xml.iP_Tripolitania,xml.iP_Cyrenaica]
+tBalkansAndAnatolia = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon]
 
 class Religions:
 
@@ -151,6 +152,15 @@ class Religions:
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['lReformationHitMatrix']
 
+        def getCounterReformationActive( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['bCounterReformationActive']
+
+        def setCounterReformationActive( self, bNewValue ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['bCounterReformationActive'] = bNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )  
+
 
 #######################################
 ### Main methods (Event-Triggered) ###
@@ -164,38 +174,69 @@ class Religions:
 		# Sedna17: Spreading Judaism in a somewhat deterministic way
 		if (iGameTurn == xml.i700AD-2):
 			#Spread Judaism to Toledo
-			utils.spreadJews(tToledo,xml.iJudaism)
+			#utils.spreadJews(tToledo,xml.iJudaism)
+                        self.spreadReligion(tToledo,xml.iJudaism)
                         tCity = self.selectRandomCityArea(tNorthAfrica)
-			utils.spreadJews(tCity,xml.iIslam)
+                        self.spreadReligion(tCity,xml.iIslam)
+			#utils.spreadJews(tCity,xml.iIslam)
                         tCity = self.selectRandomCityArea(tNorthAfrica)
-			utils.spreadJews(tCity,xml.iIslam)
+			self.spreadReligion(tCity,xml.iIslam)
+                        #utils.spreadJews(tCity,xml.iIslam)
                 if (iGameTurn == xml.i700AD+2):
 			#Spread Judaism to Toledo
 			tCity = self.selectRandomCityArea(tWestAfrica)
-			utils.spreadJews(tCity,xml.iIslam)
+			self.spreadReligion(tCity,xml.iIslam)
+                        #utils.spreadJews(tCity,xml.iIslam)
                         tCity = self.selectRandomCityArea(tWestAfrica)
-			utils.spreadJews(tCity,xml.iJudaism)
+                        self.spreadReligion(tCity,xml.iJudaism)
+			#utils.spreadJews(tCity,xml.iJudaism)
 
 		if (iGameTurn == xml.i900AD):
 			#Spread Judaism to another town or two in Spain
 			tCity = self.selectRandomCityArea(tSpain)
-			utils.spreadJews(tCity,xml.iJudaism)
+                        self.spreadReligion(tCity,xml.iJudaism)
+			#utils.spreadJews(tCity,xml.iJudaism)
 		if (iGameTurn == xml.i1000AD):
 			#Spread Judaism to a city in France/Germany
 			tCity = self.selectRandomCityArea(tGermany)
-			utils.spreadJews(tCity,xml.iJudaism)
+                        self.spreadReligion(tCity,xml.iJudaism)
+			#utils.spreadJews(tCity,xml.iJudaism)
                         tCity = self.selectRandomCityArea(tNorthAfrica)
-			utils.spreadJews(tCity,xml.iIslam)
+                        self.spreadReligion(tCity,xml.iIslam)
+			#utils.spreadJews(tCity,xml.iIslam)
 		if (iGameTurn == xml.i1101AD):
 			#Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPoland)
-			utils.spreadJews(tCity,xml.iJudaism)
+                        self.spreadReligion(tToledo,xml.iJudaism)
+			#self.spreadReligion(tToledo,xml.iJudaism)utils.spreadJews(tCity,xml.iJudaism)
 		if (iGameTurn == xml.i1200AD):
 			tCity = self.selectRandomCityArea(tPoland)
-			utils.spreadJews(tCity,xml.iJudaism)
+                        self.spreadReligion(tCity,xml.iJudaism)
+			#utils.spreadJews(tCity,xml.iJudaism)
+                if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1359AD and iGameTurn % 10 == 4):
+                        tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
+                        self.spreadReligion(tCity,xml.iIslam)
+                        
 		if (iGameTurn == xml.i1401AD):
 			tCity = self.selectRandomCityArea(tPoland)
-			utils.spreadJews(tCity,xml.iJudaism)
+                        self.spreadReligion(tCity,xml.iJudaism)
+			#utils.spreadJews(tCity,xml.iJudaism)
+                        
+                if (iGameTurn == xml.i1580AD and (not gc.getGame().isReligionFounded(xml.iProtestantism) ) ):
+                        # if Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it
+                        gc.getPlayer(con.iDutch).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
+                        gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
+                        self.setReformationActive(True)
+                        self.reformationchoice(con.iDutch)
+                        self.reformationOther(con.iIndependent)
+                        self.reformationOther(con.iIndependent2)
+                        self.reformationOther(con.iIndependent3)
+                        self.reformationOther(con.iIndependent4)
+                        self.reformationOther(con.iBarbarian)
+                        self.setReformationHitMatrix(con.iDutch,2)
+                        for iCiv in range(iNumPlayers):
+                                if ((iCiv in lReformationNeighbours[con.iDutch]) and self.getReformationHitMatrix(iCiv) == 0):
+                                        self.setReformationHitMatrix(iCiv,1)
 		
                	
                	#for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
@@ -274,15 +315,18 @@ class Religions:
 				               			self.buildInRandomCity( i, iCatholicBuilding, xml.iCatholicism )
 			               				break
         ##Reformation code
-		if (self.getReformationActive() == True):
+                if ( self.getCounterReformationActive() ):
+                        self.doCounterReformation()
+		if (self.getReformationActive() ):
 			#print( " Reformation #1 " )
 			self.reformationArrayChoice()
-			if (self.getReformationActive() == True):
+			if (self.getReformationActive() ):
 				#print( " Reformation #2 " )
 				self.reformationArrayChoice()
-				if (self.getReformationActive() == True):
+				if (self.getReformationActive() ):
 					#print( " Reformation #3 " )
 					self.reformationArrayChoice()
+                
 
         def foundReligion(self, tPlot, iReligion):
                 if (tPlot != False):
@@ -400,11 +444,15 @@ class Religions:
                 return False
 
 
-        def spreadReligion(self, tCoords, iNum, iMissionary):
-                city = gc.getMap().plot( tCoords[0], tCoords[1] ).getPlotCity()
-                #print city
-                #print city.getOwner()
-                utils.makeUnit(iMissionary, city.getOwner(), tCoords, iNum)
+        #def spreadReligion(self, tCoords, iNum, iMissionary):
+        #        city = gc.getMap().plot( tCoords[0], tCoords[1] ).getPlotCity()
+        #        utils.makeUnit(iMissionary, city.getOwner(), tCoords, iNum)
+        
+        def spreadReligion(self, tPlot, iReligion ):
+                pPlot = gc.getMap().plot( tPlot[0], tPlot[1] )                
+                if ( pPlot.isCity() ):
+                        pPlot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
+
 
 	def buildInRandomCity( self, iPlayer, iBuilding, iReligion ):
 		#print(" Building ",iBuilding," for ",iPlayer )
@@ -482,6 +530,7 @@ class Religions:
                         print( self.getReformationHitMatrixAll(), 2*iNumPlayers )
                         if (sum(self.getReformationHitMatrixAll()) == 2*iNumPlayers):
                                 self.setReformationActive(False)
+                                self.setCounterReformationActive(True) # after all players have been hit by the Reformation
                 else:
                         self.reformationArrayChoice()
                                 
@@ -495,7 +544,9 @@ class Religions:
                 
 
         def reformationchoice(self, iCiv):
-                if ((gc.getPlayer(iCiv)).isHuman()):
+                if ( gc.getPlayer(iCiv).getStateReligion() == xml.iProtestantism ):
+                        self.reformationyes(iCiv)
+                elif ((gc.getPlayer(iCiv)).isHuman()):
                         self.reformationPopup()
                 else:
                         rndnum = gc.getGame().getSorenRandNum(100, 'Reformation')
@@ -577,4 +628,59 @@ class Religions:
                                         iLostFaith += 1
                                         #iLostFaith += self.reformationReformCity( city.city, 9, False )
                 gc.getPlayer(iCiv).changeFaith( - min( gc.getPlayer(iCiv).getFaith(), iLostFaith ) )
+                
+        def doCounterReformation(self):
+                print(" Counter Reformation ")
+                for iPlayer in range( con.iPope - 1 ):
+                        pPlayer = gc.getPlayer( iPlayer )
+                        if ( pPlayer.isAlive() and pPlayer.getStateReligion() == xml.iCatholicism ):
+                                if ( pPlayer.isHuman() ):
+                                        self.doCounterReformationHuman( iPlayer )
+                                elif ( lReformationMatrix[iPlayer] < gc.getGame().getSorenRandNum(100, 'Counter Reformation AI') ):
+                                        self.doCounterReformationYes( iPlayer )
+                                else:
+                                        self.doCounterReformationNo( iPlayer )
+                self.setCounterReformationActive(False)
+        
+        def doCounterReformationHuman( self, iPlayer ):
+                pPlayer = gc.getPlayer( iPlayer )
+                szMessageYes = CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1", ()) + "+%d " %(max( 1, pPlayer.getNumCities() / 3 )) + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2", ())
+                szMessageNo = CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1", ()) + "+%d " %(max( 1, pPlayer.getNumCities() / 3 )) + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2", ())
+                self.showCounterPopup(7626, CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_TITLE", ()), CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE",()), (szMessageYes, szMessageNo))
+                
+        def showCounterPopup(self, popupID, title, message, labels):
+                popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
+                popup.setHeaderString(title)
+                popup.setBodyString(message)
+                for i in labels:
+                    popup.addButton( i )
+                popup.launch(False)
+
+        def eventApply7626(self, popupReturn):
+                iHuman = utils.getHumanID()
+                if(popupReturn.getButtonClicked() == 0):
+                        self.doCounterReformationYes(iHuman)
+                elif(popupReturn.getButtonClicked() == 1):
+                        self.doCounterReformationNo(iHuman)
+                        
+        def doCounterReformationYes( self, iPlayer ):
+                print(" Counter Reformation Yes",iPlayer)
+                pPlayer = gc.getPlayer( iPlayer )
+                pCapital = pPlayer.getCapitalCity()
+		iX = pCapital.getX()
+		iY = pCapital.getY()
+                iNumProsecutors = max( 1, pPlayer.getNumCities() / 3 )
+                for i in range( iNumProsecutors ):
+                        pPlayer.initUnit(xml.iProsecutor, iX, iY, UnitAITypes.UNITAI_MISSIONARY, DirectionTypes.DIRECTION_SOUTH)
+                for iNbr in range( len( lReformationNeighbours[iPlayer] ) ):
+                        pNbr = gc.getPlayer( lReformationNeighbours[iPlayer][iNbr] )
+                        if ( pNbr.getStateReligion() == xml.iProtestantism ):
+                                pNCapital = pNbr.getCapitalCity()
+                                iX = pNCapital.getX()
+                                iY = pNCapital.getY()
+                                pNbr.initUnit(xml.iProsecutor, iX, iY, UnitAITypes.UNITAI_MISSIONARY, DirectionTypes.DIRECTION_SOUTH)
+        
+        def doCounterReformationNo( self, iPlayer ):
+                pPlayer = gc.getPlayer( iPlayer )
+                pPlayer.changeStabilityBase( con.iCathegoryCities, max( 1, pPlayer.getNumCities() / 3 ) )      
         ### End Reformation ###

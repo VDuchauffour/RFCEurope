@@ -825,30 +825,24 @@ class RiseAndFall:
                 # Generally we want to allow Kiev, Bulgaria, Cordoba, Burgundy, Byzantium at least to be dead in late game without respawning.
                 iNumDeadCivs1 = 12 #5 in vanilla, 8 in warlords (that includes native and celt)
                 iNumDeadCivs2 = 8 #3 in vanilla, 6 in Warlords: here we must count natives and celts as dead too
-                #if (not gc.getPlayer(0).isPlayable()):  #late start condition
-                #        iNumDeadCivs1 -= 2
-                #        iNumDeadCivs2 -= 2
-                if (gc.getGame().countCivPlayersEverAlive() - gc.getGame().countCivPlayersAlive() > iNumDeadCivs1): 
-                        if (iGameTurn % 15 == 10):
+                
+                
+                iCiv = self.getSpecialRespawn( iGameTurn )
+                if ( iCiv > -1 ):
+                        self.resurrection(iGameTurn,iCiv)
+                elif (gc.getGame().countCivPlayersEverAlive() - gc.getGame().countCivPlayersAlive() > iNumDeadCivs1): 
+                        if (iGameTurn % 18 == 11):
                                 self.resurrection(iGameTurn, -1)                        
                 elif (gc.getGame().countCivPlayersEverAlive() - gc.getGame().countCivPlayersAlive() > iNumDeadCivs2): 
-                        if (iGameTurn % 30 == 15):
+                        if (iGameTurn % 35 == 13):
                                 self.resurrection(iGameTurn, -1)
-
-		lRespawnTurns = self.getAllRespawnTurns()
-		print("Special Respawn Turns ",lRespawnTurns)
-		if iGameTurn in lRespawnTurns:
-			iCiv = lRespawnTurns.index(iGameTurn)#Lookup index for 
-                        print("Special Respawn For Player: ",iCiv)
-			if iCiv < iNumMajorPlayers and iCiv > 0:
-				self.resurrection(iGameTurn,iCiv)
-                
-
-                #debug
-                #self.resurrection(iGameTurn)          
-                #self.resurrectionFromBarbs(iGameTurn)
-
-
+		#lRespawnTurns = self.getAllRespawnTurns()
+		#print("Special Respawn Turns ",lRespawnTurns)
+		#if iGameTurn in lRespawnTurns:
+		#	iCiv = lRespawnTurns.index(iGameTurn)#Lookup index for 
+                #        print("Special Respawn For Player: ",iCiv)
+		#	if iCiv < iNumMajorPlayers and iCiv > 0:
+		#		self.resurrection(iGameTurn,iCiv)
 
 
         def checkPlayerTurn(self, iGameTurn, iPlayer):
@@ -1138,7 +1132,7 @@ class RiseAndFall:
                         #self.resurectCiv( iDeadCiv )
                                 
         def findCivToResurect( self, iGameTurn , bSpecialRespawn, iDeadCiv):
-                print("Looking up a civ to resurect, iDeadCiv: ",iDeadCiv)
+                #print("Looking up a civ to resurect, iDeadCiv: ",iDeadCiv)
                 if ( bSpecialRespawn ):
                         iMinNumCities = 1
                 else:
@@ -1427,6 +1421,7 @@ class RiseAndFall:
                                                         for pCity in apCityList:
                                                                 pCity.GetCy().setHasRealBuilding((xml.iPalace), False)
                                                         newCapital.setHasRealBuilding((xml.iPalace), True)
+                                                        self.makeResurectionUnits( iCiv, newCapital.getX(), newCapital.getY() )
                 else:
                         iMaxValue = 0
                         bestCity = None
@@ -1444,7 +1439,13 @@ class RiseAndFall:
                                         if (loopCity != bestCity):
                                                 loopCity.setHasRealBuilding((xml.iPalace), False)
                                 bestCity.setHasRealBuilding((xml.iPalace), True)
+                                self.makeResurectionUnits( iCiv, bestCity.getX(), bestCity.getY() )
                                                 
+        def makeResurectionUnits( self, iPlayer, iX, iY ):
+                if ( iPlayer == iCordoba ):
+                        utils.makeUnit(xml.iSettler, iCordoba, [iX,iY], 2)
+                        utils.makeUnit(xml.iCrossbowman, iCordoba, [iX,iY], 2)
+                        utils.makeUnit(xml.iIslamicMissionary, iCordoba, [iX,iY], 1)
                                                 
 
         def convertBackCulture(self, iCiv):
@@ -1969,6 +1970,49 @@ class RiseAndFall:
         def onFirstContact(self, iTeamX, iHasMetTeamY):
         # 3Miro: Conquistador event 
                 pass
+
+        def getSpecialRespawn( self, iGameTurn ):
+                if ( (not pArabia.isAlive()) and (not pArabia.getRespawned()) and iGameTurn > con.tBirth[iArabia] + 25 and iGameTurn > utils.getLastTurnAlive(iArabia) + 10 ):
+                        # Saladin, Ayyubid Dynasty
+                        if ( iGameTurn > xml.i1080AD and iGameTurn < xml.i1291AD and iGameTurn % 7 == 3 ):
+                                return iArabia
+                if ( (not pBulgaria.isAlive()) and (not pBulgaria.getRespawned()) and iGameTurn > con.tBirth[iBulgaria] + 25 and iGameTurn > utils.getLastTurnAlive(iBulgaria) + 10 ):
+                        # second Bulgarian Empire
+                        if ( iGameTurn > xml.i1080AD and iGameTurn < xml.i1299AD and iGameTurn % 5 == 1 ):
+                                return iBulgaria
+                if ( (not pCordoba.isAlive()) and (not pCordoba.getRespawned()) and iGameTurn > con.tBirth[iCordoba] + 25 and iGameTurn > utils.getLastTurnAlive(iCordoba) + 10 ):
+                        # special respawn as the Hafsid dynasty in North Africa
+                        if ( iGameTurn > xml.i1229AD and iGameTurn < xml.i1500AD and iGameTurn % 5 == 3 ):
+                                return iCordoba
+                if ( (not pNorse.isAlive()) and (not pNorse.getRespawned()) and iGameTurn > con.tBirth[iNorse] + 25 and iGameTurn > utils.getLastTurnAlive(iNorse) + 20 ):
+                        # respawn as the Kalmar Union
+                        if ( iGameTurn > xml.i1393AD and iGameTurn < xml.i1500AD and iGameTurn % 5 == 2 ):
+                                return iNorse
+                if ( (not pBurgundy.isAlive()) and (not pBurgundy.getRespawned()) and iGameTurn > con.tBirth[iBurgundy] + 25 and iGameTurn > utils.getLastTurnAlive(iBurgundy) + 20 ):
+                        # respawn as the Burgundy in the 100 year war
+                        if ( iGameTurn > xml.i1336AD and iGameTurn < xml.i1453AD and iGameTurn % 8 == 1 ):
+                                return iBurgundy
+                if ( (not pGermany.isAlive()) and (not pGermany.getRespawned()) and iGameTurn > con.tBirth[iGermany] + 25 and iGameTurn > utils.getLastTurnAlive(iGermany) + 10 ):
+                        # respawn as Prussia
+                        if ( iGameTurn > xml.i1700AD and iGameTurn % 3 == 1 ):
+                                return iGermany
+                if ( (not pSpain.isAlive()) and (not pSpain.getRespawned()) and iGameTurn > con.tBirth[iSpain] + 25 and iGameTurn > utils.getLastTurnAlive(iSpain) + 25 ):
+                        # respawn as the Castile/Aragon Union
+                        if ( iGameTurn > xml.i1470AD and iGameTurn < xml.i1580AD and iGameTurn % 5 == 0 ):
+                                return iSpain
+                if ( (not pEngland.isAlive()) and (not pEngland.getRespawned()) and iGameTurn > con.tBirth[iEngland] + 25 and iGameTurn > utils.getLastTurnAlive(iEngland) + 12 ):
+                        # respawn as the Castile/Aragon Union
+                        if ( iGameTurn > xml.i1660AD and iGameTurn % 6 == 2 ):
+                                return iEngland
+                if ( (not pPortugal.isAlive()) and (not pPortugal.getRespawned()) and iGameTurn > con.tBirth[iPortugal] + 25 and iGameTurn > utils.getLastTurnAlive(iPortugal) + 10 ):
+                        # respawn as the Castile/Aragon Union
+                        if ( iGameTurn > xml.i1431AD and iGameTurn < xml.i1660AD and iGameTurn % 5 == 3 ):
+                                return iPortugal
+                if ( (not pAustria.isAlive()) and (not pAustria.getRespawned()) and iGameTurn > con.tBirth[iAustria] + 25 and iGameTurn > utils.getLastTurnAlive(iAustria) + 10 ):
+                        # respawn as the Castile/Aragon Union
+                        if ( iGameTurn > xml.i1526AD and iGameTurn % 8 == 3 ):
+                                return iAustria
+                return -1
 
         def initMinorBetrayal( self, iCiv ):
                 iHuman = utils.getHumanID()
