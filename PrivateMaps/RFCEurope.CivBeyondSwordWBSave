@@ -31684,7 +31684,7 @@ BeginPlot
 	x=74,y=10
 	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -31876,7 +31876,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=38
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -32155,9 +32154,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=10
-	BonusType=BONUS_OLIVES
 	ImprovementType=IMPROVEMENT_TOWN
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
 EndPlot
@@ -32623,8 +32621,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=10
-	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	BonusType=BONUS_OLIVES
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 	TeamReveal=0,
 EndPlot
 BeginPlot
