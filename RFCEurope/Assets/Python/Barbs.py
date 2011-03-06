@@ -159,11 +159,11 @@ class Barbs:
 		if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i880AD):
 			self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iAxeman, 1 + iHandicap*2, iGameTurn,14,0,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iSpearman, 1 + iHandicap*2, iGameTurn,18,3,utils.outerInvasion,1)
-			#self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iHorseArcher, 1 + iHandicap*2, iGameTurn,15,5,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iMountedInfantry, 1 + iHandicap*2, iGameTurn,15,5,utils.outerInvasion,1)
 			
 			self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iAxeman, 1 + iHandicap*2, iGameTurn,14,5,utils.outerInvasion,1)
 			self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iSpearman, 1 + iHandicap*2, iGameTurn,18,9,utils.outerInvasion,1)
-			#self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iHorseArcher, 1 + iHandicap*2, iGameTurn,16,14,utils.outerInvasion,1)
+			self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iMountedInfantry, 1 + iHandicap*2, iGameTurn,16,14,utils.outerInvasion,1)
 		
 		#Berbers in North Africa
 		if (iGameTurn >= xml.i700AD and iGameTurn < xml.i1060AD):

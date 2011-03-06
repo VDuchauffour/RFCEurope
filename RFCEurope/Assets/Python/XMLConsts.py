@@ -530,9 +530,9 @@ iNumCorporations = 7 # to mark Genoa's UHV as false
 
 #Projects
 
-iEastIndiaCompany = 0
-iWestIndiaCompany = 1
-iEncyclopedie = 2
+iEncyclopedie = 0
+iEastIndiaCompany = 1
+iWestIndiaCompany = 2
 iNumNotColonies = 3
 iNumTotalColonies = 25
 

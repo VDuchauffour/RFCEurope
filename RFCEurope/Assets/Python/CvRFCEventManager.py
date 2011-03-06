@@ -68,7 +68,8 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
             7622 : ('ResurrectionEvent', self.rnfEventApply7622, self.rnfEventBegin7622),
             7623 : ('AskNoCityPopupEvent', self.congEventApply7623, self.congEventBegin7623),
 	    7624 : ('ReformationEvent', self.relEventApply7624, self.relEventBegin7624), ### Reformation Begin ###
-	    7625 : ('DefensiveCrusadeEvent',self.crusadeApply7625, self.crusadeBegin7625)
+	    7625 : ('DefensiveCrusadeEvent',self.crusadeApply7625, self.crusadeBegin7625),
+            7626 : ('CounterReformationEvent',self.relEventApply7626, self.relEventBegin7626)
         }
         
 
@@ -245,6 +246,12 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
        
     def relEventApply7624(self, playerID, netUserData, popupReturn):
             self.rel.eventApply7624(popupReturn)
+            
+    def relEventBegin7626(self):
+            pass
+       
+    def relEventApply7626(self, playerID, netUserData, popupReturn):
+            self.rel.eventApply7626(popupReturn)
     ### End Reformation ###
 
     def congEventApply7623(self, playerID, netUserData, popupReturn):
