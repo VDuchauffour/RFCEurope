@@ -23,21 +23,20 @@ TODO:
 		Add food near Dijon - (partly done with the wheat)
 		Faith point bonuses to be based on average faith, not total faith
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
-AR		Fix a couple province names, update a few provinces
-AR		Big overhaul to the map, especially in the Balkans, Carpathian Basin, Iberian Peninsula, Lithuania
-AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Byzantine leader
-AR		Update hungarian settler map
+AR		Update/further improve the map in the german area, Iberian Peninsula, Lithuania
+AR		LHs: update Barbarossa, Simone, Isabella; maybe add Margaret, Gustav Adolph, second Byzantine leader
+AR		Update hungarian, austrian, polish, venetian settler maps
 AR		Switch hungarian order and select sounds
-AR		Update xml entry for Hungary, Moscow, Norse
-		General overhaul to ALL the leader personalities
-		Civ specific Great People names
+AR		Update xml entry for Hungary, Moscow, Norse, add entry to the new leaders
+AR		General overhaul to ALL the leader personalities
+AR		Civ specific Great People names
+AR		Add a LeaderHeadInfos.xml.light file
 		Custom DiploMusic for Bulgaria (Simeon, Ivan Asen), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
 		Readd apples and citrus as a food resource (with no health bonus)?
 		Custom Events?
 		Minor Civs?
 		Turn Burgundian Winery art 180 degrees
 		Lower La Mezquita to the ground
-		Add a LeaderHeadInfos.xml.light file
 		Dynamic Civ Names for Lithuania
 MV1		Python cleanup
 MV1		Translate the province names (after the province system is finished)
@@ -57,7 +56,7 @@ Changes for Beta 9:
 		Colonies become obsolete after some date
 		Atlantic Access is revealed by Astroable (see Balance for how this changes the game)
 		Changed Norse UHV 1: now you have to build the Vinland colony
-		Cathedrals now realy need state religion
+		Cathedrals now really need state religion
 		Some Hints are added (when you load a game)
 		Player number 4 (Cordoba) respawns as Hafsid Caliphate, effectively adding a new player in North Africa (need to work on the spread of Islam in NA)
 		Trading over ocean is possible with Astrolable (to help the Norse with their UHV)
@@ -73,6 +72,8 @@ Changes for Beta 9:
 		Changed the map area and the provinces near Cyprus and southern Greece
 		Byzantium now gets Cyprus, Rhodes and Crete as solid provinces
 		Cordoba gets Oran as OK Province
+		Removed sheep from northern Transylvania (Hungary)
+		Moved olives near Knossos
 	
 	XML updates:
 		XML cleanup (unused lines of code are removed, many typos fixed)
