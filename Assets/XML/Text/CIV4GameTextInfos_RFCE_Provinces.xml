@@ -800,596 +800,596 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_80</Tag>
 		<English>Moesia</English>
-		<French>Province_80</French>
-		<German>Province_80</German>
-		<Italian>Province_80</Italian>
-		<Spanish>Province_80</Spanish>
-		<Russian>Province_80</Russian>
+		<French>Mesiae</French>
+		<German>Moesia</German>
+		<Italian>Mesia</Italian>
+		<Spanish>Mesia</Spanish>
+		<Russian>Moesia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_81</Tag>
 		<English>Constantinople</English>
-		<French>Province_81</French>
-		<German>Province_81</German>
-		<Italian>Province_81</Italian>
-		<Spanish>Province_81</Spanish>
-		<Russian>Province_81</Russian>
+		<French>Constantinople</French>
+		<German>Konstantinopel</German>
+		<Italian>Constantinopli</Italian>
+		<Spanish>Constantinopla</Spanish>
+		<Russian>Constantinople</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_82</Tag>
 		<English>Thrace</English>
-		<French>Province_82</French>
-		<German>Province_82</German>
-		<Italian>Province_82</Italian>
-		<Spanish>Province_82</Spanish>
-		<Russian>Province_82</Russian>
+		<French>Thrace</French>
+		<German>Thrakien</German>
+		<Italian>Tracia</Italian>
+		<Spanish>Tracia</Spanish>
+		<Russian>Thrace</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_83</Tag>
 		<English>Thessaly</English>
-		<French>Province_83</French>
-		<German>Province_83</German>
-		<Italian>Province_83</Italian>
-		<Spanish>Province_83</Spanish>
-		<Russian>Province_83</Russian>
+		<French>Thessalie</French>
+		<German>Thessalien</German>
+		<Italian>Tessaglia</Italian>
+		<Spanish>Tesalia</Spanish>
+		<Russian>Thessaly</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_84</Tag>
 		<English>Macedonia</English>
-		<French>Province_84</French>
-		<German>Province_84</German>
-		<Italian>Province_84</Italian>
-		<Spanish>Province_84</Spanish>
-		<Russian>Province_84</Russian>
+		<French>Macedoine</French>
+		<German>Makedonien</German>
+		<Italian>Macedonia</Italian>
+		<Spanish>Macedonia</Spanish>
+		<Russian>Macedonia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_85</Tag>
 		<English>Serbia</English>
-		<French>Province_85</French>
-		<German>Province_85</German>
-		<Italian>Province_85</Italian>
-		<Spanish>Province_85</Spanish>
-		<Russian>Province_85</Russian>
+		<French>Serbie</French>
+		<German>Serbien</German>
+		<Italian>Serbia</Italian>
+		<Spanish>Serbia</Spanish>
+		<Russian>Serbia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_86</Tag>
 		<English>Croatia</English>
-		<French>Province_86</French>
-		<German>Province_86</German>
-		<Italian>Province_86</Italian>
-		<Spanish>Province_86</Spanish>
-		<Russian>Province_86</Russian>
+		<French>Croatie</French>
+		<German>Kroatien</German>
+		<Italian>Croazia</Italian>
+		<Spanish>Croacia</Spanish>
+		<Russian>Croatia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_87</Tag>
 		<English>Epirus</English>
-		<French>Province_87</French>
-		<German>Province_87</German>
-		<Italian>Province_87</Italian>
-		<Spanish>Province_87</Spanish>
-		<Russian>Province_87</Russian>
+		<French>Epire</French>
+		<German>Epirus</German>
+		<Italian>Epiro</Italian>
+		<Spanish>Epiro</Spanish>
+		<Russian>Epirus</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_88</Tag>
 		<English>Morea</English>
-		<French>Province_88</French>
-		<German>Province_88</German>
-		<Italian>Province_88</Italian>
-		<Spanish>Province_88</Spanish>
-		<Russian>Province_88</Russian>
+		<French>Morea</French>
+		<German>Morea</German>
+		<Italian>Morea</Italian>
+		<Spanish>Morea</Spanish>
+		<Russian>Morea</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_89</Tag>
 		<English>Wallachia</English>
-		<French>Province_89</French>
-		<German>Province_89</German>
-		<Italian>Province_89</Italian>
-		<Spanish>Province_89</Spanish>
-		<Russian>Province_89</Russian>
+		<French>Valachie</French>
+		<German>Walachei</German>
+		<Italian>Vallachia</Italian>
+		<Spanish>Valaquia</Spanish>
+		<Russian>Wallachia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_90</Tag>
 		<English>Jerusalem</English>
-		<French>Province_90</French>
-		<German>Province_90</German>
-		<Italian>Province_90</Italian>
-		<Spanish>Province_90</Spanish>
-		<Russian>Province_90</Russian>
+		<French>Jerusalem</French>
+		<German>Jerusalem</German>
+		<Italian>Gerusalemme</Italian>
+		<Spanish>Jerusalen</Spanish>
+		<Russian>Jerusalem</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_91</Tag>
 		<English>Paphlagonia</English>
-		<French>Province_91</French>
-		<German>Province_91</German>
-		<Italian>Province_91</Italian>
-		<Spanish>Province_91</Spanish>
-		<Russian>Province_91</Russian>
+		<French>Paphlagonie</French>
+		<German>Paphlagonien</German>
+		<Italian>Paflagonia</Italian>
+		<Spanish>Paflagonia</Spanish>
+		<Russian>Paphlagonia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_92</Tag>
 		<English>Opsikion</English>
-		<French>Province_92</French>
-		<German>Province_92</German>
-		<Italian>Province_92</Italian>
-		<Spanish>Province_92</Spanish>
-		<Russian>Province_92</Russian>
+		<French>Opsikion</French>
+		<German>Opsikion</German>
+		<Italian>Opsikion</Italian>
+		<Spanish>Opsikion</Spanish>
+		<Russian>Opsikion</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_93</Tag>
 		<English>Thrakesion</English>
-		<French>Province_93</French>
-		<German>Province_93</German>
-		<Italian>Province_93</Italian>
-		<Spanish>Province_93</Spanish>
-		<Russian>Province_93</Russian>
+		<French>Thrakesion</French>
+		<German>Thrakesion</German>
+		<Italian>Thrakesion</Italian>
+		<Spanish>Thrakesion</Spanish>
+		<Russian>Thrakesion</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_94</Tag>
 		<English>Cilicia</English>
-		<French>Province_94</French>
-		<German>Province_94</German>
-		<Italian>Province_94</Italian>
-		<Spanish>Province_94</Spanish>
-		<Russian>Province_94</Russian>
+		<French>Cilicie</French>
+		<German>Kilikien</German>
+		<Italian>Cilicia</Italian>
+		<Spanish>Cilicia</Spanish>
+		<Russian>Cilicia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_95</Tag>
 		<English>Anatolikon</English>
-		<French>Province_95</French>
-		<German>Province_95</German>
-		<Italian>Province_95</Italian>
-		<Spanish>Province_95</Spanish>
-		<Russian>Province_95</Russian>
+		<French>Anatoliques</French>
+		<German>Anatolikon</German>
+		<Italian>Anatolikon</Italian>
+		<Spanish>Anatolikon</Spanish>
+		<Russian>Anatolikon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_96</Tag>
 		<English>Armeniakon</English>
-		<French>Province_96</French>
-		<German>Province_96</German>
-		<Italian>Province_96</Italian>
-		<Spanish>Province_96</Spanish>
-		<Russian>Province_96</Russian>
+		<French>Armeniaques</French>
+		<German>Armeniakon</German>
+		<Italian>Armeniakon</Italian>
+		<Spanish>Armeniakon</Spanish>
+		<Russian>Armeniakon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_97</Tag>
 		<English>Charsiadon</English>
-		<French>Province_97</French>
-		<German>Province_97</German>
-		<Italian>Province_97</Italian>
-		<Spanish>Province_97</Spanish>
-		<Russian>Province_97</Russian>
+		<French>Charsiadon</French>
+		<German>Charsiadon</German>
+		<Italian>Charsiadon</Italian>
+		<Spanish>Charsiadon</Spanish>
+		<Russian>Charsiadon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_98</Tag>
 		<English>Colonea</English>
-		<French>Province_98</French>
-		<German>Province_98</German>
-		<Italian>Province_98</Italian>
-		<Spanish>Province_98</Spanish>
-		<Russian>Province_98</Russian>
+		<French>Colonea</French>
+		<German>Colonea</German>
+		<Italian>Colonea</Italian>
+		<Spanish>Colonea</Spanish>
+		<Russian>Colonea</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_99</Tag>
 		<English>Antiochia</English>
-		<French>Province_99</French>
-		<German>Province_99</German>
-		<Italian>Province_99</Italian>
-		<Spanish>Province_99</Spanish>
-		<Russian>Province_99</Russian>
+		<French>Antioche</French>
+		<German>Antiochia</German>
+		<Italian>Antiochia</Italian>
+		<Spanish>Antiochia</Spanish>
+		<Russian>Antiochia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_100</Tag>
 		<English>Syria</English>
-		<French>Province_100</French>
-		<German>Province_100</German>
-		<Italian>Province_100</Italian>
-		<Spanish>Province_100</Spanish>
-		<Russian>Province_100</Russian>
+		<French>Syrie</French>
+		<German>Syrien</German>
+		<Italian>Siria</Italian>
+		<Spanish>Siria</Spanish>
+		<Russian>Syria</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_101</Tag>
 		<English>Lebanon</English>
-		<French>Province_101</French>
-		<German>Province_101</German>
-		<Italian>Province_101</Italian>
-		<Spanish>Province_101</Spanish>
-		<Russian>Province_101</Russian>
+		<French>Liban</French>
+		<German>Libanon</German>
+		<Italian>Libano</Italian>
+		<Spanish>Libano</Spanish>
+		<Russian>Lebanon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_102</Tag>
 		<English>Arabia</English>
-		<French>Province_102</French>
-		<German>Province_102</German>
-		<Italian>Province_102</Italian>
-		<Spanish>Province_102</Spanish>
-		<Russian>Province_102</Russian>
+		<French>Arabie</French>
+		<German>Arabia</German>
+		<Italian>Araba</Italian>
+		<Spanish>Arabia</Spanish>
+		<Russian>Arabia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_103</Tag>
 		<English>Egypt</English>
-		<French>Province_103</French>
-		<German>Province_103</German>
-		<Italian>Province_103</Italian>
-		<Spanish>Province_103</Spanish>
-		<Russian>Province_103</Russian>
+		<French>Egypte</French>
+		<German>Agypten</German>
+		<Italian>Egitto</Italian>
+		<Spanish>Egipto</Spanish>
+		<Russian>Egypt</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_104</Tag>
 		<English>Cyrenaica</English>
-		<French>Province_104</French>
-		<German>Province_104</German>
-		<Italian>Province_104</Italian>
-		<Spanish>Province_104</Spanish>
-		<Russian>Province_104</Russian>
+		<French>Cyrenaique</French>
+		<German>Kyrenaika</German>
+		<Italian>Cirenaica</Italian>
+		<Spanish>Cirenaica</Spanish>
+		<Russian>Cyrenaica</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_105</Tag>
 		<English>Tripolitania</English>
-		<French>Province_105</French>
-		<German>Province_105</German>
-		<Italian>Province_105</Italian>
-		<Spanish>Province_105</Spanish>
-		<Russian>Province_105</Russian>
+		<French>Tripolitaine</French>
+		<German>Tripolitanien</German>
+		<Italian>Tripolitania</Italian>
+		<Spanish>Tripolitania</Spanish>
+		<Russian>Tripolitania5</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_106</Tag>
 		<English>Ifriqiya</English>
-		<French>Province_106</French>
-		<German>Province_106</German>
-		<Italian>Province_106</Italian>
-		<Spanish>Province_106</Spanish>
-		<Russian>Province_106</Russian>
+		<French>Ifriqiya</French>
+		<German>Ifriqiya</German>
+		<Italian>Ifriqiya</Italian>
+		<Spanish>Ifriqiya</Spanish>
+		<Russian>Ifriqiya</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_107</Tag>
 		<English>Algiers</English>
-		<French>Province_107</French>
-		<German>Province_107</German>
-		<Italian>Province_107</Italian>
-		<Spanish>Province_107</Spanish>
-		<Russian>Province_107</Russian>
+		<French>Alger</French>
+		<German>Algier</German>
+		<Italian>Algeri</Italian>
+		<Spanish>Argel</Spanish>
+		<Russian>Algiers</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_108</Tag>
 		<English>Tetouan</English>
-		<French>Province_108</French>
-		<German>Province_108</German>
-		<Italian>Province_108</Italian>
-		<Spanish>Province_108</Spanish>
-		<Russian>Province_108</Russian>
+		<French>Tetouan</French>
+		<German>Tetouan</German>
+		<Italian>Tetouan</Italian>
+		<Spanish>Tetuan</Spanish>
+		<Russian>Tetouan</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_109</Tag>
 		<English>Oran</English>
-		<French>Province_109</French>
-		<German>Province_109</German>
-		<Italian>Province_109</Italian>
-		<Spanish>Province_109</Spanish>
-		<Russian>Province_109</Russian>
+		<French>Oran</French>
+		<German>Oran</German>
+		<Italian>Orano</Italian>
+		<Spanish>Oran</Spanish>
+		<Russian>Oran</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_110</Tag>
 		<English>Sicily</English>
-		<French>Province_110</French>
-		<German>Province_110</German>
-		<Italian>Province_110</Italian>
-		<Spanish>Province_110</Spanish>
-		<Russian>Province_110</Russian>
+		<French>Sicile</French>
+		<German>Sizilien</German>
+		<Italian>Sicilia</Italian>
+		<Spanish>Sicilia</Spanish>
+		<Russian>Sicily</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_111</Tag>
 		<English>Crete</English>
-		<French>Province_111</French>
-		<German>Province_111</German>
-		<Italian>Province_111</Italian>
-		<Spanish>Province_111</Spanish>
-		<Russian>Province_111</Russian>
+		<French>Crete</French>
+		<German>Kreta</German>
+		<Italian>Creta</Italian>
+		<Spanish>Creta</Spanish>
+		<Russian>Crete</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_112</Tag>
 		<English>Cyprus</English>
-		<French>Province_112</French>
-		<German>Province_112</German>
-		<Italian>Province_112</Italian>
-		<Spanish>Province_112</Spanish>
-		<Russian>Province_112</Russian>
+		<French>Chypre</French>
+		<German>Zypern</German>
+		<Italian>Cipro</Italian>
+		<Spanish>Chipre</Spanish>
+		<Russian>Cyprus</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_113</Tag>
 		<English>Rhodes</English>
-		<French>Province_113</French>
-		<German>Province_113</German>
-		<Italian>Province_113</Italian>
-		<Spanish>Province_113</Spanish>
-		<Russian>Province_113</Russian>
+		<French>Rhodes</French>
+		<German>Rhodos</German>
+		<Italian>Rodi</Italian>
+		<Spanish>Rodas</Spanish>
+		<Russian>Rhodes</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_114</Tag>
 		<English>Corsica</English>
-		<French>Province_114</French>
-		<German>Province_114</German>
-		<Italian>Province_114</Italian>
-		<Spanish>Province_114</Spanish>
-		<Russian>Province_114</Russian>
+		<French>Corse</French>
+		<German>Korsika</German>
+		<Italian>Corsica</Italian>
+		<Spanish>Corsega</Spanish>
+		<Russian>Corsica</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_115</Tag>
 		<English>Sardinia</English>
-		<French>Province_115</French>
-		<German>Province_115</German>
-		<Italian>Province_115</Italian>
-		<Spanish>Province_115</Spanish>
-		<Russian>Province_115</Russian>
+		<French>Sardaigne</French>
+		<German>Sardinien</German>
+		<Italian>Sardegna</Italian>
+		<Spanish>Cerdena</Spanish>
+		<Russian>Sardinia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_116</Tag>
 		<English>Balears</English>
-		<French>Province_116</French>
-		<German>Province_116</German>
-		<Italian>Province_116</Italian>
-		<Spanish>Province_116</Spanish>
-		<Russian>Province_116</Russian>
+		<French>Baleares</French>
+		<German>Balearen</German>
+		<Italian>Baleari</Italian>
+		<Spanish>Baleares</Spanish>
+		<Russian>Balears</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_117</Tag>
 		<English>Canaries</English>
-		<French>Province_117</French>
-		<German>Province_117</German>
-		<Italian>Province_117</Italian>
-		<Spanish>Province_117</Spanish>
-		<Russian>Province_117</Russian>
+		<French>Canaries</French>
+		<German>Kanarien</German>
+		<Italian>Canarie</Italian>
+		<Spanish>Canarias</Spanish>
+		<Russian>Canaries</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_118</Tag>
 		<English>Azores</English>
-		<French>Province_118</French>
-		<German>Province_118</German>
-		<Italian>Province_118</Italian>
-		<Spanish>Province_118</Spanish>
-		<Russian>Province_118</Russian>
+		<French>Acores</French>
+		<German>Azoren</German>
+		<Italian>Azzorre</Italian>
+		<Spanish>Azores</Spanish>
+		<Russian>Azores</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_119</Tag>
 		<English>Morocco</English>
-		<French>Province_119</French>
-		<German>Province_119</German>
-		<Italian>Province_119</Italian>
-		<Spanish>Province_119</Spanish>
-		<Russian>Province_119</Russian>
+		<French>Maroc</French>
+		<German>Marokko</German>
+		<Italian>Marocco</Italian>
+		<Spanish>Marruecos</Spanish>
+		<Russian>Morocco</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_120</Tag>
 		<English>Moldova</English>
-		<French>Province_120</French>
-		<German>Province_120</German>
-		<Italian>Province_120</Italian>
-		<Spanish>Province_120</Spanish>
-		<Russian>Province_120</Russian>
+		<French>Moldavie</French>
+		<German>Moldawien</German>
+		<Italian>Moldavia</Italian>
+		<Spanish>Moldavia</Spanish>
+		<Russian>Moldova</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_121</Tag>
 		<English>Crimea</English>
-		<French>Province_121</French>
-		<German>Province_121</German>
-		<Italian>Province_121</Italian>
-		<Spanish>Province_121</Spanish>
-		<Russian>Province_121</Russian>
+		<French>Crimee</French>
+		<German>Krim</German>
+		<Italian>Crimea</Italian>
+		<Spanish>Crimea</Spanish>
+		<Russian>Crimea</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_122</Tag>
 		<English>Novgorod</English>
-		<French>Province_122</French>
-		<German>Province_122</German>
-		<Italian>Province_122</Italian>
-		<Spanish>Province_122</Spanish>
-		<Russian>Province_122</Russian>
+		<French>Novgorod</French>
+		<German>Nowgorod</German>
+		<Italian>Novgorod</Italian>
+		<Spanish>Novgorod</Spanish>
+		<Russian>Novgorod</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_123</Tag>
 		<English>Kuban</English>
-		<French>Province_123</French>
-		<German>Province_123</German>
-		<Italian>Province_123</Italian>
-		<Spanish>Province_123</Spanish>
-		<Russian>Province_123</Russian>
+		<French>Kouban</French>
+		<German>Kuban</German>
+		<Italian>Kuban</Italian>
+		<Spanish>Kuban</Spanish>
+		<Russian>Kuban</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_124</Tag>
 		<English>Zaporizhia</English>
-		<French>Province_124</French>
-		<German>Province_124</German>
-		<Italian>Province_124</Italian>
-		<Spanish>Province_124</Spanish>
-		<Russian>Province_124</Russian>
+		<French>Zaporijia</French>
+		<German>Saporischschaja</German>
+		<Italian>Zaporizzia</Italian>
+		<Spanish>Zaporizhia</Spanish>
+		<Russian>Zaporizhia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_125</Tag>
 		<English>Rostov</English>
-		<French>Province_125</French>
-		<German>Province_125</German>
-		<Italian>Province_125</Italian>
-		<Spanish>Province_125</Spanish>
-		<Russian>Province_125</Russian>
+		<French>Rostov</French>
+		<German>Rostow</German>
+		<Italian>Rostov</Italian>
+		<Spanish>Rostov</Spanish>
+		<Russian>Rostov</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_126</Tag>
 		<English>Moscow</English>
-		<French>Province_126</French>
-		<German>Province_126</German>
-		<Italian>Province_126</Italian>
-		<Spanish>Province_126</Spanish>
-		<Russian>Province_126</Russian>
+		<French>Moscou</French>
+		<German>Moskau</German>
+		<Italian>Mosca</Italian>
+		<Spanish>Moscu</Spanish>
+		<Russian>Moscow</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_127</Tag>
 		<English>Vologda</English>
-		<French>Province_127</French>
-		<German>Province_127</German>
-		<Italian>Province_127</Italian>
-		<Spanish>Province_127</Spanish>
-		<Russian>Province_127</Russian>
+		<French>Vologda</French>
+		<German>Wologda</German>
+		<Italian>Vologda</Italian>
+		<Spanish>Vologda</Spanish>
+		<Russian>Vologda</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_128</Tag>
 		<English>Smolensk</English>
-		<French>Province_128</French>
-		<German>Province_128</German>
-		<Italian>Province_128</Italian>
-		<Spanish>Province_128</Spanish>
-		<Russian>Province_128</Russian>
+		<French>Smolensk</French>
+		<German>Smolensk</German>
+		<Italian>Smolensk</Italian>
+		<Spanish>Smolensk</Spanish>
+		<Russian>Smolensk</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_129</Tag>
 		<English>Polotsk</English>
-		<French>Province_129</French>
-		<German>Province_129</German>
-		<Italian>Province_129</Italian>
-		<Spanish>Province_129</Spanish>
-		<Russian>Province_129</Russian>
+		<French>Polotsk</French>
+		<German>Polazk</German>
+		<Italian>Polack</Italian>
+		<Spanish>Polatsk</Spanish>
+		<Russian>Polotsk</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_130</Tag>
 		<English>Murom</English>
-		<French>Province_130</French>
-		<German>Province_130</German>
-		<Italian>Province_130</Italian>
-		<Spanish>Province_130</Spanish>
-		<Russian>Province_130</Russian>
+		<French>Mourom</French>
+		<German>Murom</German>
+		<Italian>Murom</Italian>
+		<Spanish>Murom</Spanish>
+		<Russian>Murom</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_131</Tag>
 		<English>Chernigov</English>
-		<French>Province_131</French>
-		<German>Province_131</German>
-		<Italian>Province_131</Italian>
-		<Spanish>Province_131</Spanish>
-		<Russian>Province_131</Russian>
+		<French>Tchernihiv</French>
+		<German>Tschernihiw</German>
+		<Italian>Chernihiv</Italian>
+		<Spanish>Chernigov</Spanish>
+		<Russian>Chernigov</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_132</Tag>
 		<English>Pereyaslavl</English>
-		<French>Province_132</French>
-		<German>Province_132</German>
-		<Italian>Province_132</Italian>
-		<Spanish>Province_132</Spanish>
-		<Russian>Province_132</Russian>
+		<French>Pereyaslavl</French>
+		<German>Pereyaslavl</German>
+		<Italian>Pereyaslavl2</Italian>
+		<Spanish>Pereyaslavl</Spanish>
+		<Russian>Pereyaslavl</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_133</Tag>
 		<English>Sloboda</English>
-		<French>Province_133</French>
-		<German>Province_133</German>
-		<Italian>Province_133</Italian>
-		<Spanish>Province_133</Spanish>
-		<Russian>Province_133</Russian>
+		<French>Sloboda</French>
+		<German>Sloboda</German>
+		<Italian>Sloboda</Italian>
+		<Spanish>Sloboda</Spanish>
+		<Russian>Sloboda</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_134</Tag>
 		<English>Donets</English>
-		<French>Province_134</French>
-		<German>Province_134</German>
-		<Italian>Province_134</Italian>
-		<Spanish>Province_134</Spanish>
-		<Russian>Province_134</Russian>
+		<French>Donets</French>
+		<German>Donez</German>
+		<Italian>Donec</Italian>
+		<Spanish>Donets</Spanish>
+		<Russian>Donets</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_135</Tag>
 		<English>Kiev</English>
-		<French>Province_135</French>
-		<German>Province_135</German>
-		<Italian>Province_135</Italian>
-		<Spanish>Province_135</Spanish>
-		<Russian>Province_135</Russian>
+		<French>Kiev</French>
+		<German>Kiew</German>
+		<Italian>Kiev</Italian>
+		<Spanish>Kiev</Spanish>
+		<Russian>Kiev</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_136</Tag>
 		<English>Podolia</English>
-		<French>Province_136</French>
-		<German>Province_136</German>
-		<Italian>Province_136</Italian>
-		<Spanish>Province_136</Spanish>
-		<Russian>Province_136</Russian>
+		<French>Podolie</French>
+		<German>Podolien</German>
+		<Italian>Podolia</Italian>
+		<Spanish>Podolia</Spanish>
+		<Russian>Podolia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_137</Tag>
 		<English>White Rus</English>
-		<French>Province_137</French>
-		<German>Province_137</German>
-		<Italian>Province_137</Italian>
-		<Spanish>Province_137</Spanish>
-		<Russian>Province_137</Russian>
+		<French>Russie Blanche</French>
+		<German>Weiﬂ Rus</German>
+		<Italian>Rutenia Bianca</Italian>
+		<Spanish>Rusia Blanco</Spanish>
+		<Russian>White Rus</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_138</Tag>
 		<English>Brest</English>
-		<French>Province_138</French>
-		<German>Province_138</German>
-		<Italian>Province_138</Italian>
-		<Spanish>Province_138</Spanish>
-		<Russian>Province_138</Russian>
+		<French>Brest</French>
+		<German>Brest</German>
+		<Italian>Brest</Italian>
+		<Spanish>Brest</Spanish>
+		<Russian>Brest</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_139</Tag>
 		<English>Simbirsk</English>
-		<French>Province_139</French>
-		<German>Province_139</German>
-		<Italian>Province_139</Italian>
-		<Spanish>Province_139</Spanish>
-		<Russian>Province_139</Russian>
+		<French>v</French>
+		<German>Simbirsk</German>
+		<Italian>Simbirsk</Italian>
+		<Spanish>Simbirsk</Spanish>
+		<Russian>Simbirsk</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_140</Tag>
 		<English>Nizhny Novgorod</English>
-		<French>Province_140</French>
-		<German>Province_140</German>
-		<Italian>Province_140</Italian>
-		<Spanish>Province_140</Spanish>
-		<Russian>Province_140</Russian>
+		<French>Nijni Novgorod</French>
+		<German>Nischni Nowgorod</German>
+		<Italian>Niznij Novgorod</Italian>
+		<Spanish>Nizhni Novgorod</Spanish>
+		<Russian>Nizhny Novgorod</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_141</Tag>
 		<English>Karelia</English>
-		<French>Province_141</French>
-		<German>Province_141</German>
-		<Italian>Province_141</Italian>
-		<Spanish>Province_141</Spanish>
-		<Russian>Province_141</Russian>
+		<French>Carelie</French>
+		<German>Karelien</German>
+		<Italian>Carelia</Italian>
+		<Spanish>Carelia</Spanish>
+		<Russian>Karelia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_142</Tag>
 		<English>Volhynia</English>
-		<French>Province_142</French>
-		<German>Province_142</German>
-		<Italian>Province_142</Italian>
-		<Spanish>Province_142</Spanish>
-		<Russian>Province_142</Russian>
+		<French>Volhynie</French>
+		<German>Wolhynien</German>
+		<Italian>Volinia</Italian>
+		<Spanish>Volinia</Spanish>
+		<Russian>Volhynia2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_143</Tag>
 		<English>Bosnia</English>
-		<French>Province_143</French>
-		<German>Province_143</German>
-		<Italian>Province_143</Italian>
-		<Spanish>Province_143</Spanish>
-		<Russian>Province_143</Russian>
+		<French>Bosnie</French>
+		<German>Bosnien</German>
+		<Italian>Bosnia</Italian>
+		<Spanish>Bosnia</Spanish>
+		<Russian>Bosnia</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_144</Tag>
 		<English>Thessaloniki</English>
-		<French>Province_144</French>
-		<German>Province_144</German>
-		<Italian>Province_144</Italian>
-		<Spanish>Province_144</Spanish>
-		<Russian>Province_144</Russian>
+		<French>Thessalonique</French>
+		<German>Thessaloniki</German>
+		<Italian>Salonicco</Italian>
+		<Spanish>Salonica</Spanish>
+		<Russian>Thessaloniki</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_145</Tag>
 		<English>Marrakesh</English>
-		<French>Province_145</French>
-		<German>Province_145</German>
-		<Italian>Province_145</Italian>
-		<Spanish>Province_145</Spanish>
-		<Russian>Province_145</Russian>
+		<French>Marrakech</French>
+		<German>Marrakesch</German>
+		<Italian>Marrakech</Italian>
+		<Spanish>Marrakech</Spanish>
+		<Russian>Marrakesh</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_146</Tag>
