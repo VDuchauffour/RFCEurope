@@ -689,6 +689,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=70
+	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -1782,7 +1783,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=68
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -1803,6 +1803,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=72
+	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -2155,6 +2156,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=69
+	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -2165,7 +2167,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=71
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23559,6 +23560,7 @@ BeginPlot
 	x=56,y=72
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
