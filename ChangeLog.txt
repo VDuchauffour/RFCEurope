@@ -73,6 +73,7 @@ Changes for Beta 9:
 		Cordoba gets Oran as OK Province
 		Removed sheep from northern Transylvania (Hungary)
 		Moved olives near Knossos
+		Placed a few walruses in the northern regions (for testing)
 	
 	XML updates:
 		XML cleanup (unused lines of code are removed, many typos fixed)
@@ -87,7 +88,7 @@ Changes for Beta 9:
 		Added text showing info for the Civic combo Stability boost/penalty
 		Added condition for the Dynamic Names for the case when the player has respawned (note XML value of 0 passes regardless whether the player has respawned)
 		Many small XML updates regarding religious buildings
-		Walrus (ivory) gives 1 food without a camp and an additional 1 production and 2 commerce with a camp
+		Walrus (ivory) gives 1 food without a camp and an additional 1 food, 1 production and 1 commerce with a camp
 
 	Art updates:
 		Byzantine Lancer, Byzantine Knight and Hungarian Pikeman have proper button
