@@ -35,7 +35,7 @@ iMapMaxY = 73
 # England     i1066AD
 # Portugal    i1139AD
 # Austria     i1282AD
-# Turkey      i1299AD
+# Turkey      i1359AD
 # Moscow      i1380AD
 # Sweden      i1523AD
 # Dutch       i1581AD
@@ -187,7 +187,7 @@ xml.i711AD, #712AD Cordoba
 xml.i780AD, #780AD Norse
 xml.i810AD, #800AD Venecia
 xml.i843AD, #843AD Burgundy
-xml.i858AD, # 843AD Germany
+xml.i858AD, #858AD Germany
 xml.i880AD, #864AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
 xml.i895AD, #896AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
 xml.i910AD, #910AD Spain
@@ -197,8 +197,8 @@ xml.i1066AD,# 155 normally 1066AD England
 xml.i1139AD,#1100AD Portugal
 xml.i1236AD,#1236AD Lithuania
 xml.i1282AD,#1282AD Austria
-xml.i1359AD,#1299AD Turkey - 233 is normal time (Conquest of Adrianopolis)
-xml.i1380AD,#1000AD Moscow => 1323 (260)
+xml.i1359AD,#1359AD Turkey - 233 is normal time (Conquest of Adrianopolis)
+xml.i1380AD,#1380AD Moscow => 1323 (260)
 xml.i1523AD,#1523AD Sweden
 xml.i1581AD,#1580AD Dutch 340 is normal time
 0,	#Pope

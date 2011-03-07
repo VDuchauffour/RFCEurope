@@ -857,15 +857,6 @@
 		<Spanish>.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SCRIPTORIUM_PEDIA</Tag>
-		<English>[TAB]Scriptorium, literally "a place for writing", is commonly used to refer to a room in medieval European monasteries devoted to the copying of manuscripts by monastic scribes. A scriptorium was a necessary adjunct to a library; wherever there was a library it can ordinarily be assumed that there was a scriptorium.
-[TAB]When monastic libraries and scriptoria arose in the early 6th century, they defined European literary culture and selectively preserved the literary history of the West. Monks copied Jerome's Latin Vulgate Bible and the commentaries and letters of early Church Fathers for missionary purposes as well as for use within the monastery. The products of the scriptorium provided a valuable medium of exchange. Within the scriptorium, there was typically a division of labor between the monks who readied the parchment for copying by smoothing and chalking the surface, those who ruled the parchment and copied the text, and those who illuminated the text. Sometimes a single monk would engage in all of these stages to prepare a manuscript. By the start of the 13th century, monastic manuscript production declined because secular copyshops had developed to write for the laity. These were closely followed by urban bookshops circa 1250 that before the introduction of printing in the last quarter of the fifteenth century had already virtually replaced the monastery as a source for books.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SEMINARY_PEDIA</Tag>
 		<English>[TAB]A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
 		<French>.</French>
@@ -1015,6 +1006,23 @@
 		<Tag>TXT_KEY_BUILDING_STAR_FORT_PEDIA</Tag>
 		<English>[TAB]A star fort, or trace italienne, is a fortification in the style that evolved during the age of gunpowder, when cannon came to dominate the battlefield, and was first seen in the mid-15th century in Italy. Passive ring-shaped (enceinte) fortifications of the Medieval era proved vulnerable to damage or destruction by cannon fire, when it could be directed from outside against a perpendicular masonry wall. In addition, an attacking force that could get close to the wall was able to conduct undermining operations in relative safety, as the defenders could not shoot at them from nearby walls. In contrast, the star fortress was a very flat structure composed of many triangular bastions, specifically designed to cover each other, and a ditch. Further structures, such as ravelins, hornworks or crownworks, and detached forts could be added to create a complex symmetrical structure.
 [TAB]Star fortifications were further developed in the late fifteenth and early sixteenth centuries primarily in response to the French invasion of the Italian peninsula. The French army was equipped with new cannon and bombards that were easily able to destroy traditional fortifications built in the Middle Ages. In order to counteract the power of the new weapons, defensive walls were made lower and thicker. They were built of many materials, usually earth and brick, as brick does not shatter on impact from a cannonball as does stone. Another important design modification were the bastions that characterized the new fortresses. In order to improve the defense of the fortress, covering fire had to be provided, often from multiple angles. The result was the development of star-shaped fortresses.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Tag>
+		<English>[TAB]The Byzantine historian Pseudo-Simeon stated that Krum sent a 30,000 strong cavalry, "the whole armoured with iron", which devastated Thrace. According to inscriptions found in the region of Pliska, Preslav, Madara and Shabla in north-eastern Bulgaria, armaments for 1,713 heavy riders were available. Assuming that the surviving inscriptions are around 1/10 of the total number, that makes 17,130 men only in the so called "inner region" of Bulgaria. After comparison with the data of Pseudo-Simeon, it can be assumed that the heavy cavalry component of the Bulgarian army numbered between 17-20,000 and 30,000 men, depending on the level of mobilization. During the end of the 9th and the beginning of the 10th centuries, Emperor Simeon the Great was able to lead in battle more than 60,000 soldiers.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_PEDIA</Tag>
+		<English>[TAB]A night watch was a law enforcement formation found in some countries and historical periods, usually subordinate to the local municipal government. Historically many cities had their own guard formations, which doubled as police and military force in times of need.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
