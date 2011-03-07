@@ -1484,7 +1484,7 @@
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
 			<Type>CIVIC_GUILDS</Type>
 			<Description>TXT_KEY_TECH_GUILDS</Description>
-			<Civilopedia>TXT_KEY_CIVIC_GUILDS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_GUILDS_STRATEGY</Strategy>
                         <Help>TXT_KEY_CIVIC_GUILDS_HELP</Help>
 			<Button>,Art/Interface/Buttons/TechTree/Guilds.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,4</Button>

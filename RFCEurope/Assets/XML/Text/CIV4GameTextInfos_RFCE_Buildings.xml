@@ -627,21 +627,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_HELP</Tag>
-		<English>[ICON_BULLET] +1 Stability</English>
-		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
+		<English>[ICON_BULLET]+1 Stability</English>
+		<French>[ICON_BULLET]+1 Stabilit&#233;</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
+		<Russian>[ICON_BULLET]+1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Tag>
-		<English>[ICON_BULLET] +1 Stability</English>
-		<French>[ICON_BULLET] +1 Stabilit&#233;</French>
+		<English>[ICON_BULLET]+1 Stability</English>
+		<French>[ICON_BULLET]+1 Stabilit&#233;</French>
 		<German/>
 		<Italian/>
 		<Spanish/>
-		<Russian>[ICON_BULLET] +1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
+		<Russian>[ICON_BULLET]+1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
