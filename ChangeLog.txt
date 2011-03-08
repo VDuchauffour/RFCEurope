@@ -66,6 +66,7 @@ Changes for Beta 10:
 
 	Bugfixes:
 		Fixed: a bug not resetting player data properly when starting a new game from within an existing game
+		Fixed: Genoa second UHV should work now
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

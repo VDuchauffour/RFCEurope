@@ -921,9 +921,9 @@ class Victory:
                                 if ( iPlayer != iGenoa and teamGenoa.isOpenBorders( iPlayer ) ):
                                         iCount += 1
                         if ( iCount >= 10 ):
-                                pGenoa.setUHV( 1, 1 )
+                                pGenoa.setUHV( 2, 1 )
                         else:
-                                pGenoa.setUHV( 1, 0 )
+                                pGenoa.setUHV( 2, 0 )
                                 
                 
         def checkEngland( self, iGameTurn ):
