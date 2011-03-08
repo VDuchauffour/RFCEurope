@@ -55,6 +55,10 @@ Changes for Beta 10:
 	XML updates:
 		XML cleanup (unused lines of code are removed)
 		New text for some objects (There are still some things that haven't a text yet. Feel free to make one and post it)
+		Proper text for Feudal Law civic
+
+	Python Updates:
+		Correct spawndates for the independent cities (the info after # shows the correct date now)
 
 	Art updates:
 
