@@ -31,19 +31,19 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 lMarrakesh = [18,14,157,0] #1071 AD
 lTangier = [24,23,0,0] #500 AD
-lCorunna = [25,40,75,0] #500 AD
-lToledo = [28,32,45,0] #700 AD
-lLeon = [28,37,50,0] # 720 AD
-lBurgos = [32,35,50,0] # 720 AD
-#lZaragoza = [35,32,45,0] # 720 AD
+lCorunna = [25,40,75,0] #800 AD
+lToledo = [28,32,45,0] #680 AD
+lLeon = [28,37,50,0] # 700 AD
+lBurgos = [32,35,50,0] # 700 AD
+#lZaragoza = [35,32,45,0] # 680 AD
 lValencia = [34,29,50,0] #700 AD
-lPamplona = [35,35,50,0] #500 AD
+lPamplona = [35,35,50,0] #700 AD
 lBurdigala = [37,40,0,0] #500 AD
 lNantes = [37,45,0,0] #500 AD
 lAlger = [39,20,0,0] #500 AD
 lBarcino = [39,31,0,0] #500 AD
 #lCaen = [40,48,0,0] #500 AD
-lCalais = [45,50,100,0] #500 AD
+lCalais = [45,50,100,0] #900 AD
 lToulouse = [41,37,0,0] #500 AD
 lTours = [42,42,0,0] #500 AD
 lMarseilles = [45,33,0,0] #500 AD
@@ -70,23 +70,23 @@ lTonsberg = [58,64,65,0] #760 AD
 lLeipzig = [59,48,75,0] #800 AD
 lPrague = [61,44,75,0] #800 AD
 lKharkov = [90,46,75,0] #800 AD
-lSamara = [97,54,240,0] #800 AD
-lKazan = [97,60,240,0] #800 AD
-lNovgorod = [80,62,240,0] #800 AD
-lMinsk = [76,50,120,0] #800 AD
+lSamara = [97,54,240,0] #1320 AD
+lKazan = [97,60,240,0] #1320 AD
+lNovgorod = [80,62,240,0] #1320 AD
+lMinsk = [76,50,120,0] #960 AD
 lAlbaIulia = [73,34,100,0] #900 AD
-lRiga = [72,58,240,0] #900 AD
-lMemel = [70,55,240,0] #900 AD
+lRiga = [72,58,240,0] #1320 AD
+lMemel = [70,55,240,0] #1320 AD
 lTvanksta = [70,54,100,0] #900 AD
 lBreslau = [65,45,100,0] #900 AD
-lKrakow = [69,44,100,0]
-lYaroslavl = [92,61,240,0] #900 AD
-lVologda = [89,64,240,0] #900 AD
-lTver = [85,60,240,0] #900 AD
-lSmolensk = [85,53,240,0] #900 AD
+lKrakow = [69,44,100,0] #900 AD
+lYaroslavl = [92,61,240,0] #1320 AD
+lVologda = [89,64,240,0] #1320 AD
+lTver = [85,60,240,0] #1320 AD
+lSmolensk = [85,53,240,0] #1320 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
 lMus = [99,21,153,0] #1060 AD
-lPalermo = [55,19,2,0] # 500 AD
+lPalermo = [55,19,2,0] # 508 AD
 lGroningen = [52,54,150,0] #1050 AD
 
 #handicap level modifier
@@ -286,8 +286,8 @@ class Barbs:
 		self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1) #UnitOwner = 22 -> iIndy2 
 		self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism)
 		self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
-                self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism) # 3Miro add Lyon to flip to Burgundy
-                self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
+            self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism) # 3Miro add Lyon to flip to Burgundy
+            self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism)
 		self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1)
 		self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 1, -1)
 		self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1)

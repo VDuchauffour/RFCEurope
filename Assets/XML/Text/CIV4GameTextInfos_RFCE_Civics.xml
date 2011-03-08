@@ -1265,12 +1265,12 @@
 		<French/><German/><Italian/><Spanish/><Russian/></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1</Tag>
-		<English>[ICON_BULLET] %D1_Mod [ICON_GOLD] </English>
-		<French>[ICON_BULLET] %D1_Mod [ICON_GOLD] </French>
-		<German>[ICON_BULLET] %D1_Mod [ICON_GOLD] </German>
-		<Italian>[ICON_BULLET] %D1_Mod [ICON_GOLD] </Italian>
-		<Spanish>[ICON_BULLET] %D1_Mod [ICON_GOLD] </Spanish>
-		<Russian>[ICON_BULLET] %D1_Mod [ICON_GOLD] </Russian></TEXT>
+		<English>[ICON_BULLET]%D1_Mod [ICON_GOLD] </English>
+		<French>[ICON_BULLET]%D1_Mod [ICON_GOLD] </French>
+		<German>[ICON_BULLET]%D1_Mod [ICON_GOLD] </German>
+		<Italian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO2</Tag>
 		<English>for [LINK=literal]%s1_Building[\LINK]</English>
@@ -1289,10 +1289,10 @@
 		<Russian>[ICON_BULLET]%D1_Mod% Unit Production</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
-		<English>%D1_Mod from Civics</English>
-		<French>%D1_Mod from Civics</French>
-		<German>%D1_Mod from Civics</German>
-		<Italian>%D1_Mod from Civics</Italian>
-		<Spanish>%D1_Mod from Civics</Spanish>
-		<Russian>%D1_Mod from Civics</Russian></TEXT>
+		<English>%D1_Mod% from Civics</English>
+		<French>%D1_Mod% from Civics</French>
+		<German>%D1_Mod% from Civics</German>
+		<Italian>%D1_Mod% from Civics</Italian>
+		<Spanish>%D1_Mod% from Civics</Spanish>
+		<Russian>%D1_Mod% from Civics</Russian></TEXT>
 </Civ4GameText>
