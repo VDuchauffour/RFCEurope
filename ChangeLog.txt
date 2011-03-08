@@ -61,6 +61,7 @@ Changes for Beta 10:
 	Balance:
 
 	Bugfixes:
+		Fixed: a bug not resetting player data properly when starting a new game from within an existing game
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
