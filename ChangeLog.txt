@@ -39,7 +39,6 @@ AR		Add a LeaderHeadInfos.xml.light file
 		Find proper art for Arabian Arbalestier
 		Dynamic Civ Names for Lithuania
 MV1		Python cleanup
-MV1		Translate the province names (after the province system is finished)
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		General XML updates, removing unused XML parts
@@ -54,7 +53,7 @@ Changes for Beta 10:
 
 	XML updates:
 		XML cleanup (unused lines of code are removed)
-		New text for some objects (There are still some things that haven't a text yet. Feel free to make one and post it)
+		New pedia text for some objects (There are still some things that haven't a text yet. Feel free to make one and post it)
 		Proper text for Feudal Law civic
 
 	Python Updates:
@@ -63,6 +62,7 @@ Changes for Beta 10:
 	Art updates:
 
 	Balance:
+		Flanders is a solid province for the Netherlands
 
 	Bugfixes:
 		Fixed: a bug not resetting player data properly when starting a new game from within an existing game
