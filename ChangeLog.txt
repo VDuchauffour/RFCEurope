@@ -50,6 +50,7 @@ Changes for Beta 10:
 	General changes:
 
 	Map and province changes:
+		Dense forest 1 tile east of Lyon is a forest now, so the sulphur can be mined without researching Machine Tools
 
 	XML updates:
 		XML cleanup (unused lines of code are removed)
