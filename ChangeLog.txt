@@ -51,6 +51,7 @@ Changes for Beta 10:
 
 	Map and province changes:
 		Dense forest 1 tile east of Lyon is a forest now, so the sulphur can be mined without researching Machine Tools
+		The province of Netherlands is now called Holland
 
 	XML updates:
 		XML cleanup (unused lines of code are removed)
