@@ -232,8 +232,8 @@ tSwedenDesire = []
 
 tDutchCore = []
 tDutchNorm = []
-tDutchOuter = []
-tDutchPot2Core = [xml.iP_Netherlands,xml.iP_Flanders]
+tDutchOuter = [xml.iP_Flanders]
+tDutchPot2Core = [xml.iP_Netherlands]
 tDutchPot2Norm = []
 tDutchDesire = []
 
