@@ -524,16 +524,19 @@ class Stability:
                 iExpStability = 0
                 iCivic5 = pPlayer.getCivics(5)
                 bIsUPLandStability = gc.hasUP( pPlayer.getID(), con.iUP_LandStability )
+                iCivicBonus = 0
+                iUPBonus = 0
                 for pLoopCity in apCityList:
                         pCity = pLoopCity.GetCy()
                         iProvType = pPlayer.getProvinceType( pCity.getProvince() )
                         iExpStability += tStabilityPenalty[ iProvType ]
                         if ( iProvType <= con.iProvinceOuter ):
                                 if ( iCivic5 == xml.iCivicImperialism ): # Imperialism
-                                        iExpStability += 1
+                                        iCivicBonus += 1
                                 if ( bIsUPLandStability ):
-                                        iExpStability += 1
-                                        
+                                        iUPBonus += 1
+                iExpStability += min( 6, iCivicBonus )
+                iExpStability += min( 6, iUPBonus )
                 if ( not (pPlayer.getCivics(5) == xml.iCivicOccupation) ):
                         iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceCore )
                         iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural )

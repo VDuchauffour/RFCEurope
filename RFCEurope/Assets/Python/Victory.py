@@ -1101,9 +1101,9 @@ class Victory:
                         for iProv in tSwedenControlII:
                                 iNumCities += pSweden.getProvinceCityCount( iProv )
                         if ( iNumCities >= 5 ):
-                                pSweden.setUHV( 0, 1 )
+                                pSweden.setUHV( 2, 1 )
                         else:
-                                pSweden.setUHV( 0, 0 )
+                                pSweden.setUHV( 2, 0 )
                 
         def checkDutch( self, iGameTurn ):
                 if ( iGameTurn == xml.i1640AD and pDutch.getUHV( 0 ) == - 1 ):
