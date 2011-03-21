@@ -42,6 +42,7 @@ MV1		Python cleanup
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		General XML updates, removing unused XML parts
+MV1		Make atlas from the buttons
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -65,7 +66,6 @@ Changes for Beta 10:
 	Art updates:
 
 	Balance:
-		Flanders is a solid province for the Netherlands
 		If England dies, then the English Atlantic Access would be spawned by the Norse discovering Astronomy
 		Sweden starts with Guilds and Apprenticeship (used to be Free Peasantry, for which they don't have the tech)
 		The Bonuses from Imperialism and French UP are now "capped" to 6 points max
