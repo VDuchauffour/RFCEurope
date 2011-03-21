@@ -66,10 +66,15 @@ Changes for Beta 10:
 
 	Balance:
 		Flanders is a solid province for the Netherlands
+		If England dies, then the English Atlantic Access would be spawned by the Norse discovering Astronomy
+		Sweden starts with Guilds and Apprenticeship (used to be Free Peasantry, for which they don't have the tech)
+		The Bonuses from Imperialism and French UP are now "capped" to 6 points max
 
 	Bugfixes:
 		Fixed: a bug not resetting player data properly when starting a new game from within an existing game
 		Fixed: Genoa second UHV should work now
+		Fixed: Sweden UHV 2 should work now
+		Fixed: If the AI doesn't have Atlantic Access, then it will not build East/West Trading Companies
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
