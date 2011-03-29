@@ -25826,7 +25826,7 @@ EndPlot
 BeginPlot
 	x=64,y=70
 	BonusType=BONUS_GOLD
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
