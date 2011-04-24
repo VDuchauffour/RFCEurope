@@ -374,6 +374,30 @@
 		<Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
+		<English>The road to the Masjid al-Haram</English>
+		<French>
+			<Text>Al-Masjid al-Haraam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Masjid al-Haram</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Il Masjid al-Haram</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mezquita al-Haram</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>
 		<English>Catholic Church</English>
 		<French>Eglise Catholique</French>
