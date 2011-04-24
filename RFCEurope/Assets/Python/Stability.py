@@ -102,6 +102,7 @@ class Stability:
                 
                 if ( pPlayer.getAnarchyTurns() != 0 ):
                         self.recalcCivicCombos(iPlayer)
+                        self.recalcEpansion(iPlaye)
                         iNumCities = pPlayer.getNumCities()
                         if ( pPlayer.isHuman() ):
                                 pPlayer.changeStabilityBase( iCathegoryCivics, max( -3, -iNumCities / 3 ) )
@@ -542,7 +543,7 @@ class Stability:
                         iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural )
                 if ( pPlayer.getMaster() > -1 ):
                         iExpStability += 8
-                if ( iCivic5 == xml.iCivicColonialism ):
+                if ( iCivic5 == xml.iCivicVassalage ):
                         iExpStability += 3*pPlayer.countVassals()
                 else:
                         iExpStability += pPlayer.countVassals()

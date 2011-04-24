@@ -811,7 +811,7 @@ class Victory:
                         pKiev.setUHV( 2, 0 )
                 
         def checkHungary( self, iGameTurn ):
-                if ( iGameTurn == xml.i1491AD and pHungary.getUHV( 1 ) == -1 ):
+                if ( iGameTurn == xml.i1491AD and pHungary.getUHV( 0 ) == -1 ):
                         if ( gc.controlMostTeritory( iHungary, tOLDHungarianControl[0], tOLDHungarianControl[1], tOLDHungarianControl[2], tOLDHungarianControl[3] ) ):
                                 pHungary.setUHV( 0, 1 )
                         else:
