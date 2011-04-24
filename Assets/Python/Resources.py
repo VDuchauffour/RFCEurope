@@ -35,7 +35,7 @@ class Resources:
                 
         def onTechAcquired( self, iTech, iPlayer ):
                 if ( iTech == xml.iAstronomy ):
-                        if ( gc.getMap().plot(23, 23).getBonusType(-1) != -1 ): # if the AA has already been added to the tile
+                        if ( gc.getMap().plot(23, 23).getBonusType() != -1 ): # if the AA has already been added to the tile
                                 gc.getMap().plot(23, 23).setBonusType(xml.iAccess)
                         if ( iPlayer == con.iSpain ):
                                 gc.getMap().plot(23, 41).setBonusType(xml.iAccess)
