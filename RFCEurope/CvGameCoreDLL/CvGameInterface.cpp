@@ -26,7 +26,7 @@ void CvGame::updateColoredPlots()
 	CvPlot* pLoopPlot;
 	CvPlot* pBestPlot;
 	CvPlot* pNextBestPlot;
-	long lResult;
+	//long lResult;
 	int iMaxAirRange;
 	int iRange;
 	int iDX, iDY;
@@ -42,12 +42,15 @@ void CvGame::updateColoredPlots()
 		gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 	}
 
-	lResult = 0;
-	gDLL->getPythonIFace()->callFunction(PYGameModule, "updateColoredPlots", NULL, &lResult);
-	if (lResult == 1)
-	{
-		return;
-	}
+	// 3Miro: SPEEDTWEAK: one more Python callback to cancel. Maybe study this one for some interesting in-game help ideas
+	//        maybe we can color Spaw and UHV areas using this function
+	//lResult = 0;
+	//gDLL->getPythonIFace()->callFunction(PYGameModule, "updateColoredPlots", NULL, &lResult);
+	//if (lResult == 1)
+	//{
+	//	return;
+	//}
+	// 3Miro: end
 
 	// City circles when in Advanced Start
 	if (gDLL->getInterfaceIFace()->isInAdvancedStart())
@@ -95,6 +98,21 @@ void CvGame::updateColoredPlots()
 
 	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+
+			// 3MiroProvince: if some city is selected, but I am not sure what
+			//GC.getGameINLINE().logMsg(" Here ");
+			//NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
+			//mcolor.a = 0.5f;
+			//gDLL->getEngineIFace()->fillAreaBorderPlot(44, 47, mcolor, AREA_BORDER_LAYER_RANGED);
+	// 3MiroProvince: color the province
+	if ( (provinceToColor > -1) && (provinceToColor<MAX_NUM_PROVINCES) ){
+		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
+		mcolor.a = 0.5f;
+		for ( int iI=0; iI < provinceSizeList[provinceToColor]; iI++ ){
+			gDLL->getEngineIFace()->fillAreaBorderPlot( provinceTileList[provinceToColor][iI*2], provinceTileList[provinceToColor][iI*2+1], mcolor, AREA_BORDER_LAYER_RANGED);
+		};
+	};
+	// 3MiroProvince: end
 
 	if (pHeadSelectedCity != NULL)
 	{
@@ -188,6 +206,7 @@ void CvGame::updateColoredPlots()
 						{
 							if (plotDistance(pHeadSelectedUnit->getX_INLINE(), pHeadSelectedUnit->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) <= iMaxAirRange)
 							{
+								// 3MiroProvince: This looks like it will color some tiles
 								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
 								color.a = 0.5f;
 								gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), color, AREA_BORDER_LAYER_RANGED);
@@ -309,6 +328,19 @@ void CvGame::updateColoredPlots()
 									CvPlot* pLoopPlot = ::plotXY(pLoopUnit->getX_INLINE(), pLoopUnit->getY_INLINE(), i, j);
 									if (NULL != pLoopPlot && pLoopPlot->isRevealed(getActiveTeam(), false))
 									{
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      12/11/08                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+										if( GC.getMapINLINE().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange )
+										{
+											// No blockading on other side of an isthmus
+											continue;
+										}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 										if (pLoopPlot->isWater() && pLoopPlot->area() == pLoopUnit->area())
 										{
 											NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());

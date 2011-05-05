@@ -576,9 +576,10 @@ public:
 	int cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap );
 	void calcLastOwned(); // calculates last owned stuff and puts it in Rhyes.* arrays
 	
-	// special building properties
+	// 3MiroBuildings: special building properties
 	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 	void damagePlot( int iPlayer, int iFoeDamage, int iBarbDamage, CvPlot *pPlot );
+
 
 
 protected:

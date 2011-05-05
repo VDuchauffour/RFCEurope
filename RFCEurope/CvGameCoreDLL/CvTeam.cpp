@@ -1174,7 +1174,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 	CvDiploParameters* pDiplo;
 	CvDeal* pLoopDeal;
 	CvWString szBuffer;
-	bool bCancelDeal;
+	//bool bCancelDeal;
 	int iLoop;
 	int iI, iJ;
 
@@ -1207,6 +1207,28 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 		FAssertMsg(eTeam != getID(), "eTeam is not expected to be equal with getID()");
 		setAtWar(eTeam, true);
 		GET_TEAM(eTeam).setAtWar(getID(), true);
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* Efficiency                                                                                   */
+
+/************************************************************************************************/
+
+		// Plot danger cache
+
+		GC.getMapINLINE().invalidateIsTeamBorderCache(eTeam);
+
+		GC.getMapINLINE().invalidateIsTeamBorderCache(getID());
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
 
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -1362,6 +1384,74 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 			}
 		}
 
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
+
+/*                                                                                              */
+
+/* Efficiency                                                                                   */
+
+/************************************************************************************************/
+
+		// From Sanguo Mod Performance, ie the CAR Mod
+
+		// Attitude cache
+
+		if (GC.getGameINLINE().isFinalInitialized())
+
+		{
+
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+
+			{
+
+				if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+
+				{
+
+					if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam
+
+						|| GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(getID()) || GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(eTeam) )
+
+					{
+
+						for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+
+						{
+
+							if( GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() != GET_PLAYER((PlayerTypes)iI).getTeam() )
+
+							{
+
+								if( GET_PLAYER((PlayerTypes)iJ).getTeam() == getID() || GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam )
+
+								{
+
+									GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache((PlayerTypes)iI);
+
+									GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
 		if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 		{
 			if (bNewDiplo)
@@ -1451,6 +1541,17 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 		}*/
 		//Rhye - end
 
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      12/06/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* Diplomacy, Customization                                                                     */
+
+/************************************************************************************************/
+
+
 		//Rhye - start comment (defensive pacts are canceled only with the friends of the enemy, to prevent a giant rumble caused by recursive war declaring) 
 		/*if (!(GET_TEAM(eTeam).isMinorCiv()))
 		{
@@ -1492,7 +1593,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 				}
 			}
 		}*/
-		if (!(GET_TEAM(eTeam).isMinorCiv()))
+		/*if (!(GET_TEAM(eTeam).isMinorCiv()))
 		{
 			for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -1535,7 +1636,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 					}
 				}
 			}
-		}
+		}*/
 		//Rhye - end
 
 		CvEventReporter::getInstance().changeWar(true, getID(), eTeam);
@@ -1554,7 +1655,12 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 			}
 		}
 
-		//GET_TEAM(eTeam).cancelDefensivePacts(); //Rhye - comment (defensive pacts aren't canceled) 
+		GET_TEAM(eTeam).cancelDefensivePacts(); //Rhye - comment (defensive pacts aren't canceled) 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+
 
 		for (iI = 0; iI < MAX_TEAMS; iI++)
 		{
@@ -1654,6 +1760,28 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		setAtWar(eTeam, false);
 		GET_TEAM(eTeam).setAtWar(getID(), false);
 
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* Efficiency                                                                                   */
+
+/************************************************************************************************/
+
+		// Plot danger cache
+
+		GC.getMapINLINE().invalidateIsTeamBorderCache(eTeam);
+
+		GC.getMapINLINE().invalidateIsTeamBorderCache(getID());
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID()) || (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
@@ -1719,6 +1847,76 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 
 		if (!GET_PLAYER((PlayerTypes)eTeam).isMinorCiv() && !GET_PLAYER((PlayerTypes)getID()).isMinorCiv()) { //Rhye
+
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
+
+/*                                                                                              */
+
+/* Efficiency                                                                                   */
+
+/************************************************************************************************/
+
+		// From Sanguo Mod Performance, ie the CAR Mod
+
+		// Attitude cache
+
+		if (GC.getGameINLINE().isFinalInitialized())
+
+		{
+
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+
+			{
+
+				if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+
+				{
+
+					if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam
+
+						|| GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(getID()) || GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(eTeam) )
+
+					{
+
+						for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+
+						{
+
+							if( GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() != GET_PLAYER((PlayerTypes)iI).getTeam() )
+
+							{
+
+								if( GET_PLAYER((PlayerTypes)iJ).getTeam() == getID() || GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam )
+
+								{
+
+									GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache((PlayerTypes)iI);
+
+									GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
 
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -2678,14 +2876,86 @@ int CvTeam::countEnemyDangerByArea(CvArea* pArea) const
 	return iCount;
 }
 
-
-int CvTeam::getResearchCost(TechTypes eTech) const
-{
+int CvTeam::getResearchCostUntimely(TechTypes eTech) const{
 	int iCost;
 
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
 
 	iCost = GC.getTechInfo(eTech).getResearchCost();
+
+	//iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent(); //Rhye
+	iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercentByID(getLeaderID()); //Rhye
+	iCost /= 100;
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 2  %d  %d ",getID(),iCost);
+
+	iCost *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getResearchPercent();
+	iCost /= 100;
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 3 %d  %d ",getID(),iCost);
+
+	iCost *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
+	iCost /= 100;
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 4 %d  %d ",getID(),iCost);
+
+	iCost *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getResearchPercent();
+	iCost /= 100;
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 5 %d  %d ",getID(),iCost);
+
+	iCost *= std::max(0, ((GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * (getNumMembers() - 1)) + 100));
+	iCost /= 100;
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 6 %d  %d ",getID(),iCost);
+
+	//Rhye - start penalty for large / giga empires
+	// 3Miro: Number of cities penalty
+	int iNumCities = GET_PLAYER((PlayerTypes)getID()).getNumCities();
+	int iMultiplier = 4;
+	if (GET_PLAYER((PlayerTypes)getID()).isHuman())
+		iMultiplier = 6;
+	if (iNumCities > 10)
+	{
+		iCost *= 100 + iMultiplier*(iNumCities-10);
+		iCost /= 100;
+	}	
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 7  %d  %d ",getID(),iCost);
+	//Rhye - end
+
+	//Rhye - start 
+	//discount for small empires
+	// 3Miro: discount for small empires
+	if (getID() < NUM_MAJOR_PLAYERS) {		
+		if (iNumCities < 5)
+		{
+			iMultiplier = 3*(int)GET_PLAYER((PlayerTypes)getID()).getCurrentEra() +1; //x-x-x-3-6-9-12
+			if (iMultiplier > 0) {
+				iCost *= 100 - iMultiplier*(5-iNumCities); //52-64-76-88 if future; 
+				iCost /= 100;
+			}
+		}
+	}
+	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 8 %d  %d ",getID(),iCost);
+	//Rhye - end
+
+	return std::max(1, iCost);
+};
+
+int CvTeam::getResearchCost(TechTypes eTech) const
+{
+	int iCost;
+	int iAhistoric;
+
+	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
+
+	iCost = GC.getTechInfo(eTech).getResearchCost();
+	// 3MiroTimeline: adjust the tech cost according to the turn it should get discovered
+	iAhistoric = GC.getGameINLINE().getGameTurn() - timelineTechDates[eTech];
+	if ( iAhistoric < 0 ){ // too fast
+		iAhistoric = std::max( iAhistoric, timelineTechPenaltyCap );
+		iCost *= 100 + timelineTechPenaltyTop * iAhistoric * iAhistoric / timelineTechPenaltyBottom;
+	}else{ // too slow
+		iAhistoric = std::min( iAhistoric, timelineTechBuffCap );
+		iCost *= 100 - timelineTechBuffTop * iAhistoric * iAhistoric / timelineTechBuffBottom;
+	};
+	iCost /= 100;
+
 	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 1  %d  %d ",getID(),iCost);
 
 	//iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent(); //Rhye
@@ -2735,121 +3005,8 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				iCost /= 100;
 			}
 		}	
-		//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 7.1  %d  %d ",getID(),iCost);
-		//discount for new born civs
-		int iTurnModifier = 5*(int)GET_PLAYER((PlayerTypes)getID()).getCurrentEra(); //0-5-10-15-20-25-30
-		//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 7.1.1  %d  %d  %d",iTurnModifier,startingTurn[getID()],GC.getGameINLINE().getGameTurn());
-		if (GC.getGameINLINE().getGameTurn() <= startingTurn[getID()] + iTurnModifier) {
-			
-			iCost *= 100 - ((startingTurn[getID()] + iTurnModifier) - GC.getGameINLINE().getGameTurn());
-			iCost /= 100;
-		}
-		//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 7.2  %d  %d ",getID(),iCost);
-	}
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 8 %d  %d ",getID(),iCost);
+	};
 	//Rhye - end
-
-	//Rhye - start tech discount
-	int owners = 0;
-	int modifier = 1000;
-	bool bFiber = false;
-	bool bElectricity = false;
-	bool bAstronomy = false;
-
-	// 3Miro: Tech cost decrease
-	/*for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			if (GET_TEAM((TeamTypes)iI).isHasTech((TechTypes)FIBER_OPTICS))
-			{
-				modifier = 1;
-				bFiber = true;
-				bElectricity = true;
-				bAstronomy = true;
-				break;
-			}
-		}
-	}
-	if (!bElectricity) {
-		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
-			{
-				if (GET_TEAM((TeamTypes)iI).isHasTech((TechTypes)ELECTRICITY))
-				{
-					modifier = 2;
-					bElectricity = true;
-					bAstronomy = true;
-					break;
-				}
-			}
-		}
-	}
-	if (!bAstronomy) {
-		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
-			{
-				if (GET_TEAM((TeamTypes)iI).isHasTech((TechTypes)ASTRONOMY))
-				{
-					modifier = 4;
-					bAstronomy = true;
-					break;
-				}
-			}
-		}
-	}
-
-	if (bAstronomy) {
-		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-		{
-			if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
-			{
-				owners++;
-			}
-		}
-		iCost *= ((GC.getGameINLINE().countCivPlayersAlive() * modifier) - owners);
-		iCost /= (GC.getGameINLINE().countCivPlayersAlive() * modifier);
-	}*/
-	//Rhye - end
-
-	//Rhye - start
-	//discount for the late game
-	//if (GC.getTechInfo((TechTypes)iI).getEra() == 5)
-	/*if (GC.getGameINLINE().getGameTurn() > 430) { //2000
-		iCost *= 3;
-		iCost /= 4;
-	}*/
-	//else if (GC.getGameINLINE().getGameTurn() > 380){ //1920
-	//if (GC.getGameINLINE().getGameTurn() > 380){ //1920
-	//	iCost *= 3; //4
-	//	iCost /= 4; //5
-	//}
-
-	//Rhye - end
-	
-	//Rhye - start min and max turns cap
-	/*int iResearchRate = GET_PLAYER((PlayerTypes)getID()).calculateResearchRate(eTech);
-	//int iResearchRate = GET_PLAYER((PlayerTypes)getID()).calculateResearchRate(NO_TECH);
-	
-	if (iResearchRate > 0) {
-		if (iCost / iResearchRate < 4) {
-			//return max (1, max(iCost, 4*iResearchRate) );
-			iCost = 4*iResearchRate;
-		}
-		if (iCost / iResearchRate > 40) {
-			//return max (1, min(iCost, 40*iResearchRate) );
-			iCost = 40*iResearchRate;
-		}
-	}
-	if (iResearchRate == 0) {
-		iCost = 50;
-	}*/
-	//Rhye - end
-
-
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost %d  %d ",getID(),iCost);
 
 	return std::max(1, iCost);
 }
@@ -4653,6 +4810,13 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 			//pOneCapitolCity ->plot() ->updatePlotGroupBonus(true);
 		};
 
+		// 3MiroProjects: mark is colony
+		for( iI = 0; iI < NUM_ALL_PLAYERS; iI++ ){
+			if ( GET_PLAYER((PlayerTypes)iI).getTeam() == getID() ){
+				GET_PLAYER((PlayerTypes)iI).setNumColonies( GET_PLAYER((PlayerTypes)iI).getNumColonies() + iChange );
+			};
+		};
+
 		// 3Miro: score
 		GET_PLAYER( getLeaderID() ).changeWondersScore(getProjectScore(eIndex) * iChange);
 
@@ -4964,6 +5128,72 @@ int CvTeam::getTechCount(TechTypes eIndex)		 const
 	FAssertMsg(eIndex < GC.getNumTechInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 	return m_paiTechCount[eIndex];
 }
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      07/27/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* General AI                                                                                   */
+
+/************************************************************************************************/
+
+int CvTeam::getBestKnownTechScorePercent() const
+
+{
+
+	int iOurTechScore = 0;
+
+	int iBestKnownTechScore = 0;
+
+
+
+	for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+
+	{
+
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+
+		{
+
+			if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+
+			{
+
+				iOurTechScore = std::max( iOurTechScore, GET_PLAYER((PlayerTypes)iI).getTechScore() );
+
+			}
+
+			else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
+
+			{
+
+				iBestKnownTechScore = std::max( iBestKnownTechScore, GET_PLAYER((PlayerTypes)iI).getTechScore() );
+
+			}
+
+		}
+
+	}
+
+
+
+	iBestKnownTechScore = std::max( iBestKnownTechScore, iOurTechScore );
+
+
+
+	return ((100*iOurTechScore)/std::max(iBestKnownTechScore, 1));
+
+}
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
+
 
 
 int CvTeam::getTerrainTradeCount(TerrainTypes eIndex) const

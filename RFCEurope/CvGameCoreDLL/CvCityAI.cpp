@@ -3441,6 +3441,31 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
                     }
 		        }
 		    }
+
+			// 3Miro: Building Civic combo
+			/*if ( (iCivicBuildingCommerse1 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse1 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse1/1000)%100))) ){
+				iValue += ((iCivicBuildingCommerse1 / 100000) %10) + ((iCivicBuildingCommerse1 / 1000000) %10) + ((iCivicBuildingCommerse1 / 10000000) %10) + ((iCivicBuildingCommerse1 / 100000000) %10);
+			};
+			if ( (iCivicBuildingCommerse2 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse2 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse2/1000)%100))) ){
+				iValue += ((iCivicBuildingCommerse2 / 100000) %10) + ((iCivicBuildingCommerse2 / 1000000) %10) + ((iCivicBuildingCommerse2 / 10000000) %10) + ((iCivicBuildingCommerse2 / 100000000) %10);
+			};
+			if ( (iCivicBuildingCommerse3 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse3 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse3/1000)%100))) ){
+				iValue += ((iCivicBuildingCommerse3 / 100000) %10) + ((iCivicBuildingCommerse3 / 1000000) %10) + ((iCivicBuildingCommerse3 / 10000000) %10) + ((iCivicBuildingCommerse3 / 100000000) %10);
+			};*/
+
+			// 3MiroCivicAI: Building Civic gold combo
+			int iCivic;			
+			int iBuildingClass = kBuilding.getBuildingClassType();
+			for( iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
+				CvCivicInfo &pCivicInfo = GC.getCivicInfo( (CivicTypes) iCivic );
+				
+				if ( (pCivicInfo.getBuildingCivicComboGold() != 0) && (pCivicInfo.getBuildingCivicComboBuilding() == iBuildingClass) ){
+					if ( GET_PLAYER(getOwner()).isCivic( (CivicTypes) iCivic ) ){
+						iValue += (iFocusFlags & BUILDINGFOCUS_GOLD) ? pCivicInfo.getBuildingCivicComboGold() : 2*pCivicInfo.getBuildingCivicComboGold();
+					};
+				};
+			};
+			// 3MiroCivic: end
 		    
 			if ((iFocusFlags & BUILDINGFOCUS_DEFENSE) || (iPass > 0))
 			{
@@ -4997,8 +5022,10 @@ int CvCityAI::AI_projectValue(ProjectTypes eProject)
 	// Sedna17AI: Old code wasn't working, not sure what it was supposed to do. Much simpler code just counts up the projects with this as Prereq. Doesn't account for
 	// projects which have already been built though. We'll get a lot of India Companies.
 	// 3Miro: this is exactly what the code was supposed to be doing, I must have messed it up
+	// 3Miro: new edit, now the AI should be aware of projects that cannot be build or have already been build
 	for ( iI = 0; iI < GC.getNumProjectInfos(); iI++ ){
-		if ( GC.getProjectInfo( (ProjectTypes) iI ).getPrereqProject(eProject) > 0) 
+		//if ( GC.getProjectInfo( (ProjectTypes) iI ).getPrereqProject(eProject) > 0) 
+		if ( (GC.getProjectInfo( (ProjectTypes) iI ).getPrereqProject(eProject) > 0) && (GET_PLAYER(getOwner()).canCreate((ProjectTypes)iI )) ) 
 		{
 			iValue += 1;
 		};
@@ -5332,7 +5359,16 @@ int CvCityAI::AI_neededAirDefenders()
 
 bool CvCityAI::AI_isDanger()
 {
-	return GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2, false);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+/*                                                                                              */
+/* City AI, Efficiency                                                                          */
+/************************************************************************************************/
+	//return GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2, false);
+	return GET_PLAYER(getOwnerINLINE()).AI_getAnyPlotDanger(plot(), 2, false);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 }
 
 
@@ -5404,6 +5440,8 @@ void CvCityAI::AI_updateRouteToCity()
 	iBestValue = MAX_INT;
 	pBestCity = NULL;
 
+	// 3Miro: From SPEEDTWEAK, this makes the AI think which way to connect. If the city is already connected to capital
+	//        then make another random connection. Should work fine.
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
@@ -5414,7 +5452,7 @@ void CvCityAI::AI_updateRouteToCity()
 				{
 					if (pLoopCity->area() == area())
 					{
-						if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, getOwnerINLINE(), true)))
+						/*if (!(gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, getOwnerINLINE(), true)))
 						{
 							iValue = plotDistance(getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
 
@@ -5423,12 +5461,20 @@ void CvCityAI::AI_updateRouteToCity()
 								iBestValue = iValue;
 								pBestCity = pLoopCity;
 							}
+						}*/
+
+						iValue = GC.getGameINLINE().getSorenRandNum(10000, "Trade Route");
+                        if (iValue < iBestValue)
+						{
+                            iBestValue = iValue;
+                            pBestCity = pLoopCity;
 						}
 					}
 				}
 			}
 		}
 	}
+
 
 	if (pBestCity != NULL)
 	{
@@ -6814,7 +6860,7 @@ bool CvCityAI::AI_chooseUnit(UnitAITypes eUnitAI)
 		//if ( canTrain( (UnitTypes) UNIT_PROSECUTOR ) ){
 		//	GC.getGameINLINE().logMsg("   can train ");
 		//};
-		if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) ){
+		if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE]>-1) ){
 			//GC.getGameINLINE().logMsg("   Step 2 ");
 			// check if running an oppressive civic
 			bool bOpressor = true;
@@ -8226,7 +8272,12 @@ int CvCityAI::AI_plotValue(CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool 
 	if ((eCurrentImprovement != NO_IMPROVEMENT) && (GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementUpgrade() != NO_IMPROVEMENT))
 	{
 		iValue += 200;
-		iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER);		
+		// 3Miro: upgrade time for the improvemnts is now measured in hundreds (to account for the -50% grows in Civic)
+		//if ( (pPlot->getX() == 43)&&(pPlot->getY() == 48) ){
+		//	GC.getGameINLINE().logMsg(" The Cottage plot: upgrade time left %d",pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER));
+		//};
+		//iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER);
+		iValue -= pPlot->getUpgradeTimeLeft(eCurrentImprovement, NO_PLAYER)/100;
 	}
 
 	return iValue;

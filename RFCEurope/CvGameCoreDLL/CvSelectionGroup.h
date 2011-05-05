@@ -73,6 +73,22 @@ public:
 	bool canBombard(const CvPlot* pPlot);
 	bool visibilityRange();
 
+	/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+//	int getBombardTurns( CvCity* pCity );
+	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, int iMaxPathTurns = -1 );
+	bool isHasPathToAreaEnemyCity( bool bIgnoreMinors = true, int iFlags = 0, int iMaxPathTurns = -1 );
+//	bool isStranded();
+//	void invalidateIsStrandedCache();
+//	bool calculateIsStranded();
+	bool canMoveAllTerrain() const;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 	void unloadAll();
 	bool alwaysInvisible() const;																																							// Exposed to Python
 	bool isInvisible(TeamTypes eTeam) const;																								// Exposed to Python

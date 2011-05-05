@@ -439,6 +439,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	bool bValid;
 	int iPass;
 	int iLoop;
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 1 %d", getID()); // 3Miro
 
 	if (!isHuman() || isOption(PLAYEROPTION_AUTO_PROMOTION))
 	{
@@ -453,6 +454,33 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		return;
 	}
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/24/10                                jdog5000      */
+/*                                                                                              */
+/* Gold AI                                                                                      */
+/************************************************************************************************/
+	bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
+	int iStartingGold = getGold();
+	int iTargetGold = AI_goldTarget();
+	int iUpgradeBudget = (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
+
+	iUpgradeBudget = std::min(iUpgradeBudget, iStartingGold - ((iTargetGold > iUpgradeBudget) ? (iTargetGold - iUpgradeBudget) : iStartingGold/2));
+	
+	if( AI_isFinancialTrouble() )
+	{
+		iUpgradeBudget /= 3;
+	}
+
+	// Always willing to upgrade 1 unit if we have the money
+	iUpgradeBudget = std::max(iUpgradeBudget,1);
+
+	bool bUnderBudget = true;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 2 %d", getID()); // 3Miro
 	CvPlot* pLastUpgradePlot = NULL;
 	for (iPass = 0; iPass < 4; iPass++)
 	{
@@ -464,12 +492,14 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			switch (iPass)
 			{
 			case 0:
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 3 %d", getID()); // 3Miro
 				if (AI_unitImpassableCount(pLoopUnit->getUnitType()) > 0)
 				{
 					bValid = true;
 				}
 				break;
 			case 1:
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 4 %d", getID()); // 3Miro
 				pUnitPlot = pLoopUnit->plot();
 				if (pUnitPlot->isCity())
 				{
@@ -481,7 +511,16 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					}
 
 					// try to upgrade units which are in danger... but don't get obsessed
-					if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getPlotDanger(pUnitPlot, 1, false)) > 0))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+/*                                                                                              */
+/* Unit AI, Efficiency                                                                          */
+/************************************************************************************************/
+					//if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getPlotDanger(pUnitPlot, 1, false)) > 0))
+					if (!bValid && (pLastUpgradePlot != pUnitPlot) && ((AI_getAnyPlotDanger(pUnitPlot, 1, false))))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 					{
 						bNoDisband = true;
 						bValid = true;
@@ -490,13 +529,48 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				}
 				break;
 			case 2:
+				/********************************************************************************/
+				/* 	BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
+				/* 																			*/
+				/* 	Gold AI																	*/
+				/********************************************************************************/
+				/* original BTS code
 				if (pLoopUnit->cargoSpace() > 0)
 				{
 					bValid = true;
 				}
+				*/
+				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
+
+				// Only normal transports
+				if ( (pLoopUnit->cargoSpace() > 0) && (pLoopUnit->specialCargo() == NO_SPECIALUNIT) )
+				{
+					bValid = (bAnyWar || bUnderBudget);
+				}
+				// Also upgrade escort ships
+				if ( pLoopUnit->AI_getUnitAIType() == UNITAI_ESCORT_SEA )
+				{
+					bValid = (bAnyWar || bUnderBudget);
+				}
+				/********************************************************************************/
+				/* 	BETTER_BTS_AI_MOD						END								*/
+				/********************************************************************************/
 				break;
 			case 3:
+				/********************************************************************************/
+				/* 	BETTER_BTS_AI_MOD						9/15/08			jdog5000		*/
+				/* 																			*/
+				/* 	Gold AI																	*/
+				/********************************************************************************/
+				/* original BTS code
 				bValid = true;
+				*/
+				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
+
+				bValid = (bAnyWar || bUnderBudget);
+				/********************************************************************************/
+				/* 	BETTER_BTS_AI_MOD						END								*/
+				/********************************************************************************/
 				break;
 			default:
 				FAssert(false);
@@ -505,6 +579,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 
 			if (bValid)
 			{
+				//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 7 %d", getID()); // 3Miro
 				bool bKilled = false;
 				if (!bNoDisband)
 				{
@@ -522,10 +597,25 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 							{
 								if ((iExp == 0) || (iExp < (iCityExp + 1) / 2))
 								{
-									if ((calculateUnitCost() > 0) && (AI_getPlotDanger( pLoopUnit->plot(), 2, false) == 0))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+/*                                                                                              */
+/* Unit AI, Efficiency                                                                          */
+/************************************************************************************************/
+									if ((pLoopUnit->getDomainType() != DOMAIN_LAND) || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, getID()) > 1)
 									{
+										//if ((calculateUnitCost() > 0) && (AI_getPlotDanger( pLoopUnit->plot(), 2, false) == 0))
+										if ((calculateUnitCost() > 0) && (AI_getAnyPlotDanger( pLoopUnit->plot(), 2, false)))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/									// 3Miro Original
+									/*if ((calculateUnitCost() > 0) && (AI_getPlotDanger( pLoopUnit->plot(), 2, false) == 0))
+									{
+										//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 8 %d", getID()); // 3Miro
 										if ((pLoopUnit->getDomainType() != DOMAIN_LAND) || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, getID()) > 1)
+									*/
 										{
+											//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 9 %d", getID()); // 3Miro
 										pLoopUnit->kill(false);
 										bKilled = true;
 										pLastUpgradePlot = NULL;
@@ -538,16 +628,20 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				}
 				if (!bKilled)
 				{
+					//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 10 %d", getID()); // 3Miro
 					pLoopUnit->AI_upgrade(); // CAN DELETE UNIT!!!
 				}
 			}
 		}
 	}
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 11 %d", getID()); // 3Miro
 
 	if (isBarbarian())
 	{
+		//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 12 %d", getID()); // 3Miro
 		return;
 	}
+	//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 13 %d", getID()); // 3Miro
 }
 
 
@@ -1089,10 +1183,12 @@ void CvPlayerAI::AI_unitUpdate()
 
 	if (!hasBusyUnit())
 	{
+		//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 1 "); // 3Miro
 		pCurrUnitNode = headGroupCycleNode();
 
 		while (pCurrUnitNode != NULL)
 		{
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 2 "); // 3Miro
 			pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 			pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
@@ -1108,6 +1204,7 @@ void CvPlayerAI::AI_unitUpdate()
 
 		if (isHuman())
 		{
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 3 "); // 3Miro
 			pCurrUnitNode = headGroupCycleNode();
 
 			while (pCurrUnitNode != NULL)
@@ -1123,6 +1220,7 @@ void CvPlayerAI::AI_unitUpdate()
 		}
 		else
 		{
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 4 "); // 3Miro
 			tempGroupCycle.clear();
 			finalGroupCycle.clear();
 
@@ -1138,6 +1236,7 @@ void CvPlayerAI::AI_unitUpdate()
 
 			while (tempGroupCycle.getLength() > 0)
 			{
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 5 "); // 3Miro
 				pCurrUnitNode = tempGroupCycle.head();
 
 				while (pCurrUnitNode != NULL)
@@ -1160,23 +1259,31 @@ void CvPlayerAI::AI_unitUpdate()
 			}
 
 			pCurrUnitNode = finalGroupCycle.head();
+			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 6 "); // 3Miro
 
 			while (pCurrUnitNode != NULL)
 			{
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7 "); // 3Miro
 				pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.1 "); // 3Miro
 
 				if (NULL != pLoopSelectionGroup)  // group might have been killed by a previous group update
 				{
+					//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.2 "); // 3Miro
 					if (pLoopSelectionGroup->AI_update())
 					{
+						//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.3 "); // 3Miro
 						break; // pointers could become invalid...
 					}
 				}
 
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.4 "); // 3Miro
 				pCurrUnitNode = finalGroupCycle.next(pCurrUnitNode);
+				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.5 "); // 3Miro
 			}
 		}
 	}
+	//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 8 "); // 3Miro
 }
 
 
@@ -2935,7 +3042,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 	}*/ //Rhye
 
-	//Rhye - start
+	//Rhye - start // 3Miro: Useful for settling cities
 	int tempX = pPlot->getX_INLINE();
 	int tempY = pPlot->getY_INLINE();
 
@@ -3231,6 +3338,161 @@ bool CvPlayerAI::AI_isCommercePlot(CvPlot* pPlot) const
 	return (pPlot->getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION());
 }
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+/*                                                                                              */
+/* General AI, Efficiency                                                                       */
+/************************************************************************************************/
+// Plot danger cache
+// The vast majority of checks for plot danger are boolean checks during path planning for non-combat
+// units like workers, settlers, and GP.  Since these are simple checks for any danger they can be 
+// cutoff early if danger is found.  To this end, the two caches tracked are for whether a given plot
+// is either known to be safe for the player who is currently moving, or for whether the plot is
+// known to be a plot bordering an enemy of this team and therefore unsafe.
+//
+// The safe plot cache is only for the active moving player and is only set if this is not a
+// multiplayer game with simultaneous turns.  The safety cache for all plots is reset when the active
+// player changes or a new game is loaded.
+// 
+// The border cache is done by team and works for all game types.  The border cache is reset for all
+// plots when war or peace are declared, and reset over a limited range whenever a ownership over a plot
+// changes.
+bool CvPlayerAI::AI_getAnyPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
+{
+	PROFILE_FUNC();
+
+	if (iRange == -1)
+	{
+		iRange = DANGER_RANGE;
+	}
+
+	if( bTestMoves && isTurnActive() )
+	{
+		if( (iRange <= DANGER_RANGE) && pPlot->isActivePlayerNoDangerCache() )
+		{
+			return false;
+		}
+	}
+
+	TeamTypes eTeam = getTeam();
+	bool bCheckBorder = (!isHuman() && !pPlot->isCity());
+	
+	if( bCheckBorder )
+	{
+		if( (iRange >= DANGER_RANGE) && pPlot->isTeamBorderCache(eTeam) )
+		{
+			return true;
+		}
+	}
+
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
+	CvPlot* pLoopPlot;
+	int iDistance;
+	int iDX, iDY;
+	CvArea *pPlotArea = pPlot->area();
+	int iDangerRange;
+
+	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	{
+		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		{
+			pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+
+			if (pLoopPlot != NULL)
+			{
+				if (pLoopPlot->area() == pPlotArea)
+				{
+				    iDistance = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+				    if( bCheckBorder )
+					{
+						if (atWar(pLoopPlot->getTeam(), eTeam))
+						{
+							// Border cache is reversible, set for both team and enemy
+							if (iDistance == 1)
+							{
+								pPlot->setIsTeamBorderCache(eTeam, true);
+								pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+								pLoopPlot->setIsTeamBorderCache(eTeam, true);
+								pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+								return true;
+							}
+							else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+							{
+								pPlot->setIsTeamBorderCache(eTeam, true);
+								pPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+								pLoopPlot->setIsTeamBorderCache(eTeam, true);
+								pLoopPlot->setIsTeamBorderCache(pLoopPlot->getTeam(), true);
+								return true;
+							}
+						}
+					}
+
+					pUnitNode = pLoopPlot->headUnitNode();
+
+					while (pUnitNode != NULL)
+					{
+						pLoopUnit = ::getUnit(pUnitNode->m_data);
+						pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
+
+						// No need to loop over tiles full of our own units
+						if( pLoopUnit->getTeam() == eTeam )
+						{
+							if( !(pLoopUnit->alwaysInvisible()) && (pLoopUnit->getInvisibleType() == NO_INVISIBLE) )
+							{
+								break;
+							}
+						}
+
+						if (pLoopUnit->isEnemy(eTeam))
+						{
+							if (pLoopUnit->canAttack())
+							{
+								if (!(pLoopUnit->isInvisible(eTeam, false)))
+								{
+								    if (pLoopUnit->canMoveOrAttackInto(pPlot))
+								    {
+                                        if (!bTestMoves)
+                                        {
+                                            return true;
+                                        }
+                                        else
+                                        {
+                                            iDangerRange = pLoopUnit->baseMoves();
+                                            iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+                                            if (iDangerRange >= iDistance)
+											{
+												return true;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// The test moves case is a strict subset of the more general case,
+	// either is appropriate for setting the cache.  However, since the test moves
+	// case is called far more frequently, it is more important and the cache 
+	// value being true is only assumed to mean that the plot is safe in the
+	// test moves case.
+	//if( bTestMoves )
+	{
+		if( isTurnActive() )
+		{
+			if( !(GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)) && (GC.getGameINLINE().getNumGameTurnActive() == 1) )
+			{
+				pPlot->setIsActivePlayerNoDangerCache(true);
+			}
+		}
+	}
+
+	return false;
+}
+// ----------------------------- 3Miro End of BETTER_BTS_AI_MOD ------------//
 
 int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
@@ -3418,6 +3680,7 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 	return iCount;*/
 }
 
+/* // the assumption is that this is never used
 int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, bool bAnyDanger) const
 {
 	PROFILE_FUNC();
@@ -3511,6 +3774,7 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 
 	return iCount;
 }
+*/ // 3Miro Supposedly never used
 
 int CvPlayerAI::AI_getWaterDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
@@ -5766,6 +6030,11 @@ int CvPlayerAI::AI_getSameReligionAttitude(PlayerTypes ePlayer) const
 		};
 	};
 
+	// 3MiroBuildings: If they can fight with each other, then they get no diplo boost
+	if ( GET_PLAYER(getID()).canFightBrothers() || GET_PLAYER(ePlayer).canFightBrothers() ){
+		iAttitude = 0;
+	};
+
 	//iAttitude += AI_getFaithAttitude( ePlayer );
 
 	//Rhye - start
@@ -5804,6 +6073,11 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 		}
 	}
 
+	// 3Miro: No religion means different pre-Christian Pagan believes, nobody likes Pagans
+	if ( ((getStateReligion() == NO_RELIGION) && (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION)) || ((getStateReligion() != NO_RELIGION) && (GET_PLAYER(ePlayer).getStateReligion() == NO_RELIGION)) ){
+		iAttitude = -1;
+	};
+
 	// 3MiroSchism: if before the schism date, the two don't hate each other
 	//GC.getGameINLINE().logMsg("  Schism: Players (%d,%d),  religions (%d,%d), turn %d",getID(),ePlayer,getStateReligion(),GET_PLAYER(ePlayer).getStateReligion(),GC.getGameINLINE().getGameTurn() );
 	//GC.getGameINLINE().logMsg("  Schism: A, B, Year = %d %d %d ",SCHISM_A, SCHISM_B, SCHISM_YEAR );
@@ -5812,6 +6086,13 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 			((getStateReligion() == SCHISM_B) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_A)) ){
 				//GC.getGameINLINE().logMsg(" Still Friends ");
 				iAttitude = 0;
+		};
+	};
+
+	// 3MiroBuildings: If they can fight with each other, then they get -1 diplo penalty
+	if ((getStateReligion() != NO_RELIGION) && (getStateReligion() == GET_PLAYER(ePlayer).getStateReligion())){
+		if ( GET_PLAYER(getID()).canFightBrothers() || GET_PLAYER(ePlayer).canFightBrothers() ){
+			iAttitude = -1;
 		};
 	};
 
@@ -8219,7 +8500,9 @@ int CvPlayerAI::AI_religionTradeVal(ReligionTypes eReligion, PlayerTypes ePlayer
 	{
 		if (eBestReligion != eReligion)
 		{
-			iValue += std::max(0, (GET_PLAYER(ePlayer).AI_religionValue(eBestReligion) - GET_PLAYER(ePlayer).AI_religionValue(eReligion)));
+			// 3MiroAI: it is harder to convince the AI to convert to a different religion
+			//iValue += std::max(0, (GET_PLAYER(ePlayer).AI_religionValue(eBestReligion) - GET_PLAYER(ePlayer).AI_religionValue(eReligion)));
+			iValue += 3*std::max(0, (GET_PLAYER(ePlayer).AI_religionValue(eBestReligion) - GET_PLAYER(ePlayer).AI_religionValue(eReligion)));
 		}
 	}
 
@@ -10283,6 +10566,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 	}
 
+	// 3MiroCivic: Units Production boost
+	iValue += kCivic.getUnitProductionBoost() * getNumCities() / 4;
+	// 3MiroCivic: end
+
 	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
 		iTempValue = 0;
@@ -10329,6 +10616,12 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iTempValue /= 500;
 		}
 		iTempValue += ((kCivic.getSpecialistExtraCommerce(iI) * getTotalPopulation()) / 15);
+
+		// 3MiroCivic: caculate the civic/building class combo
+		if ( (iI == COMMERCE_GOLD) && (kCivic.getBuildingCivicComboGold() != 0) ){
+			iTempValue += kCivic.getBuildingCivicComboGold() * getNumCities();
+		};
+		// 3MiroCivic: end
 
 		iTempValue *= AI_commerceWeight((CommerceTypes)iI);
 
@@ -10407,50 +10700,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	}
 	if (GC.getCivicInfo(eCivic).isStabilityFoundBonus()) {
 		//Rhye - start switch
-		/*if (iEraModifier < 5) { //from Astronomy to the end of Industrial
-			switch (getID())
-			{
-			case PERSIA:
-				iValue += 60;
-				break;
-			case JAPAN:
-				iValue += 60;
-				break;
-			case ARABIA:
-				iValue += 80;
-				break;
-			case SPAIN:
-				iValue += 180;
-				break;
-			case FRANCE:
-				iValue += 180;
-				break;
-			case ENGLAND:
-				iValue += 180;
-				break;
-			case RUSSIA:
-				iValue += 80;
-				break;
-			case NETHERLANDS:
-				iValue += 190;
-				break;
-			case PORTUGAL:
-				iValue += 190;
-				break;
-			case MONGOLIA:
-				iValue += 80;
-				break;
-			case AMERICA:
-				iValue += 60;
-				break;
-			default:
-				break;
-			}
-			//if (iValue > 0) {
-			//	if (!verifySettlersHalt(300)) //time consuming?
-			//		iValue -= 60;
-			//}
-		}*/
 		iValue += 100* GET_PLAYER( getID() ).countExternalCities();
 	}
 	if (GC.getCivicInfo(eCivic).isStabilityConquestBonus()) {
@@ -10477,32 +10726,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 	}
 	if (GC.getCivicInfo(eCivic).isStabilityCommerceBonus()) {
-		/*int iImports = calculateTotalImports(YIELD_COMMERCE);  //time consuming?
-		int iExports = calculateTotalExports(YIELD_COMMERCE);  //time consuming?
-		int iTotal = (iImports+iExports)/(2*iEraModifier+1) -5; 
-		if (iTotal < 0) 
-			iValue += - ((iTotal-2) * 10);
-		else
-			iValue += 15;*/
 		iValue += 40;
-		/*switch (getID())
-		{
-			case JAPAN:
-				iValue += 50;
-				break;
-			case CHINA:
-				iValue += 20;
-				break;
-			case KHMER:
-				iValue += 20;
-				break;
-			case INDIA:
-				iValue += 20;
-				break;
-			case ENGLAND:
-				iValue += 40;
-				break;
-		}*/
 	}
 	//Rhye - end 6th
 
@@ -10575,6 +10799,15 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 		}
 	}
 
+	// 3MiroUP: make the AI aware of the pagan benefits
+	iValue = AI_religionValue(NO_RELIGION);
+	if (iValue > iBestValue){
+		iBestValue = iValue;
+		eBestReligion = NO_RELIGION;
+	}
+	// 3MiroUP: end
+
+
 	if ((NO_RELIGION == eBestReligion) || AI_isDoStrategy(AI_STRATEGY_MISSIONARY))
 	{
 		return eBestReligion;
@@ -10583,7 +10816,9 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 	int iBestCount = getHasReligionCount(eBestReligion);
 	int iSpreadPercent = (iBestCount * 100) / std::max(1, getNumCities());
 	int iPurityPercent = (iBestCount * 100) / std::max(1, countTotalHasReligion());
-	if (iPurityPercent < 49)
+	// 3Miro: don't care if Purity is low
+	//if (iPurityPercent < 49)
+	if (iPurityPercent < ((eBestReligion == eFavorite) ? 26 : 49))
 	{
 		if (iSpreadPercent > ((eBestReligion == eFavorite) ? 65 : 75))
 		{
@@ -10601,17 +10836,46 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 
 int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 {
+	int iValue;
+	// 3MiroUP: pagan bonuses
+	if ( eReligion == NO_RELIGION ){
+		iValue = 0;
+		if ( UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_CULTURE] > -1 ){
+			iValue += ( UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_CULTURE] * getNumCities() ) / 100;
+		};
+		if ( UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_HAPPY] > -1 ){
+			iValue += 6 * UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_HAPPY] * getNumCities();
+		};
+		return iValue;
+	};
+	// 3MiroUP: end
+
+
 	if (getHasReligionCount(eReligion) == 0)
 	{
 		return 0;
 	}
 
-	int iValue = GC.getGameINLINE().countReligionLevels(eReligion);
+	iValue = GC.getGameINLINE().countReligionLevels(eReligion);
+
+	//if ( getID() == 18 ){
+	//	GC.getGameINLINE().logMsg(" ---------------------- ");
+	//	GC.getGameINLINE().logMsg(" Religion Levels HS %d  %d",eReligion,iValue);
+	//};
 
 	// 3MiroFaith: let the AI be aware of the Faith Points Accumulated
+	//             also, add extra points for the UP_FAITH + current state religion
 	if ( getStateReligion() == eReligion ){
-		iValue += getFaith();
+		iValue += 5*getFaith();
+		if ( (UniquePowers[getID()* UP_TOTAL_NUM + UP_FAITH] > -1) ){
+			iValue += 20;
+		};	
 	};
+	// 3MiroFaith: end
+
+	//if ( getID() == 18 ){
+	//	GC.getGameINLINE().logMsg(" Added Faith HS %d  %d",eReligion,iValue);
+	//};
 
 	int iLoop;
 	CvCity* pLoopCity;
@@ -10622,6 +10886,20 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 			iValue += pLoopCity->getPopulation();
 		}
 	}
+
+	// 3MiroUP: 
+	if ( UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_CULTURE] > -1 ){
+		iValue *= 2;
+		iValue /= 3;
+	};
+	if ( UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_HAPPY] > -1 ){
+		iValue /= 2;
+	};
+	// 3MiroUP: end
+
+	//if ( getID() == 18 ){
+	//	GC.getGameINLINE().logMsg(" Before HS %d  %d",eReligion,iValue);
+	//};
 
 	CvCity* pHolyCity = GC.getGameINLINE().getHolyCity(eReligion);
 	if (pHolyCity != NULL)
@@ -10648,25 +10926,34 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 		}
 
 		// 3MiroAI: estimate the potential of the religion, mainly consider it together with the Faith UP
-			if ( (UniquePowers[getID()* UP_TOTAL_NUM + UP_FAITH] > -1) ){
-				iCommerceCount += MAX_COM_SHRINE;
-			};
-			iValue += 5;
+			
 		// 3MiroAI: end
 
 
+			// 3MiroAI: we do get the commerse anyways, so put lesser value to it
+			//iCommerceCount = std::min( iCommerceCount, MAX_COM_SHRINE );
+			//if ( iCommerceCount >= MAX_COM_SHRINE/2 ){ iCommerceCount = 0; };
+			//if ( getStateReligion() != eReligion ){ // consider the shrine income high if we have this a state religion and low otherwise
+			if ( (getStateReligion() != eReligion) && (getStateReligion() != NO_RELIGION) ){
+				//iCommerceCount /= 3;
+				iCommerceCount = -1;
+			};
 			if (bOurHolyCity)
-		{
-			iValue *= (3 + iCommerceCount);
-			iValue /= 2;
-		}
+			{
+				iValue *= (3 + iCommerceCount);
+				iValue /= 2;
+			}
 			else if (bOurTeamHolyCity)
-		{
-			iValue *= (4 + iCommerceCount);
-			iValue /= 3;
-		}
+			{
+				iValue *= (4 + iCommerceCount);
+				iValue /= 3;
+			}
 	}
 	}
+
+	//if ( getID() == 18 ){
+	//	GC.getGameINLINE().logMsg(" After HS %d  %d",eReligion,iValue);
+	//};
 
 	return iValue;
 }

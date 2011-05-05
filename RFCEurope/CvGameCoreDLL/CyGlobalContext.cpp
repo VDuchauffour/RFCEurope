@@ -731,10 +731,17 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 			for ( k=0; k<iMaxX; k++ ) settlersMaps[i][j][k] = 20;
 		};
 	};*/
+	provinceMap = new int[EARTH_X* EARTH_Y];
+	for( i=0; i<EARTH_X* EARTH_Y; i++ ){ provinceMap[i] = MAX_NUM_PROVINCES+1; }; // no provinces
+	iCultureImmune = new int[MAX_NUM_PROVINCES];
+	iCultureImmuneException = new int[MAX_NUM_PROVINCES];
+	for( i=0; i<MAX_NUM_PROVINCES; i++ ){ iCultureImmune[i] = 0; iCultureImmuneException[i] = -1; };
 	settlersMaps = new int[NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y ];
 	for( i=0; i<NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y; i++ ) settlersMaps[i] = 20;
 	warsMaps = new int[NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y ];
 	for( i=0; i<NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y; i++ ) warsMaps[i] = 0;
+	conditionalVassalage = new int[ NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B ];
+	for( i=0; i< NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B; i++ ){conditionalVassalage[i] = 0; }; 
 	/*warsMaps = new int**[NUM_MAJOR_PLAYERS];
 	for ( i=0; i<NUM_MAJOR_PLAYERS; i++ ){
 		warsMaps[i] = new int*[iMaxY];
@@ -760,20 +767,37 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 		//ProsecutionCount[i] = 0;
 	};
 	startingTurn = new int[NUM_ALL_PLAYERS_B];					for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) startingTurn[i] = 0;
-	growthThreshold = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) growthThreshold[i] = 100;
-	productionModifierUnits = new int[NUM_ALL_PLAYERS_B];		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierUnits[i] = 100;
-	productionModifierBuildings = new int[NUM_ALL_PLAYERS_B];	for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierBuildings[i] = 100;
-	productionModifierWonders = new int[NUM_ALL_PLAYERS_B];		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierWonders[i] = 100;
-	inflationModifier = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) inflationModifier[i] = 100;
-	gpModifier = new int[NUM_ALL_PLAYERS_B];					for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) gpModifier[i] = 100;
-	unitSupportModifier = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) unitSupportModifier[i] = 100;
-	cityDistanceSupport = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityDistanceSupport[i] = 100;
-	cityNumberSupport = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityNumberSupport[i] = 100;
-	civicSupportModifier = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) civicSupportModifier[i] = 100;
-	researchModifier = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) researchModifier[i] = 100;
-	healthModifier = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) healthModifier[i] = 100;
-	workerModifier = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) workerModifier[i] = 100;
-	cultureModifier = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cultureModifier[i] = 100;
+
+	growthThresholdAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) growthThresholdAI[i] = 100;
+	productionModifierUnitsAI = new int[NUM_ALL_PLAYERS_B];		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierUnitsAI[i] = 100;
+	productionModifierBuildingsAI = new int[NUM_ALL_PLAYERS_B];	for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierBuildingsAI[i] = 100;
+	productionModifierWondersAI = new int[NUM_ALL_PLAYERS_B];		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierWondersAI[i] = 100;
+	inflationModifierAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) inflationModifierAI[i] = 100;
+	gpModifierAI = new int[NUM_ALL_PLAYERS_B];					for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) gpModifierAI[i] = 100;
+	unitSupportModifierAI = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) unitSupportModifierAI[i] = 100;
+	cityDistanceSupportAI = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityDistanceSupportAI[i] = 100;
+	cityNumberSupportAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityNumberSupportAI[i] = 100;
+	civicSupportModifierAI = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) civicSupportModifierAI[i] = 100;
+	researchModifierAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) researchModifierAI[i] = 100;
+	healthModifierAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) healthModifierAI[i] = 100;
+	workerModifierAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) workerModifierAI[i] = 100;
+	cultureModifierAI = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cultureModifierAI[i] = 100;
+
+	growthThresholdHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) growthThresholdHu[i] = 100;
+	productionModifierUnitsHu = new int[NUM_ALL_PLAYERS_B];		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierUnitsHu[i] = 100;
+	productionModifierBuildingsHu = new int[NUM_ALL_PLAYERS_B];	for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierBuildingsHu[i] = 100;
+	productionModifierWondersHu = new int[NUM_ALL_PLAYERS_B];		for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) productionModifierWondersHu[i] = 100;
+	inflationModifierHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) inflationModifierHu[i] = 100;
+	gpModifierHu = new int[NUM_ALL_PLAYERS_B];					for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) gpModifierHu[i] = 100;
+	unitSupportModifierHu = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) unitSupportModifierHu[i] = 100;
+	cityDistanceSupportHu = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityDistanceSupportHu[i] = 100;
+	cityNumberSupportHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityNumberSupportHu[i] = 100;
+	civicSupportModifierHu = new int[NUM_ALL_PLAYERS_B];			for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) civicSupportModifierHu[i] = 100;
+	researchModifierHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) researchModifierHu[i] = 100;
+	healthModifierHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) healthModifierHu[i] = 100;
+	workerModifierHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) workerModifierHu[i] = 100;
+	cultureModifierHu = new int[NUM_ALL_PLAYERS_B];				for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cultureModifierHu[i] = 100;
+
 	cityInitPop = new int[NUM_ALL_PLAYERS_B];					for ( int i=0; i<NUM_ALL_PLAYERS_B; i++ ) cityInitPop[i] = 1;
 
 	cityClusterTop = new int[NUM_ALL_PLAYERS_B];
@@ -825,6 +849,9 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	FaithPowers = new int[ NUM_RELIGIONS * FP_TOTAL_NUM ];
 	for ( int i=0; i< NUM_RELIGIONS * FP_TOTAL_NUM; i++ ) FaithPowers[i] = -1;
 
+	FaithPointsCap = new int[NUM_RELIGIONS];
+	for( int i=0; i<NUM_RELIGIONS; i++ ) FaithPointsCap[i] = 100; // 3Miro: this is probably too high, it will be overwritten anyway
+
 	startingWorkers = new int[ NUM_ALL_PLAYERS_B ];
 	for ( int i=0; i< NUM_ALL_PLAYERS_B; i++ ) startingWorkers[i] = 0;
 
@@ -837,40 +864,57 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 
 	buildingPrefs = new int[ NUM_ALL_PLAYERS_B * NUM_BUILDINGS ];
 	for ( int i=0; i < NUM_ALL_PLAYERS_B * NUM_BUILDINGS; i++ ){ buildingPrefs[i] = 0; }
+
+	historicalEnemyAIcheat = new int[ NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B ];
+	for( int i=0; i < NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B; i++ ){ historicalEnemyAIcheat[i] = 0; };
+
+	timelineTechDates = new int[ MAX_NUM_TECHS ]; for( int i=0; i< MAX_NUM_TECHS; i++ ){ timelineTechDates[i] = 0; };
 };
 
-void CyGlobalContext::setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop ){
-	growthThreshold[iCiv] = iPop;
-	cultureModifier[iCiv] = iCult;
-	gpModifier[iCiv] = iGP;
-	workerModifier[iCiv] = iWorker;
-	healthModifier[iCiv] = iHealth;
+void CyGlobalContext::setGrowthModifiersAI( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop ){
+	growthThresholdAI[iCiv] = iPop;
+	cultureModifierAI[iCiv] = iCult;
+	gpModifierAI[iCiv] = iGP;
+	workerModifierAI[iCiv] = iWorker;
+	healthModifierAI[iCiv] = iHealth;
 	cityInitPop[iCiv] = iInitPop;
 };
-
-void CyGlobalContext::setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch ){
-	//if ( iCiv == 21 ){
-	//	GC.getGameINLINE().logMsg(" input: %d %d %d %d %d",iCiv,iUnits,iBuildings,iWonders,iResearch );
-	//	GC.getGameINLINE().logMsg(" iUnits %d %d %d",startingTurn[4],productionModifierUnits[4],productionModifierUnits[iCiv]);
-	//	GC.getGameINLINE().logMsg(" iWonders %d %d %d",startingTurn[4],productionModifierUnits[4],productionModifierWonders[iCiv]);
-	//};
-	productionModifierUnits[iCiv] = iUnits;
-	productionModifierBuildings[iCiv] = iBuildings;
-	productionModifierWonders[iCiv] = iWonders;
-	researchModifier[iCiv] = iResearch;
-	//if ( iCiv == 21 ){
-	//	GC.getGameINLINE().logMsg(" iUnits %d %d %d",startingTurn[4],productionModifierUnits[4],productionModifierUnits[iCiv]);
-	//	GC.getGameINLINE().logMsg(" iWonders %d %d %d",startingTurn[4],productionModifierUnits[4],productionModifierWonders[iCiv]);
-	//};
+void CyGlobalContext::setProductionModifiersAI( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch ){
+	productionModifierUnitsAI[iCiv] = iUnits;
+	productionModifierBuildingsAI[iCiv] = iBuildings;
+	productionModifierWondersAI[iCiv] = iWonders;
+	researchModifierAI[iCiv] = iResearch;
+};
+void CyGlobalContext::setSupportModifiersAI( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic ){
+	inflationModifierAI[iCiv] = iInflation;
+	unitSupportModifierAI[iCiv] = iUnits;
+	cityDistanceSupportAI[iCiv] = iCityDist;
+	cityNumberSupportAI[iCiv] = iCityNum;
+	civicSupportModifierAI[iCiv] = iCivic;
 };
 
-void CyGlobalContext::setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic ){
-	inflationModifier[iCiv] = iInflation;
-	unitSupportModifier[iCiv] = iUnits;
-	cityDistanceSupport[iCiv] = iCityDist;
-	cityNumberSupport[iCiv] = iCityNum;
-	civicSupportModifier[iCiv] = iCivic;
+void CyGlobalContext::setGrowthModifiersHu( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop ){
+	growthThresholdHu[iCiv] = iPop;
+	cultureModifierHu[iCiv] = iCult;
+	gpModifierHu[iCiv] = iGP;
+	workerModifierHu[iCiv] = iWorker;
+	healthModifierHu[iCiv] = iHealth;
+	cityInitPop[iCiv] = iInitPop;
 };
+void CyGlobalContext::setProductionModifiersHu( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch ){
+	productionModifierUnitsHu[iCiv] = iUnits;
+	productionModifierBuildingsHu[iCiv] = iBuildings;
+	productionModifierWondersHu[iCiv] = iWonders;
+	researchModifierHu[iCiv] = iResearch;
+};
+void CyGlobalContext::setSupportModifiersHu( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic ){
+	inflationModifierHu[iCiv] = iInflation;
+	unitSupportModifierHu[iCiv] = iUnits;
+	cityDistanceSupportHu[iCiv] = iCityDist;
+	cityNumberSupportHu[iCiv] = iCityNum;
+	civicSupportModifierHu[iCiv] = iCivic;
+};
+
 
 void CyGlobalContext::setInitialPopulation( int iCiv, int iInitPop ){
 	cityInitPop[iCiv] = iInitPop;
@@ -1032,8 +1076,9 @@ void CyGlobalContext::setColonyAIModifier( int iCiv, int iModifier ){
 	colonyAIModifier[iCiv] = iModifier;
 };
 
-void CyGlobalContext::setReligionBenefit( int iReligion, int iBenefit, int iParameter ){
+void CyGlobalContext::setReligionBenefit( int iReligion, int iBenefit, int iParameter, int iCap ){
 	FaithPowers[ iReligion * FP_TOTAL_NUM + iBenefit ] = iParameter;
+	FaithPointsCap[iReligion] = iCap;
 };
 
 void CyGlobalContext::setSchism( int iReligionA, int iReligionB, int iTurn ){
@@ -1066,4 +1111,106 @@ void CyGlobalContext::setFastTerrain( int iFastTerrain ){
 
 void CyGlobalContext::setBuildingPref( int iCiv, int iBuilding, int iPref ){
 	buildingPrefs[ iCiv * NUM_BUILDINGS + iBuilding ] = iPref;
+};
+
+void CyGlobalContext::setAutorunHack( int iUnit, int iX, int iY ){
+	iAutorunUnit = iUnit;
+	iAutorunX = iX;
+	iAutorunY = iY;
+};
+
+void CyGlobalContext::setBuildingCivicCommerseCombo1( int iCode ){
+	iCivicBuildingCommerse1 = iCode;
+};
+void CyGlobalContext::setBuildingCivicCommerseCombo2( int iCode ){
+	iCivicBuildingCommerse2 = iCode;
+};
+void CyGlobalContext::setBuildingCivicCommerseCombo3( int iCode ){
+	iCivicBuildingCommerse3 = iCode;
+};
+
+void CyGlobalContext::setPsychoAICheat( int iPlayer, int iX, int iY ){
+	psychoAI_x = iX; 
+	psychoAI_y = iY;
+	psychoAI_player = iPlayer;
+};
+
+void CyGlobalContext::setHistoricalEnemyAICheat( int iAttacker, int iDefender, int iChange ){
+	historicalEnemyAIcheat[ iAttacker * NUM_ALL_PLAYERS_B + iDefender ] = iChange;
+};
+
+void CyGlobalContext::setTimelineTechModifiers( int iTPTop, int iTPBottom, int iTPCap, int iTBTop, int iTBBottom, int iTBCap ){
+	timelineTechPenaltyTop = iTPTop;
+	timelineTechPenaltyBottom = iTPBottom;
+	timelineTechPenaltyCap = iTPCap;
+	timelineTechBuffTop = iTBTop;
+	timelineTechBuffBottom = iTBBottom;
+	timelineTechBuffCap = iTBCap;
+};
+
+void CyGlobalContext::setTimelineTechDateForTech( int iTech, int iTurn ){
+	timelineTechDates[iTech] = iTurn;
+};
+
+void CyGlobalContext::setProvince( int iX, int iY, int iProvince ){ // set the province at tile (iX,iY)
+	provinceMap[iY * EARTH_X + iX ] = iProvince;
+};
+
+void CyGlobalContext::createProvinceCrossreferenceList(){ // call this after setting all provinces
+	int i, j, prov;
+	provinceSizeList = new int[MAX_NUM_PROVINCES+1];
+	for( i=0; i<MAX_NUM_PROVINCES+1; i++ ){
+		provinceSizeList[i] = 0;
+	};
+	for( i=0; i<EARTH_Y; i++ ){
+		for( j=0; j<EARTH_X; j++ ){
+			provinceSizeList[provinceMap[ i * EARTH_X + j ]]++;
+		};
+	};
+	provinceSizeList[MAX_NUM_PROVINCES] = 0; // last province is "no" province with no size
+	provinceTileList = new int*[MAX_NUM_PROVINCES+1];
+	for( i=0; i<MAX_NUM_PROVINCES; i++ ){
+		provinceTileList[i] = new int[ 2*provinceSizeList[i] ];
+	};
+	provinceTileList[MAX_NUM_PROVINCES] = NULL;
+	for( i=0; i<MAX_NUM_PROVINCES+1; i++ ){
+		provinceSizeList[i] = 0;
+	};
+	for( i=0; i<EARTH_Y; i++ ){
+		for( j=0; j<EARTH_X; j++ ){
+			prov = provinceMap[ i * EARTH_X + j ];
+			if ( prov < MAX_NUM_PROVINCES ){
+				provinceTileList[prov][ 2*provinceSizeList[prov] ] = j; // save the x value
+				provinceTileList[prov][ 2*provinceSizeList[prov]+1 ] = i; // save the y value
+				provinceSizeList[prov]++;
+			};
+		};
+	};
+	provinceSizeList[MAX_NUM_PROVINCES] = 0; // just in case
+};
+void CyGlobalContext::setCultureImmume( int iProvince, int iPlayerException, int iNumTurns ){ // make a province immune to culture not comming from iPlayerException
+	iCultureImmune[iProvince] = iNumTurns;
+	iCultureImmuneException[iProvince] = iPlayerException;
+};
+void CyGlobalContext::setProvinceTypeNumber( int iNum ){ // set the number of province types
+	int i=0;
+	iNumProvinceTypes = iNum;
+	iSettlerValuesPerProvinceType = new int[iNumProvinceTypes];
+	iWarValuesPerProvinceType = new int[iNumProvinceTypes];
+	iModCultureTop = new int[iNumProvinceTypes];
+	iModCultureBottom = new int[iNumProvinceTypes];
+	for( i=0; i<iNumProvinceTypes; i++ ){
+		iModCultureTop[i] = 1;
+		iModCultureBottom[i] = 1;
+	};
+};
+void CyGlobalContext::setProvinceTypeParams( int iType, int iSettlerValue, int iWarValue, int iCultureTop, int iCultureBottom ){
+	iSettlerValuesPerProvinceType[iType] = iSettlerValue;
+	iWarValuesPerProvinceType[iType] = iWarValue;
+	iModCultureTop[iType] = iCultureTop;
+	iModCultureBottom[iType] = iCultureBottom;
+};
+void CyGlobalContext::setVassalagaeCondition( int iPlayer, int iWhoTo, int iCondition, int iProvinceType ){
+	provinceFlagToVassalize  = iProvinceType;
+	conditionalVassalage[ iPlayer * NUM_ALL_PLAYERS_B + iWhoTo ] = iCondition;
 };

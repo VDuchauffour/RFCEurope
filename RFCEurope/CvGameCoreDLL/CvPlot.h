@@ -141,6 +141,30 @@ public:
 	bool isWithinCultureRange(PlayerTypes ePlayer) const;																						// Exposed to Python
 	int getNumCultureRangeCities(PlayerTypes ePlayer) const;																				// Exposed to Python
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true );
+	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER );
+	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot );
+/************************************************************************************************//* BETTER_BTS_AI_MOD                       END                                                  *//************************************************************************************************/
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+	bool isActivePlayerNoDangerCache() const;
+	bool isTeamBorderCache( TeamTypes eTeam ) const;
+	void setIsActivePlayerNoDangerCache( bool bNewValue );
+	void setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue );
+	void invalidateIsTeamBorderCache();
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 	PlayerTypes calculateCulturalOwner() const;
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
@@ -216,7 +240,20 @@ public:
 	int getFOWIndex() const;
 
 	CvArea* area() const;																																							// Exposed to Python
+	//CvArea* waterArea() const;
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						01/02/09		jdog5000		*/
+/* 																			*/
+/* 	General AI																*/
+/********************************************************************************/
+/* original BTS code
 	CvArea* waterArea() const;
+*/
+	CvArea* waterArea(bool bNoImpassable = false) const;
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
+
 	CvArea* secondWaterArea() const;
 	int getArea() const;																																		// Exposed to Python
 	void setArea(int iNewValue);			
@@ -339,7 +376,17 @@ public:
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const;		// Exposed to Python
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;															// Exposed to Python
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;																						// Exposed to Python
-	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false) const;	// Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      10/06/09                                jdog5000      */
+/*                                                                                              */
+/* City AI                                                                                      */
+/************************************************************************************************/
+	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;	// Exposed to Python
+	//int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false) const;	// Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/	
+	
 	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;												// Exposed to Python
 	bool hasYield() const;																																		// Exposed to Python
 	void updateYield();
@@ -530,6 +577,18 @@ protected:
 	IDInfo m_workingCity;
 	IDInfo m_workingCityOverride;
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+	bool m_bIsActivePlayerNoDangerCache;
+	bool* m_abIsTeamBorderCache;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 	short* m_aiYield;
 	int* m_aiCulture;
 	short* m_aiFoundValue;
@@ -580,6 +639,18 @@ protected:
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Lead From Behind                                                                             */
+/************************************************************************************************/
+// From Lead From Behind by UncutDragon
+public:
+	bool hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 };
 
 #endif

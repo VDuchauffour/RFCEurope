@@ -11,7 +11,7 @@ int *turnPlayed = NULL;
 int *civSpreadFactor = NULL;
 
 // (dynamic civ names - not jdog's)
-wchar civDynamicNames[22][22][19]  = {
+/*wchar civDynamicNames[22][22][19]  = {
 //				//people		monarchy				monarchy ext		monarchy mod		monarchy ext mod		republic			communism			fascism				islam monarchy		islam republic			vas. Byzantium			vas. Frankia		  vas. Arabia/Cordoba		vas. Spain			vas. Norse/Sweden		vas. Venice			vas. Moscow/Kiev		vas. Germany			vas. England		vas. Austria		vas. Turkey				Vassal generic					
 //Burgundy
 	{	 L"TXT_KEY_DN_BUR00", L"TXT_KEY_DN_BUR01", L"TXT_KEY_DN_BUR02", L"TXT_KEY_DN_BUR03",  L"TXT_KEY_DN_BUR04",  L"TXT_KEY_DN_BUR05",  L"TXT_KEY_DN_BUR06",  L"TXT_KEY_DN_BUR07",  L"TXT_KEY_DN_BUR08",  L"TXT_KEY_DN_BUR09",  L"TXT_KEY_DN_BUR10",  L"TXT_KEY_DN_BUR11",  L"TXT_KEY_DN_BUR12",  L"TXT_KEY_DN_BUR13",  L"TXT_KEY_DN_BUR14",  L"TXT_KEY_DN_BUR15",  L"TXT_KEY_DN_BUR16",  L"TXT_KEY_DN_BUR17",  L"TXT_KEY_DN_BUR18",  L"TXT_KEY_DN_BUR19",  L"TXT_KEY_DN_BUR20",  L"TXT_KEY_DN_BUR21" },
@@ -62,7 +62,7 @@ int civDynamicNamesFlag[22] = 	{	 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
 //									BUR BYZ	FRA ARA BUL COR SPN NOR VEN KIE HUN GER POL MOS GEN ENG POR AUS TUR SWE DUT POP
 // 1 = REL, 0 = GOV
 
-int civDynamicNamesEraThreshold[22] = { 2,  3,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 2 };
+int civDynamicNamesEraThreshold[22] = { 2,  3,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 2 };*/
 
 int *settlersMaps = NULL;
 int *warsMaps = NULL;
@@ -90,22 +90,39 @@ int HOLIEST_CITY_Y = -1;
 int *UniquePowers = NULL;
 int *FaithPowers = NULL;
 
+int *FaithPointsCap = NULL;
+
 // 3Miro: export balance factors
 // actual values are set in via Python
-int *growthThreshold = NULL;
-int* productionModifierUnits = NULL;
-int* productionModifierBuildings = NULL;
-int* productionModifierWonders = NULL;
-int* inflationModifier = NULL;
-int* gpModifier = NULL;
-int* unitSupportModifier = NULL;
-int* cityDistanceSupport = NULL;
-int* cityNumberSupport = NULL;
-int* civicSupportModifier = NULL;
-int* researchModifier = NULL;
-int* healthModifier = NULL;
-int* workerModifier = NULL;
-int* cultureModifier = NULL;
+int* growthThresholdAI = NULL;
+int* productionModifierUnitsAI = NULL;
+int* productionModifierBuildingsAI = NULL;
+int* productionModifierWondersAI = NULL;
+int* inflationModifierAI = NULL;
+int* gpModifierAI = NULL;
+int* unitSupportModifierAI = NULL;
+int* cityDistanceSupportAI = NULL;
+int* cityNumberSupportAI = NULL;
+int* civicSupportModifierAI = NULL;
+int* researchModifierAI = NULL;
+int* healthModifierAI = NULL;
+int* workerModifierAI = NULL;
+int* cultureModifierAI = NULL;
+// 3Miro: Start the export of the balance factors (for Human)
+int* growthThresholdHu = NULL;
+int* productionModifierUnitsHu = NULL;
+int* productionModifierBuildingsHu = NULL;
+int* productionModifierWondersHu = NULL;
+int* inflationModifierHu = NULL;
+int* gpModifierHu = NULL;
+int* unitSupportModifierHu = NULL;
+int* cityDistanceSupportHu = NULL;
+int* cityNumberSupportHu = NULL;
+int* civicSupportModifierHu = NULL;
+int* researchModifierHu = NULL;
+int* healthModifierHu = NULL;
+int* workerModifierHu = NULL;
+int* cultureModifierHu = NULL;
 
 int *cityInitPop = NULL;
 int **cityInitBuildings = NULL;
@@ -158,12 +175,67 @@ int *StrategicTileY = NULL;
 
 int * colonyAIModifier = NULL;
 
+int psychoAI_x = -2; 
+int psychoAI_y = -2;
+int psychoAI_player = -2;
+
+int *historicalEnemyAIcheat = NULL;
+
+// this is a more elegant solution to the bug in the culture of CvPlot (although it is still a hack)
+// once a turn we will check if we are within 3 turns of someone's spawn, if so, then set withinSpawnDate = true
+// and then only check that in CvPlot. We will set withinSpawnDate in CvGame.cpp
+bool withinSpawnDate = false; 
+
+// 3Miro: Autorun hack
+int iAutorunUnit;
+int iAutorunX;
+int iAutorunY;
+
+// 3Miro: Commerse from Building + Civic
+int iCivicBuildingCommerse1 = -1;
+int iCivicBuildingCommerse2 = -1;
+int iCivicBuildingCommerse3 = -1;
+
+// 3MiroTimeline: set the timeline for technologies
+int *timelineTechDates;
+int timelineTechPenaltyTop = 0;
+int timelineTechPenaltyBottom = 1;
+int timelineTechPenaltyCap = 0;
+int timelineTechBuffTop = 0;
+int timelineTechBuffBottom = 1;
+int timelineTechBuffCap = 0;
+
+int *provinceMap = NULL;
+int *provinceSizeList = NULL;
+int **provinceTileList = NULL;
+int provinceToColor = -1;
+
+int iNumProvinceTypes; // how many type of provinces are there
+int *iSettlerValuesPerProvinceType = NULL; // how do settlers value tiles from the specific province (AI purposes)
+int *iWarValuesPerProvinceType = NULL; // how do you consider attacking a specific province (AI purposes)
+int *iModCultureTop = NULL; // how do you modify culture for the specific province
+int *iModCultureBottom = NULL; // Culture * Top / Bottom
+int *iCultureImmune = NULL; // locks a province so that only the player in exception can put culture in it
+int *iCultureImmuneException = NULL; // the only player that can put culture on the tiles of this province
+
+int *conditionalVassalage = NULL;
+int provinceFlagToVassalize;
+
 bool MiroBelongToCore( int iCiv, int x, int y ){
-	if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
+	/*if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
 		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
 			if ( (CoreAreasMinus[iCiv][2*i] == x)&&(CoreAreasMinus[iCiv][2*i+1] == y) ) return false;
 		};
 		return true;
+	};
+	return false;*/
+	// Wrong name, Minus is actually added to the core area
+	if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
+		return true;
+	}else{
+		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
+			if ( (CoreAreasMinus[iCiv][2*i] == x)&&(CoreAreasMinus[iCiv][2*i+1] == y) ) return true;
+		};
 	};
 	return false;
 };
@@ -186,7 +258,9 @@ int getSettlersMaps( int iCiv, int y, int x, char * w ){
 			//return settlersMaps[iCiv][y][x];
 			return settlersMaps[ iCiv * SETTLER_OFFSET + y * EARTH_X + x ];
 		}else{
-			GC.getGameINLINE().logMsg(w);
+			if ( w != NULL ){
+				GC.getGameINLINE().logMsg(w);
+			};
 			return 20;
 		};
 	};

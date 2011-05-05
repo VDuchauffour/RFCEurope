@@ -8,9 +8,18 @@
 //#define EARTH_X					(100)
 //#define EARTH_Y					(73)
 
+#define MAX_NUM_PROVINCES  (150)
+#define PROVINCE_OWN		(5) // owns every tile
+#define PROVINCE_CONQUER	(4) // own every city
+#define PROVINCE_DOMINATE	(3) // 2*City populations + Num plots
+#define PROVINCE_LOST   	(2) // lost, others have cities, you don't
+#define PROVINCE_NOTHING	(0) // we have done nothing of the above
+
 #define MAX_COM_SHRINE			(20)
 
-#define BURGUNDY				(0)
+// 3Miro: Hard-coding things in the C++ makes the mod very ridgit. We should use XML and Python to set the variables here
+// this was needed for the Dynamic Civ Names, but not anymore (DCN is messed up code)
+/*#define BURGUNDY				(0)
 #define BYZANTIUM				(1)
 #define FRANKIA					(2)
 #define ARABIA					(3)
@@ -31,7 +40,7 @@
 #define TURKEY					(18)
 #define SWEDEN					(19)
 #define DUTCH					(20)
-#define POPE					(21)
+#define POPE					(21)*/
 //#define NUM_MAJOR_PLAYERS		(21)
 //#define INDEPENDENT				(22)
 //#define INDEPENDENT2			(23)
@@ -64,8 +73,15 @@
 #define UP_DISCOVERY			(20)
 #define UP_ENDLESS_LAND			(21)
 #define UP_FOREIGN_SEA			(22)
+#define UP_PIOUS				(23)
+#define UP_PAGAN_CULTURE		(24)
+#define UP_PAGAN_HAPPY			(25)
+#define UP_STABILITY_1			(26) // stability is handled in Python so make those generic
+#define UP_STABILITY_2			(27)
+#define UP_STABILITY_3			(28)
+#define UP_STABILITY_4			(29)
 
-#define UP_TOTAL_NUM			(23)
+#define UP_TOTAL_NUM			(30)
 
 // 3MiroFaith: define the possible bonuses here
 #define FP_STABILITY			(0)
@@ -79,9 +95,9 @@
 
 //#define MAX_NUM_TECHS			(100)
 
-#define IMPROVEMENT_WORKSHOP	(8)
-#define PROMOTION_MEDIC			(12)
-#define PROMOTION_FORMATION		(7)
+//#define IMPROVEMENT_WORKSHOP	(8)
+//#define PROMOTION_MEDIC			(12)
+//#define PROMOTION_FORMATION		(7)
 
 #define ENEMY_DAMAGE			(16)
 #define BARB_DAMAGE				(32)
@@ -142,21 +158,39 @@ extern int *warsMaps;
 extern int *UniquePowers;
 extern int *FaithPowers;
 
-// 3Miro: Start the export of the balance factors
-extern int* growthThreshold;
-extern int* productionModifierUnits;
-extern int* productionModifierBuildings;
-extern int* productionModifierWonders;
-extern int* inflationModifier;
-extern int* gpModifier;
-extern int* unitSupportModifier;
-extern int* cityDistanceSupport;
-extern int* cityNumberSupport;
-extern int* civicSupportModifier;
-extern int* researchModifier;
-extern int* healthModifier;
-extern int* workerModifier;
-extern int* cultureModifier;
+extern int *FaithPointsCap;
+
+// 3Miro: Start the export of the balance factors (for AI)
+extern int* growthThresholdAI;
+extern int* productionModifierUnitsAI;
+extern int* productionModifierBuildingsAI;
+extern int* productionModifierWondersAI;
+extern int* inflationModifierAI;
+extern int* gpModifierAI;
+extern int* unitSupportModifierAI;
+extern int* cityDistanceSupportAI;
+extern int* cityNumberSupportAI;
+extern int* civicSupportModifierAI;
+extern int* researchModifierAI;
+extern int* healthModifierAI;
+extern int* workerModifierAI;
+extern int* cultureModifierAI;
+// 3Miro: Start the export of the balance factors (for Human)
+extern int* growthThresholdHu;
+extern int* productionModifierUnitsHu;
+extern int* productionModifierBuildingsHu;
+extern int* productionModifierWondersHu;
+extern int* inflationModifierHu;
+extern int* gpModifierHu;
+extern int* unitSupportModifierHu;
+extern int* cityDistanceSupportHu;
+extern int* cityNumberSupportHu;
+extern int* civicSupportModifierHu;
+extern int* researchModifierHu;
+extern int* healthModifierHu;
+extern int* workerModifierHu;
+extern int* cultureModifierHu;
+
 extern int *cityInitPop;
 extern int **cityInitBuildings;
 // balance AI
@@ -170,6 +204,14 @@ extern int *buildingPrefs;
 
 extern int* cityWarDistance;
 extern int** techPreferences;
+
+// 3Miro: AI cheat to make Ottomans conquer Constantinople
+extern int psychoAI_x; 
+extern int psychoAI_y;
+extern int psychoAI_player;
+
+// 3Miro: AI cheats to help nations historically conquer certain players
+extern int *historicalEnemyAIcheat;
 
 // 3Miro: Stability last owned cities and plots
 extern int* lOwnedCities;
@@ -189,6 +231,47 @@ extern int** NormalAreasMinus;
 extern int *StrategicTileX;
 extern int *StrategicTileY;
 
-// 3Miro GlobalWarming
+// 3Miro: GlobalWarming
 extern bool USE_GLOBAL_WARMING;
 extern int FAST_TERRAIN;
+
+// 3Miro: hack on the culture bug, see CvRhye.cpp
+extern bool withinSpawnDate;
+
+// 3Miro: autorun hack (a unit is created and destroyed every turn for the Human player)
+// we need a place to put the unit and a unit index
+extern int iAutorunUnit;
+extern int iAutorunX;
+extern int iAutorunY;
+
+// 3Miro: Commerse from Building + Civic
+extern int iCivicBuildingCommerse1;
+extern int iCivicBuildingCommerse2;
+extern int iCivicBuildingCommerse3;
+// iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
+// none of the bonuses can be more than 9
+
+// 3MiroTimeline: set the timeline for technologies
+extern int *timelineTechDates;
+extern int timelineTechPenaltyTop;
+extern int timelineTechPenaltyBottom;
+extern int timelineTechPenaltyCap;
+extern int timelineTechBuffTop;
+extern int timelineTechBuffBottom;
+extern int timelineTechBuffCap;
+
+// 3MiroProvinces: province map and other things
+extern int *provinceMap;
+extern int *provinceSizeList;  // those are for cross reference purposes
+extern int **provinceTileList;
+extern int iNumProvinceTypes; // how many type of provinces are there
+extern int *iSettlerValuesPerProvinceType; // how do settlers value tiles from the specific province (AI purposes)
+extern int *iWarValuesPerProvinceType; // how do you consider attacking a specific province (AI purposes)
+extern int *iModCultureTop; // how do you modify culture for the specific province
+extern int *iModCultureBottom; // Culture * Top / Bottom
+extern int *iCultureImmune; // locks a province so that only the player in exception can put culture in it
+extern int *iCultureImmuneException; // the only player that can put culture on the tiles of this province
+extern int provinceToColor;
+
+extern int *conditionalVassalage; // conditions for vassalizing, -1 cannot vassalize, 1 can vassalize, 0 condition
+extern int provinceFlagToVassalize; // we can vassalize if we have overlap (city in province) of provinces of type >= provinceFlagToVassalize

@@ -269,7 +269,9 @@ public:
 	void changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer);								// Exposed to Python
 	int changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer);
 
-	int getTechCount(TechTypes eIndex) const;																										// Exposed to Python
+	int getTechCount(TechTypes eIndex) const;		
+																								// Exposed to Python
+	int getBestKnownTechScorePercent() const; // BETTER_BTS_AI_MOD / General AI	
 
 	int getTerrainTradeCount(TerrainTypes eIndex) const;
 	bool isTerrainTrade(TerrainTypes eIndex) const;																												// Exposed to Python
@@ -380,6 +382,9 @@ public:
 	bool isTrainVassalUU() const;
 	int getTrainVassalUU() const;
 	void setTrainVassalUU( int iNewVal );
+
+	// 3MiroTimeline: get the research without a timeline modifier
+	int getResearchCostUntimely(TechTypes eTech) const;
 
 protected:
 
