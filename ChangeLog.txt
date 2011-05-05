@@ -72,7 +72,7 @@ Changes for Beta 10:
 		The Bonuses from Imperialism and French UP are now "capped" to 6 points max
 		Podolia is now stable for Moscow
 		Granary no longer gives health bonus with Rice (there is little Rice on the map anyway and Rice by itself gives +1 Health)
-		Contant with the Pope is initiated as soon as you get a Catholic city (this is needed now as one cannot declare state rleigion until Theology)
+		Contact with the Pope is initiated as soon as you get a Catholic city (this is needed now as one cannot declare state religion until Theology)
 		Increased the research penalty for the Pope (this is done for purely balance reasons, otherwise he techs too much)
 		Longbowman now requeres Replacable Parts
 		Nerfed Longbowman strength to 8 (it is still more powerful than Knights in cities, hills and probably forest)
