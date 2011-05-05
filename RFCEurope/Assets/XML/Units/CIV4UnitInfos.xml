@@ -3989,7 +3989,9 @@
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<TechTypes/>
+                        <TechTypes>
+				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+			</TechTypes>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
 			<ProductionTraits/>
@@ -4024,7 +4026,7 @@
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>9</iCombat>
+			<iCombat>8</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -4177,7 +4179,9 @@
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<TechTypes/>
+			<TechTypes>
+				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+			</TechTypes>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
 			<ProductionTraits/>
@@ -4212,7 +4216,7 @@
 			</FeatureImpassables>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>9</iCombat>
+			<iCombat>8</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -18464,9 +18468,7 @@
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>NONE</PrereqTech>
-				<PrereqTech>NONE</PrereqTech>
-				<PrereqTech>NONE</PrereqTech>
+				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
 			</TechTypes>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses>

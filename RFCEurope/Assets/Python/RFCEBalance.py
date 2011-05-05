@@ -191,7 +191,7 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iSweden,     50,  50, 100,  80 )
 		gc.setProductionModifiersAI(iDutch,     100,  50,  30,  40 )
 		gc.setProductionModifiersHu(iDutch,     100,  50,  30,  40 )
-		gc.setProductionModifiersAI(iPope,      300, 200, 100, 150 )
+		gc.setProductionModifiersAI(iPope,      300, 200, 100, 350 )
 		gc.setProductionModifiersAI(iIndependent, 170, 100, 400, 200 ) #The peaceful ones
 		gc.setProductionModifiersAI(iIndependent2, 170, 100, 400, 200 )
 		gc.setProductionModifiersAI(iIndependent3, 125, 100, 600, 300 ) #The warlike ones
