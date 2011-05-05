@@ -2336,3 +2336,101 @@ int CyPlayer::getFaithBenefit( int iFaithPower ){
 bool CyPlayer::isFaithBenefit( int iFaithPower ){
 	return m_pPlayer ->isFaithBenefit( iFaithPower );
 };
+
+int CyPlayer::countCultureProduced(){
+	return m_pPlayer ->countCultureProduced();
+};
+
+void CyPlayer::setUHV( int iUHV, int iValue ){
+	m_pPlayer ->setUHV(iUHV,iValue);
+};
+int CyPlayer::getUHV( int iUHV ){
+	return m_pPlayer ->getUHV(iUHV);
+};
+void CyPlayer::setUHVCounter( int iUHV, int iValue ){
+	m_pPlayer ->setUHVCounter(iUHV,iValue);
+};
+int CyPlayer::getUHVCounter( int iUHV ){
+	return m_pPlayer ->getUHVCounter(iUHV);
+};
+void CyPlayer::setUHV2of3( bool bNewValue ){
+	m_pPlayer ->setUHV2of3(bNewValue);
+};
+bool CyPlayer::getUHV2of3(){
+	return m_pPlayer ->getUHV2of3();
+};
+std::wstring CyPlayer::getUHVDescription( int iUHV ) const
+{
+	return m_pPlayer ? m_pPlayer->getUHVDescription(iUHV) : std::wstring();
+}
+
+void CyPlayer::setProvinceType( int iProvince, int iType ){
+	m_pPlayer ->setProvinceType(iProvince, iType );
+};
+int CyPlayer::getProvinceType( int iProvince ){
+	return m_pPlayer ->getProvinceType( iProvince );
+};
+int CyPlayer::getProvinceCurrentState( int iProvince ){
+	return m_pPlayer ->getProvinceCurrentState( iProvince );
+};
+int CyPlayer::getProvinceCityCount( int iProvince ){
+	return m_pPlayer ->getProvinceCityCount( iProvince );
+};
+
+int CyPlayer::getStabilityBase( int iCathegory ){
+	return m_pPlayer ->getStabilityBase( iCathegory );
+};
+void CyPlayer::changeStabilityBase( int iCathegory, int iChange ){
+	m_pPlayer ->changeStabilityBase( iCathegory, iChange );
+};
+int CyPlayer::getStabilityVary( int iCathegory ){
+	return m_pPlayer ->getStabilityVary( iCathegory );
+};
+void CyPlayer::setStabilityVary( int iCathegory, int iNewValue ){
+	m_pPlayer ->setStabilityVary( iCathegory, iNewValue );
+};
+int CyPlayer::getStabilitySwing(){
+	return m_pPlayer ->getStabilitySwing();
+};
+void CyPlayer::setStabilitySwing( int iNewValue ){
+	m_pPlayer ->setStabilitySwing( iNewValue );
+};
+int CyPlayer::getStability(){
+	return m_pPlayer ->getStability();
+};
+int CyPlayer::getWarPeaceChange(){
+	return m_pPlayer ->getWarPeaceChange();
+};
+int CyPlayer::getNumColonies(){
+	return m_pPlayer ->getNumColonies();
+};
+void CyPlayer::setNumColonies( int iNewValue ){
+	m_pPlayer ->setNumColonies( iNewValue );
+};
+int CyPlayer::getPicklefreeParameter( int iParam ){
+	return m_pPlayer ->getPicklefreeParameter( iParam );
+};
+void CyPlayer::setPicklefreeParameter( int iParam, int iNewValue ){
+	m_pPlayer ->setPicklefreeParameter( iParam, iNewValue );
+};
+int CyPlayer::getForeignCitiesInMyProvinceType( int iProvinceType ){
+	return m_pPlayer ->getForeignCitiesInMyProvinceType(iProvinceType);
+};
+int CyPlayer::getMaster(){
+	return m_pPlayer ->getMaster();
+};
+int CyPlayer::countVassals(){
+	return m_pPlayer ->countVassals();
+};
+bool CyPlayer::provinceIsSpreadReligion( int iProvince, int iReligion ){
+	return m_pPlayer ->provinceIsSpreadReligion( iProvince, iReligion );
+};
+bool CyPlayer::provinceIsConvertReligion( int iProvince, int iReligion ){
+	return m_pPlayer ->provinceIsConvertReligion( iProvince, iReligion );
+};
+bool CyPlayer::getRespawned(){
+	return m_pPlayer ->getRespawned();
+};
+void CyPlayer::setRespawned( bool bNewValue ){
+	m_pPlayer ->setRespawned( bNewValue );
+};

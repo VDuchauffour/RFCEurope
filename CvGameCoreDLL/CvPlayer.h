@@ -12,6 +12,8 @@
 #include "LinkedList.h"
 #include "CvTalkingHeadMessage.h"
 
+#include "CvRhyes.h" // 3Miro for Provinces
+
 class CvDiploParameters;
 class CvPopupInfo;
 class CvEventTriggerInfo;
@@ -1069,6 +1071,7 @@ public:
 	bool getIsCrusader() const;
 
 	int countExternalCities(); // counts the cities outside the core area
+	int countCultureProduced(); // sums the amount of culture produced by each city
 
 	int getFaith() const;
 	void setFaith( int iNewFaith );
@@ -1081,10 +1084,68 @@ public:
 	int getFaithBenefit( int iFaithPower ) const;
 	bool isFaithBenefit( int iFaithPower ) const;
 
+	// 3MiroUHV: move the UHV data to the Python class so it can be easily accessible for the interface
+	void setUHV( int iUHV, int iValue );
+	int getUHV( int iUHV );
+	void setUHVCounter( int iUHV, int iValue );
+	int getUHVCounter( int iUHV );
+	void setUHV2of3( bool bNewValue );
+	bool getUHV2of3();
+	std::wstring getUHVDescription( int iUHV ) const;
+
+
+	// 3MiroProvinces: get and set the relation of a province for the player (default is 0, should be 0 <= iType < iNumProvinceTypes)
+	void setProvinceType( int iProvince, int iType );
+	int getProvinceType( int iProvince ) const;
+	int getProvinceCurrentState( int iProvince ); // own, conquer, etc ...
+	int getProvinceCityCount( int iProvince ); // count number of cities in the province
+	int getForeignCitiesInMyProvinceType( int iProvinceType ); // counts foreign cities in all my provinces of type iProvinceType
+
+	// 3MiroStability: functions to work with the stability
+	int getStabilityBase( int iCathegory );
+	void changeStabilityBase( int iCathegory, int iChange );
+	int getStabilityVary( int iCathegory );
+	void setStabilityVary( int iCathegory, int iNewValue );
+	int getStabilitySwing();
+	void setStabilitySwing( int iNewValue );
+	int getStability(); // sum all cathegories and returns one number
+	int getWarPeaceChange(); // war peace change since last time it was called
+
+	// 3MiroProjects: count the number of colonies here
+	int getNumColonies();
+	void setNumColonies( int iNewValue );
+
+	// 3Miro: pickle free
+	int getPicklefreeParameter( int iParam );
+	void setPicklefreeParameter( int iParam, int iNewValue );
+
+	bool canVassalize( int iWhoTo ) const; // checks for conditions for getting a Vassal
+
+	// 3Miro: count vassals and is a vassal of someone
+	int getMaster();
+	int countVassals();
+
+	// 3MiroProvince: religion in province
+	bool provinceIsSpreadReligion( int iProvince, int iReligion );
+	bool provinceIsConvertReligion( int iProvince, int iReligion );
+
+	// 3MiroTimeline: can trade Tech
+	bool canTradeTech( int iTech ) const;
+
+	// 3MiroCivics: faster unit production modifier
+	void changCivicUnitProductionModifier( int iChange );
+	int getCivicUnitProductionModifier() const;
+
+	bool getRespawned() const;
+	void setRespawned( bool bNewValue );
+
 protected:
 
 	// 3MiroBuildings
 	int m_iAllowBrothersAtWar;
+
+	// 3MiroProjects: count the number of colonies here
+	int m_iNumColonies;
 
 	// 3MiroCrusades
 	bool m_isCrusader;
@@ -1094,6 +1155,29 @@ protected:
 
 	// 3MiroProsecution
 	int m_iProsecutionCount;
+
+	// 3MiroUHV
+	int m_aiUHV[3];
+	int m_aiUHVcounter[3];
+	bool m_aiUHV2of3;
+
+	// 3MiroProvinces
+	int m_aiProvinceType[MAX_NUM_PROVINCES]; // core, outer, etc ...
+
+	// 3MiroStability: the Stability parameters
+	int m_aiStabilityBase[4]; // long term memory of past events
+	int m_aiStabilityVary[4]; // instanat change every X turns, no memory beyond that
+	int m_iStabilitySwing; // short tuerm memory keeping track of anarchy and such
+	bool bIsAtWar; //are we at war with anybody (only major players count)
+
+	// 3Miro: get 10 pickle free parameters to remove the need for that module (at least in part)
+	int m_aiPickleFree[10];
+
+	// 3MiroCivic
+	int m_iCivicUnitProductionModifier;
+
+	// 3Miro: respawned
+	bool m_bRespawned;
 
 	int m_iStartingX;
 	int m_iStartingY;

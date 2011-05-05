@@ -174,9 +174,15 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		// 3Miro balancing stuff, expose to Python
 		.def("setStartingTurn", &CyGlobalContext::setStartingTurn, "void (int iCiv, int iVal)") // 3Miro
 		.def("getStartingTurn", &CyGlobalContext::getStartingTurn, "int (int iCiv )") // 3Miro
-		.def("setGrowthModifiers", &CyGlobalContext::setGrowthModifiers, "void ( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop )") // 3Miro
-		.def("setProductionModifiers", &CyGlobalContext::setProductionModifiers, "void ( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch )") // 3Miro
-		.def("setSupportModifiers", &CyGlobalContext::setSupportModifiers, "void ( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic )") // 3Miro
+		
+		.def("setGrowthModifiersAI", &CyGlobalContext::setGrowthModifiersAI, "void ( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop )") // 3Miro
+		.def("setProductionModifiersAI", &CyGlobalContext::setProductionModifiersAI, "void ( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch )") // 3Miro
+		.def("setSupportModifiersAI", &CyGlobalContext::setSupportModifiersAI, "void ( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic )") // 3Miro
+
+		.def("setGrowthModifiersHu", &CyGlobalContext::setGrowthModifiersHu, "void ( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop )") // 3Miro
+		.def("setProductionModifiersHu", &CyGlobalContext::setProductionModifiersHu, "void ( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch )") // 3Miro
+		.def("setSupportModifiersHu", &CyGlobalContext::setSupportModifiersHu, "void ( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic )") // 3Miro
+		
 		.def("setInitialPopulation", &CyGlobalContext::setInitialPopulation, "void ( int iCiv, int iInitPop )") // 3Miro
 		.def("setInitialBuilding", &CyGlobalContext::setInitialBuilding, "void ( int iCiv, int iBuilding, bool w )") // 3Miro
 		
@@ -184,6 +190,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setCityClusterAI", &CyGlobalContext::setCityClusterAI, "void (int iCiv, int iTop, int iBottom, int iMinus )") // 3Miro
 		.def("setCityWarDistanceAI", &CyGlobalContext::setCityWarDistanceAI, "void (int iCiv, int iVal)") // 3Miro
 		.def("setTechPreferenceAI", &CyGlobalContext::setTechPreferenceAI, "void (int iCiv, int iTech, int iVal)") // 3Miro
+
 		.def("setDiplomacyModifiers", &CyGlobalContext::setDiplomacyModifiers, "void (int iCiv1, int iCiv2, int iVal)") // 3Miro
 		.def("setUP", &CyGlobalContext::setUP, "void (int iCiv, int iPower, int iParameter)") // 3Miro
 		.def("hasUP", &CyGlobalContext::hasUP, "bool (int iCiv, int iPower)") // 3Miro
@@ -246,7 +253,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setSchism", &CyGlobalContext::setSchism, "void ( int iReligionA, int iReligionB, int iTurn )") // 3Miro
 
 		// Faith Powers Parameters
-		.def("setReligionBenefit", &CyGlobalContext::setReligionBenefit, "void ( int iReligion, int iBenefit, int iParameter )") // 3Miro
+		.def("setReligionBenefit", &CyGlobalContext::setReligionBenefit, "void ( int iReligion, int iBenefit, int iParameter, iCap )") // 3Miro
 
 		// set Holiest City
 		.def("setHoliestCity", &CyGlobalContext::setHoliestCity, "void ( int iCityX, int iCityY )") // 3Miro
@@ -265,5 +272,33 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		// set AI building prefs
 		.def("setBuildingPref", &CyGlobalContext::setBuildingPref, "void ( int iCiv, int iBuilding, int iPref )") // 3Miro
+
+		// 3Miro: set Autorun Hack
+		.def("setAutorunHack", &CyGlobalContext::setAutorunHack, "void ( int iUnit, int iX, int iY )") // 3Miro
+
+		// 3Miro: set Building + Civic combo
+		.def("setBuildingCivicCommerseCombo1", &CyGlobalContext::setBuildingCivicCommerseCombo1, "void ( int iCode )") // 3Miro
+		.def("setBuildingCivicCommerseCombo2", &CyGlobalContext::setBuildingCivicCommerseCombo2, "void ( int iCode )") // 3Miro
+		.def("setBuildingCivicCommerseCombo3", &CyGlobalContext::setBuildingCivicCommerseCombo3, "void ( int iCode )") // 3Miro
+
+		// 3Miro: Psycho AI cheat, this gives a AI player gratiinsentive to attack a city at X, Y and it greatly improves the odds of success
+		.def("setPsychoAICheat", &CyGlobalContext::setPsychoAICheat, "void ( int iPlayer, int iX, int iY )") // 3Miro
+
+		// 3Miro: on AI to AI battles, this gives a iChange chnage to the attack.defense odds
+		.def("setHistoricalEnemyAICheat", &CyGlobalContext::setHistoricalEnemyAICheat, "void ( int iAttacker, int iDefender, int iChange )") // 3Miro
+
+		// tech Timeline modifiers
+		.def("setTimelineTechModifiers", &CyGlobalContext::setTimelineTechModifiers, "void ( int iTPTop, int iTPBottom, int iTPCap, int iTBTop, int iTBBottom, int iTBCap )") // 3Miro
+		.def("setTimelineTechDateForTech", &CyGlobalContext::setTimelineTechDateForTech, "void ( int iTech, int iTurn )") // 3Miro
+
+		// 3MiroProvinces
+		.def("setProvince", &CyGlobalContext::setProvince, "void ( int iX, int iY, int iProvince )")
+		.def("createProvinceCrossreferenceList", &CyGlobalContext::createProvinceCrossreferenceList, "void ()")
+
+		.def("setCultureImmume", &CyGlobalContext::setCultureImmume, "void (int, int, int)")
+		.def("setProvinceTypeNumber", &CyGlobalContext::setProvinceTypeNumber, "void ( iNum )")
+		.def("setProvinceTypeParams", &CyGlobalContext::setProvinceTypeParams, "void (int, int, int, int, int)")
+
+		.def("setVassalagaeCondition", &CyGlobalContext::setVassalagaeCondition, "void (int, int, int, int)")
 		;
 }

@@ -27,6 +27,16 @@
 #include "CvEventReporter.h"
 #include "CvRhyes.h" //Rhye
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      11/30/08                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+#include "FAStarNode.h"
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
 
@@ -35,6 +45,16 @@
 CvPlot::CvPlot()
 {
 	m_aiYield = new short[NUM_YIELD_TYPES];
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+	m_abIsTeamBorderCache = new bool[MAX_TEAMS];
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	m_aiCulture = NULL;
 	m_aiFoundValue = NULL;
@@ -75,6 +95,16 @@ CvPlot::~CvPlot()
 	uninit();
 
 	SAFE_DELETE_ARRAY(m_aiYield);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+	SAFE_DELETE_ARRAY(m_abIsTeamBorderCache);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 }
 
 void CvPlot::init(int iX, int iY)
@@ -213,6 +243,22 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	{
 		m_aiYield[iI] = 0;
 	}
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+	m_bIsActivePlayerNoDangerCache = false;
+
+	for (iI = 0; iI < MAX_TEAMS; iI++)
+	{
+		m_abIsTeamBorderCache[iI] = false;
+	}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 }
 
 
@@ -787,6 +833,8 @@ void CvPlot::updateCenterUnit()
 void CvPlot::verifyUnitValidPlot()
 {
 	PROFILE_FUNC();
+
+	//GC.getGameINLINE().logMsg("  DEBUG Plot Verify (owner - X,Y - Turn) %d  - %d  %d - %d",getOwner(),getX(),getY(), GC.getGameINLINE().getGameTurn() );
 	
 	std::vector<CvUnit*> aUnits;
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
@@ -805,8 +853,52 @@ void CvPlot::verifyUnitValidPlot()
 	{
 		CvUnit* pLoopUnit = *it;
 		bool bErased = false;
+		bool bMovedAlready = false; // 3MiroBugfix
 
-		if (pLoopUnit != NULL)
+		// 3MiroDebug: start
+		//GC.getGameINLINE().logMsg("  DEBUG Plot Verify (owner - X,Y ) %d  - %d  %d  Unit Type %d",getOwner(),getX(),getY(),pLoopUnit->getUnitType() );
+		//if (  (pLoopUnit->canEnterArea(getTeam(), area()))   ){
+		//	GC.getGameINLINE().logMsg("  DEBUG Can enter ");
+		//}else{
+		//	GC.getGameINLINE().logMsg("  DEBUG Cannot enter ");
+		//};
+		// 3MiroDebug: end
+
+		// 3MiroBugfix: start
+		/*if ( isCity() ){
+			GC.getGameINLINE().logMsg("  isCity %d  %d ",getX(),getY());
+			if (pLoopUnit != NULL){
+				if (pLoopUnit->atPlot(this)){
+					if (!(pLoopUnit->isCargo())){
+						GC.getGameINLINE().logMsg("  Not cargo ");
+						if (!(pLoopUnit->isCombat())){
+							GC.getGameINLINE().logMsg("  Not Combat ");
+							if ( GET_TEAM( getPlotCity()->getTeam() ).isAtWar( pLoopUnit->getTeam() ) ){
+								//
+								int iUnitTeam = pLoopUnit->getTeam();
+								GC.getGameINLINE().logMsg("  NumUnits %d ",getNumUnits());
+								for( int iI=0; iI < getNumUnits(); iI++ ){
+									//if ( getUnitByIndex( iI )->getTeam() == iCityTeam ){
+									GC.getGameINLINE().logMsg("  UnitType %d ",getUnitByIndex( iI )->getUnitType()  );
+									if ( GET_TEAM( (TeamTypes) iUnitTeam ).isAtWar( getUnitByIndex( iI )->getTeam() ) ){
+										GC.getGameINLINE().logMsg("  isAtWar %d ",iI );
+										if (!pLoopUnit->jumpToNearestValidPlot())
+										{
+											bErased = true;
+										};
+										bMovedAlready = true;
+										break;
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};*/
+		// 3MiroBugfix: end
+
+		if ( (pLoopUnit != NULL) && (!bMovedAlready) )
 		{
 			if (pLoopUnit->atPlot(this))
 			{
@@ -2955,6 +3047,376 @@ int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
 	return iCount;
 }
 
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      01/10/10                                jdog5000      */
+
+/*                                                                                              */
+
+/* General AI                                                                                   */
+
+/************************************************************************************************/
+
+bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
+
+{
+
+	PROFILE_FUNC();
+
+
+
+	int iI;
+
+	CvCity* pLoopCity = NULL;
+
+	int iLoop;
+
+
+
+	FAssert(eAttackerTeam != NO_TEAM);
+
+
+
+	if( (area()->getNumCities() - GET_TEAM(eAttackerTeam).countNumCitiesByArea(area())) == 0 )
+
+	{
+
+		return false;
+
+	}
+
+
+
+	// Imitate instatiation of irrigated finder, pIrrigatedFinder
+
+	// Can't mimic step finder initialization because it requires creation from the exe
+
+	std::vector<TeamTypes> teamVec;
+
+	teamVec.push_back(eAttackerTeam);
+
+	teamVec.push_back(NO_TEAM);
+
+	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
+
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+
+	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
+
+
+
+	bool bFound = false;
+
+
+
+	// First check capitals
+
+	for (iI = 0; !bFound && iI < MAX_CIV_PLAYERS; iI++)
+
+	{
+
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN )
+
+		{
+
+			if( !bIgnoreBarb || !(GET_PLAYER((PlayerTypes)iI).isBarbarian() || GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
+
+			{
+
+				pLoopCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+
+				
+
+				if( pLoopCity != NULL )
+
+				{
+
+					if( (pLoopCity->area() == area()) )
+
+					{
+
+						bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, 0, true);
+
+
+
+						if( bFound )
+
+						{
+
+							break;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+	// Check all other cities
+
+	for (iI = 0; !bFound && iI < MAX_PLAYERS; iI++)
+
+	{
+
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN )
+
+		{
+
+			if( !bIgnoreBarb || !(GET_PLAYER((PlayerTypes)iI).isBarbarian() || GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
+
+			{
+
+				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); !bFound && pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+
+				{
+
+					if( (pLoopCity->area() == area()) && !(pLoopCity->isCapital()) )
+
+					{
+
+						bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, 0, true);
+
+
+
+						if( bFound )
+
+						{
+
+							break;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
+
+
+
+	return bFound;
+
+}
+
+
+
+bool CvPlot::isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer )
+
+{
+
+	PROFILE_FUNC();
+
+
+
+	CvCity* pLoopCity = NULL;
+
+	int iLoop;
+
+
+
+	FAssert(eMoveTeam != NO_TEAM);
+
+
+
+	if( (area()->getCitiesPerPlayer(eOtherPlayer) == 0) )
+
+	{
+
+		return false;
+
+	}
+
+
+
+	// Imitate instatiation of irrigated finder, pIrrigatedFinder
+
+	// Can't mimic step finder initialization because it requires creation from the exe
+
+	std::vector<TeamTypes> teamVec;
+
+	teamVec.push_back(eMoveTeam);
+
+	teamVec.push_back(GET_PLAYER(eOtherPlayer).getTeam());
+
+	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
+
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+
+	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
+
+
+
+	bool bFound = false;
+
+
+
+	for (pLoopCity = GET_PLAYER(eOtherPlayer).firstCity(&iLoop); !bFound && pLoopCity != NULL; pLoopCity = GET_PLAYER(eOtherPlayer).nextCity(&iLoop))
+
+	{
+
+		if( pLoopCity->area() == area() )
+
+		{
+
+			bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), false, 0, true);
+
+
+
+			if( bFound )
+
+			{
+
+				break;
+
+			}
+
+		}
+
+	}
+
+
+
+	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
+
+
+
+	return bFound;
+
+}
+
+
+
+int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot )
+
+{
+
+	PROFILE_FUNC();
+
+
+
+	FAssert(eTeam != NO_TEAM);
+
+
+
+	if( pTargetPlot->area() != area() )
+
+	{
+
+		return false;
+
+	}
+
+
+
+	// Imitate instatiation of irrigated finder, pIrrigatedFinder
+
+	// Can't mimic step finder initialization because it requires creation from the exe
+
+	std::vector<TeamTypes> teamVec;
+
+	teamVec.push_back(eTeam);
+
+	teamVec.push_back(NO_TEAM);
+
+	FAStar* pTeamStepFinder = gDLL->getFAStarIFace()->create();
+
+	gDLL->getFAStarIFace()->Initialize(pTeamStepFinder, GC.getMapINLINE().getGridWidthINLINE(), GC.getMapINLINE().getGridHeightINLINE(), GC.getMapINLINE().isWrapXINLINE(), GC.getMapINLINE().isWrapYINLINE(), stepDestValid, stepHeuristic, stepCost, teamStepValid, stepAdd, NULL, NULL);
+
+	gDLL->getFAStarIFace()->SetData(pTeamStepFinder, &teamVec);
+
+	FAStarNode* pNode;
+
+
+
+	int iPathDistance = -1;
+
+	gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX_INLINE(), getY_INLINE(), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE(), false, 0, true);
+
+
+
+	pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+
+
+
+	if (pNode != NULL)
+
+	{
+
+		iPathDistance = pNode->m_iData1;
+
+	}
+
+
+
+	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
+
+
+
+	return iPathDistance;
+
+}
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+bool CvPlot::isActivePlayerNoDangerCache() const
+{
+	return m_bIsActivePlayerNoDangerCache;
+}
+
+bool CvPlot::isTeamBorderCache( TeamTypes eTeam ) const
+{
+	return m_abIsTeamBorderCache[eTeam];
+}
+
+void CvPlot::setIsActivePlayerNoDangerCache( bool bNewValue )
+{
+	PROFILE_FUNC();
+	m_bIsActivePlayerNoDangerCache = bNewValue;
+}
+
+void CvPlot::setIsTeamBorderCache( TeamTypes eTeam, bool bNewValue )
+{
+	PROFILE_FUNC();
+	m_abIsTeamBorderCache[eTeam] = bNewValue;
+}
+void CvPlot::invalidateIsTeamBorderCache()
+{
+	PROFILE_FUNC();
+
+	for( int iI = 0; iI < MAX_TEAMS; iI++ )
+	{
+		m_abIsTeamBorderCache[iI] = false;
+	}
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 
 PlayerTypes CvPlot::calculateCulturalOwner() const
 {
@@ -2995,9 +3457,9 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 				//	GC.getGameINLINE().logMsg("  Map is NULL ");
 				//GC.getGameINLINE().logMsg("  afterCheck ");
 				//if ( getSettlersMaps(iI,EARTH_Y - 1 - getY_INLINE(),getX_INLINE()) >= 500)
-				if ( getSettlersMaps(iI,EARTH_Y - 1 - getY_INLINE(),getX_INLINE(),"calculateCulturalOwner") >= 500)
-					if (!isCity())
-						iCulture *= 4;
+				//if ( getSettlersMaps(iI,EARTH_Y - 1 - getY_INLINE(),getX_INLINE(),"calculateCulturalOwner") >= 500)
+				//	if (!isCity())
+				//		iCulture *= 4;
 					//else
 					//	iCulture *= 2;
 				//Rhye - end
@@ -3904,8 +4366,18 @@ CvArea* CvPlot::area() const
 	return m_pPlotArea;
 }
 
-
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						01/02/09		jdog5000		*/
+/* 																			*/
+/* 	General AI																*/
+/********************************************************************************/
+/* original BTS code
 CvArea* CvPlot::waterArea() const
+*/
+CvArea* CvPlot::waterArea(bool bNoImpassable) const
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						END								*/\
+/********************************************************************************/
 {
 	CvArea* pBestArea;
 	CvPlot* pAdjacentPlot;
@@ -3927,7 +4399,18 @@ CvArea* CvPlot::waterArea() const
 
 		if (pAdjacentPlot != NULL)
 		{
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						01/02/09		jdog5000		*/
+/* 																			*/
+/* 	General AI																*/
+/********************************************************************************/
+/* original BTS code
 			if (pAdjacentPlot->isWater())
+*/
+			if (pAdjacentPlot->isWater() && (!bNoImpassable || !(pAdjacentPlot->isImpassable())))
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
 			{
 				iValue = pAdjacentPlot->area()->getNumTiles();
 
@@ -4880,6 +5363,30 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		}
 		// Sanguo Mod Performance, end
 
+// 3Miro: Are we keeping two polot danger cache values?
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+		// Plot danger cache
+		CvPlot* pLoopPlot;
+		for (int iDX = -(DANGER_RANGE); iDX <= DANGER_RANGE; iDX++)
+		{
+			for (int iDY = -(DANGER_RANGE); iDY <= (DANGER_RANGE); iDY++)
+			{
+				pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+
+				if (pLoopPlot != NULL)
+				{
+					pLoopPlot->invalidateIsTeamBorderCache();
+				}
+			}
+		}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 		updateSymbols();
 	}
 }
@@ -5216,6 +5723,7 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 FeatureTypes CvPlot::getFeatureType() const
 {
+	//GC.getGameINLINE().logMsg("CvPlot getFeatureType HERE 1 " ); // 3Miro: don't do this, creates a log in size a few GB
 	return (FeatureTypes)m_eFeatureType;
 }
 
@@ -6022,7 +6530,126 @@ int CvPlot::calculateTotalBestNatureYield(TeamTypes eTeam) const
 	return (calculateBestNatureYield(YIELD_FOOD, eTeam) + calculateBestNatureYield(YIELD_PRODUCTION, eTeam) + calculateBestNatureYield(YIELD_COMMERCE, eTeam));
 }
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      10/06/09                                jdog5000      */
+/*                                                                                              */
+/* City AI                                                                                      */
+/************************************************************************************************/
+int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal, bool bBestRoute) const
+{
+	PROFILE_FUNC();
 
+	BonusTypes eBonus;
+	int iBestYield;
+	int iYield;
+	int iI;
+
+	iYield = GC.getImprovementInfo(eImprovement).getYieldChange(eYield);
+
+	if (isRiverSide())
+	{
+		iYield += GC.getImprovementInfo(eImprovement).getRiverSideYieldChange(eYield);
+	}
+
+	if (isHills())
+	{
+		iYield += GC.getImprovementInfo(eImprovement).getHillsYieldChange(eYield);
+	}
+
+	if ((bOptimal) ? true : isIrrigationAvailable())
+	{
+		iYield += GC.getImprovementInfo(eImprovement).getIrrigatedYieldChange(eYield);
+	}
+
+	if (bOptimal)
+	{
+		iBestYield = 0;
+
+		for (iI = 0; iI < GC.getNumRouteInfos(); ++iI)
+		{
+			iBestYield = std::max(iBestYield, GC.getImprovementInfo(eImprovement).getRouteYieldChanges(iI, eYield));
+		}
+
+		iYield += iBestYield;
+	}
+	else
+	{
+		RouteTypes eRoute = getRouteType();
+
+		if( bBestRoute && ePlayer != NO_PLAYER )
+		{
+			eRoute = GET_PLAYER(ePlayer).getBestRoute(GC.getMapINLINE().plotSorenINLINE(getX_INLINE(), getY_INLINE()));
+		}
+
+		if (eRoute != NO_ROUTE)
+		{
+			iYield += GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, eYield);
+		}
+	}
+
+	if (bOptimal || ePlayer == NO_PLAYER)
+	{
+		for (iI = 0; iI < GC.getNumTechInfos(); ++iI)
+		{
+			iYield += GC.getImprovementInfo(eImprovement).getTechYieldChanges(iI, eYield);
+		}
+
+		for (iI = 0; iI < GC.getNumCivicInfos(); ++iI)
+		{
+			iYield += GC.getCivicInfo((CivicTypes) iI).getImprovementYieldChanges(eImprovement, eYield);
+		}
+	}
+	else
+	{
+		iYield += GET_PLAYER(ePlayer).getImprovementYieldChange(eImprovement, eYield);
+		iYield += GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getImprovementYieldChange(eImprovement, eYield);
+	}
+
+	if (ePlayer != NO_PLAYER)
+	{
+		eBonus = getBonusType(GET_PLAYER(ePlayer).getTeam());
+
+		if (eBonus != NO_BONUS)
+		{
+			iYield += GC.getImprovementInfo(eImprovement).getImprovementBonusYield(eBonus, eYield);
+		}
+	}
+	// 3MiroUP: UP_IMPROVEMENT_BONUS
+	if ( ePlayer != NO_PLAYER ){
+		int iUPW = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS];
+		if ( eImprovement == iUPW / 1000000 ){
+			if ( eYield == YIELD_COMMERCE ){
+				iYield += iUPW % 100;
+			}else if ( eYield == YIELD_PRODUCTION ){
+				iYield += (iUPW / 100) % 100;
+			}else if ( eYield == YIELD_FOOD ){
+				iYield += (iUPW / 10000) % 100;
+			};
+		};
+	};
+
+/*************************************************************************************************/
+/* UNOFFICIAL_PATCH                       06/02/10                     Afforess & jdog5000       */
+/*                                                                                               */
+/* Bugfix                                                                                        */
+/*************************************************************************************************/
+/* original bts code
+	return iYield;
+*/
+	// Improvement cannot actually produce negative yield
+	int iCurrYield = calculateNatureYield(eYield, (ePlayer == NO_PLAYER) ? NO_TEAM : GET_PLAYER(ePlayer).getTeam(), bOptimal);
+
+	return std::max( -iCurrYield, iYield );
+/*************************************************************************************************/
+/* UNOFFICIAL_PATCH                         END                                                  */
+/*************************************************************************************************/
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+// 3Miro: Original
+/*
 int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal) const
 {
 	PROFILE_FUNC();
@@ -6097,9 +6724,9 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	}
 
 	// 3MiroUP: workshops
-	/*if ( (ePlayer != NO_PLAYER) && (UniquePowers[(int)ePlayer][UP_WORKSHOPS] == 1) && ( eImprovement == IMPROVEMENT_WORKSHOP ) && ( eYield == YIELD_PRODUCTION ) ){
-		iYield++;
-	};*/
+	//if ( (ePlayer != NO_PLAYER) && (UniquePowers[(int)ePlayer][UP_WORKSHOPS] == 1) && ( eImprovement == IMPROVEMENT_WORKSHOP ) && ( eYield == YIELD_PRODUCTION ) ){
+	//	iYield++;
+	//}
 	if ( ePlayer != NO_PLAYER ){
 		int iUPW = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS];
 		if ( eImprovement == iUPW / 1000000 ){
@@ -6112,10 +6739,8 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 			};
 		};
 	};
-
-
 	return iYield;
-}
+}*/
 
 
 int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
@@ -6478,6 +7103,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 	if (getCulture(eIndex) != iNewValue)
 	{
 		//GC.getGameINLINE().logMsg("  plot  3");
+		//GC.getGameINLINE().logMsg("  Change for %d %d iNewValue: %d ",getX_INLINE(),getY_INLINE(),iNewValue);
 		if(NULL == m_aiCulture)
 		{
 			//GC.getGameINLINE().logMsg("  plot  4");
@@ -6489,17 +7115,92 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 			//GC.getGameINLINE().logMsg("  plot  5");
 		}
 
+		// 3MiroProvinces: Culture modifiers and immunity
+		int iChange = iNewValue - getCulture(eIndex);
+		//GC.getGameINLINE().logMsg("  Change for %d %d chage: %d ",getX_INLINE(),getY_INLINE(),iChange);
+		if ( iChange > 2 ){
+			int iProvince = provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];
+			//GC.getGameINLINE().logMsg("  Change for %d %d Province: %d ",getX_INLINE(),getY_INLINE(),iProvince);
+			if ( (iProvince > -1) && (iProvince < MAX_NUM_PROVINCES) ){
+				//if ( iCultureImmune[iProvince] > 0 ){
+				//	if ( eIndex != iCultureImmuneException[iProvince] ){
+				//		iNewValue = getCulture(eIndex); // keep current culture intact
+				//	};
+				//};
+				if ( (eIndex >-1) && (eIndex<NUM_ALL_PLAYERS_B) ){
+					int iProvinceType = GET_PLAYER(eIndex).getProvinceType( iProvince );
+					//GC.getGameINLINE().logMsg("  Change for %d %d ProvinceType: %d ",getX_INLINE(),getY_INLINE(),iProvinceType);
+					//if ( iNewValue != 0 ){
+					if ( (iProvinceType > -1)&& (iProvinceType<iNumProvinceTypes) ){
+						iChange = ( iChange * iModCultureTop[iProvinceType] ) / iModCultureBottom[iProvinceType];
+						iNewValue = getCulture(eIndex) + iChange;
+					};
+				};
+			};
+		};
+		//GC.getGameINLINE().logMsg("  Change for %d %d after iNewValue: %d ",getX_INLINE(),getY_INLINE(),iNewValue);
+
+		
+
 		// 3MiroPAPAL: pope's culture is restricted close to ROME
 		if ( eIndex == PAPAL_PLAYER ){
-			CvCity *pCity = GET_PLAYER(eIndex).getCapitalCity();
-			if ( (pCity != NULL) && ((abs( getX() - pCity ->getX() ) > 2) || ( abs( getY() - pCity ->getY() ) > 2 ) || (abs( getX() - pCity ->getX() ) + abs( getY() - pCity ->getY() ) > 3) ) ){
+			//GC.getGameINLINE().logMsg("   In Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+			CvCity *pPopeCity = GET_PLAYER(eIndex).getCapitalCity();
+			//if ( pPopeCity == NULL ){
+			//	GC.getGameINLINE().logMsg("   In Papal - NULL City %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+			//}else{
+			//	GC.getGameINLINE().logMsg("   In Papal - Plot - City %d %d %d %d  ",getX_INLINE(),getY_INLINE(),pPopeCity ->getX(),pPopeCity ->getY()); //Rhye and 3Miro
+			//};
+			if ( (pPopeCity != NULL) && ((abs( getX_INLINE() - pPopeCity ->getX() ) > 2) || ( abs( getY_INLINE() - pPopeCity ->getY() ) > 2 ) || (abs( getX() - pPopeCity ->getX() ) + abs( getY() - pPopeCity ->getY() ) > 3) ) ){
+				//GC.getGameINLINE().logMsg("   In Papal - Null culture %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+				//GC.getGameINLINE().logMsg("   In Papal - Null results %d %d %d ",abs( getX_INLINE() - pPopeCity ->getX() ),abs( getX_INLINE() - pPopeCity ->getY() ),abs( getX() - pPopeCity ->getX() ) + abs( getY() - pPopeCity ->getY() )); //Rhye and 3Miro
 				m_aiCulture[eIndex] = 0;
 			}else{
+				//GC.getGameINLINE().logMsg("   In Papal - Add culture %d %d ",abs( getX_INLINE() - pPopeCity ->getX() ),getY_INLINE()); //Rhye and 3Miro
 				m_aiCulture[eIndex] = iNewValue;
 			};
 		}else{
+			//GC.getGameINLINE().logMsg("   Not in Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
+			// 3Miro: Nasty bug expelling units from territory on flip, 
+			//			now if a plot is in somone's core, nobody gets culture there for 3 turns after spawn
+			/*if ( withinSpawnDate ){
+				if ( (eIndex >= NUM_MAJOR_PLAYERS) || ( !MiroBelongToCore(eIndex,getX_INLINE(),getX_INLINE()) ) ){
+					int iI;
+					bool inBirthAndCore = false;
+					for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
+						if ( (startingTurn[iI]>=GC.getGameINLINE().getGameTurn()) && (startingTurn[iI]<=GC.getGameINLINE().getGameTurn()+3) && (getSettlersMaps( iI, getX_INLINE(), getX_INLINE(), NULL ) > 600) ){
+							inBirthAndCore = true;
+							break;
+						}
+					};
+					if ( inBirthAndCore ){
+						m_aiCulture[eIndex] = 0;
+						
+					}else{
+						m_aiCulture[eIndex] = iNewValue;
+					};
+				}else{
+					m_aiCulture[eIndex] = iNewValue;
+				};
+			}else{
+				m_aiCulture[eIndex] = iNewValue;
+			};*/
+			//m_aiCulture[eIndex] = iNewValue;
+			if ( withinSpawnDate && iNewValue > getCulture(eIndex) ){
+				if ( (eIndex >= NUM_MAJOR_PLAYERS) || ( !MiroBelongToCore(eIndex,getX_INLINE(),getX_INLINE()) ) ){
+					int iI;
+					bool inBirthAndCore = false;
+					int iGameTurn = GC.getGameINLINE().getGameTurn();
+					for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
+						if ( (iGameTurn >= startingTurn[iI]-1) && (iGameTurn < startingTurn[iI]+2) && (MiroBelongToCore(iI,getX_INLINE(),getX_INLINE()) ) ){
+							return;
+						}
+					};
+				};
+			};
 			m_aiCulture[eIndex] = iNewValue;
 		};
+		// 3MiroPAPAL: end of section
 		//m_aiCulture[eIndex] = iNewValue;
 		
 		//GC.getGameINLINE().logMsg("  plot  6");
@@ -7068,8 +7769,24 @@ void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 		}
 
 		m_aiBlockadedCount[eTeam] += iChange;
-		FAssert(getBlockadedCount(eTeam) >= 0);
-		FAssert(getBlockadedCount(eTeam) == 0 || isWater())
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      06/01/09                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+		//FAssert(getBlockadedCount(eTeam) >= 0);
+		FAssert(getBlockadedCount(eTeam) == 0 || isWater());
+
+		// Hack so that never get negative blockade counts as a result of fixing issue causing
+		// rare permanent blockades.
+		if( getBlockadedCount(eTeam) < 0 )
+		{
+			m_aiBlockadedCount[eTeam] = 0;
+		}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 		CvCity* pWorkingCity = getWorkingCity();
 		if (NULL != pWorkingCity)
@@ -7442,8 +8159,10 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 
 		if (isRevealed(eTeam, false))
 		{
+			// 3Miro: SPEEDTWEAK: maybe we are not calling this one ever
 			// ONEVENT - PlotRevealed
-			CvEventReporter::getInstance().plotRevealed(this, eTeam);
+			//CvEventReporter::getInstance().plotRevealed(this, eTeam);
+			// 3Miro: end
 		}
 	}
 
@@ -8829,6 +9548,18 @@ void CvPlot::read(FDataStreamBase* pStream)
 	pStream->Read(&m_workingCityOverride.iID);
 
 	pStream->Read(NUM_YIELD_TYPES, m_aiYield);
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+	// Plot danger cache
+	m_bIsActivePlayerNoDangerCache = false;
+	invalidateIsTeamBorderCache();
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	SAFE_DELETE_ARRAY(m_aiCulture);
 	pStream->Read(&cCount);
@@ -10246,3 +10977,52 @@ void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange)
 	m_apaiPlayerDangerCache[ePlayer][iRange] = MAX_SHORT;
 }
 // Sanguo Mod Performance, end
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Lead From Behind                                                                             */
+/************************************************************************************************/
+// From Lead From Behind by UncutDragon
+bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
+{
+	CLLNode<IDInfo>* pUnitNode;
+	CvUnit* pLoopUnit;
+
+	pUnitNode = headUnitNode();
+	while (pUnitNode != NULL)
+	{
+		pLoopUnit = ::getUnit(pUnitNode->m_data);
+		pUnitNode = nextUnitNode(pUnitNode);
+
+		if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwnerINLINE() == eOwner))
+		{
+			if ((eAttackingPlayer == NO_PLAYER) || !(pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false)))
+			{
+				if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this)))
+				{
+					if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) ||  pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwnerINLINE()).getTeam(), this)))
+					{
+						if (!bTestCanMove || (pLoopUnit->canMove() && !(pLoopUnit->isCargo())))
+						{
+							if ((pAttacker == NULL) || (pAttacker->getDomainType() != DOMAIN_AIR) || (pLoopUnit->getDamage() < pAttacker->airCombatLimit()))
+							{
+								if (!bCheckCanAttack || (pAttacker == NULL) || (pAttacker->canAttack(*pLoopUnit)))
+								{
+									// found a valid defender
+									return true;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// there are no defenders
+	return false;
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/

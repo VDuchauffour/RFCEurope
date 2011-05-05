@@ -14,6 +14,31 @@
 #define MOVE_DIRECT_ATTACK										(0x00000010)
 #define MOVE_THROUGH_ENEMY										(0x00000020)
 #define MOVE_MAX_MOVES											(0x00000040)
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      01/01/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* General AI                                                                                   */
+
+/************************************************************************************************/
+
+// These two flags signal to weight the cost of moving through or adjacent to enemy territory higher
+
+// Used to reduce exposure to attack for approaching enemy cities
+
+#define MOVE_AVOID_ENEMY_WEIGHT_2								(0x00000080)
+
+#define MOVE_AVOID_ENEMY_WEIGHT_3								(0x00000100)
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
+
 
 #define RANDPLOT_LAND													(0x00000001)
 #define RANDPLOT_UNOWNED											(0x00000002)
@@ -24,7 +49,7 @@
 #define RANDPLOT_NOT_CITY											(0x00000040)
 
 #ifdef _USRDLL
-#define MAX_CIV_PLAYERS												(26) //Rhye
+#define MAX_CIV_PLAYERS												(27) //Rhye // 3Miro 27 counts Lithuania
 #else
 #define MAX_CIV_PLAYERS												(CvGlobals::getInstance().getMaxCivPlayers())
 #endif

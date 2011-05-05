@@ -2163,6 +2163,34 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	bAlt = gDLL->altKey();
 	bCtrl = gDLL->ctrlKey();
 	
+	// 3MiroProvince: ToColor
+	if ( bCtrl && (pPlot != NULL) ){
+		provinceToColor = provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ];
+		if ( (provinceToColor < 0) || (provinceToColor>MAX_NUM_PROVINCES) ){
+			provinceToColor = 0;
+		};
+		GC.getGameINLINE().updateColoredPlots();
+	};
+	if ( (!bCtrl) && (provinceToColor > -1) && (provinceToColor<MAX_NUM_PROVINCES) ){
+		provinceToColor = -1;
+		GC.getGameINLINE().updateColoredPlots();
+	};
+	// set Plot Province text
+	//szBuffer.append( gDLL->getText("TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1", kProject.getFreeBonus( (BonusTypes) iI ) ) );
+	//szBuffer.append( gDLL->getText("TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide() ));
+	int iProvince = provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ];
+	if ( (iProvince >-1) && (iProvince<MAX_NUM_PROVINCES) ){
+		szString.append( gDLL->getText("TXT_KEY_PROVINCE_TILE_HELP") );
+		szTempBuffer.Format(L"TXT_KEY_PROVINCE_NAME_%d",iProvince);
+		szString.append( gDLL->getText(szTempBuffer.GetCString() ) );
+		szString.append( NEWLINE );
+		szString.append( gDLL->getText("TXT_KEY_PROVINCE_STABILITY_HELP") );
+		szTempBuffer.Format(L"TXT_KEY_PROVINCE_TYPE_%d", GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getProvinceType(iProvince));
+		szString.append( gDLL->getText(szTempBuffer.GetCString() ) );
+		szString.append( NEWLINE );
+	};
+	// 3MiroProvince: end
+
 	if (bCtrl && (gDLL->getChtLvl() > 0))
 	{
 		if (bShift && pPlot->headUnitNode() != NULL)
@@ -2817,6 +2845,13 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	}
 	else
 	{
+		// 3MiroProvince: ToColor
+		//provinceToColor = provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ];
+		//if ( (provinceToColor < 0) || (provinceToColor>MAX_NUM_PROVINCES) ){
+		//	provinceToColor = 0;
+		//};
+		// 3MiroProvince: end
+
 		eRevealOwner = pPlot->getRevealedOwner(GC.getGameINLINE().getActiveTeam(), true);
 
 		if (eRevealOwner != NO_PLAYER)
@@ -4952,6 +4987,39 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_ECONOMY_BONUS"));
 	}
+
+	// 3MiroCivic: Allow Non-State Religion Buildings
+	if (GC.getCivicInfo(eCivic).isAllowNonStateReligionBuildings() )
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS"));
+	};
+	// 3MiroCivic: Civic - Building Combo
+	if ( GC.getCivicInfo(eCivic).getBuildingCivicComboGold() != 0 ){
+			if (bPlayerContext && NO_PLAYER != GC.getGameINLINE().getActivePlayer())
+			{
+				BuildingTypes eBuilding = (BuildingTypes)GC.getCivilizationInfo(GC.getGameINLINE().getActiveCivilizationType()).getCivilizationBuildings( GC.getCivicInfo(eCivic).getBuildingCivicComboBuilding() );
+				if (NO_BUILDING != eBuilding)
+				{
+					szHelpText.append(NEWLINE);
+					szHelpText.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1", GC.getCivicInfo(eCivic).getBuildingCivicComboGold() ) );
+					szHelpText.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO2", GC.getBuildingInfo( eBuilding ).getTextKeyWide() ) );
+				}
+			}
+			else
+			{
+				szHelpText.append(NEWLINE);
+				szHelpText.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1", GC.getCivicInfo(eCivic).getBuildingCivicComboGold() ) );
+				szHelpText.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO2", GC.getBuildingClassInfo((BuildingClassTypes) GC.getCivicInfo(eCivic).getBuildingCivicComboBuilding() ).getTextKeyWide() ) );
+			}
+	};
+	// 3MiroCivic: Unit production boost
+	if ( GC.getCivicInfo(eCivic).getUnitProductionBoost() != 0 ){
+		//
+		szHelpText.append(NEWLINE);
+		szHelpText.append( gDLL->getText("TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER", GC.getCivicInfo(eCivic).getUnitProductionBoost() ) );
+	};
+
 	//Rhye - end 6th
 
 	//	Yield Modifiers
@@ -5076,7 +5144,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	}
 
 	//Rhye - start stability
-	if (eCivic == 4) //univ. suff
+	// 3Miro: we don't need this
+	/*if (eCivic == 4) //univ. suff
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_DEMOCRACY"));
@@ -5090,7 +5159,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_POST_COMMUNISM"));
-	}
+	}*/
 	//Rhye - end stability
 
 	if (!CvWString(GC.getCivicInfo(eCivic).getHelp()).empty())
@@ -7597,6 +7666,19 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_SPREAD_IRRIGATION"));
 	};
+	// 3MiroCivic: Building - Civic combo
+			int iCivic;
+			int iBuildingClass = kBuilding.getBuildingClassType();
+			for( iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
+				CvCivicInfo &pCivicInfo = GC.getCivicInfo( (CivicTypes) iCivic );
+				if ( (pCivicInfo.getBuildingCivicComboGold() != 0) && (pCivicInfo.getBuildingCivicComboBuilding() == iBuildingClass) ){
+					//
+					szBuffer.append(NEWLINE);
+					szBuffer.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1", pCivicInfo.getBuildingCivicComboGold() ) );
+					szBuffer.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO2", pCivicInfo.getTextKeyWide() ) );
+				};
+			};
+	// 3MiroBuildings: end
 
 	bFirst = true;
 
@@ -11576,7 +11658,19 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				}
 			}
 		}
+		// 3MiroCivic: Unit Production boost from civic 
+		if (NO_PLAYER != city.getOwnerINLINE() ){
+			int iCivicMod = GET_PLAYER(city.getOwnerINLINE()).getCivicUnitProductionModifier();
+			if ( iCivicMod != 0 ){
+				szBuffer.append(gDLL->getText("TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP", iCivicMod ));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iCivicMod;
+			};
+		};
 	}
+
+	
+
 
 	BuildingTypes eBuilding = city.getProductionBuilding();
 	if (NO_BUILDING != eBuilding)

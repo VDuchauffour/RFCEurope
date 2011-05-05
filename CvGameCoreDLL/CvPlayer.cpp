@@ -95,6 +95,19 @@ CvPlayer::CvPlayer()
 	CvWString m_szCivAdj;
 	m_iAllowBrothersAtWar = 0; // 3MiroBuildings init brotherly war
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
+	m_aiUHV[0] = -1; m_aiUHV[1] = -1; m_aiUHV[2] = -1; 
+	m_aiUHVcounter[0] = 0; m_aiUHVcounter[1] = 0; m_aiUHVcounter[2] = 0;
+	m_aiUHV2of3 = false;
+	for( int i=0; i<MAX_NUM_PROVINCES; i++ ){
+		m_aiProvinceType[i] = 0;
+	};
+	m_aiStabilityBase[0] = 0; m_aiStabilityBase[1] = 0; m_aiStabilityBase[2] = 0; m_aiStabilityBase[3] = 0;
+	m_aiStabilityVary[0] = 0; m_aiStabilityVary[1] = 0; m_aiStabilityVary[2] = 0; m_aiStabilityVary[3] = 0;
+	m_iStabilitySwing = 0;
+	bIsAtWar = 0;
+	for( int i=0; i<10; i++ ){
+		m_aiPickleFree[i] = 0;
+	};
 	//Rhye (jdog) - end -----------------------
 
 	reset(NO_PLAYER, true);
@@ -302,8 +315,8 @@ void CvPlayer::init(PlayerTypes eID)
 	AI_init();
 
 	//Rhye - start (dynamic civ names - not jdog's)
-	if (getID() < NUM_MAJOR_PLAYERS)
-		setCivDescription(civDynamicNames[getID()][0]);
+	//if (getID() < NUM_MAJOR_PLAYERS)
+	//	setCivDescription(civDynamicNames[getID()][0]);
 	// 3Miro
 	//if (getID() == EGYPT) //Egyptian UP
 	//	setCivDescription(civDynamicNames[getID()][1]); //Egypt
@@ -766,6 +779,20 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
 	m_iFaith = 0; // 3MiroFaith
 	m_iProsecutionCount = 0;
+	m_aiUHV[0] = -1; m_aiUHV[1] = -1; m_aiUHV[2] = -1;
+	m_aiUHVcounter[0] = 0; m_aiUHVcounter[1] = 0; m_aiUHVcounter[2] = 0;
+	m_aiUHV2of3 = false;
+	m_iCivicUnitProductionModifier = 0;
+	for( iI=0; iI < MAX_NUM_PROVINCES; iI++ ){
+		m_aiProvinceType[iI] = 0;
+	};
+	m_aiStabilityBase[0] = 0; m_aiStabilityBase[1] = 0; m_aiStabilityBase[2] = 0; m_aiStabilityBase[3] = 0;
+	m_aiStabilityVary[0] = 0; m_aiStabilityVary[1] = 0; m_aiStabilityVary[2] = 0; m_aiStabilityVary[3] = 0;
+	m_iStabilitySwing = 0;
+	bIsAtWar = 0;
+	for( iI=0; iI<10; iI++ ){
+		m_aiPickleFree[iI] = 0;
+	};
 
 	if (!bConstructorCall)
 	{
@@ -1401,8 +1428,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 									}
 								}
 
+								//GC.getGameINLINE().logMsg(" Loop Plot %d %d ",pLoopPlot->getX(),pLoopPlot->getY() );
 								if (bForceUnowned)
 								{
+									//GC.getGameINLINE().logMsg(" Loop Plot Unowned %d %d ",pLoopPlot->getX(),pLoopPlot->getY() );
 									pLoopPlot->setForceUnownedTimer(GC.getDefineINT("FORCE_UNOWNED_CITY_TIMER"));
 								}
 							}
@@ -1601,6 +1630,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	}
 
 	pNewCity = initCity(pCityPlot->getX_INLINE(), pCityPlot->getY_INLINE(), !bConquest, false);
+	//GC.getGameINLINE().logMsg(" CvPlayer acquire pCityPlot owner() %d ",pCityPlot->getOwnerINLINE() )
 
 	FAssertMsg(pNewCity != NULL, "NewCity is not assigned a valid value");
 
@@ -1738,15 +1768,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 		{
-			//Rhye - start UP (Babylonian)
-			//pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100);
-			// 3Miro
-			//if (getID() != BABYLONIA)			
-			//pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100);
-			//else
-			//	pNewCity->changeOccupationTimer(0);
-			//Rhye - end UP 
-			// 3Miro:UP
+			// 3MiroUP
 			int iUPR = UniquePowers[getID() * UP_TOTAL_NUM + UP_NO_RESISTANCE];
 			if (  iUPR < 0 )
 				pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100);
@@ -1862,6 +1884,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			triggerData.m_iOtherPlayerCityId = -1;
 		}
 	}
+
+	// 3MiroBugfix: removing units again
+	//pCityPlot->verifyUnitValidPlot();
+	// 3MiroBugfix: end
 
 	processCivNames(); //Rhye - dynamic civ names - not jdog's
 	GET_PLAYER(eOldOwner).processCivNames(); //Rhye - dynamic civ names - not jdog's
@@ -2653,7 +2679,7 @@ const TCHAR* CvPlayer::getUnitButton(UnitTypes eUnit) const
 void CvPlayer::doTurn()
 {
 	PROFILE_FUNC();
-	//GC.getGameINLINE().logMsg("player doTurn", getID()); //Rhye and 3Miro
+	//GC.getGameINLINE().logMsg("player doTurn %d", getID()); //Rhye and 3Miro
 
 	//Rhye - start
 	if (turnPlayed[getID()] == 1){
@@ -2769,7 +2795,7 @@ void CvPlayer::doTurn()
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGameINLINE().getGameTurn(),  getID());
 
 	turnPlayed[getID()] = 1; //Rhye
-	//GC.getGameINLINE().logMsg("player doTurn out ", getID()); //Rhye and 3Miro
+	//GC.getGameINLINE().logMsg("player doTurn out %d", getID()); //Rhye and 3Miro
 }
 
 
@@ -2780,37 +2806,46 @@ void CvPlayer::doTurnUnits()
 	CvSelectionGroup* pLoopSelectionGroup;
 	int iLoop;
 
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE 1 %d", getID()); // 3Miro
 	AI_doTurnUnitsPre();
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE 2 %d", getID()); // 3Miro
 
 	for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup != NULL; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 	{
+		//GC.getGameINLINE().logMsg("player doTurnUnits HERE 3 %d", getID()); // 3Miro
 		pLoopSelectionGroup->doDelayedDeath();
 	}
 
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE 4 %d", getID()); // 3Miro
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
 		for(pLoopSelectionGroup = firstSelectionGroup(&iLoop); pLoopSelectionGroup != NULL; pLoopSelectionGroup = nextSelectionGroup(&iLoop))
 		{
+			//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5 %d", getID()); // 3Miro
 			switch (pLoopSelectionGroup->getDomainType())
 			{
 			case DOMAIN_AIR:
+				//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5.1 %d", getID()); // 3Miro
 				if (iPass == 1)
 				{
 					pLoopSelectionGroup->doTurn();
 				}
 				break;
 			case DOMAIN_SEA:
+				//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5.2 %d", getID()); // 3Miro
 				if (iPass == 2)
 				{
 					pLoopSelectionGroup->doTurn();
 				}
 				break;
 			case DOMAIN_LAND:
+				//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5.3 %d", getID()); // 3Miro
 				if (iPass == 3)
 				{
 					pLoopSelectionGroup->doTurn();
 				}
 				break;
+				//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5.4 %d", getID()); // 3Miro
 			case DOMAIN_IMMOBILE:
 				if (iPass == 0)
 				{
@@ -2818,17 +2853,21 @@ void CvPlayer::doTurnUnits()
 				}
 				break;
 			case NO_DOMAIN:
+				//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5.5 %d", getID()); // 3Miro
 				FAssertMsg(NULL == pLoopSelectionGroup->getHeadUnit(), "Unit with no Domain");
 			default:
+				//GC.getGameINLINE().logMsg("player doTurnUnits HERE 5.6 %d", getID()); // 3Miro
 				if (iPass == 3)
 				{
 					pLoopSelectionGroup->doTurn();
 				}
 				break;
 			}
+			//GC.getGameINLINE().logMsg("player doTurnUnits HERE 6 %d", getID()); // 3Miro
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE 7 %d", getID()); // 3Miro
 	if (getID() == GC.getGameINLINE().getActivePlayer())
 	{
 		gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
@@ -2836,10 +2875,13 @@ void CvPlayer::doTurnUnits()
 		gDLL->getInterfaceIFace()->setDirty(Waypoints_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 	}
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE 8 %d", getID()); // 3Miro
 
 	gDLL->getInterfaceIFace()->setDirty(UnitInfo_DIRTY_BIT, true);
 
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE 9 %d", getID()); // 3Miro
 	AI_doTurnUnitsPost();
+	//GC.getGameINLINE().logMsg("player doTurnUnits HERE out %d", getID()); // 3Miro
 }
 
 
@@ -3216,6 +3258,8 @@ bool CvPlayer::hasBusyUnit() const
 		        pLoopSelectionGroup->kill();
 		        return false;
 		    }
+
+			//GC.getGameINLINE().logMsg(" hasBusyUnit group at: %d %d   NumUnits: %d ",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits() );
 
 			return true;
 		}
@@ -4027,7 +4071,10 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 
 								if (GET_PLAYER(eWhoTo).canResearch(((TechTypes)item.m_iData), true))
 								{
-									return true;
+									// 3MiroTimeline: Cannot trade for 20 turns after a tech discovery
+									if ( canTradeTech( item.m_iData ) ){
+										return true;
+									};
 								}
 							}
 						}
@@ -4333,6 +4380,10 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 	case TRADE_VASSAL:
 		// 3MiroPAPAL: Vassals
 		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) ){
+			return DENIAL_ATTITUDE;
+		};
+		// 3MiroVassal: set conditional vassalage
+		if ( !(canVassalize( eWhoTo )) ){
 			return DENIAL_ATTITUDE;
 		};
 		// 3Miro: no vassals for 20 turns
@@ -5576,7 +5627,17 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 	{
 		if (getStateReligion() != GC.getBuildingInfo(eBuilding).getStateReligion())
 		{
-			return false;
+			// 3MiroCivic: check if the civic allows nonStateReligionBuildings
+			bool bAllowNSRB = false;
+			for( iI = 0; iI < GC.getNumCivicInfos(); iI++ ){
+				if ( isCivic((CivicTypes)iI) && GC.getCivicInfo((CivicTypes)iI).isAllowNonStateReligionBuildings() ){
+					bAllowNSRB = true;
+					break;
+				};
+			};
+			if ( !bAllowNSRB ){
+				return false;
+			};
 		}
 	}
 
@@ -5941,25 +6002,30 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	iProductionNeeded += getUnitExtraCost(eUnitClass);
 
+	// 3Miro: SPEEDTWEAK: more Python, this probably doesn't get called anyways
 	// Python cost modifier
-	if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
-	{
-		CyArgsList argsList;
-		argsList.add(getID());	// Player ID
-		argsList.add((int)eUnit);
-		long lResult=0;
-		gDLL->getPythonIFace()->callFunction(PYGameModule, "getUnitCostMod", argsList.makeFunctionArgs(), &lResult);
+	//if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
+	//{
+	//	CyArgsList argsList;
+	//	argsList.add(getID());	// Player ID
+	//	argsList.add((int)eUnit);
+	//	long lResult=0;
+	//	gDLL->getPythonIFace()->callFunction(PYGameModule, "getUnitCostMod", argsList.makeFunctionArgs(), &lResult);
 
-		if (lResult > 1)
-		{
-			iProductionNeeded *= lResult;
-			iProductionNeeded /= 100;
-		}
-	}
+	//	if (lResult > 1)
+	//	{
+	//		iProductionNeeded *= lResult;
+	//		iProductionNeeded /= 100;
+	//	}
+	//}
+	// 3Miro: SPEEDTWEAK: end
 
 	//Rhye - start switch
 	//3Miro: balance
-	iProductionNeeded *= productionModifierUnits[getID()];
+	//if ( getID() == 0 ){
+	//GC.getGameINLINE().logMsg(" Modifiers for player 0: %d  %d  %d ",getID(),productionModifierUnitsHu[getID()],productionModifierUnitsAI[getID()]);
+	//};
+	iProductionNeeded *= (isHuman()) ?  productionModifierUnitsHu[getID()] : productionModifierUnitsAI[getID()];
 	iProductionNeeded /= 100;
 
 	// 3MiroUP: Industry
@@ -6091,7 +6157,7 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 	if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()))) 
 	{
 		// 3Miro: Build Wonder Modifiers
-		iProductionNeeded *= productionModifierWonders[getID()];
+		iProductionNeeded *= (isHuman()) ? productionModifierWondersHu[getID()] : productionModifierWondersAI[getID()];
 		iProductionNeeded /= 100;
 
 		// 3Miro: Faith
@@ -6108,7 +6174,7 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 	else
 	{
 		// 3Miro: Build Building modifiers
-		iProductionNeeded *= productionModifierBuildings[getID()];
+		iProductionNeeded *= (isHuman()) ? productionModifierBuildingsHu[getID()] : productionModifierBuildingsAI[getID()];
 		iProductionNeeded /= 100;
 	}
 	//Rhye - end
@@ -6790,7 +6856,7 @@ int CvPlayer::calculateInflationRate() const
 	//Rhye - start switch
 	int iRate = iRatePercent;
 	// 3Miro: modify inflation rate
-	iRate *= inflationModifier[getID()];
+	iRate *= (isHuman()) ? inflationModifierHu[getID()] : inflationModifierAI[getID()];
 	iRate /= 100;
 
 	FAssert(iRate >= 0);
@@ -6833,28 +6899,145 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 		return iModifier;
 	}
 
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      07/27/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* Tech Diffusion                                                                               */
+
+/************************************************************************************************/
 	int iKnownCount = 0;
 	int iPossibleKnownCount = 0;
 
-	for (int iI = 0; iI < MAX_CIV_TEAMS; iI++)
+	// 3Miro: I think I can disable this one
+	if( GC.getTECH_DIFFUSION_ENABLE() )
+
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+
+		double knownExp = 0.0;
+
+		// Tech flows better through open borders
+
+		for (int iI = 0; iI < MAX_CIV_TEAMS; iI++)
+
 		{
-			if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI))
+
+			if (GET_TEAM((TeamTypes)iI).isAlive())
+
 			{
+
 				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
+
 				{
-					iKnownCount++;
+
+					if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI))
+
+					{
+
+						knownExp += 0.5;
+
+
+
+						if( GET_TEAM(getTeam()).isOpenBorders((TeamTypes)iI) || GET_TEAM((TeamTypes)iI).isVassal(getTeam()) )
+
+						{
+
+							knownExp += 1.5;
+
+						}
+
+						else if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) || GET_TEAM(getTeam()).isVassal((TeamTypes)iI) )
+
+						{
+
+							knownExp += 0.5;
+
+						}
+
+					}
+
 				}
+
 			}
 
-			iPossibleKnownCount++;
 		}
+
+
+
+		int techDiffMod = GC.getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
+
+		if (knownExp > 0.0)
+
+		{
+
+			iModifier += techDiffMod - (int)(techDiffMod * pow(0.85, knownExp) + 0.5);
+
+		}
+
+
+
+		// Tech flows downhill to those who are far behind
+
+		int iTechScorePercent = GET_TEAM(getTeam()).getBestKnownTechScorePercent();
+
+		int iWelfareThreshold = GC.getTECH_DIFFUSION_WELFARE_THRESHOLD();
+
+		if( iTechScorePercent < iWelfareThreshold )
+
+		{
+
+			if( knownExp > 0.0 )
+
+			{
+
+				iModifier += (GC.getTECH_DIFFUSION_WELFARE_MODIFIER() * GC.getGameINLINE().getCurrentEra() * (iWelfareThreshold - iTechScorePercent))/200;
+
+			}
+
+		}
+
 	}
 
-	if (iPossibleKnownCount > 0)
+	else
+
 	{
-		iModifier += (GC.getDefineINT("TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER") * iKnownCount) / iPossibleKnownCount;
+
+		// Default BTS code
+
+		for (int iI = 0; iI < MAX_CIV_TEAMS; iI++)
+
+		{
+
+			if (GET_TEAM((TeamTypes)iI).isAlive())
+
+			{
+
+				if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI))
+
+				{
+
+					if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
+
+					{
+
+						iKnownCount++;
+
+					}
+
+				}
+
+
+
+				iPossibleKnownCount++;
+			}
+		}
+
+		if (iPossibleKnownCount > 0)
+		{
+			iModifier += (GC.getDefineINT("TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER") * iKnownCount) / iPossibleKnownCount;
+		}
 	}
 
 	int iPossiblePaths = 0;
@@ -6875,7 +7058,21 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 
 	FAssertMsg(iPossiblePaths >= iUnknownPaths, "The number of possible paths is expected to match or exceed the number of unknown ones");
 
-	iModifier += (iPossiblePaths - iUnknownPaths) * GC.getDefineINT("TECH_COST_KNOWN_PREREQ_MODIFIER");
+	if( iPossiblePaths > iUnknownPaths )
+	{
+		iModifier += GC.getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER();
+		iPossiblePaths--;
+		iModifier += (iPossiblePaths - iUnknownPaths) * GC.getTECH_COST_KNOWN_PREREQ_MODIFIER();
+	}
+
+	iModifier -= GC.getEraInfo((EraTypes)GC.getTechInfo(eTech).getEra()).getTechCostModifier();
+
+	iModifier -= GC.getTECH_COST_MODIFIER();
+
+	return iModifier;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	return iModifier;
 }
@@ -7149,6 +7346,7 @@ bool CvPlayer::isNoResearchAvailable() const
 
 int CvPlayer::getResearchTurnsLeft(TechTypes eTech, bool bOverflow) const
 {
+	// 3MiroTimeline: inside getResearchTurnsLeftTimes100
 	int iTurnsLeft = getResearchTurnsLeftTimes100(eTech, bOverflow);
 
 	iTurnsLeft = (iTurnsLeft + 99) / 100; // round up
@@ -7160,7 +7358,6 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 {
     int iResearchRate;
 	int iOverflow;
-	int iResearchLeft;
 	int iTurnsLeft;
 	int iI;
 
@@ -7186,8 +7383,51 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 	{
 		return MAX_INT;
 	}
+
+	// 3MiroTimeline: show the correct number of turns left for research
+	if ( !bOverflow ){ iOverflow = 0; };
 	
-	iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);
+	int iCost = GET_TEAM(getTeam()).getResearchCostUntimely(eTech);
+	//int iProgress = GET_TEAM(getTeam()).getResearchProgress(eTech);
+	iOverflow += GET_TEAM(getTeam()).getResearchProgress(eTech);
+	int iCurrentTurn = GC.getGameINLINE().getGameTurn();
+	int iAhistoric = iCurrentTurn - timelineTechDates[eTech]+1; // timeline is updated at the end of the turn, after research has complete
+	float alpha, beta, gamma, delta;
+
+	//int iBase = ( iCost - iOverflow ) / iResearchRate;
+	//if ( iCurrentTurn + iBase < timelineTechDates[eTech] ){ // use the penalty formula
+	if ( (iAhistoric < 0) && ( -iAhistoric * iResearchRate > iCost - iOverflow) ){
+		alpha = ( (float) timelineTechPenaltyTop ) / ( (float) timelineTechPenaltyBottom );
+		beta = ( ( (float) 2*timelineTechPenaltyTop*iAhistoric )/ ( (float) timelineTechPenaltyBottom ) ) - ((float) 100 * iResearchRate) / ( (float) iCost );
+		gamma = (float) 100 + ( (float) timelineTechPenaltyTop * iAhistoric * iAhistoric ) / ( (float) timelineTechPenaltyBottom) - ((float) 100 * iOverflow) / ( (float) iCost );
+		delta = beta*beta - 4 * alpha * gamma;
+		if ( delta < 0 ){
+			iTurnsLeft = (( iCost - iOverflow )*100) / iResearchRate;
+		}else{
+			iTurnsLeft =(int) ( (50/alpha) * ( - beta - sqrt( delta ) ) );
+			iTurnsLeft = std::min( iTurnsLeft, -100*timelineTechPenaltyCap );
+		};
+	}else{
+		alpha = -( (float) timelineTechBuffTop ) / ( (float) timelineTechBuffBottom );
+		beta = -( ( (float) 2*timelineTechBuffTop*iAhistoric )/ ( (float) timelineTechBuffBottom ) ) - ((float) 100 * iResearchRate) / ( (float) iCost );
+		gamma = (float) 100 - ( (float) timelineTechBuffTop * iAhistoric * iAhistoric ) / ( (float) timelineTechBuffBottom) - ((float) 100 * iOverflow) / ( (float) iCost );
+		delta = beta*beta - 4 * alpha * gamma;
+		if ( delta < 0 ){
+			iTurnsLeft = (( iCost - iOverflow )*100) / iResearchRate;
+		}else{
+			iTurnsLeft =(int) ( (50/alpha) * ( - beta - sqrt( delta ) ) );
+			// get the lowest cost to estimate the lowest bound
+			if ( 100*iAhistoric + iTurnsLeft >  100*timelineTechBuffCap ){
+				// if we have reached the maximum discont
+				iCost *= 100 - timelineTechBuffTop * timelineTechBuffCap * timelineTechBuffCap / timelineTechBuffBottom;
+				iCost /= 100;
+				iTurnsLeft = (( iCost - iOverflow )*100) / iResearchRate;
+			};
+		};
+	};
+
+	// 3MiroTimeline: compute accurate number of turns left
+	/*iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);
 
 	if (bOverflow)
 	{
@@ -7196,24 +7436,12 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 	
 	iResearchLeft *= 100;
 
-	//Rhye - start min and max turns cap
-	/*int iCost = GET_TEAM((TeamTypes)getID()).getResearchCost(eTech);
-	if (iResearchRate > 0) {
-		if (iCost / iResearchRate < 4) {
-			iResearchRate = iCost/4;
-		}
-		if (iCost / iResearchRate > 40) {
-			iResearchRate = iCost/40;
-		}
-	}	*/
-	//Rhye - end
-
 	iTurnsLeft = (iResearchLeft / iResearchRate);
 
 	if (iTurnsLeft * iResearchRate < iResearchLeft)
 	{
 		++iTurnsLeft;
-	}
+	}*/
 
 	return std::max(1, iTurnsLeft);
     
@@ -7461,11 +7689,15 @@ bool CvPlayer::canChangeReligion() const
 
 bool CvPlayer::canConvert(ReligionTypes eReligion) const
 {
-	//GC.getGame().logMsg(" canConvert " );
-	if (isBarbarian())
+	//GC.getGame().logMsg(" canConvert %d  %d",getID(),eReligion );
+	// 3Miro: Independents cannot have a state religion, 
+	//        otherwise they all turn Catholic and there is strange "war with brothers in faith" unhappyness
+	//if (isBarbarian())
+	if (isBarbarian() || isIndep(getID()) )
 	{
 		return false;
 	}
+
 
 	//GC.getGame().logMsg(" Not Barb " );
 
@@ -8042,7 +8274,7 @@ int CvPlayer::greatPeopleThreshold(bool bMilitary) const
 
 	//Rhye - start switch
 	// 3Miro GP rates
-	iThreshold *= gpModifier[getID()];
+	iThreshold *= (isHuman()) ? gpModifierHu[getID()] : gpModifierAI[getID()];
 	iThreshold /= 100;
 
 	return std::max(1, iThreshold);
@@ -9704,6 +9936,10 @@ void CvPlayer::changeStateReligionFreeExperience(int iChange)
 
 CvCity* CvPlayer::getCapitalCity() const	 
 {
+	// 3Miro: the city Capital bug/crash
+	/*if ( (getNumCities() < 1) || (m_iCapitalCityID < 0) || (m_iCapitalCityID >= getNumCities()) ){
+		return NULL;
+	};*/
 	return getCity(m_iCapitalCityID);
 }
 
@@ -10244,16 +10480,33 @@ void CvPlayer::setTurnActiveForPbem(bool bActive)
 	{
 		m_bTurnActive = bActive;
 		GC.getGameINLINE().changeNumGameTurnActive(isTurnActive() ? 1 : -1);
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+		// Plot danger cache
+		//if( GC.getGameINLINE().getNumGameTurnActive() != 1 )
+		{
+			GC.getMapINLINE().invalidateIsActivePlayerNoDangerCache();
+		}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	}
 }
 
 
 void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 {
+	//GC.getGameINLINE().logMsg("player setTurnActive in %d", getID()); // 3Miro
 	int iI;
 
 	if (isTurnActive() != bNewValue)
 	{
+		//GC.getGameINLINE().logMsg("player setTurnActive HERE 1 %d", getID()); // 3Miro
+
 		m_bTurnActive = bNewValue;
 
 		if (isTurnActive())
@@ -10295,6 +10548,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 			if (bDoTurn)
 			{
+				//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1 %d", getID()); // 3Miro
 				//Rhye - start comment
 				//Not sure if this is the best place for this.
 				/*if (isAlive() && !isHuman() && !isBarbarian() && (getAdvancedStartPoints() > 0))
@@ -10304,16 +10558,23 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				//Rhye - end comment
 				if (GC.getGameINLINE().getElapsedGameTurns() > 0)
 				{
+					//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1 %d", getID()); // 3Miro
 					if (isAlive())
 					{
+						//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1.1 %d", getID()); // 3Miro
 						if (GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 						{
+							//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1.2 %d", getID()); // 3Miro
 							doTurn();
+							//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1.3 %d", getID()); // 3Miro
 						}
 
+						//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1.4 %d", getID()); // 3Miro
 						doTurnUnits();
+						//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.1.6 %d", getID()); // 3Miro
 					}
 				}
+				//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.2 %d", getID()); // 3Miro
 
 				if ((getID() == GC.getGameINLINE().getActivePlayer()) && (GC.getGameINLINE().getElapsedGameTurns() > 0))
 				{
@@ -10327,7 +10588,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					}
 				}
 
+				//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.3 %d", getID()); // 3Miro
 				doWarnings();
+				//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.4 %d", getID()); // 3Miro
 			}
 
 			if (getID() == GC.getGameINLINE().getActivePlayer())
@@ -10339,9 +10602,11 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 			}
+			//GC.getGameINLINE().logMsg("player setTurnActive HERE 1.5 %d", getID()); // 3Miro
 		}
 		else
 		{
+			//GC.getGameINLINE().logMsg("player setTurnActive HERE 2 %d", getID()); // 3Miro
 			if (GC.getLogging())
 			{
 				if (gDLL->getChtLvl() > 0)
@@ -10369,6 +10634,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 			if (bDoTurn)
 			{
+				//GC.getGameINLINE().logMsg("player setTurnActive HERE 2.1 %d", getID()); // 3Miro
 				if (!GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 				{
 					if (isAlive())
@@ -10420,10 +10686,28 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			}
 		}
 
+		//GC.getGameINLINE().logMsg("player setTurnActive HERE 3 %d", getID()); // 3Miro
+
 		gDLL->getInterfaceIFace()->updateCursorType();
+		//GC.getGameINLINE().logMsg("player setTurnActive HERE 4 %d", getID()); // 3Miro
 
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
+		//GC.getGameINLINE().logMsg("player setTurnActive HERE 5 %d", getID()); // 3Miro
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+		// Plot danger cache
+		//if( GC.getGameINLINE().getNumGameTurnActive() != 1 )
+		//{
+			GC.getMapINLINE().invalidateIsActivePlayerNoDangerCache();
+		//}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	}
+	//GC.getGameINLINE().logMsg("player setTurnActive out %d", getID()); // 3Miro
 }
 
 
@@ -10435,25 +10719,35 @@ bool CvPlayer::isAutoMoves() const
 
 void CvPlayer::setAutoMoves(bool bNewValue)
 {
+	//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 1"); //3Miro
 	if (isAutoMoves() != bNewValue)
 	{
+		//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 2"); //3Miro
 		m_bAutoMoves = bNewValue;
+		//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 3"); //3Miro
 
 		if (!isAutoMoves())
 		{
+			//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 4"); //3Miro
 			if (isEndTurn() || !isHuman())
 			{
+				//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 5"); //3Miro
 				setTurnActive(false);
+				//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 6"); //3Miro
 			}
 			else
 			{
+				//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 7"); //3Miro
 				if (getID() == GC.getGameINLINE().getActivePlayer())
 				{
+					//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 8"); //3Miro
 					gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+					//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 9"); //3Miro
 				}
 			}
 		}
 	}
+	//GC.getGameINLINE().logMsg(" setAutoMoves: out"); //3Miro
 }
 
 
@@ -11147,6 +11441,20 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 			iRate = 0;
 		}
 	}
+
+	// 3MiroUP: Commerce, the city screen only shows the commerce per city, this should actually add it
+	//GC.getGameINLINE().logMsg(" Checking getCommerceRate() player %d  %d ",getID(),iRate); // 3Miro
+	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_PER_CITY_COMMERCE];
+	if ( iUPC > -1 ){
+		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
+			iRate += 100*((iUPC / 1000000) %100) * getNumCities();
+		}else if ( eIndex == COMMERCE_RESEARCH ){
+			iRate += 100*((iUPC / 10000) %100) * getNumCities();
+		}else if ( eIndex == COMMERCE_ESPIONAGE ){
+			iRate += 100*(iUPC % 100) * getNumCities();
+		};
+		//GC.getGameINLINE().logMsg(" Added Something  %d",iRate); // 3Miro
+	};
 
 	return iRate / 100;  
 }
@@ -13269,14 +13577,16 @@ void CvPlayer::doGold()
 	int iDisbandUnit;
 	int iI;
 
-	CyArgsList argsList;
-	argsList.add(getID());
-	long lResult=0;
-	gDLL->getPythonIFace()->callFunction(PYGameModule, "doGold", argsList.makeFunctionArgs(), &lResult);
-	if (lResult == 1)
-	{
-		return;
-	}
+	// 3Miro: SPEEDTWEAK: more Python
+	//CyArgsList argsList;
+	//argsList.add(getID());
+	//long lResult=0;
+	//gDLL->getPythonIFace()->callFunction(PYGameModule, "doGold", argsList.makeFunctionArgs(), &lResult);
+	//if (lResult == 1)
+	//{
+	//	return;
+	//}
+	// 3Miro: SPEEDTWEAK: end
 
 	iGoldChange = calculateGoldRate();
 
@@ -13328,14 +13638,16 @@ void CvPlayer::doResearch()
 	bool bForceResearchChoice;
 	int iOverflowResearch;
 
-	CyArgsList argsList;
-	argsList.add(getID());
-	long lResult=0;
-	gDLL->getPythonIFace()->callFunction(PYGameModule, "doResearch", argsList.makeFunctionArgs(), &lResult);
-	if (lResult == 1)
-	{
-		return;
-	}
+	// 3Miro: SPEEDTWEAK: more Python
+	//CyArgsList argsList;
+	//argsList.add(getID());
+	//long lResult=0;
+	//gDLL->getPythonIFace()->callFunction(PYGameModule, "doResearch", argsList.makeFunctionArgs(), &lResult);
+	//if (lResult == 1)
+	//{
+	//	return;
+	//}
+	// 3Miro: end
 
 	if (isResearch())
 	{
@@ -16208,6 +16520,9 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 	changeStateReligionFreeExperience(GC.getCivicInfo(eCivic).getStateReligionFreeExperience() * iChange);
 	changeExpInBorderModifier(GC.getCivicInfo(eCivic).getExpInBorderModifier() * iChange);
 
+	// 3MiroCivics: Unit production boost
+	changCivicUnitProductionModifier( GC.getCivicInfo(eCivic).getUnitProductionBoost() * iChange );
+
 	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
 		changeYieldRateModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getYieldModifier(iI) * iChange));
@@ -16934,9 +17249,23 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iInflationModifier);
 
 	pStream->Read(&m_iAllowBrothersAtWar); // 3MiroBuildings init brotherly war
+	pStream->Read(&m_iNumColonies);
 	pStream->Read(&m_isCrusader); // 3MiroCrusades init Crusaders
 	pStream->Read(&m_iFaith); // 3MiroFaith
 	pStream->Read(&m_iProsecutionCount);	
+	pStream->Read(3,m_aiUHV);
+	pStream->Read(3,m_aiUHVcounter);
+	pStream->Read(&m_aiUHV2of3);
+	pStream->Read(MAX_NUM_PROVINCES,m_aiProvinceType);
+
+	pStream ->Read(4,m_aiStabilityBase);
+	pStream ->Read(4,m_aiStabilityVary);
+	pStream ->Read(&m_iStabilitySwing);
+	pStream ->Read(&bIsAtWar);
+
+	pStream ->Read(10,m_aiPickleFree);
+	pStream ->Read(&m_iCivicUnitProductionModifier);
+	pStream ->Read(&m_bRespawned);
 }
 
 //
@@ -17365,9 +17694,23 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(m_iInflationModifier);
 
 	pStream->Write(m_iAllowBrothersAtWar); // 3MiroBuildings init brotherly war
+	pStream->Write(m_iNumColonies);
 	pStream->Write(m_isCrusader); // 3MiroCrusades init Crusaders
 	pStream->Write(m_iFaith); // 3MiroFaith
 	pStream->Write(m_iProsecutionCount);
+	pStream->Write(3,m_aiUHV);
+	pStream->Write(3,m_aiUHVcounter);
+	pStream->Write(m_aiUHV2of3);
+
+	pStream->Write(MAX_NUM_PROVINCES,m_aiProvinceType);
+
+	pStream ->Write(4,m_aiStabilityBase);
+	pStream ->Write(4,m_aiStabilityVary);
+	pStream ->Write(m_iStabilitySwing);
+	pStream ->Write(bIsAtWar);
+	pStream ->Write(10,m_aiPickleFree);
+	pStream ->Write(m_iCivicUnitProductionModifier);
+	pStream ->Write(m_bRespawned);
 }
 
 void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience, int iX, int iY)
@@ -21444,7 +21787,7 @@ int CvPlayer::getGrowthThreshold(int iPopulation) const
 
 	//Rhye - start switch
 	// 3Miro growth
-	iThreshold *= growthThreshold[getID()];
+	iThreshold *= (isHuman()) ? growthThresholdHu[getID()] : growthThresholdAI[getID()];
 	iThreshold /= 100;
 
 	// 3MiroFaith
@@ -22510,12 +22853,213 @@ void CvPlayer::processCivNames()
 	if (getID() >= NUM_MAJOR_PLAYERS || !GET_PLAYER((PlayerTypes)getID()).isAlive())
 		return;
 
+	// 3MiroDCN
+	/*if ( getID() == 2 ){
+		//CvString *szTest = GC.getCivilizationInfo(getCivilizationType() ).getDCNName(0);
+		GC.getGameINLINE().logMsg(" Num Conditions %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNNumber() );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondCivic(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondOrCivic1(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondOrCivic2(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondReligion(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondNotReligion(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondVassalOf(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericVassal(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondMasterOf(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericMaster(0) );
+		GC.getGameINLINE().logMsg("     Condition 0 %d ", GC.getCivilizationInfo(getCivilizationType() ).getDCNCondAfterTurn(0) );
+		//GC.getGameINLINE().logMsg("     Condition 0 %d ", szTest ->GetCString() );
+		setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(0) );
+		return;
+	};*/
+
 	//if ((GC.getGameINLINE().getGameTurn() == 0 && GET_PLAYER((PlayerTypes)EGYPT).isPlayable())
 	//	|| (GC.getGameINLINE().getGameTurn() == 151 && !GET_PLAYER((PlayerTypes)EGYPT).isPlayable())) //late start condition (to be changed in MP)
 	//if (GC.getGameINLINE().getGameTurn() == 0 && getID() != EGYPT) //Egyptian UP
 	//	return;
 
-	if (getID() < NUM_MAJOR_PLAYERS) {
+	int iNumDCNNumber = GC.getCivilizationInfo(getCivilizationType() ).getDCNNumber();
+	//GC.getGameINLINE().logMsg("     Condition civ and num conds %d  %d",getID(),iNumDCNNumber );
+
+	if ( (getID() < NUM_MAJOR_PLAYERS)&&(iNumDCNNumber>0) ){
+		int iMasterType = -1; // use type as opposed to index number
+		int iI, iJ;
+		int iVal, iVal2, iVal3;
+		bool bPasses;
+		bool bHasVassal;
+		for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
+			if ( GET_PLAYER((PlayerTypes)iI).isAlive() ){
+				if ( iI != getID() ){
+					if ( GET_TEAM( getTeam() ).isVassal( GET_PLAYER((PlayerTypes)iI).getTeam() ) ){
+						iMasterType = GET_PLAYER((PlayerTypes)iI).getCivilizationType();
+						break;
+					};
+				};
+			};
+		};
+		//GC.getGameINLINE().logMsg("     Condition civ and master %d  %d",getID(),iMasterType );
+		// 3Miro: Player != Team
+		/*for( iI =0; iI < MAX_CIV_TEAMS; iI++ ){
+			if (GET_TEAM((TeamTypes)iI).isAlive()){
+				if (iI != getTeam() ){
+					if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI)){
+						iMasterType = GET_PLAYER( GET_TEAM((TeamTypes)iI).getPlayerMemberAt(0) ).getCivilizationType();
+						break;
+					};
+				};
+			};
+		};*/
+
+		for( iI = 0; iI < iNumDCNNumber; iI++ ){
+			// -----------------  GameTurn Check -------------------------- //
+			bPasses = (GC.getGameINLINE().getGameTurn() >= GC.getCivilizationInfo(getCivilizationType() ).getDCNCondAfterTurn(iI));
+			// -----------------  GenericVassal Check -------------------------- //
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericVassal(iI);
+				if ( (iVal == 1) && ( iMasterType == -1 ) ){ // this is a vassal condition, but we have no master
+					//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 1",getID() );
+					bPasses = false;
+				};
+			};
+			//GC.getGameINLINE().logMsg("     Condition check iI %d Setting New Name",iI );
+			// ----------------- Respawned check -------------------------- //
+			if ( bPasses ) {
+				if ( GC.getCivilizationInfo(getCivilizationType() ).getDCNCondHasRespawned( iI ) ){
+					bPasses = getRespawned();
+				};
+			};
+			// -----------------  VassalOf Check -------------------------- //
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondVassalOf( iI );
+				if ( iVal > -1 ){ // there is a Vassal Condition
+					if ( iMasterType == -1 ){
+						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 2",getID() );
+						bPasses = false;
+					}else{
+						if ( iMasterType != iVal ){ // wrong Master
+							//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 3",getID() );
+							bPasses = false;
+						};
+					};
+				};
+			};
+			//GC.getGameINLINE().logMsg("     Condition check iI %d Setting New Name",iI );
+			// -----------------  State Religion Check -------------------------- //
+			if ( bPasses ){ // if we have failed already, there is no point to check
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondReligion(iI);
+				if ( (iVal > -1) && ( getStateReligion() != iVal ) ){
+					//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 4",getID() );
+					bPasses = false;
+				};
+			};
+			//GC.getGameINLINE().logMsg("     Condition check iI %d Setting New Name",iI );
+			// -----------------  Non-Religion Check -------------------------- //
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondNotReligion(iI);
+				if ( (iVal > -1) && ( getStateReligion() == iVal ) ){
+					//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 5",getID() );
+					bPasses = false;
+				};
+			};
+			//GC.getGameINLINE().logMsg("     Condition check iI %d Setting New Name",iI );
+			// -----------------  Civic Check -------------------------- //
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondCivic(iI);
+				if ( (iVal > -1) && (!isCivic((CivicTypes)iVal)) ){
+					// we fail the first civic condition
+					iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondOrCivic1(iI);
+					if ( iVal > -1  ){
+						// we get a second chance
+						if (!isCivic((CivicTypes)iVal)){
+							// fail the second condition, one more try left
+							iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondOrCivic2(iI);
+							if ( iVal > -1 ){
+								// we get a third chance
+								if (!isCivic((CivicTypes)iVal)){
+									// we fail the third chance
+									//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 6",getID() );
+									bPasses = false;
+								};
+							}else{ // there is no third or condition
+								//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 7",getID() );
+								bPasses = false;
+							};
+						};
+					}else{ // there is no second "or" condition
+						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 8",getID() );
+						bPasses = false;
+					};
+				};
+			};
+			//GC.getGameINLINE().logMsg("     Condition check iI %d 1 Setting New Name",iI );
+			// -----------------  MasterOf Check: last because is most time consuming -------------------------- //
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericMaster(iI);
+				if ( iVal == 1 ){ // we are checking for being master
+					iVal2 = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondMasterOf(iI);
+					if ( iVal2 == -1 ){
+						bHasVassal = false;
+						for( iJ = 0; iJ < NUM_MAJOR_PLAYERS; iJ++ ){
+							if ( GET_TEAM( GET_PLAYER((PlayerTypes)iJ).getTeam() ).isVassal( getTeam() ) ){ // if we have a vassal
+								bHasVassal = true;
+								break;
+							};
+						};
+						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 9 (maybe)",getID() );
+						bPasses = bHasVassal;
+					}else{
+						bHasVassal = false;
+						for( iJ = 0; iJ < NUM_MAJOR_PLAYERS; iJ++ ){
+							if (GET_PLAYER((PlayerTypes)iJ).getCivilizationType() == iVal2){ // if this is the right civ
+								bHasVassal = GET_TEAM( GET_PLAYER((PlayerTypes)iJ).getTeam() ).isVassal( getTeam() ); // vassal or not, break
+								break;
+							};
+						};
+						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 10 (maybe)",getID() );
+						bPasses = bHasVassal;
+					};
+				};
+			};
+
+			if ( bPasses ){
+				iVal2 = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondConqProvinceOfTypeNum(iI);
+				if ( iVal2 > 0 ){
+					iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondConqProvinceOfTypeType(iI);
+					iVal3 = 0;
+					for( iJ=0; iJ < MAX_NUM_PROVINCES; iJ++ ){
+						if ( (getProvinceType(iJ) <= iVal) && (getProvinceCurrentState(iJ)>=PROVINCE_CONQUER) ){
+							iVal3++;
+							if ( iVal3 >= iVal2 ){
+								break;
+							};
+						};
+					};
+					if ( iVal3 < iVal2 ){
+						bPasses = false;
+					};
+				};
+			};
+
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondCondSpecificProvince(iI);
+				if ( (iVal>-1) && (iVal<=MAX_NUM_PROVINCES) ){
+					if ( getProvinceCurrentState(iVal)<PROVINCE_CONQUER ){
+						bPasses = false;
+					};
+				};
+			};
+		
+			//GC.getGameINLINE().logMsg("     Condition check iI 2 %d Setting New Name",iI );
+
+			if ( bPasses ){
+				//GC.getGameINLINE().logMsg("     Condition check iI 3 %d Setting New Name",iI );
+				setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(iI) );
+				//setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(0) );
+				return;
+			};
+		};
+	};
+
+	/*if (getID() < NUM_MAJOR_PLAYERS) {
 		int iMaster = -1;
 		int iI;
 		for (iI = 0; iI < MAX_CIV_TEAMS; iI++)
@@ -22626,14 +23170,14 @@ void CvPlayer::processCivNames()
 				}
 			}
 		}
-	}
+	}*/
 }
 //Rhye - end
 
 // 3Miro: additional units
 CvCity* CvPlayer::choosePurgeCity(){
 	int iLoop;
-	int j, iStateReligion;
+	int iStateReligion;
 	CvCity *pCity;
 	iStateReligion = getStateReligion();
 	//GC.getGameINLINE().logMsg("  Targeting prosecutor for: %d ",getID()); //Rhye and 3Miro
@@ -22747,17 +23291,36 @@ int CvPlayer::countExternalCities(){
 	return iCount;
 };
 
+int CvPlayer::countCultureProduced(){
+	int iLoop, iCount = 0;
+	CvCity *pLoopCity;
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		iCount += pLoopCity->getCommerceRateTimes100(COMMERCE_CULTURE);
+	};
+	return iCount/100;
+};
+
 int CvPlayer::getFaith() const
 {
 	return m_iFaith;
 };
 
 void CvPlayer::setFaith( int iNewFaith ){
+	int iStateReligion = getStateReligion();
 	m_iFaith = iNewFaith;
+	if ( (iStateReligion != NO_RELIGION) && (m_iFaith > FaithPointsCap[iStateReligion]) ){
+		m_iFaith = FaithPointsCap[iStateReligion];
+	};
 };	
 	
 void CvPlayer::changeFaith( int iChange ){
-	m_iFaith += iChange;
+	int iStateReligion = getStateReligion();
+	int iUP = UniquePowers[getID() * UP_TOTAL_NUM + UP_PIOUS ];
+	m_iFaith += ( iUP > 0 ) ? iUP * iChange : iChange;
+	if ( (iStateReligion != NO_RELIGION) && (m_iFaith > FaithPointsCap[iStateReligion]) ){
+		m_iFaith = FaithPointsCap[iStateReligion];
+	};
 };
 
 int CvPlayer::getProsecutionCount() const
@@ -22801,4 +23364,283 @@ bool CvPlayer::isFaithBenefit( int iFaithPower ) const
 		};
 	};
 	return false;
+};
+
+// 3MiroUHV
+void CvPlayer::setUHV( int iUHV, int iValue ){
+	m_aiUHV[iUHV] = iValue;
+};
+int CvPlayer::getUHV( int iUHV ){
+	return m_aiUHV[iUHV];
+};
+void CvPlayer::setUHVCounter( int iUHV, int iValue ){
+	m_aiUHVcounter[iUHV] = iValue;
+};
+int CvPlayer::getUHVCounter( int iUHV ){
+	return m_aiUHVcounter[iUHV];
+};
+void CvPlayer::setUHV2of3( bool bNewValue ){
+	m_aiUHV2of3 = bNewValue;
+};
+bool CvPlayer::getUHV2of3(){
+	return m_aiUHV2of3;
+};
+std::wstring CvPlayer::getUHVDescription( int iUHV ) const
+{
+	if ( iUHV == 0 ){
+		return GC.getCivilizationInfo( getCivilizationType() ).getUHV1();
+	}else if ( iUHV == 1 ){
+		return GC.getCivilizationInfo( getCivilizationType() ).getUHV2();
+	}else{
+		return GC.getCivilizationInfo( getCivilizationType() ).getUHV3();
+	};
+};
+
+void CvPlayer::setProvinceType( int iProvince, int iType ){
+	m_aiProvinceType[iProvince] = iType;
+};
+
+int CvPlayer::getProvinceType( int iProvince ) const
+{
+	return m_aiProvinceType[iProvince];
+};
+
+int CvPlayer::getProvinceCurrentState( int iProvince ){
+	int i;
+	CvPlot *pPlot;
+	CvCity *pCity;
+	int myTiles = 0, otherTiles = 0, myCity = 0, otherCity = 0;
+	if ( (iProvince >= MAX_NUM_PROVINCES) || (iProvince < 0) ){
+		return -1;
+	};
+	for( i=0; i<provinceSizeList[iProvince]; i++ ){
+		pPlot = GC.getMapINLINE().plot( provinceTileList[iProvince][2*i], provinceTileList[iProvince][2*i+1] );
+		if ( pPlot ->getOwner() == getID() ){
+			myTiles++;
+		}else{
+			otherTiles++;
+		};
+		if ( pPlot ->isCity() ){
+			pCity = pPlot ->getPlotCity();
+			if ( pCity ->getOwner() == getID() ){
+				myCity += pCity ->getPopulation();
+			}else{
+				otherCity += pCity ->getPopulation();
+			};
+		};
+	};
+	if ( otherTiles == 0 ){
+		return PROVINCE_OWN;
+	};
+	if ( (myCity > 0) && (otherCity==0) ){
+		return PROVINCE_CONQUER;
+	};
+	if ( (2*myCity + myTiles) > (2*otherCity + otherTiles) ){
+		return PROVINCE_DOMINATE;
+	};
+	if ( (myCity == 0) && (otherCity != 0) ){
+		return PROVINCE_LOST;
+	};
+	return PROVINCE_NOTHING;
+};
+
+int CvPlayer::getProvinceCityCount( int iProvince ){
+	int i;
+	CvPlot *pPlot;
+	int count = 0;
+	if ( (iProvince >= MAX_NUM_PROVINCES) || (iProvince < 0) ){
+		return -1;
+	};
+	for( i=0; i<provinceSizeList[iProvince]; i++ ){
+		pPlot = GC.getMapINLINE().plot( provinceTileList[iProvince][2*i], provinceTileList[iProvince][2*i+1] );
+		if ( pPlot ->isCity() ){
+			if ( pPlot ->getPlotCity() ->getOwner() == getID() ){
+				count++;
+			};
+		};
+	};
+	return count;
+};
+int CvPlayer::getForeignCitiesInMyProvinceType( int iProvinceType ){
+	int iProv, iCount = 0, iJ;
+	CvPlot *pPlot;
+	for ( iProv = 0; iProv < MAX_NUM_PROVINCES; iProv++ ){
+		if ( m_aiProvinceType[iProv] == iProvinceType ){
+			for( iJ=0; iJ < provinceSizeList[iProv]; iJ++ ){
+				pPlot = GC.getMapINLINE().plot( provinceTileList[iProv][2*iJ], provinceTileList[iProv][2*iJ+1] );
+				if ( (pPlot ->isCity()) && (pPlot ->getPlotCity() ->getOwner() != getID()) ){
+					iCount++;
+				};
+			};
+		};
+	};
+	return iCount;
+};
+
+int CvPlayer::getStabilityBase( int iCathegory ){
+	return m_aiStabilityBase[iCathegory];
+};
+void CvPlayer::changeStabilityBase( int iCathegory, int iChange ){
+	m_aiStabilityBase[iCathegory] += iChange;
+};
+int CvPlayer::getStabilityVary( int iCathegory ){
+	return m_aiStabilityVary[iCathegory];
+};
+void CvPlayer::setStabilityVary( int iCathegory, int iNewValue ){
+	m_aiStabilityVary[iCathegory] = iNewValue;
+};
+int CvPlayer::getStabilitySwing(){
+	return m_iStabilitySwing;
+};
+void CvPlayer::setStabilitySwing( int iNewValue ){
+	m_iStabilitySwing = iNewValue;
+};
+int CvPlayer::getStability(){ // sum all cathegories and returns one number
+	int iI, iStab = 0;
+	for( iI = 0; iI<4; iI++ ){
+		iStab += m_aiStabilityBase[iI] + m_aiStabilityVary[iI];
+	};
+	return (iStab + m_iStabilitySwing);
+};
+int CvPlayer::getWarPeaceChange(){
+	bool bPeace = true;
+	for( int iPlayer = 0; iPlayer < NUM_MAJOR_PLAYERS; iPlayer++ ){
+		if ( GET_TEAM(getTeam()).isAtWar(GET_PLAYER((PlayerTypes)iPlayer).getTeam()) ){
+			bPeace = false;
+			break;
+		};
+	};
+	if ( bIsAtWar && bPeace ){ // we have gone into peace
+		bIsAtWar = false;
+		return 1;
+	}else if ( !bIsAtWar && !bPeace ){
+		bIsAtWar = true;
+		return -1;
+	}else{
+		return 0;
+	};
+};
+int CvPlayer::getNumColonies(){
+	return m_iNumColonies;
+};
+void CvPlayer::setNumColonies( int iNewValue ){
+	m_iNumColonies = iNewValue;
+};
+int CvPlayer::getPicklefreeParameter( int iParam ){
+	return m_aiPickleFree[iParam];
+};
+void CvPlayer::setPicklefreeParameter( int iParam, int iNewValue ){
+	m_aiPickleFree[iParam] = iNewValue;
+};
+bool CvPlayer::canVassalize( int iWhoTo ) const
+{
+	int iLoop, iCount = 0;
+	CvCity *pLoopCity;
+	// if no check is needed
+	if ( conditionalVassalage[ getID() * NUM_ALL_PLAYERS_B + iWhoTo ] == 1 ){
+		return true;
+	};
+	// if no check is needed
+	if ( conditionalVassalage[ getID() * NUM_ALL_PLAYERS_B + iWhoTo ] == -1 ){
+		return false;
+	};
+	// check if iWhoTo wants any of my provinces
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if ( GET_PLAYER((PlayerTypes)iWhoTo).getProvinceType( pLoopCity ->getProvince() ) >= provinceFlagToVassalize ){
+			return true;
+		};
+	};
+	// check if I want any of his provinces
+	for (pLoopCity = GET_PLAYER((PlayerTypes)iWhoTo).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iWhoTo).nextCity(&iLoop))
+	{
+		if ( getProvinceType( pLoopCity ->getProvince() ) >= provinceFlagToVassalize ){
+			return true;
+		};
+	};
+	return false;
+};
+int CvPlayer::getMaster(){
+	int iPlayer;
+	for( iPlayer = 0; iPlayer < NUM_MAJOR_PLAYERS; iPlayer++ ){
+		if ( GET_TEAM(getTeam()).isVassal( GET_PLAYER((PlayerTypes)iPlayer).getTeam() ) ){
+			return iPlayer;
+		};
+	};
+	return -1;
+};
+int CvPlayer::countVassals(){
+	int iPlayer, iTeam = getTeam(), iCount = 0;
+	for( iPlayer = 0; iPlayer < NUM_MAJOR_PLAYERS; iPlayer++ ){
+		if ( GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isVassal((TeamTypes)iTeam) ){
+			iCount++;
+		};
+	};
+	return iCount;
+};
+bool CvPlayer::provinceIsSpreadReligion( int iProvince, int iReligion ){
+	int iI;
+	CvPlot *pPlot;
+	if ( (iProvince < 0) || (iProvince >= MAX_NUM_PROVINCES) ){
+		return false;
+	};
+	for( iI = 0; iI < provinceSizeList[iProvince]; iI++ ){
+		pPlot = GC.getMapINLINE().plot( provinceTileList[iProvince][2*iI], provinceTileList[iProvince][2*iI+1] );
+		if ( (pPlot ->isCity()) && ( !(pPlot ->getPlotCity() ->isHasReligion((ReligionTypes)iReligion)) ) ){
+			return false;
+		};
+	};
+	return true;
+};
+bool CvPlayer::provinceIsConvertReligion( int iProvince, int iReligion ){
+	int iI, iJ;
+	CvPlot *pPlot;
+	CvCity *pCity;
+	if ( (iProvince < 0) || (iProvince >= MAX_NUM_PROVINCES) ){
+		return false;
+	};
+	for( iI = 0; iI < provinceSizeList[iProvince]; iI++ ){
+		pPlot = GC.getMapINLINE().plot( provinceTileList[iProvince][2*iI], provinceTileList[iProvince][2*iI+1] );
+		if ( pPlot ->isCity() ){
+			pCity = pPlot ->getPlotCity();
+			if ( !(pCity ->isHasReligion( (ReligionTypes)iReligion )) ){
+				return false;
+			};
+			for( iJ = 0; iJ < NUM_RELIGIONS; iJ++ ){
+				if ( (iJ != iReligion) && (pCity ->isHasReligion( (ReligionTypes)iJ ) ) ){
+					return false;
+				};
+			};
+		};
+	};
+	return true;
+};
+bool CvPlayer::canTradeTech( int iTech ) const
+{
+	return ( GC.getGameINLINE().getGameTurn() >= timelineTechDates[iTech] + 20 );
+};
+void CvPlayer::changCivicUnitProductionModifier( int iChange ){
+	if (iChange != 0)
+	{
+		m_iCivicUnitProductionModifier = (m_iCivicUnitProductionModifier + iChange);
+
+		if (getTeam() == GC.getGameINLINE().getActiveTeam())
+		{
+			gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
+		}
+	}
+};
+int CvPlayer::getCivicUnitProductionModifier() const
+{
+	return m_iCivicUnitProductionModifier;
+};
+bool CvPlayer::getRespawned() const
+{
+	return m_bRespawned;
+};
+void CvPlayer::setRespawned( bool bNewValue ){
+	if ( m_bRespawned != bNewValue ){
+		m_bRespawned = bNewValue;
+		processCivNames();
+	};
 };

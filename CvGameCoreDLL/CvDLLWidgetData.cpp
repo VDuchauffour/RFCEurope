@@ -3571,12 +3571,28 @@ void CvDLLWidgetData::parseTradeItem(CvWidgetDataStruct &widgetDataStruct, CvWSt
 		case TRADE_MAPS:
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_MAPS"));
 			break;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      12/07/09                                jdog5000      */
+/*                                                                                              */
+/* Diplomacy                                                                                    */
+/************************************************************************************************/
 		case TRADE_SURRENDER:
+			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_CAPITULATE"));
+			eWhoDenies = (widgetDataStruct.m_bOption ? eWhoFrom : NO_PLAYER);
+			break;
+		case TRADE_VASSAL:
+			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_VASSAL"));
+			eWhoDenies = (widgetDataStruct.m_bOption ? eWhoFrom : NO_PLAYER);
+			break;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+		/*case TRADE_SURRENDER:
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_CAPITULATE"));
 			break;
 		case TRADE_VASSAL:
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_VASSAL"));
-			break;
+			break;*/
 		case TRADE_OPEN_BORDERS:
 			szBuffer.append(gDLL->getText("TXT_KEY_TRADE_OPEN_BORDERS"));
 			break;
@@ -3597,7 +3613,46 @@ void CvDLLWidgetData::parseTradeItem(CvWidgetDataStruct &widgetDataStruct, CvWSt
 
 		if (eDenial != NO_DENIAL)
 		{
-			szTempBuffer.Format(L"%s: " SETCOLR L"%s" ENDCOLR, GET_PLAYER(eWhoDenies).getName(), TEXT_COLOR("COLOR_WARNING_TEXT"), GC.getDenialInfo(eDenial).getDescription());
+			//szTempBuffer.Format(L"%s: " SETCOLR L"%s" ENDCOLR, GET_PLAYER(eWhoDenies).getName(), TEXT_COLOR("COLOR_WARNING_TEXT"), GC.getDenialInfo(eDenial).getDescription());
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      12/07/09                                jdog5000      */
+/*                                                                                              */
+/* Diplomacy                                                                                    */
+/************************************************************************************************/
+			if( eWhoDenies == NO_PLAYER )
+			{
+				switch(eDenial)
+				{
+				case DENIAL_POWER_US:
+					eDenial = DENIAL_POWER_YOU;
+					break;
+				case DENIAL_POWER_YOU:
+					eDenial = DENIAL_POWER_US;
+					break;
+				case DENIAL_WAR_NOT_POSSIBLE_US:
+					eDenial = DENIAL_WAR_NOT_POSSIBLE_YOU;
+					break;
+				case DENIAL_WAR_NOT_POSSIBLE_YOU:
+					eDenial = DENIAL_WAR_NOT_POSSIBLE_US;
+					break;
+				case DENIAL_PEACE_NOT_POSSIBLE_US:
+					eDenial = DENIAL_PEACE_NOT_POSSIBLE_YOU;
+					break;
+				case DENIAL_PEACE_NOT_POSSIBLE_YOU:
+					eDenial = DENIAL_PEACE_NOT_POSSIBLE_US;
+					break;
+				default :
+					break;
+				}
+				szTempBuffer.Format(L"%s: " SETCOLR L"%s" ENDCOLR, GET_PLAYER(eWhoTo).getName(), TEXT_COLOR("COLOR_WARNING_TEXT"), GC.getDenialInfo(eDenial).getDescription());
+			}
+			else
+			{
+				szTempBuffer.Format(L"%s: " SETCOLR L"%s" ENDCOLR, GET_PLAYER(eWhoDenies).getName(), TEXT_COLOR("COLOR_WARNING_TEXT"), GC.getDenialInfo(eDenial).getDescription());
+			}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 			szBuffer.append(NEWLINE);
 			szBuffer.append(szTempBuffer);
 		}

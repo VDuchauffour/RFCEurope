@@ -530,6 +530,54 @@ public:
 	int getFaithBenefit( int iFaithPower );
 	bool isFaithBenefit( int iFaithPower );
 
+	int countCultureProduced();
+
+	// 3MiroUHV
+	void setUHV( int iUHV, int iValue );
+	int getUHV( int iUHV );
+	void setUHVCounter( int iUHV, int iValue );
+	int getUHVCounter( int iUHV );
+	void setUHV2of3( bool bNewValue );
+	bool getUHV2of3();
+
+	// 3MiroProvinces: get and set the relation of a province for the player (default is 0, should be 0 <= iType < iNumProvinceTypes)
+	void setProvinceType( int iProvince, int iType );
+	int getProvinceType( int iProvince );
+	int getProvinceCurrentState( int iProvince ); // own, conquer, etc ...
+	int getProvinceCityCount( int iProvince );
+	int getForeignCitiesInMyProvinceType( int iProvinceType );
+
+	std::wstring getUHVDescription( int iUHV ) const;
+
+	// 3MiroStability: functions to work with the stability
+	int getStabilityBase( int iCathegory );
+	void changeStabilityBase( int iCathegory, int iChange );
+	int getStabilityVary( int iCathegory );
+	void setStabilityVary( int iCathegory, int iNewValue );
+	int getStabilitySwing();
+	void setStabilitySwing( int iNewValue );
+	int getStability();
+	int getWarPeaceChange();
+
+	// 3MiroProjects: count the number of colonies here
+	int getNumColonies();
+	void setNumColonies( int iNewValue );
+
+	// 3Miro: pickle free
+	int getPicklefreeParameter( int iParam );
+	void setPicklefreeParameter( int iParam, int iNewValue );
+
+	// 3Miro: count vassals and is a vassal of someone
+	int getMaster();
+	int countVassals();
+
+	// 3MiroProvince: religion in province
+	bool provinceIsSpreadReligion( int iProvince, int iReligion );
+	bool provinceIsConvertReligion( int iProvince, int iReligion );
+
+	bool getRespawned();
+	void setRespawned( bool bNewValue );
+
 private:
 	CvPlayer* m_pPlayer;
 };

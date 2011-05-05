@@ -1397,8 +1397,20 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
+	bool isAllowNonStateReligionBuildings() const; // 3MiroCivic: Allow non state religion buildings
+	int getBuildingCivicComboBuilding() const;
+	int getBuildingCivicComboGold() const;
+	int getUnitProductionBoost() const;
+
 //---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 protected:
+
+	bool m_bAllowNonStateReligionBuildings; // 3MiroCivic: Allow non state religion buildings
+
+	int m_iBuildingCivicComboBuilding;
+	int m_iBuildingCivicComboGold;
+	int m_iUnitProductionBoost;
+	// 3MiroCivics: end
 
 	int m_iCivicOptionType;
 	int m_iAnarchyLength;
@@ -2250,6 +2262,24 @@ public:
 	DllExport const wchar* getSStart() const;				// Exposed to Python
 	std::wstring pyGetSStart() { return getSStart(); }				// Exposed to Python
 
+	// 3MiroDCN
+	int getDCNNumber() const;
+	//DllExport const TCHAR* getDCNName( int iIndex ) const;
+	DllExport const wchar* getDCNName( int iIndex ) const;
+	int getDCNCondReligion( int iIndex ) const;
+	int getDCNCondNotReligion( int iIndex ) const;
+	int getDCNCondCivic( int iIndex ) const;
+	int getDCNCondOrCivic1( int iIndex ) const;
+	int getDCNCondOrCivic2( int iIndex ) const;
+	int getDCNCondVassalOf( int iIndex ) const;
+	int getDCNCondGenericVassal( int iIndex ) const;
+	int getDCNCondMasterOf( int iIndex ) const;
+	int getDCNCondGenericMaster( int iIndex ) const;
+	int getDCNCondAfterTurn( int iIndex ) const;
+	int getDCNCondConqProvinceOfTypeType( int iIndex ) const;
+	int getDCNCondConqProvinceOfTypeNum( int iIndex ) const;
+	bool getDCNCondHasRespawned( int iIndex ) const;
+	int getDCNCondCondSpecificProvince( int iIndex ) const;
 
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 
@@ -2285,6 +2315,26 @@ protected:
 	CvWString m_szGrowth;
 	CvWString m_szStartingSituation;
 
+	// 3MiroDCN
+	int m_iNumDCNConditions;
+	int *m_piDCNReligions;
+	int *m_piDCNNotReligions;
+	int *m_piDCNCicivc;
+	int *m_piDCNOrCicivc1;
+	int *m_piDCNOrCicivc2;
+	int *m_piDCNVassalOf;
+	int *m_piDCNGenericVassal;
+	int *m_piDCNMasterOf;
+	int *m_piDCNGenericMaster;
+	int *m_piDCNAfterTurn;
+	int *m_piDCNConqProvinceOfTypeType;
+	int *m_piDCNConqProvinceOfTypeNum;
+	int *m_piDCNCondSpecificProvince;
+	int *m_piDCNCondHasRespawned;
+	CvWString* m_pszDCNName;
+
+	CvString* m_pszDCNTempMasterOf;
+	CvString* m_pszDCNTempVassalOf;
 
 	// Arrays
 
@@ -4037,7 +4087,8 @@ public:
 	int getFreeBonus( BonusTypes eBonus ); // will expose to Python
 	int getPrereqProject( ProjectTypes eProject ); // will expose to Python (eventually)
 	int getPrereqBonus(); // (eventually)
-
+	bool getIsColony();
+	int getCannotBuildAfterTurn();
 
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 protected:
@@ -4056,6 +4107,8 @@ protected:
 	int m_iSuccessRate;
 
 	int m_iPrereqBonus; // 3MiroProjects
+	int m_bIsColony; // 3MiroProjects: is this project a colony
+	int m_iCannotBuildAfterTurn; // 3MiroProjects
 
 	bool m_bSpaceship;
 	bool m_bAllowsNukes;
@@ -5276,6 +5329,7 @@ public:
 	int getConstructPercent() const;			//	Exposed to Python
 	int getCreatePercent() const;					//	Exposed to Python
 	int getResearchPercent() const;				//	Exposed to Python
+	int getTechCostModifier() const; // BETTER_BTS_AI_MOD / Tech Diffusion
 	int getBuildPercent() const;					//	Exposed to Python
 	int getImprovementPercent() const;		//	Exposed to Python
 	int getGreatPeoplePercent() const;		//	Exposed to Python
@@ -5314,6 +5368,7 @@ protected:
 	int m_iConstructPercent;
 	int m_iCreatePercent;
 	int m_iResearchPercent;
+	int m_iTechCostModifier; // BETTER_BTS_AI_MOD / Tech Diffusion
 	int m_iBuildPercent;
 	int m_iImprovementPercent;
 	int m_iGreatPeoplePercent;

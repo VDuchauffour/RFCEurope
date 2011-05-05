@@ -321,9 +321,14 @@ public:
 	void setStartingTurn( int iCiv, int iVal );
 	int getStartingTurn( int iCiv ); // for debug purposes
 
-	void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
-	void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
-	void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
+	void setGrowthModifiersAI( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
+	void setProductionModifiersAI( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
+	void setSupportModifiersAI( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
+	
+	void setGrowthModifiersHu( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
+	void setProductionModifiersHu( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
+	void setSupportModifiersHu( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
+	
 	void setInitialPopulation( int iCiv, int iInitPop );
 	void setInitialBuilding( int iCiv, int iBuilding, bool w );
 
@@ -400,7 +405,7 @@ public:
 	void setHoliestCity( int iCityX, int iCityY );
 
 	// 3MiroFaith: set religious benefits from Faith
-	void setReligionBenefit( int iReligion, int iBenefit, int iParameter );
+	void setReligionBenefit( int iReligion, int iBenefit, int iParameter, int iCap );
 
 	// 3Miro: set starting workers
 	void setStartingWorkers( int iCiv, int iWorkers );
@@ -416,6 +421,35 @@ public:
 
 	// 3Miro: set building preference
 	void setBuildingPref( int iCiv, int iBuilding, int iPref );
+
+	// 3Miro: set Autorun Hack
+	void setAutorunHack( int iUnit, int iX, int iY );
+
+	// 3Miro: set Building + Civic combo
+	void setBuildingCivicCommerseCombo1( int iCode );
+	void setBuildingCivicCommerseCombo2( int iCode );
+	void setBuildingCivicCommerseCombo3( int iCode );
+
+	// 3Miro: Psycho AI cheat, this gives a AI player gratiinsentive to attack a city at X, Y and it greatly improves the odds of success
+	void setPsychoAICheat( int iPlayer, int iX, int iY );
+
+	// 3Miro: set historical enemy AI cheat
+	void setHistoricalEnemyAICheat( int iAttacker, int iDefender, int iChange );
+
+	// 3Miro: set timeline Tech modifiers, strong gain and penalty for teching out of historical order
+	void setTimelineTechModifiers( int iTPTop, int iTPBottom, int iTPCap, int iTBTop, int iTBBottom, int iTBCap );
+	void setTimelineTechDateForTech( int iTech, int iTurn );
+
+	void setProvince( int iX, int iY, int iProvince ); // set the province at tile (iX,iY)
+	void createProvinceCrossreferenceList(); // call this after setting all provinces
+
+	void setCultureImmume( int iProvince, int iPlayerException, int iNumTurns ); // make a province immune to culture not comming from iPlayerException
+	void setProvinceTypeNumber( int iNum ); // set the number of province types
+	void setProvinceTypeParams( int iType, int iSettlerValue, int iWarValue, int iCultureTop, int iCultureBottom ); // set the number of province types
+
+	void setVassalagaeCondition( int iPlayer, int iWhoTo, int iCondition, int iProvinceType );
+	// there is only one iProvinceType, even though it is being set every time (only the last one counts). 
+	// If iCondition is 1, iProvinceType still needs to be set
 
 };
 

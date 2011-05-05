@@ -203,7 +203,11 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 		//GC.getGameINLINE().logMsg("  city init  2.1.4.1");
 	}
 	//GC.getGameINLINE().logMsg("  city init  2.1.5");
+	//GC.getGameINLINE().logMsg("  CvCity init set owner() %d ",getOwnerINLINE());
 	pPlot->setOwner(getOwnerINLINE(), bBumpUnits, false);
+	// 3MiroBugfix: removing units again
+	//pPlot->verifyUnitValidPlot();
+	// 3MiroBugfix: end
 	//GC.getGameINLINE().logMsg("  city init  2.1.5.1");
 	pPlot->setPlotCity(this);
 	//GC.getGameINLINE().logMsg("  city init  2.2");
@@ -939,7 +943,13 @@ void CvCity::doTurn()
 	doGrowth();
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, growth out "); //Rhye and 3Miro
 
-	doCulture();
+	// 3Miro: SPEEDTWEAK (BarbCities) Sephi: This function can be very slow for barbarian cities(adds 1-3sec to turn time).Reason unknown
+	// 3Miro: this turns off Barbarian culture
+	//doCulture();
+	if (!isBarbarian())
+    {
+        doCulture();
+    }
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, culture out "); //Rhye and 3Miro
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
@@ -957,7 +967,8 @@ void CvCity::doTurn()
 	doGreatPeople();
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, GP out "); //Rhye and 3Miro
 
-	doMeltdown();
+	// 3Miro: this actually does some work, since we have no meltdown in the mod, we can remove it
+	//doMeltdown();
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, meltdown out "); //Rhye and 3Miro
 
 	updateEspionageVisibility(true);
@@ -2192,6 +2203,10 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 	if ( (iPBonus > -1) && ( ! (plot() ->getPlotGroupConnectedBonus( getOwnerINLINE(), (BonusTypes) iPBonus )) ) ){
 		return false;
 	};
+	iPBonus = GC.getProjectInfo( eProject ).getCannotBuildAfterTurn();
+	if ( (iPBonus > -1) && ( iPBonus < GC.getGameINLINE().getGameTurn() ) ){
+		return false;
+	};
 
 	if (!(GET_PLAYER(getOwnerINLINE()).canCreate(eProject, bContinue, bTestVisible)))
 	{
@@ -3176,6 +3191,10 @@ int CvCity::getProductionModifier(UnitTypes eUnit) const
 		}
 	}
 
+	if ( GET_PLAYER(getOwnerINLINE()).getCivicUnitProductionModifier() != 0 ){
+		iMultiplier += GET_PLAYER(getOwnerINLINE()).getCivicUnitProductionModifier();
+	};
+
 	return std::max(0, iMultiplier);
 }
 
@@ -3412,7 +3431,7 @@ UnitTypes CvCity::getConscriptUnit() const
 	int iBestValue;
 	int iI;
 
-	long lConscriptUnit;
+	//long lConscriptUnit;
 	
 	iBestValue = 0;
 	eBestUnit = NO_UNIT;
@@ -3437,15 +3456,16 @@ UnitTypes CvCity::getConscriptUnit() const
 	}
 
 	// Allow the player to determine the conscripted unit type
-	CyArgsList argsList;
-	argsList.add(getOwnerINLINE());	// pass in player
-	lConscriptUnit = -1;
-	gDLL->getPythonIFace()->callFunction(PYGameModule, "getConscriptUnitType", argsList.makeFunctionArgs(),&lConscriptUnit);
-	
-	if (lConscriptUnit != -1)
-	{
-		eBestUnit = ((UnitTypes)lConscriptUnit);
-	}
+	// 3Miro: SPEEDTWEAK More Python
+	//CyArgsList argsList;
+	//argsList.add(getOwnerINLINE());	// pass in player
+	//lConscriptUnit = -1;
+	//gDLL->getPythonIFace()->callFunction(PYGameModule, "getConscriptUnitType", argsList.makeFunctionArgs(),&lConscriptUnit);
+	//if (lConscriptUnit != -1)
+	//{
+	//	eBestUnit = ((UnitTypes)lConscriptUnit);
+	//}
+	// 3Miro: end
 
 	return eBestUnit;
 }
@@ -3809,7 +3829,9 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			changeDamageEnemy( iChange );
 		};
 		if ( GC.getBuildingInfo(eBuilding).isBrothersAtWar() ){
-			GET_PLAYER(getOwner()).changeWarWithBrothers( iChange );
+			if ( (GC.getBuildingInfo(eBuilding).getStateReligion() != NO_RELIGION) && (GC.getBuildingInfo(eBuilding).getStateReligion() == GET_PLAYER(getOwner()).getStateReligion()) ){
+				GET_PLAYER(getOwner()).changeWarWithBrothers( iChange );
+			};
 		};
 		if ( GC.getBuildingInfo(eBuilding).isVassalUU() ){
 			GET_TEAM(getTeam()).setTrainVassalUU( GET_TEAM(getTeam()).getTrainVassalUU() + iChange );
@@ -4108,7 +4130,13 @@ bool CvCity::isVisible(TeamTypes eTeam, bool bDebug) const
 
 bool CvCity::isCapital() const
 {
-	return (GET_PLAYER(getOwnerINLINE()).getCapitalCity() == this);
+	// 3Miro: This seems to cause bugs sometime, lets make the code more complicated
+	CvCity *pCity = GET_PLAYER(getOwnerINLINE()).getCapitalCity();
+	if ( pCity == NULL ){
+		return false;
+	};
+	return ( (pCity ->getX() == getX()) && (pCity ->getY() == getY()) );
+	//return (GET_PLAYER(getOwnerINLINE()).getCapitalCity() == this);
 }
 
 
@@ -4405,6 +4433,9 @@ int CvCity::getVassalHappiness() const
 	//if ( (UniquePowers[getOwnerINLINE()][UP_CULTURE] == 1) || (UniquePowers[getOwnerINLINE()][UP_GOLDEN_LIBERTY] == 1) ) iHappy += 1;
 	int iUPH  = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_HAPPINESS];
 	if ( iUPH > -1 ) iHappy += iUPH;
+
+	iUPH = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_PAGAN_HAPPY];
+	if ( (iUPH > -1) && (GET_PLAYER(getOwner()).getStateReligion() == NO_RELIGION) ) iHappy += iUPH;
 
 	return iHappy;
 }
@@ -5349,7 +5380,12 @@ void CvCity::changePopulation(int iChange)
 
 long CvCity::getRealPopulation() const
 {
-	return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
+	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
+	// 3Miro: purely aesthatic choice of population sizes
+	float fPop = (float) getPopulation();
+	//return (long) (0.0017*fPop*fPop*fPop*fPop + 13)*1000;
+	//return (long)(  (pow( fPop, 1.7f) +  3* fPop)  * 1000);
+	return (long) ( ( fPop * fPop / 2.0 + 3.5 * fPop ) * 1000 );
 }
 
 int CvCity::getHighestPopulation() const
@@ -8240,7 +8276,7 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 	//if ( (eIndex == COMMERCE_ESPIONAGE)&&(UniquePowers[getOwnerINLINE()][UP_INQUISITION] == 1) ) iRate += 200;
 	int iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PER_CITY_COMMERCE];
 	if ( iUPC > -1 ){
-		if ( eIndex == COMMERCE_GOLD ){
+		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
 			iRate += 100 * ((iUPC / 1000000) %100); 
 		}else if ( eIndex == COMMERCE_RESEARCH ){
 			iRate += 100 * ((iUPC / 10000) %100);
@@ -8252,7 +8288,7 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 	};
 	iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_COMMERCE_PERCENT];
 	if ( iUPC > -1 ){
-		if ( eIndex == COMMERCE_GOLD ){
+		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
 			iRate *= 100 + ((iUPC / 1000000) %100);
 		}else if ( eIndex == COMMERCE_RESEARCH ){
 			iRate *= 100 + ((iUPC / 10000) %100);
@@ -8263,6 +8299,28 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 		};
 		iRate /= 100;
 	};
+	// 3MiroUP: pagan
+	iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PAGAN_CULTURE];
+	if ( (iUPC > -1) && (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)  ){
+		iRate += iUPC;
+	};
+	// 3Miro: Building Civic combo
+	// this goes to the Commerce per Building, together with the Holy Shrines
+	//if ( iCivicBuildingCommerse > -1 ){
+	//	GC.getGameINLINE().logMsg(" Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
+	//	if ( (hasBuilding( (BuildingTypes)(iCivicBuildingCommerse % 1000) )) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse/1000)%100))) ){
+	//		GC.getGameINLINE().logMsg(" Combo ");
+	//		if ( eIndex == COMMERCE_GOLD ){
+	//			iRate += 100 * ((iCivicBuildingCommerse / 100000) %10); 
+	//		}else if ( eIndex == COMMERCE_RESEARCH ){
+	//			iRate += 100 * ((iCivicBuildingCommerse / 1000000) %10);
+	//		}else if ( eIndex == COMMERCE_CULTURE ){
+	//			iRate += 100 * ((iCivicBuildingCommerse / 10000000) %10);
+	//		}else if ( eIndex == COMMERCE_ESPIONAGE ){
+	//			iRate += 100 * ((iCivicBuildingCommerse / 100000000) %10);
+	//		};
+	//	};
+	//};
 	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
 		if (eIndex == COMMERCE_CULTURE)
@@ -8411,7 +8469,73 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 
 	if (getNumBuilding(eBuilding) > 0)
 	{
-		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);	
+		// 3Miro: Civic + Building combo, tested only for Gold
+		/*if ( iCivicBuildingCommerse1 > -1 ){
+			//GC.getGameINLINE().logMsg(" New Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
+			if ( (eBuilding == (BuildingTypes)(iCivicBuildingCommerse1 % 1000) ) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse1/1000)%100))) ){
+				//GC.getGameINLINE().logMsg(" Combo ");
+				if ( eIndex == COMMERCE_GOLD ){
+					iCommerce += ((iCivicBuildingCommerse1 / 100000) %10); 
+				}else if ( eIndex == COMMERCE_RESEARCH ){
+					iCommerce += ((iCivicBuildingCommerse1 / 1000000) %10);
+				}else if ( eIndex == COMMERCE_CULTURE ){
+					iCommerce += ((iCivicBuildingCommerse1 / 10000000) %10);
+				}else if ( eIndex == COMMERCE_ESPIONAGE ){
+					iCommerce += ((iCivicBuildingCommerse1 / 100000000) %10);
+				};
+			};
+		};
+		if ( iCivicBuildingCommerse2 > -1 ){
+			//GC.getGameINLINE().logMsg(" New Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
+			if ( (eBuilding == (BuildingTypes)(iCivicBuildingCommerse2 % 1000) ) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse2/1000)%100))) ){
+				//GC.getGameINLINE().logMsg(" Combo ");
+				if ( eIndex == COMMERCE_GOLD ){
+					iCommerce += ((iCivicBuildingCommerse2 / 100000) %10); 
+				}else if ( eIndex == COMMERCE_RESEARCH ){
+					iCommerce += ((iCivicBuildingCommerse2 / 1000000) %10);
+				}else if ( eIndex == COMMERCE_CULTURE ){
+					iCommerce += ((iCivicBuildingCommerse2 / 10000000) %10);
+				}else if ( eIndex == COMMERCE_ESPIONAGE ){
+					iCommerce += ((iCivicBuildingCommerse2 / 100000000) %10);
+				};
+			};
+		};
+		if ( iCivicBuildingCommerse3 > -1 ){
+			//GC.getGameINLINE().logMsg(" New Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
+			if ( (eBuilding == (BuildingTypes)(iCivicBuildingCommerse3 % 1000) ) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse3/1000)%100))) ){
+				//GC.getGameINLINE().logMsg(" Combo ");
+				if ( eIndex == COMMERCE_GOLD ){
+					iCommerce += ((iCivicBuildingCommerse3 / 100000) %10); 
+				}else if ( eIndex == COMMERCE_RESEARCH ){
+					iCommerce += ((iCivicBuildingCommerse3 / 1000000) %10);
+				}else if ( eIndex == COMMERCE_CULTURE ){
+					iCommerce += ((iCivicBuildingCommerse3 / 10000000) %10);
+				}else if ( eIndex == COMMERCE_ESPIONAGE ){
+					iCommerce += ((iCivicBuildingCommerse3 / 100000000) %10);
+				};
+			};
+		};*/
+		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
+		// 3MiroCivic: Civic Building combo
+		if ( eIndex == COMMERCE_GOLD ){
+			int iCivic;
+			
+			int iBuildingClass = kBuilding.getBuildingClassType();
+			for( iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
+				CvCivicInfo &pCivicInfo = GC.getCivicInfo( (CivicTypes) iCivic );
+				
+				if ( (pCivicInfo.getBuildingCivicComboGold() != 0) && (pCivicInfo.getBuildingCivicComboBuilding() == iBuildingClass) ){
+					if ( GET_PLAYER(getOwner()).isCivic( (CivicTypes) iCivic ) ){
+						iCommerce += pCivicInfo.getBuildingCivicComboGold();
+					};
+				};
+			};
+		};
+		// 3MiroCivic: End
+
+
+		
 		if (!(kBuilding.isCommerceChangeOriginalOwner(eIndex)) || (getBuildingOriginalOwner(eBuilding) == getOwnerINLINE()))
 		{
 			iCommerce += kBuilding.getObsoleteSafeCommerceChange(eIndex) * getNumBuilding(eBuilding);
@@ -10631,6 +10755,13 @@ void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce
 			// Python Event
 			CvEventReporter::getInstance().religionRemove(eIndex, getOwnerINLINE(), this);
 		}
+
+		// 3MiroPapal: meet the Pope on papal religion spread
+		if ( eIndex == PAPAL_RELIGION ){
+			if ( !GET_TEAM( getTeam() ).isHasMet( GET_PLAYER( (PlayerTypes) PAPAL_PLAYER ).getTeam() ) ){
+				GET_TEAM( getTeam() ).meet( GET_PLAYER( (PlayerTypes) PAPAL_PLAYER ).getTeam(), true );
+			};
+		};
 		
 	}
 }
@@ -11633,7 +11764,11 @@ void CvCity::doCulture()
 		changeCultureTimes100(getOwnerINLINE(), getCommerceRateTimes100(COMMERCE_CULTURE), false, true);
 	else {
 		// 3Miro: do culture modifyers if culture bonus is more than 4
-		changeCultureTimes100(getOwnerINLINE(), (getCommerceRateTimes100(COMMERCE_CULTURE) * cultureModifier[getOwnerINLINE()]) /100, false, true);
+		if ( GET_PLAYER(getOwnerINLINE() ).isHuman() ){
+			changeCultureTimes100(getOwnerINLINE(), (getCommerceRateTimes100(COMMERCE_CULTURE) * cultureModifierHu[getOwnerINLINE()]) /100, false, true);
+		}else{
+			changeCultureTimes100(getOwnerINLINE(), (getCommerceRateTimes100(COMMERCE_CULTURE) * cultureModifierAI[getOwnerINLINE()]) /100, false, true);
+		};
 	}
 	//Rhye - end
 
@@ -14039,7 +14174,7 @@ bool CvCity::isAutoRaze() const
 
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_RAZING))
 	{
-		if (getHighestPopulation() == 1)
+		if ( (getHighestPopulation() == 1) && (GC.getGameINLINE().getSorenRandNum(100," Shall we autoraze") < 40) )
 		{
 			return true;
 		}
@@ -14315,4 +14450,19 @@ void CvCity::doPurgeReligions(){
 	// 3MiroFaith
 	GET_PLAYER( getOwnerINLINE() ).changeFaith( 1 );
 	
+};
+
+int CvCity::getProvince(){
+	return provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];
+};
+
+int CvCity::getNumForeignReligions(){
+	int iLoopReligion, iCount = 0, iStateReligion;
+	iStateReligion = GET_PLAYER(getOwner()).getStateReligion();
+	for( iLoopReligion = 0; iLoopReligion < NUM_RELIGIONS; iLoopReligion++ ){
+		if ( (iLoopReligion != iStateReligion) && isHasReligion((ReligionTypes)iLoopReligion) ){
+			iCount ++;
+		};
+	};
+	return iCount;
 };

@@ -152,6 +152,7 @@ void CvSelectionGroup::doTurn()
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
+	//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 1 " ); // 3Miro
 	if (getNumUnits() > 0)
 	{
 		bool bHurt = false;
@@ -163,7 +164,9 @@ void CvSelectionGroup::doTurn()
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = nextUnitNode(pUnitNode);
 
+			//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 2 " ); // 3Miro
 			pLoopUnit->doTurn();
+			//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 3 " ); // 3Miro
 
 			if (pLoopUnit->isHurt())
 			{
@@ -182,10 +185,20 @@ void CvSelectionGroup::doTurn()
 		{
 			setActivityType(ACTIVITY_AWAKE);
 		}
+		//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 4 " ); // 3Miro
 
 		if (AI_isControlled())
 		{
-			if ((getActivityType() != ACTIVITY_MISSION) || (!canFight() && (GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2) > 0)))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+/*                                                                                              */
+/* Unit AI, Efficiency                                                                          */
+/************************************************************************************************/
+			//if ((getActivityType() != ACTIVITY_MISSION) || (!canFight() && (GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2) > 0)))
+			if ((getActivityType() != ACTIVITY_MISSION) || (!canFight() && (GET_PLAYER(getOwnerINLINE()).AI_getAnyPlotDanger(plot(), 2))))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 			{
 				setForceUpdate(true);
 			}
@@ -205,13 +218,32 @@ void CvSelectionGroup::doTurn()
 					}
 				}
 
-				if (bNonSpy && GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2) > 0)
+				/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* Unit AI, Efficiency                                                                          */
+
+/************************************************************************************************/
+
+				//if (bNonSpy && GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2) > 0)
+
+				if (bNonSpy && GET_PLAYER(getOwnerINLINE()).AI_getAnyPlotDanger(plot(), 2))
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
 				{
 					clearMissionQueue();
 				}
 			}
 		}
 
+		//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 5 " ); // 3Miro
 		if (isHuman())
 		{
 			if (GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
@@ -248,7 +280,9 @@ void CvSelectionGroup::doTurn()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 6 " ); // 3Miro
 	doDelayedDeath();
+	//GC.getGameINLINE().logMsg("CvSelectionGroup doTurn HERE 7 " ); // 3Miro
 }
 
 bool CvSelectionGroup::showMoves() const
@@ -415,6 +449,7 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
+	//GC.getGameINLINE().logMsg(" push_mission Here 1 "); // 3Miro
 	if (!bAppend)
 	{
 		if (isBusy())
@@ -425,10 +460,12 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 		clearMissionQueue();
 	}
 
+	//GC.getGameINLINE().logMsg(" push_mission Here 2 "); // 3Miro
 	if (bManual)
 	{
 		setAutomateType(NO_AUTOMATE);
 	}
+	//GC.getGameINLINE().logMsg(" push_mission Here 3 "); // 3Miro
 
 	mission.eMissionType = eMission;
 	mission.iData1 = iData1;
@@ -436,10 +473,13 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 	mission.iFlags = iFlags;
 	mission.iPushTurn = GC.getGameINLINE().getGameTurn();
 
+	//GC.getGameINLINE().logMsg(" push_mission Here 4 "); // 3Miro
 	AI_setMissionAI(eMissionAI, pMissionAIPlot, pMissionAIUnit);
+	//GC.getGameINLINE().logMsg(" push_mission Here 4.1 "); // 3Miro
 
 	insertAtEndMissionQueue(mission, !bAppend);
 
+	//GC.getGameINLINE().logMsg(" push_mission Here 5 "); // 3Miro
 	if (bManual)
 	{
 		if (getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
@@ -458,7 +498,9 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 //Speed: End Modify
 		//Rhye - end
 
+		//GC.getGameINLINE().logMsg(" push_mission Here 6 "); // 3Miro
 		doDelayedDeath();
+		//GC.getGameINLINE().logMsg(" push_mission Here 7 "); // 3Miro
 	}
 }
 
@@ -502,7 +544,25 @@ void CvSelectionGroup::autoMission()
 					}
 				}
 
-				if (bVisibleHuman && GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 1) > 0)
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+
+/*                                                                                              */
+
+/* Unit AI, Efficiency                                                                          */
+
+/************************************************************************************************/
+
+				//if (bVisibleHuman && GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 1) > 0)
+
+				if (bVisibleHuman && GET_PLAYER(getOwnerINLINE()).AI_getAnyPlotDanger(plot(), 1))
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
 				{
 					clearMissionQueue();
 				}
@@ -2612,6 +2672,173 @@ bool CvSelectionGroup::visibilityRange()
 	return iMaxRange;
 }
 
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      03/30/10                                jdog5000      */
+
+/*                                                                                              */
+
+/* General AI                                                                                   */
+
+/************************************************************************************************/
+
+
+
+
+
+
+
+
+
+bool CvSelectionGroup::isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags, int iMaxPathTurns )
+
+{
+
+	PROFILE_FUNC();
+
+
+
+	CvCity* pLoopCity = NULL;
+
+	int iLoop;
+
+	int iPathTurns;
+
+
+
+	for (pLoopCity = GET_PLAYER(ePlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(ePlayer).nextCity(&iLoop))
+
+	{
+
+		if( pLoopCity->area() == area() )
+
+		{
+
+			if( generatePath(plot(), pLoopCity->plot(), iFlags, true, &iPathTurns) )
+
+			{
+
+				if( (iMaxPathTurns < 0) || (iPathTurns <= iMaxPathTurns) )
+
+				{
+
+					return true;
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+	return false;
+
+}
+
+
+
+bool CvSelectionGroup::isHasPathToAreaEnemyCity( bool bIgnoreMinors, int iFlags, int iMaxPathTurns )
+
+{
+
+	PROFILE_FUNC();
+
+
+
+	int iI;
+
+	int iPass = 0;
+
+
+
+	for( iI = 0; iI < MAX_PLAYERS; iI++ )
+
+	{
+
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && isPotentialEnemy(getTeam(), GET_PLAYER((PlayerTypes)iI).getTeam()) )
+
+		{
+
+			if( !bIgnoreMinors || (!GET_PLAYER((PlayerTypes)iI).isBarbarian() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
+
+			{
+
+				if( isHasPathToAreaPlayerCity((PlayerTypes)iI, iFlags, iMaxPathTurns) )
+
+				{
+
+					return true;
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+	return false;
+
+}
+
+
+
+bool CvSelectionGroup::canMoveAllTerrain() const
+
+{
+
+	PROFILE_FUNC();
+
+
+
+	CLLNode<IDInfo>* pUnitNode;
+
+	CvUnit* pLoopUnit;
+
+
+
+	pUnitNode = headUnitNode();
+
+
+
+	while (pUnitNode != NULL)
+
+	{
+
+		pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+		pUnitNode = nextUnitNode(pUnitNode);
+
+
+
+		if (!(pLoopUnit->canMoveAllTerrain()))
+
+		{
+
+			return false;
+
+		}
+
+	}
+
+
+
+	return true;
+
+}
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
+/************************************************************************************************/
+
+
 void CvSelectionGroup::unloadAll()
 {
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
@@ -3035,19 +3262,21 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 						bAttack = true;
 
-						CySelectionGroup* pyGroup = new CySelectionGroup(this);
-						CyPlot* pyPlot = new CyPlot(pDestPlot);
-						CyArgsList argsList;
-						argsList.add(gDLL->getPythonIFace()->makePythonObject(pyGroup));	// pass in Selection Group class
-						argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in Plot class
-						long lResult=0;
-						gDLL->getPythonIFace()->callFunction(PYGameModule, "doCombat", argsList.makeFunctionArgs(), &lResult);
-						delete pyGroup;	// python fxn must not hold on to this pointer 
-						delete pyPlot;	// python fxn must not hold on to this pointer 
-						if (lResult == 1)
-						{
-							break;
-						}
+						// 3Miro: SPEEDTWEAK more Python
+						//CySelectionGroup* pyGroup = new CySelectionGroup(this);
+						//CyPlot* pyPlot = new CyPlot(pDestPlot);
+						//CyArgsList argsList;
+						//argsList.add(gDLL->getPythonIFace()->makePythonObject(pyGroup));	// pass in Selection Group class
+						//argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in Plot class
+						//long lResult=0;
+						//gDLL->getPythonIFace()->callFunction(PYGameModule, "doCombat", argsList.makeFunctionArgs(), &lResult);
+						//delete pyGroup;	// python fxn must not hold on to this pointer 
+						//delete pyPlot;	// python fxn must not hold on to this pointer 
+						//if (lResult == 1)
+						//{
+						//	break;
+						//}
+						// 3Miro: end
 
 						if (getNumUnits() > 1)
 						{

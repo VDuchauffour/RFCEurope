@@ -5392,7 +5392,11 @@ m_paiFeatureHappinessChanges(NULL),
 m_pabHurry(NULL),
 m_pabSpecialBuildingNotRequired(NULL),
 m_pabSpecialistValid(NULL),
-m_ppiImprovementYieldChanges(NULL)
+m_ppiImprovementYieldChanges(NULL),
+m_bAllowNonStateReligionBuildings(false),
+m_iBuildingCivicComboBuilding(0),
+m_iBuildingCivicComboGold(0),
+m_iUnitProductionBoost(0)
 {
 }
 
@@ -5666,6 +5670,23 @@ bool CvCivicInfo::isStabilityCommerceBonus() const
 {
 	return m_bStabilityCommerceBonus;
 }
+
+bool CvCivicInfo::isAllowNonStateReligionBuildings() const
+{ 
+	return m_bAllowNonStateReligionBuildings; // 3MiroCivic: Allow non state religion buildings
+};
+int CvCivicInfo::getBuildingCivicComboBuilding() const
+{
+	return m_iBuildingCivicComboBuilding;
+};
+int CvCivicInfo::getBuildingCivicComboGold() const
+{
+	return m_iBuildingCivicComboGold;
+};
+int CvCivicInfo::getUnitProductionBoost() const
+{
+	return m_iUnitProductionBoost;
+};
 //Rhye - end 6th
 
 const wchar* CvCivicInfo::getWeLoveTheKing()		
@@ -5859,6 +5880,10 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bStabilityFoundBonus); //Rhye 6th
 	stream->Read(&m_bStabilityConquestBonus); //Rhye 6th
 	stream->Read(&m_bStabilityCommerceBonus); //Rhye 6th
+	stream->Read(&m_bAllowNonStateReligionBuildings); // 3MiroCivic
+	stream->Read(&m_iBuildingCivicComboBuilding); // 3MiroCivic
+	stream->Read(&m_iBuildingCivicComboGold); // 3MiroCivic
+	stream->Read(&m_iUnitProductionBoost); // 3MiroCivic
 
 	// Arrays
 
@@ -5985,6 +6010,10 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bStabilityFoundBonus); //Rhye 6th
 	stream->Write(m_bStabilityConquestBonus); //Rhye 6th
 	stream->Write(m_bStabilityCommerceBonus); //Rhye 6th
+	stream->Write(m_bAllowNonStateReligionBuildings); // 3MiroCivic
+	stream->Write(m_iBuildingCivicComboBuilding); // 3MiroCivic
+	stream->Write(m_iBuildingCivicComboGold); // 3MiroCivic
+	stream->Write(m_iUnitProductionBoost); // 3MiroCivic
 
 	// Arrays
 
@@ -6071,6 +6100,13 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bStabilityFoundBonus, "bStabilityFoundBonus"); //Rhye 6th
 	pXML->GetChildXmlValByName(&m_bStabilityConquestBonus, "bStabilityConquestBonus"); //Rhye 6th
 	pXML->GetChildXmlValByName(&m_bStabilityCommerceBonus, "bStabilityCommerceBonus"); //Rhye 6th
+	pXML->GetChildXmlValByName(&m_bAllowNonStateReligionBuildings, "bAllowNonStateReligionBuildings"); //3MiroCivic
+	// -------------------------------
+		pXML->GetChildXmlValByName(szTextVal, "iCivicGoldBuildingClass"); //3MiroCivic
+		m_iBuildingCivicComboBuilding = GC.getInfoTypeForString(szTextVal);
+	// -------------------------------
+	pXML->GetChildXmlValByName(&m_iBuildingCivicComboGold, "iCivicGoldGoldAmount"); //3MiroCivic
+	pXML->GetChildXmlValByName(&m_iUnitProductionBoost, "iUnitProductionBoost"); //3MiroCivic
 	pXML->GetChildXmlValByName(&m_iStateReligionHappiness, "iStateReligionHappiness");
 	pXML->GetChildXmlValByName(&m_iNonStateReligionHappiness, "iNonStateReligionHappiness");
 	pXML->GetChildXmlValByName(&m_iStateReligionUnitProductionModifier, "iStateReligionUnitProductionModifier");
@@ -9348,7 +9384,21 @@ m_pbLeaders(NULL),
 m_pbCivilizationFreeBuildingClass(NULL),
 m_pbCivilizationFreeTechs(NULL),
 m_pbCivilizationDisableTechs(NULL),
-m_paszCityNames(NULL)
+m_paszCityNames(NULL),
+m_piDCNReligions(NULL),
+m_piDCNNotReligions(NULL),
+m_piDCNCicivc(NULL),
+m_piDCNOrCicivc1(NULL),
+m_piDCNOrCicivc2(NULL),
+m_piDCNVassalOf(NULL),
+m_piDCNGenericVassal(NULL),
+m_piDCNMasterOf(NULL),
+m_piDCNGenericMaster(NULL),
+m_piDCNAfterTurn(NULL),
+m_pszDCNName(NULL),
+m_pszDCNTempMasterOf(NULL),
+m_pszDCNTempVassalOf(NULL),
+m_iNumDCNConditions(0)
 {
 }
 
@@ -9370,6 +9420,26 @@ CvCivilizationInfo::~CvCivilizationInfo()
 	SAFE_DELETE_ARRAY(m_pbCivilizationFreeTechs);
 	SAFE_DELETE_ARRAY(m_pbCivilizationDisableTechs);
 	SAFE_DELETE_ARRAY(m_paszCityNames);
+
+	// 3MiroDCN
+	SAFE_DELETE_ARRAY(m_piDCNReligions)
+	SAFE_DELETE_ARRAY(m_piDCNNotReligions)
+	SAFE_DELETE_ARRAY(m_piDCNCicivc)
+	SAFE_DELETE_ARRAY(m_piDCNOrCicivc1)
+	SAFE_DELETE_ARRAY(m_piDCNOrCicivc2)
+	SAFE_DELETE_ARRAY(m_piDCNVassalOf)
+	SAFE_DELETE_ARRAY(m_piDCNGenericVassal)
+	SAFE_DELETE_ARRAY(m_piDCNMasterOf)
+	SAFE_DELETE_ARRAY(m_piDCNGenericMaster)
+	SAFE_DELETE_ARRAY(m_piDCNAfterTurn)
+	SAFE_DELETE_ARRAY(m_piDCNConqProvinceOfTypeType)
+	SAFE_DELETE_ARRAY(m_piDCNConqProvinceOfTypeNum)
+	SAFE_DELETE_ARRAY(m_piDCNCondSpecificProvince)
+	SAFE_DELETE_ARRAY(m_piDCNCondHasRespawned)
+	SAFE_DELETE_ARRAY(m_pszDCNName)
+	SAFE_DELETE_ARRAY(m_pszDCNTempMasterOf)
+	SAFE_DELETE_ARRAY(m_pszDCNTempVassalOf)
+	m_iNumDCNConditions = 0;
 }
 
 void CvCivilizationInfo::reset()
@@ -9496,6 +9566,39 @@ const wchar* CvCivilizationInfo::getSGrowth() const
 {return m_szGrowth;};
 const wchar* CvCivilizationInfo::getSStart() const
 {return m_szStartingSituation;};
+//3MiroDCN
+DllExport const wchar* CvCivilizationInfo::getDCNName( int iIndex ) const
+{ return m_pszDCNName[iIndex]; };
+int CvCivilizationInfo::getDCNCondReligion( int iIndex ) const
+{ return m_piDCNReligions[iIndex]; };
+int CvCivilizationInfo::getDCNCondNotReligion( int iIndex ) const
+{ return m_piDCNNotReligions[iIndex]; };
+int CvCivilizationInfo::getDCNCondCivic( int iIndex ) const
+{ return m_piDCNCicivc[iIndex]; };
+int CvCivilizationInfo::getDCNCondOrCivic1( int iIndex ) const
+{ return m_piDCNOrCicivc1[iIndex]; };
+int CvCivilizationInfo::getDCNCondOrCivic2( int iIndex ) const
+{ return m_piDCNOrCicivc2[iIndex]; };
+int CvCivilizationInfo::getDCNCondVassalOf( int iIndex ) const
+{ return m_piDCNVassalOf[iIndex]; };
+int CvCivilizationInfo::getDCNCondGenericVassal( int iIndex ) const
+{ return m_piDCNGenericVassal[iIndex]; };
+int CvCivilizationInfo::getDCNCondMasterOf( int iIndex ) const
+{ return m_piDCNMasterOf[iIndex]; };
+int CvCivilizationInfo::getDCNCondGenericMaster( int iIndex ) const
+{ return m_piDCNGenericMaster[iIndex]; };
+int CvCivilizationInfo::getDCNCondAfterTurn( int iIndex ) const
+{ return m_piDCNAfterTurn[iIndex]; };
+int CvCivilizationInfo::getDCNCondConqProvinceOfTypeType( int iIndex ) const
+{ return m_piDCNConqProvinceOfTypeType[iIndex]; };
+int CvCivilizationInfo::getDCNCondConqProvinceOfTypeNum( int iIndex ) const
+{ return m_piDCNConqProvinceOfTypeNum[iIndex]; };
+int CvCivilizationInfo::getDCNCondCondSpecificProvince( int iIndex ) const
+{ return m_piDCNCondSpecificProvince[iIndex]; };
+bool CvCivilizationInfo::getDCNCondHasRespawned( int iIndex ) const
+{ return (m_piDCNCondHasRespawned[iIndex] == 1); };
+int CvCivilizationInfo::getDCNNumber() const
+{ return m_iNumDCNConditions; };
 // 3MiroCiv: END
 
 // Arrays
@@ -9621,6 +9724,71 @@ void CvCivilizationInfo::read(FDataStreamBase* stream)
 	stream->ReadString(m_szGrowth);
 	stream->ReadString(m_szStartingSituation);
 
+	//3MiroDCN
+	stream->Read(&m_iNumDCNConditions);
+	
+	SAFE_DELETE_ARRAY(m_piDCNReligions);
+	m_piDCNReligions = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNReligions);
+	
+	SAFE_DELETE_ARRAY(m_piDCNNotReligions);
+	m_piDCNNotReligions = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNNotReligions);
+	
+	SAFE_DELETE_ARRAY(m_piDCNCicivc);
+	m_piDCNCicivc = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNCicivc);
+	
+	SAFE_DELETE_ARRAY(m_piDCNOrCicivc1);
+	m_piDCNOrCicivc1 = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNOrCicivc1);
+	
+	SAFE_DELETE_ARRAY(m_piDCNOrCicivc2);
+	m_piDCNOrCicivc2 = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNOrCicivc2);
+	
+	SAFE_DELETE_ARRAY(m_piDCNVassalOf);
+	m_piDCNVassalOf = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNVassalOf);
+	
+	SAFE_DELETE_ARRAY(m_piDCNGenericVassal);
+	m_piDCNGenericVassal = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNGenericVassal);
+	
+	SAFE_DELETE_ARRAY(m_piDCNMasterOf);
+	m_piDCNMasterOf = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNMasterOf);
+	
+	SAFE_DELETE_ARRAY(m_piDCNGenericMaster);
+	m_piDCNGenericMaster = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNGenericMaster);
+
+	SAFE_DELETE_ARRAY(m_piDCNAfterTurn);
+	m_piDCNAfterTurn = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNAfterTurn);
+
+	SAFE_DELETE_ARRAY(m_piDCNConqProvinceOfTypeType);
+	m_piDCNConqProvinceOfTypeType = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNConqProvinceOfTypeType);
+
+	SAFE_DELETE_ARRAY(m_piDCNConqProvinceOfTypeNum);
+	m_piDCNConqProvinceOfTypeNum = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNConqProvinceOfTypeNum);
+
+	SAFE_DELETE_ARRAY(m_piDCNCondSpecificProvince);
+	m_piDCNCondSpecificProvince = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNCondSpecificProvince);
+
+	SAFE_DELETE_ARRAY(m_piDCNCondHasRespawned);
+	m_piDCNCondHasRespawned = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNCondHasRespawned);
+
+	
+	SAFE_DELETE_ARRAY(m_pszDCNName);
+	m_pszDCNName = new CvWString[m_iNumDCNConditions];
+	stream->ReadString(m_iNumDCNConditions, m_pszDCNName);
+
+
 	// Arrays
 
 	SAFE_DELETE_ARRAY(m_piCivilizationBuildings);
@@ -9697,6 +9865,23 @@ void CvCivilizationInfo::write(FDataStreamBase* stream)
 	stream->WriteString(m_szGrowth);
 	stream->WriteString(m_szStartingSituation);
 
+	// 3MiroDCN
+	stream->Write( m_iNumDCNConditions );
+	stream->Write( m_iNumDCNConditions, m_piDCNReligions);
+	stream->Write( m_iNumDCNConditions, m_piDCNNotReligions);
+	stream->Write( m_iNumDCNConditions, m_piDCNCicivc);
+	stream->Write( m_iNumDCNConditions, m_piDCNOrCicivc1);
+	stream->Write( m_iNumDCNConditions, m_piDCNOrCicivc2);
+	stream->Write( m_iNumDCNConditions, m_piDCNVassalOf);
+	stream->Write( m_iNumDCNConditions, m_piDCNGenericVassal);
+	stream->Write( m_iNumDCNConditions, m_piDCNMasterOf);
+	stream->Write( m_iNumDCNConditions, m_piDCNGenericMaster);
+	stream->Write( m_iNumDCNConditions, m_piDCNAfterTurn);
+	stream->Write( m_iNumDCNConditions, m_piDCNConqProvinceOfTypeType);
+	stream->Write( m_iNumDCNConditions, m_piDCNConqProvinceOfTypeNum);
+	stream->Write( m_iNumDCNConditions, m_piDCNCondSpecificProvince);
+	stream->Write( m_iNumDCNConditions, m_piDCNCondHasRespawned);
+	stream->WriteString( m_iNumDCNConditions, m_pszDCNName);
 	// Arrays
 
 	stream->Write(GC.getNumBuildingClassInfos(), m_piCivilizationBuildings);
@@ -9735,6 +9920,89 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(m_szCulture, "SituationCulture");
 	pXML->GetChildXmlValByName(m_szGrowth, "SituationGrowth");
 	pXML->GetChildXmlValByName(m_szStartingSituation, "SituationStart");
+
+	// 3MiroDCN
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"DCNConditions")){ // set root to DCNCnditions
+		// pXML->Skip any comments and stop at the next value we might want // 3Miro: Not sure about this
+		if (pXML->SkipToNextVal()){
+			iNumSibs = gDLL->getXMLIFace()->GetNumChildren(pXML->GetXML()); // get the number of DCNCondition tags
+			m_iNumDCNConditions = iNumSibs; // set the number of conditions
+
+			if ( (iNumSibs > 0)&& (gDLL->getXMLIFace()->SetToChild(pXML->GetXML())) ){ // if more than zero, set root to the DCNCondition
+				m_piDCNReligions     = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNNotReligions  = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNCicivc        = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNOrCicivc1     = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNOrCicivc2     = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNVassalOf      = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNGenericVassal = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNMasterOf      = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNGenericMaster = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNAfterTurn     = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNConqProvinceOfTypeType = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNConqProvinceOfTypeNum  = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNCondSpecificProvince   = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNCondHasRespawned   = new int[m_iNumDCNConditions]; // init arrays
+				m_pszDCNName         = new CvWString[m_iNumDCNConditions];
+				m_pszDCNTempMasterOf = new CvString[m_iNumDCNConditions];
+				m_pszDCNTempVassalOf = new CvString[m_iNumDCNConditions];
+
+				for (j=0;j<iNumSibs;j++){ // for all of the conditions
+					if (pXML->GetChildXmlVal(szTextVal)) // get inside the condition and read the first tag
+					{
+						// On Enter we read First Civic
+						m_piDCNCicivc[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
+						pXML->GetNextXmlVal( szTextVal); // read OrCivic1
+						m_piDCNOrCicivc1[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
+						pXML->GetNextXmlVal( szTextVal); // read OrCivic2
+						m_piDCNOrCicivc2[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
+						pXML->GetNextXmlVal( szTextVal); // read Religion
+						m_piDCNReligions[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
+						pXML->GetNextXmlVal( szTextVal); // read NotReligion
+						m_piDCNNotReligions[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
+						pXML->GetNextXmlVal(  m_pszDCNTempVassalOf[j] ); // read the temp name of MasterOf
+						pXML->GetNextXmlVal( &m_piDCNGenericVassal[j]); // generic vassal of anyone
+						pXML->GetNextXmlVal(  m_pszDCNTempMasterOf[j] ); // read the Master of
+						pXML->GetNextXmlVal( &m_piDCNGenericMaster[j] ); // generic Master of anyone
+						pXML->GetNextXmlVal( &m_piDCNAfterTurn[j] ); // when do we change
+						pXML->GetNextXmlVal( &m_piDCNConqProvinceOfTypeType[j] ); // conq outer provinces (give the type)
+						pXML->GetNextXmlVal( &m_piDCNConqProvinceOfTypeNum[j] ); // how many other provinces
+						pXML->GetNextXmlVal( &m_piDCNCondSpecificProvince[j] ); // conquer a specific province
+						pXML->GetNextXmlVal( &m_piDCNCondHasRespawned[j] ); // conquer a specific province
+						pXML->GetNextXmlVal(  m_pszDCNName[j] ); // get the name
+
+						gDLL->getXMLIFace()->SetToParent(pXML->GetXML()); // get back to DCNCondition being the root
+
+						//pXML->GetNextXmlVal( szTextVal); // read the next tag
+						//m_pszDCNTempVassalOf[j] = szTextVal.GetCString();
+						//pXML->GetChildXmlValByName(&m_piDCNGenericVassal[j], "DCNConditionGenericVassal"); // 3Miro: until here, this is read always as zero
+						//pXML->GetNextXmlVal( szTextVal); // read the next tag
+						//m_piDCNGenericVassal[j] = atoi(szTextVal.GetCString());
+						//pXML->GetChildXmlValByName(&m_piDCNGenericMaster[j], "DCNConditionGenericMasterl");
+						//pXML->GetChildXmlValByName(&m_piDCNAfterTurn[j], "DCNConditionAfterTurn");
+						//pXML->GetNextXmlVal( szTextVal); // read the next tag
+						//m_piDCNGenericVassal[j] = ( _tcscmp(szTextVal.GetCString(),"1") ) ? 1 : 0;
+						//pXML->GetNextXmlVal( m_pszDCNTempVassalOf[j] ); // read the next tag
+						//pXML->GetNextXmlVal( szTextVal); // read the next tag
+						//m_piDCNGenericVassal[j] = ( _tcscmp(szTextVal.GetCString(),"1") ) ? 1 : 0;
+						//m_piDCNReligions[j] = pXML->FindInInfoClass(szTextVal);
+						//FAssertMsg(true, szTextVal.GetCString() );
+						//m_piDCNReligions[j] = pXML->FindInInfoClass(szTextVal); // find the int value of the tag
+						//m_piCivilizationBuildings[iBuildingClassIndex] = pXML->FindInInfoClass(szTextVal);
+						//gDLL->getXMLIFace()->NextSibling(pXML->GetXML()
+					}
+
+					if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML())) // this looks redundant, but if there are no mote DNCondition tags, break the loop
+					{
+						break;
+					}
+				}
+				gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+			}
+		};
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	};
+
 	// 3MiroCIV: New Civ Attributes END
 
 	pXML->GetChildXmlValByName(m_szShortDescriptionKey, "ShortDescription");
@@ -9939,6 +10207,12 @@ bool CvCivilizationInfo::readPass2(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(szTextVal, "DerivativeCiv");
 	m_iDerivativeCiv = GC.getInfoTypeForString(szTextVal);
+
+	// 3MiroDCN
+	for( int j = 0; j < m_iNumDCNConditions; j++ ){
+		m_piDCNVassalOf[j] = GC.getInfoTypeForString(m_pszDCNTempVassalOf[j]);
+		m_piDCNMasterOf[j] = GC.getInfoTypeForString(m_pszDCNTempMasterOf[j]);
+	};
 
 	return true;
 }
@@ -10274,7 +10548,7 @@ int CvHandicapInfo::getUnitCostPercentByID(PlayerTypes pl) const
 	int result = m_iUnitCostPercent;
 
 	// 3Miro: unit support cost modifiers
-	result *= unitSupportModifier[pl];
+	result *= ( GET_PLAYER(pl).isHuman() ) ? unitSupportModifierHu[pl] : unitSupportModifierAI[pl];
 	result /= 100;
 	return result;
 }
@@ -10300,7 +10574,7 @@ int CvHandicapInfo::getResearchPercentByID(PlayerTypes pl) const
 	}
 
 	// 3Miro: modify research rate, also Maya UP
-	researchPercent *= researchModifier[pl];
+	researchPercent *= ( GET_PLAYER(pl).isHuman() ) ? researchModifierHu[pl] : researchModifierAI[pl];
 	researchPercent /= 100;
 
 	// 3MiroFaith
@@ -10340,7 +10614,7 @@ int CvHandicapInfo::getDistanceMaintenancePercentByID(PlayerTypes pl) const
 	int result = m_iDistanceMaintenancePercent;
 
 	// 3Miro: Distance to capital support cost
-	result *= cityDistanceSupport[pl];
+	result *= (GET_PLAYER(pl).isHuman()) ? cityDistanceSupportHu[pl] : cityDistanceSupportAI[pl];
 	result /= 100;
 
 	// 3MiroUP: Endless Land
@@ -10363,7 +10637,7 @@ int CvHandicapInfo::getNumCitiesMaintenancePercentByID(PlayerTypes pl) const
 	int result = m_iNumCitiesMaintenancePercent;
 
 	// 3Miro: modify the number of cities support cost
-	result *= cityNumberSupport[pl];
+	result *= ( GET_PLAYER(pl).isHuman() ) ? cityNumberSupportHu[pl] : cityNumberSupportAI[pl];
 	result /= 100;
 	/*if ( UniquePowers[pl][UP_ENDLESS_LAND] == 1){
 		result *= 50;
@@ -10403,7 +10677,7 @@ int CvHandicapInfo::getCivicUpkeepPercentByID(PlayerTypes pl) const
 	int result = m_iCivicUpkeepPercent;
 
 	// 3Miro: civic cost modifiers
-	result *= civicSupportModifier[pl];
+	result *= ( GET_PLAYER(pl).isHuman() ) ? civicSupportModifierHu[pl] : civicSupportModifierAI[pl];
 	result /= 100;
 	return result;
 }
@@ -10425,7 +10699,7 @@ int CvHandicapInfo::getHealthBonusByID(PlayerTypes pl) const
 	int result = m_iHealthBonus;
 
 	// 3Miro: health bonus based on the difficulty level
-	result *= healthModifier[pl];
+	result *= ( GET_PLAYER(pl).isHuman() ) ? healthModifierHu[pl] : healthModifierAI[pl];
 	result /= 100;
 	return result;
 }
@@ -15646,7 +15920,9 @@ m_piVictoryMinThreshold(NULL),
 m_piProjectsNeeded(NULL),
 m_piFreeResources(NULL), /* 3MiroProjects */
 m_piPrereqProject(NULL), /* 3MiroProjects */
-m_iPrereqBonus(-1)  /* 3MiroProjects */
+m_iPrereqBonus(-1),  /* 3MiroProjects */
+m_bIsColony(false), /* 3MiroProjects */
+m_iCannotBuildAfterTurn(-1) /* 3MiroProjects */
 {
 }
 
@@ -15757,11 +16033,6 @@ void CvProjectInfo::setCreateSound(const TCHAR* szVal)
 	m_szCreateSound = szVal; 
 }
 
-int CvProjectInfo::getPrereqBonus(){ // 3MiroProjects
-	return m_iPrereqBonus;
-};
-
-
 // Arrays
 
 int CvProjectInfo::getBonusProductionModifier(int i) const										
@@ -15811,6 +16082,16 @@ int CvProjectInfo::getPrereqProject( ProjectTypes eProject ){
 	return m_piPrereqProject[eProject];
 };
 
+bool CvProjectInfo::getIsColony(){
+	return m_bIsColony;
+};
+int CvProjectInfo::getPrereqBonus(){ // 3MiroProjects
+	return m_iPrereqBonus;
+};
+int CvProjectInfo::getCannotBuildAfterTurn(){
+	return m_iCannotBuildAfterTurn;
+};
+
 bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
@@ -15845,6 +16126,9 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(szTextVal, "PBonus");
 	//GC.getGameINLINE().logMsg( " Bonus read:  %s ", szTextVal.c_str() );
 	m_iPrereqBonus = pXML->FindInInfoClass(szTextVal);
+
+	pXML->GetChildXmlValByName(&m_bIsColony, "bIsColony"); // 3MiroProjects
+	pXML->GetChildXmlValByName(&m_iCannotBuildAfterTurn, "iCannotBeBuildAfterTurn"); // 3MiroProjects
 
 	pXML->SetVariableListTagPair(&m_piBonusProductionModifier, "BonusProductionModifiers", sizeof(GC.getBonusInfo((BonusTypes)0)), GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, "VictoryThresholds", sizeof(GC.getVictoryInfo((VictoryTypes)0)), GC.getNumVictoryInfos());
@@ -18739,6 +19023,7 @@ m_iTrainPercent(0),
 m_iConstructPercent(0),
 m_iCreatePercent(0),
 m_iResearchPercent(0),
+m_iTechCostModifier(0), // BETTER_BTS_AI_MOD / Tech Diffusion
 m_iBuildPercent(0),
 m_iImprovementPercent(0),
 m_iGreatPeoplePercent(0),
@@ -18826,6 +19111,18 @@ int CvEraInfo::getResearchPercent() const
 {
 	return m_iResearchPercent; 
 }
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Tech Diffusion                                                                               */
+/************************************************************************************************/
+int CvEraInfo::getTechCostModifier() const
+{
+	return m_iTechCostModifier; 
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 int CvEraInfo::getBuildPercent() const
 {
@@ -18937,6 +19234,7 @@ bool CvEraInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iConstructPercent, "iConstructPercent");
 	pXML->GetChildXmlValByName(&m_iCreatePercent, "iCreatePercent");
 	pXML->GetChildXmlValByName(&m_iResearchPercent, "iResearchPercent");
+	//pXML->GetChildXmlValByName(&m_iTechCostModifier, "iTechCostModifier"); // BETTER_BTS_AI_MOD / Tech Diffusion // modify XML?
 	pXML->GetChildXmlValByName(&m_iBuildPercent, "iBuildPercent");
 	pXML->GetChildXmlValByName(&m_iImprovementPercent, "iImprovementPercent");
 	pXML->GetChildXmlValByName(&m_iGreatPeoplePercent, "iGreatPeoplePercent");
