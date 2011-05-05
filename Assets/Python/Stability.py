@@ -102,7 +102,7 @@ class Stability:
                 
                 if ( pPlayer.getAnarchyTurns() != 0 ):
                         self.recalcCivicCombos(iPlayer)
-                        self.recalcEpansion(iPlaye)
+                        self.recalcEpansion(pPlayer)
                         iNumCities = pPlayer.getNumCities()
                         if ( pPlayer.isHuman() ):
                                 pPlayer.changeStabilityBase( iCathegoryCivics, max( -3, -iNumCities / 3 ) )
