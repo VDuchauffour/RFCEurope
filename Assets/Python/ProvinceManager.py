@@ -427,9 +427,9 @@ class ProvinceManager:
                 iProv = rfcemaps.tProinceMap[y][x]
                 if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
                         if ( iProv in self.tPot2NormProvinces[iPlayer] ):
-                                pPlayer.setProvinceType( iProv, iProvinceCore )
-                        if ( iProv in self.tPot2CoreProvinces[iPlayer] ):
                                 pPlayer.setProvinceType( iProv, iProvinceNatural )
+                        if ( iProv in self.tPot2CoreProvinces[iPlayer] ):
+                                pPlayer.setProvinceType( iProv, iProvinceCore )
                 
                 
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
@@ -439,9 +439,9 @@ class ProvinceManager:
                 iProv = city.getProvince()
                 if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
                         if ( iProv in self.tPot2NormProvinces[playerType] ):
-                                pPlayer.setProvinceType( iProv, iProvinceCore )
-                        if ( iProv in self.tPot2CoreProvinces[playerType] ):
                                 pPlayer.setProvinceType( iProv, iProvinceNatural )
+                        if ( iProv in self.tPot2CoreProvinces[playerType] ):
+                                pPlayer.setProvinceType( iProv, iProvinceCore )
         
         def onCityRazed(self, iOwner, playerType, city):
                 #print(" ProvinceManager Razed")
