@@ -448,6 +448,22 @@ class ProvinceManager:
                 pass
                 
         def onRespawn(self, iPlayer ):
+                # reset the provinces
+                pPlayer = self.tpPlayerList[iPlayer]
+                for iProv in self.tCoreProvinces[iPlayer]:
+                        pPlayer.setProvinceType( iProv, iProvinceCore )
+                for iProv in self.tNormProvinces[iPlayer]:
+                        pPlayer.setProvinceType( iProv, iProvinceNatural)
+                for iProv in self.tOuterProvinces[iPlayer]:
+                        pPlayer.setProvinceType( iProv, iProvinceOuter )
+                for iProv in self.tPot2CoreProvinces[iPlayer]:
+                        pPlayer.setProvinceType( iProv, iProvincePotential )
+                for iProv in self.tPot2NormProvinces[iPlayer]:
+                        pPlayer.setProvinceType( iProv, iProvincePotential )
+                for iProv in self.tDesireProvinces[iPlayer]:
+                        pPlayer.setProvinceType( iProv, iProvinceDesired )
+                
+                #### -------- Special Respawn Conditions ---------- ####
                 if ( iPlayer == iArabia ):
                         for iProv in range( xml.iP_MaxNumberOfProvinces ):
                                 pArabia.setProvinceType( iProv, iProvinceNone )

@@ -53,6 +53,7 @@ Changes for Beta 10:
 	Map and province changes:
 		Dense forest near Lyon and Umea is a forest now, so the sulphur can be mined without researching Machine Tools first
 		The province of Netherlands is now called Holland
+		New Polish City Name Map and New Polish resources
 
 	XML updates:
 		XML cleanup (unused lines of code are removed)
@@ -89,6 +90,8 @@ Changes for Beta 10:
 		Fixed: Atlantic Access should now properly appear near Gibraltar
 		Fixed: The AI should properly weight the benefits from cottages vs water tiles (this was a problem with cottage growth time mechanics)
 		Fixed: A province bug making most provinces "Natural" as opposed to "Core"
+		Fixed: A bug with the settler AI making units hand in an infinite loop
+		Fixed: Provinces now reset on respawn, this should prevent players from dying right after respawn
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
