@@ -46,6 +46,30 @@ MV1		Make atlas from the buttons
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Changes for Beta 11:
+
+	General changes:
+
+	Map and province changes:
+
+
+	XML updates:
+
+
+	Python Updates:
+
+	Art updates:
+
+	Balance:
+
+	Bugfixes:
+		Bugfix: Moscow UHV 2 should work now
+		Bugfix: Removed the extra French units on spawn, readded the walrus, removed the dense forest near Lyon
+		
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Changes for Beta 10:
 
 	General changes:

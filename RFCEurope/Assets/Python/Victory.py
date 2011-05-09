@@ -1067,6 +1067,7 @@ class Victory:
                                 pMoscow.setUHV( 0, 0 )
                 # Get huge land (20%)
                 if ( pMoscow.getUHV( 1 ) == -1 ):
+                        totalLand = gc.getMap().getLandPlots()
                         RussianLand = pMoscow.getTotalLand()
                         if (totalLand > 0):
                                 landPercent = (RussianLand * 100.0) / totalLand
