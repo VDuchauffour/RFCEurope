@@ -375,6 +375,7 @@ iAccess = 43
 iNorthAccess = 44
 iSouthAccess = 45
 iAsiaAccess = 46
+iAmber = 47
 
 #Buildings
 

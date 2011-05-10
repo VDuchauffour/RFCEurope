@@ -51,10 +51,11 @@ Changes for Beta 11:
 	General changes:
 
 	Map and province changes:
+		Added Amber (not to the map)
 
 
 	XML updates:
-
+		Added "The" in front of the Arabian UHV-names
 
 	Python Updates:
 
