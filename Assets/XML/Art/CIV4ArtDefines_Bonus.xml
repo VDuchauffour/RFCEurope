@@ -412,5 +412,14 @@
 			<Button>Art/Interface/Buttons/WorldBuilder/Access.dds</Button>
 			<FontButtonIndex>47</FontButtonIndex>
 		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_AMBER</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Amber/Gems.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/WorldBuilder/amber.dds</Button>
+			<FontButtonIndex>48</FontButtonIndex>
+		</BonusArtInfo>
 	</BonusArtInfos>
 </Civ4ArtDefines>

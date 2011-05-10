@@ -178,4 +178,12 @@
 		<Spanish>Algod&#243;n</Spanish>
 		<Russian>&#194;&#224;&#242;&#224;</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_AMBER</Tag>
+		<English>Amber</English>
+		<French>Ambre</French>
+		<German>Bernstein</German>
+		<Italian>Ambera</Italian>
+		<Spanish>Ambar</Spanish>
+	</TEXT>
 </Civ4GameText>
