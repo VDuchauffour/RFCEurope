@@ -740,7 +740,7 @@ class CvRFCEventHandler:
                 #            iPlayer == con.iBabylonia):                            
                 #                self.vic.onTechAcquired(argsList[0], argsList[2])		
                 self.vic.onTechAcquired(argsList[0], argsList[2])
-                self.res.onTechAcquired(argsList[0], argsList[2])
+                #self.res.onTechAcquired(argsList[0], argsList[2])
                                 
                 if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
                         self.rel.onTechAcquired(argsList[0], argsList[2])

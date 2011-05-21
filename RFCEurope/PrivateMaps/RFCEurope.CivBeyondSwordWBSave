@@ -1420,7 +1420,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=69
-	BonusType=BONUS_ACCESS
+	BonusType=BONUS_NORTH_AMERICA_ACCESS
+	ImprovementType=IMPROVEMENT_COLONIAL_TRADE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -7839,6 +7840,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=31
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8930,6 +8932,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=23
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8945,6 +8948,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=26
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9039,6 +9043,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=42
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -13355,6 +13360,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=50
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14098,6 +14104,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=41
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14563,6 +14570,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=54
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19385,6 +19393,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=54
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

@@ -152,7 +152,7 @@
 				</FreeBonus>
 			</FreeBonuses>
 			<PProjects/>
-			<PBonus>BONUS_ACCESS</PBonus>
+			<PBonus>BONUS_NORTH_AMERICA_ACCESS</PBonus>
                         <bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>150</iCannotBeBuildAfterTurn>
 			<CreateSound/>

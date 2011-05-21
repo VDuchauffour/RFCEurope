@@ -739,7 +739,7 @@ class Victory:
                         iBurgundyRank = gc.getGame().getTeamRank(iBurgundy)
                         bIsOnTop = True
                         for iTestPlayer in tBurgundyOutrank:
-                                if ( gc.getGame().getTeamRank(iTestPlayer) > iBurgundyRank ):
+                                if ( gc.getGame().getTeamRank(iTestPlayer) < iBurgundyRank ):
                                         bIsOnTop = False
                                         break
                         if ( bIsOnTop ):
