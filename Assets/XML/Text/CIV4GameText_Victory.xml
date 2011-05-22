@@ -173,7 +173,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
-		<English>[COLOR_YELLOW]Not Even the Birds can Fly Through:[COLOR_REVERT] Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</English>
+		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</English>
 		<French>Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1393 ap.JC.</French>
 		<German>Verlieren Sie keine Stadt an die Barbaren, die Byzantiner oder Osmanen vor 1393 n. Chr.</German>
 		<Italian>Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Italian>
@@ -218,12 +218,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR2</Tag>
-		<English>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</English>
-		<French>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</French>
-		<German>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</German>
-		<Italian>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Italian>
-		<Spanish>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Spanish>
-		<Russian>[COLOR_YELLOW]The Burgundian way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Russian>
+		<English>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</English>
+		<French>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</French>
+		<German>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</German>
+		<Italian>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Italian>
+		<Spanish>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Spanish>
+		<Russian>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
@@ -272,7 +272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR2</Tag>
-		<English>[COLOR_YELLOW]Moorish architecture is the best:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</English>
+		<English>[COLOR_YELLOW]Moorish Architecture is the best:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</English>
 		<French>Construire l'Alhambra, les Jardins d'Al-Andalus et La Mezquita en 1309 ap.JC.</French>
 		<German>Errichten Sie die Wunder Alhambra, die G&#228;rten von Al-Andalus und La Mezquita bis zum Jahr 1309 n. Chr.</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
@@ -471,7 +471,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>[COLOR_YELLOW]Everybody hires Landsknecht Mercenaries:[COLOR_REVERT] Have the largest army in Europe in 1540AD.</English>
+		<English>[COLOR_YELLOW]Everybody Hires Landsknecht Mercenaries:[COLOR_REVERT] Have the largest army in Europe in 1540AD.</English>
 		<French>Avoir la plus grande arm&#233;e d'Europe en 1540 ap.JC.</French>
 		<German>Befehligen Sie die gr&#246;&#223;te Armee in Europa im Jahr 1540 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -534,7 +534,7 @@
  	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN1</Tag>
-		<English>[COLOR_YELLOW]Respublica superiorem non recognoscens:[COLOR_REVERT] Conquer Sardinia, Marseilles, Milano, Cyprus and Crete in 1540AD.</English>
+		<English>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Conquer Sardinia, Marseilles, Milano, Cyprus and Crete in 1540AD.</English>
 		<French>Contr&#244;ler la Sardaigne, Marseilles, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
 		<German>Kontrollieren Sie Sardinien, Marseilles, Mailand, Kreta und Zypern im Jahr 1540 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
@@ -579,7 +579,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
-		<English>[COLOR_YELLOW]The inventors of everything:[COLOR_REVERT] Be the first to enter the Industrial age.</English>
+		<English>[COLOR_YELLOW]The Inventors of Everything:[COLOR_REVERT] Be the first to enter the Industrial age.</English>
 		<French>Etre la premiere civilisation &#224; entrer dans l'Age Industrielle.</French>
 		<German>Erreichen Sie als erste Zivilisation das industrielle Zeitalter</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -615,7 +615,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
-		<English>[COLOR_YELLOW]Austrian Habsburg rule:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
+		<English>[COLOR_YELLOW]Austrian Habsburg Rule:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
 		<French>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</French>
 		<German>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</German>
 		<Italian>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Italian>
