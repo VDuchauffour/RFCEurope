@@ -115,7 +115,7 @@
 			<KFM>Art/Terrain/Resources/Walrus/Sea_Lions.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Walrus/Sea_Lions_fx.nif</SHADERNIF>
 			<Button>Art/Interface/Buttons/WorldBuilder/Walrus.dds</Button>
-			<FontButtonIndex>25</FontButtonIndex>
+			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SILK</Type>

@@ -51,15 +51,16 @@ Changes for Beta 11:
 	General changes:
 
 	Map and province changes:
-		Added Amber (not to the map)
-
+		- Added Amber (not to the map)
 
 	XML updates:
-		Added "The" in front of the Arabian UHV-names
+		- Added "The" in front of the Arabian UHV-names
+		- Capitalized some words in the UHV-names
 
 	Python Updates:
 
 	Art updates:
+		- Improved Fonts
 
 	Balance:
 		- Changed the Access dynamics, basically things were reverted to before Vinland
@@ -69,10 +70,10 @@ Changes for Beta 11:
 		- NA Access is placed near Iceland and is removed in 1050AD
 
 	Bugfixes:
-		Bugfix: Moscow UHV 2 should work now
-		Bugfix: Removed the extra French units on spawn, readded the walrus, removed the dense forest near Lyon
-		Bugfix: Burgundy UHV 3 should work now
-		Bugfix: Fixed the Polish city names, Poznan no longer appears as Poz
+		- Bugfix: Moscow UHV 2 should work now
+		- Bugfix: Removed the extra French units on spawn, readded the walrus, removed the dense forest near Lyon
+		- Bugfix: Burgundy UHV 3 should work now
+		- Bugfix: Fixed the Polish city names, Poznan no longer appears as Poz
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
