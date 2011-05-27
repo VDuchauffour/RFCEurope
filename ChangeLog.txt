@@ -99,6 +99,7 @@ Changes for Beta 10:
 		Correct spawndates for the independent cities (the info after # shows the correct date now)
 
 	Art updates:
+		Proper button Byzantine Longswordsman
 
 	Balance:
 		If England dies, then the English Atlantic Access would be spawned by the Norse discovering Astronomy
