@@ -21366,6 +21366,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=41
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -21792,7 +21793,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=41
-	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
