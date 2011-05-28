@@ -182,12 +182,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA1</Tag>
-		<English>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</English>
-		<French>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</French>
-		<German>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</German>
-		<Italian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Bavaria and Saxony by 840AD.</Russian>
+		<English>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</English>
+		<French>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</French>
+		<German>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</German>
+		<Italian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
@@ -561,12 +561,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG1</Tag>
-		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
-		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
-		<German>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</German>
-		<Italian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.)</Spanish>
-		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Yorkshire, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
+		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
+		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
+		<German>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</German>
+		<Italian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.)</Spanish>
+		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>

@@ -34,6 +34,9 @@ BeginTeam
 	Tech=TECH_CODE_OF_LAWS
 	Tech=TECH_CLASSICAL_KNOWLEDGE
 	ContactWithTeam=0
+	ContactWithTeam=3
+	ContactWithTeam=4
+	ContactWithTeam=19
 	ContactWithTeam=22
 	AtWar=3
 	AtWar=4
@@ -44,23 +47,31 @@ BeginTeam
 	TeamID=1
 	Tech=TECH_BRONZE_CASTING
 	ContactWithTeam=1
+	ContactWithTeam=15
+	AtWar=15
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=2
 	ContactWithTeam=2
+	ContactWithTeam=19
 	AtWar=19
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=3
+	ContactWithTeam=0
 	ContactWithTeam=3
+	ContactWithTeam=19
 	AtWar=0
+	AtWar=19
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=4
+	ContactWithTeam=0
 	ContactWithTeam=4
+	ContactWithTeam=6
 	AtWar=0
 	AtWar=6
 	RevealMap=0
@@ -72,6 +83,7 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=6
+	ContactWithTeam=4
 	ContactWithTeam=6
 	AtWar=4
 	RevealMap=0
@@ -118,7 +130,9 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=15
+	ContactWithTeam=1
 	ContactWithTeam=15
+	AtWar=1
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -134,13 +148,24 @@ EndTeam
 BeginTeam
 	TeamID=18
 	ContactWithTeam=18
+	ContactWithTeam=23
+	ContactWithTeam=24
+	ContactWithTeam=26
+	AtWar=23
+	AtWar=24
+	AtWar=25
+	AtWar=26
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=19
+	ContactWithTeam=0
+	ContactWithTeam=2
+	ContactWithTeam=3
 	ContactWithTeam=19
 	AtWar=0
 	AtWar=2
+	AtWar=3
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -168,26 +193,33 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=23
+	ContactWithTeam=18
 	ContactWithTeam=22
 	ContactWithTeam=23
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=24
+	ContactWithTeam=18
 	ContactWithTeam=22
 	ContactWithTeam=24
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=25
 	ContactWithTeam=22
 	ContactWithTeam=25
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=26
+	ContactWithTeam=18
 	ContactWithTeam=22
 	ContactWithTeam=26
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginPlayer
@@ -204,7 +236,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1000
+	StartingGold=3000
 	StateReligion=RELIGION_ORTHODOXY
 	StartingEra=ERA_CLASSICAL
 	RandomStartLocation=false
@@ -230,7 +262,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=50
+	StartingGold=150
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -256,7 +288,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=200
+	StartingGold=600
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -282,7 +314,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=100
+	StartingGold=300
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -308,7 +340,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=200
+	StartingGold=600
 	StateReligion=RELIGION_ISLAM
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -334,7 +366,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=200
+	StartingGold=600
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -360,7 +392,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=300
+	StartingGold=900
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -386,7 +418,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=250
+	StartingGold=750
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -412,7 +444,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=300
+	StartingGold=900
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -438,7 +470,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=250
+	StartingGold=750
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -464,7 +496,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=300
+	StartingGold=900
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -490,7 +522,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=500
+	StartingGold=1500
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -516,7 +548,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=300
+	StartingGold=900
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -542,7 +574,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=400
+	StartingGold=1200
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -568,7 +600,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=400
+	StartingGold=1200
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -594,7 +626,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=450
+	StartingGold=1350
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -620,7 +652,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=400
+	StartingGold=1200
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -646,7 +678,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=700
+	StartingGold=2100
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -672,7 +704,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1000
+	StartingGold=3000
 	StateReligion=RELIGION_ISLAM
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -698,7 +730,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=400
+	StartingGold=1200
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -724,7 +756,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1000
+	StartingGold=3000
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -750,7 +782,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1500
+	StartingGold=4500
 	StateReligion=RELIGION_PROTESTANTISM
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -802,7 +834,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=50
+	StartingGold=150
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -828,7 +860,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=50
+	StartingGold=150
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -854,7 +886,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=50
+	StartingGold=150
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -880,7 +912,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=50
+	StartingGold=150
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -903,7 +935,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3279
+	num signs written=3280
 	Randomize Resources=false
 EndMap
 
@@ -18505,55 +18537,6 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	BeginUnit
-		UnitType=UNIT_AXEMAN, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_COUNTER
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARCHER, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARCHER, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_CATHOLIC_MISSIONARY, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_MISSIONARY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_WORKER
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SETTLER, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_SETTLE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SETTLER, UnitOwner=1
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_SETTLE
-	EndUnit
 	TeamReveal=1,
 EndPlot
 BeginPlot
@@ -49247,18 +49230,6 @@ BeginSign
 	caption=43
 EndSign
 BeginSign
-	plotX=55
-	plotY=40
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=56
-	plotY=40
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
 	plotX=57
 	plotY=40
 	playerType=-1
@@ -49277,18 +49248,6 @@ BeginSign
 	caption=41
 EndSign
 BeginSign
-	plotX=56
-	plotY=41
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=55
-	plotY=41
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
 	plotX=57
 	plotY=42
 	playerType=-1
@@ -49296,12 +49255,6 @@ BeginSign
 EndSign
 BeginSign
 	plotX=58
-	plotY=42
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=55
 	plotY=42
 	playerType=-1
 	caption=41
@@ -57875,24 +57828,6 @@ BeginSign
 	caption=141
 EndSign
 BeginSign
-	plotX=66
-	plotY=58
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=67
-	plotY=59
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=67
-	plotY=60
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
 	plotX=81
 	plotY=23
 	playerType=-1
@@ -62081,38 +62016,8 @@ BeginSign
 	caption=41
 EndSign
 BeginSign
-	plotX=54
-	plotY=43
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
 	plotX=58
 	plotY=40
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=54
-	plotY=39
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=54
-	plotY=40
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=54
-	plotY=41
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=54
-	plotY=42
 	playerType=-1
 	caption=41
 EndSign
@@ -64530,55 +64435,7 @@ BeginSign
 EndSign
 BeginSign
 	plotX=41
-	plotY=60
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=41
 	plotY=58
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=41
-	plotY=59
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=42
-	plotY=60
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=43
-	plotY=61
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=43
-	plotY=60
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=44
-	plotY=59
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=43
-	plotY=59
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
-	plotX=42
-	plotY=59
 	playerType=-1
 	caption=25
 EndSign
@@ -64629,4 +64486,136 @@ BeginSign
 	plotY=10
 	playerType=-1
 	caption=111
+EndSign
+BeginSign
+	plotX=41
+	plotY=60
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=41
+	plotY=59
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=42
+	plotY=60
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=42
+	plotY=59
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=43
+	plotY=60
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=43
+	plotY=61
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=43
+	plotY=59
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=44
+	plotY=59
+	playerType=-1
+	caption=27
+EndSign
+BeginSign
+	plotX=67
+	plotY=60
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=67
+	plotY=59
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=66
+	plotY=58
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=54
+	plotY=43
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=54
+	plotY=42
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=55
+	plotY=42
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=54
+	plotY=41
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=55
+	plotY=41
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=69
+	plotY=72
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=54
+	plotY=39
+	playerType=-1
+	caption=70
+EndSign
+BeginSign
+	plotX=54
+	plotY=40
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=55
+	plotY=40
+	playerType=-1
+	caption=40
+EndSign
+BeginSign
+	plotX=56
+	plotY=41
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=56
+	plotY=40
+	playerType=-1
+	caption=41
 EndSign

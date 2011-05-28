@@ -141,13 +141,13 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 # ------------------- NEW UHV CONDITIONS
 tByzantumControl = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsiadon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople ]
-tFrankControl = [ xml.iP_Bavaria, xml.iP_Saxony, xml.iP_IleDeFrance, xml.iP_Aquitania, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Orleans, xml.iP_Champagne, xml.iP_Catalonia, xml.iP_Lombardy, xml.iP_Tuscany ] # Update this with the Province keys
+tFrankControl = [ xml.iP_Swabia, xml.iP_Saxony, xml.iP_IleDeFrance, xml.iP_Aquitania, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Orleans, xml.iP_Champagne, xml.iP_Catalonia, xml.iP_Lombardy, xml.iP_Tuscany ] # Update this with the Province keys
 tArabiaControlI = [ xml.iP_Egypt, xml.iP_Antiochia, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Arabia, xml.iP_Jerusalem ]
 tArabiaControlII = [ xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania, xml.iP_Egypt, xml.iP_Antiochia, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Arabia, xml.iP_Jerusalem]
 tBulgariaControl = [ xml.iP_Constantinople, xml.iP_Thessaloniki, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia ]
 tCordobaWonders = [ xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus ]
 tCordobaIslamize = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
-tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Yorkshire, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Crimea ]
+tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Northumbria,xml.iP_Mercia, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Crimea ]
 #tVenetianControl = [ xml.iP_Morea, xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Crete, xml.iP_Cyprus ]
 tVenetianControl = [ xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Arberia ]
 tBurgundyControl = [ xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine ]
@@ -158,7 +158,7 @@ tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thes
 tSpainConvert = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
 tPolishControl = [ xml.iP_Bohemia, xml.iP_Moravia, xml.iP_UpperHungary, xml.iP_Hungary, xml.iP_Lithuania, xml.iP_Brest, xml.iP_Podolia, xml.iP_Kiev ]
 tGenoaControl = [ xml.iP_Lombardy, xml.iP_Sardinia, xml.iP_Cyprus, xml.iP_Crete ]
-tEnglandControl = [ xml.iP_London, xml.iP_Wales, xml.iP_Wessex, xml.iP_Scotland, xml.iP_EastAnglia, xml.iP_Yorkshire, xml.iP_Ireland, xml.iP_Normandy, xml.iP_Bretagne, xml.iP_IleDeFrance, xml.iP_Aquitania, xml.iP_Orleans ]
+tEnglandControl = [ xml.iP_London, xml.iP_Wales, xml.iP_Wessex, xml.iP_Scotland, xml.iP_EastAnglia, xml.iP_Mercia, xml.iP_Northumbria, xml.iP_Ireland, xml.iP_Normandy, xml.iP_Bretagne, xml.iP_IleDeFrance, xml.iP_Aquitania, xml.iP_Orleans ]
 tPortugalControlI = [ xml.iP_Azores, xml.iP_Canaries ]
 tPortugalControlII = [ xml.iP_Morocco, xml.iP_Tetouan, xml.iP_Oran ]
 tLithuaniaControl = [ xml.iP_Lithuania, xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_Suvalkija, xml.iP_Livonia, xml.iP_Novgorod, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_WhiteRus, xml.iP_Pereyaslavl, xml.iP_Kiev, xml.iP_GaliciaPoland, xml.iP_Sloboda ]
