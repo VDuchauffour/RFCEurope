@@ -1073,14 +1073,15 @@ class Victory:
                                 landPercent = (RussianLand * 100.0) / totalLand
                         else:
                                 landPercent = 0.0
-                        if ( landPercent >= 20 ):
+                        print(" RUSSIAUHV: ",totalLand,RussianLand,landPercent)
+                        if ( landPercent >= 2 ):
                                 pMoscow.setUHV( 1, 1 )
                 # get Warm water
                 if ( pMoscow.getUHV( 2 ) == -1 ):
                         if ( pMoscow.countOwnedBonuses( xml.iAccess ) > 0 ):
-                                self.setGoal( iMoscow, 2, 1 )
+                                pMoscow.setUHV( 2, 1 )
                         elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
-                                self.setGoal( iMoscow, 2, 1 )
+                                pMoscow.setUHV( 2, 1 )
                 
         def checkSweden( self, iGameTurn ):
                 if ( iGameTurn == xml.i1600AD and pSweden.getUHV( 0 ) == -1 ):

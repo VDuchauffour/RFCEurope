@@ -77,6 +77,7 @@ Changes for Beta 11:
 		- Bugfix: Removed the extra French units on spawn, readded the walrus, removed the dense forest near Lyon
 		- Bugfix: Burgundy UHV 3 should work now
 		- Bugfix: Fixed the Polish city names, Poznan no longer appears as Poz
+		- Bugfix: Fixed the third Moscow UHV
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
