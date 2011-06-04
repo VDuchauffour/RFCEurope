@@ -55,6 +55,7 @@ Changes for Beta 11:
 		- Provinces: the islands in the North Sea are correctly part og Gotaland now
 		- Provinces: the Yorkshire now split into Mercia and Northumbria (needs testing for the English UHV)
 		- Provinces: Ausgburg was historically part of Swabia, moved Ausgburg and adjusted the Province borders accordingly
+		- Updated the North-East region for the city names as by krieger546's maps (for Moscow, Germany, Norse and Sweden)
 
 	XML updates:
 		- Added "The" in front of the Arabian UHV-names
