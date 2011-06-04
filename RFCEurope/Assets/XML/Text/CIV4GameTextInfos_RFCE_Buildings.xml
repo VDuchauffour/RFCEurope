@@ -167,38 +167,14 @@
 		<Spanish>Kremlin</Spanish>
 		<Russian>&#202;&#240;&#229;&#236;&#235;&#252;</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
-		<English>[ICON_BULLET]Provides %D1_Mod </English>
-		<French>[ICON_BULLET]Fournit %D1_Mod </French>
-		<German>[ICON_BULLET]Liefert %D1_Mod </German>
-		<Italian>[ICON_BULLET]Fornisce %D1_Mod </Italian>
-		<Spanish>[ICON_BULLET]Proporciona %D1_Mod </Spanish>
-		<Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
-		<English>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </English>
-		<French>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </French>
-		<German>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </German>
-		<Italian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Italian>
-		<Spanish>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Spanish>
-		<Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
-		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
-		<French>[ICON_BULLET]Requiert [LINK=literal]%s1_Bonus[\LINK] </French>
-		<German>[ICON_BULLET]Benötigt [LINK=literal]%s1_Bonus [\LINK] </German>
-		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
-		<Spanish>[ICON_BULLET]Requiere  [LINK=literal]%s1_Bonus [\LINK] </Spanish>
-		<Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian></TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
-		<English> [SPACE] (%D1_Mod) </English>
-		<French> [SPACE] (%D1_Mod) </French>
-		<German> [SPACE] (%D1_Mod) </German>
-		<Italian> [SPACE] (%D1_Mod) </Italian>
-		<Spanish> [SPACE] (%D1_Mod) </Spanish>
-		<Russian>[SPACE] (%D1_Mod)</Russian></TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_BOMBARD_IMMUNE_DEFENSE</Tag>
+		<English>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</English>
+		<French>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</French>
+		<German>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</German>
+		<Italian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN</Tag>
 		<English>Inn</English>

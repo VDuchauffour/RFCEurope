@@ -71,6 +71,9 @@ Changes for Beta 11:
 		- Vinland requires North American Access
 		- NA Access is visible with Astroable
 		- NA Access is placed near Iceland and is removed in 1050AD
+		- The AI is now aware of the Hungarian Stronghold ability (for city improvements only)
+		- StarFort adds special defense that applies to all unit (Gunpowder and non-Gunpowder) 
+		- The special defense provided by the StarFort cannot be broken by Catapults/Canons
 
 	Bugfixes:
 		- Bugfix: Moscow UHV 2 should work now
@@ -78,6 +81,7 @@ Changes for Beta 11:
 		- Bugfix: Burgundy UHV 3 should work now
 		- Bugfix: Fixed the Polish city names, Poznan no longer appears as Poz
 		- Bugfix: Fixed the third Moscow UHV
+		- Bugfix: the Hungarian Stronghold ability to damage enemy units is now properly preserved upon save/load
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
