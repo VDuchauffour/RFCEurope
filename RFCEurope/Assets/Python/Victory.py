@@ -152,7 +152,8 @@ tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Northumbria,xml.iP_Merci
 tVenetianControl = [ xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Arberia ]
 tBurgundyControl = [ xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine ]
 tBurgundyOutrank = [ iFrankia, iEngland, iGermany ]
-tGermanyControl = [ xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg ]
+tGermanyControl = [ xml.iP_Tuscany, xml.iP_Lombardy, xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg ]
+tGermanyControlII = [ xml.iP_Austria, xml.iP_Salzburg, xml.iP_Flanders, xml.iP_Pomerania, xml.iP_Silesia, xml.iP_Bohemia, xml.iP_Moravia, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg ]
 tKievControl = [ xml.iP_Moldova, xml.iP_Kiev, xml.iP_Crimea, xml.iP_Zaporizhia, xml.iP_Sloboda, xml.iP_Pereyaslavl, xml.iP_Chernigov, xml.iP_Podolia, xml.iP_WhiteRus ]
 tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thessaloniki, xml.iP_Wallachia, xml.iP_Thessaly, xml.iP_Epirus, xml.iP_Arberia, xml.iP_Serbia, xml.iP_Bosnia, xml.iP_Dalmatia, xml.iP_Croatia ]
 tSpainConvert = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
@@ -406,7 +407,13 @@ class Victory:
                 if (not gc.getGame().isVictoryValid(7)): #7 == historical
                         return
 
-                if ( iTech == xml.iIndustrialTech ):
+                if ( iTech == xml.iPrintingPress ):
+                        if ( pGermany.getUHV( 1 ) == -1 ):
+                                if ( iPlayer == iGermany ):
+                                        pGermany.setUHV( 1, 1 )
+                                else:
+                                        pGermany.setUHV( 1, 0 )
+                elif ( iTech == xml.iIndustrialTech ):
                         if ( pEngland.getUHV( 2 ) == -1 ):
                                 if ( iPlayer == iEngland ):
                                         pEngland.setUHV( 2, 1 )
@@ -751,7 +758,7 @@ class Victory:
                 # Have most Catholic FP in 1077 (Walk to Canossa)
                 # Have vassals (Hapsburg)
                 # Start the reformation
-                if ( iGameTurn == xml.i1359AD and pGermany.getUHV( 0 ) == -1 ):
+                if ( iGameTurn == xml.i1167AD and pGermany.getUHV( 0 ) == -1 ):
                         bOwn = True
                         for iProv in tGermanyControl:
                                 if ( pGermany.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
@@ -762,30 +769,41 @@ class Victory:
                         else:
                                 pGermany.setUHV( 0, 0 )
 
-                if ( iGameTurn == xml.i1461AD and pGermany.getUHV( 1 ) == -1 ):
-                        iCount = 0
-                        for iVassal in range( iNumMajorPlayers ):
-                                pVassal = gc.getPlayer( iVassal )
-                                if ( iVassal != iGermany and pVassal.isAlive() ):
-                                        if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
-                                                iCount += 1
-                        
-                        if ( iCount >= 3 ):
-                                pGermany.setUHV( 1, 1 )
-                        else:
-                                pGermany.setUHV( 1, 0 )
+                #if ( iGameTurn == xml.i1461AD and pGermany.getUHV( 1 ) == -1 ):
+                #        iCount = 0
+                #        for iVassal in range( iNumMajorPlayers ):
+                #                pVassal = gc.getPlayer( iVassal )
+                #                if ( iVassal != iGermany and pVassal.isAlive() ):
+                #                        if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
+                #                                iCount += 1
+                #        
+                #        if ( iCount >= 3 ):
+                #                pGermany.setUHV( 1, 1 )
+                #        else:
+                #                pGermany.setUHV( 1, 0 )
 
-                if ( iGameTurn == xml.i1540AD and pGermany.getUHV( 2 ) == -1 ):
-                        iGermanPower = teamGermany.getPower(False)
-                        bPower = True
-                        for iPlayer in range( iNumMajorPlayers ):
-                                pPlayer = gc.getPlayer( iPlayer )
-                                if ( pPlayer.isAlive() and gc.getTeam( pPlayer.getTeam() ).getPower(False) > iGermanPower ):
-                                        bPower = False
-                        if ( bPower ):
+                if ( iGameTurn == xml.i1648AD and pGermany.getUHV( 2 ) == -1 ):
+                        bOwn = True
+                        for iProv in tGermanyControlII:
+                                if ( pGermany.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
+                                        bOwn = False
+                                        break
+                        if ( bOwn ):
                                 pGermany.setUHV( 2, 1 )
                         else:
                                 pGermany.setUHV( 2, 0 )
+
+                #if ( iGameTurn == xml.i1540AD and pGermany.getUHV( 2 ) == -1 ):
+                #        iGermanPower = teamGermany.getPower(False)
+                #        bPower = True
+                #        for iPlayer in range( iNumMajorPlayers ):
+                #                pPlayer = gc.getPlayer( iPlayer )
+                #                if ( pPlayer.isAlive() and gc.getTeam( pPlayer.getTeam() ).getPower(False) > iGermanPower ):
+                #                        bPower = False
+                #        if ( bPower ):
+                #                pGermany.setUHV( 2, 1 )
+                #        else:
+                #                pGermany.setUHV( 2, 0 )
                 
         def checkKiev( self, iGameTurn ):
                 iFood = pKiev.getUHVCounter( 0 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)

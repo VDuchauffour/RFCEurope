@@ -268,7 +268,7 @@ tStartingWorkers = (
 0, #tFrance
 2, #tArabia
 2, #tBulgaria
-2, #tCordoba
+1, #tCordoba
 2, #tNorse
 3, #tVenecia
 2, #tBurgundy
@@ -388,7 +388,7 @@ tCoreAreasBR = (
 (59,65),   #Norse
 (61,36),   #Venice
 (48,42),   #Burgundy
-(57,48),   #Germany
+(58,53),   #Germany
 (91,48),   #Kiev
 (71,39),   #Hungary
 (33,40),   #Spain

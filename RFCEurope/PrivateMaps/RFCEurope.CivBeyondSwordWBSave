@@ -19253,6 +19253,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=33
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19671,7 +19672,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=33
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21947,7 +21947,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=66
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
@@ -24481,7 +24481,7 @@ BeginPlot
 	x=61,y=57
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -26681,7 +26681,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=69
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28383,7 +28383,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=55
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28443,7 +28443,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=66
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29819,7 +29819,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=61
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -34110,7 +34110,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=70
-	BonusType=BONUS_GEMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -39907,6 +39906,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=11
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -39914,8 +39915,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=12
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
