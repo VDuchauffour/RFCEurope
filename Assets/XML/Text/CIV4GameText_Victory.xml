@@ -453,30 +453,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
-		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia and Brandenburg in 1360AD.</English>
-		<French>Contr&#244;ler la rive est du Rhin en 1360 ap.JC.</French>
-		<German>Kontrollieren Sie das &#246;stliche Rheinufer im Jahr 1360 n.Chr.</German>
+		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</English>
+		<French>Contr&#244;ler la rive est du Rhin en 1167AD ap.JC.</French>
+		<German>Kontrollieren Sie das &#246;stliche Rheinufer im Jahr 1167AD n.Chr.</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
-		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#236; &#225;&#224;&#237;&#234;&#238;&#236; &#208;&#229;&#233;&#237;&#224; &#226; 1360AD.</Russian>
+		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#236; &#225;&#224;&#237;&#234;&#238;&#236; &#208;&#229;&#233;&#237;&#224; &#226; 1167AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER2</Tag>
-		<English>Have at least 3 vassals in 1460AD.</English>
-		<French>Avoir au moins 3 vassals en 1460 ap.JC.</French>
-		<German>Unterwerfen Sie mindestens 3 Vasallenstaaten bis zum Jahr 1460 n. Chr.</German>
-		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
-		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
-		<Russian>&#200;&#236;&#229;&#233;&#242;&#229; &#234;&#224;&#234; &#236;&#232;&#237;&#232;&#236;&#243;&#236; 3 &#226;&#224;&#241;&#241;&#224;&#235;&#224; &#226; 1460AD.</Russian>
+		<English>Found Protestantism.</English>
+		<French>Found Protestantism.</French>
+		<German>Found Protestantism.</German>
+		<Italian>Found Protestantism.</Italian>
+		<Spanish>Found Protestantism.</Spanish>
+		<Russian>Found Protestantism.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>[COLOR_YELLOW]Everybody Hires Landsknecht Mercenaries:[COLOR_REVERT] Have the largest army in Europe in 1540AD.</English>
-		<French>Avoir la plus grande arm&#233;e d'Europe en 1540 ap.JC.</French>
-		<German>Befehligen Sie die gr&#246;&#223;te Armee in Europa im Jahr 1540 n. Chr.</German>
-		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
-		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
-		<Russian>&#200;&#236;&#229;&#233;&#242;&#229; &#237;&#224;&#232;&#225;&#238;&#235;&#252;&#248;&#243;&#254; &#224;&#240;&#236;&#232;&#254; &#226; &#197;&#226;&#240;&#238;&#239;&#229; &#226; 1540AD.</Russian>
+		<English>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</English>
+		<French>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</French>
+		<German>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</German>
+		<Italian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>

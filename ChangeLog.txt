@@ -51,11 +51,14 @@ Changes for Beta 11:
 	General changes:
 
 	Map and province changes:
-		- Added Amber (not to the map)
+		- Added Amber
+		- Amber now replaces most of the northern Gems
 		- Provinces: the islands in the North Sea are correctly part og Gotaland now
 		- Provinces: the Yorkshire now split into Mercia and Northumbria (needs testing for the English UHV)
 		- Provinces: Ausgburg was historically part of Swabia, moved Ausgburg and adjusted the Province borders accordingly
 		- Updated the North-East region for the city names as by krieger546's maps (for Moscow, Germany, Norse and Sweden)
+		- Moved the fish next to Genoa to make the foundig spot a bit more competitive
+		- Moved the dense forest and timber near Tyre to prevent Arabia from conquering it on the spawn turn
 
 	XML updates:
 		- Added "The" in front of the Arabian UHV-names
@@ -70,11 +73,17 @@ Changes for Beta 11:
 		- Changed the Access dynamics, basically things were reverted to before Vinland
 		- Atlantic Access is placed on the map from the very beginning and becomes visible with Astronomy
 		- Vinland requires North American Access
-		- NA Access is visible with Astroable
-		- NA Access is placed near Iceland and is removed in 1050AD
+		- NA Access is visible with Astroable, NA Access is placed near Iceland and is removed in 1050AD
 		- The AI is now aware of the Hungarian Stronghold ability (for city improvements only)
 		- StarFort adds special defense that applies to all unit (Gunpowder and non-Gunpowder) 
 		- The special defense provided by the StarFort cannot be broken by Catapults/Canons
+		- Added more barbarians to Scotland
+		- Added some early Barbarians to the Byzantine start (the Sassanid)
+		- Mongols, Seljuks and Scots can now spawn with the cultural boreders of an Empire (you cannot block them with culture)
+		- Poland gets couple of Catholic Missionaries
+		- Cordoba gets one less Settler
+		- New Germany UHV conditions associated with the Holy Roman Empire, Reformation and Thirty Year War
+		- Luebec flips to Germany and Germany gets fewer Settlers
 
 	Bugfixes:
 		- Bugfix: Moscow UHV 2 should work now
@@ -83,6 +92,7 @@ Changes for Beta 11:
 		- Bugfix: Fixed the Polish city names, Poznan no longer appears as Poz
 		- Bugfix: Fixed the third Moscow UHV
 		- Bugfix: the Hungarian Stronghold ability to damage enemy units is now properly preserved upon save/load
+		- Bugfix: Kiev UHV counter works properly
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------

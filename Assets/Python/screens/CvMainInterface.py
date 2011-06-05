@@ -2117,7 +2117,7 @@ class CvMainInterface:
                                                 
                                 elif ( ePlayer == con.iKiev ):
                                         #iKievFood = utils.getKievFood()
-                                        iKievFood = pPlayer.getUHVCounter( 2 )
+                                        iKievFood = pPlayer.getUHVCounter( 0 )
                                         if ( not CyInterface().isCityScreenUp() ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )

@@ -1028,9 +1028,13 @@ class CvVictoryScreen:
                 screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
 
                 bListProvs = False
-                if ( self.iActivePlayer == con.iTurkey ):
+                if ( self.iActivePlayer == con.iGermany ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tGermanyControlII
+                elif ( self.iActivePlayer == con.iTurkey ):
                         bListProvs = True
                         tProvsToCheck = vic.tOttomanControlIII
+                
                         
                 if ( bListProvs ):
                         sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"

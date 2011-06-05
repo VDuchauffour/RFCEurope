@@ -1994,7 +1994,7 @@ class RiseAndFall:
                                 return iBulgaria
                 if ( (not pCordoba.isAlive()) and (not pCordoba.getRespawned()) and iGameTurn > con.tBirth[iCordoba] + 25 and iGameTurn > utils.getLastTurnAlive(iCordoba) + 10 ):
                         # special respawn as the Hafsid dynasty in North Africa
-                        if ( iGameTurn > xml.i1229AD and iGameTurn < xml.i1500AD and iGameTurn % 5 == 3 ):
+                        if ( iGameTurn > xml.i1229AD and iGameTurn < xml.i1540AD and iGameTurn % 5 == 3 ):
                                 return iCordoba
                 if ( (not pNorse.isAlive()) and (not pNorse.getRespawned()) and iGameTurn > con.tBirth[iNorse] + 25 and iGameTurn > utils.getLastTurnAlive(iNorse) + 20 ):
                         # respawn as the Kalmar Union
@@ -2145,15 +2145,15 @@ class RiseAndFall:
                         utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 4)
                 if (iCiv == iCordoba):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 3)
                 if (iCiv == iSpain):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iCatapult, iCiv, tPlot, 1)
                 if (iCiv == iNorse):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
@@ -2192,9 +2192,9 @@ class RiseAndFall:
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
                 if (iCiv == iGermany):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+                        #utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                 if (iCiv == iPoland):
@@ -2202,6 +2202,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                 if (iCiv == iMoscow):
                         utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)

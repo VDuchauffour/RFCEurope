@@ -973,6 +973,21 @@ class RFCUtils:
                                                 return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
                 return (None, not bPaint, bContinue)
+                
+        def forcedInvasion( self, tCoords, result, argsList ):
+                """Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
+                Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
+                bPaint = True
+                bContinue = True
+                pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
+                if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
+                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                                if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
+                                        #if (pCurrent.countTotalCulture() == 0 ):
+                                         # this is a good plot, so paint it and continue search
+                                         return (None, bPaint, bContinue)
+                # not a good plot, so don't paint it but continue search
+                return (None, not bPaint, bContinue)
 
         #Barbs
         def innerSeaSpawn( self, tCoords, result, argsList ):
