@@ -52,7 +52,7 @@ Changes for Beta 12:
 	Map and province changes:
 
 	XML updates:
-		- UHV name for the new German UHV
+		- UHV name for some UHVs
 		- Removed free priest from protestant cathedral
 		- New texts for some leaders
 		- XML Cleanup

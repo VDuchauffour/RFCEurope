@@ -227,12 +227,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
-		<English>Have higher score than France, England and Germany in 1473AD.</English>
-		<French>Have higher score than France, England and Germany in 1473AD.</French>
-		<German>Have higher score than France, England and Germany in 1473AD.</German>
-		<Italian>Have higher score than France, England and Germany in 1473AD.</Italian>
-		<Spanish>Have higher score than France, England and Germany in 1473AD.</Spanish>
-		<Russian>Have higher score than France, England and Germany in 1473AD.</Russian>
+		<English>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</English>
+		<French>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</French>
+		<German>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</German>
+		<Italian>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA1</Tag>
@@ -272,7 +272,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR2</Tag>
-		<English>[COLOR_YELLOW]Moorish Architecture is the best:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</English>
+		<English>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</English>
 		<French>Construire l'Alhambra, les Jardins d'Al-Andalus et La Mezquita en 1309 ap.JC.</French>
 		<German>Errichten Sie die Wunder Alhambra, die G&#228;rten von Al-Andalus und La Mezquita bis zum Jahr 1309 n. Chr.</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
@@ -372,12 +372,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE1</Tag>
-		<English>Produce 20000 food by 1300AD.</English>
-		<French>Produce 20000 food by 1300AD.</French>
-		<German>Produce 20000 food by 1300AD.</German>
-		<Italian>Produce 20000 food by 1300AD.</Italian>
-		<Spanish>Produce 20000 food by 1300AD.</Spanish>
-		<Russian>Produce 20000 food by 1300AD.</Russian>
+		<English>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</English>
+		<French>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</French>
+		<German>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</German>
+		<Italian>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
@@ -417,12 +417,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT3</Tag>
-		<English>Conquer or Vassalize Moscow.</English>
-		<French>Conquer or Vassalize Moscow.</French>
-		<German>Conquer or Vassalize Moscow.</German>
-		<Italian>Conquer or Vassalize Moscow.</Italian>
-		<Spanish>Conquer or Vassalize Moscow.</Spanish>
-		<Russian>Conquer or Vassalize Moscow.</Russian>
+		<English>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</English>
+		<French>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</French>
+		<German>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</German>
+		<Italian>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Italian>
+		<Spanish>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Spanish>
+		<Russian>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
@@ -624,7 +624,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS2</Tag>
-		<English>Have 3 vassals in 1700AD.</English>
+		<English>[COLOR_YELLOW]The Habsburg Domination:[COLOR_REVERT] Have 3 vassals in 1700AD.</English>
 		<French>Avoir 3 vassals en 1700 ap.JC.</French>
 		<German>Unterwerfen Sie bis zum Jahr 1700 n. Chr. 3 Vasallenstaaten</German>
 		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
@@ -642,30 +642,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR1</Tag>
-		<English>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</English>
-		<French>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</French>
-		<German>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</German>
-		<Italian>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Russian>
+		<English>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</English>
+		<French>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</French>
+		<German>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</German>
+		<Italian>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR2</Tag>
-		<English>Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</English>
-		<French>Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</French>
-		<German>Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</German>
-		<Italian>Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Italian>
-		<Spanish>Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Spanish>
-		<Russian>Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Russian>
+		<English>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</English>
+		<French>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</French>
+		<German>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</German>
+		<Italian>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR3</Tag>
-		<English>[COLOR_YELLOW]Victory at Vienna:[COLOR_REVERT] Conquer Austria by 1683AD.</English>
-		<French>[COLOR_YELLOW]Victory at Vienna:[COLOR_REVERT] Conquer Austria by 1683AD.</French>
-		<German>[COLOR_YELLOW]Victory at Vienna:[COLOR_REVERT] Conquer Austria by 1683AD.</German>
-		<Italian>[COLOR_YELLOW]Victory at Vienna:[COLOR_REVERT] Conquer Austria by 1683AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Victory at Vienna:[COLOR_REVERT] Conquer Austria by 1683AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Victory at Vienna:[COLOR_REVERT] Conquer Austria by 1683AD.</Russian>
+		<English>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</English>
+		<French>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</French>
+		<German>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</German>
+		<Italian>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE1</Tag>
