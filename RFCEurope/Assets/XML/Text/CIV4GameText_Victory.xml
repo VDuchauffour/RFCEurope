@@ -462,12 +462,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER2</Tag>
-		<English>Found Protestantism.</English>
-		<French>Found Protestantism.</French>
-		<German>Found Protestantism.</German>
-		<Italian>Found Protestantism.</Italian>
-		<Spanish>Found Protestantism.</Spanish>
-		<Russian>Found Protestantism.</Russian>
+		<English>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</English>
+		<French>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</French>
+		<German>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</German>
+		<Italian>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</Italian>
+		<Spanish>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</Spanish>
+		<Russian>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
