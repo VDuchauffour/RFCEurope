@@ -38,11 +38,31 @@ AR		Add a LeaderHeadInfos.xml.light file
 		Lower La Mezquita to the ground
 		Find proper art for Arabian Arbalestier
 		Dynamic Civ Names for Lithuania
-MV1		Python cleanup
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		General XML updates, removing unused XML parts
 MV1		Make atlas from the buttons
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for Beta 12:
+
+	General changes:
+
+	Map and province changes:
+
+	XML updates:
+		- UHV name for the new German UHV
+		- Removed free priest from protestant cathedral
+
+	Python Updates:
+
+	Art updates:
+
+	Balance:
+
+	Bugfixes:
+		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
