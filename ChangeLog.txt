@@ -54,6 +54,8 @@ Changes for Beta 12:
 	XML updates:
 		- UHV name for the new German UHV
 		- Removed free priest from protestant cathedral
+		- New texts for some leaders
+		- XML Cleanup
 
 	Python Updates:
 
