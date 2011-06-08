@@ -1092,7 +1092,7 @@ class Victory:
                         else:
                                 landPercent = 0.0
                         print(" RUSSIAUHV: ",totalLand,RussianLand,landPercent)
-                        if ( landPercent >= 2 ):
+                        if ( landPercent >= 20 ):
                                 pMoscow.setUHV( 1, 1 )
                 # get Warm water
                 if ( pMoscow.getUHV( 2 ) == -1 ):
