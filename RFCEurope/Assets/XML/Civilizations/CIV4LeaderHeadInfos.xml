@@ -7249,7 +7249,7 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_MEHMED</Type>
 			<Description>TXT_KEY_LEADER_MEHMED</Description>
-			<Civilopedia>TXT_KEY_LEADER_MEHMED_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_LEADER_MEHMED_II_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_MEHMED</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>-1</iBaseAttitude>
@@ -12216,8 +12216,8 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_LOUIS_XIV</Type>
-			<Description>TXT_KEY_LEADER_LOUIS_XIV</Description>
-			<Civilopedia>TXT_KEY_LEADER_LOUIS_XIV_PEDIA</Civilopedia>
+			<Description>TXT_KEY_LEADER_LOUISXIV</Description>
+			<Civilopedia>TXT_KEY_LEADER_LOUISXIV_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_LOUIS_XIV</ArtDefineTag>
 			<iWonderConstructRand>50</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
