@@ -84,7 +84,7 @@ iNumProvinceTypes  = con.iNumProvinceTypes
 
 ############ Lists of all the provinces for each Civ ###################
 tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Thessaloniki,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Antiochia,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt]
-tByzantiumNorm = []
+tByzantiumNorm = [xml.iP_Colonea]
 tByzantiumOuter = [xml.iP_Moesia,xml.iP_Serbia,xml.iP_Cyrenaica]
 tByzantiumPot2Core = []
 tByzantiumPot2Norm = [xml.iP_Cyprus,xml.iP_Crete,xml.iP_Rhodes]
@@ -500,6 +500,7 @@ class ProvinceManager:
                         pByzantium.setProvinceType( xml.iP_Jerusalem, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Charsiadon, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Colonea, iProvinceOuter )
                 elif ( iPlayer == iBulgaria ):
                         pByzantium.setProvinceType( xml.iP_Thrace, iProvinceOuter )
                 elif ( iPlayer == iBurgundy ):

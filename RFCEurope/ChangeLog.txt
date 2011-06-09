@@ -65,6 +65,7 @@ Changes for Beta 12:
 
 	Bugfixes:
 		Fixed: Moscow UHV 2 should work now (used to be that it required 2% land only)
+		Fixed: Colonea now Stable/OK for Byzantium
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
