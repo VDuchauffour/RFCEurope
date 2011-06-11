@@ -353,7 +353,7 @@ tNewCapitals = (  #for RiseAndFall
 #	Many functions reference those and there are search algorithm that I do not whant to change, so leave this with the comment on how to be used
 #	Also Broader Area
 
-tCoreAreasTL = ( #Core Area is initial spawn location, and also important for stability
+tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for stability
 (66,14),   #Byzantium
 (42,42),   #Franks
 (93,1),    #Arabs
@@ -388,13 +388,13 @@ tCoreAreasBR = (
 (59,65),   #Norse
 (61,36),   #Venice
 (48,42),   #Burgundy
-(58,53),   #Germany
+(56,50),   #Germany
 (91,48),   #Kiev
 (71,39),   #Hungary
 (33,40),   #Spain
 (75,50),   #Poland
 (53,35),   #Genoa
-(45,58),   #England
+(44,58),   #England
 (24,35),   #Portugal
 (78,59),   #Lithuania
 (64,43),   #Austria
