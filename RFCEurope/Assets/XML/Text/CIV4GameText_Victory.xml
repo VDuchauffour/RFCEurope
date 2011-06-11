@@ -209,12 +209,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
-		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</English>
-		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</French>
-		<German>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</German>
-		<Italian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Flanders, Champagne and Lorraine in 1376AD.</Russian>
+		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</English>
+		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</French>
+		<German>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</German>
+		<Italian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR2</Tag>
@@ -326,12 +326,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
-		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</English>
-		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</French>
-		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</German>
-		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Yorkshire, Normandy, Iceland, Crimea and Sicily by 1061AD.</Russian>
+		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</English>
+		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</French>
+		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</German>
+		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
@@ -471,12 +471,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</English>
-		<French>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</French>
-		<German>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</German>
-		<Italian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia, Salzburg and Austria Europe in 1648AD.</Russian>
+		<English>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</English>
+		<French>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</French>
+		<German>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</German>
+		<Italian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
@@ -561,12 +561,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG1</Tag>
-		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
-		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
-		<German>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</German>
-		<Italian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.)</Spanish>
-		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
+		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
+		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
+		<German>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</German>
+		<Italian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.)</Spanish>
+		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>
@@ -616,11 +616,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
 		<English>[COLOR_YELLOW]Austrian Habsburg Rule:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
-		<French>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</French>
-		<German>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</German>
-		<Italian>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Italian>
-		<Spanish>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Spanish>
-		<Russian>Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Russian>
+		<French>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</French>
+		<German>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</German>
+		<Italian>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Italian>
+		<Spanish>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Spanish>
+		<Russian>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS2</Tag>
@@ -669,12 +669,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE1</Tag>
-		<English>Conquer Gotaland, Svealand, Norrland and Finland in 1600AD.</English>
-		<French>Conquer Gotaland, Svealand, Norrland and Finland in 1600AD.</French>
-		<German>Conquer Gotaland, Svealand, Norrland and Finland in 1600AD..</German>
-		<Italian>Conquer Gotaland, Svealand, Norrland and Finland in 1600AD.</Italian>
-		<Spanish>Conquer Gotaland, Svealand, Norrland and Finland in 1600AD.</Spanish>
-		<Russian>Conquer Gotaland, Svealand, Norrland and Finland in 1600AD.</Russian>
+		<English>Conquer Gotaland, Svealand, Norrland, Skaneland and Finland in 1600AD.</English>
+		<French>Conquer Gotaland, Svealand, Norrland, Skaneland and Finland in 1600AD.</French>
+		<German>Conquer Gotaland, Svealand, Norrland, Skaneland and Finland in 1600AD..</German>
+		<Italian>Conquer Gotaland, Svealand, Norrland, Skaneland and Finland in 1600AD.</Italian>
+		<Spanish>Conquer Gotaland, Svealand, Norrland, Skaneland and Finland in 1600AD.</Spanish>
+		<Russian>Conquer Gotaland, Svealand, Norrland, Skaneland and Finland in 1600AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>

@@ -672,13 +672,14 @@ iP_Castile = 1 # La Mancha
 ##########################
 iP_Leon = 3
 iP_Lusitania = 4 # Portugal
+iP_Picardy = 5 # This is French
 ##########################
 iP_Catalonia = 6
 iP_Aragon = 7
 iP_Valencia = 8
 iP_Andalusia = 9
 
-# France 10+
+# France 10+ # + 1 in the Iberian group
 iP_Bretagne = 10
 iP_Normandy = 11
 iP_Aquitania = 12
@@ -710,6 +711,7 @@ iP_Gotaland = 34
 iP_Svealand = 35
 iP_Norrland = 36
 iP_Oppland = 37
+iP_Skaneland = 38
 
 # Germany 40+
 iP_Swabia = 40
@@ -719,7 +721,7 @@ iP_Saxony = 43
 iP_Lorraine = 44
 iP_Franconia = 45
 iP_Brandenburg = 46
-iP_Tyrol = 47
+#iP_Tyrol = 47 # Merged with Bavaria
 
 # Poland 50+
 iP_Pomerania = 50
@@ -736,7 +738,7 @@ iP_Estonia = 58
 iP_Carinthia = 60 # with Slovenia
 iP_Austria = 61
 iP_Slavonia = 62
-iP_Salzburg = 63
+#iP_Salzburg = 63 # Merged with Bavaria
 iP_Transylvania = 64
 iP_Hungary = 65
 iP_Moravia = 66

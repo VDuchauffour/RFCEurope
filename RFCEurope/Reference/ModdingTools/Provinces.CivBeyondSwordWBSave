@@ -34,9 +34,6 @@ BeginTeam
 	Tech=TECH_CODE_OF_LAWS
 	Tech=TECH_CLASSICAL_KNOWLEDGE
 	ContactWithTeam=0
-	ContactWithTeam=3
-	ContactWithTeam=4
-	ContactWithTeam=19
 	ContactWithTeam=22
 	AtWar=3
 	AtWar=4
@@ -47,31 +44,24 @@ BeginTeam
 	TeamID=1
 	Tech=TECH_BRONZE_CASTING
 	ContactWithTeam=1
-	ContactWithTeam=15
 	AtWar=15
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=2
 	ContactWithTeam=2
-	ContactWithTeam=19
-	AtWar=19
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=3
-	ContactWithTeam=0
 	ContactWithTeam=3
-	ContactWithTeam=19
 	AtWar=0
 	AtWar=19
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=4
-	ContactWithTeam=0
 	ContactWithTeam=4
-	ContactWithTeam=6
 	AtWar=0
 	AtWar=6
 	RevealMap=0
@@ -83,7 +73,6 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=6
-	ContactWithTeam=4
 	ContactWithTeam=6
 	AtWar=4
 	RevealMap=0
@@ -130,7 +119,6 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=15
-	ContactWithTeam=1
 	ContactWithTeam=15
 	AtWar=1
 	RevealMap=0
@@ -148,23 +136,14 @@ EndTeam
 BeginTeam
 	TeamID=18
 	ContactWithTeam=18
-	ContactWithTeam=23
-	ContactWithTeam=24
-	ContactWithTeam=26
-	AtWar=23
 	AtWar=24
 	AtWar=25
-	AtWar=26
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=19
-	ContactWithTeam=0
-	ContactWithTeam=2
-	ContactWithTeam=3
 	ContactWithTeam=19
 	AtWar=0
-	AtWar=2
 	AtWar=3
 	RevealMap=0
 EndTeam
@@ -193,15 +172,12 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=23
-	ContactWithTeam=18
 	ContactWithTeam=22
 	ContactWithTeam=23
-	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=24
-	ContactWithTeam=18
 	ContactWithTeam=22
 	ContactWithTeam=24
 	AtWar=18
@@ -216,10 +192,8 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=26
-	ContactWithTeam=18
 	ContactWithTeam=22
 	ContactWithTeam=26
-	AtWar=18
 	RevealMap=0
 EndTeam
 BeginPlayer
@@ -236,7 +210,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=3000
+	StartingGold=1000
 	StateReligion=RELIGION_ORTHODOXY
 	StartingEra=ERA_CLASSICAL
 	RandomStartLocation=false
@@ -262,7 +236,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=150
+	StartingGold=50
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -288,7 +262,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=600
+	StartingGold=200
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -314,7 +288,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=300
+	StartingGold=100
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -340,7 +314,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=600
+	StartingGold=200
 	StateReligion=RELIGION_ISLAM
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -366,7 +340,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=600
+	StartingGold=200
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -392,7 +366,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=900
+	StartingGold=300
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -418,7 +392,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=750
+	StartingGold=250
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -444,7 +418,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=900
+	StartingGold=300
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -470,7 +444,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=750
+	StartingGold=250
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -496,7 +470,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=900
+	StartingGold=300
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -522,7 +496,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1500
+	StartingGold=500
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -548,7 +522,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=900
+	StartingGold=300
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -574,7 +548,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1200
+	StartingGold=400
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -600,7 +574,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1200
+	StartingGold=400
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -626,7 +600,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1350
+	StartingGold=450
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -652,7 +626,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1200
+	StartingGold=400
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -678,7 +652,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=2100
+	StartingGold=700
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -704,7 +678,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=3000
+	StartingGold=1000
 	StateReligion=RELIGION_ISLAM
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -730,7 +704,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=1200
+	StartingGold=400
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -756,14 +730,14 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=3000
+	StartingGold=1000
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_FREE_PEASANTRY
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
+	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
+	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_GUILDS
 	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
 	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
@@ -782,7 +756,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
 	MinorNationStatus=0
-	StartingGold=4500
+	StartingGold=1500
 	StateReligion=RELIGION_PROTESTANTISM
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -834,7 +808,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=150
+	StartingGold=50
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -860,7 +834,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=150
+	StartingGold=50
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -886,7 +860,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=150
+	StartingGold=50
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -912,7 +886,7 @@ BeginPlayer
 	ArtStyle=ARTSTYLE_BARBARIAN
 	PlayableCiv=0
 	MinorNationStatus=1
-	StartingGold=150
+	StartingGold=50
 	StateReligion=
 	StartingEra=ERA_ANCIENT
 	RandomStartLocation=false
@@ -935,7 +909,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3280
+	num signs written=3276
 	Randomize Resources=false
 EndMap
 
@@ -1666,6 +1640,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=71
+	BonusType=BONUS_IVORY
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
@@ -2023,7 +1998,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=69
-	BonusType=BONUS_ACCESS
+	BonusType=BONUS_NORTH_AMERICA_ACCESS
+	ImprovementType=IMPROVEMENT_COLONIAL_TRADE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8442,6 +8418,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=31
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9533,6 +9510,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=23
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9548,6 +9526,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=26
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9642,6 +9621,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=42
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12663,12 +12643,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -13062,13 +13042,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=72
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_OCEAN
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=0
@@ -13465,13 +13445,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=72
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=1
+	TerrainType=TERRAIN_OCEAN
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=0
@@ -13878,12 +13858,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -14178,6 +14158,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=50
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14980,6 +14961,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=41
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=1,
@@ -15491,6 +15473,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=54
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17703,6 +17686,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=58
+	isNOfRiver
+	RiverWEDirection=1
 	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MOORLAND
@@ -17710,8 +17695,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=59
-	isNOfRiver
-	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
@@ -18159,6 +18142,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=58
+	isNOfRiver
+	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -18166,8 +18151,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=59
-	isNOfRiver
-	RiverWEDirection=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -18608,13 +18591,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=58
+	isNOfRiver
+	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=44,y=59
-	isNOfRiver
-	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -19535,7 +19518,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=70
-	TerrainType=TERRAIN_OCEAN
+	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
@@ -19773,7 +19756,6 @@ EndPlot
 BeginPlot
 	x=47,y=37
 	BonusType=BONUS_SULPHUR
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=1,22,
@@ -19985,8 +19967,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=72
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=0
@@ -20419,13 +20401,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=72
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=0
@@ -20641,6 +20623,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=33
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,1,22,
@@ -20800,6 +20783,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=54
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20885,12 +20869,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -21109,7 +21093,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=33
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,1,22,
@@ -21630,7 +21613,7 @@ BeginPlot
 	x=51,y=40
 	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 	TeamReveal=1,22,
 EndPlot
 BeginPlot
@@ -22159,7 +22142,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=49
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=1,
@@ -22611,7 +22594,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=50
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -22998,6 +22981,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=41
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -23057,7 +23041,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=50
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -23461,7 +23445,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=41
-	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -23620,7 +23603,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=66
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
@@ -23953,20 +23936,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=39
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=22,
 EndPlot
 BeginPlot
 	x=56,y=40
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=22,
 EndPlot
 BeginPlot
 	x=56,y=41
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -24028,6 +24011,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=50
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -24417,13 +24401,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=39
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
-	TeamReveal=22,
-EndPlot
-BeginPlot
-	x=57,y=40
 	BonusType=BONUS_TIMBER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
@@ -24431,8 +24408,16 @@ BeginPlot
 	TeamReveal=22,
 EndPlot
 BeginPlot
+	x=57,y=40
+	BonusType=BONUS_SALT
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
+	TeamReveal=22,
+EndPlot
+BeginPlot
 	x=57,y=41
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -24440,7 +24425,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=42
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=22,
@@ -24463,6 +24448,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=45
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -24490,13 +24476,13 @@ BeginPlot
 	x=57,y=49
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=50
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -24903,6 +24889,7 @@ BeginPlot
 	x=58,y=42
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=22,
@@ -26393,7 +26380,7 @@ BeginPlot
 	x=61,y=57
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -27781,6 +27768,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=53
+	BonusType=BONUS_GEMS
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
@@ -28809,7 +28797,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=69
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29156,6 +29144,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=47
+	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29171,6 +29160,7 @@ BeginPlot
 	x=67,y=49
 	RiverNSDirection=0
 	isWOfRiver
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29184,6 +29174,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=51
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -30082,6 +30073,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=43
+	BonusType=BONUS_SALT
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -30244,8 +30236,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=72
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=70,y=0
@@ -30638,7 +30630,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=55
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -30698,7 +30690,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=66
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -30734,8 +30726,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=72
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=71,y=0
@@ -31050,6 +31042,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=45
+	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -32153,7 +32146,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=61
-	BonusType=BONUS_GEMS
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -36601,7 +36594,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=70
-	BonusType=BONUS_GEMS
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -42578,6 +42570,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=11
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -42585,8 +42579,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=12
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 	TeamReveal=0,
@@ -46080,12 +46072,6 @@ BeginSign
 	caption=26
 EndSign
 BeginSign
-	plotX=39
-	plotY=60
-	playerType=-1
-	caption=27
-EndSign
-BeginSign
 	plotX=54
 	plotY=19
 	playerType=-1
@@ -47784,60 +47770,6 @@ BeginSign
 	caption=11
 EndSign
 BeginSign
-	plotX=44
-	plotY=48
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=44
-	plotY=49
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=45
-	plotY=48
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=45
-	plotY=49
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=45
-	plotY=50
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=46
-	plotY=50
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=46
-	plotY=49
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=46
-	plotY=48
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
-	plotX=47
-	plotY=49
-	playerType=-1
-	caption=11
-EndSign
-BeginSign
 	plotX=38
 	plotY=42
 	playerType=-1
@@ -49266,24 +49198,6 @@ BeginSign
 	caption=41
 EndSign
 BeginSign
-	plotX=55
-	plotY=43
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=56
-	plotY=43
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=57
-	plotY=43
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
 	plotX=58
 	plotY=43
 	playerType=-1
@@ -49416,38 +49330,8 @@ BeginSign
 	caption=43
 EndSign
 BeginSign
-	plotX=58
-	plotY=53
-	playerType=-1
-	caption=43
-EndSign
-BeginSign
 	plotX=57
 	plotY=52
-	playerType=-1
-	caption=43
-EndSign
-BeginSign
-	plotX=58
-	plotY=52
-	playerType=-1
-	caption=43
-EndSign
-BeginSign
-	plotX=58
-	plotY=51
-	playerType=-1
-	caption=43
-EndSign
-BeginSign
-	plotX=59
-	plotY=51
-	playerType=-1
-	caption=43
-EndSign
-BeginSign
-	plotX=59
-	plotY=50
 	playerType=-1
 	caption=43
 EndSign
@@ -50605,43 +50489,7 @@ BeginSign
 EndSign
 BeginSign
 	plotX=60
-	plotY=40
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=60
-	plotY=41
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=59
-	plotY=40
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=60
 	plotY=38
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=61
-	plotY=40
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=61
-	plotY=41
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=60
-	plotY=39
 	playerType=-1
 	caption=63
 EndSign
@@ -56430,12 +56278,6 @@ BeginSign
 	caption=31
 EndSign
 BeginSign
-	plotX=70
-	plotY=72
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
 	plotX=71
 	plotY=72
 	playerType=-1
@@ -56570,12 +56412,6 @@ EndSign
 BeginSign
 	plotX=71
 	plotY=67
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=69
-	plotY=64
 	playerType=-1
 	caption=31
 EndSign
@@ -56922,61 +56758,7 @@ BeginSign
 	caption=33
 EndSign
 BeginSign
-	plotX=60
-	plotY=64
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=60
-	plotY=63
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=61
-	plotY=64
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=61
-	plotY=65
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=61
-	plotY=66
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=60
-	plotY=67
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=61
-	plotY=67
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
 	plotX=59
-	plotY=67
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=59
-	plotY=66
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=60
 	plotY=66
 	playerType=-1
 	caption=33
@@ -56988,79 +56770,7 @@ BeginSign
 	caption=33
 EndSign
 BeginSign
-	plotX=60
-	plotY=65
-	playerType=-1
-	caption=33
-EndSign
-BeginSign
-	plotX=61
-	plotY=56
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
 	plotX=62
-	plotY=56
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=61
-	plotY=57
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=62
-	plotY=57
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=61
-	plotY=58
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=62
-	plotY=58
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=63
-	plotY=58
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=63
-	plotY=57
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=64
-	plotY=58
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=61
-	plotY=59
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=62
-	plotY=59
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
-	plotX=60
 	plotY=59
 	playerType=-1
 	caption=34
@@ -57076,276 +56786,6 @@ BeginSign
 	plotY=59
 	playerType=-1
 	caption=34
-EndSign
-BeginSign
-	plotX=60
-	plotY=60
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=60
-	plotY=61
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=60
-	plotY=62
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=61
-	plotY=63
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=61
-	plotY=62
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=61
-	plotY=61
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=61
-	plotY=60
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=62
-	plotY=61
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=62
-	plotY=60
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=63
-	plotY=60
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=63
-	plotY=61
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=62
-	plotY=62
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=62
-	plotY=63
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=63
-	plotY=63
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=64
-	plotY=63
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=65
-	plotY=62
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=64
-	plotY=62
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=63
-	plotY=62
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=64
-	plotY=61
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=65
-	plotY=61
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=64
-	plotY=60
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=65
-	plotY=63
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=66
-	plotY=63
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=66
-	plotY=64
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=67
-	plotY=64
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=66
-	plotY=65
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=67
-	plotY=65
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=65
-	plotY=65
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=64
-	plotY=65
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=63
-	plotY=65
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=62
-	plotY=65
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=62
-	plotY=64
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=63
-	plotY=64
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=64
-	plotY=64
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=65
-	plotY=64
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=66
-	plotY=67
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=66
-	plotY=66
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=65
-	plotY=67
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=65
-	plotY=66
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=64
-	plotY=67
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=63
-	plotY=67
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=62
-	plotY=67
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=62
-	plotY=66
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=63
-	plotY=66
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=64
-	plotY=66
-	playerType=-1
-	caption=36
 EndSign
 BeginSign
 	plotX=66
@@ -61878,12 +61318,6 @@ BeginSign
 	caption=42
 EndSign
 BeginSign
-	plotX=60
-	plotY=42
-	playerType=-1
-	caption=42
-EndSign
-BeginSign
 	plotX=63
 	plotY=45
 	playerType=-1
@@ -61974,48 +61408,6 @@ BeginSign
 	caption=43
 EndSign
 BeginSign
-	plotX=56
-	plotY=46
-	playerType=-1
-	caption=43
-EndSign
-BeginSign
-	plotX=56
-	plotY=44
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=57
-	plotY=44
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=54
-	plotY=44
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=55
-	plotY=44
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=56
-	plotY=45
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
-	plotX=57
-	plotY=45
-	playerType=-1
-	caption=41
-EndSign
-BeginSign
 	plotX=58
 	plotY=40
 	playerType=-1
@@ -62098,18 +61490,6 @@ BeginSign
 	plotY=38
 	playerType=-1
 	caption=61
-EndSign
-BeginSign
-	plotX=59
-	plotY=41
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
-	plotX=59
-	plotY=39
-	playerType=-1
-	caption=63
 EndSign
 BeginSign
 	plotX=59
@@ -62268,54 +61648,6 @@ BeginSign
 	caption=78
 EndSign
 BeginSign
-	plotX=55
-	plotY=39
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=56
-	plotY=39
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=57
-	plotY=39
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=58
-	plotY=39
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=58
-	plotY=38
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=57
-	plotY=38
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=56
-	plotY=38
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=55
-	plotY=38
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
 	plotX=61
 	plotY=47
 	playerType=-1
@@ -62374,18 +61706,6 @@ BeginSign
 	plotY=44
 	playerType=-1
 	caption=67
-EndSign
-BeginSign
-	plotX=55
-	plotY=37
-	playerType=-1
-	caption=47
-EndSign
-BeginSign
-	plotX=56
-	plotY=37
-	playerType=-1
-	caption=47
 EndSign
 BeginSign
 	plotX=62
@@ -64584,18 +63904,6 @@ BeginSign
 	caption=40
 EndSign
 BeginSign
-	plotX=69
-	plotY=72
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=54
-	plotY=39
-	playerType=-1
-	caption=70
-EndSign
-BeginSign
 	plotX=54
 	plotY=40
 	playerType=-1
@@ -64618,4 +63926,664 @@ BeginSign
 	plotY=40
 	playerType=-1
 	caption=41
+EndSign
+BeginSign
+	plotX=60
+	plotY=62
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=60
+	plotY=63
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=60
+	plotY=64
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=60
+	plotY=65
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=60
+	plotY=66
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=59
+	plotY=67
+	playerType=-1
+	caption=37
+EndSign
+BeginSign
+	plotX=60
+	plotY=67
+	playerType=-1
+	caption=37
+EndSign
+BeginSign
+	plotX=60
+	plotY=59
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=61
+	plotY=58
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=61
+	plotY=59
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=62
+	plotY=58
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=63
+	plotY=58
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=64
+	plotY=58
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=61
+	plotY=57
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=62
+	plotY=57
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=63
+	plotY=57
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=61
+	plotY=56
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=62
+	plotY=56
+	playerType=-1
+	caption=38
+EndSign
+BeginSign
+	plotX=60
+	plotY=60
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=60
+	plotY=61
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=61
+	plotY=62
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=62
+	plotY=62
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=63
+	plotY=62
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=64
+	plotY=62
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=65
+	plotY=62
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=65
+	plotY=61
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=64
+	plotY=61
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=63
+	plotY=61
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=61
+	plotY=61
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=62
+	plotY=61
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=61
+	plotY=60
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=62
+	plotY=60
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=64
+	plotY=60
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=63
+	plotY=60
+	playerType=-1
+	caption=34
+EndSign
+BeginSign
+	plotX=63
+	plotY=63
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=62
+	plotY=63
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=61
+	plotY=63
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=61
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=62
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=66
+	plotY=67
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=65
+	plotY=67
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=64
+	plotY=67
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=63
+	plotY=67
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=62
+	plotY=67
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=61
+	plotY=67
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=61
+	plotY=66
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=62
+	plotY=66
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=63
+	plotY=66
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=64
+	plotY=66
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=65
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=65
+	plotY=66
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=66
+	plotY=66
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=66
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=67
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=67
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=66
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=66
+	plotY=63
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=65
+	plotY=63
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=65
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=64
+	plotY=63
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=64
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=64
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=63
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=63
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=62
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=61
+	plotY=65
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=59
+	plotY=50
+	playerType=-1
+	caption=46
+EndSign
+BeginSign
+	plotX=59
+	plotY=51
+	playerType=-1
+	caption=46
+EndSign
+BeginSign
+	plotX=58
+	plotY=51
+	playerType=-1
+	caption=46
+EndSign
+BeginSign
+	plotX=58
+	plotY=52
+	playerType=-1
+	caption=46
+EndSign
+BeginSign
+	plotX=58
+	plotY=53
+	playerType=-1
+	caption=46
+EndSign
+BeginSign
+	plotX=39
+	plotY=60
+	playerType=-1
+	caption=25
+EndSign
+BeginSign
+	plotX=44
+	plotY=48
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=45
+	plotY=48
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=46
+	plotY=48
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=46
+	plotY=49
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=47
+	plotY=49
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=46
+	plotY=50
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=45
+	plotY=50
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=44
+	plotY=49
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=45
+	plotY=49
+	playerType=-1
+	caption=5
+EndSign
+BeginSign
+	plotX=54
+	plotY=44
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=55
+	plotY=44
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=56
+	plotY=45
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=57
+	plotY=45
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=56
+	plotY=44
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=57
+	plotY=44
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=55
+	plotY=43
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=56
+	plotY=43
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=56
+	plotY=37
+	playerType=-1
+	caption=71
+EndSign
+BeginSign
+	plotX=55
+	plotY=39
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=55
+	plotY=38
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=56
+	plotY=39
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=56
+	plotY=38
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=57
+	plotY=39
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=57
+	plotY=38
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=58
+	plotY=39
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=59
+	plotY=39
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=58
+	plotY=38
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=60
+	plotY=39
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=60
+	plotY=40
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=60
+	plotY=41
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=59
+	plotY=41
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=60
+	plotY=42
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=57
+	plotY=43
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=59
+	plotY=40
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=61
+	plotY=41
+	playerType=-1
+	caption=61
+EndSign
+BeginSign
+	plotX=61
+	plotY=40
+	playerType=-1
+	caption=61
+EndSign
+BeginSign
+	plotX=56
+	plotY=46
+	playerType=-1
+	caption=45
+EndSign
+BeginSign
+	plotX=54
+	plotY=39
+	playerType=-1
+	caption=40
 EndSign

@@ -29,13 +29,13 @@ ProvMap = rfceMaps.tProinceMap
 # tDefensiveCrusadeMap, can call DC, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
 tDefensiveCrusadeMap = [
 [], #tByzantium
-[xml.iP_IleDeFrance,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Bretagne,xml.iP_Normandy,xml.iP_Provence,xml.iP_Flanders,xml.iP_Burgundy], #tFrance
+[xml.iP_IleDeFrance,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Bretagne,xml.iP_Normandy,xml.iP_Provence,xml.iP_Flanders,xml.iP_Burgundy,xml.iP_Picardy], #tFrance
 [], #tArabia
 [], #tBulgaria
 [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia], #tCordoba (for consistency)
 [], #tNorse
 [xml.iP_Verona, xml.iP_Tuscany, xml.iP_Carinthia, xml.iP_Dalmatia], #tVenecia
-[xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine], #tBurgundy
+[xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine,xml.iP_Picardy], #tBurgundy
 [xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Bavaria, xml.iP_Saxony, xml.iP_Franconia, xml.iP_Flanders, xml.iP_Brandenburg, xml.iP_Bohemia], #tGermany
 [], #tKiev
 [xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Pannonia, xml.iP_Austria], #tHungary
@@ -45,7 +45,7 @@ tDefensiveCrusadeMap = [
 [], #tEngland
 [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia], #tPortugal
 [], #tLithuania
-[xml.iP_Austria, xml.iP_Salzburg, xml.iP_Tyrol, xml.iP_Bohemia, xml.iP_Moravia], #tAustria
+[xml.iP_Austria, xml.iP_Bavaria, xml.iP_Bohemia, xml.iP_Moravia], #tAustria
 [], #tTurkey
 [], #tMoscow
 [], #tSweden
