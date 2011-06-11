@@ -88,6 +88,8 @@ lSaraiBatu = [99,40,200,0] #1200 AD
 lMus = [99,21,153,0] #1060 AD
 lPalermo = [55,19,2,0] # 508 AD
 lGroningen = [52,54,150,0] #1050 AD
+#lMuenster = [52,50,....]
+
 
 #handicap level modifier
 iHandicapOld = (gc.getGame().getHandicapType() - 1)
