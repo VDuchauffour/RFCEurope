@@ -326,21 +326,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
-		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</English>
-		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</French>
-		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</German>
-		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Crimea and Sicily by 1061AD.</Russian>
+		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Novgorod and Sicily by 1061AD.</English>
+		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Novgorod and Sicily by 1061AD.</French>
+		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Novgorod and Sicily by 1061AD.</German>
+		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Novgorod and Sicily by 1061AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Novgorod and Sicily by 1061AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Mercia, Normandy, Iceland, Novgorod and Sicily by 1061AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
-		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents and Barbarians don't count)</English>
-		<French>Raser 6 villes. (Independents and Barbarians don't count)</French>
-		<German>Zerst&#246;ren sie mindestens 6 St&#228;dte (Independents and Barbarians don't count)</German>
-		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents and Barbarians don't count)</Italian>
-		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Raze 6 cities. (Independents and Barbarians don't count)</Spanish>
-		<Russian>&#209;&#237;&#229;&#241;&#232;&#242;&#229; 6 &#227;&#238;&#240;&#238;&#228;&#238;&#226;. (Independents and Barbarians don't count)</Russian>
+		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</English>
+		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</French>
+		<German>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</German>
+		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</Italian>
+		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</Spanish>
+		<Russian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>
@@ -752,13 +752,13 @@
 		<Russian>Islamic</Russian>
 	</TEXT>	
 	<TEXT>
-		<Tag>TXT_KEY_UHV_CITIES</Tag>
-		<English>Cities</English>
-		<French>Cities</French>
-		<German>Cities</German>
-		<Italian>Cities</Italian>
-		<Spanish>Cities</Spanish>
-		<Russian>Cities</Russian>
+		<Tag>TXT_KEY_UHV_VIKING</Tag>
+		<English>Viking</English>
+		<French>Viking</French>
+		<German>Viking</German>
+		<Italian>Viking</Italian>
+		<Spanish>Viking</Spanish>
+		<Russian>Viking</Russian>
 	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FOOD</Tag>
