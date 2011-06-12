@@ -96,7 +96,7 @@ bool CvUnitAI::AI_update()
 	//Rhye (Gyathaar / Kael) - end comment 
 
 	// 3MiroAI: decide how the AI would do with a prosecutor
-	//GC.getGameINLINE().logMsg("   Unit AI "); 
+	//GC.getGameINLINE().logMsg("   Unit AI  at %d %d   UnitType: %d",getX(),getY(),getUnitType() ); 
 	//GC.getGameINLINE().logMsg("   Start Prosecutions ");
 	if ( getUnitType() == UNIT_PROSECUTOR ){
 		//GC.getGameINLINE().logMsg("   PROSECUTOR ");
@@ -299,6 +299,7 @@ bool CvUnitAI::AI_update()
 			break;
 
 		case UNITAI_SETTLE:
+			//GC.getGameINLINE().logMsg("   AI_Update() Making a Settlers Move");
 			AI_settleMove();
 			break;
 
@@ -1296,6 +1297,8 @@ void CvUnitAI::AI_settleMove()
 {
 	PROFILE_FUNC();
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 1 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
+
 	if (GET_PLAYER(getOwnerINLINE()).getNumCities() == 0)
 	{
 		if (canFound(plot()))
@@ -1305,28 +1308,39 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 	
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 2 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	int iDanger = GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 3);
 	
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (iDanger > 0)
 	{
+		//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.1 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 		if ((plot()->getOwnerINLINE() == getOwnerINLINE()) || (iDanger > 2))
 		{
+			//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.2 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 			joinGroup(NULL);
+			//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.3 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 			if (AI_retreatToCity())
 			{
+				//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.4 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 				return;
 			}
+			//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.5 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 			if (AI_safety())
 			{
+				//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.6 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 				return;
 			}
+			//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.7 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 			getGroup()->pushMission(MISSION_SKIP);
+			//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 3.8 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 		}
 	}
 
 	int iAreaBestFoundValue = 0;
 	int iOtherBestFoundValue = 0;
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 4 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	for (int iI = 0; iI < GET_PLAYER(getOwnerINLINE()).AI_getNumCitySites(); iI++)
 	{
 		CvPlot* pCitySitePlot = GET_PLAYER(getOwnerINLINE()).AI_getCitySite(iI);
@@ -1335,7 +1349,7 @@ void CvUnitAI::AI_settleMove()
 /*                                                                                              */
 /* Bugfix, settler AI                                                                           */
 /************************************************************************************************/
-/* original bts code
+/*// original bts code
 		if (pCitySitePlot->getArea() == getArea())
 */
 		// Only count city sites we can get to
@@ -1362,6 +1376,7 @@ void CvUnitAI::AI_settleMove()
 	}
 	//GC.getGame().logMsg(" Settler at %d %d, values %d %d",getX(),getY(),iAreaBestFoundValue,iOtherBestFoundValue);
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 5 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if ((iAreaBestFoundValue == 0) && (iOtherBestFoundValue == 0))
 	{
 		if ((GC.getGame().getGameTurn() - getGameTurnCreated()) > 20)
@@ -1380,6 +1395,7 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 	
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 6 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if ((iOtherBestFoundValue * 100) > (iAreaBestFoundValue * 110))
 	{
 		//GC.getGame().logMsg(" -- 1 Settler at %d %d, values %d %d",getX(),getY(),iAreaBestFoundValue,iOtherBestFoundValue);
@@ -1411,6 +1427,7 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 7 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (plot()->isCity() && (plot()->getOwnerINLINE() == getOwnerINLINE()))
 	{
 /************************************************************************************************/
@@ -1433,6 +1450,7 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 8 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (iAreaBestFoundValue > 0)
 	{
 		//Rhye - start switch
@@ -1508,6 +1526,7 @@ void CvUnitAI::AI_settleMove()
 		//Rhye - end
 	}
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 9 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (plot()->getOwnerINLINE() == getOwnerINLINE())
 	{
 		if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, -1, -1, 0, MOVE_NO_ENEMY_TERRITORY))
@@ -1526,6 +1545,7 @@ void CvUnitAI::AI_settleMove()
 		return;
 	}
 
+	//GC.getGameINLINE().logMsg(" CvUnitAI::AI_settleMove() 10 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -15646,6 +15666,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 	pCity = plot()->getPlotCity();
 
 
+	//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 1 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (0 == iCurrentDanger)
 	{
 		if (pCity != NULL)
@@ -15667,6 +15688,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 2 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	for (iPass = 0; iPass < 4; iPass++)
 	{
 		for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
@@ -15707,6 +15729,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 			}
 		}
 
+		//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 3 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 		if (pBestPlot != NULL)
 		{
 			break;
@@ -15738,13 +15761,21 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 4 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (pBestPlot != NULL)
 	{
 		FAssert(!atPlot(pBestPlot));
-		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), ((iPass > 0) ? MOVE_IGNORE_DANGER : 0));
+		//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 4.1 MoveTo %d %d ",pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(),getUnitType() );
+		//if ( GC.getMapINLINE().plot( pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE() ) ->isCity() ){
+		//	GC.getGameINLINE().logMsg("                                4.1 Owner   %d ", GC.getMapINLINE().plot( pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE() ) ->getOwner()  );
+		//};
+		// 3MiroBug: with the pass condition, this causes a settlers to not know where to go and puts the game into infinite loop (going all the way from CvGame::update() )
+		//getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), ((iPass > 0) ? MOVE_IGNORE_DANGER : 0));
+		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_IGNORE_DANGER );
 		return true;
 	}
 
+	//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 5 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	if (pCity != NULL)
 	{
 		if (pCity->getTeam() == getTeam())
@@ -15754,6 +15785,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 		}
 	}
 
+	//GC.getGameINLINE().logMsg("   CvUnitAI::AI_retreatToCity() 6 %d %d  UnitType: %d",getX(),getY(),getUnitType() );
 	return false;
 }
 

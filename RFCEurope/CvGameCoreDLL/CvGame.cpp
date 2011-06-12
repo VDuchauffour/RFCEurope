@@ -2151,6 +2151,7 @@ void CvGame::update()
 		};
 		logMsg("  getNumGameTurnActive %d  ",getNumGameTurnActive() );*/
 		// 3MiroDebug: end
+		//logMsg("  update() - getNumGameTurnActive %d --- gameTurn() %d ",getNumGameTurnActive(),getGameTurn() );
 		if (getNumGameTurnActive() == 0)
 		{
 			if (!isPbem() || !getPbemTurnSent())
@@ -2203,7 +2204,7 @@ void CvGame::update()
 		}
 		//logMsg("Update in Here 5 iHuman %d",iHuman); //3Miro
 		// 3Miro
-		//GC.getGameINLINE().logMsg(" Autoplay doTurn");
+		//GC.getGameINLINE().logMsg(" update getAIAutoPlay() = %d ",getAIAutoPlay());
 		if ( (iHuman > -1) && (iHuman <NUM_ALL_PLAYERS_B) ){
 			if ( startingTurn[iHuman] > 0 ){
 				if ( getGameTurn() == 0 ){
@@ -6041,9 +6042,11 @@ void CvGame::doTurn()
 	gDLL->getInterfaceIFace()->setEndTurnMessage(false);
 	gDLL->getInterfaceIFace()->setHasMovedUnit(false);
 
+	//logMsg(" -- doTurn getAIAutoplay() = %d",getAIAutoPlay());
 	if (getAIAutoPlay() > 0)
 	{
 		changeAIAutoPlay(-1);
+		//logMsg(" ----- doTurn getAIAutoplay() = %d",getAIAutoPlay());
 
 		if (getAIAutoPlay() == 0)
 		{
@@ -6089,8 +6092,10 @@ void CvGame::doTurn()
 	{
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
+			//logMsg("  in loop Game doTurn setting setTurnActive(true) for player: %d ",iI);
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
+				//logMsg("  is Alive setting setTurnActive(true) for player: %d ",iI);
 				if (isPbem() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
 					if (iI == getActivePlayer())
@@ -6106,6 +6111,7 @@ void CvGame::doTurn()
 				}
 				else
 				{
+					//logMsg(" Game doTurn setting setTurnActive(true) for player: %d ",iI);
 					GET_PLAYER((PlayerTypes)iI).setTurnActive(true);
 					FAssert(getNumGameTurnActive() == 1);
 				}

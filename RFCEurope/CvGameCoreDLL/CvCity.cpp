@@ -411,6 +411,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	// 3Miro: DamageEnemy
 	m_iDamageEnemy = 0;
+	// 3MiroBuildings: BombardImmune
+	m_iBombardImmuneDefense = 0;
 
 	m_iID = iID;
 	m_iX = iX;
@@ -3838,6 +3840,10 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		};
 		if ( GC.getBuildingInfo(eBuilding).isAllowIrrigation() ){
 			GET_TEAM(getTeam()).changeIrrigationCount(iChange);
+		};
+		if ( GC.getBuildingInfo(eBuilding).getBombardImmuneDefense() > 0 ){
+			//GC.getGameINLINE().logMsg(" Change in Bombard Immune: %d",GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
+			chnageBombImmuneDefense(GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
 		};
 		//3MiroBuildings - END
 
@@ -7296,7 +7302,7 @@ bool CvCity::isBombardable(const CvUnit* pUnit) const
 		return false;
 	}
 
-	return (getDefenseModifier(false) > 0);
+	return (getDefenseModifier(false) - getBombImmuneDefense() > 0); // 3MiroBomb
 }
 
 
@@ -7324,7 +7330,11 @@ int CvCity::getDefenseModifier(bool bIgnoreBuilding) const
 		return 0;
 	}
 
-	return ((getTotalDefense(bIgnoreBuilding) * (GC.getMAX_CITY_DEFENSE_DAMAGE() - getDefenseDamage())) / GC.getMAX_CITY_DEFENSE_DAMAGE());
+	// 3MiroBomb
+	//if ( getX() == 44 && getY() == 46 ){
+	//	GC.getGameINLINE().logMsg(" Frances Extra Defense: %d",getBombImmuneDefense() );
+	//};
+	return ((getTotalDefense(bIgnoreBuilding) * (GC.getMAX_CITY_DEFENSE_DAMAGE() - getDefenseDamage())) / GC.getMAX_CITY_DEFENSE_DAMAGE()) + getBombImmuneDefense();
 }
 
 
@@ -12424,6 +12434,10 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iSpecialistFreeExperience);
 	pStream->Read(&m_iEspionageDefenseModifier);
 
+	// 3MiroBuildings:
+	pStream->Read(&m_iDamageEnemy);
+	pStream->Read(&m_iBombardImmuneDefense);
+
 	pStream->Read(&m_bNeverLost);
 	pStream->Read(&m_bBombarded);
 	pStream->Read(&m_bDrafted);
@@ -12664,6 +12678,10 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iCitySizeBoost);
 	pStream->Write(m_iSpecialistFreeExperience);
 	pStream->Write(m_iEspionageDefenseModifier);
+
+	// 3MiroBildings
+	pStream->Write(m_iDamageEnemy);
+	pStream->Write(m_iBombardImmuneDefense);
 
 	pStream->Write(m_bNeverLost);
 	pStream->Write(m_bBombarded);
@@ -14465,4 +14483,13 @@ int CvCity::getNumForeignReligions(){
 		};
 	};
 	return iCount;
+};
+
+int CvCity::getBombImmuneDefense() const
+{
+	return m_iBombardImmuneDefense;
+};
+
+void CvCity::chnageBombImmuneDefense( int iChange ){
+	m_iBombardImmuneDefense += iChange;
 };

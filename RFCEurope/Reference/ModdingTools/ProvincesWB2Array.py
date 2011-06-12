@@ -30,7 +30,8 @@ import re #for string manipulations
 ######################################################################
 ##### Edit this Part ################
 
-tWBFilename = "Provinces_AR.CivBeyondSwordWBSave"
+tWBFilename = "Provinces.CivBeyondSwordWBSave"
+#tWBFilename = "PolandNewCityNamesAndResources.CivBeyondSwordWBSave"
 iOutputType = 3 # 1 - Javascript Province, 2 - Javascript Map, 3 - Python Array for Maps.py
 
 iMapMaxX = 100

@@ -958,12 +958,17 @@ public:
 	// 3MiroProvinces
 	int getProvince();
 
+	// 3MiroBuildings: StarFort bombard immune defense
+	int getBombImmuneDefense() const;
+	void chnageBombImmuneDefense( int iChange );
+
 	int getNumForeignReligions();
 
 protected:
 
 	// 3Miro: damage enemy stuff
 	int m_iDamageEnemy;
+	int m_iBombardImmuneDefense;
 
 	int m_iID;
 	int m_iX;

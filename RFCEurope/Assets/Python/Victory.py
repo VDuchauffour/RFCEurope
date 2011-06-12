@@ -491,6 +491,14 @@ class Victory:
                                         pVenecia.setUHV( 2, 1 )
                                 else:
                                         pVenecia.setUHV( 2, 0 )
+                        if ( iPlayer == iFrankia ):
+                                pFrankia.setUHVCounter( 2, pFrankia.getUHVCounter( 2 ) + 1 )
+                        elif ( iPlayer == iEngland ):
+                                pEngland.setUHVCounter( 1, pEngland.getUHVCounter( 1 ) + 1 )
+                        elif ( iPlayer == iPortugal ):
+                                pPortugal.setUHVCounter( 2, pPortugal.getUHVCounter( 2 ) + 1 )
+                        elif ( iPlayer == iDutch ):
+                                pDutch.setUHVCounter( 2, pDutch.getUHVCounter( 2 ) + 1 )
 
         def onCorporationFounded(self, iPlayer ):
                 self.setCorporationsFounded( self.getCorporationsFounded() + 1 )
@@ -594,7 +602,7 @@ class Victory:
                                 pFrankia.setUHV( 1, 0 )
                                 
                 if ( pFrankia.getUHV( 2 ) == -1 ):
-                        if ( pFrankia.getNumColonies() > 5 ):
+                        if ( pFrankia.getUHVCounter( 2 ) > 5 ):
                                 pFrankia.setUHV( 2, 1 )
                 
         def checkArabia( self, iGameTurn ):
@@ -958,7 +966,7 @@ class Victory:
                                 pEngland.setUHV( 0, 0 )
                 # Colonies
                 if ( pEngland.getUHV( 1 ) == -1 ):
-                        if ( pEngland.getNumColonies() >= 8 ):
+                        if ( pEngland.getUHVCounter( 1 ) >= 8 ):
                                 pEngland.setUHV( 1, 1 )
                 # Industrial revolution
                 pass
@@ -968,7 +976,7 @@ class Victory:
                         pPortugal.setUHV( 1, 1 )
                 
                 if ( pPortugal.getUHV( 2 ) == -1 ):
-                        if ( pPortugal.getNumColonies() >= 6 ):
+                        if ( pPortugal.getUHVCounter( 2 ) >= 6 ):
                                 pPortugal.setUHV( 2, 1 )
                 
         def checkLithuania( self, iGameTurn ):
@@ -1148,6 +1156,6 @@ class Victory:
                                 pDutch.setUHV( 1, 0 )
 
                 if ( pDutch.getUHV( 2 ) == -1 ):
-                        if ( pDutch.getNumColonies() > 3 ):
+                        if ( pDutch.getUHVCounter( 2 ) > 3 ):
                                 pDutch.setUHV( 2, 1 )
                 

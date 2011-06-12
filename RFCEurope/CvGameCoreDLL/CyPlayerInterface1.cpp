@@ -510,5 +510,14 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("getRespawned", &CyPlayer::getRespawned, "bool ()")
 		.def("setRespawned", &CyPlayer::setRespawned, "void ( bool )")
+
+		.def("getForcedHistoricityUnitProduction", &CyPlayer::getForcedHistoricityUnitProduction, "int ()")
+		.def("setForcedHistoricityUnitProduction", &CyPlayer::setForcedHistoricityUnitProduction, "void ( int )")
+
+		.def("getForcedHistoricityUnitSupport", &CyPlayer::getForcedHistoricityUnitSupport, "int ()")
+		.def("setForcedHistoricityUnitSupport", &CyPlayer::setForcedHistoricityUnitSupport, "void ( int )")
+
+		.def("getForcedHistoricityCivicSupport", &CyPlayer::getForcedHistoricityCivicSupport, "int ()")
+		.def("setForcedHistoricityCivicSupport", &CyPlayer::setForcedHistoricityCivicSupport, "void ( int )")
 		;
 }

@@ -1716,7 +1716,7 @@ class CvMainInterface:
 							
 							pPlayer = gc.getPlayer(pUnit.getOwner())
 							
-							if ( pCity.canPurgeReligion() ):
+							if ( pCity.canPurgeReligion() and ( pCity.getOwner() == pUnit.getOwener() or pUnit.getOwener() == con.iPope ) ):
 								screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSICUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
 							# City belongs to unit's owner
 							#if (pCity.getOwner() == pUnit.getOwner() and not pPlayer.getCivics(4) == 24 ):

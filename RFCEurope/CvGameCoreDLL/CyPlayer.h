@@ -578,6 +578,15 @@ public:
 	bool getRespawned();
 	void setRespawned( bool bNewValue );
 
+	void setForcedHistoricityUnitProduction( int iNewValue );
+	int getForcedHistoricityUnitProduction() const;
+
+	void setForcedHistoricityUnitSupport( int iNewValue );
+	int getForcedHistoricityUnitSupport() const;
+
+	void setForcedHistoricityCivicSupport( int iNewValue );
+	int getForcedHistoricityCivicSupport() const;
+
 private:
 	CvPlayer* m_pPlayer;
 };

@@ -1786,6 +1786,7 @@ public:
 	bool isBrothersAtWar() const;
 	bool isVassalUU() const;
 	bool isAllowIrrigation() const;
+	int getBombardImmuneDefense() const;
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
@@ -1795,6 +1796,7 @@ protected:
 	bool m_bBrothersAtWar;
 	bool m_bVassalUU;
 	bool m_bAllowIrrigation;
+	int m_iBombardImmuneDefense;
 
 	int m_iBuildingClassType;						
 	int m_iVictoryPrereq;
