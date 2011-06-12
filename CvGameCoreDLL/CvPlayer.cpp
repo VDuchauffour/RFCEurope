@@ -793,6 +793,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	for( iI=0; iI<10; iI++ ){
 		m_aiPickleFree[iI] = 0;
 	};
+	m_iUnitsProduction = 0;
+	m_iUnitsSupport = 0;
+	m_iCivicSupport = 0;
 
 	if (!bConstructorCall)
 	{
@@ -3215,6 +3218,7 @@ bool CvPlayer::hasReadyUnit(bool bAny) const
 	{
 		if (pLoopSelectionGroup->readyToMove(bAny))
 		{
+			//GC.getGameINLINE().logMsg(" hasReadyUnit group at: %d %d   NumUnits: %d  UnitType: %d",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits(), pLoopSelectionGroup ->getUnitAt(0) ->getUnitType() );
 			return true;
 		}
 	}
@@ -6025,7 +6029,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	//if ( getID() == 0 ){
 	//GC.getGameINLINE().logMsg(" Modifiers for player 0: %d  %d  %d ",getID(),productionModifierUnitsHu[getID()],productionModifierUnitsAI[getID()]);
 	//};
-	iProductionNeeded *= (isHuman()) ?  productionModifierUnitsHu[getID()] : productionModifierUnitsAI[getID()];
+	iProductionNeeded *= (isHuman()) ?  productionModifierUnitsHu[getID()] : (productionModifierUnitsAI[getID()] + getForcedHistoricityUnitProduction());
 	iProductionNeeded /= 100;
 
 	// 3MiroUP: Industry
@@ -10719,7 +10723,7 @@ bool CvPlayer::isAutoMoves() const
 
 void CvPlayer::setAutoMoves(bool bNewValue)
 {
-	//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 1"); //3Miro
+	//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 1 for Playe: %d",getID() ); //3Miro
 	if (isAutoMoves() != bNewValue)
 	{
 		//GC.getGameINLINE().logMsg(" setAutoMoves: HERE 2"); //3Miro
@@ -17266,6 +17270,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream ->Read(10,m_aiPickleFree);
 	pStream ->Read(&m_iCivicUnitProductionModifier);
 	pStream ->Read(&m_bRespawned);
+
+	pStream ->Read(&m_iUnitsProduction);
+	pStream ->Read(&m_iUnitsSupport);
+	pStream ->Read(&m_iCivicSupport);
 }
 
 //
@@ -17711,6 +17719,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream ->Write(10,m_aiPickleFree);
 	pStream ->Write(m_iCivicUnitProductionModifier);
 	pStream ->Write(m_bRespawned);
+
+	pStream ->Write(m_iUnitsProduction);
+	pStream ->Write(m_iUnitsSupport);
+	pStream ->Write(m_iCivicSupport);
 }
 
 void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience, int iX, int iY)
@@ -23643,4 +23655,26 @@ void CvPlayer::setRespawned( bool bNewValue ){
 		m_bRespawned = bNewValue;
 		processCivNames();
 	};
+};
+
+void CvPlayer::setForcedHistoricityUnitProduction( int iNewValue ){
+	m_iUnitsProduction = iNewValue;
+};
+int CvPlayer::getForcedHistoricityUnitProduction() const
+{
+	return m_iUnitsProduction;
+};
+void CvPlayer::setForcedHistoricityUnitSupport( int iNewValue ){
+	m_iUnitsSupport = iNewValue;
+};
+int CvPlayer::getForcedHistoricityUnitSupport() const
+{
+	return m_iUnitsSupport;
+};
+void CvPlayer::setForcedHistoricityCivicSupport( int iNewValue ){
+	m_iCivicSupport = iNewValue;
+};
+int CvPlayer::getForcedHistoricityCivicSupport() const
+{
+	return m_iCivicSupport;
 };

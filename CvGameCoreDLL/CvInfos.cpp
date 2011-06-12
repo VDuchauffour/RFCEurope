@@ -6519,6 +6519,7 @@ m_bDamageEnemy(false), /* 3Miro: new building abilities*/
 m_bBrothersAtWar(false), /* 3Miro: new building abilities*/
 m_bVassalUU(false), /* 3Miro: new building abilities*/
 m_bAllowIrrigation(false), /* 3Miro: new building abilities*/
+m_iBombardImmuneDefense(0), /* 3Miro: new building abilities*/
 m_iBuildingClassType(NO_BUILDINGCLASS),
 m_iVictoryPrereq(NO_VICTORY),
 m_iFreeStartEra(NO_ERA),
@@ -7867,6 +7868,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bBrothersAtWar);
 	stream->Read(&m_bVassalUU);
 	stream->Read(&m_bAllowIrrigation);
+	stream->Read(&m_iBombardImmuneDefense);
 
 	stream->Read(&m_bTeamShare);
 	stream->Read(&m_bWater);
@@ -8197,6 +8199,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bBrothersAtWar);
 	stream->Write(m_bVassalUU);
 	stream->Write(m_bAllowIrrigation);
+	stream->Write(m_iBombardImmuneDefense);
 
 	stream->Write(m_bTeamShare);
 	stream->Write(m_bWater);
@@ -8456,11 +8459,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(szTextVal, "DiploVoteType");
 	m_iVoteSourceType = pXML->FindInInfoClass(szTextVal);
 
-	// 3Miro: read the new building abilities
+	// 3MiroBuildings: read the new building abilities
 	pXML->GetChildXmlValByName(&m_bDamageEnemy, "bDamageEnemies");
 	pXML->GetChildXmlValByName(&m_bBrothersAtWar, "bAllowBrotherWar");
 	pXML->GetChildXmlValByName(&m_bVassalUU, "bAllowVassalUU");
 	pXML->GetChildXmlValByName(&m_bAllowIrrigation, "bAllowIrrigation");
+	pXML->GetChildXmlValByName(&m_iBombardImmuneDefense, "iBombardImmuneDefense");
+	//if ( m_iBombardImmuneDefense > 0 ){
+	//	GC.getGameINLINE().logMsg(" Reding Building BID: %d",m_iBombardImmuneDefense);
+	//};
 
 	pXML->GetChildXmlValByName(&m_iGreatPeopleRateChange, "iGreatPeopleRateChange");
 	pXML->GetChildXmlValByName(&m_bTeamShare, "bTeamShare");
@@ -8896,7 +8903,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-// 3Miro: new Building abilities
+// 3MiroBuilding: new Building abilities
 bool CvBuildingInfo::isDamageEnemy() const
 {
 	return m_bDamageEnemy;
@@ -8913,6 +8920,11 @@ bool CvBuildingInfo::isVassalUU() const
 bool CvBuildingInfo::isAllowIrrigation() const
 {
 	return m_bAllowIrrigation;
+};
+
+int CvBuildingInfo::getBombardImmuneDefense() const
+{
+	return m_iBombardImmuneDefense;
 };
 
 //======================================================================================================
@@ -10548,7 +10560,7 @@ int CvHandicapInfo::getUnitCostPercentByID(PlayerTypes pl) const
 	int result = m_iUnitCostPercent;
 
 	// 3Miro: unit support cost modifiers
-	result *= ( GET_PLAYER(pl).isHuman() ) ? unitSupportModifierHu[pl] : unitSupportModifierAI[pl];
+	result *= ( GET_PLAYER(pl).isHuman() ) ? unitSupportModifierHu[pl] : (unitSupportModifierAI[pl] + GET_PLAYER(pl).getForcedHistoricityUnitSupport() );
 	result /= 100;
 	return result;
 }
@@ -10677,7 +10689,7 @@ int CvHandicapInfo::getCivicUpkeepPercentByID(PlayerTypes pl) const
 	int result = m_iCivicUpkeepPercent;
 
 	// 3Miro: civic cost modifiers
-	result *= ( GET_PLAYER(pl).isHuman() ) ? civicSupportModifierHu[pl] : civicSupportModifierAI[pl];
+	result *= ( GET_PLAYER(pl).isHuman() ) ? civicSupportModifierHu[pl] : (civicSupportModifierAI[pl] + GET_PLAYER(pl).getForcedHistoricityCivicSupport() );
 	result /= 100;
 	return result;
 }

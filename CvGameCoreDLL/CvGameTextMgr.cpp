@@ -7666,6 +7666,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_SPREAD_IRRIGATION"));
 	};
+	if ( kBuilding.getBombardImmuneDefense() > 0 ){
+			szBuffer.append(NEWLINE);
+			//szBuffer.append(gDLL->getText("TXT_KEY_MISC_SPREAD_IRRIGATION"));
+			szBuffer.append( gDLL->getText("TXT_KEY_BOMBARD_IMMUNE_DEFENSE", kBuilding.getBombardImmuneDefense() ) );
+	};
+	
 	// 3MiroCivic: Building - Civic combo
 			int iCivic;
 			int iBuildingClass = kBuilding.getBuildingClassType();

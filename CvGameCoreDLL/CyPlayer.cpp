@@ -2434,3 +2434,26 @@ bool CyPlayer::getRespawned(){
 void CyPlayer::setRespawned( bool bNewValue ){
 	m_pPlayer ->setRespawned( bNewValue );
 };
+
+void CyPlayer::setForcedHistoricityUnitProduction( int iNewValue ){
+	//m_iUnitsProduction = iNewValue;
+	m_pPlayer ->setForcedHistoricityUnitProduction( iNewValue );
+};
+int CyPlayer::getForcedHistoricityUnitProduction() const
+{
+	return m_pPlayer ->getForcedHistoricityUnitProduction();
+};
+void CyPlayer::setForcedHistoricityUnitSupport( int iNewValue ){
+	m_pPlayer ->setForcedHistoricityUnitSupport( iNewValue );
+};
+int CyPlayer::getForcedHistoricityUnitSupport() const
+{
+	return m_pPlayer ->getForcedHistoricityUnitSupport();
+};
+void CyPlayer::setForcedHistoricityCivicSupport( int iNewValue ){
+	m_pPlayer ->setForcedHistoricityCivicSupport( iNewValue );
+};
+int CyPlayer::getForcedHistoricityCivicSupport() const
+{
+	return m_pPlayer ->getForcedHistoricityCivicSupport();
+};

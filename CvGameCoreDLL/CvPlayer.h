@@ -1139,7 +1139,22 @@ public:
 	bool getRespawned() const;
 	void setRespawned( bool bNewValue );
 
+	void setForcedHistoricityUnitProduction( int iNewValue );
+	int getForcedHistoricityUnitProduction() const;
+
+	void setForcedHistoricityUnitSupport( int iNewValue );
+	int getForcedHistoricityUnitSupport() const;
+
+	void setForcedHistoricityCivicSupport( int iNewValue );
+	int getForcedHistoricityCivicSupport() const;
+
 protected:
+
+	// 3Miro Forced Historicity (modifiers for the AI only)
+	int m_iUnitsProduction;
+	int m_iUnitsSupport;
+	int m_iCivicSupport;
+	
 
 	// 3MiroBuildings
 	int m_iAllowBrothersAtWar;

@@ -3473,11 +3473,18 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				{
 					if ((GC.getGameINLINE().getBestLandUnit() == NO_UNIT) || !(GC.getUnitInfo(GC.getGameINLINE().getBestLandUnit()).isIgnoreBuildingDefense()))
 					{
-						iValue += (std::max(0, std::min(((kBuilding.getDefenseModifier() + getBuildingDefense()) - getNaturalDefense() - 10), kBuilding.getDefenseModifier())) / 4);
+						// 3MiroBuilding: Special Defense for Bombard Immune
+						//iValue += (std::max(0, std::min(((kBuilding.getDefenseModifier() + getBuildingDefense()) - getNaturalDefense() - 10), kBuilding.getDefenseModifier())) / 4);
+						iValue += (std::max(0, std::min(((kBuilding.getDefenseModifier() + getBuildingDefense() + 2*kBuilding.getBombardImmuneDefense() ) - getNaturalDefense() - 10), kBuilding.getDefenseModifier() + 2*kBuilding.getBombardImmuneDefense() )) / 4);
 					}
 				}
 
 				iValue += kBuilding.getBombardDefenseModifier() / 8;
+
+				// 3MiroBuilding: Damage Enemies
+				if ( kBuilding.isDamageEnemy() ){
+					iValue += 10;
+				};
 				
 				iValue += -kBuilding.getAirModifier() / 4;
 				iValue += -kBuilding.getNukeModifier() / 4;
