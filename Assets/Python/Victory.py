@@ -147,7 +147,7 @@ tArabiaControlII = [ xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrena
 tBulgariaControl = [ xml.iP_Constantinople, xml.iP_Thessaloniki, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia ]
 tCordobaWonders = [ xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus ]
 tCordobaIslamize = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
-tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Mercia, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Crimea ]
+tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Mercia, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Novgorod ]
 #tVenetianControl = [ xml.iP_Morea, xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Crete, xml.iP_Cyprus ]
 tVenetianControl = [ xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Arberia ]
 tBurgundyControl = [ xml.iP_Flanders, xml.iP_Picardy, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine ]
@@ -359,7 +359,7 @@ class Victory:
                 pass
 
 
-        def onCityAcquired(self, owner, playerType, bConquest):
+        def onCityAcquired(self, owner, playerType, city, bConquest):
                 # 3Miro: almost everything in this file is mine as well
                 if (not gc.getGame().isVictoryValid(7)): #7 == historical
                         return
@@ -387,20 +387,34 @@ class Victory:
                                 pSpain.setUHVCounter( 2, iConqueredCities )
                                 if ( pSpain.getUHV( 2 ) == - 1 and iConqueredCities >= 3 ):
                                         pSpain.setUHV( 2, 1 )
+                elif ( playerType == iNorse ):
+                        pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + city.getPopulation() )
 
         def onCityRazed(self, iPlayer,city):
-                if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
-                        if ( pNorse.isAlive() and pNorse.getUHV( 2 ) == -1):
-                                if ( city.getOwner() < iNumPlayers ):
-                                        #ioldrazed = self.getNorseRazed()
-                                        #if (ioldrazed >= 9):
-                                                #self.setGoal(iNorse,2,1)
-                                        #else:
-                                                #self.setNorseRazed(ioldrazed+1)
-                                        iRazed = pNorse.getUHVCounter( 2 ) + 1
-                                        pNorse.setUHVCounter( 2, iRazed )
-                                        if ( iRazed >= 6 ):
-                                                pNorse.setUHV( 2, 1 )
+                #if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
+                #        if ( pNorse.isAlive() and pNorse.getUHV( 2 ) == -1):
+                #                if ( city.getOwner() < iNumPlayers ):
+                #                        #ioldrazed = self.getNorseRazed()
+                #                        #if (ioldrazed >= 9):
+                #                                #self.setGoal(iNorse,2,1)
+                #                        #else:
+                #                                #self.setNorseRazed(ioldrazed+1)
+                #                       iRazed = pNorse.getUHVCounter( 2 ) + 1
+                #                        pNorse.setUHVCounter( 2, iRazed )
+                #                        if ( iRazed >= 6 ):
+                #                                pNorse.setUHV( 2, 1 )
+                pass
+                
+        def onPillageImprovement( self, iPillager, iVictim, iX, iY ):
+                if ( iPillager == iNorse ):
+                        pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + 1 )
+
+        def onCombatResult(self, argsList):
+                pWinningUnit,pLosingUnit = argsList
+                cLosingUnit = PyHelpers.PyInfo.UnitInfo(pLosingUnit.getUnitType())
+                if ( pWinningUnit.getOwner() == iNorse ):
+                        if (cLosingUnit.getDomainType() == gc.getInfoTypeForString("DOMAIN_SEA")):
+                                pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + 1 )
 
 
         def onTechAcquired(self, iTech, iPlayer):
@@ -700,6 +714,12 @@ class Victory:
                                 pNorse.setUHV( 1, 1 )
                         elif ( iGameTurn == xml.i1061AD ):
                                 pNorse.setUHV( 1, 0 )
+                                
+                if ( iGameTurn <= xml.i1066AD and pNorse.getUHV( 2 ) == -1 ):
+                        if ( pNorse.getUHVCounter( 2 ) >= 15 ):
+                                pNorse.setUHV( 2, 1 )
+                        elif ( iGameTurn == xml.i1066AD ):
+                                pNorse.setUHV( 2, 0 )
                 
                 
         def checkVenecia( self, iGameTurn ):

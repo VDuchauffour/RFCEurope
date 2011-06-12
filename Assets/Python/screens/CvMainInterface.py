@@ -2105,7 +2105,7 @@ class CvMainInterface:
                                         iNorseRaized = pPlayer.getUHVCounter( 2 )
                                         if ( not CyInterface().isCityScreenUp() ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_CITIES",()) + (" (%i) " %iNorseRaized )
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorseRaized )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.show("UHVButton")

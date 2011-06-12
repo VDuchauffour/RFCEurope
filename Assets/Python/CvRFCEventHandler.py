@@ -311,7 +311,7 @@ class CvRFCEventHandler:
 
                 self.pla.onCityAcquired(owner,playerType,city) #Plague
 
-                self.vic.onCityAcquired(owner, playerType, bConquest) #Victory
+                self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
                 
                 return 0
 
@@ -399,7 +399,7 @@ class CvRFCEventHandler:
 
         def onCombatResult(self, argsList):
                 #self.up.aztecUP(argsList)
-                #self.vic.onCombatResult(argsList)
+                self.vic.onCombatResult(argsList)
                 self.sta.onCombatResult(argsList)
 
 
@@ -496,7 +496,12 @@ class CvRFCEventHandler:
 			if (iImprovement >= xml.iImprovementCottage and iImprovement <= xml.iImprovementTown):
 				print ("Improve Type Satisfied")
 				self.barb.onImprovementDestroyed(iPlotX,iPlotY)
-
+                iVictim = pPlot.getOwner()
+                if ( iVictim > 0 and iVictim < con.iNumPlayers ):
+                        self.sta.onImprovementDestroyed( iVictim )
+                if ( iVictim > 0 and iVictim < con.iNumTotalPlayersB ):
+                        self.vic.onPillageImprovement( pUnit.getOwner(), iVictim, iPlotX, iPlotY )
+                        
 #	def onImprovementDestroyed(self, argsList):
 #		print ("Improvement Destroyed")
 #		iImprovement, iOwner, iX, iY = argsList
