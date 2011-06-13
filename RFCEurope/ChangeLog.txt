@@ -60,6 +60,7 @@ Changes for Beta 12:
 		- Readjusted Swedish provinces as per Beta 11 thread post 68
 		- Removed the land bridge between Sweden and Finland (no more Norse building strange roads)
 		- Removed some of the northern most islands above England
+		- Updated German city name map
 
 	XML updates:
 		- UHV name for some UHVs
