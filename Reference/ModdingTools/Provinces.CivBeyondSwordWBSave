@@ -35,46 +35,47 @@ BeginTeam
 	Tech=TECH_CLASSICAL_KNOWLEDGE
 	ContactWithTeam=0
 	ContactWithTeam=22
+	AtWar=2
 	AtWar=3
-	AtWar=4
-	AtWar=19
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=1
 	Tech=TECH_BRONZE_CASTING
 	ContactWithTeam=1
-	AtWar=15
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=2
 	ContactWithTeam=2
+	AtWar=0
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=3
 	ContactWithTeam=3
 	AtWar=0
-	AtWar=19
+	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=4
 	ContactWithTeam=4
-	AtWar=0
-	AtWar=6
+	AtWar=11
+	AtWar=15
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=5
 	ContactWithTeam=5
+	AtWar=20
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=6
 	ContactWithTeam=6
-	AtWar=4
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -100,6 +101,8 @@ EndTeam
 BeginTeam
 	TeamID=11
 	ContactWithTeam=11
+	AtWar=4
+	AtWar=21
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -120,7 +123,7 @@ EndTeam
 BeginTeam
 	TeamID=15
 	ContactWithTeam=15
-	AtWar=1
+	AtWar=4
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -136,25 +139,26 @@ EndTeam
 BeginTeam
 	TeamID=18
 	ContactWithTeam=18
-	AtWar=24
-	AtWar=25
+	AtWar=0
+	AtWar=2
+	AtWar=3
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=19
 	ContactWithTeam=19
-	AtWar=0
-	AtWar=3
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=20
 	ContactWithTeam=20
+	AtWar=5
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=21
 	ContactWithTeam=21
+	AtWar=11
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -180,14 +184,12 @@ BeginTeam
 	TeamID=24
 	ContactWithTeam=22
 	ContactWithTeam=24
-	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=25
 	ContactWithTeam=22
 	ContactWithTeam=25
-	AtWar=18
 	RevealMap=0
 EndTeam
 BeginTeam
@@ -7656,7 +7658,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=28
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12159,7 +12160,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=56
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14673,7 +14673,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=66
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22247,7 +22246,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=67
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22653,7 +22651,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=61
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23438,6 +23435,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=40
+	BonusType=BONUS_TIMBER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -24401,15 +24399,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=39
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	BonusType=BONUS_SALT
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=22,
 EndPlot
 BeginPlot
 	x=57,y=40
-	BonusType=BONUS_SALT
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -24441,14 +24438,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=44
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=22,
 EndPlot
 BeginPlot
 	x=57,y=45
-	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -24859,7 +24855,7 @@ BeginPlot
 	RiverWEDirection=1
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=0
 	TeamReveal=0,1,22,
 EndPlot
 BeginPlot
@@ -24889,7 +24885,6 @@ BeginPlot
 	x=58,y=42
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=22,
@@ -24898,21 +24893,21 @@ BeginPlot
 	x=58,y=43
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=22,
 EndPlot
 BeginPlot
 	x=58,y=44
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=22,
 EndPlot
 BeginPlot
 	x=58,y=45
-	BonusType=BONUS_SILVER
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -25312,7 +25307,7 @@ BeginPlot
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=0
 	TeamReveal=0,1,22,
 EndPlot
 BeginPlot
@@ -25334,8 +25329,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=40
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	PlotType=1
 	TeamReveal=22,
 EndPlot
 BeginPlot
@@ -25365,7 +25361,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=44
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	TeamReveal=22,
@@ -25378,7 +25374,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=46
-	BonusType=BONUS_IRON
+	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -25793,8 +25789,7 @@ BeginPlot
 	x=60,y=40
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_SALT
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	BonusType=BONUS_COW
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -26257,6 +26252,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=39
+	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	TeamReveal=22,
@@ -33038,7 +33034,7 @@ BeginPlot
 	x=75,y=53
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_FUR
+	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -34024,7 +34020,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=58
-	BonusType=BONUS_DEER
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -34974,7 +34970,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=55
-	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -37607,7 +37602,6 @@ BeginPlot
 		CityOwner=0
 		CityName=Alexandria
 		CityPopulation=4
-		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
@@ -38082,6 +38076,7 @@ BeginPlot
 	x=86,y=0
 	RiverNSDirection=0
 	isWOfRiver
+	BonusType=BONUS_COTTON
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 	TeamReveal=0,
@@ -38574,7 +38569,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=0
-	BonusType=BONUS_COTTON
+	ImprovementType=IMPROVEMENT_VILLAGE
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_DESERT
@@ -38583,7 +38578,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=1
-	ImprovementType=IMPROVEMENT_TOWN
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -39081,7 +39075,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_MUD, FeatureVariety=0
-	TerrainType=TERRAIN_MARSH
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
 EndPlot
@@ -39565,6 +39559,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=5
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 	TeamReveal=0,
@@ -50486,12 +50481,6 @@ BeginSign
 	plotY=33
 	playerType=-1
 	caption=62
-EndSign
-BeginSign
-	plotX=60
-	plotY=38
-	playerType=-1
-	caption=63
 EndSign
 BeginSign
 	plotX=63
@@ -61492,12 +61481,6 @@ BeginSign
 	caption=61
 EndSign
 BeginSign
-	plotX=59
-	plotY=38
-	playerType=-1
-	caption=63
-EndSign
-BeginSign
 	plotX=61
 	plotY=39
 	playerType=-1
@@ -64586,4 +64569,16 @@ BeginSign
 	plotY=39
 	playerType=-1
 	caption=40
+EndSign
+BeginSign
+	plotX=59
+	plotY=38
+	playerType=-1
+	caption=41
+EndSign
+BeginSign
+	plotX=60
+	plotY=38
+	playerType=-1
+	caption=41
 EndSign
