@@ -1,4 +1,4 @@
-Version=11
+ Version=11
 BeginGame
 	Tutorial=0
 	Era=ERA_ANCIENT
@@ -31807,11 +31807,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=18
-	BonusType=BONUS_WHEAT
-	ImprovementType=IMPROVEMENT_FARM
-	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
+	BeginUnit
+		UnitType=UNIT_ARCHER, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginCity
+		CityOwner=0
+		CityName=Smyrna
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_HARBOR
+		ReligionType=RELIGION_ORTHODOXY
+		Player0Culture=10
+	EndCity
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -32257,26 +32271,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=17
+	BonusType=BONUS_WHEAT
+	ImprovementType=IMPROVEMENT_FARM
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
-	BeginUnit
-		UnitType=UNIT_ARCHER, UnitOwner=0
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginCity
-		CityOwner=0
-		CityName=Ephesus
-		CityPopulation=2
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_LIGHTHOUSE
-		BuildingType=BUILDING_HARBOR
-		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
-	EndCity
 	TeamReveal=0,
 EndPlot
 BeginPlot
@@ -36059,8 +36058,8 @@ BeginPlot
 	x=87,y=4
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_MUD, FeatureVariety=0
+	TerrainType=TERRAIN_MARSH
 	PlotType=2
 	TeamReveal=0,
 EndPlot
@@ -36496,6 +36495,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=2
+	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
@@ -36503,6 +36503,7 @@ EndPlot
 BeginPlot
 	x=88,y=3
 	RouteType=ROUTE_ROAD
+	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,
@@ -36511,7 +36512,6 @@ BeginPlot
 	x=88,y=4
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 	TeamReveal=0,

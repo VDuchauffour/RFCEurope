@@ -62,6 +62,7 @@ Changes for Beta 12:
 		- Removed some of the northern most islands above England
 		- Updated German city name map
 		- Updated the resources near Alexandria
+		- Ephesus replaced with Smyrna for a starting city of the Byzantines
 
 	XML updates:
 		- UHV name for some UHVs
