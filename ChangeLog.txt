@@ -63,6 +63,7 @@ Changes for Beta 12:
 		- Updated German city name map
 		- Updated the resources near Alexandria
 		- Ephesus replaced with Smyrna for a starting city of the Byzantines
+		- Rearranged a couple resources on the northern Atlantic
 
 	XML updates:
 		- UHV name for some UHVs
@@ -85,7 +86,7 @@ Changes for Beta 12:
 		- Luebeck no longer flips to Germany
 		- Germany gets back the second starting settler (probably for a city in Saxony)
 		- Some large indy and barbs spaw with Workers
-		- Adjusted the spawn time for the Russian cities to histroically accurate times
+		- Adjusted the spawn time for the Russian cities to historically accurate times
 		- The Dutch now spawn with contact with England, Spain, France, Germany, Norse and Sweden
 		- Adjusted the AI flags for the various units, hopefully the AI would be more adequate now
 		- Norse UHV 1 now requires the conquest of Novgorod instead of Crimea (use Berserkers and it is a better representation of the Varangians)
