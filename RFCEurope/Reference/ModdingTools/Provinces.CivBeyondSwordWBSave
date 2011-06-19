@@ -911,7 +911,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3276
+	num signs written=3278
 	Randomize Resources=false
 EndMap
 
@@ -53462,24 +53462,6 @@ BeginSign
 	caption=31
 EndSign
 BeginSign
-	plotX=71
-	plotY=72
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=72
-	plotY=72
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=73
-	plotY=72
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
 	plotX=74
 	plotY=72
 	playerType=-1
@@ -53488,42 +53470,6 @@ EndSign
 BeginSign
 	plotX=74
 	plotY=71
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=73
-	plotY=71
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=72
-	plotY=71
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=71
-	plotY=71
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=70
-	plotY=70
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=71
-	plotY=70
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=72
-	plotY=70
 	playerType=-1
 	caption=31
 EndSign
@@ -53553,18 +53499,6 @@ BeginSign
 EndSign
 BeginSign
 	plotX=72
-	plotY=69
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=71
-	plotY=69
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=70
 	plotY=69
 	playerType=-1
 	caption=31
@@ -56032,12 +55966,6 @@ EndSign
 BeginSign
 	plotX=97
 	plotY=8
-	playerType=-1
-	caption=100
-EndSign
-BeginSign
-	plotX=99
-	plotY=7
 	playerType=-1
 	caption=100
 EndSign
@@ -61776,4 +61704,88 @@ BeginSign
 	plotY=38
 	playerType=-1
 	caption=41
+EndSign
+BeginSign
+	plotX=99
+	plotY=7
+	playerType=-1
+	caption=102
+EndSign
+BeginSign
+	plotX=55
+	plotY=37
+	playerType=-1
+	caption=71
+EndSign
+BeginSign
+	plotX=69
+	plotY=64
+	playerType=-1
+	caption=35
+EndSign
+BeginSign
+	plotX=70
+	plotY=69
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=71
+	plotY=69
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=71
+	plotY=70
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=70
+	plotY=70
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=71
+	plotY=71
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=72
+	plotY=71
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=72
+	plotY=70
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=72
+	plotY=72
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=71
+	plotY=72
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=73
+	plotY=71
+	playerType=-1
+	caption=36
+EndSign
+BeginSign
+	plotX=73
+	plotY=72
+	playerType=-1
+	caption=36
 EndSign
