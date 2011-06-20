@@ -64,6 +64,7 @@ Changes for Beta 12:
 		- Updated the resources near Alexandria
 		- Ephesus replaced with Smyrna for a starting city of the Byzantines
 		- Rearranged a couple resources on the northern Atlantic
+		- Adjusted province borders within Estonia-Livonia-Lithuania
 
 	XML updates:
 		- UHV name for some UHVs
