@@ -65,6 +65,13 @@ Changes for Beta 12:
 		- Ephesus replaced with Smyrna for a starting city of the Byzantines
 		- Rearranged a couple resources on the northern Atlantic
 		- Adjusted province borders within Estonia-Livonia-Lithuania
+		- Small changes near the Augsburg-Salzburg area
+		- Moved Madeira a few tiles SE
+		- Improved the Neman area (Lithuania)
+		- Removed and rearranged a couple resources in Anatolia, thus making it less fertile
+		- Changed the northern coast of Anatolia
+		- Revised all the rivers in Kiev, Lithuania, Poland
+		- Adjusted the provinces to these last few changes
 
 	XML updates:
 		- UHV name for some UHVs
@@ -138,7 +145,7 @@ Changes for Beta 11:
 		- The special defense provided by the StarFort cannot be broken by Catapults/Canons
 		- Added more barbarians to Scotland
 		- Added some early Barbarians to the Byzantine start (the Sassanid)
-		- Mongols, Seljuks and Scots can now spawn with the cultural boreders of an Empire (you cannot block them with culture)
+		- Mongols, Seljuks and Scots can now spawn with the cultural borders of an Empire (you cannot block them with culture)
 		- Poland gets couple of Catholic Missionaries
 		- Cordoba gets one less Settler
 		- New Germany UHV conditions associated with the Holy Roman Empire, Reformation and Thirty Year War

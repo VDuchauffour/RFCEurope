@@ -105,12 +105,12 @@ def writeCityNames( tMap ):
                 for iX in range( iMapMaxX ):
 			if ( tMap[iY][iX] != "-1" ):
 				iInvY = iMapMaxY - iY-1
-				print "BeginSign\r\n",
-				print "	plotX=%d\r\n" %iX,
-				print "	plotY=%d\r\n" %iInvY,
-				print "	playerType=-1\r\n",
-				print "	caption=%s\r\n" %tMap[iY][iX],
-				print "EndSign\r\n",
+				print "BeginSign\r",
+				print "	plotX=%d\r" %iX,
+				print "	plotY=%d\r" %iInvY,
+				print "	playerType=-1\r",
+				print "	caption=%s\r" %tMap[iY][iX],
+				print "EndSign\r",
 				iNumSigns += 1
 	print iNumSigns
 
@@ -120,12 +120,12 @@ def writeSettlersMap( tMap ):
                 for iX in range( iMapMaxX ):
 			if ( tMap[iY][iX] != 20 ):
 				iInvY = iMapMaxY - iY-1
-				print "BeginSign\r\n",
-				print "	plotX=%d\r\n" %iX,
-				print "	plotY=%d\r\n" %iInvY,
-				print "	playerType=-1\r\n",
-				print "	caption=%d\r\n" %tMap[iY][iX],
-				print "EndSign\r\n",
+				print "BeginSign\r",
+				print "	plotX=%d\r" %iX,
+				print "	plotY=%d\r" %iInvY,
+				print "	playerType=-1\r",
+				print "	caption=%d\r" %tMap[iY][iX],
+				print "EndSign\r",
 				iNumSigns += 1
 	print iNumSigns
 
@@ -135,12 +135,12 @@ def writeWarMap( tMap ):
                 for iX in range( iMapMaxX ):
 			if ( tMap[iY][iX] != 0 ):
 				iInvY = iMapMaxY - iY-1
-				print "BeginSign\r\n",
-				print "	plotX=%d\r\n" %iX,
-				print "	plotY=%d\r\n" %iInvY,
-				print "	playerType=-1\r\n",
-				print "	caption=%d\r\n" %tMap[iY][iX],
-				print "EndSign\r\n",
+				print "BeginSign\r",
+				print "	plotX=%d\r" %iX,
+				print "	plotY=%d\r" %iInvY,
+				print "	playerType=-1\r",
+				print "	caption=%d\r" %tMap[iY][iX],
+				print "EndSign\r",
 				iNumSigns += 1
 	print iNumSigns
 
