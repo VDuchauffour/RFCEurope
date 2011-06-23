@@ -13,7 +13,7 @@ import re #for string manipulations
 #       Javascript Provinces:   assumes the map contains a bunch of labels with ONLY NUMBERS, then it reads those and outputs
 #                               a Javascript array that can be used to visualize Provinces in the HTML file
 #       Python Array:   assumes the map contains a bunch of labels with ONLY NUMBERS, then it reads those and outputs
-#                       generates output of a Python array that can be places in RFCEMaps.py
+#                       generates output of a Python array that can be placed in RFCEMaps.py
 #
 #       Usage:
 #               edit the part below with the map size (by default the size of RFCEurope) and file-name of the WB file
@@ -30,7 +30,7 @@ import re #for string manipulations
 ######################################################################
 ##### Edit this Part ################
 
-tWBFilename = "Provinces_AR.CivBeyondSwordWBSave"
+tWBFilename = "Provinces.CivBeyondSwordWBSave"
 iOutputType = 3 # 1 - Javascript Province, 2 - Javascript Map, 3 - Python Array for Maps.py
 
 iMapMaxX = 100
