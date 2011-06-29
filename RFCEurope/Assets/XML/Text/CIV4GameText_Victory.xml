@@ -191,11 +191,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
-		<English>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Conquer Jerusalem in 1291AD.</English>
+		<English>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Control Jerusalem in 1291AD.</English>
 		<French>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Capturer J&#233;rusalem en 1291 ap.JC.</French>
 		<German>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Erobern Sie bis zum Jahr 1291 n. Chr. Jerusaleme</German>
-		<Italian>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Capture Jerusalem in 1291 AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Capture Jerusalem in 1291 AD.</Spanish>
+		<Italian>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Control Jerusalem in 1291AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Control Jerusalem in 1291AD.</Spanish>
 		<Russian>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] &#199;&#224;&#245;&#226;&#224;&#242;&#232;&#242;&#229; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#226; 1291 AD.</Russian>
 	</TEXT>
 	<TEXT>
@@ -308,12 +308,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN3</Tag>
-		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</English>
-		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</French>
-		<German>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</German>
-		<Italian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer three cities from Protestant nations or allow no Protestant nations in 1588AD.</Russian>
+		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer or raze three cities from Protestant nations by 1588AD, or allow no Protestant nations in 1588AD.</English>
+		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer or raze three cities from Protestant nations by 1588AD, or allow no Protestant nations in 1588AD.</French>
+		<German>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer or raze three cities from Protestant nations by 1588AD, or allow no Protestant nations in 1588AD.</German>
+		<Italian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer or raze three cities from Protestant nations by 1588AD, or allow no Protestant nations in 1588AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer or raze three cities from Protestant nations by 1588AD, or allow no Protestant nations in 1588AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Conquer or raze three cities from Protestant nations by 1588AD, or allow no Protestant nations in 1588AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
@@ -335,12 +335,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
-		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</English>
-		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</French>
-		<German>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</German>
-		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</Italian>
-		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</Spanish>
-		<Russian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 15 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+1pt).</Russian>
+		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 30 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</English>
+		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 30 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</French>
+		<German>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 30 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</German>
+		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 30 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Italian>
+		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 30 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Spanish>
+		<Russian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 30 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>

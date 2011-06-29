@@ -13513,7 +13513,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -13575,7 +13575,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>4</iStateReligionCulture>
+                        <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Temple-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
@@ -14455,7 +14455,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -14515,7 +14515,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
+                        <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Shrine-->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SHRINE</BuildingClass>
@@ -14645,7 +14645,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -14707,7 +14707,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>4</iStateReligionCulture>
+                        <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Temple-->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_TEMPLE</BuildingClass>
@@ -15585,7 +15585,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -15641,7 +15641,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
+                        <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Seminary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SEMINARY</BuildingClass>
@@ -15956,7 +15956,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -16018,7 +16018,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>4</iStateReligionCulture>
+                        <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Temple-->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_TEMPLE</BuildingClass>
@@ -16896,7 +16896,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -16952,7 +16952,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
+                        <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Seminary -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SEMINARY</BuildingClass>
@@ -17267,7 +17267,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -17329,7 +17329,7 @@
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>4</iStateReligionCulture>
+                        <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Sistine Chapel-->
 			<BuildingClass>BUILDINGCLASS_SISTINE_CHAPEL</BuildingClass>
@@ -19434,9 +19434,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KRAK_DES_CHEVALIERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KRAK_DES_CHEVALIERS</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -20378,9 +20378,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SOPHIA_KIEV</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOPHIA_KIEV</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
 			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -20578,9 +20578,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DOME_ROCK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DOME_ROCK</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -21131,9 +21131,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MONASTERY_OF_CLUNY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MONASTERY_OF_CLUNY</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -21321,9 +21321,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ROUND_CHURCH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ROUND_CHURCH</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
 			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -24562,9 +24562,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PALAIS_PAPES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PALAIS_PAPES</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
@@ -25515,7 +25515,7 @@
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
+			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
