@@ -2244,7 +2244,7 @@ class RiseAndFall:
                         #utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
                 if (iCiv == iAustria):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)

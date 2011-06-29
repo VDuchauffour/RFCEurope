@@ -28981,7 +28981,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Thessaloniki
+		CityName=Thessalonica
 		CityPopulation=3
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
@@ -33073,7 +33073,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Constantinople
+		CityName=Constantinopolis
 		CityPopulation=5
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_WALLS

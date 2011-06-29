@@ -365,6 +365,7 @@ class RFCEBalance:
 		gc.setCityClusterAI( iGermany, 1, 3, 1 )
 		gc.setCityClusterAI( iPoland, 1, 4, 1 )
 		gc.setCityClusterAI( iMoscow, 1, 4, 1 )
+		gc.setCityClusterAI( iPortugal, 1, 2, 1 )
                 gc.setCityClusterAI( iLithuania, 1, 4, 1 )
 		gc.setCityClusterAI( iGenoa, 1, 3, 1 )
 		gc.setCityClusterAI( iEngland, 1, 3, 1 )
@@ -389,6 +390,7 @@ class RFCEBalance:
 		gc.setCityWarDistanceAI( iGermany, 2 )
 		gc.setCityWarDistanceAI( iPoland, 2 )
 		gc.setCityWarDistanceAI( iMoscow, 2 )
+		gc.setCityWarDistanceAI( iPortugal, 2 )
                 gc.setCityWarDistanceAI( iLithuania, 2 )
 		gc.setCityWarDistanceAI( iGenoa, 3 )
 		gc.setCityWarDistanceAI( iEngland, 3 )
@@ -618,7 +620,7 @@ class RFCEBalance:
 		gc.setBuildingPref( iCordoba, xml.iAlhambra, 20 )
 		gc.setBuildingPref( iCordoba, xml.iDomeRock, 10 )
 		gc.setBuildingPref( iCordoba, xml.iNotreDame, -3 )
-		gc.setBuildingPref( iArabia, xml.iSistineChapel, -3 )
+		gc.setBuildingPref( iCordoba, xml.iSistineChapel, -3 )
 		gc.setBuildingPref( iCordoba, xml.iKrakDesChevaliers, -3 )
 		gc.setBuildingPref( iCordoba, xml.iGoldenBull, -3 )
 		
@@ -634,14 +636,16 @@ class RFCEBalance:
 		
 		gc.setBuildingPref( iKiev, xml.iSophiaKiev, 20 )
 		
+		gc.setBuildingPref( iHungary, xml.iPressburg, 20 )
 		gc.setBuildingPref( iHungary, xml.iGoldenBull, 20 )
 		gc.setBuildingPref( iHungary, xml.iBibliothecaCorviniana, 10 )
+		gc.setBuildingPref( iHungary, xml.iTempleMount, 5 )
 
 		gc.setBuildingPref( iGermany, xml.iBrandenburgGate, 20 )
 		gc.setBuildingPref( iGermany, xml.iImperialDiet, 10 )
 		gc.setBuildingPref( iGermany, xml.iCopernicus, 5 )
 		
-		gc.setBuildingPref( iPoland, xml.iPressburg, 20 )
+		gc.setBuildingPref( iPoland, xml.iPressburg, 10 )
 		gc.setBuildingPref( iPoland, xml.iCopernicus, 5 )
 		gc.setBuildingPref( iPoland, xml.iGoldenBull, 5 )
 		gc.setBuildingPref( iPoland, xml.iTempleMount, 5 )

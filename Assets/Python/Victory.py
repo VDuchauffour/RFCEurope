@@ -416,7 +416,7 @@ class Victory:
                 cLosingUnit = PyHelpers.PyInfo.UnitInfo(pLosingUnit.getUnitType())
                 if ( pWinningUnit.getOwner() == iNorse ):
                         if (cLosingUnit.getDomainType() == gc.getInfoTypeForString("DOMAIN_SEA")):
-                                pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + 1 )
+                                pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + 2 )
 
 
         def onTechAcquired(self, iTech, iPlayer):
@@ -718,7 +718,7 @@ class Victory:
                                 pNorse.setUHV( 1, 0 )
                                 
                 if ( iGameTurn <= xml.i1066AD and pNorse.getUHV( 2 ) == -1 ):
-                        if ( pNorse.getUHVCounter( 2 ) >= 15 ):
+                        if ( pNorse.getUHVCounter( 2 ) >= 30 ):
                                 pNorse.setUHV( 2, 1 )
                         elif ( iGameTurn == xml.i1066AD ):
                                 pNorse.setUHV( 2, 0 )
