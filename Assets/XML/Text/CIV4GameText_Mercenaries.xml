@@ -208,8 +208,8 @@
 		<Italian>Il nazionalismo ha cambiato la concezione degli eserciti: non c'&#232; pi&#249; posto per i mercenari!</Italian>
 		<Spanish>El nacionalismo ha cambiado la concepci&#243;n de los ej&#233;rcitos: &#161;los mercenarios ya no encajan en ellos!</Spanish>
 		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Russian>
-		</TEXT>
-        <TEXT>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
 		<English>Khazars</English>
 		<French>Khazars</French>
@@ -218,7 +218,7 @@
 		<Spanish>Khazars</Spanish>
 		<Russian>Khazars</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_PECHENEG</Tag>
 		<English>Pechenegs</English>
 		<French>Pechenegs</French>
@@ -227,7 +227,7 @@
 		<Spanish>Pechenegs</Spanish>
 		<Russian>Pechenegs</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_CUMANS</Tag>
 		<English>Cumans</English>
 		<French>Cumans</French>
@@ -236,7 +236,7 @@
 		<Spanish>Cumans</Spanish>
 		<Russian>Cumans</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_VIKINGS</Tag>
 		<English>Vikings</English>
 		<French>Vikings</French>
@@ -245,7 +245,7 @@
 		<Spanish>Vikings</Spanish>
 		<Russian>Vikings</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_MAGYARS</Tag>
 		<English>Magyars</English>
 		<French>Magyars</French>
@@ -254,7 +254,7 @@
 		<Spanish>Magyars</Spanish>
 		<Russian>Magyars</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_MONGOLS</Tag>
 		<English>Mongols</English>
 		<French>Mongols</French>
