@@ -56,7 +56,7 @@ Changes for Beta 12:
 		- Missile (light) Cavalries can recieve the Drill promotions
 		- Norse now needs 30 Viking Points for their 2nd UHV, but sinking ships add 2 points instead of 1
 		- Hungarian Huszar upgradeable to Knight too (it's an Armored Lancer replacement after all)
-		- Religious buildings gives half culture if using the wrong religion
+		- Religious buildings give half culture if using the "wrong" religion
 
 	Map and province changes:
 		- Added new French province Picardy to split Normandy
@@ -94,6 +94,8 @@ Changes for Beta 12:
 		- Removed unusable unit classes from Drill 2, 3, 4 in Civilopedia
 		- Byzantine preplaced cities now Constantinopolis (was Constantinople), Thessalonica (was Thessaloniki)
 		- Spanish 3rd UHV and France 2nd UHV text update
+		- UHV name update for Byzantium and Hungary
+		- Updated civilopedia entry for Free Religion (Religious Tolerance)
 
 	Python Updates:
 		- Speedup on the code for Independent city spawn (not all cities are checked every turn)
@@ -109,15 +111,15 @@ Changes for Beta 12:
 		- Some large indy and barb cities spawn with Workers
 		- Removed the walls of Alexandria
 		- Removed free priest from protestant cathedral
-		- Austria starts with Arbalesiters instead of Archers
+		- Austria starts with Arbalestiers instead of Archers
 
 	Bugfixes:
-		Fixed: Moscow UHV 2 should work now (used to be that it required 2% land only)
-		Fixed: Colonea now Stable/OK for Byzantium
-		Fixed: The player can no longer prosecute religion from foreign cities (unless the player is the Pope)
-		Fixed: Trading Companies no longer count towards the build colonies for the UHV conditions (except for Spain)
-		Fixed: A bug with the pre-defined wars causing strange wars (bad array permutation when the civs were changed)
-		Fixed: Viking points don't count roads and improvements inside own culture borders, also points count against Byzantium
+		- Fixed: Moscow UHV 2 should work now (used to be that it required 2% land only)
+		- Fixed: Colonea now Stable/OK for Byzantium
+		- Fixed: The player can no longer prosecute religion from foreign cities (unless the player is the Pope)
+		- Fixed: Trading Companies no longer count towards the build colonies for the UHV conditions (except for Spain)
+		- Fixed: A bug with the pre-defined wars causing strange wars (bad array permutation when the civs were changed)
+		- Fixed: Viking points don't count roads and improvements inside own culture borders, also points count against Byzantium
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -129,7 +131,7 @@ Changes for Beta 11:
 	Map and province changes:
 		- Added Amber
 		- Amber now replaces most of the northern Gems
-		- Provinces: the islands in the North Sea are correctly part og Gotaland now
+		- Provinces: the islands in the North Sea are correctly part of Gotaland now
 		- Provinces: the Yorkshire now split into Mercia and Northumbria (needs testing for the English UHV)
 		- Provinces: Ausgburg was historically part of Swabia, moved Ausgburg and adjusted the Province borders accordingly
 		- Updated the North-East region for the city names as by krieger546's maps (for Moscow, Germany, Norse and Sweden)
@@ -159,7 +161,7 @@ Changes for Beta 11:
 		- Poland gets couple of Catholic Missionaries
 		- Cordoba gets one less Settler
 		- New Germany UHV conditions associated with the Holy Roman Empire, Reformation and Thirty Year War
-		- Luebec flips to Germany and Germany gets fewer Settlers
+		- Luebeck flips to Germany and Germany gets fewer Settlers
 
 	Bugfixes:
 		- Bugfix: Moscow UHV 2 should work now
@@ -202,9 +204,9 @@ Changes for Beta 10:
 		The Bonuses from Imperialism and French UP are now "capped" to 6 points max
 		Podolia is now stable for Moscow
 		Granary no longer gives health bonus with Rice (there is little Rice on the map anyway and Rice by itself gives +1 Health)
-		Contant with the Pope is initiated as soon as you get a Catholic city (this is needed now as one cannot declare state rleigion until Theology)
+		Contant with the Pope is initiated as soon as you get a Catholic city (this is needed now as one cannot declare state religion until Theology)
 		Increased the research penalty for the Pope (this is done for purely balance reasons, otherwise he techs too much)
-		Longbowman now requeres Replacable Parts
+		Longbowman now requires Replacable Parts
 		Nerfed Longbowman strength to 8 (it is still more powerful than Knights in cities, hills and probably forest)
 
 	Bugfixes:

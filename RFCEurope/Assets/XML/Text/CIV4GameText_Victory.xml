@@ -137,12 +137,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ2</Tag>
-		<English>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</English>
-		<French>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</French>
-		<German>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</German>
-		<Italian>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Russian>
+		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</English>
+		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</French>
+		<German>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</German>
+		<Italian>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ3</Tag>
@@ -352,7 +352,6 @@
 		<Russian>[COLOR_YELLOW]Domination of the Adriatic Sea:[COLOR_REVERT] Conquer Verona, Dalmatia, Arberia and Epirus by 1004AD.</Russian>
 	</TEXT>
 	<TEXT>
-
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
 		<English>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</English>
 		<French>Conquer Constantinople by 1204AD.</French>
@@ -426,30 +425,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
-		<English>[COLOR_YELLOW]Fekete Sereg:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</English>
+		<English>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</English>
 		<French>Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
 		<German>Kontrollieren Sie das gr&#246;ßte Gebiet in Europa im Jahr 1490 n. Chr.</German>
-		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
-		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
+		<Italian>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</Spanish>
 		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#225;&#238;&#235;&#252;&#248;&#229; &#226;&#241;&#229;&#227;&#238; &#242;&#229;&#240;&#240;&#232;&#242;&#238;&#240;&#232;&#229;&#233; &#226; &#197;&#226;&#240;&#238;&#239;&#229; &#226; 1500AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN2</Tag>
-		<English>[COLOR_YELLOW]Edict of Turda:[COLOR_REVERT] Be the first to adopt Free Religion.</English>
+		<English>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</English>
 		<French>Etre le premier &#224; adopter la Libert&#233; de Culte.</French>
 		<German>Nehmen Sie als erste Zivilisation die Staatform Religionsfreiheit an</German>
-		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
-		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
+		<Italian>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</Italian>
+		<Spanish>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</Spanish>
 		<Russian>&#193;&#243;&#228;&#252;&#242;&#229; &#239;&#229;&#240;&#226;&#251;&#236;, &#247;&#242;&#238;&#225;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#243;&#254; &#208;&#229;&#235;&#232;&#227;&#232;&#254;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN3</Tag>
-		<English>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</English>
-		<French>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</French>
-		<German>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</German>
-		<Italian>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Italian>
-		<Spanish>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Spanish>
-		<Russian>Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Russian>
+		<English>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</English>
+		<French>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</French>
+		<German>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</German>
+		<Italian>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
