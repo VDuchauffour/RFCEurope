@@ -91,6 +91,7 @@
 	<ElementType name="bAllowVassalUU" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowIrrigation" content="textOnly" dt:type="boolean"/>
         <ElementType name="iBombardImmuneDefense" content="textOnly" dt:type="int"/>
+        <ElementType name="iStateReligionCulture" content="textOnly" dt:type="int"/>
 	<!-- 3Miro -->
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
@@ -566,6 +567,7 @@
 		<element type="bAllowVassalUU"/>
 		<element type="bAllowIrrigation"/>
                 <element type="iBombardImmuneDefense"/>
+                <element type="iStateReligionCulture"/>
 		<!-- 3Miro -->
 	</ElementType>
 	<ElementType name="BuildingInfos" content="eltOnly">
