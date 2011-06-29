@@ -1044,4 +1044,20 @@
 		<Italian>with [LINK=literal]%s1_Building[\LINK]</Italian>
 		<Spanish>with [LINK=literal]%s1_Building[\LINK]</Spanish>
 		<Russian>with [LINK=literal]%s1_Building[\LINK]</Russian></TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_STATE_RELIGION_CULTURE1</Tag>
+		<English>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </English>
+		<French>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </French>
+		<German>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </German>
+		<Italian>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </Russian></TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATE_RELIGION_CULTURE2</Tag>
+		<English>with [LINK=literal]%s1_Religion[\LINK]</English>
+		<French>with [LINK=literal]%s1_Religion[\LINK]</French>
+		<German>with [LINK=literal]%s1_Religion[\LINK]</German>
+		<Italian>with [LINK=literal]%s1_Religion[\LINK]</Italian>
+		<Spanish>with [LINK=literal]%s1_Religion[\LINK]</Spanish>
+		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian></TEXT>
 </Civ4GameText>

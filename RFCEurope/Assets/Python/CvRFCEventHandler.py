@@ -497,10 +497,10 @@ class CvRFCEventHandler:
 				print ("Improve Type Satisfied")
 				self.barb.onImprovementDestroyed(iPlotX,iPlotY)
                 iVictim = pPlot.getOwner()
-                if ( iVictim > 0 and iVictim < con.iNumPlayers ):
+                if ( iVictim > -1 and iVictim < con.iNumPlayers ):
                         self.sta.onImprovementDestroyed( iVictim )
-                if ( iVictim > 0 and iVictim < con.iNumTotalPlayersB ):
-                        self.vic.onPillageImprovement( pUnit.getOwner(), iVictim, iPlotX, iPlotY )
+                #if ( iVictim > -1 and iVictim < con.iNumTotalPlayersB ):
+                self.vic.onPillageImprovement( pUnit.getOwner(), iVictim, iImprovement, iRoute, iPlotX, iPlotY )
                         
 #	def onImprovementDestroyed(self, argsList):
 #		print ("Improvement Destroyed")

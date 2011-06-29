@@ -405,9 +405,11 @@ class Victory:
                 #                                pNorse.setUHV( 2, 1 )
                 pass
                 
-        def onPillageImprovement( self, iPillager, iVictim, iX, iY ):
-                if ( iPillager == iNorse ):
-                        pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + 1 )
+        def onPillageImprovement( self, iPillager, iVictim, iImprovement, iRoute, iX, iY ):
+                #print( "3Miro: ", iPillager, iVictim, iImprovement, iRoute )
+                if ( iPillager == iNorse and iRoute == -1 ):
+                        if ( gc.getMap().plot( iX, iY ).getOwner() != iNorse ):
+                                pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + 1 )
 
         def onCombatResult(self, argsList):
                 pWinningUnit,pLosingUnit = argsList
