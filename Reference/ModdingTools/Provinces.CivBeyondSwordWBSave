@@ -1,5 +1,6 @@
 Version=11
 BeginGame
+	Tutorial=0
 	Era=ERA_ANCIENT
 	Speed=GAMESPEED_NORMAL
 	Calendar=CALENDAR_DEFAULT
@@ -27,877 +28,296 @@ BeginTeam
 	Tech=TECH_THEOLOGY
 	Tech=TECH_CHAIN_MAIL
 	Tech=TECH_MONASTICISM
-	Tech=TECH_ASTROLABE
 	Tech=TECH_MUSIC
 	Tech=TECH_HERBAL_MEDICINE
 	Tech=TECH_LITERATURE
 	Tech=TECH_CODE_OF_LAWS
 	Tech=TECH_CLASSICAL_KNOWLEDGE
-	ContactWithTeam=0
-	ContactWithTeam=22
-	AtWar=2
-	AtWar=3
-	AtWar=18
-	RevealMap=0
+	Tech=TECH_ASTROLABE
 EndTeam
 BeginTeam
 	TeamID=1
 	Tech=TECH_BRONZE_CASTING
-	ContactWithTeam=1
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=2
-	ContactWithTeam=2
-	AtWar=0
-	AtWar=18
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=3
-	ContactWithTeam=3
-	AtWar=0
-	AtWar=18
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=4
-	ContactWithTeam=4
-	AtWar=11
-	AtWar=15
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=5
-	ContactWithTeam=5
-	AtWar=20
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=6
-	ContactWithTeam=6
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=7
-	ContactWithTeam=7
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=8
-	ContactWithTeam=8
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=9
-	ContactWithTeam=9
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=10
-	ContactWithTeam=10
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=11
-	ContactWithTeam=11
-	AtWar=4
-	AtWar=21
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=12
-	ContactWithTeam=12
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=13
-	ContactWithTeam=13
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=14
-	ContactWithTeam=14
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=15
-	ContactWithTeam=15
-	AtWar=4
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=16
-	ContactWithTeam=16
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=17
-	ContactWithTeam=17
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=18
-	ContactWithTeam=18
-	AtWar=0
-	AtWar=2
-	AtWar=3
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=19
-	ContactWithTeam=19
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=20
-	ContactWithTeam=20
-	AtWar=5
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=21
-	ContactWithTeam=21
-	AtWar=11
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=22
 	Tech=TECH_CALENDAR
 	Tech=TECH_THEOLOGY
 	Tech=TECH_ASTROLABE
-	ContactWithTeam=0
-	ContactWithTeam=22
-	ContactWithTeam=23
-	ContactWithTeam=24
-	ContactWithTeam=25
-	ContactWithTeam=26
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=23
-	ContactWithTeam=22
-	ContactWithTeam=23
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=24
-	ContactWithTeam=22
-	ContactWithTeam=24
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=25
-	ContactWithTeam=22
-	ContactWithTeam=25
-	RevealMap=0
 EndTeam
 BeginTeam
 	TeamID=26
-	ContactWithTeam=22
-	ContactWithTeam=26
-	RevealMap=0
 EndTeam
 BeginPlayer
 	Team=0
 	LeaderType=LEADER_JUSTINIAN
-	LeaderName=Justinian I
-	CivDesc=The Byzantines
-	CivShortDesc=TXT_KEY_CIV_BYZANTIUM_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BYZANTIUM_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Labarum.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BYZANTIUM
-	Color=PLAYERCOLOR_ROYAL_PURPLE_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
 	StateReligion=RELIGION_ORTHODOXY
-	StartingEra=ERA_CLASSICAL
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=1
 	LeaderType=LEADER_CHARLEMAGNE
-	LeaderName=Charlemagne
-	CivDesc=The French
-	CivShortDesc=TXT_KEY_CIV_FRANKIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_FRANKIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_3FleurDeLis2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_FRANKIA
-	Color=PLAYERCOLOR_DARK_BLUE
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=50
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=2
 	LeaderType=LEADER_ABUBAKR
-	LeaderName=Abu Bakr
-	CivDesc=The Arabs
-	CivShortDesc=TXT_KEY_CIV_ARABIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ARABIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagdecal_arabic.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ARABIA
-	Color=PLAYERCOLOR_GREEN_AND_WHITE
-	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=200
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=3
 	LeaderType=LEADER_SIMEON
-	LeaderName=Simeon I
-	CivDesc=The Bulgarians
-	CivShortDesc=TXT_KEY_CIV_BULGARIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BULGARIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Bulgaria.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BULGARIA
-	Color=PLAYERCOLOR_LIME
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=100
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=4
 	LeaderType=LEADER_ABDARRAHMAN
-	LeaderName=Abd-ar-Rahman III
-	CivDesc=The Cordobans
-	CivShortDesc=TXT_KEY_CIV_CORDOBA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_CORDOBA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagdecal_Moorish2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_CORDOBA
-	Color=PLAYERCOLOR_LIGHT_GREEN
-	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=200
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=5
 	LeaderType=LEADER_HARALD_HARDRADA
-	LeaderName=Harald Hardrada
-	CivDesc=The Norse
-	CivShortDesc=TXT_KEY_CIV_NORSE_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_NORSE_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Raven.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_NORSE
-	Color=PLAYERCOLOR_LIGHT_BLUE
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=200
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=6
 	LeaderType=LEADER_DANDOLO
-	LeaderName=Enrico Dandolo
-	CivDesc=The Venetians
-	CivShortDesc=TXT_KEY_CIV_VENEZIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_VENEZIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Venice.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_VENEZIA
-	Color=PLAYERCOLOR_VENETIAN_RED_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
-	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
+	PlayableCiv=1             
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=7
 	LeaderType=LEADER_CHARLES_V
-	LeaderName=Philip the Bold
-	CivDesc=The Burgundians
-	CivShortDesc=TXT_KEY_CIV_BURGUNDY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_BURGUNDY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Burgundy.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_BURGUNDY
-	Color=PLAYERCOLOR_BURGUNDY
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=8
 	LeaderType=LEADER_BARBAROSSA
-	LeaderName=Frederick Barbarossa
-	CivDesc=The Germans
-	CivShortDesc=TXT_KEY_CIV_GERMANY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_GERMANY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_HolyRomanEmpire.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_GERMANY
-	Color=PLAYERCOLOR_DARK_LEMON
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARHCY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=9
 	LeaderType=LEADER_YAROSLAV
-	LeaderName=Yaroslav
-	CivDesc=The Kievans
-	CivShortDesc=TXT_KEY_CIV_KIEV_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_KIEV_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagDECAL_Kiev.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_KIEV
-	Color=PLAYERCOLOR_LIGHT_PURPLE
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=250
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=10
 	LeaderType=LEADER_STEPHEN
-	LeaderName=Istvan I
-	CivDesc=The Hungarians
-	CivShortDesc=TXT_KEY_CIV_HUNGARY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_HUNGARY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Hungary2.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_HUNGARY
-	Color=PLAYERCOLOR_BROWN_AND_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=11
 	LeaderType=LEADER_ISABELLA
-	LeaderName=Isabella
-	CivDesc=The Spanish
-	CivShortDesc=TXT_KEY_CIV_SPAIN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SPAIN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Castle4.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SPAIN
-	Color=PLAYERCOLOR_DARK_YELLOW
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=500
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARHCY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=12
 	LeaderType=LEADER_CASIMIR
-	LeaderName=Casimir III
-	CivDesc=The Polish
-	CivShortDesc=TXT_KEY_CIV_POLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_POLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Poland.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_POLAND
-	Color=PLAYERCOLOR_CERISE
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=300
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARHCY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=13
 	LeaderType=LEADER_SIMONE
-	LeaderName=Simone Boccanegra
-	CivDesc=The Genoans
-	CivShortDesc=TXT_KEY_CIV_GENOA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_GENOA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagdecal_stgeorgecross.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_GENOA
-	Color=PLAYERCOLOR_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=14
 	LeaderType=LEADER_WILLIAM
-	LeaderName=William I
-	CivDesc=The English
-	CivShortDesc=TXT_KEY_CIV_ENGLAND_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_ENGLAND_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_lions.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_ENGLAND
-	Color=PLAYERCOLOR_RED_AND_GOLD
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARHCY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=15
 	LeaderType=LEADER_AFONSO
-	LeaderName=Afonso Henriques
-	CivDesc=The Portuguese
-	CivShortDesc=TXT_KEY_CIV_PORTUGAL_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PORTUGAL_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Escudo.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PORTUGAL
-	Color=PLAYERCOLOR_BLUE
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=450
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARHCY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=16
 	LeaderType=LEADER_MINDAUGAS
-	LeaderName=Mindaugas
-	CivDesc=The Lithuanians
-	CivShortDesc=TXT_KEY_CIV_LITHUANIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_LITHUANIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Lithuania.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_LITHUANIA
-	Color=PLAYERCOLOR_GRAY
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=17
 	LeaderType=LEADER_MAXIMILIAN
-	LeaderName=Maximilian I
-	CivDesc=The Austrians
-	CivShortDesc=TXT_KEY_CIV_AUSTRIA_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_AUSTRIA_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Austria.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_AUSTRIA
-	Color=PLAYERCOLOR_CYAN_AND_BLACK
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=700
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARHCY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=18
 	LeaderType=LEADER_MEHMED
-	LeaderName=Mehmed II
-	CivDesc=The Ottomans
-	CivShortDesc=TXT_KEY_CIV_TURKEY_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_TURKEY_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Tugra.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_TURKEY
-	Color=PLAYERCOLOR_DARK_ORANGE
-	ArtStyle=ARTSTYLE_MIDDLE_EAST
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
 	StateReligion=RELIGION_ISLAM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=19
 	LeaderType=LEADER_IVAN_IV
-	LeaderName=Ivan IV
-	CivDesc=The Muscovites
-	CivShortDesc=TXT_KEY_CIV_MOSCOW_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_MOSCOW_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/flagDECAL_Moscow.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_MOSCOW
-	Color=PLAYERCOLOR_VERYDARK_RED
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=400
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=20
 	LeaderType=LEADER_GUSTAVUS
-	LeaderName=Gustav Vasa
-	CivDesc=The Swedish
-	CivShortDesc=TXT_KEY_CIV_SWEDEN_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_SWEDEN_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Sweden.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_SWEDEN
-	Color=PLAYERCOLOR_DARK_CYAN_AND_LEMON
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1000
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_GUILDS
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=21
 	LeaderType=LEADER_WILLEM_VAN_ORANJE
-	LeaderName=Willem van Oranje
-	CivDesc=The Dutch
-	CivShortDesc=TXT_KEY_CIV_DUTCH_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_DUTCH_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Leeuw.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_DUTCH
-	Color=PLAYERCOLOR_ORANGE
-	ArtStyle=ARTSTYLE_EUROPEAN
 	PlayableCiv=1
-	MinorNationStatus=0
-	StartingGold=1500
 	StateReligion=RELIGION_PROTESTANTISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_LIMITED_MONARCHY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_APPRENTICESHIP
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_TRADE_ECONOMY
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=22
 	LeaderType=LEADER_THE_POPE
-	LeaderName=TXT_KEY_LEADER_THE_POPE
-	CivDesc=TXT_KEY_CIV_PAPAL_DESC
-	CivShortDesc=TXT_KEY_CIV_PAPAL_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_PAPAL_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_Pope.dds
-	WhiteFlag=0
 	CivType=CIVILIZATION_PAPAL
-	Color=PLAYERCOLOR_OFF_WHITE
-	ArtStyle=ARTSTYLE_GRECO_ROMAN
 	PlayableCiv=0
-	MinorNationStatus=0
-	StartingGold=0
 	StateReligion=RELIGION_CATHOLICISM
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
-BeginPlayer
-	Team=23
-	LeaderType=LEADER_PETER
+BeginPlayer  
+	Team=23          
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_X.dds
-	WhiteFlag=0
-	CivType=CIVILIZATION_INDEPENDENT
-	Color=PLAYERCOLOR_DARK_GRAY1
-	ArtStyle=ARTSTYLE_BARBARIAN
-	PlayableCiv=0
-	MinorNationStatus=1
-	StartingGold=50
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	Handicap=HANDICAP_PRINCE
+	LeaderType=LEADER_PETER
+	CivType=CIVILIZATION_INDEPENDENT                 	                 
+	PlayableCiv=0                 
+	MinorNationStatus=1                 
+	Handicap=HANDICAP_PRINCE                 
 EndPlayer
-BeginPlayer
-	Team=24
-	LeaderType=LEADER_PETER
+BeginPlayer                 
+	Team=24           
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_X.dds
-	WhiteFlag=0
-	CivType=CIVILIZATION_INDEPENDENT2
-	Color=PLAYERCOLOR_DARK_GRAY2
-	ArtStyle=ARTSTYLE_BARBARIAN
-	PlayableCiv=0
-	MinorNationStatus=1
-	StartingGold=50
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	Handicap=HANDICAP_PRINCE
+	LeaderType=LEADER_PETER
+	CivType=CIVILIZATION_INDEPENDENT2	                 
+	PlayableCiv=0                 
+	MinorNationStatus=1                 
+	Handicap=HANDICAP_PRINCE                 
 EndPlayer
-BeginPlayer
-	Team=25
-	LeaderType=LEADER_PETER
+BeginPlayer                 
+	Team=25  
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_X.dds
-	WhiteFlag=0
-	CivType=CIVILIZATION_INDEPENDENT3
-	Color=PLAYERCOLOR_DARK_GRAY3
-	ArtStyle=ARTSTYLE_BARBARIAN
-	PlayableCiv=0
-	MinorNationStatus=1
-	StartingGold=50
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
-	Handicap=HANDICAP_PRINCE
+	LeaderType=LEADER_PETER
+	CivType=CIVILIZATION_INDEPENDENT3	                 
+	PlayableCiv=0                 
+	MinorNationStatus=1                 
+	Handicap=HANDICAP_PRINCE                 
 EndPlayer
-BeginPlayer
-	Team=26
-	LeaderType=LEADER_PETER
+BeginPlayer                 
+	Team=26      
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
-	CivDesc=TXT_KEY_CIV_INDEPENDENT_DESC
-	CivShortDesc=TXT_KEY_CIV_INDEPENDENT_SHORT_DESC
-	CivAdjective=TXT_KEY_CIV_INDEPENDENT_ADJECTIVE
-	FlagDecal=Art/Interface/TeamColor/FlagDECAL_X.dds
-	WhiteFlag=0
-	CivType=CIVILIZATION_INDEPENDENT4
-	Color=PLAYERCOLOR_DARK_GRAY4
-	ArtStyle=ARTSTYLE_BARBARIAN
-	PlayableCiv=0
-	MinorNationStatus=1
-	StartingGold=50
-	StateReligion=
-	StartingEra=ERA_ANCIENT
-	RandomStartLocation=false
-	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_DESPOTISM
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_TRIBAL_LAW
-	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_TRIBALISM
-	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_DECENTRALIZATION
-	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_PAGANISM
-	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_SUBJUGATION
+	LeaderType=LEADER_PETER
+	CivType=CIVILIZATION_INDEPENDENT4	                 
+	PlayableCiv=0                 
+	MinorNationStatus=1                 
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginMap
@@ -911,7 +331,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3270
+	num signs written=3272
 	Randomize Resources=false
 EndMap
 
@@ -3929,7 +3349,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=14
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -4289,8 +3709,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=13
-	TerrainType=TERRAIN_DESERT
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=14
@@ -4299,12 +3719,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=15
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=16
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -4655,27 +4075,27 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=13
-	TerrainType=TERRAIN_DESERT
-	PlotType=2
-EndPlot
-BeginPlot
-	x=10,y=14
-	TerrainType=TERRAIN_DESERT
-	PlotType=2
-EndPlot
-BeginPlot
-	x=10,y=15
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=10,y=16
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
-	x=10,y=17
+	x=10,y=14
 	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=10,y=15
+	TerrainType=TERRAIN_OCEAN
+	PlotType=3
+EndPlot
+BeginPlot
+	x=10,y=16
+	TerrainType=TERRAIN_OCEAN
+	PlotType=3
+EndPlot
+BeginPlot
+	x=10,y=17
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -5017,6 +4437,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=12
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -5027,28 +4448,27 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=14
-	TerrainType=TERRAIN_DESERT
-	PlotType=2
-EndPlot
-BeginPlot
-	x=11,y=15
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=11,y=16
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=11,y=17
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
-	x=11,y=18
-	BonusType=BONUS_FISH
+	x=11,y=15
 	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=11,y=16
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=11,y=17
+	TerrainType=TERRAIN_OCEAN
+	PlotType=3
+EndPlot
+BeginPlot
+	x=11,y=18
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -5393,27 +4813,28 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=14
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=12,y=15
-	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	BonusType=BONUS_FISH
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=16
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=17
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=18
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -5758,23 +5179,23 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=14
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=15
-	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=16
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=17
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	TerrainType=TERRAIN_OCEAN
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=18
@@ -6123,24 +5544,23 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=14
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=14,y=15
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=14,y=16
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=17
-	BonusType=BONUS_WHEAT
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=18
@@ -6494,12 +5914,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=15
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=16
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -6860,7 +6280,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=15
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_SHEEP
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -6870,7 +6291,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=17
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6890,12 +6311,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=21
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=22
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -7221,7 +6642,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=14
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -7253,8 +6674,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=20
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	BonusType=BONUS_FISH
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=21
@@ -7263,7 +6685,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=22
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -7598,29 +7020,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=16
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=18
-	TerrainType=TERRAIN_PLAINS
+	RiverNSDirection=0
+	isWOfRiver
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=18,y=19
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=20
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=21
@@ -7629,12 +7054,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=22
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=23
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -7965,33 +7390,33 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=19,y=17
-	TerrainType=TERRAIN_GRASS
+	RiverNSDirection=0
+	isWOfRiver
+	BonusType=BONUS_COW
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=19,y=18
+	isNOfRiver
+	RiverWEDirection=3
 	BonusType=BONUS_TIMBER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=19,y=19
-	RiverNSDirection=0
-	isWOfRiver
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=20
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -8007,7 +7432,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=23
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -8334,32 +7759,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
 BeginPlot
 	x=20,y=16
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=20,y=17
-	TerrainType=TERRAIN_GRASS
+	isNOfRiver
+	RiverWEDirection=3
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=20,y=18
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=20,y=19
-	isNOfRiver
-	RiverWEDirection=3
 	BonusType=BONUS_IRON
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -8370,8 +7795,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=21
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=22
@@ -8380,7 +7805,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=23
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -8711,24 +8136,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=21,y=17
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	isNOfRiver
+	RiverWEDirection=3
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=21,y=18
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=21,y=19
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_PLAINS
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -8738,8 +8165,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=21
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=22
@@ -9086,30 +8513,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=22,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_DESERT
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=22,y=18
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
-EndPlot
-BeginPlot
-	x=22,y=19
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
+	x=22,y=19
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
+EndPlot
+BeginPlot
 	x=22,y=20
-	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_WHEAT
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9120,10 +8549,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=22
-	ImprovementType=IMPROVEMENT_CITY_RUINS
-	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=23
@@ -9466,7 +8893,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -9483,13 +8909,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=18
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=23,y=19
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9849,18 +9274,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=14
+	FeatureType=FEATURE_OASIS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=24,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_DESERT
-	PlotType=0
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=24,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
@@ -9871,12 +9295,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=18
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=24,y=19
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -10253,18 +9677,22 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
 BeginPlot
 	x=25,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=25,y=18
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -10275,6 +9703,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=20
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -10646,7 +10075,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -10659,10 +10087,14 @@ EndPlot
 BeginPlot
 	x=26,y=18
 	TerrainType=TERRAIN_DESERT
-	PlotType=2
+	PlotType=0
 EndPlot
 BeginPlot
 	x=26,y=19
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
@@ -11060,7 +10492,7 @@ EndPlot
 BeginPlot
 	x=27,y=19
 	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=27,y=20
@@ -11432,14 +10864,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=28,y=18
 	TerrainType=TERRAIN_DESERT
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=28,y=19
@@ -11814,7 +11245,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -11826,7 +11256,7 @@ EndPlot
 BeginPlot
 	x=29,y=18
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=29,y=19
@@ -12200,15 +11630,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_OASIS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=17
@@ -12218,7 +11647,7 @@ EndPlot
 BeginPlot
 	x=30,y=18
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=19
@@ -12588,20 +12017,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=31,y=16
 	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	TerrainType=TERRAIN_DESERT
+	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=18
@@ -12962,21 +12389,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=14
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=32,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=32,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=17
@@ -13345,7 +12769,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=14
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
@@ -13356,21 +12779,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=16
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	TerrainType=TERRAIN_DESERT
+	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=18
 	TerrainType=TERRAIN_DESERT
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=33,y=19
@@ -13380,6 +12800,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=20
+	RiverNSDirection=0
+	isWOfRiver
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -13738,20 +13160,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=14
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
 BeginPlot
 	x=34,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=34,y=16
 	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=17
@@ -13760,9 +13180,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=18
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=34,y=19
@@ -13771,6 +13190,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=20
+	isNOfRiver
+	RiverWEDirection=3
 	BonusType=BONUS_SALT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -14138,7 +13559,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
@@ -14155,7 +13575,7 @@ EndPlot
 BeginPlot
 	x=35,y=18
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=35,y=19
@@ -14165,6 +13585,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=20
+	isNOfRiver
+	RiverWEDirection=3
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -14523,13 +13945,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=14
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
 BeginPlot
 	x=36,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -14541,29 +13961,27 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=17
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=18
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=36,y=19
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=20
-	RiverNSDirection=0
-	isWOfRiver
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -14925,7 +14343,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -14936,19 +14353,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=18
+	RiverNSDirection=0
 	isNOfRiver
-	RiverWEDirection=3
+	RiverWEDirection=1
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=37,y=19
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=37,y=20
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -15320,13 +14743,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=38,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -15725,13 +15146,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=18
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -16124,13 +15543,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=17
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=40,y=18
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -16923,7 +16341,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=15
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -17338,7 +16755,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_DESERT
 	PlotType=0
 EndPlot
@@ -17746,7 +17162,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=16
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -18125,6 +17540,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=11
+	FeatureType=FEATURE_OASIS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -18151,6 +17567,10 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=16
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -18523,7 +17943,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=11
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18554,6 +17974,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=17
+	isNOfRiver
+	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -18908,7 +18330,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=11
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18933,16 +18355,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=16
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=47,y=17
-	RiverNSDirection=0
-	isWOfRiver
+	isNOfRiver
+	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
@@ -19346,6 +18766,10 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=17
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -19751,6 +19175,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=18
+	isNOfRiver
+	RiverWEDirection=1
 	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -29561,7 +28987,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Thessaloniki
+		CityName=Thessalonica
 		CityPopulation=3
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
@@ -33653,7 +33079,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Constantinople
+		CityName=Constantinopolis
 		CityPopulation=5
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_WALLS
@@ -57003,12 +56429,6 @@ BeginSign
 	caption=108
 EndSign
 BeginSign
-	plotX=22
-	plotY=22
-	playerType=-1
-	caption=108
-EndSign
-BeginSign
 	plotX=23
 	plotY=22
 	playerType=-1
@@ -57256,12 +56676,6 @@ BeginSign
 EndSign
 BeginSign
 	plotX=21
-	plotY=21
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=21
 	plotY=20
 	playerType=-1
 	caption=119
@@ -57269,12 +56683,6 @@ EndSign
 BeginSign
 	plotX=21
 	plotY=19
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=20
-	plotY=21
 	playerType=-1
 	caption=119
 EndSign
@@ -57305,18 +56713,6 @@ EndSign
 BeginSign
 	plotX=19
 	plotY=19
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=18
-	plotY=20
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=17
-	plotY=20
 	playerType=-1
 	caption=119
 EndSign
@@ -57377,48 +56773,6 @@ EndSign
 BeginSign
 	plotX=15
 	plotY=17
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=14
-	plotY=17
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=14
-	plotY=16
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=13
-	plotY=17
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=12
-	plotY=17
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=13
-	plotY=16
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=11
-	plotY=16
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=12
-	plotY=16
 	playerType=-1
 	caption=119
 EndSign
@@ -57571,18 +56925,6 @@ BeginSign
 	plotY=70
 	playerType=-1
 	caption=37
-EndSign
-BeginSign
-	plotX=10
-	plotY=15
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=11
-	plotY=15
-	playerType=-1
-	caption=119
 EndSign
 BeginSign
 	plotX=68
@@ -59841,12 +59183,6 @@ BeginSign
 	caption=119
 EndSign
 BeginSign
-	plotX=16
-	plotY=15
-	playerType=-1
-	caption=145
-EndSign
-BeginSign
 	plotX=17
 	plotY=14
 	playerType=-1
@@ -60015,49 +59351,13 @@ BeginSign
 	caption=145
 EndSign
 BeginSign
-	plotX=15
-	plotY=15
-	playerType=-1
-	caption=145
-EndSign
-BeginSign
-	plotX=15
-	plotY=14
-	playerType=-1
-	caption=145
-EndSign
-BeginSign
 	plotX=14
 	plotY=15
 	playerType=-1
 	caption=119
 EndSign
 BeginSign
-	plotX=13
-	plotY=15
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
 	plotX=12
-	plotY=15
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=12
-	plotY=14
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=11
-	plotY=14
-	playerType=-1
-	caption=119
-EndSign
-BeginSign
-	plotX=10
 	plotY=14
 	playerType=-1
 	caption=119
@@ -61729,4 +61029,142 @@ BeginSign
 	plotY=27
 	playerType=-1
 	caption=117
+EndSign
+BeginSign
+	plotX=13
+	plotY=14
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=14
+	plotY=14
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=16
+	plotY=15
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=15
+	plotY=15
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=15
+	plotY=14
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=24
+	plotY=18
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=25
+	plotY=18
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=26
+	plotY=18
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=24
+	plotY=17
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=24
+	plotY=16
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=24
+	plotY=15
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=23
+	plotY=15
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=24
+	plotY=14
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=23
+	plotY=14
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=22
+	plotY=14
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=25
+	plotY=15
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=25
+	plotY=16
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=25
+	plotY=17
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=47
+	plotY=9
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=46
+	plotY=10
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=46
+	plotY=11
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=46
+	plotY=12
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=46
+	plotY=13
+	playerType=-1
+	caption=106
 EndSign

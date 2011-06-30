@@ -80,8 +80,10 @@ Changes for Beta 12:
 		- Removed and rearranged a couple resources in Anatolia, thus making it less fertile
 		- Changed the northern coast of Anatolia
 		- Revised all the rivers in Kiev, Lithuania, Poland
+		- Updated North Africa based on Morholt's suggestions
 		- Adjusted the provinces to these last few changes
-		- Some gereral citynames are fixed
+		- Carinthia is OK for Germany, Bavaria is Solid for Austria, Iceland is unstable for England, Sicily is OK for Spain
+		- Cyprus, Crete and Rhodes are OK, Transylvania and Moldova are unstable for the Ottomans
 
 	XML/text updates:
 		- UHV name for some UHVs
@@ -98,6 +100,7 @@ Changes for Beta 12:
 		- UHV name update for Byzantium and Hungary
 		- Updated civilopedia entry for Free Religion (Religious Tolerance)
 		- Added the dot for some civic texts
+		- Some general citynames are fixed
 
 	Python Updates:
 		- Speedup on the code for Independent city spawn (not all cities are checked every turn)
