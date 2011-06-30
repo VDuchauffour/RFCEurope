@@ -1297,10 +1297,10 @@
 		<Russian>[ICON_BULLET]%D1_Mod% Unit Production</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
-		<English>%D1_Mod% from Civics</English>
-		<French>%D1_Mod% from Civics</French>
-		<German>%D1_Mod% from Civics</German>
-		<Italian>%D1_Mod% from Civics</Italian>
-		<Spanish>%D1_Mod% from Civics</Spanish>
-		<Russian>%D1_Mod% from Civics</Russian></TEXT>
+		<English>[ICON_BULLET]%D1_Mod% from Civics</English>
+		<French>[ICON_BULLET]%D1_Mod% from Civics</French>
+		<German>[ICON_BULLET]%D1_Mod% from Civics</German>
+		<Italian>[ICON_BULLET]%D1_Mod% from Civics</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod% from Civics</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod% from Civics</Russian></TEXT>
 </Civ4GameText>

@@ -81,6 +81,7 @@ Changes for Beta 12:
 		- Changed the northern coast of Anatolia
 		- Revised all the rivers in Kiev, Lithuania, Poland
 		- Adjusted the provinces to these last few changes
+		- Some gereral citynames are fixed
 
 	XML/text updates:
 		- UHV name for some UHVs
@@ -96,6 +97,7 @@ Changes for Beta 12:
 		- Spanish 3rd UHV and France 2nd UHV text update
 		- UHV name update for Byzantium and Hungary
 		- Updated civilopedia entry for Free Religion (Religious Tolerance)
+		- Added the dot for some civic texts
 
 	Python Updates:
 		- Speedup on the code for Independent city spawn (not all cities are checked every turn)
