@@ -533,12 +533,12 @@
  	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN1</Tag>
-		<English>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Conquer Sardinia, Marseilles, Milano, Cyprus and Crete in 1540AD.</English>
-		<French>Contr&#244;ler la Sardaigne, Marseilles, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
-		<German>Kontrollieren Sie Sardinien, Marseilles, Mailand, Kreta und Zypern im Jahr 1540 n. Chr.</German>
+		<English>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Conquer Sardinia, Milano, Cyprus and Crete in 1540AD.</English>
+		<French>Contr&#244;ler la Sardaigne, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
+		<German>Kontrollieren Sie Sardinien, Mailand, Kreta und Zypern im Jahr 1540 n. Chr.</German>
 		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
 		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
-		<Russian>Control Sardinia, Marseilles, Milano, Cyprus and Crete in 1540AD.</Russian>
+		<Russian>Control Sardinia, Milano, Cyprus and Crete in 1540AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
