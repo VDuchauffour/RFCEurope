@@ -96,7 +96,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
-		<English>State Religion spreads to every city with a Temple. </English>
+		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in it. </English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Ausbreitung der Staatsreligion in allen St&#228;dten</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
@@ -222,12 +222,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HUN2</Tag>
-		<English>No unhappiness or instability from foreign culture. +1 happiness in all cities.</English>
+		<English>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</English>
 		<French>Pas de m&#233;contentement ou d'instabilit&#233; pour une cuture &#233;trang&#232;re. +1 Bonheur dans les villes.</French>
 		<German>Keine Unzufriedenheit oder Instabilit&#228;t durch fremde Kultur und +1 Zufriedenheit in allen St&#228;dten </German>
-		<Italian>No unhappiness or instability from foreign culture. +1 happiness in all cities.</Italian>
-		<Spanish>No unhappiness or instability from foreign culture. +1 happiness in all cities.</Spanish>
-		<Russian>No unhappiness or instability from foreign culture. +1 happiness in all cities.</Russian>
+		<Italian>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</Italian>
+		<Spanish>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</Spanish>
+		<Russian>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GER</Tag>
@@ -276,7 +276,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
-		<English>-50% decrease in all maintenance cost assosiated with the number of the cities.</English>
+		<English>-50% decrease in all maintenance cost associated with the number of the cities.</English>
 		<French>-50%% de coût de maintenance pour le nombre de villes.</French>
 		<German>50% Verringerung der Unterhaltszahlungen, die durch die Anzahl der St&#223;dte entstehen</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
@@ -294,7 +294,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN2</Tag>
-		<English>Half Mercenaries cost.</English>
+		<English>Halves Mercenaries cost.</English>
 		<French>Coût des Mercenaires divis&#233; par 2.</French>
 		<German>Halbe S&#246;ldernkosten</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
