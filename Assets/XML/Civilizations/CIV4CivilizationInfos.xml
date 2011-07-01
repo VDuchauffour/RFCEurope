@@ -8356,7 +8356,7 @@
 			<Civilopedia>TXT_KEY_CIV_TURKEY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1359AD</StartingYear>
-			<LoadingTime>30</LoadingTime>
+			<LoadingTime>40</LoadingTime>
 			<UP1>TXT_KEY_UP_TUR</UP1>
 			<UP2>TXT_KEY_UP_TUR2</UP2>
 			<UHV1>TXT_KEY_UHV_TUR1</UHV1>
