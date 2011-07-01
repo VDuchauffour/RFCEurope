@@ -137,6 +137,7 @@ BeginPlayer
 	LeaderType=LEADER_ABUBAKR
 	CivType=CIVILIZATION_ARABIA
 	PlayableCiv=1
+	StateReligion=RELIGION_ISLAM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
