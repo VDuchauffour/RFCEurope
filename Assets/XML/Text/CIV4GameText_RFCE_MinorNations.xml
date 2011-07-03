@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - New -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<!--Please place any new text entries into this file-->
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_REBELLION_TITLE</Tag>
+		<English>%s1_CivName are revolting!</English>
+		<French>%s1_CivName are revolting!</French>
+		<German>%s1_CivName are revolting!</German>
+		<Italian>%s1_CivName are revolting!</Italian>
+		<Spanish>%s1_CivName are revolting!</Spanish>
+		<Russian>%s1_CivName are revolting!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_REBELLION_DESC</Tag>
+		<English>%s1_CivName are trying to form their own country. What shall we do?</English>
+		<French>%s1_CivName are trying to form their own country. What shall we do?</French>
+		<German>%s1_CivName are trying to form their own country. What shall we do?</German>
+		<Italian>%s1_CivName are trying to form their own country. What shall we do?</Italian>
+		<Spanish>%s1_CivName are trying to form their own country. What shall we do?</Spanish>
+		<Russian>%s1_CivName are trying to form their own country. What shall we do?</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_REBELLION_DO_NOTHING</Tag>
+		<English>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</English>
+		<French>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</French>
+		<German>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</German>
+		<Italian>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Italian>
+		<Spanish>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Spanish>
+		<Russian>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_REBELLION_CRACK</Tag>
+		<English>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</English>
+		<French>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</French>
+		<German>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</German>
+		<Italian>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</Italian>
+		<Spanish>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</Spanish>
+		<Russian>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_REBELLION_BRIBE</Tag>
+		<English>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</English>
+		<French>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</French>
+		<German>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</German>
+		<Italian>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</Italian>
+		<Spanish>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</Spanish>
+		<Russian>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_REBELLION_ALL</Tag>
+		<English>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</English>
+		<French>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</French>
+		<German>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</German>
+		<Italian>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</Italian>
+		<Spanish>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</Spanish>
+		<Russian>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_THE_SERBS</Tag>
+		<English>The Serbs</English>
+		<French>The Serbs</French>
+		<German>The Serbs</German>
+		<Italian>The Serbs</Italian>
+		<Spanish>The Serbs</Spanish>
+		<Russian>The Serbs</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SERBIAN</Tag>
+		<English>Serbian</English>
+		<French>Serbian</French>
+		<German>Serbian</German>
+		<Italian>Serbian</Italian>
+		<Spanish>Serbian</Spanish>
+		<Russian>Serbian</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
+		<English>Khazars</English>
+		<French>Khazars</French>
+		<German>Khazars</German>
+		<Italian>Khazars</Italian>
+		<Spanish>Khazars</Spanish>
+		<Russian>Khazars</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_PECHENEG</Tag>
+		<English>Pechenegs</English>
+		<French>Pechenegs</French>
+		<German>Pechenegs</German>
+		<Italian>Pechenegs</Italian>
+		<Spanish>Pechenegs</Spanish>
+		<Russian>Pechenegs</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_CUMANS</Tag>
+		<English>Cumans</English>
+		<French>Cumans</French>
+		<German>Cumans</German>
+		<Italian>Cumans</Italian>
+		<Spanish>Cumans</Spanish>
+		<Russian>Cumans</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_VIKINGS</Tag>
+		<English>Vikings</English>
+		<French>Vikings</French>
+		<German>Vikings</German>
+		<Italian>Vikings</Italian>
+		<Spanish>Vikings</Spanish>
+		<Russian>Vikings</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_MAGYARS</Tag>
+		<English>Magyars</English>
+		<French>Magyars</French>
+		<German>Magyars</German>
+		<Italian>Magyars</Italian>
+		<Spanish>Magyars</Spanish>
+		<Russian>Magyars</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_MONGOLS</Tag>
+		<English>Mongols</English>
+		<French>Mongols</French>
+		<German>Mongols</German>
+		<Italian>Mongols</Italian>
+		<Spanish>Mongols</Spanish>
+		<Russian>Mongols</Russian>
+	</TEXT>
+</Civ4GameText>

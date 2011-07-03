@@ -7,6 +7,7 @@ import CvRFCEventHandler
 import RiseAndFall
 import Crusades
 import Religions
+import Barbs
 
 class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
@@ -69,7 +70,8 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
             7623 : ('AskNoCityPopupEvent', self.congEventApply7623, self.congEventBegin7623),
 	    7624 : ('ReformationEvent', self.relEventApply7624, self.relEventBegin7624), ### Reformation Begin ###
 	    7625 : ('DefensiveCrusadeEvent',self.crusadeApply7625, self.crusadeBegin7625),
-            7626 : ('CounterReformationEvent',self.relEventApply7626, self.relEventBegin7626)
+            7626 : ('CounterReformationEvent',self.relEventApply7626, self.relEventBegin7626),
+            7627 : ('CounterReformationEvent',self.barbEventApply7627, self.barbEventBegin7627)
         }
         
 
@@ -78,6 +80,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         self.rnf = RiseAndFall.RiseAndFall()
         self.crus = Crusades.Crusades()
         self.rel = Religions.Religions()
+        self.barb = Barbs.Barbs()
         
 
     def addEventHandler(self, eventType, eventHandler):
@@ -300,4 +303,10 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
             self.crus.eventApply7625( popupReturn )
             
     def crusadeBegin7625( self ):
+            pass
+            
+    def barbEventApply7627( self, playerID, netUserData, popupReturn ):
+            self.barb.eventApply7627( popupReturn )
+            
+    def barbEventBegin7627( self ):
             pass
