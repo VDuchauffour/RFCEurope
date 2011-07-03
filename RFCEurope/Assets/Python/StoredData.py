@@ -69,6 +69,9 @@ class StoredData:
 				    'bDCEnabled': False,
 				    'iDCLast':0,
 				    #Sedna17 Respawns
-				    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+				    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                    #3Miro: Monor Nations Respawn
+                                    'lNextMinorRevolt':[-1,-1,-1],
+                                    'lRevoltinNationRevoltIndex':[-1,-1]
 				}
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )

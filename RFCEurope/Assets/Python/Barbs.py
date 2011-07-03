@@ -97,8 +97,49 @@ lTver = [85,60,240,0] #1320 AD
 iHandicapOld = (gc.getGame().getHandicapType() - 1)
 
 
+# Minor Nations sructure: [ int Province: all cities in this province will revolt
+#                           list nations: a city controlled by those players will not revolt (i.e. Greece wouldn't revolt against the Byz)
+#                           list religions: a city owned by someone with one of those state religions will not revolt (i.e. Jerusalem doesn't revolt against Muslims)
+#                           list revolt dates: the dates for the revolt,
+#                           list revolt strength: this is substracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
+#                           list units: corresponding to the revolt, if we crack down on the rebels, what barbarian units should spawn
+#                           list number: corresponding to the revolt, if we crack down on the rebels, how many units should spawn (note if we don't bribe the Lords, then double the number of Units will spawn)
+#                           list text keys: text keys for "The Nation" and "Nation Adjective"
+# Note: lists 3, 4, 5, 6 should have the same size
+# Note: you should increase the size of 'lNextMinorRevolt' in StoredData to be at least the number of minor nations
+#lMinorNations = [ [ xml.iP_Picardy, [], [], [5], [10], [xml.iAxeman], [1], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ], ]
+lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [xml.iAxeman,xml.iLongSwordsman], [1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ], ]
+
+
 
 class Barbs:
+        
+        def getRevolDates( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lNextMinorRevolt']
+                
+        def setRevolDates( self, lNextMinorRevolt ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lNextMinorRevolt'] = lNextMinorRevolt
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                
+        def getTempFlippingCity( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['tempFlippingCity']
+
+        def setTempFlippingCity( self, tNewValue ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['tempFlippingCity'] = tNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                
+        def getNationRevoltIndex( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lRevoltinNationRevoltIndex']
+                
+        def setNationRevoltIndex( self, iNationIndex, iRevoltIndex ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lRevoltinNationRevoltIndex'] = [iNationIndex,iRevoltIndex]
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName ):
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
@@ -358,7 +399,10 @@ class Barbs:
                         self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         
-		
+		if ( iGameTurn == 1 ):
+                        self.setupMinorNation()
+
+		self.doMinorNations(iGameTurn)
 		
                 
 
@@ -481,3 +525,299 @@ class Barbs:
 		else:
 			self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),xml.iSpearman,1,1,1,0,utils.outerInvasion,1)
 
+# 3Miro: Minor Nations Start
+        def setupMinorNation( self ):
+                lNextMinorRevolt = self.getRevolDates()
+                
+                for lNation in lMinorNations:
+                        #iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
+                        iNextRevolt = lNation[3][0]
+                        while iNextRevolt in lNextMinorRevolt:
+                                iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
+                        #print(" Revolt Date ",iNextRevolt)
+                        iNationIndex = lMinorNations.index(lNation)
+                        #print(" NationIndex ",iNationIndex)
+                        lNextMinorRevolt[iNationIndex] = iNextRevolt
+                
+                self.setRevolDates( lNextMinorRevolt )
+                        
+
+        def doMinorNations( self, iGameTurn ):
+                lNextMinorRevolt = self.getRevolDates()
+                
+                if ( iGameTurn in lNextMinorRevolt ):
+                        #iNation = lNextMinorRevolt.index( iGameTurn )
+                        lNation = lMinorNations[ lNextMinorRevolt.index( iGameTurn ) ]
+                        lRevolts = lNation[3]
+                        for iRevoltDate in lRevolts:
+                                if ( (iRevoltDate - 3 <= iGameTurn) and (iRevoltDate + 3 >= iGameTurn) ):
+                                        iRevoltIndex = lRevolts.index( iRevoltDate )
+                                        break
+                        # loop over all the province tiles to find the cities revolting
+                        lPlayersOwning = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                        iProvince = lNation[0]
+                        for iI in range( gc.getNumProvinceTiles( iProvince ) ):
+                                iX = gc.getProvinceX( iProvince, iI )
+                                iY = gc.getProvinceY( iProvince, iI )
+                                if ( gc.getMap().plot( iX, iY ).isCity() ):
+                                        iOwner = gc.getMap().plot( iX, iY ).getPlotCity().getOwner()
+                                        if ( iOwner > -1 and iOwner < con.iPope ): # pope doesn't count here
+                                               lPlayersOwning[iOwner] += 1
+                        
+                        for iPlayer in range( con.iPope ):
+                                if ( lPlayersOwning[iPlayer] > 0 ):
+                                        if ( utils.getHumanID() == iPlayer ):
+                                                self.doRevoltHuman( iPlayer, iGameTurn, lNation, iRevoltIndex )
+                                        else:
+                                                self.doRevoltAI( iPlayer, iGameTurn, lNation, iRevoltIndex )
+                        # setup next revolt
+                        iRevoltIndex += 1
+                        if ( iRevoltIndex < len( lNation[3] ) ):
+                                iNextRevolt = lNation[3][iRevoltIndex] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
+                                while iNextRevolt in lNextMinorRevolt:
+                                        iNextRevolt = lNation[3][iRevoltIndex] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
+                                lNextMinorRevolt[lNextMinorRevolt.index( iGameTurn )] = iNextRevolt
+                                self.setRevolDates( lNextMinorRevolt )
+                        
+                                                
+        # revolution choice effects: suppress with force, revolt +1 turn, unhappy +1 for 10 turns, suppression chance 20% + 5% per unit stationed (cap at 33%)
+        #                            bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
+        #                            passive stability: >0 add 20%, additional +2% for every point above 5 (cap at 34% for +12 Stability)
+        def doRevoltAI( self, iPlayer, iGameTurn, lNation, iRevoltIndex ):
+                cityList = []
+                for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
+                        iX = gc.getProvinceX( lNation[0], iI )
+                        iY = gc.getProvinceY( lNation[0], iI )
+                        if ( gc.getMap().plot( iX, iY ).isCity() ):
+                                pCity = gc.getMap().plot( iX, iY ).getPlotCity()
+                                if ( pCity.getOwner() == iPlayer ):
+                                        cityList.append(pCity)
+                
+                # AI always cracks on revolt
+                iSuppressOdds = 20
+                iNumGarrason = 0
+                for iI in range( len( cityList ) ):
+                        iNumGarrason += self.getGarrasonSize( cityList[iI] )
+                iSuppressOdds += min( (5 * iNumGarrason) / len( cityList ), 13 )
+                # Passive bonus from Stability
+                pPlayer = gc.getPlayer( iPlayer )
+                if ( pPlayer.getStability() > 0 ):
+                        iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
+                
+                # substract the strength of the revolt
+                iSuppressOdds -= lNation[4][iRevoltIndex]
+                # time to roll the dice
+                if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
+                        # revolt suppressed
+                        for iI in range( len( cityList ) ):
+                                pCity = cityList[iI]
+                                pCity.changeHurryAngerTimer( 10 )
+                                pCity.changeOccupationTimer( 1 )
+                                self.makeRebels( pCity, lNation[5][iRevoltIndex], 2*lNation[6][iRevoltIndex], lNation[7][1] )
+                else:
+                        # revolt succeeded
+                        iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
+                        iNewCiv = con.iIndepStart + iRndNum
+                        for iI in range( len( cityList ) ):
+                                pCity = cityList[iI]
+                                utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
+                                utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)                            
+                                self.setTempFlippingCity((pCity.getX(),pCity.getY()))
+                                utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
+                                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+                                
+        def showPopup(self, popupID, title, message, labels):
+                popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
+                popup.setHeaderString(title)
+                popup.setBodyString(message)
+                for i in labels:
+                    popup.addButton( i )
+                popup.launch(False)
+                
+                
+        
+        def eventApply7627( self, popupReturn ):
+                iDecision = popupReturn.getButtonClicked()
+                iNationIndex, iRevoltIndex = self.getNationRevoltIndex()
+                #print("Event Apply",iNationIndex, iRevoltIndex,iDecision )
+                lNation = lMinorNations[iNationIndex]
+                iPlayer = utils.getHumanID()
+                
+                cityList = []
+                for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
+                        iX = gc.getProvinceX( lNation[0], iI )
+                        iY = gc.getProvinceY( lNation[0], iI )
+                        if ( gc.getMap().plot( iX, iY ).isCity() ):
+                                pCity = gc.getMap().plot( iX, iY ).getPlotCity()
+                                if ( pCity.getOwner() == iPlayer ):
+                                        cityList.append(pCity)
+                
+                # raw suppress score
+                iSuppressOdds = - lNation[4][iRevoltIndex]
+                pPlayer = gc.getPlayer( iPlayer )
+                if ( pPlayer.getStability() > 0 ):
+                        iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
+                
+                if ( iDecision == 1 or iDecision == 3 ):
+                        iNumGarrason = 0
+                        for iI in range( len( cityList ) ):
+                                iNumGarrason += self.getGarrasonSize( cityList[iI] )
+                        iSuppressOdds += 20 + min( (5 * iNumGarrason) / len( cityList ), 13 )
+                
+                if ( iDecision == 2 or iDecision == 3 ):
+                        iBribeGold = 0
+                        for iI in range( len( cityList ) ):
+                                iBribeGold += 10 * cityList[iI].getPopulation()
+                        iGovernment = pPlayer.getCivics(0)
+                        if ( iGovernment == xml.iCivicDespotism ):
+                                iBribeOdds = 15
+                        elif ( iGovernment == xml.iCivicFeudalMonarchy ):
+                                iBribeOdds = 25
+                        elif ( iGovernment == xml.iCivicDivineMonarchy ):
+                                iBribeOdds = 33
+                        elif ( iGovernment == xml.iCivicLimitedMonarchy ):
+                                iBribeOdds = 25
+                        elif ( iGovernment == xml.iCivicMerchantRepublic ):
+                                iBribeOdds = 20
+                        iGold = pPlayer.getGold()
+                        if ( iGold < iBribeGold ):
+                                iBribeOdds = ( iBribeOdds * iGold ) / ( iBribeGold )
+                        pPlayer.setGold( iGold - min( iGold, iBribeGold ) )
+                        iSuppressOdds += iBribeOdds
+                 
+                #if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
+                #print(" Chance to suppress. ")
+                if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
+                        # revolt suppressed
+                        if ( iDecision == 1 or iDecision == 3 ):
+                                for iI in range( len( cityList ) ):
+                                        pCity = cityList[iI]
+                                        pCity.changeHurryAngerTimer( 10 )
+                                        pCity.changeOccupationTimer( 1 )
+                                        if ( iDecision == 2 or iDecision == 3 ):
+                                                self.makeRebels( pCity, lNation[5][iRevoltIndex], lNation[6][iRevoltIndex], lNation[7][1] )
+                                        else:
+                                                self.makeRebels( pCity, lNation[5][iRevoltIndex], 2*lNation[6][iRevoltIndex], lNation[7][1] )
+                else:
+                        # revolt succeeded
+                        iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
+                        iNewCiv = con.iIndepStart + iRndNum
+                        for iI in range( len( cityList ) ):
+                                pCity = cityList[iI]
+                                CyInterface().addMessage(iPlayer, True, con.iDuration, pCity.getName() + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+                                utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
+                                utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)                            
+                                self.setTempFlippingCity((pCity.getX(),pCity.getY()))
+                                utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
+                                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)       
+                                
+                
+                        
+        def doRevoltHuman( self, iPlayer, iGameTurn, lNation, iRevoltIndex ):
+                self.setNationRevoltIndex( lMinorNations.index(lNation), iRevoltIndex )
+                
+                cityList = []
+                for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
+                        iX = gc.getProvinceX( lNation[0], iI )
+                        iY = gc.getProvinceY( lNation[0], iI )
+                        if ( gc.getMap().plot( iX, iY ).isCity() ):
+                                pCity = gc.getMap().plot( iX, iY ).getPlotCity()
+                                if ( pCity.getOwner() == iPlayer ):
+                                        cityList.append(pCity)
+                
+                # rebellion odds
+                # raw odds considering minor nation strength and player stability
+                iRawOdds = - lNation[4][iRevoltIndex]
+                pPlayer = gc.getPlayer( iPlayer )
+                if ( pPlayer.getStability() > 0 ):
+                        iRawOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
+                # odds adjusted by a crack-down
+                iCrackOdds = 20
+                iNumGarrason = 0
+                iBribeGold = 0
+                for iI in range( len( cityList ) ):
+                        iNumGarrason += self.getGarrasonSize( cityList[iI] )
+                        iBribeGold += 10 * cityList[iI].getPopulation()
+                iCrackOdds += min( (5 * iNumGarrason) / len( cityList ), 13 )
+                # bibery odds
+                #bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
+                iGovernment = pPlayer.getCivics(0)
+                if ( iGovernment == xml.iCivicDespotism ):
+                        iBribeOdds = 15
+                elif ( iGovernment == xml.iCivicFeudalMonarchy ):
+                        iBribeOdds = 25
+                elif ( iGovernment == xml.iCivicDivineMonarchy ):
+                        iBribeOdds = 33
+                elif ( iGovernment == xml.iCivicLimitedMonarchy ):
+                        iBribeOdds = 25
+                elif ( iGovernment == xml.iCivicMerchantRepublic ):
+                        iBribeOdds = 20
+                iGold = pPlayer.getGold()
+                if ( iGold < iBribeGold ):
+                        iBribeOdds = ( iBribeOdds * iGold ) / ( iBribeGold )
+                
+                
+                #iLoyalPrice = min( (10 * gc.getPlayer( utils.getHumanID() ).getGold()) / 100, 50 * iNumCities )
+                szRebellName = localText.getText(lNation[7][0], ())
+                #print( szTitle )
+                self.showPopup(7627, localText.getText("TXT_KEY_MINOR_REBELLION_TITLE", (szRebellName,) ), \
+                                localText.getText("TXT_KEY_MINOR_REBELLION_DESC", (szRebellName,) ), \
+                                (localText.getText("TXT_KEY_MINOR_REBELLION_DO_NOTHING", ( iRawOdds, )), \
+                                 localText.getText("TXT_KEY_MINOR_REBELLION_CRACK", ( iRawOdds + iCrackOdds, )), \
+                                 localText.getText("TXT_KEY_MINOR_REBELLION_BRIBE", ( min( iGold, iBribeGold ), iRawOdds + iBribeOdds, )), \
+                                 localText.getText("TXT_KEY_MINOR_REBELLION_ALL", ( iRawOdds + iBribeOdds + iCrackOdds, )), \
+                                  ))
+
+
+        def getGarrasonSize( self, pCity ):
+                pPlot = gc.getMap().plot( pCity.getX(), pCity.getY() )
+		iOwner = pPlot.getOwner()
+		if ( iOwner < 0 ):
+			return 0
+		iNumUnits = pPlot.getNumUnits()
+		iDefenders = 0
+		for i in range( iNumUnits ):
+			if ( pPlot.getUnit(i).getOwner() == iOwner ):
+				iDefenders += 1
+		return iDefenders
+
+        def makeRebels( self, pCity, iUnit, iCount, szName ):
+                lAvailableFreeTiles = []
+                lAvailableTiles = []
+                iTX = pCity.getX()
+                iTY = pCity.getY()
+                for y in range( 3 ):
+                        for x in range( 3 ):
+                                iX = iTX + x - 1 # try to spawn not across the river
+                                iY = iTY + y - 1
+                                if ( (iX>=0) and (iX<con.iMapMaxX) and (iY>=0) and (iY<con.iMapMaxY) ):
+                                        pPlot = gc.getMap().plot( iX, iY )
+                                        if ( pPlot.isHills() or pPlot.isFlatlands() ):
+                                                if ( pPlot.getNumUnits() == 0 and (not pPlot.isCity()) ):
+                                                        lAvailableFreeTiles.append( (iX, iY) )
+                                                elif ( not pPlot.isCity() ): 
+                                                        lAvailableTiles.append( (iX, iY) )
+                                                        
+                if ( len( lAvailableFreeTiles ) > 0 ):
+                        iI = gc.getGame().getSorenRandNum(len(lAvailableFreeTiles),'select a free tile for the rebels')
+                        iTX = lAvailableFreeTiles[iI][0]
+                        iTY = lAvailableFreeTiles[iI][1]
+                elif ( len( lAvailableTiles ) > 0 ):
+                        # if all tiles are taken, select one tile at random and kill all units there
+                        iI = gc.getGame().getSorenRandNum(len(lAvailableTiles),'select a taken tile for the rebels')
+                        iTX = lAvailableTiles[iI][0]
+                        iTY = lAvailableTiles[iI][1]
+                        pPlot = gc.getMap().plot( iX, iY )
+                        iN = pPlot.getNumUnits()
+                        for i in range( iN ):
+                                pPlot.getUnit( i ).kill( False, con.iBarbarian )
+                else:
+                        iTX = -1
+                        iTY = -1
+
+                if ( iTX != -1 and iTY != -1 ):
+                        pBarb = gc.getPlayer( con.iBarbarian )
+                        for iI in range( iCount ):
+                                pUnit = pBarb.initUnit(iUnit, iTX, iTY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+                                pUnit.setName( localText.getText(szName, ()) )
+        
