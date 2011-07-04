@@ -169,7 +169,7 @@ tOttomanControlII = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsiadon, xml.i
 tOttomanControlIII = [ xml.iP_Austria ]
 tMoscowControl = [ xml.iP_Donets, xml.iP_Kuban, xml.iP_Zaporizhia, xml.iP_Sloboda, xml.iP_Kiev, xml.iP_Moldova, xml.iP_Crimea, xml.iP_Pereyaslavl, xml.iP_Chernigov, xml.iP_Simbirsk, xml.iP_NizhnyNovgorod, xml.iP_Vologda, xml.iP_Rostov, xml.iP_Novgorod, xml.iP_Karelia, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_WhiteRus, xml.iP_Volhynia, xml.iP_Podolia, xml.iP_Moscow, xml.iP_Murom ]
 tSwedenControlI = [ xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Norrland, xml.iP_Skaneland, xml.iP_Finland ]
-tSwedenControlII = [ xml.iP_Saxony, xml.iP_Brandenburg, xml.iP_Pomerania, xml.iP_GreaterPoland, xml.iP_Masovia, xml.iP_Suvalkija, xml.iP_Lithuania, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Murom, xml.iP_Chernigov, xml.iP_Moscow, xml.iP_Novgorod, xml.iP_Rostov ]
+tSwedenControlII = [ xml.iP_Saxony, xml.iP_Brandenburg, xml.iP_Pomerania, xml.iP_GreaterPoland, xml.iP_Masovia, xml.iP_Suvalkija, xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Murom, xml.iP_Chernigov, xml.iP_Moscow, xml.iP_Novgorod, xml.iP_Rostov ]
 
 tOLDHungarianControl = ( 0, 23, 99, 72 )
 
@@ -379,7 +379,7 @@ class Victory:
                 elif ( iPlayer == iSweden and pSweden.isAlive() ):
                         if ( bConquest ):
                                 if ( pSweden.getUHV( 1 ) == -1 ):
-                                        if ( playerType == iMoscow or playerType == iPoland ):
+                                        if ( playerType == iMoscow or playerType == iPoland or playerType == iLithuania):
                                                 pSweden.setUHV( 1, 0 )
                 if ( playerType == iSpain ):
                         if ( gc.getPlayer( owner ).getStateReligion() == xml.iProtestantism ):
@@ -1150,7 +1150,7 @@ class Victory:
                         iNumCities = 0
                         for iProv in tSwedenControlII:
                                 iNumCities += pSweden.getProvinceCityCount( iProv )
-                        if ( iNumCities >= 5 ):
+                        if ( iNumCities >= 10 ):
                                 pSweden.setUHV( 2, 1 )
                         else:
                                 pSweden.setUHV( 2, 0 )
