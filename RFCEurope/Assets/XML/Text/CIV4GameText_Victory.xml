@@ -677,21 +677,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>
-		<English>Don't lose any cities to Poland or Russia before 1700AD.</English>
-		<French>Ne pas perdre de ville par la Pologne ou la Russie avant 1700 ap.JC.</French>
-		<German>Verlieren Sie keine Stadt an die Polen oder Russen vor 1700 n. Chr.</German>
-		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
-		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
+		<English>Don't lose any cities to Poland, Lithuania or Russia before 1700AD.</English>
+		<French>Ne pas perdre de ville par la Pologne, la Lithuanie ou la Russie avant 1700 ap.JC.</French>
+		<German>Verlieren Sie keine Stadt an die Polen, die Lithuanien oder die Russen vor 1700 n. Chr.</German>
+		<Italian>Don't lose any cities to Poland, Lithuania or Russia before 1700AD.</Italian>
+		<Spanish>Don't lose any cities to Poland, Lithuania or Russia before 1700AD.</Spanish>
 		<Russian>&#205;&#229; &#238;&#242;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#237;&#232;&#234;&#224;&#234;&#232;&#245; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#207;&#238;&#235;&#252;&#248;&#229; &#232;&#235;&#232; &#208;&#238;&#241;&#241;&#232;&#232; &#239;&#229;&#240;&#229;&#228; 1700AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE3</Tag>
-		<English>Have five cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</English>
-		<French>Have five cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</French>
-		<German>Have five cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</German>
-		<Italian>Have five cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Italian>
-		<Spanish>Have five cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Spanish>
-		<Russian>Have five cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Russian>
+		<English>Have ten cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</English>
+		<French>Have ten cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</French>
+		<German>Have ten cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</German>
+		<Italian>Have ten cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Italian>
+		<Spanish>Have ten cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Spanish>
+		<Russian>Have ten cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT1</Tag>
