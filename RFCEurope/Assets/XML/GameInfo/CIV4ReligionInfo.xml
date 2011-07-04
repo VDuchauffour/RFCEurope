@@ -11,7 +11,7 @@
 			<Description>TXT_KEY_RELIGION_PROTESTANTISM</Description>
 			<Adjective>TXT_KEY_RELIGION_PROTESTANTISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_RELIGION_PROTESTANTISM_PEDIA</Civilopedia>
-			<TechPrereq>TECH_INDUSTRIAL_TECH</TechPrereq>
+			<TechPrereq>TECH_PRINTING_PRESS</TechPrereq>
 			<FreeUnitClass>UNITCLASS_PROTESTANT_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>100</iSpreadFactor>

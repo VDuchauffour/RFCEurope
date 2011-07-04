@@ -796,6 +796,9 @@ class RFCEBalance:
                 gc.setTimelineTechDateForTech( xml.iMedicine, 458 )
                 gc.setTimelineTechDateForTech( xml.iIndustrialTech, xml.i1800AD )
                 
+                # block foundation of Protestantism except by a Catholic player
+                gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
+                
 
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE

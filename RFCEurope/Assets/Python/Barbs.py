@@ -562,7 +562,8 @@ class Barbs:
                                 if ( gc.getMap().plot( iX, iY ).isCity() ):
                                         iOwner = gc.getMap().plot( iX, iY ).getPlotCity().getOwner()
                                         if ( iOwner > -1 and iOwner < con.iPope ): # pope doesn't count here
-                                               lPlayersOwning[iOwner] += 1
+                                                if ( (not iOwner in lNation[1]) and ( not gc.getPlayer( iOwner ).getStateReligion() in lNation[2] ) ):
+                                                        lPlayersOwning[iOwner] += 1
                         
                         for iPlayer in range( con.iPope ):
                                 if ( lPlayersOwning[iPlayer] > 0 ):
