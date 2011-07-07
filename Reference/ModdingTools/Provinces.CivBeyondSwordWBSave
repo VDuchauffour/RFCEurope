@@ -137,6 +137,7 @@ BeginPlayer
 	LeaderType=LEADER_ABUBAKR
 	CivType=CIVILIZATION_ARABIA
 	PlayableCiv=1
+	StateReligion=RELIGION_ISLAM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -22155,7 +22156,7 @@ BeginPlot
 		BuildingType=BUILDING_CATHOLIC_SHRINE
 		ReligionType=RELIGION_CATHOLICISM
 		HolyCityReligionType=RELIGION_CATHOLICISM
-		Player21Culture=10
+		Player22Culture=2000
 	EndCity
 EndPlot
 BeginPlot

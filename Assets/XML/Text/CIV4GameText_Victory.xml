@@ -131,8 +131,8 @@
 		<English>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Make Constantinople the largest and most cultured city in 1025AD.</English>
 		<French>Faire de Constantinople la ville la plus peupl&#233;e et cultiv&#233;e en 1025 ap.JC.</French>
 		<German>Machen Sie Konstantinople zur kulturell bedeutendsten und gr&#246;&#223;ten Stadt in 1025AD.</German>
-		<Italian>The Second Rome: Make Constantinople the largest and most cultured city in 1025AD.</Italian>
-		<Spanish>The Second Rome: Make Constantinople the largest and most cultured city in 1025AD.</Spanish>
+		<Italian>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Make Constantinople the largest and most cultured city in 1025AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Make Constantinople the largest and most cultured city in 1025AD.</Spanish>
 		<Russian>&#209;&#228;&#229;&#235;&#224;&#233;&#242;&#229; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#252; &#237;&#224;&#232;&#225;&#238;&#235;&#252;&#248;&#232;&#236; &#232; &#241;&#224;&#236;&#251;&#233; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#237;&#251;&#233; &#227;&#238;&#240;&#238;&#228; &#226; 1025AD.</Russian>
 	</TEXT>
 	<TEXT>
@@ -149,8 +149,8 @@
 		<English>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Be the richest empire in the world in 1453AD.</English>
 		<French>Etre l'Empire le plus riche du monde en 1453 ap.JC.</French>
 		<German>Bringen Sie im Jahr 1453 n. Chr. am meisten Reichtum auf</German>
-		<Italian>Crossroads of the World: Be the richest empire in the world in 1453AD.</Italian>
-		<Spanish>Crossroads of the World: Be the richest empire in the world in 1453AD.</Spanish>
+		<Italian>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Crossroads of the World: Be the richest empire in the world in 1453AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Crossroads of the World: Be the richest empire in the world in 1453AD.</Spanish>
 		<Russian>&#193;&#243;&#228;&#252;&#242;&#229; &#241;&#224;&#236;&#238;&#233; &#225;&#238;&#227;&#224;&#242;&#238;&#233; &#232;&#236;&#239;&#229;&#240;&#232;&#229;&#233; &#226; &#236;&#232;&#240;&#229; &#226; 1453AD.</Russian>
 	</TEXT>
 	<TEXT>
@@ -165,19 +165,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL2</Tag>
 		<English>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</English>
-		<French>Accumulate at least 100 Orthodox Faith Points by 1259AD</French>
+		<French>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</French>
 		<German>Sammeln Sie bis zum Jahr 12590 n. Chr. mindestens 100 Glaubenspunkte</German>
-		<Italian>Accumulate at least 100 Orthodox Faith Points by 1259AD</Italian>
-		<Spanish>Accumulate at least 100 Orthodox Faith Points by 1259AD</Spanish>
-		<Russian>Accumulate at least 100 Orthodox Faith Points by 1259AD</Russian>
+		<Italian>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Italian>
+		<Spanish>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Spanish>
+		<Russian>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
 		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</English>
 		<French>Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1393 ap.JC.</French>
 		<German>Verlieren Sie keine Stadt an die Barbaren, die Byzantiner oder Osmanen vor 1393 n. Chr.</German>
-		<Italian>Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Italian>
-		<Spanish>Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Spanish>
+		<Italian>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not loose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Spanish>
 		<Russian>&#205;&#229; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#224;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#234; &#226;&#224;&#240;&#226;&#224;&#240;&#224;&#236; (&#204;&#238;&#237;&#227;&#238;&#235;&#251;), &#226;&#232;&#231;&#224;&#237;&#242;&#232;&#233;&#246;&#224;&#236;, &#232;&#235;&#232; &#238;&#242;&#242;&#238;&#236;&#224;&#237; &#224;&#236; &#239;&#229;&#240;&#229;&#228; 1393AD.</Russian>
 	</TEXT>
 	<TEXT>
@@ -282,20 +282,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR3</Tag>
 		<English>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</English>
-		<French>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</French>
-		<German>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</German>
-		<Italian>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Italian>
-		<Spanish>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Spanish>
-		<Russian>Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Russian>
+		<French>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</French>
+		<German>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</German>
+		<Italian>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN1</Tag>
-		<English>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</English>
-		<French>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</French>
-		<German>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</German>
-		<Italian>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Russian>
+		<English>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</English>
+		<French>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</French>
+		<German>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</German>
+		<Italian>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon and Valencia in 1492AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN2</Tag>
@@ -354,11 +354,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
 		<English>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</English>
-		<French>Conquer Constantinople by 1204AD.</French>
+		<French>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</French>
 		<German>Erobern Sie Konstantinople bis zum Jahr 1204 n. Chr.</German>
-		<Italian>Conquer Constantinople by 1204AD.</Italian>
-		<Spanish>Conquer Constantinople by 1204AD.</Spanish>
-		<Russian>Conquer Constantinople by 1204AD.</Russian>
+		<Italian>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
@@ -381,29 +381,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
 		<English>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</English>
-		<French>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</French>
-		<German>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</German>
-		<Italian>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Italian>
-		<Spanish>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Spanish>
-		<Russian>Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Russian>
+		<French>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</French>
+		<German>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</German>
+		<Italian>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer Kiev, Moldova, Crimea, Zaporizhia, Sloboda, Pereyaslavl, Chernigov, Podolia and White Rus in 1288AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE3</Tag>
 		<English>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</English>
 		<French>Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1250 ap.JC.</French>
 		<German>Bauen Sie 3 orthodoxe Kathedralen und 8 orthodoxe Kl&#246;ster bis zum Jahr 1250 n. Chr.</German>
-		<Italian>Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Italian>
-		<Spanish>Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Spanish>
+		<Italian>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Spanish>
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 2 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#241;&#238;&#225;&#238;&#240;&#224; &#232; 8 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#236;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#229;&#233; 1250AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT1</Tag>
 		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</English>
-		<French>Accumulate 4000 Culture points without declaring state religion before 1386AD</French>
-		<German>Accumulate 4000 Culture points without declaring state religion before 1386AD</German>
-		<Italian>Accumulate 4000 Culture points without declaring state religion before 1386AD</Italian>
-		<Spanish>Accumulate 4000 Culture points without declaring state religion before 1386AD</Spanish>
-		<Russian>Accumulate 4000 Culture points without declaring state religion before 1386AD</Russian>
+		<French>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</French>
+		<German>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</German>
+		<Italian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</Italian>
+		<Spanish>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</Spanish>
+		<Russian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT2</Tag>
@@ -455,8 +455,8 @@
 		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</English>
 		<French>Contr&#244;ler la rive est du Rhin en 1167AD ap.JC.</French>
 		<German>Kontrollieren Sie das &#246;stliche Rheinufer im Jahr 1167AD n.Chr.</German>
-		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
-		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
+		<Italian>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</Spanish>
 		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#236; &#225;&#224;&#237;&#234;&#238;&#236; &#208;&#229;&#233;&#237;&#224; &#226; 1167AD.</Russian>
 	</TEXT>
 	<TEXT>
@@ -470,39 +470,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</English>
-		<French>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</French>
-		<German>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</German>
-		<Italian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Thirty-Year War[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Russian>
+		<English>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</English>
+		<French>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</French>
+		<German>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</German>
+		<Italian>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria Europe in 1648AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
 		<English>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</English>
-		<French>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</French>
-		<German>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</German>
-		<Italian>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</Italian>
-		<Spanish>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</Spanish>
-		<Russian>Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD..</Russian>
+		<French>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</French>
+		<German>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</German>
+		<Italian>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Commonweath:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Hungary, Lithuania, Brest, Podolia and Kiev in 1600AD..</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL2</Tag>
 		<English>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</English>
-		<French>Produce the most food at least one year between 1500 and 1520 AD.</French>
+		<French>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</French>
 		<German>Produzieren Sie ein Jahr zwischen 1500 und 1520 am meisten Nahrung</German>
-		<Italian>Produce the most food at least one year between 1500 and 1520 AD.</Italian>
-		<Spanish>Produce the most food at least one year between 1500 and 1520 AD.</Spanish>
-		<Russian>Produce the most food at least one year between 1500 and 1520 AD.</Russian>
+		<Italian>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>
-		<English>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and 2 Jewish Quarters.</English>
-		<French>Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and 2 Jewish Quarters.</French>
+		<English>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</English>
+		<French>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</French>
 		<German>Errichten Sie 3 katholische und orthodoxe Kathedralen, 2 protestantische und 2 J&#252;dische Viertel</German>
-		<Italian>Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and 2 Jewish Quarters.</Italian>
-		<Spanish>Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and 2 Jewish Quarters.</Spanish>
-		<Russian>Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and 2 Jewish Quarters.</Russian>
+		<Italian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</Italian>
+		<Spanish>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</Spanish>
+		<Russian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>
@@ -533,21 +533,21 @@
  	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN1</Tag>
-		<English>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Conquer Sardinia, Milano, Cyprus and Crete in 1540AD.</English>
+		<English>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</English>
 		<French>Contr&#244;ler la Sardaigne, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
 		<German>Kontrollieren Sie Sardinien, Mailand, Kreta und Zypern im Jahr 1540 n. Chr.</German>
-		<Italian>Devi avere pi&#249; di 500 cultura nel 700 a.C. (turno 86)</Italian>
-		<Spanish>Conseguir una cultura superior a 500 en el 700 a. C. (turno 86)</Spanish>
-		<Russian>Control Sardinia, Milano, Cyprus and Crete in 1540AD.</Russian>
+		<Italian>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
-		<English>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</English>
+		<English>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Find 2 Corporations and build 8 Banks</English>
 		<French>Fonder 2 Soci&#233;t&#233;s Commerciale et construire 8 Banques.</French>
 		<German>Gr&#252;nden Sie 2 Gesellschaften und bauen Sie 8 Banken</German>
-		<Italian>Devi costruire le Piramidi, la Grande Biblioteca e il Grande Faro entro il 250 d.C. (turno 133)</Italian>
-		<Spanish>Construir las Pir&#225;mides, la Gran Biblioteca y el Gran Faro antes del 250 d. C. (turno 133)</Spanish>
-		<Russian>Found 2 Corporations and build 8 Banks</Russian>
+		<Italian>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Find 2 Corporations and build 8 Banks</Italian>
+		<Spanish>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Find 2 Corporations and build 8 Banks</Spanish>
+		<Russian>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Find 2 Corporations and build 8 Banks</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN3</Tag>
@@ -578,7 +578,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
-		<English>[COLOR_YELLOW]The Inventors of Everything:[COLOR_REVERT] Be the first to enter the Industrial age.</English>
+		<English>[COLOR_YELLOW]Inventors of the Crown:[COLOR_REVERT] Be the first to enter the Industrial age.</English>
 		<French>Etre la premiere civilisation &#224; entrer dans l'Age Industrielle.</French>
 		<German>Erreichen Sie als erste Zivilisation das industrielle Zeitalter</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -588,11 +588,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR1</Tag>
 		<English>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</English>
-		<French>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</French>
-		<German>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</German>
-		<Italian>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Italian>
-		<Spanish>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Spanish>
-		<Russian>Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Russian>
+		<French>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</French>
+		<German>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</German>
+		<Italian>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Italian>
+		<Spanish>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Spanish>
+		<Russian>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores and Canaries and 2 in Morocco, Tetouan and Oran.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR2</Tag>
@@ -614,12 +614,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
-		<English>[COLOR_YELLOW]Austrian Habsburg Rule:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Salzburg, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
-		<French>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</French>
-		<German>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</German>
-		<Italian>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Italian>
-		<Spanish>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Spanish>
-		<Russian>Conquer Hungary, Upper Hungary, Austria, Bavaria, Transilvania, Pannonia, Moravia and Bohemia in 1600AD.</Russian>
+		<English>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Salzburg, Transylvania, Pannonia, Moravia and Bohemia in 1600AD.</English>
+		<French>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Transylvania, Pannonia, Moravia and Bohemia in 1600AD.</French>
+		<German>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Transylvania, Pannonia, Moravia and Bohemia in 1600AD.</German>
+		<Italian>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Transylvania, Pannonia, Moravia and Bohemia in 1600AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Transylvania, Pannonia, Moravia and Bohemia in 1600AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Transylvania, Pannonia, Moravia and Bohemia in 1600AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS2</Tag>
