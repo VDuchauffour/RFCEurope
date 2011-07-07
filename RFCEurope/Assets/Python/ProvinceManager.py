@@ -197,7 +197,7 @@ tPortugalDesire = []
 
 tLithuaniaCore = []
 tLithuaniaNorm = []
-tLithuaniaOuter = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Masovia,xml.iP_GaliciaPoland,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda,xml.iP_Chernigov,xml.iP_Novgorod,xml.iP_Estonia]
+tLithuaniaOuter = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Pomerania,xml.iP_Masovia,xml.iP_Brest,xml.iP_GaliciaPoland,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda,xml.iP_Chernigov,xml.iP_Novgorod,xml.iP_Estonia]
 tLithuaniaPot2Core = [xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Polotsk]
 tLithuaniaPot2Norm = [xml.iP_Suvalkija,xml.iP_Smolensk,xml.iP_WhiteRus]
 tLithuaniaDesire = []

@@ -158,7 +158,7 @@ tKievControl = [ xml.iP_Moldova, xml.iP_Kiev, xml.iP_Crimea, xml.iP_Zaporizhia, 
 tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thessaloniki, xml.iP_Wallachia, xml.iP_Thessaly, xml.iP_Epirus, xml.iP_Arberia, xml.iP_Serbia, xml.iP_Bosnia, xml.iP_Dalmatia, xml.iP_Croatia ]
 tSpainConvert = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia, xml.iP_Andalusia ]
 tPolishControl = [ xml.iP_Bohemia, xml.iP_Moravia, xml.iP_UpperHungary, xml.iP_Hungary, xml.iP_Lithuania, xml.iP_Brest, xml.iP_Podolia, xml.iP_Kiev ]
-tGenoaControl = [ xml.iP_Lombardy, xml.iP_Sardinia, xml.iP_Cyprus, xml.iP_Crete ]
+tGenoaControl = [ xml.iP_Sardinia, xml.iP_Corsica, xml.iP_Crete, xml.iP_Rhodes, xml.iP_Crimea ]
 tEnglandControl = [ xml.iP_Aquitania, xml.iP_London, xml.iP_Wales, xml.iP_Wessex, xml.iP_Scotland, xml.iP_EastAnglia, xml.iP_Mercia, xml.iP_Northumbria, xml.iP_Ireland, xml.iP_Normandy, xml.iP_Bretagne, xml.iP_IleDeFrance, xml.iP_Orleans, xml.iP_Picardy ]
 tPortugalControlI = [ xml.iP_Azores, xml.iP_Canaries ]
 tPortugalControlII = [ xml.iP_Morocco, xml.iP_Tetouan, xml.iP_Oran ]
@@ -952,7 +952,7 @@ class Victory:
 
                 
         def checkGenoa( self, iGameTurn ):
-                if ( iGameTurn == xml.i1540AD and pGenoa.getUHV( 0 ) == -1 ):
+                if ( iGameTurn == xml.i1566AD and pGenoa.getUHV( 0 ) == -1 ):
                         bConq = True
                         for iProv in tGenoaControl:
                                 if ( pGenoa.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
