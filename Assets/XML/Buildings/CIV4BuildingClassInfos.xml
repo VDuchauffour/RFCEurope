@@ -1471,6 +1471,18 @@
 			<DefaultBuilding>BUILDING_PRESSBURG</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
+		<BuildingClassInfo><!-- LA LANTERNA -->
+			<Type>BUILDINGCLASS_LANTERNA</Type>
+			<Description>TXT_KEY_BUILDING_LANTERNA</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_LANTERNA</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<!--******************* WONDERS END *******************-->
 
 		<!--******************* CORPORATIONS START *******************-->

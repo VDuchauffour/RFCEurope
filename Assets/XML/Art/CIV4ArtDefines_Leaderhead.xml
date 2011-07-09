@@ -256,11 +256,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_ISABELLA</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Spain_Isabella.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,12</Button>
-			<NIF>art/LeaderHeads/Isabella/isabella.nif</NIF>
-			<KFM>art/LeaderHeads/Isabella/isabella.kfm</KFM>
-			<NoShaderNIF>art/LeaderHeads/Isabella/isabella_noshader.nif</NoShaderNIF>
-			<BackgroundKFM>art/LeaderHeads/Isabella/Isabella_BG.kfm</BackgroundKFM>
+			<Button>Art/LeaderHeads/isabella/Btn_LH_Spain_Isabella.dds</Button>
+			<NIF>Art/LeaderHeads/isabella/isabella.nif</NIF>
+			<KFM>Art/LeaderHeads/isabella/isabella.kfm</KFM>
+			<NoShaderNIF>art/Leaderheads/isabella/isabella.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/isabella/isabella_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_GUSTAVUS</Type>

@@ -1030,12 +1030,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1</Tag>
-		<English>[ICON_BULLET]%D1_Mod [ICON_GOLD] </English>
-		<French>[ICON_BULLET]%D1_Mod [ICON_GOLD] </French>
-		<German>[ICON_BULLET]%D1_Mod [ICON_GOLD] </German>
-		<Italian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Russian></TEXT>
+		<English>[ICON_BULLET]%D1_Mod[ICON_GOLD] </English>
+		<French>[ICON_BULLET]%D1_Mod[ICON_GOLD] </French>
+		<German>[ICON_BULLET]%D1_Mod[ICON_GOLD] </German>
+		<Italian>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO2</Tag>
 		<English>with [LINK=literal]%s1_Building[\LINK]</English>
@@ -1046,12 +1046,12 @@
 		<Russian>with [LINK=literal]%s1_Building[\LINK]</Russian></TEXT>
         <TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_CULTURE1</Tag>
-		<English>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </English>
-		<French>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </French>
-		<German>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </German>
-		<Italian>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod [ICON_CULTURE] </Russian></TEXT>
+		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </English>
+		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </French>
+		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </German>
+		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_CULTURE2</Tag>
 		<English>with [LINK=literal]%s1_Religion[\LINK]</English>
