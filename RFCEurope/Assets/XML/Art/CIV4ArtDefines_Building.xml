@@ -1489,5 +1489,15 @@
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Builds/BuildWinery.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,8</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LANTERNA</Type>
+			<LSystem>LSYSTEM_WATER</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.2</fScale>
+			<fInterfaceScale>0.36</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Lanterna/GreatLighthouse.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Wonders/Lanterna.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

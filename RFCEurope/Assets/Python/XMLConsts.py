@@ -526,11 +526,12 @@ iCopernicus=138
 iSanGiorgio=139
 iWestminster=140
 iPressburg=141
-iNationalEpic=142
-iTriumphalArch = 142#Should be same number as National Epic
-iNumBuildings = 143#Should equal iPlague
-iPlague = 143
-iNumBuildingsPlague = 144
+iLanterna=142
+iNationalEpic=143
+iTriumphalArch = 143#Should be same number as National Epic
+iNumBuildings = 144#Should equal iPlague
+iPlague = 144
+iNumBuildingsPlague = 145
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
 #Projects

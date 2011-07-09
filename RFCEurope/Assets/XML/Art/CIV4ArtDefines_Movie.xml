@@ -336,5 +336,9 @@
 			<Type>ART_DEF_MOVIE_ENCYCLOPEDIE</Type>
 			<Path>Art/Movies/Wonders/encyclopedie.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LANTERNA</Type>
+			<Path>Art/Movies/Wonders/Lanterna.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>
