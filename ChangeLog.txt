@@ -46,8 +46,9 @@ MV1		Make atlas from the buttons
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 12:
+(released: 2011.07.10.)
 
-	General changes:
+	General changes and UHV updates:
 		- Adjusted the spawn time for the Russian cities to historically accurate times
 		- Adjusted the AI flags for the various units, hopefully the AI would be more adequate now
 		- The Dutch now spawn with contact with England, Spain, France, Germany, Norse and Sweden
@@ -147,10 +148,10 @@ Changes for Beta 12:
 		- Fixed: The player wasn't able to prosecute even from own cities
 		- Fixed: the Round Church abliity is now lost upon change of religion, thus we will not have unintended hostility between non-Orthodox players
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 11:
+(released: 2011.06.05.)
 
 	General changes:
 
@@ -198,11 +199,10 @@ Changes for Beta 11:
 		- Bugfix: the Hungarian Stronghold ability to damage enemy units is now properly preserved upon save/load
 		- Bugfix: Kiev UHV counter works properly
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 Changes for Beta 10:
+(released: 2011.05.09.)
 
 	General changes:
 
@@ -250,10 +250,10 @@ Changes for Beta 10:
 		Fixed: A bug with the settler AI making units hand in an infinite loop
 		Fixed: Provinces now reset on respawn, this should prevent players from dying right after respawn
 		
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 9:
+(released: 2011.03.06.)
 		
 	General changes:
 		New civic system
@@ -467,7 +467,7 @@ Changes for Beta 7:
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	
-Changes for BETA 6:
+Changes for Beta 6:
 (released: 2011.01.23.)
 
 	merijn_v1 updates some text on the new Manor House/Civic
@@ -513,7 +513,7 @@ Changes for BETA 6:
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Changes for BETA 5:
+Changes for Beta 5:
 (released: 2011.01.09.)
 
 	added merijn_v1 XML modifications, some unit abilities and removing old and unused XML entries
@@ -567,7 +567,7 @@ Changes for BETA 5:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Changes for BETA 4:
+Changes for Beta 4:
 (released: 2010.12.29.)
 
 	Synced Units (fixed Polish Paladin bug), Projects (fixed Portugal UP bug)
