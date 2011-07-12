@@ -71,9 +71,9 @@ lFirenze = [54,31,75,0] #800 AD Same as Mediolanum--->Milan
 lLeipzig = [59,48,75,0] #800 AD
 lPrague = [61,44,75,0] #800 AD
 lKharkov = [90,46,75,0] #800 AD
+lCalais = [45,50,75,0] #800 AD
 lNovgorod = [80,62,87,0] #848 AD
 lEdinburgh = [42,62,90,0] #860 AD
-lCalais = [45,50,100,0] #900 AD
 lAlbaIulia = [73,34,100,0] #900 AD
 lTvanksta = [70,54,100,0] #900 AD
 lBreslau = [65,45,100,0] #900 AD
@@ -168,10 +168,11 @@ class Barbs:
                 #        print ("iHandicapOld", iHandicapOld)
 
 		#Animals. Wolves in Scandinavia. Bears in Russia, Lions in Africa
-		if (iGameTurn <= xml.i1000AD):
-                        self.spawnUnits( iBarbarian, (56, 53), (99, 72), xml.iWolf, 1, iGameTurn, 17, 2, utils.outerInvasion, 0, "")
-                        self.spawnUnits( iBarbarian, (86, 40), (99, 72), xml.iBear, 1, iGameTurn, 19, 4, utils.outerInvasion, 0, "")
-                        self.spawnUnits( iBarbarian, (0, 1), (52, 10), xml.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0, "")
+		#Disabled wild animals - Absinthe
+		#if (iGameTurn <= xml.i1000AD):
+        #                self.spawnUnits( iBarbarian, (56, 53), (99, 72), xml.iWolf, 1, iGameTurn, 17, 2, utils.outerInvasion, 0, "")
+        #                self.spawnUnits( iBarbarian, (86, 40), (99, 72), xml.iBear, 1, iGameTurn, 19, 4, utils.outerInvasion, 0, "")
+        #                self.spawnUnits( iBarbarian, (0, 1), (52, 10), xml.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0, "")
                 
 		#Mediterranean Pirates (Light before 1500,then heavy for rest of game)
 		if ( iGameTurn >= xml.i960AD and iGameTurn < xml.i1401AD):
@@ -275,7 +276,7 @@ class Barbs:
 
 		
 		#Magyars (preceeding Hungary)
-		if (iGameTurn >= xml.i840AD and iGameTurn < xml.i940AD):
+		if (iGameTurn >= xml.i840AD and iGameTurn < xml.i892AD):
 			self.spawnUnits( iBarbarian, (54,40),(62,49), xml.iHorseArcher, 1 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()) )
 
                 #barbs in the middle east

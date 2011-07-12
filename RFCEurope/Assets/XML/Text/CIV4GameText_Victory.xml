@@ -182,12 +182,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA1</Tag>
-		<English>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</English>
-		<French>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</French>
-		<German>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</German>
-		<Italian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Aquitania, Provance, Burgundy, Orleans, Champagne, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Russian>
+		<English>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</English>
+		<French>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</French>
+		<German>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</German>
+		<Italian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
@@ -497,12 +497,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>
-		<English>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</English>
-		<French>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</French>
+		<English>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</English>
+		<French>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</French>
 		<German>Errichten Sie 3 katholische und orthodoxe Kathedralen, 2 protestantische und 2 J&#252;dische Viertel</German>
-		<Italian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</Italian>
-		<Spanish>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</Spanish>
-		<Russian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters.</Russian>
+		<Italian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</Italian>
+		<Spanish>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</Spanish>
+		<Russian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>

@@ -4835,7 +4835,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>20</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -5020,7 +5020,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>20</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -5772,7 +5772,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>100</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -9743,7 +9743,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -9929,7 +9929,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -10115,7 +10115,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -10300,7 +10300,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -10490,7 +10490,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>66</iConquestProb>
+			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -12148,7 +12148,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iConquestProb>33</iConquestProb>
+			<iConquestProb>66</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -13943,7 +13943,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Cathedral -->
+		<BuildingInfo> <!-- Islamic Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ISLAMIC_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
@@ -18304,8 +18304,8 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>ERA_ANCIENT</MaxStartEra>
-			<ObsoleteTech>TECH_SHIPBUILDING</ObsoleteTech>
-			<PrereqTech>TECH_ASTROLABE</PrereqTech>
+			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
+			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -18323,7 +18323,7 @@
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>0</bTeamShare>
-			<bWater>1</bWater>
+			<bWater>0</bWater>
 			<bRiver>0</bRiver>
 			<bPower>0</bPower>
 			<bDirtyPower>0</bDirtyPower>
@@ -18348,7 +18348,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>10</iMinAreaSize>
-			<iConquestProb>33</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
@@ -18380,7 +18380,7 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>0</iHappiness>
+			<iHappiness>3</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -26151,8 +26151,8 @@
 			<iNukeModifier>0</iNukeModifier>
 			<iNukeExplosionRand>0</iNukeExplosionRand>
 			<iFreeSpecialist>0</iFreeSpecialist>
-			<iAreaFreeSpecialist>1</iAreaFreeSpecialist>
-			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
+			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
+			<iGlobalFreeSpecialist>1</iGlobalFreeSpecialist>
 			<iMaintenanceModifier>0</iMaintenanceModifier>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
@@ -26461,7 +26461,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_PROFESSIONAL_ARMY</PrereqTech>
+			<PrereqTech>TECH_SIEGE_ENGINES</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -26499,7 +26499,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>700</iCost>
+			<iCost>500</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -26690,12 +26690,12 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>200</iCost>
+			<iCost>400</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>10</iMinAreaSize>
-			<iConquestProb>33</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>

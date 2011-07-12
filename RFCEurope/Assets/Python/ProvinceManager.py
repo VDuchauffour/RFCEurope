@@ -192,7 +192,7 @@ tPortugalCore = []
 tPortugalNorm = []
 tPortugalOuter = [xml.iP_Morocco,xml.iP_Tetouan,xml.iP_Andalusia,xml.iP_Castile,xml.iP_Leon,xml.iP_GaliciaSpain]
 tPortugalPot2Core = [xml.iP_Lusitania]
-tPortugalPot2Norm = [xml.iP_Canaries,xml.iP_Azores]
+tPortugalPot2Norm = [xml.iP_Canaries,xml.iP_Azores,xml.iP_Madeira]
 tPortugalDesire = []
 
 tLithuaniaCore = []
