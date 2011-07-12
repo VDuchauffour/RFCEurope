@@ -620,6 +620,38 @@
 						<MiddleArtDefineTag>ART_DEF_UNIT_MERCHANT_RUSSIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_ARQUEBUSIER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ARQUEBUSIER_RUSSIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ARQUEBUSIER_RUSSIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ARQUEBUSIER_RUSSIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_CANNON</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_CANNON_RUSSIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_CANNON_RUSSIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_CANNON_RUSSIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_CUIRASSIER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_CUIRASSIER_RUSSIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_CUIRASSIER_RUSSIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_CUIRASSIER_RUSSIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_HORSE_ARCHER_RUSSIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_HORSE_ARCHER_RUSSIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_HORSE_ARCHER_RUSSIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
@@ -651,23 +683,13 @@
 				<StyleUnit>
 					<UnitType>UNIT_WORKER</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_WORKERMEDIEVAL_ARABIAN</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_WORKERMEDIEVAL_ARABIAN</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_WORKERMEDIEVAL_ARABIAN</LateArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_WORKER_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_WORKER_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_WORKER_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
 					<UnitType>UNIT_AXEMAN</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</LateArtDefineTag>
-					</UnitMeshGroup>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</LateArtDefineTag>
-					</UnitMeshGroup>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</EarlyArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</MiddleArtDefineTag>
@@ -761,9 +783,9 @@
 				<StyleUnit>
 					<UnitType>UNIT_ARBALEST</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</LateArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ARBALESTIER_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ARBALESTIER_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ARBALESTIER_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -815,6 +837,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_CUIRASSIER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_CUIRASSIER_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_CUIRASSIER_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_CUIRASSIER_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_PISTOLIER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_CAVALRY_ARABIAN</EarlyArtDefineTag>
@@ -862,6 +892,62 @@
 						<LateArtDefineTag>ART_DEF_UNIT_CANNON_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_SCIENTIST</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_SCIENTIST_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_SCIENTIST_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_SCIENTIST_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_ARTIST</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ARTIST_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ARTIST_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ARTIST_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MERCHANT_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MERCHANT_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MERCHANT_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_PROPHET_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_PROPHET_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_PROPHET_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_ENGINEER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ENGINEER_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ENGINEER_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ENGINEER_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_GREAT_SPY</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_GREAT_GENERAL</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_GREAT_GENERAL_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_GREAT_GENERAL_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_GREAT_GENERAL_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 		<UnitArtStyleTypeInfo>
@@ -893,9 +979,9 @@
 				<StyleUnit>
 					<UnitType>UNIT_WORKER</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_WORKERMEDIEVAL_ARABIAN</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_WORKERMEDIEVAL_ARABIAN</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_WORKERMEDIEVAL_ARABIAN</LateArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_WORKER_OTTOMAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_WORKER_OTTOMAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_WORKER_OTTOMAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -1102,6 +1188,54 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_CANNON_OTTOMAN</EarlyArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_CANNON_OTTOMAN</MiddleArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_CANNON_OTTOMAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_SCIENTIST</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_SCIENTIST_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_SCIENTIST_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_SCIENTIST_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_ARTIST</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ARTIST_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ARTIST_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ARTIST_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MERCHANT_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MERCHANT_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MERCHANT_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_PROPHET_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_PROPHET_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_PROPHET_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_ENGINEER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ENGINEER_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ENGINEER_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ENGINEER_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_GREAT_SPY</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>				
 			</StyleUnits>

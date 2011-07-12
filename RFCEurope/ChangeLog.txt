@@ -112,6 +112,7 @@ Changes for Beta 12:
 		- Some general citynames are fixed
 		- Pedia entry for the remaining leaders
 		- Arabia UP text updated
+		- Moved Druzhina and Konnik to correct position in the XML code
 
 	Python/C++ updates:
 		- Speedup on the code for Independent city spawn (not all cities are checked every turn)
@@ -125,6 +126,7 @@ Changes for Beta 12:
 		- New art for Isabella
 		- Background for the button of Vytautas
 		- Removed unused wondermovie (to reduce the size of the mod)
+		- New/Better ethnic units for Russian civs, Muslim civs
 
 	Balance:
 		- Crossbowman city defense bonus reduced to 25%. They are still better than Archers, but it makes the Arbalestier more valuable
