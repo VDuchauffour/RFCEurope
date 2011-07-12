@@ -695,6 +695,16 @@
 						<MiddleArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</MiddleArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_AXEMAN_ARABIAN</LateArtDefineTag>
+					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
 					<UnitType>UNIT_SWORDSMAN</UnitType>
