@@ -118,6 +118,7 @@ Changes for Beta 12:
 		- We can now add names to spawning Barbarians
 		- ADDED MINOR NATION MECHANICS: cities in some provinces try to revolt, you can do several things to prevent them.
 				The result is either independent cities and/or spawning barbarians and/or loss of gold and/or nothing.
+		- Current "Minor Nations" include Serbia, Scotland and Catalonia
 		- Moved Protestantism icon to Printing Press (needed C++ code to prevent non-Catholics from founding Protestantism)
 
 	Art updates:
@@ -147,6 +148,7 @@ Changes for Beta 12:
 		- Fixed: Viking points don't count roads and improvements inside own culture borders, also points count against Byzantium
 		- Fixed: The player wasn't able to prosecute even from own cities
 		- Fixed: the Round Church abliity is now lost upon change of religion, thus we will not have unintended hostility between non-Orthodox players
+		- Fixed: the Jewish part of the Poish UHV is counted as successful if you build the Temple Mount (it was the it could prevent you from building quarters)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

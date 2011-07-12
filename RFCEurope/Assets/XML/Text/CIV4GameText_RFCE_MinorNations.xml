@@ -78,6 +78,42 @@
 		<Spanish>Serbian</Spanish>
 		<Russian>Serbian</Russian>
 	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_THE_SCOTS</Tag>
+		<English>The Scots</English>
+		<French>The Scots</French>
+		<German>The Scots</German>
+		<Italian>The Scots</Italian>
+		<Spanish>The Scots</Spanish>
+		<Russian>The Scots</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SCOTISH</Tag>
+		<English>Scottish</English>
+		<French>Scottish</French>
+		<German>Scottish</German>
+		<Italian>Scottish</Italian>
+		<Spanish>Scottish</Spanish>
+		<Russian>Scottish</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_THE_CATALANS</Tag>
+		<English>The Catalans</English>
+		<French>The Catalans</French>
+		<German>The Catalans</German>
+		<Italian>The Catalans</Italian>
+		<Spanish>The Catalans</Spanish>
+		<Russian>The Catalans</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATALAN</Tag>
+		<English>Catalan</English>
+		<French>Catalan</French>
+		<German>Catalan</German>
+		<Italian>Catalan</Italian>
+		<Spanish>Catalan</Spanish>
+		<Russian>Catalan</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
 		<English>Khazars</English>
