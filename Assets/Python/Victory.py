@@ -389,6 +389,15 @@ class Victory:
                                         pSpain.setUHV( 2, 1 )
                 elif ( playerType == iNorse ):
                         pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + city.getPopulation() )
+                elif ( playerType == iPoland and pPoland.getUHV( 2 ) == -1 ):
+                        if ( city.hasBuilding( xml.iTempleMount ):
+                                iCounter = pPoland.getUHVCounter( 2 )
+                                iCathCath = ( iCounter / 10000 ) % 10
+                                iOrthCath = ( iCounter / 1000 ) % 10 
+                                iProtCath = ( iCounter / 100 ) % 10
+                                iJewishQu = max( pPoland.getNumCities(), 2 )
+                                iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
+                                pPoland.setUHVCounter( 2, iCounter )
 
         def onCityRazed(self, iPlayer,city):
                 #if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
@@ -474,6 +483,8 @@ class Victory:
                                                 iProtCath += 1
                                         elif ( iBuilding == xml.iJewishQuarter ):
                                                 iJewishQu += 1
+                                        elif ( iBuilding == xml.iTempleMount ):
+                                                iJewishQu = max( pPoland.getNumCities(), 2 )
                                         if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
                                                 pPoland.setUHV( 2, 1 )
                                         iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath

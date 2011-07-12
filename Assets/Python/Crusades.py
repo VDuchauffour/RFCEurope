@@ -816,14 +816,14 @@ class Crusades:
 								pPlot.getUnit( i ).kill( False, con.iBarbarian )
 								iChosenX = iX
 								iChosenY = iY
-			
+		
+                print("Made Units on:", iChosenX, iChosenY,iLeader)	
 		self.crusadeMakeUnits( [iChosenX,iChosenY] )
-		print("Made Units on:", iChosenX, iChosenY)
 		
         def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
+                player = gc.getPlayer(iPlayer)
                 for i in range(iNum):
-                        player = gc.getPlayer(iPlayer)
                         player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
 		
