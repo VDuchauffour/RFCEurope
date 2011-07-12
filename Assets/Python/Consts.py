@@ -756,20 +756,20 @@ tRespawnTime = (
 190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders 
 195, #Bulgaria 1185 -- Second Bulgarian empire
 #174, #Cordoba 1122 -- Almohads, better timing than Almoravids
-215, # 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia
+215, #Cordoba 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia
 265, #Norse 1395 -- Kalmar Union
 999, #Venecia -- no special respawn
 245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
 401, #Germany 1701 -- Prussia
 999, #Kiev -- no special respawn
-999, #Hungary -- no special respawn
+393, #Hungary 1686 -- reconquest of Buda from the Ottomans
 290, #Spain 1467 -- Union of Castile/Aragon and ready for colonies
 999, #Poland -- no special respawn
 999, #Genoa -- no special respawn
 380, #England 1660 -- Restoration of Monarchy (also leading up to Scottish Union)
 267, #Portugal 1400 -- Make sure Portugal is around for colonies
 999, #Lithuania -- no special respawn
-313, #Austria 1526 -- Battle of Mohacs, Habsburgs take over Hungary
+313, #Austria 1526 -- Battle of Mohacs, start of Habsburg influence in NW Hungary
 294, #Turkey 1482 -- End of Mehmed II conquest. 
 999, #Moscow -- no special respawn
 999, #Sweden -- no special respawn

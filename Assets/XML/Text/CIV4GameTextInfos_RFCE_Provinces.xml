@@ -1331,7 +1331,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_139</Tag>
 		<English>Simbirsk</English>
-		<French>v</French>
+		<French>Simbirsk</French>
 		<German>Simbirsk</German>
 		<Italian>Simbirsk</Italian>
 		<Spanish>Simbirsk</Spanish>
@@ -1393,21 +1393,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_146</Tag>
-		<English>Province_146</English>
-		<French>Province_146</French>
-		<German>Province_146</German>
-		<Italian>Province_146</Italian>
-		<Spanish>Province_146</Spanish>
-		<Russian>Province_146</Russian>
+		<English>Madeira</English>
+		<French>Madeira</French>
+		<German>Madeira</German>
+		<Italian>Madeira</Italian>
+		<Spanish>Madeira</Spanish>
+		<Russian>Madeira</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_147</Tag>
-		<English>Province_147</English>
-		<French>Province_147</French>
-		<German>Province_147</German>
-		<Italian>Province_147</Italian>
-		<Spanish>Province_147</Spanish>
-		<Russian>Province_147</Russian>
+		<English>Isle of Man</English>
+		<French>Isle of Man</French>
+		<German>Isle of Man</German>
+		<Italian>Isle of Man</Italian>
+		<Spanish>Isle of Man</Spanish>
+		<Russian>Isle of Man</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_148</Tag>

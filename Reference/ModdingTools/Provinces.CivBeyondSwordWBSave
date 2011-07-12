@@ -14482,8 +14482,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=39
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14508,13 +14506,14 @@ EndPlot
 BeginPlot
 	x=37,y=43
 	BonusType=BONUS_WINE
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=37,y=44
-	RiverNSDirection=0
-	isWOfRiver
+	isNOfRiver
+	RiverWEDirection=3
 	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -14522,8 +14521,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=45
-	isNOfRiver
-	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -14865,13 +14862,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=37
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=38,y=38
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=38,y=39
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_MUD, FeatureVariety=0
@@ -14879,15 +14880,9 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
-	x=38,y=39
+	x=38,y=40
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=38,y=40
 	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
@@ -15255,14 +15250,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=36
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=39,y=37
-	isNOfRiver
-	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15273,6 +15268,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=39
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -15655,16 +15652,24 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=37
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=40,y=38
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=40,y=39
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -17286,12 +17291,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=38
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=44,y=39
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -17708,8 +17717,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=40
-	isNOfRiver
-	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -17726,6 +17733,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=43
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -18145,12 +18154,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=48
+	RiverNSDirection=0
+	isWOfRiver
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=46,y=49
+	RiverNSDirection=0
+	isWOfRiver
 	BonusType=BONUS_COW
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
@@ -18515,6 +18528,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=44
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -18527,6 +18542,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=46
+	RiverNSDirection=0
+	isWOfRiver
 	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -18545,8 +18562,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=49
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -18554,6 +18569,8 @@ EndPlot
 BeginPlot
 	x=47,y=50
 	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
 	isWOfRiver
 	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
@@ -18932,6 +18949,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=46
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=48,y=47
 	RiverNSDirection=0
 	isNOfRiver
 	RiverWEDirection=1
@@ -18940,12 +18962,9 @@ BeginPlot
 	PlotType=2
 EndPlot
 BeginPlot
-	x=48,y=47
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
 	x=48,y=48
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -19328,8 +19347,10 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=45
+	RiverNSDirection=0
 	isNOfRiver
 	RiverWEDirection=1
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -19341,18 +19362,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=47
-	RiverNSDirection=0
-	isNOfRiver
-	RiverWEDirection=1
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=49,y=48
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -19360,6 +19375,8 @@ EndPlot
 BeginPlot
 	x=49,y=49
 	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
 	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -19764,16 +19781,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=45
-	RiverNSDirection=0
-	isNOfRiver
-	RiverWEDirection=1
-	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=46
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -20178,8 +20195,6 @@ EndPlot
 BeginPlot
 	x=51,y=46
 	RiverNSDirection=0
-	isNOfRiver
-	RiverWEDirection=1
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
@@ -20188,6 +20203,8 @@ EndPlot
 BeginPlot
 	x=51,y=47
 	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_IRON
 	RouteType=ROUTE_ROAD
@@ -20618,31 +20635,23 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=51
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=52,y=52
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
 BeginPlot
 	x=52,y=53
-	RiverNSDirection=0
-	isWOfRiver
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=52,y=54
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -20984,6 +20993,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=45
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -21019,8 +21030,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=51
-	isNOfRiver
-	RiverWEDirection=3
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -21032,6 +21043,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=53
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -21387,55 +21400,71 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=45
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=46
-	isNOfRiver
-	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=47
+	RiverNSDirection=0
+	isWOfRiver
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=48
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=49
+	RiverNSDirection=0
+	isWOfRiver
 	BonusType=BONUS_SULPHUR
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=50
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=51
+	isNOfRiver
+	RiverWEDirection=3
 	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=52
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=53
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -21810,15 +21839,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=45
-	RiverNSDirection=0
+	RiverNSDirection=2
+	isNOfRiver
+	RiverWEDirection=3
 	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=46
-	isNOfRiver
-	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -21830,11 +21859,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=48
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=49
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -22273,13 +22306,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=45
-	isNOfRiver
-	RiverWEDirection=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=46
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -22701,6 +22734,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=46
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -22713,8 +22748,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=48
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -22735,8 +22768,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=51
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
@@ -23129,14 +23160,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=48
-	isNOfRiver
-	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=49
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -23152,14 +23183,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=51
-	isNOfRiver
-	RiverWEDirection=3
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=52
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -23550,14 +23583,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=48
-	isNOfRiver
-	RiverWEDirection=3
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=49
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -23938,8 +23973,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=44
-	RiverNSDirection=0
-	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -23982,9 +24015,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=51
-	isNOfRiver
-	RiverWEDirection=1
-	FeatureType=FEATURE_MUD, FeatureVariety=0
 	TerrainType=TERRAIN_MARSH
 	PlotType=2
 EndPlot
@@ -24366,13 +24396,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=44
-	isNOfRiver
-	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=45
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -24411,8 +24441,6 @@ EndPlot
 BeginPlot
 	x=61,y=51
 	RiverNSDirection=0
-	isNOfRiver
-	RiverWEDirection=1
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
@@ -24807,6 +24835,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=45
+	isNOfRiver
+	RiverWEDirection=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -30458,8 +30488,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=44
-	RiverNSDirection=0
-	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -60474,12 +60502,6 @@ BeginSign
 	caption=46
 EndSign
 BeginSign
-	plotX=39
-	plotY=60
-	playerType=-1
-	caption=25
-EndSign
-BeginSign
 	plotX=44
 	plotY=48
 	playerType=-1
@@ -61020,18 +61042,6 @@ BeginSign
 	caption=136
 EndSign
 BeginSign
-	plotX=10
-	plotY=26
-	playerType=-1
-	caption=117
-EndSign
-BeginSign
-	plotX=9
-	plotY=27
-	playerType=-1
-	caption=117
-EndSign
-BeginSign
 	plotX=13
 	plotY=14
 	playerType=-1
@@ -61168,4 +61178,22 @@ BeginSign
 	plotY=13
 	playerType=-1
 	caption=106
+EndSign
+BeginSign
+	plotX=9
+	plotY=27
+	playerType=-1
+	caption=146
+EndSign
+BeginSign
+	plotX=10
+	plotY=26
+	playerType=-1
+	caption=146
+EndSign
+BeginSign
+	plotX=39
+	plotY=60
+	playerType=-1
+	caption=147
 EndSign
