@@ -8544,6 +8544,16 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 		};
 		// 3MiroCivic: End
 
+		// 3MiroBuildings: Culture only from State Religion
+		if ( eIndex == COMMERCE_CULTURE ){
+			int iSRCulture = kBuilding.getStateReligionCulture();
+			if ( iSRCulture > 0 ){
+				if ( GET_PLAYER(getOwner()).getStateReligion() == kBuilding.getReligionType() ){
+					iCommerce += iSRCulture;
+				};
+			};
+		};
+		// 3MiroBuildings: End
 
 		
 		if (!(kBuilding.isCommerceChangeOriginalOwner(eIndex)) || (getBuildingOriginalOwner(eBuilding) == getOwnerINLINE()))

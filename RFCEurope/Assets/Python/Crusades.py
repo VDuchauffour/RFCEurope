@@ -822,9 +822,9 @@ class Crusades:
 		
         def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
-                player = gc.getPlayer(iPlayer)
+                pPlayer = gc.getPlayer(iPlayer)
                 for i in range(iNum):
-                        player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+                        pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
 		
 	def crusadeMakeUnits( self, tPlot ):

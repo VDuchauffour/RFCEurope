@@ -7806,6 +7806,11 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus) const
 				iTempValue /= 2;
 			};
 
+			// 3MiroAI: adjust the Atlantic Access trade value
+			if ( (kLoopProject.getPrereqBonus() == eBonus) && !(GC.getGameINLINE().isProjectMaxedOut(eProject) || kTeam.isProjectMaxedOut(eProject)) ){
+				iValue += 60;
+			};
+
 			if (iTempValue > 0)
 			{
 				bool bMaxedOut = (GC.getGameINLINE().isProjectMaxedOut(eProject) || kTeam.isProjectMaxedOut(eProject));

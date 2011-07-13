@@ -398,6 +398,8 @@ class Victory:
                                 iJewishQu = max( pPoland.getNumCities(), 2 )
                                 iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
                                 pPoland.setUHVCounter( 2, iCounter )
+                                if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
+                                        pPoland.setUHV( 2, 1 )
 
         def onCityRazed(self, iPlayer,city):
                 #if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities

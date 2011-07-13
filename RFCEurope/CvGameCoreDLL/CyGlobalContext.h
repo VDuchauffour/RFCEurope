@@ -451,6 +451,13 @@ public:
 	// there is only one iProvinceType, even though it is being set every time (only the last one counts). 
 	// If iCondition is 1, iProvinceType still needs to be set
 
+	int getNumProvinceTiles( int iProvince );
+	int getProvinceX( int iProvince, int iIndex );
+	int getProvinceY( int iProvince, int iIndex );
+
+	// 3Miro: set Parent -> Schism religion (Catholicism -> Protestantism)
+	void setParentSchismReligions( int iParent, int iSchism );
+
 };
 
 #endif	// CyGlobalContext_h

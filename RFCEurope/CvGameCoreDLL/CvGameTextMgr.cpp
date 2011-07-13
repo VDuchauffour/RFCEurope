@@ -7671,6 +7671,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 			//szBuffer.append(gDLL->getText("TXT_KEY_MISC_SPREAD_IRRIGATION"));
 			szBuffer.append( gDLL->getText("TXT_KEY_BOMBARD_IMMUNE_DEFENSE", kBuilding.getBombardImmuneDefense() ) );
 	};
+	if ( kBuilding.getStateReligionCulture() > 0 ){
+		szBuffer.append(NEWLINE);
+		szBuffer.append( gDLL->getText("TXT_KEY_STATE_RELIGION_CULTURE1", kBuilding.getStateReligionCulture() ) );
+		szBuffer.append( gDLL->getText("TXT_KEY_STATE_RELIGION_CULTURE2", GC.getReligionInfo( (ReligionTypes) kBuilding.getReligionType() ).getTextKeyWide() ) );
+	};
 	
 	// 3MiroCivic: Building - Civic combo
 			int iCivic;

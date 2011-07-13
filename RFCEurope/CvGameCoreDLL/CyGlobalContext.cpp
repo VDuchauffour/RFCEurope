@@ -1214,3 +1214,17 @@ void CyGlobalContext::setVassalagaeCondition( int iPlayer, int iWhoTo, int iCond
 	provinceFlagToVassalize  = iProvinceType;
 	conditionalVassalage[ iPlayer * NUM_ALL_PLAYERS_B + iWhoTo ] = iCondition;
 };
+
+int CyGlobalContext::getNumProvinceTiles( int iProvince ){
+	return provinceSizeList[iProvince];
+};
+int CyGlobalContext::getProvinceX( int iProvince, int iIndex ){
+	return provinceTileList[iProvince][2*iIndex];
+};
+int CyGlobalContext::getProvinceY( int iProvince, int iIndex ){
+	return provinceTileList[iProvince][2*iIndex+1];
+};
+void CyGlobalContext::setParentSchismReligions( int iParent, int iSchism ){
+	iParentReligion = iParent;
+	iSchismReligion = iSchism;
+};

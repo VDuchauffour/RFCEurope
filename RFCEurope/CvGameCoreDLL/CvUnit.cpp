@@ -2464,7 +2464,8 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
 					{
 						if (bIgnoreLoad || !canLoad(pPlot)) 
-						{ 
+						{
+							//GC.getGameINLINE().logMsg(" You shall not pass 1: %d %d",pPlot->getX(),pPlot->getY());
 							return false;
 						}
 					}
@@ -2516,16 +2517,19 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		break;
 
 	case DOMAIN_LAND:
-		if (pPlot->isWater() && !canMoveAllTerrain())
-		{
-			if (!pPlot->isCity() || 0 == GC.getDefineINT("LAND_UNITS_CAN_ATTACK_WATER_CITIES"))
+		//if ( (pPlot -> getX() != 45) || (pPlot -> getY() != 51) ){ // 3MiroTest
+			if (pPlot->isWater() && !canMoveAllTerrain())
 			{
-				if (bIgnoreLoad || !isHuman() || plot()->isWater() || !canLoad(pPlot))
+				if (!pPlot->isCity() || 0 == GC.getDefineINT("LAND_UNITS_CAN_ATTACK_WATER_CITIES"))
 				{
-					return false;
+					if (bIgnoreLoad || !isHuman() || plot()->isWater() || !canLoad(pPlot))
+					{
+						//GC.getGameINLINE().logMsg(" You shall not pass 2: %d %d",pPlot->getX(),pPlot->getY());
+						return false;
+					}
 				}
 			}
-		}
+		//};
 		break;
 
 	case DOMAIN_IMMOBILE:

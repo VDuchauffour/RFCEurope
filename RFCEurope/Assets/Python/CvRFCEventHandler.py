@@ -602,7 +602,7 @@ class CvRFCEventHandler:
         	#print( " in Begin Player Turn ")
                 iGameTurn, iPlayer = argsList                
 
-                #print ("PLAYER", iPlayer)
+                print ("PLAYER", iPlayer)
                 #iYeald = gc.getPlayer(iPlayer).calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
                 #print(" Commerce: ",iPlayer, iYeald )
                 #if (iPlayer == con.iMongolia):

@@ -1787,6 +1787,7 @@ public:
 	bool isVassalUU() const;
 	bool isAllowIrrigation() const;
 	int getBombardImmuneDefense() const;
+	int getStateReligionCulture() const;
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
@@ -1797,6 +1798,7 @@ protected:
 	bool m_bVassalUU;
 	bool m_bAllowIrrigation;
 	int m_iBombardImmuneDefense;
+	int m_iStateReligionCulture;
 
 	int m_iBuildingClassType;						
 	int m_iVictoryPrereq;

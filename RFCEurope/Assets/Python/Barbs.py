@@ -459,14 +459,16 @@ class Barbs:
                                 currentPlot=gc.getMap().plot(x,y)
                                 if (currentPlot.isCity()):
                                         return (False, -1)                                
-                                iNumUnitsInAPlot = currentPlot.getNumUnits()
-                                if (iNumUnitsInAPlot):
-                                        for i in range(iNumUnitsInAPlot):
-                                                unit = currentPlot.getUnit(i)
-                                                iOwner = unit.getOwner()
-                                                pOwner = gc.getPlayer(iOwner)
-                                                if (pOwner.isHuman()):
-                                                        return (False, tCity[3]+1)
+                                # 3Miro: Allow city founding even if the Human has units nearby
+                                #iNumUnitsInAPlot = currentPlot.getNumUnits()
+                                #if (iNumUnitsInAPlot):
+                                #        for i in range(iNumUnitsInAPlot):
+                                #                unit = currentPlot.getUnit(i)
+                                #                iOwner = unit.getOwner()
+                                #                pOwner = gc.getPlayer(iOwner)
+                                #                if (pOwner.isHuman()):
+                                #                        pass
+                                #                       #return (False, tCity[3]+1)
                 return (True, tCity[3])
 
 
