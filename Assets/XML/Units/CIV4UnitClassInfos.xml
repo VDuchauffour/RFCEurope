@@ -9,7 +9,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_LION</Type>
 			<Description>TXT_KEY_UNIT_LION</Description>
-			<iMaxGlobalInstances>0</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
@@ -18,7 +18,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_BEAR</Type>
 			<Description>TXT_KEY_UNIT_BEAR</Description>
-			<iMaxGlobalInstances>0</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
@@ -27,7 +27,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_PANTHER</Type>
 			<Description>TXT_KEY_UNIT_PANTHER</Description>
-			<iMaxGlobalInstances>0</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
@@ -36,7 +36,7 @@
 		<UnitClassInfo>
 			<Type>UNITCLASS_WOLF</Type>
 			<Description>TXT_KEY_UNIT_WOLF</Description>
-			<iMaxGlobalInstances>0</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
