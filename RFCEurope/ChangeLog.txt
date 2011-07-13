@@ -77,9 +77,10 @@ Changes for Beta 12:
 		- French 1st UHV expanded with Picardy and Lorraine
 		- Calais now spawns in 800AD (for the french UHV)
 		- Hungarian respawn chance in 1686 - reconquest of Buda from the Ottomans
-		- Disabled wild animals in the mod. Didn't want to completely remove, we may use it later (for aesthetics maybe), so only prevented them from actually spawning
+		- Reduced wild animal spawn in the mod. Also, animals can only defend
 		- Moved Pressburg Castle to Siege Engines
 		- Updated ALL leader personalities based on Caliom's changes (thx again!) - will keep everything here improved
+		- Updated city name maps: Venezia, Genoa, France, Burgundy, Germany, Poland, Lithuania, Norse, Sweden - thx for everyone who helped in these!
 
 	Map and province changes:
 		- Added new French province Picardy to split Normandy
