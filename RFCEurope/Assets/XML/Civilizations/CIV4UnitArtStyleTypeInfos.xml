@@ -1107,9 +1107,9 @@
 				<StyleUnit>
 					<UnitType>UNIT_ARBALEST</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_CHINA_CHOKONU</LateArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_ARBALESTIER_ARABIAN</EarlyArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_ARBALESTIER_ARABIAN</MiddleArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_ARBALESTIER_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
