@@ -275,3 +275,7 @@ extern int provinceToColor;
 
 extern int *conditionalVassalage; // conditions for vassalizing, -1 cannot vassalize, 1 can vassalize, 0 condition
 extern int provinceFlagToVassalize; // we can vassalize if we have overlap (city in province) of provinces of type >= provinceFlagToVassalize
+
+// 3Miro: Protestant Schism: this serves to stop non-Catholics from founding Protestantism
+extern int iParentReligion;
+extern int iSchismReligion;

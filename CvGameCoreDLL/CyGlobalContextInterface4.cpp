@@ -300,5 +300,11 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setProvinceTypeParams", &CyGlobalContext::setProvinceTypeParams, "void (int, int, int, int, int)")
 
 		.def("setVassalagaeCondition", &CyGlobalContext::setVassalagaeCondition, "void (int, int, int, int)")
+
+		.def("getNumProvinceTiles", &CyGlobalContext::getNumProvinceTiles, "int ( int )")
+		.def("getProvinceX", &CyGlobalContext::getProvinceX, "int (int, int )")
+		.def("getProvinceY", &CyGlobalContext::getProvinceY, "int (int, int )")
+
+		.def("setParentSchismReligions", &CyGlobalContext::setParentSchismReligions, "void (int, int )")
 		;
 }

@@ -6033,7 +6033,7 @@ void CvGame::doTurn()
 	doGlobalWarming();
 
 	//Rhye - comment this to stop religion founding
-	doHolyCity();
+	//doHolyCity();
 
 	doHeadquarters();
 
@@ -6354,7 +6354,16 @@ void CvGame::doHolyCity()
 
 					if (NO_RELIGION != eReligion)
 					{
-						GET_PLAYER(eBestPlayer).foundReligion(eReligion, (ReligionTypes)iI, false);
+						// 3Miro: Catholic Protestant schism only if the player is already Catholic
+						if ( eReligion == iSchismReligion ){
+							// 3Miro: this is needed to allow for you to found the religion that you already have, like the Dutch in RFCE should be able to found Protestantism without being Catholic
+							if ( (GET_PLAYER(eBestPlayer).getStateReligion() == iParentReligion) || (GET_PLAYER(eBestPlayer).getStateReligion() == iSchismReligion) ){
+								GET_PLAYER(eBestPlayer).foundReligion(eReligion, (ReligionTypes)iI, false);
+							};
+						}else{
+							GET_PLAYER(eBestPlayer).foundReligion(eReligion, (ReligionTypes)iI, false);
+						};
+						//GET_PLAYER(eBestPlayer).foundReligion(eReligion, (ReligionTypes)iI, false);// 3Miro: Original code
 					}
 				}
 			}

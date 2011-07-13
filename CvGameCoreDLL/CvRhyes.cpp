@@ -221,6 +221,9 @@ int *iCultureImmuneException = NULL; // the only player that can put culture on 
 int *conditionalVassalage = NULL;
 int provinceFlagToVassalize;
 
+int iParentReligion;
+int iSchismReligion;
+
 bool MiroBelongToCore( int iCiv, int x, int y ){
 	/*if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
 		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){

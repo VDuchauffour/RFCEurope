@@ -1771,7 +1771,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 		{
-			// 3MiroUP
+			// 3MiroUP: Occupation
 			int iUPR = UniquePowers[getID() * UP_TOTAL_NUM + UP_NO_RESISTANCE];
 			if (  iUPR < 0 )
 				pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100);
@@ -1894,6 +1894,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	processCivNames(); //Rhye - dynamic civ names - not jdog's
 	GET_PLAYER(eOldOwner).processCivNames(); //Rhye - dynamic civ names - not jdog's
+
+	// 3Miro: Founding City
+	GC.getGameINLINE().doHolyCity(); // 3Miro: see if we need to found a new religion here
 }
 
 
@@ -5442,9 +5445,12 @@ void CvPlayer::found(int iX, int iY)
 		pCity->doFoundMessage();
 	}
 
+	GC.getGameINLINE().doHolyCity(); // 3Miro: see if we need to found a new religion here
+
 	CvEventReporter::getInstance().cityBuilt(pCity);
 
 	processCivNames(); //Rhye - dynamic civ names - not jdog's
+	
 }
 
 
@@ -7785,6 +7791,13 @@ void CvPlayer::convert(ReligionTypes eReligion)
 	// 3MiroFaith + 3MiroPapal: converting to the Pope's religion gives a free point (so you can get gifts)
 	if ( eReligion == PAPAL_RELIGION ){
 		m_iFaith ++;
+	};
+
+	// 3Miro: Brothers in Faith and War, if the religion has been changes, then lose the ability
+	if ( canFightBrothers() ){
+		while ( canFightBrothers() ){
+			changeWarWithBrothers( -1 );
+		};
 	};
 		
 
@@ -23276,7 +23289,8 @@ void CvPlayer::getFreeBonus( BonusTypes eIndex, int iChange ) const
 };*/
 
 bool CvPlayer::canFightBrothers(){
-	if ( m_iAllowBrothersAtWar > 0 ){ return true; }else{ return false; };
+	//if ( m_iAllowBrothersAtWar > 0 ){ return true; }else{ return false; };
+	return ( m_iAllowBrothersAtWar > 0 ) ? true : false;
 };
 
 void CvPlayer::changeWarWithBrothers( int iChange ){

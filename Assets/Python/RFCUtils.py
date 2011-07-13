@@ -400,9 +400,12 @@ class RFCUtils:
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
                 #if ( tCoords[0] < 0 or tCoords[0] >= con.iMapMaxX or tCoords[1] < 0 or tCoords[1] >= con.iMapMaxY ):
                 #        print(" MAKING UNIT OFF THE FACE OF EUROPE: ",tCoords )
+                pPlayer = gc.getPlayer(iPlayer)
                 for i in range(iNum):
-                        player = gc.getPlayer(iPlayer)
-                        player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+                        #print(" 3Miro: Making units for Player: ",iPlayer)
+                        #if ( player == ObjectNone ):
+                        #        print(" 3Miro: Error: ",iPlayer)
+                        pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
         #RiseAndFall, Religions, Congresses
         def getHumanID(self):

@@ -4246,6 +4246,11 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 
 					iTempValue += (kBuilding.getCommerceChange(iI) * 4);
 					iTempValue += (kBuilding.getObsoleteSafeCommerceChange(iI) * 4);
+					// 3Miro: State Religion Culture
+					if ( (iI == COMMERCE_CULTURE) && ( kBuilding.getStateReligionCulture() > 0 ) && ( GET_PLAYER(getOwner()).getStateReligion() == kBuilding.getReligionType() )  ){
+						iTempValue += kBuilding.getStateReligionCulture();
+					};
+					// 3Miro: End
 					iTempValue *= 100 + kBuilding.getCommerceModifier(iI);
 					//BCM:Added 27.9.09
 					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)

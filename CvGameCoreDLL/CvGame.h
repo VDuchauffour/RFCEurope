@@ -580,7 +580,7 @@ public:
 	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 	void damagePlot( int iPlayer, int iFoeDamage, int iBarbDamage, CvPlot *pPlot );
 
-
+	void doHolyCity();	// 3Miro: expose this function to allow founding of religion on city build
 
 protected:
 	int m_iElapsedGameTurns;
@@ -688,7 +688,7 @@ protected:
 	void doTurn();
 	void doDeals();
 	void doGlobalWarming();
-	void doHolyCity();
+//	void doHolyCity(); // 3MiroTest
 	void doHeadquarters();
 	void doDiploVote();
 	void doVoteResults();
