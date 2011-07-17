@@ -298,7 +298,6 @@ class RFCEBalance:
 		# we can change True <-> False with the onTechAquire event
 		
 		#gc.setInitialBuilding( iSpain, con.iGranary, True )
-		#gc.setInitialBuilding( iSpain, con.iHerbalist, True )
 		gc.setInitialBuilding( iSpain, xml.iBarracks, True )
 
 		gc.setInitialBuilding( iMoscow, xml.iGranary, True )
@@ -314,6 +313,7 @@ class RFCEBalance:
 		
 		gc.setInitialBuilding( iPortugal, xml.iGranary, True )
 		gc.setInitialBuilding( iPortugal, xml.iBarracks, True )
+		gc.setInitialBuilding( iPortugal, xml.iPortugalFeitoria, True )
                 
                 gc.setInitialBuilding( iLithuania, xml.iGranary, True )
 		gc.setInitialBuilding( iLithuania, xml.iBarracks, True )
@@ -669,8 +669,7 @@ class RFCEBalance:
 		gc.setBuildingPref( iSweden, xml.iKalmarCastle, 20 )
 		
 		gc.setBuildingPref( iDutch, xml.iBeurs, 20 )
-		
-		gc.setBuildingPref( iPope, xml.iNotreDame, 20 )
+
 		gc.setBuildingPref( iPope, xml.iSistineChapel, 20 )
 
 
