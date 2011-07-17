@@ -313,7 +313,7 @@ class RFCEBalance:
 		
 		gc.setInitialBuilding( iPortugal, xml.iGranary, True )
 		gc.setInitialBuilding( iPortugal, xml.iBarracks, True )
-		gc.setInitialBuilding( iPortugal, xml.iPortugalFeitoria, True )
+		#gc.setInitialBuilding( iPortugal, xml.iPortugalFeitoria, True )
                 
                 gc.setInitialBuilding( iLithuania, xml.iGranary, True )
 		gc.setInitialBuilding( iLithuania, xml.iBarracks, True )

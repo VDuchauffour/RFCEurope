@@ -49,18 +49,23 @@ Changes for Beta 13:
 		- Madeira added to first Portugese UHV
 
 	Map and province changes:
+		- updated Polish and Lithuanian Settlers Maps
+		- moved the Polish spawn location one tile to match the new terrain
 
 	XML/text updates:
 
 	Python/C++ updates:
+		- cleaned some old Rhye code from the Victory and RFCEvent modules
 
 	Art updates:
 
 	Balance:
-		- Prebuild Feitoria in Portugese cities
+		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
 		- Pope doesn't favor to build the Notre Dame anymore
 
 	Bugfixes:
+		- Genoa UHV no longer fails if 7 corporations are founded before you get the 8 Banks
+		- Germany no longer wins thier UHV is they found Printing Press, but are not Catholic (you need to really found Protestantism)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -250,7 +250,7 @@ tCapitals = (
 (86, 42), #tKiev
 (67, 37), #tHungary
 (28, 37), #tLeon, Spain
-(65, 48), #tPoland
+(65, 49), #tPoland
 (50, 34), #tGenoa
 (43, 53), #tLondon, England
 (22, 31), #tLisboa, Portugal
