@@ -291,15 +291,18 @@ class Religions:
 				pPope = gc.getPlayer( con.iPope )
 				teamPope = gc.getTeam( pPope.getTeam() )
 				iCatholicFaith = 0
+                                iJerusalemOwner = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1]).getPlotCity().getOwner()
         		        for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
         		       		pPlayer = gc.getPlayer( i )
         		       		if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
         		       			#iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude( i )
         		       			iCatholicFaith += max( 0, pPope.AI_getAttitude( i ) )
+                                                if ( i == iJerusalemOwner ):
+                                                        iCatholicFaith += 20
         		       	#print(" Catholic Faith: ",iCatholicFaith)
         		       	if ( iCatholicFaith > 0 ):
         		       		iCatholicFaith += iCatholicFaith / 5 + 1
-        		       		if ( gc.getGame().getSorenRandNum(2, 'random Catholic BuildingType') % 2 == 0 ):
+        		       		if ( gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0 ):
         		       			iCatholicBuilding = xml.iCatholicTemple
         		       		else:
         		       			iCatholicBuilding = xml.iCatholicMonastery
@@ -310,6 +313,8 @@ class Religions:
         			       		if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
 				        		#iRandomNum -= pPlayer.getFaith() + pPope.AI_getAttitude( i )
 				        		iRandomNum -= max( 0, pPope.AI_getAttitude( i ) )
+                                                        if ( i == iJerusalemOwner ):
+                                                                iCatholicFaith -= 20
 				               		if ( iRandomNum <= 0 ):
 				               			#print(" The Pope Builds ",iCatholicBuilding," for ",i )
 				               			self.buildInRandomCity( i, iCatholicBuilding, xml.iCatholicism )

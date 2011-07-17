@@ -62,10 +62,12 @@ Changes for Beta 13:
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
 		- Pope doesn't favor to build the Notre Dame anymore
+		- The Pope is far more likely to favor the Catholic owner of Jerusalem, when deciding to build Churches/Monasteries
 
 	Bugfixes:
 		- Genoa UHV no longer fails if 7 corporations are founded before you get the 8 Banks
 		- Germany no longer wins thier UHV is they found Printing Press, but are not Catholic (you need to really found Protestantism)
+		- Calais now spawns properly in 800AD
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
