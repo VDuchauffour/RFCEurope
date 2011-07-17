@@ -1853,27 +1853,12 @@ class RiseAndFall:
                                 iHuman = utils.getHumanID()
                                 iOwner = loopCity.getOwner()
                                 iCultureChange = 0 #if 0, no flip; if > 0, flip will occur with the value as variable for utils.CultureManager()
-                                
-                                #print(" Random Crash: which Owner for the city: ",iOwner)
-                                #print(" Random Crash: which Owner for the city: ",loopX,loopY)
-                                #case 1: barbarian/independent city
-                                #if (iOwner == iBarbarian or iOwner == iIndependent or iOwner == iIndependent2 ):
+
                                 if (iOwner == iBarbarian or utils.isIndep( iOwner ) ):
                                         #utils.debugTextPopup( 'BARB' )
                                         iCultureChange = 100
                                 #case 2: human city
                                 elif (iOwner == iHuman and not loopCity.isCapital()):
-                                        #utils.debugTextPopup( 'HUMAN' )
-        ##                                bForeigners = False
-        ##                                cityPlot = gc.getMap().plot(cityList[i].getX(), cityList[i].getY())
-        ##                                cityCulture = cityList[i].countTotalCulture()
-        ##                                iCultureThreshold = 10
-        ##                                for j in range(iNumPlayers+1):
-        ##                                        if (cityList[i].getCulture(j)*100 / cityCulture >= iCultureThreshold) and (j != iHuman):
-        ##                                                bForeigners = True
-        ##                                humanCapital = gc.getPlayer(iHuman).getCapitalCity()
-        ##                                iDistance = gc.getMap().calculatePathDistance(cityPlot, gc.getMap().plot(humanCapital.getX(),humanCapital.getY()))
-        ##                                if (cityList[i].isOccupation()) or (cityList[i].isDisorder()) or (bForeigners == True) or (not cityPlot.getNumUnits()) or ((not cityList[i].isGovernmentCenter()) and (iDistance >= 8) and (gc.getPlayer(iHuman).getNumCities() >= 5)):
                                         if (iNumHumanCities == 0):
                                                 iNumHumanCities += 1
                                                 #iConvertedCitiesCount += 1
@@ -1910,21 +1895,6 @@ class RiseAndFall:
                                         utils.flipCity((loopX,loopY), 0, 0, iCiv, [iOwner])                                                
                                         #print ("cityList[i].getXY", cityList[i].getX(), cityList[i].getY()) 
                                         utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iCiv)
-
-                                        #iEra = gc.getPlayer(iCiv).getCurrentEra()
-                                        #if (iEra >= 2): #medieval
-                                        #        if (loopCity.getPopulation() < iEra):
-                                        #                loopCity.setPopulation(iEra) #causes an unidentifiable C++ exception
-                                                #doesn't work (assigns UBs too)
-                                                #for iLoopBuilding in range(con.iNumBuildingsPlague):                                                        
-                                                #        if (gc.getBuildingInfo(iLoopBuilding).getFreeStartEra() >= 0):
-                                                #                if (iEra >= gc.getBuildingInfo(iLoopBuilding).getFreeStartEra()):
-                                                #                        print (iEra, iLoopBuilding, gc.getBuildingInfo(iLoopBuilding).getFreeStartEra(), loopCity.canConstruct(iLoopBuilding, False, False, False))
-                                                #                        if (loopCity.canConstruct(iLoopBuilding, False, False, False)):
-                                                #                                if (not loopCity.hasBuilding(iLoopBuilding)):
-                                                #                                        loopCity.setHasRealBuilding(iLoopBuilding, True)
-
-                                        #cityList[i].setHasRealBuilding(con.iPlague, False)   #buggy
                                         
                                         iConvertedCitiesCount += 1
                                         print ("iConvertedCitiesCount", iConvertedCitiesCount)
@@ -2309,11 +2279,6 @@ class RiseAndFall:
 
         def create4000BCstartingUnits( self ):
                 # 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
-                # for the late starts those get destroyed
-                
-                # 3Miro: Byzantium Starting Units are in the WB file
-                #utils.makeUnit(iSettler, iByzantium, tCapitals[iByzantium], 1)
-                #utils.makeUnit(iSpearman, iByzantium, tCapitals[iByzantium], 1)
                 
                 utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(xml.iArcher, iFrankia, tCapitals[iFrankia], 2)
@@ -2421,10 +2386,6 @@ class RiseAndFall:
             pass
                 
         def assignTechs( self, iCiv ):
-                #popup = Popup.PyPopup()
-                #popup.setBodyString( 'assigning techs to civ #%d' %(iCiv))
-                #popup.launch()
-                
                 # 3Miro: other than the original techs
                 
                 if ( tBirth[iCiv] == 0 ):
@@ -2569,22 +2530,6 @@ class RiseAndFall:
                         
 
                 if ( iCiv == iMoscow ):
-                 #     teamMoscow.setHasTech( xml.iCalendar, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iArchitecture, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iTheology, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iMonasticism, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iManorialism, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iVassalage, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iFeudalism, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iStirrup, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iFarriers, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iArt, True, iCiv, False, False )  
-                 #     teamMoscow.setHasTech( xml.iEngineering, True, iCiv, False, False ) 
-                 #     teamMoscow.setHasTech( xml.iMachinery, True, iCiv, False, False ) 
-                 #     teamMoscow.setHasTech( xml.iMusic, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iBronzeCasting, True, iCiv, False, False )
-                 #     teamMoscow.setHasTech( xml.iChainMail, True, iCiv, False, False )
                         for iTech in range( xml.iFarriers + 1 ):
                                 teamMoscow.setHasTech( iTech, True, iCiv, False, False )
                         teamMoscow.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )

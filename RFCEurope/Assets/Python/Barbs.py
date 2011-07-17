@@ -372,13 +372,13 @@ class Barbs:
                         self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent4, lKharkov, "Kharkov", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+                        self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         # 848AD
                         self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
                         # 860AD
                         self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                 if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1250AD ):
                         # 900AD
-                        self.foundCity(iIndependent4, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iBarbarian, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
