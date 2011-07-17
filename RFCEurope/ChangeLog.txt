@@ -20,28 +20,47 @@ TODO:
 		No unhappyness from non-state religion doesn't work with Religious Law Civic
 		Great Generals leaving for the Crusade?
 		Check Genoa 1st Turn culture bug
-		Add food near Dijon - (partly done with the wheat)
 		Faith point bonuses to be based on average faith, not total faith
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
 AR		Update/further improve the map in the german area, Iberian Peninsula, Lithuania, make Anatolia less fertile
-AR		LHs: update Barbarossa, Simone, Isabella; maybe add Margaret, Gustav Adolph, second Byzantine leader
+AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Byzantine leader
 AR		Update hungarian, austrian, polish, venetian settler maps
 AR		Update xml entry for Hungary, Moscow, Norse, add entry to the new leaders
-AR		General overhaul to ALL the leader personalities
+AR		General overhaul to ALL the leader personalities - Done?
 AR		Civ specific Great People names
 AR		Add a LeaderHeadInfos.xml.light file
 		Custom DiploMusic for Bulgaria (Simeon, Ivan Asen), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
-		Readd apples and citrus as a food resource (with no health bonus)?
 		Custom Events?
 		Minor Civs?
 		Turn Burgundian Winery art 180 degrees
 		Lower La Mezquita to the ground
-		Find proper art for Arabian Arbalestier
 		Dynamic Civ Names for Lithuania
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		General XML updates, removing unused XML parts
 MV1		Make atlas from the buttons
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for Beta 13:
+(to-be-released: ???)
+
+	General changes  and UHV updates:
+		- Madeira added to first Portugese UHV
+
+	Map and province changes:
+
+	XML/text updates:
+
+	Python/C++ updates:
+
+	Art updates:
+
+	Balance:
+		- Prebuild Feitoria in Portugese cities
+		- Pope doesn't favor to build the Notre Dame anymore
+
+	Bugfixes:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
