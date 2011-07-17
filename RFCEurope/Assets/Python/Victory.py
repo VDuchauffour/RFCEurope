@@ -109,36 +109,6 @@ teamIndependent = gc.getTeam(pIndependent.getTeam())
 teamIndependent2 = gc.getTeam(pIndependent2.getTeam())
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
-# 3Miro: areas
-#tBurgundyControl = (( 46, 40, 52, 53 ),(44, 33, 48,39))
-#tByzantineControl = ( 68, 15, 99, 26 )
-##tFrankControl = ((35,31,41,35),(37,36,42,40),(44,33,48,42),(52,40,57,48),(49,31,57,37)) # Northeast Spain, Southwest France, Rhone, W Germany, Northern Italy
-#tArabiaControl = ( (93, 0, 99, 17), (76, 0, 92, 4), (31, 0, 54, 21), (55, 0, 88, 9) ) # Levant and Allepo and Antioch, Egypt, Egypt and Libia, Algeria and Tunisia
-#tBulgariaControl = ( 66, 23, 82, 32 )
-##tCordobaControl = (( 20,24,40,40 ),( 11,14,47,23 )) # Iberia, North-West Africa
-#tSpainControl = (( 20, 24, 35, 40 ),(36, 30, 41, 35)) # Iberia
-#tSpainControl2 = ((15,14,48,23),(49,6,52,18),(49,22,50,29),(54,16,58,19),(59,19,64,27),(51,25,58,33),(49,43,58,39) ) # Africa x2, Islands (Corsica + Sardines), Sicily, Italy x3
-#tNorseSettle = ( (35, 46, 46, 50 ), (39, 52, 45, 67 ), (35, 52, 38, 56 ), (31, 57, 37, 62 ), ( 0, 69, 4, 72 ), ( 54, 16, 58, 19)  ) # North France, Britain, Britain, Ireland, Iseland, Sicily
-##tVenecianControl = ( (59, 32, 61, 36), (61, 28, 64, 32), ( 65, 17, 67, 29 ), ( 67, 23, 81, 25 ), ( 67, 14, 73, 22 ), ( 88, 11, 91, 13 ), ( 71, 10, 75, 10 ), ( 78, 11, 79, 12 ) ) # 3x Dalmatian Coast, 2x Main Land Greece, Cyprus, Crete, Rhodes
-#tVenecianControl = ( (56, 33, 60, 36), (61, 29, 62, 34), (63, 25, 65, 30), (66, 21, 67, 27), ( 67, 23, 81, 25 ), ( 67, 14, 73, 22 ), ( 88, 11, 91, 13 ), ( 71, 10, 75, 10 ), ( 78, 11, 79, 12 ) ) # 4x Dalmatian Coast, 2x Main Land Greece, Cyprus, Crete, Rhodes
-#tKievControl = (83, 32, 99, 39 )
-#tHungarianControl = ( 0, 23, 99, 72 )
-#tHungarianControl2 = ( (20,24,48,72),(49,30,99,72),(54,20,76,29),(60,14,75,19),(81,29,77,23) )
-#tGermanyControl = ( 49, 40, 54, 53 )
-#tMoscowControl = ( 77, 32, 99, 70 )
-##tGenoaControl = (( 49, 22, 50, 25 ), ( 44, 32, 46, 34 ), ( 51, 36, 53, 38 ), ( 88, 11, 91, 13 ), ( 72, 10, 75, 10 ), (86, 32, 91, 35 ) ) #Sardinia, Marseilles, Milano, Cyprus, Crete, Crimea
-#tPolandControl = ((58, 38, 64, 44),(65, 32, 77, 40),(78, 35, 94, 47),(72,48,82,63)) #Bohemia, Hungary, Ukraine, Lithuania
-#tBaltic = (61,52,79,72)
-#tBlackSea = (78,24,99,39)
-
-#tGenoaControl = (( 49, 22, 50, 25 ), ( 44, 32, 46, 34 ), ( 51, 36, 53, 38 ), ( 88, 11, 91, 13 ), ( 72, 10, 75, 10 ) ) #Sardinia, Marseilles, Milano, Cyprus, Crete 
-#tEnglishControl = ((39, 61, 44, 67), (31,57,37,62), (37,55,40,57)) # Scotland, Ireland, Wales
-#tPortugalControl = ((1,15,8,39),(7,0,27,24),(4,0,6,7)) # Islands, Africa x 2
-#tNormanControl = ((35,40,38,47), (39,46,45,50)) # Bits of France (redurced areas to 2, should be more easy to recognize now
-#tAustrianControl = ( 58, 33, 70, 38 )
-#tTurkishControl = (( 77, 14, 99, 26 ), ( 65, 14, 80, 29 ), (93, 0, 99, 17), (76, 0, 92, 4), ( 60, 33, 63, 41 ) ) # Constantinople Area and Anatolia, Balkans and Peloponnesian, Levant, Egypt, Vienna
-#tSwedishControl = (( 60, 56, 68, 72 ), ( 69, 63, 77, 72 ),(59, 43, 90, 55) ) # Sweden, Finland/Estland and east Germany through Central Russia
-
 # ------------------- NEW UHV CONDITIONS
 tByzantumControl = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsiadon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople ]
 tFrankControl = [ xml.iP_Swabia, xml.iP_Saxony, xml.iP_Lorraine, xml.iP_IleDeFrance, xml.iP_Picardy, xml.iP_Aquitania, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Orleans, xml.iP_Champagne, xml.iP_Catalonia, xml.iP_Lombardy, xml.iP_Tuscany ] # Update this with the Province keys
@@ -218,59 +188,7 @@ class Victory:
                 
 #######################################
 ### Main methods (Event-Triggered) ###
-#####################################  
-
-
-        def checkOwnedCiv(self, iActiveCiv, iOwnedCiv):
-                dummy1, plotList1 = utils.squareSearch( tNormalAreasTL[iOwnedCiv], tNormalAreasBR[iOwnedCiv], utils.ownedCityPlots, iActiveCiv )
-                dummy2, plotList2 = utils.squareSearch( tNormalAreasTL[iOwnedCiv], tNormalAreasBR[iOwnedCiv], utils.ownedCityPlots, iOwnedCiv )
-                if ((len(plotList1) >= 2 and len(plotList1) > len(plotList2)) or (len(plotList1) >= 1 and not gc.getPlayer(iOwnedCiv).isAlive())):
-                        return True
-                else:
-                        return False
-
-
-        def checkOwnedArea(self, iActiveCiv, tTopLeft, tBottomRight, iThreshold):
-                dummy1, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iActiveCiv )
-                if (len(plotList) >= iThreshold):
-                        return True
-                else:
-                        return False
-
-        def checkNotOwnedArea(self, iActiveCiv, tTopLeft, tBottomRight):
-                dummy1, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iActiveCiv )
-                if (len(plotList)):
-                        return False
-                else:
-                        return True
-
-        def checkNotOwnedArea_Skip(self, iActiveCiv, tTopLeft, tBottomRight, tSkipTopLeft, tSkipBottomRight):
-                dummy1, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iActiveCiv )
-                if (not len(plotList)):
-                        return True
-                else:
-                        for loopPlot in plotList:
-                                if not (loopPlot[0] >= tSkipTopLeft[0] and loopPlot[0] <= tSkipBottomRight[0] and \
-                                    loopPlot[1] >= tSkipTopLeft[1] and loopPlot[1] <= tSkipBottomRight[1]):
-                                        return False
-                return True
-                                        
-
-        def checkOwnedCoastalArea(self, iActiveCiv, tTopLeft, tBottomRight, iThreshold):
-                dummy1, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iActiveCiv )
-                iCounter = 0
-                for i in range(len(plotList)):
-                        x = plotList[i][0]
-                        y = plotList[i][1]
-                        plot = gc.getMap().plot(x, y)
-                        if (plot.isCity()):
-                               if (plot.getPlotCity().isCoastalOld()):
-                                       iCounter += 1
-                if (iCounter >= iThreshold):
-                        return True
-                else:
-                        return False
-
+#####################################
 
         def checkTurn(self, iGameTurn):
 
@@ -356,7 +274,10 @@ class Victory:
                                 pPortugal.setUHVCounter( 0, iAfrica * 100 + iIslands )
 
         def onReligionFounded(self, iReligion, iFounder):
-                pass
+                if ( iFounder == iGermany and pGermany.getUHV( 1 ) == -1 ):
+                        pGermany.setUHV( 1, 1 )
+                elif ( iReligion == xml.iProtestantism and pGermany.getUHV( 1 ) == -1 ):
+                        pGermany.setUHV( 1, 0 )
 
 
         def onCityAcquired(self, owner, playerType, city, bConquest):
@@ -434,13 +355,13 @@ class Victory:
                 if (not gc.getGame().isVictoryValid(7)): #7 == historical
                         return
 
-                if ( iTech == xml.iPrintingPress ):
-                        if ( pGermany.getUHV( 1 ) == -1 ):
-                                if ( iPlayer == iGermany ):
-                                        pGermany.setUHV( 1, 1 )
-                                else:
-                                        pGermany.setUHV( 1, 0 )
-                elif ( iTech == xml.iIndustrialTech ):
+                #if ( iTech == xml.iPrintingPress ):
+                #        if ( pGermany.getUHV( 1 ) == -1 ):
+                #                if ( iPlayer == iGermany ):
+                #                        pGermany.setUHV( 1, 1 )
+                #                else:
+                #                        pGermany.setUHV( 1, 0 )
+                if ( iTech == xml.iIndustrialTech ):
                         if ( pEngland.getUHV( 2 ) == -1 ):
                                 if ( iPlayer == iEngland ):
                                         pEngland.setUHV( 2, 1 )
@@ -540,7 +461,10 @@ class Victory:
                                 pGenoa.setUHV( 1, 1 )
                         pGenoa.setUHVCounter( 1, 100 * iBanks + iCorps )
                 if ( self.getCorporationsFounded() == 7 and pGenoa.getUHV( 1 ) == -1 ):
-                        pGenoa.setUHV( 1, 0 )
+                        iCounter = pGenoa.getUHVCounter( 1 )
+                        iCorps = iCounter % 100 + 1
+                        if ( iCorps < 2 ):
+                                pGenoa.setUHV( 1, 0 )
 
         def getOwnedLuxes( self, pPlayer ):
                 iCount = 0
@@ -1134,7 +1058,7 @@ class Victory:
                                 landPercent = (RussianLand * 100.0) / totalLand
                         else:
                                 landPercent = 0.0
-                        print(" RUSSIAUHV: ",totalLand,RussianLand,landPercent)
+                        #print(" RUSSIAUHV: ",totalLand,RussianLand,landPercent)
                         if ( landPercent >= 20 ):
                                 pMoscow.setUHV( 1, 1 )
                 # get Warm water

@@ -223,10 +223,6 @@ class CvRFCEventHandler:
                 self.sta.setup()
                 self.aiw.setup()
                 
-                #gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).setAtWar(iCiv, True)
-                #teamCiv.setAtWar(iLoopCiv, True)
-                #gc.getTeam(gc.getPlayer(iBulgaria).getTeam()).setAtWar(gc.getPlayer(iByzantium).getTeam(), True)
-                #gc.getTeam(gc.getPlayer(iByzantium).getTeam()).setAtWar(gc.getPlayer(iBulgaria).getTeam(), True)
                 # 3Miro: WarOnSpawn
                 self.rnf.setWarOnSpawn()
 
@@ -260,16 +256,6 @@ class CvRFCEventHandler:
                          utils.spreadMajorCulture(playerType, city.getX(), city.getY())
 
                 self.sta.onCityAcquired(owner,playerType,city,bConquest,bTrade)
-
-                # 3Miro: Remove exile mechanics, if you are human and you lose your capital, might as well load a new game
-                #if (bConquest):
-                #        #self.rnf.collapseCapitals(owner, city, playerType)
-                #        if (owner == utils.getHumanID() and playerType != con.iBarbarian):
-                #                self.rnf.collapseHuman(owner, city, playerType)
-                #        #print ("exile data:", self.rnf.getExileData(0), city.getX(), self.rnf.getExileData(1), city.getY(), self.rnf.getExileData(2))
-                #        if (self.rnf.getExileData(0) == city.getX() and self.rnf.getExileData(1) == city.getY()):
-                #                if (playerType == utils.getHumanID() and self.rnf.getExileData(2) != -1):
-                #                        self.rnf.escape(city)
 
 		# 3Miro: Jerusalem's Golden Age Insentive
                 if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
@@ -323,26 +309,8 @@ class CvRFCEventHandler:
 
                 self.sta.onCityRazed(city.getOwner(),iPlayer,city)
                 self.vic.onCityRazed(iPlayer,city)
-		
-                #if (iPlayer == con.iMongolia):
-                #        self.up.setLatestRazeData(0, gc.getGame().getGameTurn())
-                #        owner = city.getOwner()
-                #        if (city.getOwner() == iPlayer):
-                #                if (city.getPreviousOwner() != -1):
-                #                        owner = city.getPreviousOwner()                        
-                #        self.up.setLatestRazeData(1, owner)
-                #        self.up.setLatestRazeData(2, city.getPopulation())
-                #        self.up.setLatestRazeData(3, city.getX())
-                #        self.up.setLatestRazeData(4, city.getY())
-                #        print ("city.getPopulation()", city.getPopulation())
-                #        print ("prev", city.getPreviousOwner(), "curr", city.getOwner())
-                #        self.up.setMongolAI()
 
                 self.pla.onCityRazed(city,iPlayer) #Plague
-                        
-                #if (iPlayer == con.iMongolia):
-                #        self.vic.onCityRazed(iPlayer) #Victory
-
 
 
         def onCityBuilt(self, argsList):
@@ -366,27 +334,10 @@ class CvRFCEventHandler:
 
                 if (iOwner < iNumMajorPlayers):
                         utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
+                        
+                if ( iOwner == iPortugal and gc.getTeam( gc.getPlayer( iPortugal ).getTeam() ).isHasTech( xml.iAstronomy ) ):
+                        city.setHasRealBuilding( xml.iPortugalFeitoria, True )
 
-		# 3Miro: Turkish UP
-                #if (iOwner == con.iTurkey):
-                #        self.up.turkishUP(city)
-
-
-		# 3Miro: USA UHV
-                #if (self.vic.getNewWorld(0) == -1):
-                #        if (iOwner not in con.lCivGroups[5] and iOwner < iNumActivePlayers):
-                #                if (city.getX() >= con.tAmericasTL[0] and city.getX() <= con.tAmericasBR[0] and city.getY() >= con.tAmericasTL[1] and city.getY() <= con.tAmericasBR[1]):
-                #                        self.vic.setNewWorld(0, iOwner)
-
-		# 3Miro: nations with city build UHV
-                #if (iOwner == con.iRussia or \
-                #    iOwner == con.iFrance or \
-                #    iOwner == con.iEngland or \
-                #    iOwner == con.iSpain or \
-                #    #iOwner == con.iCarthage or \
-                #    iOwner == con.iVikings or \
-                #    iOwner == con.iPortugal or \
-                #    iOwner == con.iNetherlands):    
                 if ( iOwner == con.iPortugal ):
                 	self.vic.onCityBuilt(city, iOwner) #Victory
 
@@ -403,27 +354,9 @@ class CvRFCEventHandler:
                 self.sta.onCombatResult(argsList)
 
 
-
-##        def onChangeWar(self, argsList):
-##                print ("No cheaters1")
-##                if (bIsWar):
-##                        print ("No cheaters2")
-##                        if (argsList[1] == utils.getHumanID() and gc.getGame().getGameTurn() <= con.tBirth[argsList[1]] + iBetrayalCheaters):
-##                                print ("No cheaters3")
-##                                self.rnf.setNewCivFlip(argsList[1])
-##                                self.rnf.setTempTopLeft(rnf.tCoreAreasTL[argsList[1]])
-##                                self.rnf.setTempBottomRight(rnf.tCoreAreasBR[argsList[1]])
-##                                self.rnf.setBetrayalTurns(rnf.iBetrayalPeriod)
-##                                self.rnf.initBetrayal()
-
-
-
         def onReligionFounded(self, argsList):
                 'Religion Founded'
                 iReligion, iFounder = argsList
-
-                #if (not gc.getPlayer(0).isPlayable() and gc.getGame().getGameTurn() == 151): #late start condition
-                #        return
         
         	lCities = PyPlayer( iFounder ).getCityList( )
         	for iCity in range( len( lCities ) ):
@@ -473,9 +406,6 @@ class CvRFCEventHandler:
                 self.vic.onBuildingBuilt(city.getOwner(), iBuildingType)
                 if (city.getOwner() < con.iNumPlayers):
                         self.sta.onBuildingBuilt(iOwner, iBuildingType, city)
-                        #self.com.onBuildingBuilt(iOwner, iBuildingType, city) # 3Miro: no communications
-                # 3Miro: no congress
-                #self.cong.onBuildingBuilt(iOwner, iBuildingType, city)
                 #3MiroFaith
                 self.rel.onBuildingBuild( iOwner, iBuildingType )
 
@@ -499,21 +429,8 @@ class CvRFCEventHandler:
                 iVictim = pPlot.getOwner()
                 if ( iVictim > -1 and iVictim < con.iNumPlayers ):
                         self.sta.onImprovementDestroyed( iVictim )
-                #if ( iVictim > -1 and iVictim < con.iNumTotalPlayersB ):
+                
                 self.vic.onPillageImprovement( pUnit.getOwner(), iVictim, iImprovement, iRoute, iPlotX, iPlotY )
-                        
-#	def onImprovementDestroyed(self, argsList):
-#		print ("Improvement Destroyed")
-#		iImprovement, iOwner, iX, iY = argsList
-#		print ("Owner was",iOwner)
-#		if (iOwner < con.iNumPlayers):
-#			self.sta.onImprovementDestroyed(iOwner)
-#		self.barb.onImprovementDestroyed(iX,iY)
-#		if (iOwner >= iNumTotalPlayers or iOwner < 0):
-#			print("Owner Satisfied")
-#			if (iImprovement >= con.iImprovementCottage and iImprovement <= con.iImprovementTown):
-#				print ("Improve Type Satisfied")
-#				self.barb.onImprovementDestroyed(iX,iY)
 
         def onBeginGameTurn(self, argsList):
                 iGameTurn = argsList[0]
@@ -523,14 +440,6 @@ class CvRFCEventHandler:
 			sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
 			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
-
-                #print ("iGameTurn", iGameTurn)
-                #self.printDebug(iGameTurn)
-
-                #debug - stop autoplay
-                #utils.makeUnit(con.iAxeman, con.iAmerica, (0,0), 1)
-                #if (iGameTurn == 250):
-                #        utils.makeUnit(con.iAxeman, con.iAmerica, (0,0), 1)
 
 		#print(" 3Miro onBegTurn ")                
 		self.barb.checkTurn(iGameTurn)
@@ -589,11 +498,6 @@ class CvRFCEventHandler:
                                 #Rhye - end                
                 #print(" 3Miro onBegTurn out: ",iGameTurn)
                 
-                #if ( iGameTurn % 10 == 0 ):
-                #	print( " 3Miro: Turn: ",iGameTurn )
-                #	for i in range( con.iNumPlayers ):
-                #		print( "    - tech Player ",i,"   research: ",utils.getRC( i ) )
-                
                 return 0
 
 
@@ -602,15 +506,7 @@ class CvRFCEventHandler:
         	#print( " in Begin Player Turn ")
                 iGameTurn, iPlayer = argsList                
 
-                print ("PLAYER", iPlayer)
-                #iYeald = gc.getPlayer(iPlayer).calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
-                #print(" Commerce: ",iPlayer, iYeald )
-                #if (iPlayer == con.iMongolia):
-                #        if (iGameTurn == self.up.getLatestRazeData(0) +1):
-                #                self.up.setMongolAI()
-                
-                #debug - stop autoplay
-                #utils.makeUnit(con.iAxeman, iAmerica, (0,0), 1)
+                #print ("PLAYER", iPlayer)
 
                 if (self.rnf.getDeleteMode(0) != -1):
                         self.rnf.deleteMode(iPlayer)
@@ -670,19 +566,6 @@ class CvRFCEventHandler:
                         objMercenaryUtils.placeMercenaries(iPlayer)
                 #print ("PLAYER FINE", iPlayer)
                 #print( " out Begin Player Turn ",iGameTurn, iPlayer )
-                
-                # 3Miro: decrease the prosecution count
-                #iProsecutionCount = utils.getProsecutionCount( iPlayer )
-                #if ( iProsecutionCount > 1 ):
-                #	iProsecutionCount -= 1
-                #	utils.setProsecutionCount( iPlayer, iProsecutionCount )
-                	
-                #if ( con.tBirth[iPlayer] == iGameTurn ):
-                #	for i in range( con.iNumTechs ):
-                #		if ( gc.getTeam( gc.getPlayer(iPlayer).getTeam() ).isHasTech( i ) ):
-                #			utils.setRC( iPlayer, utils.getRC( iPlayer ) + gc.getTechInfo( i ).getResearchCost() )
-                			
-                #utils.setRC( iPlayer, utils.getRC( iPlayer ) + gc.getPlayer( iPlayer ).getCommerceRate( CommerceTypes.COMMERCE_RESEARCH ) )
         
         
         def onEndPlayerTurn(self, argsList):
@@ -691,17 +574,6 @@ class CvRFCEventHandler:
                 #print (" 3Miro END PLAYER", iPlayer, iGameTurn)
                 
                 'Called at the end of a players turn'
-
-
-##                if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-##                
-##                        iGameTurn, iPlayer = argsList
-##                        
-##                        player = gc.getPlayer(iPlayer)
-##
-##                        CyInterface().addImmediateMessage(player.getName(),"")
-##                #print ("END PLAYER FINE", iPlayer)
-
 
 
         def onEndGameTurn(self, argsList):
@@ -732,18 +604,6 @@ class CvRFCEventHandler:
 
                 iHuman = utils.getHumanID()
                 
-                #if (not gc.getPlayer(0).isPlayable() and gc.getGame().getGameTurn() == 151): #late start condition
-                #        return
-                
-                # 3Miro: tech related UHV
-                #if (gc.getGame().getGameTurn() > con.tBirth[iPlayer]):                    
-                #        if (iPlayer == con.iGreece or \
-                #            iPlayer == con.iMaya or \
-                #            iPlayer == con.iEngland or \
-                #            iPlayer == con.iGermany or \
-                #            iPlayer == con.iAztecs or \
-                #            iPlayer == con.iBabylonia):                            
-                #                self.vic.onTechAcquired(argsList[0], argsList[2])		
                 self.vic.onTechAcquired(argsList[0], argsList[2])
                 #self.res.onTechAcquired(argsList[0], argsList[2])
                                 
@@ -752,41 +612,6 @@ class CvRFCEventHandler:
                 
                 if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
                         self.sta.onTechAcquired(argsList[0], argsList[2])
-
-		# 3Miro: as soon as someone discovers the Gunpowder, the Theodosian walls will disapear from Constantinople
-		#  this will make the city much easier to conquer by the Ottomans
-		# 3Miro: update - this helps Bulgaria, but not Turkey ... go figure
-		#if ( argsList[0] == con.iGunpowder ):
-		#	pCity = gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1]).getPlotCity()
-		#	if ( pCity.hasBuilding( con.iTheodosianWalls ) ):
-		#		pCity.setHasRealBuilding(con.iTheodosianWalls, False)
-
-		# 3Miro: no congress
-                #if (gc.getGame().getGameTurn() > con.i1000AD):
-                #        self.cong.onTechAcquired(argsList[0], argsList[2])
-
-		# 3Miro: obsolete Mercenaries with Nationalism
-                #if (gc.getGame().getGameTurn() >= con.tBirth[iHuman]):
-                #	pass
-
-                        #if (argsList[0] == con.iNationalism):
-                        #if (argsList[2] == iHuman):
-                        #	for iLoopCiv in range (con.iNumPlayers):
-                        #            
-                        #		mercenaryDict = objMercenaryUtils.getPlayerMercenaries(iLoopCiv)
-                        #                mercenary = objMercenaryUtils.getHighestMaintenanceMercenary(mercenaryDict)
-
-                        #                while(mercenary != None):
-                        #                        # Get the mercenary with the highest maintenance cost
-                        #                	mercenaryDict = objMercenaryUtils.getPlayerMercenaries(iLoopCiv)
-                        #                        mercenary = objMercenaryUtils.getHighestMaintenanceMercenary(mercenaryDict)
-                        #                        # Have the computer fire the mercenary
-                        #                        if(mercenary != None):
-                        #                        	objMercenaryUtils.fireMercenary(mercenary.getName(), iLoopCiv)
-                        #        screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
-                        #        screen.hide("MercenaryManagerButton")
-                        #        CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MERCENARIES_DISABLED", ()), "", 0, "", ColorTypes(con.iWhite), -1, -1, True, True)
-                                
         #Rhye - end
                 
                 
@@ -935,188 +760,6 @@ class CvRFCEventHandler:
 
                         iHuman = utils.getHumanID()
                         iGameTurn = gc.getGame().getGameTurn()
-
-                        
-##                        print("fava", gc.getGame().getGameTurn())
-##                        print(self.rnf.getNewCiv(), self.rnf.getNewCivFlip(), self.rnf.getSpawnDelay(con.iPersia), self.rnf.getFlipsDelay(con.iPersia))
-
-                        #print(self.aiw.getNextTurnAIWar())
-                        #self.aiw.setNextTurnAIWar(gc.getGame().getGameTurn())
-                        #self.aiw.checkTurn(gc.getGame().getGameTurn())
-                        #print(self.aiw.getNextTurnAIWar())
-                        ##for i in range(iNumPlayers):
-                        #        print(i)
-                        #        self.aiw.checkGrid(i)
-                        
-                        #gc.getGame().setGameTurn(400)
-
-                        #for a in range(1):
-                                #self.sta.test1(gc.getGame().getGameTurn())
-                                #self.sta.test2(gc.getGame().getGameTurn())
-
-                        #for a in range(iNumMajorPlayers):
-                        #        if (gc.getPlayer(a).isAlive()):
-                                        #self.sta.updateBaseStabilityTestOld(gc.getGame().getGameTurn(), a)
-                                        #self.sta.updateBaseStabilityTest(gc.getGame().getGameTurn(), a)
-                        
-                        #gc.getTeam(gc.getPlayer(con.iCarthage).getTeam()).setVassal(con.iMongolia, True, True)
-                        #gc.getTeam(gc.getPlayer(iEngland).getTeam()).signDefensivePact(iJapan)
-                        #gc.getTeam(gc.getPlayer(iInca).getTeam()).declareWar(iMongolia, True, -1)                        
-                        #gc.getGame().setActivePlayer(con.iVikings, False)
-                        #gc.getTeam(gc.getPlayer(iAztecs).getTeam()).makePeace(iMongolia)
-
-                        
-                        #utils.killCiv(con.iVikings, con.iRussia)
-                        #self.sta.checkTurn(gc.getGame().getGameTurn())
-                        #self.rnf.resurrection(gc.getGame().getGameTurn())
-
-##                        gc.getMap().plot(27, 30).setFeatureType(-1, 0)
-##                        gc.getMap().plot(28, 31).setFeatureType(-1, 0)
-##                        gc.getMap().plot(31, 13).setPlotType(PlotTypes.PLOT_HILLS, True, True)
-
-                        #self.com.decay(con.iGermany)                
-                        #self.data.setupScriptData()
-                        #gc.getGame().setWinner(con.iEgypt, 0)
-                        #if (len(lLeaders[iDeadCiv]) > 1):
-                        #gc.getTeam(gc.getPlayer(con.iIndia).getTeam()).signOpenBorders(con.iChina)
-                        #print ("CC1", gc.getTeam(gc.getPlayer(con.iIndia).getTeam()).canContact(con.iEgypt))
-                        #print ("ME1", gc.getTeam(gc.getPlayer(con.iIndia).getTeam()).isHasMet(con.iEgypt))
-                        #gc.getTeam(gc.getPlayer(con.iJapan).getTeam()).cutContact(con.iChina)
-                        #gc.getTeam(gc.getPlayer(con.iChina).getTeam()).cutContact(con.iJapan)
-                        #print ("CC2", gc.getTeam(gc.getPlayer(con.iIndia).getTeam()).canContact(con.iEgypt))
-                        #print ("ME2", gc.getTeam(gc.getPlayer(con.iIndia).getTeam()).isHasMet(con.iEgypt))
-                        #for i in range (con.iNumPlayers):
-                        #        gc.getTeam(gc.getPlayer(con.iInca).getTeam()).cutContact(i)
-                        #gc.getTeam(gc.getPlayer(con.iChina).getTeam()).setVassal(con.iJapan, True, True)
-                        #gc.getGame().changePlayer(con.iChina, 0, 22, con.iChina, False, True)
-                        #gc.getPlayer(con.iBabylonia).setLeader(24)
-                        #gc.getPlayer(con.iEgypt).changeGold(3000)
-                        #gc.getMap().plot(72, 32).getPlotCity().changeBuildingProduction(con.iBroadway,639)
-                        #print ("CC2", gc.getTeam(gc.getPlayer(con.iEgypt).getTeam()).canContact(con.iNative))
-                        #newCivDesc = CyTranslator().getText("TXT_KEY_NAM_CHI1", ())
-##                        newCivDesc = "TXT_KEY_NAM_CHI1"
-##                        newDesc = newCivDesc.encode('latin-1')
-##                        gc.getPlayer(con.iChina).setCivDescription(newDesc)
-##                        print (gc.getPlayer(con.iChina).getCivilizationDescription(0), gc.getPlayer(con.iChina).getCivilizationDescriptionKey(), gc.getPlayer(con.iChina).getCivilizationAdjective(0), gc.getPlayer(con.iChina).getCivilizationAdjectiveKey())
-##                        print (gc.getPlayer(con.iIndia).getCivilizationDescription(0), gc.getPlayer(con.iIndia).getCivilizationDescriptionKey(), gc.getPlayer(con.iIndia).getCivilizationAdjective(0), gc.getPlayer(con.iIndia).getCivilizationAdjectiveKey())
-##                        self.rnf.showPopup(7614, CyTranslator().getText("TXT_KEY_NEWCIV_TITLE", ()), CyTranslator().getText("TXT_KEY_NEWCIV_MESSAGE", (gc.getPlayer(con.iChina).getCivilizationDescriptionKey(),)), (CyTranslator().getText("TXT_KEY_POPUP_YES", ()), CyTranslator().getText("TXT_KEY_POPUP_NO", ())))
-
-                        #gc.getTeam(gc.getPlayer(con.iChina).getTeam()).setVassal(con.iArabia, True, True)
-
-                        
-                        #invasion attempt
-                        #if (iGameTurn == 100):
-                        #        utils.makeUnit(con.iAxeman, iGermany, con.tCapitals[iGermany], 3)
-                        #        utils.makeUnit(con.iSwordsman, iGermany, con.tCapitals[iGermany], 3)
-                        
-                        #for iCiv in range(iNumPlayers):
-                        #        for pyCity in PyPlayer(iCiv).getCityList():
-                        #                print (pyCity.GetCy().getName())
-
-                        #debug - kills every unit
-                        #for x in range(40, 123):
-                        #        for y in range(0, 67):
-                        #                pCurrent = gc.getMap().plot( x, y )
-                        #                if (pCurrent.getNumUnits() > 0):
-                        #                        for i in range (pCurrent.getNumUnits()):
-                        #                                unit = pCurrent.getUnit(0)
-                        #                                unit.kill(False, con.iBarbarian)
-
-
-##                        if (gc.getPlayer(utils.getHumanID()).getNumCities() > 1):
-##                                CyInterface().addImmediateMessage(CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "")
-##                                utils.killAndFragmentCiv(utils.getHumanID(), True)
-##                                utils.setStability(utils.getHumanID(), -15)
-
-
-                        #self.pla.setGenericPlagueDates(0, 96)
-                        #self.pla.spreadPlague(con.iJapan)
-                        #self.pla.stopPlague(con.iJapan)
-                        #self.pla.infectCity(utils.getRandomCity(con.iJapan))
-                        #print ("Countdown", self.pla.getPlagueCountdown( con.iJapan ))
-                    
-                        
-                        #utils.killAndFragmentCiv(con.iEngland, iIndependent, iIndependent2, -1, False)
-                        #self.rnf.resurrection(302)
-                        
-                        #utils.killAndFragmentCiv(con.iRome, iIndependent, iIndependent2, -1, True)
-                        #gc.getGame().setActivePlayer(con.iEgypt, False)
-                        #teamEgypt.changeResearchProgress(con.iNationalism, 3299, iEgypt)
-                        #teamAztecs.changeResearchProgress(con.iSteel, 3399, iAztecs)
-                        
-                        #self.sta.normalization(200)
-                        #gc.getGame().setActivePlayer(con.iNetherlands, False)
-                        #gc.getPlayer(con.iPortugal).changeGold(200)
-                        
-                        #CyInterface().addImmediateMessage(CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()), "")
-                        #CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_EMBASSY_ESTABLISHED", (gc.getPlayer(con.iRussia).getCivilizationAdjectiveKey(),)) + " " + "Citta di prova", "", 0, "", ColorTypes(con.iWhite), -1, -1, True, True)
-
-                        #CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_PERIOD", ()) + " " + CyTranslator().getText("TXT_KEY_STABILITY_GREAT_DEPRESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
-                        #CyInterface().addMessage(utils.getHumanID(), True, 5, CyTranslator().getText("TXT_KEY_CONGRESS_NOTIFY_YES2", ()), "", 0, "", ColorTypes(100), -1, -1, True, True)
-##                        for i in range(128):
-##                                CyInterface().addMessage(utils.getHumanID(), True, 1, "i", "", 0, "", ColorTypes(i), -1, -1, False, True)
-##                                if (i % 10 == 0):
-##                                         CyInterface().addMessage(utils.getHumanID(), True, 1, "10", "", 0, "", ColorTypes(0), -1, -1, False, True)
-                        #print ("vic", self.vic.getNumSinks())
-
-                        #dummy, plotList = utils.squareSearch( (29,28), (31,31), utils.outerInvasion, [])
-                        #print (plotList)
-                        #utils.setStability(con.iChina, -25)
-                        
-                        #city = gc.getMap().plot( 79, 40 ).getPlotCity() 
-                        #self.pla.infectCity(city)
-                        #self.pla.spreadPlague(con.iPersia)
-                        #self.pla.processPlague(con.iPersia)
-
-                        #city = gc.getMap().plot( 90, 40 ).getPlotCity()
-                        #print ("9040", city.getCulture(con.iIndia), 4000 + 2000*gc.getPlayer(con.iIndia).getCurrentEra())
-
-                        
-                        #CyInterface().DoSoundtrack("AS2D_R_F_C")
-                        #if (gc.getPlayer(con.iNetherlands).countOwnedBonuses(con.iSpices) + gc.getPlayer(con.iNetherlands).getBonusImport(con.iSpices) >= 5):
-                        #        self.vic.setGoal(iNetherlands, 2, 0)
-
-                        #utils.setLastRecordedStabilityStuff(2, 0)
-                        #utils.setLastRecordedStabilityStuff(1, 40)
-
-##                        #print (CyGame().getCurrentLanguage())
-##                        popup = PyPopup.PyPopup()
-##                        popup.setHeaderString(CyTranslator().getText("TXT_KEY_EXILE_TITLE", ()))          
-##                        popup.setBodyString( CyTranslator().getText("TXT_KEY_EXILE_TEXT", (gc.getPlayer(con.iGermany).getCivilizationAdjectiveKey(), gc.getPlayer(con.iSpain).getCivilizationShortDescription(0))))
-####                        popup.setHeaderString(CyTranslator().getText("TXT_KEY_ESCAPE_TITLE", ()))          
-####                        popup.setBodyString( CyTranslator().getText("TXT_KEY_ESCAPE_TEXT", (gc.getPlayer(con.iGermany).getCivilizationAdjectiveKey(),)))
-##                        popup.launch()
-##
-##                        CyInterface().addMessage(utils.getHumanID(), True, con.iDuration/2, ("XXX" + " " + \
-##                                                                                   CyTranslator().getText("TXT_KEY_CONGRESS_NOTIFY_YES", (gc.getPlayer(con.iSpain).getCivilizationAdjectiveKey(),))), \
-##                                                                                   "", 0, "", ColorTypes(con.iCyan), -1, -1, True, True)
-##                        self.rnf.newCivPopup(con.iSpain)
-##
-##                        self.rnf.showPopup(7622, CyTranslator().getText("TXT_KEY_REBELLION_TITLE", ()), \
-##                               CyTranslator().getText("TXT_KEY_REBELLION_TEXT", (gc.getPlayer(con.iGermany).getCivilizationAdjectiveKey(),)), \
-##                               (CyTranslator().getText("TXT_KEY_POPUP_YES", ()), \
-##                                CyTranslator().getText("TXT_KEY_POPUP_NO", ())))
-##
-##                        CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, \
-##                                                                                 CyTranslator().getText("TXT_KEY_STABILITY_GREAT_DEPRESSION_INFLUENCE", (gc.getPlayer(con.iSpain).getCivilizationDescription(0),)), \
-##                                                                                 "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
-##
-####                        CyInterface().addMessage(utils.getHumanID(), True, con.iDuration, \
-####                                                        (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (gc.getPlayer(con.iGermany).getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
-##                                
-                        #print ("ERA", gc.getInfoTypeForString("ERA_CLASSICAL"))
-##                        for iEuroCiv in range(iNumPlayers):
-##                                if (iEuroCiv in con.lCivGroups[0]):
-##                                        if (not self.vic.checkNotOwnedArea_Skip(iEuroCiv, (24, 3), (43, 32), (32,14), (43,30))):
-##                                                CyInterface().addImmediateMessage(CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "")
-
-##                        for x in range(0, 123):
-##                                for y in range(0, 67):
-##                                        pCurrent = gc.getMap().plot( x, y )
-##                                        if (pCurrent.isWater()):
-##                                                pCurrent.setOwner(-1)
-
-                        
                         pass
 
 
@@ -1147,102 +790,11 @@ class CvRFCEventHandler:
 
         #Rhye - start
         def printDebug(self, iGameTurn):
-
-                
-                #if (iGameTurn %10 == 1):
-                #        self.printEmbassyDebug()
-
-                #if (iGameTurn %5 == 0):
-                #        self.printPlotsDebug()
-
-                #if (iGameTurn %5 == 0): 
-                #        self.printStabilityDebug()
                 pass
 
 
                         
         def printPlotsDebug(self):
-
-##                for i in range(124):
-##                        for j in range(68):
-##                                print (i, j, gc.getMap().plot(i,j).getArea())
-            
-                #countTotalUnits
-                iTotal = 0
-                iTotalCities = 0
-##                lType = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-##                lOwner = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                
-                #lOwnerLongbow = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #         0, 0, 0, 0, 0, 0, 0]
-                #lOwnerCannon = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #         0, 0, 0, 0, 0, 0, 0]
-##                lPlotOwner = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                              0, 0]
-                #lPlotOwner2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #              0, 0]
-##                lCityOwner2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-##                              0, 0]
-                #lCityOwner_sb = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
-                #              0, 0]
-                for x in range(0, 123):
-                        for y in range(0, 67):
-                                pCurrent = gc.getMap().plot( x, y )
-                                iTotal += pCurrent.getNumUnits()
-##                                if (pCurrent.getNumUnits() > 0):
-##                                        for i in range (pCurrent.getNumUnits()):
-##                                                unit = pCurrent.getUnit(i)
-##                                                lType[unit.getUnitType()] += 1
-##                                                lOwner[unit.getOwner()] += 1
-                                                #if (unit.getUnitType() == con.iLongbowman):
-                                                #       lOwnerLongbow[unit.getOwner()] += 1
-                                                #if (unit.getUnitType() == con.iCannon):
-                                                #       lOwnerCannon[unit.getOwner()] += 1
-
-                                if ( pCurrent.isCity()):
-                                        iTotalCities += 1
-                                        
-                print ("TOTAL UNITS", iTotal)  
-                print ("TOTAL CITIES", iTotalCities)
-
-##                print ("Unit types")
-##                for i in range (len(lType)):
-##                        print (i, lType[i])
-##                print ("Unit owners")
-##                for i in range (len(lOwner)):
-##                        print (i, lOwner[i])
-                #print ("LB owners")
-                #for j in range (len(lOwnerLongbow)):
-                #        print (j, lOwnerLongbow[j])               
-                #print ("Cannon owners")
-                #for j in range (len(lOwnerCannon)):
-                #        print (j, lOwnerCannon[j])               
-        
                 pass
 
         def printEmbassyDebug(self):
