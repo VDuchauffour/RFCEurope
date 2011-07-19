@@ -69,6 +69,9 @@ Changes for Beta 13:
 		- Germany no longer wins thier UHV is they found Printing Press, but are not Catholic (you need to really found Protestantism)
 		- Calais now spawns properly in 800AD
 
+	Interface
+		- New screen to display which colonies have been built.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 12:
