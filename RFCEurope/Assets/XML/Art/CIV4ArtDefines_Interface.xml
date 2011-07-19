@@ -1361,16 +1361,16 @@
 			<Path>Art/Interface/MASK_7.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
+			<Type>MASK_8</Type>
+			<Path>Art/Interface/MASK_8.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_9</Type>
+			<Path>Art/Interface/MASK_9.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
 			<Type>MASK_10</Type>
 			<Path>Art/Interface/MASK_10.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>MASK_5</Type>
-			<Path>Art/Interface/MASK_5.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>MASK_5</Type>
-			<Path>Art/Interface/MASK_5.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_11</Type>
