@@ -2359,6 +2359,14 @@ class CvInfoScreen:
 				if i == colony[0]:
 					self.flag = self.getNextWidgetName()
 					screen.addFlagWidgetGFC(self.flag,cxy[i][0]-35+20*builtcount,cxy[i][1]-20,80,80,colony[1],WidgetTypes.WIDGET_GENERAL, -1, -1)
+					builtcount += 1
+				
+				
+		for i in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
+			builtcount = 0
+			possible = 1
+			for colony in self.aaColoniesBuilt:
+				if i == colony[0]:
 					self.mark1 = self.getNextWidgetName()
 					print("ColonyNum")
 					print(str(colony[1]))
@@ -2367,6 +2375,7 @@ class CvInfoScreen:
 					except AttributeError:
 						screen.addDDSGFC(self.mark1, ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(), cxy[i][0]-5+20*builtcount,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
 					builtcount += 1
+					#screen.moveToFront(self.mark1)
 				#self.aaColoniesUnbuilt.append([iProjectLoop,-1,"TXT_KEY_UNKNOWN"]) #This should be something else probably
 			if i == 10:
 				possible = 3
@@ -2375,7 +2384,7 @@ class CvInfoScreen:
 			for n in range(builtcount,possible):
 				self.mark1 = self.getNextWidgetName()
 				screen.addDDSGFC(self.mark1, ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(), cxy[i][0]-5+25*n,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
-
+				#screen.moveToFront(self.mark1)
 		#elf.flag1 = self.getNextWidgetName()
 		#elf.flag2 = self.getNextWidgetName()
 
