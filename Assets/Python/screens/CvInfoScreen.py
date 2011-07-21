@@ -2275,83 +2275,42 @@ class CvInfoScreen:
 		screen = self.getScreen()
 		self.BACKGROUND_ID = self.getNextWidgetName()
 
-		#Add image. Wrong size currently -> no exit button. Unknown format problem with my own image. 
 		screen.addDDSGFC(self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("MAINMENU_COLONIES").getPath(), 0, 50, 1024, 670, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-		#Pretty easy to add a flag (or button, I guess) to the image
-
-#		self.szFullPaneWidget = self.getNextWidgetName()
-#		screen.addPanel( self.szFullPaneWidget, "", "", true, true,
-#			20, 75, 980, 630, PanelStyles.PANEL_STYLE_MAIN )#PanelStyles.PANEL_STYLE_DAWNTOP )
-
 		
 		self.aaColoniesBuilt = []
-		#self.aaColoniesBuiltNumbers = []
-		#self.aaColoniesUnbuilt = []
 		self.iNumColonies = 0
-		# Loop through players to determine Projects
+		hxy = con.home_positions_xy
+		# Loop through players to determine Projects and place flags in Europe
 		for iPlayerLoop in range(gc.getMAX_PLAYERS()):
 
 			pPlayer = gc.getPlayer(iPlayerLoop)
 			iTeamLoop = pPlayer.getTeam()
 
-			color = gc.getPlayerColorInfo(pPlayer.getPlayerColor()).getText()
-
-			#print("Nothing to see")
-			#print(color)
-			
 			# Block duplicates
 			aiTeamsUsed = []
 			if (iTeamLoop not in aiTeamsUsed):
 
 				aiTeamsUsed.append(iTeamLoop)
 				pTeam = gc.getTeam(iTeamLoop)
+				self.home_flag = self.getNextWidgetName()
+
 
 				if (pTeam.isAlive() and not pTeam.isBarbarian()):
-
 					# Loop through projects
+					try:
+						screen.addFlagWidgetGFC(self.home_flag,hxy[iPlayerLoop][0]-40,hxy[iPlayerLoop][1]-20,80,80,iPlayerLoop,WidgetTypes.WIDGET_GENERAL, -1, -1)
+					except IndexError:
+						pass
 					for iProjectLoop in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
 
 						for iI in range(pTeam.getProjectCount(iProjectLoop)):
-
-							#if (iTeamLoop == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iTeamLoop)):								
+								
 							self.aaColoniesBuilt.append([iProjectLoop,iPlayerLoop])
-							#self.aaColoniesBuiltNumbers.append(iProjectLoop)
-
-							#else:
-							#	self.aaColoniesBuilt.append([iProjectLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_UNKNOWN", ())])
 							self.iNumColonies += 1
 		
-#		self.aaColoniesBuilt = [[3,0,"London"],[4,1,"Paris"],[5,2,"Washington"],[6,3,"Beijing"]]
 
-		cxy=[
-		(0,0), #Dummy slots for non-colony projects
-		(0,0),
-		(0,0),
-		(275,150), #Vinland
-		(480,335), # GoldCoast
-		(440,335), # IvoryCoast
-		(145,265), # Cuba
-		(290,410), #Brazil
-		(160,110), #Hudson
-		(170,210), #Virginia
-		(875,225), #China
-		(760,260), #India
-		(930,360), #East Indies
-		(870,320), #Malaysia
-		(560,510), #CapeTown
-		(610,390), #EastAfrica
-		(60,260),  #Aztecs
-		(170,420), #Inca
-		(185,280), #Hispaniola
-		(245,120), #Quebec
-		(200,180), #New England
-		(155,285), #Jamaica
-		(130,325), #Panama
-		(110,220), #Louisiana
-		(960,320), #Philipines
-		]
-		
+		cxy = con.colony_positions_xy
+		#Loop through to place flags first (so flags are all "under" the colony dots)
 		for i in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
 			builtcount = 0
 			possible = 1
@@ -2361,7 +2320,7 @@ class CvInfoScreen:
 					screen.addFlagWidgetGFC(self.flag,cxy[i][0]-35+20*builtcount,cxy[i][1]-20,80,80,colony[1],WidgetTypes.WIDGET_GENERAL, -1, -1)
 					builtcount += 1
 				
-				
+		#Loop through to place dots
 		for i in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
 			builtcount = 0
 			possible = 1
@@ -2371,9 +2330,9 @@ class CvInfoScreen:
 					print("ColonyNum")
 					print(str(colony[1]))
 					try:
-						screen.addDDSGFC(self.mark1, ArtFileMgr.getInterfaceArtInfo("MASK_"+str(colony[1])).getPath(), cxy[i][0]-5+20*builtcount,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
+						screen.addDDSGFC(self.mark1,ArtFileMgr.getInterfaceArtInfo("MASK_"+str(colony[1])).getPath(), cxy[i][0]-5+20*builtcount,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
 					except AttributeError:
-						screen.addDDSGFC(self.mark1, ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(), cxy[i][0]-5+20*builtcount,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
+						screen.addDDSGFC(self.mark1,ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(), cxy[i][0]-5+20*builtcount,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
 					builtcount += 1
 					#screen.moveToFront(self.mark1)
 				#self.aaColoniesUnbuilt.append([iProjectLoop,-1,"TXT_KEY_UNKNOWN"]) #This should be something else probably
@@ -2383,23 +2342,8 @@ class CvInfoScreen:
 				possible = 3
 			for n in range(builtcount,possible):
 				self.mark1 = self.getNextWidgetName()
-				screen.addDDSGFC(self.mark1, ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(), cxy[i][0]-5+25*n,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
-				#screen.moveToFront(self.mark1)
-		#elf.flag1 = self.getNextWidgetName()
-		#elf.flag2 = self.getNextWidgetName()
 
-		#creen.addFlagWidgetGFC(self.flag1,130,120,90,90,4,WidgetTypes.WIDGET_GENERAL, -1, -1)
-		#creen.addFlagWidgetGFC(self.flag2,150,150,120,120,6,WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		#elf.mark1 = self.getNextWidgetName()
-		#screen.addDDSGFC(self.mark1, ArtFileMgr.getInterfaceArtInfo("CORDOBA_MARK").getPath(), 165,192,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, 5, -1 )
-
-			
-		#screen.addImageButton( self.szRightPaneWidget, "", gc.getBuildingInfo(4).getButton(),
-		#	GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, 4, -1, False )
-		#screen.attachImageButton( self.szRightPaneWidget, "", gc.getBuildingInfo(5).getButton(),
-		#	GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, 5, -1, False )
-
+				screen.addDDSGFC(self.mark1,ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(), cxy[i][0]-5+25*n,cxy[i][1]+45,20,20, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT, i, -1 )
 	#Sedna17 End
 			
 #############################################################################################################
