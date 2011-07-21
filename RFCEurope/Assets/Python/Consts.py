@@ -860,7 +860,60 @@ iNumStabilityParameters = 13
 #Plague
 iImmunity = 20
 
+#Positions on the Colony map for "home" original flags
+home_positions_xy = [
+(573,175),#iByzantium
+(480,160),#iFrankia
+(610,220),#iArabia
+(575,160), #iBulgaria = 3
+(450,200), #iCordoba = 4
+(510,110), #iNorse = 5
+(515,162), #iVenecia = 6
+(500,150), #iBurgundy = 7
+(510,140), #iGermany = 8
+(590,140), #iKiev = 9
+(550,160), #iHungary = 10
+(460,180), #iSpain = 11
+(540,140), #iPoland = 12
+(505,162), #iGenoa = 13
+(467,130), #iEngland = 14
+(440,190), #iPortugal = 15
+(550,110), #iLithuania = 16
+(525,125), #iAustria = 17
+(600,195), #iTurkey = 18
+(595,110), #iMoscow = 19
+(515,90), #iSweden = 20
+(495,115), #iDutch = 21
+]
 
+#Positions on the Colony map where to display colonies
+colony_positions_xy=[
+(0,0), #Dummy slots for non-colony projects
+(0,0),
+(0,0),
+(275,150), #Vinland
+(480,335), # GoldCoast
+(440,335), # IvoryCoast
+(145,265), # Cuba
+(290,410), #Brazil
+(160,110), #Hudson
+(170,210), #Virginia
+(875,225), #China
+(760,260), #India
+(930,360), #East Indies
+(870,320), #Malaysia
+(560,510), #CapeTown
+(610,390), #EastAfrica
+(60,260),  #Aztecs
+(170,420), #Inca
+(185,280), #Hispaniola
+(245,120), #Quebec
+(200,180), #New England
+(155,285), #Jamaica
+(130,325), #Panama
+(110,220), #Louisiana
+(960,320), #Philipines
+]
 
 tLeaders = (		#First has to be the primary leader (the one that appaers on the civ selection screen). Can be changed in the WB file (AbsintheRed)
 (xml.iJustinian,),
