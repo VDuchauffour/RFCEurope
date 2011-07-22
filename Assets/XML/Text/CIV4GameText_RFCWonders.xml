@@ -52,8 +52,8 @@
 		<English>Marco Polo's Embassy</English>
 		<French>Embassade de Marco Polo</French>
 		<German>Marco Polos Botschaft</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Ambasciata di Marco Polo</Italian>
+		<Spanish>Embajada de Marco Polo</Spanish>
 		<Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian>
 	</TEXT>
 	<TEXT>
@@ -141,8 +141,8 @@
 		<English>The Tower of London</English>
 		<French>Tour de Londres</French>
 		<German>Tower of London</German>
-		<Italian>.</Italian>
-		<Spanish>la Torre de Londres</Spanish>
+		<Italian>Torre di Londra</Italian>
+		<Spanish>La Torre de Londres</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
@@ -153,15 +153,6 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VERSAILLES</Tag>
-		<English>Versailles</English>
-		<French>Ch&#226;teau de Versailles</French>
-		<German>Versailles</German>
-		<Italian>Versailles</Italian>
-		<Spanish>Versalles</Spanish>
-		<Russian>&#194;&#229;&#240;&#241;&#224;&#235;&#252;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE_PEDIA</Tag>
@@ -195,49 +186,65 @@
 		<English>St. Sophia</English>
 		<French>Sainte Sophie</French>
 		<German>Sophienkathedrale</German>
-		<Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Russian></TEXT>
+		<Italian>Cattedrale di Santa Sofia</Italian>
+		<Spanish>Catedral de Santa Sofia</Spanish>
+		<Russian>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA</Tag>
 		<English>Magna Carta</English>
 		<French>Magna Carta</French>
 		<German>Magna Carta</German>
-		<Italian/><Spanish/><Russian>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Russian></TEXT>
+		<Italian>Magna Carta</Italian>
+		<Spanish>Carta Magna</Spanish>
+		<Russian>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_ACADEMY</Tag>
 		<English>Royal Academy</English>
 		<French>Acad&#233;mie Royal</French>
 		<German>K&#246;nigliche Akademie</German>
-		<Italian/><Spanish/><Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Russian></TEXT>
+		<Italian>Reale Accademia</Italian>
+		<Spanish>Real Academia</Spanish>
+		<Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_MEZQUITA</Tag>
 		<English>La Mezquita</English>
 		<French>La Mezquita</French>
 		<German>La Mezquita</German>
-		<Italian/><Spanish/><Russian>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Russian></TEXT>
+		<Italian>La Mezquita</Italian>
+		<Spanish>La Mezquita</Spanish>
+		<Russian>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL</Tag>
 		<English>St. Basil's Cathedral</English>
 		<French>Cath&#233;drale de St Basil</French>
 		<German>Basilius-Kathedrale</German>
-		<Italian/><Spanish>Catedral de San Basilio</Spanish><Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian></TEXT>
+		<Italian>Cattedrale di San Basilio</Italian>
+		<Spanish>Catedral de San Basilio</Spanish>
+		<Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO</Tag>
 		<English>San Marco Basilica</English>
 		<French>Basilique St Marc</French>
 		<German>Markusdom</German>
-		<Italian/><Spanish/><Russian>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Russian></TEXT>
+		<Italian>Basilica di San Marco</Italian>
+		<Spanish>Basilica de San Marcos</Spanish>
+		<Russian>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE</Tag>
 		<English>Brandenburg Gate</English>
 		<French>Porte de Brandenburg</French>
 		<German>Brandenburger Tor</German>
-		<Italian/><Spanish/><Russian>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Russian></TEXT>
+		<Italian>Porta di Brandeburgo</Italian>
+		<Spanish>Puerta de Brandeburgo</Spanish>
+		<Russian>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK</Tag>
 		<English>The Dome of the Rock</English>
 		<French>Le Dôme du Rocher</French>
 		<German>Der Felsendom</German>
-		<Italian/><Spanish/><Russian>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Russian></TEXT>
+		<Italian>Cupola della Roccia</Italian>
+		<Spanish>Cupula de la Roca</Spanish>
+		<Russian>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Tag>
 		<English>[TAB]The Alhambra is a palace and fortress complex of the Moorish monarchs of Granada, in southern Spain (known as Al-Andalus when the fortress was constructed), occupying a hilly terrace on the south-eastern border of the city of Granada. It was the residence of the Muslim kings of Granada and their court, but is currently a museum exhibiting exquisite Islamic architecture. A Renaissance palace was also inserted by Charles V, Holy Roman Emperor.[PARAGRAPH:2]The name Alhambra, signifying in Arabic the red, derives from the colour of the red clay of the surroundings of which the fort is made. The buildings of the Alhambra were originally whitewashed; however, the buildings now seen today are reddish. The first reference to the Qal'at al Hamra was during the battles between the Arabs and the Muladies during the rule of the Abdallah (who reigned from 888-912). In one particularly fierce and bloody skirmish, the Muladies soundly defeated the Arabs who were then forced to take shelter in a primitive red castle located in the province of Elvira, nowadays located in Granada. According to surviving documents from the era, the red castle was quite small and its walls were not capable of deterring army intent on conquering. The castle was then largely ignored until the eleventh century when its ruins were renovated and rebuilt by Samuel ibn Naghralla, vizier to the King Badis of the Zirid Dynasty, in an attempt to preserve the small Jewish settlement also located on the Sabikah hill. However, evidence from Arab texts indicates that the fortress was easily penetrated and that the actual Alhambra that survives today was built during the Nasrid Dynasty. -Wikipedia</English>
@@ -252,7 +259,7 @@
 		<English>The Alhambra</English>
 		<French>L'Alhambra</French>
 		<German>Die Alhambra</German>
-		<Italian>.</Italian>
+		<Italian>La Alhambra</Italian>
 		<Spanish>La Alhambra</Spanish>
 		<Russian>&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224;</Russian>
 	</TEXT>
@@ -280,7 +287,9 @@
 		<English>The Shrine of Uppsala</English>
 		<French>Le Sanctuaire d'Uppsala</French>
 		<German>Schrein von Uppsala</German>
-		<Italian/><Spanish/><Russian>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Russian></TEXT>
+		<Italian>Il Santuario di Uppsala</Italian>
+		<Spanish>El Santuario de Uppsala</Spanish>
+		<Russian>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_PEDIA</Tag>
 		<English>[TAB]The Shrine of Uppsala was a religious site in Gamla Uppsala (Old Uppsala), near modern Uppsala, Sweden, that was created to worship the Norse gods of prehistoric times. The cult site is sparsely documented, but it is referenced in the Norse sagas and Saxo Grammaticus' Gesta Danorum, and most notably as a gilded temple in the work of Adam of Bremen.[PARAGRAPH:2]Adam of Bremen wrote that the Swedes had a famous temple named Ubsola near which there was a large tree with wide branches. It was always green, and no one knew what species it was. There was also a well where they apparently used to perform the sacrifices. One of these was to immerse a living man in the well. If the man disappeared the gods would answer the prayers. It was not far from the towns of Sigtuna and Birka.[PARAGRAPH:2]A golden chain was around the temple hanging over its gables. The chain could be seen glittering far and wide for those who approached. It stood on flat ground surrounded by mounds like a theatre. Inside the temple, which was richly decorated with gold, there were three statues of gods. The most important god, Thor sat on a throne in the centre and beside him sat the gods Odin (called Wotan by Adam) and Freyr (called Fricco by Adam). Thor was said to govern the air, thunder, lightning, winds, rain, good weather and harvests. Odin, which meant the furious, brought war and gave strength against enemies. Freyr who gave peace and pleasure was represented by a statue with an immense phallos. Odin's statue was armed, and was likened to Mars and Thor was likened by Adam to Jupiter. The people also worshiped heroes who had been elevated to gods, such as King Erik about whom it is told in Vita Ansgari.[PARAGRAPH:2]There were priests appointed for the gods, and if plague or famine threatened they sacrificed to Thor, whereas they sacrificed to Odin for war and to Freyr for marriages.</English>
@@ -300,20 +309,24 @@
 		<English>The East India Company</English>
 		<French>Compagnie des Indes de l'Est</French>
 		<German>Ost-Indien Kompanie</German>
-		<Italian/><Spanish/><Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian></TEXT>
+		<Italian>Compagnia delle Indie Orientalli</Italian>
+		<Spanish>Compania de las Indias Orientales</Spanish>
+		<Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_WEST_INDIA_COMPANY</Tag>
 		<English>The West India Company</English>
 		<French>Compagnie des Indes de l'Ouest</French>
 		<German>West-Indien Kompanie</German>
-		<Italian/><Spanish/><Russian>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian></TEXT>
+		<Italian>Compagnia delle Indie Occidentali</Italian>
+		<Spanish>Compania de las Indias Occidentales</Spanish>
+		<Russian>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
 		<English>Krak des Chevaliers</English>
 		<French>Krak des Chevaliers</French>
 		<German>Krak des Chevaliers</German>
-		<Italian/>
-		<Spanish/>
+		<Italian>Krak des Chevaliers</Italian>
+		<Spanish>Krak des Chevaliers</Spanish>
 		<Russian>&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Tag>
@@ -336,7 +349,7 @@
 		<English>Pa&#231;o da Ribeira</English>
 		<French>Pa&#231;o da Ribeira</French>
 		<German>Pa&#231;o da Ribeira</German>
-		<Italian/>
+		<Italian>Pa&#231;o da Ribeira</Italian>
 		<Spanish>Pa&#231;o da Ribeira</Spanish>
 		<Russian>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Russian></TEXT>
 	<TEXT>
@@ -348,7 +361,7 @@
 		<English>Palacio del Escorial</English>
 		<French>Palace de Escorial</French>
 		<German>Palacio del Escorial</German>
-		<Italian/>
+		<Italian>Palazzo del Escorial</Italian>
 		<Spanish>Palacio del Escorial</Spanish>
 		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#221;&#241;&#234;&#238;&#240;&#232;&#224;&#235; </Russian>
 	</TEXT>
@@ -361,27 +374,31 @@
 		<English>Cluny Abbey</English>
 		<French>Abbaye de Cluny</French>
 		<German>Abtei von Cluny</German>
-		<Italian/>
+		<Italian>Abbazia di Cluny</Italian>
 		<Spanish>Monasterio de Cluny</Spanish>
 		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPLE_MOUNT</Tag>
-		<English>Temple Mount</English>
-		<French>Temple Mont</French>
-		<German>Tempelberg</German>
-		<Italian/><Spanish/><Russian>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Russian></TEXT>
+		<English>Kazimierz</English>
+		<French>Kazimierz</French>
+		<German>Kazimierz</German>
+		<Italian>Kazimierz</Italian>
+		<Spanish>Kazimierz</Spanish>
+		<Russian>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>
 		<English>The Round Church</English>
 		<French>L'Eglise Ronde</French>
 		<German>Die Runde Kirche</German>
-		<Italian/><Spanish/><Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian></TEXT>
+		<Italian>La Chiesa Tonda</Italian>
+		<Spanish>La Iglesia Redonda</Spanish>
+		<Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE</Tag>
 		<English>Magellan's Voyage</English>
 		<French>Voyage de Magellan</French>
 		<German>Magellans Reise</German>
-		<Italian/>
+		<Italian>Viaggio di Magellano</Italian>
 		<Spanish>El Viaje de Magallanes</Spanish>
 		<Russian>&#204;&#224;&#227;&#229;&#235;&#235;&#224;&#237;&#238;&#226;&#238; &#207;&#243;&#242;&#229;&#248;&#229;&#241;&#242;&#226;&#232;&#229;</Russian></TEXT>
 	<TEXT>
@@ -389,15 +406,15 @@
 		<English>Golden Bull</English>
 		<French>Bulle d'Or</French>
 		<German>Goldener Bulle</German>
-		<Italian/>
-		<Spanish>Bula Dorada</Spanish>
+		<Italian>Toro d'Oro</Italian>
+		<Spanish>Torro Dorada</Spanish>
 		<Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE</Tag>
 		<English>Kalmar Castle</English>
 		<French>Ch&#226;teau de Kalmar</French>
 		<German>Schloss Kalmar</German>
-		<Italian/>
+		<Italian>Castello di Kalmar</Italian>
 		<Spanish>Castillo de Kalmar</Spanish>
 		<Russian>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Russian></TEXT>
 	<TEXT>
@@ -405,7 +422,7 @@
 		<English>Tomb of Al Khalid</English>
 		<French>Tombe de Al-Khalid</French>
 		<German>Grabmal von Al-Khalid</German>
-		<Italian/>
+		<Italian>Tomba di Al Khalid</Italian>
 		<Spanish>Tumba de Al Khalid</Spanish>
 		<Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian></TEXT>
 	<TEXT>
@@ -413,15 +430,15 @@
 		<English>Palais des Papes</English>
 		<French>Palais des Papes</French>
 		<German>Papstpalast</German>
-		<Italian/>
+		<Italian>Palazzo dei Papi</Italian>
 		<Spanish>Palacio Papal de Avi&#241;&#243;n</Spanish>
 		<Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#207;&#224;&#239;&#229;&#241;&#224;</Russian></TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER</Tag>
 		<English>Torre de Bel&#233;m</English>
 		<French>Tour de Belem</French>
-		<German>Torre de Belém</German>
-		<Italian/>
+		<German>Torre de Belem</German>
+		<Italian>Torre di Belem</Italian>
 		<Spanish>Tour de Bel&#233;m</Spanish>
 		<Russian>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Russian></TEXT>
 	<TEXT>
@@ -520,7 +537,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPLE_MOUNT_PEDIA</Tag>
-		<English>[TAB]The Temple Mount, also known as Mount Moriah and by Muslims as the Noble Sanctuary, is a religious site in the Old City of Jerusalem. Due to its importance for Judaism and Islam it is one of the most contested religious sites in the world.[PARAGRAPH:2]The Temple Mount contains the holiest site in Judaism. Jewish Midrash holds that it was from here that the world expanded into its present form, and that this was where God gathered the dust he used to create the first man, Adam. The Torah records that it was here that God chose to rest His Name and Divine Presence, and consequently two Jewish Temples were built at the site. According to Jewish tradition, the Third Temple will also be located here, and will be the final one. In recent times, due to difficulties in ascertaining the precise location of the Mount's holiest spot, many Jews will not set foot on the Mount itself.[PARAGRAPH:2]The Noble Sanctuary is the third holiest site in Islam, revered as the destination of Muhammad's journey to Jerusalem, and the location of his ascent to heaven. The site is also associated with all the Jewish biblical prophets who are also revered in Islam. The site is the location of the al-Aqsa Mosque and the Dome of the Rock, the oldest extant Islamic structure in the world.[PARAGRAPH:2]Controlled by Israel since 1967, both Israel and the Palestinian Authority claim sovereignty over the site, which remains a key issue in the Arab-Israeli conflict. A Muslim council, known as the Muslim Waqf, manages the site. The Israeli government enforces a controversial ban on prayer by non-Muslim visitors.</English>
+		<English>[TAB]Kazimierz is a historical district of Kraków (Poland), best known for being home to a Jewish community from the 14th century until the Second World War.
+[TAB]Jews had played an important role in the Kraków region economy since the end thirteenth century. The Jewish community in Kraków had lived undisturbed alongside their Christian neighbours under the protective King Kazimierz III. By the reign of King Jogaila (reigned in Poland 1386-1434), however, relations had deteriorated and pogroms began to occur with increasing frequency. As part of the re-founding of the Cracow Academy, starting in 1400, the Academy began to buy out buildings in the old Jewish district. The Jewish community moved to the area around modern Plac Szczepanski. During the last decade of the fifteenth century anti-Semitism led many Jews to move out of Kraków to nearby Kazimierz. There, they built a Fortress synagogue, the Old Synagogue (Kraków). In 1494 a disastrous fire destroyed a large part of Kraków. Raging populace soon attacked the Jews, blaming the fire on them. In 1495 the Polish king John I Albert of Poland expelled all Jews from Kraków, resettling them to the old Bawól district of Kazimierz. For its own defence against Christian raids, the kahal petitioned the Kazimierz town council for the right to build its own interior wall, cutting across the western end of the older defensive walls in 1553. Due to the growth of the community, the walls were expanded again in 1608. Later requests to expand the walls were turned down.
+[TAB]The area between the walls was known as the Oppidum Judaeorum, the Jewish City, which represented only about one fifth of the geographical area of Kazimierz, but nearly half of its inhabitants. The Oppidum became the main spiritual and cultural centre of Polish Jewry, hosting many of Poland's finest Jewish scholars, artists and craftsmen. Among its famous inhabitants were the Talmudist Moses Isserles, the Kabbalist Natan Szpiro, and the royal physician Shmuel bar Meshulam.
+[TAB]Interior of the Old Synagogue of Kazimierz before 1939.The golden age of the Oppidum came to an end in 1782, when the Austrian Emperor Joseph II disbanded the kahal. In 1822, the walls were torn down, removing any physical reminder of the old borders between Jewish and Christian Kazimierz.
+[TAB]In 1791, Kazimierz lost its status as a separate city and became a district of Kraków. The richer Jewish families quickly moved out of the overcrowded streets of eastern Kazimierz. Because of the injunction against travel on the Sabbath, however, most Jewish families stayed relatively close to the historic synagogues in the old Oppidum, maintaining Kazimierz's reputation as a "Jewish district" long after the concept ceased to have any administrative meaning. By the 1930s, Kraków had 120 officially registered synagogues and prayer houses scattered across the city and much of Jewish intellectual life had moved to new centres like Podgórze.
+[TAB]Jewish children in front of Corpus Christi church sometime before 1939.In a tourist guide published in 1935, Meir Balaban, a Reform rabbi and professor of History at the University of Warsaw, lamented that the Jews who remained in the once vibrant Oppidum were "only the poor and the ultra-conservative." However, this same exodus was the reason why most of the buildings in the Oppidum are preserved today in something close to their 18th century shape.
+[TAB]During the Second World War, the Jews of Krakow, including those in Kazimierz, were forced by the Nazis into a crowded ghetto in Podgórze, across the river. Most of them were later killed during the liquidation of the ghetto or in death camps.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -588,7 +611,7 @@
 		<English>Imperial Diet</English>
 		<French>Diète Fédérale</French>
 		<German>Reichstag</German>
-		<Italian/>
+		<Italian>Dieta Imperiale</Italian>
 		<Spanish>Dieta Imperial</Spanish>
 		<Russian/>
 	</TEXT>
@@ -605,7 +628,7 @@
 		<English>Copernicus' Observatory</English>
 		<French>Observatoire de Copernic</French>
 		<German>Observatorium von Kopernicus</German>
-		<Italian/>
+		<Italian>osservatorio Copernico</Italian>
 		<Spanish>Observatoire de Copernic</Spanish>
 		<Russian/>
 	</TEXT>
@@ -622,7 +645,7 @@
 		<English>Palazzo San Giorgio</English>
 		<French>Palazzo San Giorgio</French>
 		<German>Palazzo San Giorgio</German>
-		<Italian/>
+		<Italian>Palazzo San Giorgio</Italian>
 		<Spanish>Palazzo San Giorgio</Spanish>
 		<Russian/>
 	</TEXT>
@@ -639,7 +662,7 @@
 		<English>Amsterdam Beurs</English>
 		<French>Sac d'Amsterdam</French>
 		<German>Amsterdam Beurs</German>
-		<Italian/>
+		<Italian>Borsa di Amsterdam</Italian>
 		<Spanish>Bolsa de Amsterdam</Spanish>
 		<Russian/>
 	</TEXT>
@@ -656,7 +679,7 @@
 		<English>Westminster Abbey</English>
 		<French>Abbaye de Westminster</French>
 		<German>Westminster Abbay</German>
-		<Italian/>
+		<Italian>Abbazia di Westminster</Italian>
 		<Spanish>Abad&#237;a de Westminster</Spanish>
 		<Russian/>
 	</TEXT>
@@ -665,7 +688,7 @@
 		<English>Pressburg Castle</English>
 		<French>Ch&#226;teau de Pressburg</French>
 		<German>Pressburg</German>
-		<Italian/>
+		<Italian>Castello di Presburgo</Italian>
 		<Spanish>Castillo de Presburgo</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
