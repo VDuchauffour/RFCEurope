@@ -53,6 +53,8 @@ Changes for Beta 13:
 		- moved the Polish spawn location one tile to match the new terrain
 
 	XML/text updates:
+		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
+		- XML cleanup
 
 	Python/C++ updates:
 		- cleaned some old Rhye code from the Victory and RFCEvent modules
