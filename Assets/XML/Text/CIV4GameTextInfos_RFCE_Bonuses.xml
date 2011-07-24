@@ -158,17 +158,6 @@
 		<Spanish>Reliquia</Spanish>
 		<Russian>&#208;&#229;&#235;&#232;&#234;&#226;&#232;&#255;</Russian>
 	</TEXT>
-	<!-- ##### Terrain Bonuses - End ##### -->
-	<!-- BCM: New tag added 26.9.09 -->
-		<TEXT>
-			<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
-			<English>[ICON_BULLET]%D1% %F2from Resources</English>
-			<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>
-			<German>[ICON_BULLET]%D1% %F2durch Ressourcen</German>
-			<Italian>[ICON_BULLET]%D1% %F2resources</Italian>
-			<Spanish>[ICON_BULLET]%D1% %F2resources</Spanish>
-		</TEXT>
-	<!-- BCM: End -->
 	<TEXT>
 		<Tag>MOD_TXT_KEY_RESOURCE_COTTON</Tag>
 		<English>Cotton</English>
@@ -186,4 +175,15 @@
 		<Italian>Ambera</Italian>
 		<Spanish>Ambar</Spanish>
 	</TEXT>
+	<!-- ##### Terrain Bonuses - End ##### -->
+	<!-- BCM: New tag added 26.9.09 -->
+		<TEXT>
+			<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
+			<English>[ICON_BULLET]%D1% %F2from Resources</English>
+			<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>
+			<German>[ICON_BULLET]%D1% %F2durch Ressourcen</German>
+			<Italian>[ICON_BULLET]%D1% %F2resources</Italian>
+			<Spanish>[ICON_BULLET]%D1% %F2resources</Spanish>
+		</TEXT>
+	<!-- BCM: End -->
 </Civ4GameText>

@@ -655,7 +655,7 @@ class Victory:
                                 pNorse.setUHV( 1, 0 )
                                 
                 if ( iGameTurn <= xml.i1066AD and pNorse.getUHV( 2 ) == -1 ):
-                        if ( pNorse.getUHVCounter( 2 ) >= 30 ):
+                        if ( pNorse.getUHVCounter( 2 ) >= 50 ):
                                 pNorse.setUHV( 2, 1 )
                         elif ( iGameTurn == xml.i1066AD ):
                                 pNorse.setUHV( 2, 0 )

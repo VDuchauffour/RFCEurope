@@ -2680,8 +2680,8 @@
 		<CivilizationInfo>
 			<Type>CIVILIZATION_DUTCH</Type>
 			<Description>TXT_KEY_CIV_DUTCH_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_DUTCH_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_DUTCH_ADJECTIVE</Adjective>
+			<ShortDescription>TXT_KEY_CIV_NETHERLANDS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_NETHERLANDS_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_DUTCH_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1581AD</StartingYear>
@@ -3567,9 +3567,9 @@
 		<CivilizationInfo>
 			<Type>CIVILIZATION_FRANKIA</Type>
 			<Description>TXT_KEY_CIV_FRANKIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_FRANKIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_FRANKIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_FRANKIA_PEDIA</Civilopedia>
+			<ShortDescription>TXT_KEY_CIV_FRANCE_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_FRANCE_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_FRANCE_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
 			<LoadingTime>0</LoadingTime>
@@ -5758,7 +5758,7 @@
 			<Description>TXT_KEY_CIV_MOSCOW_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_MOSCOW_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MOSCOW_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_RUSSIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1380AD</StartingYear>
 			<LoadingTime>40</LoadingTime>
@@ -6185,7 +6185,7 @@
 			<Description>TXT_KEY_CIV_NORSE_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_NORSE_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NORSE_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NORSE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_VIKING_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>780AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
@@ -8351,9 +8351,9 @@
 		<CivilizationInfo>
 			<Type>CIVILIZATION_TURKEY</Type>
 			<Description>TXT_KEY_CIV_TURKEY_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_TURKEY_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_TURKEY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_TURKEY_PEDIA</Civilopedia>
+			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1359AD</StartingYear>
 			<LoadingTime>40</LoadingTime>
