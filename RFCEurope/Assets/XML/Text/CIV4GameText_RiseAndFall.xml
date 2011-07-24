@@ -239,22 +239,4 @@
 		<Spanish>. &#161;D&#233;mosles una lecci&#243;n a nuestros enemigos!</Spanish>
 		<Russian>&#242;&#229;&#240;&#240;&#232;&#242;&#238;&#240;&#232;&#255;. &#209;&#229;&#233;&#247;&#224;&#241; &#228;&#224;&#226;&#224;&#233;&#242;&#229; &#239;&#240;&#229;&#239;&#238;&#228;&#224;&#226;&#224;&#242;&#252; &#237;&#224;&#248;&#232;&#236; &#226;&#240;&#224;&#227;&#224;&#236; &#243;&#240;&#238;&#234;!</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FIRST_CONTACT_NEWWORLD</Tag>
-		<English>Conquerors from a far away continent are invading our lands searching for wealth!</English>
-		<French>Des conqu&#233;rants d'un continent lointain envahissent nos terres &#224; la recherche de richesses !</French>
-		<German>Eroberer von einem weit entfernten Kontinent fallen auf der Suche nach Reichtum in unser Land ein!</German>
-		<Italian>I conquistatori provenienti da un continente lontano invadono le nostre terre in cerca di ricchezza!</Italian>
-		<Spanish>&#161;Unos conquistadores de un continente lejano est&#225;n invadiendo nuestras tierras en busca de riquezas!</Spanish>
-		<Russian>&#199;&#224;&#226;&#238;&#229;&#226;&#224;&#242;&#229;&#235;&#232; &#228;&#224;&#235;&#229;&#234;&#238;-&#228;&#224;&#235;&#229;&#234;&#238; &#241; &#234;&#238;&#237;&#242;&#232;&#237;&#229;&#237;&#242;&#224; &#226;&#242;&#238;&#240;&#227;&#224;&#254;&#242;&#241;&#255; &#237;&#224;&#248;&#232; &#231;&#229;&#236;&#235;&#232;, &#232;&#249;&#243;&#249;&#232;&#229; &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#224;!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FIRST_CONTACT_OLDWORLD</Tag>
-		<English>A group of our own adventurers has arrived in the new world searching for wealth!</English>
-		<French>Un groupe de nos aventuriers est arriv&#233; dans le nouveau monde &#224; la recherche de richesses !</French>
-		<German>Eine Gruppe Eurer eigenen Abenteurer ist auf der Suche nach Reichtum in der Neuen Welt angekommen!</German>
-		<Italian>Un gruppo di nostri avventurieri &#232; arrivato nel nuovo mondo in cerca di ricchezza!</Italian>
-		<Spanish>&#161;Uno de nuestros grupos de aventureros ha llegado a unas nuevas tierras en busca de riquezas!</Spanish>
-		<Russian>&#195;&#240;&#243;&#239;&#239;&#224; &#237;&#224;&#248;&#232;&#245; &#241;&#238;&#225;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#245; &#224;&#226;&#224;&#237;&#242;&#254;&#240;&#232;&#241;&#242;&#238;&#226; &#239;&#240;&#232;&#225;&#251;&#235;&#224; &#226; &#237;&#238;&#226;&#251;&#233; &#236;&#232;&#240;, &#232;&#249;&#243;&#249;&#232;&#233; &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#224;!</Russian>
-	</TEXT>
 </Civ4GameText>

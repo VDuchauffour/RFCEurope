@@ -47,6 +47,7 @@ Changes for Beta 13:
 
 	General changes  and UHV updates:
 		- Madeira added to first Portugese UHV
+		- Viking UHV requires 50 Viking Points
 
 	Map and province changes:
 		- updated Polish and Lithuanian Settlers Maps
@@ -55,6 +56,7 @@ Changes for Beta 13:
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
 		- XML cleanup
+		- Added some links
 
 	Python/C++ updates:
 		- cleaned some old Rhye code from the Victory and RFCEvent modules

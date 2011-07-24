@@ -183,56 +183,6 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM</Tag>
-		<English>Islam</English>
-		<French>
-			<Text>Islam</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Islam</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Islamismo:Islamica</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Islamismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#200;&#241;&#235;&#224;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Tag>
-		<English>Islamic</English>
-		<French>
-			<Text>Islamique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>islamisch:islamischen:islamische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Misticismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_TITLE</Tag>
 		<English>The Reformation!</English>
 		<French>La R&#233;forme!</French>

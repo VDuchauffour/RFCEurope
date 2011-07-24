@@ -216,10 +216,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANSEATIC_HELP</Tag>
-		<English>[ICON_BULLET]Can only be founded in coastal town.</English>
-		<French>[ICON_BULLET]Can only be founded in coastal town.</French>
-		<German>[ICON_BULLET]Kann nur in einer K&#252;stestadt gegründet werden.</German>
-		<Italian>[ICON_BULLET]Can only be founded in coastal town.</Italian>
-		<Spanish>[ICON_BULLET]Can only be founded in coastal town.</Spanish>
+		<English>[ICON_BULLET]Can only be founded in coastal towns</English>
+		<French>[ICON_BULLET]Can only be founded in coastal towns</French>
+		<German>[ICON_BULLET]Kann nur in einer K&#252;stestadt gegründet werden</German>
+		<Italian>[ICON_BULLET]Can only be founded in coastal towns</Italian>
+		<Spanish>[ICON_BULLET]Can only be founded in coastal towns</Spanish>
 	</TEXT>
 </Civ4GameText>
