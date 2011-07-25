@@ -9700,7 +9700,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP10</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9717,7 +9717,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP11</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9734,7 +9734,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP12</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9751,7 +9751,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP12</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9768,7 +9768,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP13</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9785,7 +9785,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP14</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9802,7 +9802,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP14</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9819,7 +9819,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP15</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9836,7 +9836,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP16</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9853,7 +9853,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP16</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9870,7 +9870,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP17</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9887,7 +9887,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP18</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9904,7 +9904,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP19</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9921,7 +9921,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP20</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9938,7 +9938,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP21</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
@@ -9955,7 +9955,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP09</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9972,7 +9972,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP08</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>CIVIC_MERCHANT_REPUBLIC</DCNConditionCivic>
@@ -9989,7 +9989,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP05</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -10006,7 +10006,7 @@
                                         <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_POP02</DCNName>
+                                        <DCNName>TXT_KEY_DN_POP00</DCNName>
                                 </DCNCondition>
                         </DCNConditions>
 			<!-- 3Miro End Update -->

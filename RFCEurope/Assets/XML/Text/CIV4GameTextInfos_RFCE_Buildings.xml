@@ -352,26 +352,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
 		<English>The road to the Masjid al-Haram</English>
-		<French>
-			<Text>Al-Masjid al-Haraam</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Masjid al-Haram</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Il Masjid al-Haram</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mezquita al-Haram</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Al-Masjid al-Haraam</French>
+		<German>Masjid al-Haram</German>
+		<Italian>Il Masjid al-Haram</Italian>
+		<Spanish>Mezquita al-Haram</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>

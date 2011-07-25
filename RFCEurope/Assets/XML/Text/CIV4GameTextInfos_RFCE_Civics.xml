@@ -8,26 +8,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_EXPANSION</Tag>
 		<English>Expansion</English>
-		<French>
-			<Text>Expansion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Expansion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Expansione</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Expansi&#243;n</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Expansion</French>
+		<German>Expansion</German>
+		<Italian>Expansione</Italian>
+		<Spanish>Expansi&#243;n</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
@@ -35,57 +19,126 @@
 		<English>Lower unit costs and happiness from castles</English>
 		<French>Am&#233;liore l'Espionnage; bonus de recherche et culture depuis les sp&#233;cialistes</French>
 		<German>Geringere Unterhalskosten für Einheiten und Zufriedenheit durch Schl&#246;sser</German>
-		<Italian/><Spanish/><Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian></TEXT>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
 		<English>Happiness from military units; culture from specialists; faster great generals</English>
-		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French><German/><Italian/><Spanish/><Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian></TEXT>
+		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French><German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
-		<English>"We Love the Despot Day"</English><French/><German/><Italian/><Spanish/><Russian/></TEXT>
+		<English>"We Love the Despot Day"</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_KING</Tag>
-		<English>"We Love the King Day"</English><French/><German/><Italian/><Spanish/><Russian/></TEXT>
+		<English>"We Love the King Day"</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
 		<English>Can use gold to rush production; +1 hammer from towns</English>
-		<French>Peut utiliser l'Or pour terminer la production</French><German/><Italian/><Spanish/><Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian></TEXT>
+		<French>Peut utiliser l'Or pour terminer la production</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
 		<English>Can levy units</English>
-		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French><German/><Italian/><Spanish/><Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian></TEXT>
+		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
 		<English>Unlimited priests and faster great people; unhappiness with non-state religions</English>
-		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French><German/><Italian/><Spanish/><Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian></TEXT>
+		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
 		<English>Faster great people. Higher military support costs</English>
-		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French><German/><Italian/><Spanish/><Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Russian></TEXT>
+		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
 		<English>+100% growth to cottages, hamlets, and villages; +2 gold from towns.</English>
-		<French>+100%% de croissance des cottages, hameaux et villages.</French><German/><Italian/><Spanish/><Russian>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Russian></TEXT>
+		<French>+100%% de croissance des cottages, hameaux et villages.</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
 		<English>Unlimited artists, scholars, and merchants; workshops give extra production</English>
-		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French><German/><Italian/><Spanish/><Russian>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian></TEXT>
+		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
 		<English>Extra commerce and production from cities; penalty for other civs not adopting this</English>
-		<French>Amelioration du commerce et de la production depuis les villes</French><German/><Italian/><Spanish/><Russian>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian></TEXT>
+		<French>Amelioration du commerce et de la production depuis les villes</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
 		<English>-1 trade route, gold from farms</English>
-		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French><German/><Italian/><Spanish/><Russian>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Russian></TEXT>
+		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
 		<English>Good for trade; bad for war</English>
-		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French><German/><Italian/><Spanish/><Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian></TEXT>
+		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
 		<English>Cities with State Religion train units faster</English>
-		<French/><German/><Italian/><Spanish/><Russian/></TEXT>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
 		<English>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</English>
@@ -394,626 +447,226 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DESPOTISM</Tag>
 		<English>Despotism</English>
-		<French>
-			<Text>Despotisme</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Despotismus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Dispotismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Despotismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Despotisme</French>
+		<German>Despotismus</German>
+		<Italian>Dispotismo</Italian>
+		<Spanish>Despotismo</Spanish>
 		<Russian>&#196;&#229;&#241;&#239;&#238;&#242;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY</Tag>
 		<English>Feudal Monarchy</English>
-		<French>
-			<Text>Monarchie féodale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Feudale Monarchie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Monarchia feudale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Monarquía feudal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Monarchie féodale</French>
+		<German>Feudale Monarchie</German>
+		<Italian>Monarchia feudale</Italian>
+		<Spanish>Monarquía feudal</Spanish>
 		<Russian>&#221;&#235;&#229;&#234;&#242;&#238;&#240;&#224;&#242;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY</Tag>
 		<English>Divine Monarchy</English>
-		<French>
-			<Text>Monarchie Divine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>G&#246;ttliche Monarchie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Monarchia divinaa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Adivine Monarquía</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Monarchie Divine</French>
+		<German>G&#246;ttliche Monarchie</German>
+		<Italian>Monarchia divinaa</Italian>
+		<Spanish>Adivine Monarquía</Spanish>
 		<Russian>&#193;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
 		<English>Limited Monarchy</English>
-		<French>
-			<Text>Monarchie Constitutionnelle</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Konstitutionelle Monarchie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Monarchia costituzionale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Monarquía constitucional</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Monarchie Constitutionnelle</French>
+		<German>Konstitutionelle Monarchie</German>
+		<Italian>Monarchia costituzionale</Italian>
+		<Spanish>Monarquía constitucional</Spanish>
 		<Russian>&#202;&#238;&#237;&#241;&#242;&#232;&#242;&#243;&#246;&#232;&#238;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
 		<English>Republic</English>
-		<French>
-			<Text>R&#233;publique</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Republik</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Repubblica</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>República</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>R&#233;publique</French>
+		<German>Republik</German>
+		<Italian>Repubblica</Italian>
+		<Spanish>República</Spanish>
 		<Russian>&#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW</Tag>
 		<English>Tribal Law</English>
-		<French>
-			<Text>Loi Tribale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Stammesgesetz</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Legge tribale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ley tribal</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Loi Tribale</French>
+		<German>Stammesgesetz</German>
+		<Italian>Legge tribale</Italian>
+		<Spanish>Ley tribal</Spanish>
 		<Russian>&#208;&#238;&#228;&#238;&#226;&#238;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW</Tag>
 		<English>Feudal Law</English>
-		<French>
-			<Text>Loi F&#233;odale</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Feudales Recht</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Legge feudale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ley feudal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Loi F&#233;odale</French>
+		<German>Feudales Recht</German>
+		<Italian>Legge feudale</Italian>
+		<Spanish>Ley feudal</Spanish>
 		<Russian>&#212;&#229;&#238;&#228;&#224;&#235;&#252;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY</Tag>
 		<English>Bureaucracy</English>
-		<French>
-			<Text>Bureaucratie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>B&#252;rokratie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Burocrazia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Burocracia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Bureaucratie</French>
+		<German>B&#252;rokratie</German>
+		<Italian>Burocrazia</Italian>
+		<Spanish>Burocracia</Spanish>
 		<Russian>&#193;&#254;&#240;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>
 		<English>Religious Law</English>
-		<French>
-			<Text>Loi Religieuse</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Religi&#246;ses Recht</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Legge di Relisious</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ley de Relisious</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Loi Religieuse</French>
+		<German>Religi&#246;ses Recht</German>
+		<Italian>Legge di Relisious</Italian>
+		<Spanish>Ley de Relisious</Spanish>
 		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW</Tag>
 		<English>Common Law</English>
-		<French>
-			<Text>Loi Commune</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gewohnheitsrecht</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Diritto comune</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ley no escrita</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Loi Commune</French>
+		<German>Gewohnheitsrecht</German>
+		<Italian>Diritto comune</Italian>
+		<Spanish>Ley no escrita</Spanish>
 		<Russian>&#206;&#225;&#249;&#229;&#229; &#207;&#240;&#224;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBALISM</Tag>
 		<English>Tribalism</English>
-		<French>
-			<Text>Tribalisme</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Stammessystem</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Organiz. tribale</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Tribalismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Tribalisme</French>
+		<German>Stammessystem</German>
+		<Italian>Organiz. tribale</Italian>
+		<Spanish>Tribalismo</Spanish>
 		<Russian>&#210;&#240;&#224;&#233;&#225;&#224;&#235;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
 		<English>Apprenticeship</English>
-		<French>
-			<Text>Apprentissage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Ausbildung</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Apprendistato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Aprendizaje</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Apprentissage</French>
+		<German>Ausbildung</German>
+		<Italian>Apprendistato</Italian>
+		<Spanish>Aprendizaje</Spanish>
 		<Russian>&#211;&#247;&#229;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM</Tag>
 		<English>Serfdom</English>
-		<French>
-			<Text>Servage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Leibeigenschaft</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Servit&#249;</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Servidumbre</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Servage</French>
+		<German>Leibeigenschaft</German>
+		<Italian>Servit&#249;</Italian>
+		<Spanish>Servidumbre</Spanish>
 		<Russian>&#202;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
 		<English>Free Peasantry</English>
-		<French>
-			<Text>Paysannerie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Freie Bauernschaft</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Liberare dei Contadini</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Liberte el Campesinado</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Paysannerie</French>
+		<German>Freie Bauernschaft</German>
+		<Italian>Liberare dei Contadini</Italian>
+		<Spanish>Liberte el Campesinado</Spanish>
 		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#229; &#202;&#240;&#229;&#241;&#242;&#252;&#255;&#237;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
 		<English>Free Labor</English>
-		<French>
-			<Text>Libert&#233; de Travail</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Freier Arbeitsmarkt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Liberare la mano d'opera</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Liberte Trabajo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Libert&#233; de Travail</French>
+		<German>Freier Arbeitsmarkt</German>
+		<Italian>Liberare la mano d'opera</Italian>
+		<Spanish>Liberte Trabajo</Spanish>
 		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#240;&#224;&#225;&#238;&#247;&#224;&#255; &#209;&#232;&#235;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION</Tag>
 		<English>Decentralization</English>
-		<French>
-			<Text>D&#233;centralisation</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Dezentralisierung</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Decentralizzazione</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Descentralizaci&#243;n</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>D&#233;centralisation</French>
+		<German>Dezentralisierung</German>
+		<Italian>Decentralizzazione</Italian>
+		<Spanish>Descentralizaci&#243;n</Spanish>
 		<Russian>&#196;&#229;&#246;&#229;&#237;&#242;&#240;&#224;&#235;&#232;&#231;&#224;&#246;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM</Tag>
 		<English>Mercantilism</English>
-		<French>
-			<Text>Mercantilisme</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Merkantilismus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Mercantilismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mercantilismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Mercantilisme</French>
+		<German>Merkantilismus</German>
+		<Italian>Mercantilismo</Italian>
+		<Spanish>Mercantilismo</Spanish>
 		<Russian>&#204;&#229;&#240;&#234;&#224;&#237;&#242;&#232;&#235;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM</Tag>
 		<English>Manorialism</English>
-		<French>
-			<Text>Manorialisme</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Grunddherrschaft</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Manorialism</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Señorío</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Manorialisme</French>
+		<German>Grunddherrschaft</German>
+		<Italian>Manorialism</Italian>
+		<Spanish>Señorío</Spanish>
 		<Russian>&#204;&#224;&#237;&#238;&#240;&#224;&#235;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY</Tag>
 		<English>Trade Economy</English>
-		<French>
-			<Text>Économie de marché</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Marktwirtschaft</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Economia di mercato</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Economía de mercado</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Économie de marché</French>
+		<German>Marktwirtschaft</German>
+		<Italian>Economia di mercato</Italian>
+		<Spanish>Economía de mercado</Spanish>
 		<Russian>&#195;&#232;&#235;&#252;&#228;&#232;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Tag>
 		<English>Merchant Republic</English>
-		<French>
-			<Text>R&#233;publique Marchande</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Handelsrepublik</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Repubblica di commerciante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>República de comerciante</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>R&#233;publique Marchande</French>
+		<German>Handelsrepublik</German>
+		<Italian>Repubblica di commerciante</Italian>
+		<Spanish>República de comerciante</Spanish>
 		<Russian>&#202;&#238;&#236;&#236;&#229;&#240;&#247;&#229;&#241;&#234;&#224;&#255; &#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM</Tag>
 		<English>Paganism</English>
-		<French>
-			<Text>Paganisme</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Heidentum</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Paganesimo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Paganismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Paganisme</French>
+		<German>Heidentum</German>
+		<Italian>Paganesimo</Italian>
+		<Spanish>Paganismo</Spanish>
 		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION</Tag>
 		<English>Organized Religion</English>
-		<French>
-			<Text>Religion organis&#233;e</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Organisierte Religion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Relig. organizzata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Religi&#243;n organizada</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Religion organis&#233;e</French>
+		<German>Organisierte Religion</German>
+		<Italian>Relig. organizzata</Italian>
+		<Spanish>Religi&#243;n organizada</Spanish>
 		<Russian>&#206;&#240;&#227;&#224;&#237;&#232;&#231;&#238;&#226;&#224;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY</Tag>
 		<English>Theocracy</English>
-		<French>
-			<Text>Th&#233;ocratie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Theokratie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Teocrazia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Teocracia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Th&#233;ocratie</French>
+		<German>Theokratie</German>
+		<Italian>Teocrazia</Italian>
+		<Spanish>Teocracia</Spanish>
 		<Russian>&#210;&#229;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>
 		<English>State Religion</English>
-		<French>
-			<Text>Religion d'&#201;tat</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Staatsreligion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Dichiarare la Religione</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Indique Religión</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Religion d'&#201;tat</French>
+		<German>Staatsreligion</German>
+		<Italian>Dichiarare la Religione</Italian>
+		<Spanish>Indique Religión</Spanish>
 		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION</Tag>
 		<English>Free Religion</English>
-		<French>
-			<Text>Libert&#233; de culte</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Religionsfreiheit</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Libert&#224; religiosa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Libertad religiosa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Libert&#233; de culte</French>
+		<German>Religionsfreiheit</German>
+		<Italian>Libert&#224; religiosa</Italian>
+		<Spanish>Libertad religiosa</Spanish>
 		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
@@ -1235,26 +888,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
 		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
-		<French>
-			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</French>
+		<German>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</German>
+		<Italian>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Italian>
+		<Spanish>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Spanish>
 		<Russian>Allows contruction of non-State Religion Buildings and Wonders</Russian>
 	</TEXT>
 	<TEXT>
@@ -1262,15 +899,28 @@
 		<English>Adds stability for each colony founded</English>
 		<French/>
 		<German>Stabilitätspunkte für jede errichtete Kolonie</German>
-		<Italian/><Spanish/><Russian/></TEXT>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
 		<English>Adds stability for each city outside the core area</English>
-		<French/><German/><Italian/><Spanish/><Russian/></TEXT>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
 		<English>+1 production from farms, slower growth for cottages and great people</English>
-		<French/><German/><Italian/><Spanish/><Russian/></TEXT>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1</Tag>
 		<English>[ICON_BULLET]%D1_Mod [ICON_GOLD] </English>
@@ -1278,7 +928,8 @@
 		<German>[ICON_BULLET]%D1_Mod [ICON_GOLD] </German>
 		<Italian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Russian></TEXT>
+		<Russian>[ICON_BULLET]%D1_Mod [ICON_GOLD] </Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO2</Tag>
 		<English>for [LINK=literal]%s1_Building[\LINK]</English>
@@ -1286,7 +937,8 @@
 		<German>for [LINK=literal]%s1_Building[\LINK]</German>
 		<Italian>for [LINK=literal]%s1_Building[\LINK]</Italian>
 		<Spanish>for [LINK=literal]%s1_Building[\LINK]</Spanish>
-		<Russian>for [LINK=literal]%s1_Building[\LINK]</Russian></TEXT>
+		<Russian>for [LINK=literal]%s1_Building[\LINK]</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Mod% Unit Production</English>
@@ -1294,7 +946,8 @@
 		<German>[ICON_BULLET]%D1_Mod% Unit Production</German>
 		<Italian>[ICON_BULLET]%D1_Mod% Unit Production</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% Unit Production</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod% Unit Production</Russian></TEXT>
+		<Russian>[ICON_BULLET]%D1_Mod% Unit Production</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
 		<English>[ICON_BULLET]%D1_Mod% from Civics</English>
@@ -1302,5 +955,6 @@
 		<German>[ICON_BULLET]%D1_Mod% from Civics</German>
 		<Italian>[ICON_BULLET]%D1_Mod% from Civics</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% from Civics</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod% from Civics</Russian></TEXT>
+		<Russian>[ICON_BULLET]%D1_Mod% from Civics</Russian>
+	</TEXT>
 </Civ4GameText>
