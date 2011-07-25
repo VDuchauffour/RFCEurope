@@ -68,12 +68,14 @@ Changes for Beta 13:
 		- Pope doesn't favor to build the Notre Dame anymore
 		- The Pope is far more likely to favor the Catholic owner of Jerusalem, when deciding to build Churches/Monasteries
 		- Genoa and Venezia prefers to build the Lanterna wonder, Poland more likely builds Kazimierz
+		- Golden Age now allows for Anarchy-free change of Civics and Religion (like regular BtS)
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
 		- Germany no longer wins thier UHV if they found Printing Press, but are not Catholic (you need to really found Protestantism)
 		- Calais now spawns properly in 800AD
 		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Formation)
+		- Fixed a small bug in TeamAI.cpp thanks to Morholt
 
 	Interface:
 		- New screen to display which colonies have been built.

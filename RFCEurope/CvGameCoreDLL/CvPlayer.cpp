@@ -8048,10 +8048,10 @@ int CvPlayer::getCivicAnarchyLength(CivicTypes* paeNewCivics) const
 	}
 
 	//Rhye - start comment
-	/*if (isGoldenAge())
+	if (isGoldenAge())
 	{
 		return 0;
-	}*/
+	}
 	//Rhye - end
 
 	iAnarchyLength = 0;
@@ -8102,10 +8102,10 @@ int CvPlayer::getReligionAnarchyLength() const
 	}
 
 	//Rhye - start comment
-	/*if (isGoldenAge())
+	if (isGoldenAge())
 	{
 		return 0;
-	}*/
+	}
 	//Rhye - end
 
 	iAnarchyLength = GC.getDefineINT("BASE_RELIGION_ANARCHY_LENGTH");
