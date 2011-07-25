@@ -1031,8 +1031,8 @@ iUP_UnitProduction = 6		# after specific tech, faster unit production
 iUP_EnableCivic = 7		# always enable some civics (also use the WB)
 iUP_TradeRoutes = 8		# add some trade routes (sync with GlobalDefines.xml for max trade routes)
 iUP_ImprovementBonus = 9	# chnage the yield of a specific improvement
-iUP_PromotionI = 10		# give a promotion to all units
-iUP_PromotionII = 11		# give a second promotion to all units
+iUP_PromotionI = 10		# give a promotion to all units for which it is valid
+iUP_PromotionII = 11		# give a promotion to all units regardless if it is valid
 iUP_CanEnterTerrain = 12	# all unit can enter some terrain type
 iUP_NoResistance = 13		# no resistance from conquering cities
 iUP_Conscription = 14		# can draft from cities with foreign culture
@@ -1083,9 +1083,10 @@ iProvinceNatural   = 4 # stable, small penalty for not conquering it
 iProvinceCore      = 5 # stable, large penalty for not conquering it
 iNumProvinceTypes  = 6      
 
-# special parameters
-iIsHasStephansdom = 0 # special parameter
-iIsHasEscorial    = 1 # special parameter
+# special parameters (picklefree)
+iIsHasStephansdom = 0 # Stability parameter in Python
+iIsHasEscorial    = 1 # Stability parameter in Python
+iMercCostPerTurn  = 2 # Mercenaries
 
 # Stability Cathegories
 iCathegoryCities = 0

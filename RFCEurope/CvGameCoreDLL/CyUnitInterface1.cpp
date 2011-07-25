@@ -393,5 +393,11 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("getArtInfo", &CyUnit::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, eEra)")
 		.def("getButton", &CyUnit::getButton, "std::string ()")
+
+		// 3MiroMercs: helper functions
+		.def("setMercID", &CyUnit::setMercID, "void setMercID ( int iMercID )")
+		.def("getMercID", &CyUnit::getMercID, "int getMercID()")
+		.def("setMercUpkeep", &CyUnit::setMercUpkeep, "void setMercUpkeep ( int iNewUpkeep )")
+		.def("getMercUpkeep", &CyUnit::getMercUpkeep, "int getMercUpkeep()")
 		;
 }

@@ -404,6 +404,12 @@ public:
 	void attackForDamage(CyUnit *defender, int attakerDamageChange, int defenderDamageChange);
 	void rangeStrike(int iX, int iY);
 
+	// 3MiroMercs: mercenary proprties for the Unit
+	void setMercID( int iMercID );
+	int getMercID() const;
+	void setMercUpkeep( int iNewUpkeep );
+	int getMercUpkeep() const;
+
 protected:
 	CvUnit* m_pUnit;
 };

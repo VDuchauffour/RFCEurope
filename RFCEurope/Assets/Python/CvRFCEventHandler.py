@@ -28,7 +28,8 @@ import Victory
 import Stability
 import Plague
 #import Communications
-import Crusades  
+import Crusades
+import Mercenaries
 import RFCEMaps as rfcemaps      
         
 gc = CyGlobalContext()        
@@ -181,6 +182,9 @@ class CvRFCEventHandler:
                 self.pla = Plague.Plague()
                 #self.com = Communications.Communications()
                 self.crusade = Crusades.Crusades()
+                
+                # 3MiroMercs
+                self.mercs = Mercenaries.MercenaryManager()
                 
                 
                 #Mercenaries - start
@@ -581,6 +585,8 @@ class CvRFCEventHandler:
                 iGameTurn = argsList[0]
                 #print (" 3Miro END TURN ", iGameTurn)
                 self.sta.checkImplosion(iGameTurn)
+                # 3MiroMercs
+                self.mercs.doMercsTurn(iGameTurn)
                 
                 
 
@@ -634,6 +640,8 @@ class CvRFCEventHandler:
         # gold/turn information will be updated.        
         def onUnitPromoted(self, argsList):
                 'Unit Promoted'
+                
+                self.mercs.onUnitPromoted( argsList )
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye   
                 if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
@@ -649,6 +657,8 @@ class CvRFCEventHandler:
         # This method will remove a mercenary unit from the game if it is killed
         def onUnitKilled(self, argsList):
                 'Unit Killed'
+                
+                self.mercs.onUnitKilled( argsList )
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
                 if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
@@ -767,9 +777,9 @@ class CvRFCEventHandler:
 
                         print("ALT-N")
                         
-                        self.printEmbassyDebug()
+                        #self.printEmbassyDebug()
                         self.printPlotsDebug()
-                        self.printStabilityDebug()
+                        #self.printStabilityDebug()
 
 
                 if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_E) and self.eventManager.bAlt and self.eventManager.bShift):
