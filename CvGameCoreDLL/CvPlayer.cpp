@@ -23439,6 +23439,9 @@ int CvPlayer::getProvinceCurrentState( int iProvince ){
 	if ( (iProvince >= MAX_NUM_PROVINCES) || (iProvince < 0) ){
 		return -1;
 	};
+	if ( provinceSizeList[iProvince] == 0 ){ // 3Miro: unused provinces count as "Nothing"
+		return PROVINCE_NOTHING;
+	};
 	for( i=0; i<provinceSizeList[iProvince]; i++ ){
 		pPlot = GC.getMapINLINE().plot( provinceTileList[iProvince][2*i], provinceTileList[iProvince][2*i+1] );
 		if ( pPlot ->getOwner() == getID() ){

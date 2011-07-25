@@ -1692,3 +1692,18 @@ std::string CyUnit::getButton() const
 {
 	return m_pUnit ? m_pUnit->getButton() : "";
 }
+
+void CyUnit::setMercID( int iMercID ){
+	m_pUnit ->setMercID( iMercID );
+};
+int CyUnit::getMercID() const
+{
+	return m_pUnit ? m_pUnit->getMercID() : -1;
+};
+void CyUnit::setMercUpkeep( int iNewUpkeep ){
+	m_pUnit ->setMercUpkeep( iNewUpkeep );
+};
+int CyUnit::getMercUpkeep() const
+{
+	return m_pUnit ? m_pUnit->getMercUpkeep() : -1;
+};

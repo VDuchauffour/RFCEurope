@@ -72,6 +72,10 @@ class StoredData:
 				    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     #3Miro: Monor Nations Respawn
                                     'lNextMinorRevolt':[-1,-1,-1],
-                                    'lRevoltinNationRevoltIndex':[-1,-1]
+                                    'lRevoltinNationRevoltIndex':[-1,-1],
+                                    #3Miro: hired mercs
+                                    'lMercGlobalPool':[],
+                                    ## 3Miro: must be at least as long as lMercList
+                                    'lMercsHiredBy':[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,]
 				}
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )

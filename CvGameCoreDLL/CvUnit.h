@@ -772,7 +772,18 @@ public:
 	virtual void AI_setUnitAIType(UnitAITypes eNewValue) = 0;
     virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
 
+	// 3MiroMercs: mercenary proprties for the Unit
+	void setMercID( int iMercID );
+	int getMercID() const;
+	void setMercUpkeep( int iNewUpkeep );
+	int getMercUpkeep() const;
+
 protected:
+
+	// 3MiroMercs: start - Merc variables
+	int m_iMercID;
+	int m_iMercUpkeep;
+	// 3MiroMercs: end - Merc variables
 
 	int m_iID;
 	int m_iGroupID;

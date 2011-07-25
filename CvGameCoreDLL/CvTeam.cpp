@@ -1170,7 +1170,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 {
 	PROFILE_FUNC();
 
-	CLLNode<TradeData>* pNode;
+	//CLLNode<TradeData>* pNode; // 3Miro: unreferenced
 	CvDiploParameters* pDiplo;
 	CvDeal* pLoopDeal;
 	CvWString szBuffer;

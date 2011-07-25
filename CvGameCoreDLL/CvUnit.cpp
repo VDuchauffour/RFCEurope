@@ -232,7 +232,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGameINLINE().logMsg("   --- Init 10 with ");
 	int iUPP = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_PROMOTION_I];
 	if ( iUPP > -1 ){
-		setHasPromotion(((PromotionTypes)iUPP), true);
+		if ( this->isPromotionValid((PromotionTypes)iUPP) ){
+			setHasPromotion(((PromotionTypes)iUPP), true);
+		};
 	};
 	iUPP = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_PROMOTION_II];
 	if ( iUPP > -1 ){
@@ -315,6 +317,11 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	//--------------------------------
 	// Uninit class
 	uninit();
+
+	// 3MiroMercs: start reset the values
+	m_iMercID = -1;
+	m_iMercUpkeep = 0;
+	// 3MiroMercs: end reset the values
 
 	m_iID = iID;
 	m_iGroupID = FFreeList::INVALID_INDEX;
@@ -470,6 +477,11 @@ void CvUnit::convert(CvUnit* pUnit)
 	{
 		setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)));
 	}
+
+	// 3MiroMercs: keep settings on convert
+	setMercID( pUnit ->getMercID() );
+	setMercUpkeep( pUnit ->getMercUpkeep() );
+	// 3MiroMercs: end
 
 	setGameTurnCreated(pUnit->getGameTurnCreated());
 	setDamage(pUnit->getDamage());
@@ -11737,6 +11749,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	pStream->Read(&m_bDeathDelay);
 	pStream->Read(&m_bCombatFocus);
 	// m_bInfoBarDirty not saved...
+	// 3MiroMercs: read the data
+	pStream->Read(&m_iMercID);
+	pStream->Read(&m_iMercUpkeep);
+	// 3MiroMercs: end read the data
 	pStream->Read(&m_bBlockading);
 	if (uiFlag > 0)
 	{
@@ -11841,6 +11857,10 @@ void CvUnit::write(FDataStreamBase* pStream)
 	pStream->Write(m_bDeathDelay);
 	pStream->Write(m_bCombatFocus);
 	// m_bInfoBarDirty not saved...
+	// 3MiroMercs: write the merc parameters
+	pStream->Write(m_iMercID);
+	pStream->Write(m_iMercUpkeep);
+	// 3MiroMercs: end write the merc parameters
 	pStream->Write(m_bBlockading);
 	pStream->Write(m_bAirCombat);
 
@@ -13173,3 +13193,17 @@ int CvUnit::getSelectionSoundScript() const
 	return iScriptId;
 }
 
+void CvUnit::setMercID( int iMercID ){
+	m_iMercID = iMercID;
+};
+int CvUnit::getMercID() const
+{
+	return m_iMercID;
+};
+void CvUnit::setMercUpkeep( int iNewUpkeep ){
+	m_iMercUpkeep = iNewUpkeep;
+};
+int CvUnit::getMercUpkeep() const
+{
+	return m_iMercUpkeep;
+};
