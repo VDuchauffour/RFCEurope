@@ -58306,36 +58306,6 @@ BeginSign
 	caption=25
 EndSign
 BeginSign
-	plotX=39
-	plotY=67
-	playerType=-1
-	caption=23
-EndSign
-BeginSign
-	plotX=38
-	plotY=66
-	playerType=-1
-	caption=23
-EndSign
-BeginSign
-	plotX=37
-	plotY=65
-	playerType=-1
-	caption=23
-EndSign
-BeginSign
-	plotX=44
-	plotY=69
-	playerType=-1
-	caption=23
-EndSign
-BeginSign
-	plotX=45
-	plotY=68
-	playerType=-1
-	caption=23
-EndSign
-BeginSign
 	plotX=43
 	plotY=58
 	playerType=-1
@@ -61194,6 +61164,36 @@ EndSign
 BeginSign
 	plotX=39
 	plotY=60
+	playerType=-1
+	caption=147
+EndSign
+BeginSign
+	plotX=37
+	plotY=65
+	playerType=-1
+	caption=147
+EndSign
+BeginSign
+	plotX=38
+	plotY=66
+	playerType=-1
+	caption=147
+EndSign
+BeginSign
+	plotX=39
+	plotY=67
+	playerType=-1
+	caption=147
+EndSign
+BeginSign
+	plotX=44
+	plotY=69
+	playerType=-1
+	caption=147
+EndSign
+BeginSign
+	plotX=45
+	plotY=68
 	playerType=-1
 	caption=147
 EndSign

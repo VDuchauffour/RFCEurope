@@ -844,6 +844,6 @@ iP_Bosnia = 143
 iP_Thessaloniki = 144
 iP_Marrakesh = 145
 iP_Madeira = 146
-iP_IsleOfMan = 147
+iP_TheIsles = 147
 
 iP_MaxNumberOfProvinces = 150
