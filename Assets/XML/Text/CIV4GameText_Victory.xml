@@ -722,15 +722,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP1</Tag>
-		<English>Smite the infidels</English><French/><German/><Italian/><Spanish/><Russian/>
+		<English>Smite the infidels</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP2</Tag>
-		<English>Ensure Jerusalem is Catholic</English><French/><German/><Italian/><Spanish/><Russian/>
+		<English>Ensure Jerusalem is Catholic</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POPE</Tag>
-		<English>Prophet</English><French/><German/><Italian/><Spanish/><Russian/>
+		<English>Prophet</English>
+		<French/>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CULTURE</Tag>
@@ -796,4 +811,3 @@
 		<Russian>Not Yet</Russian>
 	</TEXT>
 </Civ4GameText>
-

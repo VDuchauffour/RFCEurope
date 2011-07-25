@@ -53,8 +53,10 @@ Changes for Beta 13:
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
 		- XML cleanup
+		- Text fixes
 		- Added some links
 		- Added and revised a couple hints
+		- Papal States will ALWAYS be named Papal States
 
 	Python/C++ updates:
 		- cleaned some old Rhye code from the Victory and RFCEvent modules
