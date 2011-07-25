@@ -14,27 +14,22 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 TODO:
 (3M, MV1, AR - you can put this in the beginning of the line if you are working on that)
 	
-		Rebalance Turkey, Hungary, Netherlands, Poland
-		make Religions hate each other even more
 		Autorun gets one extra turn sometimes
-		No unhappyness from non-state religion doesn't work with Religious Law Civic
-		Great Generals leaving for the Crusade?
-		Check Genoa 1st Turn culture bug
+		Great Generals leaving for the Crusade - and appearing as normal units
 		Faith point bonuses to be based on average faith, not total faith
 		Broken plague mechanics in some cases - probably on plagued indy city conquest when your civ don't have it
-AR		Update/further improve the map in the german area, Iberian Peninsula, Lithuania, make Anatolia less fertile
 AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Byzantine leader
-AR		Update hungarian, austrian, polish, venetian settler maps
-AR		Update xml entry for Hungary, Moscow, Norse, add entry to the new leaders
-AR		General overhaul to ALL the leader personalities - Done?
+AR		Update all settler and war maps
+AR		Rewrite xml entry for Hungary, Moscow, Norse, add entry to the new leaders
+AR		Further improve ALL the leader personalities
 AR		Civ specific Great People names
 AR		Add a LeaderHeadInfos.xml.light file
+AR		Revise Dynamic Civ Names for all the civs - especially needed for Lithuania
 		Custom DiploMusic for Bulgaria (Simeon, Ivan Asen), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
 		Custom Events?
 		Minor Civs?
 		Turn Burgundian Winery art 180 degrees
 		Lower La Mezquita to the ground
-		Dynamic Civ Names for Lithuania
 MV1		Give "Unique names" to the UHV
 MV1		Merge in the remaning civilopedia texts
 MV1		General XML updates, removing unused XML parts
@@ -52,6 +47,8 @@ Changes for Beta 13:
 	Map and province changes:
 		- updated Polish and Lithuanian Settlers Maps
 		- moved the Polish spawn location one tile to match the new terrain
+		- New Ottoman, Genoan, Venezian, French/Burgundian city name maps
+		- Isle of Man province expanded with the northern British islands (Hebrides, Orkney). New province: The Isles
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
@@ -74,13 +71,13 @@ Changes for Beta 13:
 		- Calais now spawns properly in 800AD
 		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Formation)
 
-	Interface
+	Interface:
 		- New screen to display which colonies have been built.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 12:
-(to-be-released: 2011.07.12.)
+(released: 2011.07.12.)
 
 	General changes and UHV updates:
 		- Adjusted the spawn time for the Russian cities to historically accurate times
@@ -167,10 +164,12 @@ Changes for Beta 12:
 	Python/C++ updates:
 		- Speedup on the code for Independent city spawn (not all cities are checked every turn)
 		- We can now add names to spawning Barbarians
-		- ADDED MINOR NATION MECHANICS: cities in some provinces try to revolt, you can do several things to prevent them.
+		- ADDED MINOR NATION MECHANICS:
+				Cities in some provinces try to revolt, you can do several things to prevent them.
 				The result is either independent cities and/or spawning barbarians and/or loss of gold and/or nothing.
 				Current "Minor Nations" include Serbia, Scotland and Catalonia
 		- Moved Protestantism icon to Printing Press (needed C++ code to prevent non-Catholics from founding Protestantism)
+		- Spawning of Indy cities cannot be blocked by units any longer
 
 	Art updates:
 		- New art for Isabella
@@ -192,7 +191,6 @@ Changes for Beta 12:
 		- Notre Dame now gives +2 happiness in all cities (instead of all cities in the continent)
 		- Palazzo San Giorgio now gives +1 free specialist in all cities (instead of all cities in the continent)
 		- La Lanterna's cost increased to 400, Pressburg Castle cost decreased to 500
-		- Spawning of Indy cities cannot be blocked by units any longer
 
 	Bugfixes:
 		- Fixed: Moscow UHV 2 should work now (used to be that it required 2% land only)
@@ -202,8 +200,8 @@ Changes for Beta 12:
 		- Fixed: A bug with the pre-defined wars causing strange wars (bad array permutation when the civs were changed)
 		- Fixed: Viking points don't count roads and improvements inside own culture borders, also points count against Byzantium
 		- Fixed: The player wasn't able to prosecute even from own cities
-		- Fixed: the Round Church abliity is now lost upon change of religion, thus we will not have unintended hostility between non-Orthodox players
-		- Fixed: the Jewish part of the Polish UHV is counted as successful if you build the Temple Mount (it prevented you from building quarters)
+		- Fixed: the Round Church ability is now lost upon change of religion, thus we will not have unintended hostility between non-Orthodox players
+		- Fixed: the Jewish part of the Polish UHV is counted as successful if you build/conquer the Temple Mount (it prevented you from building quarters)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
