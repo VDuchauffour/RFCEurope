@@ -632,6 +632,7 @@ class RFCEBalance:
 		
 		gc.setBuildingPref( iVenecia, xml.iMarcoPolo, 10 )
 		gc.setBuildingPref( iVenecia, xml.iSanMarco, 10 )
+		gc.setBuildingPref( iVenecia, xml.iLanterna, 10 )
 		gc.setBuildingPref( iVenecia, xml.iLeonardosWorkshop, 5 )
 		
 		gc.setBuildingPref( iKiev, xml.iSophiaKiev, 20 )
@@ -648,11 +649,12 @@ class RFCEBalance:
 		gc.setBuildingPref( iPoland, xml.iPressburg, 10 )
 		gc.setBuildingPref( iPoland, xml.iCopernicus, 5 )
 		gc.setBuildingPref( iPoland, xml.iGoldenBull, 5 )
-		gc.setBuildingPref( iPoland, xml.iTempleMount, 5 )
+		gc.setBuildingPref( iPoland, xml.iTempleMount, 15 )
 		
 		gc.setBuildingPref( iMoscow, xml.iStBasil, 20 )
 		
 		gc.setBuildingPref( iGenoa, xml.iSanGiorgio, 20 )
+		gc.setBuildingPref( iGenoa, xml.iLanterna, 20 )
 		gc.setBuildingPref( iGenoa, xml.iLeonardosWorkshop, 5 )
 		
 		gc.setBuildingPref( iEngland, xml.iMagnaCarta, 20 )
