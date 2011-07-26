@@ -52,14 +52,13 @@ Changes for Beta 13:
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
-		- XML cleanup
-		- Text fixes
+		- XML cleanup and various text fixes
 		- Added some links
-		- Added and revised a couple hints
+		- Added a couple hints, revised all the older ones (including everything from vanilla Civ IV/Warlords/BtS)
 		- Papal States will ALWAYS be named Papal States
 
 	Python/C++ updates:
-		- cleaned some old Rhye code from the Victory and RFCEvent modules
+		- Cleaned some old Rhye code from the Victory and RFCEvent modules
 
 	Art updates:
 
@@ -69,6 +68,7 @@ Changes for Beta 13:
 		- The Pope is far more likely to favor the Catholic owner of Jerusalem, when deciding to build Churches/Monasteries
 		- Genoa and Venezia prefers to build the Lanterna wonder, Poland more likely builds Kazimierz
 		- Golden Age now allows for Anarchy-free change of Civics and Religion (like regular BtS)
+		- Slightly improved Polish-Lithuanian and Polish-Hungarian relations
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
@@ -76,6 +76,7 @@ Changes for Beta 13:
 		- Calais now spawns properly in 800AD
 		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Formation)
 		- Fixed a small bug in TeamAI.cpp thanks to Morholt
+		- Removed BtS interface hints which were inaccurate for RFCE (multiplayer, spaceship, etc)
 
 	Interface:
 		- New screen to display which colonies have been built.
