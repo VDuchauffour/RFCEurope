@@ -8839,8 +8839,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>0</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>100</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
 			<iCityAttack>-10</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
