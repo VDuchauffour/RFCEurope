@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - Historical Victory Goals
+# Rhye's and Fall of Civilization - Mercenaries Written mostly by 3Miro
 
 
 from CvPythonExtensions import *
@@ -21,7 +21,7 @@ PyPlayer = PyHelpers.PyPlayer
 
 iMercCostPerTurn = con.iMercCostPerTurn
 
-# list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked religions, odds
+# list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
 lMercList = [ [xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans], [], 10 ],
                 ]
 
@@ -33,9 +33,9 @@ lMercList = [ [xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_Ile
 lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 60, 40, 20, 50, 20, 10, 40, 20, 80, 50, 30, 80, 50, 30, 80, 40, 10, 60, 30, 10, 60, 40, 10,  5, 60, 40, 10, 60, 50, 30, 20, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 # The way promotions would affect the cost of the mercenary (percentage wise)
 lPromotionCost = [  10, 15, 30, 30, 40, 20, 20, 20, 20, 20, 20, 30, 40, 20, 30, 15, 20, 30, 15, 20, 30, 20, 30, 50, 20, 30, 50, 10, 20, 40, 50, 10, 10, 10, 20, 10, 10, 10, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-iNumPromotions = 39 # without navigation and leaders
+iNumTotalPromotions = 39 # without navigation and leaders
 iNumPromotionsSoftCap = 3 # canget more promotions if you get a high promotion (i.e. combat 5), but overall it should be unlikely
-
+iNumPromorionIterations = 3 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
 
 class MercenaryManager:
 
@@ -71,6 +71,20 @@ class MercenaryManager:
                                         bPass = False
                 return lPromotions
                 
+        def getCost( self, iMerc, lPromotions ):
+                lMercInfo = lMercList[iMerc]
+                
+                # compute cost
+                iBaseCost = (80 * gc.getUnitInfo( lMercInfo[0] ).getProductionCost()) / 100
+                iPercentage = 0
+                for iPromotion in lPromotions:
+                        iPercentage += lPromotionCost[iPromotion]
+                iPurchaseCost = ( iBaseCost * ( 100 + iPercentage ) ) / 100
+                
+                iUpkeepCost = 1 + iPercentage / 33 # 1 gold for 1/3 increase of cost due to promotions
+                
+                return (iPurchaseCost, iUpkeepCost)
+                
         def addNewMerc( self, iMerc ):
                 # this processes the available promotions
                 lMercInfo = lMercList[iMerc]
@@ -78,17 +92,20 @@ class MercenaryManager:
                 # get the promotions
                 iNumPromotions = 0
                 lPromotions = []
-                while ( iNumPromotions < iNumPromotionsSoftCap ):
-                        iPromotion = gc.getGame().getSorenRandNum( iNumPromotions, 'merc get promotion')
-                        if ( isPromotionValid(iPromotionInfoType, lMercInfo[0], False) ):
-                                if ( gc.getGame().getSorenRandNum( 100, 'merc set promotion') < lPromotionOdds[iPromotion] ):
+                iIterations = 0 # limit the number of iterations so we can have mercs with only a few promotions
+                while ( iNumPromotions < iNumPromotionsSoftCap and iIterations < iNumPromorionIterations):
+                        iPromotion = gc.getGame().getSorenRandNum( iNumTotalPromotions, 'merc get promotion')
+                        if ( isPromotionValid(iPromotion, lMercInfo[0], False) ):
+                                if ( (not iPromotion in lPromotions) and gc.getGame().getSorenRandNum( 100, 'merc set promotion') < lPromotionOdds[iPromotion] ):
                                         lPromotions.append(iPromotion)
                                         lPromotions = self.setPrereqConsistentPromotions( lPromotions )
                                         iNumPromotions = len( lPromotions )
-                # compute cost?                        
-                                        
+                        iIterations += 1
                 
-                pass
+                (iPurchaseCost, iUpkeepCost) = self.getCost( iMerc, lPromotions )
+                
+                # add the merc, keep the merc index, costs and promotions
+                self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost] )
                 
         def processNewMercs( self, iGameTurn ):
                 # add new mercs to the pool
@@ -119,7 +136,10 @@ class MercenaryManager:
         # the Human gets the advantage to get the first pick at the available mercs
         
                 self.getMercLists() # load the current mercenary pool
-                        
+                
+                #for lMerc in self.lGlobalPool:
+                #        print( "3Miro Merc Pool: ", iGameTurn, lMerc)
+                
                 # Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
                 for iPlayer in range( iNumPlayers ): # minus the Pope
                         pPlayer = gc.getPlayer( iPlayer )
@@ -127,7 +147,7 @@ class MercenaryManager:
                                 pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
                         #playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
                         
-                
+                self.processNewMercs( iGameTurn ) # add new Merc to the pool
                         
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
 
