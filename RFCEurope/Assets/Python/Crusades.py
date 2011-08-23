@@ -527,7 +527,7 @@ class Crusades:
 		iCrusadersSend = 0
 		for i in range( iNumUnits ):
 			pUnit = pPlayer.getUnit( i )
-			if ( not pUnit.isHasPromotion( con.iMercPromotion ) ):
+			if ( (not pUnit.isHasPromotion( con.iMercPromotion )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
 				iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
 				if ( iCrusadeCategory < 3 ):
 					pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )

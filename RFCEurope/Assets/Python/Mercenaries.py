@@ -9,6 +9,8 @@ import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 
+from sets import Set
+
 iNumPlayers = con.iNumPlayers
 
 iMercPromotion = 48
@@ -42,6 +44,7 @@ class MercenaryManager:
         def __init__(self ):
                 self.lGlobalPool = []
                 self.lHiredBy = []
+                self.GMU = GlobalMercenaryUtils()
 		pass
 
         def getMercLists(self):
@@ -71,19 +74,7 @@ class MercenaryManager:
                                         bPass = False
                 return lPromotions
                 
-        def getCost( self, iMerc, lPromotions ):
-                lMercInfo = lMercList[iMerc]
-                
-                # compute cost
-                iBaseCost = (80 * gc.getUnitInfo( lMercInfo[0] ).getProductionCost()) / 100
-                iPercentage = 0
-                for iPromotion in lPromotions:
-                        iPercentage += lPromotionCost[iPromotion]
-                iPurchaseCost = ( iBaseCost * ( 100 + iPercentage ) ) / 100
-                
-                iUpkeepCost = 1 + iPercentage / 33 # 1 gold for 1/3 increase of cost due to promotions
-                
-                return (iPurchaseCost, iUpkeepCost)
+        
                 
         def addNewMerc( self, iMerc ):
                 # this processes the available promotions
@@ -102,7 +93,7 @@ class MercenaryManager:
                                         iNumPromotions = len( lPromotions )
                         iIterations += 1
                 
-                (iPurchaseCost, iUpkeepCost) = self.getCost( iMerc, lPromotions )
+                (iPurchaseCost, iUpkeepCost) = self.GMU.getCost( iMerc, lPromotions )
                 
                 # add the merc, keep the merc index, costs and promotions
                 self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost] )
@@ -136,6 +127,7 @@ class MercenaryManager:
         # the Human gets the advantage to get the first pick at the available mercs
         
                 self.getMercLists() # load the current mercenary pool
+                iHuman = gc.getGame().getActivePlayer()
                 
                 #for lMerc in self.lGlobalPool:
                 #        print( "3Miro Merc Pool: ", iGameTurn, lMerc)
@@ -145,7 +137,13 @@ class MercenaryManager:
                         pPlayer = gc.getPlayer( iPlayer )
                         if ( pPlayer.isAlive() ):
                                 pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
+                                # TODO: AI
+                                #if ( iPlayer != iHuman ):
+                                #        self.processMercAI( pPlayer )
                         #playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
+                        
+                
+                
                         
                 self.processNewMercs( iGameTurn ) # add new Merc to the pool
                         
@@ -165,8 +163,257 @@ class MercenaryManager:
         def onUnitLost(self, argsList):
                 # this gets called on lost and on upgrade, check to remove the merc if it has not been upgraded?
                 unit = argsList[0]
-                
-                
                 pass
                 
+        def processMercAI( self, pPlayer ):
+                if ( pPlayer.isHuman() or pPlayer.isBarbarian() or pPlayer.getID() == con.iPope ):
+                        return
+                        
+                iWarValue = 0 # compute the total number of wars being fought at the moment
                 
+                teamPlayer = gc.getTeam(pPlayer.getTeam())
+                for iOponent in range( con.iNumTotalPlayers ):
+                        if ( teamPlayer.isAtWar( gc.getPlayer( iOponent ).getTeam() ) ):
+                               iWarValue += 1
+                               if ( iOponent <= con.iPope ):
+                                       iWarValue += 3
+                                       
+                # decide to hire or fire mercs
+                # if we are at peace or have only a small war, then we can keep the merc if the expense is trivial
+                # otherwise we should get rid of some mercs
+                # we should also fire mercs if we spend too much
+                
+                bFire = False
+                
+                iGold = pPlayer.getGold()
+                iUpkeep = pPlayer.getPicklefreeParameter( iMercCostPerTurn )
+                
+                if ( 100*iGold < iUpkeep ):
+                        # can't affort mercs, fire someone
+                        bFire = True
+                elif ( iWarValue < 4 and 50*iGold < iUpkeep ):
+                        # mercs cost > 1/2 of our gold
+                        bFire = True
+                elif ( iWarValue < 2 and 20*iGold < iUpkeep ):
+                        bFire = True
+                
+                if ( bFire ):
+                        # the AI fires a Merc
+                        self.FireMercAI( pPlayer )
+                        
+                        # make sure we can affort the mercs that we keep
+                        while ( pPayer.getPicklefreeParameter( iMercCostPerTurn )>0 and 100*pPlayer.getGold() < pPayer.getPicklefreeParameter( iMercCostPerTurn ) ):
+                                self.FireMercAI( pPlayer )
+                        return
+                        
+                if ( iWarValue > 0 ):
+                        #we ave to be at war to hire
+                        iOdds = con.tHire[pPlayer.getID()]
+                        if ( iWarValue < 2 ):
+                                iOdds *= 2 # small wars are hardly worth the trouble
+                        if ( iWarValue > 4 ): # large war
+                                iOdds /= 2
+                        
+                        if ( gc.getGame().getSorenRandNum(100, 'shall we hire a merc') > iOdds ):
+                                # hiring a merc
+                                self.HireMercAI( pPlayer )
+                        
+                        
+        def FireMercAI( self, pPlayer ):
+                iNumUnits = pPlayer.getNumUnits()
+                lMercs = []
+                iGameTurn = gc.getGame().getGameTurn()
+                for iUnit in range( iNumUnits ):
+                        pUnit = pPlayer.getUnit( iUnit )
+                        if ( pUnit.getMercID() > -1 ):
+                                lMercs.append( pUnit )
+                                
+                if ( len( lMercs ) > 0 ):
+                        # we have mercs, so fire someone
+                        lMercValue = [] # estimate how "valuable" the merc is (high value is bad)
+                        for pUnit in lMercs:
+                                iValue = pUnit.getMercUpkeep()
+                                pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
+                                if ( pPlot.isCity() ):
+                                        if ( pPlot.getPlotCity().getOwner() == pPlayer.getID() ):
+                                                # keep the city defenders
+                                                iDefenders = self.getNumDefendersAtPlot( pPlot )
+                                                if ( iDefenders < 2 ):
+                                                        iValue /= 100
+                                                elif ( iDefenders < 4 ):
+                                                        iValue /= 2
+                                
+                                if ( iGameTurn > lMercList[ pUnit.getMercID() ][3] ):
+                                        # obsolete units
+                                        iValue *= 2
+                                if ( iGameTurn > lMercList[ pUnit.getMercID() ][3] + 100 ):
+                                        # really obsolete units
+                                        iValue *= 10
+                                lMercValue.append( iValue )
+                                
+                        iSum = 0
+                        for iI in range( len( lMercValue ) ):
+                                iSum += lMercValue[iI]
+
+                        iFireRand = gc.getGame().getSorenRandNum(iSum, 'random merc city')
+                        for iI in range( len( lMercValue ) ):
+                                iFireRand -= lMercValue[iI]
+                                if ( iFireRand < 0 ):
+                                        self.GMU.fireMerc( lMercs[iI] )
+                                        return
+                                        
+        def HireMercAI( self, pPlayer ):
+                # decide which merc to hire
+                lCanHireMercs = []
+                sPlayerProvinces = Set( self.getOwnedProvinces( pPlayer ) )
+                iGold = pPlayer.getGold()
+                for lMerc in self.lGlobalPool:
+                        iMercTotalCost = lMerc[2] + (lMerc[3]+99)/100
+                        sMercProvinces = Set( lMercList[lMerc[0]][4] )
+                        if ( iGold > iMercTotalCost and len( sPlayerProvinces & sMercProvinces ) > 0 ):
+                              lCanHireMercs.append( lMerc )
+                              
+                if ( len( lCanHireMercs ) > 0 ):
+                        iRandomMerc = gc.getGame().getSorenRandNum(len( lCanHireMercs ), 'random merc to hire')
+                        
+                        self.GMU.hireMerc( lCanHireMercs[iRandomMerc], pPlayer.getID() )
+                        self.getMercLists()
+                        
+        def getOwnedProvinces( self, pPlayer ):
+                lProvList = [] # all available cities that the Merc can appear in
+                apCityList = PyPlayer(pPlayer.getID()).getCityList()
+                for pCity in apCityList:
+                        city = pCity.GetCy()
+                        iProvince = city.getProvince()
+                        if ( not (iProvince in lProvList) ):
+                              lProvList.append( iProvince )
+                return lProvList
+                        
+        def getNumDefendersAtPlot( self, pPlot ):
+		iOwner = pPlot.getOwner()
+		if ( iOwner < 0 ):
+			return 0
+		iNumUnits = pPlot.getNumUnits()
+		iDefenders = 0
+		for i in range( iNumUnits ):
+			if ( pPlot.getUnit(i).getOwner() == iOwner ):
+				iDefenders += 1
+		return iDefenders
+                
+                
+class GlobalMercenaryUtils:
+        # the idea of this class is to provide ways to manipulate the mercenaries without the need to make a separate instance of the MercenaryManager
+        # the MercManager provides event driven functions and those should be called from the event interface
+        # the Utils class should be used for interface commands (like for the Human UI)
+        
+        def getMercGlobalPool( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lMercGlobalPool']
+                
+        def setMercGlobalPool( self, lNewPool ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lMercGlobalPool'] = lNewPool
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                
+        def getMercHiredBy( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lMercsHiredBy']
+        
+        def setMercHiredBy( self, lNewList ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lMercsHiredBy'] = lNewList
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                
+        def getCost( self, iMerc, lPromotions ):
+                # note that the upkeep is in the units of 100, i.e. iUpkeepCost = 100 means 1 gold
+                lMercInfo = lMercList[iMerc]
+                
+                # compute cost
+                iBaseCost = (80 * gc.getUnitInfo( lMercInfo[0] ).getProductionCost()) / 100
+                iPercentage = 0
+                for iPromotion in lPromotions:
+                        iPercentage += lPromotionCost[iPromotion]
+                iPurchaseCost = ( iBaseCost * ( 100 + iPercentage ) ) / 100
+                
+                iUpkeepCost = 100 + 3*iPercentage # 1 gold for 1/3 increase of cost due to promotions
+                
+                return (iPurchaseCost, iUpkeepCost)
+                
+        
+        def hireMerc( self, lMerc, iPlayer ):
+                # the player would hire a merc
+                lGlobalPool = self.getMercGlobalPool()
+                lHiredByList = self.getMercHiredBy()
+                
+                pPlayer = gc.getPlayer( iPlayer )
+                if ( pPlayer.getGold() < lMerc[2] ):
+                        return
+                
+                lCityList = [] # all available cities that the Merc can appear in
+                apCityList = PyPlayer(iPlayer).getCityList()
+                for pCity in apCityList:
+                        city = pCity.GetCy()
+                        if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
+                              lCityList.append( city )
+                              
+                if ( len( lCityList ) == 0 ):
+                        return
+                
+                pCity = lCityList[gc.getGame().getSorenRandNum(len(lCityList), 'random merc city')]
+                
+                iX = pCity.getX()
+                iY = pCity.getY()
+                
+                # do the Gold
+                pPlayer.setGold( pPlayer.getGold() - lMerc[2] )
+                pPlayer.setPicklefreeParameter( iMercCostPerTurn, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + lMerc[3] )
+                
+                # remove the merc from the golbal pool and set the "hired by" index
+                lGlobalPool.remove( lMerc )
+                lHiredByList[lMerc[0]] = iPlayer
+                
+                self.setMercGlobalPool( lGlobalPool )
+                self.setMercHiredBy( lHiredByList )
+                
+                # make the unit:
+                pUnit = pPlayer.initUnit( lMercList[lMerc[0]][0], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+                pUnit.setName( CyTranslator().getText( lMercList[lMerc[0]][1] , ()) )
+                
+                # add the promotions
+                for iPromotion in lMerc[1]:
+                        pUnit.setHasPromotion( iPromotion, False )
+                        
+                pUnit.setHasPromotion( iMercPromotion, False )
+                
+                # set the MercID
+                pUnit.setMercID( lMerc[0] )
+                
+                # set the Upkeep
+                pUnit.setMercUpkeep( lMerc[3] )
+                
+        def fireMerc( self, pMerc ):
+                # fires the merc unit pMerc (pointer to CyUnit)
+                lHiredByList = self.getMercHiredBy()
+                
+                # get the Merc info
+                iMerc = pMerc.getMercID()
+                iUpkeep = pMerc.getMercUpkeep()
+                
+                if ( iMerc < 0 ):
+                        return
+                
+                # free the Merc for a new contract
+                lHiredByList[iMerc] = -1
+                self.setMercHiredBy( lHiredByList )
+                
+                # lower the upkeep
+                pPlayer = gc.getPlayer( pMerc.getOwner() )
+                pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iUpkeep ) )
+                
+                pMerc.kill( 0, -1 )
+                
+                
+                
+                
+                
+        
