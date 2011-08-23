@@ -70,6 +70,7 @@ Changes for Beta 13:
 		- Genoa and Venezia prefers to build the Lanterna wonder, Poland more likely builds Kazimierz
 		- Golden Age now allows for Anarchy-free change of Civics and Religion (like regular BtS)
 		- Slightly improved Polish-Lithuanian and Polish-Hungarian relations
+		- leaders no longer leave for the Crusades
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks

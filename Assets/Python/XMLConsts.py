@@ -604,6 +604,7 @@ iTerrainOcean = 8
 
 iPromotionFormation = 7
 iPromotionMedicI = 13
+iPromotionLeader = 41
 
 
 #feature & terrain
