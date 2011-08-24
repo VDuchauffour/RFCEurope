@@ -24,7 +24,10 @@ PyPlayer = PyHelpers.PyPlayer
 iMercCostPerTurn = con.iMercCostPerTurn
 
 # list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
-lMercList = [ [xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans], [], 10 ],
+lMercList = [   [xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+                [xml.iAxeman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+                [xml.iSwordsman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+                [xml.iHorseArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
                 ]
 
 ### A few Parameters for Mercs only:
@@ -138,8 +141,8 @@ class MercenaryManager:
                         if ( pPlayer.isAlive() ):
                                 pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
                                 # TODO: AI
-                                #if ( iPlayer != iHuman ):
-                                #        self.processMercAI( pPlayer )
+                                if ( iPlayer != iHuman ):
+                                        self.processMercAI( pPlayer )
                         #playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
                         
                 
@@ -150,21 +153,72 @@ class MercenaryManager:
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
 
         def onUnitPromoted( self, argsList ):
-                pUnit, iPromotion = argsList
-                if ( pUnit.getMercID() > -1 ):
+                pUnit, iNewPromotion = argsList
+                iMerc = pUnit.getMercID()
+                if ( iMerc > -1 ):
                         # redraw the main screen to update the upkeep info
                         CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
+                        
+                        lPromotionList = []
+                        for iPromotion in range(iNumTotalPromotions):
+                                if ( pUnit.isHasPromotion( iPromotion ) ):
+                                        lPromotionList.append( iPromotion )
+                        if ( not iNewPromotion in lPromotionList ):
+                                lPromotionList.append( iNewPromotion )
+                        
+                        # get the new cost for this unit
+                        iOldUpkeep = pUnit.getMercUpkeep()
+                        iNewUpkeep = self.GMU.getCost( iMerc, lPromotionList )
+                        
+                        pPlayer = gc.getPlayer( pUnit.getOwner() )
+                        pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep[1]  ) )
 
 
         def onUnitKilled(self, argsList):
-                unit, iAttacker = argsList
-                pass
+                pUnit, iAttacker = argsList
+                
+                iMerc = pUnit.getMercID()
+                
+                if ( iMerc > -1 ):
+                        # unit is gone
+                        pPlayer = gc.getPlayer( pUnit.getOwner() )
+                        pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - pUnit.getMercUpkeep() ) )
+                        
+                        lHiredByList = self.GMU.getMercHiredBy()
+                        # remove the merc permanently
+                        lHiredByList[iMerc] = -2
+                        self.GMU.setMercHiredBy( lHiredByList )
+
+                
 
         def onUnitLost(self, argsList):
                 # this gets called on lost and on upgrade, check to remove the merc if it has not been upgraded?
-                unit = argsList[0]
-                pass
+                pUnit = argsList[0]
+                iMerc = pUnit.getMercID()
                 
+                if ( iMerc > -1 ):
+                        # is a merc, check to see if it has just been killed
+                        lHiredByList = self.GMU.getMercHiredBy()
+                        if ( lHiredBy[iMerc] == -2 ):
+                                # unit has just been killed and onUnitKilled has been called
+                                return
+                        
+                        # check to see if it has been replaced by an upgraded (promoted) version of itself
+                        # Get the list of units for the player
+                        iPlayer = pUnit.getOwner()
+                        unitList = PyPlayer( iPlayer ).getUnitList()
+                        for pTestUnit in unitList:
+                                if ( pTestUnit.getMercID() == iMerc ):
+                                        return
+                        
+                        # unit is gone
+                        pPlayer = gc.getPlayer( iPlayer )
+                        pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - pUnit.getMercUpkeep() ) )
+
+                        # remove the merc (presumably disbanded here)
+                        lHiredByList[iMerc] = -1
+                        self.setMercHiredBy( lHiredByList )
+
         def processMercAI( self, pPlayer ):
                 if ( pPlayer.isHuman() or pPlayer.isBarbarian() or pPlayer.getID() == con.iPope ):
                         return
@@ -202,7 +256,7 @@ class MercenaryManager:
                         self.FireMercAI( pPlayer )
                         
                         # make sure we can affort the mercs that we keep
-                        while ( pPayer.getPicklefreeParameter( iMercCostPerTurn )>0 and 100*pPlayer.getGold() < pPayer.getPicklefreeParameter( iMercCostPerTurn ) ):
+                        while ( pPlayer.getPicklefreeParameter( iMercCostPerTurn )>0 and 100*pPlayer.getGold() < pPlayer.getPicklefreeParameter( iMercCostPerTurn ) ):
                                 self.FireMercAI( pPlayer )
                         return
                         
@@ -220,11 +274,14 @@ class MercenaryManager:
                         
                         
         def FireMercAI( self, pPlayer ):
-                iNumUnits = pPlayer.getNumUnits()
+                #iNumUnits = pPlayer.getNumUnits()
                 lMercs = []
                 iGameTurn = gc.getGame().getGameTurn()
-                for iUnit in range( iNumUnits ):
-                        pUnit = pPlayer.getUnit( iUnit )
+                iPlayer = pPlayer.getID()
+                unitList = PyPlayer( iPlayer ).getUnitList()
+                for pUnit in unitList:
+                #for iUnit in range( iNumUnits ):
+                        #pUnit = pPlayer.getUnit( iUnit )
                         if ( pUnit.getMercID() > -1 ):
                                 lMercs.append( pUnit )
                                 

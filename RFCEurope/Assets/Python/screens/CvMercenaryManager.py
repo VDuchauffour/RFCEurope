@@ -3,6 +3,8 @@
 # By: The Lopez
 # CvMercenaryManager
 # 
+# 3Miro: we take the merc screen as it looks well. However, the rest of the machincs have been changed mostly to
+#        remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
 import CvUtil
@@ -11,6 +13,7 @@ import time
 import PyHelpers
 import Popup as PyPopup
 import MercenaryUtils
+import Mercenaries
 #import CvConfigParser #Rhye
 import math
 from CvMercenaryScreensEnums import *
@@ -23,6 +26,9 @@ gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
 objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+
+# 3Miro: this class will provide the needed interface for the RFCE Merc mechanics
+GMU = Mercenaries.GlobalMercenaryUtils()
 
 # Change this to true if hiring mercenaries should only be allowed if one or more of
 # a player's civilization contains one or more of the buildings specified in the 

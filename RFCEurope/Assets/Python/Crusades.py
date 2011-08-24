@@ -789,6 +789,7 @@ class Crusades:
                                                 teamLeader.declareWar(iTeamVictim, True, -1)
                                         else:
                                                 # we cannot declare war to the current owner of the target city
+                                                self.returnCrusaders()
                                                 return
 
 		for y in range( 3 ):
@@ -818,7 +819,11 @@ class Crusades:
 								iChosenY = iY
 			
 				print("Made Units on:", iChosenX, iChosenY,iLeader)	
-		self.crusadeMakeUnits( [iChosenX,iChosenY] )
+                                
+                if ( (iChosenX>=0) and (iChosenX<con.iMapMaxX) and (iChosenY>=0) and (iChosenY<con.iMapMaxY) ):
+                        self.crusadeMakeUnits( [iChosenX,iChosenY] )
+                else:
+                        self.returnCrusaders()
 		
         def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
