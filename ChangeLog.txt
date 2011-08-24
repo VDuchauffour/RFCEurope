@@ -80,6 +80,7 @@ Changes for Beta 13:
 		- Fixed a small bug in TeamAI.cpp thanks to Morholt
 		- Removed BtS interface hints which were inaccurate for RFCE (multiplayer, spaceship, etc)
 		- Horse Archers do Flanking damage now
+		- fixed a strange crash when Crusaders don't find a proper spot to appear when a Crusade victim collapsed
 
 	Interface:
 		- New screen to display which colonies have been built.

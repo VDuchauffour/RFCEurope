@@ -974,7 +974,8 @@ class CvMainInterface:
 			# < Mercenaries Start >
 			# Show the mercenary manager button if the player has at least one city and they are in the
 			# correct era.
-			if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+                        if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.show( "MercenaryManagerButton" )
                                 # 3Miro
@@ -998,7 +999,8 @@ class CvMainInterface:
 			# < Mercenaries Start >
 			# move the mercenary manager button to the front if the player has at least one city and they are in the
 			# correct era.
-			if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+                        if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.moveToFront( "MercenaryManagerButton" )
                                 #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
@@ -1053,7 +1055,8 @@ class CvMainInterface:
 			# < Mercenaries Start >
 			# Show the mercenary manager button if the player has at least one city and they are in the
 			# correct era.
-			if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.show( "MercenaryManagerButton" )
                                 #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
@@ -1076,7 +1079,8 @@ class CvMainInterface:
 			# < Mercenaries Start >
 			# Move the mercenary manager button to the front if the player has at least one city and they are in the
 			# correct era.
-			if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.moveToFront( "MercenaryManagerButton" )
                                 #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
@@ -1109,7 +1113,8 @@ class CvMainInterface:
 			# < Mercenaries Start >
 			# Show the mercenary manager button if the player has at least one city and they are in the
 			# correct era.
-			if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.show( "MercenaryManagerButton" )
                                 teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
@@ -1132,7 +1137,8 @@ class CvMainInterface:
 			# < Mercenaries Start >
 			# Move the mercenary manager button to the front if the player has at least one city and they are in the
 			# correct era.
-			if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.moveToFront( "MercenaryManagerButton" )
                                 teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
@@ -1651,53 +1657,55 @@ class CvMainInterface:
 						
 						iCount = iCount + 1
 					
-					# < Mercenaries Start >					
-					if(not self.repainting):
-						self.repainting=true
+					# < Mercenaries Start >
+                                        # 3Miro: this is for the Contract out Merc, we removed this mechanics in RFCE					
+					#if(not self.repainting):
+						#self.repainting=true
  
-						b=false
+						#b=false
 
-						while(not b):
-							try:
+						#while(not b):
+							#try:
 						
-								# Show the contract out unit and fire mercenary buttons only if the player has at least one city and
-								# and the current player era is at or beyond the configured starting era.
-								if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+								## Show the contract out unit and fire mercenary buttons only if the player has at least one city and
+								## and the current player era is at or beyond the configured starting era.
+								##if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+								#if(gc.getActivePlayer().getNumCities() > 0 ):
 
-                                                                        #print (gc.getActivePlayer().getName(), "=?", gc.getPlayer(gc.getGame().getActivePlayer()).getName()) #Rhye
-                                					teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam()) #Rhye
-                                					#if (not teamPlayer.isHasTech(con.iNationalism)):  #Rhye
+                                                                        ##print (gc.getActivePlayer().getName(), "=?", gc.getPlayer(gc.getGame().getActivePlayer()).getName()) #Rhye
+                                					#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam()) #Rhye
+                                					##if (not teamPlayer.isHasTech(con.iNationalism)):  #Rhye
 
-                                                                        bCreateContract = true
+                                                                        #bCreateContract = true
                                                                                 
-                                                                                # If the require city unit contract creation and the unit is not in a city then
-                                                                                # don't show the create contract button for the unit
-                                                                        if(g_bRequireCityUnitContractCreation and not g_pSelectedUnit.plot().isCity()):
-                                                                        	bCreateContract = false
+                                                                                ## If the require city unit contract creation and the unit is not in a city then
+                                                                                ## don't show the create contract button for the unit
+                                                                        #if(g_bRequireCityUnitContractCreation and not g_pSelectedUnit.plot().isCity()):
+                                                                        	#bCreateContract = false
                                                                                         
-                                                                                # Show the contract out unit button only if the selected unit can be contracted out and if the 
-                                                                                # selected unit isn't already a mercenary.
-                                                                                #Rhye - start comment
-                                                                                #if(objMercenaryUtils.canContractOutUnit(gc.getUnitInfo(g_pSelectedUnit.getUnitType())) and not objMercenaryUtils.isMercenary(g_pSelectedUnit) and bCreateContract):
-                                                                                #        screen.appendMultiListButton( "BottomButtonContainer", "Art/Interface/Buttons/Actions/ContractOutUnit.dds", 0, WidgetTypes.WIDGET_ACTION, CvMercenaryModGameUtils.CONTRACT_OUT_UNIT, -1, False )
-                                                                                #        screen.show( "BottomButtonContainer" )
-                                                                                #        iCount = iCount + 1
+                                                                                ## Show the contract out unit button only if the selected unit can be contracted out and if the 
+                                                                                ## selected unit isn't already a mercenary.
+                                                                                ##Rhye - start comment
+                                                                                ##if(objMercenaryUtils.canContractOutUnit(gc.getUnitInfo(g_pSelectedUnit.getUnitType())) and not objMercenaryUtils.isMercenary(g_pSelectedUnit) and bCreateContract):
+                                                                                ##        screen.appendMultiListButton( "BottomButtonContainer", "Art/Interface/Buttons/Actions/ContractOutUnit.dds", 0, WidgetTypes.WIDGET_ACTION, CvMercenaryModGameUtils.CONTRACT_OUT_UNIT, -1, False )
+                                                                                ##        screen.show( "BottomButtonContainer" )
+                                                                                ##        iCount = iCount + 1
                                                                                 
-                                                                                # Show the fire mercenary button only if the selected unit information is a mercenary.
-                                                                                #if(objMercenaryUtils.isMercenary(g_pSelectedUnit)):
-                                                                                #        screen.appendMultiListButton( "BottomButtonContainer", "Art/Interface/Buttons/Actions/FireMercenary.dds", 0, WidgetTypes.WIDGET_ACTION, CvMercenaryModGameUtils.FIRE_MERCENARY, -1, False )
-                                                                                #        screen.show( "BottomButtonContainer" )
-                                                                                #        iCount = iCount + 1
-                                                                                #Rhye - end comment
-								b = true
+                                                                                ## Show the fire mercenary button only if the selected unit information is a mercenary.
+                                                                                ##if(objMercenaryUtils.isMercenary(g_pSelectedUnit)):
+                                                                                ##        screen.appendMultiListButton( "BottomButtonContainer", "Art/Interface/Buttons/Actions/FireMercenary.dds", 0, WidgetTypes.WIDGET_ACTION, CvMercenaryModGameUtils.FIRE_MERCENARY, -1, False )
+                                                                                ##        screen.show( "BottomButtonContainer" )
+                                                                                ##        iCount = iCount + 1
+                                                                                ##Rhye - end comment
+								#b = true
 
-							except:
-								gameUtils.initActionButtonNumbers()
-								pass		
+							#except:
+								#gameUtils.initActionButtonNumbers()
+								#pass		
 
-						self.repainting=false						
+						#self.repainting=false						
 
-					# < Mercenaries End >
+					## < Mercenaries End >
 				# 3Miro: copy from Charlemagne	
 				########### Adding Inquisitor functionality ###########
 					
