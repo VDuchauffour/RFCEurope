@@ -902,7 +902,7 @@
 		<Spanish>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_MATTHIAS_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_1</Tag>
 		<English>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</English>
 		<French>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</French>
 		<German>Bei Freundschaft zwischen Menschen geht es um das Teilen von Ressourcen, findet ihr nicht [CT_NAME]?</German>
@@ -910,7 +910,7 @@
 		<Spanish>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_MATTHIAS_2</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_2</Tag>
 		<English>You should try to keep me in humour, [CT_NAME].</English>
 		<French>You should try to keep me in humour, [CT_NAME].</French>
 		<German>Ihr solltet mich bei Laune halten, [CT_NAME].</German>
@@ -918,7 +918,7 @@
 		<Spanish>You should try to keep me in humour, [CT_NAME].</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_MATTHIAS_3</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_3</Tag>
 		<English>If you are a true friend you'll give me this!</English>
 		<French>If you are a true friend you'll give me this!</French>
 		<German>If you are a true friend you'll give me this!</German>

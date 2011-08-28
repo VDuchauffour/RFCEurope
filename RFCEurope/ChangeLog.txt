@@ -58,12 +58,14 @@ Changes for Beta 13:
 		- Added some links
 		- Added a couple hints, revised all the older ones (including everything from vanilla Civ IV/Warlords/BtS)
 		- Papal States will ALWAYS be named Papal States
+		- Fixed diplo text of Matthias
 
 	Python/C++ updates:
 		- Cleaned some old Rhye code from the Victory and RFCEvent modules
 
-	Art updates:
+	Art/Sound updates:
 		- Dromon (Ethnic Byzantine War Galley) sound works now
+		- Olives don't require Calendar to be harvested (no change gameplaywise, because you will have calendar when they spawn)
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
