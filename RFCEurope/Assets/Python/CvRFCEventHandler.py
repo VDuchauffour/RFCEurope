@@ -5,7 +5,7 @@ import sys #Mercenaries
 import PyHelpers 
 import CvMainInterface #Mercenaries
 import CvMercenaryManager #Mercenaries
-import MercenaryUtils #Mercenaries
+#import MercenaryUtils #Mercenaries
 import CvScreenEnums  #Mercenaries
 #import CvConfigParser #Mercenaries #Rhye
 import Popup as PyPopup 
@@ -71,7 +71,7 @@ iNumTotalPlayers = con.iNumTotalPlayers
 
 
 #Mercenaries - start
-objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
 PyPlayer = PyHelpers.PyPlayer
 PyGame = PyHelpers.PyGame()
@@ -213,7 +213,7 @@ class CvRFCEventHandler:
 ##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", true)
 		#Rhye - end comment
 
-                objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+                #objMercenaryUtils = MercenaryUtils.MercenaryUtils()
                 #Mercenaries - end
 
 
@@ -231,8 +231,8 @@ class CvRFCEventHandler:
                 self.rnf.setWarOnSpawn()
 
                 #Mercenaries - start
-                global objMercenaryUtils        
-                objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+                #global objMercenaryUtils        
+                #objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 		#Mercenaries - end
                 
                 return 0
@@ -466,41 +466,41 @@ class CvRFCEventHandler:
                 #Mercenaries - start
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-                if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
                         
-                        # Get the list of active players in the game
-                        playerList = PyGame.getCivPlayerList()
+                        ## Get the list of active players in the game
+                        #playerList = PyGame.getCivPlayerList()
                         
-                        # Go through each of the players and deduct their mercenary maintenance amount from their gold
-                        for i in range(len(playerList)):
-                                playerList[i].setGold(playerList[i].getGold()-objMercenaryUtils.getPlayerMercenaryMaintenanceCost(playerList[i].getID()))
-                                playerList[i].setGold(playerList[i].getGold()+objMercenaryUtils.getPlayerMercenaryContractIncome(playerList[i].getID()))
+                        ## Go through each of the players and deduct their mercenary maintenance amount from their gold
+                        #for i in range(len(playerList)):
+                                #playerList[i].setGold(playerList[i].getGold()-objMercenaryUtils.getPlayerMercenaryMaintenanceCost(playerList[i].getID()))
+                                #playerList[i].setGold(playerList[i].getGold()+objMercenaryUtils.getPlayerMercenaryContractIncome(playerList[i].getID()))
                 
-                        # Have some mercenaries wander away from the global mercenary pool if 
-                        # g_bWanderlustMercenaries is set to true.        
-                        if(g_bWanderlustMercenaries):
+                        ## Have some mercenaries wander away from the global mercenary pool if 
+                        ## g_bWanderlustMercenaries is set to true.        
+                        #if(g_bWanderlustMercenaries):
 
-                                #Rhye - start (less frequent updates)
-                                #wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num")
-                                #objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
-                                teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):                     
-                                if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
-                                	wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num") + g_iWanderlustMercenariesMinimum
-                                	objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
-                                #Rhye - end
+                                ##Rhye - start (less frequent updates)
+                                ##wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num")
+                                ##objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
+                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+                                ##if (not teamPlayer.isHasTech(con.iNationalism)):                     
+                                #if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
+                                	#wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num") + g_iWanderlustMercenariesMinimum
+                                	#objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
+                                ##Rhye - end
                             
                                 
-                        # Add the mercenaries to the global mercenary pool if the g_bGameTurnMercenaryCreation 
-                        # is set to true
-                        if(g_bGameTurnMercenaryCreation):
+                        ## Add the mercenaries to the global mercenary pool if the g_bGameTurnMercenaryCreation 
+                        ## is set to true
+                        #if(g_bGameTurnMercenaryCreation):
                             
-                                #Rhye - start (less frequent updates)
-                                #objMercenaryUtils.addMercenariesToPool()                  
-                                if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
-                                        objMercenaryUtils.addMercenariesToPool()
-                                #Rhye - end                
-                #print(" 3Miro onBegTurn out: ",iGameTurn)
+                                ##Rhye - start (less frequent updates)
+                                ##objMercenaryUtils.addMercenariesToPool()                  
+                                #if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
+                                        #objMercenaryUtils.addMercenariesToPool()
+                                ##Rhye - end                
+                ##print(" 3Miro onBegTurn out: ",iGameTurn)
                 
                 return 0
 
@@ -534,42 +534,42 @@ class CvRFCEventHandler:
         
                 # This method will add mercenaries to the global mercenary pool, display the mercenary manager screen
                 # and provide the logic to make the computer players think.
-                player = gc.getPlayer(iPlayer)
+                #player = gc.getPlayer(iPlayer)
 
-                #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+                ##if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
+                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
 
-                        # Debug code - start
-                        if(g_bDebug):
-                                CvUtil.pyPrint(player.getName() + " Gold: " + str(player.getGold()) + " is human: " + str(player.isHuman()))
-                        # Debug code - end        
+                        ## Debug code - start
+                        #if(g_bDebug):
+                                #CvUtil.pyPrint(player.getName() + " Gold: " + str(player.getGold()) + " is human: " + str(player.isHuman()))
+                        ## Debug code - end        
                         
-                        # Add the mercenaries to the global mercenary pool if the 
-                        # g_bGameTurnMercenaryCreation is set to false
-                        if(not g_bGameTurnMercenaryCreation):
-                                objMercenaryUtils.addMercenariesToPool()
+                        ## Add the mercenaries to the global mercenary pool if the 
+                        ## g_bGameTurnMercenaryCreation is set to false
+                        #if(not g_bGameTurnMercenaryCreation):
+                                #objMercenaryUtils.addMercenariesToPool()
 
-                        # if g_bDisplayMercenaryManagerOnBeginPlayerTurn is true the the player is human
-                        # then display the mercenary manager screen
-                        if(g_bDisplayMercenaryManagerOnBeginPlayerTurn and player.isHuman()):
-                                self.mercenaryManager.interfaceScreen()
+                        ## if g_bDisplayMercenaryManagerOnBeginPlayerTurn is true the the player is human
+                        ## then display the mercenary manager screen
+                        #if(g_bDisplayMercenaryManagerOnBeginPlayerTurn and player.isHuman()):
+                                #self.mercenaryManager.interfaceScreen()
 
-                        # if the player is not human then run the think method
-                        if(not player.isHuman()):
+                        ## if the player is not human then run the think method
+                        #if(not player.isHuman()):
                             
-                                #Rhye - start
-                                #objMercenaryUtils.computerPlayerThink(iPlayer)                                        
-                                if (player.isAlive()):
-                                        #if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod) and not gc.getTeam(player.getTeam()).isHasTech(con.iNationalism)):
-                                        if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod)):
-                                                print ("AI thinking (Mercenaries)", iPlayer) #Rhye
-                                                objMercenaryUtils.computerPlayerThink(iPlayer)                                                                
-                                #Rhye - end
+                                ##Rhye - start
+                                ##objMercenaryUtils.computerPlayerThink(iPlayer)                                        
+                                #if (player.isAlive()):
+                                        ##if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod) and not gc.getTeam(player.getTeam()).isHasTech(con.iNationalism)):
+                                        #if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod)):
+                                                #print ("AI thinking (Mercenaries)", iPlayer) #Rhye
+                                                #objMercenaryUtils.computerPlayerThink(iPlayer)                                                                
+                                ##Rhye - end
                 
-                        # Place any mercenaries that might be ready to be placed.
-                        objMercenaryUtils.placeMercenaries(iPlayer)
-                #print ("PLAYER FINE", iPlayer)
-                #print( " out Begin Player Turn ",iGameTurn, iPlayer )
+                        ## Place any mercenaries that might be ready to be placed.
+                        #objMercenaryUtils.placeMercenaries(iPlayer)
+                ##print ("PLAYER FINE", iPlayer)
+                ##print( " out Begin Player Turn ",iGameTurn, iPlayer )
         
         
         def onEndPlayerTurn(self, argsList):
@@ -626,13 +626,14 @@ class CvRFCEventHandler:
 
         # This method creates a new instance of the MercenaryUtils class to be used later
 	def onLoadGame(self, argsList):
+                pass
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-		if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+		#if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
 
-			global objMercenaryUtils
+			#global objMercenaryUtils
 
-			objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+			#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
 
 
@@ -644,12 +645,12 @@ class CvRFCEventHandler:
                 self.mercs.onUnitPromoted( argsList )
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye   
-                if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-                        pUnit, iPromotion = argsList
-                        player = PyPlayer(pUnit.getOwner())
-
-                        if(objMercenaryUtils.isMercenary(pUnit)):
-                                CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
+                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+                #        pUnit, iPromotion = argsList
+                #        player = PyPlayer(pUnit.getOwner())
+                #
+                #        if(objMercenaryUtils.isMercenary(pUnit)):
+                #                CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
 
 
 
@@ -661,85 +662,88 @@ class CvRFCEventHandler:
                 self.mercs.onUnitKilled( argsList )
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
                     
-                        unit, iAttacker = argsList
+                        #unit, iAttacker = argsList
                         
-                        mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
+                        #mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
 
-                        if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
-                                strMessage = mercenary.getName() + " has died under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
-                                # Inform the player that the mercenary has died.
-                                CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True) 
+                        #if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
+                                #strMessage = mercenary.getName() + " has died under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
+                                ## Inform the player that the mercenary has died.
+                                #CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True) 
 
-                        objMercenaryUtils.removePlayerMercenary(unit)
+                        #objMercenaryUtils.removePlayerMercenary(unit)
 
 
         # This method will remove a mercenary unit from the game if it is lost
         def onUnitLost(self, argsList):
                 'Unit Lost'
+                
+                #print(" 3Miro: onUnitLost ")
+                self.mercs.onUnitLost( argsList )
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
         
-                        unit = argsList[0]
+                        #unit = argsList[0]
                         
-                        # Debug code - start
-                        if(g_bDebug):
-                                CvUtil.pyPrint("lost: " + unit.getName())
-                        # Debug code - end
+                        ## Debug code - start
+                        #if(g_bDebug):
+                                #CvUtil.pyPrint("lost: " + unit.getName())
+                        ## Debug code - end
                         
-                        # If the unit being lost is a mercenary, check to see if they have been
-                        # replaced by an upgraded version of themselves. If they are then save
-                        # the new upgraded version of themselves and return immediately.
-                        if(objMercenaryUtils.isMercenary(unit)):
+                        ## If the unit being lost is a mercenary, check to see if they have been
+                        ## replaced by an upgraded version of themselves. If they are then save
+                        ## the new upgraded version of themselves and return immediately.
+                        #if(objMercenaryUtils.isMercenary(unit)):
 
-                                # Debug code - start
-                                if(g_bDebug):        
-                                        CvUtil.pyPrint("mercenary unit lost: " + unit.getName())
-                                # Debug code - end
+                                ## Debug code - start
+                                #if(g_bDebug):        
+                                        #CvUtil.pyPrint("mercenary unit lost: " + unit.getName())
+                                ## Debug code - end
                                         
-                                # Get the active player ID
-                                iPlayer = gc.getGame().getActivePlayer()
+                                ## Get the active player ID
+                                #iPlayer = gc.getGame().getActivePlayer()
                                 
-                                # Get the reference of the actual player
-                                pyPlayer = PyPlayer(iPlayer)
+                                ## Get the reference of the actual player
+                                #pyPlayer = PyPlayer(iPlayer)
 
-                                # Get the list of units for the player
-                                unitList = pyPlayer.getUnitList()
+                                ## Get the list of units for the player
+                                #unitList = pyPlayer.getUnitList()
                                         
-                                # Go through the list of units to see if an upgraded version of 
-                                # the unit has been added. If it exists then save it and return
-                                # immediately.
-                                for unit in unitList:
+                                ## Go through the list of units to see if an upgraded version of 
+                                ## the unit has been added. If it exists then save it and return
+                                ## immediately.
+                                #for unit in unitList:
 
-                                        if(unit.getUnitType() != argsList[0].getUnitType() and unit.getNameNoDesc() == argsList[0].getNameNoDesc()):
+                                        #if(unit.getUnitType() != argsList[0].getUnitType() and unit.getNameNoDesc() == argsList[0].getNameNoDesc()):
 
-                                                # Debug code - start
-                                                if(g_bDebug):        
-                                                        CvUtil.pyPrint("mercenary unit upgraded: " + unit.getName())
-                                                # Debug code - end
+                                                ## Debug code - start
+                                                #if(g_bDebug):        
+                                                        #CvUtil.pyPrint("mercenary unit upgraded: " + unit.getName())
+                                                ## Debug code - end
                                                 
-                                                tmpMerc = objMercenaryUtils.createBlankMercenary()
-                                                tmpMerc.loadUnitData(unit)
-                                                tmpMerc.iBuilder = -1
-                                                objMercenaryUtils.saveMercenary(tmpMerc)
-                                                return
+                                                #tmpMerc = objMercenaryUtils.createBlankMercenary()
+                                                #tmpMerc.loadUnitData(unit)
+                                                #tmpMerc.iBuilder = -1
+                                                #objMercenaryUtils.saveMercenary(tmpMerc)
+                                                #return
                                                 
-                        mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
+                        #mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
 
-                        if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
-                                strMessage = mercenary.getName() + " was lost under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
-                                # Inform the player that the mercenary has died.
-                                CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True) 
-                        unit = argsList[0]
+                        #if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
+                                #strMessage = mercenary.getName() + " was lost under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
+                                ## Inform the player that the mercenary has died.
+                                #CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True) 
+                        #unit = argsList[0]
                         
-                        # Debug code - start
-                        if(g_bDebug):        
-                                CvUtil.pyPrint("lost??: " + unit.getNameNoDesc())        
-                        # Debug code - end
+                        ## Debug code - start
+                        #if(g_bDebug):        
+                                #CvUtil.pyPrint("lost??: " + unit.getNameNoDesc())        
+                        ## Debug code - end
 
-                        objMercenaryUtils.removePlayerMercenary(unit)
+                        #objMercenaryUtils.removePlayerMercenary(unit)
 
 
         # This method handles the key input and will bring up the mercenary manager screen if the 

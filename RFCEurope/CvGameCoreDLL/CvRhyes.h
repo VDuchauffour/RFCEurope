@@ -279,3 +279,5 @@ extern int provinceFlagToVassalize; // we can vassalize if we have overlap (city
 // 3Miro: Protestant Schism: this serves to stop non-Catholics from founding Protestantism
 extern int iParentReligion;
 extern int iSchismReligion;
+
+extern int iMercPromotion; // 3Miro: the promotion to block upgrades

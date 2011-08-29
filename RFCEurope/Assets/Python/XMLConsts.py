@@ -604,6 +604,7 @@ iTerrainOcean = 8
 
 iPromotionFormation = 7
 iPromotionMedicI = 13
+iPromotionMerc = 48
 iPromotionLeader = 41
 
 

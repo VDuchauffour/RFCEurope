@@ -224,6 +224,8 @@ int provinceFlagToVassalize;
 int iParentReligion;
 int iSchismReligion;
 
+int iMercPromotion = -1;
+
 bool MiroBelongToCore( int iCiv, int x, int y ){
 	/*if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
 		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
