@@ -1228,3 +1228,6 @@ void CyGlobalContext::setParentSchismReligions( int iParent, int iSchism ){
 	iParentReligion = iParent;
 	iSchismReligion = iSchism;
 };
+void CyGlobalContext::setMercPromotion( int iPromotion ){
+	iMercPromotion = iPromotion;
+};

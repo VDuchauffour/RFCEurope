@@ -13,7 +13,7 @@ from sets import Set
 
 iNumPlayers = con.iNumPlayers
 
-iMercPromotion = 48
+iMercPromotion = xml.iPromotionMerc
 
 #PyGame = PyHelpers.PyGame()
 
@@ -24,10 +24,10 @@ PyPlayer = PyHelpers.PyPlayer
 iMercCostPerTurn = con.iMercCostPerTurn
 
 # list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
-lMercList = [   [xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+lMercList = [   #[xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 110 ],
                 [xml.iAxeman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
-                [xml.iSwordsman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
-                [xml.iHorseArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+                #[xml.iSwordsman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+                #[xml.iHorseArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
                 ]
 
 ### A few Parameters for Mercs only:
@@ -122,6 +122,7 @@ class MercenaryManager:
                         iMerc = potentialMercs[( iOffset + iStart ) % iNumPotentialMercs]
                         if ( gc.getGame().getSorenRandNum( 100, 'merc appearing in global pool') < lMercList[iMerc][6] ):
                                 # adding a new merc
+                                print(" 3Miro Adding Merc to Global Pool: ",iMerc)
                                 self.addNewMerc( iMerc )
 
         def doMercsTurn( self, iGameTurn ):
@@ -151,6 +152,8 @@ class MercenaryManager:
                 self.processNewMercs( iGameTurn ) # add new Merc to the pool
                         
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
+                
+                #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
 
         def onUnitPromoted( self, argsList ):
                 pUnit, iNewPromotion = argsList
@@ -178,8 +181,12 @@ class MercenaryManager:
                 pUnit, iAttacker = argsList
                 
                 iMerc = pUnit.getMercID()
+                #print(" 3Miro: Unit killed ",iMerc )
                 
                 if ( iMerc > -1 ):
+                        lHiredByList = self.GMU.getMercHiredBy()
+                        if ( lHiredBy[iMerc] == -1 ): # merc was fired, then don't remove permanently
+                                return
                         # unit is gone
                         pPlayer = gc.getPlayer( pUnit.getOwner() )
                         pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - pUnit.getMercUpkeep() ) )
@@ -195,11 +202,12 @@ class MercenaryManager:
                 # this gets called on lost and on upgrade, check to remove the merc if it has not been upgraded?
                 pUnit = argsList[0]
                 iMerc = pUnit.getMercID()
+                #print(" 3Miro: Unit lost ",iMerc )
                 
                 if ( iMerc > -1 ):
                         # is a merc, check to see if it has just been killed
                         lHiredByList = self.GMU.getMercHiredBy()
-                        if ( lHiredBy[iMerc] == -2 ):
+                        if ( lHiredByList[iMerc] == -2 ):
                                 # unit has just been killed and onUnitKilled has been called
                                 return
                         
@@ -207,9 +215,10 @@ class MercenaryManager:
                         # Get the list of units for the player
                         iPlayer = pUnit.getOwner()
                         unitList = PyPlayer( iPlayer ).getUnitList()
-                        for pTestUnit in unitList:
-                                if ( pTestUnit.getMercID() == iMerc ):
-                                        return
+                        #for pTestUnit in unitList:
+                        #        if ( pTestUnit.getMercID() == iMerc ):
+                        #                print("Returning")
+                        #                return
                         
                         # unit is gone
                         pPlayer = gc.getPlayer( iPlayer )
@@ -217,7 +226,7 @@ class MercenaryManager:
 
                         # remove the merc (presumably disbanded here)
                         lHiredByList[iMerc] = -1
-                        self.setMercHiredBy( lHiredByList )
+                        self.GMU.setMercHiredBy( lHiredByList )
 
         def processMercAI( self, pPlayer ):
                 if ( pPlayer.isHuman() or pPlayer.isBarbarian() or pPlayer.getID() == con.iPope ):
@@ -438,9 +447,9 @@ class GlobalMercenaryUtils:
                 
                 # add the promotions
                 for iPromotion in lMerc[1]:
-                        pUnit.setHasPromotion( iPromotion, False )
+                        pUnit.setHasPromotion( iPromotion, True )
                         
-                pUnit.setHasPromotion( iMercPromotion, False )
+                pUnit.setHasPromotion( iMercPromotion, True )
                 
                 # set the MercID
                 pUnit.setMercID( lMerc[0] )
@@ -455,6 +464,7 @@ class GlobalMercenaryUtils:
                 # get the Merc info
                 iMerc = pMerc.getMercID()
                 iUpkeep = pMerc.getMercUpkeep()
+                #print(" 3Miro: fire Merc: ",iMerc)
                 
                 if ( iMerc < 0 ):
                         return

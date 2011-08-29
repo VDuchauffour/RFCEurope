@@ -132,7 +132,7 @@ class CvEventManager:
 			'unitCreated' 			: self.onUnitCreated,
 			'unitBuilt' 			: self.onUnitBuilt,
 			'unitKilled'			: self.onUnitKilled,
-			'unitLost'				: self.onUnitLost,
+			'unitLost'			: self.onUnitLost,
 			'unitPromoted'			: self.onUnitPromoted,
 			'unitSelected'			: self.onUnitSelected, 
 			'UnitRename'				: self.onUnitRename,
@@ -196,6 +196,8 @@ class CvEventManager:
 		bDummy = false
 		self.bDbg, bDummy, self.bAlt, self.bCtrl, self.bShift, self.bAllowCheats = argsList[idx:]
 		ret = 0
+                #print("Event with tag: ",tag)
+                gc.getGame().logMsg("Something")
 		if self.EventHandlerMap.has_key(tag):
 			fxn = self.EventHandlerMap[tag]
 			ret = fxn(argsList[1:idx])
@@ -657,6 +659,7 @@ class CvEventManager:
 
 	def onUnitLost(self, argsList):
 		'Unit Lost'
+                #print("3Miro: CvEvenetManager: onUnitLost")
 		unit = argsList[0]
 		player = PyPlayer(unit.getOwner())
 		if (not self.__LOG_UNITLOST):

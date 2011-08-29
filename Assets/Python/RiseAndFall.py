@@ -411,14 +411,14 @@ class RiseAndFall:
                         gc.getActivePlayer().setHandicapType(gc.getPlayer(self.getNewCiv()).getHandicapType())
                         gc.getGame().setActivePlayer(self.getNewCiv(), False)
                         gc.getPlayer(self.getNewCiv()).setHandicapType(iOldHandicap)
-                        for i in range(con.iNumStabilityParameters):
-                                utils.setStabilityParameters(utils.getHumanID(),i, 0)
-                                utils.setLastRecordedStabilityStuff(0, 0)
-                                utils.setLastRecordedStabilityStuff(1, 0)
-                                utils.setLastRecordedStabilityStuff(2, 0)
-                                utils.setLastRecordedStabilityStuff(3, 0)
-                                utils.setLastRecordedStabilityStuff(4, 0)
-                                utils.setLastRecordedStabilityStuff(5, 0)
+                        #for i in range(con.iNumStabilityParameters):
+                        #        utils.setStabilityParameters(utils.getHumanID(),i, 0)
+                        #        utils.setLastRecordedStabilityStuff(0, 0)
+                        #        utils.setLastRecordedStabilityStuff(1, 0)
+                        #        utils.setLastRecordedStabilityStuff(2, 0)
+                        #        utils.setLastRecordedStabilityStuff(3, 0)
+                        #        utils.setLastRecordedStabilityStuff(4, 0)
+                        #        utils.setLastRecordedStabilityStuff(5, 0)
                         for iMaster in range(con.iNumPlayers):
                                 if (gc.getTeam(gc.getPlayer(self.getNewCiv()).getTeam()).isVassal(iMaster)):
                                         gc.getTeam(gc.getPlayer(self.getNewCiv()).getTeam()).setVassal(iMaster, False, False)

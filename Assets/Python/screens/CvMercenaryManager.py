@@ -12,8 +12,10 @@ import ScreenInput
 import time
 import PyHelpers
 import Popup as PyPopup
-import MercenaryUtils
+#import MercenaryUtils
 import Mercenaries
+import Consts as con
+from sets import Set
 #import CvConfigParser #Rhye
 import math
 from CvMercenaryScreensEnums import *
@@ -25,10 +27,12 @@ PyInfo = PyHelpers.PyInfo
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
-objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
 # 3Miro: this class will provide the needed interface for the RFCE Merc mechanics
 GMU = Mercenaries.GlobalMercenaryUtils()
+lMercList = Mercenaries.lMercList
+iMercCostPerTurn = con.iMercCostPerTurn
 
 # Change this to true if hiring mercenaries should only be allowed if one or more of
 # a player's civilization contains one or more of the buildings specified in the 
@@ -83,18 +87,6 @@ class CvMercenaryManager:
 		global g_bDelayUnitReturn
 		global g_bRequireCityUnitContractCreation
 		
-		# Load the Mercenaries Mod Config INI file containing all of the configuration information
-		#Rhye - start comment
-##		config = CvConfigParser.CvConfigParser("Mercenaries Mod Config.ini")
-##		
-##		# If we actually were able to open the "Mercenaries Mod Config.ini" file then read in the values.
-##		# otherwise we'll keep the default values that were set at the top of this file.
-##		if(config != None):
-##			g_bRequireStartingLocationContainBuildings = config.getboolean("Mercenaries Mod", "Require Starting Location Contain Buildings", false)
-##			g_bDelayUnitReturn = config.getboolean("Mercenaries Mod", "Delay Unit Return", true)
-##			g_bRequireCityUnitContractCreation = config.getboolean("Mercenaries Mod", "Require City Unit Contract Creation", true)
-                #Rhye - end comment
-		
 	# Returns the instance of the mercenary manager screen.						
 	def getScreen(self):
 		return CyGInterfaceScreen(self.MERCENARY_MANAGER_SCREEN_NAME, self.iScreenId)
@@ -134,97 +126,67 @@ class CvMercenaryManager:
 		
 		if(self.currentScreen == MERCENARY_MANAGER):
 			self.drawMercenaryScreenContent(screen)
-		elif(self.currentScreen == MERCENARY_GROUPS_MANAGER):
-			self.drawMercenaryGroupsScreenContent(screen)
-		elif(self.currentScreen == MERCENARY_CONTRACT_MANAGER):
-			self.drawMercenaryContractsScreenContent(screen)
 		
 
 	# Populates the panel that shows all of the available mercenaries in the
 	# global mercenary pool.
 	def populateAvailableMercenariesPanel(self, screen):
-
-		# Get the available mercenaries
-		mercenaries = objMercenaryUtils.getAvailableMercenaries()
-		
-		# Get the ID for the current active player
+                ## 3Miro: draw the available merc info
+                # read in the available mercs
+                lAvailableMercs = GMU.getMercGlobalPool()
+                
+                ## Get the ID for the current active player
 		iPlayer = gc.getGame().getActivePlayer()
-		
-		# Get the actual current player object
-		player = gc.getPlayer(iPlayer)
-		
-		# Get the players current gold amount
-		currentGold = player.getGold()
-
-		mercenaryCount = 0
-		
-		# Go through the mercenaries and populate the available mercenaries panel
-		for mercenaryName in mercenaries:
-
-			# Get the mercenary from the dictionary	
-			mercenary = mercenaries[mercenaryName]
-			mercenaryName = str(mercenaryName)
-			
-			# Don't add the mercenary to the list if they were built by the current player
-			if(mercenary.getBuilder() == iPlayer):
-				continue
-
-			#Rhye - start continents
-			if (not mercenary.canHireUnit(iPlayer)):
+                pPlayer = gc.getPlayer(iPlayer)
+                
+                iGold = pPlayer.getGold()
+                
+                # get a list of the provinces controlled by the player
+                lProvList = [] # all available cities that the Merc can appear in
+                apCityList = PyPlayer(iPlayer).getCityList()
+                for pCity in apCityList:
+                        city = pCity.GetCy()
+                        iProvince = city.getProvince()
+                        if ( not (iProvince in lProvList) ):
+                              lProvList.append( iProvince )
+                lProvList = Set( lProvList ) # set as in set-theory
+                
+                mercenaryCount = 0
+                
+                #print lAvailableMercs
+                
+                for lMerc in lAvailableMercs:
+                        # get the name and note that names are no longer Unique
+                        iMerc = lMerc[0]
+                        mercenaryName = CyTranslator().getText( lMercList[iMerc][1] , ())
+                        
+                        if ( not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0 ): # we have no matching provinces, skip
                                 continue
-			#Rhye - end
-						
-			screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, mercenaryName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-			screen.attachImageButton( mercenaryName, mercenaryName+"_InfoButton", 
-										mercenary.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-			screen.attachPanel(mercenaryName, mercenaryName+"Text",mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-			# Build the mercenary hire cost string
-			#Rhye - start Carthaginian UP
-			#strHCost = u"%d%c" %(mercenary.getHireCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-			# 3MiroUP: call the appropriate function
-                        strHCost = u"%d%c" %(mercenary.getHireCostXPlayer(iPlayer), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        #Rhye - end UP
-			
-			# Build the mercenary maintenance cost string
-			#Rhye - start Carthaginian UP
-			# 3MiroUP: same as above
-			#strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCostXPlayer(iPlayer), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        #Rhye - end UP
-			
-			screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text3", "     Level: " + str(mercenary.getLevel()))			
-			screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
-
-			bEnableHireMercenary = true
-
-			# Check to see if the player has enough gold to hire the mercenary. If they don't then
-			# don't let them hire the mercenary.
-			#Rhye - start Carthaginian UP
-			# 3MiroUP: same as above
-			#if(	(currentGold-mercenary.getHireCost()) <= 0):
-                        if(	(currentGold-mercenary.getHireCostXPlayer(iPlayer)) <= 0):
-                        #Rhye - end UP
-				bEnableHireMercenary = false
-				
-			# If the mod is configured to require buildings check to see if the player has at least one
-			# building with one or more of the required buildings.
-			if(g_bRequireStartingLocationContainBuildings):
-			
-				# Try to get a city with one or more of the required buildings. If we get none
-				# then we won't allow the mercenary to be hired.
-				objCity = objMercenaryUtils.getRandomCityWithBuildings(iPlayer)
-				if(objCity == None):
-					bEnableHireMercenary = false
-
-			# Add the hire button for the mercenary
-			if(bEnableHireMercenary):
-				screen.attachPanel(mercenaryName, mercenaryName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachImageButton( mercenaryName, mercenaryName+"_HireButton", 
-											"Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-
-			mercenaryCount = mercenaryCount + 1
-			
+                        
+                        # screen needs unique internal names
+                        #szUniqueInternalName = "MercID%d" %iMerc
+                        szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
+                        
+                        pUnitInfo = gc.getUnitInfo(lMercList[iMerc][0])
+                        screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
+                        screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_AInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                        
+                        # TODO: The UP here:
+                        iHireCost = lMerc[2]
+                        iUpkeepCost = lMerc[3]
+                        
+                        strHCost = u"%d%c" %(iHireCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+                        strMCost = u"%1.2f%c" %(0.01*iUpkeepCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+                        
+                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(len(lMerc[1]) ))			
+			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
+                        
+                        if ( iGold - iHireCost >= 0 ):
+				screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
+				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HireButton", "Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )        
+                        
+                        mercenaryCount = mercenaryCount + 1
 
 		# Add the padding to the available mercenaries panel to improve the look of the screen
 		if((4-mercenaryCount)>0):
@@ -234,61 +196,57 @@ class CvMercenaryManager:
 				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
 				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
 				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+                                
+        def clearAvailableMercs( self, screen ):
+                
+                lGlobalMercPool = GMU.getMercGlobalPool()
+                
+                for iI in range( len( lGlobalMercPool ) ):
+                        screen.deleteWidget("HiredMercID" + self.numToStr(lGlobalMercPool[iI][0])) # it is OK to delete non-existent widgets
+                
+                for iI in range( 4 ):
+                        screen.deleteWidget( "dummyPanelHire"+str(iI) )
 
 
 	# Populates the panel that shows all of the players hired mercenaries
 	def populateHiredMercenariesPanel(self, screen):
+                ## 3Miro: draw the hired merc info
 
-		# Get all of the players hired mercenaries
-		mercenaries = objMercenaryUtils.getPlayerMercenaries(self.iActivePlayer)
-				
-		mercenaryCount = 0
-		
-		# Go through the mercenaries and populate the hired mercenaries panel
-		for mercenaryName in mercenaries:
+                iPlayer = gc.getGame().getActivePlayer()
+                unitList = PyPlayer( iPlayer ).getUnitList()
+                
+                mercenaryCount = 0
+                
+                for pUnit in unitList:
+                        iMerc = pUnit.getMercID()
+                        if ( iMerc > -1 ):
+                                # if this is a Merc
+                                mercenaryName = pUnit.getNameNoDesc()
+                                #szUniqueInternalName = "HiredMercID%d" %iMerc
+                                szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
+                                #mtest = szUniqueInternalName+"_FindButton"
+                                
+                                pUnitInfo = gc.getUnitInfo(pUnit.getUnitType())
+                                
+                                screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
+                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                                
+                                iUpkeep = pUnit.getMercUpkeep()
+                                strCost = u"%1.2f%c" %((0.01*iUpkeep), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+                                
+                                strXP = u"%d/%d" %(pUnit.getExperience(), pUnit.experienceNeeded())
+                                
+                                screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(pUnit.getLevel()) + "      XP: " + strXP)
+                                screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Maint. Cost: " + strCost)
+                                
+                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
+                                
+                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FindButton", "Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
 
-			# Get the mercenary from the dictionary	
-			mercenary = mercenaries[mercenaryName]
-			
-			mercenaryName = str(mercenaryName)
-			
-			# Continue if the builder of the mercenary is the same as the owner of the mercenary
-			if(mercenary.getBuilder() == mercenary.getOwner()):
-				continue
-			
-			screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, mercenaryName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-			screen.attachImageButton( mercenaryName, mercenaryName+"_InfoButton", 
-										mercenary.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-			screen.attachPanel(mercenaryName, mercenaryName+"Text",mercenary.getName(), "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-			# Build the mercenary hire cost string
-			#Rhye - start Carthaginian UP
-			# 3MiroUP: same as above
-			#strCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        strCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCostXPlayer(mercenary.getOwner()), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        #Rhye - end UP			
-			
-			# Build the mercenary XP string
-			strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
-			 
-			screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text3", "     Level: " + str(mercenary.getLevel()) + "      XP: " + strXP)
-			screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text4", "     Maint. Cost: " + strCost)
-
-			screen.attachPanel(mercenaryName, mercenaryName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-
-
-			# Only show the fire button if the mercenary is in the game
-			if(mercenary.objUnit != None):
-				
-				screen.attachImageButton( mercenaryName, mercenaryName+"-"+self.numberToAlpha(mercenary.objUnit.getID())+"_FindButton", 
-											"Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
-
-				screen.attachImageButton( mercenaryName, mercenaryName+"_FireButton", 
-											"Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-			
-			mercenaryCount = mercenaryCount + 1
-			
-		i = 0
+				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FireButton", "Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+                                
+                                mercenaryCount = mercenaryCount + 1
 
 		# Add the padding to the hired mercenaries panel to improve the look of the screen
 		if((4-mercenaryCount)>0):
@@ -297,122 +255,20 @@ class CvMercenaryManager:
 				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
 				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
 				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-
-
-	# Populates the panel that shows all of the players units available to be
-	# contracted out as mercenaries
-	def populateAvailableUnitsPanel(self, screen):
-
-		# Get all of the units available to be contracted out as mercenaries.
-		unitDict = objMercenaryUtils.getAvailableUnits(self.iActivePlayer)
-
-		# Go through all of the units
-		for unitID in unitDict:
-	
-			unit = unitDict[unitID]
-			
-			unitName = ""
-			
-			# If the unit has a mercenary name then use that name for the unitId
-			if(len(unit.getNameNoDesc()) > 0):
-				unitName = str(unit.getNameNoDesc()) 
-
-			# otherwise just the standard unit name
-			else:
-				unitName = str(unit.getName()) 
-		
-			unitID = unitName + "-" + self.numberToAlpha(unit.getID())
-
-			screen.attachPanel(AVAILABLE_UNITS_INNER_PANEL_ID, unitID, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-			screen.attachImageButton( unitID, unitID+"_UnitInfoButton", 
-										gc.getUnitInfo(unit.getUnitType()).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-			screen.attachPanel(unitID, unitID+"Text",unitName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-			# Build the unit XP string
-			strXP = u"%d/%d" %(unit.getExperience(), unit.experienceNeeded())
-			 
-			screen.attachLabel( unitID+"Text", unitID  + "text3", "     Level: " + str(unit.getLevel()) + "      XP: " + strXP)
-
-			screen.attachPanel(unitID, unitID+"CreateContractButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-			screen.attachImageButton( unitID, unitID+"_FindButton", 
-										"Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
-
-			bCreateContract = true
-			
-			# If the require city unit contract creation and the unit is not in a city then
-			# don't show the create contract button for the unit
-			if(g_bRequireCityUnitContractCreation and not unit.plot().isCity()):
-				bCreateContract = false
-			
-			# Show the create contract button if the player can contract out the unit
-			if(bCreateContract):
-				screen.attachLabel( unitID+"Text", unitID  + "text4", "     In: " + unit.plot().getPlotCity().getName())		
-				screen.attachImageButton( unitID, unitID+"_CreateContractButton", 
-											"Art/Interface/Buttons/Actions/StealPlans.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-
-		# Add the padding to the available units panel to improve the look of the screen										
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.attachPanel(AVAILABLE_UNITS_INNER_PANEL_ID, "dummyPanelCreateContract"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				
-				
-	# Populates the panel that shows all of the players units contracted out 
-	# as mercenaries
-	def populateContractedOutUnitsPanel(self, screen):
-		
-		# Get all of the units contracted out as mercenaries.
-		unitDict = objMercenaryUtils.getContractedOutUnits(self.iActivePlayer)
-
-		# Go through all of the units
-		for unitID in unitDict:
-	
-			unit = unitDict[unitID]
-
-			unitName = str(unit.getName()) 
-			unitID = ""
-			
-			# If the unit is actually in the game then convert their ID number
-			# to the alpha representation, otherwise just use a dummy value.
-			if(unit.objUnit != None):
-				unitID = unitName + "-" + self.numberToAlpha(unit.objUnit.getID())
-			else:
-				unitID = unitName + "-ABC"
-			
-			bPlaced = false
-			
-			if(unit.isPlaced()):
-				bPlaced = true
-				
-			screen.attachPanel(UNITS_CONTRACTED_OUT_INNER_PANEL_ID, unitID, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-			screen.attachImageButton( unitID, unitID+"_UnitInfoButton", 
-										unit.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-			screen.attachPanel(unitID, unitID+"Text",unitName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-			# Build the unit XP string
-			strXP = u"%d/%d" %(unit.getExperienceLevel(), unit.getNextExperienceLevel())
-			 
-			screen.attachLabel( unitID+"Text", unitID  + "text3", "     Level: " + str(unit.getLevel()) + "      XP: " + strXP)
-
-			# If the unit is hired then display their employeers information
-			if(unit.isHired()):
-				screen.attachLabel( unitID+"Text", unitID  + "text4", "     Hired by: " + gc.getPlayer(unit.getOwner()).getName())
-				
-			# Only show the cancel contract button if the unit is in the game			
-			if(bPlaced):
-				screen.attachPanel(unitID, unitID+"CancelContractButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachImageButton( unitID, unitID+"_CancelContractButton", 
-											"Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-
-		# Add the padding to the units contracted out panel to improve the look of the screen										
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.attachPanel(UNITS_CONTRACTED_OUT_INNER_PANEL_ID, "dummyPanelContractedOut"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")				
+                                
+        def clearHiredMercs( self, screen ):
+                iPlayer = gc.getGame().getActivePlayer()
+                unitList = PyPlayer( iPlayer ).getUnitList()
+                
+                mercenaryCount = 0
+                
+                for pUnit in unitList:
+                        iMerc = pUnit.getMercID()
+                        if ( iMerc > -1 ):
+                              screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
+                 
+                for iI in range( 4 ):
+                        screen.deleteWidget( "dummyPanelFire"+str(iI) )
 
 				
 	# Clears out the unit information panel contents
@@ -493,7 +349,10 @@ class CvMercenaryManager:
 		
 			
 	# Populates the mercenary information panel with the unit information details		
-	def populateMercenaryInformation(self, screen, mercenary):
+	def populateMercenaryInformation(self, screen, lMerc ):
+                
+                #lMerc = [ iMerc, lPromotions, 0, iUpkeepCost ]
+                iMerc = lMerc[0]
 
 		screen.addPanel(MERCENARY_INFORMATION_PROMOTION_PANEL_ID, "", "", True, True, self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X], self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_Y], self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_WIDTH], self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, "Promotions", "", True, True, self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_X], self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_Y], self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_WIDTH], self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_EMPTY)
@@ -505,73 +364,72 @@ class CvMercenaryManager:
                 # 3MiroUP: same as above
 		# Build the mercenary hire cost string
 		#strHCost = u"%d%c" %(mercenary.getHireCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-		strHCost = u"%d%c" %(mercenary.getHireCostXPlayer(gc.getGame().getActivePlayer()), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+		strHCost = u"%d%c" %(lMerc[2], gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
 		#Rhye - end UP
 
                 #Rhye - start Carthaginian UP
                 # 3MiroUP: same as above
 		# Build the mercenary maintenance cost string
 		#strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCostXPlayer(gc.getGame().getActivePlayer()), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+                strMCost = u"%1.2f%c" %(0.01*lMerc[3], gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
                 #Rhye - end UP
 		
 		# Build the mercenary XP string
-		strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
+		#strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
+                strXP = "0/0"
 
 		# Build the unit stats string
-		strStats = u"%d%c    %d%c" %(mercenary.getUnitInfo().getCombat(), CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR),mercenary.getUnitInfo().getMoves(),CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
+                pUnitInfo = gc.getUnitInfo(lMercList[lMerc[0]][0])
+		strStats = u"%d%c    %d%c" %(pUnitInfo.getCombat(), CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR),pUnitInfo.getMoves(),CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
 
-		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, mercenary.getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, mercenary.getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) # 3Miro
+		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, CyTranslator().getText( lMercList[iMerc][1] , ()), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Unit Type: " + mercenary.getUnitInfo().getDescription(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) #Rhye
-		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Level: " + str(mercenary.getLevel()) + "     XP: " + strXP, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Level: " + str(len(lMerc[1])-1 ) + "     XP: " + strXP, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  " + strStats, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  ", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Hire Cost: " + strHCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-		# Show the mercenary costs if it is in the game			
-		if(mercenary.isPlaced()):
-			screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Maint. Cost: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
-		# Otherwise, show the number of turns until the unit is placed in the game
-		else:
-			# Get the number of turns until the unit/mercenary is placed in the game
-			placementTurns = mercenary.getPlacementTurns()
-			strPlacement = ""
+                
+                screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Maint. Cost: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		## Show the mercenary costs if it is in the game			
+		#if(mercenary.isPlaced()):
+			#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Maint. Cost: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		## Otherwise, show the number of turns until the unit is placed in the game
+		#else:
+			## Get the number of turns until the unit/mercenary is placed in the game
+			#placementTurns = mercenary.getPlacementTurns()
+			#strPlacement = ""
 
-			# Build the placement string
-			if(placementTurns <= 1):
-				strPlacement = "Arrives next turn"
-			else:
-				strPlacement = u"Arrival in %d turns" %(placementTurns)
-			screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  " + strPlacement, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+			## Build the placement string
+			#if(placementTurns <= 1):
+				#strPlacement = "Arrives next turn"
+			#else:
+				#strPlacement = u"Arrival in %d turns" %(placementTurns)
+			#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  " + strPlacement, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		
 		# Get the promotion list for the mercenary
-		promotionList = mercenary.getCurrentPromotionList()
+		#promotionList = mercenary.getCurrentPromotionList()
 
 		screen.attachMultiListControlGFC(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
 
 		# Add all of the promotions the mercenary has.
-		for promotion in promotionList:
-			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, promotion.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(promotion.getType()), -1, false )
+		for iPromotion in lMerc[1]:
+                        pPromotionInfo = gc.getPromotionInfo(iPromotion)
+			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
 			
-		screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, mercenary.getUnitInfoID(), self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
+		screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
 
 	
 	# Draws the gold information in the "Mercenary Manager" screens
 	def drawGoldInformation(self, screen):
 	
 		iCost = 0
-		strCost = ""		
+		strCost = ""
 		
-		# If the current screen is the mercenary contract manager screen then 
-		# get the mercenary contract income information
-		if(self.currentScreen == MERCENARY_CONTRACT_MANAGER):
-			iCost = objMercenaryUtils.getPlayerMercenaryContractIncome(gc.getGame().getActivePlayer())
-			strCost = u"%s %c: %d" %("Mercenary Contract Income", gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(),iCost)
-		
-		# Otherwise get the mercenary maintenance information
-		else:
-			iCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(gc.getGame().getActivePlayer())
-			strCost = u"%s %c: %d" %("Mercenary Maintenance", gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(),iCost)
+                #iCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(gc.getGame().getActivePlayer())
+                pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
+		strCost = u"%s %c: %1.2f" %("Mercenary Maintenance", gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(), 0.01*pPlayer.getPicklefreeParameter( iMercCostPerTurn ) )
 
 		# Get the players current gold text		
 		szText = self.getGoldText(gc.getGame().getActivePlayer())
@@ -603,66 +461,8 @@ class CvMercenaryManager:
 		screen.setText(MERCENARIES_TEXT_PANEL_ID, "Background", self.screenWidgetData[MERCENARIES_TEXT_PANEL], CvUtil.FONT_LEFT_JUSTIFY, self.screenWidgetData[MERCENARIES_TEXT_PANEL_X], self.screenWidgetData[MERCENARIES_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		# Commented out due to mercenary groups not being implemented yet.
 		# screen.setText(MERCENARY_GROUPS_TEXT_PANEL_ID, "Background", self.screenWidgetData[MERCENARY_GROUPS_TEXT_PANEL], CvUtil.FONT_LEFT_JUSTIFY, self.screenWidgetData[MERCENARY_GROUPS_TEXT_PANEL_X], self.screenWidgetData[MERCENARY_GROUPS_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		screen.setText(MERCENARY_CONTRACTS_TEXT_PANEL_ID, "Background", self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL], CvUtil.FONT_LEFT_JUSTIFY, self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL_X], self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		#screen.setText(MERCENARY_CONTRACTS_TEXT_PANEL_ID, "Background", self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL], CvUtil.FONT_LEFT_JUSTIFY, self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL_X], self.screenWidgetData[MERCENARY_CONTRACTS_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setText(EXIT_TEXT_PANEL_ID, "Background", self.screenWidgetData[EXIT_TEXT_PANEL], CvUtil.FONT_RIGHT_JUSTIFY, self.screenWidgetData[EXIT_TEXT_PANEL_X], self.screenWidgetData[EXIT_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
-
-
-	# Draws the mercenary groups screen content	
-	def drawMercenaryGroupsScreenContent(self, screen):
-	
-		# Draw the top bar
-		self.drawScreenTop(screen)
-
-		# Draw the bottom bar
-		self.drawScreenBottom(screen)
-
-		screen.addPanel(AVAILABLE_MERCENARY_GROUPS_PANEL_ID, "", "", True, True, self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_PANEL_X], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_PANEL_Y], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_PANEL_WIDTH], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(AVAILABLE_MERCENARY_GROUPS_INNER_PANEL_ID, "", "", True, True, self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_INNER_PANEL_X], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_INNER_PANEL_Y], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_INNER_PANEL_WIDTH], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_INNER_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_IN)
-		screen.addPanel(AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_ID, u"", u"", True, False, self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_X], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_Y], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_WIDTH], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN )
-		screen.setText(AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_ID, "Background", self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL], CvUtil.FONT_CENTER_JUSTIFY, self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_X], self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		screen.addPanel(HIRED_MERCENARY_GROUPS_PANEL_ID, "", "", True, True, self.screenWidgetData[HIRED_MERCENARY_GROUPS_PANEL_X], self.screenWidgetData[HIRED_MERCENARY_GROUPS_PANEL_Y], self.screenWidgetData[HIRED_MERCENARY_GROUPS_PANEL_WIDTH], self.screenWidgetData[HIRED_MERCENARY_GROUPS_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(HIRED_MERCENARY_GROUPS_INNER_PANEL_ID, "", "", True, True, self.screenWidgetData[HIRED_MERCENARY_GROUPS_INNER_PANEL_X], self.screenWidgetData[HIRED_MERCENARY_GROUPS_INNER_PANEL_Y], self.screenWidgetData[HIRED_MERCENARY_GROUPS_INNER_PANEL_WIDTH], self.screenWidgetData[HIRED_MERCENARY_GROUPS_INNER_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_IN)
-		screen.addPanel(HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_ID, u"", u"", True, False, self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_X], self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_Y], self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_WIDTH], self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN )
-		screen.setText(HIRED_MERCENARY_GROUPS_TEXT_PANEL_ID, "Background", self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL], CvUtil.FONT_CENTER_JUSTIFY, self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL_X], self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		screen.addPanel(MERCENARY_GROUP_INFORMATION_PANEL_ID, "", "", True, True, self.screenWidgetData[MERCENARY_GROUP_INFORMATION_PANEL_X], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_PANEL_Y], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_PANEL_WIDTH], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_ID, u"", u"", True, False, self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_X], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_Y], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_WIDTH], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_BACKGROUND_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN )
-		screen.setText(MERCENARY_GROUP_INFORMATION_TEXT_PANEL_ID, "Background", self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_PANEL], CvUtil.FONT_CENTER_JUSTIFY, self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_PANEL_X], self.screenWidgetData[MERCENARY_GROUP_INFORMATION_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		screen.showWindowBackground(False)
-
-	
-	# Draws the mercenary contract screen content
-	def	drawMercenaryContractsScreenContent(self, screen):
-
-		# Draw the top bar
-		self.drawScreenTop(screen)
-
-		# Draw the bottom bar
-		self.drawScreenBottom(screen)
-
-		screen.addPanel(UNITS_CONTRACTED_OUT_PANEL_ID, "", "", True, True, self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_X], self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_Y], self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_WIDTH], self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(UNITS_CONTRACTED_OUT_INNER_PANEL_ID, "", "", True, True, self.screenWidgetData[UNITS_CONTRACTED_OUT_INNER_PANEL_X], self.screenWidgetData[UNITS_CONTRACTED_OUT_INNER_PANEL_Y], self.screenWidgetData[UNITS_CONTRACTED_OUT_INNER_PANEL_WIDTH], self.screenWidgetData[UNITS_CONTRACTED_OUT_INNER_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_IN)
-		screen.addPanel(UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_ID, u"", u"", True, False, self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_X], self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_Y], self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_WIDTH], self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN )
-		screen.setText(UNITS_CONTRACTED_OUT_TEXT_PANEL_ID, "Background", self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL], CvUtil.FONT_CENTER_JUSTIFY, self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL_X], self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		screen.addPanel(AVAILABLE_UNITS_PANEL_ID, "", "", True, True, self.screenWidgetData[AVAILABLE_UNITS_PANEL_X], self.screenWidgetData[AVAILABLE_UNITS_PANEL_Y], self.screenWidgetData[AVAILABLE_UNITS_PANEL_WIDTH], self.screenWidgetData[AVAILABLE_UNITS_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(AVAILABLE_UNITS_INNER_PANEL_ID, "", "", True, True, self.screenWidgetData[AVAILABLE_UNITS_INNER_PANEL_X], self.screenWidgetData[AVAILABLE_UNITS_INNER_PANEL_Y], self.screenWidgetData[AVAILABLE_UNITS_INNER_PANEL_WIDTH], self.screenWidgetData[AVAILABLE_UNITS_INNER_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_IN)
-		screen.addPanel(AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_ID, u"", u"", True, False, self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_X], self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_Y], self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_WIDTH], self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN )
-		screen.setText(AVAILABLE_UNITS_TEXT_PANEL_ID, "Background", self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL], CvUtil.FONT_CENTER_JUSTIFY, self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL_X], self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		screen.addPanel(UNIT_INFORMATION_PANEL_ID, "", "", True, True, self.screenWidgetData[UNIT_INFORMATION_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_ID, u"", u"", True, False, self.screenWidgetData[UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_TEXT_BACKGROUND_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN )
-		screen.setText(UNIT_INFORMATION_TEXT_PANEL_ID, "Background", self.screenWidgetData[UNIT_INFORMATION_TEXT_PANEL], CvUtil.FONT_CENTER_JUSTIFY, self.screenWidgetData[UNIT_INFORMATION_TEXT_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_TEXT_PANEL_Y], self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-		screen.showWindowBackground(False)
-
-		# Populate the contents of the contracted out units panel
-		self.populateContractedOutUnitsPanel(screen)
-
-		# Populate the available units panel
-		self.populateAvailableUnitsPanel(screen)
 	
 
 	# Draws the mercenary screen content
@@ -702,29 +502,30 @@ class CvMercenaryManager:
 	def getGoldText(self, iPlayer):
 
 		# Get the player
-		player = gc.getPlayer(iPlayer)
+		pPlayer = gc.getPlayer(iPlayer)
 	
 		# get the number of cities the player owns
-		numCities = player.getNumCities()	
+		numCities = pPlayer.getNumCities()	
 					
-		totalUnitCost = player.calculateUnitCost()
-		totalUnitSupply = player.calculateUnitSupply()
-		totalMaintenance = player.getTotalMaintenance()
-		totalCivicUpkeep = player.getCivicUpkeep([], False)
-		totalPreInflatedCosts = player.calculatePreInflatedCosts()
-		totalInflatedCosts = player.calculateInflatedCosts()
-		totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-		totalMercenaryContractIncome = objMercenaryUtils.getPlayerMercenaryContractIncome(iPlayer)
-		goldCommerce = player.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
-		gold = player.getGold()
+		totalUnitCost = pPlayer.calculateUnitCost()
+		totalUnitSupply = pPlayer.calculateUnitSupply()
+		totalMaintenance = pPlayer.getTotalMaintenance()
+		totalCivicUpkeep = pPlayer.getCivicUpkeep([], False)
+		totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
+		totalInflatedCosts = pPlayer.calculateInflatedCosts()
+		#totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
+                totalMercenaryCost = (pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + 99) / 100
+		#totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
+		goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
+		gold = pPlayer.getGold()
 
-		goldFromCivs = player.getGoldPerTurn()
+		goldFromCivs = pPlayer.getGoldPerTurn()
 
 		iIncome = 0
 		
 		iExpenses = 0
 
-		iIncome = goldCommerce + totalMercenaryContractIncome
+		iIncome = goldCommerce
 		
 		if( goldFromCivs > 0):
 			iIncome += goldFromCivs
@@ -750,505 +551,62 @@ class CvMercenaryManager:
 			strDelta = u"%s" %(localText.changeTextColor(" ("+str(iDelta)+"/Turn)",gc.getInfoTypeForString("COLOR_RED")))
 		
 		return strGoldText + strDelta
-		
 
-	# Performs the operation needed to contract out a player's unit as a
-	# mercenary
-	def contractOutMercenary(self, screen, panelID, unitID):
-
-		# Get the active player ID
-		iPlayer = gc.getGame().getActivePlayer()
-	
-		# Get the reference of the actual player
-		player = gc.getPlayer(iPlayer)
-		
-		# Delete the UI representation of the unit from the available units
-		# panel
-		screen.deleteWidget(panelID)
-
-		# Get the available units for the player		
-		unitDict = objMercenaryUtils.getAvailableUnits(iPlayer)
-				
-		i = 0
-		
-		# Delete the padding from the available units panel
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.deleteWidget("dummyPanelCreateContract"+str(i))
-
-		
-		# Get the contracted out units for the player		
-		unitDict = objMercenaryUtils.getContractedOutUnits(iPlayer)
-		
-		i = 0
-		# Delete the padding from the units contracted out panel
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.deleteWidget("dummyPanelContractedOut"+str(i))
-		
-		# Get the actual unit in the game
-		objUnit = player.getUnit(unitID)
-
-		# Contract out the unit as a mercenary.
-		mercenary = objMercenaryUtils.contractOutUnit(objUnit)
-		
-		# Get the mercenary's name
-		unitName = str(mercenary.getName()) 
-			
-		# Convert the mercenary's name plus the original unit's ID into the
-		# new unitID
-		unitID = unitName + "-" + self.numberToAlpha(objUnit.getID())
-			
-		screen.attachPanel(UNITS_CONTRACTED_OUT_INNER_PANEL_ID, unitID, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-		screen.attachImageButton( unitID, unitID+"_UnitInfoButton", 
-										mercenary.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-		screen.attachPanel(unitID, unitID+"Text",unitName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-		# Build the mercenary XP string
-		strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
-			 
-		screen.attachLabel( unitID+"Text", unitID  + "text3", "     Level: " + str(mercenary.getLevel()) + "      XP: " + strXP)
-
-		screen.attachPanel(unitID, unitID+"CancelContractButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-		screen.attachImageButton( unitID, unitID+"_CancelContractButton", 
-									"Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-		
-		# Get the available units for the player		
-		unitDict = objMercenaryUtils.getAvailableUnits(iPlayer)
-
-		i = 0
-		
-		# Add the padding to the available units panel to improve the look of the screen
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.attachPanel(AVAILABLE_UNITS_INNER_PANEL_ID, "dummyPanelCreateContract"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-
-		# Get the contracted out units for the player		
-		unitDict = objMercenaryUtils.getContractedOutUnits(iPlayer)
-
-		i = 0
-		# Add the padding to the units contracted out panel to improve the look of the screen
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.attachPanel(UNITS_CONTRACTED_OUT_INNER_PANEL_ID, "dummyPanelContractedOut"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				
-		# Draw the gold information for the screen
-		self.drawGoldInformation(screen)
-		
-		# Clear out the unit information panel
-		self.clearUnitInformation(screen)
-		
-	
-	# Cancels the contract of a unit contracted out by a player
-	def cancelContract(self, screen, panelID, unitID, mercenaryName):
-	
-		# Get the active player ID
-		iPlayer = gc.getGame().getActivePlayer()
-		
-		# Get the reference of the actual player
-		player = gc.getPlayer(iPlayer)
-		
-		# Delete the UI representation of the unit from the units contracted out
-		# panel
-		screen.deleteWidget(panelID)
-		
-		# Cancel the units contract
-		mercenary = objMercenaryUtils.cancelContract(iPlayer, mercenaryName)
-		
-		# If we didn't get back a mercenary object then return immediately
-		if(mercenary == None):
-			return
-
-		# If the mod has been configured to delay the units return then
-		# draw the gold information, clear the unit information panel and
-		# set the dirty bit to redraw the gold text in the main screen and
-		# return.
-		if(g_bDelayUnitReturn):
-			self.drawGoldInformation(screen)
-			self.clearUnitInformation(screen)
-			CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)		
-			return
-
-		# Get the available units for the player			
-		unitDict = objMercenaryUtils.getAvailableUnits(iPlayer)
-				
-		i = 0
-		# Delete the padding from the available units panel
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.deleteWidget("dummyPanelCreateContract"+str(i))
-				
-		# Get the contracted out units for the player		
-		unitDict = objMercenaryUtils.getContractedOutUnits(iPlayer)
-		
-		i = 0
-		
-		# Delete the padding from the units contracted out panel		
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.deleteWidget("dummyPanelContractedOut"+str(i))
-		
-			
-		# Get the mercenary's name
-		unitName = str(mercenary.getName()) 
-			
-		experienceNeeded = -1
-		experience = -1
-		level = -1
-		
-		# If the mercenary is in the game then get its real ID, experience 
-		# needed, experience and level
-		if(mercenary.objUnit != None):
-			unitID = unitName + "-" + self.numberToAlpha(mercenary.objUnit.getID())			
-			experienceNeeded = mercenary.objUnit.experienceNeeded()
-			experience = mercenary.objUnit.getExperience()
-			level = mercenary.objUnit.getLevel()
-		
-		# Otherwise get the information from its represention found in the
-		# global mercenary pool.
-		else:
-			unitID = unitName + "-" + self.numberToAlpha(unitID)
-			experienceNeeded = mercenary.getNextExperienceLevel()
-			experience = mercenary.getExperienceLevel()
-			level = mercenary.getLevel()
-						
-		screen.attachPanel(AVAILABLE_UNITS_INNER_PANEL_ID, unitID, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-		screen.attachImageButton( unitID, unitID+"_UnitInfoButton", 
-										mercenary.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-		screen.attachPanel(unitID, unitID+"Text",unitName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-		# Build the mercenary XP string
-		strXP = u"%d/%d" %(experience, experienceNeeded)
-			 
-		screen.attachLabel( unitID+"Text", unitID  + "text3", "     Level: " + str(level) + "      XP: " + strXP)
-
-		screen.attachPanel(unitID, unitID+"CreateContractButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-		screen.attachImageButton( unitID, unitID+"_FindButton", 
-									"Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
-
-		bCreateContract = true
-			
-		# If the require city unit contract creation and the unit is not in a city then
-		# don't show the create contract button for the unit
-		if(g_bRequireCityUnitContractCreation and not unit.plot().isCity()):
-			bCreateContract = false
-			
-		# Show the create contract button if the player can contract out the unit
-		if(bCreateContract):
-			screen.attachLabel( unitID+"Text", unitID  + "text4", "     In: " + unit.plot().getPlotCity().getName())
-			screen.attachImageButton( unitID, unitID+"_CreateContractButton", 
-										"Art/Interface/Buttons/Actions/StealPlans.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )		
-
-		# Get the available units for the player			
-		unitDict = objMercenaryUtils.getAvailableUnits(iPlayer)
-		i = 0
-
-
-		# Add the padding to the available units panel to improve the look of the screen
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.attachPanel(AVAILABLE_UNITS_INNER_PANEL_ID, "dummyPanelCreateContract"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelCreateContract"+str(i), "", "     ")
-
-		# Get the contracted out units for the player		
-		unitDict = objMercenaryUtils.getContractedOutUnits(iPlayer)
-		i = 0
-
-		# Add the padding to the units contracted out panel to improve the look of the screen
-		if((4-len(unitDict))>0):
-			for i in range(4-len(unitDict)):
-				screen.attachPanel(UNITS_CONTRACTED_OUT_INNER_PANEL_ID, "dummyPanelContractedOut"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelContractedOut"+str(i), "", "     ")
-								
-		# Draw the gold information for the screen
-		self.drawGoldInformation(screen)
-		
-		# Clear out the unit information panel
-		self.clearUnitInformation(screen)
-
-		# Set the dirty bit to redraw the gold text in the main screen
-		CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
-				
-	
 	# Hires a mercenary for a player
-	def hireMercenary(self, screen, mercenaryName):
+	def hireMercenary(self, screen, iMerc):
 
 		# Get the active player ID
 		iPlayer = gc.getGame().getActivePlayer()
 
 		# Delete the UI representation of the unit from the available mercenaries
 		# panel
-		screen.deleteWidget(mercenaryName)
-		
-		# Get all of the mercenaries currently employeed by the player
-		mercenaries = objMercenaryUtils.getPlayerMercenaries(self.iActivePlayer)
-
-		i = 0
-
-		# Delete the padding from the hired mercenaries panel
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.deleteWidget("dummyPanelFire"+str(i))
-				
-		# Get all of the mercenaries available to be hired
-		mercenaries = objMercenaryUtils.getAvailableMercenaries()
-
-		i = 0
-		# Delete the padding from the available mercenaries panel
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.deleteWidget("dummyPanelHire"+str(i))
-								
-		# Hire the mercenary for the player
-		objMercenaryUtils.hireMercenary(mercenaryName,iPlayer) 
-
-		# Get the newly hired mercenary
-		mercenary = objMercenaryUtils.getPlayerMercenary(mercenaryName, iPlayer)
-
-		# Return immediately if we couldn't get the mercenary
-		if(mercenary == None):
-			return
-
-		# Get the mercenaries employeed by the player			
-		mercenaries = objMercenaryUtils.getPlayerMercenaries(self.iActivePlayer)
-
-		screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, mercenaryName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-		screen.attachImageButton( mercenaryName, mercenaryName+"_InfoButton", 
-									mercenary.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-		screen.attachPanel(mercenaryName, mercenaryName+"Text",mercenary.getName(), "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-		# Build the mercenary maintenance cost string
-		strCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-
-		# Build the mercenary XP string
-		strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
-				 
-		screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text3", "     Level: " + str(mercenary.getLevel()) + "      XP: " + strXP)
-		screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text4", "     Maint. Cost: " + strCost)
-
-		screen.attachPanel(mercenaryName, mercenaryName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-
-		# Only show the fire button if the mercenary is in the game
-		if(mercenary.objUnit != None):
-			screen.attachImageButton( mercenaryName, mercenaryName+"-"+self.numberToAlpha(mercenary.objUnit.getID())+"_FindButton", 
-										"Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
-
-			screen.attachImageButton( mercenaryName, mercenaryName+"_FireButton", 
-										"Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-									
-		# Get all of the players hired mercenaries
-		mercenaries = objMercenaryUtils.getPlayerMercenaries(self.iActivePlayer)
-
-		i = 0
-		# Add the padding to the hired mercenaries panel to improve the look of the screen
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, "dummyPanelFire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-
-		# Get all of the available mercenaries for hire
-		mercenaries = objMercenaryUtils.getAvailableMercenaries()
-		i = 0
-
-		# Add the padding to the available mercenaries panel to improve the look of the screen
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+                # 3Miro: get the Unique internal name
+                szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
+		#screen.deleteWidget(szUniqueInternalName)
+                
+                lGlobalMercPool = GMU.getMercGlobalPool()
+                
+                for iI in range( len( lGlobalMercPool ) ):
+                        if ( lGlobalMercPool[iI][0] == iMerc ):
+                                lMerc = lGlobalMercPool[iI]
+                                
+                GMU.hireMerc( lMerc, iPlayer )
 				
 		# Draw the gold information for the screen
 		self.drawGoldInformation(screen)
-
-		# Update the available mercenaries in the available mercenaries panel
-		self.updateAvailableMercenaries(screen)
+                
+                #3Miro: update hired mercs
+                self.clearAvailableMercs(screen)
+                self.clearHiredMercs(screen)
+                
+                self.populateAvailableMercenariesPanel(screen)
+                self.populateHiredMercenariesPanel(screen)
 
 		# Clear the information in the mercenary information panel
 		self.clearMercenaryInformation(screen)
-				
-	# Updates the available mercenaries panel, displays the hire button to the 
-	# player only for the mercenaries they can hire.
-	def updateAvailableMercenaries(self, screen):
-	
-		# Get the mercenaries available for hire
-		mercenaries = objMercenaryUtils.getAvailableMercenaries()
-
-		# Get the ID for the current player
-		iPlayer = gc.getGame().getActivePlayer()
-		
-		# Get the actual player
-		player = gc.getPlayer(iPlayer)
-		
-		# Get the current gold for the player
-		currentGold = player.getGold()
-
-		# Go through each of the available mercenaries
-		for mercenaryName in mercenaries:
-
-			mercenary = mercenaries[mercenaryName]
-			
-			mercenaryName = str(mercenaryName)
-			
-			# Continue if the mercenary was built by the current player
-			if(mercenary.iBuilder == iPlayer):
-				continue
-
-			# Delete the hire button for the current mercenary we are processing.
-			screen.deleteWidget(mercenaryName+"_HireButton")
-
-			# To start off we'll assume that the player can hire the mercenary
-			bEnableHireMercenary = true
-
-			# If the player doesn't have enough money to hire the mercenary then
-			# we won't allow them to hire the current mercenary being processed.
-			if(	(currentGold-mercenary.getHireCost()) <= 0):
-				bEnableHireMercenary = false
-			
-			# If the mod is configured to require at least one building to hire
-			# a mercenary, check to see if they have at least one of those buildings
-			# in one of their cities
-			if(g_bRequireStartingLocationContainBuildings):
-
-				# Try to get a city for the player with at least one or more of
-				# the building configured through the INI file.
-				objCity = objMercenaryUtils.getRandomCityWithBuildings(iPlayer)
-
-				# If we couldn't find a city for the player then we won't allow then
-				# to hire the current mercenary being processed
-				if(objCity == None):
-					bEnableHireMercenary = false
-
-			if(bEnableHireMercenary):
-				screen.attachPanel(mercenaryName, mercenaryName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachImageButton( mercenaryName, mercenaryName+"_HireButton", 
-											"Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-			
 
 	# Fire the mercenary from the player										
-	def fireMercenary(self, screen, mercenaryName):
-
-		# Get the ID for the current active player
-		iPlayer = gc.getGame().getActivePlayer()
-		
-		# Get the actual current player object
-		player = gc.getPlayer(iPlayer)
-		
-		# Get the players current gold amount
-		currentGold = player.getGold()
-
-		# Delete the UI representation of the unit from the hired mercenaries
-		# panel
-		screen.deleteWidget(mercenaryName)
-		
-		# Get all of the mercenaries the player has hired
-		mercenaries = objMercenaryUtils.getPlayerMercenaries(self.iActivePlayer)
-
-		i = 0		
-		
-		# Delete the padding from the hired mercenaries panel
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.deleteWidget("dummyPanelFire"+str(i))
-				
-		# Get all of the mercenaries available to be hired				
-		mercenaries = objMercenaryUtils.getAvailableMercenaries()
-
-		i = 0
-		# Delete the padding from the available mercenaries panel
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.deleteWidget("dummyPanelHire"+str(i))
-		
-		# Fire the mercenary hired by the player
-		objMercenaryUtils.fireMercenary(mercenaryName,iPlayer) 
-
-		# Get the mercenary fired by the player
-		mercenary = objMercenaryUtils.getAvailableMercenary(mercenaryName)
-
-		screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, mercenaryName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-		screen.attachImageButton( mercenaryName, mercenaryName+"_InfoButton", 
-									mercenary.objUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-		screen.attachPanel(mercenaryName, mercenaryName+"Text",mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-
-		# Build the mercenary hire cost string
-		strHCost = u"%d%c" %(mercenary.getHireCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-
-		# Build the mercenary maintenance cost string
-		strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-
-		screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text3", "     Level: " + str(mercenary.getLevel()))			
-		screen.attachLabel( mercenaryName+"Text", mercenaryName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
-		
-		# Assume that the player can hire the mercenary
-		bEnableHireMercenary = true
-
-
-		# If the player doesn't have enough money to hire the mercenary then
-		# we won't allow them to hire the mercenary again.
-		if(	(currentGold-mercenary.getHireCost()) <= 0):
-			bEnableHireMercenary = false
-
-		# If the mod is configured to require at least one building to hire
-		# the mercenary, check to see if they have at least one of those buildings
-		# in one of their cities
-		if(g_bRequireStartingLocationContainBuildings):
-
-			# Try to get a city for the player with at least one or more of
-			# the building configured through the INI file.		
-			objCity = objMercenaryUtils.getRandomCityWithBuildings(iPlayer)
-
-			# If we couldn't find a city for the player then we won't allow then
-			# to hire the mercenary 
-			if(objCity == None):
-				bEnableHireMercenary = false
-
-		if(bEnableHireMercenary):
-			screen.attachPanel(mercenaryName, mercenaryName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-			screen.attachImageButton( mercenaryName, mercenaryName+"_HireButton", 
-										"Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-		
-		# Get all of the players hired mercenaries		
-		mercenaries = objMercenaryUtils.getPlayerMercenaries(self.iActivePlayer)
-
-		i = 0
-		# Add the padding to the hired mercenaries panel to improve the look of the screen		
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, "dummyPanelFire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-
-		# Get all of the available mercenaries for hire
-		mercenaries = objMercenaryUtils.getAvailableMercenaries()
-		i = 0
-		
-		# Add the padding to the available mercenaries panel to improve the look of the screen
-		if((4-len(mercenaries))>0):
-			for i in range(4-len(mercenaries)):
-				screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+	def fireMercenary(self, screen, iMerc):
+                
+                iPlayer = gc.getGame().getActivePlayer()
+                unitList = PyPlayer( iPlayer ).getUnitList()
+                
+                for pUnit in unitList:
+                        if ( pUnit.getMercID() == iMerc ):
+                                #print(" 3Miro: firing: ",iMerc)
+                                GMU.fireMerc( pUnit )
+                                screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
+                                break
 		
 		# Draw the gold information for the screen
 		self.drawGoldInformation(screen)		
-
-		# Update the available mercenaries in the available mercenaries panel
-		self.updateAvailableMercenaries(screen)
+                
+                #3Miro: redraw merc information
+                self.clearAvailableMercs(screen)
+                self.clearHiredMercs(screen)
+                
+                self.populateAvailableMercenariesPanel(screen)
+                self.populateHiredMercenariesPanel(screen)
 		
 		# Clear the information in the mercenary information panel
 		self.clearMercenaryInformation(screen)
@@ -1286,56 +644,45 @@ class CvMercenaryManager:
 			self.interfaceScreen()
 			return
 
-		# If the mercenary groups text was pressed and we aren't currently looking 
-		# at the mercenary groups screen then set the current screen to 
-		# mercenary groups, hide the screen and redraw the screen.		
-		if(inputClass.getFunctionName() == MERCENARY_GROUPS_TEXT_PANEL_ID and self.currentScreen != MERCENARY_GROUPS_MANAGER):
-			self.currentScreen = MERCENARY_GROUPS_MANAGER
-			self.hideScreen()
-			self.interfaceScreen()
-			return
-
-		# If the mercenary contract text was pressed and we aren't currently looking 
-		# at the mercenary contract screen then set the current screen to 
-		# mercenary contract, hide the screen and redraw the screen.		
-		if(inputClass.getFunctionName() == MERCENARY_CONTRACTS_TEXT_PANEL_ID and self.currentScreen != MERCENARY_CONTRACT_MANAGER):
-			self.currentScreen = MERCENARY_CONTRACT_MANAGER
-			self.hideScreen()
-			self.interfaceScreen()
-			return
-
 		# If someone pressed one of the buttons in the screen then handle the
 		# action
 		if(inputClass.getFunctionName().endswith("Button")):
 			# Split up the function name into the mercenary name and the actual
 			# action that was performed
-			mercenaryName, function = inputClass.getFunctionName().split("_")
-			
+			szUniqueInternalName, function = inputClass.getFunctionName().split("_")
+                        
 			self.screenFunction = function
 			self.mercenaryName = None
 
 			# If the function was find, then close the screen and find the unit
 			if(function == "FindButton"):
-				mercenaryName, unitID  = mercenaryName.split("-")
+				dummy, iMerc  = szUniqueInternalName.split("MercID")
+                                #iMerc = int( iMerc )
+                                iMerc = self.strToNum( iMerc )
 
 				# Convert the unit ID string back into a number
-				unitID = self.alphaToNumber(unitID)
+				#unitID = self.alphaToNumber(unitID)
 
 				# Get the player ID
 				iPlayer = gc.getGame().getActivePlayer()
 
 				# Get the actual player reference
-				player = gc.getPlayer(iPlayer)
+				pPlayer = gc.getPlayer(iPlayer)
 
 				# Get the actual unit in the game
-				objUnit = player.getUnit(unitID)
+				#pUnit = player.getUnit(unitID)
+                                unitList = PyPlayer( iPlayer ).getUnitList()
+                                for pUnit in unitList:
+                                        if ( pUnit.getMercID() == iMerc ):
+                                                pMercUnit = pUnit
+                                                break
 
 				# If the unit is not set to None then look at them and select
 				# them.
-				if(objUnit != None):
-					CyCamera().LookAtUnit(objUnit)
+				if(pMercUnit != None):
+					CyCamera().LookAtUnit(pMercUnit)
 					if(not CyGame().isNetworkMultiPlayer()):
-						CyInterface().selectUnit(objUnit, true, false, false)
+						CyInterface().selectUnit(pMercUnit, True, False, False)
 
 				self.currentScreen = MERCENARY_MANAGER
 	
@@ -1343,118 +690,85 @@ class CvMercenaryManager:
 				
 			# If the function was hire, then hire the mercenary
 			if(function == "HireButton"):
-				self.hireMercenary(screen, mercenaryName) 
+                                dummy, iMerc  = szUniqueInternalName.split("MercID")
+                                iMerc = self.strToNum( iMerc )
+				self.hireMercenary(screen, iMerc ) 
 
 			# If the function was fire, then fire the mercenary
 			if(function == "FireButton"):
-				self.fireMercenary(screen, mercenaryName) 
-
-			# If the function was show information then populate the
-			# mercenary/unit information
-			if(function == "UnitInfoButton"):
-			
-				# Get the player ID
-				iPlayer = gc.getGame().getActivePlayer()
-
-				# Get the actual player reference
-				player = gc.getPlayer(iPlayer)
-
-				# Split up the mercenary name into the actual mercenary name
-				# and the unit ID string
-				mercenaryName, id  = mercenaryName.split("-")
-
-				# Convert the unit ID string back into a number
-				id = self.alphaToNumber(id)
-				
-				# Get the mercenary 
-				mercenary = objMercenaryUtils.getMercenary(mercenaryName)
-
-				# If we didn't get a mercenary from the mercenary pool then
-				# it is safe to assume that the unit has never been a 
-				# mercenary.
-				if(mercenary == None):
-					
-					# Create a blank mercenary
-					mercenary = objMercenaryUtils.createBlankMercenary()
-
-					# Populate the mercenary object with the data from 
-					# the unit that we want to look at
-					mercenary.loadUnitData(player.getUnit(id))
-					mercenary.setName(mercenaryName)
-					
-				# Calculate the screen information
-				self.calculateScreenWidgetData(screen)
-
-				# Populate the unit information panel with the mercenary/unit
-				# information.
-				self.populateUnitInformation(screen,mercenary)					
-
-			# If the function was to contract out a unit then contract out the
-			# player's mercenary
-			if(function == "CreateContractButton"):
-				
-				# Set the panel ID as the mercenary name before breaking it up.
-				panelID = mercenaryName
-
-				# Split up the mercenary name into the actual mercenary name
-				# and the unit ID string
-				mercenaryName, unitID  = mercenaryName.split("-")
-
-				# Convert the unit ID string back into a number
-				unitID = self.alphaToNumber(unitID)
-
-				# Contract out the unit as a mercenary
-				self.contractOutMercenary(screen, panelID, unitID)
-
-			# If the function was to cancel the units contract then cancel 
-			# their contract
-			if(function == "CancelContractButton"):
-
-				# Set the panel ID as the mercenary name before breaking it up.
-				panelID = mercenaryName
-
-				# If we are delaying the units return set the panelID as the 
-				# function name instead
-				if(g_bDelayUnitReturn):
-					panelID = inputClass.getFunctionName()
-				
-				# Split up the mercenary name into the actual mercenary name
-				# and the unit ID string
-				mercenaryName, unitID  = mercenaryName.split("-")
-
-				# Convert the unit ID string back into a number
-				unitID = self.alphaToNumber(unitID)
-
-				# Cancel the units contract
-				self.cancelContract(screen, panelID, unitID, mercenaryName)
+                                dummy, iMerc  = szUniqueInternalName.split("MercID")
+                                iMerc = self.strToNum( iMerc )
+				self.fireMercenary(screen, iMerc )
 										
 			# If the function was to show the mercenary information then 
 			# populate the mercenary information panel.
-			if(function == "InfoButton"):
+			if(function == "AInfoButton"):
+                                
+                                dummy, iMerc  = szUniqueInternalName.split("MercID")
+                                iMerc = self.strToNum( iMerc )
+                                
+                                lGlobalMercPool = GMU.getMercGlobalPool()
+                                
+                                for iI in range( len( lGlobalMercPool ) ):
+                                        if ( lGlobalMercPool[iI][0] == iMerc ):
+                                                lMerc =lGlobalMercPool[iI]
+                                
+                                lMerc[1].append( Mercenaries.iMercPromotion )
+                                
+                                self.calculateScreenWidgetData(screen)
+                                self.populateMercenaryInformation(screen, lMerc )
+                                
+                        if(function == "HInfoButton"):
+                                
+                                dummy, iMerc  = szUniqueInternalName.split("MercID")
+                                iMerc = self.strToNum( iMerc )
+                                
+                                iPlayer = gc.getGame().getActivePlayer()
+                                unitList = PyPlayer( iPlayer ).getUnitList()
+                
+                                for pUnit in unitList:
+                                        if ( pUnit.getMercID() == iMerc ):
+                                                pMerc = pUnit
+                                                break
+                                                
+                                iUpkeepCost = pMerc.getMercUpkeep()
+                                
+                                lPromotionList = []
+                                for iPromotion in range( Mercenaries.iNumTotalPromotions ):
+                                        if ( pMerc.isHasPromotion( iPromotion ) ):
+                                                lPromotionList.append( iPromotion )
+                                                
+                                lPromotionList.append( Mercenaries.iMercPromotion )
+                                
+                                lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost ]                
+                                
+                                self.calculateScreenWidgetData(screen)
+                                self.populateMercenaryInformation(screen, lMerc )
 			
-				self.mercenaryName = mercenaryName
+				#self.mercenaryName = mercenaryName
 			
-				# If the mercenary name was actually set then get their 
-				# information from the global mercenary pool.
-				if(mercenaryName != None):
+				## If the mercenary name was actually set then get their 
+				## information from the global mercenary pool.
+				#if(mercenaryName != None):
 				
-					# Get the mercenary from the global mercenary pool
-					mercenary = objMercenaryUtils.getMercenary(mercenaryName)
+					## Get the mercenary from the global mercenary pool
+					#mercenary = objMercenaryUtils.getMercenary(mercenaryName)
 
-					# If we couldn't get the mercenary information try to get it
-					# from the player's mercenary pool.
-					if(mercenary == None):
-						mercenary = objMercenaryUtils.getPlayerMercenary(mercenaryName,gc.getGame().getActivePlayer())
+					## If we couldn't get the mercenary information try to get it
+					## from the player's mercenary pool.
+					#if(mercenary == None):
+						#mercenary = objMercenaryUtils.getPlayerMercenary(mercenaryName,gc.getGame().getActivePlayer())
 
-					# Return immediately if we still couldn't get the mercenary information
-					if(mercenary == None):
-						return
+					## Return immediately if we still couldn't get the mercenary information
+					#if(mercenary == None):
+						#return
 						
-					# Calculate the screen information
-					self.calculateScreenWidgetData(screen)
+					## Calculate the screen information
+					### Calculate the screen information
+					#self.calculateScreenWidgetData(screen)
 
-					# Populate the mercenary information panel
-					self.populateMercenaryInformation(screen, mercenary)
+					## Populate the mercenary information panel
+					#self.populateMercenaryInformation(screen, mercenary)
 			 									
 		return 0
  		
@@ -1762,3 +1076,25 @@ class CvMercenaryManager:
 			strNum = strNum + str(alphaList.index(strAlpha[i]))
 		
 		return int(strNum)
+                
+        # 3Miro: a bit more efficient version of the above two functions
+        # the different panels don't work with numbers, replace the numbers 0 - 9 with A - J
+        def strToNum( self, szStr ):
+                
+                CharacterMap = { 'A' : "0", 'B' : "1", 'C' : "2", 'D' : "3", 'E' : "4", 'F' : "5", 'G' : "6", 'H' : "7", 'I' : "8", 'J' : "9"}
+                
+                szNum = ""
+                for iI in range( len(szStr) ):
+                        szNum = szNum + CharacterMap[szStr[iI]]
+                        
+                return int( szNum )
+                
+        def numToStr( self, iNum ):
+                szNum = "%d" %iNum
+                CharacterMap = { '0' : "A", '1' : "B", '2' : "C", '3' : "D", '4' : "E", '5' : "F", '6' : "G", '7' : "H", '8' : "I", '9' : "J"}
+                
+                szResult = ""
+                for iI in range( len(szNum) ):
+                        szResult = szResult + CharacterMap[szNum[iI]]
+                        
+                return szResult

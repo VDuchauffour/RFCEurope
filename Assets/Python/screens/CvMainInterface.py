@@ -14,11 +14,11 @@ import RFCUtils #Rhye
 # < Mercenaries Start >
 import CvMercenaryManager
 #import CvConfigParser #Rhye
-import MercenaryUtils
+#import MercenaryUtils
 #import CvMercenaryModGameUtils #Rhye
 import CvGameInterface
 
-objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 gameUtils = CvGameInterface.gameUtils()
 
 # < Mercenaries End   >
@@ -1631,9 +1631,16 @@ class CvMainInterface:
 					iCount = 0
 
 					actions = CyInterface().getActionsToShow()
+                                        #pUnit = g_pSelectedUnit # 3Miro: disable disband for mercs
 					for i in actions:
+                                                #if ( i == 0 and pUnit.getMercID() > -1 ): # 3Miro: disable disband for mercs
+                                                #        continue
+
 						screen.appendMultiListButton( "BottomButtonContainer", gc.getActionInfo(i).getButton(), 0, WidgetTypes.WIDGET_ACTION, i, -1, False )
 						screen.show( "BottomButtonContainer" )
+                                                
+                                                #print(" 3Miro Actions: ",i)
+                                                #print(" 3Miro Actions: ",i," ",gc.getActionInfo(i).getHotKey())
 				
 						if ( not CyInterface().canHandleAction(i, False) ):
 							screen.disableMultiListButton( "BottomButtonContainer", 0, iCount, gc.getActionInfo(i).getButton() )
@@ -3639,7 +3646,7 @@ class CvMainInterface:
 			iUnitID = g_pSelectedUnit.getID()
 			
 			utils.prosecute( iPlotX, iPlotY, iUnitID )
-			print( " Prosecute " )
+			#print( " Prosecute " )
 			# Send NetMessage to prevent OOS: will be received in the EventManager function "onModNetMessage()"
 			#CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
 
@@ -3648,7 +3655,7 @@ class CvMainInterface:
 			#iUnitID = g_pSelectedUnit.getID()
 			
 			utils.saint( g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID() )
-			print( " Becomes a Saint " ) 
+			#print( " Becomes a Saint " ) 
 
 		return 0
 	

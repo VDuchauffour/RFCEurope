@@ -232,7 +232,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGameINLINE().logMsg("   --- Init 10 with ");
 	int iUPP = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_PROMOTION_I];
 	if ( iUPP > -1 ){
-		if ( this->isPromotionValid((PromotionTypes)iUPP) ){
+		if ( isPromotionValid((PromotionTypes)iUPP) ){
 			setHasPromotion(((PromotionTypes)iUPP), true);
 		};
 	};
@@ -671,6 +671,7 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
 
 	joinGroup(NULL, false, false);
 
+	//GC.getGameINLINE().logMsg(" Unit Lost Called for unit type: %d",getUnitType() );
 	CvEventReporter::getInstance().unitLost(this);
 
 	GET_PLAYER(getOwnerINLINE()).deleteUnit(getID());
@@ -6966,6 +6967,12 @@ bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass, 
 
 bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 {
+	// 3MiroMercs: block upgrades with the promotion
+	if ( (iMercPromotion > -1)&&( isHasPromotion((PromotionTypes)iMercPromotion) ) ){
+		return false;
+	};
+	// 3MiroMercs: end
+
 	if (eUnit == NO_UNIT)
 	{
 		return false;

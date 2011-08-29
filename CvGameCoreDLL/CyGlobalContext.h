@@ -458,6 +458,9 @@ public:
 	// 3Miro: set Parent -> Schism religion (Catholicism -> Protestantism)
 	void setParentSchismReligions( int iParent, int iSchism );
 
+	// 3Miro: set the Merc promotion to block merc upgrades
+	void setMercPromotion( int iPromotion );
+
 };
 
 #endif	// CyGlobalContext_h

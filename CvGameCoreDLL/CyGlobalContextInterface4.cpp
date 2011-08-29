@@ -306,5 +306,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("getProvinceY", &CyGlobalContext::getProvinceY, "int (int, int )")
 
 		.def("setParentSchismReligions", &CyGlobalContext::setParentSchismReligions, "void (int, int )")
+
+		.def("setMercPromotion", &CyGlobalContext::setMercPromotion, "void ( int )")
 		;
 }
