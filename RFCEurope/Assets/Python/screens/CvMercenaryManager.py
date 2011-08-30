@@ -153,6 +153,8 @@ class CvMercenaryManager:
                 
                 mercenaryCount = 0
                 
+                iStateReligion = pPlayer.getStateReligion()
+                
                 #print lAvailableMercs
                 
                 for lMerc in lAvailableMercs:
@@ -160,8 +162,10 @@ class CvMercenaryManager:
                         iMerc = lMerc[0]
                         mercenaryName = CyTranslator().getText( lMercList[iMerc][1] , ())
                         
-                        if ( not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0 ): # we have no matching provinces, skip
+                        if ( (not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
                                 continue
+                                
+                                
                         
                         # screen needs unique internal names
                         #szUniqueInternalName = "MercID%d" %iMerc
@@ -173,8 +177,8 @@ class CvMercenaryManager:
                         screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
                         
                         # TODO: The UP here:
-                        iHireCost = lMerc[2]
-                        iUpkeepCost = lMerc[3]
+                        iHireCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
+                        iUpkeepCost = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
                         
                         strHCost = u"%d%c" %(iHireCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
                         strMCost = u"%1.2f%c" %(0.01*iUpkeepCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
@@ -279,65 +283,65 @@ class CvMercenaryManager:
 		screen.deleteWidget(UNIT_GRAPHIC)
 		
 
-	# Populates the unit information panel with the unit information details		
-	def populateUnitInformation(self, screen, mercenary):
+	## Populates the unit information panel with the unit information details		
+	#def populateUnitInformation(self, screen, mercenary):
 		
-		screen.addPanel(UNIT_INFORMATION_PROMOTION_PANEL_ID, "", "", True, True, self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
-		screen.addPanel(UNIT_INFORMATION_INNER_PROMOTION_PANEL_ID, "Promotions", "", True, True, self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_EMPTY)
-		screen.addPanel(UNIT_INFORMATION_DETAILS_PANEL_ID, "", "", True, False, self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_EMPTY)
-		screen.attachListBoxGFC( UNIT_INFORMATION_DETAILS_PANEL_ID, UNIT_INFORMATION_DETAILS_LIST_ID, "", TableStyles.TABLE_STYLE_EMPTY )
-		screen.enableSelect(UNIT_INFORMATION_DETAILS_LIST_ID, False)
+		#screen.addPanel(UNIT_INFORMATION_PROMOTION_PANEL_ID, "", "", True, True, self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
+		#screen.addPanel(UNIT_INFORMATION_INNER_PROMOTION_PANEL_ID, "Promotions", "", True, True, self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_INNER_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_EMPTY)
+		#screen.addPanel(UNIT_INFORMATION_DETAILS_PANEL_ID, "", "", True, False, self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_X], self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_Y], self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_WIDTH], self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_EMPTY)
+		#screen.attachListBoxGFC( UNIT_INFORMATION_DETAILS_PANEL_ID, UNIT_INFORMATION_DETAILS_LIST_ID, "", TableStyles.TABLE_STYLE_EMPTY )
+		#screen.enableSelect(UNIT_INFORMATION_DETAILS_LIST_ID, False)
 
-		# Build the unit XP string
-		strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
+		## Build the unit XP string
+		#strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
 
-		# Build the unit stats string
-		strStats = u"%d%c    %d%c" %(mercenary.getUnitInfo().getCombat(), CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR),mercenary.getUnitInfo().getMoves(),CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
-		screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, mercenary.getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
-		#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Unit Type: " + mercenary.getUnitInfo().getDescription(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) #Rhye
-		screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Level: " + str(mercenary.getLevel()) + "     XP: " + strXP, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
-		screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  " + strStats, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
-		screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  ", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		## Build the unit stats string
+		#strStats = u"%d%c    %d%c" %(mercenary.getUnitInfo().getCombat(), CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR),mercenary.getUnitInfo().getMoves(),CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
+		#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, mercenary.getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		##screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Unit Type: " + mercenary.getUnitInfo().getDescription(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) #Rhye
+		#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Level: " + str(mercenary.getLevel()) + "     XP: " + strXP, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  " + strStats, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  ", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-		# If the unit is hired then display their employeers information
-		if(mercenary.isHired()):
-			screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Hired By: " + gc.getPlayer(mercenary.getOwner()).getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		## If the unit is hired then display their employeers information
+		#if(mercenary.isHired()):
+			#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Hired By: " + gc.getPlayer(mercenary.getOwner()).getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-		# Otherwise show their hire cost information			
-		else:
-			# Build the unit hire cost string
-			strHCost = u"%d%c" %(mercenary.getHireCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-			screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Contract Income: " + strHCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		## Otherwise show their hire cost information			
+		#else:
+			## Build the unit hire cost string
+			#strHCost = u"%d%c" %(mercenary.getHireCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+			#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Contract Income: " + strHCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		
-		# Show the contract income for the unit if it is in the game			
-		if(mercenary.isPlaced()):
-			strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-			screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Income/Turn: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		## Show the contract income for the unit if it is in the game			
+		#if(mercenary.isPlaced()):
+			#strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+			#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  Income/Turn: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-		# Otherwise, show the number of turns until the unit is placed in the game
-		else:
+		## Otherwise, show the number of turns until the unit is placed in the game
+		#else:
 
-			# Get the number of turns until the unit/mercenary is placed in the game
-			placementTurns = mercenary.getPlacementTurns()
-			strPlacement = ""
+			## Get the number of turns until the unit/mercenary is placed in the game
+			#placementTurns = mercenary.getPlacementTurns()
+			#strPlacement = ""
 			
-			# Build the placement string
-			if(placementTurns <= 1):
-				strPlacement = "Arrives next turn"
-			else:
-				strPlacement = u"Arrival in %d turns" %(placementTurns)
-			screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  " + strPlacement, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+			## Build the placement string
+			#if(placementTurns <= 1):
+				#strPlacement = "Arrives next turn"
+			#else:
+				#strPlacement = u"Arrival in %d turns" %(placementTurns)
+			#screen.appendListBoxString( UNIT_INFORMATION_DETAILS_LIST_ID, "  " + strPlacement, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		
-		# Get the promotion list for the mercenary/unit
-		promotionList = mercenary.getCurrentPromotionList()
+		## Get the promotion list for the mercenary/unit
+		#promotionList = mercenary.getCurrentPromotionList()
 
-		screen.attachMultiListControlGFC(UNIT_INFORMATION_INNER_PROMOTION_PANEL_ID, UNIT_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
+		#screen.attachMultiListControlGFC(UNIT_INFORMATION_INNER_PROMOTION_PANEL_ID, UNIT_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
 
-		# Add all of the promotions the mercenary/unit has.
-		for promotion in promotionList:
-			screen.appendMultiListButton( UNIT_INFORMATION_PROMOTION_LIST_CONTROL_ID, promotion.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(promotion.getType()), -1, false )
+		## Add all of the promotions the mercenary/unit has.
+		#for promotion in promotionList:
+			#screen.appendMultiListButton( UNIT_INFORMATION_PROMOTION_LIST_CONTROL_ID, promotion.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(promotion.getType()), -1, false )
 			
-		screen.addUnitGraphicGFC(UNIT_GRAPHIC, mercenary.getUnitInfoID(), self.screenWidgetData[UNIT_ANIMATION_X], self.screenWidgetData[UNIT_ANIMATION_Y], self.screenWidgetData[UNIT_ANIMATION_WIDTH], self.screenWidgetData[UNIT_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[UNIT_ANIMATION_ROTATION_X], self.screenWidgetData[UNIT_ANIMATION_ROTATION_Z], self.screenWidgetData[UNIT_ANIMATION_SCALE], True)
+		#screen.addUnitGraphicGFC(UNIT_GRAPHIC, mercenary.getUnitInfoID(), self.screenWidgetData[UNIT_ANIMATION_X], self.screenWidgetData[UNIT_ANIMATION_Y], self.screenWidgetData[UNIT_ANIMATION_WIDTH], self.screenWidgetData[UNIT_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[UNIT_ANIMATION_ROTATION_X], self.screenWidgetData[UNIT_ANIMATION_ROTATION_Z], self.screenWidgetData[UNIT_ANIMATION_SCALE], True)
 
 
 	# Clears out the mercenary information panel contents
@@ -706,6 +710,7 @@ class CvMercenaryManager:
                                 
                                 dummy, iMerc  = szUniqueInternalName.split("MercID")
                                 iMerc = self.strToNum( iMerc )
+                                iPlayer = gc.getGame().getActivePlayer()
                                 
                                 lGlobalMercPool = GMU.getMercGlobalPool()
                                 
@@ -716,6 +721,10 @@ class CvMercenaryManager:
                                 lMerc[1].append( Mercenaries.iMercPromotion )
                                 
                                 self.calculateScreenWidgetData(screen)
+                                
+                                lMerc[2] = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
+                                lMerc[3] = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
+                                
                                 self.populateMercenaryInformation(screen, lMerc )
                                 
                         if(function == "HInfoButton"):

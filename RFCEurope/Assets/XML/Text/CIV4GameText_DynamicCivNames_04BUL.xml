@@ -12,59 +12,10 @@
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_BUL01</Tag>
-		<English>Kingdom of Bulgaria</English>
-		<French>Royaume de Bulgarie</French>
-		<German>Königreich Bulgarien</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUL02</Tag>
-		<English>First Bulgarian Empire</English>
-		<French>Premier Empire Bulgare</French>
-		<German>Erstes Bulgarisches Reich</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUL03</Tag>
-		<English>Tsardom of Bulgaria</English>
-		<French>Tsarie de Bulgarie</French>
-		<German>Zarenreich Bulgarien</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUL04</Tag>
-		<English>Second Bulgarian Empire</English>
-		<French>Second Empire Bulgare</French>
-		<German>Zweites Bulgarisches Reich</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DN_BUL05</Tag>
 		<English>Republic of Bulgaria</English>
 		<French>R&#233;publique de Bulgarie</French>
 		<German>Republik Bulgarien</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUL06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUL07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUL08</Tag>
-		<English>Islamic Bulgarian Empire</English>
-		<French>Empire Islamique Bulgare</French>
-		<German>Islamisches Bulgarisches Reich</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
@@ -156,6 +107,48 @@
 		<English>Province of Bulgaria</English>
 		<French>Province de Bulgarie</French>
 		<German>Provinz Bulgarien</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_CALIPHATE</Tag>
+		<English>Caliphate of Bulgaria</English>
+		<French>Caliphate of Bulgaria</French>
+		<German>Caliphate of Bulgaria</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_KHANATE</Tag>
+		<English>Bulgarian Khanate</English>
+		<French>Bulgarian Khanate</French>
+		<German>Bulgarian Khanate</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_TSARDOM</Tag>
+		<English>Bulgarian Tsardom</English>
+		<French>Bulgarian Tsardom</French>
+		<German>Bulgarian Tsardom</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_KINGDOM</Tag>
+		<English>Bulgarian Kingdom</English>
+		<French>Bulgarian Kingdom</French>
+		<German>Bulgarian Kingdom</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_EMPIRE1</Tag>
+		<English>Bulgarian Empire</English>
+		<French>Bulgarian Empire</French>
+		<German>Bulgarian Empire</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_EMPIRE2</Tag>
+		<English>Second Bulgarian Empire</English>
+		<French>Second Bulgarian Empire</French>
+		<German>Second Bulgarian Empire</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>

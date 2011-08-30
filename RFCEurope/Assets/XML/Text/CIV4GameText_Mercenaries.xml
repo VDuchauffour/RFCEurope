@@ -209,4 +209,31 @@
 		<Spanish>El nacionalismo ha cambiado la concepci&#243;n de los ej&#233;rcitos: &#161;los mercenarios ya no encajan en ellos!</Spanish>
 		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
+		<English>Serbian</English>
+		<French>Serbian</French>
+		<German>Serbian</German>
+		<Italian>Serbian</Italian>
+		<Spanish>Serbian</Spanish>
+		<Russian>Serbian</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_KHAZAR</Tag>
+		<English>Khazar</English>
+		<French>Khazar</French>
+		<German>Khazar</German>
+		<Italian>Khazar</Italian>
+		<Spanish>Khazar</Spanish>
+		<Russian>Khazar</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_AVAR</Tag>
+		<English>Avar</English>
+		<French>Avar</French>
+		<German>Avar</German>
+		<Italian>Avar</Italian>
+		<Spanish>Avar</Spanish>
+		<Russian>Avar</Russian>
+	</TEXT>
 </Civ4GameText>
