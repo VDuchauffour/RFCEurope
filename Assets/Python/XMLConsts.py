@@ -848,4 +848,21 @@ iP_Marrakesh = 145
 iP_Madeira = 146
 iP_TheIsles = 147
 
+lRegionIberia   = [ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia ]
+lRegionFrance   = [ iP_Normandy, iP_Bretagne, iP_IleDeFrance, iP_Orleans, iP_Picardy ]
+lRegionBurgundy = [ iP_Provence, iP_Burgundy, iP_Champagne, iP_Flanders ]
+lRegionBritain  = [ iP_London, iP_Wales, iP_Wessex, iP_Scotland, iP_EastAnglia, iP_Mercia, iP_Northumbria, iP_Ireland ]
+lRegionScandinavia = [ iP_Denmark, iP_Finland, iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Oppland, iP_Skaneland ]
+lRegionGermany  = [ iP_Lorraine, iP_Swabia, iP_Saxony, iP_Bavaria, iP_Franconia, iP_Brandenburg ]
+lRegionPoland   = [ iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_LesserPoland, iP_Masovia ]
+lRegionLithuania = [ iP_Lithuania, iP_Livonia, iP_Estonia ]
+lRegionAustria  = [ iP_Carinthia, iP_Austria, iP_Moravia, iP_Bohemia ]
+lRegionHungary  = [ iP_Transylvania, iP_Hungary, iP_Silesia, iP_Pannonia, iP_UpperHungary ]
+lRegionBalkans  = [ iP_Serbia, iP_Thrace, iP_Macedonia, iP_Moesia, iP_Arberia, iP_Croatia, iP_Bosnia ]
+lRegionGreece   = [ iP_Constantinople, iP_Thessaly, iP_Epirus, iP_Morea, iP_Thessaloniki ]
+lRegionAsiaMinor =[ iP_Colonea, iP_Charsiadon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
+lRegionMiddleEast=[ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem ]
+lRegionAfrica   = [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Marrakesh ]
+lRegionKiev     = [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_Pereyaslavl, iP_Chernigov, iP_Podolia, iP_WhiteRus ]
+
 iP_MaxNumberOfProvinces = 150

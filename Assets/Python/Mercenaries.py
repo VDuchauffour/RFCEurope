@@ -24,10 +24,14 @@ PyPlayer = PyHelpers.PyPlayer
 iMercCostPerTurn = con.iMercCostPerTurn
 
 # list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
-lMercList = [   #[xml.iArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 110 ],
-                [xml.iAxeman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
-                #[xml.iSwordsman, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
-                #[xml.iHorseArcher, "TXT_KEY_SERBIAN", 0, 100, [xml.iP_Serbia,xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Constantinople], [], 10 ],
+# note that the province list is treated as a set (only iProvince in list or Set(list) are ever called)
+# the odds show the odds of the merc to appear every turn, this is nothing more than a delay on when the merc would appear (90-100 means right at the date, 10-30 should be good for most mercs)
+lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkans, [], 20 ],
+                [xml.iArcher, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkans, [], 20 ],
+                [xml.iHorseArcher, "TXT_KEY_MERC_KHAZAR", 25, 90, xml.lRegionBalkans + [xml.iP_Constantinople], [], 20 ],
+                [xml.iHorseArcher, "TXT_KEY_MERC_KHAZAR", 25, 108, xml.lRegionBalkans + [xml.iP_Constantinople], [], 20 ],
+                [xml.iHorseArcher, "TXT_KEY_MERC_AVAR", 25, 75, xml.lRegionBalkans + xml.lRegionAustria + xml.lRegionHungary + [xml.iP_Constantinople], [], 20 ],
+                [xml.iHorseArcher, "TXT_KEY_MERC_AVAR", 25, 75, xml.lRegionBalkans + xml.lRegionAustria + xml.lRegionHungary + [xml.iP_Constantinople], [], 20 ],
                 ]
 
 ### A few Parameters for Mercs only:
@@ -41,6 +45,38 @@ lPromotionCost = [  10, 15, 30, 30, 40, 20, 20, 20, 20, 20, 20, 30, 40, 20, 30, 
 iNumTotalPromotions = 39 # without navigation and leaders
 iNumPromotionsSoftCap = 3 # canget more promotions if you get a high promotion (i.e. combat 5), but overall it should be unlikely
 iNumPromorionIterations = 3 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
+
+# 3MiroUP: set the merc cost modifiers here
+lMercCostModifier = (
+150,  # Byzantium
+120,  # Frankia
+100, # Arabia
+100, # Bulgaria
+100, # Cordoba
+100, # Norse
+100, # Venecia
+100, # Burgundy
+110, # Germany
+100, # Kiev
+100, # Hungary
+100, # Spain
+100, # Poland
+50, # Genoa
+100,# England
+100,# Portugal
+100,# Lithuania
+100,# Austria
+100,# Turkey
+100,# Moscow 
+100,# Sweden
+100,# Dutch
+0,	#Pope
+0,
+0,
+0,
+0,
+0
+) 
 
 class MercenaryManager:
 
@@ -122,7 +158,7 @@ class MercenaryManager:
                         iMerc = potentialMercs[( iOffset + iStart ) % iNumPotentialMercs]
                         if ( gc.getGame().getSorenRandNum( 100, 'merc appearing in global pool') < lMercList[iMerc][6] ):
                                 # adding a new merc
-                                print(" 3Miro Adding Merc to Global Pool: ",iMerc)
+                                #print(" 3Miro Adding Merc to Global Pool: ",iMerc)
                                 self.addNewMerc( iMerc )
 
         def doMercsTurn( self, iGameTurn ):
@@ -145,10 +181,7 @@ class MercenaryManager:
                                 if ( iPlayer != iHuman ):
                                         self.processMercAI( pPlayer )
                         #playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
-                        
-                
-                
-                        
+
                 self.processNewMercs( iGameTurn ) # add new Merc to the pool
                         
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
@@ -170,10 +203,11 @@ class MercenaryManager:
                                 lPromotionList.append( iNewPromotion )
                         
                         # get the new cost for this unit
+                        iOwner = pUnit.getOwner()
                         iOldUpkeep = pUnit.getMercUpkeep()
-                        iNewUpkeep = self.GMU.getCost( iMerc, lPromotionList )
+                        iNewUpkeep = self.GMU.getModifiedCostPerPlayer( self.GMU.getCost( iMerc, lPromotionList ), iOwner )
                         
-                        pPlayer = gc.getPlayer( pUnit.getOwner() )
+                        pPlayer = gc.getPlayer( iOwner )
                         pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep[1]  ) )
 
 
@@ -185,7 +219,7 @@ class MercenaryManager:
                 
                 if ( iMerc > -1 ):
                         lHiredByList = self.GMU.getMercHiredBy()
-                        if ( lHiredBy[iMerc] == -1 ): # merc was fired, then don't remove permanently
+                        if ( lHiredByList[iMerc] == -1 ): # merc was fired, then don't remove permanently
                                 return
                         # unit is gone
                         pPlayer = gc.getPlayer( pUnit.getOwner() )
@@ -314,7 +348,7 @@ class MercenaryManager:
                                         iValue *= 2
                                 if ( iGameTurn > lMercList[ pUnit.getMercID() ][3] + 100 ):
                                         # really obsolete units
-                                        iValue *= 10
+                                        iValue *= 5
                                 lMercValue.append( iValue )
                                 
                         iSum = 0
@@ -333,10 +367,12 @@ class MercenaryManager:
                 lCanHireMercs = []
                 sPlayerProvinces = Set( self.getOwnedProvinces( pPlayer ) )
                 iGold = pPlayer.getGold()
+                iStateReligion = pPlayer.getStateReligion()
+                iPlayer = pPlayer.getID()
                 for lMerc in self.lGlobalPool:
-                        iMercTotalCost = lMerc[2] + (lMerc[3]+99)/100
+                        iMercTotalCost = self.GMU.getModifiedCostPerPlayer( lMerc[2] + (lMerc[3]+99)/100, iPlayer )
                         sMercProvinces = Set( lMercList[lMerc[0]][4] )
-                        if ( iGold > iMercTotalCost and len( sPlayerProvinces & sMercProvinces ) > 0 ):
+                        if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and len( sPlayerProvinces & sMercProvinces ) > 0 ):
                               lCanHireMercs.append( lMerc )
                               
                 if ( len( lCanHireMercs ) > 0 ):
@@ -405,14 +441,25 @@ class GlobalMercenaryUtils:
                 
                 return (iPurchaseCost, iUpkeepCost)
                 
+        def getModifiedCostPerPlayer( self, iCost, iPlayer ):
+                # 3MiroUP: this function gets called:
+                #  - every time a merc is hired (pPlayer.initUnit) to set the upkeep and
+                #  - every time a merc cost is considered
+                #  - every time a merc cost is to be displaded (in the merc screen)
+                return ( lMercCostModifier[iPlayer] * iCost) / 100
+                
+                
         
         def hireMerc( self, lMerc, iPlayer ):
                 # the player would hire a merc
                 lGlobalPool = self.getMercGlobalPool()
                 lHiredByList = self.getMercHiredBy()
                 
+                iCost = self.getModifiedCostPerPlayer( lMerc[2], iPlayer )
+                iUpkeep = self.getModifiedCostPerPlayer( lMerc[3], iPlayer )
+                
                 pPlayer = gc.getPlayer( iPlayer )
-                if ( pPlayer.getGold() < lMerc[2] ):
+                if ( pPlayer.getGold() < iCost ):
                         return
                 
                 lCityList = [] # all available cities that the Merc can appear in
@@ -431,8 +478,8 @@ class GlobalMercenaryUtils:
                 iY = pCity.getY()
                 
                 # do the Gold
-                pPlayer.setGold( pPlayer.getGold() - lMerc[2] )
-                pPlayer.setPicklefreeParameter( iMercCostPerTurn, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + lMerc[3] )
+                pPlayer.setGold( pPlayer.getGold() - iCost )
+                pPlayer.setPicklefreeParameter( iMercCostPerTurn, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + iUpkeep )
                 
                 # remove the merc from the golbal pool and set the "hired by" index
                 lGlobalPool.remove( lMerc )
@@ -455,7 +502,7 @@ class GlobalMercenaryUtils:
                 pUnit.setMercID( lMerc[0] )
                 
                 # set the Upkeep
-                pUnit.setMercUpkeep( lMerc[3] )
+                pUnit.setMercUpkeep( iUpkeep )
                 
         def fireMerc( self, pMerc ):
                 # fires the merc unit pMerc (pointer to CyUnit)
