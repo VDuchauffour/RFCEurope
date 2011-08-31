@@ -250,7 +250,7 @@ class CvRFCEventHandler:
                 	
                 self.cnm.renameCities(city, playerType)
                 
-                # 3Miro Arab and Turkish UP
+                # 3Miro Arab UP
                 if ( gc.hasUP( playerType, con.iUP_Faith ) ):
                 	self.up.faithUP( playerType, city )
                 #elif (playerType == con.iTurkey):
@@ -529,6 +529,9 @@ class CvRFCEventHandler:
                         
                 if ( gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers ):
                 	utils.setLastTurnAlive( iPlayer, iGameTurn )
+                        
+                if ( gc.hasUP( iPlayer, con.iUP_Janissary ) ):
+                        self.up.janissary( iPlayer )
 
                 #Mercenaries - start
         

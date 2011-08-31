@@ -1049,8 +1049,10 @@ iUP_PaganCulture = 24           # give bonus to culure if no state religion is p
 iUP_PaganHappy = 25             # give bonus to happyness if no state religion is present
 iUP_StabilityConquestBoost = 26 # if stability is < 0, then get +1 stability on Conquest
 iUP_StabilitySettler = 27       # don't lose stability from founding cities in Outer and None Provinces
-iUP_StabilityPlaceholder1 = 28  # don't lose stability from founding cities in Outer and None Provinces
-iUP_StabilityPlaceholder1 = 29  # don't lose stability from founding cities in Outer and None Provinces
+iUP_StabilityPlaceholder1 = 28  # does nothing
+iUP_StabilityPlaceholder2 = 29  # does nothing
+iUP_Janissary = 30              # free units for foreign religions (Python only)
+
 
 iFP_Stability = 0		# stability bonus
 iFP_Civic = 1			# lower civic upkeep
@@ -1083,10 +1085,11 @@ iProvinceNatural   = 4 # stable, small penalty for not conquering it
 iProvinceCore      = 5 # stable, large penalty for not conquering it
 iNumProvinceTypes  = 6      
 
-# special parameters (picklefree)
+# special parameters 10 per player (picklefree)
 iIsHasStephansdom = 0 # Stability parameter in Python
 iIsHasEscorial    = 1 # Stability parameter in Python
 iMercCostPerTurn  = 2 # Mercenaries
+iJanissaryPoints  = 3 # Janissary points
 
 # Stability Cathegories
 iCathegoryCities = 0

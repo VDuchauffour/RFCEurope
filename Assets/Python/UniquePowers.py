@@ -19,73 +19,7 @@ utils = RFCUtils.RFCUtils()
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
-
-### Constants ###
-
-iByzantium = con.iByzantium
-iBulgaria = con.iBulgaria
-iNumPlayers = con.iNumPlayers
-iNumMajorPlayers = con.iNumMajorPlayers
-iNumActivePlayers = con.iNumActivePlayers
-iIndependent = con.iIndependent
-iIndependent2 = con.iIndependent2
-iBarbarian = con.iBarbarian
-iNumTotalPlayers = con.iNumTotalPlayers
-
-# initialise player variables
-# 3Miro: set dummy values
-#iEgypt = 100
-#iIndia = 100
-#iChina = 100
-#iBabylonia = 100
-#iGreece = 100
-#iPersia = 100
-#iCarthage = 100
-#iRome = 100
-#iJapan = 100
-#iVikings = 100
-#iArabia = 100
-#iSpain = 100
-#iFrance = 100
-#iEngland = 100
-#iGermany = 100
-#iRussia = 100
-#iMali = 100
-#iTurkey = 100
-#iInca = 100
-#iMongolia = 100
-#iAztecs = 100
-#iAmerica = 100
-
-#iHolland = con.iHolland
-#iPortugal = con.iPortugal
-
-iNative = 100
-iCeltia = 100
-
-
-# 3Miro set more dummy values, and never reference them
-#pMongolia = gc.getPlayer(iMongolia)
-#teamMongolia = gc.getTeam(pMongolia.getTeam())
-pMongolia = 100
-teamMongolia = 100
-
-tRussianTopLeft = (10, 20)
-tRussianBottomRight = (20, 10)
-
-
-iNumReligions = 0
-
-
-#Buildings
-
-
-
-iMongolianRadius = 4
-iMongolianTimer = 1
-
-
-# 3Miro: I will put this somewhere else, it makes no sense to have a separate module for only one UP
+iJanissaryPoints = con.iJanissaryPoints
 
 class UniquePowers:
        	
@@ -113,3 +47,22 @@ class UniquePowers:
                                 city.setHasRealBuilding(iTemple, True)
                                 pFaithful.changeFaith( 1 )
                         
+                        
+#------------------U.P. Janissary-------------------
+        def janissary(self, iPlayer ):
+                pPlayer = gc.getPlayer( iPlayer )
+                iStateReligion = pPlayer.getStateReligion()
+                
+                apCityList = PyPlayer(iPlayer).getCityList()
+                iNewPoints = 0
+                for apCity in apCityList:
+                        pCity = apCity.GetCy()
+                        for iReligion in range( xml.iNumReligions ):
+                                if ( iReligion != iStateReligion and pCity.isHasReligion( iReligion ) ):
+                                        iNewPoints += pCity.getPopulation()
+                                        break
+                                        
+                pPlayer.setPicklefreeParameter( iJanissaryPoints, pPlayer.getPicklefreeParameter( iJanissaryPoints ) + iNewPoints )
+                print(" 3Miro Janissaries: ",pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
+                
+

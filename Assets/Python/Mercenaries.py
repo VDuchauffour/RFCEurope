@@ -205,10 +205,11 @@ class MercenaryManager:
                         # get the new cost for this unit
                         iOwner = pUnit.getOwner()
                         iOldUpkeep = pUnit.getMercUpkeep()
-                        iNewUpkeep = self.GMU.getModifiedCostPerPlayer( self.GMU.getCost( iMerc, lPromotionList ), iOwner )
+                        dummy, iNewUpkeep = self.GMU.getCost( iMerc, lPromotionList )
+                        iNewUpkeep = self.GMU.getModifiedCostPerPlayer( iNewUpkeep, iOwner )
                         
                         pPlayer = gc.getPlayer( iOwner )
-                        pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep[1]  ) )
+                        pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep  ) )
 
 
         def onUnitKilled(self, argsList):
@@ -446,7 +447,7 @@ class GlobalMercenaryUtils:
                 #  - every time a merc is hired (pPlayer.initUnit) to set the upkeep and
                 #  - every time a merc cost is considered
                 #  - every time a merc cost is to be displaded (in the merc screen)
-                return ( lMercCostModifier[iPlayer] * iCost) / 100
+                return ( iCost * lMercCostModifier[iPlayer] ) / 100
                 
                 
         

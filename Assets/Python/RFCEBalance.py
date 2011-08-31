@@ -68,6 +68,7 @@ iUP_PaganCulture = con.iUP_PaganCulture
 iUP_PaganHappy = con.iUP_PaganHappy
 iUP_StabilityConquestBoost = con.iUP_StabilityConquestBoost
 iUP_StabilitySettler = con.iUP_StabilitySettler
+iUP_Janissary = con.iUP_Janissary
 
 iFP_Stability = con.iFP_Stability		
 iFP_Civic = con.iFP_Civic			
@@ -513,7 +514,7 @@ class RFCEBalance:
                 gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )
 		
-		gc.setUP( iGenoa, iUP_Mercenaries, 1 )
+		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # this actually has no effect, it is implemented in Mercenaries entirelly
 		
 		gc.setUP( iEngland, iUP_ImprovementBonus, xml.iImprovementWorkshop * 1000000 + 200 )
 		
@@ -525,8 +526,9 @@ class RFCEBalance:
 			if ( not i == iAustria ):
 				gc.setDiplomacyModifiers( i, iAustria, +4 )
 				
-		gc.setUP( iTurkey, iUP_Conscription, 330 )
-                gc.setUP( iTurkey, iUP_StabilityConquestBoost, 1 )
+		#gc.setUP( iTurkey, iUP_Conscription, 330 )
+                #gc.setUP( iTurkey, iUP_Conscription, 1 )
+                gc.setUP( iTurkey, iUP_Janissary, 1 )
 		
 		gc.setUP( iSweden, iUP_PromotionI, xml.iPromotionFormation )
 		

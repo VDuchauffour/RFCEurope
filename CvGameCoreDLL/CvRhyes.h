@@ -80,8 +80,9 @@
 #define UP_STABILITY_2			(27)
 #define UP_STABILITY_3			(28)
 #define UP_STABILITY_4			(29)
+#define UP_JANISSARY			(30)
 
-#define UP_TOTAL_NUM			(30)
+#define UP_TOTAL_NUM			(31)
 
 // 3MiroFaith: define the possible bonuses here
 #define FP_STABILITY			(0)

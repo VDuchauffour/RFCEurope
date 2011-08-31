@@ -94,6 +94,7 @@ CvPlayer::CvPlayer()
 	CvWString m_szCivShort;
 	CvWString m_szCivAdj;
 	m_iAllowBrothersAtWar = 0; // 3MiroBuildings init brotherly war
+	m_iNumColonies = 0; // 3MiroProjects: reset the number of colonies
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
 	m_aiUHV[0] = -1; m_aiUHV[1] = -1; m_aiUHV[2] = -1; 
 	m_aiUHVcounter[0] = 0; m_aiUHVcounter[1] = 0; m_aiUHVcounter[2] = 0;
@@ -777,6 +778,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_iAllowBrothersAtWar = 0; // 3MiroBuildings
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
+	m_iNumColonies = 0;
 	m_iFaith = 0; // 3MiroFaith
 	m_iProsecutionCount = 0;
 	m_aiUHV[0] = -1; m_aiUHV[1] = -1; m_aiUHV[2] = -1;

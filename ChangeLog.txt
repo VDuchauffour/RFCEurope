@@ -86,6 +86,7 @@ Changes for Beta 13:
 		- Horse Archers do Flanking damage now
 		- fixed a strange crash when Crusaders don't find a proper spot to appear when a Crusade victim collapsed
 		- fixed a bug about old stability code when switching civilizations
+		- fixed a bug with colony counters not being intialized
 
 	Interface:
 		- New screen to display which colonies have been built.
