@@ -10891,6 +10891,20 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 			iValue += pLoopCity->getPopulation();
 		}
 	}
+	// 3MiroUP: Janissary UP, give the state religion bonus for foreign religion in the city
+	if ( (getStateReligion() == eReligion) && (UniquePowers[getID() * UP_TOTAL_NUM + UP_JANISSARY] > -1) ){
+		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+		{
+			for ( int iI = 0; iI < NUM_RELIGIONS; iI++ ){
+				if ( (iI != eReligion) && pLoopCity->isHasReligion((ReligionTypes)iI) )
+				{
+					iValue += pLoopCity->getPopulation()/2;
+					break;
+				}
+			};
+		}
+	};
+	// 3MiroUP: end
 
 	// 3MiroUP: 
 	if ( UniquePowers[getID()* UP_TOTAL_NUM + UP_PAGAN_CULTURE] > -1 ){
