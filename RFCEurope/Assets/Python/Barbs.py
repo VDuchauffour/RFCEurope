@@ -303,7 +303,9 @@ class Barbs:
 			#Middle East
 			
 			self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,3,1,utils.forcedInvasion,1, "")
+                        self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iArbalest, 2 + iHandicap, iGameTurn,3,1,utils.forcedInvasion,1, "")
 			self.spawnUnits( iBarbarian, (95,0),(99,15), xml.iSeljuk, 5 + iHandicap*2, iGameTurn,3,2,utils.forcedInvasion,1, "")
+                        self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iGuisarme, 2 + iHandicap, iGameTurn,3,1,utils.forcedInvasion,1, "")
 
 		#Mongols! 1250
 		if (iGameTurn >=xml.i1236AD and iGameTurn < xml.i1288AD):
