@@ -63,6 +63,7 @@ class UniquePowers:
                                         break
                                         
                 pPlayer.setPicklefreeParameter( iJanissaryPoints, pPlayer.getPicklefreeParameter( iJanissaryPoints ) + iNewPoints )
-                print(" 3Miro Janissaries: ",pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
+                print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
+                print(" 3Miro Janissaries this turn addes: ", iNewPoints)
                 
 

@@ -102,7 +102,7 @@ class Plague:
                         if (gc.getPlayer(i).isAlive()):
                                 if (self.getPlagueCountdown(i) > 0):                                        
                                         self.setPlagueCountdown(i, self.getPlagueCountdown(i)-1)
-                                        print ("plague countdown", i, self.getPlagueCountdown(i))
+                                        #print ("plague countdown", i, self.getPlagueCountdown(i))
                                         if (self.getPlagueCountdown(i) == 2):
                                                 self.preStopPlague(i)
                                         if (self.getPlagueCountdown(i) == 0):
@@ -138,12 +138,12 @@ class Plague:
                         pPlayer = gc.getPlayer(i)
                         if (pPlayer.isAlive()):
                                 iHealth = self.calcHealth( i )
-                                print(" player health ",i,iHealth )
+                                #print(" player health ",i,iHealth )
                                 if (self.isVulnerable(i, iHealth) ):
                                         #print(" Vulnerable civ ",i)
                                         #iHealth2 = iHealth/2
                                         iHealth2 = iHealth/2 + gc.getGame().getSorenRandNum(20, 'random modifier')
-                                        print( " modified ",iHealth2 )
+                                        #print( " modified ",iHealth2 )
                                         
                                         if ( iHealth2 < iWorstHealth ):
                                                 iWorstCiv = i
@@ -155,7 +155,7 @@ class Plague:
                 if (iPlagueCount == iBlackDeath):
                                         self.setBadPlague(True)
 
-                print( " startPlague: worst civ: ",iWorstCiv )
+                #print( " startPlague: worst civ: ",iWorstCiv )
                 if ( iWorstCiv == -1 ):
                         iWorstCiv = utils.getRandomCiv()
                         
@@ -290,7 +290,7 @@ class Plague:
 					iRandom = gc.getGame().getSorenRandNum(100, 'roll')
                                         if (iRandom > 30 + 5*city.healthRate(False, 0)) and bBadPlague:
                                                 city.changePopulation(-1)
-                                                print("This is the Black Death")
+                                                #print("This is the Black Death")
                                         elif (iRandom > 40 + 5*city.healthRate(False, 0)):
                                                 city.changePopulation(-1)
                                 # infect vassals

@@ -829,7 +829,8 @@ class Crusades:
                 'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
                 pPlayer = gc.getPlayer(iPlayer)
                 for i in range(iNum):
-                        pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+                        pUnit = pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+                        pUnit.setMercID( -5 ) # 3Miro: this is a hack to distinguish Crusades without making a separate variable
 
 		
 	def crusadeMakeUnits( self, tPlot ):
@@ -899,8 +900,37 @@ class Crusades:
 		#if ( self.getCrusadePower() > 90 ):
 		#	self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
 		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
+        def freeCrusaders( self, iPlayer ):
+                # this will kill the majority of Crusader units belonging to the player so that the Crusaders will have harder time keeping Jerusalem
+                unitList = PyPlayer( iPlayer ).getUnitList()
+                for pUnit in unitList:
+                        if ( pUnit.getMercID() == -5 ):
+                                # this is a Crusader Unit
+                                pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
+                                iOdds = 80
+                                iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
+                                if ( iCrusadeCategory < 3 ):
+                                        iOdds = -1 # Knight Orders don't return
+                                elif ( iCrusadeCategory == 5 ):
+                                        iOdds = 40 # leave some defenders
+                                if ( iOdds > 0 and pPlot.isCity() ):
+                                        if ( pPlot.getPlotCity().getOwner() == iPlayer ):
+                                                iDefenders = self.getNumDefendersAtPlot( pPlot )
+                                                if ( iDefenders < 4 ):
+                                                        iOdds = 20
+                                                        if ( iDefenders == 0 ):
+                                                                iOdds = -1
+                                                        
+                                if ( gc.getGame().getSorenRandNum(100, 'free Crusaders') < iOdds ):
+                                        pUnit.kill( 0, -1 )
+                                        iHuman = utils.getHumanID()
+                                        if ( iHuman == iPlayer ):
+                                                CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_RETURNING_AFTER_VICTORY", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+                                                        
+                                
 		
 	def success( self, iPlayer ):
+                self.freeCrusaders( iPlayer )
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( not self.hasSucceeded() ):
 			pPlayer.changeGoldenAgeTurns( gc.getPlayer( iPlayer).getGoldenAgeLength() )

@@ -110,7 +110,9 @@ iHandicapOld = (gc.getGame().getHandicapType() - 1)
 #lMinorNations = [ [ xml.iP_Picardy, [], [], [5], [10], [xml.iAxeman], [1], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ], ]
 lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [xml.iAxeman,xml.iLongSwordsman], [1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ],
                   [ xml.iP_Scotland, [], [], [xml.i1297AD,xml.i1569AD,xml.i1715AD], [20,10,20], [xml.iHighlander,xml.iMusketman,xml.iGrenadier], [2,2,2], ["TXT_KEY_THE_SCOTS","TXT_KEY_SCOTISH"] ],
-                  [ xml.iP_Catalonia, [], [], [xml.i1164AD,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],]
+                  [ xml.iP_Catalonia, [], [], [xml.i1164AD,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],
+                  [ xml.iP_Jerusalem, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],]
+# 3Miro: Jerusalem is addes so that the Crusaders will not be able to controll it for too long
 
 
 
@@ -541,9 +543,9 @@ class Barbs:
                         iNextRevolt = lNation[3][0]
                         while iNextRevolt in lNextMinorRevolt:
                                 iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
-                        #print(" Revolt Date ",iNextRevolt)
-                        iNationIndex = lMinorNations.index(lNation)
-                        #print(" NationIndex ",iNationIndex)
+                        print(" Revolt Date ",iNextRevolt)
+                        iNationIndex = lMinorNations.index(lNation)                        
+                        print(" NationIndex ",iNationIndex)
                         lNextMinorRevolt[iNationIndex] = iNextRevolt
                 
                 self.setRevolDates( lNextMinorRevolt )

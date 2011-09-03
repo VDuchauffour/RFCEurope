@@ -275,4 +275,13 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_RETURNING_AFTER_VICTORY</Tag>
+		<English>After successfully capturing the Holy City, Crusaders are returning home: </English>
+		<French>After successfully capturing the Holy City, Crusaders are returning home: </French>
+		<German>After successfully capturing the Holy City, Crusaders are returning home: </German>
+		<Italian>After successfully capturing the Holy City, Crusaders are returning home: </Italian>
+		<Spanish>After successfully capturing the Holy City, Crusaders are returning home: </Spanish>
+		<Russian>After successfully capturing the Holy City, Crusaders are returning home: </Russian>
+	</TEXT>
 </Civ4GameText>
