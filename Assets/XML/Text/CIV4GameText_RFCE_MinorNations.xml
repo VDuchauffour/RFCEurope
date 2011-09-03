@@ -115,6 +115,24 @@
 		<Russian>Catalan</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_THE_MUSLIMS</Tag>
+		<English>The Muslims</English>
+		<French>The Muslims</French>
+		<German>The Muslims</German>
+		<Italian>The Muslims</Italian>
+		<Spanish>The Muslims</Spanish>
+		<Russian>The Muslims</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MUSLIM</Tag>
+		<English>Muslims</English>
+		<French>Muslims</French>
+		<German>Muslims</German>
+		<Italian>Muslims</Italian>
+		<Spanish>Muslims</Spanish>
+		<Russian>Muslims</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
 		<English>Khazars</English>
 		<French>Khazars</French>

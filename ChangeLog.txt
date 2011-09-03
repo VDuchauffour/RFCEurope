@@ -62,6 +62,7 @@ Changes for Beta 13:
 
 	Python/C++ updates:
 		- Cleaned some old Rhye code from the Victory and RFCEvent modules
+		- removed some debug messages generaded by Plagues
 
 	Art/Sound updates:
 		- Dromon (Ethnic Byzantine War Galley) sound works now
@@ -76,6 +77,8 @@ Changes for Beta 13:
 		- Slightly improved Polish-Lithuanian and Polish-Hungarian relations
 		- leaders no longer leave for the Crusades
 		- added defenders for the Seljuks (Arbalest and Guisarme)
+		- some of the Crusader units will leave after capturing Jerusalem (Templars and Teutonic Knights will not return)
+		- added Jerusalem Monor Nation so that it will revolt against the Crusaders and make it hard to keep Jerusalem
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks

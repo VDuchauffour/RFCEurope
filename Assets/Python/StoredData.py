@@ -71,8 +71,8 @@ class StoredData:
 				    #Sedna17 Respawns
 				    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                                     #3Miro: Monor Nations Respawn
-                                    'lNextMinorRevolt':[-1,-1,-1],
-                                    'lRevoltinNationRevoltIndex':[-1,-1],
+                                    'lNextMinorRevolt':[-1,-1,-1,-1],
+                                    'lRevoltinNationRevoltIndex':[-1,-1,-1,-1],
                                     #3Miro: hired mercs
                                     'lMercGlobalPool':[],
                                     ## 3Miro: must be at least as long as lMercList
