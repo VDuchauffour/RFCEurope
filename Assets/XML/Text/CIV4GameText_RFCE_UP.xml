@@ -366,12 +366,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
-		<English>Can draft 3 units per turn from cities with at least 70% foreign culture.</English>
-		<French>Peut enr&#244;ler 3 unit&#233;s par tour dans les villes avec au moins 70%% de culture &#233;trang&#232;re.</French>
-		<German>Ermöglicht 3 Einheiten pro Runde in St&#228;dten mit mindestens 70% fremder Kultur einzuberufen</German>
-		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
-		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
-		<Russian>&#204;&#238;&#230;&#229;&#242; &#239;&#240;&#232;&#231;&#226;&#224;&#242;&#252; 3 &#254;&#237;&#232;&#242;&#224; &#231;&#224; &#245;&#238;&#228; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#234;&#224;&#234; &#236;&#232;&#237;&#232;&#236;&#243;&#236; &#241; 70% &#231;&#224;&#240;&#243;&#225;&#229;&#230;&#237;&#238;&#233; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#238;&#233;.</Russian>
+		<English>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</English>
+		<French>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</French>
+		<German>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</German>
+		<Italian>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</Italian>
+		<Spanish>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</Spanish>
+		<Russian>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE</Tag>
