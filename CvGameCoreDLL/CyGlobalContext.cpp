@@ -733,6 +733,8 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	};*/
 	provinceMap = new int[EARTH_X* EARTH_Y];
 	for( i=0; i<EARTH_X* EARTH_Y; i++ ){ provinceMap[i] = MAX_NUM_PROVINCES+1; }; // no provinces
+	provinceRegionMap = new int[MAX_NUM_PROVINCES];
+	for( i=0; i<MAX_NUM_PROVINCES; i++ ){ provinceRegionMap[i] = 0; }; // all is one region
 	iCultureImmune = new int[MAX_NUM_PROVINCES];
 	iCultureImmuneException = new int[MAX_NUM_PROVINCES];
 	for( i=0; i<MAX_NUM_PROVINCES; i++ ){ iCultureImmune[i] = 0; iCultureImmuneException[i] = -1; };
@@ -1188,6 +1190,13 @@ void CyGlobalContext::createProvinceCrossreferenceList(){ // call this after set
 	};
 	provinceSizeList[MAX_NUM_PROVINCES] = 0; // just in case
 };
+void CyGlobalContext::setNumRegions( int iNumRegions ){ // set the total number of regions (this should speedup the AI)
+	numRegions = iNumRegions;
+};
+void CyGlobalContext::setProvinceToRegion( int iProvince, int iRegion ){ // set a province to belong to a region
+	provinceRegionMap[iProvince] = iRegion;
+};
+
 void CyGlobalContext::setCultureImmume( int iProvince, int iPlayerException, int iNumTurns ){ // make a province immune to culture not comming from iPlayerException
 	iCultureImmune[iProvince] = iNumTurns;
 	iCultureImmuneException[iProvince] = iPlayerException;

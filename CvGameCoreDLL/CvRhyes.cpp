@@ -209,6 +209,8 @@ int *provinceMap = NULL;
 int *provinceSizeList = NULL;
 int **provinceTileList = NULL;
 int provinceToColor = -1;
+int numRegions = 1; // for map areas, give the number of regions
+int *provinceRegionMap = NULL; // give the region for each province (province -1 is default reigion 0)
 
 int iNumProvinceTypes; // how many type of provinces are there
 int *iSettlerValuesPerProvinceType = NULL; // how do settlers value tiles from the specific province (AI purposes)

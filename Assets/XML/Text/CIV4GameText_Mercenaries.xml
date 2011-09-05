@@ -236,4 +236,13 @@
 		<Spanish>Avar</Spanish>
 		<Russian>Avar</Russian>
 	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_MERC_GENERIC</Tag>
+		<English>Generic</English>
+		<French>Generic</French>
+		<German>Generic</German>
+		<Italian>Generic</Italian>
+		<Spanish>Generic</Spanish>
+		<Russian>Generic</Russian>
+	</TEXT>
 </Civ4GameText>

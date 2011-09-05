@@ -824,6 +824,12 @@ class RFCEBalance:
                 gc.createProvinceCrossreferenceList() # make sure to call this AFTER setting all the Province entries
                 
                 gc.setProvinceTypeNumber( con.iNumProvinceTypes ) # set the Number of Provinces, call this before you set any AI or culture modifiers
+                
+                gc.setNumRegions( xml.iNumMapRegions )
+                for lRegion in xml.tRegionMap:
+                        iIndex = xml.tRegionMap.index( lRegion )
+                        for iProvince in lRegion:
+                                gc.setProvinceToRegion( iProvince, iIndex )
         
                 # birth turns for the players, do not change this loop
                 for i in range( iNumTotalPlayers ):

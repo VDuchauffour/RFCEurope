@@ -294,6 +294,8 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		// 3MiroProvinces
 		.def("setProvince", &CyGlobalContext::setProvince, "void ( int iX, int iY, int iProvince )")
 		.def("createProvinceCrossreferenceList", &CyGlobalContext::createProvinceCrossreferenceList, "void ()")
+		.def("setNumRegions", &CyGlobalContext::setNumRegions, "void ( int )")
+		.def("setProvinceToRegion", &CyGlobalContext::setProvinceToRegion, "void ( int, int )")
 
 		.def("setCultureImmume", &CyGlobalContext::setCultureImmume, "void (int, int, int)")
 		.def("setProvinceTypeNumber", &CyGlobalContext::setProvinceTypeNumber, "void ( iNum )")

@@ -23648,7 +23648,9 @@ bool CvPlayer::provinceIsConvertReligion( int iProvince, int iReligion ){
 };
 bool CvPlayer::canTradeTech( int iTech ) const
 {
-	return ( GC.getGameINLINE().getGameTurn() >= timelineTechDates[iTech] + 20 );
+	//return ( GC.getGameINLINE().getGameTurn() >= timelineTechDates[iTech] + 20 );
+	int iFR = GC.getTechInfo((TechTypes)iTech).getFirstResearched();
+	return (iFR > -1 ) ? ( GC.getGameINLINE().getGameTurn() >= iFR + 10 ) : false;
 };
 void CvPlayer::changCivicUnitProductionModifier( int iChange ){
 	if (iChange != 0)

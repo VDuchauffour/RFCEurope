@@ -2190,6 +2190,7 @@ void CvGame::update()
 			gDLL->getInterfaceIFace()->setWorldBuilder(true);
 		}
 		//Rhye - start switch - Version B (late human starts)
+		//logMsg("Update in Here 4.1"); //3Miro
 		int iHuman = MAX_PLAYERS;
 		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
 		{
@@ -7011,7 +7012,7 @@ void CvGame::updateMoves()
 							logMsg(" Update Moves: has Busy Unit",iI); //3Miro
 						};
 						if ( player.hasReadyUnit(true) ){
-							logMsg(" Update Moves: has Busy Unit",iI); //3Miro
+							logMsg(" Update Moves: has Ready Unit",iI); //3Miro
 						};*/
 						// 3MiroDebug: end
 						if (!(player.hasBusyUnit()) && !(player.hasReadyUnit(true)))

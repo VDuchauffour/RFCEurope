@@ -1470,7 +1470,7 @@ void CvMap::calculateAreas()
 	}
 	//Rhye - start (continents)
 	// 3Miro: Make it all one continent
-	CvArea* europaArea = addArea();
+	/*CvArea* europaArea = addArea();
 	int europaID = europaArea->getID();
 	europaArea->init(europaID, false);
 
@@ -1484,7 +1484,49 @@ void CvMap::calculateAreas()
 			if (!plotSorenINLINE(iX, iY)->isWater())
 				plotSorenINLINE(iX, iY)->setArea(europaID);
 		}
+	}*/
+
+	// 3Miro: I have access to provinces here, we can use them to define Areas
+	//GC.getGameINLINE().logMsg(" Province for Constantinople: %d",provinceMap[ 25 * EARTH_X + 81]);
+	
+	CvArea* workArea = addArea();
+	int workAreaID = workArea->getID();
+	workArea ->init( workAreaID, false );
+
+	// set default region 0 for all tiles with -1
+	int iRegion, iProvince, iX, iY;
+	for (iX = 0; iX < getGridWidthINLINE(); iX++)
+	{
+		gDLL->callUpdater();
+		for (iY = 0; iY < getGridHeightINLINE(); iY++)
+		{
+			if ( provinceMap[ iY * EARTH_X + iX ] == -1 ){
+				if (!plotSorenINLINE(iX, iY)->isWater())
+					plotSorenINLINE(iX, iY)->setArea(workAreaID);
+			};
+		}
 	}
+
+	workArea = NULL;
+
+	for( iRegion = 0; iRegion < numRegions; iRegion++ ){
+		workArea = addArea();
+		workAreaID  = workArea->getID();
+		workArea ->init( workAreaID, false );
+		for( iProvince = 0; iProvince < MAX_NUM_PROVINCES; iProvince++ ){
+			if ( provinceRegionMap[iProvince] == iRegion ){
+				gDLL->callUpdater();
+				for( iI = 0; iI < provinceSizeList[iProvince]; iI++ ){
+					iX = provinceTileList[iProvince][2*iI];
+					iY = provinceTileList[iProvince][2*iI+1];
+					if (!plotSorenINLINE(iX, iY)->isWater())
+						plotSorenINLINE(iX, iY)->setArea(workAreaID);
+				};
+			};
+		};
+		workArea = NULL;
+	};
+
 	/*CvArea* sudamericaArea = addArea();
 	int sudamericaID = sudamericaArea->getID();
 	sudamericaArea->init(sudamericaID, false);
