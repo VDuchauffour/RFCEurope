@@ -1024,6 +1024,7 @@ void CvSelectionGroup::startMission()
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 	FAssert(headMissionQueueNode() != NULL);
 
+	//GC.getGameINLINE().logMsg(" Starting Mission ");
 	if (!GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (!GET_PLAYER(getOwnerINLINE()).isTurnActive())
@@ -1040,14 +1041,18 @@ void CvSelectionGroup::startMission()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" Starting Mission Here 1 ");
 	if (canAllMove())
 	{
+		//GC.getGameINLINE().logMsg(" Starting Mission Here 1.1 ");
 		setActivityType(ACTIVITY_MISSION);
 	}
 	else
 	{
+		//GC.getGameINLINE().logMsg(" Starting Mission Here 1.2 ");
 		setActivityType(ACTIVITY_HOLD);
 	}
+	//GC.getGameINLINE().logMsg(" Starting Mission Here 2 ");
 
 
 	bDelete = false;
@@ -1057,10 +1062,12 @@ void CvSelectionGroup::startMission()
 
 	if (!canStartMission(headMissionQueueNode()->m_data.eMissionType, headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2, plot()))
 	{
+		//GC.getGameINLINE().logMsg(" Starting Mission Here 3 ");
 		bDelete = true;
 	}
 	else
 	{
+		//GC.getGameINLINE().logMsg(" Starting Mission Here 4 ");
 		FAssertMsg(GET_PLAYER(getOwnerINLINE()).isTurnActive() || GET_PLAYER(getOwnerINLINE()).isHuman(), "It's expected that either the turn is active for this player or the player is human");
 
 		switch (headMissionQueueNode()->m_data.eMissionType)
@@ -1068,6 +1075,7 @@ void CvSelectionGroup::startMission()
 		case MISSION_MOVE_TO:
 		case MISSION_ROUTE_TO:
 		case MISSION_MOVE_TO_UNIT:
+			//GC.getGameINLINE().logMsg(" Starting Mission Here 5 ");
 			break;
 
 		case MISSION_SKIP:
@@ -1153,6 +1161,7 @@ void CvSelectionGroup::startMission()
 			NotifyEntity( headMissionQueueNode()->m_data.eMissionType );
 		}
 
+		//GC.getGameINLINE().logMsg(" Starting Mission Here 15 ");
 		pUnitNode = headUnitNode();
 
 		while (pUnitNode != NULL)
@@ -1398,6 +1407,7 @@ void CvSelectionGroup::startMission()
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" Starting Mission Here 16 ");
 	if ((getNumUnits() > 0) && (headMissionQueueNode() != NULL))
 	{
 		if (bAction)
@@ -1428,10 +1438,12 @@ void CvSelectionGroup::startMission()
 					}
 				}
 
+				//GC.getGameINLINE().logMsg(" Starting Mission Here 17 ");
 				deleteMissionQueueNode(headMissionQueueNode());
 			}
 			else if (getActivityType() == ACTIVITY_MISSION)
 			{
+				//GC.getGameINLINE().logMsg(" Starting Mission Here 18 ");
 				continueMission();
 			}
 		}
@@ -1515,7 +1527,14 @@ void CvSelectionGroup::continueMission(int iSteps)
 					}
 					else
 					{
-						bDone = true;
+						// 3MiroBug: another pathing bug here
+						if ( (getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2) ){
+							bDone = true;
+							pushMission(MISSION_SKIP);
+						}else{
+							bDone = true;
+						};
+						// bDone = true; // 3Miro: Original code
 					}
 					break;
 
@@ -4539,8 +4558,10 @@ void CvSelectionGroup::insertAtEndMissionQueue(MissionData mission, bool bStart)
 
 	m_missionQueue.insertAtEnd(mission);
 
+	//GC.getGameINLINE().logMsg(" Inserting Mission  getLength = %d ",getLengthMissionQueue());
 	if ((getLengthMissionQueue() == 1) && bStart)
 	{
+		//GC.getGameINLINE().logMsg(" Activate Head Mission ");
 		activateHeadMission();
 	}
 

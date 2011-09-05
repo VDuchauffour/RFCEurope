@@ -848,6 +848,7 @@ iP_Marrakesh = 145
 iP_Madeira = 146
 iP_TheIsles = 147
 
+# those regions are for easier access for UHV and Mercs
 lRegionIberia   = [ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia ]
 lRegionFrance   = [ iP_Normandy, iP_Bretagne, iP_IleDeFrance, iP_Orleans, iP_Picardy ]
 lRegionBurgundy = [ iP_Provence, iP_Burgundy, iP_Champagne, iP_Flanders ]
@@ -865,4 +866,18 @@ lRegionMiddleEast=[ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem 
 lRegionAfrica   = [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Marrakesh ]
 lRegionKiev     = [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_Pereyaslavl, iP_Chernigov, iP_Podolia, iP_WhiteRus ]
 
+# those regions are for the map and AI
+tRegionMap = [ [], # default region is empty
+[ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, iP_Bretagne, iP_Normandy, iP_Aquitania, iP_IleDeFrance, iP_Provence, iP_Burgundy, iP_Orleans, iP_Champagne, iP_Flanders, iP_Picardy, iP_London, iP_Wessex, iP_Wales, iP_Scotland, iP_Ireland, iP_Mercia, iP_EastAnglia, iP_Northumbria, iP_Iceland,iP_TheIsles ], # Western Europe
+[ iP_Finland,iP_Norway,iP_Vestfold,iP_Gotaland,iP_Svealand,iP_Norrland,iP_Oppland,iP_Skaneland,iP_Estonia ], # Northern Europe
+[ iP_Netherlands, iP_Denmark,iP_Swabia,iP_Bavaria,iP_Bohemia,iP_Saxony,iP_Lorraine,iP_Franconia,iP_Brandenburg, iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_Masovia,iP_Carinthia,iP_Austria,iP_Slavonia,iP_Transylvania,iP_Hungary,iP_Moravia,iP_Silesia,iP_Pannonia,iP_UpperHungary,iP_Lombardy,iP_Verona,iP_Tuscany,iP_Latium,iP_Calabria,iP_Apulia,iP_Arberia,iP_Dalmatia ], # Central Europe
+[ iP_LesserPoland,iP_Suvalkija,iP_Lithuania,iP_Livonia,iP_Moesia,iP_Constantinople,iP_Thrace,iP_Thessaly,iP_Macedonia,iP_Serbia,iP_Croatia,iP_Epirus,iP_Morea,iP_Wallachia,iP_Moldova,iP_Crimea,iP_Novgorod,iP_Kuban,iP_Zaporizhia,iP_Rostov,iP_Moscow,iP_Vologda,iP_Smolensk,iP_Polotsk,iP_Murom,iP_Chernigov,iP_Pereyaslavl,iP_Sloboda,iP_Donets,iP_Kiev,iP_Podolia,iP_WhiteRus,iP_Brest,iP_Simbirsk,iP_NizhnyNovgorod,iP_Karelia,iP_Volhynia,iP_Bosnia,iP_Thessaloniki ], # Eastern Europe
+[ iP_Jerusalem,iP_Paphlagonia,iP_Opsikion,iP_Thrakesion,iP_Cilicia,iP_Anatolikon,iP_Armeniakon,iP_Charsiadon,iP_Colonea,iP_Antiochia,iP_Syria,iP_Lebanon,iP_Arabia,iP_Egypt ], # Asia
+[ iP_Sicily,iP_Crete,iP_Cyprus,iP_Rhodes,iP_Corsica,iP_Sardinia,iP_Balears,iP_Canaries,iP_Azores,iP_Morocco,iP_Malta,iP_Madeira ], # Islands
+[ iP_Cyrenaica,iP_Tripolitania,iP_Ifriqiya,iP_Algiers,iP_Tetouan,iP_Oran,iP_Marrakesh ], # North Africa
+]
+iNumMapRegions = 8
+
+
+######
 iP_MaxNumberOfProvinces = 150

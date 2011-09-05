@@ -40,6 +40,11 @@ MV1		Make atlas from the buttons
 Changes for Beta 13:
 (to-be-released: ???)
 
+	Major Changes:
+		- new Mercenary scheme, the player can no longer sell units as Mercs only buy
+		- Mercs appear per province and Mercs no longer need Unique names
+		- added a bunch of generic mercs, to be updated with names later on
+
 	General changes and UHV updates:
 		- Madeira added to first Portugese UHV
 		- Viking UHV requires 50 Viking Points
@@ -51,6 +56,7 @@ Changes for Beta 13:
 		- Isle of Man province expanded with the northern British islands (Hebrides, Orkney). New province: The Isles
 		- Updated the Balkan city name maps for Byzantium, Bulgaria and Turkey
 		- Removed all Dense Forest and Forest from Peaks
+		- Europe is now divided into regions (XMLConsts and RFCEurope into C++), this will affect "continent" wonders and it has big effect on the AI
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
@@ -80,6 +86,8 @@ Changes for Beta 13:
 		- some of the Crusader units will leave after capturing Jerusalem (Templars and Teutonic Knights will not return)
 		- added Jerusalem Monor Nation so that it will revolt against the Crusaders and make it hard to keep Jerusalem
 		- new UP for Turkey, they get free Units for foreign religion in their cities
+		- added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
+		- techs can be traded 10 turns aftet they have been researched regardless of the timeline
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
@@ -92,6 +100,7 @@ Changes for Beta 13:
 		- fixed a strange crash when Crusaders don't find a proper spot to appear when a Crusade victim collapsed
 		- fixed a bug about old stability code when switching civilizations
 		- Grenadiers are now Gunpowder units (as opposed to Heavy Infantry)
+		- Hacked another ugly bug with the path-finding algorithm, the settler sometimes doesn't find a road to the target and then goes in an infinite loop
 
 	Interface:
 		- New screen to display which colonies have been built.

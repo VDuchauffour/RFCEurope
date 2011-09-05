@@ -273,6 +273,8 @@ extern int *iModCultureBottom; // Culture * Top / Bottom
 extern int *iCultureImmune; // locks a province so that only the player in exception can put culture in it
 extern int *iCultureImmuneException; // the only player that can put culture on the tiles of this province
 extern int provinceToColor;
+extern int numRegions; // for map areas, give the number of regions
+extern int *provinceRegionMap; // give the region for each province (province -1 is default reigion 0)
 
 extern int *conditionalVassalage; // conditions for vassalizing, -1 cannot vassalize, 1 can vassalize, 0 condition
 extern int provinceFlagToVassalize; // we can vassalize if we have overlap (city in province) of provinces of type >= provinceFlagToVassalize

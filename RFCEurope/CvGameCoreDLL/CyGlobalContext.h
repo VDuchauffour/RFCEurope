@@ -442,6 +442,8 @@ public:
 
 	void setProvince( int iX, int iY, int iProvince ); // set the province at tile (iX,iY)
 	void createProvinceCrossreferenceList(); // call this after setting all provinces
+	void setNumRegions( int iNumRegions ); // set the total number of regions (this should speedup the AI)
+	void setProvinceToRegion( int iProvince, int iRegion ); // set a province to belong to a region
 
 	void setCultureImmume( int iProvince, int iPlayerException, int iNumTurns ); // make a province immune to culture not comming from iPlayerException
 	void setProvinceTypeNumber( int iNum ); // set the number of province types

@@ -139,8 +139,14 @@ bool CvSelectionGroupAI::AI_update()
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
 	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 1 "); // 3Miro
+	/*if ( ( getX() == 94) && ( getY() == 6) ){
+		GC.getGameINLINE().logMsg(" AI_Update Group Size %d",getNumUnits() ); // 3Miro
+	};*/
 	if (!AI_isControlled())
 	{
+		/*if ( ( getX() == 94) && ( getY() == 6) ){
+			GC.getGameINLINE().logMsg(" AI_Update return controlled " ); // 3Miro
+		};*/
 		return false;
 	}
 
@@ -151,6 +157,9 @@ bool CvSelectionGroupAI::AI_update()
 
 	if (isForceUpdate())
 	{
+		/*if ( ( getX() == 94) && ( getY() == 6) ){
+			GC.getGameINLINE().logMsg(" AI_Update is Forced Update " ); // 3Miro
+		};*/
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
 		setForceUpdate(false);
@@ -158,6 +167,10 @@ bool CvSelectionGroupAI::AI_update()
 		// if we are in the middle of attacking with a stack, cancel it
 		AI_cancelGroupAttack();
 	}
+
+	/*if ( ( getX() == 94) && ( getY() == 6) ){
+		GC.getGameINLINE().logMsg(" AI_Update HERE 1" ); // 3Miro
+	};*/
 
 	FAssert(!(GET_PLAYER(getOwnerINLINE()).isAutoMoves()));
 
@@ -167,6 +180,9 @@ bool CvSelectionGroupAI::AI_update()
 	
 	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2 "); // 3Miro
 	bool bFailedAlreadyFighting = false;
+	/*if ( ( getX() == 94) && ( getY() == 6) ){
+		GC.getGameINLINE().logMsg(" AI_Update HERE 2" ); // 3Miro
+	};*/
 	while ((m_bGroupAttack && !bFailedAlreadyFighting) || readyToMove())
 	{
 		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.1 "); // 3Miro
@@ -175,6 +191,9 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			FAssert(false);
 			CvUnit* pHeadUnit = getHeadUnit();
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" head Unit: %d",pHeadUnit->getUnitType()); // 3Miro
+			};*/
 			if (NULL != pHeadUnit)
 			{
 				if (GC.getLogging())
@@ -186,7 +205,7 @@ bool CvSelectionGroupAI::AI_update()
 						pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE(), szTempString.GetCString());
 					gDLL->messageControlLog(szOut);
 				}
-				
+				//GC.getGameINLINE().logMsg(" AI_UPDATE Stuck HERE Unit type: %d at %d %d",pHeadUnit->getUnitType(),pHeadUnit->getX(),pHeadUnit->getY() ); // 3Miro
 				pHeadUnit->finishMoves();
 			}
 			break;
@@ -196,6 +215,9 @@ bool CvSelectionGroupAI::AI_update()
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" AI_Update HERE 3: groupAttack" ); // 3Miro
+			};*/
 			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.1 "); // 3Miro
 			m_bGroupAttack = false;
 
@@ -206,9 +228,15 @@ bool CvSelectionGroupAI::AI_update()
 		// else pick AI action
 		else
 		{
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" AI_Update HERE 4: not groupAttack" ); // 3Miro
+			};*/
 			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.4 "); // 3Miro
 			CvUnit* pHeadUnit = getHeadUnit();
 			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.5 "); // 3Miro
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" AI_Update HERE 4.1: head unit %d",pHeadUnit->getUnitType() ); // 3Miro
+			};*/
 
 			if (pHeadUnit == NULL || pHeadUnit->isDelayedDeath())
 			{
@@ -216,18 +244,33 @@ bool CvSelectionGroupAI::AI_update()
 				break;
 			}
 
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" AI_Update HERE 4.2 " ); // 3Miro
+			};*/
+
 			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.7 "); // 3Miro
 			resetPath();
 			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.8 "); // 3Miro
 
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" AI_Update HERE 4.3 " ); // 3Miro
+			};*/
+
 			if (pHeadUnit->AI_update())
 			{
+				/*if ( ( getX() == 94) && ( getY() == 6) ){
+					GC.getGameINLINE().logMsg(" AI_Update HERE AI_Update foe hrad Unit " ); // 3Miro
+				};*/
 				// AI_update returns true when we should abort the loop and wait until next slice
 				//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.9 "); // 3Miro
 				break;
 			}
 			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.10 "); // 3Miro
+			/*if ( ( getX() == 94) && ( getY() == 6) ){
+				GC.getGameINLINE().logMsg(" AI_Update HERE 4.4 " ); // 3Miro
+			};*/
 		}
+			
 
 		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.3 "); // 3Miro
 		if (doDelayedDeath())

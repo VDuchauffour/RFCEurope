@@ -5479,6 +5479,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 		ePlayer = getLeaderID();
 	}
 
+	// 3Miro: set the date the tech was first researched
+	if ( bNewValue && (GC.getTechInfo(eIndex).getFirstResearched() == -1) ){
+		GC.getTechInfo(eIndex).setFirstResearched( GC.getGameINLINE().getGameTurn() );
+	};
+	// 3Miro: end
+
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumTechInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 	FAssertMsg(ePlayer >= 0, "eIndex is expected to be non-negative (invalid Index)");

@@ -38,7 +38,7 @@ tDefensiveCrusadeMap = [
 [xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine,xml.iP_Picardy], #tBurgundy
 [xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Bavaria, xml.iP_Saxony, xml.iP_Franconia, xml.iP_Flanders, xml.iP_Brandenburg, xml.iP_Bohemia], #tGermany
 [], #tKiev
-[xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Slavonia, xml.iP_Pannonia, xml.iP_Austria], #tHungary
+[xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Slavonia, xml.iP_Pannonia, xml.iP_Austria, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia, xml.iP_Croatia, xml.iP_Bosnia], #tHungary
 [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia], #tSpain
 [xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Silesia, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_GaliciaPoland], #tPoland
 [xml.iP_Lombardy, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Tuscany], #tGenoa
