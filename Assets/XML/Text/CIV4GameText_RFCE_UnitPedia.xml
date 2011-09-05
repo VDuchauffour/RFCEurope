@@ -417,29 +417,4 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VIKING_BESERKER</Tag>
-		<English>Berserker</English>
-		<French>
-			<Text>Berserker</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Berserker</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Berserker</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Berserk:Berserker</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Russian>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Russian>
-	</TEXT>
 </Civ4GameText>
