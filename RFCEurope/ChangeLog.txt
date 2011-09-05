@@ -65,6 +65,7 @@ Changes for Beta 13:
 		- Added a couple hints, revised all the older ones (including everything from vanilla Civ IV/Warlords/BtS)
 		- Papal States will ALWAYS be named Papal States
 		- Fixed diplo text of Matthias
+		- Removed ability of the Templar Knight to move through enemy territory
 
 	Python/C++ updates:
 		- Cleaned some old Rhye code from the Victory and RFCEvent modules

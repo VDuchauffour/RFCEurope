@@ -537,6 +537,31 @@
 		<Spanish>Bajoras</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_VIKING_BESERKER</Tag>
+		<English>Berserker</English>
+		<French>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Berserk:Berserker</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHT_HOSPITALLER_HELP</Tag>
 		<English>[ICON_BULLET]Requires [LINK=CORPORATION_1]Knights Hospitallers[\LINK] present in the city</English>
 		<French>.</French>
