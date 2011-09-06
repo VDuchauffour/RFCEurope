@@ -64,6 +64,7 @@ Changes for Beta 13:
 		- Papal States will ALWAYS be named Papal States
 		- Fixed diplo text of Matthias
 		- Removed ability of the Templar Knight to move through enemy territory
+		- All gunpowder units (except arquebuseirs) ignore building defenses
 
 	Python/C++ updates:
 		- Cleaned some old Rhye code from the Victory and RFCEvent modules
