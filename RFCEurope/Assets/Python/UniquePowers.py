@@ -64,18 +64,23 @@ class UniquePowers:
                 
                 iOldPoints = pPlayer.getPicklefreeParameter( iJanissaryPoints )
                 
-                if ( iOldPoints + iNewPoints > 200 ):
+                iNextJanissary = 250
+                if ( pPlayer.isHuman() ):
+                        iNextJanissary = 400
+                
+                
+                if ( iOldPoints + iNewPoints > iNextJanissary ):
                         #iNewPoints = 0
                         apCityList = PyPlayer(iPlayer).getCityList()
                         iRandCity = gc.getGame().getSorenRandNum(len( apCityList ), 'Janissary city')
                         pCity = apCityList[iRandCity].GetCy()
                         utils.makeUnit( xml.iMusketman, iPlayer, [pCity.getX(), pCity.getY()], 1 )
                         pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
-                        print(" 3Miro making a Janissary in ",pCity.getName() )
+                        #print(" 3Miro making a Janissary in ",pCity.getName() )
                 else:
                      pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
                      
-                print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
-                print(" 3Miro Janissaries this turn addes: ", iNewPoints)
+                #print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
+                #print(" 3Miro Janissaries this turn addes: ", iNewPoints)
                 
 

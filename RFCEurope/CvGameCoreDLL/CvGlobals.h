@@ -1189,84 +1189,162 @@ protected:
 	FProfiler* m_Profiler;		// profiler
 	CvString m_szDllProfileText;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Efficiency, Options                                                                          */
-/************************************************************************************************/
-public:
-	int getDefineINT( const char * szName, const int iDefault ) const;
-	float getDefineFLOAT( const char * szName, const float fDefault ) const;
-	
-// Tech Diffusion
-public:
-	bool getTECH_DIFFUSION_ENABLE();
-	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
-	int getTECH_DIFFUSION_WELFARE_THRESHOLD();
-	int getTECH_DIFFUSION_WELFARE_MODIFIER();
-	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER();
-	int getTECH_COST_KNOWN_PREREQ_MODIFIER();
-	int getTECH_COST_MODIFIER();
-
-protected:
-	bool m_bTECH_DIFFUSION_ENABLE;
-	int m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER;
-	int m_iTECH_DIFFUSION_WELFARE_THRESHOLD;
-	int m_iTECH_DIFFUSION_WELFARE_MODIFIER;
-	int m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER;
-	int m_iTECH_COST_KNOWN_PREREQ_MODIFIER;
-	int m_iTECH_COST_MODIFIER;
-	
-// From Lead From Behind by UncutDragon
-public:
-	int getCOMBAT_DIE_SIDES();
-	int getCOMBAT_DAMAGE();
-
-protected:
-	int m_iCOMBAT_DIE_SIDES;
-	int m_iCOMBAT_DAMAGE;
-
-// Influence Driven War - added by edead
-public:
-	int getIDW_ENABLED();
-	float getIDW_BASE_COMBAT_INFLUENCE();
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER();
-	float getIDW_FORT_CAPTURE_MULTIPLIER();
-	float getIDW_EXPERIENCE_FACTOR();
-	float getIDW_WARLORD_MULTIPLIER();
-	int getIDW_INFLUENCE_RADIUS();
-	float getIDW_PLOT_DISTANCE_FACTOR();
-	float getIDW_WINNER_PLOT_MULTIPLIER();
-	float getIDW_LOSER_PLOT_MULTIPLIER();
-	int getIDW_NO_BARBARIAN_INFLUENCE();
-	int getIDW_NO_NAVAL_INFLUENCE();
-	int getIDW_PILLAGE_INFLUENCE_ENABLED();
-	float getIDW_BASE_PILLAGE_INFLUENCE();
-	int getIDW_NO_COMBAT_SPAM();
-	float getIDW_CITY_MULTIPLIER();
-	float getIDW_FORT_MULTIPLIER();
-
-protected:
-	int m_iIDW_ENABLED;
-	float m_fIDW_BASE_COMBAT_INFLUENCE;
-	float m_fIDW_NO_CITY_DEFENDER_MULTIPLIER;
-	float m_fIDW_FORT_CAPTURE_MULTIPLIER;
-	float m_fIDW_EXPERIENCE_FACTOR;
-	float m_fIDW_WARLORD_MULTIPLIER;
-	int m_iIDW_INFLUENCE_RADIUS;
-	float m_fIDW_PLOT_DISTANCE_FACTOR;
-	float m_fIDW_WINNER_PLOT_MULTIPLIER;
-	float m_fIDW_LOSER_PLOT_MULTIPLIER;
-	int m_iIDW_NO_BARBARIAN_INFLUENCE;
-	int m_iIDW_NO_NAVAL_INFLUENCE;
-	int m_iIDW_PILLAGE_INFLUENCE_ENABLED;
-	float m_fIDW_BASE_PILLAGE_INFLUENCE;
-	int m_iIDW_NO_COMBAT_SPAM;
-	float m_fIDW_CITY_MULTIPLIER;
-	float m_fIDW_FORT_MULTIPLIER;
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+
+/*                                                                                              */
+
+/* Efficiency, Options                                                                          */
+
+/************************************************************************************************/
+
+public:
+
+	int getDefineINT( const char * szName, const int iDefault ) const;
+
+	float getDefineFLOAT( const char * szName, const float fDefault ) const;
+
+	
+
+// Tech Diffusion
+
+public:
+
+	bool getTECH_DIFFUSION_ENABLE();
+
+	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
+
+	int getTECH_DIFFUSION_WELFARE_THRESHOLD();
+
+	int getTECH_DIFFUSION_WELFARE_MODIFIER();
+
+	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER();
+
+	int getTECH_COST_KNOWN_PREREQ_MODIFIER();
+
+	int getTECH_COST_MODIFIER();
+
+
+
+protected:
+
+	bool m_bTECH_DIFFUSION_ENABLE;
+
+	int m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER;
+
+	int m_iTECH_DIFFUSION_WELFARE_THRESHOLD;
+
+	int m_iTECH_DIFFUSION_WELFARE_MODIFIER;
+
+	int m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER;
+
+	int m_iTECH_COST_KNOWN_PREREQ_MODIFIER;
+
+	int m_iTECH_COST_MODIFIER;
+
+	
+
+// From Lead From Behind by UncutDragon
+
+public:
+
+	int getCOMBAT_DIE_SIDES();
+
+	int getCOMBAT_DAMAGE();
+
+
+
+protected:
+
+	int m_iCOMBAT_DIE_SIDES;
+
+	int m_iCOMBAT_DAMAGE;
+
+
+
+// Influence Driven War - added by edead
+
+public:
+
+	int getIDW_ENABLED();
+
+	float getIDW_BASE_COMBAT_INFLUENCE();
+
+	float getIDW_NO_CITY_DEFENDER_MULTIPLIER();
+
+	float getIDW_FORT_CAPTURE_MULTIPLIER();
+
+	float getIDW_EXPERIENCE_FACTOR();
+
+	float getIDW_WARLORD_MULTIPLIER();
+
+	int getIDW_INFLUENCE_RADIUS();
+
+	float getIDW_PLOT_DISTANCE_FACTOR();
+
+	float getIDW_WINNER_PLOT_MULTIPLIER();
+
+	float getIDW_LOSER_PLOT_MULTIPLIER();
+
+	int getIDW_NO_BARBARIAN_INFLUENCE();
+
+	int getIDW_NO_NAVAL_INFLUENCE();
+
+	int getIDW_PILLAGE_INFLUENCE_ENABLED();
+
+	float getIDW_BASE_PILLAGE_INFLUENCE();
+
+	int getIDW_NO_COMBAT_SPAM();
+
+	float getIDW_CITY_MULTIPLIER();
+
+	float getIDW_FORT_MULTIPLIER();
+
+
+
+protected:
+
+	int m_iIDW_ENABLED;
+
+	float m_fIDW_BASE_COMBAT_INFLUENCE;
+
+	float m_fIDW_NO_CITY_DEFENDER_MULTIPLIER;
+
+	float m_fIDW_FORT_CAPTURE_MULTIPLIER;
+
+	float m_fIDW_EXPERIENCE_FACTOR;
+
+	float m_fIDW_WARLORD_MULTIPLIER;
+
+	int m_iIDW_INFLUENCE_RADIUS;
+
+	float m_fIDW_PLOT_DISTANCE_FACTOR;
+
+	float m_fIDW_WINNER_PLOT_MULTIPLIER;
+
+	float m_fIDW_LOSER_PLOT_MULTIPLIER;
+
+	int m_iIDW_NO_BARBARIAN_INFLUENCE;
+
+	int m_iIDW_NO_NAVAL_INFLUENCE;
+
+	int m_iIDW_PILLAGE_INFLUENCE_ENABLED;
+
+	float m_fIDW_BASE_PILLAGE_INFLUENCE;
+
+	int m_iIDW_NO_COMBAT_SPAM;
+
+	float m_fIDW_CITY_MULTIPLIER;
+
+	float m_fIDW_FORT_MULTIPLIER;
+
+
+
+/************************************************************************************************/
+
+/* BETTER_BTS_AI_MOD                       END                                                  */
+
 /************************************************************************************************/
 };
 

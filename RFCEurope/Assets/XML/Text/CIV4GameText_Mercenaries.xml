@@ -210,6 +210,15 @@
 		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCES</Tag>
+		<English>Available in Provinces: </English>
+		<French>Available in Provinces: </French>
+		<German>Available in Provinces: </German>
+		<Italian>Available in Provinces: </Italian>
+		<Spanish>Available in Provinces: </Spanish>
+		<Russian>Available in Provinces: </Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
 		<English>Serbian</English>
 		<French>Serbian</French>
@@ -235,6 +244,24 @@
 		<Italian>Avar</Italian>
 		<Spanish>Avar</Spanish>
 		<Russian>Avar</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
+		<English>Knights Templar</English>
+		<French>Knights Templar</French>
+		<German>Knights Templar</German>
+		<Italian>Knights Templar</Italian>
+		<Spanish>Knights Templar</Spanish>
+		<Russian>Knights Templar</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TEUTONIC_KNIGHTS</Tag>
+		<English>Teutonic Knights</English>
+		<French>Teutonic Knights</French>
+		<German>Teutonic Knights</German>
+		<Italian>Teutonic Knights</Italian>
+		<Spanish>Teutonic Knights</Spanish>
+		<Russian>Teutonic Knights</Russian>
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_MERC_GENERIC</Tag>

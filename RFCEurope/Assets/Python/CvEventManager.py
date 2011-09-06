@@ -367,7 +367,7 @@ class CvEventManager:
 																	
 	def onGameEnd(self, argsList):
 		'Called at the End of the game'
-		print("Game is ending")
+		#print("Game is ending")
 		return
 
 	def onBeginGameTurn(self, argsList):
@@ -1004,6 +1004,7 @@ class CvEventManager:
 		'sample generic event, called on each game turn slice'
 		genericArgs = argsList[0][0]	# tuple of tuple of my args
 		turnSlice = genericArgs[0]
+                #print(" 3Miro: onGameUpdate")
 	
 	def onMouseEvent(self, argsList):
 		'mouse handler - returns 1 if the event was consumed'

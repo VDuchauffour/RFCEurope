@@ -122,6 +122,8 @@ class AIWars:
                         #make sure we don't miss this
                         print("Skipping AIWar")
                         self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
+                
+                #print(" 3MiroDebug: end AI wars ")
 
 
         def pickCivs(self): 

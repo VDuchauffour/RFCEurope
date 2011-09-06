@@ -3790,280 +3790,144 @@ void CvGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void CvGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
 CvDLLUtilityIFaceBase* CvGlobals::getDLLIFaceNonInl() { return m_pDLL; }
 /************************************************************************************************/
-
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-
 /*                                                                                              */
-
 /* Efficiency, Options                                                                          */
-
 /************************************************************************************************/
 
 // Tech Diffusion
 
 bool CvGlobals::getTECH_DIFFUSION_ENABLE()
-
 {
-
 	return m_bTECH_DIFFUSION_ENABLE;
-
 }
-
-
 
 int CvGlobals::getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER()
-
 {
-
 	return m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER;
-
 }
-
-
 
 int CvGlobals::getTECH_DIFFUSION_WELFARE_THRESHOLD()
-
 {
-
 	return m_iTECH_DIFFUSION_WELFARE_THRESHOLD;
-
 }
-
-
 
 int CvGlobals::getTECH_DIFFUSION_WELFARE_MODIFIER()
-
 {
-
 	return m_iTECH_DIFFUSION_WELFARE_MODIFIER;
-
 }
-
-
 
 int CvGlobals::getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER()
-
 {
-
 	return m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER;
-
 }
-
-
 
 int CvGlobals::getTECH_COST_KNOWN_PREREQ_MODIFIER()
-
 {
-
 	return m_iTECH_COST_KNOWN_PREREQ_MODIFIER;
-
 }
-
-
-
 int CvGlobals::getTECH_COST_MODIFIER()
-
 {
-
 	return m_iTECH_COST_MODIFIER;
-
 }
 
 // From Lead From Behind by UncutDragon
 
 int CvGlobals::getCOMBAT_DIE_SIDES()
-
 {
-
 	return m_iCOMBAT_DIE_SIDES;
-
 }
-
-
 
 int CvGlobals::getCOMBAT_DAMAGE()
-
 {
-
 	return m_iCOMBAT_DAMAGE;
-
 }
-
-
 
 // Influence Driven War - added by edead
-
-
-
 int CvGlobals::getIDW_ENABLED()
-
 {
-
 	return m_iIDW_ENABLED;
-
 }
-
-
 
 float CvGlobals::getIDW_BASE_COMBAT_INFLUENCE()
-
 {
-
 	return m_fIDW_BASE_COMBAT_INFLUENCE;
-
 }
-
-
 
 float CvGlobals::getIDW_NO_CITY_DEFENDER_MULTIPLIER()
-
 {
-
 	return m_fIDW_NO_CITY_DEFENDER_MULTIPLIER;
-
 }
-
-
 
 float CvGlobals::getIDW_FORT_CAPTURE_MULTIPLIER()
-
 {
-
 	return m_fIDW_FORT_CAPTURE_MULTIPLIER;
-
 }
-
-
 
 float CvGlobals::getIDW_EXPERIENCE_FACTOR()
-
 {
-
 	return m_fIDW_EXPERIENCE_FACTOR;
-
 }
-
-
 
 float CvGlobals::getIDW_WARLORD_MULTIPLIER()
-
 {
-
 	return m_fIDW_WARLORD_MULTIPLIER;
-
 }
-
-
 
 int CvGlobals::getIDW_INFLUENCE_RADIUS()
-
 {
-
 	return m_iIDW_INFLUENCE_RADIUS;
-
 }
-
-
 
 float CvGlobals::getIDW_PLOT_DISTANCE_FACTOR()
-
 {
-
 	return m_fIDW_PLOT_DISTANCE_FACTOR;
-
 }
-
-
 
 float CvGlobals::getIDW_WINNER_PLOT_MULTIPLIER()
-
 {
-
 	return m_fIDW_WINNER_PLOT_MULTIPLIER;
-
 }
-
-
 
 float CvGlobals::getIDW_LOSER_PLOT_MULTIPLIER()
-
 {
-
 	return m_fIDW_LOSER_PLOT_MULTIPLIER;
-
 }
-
-
 
 int CvGlobals::getIDW_NO_BARBARIAN_INFLUENCE()
-
 {
-
 	return m_iIDW_NO_BARBARIAN_INFLUENCE;
-
 }
-
-
 
 int CvGlobals::getIDW_NO_NAVAL_INFLUENCE()
-
 {
-
 	return m_iIDW_NO_NAVAL_INFLUENCE;
-
 }
-
-
 
 int CvGlobals::getIDW_PILLAGE_INFLUENCE_ENABLED()
-
 {
-
 	return m_iIDW_PILLAGE_INFLUENCE_ENABLED;
-
 }
-
-
 
 float CvGlobals::getIDW_BASE_PILLAGE_INFLUENCE()
-
 {
-
 	return m_fIDW_BASE_PILLAGE_INFLUENCE;
-
 }
-
-
 
 int CvGlobals::getIDW_NO_COMBAT_SPAM()
-
 {
-
 	return m_iIDW_NO_COMBAT_SPAM;
-
 }
-
-
 
 float CvGlobals::getIDW_CITY_MULTIPLIER()
-
 {
-
 	return m_fIDW_CITY_MULTIPLIER;
-
 }
-
-
 
 float CvGlobals::getIDW_FORT_MULTIPLIER()
-
 {
-
 	return m_fIDW_FORT_MULTIPLIER;
-
 }
-
-
 
 /************************************************************************************************/
 

@@ -86,6 +86,10 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iMusketman, "TXT_KEY_MERC_GENERIC", 300, 400, xml.lRegionBalkans, [], 20 ],
                 [xml.iMusketman, "TXT_KEY_MERC_GENERIC", 300, 400, xml.lRegionKiev, [], 20 ],
                 [xml.iMusketman, "TXT_KEY_MERC_GENERIC", 300, 400, xml.lRegionMiddleEast, [], 20 ],
+                [xml.iTemplar, "TXT_KEY_KNIGHTS_TEMPLAR", 170, 300, xml.lRegionMiddleEast, [xml.iIslam,xml.iOrthodoxy,xml.iProtestantism], 50 ],
+                [xml.iTemplar, "TXT_KEY_KNIGHTS_TEMPLAR", 170, 300, xml.lRegionMiddleEast, [xml.iIslam,xml.iOrthodoxy,xml.iProtestantism], 50 ],
+                [xml.iTeutonic, "TXT_KEY_TEUTONIC_KNIGHTS", 170, 300, xml.lRegionMiddleEast, [xml.iIslam,xml.iOrthodoxy,xml.iProtestantism], 50 ],
+                [xml.iTeutonic, "TXT_KEY_TEUTONIC_KNIGHTS", 170, 300, xml.lRegionMiddleEast, [xml.iIslam,xml.iOrthodoxy,xml.iProtestantism], 50 ],
                 ]
 
 ### A few Parameters for Mercs only:
@@ -220,6 +224,8 @@ class MercenaryManager:
         # thus the AI gets the advantage to make the Merc "decision" with the most up-to-date political data and they can get the mercs instantly
         # the Human gets the advantage to get the first pick at the available mercs
         
+                print(" Begin Merc Turn ")
+        
                 self.getMercLists() # load the current mercenary pool
                 iHuman = gc.getGame().getActivePlayer()
                 
@@ -237,7 +243,7 @@ class MercenaryManager:
                         #playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
 
                 self.processNewMercs( iGameTurn ) # add new Merc to the pool
-                        
+                
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
                 
                 #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
@@ -321,6 +327,7 @@ class MercenaryManager:
                 if ( pPlayer.isHuman() or pPlayer.isBarbarian() or pPlayer.getID() == con.iPope ):
                         return
                         
+                print(" MercAI for ",pPlayer.getID())
                 iWarValue = 0 # compute the total number of wars being fought at the moment
                 
                 teamPlayer = gc.getTeam(pPlayer.getTeam())
@@ -354,7 +361,10 @@ class MercenaryManager:
                         self.FireMercAI( pPlayer )
                         
                         # make sure we can affort the mercs that we keep
+                        #print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
                         while ( pPlayer.getPicklefreeParameter( iMercCostPerTurn )>0 and 100*pPlayer.getGold() < pPlayer.getPicklefreeParameter( iMercCostPerTurn ) ):
+                                print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
+                                self.GMU.playerMakeUpkeepSane( pPlayer.getID() )
                                 self.FireMercAI( pPlayer )
                         return
                         
@@ -382,6 +392,8 @@ class MercenaryManager:
                         #pUnit = pPlayer.getUnit( iUnit )
                         if ( pUnit.getMercID() > -1 ):
                                 lMercs.append( pUnit )
+                                
+                print(" Hired Mercs: ",len( lMercs ) )
                                 
                 if ( len( lMercs ) > 0 ):
                         # we have mercs, so fire someone
@@ -481,6 +493,25 @@ class GlobalMercenaryUtils:
                 scriptDict['lMercsHiredBy'] = lNewList
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
                 
+        def playerMakeUpkeepSane( self, iPlayer ):
+                pPlayer = gc.getPlayer( iPlayer )
+                unitList = PyPlayer( iPlayer ).getUnitList()
+                lMercs = []
+                for pUnit in unitList:
+                        if ( pUnit.getMercID() > -1 ):
+                                lMercs.append( pUnit )
+                                
+                iTotoalUpkeep = 0
+                for pUnit in lMercs:
+                        #iTotoalUpkeep += self.getModifiedCostPerPlayer( pUnit.getMercUpkeep(), iPlayer )
+                        iTotoalUpkeep += pUnit.getMercUpkeep()
+                        
+                iSavedUpkeep = pPlayer.getPicklefreeParameter( iMercCostPerTurn )
+                if ( iSavedUpkeep != iTotoalUpkeep ):
+                        print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotoalUpkeep )
+                        print("  ------- Making sane ------- ")
+                        pPlayer.setPicklefreeParameter( iMercCostPerTurn, iTotoalUpkeep )
+                
         def getCost( self, iMerc, lPromotions ):
                 # note that the upkeep is in the units of 100, i.e. iUpkeepCost = 100 means 1 gold
                 lMercInfo = lMercList[iMerc]
@@ -545,7 +576,8 @@ class GlobalMercenaryUtils:
                 
                 # make the unit:
                 pUnit = pPlayer.initUnit( lMercList[lMerc[0]][0], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-                pUnit.setName( CyTranslator().getText( lMercList[lMerc[0]][1] , ()) )
+                if ( lMercList[lMerc[0]][1] != "TXT_KEY_MERC_GENERIC" ):
+                        pUnit.setName( CyTranslator().getText( lMercList[lMerc[0]][1] , ()) )
                 
                 # add the promotions
                 for iPromotion in lMerc[1]:

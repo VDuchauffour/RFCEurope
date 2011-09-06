@@ -122,7 +122,6 @@ class Plague:
                                                 iInfectedCounter += 1
                                 if ( iInfectedCounter <= 1 ):
                                         self.startPlague(i)
-                                        
                         
         
         def checkPlayerTurn(self, iGameTurn, iPlayer):
