@@ -6028,20 +6028,29 @@ void CvGame::doTurn()
 	//createBarbarianCities();
 
 	//logMsg("doTurn Here 1");
-	createBarbarianUnits();
+	// 3Miro: create the Barbarians in Python
+	//createBarbarianUnits();
 	//logMsg("doTurn Here 1.1");
 
-	doGlobalWarming();
+	// 3Miro: disable global warming
+	//doGlobalWarming();
 
 	//Rhye - comment this to stop religion founding
 	//doHolyCity();
 
+	//logMsg("doTurn Here 1.2");
 	doHeadquarters();
+	//logMsg("doTurn Here 1.3");
 
+	//logMsg("doTurn Here 1.4");
 	doDiploVote();
+	//logMsg("doTurn Here 1.5");
 
+	//logMsg("doTurn Here 1.6");
 	gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+	//logMsg("doTurn Here 1.7");
 	gDLL->getInterfaceIFace()->setHasMovedUnit(false);
+	//logMsg("doTurn Here 1.8");
 
 	//logMsg(" -- doTurn getAIAutoplay() = %d",getAIAutoPlay());
 	if (getAIAutoPlay() > 0)
@@ -6051,14 +6060,17 @@ void CvGame::doTurn()
 
 		if (getAIAutoPlay() == 0)
 		{
+			//logMsg(" ----- doTurn 2 getAIAutoplay() = %d",getAIAutoPlay());
 			reviveActivePlayer();
 		}
 	}
 
+	//logMsg("doTurn Here 1.9");
 	CvEventReporter::getInstance().endGameTurn(getGameTurn());
+	//logMsg("doTurn Here 1.10");
 
-	incrementGameTurn();
-	incrementElapsedGameTurns();
+	incrementGameTurn(); //logMsg("doTurn Here 1.11");
+	incrementElapsedGameTurns(); 
 
 	//logMsg("doTurn Here 2");
 	if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
@@ -6732,6 +6744,7 @@ void CvGame::createBarbarianUnits()
 						if (pPlot != NULL)
 						{
 							//Rhye - start (no partially impassable terrains)
+							// 3Miro: I don't know if this terrain applies to us, just remove the entire funciton call, there is no reason for it in RFCE
 							if ((pPlot->getTerrainType() <= 3) && (pPlot->getFeatureType() >= 2) && (pPlot->getFeatureType() <= 4))
 							{
 							//Rhye - end

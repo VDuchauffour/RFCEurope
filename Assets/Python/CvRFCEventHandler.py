@@ -445,7 +445,7 @@ class CvRFCEventHandler:
 			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
 
-		#print(" 3Miro onBegTurn ")                
+		print(" 3Miro onBegTurn: ",iGameTurn)
 		self.barb.checkTurn(iGameTurn)
                 self.rnf.checkTurn(iGameTurn)
                 self.rel.checkTurn(iGameTurn)
@@ -500,7 +500,7 @@ class CvRFCEventHandler:
                                 #if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
                                         #objMercenaryUtils.addMercenariesToPool()
                                 ##Rhye - end                
-                ##print(" 3Miro onBegTurn out: ",iGameTurn)
+                #print(" 3Miro onBegTurn out: ",iGameTurn)
                 
                 return 0
 
@@ -510,7 +510,7 @@ class CvRFCEventHandler:
         	#print( " in Begin Player Turn ")
                 iGameTurn, iPlayer = argsList                
 
-                #print ("PLAYER", iPlayer)
+                print ("onBeginPlayerTurn PLAYER", iPlayer)
 
                 if (self.rnf.getDeleteMode(0) != -1):
                         self.rnf.deleteMode(iPlayer)
@@ -586,7 +586,7 @@ class CvRFCEventHandler:
         def onEndGameTurn(self, argsList):
             	# 3Miro when everyone end their turn
                 iGameTurn = argsList[0]
-                #print (" 3Miro END TURN ", iGameTurn)
+                print (" 3Miro END TURN ", iGameTurn)
                 self.sta.checkImplosion(iGameTurn)
                 # 3MiroMercs
                 self.mercs.doMercsTurn(iGameTurn)

@@ -1453,6 +1453,7 @@ void CvSelectionGroup::startMission()
 
 void CvSelectionGroup::continueMission(int iSteps)
 {
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::continueMission 1 ");
 	CvUnit* pTargetUnit;
 	bool bDone;
 	bool bAction;
@@ -1501,23 +1502,30 @@ void CvSelectionGroup::continueMission(int iSteps)
 				switch (headMissionQueueNode()->m_data.eMissionType)
 				{
 				case MISSION_MOVE_TO:
+					//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO from %d %d",getX(),getY());
 					if (getDomainType() == DOMAIN_AIR)
 					{
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 1 ");
 						groupPathTo(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2, headMissionQueueNode()->m_data.iFlags);
 						bDone = true;
 					}
 					else if (groupPathTo(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2, headMissionQueueNode()->m_data.iFlags))
 					{
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 2 ");
 						bAction = true;
 
 						if (getNumUnits() > 0)
 						{
+							//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 2.1 ");
 							if (!canAllMove())
 							{
+								//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 2.2 ");
 								if (headMissionQueueNode() != NULL)
 								{
+									//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 2.3 ");
 									if (groupAmphibMove(GC.getMapINLINE().plotINLINE(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2), headMissionQueueNode()->m_data.iFlags))
 									{
+										//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 2.4 ");
 										bAction = false;
 										bDone = true;
 									}
@@ -1527,14 +1535,16 @@ void CvSelectionGroup::continueMission(int iSteps)
 					}
 					else
 					{
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3 ");
 						// 3MiroBug: another pathing bug here
 						if ( (getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2) ){
 							bDone = true;
+							//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.1 - SKIP ");
 							pushMission(MISSION_SKIP);
 						}else{
 							bDone = true;
 						};
-						// bDone = true; // 3Miro: Original code
+						//bDone = true; // 3Miro: Original code
 					}
 					break;
 
