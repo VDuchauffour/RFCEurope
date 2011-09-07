@@ -169,12 +169,6 @@ class Barbs:
                 #        print ("iHandicap", iHandicap)
                 #        print ("iHandicapOld", iHandicapOld)
 
-		#Animals. Wolves in Scandinavia. Bears in Russia, Lions in Africa
-		#Disabled wild animals - Absinthe
-		#if (iGameTurn <= xml.i1000AD):
-        #                self.spawnUnits( iBarbarian, (56, 53), (99, 72), xml.iWolf, 1, iGameTurn, 17, 2, utils.outerInvasion, 0, "")
-        #                self.spawnUnits( iBarbarian, (86, 40), (99, 72), xml.iBear, 1, iGameTurn, 19, 4, utils.outerInvasion, 0, "")
-        #                self.spawnUnits( iBarbarian, (0, 1), (52, 10), xml.iLion, 1, iGameTurn, 23, 1, utils.outerInvasion, 0, "")
                 
 		#Mediterranean Pirates (Light before 1500,then heavy for rest of game)
 		if ( iGameTurn >= xml.i960AD and iGameTurn < xml.i1401AD):
