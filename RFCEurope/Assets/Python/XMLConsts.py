@@ -328,6 +328,7 @@ iTagmata= 91
 iSeljuk= 92
 iCorsair= 93
 iCondottieri= 94
+iSwissPikeman= 95
 
 iProsecutorClass = 62
 
