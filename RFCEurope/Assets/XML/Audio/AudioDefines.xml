@@ -730,6 +730,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SONG_BOGORODICE_DEVO</SoundID>
+			<Filename>Sounds/Soundtrack/BogorodiceDevo</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SONG_BEETHOVEN_ANDANTE</SoundID>
 			<Filename>Sounds/Soundtrack/Renaissance/BeethovenAndante</Filename>
 			<LoadType>STREAMED</LoadType>
@@ -8948,15 +8955,8 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>DIPLO_SIMEON_I_MIDDLE</SoundID>
-			<Filename>Sounds/Diplomacy/Simeon_Middle</Filename>
-			<LoadType>STREAMED</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>DIPLO_SIMEON_I_LATE</SoundID>
-			<Filename>Sounds/Diplomacy/Simeon_Late</Filename>
+			<SoundID>DIPLO_IVAN_ASEN_II</SoundID>
+			<Filename>Sounds/Diplomacy/IvanAsenII</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
