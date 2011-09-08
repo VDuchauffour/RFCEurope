@@ -327,6 +327,7 @@ iWelshLongbowman= 90
 iTagmata= 91
 iSeljuk= 92
 iCorsair= 93
+iCondottieri= 94
 
 iProsecutorClass = 62
 
@@ -861,6 +862,7 @@ lRegionAsiaMinor =[ iP_Colonea, iP_Charsiadon, iP_Cilicia, iP_Armeniakon, iP_Ana
 lRegionMiddleEast=[ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem ]
 lRegionAfrica   = [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Marrakesh ]
 lRegionKiev     = [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_Pereyaslavl, iP_Chernigov, iP_Podolia, iP_WhiteRus ]
+lRegionItaly  = [ iP_Lombardy, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Malta, iP_Dalmatia ]
 
 # those regions are for the map and AI
 tRegionMap = [ [], # default region is empty
