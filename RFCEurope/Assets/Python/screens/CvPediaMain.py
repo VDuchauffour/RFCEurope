@@ -491,12 +491,12 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		# 3Miro: merijnv1 removed the Corsair, Seljuk, Tagmata, WeshLongbowman, Highlander, Keshik
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
-			tList.pop(97) #Corsair
-			tList.pop(96) #Seljuk
-			tList.pop(95) #Tagmata
-			tList.pop(94) #WelshLongbowman                          
-			tList.pop(93) #Highlander
-			tList.pop(92) #MongolKeshik
+			tList.pop(93) #Corsair
+			tList.pop(92) #Seljuk
+			tList.pop(91) #Tagmata
+			tList.pop(90) #WelshLongbowman                          
+			tList.pop(89) #Highlander
+			tList.pop(88) #MongolKeshik
 
 		# 3Miro: merijnv1 removed the worked Access?
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT):

@@ -246,6 +246,15 @@
 		<Russian>Avar</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ITALIAN</Tag>
+		<English>Italian</English>
+		<French>Italian</French>
+		<German>Italian</German>
+		<Italian>Italian</Italian>
+		<Spanish>Italian</Spanish>
+		<Russian>Italian</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Knights Templar</French>
@@ -271,5 +280,26 @@
 		<Italian>Generic</Italian>
 		<Spanish>Generic</Spanish>
 		<Russian>Generic</Russian>
+	</TEXT>
+
+	<!-- Conditional Mercs -->
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CONDOTTIERI</Tag>
+		<English>Condottiero</English>
+		<French>Condottiero</French>
+		<German>Condottiero</German>
+		<Italian>Condottiero</Italian>
+		<Spanish>Condottiero</Spanish>
+		<Russian>Condottiero</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CONDOTTIERI_PEDIA</Tag>
+		<English>[TAB]Condottieri (singular condottiero and condottiere) were the mercenary soldier leaders (or warlords) of the professional, military free companies contracted by the Italian city-states and the Papacy,  from the late Middle Ages until the mid-16th century. In contemporary Italian, condottiero means "contractor", and is synonymous with the modern English title Mercenary Captain, which, historiographically, does not connote the hired soldier's nationality.[PARAGRAPH:1]These Italian words were standard usage in English writing of the Napoleonic times that remained current in the histories until the late 20th century; because formally-employed, standing, professional armies were uncommon until late in the Napoleonic Wars (1800-1815) thus, the word Condottiere in the English language has come to denote any hired soldier.[PARAGRAPH:1]In the thirteenth and fourteenth centuries, the Italian city-states of Venice, Florence, and Genoa were very rich from their trade with the Levant, yet possessed woefully small national armies. In the event that foreign powers and envious neighbours attacked, the ruling nobles hired foreign mercenaries to fight for them. The military-service terms and conditions were stipulated in a condotta (contract) between the City-State and the Soldier (officer and enlisted man), thus, the contracted leader, the Mercenary Captain commanding, was titled the Condottiere.[PARAGRAPH:1]From the eleventh to the thirteenth century, European soldiers led by professional officers, fought against the Muslims in the Crusades (1095-1291). These officers provided large-scale warfare combat experience in the foreign Holy Land of the Asian Middle East. On the Crusades' conclusion, the first masnada (bands of roving soldiers) appeared; they were not Italian, but (mostly) German, from the Duchy of Brabant (hence, Brabanzoni), and from Catalonia  and Aragon. The latter were Spanish soldiers who had followed King Peter III of Aragon to the Holy Land in October 1282, and, post-war, remained there, seeking military employment. In Italy, in 1333, other mercenaries arrived with John of Bohemia to fight, as the Compagnia della Colomba  (Dove Company), Perugia's war against Arezzo. Given the profession, some masnade were less mercenaries than bandits and desperate men.[PARAGRAPH:1]The first organised mercenaries were the Ventura Companies of Duke Werner of Urslingen and Count Konrad von Landau. Werner's company differed from other mercenary companies because its code of military justice imposed discipline and an equal division of the contract's income. The Ventura Company increased in number until becoming the fearsome "Great Company" of some 3,000 barbute (each barbuta comprised a knight and a sergeant). To this, the Italian nobleman Lodrisio Visconti countered with the "Company of St. George"-featuring cavalrymen as the key fighting men, and not infantrymen. In Italy, the first mercenary army was led by Alberico da Barbiano, the Count of Conio, who later taught military science to condottieri such as Braccio da Montone and Giacomuzzo Attendolo Sforza.[PARAGRAPH:1]Once aware of their military power monopoly in Italy, the condottieri bands became notorious for their capriciousness, and soon dictated terms to their ostensible employers. In turn, many condottieri, such as Braccio da Montone and Muzio Sforza, became powerful politicians. As most were educated men acquainted with Roman military-science manuals (e.g. Vegetius's Epitoma rei militarii), they began viewing warfare from the perspective of military science, rather than that of guts (physical courage)-a great, consequential departure from chivalry, the traditional medieval model of soldiering. Consequently, the condottieri fought by out-manoeuvring the opponent and fighting his ability to wage war, rather than risk uncertain fortune-defeat, capture, death-in battlefield combat.[PARAGRAPH:1]The medieval condottieri developed the art of war (strategy and tactics) into military science more than any of their historical military predecessors-fighting indirectly, not directly-thus, only reluctantly endangering themselves and their enlisted men, avoiding battle when possible. As a political scientist, Niccolo Machiavelli mis-interpreted that condottieri fought each other in grandiose, but often pointless and near-bloodless battles. Militarily, the condottieri line of battle still deployed the grand armoured knight and medieval weapons and tactics after most European powers had begun employing professional standing armies of pikemen and musketeers.[PARAGRAPH:1]In 1347, Cola di Rienzo (Tribune and effective dictator of the city) had Werner of Urslingen executed in Rome, and Konrad von Landau assumed command of the Great Company. In 1362, Count von Landau was betrayed by his Hungarian soldiers, and defeated in combat, by the White Company's more advanced tactics under commanders Albert Sterz and John Hawkwood. Stategically, the barbuta  was replaced with the three-soldier, mounted lancia (a capo-lancia, a groom, and a boy); five lance composed a posta, five poste  composed a bandiera (flag). By that time, the campaigning condottieri companies were as much Italian as foreign: the Astorre I Manfredi's Compagnia della Stella (Star Company); a new Company of St. George under Ambrogio Visconti; Niccolo da Montefeltro's Compagnia del Cappelletto (Little Hat Company); and the Compagnia della Rosa, commanded by Giovanni da Buscareto and Bartolomeo Gonzaga.[PARAGRAPH:1]From the fifteenth century hence, most condottieri were landless Italian nobles who had chosen the profession of arms as livelihood; the most famous of such mercenary captains was the son of Caterina Sforza, Giovanni dalle Bande Nere, from Forlì, known as The Last Condottiere; his son was Cosimo I de' Medici, Grand Duke of Tuscany; besides noblemen, princes also fought as condottieri, given the sizable income to their estates, notably Sigismondo Malatesta, Lord of Rimini, and Federico da Montefeltro, Duke of Urbino.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 </Civ4GameText>
