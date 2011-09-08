@@ -5000,8 +5000,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_DIPLO_SIMEON_I_EARLY</ScriptID>
-		<SoundID>DIPLO_SIMEON_I_EARLY</SoundID>
+		<ScriptID>AS2D_DIPLO_SIMEON</ScriptID>
+		<SoundID>DIPLO_SIMEON</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
 		<iMinVolume>60</iMinVolume>
 		<iMaxVolume>60</iMaxVolume>

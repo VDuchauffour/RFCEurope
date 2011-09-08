@@ -172,7 +172,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=7
-	LeaderType=LEADER_CHARLES_V
+	LeaderType=LEADER_PHILIP_THE_BOLD
 	CivType=CIVILIZATION_BURGUNDY
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
@@ -9312,6 +9312,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=21
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -10994,6 +10995,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=39
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -11377,6 +11379,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=38
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -11758,6 +11761,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=37
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -14070,6 +14074,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=36
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -14465,6 +14470,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=37
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -14850,6 +14856,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=36
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -15231,11 +15238,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=34
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=39,y=35
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -15625,11 +15634,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=34
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=40,y=35
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -16214,6 +16225,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=64
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=0
 EndPlot
@@ -16224,6 +16236,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=66
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=0
 EndPlot
@@ -16852,6 +16865,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=36
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -17271,6 +17285,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=37
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -18877,6 +18892,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=37
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -19279,16 +19295,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=36
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=49,y=37
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=49,y=38
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -20121,6 +20140,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=38
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -20536,6 +20556,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=39
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -20929,6 +20950,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=38
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -21338,6 +21360,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=39
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -21510,6 +21533,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=66
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -21776,6 +21800,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=39
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -21935,6 +21960,7 @@ BeginPlot
 	x=55,y=64
 	RiverNSDirection=2
 	isWOfRiver
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -21962,6 +21988,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=68
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -22399,6 +22426,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=65
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -22409,6 +22437,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=67
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -22422,6 +22451,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=69
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -22820,26 +22850,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=66
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=67
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=68
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=69
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=70
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -23002,6 +23037,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=27
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -23061,6 +23097,7 @@ BeginPlot
 	x=58,y=38
 	isNOfRiver
 	RiverWEDirection=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -23234,26 +23271,31 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=67
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=68
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=69
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=70
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=71
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -23474,6 +23516,7 @@ BeginPlot
 	x=59,y=38
 	isNOfRiver
 	RiverWEDirection=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -23678,6 +23721,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=72
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -23918,6 +23962,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=42
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -24080,6 +24125,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=70
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -24090,6 +24136,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=72
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -24506,6 +24553,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=69
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -24522,6 +24570,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=72
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -25628,6 +25677,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=44
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -25792,6 +25842,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=71
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -26906,6 +26957,7 @@ BeginPlot
 	x=67,y=42
 	isNOfRiver
 	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -27331,6 +27383,7 @@ BeginPlot
 	x=68,y=42
 	isNOfRiver
 	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -27652,6 +27705,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=25
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -27761,6 +27815,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=41
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -28199,6 +28254,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=42
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -28526,6 +28582,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=25
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -28543,6 +28600,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=28
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -28631,6 +28689,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=42
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -28993,6 +29052,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=26
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29090,6 +29150,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=42
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29431,6 +29492,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=25
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29493,6 +29555,7 @@ BeginPlot
 	x=73,y=35
 	isNOfRiver
 	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29529,11 +29592,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=41
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=73,y=42
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29871,6 +29936,7 @@ BeginPlot
 	x=74,y=27
 	isNOfRiver
 	RiverWEDirection=1
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29906,6 +29972,7 @@ BeginPlot
 	x=74,y=32
 	RiverNSDirection=2
 	isWOfRiver
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29929,6 +29996,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -29966,6 +30034,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=41
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -30339,6 +30408,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=32
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -30400,6 +30470,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=41
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -30848,11 +30919,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=39
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=76,y=40
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -31235,6 +31308,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=33
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -31266,11 +31340,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=38
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=77,y=39
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -31678,11 +31754,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=33
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=78,y=34
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -31700,11 +31778,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=37
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=78,y=38
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
@@ -41236,6 +41316,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=33
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
