@@ -9607,23 +9607,23 @@
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MEDIEVAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_RENAISSANCE</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INDUSTRIAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MODERN</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyMusicPeace>
 			<DiplomacyIntroMusicWar>
@@ -25327,31 +25327,31 @@
 			<DiplomacyMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_ANCIENT</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_CLASSICAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MEDIEVAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_RENAISSANCE</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INDUSTRIAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MODERN</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_LATE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_IVAN_ASEN_II</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyMusicPeace>
 			<DiplomacyIntroMusicWar>

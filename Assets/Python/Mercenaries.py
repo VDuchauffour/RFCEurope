@@ -1,6 +1,4 @@
 # Rhye's and Fall of Civilization - Mercenaries Written mostly by 3Miro
-
-
 from CvPythonExtensions import *
 import CvUtil
 import PyHelpers   
@@ -223,8 +221,7 @@ class MercenaryManager:
         # this is called at the end of the game turn
         # thus the AI gets the advantage to make the Merc "decision" with the most up-to-date political data and they can get the mercs instantly
         # the Human gets the advantage to get the first pick at the available mercs
-        
-                print(" Begin Merc Turn ")
+                #print(" Begin Merc Turn ")
         
                 self.getMercLists() # load the current mercenary pool
                 iHuman = gc.getGame().getActivePlayer()
@@ -233,7 +230,7 @@ class MercenaryManager:
                 #        print( "3Miro Merc Pool: ", iGameTurn, lMerc)
                 
                 # Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
-                for iPlayer in range( iNumPlayers ): # minus the Pope
+                for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
                         pPlayer = gc.getPlayer( iPlayer )
                         if ( pPlayer.isAlive() ):
                                 pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
@@ -246,12 +243,17 @@ class MercenaryManager:
                 
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
                 
+                for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
+                        if ( not self.GMU.playerMakeUpkeepSane( iPlayer ) ):
+                                print(" ERROR in Upkeep for: ",iPlayer )
+                
                 #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
 
         def onUnitPromoted( self, argsList ):
                 pUnit, iNewPromotion = argsList
                 iMerc = pUnit.getMercID()
                 if ( iMerc > -1 ):
+                        #print(" 3Miro: Unit promoted ",iMerc, pUnit.getOwner() )
                         # redraw the main screen to update the upkeep info
                         CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
                         
@@ -268,17 +270,20 @@ class MercenaryManager:
                         dummy, iNewUpkeep = self.GMU.getCost( iMerc, lPromotionList )
                         iNewUpkeep = self.GMU.getModifiedCostPerPlayer( iNewUpkeep, iOwner )
                         
+                        pUnit.setMercUpkeep( iNewUpkeep )
+                        
                         pPlayer = gc.getPlayer( iOwner )
                         pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep  ) )
+                        #self.GMU.playerMakeUpkeepSane( iOwner )
 
 
         def onUnitKilled(self, argsList):
                 pUnit, iAttacker = argsList
                 
                 iMerc = pUnit.getMercID()
-                #print(" 3Miro: Unit killed ",iMerc )
                 
                 if ( iMerc > -1 ):
+                        #print(" 3Miro: Unit killed ",iMerc, pUnit.getOwner() )
                         lHiredByList = self.GMU.getMercHiredBy()
                         if ( lHiredByList[iMerc] == -1 ): # merc was fired, then don't remove permanently
                                 return
@@ -297,13 +302,13 @@ class MercenaryManager:
                 # this gets called on lost and on upgrade, check to remove the merc if it has not been upgraded?
                 pUnit = argsList[0]
                 iMerc = pUnit.getMercID()
-                #print(" 3Miro: Unit lost ",iMerc )
                 
                 if ( iMerc > -1 ):
+                        #print(" 3Miro: Unit lost ",iMerc, pUnit.getOwner() )
                         # is a merc, check to see if it has just been killed
                         lHiredByList = self.GMU.getMercHiredBy()
-                        if ( lHiredByList[iMerc] == -2 ):
-                                # unit has just been killed and onUnitKilled has been called
+                        if ( lHiredByList[iMerc] < 0 ):
+                                # unit has just been killed and onUnitKilled has been called or fired (-1 and -2)
                                 return
                         
                         # check to see if it has been replaced by an upgraded (promoted) version of itself
@@ -327,7 +332,7 @@ class MercenaryManager:
                 if ( pPlayer.isHuman() or pPlayer.isBarbarian() or pPlayer.getID() == con.iPope ):
                         return
                         
-                print(" MercAI for ",pPlayer.getID())
+                #print(" MercAI for ",pPlayer.getID())
                 iWarValue = 0 # compute the total number of wars being fought at the moment
                 
                 teamPlayer = gc.getTeam(pPlayer.getTeam())
@@ -363,7 +368,7 @@ class MercenaryManager:
                         # make sure we can affort the mercs that we keep
                         #print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
                         while ( pPlayer.getPicklefreeParameter( iMercCostPerTurn )>0 and 100*pPlayer.getGold() < pPlayer.getPicklefreeParameter( iMercCostPerTurn ) ):
-                                print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
+                                #print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
                                 self.GMU.playerMakeUpkeepSane( pPlayer.getID() )
                                 self.FireMercAI( pPlayer )
                         return
@@ -393,7 +398,7 @@ class MercenaryManager:
                         if ( pUnit.getMercID() > -1 ):
                                 lMercs.append( pUnit )
                                 
-                print(" Hired Mercs: ",len( lMercs ) )
+                #print(" Hired Mercs: ",len( lMercs ) )
                                 
                 if ( len( lMercs ) > 0 ):
                         # we have mercs, so fire someone
@@ -508,9 +513,11 @@ class GlobalMercenaryUtils:
                         
                 iSavedUpkeep = pPlayer.getPicklefreeParameter( iMercCostPerTurn )
                 if ( iSavedUpkeep != iTotoalUpkeep ):
-                        print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotoalUpkeep )
-                        print("  ------- Making sane ------- ")
+                        #print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotoalUpkeep )
+                        #print("  ------- Making sane ------- ")
                         pPlayer.setPicklefreeParameter( iMercCostPerTurn, iTotoalUpkeep )
+                        return False
+                return True
                 
         def getCost( self, iMerc, lPromotions ):
                 # note that the upkeep is in the units of 100, i.e. iUpkeepCost = 100 means 1 gold
@@ -540,6 +547,8 @@ class GlobalMercenaryUtils:
                 # the player would hire a merc
                 lGlobalPool = self.getMercGlobalPool()
                 lHiredByList = self.getMercHiredBy()
+                
+                print(" 3Miro: fire Merc: ",lMerc[0], iPlayer )
                 
                 iCost = self.getModifiedCostPerPlayer( lMerc[2], iPlayer )
                 iUpkeep = self.getModifiedCostPerPlayer( lMerc[3], iPlayer )
@@ -598,7 +607,7 @@ class GlobalMercenaryUtils:
                 # get the Merc info
                 iMerc = pMerc.getMercID()
                 iUpkeep = pMerc.getMercUpkeep()
-                #print(" 3Miro: fire Merc: ",iMerc)
+                print(" 3Miro: fire Merc: ",iMerc, pMerc.getOwner() )
                 
                 if ( iMerc < 0 ):
                         return
