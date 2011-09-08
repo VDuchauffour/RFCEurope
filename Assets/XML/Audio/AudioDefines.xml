@@ -8948,15 +8948,15 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>DIPLO_SIMEON_I_EARLY</SoundID>
-			<Filename>Sounds/Diplomacy/Simeon_Early</Filename>
+			<SoundID>DIPLO_SIMEON</SoundID>
+			<Filename>Sounds/Diplomacy/Bulgaria_Simeon</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_IVAN_ASEN_II</SoundID>
-			<Filename>Sounds/Diplomacy/IvanAsenII</Filename>
+			<Filename>Sounds/Diplomacy/Bulgaria_IvanAsenII</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

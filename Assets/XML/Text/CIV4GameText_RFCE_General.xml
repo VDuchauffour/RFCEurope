@@ -255,4 +255,31 @@
 		<Spanish>&#161;%s1_CityName ha sido cedida al %s2_CivName!</Spanish>
 		<Russian>%s1 CityName &#242;&#238;&#240;&#227;&#238;&#226;&#224;&#235;&#241;&#255; &#241; %s2 CivName!!!</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RAZED_CITY</Tag>
+		<English>"You razed our cities!"</English>
+		<French>"Vous avez ras&#233; l'une de nos villes !"</French>
+		<German>"Ihr habt eine unserer St&#228;dte vernichtet!"</German>
+		<Italian>"Hai razziato una delle nostre citt&#224;!"</Italian>
+		<Spanish>"&#161;Arrasasteis una de nuestras ciudades!"</Spanish>
+		<Russian>"You razed our cities!"</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_TRADED_TECH_TO_US</Tag>
+		<English>"You have shared many technological discoveries with us."</English>
+		<French>"Vous avez partag&#233; vos d&#233;couvertes technologiques avec nous."</French>
+		<German>"Ihr habt Eure technologischen Errungenschaften mit uns geteilt."</German>
+		<Italian>"Avete condiviso le vostre scoperte tecnologiche con noi."</Italian>
+		<Spanish>"Compartisteis con nosotros vuestros descubrimientos tecnol&#243;gicos."</Spanish>
+		<Russian>"You have shared many technological discoveries with us."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Tag>
+		<English>"You received too many techs from other civilizations."</English>
+		<French>"Une autre civilisation vous a fait don d'une technologie."</French>
+		<German>"Ihr habt eine Technologie von einer anderen Zivilisation erhalten."</German>
+		<Italian>"Hai ricevuto una tecnologia da un'altra civilt&#224;."</Italian>
+		<Spanish>"Recibisteis una tecnolog&#237;a de otra civilizaci&#243;n."</Spanish>
+		<English>"You received too many techs from other civilizations."</English>
+	</TEXT>
 </Civ4GameText>

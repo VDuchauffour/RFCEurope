@@ -413,6 +413,38 @@
 			</ContactDelays>
 			<MemoryDecays>
 				<MemoryDecay>
+					<MemoryType>MEMORY_DECLARED_WAR</MemoryType>
+					<iMemoryRand>60</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_DECLARED_WAR_ON_FRIEND</MemoryType>
+					<iMemoryRand>40</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_HIRED_WAR_ALLY</MemoryType>
+					<iMemoryRand>40</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_NUKED_US</MemoryType>
+					<iMemoryRand>200</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_NUKED_FRIEND</MemoryType>
+					<iMemoryRand>100</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_RAZED_CITY</MemoryType>
+					<iMemoryRand>100</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_RAZED_HOLY_CITY</MemoryType>
+					<iMemoryRand>200</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_SPY_CAUGHT</MemoryType>
+					<iMemoryRand>40</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
 					<iMemoryRand>60</iMemoryRand>
 				</MemoryDecay>
@@ -469,6 +501,10 @@
 					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
+					<MemoryType>MEMORY_HIRED_TRADE_EMBARGO</MemoryType>
+					<iMemoryRand>30</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
 					<MemoryType>MEMORY_MADE_DEMAND</MemoryType>
 					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
@@ -489,28 +525,24 @@
 					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
+					<MemoryType>MEMORY_VOTED_AGAINST_US</MemoryType>
+					<iMemoryRand>10</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_VOTED_FOR_US</MemoryType>
+					<iMemoryRand>10</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_EVENT_GOOD_TO_US</MemoryType>
+					<iMemoryRand>50</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
+					<MemoryType>MEMORY_EVENT_BAD_TO_US</MemoryType>
+					<iMemoryRand>50</iMemoryRand>
+				</MemoryDecay>
+				<MemoryDecay>
 					<MemoryType>MEMORY_LIBERATED_CITIES</MemoryType>
-					<iMemoryRand>250</iMemoryRand>
-				</MemoryDecay>
-				<MemoryDecay>
-					<MemoryType>MEMORY_SPY_CAUGHT</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
-				</MemoryDecay>
-				<MemoryDecay>
-					<MemoryType>MEMORY_RAZED_CITY</MemoryType>
-					<iMemoryRand>200</iMemoryRand>
-				</MemoryDecay>
-				<MemoryDecay>
-					<MemoryType>MEMORY_HIRED_WAR_ALLY</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
-				</MemoryDecay>
-				<MemoryDecay>
-					<MemoryType>MEMORY_DECLARED_WAR_ON_FRIEND</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
-				</MemoryDecay>
-				<MemoryDecay>
-					<MemoryType>MEMORY_DECLARED_WAR</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>150</iMemoryRand>
 				</MemoryDecay>
 			</MemoryDecays>
 			<MemoryAttitudePercents>
@@ -525,6 +557,14 @@
 				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_HIRED_WAR_ALLY</MemoryType>
 					<iMemoryAttitudePercent>-200</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_NUKED_US</MemoryType>
+					<iMemoryAttitudePercent>-300</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_NUKED_FRIEND</MemoryType>
+					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
 				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_RAZED_CITY</MemoryType>
@@ -571,6 +611,10 @@
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
 				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
+					<iMemoryAttitudePercent>100</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_DENIED_JOIN_WAR</MemoryType>
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
@@ -587,6 +631,10 @@
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
 				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_STOPPED_TRADING_RECENT</MemoryType>
+					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_HIRED_TRADE_EMBARGO</MemoryType>
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
@@ -595,8 +643,28 @@
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
 				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_MADE_DEMAND_RECENT</MemoryType>
+					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_CANCELLED_OPEN_BORDERS</MemoryType>
+					<iMemoryAttitudePercent>-50</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_TRADED_TECH_TO_US</MemoryType>
-					<iMemoryAttitudePercent>10</iMemoryAttitudePercent>
+					<iMemoryAttitudePercent>20</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_RECEIVED_TECH_FROM_ANY</MemoryType>
+					<iMemoryAttitudePercent>-10</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_VOTED_AGAINST_US</MemoryType>
+					<iMemoryAttitudePercent>-200</iMemoryAttitudePercent>
+				</MemoryAttitudePercent>
+				<MemoryAttitudePercent>
+					<MemoryType>MEMORY_VOTED_FOR_US</MemoryType>
+					<iMemoryAttitudePercent>200</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
 				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_EVENT_GOOD_TO_US</MemoryType>
@@ -742,7 +810,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Maria Theresa  -  Austria 2nd-->
+		<!--Maria Theresa - Austria 2nd-->
 		<LeaderHeadInfo>
 			<Type>LEADER_MARIA_THERESA</Type>
 			<Description>TXT_KEY_LEADER_MARIA_THERESA</Description>
@@ -9599,31 +9667,31 @@
 			<DiplomacyMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_ANCIENT</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_CLASSICAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MEDIEVAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_RENAISSANCE</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_INDUSTRIAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_MODERN</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>ERA_FUTURE</EraType>
-					<DiploScriptId>AS2D_DIPLO_SIMEON_I_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_SIMEON</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyMusicPeace>
 			<DiplomacyIntroMusicWar>
@@ -9680,12 +9748,12 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Charles V - Burgundy-->
+		<!--Philip the Bold - Burgundy-->
 		<LeaderHeadInfo>
-			<Type>LEADER_CHARLES_V</Type>
-			<Description>TXT_KEY_LEADER_CHARLES_V</Description>
-			<Civilopedia>TXT_KEY_LEADER_CHARLES_V_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_LEADER_CHARLES_V</ArtDefineTag>
+			<Type>LEADER_PHILIP_THE_BOLD</Type>
+			<Description>TXT_KEY_LEADER_PHILIP_THE_BOLD</Description>
+			<Civilopedia>TXT_KEY_LEADER_PHILIP_THE_BOLD_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_PHILIP_THE_BOLD</ArtDefineTag>
 			<iWonderConstructRand>10</iWonderConstructRand>
 			<iBaseAttitude>-1</iBaseAttitude>
 			<iBasePeaceWeight>0</iBasePeaceWeight>

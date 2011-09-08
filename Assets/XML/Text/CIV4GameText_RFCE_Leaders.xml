@@ -6,16 +6,16 @@
 <!-- Game Text - Leaders -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_CHARLES_V</Tag>
+		<Tag>TXT_KEY_LEADER_PHILIP_THE_BOLD</Tag>
 		<English>Philip the Bold</English>
 		<French>Philippe le Hardi</French>
 		<German>Philipp der Kühne</German>
-		<Italian>Filippo II di Borgogna</Italian>
-		<Spanish>Felipe II de Borgo&#241;a</Spanish>
+		<Italian>Filippo di Borgogna</Italian>
+		<Spanish>Felipe de Borgo&#241;a</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_CHARLES_V_PEDIA</Tag>
+		<Tag>TXT_KEY_LEADER_PHILIP_THE_BOLD_PEDIA</Tag>
 		<English>[H1]Philip the Bold[\H1][NEWLINE][BOLD]Duke of Burgundy[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] January 15, 1342 - April 27, 1404 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Philip the Bold (Dutch: Filips de Stoute French: Philippe le Hardi), also Philip II, Duke of Burgundy (January 15, 1342, Pontoise - April 27, 1404, Halle), was the fourth and youngest son of King John II of France and his wife, Bonne of Luxembourg[PARAGRAPH:2]Born in 1342, Philip gained his cognomen the Bold when, at the age of 14, he fought beside and was captured with his father at the Battle of Poitiers in 1356. He was created Duke of Touraine in 1360, but in 1363, as a reward for his behaviour at Poitiers, he returned this to the crown, receiving instead from his father the Duchy of Burgundy in apanage, which his father had been Duke of since the death of Philip of Rouvres in 1361. Philip would rule the Duchy until his death.[PARAGRAPH:2]On 19 June 1369, Philip married the 19 year old Margaret of Dampierre, the daughter of Louis II, Count of Flanders, who would become the heiress of Flanders, Brabant, Artois, and the Free County of Burgundy after the death of her brother in 1376. Margaret was the widow of his stepbrother, Philip of Rouvres, Duke of Burgundy, Count Palatine of Burgundy, and Count of Artois, Boulogne and Auvergne, who had died childless in 1361. As her father's eventual heiress, Margaret would bring rich possessions to her husband and to their children.[PARAGRAPH:2]Philip was very active in the court of France, particularly after the death of his brother, Charles V, who left the 12 year old Charles VI as King. Charles was a minor, so a regency was undertaken by his uncles, Louis, Duke of Anjou, John, Duke of Berry, Philip himself, and Louis II, Duke of Bourbon, Charles VI's maternal uncle. The regency lasted until 1388, Philip taking the dominant role before the Marmousets were appointed as personnal advisors of Charles VI.[PARAGRAPH:2]From 1392 though, the king of France wasn't able to rule the kingdom because of his insanity and Philip was the principal ruler of France until 1402.</English>
 		<French>[H1]Philippe le Hardi[\H1][NEWLINE][BOLD]Duc de Bourgogne[\BOLD][NEWLINE][BOLD]Dates:[\BOLD] January 15, 1342 - April 27, 1404 AD[NEWLINE][PARAGRAPH:2][BOLD]Biographie:[\BOLD][NEWLINE][TAB]Philippe II de Bourgogne dit Philippe le Hardi, est le fils du roi Jean II de France, dit Jean le Bon, et de Bonne de Luxembourg. Né r Pontoise le 17 janvier 1342, il fut duc de Bourgogne, comte de Flandre et d'Artois, comte palatin de Bourgogne, comte de Nevers, de Rethel, d'Étampes, de Gien, de Charolais, seigneur de Salins et de Malines.[PARAGRAPH:2]Longtemps appelé Philippe sans terre parce qu'il était le dernier des quatre fils du roi Jean, il est fait duc de Touraine en 1360. Il est nommé Philippe le Hardi par la bouche du roi d'Angleterre pour trois actes qu'il fait, le plus célcbre étant son valeureux comportement au côté de son pcre r la bataille de Poitiers en 1356. Son pcre lui donne le duché de Bourgogne en apanage en 1363. Il épouse r Gand en juin 1369 Marguerite III de Flandre, riche hériticre présomptive des comtés de Flandre, d'Artois, de Rethel, de Nevers et du comté de Bourgogne et veuve du précédent duc de Bourgogne Philippe Ier de Bourgogne décédé sans descendance r l'âge de 15 ans. La mort de son beau-pcre, Louis de Male, le rend maître des territoires apportés en dot par sa femme et fait de lui le plus puissant des « sires de fleurs de lys ».[PARAGRAPH:2]Tenant sous son autorité la Flandre, l'Artois et leurs appartenances, il rassemble sous son contrôle le duché de Bourgogne et le comté de Bourgogne lesquels vont, pendant une période d'un siccle, suivre r nouveau une destinée commune.[PARAGRAPH:2]Amateur d'art, méccne fastueux, passionné pour l'architecture mais aussi homme politique habile, esprit avisé et subtil il mcne la politique bourguignonne avec prudence et jette les bases d'un État bourguignon puissant qui, r son apogée, se dressera en rival du royaume de France allant jusqu'r le mettre en péril. Il ouvre une page prestigieuse de l'histoire de la Bourgogne et la dynastie des Valois de Bourgogne qu'il fonde régnera plus d'un siccle.</French>
 		<German>.</German>
@@ -67,11 +67,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SIMEON</Tag>
-		<English>Simeon I</English>
-		<French>Sim&#233;on Ier</French>
-		<German>Simeon I.</German>
-		<Italian>Simeone I</Italian>
-		<Spanish>Sime&#243;n I</Spanish>
+		<English>Simeon</English>
+		<French>Sim&#233;on</French>
+		<German>Simeon</German>
+		<Italian>Simeone</Italian>
+		<Spanish>Sime&#243;n</Spanish>
 		<Russian/>
 	</TEXT>
 	<TEXT>

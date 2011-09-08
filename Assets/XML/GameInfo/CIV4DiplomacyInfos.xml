@@ -258,14 +258,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_CHARLES_V</LeaderType>
+							<LeaderType>LEADER_PHILIP_THE_BOLD</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_CHARLES_V_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_THE_BOLD_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
