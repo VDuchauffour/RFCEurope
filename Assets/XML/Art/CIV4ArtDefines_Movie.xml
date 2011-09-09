@@ -103,10 +103,6 @@
 			<Path>Art/Movies/Wonders/Versailles.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_GREAT_WALL</Type>
-			<Path>Art/Movies/Wonders/GreatWall.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VICTORY_CONQUEST</Type>
 			<Path>Art/Movies/Victory/Conquest.bik</Path>
 		</MovieArtInfo>
@@ -156,10 +152,6 @@
 			<Path>Art/Movies/Wonders/Apostolic Palace.bik</Path>
 		</MovieArtInfo>
 		<!-- Rhye - start -->
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_FORBIDDEN_PALACE</Type>
-			<Path>Art/Movies/Wonders/forbidden.bik</Path>
-		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_LEANING_TOWER</Type>
 			<Path>Art/Movies/Wonders/pisa.bik</Path>
