@@ -108,6 +108,7 @@ Changes for Beta 13:
 		- Fixed a bug about old stability code when switching civilizations
 		- Grenadiers are now correctly Gunpowder units (as opposed to Heavy Infantry)
 		- Hacked another ugly bug with the path-finding algorithm, the settler sometimes doesn't find a road to the target and then goes in an infinite loop
+		- hopefully we finally managed to fix the huge do-nothing stacks bug
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

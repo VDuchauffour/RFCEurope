@@ -250,9 +250,9 @@ class MercenaryManager:
                 
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
                 
-                for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
-                        if ( not self.GMU.playerMakeUpkeepSane( iPlayer ) ):
-                                print(" ERROR in Upkeep for: ",iPlayer )
+                #for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
+                #        if ( not self.GMU.playerMakeUpkeepSane( iPlayer ) ):
+                #                print(" ERROR in Upkeep for: ",iPlayer )
                 
                 #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
 
