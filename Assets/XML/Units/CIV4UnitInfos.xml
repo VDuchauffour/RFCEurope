@@ -18572,6 +18572,7 @@
 			<Description>TXT_KEY_UNIT_CONDOTTIERI</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONDOTTIERI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CONDOTTIERI_STRATEGY</Strategy>
+			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -18767,6 +18768,7 @@
 			<Description>TXT_KEY_UNIT_SWISS_PIKEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_SWISS_PIKEMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SWISS_PIKEMAN_STRATEGY</Strategy>
+			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>

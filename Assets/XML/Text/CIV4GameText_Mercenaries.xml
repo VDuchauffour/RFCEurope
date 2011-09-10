@@ -293,6 +293,15 @@
 
 	<!-- Conditional Mercs -->
 
+        <TEXT>
+		<Tag>TXT_KEY_MERCENARY_HELP</Tag>
+		<English>[ICON_BULLET]Only Available as a Mercenary</English>
+		<French>[ICON_BULLET]Only Available as a Mercenary</French>
+		<German>[ICON_BULLET]Only Available as a Mercenary</German>
+		<Italian>[ICON_BULLET]Only Available as a Mercenary</Italian>
+		<Spanish>[ICON_BULLET]Only Available as a Mercenary</Spanish>
+		<Russian>[ICON_BULLET]Only Available as a Mercenary</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONDOTTIERI</Tag>
 		<English>Condottiero</English>
