@@ -83,6 +83,7 @@ Changes for Beta 13:
 		- Added Dromon sounds (Ethnic Byzantine War Galley)
 		- New diplo music for Simeon and Ivan Asen II
 		- New in-game song Bogorodice Devo (Serbian Orthodox Chant)
+		- New art for Catherine (by melcher Kürzer)
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)

@@ -64,11 +64,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_CATHERINE</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Russia_Catherine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,12</Button>
+			<Button>art/LeaderHeads/catherine/Btn_LH_Russia_Catherine.dds</Button>
 			<NIF>art/LeaderHeads/catherine/catherine.nif</NIF>
 			<KFM>art/LeaderHeads/catherine/catherine.kfm</KFM>
-			<NoShaderNIF>art/LeaderHeads/catherine/catherine_noshader.nif</NoShaderNIF>
-			<BackgroundKFM>art/LeaderHeads/catherine/Catherine_BG.kfm</BackgroundKFM>
+			<NoShaderNIF>art/LeaderHeads/catherine/catherine.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/catherine/catherine_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_CHARLEMAGNE</Type>
