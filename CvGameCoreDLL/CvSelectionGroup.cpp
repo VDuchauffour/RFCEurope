@@ -482,14 +482,20 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 	//GC.getGameINLINE().logMsg(" push_mission Here 5 "); // 3Miro
 	if (bManual)
 	{
+		//GC.getGameINLINE().logMsg(" push_mission Here 5.1 "); // 3Miro
 		if (getOwnerINLINE() == GC.getGameINLINE().getActivePlayer())
 		{
+			//GC.getGameINLINE().logMsg(" push_mission Here 5.2 "); // 3Miro
 			if (isBusy() && GC.getMissionInfo(eMission).isSound())
 			{
+				//GC.getGameINLINE().logMsg(" push_mission Here 5.3 "); // 3Miro
 				playActionSound();
+				//GC.getGameINLINE().logMsg(" push_mission Here 5.4 "); // 3Miro
 			}
 
+			//GC.getGameINLINE().logMsg(" push_mission Here 5.5 "); // 3Miro
 			gDLL->getInterfaceIFace()->setHasMovedUnit(true);
+			//GC.getGameINLINE().logMsg(" push_mission Here 5.6 "); // 3Miro
 		}
 
 		//Rhye - start
@@ -1445,6 +1451,7 @@ void CvSelectionGroup::startMission()
 			{
 				//GC.getGameINLINE().logMsg(" Starting Mission Here 18 ");
 				continueMission();
+				//GC.getGameINLINE().logMsg(" Starting Mission Here 19 ");
 			}
 		}
 	}
@@ -1537,7 +1544,14 @@ void CvSelectionGroup::continueMission(int iSteps)
 					{
 						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3 ");
 						// 3MiroBug: another pathing bug here
-						if ( (getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2) ){
+						// getX and getY sometimes return -max_int and then headMissionQueueNode() is NULL, 
+						// maybe we should check for getNumUnits() or headMissionQueueNode() != NULL
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.0.1 getX() %d ",getX() );
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.0.1 getY() %d ",getY() );
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.0.1 data1 %d ",headMissionQueueNode()->m_data.iData1 );
+						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.0.1 data2 %d ",headMissionQueueNode()->m_data.iData2 );
+						//if ( (getX()>-1)&&(getY()>-1)&& ((getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2)) ){
+						if ( (headMissionQueueNode()!=NULL)&& ((getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2)) ){
 							bDone = true;
 							//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.1 - SKIP ");
 							pushMission(MISSION_SKIP);
@@ -4568,19 +4582,23 @@ void CvSelectionGroup::insertAtEndMissionQueue(MissionData mission, bool bStart)
 
 	m_missionQueue.insertAtEnd(mission);
 
-	//GC.getGameINLINE().logMsg(" Inserting Mission  getLength = %d ",getLengthMissionQueue());
+	//GC.getGameINLINE().logMsg(" insertAtEndMissionQueue Inserting Mission  HERE 1 getLength = %d ",getLengthMissionQueue());
 	if ((getLengthMissionQueue() == 1) && bStart)
 	{
-		//GC.getGameINLINE().logMsg(" Activate Head Mission ");
+		//GC.getGameINLINE().logMsg(" insertAtEndMissionQueue Inserting Mission HERE 2");
 		activateHeadMission();
+		//GC.getGameINLINE().logMsg(" insertAtEndMissionQueue Inserting Mission HERE 3");
 	}
 
+	///GC.getGameINLINE().logMsg(" insertAtEndMissionQueue Inserting Mission HERE 4");
 	if ((getOwnerINLINE() == GC.getGameINLINE().getActivePlayer()) && IsSelected())
 	{
+		//GC.getGameINLINE().logMsg(" insertAtEndMissionQueue Inserting Mission HERE 5");
 		gDLL->getInterfaceIFace()->setDirty(Waypoints_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
+	//GC.getGameINLINE().logMsg(" insertAtEndMissionQueue Inserting Mission HERE 6");
 }
 
 
@@ -4757,7 +4775,9 @@ void CvSelectionGroup::activateHeadMission()
 	{
 		if (!isBusy())
 		{
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::activateHeadMission() HERE 2");
 			startMission();
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::activateHeadMission() HERE 3");
 		}
 	}
 }

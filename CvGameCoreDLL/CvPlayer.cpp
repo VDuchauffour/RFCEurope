@@ -3268,7 +3268,7 @@ bool CvPlayer::hasBusyUnit() const
 		        return false;
 		    }
 
-			//GC.getGameINLINE().logMsg(" hasBusyUnit group at: %d %d   NumUnits: %d ",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits() );
+			GC.getGameINLINE().logMsg(" hasBusyUnit group at: %d %d   NumUnits: %d ",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits() );
 
 			return true;
 		}
