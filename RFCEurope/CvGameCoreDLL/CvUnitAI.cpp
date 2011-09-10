@@ -168,7 +168,7 @@ bool CvUnitAI::AI_update()
 	//GC.getGameINLINE().logMsg("   End Prosecutions ");
 	// 3MiroAI: end of the prosecutions
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg(" Unit AI_Update HERE 1 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -197,7 +197,7 @@ bool CvUnitAI::AI_update()
 	}
 	//GC.getGameINLINE().logMsg("   AI_Update() Domain Land end");
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg(" Unit AI_Update HERE 2 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -205,7 +205,7 @@ bool CvUnitAI::AI_update()
 	{
 		return false;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg(" Unit AI_Update HERE 3 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -304,7 +304,7 @@ bool CvUnitAI::AI_update()
 	}
 	else
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg(" -- Not Automated %d ",getUnitType() ); // 3Miro
 		};*/
 		switch (AI_getUnitAIType())
@@ -327,7 +327,7 @@ bool CvUnitAI::AI_update()
 			break;
 
 		case UNITAI_ATTACK:
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
 				GC.getGameINLINE().logMsg(" -- UNITAI_ATTACK %d ",getUnitType() ); // 3Miro
 			};*/
 			//if (isBarbarian()) //Rhye
@@ -345,21 +345,21 @@ bool CvUnitAI::AI_update()
 			else
 			{
 				// 3Miro: the code below is for debug only
-				/*if ( getX() == 52 && getY() == 42 ){
-					//GC.getGameINLINE().logMsg(" Unit at coordinates: %d",getUnitType() );
+				/*if ( ( getX() == 33) && ( getY() == 57) ){
+					GC.getGameINLINE().logMsg(" Unit at coordinates: %d",getUnitType() );
 				};*/
 				//GC.getGameINLINE().logMsg("   AI_Update() Barbs Here 3");
 				AI_attackMove();
 				//GC.getGameINLINE().logMsg("   AI_Update() Barbs Here 4");
-				/*if ( getX() == 52 && getY() == 42 ){
-					//GC.getGameINLINE().logMsg(" Unit at coordinates after attack: ",getUnitType() );
+				/*if ( ( getX() == 33) && ( getY() == 57) ){
+					GC.getGameINLINE().logMsg(" Unit at coordinates after attack: ",getUnitType() );
 				};*/
 			}
 			//GC.getGameINLINE().logMsg("   AI_Update() Barbs end ");
 			break;
 
 		case UNITAI_ATTACK_CITY:
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
 				GC.getGameINLINE().logMsg(" -- UNITAI_ATTACK_CITY %d ",getUnitType() ); // 3Miro
 			};*/
 			AI_attackCityMove();
@@ -2559,7 +2559,7 @@ void CvUnitAI::AI_attackCityMove()
 {
 	PROFILE_FUNC();
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 1%d",getUnitType() ); // 3Miro
 	};*/
 	bool bIgnoreFaster = false;
@@ -2570,7 +2570,7 @@ void CvUnitAI::AI_attackCityMove()
 			bIgnoreFaster = true;
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 2%d",getUnitType() ); // 3Miro
 	};*/
 
@@ -2582,14 +2582,14 @@ void CvUnitAI::AI_attackCityMove()
         getGroup()->pushMission(MISSION_HEAL);
 		return;
     }
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 3%d",getUnitType() ); // 3Miro
 	};*/
 
     AreaAITypes eAreaAIType = area()->getAreaAIType(getTeam());
     bool bLandWar = !isBarbarian() && ((eAreaAIType == AREAAI_OFFENSIVE) || (eAreaAIType == AREAAI_DEFENSIVE) || (eAreaAIType == AREAAI_MASSING));
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 4 %d  bLandWar %d",getUnitType(),bLandWar ); // 3Miro
 	};*/
 	if (plot()->isCity())
@@ -2617,7 +2617,7 @@ void CvUnitAI::AI_attackCityMove()
 		    }
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 5 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2625,7 +2625,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 6 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2633,12 +2633,12 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 7 %d ",getUnitType() ); // 3Miro
 	};*/
 
 	bool bCity = plot()->isCity();
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 8 %d  bCity = %d ",getUnitType(),bCity ); // 3Miro
 	};*/
 
@@ -2667,7 +2667,7 @@ void CvUnitAI::AI_attackCityMove()
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 9 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2675,7 +2675,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 10 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2683,7 +2683,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 11 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2695,7 +2695,7 @@ void CvUnitAI::AI_attackCityMove()
 			bHuntBarbs = true;
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 12 %d ",getUnitType() ); // 3Miro
 	};*/
 	// 3Miro
@@ -2764,7 +2764,7 @@ void CvUnitAI::AI_attackCityMove()
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 14 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2775,7 +2775,7 @@ void CvUnitAI::AI_attackCityMove()
 			return;
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 15 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2783,12 +2783,12 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 16 %d ",getUnitType() ); // 3Miro
 	};*/
 
 	bool bAtWar = isEnemy(plot()->getTeam());
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 17 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2804,7 +2804,7 @@ void CvUnitAI::AI_attackCityMove()
 			return;
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 18 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2812,7 +2812,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 19 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2831,7 +2831,7 @@ void CvUnitAI::AI_attackCityMove()
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 20 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2842,7 +2842,7 @@ void CvUnitAI::AI_attackCityMove()
 			return;
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 21 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2852,7 +2852,7 @@ void CvUnitAI::AI_attackCityMove()
 //			((area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE) && (getGroup()->getNumUnits() >= AI_stackOfDoomExtra())))
 	if (bReadyToAttack)
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 21.1 %d ready to attack ",getUnitType() ); // 3Miro
 		};*/
 		if (bHuntBarbs && AI_targetBarbCity())
@@ -2870,7 +2870,7 @@ void CvUnitAI::AI_attackCityMove()
 			return;
 		}*/
 		// 3Miro: indep stuff
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 21.2 %d ready to attack ",getUnitType() ); // 3Miro
 		};*/
 		if ( INDEP_START > -1 ){
@@ -2880,7 +2880,7 @@ void CvUnitAI::AI_attackCityMove()
 				};
 			};
 		}
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 21.3 %d ready to attack ",getUnitType() ); // 3Miro
 		};*/
 		/*else if (bHuntIndependents && AI_targetMinorCity(INDEPENDENT))
@@ -2895,14 +2895,14 @@ void CvUnitAI::AI_attackCityMove()
 		//else if (bLandWar)
 		if (bLandWar)
 		{
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
 				GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 21.4 %d land War ",getUnitType() ); // 3Miro
 			};*/
 			if (AI_targetCity())
 			{
 				return;
 			}
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
 				GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 21.5 %d land War ",getUnitType() ); // 3Miro
 			};*/
 			CvTeamAI& kTeam = GET_TEAM(getTeam());
@@ -2937,7 +2937,7 @@ void CvUnitAI::AI_attackCityMove()
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 22 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2945,7 +2945,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 23 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2953,7 +2953,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 24 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -2966,7 +2966,7 @@ void CvUnitAI::AI_attackCityMove()
 	{
 		return;
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   #### AI_attackCityMove HERE 26 %d ",getUnitType() ); // 3Miro
 	};*/
 
@@ -11384,42 +11384,42 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 	iBestValue = 0;
 	pBestCity = NULL;
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   *** Target City 1 " ); // 3Miro
 	};*/
 
 	pTargetCity = area()->getTargetCity(getOwnerINLINE());
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   *** Target City 2 " ); // 3Miro
 	};*/
 
 	if (pTargetCity != NULL)
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   *** Target City 2.1 Not null %d %d ",pTargetCity->getX(),pTargetCity->getY() ); // 3Miro
 		};*/
 		if (AI_potentialEnemy(pTargetCity->getTeam(), pTargetCity->plot()))
 		{
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
 				GC.getGameINLINE().logMsg("   *** Target City 2.2 Potential Enemy " ); // 3Miro
 			};*/
 			if (!atPlot(pTargetCity->plot()) && generatePath(pTargetCity->plot(), iFlags, true))
 			{
-				/*if ( ( getX() == 94) && ( getY() == 6) ){
+				/*if ( ( getX() == 33) && ( getY() == 57) ){
 					GC.getGameINLINE().logMsg("   *** Target City 2.3 " ); // 3Miro
 				};*/
 				pBestCity = pTargetCity;
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   *** Target City 3 " ); // 3Miro
 	};*/
 
 	if (pBestCity == NULL)
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   *** Target City 3.1 best city is NULL " ); // 3Miro
 		};*/
 		for (iI = 0; iI < MAX_CIV_PLAYERS; iI++)
@@ -11428,20 +11428,20 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 			{
 				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
 				{
-					/*if ( ( getX() == 94) && ( getY() == 6) ){
+					/*if ( ( getX() == 33) && ( getY() == 57) ){
 						GC.getGameINLINE().logMsg("   *** Target City 3.3 cheching city at: %d %d ",pLoopCity->getX(),pLoopCity->getY() ); // 3Miro
 					};*/
 					if (AI_plotValid(pLoopCity->plot()) && AI_potentialEnemy(GET_PLAYER((PlayerTypes)iI).getTeam(), pLoopCity->plot()))
 					{
-						/*if ( ( getX() == 94) && ( getY() == 6) ){
+						/*if ( ( getX() == 33) && ( getY() == 57) ){
 							GC.getGameINLINE().logMsg("   *** Target City 3.4 potential enemy at: %d %d ",pLoopCity->getX(),pLoopCity->getY() ); // 3Miro
-						};
-						if ( !generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns) ){
+						};*/
+						/*if ( !generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns) ){
 							GC.getGameINLINE().logMsg("   *** Target City 3.5 cannot generate path to: %d %d ",pLoopCity->getX(),pLoopCity->getY() ); // 3Miro
 						};*/
 						if (!atPlot(pLoopCity->plot()) && generatePath(pLoopCity->plot(), iFlags, true, &iPathTurns))
 						{
-							/*if ( ( getX() == 94) && ( getY() == 6) ){
+							/*if ( ( getX() == 33) && ( getY() == 57) ){
 								GC.getGameINLINE().logMsg("   *** Target City 3.6 cheching city at: %d %d ",pLoopCity->getX(),pLoopCity->getY() ); // 3Miro
 							};*/
 							iValue = 0;
@@ -11477,13 +11477,13 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   *** Target City 4 " ); // 3Miro
 	};*/
 
 	if (pBestCity != NULL)
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   *** Target City 4.1 best city: %d %d ",pBestCity->getX(),pBestCity->getY() ); // 3Miro
 		};*/
 		iBestValue = 0;
@@ -11539,24 +11539,34 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 			pBestPlot =  pBestCity->plot();
 		}
 
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
+		/*if ( ( getX() == 33) && ( getY() == 57) ){
 			GC.getGameINLINE().logMsg("   *** Target City 4.2  " ); // 3Miro
 		};*/
 
 		if (pBestPlot != NULL)
 		{
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
 				GC.getGameINLINE().logMsg("   *** Target City 4.3 best plot not NULL " ); // 3Miro
+				GC.getGameINLINE().logMsg("   *** Target City 4.3 best plot not NULL %d %d ",pBestPlot->getX(),pBestPlot->getY() ); // 3Miro
 			};*/
 			FAssert(!(pBestCity->at(pBestPlot)) || 0 != (iFlags & MOVE_THROUGH_ENEMY)); // no suicide missions...
+			/*if ( ( getX() == 33) && ( getY() == 57) ){
+				GC.getGameINLINE().logMsg("   *** Target City 4.4 best plot not NULL " ); // 3Miro
+			};*/
 			if (!atPlot(pBestPlot))
 			{
+				/*if ( ( getX() == 33) && ( getY() == 57) ){
+					GC.getGameINLINE().logMsg("   *** Target City 4.5 best plot not NULL " ); // 3Miro
+				};*/
 				getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), iFlags);
+				/*if ( ( getX() == 33) && ( getY() == 57) ){
+					GC.getGameINLINE().logMsg("   *** Target City 4.6 best plot not NULL " ); // 3Miro
+				};*/
 				return true;
 			}
 		}
 	}
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
+	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg("   *** Target City 5 " ); // 3Miro
 	};*/
 
