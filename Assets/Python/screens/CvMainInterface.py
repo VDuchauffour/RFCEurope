@@ -2082,6 +2082,20 @@ class CvMainInterface:
                                 else:
                                         screen.hide( "CombatXPButton" )
                                         screen.hide( "CombatXPText" )
+                                        
+                                # 3Miro: Janissary points
+                                if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
+                                        eJanissaryXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
+                                        eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/400"
+                                        screen.setLabel( "JanissaryXPButton", "Background", eJanissaryXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                                        screen.setLabel( "JanissaryXPText", "Background", eJanissaryXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                                        screen.setHitTest( "JanissaryXPButton", HitTestTypes.HITTEST_NOHIT )
+                                        screen.show( "JanissaryXPButton" )
+                                        screen.show( "JanissaryXPText" )
+                                        iCount += 1
+                                else:
+                                        screen.hide( "JanissaryXPButton" )
+                                        screen.hide( "JanissaryXPText" )
                                 # edead: end
                                 
                                 # 3Miro: Show UHV info on the screen

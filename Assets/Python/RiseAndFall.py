@@ -2112,7 +2112,7 @@ class RiseAndFall:
                 if (iCiv == iBulgaria):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 5)
                 if (iCiv == iCordoba):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
