@@ -330,8 +330,28 @@ void CvGameTextMgr::setResearchStr(CvWString& szString, PlayerTypes ePlayer)
 		szString+=szTempBuffer;
 	}
 
-	szTempBuffer.Format(L" (%d)", GET_PLAYER(ePlayer).getResearchTurnsLeft(GET_PLAYER(ePlayer).getCurrentResearch(), true));
+	int iTurnsLeft = GET_PLAYER(ePlayer).getResearchTurnsLeft(GET_PLAYER(ePlayer).getCurrentResearch(), true);
+	szTempBuffer.Format(L" (%d)", iTurnsLeft);
 	szString+=szTempBuffer;
+
+	// 3MiroTimeline: inform the player for the penalty for tech
+	int iAhistoric = GC.getGameINLINE().getGameTurn() + iTurnsLeft - timelineTechDates[GET_PLAYER(ePlayer).getCurrentResearch()];
+	int iModifier;
+	if ( iAhistoric < 0 ){ // too fast
+		iAhistoric = std::max( iAhistoric, timelineTechPenaltyCap );
+		iModifier = timelineTechPenaltyTop * iAhistoric * iAhistoric / timelineTechPenaltyBottom;
+	}else{ // too slow
+		iAhistoric = std::min( iAhistoric, timelineTechBuffCap );
+		iModifier = - timelineTechBuffTop * iAhistoric * iAhistoric / timelineTechBuffBottom;
+	};
+
+	if ( iModifier > 0 ){
+		szTempBuffer.Format(L" (+%d%%)", iModifier );
+	}else{
+		szTempBuffer.Format(L" (%d%%)", iModifier );
+	};
+	szString+=szTempBuffer;
+	// 3MiroTimeline: end
 }
 
 

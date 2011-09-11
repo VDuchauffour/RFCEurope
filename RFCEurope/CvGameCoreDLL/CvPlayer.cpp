@@ -3268,7 +3268,7 @@ bool CvPlayer::hasBusyUnit() const
 		        return false;
 		    }
 
-			GC.getGameINLINE().logMsg(" hasBusyUnit group at: %d %d   NumUnits: %d ",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits() );
+			//GC.getGameINLINE().logMsg(" hasBusyUnit group at: %d %d   NumUnits: %d ",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits() );
 
 			return true;
 		}
@@ -7437,6 +7437,21 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 			};
 		};
 	};
+
+	// double-check the result, this shouldn't do more than +/-1 adjustment
+	//GC.getGameINLINE().logMsg(" Turns Left: %d for tech %d player %d",iTurnsLeft,eTech,getID() );
+	
+	//while ( ((iTurnsLeft+99)/100) * iResearchRate + iOverflow < getModifiedTechCostForTurn( eTech, iCurrentTurn + ((iTurnsLeft+99)/100) ) ){
+	while ( ((iTurnsLeft+99)/100) * iResearchRate + iOverflow < GET_TEAM(getTeam()).getResearchCostForTurn( eTech, iCurrentTurn + ((iTurnsLeft+99)/100) ) ){
+		//GC.getGameINLINE().logMsg(" Inc Turn ");
+		iTurnsLeft+=100;
+	};
+	//GC.getGameINLINE().logMsg(" Turns Left: %d iResearch %d  iOverflow %d  modCost %d  modCostMinus %d",iTurnsLeft,iResearchRate,iOverflow,getModifiedTechCostForTurn( eTech, iCurrentTurn + ((iTurnsLeft+99)/100) ), getModifiedTechCostForTurn( eTech, iCurrentTurn -1 + (iTurnsLeft+99)/100 ) );
+	while ( (iTurnsLeft>100)&& ( ((iTurnsLeft+99)/100 -1) * iResearchRate + iOverflow >= GET_TEAM(getTeam()).getResearchCostForTurn( eTech, iCurrentTurn -1 + (iTurnsLeft+99)/100 ) ) ){
+		//GC.getGameINLINE().logMsg(" Decrement Turn ");
+		iTurnsLeft-=100;
+	};
+	//GC.getGameINLINE().logMsg(" Turns Left Adjusted: %d ",iTurnsLeft );
 
 	// 3MiroTimeline: compute accurate number of turns left
 	/*iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);

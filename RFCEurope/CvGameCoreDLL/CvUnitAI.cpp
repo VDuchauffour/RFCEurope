@@ -11609,12 +11609,13 @@ bool CvUnitAI::AI_targetBarbCity()
 					{
 						iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, false);
 
-						// 3MiroAI: ignore Barb cities outside the war map
-						if ( getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
+						// 3MiroAI: ignore Barb cities outside the war map,
+						// 3Miro: moved to CvPlayerAI::AI_targetCityValue
+						/*if ( getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
 							if ( warsMaps[ getOwnerINLINE() * SETTLER_OFFSET + (EARTH_Y - pLoopCity ->getY() - 1) * EARTH_X + pLoopCity ->getX() ] == 0 ){
 								iValue = 0;
 							};
-						};
+						};*/
 
 						iValue *= 1000;
 
@@ -11728,11 +11729,12 @@ bool CvUnitAI::AI_targetMinorCity(int iMinorCiv)
 						iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, false);
 
 						// 3MiroAI: ignore Indy cities outside the war map
-						if ( getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
+						// 3Miro: moved to CvPlayerAI::AI_targetCityValue
+						/*if ( getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
 							if ( warsMaps[ getOwnerINLINE() * SETTLER_OFFSET + (EARTH_Y - pLoopCity ->getY() - 1) * EARTH_X + pLoopCity ->getX() ] == 0 ){
 								iValue = 0;
 							};
-						};
+						};*/
 
 						iValue *= 1000;
 

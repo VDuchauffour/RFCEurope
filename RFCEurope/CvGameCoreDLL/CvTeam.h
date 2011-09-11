@@ -385,6 +385,7 @@ public:
 
 	// 3MiroTimeline: get the research without a timeline modifier
 	int getResearchCostUntimely(TechTypes eTech) const;
+	int getResearchCostForTurn( TechTypes eTech, int iTurn ) const;
 
 protected:
 

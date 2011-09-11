@@ -310,5 +310,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setParentSchismReligions", &CyGlobalContext::setParentSchismReligions, "void (int, int )")
 
 		.def("setMercPromotion", &CyGlobalContext::setMercPromotion, "void ( int )")
+
+		.def("setPaceTurnsAfterSpawn", &CyGlobalContext::setPaceTurnsAfterSpawn, "void ( int )")
 		;
 }

@@ -806,6 +806,9 @@ class RFCEBalance:
                 # block foundation of Protestantism except by a Catholic player
                 gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
                 
+                # block declaration of war against newly spawning naiton for this many turns (pre-set wars are not affected)
+                gc.setPaceTurnsAfterSpawn( 5 )
+                
 
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE

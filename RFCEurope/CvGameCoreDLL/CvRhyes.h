@@ -106,8 +106,11 @@
 bool MiroBelongToCore( int iCiv, int x, int y );
 bool MiroBelongToNormal( int iCiv, int x, int y );
 int getSettlersMaps( int iCiv, int y, int x, char * );
+int getWarsMaps( int iCiv, int y, int x, char * );
 
 bool isIndep( int iCiv ); // true if the nations is independent
+
+int getModifiedTechCostForTurn( int iTech, int iTurn );
 
 #endif	// CVRHYES_H
 
@@ -284,3 +287,5 @@ extern int iParentReligion;
 extern int iSchismReligion;
 
 extern int iMercPromotion; // 3Miro: the promotion to block upgrades
+
+extern int iPeaceTurnsAfterSpawn;

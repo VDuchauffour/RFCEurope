@@ -1240,3 +1240,7 @@ void CyGlobalContext::setParentSchismReligions( int iParent, int iSchism ){
 void CyGlobalContext::setMercPromotion( int iPromotion ){
 	iMercPromotion = iPromotion;
 };
+
+void CyGlobalContext::setPaceTurnsAfterSpawn( int iTurns ){
+	iPeaceTurnsAfterSpawn = iTurns;
+};

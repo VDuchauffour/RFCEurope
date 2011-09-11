@@ -6033,7 +6033,7 @@ void CvGame::doTurn()
 	//logMsg("doTurn Here 1.1");
 
 	// 3Miro: disable global warming
-	//doGlobalWarming();
+	doGlobalWarming();
 
 	//Rhye - comment this to stop religion founding
 	//doHolyCity();
