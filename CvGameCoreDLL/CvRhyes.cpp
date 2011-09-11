@@ -228,6 +228,8 @@ int iSchismReligion;
 
 int iMercPromotion = -1;
 
+int iPeaceTurnsAfterSpawn = 0;
+
 bool MiroBelongToCore( int iCiv, int x, int y ){
 	/*if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
 		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
@@ -272,8 +274,37 @@ int getSettlersMaps( int iCiv, int y, int x, char * w ){
 		};
 	};
 };
+int getWarsMaps( int iCiv, int y, int x, char *w ){
+	if ( settlersMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){
+		return 0;
+	}else{
+		if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
+			//return settlersMaps[iCiv][y][x];
+			return warsMaps[ iCiv * SETTLER_OFFSET + y * EARTH_X + x ];
+		}else{
+			if ( w != NULL ){
+				GC.getGameINLINE().logMsg(w);
+			};
+			return 0;
+		};
+	};
+};
 
 bool isIndep( int iCiv ){
 	if ( ( iCiv >= INDEP_START) && ( iCiv <= INDEP_END ) ) return true;
 	return false;
+};
+
+int getModifiedTechCostForTurn( int iTech, int iTurn ){
+	int iCost = GC.getTechInfo((TechTypes)iTech).getResearchCost();
+	// 3MiroTimeline: adjust the tech cost according to the turn it should get discovered
+	int iAhistoric = iTurn - timelineTechDates[iTech];
+	if ( iAhistoric < 0 ){ // too fast
+		iAhistoric = std::max( iAhistoric, timelineTechPenaltyCap );
+		iCost *= 100 + timelineTechPenaltyTop * iAhistoric * iAhistoric / timelineTechPenaltyBottom;
+	}else{ // too slow
+		iAhistoric = std::min( iAhistoric, timelineTechBuffCap );
+		iCost *= 100 - timelineTechBuffTop * iAhistoric * iAhistoric / timelineTechBuffBottom;
+	};
+	return iCost / 100;
 };

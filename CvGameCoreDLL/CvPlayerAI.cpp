@@ -3200,7 +3200,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 	else if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] >= 40) //40-60-90
 		iValue += 1;*/
 
-	if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) <= 3)
+	/*if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) <= 3)
 		iValue -= 2;
 	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) <= 20)
 		iValue -= 1;
@@ -3211,15 +3211,14 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) >= 150) //150-200
 		iValue += 2;
 	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) >= 40) //40-60-90
-		iValue += 1;
+		iValue += 1;*/
 
-	if (pCity->getOwner() >= NUM_MAJOR_PLAYERS)
-		iValue += 2;
+	
 	//Rhye - end
 
 	if (!bIgnoreAttackers)
 	{
-	iValue += AI_adjacentPotentialAttackers(pCity->plot());
+		iValue += AI_adjacentPotentialAttackers(pCity->plot());
 	}
 
 	for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
@@ -3283,12 +3282,27 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 	}*/
 	//Rhye - end
 
-	
-
 	if (bRandomize)
 	{
 		iValue += GC.getGameINLINE().getSorenRandNum(((pCity->getPopulation() / 2) + 1), "AI Target City Value");
 	}
+
+	// 3MiroAI: values in attacking a city, no longer use Settlers Maps and use Wars Maps, also ignore Barbs and Indies outside of Wars Maps
+	// 3Miro: consider WAR MAPS in deciding where to attack, wars maps go from 0,2,4,6,8,10 -> add value/2
+	int iWarsVale = getWarsMaps(getID(), EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE(), NULL);
+	iValue += iWarsVale/2;
+	if ( iWarsVale == 0 ){
+		iValue = std::max( iValue - 2, 0 );
+		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
+			iValue = 0; // completely ignore Barbs and Indies outside of War Maps
+		};
+	}else{
+		iValue += 2; // fixed bonus for having this in the wars map
+		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
+			iValue += 2; // prioritize Indies
+		};
+	};
+	// 3MiroAI: end
 
 	return iValue;
 }

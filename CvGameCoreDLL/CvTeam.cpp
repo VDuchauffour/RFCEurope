@@ -1102,6 +1102,13 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 		return false;
 	};
 
+	// 3Miro: Cannot Declare War for 10 turns after player spawn
+	int iPlayer = GET_TEAM(eTeam).getLeaderID();
+	if ( GC.getGameINLINE().getGameTurn() < startingTurn[iPlayer] + iPeaceTurnsAfterSpawn ){
+		return false;
+	};
+	// 3Miro: end
+
 	if (eTeam == getID())
 	{
 		return false;
@@ -2939,45 +2946,33 @@ int CvTeam::getResearchCostUntimely(TechTypes eTech) const{
 
 int CvTeam::getResearchCost(TechTypes eTech) const
 {
+	return getResearchCostForTurn( eTech, GC.getGameINLINE().getGameTurn() );
+}
+
+int CvTeam::getResearchCostForTurn( TechTypes eTech, int iTurn ) const
+{
 	int iCost;
-	int iAhistoric;
 
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
 
-	iCost = GC.getTechInfo(eTech).getResearchCost();
 	// 3MiroTimeline: adjust the tech cost according to the turn it should get discovered
-	iAhistoric = GC.getGameINLINE().getGameTurn() - timelineTechDates[eTech];
-	if ( iAhistoric < 0 ){ // too fast
-		iAhistoric = std::max( iAhistoric, timelineTechPenaltyCap );
-		iCost *= 100 + timelineTechPenaltyTop * iAhistoric * iAhistoric / timelineTechPenaltyBottom;
-	}else{ // too slow
-		iAhistoric = std::min( iAhistoric, timelineTechBuffCap );
-		iCost *= 100 - timelineTechBuffTop * iAhistoric * iAhistoric / timelineTechBuffBottom;
-	};
-	iCost /= 100;
-
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 1  %d  %d ",getID(),iCost);
+	iCost = getModifiedTechCostForTurn( eTech, iTurn );
 
 	//iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent(); //Rhye
 	iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercentByID(getLeaderID()); //Rhye
 	iCost /= 100;
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 2  %d  %d ",getID(),iCost);
 
 	iCost *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getResearchPercent();
 	iCost /= 100;
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 3 %d  %d ",getID(),iCost);
 
 	iCost *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent();
 	iCost /= 100;
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 4 %d  %d ",getID(),iCost);
 
 	iCost *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getResearchPercent();
 	iCost /= 100;
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 5 %d  %d ",getID(),iCost);
 
 	iCost *= std::max(0, ((GC.getDefineINT("TECH_COST_EXTRA_TEAM_MEMBER_MODIFIER") * (getNumMembers() - 1)) + 100));
 	iCost /= 100;
-	//if ( getID() == 4 ) GC.getGameINLINE().logMsg("  Cost 6 %d  %d ",getID(),iCost);
 
 	//Rhye - start penalty for large / giga empires
 	// 3Miro: Number of cities penalty
@@ -3009,8 +3004,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	//Rhye - end
 
 	return std::max(1, iCost);
-}
-
+};
 
 int CvTeam::getResearchLeft(TechTypes eTech) const
 {

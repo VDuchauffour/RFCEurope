@@ -99,8 +99,10 @@ Changes for Beta 13:
 		- All gunpowder units (except arquebuseirs) ignore building defenses
 		- Added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
 		- Crossbows don't upgrade to Longbows and Longbows are about 10% more expensive (this should nerf the powerful Longbowman)
-		- cannot declare war on newly spawned players for 10 turns
+		- cannot declare war on newly spawned players for X turns (X can be set in RFCEBalance.py)
 		- the AI now considers WarsMaps when picking a city to attack (before WarsMaps were used only for scripted wars)
+		- settlers maps no longer used in the city attack algorithm
+		- reworked the targeting algorithm for attacking indy and barb cities outside the wars map, we should see much less of that
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks

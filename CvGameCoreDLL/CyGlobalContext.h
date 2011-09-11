@@ -463,6 +463,9 @@ public:
 	// 3Miro: set the Merc promotion to block merc upgrades
 	void setMercPromotion( int iPromotion );
 
+	// 3Miro: set the number of peace turns after spawn
+	void setPaceTurnsAfterSpawn( int iTurns );
+
 };
 
 #endif	// CyGlobalContext_h
