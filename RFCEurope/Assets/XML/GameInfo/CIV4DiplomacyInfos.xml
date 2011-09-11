@@ -61,6 +61,19 @@
 			<Responses>
 				<Response>
 					<Civilizations/>
+					<Leaders/>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_2</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_3</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_4</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_5</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
 					<Leaders>
 						<Leader>
 							<LeaderType>LEADER_ABUYUSUFYAQUB</LeaderType>
@@ -524,9 +537,9 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_1</Text>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_2</Text>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_3</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_2</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_3</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -899,7 +912,7 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_HARALD_1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_HARALD_HARDRADA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -1319,7 +1332,7 @@
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_HARALD_1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_HARALD_HARDRADA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -1989,7 +2002,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HARALD_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HARALD_HARDRADA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -2647,8 +2660,8 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_1</Text>
-						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_2</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_HARDRADA_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_HARDRADA_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -3719,8 +3732,8 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_MATTHIAS_1</Text>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_MATTHIAS_2</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -3930,7 +3943,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HARALD_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HARALD_HARDRADA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4410,7 +4423,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HARALD_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HARALD_HARDRADA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4660,8 +4673,8 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_MATTHIAS_1</Text>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_MATTHIAS_2</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4890,7 +4903,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HARALD_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HARALD_HARDRADA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>

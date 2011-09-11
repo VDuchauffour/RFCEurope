@@ -4804,7 +4804,7 @@
 		<iMaxLeftPan>-1</iMaxLeftPan>
 		<iMinRightPan>-1</iMinRightPan>
 		<iMaxRightPan>-1</iMaxRightPan>
-		<bLooping>0</bLooping>
+		<bLooping>1</bLooping>
 		<iMinTimeDelay>0</iMinTimeDelay>
 		<iMaxTimeDelay>0</iMaxTimeDelay>
 		<bTaperForSoundtracks>0</bTaperForSoundtracks>
@@ -4873,7 +4873,7 @@
 		<iMaxLeftPan>-1</iMaxLeftPan>
 		<iMinRightPan>-1</iMinRightPan>
 		<iMaxRightPan>-1</iMaxRightPan>
-		<bLooping>0</bLooping>
+		<bLooping>1</bLooping>
 		<iMinTimeDelay>0</iMinTimeDelay>
 		<iMaxTimeDelay>0</iMaxTimeDelay>
 		<bTaperForSoundtracks>0</bTaperForSoundtracks>
@@ -5011,7 +5011,7 @@
 		<iMaxLeftPan>-1</iMaxLeftPan>
 		<iMinRightPan>-1</iMinRightPan>
 		<iMaxRightPan>-1</iMaxRightPan>
-		<bLooping>0</bLooping>
+		<bLooping>1</bLooping>
 		<iMinTimeDelay>0</iMinTimeDelay>
 		<iMaxTimeDelay>0</iMaxTimeDelay>
 		<bTaperForSoundtracks>0</bTaperForSoundtracks>
@@ -5034,7 +5034,7 @@
 		<iMaxLeftPan>-1</iMaxLeftPan>
 		<iMinRightPan>-1</iMinRightPan>
 		<iMaxRightPan>-1</iMaxRightPan>
-		<bLooping>0</bLooping>
+		<bLooping>1</bLooping>
 		<iMinTimeDelay>0</iMinTimeDelay>
 		<iMaxTimeDelay>0</iMaxTimeDelay>
 		<bTaperForSoundtracks>0</bTaperForSoundtracks>
@@ -5057,7 +5057,7 @@
 		<iMaxLeftPan>-1</iMaxLeftPan>
 		<iMinRightPan>-1</iMinRightPan>
 		<iMaxRightPan>-1</iMaxRightPan>
-		<bLooping>0</bLooping>
+		<bLooping>1</bLooping>
 		<iMinTimeDelay>0</iMinTimeDelay>
 		<iMaxTimeDelay>0</iMaxTimeDelay>
 		<bTaperForSoundtracks>0</bTaperForSoundtracks>

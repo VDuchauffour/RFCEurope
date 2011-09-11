@@ -5,6 +5,57 @@
 <!-- -->
 <!-- Game Text - DiploText -->
 <Civ4GameText xmlns="http://www.firaxis.com">
+
+		<!-- A few generic first contact DiploTexts BEGIN -->
+
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_1</Tag>
+		<English>Hello! I am [OUR_NAME], king of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_2</Tag>
+		<English>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! Are you looking for peace or demand war?</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_3</Tag>
+		<English>Welcome to this beautiful land, [CT_NAME]. Take a look around and see the might of the [OUR_EMPIRE]!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_4</Tag>
+		<English>Hello, I am [OUR_NAME], ruler of the [OUR_EMPIRE]! I hope you come in peace... it would be so unfortunate if we had to destroy you!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_5</Tag>
+		<English>I am honored to meet you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_ADJ] people. We can be friends or enemies.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	
+		<!-- A few generic first contact DiploTexts END -->
+	
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUYUSUFYAQUB_1</Tag>
 		<English>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</English>
@@ -774,7 +825,7 @@
 		<Spanish>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_STEPHEN_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_STEPHEN_1</Tag>
 		<English>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</English>
 		<French>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</French>
 		<German>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</German>
@@ -782,7 +833,7 @@
 		<Spanish>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_LEADER_STEPHEN_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_STEPHEN_1</Tag>
 		<English>I have the divine right to demand this, [CT_NAME].  If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</English>
 		<French>I have the divine right to demand this, [CT_NAME].  If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</French>
 		<German>I have the divine right to demand this, [CT_NAME].  If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</German>
@@ -790,7 +841,7 @@
 		<Spanish>I have the divine right to demand this, [CT_NAME].  If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_STEPHEN_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_STEPHEN_1</Tag>
 		<English>Begad, give us what we want or you will know the wrath of God!</English>
 		<French>Begad, give us what we want or you will know the wrath of God!</French>
 		<German>Bei Gott, gebt uns, was wir fordern oder Ihr werdet den Zorn Gottes sp&#252;ren!</German>
@@ -799,7 +850,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
-		<English>Welcome to this beautiful land, [CT_NAME].  I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</English>
+		<English>Welcome to this beautiful land, [CT_NAME]. I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</English>
 		<French>Bienvenue dans ce beau pays, [CT_NAME]. J'espère que vous apporter la paix avec vous, car celui qui accueille avec un bâton, et il sera r&#233;pondu dans un club.</French>
 		<German>Willkommen in diesem wundersch&#246;nen Land, [CT_NAME]. Ich hoffe, Ihr bringt uns Frieden, denn wer uns mit dem Stock begr&#252;&#223;t, erh&#228;lt die Antwort durch die Keule.</German>
 		<Italian>Benvenuto in questa splendida terra, [CT_NAME]. Spero che tu porti la pace, perch&#233; a colui che saluta con una mazza verr&#224; risposto con una clava.</Italian>
@@ -886,7 +937,7 @@
 		<Spanish>What, you again?!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_MATTHIAS_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_1</Tag>
 		<English>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</English>
 		<French>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</French>
 		<German>Ich könnte ein wenig Hilfe gebrauchen, mein Freund [CT_NAME]. So ein Geschenk würde meine Stimmung erhellen!</German>
@@ -894,7 +945,7 @@
 		<Spanish>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_MATTHIAS_2</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_2</Tag>
 		<English>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</English>
 		<French>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</French>
 		<German>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</German>
@@ -926,7 +977,7 @@
 		<Spanish>If you are a true friend you'll give me this!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_MATTHIAS_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_1</Tag>
 		<English>Give me this, and my armies will go spill the blood of some other heathen on the ground.</English>
 		<French>Give me this, and my armies will go spill the blood of some other heathen on the ground.</French>
 		<German>Give me this, and my armies will go spill the blood of some other heathen on the ground.</German>
@@ -934,7 +985,7 @@
 		<Spanish>Give me this, and my armies will go spill the blood of some other heathen on the ground.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LEADER_MATTHIAS_2</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_2</Tag>
 		<English>If you won't give me this I'll use my army to get it, so what do you prefer?</English>
 		<French>If you won't give me this I'll use my army to get it, so what do you prefer?</French>
 		<German>If you won't give me this I'll use my army to get it, so what do you prefer?</German>
@@ -1246,7 +1297,7 @@
 		<Spanish>Recognizing me as king of the [OUR_EMPIRE] is not enough! I demand the following in tribute!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_1</Tag>
 		<English>Hail and well met, [CT_NAME]! I am [OUR_NAME], ruler of the glorious [OUR_CIV_SHORT].  So tell me: does [CT_CIV_SHORT] have a lot of rich and unprotected coastal cities, or what?</English>
 		<French>Bonjour, [CT_NAME], c'est un vrai plaisir ! Je suis [OUR_NAME], chef des glorieux [OUR_CIV_SHORT]. Dites-moi : est-ce que [CT_CIV_SHORT] dispose de nombreuses villes c&#244;ti&#232;res riches et faiblement prot&#233;g&#233;es ?</French>
 		<German>Tag auch, [CT_NAME]! Ich bin [OUR_NAME], Staatsoberhaupt des ruhmreichen Volkes von [OUR_CIV_SHORT]. Nun, dann erz&#228;hlt mal: Besitzt Ihr vielleicht ein paar reiche, schutzlose K&#252;stenst&#228;dte?</German>
@@ -1254,7 +1305,7 @@
 		<Spanish>Saludos y bienaventuranzas, [CT_NAME]. Soy [OUR_NAME], dirigente de la gloriosa tierra de [OUR_CIV_SHORT].  Decidme, &#191;tiene o no [CT_CIV_SHORT] muchas ciudades costeras pr&#243;speras e indefensas?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_2</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_2</Tag>
 		<English>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</English>
 		<French>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</French>
 		<German>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</German>
@@ -1262,7 +1313,7 @@
 		<Spanish>Greetings from the [OUR_CIV_ADJ:1] of the ancient north! Shall we live in peace or do you wish to challenge us?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_3</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_3</Tag>
 		<English>Hail, [CT_NAME]! Do you follow the real warrior's way?</English>
 		<French>Hail, [CT_NAME]! Do you follow the real warrior's way?</French>
 		<German>Hail, [CT_NAME]! Do you follow the real warrior's way?</German>
@@ -1270,7 +1321,7 @@
 		<Spanish>Hail, [CT_NAME]! Do you follow the real warrior's way?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HARALD_HARDRADA_1</Tag>
 		<English>I don't wish to talk to you. To me you are just like those bandits I have slaughtered!</English>
 		<French>I don't wish to talk to you. To me you are just like those bandits I have slaughtered!</French>
 		<German>I don't wish to talk to you. To me you are just like those bandits I have slaughtered!</German>
@@ -1278,7 +1329,7 @@
 		<Spanish>I don't wish to talk to you. To me you are just like those bandits I have slaughtered!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_NO_PEACE_LEADER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_HARALD_HARDRADA_1</Tag>
 		<English>There will be no peace between us! I've been planning on occupying your land a long time ago, and now I finally have the chance to do it! Don't spoil it for me!</English>
 		<French>There will be no peace between us! I've been planning on occupying your land a long time ago, and now I finally have the chance to do it! Don't spoil it for me!</French>
 		<German>There will be no peace between us! I've been planning on occupying your land a long time ago, and now I finally have the chance to do it! Don't spoil it for me!</German>
@@ -1286,7 +1337,7 @@
 		<Spanish>There will be no peace between us! I've been planning on occupying your land a long time ago, and now I finally have the chance to do it! Don't spoil it for me!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HARALD_HARDRADA_1</Tag>
 		<English>Hello, [CT_NAME]! Who's bothering you this time? I'll make them pay!</English>
 		<French>Hello, [CT_NAME]! Who's bothering you this time? I'll make them pay!</French>
 		<German>Hello, [CT_NAME]! Who's bothering you this time? I'll make them pay!</German>
@@ -1294,7 +1345,7 @@
 		<Spanish>Hello, [CT_NAME]! Who's bothering you this time? I'll make them pay!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_HARDRADA_1</Tag>
 		<English>Your crown is tempting, [CT_NAME], don't tempt me to take it by force.</English>
 		<French>Your crown is tempting, [CT_NAME], don't tempt me to take it by force.</French>
 		<German>Your crown is tempting, [CT_NAME], don't tempt me to take it by force.</German>
@@ -1302,7 +1353,7 @@
 		<Spanish>Your crown is tempting, [CT_NAME], don't tempt me to take it by force.</Spanish>	
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_2</Tag>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HARALD_HARDRADA_2</Tag>
 		<English>Speak, heathen fool!</English>
 		<French>Speak, heathen fool!</French>
 		<German>Speak, heathen fool!</German>
@@ -1310,7 +1361,7 @@
 		<Spanish>Speak, heathen fool!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HARALD_HARDRADA_1</Tag>
 		<English>I hate to disturb you, but I really need this!</English>
 		<French>I hate to disturb you, but I really need this!</French>
 		<German>I hate to disturb you, but I really need this!</German>
@@ -1318,7 +1369,7 @@
 		<Spanish>I hate to disturb you, but I really need this!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HARALD_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HARALD_HARDRADA_1</Tag>
 		<English>The [OUR_CIV_ADJ:1] are strong and don't need anything from you... except for maybe this...</English>
 		<French>The [OUR_CIV_ADJ:1] are strong and don't need anything from you... except for maybe this...</French>
 		<German>The [OUR_CIV_ADJ:1] are strong and don't need anything from you... except for maybe this...</German>
@@ -1326,7 +1377,7 @@
 		<Spanish>The [OUR_CIV_ADJ:1] are strong and don't need anything from you... except for maybe this...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HARALD_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HARALD_HARDRADA_1</Tag>
 		<English>Give me this or we will go berserk on your country, [CT_NAME]!</English>
 		<French>Give me this or we will go berserk on your country, [CT_NAME]!</French>
 		<German>Give me this or we will go berserk on your country, [CT_NAME]!</German>
