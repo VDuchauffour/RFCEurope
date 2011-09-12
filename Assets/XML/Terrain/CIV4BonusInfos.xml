@@ -1668,8 +1668,8 @@
 		<!-- Rhye - start -->
 		<BonusInfo>
 			<Type>BONUS_COTTON</Type>
-			<Description>MOD_TXT_KEY_RESOURCE_COTTON</Description>
-			<Civilopedia>TXT_KEY_CHINESE_UNIFICATION_BONUS_COTTON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BONUS_COTTON</Description>
+			<Civilopedia>TXT_KEY_BONUS_COTTON_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COTTON</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>

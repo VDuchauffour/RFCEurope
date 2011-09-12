@@ -20,11 +20,10 @@ TODO:
 AR		LHs: update Barbarossa, Simone; maybe add Margaret, Gustav Adolph, second Byzantine leader
 AR		Update all settler and war maps
 AR		Rewrite xml entry for Hungary, Moscow, Norse, add entry to the new leaders
-AR		Further improve ALL the leader personalities
 AR		Civ specific Great People names
 AR		Add a LeaderHeadInfos.xml.light file
 AR		Revise Dynamic Civ Names for all the civs - especially needed for Lithuania
-		Custom DiploMusic for Bulgaria (Simeon, Ivan Asen), Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
+		Custom DiploMusic for Hungary (Matthias, Stephen), Lithuania (Mindaugas, Vytautas), Barbarossa, Philip the Bold, Boccanegra
 		Custom Events?
 		Turn Burgundian Winery art 180 degrees
 		Lower La Mezquita to the ground
@@ -77,7 +76,7 @@ Changes for Beta 13:
 		- Renamed Simeon and Elisabeth
 		- Olives don't require Calendar to be harvested (no change gameplaywise, because you will already have calendar when they spawn)
 		- Diplotext fixes, also added a few generic first contacts
-		- Civ specific Dawn of Man screen. Most civs still have the generic text until we update them 
+		- Civ specific Dawn of Man screen. Most civs still have the generic text until we update them
 
 	Python/C++ updates and AI tweaks:
 		- Europe is now divided into regions (XMLConsts and RFCEurope into C++), this will affect "continent" wonders and it has big effect on the AI
@@ -92,7 +91,7 @@ Changes for Beta 13:
 		- Added Dromon sounds (Ethnic Byzantine War Galley)
 		- New diplo music for Simeon and Ivan Asen II
 		- New in-game song Bogorodice Devo (Serbian Orthodox Chant)
-		- New art for Catherine (by melcher Kürzer)
+		- New art for Catherine (by Melcher Kürzer)
 		- All leaders' diplomusic is set to loop
 
 	Balance:
@@ -106,6 +105,7 @@ Changes for Beta 13:
 		- All gunpowder units (except arquebuseirs) ignore building defenses
 		- Added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
 		- Crossbows don't upgrade to Longbows and Longbows are about 10% more expensive (this should nerf the powerful Longbowman)
+		- Light Cavalry units have 25% city attack penalty
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
