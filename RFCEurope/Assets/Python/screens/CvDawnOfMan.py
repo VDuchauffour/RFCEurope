@@ -131,12 +131,10 @@ class CvDawnOfMan:
 ##Rhye - begin	
 		pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
-		# 3Miro: init screen Dawn of Man
-			# year = con.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(con.tYear[CyGame().getActiveTeam()][1], ())
-			# bodyString = localText.getText("TXT_KEY_RHYES_DAWN_OF_MAN_TEXT", (year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey()))
-		
+		# Added civ specific Dawn of Man screen, while keeping the generic version too - AbsintheRed
+		year = con.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(con.tYear[CyGame().getActiveTeam()][1], ()) #3Miro
 		textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
-		bodyString = localText.getText(textKey, (self.player.getCivilizationAdjectiveKey(), self.player.getNameKey())) # edead
+		bodyString = localText.getText(textKey, (year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey())) # Absinthe
 
 		screen.addStackedBarGFC("ProgressBar", 300, 400, 435, 40, InfoBarTypes.NUM_INFOBAR_TYPES, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setStackedBarColors("ProgressBar", InfoBarTypes.INFOBAR_STORED, gc.getInfoTypeForString("COLOR_PLAYER_GREEN"))
