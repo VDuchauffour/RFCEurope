@@ -12,7 +12,8 @@
 		<German>Kerker</German>
 		<Italian>Prigione Sotterranea</Italian>
 		<Spanish>Mazmorra</Spanish>
-		<Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE</Tag>
 		<English>Archery Range</English>
@@ -20,7 +21,8 @@
 		<German>Bogenschie&#223;anlage</German>
 		<Italian>Gamma di tiro con l'arco</Italian>
 		<Spanish>Gama de tiro al arco</Spanish>
-		<Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian></TEXT>
+		<Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_APOTHECARY</Tag>
 		<English>Apothecary</English>
@@ -28,7 +30,8 @@
 		<German>Apotheke</German>
 		<Italian>Farmacista</Italian>
 		<Spanish>Boticario</Spanish>
-		<Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian></TEXT>
+		<Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
 		<English>Wharf</English>
@@ -36,7 +39,8 @@
 		<German>Anlegeplatz</German>
 		<Italian>Molo</Italian>
 		<Spanish>Muelle</Spanish>
-		<Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian></TEXT>
+		<Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TANNERY</Tag>
 		<English>Tannery</English>
@@ -44,7 +48,8 @@
 		<German>Gerberei</German>
 		<Italian>Conceria</Italian>
 		<Spanish>Curtiduría</Spanish>
-		<Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
+		<Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH</Tag>
 		<English>Night Watch</English>
@@ -52,7 +57,8 @@
 		<German>Nachtwache</German>
 		<Italian>Orologio di notte</Italian>
 		<Spanish>Reloj de noche</Spanish>
-		<Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian></TEXT>
+		<Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL</Tag>
 		<English>Guild Hall</English>
@@ -60,7 +66,8 @@
 		<German>Gildenhaus</German>
 		<Italian>Atrio di corporazione</Italian>
 		<Spanish>Vestíbulo de gremio</Spanish>
-		<Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian></TEXT>
+		<Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL</Tag>
 		<English>Arsenal</English>
@@ -68,7 +75,8 @@
 		<German>Arsenal</German>
 		<Italian>Arsenale</Italian>
 		<Spanish>Arsenal</Spanish>
-		<Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian></TEXT>
+		<Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
 		<English>Bulgarian Stan</English>
@@ -76,7 +84,8 @@
 		<German>Bulgarische Stallung</German>
 		<Italian>Stan Bulgaro</Italian>
 		<Spanish>Stan Búlgaro</Spanish>
-		<Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233; &#209;&#242;&#253;&#237;</Russian></TEXT>
+		<Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233; &#209;&#242;&#253;&#237;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KIEV_VECHE</Tag>
 		<English>Veche Hall</English>
@@ -102,7 +111,8 @@
 		<German>Vegvar</German>
 		<Italian>Vegvar</Italian>
 		<Spanish>Vegvar</Spanish>
-		<Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian></TEXT>
+		<Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK</Tag>
 		<English>Folwark</English>
@@ -119,7 +129,8 @@
 		<German>[TAB]Folwarks sind riesigen polnischen Bauernh&#195;&#182;fen betrieben, die in der polnisch-litauischen Commonwealth aus dem 14. Jahrhundert in das 20. Jahrhundert. Sie wurden f&#195;&#188;r die Herstellung von einem &#195;&#156;berschuss von Lebensmitteln. Die erste folwarks wurden auf Kirche und Kloster im Besitz Gr&#195;&#188;nden, sondern wurden sp&#195;&#164;ter vom Adel und reichen Bauern. Die Schaffung von folwarks wurde durch eine wachsende Nachfrage nach Getreide und seiner hohen Gewinn. Folwark - auf der Grundlage Getreide exportieren war ein wichtiger Teil der Wirtschaft in der polnisch-litauischen Commonwealth.[PARAGRAPH: 1]Der R&#195;&#188;ckgang der Landwirtschaft Waren, die Preise in der Ende des 17. Jahrhunderts markiert den Beginn einer Krise f&#195;&#188;r die folwark &#195;&#164;hnliche Wirtschaft. Die edle Versuch zur Erh&#195;&#182;hung der Nutzung von folwarks nur schaden, die wirtschaftliche Krise. Bis zum 18. Jahrhundert, folwarks blieb die Grundlage f&#195;&#188;r die polnische edlen die wirtschaftliche und politische Macht. Nach der Abschaffung der Leibeigenschaft in Polen, folwarks verwendet Lohnarbeit. Folwarks abgeschafft wurden von der Volksrepublik Polen mit dem PKWN Dekret vom 6. September 1944 &#195;&#188;ber die Agrarreform.</German>
 		<Italian>[TAB]Folwarks sono gigante polacco aziende agricole che sono stati operati nel Polacco-Lituano dal 14 &#194;&#176; secolo in 20a. Essi sono stati utilizzati per la produzione di un surplus di cibo. Il primo folwarks sono stati creati sulla chiesa e del convento di propriet&#195;&#160; motivi, ma sono stati in seguito adottati dalla nobilt&#195;&#160; e ricchi contadini. La creazione di folwarks &#195;&#168; stata incentivata da una crescente domanda di cereali e il suo alto profitto. Folwark a base di grano di esportazione &#195;&#168; stato una parte importante dell 'economia di Stato polacco - lituano.[PARAGRAPH: 1]La caduta dei prezzi in agricoltura merci alla fine del 17 &#194;&#176; secolo ha segnato l'inizio di una crisi per il folwark connessi economia. Il nobile del tentativo di aumentare l'uso di folwarks solo male la crisi economica pi&#195;&#185;. Fino al 18 &#194;&#176; secolo, folwarks rimasti la base per la nobile polacco potere economico e politico. Dopo l'abolizione della serfdom in Polonia, folwarks utilizzati pagato lavoro. Folwarks sono state abolite dalla Repubblica popolare di Polonia con il PKWN decreto del 6 settembre 1944 sulla riforma agricola.</Italian>
 		<Spanish>[TAB]Folwarks son gigantes granjas polacas que fueron operados en la Comunidad de Polonia - Lituania desde el siglo 14 en la 20. Estos recursos se utilizaron para producir un excedente de alimentos. La primera folwarks se crearon en la iglesia y el monasterio de propiedad de motivos, pero luego fueron aprobadas por la nobleza y los campesinos ricos. La creaci&#195;&#179;n de folwarks fue impulsada por una creciente demanda de cereales y su alto beneficio. Folwark basado en la exportaci&#195;&#179;n de cereales es una parte importante de la econom&#195;&#173;a de la polaca y lituana ELA. [PARAGRAPH: 1]La ca&#195;&#173;da de los precios de los bienes en la agricultura a finales del siglo 17 marc&#195;&#179; el inicio de una crisis para la folwark relacionados con la econom&#195;&#173;a. El noble intento de aumentar la utilizaci&#195;&#179;n de folwarks s&#195;&#179;lo perjudican la crisis econ&#195;&#179;mica m&#195;&#161;s. Hasta el siglo 18, folwarks sigue siendo la base de nobles polacos del poder econ&#195;&#179;mico y pol&#195;&#173;tico. Despu&#233;s de la abolici&#195;&#179;n de la servidumbre de la gleba en Polonia, folwarks utilizados trabajo remunerado. Folwarks fueron abolidas por la Rep&#195;&#186;blica Popular de Polonia con la PKWN decreto de 6 de septiembre de 1944 sobre la reforma agr&#195;&#173;cola.</Spanish>
-		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH: 1]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>	</TEXT>
+		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH: 1]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_STOCK_EXCHANGE</Tag>
 		<English>Royal Exchange</English>
@@ -127,7 +138,8 @@
 		<German>K&#246;nigliche B&#246;rse</German>
 		<Italian>Borsa Reale</Italian>
 		<Spanish>Bolsa Real</Spanish>
-		<Russian>"&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#233; &#206;&#225;&#236;&#229;&#237;"</Russian></TEXT>
+		<Russian>"&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#233; &#206;&#225;&#236;&#229;&#237;"</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE</Tag>
 		<English>Opera House</English>
@@ -135,12 +147,17 @@
 		<German>Opernhaus</German>
 		<Italian>Teatri d'opera</Italian>
 		<Spanish>Teatro de ópera</Spanish>
-		<Russian>&#196;&#238;&#236; &#206;&#239;&#229;&#240;&#251;</Russian></TEXT>
+		<Russian>&#196;&#238;&#236; &#206;&#239;&#229;&#240;&#251;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
 		<English>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</English>
 		<French>.</French>
-		<German/><Italian/><Spanish/><Russian>.</Russian></TEXT>
+		<German/>
+		<Italian/>
+		<Spanish/>
+		<Russian>.</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT</Tag>
 		<English>Soldier Tennant</English>
@@ -148,7 +165,8 @@
 		<German>Soldaten Tennant</German>
 		<Italian>Tennant di soldato</Italian>
 		<Spanish>Tennant Soldado</Spanish>
-		<Russian>&#209;&#238;&#235;&#228;&#224;&#242; &#210;&#229;&#237;&#237;&#224;&#237;&#242;</Russian></TEXT>
+		<Russian>&#209;&#238;&#235;&#228;&#224;&#242; &#210;&#229;&#237;&#237;&#224;&#237;&#242;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
 		<English>[ICON_BULLET]Damages enemy units in the area.</English>
@@ -167,14 +185,15 @@
 		<Spanish>Kremlin</Spanish>
 		<Russian>&#202;&#240;&#229;&#236;&#235;&#252;</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BOMBARD_IMMUNE_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</English>
 		<French>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</French>
 		<German>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</German>
 		<Italian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Russian></TEXT>
+		<Russian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN</Tag>
 		<English>Inn</English>
@@ -182,7 +201,8 @@
 		<German>Wirtshaus</German>
 		<Italian>Albergo</Italian>
 		<Spanish>Posada</Spanish>
-		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
 		<English>Manor House</English>
@@ -190,7 +210,8 @@
 		<German>Landgut</German>
 		<Italian>Casa di residenza</Italian>
 		<Spanish>Casa solariega</Spanish>
-		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian></TEXT>
+		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
 		<English>Weaver</English>
@@ -198,7 +219,8 @@
 		<German>Weberei</German>
 		<Italian>Tessitore</Italian>
 		<Spanish>Tejedor</Spanish>
-		<Russian>&#210;&#234;&#224;&#247;</Russian></TEXT>
+		<Russian>&#210;&#234;&#224;&#247;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY</Tag>
 		<English>Brewery</English>
@@ -206,15 +228,17 @@
 		<German>Brauerei</German>
 		<Italian>Birrificio</Italian>
 		<Spanish>Cervecería</Spanish>
-		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian></TEXT>
-        <TEXT>
+		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY</Tag>
 		<English>Winery</English>
 		<French>Entreprise vinicole</French>
 		<German>Kellerei</German>
 		<Italian>Cantina</Italian>
 		<Spanish>Bodega</Spanish>
-		<Russian>Winery</Russian></TEXT>
+		<Russian>Winery</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA</Tag>
 		<English>Noria</English>
@@ -222,7 +246,8 @@
 		<German>Noria</German>
 		<Italian>Noria</Italian>
 		<Spanish>Noria</Spanish>
-		<Russian>&#205;&#238;&#240;&#232;&#255;</Russian></TEXT>
+		<Russian>&#205;&#238;&#240;&#232;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORGE</Tag>
 		<English>Blacksmith</English>
@@ -230,7 +255,8 @@
 		<German>Schmiede</German>
 		<Italian>Fabbro</Italian>
 		<Spanish>Herrero</Spanish>
-		<Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian></TEXT>
+		<Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL</Tag>
 		<English>Textile Mill</English>
@@ -238,7 +264,8 @@
 		<German>Tuchfabrik</German>
 		<Italian>Fabbrica tessile</Italian>
 		<Spanish>Manufactura textil</Spanish>
-		<Russian>&#210;&#229;&#234;&#241;&#242;&#232;&#235;&#252;&#237;&#224;&#255; &#204;&#229;&#235;&#252;&#237;&#232;&#246;&#224;</Russian></TEXT>
+		<Russian>&#210;&#229;&#234;&#241;&#242;&#232;&#235;&#252;&#237;&#224;&#255; &#204;&#229;&#235;&#252;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER</Tag>
 		<English>Jeweler</English>
@@ -246,7 +273,8 @@
 		<German>Juwellier</German>
 		<Italian>Gioielleria</Italian>
 		<Spanish>Joyería</Spanish>
-		<Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian></TEXT>
+		<Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE</Tag>
 		<English>Smokehouse</English>
@@ -254,7 +282,8 @@
 		<German>R&#228;ucherei</German>
 		<Italian>Affumicatoio</Italian>
 		<Spanish>Ahumadero</Spanish>
-		<Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian></TEXT>
+		<Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_STORE</Tag>
 		<English>Luxury Store</English>
@@ -262,7 +291,8 @@
 		<German>Luxusgesch&#228;ft</German>
 		<Italian>Negozio di lussuria</Italian>
 		<Spanish>Tienda de lujo</Spanish>
-		<Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian></TEXT>
+		<Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAREHOUSE</Tag>
 		<English>Warehouse</English>
@@ -270,7 +300,8 @@
 		<German>Warenhaus</German>
 		<Italian>Magazzino</Italian>
 		<Spanish>Almacén</Spanish>
-		<Russian>&#209;&#234;&#235;&#224;&#228;</Russian></TEXT>
+		<Russian>&#209;&#234;&#235;&#224;&#228;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE</Tag>
 		<English>Coffee House</English>
@@ -278,7 +309,8 @@
 		<German>Kaffeehaus</German>
 		<Italian>Caffè</Italian>
 		<Spanish>Café</Spanish>
-		<Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian></TEXT>
+		<Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU</Tag>
 		<English>Chateau</English>
@@ -286,7 +318,8 @@
 		<German>Chateau</German>
 		<Italian>Chateau</Italian>
 		<Spanish>Chateau</Spanish>
-		<Russian>&#199;&#224;&#236;&#238;&#234;</Russian></TEXT>
+		<Russian>&#199;&#224;&#236;&#238;&#234;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
 		<English>Infirmary</English>
@@ -294,7 +327,8 @@
 		<German>Spital</German>
 		<Italian>Infermeria</Italian>
 		<Spanish>Enfermería</Spanish>
-		<Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian></TEXT>
+		<Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
 		<English>Pagan Shrine</English>
@@ -634,6 +668,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
@@ -642,6 +677,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
@@ -651,6 +687,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_PEDIA</Tag>
@@ -660,6 +697,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
@@ -671,6 +709,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
@@ -682,6 +721,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA_PEDIA</Tag>
@@ -691,6 +731,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
@@ -701,6 +742,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUNGEON_PEDIA</Tag>
@@ -711,6 +753,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
@@ -719,6 +762,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
@@ -730,6 +774,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Tag>
@@ -738,6 +783,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Tag>
@@ -746,6 +792,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
@@ -755,6 +802,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
@@ -764,6 +812,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
@@ -772,6 +821,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
@@ -780,6 +830,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
@@ -788,6 +839,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL_PEDIA</Tag>
@@ -797,6 +849,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Tag>
@@ -806,6 +859,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CHAPEL_PEDIA</Tag>
@@ -814,6 +868,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_MONASTERY_PEDIA</Tag>
@@ -823,6 +878,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CATHEDRAL_PEDIA</Tag>
@@ -831,6 +887,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_RELIQUARY_PEDIA</Tag>
@@ -839,6 +896,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SEMINARY_PEDIA</Tag>
@@ -847,6 +905,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU_PEDIA</Tag>
@@ -855,6 +914,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Tag>
@@ -864,6 +924,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENOA_BANK</Tag>
@@ -872,7 +933,8 @@
 		<German>Genuesische Bank</German>
 		<Italian>Banca di Genoan</Italian>
 		<Spanish>Banco de Genoan</Spanish>
-		<Russian/></TEXT>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
 		<English>Star Fort</English>
@@ -880,7 +942,8 @@
 		<German>Sternförmige Festung</German>
 		<Italian>Fortificazione alla stella</Italian>
 		<Spanish>Estrelle Fuerte</Spanish>
-		<Russian/></TEXT>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
 		<English>Royal Exchange</English>
@@ -888,7 +951,8 @@
 		<German>K&#246;nigliche B&#246;rse</German>
 		<Italian>Borsa Reale</Italian>
 		<Spanish>Bolsa Real</Spanish>
-		<Russian/></TEXT>
+		<Russian/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Tag>
 		<English>[TAB]After the Turks conquered much of southern Hungary, a new defensive line inside the country was strongly needed. Out of castles, mansions, churches and monasteries a new defensive line was built with the efforts of the bondsmen of the surrounding area within a short time. A new system of castles was created, which began at the Adriatic Sea, ended at the lower Danube River and enclosed the area that was controlled by the Turks. The most important functions of these V&#233;gv&#225;rs were to defend the borders, secure the roads and the river crossings, the prevention of the enemy troop supplies and the security of the people and their goods in the surrounding area.</English>
@@ -896,6 +960,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE_PEDIA</Tag>
@@ -905,6 +970,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TANNERY_PEDIA</Tag>
@@ -914,6 +980,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL_PEDIA</Tag>
@@ -922,6 +989,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAVER_PEDIA</Tag>
@@ -933,6 +1001,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
@@ -943,6 +1012,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE_PEDIA</Tag>
@@ -951,6 +1021,7 @@
 		<German>[TAB]B&#246;gen waren eine wichtige Erfindung, da sie erstmals die Speicherung und schnelle Freigabe kinetischer Energie erm&#246;glichten. Die ersten B&#246;gen entstanden vor etwa 30.000 Jahren aus elastischem Holz (Eibe, Bambus, Palme usw.). Um 1300 vor Christus entstanden B&#246;gen aus Verbundwerkstoffen, wie Holz, Horn und Sehnen. Die ersten Pfeile waren vermutlich angespitzte und im Feuer geh&#228;rtete &#196;ste. Als der Mensch schlie&#223;lich lernte, Feuerstein zu sch&#228;rfen, wurden die traditionellen Holzspitzen von Steinspitzen abgel&#246;st.r Zeit in Anspruch als die Ausbildung eines Bogensch&#252;tzen.</German>
 		<Italian>[TAB]L'arco rappresenta un'innovazione tecnologica importante, essendo il primo modello di &quot;macchinario&quot; in grado di incamerare energia lentamente per poi rilasciarla rapidamente. Archi e frecce esistono da più di 30.000 anni. I primi archi erano fatti con del legno molto elastico, come quello del tasso, del bambù e della palma. Nel 1300 a. C., gli archi erano realizzati con più materiali, come legno, corna e tendini animali. Le prime frecce erano probabilmente dei semplici legni con la punta affilata o temprata. Successivamente, quando l'uomo imparò la lavorazione della selce, le punte divennero in pietra.</Italian>
 		<Spanish>[TAB]El arco, importante innovaci&#243;n tecnol&#243;gica, seguramente fuera la primera m&#225;quina capaz de almacenar la energ&#237;a lentamente y liberarla r&#225;pidamente. Los arcos y las flechas existen desde hace 30.000 a&#241;os. Los primeros arcos estaban hechos de maderas el&#225;sticas: tejo, bamb&#250;, palma, etc. Desde el a&#241;o 1300 a. C., se fabricaban ya con materiales compuestos: madera, cuerno y tendones. Probablemente, las primeras flechas fueran astiles de madera con un extremo endurecido al fuego. Una vez que el hombre aprendi&#243; a afilar el s&#237;lex, se a&#241;adieron puntas de piedra.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE_PEDIA</Tag>
@@ -960,6 +1031,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP</Tag>
@@ -968,6 +1040,7 @@
 		<German>Vaivadija</German>
 		<Italian>Vaivadija</Italian>
 		<Spanish>Vaivadija</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP_PEDIA</Tag>
@@ -976,6 +1049,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT_PEDIA</Tag>
@@ -985,6 +1059,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT_PEDIA</Tag>
@@ -994,6 +1069,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Tag>
@@ -1002,8 +1078,8 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_PEDIA</Tag>
 		<English>[TAB]A night watch was a law enforcement formation found in some countries and historical periods, usually subordinate to the local municipal government. Historically many cities had their own guard formations, which doubled as police and military force in times of need.</English>
@@ -1011,6 +1087,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1</Tag>
@@ -1019,7 +1096,8 @@
 		<German>[ICON_BULLET]%D1_Mod[ICON_GOLD] </German>
 		<Italian>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Russian></TEXT>
+		<Russian>[ICON_BULLET]%D1_Mod[ICON_GOLD] </Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO2</Tag>
 		<English>with [LINK=literal]%s1_Building[\LINK]</English>
@@ -1027,15 +1105,17 @@
 		<German>with [LINK=literal]%s1_Building[\LINK]</German>
 		<Italian>with [LINK=literal]%s1_Building[\LINK]</Italian>
 		<Spanish>with [LINK=literal]%s1_Building[\LINK]</Spanish>
-		<Russian>with [LINK=literal]%s1_Building[\LINK]</Russian></TEXT>
-        <TEXT>
+		<Russian>with [LINK=literal]%s1_Building[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_CULTURE1</Tag>
 		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </English>
 		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </French>
 		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </German>
 		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Russian></TEXT>
+		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] </Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_CULTURE2</Tag>
 		<English>with [LINK=literal]%s1_Religion[\LINK]</English>
@@ -1043,5 +1123,6 @@
 		<German>with [LINK=literal]%s1_Religion[\LINK]</German>
 		<Italian>with [LINK=literal]%s1_Religion[\LINK]</Italian>
 		<Spanish>with [LINK=literal]%s1_Religion[\LINK]</Spanish>
-		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian></TEXT>
+		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian>
+	</TEXT>
 </Civ4GameText>
