@@ -77,7 +77,7 @@ Changes for Beta 13:
 		- Renamed Simeon and Elisabeth
 		- Olives don't require Calendar to be harvested (no change gameplaywise, because you will already have calendar when they spawn)
 		- Diplotext fixes, also added a few generic first contacts
-		- Civ specific Dawn of Man screen
+		- Civ specific Dawn of Man screen. Most civs still have the generic text until we update them 
 
 	Python/C++ updates and AI tweaks:
 		- Europe is now divided into regions (XMLConsts and RFCEurope into C++), this will affect "continent" wonders and it has big effect on the AI
