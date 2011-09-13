@@ -247,14 +247,14 @@ tCapitals = (
 (56, 35), #tVenecia
 (47, 41), #tBurgundy
 (54, 46), #tGermany
-(86, 42), #tKiev
-(67, 37), #tHungary
+(83, 45), #tKiev
+(66, 37), #tHungary
 (28, 37), #tLeon, Spain
 (65, 49), #tPoland
 (50, 34), #tGenoa
 (43, 53), #tLondon, England
 (22, 31), #tLisboa, Portugal
-(74, 53), #Lithuania
+(75, 53), #Lithuania
 (63, 39), #tAustria
 (79, 22), #tTurkey
 (88, 56), #tMoscow
