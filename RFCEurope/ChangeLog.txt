@@ -68,15 +68,14 @@ Changes for Beta 13:
 		- Updated the Balkan city name maps for Byzantium, Bulgaria and Turkey
 		- Moved starting positions/capitals to realistic location: Hungary 1W, Lithuania 1E, Kiev 3N 3W
 		- Now the Lithuanian capital is correctly Vilnius, Hungarian is correctly Buda
-		- Also moved a couple indy cities to realistic location: Riga 2E 1N, Minsk 3E 2N, Smolensk 2N 1W
+		- Also moved a couple indy cities to realistic location: Riga 2E, Minsk 3E 2N, Smolensk 2N 1W
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
 		- XML cleanup and renaming various text fixes, also added some links
 		- Added a couple hints, revised all the older ones (including everything from vanilla Civ IV/Warlords/BtS)
 		- Papal States will ALWAYS be named Papal States
-		- Fixed xml mistakes and typos in the texts of Matthias, Philip the Bold
-		- Renamed Simeon and Elisabeth
+		- Fixed xml mistakes and typos in the texts of Matthias and Philip the Bold, updated Simeon and Elisabeth
 		- Olives don't require Calendar to be harvested (no change gameplaywise, because you will already have calendar when they spawn)
 		- Diplotext fixes, also added a few generic first contacts
 		- Civ specific Dawn of Man screen. Most civs still have the generic text until we update them
@@ -108,13 +107,15 @@ Changes for Beta 13:
 		- All gunpowder units (except arquebuseirs) ignore building defenses
 		- Added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
 		- Crossbows don't upgrade to Longbows and Longbows are about 10% more expensive (this should nerf the powerful Longbowman)
-		- Light Cavalry units have 25% city attack penalty, and cannot adopt the drill promotion line
+		- Normal light cavalry units have 25% city attack penalty, while light cavalry based UUs (Berber Cavalry, Ghazi and Huszar) have 10% city attack penalty
+		- None of the light cavalry type units can adopt the drill promotion line
+		- Siege and naval units cannot have march and medic promotions
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
 		- Germany no longer wins thier UHV if they found Printing Press, but are not Catholic (you need to really found Protestantism)
 		- Calais now spawns properly in 800AD
-		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Medic or settlers with Formation)
+		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Formation)
 		- Fixed a small bug in TeamAI.cpp thanks to Morholt
 		- Removed BtS interface hints which were inaccurate for RFCE (multiplayer, spaceship, etc)
 		- Horse Archers do Flanking damage now (as it was intended)
