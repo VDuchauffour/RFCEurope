@@ -382,5 +382,20 @@
 		<HintInfo>
 			<Description>TXT_KEY_HINT_RFCE_58</Description>
 		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_59</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_60</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_61</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_62</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_63</Description>
+		</HintInfo>
 	</HintInfos>
 </Civ4Hints>
