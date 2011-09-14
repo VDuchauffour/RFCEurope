@@ -327,8 +327,10 @@ iWelshLongbowman= 90
 iTagmata= 91
 iSeljuk= 92
 iCorsair= 93
-iCondottieri= 94
-iSwissPikeman= 95
+iJanissary= 94
+iCondottieri= 95
+iSwissPikeman= 96
+iVarangianGuard= 97
 
 iProsecutorClass = 62
 

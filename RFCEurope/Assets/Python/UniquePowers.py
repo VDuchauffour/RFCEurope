@@ -74,7 +74,7 @@ class UniquePowers:
                         apCityList = PyPlayer(iPlayer).getCityList()
                         iRandCity = gc.getGame().getSorenRandNum(len( apCityList ), 'Janissary city')
                         pCity = apCityList[iRandCity].GetCy()
-                        utils.makeUnit( xml.iMusketman, iPlayer, [pCity.getX(), pCity.getY()], 1 )
+                        utils.makeUnit( xml.iJanissary, iPlayer, [pCity.getX(), pCity.getY()], 1 )
                         pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
                         #print(" 3Miro making a Janissary in ",pCity.getName() )
                 else:

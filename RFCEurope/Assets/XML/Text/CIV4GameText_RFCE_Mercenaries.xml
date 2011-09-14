@@ -264,6 +264,15 @@
 		<Russian>Swiss</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_VARANGIAN</Tag>
+		<English>Varangian</English>
+		<French>Varangian</French>
+		<German>Varangian</German>
+		<Italian>Varangian</Italian>
+		<Spanish>Varangian</Spanish>
+		<Russian>Varangian</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Knights Templar</French>
@@ -332,6 +341,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWISS_PIKEMAN_PEDIA</Tag>
 		<English>[TAB]Swiss Guards is the name given to the Swiss soldiers  who have served as bodyguards, ceremonial guards, and palace  guards at foreign European courts since the late 15th century. In contemporary usage it refers to the Pontifical Swiss Guard of Vatican City. They have generally had a high reputation for discipline and loyalty to their employers. Apart from household and guard units, some formations have also served as fighting troops; regular Swiss mercenary regiments  served as line troops in various armies, notably those of France, Spain and Naples up to the 19th century.[PARAGRAPH:1]Various units of Swiss Guards have existed for hundreds of years. The earliest such detachment was the Swiss Hundred Guard (Cent-Garde) at the French court (1497-1830). This small force was complemented in 1567 by a Swiss Guard regiment. The Papal Swiss Guard in the Vatican was founded in 1506 and is the only Swiss Guard that still exists. In the 18th century several other Swiss Guards existed for periods in various European courts.[PARAGRAPH:1]The institution reflects the situation of Switzerland at the time. Unlike the present, Switzerland was a poor country whose young men often sought their fortunes abroad.[PARAGRAPH:1]The Corps of the Pontifical Swiss Guard or Swiss Guard (German: Schweizergarde, Italian: Guardia Svizzera Pontificia, Latin: Pontificia Cohors Helvetica, or Cohors Pedestris Helvetiorum a Sacra Custodia Pontificis) is something of an exception to the Swiss rulings of 1874 and 1927. It is a small force maintained by the Holy See and is responsible for the safety of the Pope, including the security of the Apostolic Palace. It serves as the de facto military of Vatican City.[PARAGRAPH:1]The history of the Swiss Guards has its origins in the 15th century. Pope Sixtus IV (1471-1484) already made a previous alliance with the Swiss Confederation and built barracks in Via Pellegrino after foreseeing the possibility of recruiting Swiss mercenaries. The pact was renewed by Innocent VIII (1484-1492) in order to use them against the Duke of Milan. Alexander VI (1492-1503) later actually used the Swiss mercenaries during their alliance with the King of France. During the time of the Borgias, however, the Italian Wars began in which the Swiss mercenaries were a fixture in the front lines among the warring factions, sometimes for France and sometimes for the Holy See or the Holy Roman Empire. The mercenaries enlisted when they heard King Charles VIII of France was going to raise a war against Naples. Among the participants in the war against Naples was Cardinal Giuliano della Rovere, the future Pope Julius II (1503-1513), who was well acquainted with the Swiss having been Bishop of Lausanne years earlier. The expedition failed in part thanks to new alliances made by Alexander VI against the French. When Cardinal della Rovere became pope Julius II in 1505, he asked the Swiss Diet to provide him with a constant corps of 200 Swiss mercenaries. In September 1505, the first contingent of 150 soldiers started their march towards Rome, under the command of Kaspar von Silenen, and entered the city on January 22, 1506, today given as the official date of the Guard's foundation. "The Swiss see the sad situation of the Church of God, Mother of Christianity, and realize how grave and dangerous it is that any tyrant, avid for wealth, can assault with impunity, the common Mother of Christianity," declared Huldrych Zwingli, a Swiss Catholic who later became a Protestant reformer. Pope Julius II later granted them the title "Defenders of the Church's freedom".</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD</Tag>
+		<English>Varangian Guard</English>
+		<French>Varangian Guard</French>
+		<German>Varangian Guard</German>
+		<Italian>Varangian Guard</Italian>
+		<Spanish>Varangian Guard</Spanish>
+		<Russian>Varangian Guard</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD_PEDIA</Tag>
+		<English>[TAB]It was because of Basil's distrust of the native Byzantine guardsmen, whose loyalties often shifted with fatal consequences, as well as the proven loyalty of the Varangians that led Basil to employ them as his personal bodyguards. This new force became known as the Varangian Guard. Over the years, new recruits from as far abroad as Sweden, Denmark, and Norway gave a predominantly Scandinavian cast to the organization until the late 11th century.[PARAGRAPH:1]Composed primarily of Scandinavians for the first 100 years, the guard began to see increased inclusion of Anglo-Saxons after the successful invasion of England by the Normans, the earliest written record dating to 1088. At this time a large number of Anglo-Saxons and Danes emigrated to the Byzantine Empire by way of the Mediterranean. One source has more than 5,000 of them arriving in 235 ships. Those who did not enter imperial service were settled on the Black Sea, but those who did became so vital to the Varangians that it was commonly called the Englinbarrangoi from that point. In this capacity they were able to war against the Normans under Robert Guiscard in Sicily, who unsuccessfully sought to invade the lower Balkans as well.[PARAGRAPH:1]The Varangians served as the personal bodyguard of the emperor, swearing an oath of loyalty to him; they had ceremonial duties as retainers and acclaimers and performed some police duties, especially with regard to cases of treason and conspiracy. Other than their fierce loyalty, the most recognizable attributes of the Varangian guard during the 11th century were their large axes and their penchant for drinking. There are countless stories of the Varangian guard either drinking in excess or being drunk. In 1103 during a visit to Constantinople, King Eric of Denmark "exhorted members of the guard to lead a more sober life and not give themselves up to drunkenness." It is not surprising, due to this Varangian vice to find a 12th century description of them as "the Emperor's wine-bags."</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
