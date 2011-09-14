@@ -268,7 +268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_30</Tag>
-		<English>In RFC you can hire out one of your units as a Mercenary by clicking on the button with the hand symbol on it in the unit actions interface, and another civ may hire it. This is disabled in RFCE, because this would be absolutely unrealistic in a medieval European mod.</English>
+		<English>In RFC you can hire out one of your units as a Mercenary by clicking on the button with the hand symbol on it in the unit actions interface, and another civ may hire it. This is disabled in RFCE, because it wouldn't fit in the theme of a medieval European mod.</English>
 		<French>Vous pouvez louer les services de l'une de vos unit&#233;s comme mercenaire. Pour cela, cliquez sur la main dans sa fen&#233;tre d'action. Une autre civilisation pourra alors l'engager.</French>
 		<German>Sie k&#233;nnen eine Ihrer Einheiten als S&#233;ldner verdingen, indem Sie den Button mit dem Hand-Symbol im Einheitenaktionsmen&#233; anklicken. Anschlie&#233;end kann sie von anderen Zivilisationen angeheuert werden.</German>
 		<Italian>Puoi affittare una delle tue unit&#224; come mercenari cliccando sul pulsante con il simbolo della mano, nell'interfaccia delle azioni delle unit&#224;. Potrebbe essere ingaggiata da un'altra civilt&#224;.</Italian>
@@ -521,6 +521,51 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_58</Tag>
 		<English>Stability can ruin your games if you overexpand. Watch for building as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_59</Tag>
+		<English>You cannot trade techs you didn't discover yourself, also your newly discovered techs cannot be traded for 10 turns.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_60</Tag>
+		<English>Don't be surprised if the AI of small civs value techs suprisingly high: One of the factors modifying your tech costs is the size of your empire.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_61</Tag>
+		<English>In RFC Europe you cannot declare war on newly spawned civs for 5 turns.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_62</Tag>
+		<English>You won't get huge diplo boost just for sharing a religion with another civ. You have to earn faith points for that.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_63</Tag>
+		<English>The scrolling image in the opening screen of RFCE is the Bayeux Tapestry, in case you were wondering.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
