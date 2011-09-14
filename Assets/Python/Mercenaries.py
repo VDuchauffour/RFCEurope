@@ -94,7 +94,8 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, xml.lRegionAustria + [xml.iP_Bavaria], [], 50 ],
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, xml.lRegionAustria + [xml.iP_Bavaria], [], 50 ],
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, xml.lRegionAustria + [xml.iP_Bavaria], [], 50 ],
-                [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, xml.lRegionAustria + [xml.iP_Bavaria], [], 50 ],
+                [xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 128, 267, [xml.iP_Constantinople], [], 50 ],                [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, xml.lRegionAustria + [xml.iP_Bavaria], [], 50 ],
+                [xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 128, 267, [xml.iP_Constantinople], [], 50 ],
                 ]
 
 ### A few Parameters for Mercs only:
