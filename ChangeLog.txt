@@ -97,6 +97,8 @@ Changes for Beta 13:
 		- New in-game song Bogorodice Devo (Serbian Orthodox Chant)
 		- New art for Catherine (by Melcher Kürzer)
 		- All leaders' diplomusic is set to loop
+		- German and Austria Units have Holy Roman Select sounds (Old German is too modern)
+		- Italian Select sounds for Venice and Genoa
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)

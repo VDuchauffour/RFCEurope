@@ -273,6 +273,24 @@
 		<Russian>Varangian</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_DANISH</Tag>
+		<English>Danish</English>
+		<French>Danish</French>
+		<German>Danish</German>
+		<Italian>Danish</Italian>
+		<Spanish>Danish</Spanish>
+		<Russian>Danish</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ARAGON</Tag>
+		<English>Aragonese</English>
+		<French>Aragonese</French>
+		<German>Aragonese</German>
+		<Italian>Aragonese</Italian>
+		<Spanish>Aragonese</Spanish>
+		<Russian>Aragonese</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Knights Templar</French>
@@ -359,6 +377,47 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD_PEDIA</Tag>
 		<English>[TAB]It was because of Basil's distrust of the native Byzantine guardsmen, whose loyalties often shifted with fatal consequences, as well as the proven loyalty of the Varangians that led Basil to employ them as his personal bodyguards. This new force became known as the Varangian Guard. Over the years, new recruits from as far abroad as Sweden, Denmark, and Norway gave a predominantly Scandinavian cast to the organization until the late 11th century.[PARAGRAPH:1]Composed primarily of Scandinavians for the first 100 years, the guard began to see increased inclusion of Anglo-Saxons after the successful invasion of England by the Normans, the earliest written record dating to 1088. At this time a large number of Anglo-Saxons and Danes emigrated to the Byzantine Empire by way of the Mediterranean. One source has more than 5,000 of them arriving in 235 ships. Those who did not enter imperial service were settled on the Black Sea, but those who did became so vital to the Varangians that it was commonly called the Englinbarrangoi from that point. In this capacity they were able to war against the Normans under Robert Guiscard in Sicily, who unsuccessfully sought to invade the lower Balkans as well.[PARAGRAPH:1]The Varangians served as the personal bodyguard of the emperor, swearing an oath of loyalty to him; they had ceremonial duties as retainers and acclaimers and performed some police duties, especially with regard to cases of treason and conspiracy. Other than their fierce loyalty, the most recognizable attributes of the Varangian guard during the 11th century were their large axes and their penchant for drinking. There are countless stories of the Varangian guard either drinking in excess or being drunk. In 1103 during a visit to Constantinople, King Eric of Denmark "exhorted members of the guard to lead a more sober life and not give themselves up to drunkenness." It is not surprising, due to this Varangian vice to find a 12th century description of them as "the Emperor's wine-bags."</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HUSCARL</Tag>
+		<English>Huskarl</English>
+		<French>Huskarl</French>
+		<German>Huskarl</German>
+		<Italian>Huskarl</Italian>
+		<Spanish>Huskarl</Spanish>
+		<Russian>Huskarl</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HUSCARL_PEDIA</Tag>
+		<English>[TAB]Housecarls were household troops, personal warriors and equivalent to a royal bodyguard to Scandinavian kings. The anglicized term comes from the Old Norse term huskarl or huscarl (literally, 'house man', i.e., armed man in the service of a specific house.) They were also called hirth ('household') that referred to household troops. The term later came to cover armed soldiers of the household. They were often the only professional soldiers in the kingdom, the rest of the army being made up of militia, peasant levy, and occasionally mercenaries. They were usually armed with long Danish axe. A kingdom would have fewer than 2000 Housecarls.[PARAGRAPH:2]The term entered the English language when Canute the Great conquered and occupied Anglo-Saxon England.[PARAGRAPH:2]In England, there may have been as many as 3000 royal housecarls, and a special tax was levied to provide pay in coin. They were housed and fed at the king's expense. They formed a standing army of professional soldiers, and also had some administrative duties in peacetime as the Kings representatives. The term was often used in contrast to the non-professional fyrd.[PARAGRAPH:2]Certainly the vast majority of English housecarls died at the Battle of Hastings. Survivors, along with King Harold's thegns, crossed to Continental Europe as mercenary troops. Some of these reached Byzantium and along with other Saxons joined the Varangian Guard. By the 12th century, the Varangian Guard contained so many Saxons that the entire unit was sometimes called "the English Guard."</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ALMOGAVAR</Tag>
+		<English>Almogavar</English>
+		<French>Almogavar</French>
+		<German>Almogavar</German>
+		<Italian>Almogavar</Italian>
+		<Spanish>Almogavar</Spanish>
+		<Russian>Almogavar</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ALMOGAVAR_PEDIA</Tag>
+		<English>[TAB]The Almogavars were a class of soldiers from the Crown of Aragon, well-known during the Christian Reconquista (reconquest) of the Iberian Peninsula. They were much employed as mercenaries in Italy, Latin Greece and the Levant during the 13th and 14th centuries.
+[TAB]The Almogavars came mainly from the mountain regions of Aragon, Catalonia and, to a lesser extent, from Navarre. They were frontiersmen and foot-soldiers who wore no armour, dressed in skins, were shod with brogues (abarcas), and carried the arms similar to those of Roman legionaries: two heavy javelins, or azconas in Spanish language, and a short stabbing sword.
+[TAB]They were professional soldiers, and served kings, the Roman Catholic Church, nobles, or towns for pay; eventually they also hired themselves out to the Byzantine Empire. When Peter III of Aragon made war on Charles of Anjou after the Sicilian Vespers of March 30, 1282 for the possession of Naples and Sicily, the Almogavars formed the most effective element of his army. Their discipline and ferocity, the force with which they hurled their javelins, and their activity, made them very formidable to the heavy cavalry of the Angevin armies. They fought against cavalry by attacking firstly horses instead of knights. Once the knight was on the ground he was an easy victim for the Almogavar.
+[TAB]When the Peace of Caltabellotta in 1302 ended the war in southern Italy, the Almogavars, under the leadership of Roger de Flor ("Roger Blum", a former Knight Templar), formed the Catalan Company in the service of the emperor of the East, Andronicus II Palaeologus, to fight against the Turks. Both kings of Aragon and Sicily agreed with the idea since peace had been reached and it was viable alternative to having the Almogavar standing army unemployed in their realms.
+[TAB]Their campaign in Asia Minor during 1303 and 1304 was a series of military victories, but alongside widespread looting of Byzantine civilians, so when they insisted in receiving the agreed payment, the Emperor refused. Thereafter the Almogavars turned to violence, making their presence intolerable to the Byzantine population. Roger de Flor and his lieutenants were assassinated by orders of the Emperor in 1305 while meeting to discuss terms on their compensation, presumably on the instigation of Genoese merchants, who were conspiring to keep their own position of influence and power and keep the Catalans out of the loop. This betrayal resulted in the Almogavars ravaging the neighbourhood of Constantinople.
+[TAB]Subsequently they marched against the Duchy of Athens, under the rule of the French House of Brienne. Duke Walter V of Brienne was defeated and slain by the Almogavars with all his knights at the Battle of the Cephissus, or Orchomenus, in Boeotia in March 1310. They then divided the wives and possessions of the Frenchmen by lot, and summoned a prince of the house of Aragon to rule over them.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
