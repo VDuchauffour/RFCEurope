@@ -22161,7 +22161,7 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_PIKEMAN, UnitOwner=22
+		UnitType=UNIT_SWISS_PIKEMAN, UnitOwner=22
 		Damage=0
 		Level=1, Experience=5
 		FacingDirection=4

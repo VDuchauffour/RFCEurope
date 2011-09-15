@@ -246,7 +246,7 @@
 		<Russian>Avar</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ITALIAN</Tag>
+		<Tag>TXT_KEY_MERC_ITALIAN</Tag>
 		<English>Italian</English>
 		<French>Italian</French>
 		<German>Italian</German>
@@ -255,7 +255,7 @@
 		<Russian>Italian</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SWISS</Tag>
+		<Tag>TXT_KEY_MERC_SWISS</Tag>
 		<English>Swiss</English>
 		<French>Swiss</French>
 		<German>Swiss</German>
@@ -264,7 +264,7 @@
 		<Russian>Swiss</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VARANGIAN</Tag>
+		<Tag>TXT_KEY_MERC_VARANGIAN</Tag>
 		<English>Varangian</English>
 		<French>Varangian</French>
 		<German>Varangian</German>
@@ -273,7 +273,7 @@
 		<Russian>Varangian</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DANISH</Tag>
+		<Tag>TXT_KEY_MERC_DANISH</Tag>
 		<English>Danish</English>
 		<French>Danish</French>
 		<German>Danish</German>
@@ -282,13 +282,22 @@
 		<Russian>Danish</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARAGON</Tag>
+		<Tag>TXT_KEY_MERC_ARAGON</Tag>
 		<English>Aragonese</English>
 		<French>Aragonese</French>
 		<German>Aragonese</German>
 		<Italian>Aragonese</Italian>
 		<Spanish>Aragonese</Spanish>
 		<Russian>Aragonese</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_MOROCCO</Tag>
+		<English>Moroccan</English>
+		<French>Moroccan</French>
+		<German>Moroccan</German>
+		<Italian>Moroccan</Italian>
+		<Spanish>Moroccan</Spanish>
+		<Russian>Moroccan</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
@@ -418,6 +427,24 @@
 [TAB]When the Peace of Caltabellotta in 1302 ended the war in southern Italy, the Almogavars, under the leadership of Roger de Flor ("Roger Blum", a former Knight Templar), formed the Catalan Company in the service of the emperor of the East, Andronicus II Palaeologus, to fight against the Turks. Both kings of Aragon and Sicily agreed with the idea since peace had been reached and it was viable alternative to having the Almogavar standing army unemployed in their realms.
 [TAB]Their campaign in Asia Minor during 1303 and 1304 was a series of military victories, but alongside widespread looting of Byzantine civilians, so when they insisted in receiving the agreed payment, the Emperor refused. Thereafter the Almogavars turned to violence, making their presence intolerable to the Byzantine population. Roger de Flor and his lieutenants were assassinated by orders of the Emperor in 1305 while meeting to discuss terms on their compensation, presumably on the instigation of Genoese merchants, who were conspiring to keep their own position of influence and power and keep the Catalans out of the loop. This betrayal resulted in the Almogavars ravaging the neighbourhood of Constantinople.
 [TAB]Subsequently they marched against the Duchy of Athens, under the rule of the French House of Brienne. Duke Walter V of Brienne was defeated and slain by the Almogavars with all his knights at the Battle of the Cephissus, or Orchomenus, in Boeotia in March 1310. They then divided the wives and possessions of the Frenchmen by lot, and summoned a prince of the house of Aragon to rule over them.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BLACK_GUARD</Tag>
+		<English>Black Guard</English>
+		<French>Black Guard</French>
+		<German>Black Guard</German>
+		<Italian>Black Guard</Italian>
+		<Spanish>Black Guard</Spanish>
+		<Russian>Black Guard</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BLACK_GUARD_PEDIA</Tag>
+		<English>[TAB]The Black Guard were the corps of African slave-soldiers assembled by sultan Moulay Ismail of Morocco. The Black Guard descended from black captives brought to Morocco from sub-Saharan Africa, who were settled in a special colony and given wives; their male offspring would be pressed into military careers at the age of sixteen. Considered more reliable than Arab or Berber warriors because of their lack of tribal loyalties, Ismail's black soldiers formed the bulk of his standing army and numbered 150,000 at their peak.[PARAGRAPH:1]The Black Guard were charged with fighting Ismail's campaigns against the European-controlled fortress enclaves dotting his empire's coast and with patrolling Morocco's unstable countryside: They crushed rebellions against Ismail's rule not only by Moroccan Berber clans but also by Ismail's seditious sons, who defected from service as his provincial governors to insurrection as would-be usurpers of his throne.[PARAGRAPH:1]Moulay Ismail always went about his court surrounded by a bodyguard of eighty black slave-soldiers, with muskets and scimitars at the ready in case of any attempt on the sultan's life. At his throne, Ismail was attended by a slave charged with twirling a parasol above the sultan at all times (a legend says that on at least one occasion, Ismail pulled out his sword and murdered an attendant who had allowed the sun to briefly fall upon his skin). Two more slaves fanned the flies away from his face, while a third held a napkin beneath his chin to collect his spittle. Though the Black Guard were fiercely loyal, they remained just as vulnerable to their commander's fits of rage as his European slaves and Moorish subjects.[PARAGRAPH:1]Despite endless civil wars and civil slaughter, the Black Guard remained brutally loyal and disciplined through the turmoil of Ismail's reign. More than any other factor did they enable the sultan to remain on Morocco's throne for half a century.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
