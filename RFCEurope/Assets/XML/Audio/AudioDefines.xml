@@ -7030,20 +7030,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_AMERICA_SELECT</SoundID>
-			<Filename>Sounds/Units/AmericaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AMERICA_ORDER</SoundID>
-			<Filename>Sounds/Units/AmericaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_ARABIA_SELECT</SoundID>
 			<Filename>Sounds/Units/ArabiaSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -7053,48 +7039,6 @@
 		<SoundData>
 			<SoundID>SND_ARABIA_ORDER</SoundID>
 			<Filename>Sounds/Units/ArabiaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AZTEC_SELECT</SoundID>
-			<Filename>Sounds/Units/AztecSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AZTEC_ORDER</SoundID>
-			<Filename>Sounds/Units/AztecOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_CHINA_SELECT</SoundID>
-			<Filename>Sounds/Units/ChinaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_CHINA_ORDER</SoundID>
-			<Filename>Sounds/Units/ChinaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_EGYPT_SELECT</SoundID>
-			<Filename>Sounds/Units/EgyptSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_EGYPT_ORDER</SoundID>
-			<Filename>Sounds/Units/EgyptOrder</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -7128,20 +7072,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_GERMANY_SELECT</SoundID>
-			<Filename>Sounds/Units/GermanySelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_GERMANY_ORDER</SoundID>
-			<Filename>Sounds/Units/GermanyOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_GREECE_SELECT</SoundID>
 			<Filename>Sounds/Units/GreeceSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -7151,62 +7081,6 @@
 		<SoundData>
 			<SoundID>SND_GREECE_ORDER</SoundID>
 			<Filename>Sounds/Units/GreeceOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_INCA_SELECT</SoundID>
-			<Filename>Sounds/Units/IncaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_INCA_ORDER</SoundID>
-			<Filename>Sounds/Units/IncaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_INDIA_SELECT</SoundID>
-			<Filename>Sounds/Units/IndiaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_INDIA_ORDER</SoundID>
-			<Filename>Sounds/Units/IndiaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_JAPAN_SELECT</SoundID>
-			<Filename>Sounds/Units/JapanSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_JAPAN_ORDER</SoundID>
-			<Filename>Sounds/Units/JapanOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_MALI_SELECT</SoundID>
-			<Filename>Sounds/Units/MaliSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_MALI_ORDER</SoundID>
-			<Filename>Sounds/Units/MaliOrder</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -7282,48 +7156,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_CARTHAGE_SELECT</SoundID>
-			<Filename>Sounds/Units/CarthageSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_CARTHAGE_ORDER</SoundID>
-			<Filename>Sounds/Units/CarthageOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_KOREA_SELECT</SoundID>
-			<Filename>Sounds/Units/KoreaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_KOREA_ORDER</SoundID>
-			<Filename>Sounds/Units/KoreaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_ZULU_SELECT</SoundID>
-			<Filename>Sounds/Units/ZuluSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_ZULU_ORDER</SoundID>
-			<Filename>Sounds/Units/ZuluOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_VIKING_SELECT</SoundID>
 			<Filename>Sounds/Units/VikingSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -7333,20 +7165,6 @@
 		<SoundData>
 			<SoundID>SND_VIKING_ORDER</SoundID>
 			<Filename>Sounds/Units/VikingOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_CELTS_SELECT</SoundID>
-			<Filename>Sounds/Units/CeltsSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_CELTS_ORDER</SoundID>
-			<Filename>Sounds/Units/CeltsOrder</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -7380,20 +7198,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_NATIVE_AMERICA_SELECT</SoundID>
-			<Filename>Sounds/Units/NativeAmericaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_NATIVE_AMERICA_ORDER</SoundID>
-			<Filename>Sounds/Units/NativeAmericaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_HOLY_ROMAN_SELECT</SoundID>
 			<Filename>Sounds/Units/HolyRomanEmpireSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -7403,76 +7207,6 @@
 		<SoundData>
 			<SoundID>SND_HOLY_ROMAN_ORDER</SoundID>
 			<Filename>Sounds/Units/HolyRomanEmpireOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_MAYA_SELECT</SoundID>
-			<Filename>Sounds/Units/MayaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_MAYA_ORDER</SoundID>
-			<Filename>Sounds/Units/MayaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_ETHIOPIA_SELECT</SoundID>
-			<Filename>Sounds/Units/EthiopiaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_ETHIOPIA_ORDER</SoundID>
-			<Filename>Sounds/Units/EthiopiaOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_KHMER_SELECT</SoundID>
-			<Filename>Sounds/Units/KhmerSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_KHMER_ORDER</SoundID>
-			<Filename>Sounds/Units/KhmerOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BABYLON_SELECT</SoundID>
-			<Filename>Sounds/Units/BabylonSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BABYLON_ORDER</SoundID>
-			<Filename>Sounds/Units/BabylonOrder</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_SUMERIA_SELECT</SoundID>
-			<Filename>Sounds/Units/SumeriaSelect</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_SUMERIA_ORDER</SoundID>
-			<Filename>Sounds/Units/SumeriaOrder</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -7501,6 +7235,20 @@
 		<SoundData>
 			<SoundID>SND_BYZANTIUM_ORDER</SoundID>
 			<Filename>Sounds/Units/ByzantineEmpireOrder</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_ITALY_SELECT</SoundID>
+			<Filename>Sounds/Units/ItalySelect</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_ITLAY_ORDER</SoundID>
+			<Filename>Sounds/Units/ItalyOrder</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

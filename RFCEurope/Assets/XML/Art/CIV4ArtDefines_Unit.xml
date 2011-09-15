@@ -1393,6 +1393,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
+			<SelectionSound>AS3D_MONGOL_SELECT</SelectionSound>
+			<ActionSound>AS3D_MONGOL_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BULGARIAN_KONNIK</Type>
@@ -2441,6 +2443,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
+			<SelectionSound>AS3D_VIKING_SELECT</SelectionSound>
+			<ActionSound>AS3D_VIKING_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CORDOBAN_BERBER</Type>
@@ -6480,7 +6484,7 @@
 			<fBattleDistance>0.28</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
@@ -6504,7 +6508,7 @@
 			<fBattleDistance>0.28</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
@@ -6528,7 +6532,7 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
@@ -6552,7 +6556,7 @@
 			<fBattleDistance>0.28</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
@@ -6576,7 +6580,7 @@
 			<fBattleDistance>0.28</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
@@ -6603,11 +6607,13 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
+			<SelectionSound>AS3D_ITALY_SELECT</SelectionSound>
+			<ActionSound>AS3D_ITALY_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SWISS_PIKEMAN</Type>
@@ -6627,11 +6633,13 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
+			<SelectionSound>AS3D_HOLY_ROMAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_HOLY_ROMAN_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_VARANGIAN_GUARD</Type>
@@ -6651,13 +6659,39 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 			<SelectionSound>AS3D_VIKING_SELECT</SelectionSound>
 			<ActionSound>AS3D_VIKING_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_ALMOGAVAR</Type>
+			<Button>Art/Units/Mercs/Buttons/Mercs/Almogavar_Btn.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Mercs/Almogavar/javelineer.nif</NIF>
+			<KFM>Art/Units/Mercs/Almogavar/javelineer_1.kfm</KFM>
+			<SHADERNIF>Art/Units/Mercs/Almogavar/javelineer_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_SPAIN_SELECT</SelectionSound>
+			<ActionSound>AS3D_SPAIN_ORDER</ActionSound>
 		</UnitArtInfo>
 	</UnitArtInfos>
 </Civ4ArtDefines>

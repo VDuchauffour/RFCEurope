@@ -331,6 +331,8 @@ iJanissary= 94
 iCondottieri= 95
 iSwissPikeman= 96
 iVarangianGuard= 97
+iHuscarl= 98
+iAlmogavar= 99
 
 iProsecutorClass = 62
 
