@@ -333,6 +333,7 @@ iSwissPikeman= 96
 iVarangianGuard= 97
 iHuscarl= 98
 iAlmogavar= 99
+iBlackGuard= 100
 
 iProsecutorClass = 62
 
