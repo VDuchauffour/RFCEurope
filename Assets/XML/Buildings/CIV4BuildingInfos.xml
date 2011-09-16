@@ -6,7 +6,7 @@
 <!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<BuildingInfo> <!-- Palace-->
+		<BuildingInfo> <!-- Palace -->
 			<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
 			<Type>BUILDING_PALACE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -184,16 +184,16 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Summer Palace-->
-			<BuildingClass>BUILDINGCLASS_GREAT_PALACE</BuildingClass>
-			<Type>BUILDING_GREAT_PALACE</Type>
+		<BuildingInfo> <!-- Summer Palace -->
+			<BuildingClass>BUILDINGCLASS_SUMMER_PALACE</BuildingClass>
+			<Type>BUILDING_SUMMER_PALACE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<!-- Rhye - start -->
 			<Description>TXT_KEY_BUILDING_SUMMER_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUMMER_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SUMMER_PALACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PALACE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SUMMER_PALACE</ArtDefineTag>
 			<!-- Rhye - end -->
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
@@ -384,7 +384,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo><!--Royal Academy-->
+		<BuildingInfo> <!-- Royal Academy -->
 			<BuildingClass>BUILDINGCLASS_ROYAL_ACADEMY</BuildingClass>
 			<Type>BUILDING_ROYAL_ACADEMY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -567,7 +567,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Versailles-->
+		<BuildingInfo> <!-- Versailles -->
 			<BuildingClass>BUILDINGCLASS_VERSAILLES</BuildingClass>
 			<Type>BUILDING_VERSAILLES</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -757,7 +757,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Walls-->
+		<BuildingInfo> <!-- Walls -->
 			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
 			<Type>BUILDING_WALLS</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -1297,7 +1297,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Kremlin -->
+		<BuildingInfo> <!-- Moscow Kremlin -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
 			<Type>BUILDING_MOSCOW_KREMLIN</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -1698,7 +1698,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Citadel-->
+		<BuildingInfo> <!-- Spanish Citadel -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
 			<Type>BUILDING_SPANISH_CITADEL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -2258,7 +2258,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Archery Range-->
+		<BuildingInfo> <!-- Archery Range -->
 			<BuildingClass>BUILDINGCLASS_ARCHERY_RANGE</BuildingClass>
 			<Type>BUILDING_ARCHERY_RANGE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -2439,7 +2439,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Stable-->
+		<BuildingInfo> <!-- Stable -->
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
 			<Type>BUILDING_STABLE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -2618,7 +2618,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Stan (Bulgaria)-->
+		<BuildingInfo> <!-- Bulgarian Stan -->
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
 			<Type>BUILDING_BULGARIAN_STAN</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -2797,7 +2797,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Granary-->
+		<BuildingInfo> <!-- Granary -->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
 			<Type>BUILDING_GRANARY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -2976,7 +2976,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Cordoban Noria-->
+		<BuildingInfo> <!-- Cordoban Noria -->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
 			<Type>BUILDING_CORDOBAN_NORIA</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -3164,7 +3164,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Folwark-->
+		<BuildingInfo> <!-- Folwark -->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
 			<Type>BUILDING_POLISH_FOLWARK</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -3351,7 +3351,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Aqueduct-->
+		<BuildingInfo> <!-- Aqueduct -->
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
 			<Type>BUILDING_AQUEDUCT</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -3881,7 +3881,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Trading Post-->
+		<BuildingInfo> <!-- Trading Post -->
 			<BuildingClass>BUILDINGCLASS_LIGHTHOUSE</BuildingClass>
 			<Type>BUILDING_VIKING_TRADING_POST</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -4069,7 +4069,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- River Wharf-->
+		<BuildingInfo> <!-- River Wharf -->
 			<BuildingClass>BUILDINGCLASS_WHARF</BuildingClass>
 			<Type>BUILDING_WHARF</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -4415,7 +4415,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-                <BuildingInfo> <!-- Feitoria-->
+                <BuildingInfo> <!-- Feitoria -->
 			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
 			<Type>BUILDING_PORTUGAL_FEITORIA</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -4593,7 +4593,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Custom House-->
+		<BuildingInfo> <!-- Custom House -->
 			<BuildingClass>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClass>
 			<Type>BUILDING_CUSTOM_HOUSE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -4768,7 +4768,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Drydock-->
+		<BuildingInfo> <!-- Drydock -->
 			<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
 			<Type>BUILDING_DRYDOCK</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -4954,7 +4954,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Venice Arsenal-->
+		<BuildingInfo> <!-- Venice Arsenal -->
 			<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
 			<Type>BUILDING_VENICE_ARSENAL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -5139,7 +5139,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Forge-->
+		<BuildingInfo> <!-- Forge -->
 			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
 			<Type>BUILDING_FORGE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -5344,7 +5344,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Guild Hall-->
+		<BuildingInfo> <!-- Guild Hall -->
 			<BuildingClass>BUILDINGCLASS_GUILD_HALL</BuildingClass>
 			<Type>BUILDING_GUILD_HALL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -5530,7 +5530,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Textile Mill-->
+		<BuildingInfo> <!-- Textile Mill -->
 			<BuildingClass>BUILDINGCLASS_TEXTILE_MILL</BuildingClass>
 			<Type>BUILDING_TEXTILE_MILL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -5886,7 +5886,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- University-->
+		<BuildingInfo> <!-- University -->
 			<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
 			<Type>BUILDING_UNIVERSITY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -6072,7 +6072,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Observatory-->
+		<BuildingInfo> <!-- Observatory -->
 			<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
 			<Type>BUILDING_OBSERVATORY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -6250,7 +6250,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Hospital-->
+		<BuildingInfo> <!-- Hospital -->
 			<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
 			<Type>BUILDING_HOSPITAL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -6425,7 +6425,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Theatre-->
+		<BuildingInfo> <!-- Theatre -->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
 			<Type>BUILDING_THEATRE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -6617,7 +6617,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Hippodrome-->
+		<BuildingInfo> <!-- Byzantine Hippodrome -->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
 			<Type>BUILDING_BYZANTINE_HIPPODROME</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -6804,7 +6804,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Opera House-->
+		<BuildingInfo> <!-- Austrian Opera House -->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
 			<Type>BUILDING_AUSTRIAN_OPERA_HOUSE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -7000,7 +7000,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Market-->
+		<BuildingInfo> <!-- Market -->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
 			<Type>BUILDING_MARKET</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -7177,7 +7177,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Caravan House-->
+		<BuildingInfo> <!-- Caravan House -->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
 			<Type>BUILDING_ARABIC_CARAVAN</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -8985,7 +8985,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Apothecary-->
+		<BuildingInfo> <!-- Apothecary -->
 			<BuildingClass>BUILDINGCLASS_APOTHECARY</BuildingClass>
 			<Type>BUILDING_APOTHECARY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -9155,7 +9155,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Bank-->
+		<BuildingInfo> <!-- Bank -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			<Type>BUILDING_BANK</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -9327,7 +9327,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Genoese Mint -->
+		<BuildingInfo> <!-- Genoan Bank -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			<Type>BUILDING_GENOA_BANK</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -9504,7 +9504,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Stock Exchange-->
+		<BuildingInfo> <!-- English Royal Exchange -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
 			<Type>BUILDING_ENGLISH_STOCK_EXCHANGE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -9676,7 +9676,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Courthouse-->
+		<BuildingInfo> <!-- Courthouse -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
 			<Type>BUILDING_COURTHOUSE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -9861,7 +9861,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Veche-->
+		<BuildingInfo> <!-- Kievan Veche -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
 			<Type>BUILDING_KIEV_VECHE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -10047,7 +10047,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Rathaus-->
+		<BuildingInfo> <!-- Rathaus -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
 			<Type>BUILDING_HOLY_ROMAN_RATHAUS</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -10233,7 +10233,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Lithuanian Voivodeship-->
+		<BuildingInfo> <!-- Lithuanian Voivodeship -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
 			<Type>BUILDING_LITHUANIAN_VOIVODESHIP</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -10423,7 +10423,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Dungeon-->
+		<BuildingInfo> <!-- Dungeon -->
 			<BuildingClass>BUILDINGCLASS_DUNGEON</BuildingClass>
 			<Type>BUILDING_DUNGEON</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -10618,7 +10618,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Night Watch-->
+		<BuildingInfo> <!-- Night Watch -->
 			<BuildingClass>BUILDINGCLASS_NIGHT_WATCH</BuildingClass>
 			<Type>BUILDING_NIGHT_WATCH</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -10808,7 +10808,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Levee-->
+		<BuildingInfo> <!-- Levee -->
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
 			<Type>BUILDING_LEVEE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -11157,7 +11157,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Inn-->
+		<BuildingInfo> <!-- Inn -->
 			<BuildingClass>BUILDINGCLASS_INN</BuildingClass>
 			<Type>BUILDING_INN</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -11361,7 +11361,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Coffee House-->
+		<BuildingInfo> <!-- Coffee House -->
 			<BuildingClass>BUILDINGCLASS_COFFEE_HOUSE</BuildingClass>
 			<Type>BUILDING_COFFEE_HOUSE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -11553,7 +11553,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Manor House-->
+		<BuildingInfo> <!-- Manor House -->
 			<BuildingClass>BUILDINGCLASS_MANOR_HOUSE</BuildingClass>
 			<Type>BUILDING_MANOR_HOUSE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -11728,7 +11728,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- French Chateau-->
+		<BuildingInfo> <!-- French Chateau -->
 			<BuildingClass>BUILDINGCLASS_MANOR_HOUSE</BuildingClass>
 			<Type>BUILDING_FRENCH_CHATEAU</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -11911,7 +11911,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Infirmary-->
+		<BuildingInfo> <!-- Infirmary -->
 			<BuildingClass>BUILDINGCLASS_INFIRMARY</BuildingClass>
 			<Type>BUILDING_INFIRMARY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -12440,7 +12440,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Protestant Temple-->
+		<BuildingInfo> <!-- Protestant Temple -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_TEMPLE</BuildingClass>
 			<Type>BUILDING_PROTESTANT_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
@@ -12623,7 +12623,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Protestant School-->
+		<BuildingInfo> <!-- Protestant School -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SCHOOL</BuildingClass>
 			<Type>BUILDING_PROTESTANT_SCHOOL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_SCHOOL</SpecialBuildingType>
@@ -12823,7 +12823,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>		
-		<BuildingInfo> <!-- Protestant Cathedral-->
+		<BuildingInfo> <!-- Protestant Cathedral -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_PROTESTANT_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
@@ -13017,7 +13017,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Protestant Chapel-->
+		<BuildingInfo> <!-- Protestant Chapel -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_CHAPEL</BuildingClass>
 			<Type>BUILDING_PROTESTANT_CHAPEL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CHAPEL</SpecialBuildingType>
@@ -13394,7 +13394,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROTESTANT_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROTESTANT_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_PROTESTANT</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROTESTANT_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_PROTESTANTISM</HolyCity>
 			<ReligionType>RELIGION_PROTESTANTISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
@@ -13577,7 +13577,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Islamic Temple-->
+		<BuildingInfo> <!-- Islamic Temple -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
 			<Type>BUILDING_ISLAMIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
@@ -13760,7 +13760,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Islamic Chapel-->
+		<BuildingInfo> <!-- Islamic Chapel -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CHAPEL</BuildingClass>
 			<Type>BUILDING_ISLAMIC_CHAPEL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CHAPEL</SpecialBuildingType>
@@ -14137,7 +14137,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Islamic School-->
+		<BuildingInfo> <!-- Islamic School -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SCHOOL</BuildingClass>
 			<Type>BUILDING_ISLAMIC_SCHOOL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -14327,7 +14327,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>		
-		<BuildingInfo> <!-- Islamic Madrassa-->
+		<BuildingInfo> <!-- Islamic Madrassa -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_MADRASSA</BuildingClass>
 			<Type>BUILDING_ISLAMIC_MADRASSA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
@@ -14517,7 +14517,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Islamic Shrine-->
+		<BuildingInfo> <!-- Islamic Shrine -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SHRINE</BuildingClass>
 			<Type>BUILDING_ISLAMIC_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -14526,7 +14526,7 @@
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ISLAMIC_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_ISLAM</HolyCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>NONE</StateReligion>
@@ -14709,7 +14709,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Catholic Temple-->
+		<BuildingInfo> <!-- Catholic Temple -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_TEMPLE</BuildingClass>
 			<Type>BUILDING_CATHOLIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
@@ -14892,7 +14892,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Catholic Cathedral-->
+		<BuildingInfo> <!-- Catholic Cathedral -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_CATHOLIC_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
@@ -15086,7 +15086,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Catholic Chapel-->
+		<BuildingInfo> <!-- Catholic Chapel -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CHAPEL</BuildingClass>
 			<Type>BUILDING_CATHOLIC_CHAPEL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CHAPEL</SpecialBuildingType>
@@ -15457,7 +15457,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Catholic Monastery-->
+		<BuildingInfo> <!-- Catholic Monastery -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_MONASTERY</BuildingClass>
 			<Type>BUILDING_CATHOLIC_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
@@ -15828,7 +15828,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Catholic Shrine-->
+		<BuildingInfo> <!-- Catholic Shrine -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SHRINE</BuildingClass>
 			<Type>BUILDING_CATHOLIC_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -15836,8 +15836,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CATHOLIC_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_APOSTOLIC_PALACE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_APOSTOLIC_PALACE</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CATHOLIC_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CATHOLIC_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_CATHOLICISM</HolyCity>
 			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
@@ -16020,7 +16020,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Orthodox Temple-->
+		<BuildingInfo> <!-- Orthodox Temple -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_TEMPLE</BuildingClass>
 			<Type>BUILDING_ORTHODOX_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
@@ -16203,7 +16203,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Orthodox Cathedral-->
+		<BuildingInfo> <!-- Orthodox Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ORTHODOX_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
@@ -16397,7 +16397,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Orthodox Chapel-->
+		<BuildingInfo> <!-- Orthodox Chapel -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_CHAPEL</BuildingClass>
 			<Type>BUILDING_ORTHODOX_CHAPEL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CHAPEL</SpecialBuildingType>
@@ -16768,7 +16768,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Orthodox Monastery-->
+		<BuildingInfo> <!-- Orthodox Monastery -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_MONASTERY</BuildingClass>
 			<Type>BUILDING_ORTHODOX_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
@@ -17139,16 +17139,16 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Orthodox Shrine-->
+		<BuildingInfo> <!-- Orthodox Shrine -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SHRINE</BuildingClass>
 			<Type>BUILDING_ORTHODOX_SHRINE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_HAGIA_SOPHIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HAGIA_SOPHIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORTHODOX_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HAGIA_SOPHIA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_HAGIA_SOPHIA</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORTHODOX_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ORTHODOX_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_ORTHODOXY</HolyCity>
 			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
 			<StateReligion>NONE</StateReligion>
@@ -17331,7 +17331,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Sistine Chapel-->
+		<BuildingInfo> <!-- Sistine Chapel -->
 			<BuildingClass>BUILDINGCLASS_SISTINE_CHAPEL</BuildingClass>
 			<Type>BUILDING_SISTINE_CHAPEL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -17526,7 +17526,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Notre Dame-->
+		<BuildingInfo> <!-- Notre Dame -->
 			<BuildingClass>BUILDINGCLASS_NOTRE_DAME</BuildingClass>
 			<Type>BUILDING_NOTRE_DAME</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -17713,13 +17713,13 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Leaning Tower-->
+		<BuildingInfo> <!-- Leaning Tower -->
 			<BuildingClass>BUILDINGCLASS_LEANING_TOWER</BuildingClass>
 			<Type>BUILDING_LEANING_TOWER</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_LEANING_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LEANING_TOWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_EPIC_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_LEANING_TOWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LEANING_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LEANING_TOWER</MovieDefineTag>
@@ -17902,7 +17902,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Theodosian Walls-->
+		<BuildingInfo> <!-- Theodosian Walls -->
 			<BuildingClass>BUILDINGCLASS_THEODOSIAN_WALLS</BuildingClass>
 			<Type>BUILDING_THEODOSIAN_WALLS</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -18090,7 +18090,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Topkapi Palace-->
+		<BuildingInfo> <!-- Topkapi Palace -->
 			<BuildingClass>BUILDINGCLASS_TOPKAPI_PALACE</BuildingClass>
 			<Type>BUILDING_TOPKAPI_PALACE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -18281,7 +18281,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Shrine of Uppsala-->
+		<BuildingInfo> <!-- Shrine of Uppsala -->
 			<BuildingClass>BUILDINGCLASS_SHRINE_OF_UPPSALA</BuildingClass>
 			<Type>BUILDING_SHRINE_OF_UPPSALA</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -18482,7 +18482,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_THEATRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_THEATRE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GLOBE_THEATRE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_THEATRE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -18667,15 +18667,15 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Hermitage -->
-			<BuildingClass>BUILDINGCLASS_HERMITAGE</BuildingClass>
-			<Type>BUILDING_HERMITAGE</Type>
+		<BuildingInfo> <!-- National Gallery -->
+			<BuildingClass>BUILDINGCLASS_NATIONAL_GALLERY</BuildingClass>
+			<Type>BUILDING_NATIONAL_GALLERY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_HERMITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HERMITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HERMITAGE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NATIONAL_GALLERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_GALLERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_GALLERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HERMITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_GALLERY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -18846,16 +18846,16 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Oxford -->
+		<BuildingInfo> <!-- National University -->
 			<!-- Rhye - start -->
-			<BuildingClass>BUILDINGCLASS_OXFORD_UNIVERSITY</BuildingClass>
-			<Type>BUILDING_OXFORD_UNIVERSITY</Type>
+			<BuildingClass>BUILDINGCLASS_NATIONAL_UNIVERSITY</BuildingClass>
+			<Type>BUILDING_NATIONAL_UNIVERSITY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_OXFORD_UNIVERSITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OXFORD_UNIVERSITY_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<!-- Rhye - end -->
 			<HolyCity>NONE</HolyCity>
@@ -19047,7 +19047,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Heroic Epic-->
+		<BuildingInfo> <!-- Heroic Epic -->
 			<BuildingClass>BUILDINGCLASS_HEROIC_EPIC</BuildingClass>
 			<Type>BUILDING_HEROIC_EPIC</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -19603,7 +19603,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- San Marco -->
+		<BuildingInfo> <!-- San Marco Basilica -->
 			<BuildingClass>BUILDINGCLASS_SAN_MARCO</BuildingClass>
 			<Type>BUILDING_SAN_MARCO</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -19992,7 +19992,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- St Basil-->
+		<BuildingInfo> <!-- St Basil's Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ST_BASIL</BuildingClass>
 			<Type>BUILDING_ST_BASIL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -20565,7 +20565,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!--The Dome of the Rock -->
+		<BuildingInfo> <!-- The Dome of the Rock -->
 			<BuildingClass>BUILDINGCLASS_DOME_ROCK</BuildingClass>
 			<Type>BUILDING_DOME_ROCK</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -21499,7 +21499,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Corp 1-->
+		<BuildingInfo> <!-- Knights Hospitaller -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_1</BuildingClass>
 			<Type>BUILDING_CORPORATION_1</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -21539,8 +21539,8 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
+			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>0</bTeamShare>
@@ -21685,7 +21685,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Knights Templar -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_2</BuildingClass>
 			<Type>BUILDING_CORPORATION_2</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -21725,8 +21725,8 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
+			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>0</bTeamShare>
@@ -21871,7 +21871,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Teutonic Knights -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_3</BuildingClass>
 			<Type>BUILDING_CORPORATION_3</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -21911,8 +21911,8 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
+			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>0</bTeamShare>
@@ -22057,7 +22057,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Hanseatic League -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_4</BuildingClass>
 			<Type>BUILDING_CORPORATION_4</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -22244,7 +22244,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Medici Banks -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_5</BuildingClass>
 			<Type>BUILDING_CORPORATION_5</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -22430,7 +22430,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Augsburg Families -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_6</BuildingClass>
 			<Type>BUILDING_CORPORATION_6</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -22616,7 +22616,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Bank of St. George -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_7</BuildingClass>
 			<Type>BUILDING_CORPORATION_7</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -23012,7 +23012,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Gardens of Al-Andalus -->
 			<BuildingClass>BUILDINGCLASS_GARDENS_AL_ANDALUS</BuildingClass>
 			<Type>BUILDING_GARDENS_AL_ANDALUS</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -23197,7 +23197,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Magellan's Voyage -->
 			<BuildingClass>BUILDINGCLASS_MAGELLANS_VOYAGE</BuildingClass>
 			<Type>BUILDING_MAGELLANS_VOYAGE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -23391,7 +23391,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Marco Polo's Embassy -->
 			<BuildingClass>BUILDINGCLASS_MARCO_POLO</BuildingClass>
 			<Type>BUILDING_MARCO_POLO</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -23583,7 +23583,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Palacio de Escorial -->
 			<BuildingClass>BUILDINGCLASS_ESCORIAL</BuildingClass>
 			<Type>BUILDING_ESCORIAL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -23769,16 +23769,16 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Temple Mount -->
-			<BuildingClass>BUILDINGCLASS_TEMPLE_MOUNT</BuildingClass>
-			<Type>BUILDING_TEMPLE_MOUNT</Type>
+		<BuildingInfo> <!-- Kazimierz -->
+			<BuildingClass>BUILDINGCLASS_KAZIMIERZ</BuildingClass>
+			<Type>BUILDING_KAZIMIERZ</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_MOUNT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_MOUNT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_MOUNT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KAZIMIERZ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KAZIMIERZ_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KAZIMIERZ_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_MOUNT</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TEMPLE_MOUNT</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KAZIMIERZ</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KAZIMIERZ</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
@@ -23805,8 +23805,8 @@
 			<FreeBuilding>BUILDINGCLASS_JEWISH_QUARTER</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
+			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>1</bTeamShare>
@@ -23971,7 +23971,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo><!-- Belem Tower -->
+		<BuildingInfo> <!-- Belem Tower -->
 			<BuildingClass>BUILDINGCLASS_BELEM_TOWER</BuildingClass>
 			<Type>BUILDING_BELEM_TOWER</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -24174,7 +24174,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo><!-- Golden Bull -->
+		<BuildingInfo> <!-- Golden Bull -->
 			<BuildingClass>BUILDINGCLASS_GOLDEN_BULL</BuildingClass>
 			<Type>BUILDING_GOLDEN_BULL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -24361,7 +24361,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo><!--Kalmar Castle-->
+		<BuildingInfo> <!-- Kalmar Castle -->
 			<BuildingClass>BUILDINGCLASS_KALMAR_CASTLE</BuildingClass>
 			<Type>BUILDING_KALMAR_CASTLE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -24549,7 +24549,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!--Palais des Papes-->
+		<BuildingInfo> <!-- Palais des Papes -->
 			<BuildingClass>BUILDINGCLASS_PALAIS_PAPES</BuildingClass>
 			<Type>BUILDING_PALAIS_PAPES</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -24736,7 +24736,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo><!--Tomb of Al Khalid-->
+		<BuildingInfo> <!-- Tomb of Al Khalid -->
 			<BuildingClass>BUILDINGCLASS_TOMB_KHAL</BuildingClass>
 			<Type>BUILDING_TOMB_KHAL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -24925,7 +24925,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Stephansdom-->
+		<BuildingInfo> <!-- Stephansdom -->
 			<BuildingClass>BUILDINGCLASS_STEPHANSDOM</BuildingClass>
 			<Type>BUILDING_STEPHANSDOM</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -25681,7 +25681,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo><!-- Amsterdam Beurs-->
+		<BuildingInfo> <!-- Amsterdam Beurs -->
 			<BuildingClass>BUILDINGCLASS_BEURS</BuildingClass>
 			<Type>BUILDING_BEURS</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -25887,8 +25887,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo>
-			<!-- Copernicus Observatory-->
+		<BuildingInfo> <!-- Copernicus Observatory -->
 			<BuildingClass>BUILDINGCLASS_COPERNICUS</BuildingClass>
 			<Type>BUILDING_COPERNICUS</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -26063,7 +26062,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Palazzo San Giorgio-->
+		<BuildingInfo> <!-- Palazzo San Giorgio -->
 			<BuildingClass>BUILDINGCLASS_SAN_GIORGIO</BuildingClass>
 			<Type>BUILDING_SAN_GIORGIO</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -26815,12 +26814,12 @@
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
     <!--******************THESE ALWAYS AT THE END***********************-->
-		<BuildingInfo> <!--National Epic-->
+		<BuildingInfo> <!-- Triumphal Arch -->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
 			<Type>BUILDING_NATIONAL_EPIC</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_NATIONAL_EPIC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TRIUMPHAL_ARCH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TRIUMPHAL_ARCH_PEDIA</Civilopedia>
 			<!-- Rhye -->
 			<Strategy>TXT_KEY_BUILDING_TAJ_MAHAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -26856,7 +26855,7 @@
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
 			<!-- Rhye -->
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
@@ -27005,7 +27004,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-		<BuildingInfo> <!--Plague-->
+		<BuildingInfo> <!-- Plague -->
 			<BuildingClass>BUILDINGCLASS_PLAGUE</BuildingClass>
 			<Type>BUILDING_PLAGUE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>

@@ -128,7 +128,7 @@ EndPlayer
 BeginPlayer
 	Team=1
 	LeaderType=LEADER_CHARLEMAGNE
-	CivType=CIVILIZATION_FRANKIA
+	CivType=CIVILIZATION_FRANCE
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
@@ -250,7 +250,7 @@ EndPlayer
 BeginPlayer
 	Team=18
 	LeaderType=LEADER_MEHMED
-	CivType=CIVILIZATION_TURKEY
+	CivType=CIVILIZATION_OTTOMAN
 	PlayableCiv=1
 	StateReligion=RELIGION_ISLAM
 	Handicap=HANDICAP_PRINCE
@@ -22161,14 +22161,21 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_SWISS_PIKEMAN, UnitOwner=22
+		UnitType=UNIT_GUISARME, UnitOwner=22
 		Damage=0
 		Level=1, Experience=5
 		FacingDirection=4
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARBALEST, UnitOwner=22
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=22
+		Damage=0
+		Level=1, Experience=5
+		FacingDirection=4
+		UnitAIType=UNITAI_COUNTER
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=22
 		Damage=0
 		Level=1, Experience=5
 		FacingDirection=4

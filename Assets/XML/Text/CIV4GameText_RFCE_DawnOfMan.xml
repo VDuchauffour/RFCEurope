@@ -3,7 +3,7 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text - DiploText -->
+<!-- Game Text - RFCE Dawn of Man -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_RHYES_DAWN_OF_MAN_TEXT</Tag>
@@ -23,11 +23,9 @@
 		<Spanish>RHYE'S AND FALL OF EUROPE</Spanish>
 		<Russian>RHYE'S AND FALL OF EUROPE</Russian>
 	</TEXT>
-	
 		<!-- Civ Specific Dawn of Man -->
 		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->
 		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc -->
-	
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0</Tag>
 		<English>It is the year %s1_year. You, %s3_leader, are the sole ruler of the %s2_civ people. Your civilization is the successor of the Roman Empire and you still have a mighty empire to rule over, but be aware: huge riches attract many enemies. Various threats are rising, especially in the east.</English>
@@ -222,4 +220,5 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+		<!-- Civ Specific Dawn of Man -->
 </Civ4GameText>

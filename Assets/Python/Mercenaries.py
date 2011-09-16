@@ -95,6 +95,8 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, [xml.iP_Bavaria, xml.iP_Austria, xml.iP_Swabia, xml.iP_Burgundy], [], 50 ],
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, [xml.iP_Bavaria, xml.iP_Austria, xml.iP_Swabia, xml.iP_Burgundy], [], 50 ],
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, [xml.iP_Bavaria, xml.iP_Austria, xml.iP_Swabia, xml.iP_Burgundy], [], 50 ],
+				[xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 413, [xml.iP_Latium], [], 30 ],
+				[xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 413, [xml.iP_Latium], [], 30 ],
                 [xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 128, 267, [xml.iP_Constantinople], [], 50 ],
                 [xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 128, 267, [xml.iP_Constantinople], [], 50 ],
                 [xml.iHuscarl, "TXT_KEY_MERC_DANISH", 75, 200, xml.lRegionScandinavia, [], 50 ],
@@ -109,7 +111,7 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
 ### A few Parameters for Mercs only:
 # Promotions and their odds, higher promotions have very low probability, leaders and navigation don't appear
 # combat 1 - 5, cover (vs archer), shock (vs heavy infantry), formation (vs heavy horse), charge (vs siege), ambush (vs light cav), feint (vs polearm), amphibious, march (movement heal), medic 1-2, 
-# gurilla (hill defense) 1-3, woodsman 1-3, city raider 1-3, garrason 1-3, drill 1-4, barrage (collateral) 1-3, accuracy (more bombard), flanking (vs siege) 1-2, sentry (vision), mobility (movement), 
+# gurilla (hill defense) 1-3, woodsman 1-3, city raider 1-3, garrison 1-3, drill 1-4, barrage (collateral) 1-3, accuracy (more bombard), flanking (vs siege) 1-2, sentry (vision), mobility (movement), 
 # navigation 1-2, leader, leadership (more XP), tactic (withdraw), commando (enemy roads), combat 6, morale (movement), medic 3, merc 
 lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 60, 40, 20, 50, 20, 10, 40, 20, 80, 50, 30, 80, 50, 30, 80, 40, 10, 60, 30, 10, 60, 40, 10,  5, 60, 40, 10, 60, 50, 30, 20, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 # The way promotions would affect the cost of the mercenary (percentage wise)
