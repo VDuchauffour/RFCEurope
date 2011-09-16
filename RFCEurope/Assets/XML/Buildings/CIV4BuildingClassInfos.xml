@@ -550,6 +550,18 @@
 			<DefaultBuilding>BUILDING_JEWISH_QUARTER</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
+		<BuildingClassInfo><!-- JEWISH_SHRINE -->
+			<Type>BUILDINGCLASS_JEWISH_SHRINE</Type>
+			<Description>TXT_KEY_BUILDING_JEWISH_SHRINE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_JEWISH_SHRINE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<BuildingClassInfo><!-- PROTESTANT_TEMPLE -->
 			<Type>BUILDINGCLASS_PROTESTANT_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Description>
@@ -913,16 +925,16 @@
 			<DefaultBuilding>BUILDING_SUMMER_PALACE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- NATIONAL_EPIC -->
-			<Type>BUILDINGCLASS_NATIONAL_EPIC</Type>
-			<Description>TXT_KEY_BUILDING_NATIONAL_EPIC</Description>
+		<BuildingClassInfo><!-- TRIUMPHAL_ARCH -->
+			<Type>BUILDINGCLASS_TRIUMPHAL_ARCH</Type>
+			<Description>TXT_KEY_BUILDING_TRIUMPHAL_ARCH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_NATIONAL_EPIC</DefaultBuilding>
+			<DefaultBuilding>BUILDING_TRIUMPHAL_ARCH</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- TOWER OF LONDON -->
@@ -995,6 +1007,18 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>1</bMonument>
 			<DefaultBuilding>BUILDING_HEROIC_EPIC</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- NATIONAL_EPIC -->
+			<Type>BUILDINGCLASS_NATIONAL_EPIC</Type>
+			<Description>TXT_KEY_BUILDING_NATIONAL_EPIC</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>1</bMonument>
+			<DefaultBuilding>BUILDING_NATIONAL_EPIC</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<!--******************* NATIONAL WONDERS END *******************-->
