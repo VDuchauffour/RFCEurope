@@ -95,8 +95,6 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, [xml.iP_Bavaria, xml.iP_Austria, xml.iP_Swabia, xml.iP_Burgundy], [], 50 ],
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, [xml.iP_Bavaria, xml.iP_Austria, xml.iP_Swabia, xml.iP_Burgundy], [], 50 ],
                 [xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 313, [xml.iP_Bavaria, xml.iP_Austria, xml.iP_Swabia, xml.iP_Burgundy], [], 50 ],
-				[xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 413, [xml.iP_Latium], [], 30 ],
-				[xml.iSwissPikeman, "TXT_KEY_MERC_SWISS", 233, 413, [xml.iP_Latium], [], 30 ],
                 [xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 128, 267, [xml.iP_Constantinople], [], 50 ],
                 [xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 128, 267, [xml.iP_Constantinople], [], 50 ],
                 [xml.iHuscarl, "TXT_KEY_MERC_DANISH", 75, 200, xml.lRegionScandinavia, [], 50 ],
@@ -106,6 +104,14 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iAlmogavar, "TXT_KEY_MERC_ARAGON", 188, 267, [xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia], [], 50 ],
                 [xml.iBlackGuard, "TXT_KEY_MERC_MOROCCO", 375, 430, [xml.iP_Morocco, xml.iP_Oran, xml.iP_Tetouan, xml.iP_Marrakesh], [], 50 ],
                 [xml.iBlackGuard, "TXT_KEY_MERC_MOROCCO", 375, 430, [xml.iP_Morocco, xml.iP_Oran, xml.iP_Tetouan, xml.iP_Marrakesh], [], 50 ],
+                [xml.iHackapell, "TXT_KEY_MERC_FINNISH", 359, 500, [xml.iP_Finland], [], 50 ],
+                [xml.iHackapell, "TXT_KEY_MERC_FINNISH", 359, 500, [xml.iP_Finland], [], 50 ],
+                [xml.iReiter, "TXT_KEY_MERC_GERMAN", 350, 400, [xml.iP_Silesia, xml.iP_LesserPoland, xml.iP_Masovia, xml.iP_GreaterPoland, xml.iP_Pomerania], [], 50 ],
+                [xml.iReiter, "TXT_KEY_MERC_GERMAN", 350, 400, [xml.iP_Silesia, xml.iP_LesserPoland, xml.iP_Masovia, xml.iP_GreaterPoland, xml.iP_Pomerania], [], 50 ],
+                [xml.iZaporozhianCossack, "TXT_KEY_MERC_ZAPOROZHIAN", 300, 500, [xml.iP_Zaporizhia, xml.iP_Kiev, xml.iP_Sloboda], [], 50 ],
+                [xml.iZaporozhianCossack, "TXT_KEY_MERC_ZAPOROZHIAN", 300, 500, [xml.iP_Zaporizhia, xml.iP_Kiev, xml.iP_Sloboda], [], 50 ],
+                [xml.iDonCossack, "TXT_KEY_MERC_KUBAN", 350, 500, [xml.iP_Kuban, xml.iP_Donets], [], 50 ],
+                [xml.iDonCossack, "TXT_KEY_MERC_KUBAN", 350, 500, [xml.iP_Kuban, xml.iP_Donets], [], 50 ],
                 ]
 
 ### A few Parameters for Mercs only:

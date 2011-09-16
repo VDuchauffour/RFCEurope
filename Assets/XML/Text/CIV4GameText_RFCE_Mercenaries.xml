@@ -300,6 +300,42 @@
 		<Russian>Moroccan</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_GERMAN</Tag>
+		<English>German</English>
+		<French>German</French>
+		<German>German</German>
+		<Italian>German</Italian>
+		<Spanish>German</Spanish>
+		<Russian>German</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_FINNISH</Tag>
+		<English>Finnish</English>
+		<French>Finnish</French>
+		<German>Finnish</German>
+		<Italian>Finnish</Italian>
+		<Spanish>Finnish</Spanish>
+		<Russian>Finnish</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_DON</Tag>
+		<English>Kuban</English>
+		<French>Kuban</French>
+		<German>Kuban</German>
+		<Italian>Kuban</Italian>
+		<Spanish>Kuban</Spanish>
+		<Russian>Kuban</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_ZAPOROZHIAN</Tag>
+		<English>Zaporozhian</English>
+		<French>Zaporozhian</French>
+		<German>Zaporozhian</German>
+		<Italian>Zaporozhian</Italian>
+		<Spanish>Zaporozhian</Spanish>
+		<Russian>Zaporozhian</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Knights Templar</French>
@@ -445,6 +481,78 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_GUARD_PEDIA</Tag>
 		<English>[TAB]The Black Guard were the corps of African slave-soldiers assembled by sultan Moulay Ismail of Morocco. The Black Guard descended from black captives brought to Morocco from sub-Saharan Africa, who were settled in a special colony and given wives; their male offspring would be pressed into military careers at the age of sixteen. Considered more reliable than Arab or Berber warriors because of their lack of tribal loyalties, Ismail's black soldiers formed the bulk of his standing army and numbered 150,000 at their peak.[PARAGRAPH:1]The Black Guard were charged with fighting Ismail's campaigns against the European-controlled fortress enclaves dotting his empire's coast and with patrolling Morocco's unstable countryside: They crushed rebellions against Ismail's rule not only by Moroccan Berber clans but also by Ismail's seditious sons, who defected from service as his provincial governors to insurrection as would-be usurpers of his throne.[PARAGRAPH:1]Moulay Ismail always went about his court surrounded by a bodyguard of eighty black slave-soldiers, with muskets and scimitars at the ready in case of any attempt on the sultan's life. At his throne, Ismail was attended by a slave charged with twirling a parasol above the sultan at all times (a legend says that on at least one occasion, Ismail pulled out his sword and murdered an attendant who had allowed the sun to briefly fall upon his skin). Two more slaves fanned the flies away from his face, while a third held a napkin beneath his chin to collect his spittle. Though the Black Guard were fiercely loyal, they remained just as vulnerable to their commander's fits of rage as his European slaves and Moorish subjects.[PARAGRAPH:1]Despite endless civil wars and civil slaughter, the Black Guard remained brutally loyal and disciplined through the turmoil of Ismail's reign. More than any other factor did they enable the sultan to remain on Morocco's throne for half a century.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HACKAPELL</Tag>
+		<English>Hackapell</English>
+		<French>Hackapell</French>
+		<German>Hackapell</German>
+		<Italian>Hackapell</Italian>
+		<Spanish>Hackapell</Spanish>
+		<Russian>Hackapell</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HACKAPELL_PEDIA</Tag>
+		<English>.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REITER</Tag>
+		<English>Black Rider</English>
+		<French>Black Rider</French>
+		<German>Black Rider</German>
+		<Italian>Black Rider</Italian>
+		<Spanish>Black Rider</Spanish>
+		<Russian>Black Rider</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REITER_PEDIA</Tag>
+		<English>.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK</Tag>
+		<English>Zaporozhian Cossack</English>
+		<French>Zaporozhian Cossack</French>
+		<German>Zaporozhian Cossack</German>
+		<Italian>Zaporozhian Cossack</Italian>
+		<Spanish>Zaporozhian Cossack</Spanish>
+		<Russian>Zaporozhian Cossack</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK_PEDIA</Tag>
+		<English>.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DON_COSSACK</Tag>
+		<English>Don Cossack</English>
+		<French>Don Cossack</French>
+		<German>Don Cossack</German>
+		<Italian>Don Cossack</Italian>
+		<Spanish>Don Cossack</Spanish>
+		<Russian>Don Cossack</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DON_COSSACK_PEDIA</Tag>
+		<English>.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

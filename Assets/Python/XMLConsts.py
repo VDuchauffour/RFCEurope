@@ -334,6 +334,10 @@ iVarangianGuard= 97
 iHuscarl= 98
 iAlmogavar= 99
 iBlackGuard= 100
+iHackapell= 101
+iReiter= 102
+iZaporozhianCossack= 103
+iDonCossack= 104
 
 iProsecutorClass = 62
 
