@@ -16,7 +16,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PLAGUE_SPREAD_CITY</Tag>
 		<English>Plague has spread in</English>
-		<French>La peste se r&#233;pand dans la ville : </French>
+		<French>La peste se r&#233;pand dans la ville: </French>
 		<German>Die Pest breitet sich aus, diesmal in</German>
 		<Italian>La peste si &#232; diffusa a</Italian>
 		<Spanish>La peste se ha extendido por</Spanish>
@@ -25,7 +25,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PLAGUE_PROCESS_CITY</Tag>
 		<English>Plague is killing people in</English>
-		<French>La peste tue des gens dans la ville : </French>
+		<French>La peste tue des gens dans la ville: </French>
 		<German>Die Pest fordert Menschenopfer in</German>
 		<Italian>La peste sta uccidendo gente a</Italian>
 		<Spanish>La peste est&#225; matando gente en</Spanish>

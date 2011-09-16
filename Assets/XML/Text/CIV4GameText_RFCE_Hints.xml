@@ -219,7 +219,7 @@
 		<German>Die Kombination von Polizeistaat und Meinungsfreiheit ist keine gute Idee.</German>
 		<Italian>Combinare lo stato di polizia con la libert&#224; di parola non &#232; una buona idea.</Italian>
 		<Spanish>Combinar Estado policial y Libertad de expresi&#243;n no es una buena idea.</Spanish>
-		<Russian>&#202;&#238;&#236;&#225;&#232;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#232;&#229; &#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#238;&#227;&#238; &#199;&#224;&#234;&#238;&#237;&#224; &#232; &#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#233; &#208;&#229;&#235;&#232;&#227;&#232;&#232;  - &#237;&#229; &#245;&#238;&#240;&#238;&#248;&#224;&#255; &#232;&#228;&#229;&#255;.</Russian>
+		<Russian>&#202;&#238;&#236;&#225;&#232;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#232;&#229; &#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#238;&#227;&#238; &#199;&#224;&#234;&#238;&#237;&#224; &#232; &#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#233; &#208;&#229;&#235;&#232;&#227;&#232;&#232; - &#237;&#229; &#245;&#238;&#240;&#238;&#248;&#224;&#255; &#232;&#228;&#229;&#255;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_25</Tag>
@@ -980,7 +980,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_50</Tag>
 		<English>You can group move all units on the same tile by a [ALT + RIGHT-CLICK] on the destination...</English>
-		<French>Pour regrouper et d&#233;placer toutes les unit&#233;s sur la m&#234;me case, appuyez sur touche [ALT]  et faites un [CLIC DROIT] sur la destination.</French>
+		<French>Pour regrouper et d&#233;placer toutes les unit&#233;s sur la m&#234;me case, appuyez sur touche [ALT] et faites un [CLIC DROIT] sur la destination.</French>
 		<German>Sie k&#246;nnen alle Einheiten eines Feldes mit [ALT + RECHTSKLICK] auf die gew&#252;nschte Position bewegen.</German>
 		<Italian>Puoi muovere un gruppo di unit&#224; sulla stessa casella con [ALT + PULSANTE DESTRO] sulla destinazione...</Italian>
 		<Spanish>Se pueden mover en grupo todas las unidades de la misma casilla pulsando [ALT + CLIC DERECHO] en el lugar de destino...</Spanish>

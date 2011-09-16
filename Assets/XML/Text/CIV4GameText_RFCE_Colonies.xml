@@ -7,11 +7,11 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PREREQ_BONUS</Tag>
-		<English> [ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
-		<French> [ICON_BULLET]Requiert [LINK=literal]%s1_Bonus[\LINK] </French>
+		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
+		<French>[ICON_BULLET]Requiert [LINK=literal]%s1_Bonus[\LINK] </French>
 		<German>[ICON_BULLET]Ben&#246;tigt [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
-		<Spanish>[ICON_BULLET]Requiere  [LINK=literal]%s1_Bonus [\LINK] </Spanish>
+		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
 		<Russian>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </Russian>
 	</TEXT>	
 	<TEXT>
@@ -20,7 +20,7 @@
 		<French>[ICON_BULLET]Requiert [LINK=literal]%s1_Bonus[\LINK] </French>
 		<German>[ICON_BULLET]Ben&#246;tigt [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
-		<Spanish>[ICON_BULLET]Requiere  [LINK=literal]%s1_Bonus [\LINK] </Spanish>
+		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
 		<Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
@@ -30,7 +30,7 @@
 		<German> [SPACE] (%D1_Mod) </German>
 		<Italian> [SPACE] (%D1_Mod) </Italian>
 		<Spanish> [SPACE] (%D1_Mod) </Spanish>
-		<Russian>[SPACE] (%D1_Mod)</Russian>
+		<Russian> [SPACE] (%D1_Mod) </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
@@ -48,7 +48,7 @@
 		<German>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Italian>
 		<Spanish>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Spanish>
-		<Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK]</Russian>
+		<Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_TRADING_COMPANY</Tag>

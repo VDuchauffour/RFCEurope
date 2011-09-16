@@ -7,12 +7,12 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_RHYES_DAWN_OF_MAN_TEXT</Tag>
-		<English>The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
-		<French>Le soleil se l&#232;ve sur l'an %s1_year. Les %s2_civ sont pr&#234;ts &#224; s'installer et &#224; fonder votre premi&#232;re ville. [NEWLINE][NEWLINE]%s3_leader, votre peuple vous a confi&#233; le pouvoir absolu et s'en remet &#224; vous pour b&#226;tir une civilisation qui r&#233;sistera &#224; l'&#233;preuve du temps !</French>
-		<German>Die Sonne erhellt das Jahr %s1_year. Das %s2:3_civ Volk ist bereit, sich niederzulassen und Eure erste Stadt zu gr&#252;nden. [NEWLINE][NEWLINE]%s3_leader, Euer Volk hat Euch absolute Macht verliehen und vertraut darauf, dass Ihr eine Zivilisation errichtet, welche die Zeit &#252;berdauern wird!</German>
-		<Italian>Il sole sorge nell'anno %s1_year. La popolazione %s2:2_civ &#232; infine pronta a stabilirsi e a fondare la tua prima citt&#224;. [NEWLINE][NEWLINE]%s3_leader, il tuo popolo ti ha conferito potere assoluto, credendo che tu possa sviluppare una civilt&#224; in grado di resistere alle prove del tempo!</Italian>
-		<Spanish>El sol se alza en el a&#241;o %s1_year. Las gentes del %s2_civ est&#225;n listas para asentarse y fundar vuestra primera ciudad. [NEWLINE][NEWLINE]%s3_leader, vuestro pueblo os ha conferido poder absoluto, confiando en que pod&#225;is desarrollar una civilizaci&#243;n que supere los retos del tiempo.</Spanish>
-		<Russian>&#209;&#238;&#235;&#237;&#246;&#229; &#226;&#238;&#241;&#245;&#238;&#228;&#232;&#242; &#226; %s1_year. %s2_civ &#235;&#254;&#228;&#232; &#227;&#238;&#242;&#238;&#226;&#251; &#231;&#224;&#241;&#229;&#235;&#232;&#242;&#252;&#241;&#255; &#232; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#252; &#226;&#224;&#248; &#239;&#229;&#240;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228;. [NEWLINE][NEWLINE]%s3_leader, &#226;&#224;&#248;&#232; &#235;&#254;&#228;&#232; &#237;&#224;&#228;&#229;&#235;&#232;&#235;&#232; &#226;&#241;&#229;&#226;&#235;&#224;&#241;&#242;&#232;&#229;&#236; &#226;&#224;&#241;, &#228;&#238;&#226;&#229;&#240;&#232;&#226; &#242;&#238;, &#247;&#242;&#238; &#226;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#242;&#252; &#214;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#254;, &#247;&#242;&#238;&#225;&#251; &#226;&#251;&#228;&#229;&#240;&#230;&#224;&#242;&#252; &#232;&#241;&#239;&#251;&#242;&#224;&#237;&#232;&#229; &#226;&#240;&#229;&#236;&#229;&#237;&#229;&#236;!</Russian>
+		<English>The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<French>Le soleil se l&#232;ve sur l'an %s1_year. Les %s2_civ sont pr&#234;ts &#224; s'installer et &#224; fonder votre premi&#232;re ville.[NEWLINE][NEWLINE]%s3_leader, votre peuple vous a confi&#233; le pouvoir absolu et s'en remet &#224; vous pour b&#226;tir une civilisation qui r&#233;sistera &#224; l'&#233;preuve du temps !</French>
+		<German>Die Sonne erhellt das Jahr %s1_year. Das %s2:3_civ Volk ist bereit, sich niederzulassen und Eure erste Stadt zu gr&#252;nden.[NEWLINE][NEWLINE]%s3_leader, Euer Volk hat Euch absolute Macht verliehen und vertraut darauf, dass Ihr eine Zivilisation errichtet, welche die Zeit &#252;berdauern wird!</German>
+		<Italian>Il sole sorge nell'anno %s1_year. La popolazione %s2:2_civ &#232; infine pronta a stabilirsi e a fondare la tua prima citt&#224;.[NEWLINE][NEWLINE]%s3_leader, il tuo popolo ti ha conferito potere assoluto, credendo che tu possa sviluppare una civilt&#224; in grado di resistere alle prove del tempo!</Italian>
+		<Spanish>El sol se alza en el a&#241;o %s1_year. Las gentes del %s2_civ est&#225;n listas para asentarse y fundar vuestra primera ciudad.[NEWLINE][NEWLINE]%s3_leader, vuestro pueblo os ha conferido poder absoluto, confiando en que pod&#225;is desarrollar una civilizaci&#243;n que supere los retos del tiempo.</Spanish>
+		<Russian>&#209;&#238;&#235;&#237;&#246;&#229; &#226;&#238;&#241;&#245;&#238;&#228;&#232;&#242; &#226; %s1_year. %s2_civ &#235;&#254;&#228;&#232; &#227;&#238;&#242;&#238;&#226;&#251; &#231;&#224;&#241;&#229;&#235;&#232;&#242;&#252;&#241;&#255; &#232; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#252; &#226;&#224;&#248; &#239;&#229;&#240;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228;.[NEWLINE][NEWLINE]%s3_leader, &#226;&#224;&#248;&#232; &#235;&#254;&#228;&#232; &#237;&#224;&#228;&#229;&#235;&#232;&#235;&#232; &#226;&#241;&#229;&#226;&#235;&#224;&#241;&#242;&#232;&#229;&#236; &#226;&#224;&#241;, &#228;&#238;&#226;&#229;&#240;&#232;&#226; &#242;&#238;, &#247;&#242;&#238; &#226;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#242;&#252; &#214;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#254;, &#247;&#242;&#238;&#225;&#251; &#226;&#251;&#228;&#229;&#240;&#230;&#224;&#242;&#252; &#232;&#241;&#239;&#251;&#242;&#224;&#237;&#232;&#229; &#226;&#240;&#229;&#236;&#229;&#237;&#229;&#236;!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
@@ -37,7 +37,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_1</Tag>
-		<English>France: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>France: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -46,7 +46,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_2</Tag>
-		<English>Arabia: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Arabia: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -55,7 +55,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_3</Tag>
-		<English>Bulgaria: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Bulgaria: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -64,7 +64,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_4</Tag>
-		<English>Cordoba: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Cordoba: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -73,7 +73,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_5</Tag>
-		<English>Norse: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Norse: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -82,7 +82,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_6</Tag>
-		<English>Venezia: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Venezia: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_7</Tag>
-		<English>Burgundy: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Burgundy: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -100,7 +100,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_8</Tag>
-		<English>Germany: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Germany: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -109,7 +109,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_9</Tag>
-		<English>Kiev: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Kiev: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -118,7 +118,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_10</Tag>
-		<English>Hungary: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Hungary: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -127,7 +127,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_11</Tag>
-		<English>Spain: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Spain: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -136,7 +136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_12</Tag>
-		<English>Poland: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Poland: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -145,21 +145,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_13</Tag>
-		<English>Genoa: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Genoa: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT><TEXT>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_14</Tag>
-		<English>England: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>England: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT><TEXT>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_15</Tag>
 		<English>In 1139, Portugal is a county that breaks the family ties with Leon and declares its independence, creating the Kingdom of Portugal. Now it is time to proceed with the reconquista to the south and prepare to expand beyond the Iberian Peninsula.</English>
 		<French>.</French>
@@ -167,15 +169,17 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT><TEXT>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_16</Tag>
-		<English>Lithuania: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Lithuania: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT><TEXT>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_17</Tag>
 		<English>Austria: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
@@ -186,7 +190,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_18</Tag>
-		<English>Ottomans: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Ottomans: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -195,7 +199,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_19</Tag>
-		<English>Moscow: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Moscow: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -204,7 +208,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_20</Tag>
-		<English>Sweden: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>Sweden: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
