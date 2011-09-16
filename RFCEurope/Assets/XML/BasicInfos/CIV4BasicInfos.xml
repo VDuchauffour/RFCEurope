@@ -33,6 +33,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_STABILITY_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
+			<Type>CONCEPT_GOLDEN_AGE</Type>
+			<Description>TXT_KEY_CONCEPT_GOLDEN_AGE</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GOLDEN_AGE_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
 			<Type>CONCEPT_PLAGUE</Type>
 			<Description>TXT_KEY_CONCEPT_PLAGUE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_PLAGUE_PEDIA</Civilopedia>

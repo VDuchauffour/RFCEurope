@@ -17,7 +17,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Palace.dds,Art/Interface/Buttons/Buildings_Atlas.dds,6,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREAT_PALACE</Type>
+			<Type>ART_DEF_BUILDING_SUMMER_PALACE</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>0.25</fScale>
@@ -969,16 +969,6 @@
 			<Button>Art/Interface/Buttons/Buildings/Catholic Scriptorium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CATHOLIC_SHRINE</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.25</fScale>
-			<fInterfaceScale>0.56</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Shrine/hindu_shrine.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Shrine_Hindu.dds,Art/Interface/Buttons/Buildings_Atlas.dds,7,12</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_TEMPLE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
@@ -1059,7 +1049,7 @@
 			<Button>Art/Interface/Buttons/Buildings/OrthodoxMonastery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TEMPLE_MOUNT</Type>
+			<Type>ART_DEF_BUILDING_KAZIMIERZ</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.4</fScale>
@@ -1110,7 +1100,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Archery Range.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAGIA_SOPHIA</Type>
+			<Type>ART_DEF_BUILDING_ORTHODOX_SHRINE</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -1120,7 +1110,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/HagiaSophia.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_APOSTOLIC_PALACE</Type>
+			<Type>ART_DEF_BUILDING_CATHOLIC_SHRINE</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.28</fScale>
@@ -1200,7 +1190,7 @@
 			<Button>Art/Interface/Buttons/Wonders/AsenShrine_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GLOBE_THEATRE</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_THEATRE</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -1210,7 +1200,7 @@
 			<Button>Art/Interface/Buttons/Buildings/GlobeTheatre.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HERMITAGE</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_GALLERY</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -1220,7 +1210,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Hermitage.dds,Art/Interface/Buttons/Buildings_Atlas.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OXFORD_UNIVERSITY</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_UNIVERSITY</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.83</fScale>

@@ -55,7 +55,7 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_FRANKIA</Type>
+			<Type>ART_DEF_CIVILIZATION_FRANCE</Type>
 			<Button>Art/Interface/Buttons/Civilizations/France.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_3FleurDeLis2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
@@ -127,7 +127,7 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_TURKEY</Type>
+			<Type>ART_DEF_CIVILIZATION_OTTOMAN</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Turkey.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Tugra.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>

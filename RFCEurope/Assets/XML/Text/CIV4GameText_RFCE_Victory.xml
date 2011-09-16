@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Game Text - RFCE Victory -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_HISTORICAL</Tag>
@@ -93,33 +94,17 @@
 		<Russian>&#204;&#251; &#228;&#238;&#241;&#242;&#232;&#227;&#235;&#232; 2 &#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#245; &#214;&#229;&#235;&#229;&#233; &#232;&#231; 3. &#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#235;&#224;&#241;&#252; &#232;&#231; &#237;&#224;&#248;&#229;&#227;&#238; &#234;&#224;&#239;&#232;&#242;&#224;&#235;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_EPIC</Tag>
-		<English>Triumphal Arch</English>
-		<French>
-			<Text>Arc de Triomphe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Triumphbogen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Arco di trionfo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arco de Triunfo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224;</Russian>
+		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
+		<English>Historical goals accomplished:</English>
+		<French>Objectifs historiques accomplis :</French>
+		<German>Erreichte historische Ziele:</German>
+		<Italian>Obiettivi storici raggiunti:</Italian>
+		<Spanish>Objetivos hist&#243;ricos conseguidos:</Spanish>
+		<Russian>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#231;&#224;&#226;&#229;&#240;&#248;&#229;&#237;&#237;&#251;&#229; &#246;&#229;&#235;&#232;:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MIN_LATITUDE</Tag>
-		<English>[COLOR_WARNING_TEXT]Is automatically built on achievement of 2 Historical Goals out of 3[COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Is automatically built in your capital when you achieve 2 out of your 3 Historical Goals[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Est automatiquement construit lorsque 2 objectifs historiques sur 3 sont atteints[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Wird bei Erf&#252;llung von 2 von 3 Historischen Siegbedingungen automatisch erbaut[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Viene automaticamente costruito al raggiungimento di 2 obiettivi storici su 3[COLOR_REVERT]</Italian>

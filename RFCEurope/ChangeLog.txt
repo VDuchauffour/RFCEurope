@@ -69,7 +69,7 @@ Changes for Beta 13:
 		- Moved starting positions/capitals to realistic location: Hungary 1W, Lithuania 1E, Kiev 3N 3W
 		- Now the Lithuanian capital is correctly Vilnius, Hungarian is correctly Buda
 		- Also moved a couple indy cities to realistic location: Riga 2E, Minsk 3E 2N, Smolensk 2N 1W, Valencia 1S
-		- Rearranged resources in a few areas to better cover the new city spots
+		- Rearranged resources to better cover the new city spots
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
@@ -81,6 +81,7 @@ Changes for Beta 13:
 		- Diplotext fixes, also added a few generic first contacts
 		- Civ specific Dawn of Man screen. Most civs still have the generic text until we update them
 		- A few more hints - to keep up with the latest changes
+		- Road to Masjid al-Haram renamed to Umayyad Mosque (Great Mosque of Damascus)
 
 	Python/C++ updates and AI tweaks:
 		- Europe is now divided into regions (XMLConsts and RFCEurope into C++), this will affect "continent" wonders and it has big effect on the AI
@@ -97,8 +98,8 @@ Changes for Beta 13:
 		- New in-game song Bogorodice Devo (Serbian Orthodox Chant)
 		- New art for Catherine (by Melcher Kürzer)
 		- All leaders' diplomusic is set to loop
-		- German and Austria Units have Holy Roman Select sounds (Old German is too modern)
-		- Italian Select sounds for Venice and Genoa
+		- German and Austrian units have Holy Roman order/select sounds (vanilla German sounds were too modern)
+		- Italian order/select sounds for Venice and Genoa (instead of Roman)
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
@@ -114,6 +115,7 @@ Changes for Beta 13:
 		- Normal light cavalry units have 25% city attack penalty, while light cavalry based UUs (Berber Cavalry, Ghazi and Huszar) have 10% city attack penalty
 		- None of the light cavalry type units can adopt the drill promotion line
 		- Siege and naval units cannot have march and medic promotions
+		- Papal State has more appropriate starting units (still get advanced units, but not by that much)
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks

@@ -43,6 +43,15 @@
 		<Russian>%s1_PlyrAdject &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; &#231;&#224;&#234;&#238;&#237;&#247;&#232;&#235;&#241;&#255;...</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_START_GOLDENAGE_HELP</Tag>
+		<English>This order will consume one or more Great People (of different types) and initiate a Golden Age (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</English>
+		<French>Cette ordre consommera plusieurs personnages illustres (de types diff&#233;rents) et d&#233;clenchera un &#226;ge d'or ([ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE] suppl&#233;mentaires).</French>
+		<German>Opfern Sie eine oder mehrere Gro&#223;e Pers&#246;nlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zus&#228;tzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begr&#252;nden.</German>
+		<Italian>Con questo ordine si consumano uno o pi&#249; Grandi Personaggi (di tipi differenti) e si avvia un'Et&#224; dell'Oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</Italian>
+		<Spanish>Esta orden consume uno o m&#225;s grandes personajes (de diferentes tipos) e inicia una edad de oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</Spanish>
+		<Russian>&#221;&#242;&#238;&#242; &#231;&#224;&#234;&#224;&#231; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#229;&#242; &#238;&#228;&#232;&#237; &#232;&#235;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#194;&#229;&#235;&#232;&#234;&#232;&#245; &#203;&#254;&#228;&#229;&#233; (&#240;&#224;&#231;&#235;&#232;&#247;&#237;&#251;&#245; &#242;&#232;&#239;&#238;&#226;) &#232; &#232;&#237;&#232;&#246;&#232;&#232;&#240;&#243;&#229;&#242; &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; (&#238;&#241;&#238;&#225;&#229;&#237;&#237;&#238; [ICON_PRODUCTION] [ICON_COMMERCE] [ICON_GREATPEOPLE]).</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_NEWCIV_MESSAGE</Tag>
 		<English>Do you wish to take permanent control of the %s1 civilization?</English>
 		<French>Voulez-vous prendre le contr&#244;le permanent de la civilisation %s1:2</French>

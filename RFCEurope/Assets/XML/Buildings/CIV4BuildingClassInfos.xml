@@ -211,18 +211,6 @@
 			<DefaultBuilding>BUILDING_TEXTILE_MILL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- TOWER OF LONDON -->
-			<Type>BUILDINGCLASS_TOWER_LONDON</Type>
-			<Description>TXT_KEY_BUILDING_TOWER_LONDON</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_TOWER_LONDON</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- UNIVERSITY -->
 			<Type>BUILDINGCLASS_UNIVERSITY</Type>
 			<Description>TXT_KEY_BUILDING_UNIVERSITY</Description>
@@ -913,8 +901,8 @@
 			<DefaultBuilding>BUILDING_PALACE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- GREAT_PALACE -->
-			<Type>BUILDINGCLASS_GREAT_PALACE</Type>
+		<BuildingClassInfo><!-- SUMMER_PALACE -->
+			<Type>BUILDINGCLASS_SUMMER_PALACE</Type>
 			<Description>TXT_KEY_BUILDING_SUMMER_PALACE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -922,7 +910,7 @@
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_GREAT_PALACE</DefaultBuilding>
+			<DefaultBuilding>BUILDING_SUMMER_PALACE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- NATIONAL_EPIC -->
@@ -935,6 +923,18 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>1</bMonument>
 			<DefaultBuilding>BUILDING_NATIONAL_EPIC</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- TOWER OF LONDON -->
+			<Type>BUILDINGCLASS_TOWER_LONDON</Type>
+			<Description>TXT_KEY_BUILDING_TOWER_LONDON</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>1</bMonument>
+			<DefaultBuilding>BUILDING_TOWER_LONDON</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- ROYAL_ACADEMY -->
@@ -961,30 +961,29 @@
 			<DefaultBuilding>BUILDING_NATIONAL_THEATRE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- HERMITAGE -->
-			<Type>BUILDINGCLASS_HERMITAGE</Type>
-			<Description>TXT_KEY_BUILDING_HERMITAGE</Description>
+		<BuildingClassInfo><!-- NATIONAL_GALLERY -->
+			<Type>BUILDINGCLASS_NATIONAL_GALLERY</Type>
+			<Description>TXT_KEY_BUILDING_NATIONAL_GALLERY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_HERMITAGE</DefaultBuilding>
+			<DefaultBuilding>BUILDING_NATIONAL_GALLERY</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- OXFORD_UNIVERSITY-->
-			<Type>BUILDINGCLASS_OXFORD_UNIVERSITY</Type>
-			<Description>TXT_KEY_BUILDING_OXFORD_UNIVERSITY</Description>
+		<BuildingClassInfo><!-- NATIONAL_UNIVERSITY-->
+			<Type>BUILDINGCLASS_NATIONAL_UNIVERSITY</Type>
+			<Description>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_OXFORD_UNIVERSITY</DefaultBuilding>
+			<DefaultBuilding>BUILDING_NATIONAL_UNIVERSITY</DefaultBuilding>
 			<VictoryThresholds/>
-			<!-- Rhye - end -->
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- HEROIC_EPIC -->
 			<Type>BUILDINGCLASS_HEROIC_EPIC</Type>
@@ -1291,16 +1290,16 @@
 			<DefaultBuilding>BUILDING_ESCORIAL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- TEMPLE_MOUNT -->
-			<Type>BUILDINGCLASS_TEMPLE_MOUNT</Type>
-			<Description>TXT_KEY_BUILDING_TEMPLE_MOUNT</Description>
+		<BuildingClassInfo><!-- KAZIMIERZ -->
+			<Type>BUILDINGCLASS_KAZIMIERZ</Type>
+			<Description>TXT_KEY_BUILDING_KAZIMIERZ</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_TEMPLE_MOUNT</DefaultBuilding>
+			<DefaultBuilding>BUILDING_KAZIMIERZ</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- BELEM_TOWER -->

@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text - Unit Upgrades for Civilopedia -->
+<!-- Game Text - RFCE Rise and Fall -->
 <Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_FLIP_TO_US</Tag>
+		<English>Cities in the area have joined our rising empire!</English>
+		<French>Certaines villes de la r&#233;gion ont rejoint notre empire florissant !</French>
+		<German>Die St&#228;dte in der Gegend haben sich unserem aufstrebenden Reich angeschlossen!</German>
+		<Italian>Le citt&#224; di questa regione si sono unite al nostro impero!</Italian>
+		<Spanish>&#161;Las ciudades de la zona se han unido a nuestro naciente imperio!</Spanish>
+		<Russian>&#195;&#238;&#240;&#238;&#228;&#224; &#238;&#225;&#235;&#224;&#241;&#242;&#232; &#239;&#240;&#232;&#241;&#238;&#229;&#228;&#232;&#237;&#232;&#235;&#232;&#241;&#252; &#226; &#237;&#224;&#248;&#243; &#226;&#238;&#231;&#240;&#224;&#241;&#242;&#224;&#254;&#249;&#243;&#254; &#232;&#236;&#239;&#229;&#240;&#232;&#254;!</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWCIV_TITLE</Tag>
 		<English>A new civilization is being born</English>

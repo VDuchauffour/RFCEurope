@@ -3,11 +3,10 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text - DiploText -->
+<!-- Game Text - RFCE DiploText -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 
-		<!-- A few generic first contact DiploTexts BEGIN -->
-
+		<!-- Generic first contact DiploTexts -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_1</Tag>
 		<English>Hello! I am [OUR_NAME], king of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</English>
@@ -53,9 +52,8 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	
-		<!-- A few generic first contact DiploTexts END -->
-	
+		<!-- Generic first contact DiploTexts -->
+		<!-- Leader specific first contact DiploTexts -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUYUSUFYAQUB_1</Tag>
 		<English>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</English>
@@ -155,9 +153,9 @@
 		<Spanish>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Spanish>
 		<Russian>In nomine Patris, et Filii, et Spiritus Sancti. Welcome, my child.</Russian>
 	</TEXT>
-	
+		<!-- Leader specific first contact DiploTexts -->
 		<!-- New DiploText by AbsintheRed -->
-	
+		<!-- Spanish 2nd leader - Philip II -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_1</Tag>
 		<English>Welcome to my dominions, [CT_NAME]. My empire is vast, as is my knowlege. Would you agree to peaceful terms, or shall I bring forth my armies against you, in the name of God?</English>
@@ -248,6 +246,8 @@
 		<Italian>[CT_NAME], it has been brought to my attention that you have something the [OUR_EMPIRE] needs. I am sure you are willing to help us here, or else I will send my armada - and mark my words, it will not fail this time!</Italian>
 		<Spanish>[CT_NAME], it has been brought to my attention that you have something the [OUR_EMPIRE] needs. I am sure you are willing to help us here, or else I will send my armada - and mark my words, it will not fail this time!</Spanish>
 	</TEXT>
+		<!-- Spanish 2nd leader - Philip II -->
+		<!-- French 2nd leader - Joan of Arc -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JOAN_1</Tag>
 		<English>One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.</English>
@@ -320,6 +320,8 @@
 		<Italian>I had a vision of the [CT_EMPIRE] going up in flames. Care to assure me that I was just crazy?</Italian>
 		<Spanish>Tuve una visin del [CT_EMPIRE] prendindose en llamas. Os importara asegurarme de que slo era una locura ma?</Spanish>
 	</TEXT>
+		<!-- French 2nd leader - Joan of Arc -->
+		<!-- Polish 1st leader - Casimir III -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CASIMIR_1</Tag>
 		<English>Greetings from [OUR_NAME] the Great, king of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</English>
@@ -392,6 +394,8 @@
 		<Italian>Give us this or prepare for war with the [OUR_EMPIRE]!</Italian>
 		<Spanish>Give us this or prepare for war with the [OUR_EMPIRE]!</Spanish>
 	</TEXT>
+		<!-- Polish 1st leader - Casimir III -->
+		<!-- Polish 2nd leader - Jan III Sobieski -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOBIESKI_1</Tag>
 		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. Remember: they don't call me the "Lion of Lechistan" for no reason!</English>
@@ -464,6 +468,8 @@
 		<Italian>Do you really want me to start another crusade? My beloved Marysienka won't be happy.</Italian>
 		<Spanish>Do you really want me to start another crusade? My beloved Marysienka won't be happy.</Spanish>
 	</TEXT>
+		<!-- Polish 2nd leader - Jan III Sobieski -->
+		<!-- Kievan 1st leader - Yaroslav the Wise -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YAROSLAV_1</Tag>
 		<English>To quote my patron saint: Nothing in this inconstant life can weaken my resolve to serve God.</English>
@@ -536,6 +542,8 @@
 		<Italian>I suggest you give us this if you don't want to spend the rest of your life imprisoned like my brother...</Italian>
 		<Spanish>I suggest you give us this if you don't want to spend the rest of your life imprisoned like my brother...</Spanish>
 	</TEXT>
+		<!-- Kievan 1st leader - Yaroslav the Wise -->
+		<!-- Moscow 1st leader - Ivan IV -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IVAN_IV_1</Tag>
 		<English>I am honored to meet you, [CT_NAME]. I am the great [OUR_NAME] of the [OUR_CIV_ADJ] people, inhabitants of [OUR_CIV_SHORT].</English>
@@ -664,6 +672,8 @@
 		<Italian>Pay your debts, dog!</Italian>
 		<Spanish>Pagad vuestras deudas, perro!</Spanish>
 	</TEXT>
+		<!-- Moscow 1st leader - Ivan IV -->
+		<!-- Swedish 2nd leader - Gustav Adolph -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_1</Tag>
 		<English>Greetings from the great king of [OUR_CIV_SHORT], [OUR_NAME]! Are you looking for peace and an alliance with us or demand war?</English>
@@ -736,6 +746,8 @@
 		<Italian>[OUR_NAME] demands this! Do not test his patience!</Italian>
 		<Spanish>[OUR_NAME] demands this! Do not test his patience!</Spanish>
 	</TEXT>
+		<!-- Swedish 2nd leader - Gustav Adolph -->
+		<!-- Hungarian 1st leader - Istvan I -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Tag>
 		<English>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</English>
@@ -848,6 +860,8 @@
 		<Italian>Dacci ci&#242; che chiediamo o conoscerai l'ira divina!</Italian>
 		<Spanish>Begad, give us what we want or you will know the wrath of God!</Spanish>
 	</TEXT>
+		<!-- Hungarian 1st leader - Istvan I -->
+		<!-- Hungarian 2nd leader - Matyas -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
 		<English>Welcome to this beautiful land, [CT_NAME]. I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</English>
@@ -992,6 +1006,8 @@
 		<Italian>If you won't give me this I'll use my army to get it, so what do you prefer?</Italian>
 		<Spanish>If you won't give me this I'll use my army to get it, so what do you prefer?</Spanish>
 	</TEXT>
+		<!-- Hungarian 2nd leader - Matyas -->
+		<!-- German 1st leader - Barbarossa -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BARBAROSSA_1</Tag>
 		<English>Hello, I am [OUR_NAME], [OUR_CIV_ADJ] Emperor! You, [CT_NAME], are pleased to be in my presence!</English>
@@ -1064,6 +1080,8 @@
 		<Italian>The [OUR_EMPIRE] demands the following! I suggest you give it to us unless you like eating donkey droppings!</Italian>
 		<Spanish>The [OUR_EMPIRE] demands the following! I suggest you give it to us unless you like eating donkey droppings!</Spanish>
 	</TEXT>
+		<!-- German 1st leader - Barbarossa -->
+		<!-- Arabia 1st leader - Abu Bakr -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABU_BAKR_1</Tag>
 		<English>Peace be onto you, [CT_NAME]. I am the righteous [OUR_NAME] of the [OUR_EMPIRE]. May there be peace betwen us for as long as we worship the same deity!</English>
@@ -1160,6 +1178,8 @@
 		<Italian>Mighty [OUR_CIV_SHORT] will crush your kingdom of evil if you don't obey her commands!</Italian>
 		<Spanish>Mighty [OUR_CIV_SHORT] will crush your kingdom of evil if you don't obey her commands!</Spanish>
 	</TEXT>
+		<!-- Arabia 1st leader - Abu Bakr -->
+		<!-- Portuguese 1st leader - Afonso Henriques -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AFONSO_1</Tag>
 		<English>Welcome to the [OUR_EMPIRE], [CT_NAME]. I am the king, [OUR_NAME]. Would you like to become a friend of our kingdom? If you don't want to, then... it's been nice knowing you.</English>
@@ -1296,6 +1316,8 @@
 		<Italian>Recognizing me as king of the [OUR_EMPIRE] is not enough! I demand the following in tribute!</Italian>
 		<Spanish>Recognizing me as king of the [OUR_EMPIRE] is not enough! I demand the following in tribute!</Spanish>
 	</TEXT>
+		<!-- Portuguese 1st leader - Afonso Henriques -->
+		<!-- Norse 1st leader - Harald Hardrada -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_HARDRADA_1</Tag>
 		<English>Hail and well met, [CT_NAME]! I am [OUR_NAME], ruler of the glorious [OUR_CIV_SHORT].  So tell me: does [CT_CIV_SHORT] have a lot of rich and unprotected coastal cities, or what?</English>
@@ -1384,4 +1406,6 @@
 		<Italian>Give me this or we will go berserk on your country, [CT_NAME]!</Italian>
 		<Spanish>Give me this or we will go berserk on your country, [CT_NAME]!</Spanish>
 	</TEXT>
+		<!-- Norse 1st leader - Harald Hardrada -->
+		<!-- New DiploText by AbsintheRed -->
 </Civ4GameText>
