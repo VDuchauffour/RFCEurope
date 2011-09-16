@@ -96,7 +96,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
 		<English>Historical goals accomplished:</English>
-		<French>Objectifs historiques accomplis :</French>
+		<French>Objectifs historiques accomplis:</French>
 		<German>Erreichte historische Ziele:</German>
 		<Italian>Obiettivi storici raggiunti:</Italian>
 		<Spanish>Objetivos hist&#243;ricos conseguidos:</Spanish>
@@ -491,12 +491,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>
-		<English>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</English>
-		<French>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</French>
-		<German>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</German>
-		<Italian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and  Murom in 1482AD.</Russian>
+		<English>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and Murom in 1482AD.</English>
+		<French>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and Murom in 1482AD.</French>
+		<German>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and Murom in 1482AD.</German>
+		<Italian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and Murom in 1482AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and Murom in 1482AD.</Spanish>
+		<Russian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, WhiteRus, Volhynia, Podolia and Murom in 1482AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS2</Tag>

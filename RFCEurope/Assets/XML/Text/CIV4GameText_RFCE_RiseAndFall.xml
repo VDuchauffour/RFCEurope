@@ -36,7 +36,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FLIPMESSAGE1</Tag>
 		<English>The following cities:[NEWLINE][NEWLINE]</English>
-		<French>Les villes suivantes :[NEWLINE][NEWLINE]</French>
+		<French>Les villes suivantes:[NEWLINE][NEWLINE]</French>
 		<German>Die folgenden St&#228;dte:[NEWLINE][NEWLINE]</German>
 		<Italian>Le seguenti citt&#224;:[NEWLINE][NEWLINE]</Italian>
 		<Spanish>Las ciudades de[NEWLINE][NEWLINE]</Spanish>
@@ -90,7 +90,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CIV_IS_BORN</Tag>
 		<English>A new civilization is born: %s1_CityName</English>
-		<French>Naissance d'une nouvelle civilisation : %s1_CityName</French>
+		<French>Naissance d'une nouvelle civilisation: %s1_CityName</French>
 		<German>Eine neue Zivilisation wurde geboren: %s1_CityName</German>
 		<Italian>&#200; nata una nuova civilt&#224;: %s1_CityName</Italian>
 		<Spanish>Ha nacido una nueva civilizaci&#243;n: %s1_CityName</Spanish>

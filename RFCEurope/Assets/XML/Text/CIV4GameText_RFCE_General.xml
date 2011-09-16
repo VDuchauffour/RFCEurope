@@ -9,7 +9,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOPLAY_TURNS_REMAINING</Tag>
 		<English>AUTO-PLAY TURNS REMAINING:  %d1_Num</English>
-		<French>TOURS RESTANTS EN JEU AUTO : %d1_Num</French>
+		<French>TOURS RESTANTS EN JEU AUTO: %d1_Num</French>
 		<German>VERBLEIBENDE AUTOPLAY-RUNDEN:  %d1_Num</German>
 		<Italian>TURNI DI GIOCO AUTOMATICO RIMANENTI:  %d1_Num</Italian>
 		<Spanish>TURNOS AUTOM&#193;TICOS RESTANTES: %d1_Num</Spanish>
@@ -87,7 +87,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_GOLD</Tag>
 		<English>[ICON_BULLET]Gold: </English>
-		<French>[ICON_BULLET]Or : </French>
+		<French>[ICON_BULLET]Or: </French>
 		<German>[ICON_BULLET]Gold: </German>
 		<Italian>[ICON_BULLET]Oro: </Italian>
 		<Spanish>[ICON_BULLET]Oro: </Spanish>
@@ -96,7 +96,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_SCIENCE</Tag>
 		<English>[ICON_BULLET]Science: </English>
-		<French>[ICON_BULLET]Science : </French>
+		<French>[ICON_BULLET]Science: </French>
 		<German>[ICON_BULLET]Wissenschaft: </German>
 		<Italian>[ICON_BULLET]Scienza: </Italian>
 		<Spanish>[ICON_BULLET]Ciencia: </Spanish>
@@ -105,7 +105,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_TRADE</Tag>
 		<English>[ICON_BULLET]Trade: </English>
-		<French>[ICON_BULLET]Commerce : </French>
+		<French>[ICON_BULLET]Commerce: </French>
 		<German>[ICON_BULLET]Handel: </German>
 		<Italian>[ICON_BULLET]Commercio: </Italian>
 		<Spanish>[ICON_BULLET]Intercambio: </Spanish>
@@ -114,7 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_PRODUCTION</Tag>
 		<English>[ICON_BULLET]Production: </English>
-		<French>[ICON_BULLET]Production : </French>
+		<French>[ICON_BULLET]Production: </French>
 		<German>[ICON_BULLET]Produktion: </German>
 		<Italian>[ICON_BULLET]Produzione: </Italian>
 		<Spanish>[ICON_BULLET]Producci&#243;n: </Spanish>
@@ -123,7 +123,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_CULTURE</Tag>
 		<English>[ICON_BULLET]Culture: </English>
-		<French>[ICON_BULLET]Culture : </French>
+		<French>[ICON_BULLET]Culture: </French>
 		<German>[ICON_BULLET]Kultur: </German>
 		<Italian>[ICON_BULLET]Cultura: </Italian>
 		<Spanish>[ICON_BULLET]Cultura: </Spanish>
@@ -132,7 +132,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_GROWTH</Tag>
 		<English>[ICON_BULLET]Growth: </English>
-		<French>[ICON_BULLET]Croissance : </French>
+		<French>[ICON_BULLET]Croissance: </French>
 		<German>[ICON_BULLET]Wachstum: </German>
 		<Italian>[ICON_BULLET]Crescita: </Italian>
 		<Spanish>[ICON_BULLET]Crecimiento: </Spanish>
@@ -141,7 +141,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MM_STARTING_SITUATION</Tag>
 		<English>[ICON_BULLET]Starting situation: </English>
-		<French>[ICON_BULLET]Situation de d&#233;part : </French>
+		<French>[ICON_BULLET]Situation de d&#233;part: </French>
 		<German>[ICON_BULLET]Startsituation: </German>
 		<Italian>[ICON_BULLET]Situazione di avvio: </Italian>
 		<Spanish>[ICON_BULLET]Situaci&#243;n de inicio: </Spanish>
@@ -213,7 +213,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FREE_PROMOTION</Tag>
 		<English>Free Promotion: (%s1)</English>
-		<French>Promotion gratuite : (%s1)</French>
+		<French>Promotion gratuite: (%s1)</French>
 		<German>Freie Bef&#246;rderung: (%s1)</German>
 		<Italian>Promozione gratuita: (%s1)</Italian>
 		<Spanish>Ascenso gratis: (%s1)</Spanish>
@@ -231,7 +231,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_DEFENSIVE_PACT</Tag>
 		<English>A Mutual Protection Pact - Each Party Agrees to Automatically Declare War if the Other Party is Attacked.</English>
-		<French>Pacte d'assistance mutuelle : chaque partie accepte de d&#233;clarer automatiquement la guerre si l'autre est attaqu&#233;e.</French>
+		<French>Pacte d'assistance mutuelle: chaque partie accepte de d&#233;clarer automatiquement la guerre si l'autre est attaqu&#233;e.</French>
 		<German>Ein Verteidigungsb&#252;ndnis - Beide Parteien stimmen zu, den Angreifern der anderen Partei automatisch den Krieg zu erkl&#228;ren.</German>
 		<Italian>Un patto di protezione reciproca: ogni civilt&#224; accetta di dichiarare automaticamente guerra se la civilt&#224; alleata viene attaccata.</Italian>
 		<Spanish>Un acuerdo de protecci&#243;n mutua: cada parte accede a declarar autom&#225;ticamente la guerra si alguien ataca a la otra.</Spanish>

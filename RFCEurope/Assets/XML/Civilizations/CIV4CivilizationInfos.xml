@@ -5842,7 +5842,7 @@
 			<Description>TXT_KEY_CIV_MOSCOW_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_MOSCOW_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MOSCOW_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_RUSSIA_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>1380AD</StartingYear>
 			<LoadingTime>40</LoadingTime>
@@ -6269,7 +6269,7 @@
 			<Description>TXT_KEY_CIV_NORSE_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_NORSE_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NORSE_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NORSE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_VIKING_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
 			<StartingYear>780AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
