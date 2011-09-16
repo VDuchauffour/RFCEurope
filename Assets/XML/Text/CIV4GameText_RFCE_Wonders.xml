@@ -79,6 +79,24 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE</Tag>
+		<English>Temple Mount</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE_PEDIA</Tag>
+		<English>[TAB]The Temple Mount, also known as Mount Moriah and by Muslims as the Noble Sanctuary, is a religious site in the Old City of Jerusalem. Due to its importance for Judaism and Islam it is one of the most contested religious sites in the world.[PARAGRAPH:2]The Temple Mount contains the holiest site in Judaism. Jewish Midrash holds that it was from here that the world expanded into its present form, and that this was where God gathered the dust he used to create the first man, Adam. The Torah records that it was here that God chose to rest His Name and Divine Presence, and consequently two Jewish Temples were built at the site. According to Jewish tradition, the Third Temple will also be located here, and will be the final one. In recent times, due to difficulties in ascertaining the precise location of the Mount's holiest spot, many Jews will not set foot on the Mount itself.[PARAGRAPH:2]The Noble Sanctuary is the third holiest site in Islam, revered as the destination of Muhammad's journey to Jerusalem, and the location of his ascent to heaven. The site is also associated with all the Jewish biblical prophets who are also revered in Islam. The site is the location of the al-Aqsa Mosque and the Dome of the Rock, the oldest extant Islamic structure in the world.[PARAGRAPH:2]Controlled by Israel since 1967, both Israel and the Palestinian Authority claim sovereignty over the site, which remains a key issue in the Arab-Israeli conflict. A Muslim council, known as the Muslim Waqf, manages the site. The Israeli government enforces a controversial ban on prayer by non-Muslim visitors.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
 		<!-- Religious Shrines -->
 		<!-- World Wonders -->
 	<TEXT>

@@ -31,10 +31,6 @@
 			<Path>Art/Movies/Victory/Domination.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_VICTORY_SPACE_RACE</Type>
-			<Path>Art/Movies/Victory/SpaceRace.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VICTORY_CULTURAL</Type>
 			<Path>Art/Movies/Victory/Cultural.bik</Path>
 		</MovieArtInfo>
@@ -119,12 +115,16 @@
 			<Path>Art/Movies/Wonders/Temple_Mount.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JEWISH_SHRINE</Type>
+			<Path>Art/Movies/Wonders/Temple_Mount.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISLAMIC_SHRINE</Type>
-			<Path>Art/Movies/Religion/Islam/Shrine_Isl_dwg_512.dds</Path>
+			<Path>Art/Movies/Wonders/islamic_shrine.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PROTESTANT_SHRINE</Type>
-			<Path>Art/Movies/Religion/Protestant Shrine/WittenbergChurch.bik</Path>
+			<Path>Art/Movies/Wonders/WittenbergChurch.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ORTHODOX_SHRINE</Type>

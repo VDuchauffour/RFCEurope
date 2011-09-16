@@ -59,6 +59,7 @@ Changes for Beta 13:
 		- Techs can be traded 10 turns after they have been researched regardless of the timeline
 		- New UP for Turkey, they get free Units for foreign religion in their cities
 		- Cannot declare war on newly spawned players for X turns (X can be set in RFCEBalance.py). Currently 5 turns
+		- Readded National Epic and Temple Mount (Jewish Shrine) as separate wonders
 
 	Map and province changes:
 		- Updated Polish and Lithuanian SettlerMaps
