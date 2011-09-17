@@ -26,7 +26,7 @@
 		<!-- Civ Specific Dawn of Man -->
 		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->
 		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc -->
-	<TEXT>
+	<TEXT> <!-- Byzantium -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0</Tag>
 		<English>It is the year %s1_year. You, %s3_leader, are the sole ruler of the %s2_civ people. Your civilization is the successor of the Roman Empire and you still have a mighty empire to rule over, but be aware: huge riches attract many enemies. Various threats are rising, especially in the east.</English>
 		<French>.</French>
@@ -35,79 +35,79 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- France -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_1</Tag>
-		<English>France: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 500 AD. As king of the Frankish people, you have lead their way in becoming the first barbarian tribe to set aside arianism and embrace catholicism, which will be the guiding principle in building a glorious civilization. Your lands are vast and fertile, but the Burgundians in the Rhône valley will not always stay subdued, and the coasts may provide access to dangerous raiders from the north.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Arabia -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_2</Tag>
-		<English>Arabia: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 635 AD. The prophet Muhammed, peace be upon him, accomplished what no one thought was possible - uniting the tribes of Arabia. You, Abu Bakr, has been chosen to succeed him as Caliph and expand the House of Islam. After a devastating war with Sassanid Persia and raging religious controversies between Chalcedonians and Monophysities, the land of the Byzantine Empire is ripe for conquest. There will be many centuries to build up your forces before the western crusaders cast their gaze towards al-Quds.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Bulgaria -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_3</Tag>
-		<English>Bulgaria: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>After many years of civil war, you father had finally united your people in the Great Bulgar. However, after his death and pushed by the Khazar hordes, you and your borthers had to divide the Bulgarians yet again and leave your old home in different direction.[NEWLINE][NEWLINE]After years of travel trhough snow and heat, mountains and swamps, you finally reached the northern borders of the East Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this lustful land as yours forever.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Cordoba -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_4</Tag>
-		<English>Cordoba: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 711 AD. You can hardly believe your luck. The stupid followers of the deposed Visiogothic king Womba actually invited you and your fellow muslims over the straits of Gibraltar. With the reigning Visiogothic king Rod defeated through trechary, it was an easy matter to seize full control with the help of the persecuted jews. Now you can build a rich and happy Caliphate, full of poetry, art and religious toleration!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Norse -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_5</Tag>
-		<English>Norse: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 780 AD. The winters in Scandinavia are harsh, but have bred a sturdy people and your longships are the envy of any sailor. Now, far away Vinland, the coast of Normandy and the rich monastery of Lindisfarne beckons. Be bold, be swift, be strong, and the halls of Valhalla will await you!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Venezia -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_6</Tag>
-		<English>Venezia: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 810 AD. Fleeing the onslaught of the barbarian Lombards, your people and the remnants of the Byzantine Exarchate of Ravenna have settled on the inaccessible islands in the lagoon. The recent agreement between Charlemange of the Franks and emperor Nicephorus in Constantinople means that you will be left alone for the time being. There has never been a better opportunity to build a rich trading empire that will dominate the seas!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Burgundy -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_7</Tag>
-		<English>Burgundy: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 843 AD. After defeat at the hands of your brothers you have signed the treaty of Verdun and accepted that the inheritance of the great empire that Charlemange built will be split into three, with you taking the middle part. Your exposed position, wedged between the powerful Frankish and German kingdoms, will require great diplomatic skills, but your knights should be the envy of all of Europe!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Germany -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_8</Tag>
-		<English>Germany: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 858 AD. The great Frankish inheritance have irrevocably been split into three, with the eastern part going to you. As the Byzantine Empress Irene rejected Charlemange's marriage proposal, you should instead build a Holy Roman Empire for yourself!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Kiev -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_9</Tag>
 		<English>Kiev: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
@@ -116,7 +116,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Hungary -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_10</Tag>
 		<English>Hungary: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
@@ -125,61 +125,61 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Spain -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_11</Tag>
-		<English>Spain: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 910 AD. While the moors never really held sway over your northen parts of Spain, the Caliphate of Cordoba under Abd-ar-Rahman III is stronger than ever. Christians there are tolerated, but lower taxes drive them towards conversion and eternal damnation. You must launch the Reconquista and liberate them before it is too late!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Poland -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_12</Tag>
-		<English>Poland: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 966 AD. Worried by the threat of a unified German Empire, you have accepted Christianity to protect your land against foreign aggression. You will be a shining example of liberty and toleration for the rest of Europe - no inquisition will be needed, and the Szlactha will curb any autocratic tendencies!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Genoa -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_13</Tag>
-		<English>Genoa: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 1016 AD. Together with the Pisans, you have just defeated the muslim pirates, but the need for security forces the republic you serve to assert an ever greater responsibility for the protection of the Italian peninsula. This is your chance to build a magnificent merchant republic! With enough resources, even the fabled citiese of the eastern Mediterranean may lay at your hands.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- England -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_14</Tag>
-		<English>England: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 1066 AD. The battlefield of Hastings lays quiet. Harold Godwinson is dead, but not before he took care of the Norwegians for you. Even though Scotland may be the source of trouble sometimes, the rich estates of England will fund the defense of your important possesions in France. No longer William the Bastard, henceforth you will be known as William the Conqueror!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Portugal -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_15</Tag>
-		<English>In 1139, Portugal is a county that breaks the family ties with Leon and declares its independence, creating the Kingdom of Portugal. Now it is time to proceed with the reconquista to the south and prepare to expand beyond the Iberian Peninsula.</English>
+		<English>In 1139 AD, Portugal is a county that breaks the family ties with Leon and declares its independence, creating the Kingdom of Portugal. Now it is time to proceed with the reconquista to the south and prepare to expand beyond the Iberian Peninsula.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Lithuania -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_16</Tag>
-		<English>Lithuania: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is the year 1236 AD. Strange invaders, Teutonic knights worshipping a man on a cross, have disturbed the tranquility of the land. However, they are not invincible. You, Mindaugas, showed that they bleed and die, just like other men. It is high time to drive them out, the religion of your ancestors is surely also the best for you. Make them proud!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Austria -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_17</Tag>
 		<English>Austria: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
@@ -188,7 +188,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Ottomans -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_18</Tag>
 		<English>Ottomans: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
@@ -197,7 +197,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Moscow -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_19</Tag>
 		<English>Moscow: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>.</French>
@@ -206,18 +206,18 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Sweden -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_20</Tag>
-		<English>Sweden: The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<English>It is 1523 AD, a couple years after the outrages of the Stockholm Bloodbath, commited by the Danish king Kristian the Tyrant. You, Gustav Vasa, have lead a rebellion since to restore independence, succesfully uniting Sweden under a hereditary monarchy.[NEWLINE][NEWLINE]Now it's time to claim your rightfully place as ruler over the Baltic sea. Contested in this by mighty rivals, success can only be achieved by superior military and tactics. One way is to break the ties with Rome and build a great nation based on the true Lutheran faith!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT>
+	<TEXT> <!-- Dutch -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_21</Tag>
-		<English>It is the year 1581 AD. The Low Countries have been under control by the Spanish Empire for a long time. On July 22th this year, the Plakaat van Verlatinghe (Act of Abjuration) was signed by Philip II, making the Dutch officially independent. This was the start of an empire that will become one of the most wealthiest civilizations in the world.</English>
+		<English>It is the year 1581 AD. The Low Countries have been under control by the Spanish Empire for a long time. On July 22th this year, the Plakaat van Verlatinghe (Act of Abjuration) was signed by Philip II, making the Dutch officially independent. This could be the start of an empire that will become one of the most wealthiest civilizations in the world.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
