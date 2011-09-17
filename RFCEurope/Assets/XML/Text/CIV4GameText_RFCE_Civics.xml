@@ -3,7 +3,7 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text Objects -->
+<!-- Game Text - RFCE Civics -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_EXPANSION</Tag>
@@ -27,6 +27,7 @@
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
 		<English>Happiness from military units; culture from specialists; faster great generals</English>
 		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French><German/>
+		<German/>
 		<Italian/>
 		<Spanish/>
 		<Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
@@ -146,6 +147,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Tag>
@@ -154,6 +156,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Tag>
@@ -162,6 +165,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Tag>
@@ -170,6 +174,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_PEDIA</Tag>
@@ -178,6 +183,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_PEDIA</Tag>
@@ -186,6 +192,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_PEDIA</Tag>
@@ -194,6 +201,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Tag>
@@ -202,6 +210,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Tag>
@@ -210,6 +219,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_PEDIA</Tag>
@@ -218,6 +228,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Tag>
@@ -226,6 +237,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Tag>
@@ -234,6 +246,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Tag>
@@ -242,6 +255,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Tag>
@@ -250,6 +264,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Tag>
@@ -258,6 +273,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_PEDIA</Tag>
@@ -266,6 +282,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_PEDIA</Tag>
@@ -274,6 +291,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_PEDIA</Tag>
@@ -282,6 +300,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
@@ -290,6 +309,7 @@
 		<German>[ICON_BULLET]+1 Stabilität für jede gegründete Kolonie</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_EXPANSION</Tag>
@@ -362,7 +382,7 @@
 		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni vassallo.</Italian>
 		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada vasallo</Spanish>
 		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
-		</TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS_VANILLA</Tag>
 		<English>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</English>
@@ -371,7 +391,7 @@
 		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
 		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
 		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, &#232;&#225;&#238; &#234;&#224;&#230;&#228;&#251;&#233; &#232;&#241;&#245;&#238;&#228;&#237;&#251;&#233; &#239;&#243;&#237;&#234;&#242; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#235;&#241;&#255;</Russian>
-		</TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
 		<English>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</English>
@@ -696,7 +716,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
 		<French>.</French>
@@ -705,7 +725,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
 		<French>.</French>
@@ -714,7 +734,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
 		<French>.</French>
@@ -723,7 +743,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
 		<French>.</French>
@@ -732,7 +752,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
 		<French>.</French>
@@ -741,7 +761,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
 		<French>.</French>
@@ -750,7 +770,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
 		<French>.</French>
@@ -759,7 +779,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
 		<French>.</French>
@@ -768,7 +788,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
 		<French>.</French>
@@ -777,7 +797,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
 		<French>.</French>
@@ -786,7 +806,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Common Law[COLOR_REVERT]</English>
 		<French>.</French>
@@ -795,7 +815,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
 		<French>.</French>
@@ -804,7 +824,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
 		<French>.</French>
@@ -813,7 +833,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Apprenticeship[COLOR_REVERT]</English>
 		<French>.</French>
@@ -822,7 +842,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
 		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
@@ -831,7 +851,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
 		<French>.</French>
@@ -840,7 +860,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
 		<French>.</French>
@@ -849,7 +869,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
@@ -858,7 +878,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
 		<French>.</French>
@@ -867,7 +887,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
