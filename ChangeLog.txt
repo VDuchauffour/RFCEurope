@@ -73,7 +73,6 @@ Changes for Beta 13:
 		- Now the Lithuanian capital is correctly Vilnius, Hungarian is correctly Buda
 		- Also moved a couple indy cities to realistic location: Riga 2E, Minsk 3E 2N, Smolensk 2N 1W, Valencia 1S
 		- Rearranged resources to better cover the new city spots
-		- A part of Norrland that was in Finland is now Finland
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
