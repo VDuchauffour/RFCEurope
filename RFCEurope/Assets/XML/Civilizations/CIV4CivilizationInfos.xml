@@ -2716,7 +2716,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_LANCER</UnitClassType>
-					<UnitType>UNIT_CORDOBAN_BERBER</UnitType>
+					<UnitType>UNIT_CORDOBAN_BERBER_CAVALRY</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
@@ -6652,7 +6652,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_AXEMAN</UnitClassType>
-					<UnitType>UNIT_VIKING_BESERKER</UnitType>
+					<UnitType>UNIT_VIKING_BERSERKER</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
@@ -8822,7 +8822,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-					<UnitType>UNIT_TURKEY_GREAT_BOMBARD</UnitType>
+					<UnitType>UNIT_OTTOMAN_GREAT_BOMBARD</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>

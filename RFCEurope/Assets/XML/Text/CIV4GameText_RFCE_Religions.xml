@@ -3,7 +3,7 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text Objects -->
+<!-- Game Text - RFCE Religions -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM</Tag>
@@ -387,5 +387,6 @@
 		<German>Werdet ein Heiliger und st&#228;rkt den Glauben euer Zivilisation.</German>
 		<Italian>Become a Saint and strengthen the Faith of your nation.</Italian>
 		<Spanish>Become a Saint and strengthen the Faith of your nation.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 </Civ4GameText>

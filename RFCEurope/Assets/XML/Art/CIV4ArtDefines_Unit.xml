@@ -433,7 +433,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TURKEY_GREAT_BOMBARD</Type>
+			<Type>ART_DEF_UNIT_OTTOMAN_GREAT_BOMBARD</Type>
 			<Button>Art/Interface/Buttons/Units/GreatBombard.dds</Button>
 			<fScale>0.40</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
@@ -2421,7 +2421,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_VIKING_BESERKER</Type>
+			<Type>ART_DEF_UNIT_VIKING_BERSERKER</Type>
 			<Button>,Art/Interface/Buttons/Units/Maceman.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,10</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -2447,7 +2447,7 @@
 			<ActionSound>AS3D_VIKING_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CORDOBAN_BERBER</Type>
+			<Type>ART_DEF_UNIT_CORDOBAN_BERBER_CAVALRY</Type>
 			<Button>Art/Interface/Buttons/Units/CordobaBerber.dds</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>

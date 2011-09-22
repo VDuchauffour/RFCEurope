@@ -11918,7 +11918,7 @@
 			<Description>TXT_KEY_BUILDING_INFIRMARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INFIRMARY_STRATEGY</Strategy>
-			<Help>TXT_KEY_KNIGHT_HOSPITALLER_HELP</Help>
+			<Help>TXT_KEY_BUILDING_INFIRMARY_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFIRMARY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -22256,7 +22256,7 @@
 			<Description>TXT_KEY_HANSEATIC_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_HANSEATIC_LEAGUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_4_STRATEGY</Strategy>
-			<Help>TXT_KEY_HANSEATIC_HELP</Help>
+			<Help>TXT_KEY_HANSEATIC_LEAGUE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_4</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -23030,7 +23030,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
@@ -27077,7 +27077,7 @@
 			<iLevelPrereq>0</iLevelPrereq>
 			<iMinLatitude>0</iMinLatitude>
 			<iMaxLatitude>90</iMaxLatitude>
-			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>50</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iGlobalGreatPeopleRateModifier>0</iGlobalGreatPeopleRateModifier>

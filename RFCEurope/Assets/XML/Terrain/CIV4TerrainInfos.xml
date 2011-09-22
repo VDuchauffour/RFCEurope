@@ -163,7 +163,7 @@
 			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</TerrainInfo>
-		<!-- Senda - end -->
+		<!-- Sedna - end -->
 		<TerrainInfo>
 			<Type>TERRAIN_GRASS</Type>
 			<Description>TXT_KEY_TERRAIN_GRASS</Description>
@@ -631,10 +631,10 @@
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_MARSH</Type>
-			<Description>TXT_KEY_TERRAIN_MARSH</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_MARSH_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_MARSH</ArtDefineTag>
+			<Type>TERRAIN_WETLAND</Type>
+			<Description>TXT_KEY_TERRAIN_WETLAND</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_WETLAND_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_WETLAND</ArtDefineTag>
 			<Yields>
 				<iYield>1</iYield>
 				<iYield>0</iYield>
@@ -809,7 +809,7 @@
 			<bFound>0</bFound>
 			<bFoundCoast>1</bFoundCoast>
 			<!-- Rhye - end -->
-			<bFoundFreshWater>0</bFoundFreshWater>
+			<bFoundFreshWater>1</bFoundFreshWater>
 			<iMovement>1</iMovement>
 			<iSeeFrom>1</iSeeFrom>
 			<iSeeThrough>1</iSeeThrough>
@@ -959,7 +959,7 @@
 			<bFound>0</bFound>
 			<bFoundCoast>0</bFoundCoast>
 			<bFoundFreshWater>0</bFoundFreshWater>
-			<iMovement>1</iMovement>
+			<iMovement>2</iMovement>
 			<iSeeFrom>1</iSeeFrom>
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>50</iBuildModifier>
@@ -1406,9 +1406,9 @@
 			<Yields/>
 			<RiverYieldChange/>
 			<HillsYieldChange/>
-			<bWater>1</bWater>
-			<bImpassable>0</bImpassable>
-			<bFound>0</bFound>
+			<bWater>0</bWater>
+			<bImpassable>1</bImpassable>
+			<bFound>1</bFound>
 			<bFoundCoast>0</bFoundCoast>
 			<bFoundFreshWater>0</bFoundFreshWater>
 			<iMovement>1</iMovement>
@@ -1550,19 +1550,23 @@
 			<Description>TXT_KEY_TERRAIN_HILL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_HILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
-			<Yields/>
+			<Yields>
+				<iYield>-1</iYield>
+				<iYield>1</iYield>
+				<iYield>0</iYield>
+			</Yields>
 			<RiverYieldChange/>
 			<HillsYieldChange/>
-			<bWater>1</bWater>
+			<bWater>0</bWater>
 			<bImpassable>0</bImpassable>
-			<bFound>0</bFound>
+			<bFound>1</bFound>
 			<bFoundCoast>0</bFoundCoast>
 			<bFoundFreshWater>0</bFoundFreshWater>
-			<iMovement>1</iMovement>
+			<iMovement>2</iMovement>
 			<iSeeFrom>0</iSeeFrom>
 			<iSeeThrough>0</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
-			<iDefense>0</iDefense>
+			<iDefense>25</iDefense>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Hill.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>

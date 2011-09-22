@@ -13721,11 +13721,11 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Louis XVI - France 3rd-->
+		<!--Louis XIV - France 3rd-->
 		<LeaderHeadInfo>
 			<Type>LEADER_LOUIS_XIV</Type>
-			<Description>TXT_KEY_LEADER_LOUISXIV</Description>
-			<Civilopedia>TXT_KEY_LEADER_LOUISXIV_PEDIA</Civilopedia>
+			<Description>TXT_KEY_LEADER_LOUIS_XIV</Description>
+			<Civilopedia>TXT_KEY_LEADER_LOUIS_XIV_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_LOUIS_XIV</ArtDefineTag>
 			<iWonderConstructRand>50</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>

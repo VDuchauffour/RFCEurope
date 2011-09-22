@@ -111,7 +111,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>0</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -317,7 +317,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_FOREST</BuildType>
+					<BuildType>BUILD_REMOVE_DENSE_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -325,7 +325,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_MUD</BuildType>
+					<BuildType>BUILD_REMOVE_MARSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -375,7 +375,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>0</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -555,7 +555,7 @@
 			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -737,7 +737,7 @@
 			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -919,7 +919,7 @@
 			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -1276,7 +1276,7 @@
 			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -1453,7 +1453,7 @@
 			<!-- Rhye -->
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -1629,7 +1629,7 @@
 			<!-- Rhye -->
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -1804,7 +1804,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -1978,7 +1978,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  			</FeatureImpassable>
 			</FeatureImpassables>
@@ -2152,7 +2152,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -2326,7 +2326,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -2509,7 +2509,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -2708,7 +2708,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -2908,7 +2908,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -3108,7 +3108,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -3307,7 +3307,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -3497,7 +3497,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -3702,7 +3702,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -3906,7 +3906,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -4110,7 +4110,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -4314,7 +4314,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -4523,7 +4523,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -4606,9 +4606,9 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!--Beserker-->
+		<UnitInfo> <!--Berserker-->
 			<Class>UNITCLASS_AXEMAN</Class>
-			<Type>UNIT_VIKING_BESERKER</Type>
+			<Type>UNIT_VIKING_BERSERKER</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
 			<Capture>NONE</Capture>
@@ -4617,9 +4617,9 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_VIKING_BESERKER</Description>
-			<Civilopedia>TXT_KEY_CHANGED_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VIKING_BESERKER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_VIKING_BERSERKER</Description>
+			<Civilopedia>TXT_KEY_UNIT_VIKING_BERSERKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_VIKING_BERSERKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -4799,7 +4799,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_VIKING_BESERKER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VIKING_BERSERKER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -4936,7 +4936,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -5127,7 +5127,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -5216,7 +5216,7 @@
 			<Description>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_STRATEGY</Strategy>
-			<Help>TXT_KEY_KNIGHT_HOSPITALLER_HELP</Help>
+			<Help>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -5324,7 +5324,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -5533,7 +5533,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -5737,7 +5737,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -5958,7 +5958,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -6153,7 +6153,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -6348,7 +6348,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -6540,7 +6540,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -6731,7 +6731,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -6922,7 +6922,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -7117,7 +7117,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -7321,7 +7321,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
@@ -7507,7 +7507,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -7707,7 +7707,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -7903,7 +7903,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -8108,7 +8108,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -8319,7 +8319,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -8400,9 +8400,9 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_MOUNTED_INFANTRY</Description>
-			<Civilopedia>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MOUNTED_INFANTRY_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_MOUNTED_SERGEANT</Description>
+			<Civilopedia>TXT_KEY_UNIT_MOUNTED_SERGEANT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MOUNTED_SERGEANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -8515,7 +8515,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -8719,7 +8719,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -8922,7 +8922,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -9115,7 +9115,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -9300,7 +9300,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -9385,7 +9385,7 @@
 		</UnitInfo>
 		<UnitInfo> <!--Berber Cavalry-->
 			<Class>UNITCLASS_LANCER</Class>
-			<Type>UNIT_CORDOBAN_BERBER</Type>
+			<Type>UNIT_CORDOBAN_BERBER_CAVALRY</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
 			<Capture>NONE</Capture>
@@ -9394,9 +9394,9 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_CORDOBAN_BERBER</Description>
-			<Civilopedia>TXT_KEY_UNIT_CORDOBAN_BERBER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CORDOBAN_BERBER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY</Description>
+			<Civilopedia>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -9513,7 +9513,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -9568,7 +9568,7 @@
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CORDOBAN_BERBER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_CORDOBAN_BERBER_CAVALRY</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -9708,7 +9708,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -9908,7 +9908,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -10103,7 +10103,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -10311,7 +10311,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -10511,7 +10511,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -10581,7 +10581,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!-- Templar -->
+		<UnitInfo> <!-- Templar Knight -->
 			<Class>UNITCLASS_TEMPLAR</Class>
 			<Type>UNIT_TEMPLAR</Type>
 			<UniqueNames/>
@@ -10592,10 +10592,10 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_TEMPLAR</Description>
+			<Description>TXT_KEY_UNIT_TEMPLAR_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TEMPLAR_STRATEGY</Strategy>
-			<Help>TXT_KEY_KNIGHT_TEMPLAR_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_TEMPLAR_KNIGHT_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_TEMPLAR_KNIGHT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -10712,7 +10712,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -10793,10 +10793,10 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_TEUTONIC</Description>
+			<Description>TXT_KEY_UNIT_TEUTONIC_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TEUTONIC_STRATEGY</Strategy>
-			<Help>TXT_KEY_TEUTONIC_KNIGHTS_HELP</Help>
+			<Strategy>TXT_KEY_UNIT_TEUTONIC_KNIGHT_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_TEUTONIC_KNIGHT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -10913,7 +10913,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -11113,7 +11113,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -11318,7 +11318,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -11517,7 +11517,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -11712,7 +11712,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -11920,7 +11920,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -12113,7 +12113,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -12301,7 +12301,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -12494,7 +12494,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -12569,9 +12569,9 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!--Turkey Great Bombard-->
+		<UnitInfo> <!-- Ottoman Great Bombard -->
 			<Class>UNITCLASS_BOMBARD</Class>
-			<Type>UNIT_TURKEY_GREAT_BOMBARD</Type>
+			<Type>UNIT_OTTOMAN_GREAT_BOMBARD</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
 			<Capture>NONE</Capture>
@@ -12580,9 +12580,9 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_TURKEY_GREAT_BOMBARD</Description>
-			<Civilopedia>TXT_KEY_UNIT_TURKEY_GREAT_BOMBARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TURKEY_GREAT_BOMBARD_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD</Description>
+			<Civilopedia>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -12687,7 +12687,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -12747,7 +12747,7 @@
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_TURKEY_GREAT_BOMBARD</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_OTTOMAN_GREAT_BOMBARD</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -12879,7 +12879,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -13066,7 +13066,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -14094,7 +14094,7 @@
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_WAR_GALLEY</Description>
-			<Civilopedia>CHANGED_TXT_KEY_UNIT_WAR_GALLEY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_WAR_GALLEY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WAR_GALLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
@@ -15552,7 +15552,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -15732,7 +15732,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -16179,7 +16179,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -16411,7 +16411,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -16644,7 +16644,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -16863,7 +16863,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -17091,7 +17091,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -17326,7 +17326,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -17523,7 +17523,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -17715,7 +17715,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -17910,7 +17910,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -18288,7 +18288,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -18676,7 +18676,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -18875,7 +18875,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -19066,7 +19066,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -19259,7 +19259,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -19351,7 +19351,7 @@
 			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_HUSCARL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUSCARL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VIKING_BESERKER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_VIKING_BERSERKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
@@ -19527,7 +19527,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_VIKING_BESERKER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_VIKING_BERSERKER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -19663,7 +19663,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -19855,7 +19855,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -20050,7 +20050,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -20250,7 +20250,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -20433,7 +20433,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>
@@ -20628,7 +20628,7 @@
 			<TerrainImpassables/>
 			<FeatureImpassables>
 				<FeatureImpassable>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
  				</FeatureImpassable>
 			</FeatureImpassables>

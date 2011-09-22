@@ -4,8 +4,8 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Game Text - RFCE General Texts -->
+<!-- Please place any new text entries into this file -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<!--Please place any new text entries into this file-->
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_VICEROY</Tag>
 		<English>Viceroy</English>
@@ -77,6 +77,15 @@
 		<Russian>AUTO-PLAY TURNS REMAINING:  %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SAVEGAME_TURN</Tag>
+		<English>Turn %d1_TurnNum</English>
+		<French>Tour %d1_TurnNum</French>
+		<German>Runde %d1_TurnNum</German>
+		<Italian>Turno %d1_TurnNum</Italian>
+		<Spanish>Turno %d1_TurnNum</Spanish>
+		<Russian>Turn %d1_TurnNum</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_STARTING_YEAR</Tag>
 		<English>Starting year</English>
 		<French>Ann&#233;e de d&#233;part</French>
@@ -104,13 +113,40 @@
 		<Russian>&#237;. &#253;.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SAVEGAME_TURN</Tag>
-		<English>Turn %d1_TurnNum</English>
-		<French>Tour %d1_TurnNum</French>
-		<German>Runde %d1_TurnNum</German>
-		<Italian>Turno %d1_TurnNum</Italian>
-		<Spanish>Turno %d1_TurnNum</Spanish>
-		<Russian>Turn %d1_TurnNum</Russian>
+		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
+		<English>Early Middle Ages</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Russian>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
+		<English>High Middle Ages</English>
+		<French>Moyen &#194;ge</French>
+		<German>Hochmittelalter</German>
+		<Italian>Pieno Medioevo</Italian>
+		<Spanish>Plenitud de la Edad Media</Spanish>
+		<Russian>&#209;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
+		<English>Late Middle Ages</English>
+		<French>Bas Moyen &#194;ge</French>
+		<German>Sp&#228;tmittelalter</German>
+		<Italian>Basso Medioevo</Italian>
+		<Spanish>Baja Edad Media</Spanish>
+		<Russian>&#207;&#238;&#231;&#228;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
+		<English>Early Middle Ages</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Russian>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_GOLD</Tag>
@@ -302,15 +338,6 @@
 		<Russian>&#207;&#240;&#238;&#226;&#229;&#240;&#252;&#242;&#229; &#211;&#241;&#235;&#238;&#226;&#232;&#255; &#207;&#238;&#225;&#229;&#228;&#251; (F8) &#228;&#235;&#255; &#225;&#238;&#235;&#229;&#229; &#234;&#238;&#237;&#234;&#240;&#229;&#242;&#237;&#238;&#233; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#232;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CITY_WAS_TRADED_TO</Tag>
-		<English>%s1_CityName was traded to the %s2_CivName!!!</English>
-		<French>%s1_CityName a &#233;t&#233; &#233;chang&#233; &#224; %s2_CivName!!!</French>
-		<German>Die Stadt %s1_CityName wurde an das %s2:2_CivName &#252;bereignet!!!</German>
-		<Italian>%s1_CityName &#232; stata ceduta a %s2_CivName!!!</Italian>
-		<Spanish>&#161;%s1_CityName ha sido cedida al %s2_CivName!</Spanish>
-		<Russian>%s1 CityName &#242;&#238;&#240;&#227;&#238;&#226;&#224;&#235;&#241;&#255; &#241; %s2 CivName!!!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS</Tag>
 		<English>The %s1_PlyrAdject Golden Age begins</English>
 		<French>L'&#226;ge d'or %s1:1_PlyrAdject commence</French>
@@ -347,57 +374,75 @@
 		<Russian>&#221;&#242;&#238;&#242; &#231;&#224;&#234;&#224;&#231; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#229;&#242; &#238;&#228;&#232;&#237; &#232;&#235;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#194;&#229;&#235;&#232;&#234;&#232;&#245; &#203;&#254;&#228;&#229;&#233; (&#240;&#224;&#231;&#235;&#232;&#247;&#237;&#251;&#245; &#242;&#232;&#239;&#238;&#226;) &#232; &#232;&#237;&#232;&#246;&#232;&#232;&#240;&#243;&#229;&#242; &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; (&#238;&#241;&#238;&#225;&#229;&#237;&#237;&#238; [ICON_PRODUCTION] [ICON_COMMERCE] [ICON_GREATPEOPLE]).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEWCIV_MESSAGE</Tag>
-		<English>Do you wish to take permanent control of the %s1 civilization?</English>
-		<French>Voulez-vous prendre le contr&#244;le permanent de la civilisation %s1:2</French>
-		<German>Wollt Ihr die permanente Kontrolle &#252;ber das %s1:3 Volk &#252;bernehmen?</German>
-		<Italian>Vuoi assumere il controllo permanente della civilt&#224; %s1:2?</Italian>
-		<Spanish>&#191;Deseas tomar el control permanente de la civilizaci&#243;n %s1:2?</Spanish>
-		<Russian>&#194;&#251; &#230;&#229;&#235;&#224;&#229;&#242;&#229; &#226;&#231;&#255;&#242;&#252; &#239;&#238;&#241;&#242;&#238;&#255;&#237;&#237;&#251;&#233; &#234;&#238;&#237;&#242;&#240;&#238;&#235;&#252; %s1 &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#254;?</Russian>
+		<Tag>TXT_KEY_UNITCOMBAT_POLEARM</Tag>
+		<English>Polearm</English>
+		<French>Arme d'hast</French>
+		<German>Stangenwaffeninfanterie</German>
+		<Italian>Fanteria di braccio di asta</Italian>
+		<Spanish>Infantería de brazo de asta</Spanish>
+		<Russian>&#196;&#240;&#229;&#226;&#234;&#238;&#226;&#238;&#229; &#238;&#240;&#243;&#230;&#232;&#229;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEWCIV_MESSAGE1</Tag>
-		<English>Do you wish to take permanent control of the </English>
-		<French>Voulez-vous prendre le contr&#244;le permanent de la</French>
-		<German>Wollt Ihr die permanente Kontrolle &#252;ber </German>
-		<Italian>Vuoi assumere il controllo permanente di </Italian>
-		<Spanish>&#191;Deseas tener el control permanente sobre </Spanish>
-		<Russian>&#194;&#251; &#230;&#229;&#235;&#224;&#229;&#242;&#229; &#226;&#231;&#255;&#242;&#252; &#239;&#238;&#241;&#242;&#238;&#255;&#237;&#237;&#251;&#233; &#234;&#238;&#237;&#242;&#240;&#238;&#235;&#252; </Russian>
+		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_INFANTRY</Tag>
+		<English>Heavy Infantry</English>
+		<French>Infantrie Lourde</French>
+		<German>Schwere Infanterie</German>
+		<Italian>Fanteria pesante</Italian>
+		<Spanish>Infantería pesada</Spanish>
+		<Russian>&#210;&#255;&#230;&#229;&#235;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REBELLION_TEXT</Tag>
-		<English>%s1 cities have declared their independence from us and expelled our garrisons. Shall we leave them free?</English>
-		<French>Les villes %s1 ont d&#233;clar&#233; leur ind&#233;pendance et attaquent nos garnisons. Devons-nous les laisser libres ?</French>
-		<German>%s1:3 St&#228;dte haben ihre Unabh&#228;ngigkeit von uns erkl&#228;rt und unsere Garnisonen vertrieben. Sollen wir sie gew&#228;hren lassen?</German>
-		<Italian>Le citt&#224; %s1:4 hanno dichiarato la propria indipendenza, espellendo le nostre guarnigioni. Dobbiamo lasciarle libere?</Italian>
-		<Spanish>Las ciudades %s1:4 han declarado su independencia de nosotros y han expulsado a nuestras guarniciones. &#191;Debemos permitir su libertad?</Spanish>
-		<Russian>%s1 &#227;&#238;&#240;&#238;&#228;&#224; &#238;&#225;&#250;&#255;&#226;&#232;&#235;&#232; &#241;&#226;&#238;&#254; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252; &#238;&#242; &#237;&#224;&#241; &#232; &#226;&#251;&#227;&#237;&#224;&#235; &#237;&#224;&#248;&#232; &#227;&#224;&#240;&#237;&#232;&#231;&#238;&#237;&#251;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#238;&#241;&#242;&#224;&#226;&#232;&#242;&#252; &#232;&#245; &#241;&#226;&#238;&#225;&#238;&#228;&#237;&#238;?</Russian>
+		<Tag>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Tag>
+		<English>Light Cavalry</English>
+		<French>Cavalerie L&#233;g&#232;re</French>
+		<German>Leichte Kavallerie</German>
+		<Italian>Cavalleria leggera</Italian>
+		<Spanish>Caballería ligera</Spanish>
+		<Russian>&#203;&#229;&#227;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INDEPENDENCE_TEXT</Tag>
-		<English>%s1 cities have declared their independence from their foreign domination!</English>
-		<French>Les villes %s1 ont d&#233;clar&#233; leur ind&#233;pendance par rapport &#224; la domination &#233;trang&#232;re !</French>
-		<German>%s1:3 St&#228;dte haben ihre Unabh&#228;ngigkeit von der Fremdherrschaft erkl&#228;rt!</German>
-		<Italian>Le citt&#224; %s1:4 hanno dichiarato la propria indipendenza dal dominio straniero!</Italian>
-		<Spanish>Las ciudades %s1:4 han declarado su independencia del dominio extranjero.</Spanish>
-		<Russian>%s1 &#227;&#238;&#240;&#238;&#228;&#224; &#238;&#225;&#250;&#255;&#226;&#232;&#235;&#232; &#241;&#226;&#238;&#254; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252; &#238;&#242; &#232;&#245; &#231;&#224;&#240;&#243;&#225;&#229;&#230;&#237;&#238;&#227;&#238; &#239;&#240;&#229;&#232;&#236;&#243;&#249;&#229;&#241;&#242;&#226;&#224;!</Russian>
+		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_CAVALRY</Tag>
+		<English>Heavy Cavalry</English>
+		<French>Cavalerie Lourde</French>
+		<German>Schwere Kavallerie</German>
+		<Italian>Cavalleria pesante</Italian>
+		<Spanish>Caballería pesada</Spanish>
+		<Russian>&#210;&#255;&#230;&#229;&#235;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EXILE_TEXT</Tag>
-		<English>You have been captured by the %s1:2 and exiled to the unimportant lands of %s2. You have a short period of time for retaking your capital and gain back your position.</English>
-		<French>Vous avez &#233;t&#233; captur&#233; par les %s1 et exil&#233; dans les terres inint&#233;ressantes de %s2. Vous avez peu de temps pour reprendre votre capitale et r&#233;cup&#233;rer votre situation.</French>
-		<German>Ihr wurdet vom %s1:2 Volk gefangen genommen und seid ins Exil geschickt worden - in das unbedeutende %s2:3 Reich. Es bleibt Euch nur wenig Zeit, um Eure Hauptstadt zur&#252;ckzuerobern und Eure Position wiederzuerlangen.</German>
-		<Italian>Sei stato catturato dai %s1:3 ed esiliato nelle insignificanti terre di %s2. Hai un breve periodo di tempo per riprendere la tua capitale e riguadagnare la tua posizione.</Italian>
-		<Spanish>Hab&#233;is sido capturado por los %s1:3 y exiliado a las insignificantes tierras de %s2. Dispon&#233;is de un breve periodo de tiempo para recuperar vuestra capital y vuestra posici&#243;n.</Spanish>
-		<Russian>&#194;&#224;&#241; &#231;&#224;&#245;&#226;&#224;&#242;&#232;&#235;&#232; %s1:2 &#232; &#241;&#238;&#241;&#235;&#224;&#235;&#232;&#241;&#252; &#234; &#236;&#224;&#235;&#238;&#231;&#237;&#224;&#247;&#224;&#249;&#232;&#236; &#231;&#229;&#236;&#235;&#255;&#236; %s2. &#194;&#251; &#232;&#236;&#229;&#229;&#242;&#229; &#234;&#238;&#240;&#238;&#242;&#234;&#232;&#233; &#239;&#229;&#240;&#232;&#238;&#228; &#226;&#240;&#229;&#236;&#229;&#237;&#232; &#226;&#231;&#255;&#242;&#232;&#229; &#238;&#225;&#240;&#224;&#242;&#237;&#238; &#226;&#224;&#248; &#234;&#224;&#239;&#232;&#242;&#224;&#235; &#232; &#239;&#240;&#232;&#238;&#225;&#240;&#229;&#242;&#224;&#229;&#242;&#229; &#237;&#224;&#231;&#224;&#228; &#226;&#224;&#248;&#243; &#239;&#238;&#231;&#232;&#246;&#232;&#254;.</Russian>
+		<Tag>TXT_KEY_PROMOTION_FEINT</Tag>
+		<English>Feint</English>
+		<French>Feinte</French>
+		<German>Finte</German>
+		<Italian>Finta</Italian>
+		<Spanish>Finta</Spanish>
+		<Russian>&#207;&#240;&#232;&#242;&#226;&#238;&#240;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ESCAPE_TEXT</Tag>
-		<English>You have escaped and regained control of %s1 territory. Now let's teach our enemies a lesson!</English>
-		<French>Vous vous &#234;tes &#233;chapp&#233; et avez regagn&#233; le contr&#244;le du territoire %s1. A pr&#233;sent, donnons une le&#231;on &#224; nos ennemis !</French>
-		<German>Ihr seid entkommen und habt die Kontrolle &#252;ber das %s1:3 Gebiet wiedererlangt. Nun sollten wir unseren Feinden eine Lektion erteilen!</German>
-		<Italian>Sei riuscito a fuggire e a riguadagnare il controllo del territorio %s1. Ora diamo una bella lezione ai nostri nemici!</Italian>
-		<Spanish>Hab&#233;is escapado y recuperado el control del territorio %s1:1. &#161;D&#233;mosles una lecci&#243;n a nuestros enemigos!</Spanish>
-		<Russian>&#194;&#251; &#243;&#225;&#229;&#230;&#224;&#235;&#232; &#232; &#238;&#226;&#235;&#224;&#228;&#229;&#226;&#224;&#229;&#236;&#251;&#233; &#226;&#237;&#238;&#226;&#252; &#234;&#238;&#237;&#242;&#240;&#238;&#235;&#252; %s1 &#242;&#229;&#240;&#240;&#232;&#242;&#238;&#240;&#232;&#232;. &#209;&#229;&#233;&#247;&#224;&#241; &#228;&#224;&#226;&#224;&#233;&#242;&#229; &#239;&#240;&#229;&#239;&#238;&#228;&#224;&#226;&#224;&#242;&#252; &#237;&#224;&#248;&#232;&#236; &#226;&#240;&#224;&#227;&#224;&#236; &#243;&#240;&#238;&#234;!</Russian>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADES</Tag>
+		<English>Unit Upgrades</English>
+		<French>Am&#233;liorations d'unit&#233;s</French>
+		<German>Einheitenbef&#246;rderungen</German>
+		<Italian>Aggiornamento delle unit&#224;</Italian>
+		<Spanish>Modernizaci&#243;n de unidades</Spanish>
+		<Russian>&#211;&#235;&#243;&#247;&#248;&#229;&#237;&#232;&#229; &#222;&#237;&#232;&#242;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1% %F2from Resources</English>
+		<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>
+		<German>[ICON_BULLET]%D1% %F2durch Ressourcen</German>
+		<Italian>[ICON_BULLET]%D1% %F2resources</Italian>
+		<Spanish>[ICON_BULLET]%D1% %F2resources</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER</Tag>
+		<English>Remove non-state religion</English>
+		<French>Supprime religion non-officiel</French>
+		<German>Nicht-staatliche Religion entfernen</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>&#211;&#228;&#224;&#235;&#232;&#242;&#252; &#237;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;</Russian>
 	</TEXT>
 </Civ4GameText>

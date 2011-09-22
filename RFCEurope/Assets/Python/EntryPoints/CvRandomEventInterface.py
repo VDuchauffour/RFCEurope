@@ -909,12 +909,12 @@ def canApplySaltpeter(argsList):
 	if (plot == None):
 		return false
 		
-	iForest = CvUtil.findInfoTypeNum(gc.getFeatureInfo,gc.getNumFeatureInfos(),'FEATURE_FOREST')
+	iWoodland = CvUtil.findInfoTypeNum(gc.getFeatureInfo,gc.getNumFeatureInfos(),'FEATURE_FOREST')
 	
 	iNumPlots = 0
 	for i in range(map.numPlots()):
 		loopPlot = map.plotByIndex(i)
-		if (loopPlot.getOwner() == kTriggeredData.ePlayer and loopPlot.getFeatureType() == iForest and loopPlot.isHills()):
+		if (loopPlot.getOwner() == kTriggeredData.ePlayer and loopPlot.getFeatureType() == iWoodland and loopPlot.isHills()):
 			iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, loopPlot.getX(), loopPlot.getY())
 			if iDistance > 0:
 				iNumPlots += 1
@@ -933,12 +933,12 @@ def applySaltpeter(argsList):
 	if (plot == None):
 		return
 		
-	iForest = CvUtil.findInfoTypeNum(gc.getFeatureInfo,gc.getNumFeatureInfos(),'FEATURE_FOREST')
+	iWoodland = CvUtil.findInfoTypeNum(gc.getFeatureInfo,gc.getNumFeatureInfos(),'FEATURE_FOREST')
 	
 	listPlots = []
 	for i in range(map.numPlots()):
 		loopPlot = map.plotByIndex(i)
-		if (loopPlot.getOwner() == kTriggeredData.ePlayer and loopPlot.getFeatureType() == iForest and loopPlot.isHills()):
+		if (loopPlot.getOwner() == kTriggeredData.ePlayer and loopPlot.getFeatureType() == iWoodland and loopPlot.isHills()):
 			iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, loopPlot.getX(), loopPlot.getY())
 			if iDistance > 0:
 				listPlots.append((iDistance, loopPlot))
