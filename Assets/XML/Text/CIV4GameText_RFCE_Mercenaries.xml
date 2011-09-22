@@ -3,9 +3,8 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text - New -->
+<!-- Game Text - RFCE Mercenaries -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<!--Please place any new text entries into this file-->
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MERCENARIES_PEDIA</Tag>
 		<English>[H1]Mercenaries[\H1][PARAGRAPH:2]Mercenaries are soldiers who fight primarily for private gain, usually with little regard for ideological, national, political, or moral considerations. However, when the term is used to refer to a soldier in a regular national army, it is usually considered an insult.[PARAGRAPH:2][PARAGRAPH:2]Mercenaries have seen regular deployment in battle since the time of Ancient Egypt and Carthage, up through the 16th century, including the famous Swiss Guard and the Landsknechts. In the game, Mercenaries can be hired only until the discovery of Nationalism, which changed the conception of armies and caused a rapid decline in Mercenary usage.[PARAGRAPH:2]</English>

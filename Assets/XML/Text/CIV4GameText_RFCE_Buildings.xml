@@ -3,7 +3,7 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text Objects -->
+<!-- Game Text - RFCE Buildings -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUNGEON</Tag>
@@ -328,6 +328,24 @@
 		<Italian>Infermeria</Italian>
 		<Spanish>Enfermería</Spanish>
 		<Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Tag>
+		<English>[TAB]Infirmary is a place for the care of the infirm, sick, or injured. In the Middle Ages, infirmaries were often attached to monasteries, with care provided by monks and nuns. Additionally, they could also serve as almhouses or refuges for pilgrims.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INFIRMARY_HELP</Tag>
+		<English>[ICON_BULLET]Requires [LINK=CORPORATION_1]Knights Hospitallers[\LINK] present in the city</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
@@ -770,15 +788,6 @@
 [TAB]The Byzantine-style establishment may have existed as early as the 8th century, though the present structure is usually said to have been begun in 1104, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina'a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.
 [TAB]Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.
 [TAB]Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early 16th century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Tag>
-		<English>[TAB]Infirmary is a place for the care of the infirm, sick, or injured. In the Middle Ages, infirmaries were often attached to monasteries, with care provided by monks and nuns. Additionally, they could also serve as almhouses or refuges for pilgrims.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

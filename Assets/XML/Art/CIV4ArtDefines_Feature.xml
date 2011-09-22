@@ -480,29 +480,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_PUFFIN</Type>
-			<bAnimated>0</bAnimated>
-			<bRiverArt>1</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.25</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/BaseTerrain/Marsh.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,2,2</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-			<FeatureArtPiece>
-				<ModelFile>Art/Terrain/Features/Floodplain/FloodPlain_baseALL.dds</ModelFile>
-				<Connections/>
-			</FeatureArtPiece>
-			</FeatureArtPieces> 
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/BaseTerrain/Marsh.dd</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-	<!-- Rhye - start -->
-		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_MUD</Type>
+			<Type>ART_DEF_FEATURE_MARSH</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>1</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -522,6 +500,5 @@
 				<VarietyButton>Art/Interface/Buttons/BaseTerrain/Marsh.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
-		<!-- Rhye - end -->
 	</FeatureArtInfos>
 </Civ4ArtDefines>

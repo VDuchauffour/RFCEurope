@@ -32,7 +32,7 @@
 			<Help/>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<!-- Rhye -->
-			<iTime>600</iTime>
+			<iTime>450</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -42,14 +42,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -67,7 +67,7 @@
 			<Help/>
 			<PrereqTech>TECH_BRONZE_CASTING</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>500</iTime>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
@@ -77,14 +77,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>			
@@ -111,14 +111,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>			
@@ -156,7 +156,7 @@
 			<Help/>
 			<PrereqTech>TECH_MONUMENT_BUILDING</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>600</iTime>
+			<iTime>750</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
@@ -166,14 +166,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -191,7 +191,7 @@
 			<Help/>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>900</iTime>
+			<iTime>750</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WATERMILL</ImprovementType>
@@ -201,14 +201,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>			
@@ -226,7 +226,7 @@
 			<Help/>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>700</iTime>
+			<iTime>900</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
@@ -236,7 +236,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>NONE</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
+						<iProduction>30</iProduction>
+						<bRemove>1</bRemove>
+					</FeatureStruct>
+					<FeatureStruct>
+						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
+						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -263,7 +270,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
+						<iProduction>30</iProduction>
+						<bRemove>1</bRemove>
+					</FeatureStruct>
+					<FeatureStruct>
+						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
+						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -281,7 +295,7 @@
 			<Help/>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>500</iTime>
+			<iTime>450</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
@@ -291,14 +305,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -316,7 +330,7 @@
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>500</iTime>
+			<iTime>450</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
@@ -336,7 +350,7 @@
 			<Help/>
 			<PrereqTech>TECH_HERBAL_MEDICINE</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>600</iTime>
+			<iTime>900</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
@@ -346,7 +360,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
+						<iProduction>30</iProduction>
+						<bRemove>1</bRemove>
+					</FeatureStruct>
+					<FeatureStruct>
+						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
+						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -364,7 +385,7 @@
 			<Help/>
 			<PrereqTech>TECH_HERBAL_MEDICINE</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>600</iTime>
+			<iTime>750</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_APIARY</ImprovementType>
@@ -384,7 +405,7 @@
 			<Help/>
 			<PrereqTech>TECH_MANORIALISM</PrereqTech>
 			<!-- Rhye  -->
-			<iTime>700</iTime>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
@@ -394,14 +415,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>300</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -418,7 +439,7 @@
 			<Description>TXT_KEY_BUILD_FORT</Description>
 			<Help/>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iTime>1000</iTime>
+			<iTime>1200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
@@ -433,8 +454,8 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_REMOVE_FOREST</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_FOREST</Description>
+			<Type>BUILD_REMOVE_DENSE_FOREST</Type>
+			<Description>TXT_KEY_BUILD_REMOVE_DENSE_FOREST</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>0</iTime>
@@ -447,7 +468,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 					<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-					<iTime>300</iTime>
+					<iTime>600</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -474,7 +495,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
-					<iTime>300</iTime>
+					<iTime>400</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -544,8 +565,8 @@
 			<Button>Art/Interface/Buttons/Builds/BuildAccess.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_REMOVE_MUD</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_MUD</Description>
+			<Type>BUILD_REMOVE_MARSH</Type>
+			<Description>TXT_KEY_BUILD_REMOVE_MARSH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>0</iTime>
@@ -556,9 +577,9 @@
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_MUD</FeatureType>
+					<FeatureType>FEATURE_MARSH</FeatureType>
 					<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>1500</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>

@@ -249,7 +249,7 @@
 			<TextureBlend15>15,0 16,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_MARSH</Type>
+			<Type>ART_DEF_TERRAIN_WETLAND</Type>
 			<Path>Art/Terrain/Textures/SwampBLEND.dds</Path>
 			<Grid>Art/Terrain/Textures/SwampGRIDS.dds</Grid>
 			<Detail>Art/Terrain/Textures/SwampDETAIL.dds</Detail>

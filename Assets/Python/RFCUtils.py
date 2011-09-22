@@ -969,7 +969,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                        if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         if (pCurrent.countTotalCulture() == 0 ):
                                                 # this is a good plot, so paint it and continue search
@@ -984,7 +984,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                        if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         #if (pCurrent.countTotalCulture() == 0 ):
                                          # this is a good plot, so paint it and continue search
@@ -1042,7 +1042,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                        if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         iClean = 0
                                         for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
@@ -1064,7 +1064,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                        if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                             # this is a good plot, so paint it and continue search
                                             return (None, bPaint, bContinue)
@@ -1078,7 +1078,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                        if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         iClean = 0
                                         for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
@@ -1103,7 +1103,7 @@ class RFCUtils:
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
                         if ( not pCurrent.isImpassable()):
                                 if ( not pCurrent.isUnit() ):
-                                        if (pCurrent.getTerrainType() != xml.iDesert) and (pCurrent.getTerrainType() != xml.iTundra) and (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                                        if (pCurrent.getTerrainType() != xml.iDesert) and (pCurrent.getTerrainType() != xml.iTundra) and (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                                 if (pCurrent.countTotalCulture() == 0 ):
                                                         # this is a good plot, so paint it and continue search
                                                         return (None, bPaint, bContinue)
@@ -1143,7 +1143,7 @@ class RFCUtils:
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
                 if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-                        if (pCurrent.getTerrainType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+                        if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                             if (pCurrent.getOwner() == argsList ):
                                                     # this is a good plot, so paint it and continue search

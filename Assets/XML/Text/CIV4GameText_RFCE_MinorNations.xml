@@ -3,9 +3,8 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text - New -->
+<!-- Game Text - RFCE Minor Nations -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<!--Please place any new text entries into this file-->
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_TITLE</Tag>
 		<English>%s1_CivName are revolting!</English>

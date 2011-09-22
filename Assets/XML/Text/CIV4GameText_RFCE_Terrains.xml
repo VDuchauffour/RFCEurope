@@ -3,7 +3,7 @@
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
-<!-- Game Text Objects -->
+<!-- Game Text - RFCE Terrains and Improvements-->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_WB_DESC</Tag>
@@ -12,15 +12,17 @@
 		<German>Große Karte von Europa</German>
 		<Italian>Große Karte von Europa</Italian>
 		<Spanish>El Mapa grande de Europa</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
-		<English>Forest</English>
+		<English>Dense Forest</English>
 		<French>For&#234;t Dense</French>
 		<German>Wald</German>
 		<Italian>Foresta</Italian>
 		<Spanish>Bosque</Spanish>
-		<Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian></TEXT>
+		<Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
 		<English>Woodland</English>
@@ -28,7 +30,8 @@
 		<German>Waldland</German>
 		<Italian>Terreno boscoso</Italian>
 		<Spanish>Bosque</Spanish>
-		<Russian/></TEXT>
+		<Russian>.</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
 		<English>Moorland</English>
@@ -36,7 +39,8 @@
 		<German>Moor</German>
 		<Italian>Brughiera</Italian>
 		<Spanish>Páramo</Spanish>
-		<Russian>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252;</Russian></TEXT>
+		<Russian>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_APIARY</Tag>
 		<English>Apiary</English>
@@ -44,7 +48,8 @@
 		<German>Imkerei</German>
 		<Italian>Apiario</Italian>
 		<Spanish>Colmenar</Spanish>
-		<Russian>&#207;&#224;&#241;&#229;&#234;&#224;</Russian><Japanese/><Chinese/></TEXT>
+		<Russian>&#207;&#224;&#241;&#229;&#234;&#224;</Russian><Japanese/><Chinese/>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
 		<English>Colonial Trade Route</English>
@@ -52,7 +57,8 @@
 		<German>Koloniale Handelroute</German>
 		<Italian>La Strada di Mestiere coloniale</Italian>
 		<Spanish>Ruta colonial de Comercio</Spanish>
-		<Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian></TEXT>
+		<Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINERY</Tag>
 		<English>Vineyard</English>
@@ -60,6 +66,7 @@
 		<German>Weingut</German>
 		<Italian>Azienda vinicola</Italian>
 		<Spanish>Bodega</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONIAL_TRADE</Tag>
@@ -68,7 +75,8 @@
 		<German>Errichten [LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[/LINK]</German>
 		<Italian>Stabilire [LINK=IMPROVEMENT_COLONIAL_TRADE]la Strada di Mestiere coloniale[\LINK]</Italian>
 		<Spanish>Establezca [LINK=IMPROVEMENT_COLONIAL_TRADE]Ruta colonial de Comercio[\LINK]</Spanish>
-		<Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian></TEXT>
+		<Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_APIARY</Tag>
 		<English>Build a [LINK=IMPROVEMENT_APIARY]Apiary[\LINK]</English>
@@ -76,31 +84,34 @@
 		<German>[LINK=IMPROVEMENT_APIARY]Imkerei[\LINK] bauen</German>
 		<Italian>Colmenar una [LINK=IMPROVEMENT_APIARY]Apiario[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_APIARY]Colmenar[\LINK]</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian></TEXT>
+		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_MARSH</Tag>
+		<Tag>TXT_KEY_TERRAIN_WETLAND</Tag>
+		<English>Wetland</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
 		<English>Marsh</English>
 		<French>Marécage</French>
 		<German>Sumpf</German>
 		<Italian>Palude</Italian>
 		<Spanish>Ci&#233;naga</Spanish>
-		<Russian>&#193;&#238;&#235;&#238;&#242;&#238;</Russian></TEXT>
+		<Russian>&#193;&#238;&#235;&#238;&#242;&#238;</Russian>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_MUD</Tag>
-		<English>Mud</English>
-		<French>Boue</French>
-		<German>Schlamm</German>
-		<Italian>Fango</Italian>
-		<Spanish>Barro</Spanish>
-		<Russian>&#195;&#240;&#255;&#231;&#252;</Russian></TEXT>
-
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_REMOVE_FOREST</Tag>
-		<English>Clear [LINK=FEATURE_DENSE_FOREST]Forest[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_REMOVE_DENSE_FOREST</Tag>
+		<English>Clear [LINK=FEATURE_DENSE_FOREST]Dense Forest[\LINK]</English>
 		<French>d&#233;fricher la [LINK=FEATURE_DENSE_FOREST]for&#234;t[\LINK]</French>
 		<German>[LINK=FEATURE_DENSE_FOREST]Wald[\LINK] abholzen</German>
 		<Italian>Disboscare una [LINK=FEATURE_DENSE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_DENSE_FOREST]bosque[\LINK]</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_WOODLAND</Tag>
@@ -109,14 +120,16 @@
 		<German>[LINK=FEATURE_FOREST]Wald[\LINK] abholzen</German>
 		<Italian>Disboscare una [LINK=FEATURE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_FOREST]bosque[\LINK]</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_REMOVE_MUD</Tag>
-		<English>Clear [LINK=FEATURE_MUD]Mud[\LINK]</English>
-		<French>Eclaircir de la [LINK=FEATURE_MUD]Boue[\LINK]</French>
-		<German>Entferne [LINK=FEATURE_MUD]Schlamm[\LINK]</German>
-		<Italian>Chiarire il [LINK=FEATURE_MUD]Fango[\LINK]</Italian>
-		<Spanish>Vacíe [LINK=FEATURE_MUD]Barro[\LINK]</Spanish>
+		<Tag>TXT_KEY_BUILD_REMOVE_MARSH</Tag>
+		<English>Clear [LINK=FEATURE_MARSH]Marsh[\LINK]</English>
+		<French>Eclaircir de la [LINK=FEATURE_MARSH]Marécage[\LINK]</French>
+		<German>Entferne [LINK=FEATURE_MARSH]Sumpf[\LINK]</German>
+		<Italian>Chiarire il [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
+		<Spanish>Vacíe [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINERY</Tag>
@@ -125,5 +138,6 @@
 		<German>[LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
 		<Italian>Costruire un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 </Civ4GameText>
