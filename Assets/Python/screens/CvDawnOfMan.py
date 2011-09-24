@@ -20,17 +20,17 @@ class CvDawnOfMan:
 		self.W_SCREEN = 1024
 		self.H_SCREEN = 768
 		
-		self.X_MAIN_PANEL = 250
-		self.Y_MAIN_PANEL = 190 #70
-		self.W_MAIN_PANEL = 550
-		self.H_MAIN_PANEL = 350 #500
+		self.X_MAIN_PANEL = 238	#position of the main panel's top-left corner: pixels from left side of the screen
+		self.Y_MAIN_PANEL = 180 #pixels from top of the screen
+		self.W_MAIN_PANEL = 556 #number of pixels wide
+		self.H_MAIN_PANEL = 355 #number of pixels height
 		
 		self.iMarginSpace = 15
 		
 		self.X_HEADER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
-		self.Y_HEADER_PANEL = self.Y_MAIN_PANEL + self.iMarginSpace
+		self.Y_HEADER_PANEL = self.Y_MAIN_PANEL + 10 	#self.iMarginSpace
 		self.W_HEADER_PANEL = self.W_MAIN_PANEL - (self.iMarginSpace * 2)
-		self.H_HEADER_PANEL = int(self.H_MAIN_PANEL * (2.0 / 5.0))
+		self.H_HEADER_PANEL = self.H_MAIN_PANEL - 146 	#int(self.H_MAIN_PANEL * (2.0 / 5.0))
 		
 		self.X_LEADER_ICON = self.X_HEADER_PANEL + self.iMarginSpace
 		self.Y_LEADER_ICON = self.Y_HEADER_PANEL + self.iMarginSpace
@@ -57,11 +57,11 @@ class CvDawnOfMan:
 		self.X_TEXT_PANEL = self.X_HEADER_PANEL
 		self.Y_TEXT_PANEL = self.Y_HEADER_PANEL + self.iMarginSpace #10 is the fudge factor  #self.Y_HEADER_PANEL + self.H_HEADER_PANEL + self.iMarginSpace - 10		self.W_TEXT_PANEL = self.W_HEADER_PANEL
 		self.W_TEXT_PANEL = self.W_HEADER_PANEL
-		self.H_TEXT_PANEL = self.H_MAIN_PANEL - (self.iMarginSpace * 3) + 10 #10 is the fudge factor
-		self.iTEXT_PANEL_MARGIN = 35
+		self.H_TEXT_PANEL = self.H_MAIN_PANEL -	32		#(self.iMarginSpace * 3) + 10 #10 is the fudge factor
+		self.iTEXT_PANEL_MARGIN = 40					#from the top of the header panel
 		
-		self.X_EXIT = 460
-		self.Y_EXIT = self.Y_MAIN_PANEL + 290 #self.Y_MAIN_PANEL + 440 (240)
+		self.X_EXIT = 456 #self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - self.W_EXIT/2
+		self.Y_EXIT = self.Y_MAIN_PANEL + 307 #const = main panel height - 48
 		self.W_EXIT = 120
 		self.H_EXIT = 30
 		
@@ -135,8 +135,9 @@ class CvDawnOfMan:
 		year = con.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(con.tYear[CyGame().getActiveTeam()][1], ()) #3Miro
 		textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
 		bodyString = localText.getText(textKey, (year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey())) # Absinthe
-
-		screen.addStackedBarGFC("ProgressBar", 300, 400, 435, 40, InfoBarTypes.NUM_INFOBAR_TYPES, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		
+		#Progress bar position (top left corner, width, height) #X coordinate: self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - Progress bar width/2
+		screen.addStackedBarGFC("ProgressBar", 271, 425, 490, 35, InfoBarTypes.NUM_INFOBAR_TYPES, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setStackedBarColors("ProgressBar", InfoBarTypes.INFOBAR_STORED, gc.getInfoTypeForString("COLOR_PLAYER_GREEN"))
 		screen.setStackedBarColors("ProgressBar", InfoBarTypes.INFOBAR_RATE, gc.getInfoTypeForString("COLOR_RESEARCH_RATE"))
 		screen.setStackedBarColors("ProgressBar", InfoBarTypes.INFOBAR_RATE_EXTRA, gc.getInfoTypeForString("COLOR_EMPTY"))
@@ -144,7 +145,7 @@ class CvDawnOfMan:
 		self.iTurnsRemaining = -1
 
 ##Rhye - end		
-		screen.addMultilineText( "BodyText", bodyString, self.X_TEXT_PANEL + self.iMarginSpace, self.Y_TEXT_PANEL + self.iMarginSpace + self.iTEXT_PANEL_MARGIN, self.W_TEXT_PANEL - (self.iMarginSpace * 2), self.H_TEXT_PANEL - (self.iMarginSpace * 2) - 75, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText( "BodyText", bodyString, self.X_TEXT_PANEL + self.iMarginSpace, self.Y_TEXT_PANEL + self.iMarginSpace + self.iTEXT_PANEL_MARGIN, self.W_TEXT_PANEL - (self.iMarginSpace * 2), self.H_TEXT_PANEL - (self.iMarginSpace * 2) - 139, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		
 		screen.setButtonGFC("Exit", self.EXIT_TEXT, "", self.X_EXIT, self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
 		screen.hide( "Exit" ) #Rhye
@@ -167,7 +168,7 @@ class CvDawnOfMan:
                 if (con.tBirth[CyGame().getActiveTeam()] == 0):
 			screen = CyGInterfaceScreen( "CvLoadingScreen", self.iScreenID )
 			screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
-			screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (0,)), CvUtil.FONT_CENTER_JUSTIFY, 530, 445, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (0,)), CvUtil.FONT_CENTER_JUSTIFY, 516, 465, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                         screen.show( "Exit" )  #Rhye
 		else:                        
 			iGameTurn = CyGame().getGameTurn()
@@ -184,7 +185,7 @@ class CvDawnOfMan:
                                 screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn, exponent)) / float(math.pow(iNumAutoPlayTurns, exponent)))
                         else:
                                 screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn-151, exponent)) / float(math.pow(iNumAutoPlayTurns-151, exponent)))
-                        screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (iNumTurnsRemaining,)), CvUtil.FONT_CENTER_JUSTIFY, 530, 445, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                        screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (iNumTurnsRemaining,)), CvUtil.FONT_CENTER_JUSTIFY, 514, 465, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                         if (iNumTurnsRemaining <= 0):  #Rhye
                                 screen.show( "Exit" )  #Rhye
 		

@@ -374,7 +374,7 @@ class Religions:
 				pPlayer.changeFaith( 3 )
 		if ( iBuilding in tReligiousWonders ):
 			pPlayer.changeFaith( 6 )
-		if ( iStateReligion != xml.iJudaism and iBuilding == xml.iTempleMount ):
+		if ( iStateReligion != xml.iJudaism and iBuilding == xml.iKazimierz ):
 			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
 
         def selectRandomCityCiv(self, iCiv):
