@@ -84,14 +84,14 @@ lCivGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],  		#Eastern
 		[iBurgundy,iHungary,iGermany,iPoland,iAustria],	#Central
 		[iFrankia,iSpain,iEngland,iPortugal,iDutch],	#Atlantic
 		[iArabia,iCordoba,iTurkey],			#Islamic
-		[iGenoa,iVenecia, iPope],		 		#Italian
+		[iGenoa,iVenecia,iPope],		 		#Italian
 		[iNorse,iSweden]] 				#Scandinavian
 
 lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],  #Eastern
 			[iBurgundy,iHungary,iGermany,iPoland,iAustria],  		#Central
 			[iFrankia,iSpain,iEngland,iPortugal,iDutch], 		#Atlantic
 			[iArabia,iCordoba,iTurkey],		#Islamic
-			[iGenoa,iVenecia, iPope], #Italian
+			[iGenoa,iVenecia,iPope], #Italian
 			[iNorse,iSweden]]		#Norse
 
 lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iSpain, iCordoba, iNorse, iVenecia, iKiev, iHungary, \
@@ -239,28 +239,28 @@ tYear = ( # for Dawn of Man starting screen
 # starting locations coordinates
 tCapitals = (
 (81, 25), #tConstantinople, Byzantium
-(44, 46), #tFrance
+(44, 46), #tParis, France
 (97, 13), #tDamascus, Arabia
 (77, 30), #tPreslav, Bulgaria
-(28, 28), #tCordoba
-(59, 57), #tNorse
-(56, 35), #tVenecia
-(47, 41), #tBurgundy
-(54, 46), #tGermany
-(83, 45), #tKiev
-(66, 37), #tHungary
+(28, 28), #tCordoba, Cordoba
+(59, 57), #tRoskilde, Norse
+(56, 35), #tVenice, Venezia
+(47, 41), #tDijon, Burgundy
+(54, 46), #tFrankfurt, Germany
+(83, 45), #tKiev, Kiev
+(66, 37), #tBuda, Hungary
 (28, 37), #tLeon, Spain
-(65, 49), #tPoland
-(50, 34), #tGenoa
+(65, 49), #tPoznan, Poland
+(50, 34), #tGenoa, Genoa
 (43, 53), #tLondon, England
 (22, 31), #tLisboa, Portugal
-(75, 53), #Lithuania
-(63, 39), #tAustria
-(79, 22), #tTurkey
-(88, 56), #tMoscow
-(67, 64), #tSweden
-(49, 52), #tDutch
-(56, 27)  #Rome
+(75, 53), #tVilnius, Lithuania
+(63, 39), #tWien, Austria
+(79, 22), #tBursa, Turkey
+(88, 56), #tMoscow, Moscow
+(67, 64), #tStockholm, Sweden
+(49, 52), #tAmsterdam, Dutch
+(56, 27)  #tRome, Pope
 ) 
 
 tStartingWorkers = (
@@ -321,29 +321,29 @@ tReserveCapitals = (
 )
 
 tNewCapitals = (  #for RiseAndFall
-((81, 25), (81, 25)), #tConstantinople, Byzantium
-((44, 46),(44, 46)), #tFrance -- Pairs
-((85, 4), (84,3),(85,3)), #Arabia --> Alexandria (best Egyption city)
-((77, 30),(77, 30)), #tPreslav, Bulgaria
-((18, 14),(17, 14)), #tCordoba --> Marrakesh
-((59, 57),(59, 57)), #tNorse
-((56, 35),(56, 35)), #tVenecia
-((47, 41),(47, 41)), #tBurgundy -- Dijon
-((61, 49),(60, 48),(61,48),(62,48)), #tGermany --> Berlin
-((86, 42),(86, 42)), #tKiev
-((67, 37),(67, 37)), #tHungary
-((28,32),(28,31),(28,33),(27,31)), #Spain --> Toledo (like Madrid)
-((65, 48),(65, 48)), #tPoland
-((50, 34),(50, 34)), #tGenoa
-((43, 53),(43, 53)), #tLondon, England
-((22, 31),(22, 31)), #tLisboa, Portugal
-((74, 53),(74, 53)), #Lithuania
-((63, 39),(63, 39)), #tAustria
-((79, 22),(79, 22)), #tTurkey
-((88, 56),(88, 56)), #tMoscow
-((67, 64),(67, 64)), #tSweden
-((49, 52),(49, 52)), #tDutch
-((56, 27),(56, 27))  #Rome
+((81, 25),(81, 25)), #tByzantium: Constantinople
+((44, 46),(44, 46)), #tFrance: Paris
+((85, 4),(84, 3),(85, 3)), #tArabia: Damascus --> Alexandria (best Egyption city)
+((77, 30),(77, 30)), #tBulgaria: Preslav
+((18, 14),(17, 14)), #tCordoba: Cordoba --> Marrakesh
+((59, 57),(59, 57)), #tNorse: Roskilde
+((56, 35),(56, 35)), #tVenezia: Venice
+((47, 41),(47, 41)), #tBurgundy: Dijon
+((61, 49),(60, 48),(61, 48),(62, 48)), #tGermany: Frankfurt --> Berlin
+((83, 45),(83, 45)), #tKiev: Kiev
+((66, 37),(66, 37)), #tHungary: Buda
+((28, 32),(28, 31),(28, 33),(27, 31)), #Spain: Leon --> Toledo (like Madrid)
+((65, 49),(65, 49)), #tPoland: Poznan
+((50, 34),(50, 34)), #tGenoa: Genoa
+((43, 53),(43, 53)), #tEngland: London
+((22, 31),(22, 31)), #tPortugal: Lisboa
+((75, 53),(75, 53)), #tLithuania: Vilnius
+((63, 39),(63, 39)), #tAustria: Wien
+((79, 22),(79, 22)), #tTurkey: Bursa
+((88, 56),(88, 56)), #tMoscow: Moscow
+((67, 64),(67, 64)), #tSweden: Stockholm
+((49, 52),(49, 52)), #tDutch: Amsterdam
+((56, 27),(56, 27))  #tPope: Rome
 ) 
 
 #core areas (for RiseAndFall and Victory)

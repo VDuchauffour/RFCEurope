@@ -311,7 +311,7 @@ class Victory:
                 elif ( playerType == iNorse ):
                         pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + city.getPopulation() )
                 elif ( playerType == iPoland and pPoland.getUHV( 2 ) == -1 ):
-                        if ( city.hasBuilding( xml.iTempleMount )):
+                        if ( city.hasBuilding( xml.iKazimierz )):
                                 iCounter = pPoland.getUHVCounter( 2 )
                                 iCathCath = ( iCounter / 10000 ) % 10
                                 iOrthCath = ( iCounter / 1000 ) % 10 
@@ -406,7 +406,7 @@ class Victory:
                                                 iProtCath += 1
                                         elif ( iBuilding == xml.iJewishQuarter ):
                                                 iJewishQu += 1
-                                        elif ( iBuilding == xml.iTempleMount ):
+                                        elif ( iBuilding == xml.iKazimierz ):
                                                 iJewishQu = max( pPoland.getNumCities(), 2 )
                                         if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
                                                 pPoland.setUHV( 2, 1 )
