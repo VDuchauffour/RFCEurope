@@ -97,6 +97,7 @@ Changes for Beta 13:
 		- All leaders' diplomusic is set to loop
 		- German and Austrian units have Holy Roman order/select sounds (vanilla German sounds were too modern)
 		- Italian order/select sounds for Venice and Genoa (instead of Roman)
+		- Better wondermovie for the Leaning Tower, new wondermovie for San Marco Basilica
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
