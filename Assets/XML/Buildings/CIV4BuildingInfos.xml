@@ -819,7 +819,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>50</iCost>
+			<iCost>100</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -3371,7 +3371,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
+			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PUBLIC_WORKS</PrereqTech>
@@ -3542,7 +3542,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
+			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PUBLIC_WORKS</PrereqTech>
@@ -4263,7 +4263,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
+			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_MAP_MAKING</PrereqTech>
@@ -4415,7 +4415,7 @@
                         <iBombardImmuneDefense>0</iBombardImmuneDefense>
                         <iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
-                <BuildingInfo> <!-- Feitoria -->
+		<BuildingInfo> <!-- Feitoria -->
 			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
 			<Type>BUILDING_PORTUGAL_FEITORIA</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -4435,7 +4435,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
+			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_MAP_MAKING</PrereqTech>
@@ -11615,7 +11615,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>45</iCost>
+			<iCost>50</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -12143,7 +12143,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -12254,8 +12254,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Jewish Quarter -->
 			<BuildingClass>BUILDINGCLASS_JEWISH_QUARTER</BuildingClass>
@@ -15275,8 +15275,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Chapel -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CHAPEL</BuildingClass>
@@ -15462,8 +15462,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Reliquary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_RELIQUARY</BuildingClass>
@@ -15646,8 +15646,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Monastery -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_MONASTERY</BuildingClass>
@@ -15832,8 +15832,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Seminary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SEMINARY</BuildingClass>
@@ -16017,8 +16017,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Shrine -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SHRINE</BuildingClass>
@@ -16209,8 +16209,8 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>2</iStateReligionCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Temple -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_TEMPLE</BuildingClass>
@@ -18495,7 +18495,7 @@
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
-			<MaxStartEra>ERA_ANCIENT</MaxStartEra>
+			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<TechTypes/>
