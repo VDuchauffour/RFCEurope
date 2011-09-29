@@ -481,11 +481,12 @@ class Victory:
                 iCount += pPlayer.countOwnedBonuses( xml.iWine )
                 iCount += pPlayer.countOwnedBonuses( xml.iHoney )
                 iCount += pPlayer.countOwnedBonuses( xml.iWhale )
-                iCount += pPlayer.countOwnedBonuses( xml.iRelic )
+                iCount += pPlayer.countOwnedBonuses( xml.iAmber )
                 iCount += pPlayer.countOwnedBonuses( xml.iCotton )
                 iCount += pPlayer.countOwnedBonuses( xml.iCoffee )
                 iCount += pPlayer.countOwnedBonuses( xml.iTea )
                 iCount += pPlayer.countOwnedBonuses( xml.iTobacco )
+				#iCount += pPlayer.countOwnedBonuses( xml.iRelic )
                 return iCount
 
         def getOwnedGrain( self, pPlayer ):
@@ -1087,7 +1088,7 @@ class Victory:
                         iNumCities = 0
                         for iProv in tSwedenControlII:
                                 iNumCities += pSweden.getProvinceCityCount( iProv )
-                        if ( iNumCities >= 10 ):
+                        if ( iNumCities >= 15 ):
                                 pSweden.setUHV( 2, 1 )
                         else:
                                 pSweden.setUHV( 2, 0 )

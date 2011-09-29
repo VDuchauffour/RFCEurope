@@ -43,6 +43,7 @@ Changes for Beta 13:
 		- Readded National Epic and Temple Mount as separate wonders (National Wonder and Jewish Shrine)
 		- Updated the UHVs affected by the province changes (Lithuania, Moscow, Kiev, Sweden)
 		- Added missing provinces for a few UHVs (some of the above ones + Austria and Poland)
+		- Swedish 3rd UHV needs 15 cities
 
 	Map and province changes:
 		- Updated Polish and Lithuanian SettlerMaps
@@ -77,8 +78,7 @@ Changes for Beta 13:
 		- Huge XML organization and uniformization
 		- New civilopedia text for Abu Yusuf Yaqub (changing him to Abu Yusuf Yaqub al-Mansur), and various small fixes in most leaders' texts.
 		- Revised parts of the changelog file, while adding and/or organizing all the older changes too
-		- Austrian Kuirassier doesn't ignore building defences
-		
+		- Added all missing UHV names (a couple Sweden, Genoan and Lithuanian)
 
 	Python/C++ updates and AI tweaks:
 		- Europe is now divided into regions (XMLConsts and RFCEurope into C++), this will affect "continent" wonders and it has big effect on the AI
@@ -108,6 +108,7 @@ Changes for Beta 13:
 		- Added defenders for the Seljuks (Arbalest and Guisarme)
 		- Removed ability of the Templar Knight to move through enemy territory
 		- All gunpowder units (except arquebuseirs) and gunpowderbased siege units (bombards and more advanced ones) ignore building defenses
+		- Austrian Kuirassier doesn't ignore building defences
 		- Added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
 		- Crossbows don't upgrade to Longbows and Longbows are about 10% more expensive (this should nerf the powerful Longbowman)
 		- Normal light cavalry units have 25% city attack penalty, while light cavalry based UUs (Berber Cavalry, Ghazi and Huszar) have 10% city attack penalty
@@ -121,6 +122,7 @@ Changes for Beta 13:
 		- Marshes (Wetlands) can be improved after the removal of Mud (Marsh)
 		- Oasis got a +1 food boost, no more forest, sheep or horse on desert tiles
 		- National Epic has +50% GP birth rate - until we find a more suitable bonus for the Leaning Tower
+		- Increased Wall cost to 100, Pagan Shrine cost reduced to 30
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
@@ -258,7 +260,7 @@ Changes for Beta 12:
 		- Fixed: Moscow UHV 2 should work now (used to be that it required 2% land only)
 		- Fixed: Colonea now Stable/OK for Byzantium
 		- Fixed: The player can no longer prosecute religion from foreign cities (unless the player is the Pope)
-		- Fixed: Trading Companies no longer count towards the build colonies for the UHV conditions (except for Spain)
+		- Fixed: Trading Companies no longer count as colonies for the UHV conditions (except for Spain)
 		- Fixed: A bug with the pre-defined wars causing strange wars (bad array permutation when the civs were changed)
 		- Fixed: Viking points don't count roads and improvements inside own culture borders, also points count against Byzantium
 		- Fixed: The player wasn't able to prosecute even from own cities
