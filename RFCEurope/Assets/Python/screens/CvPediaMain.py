@@ -490,12 +490,9 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			#tList.pop(21) #papal
 
 		# 3Miro: merijnv1 removed the Corsair, Seljuk, Tagmata, WeshLongbowman, Highlander, Keshik
+		# Absinthe: Corsair, Tagmata, Welsh Longbowman and Highlander readded as Unique Mercenaries
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
-			tList.pop(93) #Corsair
-			tList.pop(92) #Seljuk
-			tList.pop(91) #Tagmata
-			tList.pop(90) #WelshLongbowman                          
-			tList.pop(89) #Highlander
+			tList.pop(89) #Seljuk
 			tList.pop(88) #MongolKeshik
 
 		# 3Miro: merijnv1 removed the worked Access?

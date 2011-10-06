@@ -597,7 +597,7 @@ class Crusades:
 			return 66
 		if ( iUnitType == xml.iTemplar or iUnitType == xml.iTeutonic ):
 			return 90
-		if ( iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Tagmata do not go
+		if ( iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
 			return -1
 		return 50
 		

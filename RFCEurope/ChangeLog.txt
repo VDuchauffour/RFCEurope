@@ -22,6 +22,7 @@ Changes for Beta 13:
 			- Mercenaries are also tied to specific intervals on the timeline
 			- Added a bunch of generic mercs, they can be updated with specific names later on
 			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack
+			- Readded Tagmata, Corsair, Welsh Longbowman, Highlander as unique mercenaries (some of these also availeable as barbs)
 		- Revised crusade mechanics:
 			- Some of the crusader units will leave after capturing Jerusalem (Templars and Teutonic Knights will not return)
 			- Added Jerusalem Minor Nation so that it will revolt against the Crusaders and make it hard to keep Jerusalem
@@ -44,6 +45,7 @@ Changes for Beta 13:
 		- Updated the UHVs affected by the province changes (Lithuania, Moscow, Kiev, Sweden)
 		- Added missing provinces for a few UHVs (some of the above ones + Austria and Poland)
 		- Swedish 3rd UHV needs 15 cities
+		- Added a couple new "barbarian" spawns from Morholt: Swedish Crusades, Chudes, Nogais, Kalmyks
 
 	Map and province changes:
 		- Updated Polish and Lithuanian SettlerMaps
@@ -123,6 +125,7 @@ Changes for Beta 13:
 		- Oasis got a +1 food boost, no more forest, sheep or horse on desert tiles
 		- National Epic has +50% GP birth rate - until we find a more suitable bonus for the Leaning Tower
 		- Increased Wall cost to 100, Pagan Shrine cost reduced to 30
+		- Balanced most barbs (both number and area). IE: reduced barbs near Cordoba, increased pirate and horse archer activity, moved mongol spawn areas (no more Keshiks around Jerusalem)
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
@@ -137,6 +140,7 @@ Changes for Beta 13:
 		- Grenadiers are now correctly Gunpowder units (as opposed to Heavy Infantry)
 		- Hacked another ugly bug with the path-finding algorithm, the settler sometimes doesn't find a road to the target and then goes in an infinite loop
 		- Hopefully we finally managed to fix the huge do-nothing stacks bug
+		- Fixed a mongol spawn bug in Barbs.py (only appeared on Viceroy)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -168,7 +172,7 @@ Changes for Beta 12:
 			- All world wonders, corporations (and plague) have 100% chance to stay
 			- All national wonders, religious buildings, military buildings, stability/culture/defense giving buildings have 0% chance to stay
 			- All other buildings have 66% chance to stay
-			- Exceptions: Jewish Quarter with 100% (because of the judaism spread mechanics), Pagan Temple with 66% (to increase the probability of the Shrine of Uppsala wonder)
+			- Exceptions: Jewish Quarter with 66% (because of the judaism spread mechanics), Pagan Temple with 66% (to increase the probability of the Shrine of Uppsala wonder)
 		- French 1st UHV expanded with Picardy and Lorraine
 		- Calais now spawns in 800AD (for the french UHV)
 		- Hungarian respawn chance in 1686 - reconquest of Buda from the Ottomans
