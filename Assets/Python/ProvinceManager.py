@@ -185,7 +185,7 @@ tEnglandCore = []
 tEnglandNorm = []
 tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Normandy,xml.iP_Picardy]
 tEnglandPot2Core = [xml.iP_London,xml.iP_EastAnglia,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_Wessex,xml.iP_Wales]
-tEnglandPot2Norm = [xml.iP_Scotland,xml.iP_Ireland]
+tEnglandPot2Norm = [xml.iP_Scotland,xml.iP_Ireland,xml.iP_TheIsles]
 tEnglandDesire = []
 
 tPortugalCore = []

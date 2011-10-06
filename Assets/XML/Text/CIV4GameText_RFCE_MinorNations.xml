@@ -141,7 +141,7 @@
 		<Russian>Khazars</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BARBARIAN_NAMES_PECHENEG</Tag>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_PECHENEGS</Tag>
 		<English>Pechenegs</English>
 		<French>Pechenegs</French>
 		<German>Pechenegs</German>
@@ -184,5 +184,86 @@
 		<Italian>Mongols</Italian>
 		<Spanish>Mongols</Spanish>
 		<Russian>Mongols</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SELJUKS</Tag>
+		<English>Seljuks</English>
+		<French>Seljuks</French>
+		<German>Seljuks</German>
+		<Italian>Seljuks</Italian>
+		<Spanish>Seljuks</Spanish>
+		<Russian>Seljuks</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SASSANIDS</Tag>
+		<English>Sassanids</English>
+		<French>Sassanids</French>
+		<German>Sassanids</German>
+		<Italian>Sassanids</Italian>
+		<Spanish>Sassanids</Spanish>
+		<Russian>Sassanids</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES</Tag>
+		<English>Barbary Pirates</English>
+		<French>Barbary Pirates</French>
+		<German>Barbary Pirates</German>
+		<Italian>Barbary Pirates</Italian>
+		<Spanish>Barbary Pirates</Spanish>
+		<Russian>Barbary Pirates</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_LONGOBARDS</Tag>
+		<English>Longobards</English>
+		<French>Longobards</French>
+		<German>Longobards</German>
+		<Italian>Longobards</Italian>
+		<Spanish>Longobards</Spanish>
+		<Russian>Longobards</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_AVARS</Tag>
+		<English>Avars</English>
+		<French>Avars</French>
+		<German>Avars</German>
+		<Italian>Avars</Italian>
+		<Spanish>Avars</Spanish>
+		<Russian>Avars</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SWEDES</Tag>
+		<English>Swedes</English>
+		<French>Swedes</French>
+		<German>Swedes</German>
+		<Italian>Swedes</Italian>
+		<Spanish>Swedes</Spanish>
+		<Russian>Swedes</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_CHUDES</Tag>
+		<English>Chudes</English>
+		<French>Chudes</French>
+		<German>Chudes</German>
+		<Italian>Chudes</Italian>
+		<Spanish>Chudes</Spanish>
+		<Russian>Chudes</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_NOGAIS</Tag>
+		<English>Nogais</English>
+		<French>Nogais</French>
+		<German>Nogais</German>
+		<Italian>Nogais</Italian>
+		<Spanish>Nogais</Spanish>
+		<Russian>Nogais</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_KALMYKS</Tag>
+		<English>Kalmyks</English>
+		<French>Kalmyks</French>
+		<German>Kalmyks</German>
+		<Italian>Kalmyks</Italian>
+		<Spanish>Kalmyks</Spanish>
+		<Russian>Kalmyks</Russian>
 	</TEXT>
 </Civ4GameText>

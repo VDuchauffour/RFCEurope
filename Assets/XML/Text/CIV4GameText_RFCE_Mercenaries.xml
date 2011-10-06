@@ -335,6 +335,42 @@
 		<Russian>Zaporozhian</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_TAGMATA</Tag>
+		<English>Tagmata</English>
+		<French>Tagmata</French>
+		<German>Tagmata</German>
+		<Italian>Tagmata</Italian>
+		<Spanish>Tagmata</Spanish>
+		<Russian>Tagmata</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_CORSAIR</Tag>
+		<English>Barbary Pirates</English>
+		<French>Barbary Pirates</French>
+		<German>Barbary Pirates</German>
+		<Italian>Barbary Pirates</Italian>
+		<Spanish>Barbary Pirates</Spanish>
+		<Russian>Barbary Pirates</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_HIGHLANDER</Tag>
+		<English>Highlander</English>
+		<French>Highlander</French>
+		<German>Highlander</German>
+		<Italian>Highlander</Italian>
+		<Spanish>Highlander</Spanish>
+		<Russian>Highlander</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_WELSH</Tag>
+		<English>Welsh Longbowman</English>
+		<French>Welsh Longbowman</French>
+		<German>Welsh Longbowman</German>
+		<Italian>Welsh Longbowman</Italian>
+		<Spanish>Welsh Longbowman</Spanish>
+		<Russian>Welsh Longbowman</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Knights Templar</French>
@@ -372,6 +408,78 @@
 		<Italian>[ICON_BULLET]Only Available as a Mercenary</Italian>
 		<Spanish>[ICON_BULLET]Only Available as a Mercenary</Spanish>
 		<Russian>[ICON_BULLET]Only Available as a Mercenary</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAGMATA</Tag>
+		<English>Tagmata</English>
+		<French>Tagmata</French>
+		<German>Tagmata</German>
+		<Italian>Tagmata</Italian>
+		<Spanish>Tagmata</Spanish>
+		<Russian>&#210;&#224;&#227;&#236;&#224;&#242;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAGMATA_PEDIA</Tag>
+		<English>[TAB]The tagma is a term for a military unit of battalion size. The best-known use of the term however refers to the elite regiments comprising the central imperial army of the middle and late Byzantine Empire.[PARAGRAPH:2]In Byzantine usage, the term came to refer exclusively to the professional, standing troops, garrisoned in and around the capital of Constantinople. Most of them traced their origins to the Imperial guard units of the later Roman Empire. By the 7th century, these had declined to little more than parade troops, meaning that the emperors were hard put to face the frequent revolts of the new and powerful thematic formations, especially the Opsician theme, the Asian theme closest to the capital. Within the first sixty years since its creation, it was involved in five revolts, culminating in the rebellion and usurpation of the throne by its commander, the Count Artabasdos, in 741 - 743.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CORSAIR</Tag>
+		<English>Corsair</English>
+		<French>Corsaire</French>
+		<German>Kosar</German>
+		<Italian>Nave Corsara</Italian>
+		<Spanish>Corsario</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CORSAIR_PEDIA</Tag>
+		<English>[TAB]From the French "corsaire" for privateer, the Barbary Pirates, often known as "Turkish corsairs" were Muslim pirates operating from the North African ports of Tunis, Tripoli, Algiers and part of Morocco in an area which became known as the Barbary Coast. Their attacks even extended into the Atlantic as far north as Ireland and Iceland as they destroyed thousands of Venetian, French, Spanish and English ships from the time of the Crusades until the beginning of the early 1800s. Long stretches of coastline in Italy, Spain and France were almost abandoned for centuries as the pirates captured nearly a million Europeans as slaves between the 16th and 19th century to be sold in the slave markets of North Africa and the Ottoman Empire.[PARAGRAPH:2]Among the most famous corsairs were the brothers Hayreddin Barbarossa and Oruc Reis, who took control of the port of Algiers in the 15th century. beginning 400 years of Ottoman presence in North Africa and establishing a centre of Mediterranean piracy, nominally under Ottoman control but self-governing and funded largely by piracy. Many of these Barbary corsairs, sailing in their large war galleys or "Xebecs" were originally Europeans, often former Dutch captives recruited as pirates, and operated with the cooperation of some European powers, like the French against the Spanish or the British and Dutch against the French. Most European nations paid ransom and tribute to the Barbary pirates until the beginning of the 19th century when concerted French, British and American naval actions finally suppressed their fleets and bases and Algiers was captured by the French in 1830.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HIGHLANDER</Tag>
+		<English>Highlander</English>
+		<French>Highlander</French>
+		<German>Highlander</German>
+		<Italian>Highlander</Italian>
+		<Spanish>Highlander</Spanish>
+		<Russian>&#195;&#238;&#240;&#229;&#246;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HIGHLANDER_PEDIA</Tag>
+		<English>[TAB]The term "Highlander" refers to the Gaelic-speaking inhabitants of the northern uplands and western isles of Scotland who are descended from original Picts and Scots before the 10th century, becoming increasingly distinct from the "Lowlanders" of southern Scotland, with their traditional Gaelic language and customs. Organized in clans led by chiefs or "lairds", they were known as fierce warriors armed with swords, axes and small shields, wearing little else but their short skirt or "kilt" woven in their distinctive clan pattern or "tartan". Although they supported Robert the Bruce in the unification of Scotland and its independence following the Declaration of Arbroath in 1320, the highland clans remained resistant to any central government.[PARAGRAPH:2]The Stewart dynasty ruled Scotland for the remainder of the Middle Ages, managing to retain the loyalty of the fierce Highland clans despite their growing resentment of the increasingly Protestant and Anglophile Scottish lowlands. Clan resistance to British rule erupted after the Act of Union between Scotland and England in 1707 in support of the Stewart pretender "Bonnie Prince Charlie" until the Scottish highlanders were finally decisively beaten at the Battle of Culloden in 1745. The Scottish Highlands were effectively cleared and replaced with sheep in the late 18th century while most highlanders were deported to the colonies, mainly Canada and Australia, where many retain their language and customs to this day.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN</Tag>
+		<English>Welsh Longbowman</English>
+		<French>Archer Long Gallois</French>
+		<German>Walisischer Langbogensch&#252;tze</German>
+		<Italian>Arciere con Arco Lungo di Gallese</Italian>
+		<Spanish>Saetero Galés</Spanish>
+		<Russian>&#211;&#253;&#235;&#252;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN_PEDIA</Tag>
+		<English>[TAB]Following the Norman conquest of Wales in the 13th century, during which Welsh bowmen caused heavy casualties to the invader, Kings of England increasingly began to used longbowmen, including Welsh bowmen in their armies. Originally the Welsh employed a much shorter, rougher bow made of elm technically distinct from the classic English yew longbows. But as soon as the Welsh campaign was successfully over, Welsh conscripts began to be incorporated in large numbers into English armies. The valuable lessons the English learned in Wales of the tactic of massed formations of skilled archers using powerful bows was later used with great effect by English and Welsh mercenary longbowmen on the battlefields of Scotland and France.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONDOTTIERI</Tag>
@@ -456,12 +564,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALMOGAVAR_PEDIA</Tag>
-		<English>[TAB]The Almogavars were a class of soldiers from the Crown of Aragon, well-known during the Christian Reconquista (reconquest) of the Iberian Peninsula. They were much employed as mercenaries in Italy, Latin Greece and the Levant during the 13th and 14th centuries.
-[TAB]The Almogavars came mainly from the mountain regions of Aragon, Catalonia and, to a lesser extent, from Navarre. They were frontiersmen and foot-soldiers who wore no armour, dressed in skins, were shod with brogues (abarcas), and carried the arms similar to those of Roman legionaries: two heavy javelins, or azconas in Spanish language, and a short stabbing sword.
-[TAB]They were professional soldiers, and served kings, the Roman Catholic Church, nobles, or towns for pay; eventually they also hired themselves out to the Byzantine Empire. When Peter III of Aragon made war on Charles of Anjou after the Sicilian Vespers of March 30, 1282 for the possession of Naples and Sicily, the Almogavars formed the most effective element of his army. Their discipline and ferocity, the force with which they hurled their javelins, and their activity, made them very formidable to the heavy cavalry of the Angevin armies. They fought against cavalry by attacking firstly horses instead of knights. Once the knight was on the ground he was an easy victim for the Almogavar.
-[TAB]When the Peace of Caltabellotta in 1302 ended the war in southern Italy, the Almogavars, under the leadership of Roger de Flor ("Roger Blum", a former Knight Templar), formed the Catalan Company in the service of the emperor of the East, Andronicus II Palaeologus, to fight against the Turks. Both kings of Aragon and Sicily agreed with the idea since peace had been reached and it was viable alternative to having the Almogavar standing army unemployed in their realms.
-[TAB]Their campaign in Asia Minor during 1303 and 1304 was a series of military victories, but alongside widespread looting of Byzantine civilians, so when they insisted in receiving the agreed payment, the Emperor refused. Thereafter the Almogavars turned to violence, making their presence intolerable to the Byzantine population. Roger de Flor and his lieutenants were assassinated by orders of the Emperor in 1305 while meeting to discuss terms on their compensation, presumably on the instigation of Genoese merchants, who were conspiring to keep their own position of influence and power and keep the Catalans out of the loop. This betrayal resulted in the Almogavars ravaging the neighbourhood of Constantinople.
-[TAB]Subsequently they marched against the Duchy of Athens, under the rule of the French House of Brienne. Duke Walter V of Brienne was defeated and slain by the Almogavars with all his knights at the Battle of the Cephissus, or Orchomenus, in Boeotia in March 1310. They then divided the wives and possessions of the Frenchmen by lot, and summoned a prince of the house of Aragon to rule over them.</English>
+		<English>[TAB]The Almogavars were a class of soldiers from the Crown of Aragon, well-known during the Christian Reconquista (reconquest) of the Iberian Peninsula. They were much employed as mercenaries in Italy, Latin Greece and the Levant during the 13th and 14th centuries.[PARAGRAPH:2]The Almogavars came mainly from the mountain regions of Aragon, Catalonia and, to a lesser extent, from Navarre. They were frontiersmen and foot-soldiers who wore no armour, dressed in skins, were shod with brogues (abarcas), and carried the arms similar to those of Roman legionaries: two heavy javelins, or azconas in Spanish language, and a short stabbing sword.[PARAGRAPH:2]They were professional soldiers, and served kings, the Roman Catholic Church, nobles, or towns for pay; eventually they also hired themselves out to the Byzantine Empire. When Peter III of Aragon made war on Charles of Anjou after the Sicilian Vespers of March 30, 1282 for the possession of Naples and Sicily, the Almogavars formed the most effective element of his army. Their discipline and ferocity, the force with which they hurled their javelins, and their activity, made them very formidable to the heavy cavalry of the Angevin armies. They fought against cavalry by attacking firstly horses instead of knights. Once the knight was on the ground he was an easy victim for the Almogavar.[PARAGRAPH:2]When the Peace of Caltabellotta in 1302 ended the war in southern Italy, the Almogavars, under the leadership of Roger de Flor ("Roger Blum", a former Knight Templar), formed the Catalan Company in the service of the emperor of the East, Andronicus II Palaeologus, to fight against the Turks. Both kings of Aragon and Sicily agreed with the idea since peace had been reached and it was viable alternative to having the Almogavar standing army unemployed in their realms.[PARAGRAPH:2]Their campaign in Asia Minor during 1303 and 1304 was a series of military victories, but alongside widespread looting of Byzantine civilians, so when they insisted in receiving the agreed payment, the Emperor refused. Thereafter the Almogavars turned to violence, making their presence intolerable to the Byzantine population. Roger de Flor and his lieutenants were assassinated by orders of the Emperor in 1305 while meeting to discuss terms on their compensation, presumably on the instigation of Genoese merchants, who were conspiring to keep their own position of influence and power and keep the Catalans out of the loop. This betrayal resulted in the Almogavars ravaging the neighbourhood of Constantinople.[PARAGRAPH:2]Subsequently they marched against the Duchy of Athens, under the rule of the French House of Brienne. Duke Walter V of Brienne was defeated and slain by the Almogavars with all his knights at the Battle of the Cephissus, or Orchomenus, in Boeotia in March 1310. They then divided the wives and possessions of the Frenchmen by lot, and summoned a prince of the house of Aragon to rule over them.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

@@ -1,6 +1,6 @@
-# RFCEurope - XML Constants (the other file gets crouded)
+# RFCEurope - XML Constants (the other file got crowded)
 
-# Timeline of the mod, all impotant years to be references by year as opposed to complicated number
+# Timeline of the mod, all important years to be references by year as opposed to complicated number
 # date waypoints
 # 3Miro: important years
 #		#Important event			#Spawn			#UHV
@@ -25,6 +25,7 @@ i843AD = 86						# Spawn of Burgundy
 i844AD = 86
 i852AD = 88
 i858AD = 89						# Spawn of Germany
+i864AD = 91
 i880AD = 95						# Spawn of Kiev
 i892AD = 98
 i895AD = 99						# spawn of Hungary
@@ -57,6 +58,7 @@ i1099AD =166 # First Crusade to arrive
 i1101AD =167 
 i1139AD =180					# Spawn of Portugal
 i1147AD =183 # Second Crusade to arrive
+i1150AD =184
 i1160AD =187
 i1164AD =188
 i1167AD =189 # Barbarossa wins against Rome
@@ -64,6 +66,7 @@ i1187AD =195 # Third Crusade to arrive
 i1200AD =200									# Burgundy UHV 1
 i1202AD =201 # Fourth Crusade to arrive
 i1204AD =202									# Venetian UHV 2
+i1210AD =204
 i1229AD =210 # Fifth Crusade to arrive
 i1230AD =210
 i1236AD =212 # Start of the Mongol invasion # spawn of Lithuania
@@ -322,12 +325,12 @@ iEngineer= 85
 iGreatGeneral= 86
 iGreatSpy= 87
 iMongolKeshik= 88
-iHighlander= 89
-iWelshLongbowman= 90
+iSeljuk= 89
+iJanissary= 90
 iTagmata= 91
-iSeljuk= 92
-iCorsair= 93
-iJanissary= 94
+iCorsair= 92
+iHighlander= 93
+iWelshLongbowman= 94
 iCondottieri= 95
 iSwissPikeman= 96
 iVarangianGuard= 97
@@ -871,7 +874,7 @@ lRegionBalkans		= [ iP_Serbia, iP_Thrace, iP_Macedonia, iP_Moesia, iP_Arberia, i
 lRegionGreece		= [ iP_Constantinople, iP_Thessaly, iP_Epirus, iP_Morea, iP_Thessaloniki ]
 lRegionAsiaMinor	= [ iP_Colonea, iP_Charsiadon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
 lRegionMiddleEast	= [ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem ]
-lRegionAfrica		= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Marrakesh ]
+lRegionAfrica		= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh ]
 lRegionKiev			= [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_Pereyaslavl, iP_Chernigov, iP_Podolia, iP_Minsk ]
 lRegionItaly		= [ iP_Lombardy, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Malta, iP_Dalmatia ]
 
