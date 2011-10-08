@@ -33,20 +33,20 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 lTangier = [24,23,0,0] #500 AD
 lBurdigala = [37,40,0,0] #500 AD
-lNantes = [37,45,0,0] #500 AD
+#lNantes = [37,45,0,0] #500 AD
 lAlger = [39,20,0,0] #500 AD
 lBarcino = [39,31,0,0] #500 AD
 #lCaen = [40,48,0,0] #500 AD
 lToulouse = [41,37,0,0] #500 AD
-lTours = [42,42,0,0] #500 AD
+#lTours = [42,42,0,0] #500 AD
 lMarseilles = [45,33,0,0] #500 AD
 lLyon = [46,37,0,0] #500 AD
 lTunis = [49,17,0,0] #500 AD
-lPisae = [52,32,0,0] #500 AD These guys want to start with Catholicism?
+#lPisae = [52,32,0,0] #500 AD
 lMediolanum = [52,37,0,0] #500 AD
 lFlorentia = [54,31,0,0] #500 AD
-lTripoli = [56,6,0,0] #500 AD
-lRoma = [56,27,0,0] #500 AD
+lTripoli = [54,8,0,0] #500 AD
+#lRoma = [56,27,0,0] #500 AD
 lAugsburg = [55,41,0,0] #500 AD
 #lCatania = [58,18,0,0] #500 AD
 lNapoli = [60,24,0,0] #500 AD
@@ -57,40 +57,46 @@ lPalermo = [55,19,2,0] # 508 AD
 #lZaragoza = [35,32,45,0] # 680 AD
 lToledo = [28,32,45,0] #680 AD
 lBulgar = [97,60,45,0] #680 AD
-lLeon = [28,37,50,0] # 700 AD
-lBurgos = [32,35,50,0] # 700 AD
+#lLeon = [28,37,50,0] # 700 AD
+#lBurgos = [32,35,50,0] # 700 AD
 lValencia = [34,28,50,0] #700 AD
 lPamplona = [35,35,50,0] #700 AD
+lPorto = [23,36,50,0] #700 AD
 lYork = [44,58,50,0] # 700 AD
 lDublin = [36,58,50,0] # 700 AD
 lLubeck = [58,53,50,0] #700 AD
 lTonsberg = [58,64,65,0] #760 AD
-lCorunna = [25,40,75,0] #800 AD
-lMilan = [52,37,75,0] #800 AD The respawn gambit, so that it still exists if razed
-lFirenze = [54,31,75,0] #800 AD Same as Mediolanum--->Milan 
-lLeipzig = [59,48,75,0] #800 AD
+#lCorunna = [25,40,75,0] #800 AD
+lMilan = [52,37,75,0] #800 AD, Respawn of Mediolanum, so that it still exists if razed
+lFirenze = [54,31,75,0] #800 AD, Respawn of Florentia 
+#lLeipzig = [59,48,75,0] #800 AD
 lPrague = [61,44,75,0] #800 AD
 lKharkov = [90,46,75,0] #800 AD
 lCalais = [45,50,75,0] #800 AD
+lNidaros = [55,71,75,0] #800 AD
 lNovgorod = [80,62,87,0] #848 AD
 lEdinburgh = [42,62,90,0] #860 AD
 lAlbaIulia = [73,34,100,0] #900 AD
 lTvanksta = [70,54,100,0] #900 AD
-lBreslau = [65,45,100,0] #900 AD
+#lBreslau = [65,45,100,0] #900 AD
 lKrakow = [69,44,100,0] #900 AD
 lRiga = [74,58,100,0] #900 AD
 lMinsk = [79,52,120,0] #960 AD
 lYaroslavl = [92,61,137,0] #1010 AD
 lGroningen = [52,54,150,0] #1050 AD
+#lMuenster = [52,50,150,0] #1050 AD
 lSmolensk = [84,55,151,0] #1054 AD
 lMus = [99,21,153,0] #1060 AD
 lMarrakesh = [18,14,157,0] #1071 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
+lTarabulus = [54,8,209,0] #1227 AD, Respawn of Tripoli
+lAbo = [71,65,217,0] #1250 AD
 lSamara = [97,54,240,0] #1320 AD
-lMemel = [70,55,240,0] #1320 AD
+#lMemel = [70,55,240,0] #1320 AD
 lVologda = [89,64,240,0] #1320 AD
-lTver = [85,60,240,0] #1320 AD
-#lMuenster = [52,50,....]
+#lTver = [85,60,240,0] #1320 AD
+lReykjavik = [2,70,270,0] #1410 AD
+lValletta = [58,12,315,0] #1530 AD
 
 
 
@@ -339,6 +345,7 @@ class Barbs:
 		
 		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
 		# 3Miro Barbarian and Independent city spawn and barbarian invasions go here. Check with original RFC file for details
+		# self.foundCity(owner, self.lCity, name, iGameTurn, pop size, unit, num units, religion )
 		
                 if ( iGameTurn < xml.i700AD ):
                         #500AD
@@ -348,7 +355,7 @@ class Barbs:
                         self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # 3Miro add Lyon to flip to Burgundy
+                        self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # 3Miro - Lyon flips to Burgundy
                         self.foundCity(iIndependent2, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
@@ -357,7 +364,7 @@ class Barbs:
                         self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
                         self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-                        self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 ) #Start with Orthodoxy and a Harbor?
+                        self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
                         # 508AD
                         self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 ) 
                         # 680AD
@@ -370,6 +377,7 @@ class Barbs:
                         self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
                         self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
+                        self.foundCity(iIndependent3, lPorto, "Porto", iGameTurn, 1, xml.iCrossbowman, 1, xml.iCatholicism, 0 )
                         # 760AD
                         self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 800AD
@@ -378,6 +386,7 @@ class Barbs:
                         self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent4, lKharkov, "Kharkov", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+                        self.foundCity(iIndependent2, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 848AD
                         self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
                         # 860AD
@@ -399,13 +408,21 @@ class Barbs:
                         # 1060AD
                         self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
                         # 1071AD
-                        self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 1 ) # Pop size, unit, num units UnitOwner=23 -> iBarbarian
+                        self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 3, xml.iCrossbowman, 2, xml.iIslam, 1 )
                         # 1200AD
                         self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
-                if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1401AD ):
+                        # 1227 AD
+                        self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 4, xml.iArbalest, 2, xml.iIslam, 1 )
+                        # 1250 AD
+                        self.foundCity(iIndependent2, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) #Abo flips to Sweden
+                if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
                         # 1320AD
                         self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+                        # 1410AD
+                        self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 ) #Morholt
+                        # 1530AD
+                        self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 ) #Morholt
                         
 		if ( iGameTurn == 1 ):
                         self.setupMinorNation()
@@ -456,14 +473,14 @@ class Barbs:
 ##                                iOwner = unit.getOwner()
 ##                                pOwner = gc.getPlayer(iOwner)
 ##                                if (pOwner.isHuman()):
-##                                        return (False, tCity[3]+1)                    
+##                                        return (False, tCity[3]+1)
 
                 #checks the surroundings and allows only AI units
                 for x in range(tCity[0]-1, tCity[0]+2):
                         for y in range(tCity[1]-1, tCity[1]+2):
                                 currentPlot=gc.getMap().plot(x,y)
                                 if (currentPlot.isCity()):
-                                        return (False, -1)                                
+                                        return (False, -1)
                                 # 3Miro: Allow city founding even if the Human has units nearby
                                 #iNumUnitsInAPlot = currentPlot.getNumUnits()
                                 #if (iNumUnitsInAPlot):

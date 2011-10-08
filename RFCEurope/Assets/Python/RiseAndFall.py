@@ -2201,12 +2201,12 @@ class RiseAndFall:
                         if ( tSeaPlot ):
 				pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
                 if (iCiv == iPortugal):
-                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
                 if (iCiv == iLithuania):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
