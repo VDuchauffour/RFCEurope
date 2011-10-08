@@ -808,7 +808,7 @@ class RFCEBalance:
                 # block foundation of Protestantism except by a Catholic player
                 gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
                 
-                # block declaration of war against newly spawning naiton for this many turns (pre-set wars are not affected)
+                # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
                 gc.setPaceTurnsAfterSpawn( 5 )
                 
 
@@ -844,7 +844,7 @@ class RFCEBalance:
 			
 	def postAreas( self ):
 		#3Miro: DO NOT CHANGE THIS CODE
-		# this adds the Core and Notmal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
+		# this adds the Core and Normal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
 		for iCiv in range( iNumPlayers ):
 			iCBLx = con.tCoreAreasTL[iCiv][0]
 			iCBLy = con.tCoreAreasTL[iCiv][1]

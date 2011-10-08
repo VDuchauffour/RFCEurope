@@ -100,12 +100,6 @@ lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iSpain, 
                    
 lCivBioNewWorld = []
 
-
-#for Victory and the handler
-#tAmericasTL = (3, 0)
-#tAmericasBR = (43, 63)
-
-
 #for messages
 iDuration = 14
 iWhite = 0
@@ -179,8 +173,8 @@ lOlderNeighbours = [
 
 # civ birth dates
 tBirth = (
-xml.i500AD,  #500AD Byzantium
-xml.i500AD,  #500AD Frankia
+xml.i500AD, #500AD Byzantium
+xml.i500AD, #500AD Frankia
 xml.i635AD, #632AD Arabia
 xml.i680AD, #680AD Bulgaria
 xml.i711AD, #712AD Cordoba
@@ -192,15 +186,15 @@ xml.i880AD, #864AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play
 xml.i895AD, #896AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
 xml.i910AD, #910AD Spain
 xml.i966AD, #966AD Poland
-xml.i1016AD,# 140 normally 1020AD Genoa
-xml.i1066AD,# 155 normally 1066AD England
+xml.i1016AD,#1020AD Genoa
+xml.i1066AD,#1066AD England
 xml.i1139AD,#1100AD Portugal
 xml.i1236AD,#1236AD Lithuania
 xml.i1282AD,#1282AD Austria
-xml.i1359AD,#1359AD Turkey - 233 is normal time (Conquest of Adrianopolis)
-xml.i1380AD,#1380AD Moscow => 1323 (260)
+xml.i1359AD,#1359AD Turkey - turn 233 is normal time (Conquest of Adrianopolis)
+xml.i1380AD,#1380AD Moscow
 xml.i1523AD,#1523AD Sweden
-xml.i1581AD,#1580AD Dutch 340 is normal time
+xml.i1581AD,#1580AD Dutch - turn 340 is normal time
 0,	#Pope
 0,
 0,
@@ -253,7 +247,7 @@ tCapitals = (
 (65, 49), #tPoznan, Poland
 (50, 34), #tGenoa, Genoa
 (43, 53), #tLondon, England
-(22, 31), #tLisboa, Portugal
+(22, 32), #tLisboa, Portugal
 (75, 53), #tVilnius, Lithuania
 (63, 39), #tWien, Austria
 (79, 22), #tBursa, Turkey
@@ -336,7 +330,7 @@ tNewCapitals = (  #for RiseAndFall
 ((65, 49),(65, 49)), #tPoland: Poznan
 ((50, 34),(50, 34)), #tGenoa: Genoa
 ((43, 53),(43, 53)), #tEngland: London
-((22, 31),(22, 31)), #tPortugal: Lisboa
+((22, 32),(22, 32)), #tPortugal: Lisboa
 ((75, 53),(75, 53)), #tLithuania: Vilnius
 ((63, 39),(63, 39)), #tAustria: Wien
 ((79, 22),(79, 22)), #tTurkey: Bursa
@@ -374,7 +368,7 @@ tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for st
 (58,37),   #Austria
 (76,16),   #Turks
 (80,52),   #Moscow
-(60,59),   #Sweden
+(61,59),   #Sweden
 (47,49),   #Netherlands
 (54,25)	   #Pope
 ) 
@@ -400,7 +394,7 @@ tCoreAreasBR = (
 (64,43),   #Austria
 (84,22),   #Turks
 (95,68),   #Moscow
-(67,71),   #Sweden
+(66,69),   #Sweden
 (52,57),   #Netherlands
 (58,29)	   #Pope
 )
@@ -422,14 +416,12 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 (), #Poland
 (), #Genoa
 ((39, 47), (40, 47), (41, 47)), #England
-((20, 29), (22, 28), (23, 28), (24, 36), (24, 37)), #Portugal
+((20, 29), (23, 36), (23, 37), (24, 36), (24, 37)), #Portugal
 (), #Lithuania
-#(), #Austria
-#((59, 37), (60, 37), (64, 37), (59, 44), (60, 44), (62, 44), (61, 44)), #Austria
 ((59, 44), (60, 44), (62, 44), (61, 44)), #Austria
 ((75,23),(75,24),(75,25),(75,26),(75,27),(76,23),(76,24),(76,25),(76,26),(76,27),(77,23),(77,24),(77,25),(77,26),(77,27),(78,23),(78,24),(78,25),(78,26),(78,27)), #Turkey
 (), #Moscow
-(), #Sweden
+((60,59),(60,60),(60,61),(65,70),(66,70),(65,71),(66,71),(67,71),(68,71),(65,72),(66,72),(67,72),(68,72),(67,64),(67,65),(69,64),(70,66),(71,65),(71,66),(72,64),(72,65)), #Sweden
 (), #Dutch
 ()  #Pope
 )
@@ -441,7 +433,7 @@ tNormalAreasTL = ( #These areas are typically used for resurrection. Also used i
 (35,34),   #Franks
 (48,1),    #Arabs
 (73,28),   #Bulgaria
-(44,9),   #Cordoba
+(44,9),    #Cordoba
 (53,56),   #Norse
 (56,33),   #Venice
 (45,33),   #Burgundy
@@ -915,7 +907,7 @@ colony_positions_xy=[
 (960,320), #Philipines
 ]
 
-tLeaders = (		#First has to be the primary leader (the one that appaers on the civ selection screen). Can be changed in the WB file (AbsintheRed)
+tLeaders = (		#First has to be the primary leader (the one that appears on the civ selection screen). Can be changed in the WB file (AbsintheRed)
 (xml.iJustinian,),
 (xml.iCharlemagne, xml.iJoan, xml.iLouis_Xiv),
 (xml.iAbuBakr, xml.iSaladin),

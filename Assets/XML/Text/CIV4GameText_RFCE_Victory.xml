@@ -383,12 +383,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT1</Tag>
-		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</English>
-		<French>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</French>
-		<German>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</German>
-		<Italian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</Italian>
-		<Spanish>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</Spanish>
-		<Russian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 4000 Culture points without declaring state religion before 1386AD</Russian>
+		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD</English>
+		<French>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD</French>
+		<German>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD</German>
+		<Italian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD</Italian>
+		<Spanish>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD</Spanish>
+		<Russian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT2</Tag>

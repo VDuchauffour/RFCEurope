@@ -945,7 +945,7 @@ class Victory:
                 if ( iGameTurn <= xml.i1386AD and pLithuania.getUHV( 0 ) == -1 ):
                         if ( pLithuania.getStateReligion() != -1 ):
                                 pLithuania.setUHV( 0, 0 )
-                        elif ( iCulture >= 4000 ):
+                        elif ( iCulture >= 2000 ):
                                 pLithuania.setUHV( 0, 1 )
                         elif ( iGameTurn == xml.i1386AD ):
                                 pLithuania.setUHV( 0, 0 )
