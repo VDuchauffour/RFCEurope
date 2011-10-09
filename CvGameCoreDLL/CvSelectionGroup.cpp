@@ -1543,6 +1543,8 @@ void CvSelectionGroup::continueMission(int iSteps)
 					else
 					{
 						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3 ");
+						//GC.getGameINLINE().logMsg(" Workaround Bugfix for CvSelectionGroup ");
+						//GC.getGameINLINE().logMsg("                    Location at %d %d ",getX(),getY());
 						// 3MiroBug: another pathing bug here
 						// getX and getY sometimes return -max_int and then headMissionQueueNode() is NULL, 
 						// maybe we should check for getNumUnits() or headMissionQueueNode() != NULL
@@ -1551,13 +1553,15 @@ void CvSelectionGroup::continueMission(int iSteps)
 						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.0.1 data1 %d ",headMissionQueueNode()->m_data.iData1 );
 						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.0.1 data2 %d ",headMissionQueueNode()->m_data.iData2 );
 						//if ( (getX()>-1)&&(getY()>-1)&& ((getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2)) ){
-						if ( (headMissionQueueNode()!=NULL)&& ((getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2)) ){
+						if ( (headMissionQueueNode()!=NULL)&& (headMissionQueueNode()->m_data.eMissionType==MISSION_MOVE_TO)&& ((getX() != headMissionQueueNode()->m_data.iData1) || (getY() != headMissionQueueNode()->m_data.iData2)) ){
 							bDone = true;
+							//GC.getGameINLINE().logMsg(" FixingBug ");
 							//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3.1 - SKIP ");
 							pushMission(MISSION_SKIP);
 						}else{
 							bDone = true;
 						};
+						//GC.getGameINLINE().logMsg(" Workaround Bugfix - FINISHED ");
 						//bDone = true; // 3Miro: Original code
 					}
 					break;
