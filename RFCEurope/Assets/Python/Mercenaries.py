@@ -7,7 +7,7 @@ import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 
-from sets import Set
+#from sets import Set
 
 iNumPlayers = con.iNumPlayers
 
@@ -194,6 +194,15 @@ class MercenaryManager:
                 scriptDict['lMercsHiredBy'] = self.lHiredBy
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
                 
+        def rendomizeMercProvinces( self ):
+                iHuman = gc.getGame().getActivePlayer()
+                lHumanProvinces = self.getOwnedProvinces( gc.getPlayer(iHuman) )
+                for lMerc in self.lGlobalPool:
+                        iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available prvonce') ]
+                        if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
+                                CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+                        lMerc[4] = iNewProv
+                
         def setPrereqConsistentPromotions( self, lPromotions ):
                 bPass = True
                 while ( not bPass ):
@@ -209,8 +218,6 @@ class MercenaryManager:
                                         lPromotions.append( iPrereq )
                                         bPass = False
                 return lPromotions
-                
-        
                 
         def addNewMerc( self, iMerc ):
                 # this processes the available promotions
@@ -230,9 +237,16 @@ class MercenaryManager:
                         iIterations += 1
                 
                 (iPurchaseCost, iUpkeepCost) = self.GMU.getCost( iMerc, lPromotions )
+                iCurrentProvince = lMercInfo[4][gc.getGame().getSorenRandNum( len(lMercInfo[4]), 'available prvonce') ]
+                
+                iHuman = gc.getGame().getActivePlayer()
+                if ( gc.getPlayer( iHuman ).getProvinceCityCount( iCurrentProvince ) > 0 ):
+                        CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+                
                 
                 # add the merc, keep the merc index, costs and promotions
-                self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost] )
+                self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
+                #print(" 3Miro Added Merc: ",[iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince])
                 
         def processNewMercs( self, iGameTurn ):
                 # add new mercs to the pool
@@ -246,6 +260,10 @@ class MercenaryManager:
                         if ( self.lHiredBy[iMerc] == -1 and (not iMerc in alreadyAvailableMercs) and iGameTurn >= lMercList[iMerc][2] and iGameTurn <= lMercList[iMerc][3] ):
                                 potentialMercs.append( iMerc )
                 
+                if ( iGameTurn == 1 ):
+                        self.addNewMerc( 6 )
+                        self.addNewMerc( 9 )
+                
                 iNumPotentialMercs = len( potentialMercs )
                 if ( iNumPotentialMercs == 0 ):
                         return
@@ -257,6 +275,7 @@ class MercenaryManager:
                                 # adding a new merc
                                 #print(" 3Miro Adding Merc to Global Pool: ",iMerc)
                                 self.addNewMerc( iMerc )
+                
 
         def doMercsTurn( self, iGameTurn ):
         # this is called at the end of the game turn
@@ -274,13 +293,21 @@ class MercenaryManager:
                 for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
                         pPlayer = gc.getPlayer( iPlayer )
                         if ( pPlayer.isAlive() ):
+                                if ( pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100  ):
+                                        # not enough gold to pay the mercs, they will randomly desert you
+                                        self.desertMercs( iPlayer )
+                                        
                                 pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
                                 # TODO: AI
                                 if ( iPlayer != iHuman ):
                                         self.processMercAI( pPlayer )
+                                        
                         #playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
-
+                        
                 self.processNewMercs( iGameTurn ) # add new Merc to the pool
+                
+                if ( iGameTurn % 5 == 3 ):
+                        self.rendomizeMercProvinces()
                 
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
                 
@@ -289,6 +316,28 @@ class MercenaryManager:
                 #                print(" ERROR in Upkeep for: ",iPlayer )
                 
                 #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
+                
+        def desertMercs( self, iPlayer ):
+                pPlayer = gc.getPlayer( iPlayer )
+                if ( iPlayer == gc.getGame().getActivePlayer() ):
+                        CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+                
+                bLoop = True
+                while ( bLoop ):
+                        lHiredMercs = []
+                        unitList = PyPlayer( iPlayer ).getUnitList()
+                        for pUnit in unitList:
+                                if ( pUnit.getMercID() > -1 ):
+                                        lHiredMercs.append( pUnit )
+                        
+                        if ( len( lHiredMercs ) > 0 ):
+                                self.GMU.fireMerc( lHiredMercs[ gc.getGame().getSorenRandNum( len( lHiredMercs ), 'deserting Merc') ] )
+                                bLoop = ( pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
+                        else:
+                                # if the player has no mercs, then stop the loop
+                                bLoop = False
+                                
+                        
 
         def onUnitPromoted( self, argsList ):
                 pUnit, iNewPromotion = argsList
@@ -478,14 +527,16 @@ class MercenaryManager:
         def HireMercAI( self, pPlayer ):
                 # decide which merc to hire
                 lCanHireMercs = []
-                sPlayerProvinces = Set( self.getOwnedProvinces( pPlayer ) )
+                #sPlayerProvinces = Set( self.getOwnedProvinces( pPlayer ) )
+                lPlayerProvinces = self.getOwnedProvinces( pPlayer )
                 iGold = pPlayer.getGold()
                 iStateReligion = pPlayer.getStateReligion()
                 iPlayer = pPlayer.getID()
                 for lMerc in self.lGlobalPool:
                         iMercTotalCost = self.GMU.getModifiedCostPerPlayer( lMerc[2] + (lMerc[3]+99)/100, iPlayer )
-                        sMercProvinces = Set( lMercList[lMerc[0]][4] )
-                        if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and len( sPlayerProvinces & sMercProvinces ) > 0 ):
+                        #sMercProvinces = Set( lMercList[lMerc[0]][4] )
+                        #if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and len( sPlayerProvinces & sMercProvinces ) > 0 ):
+                        if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and (lMerc[4] in lPlayerProvinces) ):
                               lCanHireMercs.append( lMerc )
                               
                 if ( len( lCanHireMercs ) > 0 ):
@@ -602,7 +653,8 @@ class GlobalMercenaryUtils:
                 apCityList = PyPlayer(iPlayer).getCityList()
                 for pCity in apCityList:
                         city = pCity.GetCy()
-                        if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
+                        #if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
+                        if ( city.getProvince() == lMerc[4] ):
                               lCityList.append( city )
                               
                 if ( len( lCityList ) == 0 ):
