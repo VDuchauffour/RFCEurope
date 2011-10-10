@@ -23,6 +23,9 @@ Changes for Beta 13:
 			- Added a bunch of generic mercs, they can be updated with specific names later on
 			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack
 			- Readded Tagmata, Corsair, Welsh Longbowman, Highlander as unique mercenaries (some of these also availeable as barbs)
+			- Update to Merc Mechanics: Mercs are only available at one province at a time and Mercs change provinces every 5 turns
+						    the player gets a message when new Mercs become available
+						    if a player doesn't have enough gold to support the currently hired mercs, then some of the mercs will desert
 		- Revised crusade mechanics:
 			- Some of the crusader units will leave after capturing Jerusalem (Templars and Teutonic Knights will not return)
 			- Added Jerusalem Minor Nation so that it will revolt against the Crusaders and make it hard to keep Jerusalem

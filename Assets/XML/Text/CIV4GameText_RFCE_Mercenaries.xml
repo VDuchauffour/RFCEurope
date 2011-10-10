@@ -217,6 +217,24 @@
 		<Spanish>Available in Provinces: </Spanish>
 		<Russian>Available in Provinces: </Russian>
 	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
+		<English>New Mercenaries are available for hire.</English>
+		<French>New Mercenaries are available for hire.</French>
+		<German>New Mercenaries are available for hire.</German>
+		<Italian>New Mercenaries are available for hire.</Italian>
+		<Spanish>New Mercenaries are available for hire.</Spanish>
+		<Russian>New Mercenaries are available for hire.</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
+		<English>Upset for not getting payed, Mercenaries have abandoned your cause.</English>
+		<French>Upset for not getting payed, Mercenaries have abandoned your cause.</French>
+		<German>Upset for not getting payed, Mercenaries have abandoned your cause..</German>
+		<Italian>Upset for not getting payed, Mercenaries have abandoned your cause.</Italian>
+		<Spanish>Upset for not getting payed, Mercenaries have abandoned your cause.</Spanish>
+		<Russian>Upset for not getting payed, Mercenaries have abandoned your cause.</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
 		<English>Serbian</English>

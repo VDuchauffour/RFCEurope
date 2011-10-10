@@ -15,7 +15,7 @@ import Popup as PyPopup
 #import MercenaryUtils
 import Mercenaries
 import Consts as con
-from sets import Set
+#from sets import Set
 #import CvConfigParser #Rhye
 import math
 from CvMercenaryScreensEnums import *
@@ -149,7 +149,7 @@ class CvMercenaryManager:
                         iProvince = city.getProvince()
                         if ( not (iProvince in lProvList) ):
                               lProvList.append( iProvince )
-                lProvList = Set( lProvList ) # set as in set-theory
+                #lProvList = Set( lProvList ) # set as in set-theory
                 
                 mercenaryCount = 0
                 
@@ -162,7 +162,8 @@ class CvMercenaryManager:
                         iMerc = lMerc[0]
                         mercenaryName = CyTranslator().getText( lMercList[iMerc][1] , ())
                         
-                        if ( (not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
+                        #if ( (not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
+                        if ( ( not (lMerc[4] in lProvList) ) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
                                 continue
                                 
                                 
@@ -174,7 +175,7 @@ class CvMercenaryManager:
                         pUnitInfo = gc.getUnitInfo(lMercList[iMerc][0])
                         screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
                         screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_AInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",mercenaryName +" ("+pUnitInfo.getDescription()+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
                         
                         # TODO: The UP here:
                         iHireCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
@@ -287,7 +288,8 @@ class CvMercenaryManager:
 		screen.deleteWidget(MERCENARY_INFORMATION_PROMOTION_PANEL_ID)
 		screen.deleteWidget(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID)
 		screen.deleteWidget(MERCENARY_INFORMATION_DETAILS_PANEL_ID)
-		screen.deleteWidget(MERCENARIES_UNIT_GRAPHIC)		
+		screen.deleteWidget(MERCENARIES_UNIT_GRAPHIC)
+                screen.deleteWidget(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT")
 		
 			
 	# Populates the mercenary information panel with the unit information details		
@@ -347,11 +349,17 @@ class CvMercenaryManager:
                 # 3Miro: Add the provinces
                 pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
                 szProvinces = localText.getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES",())
-                for iProv in lMercList[iMerc][4]:
-                        if ( pPlayer.getProvinceCityCount( iProv ) > 0 ):
-                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
-                                sProvName = localText.getText(sProvName,())
-                                szProvinces = szProvinces + u"<color=0,255,0>%s</color>" %(sProvName) + "  "
+                #for iProv in lMercList[iMerc][4]:
+                #        if ( pPlayer.getProvinceCityCount( iProv ) > 0 ):
+                #                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
+                #                sProvName = localText.getText(sProvName,())
+                #                szProvinces = szProvinces + u"<color=0,255,0>%s</color>" %(sProvName) + "  "
+                if ( lMerc[4] > -1 ):
+                        sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
+                        sProvName = localText.getText(sProvName,())
+                        szProvinces = szProvinces + u"<color=0,255,0>%s</color>" %(sProvName)
+                else:
+                        szProvinces = ""
                         
                 screen.addMultilineText(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT", szProvinces, 500, 500, 500, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
@@ -680,7 +688,7 @@ class CvMercenaryManager:
                                                 
                                 lPromotionList.append( Mercenaries.iMercPromotion )
                                 
-                                lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost ]                
+                                lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost, -1 ]                
                                 
                                 self.calculateScreenWidgetData(screen)
                                 self.populateMercenaryInformation(screen, lMerc )
