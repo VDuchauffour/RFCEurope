@@ -68,6 +68,7 @@ Changes for Beta 13:
 		- Tripoli moved 2N 2E, added Tarabulus as it's respawn
 		- Added Nidaros, Abo and Porto as indy cities
 		- Adjusted territory and resources in these areas, especially in Portugal
+		- Jerusalem is on a relic bonus (So the contoller of Jerusalem gets a relic resource)
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
