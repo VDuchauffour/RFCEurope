@@ -260,10 +260,6 @@ class MercenaryManager:
                         if ( self.lHiredBy[iMerc] == -1 and (not iMerc in alreadyAvailableMercs) and iGameTurn >= lMercList[iMerc][2] and iGameTurn <= lMercList[iMerc][3] ):
                                 potentialMercs.append( iMerc )
                 
-                if ( iGameTurn == 1 ):
-                        self.addNewMerc( 6 )
-                        self.addNewMerc( 9 )
-                
                 iNumPotentialMercs = len( potentialMercs )
                 if ( iNumPotentialMercs == 0 ):
                         return
@@ -320,7 +316,7 @@ class MercenaryManager:
         def desertMercs( self, iPlayer ):
                 pPlayer = gc.getPlayer( iPlayer )
                 if ( iPlayer == gc.getGame().getActivePlayer() ):
-                        CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+                        CyInterface().addMessage(gc.getGame().getActivePlayer(), True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
                 
                 bLoop = True
                 while ( bLoop ):
