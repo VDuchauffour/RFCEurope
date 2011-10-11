@@ -218,7 +218,7 @@
 		<Russian>Available in Provinces: </Russian>
 	</TEXT>
         <TEXT>
-		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
+		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
 		<English>New Mercenaries are available for hire.</English>
 		<French>New Mercenaries are available for hire.</French>
 		<German>New Mercenaries are available for hire.</German>
@@ -227,7 +227,7 @@
 		<Russian>New Mercenaries are available for hire.</Russian>
 	</TEXT>
         <TEXT>
-		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
+		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
 		<English>Upset for not getting payed, Mercenaries have abandoned your cause.</English>
 		<French>Upset for not getting payed, Mercenaries have abandoned your cause.</French>
 		<German>Upset for not getting payed, Mercenaries have abandoned your cause..</German>
