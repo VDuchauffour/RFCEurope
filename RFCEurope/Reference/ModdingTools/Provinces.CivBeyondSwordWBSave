@@ -332,7 +332,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3279
+	num signs written=3280
 	Randomize Resources=false
 EndMap
 
@@ -38826,6 +38826,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=6
+	BonusType=BONUS_RELIC
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -42950,12 +42951,6 @@ BeginSign
 	plotY=6
 	playerType=-1
 	caption=90
-EndSign
-BeginSign
-	plotX=24
-	plotY=37
-	playerType=-1
-	caption=0
 EndSign
 BeginSign
 	plotX=25
@@ -61268,4 +61263,16 @@ BeginSign
 	plotY=49
 	playerType=-1
 	caption=132
+EndSign
+BeginSign
+	plotX=23
+	plotY=36
+	playerType=-1
+	caption=4
+EndSign
+BeginSign
+	plotX=24
+	plotY=37
+	playerType=-1
+	caption=4
 EndSign

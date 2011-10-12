@@ -293,33 +293,6 @@
 		<Russian>&#196;&#238;&#227;&#238;&#226;&#238;&#240; &#202;&#238;&#235;&#235;&#229;&#234;&#242;&#232;&#226;&#237;&#238;&#233; &#199;&#224;&#249;&#232;&#242;&#251; - &#202;&#224;&#230;&#228;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#209;&#238;&#227;&#235;&#224;&#241;&#237;&#224; &#192;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#232; &#206;&#225;&#250;&#255;&#226;&#232;&#242;&#252; &#194;&#238;&#233;&#237;&#243;, &#229;&#241;&#235;&#232; &#228;&#240;&#243;&#227;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#255;&#226;&#235;&#255;&#229;&#242;&#241;&#255; &#192;&#242;&#224;&#234;&#238;&#226;&#224;&#237;&#237;&#238;&#233;.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MEMORY_RAZED_CITY</Tag>
-		<English>"You razed our cities!"</English>
-		<French>"Vous avez ras&#233; l'une de nos villes !"</French>
-		<German>"Ihr habt eine unserer St&#228;dte vernichtet!"</German>
-		<Italian>"Hai razziato una delle nostre citt&#224;!"</Italian>
-		<Spanish>"&#161;Arrasasteis una de nuestras ciudades!"</Spanish>
-		<Russian>"You razed our cities!"</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MEMORY_TRADED_TECH_TO_US</Tag>
-		<English>"You have shared many technological discoveries with us."</English>
-		<French>"Vous avez partag&#233; vos d&#233;couvertes technologiques avec nous."</French>
-		<German>"Ihr habt Eure technologischen Errungenschaften mit uns geteilt."</German>
-		<Italian>"Avete condiviso le vostre scoperte tecnologiche con noi."</Italian>
-		<Spanish>"Compartisteis con nosotros vuestros descubrimientos tecnol&#243;gicos."</Spanish>
-		<Russian>"You have shared many technological discoveries with us."</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Tag>
-		<English>"You received too many techs from other civilizations."</English>
-		<French>"Une autre civilisation vous a fait don d'une technologie."</French>
-		<German>"Ihr habt eine Technologie von einer anderen Zivilisation erhalten."</German>
-		<Italian>"Hai ricevuto una tecnologia da un'altra civilt&#224;."</Italian>
-		<Spanish>"Recibisteis una tecnolog&#237;a de otra civilizaci&#243;n."</Spanish>
-		<Russian>"You received too many techs from other civilizations."</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CHECKF2</Tag>
 		<English>Check the Interior Advisor (F2) for details</English>
 		<French>Consulter le Conseiller aux affaires int&#233;rieures (F2) pour de plus amples d&#233;tails</French>

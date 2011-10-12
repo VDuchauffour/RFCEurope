@@ -24,11 +24,14 @@ Changes for Beta 13:
 			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack
 			- Readded Tagmata, Corsair, Welsh Longbowman, Highlander as unique mercenaries (some of these also availeable as barbs)
 			- Update to Merc Mechanics: Mercs are only available at one province at a time and Mercs change provinces every 5 turns
-						    the player gets a message when new Mercs become available
-						    if a player doesn't have enough gold to support the currently hired mercs, then some of the mercs will desert
+			- The player gets a message when new Mercs become available
+			- If a player doesn't have enough gold to support the currently hired mercs, then some of the mercs will desert
 		- Revised crusade mechanics:
-			- Some of the crusader units will leave after capturing Jerusalem (Templars and Teutonic Knights will not return)
+			- Some of the crusader units will leave after capturing Jerusalem
+			- Templars and Teutonic Knights never return, and they can be hired as mercenaries in the region, especially around Jerusalem
 			- Added Jerusalem Minor Nation so that it will revolt against the Crusaders and make it hard to keep Jerusalem
+			- Syria also got minor nation status, so Damascus won't be a so tempting target. The goal is to make Jerusalem the most important city in the region for the player too
+			- Jerusalem is on a relic bonus (so the contoller of the city gets a relic resource)
 		- Golden Age now allows for Anarchy-free change of Civics and Religion (like in regular BtS)
 		- Interface:
 			- New screen to display which colonies have been built.
@@ -51,6 +54,8 @@ Changes for Beta 13:
 		- Lithuanian 1st UHV requires 2000 culture
 		- Added a couple new "barbarian" spawns from Morholt: Swedish Crusades, Chudes, Nogais, Kalmyks
 		- Expanded Swedish and Portuguese spawn areas, so they flip Abo and Porto respectively
+		- Added Show Hidden Attitudes Modcomp
+		- Minor nations in Tetuoan (Wattasids), and Oran (Ziyyanids) from RFCE++
 
 	Map and province changes:
 		- Updated Polish and Lithuanian SettlerMaps
@@ -70,8 +75,7 @@ Changes for Beta 13:
 		- Added Reykjavik with Berserkers and Valletta with Hospitaller Knights as late indy cities, if they are not settled (from Morholt)
 		- Tripoli moved 2N 2E, added Tarabulus as it's respawn
 		- Added Nidaros, Abo and Porto as indy cities
-		- Adjusted territory and resources in these areas, especially in Portugal
-		- Jerusalem is on a relic bonus (So the contoller of Jerusalem gets a relic resource)
+		- Adjusted territory and resources in these areas, especially in Portugal. Slightly expanded province Lusitania to follow these changes
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
