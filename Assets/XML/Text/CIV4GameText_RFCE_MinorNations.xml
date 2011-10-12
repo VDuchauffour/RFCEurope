@@ -132,6 +132,42 @@
 		<Russian>Muslims</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_THE_ZIYYANIDS</Tag>
+		<English>The Ziyyanids</English>
+		<French>The Ziyyanids</French>
+		<German>The Ziyyanids</German>
+		<Italian>The Ziyyanids</Italian>
+		<Spanish>The Ziyyanids</Spanish>
+		<Russian>The Ziyyanids</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ZIYYANID</Tag>
+		<English>Ziyyanid</English>
+		<French>Ziyyanid</French>
+		<German>Ziyyanid</German>
+		<Italian>Ziyyanid</Italian>
+		<Spanish>Ziyyanid</Spanish>
+		<Russian>Ziyyanid</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_THE_WATTASIDS</Tag>
+		<English>The Wattasids</English>
+		<French>The Wattasids</French>
+		<German>The Wattasids</German>
+		<Italian>The Wattasids</Italian>
+		<Spanish>The Wattasids</Spanish>
+		<Russian>The Wattasids</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WATTASID</Tag>
+		<English>Wattasid</English>
+		<French>Wattasid</French>
+		<German>Wattasid</German>
+		<Italian>Wattasid</Italian>
+		<Spanish>Wattasid</Spanish>
+		<Russian>Wattasid</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
 		<English>Khazars</English>
 		<French>Khazars</French>

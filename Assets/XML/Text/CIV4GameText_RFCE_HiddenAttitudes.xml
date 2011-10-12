@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - RFCE Hidden Attitudes -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_FIRST_IMPRESSION</Tag>
+		<English>%D1: "A first impression is a lasting one."</English>
+		<French>%D1: "C'est la première impression qui compte."</French>
+		<German>%D1: "Der erste Eindruck zählt."</German>
+		<Italian>%D1: "La prima impressione è quella che conta."</Italian>
+		<Spanish>%D1: "La primera impresión es la que cuenta."</Spanish>
+		<Russian>%D1: "A first impression is a lasting one."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_TEAM_SIZE</Tag>
+		<English>%D1: "You have too many allies."</English>
+		<French>%D1: "Votre équipe est déjà trop grande."</French>
+		<German>%D1: "Ihr habt zu viele Verbündete."</German>
+		<Italian>%D1: "La tua squadra è troppo grande."</Italian>
+		<Spanish>%D1: "Tu equipo es demasiado grande."</Spanish>
+		<Russian>%D1: "You have too many allies."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_BETTER_RANK</Tag>
+		<English>%D1: "Your small state is no threat to us."</English>
+		<French>%D1: "Votre misérable civilisation ne nous pose aucune menace."</French>
+		<German>%D1: "Eure kleine Zivilisation ist keine Bedrohung für uns."</German>
+		<Italian>%D1: "La tua insignificante civiltà non ci pone alcuna minaccia."</Italian>
+		<Spanish>%D1: "Tu pequeña civilización no supone ninguna amenaza para nosotros."</Spanish>
+		<Russian>%D1: "Your small state is no threat to us."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_WORSE_RANK</Tag>
+		<English>%D1: "We feel threatened by your growing empire."</English>
+		<French>%D1: "Nous nous sentons menacés par votre grande civilisation."</French>
+		<German>%D1: "Wir fühlen uns von Eurer großen Zivilisation bedroht."</German>
+		<Italian>%D1: "Ci sentiamo minacciati dalla tua grande civiltà."</Italian>
+		<Spanish>%D1: "Nos sentimos amenazados por tu gran civilización."</Spanish>
+		<Russian>%D1: "We feel threatened by your growing empire."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_LOW_RANK</Tag>
+		<English>%D1: "Small nations should work together."</English>
+		<French>%D1: "Les nations arriérées devraient travailler ensemble pour se rattraper."</French>
+		<German>%D1: "Zurückliegende Nationen sollten kooperieren um voranzukommen."</German>
+		<Italian>%D1: "Le nazioni più arretrate dovrebbero cooperare tra loro per progredire."</Italian>
+		<Spanish>%D1: "Las naciones atrasadas deberían cooperar para salir adelante."</Spanish>
+		<Russian>%D1: "Small nations should work together."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_LOST_WAR</Tag>
+		<English>%D1: "The war is going badly for us."</English>
+		<French>%D1: "Nous perdons la guerre."</French>
+		<German>%D1: "Dieser Krieg verläuft ungünstig für uns."</German>
+		<Italian>%D1: "La guerra sta andando male per noi."</Italian>
+		<Spanish>%D1: "Nos va mal en esta guerra."</Spanish>
+		<Russian>%D1: "The war is going badly for us."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_EXTRA_GOOD</Tag>
+		<English>%D1: "Past events have brought our people together."</English>
+		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on peut vous faire confiance."</French>
+		<German>%D1: "Die vergangenen Ereignisse haben Eure guten Absichten bewiesen."</German>
+		<Italian>%D1: "Gli eventi passati hanno unito i nostri popoli."</Italian>
+		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra bondad."</Spanish>
+		<Russian>%D1: "Past events have brought our people together."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_EXTRA_BAD</Tag>
+		<English>%D1: "Past events have drawn our people apart."</English>
+		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on ne peut vous faire confiance."</French>
+		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen."</German>
+		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>
+		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra maldad."</Spanish>
+		<Russian>%D1: "Past events have drawn our people apart."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_FREEDOM</Tag>
+		<English>%D1: "You have granted us our independence!"</English>
+		<French>%D1: "Vous nous avez accord&#233; l'ind&#233;pendance!"</French>
+		<German>%D1: "Ihr habt uns unsere Unabh&#228;ngigkeit gegeben!"</German>
+		<Italian>%D1: "Ci hai promesso l'indipendenza!"</Italian>
+		<Spanish>%D1: "Nos hab&#233;is concedido la independencia."</Spanish>
+		<Russian>%D1: "You have granted us our independence!"</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_PROSECUTION</Tag>
+		<English>%D1: "We cannot forget the prosecution of our brothers in faith!"</English>
+		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on ne peut vous faire confiance."</French>
+		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen."</German>
+		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>
+		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra maldad."</Spanish>
+		<Russian>%D1: "We cannot forget the prosecution of our brothers in faith!"</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RAZED_CITY</Tag>
+		<English>"You razed our cities!"</English>
+		<French>"Vous avez ras&#233; l'une de nos villes !"</French>
+		<German>"Ihr habt eine unserer St&#228;dte vernichtet!"</German>
+		<Italian>"Hai razziato una delle nostre citt&#224;!"</Italian>
+		<Spanish>"&#161;Arrasasteis una de nuestras ciudades!"</Spanish>
+		<Russian>"You razed our cities!"</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_TRADED_TECH_TO_US</Tag>
+		<English>"You have shared technological discoveries with us."</English>
+		<French>"Vous avez partag&#233; vos d&#233;couvertes technologiques avec nous."</French>
+		<German>"Ihr habt Eure technologischen Errungenschaften mit uns geteilt."</German>
+		<Italian>"Avete condiviso le vostre scoperte tecnologiche con noi."</Italian>
+		<Spanish>"Compartisteis con nosotros vuestros descubrimientos tecnol&#243;gicos."</Spanish>
+		<Russian>"You have shared technological discoveries with us."</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Tag>
+		<English>"You received too many techs from other civilizations."</English>
+		<French>"Une autre civilisation vous a fait don d'une technologie."</French>
+		<German>"Ihr habt eine Technologie von einer anderen Zivilisation erhalten."</German>
+		<Italian>"Hai ricevuto una tecnologia da un'altra civilt&#224;."</Italian>
+		<Spanish>"Recibisteis una tecnolog&#237;a de otra civilizaci&#243;n."</Spanish>
+		<Russian>"You received too many techs from other civilizations."</Russian>
+	</TEXT>
+</Civ4GameText>
