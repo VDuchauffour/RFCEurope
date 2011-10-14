@@ -17912,6 +17912,7 @@
 			<Description>TXT_KEY_BUILDING_LEANING_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LEANING_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LEANING_TOWER_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_LEANING_TOWER_HELP</Help>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LEANING_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LEANING_TOWER</MovieDefineTag>
@@ -17979,7 +17980,7 @@
 			<iLevelPrereq>0</iLevelPrereq>
 			<iMinLatitude>0</iMinLatitude>
 			<iMaxLatitude>90</iMaxLatitude>
-			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iGlobalGreatPeopleRateModifier>0</iGlobalGreatPeopleRateModifier>
@@ -27077,7 +27078,7 @@
 			<iLevelPrereq>0</iLevelPrereq>
 			<iMinLatitude>0</iMinLatitude>
 			<iMaxLatitude>90</iMaxLatitude>
-			<iGreatPeopleRateModifier>50</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iGlobalGreatPeopleRateModifier>0</iGlobalGreatPeopleRateModifier>

@@ -630,6 +630,24 @@
 		<Russian>[TAB]&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#225;&#224;&#248;&#237;&#255; (&#232;&#242;&#224;&#235;. Torre pendente di Pisa) &#151; &#234;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#224;&#255; &#225;&#224;&#248;&#237;&#255;, &#247;&#224;&#241;&#242;&#252; &#224;&#237;&#241;&#224;&#236;&#225;&#235;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#227;&#238; &#241;&#238;&#225;&#238;&#240;&#224; &#209;&#224;&#237;&#242;&#224;-&#204;&#224;&#240;&#232;&#255; &#192;&#241;&#241;&#243;&#237;&#242;&#224; &#226; &#227;&#238;&#240;&#238;&#228;&#229; &#207;&#232;&#231;&#224;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#225;&#224;&#248;&#237;&#232; &#225;&#251;&#235;&#238; &#231;&#224;&#234;&#238;&#237;&#247;&#229;&#237;&#238; &#226; 1360 &#227;&#238;&#228;&#243;. &#193;&#224;&#248;&#237;&#255; &#239;&#238;&#235;&#243;&#247;&#232;&#235;&#224; &#239;&#240;&#238;&#231;&#226;&#232;&#249;&#229; &#171;&#207;&#224;&#228;&#224;&#254;&#249;&#224;&#255; &#225;&#224;&#248;&#237;&#255;&#187; &#232; &#226;&#241;&#229;&#236;&#232;&#240;&#237;&#243;&#254; &#232;&#231;&#226;&#229;&#241;&#242;&#237;&#238;&#241;&#242;&#252; &#225;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#255; &#242;&#238;&#236;&#243;, &#247;&#242;&#238; &#238;&#237;&#224; &#241;&#232;&#235;&#252;&#237;&#238; &#237;&#224;&#234;&#235;&#238;&#237;&#229;&#237;&#224; &#232; &#234;&#224;&#234; &#225;&#251; &#171;&#239;&#224;&#228;&#224;&#229;&#242;&#187;. &#194;&#251;&#241;&#238;&#242;&#224; &#225;&#224;&#248;&#237;&#232; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 55,86 &#236; &#238;&#242; &#231;&#229;&#236;&#235;&#232; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#237;&#232;&#231;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229; &#232; 56,7 &#236; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229;. &#216;&#232;&#240;&#232;&#237;&#224; &#241;&#242;&#229;&#237; &#226; &#238;&#241;&#237;&#238;&#226;&#229; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 4,09 &#236; &#232; &#226;&#226;&#229;&#240;&#245;&#243; 2,48 &#236;. &#197;&#184; &#236;&#224;&#241;&#241;&#224; &#238;&#246;&#229;&#237;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#226; 14453 &#242;. &#210;&#229;&#234;&#243;&#249;&#232;&#233; &#237;&#224;&#234;&#235;&#238;&#237; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; &#238;&#234;&#238;&#235;&#238; 3,97&#176; (&#238;&#242;&#234;&#235;&#238;&#237;&#229;&#237;&#232;&#229; &#239;&#240;&#232;&#236;&#229;&#240;&#237;&#238; 3,9 &#236; &#238;&#242; &#226;&#229;&#240;&#242;&#232;&#234;&#224;&#235;&#232;). &#193;&#224;&#248;&#237;&#255; &#232;&#236;&#229;&#229;&#242; 294 &#241;&#242;&#243;&#239;&#229;&#237;&#252;&#234;&#232;.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Spanish>
+		<Russian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_HELP</Tag>
+		<English>[ICON_BULLET]Provides a Random Great Person</English>
+		<French>[ICON_BULLET]Provides a Random Great Person</French>
+		<German>[ICON_BULLET]Provides a Random Great Person</German>
+		<Italian>[ICON_BULLET]Provides a Random Great Person</Italian>
+		<Spanish>[ICON_BULLET]Provides a Random Great Person</Spanish>
+		<Russian>[ICON_BULLET]Provides a Random Great Person</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA</Tag>
 		<English>Bibliotheca Corviniana</English>
 		<French>Bibliotheca Corviniana</French>
@@ -1010,6 +1028,69 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>[ICON_BULLET]&#209;&#238;&#231;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#243;&#237;&#232;&#234;&#224;&#235;&#252;&#237;&#251;&#233; &#254;&#237;&#232;&#242; &#194;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_PROPHET</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_ARTIST</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_SCIENTIST</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_MERCHANT</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_ENGINEER</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_GENERAL</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEANING_TOWER_SPY</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 		<!-- Misc -->
 </Civ4GameText>
