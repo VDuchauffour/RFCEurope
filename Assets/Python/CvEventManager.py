@@ -20,6 +20,7 @@ import sys
 import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
+import XMLConsts as xml
 
 #Rhye
 import RFCUtils
@@ -520,57 +521,46 @@ class CvEventManager:
 		pCity, iBuildingType = argsList
 		game = gc.getGame()
 			
-### The Leaning Tower Start ### AbsintheRed - based on Tsentom's School of Confucius
-
-		if ( iBuildingType == gc.getInfoTypeForString("BUILDING_LEANING_TOWER") ):
-
+# The Leaning Tower Start
+# AbsintheRed, "improved" by merijn_v1 - based on Tsentom's School of Confucius
+		if ( iBuildingType == xml.iLeaningTower):
 			pPlayer = gc.getPlayer(pCity.plot().getOwner())
 			iPID = pPlayer.getID()
 			iTID = pPlayer.getTeam()
 			iX = pCity.getX()
 			iY = pCity.getY()
-			b_school = gc.getInfoTypeForString("BUILDING_LEANING_TOWER")
-			u_prophet = gc.getInfoTypeForString( 'UNIT_PROPHET' )
-			u_artist = gc.getInfoTypeForString( 'UNIT_ARTIST' )
-			u_scientist = gc.getInfoTypeForString( 'UNIT_SCIENTIST' )
-			u_merchant = gc.getInfoTypeForString( 'UNIT_MERCHANT' )
-			u_engineer = gc.getInfoTypeForString( 'UNIT_ENGINEER' )
-			u_general = gc.getInfoTypeForString( 'UNIT_GREAT_GENERAL' )
-			u_spy = gc.getInfoTypeForString( 'UNIT_GREAT_SPY' )
-
-			self.iGreatPeopleNumberOne = self.getRandomNumber( 6 )
-
+			b_school = xml.iLeaningTower
+			self.iGreatPeopleNumberOne = self.getRandomNumber(6)
 			for i in range(1):
 				if self.iGreatPeopleNumberOne == 0:
-					pNewUnit = pPlayer.initUnit( u_prophet, iX, iY, UnitAITypes.UNITAI_PROPHET, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_PROPHET", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
+					pNewUnit = pPlayer.initUnit(xml.iProphet, iX, iY, UnitAITypes.UNITAI_PROPHET, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_PROPHET", ())
+					CyInterface().addImmediateMessage(szTitle , None)
 				if self.iGreatPeopleNumberOne == 1:
-					pNewUnit = pPlayer.initUnit( u_artist, iX, iY, UnitAITypes.UNITAI_ARTIST, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_ARTIST", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
+					pNewUnit = pPlayer.initUnit(xml.iArtist, iX, iY, UnitAITypes.UNITAI_ARTIST, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_ARTIST", ())
+					CyInterface().addImmediateMessage(szTitle , None)
 				if self.iGreatPeopleNumberOne == 2:
-					pNewUnit = pPlayer.initUnit( u_scientist, iX, iY, UnitAITypes.UNITAI_SCIENTIST, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_SCIENTIST", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
+					pNewUnit = pPlayer.initUnit(xml.iScientist, iX, iY, UnitAITypes.UNITAI_SCIENTIST, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_SCIENTIST", ())
+					CyInterface().addImmediateMessage(szTitle , None)
 				if self.iGreatPeopleNumberOne == 3:
-					pNewUnit = pPlayer.initUnit( u_merchant, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_MERCHANT", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
+					pNewUnit = pPlayer.initUnit(xml.iMerchant, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_MERCHANT", ())
+					CyInterface().addImmediateMessage(szTitle , None)
 				if self.iGreatPeopleNumberOne == 4:
-					pNewUnit = pPlayer.initUnit( u_engineer, iX, iY, UnitAITypes.UNITAI_ENGINEER, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_ENGINEER", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
+					pNewUnit = pPlayer.initUnit(xml.iEngineer, iX, iY, UnitAITypes.UNITAI_ENGINEER, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_ENGINEER", ())
+					CyInterface().addImmediateMessage(szTitle , None)
 				if self.iGreatPeopleNumberOne == 5:
-					pNewUnit = pPlayer.initUnit( u_general, iX, iY, UnitAITypes.UNITAI_GENERAL, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_GENERAL", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
+					pNewUnit = pPlayer.initUnit(xml.iGreatGeneral, iX, iY, UnitAITypes.UNITAI_GENERAL, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_GENERAL", ())
+					CyInterface().addImmediateMessage(szTitle , None)
 				if self.iGreatPeopleNumberOne == 6:
-					pNewUnit = pPlayer.initUnit( u_spy, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.NO_DIRECTION )
-					szTitle = localText.getText( "TXT_KEY_LEANING_TOWER_SPY", ( ) )
-					CyInterface().addImmediateMessage( szTitle , None)
-
-### The Leaning Tower End ### AbsintheRed - based on Tsentom's School of Confucius
+					pNewUnit = pPlayer.initUnit(xml.iGreatSpy, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.NO_DIRECTION)
+					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_SPY", ())
+					CyInterface().addImmediateMessage(szTitle , None)
+# The Leaning Tower End
 		
 		if ((not gc.getGame().isNetworkMultiPlayer()) and (pCity.getOwner() == gc.getGame().getActivePlayer()) and isWorldWonderClass(gc.getBuildingInfo(iBuildingType).getBuildingClassType())):
 			# If this is a wonder...
