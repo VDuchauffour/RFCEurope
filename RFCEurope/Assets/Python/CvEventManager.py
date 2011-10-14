@@ -522,7 +522,7 @@ class CvEventManager:
 		game = gc.getGame()
 			
 # The Leaning Tower Start
-# AbsintheRed, "improved" by merijn_v1 - based on Tsentom's School of Confucius
+# Added by AbsintheRed, based on Tsentom's School of Confucius. Improved by merijn_v1
 		if ( iBuildingType == xml.iLeaningTower):
 			pPlayer = gc.getPlayer(pCity.plot().getOwner())
 			iPID = pPlayer.getID()
@@ -530,7 +530,7 @@ class CvEventManager:
 			iX = pCity.getX()
 			iY = pCity.getY()
 			b_school = xml.iLeaningTower
-			self.iGreatPeopleNumberOne = self.getRandomNumber(6)
+			self.iGreatPeopleNumberOne = self.getRandomNumber(7)
 			for i in range(1):
 				if self.iGreatPeopleNumberOne == 0:
 					pNewUnit = pPlayer.initUnit(xml.iProphet, iX, iY, UnitAITypes.UNITAI_PROPHET, DirectionTypes.NO_DIRECTION)
@@ -1204,9 +1204,10 @@ class CvEventManager:
 		CvScreensInterface.getWorldBuilderScreen().setStartYearCB(iStartYear)
 		return
 		
-### The Leaning Tower Start ### AbsintheRed - based on Tsentom's School of Confucius
+# The Leaning Tower Start
+# Added by AbsintheRed, based on Tsentom's School of Confucius. Improved by merijn_v1
 
 	def getRandomNumber(self, int):
 		return CyGame().getSorenRandNum(int, "Gods")
 
-### The Leaning Tower End ### AbsintheRed - based on Tsentom's School of Confucius
+# The Leaning Tower End
