@@ -844,7 +844,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_35</Tag>
-		<English>Press [/] to scroll though active workers...</English>
+		<English>Press [/] to scroll through active workers...</English>
 		<French>Appuyez sur [!] pour parcourir les ouvriers actifs.</French>
 		<German>Dr&#252;cken Sie [/], um durch Ihre aktiven Bautrupps zu schalten.</German>
 		<Italian>Premi [/] per scorrere tra i lavoratori...</Italian>
@@ -853,7 +853,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_36</Tag>
-		<English>Press [COMMA] and [PERIOD] to scroll though units on the same square...</English>
+		<English>Press [COMMA] and [PERIOD] to scroll through units on the same square...</English>
 		<French>Appuyez sur [POINT-VIRGULE] et [DEUX POINTS] pour parcourir les unit&#233;s sur la m&#234;me case.</French>
 		<German>Dr&#252;cken Sie [KOMMA] und [PUNKT], um durch die Einheiten auf einem Gel&#228;ndefeld zu schalten.</German>
 		<Italian>Premi [,] e [.] per scorrere tra le unit&#224; che si trovano nella stessa casella...</Italian>
