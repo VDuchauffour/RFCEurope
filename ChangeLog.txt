@@ -79,6 +79,7 @@ Changes for Beta 13:
 		- Tripoli moved 2N 2W, added Tarabulus as it's respawn
 		- Added Nidaros, Abo and Porto as indy cities
 		- Adjusted territory and resources in these areas, especially in Portugal. Slightly expanded province Lusitania to follow these changes
+		- New/updated CityNameMap to Hungary, Austria, Germany, Kiev, Spain, Portugal, Cordoba, Arabia, Turkey, Byzantium, smaller fixes in the English, Dutch and Bulgarian ones
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
