@@ -11243,7 +11243,11 @@ const CvWString CvUnit::getName(uint uiForm) const
 		return m_pUnitInfo->getDescription(uiForm);
 	}
 
-	szBuffer.Format(L"%s (%s)", m_szName.GetCString(), m_pUnitInfo->getDescription(uiForm));
+	if ( (getOwner() == BARBARIAN) || (getMercID() > -1) ){
+		szBuffer.Format(L"%s (%s)", m_pUnitInfo->getDescription(uiForm), m_szName.GetCString() );
+	}else{
+		szBuffer.Format(L"%s (%s)", m_szName.GetCString(), m_pUnitInfo->getDescription(uiForm));
+	};
 
 	return szBuffer;
 }
