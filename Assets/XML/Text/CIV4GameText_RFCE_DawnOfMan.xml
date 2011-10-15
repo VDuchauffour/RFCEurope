@@ -16,12 +16,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
-		<English>RHYE'S AND FALL OF EUROPE</English>
-		<French>RHYE'S AND FALL OF EUROPE</French>
-		<German>RHYE'S AND FALL OF EUROPE</German>
-		<Italian>RHYE'S AND FALL OF EUROPE</Italian>
-		<Spanish>RHYE'S AND FALL OF EUROPE</Spanish>
-		<Russian>RHYE'S AND FALL OF EUROPE</Russian>
+		<English>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</English>
+		<French>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</French>
+		<German>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</German>
+		<Italian>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</Italian>
+		<Spanish>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</Spanish>
+		<Russian>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</Russian>
 	</TEXT>
 		<!-- Civ Specific Dawn of Man -->
 		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->

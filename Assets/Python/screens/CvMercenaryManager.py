@@ -142,13 +142,14 @@ class CvMercenaryManager:
                 iGold = pPlayer.getGold()
                 
                 # get a list of the provinces controlled by the player
-                lProvList = [] # all available cities that the Merc can appear in
-                apCityList = PyPlayer(iPlayer).getCityList()
-                for pCity in apCityList:
-                        city = pCity.GetCy()
-                        iProvince = city.getProvince()
-                        if ( not (iProvince in lProvList) ):
-                              lProvList.append( iProvince )
+                #lProvList = [] # all available cities that the Merc can appear in
+                #apCityList = PyPlayer(iPlayer).getCityList()
+                #for pCity in apCityList:
+                        #city = pCity.GetCy()
+                        #iProvince = city.getProvince()
+                        #if ( (not (iProvince in lProvList)) and (city.getCultureLevel() >= 2) ):
+                                #lProvList.append( iProvince )
+                lProvList = GMU.getOwnedProvinces( pPlayer )
                 #lProvList = Set( lProvList ) # set as in set-theory
                 
                 mercenaryCount = 0
@@ -166,8 +167,6 @@ class CvMercenaryManager:
                         if ( ( not (lMerc[4] in lProvList) ) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
                                 continue
                                 
-                                
-                        
                         # screen needs unique internal names
                         #szUniqueInternalName = "MercID%d" %iMerc
                         szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
@@ -175,7 +174,7 @@ class CvMercenaryManager:
                         pUnitInfo = gc.getUnitInfo(lMercList[iMerc][0])
                         screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
                         screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_AInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",mercenaryName +" ("+pUnitInfo.getDescription()+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
                         
                         # TODO: The UP here:
                         iHireCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )

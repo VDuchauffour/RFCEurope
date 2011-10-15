@@ -23,7 +23,9 @@ Changes for Beta 13:
 			- Added a bunch of generic mercs, they can be updated with specific names later on
 			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack
 			- Readded Tagmata, Corsair, Welsh Longbowman, Highlander as unique mercenaries (some of these also availeable as barbs)
-			- Update to Merc Mechanics: Mercs are only available at one province at a time and Mercs change provinces every 5 turns
+			- Update to Merc Mechanics: Mercs are only available at one province at a time
+			- Mercs can also randomly leave the pool
+			- You can only hire a merc in a province where you have at least one city with 10 culture points (culture level more than poor)
 			- The player gets a message when new Mercs become available
 			- If a player doesn't have enough gold to support the currently hired mercs, then some of the mercs will desert
 		- Revised crusade mechanics:
@@ -115,6 +117,7 @@ Changes for Beta 13:
 		- German and Austrian units have Holy Roman order/select sounds (vanilla German sounds were too modern)
 		- Italian order/select sounds for Venice and Genoa (instead of Roman)
 		- Better wondermovie for the Leaning Tower, new wondermovie for San Marco Basilica
+		- Merc names and Barbarian names appear in the format: Horse Archer (Khazars)
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
