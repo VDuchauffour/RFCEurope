@@ -21,7 +21,7 @@ Changes for Beta 13:
 			- Mercs are tied to provinces, thus we can have region specific mercs. Also they appear in the given province when hired
 			- Mercenaries are also tied to specific intervals on the timeline
 			- Added a bunch of generic mercs, they can be updated with specific names later on
-			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack
+			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack (more to come in later versions)
 			- Readded Tagmata, Corsair, Welsh Longbowman, Highlander as unique mercenaries (some of these also availeable as barbs)
 			- Update to Merc Mechanics: Mercs are only available at one province at a time
 			- Mercs can also randomly leave the pool
@@ -63,7 +63,6 @@ Changes for Beta 13:
 	Map and province changes:
 		- Updated Polish and Lithuanian SettlerMaps
 		- Moved the Polish spawn location one tile north to match the new terrain
-		- New Ottoman, Genoan, Venetian, French/Burgundian CityNameMaps
 		- Isle of Man province expanded with the northern British islands (Hebrides, Orkney). New province name: The Isles
 		- Updated the Balkan parts of the Byzantian, Bulgarian and Ottoman CityNameMap
 		- Moved starting positions/capitals to realistic location: Hungary 1W, Lithuania 1E, Kiev 3N 3W, Portugal 1N
@@ -79,7 +78,7 @@ Changes for Beta 13:
 		- Tripoli moved 2N 2W, added Tarabulus as it's respawn
 		- Added Nidaros, Abo and Porto as indy cities
 		- Adjusted territory and resources in these areas, especially in Portugal. Slightly expanded province Lusitania to follow these changes
-		- New/updated CityNameMap to Hungary, Austria, Germany, Kiev, Spain, Portugal, Cordoba, Arabia, Turkey, Byzantium, smaller fixes in the English, Dutch and Bulgarian ones
+		- New/updated CityNameMap for Genoa, Turkey, Venice, France/Burgundy Hungary, Austria, Germany, Kiev, Spain, Portugal, Cordoba, Arabia, Turkey, Byzantium, smaller fixes in the English, Dutch and Bulgarian ones
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
