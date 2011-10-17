@@ -32,12 +32,12 @@ iIndependent3 = con.iIndependent3
 iIndependent4 = con.iIndependent4
 iNumTotalPlayers = con.iNumTotalPlayers
 
-
-
 tWarsMap = rfcemaps.tWarsMaps
 
 
-
+# for AI Hack
+pVenice = gc.getPlayer( con.iVenecia )
+teamVenice = gc.getTeam( pVenice.getTeam() )
       
   
 class AIWars:
@@ -97,6 +97,16 @@ class AIWars:
 		if (iGameTurn % 60 == 47 and iGameTurn > 50): #1 turn after restorePeace()
                         utils.minorWars(con.iIndependent4)
 
+
+                ### 3Miro: AI Hacking - Venice has hard time dealing with Indy Ragusa
+                if ( (iGameTurn % 7 == 3) and (not pVenice.isHuman()) ):
+                        pRagusa = gc.getMap().plot( 64, 28 )
+                        if ( pRagusa.isCity() ):
+                                pRagusa = pRagusa.getPlotCity()
+                                if ( utils.isIndep( pRagusa.getOwner() ) ):
+                                        #pTeamRagusa = gc.getTeam( gc.getPlayer( pRagusa.getOwner() ).getTeam() ).setAtWar
+                                        teamVenice.setAtWar( gc.getPlayer( pRagusa.getOwner() ).getTeam(), True )
+                ### 3Miro: End of AI Hacking
 
                      
                 if (iGameTurn == self.getNextTurnAIWar()):

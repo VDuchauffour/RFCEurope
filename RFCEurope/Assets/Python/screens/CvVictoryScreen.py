@@ -6,6 +6,7 @@ import ScreenInput
 import PyHelpers
 import time
 import Consts as con #Rhye
+import XMLConsts as xml
 #import cPickle as pickle #Rhye
 import RFCUtils #Rhye
 import Victory as vic
@@ -988,9 +989,9 @@ class CvVictoryScreen:
                 elif ( self.iActivePlayer == con.iKiev ):
                         bListProvs = True
                         tProvsToCheck = vic.tKievControl
-                elif ( self.iActivePlayer == con.iLithuania ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tLithuaniaControl
+                #elif ( self.iActivePlayer == con.iLithuania ):
+                #        bListProvs = True
+                #        tProvsToCheck = vic.tLithuaniaControl
                 elif ( self.iActivePlayer == con.iNorse ):
                         bListProvs = True
                         tProvsToCheck = vic.tNorseControl
@@ -1049,6 +1050,48 @@ class CvVictoryScreen:
                                 else:
                                         sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
                         sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+                        
+                ### Add New Spanish UHV
+                if ( self.iActivePlayer == con.iSpain ):
+                        lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
+                        lPop  = [ 0, 0, 0, 0, 0, 0 ]
+                        for iPlayer in range( con.iNumPlayers ):
+                                pPlayer = gc.getPlayer( iPlayer )
+                                iStateReligion = pPlayer.getStateReligion()
+                                if ( iStateReligion > -1 ):
+                                        lLand[ iStateReligion ] += pPlayer.getTotalLand()
+                                        lPop[ iStateReligion ] += pPlayer.getTotalPopulation()
+                                else:
+                                        lLand[ 5 ] += pPlayer.getTotalLand()
+                                        lPop[ 5 ] += pPlayer.getTotalPopulation()
+                        
+                        iBestLand = xml.iCatholicism
+                        iBestPop = xml.iCatholicism
+                        
+                        for iReligion in range( xml.iNumReligions + 1 ):
+                                if ( iReligion != xml.iCatholicism ):
+                                        if ( lLand[ iReligion ] > lLand[ iBestLand ] ):
+                                                iBestLand = iReligion
+                                        if ( lPop[ iReligion ] > lPop[ iBestPop ] ):
+                                                iBestPop = iReligion
+                                                
+                        if ( iBestLand == 5 ):
+                                sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
+                        else:
+                                sBestR = localText.getText( gc.getReligionInfo(iBestLand).getAdjectiveKey().encode('ascii', 'replace'), () )
+                        if ( iBestLand == xml.iCatholicism ):
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u"<color=0,255,0>%s</color>" %(sBestR)
+                        else:
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u"<color=208,0,0>%s</color>" %(sBestR)
+                                
+                        if ( iBestPop == 5 ):
+                                sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
+                        else:
+                                sBestR = localText.getText( gc.getReligionInfo(iBestPop).getAdjectiveKey().encode('ascii', 'replace'), () )
+                        if ( iBestPop == xml.iCatholicism ):
+                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u"<color=0,255,0>%s</color>" %(sBestR)
+                        else:
+                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u"<color=208,0,0>%s</color>" %(sBestR)
 
                 screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+7, self.Y_UHV3+15, self.W_UHV3-10, self.H_UHV3-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 

@@ -65,6 +65,7 @@ class StoredData:
                                     'iTarget':[0,0],
                                     'iCrusadePower':0,
 				    'iCrusadeSucceeded':0,
+                                    'iCrusadeToReturn':-1,
 				    'lSelectedUnits':[0, 0, 0, 0, 0, 0], # Templars, Zerglings ops! ... Teutonic Knights, Knights, Heavy Lancers, Siege Weapons, Generic
 				    'bDCEnabled': False,
 				    'iDCLast':0,

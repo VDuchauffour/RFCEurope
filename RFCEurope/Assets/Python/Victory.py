@@ -838,7 +838,7 @@ class Victory:
                         else:
                                 pSpain.setUHV( 0, 0 )
                 # many colonies
-                if ( iGameTurn == xml.i1542AD and pSpain.getUHV( 1 ) == -1 ):
+                if ( iGameTurn == xml.i1588AD and pSpain.getUHV( 1 ) == -1 ):
                         bMost = True
                         iSpainColonies = pSpain.getNumColonies()
                         for iPlayer in range( iNumPlayers ):
@@ -851,19 +851,48 @@ class Victory:
                         else:
                                 pSpain.setUHV( 1, 0 )
                 # purge protestants
-                if ( iGameTurn == xml.i1588AD and pSpain.getUHV( 2 ) == -1 ):
+                if ( iGameTurn == xml.i1648AD and pSpain.getUHV( 2 ) == -1 ):
                         # we have not captured enough cities
-                        bConverted = True
+                        lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
+                        lPop  = [ 0, 0, 0, 0, 0, 0 ]
                         for iPlayer in range( iNumPlayers ):
-                                if ( iPlayer != iSpain ):
-                                        pPlayer = gc.getPlayer( iPlayer )
-                                        if ( pPlayer.getStateReligion() == xml.iProtestantism ):
-                                                bConverted = False
-                                                break
-                        if ( bConverted ):
+                                pPlayer = gc.getPlayer( iPlayer )
+                                iStateReligion = pPlayer.getStateReligion()
+                                if ( iStateReligion > -1 ):
+                                        lLand[ iStateReligion ] += pPlayer.getTotalLand()
+                                        lPop[ iStateReligion ] += pPlayer.getTotalPopulation()
+                                else:
+                                        lLand[ 5 ] += pPlayer.getTotalLand()
+                                        lPop[ 5 ] += pPlayer.getTotalPopulation()
+                                        
+                        iCathLand = lLand[ xml.iCatholicism ]
+                        iCathPop  = lPop[ xml.iCatholicism ]
+                        
+                        bWon = True
+                        
+                        for iReligion in range( xml.iNumReligions + 1 ):
+                                if ( iReligion != xml.iCatholicism ):
+                                        if ( lLand[ iReligion ] > iCathLand ):
+                                                bWon = False
+                                        if ( lPop[ iReligion ] > iCathPop ):
+                                                bWon = False
+                                                
+                        if ( pSpain.getStateReligion() == xml.iCatholicism and bWon ):
                                 pSpain.setUHV( 2, 1 )
                         else:
                                 pSpain.setUHV( 2, 0 )
+                                
+                        #bConverted = True
+                        #for iPlayer in range( iNumPlayers ):
+                        #        if ( iPlayer != iSpain ):
+                        #                pPlayer = gc.getPlayer( iPlayer )
+                        #                if ( pPlayer.getStateReligion() == xml.iProtestantism ):
+                        #                        bConverted = False
+                        #                        break
+                        #if ( bConverted ):
+                        #        pSpain.setUHV( 2, 1 )
+                        #else:
+                        #        pSpain.setUHV( 2, 0 )
                                                 
                 
         def checkPoland( self, iGameTurn ):
@@ -951,12 +980,14 @@ class Victory:
                                 pLithuania.setUHV( 0, 0 )
                                 
                 if ( iGameTurn == xml.i1569AD and pLithuania.getUHV( 1 ) == -1 ):
-                        bConq = True
-                        for iProv in tLithuaniaControl:
-                                if ( pLithuania.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
-                                        bConq = False
-                                        break
-                        if ( bConq ):
+                        #bConq = True
+                        #for iProv in tLithuaniaControl:
+                        #        if ( pLithuania.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
+                        #                bConq = False
+                        #                break
+                        #<English>[COLOR_YELLOW]Lithuanian Commonwealth:[COLOR_REVERT] Conquer Lithuania, Greater Poland, Lesser Poland, Pomerania, Masovia, Brest, Suvalkija, Livonia, Novgorod, Smolensk, Polotsk, Minsk, Chernigov, Pereyaslavl, Kiev, Galicia and Sloboda in 1569AD.</English>
+                        #if ( bConq ):
+                        if ( pLithuania.getNumCities() >= 18 ):
                                 pLithuania.setUHV( 1, 1 )
                         else:
                                 pLithuania.setUHV( 1, 0 )
@@ -964,7 +995,7 @@ class Victory:
                 if ( pLithuania.getUHV( 2 ) == -1 ):
                         if ( pMoscow.isAlive() and teamMoscow.isVassal( teamLithuania.getID() ) ):
                                 pLithuania.setUHV( 2, 1 )
-                        elif ( pLithuania.getProvinceCurrentState( xml.iP_Moscow ) >= con.iProvinceConquer ):
+                        elif ( (iGameTurn > xml.i1401AD) and (pLithuania.getProvinceCurrentState( xml.iP_Moscow ) >= con.iProvinceConquer) ):
                                 pLithuania.setUHV( 2, 1 )
                 
         def checkAustria( self, iGameTurn ):

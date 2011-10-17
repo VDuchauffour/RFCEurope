@@ -39,6 +39,7 @@ Changes for Beta 13:
 			- New screen to display which colonies have been built.
 			- The Main Screen shows the percent penalty for researching techs early or late
 			- New starting theme (intro screen with Bayeaux Tapestry)
+				Note: since the Bayeaux Tapestry doesn't work properly yet, we replaced it with a statis image of The Siege of Acre, at least for now
 			- Adjusted Dawn of Man screen
 			
 	General changes and UHV updates:
@@ -118,6 +119,8 @@ Changes for Beta 13:
 		- Italian order/select sounds for Venice and Genoa (instead of Roman)
 		- Better wondermovie for the Leaning Tower, new wondermovie for San Marco Basilica
 		- Merc names and Barbarian names appear in the format: Horse Archer (Khazars)
+		- GRAPHICS LIGHT VERSION: in folders RFCEurope\Assets\XML\Civilzations and RFCEurope\Assets\XML\Art, there are two files that end with .xml_light
+					  if those two files repalce the corresponding .xml files, then the game will use only BtS leaderhead graphics and the mod will be much lighter
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
@@ -145,6 +148,13 @@ Changes for Beta 13:
 		- Balanced most barbs (both number and area). IE: reduced barbs near Cordoba, increased pirate and horse archer activity, moved mongol spawn areas (no more Keshiks around Jerusalem)
 		- Reduced upgrade time of towns: cottage-hamlet 10 turns, hamlet-village 15 turns, village-town 25 turns
 		- Removed second settler and a few initial units from the Portugal spawn (as Porto flips to them)
+		- upkeep for Militarism and Imperialism is now Medium and High respectively
+		- new Spanish UHV, the Colony UHV is moved to 1588AD and UHV 3 is now changed to require Catholics to get more land and more Population than any other Religion by 1648AD
+		- adjusted the Mongols so that they will hit Hungary more often and also added another invasion spot near Bulgaria
+		- increaded the power of Venice AI (in the special modifiers)
+		- Venice (city) gets a pre-build City Walls since the rivers don't provide enough defense
+		- Ragusa was keeping Venice down, now Venice AI is constantly at war with Ragusa and the plot of Ragusa was changed to flat-land (no defensive bonus)
+		- adjusted many parameters in RFCEBalance due to the new map division and better AI
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
@@ -160,6 +170,7 @@ Changes for Beta 13:
 		- Hacked another ugly bug with the path-finding algorithm, the settler sometimes doesn't find a road to the target and then goes in an infinite loop
 		- Hopefully we finally managed to fix the huge do-nothing stacks bug
 		- Fixed a mongol spawn bug in Barbs.py (only appeared on Viceroy)
+		- fixed a bug associated with the return of the crusades, the game crashes if the unit conquering Jerusalem has to return, now Crusaders return on the next turn after the fall of Jerusalem
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -138,7 +138,7 @@ bool CvSelectionGroupAI::AI_update()
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
-	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 1 "); // 3Miro
+	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 1 %d %d",getX(),getY()); // 3Miro
 	/*if ( ( getX() == 94) && ( getY() == 6) ){
 		GC.getGameINLINE().logMsg(" AI_Update Group Size %d",getNumUnits() ); // 3Miro
 	};*/
