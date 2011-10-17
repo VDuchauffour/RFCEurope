@@ -209,6 +209,15 @@ class Crusades:
 		scriptDict['iCrusadeSucceeded'] = 1
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) ) 
                 
+        def getCrusadeToReturn( self ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['iCrusadeToReturn']
+        
+        def setCrusadeToReturn( self, iNewValue ):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['iCrusadeToReturn'] = iNewValue
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) ) 
+                
 	def isDCEnabled( self ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['bDCEnabled']
@@ -278,6 +287,10 @@ class Crusades:
 	def checkTurn( self, iGameTurn ):
 		#print(" 3Miro Crusades ")
 		#self.informPopup()
+                
+                if ( self.getCrusadeToReturn() > -1 ):
+                        self.freeCrusaders( self.getCrusadeToReturn() )
+                        self.setCrusadeToReturn( -1 )
 		
 		if ( iGameTurn == xml.i1099AD - 6 ): #1080AD to arrive 1099AD
 			self.setCrusadeInit( 0, -1 )
@@ -763,7 +776,7 @@ class Crusades:
                 
                 # if the leader has been destroyed, cancel the crusade
                 iLeader = self.getLeader()
-                if ( (iLeader>-1) and (not gc.getPlayer( iLeader ).isAlive()) ):
+                if ( (iLeader==-1) or (not gc.getPlayer( iLeader ).isAlive()) ):
                         self.returnCrusaders()
                         return
 		
@@ -930,7 +943,8 @@ class Crusades:
                                 
 		
 	def success( self, iPlayer ):
-                self.freeCrusaders( iPlayer )
+                #self.freeCrusaders( iPlayer )
+                self.setCrusadeToReturn( iPlayer )
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( not self.hasSucceeded() ):
 			pPlayer.changeGoldenAgeTurns( gc.getPlayer( iPlayer).getGoldenAgeLength() )

@@ -3247,6 +3247,7 @@ bool CvSelectionGroup::groupDeclareWar(CvPlot* pPlot, bool bForce)
 // Returns true if attack was made...
 bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting)
 {
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 1: %d %d",iX,iY); //3Miro
 	CvPlot* pDestPlot = GC.getMapINLINE().plotINLINE(iX, iY);
 
 	if (iFlags & MOVE_THROUGH_ENEMY)
@@ -3256,6 +3257,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			pDestPlot = getPathFirstPlot();
 		}
 	}
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 2: %d %d",iX,iY); //3Miro
 
 
 	FAssertMsg(pDestPlot != NULL, "DestPlot is not assigned a valid value");
@@ -3265,6 +3267,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 	bool bAttack = false;
 	bFailedAlreadyFighting = false;
 
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 3: %d %d",iX,iY); //3Miro
 	if (getNumUnits() > 0)
 	{
 		if ((getDomainType() == DOMAIN_AIR) || (stepDistance(getX(), getY(), pDestPlot->getX_INLINE(), pDestPlot->getY_INLINE()) == 1))
@@ -3274,6 +3277,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				int iAttackOdds;
 				CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds);
 
+				//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 4: %d %d",iX,iY); //3Miro
 				if (pBestAttackUnit)
 				{
 					// if there are no defenders, do not attack
@@ -3290,6 +3294,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						return true;
 					}
 
+					//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 5: %d %d",iX,iY); //3Miro
 					while (true)
 					{
 						pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, false, bNoBlitz);
@@ -3325,39 +3330,54 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						//}
 						// 3Miro: end
 
+						//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6: %d %d",iX,iY); //3Miro
+						//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack numUnits() %d",getNumUnits()); //3Miro
 						if (getNumUnits() > 1)
 						{
+							//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.1: %d %d",iX,iY); //3Miro
 							if (pBestAttackUnit->plot()->isFighting() || pDestPlot->isFighting())
 							{
+								//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.2: %d %d",iX,iY); //3Miro
 								bFailedAlreadyFighting = true;
+								//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.3: %d %d",iX,iY); //3Miro
 							}
 							else
 							{
+								//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.4: %d %d",iX,iY); //3Miro
 								pBestAttackUnit->attack(pDestPlot, bStack);
+								//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.5: %d %d",iX,iY); //3Miro
 							}
 						}
 						else
 						{
+							//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.6: %d %d",iX,iY); //3Miro
 							pBestAttackUnit->attack(pDestPlot, false);
+							//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.7: %d %d",iX,iY); //3Miro
 							break;
 						}
 
+						//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.8: %d %d",iX,iY); //3Miro
 						if (bFailedAlreadyFighting || !bStack)
 						{
+							//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.9: %d %d",iX,iY); //3Miro
 							// if this is AI stack, follow through with the attack to the end
 							if (!isHuman() && getNumUnits() > 1)
 							{
+								//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.10: %d %d",iX,iY); //3Miro
 								AI_queueGroupAttack(iX, iY);
+								//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.11: %d %d",iX,iY); //3Miro
 							}
-							
+							//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 6.12: %d %d",iX,iY); //3Miro
 							break;
 						}
+						//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 7: %d %d",iX,iY); //3Miro
 					}
 				}
 			}
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupAttack Here 8: %d %d",iX,iY); //3Miro
 	return bAttack;
 }
 
@@ -3369,34 +3389,64 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
 
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 1"); // 3Miro
 	pUnitNode = headUnitNode();
 
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 2"); // 3Miro
 	while (pUnitNode != NULL)
 	{
+		//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 3"); // 3Miro
 		pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = nextUnitNode(pUnitNode);
 
+		/*GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4"); // 3Miro
+		if( pLoopUnit->canMove() ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.1"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.2"); // 3Miro
+		if( bCombat ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.3"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.4"); // 3Miro
+		if( pLoopUnit->isNoCapture() ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.5"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.6"); // 3Miro
+		if( pPlot->isEnemyCity(*pLoopUnit) ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.7"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.8"); // 3Miro
+		if( pLoopUnit->canMoveOrAttackInto(pPlot) ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.9"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.10"); // 3Miro
+		if( pLoopUnit->canMoveInto(pPlot) ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.12"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.13"); // 3Miro
+		if( pLoopUnit == pCombatUnit ){ GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.14"); }; // 3Miro
+		GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 4.15"); // 3Miro*/
+
 		if ((pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canMoveOrAttackInto(pPlot) : pLoopUnit->canMoveInto(pPlot))) || (pLoopUnit == pCombatUnit))
 		{
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 5"); // 3Miro
 			pLoopUnit->move(pPlot, true);
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 6"); // 3Miro
 		}
 		else
 		{
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 7"); // 3Miro
 			pLoopUnit->joinGroup(NULL, true);
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 8"); // 3Miro
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 9"); // 3Miro
 		}
 	}
 
+	//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 10"); // 3Miro
 	//execute move
 	if(bEndMove || !canAllMove())
 	{
+		//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 11"); // 3Miro
 		pUnitNode = headUnitNode();
 		while(pUnitNode != NULL)
 		{
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 12"); // 3Miro
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 13"); // 3Miro
 			pUnitNode = nextUnitNode(pUnitNode);
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 14"); // 3Miro
 
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
+			//GC.getGameINLINE().logMsg(" CvSelectionGroup::groupMove Here 15"); // 3Miro
 		}
 	}
 }

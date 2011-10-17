@@ -323,7 +323,7 @@ class CvRFCEventHandler:
                 
                 iOwner = city.getOwner()
                 
-                self.rnf.onCityBuilt(iOwner, city.getX(), city.getY() )
+                self.rnf.onCityBuilt(iOwner, city )
                 
                 if (iOwner < con.iNumActivePlayers): 
                         self.cnm.assignName(city)

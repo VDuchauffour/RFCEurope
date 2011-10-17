@@ -694,8 +694,11 @@ class RiseAndFall:
                 #        #print (unit)
                 
         ### 3Miro Province Related Functions ###
-        def onCityBuilt(self, iPlayer, x, y):
-                self.pm.onCityBuilt(iPlayer, x, y)
+        def onCityBuilt(self, iPlayer, pCity ):
+                self.pm.onCityBuilt(iPlayer, pCity.getX(), pCity.getY() )
+                ### 3Miro: Venice defence boost
+                if ( (pCity.getX()==64) and (pCity.getY()==28) ):
+                        pCity.setHasRealBuilding( xml.iWalls, True ) # this gives defense to Venice, the rivers alone are not enough
                 
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
                 self.pm.onCityAcquired(owner, playerType, city, bConquest, bTrade)

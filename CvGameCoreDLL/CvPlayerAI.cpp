@@ -5941,11 +5941,14 @@ int CvPlayerAI::AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const
 #endif
 		iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(), GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getWarmongerRespect());
 	}
-    return iAttitude;}
+    return iAttitude;
+}
+
 int CvPlayerAI::AI_getTeamSizeAttitude(PlayerTypes ePlayer) const
 {
 	return -std::max(0, (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getNumMembers() - GET_TEAM(getTeam()).getNumMembers()));
-}
+}
+
 #ifndef HIDDEN_ATTITUDE_SPOILER
 // Count only players visible on the active player's scoreboard
 int CvPlayerAI::AI_getKnownPlayerRank(PlayerTypes ePlayer) const
@@ -5985,7 +5988,8 @@ int CvPlayerAI::AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const
 		return (GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange() * -(iRankDifference)) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1);
 	}
     return 0;
-}
+}
+
 int CvPlayerAI::AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const
 {
 #ifdef HIDDEN_ATTITUDE_SPOILER
@@ -5999,7 +6003,8 @@ int CvPlayerAI::AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const
 		return (GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange() * iRankDifference) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1);
 	}
     return 0;
-}
+}
+
 int CvPlayerAI::AI_getLowRankAttitude(PlayerTypes ePlayer) const
 {
 #ifdef HIDDEN_ATTITUDE_SPOILER

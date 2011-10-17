@@ -25595,7 +25595,7 @@ EndPlot
 BeginPlot
 	x=64,y=28
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=29

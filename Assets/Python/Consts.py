@@ -319,7 +319,7 @@ tNewCapitals = (  #for RiseAndFall
 ((44, 46),(44, 46)), #tFrance: Paris
 ((85, 4),(84, 3),(85, 3)), #tArabia: Damascus --> Alexandria (best Egyption city)
 ((77, 30),(77, 30)), #tBulgaria: Preslav
-((18, 14),(17, 14)), #tCordoba: Cordoba --> Marrakesh
+((48, 16),(50, 18)), #tCordoba: Cordoba --> Hasfid at Tunis 
 ((59, 57),(59, 57)), #tNorse: Roskilde
 ((56, 35),(56, 35)), #tVenezia: Venice
 ((47, 41),(47, 41)), #tBurgundy: Dijon
