@@ -13,18 +13,15 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 14:
-(to-be-released: ????.??.??.)
-
-	Major Changes:
-			
+(to-be-released: around mid-December, 2011)
+		
 	General changes and UHV updates:
 
 	Map and province changes:
 
 	XML/text updates:
 		- More Unique Dawn of Man texts
-
-	Python/C++ updates and AI tweaks:
+		- Various fixes in the GP names
 
 	Art/Sound updates:
 
@@ -35,11 +32,11 @@ Changes for Beta 14:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for Beta 13:
-(to-be-released: 2011.10.16.)
+(released: 2011.10.16.)
 
 	Major Changes:
 		- New Mercenary scheme:
-			- You cannot contract your units out (basicaly sell) as mercenaries anymore, mercs are only there to hire them
+			- You cannot contract your units out (basically sell) as mercenaries anymore, mercs are only there to hire them
 			- Mercs are tied to provinces, thus we can have region specific mercs. Also they appear in the given province when hired
 			- Mercenaries are also tied to specific intervals on the timeline
 			- Added a bunch of generic mercs, they can be updated with specific names later on
@@ -60,9 +57,13 @@ Changes for Beta 13:
 		- Interface:
 			- New screen to display which colonies have been built.
 			- The Main Screen shows the percent penalty for researching techs early or late
-			- New starting theme (intro screen with Bayeaux Tapestry)
-				Note: since the Bayeaux Tapestry doesn't work properly yet, we replaced it with a static image of The Siege of Acre, at least for now
+			- New starting theme (intro screen) is a scrolling image of the Bayeaux Tapestry
+			- Since the Bayeaux Tapestry doesn't work properly yet, we replaced it with a static image of The Siege of Acre, at least for now
 			- Adjusted Dawn of Man screen
+			- Merc names and Barbarian names appear in the format: Horse Archer (Khazars)
+		- Graphics light version:
+			- In the RFCEurope\Assets\XML\Civilizations and RFCEurope\Assets\XML\Art folders, there are two files that end with .xml_light
+			- If those two files replace the corresponding .xml files, then the game will use only BtS leaderhead graphics and the mod will be much lighter
 			
 	General changes and UHV updates:
 		- Madeira added to first Portuguese UHV
@@ -82,6 +83,7 @@ Changes for Beta 13:
 		- Added Show Hidden Attitudes Modcomp
 		- Minor nations in Tetuoan (Wattasids), and Oran (Ziyyanids) from RFCE++
 		- The Leaning Tower provides a random Great Person, National Epic has it's former bonus (+100% GP birth rate)
+		- New Spanish UHV, the Colony UHV is moved to 1588AD and UHV 3 is now changed to require Catholics to get more land and more Population than any other Religion by 1648AD
 
 	Map and province changes:
 		- Updated Polish and Lithuanian SettlerMaps
@@ -101,7 +103,7 @@ Changes for Beta 13:
 		- Tripoli moved 2N 2W, added Tarabulus as it's respawn
 		- Added Nidaros, Abo and Porto as indy cities
 		- Adjusted territory and resources in these areas, especially in Portugal. Slightly expanded province Lusitania to follow these changes
-		- New/updated CityNameMap for Genoa, Turkey, Venice, France/Burgundy Hungary, Austria, Germany, Kiev, Spain, Portugal, Cordoba, Arabia, Turkey, Byzantium, smaller fixes in the English, Dutch and Bulgarian ones
+		- New/updated CityNameMap for Genoa, Venice, France/Burgundy, Hungary, Austria, Germany, Kiev, Spain, Portugal, Cordoba, Arabia, Turkey, Byzantium, smaller fixes in the English, Dutch and Bulgarian ones
 
 	XML/text updates:
 		- Renamed "Temple Mount" to "Kazimierz" (To represent the Jewish Quarter of Krakow)
@@ -140,9 +142,6 @@ Changes for Beta 13:
 		- German and Austrian units have Holy Roman order/select sounds (vanilla German sounds were too modern)
 		- Italian order/select sounds for Venice and Genoa (instead of Roman)
 		- Better wondermovie for the Leaning Tower, new wondermovie for San Marco Basilica
-		- Merc names and Barbarian names appear in the format: Horse Archer (Khazars)
-		- GRAPHICS LIGHT VERSION: in folders RFCEurope\Assets\XML\Civilzations and RFCEurope\Assets\XML\Art, there are two files that end with .xml_light
-					  if those two files repalce the corresponding .xml files, then the game will use only BtS leaderhead graphics and the mod will be much lighter
 
 	Balance:
 		- Prebuild Feitoria in Portugese cities (only after the discovery of Astronomy)
@@ -170,13 +169,12 @@ Changes for Beta 13:
 		- Balanced most barbs (both number and area). IE: reduced barbs near Cordoba, increased pirate and horse archer activity, moved mongol spawn areas (no more Keshiks around Jerusalem)
 		- Reduced upgrade time of towns: cottage-hamlet 10 turns, hamlet-village 15 turns, village-town 25 turns
 		- Removed second settler and a few initial units from the Portugal spawn (as Porto flips to them)
-		- upkeep for Militarism and Imperialism is now Medium and High respectively
-		- new Spanish UHV, the Colony UHV is moved to 1588AD and UHV 3 is now changed to require Catholics to get more land and more Population than any other Religion by 1648AD
-		- adjusted the Mongols so that they will hit Hungary more often and also added another invasion spot near Bulgaria
-		- increaded the power of Venice AI (in the special modifiers)
+		- Upkeep for Militarism and Imperialism is now Medium and High respectively
+		- Adjusted the Mongols so that they will hit Hungary more often and also added another invasion spot near Bulgaria
+		- Increased the power of Venice AI (in the special modifiers)
 		- Venice (city) gets a pre-build City Walls since the rivers don't provide enough defense
 		- Ragusa was keeping Venice down, now Venice AI is constantly at war with Ragusa and the plot of Ragusa was changed to flat-land (no defensive bonus)
-		- adjusted many parameters in RFCEBalance due to the new map division and better AI
+		- Adjusted many parameters in RFCEBalance due to the new map division and better AI
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
@@ -192,7 +190,7 @@ Changes for Beta 13:
 		- Hacked another ugly bug with the path-finding algorithm, the settler sometimes doesn't find a road to the target and then goes in an infinite loop
 		- Hopefully we finally managed to fix the huge do-nothing stacks bug
 		- Fixed a mongol spawn bug in Barbs.py (only appeared on Viceroy)
-		- fixed a bug associated with the return of the crusades, the game crashes if the unit conquering Jerusalem has to return, now Crusaders return on the next turn after the fall of Jerusalem
+		- Fixed a bug associated with the return of the crusades, the game crashes if the unit conquering Jerusalem has to return, now Crusaders return on the next turn after the fall of Jerusalem
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

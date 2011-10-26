@@ -114,15 +114,6 @@
 		<Russian>Vladimir Sviatoslavich</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MATHIUS_CORVINUS</Tag>
-		<English>Mathius Corvinus</English>
-		<French>Mathius Corvinus</French>
-		<German>Mathius Corvinus</German>
-		<Italian>Mathius Corvinus</Italian>
-		<Spanish>Mathius Corvinus</Spanish>
-		<Russian>Mathius Corvinus</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BARUCH_SPINOZA</Tag>
 		<English>Baruch Spinoza</English>
 		<French>Baruch Spinoza</French>
@@ -519,13 +510,13 @@
 		<Russian>Hans Holbein</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JOHAN_SEBASTIAN_BACH</Tag>
-		<English>Johan Sebastian Bach</English>
-		<French>Johan Sebastian Bach</French>
-		<German>Johan Sebastian Bach</German>
-		<Italian>Johan Sebastian Bach</Italian>
-		<Spanish>Johan Sebastian Bach</Spanish>
-		<Russian>Johan Sebastian Bach</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_JOHANN_SEBASTIAN_BACH</Tag>
+		<English>Johann Sebastian Bach</English>
+		<French>Johann Sebastian Bach</French>
+		<German>Johann Sebastian Bach</German>
+		<Italian>Johann Sebastian Bach</Italian>
+		<Spanish>Johann Sebastian Bach</Spanish>
+		<Russian>Johann Sebastian Bach</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAN_KOCHANOWSKI</Tag>
@@ -1041,13 +1032,13 @@
 		<Russian>Afanasij Nikitin</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SANDOR_CSOMA</Tag>
-		<English>Sandor Csoma</English>
-		<French>Sandor Csoma</French>
-		<German>Sandor Csoma</German>
-		<Italian>Sandor Csoma</Italian>
-		<Spanish>Sandor Csoma</Spanish>
-		<Russian>Sandor Csoma</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_SANDOR_KOROSI_CSOMA</Tag>
+		<English>Sandor Korosi Csoma</English>
+		<French>Sandor Korosi Csoma</French>
+		<German>Sandor Korosi Csoma</German>
+		<Italian>Sandor Korosi Csoma</Italian>
+		<Spanish>Sandor Korosi Csoma</Spanish>
+		<Russian>Sandor Korosi Csoma</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JACOB_FUGGER</Tag>
@@ -1617,13 +1608,13 @@
 		<Russian>George Frederick Waldeck</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_STEFAN_BATORY</Tag>
-		<English>Stefan Batory</English>
-		<French>Stefan Batory</French>
-		<German>Stefan Batory</German>
-		<Italian>Stefan Batory</Italian>
-		<Spanish>Stefan Batory</Spanish>
-		<Russian>Stefan Batory</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_ISTVAN_BATHORY</Tag>
+		<English>Istvan Bathory</English>
+		<French>Istvan Bathory</French>
+		<German>Istvan Bathory</German>
+		<Italian>Istvan Bathory</Italian>
+		<Spanish>Istvan Bathory</Spanish>
+		<Russian>Istvan Bathory</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_THE_BOLD</Tag>
