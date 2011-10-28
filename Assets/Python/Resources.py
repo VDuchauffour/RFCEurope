@@ -21,14 +21,13 @@ class Resources:
 			gc.getMap().plot(86, 2).setBonusType(xml.iRice)  #Rice in Middle East
 		if (iGameTurn == xml.i1500AD):
 			gc.getMap().plot(54, 35).setBonusType(xml.iRice) #Rice in Italy?
-                if ( iGameTurn == xml.i1050AD ):
-                        gc.getMap().plot( 2, 69).setBonusType(-1)  # Remove the AA from Iceland
-		if (iGameTurn == xml.i1580AD): #1580
+		if (iGameTurn == xml.i1250AD):
+			gc.getMap().plot( 2, 69).setBonusType(-1) # Remove the NAA from Iceland
+		if (iGameTurn == xml.i1580AD):
 			gc.getMap().plot(35, 58).setBonusType(xml.iPotato) #Potatoes in Ireland
 			gc.getMap().plot(37, 60).setBonusType(xml.iPotato)
 			gc.getMap().plot(68, 49).setBonusType(xml.iPotato) #Poland
 			gc.getMap().plot(59, 53).setBonusType(xml.iPotato) #Northern Germany
-                        #gc.getMap().plot(49, 54).setBonusType(xml.iAccess) #Dutch AA
 		if (iGameTurn == xml.i1680AD):
 			gc.getMap().plot(59, 61).setBonusType(xml.iAccess) #Atlantic Access in Scandinavia
 

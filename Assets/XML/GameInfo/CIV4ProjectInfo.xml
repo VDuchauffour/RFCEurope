@@ -139,11 +139,11 @@
 			<BonusProductionModifiers/>
 			<FreeBonuses>
 				<FreeBonus>
-					<FreeBonusType>BONUS_FUR</FreeBonusType>
+					<FreeBonusType>BONUS_TIMBER</FreeBonusType>
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 				<FreeBonus>
-					<FreeBonusType>BONUS_TOBACCO</FreeBonusType>
+					<FreeBonusType>BONUS_WINE</FreeBonusType>
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 				<FreeBonus>
