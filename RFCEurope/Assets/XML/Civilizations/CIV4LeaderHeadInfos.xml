@@ -201,7 +201,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Abu Yusf Yaqub - Cordoba 2nd-->
+		<!--Abu Yusuf Yaqub - Cordoba 2nd-->
 		<LeaderHeadInfo>
 			<Type>LEADER_ABUYUSUFYAQUB</Type>
 			<Description>TXT_KEY_LEADER_ABUYUSUFYAQUB</Description>
@@ -279,7 +279,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_FRIENDLY</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
-			<iVassalPowerModifier>20</iVassalPowerModifier><!--(-20 easy to capitulate; 50 extremely hard to capitulate) -->
+			<iVassalPowerModifier>50</iVassalPowerModifier><!--(-20 easy to capitulate; 50 extremely hard to capitulate) -->
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ISLAM</FavoriteReligion>
@@ -11851,7 +11851,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--AbdarRahman - Cordoba 1st-->
+		<!--Abd-ar-Rahman - Cordoba 1st-->
 		<LeaderHeadInfo>
 			<Type>LEADER_ABDARRAHMAN</Type>
 			<Description>TXT_KEY_LEADER_ABDARRAHMAN</Description>
@@ -11928,7 +11928,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
-			<iVassalPowerModifier>0</iVassalPowerModifier>
+			<iVassalPowerModifier>50</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ISLAM</FavoriteReligion>

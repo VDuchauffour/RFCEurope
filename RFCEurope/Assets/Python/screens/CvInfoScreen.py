@@ -2295,7 +2295,8 @@ class CvInfoScreen:
 				self.home_flag = self.getNextWidgetName()
 
 
-				if (pTeam.isAlive() and not pTeam.isBarbarian()):
+				#if (pTeam.isAlive() and not pTeam.isBarbarian()):
+				if (not pTeam.isBarbarian()):
 					# Loop through projects
 					try:
 						screen.addFlagWidgetGFC(self.home_flag,hxy[iPlayerLoop][0]-40,hxy[iPlayerLoop][1]-20,80,80,iPlayerLoop,WidgetTypes.WIDGET_GENERAL, -1, -1)

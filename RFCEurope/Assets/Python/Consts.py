@@ -854,28 +854,28 @@ iImmunity = 20
 
 #Positions on the Colony map for "home" original flags
 home_positions_xy = [
-(573,175),#iByzantium
-(480,160),#iFrankia
-(610,220),#iArabia
-(575,160), #iBulgaria = 3
-(450,200), #iCordoba = 4
-(510,110), #iNorse = 5
-(515,162), #iVenecia = 6
-(500,150), #iBurgundy = 7
+(578,179), #iByzantium = 0
+(480,152), #iFrankia = 1
+(614,212), #iArabia = 2
+(567,166), #iBulgaria = 3
+(455,195), #iCordoba = 4
+(515,118), #iNorse = 5
+(518,157), #iVenice = 6
+(490,160), #iBurgundy = 7
 (510,140), #iGermany = 8
 (590,140), #iKiev = 9
-(550,160), #iHungary = 10
+(550,155), #iHungary = 10
 (460,180), #iSpain = 11
-(540,140), #iPoland = 12
-(505,162), #iGenoa = 13
-(467,130), #iEngland = 14
-(440,190), #iPortugal = 15
-(550,110), #iLithuania = 16
-(525,125), #iAustria = 17
-(600,195), #iTurkey = 18
+(540,130), #iPoland = 12
+(503,165), #iGenoa = 13
+(473,132), #iEngland = 14
+(441,190), #iPortugal = 15
+(556,119), #iLithuania = 16
+(535,150), #iAustria = 17
+(590,195), #iTurkey = 18
 (595,110), #iMoscow = 19
-(515,90), #iSweden = 20
-(495,115), #iDutch = 21
+(531, 92), #iSweden = 20
+(492,131), #iDutch = 21
 ]
 
 #Positions on the Colony map where to display colonies
