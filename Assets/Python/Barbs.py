@@ -397,7 +397,7 @@ class Barbs:
                         self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
                         # 860AD
                         self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-                if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1250AD ):
+                if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1259AD ):
                         # 900AD
                         self.foundCity(iBarbarian, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
@@ -420,7 +420,7 @@ class Barbs:
                         # 1227 AD
                         self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 4, xml.iArbalest, 2, xml.iIslam, 1 )
                         # 1250 AD
-                        self.foundCity(iIndependent2, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) #Abo flips to Sweden
+                        self.foundCity(iIndependent2, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) #Abo - flips to Sweden
                 if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
                         # 1320AD
                         self.foundCity(iBarbarian, lSamara, "Samara", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
