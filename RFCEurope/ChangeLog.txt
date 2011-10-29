@@ -32,6 +32,7 @@ Changes for Beta 14:
 	Balance:
 
 	Bugfixes:
+		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
