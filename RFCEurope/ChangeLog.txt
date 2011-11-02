@@ -20,6 +20,8 @@ Changes for Beta 14:
 		- Lowered both Cordoban leaders chance for capitulation (now they should be extremely hard to capitulate)
 		- Colony screen always shows all the civs
 		- Adjusted "home flags" on the colony screen
+		- Swedish Tennant is now a Night Watch replacement (what's the fun in a UB if it's preplaced in all your cities so you can never build it?) - from RFCE++
+		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans.
 
 	Map and province changes:
 
@@ -30,9 +32,12 @@ Changes for Beta 14:
 	Art/Sound updates:
 
 	Balance:
+		- Improved french start (+1 axeman and +1 worker)
+		- Reduced early barbarian Sassanid pressure on Byzantium, and early christian barb pressure on Cordoba (only on Emperor difficulty)
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
+		- Updated special respawns in the RiseAndFall.py, now they work properly
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
