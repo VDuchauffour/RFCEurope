@@ -80,18 +80,18 @@ iIndepStart = iIndependent # creates a block of independent civs
 iIndepEnd = iIndependent4
 
 #for Congresses and Victory
-lCivGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],  		#Eastern
-		[iBurgundy,iHungary,iGermany,iPoland,iAustria],	#Central
+lCivGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],		#Eastern
+		[iBurgundy,iHungary,iGermany,iPoland,iAustria],		#Central
 		[iFrankia,iSpain,iEngland,iPortugal,iDutch],	#Atlantic
 		[iArabia,iCordoba,iTurkey],			#Islamic
-		[iGenoa,iVenecia,iPope],		 		#Italian
-		[iNorse,iSweden]] 				#Scandinavian
+		[iGenoa,iVenecia,iPope],		#Italian
+		[iNorse,iSweden]] 			#Scandinavian
 
-lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],  #Eastern
-			[iBurgundy,iHungary,iGermany,iPoland,iAustria],  		#Central
-			[iFrankia,iSpain,iEngland,iPortugal,iDutch], 		#Atlantic
+lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],	#Eastern
+			[iBurgundy,iHungary,iGermany,iPoland,iAustria],		#Central
+			[iFrankia,iSpain,iEngland,iPortugal,iDutch],	#Atlantic
 			[iArabia,iCordoba,iTurkey],		#Islamic
-			[iGenoa,iVenecia,iPope], #Italian
+			[iGenoa,iVenecia,iPope],	#Italian
 			[iNorse,iSweden]]		#Norse
 
 lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iSpain, iCordoba, iNorse, iVenecia, iKiev, iHungary, \
@@ -119,28 +119,28 @@ iLime = 100
 
 #neighbours
 lNeighbours = [
-[iBulgaria,iArabia], #Byzantium
-[iBurgundy,iEngland], #Frankia
-[iByzantium], 		#Arabia
-[iByzantium,iHungary,iKiev], #Bulgaria
-[iSpain,iPortugal], 	#Cordoba
-[iSweden],  		#Norse
-[iGenoa,iGermany,iAustria,iHungary,iPope],  #Venecia
-[iFrankia,iDutch,iGermany], #Burgundy
-[iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary],  #Germany
-[iBulgaria,iMoscow,iPoland],  		#Kiev
-[iBulgaria,iVenecia,iPoland,iGermany,iAustria],  		#Hungary
-[iCordoba,iPortugal], 	#Spain
-[iGermany,iAustria,iHungary,iKiev,iMoscow],  			#Poland
-[iGermany,iVenecia,iBurgundy,iPope],  #Genoa
-[iFrankia,iDutch],  		#England
-[iSpain,iCordoba],  		#Portugal
-[iKiev,iPoland],  		#Lithuania
-[iGermany,iHungary,iPoland,iVenecia],  	#Austria
-[iByzantium,iArabia],  			#Turkey
-[iKiev,iPoland],  		#Moscow
-[iNorse],  				#Sweden
-[iGermany,iEngland,iBurgundy],   	#Dutch
+[iBulgaria,iArabia],	#Byzantium
+[iBurgundy,iEngland],	#Frankia
+[iByzantium],			#Arabia
+[iByzantium,iHungary,iKiev],	#Bulgaria
+[iSpain,iPortugal],		#Cordoba
+[iSweden],			#Norse
+[iGenoa,iGermany,iAustria,iHungary,iPope],		#Venecia
+[iFrankia,iDutch,iGermany],		#Burgundy
+[iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary],	#Germany
+[iBulgaria,iMoscow,iPoland],		#Kiev
+[iBulgaria,iVenecia,iPoland,iGermany,iAustria],			#Hungary
+[iCordoba,iPortugal],	#Spain
+[iGermany,iAustria,iHungary,iKiev,iMoscow],				#Poland
+[iGermany,iVenecia,iBurgundy,iPope],	#Genoa
+[iFrankia,iDutch],			#England
+[iSpain,iCordoba],			#Portugal
+[iKiev,iPoland],		#Lithuania
+[iGermany,iHungary,iPoland,iVenecia],	#Austria
+[iByzantium,iArabia],			#Turkey
+[iKiev,iPoland],		#Moscow
+[iNorse],				#Sweden
+[iGermany,iEngland,iBurgundy],		#Dutch
 [iVenecia, iGenoa]			#Pope
 ]
 
@@ -167,7 +167,7 @@ lOlderNeighbours = [
 [iByzantium,iBulgaria,iCordoba,iArabia], #Turkey
 [iKiev,iPoland], #Moscow
 [iNorse,iPoland,iMoscow], #Sweden
-[iGermany,iFrankia],  #Dutch
+[iGermany,iFrankia], #Dutch
 [] #Pope
 ]
 
@@ -260,11 +260,11 @@ tCapitals = (
 tStartingWorkers = (
 0, #tByzantium
 0, #tFrance
-2, #tArabia
-2, #tBulgaria
+1, #tArabia
+1, #tBulgaria
 1, #tCordoba
 2, #tNorse
-3, #tVenecia
+2, #tVenecia
 2, #tBurgundy
 3, #tGermany
 3, #tKiev
@@ -304,13 +304,13 @@ tReserveCapitals = (
 (), 
 (), 
 (), 
-(),
 (), 
-(),
-(),
-(),
-(),
-(),
+(), 
+(), 
+(), 
+(), 
+(), 
+(), 
 (), 
 )
 
@@ -319,7 +319,7 @@ tNewCapitals = (  #for RiseAndFall
 ((44, 46),(44, 46)), #tFrance: Paris
 ((85, 4),(84, 3),(85, 3)), #tArabia: Damascus --> Alexandria (best Egyption city)
 ((77, 30),(77, 30)), #tBulgaria: Preslav
-((48, 16),(50, 18)), #tCordoba: Cordoba --> Hasfid at Tunis 
+((48, 16),(50, 18)), #tCordoba: Cordoba --> Hafsids at Tunis
 ((59, 57),(59, 57)), #tNorse: Roskilde
 ((56, 35),(56, 35)), #tVenezia: Venice
 ((47, 41),(47, 41)), #tBurgundy: Dijon
@@ -744,8 +744,8 @@ tResurrectionProb = (
 #Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
 tRespawnTime = (
 999, #Byzantium -- no special respawn
-350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line. 
-190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders 
+350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line
+190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders
 195, #Bulgaria 1185 -- Second Bulgarian empire
 #174, #Cordoba 1122 -- Almohads, better timing than Almoravids
 215, #Cordoba 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia

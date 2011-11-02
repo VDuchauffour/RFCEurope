@@ -83,8 +83,8 @@ class RFCEBalance:
 	def setBalanceParameters( self ):
 	
 		self.preMapsNSizes()
-                
-                self.setTechTimeline() # Timeline for correct tech three
+		
+		self.setTechTimeline() # Timeline for correct tech three
 		
 		# 3Miro: consolidate several modifiers into fewer calls, makes it more structured. Each modfier works as described below.
 		
@@ -143,7 +143,7 @@ class RFCEBalance:
 		gc.setGrowthModifiersAI(iIndependent3, 100, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiersAI(iIndependent4, 100, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiersAI(iBarbarian,    100, 100, 100,  50, 100, 1 )
-
+		
 		
 		#void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
@@ -198,7 +198,7 @@ class RFCEBalance:
 		gc.setProductionModifiersAI(iIndependent3, 125, 100, 600, 300 ) #The warlike ones
 		gc.setProductionModifiersAI(iIndependent4, 125, 100, 600, 300 )
 		gc.setProductionModifiersAI(iBarbarian, 125, 100, 1000, 350 )
-
+		
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
 		gc.setSupportModifiersAI(iBurgundy,      10, 150,  80,  75, 110 )
@@ -252,11 +252,11 @@ class RFCEBalance:
 		gc.setSupportModifiersAI(iIndependent4,  10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iBarbarian,     10, 250,  10, 100, 100 )
 		
-	
+		
 		#3Miro: setGrowthTreshold(iCiv,iVal), for each civ, a value in percent. How much food is needed for the next growth level.
 		# in c++, iTreshold *= value, iTreshlod /= 100 (value is in percent, with integer truncation, default 100)
 		# low percent means faster growth
-
+		
 		#3Miro: setProductionModifiersUnits(iCiv,iVal) for each civ. Same as growth.
 		# on all production, low percent means fast production
 		
@@ -269,7 +269,7 @@ class RFCEBalance:
 		
 		#3Miro: setGPModifier(iCiv,iVal) for each civ. The rate at which GP would appear. Same as growth.
 		# low percent means faster GP rate
-
+		
 		#3Miro: setUnitSupportModifier(iCiv, iVal), set unit sipport modifiers for the player. Same as growth.
 		# low percent means lower support cost)
 		
@@ -278,7 +278,7 @@ class RFCEBalance:
 		
 		#3Miro: setNumberOfCitiesSupport(iCiv,iVal), set number of cities modifier. Same as growth
 		# low percent means low cost
-
+		
 		
 		#3Miro: setCivicSupportModifier(iCiv,iVal), set the civic support modifiers. Same as growth.
 		# low percent means low cost
@@ -297,13 +297,13 @@ class RFCEBalance:
 		##### Set Initial buildings for the civs
 		#gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
 		# we can change True <-> False with the onTechAquire event
-                
-                gc.setInitialBuilding( iVenecia, xml.iHarbor, True )
-                gc.setInitialBuilding( iVenecia, xml.iGranary, True )
+		
+		gc.setInitialBuilding( iVenecia, xml.iHarbor, True )
+		gc.setInitialBuilding( iVenecia, xml.iGranary, True )
 		
 		#gc.setInitialBuilding( iSpain, con.iGranary, True )
 		gc.setInitialBuilding( iSpain, xml.iBarracks, True )
-
+		
 		gc.setInitialBuilding( iMoscow, xml.iGranary, True )
 		gc.setInitialBuilding( iMoscow, xml.iBarracks, True )
 		gc.setInitialBuilding( iMoscow, xml.iForge, True )
@@ -311,7 +311,7 @@ class RFCEBalance:
 		
 		gc.setInitialBuilding( iGenoa, xml.iGranary, True )
 		gc.setInitialBuilding( iGenoa, xml.iBarracks, True )
-                gc.setInitialBuilding( iGenoa, xml.iHarbor, True )
+		gc.setInitialBuilding( iGenoa, xml.iHarbor, True )
 		
 		gc.setInitialBuilding( iEngland, xml.iGranary, True )
 		gc.setInitialBuilding( iEngland, xml.iBarracks, True )
@@ -319,10 +319,10 @@ class RFCEBalance:
 		gc.setInitialBuilding( iPortugal, xml.iGranary, True )
 		gc.setInitialBuilding( iPortugal, xml.iBarracks, True )
 		#gc.setInitialBuilding( iPortugal, xml.iPortugalFeitoria, True )
-                
+		
 		gc.setInitialBuilding( iLithuania, xml.iGranary, True )
 		gc.setInitialBuilding( iLithuania, xml.iBarracks, True )
-
+		
 		gc.setInitialBuilding( iAustria, xml.iGranary, True )
 		gc.setInitialBuilding( iAustria, xml.iBarracks, True )
 		
@@ -330,14 +330,14 @@ class RFCEBalance:
 		gc.setInitialBuilding( iTurkey, xml.iBarracks, True )
 		gc.setInitialBuilding( iTurkey, xml.iForge, True )
 		gc.setInitialBuilding( iTurkey, xml.iHarbor, True )
-		gc.setInitialBuilding( iTurkey, xml.iOttomanHammam, True )
+		#gc.setInitialBuilding( iTurkey, xml.iOttomanHammam, True )
 		
 		gc.setInitialBuilding( iSweden, xml.iGranary, True )
-		gc.setInitialBuilding( iSweden, xml.iSwedishTennant, True )
+		gc.setInitialBuilding( iSweden, xml.iBarracks, True )
 		gc.setInitialBuilding( iSweden, xml.iForge, True )
 		gc.setInitialBuilding( iSweden, xml.iHarbor, True )
 		gc.setInitialBuilding( iSweden, xml.iAqueduct, True )
-
+		
 		gc.setInitialBuilding( iDutch, xml.iGranary, True )
 		gc.setInitialBuilding( iDutch, xml.iBarracks, True )
 		gc.setInitialBuilding( iDutch, xml.iForge, True )
@@ -376,11 +376,11 @@ class RFCEBalance:
 		gc.setCityClusterAI( iEngland, 1, 3, 1 )
 		gc.setCityClusterAI( iAustria, 1, 3, 1 )
 		gc.setCityClusterAI( iTurkey, 1, 3, 1 )
-		gc.setCityClusterAI( iSweden, 1, 3, 1 )		
+		gc.setCityClusterAI( iSweden, 1, 3, 1 )
 		gc.setCityClusterAI( iDutch, 3, 4, 1 )
-
+		
 		#3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
-		# values are 1 - small empires (Egypt,default), 2 - large contiguous empires (Rome,Arabia), 3 - global empire (England,Russia,Mongolia)
+		# values are 1 - small empires, 2 - larger continuous empires, 3 - not necessarily continuous empires
 		gc.setCityWarDistanceAI( iBurgundy, 1 )
 		gc.setCityWarDistanceAI( iByzantium, 2 )
 		gc.setCityWarDistanceAI( iFrankia, 2 )
@@ -399,20 +399,20 @@ class RFCEBalance:
 		gc.setCityWarDistanceAI( iLithuania, 2 )
 		gc.setCityWarDistanceAI( iGenoa, 3 )
 		gc.setCityWarDistanceAI( iEngland, 3 )
-		gc.setCityWarDistanceAI( iAustria, 2 )		
+		gc.setCityWarDistanceAI( iAustria, 2 )
 		gc.setCityWarDistanceAI( iTurkey, 2 )
 		gc.setCityWarDistanceAI( iSweden, 2 )
 		gc.setCityWarDistanceAI( iDutch, 1 )
-
+		
 		#3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
 		# low percent makes the tech less desirable
 		#gc.setTechPreferenceAI(iByzantium,1,200)
 		#gc.setTechPreferenceAI(iFrankia,1,200)
-		gc.setTechPreferenceAI(iBulgaria,xml.iBronzeCasting,200)				
+		gc.setTechPreferenceAI(iBulgaria,xml.iBronzeCasting,200)
 		gc.setTechPreferenceAI(iGermany,xml.iPrintingPress,200)
 		gc.setTechPreferenceAI(iEngland,xml.iPrintingPress,150)
 		gc.setTechPreferenceAI(iPope,xml.iPrintingPress,10) # Pope shouldn't want this
-
+		
 		gc.setTechPreferenceAI(iSpain,xml.iAstronomy,200)
 		gc.setTechPreferenceAI(iPortugal,xml.iAstronomy,200)
 		
@@ -452,7 +452,7 @@ class RFCEBalance:
 		
 		#gc.setDiplomacyModifiers( iIndependent, iIndependent2, -10 )
 		
-			
+		
 		####### 3Miro: UNIQUE POWERS
 		#3Miro: setUP(iCiv,iPower) sets the Unique Powers for C++
 		
@@ -488,16 +488,16 @@ class RFCEBalance:
 		
 		gc.setUP( iArabia, iUP_Faith, 1 )
 		
-		gc.setUP( iBulgaria, iUP_NoResistance, 0 )		
-
+		gc.setUP( iBulgaria, iUP_NoResistance, 0 )
+		
 		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedicI )
 		
 		gc.setUP( iSpain, iUP_Inquisition, 1 )
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
 		
 		gc.setUP( iNorse, iUP_CanEnterTerrain, xml.iTerrainOcean )
-                gc.setUP( iNorse, iUP_StabilitySettler, 1 )
-
+		gc.setUP( iNorse, iUP_StabilitySettler, 1 )
+		
 		#JediClemente: changed to only Merchant Republic
 		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic ) # before + con.iCivicRepublic
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
@@ -510,38 +510,38 @@ class RFCEBalance:
 		gc.setUP( iGermany, iUP_UnitProduction, xml.iGunpowder * 100 + 75 )
 		
 		gc.setUP( iPoland, iUP_ReligiousTolerance, 0 )
-                
-                gc.setUP( iLithuania, iUP_PaganCulture, 200 )
-                gc.setUP( iLithuania, iUP_PaganHappy, 1 )
+		
+		gc.setUP( iLithuania, iUP_PaganCulture, 200 )
+		gc.setUP( iLithuania, iUP_PaganHappy, 1 )
 		
 		gc.setSupportModifiersAI(iMoscow, 10, 100, 25, 12, 100 )
-                gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
+		gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )
 		
 		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # this actually has no effect, it is implemented in Mercenaries entirelly
 		
 		gc.setUP( iEngland, iUP_ImprovementBonus, xml.iImprovementWorkshop * 1000000 + 200 )
 		
-                # Speedup East/West India Trading Companies
+		# Speedup East/West India Trading Companies
 		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 40 );
-                gc.setUP( iPortugal, iUP_StabilitySettler, 1 )
+		gc.setUP( iPortugal, iUP_StabilitySettler, 1 )
 		
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
 				gc.setDiplomacyModifiers( i, iAustria, +4 )
 				
 		#gc.setUP( iTurkey, iUP_Conscription, 330 )
-                #gc.setUP( iTurkey, iUP_Conscription, 1 )
-                gc.setUP( iTurkey, iUP_Janissary, 1 )
+		#gc.setUP( iTurkey, iUP_Conscription, 1 )
+		gc.setUP( iTurkey, iUP_Janissary, 1 )
 		
 		gc.setUP( iSweden, iUP_PromotionI, xml.iPromotionFormation )
 		
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
 		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little (not enouth cities)
-                gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
-
+		gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
+		
 		gc.setUP( iPope, iUP_Emperor, 1 )
-
+		
 		# GlobalWarming
 		gc.setGlobalWarming( False )
 		
@@ -555,7 +555,7 @@ class RFCEBalance:
 				
 		# set the religions and year of the great schism
 		gc.setSchism( xml.iCatholicism, xml.iOrthodoxy, xml.i1053AD )
-
+		
 		gc.setHoliestCity( con.iJerusalem[0], con.iJerusalem[1] )
 		
 		# 3Miro: Faith Points benefits
@@ -591,10 +591,11 @@ class RFCEBalance:
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Science, 30, 100 )
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Production, 30, 100 )
 		
-		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 6, 100 )
+		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 7, 100 )
 		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 10, 100 )
-		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 6, 100 )
-
+		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 7, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Displomacy, 4, 100 )
+		
 		# every nation gets a land tile that is normally impassible and now pass through it
 		#gc.setStrategicTile( iVenecia, 56, 35 )
 		
@@ -650,7 +651,7 @@ class RFCEBalance:
 		gc.setBuildingPref( iHungary, xml.iGoldenBull, 20 )
 		gc.setBuildingPref( iHungary, xml.iBibliothecaCorviniana, 15 )
 		gc.setBuildingPref( iHungary, xml.iKazimierz, 10 )
-
+		
 		gc.setBuildingPref( iGermany, xml.iBrandenburgGate, 20 )
 		gc.setBuildingPref( iGermany, xml.iImperialDiet, 10 )
 		gc.setBuildingPref( iGermany, xml.iCopernicus, 5 )
@@ -681,22 +682,22 @@ class RFCEBalance:
 		gc.setBuildingPref( iSweden, xml.iKalmarCastle, 20 )
 		
 		gc.setBuildingPref( iDutch, xml.iBeurs, 20 )
-
+		
 		gc.setBuildingPref( iPope, xml.iSistineChapel, 20 )
-
-
+		
+		
 		# Manor House + Manorism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
-                # 3Miro: moved to XML, no need to put it here
+			# 3Miro: moved to XML, no need to put it here
 		#gc.setBuildingCivicCommerseCombo1( xml.iManorHouse + 1000 * xml.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
 		#gc.setBuildingCivicCommerseCombo2( xml.iFrenchChateau + 1000 * xml.iManorialism + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
 		#gc.setBuildingCivicCommerseCombo3(-1)
-
+		
 		# 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
 		#  it will also indeed boost Ottoman's odds, but only by about 60 percent (maybe even less)
 		#   works only for AI vs AI, Humans are excempts of this rule
 		#gc.setPsychoAICheat( iBulgaria, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ); # This is for testing only
 		gc.setPsychoAICheat( iTurkey, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] )
-
+		
 		# 3Miro: be very careful here, this can really mess the AI
 		#        this works only for AI vs AI, if either player is Human, this is ignored
 		#        setHistoricalEnemyAICheat( iAttacker, iDefender, 10 ) gives the attacker +10% bonus, when attacking units belonging to the defender
@@ -704,8 +705,8 @@ class RFCEBalance:
 		#        this should be "last" resot solution, other methods are always preferable
 		gc.setHistoricalEnemyAICheat( iTurkey, iBulgaria,  10 )
 		gc.setHistoricalEnemyAICheat( iBulgaria, iTurkey, -10 )
-                
-                gc.setHistoricalEnemyAICheat( iSpain, iCordoba,  10 )
+		
+		gc.setHistoricalEnemyAICheat( iSpain, iCordoba,  10 )
 		gc.setHistoricalEnemyAICheat( iCordoba, iSpain, -10 )
                 
                 # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
