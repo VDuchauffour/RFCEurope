@@ -247,7 +247,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Castle.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KREMLIN</Type>
+			<Type>ART_DEF_BUILDING_MOSCOW_KREMLIN</Type>
 			<LSystem>LSYSTEM_RUSSIAN_WALLS</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.0</fScale>
@@ -679,7 +679,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Brewery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PERSIAN_APOTHECARY</Type>
+			<Type>ART_DEF_BUILDING_APOTHECARY</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -699,7 +699,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Bank.dds,Art/Interface/Buttons/Buildings_Atlas.dds,5,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ENGLISH_STOCK_EXCHANGE</Type>
+			<Type>ART_DEF_BUILDING_ENGLISH_ROYAL_EXCHANGE</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>

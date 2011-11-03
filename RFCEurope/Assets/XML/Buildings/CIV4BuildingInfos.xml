@@ -1301,12 +1301,12 @@
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
 			<Type>BUILDING_MOSCOW_KREMLIN</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_KREMLIN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KREMLIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_KREMLIN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_MOSCOW_KREMLIN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MOSCOW_KREMLIN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MOSCOW_KREMLIN_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KREMLIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MOSCOW_KREMLIN</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -3402,7 +3402,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>200</iCost>
+			<iCost>120</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -8808,11 +8808,11 @@
 			<BuildingClass>BUILDINGCLASS_APOTHECARY</BuildingClass>
 			<Type>BUILDING_APOTHECARY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_PERSIAN_APOTHECARY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PERSIAN_GROCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PERSIAN_APOTHECARY_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_APOTHECARY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_APOTHECARY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_APOTHECARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PERSIAN_APOTHECARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_APOTHECARY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -9325,13 +9325,13 @@
 		</BuildingInfo>
 		<BuildingInfo> <!-- English Royal Exchange -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
-			<Type>BUILDING_ENGLISH_STOCK_EXCHANGE</Type>
+			<Type>BUILDING_ENGLISH_ROYAL_EXCHANGE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENGLISH_BANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENGLISH_STOCK_EXCHANGE_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENGLISH_STOCK_EXCHANGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENGLISH_ROYAL_EXCHANGE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -11575,7 +11575,7 @@
 			<Description>TXT_KEY_BUILDING_MANOR_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANOR_HOUSE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANOR_HOUSE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -11750,7 +11750,7 @@
 			<Description>TXT_KEY_BUILDING_FRENCH_CHATEAU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FRENCH_CHATEAU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FRENCH_CHATEAU_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Help>
+			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BURGUNDIAN_CHATEAU</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -13788,7 +13788,7 @@
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
 			<Type>BUILDING_ISLAMIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Description>
+			<Description>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
@@ -14154,7 +14154,7 @@
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ISLAMIC_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Description>
+			<Description>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>

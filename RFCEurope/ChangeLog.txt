@@ -21,7 +21,7 @@ Changes for Beta 14:
 		- Colony screen always shows all the civs
 		- Adjusted "home flags" on the colony screen
 		- Swedish Tennant is now a Night Watch replacement (what's the fun in a UB if it's preplaced in all your cities so you can never build it?) - from RFCE++
-		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans
+		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans. They have reduced cost though
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -30,6 +30,7 @@ Changes for Beta 14:
 		- More Unique Dawn of Man texts
 		- Various fixes in the GP names
 		- Swedish Soldier Tennant renamed to Soldattorp
+		- Pedia entry for Luxury Store and Apothecary
 
 	Art/Sound updates:
 
