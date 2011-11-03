@@ -24,6 +24,7 @@ Changes for Beta 14:
 		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans
 
 	Map and province changes:
+		- Coffee isn't preplaced, but appears around 1450 AD
 
 	XML/text updates:
 		- More Unique Dawn of Man texts

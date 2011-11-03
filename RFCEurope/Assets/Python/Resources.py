@@ -23,6 +23,9 @@ class Resources:
 			gc.getMap().plot(54, 35).setBonusType(xml.iRice) #Rice in Italy?
 		if (iGameTurn == xml.i1250AD):
 			gc.getMap().plot( 2, 69).setBonusType(-1) # Remove the NAA from Iceland
+		if (iGameTurn == xml.i1452AD):
+			gc.getMap().plot(94, 0).setBonusType(xml.iCoffee)
+			gc.getMap().plot(99, 14).setBonusType(xml.iCoffee)
 		if (iGameTurn == xml.i1580AD):
 			gc.getMap().plot(35, 58).setBonusType(xml.iPotato) #Potatoes in Ireland
 			gc.getMap().plot(37, 60).setBonusType(xml.iPotato)
