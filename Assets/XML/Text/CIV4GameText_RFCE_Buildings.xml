@@ -5,69 +5,7 @@
 <!-- -->
 <!-- Game Text - RFCE Buildings -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUNGEON</Tag>
-		<English>Dungeon</English>
-		<French>Donjon</French>
-		<German>Kerker</German>
-		<Italian>Prigione Sotterranea</Italian>
-		<Spanish>Mazmorra</Spanish>
-		<Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE</Tag>
-		<English>Archery Range</English>
-		<French>Atelier de Tir &#224; l'Arc</French>
-		<German>Bogenschie&#223;anlage</German>
-		<Italian>Gamma di tiro con l'arco</Italian>
-		<Spanish>Gama de tiro al arco</Spanish>
-		<Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_APOTHECARY</Tag>
-		<English>Apothecary</English>
-		<French>Apothicaire</French>
-		<German>Apotheke</German>
-		<Italian>Farmacista</Italian>
-		<Spanish>Boticario</Spanish>
-		<Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
-		<English>Wharf</English>
-		<French>Quai</French>
-		<German>Anlegeplatz</German>
-		<Italian>Molo</Italian>
-		<Spanish>Muelle</Spanish>
-		<Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TANNERY</Tag>
-		<English>Tannery</English>
-		<French>Tannerie</French>
-		<German>Gerberei</German>
-		<Italian>Conceria</Italian>
-		<Spanish>Curtiduría</Spanish>
-		<Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH</Tag>
-		<English>Night Watch</English>
-		<French>Veille de nuit</French>
-		<German>Nachtwache</German>
-		<Italian>Orologio di notte</Italian>
-		<Spanish>Reloj de noche</Spanish>
-		<Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GUILD_HALL</Tag>
-		<English>Guild Hall</English>
-		<French>Salle de Confr&#233;rie</French>
-		<German>Gildenhaus</German>
-		<Italian>Atrio di corporazione</Italian>
-		<Spanish>Vestíbulo de gremio</Spanish>
-		<Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian>
-	</TEXT>
+		<!-- Unique Buildings -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL</Tag>
 		<English>Arsenal</English>
@@ -78,6 +16,15 @@
 		<Russian>&#192;&#240;&#241;&#229;&#237;&#224;&#235;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
+		<English>[TAB]The Venetian Arsenal is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.[PARAGRAPH:2]The Byzantine-style establishment may have existed as early as the 8th century, though the present structure is usually said to have been begun in 1104, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina'a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.[PARAGRAPH:2]Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.[PARAGRAPH:2]Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early 16th century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
 		<English>Bulgarian Stan</English>
 		<French>Stan Bulgare</French>
@@ -85,6 +32,15 @@
 		<Italian>Stan Bulgaro</Italian>
 		<Spanish>Stan Búlgaro</Spanish>
 		<Russian>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233; &#209;&#242;&#253;&#237;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Tag>
+		<English>[TAB]The Byzantine historian Pseudo-Simeon stated that Krum sent a 30,000 strong cavalry, "the whole armoured with iron", which devastated Thrace. According to inscriptions found in the region of Pliska, Preslav, Madara and Shabla in north-eastern Bulgaria, armaments for 1,713 heavy riders were available. Assuming that the surviving inscriptions are around 1/10 of the total number, that makes 17,130 men only in the so called "inner region" of Bulgaria. After comparison with the data of Pseudo-Simeon, it can be assumed that the heavy cavalry component of the Bulgarian army numbered between 17-20,000 and 30,000 men, depending on the level of mobilization. During the end of the 9th and the beginning of the 10th centuries, Emperor Simeon the Great was able to lead in battle more than 60,000 soldiers.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KIEV_VECHE</Tag>
@@ -114,6 +70,15 @@
 		<Russian>&#210;&#226;&#229;&#240;&#228;&#251;&#237;&#255;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Tag>
+		<English>[TAB]After the Turks conquered much of southern Hungary, a new defensive line inside the country was strongly needed. Out of castles, mansions, churches and monasteries a new defensive line was built with the efforts of the bondsmen of the surrounding area within a short time. A new system of castles was created, which began at the Adriatic Sea, ended at the lower Danube River and enclosed the area that was controlled by the Turks. The most important functions of these V&#233;gv&#225;rs were to defend the borders, secure the roads and the river crossings, the prevention of the enemy troop supplies and the security of the people and their goods in the surrounding area.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK</Tag>
 		<English>Folwark</English>
 		<French>Folwark</French>
@@ -124,21 +89,48 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK_PEDIA</Tag>
-		<English>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH:1]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</English>
-		<French>[TAB]Folwarks sont g&#233;ant polonais exploitations qui ont &#233;t&#233; op&#233;r&#233;s dans le polonais-lituanien du 14e si&#195;&#168;cle dans le 20&#195;&#168;me. Ils ont servi &#195;&#160; produire un exc&#233;dent de nourriture. La premi&#195;&#168;re folwarks ont &#233;t&#233; cr&#233;&#233;s sur l'&#233;glise et le monast&#195;&#168;re appartenant motifs, mais ont par la suite &#233;t&#233; adopt&#233; par la noblesse et les paysans riches. La cr&#233;ation de folwarks a &#233;t&#233; stimul&#233;e par une demande croissante de c&#233;r&#233;ales et de sa forte rentabilit&#233;. Folwark fond&#233;e sur l'exportation de c&#233;r&#233;ales a &#233;t&#233; une partie importante de l'&#233;conomie de la polonais-lituanien Commonwealth.[PARAGRAPH:1]La chute du prix des produits agricoles &#195;&#160; la fin du 17e si&#195;&#168;cle ont marqu&#233; le d&#233;but d'une crise pour la folwark li&#233;s &#233;conomie. La noble tentative d'accro&#195;&#174;tre l'utilisation des folwarks seulement bless&#233; plus de la crise &#233;conomique. Jusqu'au 18e si&#195;&#168;cle, folwarks demeure la base d'nobles polonais du pouvoir &#233;conomique et politique. Apr&#195;&#168;s l'abolition du servage en Pologne, folwarks utilis&#233; travail r&#233;mun&#233;r&#233;. Folwarks ont &#233;t&#233; abolis par la R&#233;publique populaire de Pologne avec le PKWN d&#233;cret du 6 septembre 1944 sur la r&#233;forme agricole.</French>
-		<German>[TAB]Folwarks sind riesigen polnischen Bauernh&#195;&#182;fen betrieben, die in der polnisch-litauischen Commonwealth aus dem 14. Jahrhundert in das 20. Jahrhundert. Sie wurden f&#195;&#188;r die Herstellung von einem &#195;&#156;berschuss von Lebensmitteln. Die erste folwarks wurden auf Kirche und Kloster im Besitz Gr&#195;&#188;nden, sondern wurden sp&#195;&#164;ter vom Adel und reichen Bauern. Die Schaffung von folwarks wurde durch eine wachsende Nachfrage nach Getreide und seiner hohen Gewinn. Folwark - auf der Grundlage Getreide exportieren war ein wichtiger Teil der Wirtschaft in der polnisch-litauischen Commonwealth.[PARAGRAPH:1]Der R&#195;&#188;ckgang der Landwirtschaft Waren, die Preise in der Ende des 17. Jahrhunderts markiert den Beginn einer Krise f&#195;&#188;r die folwark &#195;&#164;hnliche Wirtschaft. Die edle Versuch zur Erh&#195;&#182;hung der Nutzung von folwarks nur schaden, die wirtschaftliche Krise. Bis zum 18. Jahrhundert, folwarks blieb die Grundlage f&#195;&#188;r die polnische edlen die wirtschaftliche und politische Macht. Nach der Abschaffung der Leibeigenschaft in Polen, folwarks verwendet Lohnarbeit. Folwarks abgeschafft wurden von der Volksrepublik Polen mit dem PKWN Dekret vom 6. September 1944 &#195;&#188;ber die Agrarreform.</German>
-		<Italian>[TAB]Folwarks sono gigante polacco aziende agricole che sono stati operati nel Polacco-Lituano dal 14 &#194;&#176; secolo in 20a. Essi sono stati utilizzati per la produzione di un surplus di cibo. Il primo folwarks sono stati creati sulla chiesa e del convento di propriet&#195;&#160; motivi, ma sono stati in seguito adottati dalla nobilt&#195;&#160; e ricchi contadini. La creazione di folwarks &#195;&#168; stata incentivata da una crescente domanda di cereali e il suo alto profitto. Folwark a base di grano di esportazione &#195;&#168; stato una parte importante dell 'economia di Stato polacco - lituano.[PARAGRAPH:1]La caduta dei prezzi in agricoltura merci alla fine del 17 &#194;&#176; secolo ha segnato l'inizio di una crisi per il folwark connessi economia. Il nobile del tentativo di aumentare l'uso di folwarks solo male la crisi economica pi&#195;&#185;. Fino al 18 &#194;&#176; secolo, folwarks rimasti la base per la nobile polacco potere economico e politico. Dopo l'abolizione della serfdom in Polonia, folwarks utilizzati pagato lavoro. Folwarks sono state abolite dalla Repubblica popolare di Polonia con il PKWN decreto del 6 settembre 1944 sulla riforma agricola.</Italian>
-		<Spanish>[TAB]Folwarks son gigantes granjas polacas que fueron operados en la Comunidad de Polonia - Lituania desde el siglo 14 en la 20. Estos recursos se utilizaron para producir un excedente de alimentos. La primera folwarks se crearon en la iglesia y el monasterio de propiedad de motivos, pero luego fueron aprobadas por la nobleza y los campesinos ricos. La creaci&#195;&#179;n de folwarks fue impulsada por una creciente demanda de cereales y su alto beneficio. Folwark basado en la exportaci&#195;&#179;n de cereales es una parte importante de la econom&#195;&#173;a de la polaca y lituana ELA.[PARAGRAPH:1]La ca&#195;&#173;da de los precios de los bienes en la agricultura a finales del siglo 17 marc&#195;&#179; el inicio de una crisis para la folwark relacionados con la econom&#195;&#173;a. El noble intento de aumentar la utilizaci&#195;&#179;n de folwarks s&#195;&#179;lo perjudican la crisis econ&#195;&#179;mica m&#195;&#161;s. Hasta el siglo 18, folwarks sigue siendo la base de nobles polacos del poder econ&#195;&#179;mico y pol&#195;&#173;tico. Despu&#233;s de la abolici&#195;&#179;n de la servidumbre de la gleba en Polonia, folwarks utilizados trabajo remunerado. Folwarks fueron abolidas por la Rep&#195;&#186;blica Popular de Polonia con la PKWN decreto de 6 de septiembre de 1944 sobre la reforma agr&#195;&#173;cola.</Spanish>
-		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH:1]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>
+		<English>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH:2]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</English>
+		<French>[TAB]Folwarks sont g&#233;ant polonais exploitations qui ont &#233;t&#233; op&#233;r&#233;s dans le polonais-lituanien du 14e si&#195;&#168;cle dans le 20&#195;&#168;me. Ils ont servi &#195;&#160; produire un exc&#233;dent de nourriture. La premi&#195;&#168;re folwarks ont &#233;t&#233; cr&#233;&#233;s sur l'&#233;glise et le monast&#195;&#168;re appartenant motifs, mais ont par la suite &#233;t&#233; adopt&#233; par la noblesse et les paysans riches. La cr&#233;ation de folwarks a &#233;t&#233; stimul&#233;e par une demande croissante de c&#233;r&#233;ales et de sa forte rentabilit&#233;. Folwark fond&#233;e sur l'exportation de c&#233;r&#233;ales a &#233;t&#233; une partie importante de l'&#233;conomie de la polonais-lituanien Commonwealth.[PARAGRAPH:2]La chute du prix des produits agricoles &#195;&#160; la fin du 17e si&#195;&#168;cle ont marqu&#233; le d&#233;but d'une crise pour la folwark li&#233;s &#233;conomie. La noble tentative d'accro&#195;&#174;tre l'utilisation des folwarks seulement bless&#233; plus de la crise &#233;conomique. Jusqu'au 18e si&#195;&#168;cle, folwarks demeure la base d'nobles polonais du pouvoir &#233;conomique et politique. Apr&#195;&#168;s l'abolition du servage en Pologne, folwarks utilis&#233; travail r&#233;mun&#233;r&#233;. Folwarks ont &#233;t&#233; abolis par la R&#233;publique populaire de Pologne avec le PKWN d&#233;cret du 6 septembre 1944 sur la r&#233;forme agricole.</French>
+		<German>[TAB]Folwarks sind riesigen polnischen Bauernh&#195;&#182;fen betrieben, die in der polnisch-litauischen Commonwealth aus dem 14. Jahrhundert in das 20. Jahrhundert. Sie wurden f&#195;&#188;r die Herstellung von einem &#195;&#156;berschuss von Lebensmitteln. Die erste folwarks wurden auf Kirche und Kloster im Besitz Gr&#195;&#188;nden, sondern wurden sp&#195;&#164;ter vom Adel und reichen Bauern. Die Schaffung von folwarks wurde durch eine wachsende Nachfrage nach Getreide und seiner hohen Gewinn. Folwark - auf der Grundlage Getreide exportieren war ein wichtiger Teil der Wirtschaft in der polnisch-litauischen Commonwealth.[PARAGRAPH:2]Der R&#195;&#188;ckgang der Landwirtschaft Waren, die Preise in der Ende des 17. Jahrhunderts markiert den Beginn einer Krise f&#195;&#188;r die folwark &#195;&#164;hnliche Wirtschaft. Die edle Versuch zur Erh&#195;&#182;hung der Nutzung von folwarks nur schaden, die wirtschaftliche Krise. Bis zum 18. Jahrhundert, folwarks blieb die Grundlage f&#195;&#188;r die polnische edlen die wirtschaftliche und politische Macht. Nach der Abschaffung der Leibeigenschaft in Polen, folwarks verwendet Lohnarbeit. Folwarks abgeschafft wurden von der Volksrepublik Polen mit dem PKWN Dekret vom 6. September 1944 &#195;&#188;ber die Agrarreform.</German>
+		<Italian>[TAB]Folwarks sono gigante polacco aziende agricole che sono stati operati nel Polacco-Lituano dal 14 &#194;&#176; secolo in 20a. Essi sono stati utilizzati per la produzione di un surplus di cibo. Il primo folwarks sono stati creati sulla chiesa e del convento di propriet&#195;&#160; motivi, ma sono stati in seguito adottati dalla nobilt&#195;&#160; e ricchi contadini. La creazione di folwarks &#195;&#168; stata incentivata da una crescente domanda di cereali e il suo alto profitto. Folwark a base di grano di esportazione &#195;&#168; stato una parte importante dell 'economia di Stato polacco - lituano.[PARAGRAPH:2]La caduta dei prezzi in agricoltura merci alla fine del 17 &#194;&#176; secolo ha segnato l'inizio di una crisi per il folwark connessi economia. Il nobile del tentativo di aumentare l'uso di folwarks solo male la crisi economica pi&#195;&#185;. Fino al 18 &#194;&#176; secolo, folwarks rimasti la base per la nobile polacco potere economico e politico. Dopo l'abolizione della serfdom in Polonia, folwarks utilizzati pagato lavoro. Folwarks sono state abolite dalla Repubblica popolare di Polonia con il PKWN decreto del 6 settembre 1944 sulla riforma agricola.</Italian>
+		<Spanish>[TAB]Folwarks son gigantes granjas polacas que fueron operados en la Comunidad de Polonia - Lituania desde el siglo 14 en la 20. Estos recursos se utilizaron para producir un excedente de alimentos. La primera folwarks se crearon en la iglesia y el monasterio de propiedad de motivos, pero luego fueron aprobadas por la nobleza y los campesinos ricos. La creaci&#195;&#179;n de folwarks fue impulsada por una creciente demanda de cereales y su alto beneficio. Folwark basado en la exportaci&#195;&#179;n de cereales es una parte importante de la econom&#195;&#173;a de la polaca y lituana ELA.[PARAGRAPH:2]La ca&#195;&#173;da de los precios de los bienes en la agricultura a finales del siglo 17 marc&#195;&#179; el inicio de una crisis para la folwark relacionados con la econom&#195;&#173;a. El noble intento de aumentar la utilizaci&#195;&#179;n de folwarks s&#195;&#179;lo perjudican la crisis econ&#195;&#179;mica m&#195;&#161;s. Hasta el siglo 18, folwarks sigue siendo la base de nobles polacos del poder econ&#195;&#179;mico y pol&#195;&#173;tico. Despu&#233;s de la abolici&#195;&#179;n de la servidumbre de la gleba en Polonia, folwarks utilizados trabajo remunerado. Folwarks fueron abolidas por la Rep&#195;&#186;blica Popular de Polonia con la PKWN decreto de 6 de septiembre de 1944 sobre la reforma agr&#195;&#173;cola.</Spanish>
+		<Russian>[TAB]Folwarks are giant Polish farms that were operated in the Polish-Lithuanian Commonwealth from the 14th century into the 20th. They were used to produce a surplus of food. The first folwarks were created on church and monastery owned grounds, but were later adopted by nobility and rich peasants. The creation of folwarks was boosted by a growing demand for grain and its high profit. Folwark-based grain export was an important part of the economy of the Polish-Lithuanian commonwealth.[PARAGRAPH:2]The fall of agriculture goods prices in the end of the 17th century marked the start of a crisis for the folwark related economy. The noble's attempt to increase use of folwarks only hurt the economic crisis more. Until the 18th century, folwarks remained the basis for Polish noble's economic and political power. After the abolition of serfdom in Poland, folwarks used paid labor. Folwarks were abolished by the People's Republic of Poland with the PKWN decree of 6 September 1944 about agricultural reform</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ENGLISH_STOCK_EXCHANGE</Tag>
-		<English>Royal Exchange</English>
-		<French>Bourse Royale</French>
-		<German>K&#246;nigliche B&#246;rse</German>
-		<Italian>Borsa Reale</Italian>
-		<Spanish>Bolsa Real</Spanish>
-		<Russian>"&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#233; &#206;&#225;&#236;&#229;&#237;"</Russian>
+		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP</Tag>
+		<English>Vaivadija</English>
+		<French>Vaivadija</French>
+		<German>Vaivadija</German>
+		<Italian>Vaivadija</Italian>
+		<Spanish>Vaivadija</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP_PEDIA</Tag>
+		<English>[TAB]A voivodeship, also spelled voivodship, voivodina or vojvodina, is a type of administrative division dating to medieval Poland, Romania, Hungary, Lithuania, Latvia, Russia and Serbia (see Vojvodina), ruled by a voivode (wojewoda, voivod). The voivode (literally, "leader of warriors", equivalent to Dux Exercituum or Herzog) was originally the military commander next to the ruler.[PARAGRAPH:2]Contemporarily, the term (or its variant spelling voivodship) is used for the województwa (preferably translated as "provinces") of Poland, of which there are currently 16. There is also an autonomous province of Vojvodina in Serbia.[PARAGRAPH:2]The word "voivodeship" appears in some of the larger English dictionaries, such as the OED and Webster's Third New International Dictionary, though it is not in common usage. Depending on the context, historic voivodeships may also be referred to as "duchies," "provinces," "palatinates," "administrative districts" or "regions."</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GENOA_BANK</Tag>
+		<English>Genoan Bank</English>
+		<French>Banque Génoise</French>
+		<German>Genuesische Bank</German>
+		<Italian>Banca di Genoan</Italian>
+		<Spanish>Banco de Genoan</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
+		<English>[TAB]A number of prominent Genoese families were involved in the establishment and governance of the Bank, including the Houses of Grimaldi and Serra. Unusually for its time, the Bank made use of a number of Jewish agents, including the Ghisolfi clan that managed certain possessions around the Black Sea.[PARAGRAPH:2]The Bank was governed by four consuls who administered its finances and directed investments. Because the Republic's ruling oligarchs were normally prominent in Bank politics, it is often difficult to determine where the Bank's influence ended and the Republic's began.[PARAGRAPH:2]Many of Genoa's overseas territories were governed either directly or indirectly by the Bank. In 1453 the Republic handed over governance of Corsica, Gazaria, and a number of other possessions to Bank officials, though over the course of the fifteenth century the Republic gradually reclaimed many of its territories from Bank control. The Taman peninsula remained in the control of the de Ghisolfi family, but the princes of that clan now reported to the Bank.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE</Tag>
@@ -153,9 +145,9 @@
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
 		<English>[TAB]An opera house is a theater building used for opera performances that consists of a stage, an orchestra pit, audience seating, and backstage facilities for costumes and set building. While some venues are constructed specifically for operas, other opera houses are part of larger performing arts centers.[PARAGRAPH:2]Because many operas call for large-scale productions, opera houses are usually large - generally more than 1,000 seats and often several thousand seats. Traditionally, Europe's major opera houses built in the 19th century contained between about 1,500 to 3,000 seats. Since the latter part of the nineteenth century, opera houses generally have an orchestra pit, where a large number of orchestra players may be seated at a level below the audience, so that they can play without overwhelming the singing voices.[PARAGRAPH:2]The Vienna Opera House (Staatsoper) has a world-wide reputation for its first-class opera performances and is also known because of the Vienna Philharmonic Orchestra. A night at the State Opera is one of the most impressive events any visitor to Vienna can experience.</English>
 		<French>.</French>
-		<German/>
-		<Italian/>
-		<Spanish/>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
@@ -168,67 +160,31 @@
 		<Russian>&#209;&#238;&#235;&#228;&#224;&#242; &#210;&#229;&#237;&#237;&#224;&#237;&#242;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
-		<English>[ICON_BULLET]Damages enemy units in the area.</English>
-		<French>Peste</French>
-		<German>Pest</German>
-		<Italian>Peste</Italian>
-		<Spanish>Peste</Spanish>
-		<Russian>[ICON_BULLET]&#207;&#238;&#226;&#240;&#229;&#230;&#228;&#224;&#229;&#242; &#226;&#240;&#224;&#230;&#229;&#241;&#234;&#232;&#229; &#229;&#228;&#232;&#237;&#232;&#246;&#251; &#226; &#238;&#225;&#235;&#224;&#241;&#242;&#232;.</Russian>
+		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT_PEDIA</Tag>
+		<English>[TAB]The allotment system (Swedish: indelningsverket) was a system used in Sweden for keeping a trained army at all times. This system came into use in around 1640, and was replaced in the early 1900s by the Swedish Armed Forces conscription system. Two different allotment systems have been in use in Sweden; they are the old allotment system (äldre indelningsverket) and the new allotment system (yngre indelningsverket), the latter often referred to as just "the allotment system". The soldiers who were part of these systems were known as "tenement soldiers" (indelta soldater, the Swedish term, does not have the same meaning) due to the small tenements or crofts allotted to them.[PARAGRAPH:2]Originally, the allotment system was a name for a system used to pay servants of the state, like officers and clergy. It was introduced because of an often felt shortage of money, and the allotment system tried to solve this by localizing taxes; meaning that payment consisted of an individual's right to collect certain taxes. Later on it referred to an organization created to provide soldiers to the armed forces, properly known as "det ständiga knektehallet" (literally "the permanent soldier household"). The reason for this development of the term is that a large part of the allotment system was used to support det ständiga knektehallet.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KREMLIN</Tag>
-		<English>Kremlin</English>
-		<French>Kremlin</French>
-		<German>Kremlin</German>
-		<Italian>Kremlin</Italian>
-		<Spanish>Kremlin</Spanish>
-		<Russian>&#202;&#240;&#229;&#236;&#235;&#252;</Russian>
+		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU</Tag>
+		<English>Chateau</English>
+		<French>Grand Chateau</French>
+		<German>Chateau</German>
+		<Italian>Chateau</Italian>
+		<Spanish>Chateau</Spanish>
+		<Russian>&#199;&#224;&#236;&#238;&#234;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BOMBARD_IMMUNE_DEFENSE</Tag>
-		<English>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</English>
-		<French>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</French>
-		<German>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</German>
-		<Italian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INN</Tag>
-		<English>Inn</English>
-		<French>Auberge</French>
-		<German>Wirtshaus</German>
-		<Italian>Albergo</Italian>
-		<Spanish>Posada</Spanish>
-		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
-		<English>Manor House</English>
-		<French>Château</French>
-		<German>Landgut</German>
-		<Italian>Casa di residenza</Italian>
-		<Spanish>Casa solariega</Spanish>
-		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
-		<English>Weaver</English>
-		<French>Tisserie</French>
-		<German>Weberei</German>
-		<Italian>Tessitore</Italian>
-		<Spanish>Tejedor</Spanish>
-		<Russian>&#210;&#234;&#224;&#247;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BREWERY</Tag>
-		<English>Brewery</English>
-		<French>Brasserie</French>
-		<German>Brauerei</German>
-		<Italian>Birrificio</Italian>
-		<Spanish>Cervecería</Spanish>
-		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
+		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU_PEDIA</Tag>
+		<English>[TAB]A château is a manor house or residence of the lord of the manor or a country house of nobility or gentry, with or without fortifications, originally-and still most frequently-in French-speaking regions. Where clarification is needed, a fortified château (that is, a castle) is called a château fort, such as Château fort de Roquetaillade. Care should be taken when translating the word château into English. It is not used in the same way as "castle", and most châteaux are described in English as "palaces" or "country houses" rather than "castles". For example, the Château de Versailles is so called because it was located in the countryside when it was built, but it does not bear any resemblance to a castle, so it is usually known in English as the Palace of Versailles.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY</Tag>
@@ -240,6 +196,33 @@
 		<Russian>Winery</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_PEDIA</Tag>
+		<English>[TAB]Burgundy wine (French: Bourgogne or Vin de Bourgogne) is wine made in the Burgundy region in eastern France, in the valleys and slopes west of the Saône River, a tributary of the Rhône. The most famous wines produced here - those commonly referred to as "Burgundies" - are red wines made from Pinot Noir grapes or white wines made from Chardonnay grapes. Red and white wines are also made from other grape varieties, such as Gamay and Aligoté respectively. Small amounts of rosé and sparkling wine are also produced in the region. Chardonnay-dominated Chablis and Gamay-dominated Beaujolais are formally part of Burgundy wine region, but wines from those subregions are usually referred to by their own names rather than as "Burgundy wines".[PARAGRAPH:2]The status of Burgundy wines continued in the court of the House of Valois, which ruled as Dukes of Burgundy for much of the 14th and 15th centuries. It is from this era we have the first reliable reference to grape varieties in Burgundy. Pinot Noir was first mentioned in 1370 under the name Noirien, but it is believed that it was cultivated earlier than that, since no other grape variety associated with Medieval Burgundy is believed to have been able to produce red wines of a quality able to impress the papal court. On August 6, 1395, Duke Philip the Bold issued a decree concerned with safeguarding the quality of Burgundy wines. The duke declared Gamay, which was a higher-yielding grape than Pinot Noir in the 14th century as it is today, unfit for human consumption and banned the use of organic fertilizer (manure), which probably increased yields even further to the detriment of quality. High-quality white Burgundy wines of this era were probably made from Fromenteau, which is known as a quality grape in northeastern France in this time. Fromenteau is probably the same variety as today's Pinot Gris. Chardonnay is a much later addition to Burgundy's vineyards.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN</Tag>
+		<English>Bazaar</English>
+		<French>Bazar</French>
+		<German>Bazar</German>
+		<Italian>Bazar</Italian>
+		<Spanish>Bazar</Spanish>
+		<Russian>&#193;&#224;&#231;&#224;&#240;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
+		<English>[TAB]Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA</Tag>
 		<English>Noria</English>
 		<French>Noria</French>
@@ -249,13 +232,231 @@
 		<Russian>&#205;&#238;&#240;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FORGE</Tag>
-		<English>Blacksmith</English>
-		<French>Forge</French>
-		<German>Schmiede</German>
-		<Italian>Fabbro</Italian>
-		<Spanish>Herrero</Spanish>
-		<Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian>
+		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA_PEDIA</Tag>
+		<English>[TAB]A noria is a machine for lifting water into a small aqueduct, either for the purpose of irrigation or, in at least one known instance, to feed seawater into a saltern.[PARAGRAPH:2]Muslim engineers used norias to discharge water into aqueducts which carried the water to towns and fields. Some of the norias used in the medieval Islamic world were as large as 20 meters in diameter, the one in Hama being a surviving example still used in modern times. It has 120 water collection compartments and could raise as much as 95 litres of water per minute.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
+		<English>Royal Exchange</English>
+		<French>Bourse Royale</French>
+		<German>K&#246;nigliche B&#246;rse</German>
+		<Italian>Borsa Reale</Italian>
+		<Spanish>Bolsa Real</Spanish>
+		<Russian>"&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#233; &#206;&#225;&#236;&#229;&#237;"</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE_PEDIA</Tag>
+		<English>[TAB]At the risk of dramatic oversimplification - a stock exchange is an organization which allows "brokers" to buy and sell "stocks" and "bonds." A stock represents part ownership in a company, and a bond is a loan to a company, which the company guarantees to repay with interest. If the company does well, the investors make money; if the company does poorly (or fails entirely) the investors lose money. [PARAGRAPH:2]The primary benefit of a stock exchange to society is that it allows companies to concentrate a large amount of wealth to accomplish something that no individual (or perhaps government) would be able to afford. In the nineteenth century, for example, construction of the United States' railroad network was in large part financed by individuals who purchased shares of railroad companies. Earlier in history, the great British and Dutch trading companies were similarly financed. [PARAGRAPH:2]For a long period of history, the English city of London was the financial center of the world. The London Stock Exchange is one of the largest exchanges in the world, as well as one of the oldest. Though officially founded in 1801, it can trace its origins to the late seventeenth century, when - the brokers having been expelled from the Royal Exchange for rowdiness - buying and selling stocks took place in London coffee houses. [PARAGRAPH:2]</English>
+		<French>[TAB]En simplifiant &#224; outrance, une bourse est une organisation qui permet &#224; des "courtiers" d'acheter et de vendre des "actions" et des "obligations". Une action constitue une portion de la propri&#233;t&#233; d'une entreprise, que celle-ci s'engage &#224; rembourser avec des int&#233;r&#234;ts. Si l'entreprise fonctionne bien, les investisseurs gagnent de l'argent ; dans le cas contraire, ou en cas de faillite, ils en perdent. [PARAGRAPH:2]Le premier avantage d'une place boursi&#232;re pour la soci&#233;t&#233; est qu'elle permet aux entreprises de concentrer de nombreuses ressources afin de r&#233;aliser ce qu'aucune structure, si ce n'est peut-&#234;tre un gouvernement, ne pourrait se procurer seule. Ainsi, au XIXe si&#232;cle, la construction du r&#233;seau ferr&#233; des Etats-Unis a &#233;t&#233; largement financ&#233;e par les actionnaires des compagnies ferroviaires. Auparavant, les grandes compagnies commerciales britanniques et n&#233;erlandaises avaient utilis&#233; les m&#234;mes moyens de financement. [PARAGRAPH:2]Pendant longtemps, la ville de Londres fut le centre financier du monde. La Bourse de Londres est l'une des principales places boursi&#232;res du monde, tout en &#233;tant l'une des plus anciennes. Bien qu'officiellement fond&#233;e en 1801, ses origines remontent &#224; la fin du XVIIe si&#232;cle lorsque l'achat et la vente des actions avaient lieu dans des caf&#233;s de Londres, les courtiers ayant &#233;t&#233; expuls&#233;s de la Bourse du commerce de Londres en raison du bruit qu'ils g&#233;n&#233;raient. [PARAGRAPH:2]</French>
+		<German>[TAB]Vereinfacht dargestellt, ist die B&#246;rse eine Institution, die es "Brokern" (Wertpapierh&#228;ndlern) erm&#246;glicht, Aktien und Obligationen zu kaufen und zu verkaufen. Mit einer Aktie wird die Teilhaberschaft an einem Unternehmen erworben, w&#228;hrend eine Obligation eine Anleihe an ein Unternehmen darstellt, das im Gegenzug die R&#252;ckzahlung des Kapitals mit Zins und Zinseszins garantiert. Laufen die Gesch&#228;fte des Unternehmens gut, erwirtschaften die Investoren Gewinne; laufen die Gesch&#228;fte des Unternehmens dagegen schlecht (oder gar nicht), ergeben sich daraus Verluste f&#252;r die Investoren. [PARAGRAPH:2]Der aus gesellschaftlicher Sicht gr&#246;&#223;te Nutzen einer B&#246;rse ist, dass sie es Unternehmen erm&#246;glicht, hohe Kapitalsummen zu konzentrieren, um Projekte zu realisieren, die weder eine Einzelperson noch ein Einzelunternehmen (m&#246;glicherweise sogar eine Regierung nicht) allein zustande bringen k&#246;nnte. So wurde zum Beispiel der Bau des Eisenbahnnetzwerks der Vereinigten Staaten von Amerika im 19. Jahrhundert gr&#246;&#223;tenteils von Einzelinvestoren finanziert, indem sie Aktien der Eisenbahngesellschaften erwarben. Auch die gro&#223;en britischen und niederl&#228;ndischen Handelsgesellschaften waren schon lange Zeit zuvor auf &#228;hnliche Art und Weise finanziert worden. [PARAGRAPH:2]Sehr lange Zeit galt die englische Stadt London als das weltweit bedeutendste Finanzzentrum und auch heute noch z&#228;hlt die Londoner B&#246;rse zu den gr&#246;&#223;ten und &#228;ltesten B&#246;rsenpl&#228;tzen der Welt. Offiziell wurde sie zwar erst 1801 gegr&#252;ndet, aber ihre Urspr&#252;nge reichen bereits bis in das sp&#228;te 17. Jahrhundert zur&#252;ck. Damals fand der Aktienhandel allerdings in den Londoner Kaffeeh&#228;usern statt, weil die B&#246;rsenh&#228;ndler wegen ungeb&#252;hrlichen Benehmens von der Royal Exchange ausgeschlossen worden waren. [PARAGRAPH:2]</German>
+		<Italian>[TAB]A rischio di semplificare eccessivamente la questione, si pu&#242; dire che la borsa &#232; il luogo in cui dei mediatori acquistano e vendono azioni e obbligazioni. Le azioni rappresentano una quota di propriet&#224; di una societ&#224;, le obbligazioni sono un prestito alla societ&#224;, la quale si impegna a restituirlo con gli interessi. Se la societ&#224; si arricchisce, gli investitori si arricchiscono con essa; se perde denaro o fallisce, gli investitori perdono in tutto o in parte i propri soldi. [PARAGRAPH:2]Il beneficio principale apportato dalle borse alla comunit&#224; &#232; che esse permettono alle societ&#224; di riunire grandi somme denaro che nessun individuo (o anche governo) potrebbe mai avere a disposizione. Nel diciannovesimo secolo, per esempio, la costruzione della rete ferroviaria degli Stati Uniti fu finanziata in larga parte dagli individui che acquistarono le azioni delle societ&#224; ferroviarie. Gi&#224; nei secoli precedenti le grandi societ&#224; commerciali britanniche e olandesi si finanziavano in maniera simile. [PARAGRAPH:2]Per un lungo periodo fu Londra la capitale finanziaria del mondo. La borsa di Londra &#232; tutt'oggi una delle pi&#249; importanti, oltre che la pi&#249; antica. Anche se la sua fondazione ufficiale si ha nel 1801, le sue origini risalgono alla fine del diciassettesimo secolo, quando i mediatori, espulsi dalla borsa reale per disturbo dell'ordine pubblico, presero ad acquistare e vendere azioni nei caff&#232; della capitale. [PARAGRAPH:2]</Italian>
+		<Spanish>[TAB]Aun a riesgo de incurrir en una simplificaci&#243;n, una bolsa puede definirse como una organizaci&#243;n que permite a los "agentes" comprar y vender "acciones" y "bonos". Una acci&#243;n representa una fracci&#243;n de la compa&#241;&#237;a, mientras que un bono es un pr&#233;stamo a la compa&#241;&#237;a que &#233;sta se compromete a devolver con intereses. Si a la compa&#241;&#237;a le va bien, los inversores ganan dinero. Si a la compa&#241;&#237;a le va menos bien (o le va muy mal), los inversores pierden dinero. [PARAGRAPH:2]La principal ventaja de las bolsas es que permiten que las compa&#241;&#237;as acumulen gran cantidad de riqueza para abordar proyectos que ning&#250;n particular (y hasta puede que muy pocos gobiernos) podr&#237;a permitirse por s&#237; solo. Por poner un ejemplo, en el siglo XIX, la construcci&#243;n de la red de ferrocarriles de EE. UU. se coste&#243; en gran parte mediante las aportaciones de los individuos que compraron las acciones de las compa&#241;&#237;as. En una &#233;poca anterior, las grandes compa&#241;&#237;as mercantes de Inglaterra y Holanda se financiaron de manera similar. [PARAGRAPH:2]Durante un largo per&#237;odo de la historia, la ciudad de Londres fue el coraz&#243;n financiero del mundo. La Bolsa de Londres es una de las m&#225;s grandes del mundo, as&#237; como una de las m&#225;s antiguas. Aunque fundada oficialmente en 1801, sus or&#237;genes se remontan a finales del XVII cuando, tras la expulsi&#243;n de los agentes del Royal Exchange por gamberrismo, la compraventa de acciones empez&#243; a realizarse en las cafeter&#237;as de la ciudad. [PARAGRAPH:2]</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOSCOW_KREMLIN</Tag>
+		<English>Kremlin</English>
+		<French>Kremlin</French>
+		<German>Kremlin</German>
+		<Italian>Kremlin</Italian>
+		<Spanish>Kremlin</Spanish>
+		<Russian>&#202;&#240;&#229;&#236;&#235;&#252;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOSCOW_KREMLIN_PEDIA</Tag>
+		<English>[TAB]"Kremlin" is a Russian word which denotes a fortified complex of buildings in the center of a city. It is most often used to refer to the Kremlin in the city of Moscow, a remarkable set of buildings which hold much of the Russian government. The Kremlin sits on a hill overlooking the Moskva River. In one form or the other, fortified structures have been in that location for almost 1000 years. The site was named "Kremlin" in the 14th century. [PARAGRAPH:2]The Kremlin is within a triangular, walled area about 68 acres in extent. The walls are of red brick, with pencil-like towers at the corners and entrances. Many of the buildings are painted white with yellow trim and green roofs that look quite cheerful from a distance. The Cathedral of the Dormition, constructed in the 1470s, is the oldest building in the complex. Two other cathedrals lie within its walls, as do a surprising number of palaces, the Kremlin Palace being the largest.[PARAGRAPH:2]The Kremlin has seen many great figures rise and fall within its walls. Ivan the Terrible built the Palace of Facets in the Kremlin. In the Great Patriotic War (WWII), Josef Stalin drove the German invaders from the gates of Moscow - perhaps the greatest service that any Russian ruler has ever performed for his country. (It was also here that Stalin planned the systematic extermination of millions of his own people.) It was here that Mikhail Gorbachev oversaw the dissolution of the Soviet Union. Today, the Kremlin holds the government of the Russian Federation.[PARAGRAPH:2]To whatever use it might be put in the future, the Kremlin will always stand as a mighty monument to Russia's past - for it has seen the best and the worst of that great nation.</English>
+		<French>[TAB]"Kremlin" est un mot russe d&#233;signant un ensemble fortifi&#233; de b&#226;timents dans le centre d'une ville. Il est plus souvent utilis&#233; en r&#233;f&#233;rence au Kremlin de Moscou, un remarquable ensemble de b&#226;timents qui abrite une grande partie du gouvernement russe. Le Kremlin se situe sur une colline surplombant la Moskova. Sous une forme ou une autre, des structures fortifi&#233;es y sont pr&#233;sentes depuis pr&#232;s de 1 000 ans. Le site est appel&#233; "Kremlin" au XIVe si&#232;cle. [PARAGRAPH:2]Il se situe dans une zone triangulaire mur&#233;e s'&#233;tendant sur environ 27 ha. Les murs sont faits de briques rouges et de fines tours s'&#233;l&#232;vent dans les angles et aux entr&#233;es. Une grande partie des b&#226;timents sont peints en blanc avec des ornements jaunes et des toits verts, ce qui, de loin, rend l'ensemble tr&#232;s gai. La cath&#233;drale de la Dormition, construite dans les ann&#233;es 1470, est le plus vieux b&#226;timent du complexe. Deux autres cath&#233;drales sont construites dans les enceintes du Kremlin, comme c'est le cas dans un nombre surprenant de palais, celui du Kremlin &#233;tant n&#233;anmoins le plus grand. [PARAGRAPH:2]Le Kremlin a vu l'ascension et la chute d'un grand nombre de personnages c&#233;l&#232;bres. Ivan le terrible y construisit le Palais &#224; facettes. Pendant la grande guerre patriotique (la Deuxi&#232;me Guerre mondiale), Joseph Staline chassa les envahisseurs allemands des portes de Moscou, ce qui constitue sans doute le plus grand service qu'un dirigeant russe ait pu rendre &#224; son pays. (C'est &#233;galement au Kremlin que Staline envisagea l'extermination syst&#233;matique de millions de ses compatriotes.) C'est aussi dans les murs du Kremlin que Mikha&#239;l Gorbatchev observa la dissolution de l'Union sovi&#233;tique. Aujourd'hui, le Kremlin abrite le gouvernement de la F&#233;d&#233;ration de Russie. [PARAGRAPH:2]Quel que soit l'usage qui en sera fait plus tard, le Kremlin restera toujours un grand monument du pass&#233; russe, qui a vu na&#238;tre le meilleur et le pire de cette grande nation.</French>
+		<German>[TAB]"Kreml" ist das russische Wort f&#252;r einen befestigten Geb&#228;udekomplex in der Mitte einer Stadt. Allerdings wird der Begriff heute prim&#228;r als Bezeichnung f&#252;r den Sitz der russischen Regierung in Moskau verwendet. Der Kreml befindet sich auf einem H&#252;gel mit Blick &#252;ber die Moskwa. An diesem Standort gib es seit mehr als 1000 Jahren befestigte Geb&#228;ude. Bereits im 14. Jahrhundert wurde der Platz deshalb "Kreml" genannt. [PARAGRAPH:2]Der Kreml liegt innerhalb eines dreieckigen, etwa 27,5 Hektar gro&#223;en, ummauerten Gebiets. Die Mauern aus rotem Backstein sind an den Ecken und Eing&#228;ngen mit T&#252;rmen eingefasst. Viele Geb&#228;ude des Komplexes sind wei&#223; bemalt. Ihre gelben Verzierungen und roten D&#228;cher vermitteln aus der Ferne einen fr&#246;hlichen Eindruck. Die in den 70er Jahren des 15. Jahrhunderts gebaute Uspenski-Kathedrale ist das &#228;lteste Geb&#228;ude der Anlage. Zwei weitere Kathedralen und mehrere Pal&#228;ste schlie&#223;en sich an die Uspenski-Kathedrale an.[PARAGRAPH:2]Der Kreml hat den Aufstieg und Fall vieler Pers&#246;nlichkeiten erlebt. Ivan der Schreckliche baute im Kreml den Facettenpalast. W&#228;hrend des gro&#223;en vaterl&#228;ndischen Krieges (des 2. Weltkriegs) schlug Stalin die Deutschen vor den Toren Moskaus zur&#252;ck. Gleichzeitig plante er im Kreml aber auch die systematische Vernichtung von Millionen Russen. Ende der 80er Jahre erlebte Gorbatschow im Kreml den Zerfall der Sowjetunion. Heute ist er der Regierungssitz der russische Regierung.[PARAGRAPH:2]Egal, wie die Zukunft des Kremls auch aussehen mag ... er ist ein Monument der russischen Vergangenheit, das dessen Bl&#252;te und Niedergang miterlebte.</German>
+		<Italian>[TAB]"Cremlino" &#232; una parola Russa che serve a indicare un complesso fortificato di edifici nel centro della citt&#224;. In genere si usa la parola Cremlino per indicare la straordinaria sede degli organi governativi Russi a Mosca. Il Cremlino si trova su una collina che si affaccia sul fiume Moscova e, in un modo o nell'altro, esiste da quasi 1000 anni. Il luogo venne chiamato "Cremlino" nel XIV secolo. [PARAGRAPH:2]Il Cremlino si trova all'interno di una zona murata triangolare che si estendo per circa 69 acri; i muri sono realizzati con mattoni rossi con delle torri molto affusulate agli angoli e all'ingresso. Molti di questi edifici sono con tinte gialle e tetti verdi, molto suggestivi visti da lontano. La Cattedrale dell'Assunzione, costruita nel 1470, &#232; l'edificio pi&#249; antico del complesso: altre due cattedrali si trovano all'interno delle mura assieme ad un sorprendente numero di palazzi, dei quali il Cremlino &#232; il pi&#249; grande.[PARAGRAPH:2]Il Cremlino &#232; stato testimone dell'ascesa e della caduta di grandi personaggi: Ivan il terribile costru&#236; il palazzo a faccette. Durante la grande Guerra Patriottica (la Seconda Guerra Mondiale), Josef Stalin respinse le truppe naziste alle porte di Mosca, forse uno dei gesti pi&#249; grandi che siano mai stati realizzati da un sovrano Russo (anche se lo stesso Stalin abbracci&#242; un progetto di sterminio di milioni di connazionali). &#200; in questo luogo che Mikhail Gorbaciov assistette al crollo dell'Unione Sovietica. Attualmente, il Cremlino ospita il governo della Federazione Russa.[PARAGRAPH:2]Indipendentemente dall'utilizzo che ne verr&#224; fatto in futuro, il Cremlino sar&#224; per sempre un monumento al passato glorioso e doloroso della Russia.</Italian>
+		<Spanish>[TAB]"Kremlin" es una palabra rusa con la que se indica un complejo fortificado de edificios en el centro de una ciudad. Se suele usar casi siempre para referirse al Kremlin de la ciudad de Mosc&#250;, un destacable conjunto de edificios que alberga a gran parte del gobierno ruso. El Kremlin se yergue sobre una colina que domina las vistas del r&#237;o Moscova. En una u otra forma, las estructuras fortificadas han estado presentes en esta ciudad durante mil a&#241;os. El sitio fue bautizado como "Kremlin" en el s. XIV. [PARAGRAPH:2]Se encuentra en un &#225;rea triangular amurallada de unas veintiocho hect&#225;reas de extensi&#243;n. Los muros son de ladrillo rojo, con sus peculiares torres en las esquinas y las entradas. Muchos de sus edificios est&#225;n pintados de blanco con un ribete amarillo y tienen tejados verdes que dan un aspecto muy alegre desde lejos. La Catedral de la Asunci&#243;n, construida en 1476, es el edificio m&#225;s antiguo del complejo. Dos catedrales m&#225;s se encuentran tras sus muros, al igual que un sorprendente n&#250;mero de palacios, siendo el Palacio del Kremlin el mayor de ellos.[PARAGRAPH:2]El Kremlin ha visto el auge y la ca&#237;da de muchos personajes importantes tras sus muros. Iv&#225;n el Terrible construy&#243; all&#237; la C&#225;mara de las Facetas. En la Gran Guerra Patri&#243;tica (la Segunda Guerra Mundial), I&#243;siv Stalin expuls&#243; a los invasores alemanes de las puertas de Mosc&#250;, uno de los mayores servicios que nunca hiciera un dirigente ruso por su pa&#237;s (aunque tambi&#233;n fue aqu&#237; donde el propio Stalin plane&#243; el exterminio sistem&#225;tico de millones de miembros de su propio pueblo). Y tambi&#233;n en este mismo lugar Mija&#237;l Gorbachov supervis&#243; la disoluci&#243;n de la Uni&#243;n Sovi&#233;tica. Hoy en d&#237;a, el Kremlin alberga el gobierno de la Federaci&#243;n Rusa.[PARAGRAPH:2]Con independencia del uso que se le d&#233; en el futuro, siempre ser&#225; un monumento imponente del pasado de Rusia, pues ha visto lo mejor y lo peor de esta gran naci&#243;n.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+		<!-- Unique Buildings -->
+		<!-- General Buildings -->
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUNGEON</Tag>
+		<English>Dungeon</English>
+		<French>Donjon</French>
+		<German>Kerker</German>
+		<Italian>Prigione Sotterranea</Italian>
+		<Spanish>Mazmorra</Spanish>
+		<Russian>&#210;&#229;&#236;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUNGEON_PEDIA</Tag>
+		<English>[TAB]A dungeon is a room or cell in which prisoners are kept, especially underground. Dungeons are generally associated with medieval castles, though their association with torture probably belongs more to the Renaissance period. The image of dark, damp dungeons as the scene of lengthy incarceration and unspeakable cruelty is a powerful one in popular culture.[PARAGRAPH:2]In its original medieval usage, donjon meant a keep, the main tower of a castle which formed the final defensive position to which the garrison could retreat when outer fortifications were overcome. By association of a tower with a prison, its English meaning has evolved over time to mean an underground prison or oubliette, typically in a basement of a castle.[PARAGRAPH:2]In French the term donjon still refers to a "keep", and the term oubliette is a more appropriate translation of English "dungeon". Donjon is therefore a false friend to "dungeon".</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE</Tag>
+		<English>Archery Range</English>
+		<French>Atelier de Tir &#224; l'Arc</French>
+		<German>Bogenschie&#223;anlage</German>
+		<Italian>Gamma di tiro con l'arco</Italian>
+		<Spanish>Gama de tiro al arco</Spanish>
+		<Russian>&#196;&#232;&#224;&#239;&#224;&#231;&#238;&#237; &#209;&#242;&#240;&#229;&#235;&#252;&#225;&#251; &#232;&#231; &#235;&#243;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE_PEDIA</Tag>
+		<English>[TAB]An important technological innovation, bows were perhaps the first machines built to store energy slowly and then release it quickly. Bows and arrows have been in existence for 30,000 years. The original bows were made of springy wood - yew, bamboo, palm, and so forth. By 1300 BC, bows were made of composite material - wood, horn, and sinew. The first arrows were probably straight wooden sticks with one end sharpened and fire-hardened. Stone tips were added once man learned to sharpen flint.</English>
+		<French>[TAB]Importante innovation technique, l'arc est peut-&#234;tre le premier m&#233;canisme invent&#233; pour emmagasiner l'&#233;nergie et la lib&#233;rer d'un coup. Il existe depuis 30 000 ans et &#233;tait fabriqu&#233; &#224; l'origine avec du bois souple, comme l'if, le bambou ou le palmier. Vers 1 300 av. J.-C. apparaissent les arcs composites, con&#231;us avec du bois, de la corne et des tendons. Les premi&#232;res fl&#232;ches &#233;taient probablement des bouts de bois droits, dont une extr&#233;mit&#233; &#233;tait aiguis&#233;e et durcie au feu. Les pointes en pierre sont apparues une fois que l'homme a appris &#224; tailler le silex.</French>
+		<German>[TAB]B&#246;gen waren eine wichtige Erfindung, da sie erstmals die Speicherung und schnelle Freigabe kinetischer Energie erm&#246;glichten. Die ersten B&#246;gen entstanden vor etwa 30.000 Jahren aus elastischem Holz (Eibe, Bambus, Palme usw.). Um 1300 vor Christus entstanden B&#246;gen aus Verbundwerkstoffen, wie Holz, Horn und Sehnen. Die ersten Pfeile waren vermutlich angespitzte und im Feuer geh&#228;rtete &#196;ste. Als der Mensch schlie&#223;lich lernte, Feuerstein zu sch&#228;rfen, wurden die traditionellen Holzspitzen von Steinspitzen abgel&#246;st.r Zeit in Anspruch als die Ausbildung eines Bogensch&#252;tzen.</German>
+		<Italian>[TAB]L'arco rappresenta un'innovazione tecnologica importante, essendo il primo modello di &quot;macchinario&quot; in grado di incamerare energia lentamente per poi rilasciarla rapidamente. Archi e frecce esistono da più di 30.000 anni. I primi archi erano fatti con del legno molto elastico, come quello del tasso, del bambù e della palma. Nel 1300 a. C., gli archi erano realizzati con più materiali, come legno, corna e tendini animali. Le prime frecce erano probabilmente dei semplici legni con la punta affilata o temprata. Successivamente, quando l'uomo imparò la lavorazione della selce, le punte divennero in pietra.</Italian>
+		<Spanish>[TAB]El arco, importante innovaci&#243;n tecnol&#243;gica, seguramente fuera la primera m&#225;quina capaz de almacenar la energ&#237;a lentamente y liberarla r&#225;pidamente. Los arcos y las flechas existen desde hace 30.000 a&#241;os. Los primeros arcos estaban hechos de maderas el&#225;sticas: tejo, bamb&#250;, palma, etc. Desde el a&#241;o 1300 a. C., se fabricaban ya con materiales compuestos: madera, cuerno y tendones. Probablemente, las primeras flechas fueran astiles de madera con un extremo endurecido al fuego. Una vez que el hombre aprendi&#243; a afilar el s&#237;lex, se a&#241;adieron puntas de piedra.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WHARF</Tag>
+		<English>Wharf</English>
+		<French>Quai</French>
+		<German>Anlegeplatz</German>
+		<Italian>Molo</Italian>
+		<Spanish>Muelle</Spanish>
+		<Russian>&#207;&#240;&#232;&#247;&#224;&#235;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
+		<English>[TAB]A wharf is a landing place or pier where ships may tie up and load or unload.[PARAGRAPH:2]A wharf commonly comprises a fixed platform, often on pilings. They often serve as interim storage areas with warehouses, since the typical objective is to unload and reload vessels as quickly as possible. Where capacity is sufficient a single quay constructed along the land adjacent to the water is normally used; where there is a need for more capacity many wharves will instead be constructed projecting into the water, as with the well known collection of wharves in San Francisco. A pier, raised over the water rather than within it, is one type of wharf, commonly used for cases where the weight or volume of cargos will be low.[PARAGRAPH:2]Smaller and more modern wharves are sometimes built on flotation devices (pontoons) to keep them at the same level to the ship even during changing tides.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GUILD_HALL</Tag>
+		<English>Guild Hall</English>
+		<French>Salle de Confr&#233;rie</French>
+		<German>Gildenhaus</German>
+		<Italian>Atrio di corporazione</Italian>
+		<Spanish>Vestíbulo de gremio</Spanish>
+		<Russian>&#214;&#229;&#245;&#238;&#226;&#238;&#233; &#199;&#224;&#235;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
+		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TANNERY</Tag>
+		<English>Tannery</English>
+		<French>Tannerie</French>
+		<German>Gerberei</German>
+		<Italian>Conceria</Italian>
+		<Spanish>Curtiduría</Spanish>
+		<Russian>&#202;&#238;&#230;&#229;&#226;&#229;&#237;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TANNERY_PEDIA</Tag>
+		<English>[TAB]Tanning is the process of making leather, which does not easily decompose, from the skins of animals, which do. Often this uses tannin, an acidic chemical compound. Coloring may occur during tanning. A tannery is the term for a place where these skins are processed.[PARAGRAPH:2]Tanning leather involves a process which permanently alters the protein structure of skin so that it cannot ever return to rawhide. Making rawhide does not require the use of tannin and is made simply by removing the flesh and fat and then the hair by way of soaking in an aqueous solution (often called liming when using lime and water or bucking when using wood ash (lye) and water), then scraping over a beam with a somewhat dull knife, and then leaving to dry, usually stretched on a frame so that it dries flat. The two aforementioned solutions for removing the hair also act to clean the fiber network of the skin and therefore allow penetration and action of the tanning agent.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH</Tag>
+		<English>Night Watch</English>
+		<French>Veille de nuit</French>
+		<German>Nachtwache</German>
+		<Italian>Orologio di notte</Italian>
+		<Spanish>Reloj de noche</Spanish>
+		<Russian>&#205;&#238;&#247;&#237;&#238;&#229; &#205;&#224;&#225;&#235;&#254;&#228;&#229;&#237;&#232;&#229;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_PEDIA</Tag>
+		<English>[TAB]A night watch was a law enforcement formation found in some countries and historical periods, usually subordinate to the local municipal government. Historically many cities had their own guard formations, which doubled as police and military force in times of need.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INN</Tag>
+		<English>Inn</English>
+		<French>Auberge</French>
+		<German>Wirtshaus</German>
+		<Italian>Albergo</Italian>
+		<Spanish>Posada</Spanish>
+		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
+		<English>[TAB]Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.[PARAGRAPH:2]Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.[PARAGRAPH:2]In Europe, it is the provision of accommodation, if anything, that now differentiates inns from taverns, alehouses and pubs. The latter tend only to supply alcohol (although in the UK the conditions of their licence sometimes require them to have a nominal supply of food and soft drinks). Inns tend to be grander and more long-lived establishments. Famous London examples include the George and The Tabard. There is however no longer a formal distinction between an inn and other kinds of establishment, and many pubs will use the name "inn", either simply because they are long established and maybe were once a Coaching inn, or to summon up a particular kind of image; however, originally an Inn had to provide not only food and lodging, but also stabling and fodder for the traveller's horse(s) and for fresh horses for the Mail coach.[PARAGRAPH:2]The original functions of an inn are now usually split among separate establishments, such as hotels, lodges, and motels, all of which might provide the traditional functions of an inn but which focus more on lodging customers than on other services; public houses, which are primarily alcohol-serving establishments; and restaurants and taverns, which serve food and drink. (Hotels often contain restaurants and also often serve complimentary breakfast and meals, thus providing all of the functions of traditional inns.) In North America, the lodging aspect of the word "inn" lives on in hotel brand names like Holiday Inn, and in some state laws that refer to lodging operators as innkeepers.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
+		<English>Manor House</English>
+		<French>Château</French>
+		<German>Landgut</German>
+		<Italian>Casa di residenza</Italian>
+		<Spanish>Casa solariega</Spanish>
+		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
+		<English>[TAB]A manor house or fortified manor-house is a country house, which has historically formed the administrative centre of a manor, the lowest unit of territorial organization in the feudal system. The term is sometimes applied to relatively small country houses which belonged to gentry families, as well as to grand stately homes, particularly as a technical term for minor late medieval fortified country houses intended more for show than for defence.[PARAGRAPH:2]In general terms, the manor house was the dwelling house, or "capital messuage", of a feudal lord of a manor, which he occupied only on occasional visits if he held many manors. As such it was the place in which sessions of his "court baron", or manor court, were held. Sometimes a steward or seneschal was appointed by the seigneurial lord to oversee and manage his different manorial properties. The day-to-day administration was delegated to a bailiff, or reeve.[PARAGRAPH:2]Although not typically built with strong fortifications as castles were, many manor-houses were partly fortified: they were enclosed within walls or ditches that often included the farm buildings as well. Arranged for defence against robbers and thieves, it was often surrounded by a moat with a drawbridge, and equipped with small gatehouses and watchtowers; but was not provided with a keep or with large towers or lofty curtain walls so as to withstand a siege. The primary feature of the manor-house was its great hall, to which subsidiary apartments were added as the lessening of feudal warfare permitted more peaceful domestic life.[PARAGRAPH:2]By the beginning of the 16th century, manor-houses as well as small castles began to acquire the character and amenities of the residences of country gentlemen. This late 16th century transformation produced many of the smaller Renaissance châteaux of France and the numerous country mansions of the Elizabethan and Jacobean styles in England.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WEAVER</Tag>
+		<English>Weaver</English>
+		<French>Tisserie</French>
+		<German>Weberei</German>
+		<Italian>Tessitore</Italian>
+		<Spanish>Tejedor</Spanish>
+		<Russian>&#210;&#234;&#224;&#247;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WEAVER_PEDIA</Tag>
+		<English>[TAB]Weaving is a textile craft in which two distinct sets of yarns or threads, called the warp and the filling or weft (older woof), are interlaced to form a fabric or cloth. The warp threads run lengthways on the piece of cloth, and the weft runs across from side to side, across the bolt of cloth.[PARAGRAPH:2]Cloth is woven on a loom, a device that holds the warp threads in place while filling threads are woven through them. Weft is an old English word meaning "that which is woven".[PARAGRAPH:2]The way the warp and filling threads interlace with each other is called the weave. The majority of woven products are created with one of three basic weaves: plain weave, satin weave, or twill.[PARAGRAPH:2]Woven cloth can be plain (in one colour or a simple pattern), or can be woven in decorative or artistic designs, including tapestries. Fabric in which the warp and/or weft is tie-dyed before weaving is called ikat.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BREWERY</Tag>
+		<English>Brewery</English>
+		<French>Brasserie</French>
+		<German>Brauerei</German>
+		<Italian>Birrificio</Italian>
+		<Spanish>Cervecería</Spanish>
+		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
+		<English>[TAB]A brewery is a dedicated building for the making of beer, though beer can be made in the home, and has been for much of beer's history. A company which makes beer is called either a brewery or a brewing company.[PARAGRAPH:2]The diversity of size in breweries is matched by the diversity of processes, degrees of automation, and kinds of beer produced in breweries. Typically a brewery is divided into distinct sections, with each section reserved for one part of the brewing process.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL</Tag>
@@ -267,6 +468,15 @@
 		<Russian>&#210;&#229;&#234;&#241;&#242;&#232;&#235;&#252;&#237;&#224;&#255; &#204;&#229;&#235;&#252;&#237;&#232;&#246;&#224;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL_PEDIA</Tag>
+		<English>[TAB]Textile manufacturing is a major industry. It is based in the conversion of three types of fibre into yarn, then fabric, then textiles. These are then fabricated into clothes or other artifacts. Cotton remains the most important natural fibre, so is treated in depth. There are many variable processes available at the spinning and fabric-forming stages coupled with the complexities of the finishing and colouration processes to the production of a wide ranges of products. There remains a large industry that uses hand techniques to achieve the same results.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER</Tag>
 		<English>Jeweler</English>
 		<French>Bijoutier</French>
@@ -274,6 +484,15 @@
 		<Italian>Gioielleria</Italian>
 		<Spanish>Joyería</Spanish>
 		<Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
+		<English>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods.[PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
+		<French>.</French> 
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE</Tag>
@@ -285,13 +504,31 @@
 		<Russian>&#202;&#238;&#239;&#242;&#232;&#235;&#252;&#237;&#255;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LUXURY_STORE</Tag>
-		<English>Luxury Store</English>
-		<French>Magasin de Luxe</French>
-		<German>Luxusgesch&#228;ft</German>
-		<Italian>Negozio di lussuria</Italian>
-		<Spanish>Tienda de lujo</Spanish>
-		<Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian>
+		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE_PEDIA</Tag>
+		<English>[TAB]A smokehouse is a building where meat or fish is cured with smoke. The finished product might be stored in the building, sometimes for a year or more.[PARAGRAPH:2]Traditional smokehouses served both as meat smokers and to store the meats, often for groups and communities of people. Food preservation occurred by salt curing and extended cold smoking for two weeks or longer. Smokehouses were often secured to prevent animals and thieves from accessing the food.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
+		<English>Star Fort</English>
+		<French>Tracé à l'Italienne</French>
+		<German>Sternförmige Festung</German>
+		<Italian>Fortificazione alla stella</Italian>
+		<Spanish>Estrelle Fuerte</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STAR_FORT_PEDIA</Tag>
+		<English>[TAB]A star fort, or trace italienne, is a fortification in the style that evolved during the age of gunpowder, when cannon came to dominate the battlefield, and was first seen in the mid-15th century in Italy. Passive ring-shaped (enceinte) fortifications of the Medieval era proved vulnerable to damage or destruction by cannon fire, when it could be directed from outside against a perpendicular masonry wall. In addition, an attacking force that could get close to the wall was able to conduct undermining operations in relative safety, as the defenders could not shoot at them from nearby walls. In contrast, the star fortress was a very flat structure composed of many triangular bastions, specifically designed to cover each other, and a ditch. Further structures, such as ravelins, hornworks or crownworks, and detached forts could be added to create a complex symmetrical structure.[PARAGRAPH:2]Star fortifications were further developed in the late fifteenth and early sixteenth centuries primarily in response to the French invasion of the Italian peninsula. The French army was equipped with new cannon and bombards that were easily able to destroy traditional fortifications built in the Middle Ages. In order to counteract the power of the new weapons, defensive walls were made lower and thicker. They were built of many materials, usually earth and brick, as brick does not shatter on impact from a cannonball as does stone. Another important design modification were the bastions that characterized the new fortresses. In order to improve the defense of the fortress, covering fire had to be provided, often from multiple angles. The result was the development of star-shaped fortresses.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAREHOUSE</Tag>
@@ -303,6 +540,15 @@
 		<Russian>&#209;&#234;&#235;&#224;&#228;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Tag>
+		<English>[TAB]A warehouse is a commercial building for storage of goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs, etc. They are usually large plain buildings in industrial areas of cities and towns. They usually have loading docks to load and unload goods from trucks. Sometimes warehouses load and unload goods directly from railways, airports, or seaports. They often have cranes and forklifts for moving goods, which are usually placed on ISO standard pallets loaded into pallet racks.[PARAGRAPH:2]Stored goods can include any raw materials, components, or finished goods associated with agriculture, manufacturing, or commerce.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE</Tag>
 		<English>Coffee House</English>
 		<French>Caf&#233;</French>
@@ -312,13 +558,67 @@
 		<Russian>&#202;&#238;&#244;&#229;&#233;&#237;&#224;&#255;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU</Tag>
-		<English>Chateau</English>
-		<French>Grand Chateau</French>
-		<German>Chateau</German>
-		<Italian>Chateau</Italian>
-		<Spanish>Chateau</Spanish>
-		<Russian>&#199;&#224;&#236;&#238;&#234;</Russian>
+		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE_PEDIA</Tag>
+		<English>[TAB]A coffeehouse or coffee shop is an establishment which primarily serves prepared coffee or other hot beverages. It shares some of the characteristics of a bar, and some of the characteristics of a restaurant, but it is different from a cafeteria. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks. Many coffee houses in the Middle East, and in West Asian immigrant districts in the Western world, offer shisha (nargile in Turkish and Greek), flavored tobacco smoked through a hookah.[PARAGRAPH:2]From a cultural standpoint, coffeehouses largely serve as centers of social interaction: the coffeehouse provides social members with a place to congregate, talk, write, read, entertain one another, or pass the time, whether individually or in small groups of 2 or 3.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LUXURY_STORE</Tag>
+		<English>Luxury Store</English>
+		<French>Magasin de Luxe</French>
+		<German>Luxusgesch&#228;ft</German>
+		<Italian>Negozio di lussuria</Italian>
+		<Spanish>Tienda de lujo</Spanish>
+		<Russian>&#208;&#238;&#241;&#234;&#238;&#248;&#237;&#251;&#233; &#204;&#224;&#227;&#224;&#231;&#232;&#237;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LUXURY_STORE_PEDIA</Tag>
+		<English>[TAB]The Luxury Store is a place where people can acquire products and services that are not considered essential and associated with affluence. These are most commonly called luxury goods.[PARAGRAPH:2]The concept of luxury has been present in various forms since the beginning of civilization. Its role was just as important in ancient western and eastern empires as it is in modern societies. With the clear differences between social classes in earlier civilizations, the consumption of luxury was limited to the elite classes. It also meant the definition of luxury was fairly clear. Whatever the poor cannot have and the elite can was identified as luxury.[PARAGRAPH:2]Later though, with increasing 'democratization', several new product categories were created within the luxury market which were aptly called: accessible luxury or mass luxury. This kind of luxury specifically targeted the middle class (or what is sometimes termed as aspiring class). As luxury penetrated into the masses, defining luxury has become difficult.[PARAGRAPH:2]One things remains clear: luxury evokes a sense of belonging to a certain elite group. Thus, there always was, and always will be need for luxury goods in all civilizations.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FORGE</Tag>
+		<English>Blacksmith</English>
+		<French>Forge</French>
+		<German>Schmiede</German>
+		<Italian>Fabbro</Italian>
+		<Spanish>Herrero</Spanish>
+		<Russian>&#202;&#243;&#231;&#237;&#229;&#246;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FORGE_PEDIA</Tag>
+		<English>[TAB]A forge is a furnace where metal is heated or melted. In ancient times smiths with small forges could be found in most settlements. The furnaces were stoked with coal, which was fanned by manually pumped bellows to create intense heat. The blacksmith would heat the metal in the oven and then shape it by putting the metal on an anvil and beating it with heavy hammers. The finished product was then put into cold water to harden and cool. The smith might also melt the metal and pour it into molds.[PARAGRAPH:2]Modern forges are huge industrial structures requiring many workers to operate. The operation is similar to that in the smithy; except on a grand scale.  Tons of ore are poured into massive vats, which are conveyed into the furnace. Once the metal is smelted, it may be mixed with other materials to create an alloy such as steel, and it may undergo a number of different processes to remove impurities. The finished metal can then be rolled into sheets, poured into molds, stamped into coins, and so forth.</English>
+		<French>[TAB]Une forge est un four dans lequel le m&#233;tal est chauff&#233; ou fondu. Autrefois, on trouvait des mar&#233;chaux-ferrants poss&#233;dant de petites forges dans la majorit&#233; des villages. Les fours &#233;taient aliment&#233;s par du charbon attis&#233; &#224; l'aide de soufflets &#224; pompe manuelle afin de cr&#233;er une chaleur intense. Le forgeron chauffe le m&#233;tal dans le four puis lui donne sa forme en pla&#231;ant le m&#233;tal sur une enclume et en le frappant avec de lourds marteaux. Le produit fini est ensuite plac&#233; dans de l'eau froide pour le durcir et le faire refroidir. Le mar&#233;chal-ferrant peut &#233;galement fondre le m&#233;tal et le couler dans des moules.[PARAGRAPH:2]Les forges modernes sont d'immenses structures industrielles qui ne peuvent fonctionner qu'en pr&#233;sence de nombreux travailleurs. Le fonctionnement est similaire &#224; celui d'une forge, mais il se fait &#224; plus grande &#233;chelle. Des tonnes de minerais sont vers&#233;es dans d'immenses cuves qui sont transport&#233;es dans le four. Lorsque le m&#233;tal est fondu, il peut &#234;tre m&#233;lang&#233; avec d'autres mat&#233;riaux pour cr&#233;er des alliages tels que l'acier. Il peut en outre faire l'objet de nombreux traitements diff&#233;rents pour &#233;liminer les impuret&#233;s. Le m&#233;tal fini est ensuite lamin&#233; en feuilles, vers&#233; dans des moules, frapp&#233; en pi&#232;ces, etc.</French>
+		<German>[TAB]Schmieden verf&#252;gen &#252;ber Schmelz&#246;fen, in denen Metall erhitzt oder geschmolzen wird. Fr&#252;her gab es in fast jeder Siedlung einen Schmied mit einer kleinen Schmiede. Die &#214;fen wurden mit Kohle befeuert. Manuell bediente Blaseb&#228;lge sollten die Hitze erh&#246;hen. Anschlie&#223;end erhitzte der Schmied das Metall im Ofen und formte es mit Hammerschl&#228;gen auf dem Amboss. Das fertige Produkt wurde schlie&#223;lich zum H&#228;rten in kaltes Wasser gelegt. Der Schmied konnte das Metall auch schmelzen und in Formen gie&#223;en.[PARAGRAPH:2]Moderne Schmieden sind riesige Industrieanlagen mit vielen Arbeitern. Tonnen von Erz werden in gewaltige Bottiche gegossen und &#252;ber F&#246;rderb&#228;nder in den Schmelzofen geschoben. Ist das Metall geschmolzen, kann es mit anderen Materialien gemischt werden, um Legierungen, wie Stahl, herzustellen. In verschiedenen Prozessschritten werden dar&#252;ber hinaus Unreinheiten aus dem Metall entfernt. Das fertige Metall kann beispielsweise zu Blechen verarbeitet und aufgerollt, in Formen gegossen oder f&#252;r die Herstellung von M&#252;nzen verwendet werden, und vieles mehr.</German>
+		<Italian>[TAB]La fucina &#232; una fornace nella quale viene scaldato o fuso il metallo. Nell'antichit&#224;, si potevano trovare fabbri e una piccola fucina in qualsiasi colonia. Le fornaci venivano alimentate con il carbone che veniva attizzato con dei soffietti a mano per creare un calore intenso. Il fabbro riscaldava il metallo nel forno e poi gli dava forma colpendolo su una incudine con dei pesanti martelli. Quando il metallo aveva preso la forma necessaria, veniva immerso nell'acqua per indurire il metallo e poi lasciato raffreddare. Il fabbro poteva anche fondere il metallo e distribuirlo in alcuni stampi.[PARAGRAPH:2]Le fucine moderne sono delle strutture industriali che necessitano di parecchi lavoratori per poter operare. Il funzionamento &#232; ancora simile a quello del fabbro di una volta, soltanto che &#232; in larga scala. Tonnellate di minerali vengono riversati all'interno di vasche gigantesche che poi vengono trasferiti alla fornace. Quando il metallo &#232; fuso, pu&#242; essere mischiato con altri materiali per ottenere una lega come l'acciaio oppure inviato a una fase di un processo successivo per rimuovere le impurit&#224;. Il risultato finale pu&#242; essere tagliato in lamine, versato in calchi, stampato in monete, eccetera.</Italian>
+		<Spanish>[TAB]Una fragua es un horno en el que se calienta o funde el metal. En la antig&#252;edad, pod&#237;an encontrarse herreros y peque&#241;as forjas en casi todos los asentamientos. Los hornos utilizaban carb&#243;n, que se atizaba manualmente por medio de unos fuelles, hasta conseguir un intenso calor. El herrero calentaba el metal en el horno y, a continuaci&#243;n, le daba forma llev&#225;ndolo a un yunque donde lo golpeaba con un pesado martillo. El producto terminado se introduc&#237;a en agua fr&#237;a, para que se enfriara y endureciera. El herrero tambi&#233;n pod&#237;a fundir el metal y verterlo en moldes.[PARAGRAPH:2]Las forjas modernas son enormes estructuras industriales que requieren muchos trabajadores. Sus principios son similares a los de una peque&#241;a forja, solo que a gran escala.  Toneladas de mineral se introducen en grandes contenedores, que a su vez se introducen en los hornos. Una vez que se ha fundido el metal, puede mezclarse con otros materiales para crear aleaciones como el acero, y tambi&#233;n se le puede someter a varios procesos diferentes para eliminar las impurezas. El metal acabado puede ser alisado, vertido en moldes, acu&#241;ado en forma de monedas y as&#237; sucesivamente.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOTHECARY</Tag>
+		<English>Apothecary</English>
+		<French>Apothicaire</French>
+		<German>Apotheke</German>
+		<Italian>Farmacista</Italian>
+		<Spanish>Boticario</Spanish>
+		<Russian>&#192;&#239;&#242;&#229;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOTHECARY_PEDIA</Tag>
+		<English>[TAB]Apothecary is a historical name for a medical professional (it's also the name of his business establishment) who formulates and dispenses materia medica to physicians, surgeons and patients - a role now served by a pharmacist. In addition to pharmacy responsibilities, the apothecary offered general medical advice and a range of services that are now performed solely by other specialist practitioners, such as surgery and midwifery.[PARAGRAPH:2]Apothecaries often operated through a retail shop which, in addition to ingredients for medicines, sold tobacco and patent medicines. In its investigation of herbal and chemical ingredients, the work of an apothecary may be regarded as a precursor of the modern sciences of chemistry and pharmacology, prior to the formulation of the scientific method.[PARAGRAPH:2]According to Sharif Kaf al-Ghazal, Jolyn Carter, and S. Hadzovic, the first apothecary shops were founded during the Middle Ages in Baghdad. The first one was founded by Muslim pharmacists in 754, during the Abbasid Caliphate, or Islamic Golden Age. Apothecaries were also active in Islamic Spain by the 11th century.[PARAGRAPH:2]By the end of the 14th century, Geoffrey Chaucer (1342-1400) was mentioning an English apothecary in the Canterbury Tales, specifically "The Nun's Priest's Tale". Another famous mention of an apothecary appears in William Shakespeare's play Romeo and Juliet, in which a poor apothecary sells Romeo an elixir of death with which Romeo commits suicide.[PARAGRAPH:2]By the 15th century, the apothecary gained the status of a skilled practitioner, but by the end of the 19th century, the medical professions had taken on their current institutional form, with defined roles for physicians and surgeons, and the role of the apothecary was more narrowly conceived as that of pharmacist.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
@@ -347,6 +647,8 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+		<!-- General Buildings -->
+		<!-- Religious Buildings -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE</Tag>
 		<English>Pagan Shrine</English>
@@ -355,6 +657,15 @@
 		<Italian>Santuario pagano</Italian>
 		<Spanish>Relicario pagano</Spanish>
 		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#234;&#224;&#255; &#209;&#226;&#255;&#242;&#251;&#237;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Tag>
+		<English>[TAB]Paganism (from Latin paganus, meaning "country dweller, rustic") is a word used to refer to various religions and religious beliefs from across the world. It is a term which, from a Western perspective, has modern connotations of spiritualist, animistic or shamanic practices or beliefs of any folk religion, and of historical and contemporary polytheistic religions in particular.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER</Tag>
@@ -366,6 +677,33 @@
 		<Russian>&#197;&#226;&#240;&#229;&#233;&#241;&#234;&#232;&#233; &#202;&#226;&#224;&#240;&#242;&#224;&#235;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
+		<English>[TAB]In the Jewish Diaspora, a Jewish quarter is the area of a city traditionally inhabited by Jews. Jewish quarters, like the Jewish ghettos in Europe, were often the outgrowths of segregated ghettos instituted by the surrounding Christian authorities. A Yiddish term for a Jewish quarter or neighborhood is "Di yiddishe gas", or "The Jewish street". Many European and Middle Eastern cities once had a historical Jewish quarter and some still have it.[PARAGRAPH:2]The Jewish ghettos existed because Jews were viewed as that they were foreigners due to their non-Christian beliefs in a Renaissance Christian environment. As a result, Jews were placed under strict regulations throughout many European cities. The character of ghettos has varied through times. In some cases, the ghetto was a Jewish quarter with a relatively affluent population (for instance the Jewish ghetto in Venice). In other cases, ghettos were places of terrible poverty and during periods of population growth, ghettos had narrow streets and tall, crowded houses. Residents had their own justice system. Around the ghetto stood walls that, during pogroms, were closed from inside to protect the community, but from the outside during Christmas, Pesach, and Easter Week to prevent the Jews from leaving during those times.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
+		<English>Islamic Mosque</English>
+		<French>Mosqu&#233;e</French>
+		<German>Islamische Moschee</German>
+		<Italian>Moschea Islamica</Italian>
+		<Spanish>Mezquita isl&#225;mica</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
+		<English>[TAB]A mosque is a place of worship for followers of Islam. The word entered the English language most likely through French (mosquée), from Spanish (mezquita), from Berber (tamezgida), ultimately originating in Arabic: masjid. The Arabic word masjid literally means a place of prostration. The word "mosque" in English refers to all types of buildings dedicated for Islamic worship, although there is a distinction in Arabic between the smaller masjid dedicated for the daily five prayers and the larger masjid jami where the daily five prayers and the Friday congregation sermons are held with a high volume of attendence. The masjid jami also plays more roles such as teaching Qur'an and educating future imams.[PARAGRAPH:2]The mosque serves as a place where Muslims can come together for salat (prayer) as well as a center for information, education, and dispute settlement. The Imam leads the prayer.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL</Tag>
 		<English>Islamic Minaret</English>
 		<French>Minaret Islamique</French>
@@ -373,6 +711,15 @@
 		<Italian>Minareto islamico</Italian>
 		<Spanish>Minarete islámico</Spanish>
 		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#237;&#224;&#240;&#229;&#242;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
+		<English>[TAB]Minarets are distinctive architectural features of Islamic mosques. Minarets are generally tall spires with onion-shaped crowns, usually either free standing or much taller than any surrounding support structure. As well as providing a visual cue to a Muslim community, the main function of the minaret is to provide a vantage point from which the muezzin can call out the adhan, calling the faithful to prayer.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA</Tag>
@@ -384,13 +731,31 @@
 		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#204;&#224;&#228;&#240;&#224;&#241;&#241;&#224;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_GREAT_CATHEDRAL</Tag>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
+		<English>[TAB]A "madrassa" is an Arabic institute of higher learning, usually religious in nature. The earliest madrasses were formed in Islamic mosques, where scholars gathered to study and debate religious and secular issues of the day. Over time students would come to study with the most learned scholars; the most popular teachers often had to construct separate buildings to hold their growing student population.[NEWLINE][NEWLINE]At the madrassas the students would learn to read and write and study religious doctrine, history and law. Some madrassas also taught logic, world history, foreign language, mathematics, art and science. Since state-run colleges and universities did not appear until later in history, the madrassas were critical centers of learning in many early Arabic cities.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
 		<English>Islamic Grand Mosque</English>
 		<French>Grande Mosqu&#233;e</French>
 		<German>Islamische Gro&#223;moschee</German>
 		<Italian>Grande Moschea islamica</Italian>
 		<Spanish>Gran Mezquita islámica</Spanish>
 		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#224;&#255; &#195;&#240;&#224;&#237;&#228;&#232;&#238;&#231;&#237;&#224;&#255; &#204;&#229;&#247;&#229;&#242;&#252;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
+		<English>[TAB]"Great Mosque" refers to a large mosque, resembling a Christian cathedral in size and significance. Examples of such mosques include the Grand Mosque of Damascus, the Great Mosque of Algiers or the Sultan Ahmed Mosque of Istanbul.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL</Tag>
@@ -402,12 +767,13 @@
 		<Russian>&#196;&#238;&#236; &#204;&#243;&#228;&#240;&#238;&#241;&#242;&#232;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
-		<English>The road to the Masjid al-Haram</English>
-		<French>Al-Masjid al-Haraam</French>
-		<German>Masjid al-Haram</German>
-		<Italian>Il Masjid al-Haram</Italian>
-		<Spanish>Mezquita al-Haram</Spanish>
+		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL_PEDIA</Tag>
+		<English>[TAB]The House of Wisdom was a library and translation institute in Abbassid-era Baghdad. It was a key institution in the Translation Movement and considered to have been a major intellectual center of the Islamic Golden Age. The House of Wisdom acted as a society founded by Abbasid caliphs Harun al-Rashid and his son al-Ma'mun who reigned from 813-833 CE. Based in Baghdad from the 9th to 13th centuries, many of the most learned Muslim scholars were part of this excellent research and educational institute.[PARAGRAPH:2]The term house of wisdom is a direct translation of Persian Sassanians' designation for a library. It was modeled on that of the Sassanians, had the purpose of translating books from Persian to Arabic, and also of preservation of translated books. The House was an unrivalled centre for the study of humanities and for sciences, including mathematics, astronomy, medicine, chemistry, zoology and geography. Drawing on Persian, Indian and Greek texts - including those of Pythagoras, Plato, Aristotle, Hippocrates, Euclid, Plotinus, Galen, Sushruta, Charaka, Aryabhata, Socrates and Brahmagupta - the scholars accumulated a great collection of world knowledge, and built on it through their own discoveries. The great scholars of the House of Wisdom included Al-Khawarizmi, the "father" of algebra, which takes its name from his book Kitab al-Jabr.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_TEMPLE</Tag>
@@ -608,6 +974,60 @@
 		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#224;&#255; &#209;&#229;&#236;&#232;&#237;&#224;&#240;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Tag>
+		<English>[TAB]A temple is a building or structure whose primary purpose is to facilitate the meeting of a church. Originally, Jewish Christians met in synagogues, such as the Cenacle, and in one another's homes. As Christianity grew and became more accepted by governments, rooms and, eventually, entire buildings were set aside for the explicit purpose of Christian worship.[PARAGRAPH:2]Traditional church buildings are often in the shape of a cross and frequently have a tower or dome. More modern church buildings have a variety of architectural styles and layouts; many buildings that were designed for other purposes have now been converted for church use, and, similarly, many original church buildings have been put to other uses.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CHAPEL_PEDIA</Tag>
+		<English>[TAB]A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_MONASTERY_PEDIA</Tag>
+		<English>[TAB]Monastery denotes the building, or complex of buildings, that houses a room reserved for prayer (e.g. an oratory) as well as the domestic quarters and workplace(s) of monastics, whether monks or nuns, and whether living in community or alone (hermits).[PARAGRAPH:2]Monasteries may vary greatly in size - a small dwelling accommodating only a hermit, or in the case of communities anything from a single building housing only a one senior and two or three junior monks or nuns, to vast complexes and estates housing tens or hundreds.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CATHEDRAL_PEDIA</Tag>
+		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_RELIQUARY_PEDIA</Tag>
+		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SEMINARY_PEDIA</Tag>
+		<English>[TAB]A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_CHAPEL</Tag>
 		<English>Belfry</English>
 		<French>B&#233;froi</French>
@@ -652,449 +1072,34 @@
 		<Spanish>Scriptorium</Spanish>
 		<Russian>&#207;&#238;&#236;&#229;&#249;&#229;&#237;&#232;&#229; &#228;&#235;&#255; &#239;&#229;&#240;&#229;&#239;&#232;&#241;&#234;&#232; &#240;&#243;&#234;&#238;&#239;&#232;&#241;&#229;&#233;</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN</Tag>
-		<English>Bazaar</English>
-		<French>Bazar</French>
-		<German>Bazar</German>
-		<Italian>Bazar</Italian>
-		<Spanish>Bazar</Spanish>
-		<Russian>&#193;&#224;&#231;&#224;&#240;</Russian>
-	</TEXT>
+		<!-- Religious Buildings -->
+		<!-- Other -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STABILITY_HELP</Tag>
 		<English>[ICON_BULLET]+1 Stability</English>
 		<French>[ICON_BULLET]+1 Stabilit&#233;</French>
-		<German/>
-		<Italian/>
-		<Spanish/>
+		<German>[ICON_BULLET]+1 Stability</German>
+		<Italian>[ICON_BULLET]+1 Stability</Italian>
+		<Spanish>[ICON_BULLET]+1 Stability</Spanish>
 		<Russian>[ICON_BULLET]+1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STABILITY_MANOR_HELP</Tag>
-		<English>[ICON_BULLET]+1 Stability</English>
-		<French>[ICON_BULLET]+1 Stabilit&#233;</French>
-		<German/>
-		<Italian/>
-		<Spanish/>
-		<Russian>[ICON_BULLET]+1 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;</Russian>
+		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
+		<English>[ICON_BULLET]Damages enemy units in the area.</English>
+		<French>[ICON_BULLET]Damages enemy units in the area.</French>
+		<German>[ICON_BULLET]Damages enemy units in the area.</German>
+		<Italian>[ICON_BULLET]Damages enemy units in the area.</Italian>
+		<Spanish>[ICON_BULLET]Damages enemy units in the area.</Spanish>
+		<Russian>[ICON_BULLET]&#207;&#238;&#226;&#240;&#229;&#230;&#228;&#224;&#229;&#242; &#226;&#240;&#224;&#230;&#229;&#241;&#234;&#232;&#229; &#229;&#228;&#232;&#237;&#232;&#246;&#251; &#226; &#238;&#225;&#235;&#224;&#241;&#242;&#232;.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
-		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
-		<French>.</French> 
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
-		<English>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods.[PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
-		<French>.</French> 
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
-		<English>[TAB]A brewery is a dedicated building for the making of beer, though beer can be made in the home, and has been for much of beer's history. A company which makes beer is called either a brewery or a brewing company.
-[TAB]The diversity of size in breweries is matched by the diversity of processes, degrees of automation, and kinds of beer produced in breweries. Typically a brewery is divided into distinct sections, with each section reserved for one part of the brewing process.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_PEDIA</Tag>
-		<English>[TAB]Burgundy wine (French: Bourgogne or Vin de Bourgogne) is wine made in the Burgundy region in eastern France, in the valleys and slopes west of the Saône River, a tributary of the Rhône. The most famous wines produced here - those commonly referred to as "Burgundies" - are red wines made from Pinot Noir grapes or white wines made from Chardonnay grapes. Red and white wines are also made from other grape varieties, such as Gamay and Aligoté respectively. Small amounts of rosé and sparkling wine are also produced in the region. Chardonnay-dominated Chablis and Gamay-dominated Beaujolais are formally part of Burgundy wine region, but wines from those subregions are usually referred to by their own names rather than as "Burgundy wines".
-[TAB]The status of Burgundy wines continued in the court of the House of Valois, which ruled as Dukes of Burgundy for much of the 14th and 15th centuries. It is from this era we have the first reliable reference to grape varieties in Burgundy. Pinot Noir was first mentioned in 1370 under the name Noirien, but it is believed that it was cultivated earlier than that, since no other grape variety associated with Medieval Burgundy is believed to have been able to produce red wines of a quality able to impress the papal court. On August 6, 1395, Duke Philip the Bold issued a decree concerned with safeguarding the quality of Burgundy wines. The duke declared Gamay, which was a higher-yielding grape than Pinot Noir in the 14th century as it is today, unfit for human consumption and banned the use of organic fertilizer (manure), which probably increased yields even further to the detriment of quality. High-quality white Burgundy wines of this era were probably made from Fromenteau, which is known as a quality grape in northeastern France in this time. Fromenteau is probably the same variety as today's Pinot Gris. Chardonnay is a much later addition to Burgundy's vineyards.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
-		<English>[TAB]Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.
-[TAB]Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.
-[TAB]In Europe, it is the provision of accommodation, if anything, that now differentiates inns from taverns, alehouses and pubs. The latter tend only to supply alcohol (although in the UK the conditions of their licence sometimes require them to have a nominal supply of food and soft drinks). Inns tend to be grander and more long-lived establishments. Famous London examples include the George and The Tabard. There is however no longer a formal distinction between an inn and other kinds of establishment, and many pubs will use the name "inn", either simply because they are long established and maybe were once a Coaching inn, or to summon up a particular kind of image; however, originally an Inn had to provide not only food and lodging, but also stabling and fodder for the traveller's horse(s) and for fresh horses for the Mail coach.
-[TAB]The original functions of an inn are now usually split among separate establishments, such as hotels, lodges, and motels, all of which might provide the traditional functions of an inn but which focus more on lodging customers than on other services; public houses, which are primarily alcohol-serving establishments; and restaurants and taverns, which serve food and drink. (Hotels often contain restaurants and also often serve complimentary breakfast and meals, thus providing all of the functions of traditional inns.) In North America, the lodging aspect of the word "inn" lives on in hotel brand names like Holiday Inn, and in some state laws that refer to lodging operators as innkeepers.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
-		<English>[TAB]A manor house or fortified manor-house is a country house, which has historically formed the administrative centre of a manor, the lowest unit of territorial organization in the feudal system. The term is sometimes applied to relatively small country houses which belonged to gentry families, as well as to grand stately homes, particularly as a technical term for minor late medieval fortified country houses intended more for show than for defence.
-[TAB]In general terms, the manor house was the dwelling house, or "capital messuage", of a feudal lord of a manor, which he occupied only on occasional visits if he held many manors. As such it was the place in which sessions of his "court baron", or manor court, were held. Sometimes a steward or seneschal was appointed by the seigneurial lord to oversee and manage his different manorial properties. The day-to-day administration was delegated to a bailiff, or reeve.
-[TAB]Although not typically built with strong fortifications as castles were, many manor-houses were partly fortified: they were enclosed within walls or ditches that often included the farm buildings as well. Arranged for defence against robbers and thieves, it was often surrounded by a moat with a drawbridge, and equipped with small gatehouses and watchtowers; but was not provided with a keep or with large towers or lofty curtain walls so as to withstand a siege. The primary feature of the manor-house was its great hall, to which subsidiary apartments were added as the lessening of feudal warfare permitted more peaceful domestic life.
-[TAB]By the beginning of the 16th century, manor-houses as well as small castles began to acquire the character and amenities of the residences of country gentlemen. This late 16th century transformation produced many of the smaller Renaissance châteaux of France and the numerous country mansions of the Elizabethan and Jacobean styles in England.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA_PEDIA</Tag>
-		<English>[TAB]A noria is a machine for lifting water into a small aqueduct, either for the purpose of irrigation or, in at least one known instance, to feed seawater into a saltern.
-[TAB]Muslim engineers used norias to discharge water into aqueducts which carried the water to towns and fields. Some of the norias used in the medieval Islamic world were as large as 20 meters in diameter, the one in Hama being a surviving example still used in modern times. It has 120 water collection compartments and could raise as much as 95 litres of water per minute.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
-		<English>[TAB]A wharf is a landing place or pier where ships may tie up and load or unload.
-[TAB]A wharf commonly comprises a fixed platform, often on pilings. They often serve as interim storage areas with warehouses, since the typical objective is to unload and reload vessels as quickly as possible. Where capacity is sufficient a single quay constructed along the land adjacent to the water is normally used; where there is a need for more capacity many wharves will instead be constructed projecting into the water, as with the well known collection of wharves in San Francisco. A pier, raised over the water rather than within it, is one type of wharf, commonly used for cases where the weight or volume of cargos will be low.
-[TAB]Smaller and more modern wharves are sometimes built on flotation devices (pontoons) to keep them at the same level to the ship even during changing tides.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUNGEON_PEDIA</Tag>
-		<English>[TAB]A dungeon is a room or cell in which prisoners are kept, especially underground. Dungeons are generally associated with medieval castles, though their association with torture probably belongs more to the Renaissance period. The image of dark, damp dungeons as the scene of lengthy incarceration and unspeakable cruelty is a powerful one in popular culture.
-[TAB]In its original medieval usage, donjon meant a keep, the main tower of a castle which formed the final defensive position to which the garrison could retreat when outer fortifications were overcome. By association of a tower with a prison, its English meaning has evolved over time to mean an underground prison or oubliette, typically in a basement of a castle.
-[TAB]In French the term donjon still refers to a "keep", and the term oubliette is a more appropriate translation of English "dungeon". Donjon is therefore a false friend to "dungeon".</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
-		<English>[TAB]Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
-		<English>[TAB]The Venetian Arsenal is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.
-[TAB]The Byzantine-style establishment may have existed as early as the 8th century, though the present structure is usually said to have been begun in 1104, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina'a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.
-[TAB]Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.
-[TAB]Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early 16th century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Tag>
-		<English>[TAB]Paganism (from Latin paganus, meaning "country dweller, rustic") is a word used to refer to various religions and religious beliefs from across the world. It is a term which, from a Western perspective, has modern connotations of spiritualist, animistic or shamanic practices or beliefs of any folk religion, and of historical and contemporary polytheistic religions in particular.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
-		<English>[TAB]In the Jewish Diaspora, a Jewish quarter is the area of a city traditionally inhabited by Jews. Jewish quarters, like the Jewish ghettos in Europe, were often the outgrowths of segregated ghettos instituted by the surrounding Christian authorities. A Yiddish term for a Jewish quarter or neighborhood is "Di yiddishe gas", or "The Jewish street". Many European and Middle Eastern cities once had a historical Jewish quarter and some still have it.
-[TAB]The Jewish ghettos existed because Jews were viewed as that they were foreigners due to their non-Christian beliefs in a Renaissance Christian environment. As a result, Jews were placed under strict regulations throughout many European cities. The character of ghettos has varied through times. In some cases, the ghetto was a Jewish quarter with a relatively affluent population (for instance the Jewish ghetto in Venice). In other cases, ghettos were places of terrible poverty and during periods of population growth, ghettos had narrow streets and tall, crowded houses. Residents had their own justice system. Around the ghetto stood walls that, during pogroms, were closed from inside to protect the community, but from the outside during Christmas, Pesach, and Easter Week to prevent the Jews from leaving during those times.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
-		<English>[TAB]A mosque is a place of worship for followers of Islam. The word entered the English language most likely through French (mosquée), from Spanish (mezquita), from Berber (tamezgida), ultimately originating in Arabic: masjid. The Arabic word masjid literally means a place of prostration. The word "mosque" in English refers to all types of buildings dedicated for Islamic worship, although there is a distinction in Arabic between the smaller masjid dedicated for the daily five prayers and the larger masjid jami where the daily five prayers and the Friday congregation sermons are held with a high volume of attendence. The masjid jami also plays more roles such as teaching Qur'an and educating future imams.
-[TAB]The mosque serves as a place where Muslims can come together for salat (prayer) as well as a center for information, education, and dispute settlement. The Imam leads the prayer.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
-		<English>[TAB]Minarets are distinctive architectural features of Islamic mosques. Minarets are generally tall spires with onion-shaped crowns, usually either free standing or much taller than any surrounding support structure. As well as providing a visual cue to a Muslim community, the main function of the minaret is to provide a vantage point from which the muezzin can call out the adhan, calling the faithful to prayer.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
-		<English>[TAB]A "madrassa" is an Arabic institute of higher learning, usually religious in nature. The earliest madrasses were formed in Islamic mosques, where scholars gathered to study and debate religious and secular issues of the day. Over time students would come to study with the most learned scholars; the most popular teachers often had to construct separate buildings to hold their growing student population.[NEWLINE][NEWLINE]At the madrassas the students would learn to read and write and study religious doctrine, history and law. Some madrassas also taught logic, world history, foreign language, mathematics, art and science. Since state-run colleges and universities did not appear until later in history, the madrassas were critical centers of learning in many early Arabic cities.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
-		<English>[TAB]"Great Mosque" refers to a large mosque, resembling a Christian cathedral in size and significance. Examples of such mosques include the Grand Mosque of Damascus, the Great Mosque of Algiers or the Sultan Ahmed Mosque of Istanbul.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL_PEDIA</Tag>
-		<English>[TAB]The House of Wisdom was a library and translation institute in Abbassid-era Baghdad. It was a key institution in the Translation Movement and considered to have been a major intellectual center of the Islamic Golden Age. The House of Wisdom acted as a society founded by Abbasid caliphs Harun al-Rashid and his son al-Ma'mun who reigned from 813-833 CE. Based in Baghdad from the 9th to 13th centuries, many of the most learned Muslim scholars were part of this excellent research and educational institute.
-[TAB]The term house of wisdom is a direct translation of Persian Sassanians' designation for a library. It was modeled on that of the Sassanians, had the purpose of translating books from Persian to Arabic, and also of preservation of translated books. The House was an unrivalled centre for the study of humanities and for sciences, including mathematics, astronomy, medicine, chemistry, zoology and geography. Drawing on Persian, Indian and Greek texts - including those of Pythagoras, Plato, Aristotle, Hippocrates, Euclid, Plotinus, Galen, Sushruta, Charaka, Aryabhata, Socrates and Brahmagupta - the scholars accumulated a great collection of world knowledge, and built on it through their own discoveries. The great scholars of the House of Wisdom included Al-Khawarizmi, the "father" of algebra, which takes its name from his book Kitab al-Jabr.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Tag>
-		<English>[TAB]A temple is a building or structure whose primary purpose is to facilitate the meeting of a church. Originally, Jewish Christians met in synagogues, such as the Cenacle, and in one another's homes. As Christianity grew and became more accepted by governments, rooms and, eventually, entire buildings were set aside for the explicit purpose of Christian worship.
-[TAB]Traditional church buildings are often in the shape of a cross and frequently have a tower or dome. More modern church buildings have a variety of architectural styles and layouts; many buildings that were designed for other purposes have now been converted for church use, and, similarly, many original church buildings have been put to other uses.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CHAPEL_PEDIA</Tag>
-		<English>[TAB]A belfry, or simply bell tower, is a tower which contains one or more bells, or which is designed to hold bells, even if it has none. In the European tradition, such a tower most commonly serves as part of a church and contains church bells.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_MONASTERY_PEDIA</Tag>
-		<English>[TAB]Monastery denotes the building, or complex of buildings, that houses a room reserved for prayer (e.g. an oratory) as well as the domestic quarters and workplace(s) of monastics, whether monks or nuns, and whether living in community or alone (hermits).
-[TAB]Monasteries may vary greatly in size - a small dwelling accommodating only a hermit, or in the case of communities anything from a single building housing only a one senior and two or three junior monks or nuns, to vast complexes and estates housing tens or hundreds.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_CATHEDRAL_PEDIA</Tag>
-		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_RELIQUARY_PEDIA</Tag>
-		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_SEMINARY_PEDIA</Tag>
-		<English>[TAB]A seminary, theological college, or divinity school is a specialized education institution for the purpose of instructing students (seminarians) in philosophy, theology, spirituality and the religious life, usually in order to prepare them to become members of the clergy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU_PEDIA</Tag>
-		<English>[TAB]A château is a manor house or residence of the lord of the manor or a country house of nobility or gentry, with or without fortifications, originally-and still most frequently-in French-speaking regions. Where clarification is needed, a fortified château (that is, a castle) is called a château fort, such as Château fort de Roquetaillade. Care should be taken when translating the word château into English. It is not used in the same way as "castle", and most châteaux are described in English as "palaces" or "country houses" rather than "castles". For example, the Château de Versailles is so called because it was located in the countryside when it was built, but it does not bear any resemblance to a castle, so it is usually known in English as the Palace of Versailles.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Tag>
-		<English>[TAB]A warehouse is a commercial building for storage of goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs, etc. They are usually large plain buildings in industrial areas of cities and towns. They usually have loading docks to load and unload goods from trucks. Sometimes warehouses load and unload goods directly from railways, airports, or seaports. They often have cranes and forklifts for moving goods, which are usually placed on ISO standard pallets loaded into pallet racks.
-[TAB]Stored goods can include any raw materials, components, or finished goods associated with agriculture, manufacturing, or commerce.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GENOA_BANK</Tag>
-		<English>Genoan Bank</English>
-		<French>Banque Génoise</French>
-		<German>Genuesische Bank</German>
-		<Italian>Banca di Genoan</Italian>
-		<Spanish>Banco de Genoan</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
-		<English>Star Fort</English>
-		<French>Tracé à l'Italienne</French>
-		<German>Sternförmige Festung</German>
-		<Italian>Fortificazione alla stella</Italian>
-		<Spanish>Estrelle Fuerte</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
-		<English>Royal Exchange</English>
-		<French>Bourse Royale</French>
-		<German>K&#246;nigliche B&#246;rse</German>
-		<Italian>Borsa Reale</Italian>
-		<Spanish>Bolsa Real</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Tag>
-		<English>[TAB]After the Turks conquered much of southern Hungary, a new defensive line inside the country was strongly needed. Out of castles, mansions, churches and monasteries a new defensive line was built with the efforts of the bondsmen of the surrounding area within a short time. A new system of castles was created, which began at the Adriatic Sea, ended at the lower Danube River and enclosed the area that was controlled by the Turks. The most important functions of these V&#233;gv&#225;rs were to defend the borders, secure the roads and the river crossings, the prevention of the enemy troop supplies and the security of the people and their goods in the surrounding area.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE_PEDIA</Tag>
-		<English>[TAB]A smokehouse is a building where meat or fish is cured with smoke. The finished product might be stored in the building, sometimes for a year or more.
-[TAB]Traditional smokehouses served both as meat smokers and to store the meats, often for groups and communities of people. Food preservation occurred by salt curing and extended cold smoking for two weeks or longer. Smokehouses were often secured to prevent animals and thieves from accessing the food.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TANNERY_PEDIA</Tag>
-		<English>[TAB]Tanning is the process of making leather, which does not easily decompose, from the skins of animals, which do. Often this uses tannin, an acidic chemical compound. Coloring may occur during tanning. A tannery is the term for a place where these skins are processed.
-[TAB]Tanning leather involves a process which permanently alters the protein structure of skin so that it cannot ever return to rawhide. Making rawhide does not require the use of tannin and is made simply by removing the flesh and fat and then the hair by way of soaking in an aqueous solution (often called liming when using lime and water or bucking when using wood ash (lye) and water), then scraping over a beam with a somewhat dull knife, and then leaving to dry, usually stretched on a frame so that it dries flat. The two aforementioned solutions for removing the hair also act to clean the fiber network of the skin and therefore allow penetration and action of the tanning agent.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL_PEDIA</Tag>
-		<English>[TAB]Textile manufacturing is a major industry. It is based in the conversion of three types of fibre into yarn, then fabric, then textiles. These are then fabricated into clothes or other artifacts. Cotton remains the most important natural fibre, so is treated in depth. There are many variable processes available at the spinning and fabric-forming stages coupled with the complexities of the finishing and colouration processes to the production of a wide ranges of products. There remains a large industry that uses hand techniques to achieve the same results.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WEAVER_PEDIA</Tag>
-		<English>[TAB]Weaving is a textile craft in which two distinct sets of yarns or threads, called the warp and the filling or weft (older woof), are interlaced to form a fabric or cloth. The warp threads run lengthways on the piece of cloth, and the weft runs across from side to side, across the bolt of cloth.
-[TAB]Cloth is woven on a loom, a device that holds the warp threads in place while filling threads are woven through them. Weft is an old English word meaning "that which is woven".
-[TAB]The way the warp and filling threads interlace with each other is called the weave. The majority of woven products are created with one of three basic weaves: plain weave, satin weave, or twill.
-[TAB]Woven cloth can be plain (in one colour or a simple pattern), or can be woven in decorative or artistic designs, including tapestries. Fabric in which the warp and/or weft is tie-dyed before weaving is called ikat.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
-		<English>[TAB]A number of prominent Genoese families were involved in the establishment and governance of the Bank, including the Houses of Grimaldi and Serra. Unusually for its time, the Bank made use of a number of Jewish agents, including the Ghisolfi clan that managed certain possessions around the Black Sea.
-[TAB]The Bank was governed by four consuls who administered its finances and directed investments. Because the Republic's ruling oligarchs were normally prominent in Bank politics, it is often difficult to determine where the Bank's influence ended and the Republic's began.
-[TAB]Many of Genoa's overseas territories were governed either directly or indirectly by the Bank. In 1453 the Republic handed over governance of Corsica, Gazaria, and a number of other possessions to Bank officials, though over the course of the fifteenth century the Republic gradually reclaimed many of its territories from Bank control. The Taman peninsula remained in the control of the de Ghisolfi family, but the princes of that clan now reported to the Bank.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE_PEDIA</Tag>
-		<English>[TAB]An important technological innovation, bows were perhaps the first machines built to store energy slowly and then release it quickly. Bows and arrows have been in existence for 30,000 years. The original bows were made of springy wood - yew, bamboo, palm, and so forth. By 1300 BC, bows were made of composite material - wood, horn, and sinew. The first arrows were probably straight wooden sticks with one end sharpened and fire-hardened. Stone tips were added once man learned to sharpen flint.</English>
-		<French>[TAB]Importante innovation technique, l'arc est peut-&#234;tre le premier m&#233;canisme invent&#233; pour emmagasiner l'&#233;nergie et la lib&#233;rer d'un coup. Il existe depuis 30 000 ans et &#233;tait fabriqu&#233; &#224; l'origine avec du bois souple, comme l'if, le bambou ou le palmier. Vers 1 300 av. J.-C. apparaissent les arcs composites, con&#231;us avec du bois, de la corne et des tendons. Les premi&#232;res fl&#232;ches &#233;taient probablement des bouts de bois droits, dont une extr&#233;mit&#233; &#233;tait aiguis&#233;e et durcie au feu. Les pointes en pierre sont apparues une fois que l'homme a appris &#224; tailler le silex.</French>
-		<German>[TAB]B&#246;gen waren eine wichtige Erfindung, da sie erstmals die Speicherung und schnelle Freigabe kinetischer Energie erm&#246;glichten. Die ersten B&#246;gen entstanden vor etwa 30.000 Jahren aus elastischem Holz (Eibe, Bambus, Palme usw.). Um 1300 vor Christus entstanden B&#246;gen aus Verbundwerkstoffen, wie Holz, Horn und Sehnen. Die ersten Pfeile waren vermutlich angespitzte und im Feuer geh&#228;rtete &#196;ste. Als der Mensch schlie&#223;lich lernte, Feuerstein zu sch&#228;rfen, wurden die traditionellen Holzspitzen von Steinspitzen abgel&#246;st.r Zeit in Anspruch als die Ausbildung eines Bogensch&#252;tzen.</German>
-		<Italian>[TAB]L'arco rappresenta un'innovazione tecnologica importante, essendo il primo modello di &quot;macchinario&quot; in grado di incamerare energia lentamente per poi rilasciarla rapidamente. Archi e frecce esistono da più di 30.000 anni. I primi archi erano fatti con del legno molto elastico, come quello del tasso, del bambù e della palma. Nel 1300 a. C., gli archi erano realizzati con più materiali, come legno, corna e tendini animali. Le prime frecce erano probabilmente dei semplici legni con la punta affilata o temprata. Successivamente, quando l'uomo imparò la lavorazione della selce, le punte divennero in pietra.</Italian>
-		<Spanish>[TAB]El arco, importante innovaci&#243;n tecnol&#243;gica, seguramente fuera la primera m&#225;quina capaz de almacenar la energ&#237;a lentamente y liberarla r&#225;pidamente. Los arcos y las flechas existen desde hace 30.000 a&#241;os. Los primeros arcos estaban hechos de maderas el&#225;sticas: tejo, bamb&#250;, palma, etc. Desde el a&#241;o 1300 a. C., se fabricaban ya con materiales compuestos: madera, cuerno y tendones. Probablemente, las primeras flechas fueran astiles de madera con un extremo endurecido al fuego. Una vez que el hombre aprendi&#243; a afilar el s&#237;lex, se a&#241;adieron puntas de piedra.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE_PEDIA</Tag>
-		<English>[TAB]A coffeehouse or coffee shop is an establishment which primarily serves prepared coffee or other hot beverages. It shares some of the characteristics of a bar, and some of the characteristics of a restaurant, but it is different from a cafeteria. As the name suggests, coffeehouses focus on providing coffee and tea as well as light snacks. Many coffee houses in the Middle East, and in West Asian immigrant districts in the Western world, offer shisha (nargile in Turkish and Greek), flavored tobacco smoked through a hookah.
-[TAB]From a cultural standpoint, coffeehouses largely serve as centers of social interaction: the coffeehouse provides social members with a place to congregate, talk, write, read, entertain one another, or pass the time, whether individually or in small groups of 2 or 3.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP</Tag>
-		<English>Vaivadija</English>
-		<French>Vaivadija</French>
-		<German>Vaivadija</German>
-		<Italian>Vaivadija</Italian>
-		<Spanish>Vaivadija</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP_PEDIA</Tag>
-		<English>[TAB]A voivodeship, also spelled voivodship, voivodina or vojvodina, is a type of administrative division dating to medieval Poland, Romania, Hungary, Lithuania, Latvia, Russia and Serbia (see Vojvodina), ruled by a voivode (wojewoda, voivod). The voivode (literally, "leader of warriors", equivalent to Dux Exercituum or Herzog) was originally the military commander next to the ruler.[PARAGRAPH:2]Contemporarily, the term (or its variant spelling voivodship) is used for the województwa (preferably translated as "provinces") of Poland, of which there are currently 16. There is also an autonomous province of Vojvodina in Serbia.[PARAGRAPH:2]The word "voivodeship" appears in some of the larger English dictionaries, such as the OED and Webster's Third New International Dictionary, though it is not in common usage. Depending on the context, historic voivodeships may also be referred to as "duchies," "provinces," "palatinates," "administrative districts" or "regions."</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT_PEDIA</Tag>
-		<English>[TAB]The allotment system (Swedish: indelningsverket) was a system used in Sweden for keeping a trained army at all times. This system came into use in around 1640, and was replaced in the early 1900s by the Swedish Armed Forces conscription system. Two different allotment systems have been in use in Sweden; they are the old allotment system (äldre indelningsverket) and the new allotment system (yngre indelningsverket), the latter often referred to as just "the allotment system". The soldiers who were part of these systems were known as "tenement soldiers" (indelta soldater, the Swedish term, does not have the same meaning) due to the small tenements or crofts allotted to them.[PARAGRAPH:2][TAB]Originally, the allotment system was a name for a system used to pay servants of the state, like officers and clergy. It was introduced because of an often felt shortage of money, and the allotment system tried to solve this by localizing taxes; meaning that payment consisted of an individual's right to collect certain taxes. Later on it referred to an organization created to provide soldiers to the armed forces, properly known as "det ständiga knektehallet" (literally "the permanent soldier household"). The reason for this development of the term is that a large part of the allotment system was used to support det ständiga knektehallet.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STAR_FORT_PEDIA</Tag>
-		<English>[TAB]A star fort, or trace italienne, is a fortification in the style that evolved during the age of gunpowder, when cannon came to dominate the battlefield, and was first seen in the mid-15th century in Italy. Passive ring-shaped (enceinte) fortifications of the Medieval era proved vulnerable to damage or destruction by cannon fire, when it could be directed from outside against a perpendicular masonry wall. In addition, an attacking force that could get close to the wall was able to conduct undermining operations in relative safety, as the defenders could not shoot at them from nearby walls. In contrast, the star fortress was a very flat structure composed of many triangular bastions, specifically designed to cover each other, and a ditch. Further structures, such as ravelins, hornworks or crownworks, and detached forts could be added to create a complex symmetrical structure.[PARAGRAPH:2][TAB]Star fortifications were further developed in the late fifteenth and early sixteenth centuries primarily in response to the French invasion of the Italian peninsula. The French army was equipped with new cannon and bombards that were easily able to destroy traditional fortifications built in the Middle Ages. In order to counteract the power of the new weapons, defensive walls were made lower and thicker. They were built of many materials, usually earth and brick, as brick does not shatter on impact from a cannonball as does stone. Another important design modification were the bastions that characterized the new fortresses. In order to improve the defense of the fortress, covering fire had to be provided, often from multiple angles. The result was the development of star-shaped fortresses.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Tag>
-		<English>[TAB]The Byzantine historian Pseudo-Simeon stated that Krum sent a 30,000 strong cavalry, "the whole armoured with iron", which devastated Thrace. According to inscriptions found in the region of Pliska, Preslav, Madara and Shabla in north-eastern Bulgaria, armaments for 1,713 heavy riders were available. Assuming that the surviving inscriptions are around 1/10 of the total number, that makes 17,130 men only in the so called "inner region" of Bulgaria. After comparison with the data of Pseudo-Simeon, it can be assumed that the heavy cavalry component of the Bulgarian army numbered between 17-20,000 and 30,000 men, depending on the level of mobilization. During the end of the 9th and the beginning of the 10th centuries, Emperor Simeon the Great was able to lead in battle more than 60,000 soldiers.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_PEDIA</Tag>
-		<English>[TAB]A night watch was a law enforcement formation found in some countries and historical periods, usually subordinate to the local municipal government. Historically many cities had their own guard formations, which doubled as police and military force in times of need.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Tag>TXT_KEY_BOMBARD_IMMUNE_DEFENSE</Tag>
+		<English>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</English>
+		<French>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</French>
+		<German>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</German>
+		<Italian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1</Tag>
@@ -1132,4 +1137,5 @@
 		<Spanish>with [LINK=literal]%s1_Religion[\LINK]</Spanish>
 		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian>
 	</TEXT>
+		<!-- Other -->
 </Civ4GameText>

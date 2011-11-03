@@ -38792,7 +38792,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=0
-	BonusType=BONUS_COFFEE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -41221,7 +41220,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=14
-	BonusType=BONUS_COFFEE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
