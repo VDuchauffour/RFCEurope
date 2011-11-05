@@ -8380,7 +8380,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_NIGHT_WATCH</BuildingClassType>
 					<BuildingType>BUILDING_SWEDISH_TENNANT</BuildingType>
 				</Building>
 			</Buildings>
