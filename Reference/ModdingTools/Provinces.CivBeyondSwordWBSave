@@ -38825,7 +38825,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=6
-	BonusType=BONUS_RELIC
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
