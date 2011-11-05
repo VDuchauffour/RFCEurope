@@ -22,9 +22,11 @@ Changes for Beta 14:
 		- Adjusted "home flags" on the colony screen
 		- Swedish Tennant is now a Night Watch replacement (what's the fun in a UB if it's preplaced in all your cities so you can never build it?) - from RFCE++
 		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans. They have reduced cost though
+		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
+		- Removed Relic resource from the map (was under Jerusalem)
 
 	XML/text updates:
 		- More Unique Dawn of Man texts
