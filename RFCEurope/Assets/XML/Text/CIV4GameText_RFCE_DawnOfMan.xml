@@ -16,12 +16,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
-		<English>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</English>
-		<French>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</French>
-		<German>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</German>
-		<Italian>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</Italian>
-		<Spanish>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</Spanish>
-		<Russian>RHYE'S AND FALL OF CIVILIZATIONS - EUROPE</Russian>
+		<English>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</English>
+		<French>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</French>
+		<German>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</German>
+		<Italian>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Italian>
+		<Spanish>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Spanish>
+		<Russian>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Russian>
 	</TEXT>
 		<!-- Civ Specific Dawn of Man -->
 		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->
@@ -80,7 +80,7 @@
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
-	<TEXT> <!-- Venezia -->
+	<TEXT> <!-- Venice -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_6</Tag>
 		<English>It is the year 810 AD. Fleeing the onslaught of the barbarian Lombards, your people and the remnants of the Byzantine Exarchate of Ravenna have settled on the inaccessible islands in the lagoon. The recent agreement between Charlemange of the Franks and emperor Nicephorus in Constantinople means that you will be left alone for the time being. There has never been a better opportunity to build a rich trading empire that will dominate the seas!</English>
 		<French>.</French>
