@@ -195,6 +195,24 @@
 		<Russian>Cumans</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS</Tag>
+		<English>Southern Slavs</English>
+		<French>Southern Slavs</French>
+		<German>Southern Slavs</German>
+		<Italian>Southern Slavs</Italian>
+		<Spanish>Southern Slavs</Spanish>
+		<Russian>Southern Slavs</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES</Tag>
+		<English>Germanic Tribes</English>
+		<French>Germanic Tribes</French>
+		<German>Germanic Tribes</German>
+		<Italian>Germanic Tribes</Italian>
+		<Spanish>Germanic Tribes</Spanish>
+		<Russian>Germanic Tribes</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_VIKINGS</Tag>
 		<English>Vikings</English>
 		<French>Vikings</French>
@@ -202,6 +220,24 @@
 		<Italian>Vikings</Italian>
 		<Spanish>Vikings</Spanish>
 		<Russian>Vikings</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SCOTS</Tag>
+		<English>Scots</English>
+		<French>Scots</French>
+		<German>Scots</German>
+		<Italian>Scots</Italian>
+		<Spanish>Scots</Spanish>
+		<Russian>Scots</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_WELSH</Tag>
+		<English>Welsh</English>
+		<French>Welsh</French>
+		<German>Welsh</German>
+		<Italian>Welsh</Italian>
+		<Spanish>Welsh</Spanish>
+		<Russian>Welsh</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_MAGYARS</Tag>
@@ -238,6 +274,24 @@
 		<Italian>Sassanids</Italian>
 		<Spanish>Sassanids</Spanish>
 		<Russian>Sassanids</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_BEDUINS</Tag>
+		<English>Beduin Tribes</English>
+		<French>Beduin Tribes</French>
+		<German>Beduin Tribes</German>
+		<Italian>Beduin Tribes</Italian>
+		<Spanish>Beduin Tribes</Spanish>
+		<Russian>Beduin Tribes</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_BERBERS</Tag>
+		<English>Berbers</English>
+		<French>Berbers</French>
+		<German>Berbers</German>
+		<Italian>Berbers</Italian>
+		<Spanish>Berbers</Spanish>
+		<Russian>Berbers</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES</Tag>

@@ -35,6 +35,7 @@ Changes for Beta 14:
 		- Pedia entry for Luxury Store and Apothecary
 		- Added Cordoban dynamic civ names when respawned as the Hafsids in Tunisia
 		- Dynamic civ names for Lithuania
+		- More unique names to barbarians
 
 	Art/Sound updates:
 
@@ -42,6 +43,7 @@ Changes for Beta 14:
 		- Improved french start (+1 axeman and +1 worker)
 		- Reduced early barbarian Sassanid pressure on Byzantium, and early christian barb pressure on Cordoba (only on Emperor difficulty)
 		- Increased NE barbarian pressure on Bulgaria, also more Pecheneg and Cuman activity in and near the Carpathian-basin
+		- Seljuks strike on Anatolia harder, but lighter in the Levant. OTOH increased Beduin barbarian threat from the Arabian peninsula
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
