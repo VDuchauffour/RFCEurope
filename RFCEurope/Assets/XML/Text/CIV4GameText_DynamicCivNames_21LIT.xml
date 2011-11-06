@@ -24,7 +24,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT02</Tag>
-		<English>Lithuania</English>
+		<English>Grand Duchy of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -51,7 +51,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT05</Tag>
-		<English>Lithuania</English>
+		<English>Lithuanian Republic</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -74,7 +74,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT08</Tag>
-		<English>Lithuania</English>
+		<English>Sultanate of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -83,7 +83,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT09</Tag>
-		<English>Lithuania</English>
+		<English>Islamic Republic of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -92,7 +92,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT10</Tag>
-		<English>Lithuania</English>
+		<English>Exarchate of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -101,7 +101,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT11</Tag>
-		<English>Lithuania</English>
+		<English>Duchy of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -110,7 +110,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT12</Tag>
-		<English>Lithuania</English>
+		<English>Emirate of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -119,7 +119,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT13</Tag>
-		<English>Lithuania</English>
+		<English>Spanish Baltics</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -128,7 +128,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT14</Tag>
-		<English>Lithuania</English>
+		<English>Norse Baltics</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -137,14 +137,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT15</Tag>
-		<English>Venetian Netherlands</English>
-		<French>Pays-Bas V&#233;nitienne</French>
-		<German>Venezianische Niederlande</German>
-		<Italian/><Spanish/><Russian/>
+		<English>Venetian Lithuania</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT16</Tag>
-		<English>Lithuania</English>
+		<English>Russian Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -153,7 +155,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT17</Tag>
-		<English>Lithuania</English>
+		<English>German Baltics</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -162,7 +164,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT18</Tag>
-		<English>Lithuania</English>
+		<English>County of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -171,7 +173,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT19</Tag>
-		<English>Lithuania</English>
+		<English>Habsburg Baltics</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -180,7 +182,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT20</Tag>
-		<English>Lithuania</English>
+		<English>Principality of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -189,7 +191,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT21</Tag>
-		<English>Lithuania</English>
+		<English>Province of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

@@ -34,6 +34,7 @@ Changes for Beta 14:
 		- Swedish Soldier Tennant renamed to Soldattorp
 		- Pedia entry for Luxury Store and Apothecary
 		- Added Cordoban dynamic civ names when respawned as the Hafsids in Tunisia
+		- Dynamic civ names for Lithuania
 
 	Art/Sound updates:
 

@@ -134,15 +134,8 @@
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_GER17</Tag>
-		<English>Kingdom of Germany</English>
-		<French>Royaume de Germanie</French>
-		<German>Königreich Deutschland</German>
-		<Italian/><Spanish/><Russian/>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DN_GER18</Tag>
-		<English>Counties of Germany</English>
+		<English>German Counties</English>
 		<French>Comt&#233;es de Germanie</French>
 		<German>Counties Deutschlands</German>
 		<Italian>Contea di Germania</Italian>
