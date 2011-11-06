@@ -4915,23 +4915,6 @@
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_GERMANY</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_GER17</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>CIVILIZATION_ENGLAND</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
                                         <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -5767,23 +5750,6 @@
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_KIEV</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_KIE16</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>CIVILIZATION_MOSCOW</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
                                         <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -6203,23 +6169,6 @@
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_MOSCOW</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_MOS16</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>CIVILIZATION_GERMANY</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
                                         <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -6555,23 +6504,6 @@
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
                                         <DCNName>TXT_KEY_DN_NOR13</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_NORSE</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_NOR14</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
@@ -7852,23 +7784,6 @@
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_SPAIN</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_SPN13</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>CIVILIZATION_NORSE</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
                                         <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -8298,23 +8213,6 @@
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>CIVILIZATION_NORSE</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_SWE14</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_SWEDEN</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
                                         <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
                                         <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
@@ -8866,23 +8764,6 @@
                                         <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
                                         <DCNConditionReligion>NONE</DCNConditionReligion>
                                         <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_OTTOMAN</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_TUR20</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
                                         <DCNConditionVassalOf>NONE</DCNConditionVassalOf>
                                         <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
                                         <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -9192,23 +9073,6 @@
                                         <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
                                         <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
                                         <DCNName>TXT_KEY_DN_VEN14</DCNName>
-                                </DCNCondition>
-                                <DCNCondition>
-                                        <DCNConditionCivic>NONE</DCNConditionCivic>
-                                        <DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
-                                        <DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
-                                        <DCNConditionReligion>NONE</DCNConditionReligion>
-                                        <DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-                                        <DCNConditionVassalOf>CIVILIZATION_VENEZIA</DCNConditionVassalOf>
-                                        <DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-                                        <DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-                                        <DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-                                        <DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-                                        <DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-                                        <DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-                                        <DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
-                                        <DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-                                        <DCNName>TXT_KEY_DN_VEN15</DCNName>
                                 </DCNCondition>
                                 <DCNCondition>
                                         <DCNConditionCivic>NONE</DCNConditionCivic>
