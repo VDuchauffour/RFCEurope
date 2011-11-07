@@ -30,12 +30,12 @@ Changes for Beta 14:
 
 	XML/text updates:
 		- More Unique Dawn of Man texts
-		- Various fixes in the GP names
+		- Various fixes in the GP names - now all of them should work fine
 		- Swedish Soldier Tennant renamed to Soldattorp
 		- Pedia entry for Luxury Store and Apothecary
 		- Added Cordoban dynamic civ names when respawned as the Hafsids in Tunisia
 		- Dynamic civ names for Lithuania
-		- More unique names to barbarians
+		- Added a couple more unique names to barbarians
 
 	Art/Sound updates:
 

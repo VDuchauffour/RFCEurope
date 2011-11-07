@@ -672,13 +672,13 @@
 		<Russian>Johannes Kepler</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_GUTTENBERG</Tag>
-		<English>Johannes Guttenberg</English>
-		<French>Johannes Guttenberg</French>
-		<German>Johannes Guttenberg</German>
-		<Italian>Johannes Guttenberg</Italian>
-		<Spanish>Johannes Guttenberg</Spanish>
-		<Russian>Johannes Guttenberg</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_GUTENBERG</Tag>
+		<English>Johannes Gutenberg</English>
+		<French>Johannes Gutenberg</French>
+		<German>Johannes Gutenberg</German>
+		<Italian>Johannes Gutenberg</Italian>
+		<Spanish>Johannes Gutenberg</Spanish>
+		<Russian>Johannes Gutenberg</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NICOLAUS_COPERNICUS</Tag>
@@ -1428,13 +1428,13 @@
 		<Russian>Giacomo Leone</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_IMRE_STEINDAL</Tag>
-		<English>Imre Steindal</English>
-		<French>Imre Steindal</French>
-		<German>Imre Steindal</German>
-		<Italian>Imre Steindal</Italian>
-		<Spanish>Imre Steindal</Spanish>
-		<Russian>Imre Steindal</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_IMRE_STEINDL</Tag>
+		<English>Imre Steindl</English>
+		<French>Imre Steindl</French>
+		<German>Imre Steindl</German>
+		<Italian>Imre Steindl</Italian>
+		<Spanish>Imre Steindl</Spanish>
+		<Russian>Imre Steindl</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ADAM_KOCHANSKI</Tag>
@@ -1500,6 +1500,24 @@
 		<Russian>Cornelius Drebbel</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_BELISARIUS</Tag>
+		<English>Belisarius</English>
+		<French>Belisarius</French>
+		<German>Belisarius</German>
+		<Italian>Belisarius</Italian>
+		<Spanish>Belisarius</Spanish>
+		<Russian>Belisarius</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_BASIL_II</Tag>
+		<English>Basil II</English>
+		<French>Basil II</French>
+		<German>Basil II</German>
+		<Italian>Basil II</Italian>
+		<Spanish>Basil II</Spanish>
+		<Russian>Basil II</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BALDWIN_OF_JERUSALEM</Tag>
 		<English>Baldwin of Jerusalem</English>
 		<French>Baldwin of Jerusalem</French>
@@ -1509,13 +1527,13 @@
 		<Russian>Baldwin of jerusalem</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_BELISARIUS</Tag>
-		<English>Belisarius</English>
-		<French>Belisarius</French>
-		<German>Belisarius</German>
-		<Italian>Belisarius</Italian>
-		<Spanish>Belisarius</Spanish>
-		<Russian>Belisarius</Russian>
+		<Tag>TXT_KEY_GREAT_PERSON_PHILIP_THE_GOOD</Tag>
+		<English>Philip the Good</English>
+		<French>Philip the Good</French>
+		<German>Philip the Good</German>
+		<Italian>Philip the Good</Italian>
+		<Spanish>Philip the Good</Spanish>
+		<Russian>Philip the Good</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_CHARLES_MARTEL</Tag>
