@@ -394,7 +394,7 @@ class Barbs:
                         self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
                         self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        self.foundCity(iIndependent3, lPorto, "Porto", iGameTurn, 1, xml.iCrossbowman, 1, xml.iCatholicism, 0 )
+                        self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 1, xml.iCatholicism, 0 )
                         # 760AD
                         self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 800AD
