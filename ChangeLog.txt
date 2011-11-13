@@ -23,6 +23,7 @@ Changes for Beta 14:
 		- Swedish Tennant is now a Night Watch replacement (what's the fun in a UB if it's preplaced in all your cities so you can never build it?) - from RFCE++
 		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans. They have reduced cost though
 		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
+		- Adjusted Kievan visibility map to the new starting point
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -36,6 +37,8 @@ Changes for Beta 14:
 		- Added Cordoban dynamic civ names when respawned as the Hafsids in Tunisia
 		- Dynamic civ names for Lithuania
 		- Added a couple more unique names to barbarians
+		- Indy Porto renamed to Portucale
+		- Improved DCN for Arabia and Norse
 
 	Art/Sound updates:
 
@@ -48,6 +51,7 @@ Changes for Beta 14:
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
 		- Updated special respawns in the RiseAndFall.py, now they work properly
+		- Bugfix in the Bulgarian 3rd UHV (could switch back to failed, even after you successfully completed it)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -22,23 +22,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA02</Tag>
-		<English>Abbasid State of Arabia</English>
-		<French>Etat Abbasside d'Arabie</French>
-		<German>Abbasidischer Staat Arabien</German>
+		<English>Rashidun Caliphate</English>
+		<French></French>
+		<German></German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA03</Tag>
-		<English>Arabian Empire</English>
-		<French>Empire Arabe</French>
-		<German>Arabisches Reich</German>
+		<English>Umayyad Caliphate</English>
+		<French></French>
+		<German></German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA04</Tag>
-		<English>Arabian Empire</English>
-		<French>Empire Arabe</French>
-		<German>Arabisches Reich</German>
+		<English>Abbasid Caliphate</English>
+		<French></French>
+		<German></German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
@@ -52,16 +52,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA06</Tag>
-		<English>Arabia Error</English>
-		<French>Arabia Error</French>
-		<German>Arabia Error</German>
+		<English>Arabian Empire</English>
+		<French>Empire Arabe</French>
+		<German>Arabisches Reich</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA07</Tag>
-		<English>Arabia Error</English>
-		<French>Arabia Error</French>
-		<German>Arabia Error</German>
+		<English>Arabian Empire</English>
+		<French>Empire Arabe</French>
+		<German>Arabisches Reich</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
@@ -170,4 +170,30 @@
 		<Spanish>Provincia de Arabia</Spanish>
 		<Russian/>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA31</Tag>
+		<English>Mamluk Sultanate</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA32</Tag>
+		<English>Ayyubid Sultanate</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA33</Tag>
+		<English>Fatimid Caliphate</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian/>
 </Civ4GameText>

@@ -289,8 +289,9 @@ class Victory:
                 iGameTurn = gc.getGame().getGameTurn()
                 
                 if ( iPlayer == iBulgaria and pBulgaria.isAlive() ):
-                        if (playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
-                                pBulgaria.setUHV( 2, 0 )
+                        if ( iGameTurn <= xml.i1393AD and pBulgaria.getUHV( 2 ) == -1 ):
+                                if ( playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
+                                        pBulgaria.setUHV( 2, 0 )
 
                 elif ( iPlayer == iPortugal and pPortugal.isAlive() ):
                         if ( bConquest ):

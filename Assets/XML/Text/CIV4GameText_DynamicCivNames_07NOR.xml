@@ -13,7 +13,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR01</Tag>
-		<English>Kingdoms of Denmark and Norway</English>
+		<English>Kingdom of Denmark</English>
 		<French>Royaumes de Danemark et Norv&#232;ge</French>
 		<German>Königreiche Dänemark und Norwegen</German>
 		<Italian/><Spanish/><Russian/>
@@ -34,9 +34,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR04</Tag>
-		<English>Union of Denmark and Norway</English>
-		<French>Union du Danemark et Norv&#232;ge</French>
-		<German>Union Dänemarks und Norwegens</German>
+		<English>Danish Republic</English>
+		<French>.</French>
+		<German>.</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
@@ -48,16 +48,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
+		<English>Viking Kingdoms</English>
+		<French>.</French>
+		<German>.</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
+		<English>Viking Republic</English>
+		<French>.</French>
+		<German>.</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
@@ -156,6 +156,20 @@
 		<English>Province of Scandinavia</English>
 		<French>Province de Scandinavie</French>
 		<German>Provinz Skandinavien</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR22</Tag>
+		<English>Kalmar Union</English>
+		<French>Kalmar Union</French>
+		<German>Kalmar Union</German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR23</Tag>
+		<English>Kalmar Republic</English>
+		<French>Kalmar Republic</French>
+		<German>Kalmar Republic</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 </Civ4GameText>
