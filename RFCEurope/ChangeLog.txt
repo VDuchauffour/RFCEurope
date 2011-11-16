@@ -43,6 +43,7 @@ Changes for Beta 14:
 		- Improved DCN for Arabia and Norse
 
 	Art/Sound updates:
+		- New icons for the civilopedia categories
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
