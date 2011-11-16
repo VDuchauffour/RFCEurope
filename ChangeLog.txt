@@ -31,6 +31,7 @@ Changes for Beta 14:
 		- Removed Relic resource from the map (was under Jerusalem)
 
 	XML/text updates:
+		- XML Cleanup
 		- More Unique Dawn of Man texts
 		- Various fixes in the GP names - now all of them should work fine
 		- Swedish Soldier Tennant renamed to Soldattorp
