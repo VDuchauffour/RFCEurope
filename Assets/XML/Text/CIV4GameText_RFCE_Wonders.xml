@@ -5,7 +5,6 @@
 <!-- -->
 <!-- Game Text - RFCE Wonders -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-
 		<!-- Religious Shrines -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE</Tag>

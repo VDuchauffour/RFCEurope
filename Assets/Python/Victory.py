@@ -586,7 +586,7 @@ class Victory:
 
                 if ( pArabia.getUHV( 2 ) == -1 ):
                         iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
-                        if ( iPerc >= 25 ):
+                        if ( iPerc >= 35 ):
                                 pArabia.setUHV( 2, 1 )
                 
         def checkBulgaria( self, iGameTurn ):

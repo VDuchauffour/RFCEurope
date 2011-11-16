@@ -24,6 +24,7 @@ Changes for Beta 14:
 		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans. They have reduced cost though
 		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
 		- Adjusted Kievan visibility map to the new starting point
+		- Arabian UHV requires 35% islam instead of 25%
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
