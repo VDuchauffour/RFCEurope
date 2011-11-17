@@ -114,7 +114,7 @@ bool CvUnitAI::AI_update()
 			this ->kill(false);
 			return false;
 		};
-		if ( UniquePowers[getID() * UP_TOTAL_NUM + UP_JANISSARY] > -1 ){
+		if ( UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_JANISSARY] > -1 ){
 			// 3MiroUP: if we have the Janissaries UP then we should be far less likely to prosecure as foreign religion does giveup bonuses
 			if ( GC.getGameINLINE().getSorenRandNum( 100, "Janissary Prosecution") > 1 ){ // only 2% chance to do prosecution
 				getGroup() ->pushMission(MISSION_SKIP);

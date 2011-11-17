@@ -209,15 +209,14 @@ class MercenaryManager:
                                 if ( gc.getGame().getSorenRandNum( 100, 'mercs leaving the global pool') < lMercList[lMerc[0]][6]/2 ):
                                         self.lGlobalPool.remove( lMerc )
                                         if ( lMerc[4] in lHumanProvinces ):
-                                                # this should be changed to "mercs are leving"
-                                                CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+                                                CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_MOVING",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
                                         iMercsLeft += 1
                                         if ( iMercsLeft > 1 ):
                                                 # don't let too many mercs leave the pool
                                                 return
                 
         def setPrereqConsistentPromotions( self, lPromotions ):
-                bPass = True
+                bPass = False
                 while ( not bPass ):
                         bPass = True
                         for iPromotion in lPromotions:
@@ -254,8 +253,9 @@ class MercenaryManager:
                 
                 iHuman = gc.getGame().getActivePlayer()
                 if ( gc.getPlayer( iHuman ).getProvinceCityCount( iCurrentProvince ) > 0 ):
-                        CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
-                
+                        szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
+                        szCurrentProvince = CyTranslator().getText(szProvName,())
+                        CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince, "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
                 
                 # add the merc, keep the merc index, costs and promotions
                 self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
@@ -302,7 +302,7 @@ class MercenaryManager:
                 for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
                         pPlayer = gc.getPlayer( iPlayer )
                         if ( pPlayer.isAlive() ):
-                                if ( pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100  ):
+                                if ( (pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 0) and (pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100)  ):
                                         # not enough gold to pay the mercs, they will randomly desert you
                                         self.desertMercs( iPlayer )
                                         
@@ -319,10 +319,6 @@ class MercenaryManager:
                 self.processNewMercs( iGameTurn ) # can add up to 2 mercs per turn
                 
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
-                
-                #for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
-                #        if ( not self.GMU.playerMakeUpkeepSane( iPlayer ) ):
-                #                print(" ERROR in Upkeep for: ",iPlayer )
                 
                 #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
                 
@@ -631,7 +627,9 @@ class GlobalMercenaryUtils:
                         iPercentage += lPromotionCost[iPromotion]
                 iPurchaseCost = ( iBaseCost * ( 100 + iPercentage ) ) / 100
                 
-                iUpkeepCost = 100 + 3*iPercentage # 1 gold for 1/3 increase of cost due to promotions
+                # 1 gold of upkeep for 60 hammers cost, minimum 1 gold, maximum 4 gold
+                iUpkeepCost = max( 100, min( (100*gc.getUnitInfo( lMercInfo[0] ).getProductionCost())/60, 400 ) )
+                iUpkeepCost = iUpkeepCost + 3*iPercentage # 1 gold for 1/3 increase of cost due to promotions
                 
                 return (iPurchaseCost, iUpkeepCost)
                 

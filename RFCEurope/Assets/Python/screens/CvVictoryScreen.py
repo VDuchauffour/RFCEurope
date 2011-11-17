@@ -956,7 +956,7 @@ class CvVictoryScreen:
                         for iProv in tProvsToCheck:
                                 sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
                                 sProvName = localText.getText(sProvName,())
-                                localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                                #localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
                                 iHave = pPlayer.getProvinceCurrentState( iProv )
                                 if ( iHave < con.iProvinceConquer ):
                                         sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
@@ -1005,7 +1005,7 @@ class CvVictoryScreen:
                         for iProv in tProvsToCheck:
                                 sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
                                 sProvName = localText.getText(sProvName,())
-                                localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                                #localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
                                 iHave = pPlayer.getProvinceCurrentState( iProv )
                                 if ( iHave < con.iProvinceConquer ):
                                         sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
@@ -1043,7 +1043,7 @@ class CvVictoryScreen:
                         for iProv in tProvsToCheck:
                                 sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
                                 sProvName = localText.getText(sProvName,())
-                                localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+                                #localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
                                 iHave = pPlayer.getProvinceCurrentState( iProv )
                                 if ( iHave < con.iProvinceConquer ):
                                         sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)

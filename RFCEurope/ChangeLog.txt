@@ -25,6 +25,8 @@ Changes for Beta 14:
 		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
 		- Adjusted Kievan visibility map to the new starting point
 		- Arabian UHV requires 35% islam instead of 25%
+		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
+		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when the become available)
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -50,11 +52,16 @@ Changes for Beta 14:
 		- Reduced early barbarian Sassanid pressure on Byzantium, and early christian barb pressure on Cordoba (only on Emperor difficulty)
 		- Increased NE barbarian pressure on Bulgaria, also more Pecheneg and Cuman activity in and near the Carpathian-basin
 		- Seljuks strike on Anatolia harder, but lighter in the Levant. OTOH increased Beduin barbarian threat from the Arabian peninsula
+		- Barbarian culture is enabled again, it was really hurting the Barbs by making them build useless Culture in their cities, it was removed only as a speedup feature in the first place anyway
+		- Merc Upkeep cost also depends on the hammer cost of the Unit
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
 		- Updated special respawns in the RiseAndFall.py, now they work properly
 		- Bugfix in the Bulgarian 3rd UHV (could switch back to failed, even after you successfully completed it)
+		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
+		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
+		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

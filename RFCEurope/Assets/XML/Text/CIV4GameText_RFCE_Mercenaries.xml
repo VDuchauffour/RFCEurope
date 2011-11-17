@@ -219,12 +219,21 @@
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
-		<English>New Mercenaries are available for hire.</English>
-		<French>New Mercenaries are available for hire.</French>
-		<German>New Mercenaries are available for hire.</German>
-		<Italian>New Mercenaries are available for hire.</Italian>
-		<Spanish>New Mercenaries are available for hire.</Spanish>
-		<Russian>New Mercenaries are available for hire.</Russian>
+		<English>New Mercenaries are available for hire in</English>
+		<French>New Mercenaries are available for hire in</French>
+		<German>New Mercenaries are available for hire in</German>
+		<Italian>New Mercenaries are available for hire in</Italian>
+		<Spanish>New Mercenaries are available for hire in</Spanish>
+		<Russian>New Mercenaries are available for hire in</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
+		<English>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</English>
+		<French>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</French>
+		<German>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</German>
+		<Italian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Italian>
+		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
+		<Russian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Russian>
 	</TEXT>
         <TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
