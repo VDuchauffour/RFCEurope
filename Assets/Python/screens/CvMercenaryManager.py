@@ -134,6 +134,7 @@ class CvMercenaryManager:
                 ## 3Miro: draw the available merc info
                 # read in the available mercs
                 lAvailableMercs = GMU.getMercGlobalPool()
+                print(lAvailableMercs)
                 
                 ## Get the ID for the current active player
 		iPlayer = gc.getGame().getActivePlayer()
@@ -234,7 +235,7 @@ class CvMercenaryManager:
                                 
                                 screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
                                 screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", mercenaryName, "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
                                 
                                 iUpkeep = pUnit.getMercUpkeep()
                                 strCost = u"%1.2f%c" %((0.01*iUpkeep), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
@@ -325,8 +326,10 @@ class CvMercenaryManager:
                 pUnitInfo = gc.getUnitInfo(lMercList[lMerc[0]][0])
 		strStats = u"%d%c    %d%c" %(pUnitInfo.getCombat(), CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR),pUnitInfo.getMoves(),CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
 
+                
 		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, mercenary.getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) # 3Miro
-                screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, CyTranslator().getText( lMercList[iMerc][1] , ()), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+                #screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, CyTranslator().getText( lMercList[iMerc][1] , ()), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+                screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID,  pUnitInfo.getDescription() +" ("+CyTranslator().getText( lMercList[iMerc][1], ())+")", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Unit Type: " + mercenary.getUnitInfo().getDescription(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) #Rhye
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Level: " + str(len(lMerc[1])-1 ) + "     XP: " + strXP, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  " + strStats, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )

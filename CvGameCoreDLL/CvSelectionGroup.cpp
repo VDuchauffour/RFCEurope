@@ -2621,7 +2621,7 @@ bool CvSelectionGroup::canMoveThrough(CvPlot* pPlot)
 		while (pUnitNode != NULL)
 		{
 			iCounter++; //Rhye (fix)
-			if (iCounter > 50) return false; //Rhye (fix)
+			if (iCounter > 50) return false; //Rhye (fix) // 3Miro: increase this to 50
 
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 			pUnitNode = nextUnitNode(pUnitNode);

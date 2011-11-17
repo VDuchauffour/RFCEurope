@@ -946,12 +946,12 @@ void CvCity::doTurn()
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, growth out "); //Rhye and 3Miro
 
 	// 3Miro: SPEEDTWEAK (BarbCities) Sephi: This function can be very slow for barbarian cities(adds 1-3sec to turn time).Reason unknown
-	// 3Miro: this turns off Barbarian culture
+	// 3Miro: this turns off Barbarian culture, however it also messes the Barb AI trying to build culture
 	//doCulture();
-	if (!isBarbarian())
-    {
+	//if (!isBarbarian())
+    //{
         doCulture();
-    }
+    //}
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, culture out "); //Rhye and 3Miro
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
