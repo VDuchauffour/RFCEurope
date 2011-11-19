@@ -62,6 +62,9 @@ Changes for Beta 14:
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
 		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
+		- Moved Estonia to Estern Europe Region, otherwise Barbarians from Estonia were trying to attack the Norse in Scandinavia and they had no way to get there
+		- Same as Estonia, Morocco had to be moved from the Islands Region to the North Africa Region
+		- Moved Bosnia and Croatia to Central Europe Region, hopefully this will help the Venice AI
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
