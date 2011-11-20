@@ -248,6 +248,12 @@ class Religions:
                		pPlayer = gc.getPlayer( i )
                		if ( pPlayer.getProsecutionCount() > 0 ):
                			pPlayer.changeProsecutionCount( -1 )
+                                
+                # Resettle Jewish refugies
+                iRefugies = gc.getMinorReligionRefugies()
+                for i in range(iRefugies):
+                        self.resettleRefugies()
+                gc.setMinorReligionRefugies( 0 )
                	
                	# 3Miro: Catholic Benefits from the Pope
                	# the Pope gifts gold every 3 turns
@@ -689,3 +695,57 @@ class Religions:
                 pPlayer = gc.getPlayer( iPlayer )
                 pPlayer.changeStabilityBase( con.iCathegoryCities, max( 1, pPlayer.getNumCities() / 3 ) )      
         ### End Reformation ###
+        
+        def resettleRefugies( self ):
+                intolerance = [-1]*con.iNumTotalPlayersB
+                for iI in range( con.iNumTotalPlayersB ):
+                        pPlayer = gc.getPlayer( iI )
+                        if ( pPlayer.isAlive() ):
+                                if ( iI < con.iPope ):
+                                        # add a random element
+                                        intolerance[iI] += gc.getGame().getSorenRandNum(100, 'roll to randomize the migration of refugies')
+                                        intolerance[iI] += 10*pPlayer.getProsecutionCount()
+                                        if ( pPlayer.getProsecutionCount() == 0 ):
+                                                intolerance[iI] = max( 0, intolerance[iI] - 30 ) # if this player doesn't prosecute, decrease intolerance
+                                        iRCivic = pPlayer.getCivics(4)
+                                        if ( iRCivic == xml.iCivicTheocracy ):
+                                                intolerance[iI] += 50
+                                        if ( iRCivic == xml.iCivicFreeReligion ):
+                                                intolerance[iI] = max( 0, intolerance[iI] - 30 )
+                                if ( iI > con.iPope ):
+                                        intolerance[iI] += gc.getGame().getSorenRandNum(100, 'roll to randomize the migration of refugies')
+                # once we have the list of potential nations
+                iCandidate1 = 0
+                for iI in range( con.iNumTotalPlayersB ):
+                        if ( intolerance[iI] > -1 and intolerance[iI] < intolerance[iCandidate1] ):
+                                iCandidate1 = iI
+                iCandidate2 = 0
+                if ( iCandidate2 == iCandidate1 ):
+                        iCandidate2 = 1
+                for iI in range( con.iNumTotalPlayersB ):
+                        if ( intolerance[iI] > -1 and iI != iCandidate1 and intolerance[iI] < intolerance[iCandidate1] ):
+                                iCandidate2 = iI
+                
+                if ( gc.getGame().getSorenRandNum(100, 'roll to migrate to one of the two most tolerant players') > 50 ):
+                        self.migrateJews( iCandidate1 )
+                else:
+                        self.migrateJews( iCandidate2 )
+        
+        def migrateJews( self, iPlayer ):
+                pPlayer = gc.getPlayer( iPlayer )
+                
+                lCityList = []
+                apCityList = PyPlayer(iPlayer).getCityList()
+                for pCity in apCityList:
+                        city = pCity.GetCy()
+                        #if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
+                        if ( not city.isHasReligion( xml.iJudaism ) ):
+                              lCityList.append( city )
+                              
+                if ( len( lCityList ) > 0 ):
+                        city = lCityList[gc.getGame().getSorenRandNum(len(lCityList), 'random city to migrate')]
+                        city.setHasReligion(xml.iJudaism, True, True, False)
+                                        
+                                        
+                                        
+                                        

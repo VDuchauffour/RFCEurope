@@ -685,6 +685,9 @@ class RFCEBalance:
 		
 		gc.setBuildingPref( iPope, xml.iSistineChapel, 20 )
 		
+                # 3Miro: set the Jews as the minor Religion
+                gc.setMinorReligion( xml.iJudaism )
+                gc.setMinorReligionRefugies( 0 )
 		
 		# Manor House + Manorism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
 			# 3Miro: moved to XML, no need to put it here

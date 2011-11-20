@@ -1244,3 +1244,15 @@ void CyGlobalContext::setMercPromotion( int iPromotion ){
 void CyGlobalContext::setPaceTurnsAfterSpawn( int iTurns ){
 	iPeaceTurnsAfterSpawn = iTurns;
 };
+
+void CyGlobalContext::setMinorReligion( int iMinorReligion ){
+	minorReligion = iMinorReligion;
+};
+
+void CyGlobalContext::setMinorReligionRefugies( int iMRR ){
+	minorReligionRefugies = iMRR;
+};
+
+int CyGlobalContext::getMinorReligionRefugies(){
+	return minorReligionRefugies;
+};

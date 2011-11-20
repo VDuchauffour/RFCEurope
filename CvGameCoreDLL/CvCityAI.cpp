@@ -6869,11 +6869,14 @@ bool CvCityAI::AI_chooseUnit(UnitAITypes eUnitAI)
 	//GC.getGameINLINE().logMsg("   Into AI Chose unit: %d",UNIT_PROSECUTOR); //Rhye and 3Miro
 	if ( UNIT_PROSECUTOR != -2 && getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
 		//GC.getGameINLINE().logMsg("   Step 1 ");
+		//GC.getGameINLINE().logMsg("    Missionary AI: %d  this AI: %d ",UNITAI_MISSIONARY,eUnitAI);
 		//if ( canTrain( (UnitTypes) UNIT_PROSECUTOR ) ){
-		//	GC.getGameINLINE().logMsg("   can train ");
+		//	GC.getGameINLINE().logMsg("  %d can train Prosecutors",getOwnerINLINE() );
 		//};
-		if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE]>-1) ){
-			//GC.getGameINLINE().logMsg("   Step 2 ");
+		//if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE]>-1) ){
+		//if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) ){
+		if ( (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && ((eUnitAI == UNITAI_MISSIONARY) || (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < 33) ) ){
+			//GC.getGameINLINE().logMsg("   Step 2 for %d",getOwnerINLINE());
 			// check if running an oppressive civic
 			bool bOpressor = true;
 			for ( int iI = 0; iI < GC.getNumCivicInfos(); iI++ ){
@@ -6882,9 +6885,13 @@ bool CvCityAI::AI_chooseUnit(UnitAITypes eUnitAI)
 					//GC.getGameINLINE().logMsg("   --- not oppression ");
 				};
 			};
+			if ( (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE]>-1) ){
+				bOpressor = false;
+			};
 			
 			if ( bOpressor ){
 				//GC.getLeaderHeadInfo( GET_PLAYER( getOwner() ).getLeader() ).getFlavorValue( 1 );
+				//GC.getGameINLINE().logMsg("   Step 3 Opressor is %d",getOwnerINLINE());
 				int iProb = 6* GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 30; // max 90, Flavor religion
 				int iMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 1;
 				// 3MiroProsecutions
