@@ -16,6 +16,7 @@ Changes for Beta 14:
 (to-be-released: around mid-December, 2011)
 		
 	General changes and UHV updates:
+		- Add a stability guide in the civilopedia (Beware, the guide is outdated at some points)
 		- Vinland is buildable until 1250 (but the UHV is unchanged), adds 1 Timber and 1 Wine for now
 		- Lowered both Cordoban leaders chance for capitulation (now they should be extremely hard to capitulate)
 		- Colony screen always shows all the civs
