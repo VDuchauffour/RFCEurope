@@ -299,6 +299,15 @@
 		<Russian>Varangian</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_BALKAN</Tag>
+		<English>Balkan</English>
+		<French>Balkan</French>
+		<German>Balkan</German>
+		<Italian>Balkan</Italian>
+		<Spanish>Balkan</Spanish>
+		<Russian>Balkan</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_DANISH</Tag>
 		<English>Danish</English>
 		<French>Danish</French>
@@ -360,6 +369,65 @@
 		<Italian>Zaporozhian</Italian>
 		<Spanish>Zaporozhian</Spanish>
 		<Russian>Zaporozhian</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_IRISH</Tag>
+		<English>Irish</English>
+		<French>Irish</French>
+		<German>Irish</German>
+		<Italian>Irish</Italian>
+		<Spanish>Irish</Spanish>
+		<Russian>Irish</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_ARABIAN</Tag>
+		<English>Arabian</English>
+		<French>
+			<Text>Arabes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Arabisch:arabischen:arabische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Arabo:Araba:Arabi:Arabe</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>&#225;rabe:&#225;rabe:&#225;rabes:&#225;rabes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+		<Russian>Arabian</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_EGYPT</Tag>
+		<English>Egyptian</English>
+		<French>
+			<Text>Egyptiens</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>&#196;gyptisch:&#228;gyptischen:&#228;gyptische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Egiziano:Egiziana:Egiziani:Egiziane</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>egipcio:egipcia:egipcios:egipcias</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+		<Russian>Egyptian</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_TAGMATA</Tag>
@@ -429,7 +497,7 @@
 
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_HELP</Tag>
-		<English>[ICON_BULLET]Only Available as a Mercenary</English>
+		<English>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</English>
 		<French>[ICON_BULLET]Only Available as a Mercenary</French>
 		<German>[ICON_BULLET]Only Available as a Mercenary</German>
 		<Italian>[ICON_BULLET]Only Available as a Mercenary</Italian>
@@ -627,9 +695,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HACKAPELL_PEDIA</Tag>
-		<English>.</English>
-		<French>.</French>
-		<German>.</German>
+		<English>[TAB] Hakkapeliitta (plural Hakkapeliitat) was the term used in the Holy Roman Empire for a Finnish light cavalryman in the service of King Gustavus Adolphus of Sweden (a.k.a. Sweden-Finland) during the Thirty Years' War (1618 to 1648). A Hakkapeliitta was also known as a Hackapelit, Hackapelite, Haccapelit, or Haccapelite.[PARAGRAPH:1]The hakkapeliitat were first used during the Polish-Swedish Wars of the late 1500s. In the early 17th century the cavalry led by the Swedish-Finnish Field Marshal Jacob De la Gardie conquered the Russian cities Novgorod and Moscow. The Hakkapeliitta cavalry men led by the Finnish Field Marshal Gustaf Horn were vital to the Swedish victories in Germany during the Thirty Years' War.[PARAGRAPH:1]The Hakkapeliitat were well-trained Finnish light cavalrymen who excelled in sudden and savage attacks, raiding and reconnaissance. The term hakkapeliitta comes from the Finnish war cry hakkaa päälle (English: hack on or hit on; Swedish: hacka på), but most commonly translated as "Cut them down!"[PARAGRAPH:1]The greatest advantage of the fast and lightly-armored Hakkapeliitta cavalry was its charge. They typically had two pistols, a sword, a helmet, and leather armor or a breastplate of steel. They would attack at a full gallop, fire the first pistol at twenty paces and the second at five paces, and then draw the sword. The horse itself was used like another weapon, as it was used to trample enemy infantry.[PARAGRAPH:1]The horses used by the Hakkapeliitat were known as Finnhorses, a strong and durable breed larger than the neighboring Swedish counterpart.</English>
+		<French>[TAB] Les Hakkapélites ou Haccapélites  Hakkapeliitat en finnois, Hakkapeliter en suédois  sont du XVe au XVIIe siècles des cavaliers finlandais du roi de Suède. Ce nom leur vient de leur cri de guerre hakkaa päälle !  « tape sur la tête » en finnois.[PARAGRAPH:1]Les hakkapélites montaient des chevaux finlandais. Le cavalier hakkapélite portait deux pistolets qu'il déchargeait l'un à vingt pas de l'adversaire, l'autre à cinq pas. Puis il tirait l'épée. La masse du cheval servait aussi à écraser l'infanterie ennemie au cours de la charge. Le Hakkapélite se protégeait d'un casque, et d'un vêtement de cuir (költeri) ou d'une cuirasse (kyrassi) sur la poitrine. La charge des Hakkapélites était difficile à contenir et décidait souvent du combat dès le premier contact. Par comparaison avec les engagements antérieurs, soit elle s'accompagnait d'un tir plus précis soit alors sa puissance de feu était plus concentrée au moment du choc. C'est ainsi que les Hakkapélites étaient capables de disloquer les carrés ou tercios de piques que l'on jugeait auparavant invincibles. Ils se montrèrent aussi capables d'affronter les cuirassiers impériaux plus lourdement équipés.</French>
+		<German>[TAB] Hakkapeliitta (von finn.: hakkaa päälle "hau' drauf!") war während des Dreißigjährigen Krieges ein volkstümlicher Name für die berittenen finnischen Söldner, die für Schweden in Deutschland kämpften. Ihr berühmtester Oberbefehlshaber war Torsten Stålhandske von 1630 bis 1644. Hakkapeliten gab es aber über den Dreißigjährigen Krieg hinaus; sie nahmen Teil an allen schwedischen Kriegen des 17. Jahrhunderts.[PARAGRAPH:1]Im Jahre 1891 wurde der traditionelle Marsch der Hakkapeliten als Marsch der Finnländischen Reiterei (im 30-jährigen Kriege) oder Schwedischer Reitermarsch von der preussischen Armee öffentlich angenommen. Seitdem ist er in Deutschland ein beliebter Reitermarsch geblieben.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -655,15 +723,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK</Tag>
 		<English>Zaporozhian Cossack</English>
-		<French>Zaporozhian Cossack</French>
-		<German>Zaporozhian Cossack</German>
-		<Italian>Zaporozhian Cossack</Italian>
-		<Spanish>Zaporozhian Cossack</Spanish>
+		<French>Zaporogue Cosaque</French>
+		<German>Saporoscher Kosak</German>
+		<Italian>Zaporozhian Cosacco</Italian>
+		<Spanish>Zaporozhian Cosaco</Spanish>
 		<Russian>Zaporozhian Cossack</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK_PEDIA</Tag>
-		<English>.</English>
+		<English>[TAB]The Zaporozhian Cossacks were Cossacks who lived in Zaporizhya, a region in Central Ukraine. The Zaporozhian Host grew rapidly in the 15th century by serfs escaping the Polish Lithuanian Commonwealth. The base and fortress of the Cossacks was the Zaporozhian Sich, which was originally built in the area known as Zaporizhia. During the course of the 16th, 17th and well into the 18th century, the Zaporozhian Cossacks became a strong political and military forced that challenged the authority of the Poland-Lithuania, the Ottoman Empire and its vassal, the Crimean Khanate, and the Tsardom of Russia. The Host underwent a sequence of conflicts and alliances involving the three powers before being destroyed in the late 18th century by the Russian Empire.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -681,7 +749,115 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DON_COSSACK_PEDIA</Tag>
-		<English>.</English>
+		<English>[TAB] The Don Cossack Host, (Russian: Vsevelikoye Voysko Donskoye) was a frontier military organization from the end of the sixteenth until the early twentieth century.[NEWLINE][TAB]Don Cossacks were masters of horse riding and had superb military training, due to their long conflict with the Crimean Khanate and the Ottoman Empire. They were selling their military services to different powers in Eastern Europe. Together with the Polish King, they raided Moscow during The Time of Troubles and under Russian authority carried out raids and expeditions against Turkey and Persia.[NEWLINE][TAB]Don Cossacks are credited with playing a significant part in repelling Napoleon's Invasion of Russia. Under the command of Count Matvey Ivanovich Platov, the Don Cossacks successfully fought in the number of battles with Grande Armee. In the Battle of Borodino Don Cossacks were making raids to the rear of the French Army. Ataman Platov commanded all Cossack troops and had successfully covered the retreat of the Russian Army to Moscow. The Don Cossacks distinguished themselves in all the campaigns to come and took part in the capture of Paris. Napoleon is credited with declaring, "Cossacks are the best light troops among all that exist. If I had them in my army, I would go through all the world with them."</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DOPPELSOLDNER</Tag>
+		<English>Doppelsoldner</English>
+		<French>Doppelsoldner</French>
+		<German>Doppelsoldner</German>
+		<Italian>Doppelsoldner</Italian>
+		<Spanish>Doppelsoldner</Spanish>
+		<Russian>Doppelsoldner</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DOPPELSOLDNER_PEDIA</Tag>
+		<English>[TAB] Doppelsöldner (Double mercenary) were Landsknechts in 16th-century Germany who were prepared to fight in the front line, taking an extra risk, in exchange for double payment. The stated ratio was that one Landsknecht in four would be a Doppelsöldner. A small number of the Doppelsöldner of each company were usually issued with firearms.[NEWLINE][TAB]Likewise, Landsknechts schooled in the use of the Zweihänder (two-hander), a massive two-handed sword, were entitled to double pay and thus qualified as Doppelsöldner. The fencing guild of the Brotherhood of St. Mark had the monopoly on the use of the Zweihänder after Frederick III, Holy Roman Emperor granted it to them in 1487.[NEWLINE][TAB]The Zweihänder was allegedly used by the Doppelsöldner to break through formations of pikemen, especially Swiss pikemen, by either being swung to break the ends of the pikes themselves or to knock them aside and attack the pikemen directly. The factuality of this tradition is disputed, but at least as a legend, it appears to date to at least the 17th century.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IRISH_BRIGADE</Tag>
+		<English>Irish Brigade</English>
+		<French>Irish Brigade</French>
+		<German>Irish Brigade</German>
+		<Italian>Irish Brigade</Italian>
+		<Spanish>Irish Brigade</Spanish>
+		<Russian>Irish Brigade</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IRISH_BRIGADE_PEDIA</Tag>
+		<English>[TAB]The Irish Brigade was a brigade in the French army composed of Irish exiles, led by Robert Reid. It was formed in May 1690 when five Jacobite regiments were sent from Ireland to France in return for a larger force of French infantry who were sent to fight in the Williamite war in Ireland. The Irish Brigade served as part of the French Army until 1792.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STRADIOT</Tag>
+		<English>Stradiot</English>
+		<French>Stradiot</French>
+		<German>Stradiot</German>
+		<Italian>Stradiot</Italian>
+		<Spanish>Stradiot</Spanish>
+		<Russian>Stradiot</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STRADIOT_PEDIA</Tag>
+		<English>[TAB]The Stratioti or Stradioti, were mercenary units from the Balkans recruited mainly by states of southern and central Europe from the 15th until the middle of the 18th century.[NEWLINE][TAB]The stradioti were recruited in Albania, Greece, Dalmatia, Serbia and later Cyprus. Most modern historians have indicated that of the Stratioti were mostly Albanians. According to a study by a Greek author, around 80% of the listed names attributed to the stradioti were of Albanian origin while most of the remaining ones, especially those of officers, were of Greek origin; a small minority were of South Slavic origin. Among their leaders there were also members of some old Byzantine Greek noble families such as the Palaiologi and Comneni.[NEWLINE][TAB]On various medieval sources Stradioti are mentioned either as Greeks or Albanians. This mainly happened because the bulk of stradioti rank and file were of Albanian origin from regions of Greece, but by the middle of the 16th century there is evidence that many of them had been Hellenized and in some occasions even Italianized. Hellenization was possibly underway prior to service abroad, since stradioti of Albanian origin had settled in Greek lands for two generations before their emigration to Italy. Moreover, since many served under Greek commanders and together with the Greek stradioti, this process continued. Another factor in this assimilative process was the stradioti's and their families' active involvement and affiliation with the Greek Orthodox or Uniate Church communities in the places they lived in Italy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WAARDGELDER</Tag>
+		<English>Waardgelder</English>
+		<French>Waardgelder</French>
+		<German>Waardgelder</German>
+		<Italian>Waardgelder</Italian>
+		<Spanish>Waardgelder</Spanish>
+		<Russian>Waardgelder</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WAARDGELDER_PEDIA</Tag>
+		<English>[TAB]A Waardgelder is a mercenary from Albania. The word comes from the German word "Wartegeld", what "redundancy" means. In the Republic of the Seven United Netherlands, they were the mercenary corps rent by the directors of cities to protect the city against foreign troops.[NEWLINE][TAB]In August 1617, the States of Holland adopted a "Sharp Resolution", this resolution gave the cities in Holland the opportunity to hire Waardgelders on own hand, at the expense of the states, to prevent riots. In practice, the resolution was directed against the Counter-Remonstrants, a rebellious group among population in the cities. This, however, undermined the authority of Prince Maurice, commander of the army. This was Prince Maurice therefore not acceptable and he went to Utrecht to dismiss the Waardgelders on 31 July 1618.[NEWLINE][TAB]In 1627, 8000 Waardgelders were hired for the Siege of Grol. Two years later, for the Siege of 's-Hertogenbosch, between 10000 and 11000 Waardgelders were hired.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAFFATUN</Tag>
+		<English>Naffatun</English>
+		<French>Naffatun</French>
+		<German>Naffatun</German>
+		<Italian>Naffatun</Italian>
+		<Spanish>Naffatun</Spanish>
+		<Russian>Naffatun</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NAFFATUN_PEDIA</Tag>
+		<English>[TAB]Naffatun were Arabian infantry corps armed with naphtha grenades. They are noted for the successful defense during the Seljuk Siege of Baghdad in 1157, when they managed to destroy several catapults.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TURKOPOLES</Tag>
+		<English>Turkopoles</English>
+		<French>Turkopoles</French>
+		<German>Turkopoles</German>
+		<Italian>Turkopoles</Italian>
+		<Spanish>Turkopoles</Spanish>
+		<Russian>Turkopoles</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TURKOPOLES_PEDIA</Tag>
+		<English>[TAB]Turkopoles are mercenaries hired by Christian forces in the Holy Lands for light cavalry duties. Composed of Christianised Turks and Eastern Orthodox Christians, these Turkopoles are armed with a bow and sword, and are capable of adopting a shooting circle formation, which provides constant fire against the enemy.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

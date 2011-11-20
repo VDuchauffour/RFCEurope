@@ -27,28 +27,35 @@ Changes for Beta 14:
 		- Arabian UHV requires 35% islam instead of 25%
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when the become available)
-		- when the Jews are prosecuted from one city, then automatically move to another city from a player that is most otlerant (measureb by civics and lack of prosecutions)
+<<<<<<< .mine
+		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles
+		- when the Jews are prosecuted from one city, then automatically move to another city from a player that is most tolerant (measured by civics and lack of prosecutions)
                        This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
                        Also, there should be a lot more Jews left in late game
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
 		- Removed Relic resource from the map (was under Jerusalem)
+		- Indy Porto renamed to Portucale
+		- Moved Estonia to Estern Europe Region, otherwise Barbarians from Estonia were trying to attack the Norse in Scandinavia and they had no way to get there
+		- Same as Estonia, Morocco had to be moved from the Islands Region to the North Africa Region
+		- Moved Bosnia and Croatia to Central Europe Region, hopefully this will help the Venice AI
 
 	XML/text updates:
 		- XML Cleanup
 		- More Unique Dawn of Man texts
 		- Various fixes in the GP names - now all of them should work fine
 		- Swedish Soldier Tennant renamed to Soldattorp
-		- Pedia entry for Luxury Store and Apothecary
+		- Pedia entry for Luxury Store, Apothecary, Zaporozhian Cossack, Don Cossack, Hackapell
 		- Added Cordoban dynamic civ names when respawned as the Hafsids in Tunisia
 		- Dynamic civ names for Lithuania
 		- Added a couple more unique names to barbarians
-		- Indy Porto renamed to Portucale
 		- Improved DCN for Arabia and Norse
+		- Link to the Mercenary-Concepts for Mercenary units
 
 	Art/Sound updates:
 		- New icons for the civilopedia categories
+		- New art for Don Cossack
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
@@ -65,9 +72,7 @@ Changes for Beta 14:
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
 		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
-		- Moved Estonia to Estern Europe Region, otherwise Barbarians from Estonia were trying to attack the Norse in Scandinavia and they had no way to get there
-		- Same as Estonia, Morocco had to be moved from the Islands Region to the North Africa Region
-		- Moved Bosnia and Croatia to Central Europe Region, hopefully this will help the Venice AI
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

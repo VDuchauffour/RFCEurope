@@ -6820,6 +6820,20 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_CELTS_SELECT</SoundID>
+			<Filename>Sounds/Units/CeltsSelect</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_CELTS_ORDER</SoundID>
+			<Filename>Sounds/Units/CeltsOrder</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_NETHERLANDS_SELECT</SoundID>
 			<Filename>Sounds/Units/NetherlandsSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
