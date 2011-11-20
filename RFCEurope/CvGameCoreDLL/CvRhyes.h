@@ -289,3 +289,7 @@ extern int iSchismReligion;
 extern int iMercPromotion; // 3Miro: the promotion to block upgrades
 
 extern int iPeaceTurnsAfterSpawn;
+
+extern int minorReligion; // 3Miro: set the Jews here to be the minorReligion in the game
+extern int minorReligionRefugies; // 3Miro: this is incremented every tume the minorReligion is prosecuted
+								

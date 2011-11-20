@@ -8455,6 +8455,8 @@ void CvGame::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumBuildingInfos(), m_aiShrineReligion);
 	pStream->Read(&m_iNumCultureVictoryCities);
 	pStream->Read(&m_eCultureVictoryCultureLevel);
+	// 3Miro: save the minorReligion refugie count
+	pStream->Read(&minorReligionRefugies);
 }
 
 
@@ -8611,6 +8613,8 @@ void CvGame::write(FDataStreamBase* pStream)
 	pStream->Write(GC.getNumBuildingInfos(), m_aiShrineReligion);
 	pStream->Write(m_iNumCultureVictoryCities);
 	pStream->Write(m_eCultureVictoryCultureLevel);
+	// 3Miro: save the minorReligion refugie count
+	pStream->Write(minorReligionRefugies);
 }
 
 

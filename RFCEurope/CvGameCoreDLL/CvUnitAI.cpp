@@ -99,7 +99,7 @@ bool CvUnitAI::AI_update()
 	//GC.getGameINLINE().logMsg("   Unit AI  at %d %d   UnitType: %d",getX(),getY(),getUnitType() ); 
 	//GC.getGameINLINE().logMsg("   Start Prosecutions ");
 	if ( getUnitType() == UNIT_PROSECUTOR ){
-		//GC.getGameINLINE().logMsg("   PROSECUTOR ");
+		//GC.getGameINLINE().logMsg("   PROSECUTOR for %d",getOwnerINLINE());
 		//if ( GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)24) ){
 		//	this ->kill(false);
 		//	return false;

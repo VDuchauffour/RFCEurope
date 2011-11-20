@@ -1804,7 +1804,8 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 
 	// 3MiroProsecutor: Make it so that Prosecutors can only be build in cities with state religion
 	if ( eUnit == UNIT_PROSECUTOR ){
-		if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) || (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){
+		//if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) || (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){
+		if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() != NO_RELIGION) && (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){
 			return false;
 		};
 	};
@@ -14487,6 +14488,9 @@ void CvCity::doPurgeReligions(){
 			};
 			if ( !safeReligion ){
 				setHasReligion((ReligionTypes) i, false, false );
+				if ( i == minorReligion ){ // 3Miro: count the minor religion prosecutions
+					minorReligionRefugies++;
+				};
 				// if a building requires a religion that has been purged (i.e. non-state and non-holy city)
 				for( int j=0; j< GC.getNumBuildInfos(); j++ ){
 					if ( isHasRealBuilding((BuildingTypes) j) ){

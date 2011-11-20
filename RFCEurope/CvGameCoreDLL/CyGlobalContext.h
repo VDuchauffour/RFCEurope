@@ -466,6 +466,11 @@ public:
 	// 3Miro: set the number of peace turns after spawn
 	void setPaceTurnsAfterSpawn( int iTurns );
 
+	// 3Miro: minorReligion prosecutions
+	void setMinorReligion( int iMinorReligion );
+	void setMinorReligionRefugies( int iMRR );
+	int getMinorReligionRefugies();
+
 };
 
 #endif	// CyGlobalContext_h

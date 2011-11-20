@@ -312,5 +312,9 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setMercPromotion", &CyGlobalContext::setMercPromotion, "void ( int )")
 
 		.def("setPaceTurnsAfterSpawn", &CyGlobalContext::setPaceTurnsAfterSpawn, "void ( int )")
+
+		.def("setMinorReligion", &CyGlobalContext::setMinorReligion, "void ( int )")
+		.def("setMinorReligionRefugies", &CyGlobalContext::setMinorReligionRefugies, "void ( int )")
+		.def("getMinorReligionRefugies", &CyGlobalContext::getMinorReligionRefugies, "int( )")
 		;
 }

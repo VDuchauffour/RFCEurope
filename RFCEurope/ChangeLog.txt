@@ -27,6 +27,9 @@ Changes for Beta 14:
 		- Arabian UHV requires 35% islam instead of 25%
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when the become available)
+		- when the Jews are prosecuted from one city, then automatically move to another city from a player that is most otlerant (measureb by civics and lack of prosecutions)
+                       This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
+                       Also, there should be a lot more Jews left in late game
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
