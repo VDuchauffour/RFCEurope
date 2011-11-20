@@ -411,41 +411,44 @@ There are two types of Crusades: for the Holy Land that aim at capturing Jerusal
 		<English>[H1]List of event based modifiers / permanent stability:[\H1]
 
 [BOLD]Cities[\BOLD]
-entering a war -1 
-building a courhouse +1 
+entering a war -1
+building a courthouse +1
+
 
 [BOLD]Civics[\BOLD]
-building a nightwatch +1 
-beeing in anarchy max(-3, -numCities/3) (this applies each turn) 
+building a nightwatch +1
+beeing in anarchy max(-3, -numCities/3) (this applies for each turn in anarchy)
+
 
 [BOLD]Expension[\BOLD]
-building a castle +1 
+building a castle +1
 founding a city
 - in a solid province +1
-- in a unstable or OK province -2
-- while numCities less than 5 +1 
-conquering a city in a solid province +1 
-conquering a city while running Militarism +1 
-razing a city -2 (-1 for norse) 
-loosing a city in a solid province -4 
-loosing the capitol city -10 (-20 for Byzantium) 
-moving the palace -3 
-building a colony while running colonialism +1 
+- in a unstable or OK province -2 (0 for Portugal and Norse)
+- while numCities < 5 +1
+conquering a city in a solid province +1
+conquering a city while running Militarism +1
+razing a city -2 (-1 for Norse)
+loosing a city in a solid province -4
+loosing the capitol city -10 (-20 for Byzantium)
+moving the palace -3
+building a colony while running colonialism +1
+
 
 [BOLD]Economy[\BOLD]
-building a manor house +1 
-founding a corporation -2 
+building a manor house +1
+founding a corporation -2
 researching certain techs -1
-(Feudalism, Guilds, Gunpowder, ProfessionalArmy, Nationalism, CivilService, Economics, Machinery, Aristocracy) 
+(Feudalism, Guilds, Gunpowder, ProfessionalArmy, Nationalism, CivilService, Economics, Machinery, Aristocracy)
 
 [BOLD]Swing[\BOLD]
-beeing in anarchy -8 
-entering a war -3 
-own improvement destroyed -2 
-moving palace -5 
-conquering a city in a solid province +3 
-loosing a city in a solid province -3 
-loosing the capitol city -10 
+beeing in anarchy -8
+entering a war -3
+own improvement destroyed -2
+moving palace -5
+conquering a city in a solid province +3
+loosing a city in a solid province -3
+loosing the capitol city -10
 (note: those values are high, but their effect gets halfed every turn)
 
 
@@ -453,9 +456,9 @@ loosing the capitol city -10
 
 [BOLD]Cities[\BOLD]
 for an average city happiness of at least
-3 +1 
-5 +2 
-7 +3 
+3 +1
+5 +2
+7 +3
 etc.
 
 for a prosecution countdown of at least
@@ -467,24 +470,25 @@ etc.
 add for each city that
 - is healty +1
 - is unhappy (angry population) -2
-- has at least one foreign religion -2 (-1 if running pagansism)
-- has unhappy population because of hurrying -1 
+- has at least one foreign religion -2 (-1 if running paganism, 0 for Poland or if running free religion)
+- has unhappy population because of hurrying -1
 - has unhappy population because of no military -1
 - has unhappy population because of war weariness -1
 - has unhappy population because of religion -1
-- has less than 40% own culture -1 
+- has less than 40% own culture -1 (0 for Hungary and France)
 the sum of war weariness and no military penalties for all cities together will never exceed -2
 the sum of all values so far is bound between -6 and 8
-add the stability bonus for orthodox civs (+0.08 per faithpoint) 
-add +8 while in a golden age 
+add the stability bonus for orthodox civs (+0.08 per faithpoint)
+add +8 while in a golden age
+
 
 [BOLD]Civics[\BOLD]
 The following civic combos give bonuses/penalties
-FeudalMonarchy with
+Feudal Monarchy with
 - Wonder Stephansdom +2
 - FeudalLaw +1
 
-DivineMonarchy with
+Divine Monarchy with
 - Paganism -4
 - StateReligion +2
 - Theocracy +3
@@ -493,13 +497,13 @@ DivineMonarchy with
 - ReligiousLaw +2
 - Wonder Stephansdom +2
 
-LimitedMonarchy with
+Limited Monarchy with
 - Wonder Stephansdom +2
 - CommonLaw +3
 - FreePeasantry +2
 - FreeLabor +2
 
-MerchantRepublic with
+Merchant Republic with
 - FeudalLaw -4
 - TradeEconomy +3
 - CommonLaw +3
@@ -507,7 +511,7 @@ MerchantRepublic with
 - FreeLabor +2
 - Number of cities max( -3, 4 - NumCities )
 
-FeudalLaw with
+Feudal Law with
 - Serfdom +1
 - Manorialism +1
 - FreePeasantry -4
@@ -515,12 +519,12 @@ FeudalLaw with
 Bureaucracy with
 - Number of cities max( -4, 5 - NumCities )
 
-ReligiousLaw with
+Religious Law with
 - Paganism -5
 - Theocracy +3
 - FreeReligion -5
 
-CommonLaw with
+Common Law with
 - FreeLabor +3
 - Theocracy -4
 
@@ -528,7 +532,8 @@ Serfdom with
 - Manorialism +2
 
 Apprenticeship with
-- Guilds +3 
+- Guilds +3
+
 
 [BOLD]Expansion[\BOLD]
 for each own city in
@@ -556,8 +561,9 @@ for total number of cities beeing at least
 15 -5
 for each city beyond 16 add -1
 for each city beyond 31 add -2
-(the exact formula is -(numCities*numCities)/40 )
-(Turkey and Moscow get five cities for free, that means -1 at 12 cities, -2 at 14 cities, etc.) 
+(the exact formula is -(numCities*numCities)/40)
+(Turkey and Moscow get five cities for free, that means -1 at 12 cities, -2 at 14 cities, etc.)
+
 
 [BOLD]Economy[\BOLD]
 The total value is bound between -7 and 7</English>
