@@ -344,6 +344,12 @@ iHackapell= 101
 iReiter= 102
 iZaporozhianCossack= 103
 iDonCossack= 104
+iDoppelsoldner= 105
+iIrishBrigade= 106
+iStradiot= 107
+iWaardgelder= 108
+iNaffatun= 109
+iTurkopoles= 110
 
 iProsecutorClass = 62
 
