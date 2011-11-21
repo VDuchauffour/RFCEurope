@@ -96,17 +96,8 @@
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA11</Tag>
-		<English>Metropolitan France</English>
-		<French>France M&#233;tropolitaine</French>
-		<German>Metropolitan-Frankreich</German>
-		<Italian>Francia Metropolitana</Italian>
-		<Spanish>Francia Metropolitana</Spanish>
-		<Russian/>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DN_FRA12</Tag>
-		<English>Emirate of France</English>
+		<English>Emirate of Frangistan</English>
 		<French>Emirat de France</French>
 		<German>Emirat Frankreich</German>
 		<Italian/><Spanish/><Russian/>
@@ -143,16 +134,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA17</Tag>
-		<English>German France</English>
-		<French>France Allemande</French>
-		<German>Deutsch-Frankreich</German>
+		<English>Western Francia</English>
+		<French></French>
+		<German></German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA18</Tag>
-		<English>Counties of France</English>
-		<French>Comtés de la France</French>
-		<German>Counties Frankreichs</German>
+		<English>Duchy of Chinon</English>
+		<French></French>
+		<German></German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
@@ -164,13 +155,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA20</Tag>
-		<English>Principality of Fransa</English>
-		<French>Principauté de France</French>
-		<German>Fürstentum Fransa</German>
+		<English>Principality of Frangistan</English>
+		<French></French>
+		<German></German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA21</Tag>
+		<English>Emirate of Poitiers</English>
+		<French></French>
+		<German></German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA22</Tag>
+		<English>Western Francia</English>
+		<French></French>
+		<German></German>
+		<Italian/><Spanish/><Russian/>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA23</Tag>
 		<English>Province of France</English>
 		<French>Province de France</French>
 		<German>Provinz Frankreich</German>
