@@ -27,12 +27,11 @@ Changes for Beta 14:
 		- Adjusted Kievan visibility map to the new starting point
 		- Arabian UHV requires 35% islam instead of 25%
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
-		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when the become available)
-<<<<<<< .mine
+		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
 		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles
-		- when the Jews are prosecuted from one city, then automatically move to another city from a player that is most tolerant (measured by civics and lack of prosecutions)
-                       This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
-                       Also, there should be a lot more Jews left in late game
+		- When the Jews are prosecuted from one city, then automatically move to another city from a player that is most tolerant (measured by civics and lack of prosecutions)
+				This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
+				Also, there should be a lot more Jews left in late game
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -51,7 +50,7 @@ Changes for Beta 14:
 		- Added Cordoban dynamic civ names when respawned as the Hafsids in Tunisia
 		- Dynamic civ names for Lithuania
 		- Added a couple more unique names to barbarians
-		- Improved DCN for Arabia and Norse
+		- Improved DCN for Arabia, France and Norse
 		- Link to the Mercenary-Concepts for Mercenary units
 
 	Art/Sound updates:
@@ -73,7 +72,7 @@ Changes for Beta 14:
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
 		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
-
+		- Fixed a bug in stability calculation on city razing
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

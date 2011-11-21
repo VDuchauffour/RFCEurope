@@ -153,8 +153,8 @@ class Stability:
                 if (city.hasBuilding(xml.iEscorial)):
                         gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasEscorial, 1 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
-		if (city.hasBuilding(xml.iStephansdom)):
-			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+                if (city.hasBuilding(xml.iStephansdom)):
+                        gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                 self.recalcCivicCombos(playerType)
                 self.recalcCivicCombos(owner)
@@ -182,22 +182,27 @@ class Stability:
                                 pOwner.changeStabilityBase( iCathegoryExpansion, -10 ) # If Byzantium loses Constantinople, they should collapse
                                 
         def onCityRazed(self, iOwner, playerType, city):
-            	#Sedna17: Not sure what difference between iOwner and playerType is here
-		#3Miro: iOwner owns the city (victim) and playerType conquers the city (pillager)
+                #Sedna17: Not sure what difference between iOwner and playerType is here
+                #3Miro: iOwner owns the city (victim) and playerType conquers the city (pillager)
                 #3Miro: on second thought, I think playerType is the one razing the city, iOwner is the previous owner but if the prev owner 
                 #       doesn't have enough culture, then iOwner ==  playerType
+                #AbsintheRed: The question of razing is after the conquest of the city. This means iOwner is the conqueror.
+                #             Thus, if 3Miro is right, and playerType is the one razing the city, then: iOwner == playerType in all cases
                 if (city.hasBuilding(xml.iEscorial)):
                         gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
-		if (city.hasBuilding(xml.iStephansdom)):
-			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
+                if (city.hasBuilding(xml.iStephansdom)):
+                        gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                         gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                 self.recalcCivicCombos(playerType)
                 #print(" Who is doing what?", playerType, iOwner)
+                #AbsintheRed: -1 for everyone, additional -1 if not Norse:
                 if ( playerType != con.iNorse ):
                         gc.getPlayer( playerType ).changeStabilityBase( iCathegoryExpansion, -1 )
-                if ( iOwner != playerType ):
-                        gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -2 )
+                #if ( iOwner != playerType ):
+                #        gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -2 )
+                if ( iOwner == playerType ):
+                        gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -1 )
                 self.recalcEpansion( gc.getPlayer( playerType ) )
 
 
