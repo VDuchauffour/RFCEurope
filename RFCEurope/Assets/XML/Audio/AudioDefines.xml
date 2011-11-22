@@ -2606,6 +2606,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_BUILD_PAGAN</SoundID>
+			<Filename>Sounds/Ambient/GoodyHeal</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_BUILD_JEWISH</SoundID>
 			<Filename>Sounds/Buildings/JewishDink</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -2620,14 +2627,42 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_BUILD_CHRISTIAN</SoundID>
+			<SoundID>SND_BUILD_CATHOLIC</SoundID>
 			<Filename>Sounds/Buildings/ChristianDink</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_BUILD_CHRISTIAN_MOVIE</SoundID>
+			<SoundID>SND_BUILD_CATHOLIC_MOVIE</SoundID>
+			<Filename>Sounds/Buildings/Christian</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_BUILD_ORTHODOX</SoundID>
+			<Filename>Sounds/Buildings/ChristianDink</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_BUILD_ORTHODOX_MOVIE</SoundID>
+			<Filename>Sounds/Buildings/Christian</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_BUILD_PROTESTANT</SoundID>
+			<Filename>Sounds/Buildings/ChristianDink</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_BUILD_PROTESTANT_MOVIE</SoundID>
 			<Filename>Sounds/Buildings/Christian</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
@@ -2643,62 +2678,6 @@
 		<SoundData>
 			<SoundID>SND_BUILD_ISLAMIC_MOVIE</SoundID>
 			<Filename>Sounds/Buildings/Islamic</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_HINDU</SoundID>
-			<Filename>Sounds/Buildings/HinduDink</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_HINDU_MOVIE</SoundID>
-			<Filename>Sounds/Buildings/Hindu</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_BUDDHIST</SoundID>
-			<Filename>Sounds/Buildings/BuddhistDink</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_BUDDHIST_MOVIE</SoundID>
-			<Filename>Sounds/Buildings/Buddhist</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_CONFUCIAN</SoundID>
-			<Filename>Sounds/Buildings/ConfucianistDink</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_CONFUCIAN_MOVIE</SoundID>
-			<Filename>Sounds/Buildings/Confuscianist</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_TAOIST</SoundID>
-			<Filename>Sounds/Buildings/TaoistDink</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_BUILD_TAOIST_MOVIE</SoundID>
-			<Filename>Sounds/Buildings/Taoist</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

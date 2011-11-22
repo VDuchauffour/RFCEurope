@@ -40,7 +40,7 @@ Changes for Beta 14:
 		- Moved Estonia to Estern Europe Region, otherwise Barbarians from Estonia were trying to attack the Norse in Scandinavia and they had no way to get there
 		- Same as Estonia, Morocco had to be moved from the Islands Region to the North Africa Region
 		- Moved Bosnia and Croatia to Central Europe Region, hopefully this will help the Venice AI
-		- Norrland only in the Sweden, Österland expanded
+		- Norrland province is only in Sweden, Osterland expanded
 		- Expanded North African provinces - needed for barbarian spawn areas (so AI regions don't mess them up if they are outside their region)
 
 	XML/text updates:
@@ -58,6 +58,7 @@ Changes for Beta 14:
 	Art/Sound updates:
 		- New icons for the civilopedia categories
 		- New art for Don Cossack
+		- Religious building sounds updated. Now all of them have build sounds (including Pagan Shrine and Jewish buildings)
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
