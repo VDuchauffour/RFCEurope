@@ -332,7 +332,7 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 	num plots written=7300
-	num signs written=3280
+	num signs written=3440
 	Randomize Resources=false
 EndMap
 
@@ -51614,18 +51614,6 @@ BeginSign
 	caption=31
 EndSign
 BeginSign
-	plotX=78
-	plotY=71
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
-	plotX=78
-	plotY=72
-	playerType=-1
-	caption=31
-EndSign
-BeginSign
 	plotX=77
 	plotY=72
 	playerType=-1
@@ -58910,18 +58898,6 @@ BeginSign
 	caption=35
 EndSign
 BeginSign
-	plotX=61
-	plotY=63
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
-	plotX=61
-	plotY=64
-	playerType=-1
-	caption=35
-EndSign
-BeginSign
 	plotX=62
 	plotY=64
 	playerType=-1
@@ -59376,72 +59352,6 @@ BeginSign
 	plotY=64
 	playerType=-1
 	caption=35
-EndSign
-BeginSign
-	plotX=70
-	plotY=69
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=71
-	plotY=69
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=71
-	plotY=70
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=70
-	plotY=70
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=71
-	plotY=71
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=72
-	plotY=71
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=72
-	plotY=70
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=72
-	plotY=72
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=71
-	plotY=72
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=73
-	plotY=71
-	playerType=-1
-	caption=36
-EndSign
-BeginSign
-	plotX=73
-	plotY=72
-	playerType=-1
-	caption=36
 EndSign
 BeginSign
 	plotX=56
@@ -60548,12 +60458,6 @@ BeginSign
 	caption=34
 EndSign
 BeginSign
-	plotX=60
-	plotY=62
-	playerType=-1
-	caption=34
-EndSign
-BeginSign
 	plotX=88
 	plotY=61
 	playerType=-1
@@ -61272,4 +61176,1060 @@ BeginSign
 	plotY=37
 	playerType=-1
 	caption=4
+EndSign
+BeginSign
+	plotX=78
+	plotY=72
+	playerType=-1
+	caption=141
+EndSign
+BeginSign
+	plotX=78
+	plotY=71
+	playerType=-1
+	caption=141
+EndSign
+BeginSign
+	plotX=70
+	plotY=69
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=71
+	plotY=69
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=72
+	plotY=70
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=73
+	plotY=71
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=73
+	plotY=72
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=72
+	plotY=72
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=71
+	plotY=72
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=72
+	plotY=71
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=71
+	plotY=71
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=71
+	plotY=70
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=70
+	plotY=70
+	playerType=-1
+	caption=31
+EndSign
+BeginSign
+	plotX=61
+	plotY=64
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=61
+	plotY=63
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=60
+	plotY=62
+	playerType=-1
+	caption=33
+EndSign
+BeginSign
+	plotX=45
+	plotY=14
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=45
+	plotY=13
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=44
+	plotY=15
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=44
+	plotY=14
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=37
+	plotY=17
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=38
+	plotY=17
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=39
+	plotY=17
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=40
+	plotY=17
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=41
+	plotY=16
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=42
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=43
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=41
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=40
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=40
+	plotY=16
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=39
+	plotY=16
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=39
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=38
+	plotY=16
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=38
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=37
+	plotY=16
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=36
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=36
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=35
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=35
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=34
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=34
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=61
+	plotY=0
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=60
+	plotY=0
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=59
+	plotY=0
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=58
+	plotY=0
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=58
+	plotY=1
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=57
+	plotY=2
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=56
+	plotY=3
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=54
+	plotY=5
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=53
+	plotY=5
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=53
+	plotY=6
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=51
+	plotY=6
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=52
+	plotY=6
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=52
+	plotY=5
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=50
+	plotY=6
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=49
+	plotY=6
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=47
+	plotY=8
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=46
+	plotY=9
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=45
+	plotY=10
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=45
+	plotY=11
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=45
+	plotY=12
+	playerType=-1
+	caption=106
+EndSign
+BeginSign
+	plotX=51
+	plotY=5
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=52
+	plotY=4
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=53
+	plotY=3
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=53
+	plotY=4
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=54
+	plotY=4
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=54
+	plotY=3
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=54
+	plotY=2
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=55
+	plotY=3
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=55
+	plotY=2
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=56
+	plotY=2
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=57
+	plotY=1
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=57
+	plotY=0
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=56
+	plotY=1
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=69
+	plotY=3
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=70
+	plotY=3
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=71
+	plotY=3
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=67
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=68
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=68
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=69
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=69
+	plotY=2
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=70
+	plotY=2
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=71
+	plotY=2
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=72
+	plotY=2
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=73
+	plotY=2
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=74
+	plotY=2
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=77
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=76
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=75
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=78
+	plotY=1
+	playerType=-1
+	caption=103
+EndSign
+BeginSign
+	plotX=78
+	plotY=0
+	playerType=-1
+	caption=103
+EndSign
+BeginSign
+	plotX=69
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=70
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=71
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=72
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=73
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=74
+	plotY=1
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=70
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=71
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=72
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=73
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=74
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=76
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=77
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=75
+	plotY=0
+	playerType=-1
+	caption=104
+EndSign
+BeginSign
+	plotX=33
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=33
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=32
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=32
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=31
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=31
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=30
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=30
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=31
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=30
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=27
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=28
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=29
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=29
+	plotY=16
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=29
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=28
+	plotY=17
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=26
+	plotY=17
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=26
+	plotY=16
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=27
+	plotY=16
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=27
+	plotY=15
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=26
+	plotY=15
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=27
+	plotY=14
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=26
+	plotY=14
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=25
+	plotY=14
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=25
+	plotY=13
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=24
+	plotY=13
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=23
+	plotY=13
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=22
+	plotY=13
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=21
+	plotY=13
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=20
+	plotY=12
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=11
+	plotY=13
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=12
+	plotY=13
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=13
+	plotY=13
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=9
+	plotY=12
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=10
+	plotY=12
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=10
+	plotY=11
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=11
+	plotY=11
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=11
+	plotY=12
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=12
+	plotY=11
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=13
+	plotY=12
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=12
+	plotY=12
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=13
+	plotY=11
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=14
+	plotY=12
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=15
+	plotY=13
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=14
+	plotY=13
+	playerType=-1
+	caption=119
+EndSign
+BeginSign
+	plotX=28
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=36
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=34
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=35
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=33
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=32
+	plotY=15
+	playerType=-1
+	caption=109
+EndSign
+BeginSign
+	plotX=37
+	plotY=15
+	playerType=-1
+	caption=107
+EndSign
+BeginSign
+	plotX=55
+	plotY=1
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=56
+	plotY=0
+	playerType=-1
+	caption=105
+EndSign
+BeginSign
+	plotX=15
+	plotY=12
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=16
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=16
+	plotY=12
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=17
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=18
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=19
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=22
+	plotY=12
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=21
+	plotY=12
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=20
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=21
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=14
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=15
+	plotY=11
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=15
+	plotY=10
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=16
+	plotY=10
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=17
+	plotY=10
+	playerType=-1
+	caption=145
+EndSign
+BeginSign
+	plotX=18
+	plotY=10
+	playerType=-1
+	caption=145
 EndSign

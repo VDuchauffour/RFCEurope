@@ -417,15 +417,15 @@ building a courthouse +1
 
 [BOLD]Civics[\BOLD]
 building a nightwatch +1
-beeing in anarchy max(-3, -numCities/3) (this applies for each turn in anarchy)
+being in anarchy max(-3, -numCities/3) (this applies for each turn in anarchy)
 
 
-[BOLD]Expension[\BOLD]
+[BOLD]Expansion[\BOLD]
 building a castle +1
 founding a city
 - in a solid province +1
 - in a unstable or OK province -2 (0 for Portugal and Norse)
-- while numCities < 5 +1
+- while the number of your cities is less than 5 +1
 conquering a city in a solid province +1
 conquering a city while running Militarism +1
 razing a city -2 (-1 for Norse)
@@ -441,8 +441,9 @@ founding a corporation -2
 researching certain techs -1
 (Feudalism, Guilds, Gunpowder, ProfessionalArmy, Nationalism, CivilService, Economics, Machinery, Aristocracy)
 
+
 [BOLD]Swing[\BOLD]
-beeing in anarchy -8
+being in anarchy -8
 entering a war -3
 own improvement destroyed -2
 moving palace -5
@@ -538,7 +539,7 @@ Apprenticeship with
 [BOLD]Expansion[\BOLD]
 for each own city in
 - an unstable province -3
-- a OK province -1
+- an OK province -1
 
 with Imperialism +1 for each city in a non solid province (up to a maximum of +6) 
 (as France +2 per city with a maximum of +12)
@@ -551,9 +552,9 @@ for each foreign city in
 
 for each vassal +1 (+3 with Vassalage)
 
-for beeing a vassal of someone else +8
+for being a vassal of someone else +8
 
-for total number of cities beeing at least
+for total number of cities being at least
 7 -1
 9 -2
 11 -3
