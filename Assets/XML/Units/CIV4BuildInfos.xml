@@ -397,7 +397,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/BuildApiary.dds</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildApiary.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,11</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_COTTAGE</Type>
@@ -562,7 +562,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/BuildAccess.dds</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildAccess.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,4,11</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_REMOVE_MARSH</Type>
@@ -589,7 +589,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/BaseTerrain/marsh.dds</Button>
+			<Button>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>

@@ -487,7 +487,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.25</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Interface/Buttons/BaseTerrain/Marsh.dds</Button>
+			<Button>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 			<FeatureArtPiece>
@@ -497,7 +497,7 @@
 			</FeatureArtPieces> 
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/BaseTerrain/Marsh.dds</VarietyButton>
+				<VarietyButton>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 	</FeatureArtInfos>

@@ -114,7 +114,7 @@
 			<NIF>Art/Terrain/Resources/Walrus/Sea_Lions.nif</NIF>
 			<KFM>Art/Terrain/Resources/Walrus/Sea_Lions.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Walrus/Sea_Lions_fx.nif</SHADERNIF>
-			<Button>Art/Interface/Buttons/WorldBuilder/Walrus.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Walrus.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,9</Button>
 			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -291,7 +291,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/WorldBuilder/Relic.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Relic.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,10</Button>
 			<FontButtonIndex>34</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -309,7 +309,7 @@
 			<fInterfaceScale>0.7</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Apple/Banana.nif</NIF>
 			<KFM>Art/Terrain/Resources/Apple/Banana.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Apple.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Apple.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,11</Button>
 			<FontButtonIndex>36</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -318,7 +318,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Barley/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Barley/Wheat.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Barley.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Barley.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,10</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -327,7 +327,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Corn/Corn.nif</NIF>
 			<KFM>Art/Terrain/Resources/Corn/Corn.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Honey.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Honey.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,10</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -336,7 +336,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Potato/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Potato/Wheat.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Potato.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Potato.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,10</Button>
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -345,7 +345,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Salt/Marble.nif</NIF>
 			<KFM>Art/Terrain/Resources/Salt/Marble.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Salt.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Salt.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,10</Button>
 			<FontButtonIndex>40</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -354,7 +354,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Sulphur/Silver.nif</NIF>
 			<KFM>Art/Terrain/Resources/Sulphur/Silver.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Sulphur.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Sulphur.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,10</Button>
 			<FontButtonIndex>41</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -363,7 +363,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Timber/Timber.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/WorldBuilder/Timber.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Timber.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,9</Button>
 			<FontButtonIndex>42</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -372,7 +372,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coffee/Spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coffee/Spices.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Coffee.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Coffee.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,10</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
 		 <!--These are colonial-only resources and currently have dummy model-->
@@ -382,7 +382,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Barley/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Barley/Wheat.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Slaves.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Slaves.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,10</Button>
 			<FontButtonIndex>44</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -391,7 +391,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Barley/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Barley/Wheat.kfm</KFM>
-			<Button>Art/Interface/Buttons/WorldBuilder/Tea.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Tea.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,9</Button>
 			<FontButtonIndex>45</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -400,7 +400,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Tobacco/tobacco.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/WorldBuilder/Tobacco.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Tobacco.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,9</Button>
 			<FontButtonIndex>46</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -409,7 +409,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/WorldBuilder/Access.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Access.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,11</Button>
 			<FontButtonIndex>47</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -418,7 +418,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Amber/Gems.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/WorldBuilder/amber.dds</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/amber.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,11</Button>
 			<FontButtonIndex>48</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

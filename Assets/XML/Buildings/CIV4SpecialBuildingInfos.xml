@@ -44,7 +44,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/Seminary.dds</Button>
+			<Button>,Art/Interface/Buttons/Buildings/Seminary.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,7,16</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo> <!-- Also a House of Wisdom-->
 			<Type>SPECIALBUILDING_SCHOOL</Type>
@@ -54,7 +54,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/School.dds</Button>
+			<Button>,Art/Interface/Buttons/Buildings/School.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,16</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo> <!-- Also a minaret -->
 			<Type>SPECIALBUILDING_CHAPEL</Type>
@@ -64,7 +64,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/belfry.dds</Button>
+			<Button>,Art/Interface/Buttons/Buildings/belfry.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,12</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_RELIQUARY</Type>
@@ -74,7 +74,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/Reliquary.dds</Button>
+			<Button>,Art/Interface/Buttons/Buildings/Reliquary.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,16</Button>
 		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>
 </Civ4SpecialBuildingInfos>
