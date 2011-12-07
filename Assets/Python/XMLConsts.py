@@ -350,6 +350,9 @@ iStradiot= 107
 iWaardgelder= 108
 iNaffatun= 109
 iTurkopoles= 110
+iWalloonGuard= 111
+iWaldeck= 112
+iLipkaTatar= 113
 
 iProsecutorClass = 62
 

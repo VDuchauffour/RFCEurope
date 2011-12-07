@@ -371,6 +371,15 @@
 		<Russian>Zaporozhian</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_BALTIC</Tag>
+		<English>Baltic</English>
+		<French>Baltic</French>
+		<German>Baltic</German>
+		<Italian>Baltic</Italian>
+		<Spanish>Baltic</Spanish>
+		<Russian>Baltic</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_IRISH</Tag>
 		<English>Irish</English>
 		<French>Irish</French>
@@ -378,6 +387,15 @@
 		<Italian>Irish</Italian>
 		<Spanish>Irish</Spanish>
 		<Russian>Irish</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_WALLOON</Tag>
+		<English>Walloon</English>
+		<French>Walloon</French>
+		<German>Walloon</German>
+		<Italian>Walloon</Italian>
+		<Spanish>Walloon</Spanish>
+		<Russian>Walloon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ARABIAN</Tag>
@@ -858,6 +876,60 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TURKOPOLES_PEDIA</Tag>
 		<English>[TAB]Turkopoles are mercenaries hired by Christian forces in the Holy Lands for light cavalry duties. Composed of Christianised Turks and Eastern Orthodox Christians, these Turkopoles are armed with a bow and sword, and are capable of adopting a shooting circle formation, which provides constant fire against the enemy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WALLOON_GUARD</Tag>
+		<English>Walloon Guard</English>
+		<French>Walloon Guard</French>
+		<German>Walloon Guard</German>
+		<Italian>Walloon Guard</Italian>
+		<Spanish>Walloon Guard</Spanish>
+		<Russian>Walloon Guard</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WALLOON_GUARD_PEDIA</Tag>
+		<English>[TAB]The Walloon Guards were an infantry corps originally recruited in the region now known as Belgium, mainly in Catholic Wallonia, for the Spanish Army. The Walloons formed an elite unit tasked with the interior security of Spain and the maintenance of public order, eventually being incorporated as a regiment of the Spanish Royal Guard.[NEWLINE][TAB]The Walloon Guards originated at a time when the Low Countries were under the Spanish Crown as the Spanish Netherlands. "Walloons" was the German (walah) name for their romanized neighbors. The first Walloon regiments were formed by the Flemish, the Brabantians and Walloons to the number of 4,000 men and were recruited among the strongest and tallest men available, to spearhead assaults or to cover retreats.[NEWLINE][TAB]The decision to raise a regiment of Walloon Guards was taken on 17 October 1702 by Philip V of Spain and the new unit arrived in Spain in December the following year. They were linked with the Spanish Guards (Gardes Espagnoles) raised shortly before. Both regiments had the same organisation, disciplinary regulations and uniforms of dark blue, red and silver. The model for both were the French Guards (Gardes Francais) of the French Maison du Roi, a detachment of whom were sent to Spain in 1703 to act as instructors.[NEWLINE][TAB]After the independence of the United Netherlands in 1648 and the cession of the Spanish Netherlands to Austria at the Treaty of Utrecht in 1714, Walloons continued to serve in the Spanish army together with foreign soldiers from Switzerland, Ireland, and Italy. The Walloon Guards remained a primarily Walloon unit, although the Austrian authorities attempted to discourage recruitment in the former Spanish Netherlands. Most officers of the Regiment came from Spanish families of Walloon origin.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WALDECK</Tag>
+		<English>Waldeck</English>
+		<French>Waldeck</French>
+		<German>Waldeck</German>
+		<Italian>Waldeck</Italian>
+		<Spanish>Waldeck</Spanish>
+		<Russian>Waldeck</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WALDECK_PEDIA</Tag>
+		<English>[TAB]Waldeck had raised a battalion of infantry in 1681 but for much of the subsequent history leading up to the Napoleonic Wars, Waldeckers generally served as 'mercenaries' (actually hired out by the rulers of Waldeck) in foreign service. Such was the demand that the single battalion became two in 1740 (the 1st Regiment), three battalions in 1744, four in 1767 (forming a 2nd Regiment) and in 1776 a third regiment (5th and 6th Battalions) was raised. Most notably the foreign service was with the Dutch (the 1st and 2nd Regiments) and English (the 3rd Regiment) - the latter using them to suppress rebellions in the colonies. The 3rd Waldeck Regiment thus served during the American War of Independence, where they were known under the 'umbrella term' used during that conflict for all Germans - 'Hessians'. The regiment was captured by the Americans and only a small number returned to Germany, where some formed part of a newly raised 5th Battalion (1784).[NEWLINE][TAB]By the time of Napoleon's conquest of Germany, the Waldeck Regiments in Dutch service had been dissolved when, as the Batavian Republic, Holland was made into a kingdom ruled by Napoleon's brother Louis. Reduced to battalion strength, they now formed the 3rd battalions of the 1st and 2nd Infantry Regiments of the Kingdom of Holland. The 5th Battalion was disbanded, and Waldeck was now also obliged to provide two companies to the II Battalion, 6th German Confederation (i.e., Confederation of the Rhine) Regiment (along with two companies from Reuﬂ) in the service of the French Empire. As with all French infantry, they were referred to as 'Fusiliers'. They served mainly in the Peninsula War against the Duke of Wellington. In 1812, the 6th Confederation Regiment was re-formed, with three companies from Waldeck and one from Reuﬂ again forming the II Battalion. By the time of the downfall of the French Empire in 1814 the battalions in Dutch service had disappeared, but Waldeck now supplied three Infantry and one J‰ger Companies to the newly formed German Confederation.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIPKA_TATAR</Tag>
+		<English>Lipka Tatar</English>
+		<French>Lipka Tatar</French>
+		<German>Lipka Tatar</German>
+		<Italian>Lipka Tatar</Italian>
+		<Spanish>Lipka Tatar</Spanish>
+		<Russian>Lipka Tatar</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIPKA_TATAR_PEDIA</Tag>
+		<English>[TAB]The Lipka Tatars are a group of Tatars who originally settled in the Grand Duchy of Lithuania at the beginning of 14th century. The first settlers tried to preserve their shamanistic religion and sought asylum amongst the non-Christian Lithuanians. Towards the end of the 14th century, another wave of Tatars - this time, Muslims, were invited into the Grand Duchy by Vytautas the Great. These Tatars first settled in Lithuania proper around Vilnius, Trakai, Hrodna and Kaunas and later spread to other parts of the Grand Duchy that later became part of Polish Lithuanian Commonwealth. These areas comprise present-day Lithuania, Belarus and Poland. From the very beginning of their settlement in Lithuania they were known as the Lipka Tatars. While maintaining their religion, they united their fate with that of the mainly Christian Polish-Lithuanian Commonwealth. From the Battle of Grunwald onwards the Lipka Tatar light cavalry regiments participated in every significant military campaign of Lithuania and Poland.[NEWLINE][TAB]The Lipka Tatar origins can be traced back to the descendant states of the Mongol Empire of Genghis Khan - the White Horde, the Golden Horde, the Crimean Khanate and Kazan Khanate. They initially served as a noble military caste but later they became urban-dwellers known for their crafts, horses and gardening skills. Throughout centuries they resisted assimilation and kept their traditional lifestyle. While they remained very attached to their religions, over time however, they lost their original Tatar language and for the most part adopted Polish. There are still small groups of Lipka Tatars living in today's Belarus, Lithuania and Poland, as well as their communities in United States.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
