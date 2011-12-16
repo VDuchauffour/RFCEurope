@@ -26,12 +26,19 @@ Changes for Beta 14:
 		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
 		- Adjusted Kievan visibility map to the new starting point
 		- Arabian UHV requires 35% islam instead of 25%
-		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
-		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
-		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard, Waldeck, Lipka Tatars
 		- When the Jews are prosecuted from one city, then automatically move to another city from a player that is most tolerant (measured by civics and lack of prosecutions)
 				This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
 				Also, there should be a lot more Jews left in late game
+
+	Mercenaries:
+		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
+		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
+		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard,
+Swiss Line infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman), Touareg Camel Archer,
+Medjay (Nubian Longbowman)
+		- Swiss Pikeman aviable in a much bigger area, Almogavar aviable in Greece (Catalan Company)
+		- New art for Don Cossack, Huscarl
+		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 
 	Map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -57,9 +64,9 @@ Changes for Beta 14:
 
 	Art/Sound updates:
 		- New icons for the civilopedia categories
-		- New art for Don Cossack
 		- Religious building sounds updated. Now all of them have build sounds (including Pagan Shrine and Jewish buildings)
 		- Merged buttons into several atlas' (this should reduce the loading time of the mod a bit)
+		- New art for the Tercio
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
@@ -73,7 +80,6 @@ Changes for Beta 14:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
 		- Updated special respawns in the RiseAndFall.py, now they work properly
 		- Bugfix in the Bulgarian 3rd UHV (could switch back to failed, even after you successfully completed it)
-		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
 		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
 		- Fixed a bug in stability calculation on city razing
@@ -1143,7 +1149,7 @@ Changes for Alpha 8:
 	Religion info added to manual and a little more work therein
 	New respawn mechanics
 	New optimized leadheads from embryodead   
-	Merged in JediClemente's wonders and merjin_v1's texts (Civilopedias and a few other changes)   
+	Merged in JediClemente's wonders and merijn_v1's texts (Civilopedias and a few other changes)   
 	Changes to Iberia AI maps   
 	Updated Colony Requirement Techs   
 	Gave economy civics corporation changes.   

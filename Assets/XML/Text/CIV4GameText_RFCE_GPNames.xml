@@ -429,15 +429,6 @@
 		<Russian>William Shakespeare</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JEAN_SIBELIUS</Tag>
-		<English>Jean Sibelius</English>
-		<French>Jean Sibelius</French>
-		<German>Jean Sibelius</German>
-		<Italian>Jean Sibelius</Italian>
-		<Spanish>Jean Sibelius</Spanish>
-		<Russian>Jean Sibelius</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHANNES_VERMEER</Tag>
 		<English>Johannes Vermeer</English>
 		<French>Johannes Vermeer</French>
@@ -2272,7 +2263,6 @@
 		<Italian>Krum</Italian>
 		<Spanish>Krum</Spanish>
 		<Russian>Krum</Russian>
-		<Japanese/>Krum<Chinese/>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KALOYAN</Tag>
