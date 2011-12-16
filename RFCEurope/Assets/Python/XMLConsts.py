@@ -351,8 +351,12 @@ iWaardgelder= 108
 iNaffatun= 109
 iTurkopoles= 110
 iWalloonGuard= 111
-iWaldeck= 112
+iSwissGun= 112
 iLipkaTatar= 113
+iHighlanderGun= 114
+iZanji= 115
+iTouareg= 116
+iNubianLongbowman= 117
 
 iProsecutorClass = 62
 
@@ -889,6 +893,7 @@ lRegionMiddleEast	= [ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusale
 lRegionAfrica		= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh ]
 lRegionKiev			= [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_Pereyaslavl, iP_Chernigov, iP_Podolia, iP_Minsk ]
 lRegionItaly		= [ iP_Lombardy, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Malta, iP_Dalmatia ]
+lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, iP_Champagne, iP_Provence, iP_Lombardy, iP_Verona, iP_Franconia, iP_Bohemia ]
 
 # those regions are for the map and AI
 tRegionMap = [ [], # default region is empty
