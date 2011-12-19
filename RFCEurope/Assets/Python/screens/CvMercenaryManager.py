@@ -235,7 +235,10 @@ class CvMercenaryManager:
                                 
                                 screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
                                 screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                                if ( lMercList[iMerc][1] == "TXT_KEY_MERC_GENERIC" ):
+                                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription(), "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                                else:
+                                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
                                 
                                 iUpkeep = pUnit.getMercUpkeep()
                                 strCost = u"%1.2f%c" %((0.01*iUpkeep), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())

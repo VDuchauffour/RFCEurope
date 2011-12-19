@@ -283,6 +283,11 @@ class MercenaryManager:
                 (iPurchaseCost, iUpkeepCost) = self.GMU.getCost( iMerc, lPromotions )
                 iCurrentProvince = lMercInfo[4][gc.getGame().getSorenRandNum( len(lMercInfo[4]), 'available prvonce') ]
                 
+                #### DEBUG - start
+                #if ( iMerc == 12 or iMerc == 76 ):
+                #        iCurrentProvince = xml.iP_Denmark
+                #### DEBUG - end
+                
                 iHuman = gc.getGame().getActivePlayer()
                 if ( gc.getPlayer( iHuman ).getProvinceCityCount( iCurrentProvince ) > 0 ):
                         szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
@@ -334,7 +339,7 @@ class MercenaryManager:
                 for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
                         pPlayer = gc.getPlayer( iPlayer )
                         if ( pPlayer.isAlive() ):
-                                if ( (pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 0) and (pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100)  ):
+                                if ( (pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100) and (pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100)  ):
                                         # not enough gold to pay the mercs, they will randomly desert you
                                         self.desertMercs( iPlayer )
                                         
@@ -350,9 +355,15 @@ class MercenaryManager:
                 self.processNewMercs( iGameTurn ) # add new Merc to the pool
                 self.processNewMercs( iGameTurn ) # can add up to 2 mercs per turn
                 
+                ### DEBUG - start
+                #self.addNewMerc( 12 )
+                #self.addNewMerc( 76 )
+                ### DEBUG - end
+                
                 self.setMercLists() # save the potentially modified merc list (this allows for pickle read/write only once per turn)
                 
                 #self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
+                
                 
         def desertMercs( self, iPlayer ):
                 pPlayer = gc.getPlayer( iPlayer )
