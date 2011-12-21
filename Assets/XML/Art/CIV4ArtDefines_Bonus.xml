@@ -318,7 +318,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Barley/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Barley/Wheat.kfm</KFM>
-			<Button>,Art/Interface/Buttons/WorldBuilder/Barley.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,10</Button>
+			<Button>,Art/Interface/Buttons/WorldBuilder/Barley.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,10</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
