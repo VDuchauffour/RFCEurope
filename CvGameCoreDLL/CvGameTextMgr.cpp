@@ -7696,6 +7696,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 		szBuffer.append( gDLL->getText("TXT_KEY_STATE_RELIGION_CULTURE1", kBuilding.getStateReligionCulture() ) );
 		szBuffer.append( gDLL->getText("TXT_KEY_STATE_RELIGION_CULTURE2", GC.getReligionInfo( (ReligionTypes) kBuilding.getReligionType() ).getTextKeyWide() ) );
 	};
+	if ( kBuilding.getPaganCulture() > 0 ){
+		szBuffer.append(NEWLINE);
+		szBuffer.append( gDLL->getText("TXT_KEY_PAGAN_CULTURE", kBuilding.getPaganCulture() ) );
+	};
 	
 	// 3MiroCivic: Building - Civic combo
 			int iCivic;
@@ -11221,7 +11225,8 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 			szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR((iAttitudeChange > 0) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"), gDLL->getText("TXT_KEY_MISC_ATTITUDE_LOST_WAR", iAttitudeChange).GetCString());
 			szBuffer.append(NEWLINE);
 			szBuffer.append(szTempBuffer);
-		}
+		}
+
 		iAttitudeChange = kPlayer.AI_getTeamSizeAttitude(eTargetPlayer);
 		if ((iPass == 0) ? (iAttitudeChange > 0) : (iAttitudeChange < 0))
 		{

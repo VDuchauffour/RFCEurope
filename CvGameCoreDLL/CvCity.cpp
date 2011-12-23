@@ -3844,7 +3844,10 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		};
 		if ( GC.getBuildingInfo(eBuilding).getBombardImmuneDefense() > 0 ){
 			//GC.getGameINLINE().logMsg(" Change in Bombard Immune: %d",GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
-			chnageBombImmuneDefense(GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
+			chnageBombImmuneDefense(iChange * GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
+		};
+		if ( GC.getBuildingInfo(eBuilding).getPaganCulture() > 0 ){
+			GET_PLAYER(getOwnerINLINE()).setPaganCulture( GET_PLAYER(getOwnerINLINE()).getPaganCulture() + iChange*GC.getBuildingInfo(eBuilding).getPaganCulture() );
 		};
 		//3MiroBuildings - END
 
@@ -8314,6 +8317,9 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 	iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PAGAN_CULTURE];
 	if ( (iUPC > -1) && (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)  ){
 		iRate += iUPC;
+	};
+	if ( (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)  ){
+		iRate += 100*GET_PLAYER(getOwnerINLINE()).getPaganCulture(); // 3MiroBuilding: the pagan culture building
 	};
 	// 3Miro: Building Civic combo
 	// this goes to the Commerce per Building, together with the Holy Shrines
