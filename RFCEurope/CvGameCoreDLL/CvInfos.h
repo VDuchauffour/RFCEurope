@@ -1794,6 +1794,7 @@ public:
 	bool isAllowIrrigation() const;
 	int getBombardImmuneDefense() const;
 	int getStateReligionCulture() const;
+	int getPaganCulture() const;
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
@@ -1805,6 +1806,7 @@ protected:
 	bool m_bAllowIrrigation;
 	int m_iBombardImmuneDefense;
 	int m_iStateReligionCulture;
+	int m_iPaganCulture;
 
 	int m_iBuildingClassType;						
 	int m_iVictoryPrereq;

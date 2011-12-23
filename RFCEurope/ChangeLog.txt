@@ -61,6 +61,7 @@ Medjay (Nubian Longbowman)
 		- Added a couple more unique names to barbarians
 		- Improved DCN for Arabia, France and Norse
 		- Link to the Mercenary-Concepts for Mercenary units
+		- Added Shrine of Uppsala code to XML and C++
 
 	Art/Sound updates:
 		- New icons for the civilopedia categories
@@ -75,6 +76,8 @@ Medjay (Nubian Longbowman)
 		- Seljuks strike on Anatolia harder, but lighter in the Levant. OTOH increased Beduin barbarian threat from the Arabian peninsula
 		- Barbarian culture is enabled again, it was really hurting the Barbs by making them build useless Culture in their cities, it was removed only as a speedup feature in the first place anyway
 		- Merc Upkeep cost also depends on the hammer cost of the Unit
+		- Brewery replaced by Tavern with +1 happy from wine and barley, also small +5% gold bonus
+		- Inn has +5% gold bonus independent from wine (Note: Inn should be renamed to something to represent the Secret Societies like Masons and Assasins)
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)

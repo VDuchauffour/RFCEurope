@@ -449,6 +449,15 @@
 		<Spanish>Cervecería</Spanish>
 		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
 	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_BUILDING_TAVERN</Tag>
+		<English>Tavern</English>
+		<French>Tavern</French>
+		<German>Tavern</German>
+		<Italian>Tavern</Italian>
+		<Spanish>Tavern</Spanish>
+		<Russian>Tavern</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
 		<English>[TAB]A brewery is a dedicated building for the making of beer, though beer can be made in the home, and has been for much of beer's history. A company which makes beer is called either a brewery or a brewing company.[PARAGRAPH:2]The diversity of size in breweries is matched by the diversity of processes, degrees of automation, and kinds of beer produced in breweries. Typically a brewery is divided into distinct sections, with each section reserved for one part of the brewing process.</English>
@@ -1136,6 +1145,15 @@
 		<Italian>with [LINK=literal]%s1_Religion[\LINK]</Italian>
 		<Spanish>with [LINK=literal]%s1_Religion[\LINK]</Spanish>
 		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
+		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </English>
+		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </French>
+		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </German>
+		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Russian>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

@@ -1148,7 +1148,13 @@ public:
 	void setForcedHistoricityCivicSupport( int iNewValue );
 	int getForcedHistoricityCivicSupport() const;
 
+	int getPaganCulture() const;
+	void setPaganCulture( int iNewValue );
+
 protected:
+
+	// 3Miro: culture bonus to cities if the player has no StateReligion
+	int m_iPaganCulture;
 
 	// 3Miro Forced Historicity (modifiers for the AI only)
 	int m_iUnitsProduction;

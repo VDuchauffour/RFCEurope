@@ -325,6 +325,7 @@ void CvPlayer::init(PlayerTypes eID)
 	//GC.getGameINLINE().logMsg("player init out",getID());
 	m_iAllowBrothersAtWar = 0; // 3MiroBuldings
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
+	m_iPaganCulture = 0;
 }
 
 
@@ -778,6 +779,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_iAllowBrothersAtWar = 0; // 3MiroBuildings
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
+	m_iPaganCulture = 0;
 	m_iNumColonies = 0;
 	m_iFaith = 0; // 3MiroFaith
 	m_iProsecutionCount = 0;
@@ -17304,6 +17306,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream ->Read(&m_iUnitsProduction);
 	pStream ->Read(&m_iUnitsSupport);
 	pStream ->Read(&m_iCivicSupport);
+
+	pStream ->Read(&m_iPaganCulture);
 }
 
 //
@@ -17753,6 +17757,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream ->Write(m_iUnitsProduction);
 	pStream ->Write(m_iUnitsSupport);
 	pStream ->Write(m_iCivicSupport);
+
+	pStream ->Write(m_iPaganCulture);
 }
 
 void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience, int iX, int iY)
@@ -23713,4 +23719,11 @@ void CvPlayer::setForcedHistoricityCivicSupport( int iNewValue ){
 int CvPlayer::getForcedHistoricityCivicSupport() const
 {
 	return m_iCivicSupport;
+};
+int CvPlayer::getPaganCulture() const
+{
+	return m_iPaganCulture;
+};
+void CvPlayer::setPaganCulture( int iNewValue ){
+	m_iPaganCulture = iNewValue;
 };
