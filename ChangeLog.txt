@@ -86,6 +86,7 @@ Medjay (Nubian Longbowman)
 		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
 		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
 		- Fixed a bug in stability calculation on city razing
+		- Fixed name of the Genoan 2nd UHV
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
