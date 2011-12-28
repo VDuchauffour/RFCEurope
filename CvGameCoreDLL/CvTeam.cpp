@@ -5474,8 +5474,10 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 	}
 
 	// 3Miro: set the date the tech was first researched
-	if ( bNewValue && (GC.getTechInfo(eIndex).getFirstResearched() == -1) ){
-		GC.getTechInfo(eIndex).setFirstResearched( GC.getGameINLINE().getGameTurn() );
+	//if ( bNewValue && (GC.getTechInfo(eIndex).getFirstResearched() == -1) ){
+	if ( bNewValue && (techFoundedDate[eIndex] == -1) ){
+		//GC.getTechInfo(eIndex).setFirstResearched( GC.getGameINLINE().getGameTurn() );
+		techFoundedDate[eIndex] = GC.getGameINLINE().getGameTurn();
 	};
 	// 3Miro: end
 
@@ -5605,6 +5607,12 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 								{
 									if (GET_PLAYER((PlayerTypes)iJ).isAlive())
 									{
+										// 3Miro: Force Schism - start
+										if ( (iI == iSchismReligion) && !((GET_PLAYER((PlayerTypes)iJ).getStateReligion()==iSchismReligion)||
+											(GET_PLAYER((PlayerTypes)iJ).getStateReligion()==iParentReligion)) ){
+												continue; // ignore the case where we are looking at Protestantism and the player isn't Protestant or Catholic
+										};
+										// 3Miro: Force Schism - end
 										if (GET_PLAYER((PlayerTypes)iJ).getTeam() == getID())
 										{
 											iValue = 10;
