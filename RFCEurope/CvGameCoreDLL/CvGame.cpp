@@ -276,6 +276,9 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	doUpdateCacheOnTurn();
 	//logMsg("Init Out");
+
+	// 3Miro: tech date restriction
+	for( iI = 0; iI<120; iI++ ){ techFoundedDate[iI] = -1; };
 }
 
 //
@@ -648,6 +651,10 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		}while(aUpgradeUnits.size() >= 0);
 	}
 	// Sanguo Mod Performance, end
+
+	// 3Miro: tech date restriction
+	for( iI = 0; iI<120; iI++ ){ techFoundedDate[iI] = -1; };
+
 	//logMsg(" reset out ");
 }
 
@@ -8457,6 +8464,9 @@ void CvGame::read(FDataStreamBase* pStream)
 	pStream->Read(&m_eCultureVictoryCultureLevel);
 	// 3Miro: save the minorReligion refugie count
 	pStream->Read(&minorReligionRefugies);
+
+	// 3Miro: save/load the Tech Date Restrction
+	pStream->Read(120,techFoundedDate);
 }
 
 
@@ -8615,6 +8625,9 @@ void CvGame::write(FDataStreamBase* pStream)
 	pStream->Write(m_eCultureVictoryCultureLevel);
 	// 3Miro: save the minorReligion refugie count
 	pStream->Write(minorReligionRefugies);
+
+	// 3Miro: save/load the Tech Date Restrction
+	pStream->Write(120,techFoundedDate);
 }
 
 

@@ -63,6 +63,7 @@ int civDynamicNamesFlag[22] = 	{	 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
 // 1 = REL, 0 = GOV
 
 int civDynamicNamesEraThreshold[22] = { 2,  3,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 2 };*/
+int techFoundedDate[120];
 
 int *settlersMaps = NULL;
 int *warsMaps = NULL;

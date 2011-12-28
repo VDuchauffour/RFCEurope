@@ -1024,8 +1024,8 @@ m_piFlavorValue(NULL),
 m_piPrereqOrTechs(NULL),
 m_piPrereqAndTechs(NULL), 
 m_pbCommerceFlexible(NULL), 
-m_pbTerrainTrade(NULL),
-m_iFirstResearched(-1)
+m_pbTerrainTrade(NULL)
+//m_iFirstResearched(-1)
 {
 }
 
@@ -1297,13 +1297,13 @@ bool CvTechInfo::isTerrainTrade(int i) const
 	return m_pbTerrainTrade ? m_pbTerrainTrade[i] : false;
 }
 
-int CvTechInfo::getFirstResearched() const
+/*int CvTechInfo::getFirstResearched() const
 {
 	return m_iFirstResearched;
 };
 void CvTechInfo::setFirstResearched( int iGameTurn ){
 	m_iFirstResearched = iGameTurn;
-};
+};*/
 
 void CvTechInfo::read(FDataStreamBase* stream)
 {
@@ -1350,7 +1350,8 @@ void CvTechInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iGridX);
 	stream->Read(&m_iGridY);
 	// 3Miro: block research for 10 turns after a tech is discovered
-	stream->Read(&m_iFirstResearched);
+	//GC.getGameINLINE().logMsg(" Reading TechInfo()");
+	//stream->Read(&m_iFirstResearched);
 
 	SAFE_DELETE_ARRAY(m_piDomainExtraMoves);
 	m_piDomainExtraMoves = new int[NUM_DOMAIN_TYPES];
@@ -1426,7 +1427,8 @@ void CvTechInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iGridX);
 	stream->Write(m_iGridY);
 	// 3Miro: block tech trade for 10 turns after a tech is researched
-	stream->Write(m_iFirstResearched);
+	//GC.getGameINLINE().logMsg(" Writing TechInfo()");
+	//stream->Write(m_iFirstResearched);
 	
 	stream->Write(NUM_DOMAIN_TYPES, m_piDomainExtraMoves);
 	stream->Write(GC.getNumFlavorTypes(), m_piFlavorValue);

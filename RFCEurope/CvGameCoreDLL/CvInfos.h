@@ -365,15 +365,15 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	int getFirstResearched() const;
-	void setFirstResearched( int iGameTurn );
+	//int getFirstResearched() const;
+	//void setFirstResearched( int iGameTurn );
 
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 
 protected:
 
 	// 3Miro: block tech trade for 10 turns after the tech is researched
-	int m_iFirstResearched;
+	//int m_iFirstResearched;
 
 	int m_iAdvisorType;
 	int m_iAIWeight;
