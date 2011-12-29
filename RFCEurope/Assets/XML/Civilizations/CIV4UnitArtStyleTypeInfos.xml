@@ -386,7 +386,7 @@
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_SPEARMAN_VIKING</EarlyArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_SPEARMAN_VIKING</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_SPEARMAN_VIKING</LateArtDefineTag>						
+						<LateArtDefineTag>ART_DEF_UNIT_SPEARMAN_VIKING</LateArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -1247,7 +1247,7 @@
 						<MiddleArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</MiddleArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_GREAT_SPY_ARABIAN</LateArtDefineTag>
 					</UnitMeshGroup>
-				</StyleUnit>				
+				</StyleUnit>
 			</StyleUnits>
 		</UnitArtStyleTypeInfo>
 	</UnitArtStyleTypeInfos>

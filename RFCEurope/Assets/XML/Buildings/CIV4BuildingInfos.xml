@@ -181,9 +181,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Summer Palace -->
 			<BuildingClass>BUILDINGCLASS_SUMMER_PALACE</BuildingClass>
@@ -382,9 +382,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Royal Academy -->
 			<BuildingClass>BUILDINGCLASS_ROYAL_ACADEMY</BuildingClass>
@@ -566,9 +566,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Versailles -->
 			<BuildingClass>BUILDINGCLASS_VERSAILLES</BuildingClass>
@@ -757,9 +757,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Walls -->
 			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
@@ -934,9 +934,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Star Fort -->
 			<BuildingClass>BUILDINGCLASS_STAR_FORT</BuildingClass>
@@ -1105,9 +1105,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>20</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>20</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Castle -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1245,12 +1245,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -1300,9 +1295,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Moscow Kremlin -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1504,9 +1499,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hungarian Stronghold -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1644,12 +1639,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -1703,9 +1693,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Spanish Citadel -->
 			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
@@ -1843,12 +1833,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -1907,9 +1892,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Barracks -->
 			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
@@ -2086,7 +2071,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Archery Range -->
 			<BuildingClass>BUILDINGCLASS_ARCHERY_RANGE</BuildingClass>
@@ -2266,9 +2251,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Stable -->
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
@@ -2446,9 +2431,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Bulgarian Stan -->
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
@@ -2626,9 +2611,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Granary -->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
@@ -2806,9 +2791,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Cordoban Noria -->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
@@ -2936,7 +2921,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<YieldModifiers/>
 			<CommerceChanges/>
@@ -2995,9 +2979,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Folwark -->
 			<BuildingClass>BUILDINGCLASS_GRANARY</BuildingClass>
@@ -3124,8 +3108,6 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
@@ -3183,9 +3165,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Aqueduct -->
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
@@ -3355,9 +3337,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hammam -->
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
@@ -3526,9 +3508,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Lighthouse -->
 			<BuildingClass>BUILDINGCLASS_LIGHTHOUSE</BuildingClass>
@@ -3716,9 +3698,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Trading Post -->
 			<BuildingClass>BUILDINGCLASS_LIGHTHOUSE</BuildingClass>
@@ -3891,7 +3873,7 @@
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>					
+					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
@@ -3905,9 +3887,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- River Wharf -->
 			<BuildingClass>BUILDINGCLASS_WHARF</BuildingClass>
@@ -4066,7 +4048,7 @@
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>					
+					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
@@ -4080,9 +4062,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Harbor -->
 			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
@@ -4239,7 +4221,7 @@
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>					
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
@@ -4253,9 +4235,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Feitoria -->
 			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
@@ -4414,11 +4396,11 @@
 			<ImprovementFreeSpecialists/>
 			<Flavors>
 				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>					
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
-                                <Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>					
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
@@ -4432,9 +4414,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Custom House -->
 			<BuildingClass>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClass>
@@ -4608,9 +4590,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Drydock -->
 			<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
@@ -4795,9 +4777,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Venice Arsenal -->
 			<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
@@ -4981,9 +4963,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Forge -->
 			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
@@ -5112,7 +5094,6 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
@@ -5149,7 +5130,6 @@
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
-						<iYield>0</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
@@ -5157,7 +5137,6 @@
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
-						<iYield>0</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
@@ -5165,7 +5144,6 @@
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
-						<iYield>0</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
@@ -5187,9 +5165,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Guild Hall -->
 			<BuildingClass>BUILDINGCLASS_GUILD_HALL</BuildingClass>
@@ -5374,9 +5352,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Textile Mill -->
 			<BuildingClass>BUILDINGCLASS_TEXTILE_MILL</BuildingClass>
@@ -5505,7 +5483,6 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>25</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<PowerYieldModifiers/>
 			<CommerceChanges/>
@@ -5551,9 +5528,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Tower of London -->
 			<BuildingClass>BUILDINGCLASS_TOWER_LONDON</BuildingClass>
@@ -5732,9 +5709,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- University -->
 			<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
@@ -5919,9 +5896,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Observatory -->
 			<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
@@ -6098,9 +6075,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hospital -->
 			<BuildingClass>BUILDINGCLASS_HOSPITAL</BuildingClass>
@@ -6274,9 +6251,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Theatre -->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
@@ -6467,9 +6444,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Byzantine Hippodrome -->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
@@ -6655,9 +6632,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Austrian Opera House -->
 			<BuildingClass>BUILDINGCLASS_THEATRE</BuildingClass>
@@ -6852,9 +6829,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Market -->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
@@ -7030,9 +7007,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Caravan House -->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
@@ -7208,9 +7185,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Brewery, now called Tavern -->
 			<BuildingClass>BUILDINGCLASS_BREWERY</BuildingClass>
@@ -7358,7 +7335,7 @@
 					<BonusType>BONUS_BARLEY</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
-                                <BonusHappinessChange>
+				<BonusHappinessChange>
 					<BonusType>BONUS_WINE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
@@ -7395,9 +7372,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Burgundian Winery -->
 			<BuildingClass>BUILDINGCLASS_BREWERY</BuildingClass>
@@ -7574,7 +7551,7 @@
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
-                                <Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
@@ -7589,9 +7566,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Jeweler -->
 			<BuildingClass>BUILDINGCLASS_JEWELER</BuildingClass>
@@ -7782,10 +7759,10 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
-		</BuildingInfo>		
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
+		</BuildingInfo>
 		<BuildingInfo> <!-- Weaver -->
 			<BuildingClass>BUILDINGCLASS_WEAVER</BuildingClass>
 			<Type>BUILDING_WEAVER</Type>
@@ -7947,16 +7924,12 @@
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>10</iCommerce>
-						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>10</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -7965,16 +7938,12 @@
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>10</iCommerce>
-						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
 					<CommerceModifiers>
 						<iCommerce>10</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -7983,7 +7952,6 @@
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>10</iCommerce>
-						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
@@ -8004,9 +7972,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Smokehouse -->
 			<BuildingClass>BUILDINGCLASS_SMOKEHOUSE</BuildingClass>
@@ -8189,9 +8157,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Tannery -->
 			<BuildingClass>BUILDINGCLASS_TANNERY</BuildingClass>
@@ -8320,7 +8288,6 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
@@ -8352,7 +8319,6 @@
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
-						<iYield>0</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
@@ -8360,7 +8326,6 @@
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
-						<iYield>0</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
@@ -8368,7 +8333,6 @@
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
-						<iYield>0</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 			 </BonusYieldModifiers>
@@ -8390,9 +8354,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Luxury Store -->
 			<BuildingClass>BUILDINGCLASS_LUXURY_STORE</BuildingClass>
@@ -8612,9 +8576,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Warehouse -->
 			<BuildingClass>BUILDINGCLASS_WAREHOUSE</BuildingClass>
@@ -8853,9 +8817,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Apothecary -->
 			<BuildingClass>BUILDINGCLASS_APOTHECARY</BuildingClass>
@@ -9024,9 +8988,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Bank -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
@@ -9197,9 +9161,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Genoan Bank -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
@@ -9375,9 +9339,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- English Royal Exchange -->
 			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
@@ -9548,9 +9512,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Courthouse -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -9734,9 +9698,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Kievan Veche -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -9921,9 +9885,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Rathaus -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -10108,9 +10072,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Lithuanian Voivodeship -->
 			<BuildingClass>BUILDINGCLASS_COURTHOUSE</BuildingClass>
@@ -10299,9 +10263,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Dungeon -->
 			<BuildingClass>BUILDINGCLASS_DUNGEON</BuildingClass>
@@ -10495,9 +10459,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Night Watch -->
 			<BuildingClass>BUILDINGCLASS_NIGHT_WATCH</BuildingClass>
@@ -10632,12 +10596,7 @@
 			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -10686,9 +10645,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Swedish Soldier Tennant -->
 			<BuildingClass>BUILDINGCLASS_NIGHT_WATCH</BuildingClass>
@@ -10824,12 +10783,7 @@
 			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -10883,9 +10837,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Levee -->
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
@@ -11057,9 +11011,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Dike -->
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
@@ -11234,9 +11188,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Inn -->
 			<BuildingClass>BUILDINGCLASS_INN</BuildingClass>
@@ -11372,9 +11326,6 @@
 			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -11429,9 +11380,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Coffee House -->
 			<BuildingClass>BUILDINGCLASS_COFFEE_HOUSE</BuildingClass>
@@ -11622,9 +11573,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Manor House -->
 			<BuildingClass>BUILDINGCLASS_MANOR_HOUSE</BuildingClass>
@@ -11798,9 +11749,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- French Chateau -->
 			<BuildingClass>BUILDINGCLASS_MANOR_HOUSE</BuildingClass>
@@ -11929,7 +11880,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
@@ -11982,9 +11932,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Infirmary -->
 			<BuildingClass>BUILDINGCLASS_INFIRMARY</BuildingClass>
@@ -12154,9 +12104,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Pagan Shrine -->
 			<BuildingClass>BUILDINGCLASS_PAGAN_SHRINE</BuildingClass>
@@ -12286,7 +12236,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
@@ -12332,7 +12281,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Jewish Quarter -->
 			<BuildingClass>BUILDINGCLASS_JEWISH_QUARTER</BuildingClass>
@@ -12462,13 +12411,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
 				<iCommerce>25</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -12514,9 +12461,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Jewish Shrine -->
 			<BuildingClass>BUILDINGCLASS_JEWISH_SHRINE</BuildingClass>
@@ -12707,9 +12654,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>2</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Temple -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_TEMPLE</BuildingClass>
@@ -12836,11 +12783,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12891,9 +12834,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant School -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SCHOOL</BuildingClass>
@@ -13019,25 +12962,12 @@
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChanges>	
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChangeDoubleTimes>
+			<CommerceChanges/>
+			<ObsoleteSafeCommerceChanges/>
+			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -13092,10 +13022,10 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
-		</BuildingInfo>		
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
+		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Cathedral -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_PROTESTANT_CATHEDRAL</Type>
@@ -13287,9 +13217,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Chapel -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_CHAPEL</BuildingClass>
@@ -13471,9 +13401,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Seminary -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SEMINARY</BuildingClass>
@@ -13600,11 +13530,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13657,9 +13583,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Protestant Shrine -->
 			<BuildingClass>BUILDINGCLASS_PROTESTANT_SHRINE</BuildingClass>
@@ -13850,9 +13776,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>2</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Temple -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_TEMPLE</BuildingClass>
@@ -13979,11 +13905,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14034,9 +13956,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Chapel -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CHAPEL</BuildingClass>
@@ -14218,9 +14140,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClass>
@@ -14413,9 +14335,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic School -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SCHOOL</BuildingClass>
@@ -14541,21 +14463,9 @@
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChanges>	
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChangeDoubleTimes>
+			<CommerceChanges/>
+			<ObsoleteSafeCommerceChanges/>
+			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>100</iCommerce>
@@ -14604,10 +14514,10 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
-		</BuildingInfo>		
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
+		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Madrassa -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_MADRASSA</BuildingClass>
 			<Type>BUILDING_ISLAMIC_MADRASSA</Type>
@@ -14795,9 +14705,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Islamic Shrine -->
 			<BuildingClass>BUILDINGCLASS_ISLAMIC_SHRINE</BuildingClass>
@@ -14988,9 +14898,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>2</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Temple -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_TEMPLE</BuildingClass>
@@ -15117,11 +15027,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15172,9 +15078,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Cathedral -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CATHEDRAL</BuildingClass>
@@ -15369,7 +15275,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Chapel -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_CHAPEL</BuildingClass>
@@ -15557,7 +15463,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Reliquary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_RELIQUARY</BuildingClass>
@@ -15686,11 +15592,7 @@
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -15742,7 +15644,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Monastery -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_MONASTERY</BuildingClass>
@@ -15929,7 +15831,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Seminary -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SEMINARY</BuildingClass>
@@ -16056,11 +15958,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16115,7 +16013,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Catholic Shrine -->
 			<BuildingClass>BUILDINGCLASS_CATHOLIC_SHRINE</BuildingClass>
@@ -16308,7 +16206,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>2</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Temple -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_TEMPLE</BuildingClass>
@@ -16435,11 +16333,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16490,9 +16384,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_CATHEDRAL</BuildingClass>
@@ -16685,9 +16579,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Chapel -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_CHAPEL</BuildingClass>
@@ -16873,9 +16767,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Reliquary -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_RELIQUARY</BuildingClass>
@@ -17004,11 +16898,7 @@
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
+			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -17058,9 +16948,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Monastery -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_MONASTERY</BuildingClass>
@@ -17245,9 +17135,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>1</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>1</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Seminary -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SEMINARY</BuildingClass>
@@ -17374,11 +17264,7 @@
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17431,9 +17317,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Orthodox Shrine -->
 			<BuildingClass>BUILDINGCLASS_ORTHODOX_SHRINE</BuildingClass>
@@ -17624,9 +17510,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>2</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>2</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Sistine Chapel -->
 			<BuildingClass>BUILDINGCLASS_SISTINE_CHAPEL</BuildingClass>
@@ -17820,9 +17706,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Notre Dame -->
 			<BuildingClass>BUILDINGCLASS_NOTRE_DAME</BuildingClass>
@@ -18008,9 +17894,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Leaning Tower -->
 			<BuildingClass>BUILDINGCLASS_LEANING_TOWER</BuildingClass>
@@ -18199,9 +18085,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Theodosian Walls -->
 			<BuildingClass>BUILDINGCLASS_THEODOSIAN_WALLS</BuildingClass>
@@ -18388,9 +18274,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Topkapi Palace -->
 			<BuildingClass>BUILDINGCLASS_TOPKAPI_PALACE</BuildingClass>
@@ -18580,9 +18466,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>1</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Shrine of Uppsala -->
 			<BuildingClass>BUILDINGCLASS_SHRINE_OF_UPPSALA</BuildingClass>
@@ -18773,9 +18659,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>1</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>1</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- National Theatre -->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_THEATRE</BuildingClass>
@@ -18967,9 +18853,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- National Gallery -->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_GALLERY</BuildingClass>
@@ -19147,9 +19033,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- National University -->
 			<!-- Rhye - start -->
@@ -19349,9 +19235,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Heroic Epic -->
 			<BuildingClass>BUILDINGCLASS_HEROIC_EPIC</BuildingClass>
@@ -19538,9 +19424,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Alhambra -->
 			<BuildingClass>BUILDINGCLASS_ALHAMBRA</BuildingClass>
@@ -19724,9 +19610,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Krak Des Chevaliers -->
 			<BuildingClass>BUILDINGCLASS_KRAK_DES_CHEVALIERS</BuildingClass>
@@ -19908,9 +19794,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- San Marco Basilica -->
 			<BuildingClass>BUILDINGCLASS_SAN_MARCO</BuildingClass>
@@ -20105,9 +19991,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- La Mezquita de Cordoba -->
 			<BuildingClass>BUILDINGCLASS_LA_MEZQUITA</BuildingClass>
@@ -20299,9 +20185,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- St Basil's Cathedral -->
 			<BuildingClass>BUILDINGCLASS_ST_BASIL</BuildingClass>
@@ -20491,9 +20377,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Magna Carta -->
 			<BuildingClass>BUILDINGCLASS_MAGNA_CARTA</BuildingClass>
@@ -20674,9 +20560,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- St. Sophia (Kiev) -->
 			<BuildingClass>BUILDINGCLASS_SOPHIA_KIEV</BuildingClass>
@@ -20852,7 +20738,6 @@
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
-						<iYield>0</iYield>
 					</YieldChanges>
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
@@ -20875,9 +20760,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- The Dome of the Rock -->
 			<BuildingClass>BUILDINGCLASS_DOME_ROCK</BuildingClass>
@@ -21063,9 +20948,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Brandenburg Gate -->
 			<BuildingClass>BUILDINGCLASS_BRANDENBURG_GATE</BuildingClass>
@@ -21252,9 +21137,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Ribeira Palace -->
 			<BuildingClass>BUILDINGCLASS_RIBEIRA</BuildingClass>
@@ -21431,9 +21316,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Monastery of Cluny-->
 			<BuildingClass>BUILDINGCLASS_MONASTERY_OF_CLUNY</BuildingClass>
@@ -21622,9 +21507,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Round Church -->
 			<BuildingClass>BUILDINGCLASS_ROUND_CHURCH</BuildingClass>
@@ -21814,9 +21699,9 @@
 			<bAllowBrotherWar>1</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Knights Hospitaller -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_1</BuildingClass>
@@ -22001,9 +21886,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Knights Templar -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_2</BuildingClass>
@@ -22188,9 +22073,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Teutonic Knights -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_3</BuildingClass>
@@ -22375,9 +22260,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Hanseatic League -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_4</BuildingClass>
@@ -22563,9 +22448,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Medici Banks -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_5</BuildingClass>
@@ -22750,9 +22635,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Augsburg Families -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_6</BuildingClass>
@@ -22937,9 +22822,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Bank of St. George -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_7</BuildingClass>
@@ -23124,9 +23009,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!--Leonardo's Inventions-->
 			<BuildingClass>BUILDINGCLASS_LEONARDOS_WORKSHOP</BuildingClass>
@@ -23255,7 +23140,6 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<PowerYieldModifiers/>
 			<CommerceChanges/>
@@ -23335,9 +23219,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Gardens of Al-Andalus -->
 			<BuildingClass>BUILDINGCLASS_GARDENS_AL_ANDALUS</BuildingClass>
@@ -23521,9 +23405,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>1</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Magellan's Voyage -->
 			<BuildingClass>BUILDINGCLASS_MAGELLANS_VOYAGE</BuildingClass>
@@ -23716,9 +23600,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Marco Polo's Embassy -->
 			<BuildingClass>BUILDINGCLASS_MARCO_POLO</BuildingClass>
@@ -23909,9 +23793,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Palacio de Escorial -->
 			<BuildingClass>BUILDINGCLASS_ESCORIAL</BuildingClass>
@@ -24096,9 +23980,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Kazimierz -->
 			<BuildingClass>BUILDINGCLASS_KAZIMIERZ</BuildingClass>
@@ -24224,12 +24108,7 @@
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChanges>
+			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -24299,9 +24178,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Belem Tower -->
 			<BuildingClass>BUILDINGCLASS_BELEM_TOWER</BuildingClass>
@@ -24503,9 +24382,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Golden Bull -->
 			<BuildingClass>BUILDINGCLASS_GOLDEN_BULL</BuildingClass>
@@ -24691,9 +24570,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Kalmar Castle -->
 			<BuildingClass>BUILDINGCLASS_KALMAR_CASTLE</BuildingClass>
@@ -24880,9 +24759,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Palais des Papes -->
 			<BuildingClass>BUILDINGCLASS_PALAIS_PAPES</BuildingClass>
@@ -25068,9 +24947,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Tomb of Al Khalid -->
 			<BuildingClass>BUILDINGCLASS_TOMB_KHAL</BuildingClass>
@@ -25258,9 +25137,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Stephansdom -->
 			<BuildingClass>BUILDINGCLASS_STEPHANSDOM</BuildingClass>
@@ -25447,9 +25326,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Bibliotheca Corviniana -->
 			<BuildingClass>BUILDINGCLASS_BIBLIOTHECA_CORVINIANA</BuildingClass>
@@ -25595,12 +25474,12 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-      		<SpecialistCounts>
-        		<SpecialistCount>
-          			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-          			<iSpecialistCount>3</iSpecialistCount>
-        		</SpecialistCount>
-      		</SpecialistCounts>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>3</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
@@ -25638,9 +25517,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Chateau de Fontainebleau -->
 			<BuildingClass>BUILDINGCLASS_FONTAINEBLEAU</BuildingClass>
@@ -25781,13 +25660,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</SpecialistExtraCommerces>
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
@@ -25835,9 +25711,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Imperial Diet -->
 			<BuildingClass>BUILDINGCLASS_IMPERIAL_DIET</BuildingClass>
@@ -26018,9 +25894,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Amsterdam Beurs -->
 			<BuildingClass>BUILDINGCLASS_BEURS</BuildingClass>
@@ -26225,9 +26101,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Copernicus Observatory -->
 			<BuildingClass>BUILDINGCLASS_COPERNICUS</BuildingClass>
@@ -26401,9 +26277,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Palazzo San Giorgio -->
 			<BuildingClass>BUILDINGCLASS_SAN_GIORGIO</BuildingClass>
@@ -26590,9 +26466,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Westminster Abbey -->
 			<BuildingClass>BUILDINGCLASS_WESTMINSTER</BuildingClass>
@@ -26778,9 +26654,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Pressburg Castle -->
 			<BuildingClass>BUILDINGCLASS_PRESSBURG</BuildingClass>
@@ -26970,9 +26846,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- La Lanterna -->
 			<BuildingClass>BUILDINGCLASS_LANTERNA</BuildingClass>
@@ -27156,9 +27032,9 @@
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-                        <iBombardImmuneDefense>0</iBombardImmuneDefense>
-                        <iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iBombardImmuneDefense>0</iBombardImmuneDefense>
+			<iStateReligionCulture>0</iStateReligionCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- National Epic -->
 			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
@@ -27347,9 +27223,9 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
-    <!--******************THESE ALWAYS AT THE END***********************-->
+	<!--******************THESE ALWAYS AT THE END***********************-->
 		<BuildingInfo> <!-- Triumphal Arch -->
 			<BuildingClass>BUILDINGCLASS_TRIUMPHAL_ARCH</BuildingClass>
 			<Type>BUILDING_TRIUMPHAL_ARCH</Type>
@@ -27539,7 +27415,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 		<BuildingInfo> <!-- Plague -->
 			<BuildingClass>BUILDINGCLASS_PLAGUE</BuildingClass>
@@ -27705,7 +27581,7 @@
 			<bAllowIrrigation>0</bAllowIrrigation>
 			<iBombardImmuneDefense>0</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
-                        <iPaganCulture>0</iPaganCulture>
+			<iPaganCulture>0</iPaganCulture>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

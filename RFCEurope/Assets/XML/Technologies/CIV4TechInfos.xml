@@ -2201,7 +2201,7 @@
 				<PrereqTech>TECH_CLASSICAL_KNOWLEDGE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>			
+				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EU_PHILOSOPHY_QUOTE</Quote>
 			<Sound>NONE</Sound>

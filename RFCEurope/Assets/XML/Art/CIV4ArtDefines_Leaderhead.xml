@@ -109,7 +109,7 @@
 			<KFM>Art/Leaderheads/William the Conqueror/frederick_the_great.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/William the Conqueror/frederick_the_great_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/William the Conqueror/frederick_the_great_bg.kfm</BackgroundKFM>
-		</LeaderheadArtInfo>	
+		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_AFONSO</Type>
 			<Button>Art/Leaderheads/Afonso/AfonsoHenriques.dds</Button>
@@ -309,7 +309,7 @@
 			<KFM>Art/Leaderheads/IvanIV/alexander.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/IvanIV/Grozniy.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/IvanIV/alexander_bg.kfm</BackgroundKFM>
-		</LeaderheadArtInfo>		
+		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_GEORGE_III</Type>
 			<Button>Art/Leaderheads/George_III/Btn_George_III.dds</Button>

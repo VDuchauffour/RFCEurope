@@ -217,7 +217,7 @@
 		<Spanish>Available in Provinces: </Spanish>
 		<Russian>Available in Provinces: </Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
 		<English>New Mercenaries are available for hire in</English>
 		<French>New Mercenaries are available for hire in</French>
@@ -226,7 +226,7 @@
 		<Spanish>New Mercenaries are available for hire in</Spanish>
 		<Russian>New Mercenaries are available for hire in</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
 		<English>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</English>
 		<French>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</French>
@@ -235,7 +235,7 @@
 		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
 		<Russian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
 		<English>Upset for not getting payed, Mercenaries have abandoned your cause.</English>
 		<French>Upset for not getting payed, Mercenaries have abandoned your cause.</French>
@@ -741,7 +741,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HACKAPELL_PEDIA</Tag>
 		<English>[TAB]Hakkapeliitta (plural Hakkapeliitat) was the term used in the Holy Roman Empire for a Finnish light cavalryman in the service of King Gustavus Adolphus of Sweden (a.k.a. Sweden-Finland) during the Thirty Years' War (1618 to 1648). A Hakkapeliitta was also known as a Hackapelit, Hackapelite, Haccapelit, or Haccapelite.[PARAGRAPH:1]The hakkapeliitat were first used during the Polish-Swedish Wars of the late 1500s. In the early 17th century the cavalry led by the Swedish-Finnish Field Marshal Jacob De la Gardie conquered the Russian cities Novgorod and Moscow. The Hakkapeliitta cavalry men led by the Finnish Field Marshal Gustaf Horn were vital to the Swedish victories in Germany during the Thirty Years' War.[PARAGRAPH:1]The Hakkapeliitat were well-trained Finnish light cavalrymen who excelled in sudden and savage attacks, raiding and reconnaissance. The term hakkapeliitta comes from the Finnish war cry hakkaa päälle (English: hack on or hit on; Swedish: hacka på), but most commonly translated as "Cut them down!"[PARAGRAPH:1]The greatest advantage of the fast and lightly-armored Hakkapeliitta cavalry was its charge. They typically had two pistols, a sword, a helmet, and leather armor or a breastplate of steel. They would attack at a full gallop, fire the first pistol at twenty paces and the second at five paces, and then draw the sword. The horse itself was used like another weapon, as it was used to trample enemy infantry.[PARAGRAPH:1]The horses used by the Hakkapeliitat were known as Finnhorses, a strong and durable breed larger than the neighboring Swedish counterpart.</English>
-		<French>[TAB]Les Hakkapélites ou Haccapélites  Hakkapeliitat en finnois, Hakkapeliter en suédois  sont du XVe au XVIIe siècles des cavaliers finlandais du roi de Suède. Ce nom leur vient de leur cri de guerre hakkaa päälle !  « tape sur la tête » en finnois.[PARAGRAPH:1]Les hakkapélites montaient des chevaux finlandais. Le cavalier hakkapélite portait deux pistolets qu'il déchargeait l'un à vingt pas de l'adversaire, l'autre à cinq pas. Puis il tirait l'épée. La masse du cheval servait aussi à écraser l'infanterie ennemie au cours de la charge. Le Hakkapélite se protégeait d'un casque, et d'un vêtement de cuir (költeri) ou d'une cuirasse (kyrassi) sur la poitrine. La charge des Hakkapélites était difficile à contenir et décidait souvent du combat dès le premier contact. Par comparaison avec les engagements antérieurs, soit elle s'accompagnait d'un tir plus précis soit alors sa puissance de feu était plus concentrée au moment du choc. C'est ainsi que les Hakkapélites étaient capables de disloquer les carrés ou tercios de piques que l'on jugeait auparavant invincibles. Ils se montrèrent aussi capables d'affronter les cuirassiers impériaux plus lourdement équipés.</French>
+		<French>[TAB]Les Hakkapélites ou Haccapélites Hakkapeliitat en finnois, Hakkapeliter en suédois sont du XVe au XVIIe siècles des cavaliers finlandais du roi de Suède. Ce nom leur vient de leur cri de guerre hakkaa päälle! « tape sur la tête » en finnois.[PARAGRAPH:1]Les hakkapélites montaient des chevaux finlandais. Le cavalier hakkapélite portait deux pistolets qu'il déchargeait l'un à vingt pas de l'adversaire, l'autre à cinq pas. Puis il tirait l'épée. La masse du cheval servait aussi à écraser l'infanterie ennemie au cours de la charge. Le Hakkapélite se protégeait d'un casque, et d'un vêtement de cuir (költeri) ou d'une cuirasse (kyrassi) sur la poitrine. La charge des Hakkapélites était difficile à contenir et décidait souvent du combat dès le premier contact. Par comparaison avec les engagements antérieurs, soit elle s'accompagnait d'un tir plus précis soit alors sa puissance de feu était plus concentrée au moment du choc. C'est ainsi que les Hakkapélites étaient capables de disloquer les carrés ou tercios de piques que l'on jugeait auparavant invincibles. Ils se montrèrent aussi capables d'affronter les cuirassiers impériaux plus lourdement équipés.</French>
 		<German>[TAB]Hakkapeliitta (von finn.: hakkaa päälle "hau' drauf!") war während des Dreißigjährigen Krieges ein volkstümlicher Name für die berittenen finnischen Söldner, die für Schweden in Deutschland kämpften. Ihr berühmtester Oberbefehlshaber war Torsten Stålhandske von 1630 bis 1644. Hakkapeliten gab es aber über den Dreißigjährigen Krieg hinaus; sie nahmen Teil an allen schwedischen Kriegen des 17. Jahrhunderts.[PARAGRAPH:1]Im Jahre 1891 wurde der traditionelle Marsch der Hakkapeliten als Marsch der Finnländischen Reiterei (im 30-jährigen Kriege) oder Schwedischer Reitermarsch von der preussischen Armee öffentlich angenommen. Seitdem ist er in Deutschland ein beliebter Reitermarsch geblieben.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -758,7 +758,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REITER_PEDIA</Tag>
-		<English>[TAB]Black Riders were also known as "Devil Riders", because of the blackened armor they wore. They first appeared in Germany in the sixteenth century. The Riders developed a special tactic known as "Caracole", which allowed them to effectively bombard infantry units with constant weapons fire. In Caracole, cavalry units created a thight formation. The units in front fired their weapons, and then quickly charged to the back to reload. The units that were just behind them fired immediately after the  first row charged backwards to reload.</English>
+		<English>[TAB]Black Riders were also known as "Devil Riders", because of the blackened armor they wore. They first appeared in Germany in the sixteenth century. The Riders developed a special tactic known as "Caracole", which allowed them to effectively bombard infantry units with constant weapons fire. In Caracole, cavalry units created a thight formation. The units in front fired their weapons, and then quickly charged to the back to reload. The units that were just behind them fired immediately after the first row charged backwards to reload.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

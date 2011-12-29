@@ -11,7 +11,7 @@
 		<German>Venezianische Völker</German>
 		<Italian/><Spanish/><Russian/>
 	</TEXT>
-  <!-- JediClemente: Venezia should always be a Most Serene Republic as it always has Merchant Republic -->
+	<!-- JediClemente: Venezia should always be a Most Serene Republic as it always has Merchant Republic -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN01</Tag>
 		<English>Most Serene Republic of Venice</English>

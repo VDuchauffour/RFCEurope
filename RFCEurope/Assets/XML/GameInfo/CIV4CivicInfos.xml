@@ -62,9 +62,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -138,9 +138,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -219,9 +219,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -305,9 +305,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -395,9 +395,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -478,9 +478,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -554,9 +554,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>20</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>20</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -630,9 +630,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers>
@@ -710,9 +710,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -795,9 +795,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -874,9 +874,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -950,9 +950,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1035,9 +1035,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1111,9 +1111,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1225,9 +1225,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1300,9 +1300,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1376,9 +1376,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>BUILDINGCLASS_MANOR_HOUSE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>2</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>BUILDINGCLASS_MANOR_HOUSE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>2</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1461,9 +1461,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1537,9 +1537,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1616,9 +1616,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>BUILDINGCLASS_MARKET</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>5</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>BUILDINGCLASS_MARKET</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>5</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1701,9 +1701,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1782,9 +1782,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1858,9 +1858,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -1934,9 +1934,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2015,9 +2015,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>1</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2095,9 +2095,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2170,9 +2170,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2245,9 +2245,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2320,9 +2320,9 @@
 			<bStabilityConquestBonus>1</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
@@ -2396,9 +2396,9 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-                        <iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
-                        <iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
-                        <iUnitProductionBoost>0</iUnitProductionBoost>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
+			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<!-- Rhye - end -->
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>

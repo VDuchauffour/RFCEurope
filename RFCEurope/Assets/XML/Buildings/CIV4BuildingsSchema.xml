@@ -90,9 +90,9 @@
 	<ElementType name="bAllowBrotherWar" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowVassalUU" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowIrrigation" content="textOnly" dt:type="boolean"/>
-        <ElementType name="iBombardImmuneDefense" content="textOnly" dt:type="int"/>
-        <ElementType name="iStateReligionCulture" content="textOnly" dt:type="int"/>
-        <ElementType name="iPaganCulture" content="textOnly" dt:type="int"/>
+	<ElementType name="iBombardImmuneDefense" content="textOnly" dt:type="int"/>
+	<ElementType name="iStateReligionCulture" content="textOnly" dt:type="int"/>
+	<ElementType name="iPaganCulture" content="textOnly" dt:type="int"/>
 	<!-- 3Miro -->
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
@@ -357,7 +357,7 @@
 	<ElementType name="BonusYieldModifiers" content="eltOnly">
 		<element type="BonusYieldModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- BCM: Added 21.9.09 -->	
+	<!-- BCM: Added 21.9.09 -->
 	<ElementType name="BonusCommerceModifier" content="eltOnly">
 		<element type="BonusType"/>
 		<element type="CommerceModifiers"/>
@@ -365,7 +365,7 @@
 	<ElementType name="BonusCommerceModifiers" content="eltOnly">
 		<element type="BonusCommerceModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- BCM: End -->	
+	<!-- BCM: End -->
 	<ElementType name="ImprovementFreeSpecialist" content="eltOnly">
 		<element type="ImprovementType"/>
 		<element type="iFreeSpecialistCount"/>
@@ -551,9 +551,9 @@
 		<element type="BuildingClassNeededs"/>
 		<element type="SpecialistYieldChanges"/>
 		<element type="BonusYieldModifiers"/>
-		<!-- BCM: Added 21.9.09 -->	
+		<!-- BCM: Added 21.9.09 -->
 		<element type="BonusCommerceModifiers" minOccurs="0"/>
-		<!-- BCM: End -->	
+		<!-- BCM: End -->
 		<element type="ImprovementFreeSpecialists"/>
 		<element type="Flavors"/>
 		<element type="HotKey"/>
@@ -567,9 +567,9 @@
 		<element type="bAllowBrotherWar"/>
 		<element type="bAllowVassalUU"/>
 		<element type="bAllowIrrigation"/>
-                <element type="iBombardImmuneDefense"/>
-                <element type="iStateReligionCulture"/>
-                <element type="iPaganCulture"/>
+		<element type="iBombardImmuneDefense"/>
+		<element type="iStateReligionCulture"/>
+		<element type="iPaganCulture"/>
 		<!-- 3Miro -->
 	</ElementType>
 	<ElementType name="BuildingInfos" content="eltOnly">

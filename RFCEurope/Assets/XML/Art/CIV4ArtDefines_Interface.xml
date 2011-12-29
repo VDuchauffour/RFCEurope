@@ -1258,7 +1258,7 @@
 			<Type>INTERFACE_MERCENARIES_MANAGER</Type>
 			<Path>Art/Interface/Mainscreen/MercenariesManager.dds</Path>
 		</InterfaceArtInfo>
-		<!-- Mercenaries End   -->
+		<!-- Mercenaries End -->
 		<!-- 3Miro Prosecution -->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_PERSICUTION</Type>
