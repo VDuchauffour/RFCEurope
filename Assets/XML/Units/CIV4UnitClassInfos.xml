@@ -320,7 +320,7 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HUSSAR</DefaultUnit>
-		</UnitClassInfo>		
+		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_LANCER</Type>
 			<Description>TXT_KEY_UNIT_LANCER</Description>

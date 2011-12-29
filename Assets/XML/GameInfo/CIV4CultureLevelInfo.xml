@@ -11,11 +11,11 @@
 			<Description>TXT_KEY_CULTURELEVEL_NONE</Description>
 			<iCityDefenseModifier>0</iCityDefenseModifier>
 			<!-- Rhye - start -->
-			<SpeedThresholds>				
+			<SpeedThresholds>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
 					<iThreshold>0</iThreshold>
-				</SpeedThreshold>				
+				</SpeedThreshold>
 			</SpeedThresholds>
 			<!-- Rhye - end -->
 		</CultureLevelInfo>

@@ -3276,7 +3276,7 @@
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-                        <TechTypes>
+			<TechTypes>
 				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
 			</TechTypes>
 			<BonusType>NONE</BonusType>
@@ -5884,7 +5884,7 @@
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
 			<FlankingStrikes/>
-			<UnitAIs>				
+			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
@@ -7582,7 +7582,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!--Dragoon--> 
+		<UnitInfo> <!--Dragoon-->
 			<Class>UNITCLASS_DRAGOON</Class>
 			<Type>UNIT_DRAGOON</Type>
 			<UniqueNames/>
@@ -8585,7 +8585,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!-- Pistolier --> 
+		<UnitInfo> <!-- Pistolier -->
 			<Class>UNITCLASS_PISTOLIER</Class>
 			<Type>UNIT_PISTOLIER</Type>
 			<UniqueNames/>
@@ -8789,7 +8789,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!-- Hussar --> 
+		<UnitInfo> <!-- Hussar -->
 			<Class>UNITCLASS_HUSSAR</Class>
 			<Type>UNIT_HUSSAR</Type>
 			<UniqueNames/>
@@ -8852,7 +8852,7 @@
 					<FlankingStrikeUnitClass>UNITCLASS_FIELD_ARTILLERY</FlankingStrikeUnitClass>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
-			</FlankingStrikes>	
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -9057,11 +9057,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -9271,7 +9271,7 @@
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<TechTypes/>
 			<BonusType>BONUS_HORSE</BonusType>
-                        <PrereqBonuses>
+			<PrereqBonuses>
 				<BonusType>BONUS_IRON</BonusType>
 			</PrereqBonuses>
 			<ProductionTraits/>
@@ -9342,7 +9342,7 @@
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
-                                <UnitCombatMod>
+				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_POLEARM</UnitCombatType>
 					<iUnitCombatMod>15</iUnitCombatMod>
 				</UnitCombatMod>
@@ -9457,7 +9457,7 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -9652,7 +9652,7 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -9852,11 +9852,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -10043,11 +10043,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -10251,11 +10251,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -10446,11 +10446,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -10647,11 +10647,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -10848,11 +10848,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -11048,11 +11048,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -11253,11 +11253,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -11453,11 +11453,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -11647,11 +11647,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -11855,11 +11855,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -12253,7 +12253,7 @@
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COLLATERAL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -20015,11 +20015,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -20158,7 +20158,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
-		<UnitInfo> <!-- Black Rider --> 
+		<UnitInfo> <!-- Black Rider -->
 			<Class>UNITCLASS_PISTOLIER</Class>
 			<Type>UNIT_REITER</Type>
 			<UniqueNames/>
@@ -20611,11 +20611,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -21220,11 +21220,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -21421,11 +21421,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -22392,11 +22392,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -22989,11 +22989,11 @@
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-                                <UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>

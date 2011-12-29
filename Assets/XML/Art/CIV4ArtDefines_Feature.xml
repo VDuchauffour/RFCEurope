@@ -117,7 +117,7 @@
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Ice.dds</VarietyButton>
 			</FeatureVariety>
-		</FeatureArtInfo>	
+		</FeatureArtInfo>
 		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_JUNGLE</Type>
 			<bAnimated>0</bAnimated>
@@ -494,7 +494,7 @@
 				<ModelFile/>
 				<Connections/>
 			</FeatureArtPiece>
-			</FeatureArtPieces> 
+			</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</VarietyButton>

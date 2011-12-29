@@ -5,11 +5,11 @@
 <!-- -->
 <!-- When debugging LSystems, refer to Civ4/Logs/LSystem.log for help -->
 <!-- Attribute Overview
-     
+
      On specific art:	ONE artref is picked as long as it satisfies all the subconstraints below
-        Bonus
-        Imporvement
-        Scalars:
+	Bonus
+	Imporvement
+	Scalars:
 			bApplyRotation	- if set, the art will be rotated according to its cumulative rotation when placed
 			bZMode_Ground	- if set, the builder will try to force the art to not z-write nor z-test
 			bIsPartOfImprovement, bIsPartOfBonus - when provided once during a plot build on any placed artref, this will
@@ -22,8 +22,8 @@
 							- if the value is 1NW then the node will be region tested but won't be water tested
 		
      On productions:
-        Bonus			- can be multiple, if any met constraint met, then the production is expandable
-        Improvement		- as with bonus
+	Bonus			- can be multiple, if any met constraint met, then the production is expandable
+	Improvement		- as with bonus
 		Scalars:	
 			bGoalOnly:1	- if true, then the production can only be expanded if we're in GOAL seek mode
 						- note, this does not prevent child nodes from being visited by DFS or BFS
@@ -1240,7 +1240,7 @@
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eu</Attribute>
 			<Scale>0.35</Scale>
-		</ArtRef>		
+		</ArtRef>
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 			<!-- Rhye -->

@@ -740,7 +740,7 @@
 		<Italian>Culture</Italian>
 		<Spanish>Culture</Spanish>
 		<Russian>Culture</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ISLAM</Tag>
 		<English>Islamic</English>
@@ -749,7 +749,7 @@
 		<Italian>Islamic</Italian>
 		<Spanish>Islamic</Spanish>
 		<Russian>Islamic</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VIKING</Tag>
 		<English>Viking</English>
@@ -758,7 +758,7 @@
 		<Italian>Viking</Italian>
 		<Spanish>Viking</Spanish>
 		<Russian>Viking</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FOOD</Tag>
 		<English>Food</English>
@@ -767,7 +767,7 @@
 		<Italian>Food</Italian>
 		<Spanish>Food</Spanish>
 		<Russian>Food</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COLONIES</Tag>
 		<English>Colonies</English>
@@ -795,7 +795,7 @@
 		<Spanish>Not Yet</Spanish>
 		<Russian>Not Yet</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_MOST_POPULATION</Tag>
 		<English>Most Population: </English>
 		<French>Most Population: </French>
@@ -804,7 +804,7 @@
 		<Spanish>Most Population: </Spanish>
 		<Russian>Most Population: </Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_MOST_LAND</Tag>
 		<English>Most Land: </English>
 		<French>Most Land: </French>
@@ -813,7 +813,7 @@
 		<Spanish>Most Land: </Spanish>
 		<Russian>Most Land: </Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_PAGAN</Tag>
 		<English>Pagan</English>
 		<French>Pagan</French>

@@ -344,7 +344,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
 		<English>[TAB]A Guildhall is a building used by guilds for meetings. The town authorities were represented in the guild meetings and thus had a means of controlling the handicraft activities. This was important since towns very often depended on a good reputation for export of a narrow range of products, on which not only the guild's, but the town's, reputation depended.</English>
-		<French>.</French> 
+		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -449,7 +449,7 @@
 		<Spanish>Cervecería</Spanish>
 		<Russian>&#207;&#232;&#226;&#238;&#226;&#224;&#240;&#237;&#251;&#233; &#231;&#224;&#226;&#238;&#228;</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAVERN</Tag>
 		<English>Tavern</English>
 		<French>Tavern</French>
@@ -497,7 +497,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
 		<English>[TAB]The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. he Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods.[PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy’s neck must be red to satisfy Isis’s need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country’s borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
-		<French>.</French> 
+		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
@@ -604,11 +604,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORGE_PEDIA</Tag>
-		<English>[TAB]A forge is a furnace where metal is heated or melted. In ancient times smiths with small forges could be found in most settlements. The furnaces were stoked with coal, which was fanned by manually pumped bellows to create intense heat. The blacksmith would heat the metal in the oven and then shape it by putting the metal on an anvil and beating it with heavy hammers. The finished product was then put into cold water to harden and cool. The smith might also melt the metal and pour it into molds.[PARAGRAPH:2]Modern forges are huge industrial structures requiring many workers to operate. The operation is similar to that in the smithy; except on a grand scale.  Tons of ore are poured into massive vats, which are conveyed into the furnace. Once the metal is smelted, it may be mixed with other materials to create an alloy such as steel, and it may undergo a number of different processes to remove impurities. The finished metal can then be rolled into sheets, poured into molds, stamped into coins, and so forth.</English>
+		<English>[TAB]A forge is a furnace where metal is heated or melted. In ancient times smiths with small forges could be found in most settlements. The furnaces were stoked with coal, which was fanned by manually pumped bellows to create intense heat. The blacksmith would heat the metal in the oven and then shape it by putting the metal on an anvil and beating it with heavy hammers. The finished product was then put into cold water to harden and cool. The smith might also melt the metal and pour it into molds.[PARAGRAPH:2]Modern forges are huge industrial structures requiring many workers to operate. The operation is similar to that in the smithy; except on a grand scale. Tons of ore are poured into massive vats, which are conveyed into the furnace. Once the metal is smelted, it may be mixed with other materials to create an alloy such as steel, and it may undergo a number of different processes to remove impurities. The finished metal can then be rolled into sheets, poured into molds, stamped into coins, and so forth.</English>
 		<French>[TAB]Une forge est un four dans lequel le m&#233;tal est chauff&#233; ou fondu. Autrefois, on trouvait des mar&#233;chaux-ferrants poss&#233;dant de petites forges dans la majorit&#233; des villages. Les fours &#233;taient aliment&#233;s par du charbon attis&#233; &#224; l'aide de soufflets &#224; pompe manuelle afin de cr&#233;er une chaleur intense. Le forgeron chauffe le m&#233;tal dans le four puis lui donne sa forme en pla&#231;ant le m&#233;tal sur une enclume et en le frappant avec de lourds marteaux. Le produit fini est ensuite plac&#233; dans de l'eau froide pour le durcir et le faire refroidir. Le mar&#233;chal-ferrant peut &#233;galement fondre le m&#233;tal et le couler dans des moules.[PARAGRAPH:2]Les forges modernes sont d'immenses structures industrielles qui ne peuvent fonctionner qu'en pr&#233;sence de nombreux travailleurs. Le fonctionnement est similaire &#224; celui d'une forge, mais il se fait &#224; plus grande &#233;chelle. Des tonnes de minerais sont vers&#233;es dans d'immenses cuves qui sont transport&#233;es dans le four. Lorsque le m&#233;tal est fondu, il peut &#234;tre m&#233;lang&#233; avec d'autres mat&#233;riaux pour cr&#233;er des alliages tels que l'acier. Il peut en outre faire l'objet de nombreux traitements diff&#233;rents pour &#233;liminer les impuret&#233;s. Le m&#233;tal fini est ensuite lamin&#233; en feuilles, vers&#233; dans des moules, frapp&#233; en pi&#232;ces, etc.</French>
 		<German>[TAB]Schmieden verf&#252;gen &#252;ber Schmelz&#246;fen, in denen Metall erhitzt oder geschmolzen wird. Fr&#252;her gab es in fast jeder Siedlung einen Schmied mit einer kleinen Schmiede. Die &#214;fen wurden mit Kohle befeuert. Manuell bediente Blaseb&#228;lge sollten die Hitze erh&#246;hen. Anschlie&#223;end erhitzte der Schmied das Metall im Ofen und formte es mit Hammerschl&#228;gen auf dem Amboss. Das fertige Produkt wurde schlie&#223;lich zum H&#228;rten in kaltes Wasser gelegt. Der Schmied konnte das Metall auch schmelzen und in Formen gie&#223;en.[PARAGRAPH:2]Moderne Schmieden sind riesige Industrieanlagen mit vielen Arbeitern. Tonnen von Erz werden in gewaltige Bottiche gegossen und &#252;ber F&#246;rderb&#228;nder in den Schmelzofen geschoben. Ist das Metall geschmolzen, kann es mit anderen Materialien gemischt werden, um Legierungen, wie Stahl, herzustellen. In verschiedenen Prozessschritten werden dar&#252;ber hinaus Unreinheiten aus dem Metall entfernt. Das fertige Metall kann beispielsweise zu Blechen verarbeitet und aufgerollt, in Formen gegossen oder f&#252;r die Herstellung von M&#252;nzen verwendet werden, und vieles mehr.</German>
 		<Italian>[TAB]La fucina &#232; una fornace nella quale viene scaldato o fuso il metallo. Nell'antichit&#224;, si potevano trovare fabbri e una piccola fucina in qualsiasi colonia. Le fornaci venivano alimentate con il carbone che veniva attizzato con dei soffietti a mano per creare un calore intenso. Il fabbro riscaldava il metallo nel forno e poi gli dava forma colpendolo su una incudine con dei pesanti martelli. Quando il metallo aveva preso la forma necessaria, veniva immerso nell'acqua per indurire il metallo e poi lasciato raffreddare. Il fabbro poteva anche fondere il metallo e distribuirlo in alcuni stampi.[PARAGRAPH:2]Le fucine moderne sono delle strutture industriali che necessitano di parecchi lavoratori per poter operare. Il funzionamento &#232; ancora simile a quello del fabbro di una volta, soltanto che &#232; in larga scala. Tonnellate di minerali vengono riversati all'interno di vasche gigantesche che poi vengono trasferiti alla fornace. Quando il metallo &#232; fuso, pu&#242; essere mischiato con altri materiali per ottenere una lega come l'acciaio oppure inviato a una fase di un processo successivo per rimuovere le impurit&#224;. Il risultato finale pu&#242; essere tagliato in lamine, versato in calchi, stampato in monete, eccetera.</Italian>
-		<Spanish>[TAB]Una fragua es un horno en el que se calienta o funde el metal. En la antig&#252;edad, pod&#237;an encontrarse herreros y peque&#241;as forjas en casi todos los asentamientos. Los hornos utilizaban carb&#243;n, que se atizaba manualmente por medio de unos fuelles, hasta conseguir un intenso calor. El herrero calentaba el metal en el horno y, a continuaci&#243;n, le daba forma llev&#225;ndolo a un yunque donde lo golpeaba con un pesado martillo. El producto terminado se introduc&#237;a en agua fr&#237;a, para que se enfriara y endureciera. El herrero tambi&#233;n pod&#237;a fundir el metal y verterlo en moldes.[PARAGRAPH:2]Las forjas modernas son enormes estructuras industriales que requieren muchos trabajadores. Sus principios son similares a los de una peque&#241;a forja, solo que a gran escala.  Toneladas de mineral se introducen en grandes contenedores, que a su vez se introducen en los hornos. Una vez que se ha fundido el metal, puede mezclarse con otros materiales para crear aleaciones como el acero, y tambi&#233;n se le puede someter a varios procesos diferentes para eliminar las impurezas. El metal acabado puede ser alisado, vertido en moldes, acu&#241;ado en forma de monedas y as&#237; sucesivamente.</Spanish>
+		<Spanish>[TAB]Una fragua es un horno en el que se calienta o funde el metal. En la antig&#252;edad, pod&#237;an encontrarse herreros y peque&#241;as forjas en casi todos los asentamientos. Los hornos utilizaban carb&#243;n, que se atizaba manualmente por medio de unos fuelles, hasta conseguir un intenso calor. El herrero calentaba el metal en el horno y, a continuaci&#243;n, le daba forma llev&#225;ndolo a un yunque donde lo golpeaba con un pesado martillo. El producto terminado se introduc&#237;a en agua fr&#237;a, para que se enfriara y endureciera. El herrero tambi&#233;n pod&#237;a fundir el metal y verterlo en moldes.[PARAGRAPH:2]Las forjas modernas son enormes estructuras industriales que requieren muchos trabajadores. Sus principios son similares a los de una peque&#241;a forja, solo que a gran escala. Toneladas de mineral se introducen en grandes contenedores, que a su vez se introducen en los hornos. Una vez que se ha fundido el metal, puede mezclarse con otros materiales para crear aleaciones como el acero, y tambi&#233;n se le puede someter a varios procesos diferentes para eliminar las impurezas. El metal acabado puede ser alisado, vertido en moldes, acu&#241;ado en forma de monedas y as&#237; sucesivamente.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1035,7 +1035,7 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_CHAPEL</Tag>
 		<English>Belfry</English>
@@ -1146,7 +1146,7 @@
 		<Spanish>with [LINK=literal]%s1_Religion[\LINK]</Spanish>
 		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
 		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </English>
 		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </French>

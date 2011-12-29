@@ -549,7 +549,7 @@
 						<iYieldChange>-1</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
-				</BonusTypeStruct>				
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage/>
 			<ImprovementUpgrade/>

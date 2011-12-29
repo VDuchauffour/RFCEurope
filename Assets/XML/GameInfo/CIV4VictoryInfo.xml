@@ -73,7 +73,7 @@
 			<bDiploVote>0</bDiploVote>
 			<bPermanent>0</bPermanent>
 			<!-- Rhye - start -->
-			<iPopulationPercentLead>20</iPopulationPercentLead>			
+			<iPopulationPercentLead>20</iPopulationPercentLead>
 			<iLandPercent>60</iLandPercent>
 			<iMinLandPercent>25</iMinLandPercent>
 			<!-- Rhye - end -->

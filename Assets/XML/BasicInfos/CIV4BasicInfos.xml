@@ -53,7 +53,7 @@
 			<Description>TXT_KEY_CONCEPT_MERCENARIES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_MERCENARIES_PEDIA</Civilopedia>
 		</ConceptInfo>
-		<!-- Mercenaries End   -->		
+		<!-- Mercenaries End -->
 		<ConceptInfo>
 			<Type>CONCEPT_RFCE_COLONIES</Type>
 			<Description>TXT_KEY_CONCEPT_COLONIES</Description>

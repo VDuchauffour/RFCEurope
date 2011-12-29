@@ -13,7 +13,7 @@
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
 		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
 		<Russian>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
 		<English>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </English>
@@ -274,7 +274,7 @@
 		<Italian>Filippine</Italian>
 		<Spanish>Filipinas</Spanish>
 		<Russian>Phillipines</Russian>
-	</TEXT>		
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_GUINEA</Tag>
 		<English>Guinea</English>
@@ -283,7 +283,7 @@
 		<Italian>Guinea</Italian>
 		<Spanish>Guinea</Spanish>
 		<Russian>Guinea</Russian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VINLAND</Tag>
 		<English>Vinland</English>
@@ -296,7 +296,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Tag>
 		<English>[TAB]"L'Encyclop&#233;die, ou dictionnaire raisonn&#233; des sciences, des arts et des m&#233;tiers" (English: Encyclopedia, or a systematic dictionary of the sciences, arts, and crafts) was a general encyclopedia published in France between 1751 and 1772, with later supplements and revisions in 1772, 1777 and 1780 and numerous foreign editions and later derivatives.[PARAGRAPH:2]Its introduction, the Preliminary Discourse, is considered an important exposition of Enlightenment ideals. The Encyclop&#233;die's self-professed aim was "to change the way people think." It was hoped that the work would eventually encompass all of human knowledge; Denis Diderot explained the goal of the project as "All things must be examined, debated, investigated without exception and without regard for anyone's feelings."[PARAGRAPH:2]The Encyclop&#233;die was originally meant to be simply a French translation of Ephraim Chambers's Cyclopaedia (1728). The translation was commissioned by Paris book publisher Andr&#233; Le Breton in 1743 to John Mills, an English resident in France. In May 1745 Le Breton announced the work as available for sale - however to Le Breton's dismay, Mills had not done the work he was commissioned to do; in fact, he could barely read and write French and did not even own a copy of Cyclopaedia. Le Breton had been swindled, and so he physically beat Mills with a cane - Mills sued on assault charges, but Le Breton was acquitted in court as being justified. Setting out to find a new editor, Le Breton engaged Jean Paul de Gua de Malves. Among those hired by Malves were the young &#201;tienne Bonnot de Condillac, Jean le Rond d'Alembert and Denis Diderot. Within thirteen months, in August 1747, Malves was fired due to his rigid methods. Le Breton then hired Diderot and Jean d'Alembert as the new editors. Diderot would remain editor for the next 25 years, seeing the Encyclop&#233;die through to completion.[PARAGRAPH:2]The work comprised 35 volumes, with 71,818 articles, and 3,129 illustrations. The first 28 volumes were published between 1751 and 1766 and were edited by Diderot - although some of the later picture-only volumes were not actually printed until 1772. The remaining five volumes were completed by other editors in 1777, along with a two volume index in 1780. Many of the most noted figures of the French enlightenment contributed to the work including Voltaire, Rousseau, and Montesquieu. The single greatest contributor was Louis de Jaucourt who wrote 17,266 articles, or about 8 per day between 1759 and 1765.[PARAGRAPH:2]The writers of the encyclopedia saw it as a vehicle to covertly destroy superstitions while overtly providing access to human knowledge. It was a summary of thought and belief of the Enlightenment. In ancien r&#233;gime France it caused a storm of controversy, due mostly to its tone of religious tolerance. The encyclopedia praised Protestant thinkers and challenged Catholic dogma, and classified religion as a branch of philosophy, not as the ultimate source of knowledge and moral advice. The entire work was banned by royal decree and officially closed down after the first seven volumes in 1759; but because it had many highly placed supporters, notably Madame de Pompadour, work continued "in secret". In truth, secular authorities did not want to disrupt the commercial enterprise which employed hundreds of people. To appease the church's enemies of the project, the authorities had officially banned the enterprise, but they turned a blind eye to its continued existence.[PARAGRAPH:2]The Encyclop&#233;die played an important role in the intellectual ferment leading to the French Revolution. While it is debatable that the editors intended to have a radical influence on French society, it can hardly be denied that it did. The Encyclop&#233;die denied that the teachings of the Catholic Church could be treated as authoritative in matters of science. The editors also refused to treat the decisions of political powers as definitive in intellectual or artistic questions. Given that Paris was the intellectual capital of Europe at the time and that many European leaders used French as their administrative language, these ideas had the capacity to spread.</English>
-		<French>.</French> 
+		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>

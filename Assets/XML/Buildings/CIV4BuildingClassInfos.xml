@@ -456,37 +456,37 @@
 			<Description>TXT_KEY_BUILDING_INN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>		
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_INN</DefaultBuilding>
-			<VictoryThresholds/>			
-		</BuildingClassInfo>	
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<BuildingClassInfo><!-- COFFEE_HOUSE -->
 			<Type>BUILDINGCLASS_COFFEE_HOUSE</Type>
 			<Description>TXT_KEY_BUILDING_COFFEE_HOUSE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>		
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_COFFEE_HOUSE</DefaultBuilding>
-			<VictoryThresholds/>			
-		</BuildingClassInfo>	
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<BuildingClassInfo><!-- MANOR_HOUSE -->
 			<Type>BUILDINGCLASS_MANOR_HOUSE</Type>
 			<Description>TXT_KEY_BUILDING_MANOR_HOUSE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>		
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_MANOR_HOUSE</DefaultBuilding>
-			<VictoryThresholds/>			
-		</BuildingClassInfo>	
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<BuildingClassInfo><!-- HERBALIST -->
 			<Type>BUILDINGCLASS_HERBALIST</Type>
 			<Description>TXT_KEY_BUILDING_HERBALIST</Description>
