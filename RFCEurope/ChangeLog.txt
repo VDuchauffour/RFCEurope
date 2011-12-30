@@ -39,8 +39,15 @@ Medjay (Nubian Longbowman)
 		- Swiss Pikeman aviable in a much bigger area, Almogavar aviable in Greece (Catalan Company)
 		- New art for Don Cossack, Huscarl
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
-
-	Map and province changes:
+	
+	Huge map overhaul:
+		- Totally new Iberia, North Africa, Britain, Atlantic Islands
+		- Major changes to France, the Austrian/Venetian/Dalmatian area, southern Bulgaria
+		- Minor changes to the Mediterranean Islands, Lombardy and Toscana, southern Hungary
+		- More realistic rivers and revised resource placement in most of the mentioned areas
+		- New provinces: Fez, Navarre, La Mancha
+	
+	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
 		- Removed Relic resource from the map (was under Jerusalem)
 		- Indy Porto renamed to Portucale

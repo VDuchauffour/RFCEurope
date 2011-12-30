@@ -97,12 +97,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_2</Tag>
-		<English>Province_2</English>
-		<French>Province_2</French>
-		<German>Province_2</German>
-		<Italian>Province_2</Italian>
-		<Spanish>Province_2</Spanish>
-		<Russian>Province_2</Russian>
+		<English>Navarre</English>
+		<French>Navarre</French>
+		<German>Navarre</German>
+		<Italian>Navarre</Italian>
+		<Spanish>Navarre</Spanish>
+		<Russian>Navarre</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_3</Tag>
@@ -124,12 +124,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_5</Tag>
-		<English>Picardy</English>
-		<French>Picardie</French>
-		<German>Picardie</German>
-		<Italian>Piccardia</Italian>
-		<Spanish>Picardia</Spanish>
-		<Russian>Picardy</Russian>
+		<English>La Mancha</English>
+		<French>La Mancha</French>
+		<German>La Mancha</German>
+		<Italian>La Mancha</Italian>
+		<Spanish>La Mancha</Spanish>
+		<Russian>La Mancha</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_6</Tag>
@@ -1411,20 +1411,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_148</Tag>
-		<English>Province_148</English>
-		<French>Province_148</French>
-		<German>Province_148</German>
-		<Italian>Province_148</Italian>
-		<Spanish>Province_148</Spanish>
-		<Russian>Province_148</Russian>
+		<English>Fez</English>
+		<French>Fez</French>
+		<German>Fez</German>
+		<Italian>Fez</Italian>
+		<Spanish>Fez</Spanish>
+		<Russian>Fez</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_149</Tag>
-		<English>Province_149</English>
-		<French>Province_149</French>
-		<German>Province_149</German>
-		<Italian>Province_149</Italian>
-		<Spanish>Province_149</Spanish>
-		<Russian>Province_149</Russian>
+		<English>Picardy</English>
+		<French>Picardie</French>
+		<German>Picardie</German>
+		<Italian>Piccardia</Italian>
+		<Spanish>Picardia</Spanish>
+		<Russian>Picardy</Russian>
 	</TEXT>
 </Civ4GameText>
