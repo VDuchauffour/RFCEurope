@@ -17,20 +17,22 @@ class Resources:
        	
         def checkTurn(self, iGameTurn):
 		if (iGameTurn == xml.i1000AD):
-			gc.getMap().plot(35, 29).setBonusType(xml.iRice) #Rice in Iberia
+			gc.getMap().plot(36, 24).setBonusType(xml.iRice) #Rice in Iberia
 			gc.getMap().plot(86, 2).setBonusType(xml.iRice)  #Rice in Middle East
 		if (iGameTurn == xml.i1500AD):
-			gc.getMap().plot(54, 35).setBonusType(xml.iRice) #Rice in Italy?
+			gc.getMap().plot(55, 35).setBonusType(xml.iRice) #Rice in Italy?
 		if (iGameTurn == xml.i1250AD):
 			gc.getMap().plot( 2, 69).setBonusType(-1) # Remove the NAA from Iceland
 		if (iGameTurn == xml.i1452AD):
 			gc.getMap().plot(94, 0).setBonusType(xml.iCoffee)
 			gc.getMap().plot(99, 14).setBonusType(xml.iCoffee)
 		if (iGameTurn == xml.i1580AD):
-			gc.getMap().plot(35, 58).setBonusType(xml.iPotato) #Potatoes in Ireland
-			gc.getMap().plot(37, 60).setBonusType(xml.iPotato)
-			gc.getMap().plot(68, 49).setBonusType(xml.iPotato) #Poland
-			gc.getMap().plot(59, 53).setBonusType(xml.iPotato) #Northern Germany
+			gc.getMap().plot(32, 59).setBonusType(xml.iPotato) #Potatoes in Ireland
+			gc.getMap().plot(29, 57).setBonusType(xml.iPotato)
+			gc.getMap().plot(69, 49).setBonusType(xml.iPotato) #Poland
+			gc.getMap().plot(66, 46).setBonusType(xml.iPotato)
+			gc.getMap().plot(60, 48).setBonusType(xml.iPotato) #Northern Germany
+			gc.getMap().plot(55, 52).setBonusType(xml.iPotato)
 		if (iGameTurn == xml.i1680AD):
 			gc.getMap().plot(59, 61).setBonusType(xml.iAccess) #Atlantic Access in Scandinavia
 

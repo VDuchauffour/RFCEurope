@@ -34,8 +34,8 @@ Changes for Beta 14:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
 		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard,
-Swiss Line infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman), Touareg Camel Archer,
-Medjay (Nubian Longbowman)
+				Swiss Line infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman),
+				Touareg Camel Archer, Medjay (Nubian Longbowman)
 		- Swiss Pikeman aviable in a much bigger area, Almogavar aviable in Greece (Catalan Company)
 		- New art for Don Cossack, Huscarl
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
@@ -46,6 +46,7 @@ Medjay (Nubian Longbowman)
 		- Minor changes to the Mediterranean Islands, Lombardy and Tuscany, southern Hungary
 		- More realistic rivers and revised resource placement in most of the mentioned areas
 		- New provinces: Fez, Navarre, La Mancha
+		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav
 	
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
