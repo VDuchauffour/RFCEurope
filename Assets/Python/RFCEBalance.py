@@ -592,9 +592,9 @@ class RFCEBalance:
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Production, 30, 100 )
 		
 		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 7, 100 )
-		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 10, 100 )
-		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 7, 100 )
-		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Displomacy, 4, 100 )
+		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 6, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 5, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Displomacy, 3, 100 )
 		
 		# every nation gets a land tile that is normally impassible and now pass through it
 		#gc.setStrategicTile( iVenecia, 56, 35 )

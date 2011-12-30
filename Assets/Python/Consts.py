@@ -162,7 +162,7 @@ lOlderNeighbours = [
 [iVenecia,iGermany,iCordoba], #Genoa
 [iFrankia], #England
 [iSpain,iCordoba], #Portugal
-[iPoland], #Portugal
+[iPoland], #Lithuania
 [iGermany,iHungary,iVenecia,iGenoa], #Austria
 [iByzantium,iBulgaria,iCordoba,iArabia], #Turkey
 [iKiev,iPoland], #Moscow
