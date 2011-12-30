@@ -27,14 +27,14 @@ iIndependent2 = con.iIndependent2
 
 # initialise coordinates
 
-tToledo = (28,32)
-tAugsburg = (56,41)
-tSpainTL = (20,24)
-tSpainBR = (35,40)
-tMainzTL = (47,38)
-tMainzBR = (56,55)
+tToledo = (30,27)
+tAugsburg = (55,41)
+tSpainTL = (25,20)
+tSpainBR = (38,34)
+tMainzTL = (49,41)
+tMainzBR = (55,52)
 tPolandTL = (64,43)
-tPolandBR = (78,57)
+tPolandBR = (75,54)
 
 ### Religious Buildings that give Faith Points ###
 tCatholicBuildings = [ xml.iCatholicTemple, xml.iCatholicMonastery, xml.iCatholicCathedral ]

@@ -179,12 +179,12 @@ xml.i635AD, #632AD Arabia
 xml.i680AD, #680AD Bulgaria
 xml.i711AD, #712AD Cordoba
 xml.i780AD, #780AD Norse
-xml.i810AD, #800AD Venecia
-xml.i843AD, #843AD Burgundy
+xml.i810AD, #810AD Venecia
+xml.i843AD, #844AD Burgundy
 xml.i858AD, #858AD Germany
-xml.i880AD, #864AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
+xml.i880AD, #880AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
 xml.i895AD, #896AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
-xml.i910AD, #910AD Spain
+xml.i910AD, #909AD Spain
 xml.i966AD, #966AD Poland
 xml.i1016AD,#1020AD Genoa
 xml.i1066AD,#1066AD England
@@ -235,21 +235,21 @@ tCapitals = (
 (81, 25), #tConstantinople, Byzantium
 (44, 46), #tParis, France
 (97, 13), #tDamascus, Arabia
-(77, 30), #tPreslav, Bulgaria
-(28, 28), #tCordoba, Cordoba
+(78, 29), #tPreslav, Bulgaria
+(30, 23), #tCordoba, Cordoba
 (59, 57), #tRoskilde, Norse
 (56, 35), #tVenice, Venezia
 (47, 41), #tDijon, Burgundy
-(54, 46), #tFrankfurt, Germany
+(53, 46), #tFrankfurt, Germany
 (83, 45), #tKiev, Kiev
 (66, 37), #tBuda, Hungary
-(28, 37), #tLeon, Spain
+(27, 32), #tLeon, Spain
 (65, 49), #tPoznan, Poland
 (50, 34), #tGenoa, Genoa
-(43, 53), #tLondon, England
-(22, 32), #tLisboa, Portugal
+(41, 52), #tLondon, England
+(21, 25), #tLisboa, Portugal
 (75, 53), #tVilnius, Lithuania
-(63, 39), #tWien, Austria
+(62, 40), #tWien, Austria
 (79, 22), #tBursa, Turkey
 (88, 56), #tMoscow, Moscow
 (67, 64), #tStockholm, Sweden
@@ -317,22 +317,22 @@ tReserveCapitals = (
 tNewCapitals = (  #for RiseAndFall
 ((81, 25),(81, 25)), #tByzantium: Constantinople
 ((44, 46),(44, 46)), #tFrance: Paris
-((85, 4),(84, 3),(85, 3)), #tArabia: Damascus --> Alexandria (best Egyption city)
-((77, 30),(77, 30)), #tBulgaria: Preslav
+((85, 4),(84, 3),(85, 3)), #tArabia: Damascus --> Alexandria (best Egyptian city)
+((78, 29),(78, 29)), #tBulgaria: Preslav
 ((48, 16),(50, 18)), #tCordoba: Cordoba --> Hafsids at Tunis
 ((59, 57),(59, 57)), #tNorse: Roskilde
 ((56, 35),(56, 35)), #tVenezia: Venice
 ((47, 41),(47, 41)), #tBurgundy: Dijon
-((61, 49),(60, 48),(61, 48),(62, 48)), #tGermany: Frankfurt --> Berlin
+((59, 49),(61, 50)), #tGermany: Frankfurt --> Berlin
 ((83, 45),(83, 45)), #tKiev: Kiev
 ((66, 37),(66, 37)), #tHungary: Buda
-((28, 32),(28, 31),(28, 33),(27, 31)), #Spain: Leon --> Toledo (like Madrid)
+((30, 27),(31, 27),(31, 28),(32, 28)), #Spain: Leon --> Toledo or Madrid
 ((65, 49),(65, 49)), #tPoland: Poznan
 ((50, 34),(50, 34)), #tGenoa: Genoa
-((43, 53),(43, 53)), #tEngland: London
-((22, 32),(22, 32)), #tPortugal: Lisboa
+((41, 52),(41, 52)), #tEngland: London
+((21, 25),(21, 25)), #tPortugal: Lisboa
 ((75, 53),(75, 53)), #tLithuania: Vilnius
-((63, 39),(63, 39)), #tAustria: Wien
+((62, 40),(62, 40)), #tAustria: Wien
 ((79, 22),(79, 22)), #tTurkey: Bursa
 ((88, 56),(88, 56)), #tMoscow: Moscow
 ((67, 64),(67, 64)), #tSweden: Stockholm
