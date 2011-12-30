@@ -1215,7 +1215,7 @@ class RiseAndFall:
                                                                                                         if (pCurrent.getPlotCity() not in cityList):
                                                                                                                 cityList.append(pCurrent.getPlotCity())
                                 if (len(cityList) >= iMinNumCities ):
-					if bSpecialRespawn or (gc.getGame().getSorenRandNum(100, 'roll') < con.tResurrectionProb[iDeadCiv]): #If special, always happens
+                                        if bSpecialRespawn or (gc.getGame().getSorenRandNum(100, 'roll') < con.tResurrectionProb[iDeadCiv]): #If special, always happens
                                                 lCityList = []
                                                 for iCity in range( len(cityList)  ):
                                                         lCityList.append( (cityList[iCity].getX(), cityList[iCity].getY()) )
@@ -2723,6 +2723,8 @@ class RiseAndFall:
                                 teamMoscow.meet( pBulgaria.getTeam(), True )
                         if ( pKiev.isAlive() and ( not teamMoscow.isHasMet( pKiev.getTeam() ) ) ):
                                 teamMoscow.meet( pKiev.getTeam(), True )
+                        if ( pLithuania.isAlive() and ( not teamMoscow.isHasMet( pLithuania.getTeam() ) ) ):
+                                teamMoscow.meet( pLithuania.getTeam(), True )
                 elif ( iCiv == iGenoa ):
                         if ( pBurgundy.isAlive() and ( not teamGenoa.isHasMet( pBurgundy.getTeam() ) ) ):
                                 teamGenoa.meet( pBurgundy.getTeam(), True )
@@ -2737,6 +2739,8 @@ class RiseAndFall:
                                 teamSweden.meet( pPoland.getTeam(), True )
                         if ( pGermany.isAlive() and ( not teamSweden.isHasMet( pGermany.getTeam() ) ) ):
                                 teamSweden.meet( pGermany.getTeam(), True )
+                        if ( pLithuania.isAlive() and ( not teamSweden.isHasMet( pLithuania.getTeam() ) ) ):
+                                teamSweden.meet( pLithuania.getTeam(), True )
                 elif ( iCiv == iDutch ):
                         if ( pEngland.isAlive() and ( not teamDutch.isHasMet( pEngland.getTeam() ) ) ):
                                 teamDutch.meet( pEngland.getTeam(), True )

@@ -105,8 +105,8 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iAlmogavar, "TXT_KEY_MERC_ARAGON", 188, 267, [xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia], [], 50 ],
                 [xml.iAlmogavar, "TXT_KEY_MERC_ARAGON", 188, 267, [xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Valencia], [], 50 ],
                 [xml.iAlmogavar, "TXT_KEY_MERC_ARAGON", 234, 270, [xml.iP_Thessaly, xml.iP_Thessaloniki], [], 50 ],
-                [xml.iBlackGuard, "TXT_KEY_MERC_MOROCCO", 375, 430, [xml.iP_Morocco, xml.iP_Oran, xml.iP_Tetouan, xml.iP_Marrakesh], [], 50 ],
-                [xml.iBlackGuard, "TXT_KEY_MERC_MOROCCO", 375, 430, [xml.iP_Morocco, xml.iP_Oran, xml.iP_Tetouan, xml.iP_Marrakesh], [], 50 ],
+                [xml.iBlackGuard, "TXT_KEY_MERC_MOROCCO", 375, 430, [xml.iP_Morocco, xml.iP_Oran, xml.iP_Tetouan, xml.iP_Marrakesh, xml.iP_Fez], [], 50 ],
+                [xml.iBlackGuard, "TXT_KEY_MERC_MOROCCO", 375, 430, [xml.iP_Morocco, xml.iP_Oran, xml.iP_Tetouan, xml.iP_Marrakesh, xml.iP_Fez], [], 50 ],
                 [xml.iHackapell, "TXT_KEY_MERC_FINNISH", 359, 500, [xml.iP_Osterland, xml.iP_Norrland, xml.iP_Karelia], [], 50 ],
                 [xml.iHackapell, "TXT_KEY_MERC_FINNISH", 359, 500, [xml.iP_Osterland, xml.iP_Norrland, xml.iP_Karelia], [], 50 ],
                 [xml.iReiter, "TXT_KEY_MERC_GERMAN", 350, 400, [xml.iP_Silesia, xml.iP_LesserPoland, xml.iP_Masovia, xml.iP_GreaterPoland, xml.iP_Pomerania], [], 50 ],
@@ -142,8 +142,8 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iZanji, "TXT_KEY_MERC_AFRICAN", 42, 200, xml.lRegionAfrica + [xml.iP_Egypt], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
                 [xml.iZanji, "TXT_KEY_MERC_AFRICAN", 42, 200, xml.lRegionAfrica + [xml.iP_Egypt], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
                 [xml.iZanji, "TXT_KEY_MERC_AFRICAN", 42, 200, xml.lRegionAfrica + [xml.iP_Egypt], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-                [xml.iTouareg, "TXT_KEY_MERC_AFRICAN", 50, 266, [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-                [xml.iTouareg, "TXT_KEY_MERC_AFRICAN", 50, 266, [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTouareg, "TXT_KEY_MERC_AFRICAN", 50, 266, [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTouareg, "TXT_KEY_MERC_AFRICAN", 50, 266, [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
                 [xml.iNubianLongbowman, "TXT_KEY_MERC_NUBIAN", 37, 150, [xml.iP_Egypt], [], 50 ],
                 [xml.iNubianLongbowman, "TXT_KEY_MERC_NUBIAN", 37, 150, [xml.iP_Egypt], [], 50 ],
 				[xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
@@ -157,12 +157,6 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
 				[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
 				[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
 				[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Ifriqiya], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-				#test:
-				#[xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 3, 217, [xml.iP_Constantinople], [], 50 ],
-				#[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 3, 450, [xml.iP_Constantinople], [xml.iCatholicism, xml.iProtestantism], 50 ],
-				#[xml.iHackapell, "TXT_KEY_MERC_FINNISH", 3, 500, xml.lRegionAsiaMinor, [], 50 ],
-				#[xml.iAlmogavar, "TXT_KEY_MERC_ARAGON", 3, 500, xml.lRegionAsiaMinor, [], 50 ],
-				#[xml.iVarangianGuard, "TXT_KEY_MERC_VARANGIAN", 3, 500, xml.lRegionAsiaMinor, [], 50 ],
                 ]
 
 ### A few Parameters for Mercs only:
