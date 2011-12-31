@@ -208,13 +208,13 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KAZIMIERZ</Type>
-			<LSystem>LSYSTEM_3x2</LSystem>
+			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>0.4</fScale>
-			<fInterfaceScale>0.7</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Temple_Mount/bethlehem.nif</NIF>
+			<fScale>2.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Kazimierz/synagoga06.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Shrine_Jewish.dds,Art/Interface/Buttons/Buildings_Atlas.dds,7,14</Button>
+			<Button>,Art/Interface/Buttons/Wonders/Kazimierz.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,8,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THEODOSIAN_WALLS</Type>

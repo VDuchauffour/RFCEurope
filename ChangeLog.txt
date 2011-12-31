@@ -76,6 +76,7 @@ Changes for Beta 14:
 		- Religious building sounds updated. Now all of them have build sounds (including Pagan Shrine and Jewish buildings)
 		- Merged buttons into several atlas' (this should reduce the loading time of the mod a bit)
 		- New art for the Tercio
+		- New Art + Button for Kazimierz
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
