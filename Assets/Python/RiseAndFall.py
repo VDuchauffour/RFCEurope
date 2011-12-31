@@ -2162,7 +2162,11 @@ class RiseAndFall:
                                 pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
+                                # 3Miro: Added one more settler for Venice, to see if this helps them
                                 utils.makeUnit(xml.iArcher,iCiv,tSeaPlot,1)
+                                pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
+                                utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
                 if (iCiv == iKiev):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
