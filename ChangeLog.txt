@@ -47,6 +47,7 @@ Changes for Beta 14:
 		- More realistic rivers and revised resource placement in most of the mentioned areas
 		- New provinces: Fez, Navarre, La Mancha
 		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav
+		- Updated war map to all civs
 	
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
