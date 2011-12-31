@@ -1936,7 +1936,7 @@
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-					<DCNConditionVassalOf>CIVILIZATION_BYZANTIUM</DCNConditionVassalOf>
+					<DCNConditionVassalOf>CIVILIZATION_FRANCE</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
@@ -2425,7 +2425,7 @@
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>1</DCNConditionHasRespawned>
-					<DCNName>TXT_KEY_DN_COR30</DCNName>
+					<DCNName>TXT_KEY_DN_COR32</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -6768,9 +6768,9 @@
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>NONE</DCNConditionVassalOf>
-					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
-					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>CIVILIZATION_SWEDEN</DCNConditionMasterlOf>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -6808,7 +6808,7 @@
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionConqASpecificProvince>35</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_NOR23</DCNName>
 				</DCNCondition>
@@ -8451,7 +8451,7 @@
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
-					<DCNConditionVassalOf>CIVILIZATION_KIEVE</DCNConditionVassalOf>
+					<DCNConditionVassalOf>CIVILIZATION_KIEV</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
