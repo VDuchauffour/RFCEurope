@@ -31,55 +31,56 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 # city coordinates, spawn 1st turn and retries
 
 
-lTangier = [24,23,0,0] #500 AD
-lBurdigala = [37,40,0,0] #500 AD
-#lNantes = [37,45,0,0] #500 AD
-lAlger = [39,20,0,0] #500 AD
-lBarcino = [39,31,0,0] #500 AD
-#lCaen = [40,48,0,0] #500 AD
-lToulouse = [41,37,0,0] #500 AD
-#lTours = [42,42,0,0] #500 AD
-lMarseilles = [45,33,0,0] #500 AD
+lTangier = [27,16,0,0] #500 AD
+lBurdigala = [37,38,0,0] #500 AD, Bordeaux
+#lNantes = [36,43,0,0] #500 AD
+lAlger = [40,16,0,0] #500 AD
+lBarcino = [40,28,0,0] #500 AD
+#lCaen = [40,47,0,0] #500 AD
+lToulouse = [41,34,0,0] #500 AD
+#lTours = [40,43,0,0] #500 AD
+#lOrleans = [42,44,0,0] #500 AD
+lMarseilles = [46,32,0,0] #500 AD
 lLyon = [46,37,0,0] #500 AD
 lTunis = [49,17,0,0] #500 AD
-#lPisae = [52,32,0,0] #500 AD
-lMediolanum = [52,37,0,0] #500 AD
-lFlorentia = [54,31,0,0] #500 AD
+#lPisae = [53,32,0,0] #500 AD
+lMediolanum = [52,37,0,0] #500 AD, Milan
+lFlorentia = [54,32,0,0] #500 AD, Firenze
 lTripoli = [54,8,0,0] #500 AD
 #lRoma = [56,27,0,0] #500 AD
 lAugsburg = [55,41,0,0] #500 AD
 #lCatania = [58,18,0,0] #500 AD
-lNapoli = [60,24,0,0] #500 AD
+lNapoli = [59,24,0,0] #500 AD
 lRagusa = [64,28,0,0] #500 AD
 lBeograd = [68,31,0,0] #500 AD
 lRhodes = [79,12,0,0] # 500 AD
 lPalermo = [55,19,2,0] # 508 AD
-#lZaragoza = [35,32,45,0] # 680 AD
-lToledo = [28,32,45,0] #680 AD
+#lZaragoza = [36,29,45,0] # 680 AD
+lToledo = [30,27,45,0] #680 AD
 lBulgar = [97,60,45,0] #680 AD
-#lLeon = [28,37,50,0] # 700 AD
-#lBurgos = [32,35,50,0] # 700 AD
-lValencia = [34,28,50,0] #700 AD
-lPamplona = [35,35,50,0] #700 AD
-lPorto = [23,36,50,0] #700 AD
-lYork = [44,58,50,0] # 700 AD
-lDublin = [36,58,50,0] # 700 AD
-lLubeck = [58,53,50,0] #700 AD
-lTonsberg = [58,64,65,0] #760 AD
-#lCorunna = [25,40,75,0] #800 AD
+#lLeon = [27,32,50,0] # 700 AD
+#lBurgos = [30,32,50,0] # 700 AD
+lValencia = [36,25,50,0] #700 AD
+lPamplona = [35,32,50,0] #700 AD
+lPorto = [23,31,50,0] #700 AD
+lYork = [39,59,50,0] # 700 AD
+lDublin = [32,58,50,0] # 700 AD
+lLubeck = [57,53,50,0] #700 AD
+lTonsberg = [57,65,65,0] #760 AD
+#lCorunna = [24,35,75,0] #800 AD
 lMilan = [52,37,75,0] #800 AD, Respawn of Mediolanum, so that it still exists if razed
-lFirenze = [54,31,75,0] #800 AD, Respawn of Florentia 
-#lLeipzig = [59,48,75,0] #800 AD
-lPrague = [61,44,75,0] #800 AD
+lFirenze = [54,32,75,0] #800 AD, Respawn of Florentia 
+#lLeipzig = [58,48,75,0] #800 AD
+lPrague = [60,44,75,0] #800 AD
 lKharkov = [90,46,75,0] #800 AD
-lCalais = [45,50,75,0] #800 AD
-lNidaros = [55,71,75,0] #800 AD
+lCalais = [44,50,75,0] #800 AD
+lNidaros = [57,71,75,0] #800 AD, Trondheim
 lNovgorod = [80,62,87,0] #848 AD
-lEdinburgh = [42,62,90,0] #860 AD
+lEdinburgh = [37,63,90,0] #860 AD
 lAlbaIulia = [73,34,100,0] #900 AD
-lTvanksta = [70,54,100,0] #900 AD
-#lBreslau = [65,45,100,0] #900 AD
-lKrakow = [69,44,100,0] #900 AD
+lTvanksta = [69,53,100,0] #900 AD, Konigsberg
+#lBreslau = [64,46,100,0] #900 AD
+lKrakow = [68,44,100,0] #900 AD
 lRiga = [74,58,100,0] #900 AD
 lMinsk = [79,52,120,0] #960 AD
 lYaroslavl = [92,61,137,0] #1010 AD
@@ -87,16 +88,16 @@ lGroningen = [52,54,150,0] #1050 AD
 #lMuenster = [52,50,150,0] #1050 AD
 lSmolensk = [84,55,151,0] #1054 AD
 lMus = [99,21,153,0] #1060 AD
-lMarrakesh = [18,14,157,0] #1071 AD
+lMarrakesh = [24,7,157,0] #1071 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
 lTarabulus = [54,8,209,0] #1227 AD, Respawn of Tripoli
-lAbo = [71,65,217,0] #1250 AD
+lAbo = [71,66,217,0] #1250 AD
 lSamara = [97,54,240,0] #1320 AD
-#lMemel = [70,55,240,0] #1320 AD
+#lMemel = [70,55,240,0] #1320 AD, Klaipeda
 lVologda = [89,64,240,0] #1320 AD
 #lTver = [85,60,240,0] #1320 AD
 lReykjavik = [2,70,270,0] #1410 AD
-lValletta = [58,12,315,0] #1530 AD
+lValletta = [57,14,315,0] #1530 AD
 
 
 
@@ -204,12 +205,14 @@ class Barbs:
 		#Christians in Spain, this might be a bit overtuned, but lets wait for feedback
 		if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i880AD):
 			self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iAxeman, 1 + iHandicap, iGameTurn,14,0,utils.outerInvasion,1, "")
-			#self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iSpearman, 1 + iHandicap, iGameTurn,18,3,utils.outerInvasion,1, "")
 			self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iMountedInfantry, 1 + iHandicap, iGameTurn,15,5,utils.outerInvasion,1, "")
-			
 			self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iAxeman, 2 + iHandicap, iGameTurn,14,5,utils.outerInvasion,1, "")
-			#self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iSpearman, 1 + iHandicap, iGameTurn,18,9,utils.outerInvasion,1, "")
 			self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iMountedInfantry, 1 + iHandicap, iGameTurn,16,14,utils.outerInvasion,1, "")
+		if (gc.getPlayer(con.iCordoba).isHuman()): #extra barbs for human Cordoba
+			if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i880AD):
+				self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iAxeman, 1 + iHandicap, iGameTurn,14,0,utils.outerInvasion,1, "")
+				self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iSpearman, 1 + iHandicap, iGameTurn,18,3,utils.outerInvasion,1, "")
+				self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iSpearman, 1 + iHandicap, iGameTurn,18,9,utils.outerInvasion,1, "")
 		
 		#Berbers in North Africa
 		if (iGameTurn >= xml.i700AD and iGameTurn < xml.i1060AD):
@@ -218,8 +221,9 @@ class Barbs:
 		#Avars in Austria-Hungary from 550 AD to 800 AD	
 		if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
 			self.spawnUnits( iBarbarian, (60,30),(75,40), xml.iHorseArcher, 2 + iHandicap*2, iGameTurn,5,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()))
-		#if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
-		#	self.spawnUnits( iBarbarian, (66,26),(73,29), xml.iHorseArcher, 1 + iHandicap, iGameTurn,4,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()))
+		if (gc.getPlayer(con.iBulgaria).isHuman()): #extra barbs for human Bulgaria
+			if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
+				self.spawnUnits( iBarbarian, (66,26),(73,29), xml.iHorseArcher, 1 + iHandicap, iGameTurn,4,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()))
 		
 		#Early barbs in Byzantium:
 		#Pre-Bulgarian Slavs in South Balkans
@@ -243,14 +247,24 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
 		if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1000AD):
 			self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iHorseArcher, 2 + iHandicap*2, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
+		if (gc.getPlayer(con.iKiev).isHuman()): #extra barbs for human Kiev
+			if (iGameTurn >= xml.i800AD and iGameTurn < xml.i940AD):
+				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iHorseArcher, 1 + iHandicap*2, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
+			if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1000AD):
+				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iHorseArcher, 1 + iHandicap*2, iGameTurn,8,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
 		
 		#Pechenegs and Cumans in Northern Balkans
 		if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1160AD):
 			self.spawnUnits( iBarbarian, (64,33),(77,43), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-			self.spawnUnits( iBarbarian, (66,35),(75,42), xml.iHorseArcher, 2 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
-		#if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1160AD):
-			#self.spawnUnits( iBarbarian, (78,32),(80,34), xml.iHorseArcher, 2 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-			#self.spawnUnits( iBarbarian, (77,31),(79,33), xml.iHorseArcher, 1 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
+			self.spawnUnits( iBarbarian, (66,35),(75,42), xml.iHorseArcher, 1 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
+		if (gc.getPlayer(con.iHungary).isHuman()): #extra barbs for human Hungary
+			if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1160AD):
+				self.spawnUnits( iBarbarian, (64,33),(77,43), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
+				self.spawnUnits( iBarbarian, (66,35),(75,42), xml.iHorseArcher, 1 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))		
+		if (gc.getPlayer(con.iBulgaria).isHuman()): #extra barbs for human Bulgaria
+			if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1160AD):
+				self.spawnUnits( iBarbarian, (78,32),(80,34), xml.iHorseArcher, 2 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
+				self.spawnUnits( iBarbarian, (77,31),(79,33), xml.iHorseArcher, 1 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
 		
 		#Vikings on ships
 		if (gc.getPlayer(con.iNorse).isHuman()): #Humans can properly go viking without help
@@ -293,8 +307,9 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (54,40),(62,49), xml.iHorseArcher, 2 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()))
 		if (iGameTurn >= xml.i840AD and iGameTurn < xml.i892AD):
 			self.spawnUnits( iBarbarian, (66,26),(73,29), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()))
-		#if (iGameTurn >= xml.i840AD and iGameTurn < xml.i892AD):
-		#	self.spawnUnits( iBarbarian, (77,31),(80,34), xml.iHorseArcher, 2 + iHandicap, iGameTurn,3,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()))
+		if (gc.getPlayer(con.iBulgaria).isHuman()): #extra barbs for human Bulgaria
+			if (iGameTurn >= xml.i840AD and iGameTurn < xml.i892AD):
+				self.spawnUnits( iBarbarian, (77,31),(80,34), xml.iHorseArcher, 2 + iHandicap, iGameTurn,3,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()))
 		
 		#Barbs in the middle east
 		if (gc.getPlayer(con.iArabia).isAlive()):
@@ -352,12 +367,17 @@ class Barbs:
 			
 		#Nogais (from Morholt)
 		if (iGameTurn >=xml.i1500AD and iGameTurn <=xml.i1600AD):
-			self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iHorseArcher, 5 + iHandicap*2, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()))
+			self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iHorseArcher, 3 + iHandicap*2, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()))
+		if (gc.getPlayer(con.iMoscow).isHuman()): #extra barbs for human Moscow
+			if (iGameTurn >=xml.i1500AD and iGameTurn <=xml.i1600AD):
+				self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iHorseArcher, 2 + iHandicap*2, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()))
 		
 		#Kalmyks (from Morholt)
 		if (iGameTurn >=xml.i1600AD and iGameTurn <=xml.i1715AD):
-			self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iMongolKeshik, 6 + iHandicap*2, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()))
-		
+			self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iMongolKeshik, 3 + iHandicap*2, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()))
+		if (gc.getPlayer(con.iMoscow).isHuman()): #extra barbs for human Moscow
+			if (iGameTurn >=xml.i1600AD and iGameTurn <=xml.i1715AD):
+				self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iMongolKeshik, 3 + iHandicap*2, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()))
 		
 		
 		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.

@@ -119,27 +119,27 @@ iLime = 100
 
 #neighbours
 lNeighbours = [
-[iBulgaria,iArabia],	#Byzantium
+[iBulgaria,iArabia,iTurkey],	#Byzantium
 [iBurgundy,iEngland],	#Frankia
-[iByzantium],			#Arabia
+[iByzantium,iTurkey],			#Arabia
 [iByzantium,iHungary,iKiev],	#Bulgaria
 [iSpain,iPortugal],		#Cordoba
-[iSweden],			#Norse
+[iSweden,iGermany],			#Norse
 [iGenoa,iGermany,iAustria,iHungary,iPope],		#Venecia
 [iFrankia,iDutch,iGermany],		#Burgundy
-[iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary],	#Germany
+[iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary,iNorse],	#Germany
 [iBulgaria,iMoscow,iPoland],		#Kiev
 [iBulgaria,iVenecia,iPoland,iGermany,iAustria],			#Hungary
 [iCordoba,iPortugal],	#Spain
-[iGermany,iAustria,iHungary,iKiev,iMoscow],				#Poland
+[iGermany,iAustria,iHungary,iKiev,iMoscow,iLithuania],			#Poland
 [iGermany,iVenecia,iBurgundy,iPope],	#Genoa
 [iFrankia,iDutch],			#England
 [iSpain,iCordoba],			#Portugal
-[iKiev,iPoland],		#Lithuania
+[iKiev,iPoland,iMoscow],		#Lithuania
 [iGermany,iHungary,iPoland,iVenecia],	#Austria
 [iByzantium,iArabia],			#Turkey
-[iKiev,iPoland],		#Moscow
-[iNorse],				#Sweden
+[iKiev,iPoland,iLithuania],		#Moscow
+[iNorse,iLithuania],				#Sweden
 [iGermany,iEngland,iBurgundy],		#Dutch
 [iVenecia, iGenoa]			#Pope
 ]
@@ -165,8 +165,8 @@ lOlderNeighbours = [
 [iPoland], #Lithuania
 [iGermany,iHungary,iVenecia,iGenoa], #Austria
 [iByzantium,iBulgaria,iCordoba,iArabia], #Turkey
-[iKiev,iPoland], #Moscow
-[iNorse,iPoland,iMoscow], #Sweden
+[iKiev,iPoland,iLithuania], #Moscow
+[iNorse,iPoland,iMoscow,iLithuania], #Sweden
 [iGermany,iFrankia], #Dutch
 [] #Pope
 ]
@@ -349,23 +349,23 @@ tNewCapitals = (  #for RiseAndFall
 
 tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for stability
 (66,14),   #Byzantium
-(42,42),   #Franks
+(42,43),   #Franks
 (93,1),    #Arabs
-(74,28),   #Bulgaria
+(74,27),   #Bulgaria
 (25,18),   #Cordoba
 (54,56),   #Norse
-(56,33),   #Venice
+(55,33),   #Venice
 (44,33),   #Burgundy
-(52,40),   #Germany
+(51,40),   #Germany
 (80,37),   #Kiev
-(65,34),   #Hungary
+(64,34),   #Hungary
 (25,34),   #Spain
 (64,44),   #Poland
 (49,27),   #Genoa
 (38,48),   #England
 (21,29),   #Portugal
 (71,48),   #Lithuania
-(58,37),   #Austria
+(59,36),   #Austria
 (76,16),   #Turks
 (80,52),   #Moscow
 (61,59),   #Sweden
@@ -377,12 +377,12 @@ tCoreAreasBR = (
 (84,26),   #Byzantium
 (46,47),   #Franks
 (99,15),   #Arabs
-(84,36),   #Bulgaria
+(80,32),   #Bulgaria
 (35,32),   #Cordoba
-(59,65),   #Norse
+(60,65),   #Norse
 (61,36),   #Venice
 (48,42),   #Burgundy
-(56,50),   #Germany
+(58,50),   #Germany
 (91,48),   #Kiev
 (71,39),   #Hungary
 (33,40),   #Spain
@@ -391,7 +391,7 @@ tCoreAreasBR = (
 (44,58),   #England
 (24,35),   #Portugal
 (78,59),   #Lithuania
-(64,43),   #Austria
+(62,44),   #Austria
 (84,22),   #Turks
 (95,68),   #Moscow
 (66,69),   #Sweden
@@ -563,7 +563,7 @@ tBroaderAreasBR = (
 (58, 29)  #Pope
 )
 
-# visiable areas:
+# visible areas:
 tVisible = (
 ( (64,0,99,34),(49,1,63,38),(24,17,48,36), ), # Byzantium
 ( (35,31,52,51),(49,26,59,38), ), # France
