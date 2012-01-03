@@ -748,6 +748,7 @@ iP_Svealand = 35
 iP_Norrland = 36
 iP_Oppland = 37
 iP_Skaneland = 38
+iP_Gotland = 39
 
 # Germany 40+
 iP_Swabia = 40
@@ -881,7 +882,7 @@ lRegionIberia		= [ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalo
 lRegionFrance		= [ iP_Normandy, iP_Bretagne, iP_IleDeFrance, iP_Orleans, iP_Picardy ]
 lRegionBurgundy		= [ iP_Provence, iP_Burgundy, iP_Champagne, iP_Flanders ]
 lRegionBritain		= [ iP_London, iP_Wales, iP_Wessex, iP_Scotland, iP_EastAnglia, iP_Mercia, iP_Northumbria, iP_Ireland ]
-lRegionScandinavia	= [ iP_Denmark, iP_Osterland, iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Oppland, iP_Skaneland ]
+lRegionScandinavia	= [ iP_Denmark, iP_Osterland, iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Oppland, iP_Skaneland, iP_Gotland ]
 lRegionGermany		= [ iP_Lorraine, iP_Swabia, iP_Saxony, iP_Bavaria, iP_Franconia, iP_Brandenburg ]
 lRegionPoland		= [ iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_LesserPoland, iP_Silesia, iP_Masovia ]
 lRegionLithuania	= [ iP_Lithuania, iP_Livonia, iP_Estonia ]
@@ -899,7 +900,7 @@ lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, i
 # those regions are for the map and AI
 tRegionMap = [ [], # default region is empty
 [ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Navarre, iP_LaMancha, iP_Valencia, iP_Andalusia, iP_Bretagne, iP_Normandy, iP_Aquitania, iP_IleDeFrance, iP_Provence, iP_Burgundy, iP_Orleans, iP_Champagne, iP_Flanders, iP_Picardy, iP_London, iP_Wessex, iP_Wales, iP_Scotland, iP_Ireland, iP_Mercia, iP_EastAnglia, iP_Northumbria, iP_Iceland, iP_TheIsles ], # Western Europe
-[ iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Oppland, iP_Skaneland ], # Northern Europe
+[ iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Oppland, iP_Skaneland, iP_Gotland ], # Northern Europe
 [ iP_Netherlands, iP_Denmark, iP_Swabia, iP_Bavaria, iP_Bohemia, iP_Saxony, iP_Lorraine, iP_Franconia, iP_Brandenburg, iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_Masovia, iP_Carinthia, iP_Austria, iP_Slavonia, iP_Transylvania, iP_Hungary, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, iP_Lombardy, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Dalmatia, iP_Bosnia, iP_Croatia ], # Central Europe
 [ iP_LesserPoland, iP_Suvalkija, iP_Lithuania, iP_Livonia, iP_Moesia, iP_Constantinople, iP_Thrace, iP_Thessaly, iP_Macedonia, iP_Serbia, iP_Epirus, iP_Morea, iP_Wallachia, iP_Moldova, iP_Crimea, iP_Novgorod, iP_Kuban, iP_Zaporizhia, iP_Rostov, iP_Moscow, iP_Vologda, iP_Smolensk, iP_Polotsk, iP_Murom, iP_Chernigov, iP_Pereyaslavl, iP_Sloboda, iP_Donets, iP_Kiev, iP_Podolia, iP_Minsk, iP_Brest, iP_Simbirsk, iP_NizhnyNovgorod, iP_Karelia, iP_Volhynia, iP_Thessaloniki, iP_Estonia, iP_Osterland ], # Eastern Europe
 [ iP_Jerusalem, iP_Paphlagonia, iP_Opsikion, iP_Thrakesion, iP_Cilicia, iP_Anatolikon, iP_Armeniakon, iP_Charsiadon, iP_Colonea, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Egypt ], # Asia

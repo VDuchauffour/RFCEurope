@@ -121,7 +121,7 @@ tCordobaDesire = []
 tNorseCore = []
 tNorseNorm = []
 tNorseOuter = [xml.iP_Scotland,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_Novgorod,xml.iP_Crimea,xml.iP_Sicily,xml.iP_Ireland]
-tNorsePot2Core = [xml.iP_Denmark,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Oppland,xml.iP_Norrland,xml.iP_Skaneland]
+tNorsePot2Core = [xml.iP_Denmark,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Oppland,xml.iP_Norrland,xml.iP_Skaneland,xml.iP_Gotland]
 tNorsePot2Norm = [xml.iP_Normandy,xml.iP_Iceland]
 tNorseDesire = []
 
@@ -225,8 +225,8 @@ tMoscowDesire = []
 
 tSwedenCore = []
 tSwedenNorm = []
-tSwedenOuter = [xml.iP_Denmark,xml.iP_Pomerania,xml.iP_Skaneland]
-tSwedenPot2Core = [xml.iP_Gotaland,xml.iP_Norrland,xml.iP_Svealand,]
+tSwedenOuter = [xml.iP_Denmark,xml.iP_Pomerania,xml.iP_Skaneland,xml.iP_Estonia]
+tSwedenPot2Core = [xml.iP_Gotaland,xml.iP_Norrland,xml.iP_Svealand,xml.iP_Gotland]
 tSwedenPot2Norm = [xml.iP_Osterland,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Oppland]
 tSwedenDesire = []
 
@@ -534,3 +534,4 @@ class ProvinceManager:
                         pNorse.setProvinceType( xml.iP_Norrland, iProvinceOuter )
                         pNorse.setProvinceType( xml.iP_Svealand, iProvinceOuter )
                         pNorse.setProvinceType( xml.iP_Gotaland, iProvinceOuter )
+                        pNorse.setProvinceType( xml.iP_Gotland, iProvinceOuter )

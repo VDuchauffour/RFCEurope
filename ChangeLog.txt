@@ -24,30 +24,32 @@ Changes for Beta 14:
 		- Swedish Tennant is now a Night Watch replacement (what's the fun in a UB if it's preplaced in all your cities so you can never build it?) - from RFCE++
 		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans. They have reduced cost though
 		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
-		- Adjusted Kievan visibility map to the new starting point
 		- Arabian UHV requires 35% islam instead of 25%
 		- When the Jews are prosecuted from one city, then automatically move to another city from a player that is most tolerant (measured by civics and lack of prosecutions)
 				This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
 				Also, there should be a lot more Jews left in late game
+		- All UHVs, AI and mercenary regions, defensive crusades are updated to the new map and provinces
+		- Many barbarian spawns got separated: they should be hard on the human player, but much easier if the civ is played by the AI
 
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
 		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard,
-				Swiss Line infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman),
+				Swiss Line Infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman),
 				Touareg Camel Archer, Medjay (Nubian Longbowman)
 		- Swiss Pikeman aviable in a much bigger area, Almogavar aviable in Greece (Catalan Company)
 		- New art for Don Cossack, Huscarl
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 	
 	Huge map overhaul:
-		- Totally new Iberia, North Africa, Britain, Atlantic Islands
-		- Major changes to France, the Austrian/Venetian/Dalmatian area, southern Bulgaria
+		- Totally new Iberia, North Africa, Britain, Atlantic Islands, Scandinavia
+		- Major changes to France, the Austrian/Venetian/Dalmatian area, southern Bulgaria, Finland
 		- Minor changes to the Mediterranean Islands, Lombardy and Tuscany, southern Hungary
 		- More realistic rivers and revised resource placement in most of the mentioned areas
-		- New provinces: Fez, Navarre, La Mancha
-		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav
-		- Updated war map to all civs
+		- New provinces: Fez, Navarre, La Mancha, Gotland
+		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm
+		- Revised all indy/barb cities spawn coordinates and spawn attributes
+		- Updated all civs' war and settler maps
 	
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD

@@ -653,12 +653,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE1</Tag>
-		<English>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland and Osterland in 1600AD.</English>
-		<French>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland and Osterland in 1600AD.</French>
-		<German>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland and Osterland in 1600AD..</German>
-		<Italian>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland and Osterland in 1600AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland and Osterland in 1600AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland and Osterland in 1600AD.</Russian>
+		<English>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</English>
+		<French>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</French>
+		<German>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD..</German>
+		<Italian>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Spanish>
+		<Russian>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>

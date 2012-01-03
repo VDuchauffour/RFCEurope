@@ -14712,7 +14712,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=60
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -15113,6 +15113,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=58
+	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -15128,7 +15129,8 @@ BeginPlot
 	x=38,y=60
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_SHEEP
+	BonusType=BONUS_DEER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -15547,8 +15549,7 @@ BeginPlot
 	x=39,y=58
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_COAL
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -15556,7 +15557,6 @@ BeginPlot
 	x=39,y=59
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
@@ -16734,6 +16734,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=52
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16760,12 +16761,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=57
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=58
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17133,7 +17134,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=53
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20441,23 +20441,23 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=63
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=64
-	BonusType=BONUS_WHALE
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=65
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=66
-	TerrainType=TERRAIN_COAST
+	BonusType=BONUS_WHALE
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -20831,17 +20831,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=61
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=62
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=63
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -20866,6 +20866,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=68
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21147,7 +21148,6 @@ BeginPlot
 	x=53,y=46
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -21231,12 +21231,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=61
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=62
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -21246,27 +21246,25 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=64
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=65
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=53,y=66
-	BonusType=BONUS_AMBER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=67
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=53,y=68
@@ -21275,23 +21273,24 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=69
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=53,y=70
-	BonusType=BONUS_CRAB
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -21547,6 +21546,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
+	BonusType=BONUS_SILVER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -21625,23 +21625,26 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=56
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=57
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=58
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=59
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	isNOfRiver
+	RiverWEDirection=3
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=60
@@ -21660,46 +21663,51 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=63
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=64
 	BonusType=BONUS_SULPHUR
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=65
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
-EndPlot
-BeginPlot
-	x=54,y=66
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	isNOfRiver
+	RiverWEDirection=3
+	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
-	x=54,y=67
-	isNOfRiver
-	RiverWEDirection=3
+	x=54,y=66
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
+EndPlot
+BeginPlot
+	x=54,y=67
+	RiverNSDirection=0
+	isWOfRiver
+	BonusType=BONUS_AMBER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=68
+	isNOfRiver
+	RiverWEDirection=3
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=54,y=69
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -21714,8 +21722,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=72
-	BonusType=BONUS_WHALE
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -22059,8 +22066,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=56
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
+	BonusType=BONUS_HORSE
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22071,23 +22079,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=58
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=59
-	RiverNSDirection=2
-	isNOfRiver
-	RiverWEDirection=3
-	isWOfRiver
-	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	BonusType=BONUS_CLAM
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=60
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=61
@@ -22101,72 +22106,61 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=63
-	RiverNSDirection=2
-	isWOfRiver
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=55,y=64
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
-	x=55,y=64
-	RiverNSDirection=2
-	isWOfRiver
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
-EndPlot
-BeginPlot
 	x=55,y=65
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
-EndPlot
-BeginPlot
-	x=55,y=66
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
+	x=55,y=66
+	TerrainType=TERRAIN_TUNDRA
+	PlotType=0
+EndPlot
+BeginPlot
 	x=55,y=67
+	TerrainType=TERRAIN_TUNDRA
+	PlotType=0
+EndPlot
+BeginPlot
+	x=55,y=68
 	RiverNSDirection=2
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
-EndPlot
-BeginPlot
-	x=55,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
 	PlotType=0
 EndPlot
 BeginPlot
 	x=55,y=69
-	BonusType=BONUS_FUR
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_TUNDRA
+	PlotType=0
 EndPlot
 BeginPlot
 	x=55,y=70
-	isNOfRiver
-	RiverWEDirection=3
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=55,y=71
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=72
-	TerrainType=TERRAIN_COAST
+	BonusType=BONUS_WHALE
+	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
@@ -22527,31 +22521,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=56
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=57
-	BonusType=BONUS_COPPER
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=58
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=59
-	TerrainType=TERRAIN_MOORLAND
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=60
+	RiverNSDirection=0
 	isNOfRiver
 	RiverWEDirection=3
+	isWOfRiver
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
@@ -22567,66 +22562,62 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=63
-	BonusType=BONUS_IRON
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=64
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=65
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	RiverNSDirection=2
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=66
-	TerrainType=TERRAIN_GRASS
-	PlotType=0
+	RiverNSDirection=2
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=56,y=67
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=56,y=68
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=56,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=56,y=70
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=56,y=71
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=72
-	isNOfRiver
-	RiverWEDirection=3
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=0
@@ -22953,29 +22944,30 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=57
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=58
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=57,y=59
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
+	x=57,y=59
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
 	x=57,y=60
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=61
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	isNOfRiver
+	RiverWEDirection=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=62
@@ -22989,57 +22981,56 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=64
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	BonusType=BONUS_CRAB
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=57,y=65
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=57,y=65
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
-EndPlot
-BeginPlot
 	x=57,y=66
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	RiverNSDirection=2
+	isWOfRiver
+	BonusType=BONUS_COPPER
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=57,y=67
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	RiverNSDirection=2
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=57,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=70
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=57,y=71
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=57,y=72
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	BonusType=BONUS_CRAB
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=0
@@ -23362,6 +23353,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=56
+	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -23392,7 +23384,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=62
-	BonusType=BONUS_CRAB
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23403,56 +23394,55 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=64
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=65
-	BonusType=BONUS_COPPER
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=58,y=66
+	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=58,y=66
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
-EndPlot
-BeginPlot
 	x=58,y=67
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=58,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	RiverNSDirection=2
+	isWOfRiver
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=70
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
 BeginPlot
 	x=58,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=72
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=0
@@ -23776,9 +23766,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=56
-	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=57
@@ -23787,8 +23776,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=58
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	BonusType=BONUS_MARBLE
+	TerrainType=TERRAIN_PLAINS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=59
@@ -23807,67 +23797,73 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=62
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=63
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=64
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=65
-	BonusType=BONUS_HONEY
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=66
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	RiverNSDirection=2
+	isNOfRiver
+	RiverWEDirection=3
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=67
-	BonusType=BONUS_FUR
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	RiverNSDirection=2
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=59,y=68
+	isNOfRiver
+	RiverWEDirection=1
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=59,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=59,y=70
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=59,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=59,y=72
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=60,y=0
@@ -24180,8 +24176,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=54
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=55
@@ -24205,35 +24201,35 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=59
-	BonusType=BONUS_COW
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=60,y=60
+	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=61
-	RiverNSDirection=0
+	RiverNSDirection=2
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=62
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=63
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=60,y=64
@@ -24243,21 +24239,27 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=65
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	RiverNSDirection=2
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=66
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=67
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=68
@@ -24267,13 +24269,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=69
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
 BeginPlot
 	x=60,y=70
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -24286,7 +24289,7 @@ BeginPlot
 	x=60,y=72
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=0
@@ -24617,7 +24620,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=54
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24628,46 +24630,48 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=56
-	RiverNSDirection=2
-	isWOfRiver
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=61,y=57
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=61,y=57
-	RiverNSDirection=2
-	isWOfRiver
-	BonusType=BONUS_AMBER
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
-EndPlot
-BeginPlot
 	x=61,y=58
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=59
+	RiverNSDirection=2
+	isNOfRiver
+	RiverWEDirection=3
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=60
-	BonusType=BONUS_FUR
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	RiverNSDirection=2
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=61
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=62
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	BonusType=BONUS_FUR
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=61,y=63
@@ -24676,25 +24680,38 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=64
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=61,y=65
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=61,y=65
-	BonusType=BONUS_TIMBER
+	x=61,y=66
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
-	x=61,y=66
+	x=61,y=67
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
+EndPlot
+BeginPlot
+	x=61,y=68
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
 EndPlot
 BeginPlot
-	x=61,y=67
+	x=61,y=69
 	isNOfRiver
 	RiverWEDirection=1
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
@@ -24702,21 +24719,10 @@ BeginPlot
 	PlotType=1
 EndPlot
 BeginPlot
-	x=61,y=68
+	x=61,y=70
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
-EndPlot
-BeginPlot
-	x=61,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
-EndPlot
-BeginPlot
-	x=61,y=70
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
 EndPlot
 BeginPlot
 	x=61,y=71
@@ -24726,7 +24732,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=72
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=0
 EndPlot
@@ -25054,8 +25059,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=56
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=62,y=57
@@ -25064,26 +25069,22 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=58
-	RiverNSDirection=0
-	isNOfRiver
-	RiverWEDirection=3
-	isWOfRiver
+	BonusType=BONUS_PIG
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=62,y=59
 	BonusType=BONUS_IRON
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
-	x=62,y=59
-	RiverNSDirection=0
-	isWOfRiver
+	x=62,y=60
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=62,y=60
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=61
@@ -25103,47 +25104,43 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=64
-	RiverNSDirection=2
-	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=65
-	RiverNSDirection=2
-	isWOfRiver
-	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=66
-	RiverNSDirection=2
-	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=67
-	isNOfRiver
-	RiverWEDirection=1
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	isNOfRiver
+	RiverWEDirection=1
+	BonusType=BONUS_COPPER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=62,y=69
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -25154,12 +25151,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=62,y=72
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
@@ -25482,8 +25480,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=55
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	BonusType=BONUS_AMBER
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=56
@@ -25492,100 +25491,103 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=57
-	BonusType=BONUS_PIG
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=63,y=58
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=63,y=59
+	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=63,y=58
+	x=63,y=60
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
-	x=63,y=59
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
-EndPlot
-BeginPlot
-	x=63,y=60
-	TerrainType=TERRAIN_COAST
-	PlotType=3
-EndPlot
-BeginPlot
 	x=63,y=61
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=63,y=62
-	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=63
 	isNOfRiver
 	RiverWEDirection=3
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=64
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=63,y=65
 	BonusType=BONUS_SULPHUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
-	x=63,y=65
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	x=63,y=66
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=63,y=66
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
-EndPlot
-BeginPlot
 	x=63,y=67
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	isNOfRiver
+	RiverWEDirection=1
+	BonusType=BONUS_COPPER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=69
-	BonusType=BONUS_IRON
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	BonusType=BONUS_DEER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=70
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=72
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=0
@@ -25892,7 +25894,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=53
-	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
@@ -25919,37 +25920,38 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=58
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=64,y=59
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=60
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=61
-	TerrainType=TERRAIN_MOORLAND
+	BonusType=BONUS_COW
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=62
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_BARLEY
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=63
 	isNOfRiver
-	RiverWEDirection=3
-	BonusType=BONUS_BARLEY
-	TerrainType=TERRAIN_MOORLAND
+	RiverWEDirection=1
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25959,52 +25961,61 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=65
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=66
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	BonusType=BONUS_SILVER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=67
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	RiverNSDirection=0
+	isNOfRiver
+	RiverWEDirection=1
+	isWOfRiver
+	BonusType=BONUS_FUR
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	BonusType=BONUS_AMBER
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=70
-	BonusType=BONUS_GOLD
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=0
+	RiverNSDirection=2
+	isWOfRiver
+	BonusType=BONUS_COW
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=72
+	isNOfRiver
+	RiverWEDirection=1
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=0
@@ -26353,20 +26364,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=61
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=65,y=62
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=65,y=63
-	isNOfRiver
-	RiverWEDirection=1
-	TerrainType=TERRAIN_MOORLAND
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26376,53 +26385,52 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=65
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	isNOfRiver
+	RiverWEDirection=3
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=66
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=67
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=68
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=65,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=65,y=70
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=71
+	isNOfRiver
+	RiverWEDirection=1
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=72
 	BonusType=BONUS_TIMBER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=0
@@ -26778,12 +26786,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=58
-	BonusType=BONUS_SHEEP
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=59
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26804,64 +26812,57 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=63
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=64
-	isNOfRiver
-	RiverWEDirection=3
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=65
+	isNOfRiver
+	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=66
-	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=67
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=68
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=69
-	BonusType=BONUS_AMBER
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=70
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=71
-	BonusType=BONUS_FUR
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=66,y=72
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=67,y=0
@@ -27208,18 +27209,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=58
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=59
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=67,y=60
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27229,26 +27229,24 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=62
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=63
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=64
-	isNOfRiver
-	RiverWEDirection=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=65
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=66
@@ -27257,7 +27255,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=67
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27273,20 +27270,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=70
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=71
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=67,y=72
-	BonusType=BONUS_IRON
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=68,y=0
@@ -27650,8 +27646,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=61
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	BonusType=BONUS_SHEEP
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=62
@@ -27670,8 +27667,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=65
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=66
@@ -27700,14 +27697,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=71
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=68,y=72
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=69,y=0
@@ -28104,8 +28100,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=64
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=69,y=65
@@ -28553,18 +28549,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=66
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=70,y=67
 	BonusType=BONUS_AMBER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=70,y=67
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
 	x=70,y=68
+	RiverNSDirection=0
+	isWOfRiver
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28578,14 +28575,16 @@ EndPlot
 BeginPlot
 	x=70,y=70
 	BonusType=BONUS_SILVER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=71
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	RiverNSDirection=0
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=72
@@ -28967,7 +28966,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=63
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28978,8 +28976,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=65
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=71,y=66
@@ -28994,34 +28992,38 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=68
+	isNOfRiver
+	RiverWEDirection=3
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=71,y=69
 	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=71,y=69
-	isNOfRiver
-	RiverWEDirection=1
+	x=71,y=70
+	RiverNSDirection=2
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=71,y=70
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
-	PlotType=2
-EndPlot
-BeginPlot
 	x=71,y=71
+	isNOfRiver
+	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=72
-	TerrainType=TERRAIN_TUNDRA
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29437,32 +29439,35 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=64
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	BonusType=BONUS_FISH
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=72,y=65
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=66
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=67
-	BonusType=BONUS_DEER
+	BonusType=BONUS_HORSE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=68
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
+	isNOfRiver
+	RiverWEDirection=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29472,14 +29477,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=70
-	BonusType=BONUS_TIMBER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=71
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	BonusType=BONUS_TIMBER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29899,51 +29904,53 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=65
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
+	PlotType=2
+EndPlot
+BeginPlot
+	x=73,y=66
 	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=73,y=66
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
-	PlotType=2
-EndPlot
-BeginPlot
 	x=73,y=67
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=68
 	BonusType=BONUS_IRON
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=69
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=70
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=71
-	BonusType=BONUS_FUR
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_TUNDRA
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=72
+	BonusType=BONUS_FUR
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30337,49 +30344,50 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=65
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=66
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
+	RiverNSDirection=2
+	isWOfRiver
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=67
+	RiverNSDirection=0
+	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=68
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=74,y=69
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=74,y=70
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=74,y=71
 	FeatureType=FEATURE_MARSH, FeatureVariety=0
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
 BeginPlot
-	x=74,y=69
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
-EndPlot
-BeginPlot
-	x=74,y=70
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
-EndPlot
-BeginPlot
-	x=74,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
-EndPlot
-BeginPlot
 	x=74,y=72
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30781,52 +30789,49 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=65
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
+	x=75,y=66
 	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=75,y=66
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
-	PlotType=2
-EndPlot
-BeginPlot
 	x=75,y=67
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
-	PlotType=2
-EndPlot
-BeginPlot
-	x=75,y=68
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
+	x=75,y=68
+	TerrainType=TERRAIN_COAST
+	PlotType=3
+EndPlot
+BeginPlot
 	x=75,y=69
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=70
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
+	PlotType=2
+EndPlot
+BeginPlot
+	x=75,y=71
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
-	x=75,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
-EndPlot
-BeginPlot
 	x=75,y=72
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=1
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
+	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=0
@@ -31254,8 +31259,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=67
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=68
@@ -31277,15 +31283,14 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=71
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=72
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=0
@@ -31668,31 +31673,32 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=66
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=67
-	TerrainType=TERRAIN_COAST
-	PlotType=3
+	RiverNSDirection=0
+	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=77,y=68
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
-	x=77,y=69
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
-	x=77,y=70
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	x=77,y=69
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
+EndPlot
+BeginPlot
+	x=77,y=70
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=71
@@ -32112,32 +32118,33 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=66
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=67
+	isNOfRiver
+	RiverWEDirection=1
+	BonusType=BONUS_PIG
+	TerrainType=TERRAIN_GRASS
+	PlotType=2
+EndPlot
+BeginPlot
+	x=78,y=68
 	BonusType=BONUS_FUR
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
-	x=78,y=68
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
-EndPlot
-BeginPlot
 	x=78,y=69
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=78,y=70
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	BonusType=BONUS_DEER
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -32148,9 +32155,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=72
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=79,y=0
@@ -32578,7 +32584,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=67
-	BonusType=BONUS_PIG
+	isNOfRiver
+	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -32603,13 +32610,13 @@ BeginPlot
 	x=79,y=71
 	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=79,y=72
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=80,y=0
@@ -33035,19 +33042,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=69
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=70
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
 BeginPlot
 	x=80,y=71
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33543,9 +33549,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=68
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=69
@@ -33563,7 +33568,7 @@ BeginPlot
 	x=81,y=71
 	BonusType=BONUS_FUR
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_TUNDRA
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34000,8 +34005,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=68
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
-	TerrainType=TERRAIN_WETLAND
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
