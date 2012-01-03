@@ -73,6 +73,7 @@ lFirenze = [54,32,75,0] #800 AD, Respawn of Florentia
 #lLeipzig = [58,48,75,0] #800 AD
 lPrague = [60,44,75,0] #800 AD
 #lKharkov = [90,46,75,0] #800 AD
+lKursk = [91,48,75,0] #800 AD
 lCalais = [44,50,75,0] #800 AD
 lNidaros = [57,71,75,0] #800 AD, Trondheim
 lNovgorod = [80,62,87,0] #848 AD
@@ -414,14 +415,14 @@ class Barbs:
                         self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
                         self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 1, xml.iCatholicism, 0 )
+                        self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 3, xml.iCatholicism, 0 )
                         # 760AD
                         self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 800AD
                         self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
-                        #self.foundCity(iIndependent4, lKharkov, "Kharkov", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+                        self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iIndependent2, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 848AD
