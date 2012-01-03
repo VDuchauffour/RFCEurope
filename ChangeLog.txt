@@ -30,6 +30,9 @@ Changes for Beta 14:
 				Also, there should be a lot more Jews left in late game
 		- All UHVs, AI and mercenary regions, defensive crusades are updated to the new map and provinces
 		- Many barbarian spawns got separated: they should be hard on the human player, but much easier if the civ is played by the AI
+		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
+		- Kharkov isn't preplaced anymore, instead indy Kursk spawns in 800 AD
+		- Cordoban and Kievan province stability updated
 
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
