@@ -2184,6 +2184,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	bCtrl = gDLL->ctrlKey();
 	
 	// 3MiroProvince: ToColor
+	//if ( bCtrl && (!bShift) && (pPlot != NULL) ){
 	if ( bCtrl && (pPlot != NULL) ){
 		provinceToColor = provinceMap[ pPlot ->getY() * EARTH_X + pPlot ->getX() ];
 		if ( (provinceToColor < 0) || (provinceToColor>MAX_NUM_PROVINCES) ){
@@ -2191,6 +2192,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		};
 		GC.getGameINLINE().updateColoredPlots();
 	};
+	//if ( ((!bCtrl) || bShift) && (provinceToColor > -1) && (provinceToColor<MAX_NUM_PROVINCES) ){
 	if ( (!bCtrl) && (provinceToColor > -1) && (provinceToColor<MAX_NUM_PROVINCES) ){
 		provinceToColor = -1;
 		GC.getGameINLINE().updateColoredPlots();
@@ -2210,6 +2212,37 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		szString.append( NEWLINE );
 	};
 	// 3MiroProvince: end
+
+	// 3MiroMaps: colors the maps
+	if ( !(gDLL->GetWorldBuilderMode() ) ){
+		if ( bShift && (pPlot != NULL) ){
+			if ( iWhatToPlot == 0 ){
+				iPlotCore = -1;
+				for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
+					if ( MiroBelongToCore( iI, pPlot ->getX_INLINE(), pPlot->getY_INLINE() ) ){
+						iPlotCore = iI;
+					};
+				};
+			}else if ( iWhatToPlot == 1 ){
+				iPlotNormal = -1;
+				for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
+					if ( MiroBelongToNormal( iI, pPlot ->getX_INLINE(), pPlot->getY_INLINE() ) ){
+						iPlotNormal = iI;
+					};
+				};
+			};
+			GC.getGameINLINE().updateColoredPlots();
+		};
+		if ( !bShift ){
+			if ( (iWhatToPlot == 0) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
+				iPlotCore = -1;
+			}else if ( (iWhatToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
+				iPlotNormal = -1;
+			};
+			GC.getGameINLINE().updateColoredPlots();
+		};
+	};
+	// 3MiroMaps: end
 
 	if (bCtrl && (gDLL->getChtLvl() > 0))
 	{

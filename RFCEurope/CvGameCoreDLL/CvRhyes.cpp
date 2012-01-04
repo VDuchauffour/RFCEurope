@@ -221,6 +221,13 @@ int *iModCultureBottom = NULL; // Culture * Top / Bottom
 int *iCultureImmune = NULL; // locks a province so that only the player in exception can put culture in it
 int *iCultureImmuneException = NULL; // the only player that can put culture on the tiles of this province
 
+// Additional Plotting Tools:
+int iPlotCore = -1; // plot the core area of this player
+int iPlotNormal = -1; // plot the normal area of this player
+int iPlotSettlers = -1; // which player to plot for the settlers map
+int iPlotWars = -1; // which player to plot for the wars map
+int iWhatToPlot = 0; // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
+
 int *conditionalVassalage = NULL;
 int provinceFlagToVassalize;
 

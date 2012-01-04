@@ -280,6 +280,14 @@ extern int provinceToColor;
 extern int numRegions; // for map areas, give the number of regions
 extern int *provinceRegionMap; // give the region for each province (province -1 is default reigion 0)
 
+// Additional Plotting Tools:
+extern int iPlotCore; // plot the core area of this player
+extern int iPlotNormal; // plot the normal area of this player
+extern int iPlotSettlers; // which player to plot for the settlers map
+extern int iPlotWars; // which player to plot for the wars map
+extern int iWhatToPlot; // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
+
+
 extern int *conditionalVassalage; // conditions for vassalizing, -1 cannot vassalize, 1 can vassalize, 0 condition
 extern int provinceFlagToVassalize; // we can vassalize if we have overlap (city in province) of provinces of type >= provinceFlagToVassalize
 

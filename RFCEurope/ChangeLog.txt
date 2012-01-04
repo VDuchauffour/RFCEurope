@@ -53,6 +53,7 @@ Changes for Beta 14:
 		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm, Moscow
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
 		- Updated all civs' war and settler maps
+		- You can how Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
 	
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD

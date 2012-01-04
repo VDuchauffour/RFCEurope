@@ -726,6 +726,20 @@ class RFCEBalance:
                 gc.setProvinceTypeParams( con.iProvincePotential, 0, 0, 1, 1 ) # same as outer culture 
                 gc.setProvinceTypeParams( con.iProvinceNatural, 0, 0, 2, 1 ) # double-culture 
                 gc.setProvinceTypeParams( con.iProvinceCore, 0, 0, 2, 1 ) # double-culture 
+                
+                # block foundation of Protestantism except by a Catholic player
+                gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
+                
+                # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
+                gc.setPaceTurnsAfterSpawn( 5 )
+                
+                # set the Visualization parameters, note that those functions can be accessed at any time, not just here
+                # note that if you set Civs for mode 0 and 1 in WB mode, they will stay set until you exit
+                gc.setWhatToPlot( 0 ) # 0 - Core (default), 1 - Normal, 2 - Settler, 3 - Wars
+                #gc.setCivForCore( iByzantium ) # plot the Core of Byzantium (only if setWhatToPlot is set to 0)
+                #gc.setCivForNormal( iByzantium ) # plot the Normal area of Byzantium (only if setWhatToPlot is set to 1)
+                #gc.setCivForSettler( iByzantium ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
+                #gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
 
 		self.postAreas()
                 
@@ -811,13 +825,6 @@ class RFCEBalance:
                 gc.setTimelineTechDateForTech( xml.iMedicine, 458 )
                 gc.setTimelineTechDateForTech( xml.iIndustrialTech, xml.i1800AD )
                 
-                # block foundation of Protestantism except by a Catholic player
-                gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
-                
-                # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
-                gc.setPaceTurnsAfterSpawn( 5 )
-                
-
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE
                 gc.setSizeNPlayers( con.iMapMaxX, con.iMapMaxY, iNumPlayers, iNumTotalPlayers, xml.iNumTechs, xml.iNumBuildingsPlague, xml.iNumReligions )
