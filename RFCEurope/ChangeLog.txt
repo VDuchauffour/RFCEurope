@@ -31,7 +31,7 @@ Changes for Beta 14:
 		- All UHVs, AI and mercenary regions, defensive crusades are updated to the new map and provinces
 		- Many barbarian spawns got separated: they should be hard on the human player, but much easier if the civ is played by the AI
 		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
-		- Kharkov isn't preplaced anymore, instead indy Kursk spawns in 800 AD
+		- Removed Kharkov and Samara as indy cities. New indy spawns: Kursk in 800 AD, Nizhny Novgorod in 1320 AD. Smolensk now spawns earlier, in 960 AD
 		- Cordoban and Kievan province stability updated
 
 	Mercenaries:
@@ -50,7 +50,7 @@ Changes for Beta 14:
 		- Minor changes to the Mediterranean Islands, Lombardy and Tuscany, southern Hungary
 		- More realistic rivers and revised resource placement in most of the mentioned areas
 		- New provinces: Fez, Navarre, La Mancha, Gotland
-		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm
+		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm, Moscow
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
 		- Updated all civs' war and settler maps
 	
