@@ -251,7 +251,7 @@ tCapitals = (
 (75, 53), #tVilnius, Lithuania
 (62, 40), #tWien, Austria
 (79, 22), #tBursa, Turkey
-(88, 56), #tMoscow, Moscow
+(91, 56), #tMoscow, Moscow
 (66, 64), #tStockholm, Sweden
 (49, 52), #tAmsterdam, Dutch
 (56, 27)  #tRome, Pope
@@ -334,7 +334,7 @@ tNewCapitals = (  #for RiseAndFall
 ((75, 53),(75, 53)), #tLithuania: Vilnius
 ((62, 40),(62, 40)), #tAustria: Wien
 ((79, 22),(79, 22)), #tTurkey: Bursa
-((88, 56),(88, 56)), #tMoscow: Moscow
+((91, 56),(91, 56)), #tMoscow: Moscow
 ((66, 64),(66, 64)), #tSweden: Stockholm
 ((49, 52),(49, 52)), #tDutch: Amsterdam
 ((56, 27),(56, 27))  #tPope: Rome
