@@ -471,6 +471,13 @@ public:
 	void setMinorReligionRefugies( int iMRR );
 	int getMinorReligionRefugies();
 
+	// 3Miro: set the plotting parameters
+	void setWhatToPlot( int iToPlot ); // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
+	void setCivForCore( int iCiv );
+	void setCivForNormal( int iCiv );
+	void setCivForWars( int iCiv );
+	void setCivForSettler( int iCiv );
+
 };
 
 #endif	// CyGlobalContext_h

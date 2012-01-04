@@ -1256,3 +1256,19 @@ void CyGlobalContext::setMinorReligionRefugies( int iMRR ){
 int CyGlobalContext::getMinorReligionRefugies(){
 	return minorReligionRefugies;
 };
+
+void CyGlobalContext::setWhatToPlot( int iToPlot ){
+	iWhatToPlot = iToPlot;
+};
+void CyGlobalContext::setCivForCore( int iCiv ){
+	iPlotCore = iCiv;
+};
+void CyGlobalContext::setCivForNormal( int iCiv ){
+	iPlotNormal = iCiv;
+};
+void CyGlobalContext::setCivForWars( int iCiv ){
+	iPlotWars = iCiv;
+};
+void CyGlobalContext::setCivForSettler( int iCiv ){
+	iPlotSettlers = iCiv;
+};

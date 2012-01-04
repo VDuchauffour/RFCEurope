@@ -30,7 +30,7 @@ void CvGame::updateColoredPlots()
 	int iMaxAirRange;
 	int iRange;
 	int iDX, iDY;
-	int iI;
+	int iI, iJ;
 
 	gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_BASE);
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_CITY_RADIUS);
@@ -113,6 +113,99 @@ void CvGame::updateColoredPlots()
 		};
 	};
 	// 3MiroProvince: end
+
+	// 3MiroMaps: colors the maps
+	if ( (iWhatToPlot == 0) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
+		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor());
+		mcolor.a = 0.5f;
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				if ( MiroBelongToCore( iPlotCore, iJ, iI ) ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+	};
+	if ( (iWhatToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
+		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+		mcolor.a = 0.7f;
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				if ( MiroBelongToNormal( iPlotNormal, iJ, iI ) ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+	};
+	if ( (iWhatToPlot == 2) && (iPlotSettlers>-1) && (iPlotSettlers<NUM_MAJOR_PLAYERS) ){
+		NiColorA mcolor7(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
+		mcolor7.a = 0.8f;
+		NiColorA mcolor5(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor());
+		mcolor5.a = 0.8f;
+		NiColorA mcolor4(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLUE")).getColor());
+		mcolor4.a = 0.8f;
+		NiColorA mcolor3(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_CYAN")).getColor());
+		mcolor3.a = 0.8f;
+		NiColorA mcolor2(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+		mcolor2.a = 0.8f;
+		NiColorA mcolor0(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLACK")).getColor());
+		mcolor0.a = 0.8f;
+		int iVal;
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				//if ( MiroBelongToCore( iPlotNormal, iJ, iI ) ){
+				//	gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor, AREA_BORDER_LAYER_RANGED);
+				//};
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 500 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 400 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 300 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 200 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 20 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal < 10 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor0, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+	};
+	if ( (iWhatToPlot == 3) && (iPlotWars>-1) && (iPlotWars<NUM_MAJOR_PLAYERS) ){
+		NiColorA mcolor7(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
+		mcolor7.a = 0.5f;
+		NiColorA mcolor5(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor());
+		mcolor5.a = 0.5f;
+		NiColorA mcolor4(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLUE")).getColor());
+		mcolor4.a = 0.5f;
+		NiColorA mcolor3(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_CYAN")).getColor());
+		mcolor3.a = 0.6f;
+		NiColorA mcolor2(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+		mcolor2.a = 0.7f;
+		int iVal;
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				//if ( MiroBelongToCore( iPlotNormal, iJ, iI ) ){
+				//	gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor, AREA_BORDER_LAYER_RANGED);
+				//};
+				iVal = getWarsMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 8 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 6 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 4 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 2 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, AREA_BORDER_LAYER_RANGED);
+				}else if ( iVal > 0 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+	};
+	// 3MiroMaps: end
 
 	if (pHeadSelectedCity != NULL)
 	{

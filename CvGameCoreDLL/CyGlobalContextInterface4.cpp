@@ -316,5 +316,11 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 		.def("setMinorReligion", &CyGlobalContext::setMinorReligion, "void ( int )")
 		.def("setMinorReligionRefugies", &CyGlobalContext::setMinorReligionRefugies, "void ( int )")
 		.def("getMinorReligionRefugies", &CyGlobalContext::getMinorReligionRefugies, "int( )")
+
+		.def("setWhatToPlot", &CyGlobalContext::setWhatToPlot, "void ( int )")
+		.def("setCivForCore", &CyGlobalContext::setCivForCore, "void ( int )")
+		.def("setCivForNormal", &CyGlobalContext::setCivForNormal, "void ( int )")
+		.def("setCivForWars", &CyGlobalContext::setCivForWars, "void ( int )")
+		.def("setCivForSettler", &CyGlobalContext::setCivForSettler, "void ( int )")
 		;
 }
