@@ -151,54 +151,6 @@ void CvGame::updateColoredPlots()
 		NiColorA mcolor0(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLACK")).getColor());
 		mcolor0.a = 0.9f;
 		int iVal;
-		/*for( iI = 0; iI < EARTH_Y; iI++ ){
-			for( iJ = 0; iJ < EARTH_X; iJ++ ){
-				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
-				if ( iVal > 500 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, AREA_BORDER_LAYER_RANGED);
-				};
-			};
-		};
-		for( iI = 0; iI < EARTH_Y; iI++ ){
-			for( iJ = 0; iJ < EARTH_X; iJ++ ){
-				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
-				if ( iVal > 400 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, AREA_BORDER_LAYER_RANGED);
-				};
-			};
-		};
-		for( iI = 0; iI < EARTH_Y; iI++ ){
-			for( iJ = 0; iJ < EARTH_X; iJ++ ){
-				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
-				if ( iVal > 300 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, AREA_BORDER_LAYER_RANGED);
-				};
-			};
-		};
-		for( iI = 0; iI < EARTH_Y; iI++ ){
-			for( iJ = 0; iJ < EARTH_X; iJ++ ){
-				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
-				if ( iVal > 200 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, AREA_BORDER_LAYER_RANGED);
-				};
-			};
-		};
-		for( iI = 0; iI < EARTH_Y; iI++ ){
-			for( iJ = 0; iJ < EARTH_X; iJ++ ){
-				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
-				if ( iVal > 20 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, AREA_BORDER_LAYER_RANGED);
-				};
-			};
-		};
-		for( iI = 0; iI < EARTH_Y; iI++ ){
-			for( iJ = 0; iJ < EARTH_X; iJ++ ){
-				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
-				if ( iVal < 10 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor0, AREA_BORDER_LAYER_RANGED);
-				};
-			};
-		};*/
 		for( iI = 0; iI < EARTH_Y; iI++ ){
 			for( iJ = 0; iJ < EARTH_X; iJ++ ){
 				//if ( MiroBelongToCore( iPlotNormal, iJ, iI ) ){
@@ -206,17 +158,17 @@ void CvGame::updateColoredPlots()
 				//};
 				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
 				if ( iVal > 500 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 5) );
 				}else if ( iVal > 400 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 6) );
 				}else if ( iVal > 300 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 7) );
 				}else if ( iVal > 200 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 8) );
 				}else if ( iVal > 20 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 9) );
 				}else if ( iVal < 10 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor0, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor0, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 10) );
 				};
 			};
 		};
@@ -240,15 +192,15 @@ void CvGame::updateColoredPlots()
 				//};
 				iVal = getWarsMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
 				if ( iVal > 8 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 12));
 				}else if ( iVal > 6 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 13));
 				}else if ( iVal > 4 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 14));
 				}else if ( iVal > 2 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 15));
 				}else if ( iVal > 0 ){
-					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, AREA_BORDER_LAYER_RANGED);
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, (AreaBorderLayers)(NUM_AREA_BORDER_LAYERS + 16));
 				};
 			};
 		};
