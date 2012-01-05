@@ -1155,7 +1155,7 @@
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
 		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </English>
 		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </French>
