@@ -188,7 +188,7 @@
 		</SpecialistInfo>
 		<SpecialistInfo>
 			<Type>SPECIALIST_GREAT_PRIEST</Type>
-			<Description>TXT_KEY_SPECIALIST_GREAT_PRIEST</Description>
+			<Description>TXT_KEY_SPECIALIST_GREAT_THEOLOGIAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_GREAT_PRIEST_STRATEGY</Strategy>
 			<Help/>

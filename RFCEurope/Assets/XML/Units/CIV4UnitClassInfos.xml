@@ -539,7 +539,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PROPHET</Type>
-			<Description>TXT_KEY_UNIT_GREAT_PROPHET</Description>
+			<Description>TXT_KEY_UNIT_GREAT_THEOLOGIAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
@@ -557,7 +557,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_SCIENTIST</Type>
-			<Description>TXT_KEY_UNIT_GREAT_SCIENTIST</Description>
+			<Description>TXT_KEY_SPECIALIST_GREAT_SCHOLAR</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

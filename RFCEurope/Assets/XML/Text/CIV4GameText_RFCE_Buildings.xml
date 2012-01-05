@@ -1147,13 +1147,22 @@
 		<Russian>with [LINK=literal]%s1_Religion[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
+		<Tag>TXT_KEY_PAGAN_CULTURE_PER_CITY</Tag>
 		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </English>
 		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </French>
 		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </German>
 		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
+		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </English>
+		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </French>
+		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </German>
+		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </Russian>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

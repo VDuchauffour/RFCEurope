@@ -77,6 +77,8 @@ Changes for Beta 14:
 		- Improved DCN for Arabia, France and Norse
 		- Link to the Mercenary-Concepts for Mercenary units
 		- Added Shrine of Uppsala code to XML and C++
+		- Added Pagan Shrine code so the Cultue bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
+		- Changed the Prophet to Theologian
 
 	Art/Sound updates:
 		- New icons for the civilopedia categories

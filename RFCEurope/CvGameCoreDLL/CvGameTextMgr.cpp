@@ -7729,6 +7729,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 		szBuffer.append( gDLL->getText("TXT_KEY_STATE_RELIGION_CULTURE1", kBuilding.getStateReligionCulture() ) );
 		szBuffer.append( gDLL->getText("TXT_KEY_STATE_RELIGION_CULTURE2", GC.getReligionInfo( (ReligionTypes) kBuilding.getReligionType() ).getTextKeyWide() ) );
 	};
+	if ( kBuilding.getPaganCulturePerCity() > 0 ){
+		szBuffer.append(NEWLINE);
+		szBuffer.append( gDLL->getText("TXT_KEY_PAGAN_CULTURE_PER_CITY", kBuilding.getPaganCulturePerCity() ) );
+	};
 	if ( kBuilding.getPaganCulture() > 0 ){
 		szBuffer.append(NEWLINE);
 		szBuffer.append( gDLL->getText("TXT_KEY_PAGAN_CULTURE", kBuilding.getPaganCulture() ) );

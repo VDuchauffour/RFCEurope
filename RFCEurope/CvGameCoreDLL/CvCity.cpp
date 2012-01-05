@@ -413,6 +413,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iDamageEnemy = 0;
 	// 3MiroBuildings: BombardImmune
 	m_iBombardImmuneDefense = 0;
+	m_iPaganCulture = 0;
 
 	m_iID = iID;
 	m_iX = iX;
@@ -3846,8 +3847,11 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			//GC.getGameINLINE().logMsg(" Change in Bombard Immune: %d",GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
 			chnageBombImmuneDefense(iChange * GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
 		};
+		if ( GC.getBuildingInfo(eBuilding).getPaganCulturePerCity() > 0 ){
+			GET_PLAYER(getOwnerINLINE()).setPaganCulture( GET_PLAYER(getOwnerINLINE()).getPaganCulture() + iChange*GC.getBuildingInfo(eBuilding).getPaganCulturePerCity() );
+		};
 		if ( GC.getBuildingInfo(eBuilding).getPaganCulture() > 0 ){
-			GET_PLAYER(getOwnerINLINE()).setPaganCulture( GET_PLAYER(getOwnerINLINE()).getPaganCulture() + iChange*GC.getBuildingInfo(eBuilding).getPaganCulture() );
+			setPaganCulture( getPaganCulture() + iChange * GC.getBuildingInfo(eBuilding).getPaganCulture() );
 		};
 		//3MiroBuildings - END
 
@@ -8319,7 +8323,8 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 		iRate += iUPC;
 	};
 	if ( (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)  ){
-		iRate += 100*GET_PLAYER(getOwnerINLINE()).getPaganCulture(); // 3MiroBuilding: the pagan culture building
+		iRate += 100*GET_PLAYER(getOwnerINLINE()).getPaganCulture(); // 3MiroBuilding: the pagan culture per city building
+		iRate += 100*getPaganCulture(); // 3MiroBuilding: the pagan culture building for this city
 	};
 	// 3Miro: Building Civic combo
 	// this goes to the Commerce per Building, together with the Holy Shrines
@@ -12478,6 +12483,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	// 3MiroBuildings:
 	pStream->Read(&m_iDamageEnemy);
 	pStream->Read(&m_iBombardImmuneDefense);
+	pStream->Read(&m_iPaganCulture);
 
 	pStream->Read(&m_bNeverLost);
 	pStream->Read(&m_bBombarded);
@@ -12723,6 +12729,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	// 3MiroBildings
 	pStream->Write(m_iDamageEnemy);
 	pStream->Write(m_iBombardImmuneDefense);
+	pStream->Write(m_iPaganCulture);
 
 	pStream->Write(m_bNeverLost);
 	pStream->Write(m_bBombarded);
@@ -14536,4 +14543,13 @@ int CvCity::getBombImmuneDefense() const
 
 void CvCity::chnageBombImmuneDefense( int iChange ){
 	m_iBombardImmuneDefense += iChange;
+};
+
+int CvCity::getPaganCulture() const
+{
+	return m_iPaganCulture;
+};
+
+void CvCity::setPaganCulture( int iNewCulture ){
+	m_iPaganCulture = iNewCulture;
 };

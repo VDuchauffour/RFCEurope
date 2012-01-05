@@ -738,7 +738,7 @@ class RFCEBalance:
                 gc.setWhatToPlot( 0 ) # 0 - Core (default), 1 - Normal, 2 - Settler, 3 - Wars
                 #gc.setCivForCore( iByzantium ) # plot the Core of Byzantium (only if setWhatToPlot is set to 0)
                 #gc.setCivForNormal( iByzantium ) # plot the Normal area of Byzantium (only if setWhatToPlot is set to 1)
-                #gc.setCivForSettler( iByzantium ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
+                #gc.setCivForSettler( iFrankia ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
                 #gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
 
 		self.postAreas()

@@ -962,6 +962,10 @@ public:
 	int getBombImmuneDefense() const;
 	void chnageBombImmuneDefense( int iChange );
 
+	// 3MiroBuildings: the Pagan Shrine Pagan bonus
+	int getPaganCulture() const;
+	void setPaganCulture( int iNewCulture );
+
 	int getNumForeignReligions();
 
 protected:
@@ -969,6 +973,7 @@ protected:
 	// 3Miro: damage enemy stuff
 	int m_iDamageEnemy;
 	int m_iBombardImmuneDefense;
+	int m_iPaganCulture;
 
 	int m_iID;
 	int m_iX;

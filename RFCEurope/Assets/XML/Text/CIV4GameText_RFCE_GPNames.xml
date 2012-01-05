@@ -5,6 +5,24 @@
 <!-- -->
 <!-- Game Text - RFCE Great People -->
 <Civ4GameText xmlns="http://www.firaxis.com">
+        <TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_THEOLOGIAN</Tag>
+		<English>Great Theologian</English>
+		<French>Great Theologian</French>
+		<German>Great Theologian</German>
+		<Italian>Great Theologian</Italian>
+		<Spanish>Great Theologian</Spanish>
+		<Russian>Great Theologian</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_THEOLOGIAN</Tag>
+		<English>Great Theologian</English>
+		<French>Great Theologian</French>
+		<German>Great Theologian</German>
+		<Italian>Great Theologian</Italian>
+		<Spanish>Great Theologian</Spanish>
+		<Russian>Great Theologian</Russian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SCHOLAR</Tag>
 		<English>Scholar</English>

@@ -15841,7 +15841,7 @@
 			<DefaultUnitAI>UNITAI_PROPHET</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_GREAT_PROPHET</Description>
+			<Description>TXT_KEY_UNIT_GREAT_THEOLOGIAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_PROPHET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
