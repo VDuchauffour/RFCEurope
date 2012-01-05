@@ -6536,7 +6536,8 @@ m_bVassalUU(false), /* 3Miro: new building abilities*/
 m_bAllowIrrigation(false), /* 3Miro: new building abilities*/
 m_iBombardImmuneDefense(0), /* 3Miro: new building abilities*/
 m_iStateReligionCulture(0), /* 3Miro: new building abilities*/
-m_iPaganCulture(0),
+m_iPaganCulture(0), /* 3Miro: new building abilities*/
+m_iPaganCulturePerCity(0), /* 3Miro: new building abilities*/
 m_iBuildingClassType(NO_BUILDINGCLASS),
 m_iVictoryPrereq(NO_VICTORY),
 m_iFreeStartEra(NO_ERA),
@@ -7888,6 +7889,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iBombardImmuneDefense);
 	stream->Read(&m_iStateReligionCulture);
 	stream->Read(&m_iPaganCulture);
+	stream->Read(&m_iPaganCulturePerCity);
 
 	stream->Read(&m_bTeamShare);
 	stream->Read(&m_bWater);
@@ -8221,6 +8223,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iBombardImmuneDefense);
 	stream->Write(m_iStateReligionCulture);
 	stream->Write(m_iPaganCulture);
+	stream->Write(m_iPaganCulturePerCity);
 
 	stream->Write(m_bTeamShare);
 	stream->Write(m_bWater);
@@ -8488,6 +8491,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iBombardImmuneDefense, "iBombardImmuneDefense");
 	pXML->GetChildXmlValByName(&m_iStateReligionCulture, "iStateReligionCulture");
 	pXML->GetChildXmlValByName(&m_iPaganCulture, "iPaganCulture");
+	pXML->GetChildXmlValByName(&m_iPaganCulturePerCity, "iPaganCulturePerCity");
 	//if ( m_iBombardImmuneDefense > 0 ){
 	//	GC.getGameINLINE().logMsg(" Reding Building BID: %d",m_iBombardImmuneDefense);
 	//};
@@ -8956,6 +8960,10 @@ int CvBuildingInfo::getStateReligionCulture() const
 int CvBuildingInfo::getPaganCulture() const
 {
 	return m_iPaganCulture;
+};
+int CvBuildingInfo::getPaganCulturePerCity() const
+{
+	return m_iPaganCulturePerCity;
 };
 //======================================================================================================
 //					CvSpecialBuildingInfo

@@ -139,18 +139,66 @@ void CvGame::updateColoredPlots()
 	};
 	if ( (iWhatToPlot == 2) && (iPlotSettlers>-1) && (iPlotSettlers<NUM_MAJOR_PLAYERS) ){
 		NiColorA mcolor7(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
-		mcolor7.a = 0.8f;
+		mcolor7.a = 0.9f;
 		NiColorA mcolor5(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor());
-		mcolor5.a = 0.8f;
+		mcolor5.a = 0.9f;
 		NiColorA mcolor4(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLUE")).getColor());
-		mcolor4.a = 0.8f;
+		mcolor4.a = 0.9f;
 		NiColorA mcolor3(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_CYAN")).getColor());
-		mcolor3.a = 0.8f;
+		mcolor3.a = 0.9f;
 		NiColorA mcolor2(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
-		mcolor2.a = 0.8f;
+		mcolor2.a = 0.9f;
 		NiColorA mcolor0(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_BLACK")).getColor());
-		mcolor0.a = 0.8f;
+		mcolor0.a = 0.9f;
 		int iVal;
+		/*for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 500 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor7, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 400 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor5, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 300 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor4, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 200 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor3, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal > 20 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor2, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};
+		for( iI = 0; iI < EARTH_Y; iI++ ){
+			for( iJ = 0; iJ < EARTH_X; iJ++ ){
+				iVal = getSettlersMaps( iPlotSettlers, EARTH_Y - 1 - iI, iJ, NULL );
+				if ( iVal < 10 ){
+					gDLL->getEngineIFace()->fillAreaBorderPlot( iJ, iI, mcolor0, AREA_BORDER_LAYER_RANGED);
+				};
+			};
+		};*/
 		for( iI = 0; iI < EARTH_Y; iI++ ){
 			for( iJ = 0; iJ < EARTH_X; iJ++ ){
 				//if ( MiroBelongToCore( iPlotNormal, iJ, iI ) ){

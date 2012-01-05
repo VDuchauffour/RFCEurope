@@ -4568,6 +4568,12 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				{
 					iTempValue = (kBuilding.getCommerceChange(COMMERCE_CULTURE) * 3);
 					iTempValue += (kBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) * 3);
+					// 3MiroBuildings: the AI for the Pagan Culture
+					if ( GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION ){
+						iTempValue += (kBuilding.getPaganCulture() * 3);
+						iTempValue += (kBuilding.getPaganCulturePerCity() * 3 * GET_PLAYER(getOwnerINLINE()).getNumCities() );
+					};
+					// 3MiroBuildings: end
 					if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
 					{
 						iTempValue += (kBuilding.getCommerceChange(COMMERCE_ESPIONAGE) * 3);
