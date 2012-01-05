@@ -33,6 +33,10 @@ Changes for Beta 14:
 		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
 		- Removed Kharkov and Samara as indy cities. New indy spawns: Kursk in 800 AD, Nizhny Novgorod in 1320 AD. Smolensk now spawns earlier, in 960 AD
 		- Cordoban and Kievan province stability updated
+		- Added Shrine of Uppsala code: +1 culture for all your cities if you don't have a state religion
+		- Added Pagan Shrine code so the Cultue bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
+		- Shrine of Uppsala happiness bonus reduced (now that the new bonus is in place)
+		- Viking 2nd UHV now needs Northumbria not Mercia, so York covers it
 
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
@@ -53,7 +57,7 @@ Changes for Beta 14:
 		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm, Moscow
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
 		- Updated all civs' war and settler maps
-		- You can how Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
+		- You can now Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
 	
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -76,8 +80,6 @@ Changes for Beta 14:
 		- Added a couple more unique names to barbarians
 		- Improved DCN for Arabia, France and Norse
 		- Link to the Mercenary-Concepts for Mercenary units
-		- Added Shrine of Uppsala code to XML and C++
-		- Added Pagan Shrine code so the Cultue bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
 		- Changed the Prophet to Theologian
 
 	Art/Sound updates:
