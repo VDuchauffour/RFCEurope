@@ -645,6 +645,7 @@ iFloodPlains = 4
 iWoodland = 5
 iFallout = 6
 iMarsh = 7
+iPalmForest = 8
 
 iDesert = 3
 iTundra = 4

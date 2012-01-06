@@ -40,7 +40,13 @@ Changes for Beta 14:
 		- Decreased all Muscovian leaders willingness to vassalization
 		- Temples and the Shrine of Uppsala moved to the Religious Art tech, while the "build" culture option moved to the Literature tech
 		- Increased first culture expansion (Fledging) to 20 culture. We may increase it a little more, will see for the next version
-
+		- Added Palm Forest feature as light forest, mostly for aesthatics. 0 bonus yields, improveable and no chopping bonus, 10% defence for units
+		- Updates and fixes to some terrain, feature and improvement dependencies:
+				All tiles which produce at least one food are settleable
+				Now you can build cottages on flood plains, workshops on moorlands as it was intended.
+				Cottages are only buildable where the base tile (sum of terrain and elevation) produces at least one food
+				Increased chopping bonus from dense forest
+				
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
