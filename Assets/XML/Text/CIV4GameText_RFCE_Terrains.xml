@@ -42,6 +42,24 @@
 		<Russian>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FEATURE_PALM_FOREST</Tag>
+		<English>Palm Forest</English>
+		<French>Palm Forest</French>
+		<German>Palm Forest</German>
+		<Italian>Palm Forest</Italian>
+		<Spanish>Palm Forest</Spanish>
+		<Russian>Palm Forest</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_PALM_FOREST_PEDIA</Tag>
+		<English>A savanna, or savannah, is a grassland ecosystem characterized by the trees being sufficiently small or widely spaced so that the canopy does not close. It is often believed that savannas feature widely spaced, scattered trees. However, in many savannas, tree densities are higher and trees are more regularly spaced than in forest. Savannas are also characterized by seasonal water availability, with the majority of rainfall confined to one season. Savannas are associated with several types of biomes. Savannas are frequently in a transitional zone between forest and desert or prairie. Savanna covers 20% of the Earth's land area. The largest area of savanna is in Africa.</English>
+		<French>A savanna, or savannah, is a grassland ecosystem characterized by the trees being sufficiently small or widely spaced so that the canopy does not close. It is often believed that savannas feature widely spaced, scattered trees. However, in many savannas, tree densities are higher and trees are more regularly spaced than in forest. Savannas are also characterized by seasonal water availability, with the majority of rainfall confined to one season. Savannas are associated with several types of biomes. Savannas are frequently in a transitional zone between forest and desert or prairie. Savanna covers 20% of the Earth's land area. The largest area of savanna is in Africa.</French>
+		<German>Als Savanne wird im Allgemeinen ein tropischer oder subtropischer Vegetationstyp definiert, der aus einer geschlossenen Krautschicht und einer eher offenen Geh&#246;lzschicht besteht. Die Abgrenzung zu Steppen, Grasland und Trockenw&#228;ldern wird unterschiedlich gehandhabt. Au&#223;erdem ist Savanne ein Sammelbegriff f&#252;r die Vegetationszone zwischen dem tropischen Regenwald und der W&#252;ste. Savanne beziehungsweise savana/sabana bedeutet so viel wie "weite Ebene". Savannen sind insbesondere in Afrika stark verbreitet, besonders bekannt ist die Serengeti.</German>
+		<Italian>A savanna, or savannah, is a grassland ecosystem characterized by the trees being sufficiently small or widely spaced so that the canopy does not close. It is often believed that savannas feature widely spaced, scattered trees. However, in many savannas, tree densities are higher and trees are more regularly spaced than in forest. Savannas are also characterized by seasonal water availability, with the majority of rainfall confined to one season. Savannas are associated with several types of biomes. Savannas are frequently in a transitional zone between forest and desert or prairie. Savanna covers 20% of the Earth's land area. The largest area of savanna is in Africa.</Italian>
+		<Spanish>A savanna, or savannah, is a grassland ecosystem characterized by the trees being sufficiently small or widely spaced so that the canopy does not close. It is often believed that savannas feature widely spaced, scattered trees. However, in many savannas, tree densities are higher and trees are more regularly spaced than in forest. Savannas are also characterized by seasonal water availability, with the majority of rainfall confined to one season. Savannas are associated with several types of biomes. Savannas are frequently in a transitional zone between forest and desert or prairie. Savanna covers 20% of the Earth's land area. The largest area of savanna is in Africa.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_APIARY</Tag>
 		<English>Apiary</English>
 		<French>Rucher</French>
