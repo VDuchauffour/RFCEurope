@@ -244,6 +244,77 @@
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 		</ArtRef>
+
+	<!-- merijn_v1-->
+	<!-- 1x1 ARAB EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
+		<ArtRef Name="generic:an_arabia.nif::1x1x1_01">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.7</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x1x1_02">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x1x2_01">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.7</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x1x2_02">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x2x2_02">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_arabia.nif::1x1x1_01">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_arabia.nif::1x1x2_01">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+	<!-- 1x1 ARAB LATE MIDDLE AGE/RENAISSANCE -->
+		<ArtRef Name="generic:ren_arabia.nif::1x1x1_01">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x1x1_02">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x1x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x2x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+
 		<!-- LEAF 1x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_1x1">
 			<Scale>1.0</Scale>
@@ -655,6 +726,95 @@
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 		</ArtRef>
+
+	<!-- merijn_v1 -->
+	<!-- 2x1 ARABIAN EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
+		<ArtRef Name="generic:an_arabia.nif::1x1x2_03">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x2x2_01">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x2x2_05">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::2x1x2_02">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::1x2x2_04">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.7</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:an_arabia.nif::2x1x2_04">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.7</Scale>
+		</ArtRef>
+	<!-- 2x1 ARABIAN LATE MIDDLE AGE/RENAISSANCE -->
+		<ArtRef Name="generic:ren_arabia.nif::1x1x2_03">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x2x2_01">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x2x2_04">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.75</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x2x2_05">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::2x1x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::2x1x2_04">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.75</Scale>
+		</ArtRef>
+
 		<!-- LEAF 2x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_2x1">
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -827,6 +987,41 @@
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 		</ArtRef>
+
+	<!-- merijn_v1 -->
+	<!-- 2x2 ARAB EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
+		<ArtRef Name="generic:an_arabia.nif::1x2x2_03">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef> 
+		<ArtRef Name="generic:an_arabia.nif::2x2x2_01">
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+	<!-- 2x2 ARAB LATE MIDDLE AGE/RENAISSANCE -->
+		<ArtRef Name="generic:ren_arabia.nif::1x1x2_01">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>1.5</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::1x2x2_03">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_arabia.nif::2x2x2_01">
+			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+
 		<!-- LEAF 2x2 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_2x2">
 			<Scale>1.0</Scale>

@@ -422,7 +422,7 @@
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_GREEN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ARABIA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -2993,7 +2993,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CORDOBA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -9053,7 +9053,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_OTTOMAN</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_OTTOMAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>

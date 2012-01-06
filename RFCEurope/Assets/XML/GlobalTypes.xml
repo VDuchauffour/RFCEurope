@@ -46,12 +46,12 @@
 		<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 		<!--merijn_v1-->
-	<!--	<ArtStyleType>ARTSTYLE_ENGLAND</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_ENGLAND</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
-		<ArtStyleType>ARTSTYLE_HUNGARY</ArtStyleType> -->
+		<ArtStyleType>ARTSTYLE_HUNGARY</ArtStyleType>
 	</ArtStyleTypes>
 	<CitySizeTypes>
 		<CitySizeType>CITYSIZE_SMALL</CitySizeType>
