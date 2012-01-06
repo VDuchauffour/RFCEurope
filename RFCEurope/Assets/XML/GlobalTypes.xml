@@ -42,13 +42,16 @@
 	</FlavorTypes>
 	<ArtStyleTypes>
 		<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-		<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
-		<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
-		<!-- Rhye -->
-		<ArtStyleType>ARTSTYLE_AFRICAN</ArtStyleType>
+		<!--merijn_v1-->
+	<!--	<ArtStyleType>ARTSTYLE_ENGLAND</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_HUNGARY</ArtStyleType> -->
 	</ArtStyleTypes>
 	<CitySizeTypes>
 		<CitySizeType>CITYSIZE_SMALL</CitySizeType>
