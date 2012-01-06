@@ -14,7 +14,7 @@
 <!-- Good luck! -->
 <Civ4EraInfos xmlns="x-schema:CIV4GameInfoSchema.xml">
 	<EraInfos>
-		<EraInfo>
+		<EraInfo> <!--Early Middle Ages-->
 			<Type>ERA_ANCIENT</Type>
 			<Description>TXT_KEY_ERA_ANCIENT</Description>
 			<Strategy>TXT_KEY_ERA_ANCIENT_STRATEGY</Strategy>
@@ -67,7 +67,7 @@
 			<AudioUnitVictoryScript>AS2D_VICTORY_EARLY</AudioUnitVictoryScript>
 			<AudioUnitDefeatScript>AS2D_LOSS_EARLY</AudioUnitDefeatScript>
 		</EraInfo>
-		<EraInfo>
+		<EraInfo> <!--High Middle Age-->
 			<Type>ERA_CLASSICAL</Type>
 			<Description>TXT_KEY_ERA_CLASSICAL</Description>
 			<Strategy>TXT_KEY_ERA_CLASSICAL_STRATEGY</Strategy>
@@ -135,7 +135,7 @@
 			<AudioUnitVictoryScript>AS2D_VICTORY_MIDDLE</AudioUnitVictoryScript>
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 		</EraInfo>
-		<EraInfo>
+		<EraInfo> <!--Late Middle Age-->
 			<Type>ERA_MEDIEVAL</Type>
 			<Description>TXT_KEY_ERA_MEDIEVAL</Description>
 			<Strategy>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Strategy>
@@ -204,7 +204,7 @@
 			<AudioUnitVictoryScript>AS2D_VICTORY_MIDDLE</AudioUnitVictoryScript>
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 		</EraInfo>
-		<EraInfo>
+		<EraInfo> <!--Renaissance-->
 			<Type>ERA_RENAISSANCE</Type>
 			<Description>TXT_KEY_ERA_RENAISSANCE</Description>
 			<Strategy>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Strategy>
@@ -272,7 +272,7 @@
 			<AudioUnitVictoryScript>AS2D_VICTORY_MIDDLE</AudioUnitVictoryScript>
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 		</EraInfo>
-		<EraInfo>
+		<EraInfo> <!--Industrial-->
 			<Type>ERA_INDUSTRIAL</Type>
 			<Description>TXT_KEY_ERA_INDUSTRIAL</Description>
 			<Strategy>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Strategy>
@@ -336,7 +336,7 @@
 			<AudioUnitVictoryScript>AS2D_VICTORY_MIDDLE</AudioUnitVictoryScript>
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 		</EraInfo>
-		<EraInfo>
+		<EraInfo> <!--Not in use-->
 			<Type>ERA_MODERN</Type>
 			<Description>TXT_KEY_ERA_MODERN</Description>
 			<Strategy>TXT_KEY_ERA_MODERN_STRATEGY</Strategy>
@@ -398,7 +398,7 @@
 			<AudioUnitVictoryScript>AS2D_VICTORY_LATE</AudioUnitVictoryScript>
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 		</EraInfo>
-		<EraInfo>
+		<EraInfo> <!--Not in use-->
 			<Type>ERA_FUTURE</Type>
 			<Description>TXT_KEY_ERA_FUTURE</Description>
 			<Strategy>TXT_KEY_ERA_FUTURE_STRATEGY</Strategy>
