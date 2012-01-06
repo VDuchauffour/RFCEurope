@@ -3935,7 +3935,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
-			<iVassalPowerModifier>-20</iVassalPowerModifier>
+			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>NONE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>
@@ -16886,7 +16886,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
-			<iVassalPowerModifier>0</iVassalPowerModifier>
+			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_BUREAUCRACY</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>
@@ -22426,7 +22426,7 @@
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
-			<iVassalPowerModifier>0</iVassalPowerModifier>
+			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_BUREAUCRACY</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>

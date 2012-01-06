@@ -40,7 +40,7 @@
 			<SpeedThresholds>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
-					<iThreshold>10</iThreshold>
+					<iThreshold>20</iThreshold>
 				</SpeedThreshold>
 			</SpeedThresholds>
 			<!-- Rhye - end -->

@@ -37,6 +37,9 @@ Changes for Beta 14:
 		- Added Pagan Shrine code so the Cultue bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
 		- Shrine of Uppsala happiness bonus reduced (now that the new bonus is in place)
 		- Viking 2nd UHV now needs Northumbria not Mercia, so York covers it
+		- Decreased all Muscovian leaders willingness to vassalization
+		- Temples and the Shrine of Uppsala moved to the Religious Art tech, while the "build" culture option moved to the Literature tech
+		- Increased first culture expansion (Fledging) to 20 culture. We may increase it a little more, will see for the next version
 
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)

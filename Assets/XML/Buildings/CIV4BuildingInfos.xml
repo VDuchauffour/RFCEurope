@@ -18588,7 +18588,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
-			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
+			<PrereqTech>TECH_ART</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
