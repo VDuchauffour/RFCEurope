@@ -223,58 +223,6 @@
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
-
-		<ArtRef Name="generic:mod_eu.nif::1x1_01">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x1_02">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x1_03">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x1_04">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x1_05">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<!-- Asian -->
-		<ArtRef Name="generic:asian.nif::1x1_01">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x1_02">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x1_03">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x1_04">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x1_05">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
 		<!-- Roman -->
 		<ArtRef Name="generic:greco_roman.nif::1x1_01">
 			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
@@ -658,124 +606,6 @@
 			<Scale>1.0</Scale>
 		</ArtRef>
 
-		<!-- MODERN -->
-		<ArtRef Name="generic:mod_eu.nif::1x2_01">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x2_02">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x2_03">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::1x2_04">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::2x1_01">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::2x1_02">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::2x1_03">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::park_2x1">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">fCurvatureBias:68</Attribute>
-			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::park_2x1">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Attribute Class="Scalar">fCurvatureBias:68</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
-			<Rotate>90</Rotate>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::park_2x1">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Attribute Class="Scalar">fCurvatureBias:68</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
-			<Rotate>90</Rotate>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<!-- Asian -->
-		<ArtRef Name="generic:asian.nif::2x1_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::2x1_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::2x1_03">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::2x1_04">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x2_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x2_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x2_03">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x2_04">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
 		<!-- Roman -->
 		<ArtRef Name="generic:greco_roman.nif::2x1_01">
 			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
@@ -865,31 +695,6 @@
 			<!-- Rhye -->
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-		</ArtRef>
-		<!-- Asian -->
-		<ArtRef Name="generic:asian.nif::3x1_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::3x1_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x3_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::1x3_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
 		</ArtRef>
 		<!-- Roman -->
 		<ArtRef Name="generic:greco_roman.nif::3x1_01">
@@ -1005,48 +810,6 @@
 			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.0</Scale>
-		</ArtRef>
-		<!-- MODERN -->
-		<ArtRef Name="generic:mod_eu.nif::2x2_01">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::2x2_02">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.3</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::2x2_03">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:mod_eu.nif::2x2_04">
-			<Attribute Class="Era">ERA_MODERN,ERA_FUTURE</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
-			<Scale>1.0</Scale>
-		</ArtRef>
-		<!-- Asian -->
-		<ArtRef Name="generic:asian.nif::2x2_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::2x2_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::2x2_03">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:asian.nif::2x2_04">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ASIAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 		</ArtRef>
 		<!-- Roman -->
 		<ArtRef Name="generic:greco_roman.nif::2x2_01">
@@ -1193,7 +956,7 @@
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_LIGHTHOUSE">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Lighthouse/LighthouseModern.nif</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">bNoWaterTest:1</Attribute>
 			<!-- this bypasses water testing -->
 			<Attribute Class="Scalar">szSpecialLayout:Water</Attribute>
@@ -1226,7 +989,7 @@
 		</ArtRef>
 		<ArtRef Name="building:LSYSTEM_HARBOR">
 			<Attribute Class="Scalar">szNIF:Art/Structures/Buildings/Harbor/HarborModern.nif</Attribute>
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="Scalar">bNoWaterTest:1</Attribute>
 			<!-- this bypasses water testing -->
 			<Attribute Class="Scalar">szSpecialLayout:Coast</Attribute>
@@ -1480,7 +1243,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::4x2">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_4x2">
@@ -1558,7 +1321,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::3x2">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_3x2">
@@ -1614,7 +1377,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::4x1">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_4x1">
@@ -1677,7 +1440,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::3x1">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_3x1">
@@ -1694,7 +1457,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::3x1">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<!-- 2x2 node ***************************** -->
@@ -1709,7 +1472,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::2x2">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_2x2">
@@ -1729,7 +1492,7 @@
 		</To>
 	</LProduction>
 	<LProduction From="Node_2x2">
-		<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_MODERN,ERA_FUTURE</Attribute>
+		<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
 		<To Name="Node_2x1">
 			<Rotate>90</Rotate>
 			<Translate>-0.5,0</Translate>
@@ -1772,7 +1535,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::2x1">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_2x1">
@@ -1786,11 +1549,11 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::2x1">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<LProduction From="Node_2x1">
-		<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+		<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		<To Name="Leaf_2x1">
 			<Translate>0,0</Translate>
 		</To>
@@ -1801,7 +1564,7 @@
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 		</ArtRef>
 		<ArtRef Name="decoration:mod_city_lot.nif::2x1">
-			<Attribute Class="Era">ERA_INDUSTRIAL,ERA_MODERN,ERA_FUTURE</Attribute>
+			<Attribute Class="Era">ERA_INDUSTRIAL</Attribute>
 		</ArtRef>
 	</LProduction>
 	<!-- AUTOGENERATED NODES FOLLOW -->
