@@ -887,7 +887,7 @@ class RiseAndFall:
                 # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
                 #        if in 1300AD Dublin is still Barbarian, it will flip to England
                 if ( iGameTurn == xml.i1300AD and utils.getHumanID() != iEngland and iPlayer == iEngland and pEngland.isAlive() ):
-                        pPlot = gc.getMap().plot( 36, 58 )
+                        pPlot = gc.getMap().plot( 32, 58 )
                         if ( pPlot.isCity() ):
                                 if ( pPlot.getPlotCity().getOwner() == con.iBarbarian ):
                                         pDublin = pPlot.getPlotCity()
@@ -2168,8 +2168,8 @@ class RiseAndFall:
                                 utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
                                 utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
                 if (iCiv == iKiev):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
                 if (iCiv == iHungary):

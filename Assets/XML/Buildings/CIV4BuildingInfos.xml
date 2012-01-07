@@ -21840,7 +21840,7 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MONASTICISM</PrereqTech>
+				<PrereqTech>TECH_CHIVALRY</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -22028,7 +22028,7 @@
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_CLASSICAL_KNOWLEDGE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_MONASTICISM</PrereqTech>
+				<PrereqTech>TECH_CHIVALRY</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>

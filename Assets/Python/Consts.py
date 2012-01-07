@@ -383,7 +383,7 @@ tCoreAreasBR = (
 (59,36),   #Venice
 (48,42),   #Burgundy
 (58,50),   #Germany
-(88,50),   #Kiev
+(88,50),   #Kiev 3Miro expanded this from 88 to 90 to get Kursk (moved back)
 (73,39),   #Hungary
 (32,36),   #Spain
 (70,50),   #Poland
@@ -415,7 +415,7 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 (), #Spain
 ((63,46),(63,47),(63,48),(63,49),(63,50)), #Poland
 (), #Genoa
-((37,47),(38,47),(39,47),(40,47),(41,47),(44,48),(44,49),(44,50),(44,51)), #England
+((37,47),(38,47),(39,47),(40,47),(41,47)), #England: 3Miro removed: (44,48),(44,49),(44,50),(44,51)
 ((25,27),(25,28),(25,29),(25,30),(25,31)), #Portugal
 (), #Lithuania
 ((60,36),(61,36),(62,36)), #Austria
