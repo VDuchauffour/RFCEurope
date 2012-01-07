@@ -14,7 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for Beta 14:
 (to-be-released: around mid-December, 2011)
-		
+
 	General changes and UHV updates:
 		- Add a stability guide in the civilopedia (Beware, the guide is outdated at some points)
 		- Vinland is buildable until 1250 (but the UHV is unchanged), adds 1 Timber and 1 Wine for now
@@ -30,23 +30,22 @@ Changes for Beta 14:
 				Also, there should be a lot more Jews left in late game
 		- All UHVs, AI and mercenary regions, defensive crusades are updated to the new map and provinces
 		- Many barbarian spawns got separated: they should be hard on the human player, but much easier if the civ is played by the AI
-		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
-		- Removed Kharkov and Samara as indy cities. New indy spawns: Kursk in 800 AD, Nizhny Novgorod in 1320 AD. Smolensk now spawns earlier, in 960 AD
+		- Removed Kharkov, Samara and Bulgar as indy cities. New indy spawns: Kursk in 800 AD, Nizhny Novgorod in 1320 AD. Smolensk now spawns earlier, in 960 AD
 		- Cordoban and Kievan province stability updated
 		- Added Shrine of Uppsala code: +1 culture for all your cities if you don't have a state religion
-		- Added Pagan Shrine code so the Cultue bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
+		- Added Pagan Shrine code so the Culture bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
 		- Shrine of Uppsala happiness bonus reduced (now that the new bonus is in place)
 		- Viking 2nd UHV now needs Northumbria not Mercia, so York covers it
-		- Decreased all Muscovian leaders willingness to vassalization
 		- Temples and the Shrine of Uppsala moved to the Religious Art tech, while the "build" culture option moved to the Literature tech
 		- Increased first culture expansion (Fledging) to 20 culture. We may increase it a little more, will see for the next version
-		- Added Palm Forest feature as light forest, mostly for aesthatics. 0 bonus yields, improveable and no chopping bonus, 10% defence for units
+		- Added Palm Forest feature as light forest, mostly for aesthatics. No extra yields for the tile, stays when improved (so no chopping), 10% defence for units
 		- Updates and fixes to some terrain, feature and improvement dependencies:
 				All tiles which produce at least one food are settleable
 				Now you can build cottages on flood plains, workshops on moorlands as it was intended.
 				Cottages are only buildable where the base tile (sum of terrain and elevation) produces at least one food
 				Increased chopping bonus from dense forest
-				
+				May have to set dummy chopping values for Palm Forest with a few improvements - it's possible that it doesn't look good with all of them
+
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
@@ -56,7 +55,7 @@ Changes for Beta 14:
 		- Swiss Pikeman aviable in a much bigger area, Almogavar aviable in Greece (Catalan Company)
 		- New art for Don Cossack, Huscarl
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
-	
+
 	Huge map overhaul:
 		- Totally new Iberia, North Africa, Britain, Atlantic Islands, Scandinavia
 		- Major changes to France, the Austrian/Venetian/Dalmatian area, southern Bulgaria, Finland
@@ -67,7 +66,8 @@ Changes for Beta 14:
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
 		- Updated all civs' war and settler maps
 		- You can now Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
-	
+		- Added Caliom's World Builder tool to the main version. Mostly for the modders, but also handy to check settler/war map or spawn/respawn area visualizations
+
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
 		- Removed Relic resource from the map (was under Jerusalem)
@@ -107,6 +107,8 @@ Changes for Beta 14:
 		- Merc Upkeep cost also depends on the hammer cost of the Unit
 		- Brewery replaced by Tavern with +1 happy from wine and barley, also small +5% gold bonus
 		- Inn has +5% gold bonus independent from wine (Note: Inn should be renamed to something to represent the Secret Societies like Masons and Assasins)
+		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
+		- Decreased all Muscovian leaders willingness to vassalization
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
@@ -153,7 +155,7 @@ Changes for Beta 13:
 		- Graphics light version:
 			- In the RFCEurope\Assets\XML\Civilizations and RFCEurope\Assets\XML\Art folders, there are two files that end with .xml_light
 			- If those two files replace the corresponding .xml files, then the game will use only BtS leaderhead graphics and the mod will be much lighter
-			
+
 	General changes and UHV updates:
 		- Madeira added to first Portuguese UHV
 		- Viking UHV requires 50 Viking Points

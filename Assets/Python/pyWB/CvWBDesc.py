@@ -12,6 +12,8 @@ import os
 import sys
 import CvUtil
 from array import *
+# Caliom
+import RFCEMapUtil
 
 # globals
 gc = CyGlobalContext()
@@ -1154,7 +1156,48 @@ class CvPlotDesc:
 	def write(self, f, plot):
 		"save plot desc to a file"
 		f.write("BeginPlot\n")
-		f.write("\tx=%d,y=%d\n" %(plot.getX(), plot.getY()))	
+		
+		#Caliom: shift map 
+		iMapWidth = 100
+		iMapHeight = 73
+		iShiftX = 0
+		iShiftY = 0
+		alpha = 10
+		
+		# bOverflow = false
+		# c = math.cos(alpha)
+		# s = math.sin(alpha)
+		
+		x = plot.getX()
+		y = plot.getY()
+		
+		# #Rotate
+		# x = c*x + s*y
+		# y = -s+x + c*y
+		
+		
+		#Transpose
+		x = x + iShiftX
+		y = y + iShiftY
+		
+		#Overflow
+		if x < 0:
+			x=x + iMapWidth
+			bOverflow = true
+		elif x >= iMapWidth:
+			x=x - iMapWidth
+			bOverflow = true
+		if y < 0:
+			y=y + iMapHeight
+			bOverflow = true
+		elif y >= iMapHeight:
+			y=y - iMapHeight
+			bOverflow = true
+		
+		
+		
+		f.write("\tx=%d,y=%d\n" %(x, y))	
+		#f.write("\tx=%d,y=%d\n" %(plot.getX(), plot.getY()))	
 		
 		# scriptData
 		if (plot.getScriptData() != ""):
@@ -1522,6 +1565,8 @@ class CvWBDesc:
 		fileName,ext = os.path.splitext(fileName)
 		CvUtil.pyPrint( 'saveDesc:%s, curDir:%s' %(fileName,os.getcwd()) )
 
+		self.writeRFCEMaps(fileName) #Caliom
+		
 		f = file(self.getDescFileName(fileName), "w")		# open text file		
 		f.write("Version=%d\n" %(self.getVersion(),))		
 		self.gameDesc.write(f)	# write game info
@@ -1831,3 +1876,7 @@ class CvWBDesc:
 		print ("WB read done\n")
 		return 0
 		
+#Caliom
+	def writeRFCEMaps(self, sFileName):
+		sFileName = sFileName + "RFCEMaps.py"
+		RFCEMapUtil.MapExporter.saveTo(sFileName)
