@@ -126,44 +126,11 @@
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<!-- Rhye - start -->
-		<!-- ORIENTAL -->
-		<ArtRef Name="generic:Oriental.nif::1x1x1_01">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x1x1_02">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x1x2_01">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x1x2_02">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x1x2_03">
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<!-- Rhye - end -->
 		<!-- RENAISSANCE -->
 		<ArtRef Name="generic:ren_eu.nif::park_1x1">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 			<!-- Rhye -->
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Attribute Class="Scalar">fCurvatureBias:24</Attribute>
@@ -172,28 +139,28 @@
 		<ArtRef Name="generic:ren_eu.nif::1x1_01">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 			<!-- Rhye -->
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.4</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_eu.nif::1x1_02">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 			<!-- Rhye -->
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.4</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_eu.nif::1x1_03">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 			<!-- Rhye -->
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.4</Scale>
 		</ArtRef>
 		<ArtRef Name="generic:ren_eu.nif::1x1_04">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
 			<!-- Rhye -->
-			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.4</Scale>
 		</ArtRef>
@@ -543,6 +510,77 @@
 			<Scale>0.8</Scale>
 		</ArtRef>
 
+	<!-- 1x1 RUSSIAN EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:clas_norsca.nif::1x1x1_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x1x1_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x1x2_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x1x2_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x1x2_03">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+	<!-- 1x1 RUSSIAN MEDIEVAL/RENAISSANCE -->
+		<ArtRef Name="generic:med_russia.nif::1x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::1x1_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::1x1_03">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::1x1_05">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+<!--			<Attribute Class="Rotation">0,180</Attribute> -->
+			<Rotate>90</Rotate>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::1x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.4</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::1x1_03">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+
 		<!-- LEAF 1x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_1x1">
 			<Scale>1.0</Scale>
@@ -691,72 +729,6 @@
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<!-- Rhye - start -->
-		<!-- ORIENTAL -->
-		<ArtRef Name="generic:Oriental.nif::1x2x2_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x2x2_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x2x2_03">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x2x2_04">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::1x2x2_05">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::2x1x2_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::2x1x2_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::2x1x2_03">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<ArtRef Name="generic:Oriental.nif::2x1x2_04">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_MIDDLE_EAST</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Scale>0.9</Scale>
-		</ArtRef>
-		<!-- Rhye - end -->
 		<!-- RENAISSANCE -->
 		<ArtRef Name="generic:ren_eu.nif::park_2x1">
 			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
@@ -1386,6 +1358,156 @@
 			<Scale>0.8</Scale>
 		</ArtRef>
 
+	<!-- 2x1 RUSSIAN EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:clas_norsca.nif::1x2x2_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x2x2_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x2x2_03">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x2x2_04">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::1x2x2_05">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::2x1x2_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::2x1x2_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::2x1x2_03">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::2x1x2_04">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+	<!-- 2x1 RUSSIAN HIGH MIDDLE AGE/LATE MIDDLE AGE/RENAISSANCE -->
+		<ArtRef Name="generic:med_russia.nif::1x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::1x2_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.80</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::1x2_3">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::2x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::2x1_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::2x1_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::2x1_04">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::1x2_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::1x2_3">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::1x1_05">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::2x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ind_russia.nif::2x1_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+
 		<!-- LEAF 2x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_2x1">
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -1681,6 +1803,45 @@
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.9</Scale>
+		</ArtRef>
+
+	<!-- 2x2 RUSSIAN EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:clas_norsca.nif::2x2x2_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:clas_norsca.nif::2x2x2_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+	<!-- 2x2 RUSSIAN MEDIEVAL/RENAISSANCE -->
+		<ArtRef Name="generic:med_russia.nif::2x2x3_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::2x2x4_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_russia.nif::2x2x4_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef> 
+		<ArtRef Name="generic:ind_russia.nif::2x2x4_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>1.1</Scale>
 		</ArtRef>
 
 		<!-- LEAF 2x2 BUILDINGS -->
