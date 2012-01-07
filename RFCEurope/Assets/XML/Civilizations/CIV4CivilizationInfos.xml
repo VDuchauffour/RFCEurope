@@ -6936,7 +6936,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NORSE</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_NORSE</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -8637,7 +8637,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_CYAN_AND_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SWEDEN</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_NORSE</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
