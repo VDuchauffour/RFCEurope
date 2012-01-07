@@ -42,7 +42,6 @@
 	</FlavorTypes>
 	<ArtStyleTypes>
 		<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-		<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 		<!--merijn_v1-->
