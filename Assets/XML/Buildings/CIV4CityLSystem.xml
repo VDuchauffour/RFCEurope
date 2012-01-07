@@ -199,6 +199,38 @@
 		</ArtRef>
 
 	<!-- merijn_v1-->
+	<!-- 1x1 GENERIC ANCIENT -->
+		<ArtRef Name="generic:an_eu.nif::1x1_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_05">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_06">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_07">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_09">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+
 	<!-- 1x1 ARAB EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
 		<ArtRef Name="generic:an_arabia.nif::1x1x1_01">
 			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
@@ -317,6 +349,115 @@
 		<ArtRef Name="generic:ren_mediterranean.nif::1x1x2_03">
 			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+
+	<!-- 1x1 IBERIAN HIGH MEDIEVAL -->
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_02">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_03">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_04">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_05">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_06">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_07">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_08">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::1x1_09">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+	<!-- 1x1 IBERIAN LATE MEDIEVAL -->
+		<ArtRef Name="generic:med_Iberia.nif::1x1x1_01">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x1x1_02">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x1x2_01">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x1x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x1x2_03">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+	<!-- 1x1 IBERIAN LATE MEDIEVAL AGE/RENAISSANCE -->
+		<ArtRef Name="generic:ren_mediterranean.nif::1x1x1_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x1x1_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x1x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x1x2_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>	
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x1x2_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
@@ -684,6 +825,32 @@
 		</ArtRef>
 
 	<!-- merijn_v1 -->
+	<!-- 2x1 GENERIC EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:an_eu.nif::1x2_01">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::2x1_01">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::2x1_02">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::2x1_03">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+
 	<!-- 2x1 ARABIAN EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
 		<ArtRef Name="generic:an_arabia.nif::1x1x2_03">
 			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
@@ -885,6 +1052,172 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 
+	<!-- 2x1 IBERIAN HIGH MIDDLE AGE -->
+		<ArtRef Name="generic:clas_Iberia.nif::1x2_01">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+<!--		<ArtRef Name="generic:clas_Iberia.nif::1x2_02">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef> -->
+		<ArtRef Name="generic:clas_Iberia.nif::2x1_01">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::2x1_02">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::2x1_03">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::2x1_04">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+	<!-- 2x1 IBERIAN LATE MIDDLE AGE -->
+		<ArtRef Name="generic:med_Iberia.nif::1x2x2_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x2x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x2x2_03">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x2x2_04">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::1x2x2_05">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::2x1x2_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::2x1x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::2x1x2_03">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_Iberia.nif::2x1x2_04">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+	<!-- 2x1 IBERIA RENAISSANCE -->
+		<ArtRef Name="generic:ren_mediterranean.nif::1x2x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x2x2_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x2x2_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x2x2_04">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::1x2x2_05">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::2x1x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>1.2</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::2x1x2_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::2x1x2_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.7</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::2x1x2_04">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
+
 		<!-- LEAF 2x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_2x1">
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -926,32 +1259,22 @@
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPEAN,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
-		<!-- Roman -->
-		<ArtRef Name="generic:greco_roman.nif::3x1_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:greco_roman.nif::3x1_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">0,180</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:greco_roman.nif::1x3_01">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
-		<ArtRef Name="generic:greco_roman.nif::1x3_02">
-			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
-			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
-			<Attribute Class="Rotation">90,270</Attribute>
-		</ArtRef>
+
 	<!-- merijn_v1 -->
+	<!-- 3x1 GENERIC EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:an_eu.nif::3x1_01">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x3_01">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+
 	<!-- 3x1 GRECO_ROMAN EARLY MIDDLE AGES/HIGH MIDDLE AGES -->
 		<ArtRef Name="generic:greco_roman.nif::3x1_01">
 			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
@@ -976,6 +1299,20 @@
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
+		</ArtRef>
+
+	<!-- 3x1 IBERIAN HIGH MIDDLE AGE -->
+		<ArtRef Name="generic:clas_Iberia.nif::1x3_01">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:clas_Iberia.nif::3x1_01">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 
 		<!-- LEAF 3x1 BUILDINGS -->
@@ -1070,6 +1407,20 @@
 		</ArtRef>
 
 	<!-- merijn_v1 -->
+	<!-- 2x2 GENERIC EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
+<!--		<ArtRef Name="generic:an_eu.nif::1x2_02">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,!ARTSTYLE_EUROPE,ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef> -->
+		<ArtRef Name="generic:an_eu.nif::2x1_04">
+<!--			<Attribute Class="Rotation">0,180</Attribute> -->
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA,ARTSTYLE_NORSE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+
 	<!-- 2x2 ARAB EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
 		<ArtRef Name="generic:an_arabia.nif::1x2x2_03">
 			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
@@ -1128,6 +1479,39 @@
 		<ArtRef Name="generic:ren_mediterranean.nif::2x2x2_02">
 			<Attribute Class="Era">ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>0.7</Scale>
+		</ArtRef>
+
+	<!-- 2x2 IBERIAN HIGH MIDDLE AGE -->
+		<ArtRef Name="generic:clas_Iberia.nif::2x2_01">
+			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+	<!-- 2x2 IBERIAN LATE MIDDLE AGE -->
+		<ArtRef Name="generic:med_Iberia.nif::2x2x2_01">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef> 
+		<ArtRef Name="generic:med_Iberia.nif::2x2x2_02">
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+	<!-- 2x2 IBERIAN RENAISSANCE -->
+		<ArtRef Name="generic:ren_mediterranean.nif::2x2x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
+			<Scale>1.0</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_mediterranean.nif::2x2x2_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:1</Attribute>
 			<Scale>0.7</Scale>
 		</ArtRef>
