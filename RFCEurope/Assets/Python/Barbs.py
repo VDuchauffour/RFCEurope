@@ -57,7 +57,6 @@ lRhodes = [79,12,0,0] # 500 AD
 lPalermo = [55,19,2,0] # 508 AD
 #lZaragoza = [36,29,45,0] # 680 AD
 lToledo = [30,27,45,0] #680 AD
-lBulgar = [97,60,45,0] #680 AD
 #lLeon = [27,32,50,0] # 700 AD
 #lBurgos = [30,32,50,0] # 700 AD
 lValencia = [36,25,50,0] #700 AD
@@ -407,7 +406,6 @@ class Barbs:
                         self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 ) 
                         # 680AD
                         self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
-                        self.foundCity(iIndependent4, lBulgar, "Bulgar", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1 )
                 if ( iGameTurn > xml.i680AD and iGameTurn < xml.i900AD ):        
                         # 700AD
                         self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )

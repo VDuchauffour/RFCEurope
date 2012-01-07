@@ -428,7 +428,7 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 
 #normal areas
 
-tNormalAreasTL = ( #These areas are typically used for resurrection. Also used in stability and (maybe) for victory conditions
+tNormalAreasTL = ( #These areas are typically used for resurrection.
 (66,14),   #Byzantium
 (35,34),   #Franks
 (48,1),    #Arabs
