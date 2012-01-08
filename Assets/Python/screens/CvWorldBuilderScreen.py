@@ -15,6 +15,7 @@ import Consts
 
 #Caliom globals
 CITY_NAME_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
+RESTORE_LANDMARKS_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
 MapManager = RFCEMapUtil.MapManager
 MapVisualizer = RFCEMapUtil.MapVisualizer
 
@@ -120,17 +121,16 @@ class CvWorldBuilderScreen:
 		self.revealMode = RevealMode(self) #Caliom
 		self.landmarkMode = LandmarkMode(self) #Caliom
 		self.currentMode = None #Caliom
-		self.altTabFixFlag = False #Caliom
 		return
 	
 	def interfaceScreen (self):
 		# This is the main interface screen, create it as such
 		
-		if(self.altTabFixFlag): #Caliom
+		#Caliom begin
+		if(self.currentMode != None):
+			self.currentMode.activate()
 			return
-		else:
-			self.altTabFixFlag == True
-		
+		#Caliom end
 		
 		self.initVars()
 		screen = CyGInterfaceScreen( "WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN )
@@ -201,10 +201,11 @@ class CvWorldBuilderScreen:
 		return 0
 
 	def killScreen(self):
-		self.altTabFixFlag = False #Caliom
-		
+		#Caliom begin
 		if(self.currentMode != None):
 			self.currentMode.deactivate()
+			self.currentMode = None
+		#Caliom end
 		
 		if (self.m_tabCtrlEdit != 0):
 			self.m_tabCtrlEdit.destroy()
@@ -2367,6 +2368,13 @@ class CvWorldBuilderScreen:
 		return
 
 	def revealAll(self, bReveal):
+		#Caliom begin
+		# The reveal stuff is now handled in the reveal mode. Only the revealall/unrevealall functionality is handled in the old code.
+		# But the old code does not know if the player was changed in reveal mode. So i have to fetch the player/team here
+		self.m_iCurrentPlayer = self.revealMode.iPlayer
+		self.m_iCurrentTeam = gc.getPlayer(self.revealMode.iPlayer).getTeam()
+		#Caliom end
+		
 		for i in range (CyMap().getGridWidth()):
 			for j in range (CyMap().getGridHeight()):
 				pPlot = CyMap().plot(i,j)
@@ -2720,85 +2728,6 @@ class CvWorldBuilderScreen:
 		self.currentMode = None #Caliom
 		return
 
-#Caliom WB: some functions
-	def clearRevealMode(self):
-		MapVisualizer.hideSettlerMap()
-		MapVisualizer.hideWarMap()
-		MapVisualizer.hideProvinces()
-		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		
-	def clearLandmarkMode(self):
-		if(self.m_iCurrentLandmarkType == iCityNames):
-			if(not self.m_iCurrentPlayer == gc.getBARBARIAN_PLAYER()):
-				self.setCityNames()
-			MapVisualizer.hideCityNames()
-		elif(self.m_iCurrentLandmarkType == iProvinceNames):
-			MapVisualizer.hideProvinceNames()
-		elif(self.m_iCurrentLandmarkType == iProvinceIds):
-			self.setProvinceIds()
-			MapVisualizer.hideProvinceIds()
-		
-	def showLandmarks(self):
-		MapVisualizer.setPlayer(self.m_iCurrentPlayer)
-		if(self.m_iCurrentLandmarkType == iCityNames):
-			MapVisualizer.showCityNames()
-		elif(self.m_iCurrentLandmarkType == iProvinceNames):
-			MapVisualizer.showProvinceNames()
-		elif(self.m_iCurrentLandmarkType == iProvinceIds):
-			MapVisualizer.showProvinceIds()
-		
-	def showCityNames(self):
-		MapVisualizer.setPlayer(self.m_iCurrentPlayer)
-		MapVisualizer.showCityNames()
-	
-	def hideCityNames(self):
-		MapVisualizer.hideCityNames()
-					
-	def removeCityName(self):
-		MapManager.removeCityName(self.m_iCurrentPlayer,self.m_pCurrentPlot)
-	
-	def setProvinceIds(self):
-		iNumSigns = CyEngine().getNumSigns()
-		RFCEMapUtil.showMessage("Updating: %d provinces.." %iNumSigns)
-		for i in range(iNumSigns):
-			sign = CyEngine().getSignByIndex(i)
-			if(sign.getPlayerType() == -1):
-				MapManager.setProvinceId(sign.getPlot(), CvUtil.convertToStr(sign.getCaption()))
-	
-	def setCityNames(self):
-		return
-		iNumSigns = CyEngine().getNumSigns()
-		RFCEMapUtil.showMessage("Updating: %d city names.." %iNumSigns)
-		for i in range(iNumSigns):
-			sign = CyEngine().getSignByIndex(i)
-			if(sign.getPlayerType() == -1):
-				MapManager.setCityName(self.m_iCurrentPlayer, sign.getPlot(), CvUtil.convertToStr(sign.getCaption()))
-		# for i in range (CyMap().getGridWidth()):
-			# for j in range (CyMap().getGridHeight()):
-				# pPlot = CyMap().plot(i,j)
-				# if (not pPlot.isNone()):
-					# name = ""
-					# RFCEMap.setCityName(self.m_iCurrentPlayer, pPlot, name)
-	
-	def clearSubSideMenu(self):
-		"""
-		removes the widgets that are created by refreshSideMenu
-		@author: Caliom
-		"""
-		screen.deleteWidget("WorldBuilderPlayerChoice")
-		screen.deleteWidget("WorldBuilderTechByEra")
-		screen.deleteWidget("WorldBuilderBrushSize")
-		screen.deleteWidget("WorldBuilderRegenerateMap")
-		screen.deleteWidget("WorldBuilderTeamChoice")
-		screen.deleteWidget("WorldBuilderRevealType") # Caliom
-		screen.deleteWidget("WorldBuilderLandmarkType")# Caliom 
-		screen.deleteWidget("WorldBuilderProvinceChoice")# Caliom
-		screen.deleteWidget("WorldBuilderBrushValue")# Caliom
-		screen.deleteWidget("WorldBuilderRevealAll")
-		screen.deleteWidget("WorldBuilderUnrevealAll")
-		screen.deleteWidget("WorldBuilderRevealPanel")
-		screen.deleteWidget("WorldBuilderBackgroundBottomPanel")
-
 
 #Caliom own classes
 class RevealMode:
@@ -2907,16 +2836,16 @@ class RevealMode:
 		iScreenWidth = self.worldBuilderScreen.iScreenWidth
 		iPanelX = iMaxScreenWidth-iScreenWidth
 		
-		
+		# panel background height
 		if(self.isWarMap() or self.isSettlerMap()):
 			iHeight = 45+40+40+40
 		elif(self.isCoreArea() or self.isNormalArea()):
 			iHeight = 45+40
 		else:
 			iHeight = 45+40+40
-		
 		screen.addPanel( "WorldBuilderBackgroundBottomPanel", "", "", True, True, iPanelX, 10+32+32, iScreenWidth, iHeight, PanelStyles.PANEL_STYLE_MAIN )		
 		
+		# map type dropdown
 		szDropdownName = str("WorldBuilderMapType")
 		screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString(szDropdownName, "Visible Map", self.VISIBLE_MAP, self.VISIBLE_MAP, self.isVisibleMap() )
@@ -2926,25 +2855,41 @@ class RevealMode:
 		screen.addPullDownString(szDropdownName, "Spawn Area (uneditable)", self.CORE_AREA, self.CORE_AREA, self.isCoreArea() )
 		screen.addPullDownString(szDropdownName, "Respawn Area (uneditable)", self.NORMAL_AREA, self.NORMAL_AREA, self.isNormalArea() )
 		
+		# province dropdown
 		if(self.isProvinceMap()):
 			szDropdownName = str("WorldBuilderProvinceChoice")
 			screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString(szDropdownName, "None", -1, -1, (-1 == self.iBrushValue) )
 			for i in range( RFCEMapUtil.iNumProvinces ):
 				screen.addPullDownString(szDropdownName, MapManager.getProvinceName(i), i, i, (i == self.iBrushValue) )
+		
+		# player dropdown
 		else:
 			szDropdownName = str("WorldBuilderPlayerChoice")
 			screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			for i in range( Consts.iNumMajorPlayers ):
 				screen.addPullDownString(szDropdownName, gc.getPlayer(i).getName(), i, i, i == self.iPlayer )
 		
+		# revale/hide all buttons
+		if(self.isVisibleMap()):
+			iButtonWidth = 32
+			iButtonHeight = 32
+			screen.setImageButton( "WorldBuilderRevealAll", ArtFileMgr.getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(), iPanelX+8, (10+36+36+36+36), iButtonWidth, iButtonHeight, WidgetTypes.WIDGET_WB_REVEAL_ALL_BUTTON, -1, -1)
+			screen.setImageButton( "WorldBuilderUnrevealAll", ArtFileMgr.getInterfaceArtInfo("WORLDBUILDER_UNREVEAL_ALL_TILES").getPath(), iPanelX+8+35, (10+36+36+36+36), iButtonWidth, iButtonHeight, WidgetTypes.WIDGET_WB_UNREVEAL_ALL_BUTTON, -1, -1)
+			
+		
+		# brushsize dropdown
 		if(self.isWarMap() or self.isSettlerMap() or self.isProvinceMap() or self.isVisibleMap()):
 			szDropdownName = str("WorldBuilderBrushSize")
-			screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			if(self.isVisibleMap()):
+				screen.addDropDownBoxGFC(szDropdownName, iPanelX+8+80, (10+36+36+36+36), iPanelWidth-80, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			else:
+				screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString(szDropdownName, localText.getText("TXT_KEY_WB_1_BY_1",()), 1, 1, self.iBrushSize == 1 )
 			screen.addPullDownString(szDropdownName, localText.getText("TXT_KEY_WB_3_BY_3",()), 2, 2, self.iBrushSize == 2 )
 			screen.addPullDownString(szDropdownName, localText.getText("TXT_KEY_WB_5_BY_5",()), 3, 3, self.iBrushSize == 3 )
 		
+		# brushvalue dropdown
 		if(self.isWarMap() or self.isSettlerMap()):
 			szDropdownName = str("WorldBuilderBrushValue")
 			screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
@@ -2964,6 +2909,8 @@ class RevealMode:
 		screen.deleteWidget("WorldBuilderBrushValue")
 		screen.deleteWidget("WorldBuilderBackgroundBottomPanel")
 		screen.deleteWidget("WorldBuilderProvinceChoice")
+		screen.deleteWidget("WorldBuilderRevealAll")
+		screen.deleteWidget("WorldBuilderUnrevealAll")
 	
 	def clearOtherWidgets(self):
 		screen = CyGInterfaceScreen( "WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN )
@@ -3135,6 +3082,7 @@ class LandmarkMode:
 		self.iPlayer = self.worldBuilderScreen.m_iCurrentPlayer
 		
 		CvEventInterface.getEventManager().setPopupHandler(CITY_NAME_POPUP_EVENT_ID, ("CityNamePopup", self.cityNamePopupApply, self.cityNamePopupBegin))
+		CvEventInterface.getEventManager().setPopupHandler(RESTORE_LANDMARKS_POPUP_EVENT_ID, ("RestoreLandmarksPopup", self.restoreLandmarksPopupApply, self.restoreLandmarksPopupBegin))
 		#alternativ way of setting events ()without the need to add "setPopupHandler" to RFCEventManager)
 		#CvEventInterface.getEventManager().Events[CITY_NAME_POPUP_EVENT_ID] = ("CityNamePopup", cityNamePopupApply, cityNamePopupBegin)
 		
@@ -3148,8 +3096,8 @@ class LandmarkMode:
 	def deactivate(self):
 		self.clearScreen()
 		self.clearSideMenu()
-		if(self.isCityNames()):
-			self.restoreLandmarks()
+		self.checkRestoreLandmarks()
+	
 	
 	def leftMouseDown (self, pPlot, argsList):
 		if(self.isCityNames()):
@@ -3262,10 +3210,11 @@ class LandmarkMode:
 		
 		if(self.isCityNames()):
 			self.backupLandmarks()
+			self.refreshScreen()
 		elif(self.isLandmarks()):
-			self.restoreLandmarks()
+			self.clearScreen()
+			self.checkRestoreLandmarks()
 			
-		self.refreshScreen()
 		self.refreshSideMenu()
 		return 1
 	
@@ -3366,16 +3315,33 @@ class LandmarkMode:
 				self.clearScreen()
 		return
 	
-	def restoreLandmarks(self):
+	def checkRestoreLandmarks(self):
 		if(self.landmarks != None):
 			length = len(self.landmarks)
 			if(length > 0):
-				CyInterface().addImmediateMessage( ("restoring %d landmarks" % length), "")
-				for i in range(length):
-					landmark = self.landmarks[i]
-					CyEngine().addLandmark(landmark[0], landmark[1])
+				self.restoreLandmarksPopupBegin(length)
+		return
+	
+	def restoreLandmarks(self):
+		if(self.landmarks != None):
+			for i in range(len(self.landmarks)):
+				pPlot, caption = self.landmarks[i]
+				CyEngine().addLandmark(pPlot, caption)
 			self.landmarks = None
 		return
+	
+	def restoreLandmarksPopupBegin(self, userData=None):
+		popup = PyPopup.PyPopup(RESTORE_LANDMARKS_POPUP_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
+		popup.setHeaderString("Restore Landmarks")
+		popup.setBodyString( ("Found %d landmarks that will be restored. Click ok to proceed." %userData))
+		popup.setPosition(400, 400)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+		return
+	
+	def restoreLandmarksPopupApply(self, playerID, userData, popupReturn):
+		self.restoreLandmarks()
+		return
+
 
 class Mode:
 	"Editor Mode template"

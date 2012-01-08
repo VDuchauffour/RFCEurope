@@ -34,7 +34,7 @@ Changes for Beta 14:
 		- Cordoban and Kievan province stability updated
 		- Added Shrine of Uppsala code: +1 culture for all your cities if you don't have a state religion
 		- Added Pagan Shrine code so the Culture bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
-		- Shrine of Uppsala happiness bonus reduced (now that the new bonus is in place)
+		- Shrine of Uppsala happiness bonus reduced (now that the new bonus is in place), but it gives 2 Great Prophet/Theologian points
 		- Viking 2nd UHV now needs Northumbria not Mercia, so York covers it
 		- Temples and the Shrine of Uppsala moved to the Religious Art tech, while the "build" culture option moved to the Literature tech
 		- Increased first culture expansion (Fledging) to 20 culture. We may increase it a little more, will see for the next version
@@ -65,6 +65,7 @@ Changes for Beta 14:
 		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm, Moscow
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
 		- Updated all civs' war and settler maps
+		- Added palm/light forest to the mediterranean coast
 		- You can now Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
 		- Added Caliom's World Builder tool to the main version. Mostly for the modders, but also handy to check settler/war map or spawn/respawn area visualizations
 

@@ -20,11 +20,11 @@ class Resources:
 			gc.getMap().plot(36, 24).setBonusType(xml.iRice) #Rice in Iberia
 			gc.getMap().plot(86, 2).setBonusType(xml.iRice)  #Rice in Middle East
 		if (iGameTurn == xml.i1500AD):
-			gc.getMap().plot(55, 35).setBonusType(xml.iRice) #Rice in Italy?
+			gc.getMap().plot(55, 35).setBonusType(xml.iRice) #Rice in Italy
 		if (iGameTurn == xml.i1250AD):
-			gc.getMap().plot( 2, 69).setBonusType(-1) # Remove the NAA from Iceland
+			gc.getMap().plot( 2, 69).setBonusType(-1) #Remove the NAA from Iceland
 		if (iGameTurn == xml.i1452AD):
-			gc.getMap().plot(94, 0).setBonusType(xml.iCoffee)
+			gc.getMap().plot(94, 0).setBonusType(xml.iCoffee) #Coffee spawns instead of being preplaced
 			gc.getMap().plot(99, 14).setBonusType(xml.iCoffee)
 		if (iGameTurn == xml.i1580AD):
 			gc.getMap().plot(32, 59).setBonusType(xml.iPotato) #Potatoes in Ireland
