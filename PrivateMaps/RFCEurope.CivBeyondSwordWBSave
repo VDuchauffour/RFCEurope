@@ -8949,7 +8949,6 @@ BeginPlot
 	x=23,y=23
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_OLIVES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -9338,13 +9337,14 @@ BeginPlot
 	x=24,y=22
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=23
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_OLIVES
+	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -9722,7 +9722,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=20
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10103,6 +10102,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=17
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10126,12 +10126,12 @@ BeginPlot
 	x=26,y=21
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=22
-	BonusType=BONUS_PIG
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -10498,7 +10498,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=17
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12147,7 +12146,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=24
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -12155,6 +12153,7 @@ BeginPlot
 	x=31,y=25
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -14524,7 +14523,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=24
-	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14973,7 +14971,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=28
-	BonusType=BONUS_HORSE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -15393,6 +15390,7 @@ BeginPlot
 	x=39,y=28
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_HORSE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -15401,7 +15399,6 @@ BeginPlot
 	x=39,y=29
 	RiverNSDirection=2
 	isWOfRiver
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -15409,6 +15406,7 @@ BeginPlot
 	x=39,y=30
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -15783,7 +15781,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=22
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16219,12 +16216,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=27
+	BonusType=BONUS_CRAB
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=28
-	BonusType=BONUS_CRAB
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16991,6 +16988,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=22
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
