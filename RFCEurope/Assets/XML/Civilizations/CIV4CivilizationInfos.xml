@@ -7373,7 +7373,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_CERISE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_POLAND</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -9924,7 +9924,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_GRAY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_LITHUANIA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>

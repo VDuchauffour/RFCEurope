@@ -51,6 +51,7 @@
 		<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_HUNGARY</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
 	</ArtStyleTypes>
 	<CitySizeTypes>
 		<CitySizeType>CITYSIZE_SMALL</CitySizeType>
