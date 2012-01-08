@@ -508,7 +508,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Interface/Buttons/TerrainFeatures/button_palm_forest.dds</Button>
+			<Button>,Art/Interface/Buttons/Terrain/button_palm_forest.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
