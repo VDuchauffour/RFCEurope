@@ -97,6 +97,7 @@ Changes for Beta 14:
 		- Merged buttons into several atlas' (this should reduce the loading time of the mod a bit)
 		- New art for the Tercio
 		- New Art + Button for Kazimierz
+		- New cultural citystyles
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
