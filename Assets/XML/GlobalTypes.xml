@@ -41,11 +41,11 @@
 		<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
 	</FlavorTypes>
 	<ArtStyleTypes>
-		<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 		<!--merijn_v1-->
-		<ArtStyleType>ARTSTYLE_ENGLAND</ArtStyleType>
+		<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
 		<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
