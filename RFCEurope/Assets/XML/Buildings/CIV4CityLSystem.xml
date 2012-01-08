@@ -581,6 +581,109 @@
 			<Scale>0.85</Scale>
 		</ArtRef>
 
+
+	<!-- 1x1 ANGLO/EUROPEAN EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:an_eu.nif::1x1_01">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_03">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE,ARTSTYLE_BARBARIAN</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_04">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_05">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_06">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_07">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_08">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x1_09">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+	<!-- 1x1 ANGLO/EUROPEAN HIGH MIDDLE AGE/LATE MIDDLE AGE -->
+		<ArtRef Name="generic:med_europe.nif::1x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x1_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x1_03">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x1_04">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+
+	<!-- 1x1 EUROPEAN RENAISSANCE -->
+		<ArtRef Name="generic:ren_europe.nif::1x1_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x1_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x1_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x1_04">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+
 		<!-- LEAF 1x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_1x1">
 			<Scale>1.0</Scale>
@@ -1508,6 +1611,167 @@
 			<Scale>1.1</Scale>
 		</ArtRef>
 
+	<!-- 2x1 ANGLO/EUROPEAN EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:an_eu.nif::1x2_01">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+<!--		<ArtRef Name="generic:an_eu.nif::1x2_02">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef> -->
+		<ArtRef Name="generic:an_eu.nif::2x1_01">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::2x1_02">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::2x1_03">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::2x1_04">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+	<!-- 2x1 ANGLO/EUROPEAN MEDIEVAL -->
+		<ArtRef Name="generic:med_europe.nif::1x2_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x2_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x2_03">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x2_04">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x1_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x1_03">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x1_04">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+
+	<!-- 2x1 EUROPEAN RENAISSANCE -->
+		<ArtRef Name="generic:ren_europe.nif::1x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x2_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x2_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>0.8</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x2_04">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::2x1_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::2x1_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::2x1_03">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::2x1_04">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+
 		<!-- LEAF 2x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_2x1">
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -1605,6 +1869,83 @@
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 		</ArtRef>
 
+	<!-- 3x1 ANGLO/EUROPEAN EARLY MIDDLE AGE -->
+		<ArtRef Name="generic:an_eu.nif::1x3_01">
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::3x1_01">
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+		</ArtRef>
+	<!-- 3x1 ANGLO/EUROPEAN HIGH MIDDLE AGE/LATE MIDDLE AGE -->
+		<ArtRef Name="generic:med_europe.nif::3x1_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::3x1_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x3_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::1x3_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+
+	<!-- 3x1 EUROPEAN RENAISSANCE -->
+		<ArtRef Name="generic:ren_europe.nif::3x1_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::3x1_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">0,180</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x3_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::1x3_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Rotation">90,270</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+
 		<!-- LEAF 3x1 BUILDINGS -->
 		<ArtRef Name="building:LSYSTEM_3x1">
 			<Attribute Class="Rotation">0,180</Attribute>
@@ -1664,12 +2005,18 @@
 
 	<!-- merijn_v1 -->
 	<!-- 2x2 GENERIC EARLY MIDDLE AGE/HIGH MIDDLE AGE -->
-<!--		<ArtRef Name="generic:an_eu.nif::1x2_02">
+		<ArtRef Name="generic:an_eu.nif::1x2_02">
 			<Attribute Class="Era">ERA_CLASSICAL</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,!ARTSTYLE_EUROPE,ARTSTYLE_IBERIA</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>0.9</Scale>
-		</ArtRef> -->
+		</ArtRef>
+		<ArtRef Name="generic:an_eu.nif::1x2_02">
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.9</Scale>
+		</ArtRef>
 		<ArtRef Name="generic:an_eu.nif::2x1_04">
 <!--			<Attribute Class="Rotation">0,180</Attribute> -->
 			<Attribute Class="Era">ERA_ANCIENT</Attribute>
@@ -1842,6 +2189,50 @@
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
 			<Scale>1.1</Scale>
+		</ArtRef>
+
+	<!-- 2x2 ANGLO/EUROPEAN HIGH MIDDLE AGE/LATE MIDDLE AGE -->
+		<ArtRef Name="generic:med_europe.nif::2x2_01">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x2_02">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x2_03">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:med_europe.nif::2x2_04">
+			<Attribute Class="Era">ERA_CLASSICAL,ERA_MEDIEVAL</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Scale>1.1</Scale>
+		</ArtRef>
+
+	<!-- 2x2 EUROPEAN RENAISSANCE -->
+		<ArtRef Name="generic:ren_europe.nif::2x2_01">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
+		</ArtRef>
+		<ArtRef Name="generic:ren_europe.nif::2x2_02">
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
+			<Attribute Class="Scalar">iBatchGroup:0</Attribute>
+			<Scale>0.85</Scale>
 		</ArtRef>
 
 		<!-- LEAF 2x2 BUILDINGS -->

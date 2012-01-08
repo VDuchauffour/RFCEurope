@@ -827,7 +827,7 @@
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_CYAN_AND_BLACK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_AUSTRIA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -1384,7 +1384,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIME</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BULGARIA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -1830,7 +1830,7 @@
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BURGUNDY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BURGUNDY</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -3416,7 +3416,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_DUTCH</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -3844,7 +3844,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_RED_AND_GOLD</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ENGLAND</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -4285,7 +4285,7 @@
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_FRANCE</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -5152,7 +5152,7 @@
 			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GERMANY</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -7373,7 +7373,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_CERISE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_POLAND</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
@@ -9924,7 +9924,7 @@
 			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_GRAY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_LITHUANIA</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
