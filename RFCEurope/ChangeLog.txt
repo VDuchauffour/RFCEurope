@@ -16,6 +16,9 @@ Changes for version 1.0:
 (to-be-released: early february)
 
 	General changes and UHV updates:
+		- Lowered spread (growth) chance of Palm Forests
+		- Small updates to the normal (respawn) areas
+		- Minor improvements and balancing on the settler and war maps
 
 	Map and province changes:
 
@@ -26,6 +29,7 @@ Changes for version 1.0:
 		- Fixed cottages+upgrades art
 
 	Balance:
+		- Norse got an additional Berserker on spawn
 
 	Bugfixes:
 

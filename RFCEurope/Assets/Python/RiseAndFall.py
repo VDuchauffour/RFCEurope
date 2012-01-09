@@ -2143,7 +2143,7 @@ class RiseAndFall:
                 if (iCiv == iNorse):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
