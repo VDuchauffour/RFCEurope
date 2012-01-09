@@ -23,6 +23,7 @@ Changes for version 1.0:
 
 	Art/Sound updates:
 		- Fixed Light Forest button
+		- Fixed cottages+upgrades art
 
 	Balance:
 
