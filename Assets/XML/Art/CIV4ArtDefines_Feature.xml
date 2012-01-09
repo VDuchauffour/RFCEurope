@@ -574,7 +574,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/button_palm_forest.dds</VarietyButton>
+				<VarietyButton>,Art/Interface/Buttons/Terrain/button_palm_forest.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 	</FeatureArtInfos>
