@@ -945,7 +945,7 @@
 			<iDefense>10</iDefense>
 			<iAppearance>0</iAppearance>
 			<iDisappearance>0</iDisappearance>
-			<iGrowth>20</iGrowth>
+			<iGrowth>5</iGrowth>
 			<iTurnDamage>0</iTurnDamage>
 			<bNoCoast>0</bNoCoast>
 			<bNoRiver>0</bNoRiver>
