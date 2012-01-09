@@ -1002,6 +1002,7 @@ class CvVictoryScreen:
                 if ( bListProvs ):
                         sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
                         sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+                        iConq = 0
                         for iProv in tProvsToCheck:
                                 sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
                                 sProvName = localText.getText(sProvName,())
@@ -1011,7 +1012,11 @@ class CvVictoryScreen:
                                         sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
                                 else:
                                         sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
-                        sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+                                        iConq += 1
+                        if ( self.iActivePlayer == con.iKiev ):
+                                sString = sString + "\n\n" + "%i"%iConq + " " + sStringConq + "\n" + sStringMiss
+                        else:
+                                sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
                 
                 screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+7, self.Y_UHV2+15, self.W_UHV2-10, self.H_UHV2-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 

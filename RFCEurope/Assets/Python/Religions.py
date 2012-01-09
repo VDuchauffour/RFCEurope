@@ -680,8 +680,17 @@ class Religions:
                 pCapital = pPlayer.getCapitalCity()
 		iX = pCapital.getX()
 		iY = pCapital.getY()
+                if ( iX == -1 or iY == -1 ):
+                        if ( pPlayer.getNumCities() > 0 ):
+                                apCityList = PyPlayer(iPlayer).getCityList()
+                                pCapital = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for prosecutors')].GetCy()
+                                iX = pCapital.getX()
+                                iY = pCapital.getY()
+                        else:
+                                return
                 iNumProsecutors = max( 1, pPlayer.getNumCities() / 3 )
                 for i in range( iNumProsecutors ):
+                        #print(" 3Miro CR",iPlayer,iX,iY,xml.iProsecutor)
                         pPlayer.initUnit(xml.iProsecutor, iX, iY, UnitAITypes.UNITAI_MISSIONARY, DirectionTypes.DIRECTION_SOUTH)
                 for iNbr in range( len( lReformationNeighbours[iPlayer] ) ):
                         pNbr = gc.getPlayer( lReformationNeighbours[iPlayer][iNbr] )
@@ -689,6 +698,15 @@ class Religions:
                                 pNCapital = pNbr.getCapitalCity()
                                 iX = pNCapital.getX()
                                 iY = pNCapital.getY()
+                                if ( iX == -1 or iY == -1 ):
+                                        if ( pNbr.getNumCities() > 0 ):
+                                                apCityList = PyPlayer(lReformationNeighbours[iPlayer][iNbr]).getCityList()
+                                                pNCapital = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for prosecutors')].GetCy()     
+                                                iX = pNCapital.getX()
+                                                iY = pNCapital.getY()
+                                        else:
+                                                return
+                                                
                                 pNbr.initUnit(xml.iProsecutor, iX, iY, UnitAITypes.UNITAI_MISSIONARY, DirectionTypes.DIRECTION_SOUTH)
         
         def doCounterReformationNo( self, iPlayer ):
