@@ -420,7 +420,7 @@ class Barbs:
                         self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
-                        self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+                        self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iIndependent2, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 848AD

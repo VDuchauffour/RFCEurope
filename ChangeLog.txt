@@ -12,8 +12,8 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Changes for Beta 14:
-(to-be-released: around mid-December, 2011)
+Changes for Beta 14 (Release Candidate):
+(released: 2012.01.08.)
 
 	General changes and UHV updates:
 		- Add a stability guide in the civilopedia (Beware, the guide is outdated at some points)
@@ -45,6 +45,9 @@ Changes for Beta 14:
 				Cottages are only buildable where the base tile (sum of terrain and elevation) produces at least one food
 				Increased chopping bonus from dense forest
 				May have to set dummy chopping values for Palm Forest with a few improvements - it's possible that it doesn't look good with all of them
+		- You can now Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
+		- Added Caliom's World Builder tool to the main version. Mostly for the modders, but also handy to check settler/war map or spawn/respawn area visualizations
+		- New UHV for Kiev, now they have to hold 10 provinces out of 13 in their historically accurate region
 
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
@@ -52,7 +55,7 @@ Changes for Beta 14:
 		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard,
 				Swiss Line Infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman),
 				Touareg Camel Archer, Medjay (Nubian Longbowman)
-		- Swiss Pikeman aviable in a much bigger area, Almogavar aviable in Greece (Catalan Company)
+		- Swiss Pikeman aviable in a much bigger area, Almogavar available in Greece (Catalan Company)
 		- New art for Don Cossack, Huscarl
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
 
@@ -64,10 +67,9 @@ Changes for Beta 14:
 		- New provinces: Fez, Navarre, La Mancha, Gotland
 		- Moved capital/starting location: Cordoba, Leon, Lisboa, London, Frankfurt, Wien, Preslav, Stockholm, Moscow
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
+		- Adjusted core and normal areas to fit the recent changes
 		- Updated all civs' war and settler maps
 		- Added palm/light forest to the mediterranean coast
-		- You can now Shift + Hover over the map and see the Spawn zones for each player. Just Hover around the area where they will spawn.
-		- Added Caliom's World Builder tool to the main version. Mostly for the modders, but also handy to check settler/war map or spawn/respawn area visualizations
 
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
@@ -98,7 +100,7 @@ Changes for Beta 14:
 		- Merged buttons into several atlas' (this should reduce the loading time of the mod a bit)
 		- New art for the Tercio
 		- New Art + Button for Kazimierz
-		- New cultural citystyles
+		- New cultural citystyles for all civs. Now we have 8 different styles based for the different ethnic regions 
 
 	Balance:
 		- Improved french start (+1 axeman and +1 worker)
@@ -111,7 +113,6 @@ Changes for Beta 14:
 		- Inn has +5% gold bonus independent from wine (Note: Inn should be renamed to something to represent the Secret Societies like Masons and Assasins)
 		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
 		- Decreased all Muscovian leaders willingness to vassalization
-		- new Kiev UHV, now they have to hold 10 provinces out of 13 in a histroically accurate region
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
