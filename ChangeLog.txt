@@ -111,6 +111,7 @@ Changes for Beta 14:
 		- Inn has +5% gold bonus independent from wine (Note: Inn should be renamed to something to represent the Secret Societies like Masons and Assasins)
 		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
 		- Decreased all Muscovian leaders willingness to vassalization
+		- new Kiev UHV, now they have to hold 10 provinces out of 13 in a histroically accurate region
 
 	Bugfixes:
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)

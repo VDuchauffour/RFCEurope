@@ -666,7 +666,7 @@ class RiseAndFall:
                 pGenoa.changeGold(400)
                 pEngland.changeGold(400)
                 pPortugal.changeGold(450)
-                pAustria.changeGold(700)
+                pAustria.changeGold(1000)
                 pTurkey.changeGold(1000)
                 pSweden.changeGold(1000)
                 pDutch.changeGold(1500)
@@ -2225,7 +2225,7 @@ class RiseAndFall:
                 if (iCiv == iLithuania):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
                 if (iCiv == iAustria):
                         utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
