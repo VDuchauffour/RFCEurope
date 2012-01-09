@@ -22,6 +22,7 @@ Changes for version 1.0:
 	XML/text updates:
 
 	Art/Sound updates:
+		- Fixed Light Forest button
 
 	Balance:
 
