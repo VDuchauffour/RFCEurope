@@ -2464,7 +2464,7 @@
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Cordoban_Berber/Numidian_Cavalry.nif</NIF>
-			<KFM>Art/Units/Cordoban_Berber/Numidian_Cavalry.kfm</KFM>
+			<KFM>Art/Units/Numidian_Cavalry/Numidian_Cavalry.kfm</KFM>
 			<SHADERNIF>Art/Units/Cordoban_Berber/Numidian_Cavalry_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
