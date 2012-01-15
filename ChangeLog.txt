@@ -27,6 +27,7 @@ Changes for version 1.0:
 	Art/Sound updates:
 		- Fixed Light Forest button
 		- Fixed cottages+upgrades art
+		- Art cleanup
 
 	Balance:
 		- Norse got an additional Berserker on spawn
