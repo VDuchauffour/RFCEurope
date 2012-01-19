@@ -23,6 +23,7 @@ Changes for version 1.0:
 	Map and province changes:
 
 	XML/text updates:
+		- Dawn of Man text for Byzantium
 
 	Art/Sound updates:
 		- Fixed Light Forest button

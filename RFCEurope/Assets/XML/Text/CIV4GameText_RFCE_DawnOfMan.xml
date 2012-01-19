@@ -28,7 +28,7 @@
 		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc -->
 	<TEXT> <!-- Byzantium -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0</Tag>
-		<English>It is the year %s1_year. You, %s3_leader, are the sole ruler of the %s2_civ people. Your civilization is the successor of the Roman Empire and you still have a mighty empire to rule over, but be aware: huge riches attract many enemies. Various threats are rising, especially in the east.</English>
+		<English>It is the year 500 A.D. After many glorious centuries under Rome, the great Constantine saw fit to split the mighty empire into two parts.[NEWLINE][NEWLINE]While Rome will always have a place in your people's hearts, Constantinople is now the heart of the most glorious nation on Earth![NEWLINE][NEWLINE]Now you, Justinian, rule as the mighty Roman Emperor. Your nation is strong, but the barbarians may be stronger. Your people have faith that you can lead their mighty nation through the coming storm. Will you prevail, and lead the Byzantine Empire through another 1,000 years of glory?</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
