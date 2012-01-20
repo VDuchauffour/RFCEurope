@@ -1056,7 +1056,7 @@
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
-			<iDefense>20</iDefense>
+			<iDefense>25</iDefense>
 			<iBombardDefense>50</iBombardDefense>
 			<iAllCityDefense>0</iAllCityDefense>
 			<iEspionageDefense>0</iEspionageDefense>
@@ -1106,11 +1106,11 @@
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<!-- 3Miro -->
-			<bDamageEnemies>1</bDamageEnemies>
+			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
 			<bAllowIrrigation>0</bAllowIrrigation>
-			<iBombardImmuneDefense>20</iBombardImmuneDefense>
+			<iBombardImmuneDefense>25</iBombardImmuneDefense>
 			<iStateReligionCulture>0</iStateReligionCulture>
 			<iPaganCulture>0</iPaganCulture>
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
