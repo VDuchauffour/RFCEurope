@@ -29,9 +29,11 @@ Changes for version 1.0:
 		- Fixed Light Forest button
 		- Fixed cottages+upgrades art
 		- Art cleanup
+		- Spy has "Monk-art" in the renaissance era instead of the secret agent art
 
 	Balance:
 		- Norse got an additional Berserker on spawn
+		- Star Fort doesn't damages units in the area anymore, defense and bombard-free defense increased 25% (was 20%)
 
 	Bugfixes:
 
