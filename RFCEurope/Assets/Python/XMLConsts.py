@@ -580,10 +580,6 @@ iAncient = 0
 iClassical = 1
 iMedieval = 2
 iRenaissance = 3
-iIndustrial = 4
-iModern = 5
-iFuture = 6
-
 
 #Improvements
 
