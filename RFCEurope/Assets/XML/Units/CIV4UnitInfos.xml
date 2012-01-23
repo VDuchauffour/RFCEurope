@@ -17146,7 +17146,7 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_WARLORD_ANCIENT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_WARLORD_MODERN</LateArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_WARLORD_MEDIEVAL</LateArtDefineTag>
 					<MiddleArtDefineTag>ART_DEF_UNIT_WARLORD_MEDIEVAL</MiddleArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>

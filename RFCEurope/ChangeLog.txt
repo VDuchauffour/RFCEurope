@@ -37,6 +37,7 @@ Changes for version 1.0:
 		- Star Fort doesn't damages units in the area anymore, defense and bombard-free defense increased 25% (was 20%)
 
 	Bugfixes:
+		- GG Renaissance art (this caused the crash around turn 300)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
