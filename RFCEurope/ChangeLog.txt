@@ -30,6 +30,7 @@ Changes for version 1.0:
 		- Fixed cottages+upgrades art
 		- Art cleanup
 		- Spy has "Monk-art" in the renaissance era instead of the secret agent art
+		- Great Spy doesn't get the modern art in the Renaissance
 		- Lithuanian flag has colors inverted (now the color of the borders are the same as the background of the flag, as all other flags have) + Button has correct colors now
 
 	Balance:
