@@ -36,6 +36,7 @@ Changes for version 1.0:
 	Balance:
 		- Norse got an additional Berserker on spawn
 		- Star Fort doesn't damages units in the area anymore, defense and bombard-free defense increased 25% (was 20%)
+		- Swiss Line Infantry is later available
 
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)
