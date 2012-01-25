@@ -24,6 +24,7 @@ Changes for version 1.0:
 
 	XML/text updates:
 		- Dawn of Man text for Byzantium
+		- XML cleanup
 
 	Art/Sound updates:
 		- Fixed Light Forest button
