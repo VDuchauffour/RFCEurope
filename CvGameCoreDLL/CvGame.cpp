@@ -9990,6 +9990,7 @@ bool CvGame::safeMotherland( int iCiv ){
 		};
 	};
 	if ( iCitiesOwned > iCitiesLost ) return true;
+	if ( (GET_PLAYER((PlayerTypes)iCiv).getRespawned()) && (iCitiesOwned > 0) ) return true;
 	if ( GET_TEAM((TeamTypes) GET_PLAYER((PlayerTypes)iCiv).getTeam() ).isAVassal() ){
 		return true;
 	}else{

@@ -1012,6 +1012,21 @@ class RiseAndFall:
                                                 print ("COLLAPSE BY BARBS", gc.getPlayer(iCiv).getCivilizationAdjective(0))
                                                 #utils.killAndFragmentCiv(iCiv, iIndependent, iIndependent2, -1, False)
                                                 utils.killAndFragmentCiv(iCiv, False, False)
+                # Add this part to force several cities to revolt in the case of very bad stability
+                iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
+                for j in range(iRndnum, iRndnum + iNumPlayers):
+                        iPlayer = j % iNumPlayers
+                        #print(" 3Miro: player ",iPlayer)
+                        pPlayer = gc.getPlayer(iPlayer)
+                        if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
+                                #if (utils.getStability(iPlayer) >= -40 and utils.getStability(iPlayer) < -20): #secession
+                                #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
+                                iStability = pPlayer.getStability()
+                                if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() > 10) ): #civil war
+                                        self.revoltCity( iPlayer )
+                                        self.revoltCity( iPlayer )
+                                        self.revoltCity( iPlayer )
+                                        self.revoltCity( iPlayer )
 
         def collapseGeneric(self, iGameTurn):
                 #lNumCitiesNew = con.l0Array
@@ -1037,6 +1052,7 @@ class RiseAndFall:
                                                                         utils.killAndFragmentCiv(iCiv, False, False)
                                                 else:
                                                         self.setNumCities(iCiv, lNumCitiesNew[iCiv])
+                
 
         def collapseMotherland(self, iGameTurn):
                 #collapses if completely out of broader areas
@@ -1065,74 +1081,78 @@ class RiseAndFall:
                                 #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
                                 iStability = pPlayer.getStability()
                                 if ( ( iStability < -5) or (gc.getGame().getSorenRandNum(20, 'do the check for city secession') < -iStability) ): #secession, 3Miro: do regarless of how low stability is
-
-                                        #print("3Miro: unstable")
-                                        cityList = []
-                                        apCityList = PyPlayer(iPlayer).getCityList()
-                                        for pCity in apCityList:
-                                                city = pCity.GetCy()
-                                                pCurrent = gc.getMap().plot(city.getX(), city.getY())
-
-                                                if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))):
-                                                        # 3MiroUP: Emperor
-                                                        if (pPlayer.getNumCities() > 0): #this check is needed, otherwise game crashes
-                                                                capital = gc.getPlayer(iPlayer).getCapitalCity()
-                                                                iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
-                                                                if (iDistance > 3):                                                                                               
-                                                                        iProvType = pPlayer.getProvinceType( city.getProvince() )
-                                                                        if ( iProvType < con.iProvinceNatural or \
-                                                                            city.angryPopulation(0) > 0 or \
-                                                                            city.healthRate(False, 0) < 0 or \
-                                                                            city.getReligionBadHappiness() > 0 or \
-                                                                            city.getLargestCityHappiness() < 0 or \
-                                                                            city.getHurryAngerModifier() > 0 or \
-                                                                            city.getNoMilitaryPercentAnger() > 0 ):
-                                                                                if ( gc.getGame().getSorenRandNum(100, 'city secession') > - 10 * pPlayer.getStability() ):
-                                                                                        cityList.append(city)
-                                                                                        # 3MiroProvinces: outer and none provices have much higher probability of flipping
-                                                                                        if ( iProvType == con.iProvinceNone ):
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                        if ( iProvType == con.iProvinceNatural ):
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                                cityList.append(city)
-                                                                                        continue
-                                                                        
-                                                                        #for iLoop in range(iNumTotalPlayers+1):
-                                                                        #        if (iLoop != iPlayer):
-                                                                        #                if (pCurrent.getCulture(iLoop) > 0):
-                                                                        #                        cityList.append(city)
-                                                                        #                        break
-
-                                        if (len(cityList)):
-                                                #iNewCiv = iIndependent
-                                                #iRndNum = gc.getGame().getSorenRandNum(2, 'random independent')
-                                                #if (iRndNum % 2 == 0):
-                                                #        iNewCiv = iIndependent2                        
-                                                iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
-                                                iNewCiv = con.iIndepStart + iRndNum
-                                                
-                                                splittingCity = cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
-                                                if (iPlayer == utils.getHumanID()):
-                                                        CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + \
-                                                                                           CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
-                                                utils.cultureManager((splittingCity.getX(),splittingCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
-                                                utils.flipUnitsInCityBefore((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)                            
-                                                self.setTempFlippingCity((splittingCity.getX(),splittingCity.getY()))
-                                                utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
-                                                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
-                                                #print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
-						#Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
-                                                #utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
-                                                #utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
-                                                pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
-
+                                        self.revoltCity( iPlayer )
                                         return #just 1 secession per turn
+
+        def revoltCity( self, iPlayer ):
+                #print("3Miro: unstable")
+                pPlayer = gc.getPlayer(iPlayer)
+                iStability = pPlayer.getStability()
+                
+                cityList = []
+                apCityList = PyPlayer(iPlayer).getCityList()
+                for pCity in apCityList:
+                        city = pCity.GetCy()
+                        pCurrent = gc.getMap().plot(city.getX(), city.getY())
+        
+                        if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))):
+                                # 3MiroUP: Emperor
+                                if (pPlayer.getNumCities() > 0): #this check is needed, otherwise game crashes
+                                        capital = gc.getPlayer(iPlayer).getCapitalCity()
+                                        iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
+                                        if (iDistance > 3):                                                                                               
+                                                iProvType = pPlayer.getProvinceType( city.getProvince() )
+                                                if ( iProvType < con.iProvinceNatural or \
+                                                    city.angryPopulation(0) > 0 or \
+                                                    city.healthRate(False, 0) < 0 or \
+                                                    city.getReligionBadHappiness() > 0 or \
+                                                    city.getLargestCityHappiness() < 0 or \
+                                                    city.getHurryAngerModifier() > 0 or \
+                                                    city.getNoMilitaryPercentAnger() > 0 ):
+                                                        if ( gc.getGame().getSorenRandNum(100, 'city secession') > - 10 * pPlayer.getStability() ):
+                                                                cityList.append(city)
+                                                                # 3MiroProvinces: outer and none provices have much higher probability of flipping
+                                                                if ( iProvType == con.iProvinceNone ):
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                if ( iProvType == con.iProvinceNatural ):
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                        cityList.append(city)
+                                                                continue
+                                                
+                                                #for iLoop in range(iNumTotalPlayers+1):
+                                                #        if (iLoop != iPlayer):
+                                                #                if (pCurrent.getCulture(iLoop) > 0):
+                                                #                        cityList.append(city)
+                                                #                        break
+        
+                if (len(cityList)):
+                        #iNewCiv = iIndependent
+                        #iRndNum = gc.getGame().getSorenRandNum(2, 'random independent')
+                        #if (iRndNum % 2 == 0):
+                        #        iNewCiv = iIndependent2                        
+                        iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
+                        iNewCiv = con.iIndepStart + iRndNum
+                        
+                        splittingCity = cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
+                        if (iPlayer == utils.getHumanID()):
+                                CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + \
+                                                                   CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+                        utils.cultureManager((splittingCity.getX(),splittingCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
+                        utils.flipUnitsInCityBefore((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)                            
+                        self.setTempFlippingCity((splittingCity.getX(),splittingCity.getY()))
+                        utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
+                        utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+                        #print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
+                        #Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
+                        #utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+                        #utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+                        pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
 
 
                               

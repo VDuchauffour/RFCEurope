@@ -46,6 +46,8 @@ class Stability:
                 gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 5 ) # to account for the cities build in the WB
                 if ( not gc.getPlayer( con.iFrankia ).isHuman() ):
                         gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
+                if ( not gc.getPlayer( con.iVenecia ).isHuman() ):
+                        gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
                 iHandicap = gc.getGame().getHandicapType()
                 if (iHandicap == 0):
                         gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 8 )
@@ -289,7 +291,7 @@ class Stability:
                                 pPlayer = gc.getPlayer(iPlayer)
                                 if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 25):
                                 	# 3MiroUP: Emperor
-                                        if (pPlayer.getStability() < -15 and not utils.collapseImmune(iPlayer) ): #civil war
+                                        if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() < 11) ): #civil war
                                                 print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
                                                 if (iPlayer != utils.getHumanID()):
                                                         if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
@@ -542,7 +544,8 @@ class Stability:
                                 if ( bIsUPLandStability ):
                                         iUPBonus += 1
                 iExpStability += min( 6, iCivicBonus )
-                iExpStability += min( 6, iUPBonus )
+                if ( pPlayer.isHuman() ):
+                        iExpStability += min( 6, iUPBonus )
                 if ( not (pPlayer.getCivics(5) == xml.iCivicOccupation) ):
                         iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceCore )
                         iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural )

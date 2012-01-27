@@ -38,6 +38,11 @@ Changes for version 1.0:
 		- Norse got an additional Berserker on spawn
 		- Star Fort doesn't damages units in the area anymore, defense and bombard-free defense increased 25% (was 20%)
 		- Swiss Line Infantry is later available
+		- Large (>10 cities) unstable Empires no longer collapse instantly, they first start to rapidly lose cities
+		- fixed a bug with collapse and respawning in a different region (safeMotherland in C++)
+		- nerfed France and Burgundy (in Units production)
+		- the French UP is disabled for the AI, it seems to do well enough with it anyway (AI doesn't build Charlemagne's Empire)
+		- buffed Venice stability
 
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)

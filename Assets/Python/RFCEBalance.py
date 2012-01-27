@@ -148,11 +148,11 @@ class RFCEBalance:
 		#void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-		gc.setProductionModifiersAI(iBurgundy,  110, 110, 120, 140 )
-		gc.setProductionModifiersHu(iBurgundy,  110, 110, 120, 140 )
+		gc.setProductionModifiersAI(iBurgundy,  120, 110, 120, 140 )
+		gc.setProductionModifiersHu(iBurgundy,  120, 110, 120, 140 )
 		gc.setProductionModifiersAI(iByzantium, 270, 220, 200, 350 )
 		gc.setProductionModifiersHu(iByzantium, 200, 150, 200, 350 )
-		gc.setProductionModifiersAI(iFrankia,   125, 110, 125, 120 )
+		gc.setProductionModifiersAI(iFrankia,   145, 110, 125, 120 )
 		gc.setProductionModifiersHu(iFrankia,   135, 110, 125, 125 )
 		gc.setProductionModifiersAI(iArabia,    200, 125, 150, 280 )
 		gc.setProductionModifiersHu(iArabia,    150, 125, 150, 230 )
