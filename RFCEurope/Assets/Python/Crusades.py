@@ -1128,6 +1128,16 @@ class Crusades:
 		pCapital = pPlayer.getCapitalCity()
 		iX = pCapital.getX()
 		iY = pCapital.getY()
+                #print(" Position for Units: ",iX,iY)
+                if ( iX == -1 or iY == -1 ):
+                        apCityList = PyPlayer(iPlayer).getCityList()
+                        if ( len(apCityList) > 0 ):
+                                pCity = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for DC')]
+                                city = pCity.GetCy()
+                                iX = city.getX()
+                                iY = city.getY()
+                        else:
+                                return
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
