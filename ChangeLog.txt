@@ -48,6 +48,7 @@ Changes for version 1.0:
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)
 		- edead's Indy bug
+                - fixed a bug about defensive Crusades involving a Catholic nation that has lost its Capital
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
