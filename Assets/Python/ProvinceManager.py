@@ -204,9 +204,9 @@ tLithuaniaDesire = []
 
 tAustriaCore = []
 tAustriaNorm = []
-tAustriaOuter = [xml.iP_Verona,xml.iP_Pannonia,xml.iP_UpperHungary,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Croatia,xml.iP_Slavonia,xml.iP_Silesia,xml.iP_LesserPoland,xml.iP_GaliciaPoland]
+tAustriaOuter = [xml.iP_Verona,xml.iP_UpperHungary,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Croatia,xml.iP_Slavonia,xml.iP_Silesia,xml.iP_LesserPoland,xml.iP_GaliciaPoland]
 tAustriaPot2Core = [xml.iP_Austria,xml.iP_Carinthia]
-tAustriaPot2Norm = [xml.iP_Bohemia,xml.iP_Moravia,xml.iP_Bavaria]
+tAustriaPot2Norm = [xml.iP_Bohemia,xml.iP_Moravia,xml.iP_Bavaria,xml.iP_Pannonia]
 tAustriaDesire = []
 
 tTurkeyCore = []
@@ -523,6 +523,8 @@ class ProvinceManager:
                 elif ( iPlayer == iAustria ):
                         pHungary.setProvinceType( xml.iP_Austria, iProvinceOuter )
                         pHungary.setProvinceType( xml.iP_Moravia, iProvinceOuter )
+                        pGermany.setProvinceType( xml.iP_Bavaria, iProvinceOuter )
+                        pGermany.setProvinceType( xml.iP_Bohemia, iProvinceOuter )
                 elif ( iPlayer == iTurkey ):
                         pByzantium.setProvinceType( xml.iP_Opsikion, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Thrakesion, iProvinceOuter )

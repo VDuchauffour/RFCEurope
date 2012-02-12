@@ -1084,7 +1084,7 @@ class RiseAndFall:
                                         self.revoltCity( iPlayer, False )
                                         return #just 1 secession per turn
 
-        def revoltCity( self, iPlayer, bFoece ):
+        def revoltCity( self, iPlayer, bForce ):
                 # if bForce is true, then any city can revolt
                 #print("3Miro: unstable")
                 pPlayer = gc.getPlayer(iPlayer)
