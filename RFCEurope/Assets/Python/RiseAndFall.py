@@ -1023,10 +1023,10 @@ class RiseAndFall:
                                 #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
                                 iStability = pPlayer.getStability()
                                 if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() > 10) ): #civil war
-                                        self.revoltCity( iPlayer )
-                                        self.revoltCity( iPlayer )
-                                        self.revoltCity( iPlayer )
-                                        self.revoltCity( iPlayer )
+                                        self.revoltCity( iPlayer, False )
+                                        self.revoltCity( iPlayer, False )
+                                        self.revoltCity( iPlayer, True )
+                                        self.revoltCity( iPlayer, True )
 
         def collapseGeneric(self, iGameTurn):
                 #lNumCitiesNew = con.l0Array
@@ -1081,10 +1081,11 @@ class RiseAndFall:
                                 #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
                                 iStability = pPlayer.getStability()
                                 if ( ( iStability < -5) or (gc.getGame().getSorenRandNum(20, 'do the check for city secession') < -iStability) ): #secession, 3Miro: do regarless of how low stability is
-                                        self.revoltCity( iPlayer )
+                                        self.revoltCity( iPlayer, False )
                                         return #just 1 secession per turn
 
-        def revoltCity( self, iPlayer ):
+        def revoltCity( self, iPlayer, bFoece ):
+                # if bForce is true, then any city can revolt
                 #print("3Miro: unstable")
                 pPlayer = gc.getPlayer(iPlayer)
                 iStability = pPlayer.getStability()
@@ -1102,14 +1103,14 @@ class RiseAndFall:
                                         iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
                                         if (iDistance > 3):                                                                                               
                                                 iProvType = pPlayer.getProvinceType( city.getProvince() )
-                                                if ( iProvType < con.iProvinceNatural or \
+                                                if ( bForce or iProvType < con.iProvinceNatural or \
                                                     city.angryPopulation(0) > 0 or \
                                                     city.healthRate(False, 0) < 0 or \
                                                     city.getReligionBadHappiness() > 0 or \
                                                     city.getLargestCityHappiness() < 0 or \
                                                     city.getHurryAngerModifier() > 0 or \
                                                     city.getNoMilitaryPercentAnger() > 0 ):
-                                                        if ( gc.getGame().getSorenRandNum(100, 'city secession') > - 10 * pPlayer.getStability() ):
+                                                        if ( gc.getGame().getSorenRandNum(100, 'city secession') > 100 - 10 * pPlayer.getStability() ):
                                                                 cityList.append(city)
                                                                 # 3MiroProvinces: outer and none provices have much higher probability of flipping
                                                                 if ( iProvType == con.iProvinceNone ):
