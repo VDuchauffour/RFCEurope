@@ -349,7 +349,8 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (94,34),(99,48), xml.iMongolKeshik, 3 + iExtra*2 + iHandicap*2, iGameTurn,3,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Central Europe (So Kiev can't keep them out)
 			self.spawnUnits( iBarbarian, (70,35),(76,45), xml.iMongolKeshik, 3 + iExtra*2 + iHandicap*2, iGameTurn,4,2,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
-			self.spawnUnits( iBarbarian, (72,40),(75,58), xml.iMongolKeshik, 3 + iExtra*2 + iHandicap*2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+                        # 3Miro: nerf the mongols that go after Poland
+			self.spawnUnits( iBarbarian, (72,40),(75,58), xml.iMongolKeshik, 3 + iExtra*2 + iHandicap*2, iGameTurn,12,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Bulgaria
 			self.spawnUnits( iBarbarian, (78,32),(83,34), xml.iMongolKeshik, 3 + iExtra*2 + iHandicap*2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Moscow

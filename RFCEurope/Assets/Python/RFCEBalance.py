@@ -113,10 +113,10 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iVenecia,      100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iKiev,         100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iKiev,         100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iHungary,      100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iHungary,      100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iGermany,      100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iGermany,      100, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iHungary,      120, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iHungary,      120, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iGermany,      120, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iGermany,      120, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iPoland,       100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iPoland,       100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iMoscow,       100, 100, 100, 100, 100, 3 )
@@ -129,7 +129,7 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iPortugal,     100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iLithuania,    100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iLithuania,    100, 100, 100, 100, 100, 3 )
-		gc.setGrowthModifiersAI(iAustria,      100, 200, 100, 100, 100, 3 )
+		gc.setGrowthModifiersAI(iAustria,      100, 300, 100, 100, 200, 3 ) # Austria is squashed by other's culture, they need the boost
 		gc.setGrowthModifiersHu(iAustria,      100, 200, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iTurkey,       100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iTurkey,       100, 150, 100, 100, 100, 3 )
@@ -160,28 +160,28 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iBulgaria,  125, 100, 125, 170 )
 		gc.setProductionModifiersAI(iCordoba,   150, 150, 125, 230 )
 		gc.setProductionModifiersHu(iCordoba,   150, 150, 125, 230 )
-		gc.setProductionModifiersAI(iSpain,      85, 100, 100, 120 )
+		gc.setProductionModifiersAI(iSpain,     100, 100, 100, 120 )
 		gc.setProductionModifiersHu(iSpain,      90, 100, 100, 120 )
-		gc.setProductionModifiersAI(iNorse,     100, 100, 100, 100 )
-		gc.setProductionModifiersHu(iNorse,     100, 100, 100, 100 )
+		gc.setProductionModifiersAI(iNorse,     100, 100, 100, 110 )
+		gc.setProductionModifiersHu(iNorse,     100, 100, 100, 110 )
 		gc.setProductionModifiersAI(iVenecia,    80,  80, 100, 100 )
 		gc.setProductionModifiersHu(iVenecia,    80, 100, 100, 125 )
 		gc.setProductionModifiersAI(iKiev,      100, 100, 100, 150 )
 		gc.setProductionModifiersHu(iKiev,      100, 100, 100, 150 )
 		gc.setProductionModifiersAI(iHungary,   125, 125, 100, 150 )
 		gc.setProductionModifiersHu(iHungary,   125, 125, 100, 150 )
-		gc.setProductionModifiersAI(iGermany,   110, 110, 120, 130 )
-		gc.setProductionModifiersHu(iGermany,   110, 110, 120, 130 )
-		gc.setProductionModifiersAI(iPoland,    100, 125, 140, 140 )
-		gc.setProductionModifiersHu(iPoland,    100, 160, 140, 140 )
+		gc.setProductionModifiersAI(iGermany,   120, 120, 120, 130 )
+		gc.setProductionModifiersHu(iGermany,   120, 120, 120, 130 )
+		gc.setProductionModifiersAI(iPoland,     90, 110, 130, 120 )
+		gc.setProductionModifiersHu(iPoland,     90, 150, 130, 120 )
 		gc.setProductionModifiersAI(iMoscow,     75,  75, 100, 150 )
 		gc.setProductionModifiersHu(iMoscow,     75,  75, 100, 150 )
 		gc.setProductionModifiersAI(iGenoa,     100, 100, 100, 125 )
 		gc.setProductionModifiersHu(iGenoa,     100, 100, 100, 125 )
 		gc.setProductionModifiersAI(iEngland,    90, 100, 100, 100 )
 		gc.setProductionModifiersHu(iEngland,    90, 100, 100, 100 )
-		gc.setProductionModifiersAI(iPortugal,   80,  90, 100,  90 )
-		gc.setProductionModifiersHu(iPortugal,   80,  90, 100,  90 )
+		gc.setProductionModifiersAI(iPortugal,   70,  90, 100,  90 )
+		gc.setProductionModifiersHu(iPortugal,   70,  90, 100,  90 )
 		gc.setProductionModifiersAI(iLithuania,  80, 100, 110, 100 )
 		gc.setProductionModifiersHu(iLithuania,  80, 100, 110, 100 )
 		gc.setProductionModifiersAI(iAustria,    50,  75, 100,  70 )
@@ -215,14 +215,14 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iCordoba,       20, 150,  70,  50, 120 )
 		gc.setSupportModifiersAI(iSpain,         10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iNorse,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iNorse,         10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iNorse,         50, 100,  50,  35, 120 ) # Norse are not meant to last long, give them high inflation
+		gc.setSupportModifiersHu(iNorse,         50, 100,  50,  35, 120 )
 		gc.setSupportModifiersAI(iVenecia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iVenecia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iKiev,          10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iKiev,          10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iHungary,       30, 100,  70,  45, 100 )
-		gc.setSupportModifiersHu(iHungary,       30, 100,  70,  35, 100 )
+		gc.setSupportModifiersAI(iHungary,       40, 100,  80,  45, 100 )
+		gc.setSupportModifiersHu(iHungary,       40, 100,  80,  45, 100 )
 		gc.setSupportModifiersAI(iGermany,       10, 100,  70,  25, 100 )
 		gc.setSupportModifiersHu(iGermany,       10, 100,  70,  25, 100 )
 		gc.setSupportModifiersAI(iPoland,        10, 100,  75,  25, 100 )
@@ -325,6 +325,7 @@ class RFCEBalance:
 		
 		gc.setInitialBuilding( iAustria, xml.iGranary, True )
 		gc.setInitialBuilding( iAustria, xml.iBarracks, True )
+                gc.setInitialBuilding( iAustria, xml.iForge, True )
 		
 		gc.setInitialBuilding( iTurkey, xml.iGranary, True )
 		gc.setInitialBuilding( iTurkey, xml.iBarracks, True )
@@ -529,6 +530,7 @@ class RFCEBalance:
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
 				gc.setDiplomacyModifiers( i, iAustria, +4 )
+                gc.setUP( iAustria, iUP_PerCityCommerce, 200)
 				
 		#gc.setUP( iTurkey, iUP_Conscription, 330 )
 		#gc.setUP( iTurkey, iUP_Conscription, 1 )
@@ -674,8 +676,10 @@ class RFCEBalance:
 		
 		gc.setBuildingPref( iPortugal, xml.iBelemTower, 20 )
 		gc.setBuildingPref( iPortugal, xml.iRibeira, 20 )
+		gc.setBuildingPref( iPortugal, xml.iCastle, 5 )
 		
 		gc.setBuildingPref( iAustria, xml.iStephansdom, 20 )
+		gc.setBuildingPref( iAustria, xml.iAustrianOperaHouse, 10 )
 		
 		gc.setBuildingPref( iTurkey, xml.iTopkapiPalace, 20 )
 		
@@ -711,6 +715,15 @@ class RFCEBalance:
 		
 		gc.setHistoricalEnemyAICheat( iSpain, iCordoba,  10 )
 		gc.setHistoricalEnemyAICheat( iCordoba, iSpain, -10 )
+                
+                gc.setHistoricalEnemyAICheat( iPortugal, iSpain,  10 )
+		gc.setHistoricalEnemyAICheat( iSpain, iPortugal, -10 )
+                
+                gc.setHistoricalEnemyAICheat( iAustria, iHungary,  10 )
+		gc.setHistoricalEnemyAICheat( iHungary, iAustria, -10 )
+                
+                gc.setHistoricalEnemyAICheat( iAustria, iGermany,  10 )
+		gc.setHistoricalEnemyAICheat( iGermany, iAustria, -10 )
                 
                 # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
                 #        second parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions

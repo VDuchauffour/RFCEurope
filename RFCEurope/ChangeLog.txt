@@ -44,6 +44,7 @@ Changes for version 1.0:
 		- nerfed France and Burgundy (in Units production)
 		- the French UP is disabled for the AI, it seems to do well enough with it anyway (AI doesn't build Charlemagne's Empire)
 		- buffed Venice stability
+		- various balance tweaks, the AI is about as good as it will ever get
 
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)
