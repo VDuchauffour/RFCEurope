@@ -49,6 +49,7 @@ Changes for version 1.0:
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)
 		- the way secession used to work, one can have -30 stability and 20 cities in Stable provinces and not collapse, now some cities are guaranteed to split
+		- fixed the new Kiev UHV, changed < meaning not conquered to >= to mean conquered, also fixed the text
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
