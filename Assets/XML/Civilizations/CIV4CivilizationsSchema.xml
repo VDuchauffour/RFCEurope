@@ -30,6 +30,7 @@
 	<ElementType name="DCNConditionVassalOf" content="textOnly"/>
 	<ElementType name="DCNConditionGenericVassal" content="textOnly" dt:type="int"/>
 	<ElementType name="DCNConditionMasterlOf" content="textOnly"/>
+	<ElementType name="DCNConditionMasterlOf2" content="textOnly"/>
 	<ElementType name="DCNConditionGenericMasterl" content="textOnly" dt:type="int"/>
 	<ElementType name="DCNConditionAfterTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="DCNConditionConqNumOfProvincesOfTypeType" content="textOnly" dt:type="int"/>
@@ -46,6 +47,7 @@
 		<element type="DCNConditionVassalOf"/>
 		<element type="DCNConditionGenericVassal"/>
 		<element type="DCNConditionMasterlOf"/>
+		<element type="DCNConditionMasterlOf2"/>
 		<element type="DCNConditionGenericMasterl"/>
 		<element type="DCNConditionAfterTurn"/>
 		<element type="DCNConditionConqNumOfProvincesOfTypeType"/>

@@ -26,6 +26,7 @@ Changes for version 1.0:
 		- Dawn of Man text for Byzantium
 		- XML cleanup
 		- Dawn of Man text fix for Venice
+		- Added second "Master of" condition to the Dynamic names
 
 	Art/Sound updates:
 		- Fixed Light Forest button

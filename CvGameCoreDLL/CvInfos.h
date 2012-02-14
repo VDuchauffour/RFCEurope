@@ -2288,6 +2288,7 @@ public:
 	int getDCNCondVassalOf( int iIndex ) const;
 	int getDCNCondGenericVassal( int iIndex ) const;
 	int getDCNCondMasterOf( int iIndex ) const;
+	int getDCNCondMasterOf2( int iIndex ) const;
 	int getDCNCondGenericMaster( int iIndex ) const;
 	int getDCNCondAfterTurn( int iIndex ) const;
 	int getDCNCondConqProvinceOfTypeType( int iIndex ) const;
@@ -2339,6 +2340,7 @@ protected:
 	int *m_piDCNVassalOf;
 	int *m_piDCNGenericVassal;
 	int *m_piDCNMasterOf;
+	int *m_piDCNMasterOf2;
 	int *m_piDCNGenericMaster;
 	int *m_piDCNAfterTurn;
 	int *m_piDCNConqProvinceOfTypeType;
@@ -2348,6 +2350,7 @@ protected:
 	CvWString* m_pszDCNName;
 
 	CvString* m_pszDCNTempMasterOf;
+	CvString* m_pszDCNTempMasterOf2;
 	CvString* m_pszDCNTempVassalOf;
 
 	// Arrays
