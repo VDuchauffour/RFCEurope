@@ -9635,6 +9635,8 @@ int CvCivilizationInfo::getDCNCondGenericVassal( int iIndex ) const
 { return m_piDCNGenericVassal[iIndex]; };
 int CvCivilizationInfo::getDCNCondMasterOf( int iIndex ) const
 { return m_piDCNMasterOf[iIndex]; };
+int CvCivilizationInfo::getDCNCondMasterOf2( int iIndex ) const
+{ return m_piDCNMasterOf2[iIndex]; };
 int CvCivilizationInfo::getDCNCondGenericMaster( int iIndex ) const
 { return m_piDCNGenericMaster[iIndex]; };
 int CvCivilizationInfo::getDCNCondAfterTurn( int iIndex ) const
@@ -9808,6 +9810,10 @@ void CvCivilizationInfo::read(FDataStreamBase* stream)
 	SAFE_DELETE_ARRAY(m_piDCNMasterOf);
 	m_piDCNMasterOf = new int[m_iNumDCNConditions];
 	stream->Read(m_iNumDCNConditions, m_piDCNMasterOf);
+
+	SAFE_DELETE_ARRAY(m_piDCNMasterOf2);
+	m_piDCNMasterOf2 = new int[m_iNumDCNConditions];
+	stream->Read(m_iNumDCNConditions, m_piDCNMasterOf2);
 	
 	SAFE_DELETE_ARRAY(m_piDCNGenericMaster);
 	m_piDCNGenericMaster = new int[m_iNumDCNConditions];
@@ -9925,6 +9931,7 @@ void CvCivilizationInfo::write(FDataStreamBase* stream)
 	stream->Write( m_iNumDCNConditions, m_piDCNVassalOf);
 	stream->Write( m_iNumDCNConditions, m_piDCNGenericVassal);
 	stream->Write( m_iNumDCNConditions, m_piDCNMasterOf);
+	stream->Write( m_iNumDCNConditions, m_piDCNMasterOf2);
 	stream->Write( m_iNumDCNConditions, m_piDCNGenericMaster);
 	stream->Write( m_iNumDCNConditions, m_piDCNAfterTurn);
 	stream->Write( m_iNumDCNConditions, m_piDCNConqProvinceOfTypeType);
@@ -9987,6 +9994,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 				m_piDCNVassalOf      = new int[m_iNumDCNConditions]; // init arrays
 				m_piDCNGenericVassal = new int[m_iNumDCNConditions]; // init arrays
 				m_piDCNMasterOf      = new int[m_iNumDCNConditions]; // init arrays
+				m_piDCNMasterOf2     = new int[m_iNumDCNConditions]; // init arrays
 				m_piDCNGenericMaster = new int[m_iNumDCNConditions]; // init arrays
 				m_piDCNAfterTurn     = new int[m_iNumDCNConditions]; // init arrays
 				m_piDCNConqProvinceOfTypeType = new int[m_iNumDCNConditions]; // init arrays
@@ -9994,8 +10002,9 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 				m_piDCNCondSpecificProvince   = new int[m_iNumDCNConditions]; // init arrays
 				m_piDCNCondHasRespawned   = new int[m_iNumDCNConditions]; // init arrays
 				m_pszDCNName         = new CvWString[m_iNumDCNConditions];
-				m_pszDCNTempMasterOf = new CvString[m_iNumDCNConditions];
-				m_pszDCNTempVassalOf = new CvString[m_iNumDCNConditions];
+				m_pszDCNTempMasterOf  = new CvString[m_iNumDCNConditions];
+				m_pszDCNTempMasterOf2 = new CvString[m_iNumDCNConditions];
+				m_pszDCNTempVassalOf  = new CvString[m_iNumDCNConditions];
 
 				for (j=0;j<iNumSibs;j++){ // for all of the conditions
 					if (pXML->GetChildXmlVal(szTextVal)) // get inside the condition and read the first tag
@@ -10013,6 +10022,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 						pXML->GetNextXmlVal(  m_pszDCNTempVassalOf[j] ); // read the temp name of MasterOf
 						pXML->GetNextXmlVal( &m_piDCNGenericVassal[j]); // generic vassal of anyone
 						pXML->GetNextXmlVal(  m_pszDCNTempMasterOf[j] ); // read the Master of
+						pXML->GetNextXmlVal(  m_pszDCNTempMasterOf2[j] ); // read the Master of
 						pXML->GetNextXmlVal( &m_piDCNGenericMaster[j] ); // generic Master of anyone
 						pXML->GetNextXmlVal( &m_piDCNAfterTurn[j] ); // when do we change
 						pXML->GetNextXmlVal( &m_piDCNConqProvinceOfTypeType[j] ); // conq outer provinces (give the type)

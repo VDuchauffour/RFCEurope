@@ -23067,7 +23067,36 @@ void CvPlayer::processCivNames()
 					};
 				};
 			};
+			// -----------------  MasterOf2 Check: last because is most time consuming -------------------------- //
+			if ( bPasses ){
+				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericMaster(iI);
+				if ( iVal == 1 ){ // we are checking for being master
+					iVal2 = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondMasterOf2(iI);
+					if ( iVal2 == -1 ){
+						bHasVassal = false;
+						for( iJ = 0; iJ < NUM_MAJOR_PLAYERS; iJ++ ){
+							if ( GET_TEAM( GET_PLAYER((PlayerTypes)iJ).getTeam() ).isVassal( getTeam() ) ){ // if we have a vassal
+								bHasVassal = true;
+								break;
+							};
+						};
+						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 9 (maybe)",getID() );
+						bPasses = bHasVassal;
+					}else{
+						bHasVassal = false;
+						for( iJ = 0; iJ < NUM_MAJOR_PLAYERS; iJ++ ){
+							if (GET_PLAYER((PlayerTypes)iJ).getCivilizationType() == iVal2){ // if this is the right civ
+								bHasVassal = GET_TEAM( GET_PLAYER((PlayerTypes)iJ).getTeam() ).isVassal( getTeam() ); // vassal or not, break
+								break;
+							};
+						};
+						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 10 (maybe)",getID() );
+						bPasses = bHasVassal;
+					};
+				};
+			};
 
+			// -----------------  Provinces Check: last because is most time consuming -------------------------- //
 			if ( bPasses ){
 				iVal2 = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondConqProvinceOfTypeNum(iI);
 				if ( iVal2 > 0 ){
