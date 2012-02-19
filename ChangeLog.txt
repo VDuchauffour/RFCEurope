@@ -19,6 +19,7 @@ Changes for version 1.0:
 		- Lowered spread (growth) chance of Palm Forests
 		- Small updates to the normal (respawn) areas
 		- Minor improvements and balancing on the settler and war maps
+		- New UHV conditions for Genoa and Austria
 
 	Map and province changes:
 

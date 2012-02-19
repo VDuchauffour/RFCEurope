@@ -1097,6 +1097,23 @@ class CvVictoryScreen:
                                 sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u"<color=0,255,0>%s</color>" %(sBestR)
                         else:
                                 sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u"<color=208,0,0>%s</color>" %(sBestR)
+                                
+                ### Add New Genoa UHV
+                if ( self.iActivePlayer == con.iGenoa ):
+                        iMostTrade = 0
+                        iBiggestTrader = -1
+                        for iPlayer in range( con.iNumPlayers ):
+                                pPlayer = gc.getPlayer( iPlayer )
+                                iTrade = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
+                                if ( iTrade > iMostTrade ):
+                                       iMostTrade = iTrade
+                                       iBiggestTrader = iPlayer
+                                 
+                        pBestTrader = gc.getPlayer( iBiggestTrader )
+                        if ( iBiggestTrader == con.iGenoa ):
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u"<color=0,255,0>%s</color>" %(pBestTrader.getName())
+                        else:
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u"<color=208,0,0>%s</color>" %(pBestTrader.getName())
 
                 screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+7, self.Y_UHV3+15, self.W_UHV3-10, self.H_UHV3-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 
