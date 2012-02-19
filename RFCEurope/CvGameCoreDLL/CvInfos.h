@@ -1796,6 +1796,7 @@ public:
 	int getStateReligionCulture() const;
 	int getPaganCulturePerCity() const;
 	int getPaganCulture() const;
+	int getInterest() const;
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
@@ -1809,6 +1810,7 @@ protected:
 	int m_iStateReligionCulture;
 	int m_iPaganCulture;
 	int m_iPaganCulturePerCity;
+	int m_iInterest;
 
 	int m_iBuildingClassType;						
 	int m_iVictoryPrereq;

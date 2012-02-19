@@ -450,7 +450,7 @@ class Victory:
                         elif ( iPlayer == iPortugal ):
                                 pPortugal.setUHVCounter( 2, pPortugal.getUHVCounter( 2 ) + 1 )
                         elif ( iPlayer == iDutch ):
-                                pDutch.setUHVCounter( 2, pDutch.getUHVCounter( 2 ) + 1 )
+                                pDutch.setUHVCounter( 1, pDutch.getUHVCounter( 1 ) + 1 )
 
         def onCorporationFounded(self, iPlayer ):
                 self.setCorporationsFounded( self.getCorporationsFounded() + 1 )
@@ -1133,28 +1133,40 @@ class Victory:
                                 pSweden.setUHV( 2, 0 )
                 
         def checkDutch( self, iGameTurn ):
-                if ( iGameTurn == xml.i1640AD and pDutch.getUHV( 0 ) == - 1 ):
-                        iCount = 0
-                        for iPlayer in range( iNumMajorPlayers ):
-                                if ( iPlayer != iDutch and teamDutch.isOpenBorders( iPlayer ) ):
-                                        iCount += 1
+                #if ( iGameTurn == xml.i1640AD and pDutch.getUHV( 0 ) == - 1 ):
+                        #iCount = 0
+                        #for iPlayer in range( iNumMajorPlayers ):
+                                #if ( iPlayer != iDutch and teamDutch.isOpenBorders( iPlayer ) ):
+                                        #iCount += 1
 
-                        if ( iCount >= 10 ):
-                                pDutch.setUHV( 0, 1 )
-                        else:
-                                pDutch.setUHV( 0, 0 )
+                        #if ( iCount >= 10 ):
+                                #pDutch.setUHV( 0, 1 )
+                        #else:
+                                #pDutch.setUHV( 0, 0 )
 
-                if ( iGameTurn <= xml.i1750AD and pDutch.getUHV( 1 ) == - 1 ):
+                if ( iGameTurn <= xml.i1750AD and pDutch.getUHV( 0 ) == -1 ):
                         pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
                         if ( pPlot.isCity() ):
                                 iGMerchant = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_MERCHANT")
                                 if ( pPlot.getPlotCity().getFreeSpecialistCount(iGMerchant) >= 5 ):
-                                        pDutch.setUHV( 1, 1 )
+                                        pDutch.setUHV( 0, 1 )
                 else:
-                        if ( pDutch.getUHV( 1 ) == - 1 ):
-                                pDutch.setUHV( 1, 0 )
+                        if ( pDutch.getUHV( 0 ) == -1 ):
+                                pDutch.setUHV( 0, 0 )
 
+                if ( pDutch.getUHV( 1 ) == -1 ):
+                        if ( pDutch.getUHVCounter( 1 ) > 3 ):
+                                pDutch.setUHV( 1, 1 )
+                                
                 if ( pDutch.getUHV( 2 ) == -1 ):
-                        if ( pDutch.getUHVCounter( 2 ) > 3 ):
-                                pDutch.setUHV( 2, 1 )
+                        iGold = pDutch.getGold()
+                        bMost = True
+                        for iCiv in range( iNumPlayers ):
+                                if ( iCiv != iDutch and gc.getPlayer( iCiv ).isAlive() ):
+                                        if (gc.getPlayer(iCiv).getGold() > iGold):
+                                                bMost = False
+                        if ( bMost ):
+                                 pDutch.setUHV( 2, 1 )
+                        else:
+                                 pDutch.setUHV( 2, 0 )
                 

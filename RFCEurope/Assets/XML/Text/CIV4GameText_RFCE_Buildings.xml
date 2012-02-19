@@ -1164,5 +1164,14 @@
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] if you don't have a State Religion. </Russian>
 	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_INTEREST_RATE</Tag>
+		<English>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </English>
+		<French>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn.</French>
+		<German>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn.</German>
+		<Italian>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn.</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn.</Russian>
+	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

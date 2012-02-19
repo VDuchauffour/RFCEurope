@@ -1067,6 +1067,10 @@ public:
 	bool canFightBrothers();
 	void changeWarWithBrothers( int iChange );
 
+	// 3MiroBuildings
+	void setInterest( int iNewInterest );
+	int getInterest() const;
+
 	void setIsCrusader( bool bVal );
 	bool getIsCrusader() const;
 
@@ -1164,6 +1168,9 @@ protected:
 
 	// 3MiroBuildings
 	int m_iAllowBrothersAtWar;
+
+	// 3MiroBuildings
+	int m_iInterest; // given by the new building ability
 
 	// 3MiroProjects: count the number of colonies here
 	int m_iNumColonies;
