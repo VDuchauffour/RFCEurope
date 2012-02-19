@@ -3853,6 +3853,9 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		if ( GC.getBuildingInfo(eBuilding).getPaganCulture() > 0 ){
 			setPaganCulture( getPaganCulture() + iChange * GC.getBuildingInfo(eBuilding).getPaganCulture() );
 		};
+		if ( GC.getBuildingInfo(eBuilding).getInterest() > 0 ){
+			GET_PLAYER(getOwnerINLINE()).setInterest( std::max( GET_PLAYER(getOwnerINLINE()).getInterest() + iChange*GC.getBuildingInfo(eBuilding).getInterest(), 0 ) );
+		};
 		//3MiroBuildings - END
 
 		changeEspionageDefenseModifier(GC.getBuildingInfo(eBuilding).getEspionageDefenseModifier() * iChange);

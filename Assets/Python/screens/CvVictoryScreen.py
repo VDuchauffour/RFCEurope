@@ -1085,18 +1085,18 @@ class CvVictoryScreen:
                         else:
                                 sBestR = localText.getText( gc.getReligionInfo(iBestLand).getAdjectiveKey().encode('ascii', 'replace'), () )
                         if ( iBestLand == xml.iCatholicism ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u"<color=0,255,0>%s</color>" %(sBestR)
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u" <color=0,255,0>%s</color>" %(sBestR)
                         else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u"<color=208,0,0>%s</color>" %(sBestR)
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u" <color=208,0,0>%s</color>" %(sBestR)
                                 
                         if ( iBestPop == 5 ):
                                 sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
                         else:
                                 sBestR = localText.getText( gc.getReligionInfo(iBestPop).getAdjectiveKey().encode('ascii', 'replace'), () )
                         if ( iBestPop == xml.iCatholicism ):
-                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u"<color=0,255,0>%s</color>" %(sBestR)
+                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u" <color=0,255,0>%s</color>" %(sBestR)
                         else:
-                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u"<color=208,0,0>%s</color>" %(sBestR)
+                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u" <color=208,0,0>%s</color>" %(sBestR)
                                 
                 ### Add New Genoa UHV
                 if ( self.iActivePlayer == con.iGenoa ):
@@ -1111,9 +1111,24 @@ class CvVictoryScreen:
                                  
                         pBestTrader = gc.getPlayer( iBiggestTrader )
                         if ( iBiggestTrader == con.iGenoa ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u"<color=0,255,0>%s</color>" %(pBestTrader.getName())
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u" <color=0,255,0>%s</color>" %(pBestTrader.getName())
                         else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u"<color=208,0,0>%s</color>" %(pBestTrader.getName())
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u" <color=208,0,0>%s</color>" %(pBestTrader.getName())
+                
+                ### Add Dutch and Byzantium UHV
+                if ( self.iActivePlayer == con.iDutch or self.iActivePlayer == con.iByzantium ):
+                        iGold = 0
+                        iPlayer = -1
+                        for iCiv in range( con.iNumPlayers ):
+                                if ( gc.getPlayer( iCiv ).isAlive() ):
+                                        if (gc.getPlayer(iCiv).getGold() > iGold):
+                                                iGold = gc.getPlayer(iCiv).getGold()
+                                                iPlayer = iCiv
+                        pPlayer = gc.getPlayer( iPlayer )
+                        if ( iPlayer == self.iActivePlayer ):
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=0,255,0>%s</color>" %(pPlayer.getName())
+                        else:
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=208,0,0>%s</color>" %(pPlayer.getName()) + " (%d)" %pPlayer.getGold()
 
                 screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+7, self.Y_UHV3+15, self.W_UHV3-10, self.H_UHV3-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 

@@ -19,7 +19,7 @@ Changes for version 1.0:
 		- Lowered spread (growth) chance of Palm Forests
 		- Small updates to the normal (respawn) areas
 		- Minor improvements and balancing on the settler and war maps
-		- New UHV conditions for Genoa and Austria
+		- New UHV conditions for Genoa and Austria and the Dutch
 
 	Map and province changes:
 
@@ -28,6 +28,7 @@ Changes for version 1.0:
 		- XML cleanup
 		- Dawn of Man text fix for Venice
 		- Added second "Master of" condition to the Dynamic names
+		- Added new unique ability for a building, Amsterdam Buers gives 2% interest to gold added each turn
 
 	Art/Sound updates:
 		- Fixed Light Forest button

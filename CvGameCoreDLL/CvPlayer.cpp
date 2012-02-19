@@ -109,6 +109,7 @@ CvPlayer::CvPlayer()
 	for( int i=0; i<10; i++ ){
 		m_aiPickleFree[i] = 0;
 	};
+	m_iInterest = 0;
 	//Rhye (jdog) - end -----------------------
 
 	reset(NO_PLAYER, true);
@@ -326,6 +327,7 @@ void CvPlayer::init(PlayerTypes eID)
 	m_iAllowBrothersAtWar = 0; // 3MiroBuldings
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
 	m_iPaganCulture = 0;
+	m_iInterest = 0;
 }
 
 
@@ -800,6 +802,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iUnitsProduction = 0;
 	m_iUnitsSupport = 0;
 	m_iCivicSupport = 0;
+	m_iInterest = 0;
 
 	if (!bConstructorCall)
 	{
@@ -2705,6 +2708,12 @@ void CvPlayer::doTurn()
 	//GC.getGameINLINE().logMsg("player doTurn FAssertMsg1 ", getID()); //Rhye and 3Miro
 	FAssertMsg(!hasBusyUnit() || GC.getGameINLINE().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)  || GC.getGameINLINE().isSimultaneousTeamTurns(), "End of turn with busy units in a sequential-turn game");
 	//GC.getGameINLINE().logMsg("player doTurn FAssertMsg1 ", getID()); //Rhye and 3Miro
+
+	// 3Miro: add the interest
+	if ( getInterest() > 0 ){
+		//GC.getGameINLINE().logMsg("player doTurn Interest %d  %d  %d ", getID(),getInterest(),getGold() ); //Rhye and 3Miro
+		setGold( (getGold() * ( 100 + getInterest() ))/100 );
+	};
 
 	// 3Miro: I Believe we are calling Pyton here
 	CvEventReporter::getInstance().beginPlayerTurn( GC.getGameINLINE().getGameTurn(),  getID());
@@ -17308,6 +17317,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream ->Read(&m_iCivicSupport);
 
 	pStream ->Read(&m_iPaganCulture);
+	pStream ->Read(&m_iInterest);
 }
 
 //
@@ -17759,6 +17769,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream ->Write(m_iCivicSupport);
 
 	pStream ->Write(m_iPaganCulture);
+	pStream ->Write(m_iInterest);
 }
 
 void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience, int iX, int iY)
@@ -23757,4 +23768,11 @@ int CvPlayer::getPaganCulture() const
 };
 void CvPlayer::setPaganCulture( int iNewValue ){
 	m_iPaganCulture = iNewValue;
+};
+void CvPlayer::setInterest( int iNewInterest ){
+	m_iInterest = iNewInterest;
+};
+int CvPlayer::getInterest() const
+{
+	return m_iInterest;
 };

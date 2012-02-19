@@ -7737,6 +7737,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 		szBuffer.append(NEWLINE);
 		szBuffer.append( gDLL->getText("TXT_KEY_PAGAN_CULTURE", kBuilding.getPaganCulture() ) );
 	};
+	if ( kBuilding.getInterest() > 0 ){
+		szBuffer.append(NEWLINE);
+		szBuffer.append( gDLL->getText("TXT_KEY_INTEREST_RATE", kBuilding.getInterest() ) );
+	};
 	
 	// 3MiroCivic: Building - Civic combo
 			int iCivic;
