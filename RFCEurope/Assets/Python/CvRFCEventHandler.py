@@ -444,6 +444,7 @@ class CvRFCEventHandler:
 			sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
 			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
+                print("3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
 
 		print(" 3Miro onBegTurn: ",iGameTurn)
 		self.barb.checkTurn(iGameTurn)

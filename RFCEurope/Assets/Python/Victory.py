@@ -932,14 +932,26 @@ class Victory:
                                 pGenoa.setUHV( 0, 0 )
                 
                 if ( iGameTurn == xml.i1640AD and pGenoa.getUHV( 2 ) == -1 ):
-                        iCount = 0
+                        iGenoaTrade = iImports = pGenoa.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pGenoa.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
+                        bLargest = True
                         for iPlayer in range( iNumMajorPlayers ):
-                                if ( iPlayer != iGenoa and teamGenoa.isOpenBorders( iPlayer ) ):
-                                        iCount += 1
-                        if ( iCount >= 10 ):
+                                if ( iPlayer != iGenoa ):
+                                        pPlayer = gc.getPlayer(iPlayer)
+                                        if ( pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE) > iGenoaTrade ):
+                                                bLargest = False
+                                                break
+                        if ( bLargest ):
                                 pGenoa.setUHV( 2, 1 )
                         else:
                                 pGenoa.setUHV( 2, 0 )
+                        #iCount = 0
+                        #for iPlayer in range( iNumMajorPlayers ):
+                        #        if ( iPlayer != iGenoa and teamGenoa.isOpenBorders( iPlayer ) ):
+                        #                iCount += 1
+                        #if ( iCount >= 10 ):
+                        #        pGenoa.setUHV( 2, 1 )
+                        #else:
+                        #        pGenoa.setUHV( 2, 0 )
                                 
                 
         def checkEngland( self, iGameTurn ):
@@ -1000,7 +1012,7 @@ class Victory:
                                 pLithuania.setUHV( 2, 1 )
                 
         def checkAustria( self, iGameTurn ):
-                if ( iGameTurn == xml.i1600AD and pAustria.getUHV( 0 ) == -1 ):
+                if ( iGameTurn == xml.i1617AD and pAustria.getUHV( 0 ) == -1 ):
                         bConq = True
                         for iProv in tAustriaControl:
                                 if ( pAustria.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
@@ -1024,13 +1036,8 @@ class Victory:
                         else:
                                  pAustria.setUHV( 1, 0 )
                                 
-                if ( iGameTurn == xml.i1750AD and pAustria.getUHV( 2 ) == -1 ):
-                        iCount = 0
-                        for iPlayer in range( iNumMajorPlayers ):
-                                if ( iPlayer != iAustria and teamAustria.isDefensivePact( iPlayer ) ):
-                                        iCount += 1
-
-                        if ( iCount >= 2 ):
+                if ( iGameTurn == xml.i1780AD and pAustria.getUHV( 2 ) == -1 ):
+                        if ( gc.getGame().getTeamRank(iAustria) == 0 ):
                                  pAustria.setUHV( 2, 1 )
                         else:
                                  pAustria.setUHV( 2, 0 )

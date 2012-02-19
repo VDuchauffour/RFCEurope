@@ -123,6 +123,7 @@ i1580AD =340
 i1581AD =340					# Dutch Spawn
 i1588AD =344									# Spain UHV 3
 i1600AD =350									# Austria UHV 1, Poland UHV 1, Sweden UHV 1
+i1617AD =358
 i1620AD =360
 i1623AD =361 # Galileo
 i1640AD =370									# Dutch UHV 1, Genoa UHV 1, Portugal UHV 2
@@ -137,7 +138,8 @@ i1690AD =395 # Steam Engine
 i1700AD =400									# Austria UHV 2, Sweden UHV 2
 i1715AD =415
 i1730AD =430
-i1750AD =450									# Austria UHV 3, Dutch UHV 2, Sweden UHV 3
+i1750AD =450									# Dutch UHV 2, Sweden UHV 3
+i1780AD =480                                                                    # Austria UHV 3
 i1800AD =500 # Industrial Era
 
 
