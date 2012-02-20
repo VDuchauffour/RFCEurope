@@ -94,7 +94,7 @@
 	<ElementType name="iStateReligionCulture" content="textOnly" dt:type="int"/>
 	<ElementType name="iPaganCulture" content="textOnly" dt:type="int"/>
 	<ElementType name="iPaganCulturePerCity" content="textOnly" dt:type="int"/>
-        <ElementType name="iInterestPerTurn" content="textOnly" dt:type="int"/>
+	<ElementType name="iInterestPerTurn" content="textOnly" dt:type="int"/>
 	<!-- 3Miro -->
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
