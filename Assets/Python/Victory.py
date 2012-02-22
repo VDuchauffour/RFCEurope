@@ -1167,6 +1167,4 @@ class Victory:
                                                 bMost = False
                         if ( bMost ):
                                  pDutch.setUHV( 2, 1 )
-                        else:
-                                 pDutch.setUHV( 2, 0 )
                 
