@@ -20,6 +20,7 @@ Changes for version 1.0:
 		- Small updates to the normal (respawn) areas
 		- Minor improvements and balancing on the settler and war maps
 		- New UHV conditions for Genoa and Austria and the Dutch
+		- New info added to the UHV for Poland, one can now see a counter for the cities under control
 
 	Map and province changes:
 
