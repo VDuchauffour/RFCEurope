@@ -696,7 +696,7 @@
 		<Spanish>Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT3</Tag>
 		<English>[COLOR_YELLOW]The Financial Domination:[COLOR_REVERT] Become the richest country in Europe.</English>
 		<French>[COLOR_YELLOW]The Financial Domination:[COLOR_REVERT] Become the richest country in Europe.</French>
@@ -822,7 +822,7 @@
 		<Spanish>Pagan</Spanish>
 		<Russian>Pagan</Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_BIGGEST_TRADER</Tag>
 		<English>The biggest Trader is: </English>
 		<French>The biggest Trader is: </French>
@@ -831,7 +831,7 @@
 		<Spanish>The biggest Trader is: </Spanish>
 		<Russian>The biggest Trader is: </Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_RICHEST_NATION</Tag>
 		<English>The Richest Leader is: </English>
 		<French>The Richest Leader is: </French>
@@ -840,7 +840,7 @@
 		<Spanish>The Richest Leader is: </Spanish>
 		<Russian>The Richest Leader is: </Russian>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_CITIES_CONTROLLED</Tag>
 		<English>Cities under control: </English>
 		<French>Cities under control: </French>

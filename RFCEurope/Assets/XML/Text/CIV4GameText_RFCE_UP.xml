@@ -79,7 +79,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUR2</Tag>
-		<English>+2 Culture and +1 Happiness in every city. </English>
+		<English>+2 Culture and +1 Happiness in every city.</English>
 		<French>+2 Culture et +1 Bonheur dans chaque ville</French>
 		<German>+2 Kultur und +1 Zufriedenheit in jeder Stadt</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
-		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in it. </English>
+		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in it.</English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Ausbreitung der Staatsreligion in allen St&#228;dten</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
@@ -135,7 +135,7 @@
 		<Tag>TXT_KEY_UP_SPN2</Tag>
 		<English>No stability penalty from Religious Prosecution and +2EP per city.</English>
 		<French>Pas de p&#233;nalit&#233;s pour les Pers&#233;cuteur et +2XP par ville.</French>
-		<German>+2EP pro Stadt und kein Stabilit&#228;tsverlust durch Religi&#246;se Inquisition </German>
+		<German>+2EP pro Stadt und kein Stabilit&#228;tsverlust durch Religi&#246;se Inquisition</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
 		<Russian>&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#238;&#242; &#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#238;&#227;&#238; &#241;&#243;&#228;&#229;&#225;&#237;&#238;&#227;&#238; &#207;&#240;&#229;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#255; &#232; +2EP &#231;&#224; &#227;&#238;&#240;&#238;&#228;.</Russian>
@@ -225,7 +225,7 @@
 		<Tag>TXT_KEY_UP_HUN2</Tag>
 		<English>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</English>
 		<French>Pas de m&#233;contentement ou d'instabilit&#233; pour une cuture &#233;trang&#232;re. +1 Bonheur dans les villes.</French>
-		<German>Keine Unzufriedenheit oder Instabilit&#228;t durch fremde Kultur und +1 Zufriedenheit in allen St&#228;dten </German>
+		<German>Keine Unzufriedenheit oder Instabilit&#228;t durch fremde Kultur und +1 Zufriedenheit in allen St&#228;dten</German>
 		<Italian>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</Italian>
 		<Spanish>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</Spanish>
 		<Russian>No unhappiness or instability from foreign culture, and +1 happiness in all cities.</Russian>
