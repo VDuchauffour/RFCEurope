@@ -840,4 +840,13 @@
 		<Spanish>The Richest Leader is: </Spanish>
 		<Russian>The Richest Leader is: </Russian>
 	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_UHV_CITIES_CONTROLLED</Tag>
+		<English>Cities under control: </English>
+		<French>Cities under control: </French>
+		<German>Cities under control: </German>
+		<Italian>Cities under control: </Italian>
+		<Spanish>Cities under control: </Spanish>
+		<Russian>Cities under control: </Russian>
+	</TEXT>
 </Civ4GameText>
