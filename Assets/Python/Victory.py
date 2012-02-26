@@ -1155,7 +1155,7 @@ class Victory:
                                 pDutch.setUHV( 0, 0 )
 
                 if ( pDutch.getUHV( 1 ) == -1 ):
-                        if ( pDutch.getUHVCounter( 1 ) > 3 ):
+                        if ( pDutch.getUHVCounter( 1 ) > 4 ):
                                 pDutch.setUHV( 1, 1 )
                                 
                 if ( pDutch.getUHV( 2 ) == -1 ):

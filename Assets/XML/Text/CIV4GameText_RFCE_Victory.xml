@@ -689,7 +689,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT2</Tag>
-		<English>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 4 Colonial Projects.</English>
+		<English>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 5 Colonial Projects.</English>
 		<French>Construire 4 Projets Coloniaux.</French>
 		<German>Errichten Sie 4 Kolonien</German>
 		<Italian>Devi avere pi&#249; di 5000 cultura nel 450 d.C. (turno 143)</Italian>
@@ -848,5 +848,193 @@
 		<Italian>Cities under control: </Italian>
 		<Spanish>Cities under control: </Spanish>
 		<Russian>Cities under control: </Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
+		<English>Emperor</English>
+		<French>Emperor</French>
+		<German>Emperor</German>
+		<Italian>Emperor</Italian>
+		<Spanish>Emperor</Spanish>
+		<Russian>Emperor</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_2</Tag>
+		<English>King</English>
+		<French>King</French>
+		<German>King</German>
+		<Italian>King</Italian>
+		<Spanish>King</Spanish>
+		<Russian>King</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_3</Tag>
+		<English>Prince</English>
+		<French>Prince</French>
+		<German>Prince</German>
+		<Italian>Prince</Italian>
+		<Spanish>Prince</Spanish>
+		<Russian>Prince</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_4</Tag>
+		<English>Grand Duke</English>
+		<French>Grand Duke</French>
+		<German>Grand Duke</German>
+		<Italian>Grand Duke</Italian>
+		<Spanish>Grand Duke</Spanish>
+		<Russian>Grand Duke</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_5</Tag>
+		<English>Baron</English>
+		<French>Baron</French>
+		<German>Baron</German>
+		<Italian>Baron</Italian>
+		<Spanish>Baron</Spanish>
+		<Russian>Baron</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_6</Tag>
+		<English>Duke</English>
+		<French>Duke</French>
+		<German>Duke</German>
+		<Italian>Duke</Italian>
+		<Spanish>Duke</Spanish>
+		<Russian>Duke</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_7</Tag>
+		<English>Marquess</English>
+		<French>Marquess</French>
+		<German>Marquess</German>
+		<Italian>Marquess</Italian>
+		<Spanish>Marquess</Spanish>
+		<Russian>Marquess</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_8</Tag>
+		<English>Count</English>
+		<French>Count</French>
+		<German>Count</German>
+		<Italian>Count</Italian>
+		<Spanish>Count</Spanish>
+		<Russian>Count</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_9</Tag>
+		<English>Knight</English>
+		<French>Knight</French>
+		<German>Knight</German>
+		<Italian>Knight</Italian>
+		<Spanish>Knight</Spanish>
+		<Russian>Knight</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_10</Tag>
+		<English>Guild Master</English>
+		<French>Guild Master</French>
+		<German>Guild Master</German>
+		<Italian>Guild Master</Italian>
+		<Spanish>Guild Master</Spanish>
+		<Russian>Guild Master</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_11</Tag>
+		<English>Merchant</English>
+		<French>Merchant</French>
+		<German>Merchant</German>
+		<Italian>Merchant</Italian>
+		<Spanish>Merchant</Spanish>
+		<Russian>Merchant</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_12</Tag>
+		<English>Squire</English>
+		<French>Squire</French>
+		<German>Squire</German>
+		<Italian>Squire</Italian>
+		<Spanish>Squire</Spanish>
+		<Russian>Squire</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_13</Tag>
+		<English>Village Mayor</English>
+		<French>Village Mayor</French>
+		<German>Village Mayor</German>
+		<Italian>Village Mayor</Italian>
+		<Spanish>Village Mayor</Spanish>
+		<Russian>Village Mayor</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_14</Tag>
+		<English>Blacksmith</English>
+		<French>Blacksmith</French>
+		<German>Blacksmith</German>
+		<Italian>Blacksmith</Italian>
+		<Spanish>Blacksmith</Spanish>
+		<Russian>Blacksmith</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_15</Tag>
+		<English>Peddler</English>
+		<French>Peddler</French>
+		<German>Peddler</German>
+		<Italian>Peddler</Italian>
+		<Spanish>Peddler</Spanish>
+		<Russian>Peddler</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_16</Tag>
+		<English>Apprentice</English>
+		<French>Apprentice</French>
+		<German>Apprentice</German>
+		<Italian>Apprentice</Italian>
+		<Spanish>Apprentice</Spanish>
+		<Russian>Apprentice</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_17</Tag>
+		<English>Peasant</English>
+		<French>Peasant</French>
+		<German>Peasant</German>
+		<Italian>Peasant</Italian>
+		<Spanish>Peasant</Spanish>
+		<Russian>Peasant</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_18</Tag>
+		<English>Jester</English>
+		<French>Jester</French>
+		<German>Jester</German>
+		<Italian>Jester</Italian>
+		<Spanish>Jester</Spanish>
+		<Russian>Jester</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_19</Tag>
+		<English>Serf</English>
+		<French>Serf</French>
+		<German>Serf</German>
+		<Italian>Serf</Italian>
+		<Spanish>Serf</Spanish>
+		<Russian>Serf</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_LEADER_NAME_20</Tag>
+		<English>Begger</English>
+		<French>Begger</French>
+		<German>Begger</German>
+		<Italian>Begger</Italian>
+		<Spanish>Begger</Spanish>
+		<Russian>Begger</Russian>
+	</TEXT>
+        <TEXT>
+		<Tag>TXT_KEY_DQ_TEXT_STRING</Tag>
+		<English>%s1_leader, during this game you achieved the rank of %s2_leader!</English>
+		<French>%s1_leader, during this game you achieved the rank of %s2_leader!</French>
+		<German>%s1_leader, during this game you achieved the rank of %s2_leader!</German>
+		<Italian>%s1_leader, during this game you achieved the rank of %s2_leader!</Italian>
+		<Spanish>%s1_leader, during this game you achieved the rank of %s2_leader!</Spanish>
 	</TEXT>
 </Civ4GameText>

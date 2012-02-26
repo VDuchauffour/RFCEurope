@@ -21,6 +21,8 @@ Changes for version 1.0:
 		- Minor improvements and balancing on the settler and war maps
 		- New UHV conditions for Genoa and Austria and the Dutch
 		- New info added to the UHV for Poland, one can now see a counter for the cities under control
+		- New victory screen with ranking based on mediaeval society (Dan Quayle == Beggar and Augustus Ceaser == Emperor)
+		- The score no longer depend on date (to account for late starts and late UHV conditions) and huge points are rewarded for completing UHV conditions
 
 	Map and province changes:
 
@@ -50,6 +52,7 @@ Changes for version 1.0:
 		- the French UP is disabled for the AI, it seems to do well enough with it anyway (AI doesn't build Charlemagne's Empire)
 		- buffed Venice stability
 		- various balance tweaks, the AI is about as good as it will ever get
+		- the Dutch UHV now requires 5 colonies (I got 7 in my game, but had no powerful enemies)
 
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)

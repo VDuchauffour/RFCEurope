@@ -1328,7 +1328,7 @@
 	<Define>
 		<DefineName>SCORE_POPULATION_FACTOR</DefineName>
 		<!--Score you get if you have the 'maximum' population possible on the current map-->
-		<iDefineIntVal>5000</iDefineIntVal>
+		<iDefineIntVal>2000</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_LAND_FACTOR</DefineName>
