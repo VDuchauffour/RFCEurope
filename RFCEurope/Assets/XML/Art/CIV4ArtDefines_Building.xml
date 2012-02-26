@@ -786,7 +786,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/LuxuryStore/ts_s_gov.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/LuxuryGoods.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,3,14</Button>
+			<Button>,Art/Interface/Buttons/Buildings/LuxuryGoods.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,14</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WAREHOUSE</Type>
