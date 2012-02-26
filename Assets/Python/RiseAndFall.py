@@ -2279,7 +2279,7 @@ class RiseAndFall:
                         #print(" 3Miro: make Dutch Units in Plot ",tPlot )
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iMusketman, iCiv, tPlot, 6)
-                        utils.makeUnit(xml.iProtestantMissionary, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iProtestantMissionary, iCiv, tPlot, 2)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
                                 utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 2 )

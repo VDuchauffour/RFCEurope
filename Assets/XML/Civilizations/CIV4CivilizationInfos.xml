@@ -3654,7 +3654,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_LIMITED_MONARCHY</CivicType>
+				<CivicType>CIVIC_MERCHANT_REPUBLIC</CivicType>
 				<CivicType>CIVIC_BUREAUCRACY</CivicType>
 				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
 				<CivicType>CIVIC_TRADE_ECONOMY</CivicType>

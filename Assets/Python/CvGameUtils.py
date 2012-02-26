@@ -250,10 +250,13 @@ class CvGameUtils:
                         iLandScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getLandScore(), gc.getGame().getInitLand(), gc.getGame().getMaxLand(), gc.getDefineINT("SCORE_LAND_FACTOR"), True, bFinal, bVictory)
                         iTechScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getTechScore(), gc.getGame().getInitTech(), gc.getGame().getMaxTech(), gc.getDefineINT("SCORE_TECH_FACTOR"), True, bFinal, bVictory)
                         iWondersScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getWondersScore(), gc.getGame().getInitWonders(), gc.getGame().getMaxWonders(), gc.getDefineINT("SCORE_WONDER_FACTOR"), False, bFinal, bVictory)
-                        iUHVScore = 0
+                        iUHVDone = 0
                         for iUHV in range( 3 ):
-                                if ( gc.getPlayer(ePlayer).getUHV( 0 ) == 1 ):
-                                        iUHVScore += 5000
+                                if ( gc.getPlayer(ePlayer).getUHV( iUHV ) == 1 ):
+                                        iUHVDone += 1
+                        iUHVScore = iUHVDone * 3000
+                        if ( iUHVDone == 3 ): # if finished all 3 UHV conditions
+                                iUHVScore += 6000
                         return int(iPopulationScore + iLandScore + iWondersScore + iTechScore + iUHVScore)
                         
         def getScoreComponentRFCE(self,iRawScore, iInitial, iMax, iFactor, bExponential, bFinal, bVictory):
