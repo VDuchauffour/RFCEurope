@@ -46,8 +46,8 @@ class Stability:
                 gc.getPlayer( con.iByzantium ).changeStabilityBase( iCathegoryExpansion, 5 ) # to account for the cities build in the WB
                 if ( not gc.getPlayer( con.iFrankia ).isHuman() ):
                         gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
-                if ( not gc.getPlayer( con.iVenecia ).isHuman() ):
-                        gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
+                #if ( not gc.getPlayer( con.iVenecia ).isHuman() ):
+                        #gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
                 iHandicap = gc.getGame().getHandicapType()
                 if (iHandicap == 0):
                         gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 8 )
@@ -172,8 +172,6 @@ class Stability:
                         pConq.changeStabilityBase( iCathegoryExpansion, 1 )
                         pConq.setStabilitySwing( pConq.getStabilitySwing() + 3 )
                 if ( pConq.getCivics(5) == 28 ):
-                        pConq.changeStabilityBase( iCathegoryExpansion, 1 )
-                if ( playerType == con.iTurkey and pConq.getStability() < 3 ): # lazy version of an UP
                         pConq.changeStabilityBase( iCathegoryExpansion, 1 )
                 self.recalcEpansion( pOwner )
                 self.recalcEpansion( pConq )
@@ -559,5 +557,13 @@ class Stability:
                 iPlayer = pPlayer.getID()
                 if ( iPlayer == con.iTurkey or iPlayer == con.iMoscow ): # five free cities for those two
                         iNumCities = max( 0, iNumCities - 5 )
-                iExpStability -= iNumCities*iNumCities / 40 
+                iExpStability -= iNumCities*iNumCities / 40
+                if ( pPlayer.getID() == con.iTurkey and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
+                        if ( pPlayer.isHuman() ):
+                                iExpStability += 5
+                        else:
+                                iExpStability += min( 3 - pPlayer.getStability(), 8 )
+                if ( pPlayer.getID() == con.iVenecia and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
+                        if ( not pPlayer.isHuman() ):
+                                iExpStability += 4
                 pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )

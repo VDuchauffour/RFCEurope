@@ -23,6 +23,7 @@ Changes for version 1.0:
 		- New info added to the UHV for Poland, one can now see a counter for the cities under control
 		- New victory screen with ranking based on mediaeval society (Dan Quayle == Beggar and Augustus Ceaser == Emperor)
 		- The score no longer depend on date (to account for late starts and late UHV conditions) and huge points are rewarded for completing UHV conditions
+		- Updated the reference folder with explanations about many UP and UHV
 
 	Map and province changes:
 
@@ -53,6 +54,10 @@ Changes for version 1.0:
 		- buffed Venice stability
 		- various balance tweaks, the AI is about as good as it will ever get
 		- the Dutch UHV now requires 5 colonies (I got 7 in my game, but had no powerful enemies)
+		- Given another Missionary to the Dutch, since they may flip only Catholic cities
+		- The Dutch properly start with Merchant Republic civic, as they were a Republic
+		- Minor boost to English research and building construction rate, they were often unreasonably behind
+		- Ottomans and Venice used to get stability bonuses, now those bonuses expire after 1581AD and 1204AD (Ottomans bonus for the Human is weak and Human Venice gets no bonus)
 
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)
