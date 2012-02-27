@@ -30605,7 +30605,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=29
-	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -30618,7 +30617,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=31
-	BonusType=BONUS_IRON
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -31062,7 +31060,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=27
-	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -31073,6 +31070,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=29
+	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -31946,6 +31944,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=28
+	BonusType=BONUS_IRON
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -31970,6 +31969,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=32
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
