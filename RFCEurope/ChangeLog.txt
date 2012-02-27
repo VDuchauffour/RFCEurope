@@ -26,6 +26,7 @@ Changes for version 1.0:
 		- Updated the reference folder with explanations about many UP and UHV
 
 	Map and province changes:
+		- New and/or improved city name map for most civs. Huge thanks to Michael Vick and Morholt for their help
 
 	XML/text updates:
 		- Dawn of Man text for Byzantium
