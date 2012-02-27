@@ -13,7 +13,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for version 1.0:
-(to-be-released: early february)
+(to-be-released: 2012.02.27.)
 
 	General changes and UHV updates:
 		- Lowered spread (growth) chance of Palm Forests
