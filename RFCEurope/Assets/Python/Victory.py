@@ -634,11 +634,6 @@ class Victory:
 
                 
         def checkNorse( self, iGameTurn ):
-                #if ( iGameTurn == xml.i1009AD and pNorse.getUHV( 0 ) == -1 ):
-                #        if ( gc.canSeeAllTerrain( iNorse, xml.iTerrainOcean ) ):
-                #                pNorse.setUHV( 0, 1 )
-                #        else:
-                #                pNorse.setUHV( 0, 0 )
                 if ( iGameTurn <= xml.i1009AD+1 and pNorse.getUHV( 0 ) == -1 ): # there is one turn delay between Building and this function being called
                         if ( pNorse.getNumColonies() >= 1 ):
                                 pNorse.setUHV( 0, 1 )
@@ -685,13 +680,6 @@ class Victory:
                 # one colony project
                 
         def checkBurgundy( self, iGameTurn ):
-                #if ( iGameTurn == xml.i1200AD and pBurgundy.getUHV(0) == -1 ):
-                #        iBurgundyRhine = gc.doesOwnCities( iBurgundy, tBurgundyControl[0][0], tBurgundyControl[0][1], tBurgundyControl[0][2], tBurgundyControl[0][3] )
-                #        iBurgundyRhone = gc.doesOwnCities( iBurgundy, tBurgundyControl[1][0], tBurgundyControl[1][1], tBurgundyControl[1][2], tBurgundyControl[1][3] )
-                #        if (iBurgundyRhine == 11 and iBurgundyRhone == 11):
-                #                pBurgundy.setUHV( 0, 1 )
-                #        else:
-                #                pBurgundy.setUHV( 0, 0 )
                 if ( iGameTurn == xml.i1376AD and pBurgundy.getUHV( 0 ) == -1 ):
                         bOwn = True
                         for iProv in tBurgundyControl:
@@ -739,19 +727,6 @@ class Victory:
                         else:
                                 pGermany.setUHV( 0, 0 )
 
-                #if ( iGameTurn == xml.i1461AD and pGermany.getUHV( 1 ) == -1 ):
-                #        iCount = 0
-                #        for iVassal in range( iNumMajorPlayers ):
-                #                pVassal = gc.getPlayer( iVassal )
-                #                if ( iVassal != iGermany and pVassal.isAlive() ):
-                #                        if ( gc.getTeam( pVassal.getTeam() ).isVassal( pGermany.getTeam() ) ):
-                #                                iCount += 1
-                #        
-                #        if ( iCount >= 3 ):
-                #                pGermany.setUHV( 1, 1 )
-                #        else:
-                #                pGermany.setUHV( 1, 0 )
-
                 if ( iGameTurn == xml.i1648AD and pGermany.getUHV( 2 ) == -1 ):
                         bOwn = True
                         for iProv in tGermanyControlII:
@@ -762,18 +737,6 @@ class Victory:
                                 pGermany.setUHV( 2, 1 )
                         else:
                                 pGermany.setUHV( 2, 0 )
-
-                #if ( iGameTurn == xml.i1540AD and pGermany.getUHV( 2 ) == -1 ):
-                #        iGermanPower = teamGermany.getPower(False)
-                #        bPower = True
-                #        for iPlayer in range( iNumMajorPlayers ):
-                #                pPlayer = gc.getPlayer( iPlayer )
-                #                if ( pPlayer.isAlive() and gc.getTeam( pPlayer.getTeam() ).getPower(False) > iGermanPower ):
-                #                        bPower = False
-                #        if ( bPower ):
-                #                pGermany.setUHV( 2, 1 )
-                #        else:
-                #                pGermany.setUHV( 2, 0 )
                 
         def checkKiev( self, iGameTurn ):
                 iFood = pKiev.getUHVCounter( 0 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
@@ -882,18 +845,6 @@ class Victory:
                                 pSpain.setUHV( 2, 1 )
                         else:
                                 pSpain.setUHV( 2, 0 )
-                                
-                        #bConverted = True
-                        #for iPlayer in range( iNumPlayers ):
-                        #        if ( iPlayer != iSpain ):
-                        #                pPlayer = gc.getPlayer( iPlayer )
-                        #                if ( pPlayer.getStateReligion() == xml.iProtestantism ):
-                        #                        bConverted = False
-                        #                        break
-                        #if ( bConverted ):
-                        #        pSpain.setUHV( 2, 1 )
-                        #else:
-                        #        pSpain.setUHV( 2, 0 )
                                                 
                 
         def checkPoland( self, iGameTurn ):
@@ -944,14 +895,6 @@ class Victory:
                                 pGenoa.setUHV( 2, 1 )
                         else:
                                 pGenoa.setUHV( 2, 0 )
-                        #iCount = 0
-                        #for iPlayer in range( iNumMajorPlayers ):
-                        #        if ( iPlayer != iGenoa and teamGenoa.isOpenBorders( iPlayer ) ):
-                        #                iCount += 1
-                        #if ( iCount >= 10 ):
-                        #        pGenoa.setUHV( 2, 1 )
-                        #else:
-                        #        pGenoa.setUHV( 2, 0 )
                                 
                 
         def checkEngland( self, iGameTurn ):
@@ -993,13 +936,6 @@ class Victory:
                                 pLithuania.setUHV( 0, 0 )
                                 
                 if ( iGameTurn == xml.i1569AD and pLithuania.getUHV( 1 ) == -1 ):
-                        #bConq = True
-                        #for iProv in tLithuaniaControl:
-                        #        if ( pLithuania.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
-                        #                bConq = False
-                        #                break
-                        #<English>[COLOR_YELLOW]Lithuanian Commonwealth:[COLOR_REVERT] Conquer Lithuania, Greater Poland, Lesser Poland, Pomerania, Masovia, Brest, Suvalkija, Livonia, Novgorod, Smolensk, Polotsk, Minsk, Chernigov, Pereyaslavl, Kiev, Galicia and Sloboda in 1569AD.</English>
-                        #if ( bConq ):
                         if ( pLithuania.getNumCities() >= 18 ):
                                 pLithuania.setUHV( 1, 1 )
                         else:
@@ -1133,17 +1069,6 @@ class Victory:
                                 pSweden.setUHV( 2, 0 )
                 
         def checkDutch( self, iGameTurn ):
-                #if ( iGameTurn == xml.i1640AD and pDutch.getUHV( 0 ) == - 1 ):
-                        #iCount = 0
-                        #for iPlayer in range( iNumMajorPlayers ):
-                                #if ( iPlayer != iDutch and teamDutch.isOpenBorders( iPlayer ) ):
-                                        #iCount += 1
-
-                        #if ( iCount >= 10 ):
-                                #pDutch.setUHV( 0, 1 )
-                        #else:
-                                #pDutch.setUHV( 0, 0 )
-
                 if ( iGameTurn <= xml.i1750AD and pDutch.getUHV( 0 ) == -1 ):
                         pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
                         if ( pPlot.isCity() ):
