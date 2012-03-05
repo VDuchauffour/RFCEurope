@@ -1168,8 +1168,8 @@
 
 		<!-- 1x1 RUSSIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
@@ -1177,8 +1177,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
@@ -1186,8 +1186,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
@@ -1195,8 +1195,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
@@ -1204,8 +1204,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x2_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
@@ -2700,8 +2700,8 @@
 
 		<!-- 2x1 RUSSIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x2x2_01</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2710,8 +2710,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x2x2_02</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2720,8 +2720,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x2x2_03</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2730,8 +2730,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x2x2_04</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2740,8 +2740,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x2x2_05</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2750,8 +2750,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::2x1x2_01</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2760,8 +2760,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::2x1x2_02</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2770,8 +2770,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::2x1x2_03</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>
@@ -2780,8 +2780,8 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">ERA_ANCIENT,ARTSTYLE_LITHUANIA</Attribute>
-			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT</Attribute>
+			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA,ARTSTYLE_LITHUANIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::2x1x2_04</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN</Attribute>

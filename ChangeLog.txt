@@ -11,6 +11,13 @@ Please post your thoughts in our forum at http://forums.civfanatics.com/forumdis
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Changes for version 1.1:
+(to-be-released: ???)
+
+	Bugfixes:
+		- Bulgarian, Hungarian, Polish and Lithuanian building art
+
+
 
 Changes for version 1.0:
 (to-be-released: 2012.02.27.)
