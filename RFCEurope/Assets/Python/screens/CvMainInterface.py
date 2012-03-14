@@ -2160,9 +2160,9 @@ class CvMainInterface:
                                                 screen.hide( "UHVText" )
                                 elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch ):
                                         if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
-                                                if ( ePlayer == ePlayer == con.iFrankia or ePlayer == con.iPortugal ):
-                                                        iColonies = pPlayer.pPlayer.getUHVCounter( 2 )
-                                                elif ( ePlayer == ePlayer == con.iSpain ):
+                                                if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal ):
+                                                        iColonies = pPlayer.getUHVCounter( 2 )
+                                                elif ( ePlayer == con.iSpain ):
                                                         iColonies = pPlayer.getNumColonies()
                                                 elif ( ePlayer == con.iEngland or ePlayer == con.iDutch ):
                                                         iColonies = pPlayer.getUHVCounter( 1 )
