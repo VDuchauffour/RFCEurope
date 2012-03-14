@@ -11,16 +11,22 @@ Please post your thoughts in our forum at http://forums.civfanatics.com/forumdis
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Changes for version 1.1:
+
+Changes for RFCE 1.1:
 (to-be-released: ???)
-
+	
+	XML/text updates:
+		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
+		- Small updates in the reference files
+	
 	Bugfixes:
-		- Bulgarian, Hungarian, Polish and Lithuanian building art
+		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
+		- UHV counter display bug for Portugal and France
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-Changes for version 1.0:
-(to-be-released: 2012.02.27.)
+Changes for RFCE 1.0:
+(released: 2012.02.27.)
 
 	General changes and UHV updates:
 		- Lowered spread (growth) chance of Palm Forests
