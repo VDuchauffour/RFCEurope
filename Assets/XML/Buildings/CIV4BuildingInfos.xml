@@ -12984,8 +12984,8 @@
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_PROTESTANTISM</ReligionType>
-			<StateReligion>NONE</StateReligion>
-			<bStateReligion>0</bStateReligion>
+			<StateReligion>RELIGION_PROTESTANTISM</StateReligion>
+			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_PROTESTANTISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
