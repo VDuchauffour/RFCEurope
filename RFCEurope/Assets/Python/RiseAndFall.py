@@ -2093,41 +2093,41 @@ class RiseAndFall:
                 if ( iCiv == iBurgundy ):
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
                 if ( iCiv == iArabia ):
-                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 7)
+                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
                 if ( iCiv == iBulgaria ):
                         utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 2)
                 if ( iCiv == iCordoba ):
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                 if ( iCiv == iSpain ):
-                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
                 if ( iCiv == iNorse ):
-                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 2)
                 if ( iCiv == iVenecia ):
-                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
                 if ( iCiv == iKiev ):
-                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
                 if ( iCiv == iHungary ):
-                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
                 if ( iCiv == iGermany ):
-                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
                 if ( iCiv == iPoland ):
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
                 if ( iCiv == iMoscow ):
-                        utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 2)
                 if ( iCiv == iGenoa ):
-                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
                 if ( iCiv == iEngland ):
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iPortugal ):
-                        utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 3)
                 if ( iCiv == iLithuania ):
-                        utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 2)
                 if ( iCiv == iAustria ):
-                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iTurkey ):
-                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
                 if ( iCiv == iSweden ):
-                        utils.makeUnit(xml.iSwedishKarolin, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iSwedishKarolin, iCiv, tPlot, 2)
                 if ( iCiv == iDutch ):
                         utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)                       
 
@@ -2152,7 +2152,7 @@ class RiseAndFall:
                 if (iCiv == iCordoba):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 3)
                 if (iCiv == iSpain):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
@@ -2200,20 +2200,20 @@ class RiseAndFall:
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
                 if (iCiv == iGermany):
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                 if (iCiv == iPoland):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                 if (iCiv == iMoscow):
                         utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 6)
-                        utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 5)
+                        utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 5)
+                        utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 3)
                 if (iCiv == iGenoa):
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)

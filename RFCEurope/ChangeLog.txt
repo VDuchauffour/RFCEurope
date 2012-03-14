@@ -15,6 +15,12 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 Changes for RFCE 1.1:
 (to-be-released: ???)
 	
+	General changes:
+		- Protestant Church School requires Protestantism as a state religion
+		- Revised AI distance settings for city placement - territory coverage should be better now
+		- Lowered some of the extra units you get on initial war
+		- Small changes to a couple civs initially spawned units too
+	
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
 		- Small updates in the reference files
