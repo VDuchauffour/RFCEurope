@@ -19,6 +19,10 @@ Changes for RFCE 1.1:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
 		- Small updates in the reference files
 	
+	Art/sound updates:
+		- Fixed button for Golden Bull
+		- Removed Religious School icon from the tech tree
+	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
 		- UHV counter display bug for Portugal and France
@@ -34,7 +38,7 @@ Changes for RFCE 1.0:
 		- Minor improvements and balancing on the settler and war maps
 		- New UHV conditions for Genoa and Austria and the Dutch
 		- New info added to the UHV for Poland, one can now see a counter for the cities under control
-		- New victory screen with ranking based on mediaeval society (Dan Quayle == Beggar and Augustus Ceaser == Emperor)
+		- New victory screen with ranking based on medieval society (Dan Quayle == Beggar and Augustus Caesar == Emperor)
 		- The score no longer depend on date (to account for late starts and late UHV conditions) and huge points are rewarded for completing UHV conditions
 		- Updated the reference folder with explanations about many UP and UHV
 

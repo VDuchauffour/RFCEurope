@@ -324,7 +324,7 @@
 			<fInterfaceScale>0.64</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Golden_Bull/HumanBank.NIF</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Wonders/goldenbullBTN.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,3</Button>
+			<Button>,Art/Interface/Buttons/Wonders/goldenbullBTN.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RIBEIRA</Type>

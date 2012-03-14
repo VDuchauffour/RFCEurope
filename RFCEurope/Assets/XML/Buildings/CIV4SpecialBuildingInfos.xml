@@ -46,17 +46,17 @@
 			<ProductionTraits/>
 			<Button>,Art/Interface/Buttons/Buildings/Seminary.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,7,16</Button>
 		</SpecialBuildingInfo>
-		<SpecialBuildingInfo> <!-- Also a House of Wisdom-->
+		<SpecialBuildingInfo> <!-- "Prereq" for House of Wisdom and Protestant Church School -->
 			<Type>SPECIALBUILDING_SCHOOL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_SCHOOL</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<TechPrereq>TECH_CLASSICAL_KNOWLEDGE</TechPrereq>
+			<TechPrereq>NONE</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
 			<Button>,Art/Interface/Buttons/Buildings/School.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,16</Button>
 		</SpecialBuildingInfo>
-		<SpecialBuildingInfo> <!-- Also a minaret -->
+		<SpecialBuildingInfo> <!-- Minaret also counts as a Chapel -->
 			<Type>SPECIALBUILDING_CHAPEL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_CHAPEL</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
