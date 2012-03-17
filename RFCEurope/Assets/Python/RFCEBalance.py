@@ -365,20 +365,20 @@ class RFCEBalance:
 		gc.setCityClusterAI( iCordoba, 1, 2, 2 ) #9
 		gc.setCityClusterAI( iSpain, 1, 2, 2 ) #9
 		gc.setCityClusterAI( iNorse, 1, 2, 1 ) #10
-		gc.setCityClusterAI( iVenecia, 1, 2, 1 ) #10
+		gc.setCityClusterAI( iVenecia, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iKiev, 1, 4, 1 ) #5
 		gc.setCityClusterAI( iHungary, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iGermany, 1, 2, 2 ) #9
 		gc.setCityClusterAI( iPoland, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iMoscow, 1, 4, 1 ) #5
-		gc.setCityClusterAI( iPortugal, 2, 3, 3 ) #12
+		gc.setCityClusterAI( iPortugal, 2, 3, 1 ) #14
 		gc.setCityClusterAI( iLithuania, 1, 3, 1 ) #7
-		gc.setCityClusterAI( iGenoa, 1, 2, 1 ) #10
+		gc.setCityClusterAI( iGenoa, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iEngland, 1, 2, 2 ) #9
 		gc.setCityClusterAI( iAustria, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iTurkey, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iSweden, 1, 2, 2 ) #9
-		gc.setCityClusterAI( iDutch, 3, 4, 2 ) #14
+		gc.setCityClusterAI( iDutch, 2, 3, 1 ) #14
 		
 		#3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
 		# values are 1 - small empires, 2 - larger continuous empires, 3 - not necessarily continuous empires
