@@ -18,8 +18,7 @@ Changes for RFCE 1.1:
 	General changes:
 		- Protestant Church School requires Protestantism as a state religion
 		- Revised AI distance settings for city placement - territory coverage should be better now
-		- Lowered some of the extra units you get on initial war
-		- Small changes to a couple civs initially spawned units too
+		- A couple changes and fixes in the settler maps in light of these AI distance changes
 	
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
@@ -28,6 +27,11 @@ Changes for RFCE 1.1:
 	Art/sound updates:
 		- Fixed button for Golden Bull
 		- Removed Religious School icon from the tech tree
+	
+	Balance:
+		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
+		- Lowered the number of extra units you get on initial war for most civs
+		- Small changes to a couple civs initially spawned units too
 	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
