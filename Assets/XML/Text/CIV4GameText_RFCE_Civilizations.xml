@@ -26,7 +26,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Burgundios</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -51,7 +51,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Burgundia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -80,7 +80,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>burgundio:burgundia:burgundios:burgundias</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -92,7 +92,8 @@
 		<French>.</French>
 		<German>[TAB]Das Herzogtum Burgund, mit Ursprung im Römischen Reich, war ein Gebilde, das sich an seinem Höhepunkt von dem heutigen Südwesten Frankreichs bis nach Zentral-Frankreich, Belgien und den südlichen Niederlanden erstreckte. Als Zentrum des Handels, der Kunst, des Denkens und militärischer Macht, war es die Mitte des Konflikts zwischen Frankreich, Spanien, Österreich und dem Heiligen Römischen Reich deutscher Nation; als ein unabhängiges Gebilde konnte das Herzogtum es zeitweise mit den Mächten aufnehmen, die es bedrohten.[PARAGRAPH:2]Durch politische Intrige, glückliche Vermählungen, finanzielle Macht und militärischer Stärke kontrollierten die frühen Herzöge und Könige ein wohlhabendes Gebiet Galliens, das große Teile der Provence, der Schweiz, Franche-Comté und die heutige Region Bourgogne enthielt. Nach sowohl kriegerischen als auch rechtlichen Schlachten, wurde Burgund nominell ein Lehen Frankreichs. Als eine so große und wohlhabende Provinz, rivalisierten und übertrafenburgundische Herzögeoft ihre feudalen Herren: der Landadel hatte wenig Interesse, nur eine französische Provinz zu werden, und Burgund blühte auf als ein größtenteils unabhängiger Staat.[PARAGRAPH:2]Die Pest in der Mitte des 14. Jahrhunderts hinterließ Burgund eine Krise der Erbfolge, jedoch mit der Folge einer starken und fähigen Valois Dynastie. Freundlich, aber nicht unterwürfig zu den Königen Frankreichs, brachte das Haus Valois das goldene Zeitalter des Herzogtums. Während dieser Periode breitete sich Burgunds Macht in die schwächeren Länder aus und verwaltete unter anderem die wohlhabenden Städte Dijon, Brügge, Luxemburg, Brüssel und Ghent.[PARAGRAPH:2]Das Haus Valois, jetzt ebenbürtig mit Wohlhaben und Macht, versuchte die Oberhoheit Frankreichs ein für alle mal zu beenden, wurden aber geschlagen. Als Herzog Karl der Kühne in der Schlacht bei Nancy 1477 starb, endete das Hezogtum gewissermaßen als wenig mehr als eine französische Provinz.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]El Ducado de Borgoña fue uno de los Estados más importantes de la Europa medieval, independiente entre 880 y 1482. El feudo del Duque de Borgoña correspondía aproximadamente con la región actual francesa de Borgoña. Gracias a su riqueza y vasto territorio, el ducado fue tanto política como económicamente muy importante. Técnicamente eran vasallos del rey de Francia, pero los duques de Borgoña supieron mantener una política propia.[PARAGRAPH:2]La dinastía inicial de los Duques de Borgoña se extinguió en 1026, con la muerte sin descendientes del heredero de la casa, el duque Otón Guillermo de Borgoña. Pero el ducado ya había sido anexionado en 1016 por Enrique I, que se convirtió en duque en 1016. Enrique concedió el ducado a su hermano Roberto, que funda la rama de la Dinastía de los Capetos. De esta línea descendiente proviene Alfonso Enríquez, el primer rey de Portugal. El último representante de la casa fue Felipe de Rouvres, que murió de peste en 1361. El ducado pasó a la corona francesa y dos años más tarde Juan II de Francia le concedió el título a su hijo más pequeño, Felipe. Felipe se casó con Margarita III de Flandes y a través de esta unión el ducado de Borgoña se unió al Condado de Flandes, Artois, Nevers, Rethel y los ducados de Brabante y Limburgo.
+La última duquesa de la Borgoña independiente fue María de Valois, que se casó con Maximiliano I de Austria. En las capitulaciones matrimoniales se estipuló que su segundo hijo sería quien heredase los territorios maternos, pero María falleció en un accidente de caballo antes de que eso aconteciese. Después de esta tragedia, el ducado de Borgoña fue incorporado a Francia, mientras que los Países Bajos pasaron a la Casa de Austria.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Burgundy -->
@@ -116,7 +117,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Egipcios</Text>
+			<Text>Los Bizantinos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -206,7 +207,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Franc&#233;ses</Text>
+			<Text>Los Franceses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -382,7 +383,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Búlgaros</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -407,7 +408,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Bulgaria</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -436,7 +437,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>búlgaro:búlgara:búlgaros:búlgaras</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -448,7 +449,7 @@
 		<French>.</French>
 		<German>[TAB]Die Bulgaren kamen ursprünglich aus Zentralasien, "irgendwo östlich des Schwarzen Meeres", nahe dem heutigen Kasachstan und waren gelegentlich Alliierte der Hunnen. Ende des fünften Jahrhunderts fingen sie vereinzelt an, Byzanz als Söldner zu dienen, und zur Zeit Kaiser Justinians I. verwalteten sie sogar einige Städte im Reich, die sie gegen andere Bulgaren und nomadische Stämme aus dem Osten verteidigten. Die Bulgaren hatten einen Fall außerhalb des Reichs, zogen sich in die Steppe zurück und wurden zum nächsten Mal gehört, als sie zusammen mit den Gepiden und den Lombarden in Italien einfielen. Um 600 n. Chr. kehrten die Bulgaren um und eroberten das slawische Gebiet des Balkans, das von Byzanz kontrolliert wurde. Das Byzantinische Reich erkannte das Erste Bulgarische Reich 681 n. Chr. an und diese Nation dauerte bis 1081 an.[PARAGRAPH:2]Obwohl die Bulgaren dieses Gebiet mit eiserner Faust regierten, nahmen sie letztendlich viel von der slawischen Sprache und Kultur an und vermischten sich derart mit den Slawen, dass es unmöglich war, zu unterscheiden, wer Bulgare und wer Slawe war. Diese Vermischung mit dem slawischen Volk stumpfte ihre Wildheit jedoch nicht ab und während des Mittelalters war Bulgarien eine große militärische Macht. Die Bulgaren kämpften mehrfach gegen das Byzantinische Reich, ihre anderen Nachbarn und nomadische Eindringlinge. 865 konvertierte Zar Boris I. zum Christentum und etablierte einen unabhängigen bulgarischen Ableger der Östlich-Orthodoxen Kirche und übernahm das Kyrillische Alphabet in die offizielle Amtssprache. Dieses Alphabet und diese Kirche breitete sich von Bulgarien zum Rest Osteuropas und dann nach Russland aus. Boris' Sohn, Zar Simeon I. (893-927) war einer von Bulgariens größten Herrschern und während seiner Herrschaft blühte Bulgarien als ein Zentrum slawischer Kultur und Bildung auf. Geziemend seinem kriegerischen Erbe, eroberte Simeon auch viele Gebiete und zu seinem Tod erstreckte sich Bulgarien vom Schwarzen Meer bis zur Adria. Nach Simeons Tod nahm Bulgariens Macht ab und wurde letztendlich von den Byzantinern erobert. Nach fast 200 Jahren der byzantinischen Herrschaft folgte 200 Jahre lang ein Zweites Bulgarisches Reich, das wiederum vom Osmanischen Reich erobert wurde.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]Los búlgaros originalmente vinieron de Asia central,"de algún lugar al este del Mar Negro", cerca de la moderna Kazakhstan y fueron aliados ocasionales de los hunos. Dieron esporádicos servicios a los bizantinos como mercenarios a fines del siglo V y para esa época el empreador Justiniano I estuvieron en realidda administrando algunos pueblos en el imperio, defendiéndolos de otro búlgaros y tribus nómadas del este. Los Búlgaros tuvieron un revés con el imperio, retirándose a las estepas, y volvieron después al unirse a la invasión de los Gépidos y los Lombardos a Italia. Alrededor del 600 D.C. los búlgaros regresaron y conquistaron el área eslava controlada por los bizantinos. El Imperio bizantino reconoció el primer imperio búlgaro en 681 D.C., y esta nación duró hasta el año 1081 D.C.[PARAGRAPH:2]A pesar de que los búlgaros gobernaron esta área con puño de hierro, acabaron por asimilar mucho de la lengua eslava y eventualmente se mezclaron bastante con sus súbditos con el resultado de que fue imposible determinar quien era búlgaro y quien eslavo. Esta interacción con los súbditos eslavos no calmó su ferocidda sin embargo, y durante la Edad Media Bulgaria fue una gran poder militar. Los búlgaros pelearon muchas guerras contra el Imperio Bizantino, sus otros vecinos y los invasores mómadas. Para el 865 D.C. el zar Boris I se convirtió al cristianismo y estableció una rama independiente búlgara de la Iglesia Ortodoxa y adoptó el alfabeto cirilico como la lengua oficial del estado, y estos alfabeto e iglesia se extendieron desde Bulgaria al resto de la Europa oriental y luego a Rusia. El hijo de Boris, el zar Simeón I (893-927 D.C) fue uno de los más grandes gobernantes búlgaros y durante su reinado, Bulgaria floreció como un centro de aprendizaje y cultura eslavos. Simeón también conquistó muchos territorios nuevos y a su muerte, Bulgaria se extendía desde el Mar Negro al Adriático. Luego de su muerte, Bulgaria perdió poder, siendo conquistada por los bizantinos. Luego de doscientos años de gobierno de los bizantinos, siguió por otros doscientos años un segundo imperio búlgaro que fue, a su vez, conquistado por el Imperio Otomano.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Bulgaria -->
@@ -472,7 +473,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Cordobeses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -497,7 +498,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Córdoba</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -526,7 +527,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>cordobés:cordobesa:cordobeses:cordobesas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -538,7 +539,7 @@
 		<French>.</French>
 		<German>[TAB]711 n. Chr. landeten Tausende von muslimischen Arabern und Berbern an Gibraltar um eine schnelle Eroberung Spaniens zu beginnen. Die Araber nannten das Gebiet al-Andalus (wovon der moderne Name "Andalusien" abgeleitet wird) und brachte es unter die Kontrolle des umayyadischen Kalifats. Diese arabische Dynastie war die bürgerliche und geistige Elite des Islam in den vorherigen fünfzig Jahren gewesen, aber ihre nepotistische Herrschaft verursachte viel Unruhe in der muslimischen Welt. Nach der Vertreibung der Umayyaden in Damaskus durch die Abbasiden 750 floh Abd ar-Rahman, ein Enkel eines ehemaligen Kalifen und einer der wenigen überlebenden Umayyaden, nach al-Andalus und übernahm diese muslimische Ausbuchtung in Europa. Sein um Córdoba liegendes Emirat war das Einzige, das unabhängig von Abbasid Kalifat blieb. Die Abbasiden hatten nicht die Arbeitskräfte um solch eine abgelegene Provinz zurückzuerobern und unter der Herrschaft der Dynastie ar-Rahmans wurde das córdobanische Spanien ein starker, zentralisierter Staat, der sein Territorium nordwärts auf Kosten von christlichen Königreichen, die den muslimischen Eindringlingen widerstanden hatten, ausdehnte. Abd ar-Rahman ließ die Mezquita de Córdoba 785 bauen, die bis heute dort steht.[PARAGRAPH:2]929 n. Chr. erklärte sich Abd ar-Rahman III zum Kalifen Córdobas. Der Titel "Kalif" ist dem Führer des Islam vorbestellt, aber es gab bereits zwei Kalifen in der islamischen Welt. Der abbasidische (in Bagdad herrschende) Kalif, der Sunnit war, berief sich auf seine Abstammung von Abbas, einem Onkel des Propheten Mohammed. Der fatimidische Kalif, der Schiit war, berief sich auf seinen Abstammung von Fatima, einer Tochter des Propheten. Die Umayyaden waren auch sunnitische Araber, aber ihre Abstammung, beriefen sich aber auf Uthman, dem dritte Kalif, der Mohammed nachfolgte.[PARAGRAPH:2]Die córdobanischen Umayyaden erreichten ihre Blütezeit gegen Ende des 10. Jahrhunderts, festigten ihren Einfluss auf die Provinzen in Spanien und expandierten in Nordafrika wider die Fatimiden. Wie man es aber überall in der Geschichte des Muslimischen Halbmondes sehen, wurden regionale Herrscher unzufrieden mit der Führung am Córdoba und untergruben die Autorität der Umayyaden, und zwischen 1009-1031 zerriss ein erbitterter Bürgerkrieg das córdobanische Kalifat. Später wurde al-Andalus in kleine Königreiche, sogenannte Taifas, gespalten, die von lokalen Kriegsherren regiert wurden.[PARAGRAPH:2]Diese lokalen Kriegsherren konnten den christlichen Königreichen im Norden, die begannen Spanien zurückzuerobern, nicht widerstehen. Um diesem Stoß Stärke zu verleihen, erklärte Papst Alexander II einen Kreuzzug, der die Sünden derjenigen erließ, die zum Kampf gegen die Moslems zogen. 1212 hatten die christlichen Königreiche von León, Kastilien, Aragon und Katalonien die Moslems halb von der Halbinsel vertrieben und ein schwere Niederlage der muslimischen Führer bei Las Navas de Tolosa verkündete den Anfang vom Ende für al-Andalus. Córdoba selbst fiel 1236. Der Rest der Geschichte von al-Andalus ist eine Reihe von Niederlagen, Rückzügen und dem Schrumpfen der moslemischen Anwesenheit in Spanien, bis alle, was von dem ehemals mächtigen al-Andalus blieb, ein schmaler Landstreifen in der Nähe von Granada war. Ferdinand von Aragon und Isabella von Kastilien fingen einen letzten Krieg gegen die Moslems an und eroberten Granada schließlich 1492.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]En 711 dc. miles de muslmanes árabes y bereberes desembarcaron en Gibraltar para comenzar una rápida conquista de España. Los árabes llamaron a la región Al-Andalus (de donde proviene el nombre moderno de "Andalucía") y lo mantuvieron bajo el control del Califato Omeya. Esta dinastía árabe había sido la líder civil y espiritual los cincuenta años anteriores, pero su gobierno nepotista causó mucha intranquilidad al mundo musulmán. Luego del derrocamiento de los Omeyas en Damasco por los Abasidas en 750, Abderramán, nieto del califa y uno de los pocos sobrevivientes del clan Omeya, huyó a Al-Andalus y tomó este saliente musulmán en Europa. Su emirato, centrado alrededor de Córdoba, fue el único que permaneció independiente del Califato Abasida. Los Abasidas no tenían el poder humano para reconquistar esa provincia tan lejana y bajo el gobierno de la dinastía de los Omeya, la España cordobesa se volvió poderosa, expandiendo su territorio al norte, a expensas de los reinos cristianos que resistieron a los invasores musulmanes. Abderramánconstruyó la Gran Mezquita de Córdoba en 785, que perdura hasta nuestros días.[PARAGRAPH:2]En 929 Abderramán III se declaró a sí mismo el Califa de Córdoba. El título se reservaba para el líder del Islam, pero hubieron al mismo tiempo dos califas en el mundo musulmán. El Califa Abasida (o de Bagdad) que era suní, trazó su ascendencia hasta Abbas, un tío del profeta Mahoma. El Califa Fatimí, que era chiíta, trazó su ascendecia hasta Fátima, la hija del Profeta. Los Omeyas también eran árabes de la secta suní, pero su linaje venía de Uthmán, el tercer califa que sucedió a Mahoma.[PARAGRAPH:2]Los Omeya cordobeses alcanzaron el ápice de su poder a fines del siglo X, consolidando su control de las provincias en España y expandiendose al norte de África contra los Fatimíes. Sin embargo, siguiendo el patrón familiar visto a lo largo de la historia del Creciente Musulmán, los gobernantes regionales estaban descontentos con el liderazgo de Córdoba y socavaron la autoridad de los Omeya y entre 1009-1031 una una amarga guerra civil azotó el Califato Cordobés. Luego de esto, Al-Andalus se dividió en pequeños reinos llamados Taifas, regidos por señores locales.[PARAGRAPH:2]Estos señores no pudieron resistir el avance de los reinos cristianos que del norte iniciaron la reconquista de España, para subrayar la importancia de este empuje, el Papa Alejandro II declaró una crusada, perdonando los pecados de aquellos que iban a pelear contra los musulmanes. Para 1212, los reinos cristianos de León, Castilla, Aragón y Cataluña empujaron a los musulmanes hacia el sur de la península , y la mayor derrota de los gobernantes musulmanes fue en Las Navas de Tolosa, que fue el principio del fin de Al-Andalus. Córdoba cayó en 1236. El resto de la historia de Al-Andalus es una serie de derrotas, retiradas y hundimiento de la presencia musulmana en España hasta que lo que alguna vez fue la poderosa Al-Amdalus se convirtió en una franja estrecha cerca a Granada. Fernando de Aragón e Isabel de Castilla lanzaron una guerra contra los muslmanes y conquistaron Granada en 1492.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Cordoba -->
@@ -648,7 +649,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Escandinavos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -673,7 +674,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Escandinavia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -702,7 +703,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>escandinavo:escandinava:escandinavos:escandinavas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -738,7 +739,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Venecianos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -763,7 +764,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Venecia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -792,7 +793,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>veneciano:veneciana:venecianos:venecianas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -804,7 +805,7 @@
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]Se tiene como fecha de la fundación de Venecia el año 421, en el cual los habitantes de la región, ante la amenaza de las invasiones de longobardos y hunos que habían destruido la capital, Aquilea, se refugiaron en las marismas de la desembocadura del Po, en la laguna situada en el golfo, entre la península Itálica y la balcánica, llamado más tarde precisamente golfo de Venecia. Las construcciones de esta época eran simples edificaciones lacustres, erigidas sobre palafitos. Debido a esta estratégica característica geográfica, Venecia tuvo desde entonces una gran independencia respecto a sus dominadores gracias a la barrera natural de la cadena de islas en una laguna profunda que impedía un ataque de caballería o infantería. Cuando el general Belisario conquistó para el Imperio bizantino gran parte de Italia en el siglo VI, Venecia pasó a formar parte del dominio de dicho imperio, dependiendo administrativamente de la ciudad de Rávena, sede del poder imperial en la península Itálica. El exarcado de Rávena estaba dividido en ducados, y el ducado de Venecia era uno de ellos. En el año 726 el veneciano Orso Ipato fue reconocido por el Imperio bizantino como dux, aceptando así la autonomía (aunque no independencia) de Venecia. No obstante, con la pronta desaparición del poder bizantino en Italia, Orso Ipato quedó asentado definitvamente como dux de Venecia, en calidad de gobernante autónomo. La ciudad de Venecia obtuvo su independencia total en el siglo IX. Cabe destacar que ya desde mediados del siglo VIII la ciudad ni obedecía al emperador bizantino en la práctica, ni formaba parte del Sacro Imperio, sino que establecía relaciones comerciales con ellos como un estado soberano; en el año 803 ambos imperios reconocieron la independencia de facto de Venecia, llegando ésta a rechazar en el 811 un intento de invasión lombarda, y enviando en 841 una flota de apoyo al emperador bizantino en su lucha contra el Califato Abásida. La ubicación de Venecia en medio de una laguna natural hacía arriesgado el intento de conquistarla, en tanto el arte naval europeo en la Baja Edad Media estaba muy poco desarrollado; precisamente, fueron los venecianos quienes colaboraron con el desarrollo de la construcción náutica por razones primordiales de necesidad: con un territorio continental muy pequeño, su fuente de subsistencia fue el comercio en el Adriático, por lo cual el estímulo a la navegación marítima se había transformado en una necesidad y, a la vez, en fuente de poder. La ubicación de Venecia en el medio del Mar Mediterráneo le permitía un activo rol mercantil entre Bizancio y el resto de Europa, además su ubicación en el extremo norte del Adriático la defendía de ataques marítimos debido a su dominio militar sobre Dalmacia; tales circunstancias aumentaron el poderío veneciano en una época cuando las flotas comerciales en el Mediterráneo eran raras. El apogeo de Venecia alcanzó su cénit en la primera mitad del siglo XV, cuando los venecianos comenzaron su expansión por Italia, como respuesta al amenazador avance de Gian Galeazzo Visconti, (duque de Milán). En 1410, Venecia controlaba la mayor parte del Véneto, incluyendo ciudades como Verona, Padua y Udine y más tarde Brescia y Bérgamo (llamadas colectivamente el Stato di Terraferma), controlando una flota de casi 3.300 navíos. El mar Adriático se convirtió en el "mare veneziano", desde Corfú hasta el río Po, mientras las posesiones del Stato di Mare alcanzaban Chipre, Creta, Eubea, varias islas del Mar Egeo y numerosos enclaves en los Balcanes, mientras las flotas venecianas mantenían activo comercio con todo el Mediterráneo, extendiendo su red de contactos mercantiles por toda Europa y Medio Oriente desde Inglaterra hasta Egipto, siendo que la misma ciudad de Venecia superaba los 100.000 habitantes, cifra elevadísima para la época. En marzo de 1797, el territorio de Venecia fue invadido por las tropas del general Napoleón Bonaparte, tanto por tierra como por mar, las ciudades del Stato di Terraferma se rindieron rápidamente ante la superioridad numérica francesa, mientras que la propia flota de guerra veneciana estaba formada por sólo 11 barcos útiles, pero incapaces de resistir. El gobierno afrontó en abril un ultimátum de Napoleón Bonaparte mientras a inicios de mayo las tropas francesas terminaban de ocupar el Stato di Terraferma casi sin lucha, faltando tan sólo ocupar la capital misma. El Gran Consejo se reunió finalmente el 12 de mayo para disolverse e instaurar un "gobierno representativo" siguiendo el modelo francés pero cuatro días después tropas francesas tomaron la urbe sin que las tropas venecianas opusieran la menor resistencia, extinguiendo definitivamente la República. Tras la firma del Tratado de Campoformio en octubre del mismo año, se repartió el territorio de Venecia entre Francia y Austria.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Venezia -->
@@ -828,7 +829,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Kieveños</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -853,8 +854,8 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
-			<Gender>Female</Gender>
+			<Text>Rus' de Kiev</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#202;&#232;&#229;&#226;&#241;&#234;&#224;&#255; &#208;&#243;&#241;&#252;</Russian>
@@ -882,7 +883,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>kieveño:kieveña:kieveños:kieveñas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -894,7 +895,7 @@
 		<French>.</French>
 		<German>[TAB]Das Volk der Rus beherrschten seit dem achten Jahrhundert wahrscheinlich das, was jetzt das nordwestliche Russland ist. Im frühen neunten Jahrhundert wurden sie lose organisiert unter dem Khanat der Rus, der als ein Vorgänger-Staat der Kiewer Rus betrachtet werden kann. Gemäß der Primären Chronik, der frühsten Chronik der Kiewer Rus, setzte sich ungefähr 860 zuerst ein Waräger mit dem Namen Rurik in Novgorod, bevor er seine Autorität südlich nach Kiew ausweitete.[PARAGRAPH:2]Diese Waräger siedelten in Ladoga, zogen dann südwärts nach Novgorod und erreichten schließlich Kiew, den Chasaren, die von den Kiewern Tribut forderten, ein Ende setzend. Die Kiewer Rus wurde von Prinz Oleg ungefähr 880 gegründet. Während der nächsten fünfunddreißig Jahre unterwarfen Oleg und seine Krieger die zahlreichen östlichen finnischen und slawischen Stämme. 907 führte Oleg einen Angriff gegen Konstantinopel, und 911 unterzeichnete er als ein gleichwertiger Partner einen kommerziellen Vertrag mit dem Byzantinischen Reich. Der neue Kiewer Staat gedieh, weil er einen reichen Bestand an Pelzen, Bienenwachs und Honig für den Export hatte, und weil er drei Haupthandelswege Osteuropas kontrollierte: Der Wolga Handelsweg von der Ostsee zum Orient, den Dnjeper-Handelsweg von der Ostsee zum Schwarzen Meer, und den Handelsweg von den Chasaren zu den Deutschen.[PARAGRAPH:2]Bis zur Herrschaft Swjatoslaws (945-972) hatten die Kiewer Führer die slawische Religion und slawische Namen angenommen, aber ihre Druschina (persönliches Heergefolge eines russischen Fürsten) bestand noch in erster Linie aus Skandinaviern. Die Eroberungen Swjatoslaws waren erstaunlich: Er fügte zwei seiner stärksten Nachbarn (das chasarische und das bulgarische Reich, das bald nach seinen Überfällen zusammenbrach) tödliche Schläge zu.[PARAGRAPH:2]Das Gebiet Kiews beherrschte den Staat der Kiewer Rus für die nächsten zwei Jahrhunderte. Der Großfürst Kiews kontrollierte die Länder um die Stadt, und seine theoretisch untergeordneten Verwandten herrschten in anderen Städten und zahlten ihm Tribut.Der Zenit der Macht des Staates kam während der Herrschaft von Fürst Wladimir dem Großen (980-1015) und Fürst Yaroslav des Weisen (1019-1054). Beide Herrscher setzten die stetige Expansion der Kiewer Rus fort, die unter Oleg begonnen hatte.[PARAGRAPH:2]Wladimir kam in Kiew an die Macht nach dem Tod seines Vaters Swjatoslaw I. 972 und nachdem er seinen Halbbruders Yaropolk 980 besiegte. Als Fürst Kiews war die bemerkenswerteste Errungenschaft Wladimirs die Christianisierung der Kiewer Rus, was 988 begann.[PARAGRAPH:2]Die Kiewer Rus war nicht im Stande, seine Position als ein starker und wohlhabender Staat aufrecht zu erhalten, zum Teil aufgrund des Zusammenschlusses von ganz verschiedenen Ländern unter der Kontrolle eines herrschenden Klans. Als die Mitglieder dieses Klans zahlreicher wurden, identifizierten diese sich eher mit Regionalinteressen als mit dem größeren Erbgut.[PARAGRAPH:2]So bekämpften die Fürsten sich gegenseitig, oftmals Bündnisse mit äußeren Gruppen wie die Kyptschaken, die Polen, und die Ungarn eingehend. Von 1054 bis 1224 hatten nicht weniger als 64 Fürstentümer eine mehr oder weniger kurzlebige Existenz, 293 Fürsten brachten Erbansprüche vor und ihre Konflikte führten zu 83 Bürgerkriegen.[PARAGRAPH:2]Die Kreuzzüge führten zu einer Verschiebung der europäischen Handelswege, die den Niedergang der Kiewer Rus beschleunigten. 1204 nahmen die Kräfte des Vierten Kreuzzugs Konstantinopel ein und machten den Dnjeper-Handel marginal. Als der Handel abnahm, zersplitterte die Kiewer Rus in viele Fürstentümer und mehrere große Regionalzentren. Die drei stärksten waren unter ihnen Halytsch-Wolhynien (schließlich erobert von Polen und Litauen), die Republik Novgorod (später eingegliedert in das Großfürstentum Moskau) und das Fürstentum Wladimir-Susdal, das sich allmählich zum Großfürstentum Moskau entwickelte.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]El Rus' de Kiev o el estado Ruso antiguo fue un estado medieval monárquico surgido en Europa oriental, a finales del siglo IX, de la dinastía Rúrika, considerado el más antiguo estado eslavo oriental, dirigido desde la ciudad de Kiev, desde aproximadamente 880 hasta mediados del siglo XII. Los reinados de Vladímir el Grande (980-1015) y su hijo Yaroslav I el Sabio (1019-1054) supusieron la edad de oro de Kiev, que vio la aceptación del cristianismo ortodoxo y la creación del primer código o cuerpo legal escrito en lengua eslava, el Rúskaya Pravda. El Rus' de Kiev fue el mayor Estado europeo de la Edad Media y comprendía parte de la actual Ucrania, Rusia, el oeste de Bielorrusia, Polonia, Lituania, Letonia y Estonia Oriental. La región de Kiev dominó el principado completo durante los siguientes dos siglos. El gran príncipe (velikiy kniaz') de Kiev controlaba las tierras circundantes a la ciudad, y sus familiares teóricamente subordinados a él gobernaban en otras ciudades y les pagaban tributo. El apogeo de su poder llegó durante el reinado del príncipe Vladímir (Vladímir el Grande, r. 980-1015) y príncipe Yaroslav (el Sabio; r. 1019-1054). Ambos mandatarios continuaron la expansión del principado que había comenzado bajo Oleg. Vladímir llegó al poder en Kiev tras la muerte de su padre Sviatoslav I en 972, al derrotar a su hermanastro Yaropolk en 980. Como príncipe de Kiev, el mayor logro de Vladímir fue la cristianización del principado, proceso que emprendió en 988. Los anales indican que cuando Vladímir decidió aceptar la nueva fe en lugar del paganismo idólatra eslavo, mandó a algunos de sus consejeros y guerreros más cercanos a distintos países de Europa. Tras visitar los católicos, judíos y musulmanes, acabaron en Constantinopla. Allí quedaron tan asombrados por la grandeza de la catedral Hagia Sofía y los servicios litúrgicos que en ese momento decidieron la fe oficial que adoptaría el Estado kievano. Tras el regreso, convencieron a Vladímir que la fe de los griegos era la mejor opción; Vladímir emprendió un viaje a Constantinopla, donde casaría con la princesa Ana, hermana del emperador bizantino Basilio II. La opción por el culto oriental también reflejó posiblemente los vínculos estrechos con el Imperio, que dominaba el mar Negro y por ende la ruta comercial más importante para Kiev: el río Dniéper. La adhesión a la Iglesia Ortodoxa Oriental tuvo importantes consecuencias políticas, culturales y religiosas a largo plazo. La iglesia tenía una liturgia escrita en cirílico y una colección de escrituras traducidas del griego para los pueblos eslavos. La existencia de esta literatura facilitó la conversión al cristianismo de los eslavos orientales y les inició en una rudimentaria filosofía griega, a la ciencia y la historiografía sin la necesidad de aprender griego antiguo, a diferencia de la población culta de la Europa Occidental y Central, que continuaba manejando el latín. La independencia de la autoridad romana y la falta de obligación de aprender latín hicieron que los eslavos orientales desarrollaran su propia literatura y bellas artes, sustancialmente distintas de las encontradas en otros países ortodoxos. Yaroslav, conocido como El Sabio, pugnó igualmente con sus hermanos por el poder. Aunque logró imponerse en Kiev en el año 1019, no fue reconocido como líder en todo el principado hasta el 1036. Como Vladímir, Yaroslav el sabio se preocupó por entablar relaciones amistosas con el resto de Europa. Yaroslav casó a tres de sus hijas con príncipes extranjeros, exiliados, que vivieron en su palacio: Isabel (Elizaveta) con Harald III de Noruega (que obtuvo su mano por sus hazañas militares en el Imperio bizantino); Anastasia (Agmunda) con el futuro Andrés I de Hungría, y su hija menor, Ana de Kiev, se casó con Enrique I de Francia, que rigió en este país durante la minoría de edad de su hijo. Otra hija puede haber sido la Ágata que se casó con Eduardo el Exiliado, heredero del trono de Inglaterra, y que fue madre de Edgar Atheling y Santa Margarita. Su hija mayor Dobroniega o Dobroñeva (o según otros fuentes su hermana) contrajo matrimonio con Casimiro I el Restaurador, rey de Polonia. La nieta de Yaroslav, Eupraxia (Adelaida), hija de su hijo Vsevolod I, se casó con Enrique IV del Sacro Imperio Romano Germánico. Yaroslav también pactó matrimonios para su hermana y sus tres hijas con los reyes de Polonia, Francia, Hungría y Noruega. Mandó construir el primer gran edificio del principado, la Iglesia Desyatínnaya de Kiev, así como la catedral de Santa Sofía de Kiev y la Catedral de Santa Sofía de Nóvgorod. Patrocinó el clero autóctono y el monaquismo, además de atribuírsele la fundación de un sistema educativo. Los hijos de Yaroslav levantaron el gran Monasterio de las Cuevas de Kiev, que funcionó como academia eclesiástica.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Kiev -->
@@ -918,7 +919,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Húngaros</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -943,7 +944,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Hungría</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -972,7 +973,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>húngaro:húngara:húngaros:húngaras</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -984,7 +985,7 @@
 		<French>.</French>
 		<German>[TAB]Die Magyaren waren mit den Hunnen und Avaren verwandte Nomaden und kamen ursprünglich aus der Nähe von Finnland und Estland. Sie ließen sich nördlich vom Schwarzen Meer nieder und traten in Dienst des Byzantinischen Reiches. In byzantinischen Auftrag führten sie Krieg gegen die Bulgaren. Sie wanderten dann aus der Ukraine aus, um den Petschenegen zu entkommen, die sie auf Geheiß der Bulgaren angriffen, und siedelten 896 n. Chr. im Donaubecken unter der Herrschaft ihres Großen Hauptmanns Arpad. Sie waren erfahrene Reiter und furchterregende Krieger und führten wikingergleiche Überfälle auf alle Ländern um sie herum, jedoch zu Pferd, statt mit dem Schiff. Sie beherrschten bald das komplette Gebiet und belagerten sogar deutsche Städte und Konstantinopel.[PARAGRAPH:2]997 starb der magyarische Führer Graf Géza und sein Sohn Istvan behauptete schnell und kräftig seine Überlegenheit über die Nation und mehrere unzufriedene ältere Verwandte, die sein Recht auf die Folge bestritten. Bis zu diesem Zeitpunkt hatte der Älteste der Herrscherfamilie die magyarische Führung inne und nicht der Erstgeborene. 1000 n. Chr. bat Istvan Papst Sylvester II. um eine königliche Krone, die der Papst sandte, und erkannte ihn so als den ersten christlichen König Ungarns (als König Stephan I.) an. Während seiner 38-jährigen Regierung konsolidierte Stephan I. den magyarischen Staat unter einer Gruppe von mächtigen Edelmännern und nutzte veränderte karolingische Verwaltungsmethoden. Er vollendete die Konvertierung der Magyaren zum Christentum und verband das Königreich näher mit dem Westen, am bemerkenswertesten durch die Hochzeit der Nichte Otto des Großen. Stephan wurde 1083 heilig gesprochen und die Krone des Heiligen Stephan wurde ein Symbol der ungarischen nationalen Souveränität.[PARAGRAPH:2]Die Throne Ungarns und Kroatiens wurden in 1091 vereinigt und während der Regierung von Bela III. (1173-1196) wurde Ungarn der stärkste Staat im östlichen Mitteleuropa. Die Macht der Monarchie neigte sich unter der schwachen Herrschaft Andreas II., der gezwungen wurde, dem Adel eine Goldene Bulle zu erlassen, die ihm größere Privilegien zusprach. 1241 griffen die Mongolen an und verwüstet das Land, was die magyarische Monarchie weiter schwächte. Der Letzte der Arpad-Dynastie starb 1301, und danach waren die meisten ungarischen Führer Ausländer.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]La tradición sostiene que Hungría fue fundada por siete tribus magiares (húngaras) que emigraron desde la región de los Montes Urales cerca del límite de Europa y Asia hasta el territorio actual en el siglo VIII. Estas fueron guiadas por siete líderes: Álmos, Elod, Ond, Kond, Tas, Huba y Töhötöm. Un par de décadas después de haber llegado a las tierras del Danubio, Árpád - el hijo mayor de Álmos - se convirtió en príncipe y líder absoluto de las tribus, que hicieron un pacto de sangre para simbolizar una unión indivisible. Así comenzó la historia de la nación húngara y la dinastía de los Árpád. El tataranieto de Árpád fue Esteban I, hijo del príncipe Géza. Esteban había nacido como pagano con el nombre de Vajk y posteriormente fue bautizado con su nombre cristiano. Esteban sabía que si su nación quería sobrevivir, debía ser reconocida como un reino cristiano y estar bajo la tutela del Papa. Así, comenzó su lucha contra el paganismo tras haber sido coronado Rey de Hungría en el año 1000. El principal adversario de Esteban era un familiar suyo llamado Koppány, que deseaba la corona de Hungría y repudiaba el cristianismo. Finalmente fallece y Esteban ordena que fuese desmembrado en cuatro y que las partes de su cuerpo fueran enviadas a ciudades importantes como muestra de lo "poco conveniente" que podía ser el paganismo. Hungría se convirtió gradualmente en un reino amplio e independiente, donde florecería la cultura y se daría un importante progreso económico, sobre todo de la mano de Mátyás (Matías Corvino), quien conquistó Moravia, Bohemia y Silesia, y posteriormente trasladó la corte húngara a Viena. Así, Matías fue una figura de gran relevancia para el renacimiento en Hungría y la lucha armada contra los turcos, a los que se intentaba repeler desde hacía décadas (por ejemplo, su padre, el Regente húngaro Juan Hunyadi, hijo de un noble de Valaquia, guio incontables campañas contra los turcos). La época dorada finalizó con la derrota húngara de Mohács en 1526 y la ocupación turca de Buda (hoy parte de Budapest). A la muerte de Luis II en la batalla de Mohács, la nobleza húngara elegirá rey a Fernando de Habsburgo, hermano del emperador Carlos V, vinculándose así Hungría por casi 400 años a la Casa de Habsburgo. En 1529 fracasó la ofensiva turca contra Viena. Durante la dominación otomana de gran parte de Hungría, ésta estaría administrada por algunas grandes familias, y las revueltas serían constantes, al igual que en Transilvania. A finales del siglo XVII, los Habsburgo reconquistarían Hungría (Budapest en 1686 y en 1699 Transilvania). Durante los siglos XVIII y XIX, Hungría formó parte de los territorios administrados por los Habsburgo (Imperio austríaco a partir de 1806).</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Hungary -->
@@ -1098,7 +1099,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Polacos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1123,7 +1124,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Polonia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1148,7 +1149,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>polaco:polaca:polacos:polacas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1160,7 +1161,7 @@
 		<French>.</French>
 		<German>[TAB]Es kann wenig Zweifel geben, dass, wenn sie fähig gewesen wären, ihre inneren Spaltungen zu überwinden, die Polen eine dominierende Macht im Mittelalter gewesen wären. Die erste Institution, die ein polnisches Königreich oder eine polnische Nation genannt werden kann, entstand ungefähr 980 n. Chr., als ein Stammesführer, Mieszko, drei größere Stämme in Osteuropa vereinigte und zum Katholizismus konvertierte. Obwohl das Konzept einer Dynastie hatte in diesem Teil Europas noch nicht Anklang gefunden, waren Thronfolgen häufig äußerst brutal und chaotisch. Nach der Herrschaft Mieszkos hing das Geschick des polnischen Nationalstaats völlig von der Grausamkeit und Willenskraft seines Führers ab. Einige der Nachfolger Mieszkos waren stark und fähig, ihre Willen den widerspenstigen Fürstentümern und Stämmen Polens und Pommerns aufzuerlegen, und sich dabei effektiv gegen ausländische, gewöhnlich deutsche oder böhmische, Invasionen zu verteidigen. Andere waren es nicht.[PARAGRAPH:2]1226 n. Chr., nur zweihundert Jahre nachdem Boleslaw II. das polnische Königreich erfolgreich wiedervereinigt hatte, wurde Polen wieder tief geteilt. Baltische Stämme bedrohte den Norden und der deutsche Staat Brandenburg suchte größeres Land und Einfluss im Westen. Der polnische König Konrad I. von Masowien entschied sich dafür, eine Armee anzuheuern, um beide dieser Drohungen im Austausch für ein unbestimmtes Heimatland in Polen zu bekämpfen. Diese Armee waren die teutonischen Ritter. Sie akzeptierten das Angebot von Konrad und nachdem sie im nördlichen Polen angekommen waren, führten sie mehrere blutige Kampagnen der Eroberung gegen die deutschen und baltischen Besatzer. Zur Überraschung Konrads aber entschieden sich die Ritter dann dafür, dass sie lieber ihr eigenes Land und nicht ein abhängiges Heimatland innerhalb eines Königreichs eines anderen haben wollten. Konrad hatte das polnische Königreich vor äußeren Invasionen geschützt, um nun von innen angegriffen zu werden.[PARAGRAPH:2]Zukünftige polnische Könige mussten sich dann nicht nur mit Deutschen, Böhmen und Litauern, sondern auch den ruhelosen und aggressiven teutonischen Rittern befassen. Als ob das nicht genug war, kam 1241 eine große mongolische Invasionsarmee in Silesia (südöstliches Polen) an. Die Polen waren im Stande, die Mongolen zu besiegen, jedoch mit immensem Aufwand. Riesengroße Länder wurden verwüstet und Tausende von Soldaten kamen um. 1330 mündeten die Spannungen zwischen den teutonischen Rittern und Polen in offenen Krieg aus, und nach vielen politischen und militärischen Patts war der polnische König Kasimir III. im Stande, zu expandieren und sich vom mongolischen Angriff und den endlosen Konflikten mit Polens Nachbarn zu erholen. Aber obwohl er standhaft blieb, musste sich Kasimir eher mit dem Überleben, als mit Wohlstand abfinden.[PARAGRAPH:2]Das Goldene Zeitalter Polens kam am Ende des Mittelalters, als das Bündnis mit Litauen zu einem vereinigten Angriff gegen die teutonischen Ritter führte, der 1410 in der vom Schicksal bestimmten Schlacht bei Tannenberg kulminierte. Die Ritter waren im Stande, ein Kontingent der verbündeten Streitmacht zu bekämpfen, wurden aber durch den anderen zerschlagen. Die Ritter wurden nicht völlig besiegt, würden aber nie wieder ihren Willen auf Polen so kräftig ausüben, wie sie es in den vorangegangenen zwei Jahrhunderten getan hatten. Kasimir IV., der vielleicht größte polnische König, konnte aus diesem Erfolg Kapital schlagen, um die polnischen Erbfolge-Linien mit den Ungarns und Böhmens zu vereinigen. Er schuf, wenngleich nur für kurze Zeit, einen osteuropäischen Superstaat, der das Gebiet kulturell und militärisch für zwei Generationen beherrschte.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]La creación de una nación polaca es frecuentemente identificada con la adopción del cristianismo por su monarca Miecislao I en el 966, cuando su territorio era similar al de la Polonia moderna. El Reino de Polonia fue formado en 1025, y en 1569 cimentó una larga asociación con el Gran Ducado de Lituania al firmar la Unión de Lublin, mediante la cual se erigió la Mancomunidad Polaco-Lituana. La Mancomunidad colapsó en 1795, y el territorio polaco fue repartido entre Rusia, Prusia y Austria.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Poland -->
@@ -1184,7 +1185,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Rusos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1209,7 +1210,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Rusia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1238,7 +1239,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>ruso:rusa:rusos:rusas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1274,7 +1275,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Genoveses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1299,7 +1300,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Génova</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1328,7 +1329,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>genovés:genovesa:genoveses:genovesas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1340,7 +1341,7 @@
 		<French>.</French>
 		<German>[TAB]Die Republik entstand am Anfang am Anfang des 11. Jahrhunderts, als Genua eine selbstverwaltete Kommune innerhalb des alten Regnum Italicum wurde. In seinen frühen Jahrhunderten war Genua, wie Venedig, eine wichtige Handelsstadt. Genua begann während der Kreuzzüge zu expandieren: Die Republik gewährte ihre Flotte für die Transporte und gewann viele Ansiedlungen im Nahen Osten und begünstigte Handelsverträge. Während des 13. Jahrhunderts verbündete sich die Republik Genua mit dem Byzantinischen Reich von Nicaea, das Genuanische Hilfe erhielt, um Konstantinopel 1261 zurückzuerobern. Das Bündnis erlaubte eine große kommerzielle Expansion auf das Reich und auch die Eroberung vieler Inseln und Siedlungen im Ägäischen Meer (die wichtigste war die Insel von Chios, die nur 1566 verloren wurde). In demselben Jahrhundert eroberte die Republik wichtige Handelsbeteiligungen überall im Schwarzen Meer, wo Genua viele Siedlungen auf Krim kontrollierte.[PARAGRAPH:2]Im westlichen Mittelmeer war der Hauptrivale für Genua Pisa, das in der Seeschlacht von Meloria (1284) schließlich besiegt wurde. Davon wurde die Insel Korsika gegen Ende des 13. Jahrhunderts und später die Kontrolle über den Nordwestens Sardiniens gewonnen, wo genuesische Familien Territorien gewannen. Im Streit zwischen dem Haus Anjou und Aragon um die Kontrolle Siziliens nach der Sizilianischen Vesper von 1283 beschlossen genuesische Großhändler glücklicherweise, Aragon, die Gewinner-Seite, zu unterstützen, und zogen mit Energie in die sizilianische Wirtschaft: Sie liehen der herrschenden Klasse Geld, organisierten und steuerten die Produktion von Zucker und Seiden und monopolisierten den Export des sizilianischen Korns um, von dem Genua abhängig war, aber den der Maghreb auch verlangte. Im Austausch erhielt Genua afrikanisches Gold.[PARAGRAPH:2]Infolge der Wirtschaftseinschränkung in Europa gegen Ende des 14. Jahrhunderts, sowie Genuas langen Krieges mit Venedig, der mit seiner Niederlage bei Chioggia (1380) endete, trat für Genua ein Niedergang ein. Die aufsteigende osmanische Macht schränkte die genuesischen Handelszentren in der Ägäis ein, und der Schwarzmeerhandel wurde abgedrückt.[PARAGRAPH:2]Genua wurde schließlich den großen Teil dieser Periode von den Franzosen oder den Mailändern besetzt. Von 1499 bis 1528 erreichte die Republik seinen Tiefstpunkt und war unter fast durchgängiger französischer Besatzung. Die Spanier, mit ihren intramuralen Verbündeten, der "alte Adel", der sich in den Bergfestungen hinter Genua verschanzt hatte, gewannen die Stadt am 30. Mai 1522 und unterwarfen die Stadt einer gnadenlosen Plünderung. Als sich der große Admiral Andrea Doria der mächtigen Familie Doria mit Kaiser Karl V. verbündete, um die Franzosen zu vertreiben und Genuas Unabhängigkeit wieder herzustellen, öffnete sich eine erneuerte Aussicht: 1528 kennzeichnet das erste Darlehen von genuesischen Banken an Charles.[PARAGRAPH:2]Danach erlebte Genua eine Art Wiederbelebung als ein jüngerer Partner des spanischen Reiches mit genuesischen Bankiers und finanzierte insbesondere viele Auslandsunternehmungen der Spanischen Krone von ihren Kontoren in Sevilla aus. Der Niedergang Spaniens im 17. Jahrhundert brachte auch den erneuerten Niedergang Genuas, und die häufigen Bankrotte der Spanischen Krone insbesondere zerstörten viele der Handelshäuser Genuas.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]La Serenísima República de Génova fue un estado independiente creado por la ciudad costera de Génova en 1096, situado en Liguria, en la costa noroccidental de Italia que se mantuvo como estado independiente entre los siglos XI y finales del XVIII. Las tropas de Napoleón Bonaparte establecieron luego la República ligur. Finalmente acabó siendo anexionada por el Reino de Cerdeña, que acabó creando el Reino de Italia. Junto a Amalfi, Venecia y Pisa era una de las cuatro repúblicas marítimas. Estuvo gobernada desde la Edad Media por Cónsules, Podestás o Capitanes del pueblo. En el siglo XVI cambió su gobierno por un sistema de tipo oligárquico. Andrea Doria consiguió poner de acuerdo a las 250 familias más poderosas de la República. Estas familias tuvieron la misión de elegir el Consejo Mayor (Maggior Consiglio), que cada dos años elegía a los dogos que representaban a la República. Génova fue un estado con vocación, claramente marítima y comercial, siendo un estado débil y dependiente de injerencias extranjeras en el plano político y militar. La vida política de Génova estuvo dominada por varias familias sin que el estado tuviera un papel principal como en otros estados. Pese a que los principales logros fueron económicos también consiguió una expansión territorial por el Mediterráneo y el Mar Negro, aunque la mayoría de las veces se trataba tan sólo de establecimientos puramente comerciales. La antigua República de Génova, tuvo en sus ocho siglos de existencia diversas formas de gobierno. Su máximo esplendor fue durante el siglo XVI, conocido como El siglo de los genoveses. Subdividiendo la época histórica de la República de Génova en cinco periodos diferentes serían los siguientes: una primera República, llamada de los Cónsules; una segunda, de los Podestás; una tercera, de los Capitanes del Pueblo; una cuarta, de los dogos perpetuos; una quinta, de los dogos elegidos con mandato bienal. La república consular fue, sustancialmente, democrática, mientras la de los podestás y la de los capitanes del pueblo restauraron con violencia la relación, con frecuencia conflictiva, entre autoridad y libertad; los dogos perpetuos por su parte se proclamaron populares, quizás porque apartaron a la oligarquía; por último la quinta república fue institucionalmente aristocrática.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Genoa -->
@@ -1364,7 +1365,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Ingl&#233;ses</Text>
+			<Text>Los Ingleses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1450,7 +1451,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Portugueses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1536,7 +1537,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Austríacos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1561,7 +1562,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Austria</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1590,7 +1591,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>austríaco:austríaca:austríacos:austríacas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1626,7 +1627,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Otomanos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1651,7 +1652,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Turquía</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1716,7 +1717,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>Los Suecos</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1741,7 +1742,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Suecia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1770,7 +1771,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>sueco:sueca:suecos:suecas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1782,7 +1783,7 @@
 		<French>[TAB]On sait peu de choses de l'histoire de la Suède avant la période viking de la fin du 8e siècle. Deux peuples liés, les Svear et les Götar, puis vécu dans le centre-sud de la Suède. Presque sans cesse en guerre les uns avec les autres, ils ont uni au 9e siècle sous le contrôle de Svear. Le suédois nom de la Suède, Sverige, et signifie «royaume des Svear." Les Vikings suédois navigué vers l'est à travers la mer Baltique et dans les fleuves de la Russie. À la 9 e et 10 e siècles, ils faisaient des affaires l'Est jusqu'à Constantinople. Selon la légende, un chef viking suédois, Rurik, est le créateur de la première monarchie russe. Finlande relèvent suédois règle dans le 12ème siècle. En 1397 l'Union de Kalmar a rejoint le royaume de Suède, le Danemark et la Norvège en vertu de la monarchie danoise. Les Suédois Danois opposés commandement, qui a pris fin en 1523, quand Gustave Vasa est arrivé à la trône comme roi suédois Gustav I.[PARAGRAPH:2]En vertu de Gustav Ier et ses successeurs, la Suède est devenue une puissance martiale. Deux monarques étaient suédois célèbre guerrier comme des rois. Gustav II, également connu sous le nom de Gustavus Adolphus, a remporté un grand triomphe dans la guerre de Trente Ans. Comme un effet de cette guerre, la Suède a augmenté terres dans le nord de l'Allemagne et devint maître de la région de la Baltique. En 1638, la Suède a fondé une colonie en Amérique brève appelé New Suède. Sans cesse contestée par ses voisins, la Suède a mené une série de guerres avec le Danemark, la Russie, la Pologne et la Saxe au début du 18ème siècle. Le roi Charles XII de Suède, a remporté le premier impressionnantes victoires. Mais sa défaite dévastatrice par le tsar russe Pierre le Grand en 1709 la Suède a commencé à décliner en tant que puissance européenne.[PARAGRAPH:2]La perte de la Finlande à la Russie en 1809 a abouti à la déposition du roi Gustav IV. Une nouvelle constitution a été adoptée et un Français, Jean-Baptiste Bernadotte, a été choisi comme prince héritier suédois. Après la défaite de Napoléon en 1814, la Norvège a été prise compte tenu du Danemark et de Suède, de substituer sa perte de la Finlande. L'union de la Suède et la Norvège ont duré jusqu'en 195, lorsque la Norvège a obtenu son indépendance pacifiquement. Bernadotte monta sur le trône en 1818 que le roi Charles XIV Jean et fut le fondateur de la maison royale suédoise.[PARAGRAPH:2]Les années de guerre constante appauvri Suède. Le manque de perspectives financières causé un grand nombre de Suédois à émigrer du pays. La Suède a été plus jamais à faire la guerre, adoptant la politique de neutralité et nonalignment qui continue aujourd'hui. La croissance de l'industrie suédoise au début du 20ème siècle restaurée de son économie. La Suède a également mis au point son système de protection sociale qui garantit l'existence de besoins à tous les Suédois. La Suède a été en mesure de défendre sa neutralité dans les deux guerre mondiale I et II, en train de s'affirmer comme un havre pour les réfugiés fuyant les dégâts de ces deux guerres. La Suède a également cherché à promouvoir la paix, non seulement en soi, mais dans tous les pays. Beaucoup de Suède servi dans les troupes de la force de maintien de la paix des Nations Unies.</French>
 		<German>[TAB]Wenig bekannt von der schwedischen Geschichte vor der Viking Periode des späten 8. Jahrhunderts. Zwei bezogen Völker, das Svear und das Gö Teer, dann gewohnt in zentralem Südschweden. Fast incessantly am Krieg mit einander, vereinigten sie im 9. Jahrhundert unter der Steuerung von Svear. Der schwedische Name für Schweden, Sverige und Mittel „Reich des Svear.“ Schwedisches Vikings segelte ostwärts über die Ostsee und in die Flüsse von Rußland. Bis zum den 9. und 10. Jahrhunderten taten sie Geschäft als Ferner Osten als Konstantinopolis. Entsprechend Legende war ein schwedischer Viking Häuptling, Rurik, der Schöpfer der ersten russischen Monarchie. Finnland kam unter schwedische Richtlinie im 12. Jahrhundert. In 1397 verband der Anschluß von Kalmar die Königreiche von Schweden, von Dänemark und von Norwegen unter der dänischen Monarchie. Die Schweden setzten dänischem Befehl entgegen, der 1523 beendete, als Gustavus Vasa zum schwedischen Thron als König Gustav I. kam.[PARAGRAPH:2]Unter Gustav wurden I und seine Nachfolger, Schweden eine kriegerische Energie. Zwei schwedische Monarchen waren als Kriegerkönige berühmt. Gustav II, alias Gustavus Adolphus, gewonnene große Triumphe im dreißig Krieg der Jahre. Als Effekt dieses Krieges, erhöhte Schweden Land in Norddeutschland und wurde Meister der baltischen Region. 1638 gründete Schweden eine kurze Kolonie in Amerika angerufenem New Schweden. Fortwährend herausgefordert durch seine Nachbarn, kämpfte Schweden eine Reihe Kriege mit Dänemark, Rußland, Polen und Sachsen während des frühen 18. Jahrhunderts. Der schwedische König Charles XII gewann erste eindrucksvolle Siege. Aber seine verheerende Niederlage durch das russische Tsar Peter das große in der Abnahme 1709 begonnenen Schwedens als europäischer Energie.[PARAGRAPH:2]Der Verlust von Finnland nach Rußland in 1809 zur Absetzung des Königs Gustav IV. geführt. Eine neue Beschaffenheit wurde angenommen und ein Franzose, Jean Baptiste Bernadotte, wurde als der schwedische Kronprinz gewählt. Nach Niederlage Napoleons 1814, wurde Norwegen von Dänemark genommen und gegeben nach Schweden, um seinen Verlust von Finnland zu ersetzen. Der Anschluß von Schweden und von Norwegen dauerte bis 195, als Norwegen friedlich seine Unabhängigkeit gewann. Bernadotte kam zum Thron in 1818 als König Charles XIV John und war der Gründer des anwesenden schwedischen königlichen Hauses.[PARAGRAPH:2]Die konstanten Jahre des Krieges verarmtes Schweden. Ein Mangel an finanziellen Aussichten veranlaßte viele Schweden, aus dem Land auszuwandern. Schweden war nie wieder in den Krieg zu gehen und nahm die Neutralitätspolitik und nonalignment an, das heute fortfährt. Das Wachstum der schwedischen Industrie im frühen - Jahrhundert des Th 20 stellte seine Wirtschaft wieder her. Schweden entwickelte auch sein Sozialwohlfahrt System, das den Notwendigkeiten des Bestehens zu jedem Schweden garantierte. Schweden war in der Lage, seine Neutralität im Ersten Weltkrieg und in II zu unterstützen und stellte sich als Hafen für die Flüchtlinge her, die der Beschädigung beider dieser Kriege entgehen. Schweden hat auch gesucht, Frieden in nicht nur selbst, aber in allen Ländern zu fördern. Viele von Truppen Schwedens dienten in den Nationen Friedenssicherungkräften.</German>
 		<Italian>[TAB]Piccolo è conosciuto di storia svedese prima del periodo di Viking dell'ottavo secolo tardo. Due hanno collegato la gente, lo Svear e il Gö catrame, allora vivo in Svezia centrale del sud. Quasi incessantly alla guerra con a vicenda, hanno unito nel nono secolo sotto il controllo di Svear. Il nome svedese per la Svezia, Sverige ed i mezzi “regno dello Svear.„ Vikings svedese ha navigato verso l'est attraverso il Mar Baltico e nei fiumi della Russia. Entro i noni e decimi secoli stavano facendo il commercio come Estremo-Oriente come Constantinople. Secondo la leggenda, un capo svedese di Viking, Rurik, era il creatore del primo monarchy russo. La Finlandia è rientrato nella regola svedese nel dodicesimo secolo. In 1397 l'unione di Kalmar ha unito i regni della Svezia, della Danimarca e della Norvegia sotto il monarchy danese. Gli Svedesi hanno opposto l'ordine danese, che si è concluso in 1523, quando Gustavus Vasa è venuto al throne svedese come re Gustav I.[PARAGRAPH:2]Sotto Gustav I ed i suoi successori, Svezia si sono trasformati in in un'alimentazione martial. Due monarchi svedesi erano famed come re del guerriero. Gustav II, anche conosciuto come Gustavus Adolphus, trionfi grandi vinti nella guerra dei trenta anni. Come effetto di questa guerra, la terra aumentata la Svezia in Germania del Nord e si è trasformata in in padrone della regione baltica. In 1638, la Svezia ha fondato una breve colonia in New denominato l'America Svezia. Sfidato continuamente dai relativi vicini, la Svezia ha combattuto una serie di guerre con la Danimarca, la Russia, la Polonia e la Sassonia durante il diciottesimo secolo in anticipo. Il re svedese Charles XII ha vinto le prime vittorie impressionanti. Ma la sua sconfitta devastating dal Tsar russo Peter il grande in un declino delle 1709 Svezie cominciate come alimentazione europea.[PARAGRAPH:2]La perdita della Finlandia in Russia in 1809 ha condotto al deposito del re Gustav IV. Una nuova costituzione è stata adottata e un francese, Jean Baptiste Bernadotte, è stato scelto come il principe di parte superiore svedese. Dopo la sconfitta del Napoleon in 1814, la Norvegia è stata presa dalla Danimarca ed è stata data in Svezia per sostituire la relativa perdita della Finlandia. L'unione della Svezia e della Norvegia ha durato fino a 195, quando la Norvegia ha guadagnato pacificamente la relativa indipendenza. Bernadotte è venuto al throne in 1818 come re Charles XIV John ed era il fondatore della casa reale svedese attuale.[PARAGRAPH:2]Gli anni costanti della guerra Svezia impoverita. Una mancanza di prospetti finanziari ha indotto tantissimi Svedesi ad emigrare dal paese. La Svezia non era mai ancora di andare fare la guerra, adottando la politica di neutralità e del nonalignment che continua oggi. Lo sviluppo di industria svedese nell'inizio del 20esimo secolo ha ristabilito la relativa economia. La Svezia inoltre ha sviluppato il relativo sistema di assistenza sociale sociale che ha garantito i bisogni dell'esistenza all'ogni Svedesi. La Svezia poteva sostenere la relativa neutralità sia nelle guerre mondiali I che II, stabilendosi come porto per i rifugiati che fuoriescono danni di entrambe queste guerre. La Svezia inoltre ha cercato di promuovere la pace in non solo in se, ma in tutti i paesi. Molte delle truppe della Svezia hanno servito nelle forze di mantenimento della pace delle Nazioni Unite.</Italian>
-		<Spanish>[TAB]Poco se sabe de historia sueca antes del período de Viking del último 8vo siglo. Dos relacionaron la gente, el Svear y el Gö alquitrán, entonces vivido en Suecia central del sur. Casi incesantemente en la guerra con uno a, unieron en el 9no siglo bajo control de Svear. El nombre sueco para Suecia, Sverige, y los medios “reino del Svear.” Vikings sueco navegó hacia el este a través del mar báltico y en los ríos de Rusia. Por los 9nos y 10mos siglos hacían negocio como Extremo Oriente como Constantinople. Según leyenda, un cacique sueco de Viking, Rurik, era el creador de la primera monarquía rusa. Finlandia vino bajo regla sueca en el 12mo siglo. En 1397 la unión de Kalmar ensambló los reinos de Suecia, de Dinamarca, y de Noruega bajo monarquía danéa. Los sueco opusieron el comando danés, que terminó en 1523, cuando Gustavus Vasa vino al trono sueco como rey Gustav I.[PARAGRAPH:2]Debajo de Gustav I y sus sucesores, Suecia se convirtió en una energía marcial. Dos monarcas suecos eran famosos como reyes del guerrero. Gustav II, también conocido como Gustavus Adolphus, grandes triunfos ganados en la guerra de los treinta años. Como efecto de esta guerra, la tierra creciente Suecia en Alemania norteña y se convirtió en amo de la región báltica. En 1638, Suecia fundó a breve colonia en New llamado América Suecia. Desafiado continuamente por sus vecinos, Suecia luchó una serie de guerras con Dinamarca, Rusia, Polonia, y Sajonia durante el décimo octavo siglo temprano. El rey sueco Charles XII ganó las primeras victorias impresionantes. Pero su derrota devastadora por el Tsar ruso Peter el grande en la declinación de 1709 Suecia comenzadas como energía europea.[PARAGRAPH:2]La pérdida de Finlandia a Rusia en 1809 condujo a la deposición de rey Gustav IV. Una nueva constitución fue adoptada y eligieron a un francés, Jean Baptiste Bernadotte, como el príncipe de corona sueco. Después de la derrota de Napoleon en 1814, Noruega fue tomada de Dinamarca y dada a Suecia para substituir su pérdida de Finlandia. La unión de Suecia y de Noruega duró hasta 195, cuando Noruega ganó pacífico su independencia. Bernadotte vino al trono en 1818 como rey Charles XIV Juan y era el fundador de la actual casa real sueca.[PARAGRAPH:2]Los años constantes de la guerra Suecia empobrecida. Una carencia de perspectivas financieras hizo a una gran cantidad de sueco emigrar del país. Suecia nunca era otra vez ir a guerrear, adoptando la política de la neutralidad y del nonalignment que continúa hoy. El crecimiento de la industria sueca en el siglo a principios de siglo 20 restauró su economía. Suecia también desarrolló su sistema de la asistencia social que garantizó las necesidades de la existencia a cada sueco. Suecia podía mantener su neutralidad en Primera Guerra Mundial e II, estableciéndose como asilo para los refugiados que escapaban el daño de ambas estas guerras. Suecia también ha intentado promover la paz en no sólo sí mismo, pero en todos los países. Muchas de las tropas de Suecia desempen'aron servicios en las fuerzas del mantenimiento de la paz de Naciones Unidas.</Spanish>
+		<Spanish>[TAB]Durante el siglo XVII emergió como una potencia europea. Antes del surgimiento del Imperio sueco, era un país muy pobre, escasamente poblado, y con poca participación en asuntos internacionales. Fue repentinamente convertido en una de las naciones líderes en Europa por Axel Oxenstierna y el rey Gustavo II Adolfo de Suecia, gracias a la conquista de territorios de Rusia y Polonia-Lituania, pero también gracias a su participación en la Guerra de los Treinta Años, la cual la convirtió en el líder continental del protestantismo hasta el colapso del imperio en 1721. La guerra de Gustavo II Adolfo en contra del Sacro Imperio Romano-Germánico tuvo un alto costo para este último, donde un tercio de la población murió y casi la mitad de los Estados que lo componían fueron ocupados por los suecos. El plan de Gustavo II Adolfo era aventajarse del conflicto armado para expandir los límites de su reino. Sin embargo, Gustavo II Adolfo murió después en la Batalla de Lützen de 1632, dejando el trono a la menor Cristina de Suecia.26 Después de la Batalla de Nördlingen Suecia se retiró de la guerra y perdió su poderío en la zona sur de la actual Alemania, y las provincias conquistadas se separaron del dominio sueco una a una, dejándola con sólo un par de territorios en el norte: Pomerania Sueca, Bremen-Verden y Wismar. A mediados del siglo XVII, era el tercer país más extenso en Europa, sólo superado por Rusia y España. En 1658, alcanzó su máxima extensión bajo el reinado de Carlos X de Suecia (1622-1660), poco después de la firma del Tratado de Roskilde.28 A mediados del siglo XVI, el rey Gustavo I convirtió al país al protestantismo y realizó una serie de reformas económicas.29 Durante el siglo XVII, el país se vio envuelto en varias guerras, como la que sostuvo contra Polonia-Lituania, en la que ambos compitieron por los territorios de los Países Bálticos hasta la Batalla de Kircholm ocurrida en 1605, la cual es considerada una de las peores derrotas del ejército sueco. Este periodo también fue testigo de «El Diluvio», la invasión sueca de la Unión de Polonia-Lituania. Después de más de medio siglo de una guerra casi constante, la economía sueca se deterioró seriamente. Reconstruir la economía y recuperar el poder militar se convirtió en una labor que se extendió durante toda la vida del sucesor de Carlos X, Carlos XI de Suecia (1655-1697). El legado para su hijo, Carlos XII, fue uno de los mejores arsenales en el mundo, un ejército numeroso y una gran flota. En 1700, después de la Batalla de Narva (una de las primeras batallas de la Gran Guerra del Norte), el Ejército Ruso, peor equipado y entrenado y desmoralizado por la retirada de Pedro I de Rusia antes de la batalla, fue severamente diezmado, dándole a Suecia la oportunidad de invadir Rusia. Sin embargo, Carlos XII no persiguió al Ejército Ruso, sino que se dirigió a Polonia-Lituania y en 1702, derrotó al rey polaco Augusto II y a sus aliados sajones en la Batalla de Kliszów.32 Después de la exitosa invasión a Polonia, Carlos XII tenía preparado el terreno para invadir Rusia atacando su capital, Moscú, desde Ucrania. Además de su ejército contaba con la ayuda de cerca de 2.000 cosacos ucranianos. Pero en esta ocasión el ejército zarista estaba mejor preparado y motivado, y después de acosar a los invasores con los jinetes cosacos y rebajar sus suministros con técnicas de tierra quemada, en 1709 Pedro I derrotó decisivamente a los suecos en la Batalla de Poltava. Los suecos fueron perseguidos, rindiéndose tres días después en Perevolochna. Esta derrota significó el comienzo del derrumbe del Imperio sueco. En 1716, Carlos XII intentó invadir Noruega, sin embargo, su avance fue frenado por los noruegos en 1718, con el asedio de la fortaleza Fredriksten. Los suecos no fueron derrotados militarmente en Fredriksten, pero la organización y estructura de la campaña noruega llevaron a la muerte del rey y a la retirada del ejército.32 Forzada a ceder grandes extensiones de tierra en el Tratado de Nystad de 1721, también perdió su lugar como imperio y como el Estado dominante del mar Báltico. Con la pérdida de la influencia sueca, Rusia emergió como un imperio y se convirtió en una de las naciones dominantes en Europa.33 En el siglo XVII, ya carecía de los suficientes recursos para mantener sus territorios fuera de Escandinavia, debido a lo cual perdió la mayoría de éstos, culminando con la pérdida del este de Suecia por Rusia, territorios que se convertirían en el Ducado de Finlandia semiautónomo en la Rusia imperial. Después de que Dinamarca-Noruega fuera derrotada en las Guerras Napoleónicas, el 14 de enero de 1814 Noruega fue cedida a Suecia a cambio de las provincias del norte de Alemania, en el Tratado de Kiel. Los intentos de Noruega por mantenerse como una nación soberana fueron repelidos por el rey Carlos XIII de Suecia. El rey lanzó una campaña militar contra Noruega el 27 de julio de 1814, terminando con la Convención de Moss, la cual forzó a Noruega a una unión personal bajo el poder sueco, que duró hasta 1905. La campaña de 1814 fue la última guerra en la que su ejército participó como beligerante.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Sweden -->
@@ -1806,7 +1807,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Holand&#233;ses</Text>
+			<Text>Los Holandeses</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1879,7 +1880,7 @@
 		<French>N/T</French>
 		<German>N/T</German>
 		<Italian>N/T</Italian>
-		<Spanish>N/T</Spanish>
+		<Spanish>Los Lituanos</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1888,7 +1889,7 @@
 		<French>N/T</French>
 		<German>N/T</German>
 		<Italian>N/T</Italian>
-		<Spanish>N/T</Spanish>
+		<Spanish>Lituania</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1901,7 +1902,10 @@
 		<French>N/T</French>
 		<German>N/T</German>
 		<Italian>N/T</Italian>
-		<Spanish>N/T</Spanish>
+		<Spanish>
+			<Text>lituano:lituana:lituanos:lituanas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1910,7 +1914,8 @@
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]El territorio que actualmente corresponde a Lituania se remonta en sus orígenes políticos al siglo XIII como Estado medieval. Fue primero un gran ducado independiente. Se considera que la fecha de la constitución del primer Estado lituano fue la coronación oficial de Mindaugas, el 6 de julio de 1253 en Vilnius, que unió a los duques lituanos rivales en un único Estado. En 1241, 1259, 1275 y 1277 el reino fue invadido por los reyes mongoles de la Horda de Oro. Los mongoles fueron derrotados en 1377 en "Aguas Azules". En 1385 se unió con Polonia tras la coronación como rey de Vladislovas II Jogaila.
+En 1401 Vytautas, primo de Jogaila, se proclamó Gran Duque de Lituania y se disolvió la unión de los dos países. Gracias a la cooperación de ambos países, los ejércitos lituano y polaco vencieron a la Orden Teutónica en la Batalla de Grünwald en 1410. Fue la mayor batalla en suelo europeo librada en todo el siglo XV. Después fue de nuevo anexionada a Polonia formando la República de las Dos Naciones o Mancomunidad de Polonia-Lituania en virtud de la unión dinástica de los dos estados en 1569, convirtiéndose así en el país más grande de Europa. Según el sistema de unión de los dos países, Lituania pudo conservar un autogobierno propio. Posteriormente fue incorporada a Rusia en 1795 bajo el reinado de Catalina II de Rusia, tras un proceso de desintegración que duró todo el siglo XVIII.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Lithuania -->
@@ -1934,7 +1939,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Persas</Text>
+			<Text>El Papa</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1959,7 +1964,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Persia</Text>
+			<Text>Roma</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1984,7 +1989,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>persa:persa:persas:persas</Text>
+			<Text>papal:papal:papales:papales</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -2045,7 +2050,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Autonolandia</Text>
+			<Text>Ciudades Autónomas</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -2082,7 +2087,7 @@
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>[TAB]Sobreviviré...</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 		<!-- Civilization Independent -->
