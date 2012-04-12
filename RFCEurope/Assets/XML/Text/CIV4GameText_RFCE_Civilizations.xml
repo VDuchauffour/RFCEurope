@@ -26,7 +26,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Burgundios</Text>
+			<Text>Los Borgoñones</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -51,7 +51,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Burgundia</Text>
+			<Text>Borgoña</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -80,7 +80,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>burgundio:burgundia:burgundios:burgundias</Text>
+			<Text>borgoñón:borgoñona:borgoñones:borgoñonas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1185,7 +1185,7 @@ La última duquesa de la Borgoña independiente fue María de Valois, que se casó c
 			<Plural>1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Los Rusos</Text>
+			<Text>Los Moscovitas</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
@@ -1210,7 +1210,7 @@ La última duquesa de la Borgoña independiente fue María de Valois, que se casó c
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Rusia</Text>
+			<Text>Moscovia</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1239,7 +1239,7 @@ La última duquesa de la Borgoña independiente fue María de Valois, que se casó c
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>ruso:rusa:rusos:rusas</Text>
+			<Text>moscovita:moscovita:moscovitas:moscovitas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
@@ -1906,6 +1906,7 @@ La última duquesa de la Borgoña independiente fue María de Valois, que se casó c
 			<Text>lituano:lituana:lituanos:lituanas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
+		</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
