@@ -43,6 +43,8 @@ class UniquePowers:
 		                iTemple = xml.iCatholicTemple
 			if (iStateReligion == 3):
 			        iTemple = xml.iOrthodoxTemple
+			if (iStateReligion == 4):
+			        iTemple = xml.iPlague
                         if (not city.hasBuilding(iTemple)):
                                 city.setHasRealBuilding(iTemple, True)
                                 pFaithful.changeFaith( 1 )
