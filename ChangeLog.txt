@@ -19,6 +19,7 @@ Changes for RFCE 1.1:
 		- Protestant Church School requires Protestantism as a state religion
 		- Revised AI distance settings for city placement - territory coverage should be better now
 		- A couple changes and fixes in the settler maps in light of these AI distance changes
+		- Arabian UP places the Plague in all cities when Judaism is state religion
 	
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
