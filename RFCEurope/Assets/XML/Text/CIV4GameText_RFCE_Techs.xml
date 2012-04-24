@@ -1080,4 +1080,13 @@
 		</Spanish>
 		<Russian>&#192;&#240;&#232;&#241;&#242;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY_HELP</Tag>
+		<English>[ICON_BULLET]Obsoletes Knightly Orders Masters (Executives)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
 </Civ4GameText>
