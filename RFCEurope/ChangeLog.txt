@@ -37,6 +37,7 @@ Changes for RFCE 1.1:
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
 		- UHV counter display bug for Portugal and France
+		- Workboat is no longer a military unit
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
