@@ -409,7 +409,7 @@ class Stability:
                         if (iCivic3 == xml.iCivicTradeEconomy):
                                 iCivicCombo += 3
                 if (iCivic0 == xml.iCivicDivineMonarchy): #Divine Monarchy should have an appropriate religious civic
-			if (iCivic4 == xml.iCivicDivineMonarchy): #Paganism
+			if (iCivic4 == xml.iCivicPaganism): #Paganism
 				iCivicCombo -=4
 			if (iCivic4 == xml.iCivicTheocracy): #Theocracy
 				iCivicCombo +=3
