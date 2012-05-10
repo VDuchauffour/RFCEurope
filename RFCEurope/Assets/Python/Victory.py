@@ -318,7 +318,7 @@ class Victory:
                                 iCathCath = ( iCounter / 10000 ) % 10
                                 iOrthCath = ( iCounter / 1000 ) % 10 
                                 iProtCath = ( iCounter / 100 ) % 10
-                                iJewishQu = max( pPoland.getNumCities(), 2 )
+                                iJewishQu = 99
                                 iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
                                 pPoland.setUHVCounter( 2, iCounter )
                                 if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
@@ -391,26 +391,28 @@ class Victory:
                                                 pKiev.setUHV( 2, 1 )
                                         pKiev.setUHVCounter( 2, 100 * iMonasteryCounter + iCathedralCounter )
                 # Sedna17: Polish UHV changed again                 	                	
+                # HHG: Polish UHV3 now uses Wonder Kazimierz with maximum value 99
+                #      and all other buildings have boundary checks
                 elif ( iPlayer == iPoland ):
                         if ( pPoland.isAlive() and pPoland.getUHV( 2 ) == -1 ):
-                                lBuildingList = [xml.iCatholicCathedral,xml.iOrthodoxCathedral,xml.iProtestantCathedral,xml.iJewishQuarter]
+                                lBuildingList = [xml.iCatholicCathedral,xml.iOrthodoxCathedral,xml.iProtestantCathedral,xml.iJewishQuarter,xml.iKazimierz]
                                 if ( iBuilding in lBuildingList):
                                         iCounter = pPoland.getUHVCounter( 2 )
                                         iCathCath = ( iCounter / 10000 ) % 10
                                         iOrthCath = ( iCounter / 1000 ) % 10 
                                         iProtCath = ( iCounter / 100 ) % 10
                                         iJewishQu = iCounter % 100
-                                        if ( iBuilding == xml.iCatholicCathedral ):
+                                        if ( iCathCath < 9 and iBuilding == xml.iCatholicCathedral ):
                                                 iCathCath += 1
-                                        elif ( iBuilding == xml.iOrthodoxCathedral ):
+                                        elif ( iOrthCath < 9 and iBuilding == xml.iOrthodoxCathedral ):
                                                 iOrthCath += 1
-                                        elif ( iBuilding == xml.iProtestantCathedral ):
+                                        elif ( iProtCath < 9 and iBuilding == xml.iProtestantCathedral ):
                                                 iProtCath += 1
-                                        elif ( iBuilding == xml.iJewishQuarter ):
-                                                iJewishQu += 1
                                         elif ( iBuilding == xml.iKazimierz ):
-                                                iJewishQu = max( pPoland.getNumCities(), 2 )
-                                        if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
+                                                iJewishQu = 99
+                                        elif ( iJewishQu < 99 and iBuilding == xml.iJewishQuarter ):
+                                                iJewishQu += 1
+                                        if ( iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2 ):
                                                 pPoland.setUHV( 2, 1 )
                                         iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
                                         pPoland.setUHVCounter( 2, iCounter )
@@ -488,7 +490,7 @@ class Victory:
                 iCount += pPlayer.countOwnedBonuses( xml.iCoffee )
                 iCount += pPlayer.countOwnedBonuses( xml.iTea )
                 iCount += pPlayer.countOwnedBonuses( xml.iTobacco )
-				#iCount += pPlayer.countOwnedBonuses( xml.iRelic )
+                #iCount += pPlayer.countOwnedBonuses( xml.iRelic )
                 return iCount
 
         def getOwnedGrain( self, pPlayer ):
@@ -868,6 +870,29 @@ class Victory:
                                 pPoland.setUHV( 1, 1 )
                         elif ( iGameTurn == xml.i1520AD ):
                                 pPoland.setUHV( 1, 0 )
+#                # HHG: the code below was intended to recalculate UHV3 conditions if messed up - but it does nothing :(
+#                #3 Catholic, 3 Orthodox, 2 Protestant Cathedrals and 2 Jewish Quarters
+#                if (pPoland.getUHV( 2 ) == -1 and pPoland.getNumCities() > 0):
+#                        iCathCath = 0
+#                        iOrthCath = 0
+#                        iProtCath = 0
+#                        iJewishQu = 0
+#                        apCityList = pPoland.getCityList()
+#                        for pCity in apCityList:
+#                                if ( iCathCath < 9 and pCity.hasBuilding( xml.iCatholicCathedral )):
+#                                        iCathCath += 1
+#                                if ( iOrthCath < 9 and pCity.hasBuilding( xml.iOrthodoxCathedral )):
+#                                        iOrthCath += 1
+#                                if ( iProtCath < 9 and pCity.hasBuilding( xml.iProtestantCathedral )):
+#                                        iProtCath += 1
+#                                if ( pCity.hasBuilding( xml.iKazimierz )):
+#                                        iJewishQu = 99
+#                                elif ( iJewishQu < 99 and pCity.hasBuilding( xml.iJewishQuarter )):
+#                                        iJewishQu += 1
+#                        if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
+#                                pPoland.setUHV( 2, 1 )
+#                        iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
+#                        pPoland.setUHVCounter( 2, iCounter )
 
                 
         def checkGenoa( self, iGameTurn ):

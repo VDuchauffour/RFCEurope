@@ -1071,6 +1071,46 @@ class CvVictoryScreen:
                                         sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
                         sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
                         
+                # The Polish UHV 3: count cathedrals and quarters
+                if ( self.iActivePlayer == con.iPoland ): 
+                        iCounter = pPlayer.getUHVCounter( 2 )
+                        iCathCath = ( iCounter / 10000 ) % 10
+                        iOrthCath = ( iCounter / 1000 ) % 10
+                        iProtCath = ( iCounter / 100 ) % 10
+                        iJewishQu = iCounter % 100
+                        sCathCath = localText.getText("TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL",()) + ": "
+                        sOrthCath = localText.getText("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL",()) + ": "
+                        sProtCath = localText.getText("TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL",()) + ": "
+                        sJewishQu = localText.getText("TXT_KEY_BUILDING_JEWISH_QUARTER",()) + ": "
+                        if ( iCathCath >= 3 ):
+                                sCathCath = sCathCath + u" <color=0,255,0>%i</color>" %(iCathCath)
+                        elif ( iCathCath > 0 ):
+                                sCathCath = sCathCath + u" <color=255,250,0>%i</color>" %(iCathCath)
+                        else:
+                                sCathCath = sCathCath + u" <color=208,0,0>%i</color>" %(iCathCath)
+                        if ( iOrthCath >= 3 ):
+                                sOrthCath = sOrthCath + u" <color=0,255,0>%i</color>" %(iOrthCath)
+                        elif ( iOrthCath > 0 ):
+                                sOrthCath = sOrthCath + u" <color=255,250,0>%i</color>" %(iOrthCath)
+                        else:
+                                sOrthCath = sOrthCath + u" <color=208,0,0>%i</color>" %(iOrthCath)
+                        if ( iProtCath >= 2 ):
+                                sProtCath = sProtCath + u" <color=0,255,0>%i</color>" %(iProtCath)
+                        elif ( iProtCath > 0 ):
+                                sProtCath = sProtCath + u" <color=255,250,0>%i</color>" %(iProtCath)
+                        else:
+                                sProtCath = sProtCath + u" <color=208,0,0>%i</color>" %(iProtCath)
+                        if ( iJewishQu == 99 ):
+                                sKazimierzWonder = localText.getText("TXT_KEY_BUILDING_KAZIMIERZ",())
+                                sJewishQu = sJewishQu + u" <color=0,255,0>%s</color>" %(sKazimierzWonder)
+                        elif ( iJewishQu >= 2 ):
+                                sJewishQu = sJewishQu + u" <color=0,255,0>%i</color>" %(iJewishQu)
+                        elif ( iJewishQu > 0 ):
+                                sJewishQu = sJewishQu + u" <color=255,250,0>%i</color>" %(iJewishQu)
+                        else:
+                                sJewishQu = sJewishQu + u" <color=208,0,0>%i</color>" %(iJewishQu)
+                        sString = sString + "\n\n" + sCathCath + "   " + sOrthCath + "   " + sProtCath + "   " + sJewishQu
+
                 ### Add New Spanish UHV
                 if ( self.iActivePlayer == con.iSpain ):
                         lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan

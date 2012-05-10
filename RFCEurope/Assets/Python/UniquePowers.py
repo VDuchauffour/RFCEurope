@@ -32,19 +32,18 @@ class UniquePowers:
                 iStateReligion = pFaithful.getStateReligion()
                 iTemple = 0
                 if (iStateReligion >= 0):
-                	if (not city.isHasReligion(iStateReligion)):
-	                        city.setHasReligion(iStateReligion, True, True, False)
-	                        pFaithful.changeFaith( 1 )
-			if (iStateReligion == 0):
-			        iTemple = xml.iProtestantTemple
-			if (iStateReligion == 1):
-			        iTemple = xml.iIslamicTemple
-			if (iStateReligion == 2):
-		                iTemple = xml.iCatholicTemple
-			if (iStateReligion == 3):
-			        iTemple = xml.iOrthodoxTemple
-			if (iStateReligion == 4):
-			        iTemple = xml.iPlague
+                        if (not city.isHasReligion(iStateReligion)):
+                                city.setHasReligion(iStateReligion, True, True, False)
+                                pFaithful.changeFaith( 1 )
+                if (iStateReligion >= 0 and iStateReligion <= 3):
+                        if (iStateReligion == 0):
+                                iTemple = xml.iProtestantTemple
+                        if (iStateReligion == 1):
+                                iTemple = xml.iIslamicTemple
+                        if (iStateReligion == 2):
+                                iTemple = xml.iCatholicTemple
+                        if (iStateReligion == 3):
+                                iTemple = xml.iOrthodoxTemple
                         if (not city.hasBuilding(iTemple)):
                                 city.setHasRealBuilding(iTemple, True)
                                 pFaithful.changeFaith( 1 )
