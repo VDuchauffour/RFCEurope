@@ -304,14 +304,10 @@ class Victory:
                                 if ( pSweden.getUHV( 1 ) == -1 ):
                                         if ( playerType == iMoscow or playerType == iPoland or playerType == iLithuania):
                                                 pSweden.setUHV( 1, 0 )
-                if ( playerType == iSpain ):
-                        if ( gc.getPlayer( owner ).getStateReligion() == xml.iProtestantism ):
-                                iConqueredCities = pSpain.getUHVCounter( 2 ) + 1
-                                pSpain.setUHVCounter( 2, iConqueredCities )
-                                if ( pSpain.getUHV( 2 ) == - 1 and iConqueredCities >= 3 ):
-                                        pSpain.setUHV( 2, 1 )
+
                 elif ( playerType == iNorse ):
                         pNorse.setUHVCounter( 2, pNorse.getUHVCounter( 2 ) + city.getPopulation() )
+
                 elif ( playerType == iPoland and pPoland.getUHV( 2 ) == -1 ):
                         if ( city.hasBuilding( xml.iKazimierz )):
                                 iCounter = pPoland.getUHVCounter( 2 )
@@ -816,9 +812,8 @@ class Victory:
                                 pSpain.setUHV( 1, 1 )
                         else:
                                 pSpain.setUHV( 1, 0 )
-                # purge protestants
+                # catholic lands/population superior
                 if ( iGameTurn == xml.i1648AD and pSpain.getUHV( 2 ) == -1 ):
-                        # we have not captured enough cities
                         lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
                         lPop  = [ 0, 0, 0, 0, 0, 0 ]
                         for iPlayer in range( iNumPlayers ):

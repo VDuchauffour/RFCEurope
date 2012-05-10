@@ -40,6 +40,7 @@ Changes for RFCE 1.1:
 		- Lowered the number of extra units you get on initial war for most civs
 		- Small changes to a couple civs initially spawned units too - mostly increasing defensive units for the AI
 		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
+		- Indy Augsburg starts with an additional archer - so it won't be razed so often by barbs before the German spawn
 	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
@@ -48,6 +49,7 @@ Changes for RFCE 1.1:
 		- Fixed bug with Arabian UP when Judaism is the state religion
 		- Fixed Jewish Quarter counting bug in the Polish 3rd UHV when Kazimierz is built - by HolyHandGrenade
 		- Fixed small bug in stability counting when using Divine Monarchy and Paganism civics together - by HolyHandGrenade
+		- Removed the UHV check for the old Spanish 3rd UHV (conquer protestant cities). It was possible to trigger both 3rd UHVs!! - by lzd
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
