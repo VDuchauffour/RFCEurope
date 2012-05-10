@@ -19,11 +19,17 @@ Changes for RFCE 1.1:
 		- Protestant Church School requires Protestantism as a state religion
 		- Revised AI distance settings for city placement - territory coverage should be better now
 		- A couple changes and fixes in the settler maps in light of these AI distance changes
-		- Arabian UP places the Plague in all cities when Judaism is state religion
+		- Improved UHV counter for the Polish 3rd UHV - by HolyHandGrenade
+		- Added a Spawn map in the Reference folder (with all civs' spawn areas and spawn dates, and the indy/barb cities) - by HolyHandGrenade
+	
+	Map and province changes:
+		- Atlantic Access near Sevilla
+		- Forest near Antioch, so AI Arabia will have Damascus as it's first city -> it will be the holy city of Islam
 	
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
 		- Small updates in the reference files
+		- Added a couple Spanish translations by mijamobu
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
@@ -32,12 +38,16 @@ Changes for RFCE 1.1:
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
 		- Lowered the number of extra units you get on initial war for most civs
-		- Small changes to a couple civs initially spawned units too
+		- Small changes to a couple civs initially spawned units too - mostly increasing defensive units for the AI
+		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
 	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
 		- UHV counter display bug for Portugal and France
 		- Workboat is no longer a military unit
+		- Fixed bug with Arabian UP when Judaism is the state religion
+		- Fixed Jewish Quarter counting bug in the Polish 3rd UHV when Kazimierz is built - by HolyHandGrenade
+		- Fixed small bug in stability counting when using Divine Monarchy and Paganism civics together - by HolyHandGrenade
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

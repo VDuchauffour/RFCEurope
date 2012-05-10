@@ -9702,6 +9702,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=16
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9722,6 +9723,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=20
+	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10102,7 +10104,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=17
-	BonusType=BONUS_ACCESS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -39621,6 +39622,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=15
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot

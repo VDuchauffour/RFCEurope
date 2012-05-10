@@ -2146,11 +2146,11 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 6)
                 if (iCiv == iBulgaria):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 4)
-                if (iCiv == iCordoba):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 5)
+                if (iCiv == iCordoba):
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 3)
@@ -2194,7 +2194,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
                 if (iCiv == iHungary):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
@@ -2204,7 +2204,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                 if (iCiv == iPoland):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
@@ -2233,12 +2233,12 @@ class RiseAndFall:
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
-                        tSeaPlot = self.findSeaPlots(tPlot, 3)
+                        tSeaPlot = self.findSeaPlots(tPlot, 3)		# HHG: Calais-culture mostly prevents spawn of the galley. Range changed from 2 to 3.
                         if ( tSeaPlot ):
                                 pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
                 if (iCiv == iPortugal):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
@@ -2252,10 +2252,10 @@ class RiseAndFall:
                         utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iKnight, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                 if (iCiv == iTurkey):
                         utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
