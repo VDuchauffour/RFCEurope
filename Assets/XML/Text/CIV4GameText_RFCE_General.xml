@@ -270,7 +270,7 @@
 		<English>Military Bonus</English>
 		<French>Bonus militaire</French>
 		<German>Milit&#228;rbonus</German>
-		<Italian>Bonus militare</Italian>
+		<Italian>Bonus Militare</Italian>
 		<Spanish>Bonificaci&#243;n militar</Spanish>
 		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#207;&#240;&#229;&#236;&#232;&#255;</Russian>
 	</TEXT>
@@ -351,7 +351,7 @@
 		<English>Polearm</English>
 		<French>Arme d'hast</French>
 		<German>Stangenwaffeninfanterie</German>
-		<Italian>Fanteria di braccio di asta</Italian>
+		<Italian>Armi ad Asta</Italian>
 		<Spanish>Infantería de brazo de asta</Spanish>
 		<Russian>&#196;&#240;&#229;&#226;&#234;&#238;&#226;&#238;&#229; &#238;&#240;&#243;&#230;&#232;&#229;</Russian>
 	</TEXT>
@@ -360,7 +360,7 @@
 		<English>Heavy Infantry</English>
 		<French>Infantrie Lourde</French>
 		<German>Schwere Infanterie</German>
-		<Italian>Fanteria pesante</Italian>
+		<Italian>Fanteria Pesante</Italian>
 		<Spanish>Infantería pesada</Spanish>
 		<Russian>&#210;&#255;&#230;&#229;&#235;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Russian>
 	</TEXT>
@@ -369,7 +369,7 @@
 		<English>Light Cavalry</English>
 		<French>Cavalerie L&#233;g&#232;re</French>
 		<German>Leichte Kavallerie</German>
-		<Italian>Cavalleria leggera</Italian>
+		<Italian>Cavalleria Leggera</Italian>
 		<Spanish>Caballería ligera</Spanish>
 		<Russian>&#203;&#229;&#227;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
 	</TEXT>
@@ -378,7 +378,7 @@
 		<English>Heavy Cavalry</English>
 		<French>Cavalerie Lourde</French>
 		<German>Schwere Kavallerie</German>
-		<Italian>Cavalleria pesante</Italian>
+		<Italian>Cavalleria Pesante</Italian>
 		<Spanish>Caballería pesada</Spanish>
 		<Russian>&#210;&#255;&#230;&#229;&#235;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
 	</TEXT>
@@ -405,7 +405,7 @@
 		<English>[ICON_BULLET]%D1% %F2from Resources</English>
 		<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>
 		<German>[ICON_BULLET]%D1% %F2durch Ressourcen</German>
-		<Italian>[ICON_BULLET]%D1% %F2resources</Italian>
+		<Italian>[ICON_BULLET]%D1% %F2dalle Risorse</Italian>
 		<Spanish>[ICON_BULLET]%D1% %F2resources</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -414,7 +414,7 @@
 		<English>Remove non-state religion</English>
 		<French>Supprime religion non-officiel</French>
 		<German>Nicht-staatliche Religion entfernen</German>
-		<Italian>.</Italian>
+		<Italian>Rimuovi la religione non-ufficiale</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#211;&#228;&#224;&#235;&#232;&#242;&#252; &#237;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;</Russian>
 	</TEXT>
