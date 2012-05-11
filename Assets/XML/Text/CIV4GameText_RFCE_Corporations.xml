@@ -10,7 +10,7 @@
 		<English>Knights Hospitaller</English>
 		<French>Ordre Hospitalier</French>
 		<German>Johanniterorden</German>
-		<Italian>Cavalieri Ospitalieri</Italian>
+		<Italian>Cavalieri Ospedalieri</Italian>
 		<Spanish>Caballeros Hospitalarios</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#232; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#251;</Russian>
 	</TEXT>
@@ -46,7 +46,7 @@
 		<English>Teutonic Knights</English>
 		<French>Ordre Teutonique</French>
 		<German>Deutscher Orden</German>
-		<Italian>Ordine Teutonico</Italian>
+		<Italian>Cavalieri Teutonici</Italian>
 		<Spanish>Caballeros Teut&#243;nica</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#229; &#208;&#251;&#246;&#224;&#240;&#232;</Russian>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>[ICON_BULLET]Can only be founded in coastal towns</English>
 		<French>[ICON_BULLET]Can only be founded in coastal towns</French>
 		<German>[ICON_BULLET]Kann nur in einer K&#252;stestadt gegründet werden</German>
-		<Italian>[ICON_BULLET]Can only be founded in coastal towns</Italian>
+		<Italian>[ICON_BULLET]Può essere fondata solo in città costiere</Italian>
 		<Spanish>[ICON_BULLET]Can only be founded in coastal towns</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -109,7 +109,7 @@
 		<English>Augsburg Families</English>
 		<French>Famille Augsburg</French>
 		<German>Augsburger Familien</German>
-		<Italian>Famiglie di augusta</Italian>
+		<Italian>Famiglie di Augusta</Italian>
 		<Spanish>Familias Augsburgo</Spanish>
 		<Russian>&#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#209;&#229;&#236;&#252;&#232;</Russian>
 	</TEXT>
@@ -145,7 +145,7 @@
 		<English>Hospitaller Master</English>
 		<French>Maître Hospitalier</French>
 		<German>Ordensmeister der Johanniter</German>
-		<Italian>Padrone di Hospitaller</Italian>
+		<Italian>Maestro Ospedaliero</Italian>
 		<Spanish>Maestre Hospitalario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Russian>
 	</TEXT>
@@ -154,7 +154,7 @@
 		<English>Templar Master</English>
 		<French>Maître Templiers</French>
 		<German>Ordensmeister der Templer</German>
-		<Italian>Padrone di Templare</Italian>
+		<Italian>Maestro Templare</Italian>
 		<Spanish>Maestre Templario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
 	</TEXT>
@@ -163,7 +163,7 @@
 		<English>Teutonic Master</English>
 		<French>Maître Teutonique</French>
 		<German>Ordensmeister des Deutschordens</German>
-		<Italian>Padrone Teutonico</Italian>
+		<Italian>Maestro Teutonico</Italian>
 		<Spanish>Maestre Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Russian>
 	</TEXT>
@@ -172,7 +172,7 @@
 		<English>Hanseatic Executive</English>
 		<French>Cadre Hanse</French>
 		<German>Gesandter der Hanse</German>
-		<Italian>Dirigente di Hanseatic</Italian>
+		<Italian>Mercante Anseatico</Italian>
 		<Spanish>Mercader Hanseático</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#232;&#233; &#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;</Russian>
 	</TEXT>
@@ -181,7 +181,7 @@
 		<English>Medici Executive</English>
 		<French>Cadre M&#233;dicis</French>
 		<German>Gesandter der Medici</German>
-		<Italian>Dirigente di Medici</Italian>
+		<Italian>Banchiere de Medici</Italian>
 		<Spanish>Mercader Medici</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
 	</TEXT>
@@ -190,7 +190,7 @@
 		<English>Augsburg Executive</English>
 		<French>Cadre Augsburg</French>
 		<German>Gesandter der Augsburger Familien</German>
-		<Italian>Dirigente di Augusta</Italian>
+		<Italian>Mercante di Augusta</Italian>
 		<Spanish>Mercader Augsburgo</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Russian>
 	</TEXT>
@@ -199,7 +199,7 @@
 		<English>Bank of St. George Executive</English>
 		<French>Cadre de la Banque de St George</French>
 		<German>Gesandter der Bank von St. George</German>
-		<Italian>Dirigente di Banca di San Giorgio</Italian>
+		<Italian>Banchiere di San Giorgio</Italian>
 		<Spanish>Mercader del Banco de S. Jorge</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>
 	</TEXT>
