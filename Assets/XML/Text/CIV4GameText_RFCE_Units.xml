@@ -19,7 +19,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>.</Text>
+			<Text>Missionario Cattolico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -44,7 +44,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>.</Text>
+			<Text>Missionario Ortodosso</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -69,7 +69,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>.</Text>
+			<Text>Missionario Protestante</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -128,7 +128,7 @@
 		<English>Guisarmier</English>
 		<French>Piquier pontifical</French>
 		<German>Guisarmier</German>
-		<Italian>Picchiere papale</Italian>
+		<Italian>Ronconiere</Italian>
 		<Spanish>Piquero papal</Spanish>
 		<Russian>&#192;&#235;&#229;&#225;&#224;&#240;&#228;&#237;&#232;&#234;</Russian>
 	</TEXT>
@@ -164,7 +164,7 @@
 		<English>Arbalestier</English>
 		<French>Arbal&#233;trier lourd</French>
 		<German>Schwerer Armbrustsch&#252;tze</German>
-		<Italian>Balestriere pesante</Italian>
+		<Italian>Arbalestiere</Italian>
 		<Spanish>Ballestero pesado</Spanish>
 		<Russian>&#210;&#255;&#230;&#229;&#235;&#251;&#233; &#192;&#240;&#225;&#224;&#235;&#229;&#242;&#247;&#232;&#234;</Russian>
 	</TEXT>
@@ -182,7 +182,7 @@
 		<English>Horse Archer</English>
 		<French>Archer mont&#233;</French>
 		<German>Berittener Bogensch&#252;tze</German>
-		<Italian>Arciere a cavallo</Italian>
+		<Italian>Arciere a Cavallo</Italian>
 		<Spanish>Arquero a caballo</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -200,7 +200,7 @@
 		<English>Mounted Sergeant</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Sergente a Cavallo</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -218,7 +218,7 @@
 		<English>Mounted Infantry</English>
 		<French>Infanterie mont&#233;e</French>
 		<German>Berittene Infanterie</German>
-		<Italian>Fanteria a cavallo</Italian>
+		<Italian>Fanteria a Cavallo</Italian>
 		<Spanish>Infanter&#237;a montada</Spanish>
 		<Russian>&#202;&#238;&#237;&#237;&#251;&#233; &#209;&#229;&#240;&#230;&#224;&#237;&#242;</Russian>
 	</TEXT>
@@ -236,7 +236,7 @@
 		<English>Lancer</English>
 		<French>Cavalerie l&#233;g&#232;re</French>
 		<German>Reiter</German>
-		<Italian>Cavalleria leggera</Italian>
+		<Italian>Cavalleria Leggera</Italian>
 		<Spanish>Caballer&#237;a ligera</Spanish>
 		<Russian>&#211;&#235;&#224;&#237;</Russian>
 	</TEXT>
@@ -254,7 +254,7 @@
 		<English>Armored Lancer</English>
 		<French>Cavalerie lourde</French>
 		<German>Schwere Reiter</German>
-		<Italian>Cavalleria pesante</Italian>
+		<Italian>Cavalleria Corazzata</Italian>
 		<Spanish>Caballer&#237;a pesada</Spanish>
 		<Russian>&#193;&#240;&#238;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#237;&#251;&#233; &#211;&#235;&#224;&#237;</Russian>
 	</TEXT>
@@ -290,7 +290,7 @@
 		<English>Field Artillery</English>
 		<French>Artillerie de Campagne</French>
 		<German>Feldartillerie</German>
-		<Italian>.</Italian>
+		<Italian>Artiglieria da Campo</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#207;&#238;&#235;&#229;&#226;&#224;&#255; &#207;&#243;&#248;&#234;&#224;</Russian>
 	</TEXT>
@@ -326,7 +326,7 @@
 		<English>Pistolier</English>
 		<French>Pistolier</French>
 		<German>Pistolier</German>
-		<Italian>Pistolier</Italian>
+		<Italian>Pistoliere</Italian>
 		<Spanish>Pistolier</Spanish>
 		<Russian>&#207;&#232;&#241;&#242;&#238;&#235;&#229;&#242;&#247;&#232;&#234;</Russian>
 	</TEXT>
@@ -362,7 +362,7 @@
 		<English>Arquebusier</English>
 		<French>Arquebusier</French>
 		<German>Arquebusier</German>
-		<Italian>Arquebusier</Italian>
+		<Italian>Archibugiere</Italian>
 		<Spanish>Arquebusier</Spanish>
 		<Russian>&#192;&#240;&#234;&#229;&#225;&#243;&#231;&#232;&#240;&#249;&#232;&#234;</Russian>
 	</TEXT>
@@ -380,7 +380,7 @@
 		<English>Line Infantry</English>
 		<French>Infanterie de Ligne</French>
 		<German>Linieninfanterie</German>
-		<Italian>Rivestire la Fanteria</Italian>
+		<Italian>Fanteria di Linea</Italian>
 		<Spanish>Infantería de Línea</Spanish>
 		<Russian>&#203;&#232;&#237;&#229;&#233;&#237;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Russian>
 	</TEXT>
@@ -398,7 +398,7 @@
 		<English>Swordsman</English>
 		<French>Spadassin l&#233;ger</French>
 		<German>Leichter Schwertk&#228;mpfer</German>
-		<Italian>Spadaccino leggero</Italian>
+		<Italian>Spadaccino</Italian>
 		<Spanish>Soldado con espada ligera</Spanish>
 		<Russian>&#204;&#229;&#247;&#237;&#232;&#234;</Russian>
 	</TEXT>
@@ -434,7 +434,7 @@
 		<English>Skirmisher</English>
 		<French>Accrocheur</French>
 		<German>Kundschafter</German>
-		<Italian>.</Italian>
+		<Italian>Esploratore</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#199;&#224;&#241;&#242;&#240;&#229;&#235;&#252;&#249;&#232;&#234;</Russian>
 	</TEXT>
@@ -470,7 +470,7 @@
 		<English>Gun Galley</English>
 		<French>Gal&#232;re Arm&#233;e</French>
 		<German>Kanonengaleere</German>
-		<Italian>Sparare la Galea</Italian>
+		<Italian>Galea Armata</Italian>
 		<Spanish>Galera de Fusil</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -506,7 +506,7 @@
 		<English>War Galley</English>
 		<French>Galion de guerre</French>
 		<German>Kriegsgaleere</German>
-		<Italian>Galea di Guerra</Italian>
+		<Italian>Galea da Guerra</Italian>
 		<Spanish>Galera Guerree</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -524,7 +524,7 @@
 		<English>Religious Prosecutor</English>
 		<French>Inquisiteur</French>
 		<German>Religi&#246;ser Inquisitor</German>
-		<Italian>Accusatore Religioso</Italian>
+		<Italian>Inquisitore</Italian>
 		<Spanish>Acusador Religioso</Spanish>
 		<Russian>&#200;&#237;&#234;&#226;&#232;&#231;&#232;&#242;&#238;&#240;</Russian>
 	</TEXT>
@@ -597,7 +597,7 @@
 		<English>Berber Cavalry</English>
 		<French>Cavalerie Berber</French>
 		<German>Berber Kavallerie</German>
-		<Italian>Cavalleria di Berbero</Italian>
+		<Italian>Cavalleria Berbera</Italian>
 		<Spanish>Caballería Beréber</Spanish>
 		<Russian>&#193;&#229;&#240;&#225;&#229;&#240;&#241;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
 	</TEXT>
@@ -633,7 +633,7 @@
 		<English>Galleass</English>
 		<French>Galleass</French>
 		<German>Galleass</German>
-		<Italian>Galleass</Italian>
+		<Italian>Galeazza</Italian>
 		<Spanish>Galleass</Spanish>
 		<Russian>&#195;&#224;&#235;&#235;&#229;&#224;&#241;</Russian>
 	</TEXT>
@@ -687,7 +687,7 @@
 		<English>Boyar</English>
 		<French>Boyard</French>
 		<German>Bojar</German>
-		<Italian>Boiardi</Italian>
+		<Italian>Boiardo</Italian>
 		<Spanish>Boyardo</Spanish>
 		<Russian>&#193;&#238;&#255;&#240;&#232;&#237;</Russian>
 	</TEXT>
@@ -705,7 +705,7 @@
 		<English>Balestrieri</English>
 		<French>Balestrieri</French>
 		<German>Balestrieri</German>
-		<Italian>Balestrieri</Italian>
+		<Italian>Balestriere Genovese</Italian>
 		<Spanish>Balestrieri</Spanish>
 		<Russian>&#193;&#224;&#235;&#229;&#241;&#242;&#240;&#232;&#229;&#240;&#232;</Russian>
 	</TEXT>
@@ -741,7 +741,7 @@
 		<English>Kurassier</English>
 		<French>Kurassier</French>
 		<German>&#214;sterreichischer K&#252;rassier</German>
-		<Italian>Kurassier</Italian>
+		<Italian>Corazziere</Italian>
 		<Spanish>Kurassier</Spanish>
 		<Russian>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#202;&#232;&#240;&#224;&#241;&#232;&#240;</Russian>
 	</TEXT>
@@ -759,7 +759,7 @@
 		<English>Great Bombard</English>
 		<French>Grande Bombard</French>
 		<German>Gro&#223;e Bombarde</German>
-		<Italian>Bombardare Grande</Italian>
+		<Italian>Grande Bombarda</Italian>
 		<Spanish>Bombardean Gran</Spanish>
 		<Russian>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian>
 	</TEXT>
@@ -795,7 +795,7 @@
 		<English>Dutch Grenadier</English>
 		<French>Grenadier Hollandais</French>
 		<German>Holl&#228;ndischer Grenadier</German>
-		<Italian>Olandese Grenadier</Italian>
+		<Italian>Granatiere Olandese</Italian>
 		<Spanish>Holandés Granaderos</Spanish>
 		<Russian>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Russian>
 	</TEXT>

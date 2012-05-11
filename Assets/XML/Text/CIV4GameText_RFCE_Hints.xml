@@ -17,10 +17,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_2</Tag>
 		<English>If you can read any of French, German, Italian, Spanish or Russian, you could help us translate this mod into that language</English>
-		<French>Si vous lisez le russe, rendez-vous sur civfanatics.ru. Ce site h&#233;berge une grande communaut&#233; qui traduit le mod en russe et y consacre une page Wikipedia.</French>
-		<German>Wenn Sie die russische Sprache beherrschen, sollten Sie der Site civfanatics.ru einen Besuch abstatten. Hier arbeitet eine gro&#233;e Community an der &#233;bersetzung des Mods ins Russische und entwickelt einen Civ-spezifischen Wikipedia-Beitrag.</German>
-		<Italian>Se sai il russo vai al sito civfanatics.ru. Ospita una grande comunit&#224; che traduce il mod in russo e sta creando una wikipedia dedicata.</Italian>
-		<Spanish>Si lees ruso, visita civfanatics.ru. Es el sitio web de una numerosa comunidad que est&#225; traduciendo el mod al ruso y creando una wikipedia.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#197;&#241;&#235;&#232; &#226;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#247;&#232;&#242;&#224;&#242;&#252; &#235;&#254;&#225;&#238;&#233; &#232;&#231; &#244;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#238;&#227;&#238; &#255;&#231;&#251;&#234;&#224;, &#237;&#229;&#236;&#229;&#246;&#234;&#238;&#227;&#238; &#255;&#231;&#251;&#234;&#224;, &#232;&#242;&#224;&#235;&#252;&#255;&#237;&#241;&#234;&#232;&#233;, &#232;&#241;&#239;&#224;&#237;&#241;&#234;&#232;&#233;, &#226;&#251; &#236;&#238;&#227;&#235;&#232; &#239;&#238;&#236;&#238;&#227;&#224;&#242;&#252; &#237;&#224;&#236; &#239;&#229;&#240;&#229;&#226;&#229;&#241;&#242;&#232; &#253;&#242;&#238;&#242; &#236;&#238;&#228; &#237;&#224; &#253;&#242;&#238;&#242; &#255;&#231;&#251;&#234;</Russian>
 	</TEXT>
 	<TEXT>
@@ -71,55 +71,55 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_8</Tag>
 		<English>In RFC Europe contacts are permanent and all Catholic nations establish contact with the Pope upon conversion</English>
-		<French>Vous ne pouvez pas construire l'ambassade d'une civilisation avec laquelle vous &#233;tes en guerre. Par ailleurs, si vous entrez en guerre avec une civilisation, son ambassade sera d&#233;truite automatiquement si vous l'avez d&#233;j&#233; construite, et la v&#233;tre conna&#233;tra le m&#233;me sort.</French>
-		<German>Solange Sie sich mit einer anderen Zivilisation im Krieg befinden, k&#233;nnen Sie keine Botschaft f&#233;r diese Nation errichten. Im Falle einer Kriegserkl&#233;rung werden die gegenseitigen Botschaften, sofern sie bereits existieren, automatisch zerst&#233;rt.</German>
-		<Italian>Non puoi costruire l'ambasciata di una civilt&#224;, se siete in guerra. Inoltre quando viene dichiarata la guerra le ambasciate, se sono gi&#224; state costruite, vengono automaticamente distrutte.</Italian>
-		<Spanish>No podr&#225;s construir una embajada de otra civilizaci&#243;n si est&#225;s en guerra con ella. Adem&#225;s, cuando se declara la guerra, vuestras embajadas, si las ten&#233;is, ser&#225;n autom&#225;ticamente destruidas.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#194; &#208;&#212;&#214; &#229;&#226;&#240;&#238;&#239;&#229;&#233;&#241;&#234;&#232;&#245; &#234;&#238;&#237;&#242;&#224;&#234;&#242;&#224;&#245; &#239;&#238;&#241;&#242;&#238;&#255;&#237;&#237;&#251; &#232; &#226;&#241;&#229; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#237;&#224;&#246;&#232;&#232; &#243;&#241;&#242;&#224;&#237;&#224;&#226;&#235;&#232;&#226;&#224;&#254;&#242; &#234;&#238;&#237;&#242;&#224;&#234;&#242; &#241; &#240;&#232;&#236;&#241;&#234;&#232;&#236; &#239;&#224;&#239;&#238;&#233; &#237;&#224; &#234;&#238;&#237;&#226;&#229;&#240;&#241;&#232;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_9</Tag>
 		<English>Embassies have been removed from RFC Europe.</English>
-		<French>Pour &#233;viter de perdre le contact avec une autre civilisation, construisez son ambassade dans une de vos villes. Votre ambassade sera plac&#233;e automatiquement dans une de ses villes.</French>
-		<German>Um dauerhaften Kontakt mit einer anderen Zivilisation zu halten, sollten Sie in einer Ihrer St&#233;dte eine Botschaft f&#233;r diese Nation errichten. Gleichzeitig wird automatisch auch eine Botschaft f&#233;r Ihre Zivilisation in einer deren St&#233;dte eingerichtet.</German>
-		<Italian>Per evitare di perdere i contatti con un'altra civilt&#224; costruisci la sua ambasciata in una delle tue citt&#224;. La tua ambasciata verr&#224; automaticamente costruita in una delle citt&#224; dell'altra civilt&#224;.</Italian>
-		<Spanish>Para evitar perder el contacto con otra civilizaci&#243;n, construye su embajada en una de tus ciudades. Tu embajada se colocar&#225; autom&#225;ticamente en una de las suyas.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#224; &#225;&#251;&#235;&#232; &#243;&#228;&#224;&#235;&#229;&#237;&#251; &#232;&#231; &#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#251;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_10</Tag>
 		<English>Every now and then the Pope would call upon the Catholic nations to go on a Crusade. This may provide either danger or opportunity for you.</English>
-		<French>Vous ne pouvez pas construire plus de cinq ambassades par ville.</French>
-		<German>Es k&#233;nnen maximal 5 Botschaften pro Stadt errichtet werden.</German>
-		<Italian>Non puoi costruire pi&#233; di 5 ambasciate per citt&#224;.</Italian>
-		<Spanish>No puedes construir m&#225;s de 5 embajadas por ciudad.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#194;&#240;&#229;&#236;&#255; &#238;&#242; &#226;&#240;&#229;&#236;&#229;&#237;&#232; &#240;&#232;&#236;&#241;&#234;&#232;&#233; &#239;&#224;&#239;&#224; &#231;&#226;&#224;&#235; &#225;&#251; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#237;&#224;&#246;&#232;&#232;, &#247;&#242;&#238;&#225;&#251; &#241;&#238;&#231;&#226;&#224;&#242;&#252; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#233; &#207;&#238;&#245;&#238;&#228;. &#221;&#242;&#238;, &#226;&#238;&#231;&#236;&#238;&#230;&#237;&#238;, &#238;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; &#232;&#235;&#232; &#238;&#239;&#224;&#241;&#237;&#238;&#241;&#242;&#252;, &#232;&#235;&#232; &#226;&#238;&#231;&#236;&#238;&#230;&#237;&#238;&#241;&#242;&#252; &#226;&#224;&#241;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_11</Tag>
 		<English>Hungarian Vegvars are excellent defensive buildings, damaging all enemy units in a 2x2 square around the city</English>
-		<French>Attaquez la Russie pour d&#233;couvrir si Napol&#233;on avait raison au sujet de l'hiver russe.</French>
-		<German>Greifen Sie Russland an und &#233;berzeugen Sie sich von der Richtigkeit von Napoleons Aussage &#233;ber den "General Winter".</German>
-		<Italian>Attacca la Russia per scoprire se Napoleone aveva ragione, quando parlava del "Generale Inverno".</Italian>
-		<Spanish>Ataca Rusia y comprobar&#225;s si Napole&#243;n ten&#237;a raz&#243;n al hablar del "general Invierno".</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#194;&#229;&#237;&#227;&#229;&#240;&#241;&#234;&#232;&#229; &#210;&#226;&#229;&#240;&#228;&#251;&#237;&#232; - &#239;&#240;&#229;&#226;&#238;&#241;&#245;&#238;&#228;&#237;&#251;&#229; &#231;&#224;&#249;&#232;&#242;&#237;&#251;&#229; &#231;&#228;&#224;&#237;&#232;&#255;, &#239;&#238;&#226;&#240;&#229;&#230;&#228;&#224;&#255; &#226;&#241;&#229; &#226;&#240;&#224;&#230;&#229;&#241;&#234;&#232;&#229; &#229;&#228;&#232;&#237;&#232;&#246;&#251; 2x2 &#240;&#238;&#226;&#237;&#238; &#226;&#238;&#234;&#240;&#243;&#227; &#227;&#238;&#240;&#238;&#228;&#224;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_12</Tag>
 		<English>Janissaries were the elite guards of the Ottoman Sultans and were drafted from the conquered Christian population in the Empire</English>
-		<French>Le syst&#233;me num&#233;rique chinois utilise souvent le terme de myriade, &#233;quivalent &#233; 10 000.</French>
-		<German>Myriaden (sprich 10.000) sind im chinesischen Zahlensystem allgemein gebr&#233;uchlich.</German>
-		<Italian>Le miriadi (che significa 10.000) vengono comunemente usate nel sistema di numerazione cinese.</Italian>
-		<Spanish>Las mir&#237;adas (que equivalen a 10.000) se utilizan con frecuencia en el sistema de numeraci&#243;n chino.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#223;&#237;&#251;&#247;&#224;&#240;&#251; &#225;&#251;&#235;&#232; &#253;&#235;&#232;&#242;&#237;&#238;&#233; &#238;&#245;&#240;&#224;&#237;&#238;&#233; &#206;&#242;&#242;&#238;&#236;&#224;&#237;&#241;&#234;&#232;&#245; &#209;&#243;&#235;&#242;&#224;&#237;&#238;&#226; &#232; &#231;&#224;&#249;&#232;&#249;&#224;&#235;&#232; &#238;&#242; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#227;&#238; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#241;&#229;&#235;&#229;&#237;&#232;&#255; &#226; &#200;&#236;&#239;&#229;&#240;&#232;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_13</Tag>
 		<English>The only way in and out of the Black Sea is via the Bosporus near Constantinople (Istanbul)</English>
-		<French>Les lacs ne produisent pas tous 2 nourriture. Les lacs sal&#233;s produisent seulement 1 nourriture, comme les c&#233;tes.</French>
-		<German>Nicht jeder See produziert 2 Nahrung. Einige von ihnen sind Salzwasserseen, die aus diesem Grund wie K&#233;sten-Gel&#233;ndefelder nur 1 Nahrung produzieren.</German>
-		<Italian>Non tutti i laghi producono 2 cibo. Alcuni sono laghi salati, quindi producono 1 cibo, come la costa.</Italian>
-		<Spanish>No todos los lagos producen 2 alimentos. Algunos son salados y, por tanto, producen 1 alimento, como las costas.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#210;&#238;&#235;&#252;&#234;&#238; &#239;&#243;&#242;&#252; &#226; &#232; &#226;&#237;&#229; &#215;&#229;&#240;&#237;&#238;&#227;&#238; &#204;&#238;&#240;&#255; - &#247;&#229;&#240;&#229;&#231; &#193;&#238;&#241;&#244;&#238;&#240; &#226;&#238;&#231;&#235;&#229; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#255; (&#209;&#242;&#224;&#236;&#225;&#243;&#235;)</Russian>
 	</TEXT>
 	<TEXT>
@@ -170,19 +170,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_19</Tag>
 		<English>You can become a colonial power by building colonial projects and establishing monopoly over exotic goods.</English>
-		<French>Les grandes crises sont provoqu&#233;es par une d&#233;flation, due &#233; un d&#233;s&#233;quilibre entre la production et la richesse.</French>
-		<German>Eine Gro&#233;e Depression wird in erster Linie durch ein Missverh&#233;ltnis zwischen Produktion und Wohlstand verursacht und l&#233;st eine Deflation aus.</German>
-		<Italian>La Grande Depressione viene causata da una disparit&#224; tra produzione e ricchezza, che causa deflazione.</Italian>
-		<Spanish>La Gran Depresi&#243;n es provocada por la desproporci&#243;n entre la producci&#243;n y la riqueza, que causa deflacci&#243;n.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#194;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#241;&#242;&#224;&#242;&#252; &#234;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#238;&#233; &#226;&#235;&#224;&#241;&#242;&#252;&#254;, &#241;&#242;&#240;&#238;&#255; &#234;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#229; &#239;&#240;&#238;&#229;&#234;&#242;&#251; &#232; &#243;&#241;&#242;&#224;&#237;&#238;&#226;&#235;&#229;&#237;&#232;&#229; &#236;&#238;&#237;&#238;&#239;&#238;&#235;&#232;&#232; &#237;&#224;&#228; &#253;&#234;&#231;&#238;&#242;&#232;&#247;&#229;&#241;&#234;&#232;&#236;&#232; &#242;&#238;&#226;&#224;&#240;&#224;&#236;&#232;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_20</Tag>
 		<English>Merchant Republic is a great Civic, for a peaceful commercial Empire.</English>
-		<French>Le passage au capitalisme provoquera une p&#233;riode d'instabilit&#233;.</French>
-		<German>Durch den Wechsel zum Kapitalismus wird eine Phase der Instabilit&#233;t ausgel&#233;st.</German>
-		<Italian>Il passaggio al capitalismo causer&#224; un periodo di instabilit&#224;.</Italian>
-		<Spanish>La transici&#243;n al capitalismo producir&#225; un periodo de inestabilidad.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224; &#210;&#238;&#240;&#227;&#238;&#226;&#246;&#229;&#226; &#255;&#226;&#235;&#255;&#229;&#242;&#241;&#255; &#225;&#238;&#235;&#252;&#248;&#229;&#195;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233;, &#228;&#235;&#255; &#236;&#232;&#240;&#237;&#238;&#233; &#234;&#238;&#236;&#236;&#229;&#240;&#247;&#229;&#241;&#234;&#238;&#233; &#200;&#236;&#239;&#229;&#240;&#232;&#232;.</Russian>
 	</TEXT>
 	<TEXT>
@@ -197,10 +197,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_22</Tag>
 		<English>Keep track of the current year, this mod spans 500AD - 1800AD in 500 turns.</English>
-		<French>Vous ne pouvez pas conna&#233;tre l'ann&#233;e actuelle avant d'avoir d&#233;couvert le calendrier.</French>
-		<German>Das aktuelle Spieljahr ist bis zur Entdeckung des "Kalenders" nicht sichtbar.</German>
-		<Italian>Non puoi sapere in che anno ti trovi fino a quando non scopri il calendario.</Italian>
-		<Spanish>No podr&#225;s ver el a&#241;o actual hasta que descubras el calendario.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#209;&#235;&#229;&#228;&#232;&#242;&#229; &#231;&#224; &#242;&#229;&#234;&#243;&#249;&#232;&#236; &#227;&#238;&#228;&#238;&#236;, &#253;&#242;&#238;&#242; &#236;&#238;&#228; &#239;&#238;&#240;&#238;&#230;&#228;&#224;&#229;&#242; 500AD - 1800AD &#226; 500 &#245;&#238;&#228;&#224;&#245;.</Russian>
 	</TEXT>
 	<TEXT>
@@ -251,19 +251,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_28</Tag>
 		<English>RFC Europe introduces many wonders which correspond to the time period and the nations not included in standard Civilization</English>
-		<French>Dans Rhye's and Fall of Civilization, le Colis&#233;e est une merveille mondiale. Le b&#233;timent g&#233;n&#233;rique est appel&#233; "amphith&#233;&#233;tre".</French>
-		<German>In Rhye's and Fall of Civilization ist das Kolosseum ein Weltwunder. Das gew&#233;hnliche Geb&#233;ude hei&#233;t hier "Amphitheater".</German>
-		<Italian>In Rhye's and Fall il Colosseo &#232; una Grande Meraviglia. L'edificio generico si chiama "anfiteatro."</Italian>
-		<Spanish>En Rhye's and Fall of Civilization el Coliseo es una maravilla del mundo. El edificio gen&#233;rico se denomina "anfiteatro".</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#224; &#226;&#226;&#238;&#228;&#232;&#242; &#236;&#237;&#238;&#227;&#238; &#237;&#238;&#226;&#238;&#226;&#226;&#229;&#228;&#229;&#237;&#237;&#232;&#233;, &#234;&#238;&#242;&#238;&#240;&#251;&#229; &#241;&#238;&#238;&#242;&#226;&#229;&#242;&#241;&#242;&#226;&#243;&#254;&#242; &#239;&#229;&#240;&#232;&#238;&#228;&#243; &#226;&#240;&#229;&#236;&#229;&#237;&#232;, &#232; &#237;&#224;&#246;&#232;&#232;, &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#237;&#229; &#225;&#251;&#235;&#238; &#226; &#241;&#242;&#224;&#237;&#228;&#224;&#240;&#242;&#237;&#238;&#233; &#214;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_29</Tag>
 		<English>In RFC Europe, vassal states are enabled by the discovery of the Vassalage tech.</English>
-		<French>Dans Rhye's and Fall of Civilization, la d&#233;couverte de la monarchie permet les &#233;tats vassaux.</French>
-		<German>In Rhye's and Fall of Civilization werden Vasallenstaaten durch die Entdeckung der "Monarchie" verf&#233;gbar.</German>
-		<Italian>In Rhye's and Fall gli stati vassalli sono abilitati dalla scoperta della monarchia.</Italian>
-		<Spanish>En Rhye's and Fall of Civilization los estados vasallos se activan con el descubrimiento de la Monarqu&#237;a.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#194; &#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#224;, &#226;&#224;&#241;&#241;&#224;&#235;&#252;&#237;&#251;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#224; &#240;&#224;&#231;&#240;&#229;&#248;&#224;&#254;&#242;&#241;&#255; &#238;&#242;&#234;&#240;&#251;&#242;&#232;&#229;&#236; &#242;&#229;&#245;&#237;&#238;&#235;&#238;&#227;&#232;&#232; &#226;&#224;&#241;&#241;&#224;&#235;&#252;&#237;&#238;&#233; &#199;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#232;.</Russian>
 	</TEXT>
 	<TEXT>
@@ -304,11 +304,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_34</Tag>
-		<English>Check the files in the Reference folder for details on the UHV conditions</English>
-		<French>Quand un objectif historique exige que vous colonisiez un territoire, vous devez y fonder un certain nombre de villes. Quand il exige de contr&#233;ler un territoire, vous pouvez simplement le conqu&#233;rir.</French>
-		<German>Wenn eine historische Zielvorgabe die Kolonisierung eines Territoriums verlangt, m&#233;ssen Sie dort eine bestimmte Anzahl von St&#233;dten gr&#233;nden. Sollen Sie dagegen ein Territorium unter Ihre Kontrolle bringen, brauchen Sie es lediglich zu erobern.</German>
-		<Italian>Quando un obiettivo storico richiede la colonizzazione di un territorio significa che devi fondarci un certo numero di citt&#224;. Quando invece ne richiede il controllo, ti basta conquistarlo.</Italian>
-		<Spanish>Cuando un objetivo hist&#243;rico te pida que colonices un territorio, debes fundar una cantidad determinada de ciudades en &#233;l. Cuando te pida que controles un territorio, basta con conquistarlo.</Spanish>
+		<English>Check the files in the Reference folder for details on the new features in RFCE</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#207;&#240;&#238;&#226;&#229;&#240;&#252;&#242;&#229; &#244;&#224;&#233;&#235;&#251; &#226; &#209;&#239;&#240;&#224;&#226;&#238;&#247;&#237;&#238;&#233; &#239;&#224;&#239;&#234;&#229; &#228;&#235;&#255; &#225;&#238;&#235;&#229;&#229; &#234;&#238;&#237;&#234;&#240;&#229;&#242;&#237;&#238;&#233; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#232; &#238;&#225; &#243;&#241;&#235;&#238;&#226;&#232;&#255;&#245; UHV</Russian>
 	</TEXT>
 	<TEXT>
@@ -323,19 +323,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_36</Tag>
 		<English>RFC Europe has many new terrain types and resources</English>
-		<French>Dans Rhye's and Fall of Civilization, il est impossible de fonder une ville sur une case de toundra, de d&#233;sert ou de glace trop loin de l'eau.</French>
-		<German>In Rhye's and Fall of Civilization ist die Gr&#233;ndung einer Stadt auf den Gel&#233;ndearten Tundra, Eis und W&#233;ste, sofern zu weit von einer Wasserquelle entfernt, nicht zul&#233;ssig.</German>
-		<Italian>In Rhye's and Fall non &#232; permessa la fondazione di citt&#224; nella tundra, sul ghiaccio o nel deserto, se distanti dall'acqua.</Italian>
-		<Spanish>En Rhye's and Fall of Civilization no se permite fundar ciudades en tundra, hielo o desierto si no hay agua cerca.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#224; &#232;&#236;&#229;&#229;&#242; &#236;&#237;&#238;&#227;&#238; &#237;&#238;&#226;&#251;&#245; &#242;&#232;&#239;&#238;&#226; &#236;&#229;&#241;&#242;&#237;&#238;&#241;&#242;&#232; &#232; &#240;&#229;&#241;&#243;&#240;&#241;&#251;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_37</Tag>
 		<English>RFC Europe has a completely reworked tech tree</English>
-		<French>Dans Rhye's and Fall of Civilization, la plupart des unit&#233;s terrestres ne peuvent pas franchir les marais et les jungles.</French>
-		<German>In Rhye's and Fall of Civilization sind Dschungel- und Sumpf-Gel&#233;ndefelder f&#233;r die meisten Landeinheiten unpassierbar.</German>
-		<Italian>In Rhye's and Fall giungle e paludi sono impossibili da attraversare per la maggior parte delle unit&#224; terrestri.</Italian>
-		<Spanish>En Rhye's and Fall of Civilization la mayor&#237;a de las unidades terrestres no pueden atravesar junglas ni ci&#233;nagas.</Spanish>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>&#208;&#212;&#214; &#197;&#226;&#240;&#238;&#239;&#224; &#232;&#236;&#229;&#229;&#242; &#246;&#229;&#235;&#232;&#234;&#238;&#236; &#228;&#238;&#240;&#224;&#225;&#238;&#242;&#224;&#237;&#237;&#238;&#229; &#242;&#229;&#245;&#237;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#228;&#229;&#240;&#229;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
@@ -368,20 +368,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_41</Tag>
 		<English>Moorland is a new type of terrain with limited ability to be worked.</English>
-		<French>"Non dire gatto se non ce l'hai nel sacco." (Il ne faut pas vendre la peau de l'ours avant de l'avoir tu&#233;.) _ G. Trapattoni</French>
-		<German>Sag nicht Katze, wenn du sie nicht im Sack hast! (G. Trapattoni)</German>
-		<Italian>Non dire "gatto" se non ce l'hai nel sacco. (G.Trapattoni)</Italian>
-		<Spanish>No hay que vender la piel del oso antes de haberlo cazado.</Spanish>
-		<Russian>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252; - &#237;&#238;&#226;&#251;&#233; &#226;&#232;&#228; &#236;&#229;&#241;&#242;&#237;&#238;&#241;&#242;&#232; &#241; &#238;&#227;&#240;&#224;&#237;&#232;&#247;&#229;&#237;&#237;&#238;&#233; &#241;&#239;&#238;&#241;&#238;&#225;&#237;&#238;&#241;&#242;&#252;&#254; &#225;&#251;&#242;&#252; &#238;&#225;&#240;&#224;&#225;&#238;&#242;&#224;&#237;&#237;&#251;&#236;.</Russian>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_42</Tag>
 		<English>Light cavalry are fast and have high withdrawal rates; use them to pillage land and to harass the enemy.</English>
-		<French>"Non dire gatto se non ce l'hai nel sacco." (Il ne faut pas vendre la peau de l'ours avant de l'avoir tu&#233;.) _ G. Trapattoni</French>
-		<German>Es gibt Spieler, die zwei oder drei oder vier Spiele waren schwach wie eine Flasche leer! (G. Trapattoni)</German>
-		<Italian>Non dire "gatto" se non ce l'hai nel sacco. (G.Trapattoni)</Italian>
-		<Spanish>No hay que vender la piel del oso antes de haberlo cazado.</Spanish>
-		<Russian>&#203;&#229;&#227;&#234;&#224;&#255; &#234;&#238;&#237;&#237;&#232;&#246;&#224; &#225;&#251;&#241;&#242;&#240;&#251;&#229; &#232; &#232;&#236;&#229;&#254;&#249;&#232;&#229; &#226;&#251;&#241;&#238;&#234;&#232;&#229; &#237;&#238;&#240;&#236;&#251; &#232;&#231;&#250;&#255;&#242;&#232;&#255;; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#232;&#245;, &#247;&#242;&#238;&#225;&#251; &#227;&#240;&#224;&#225;&#224;&#237;&#243;&#242;&#252; &#231;&#229;&#236;&#235;&#254; &#232; &#225;&#229;&#241;&#239;&#238;&#234;&#238;&#232;&#242;&#252; &#226;&#240;&#224;&#227;&#224;.</Russian>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_43</Tag>
@@ -397,7 +397,7 @@
 		<English>Snacks are good in moderation.</English>
 		<French>Les en-cas sont &#224; consommer avec mod&#233;ration.</French>
 		<German>Snacks in Ma&#223;en sind gut!</German>
-		<Italian>Spuntini sono buone con moderazione.</Italian>
+		<Italian>Gli spuntini sono buoni con moderazione.</Italian>
 		<Spanish>Las meriendas son buenas en la moderación.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>

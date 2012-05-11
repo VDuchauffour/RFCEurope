@@ -10,7 +10,7 @@
 		<English>%s1_CivName are revolting!</English>
 		<French>%s1_CivName are revolting!</French>
 		<German>%s1_CivName are revolting!</German>
-		<Italian>%s1_CivName are revolting!</Italian>
+		<Italian>%s1_CivName sono in rivolta!</Italian>
 		<Spanish>%s1_CivName are revolting!</Spanish>
 		<Russian>%s1_CivName are revolting!</Russian>
 	</TEXT>
@@ -19,7 +19,7 @@
 		<English>%s1_CivName are trying to form their own country. What shall we do?</English>
 		<French>%s1_CivName are trying to form their own country. What shall we do?</French>
 		<German>%s1_CivName are trying to form their own country. What shall we do?</German>
-		<Italian>%s1_CivName are trying to form their own country. What shall we do?</Italian>
+		<Italian>%s1_CivName stanno provando a formare una loro nazione. Cosa dobbiamo fare?</Italian>
 		<Spanish>%s1_CivName are trying to form their own country. What shall we do?</Spanish>
 		<Russian>%s1_CivName are trying to form their own country. What shall we do?</Russian>
 	</TEXT>
@@ -28,43 +28,43 @@
 		<English>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</English>
 		<French>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</French>
 		<German>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</German>
-		<Italian>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Italian>
+		<Italian>Ignorali, nessuno vorrà davvero abbandonare il nostro potente Impero. (dipende dalla stabilità, solo il %d1_RawOdds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Spanish>
 		<Russian>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_CRACK</Tag>
-		<English>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</English>
-		<French>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</French>
-		<German>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</German>
-		<Italian>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</Italian>
-		<Spanish>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</Spanish>
-		<Russian>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebells)</Russian>
+		<English>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</English>
+		<French>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</French>
+		<German>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</German>
+		<Italian>Sopprimi la rivolta. (dipende dal numero di unità presenti nelle tue città, genera infelicità e causa un turno di rivolta, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
+		<Spanish>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Spanish>
+		<Russian>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_BRIBE</Tag>
-		<English>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</English>
-		<French>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</French>
-		<German>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</German>
-		<Italian>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</Italian>
-		<Spanish>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</Spanish>
-		<Russian>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebells)</Russian>
+		<English>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</English>
+		<French>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</French>
+		<German>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</German>
+		<Italian>Corrompi l'aristocrazia locale, i ribelli non hanno possibilità di sopravvivere senza il loro supporto. (dipende dalla tua forma di governo, paga %d1_Gold, %d2_Odds % di chance di fermare i rivoltosi)</Italian>
+		<Spanish>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Spanish>
+		<Russian>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_ALL</Tag>
-		<English>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</English>
-		<French>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</French>
-		<German>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</German>
-		<Italian>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</Italian>
-		<Spanish>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</Spanish>
-		<Russian>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebells)</Russian>
+		<English>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</English>
+		<French>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</French>
+		<German>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</German>
+		<Italian>Fai qualunque cosa per fermarli. (combina tutte le opzioni di sopra, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
+		<Spanish>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Spanish>
+		<Russian>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_SERBS</Tag>
 		<English>The Serbs</English>
 		<French>The Serbs</French>
 		<German>The Serbs</German>
-		<Italian>The Serbs</Italian>
+		<Italian>I Serbi</Italian>
 		<Spanish>The Serbs</Spanish>
 		<Russian>The Serbs</Russian>
 	</TEXT>
@@ -73,7 +73,7 @@
 		<English>Serbian</English>
 		<French>Serbian</French>
 		<German>Serbian</German>
-		<Italian>Serbian</Italian>
+		<Italian>Serbo</Italian>
 		<Spanish>Serbian</Spanish>
 		<Russian>Serbian</Russian>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>The Scots</English>
 		<French>The Scots</French>
 		<German>The Scots</German>
-		<Italian>The Scots</Italian>
+		<Italian>Gli Scozzesi</Italian>
 		<Spanish>The Scots</Spanish>
 		<Russian>The Scots</Russian>
 	</TEXT>
@@ -91,7 +91,7 @@
 		<English>Scottish</English>
 		<French>Scottish</French>
 		<German>Scottish</German>
-		<Italian>Scottish</Italian>
+		<Italian>Scozzese</Italian>
 		<Spanish>Scottish</Spanish>
 		<Russian>Scottish</Russian>
 	</TEXT>
@@ -100,7 +100,7 @@
 		<English>The Catalans</English>
 		<French>The Catalans</French>
 		<German>The Catalans</German>
-		<Italian>The Catalans</Italian>
+		<Italian>I Catalani</Italian>
 		<Spanish>The Catalans</Spanish>
 		<Russian>The Catalans</Russian>
 	</TEXT>
@@ -109,7 +109,7 @@
 		<English>Catalan</English>
 		<French>Catalan</French>
 		<German>Catalan</German>
-		<Italian>Catalan</Italian>
+		<Italian>Catalano</Italian>
 		<Spanish>Catalan</Spanish>
 		<Russian>Catalan</Russian>
 	</TEXT>
@@ -118,7 +118,7 @@
 		<English>The Muslims</English>
 		<French>The Muslims</French>
 		<German>The Muslims</German>
-		<Italian>The Muslims</Italian>
+		<Italian>I Musulmani</Italian>
 		<Spanish>The Muslims</Spanish>
 		<Russian>The Muslims</Russian>
 	</TEXT>
@@ -127,7 +127,7 @@
 		<English>Muslims</English>
 		<French>Muslims</French>
 		<German>Muslims</German>
-		<Italian>Muslims</Italian>
+		<Italian>Musulmano</Italian>
 		<Spanish>Muslims</Spanish>
 		<Russian>Muslims</Russian>
 	</TEXT>
@@ -136,7 +136,7 @@
 		<English>The Ziyyanids</English>
 		<French>The Ziyyanids</French>
 		<German>The Ziyyanids</German>
-		<Italian>The Ziyyanids</Italian>
+		<Italian>Gli Ziyyanidi</Italian>
 		<Spanish>The Ziyyanids</Spanish>
 		<Russian>The Ziyyanids</Russian>
 	</TEXT>
@@ -145,7 +145,7 @@
 		<English>Ziyyanid</English>
 		<French>Ziyyanid</French>
 		<German>Ziyyanid</German>
-		<Italian>Ziyyanid</Italian>
+		<Italian>Zianide</Italian>
 		<Spanish>Ziyyanid</Spanish>
 		<Russian>Ziyyanid</Russian>
 	</TEXT>
@@ -154,7 +154,7 @@
 		<English>The Wattasids</English>
 		<French>The Wattasids</French>
 		<German>The Wattasids</German>
-		<Italian>The Wattasids</Italian>
+		<Italian>I Wattasidi</Italian>
 		<Spanish>The Wattasids</Spanish>
 		<Russian>The Wattasids</Russian>
 	</TEXT>
@@ -163,7 +163,7 @@
 		<English>Wattasid</English>
 		<French>Wattasid</French>
 		<German>Wattasid</German>
-		<Italian>Wattasid</Italian>
+		<Italian>Wattasida</Italian>
 		<Spanish>Wattasid</Spanish>
 		<Russian>Wattasid</Russian>
 	</TEXT>
@@ -172,7 +172,7 @@
 		<English>Khazars</English>
 		<French>Khazars</French>
 		<German>Khazars</German>
-		<Italian>Khazars</Italian>
+		<Italian>Cazari</Italian>
 		<Spanish>Khazars</Spanish>
 		<Russian>Khazars</Russian>
 	</TEXT>
@@ -181,7 +181,7 @@
 		<English>Pechenegs</English>
 		<French>Pechenegs</French>
 		<German>Pechenegs</German>
-		<Italian>Pechenegs</Italian>
+		<Italian>Peceneghi</Italian>
 		<Spanish>Pechenegs</Spanish>
 		<Russian>Pechenegs</Russian>
 	</TEXT>
@@ -190,7 +190,7 @@
 		<English>Cumans</English>
 		<French>Cumans</French>
 		<German>Cumans</German>
-		<Italian>Cumans</Italian>
+		<Italian>Cumani</Italian>
 		<Spanish>Cumans</Spanish>
 		<Russian>Cumans</Russian>
 	</TEXT>
@@ -199,7 +199,7 @@
 		<English>Southern Slavs</English>
 		<French>Southern Slavs</French>
 		<German>Southern Slavs</German>
-		<Italian>Southern Slavs</Italian>
+		<Italian>Slavi Meridionali</Italian>
 		<Spanish>Southern Slavs</Spanish>
 		<Russian>Southern Slavs</Russian>
 	</TEXT>
@@ -208,7 +208,7 @@
 		<English>Germanic Tribes</English>
 		<French>Germanic Tribes</French>
 		<German>Germanic Tribes</German>
-		<Italian>Germanic Tribes</Italian>
+		<Italian>Tribù Germaniche</Italian>
 		<Spanish>Germanic Tribes</Spanish>
 		<Russian>Germanic Tribes</Russian>
 	</TEXT>
@@ -217,7 +217,7 @@
 		<English>Vikings</English>
 		<French>Vikings</French>
 		<German>Vikings</German>
-		<Italian>Vikings</Italian>
+		<Italian>Vichinghi</Italian>
 		<Spanish>Vikings</Spanish>
 		<Russian>Vikings</Russian>
 	</TEXT>
@@ -226,7 +226,7 @@
 		<English>Scots</English>
 		<French>Scots</French>
 		<German>Scots</German>
-		<Italian>Scots</Italian>
+		<Italian>Scozzesi</Italian>
 		<Spanish>Scots</Spanish>
 		<Russian>Scots</Russian>
 	</TEXT>
@@ -235,7 +235,7 @@
 		<English>Welsh</English>
 		<French>Welsh</French>
 		<German>Welsh</German>
-		<Italian>Welsh</Italian>
+		<Italian>Gallesi</Italian>
 		<Spanish>Welsh</Spanish>
 		<Russian>Welsh</Russian>
 	</TEXT>
@@ -244,7 +244,7 @@
 		<English>Magyars</English>
 		<French>Magyars</French>
 		<German>Magyars</German>
-		<Italian>Magyars</Italian>
+		<Italian>Magiari</Italian>
 		<Spanish>Magyars</Spanish>
 		<Russian>Magyars</Russian>
 	</TEXT>
@@ -253,7 +253,7 @@
 		<English>Mongols</English>
 		<French>Mongols</French>
 		<German>Mongols</German>
-		<Italian>Mongols</Italian>
+		<Italian>Mongoli</Italian>
 		<Spanish>Mongols</Spanish>
 		<Russian>Mongols</Russian>
 	</TEXT>
@@ -262,7 +262,7 @@
 		<English>Seljuks</English>
 		<French>Seljuks</French>
 		<German>Seljuks</German>
-		<Italian>Seljuks</Italian>
+		<Italian>Selgiuchidi</Italian>
 		<Spanish>Seljuks</Spanish>
 		<Russian>Seljuks</Russian>
 	</TEXT>
@@ -271,7 +271,7 @@
 		<English>Sassanids</English>
 		<French>Sassanids</French>
 		<German>Sassanids</German>
-		<Italian>Sassanids</Italian>
+		<Italian>Sasanidi</Italian>
 		<Spanish>Sassanids</Spanish>
 		<Russian>Sassanids</Russian>
 	</TEXT>
@@ -280,7 +280,7 @@
 		<English>Beduin Tribes</English>
 		<French>Beduin Tribes</French>
 		<German>Beduin Tribes</German>
-		<Italian>Beduin Tribes</Italian>
+		<Italian>Tribù Beduine</Italian>
 		<Spanish>Beduin Tribes</Spanish>
 		<Russian>Beduin Tribes</Russian>
 	</TEXT>
@@ -289,7 +289,7 @@
 		<English>Berbers</English>
 		<French>Berbers</French>
 		<German>Berbers</German>
-		<Italian>Berbers</Italian>
+		<Italian>Berberi</Italian>
 		<Spanish>Berbers</Spanish>
 		<Russian>Berbers</Russian>
 	</TEXT>
@@ -298,7 +298,7 @@
 		<English>Barbary Pirates</English>
 		<French>Barbary Pirates</French>
 		<German>Barbary Pirates</German>
-		<Italian>Barbary Pirates</Italian>
+		<Italian>Pirati Berberi</Italian>
 		<Spanish>Barbary Pirates</Spanish>
 		<Russian>Barbary Pirates</Russian>
 	</TEXT>
@@ -307,7 +307,7 @@
 		<English>Longobards</English>
 		<French>Longobards</French>
 		<German>Longobards</German>
-		<Italian>Longobards</Italian>
+		<Italian>Longobardi</Italian>
 		<Spanish>Longobards</Spanish>
 		<Russian>Longobards</Russian>
 	</TEXT>
@@ -316,7 +316,7 @@
 		<English>Avars</English>
 		<French>Avars</French>
 		<German>Avars</German>
-		<Italian>Avars</Italian>
+		<Italian>Avari</Italian>
 		<Spanish>Avars</Spanish>
 		<Russian>Avars</Russian>
 	</TEXT>
@@ -325,7 +325,7 @@
 		<English>Swedes</English>
 		<French>Swedes</French>
 		<German>Swedes</German>
-		<Italian>Swedes</Italian>
+		<Italian>Svevi</Italian>
 		<Spanish>Swedes</Spanish>
 		<Russian>Swedes</Russian>
 	</TEXT>
@@ -334,7 +334,7 @@
 		<English>Chudes</English>
 		<French>Chudes</French>
 		<German>Chudes</German>
-		<Italian>Chudes</Italian>
+		<Italian>Ciudi</Italian>
 		<Spanish>Chudes</Spanish>
 		<Russian>Chudes</Russian>
 	</TEXT>
@@ -343,7 +343,7 @@
 		<English>Nogais</English>
 		<French>Nogais</French>
 		<German>Nogais</German>
-		<Italian>Nogais</Italian>
+		<Italian>Nogai</Italian>
 		<Spanish>Nogais</Spanish>
 		<Russian>Nogais</Russian>
 	</TEXT>
@@ -352,7 +352,7 @@
 		<English>Kalmyks</English>
 		<French>Kalmyks</French>
 		<German>Kalmyks</German>
-		<Italian>Kalmyks</Italian>
+		<Italian>Calmucchi</Italian>
 		<Spanish>Kalmyks</Spanish>
 		<Russian>Kalmyks</Russian>
 	</TEXT>
