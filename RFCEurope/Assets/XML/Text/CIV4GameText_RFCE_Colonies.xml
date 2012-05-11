@@ -55,7 +55,7 @@
 		<English>Trading Company</English>
 		<French>Compagnie marchande</French>
 		<German>Handelsgesellschaft</German>
-		<Italian>Compagnia commerciale</Italian>
+		<Italian>Compagnia Commerciale</Italian>
 		<Spanish>La Compa&#241;&#237;a de las Indias</Spanish>
 		<Russian>&#210;&#238;&#240;&#227;&#238;&#226;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian>
 	</TEXT>
@@ -64,7 +64,7 @@
 		<English>The East India Company</English>
 		<French>Compagnie des Indes de l'Est</French>
 		<German>Ost-Indien Kompanie</German>
-		<Italian>Compagnia delle Indie Orientalli</Italian>
+		<Italian>Compagnia delle Indie Orientali</Italian>
 		<Spanish>Compania de las Indias Orientales</Spanish>
 		<Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>L'Encyclop&#233;die</English>
 		<French>L'Encyclopedie</French>
 		<German>Enzyklop&#228;die</German>
-		<Italian>Enciclopedia</Italian>
+		<Italian>L'Enciclopedia</Italian>
 		<Spanish>Enciclopedia</Spanish>
 		<Russian>&#221;&#237;&#246;&#232;&#234;&#235;&#238;&#239;&#229;&#228;&#232;&#255; ("L'Encyclopedie")</Russian>
 	</TEXT>
@@ -91,7 +91,7 @@
 		<English>Gold Coast</English>
 		<French>Côte d'Or</French>
 		<German>Goldk&#252;ste</German>
-		<Italian>Costa d'Oro</Italian>
+		<Italian>Costa dell'Oro</Italian>
 		<Spanish>Costa del Oro</Spanish>
 		<Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#229; &#207;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;</Russian>
 	</TEXT>
@@ -136,7 +136,7 @@
 		<English>Far Eastern Treaty Port</English>
 		<French>Comptoire Chinois</French>
 		<German>Fernost Handelsvertrag</German>
-		<Italian>Porto di Trattato lontano Orientale</Italian>
+		<Italian>Trattato Portuale Orientale</Italian>
 		<Spanish>Puerto Oriental distante de Tratado</Spanish>
 		<Russian>&#196;&#224;&#235;&#229;&#234;&#232;&#233; &#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#233; &#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#251;&#233; &#207;&#238;&#240;&#242;</Russian>
 	</TEXT>
@@ -145,7 +145,7 @@
 		<English>Indian Trading Post</English>
 		<French>Comptoir Indien</French>
 		<German>Indischer Handelsposten</German>
-		<Italian>Stazione Commerciale di Indiano</Italian>
+		<Italian>Stazione Commerciale Indiana</Italian>
 		<Spanish>Centro de comercio Indio</Spanish>
 		<Russian>&#200;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#212;&#224;&#234;&#242;&#238;&#240;&#232;&#255;</Russian>
 	</TEXT>
@@ -154,7 +154,7 @@
 		<English>East Indies</English>
 		<French>Indon&#233;sie</French>
 		<German>Ostindien</German>
-		<Italian>Indie orientale</Italian>
+		<Italian>Indie Orientali</Italian>
 		<Spanish>Indias Orientales</Spanish>
 		<Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#229; &#200;&#237;&#228;&#232;&#232;</Russian>
 	</TEXT>
@@ -199,7 +199,7 @@
 		<English>Aztec Conquest</English>
 		<French>Conquête Azt&#232;que</French>
 		<German>Eroberung der Azteken</German>
-		<Italian>Conquista dell'impero azteco</Italian>
+		<Italian>Conquista dell'Impero Azteco</Italian>
 		<Spanish>Conquista Azteca</Spanish>
 		<Russian>Aztec Conquest</Russian>
 	</TEXT>
@@ -208,7 +208,7 @@
 		<English>Inca Conquest</English>
 		<French>Conquête Inca</French>
 		<German>Eroberung der Inkas</German>
-		<Italian>Conquista dell'impero Inca</Italian>
+		<Italian>Conquista dell'Impero Inca</Italian>
 		<Spanish>Conquista Incaica</Spanish>
 		<Russian>Inca Conquest</Russian>
 	</TEXT>
@@ -289,7 +289,7 @@
 		<English>Vinland</English>
 		<French>Vinland</French>
 		<German>Vinland</German>
-		<Italian>Vinland</Italian>
+		<Italian>Terranova</Italian>
 		<Spanish>Vinland</Spanish>
 		<Russian>Vinland</Russian>
 	</TEXT>

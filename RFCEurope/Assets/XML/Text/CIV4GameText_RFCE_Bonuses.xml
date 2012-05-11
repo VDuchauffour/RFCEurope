@@ -46,7 +46,7 @@
 		<English>Coffee</English>
 		<French>Caf&#233;</French>
 		<German>Kaffee</German>
-		<Italian>Caffe</Italian>
+		<Italian>Caffè</Italian>
 		<Spanish>Cafe</Spanish>
 		<Russian>&#202;&#238;&#244;&#229;</Russian>
 	</TEXT>
@@ -82,7 +82,7 @@
 		<English>Tobacco</English>
 		<French>Tabac</French>
 		<German>Tabak</German>
-		<Italian>Tobacco</Italian>
+		<Italian>Tabacco</Italian>
 		<Spanish>Tabaco</Spanish>
 		<Russian>&#210;&#224;&#225;&#224;&#234;</Russian>
 	</TEXT>
@@ -190,7 +190,7 @@
 		<English>Honey</English>
 		<French>Miel</French>
 		<German>Honig</German>
-		<Italian>Zucchero</Italian>
+		<Italian>Miele</Italian>
 		<Spanish>Miel</Spanish>
 		<Russian>&#204;&#229;&#228;</Russian>
 	</TEXT>
@@ -244,7 +244,7 @@
 		<English>Amber</English>
 		<French>Ambre</French>
 		<German>Bernstein</German>
-		<Italian>Ambera</Italian>
+		<Italian>Ambra</Italian>
 		<Spanish>Ambar</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -262,7 +262,7 @@
 		<English>Atlantic Access</English>
 		<French>Acc&#232;s Atlantique</French>
 		<German>Zugang zum Atlantik</German>
-		<Italian>Accesso atlantico</Italian>
+		<Italian>Accesso all'Atlantico</Italian>
 		<Spanish>Acceso atlántico</Spanish>
 		<Russian>&#192;&#242;&#235;&#224;&#237;&#242;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#196;&#238;&#241;&#242;&#243;&#239;</Russian>
 	</TEXT>
@@ -271,7 +271,7 @@
 		<English>[TAB]Atlantic Access</English>
 		<French>[TAB]Atlantic Access</French>
 		<German>[TAB]Atlantic Access</German>
-		<Italian>[TAB]Atlantic Access</Italian>
+		<Italian>[TAB]Accesso all'Atlantico</Italian>
 		<Spanish>[TAB]Atlantic Access</Spanish>
 		<Russian>[TAB]Atlantic Access</Russian>
 	</TEXT>
@@ -280,7 +280,7 @@
 		<English>North America Access</English>
 		<French>Acc&#232;s Am&#233;rique Nord</French>
 		<German>Zugang zu Nordamerika</German>
-		<Italian>Accesso di America del Nord</Italian>
+		<Italian>Accesso all'America del Nord</Italian>
 		<Spanish>Acceso de Norteamérica</Spanish>
 		<Russian>North America Access</Russian>
 	</TEXT>
@@ -298,7 +298,7 @@
 		<English>South America Access</English>
 		<French>Acc&#232;s Am&#233;rique du Sud</French>
 		<German>Zugang zu S&#252;damerika</German>
-		<Italian>Accesso di Sudamerica</Italian>
+		<Italian>Accesso all'America del Sud</Italian>
 		<Spanish>Acceso de Sudamérica</Spanish>
 		<Russian>South America Access</Russian>
 	</TEXT>
@@ -316,7 +316,7 @@
 		<English>East Asia Access</English>
 		<French>Acc&#232;s Asie</French>
 		<German>Zugang zu Ostasien</German>
-		<Italian>Accesso di Asia Orientale</Italian>
+		<Italian>Accesso all'Asia Orientale</Italian>
 		<Spanish>Acceso oriental de Asia</Spanish>
 		<Russian>East Asia Access</Russian>
 	</TEXT>
