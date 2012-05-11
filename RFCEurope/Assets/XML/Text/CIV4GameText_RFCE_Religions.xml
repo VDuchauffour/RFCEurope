@@ -19,7 +19,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Cattolicità</Text>
+			<Text>Cattolicesimo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -44,7 +44,7 @@
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Cattolico</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -78,7 +78,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Ortodossia</Text>
+			<Text>Ortodossismo</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -103,7 +103,7 @@
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Ortodosso</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -162,7 +162,7 @@
 			<Plural>0:0:0</Plural>
 		</German>
 		<Italian>
-			<Text>Misticismo</Text>
+			<Text>Protestante</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -193,10 +193,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
-		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (All our Catholic cities and buildings will be converted to the new religion.)</English>
+		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (All our Catholic cities and buildings will be converted to the new religion)</English>
 		<French>L'invention de l'imprimerie a suscité&#233; une r&#233;formation du Catholicisme. Allons-nous accepter cette r&#233;forme ? Toutes nos villes Catholique seront automatiquement convertie.</French>
 		<German>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</German>
-		<Italian>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Italian>
+		<Italian>L'invenzione della Stampa ha fatto diffondere nuove dottrine. Chiese Protestanti si stanno opponendo al potere del Papa. Dobbiamo appoggiare la Riforma? (Tutti gli edifici e le città Cattolici verrano convertiti in Protestanti)</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
 		<Russian>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229; "&#207;&#229;&#247;&#224;&#242;&#224;&#254;&#249;&#229;&#233;&#241;&#255; &#207;&#240;&#229;&#241;&#241;&#251;" &#239;&#238;&#235;&#238;&#230;&#232;&#235;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#226;&#238;&#235;&#237;&#229; &#237;&#238;&#226;&#251;&#245; &#228;&#238;&#234;&#242;&#240;&#232;&#237;. &#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#229; &#246;&#229;&#240;&#234;&#226;&#232; &#238;&#239;&#239;&#238;&#237;&#232;&#240;&#243;&#254;&#242; &#226;&#235;&#224;&#241;&#242;&#232; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#228; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#232;&#236;&#232; &#228;&#229;&#235;&#224;&#236;&#232;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#253;&#242;&#243; &#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254;? (&#194;&#241;&#229; &#237;&#224;&#248;&#232; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#232; &#231;&#228;&#224;&#237;&#232;&#255; &#225;&#243;&#228;&#243;&#242; &#239;&#240;&#229;&#226;&#240;&#224;&#249;&#229;&#237;&#251; &#226; &#237;&#238;&#226;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;.)</Russian>
 	</TEXT>
@@ -205,7 +205,7 @@
 		<English>The Counter-Reformation!</English>
 		<French>The Counter-Reformation!</French>
 		<German>The Counter-Reformation!</German>
-		<Italian>The Counter-Reformation!</Italian>
+		<Italian>La Contro-Riforma!</Italian>
 		<Spanish>The Counter-Reformation!</Spanish>
 		<Russian>The Counter-Reformation!</Russian>
 	</TEXT>
@@ -214,7 +214,7 @@
 		<English>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</English>
 		<French>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</French>
 		<German>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</German>
-		<Italian>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</Italian>
+		<Italian>Il Papa ha dichiarato la sua interpretazione della Bibbia Cristiana come unica valida e ha dichiarato la Riforma un eresia.</Italian>
 		<Spanish>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</Spanish>
 		<Russian>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a herecy.</Russian>
 	</TEXT>
@@ -223,7 +223,7 @@
 		<English>We should help our Holy Father expel the heretics and restore unity to the Church. (get </English>
 		<French>We should help our Holy Father expel the heretics and restore unity to the Church. (get </French>
 		<German>We should help our Holy Father expel the heretics and restore unity to the Church. (get </German>
-		<Italian>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Italian>
+		<Italian>Dobbiamo aiutare il nostro Santo Padre ad espellere gli eretici e riformare l'unità della Chiesa. (ottieni </Italian>
 		<Spanish>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Spanish>
 		<Russian>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Russian>
 	</TEXT>
@@ -232,7 +232,7 @@
 		<English> Prosecutors)</English>
 		<French> Prosecutors)</French>
 		<German> Prosecutors)</German>
-		<Italian> Prosecutors)</Italian>
+		<Italian> Inquisitore)</Italian>
 		<Spanish> Prosecutors)</Spanish>
 		<Russian> Prosecutors)</Russian>
 	</TEXT>
@@ -241,7 +241,7 @@
 		<English>We should be tolerant to our brothers and sisters as misguided as they can be. (get </English>
 		<French>We should be tolerant to our brothers and sisters as misguided as they can be. (get </French>
 		<German>We should be tolerant to our brothers and sisters as misguided as they can be. (get </German>
-		<Italian>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Italian>
+		<Italian>Dobbiamo essere tolleranti con i nostri fratelli e le nostre sorelle per quanto possano sbagliarsi. (ottieni </Italian>
 		<Spanish>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Spanish>
 		<Russian>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Russian>
 	</TEXT>
@@ -250,7 +250,7 @@
 		<English> Stability)</English>
 		<French> Stability)</French>
 		<German> Stability)</German>
-		<Italian> Stability)</Italian>
+		<Italian> Stabilità)</Italian>
 		<Spanish> Stability)</Spanish>
 		<Russian> Stability)</Russian>
 	</TEXT>
@@ -259,7 +259,7 @@
 		<English>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</English>
 		<French>Le Grand Schisme: Apr&#232; des ann&#233;es de discution, les Chr&#233;tiens Catholique et Orthodoxe ont finallement d&#233;cider de se separer en 2 religions rivales.</French>
 		<German>Das große Schisma: Nach vielen Jahren polistischer und dogmatischer Auseinandersetzung haben sich Katholische und Orthodoxe Christen in zwei rivalisierende Glaubensrichtungen aufgespalten.</German>
-		<Italian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Italian>
+		<Italian>Il Grande Scisma: Dopo molti anni di divisione politica e dogmatica, i Cristiani Cattolici e Ortodossi si sono infine divisi in due credi distinti e rivali.</Italian>
 		<Spanish>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Spanish>
 		<Russian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Russian>
 	</TEXT>
@@ -277,7 +277,7 @@
 		<English>Prosecution Instability Countdown</English>
 		<French>Compte &#224; rebours de la poursuite de l'Instabilit&#233;</French>
 		<German>Countdown f&#252;r Instabilit&#228;t durch Inquisition</German>
-		<Italian>Prosecution Instability Countdown</Italian>
+		<Italian>Countdown per Instabilità da Inquisizione</Italian>
 		<Spanish>Prosecution Instability Countdown</Spanish>
 		<Russian>Prosecution Instability Countdown</Russian>
 	</TEXT>
@@ -286,7 +286,7 @@
 		<English>Prosecution Instability:</English>
 		<French>Poursuite de l'Instabilit&#233;:</French>
 		<German>Instabilit&#228;t durch Inquisition:</German>
-		<Italian>Prosecution Instability:</Italian>
+		<Italian>Instabilità da Inquisizione:</Italian>
 		<Spanish>Prosecution Instability:</Spanish>
 		<Russian>Prosecution Instability:</Russian>
 	</TEXT>
@@ -304,7 +304,7 @@
 		<English>Civic Upkeep:</English>
 		<French>Entretient des Doctrines:</French>
 		<German>Staatsformunterhalt:</German>
-		<Italian>Civic Upkeep:</Italian>
+		<Italian>Manutenzione Statale:</Italian>
 		<Spanish>Civic Upkeep:</Spanish>
 		<Russian>Civic Upkeep:</Russian>
 	</TEXT>
@@ -313,7 +313,7 @@
 		<English>City Growth:</English>
 		<French>Croissance Urbaine:</French>
 		<German>Stadtwachstum:</German>
-		<Italian>City Growth:</Italian>
+		<Italian>Crescità della Città:</Italian>
 		<Spanish>City Growth:</Spanish>
 		<Russian>City Growth:</Russian>
 	</TEXT>
@@ -322,7 +322,7 @@
 		<English>Unit Production Cost:</English>
 		<French>Co&#251;t de la Production d'Unit&#233;e:</French>
 		<German>Einheitenproduktion:</German>
-		<Italian>Unit Production Cost:</Italian>
+		<Italian>Costo di Produzione delle Unità:</Italian>
 		<Spanish>Unit Production Cost:</Spanish>
 		<Russian>Unit Production Cost:</Russian>
 	</TEXT>
@@ -331,7 +331,7 @@
 		<English>Tech Breaker Cost:</English>
 		<French>Co&#251;t de l'acc&#233;l&#233;ration des sciences:</French>
 		<German>Technologiekosten:</German>
-		<Italian>Tech Breaker Cost:</Italian>
+		<Italian>Costo per l'accelerazione della ricerca:</Italian>
 		<Spanish>Tech Breaker Cost:</Spanish>
 		<Russian>Tech Breaker Cost:</Russian>
 	</TEXT>
@@ -340,7 +340,7 @@
 		<English>Wonder and Project Production Cost:</English>
 		<French>Co&#251;t de la Production de Merveilles et Projets:</French>
 		<German>Wunder und Projekt Produktion:</German>
-		<Italian>Wonder and Project Production Cost:</Italian>
+		<Italian>Costo di Produzione per Meraviglie e Progetti:</Italian>
 		<Spanish>Wonder and Project Production Cost:</Spanish>
 		<Russian>Wonder and Project Production Cost:</Russian>
 	</TEXT>
@@ -349,7 +349,7 @@
 		<English>Diplomacy Boost:</English>
 		<French>Hausse Diplomatique:</French>
 		<German>Diplomatie Bonus:</German>
-		<Italian>Diplomacy Boost:</Italian>
+		<Italian>Incremento Diplomatico:</Italian>
 		<Spanish>Diplomacy Boost:</Spanish>
 		<Russian>Diplomacy Boost:</Russian>
 	</TEXT>
@@ -358,7 +358,7 @@
 		<English>You have received a gift of gold from the Pope</English>
 		<French>Le Pape vous &#224; offert de l'or</French>
 		<German>Sie haben ein Goldgeschenk vom Papst erhalten.</German>
-		<Italian>You have received a gift of gold from the Pope</Italian>
+		<Italian>Hai ricevuto un regalo in oro dal Papa</Italian>
 		<Spanish>You have received a gift of gold from the Pope</Spanish>
 		<Russian>You have received a gift of gold from the Pope</Russian>
 	</TEXT>
@@ -367,7 +367,7 @@
 		<English>The Pope has built a </English>
 		<French>Le Pape a construire un </French>
 		<German>Der Papst hat ein/e</German>
-		<Italian>The Pope has built a </Italian>
+		<Italian>Il Papa ha costruito un </Italian>
 		<Spanish>The Pope has built a </Spanish>
 		<Russian>The Pope has built a </Russian>
 	</TEXT>
@@ -376,7 +376,7 @@
 		<English> in your city of </English>
 		<French> dans la ville de </French>
 		<German> in euer Stadt </German>
-		<Italian> in your city of </Italian>
+		<Italian> nella tua città di </Italian>
 		<Spanish> in your city of </Spanish>
 		<Russian> in your city of </Russian>
 	</TEXT>
@@ -385,7 +385,7 @@
 		<English>Write a Great work of Theology to strengthen the Faith of your nation.</English>
 		<French>Write a Great work of Theology to strengthen the Faith of your nation.</French>
 		<German>Write a Great work of Theology to strengthen the Faith of your nation.</German>
-		<Italian>Write a Great work of Theology to strengthen the Faith of your nation.</Italian>
+		<Italian>Scrivi un grande trattato di Teologia per rafforzare la Fede nella tua nazione.</Italian>
 		<Spanish>Write a Great work of Theology to strengthen the Faith of your nation.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>

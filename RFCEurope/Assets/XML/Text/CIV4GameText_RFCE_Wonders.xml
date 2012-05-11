@@ -29,7 +29,7 @@
 		<English>All Saints' Church</English>
 		<French>Eglise de Tous les Saints</French>
 		<German>Allerheiligenkirche</German>
-		<Italian>La Chiesa di tutta i santi</Italian>
+		<Italian>La Chiesa di Ognissanti</Italian>
 		<Spanish>Iglesia de todas las santos</Spanish>
 		<Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian>
 	</TEXT>
@@ -65,7 +65,7 @@
 		<English>Umayyad Mosque</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Moschea degli Omayyadi</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -83,7 +83,7 @@
 		<English>Temple Mount</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Monte del Tempio</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -139,7 +139,7 @@
 		<English>[ICON_BULLET]+2 stability points for running a Monarchy.</English>
 		<French>[ICON_BULLET]+2 points de stabilit&#233; pour l'utilisation de la Monarchie.</French>
 		<German>[ICON_BULLET]+2 Stabilit&#228;t mit einer monarchischen Staatsform</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]+2 Punti Stabilità per l'utilizzo di una Monarchia.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -148,7 +148,7 @@
 		<English>Palacio del Escorial</English>
 		<French>Palace de Escorial</French>
 		<German>Palacio del Escorial</German>
-		<Italian>Palazzo del Escorial</Italian>
+		<Italian>Palazzo dell'Escorial</Italian>
 		<Spanish>Palacio del Escorial</Spanish>
 		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#221;&#241;&#234;&#238;&#240;&#232;&#224;&#235; </Russian>
 	</TEXT>
@@ -166,7 +166,7 @@
 		<English>[ICON_BULLET]No stability penalty for bad economy.</English>
 		<French>[ICON_BULLET]Pas p&#233;nalit&#233; pour une mauvaise &#233;conomie.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#231;&#224; &#239;&#235;&#238;&#245;&#243;&#254; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;.</Russian>
 	</TEXT>
@@ -193,7 +193,7 @@
 		<English>[ICON_BULLET]Free walls and castle in every conquered city.</English>
 		<French>[ICON_BULLET]Rempart et Chateau dans chaque ville conquite.</French>
 		<German>[ICON_BULLET]Freie Gebäude [COLOR_BUILDING_TEXT]Stadtmauern[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Schloss[COLOR_REVERT] in jeder eroberten Stadt</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]Mura e Castello gratuiti in ogni città conquistata.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>[ICON_BULLET]&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#229; &#241;&#242;&#229;&#237;&#251; &#232; &#231;&#224;&#236;&#238;&#234; &#226; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#236; &#227;&#238;&#240;&#238;&#228;&#229;.</Russian>
 	</TEXT>
@@ -202,7 +202,7 @@
 		<English>The Gardens of Al Andalus</English>
 		<French>Les Jardins d'Al Andalus</French>
 		<German>Die G&#228;rten von Al-Andalus</German>
-		<Italian>I giardini di Al Andalus</Italian>
+		<Italian>I Giardini di Al Andalus</Italian>
 		<Spanish>Los Jardines del Generalife</Spanish>
 		<Russian>&#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;</Russian>
 	</TEXT>
@@ -220,7 +220,7 @@
 		<English>[ICON_BULLET]Allows to build [COLOR_BUILDING_TEXT]Farms[COLOR_REVERT] without Irrigation.</English>
 		<French>[ICON_BULLET]Permet de construire une [COLOR_BUILDING_TEXT]Ferme[COLOR_REVERT] sans l'Irrigation</French>
 		<German>[ICON_BULLET]Erlaubt den Bau von [COLOR_BUILDING_TEXT]Bauernh&#246;fen[COLOR_REVERT] ohne Bew&#228;sserung</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]Permette di costruire [COLOR_BUILDING_TEXT]Fattorie[COLOR_REVERT] senza irrigazione</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -244,10 +244,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Tag>
-		<English>[ICON_BULLET]+1[ICON_CULTURE] in all cities without a (state) religion. (Not coded yet)</English>
+		<English>[ICON_BULLET]+1[ICON_CULTURE] in all cities without a (state) religion.</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]+1[ICON_CULTURE] in tutte le città senza una religione ufficiale.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -256,7 +256,7 @@
 		<English>The Round Church</English>
 		<French>L'Eglise Ronde</French>
 		<German>Die Runde Kirche</German>
-		<Italian>La Chiesa Tonda</Italian>
+		<Italian>La Chiesa Rotonda</Italian>
 		<Spanish>La Iglesia Redonda</Spanish>
 		<Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian>
 	</TEXT>
@@ -310,7 +310,7 @@
 		<English>Golden Bull</English>
 		<French>Bulle d'Or</French>
 		<German>Goldener Bulle</German>
-		<Italian>Toro d'Oro</Italian>
+		<Italian>Bolla d'Oro</Italian>
 		<Spanish>Torro Dorada</Spanish>
 		<Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Russian>
 	</TEXT>
@@ -328,7 +328,7 @@
 		<English>The Alhambra</English>
 		<French>L'Alhambra</French>
 		<German>Die Alhambra</German>
-		<Italian>La Alhambra</Italian>
+		<Italian>L'Alhambra</Italian>
 		<Spanish>La Alhambra</Spanish>
 		<Russian>&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224;</Russian>
 	</TEXT>
@@ -382,7 +382,7 @@
 		<English>Brandenburg Gate</English>
 		<French>Porte de Brandenburg</French>
 		<German>Brandenburger Tor</German>
-		<Italian>Porta di Brandeburgo</Italian>
+		<Italian>Portale di Brandeburgo</Italian>
 		<Spanish>Puerta de Brandeburgo</Spanish>
 		<Russian>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Russian>
 	</TEXT>
@@ -454,7 +454,7 @@
 		<English>Theodosian Walls</English>
 		<French>Mur Th&#233;odosien</French>
 		<German>Theodosianischer Wall</German>
-		<Italian>Theodosian Walls</Italian>
+		<Italian>Mura Teodosiane</Italian>
 		<Spanish>Muralla Teodosiana</Spanish>
 		<Russian>&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251;</Russian>
 	</TEXT>
@@ -507,7 +507,7 @@
 		<English>Leonardo's Inventions</English>
 		<French>Les Inventions de Leonard</French>
 		<German>Leonardos Erfindungen</German>
-		<Italian>L'invenzioni di Leonardo</Italian>
+		<Italian>Le Invenzioni di Leonardo</Italian>
 		<Spanish>Taller de Leonardo</Spanish>
 		<Russian>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#255; &#203;&#229;&#238;&#237;&#224;&#240;&#228;&#238;</Russian>
 	</TEXT>
@@ -579,7 +579,7 @@
 		<English>Torre de Bel&#233;m</English>
 		<French>Tour de Belem</French>
 		<German>Torre de Belem</German>
-		<Italian>Torre di Belem</Italian>
+		<Italian>Torre di Bel&#233;m</Italian>
 		<Spanish>Tour de Bel&#233;m</Spanish>
 		<Russian>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Russian>
 	</TEXT>
@@ -615,7 +615,7 @@
 		<English>The Leaning Tower</English>
 		<French>La tour de Pise</French>
 		<German>Der schiefe Turm</German>
-		<Italian>La torre pendente</Italian>
+		<Italian>La Torre Pendente</Italian>
 		<Spanish>la Torre Inclinada</Spanish>
 		<Russian>&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#193;&#224;&#248;&#237;&#255;</Russian>
 	</TEXT>
@@ -633,7 +633,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_REVERT] genera un grande personaggio casuale.</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Spanish>
 		<Russian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Russian>
 	</TEXT>
@@ -642,7 +642,7 @@
 		<English>[ICON_BULLET]Provides a Random Great Person</English>
 		<French>[ICON_BULLET]Provides a Random Great Person</French>
 		<German>[ICON_BULLET]Provides a Random Great Person</German>
-		<Italian>[ICON_BULLET]Provides a Random Great Person</Italian>
+		<Italian>[ICON_BULLET]Genera un Grande Personaggio casuale</Italian>
 		<Spanish>[ICON_BULLET]Provides a Random Great Person</Spanish>
 		<Russian>[ICON_BULLET]Provides a Random Great Person</Russian>
 	</TEXT>
@@ -669,7 +669,7 @@
 		<English>Chateau de Fontainebleau</English>
 		<French>Chateau de Fontainebleau</French>
 		<German>Schloss Fontainebleau</German>
-		<Italian>Chateau de Fontainebleau</Italian>
+		<Italian>Chateau di Fontainebleau</Italian>
 		<Spanish>Chateau de Fontainebleau</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -705,7 +705,7 @@
 		<English>Copernicus' Observatory</English>
 		<French>Observatoire de Copernic</French>
 		<German>Observatorium von Kopernicus</German>
-		<Italian>osservatorio Copernico</Italian>
+		<Italian>Osservatorio di Copernico</Italian>
 		<Spanish>Observatoire de Copernic</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -813,7 +813,7 @@
 		<English>Topkapi Palace</English>
 		<French>Palace Topkapi</French>
 		<German>Topkapi Palast</German>
-		<Italian>Topkapi Palace</Italian>
+		<Italian>Palazzo Topkapi</Italian>
 		<Spanish>Palacio de Topkapi</Spanish>
 		<Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;</Russian>
 	</TEXT>
@@ -851,7 +851,7 @@
 		<English>Summer Palace</English>
 		<French>Palais d'&#233;t&#233;</French>
 		<German>Sommerresidenz</German>
-		<Italian>Palazzon d'Estate</Italian>
+		<Italian>Palazzo d'Estate</Italian>
 		<Spanish>Palacio de Verano</Spanish>
 		<Russian>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Russian>
 	</TEXT>
@@ -905,7 +905,7 @@
 		<English>National Gallery</English>
 		<French>Galerie nationale</French>
 		<German>Nationalgalerie</German>
-		<Italian>Galleria nazionale</Italian>
+		<Italian>Galleria Nazionale</Italian>
 		<Spanish>la National Gallery</Spanish>
 		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#195;&#224;&#235;&#229;&#240;&#229;&#255;</Russian>
 	</TEXT>
@@ -959,7 +959,7 @@
 		<English>Royal Academy</English>
 		<French>Acad&#233;mie Royal</French>
 		<German>K&#246;nigliche Akademie</German>
-		<Italian>Reale Accademia</Italian>
+		<Italian>Accademia Reale</Italian>
 		<Spanish>Real Academia</Spanish>
 		<Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Russian>
 	</TEXT>
@@ -977,7 +977,7 @@
 		<English>National Epic</English>
 		<French>Epop&#233;e nationale</French>
 		<German>Nationalepos</German>
-		<Italian>Poema patriottico</Italian>
+		<Italian>Poema Patriottico</Italian>
 		<Spanish>La Epopeya nacional</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -995,7 +995,7 @@
 		<English>Triumphal Arch</English>
 		<French>Arc de Triomphe</French>
 		<German>Triumphbogen</German>
-		<Italian>Arco di trionfo</Italian>
+		<Italian>Arco di Trionfo</Italian>
 		<Spanish>Arco de Triunfo</Spanish>
 		<Russian>&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224;</Russian>
 	</TEXT>
@@ -1015,7 +1015,7 @@
 		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith, diplomatic penalty agains nations with the same religion.</English>
 		<French>[ICON_BULLET]Pas de m&#233;contement pour les guerres contre les fr&#232;res de foi.</French>
 		<German>[ICON_BULLET]Keine Unzufriedenheit wenn ihr gegen Glaubensbr&#252;der k&#228;mpft</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]Nessuna infelicità per la guerra contro i fratelli di fede. Penalità diplomatica verso le nazioni con la stessa religione.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Russian>
 	</TEXT>
@@ -1024,7 +1024,7 @@
 		<English>[ICON_BULLET]Train a Vassal's Unique Unit</English>
 		<French>[ICON_BULLET]Entraîne les UU de vos vassaux</French>
 		<German>[ICON_BULLET]Erlaubt die Spezialeinheit der Vasallen zu bauen</German>
-		<Italian>.</Italian>
+		<Italian>[ICON_BULLET]Può addestrare le Unità Uniche dei Vassalli</Italian>
 		<Spanish>.</Spanish>
 		<Russian>[ICON_BULLET]&#209;&#238;&#231;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#243;&#237;&#232;&#234;&#224;&#235;&#252;&#237;&#251;&#233; &#254;&#237;&#232;&#242; &#194;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
 	</TEXT>
@@ -1033,7 +1033,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Profeta[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -1042,7 +1042,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -1051,7 +1051,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Scienziato[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -1060,7 +1060,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Mercante[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -1069,7 +1069,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Ingegnere[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -1078,7 +1078,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Generale[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -1087,7 +1087,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato una [COLOR_UNIT_TEXT]Grande Spia[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>

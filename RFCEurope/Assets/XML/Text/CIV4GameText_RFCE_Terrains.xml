@@ -10,7 +10,7 @@
 		<English>Large Map of Europe</English>
 		<French>Grande Carte d'Europe</French>
 		<German>Große Karte von Europa</German>
-		<Italian>Große Karte von Europa</Italian>
+		<Italian>Grande Mappa d'Europa</Italian>
 		<Spanish>El Mapa grande de Europa</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -19,7 +19,7 @@
 		<English>Dense Forest</English>
 		<French>For&#234;t Dense</French>
 		<German>Wald</German>
-		<Italian>Foresta</Italian>
+		<Italian>Foresta Fitta</Italian>
 		<Spanish>Bosque</Spanish>
 		<Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian>
 	</TEXT>
@@ -28,7 +28,7 @@
 		<English>Woodland</English>
 		<French>For&#234;t</French>
 		<German>Waldland</German>
-		<Italian>Terreno boscoso</Italian>
+		<Italian>Bosco</Italian>
 		<Spanish>Bosque</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -46,7 +46,7 @@
 		<English>Palm Forest</English>
 		<French>Palm Forest</French>
 		<German>Palm Forest</German>
-		<Italian>Palm Forest</Italian>
+		<Italian>Foresta di Palme</Italian>
 		<Spanish>Palm Forest</Spanish>
 		<Russian>Palm Forest</Russian>
 	</TEXT>
@@ -73,7 +73,7 @@
 		<English>Colonial Trade Route</English>
 		<French>Route Coloniale</French>
 		<German>Koloniale Handelroute</German>
-		<Italian>La Strada di Mestiere coloniale</Italian>
+		<Italian>Rotta Commerciale Coloniale</Italian>
 		<Spanish>Ruta colonial de Comercio</Spanish>
 		<Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
 	</TEXT>
@@ -91,7 +91,7 @@
 		<English>Establish [LINK=IMPROVEMENT_COLONIAL_TRADE]Colonial Trade Route[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_COLONIAL_TRADE]Route Coloniale[\LINK] Etablie</French>
 		<German>Errichten [LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[/LINK]</German>
-		<Italian>Stabilire [LINK=IMPROVEMENT_COLONIAL_TRADE]la Strada di Mestiere coloniale[\LINK]</Italian>
+		<Italian>Traccia [LINK=IMPROVEMENT_COLONIAL_TRADE]una Rotta Commerciale Coloniale[\LINK]</Italian>
 		<Spanish>Establezca [LINK=IMPROVEMENT_COLONIAL_TRADE]Ruta colonial de Comercio[\LINK]</Spanish>
 		<Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
 	</TEXT>
@@ -100,7 +100,7 @@
 		<English>Build a [LINK=IMPROVEMENT_APIARY]Apiary[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_APIARY]ruche[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_APIARY]Imkerei[\LINK] bauen</German>
-		<Italian>Colmenar una [LINK=IMPROVEMENT_APIARY]Apiario[\LINK]</Italian>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_APIARY]Apiario[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_APIARY]Colmenar[\LINK]</Spanish>
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Russian>
 	</TEXT>
@@ -109,7 +109,7 @@
 		<English>Wetland</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Zone Umide</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -145,7 +145,7 @@
 		<English>Clear [LINK=FEATURE_MARSH]Marsh[\LINK]</English>
 		<French>Eclaircir de la [LINK=FEATURE_MARSH]Marécage[\LINK]</French>
 		<German>Entferne [LINK=FEATURE_MARSH]Sumpf[\LINK]</German>
-		<Italian>Chiarire il [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
+		<Italian>Bonificare la [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
 		<Spanish>Vacíe [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
