@@ -1576,9 +1576,9 @@
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>0</iAITradeModifier>
 			<iAIObjective>0</iAIObjective>

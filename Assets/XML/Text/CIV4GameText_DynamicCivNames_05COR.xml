@@ -9,7 +9,7 @@
 		<English>Andalusian Peoples</English>
 		<French>Peuplade Andalouse</French>
 		<German>Andalusische Völker</German>
-		<Italian></Italian>
+		<Italian>Popoli Andalusi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Duchy of Andalusia</English>
 		<French>Duch&#233; d'Andalousie</French>
 		<German>Herzogtum Andalusien</German>
-		<Italian></Italian>
+		<Italian>Ducato dell' Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Duchy of Andalusia</English>
 		<French>Duch&#233; d'Andalousie</French>
 		<German>Herzogtum Andalusien</German>
-		<Italian></Italian>
+		<Italian>Ducato dell' Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Kingdom of Andalusia</English>
 		<French>Royaume d'Andalousie</French>
 		<German>Königreich Andalusien</German>
-		<Italian></Italian>
+		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Kingdom of Andalusia</English>
 		<French>Royaume d'Andalousie</French>
 		<German>Königreich Andalusien</German>
-		<Italian></Italian>
+		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Andalusian Republic</English>
 		<French>R&#233;publique d'Andalousie</French>
 		<German>Andalusische Republik</German>
-		<Italian></Italian>
+		<Italian>Repubblica Andalusa</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<English>Caliphate of Cordoba</English>
 		<French>Califat de Courdoue</French>
 		<German>Kalifat Córdoba</German>
-		<Italian></Italian>
+		<Italian>Califfato di Cordoba</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -90,7 +90,7 @@
 		<English>Taifa of Cordoba</English>
 		<French>Ta&#239;fa de Courdoue</French>
 		<German>Taifa Córdoba</German>
-		<Italian></Italian>
+		<Italian>Taifa di Cordoba</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>Exarchate of Andalusia</English>
 		<French>Exarchat d'Andalousie</French>
 		<German>Exarchat Andalusien</German>
-		<Italian></Italian>
+		<Italian>Esarcato di Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>Duchy of Andalusia</English>
 		<French>Duch&#233; d'Andalousie</French>
 		<German>Herzogtum Andalusien</German>
-		<Italian></Italian>
+		<Italian>Ducato di Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Emirate of Cordoba</English>
 		<French>Emirat de Courdoue</French>
 		<German>Emirat Córdoba</German>
-		<Italian></Italian>
+		<Italian>Emirato di Cordoba</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Kingdom of Andalusia</English>
 		<French>Andalousie Reconquite</French>
 		<German>Reconquista Andalusien</German>
-		<Italian/>
+		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish>Reino de Andalucia</Spanish>
 		<Russian/>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<English>Norse Andalusia</English>
 		<French>Andalousie Nordique</French>
 		<German>Nordisch-Andalusien</German>
-		<Italian></Italian>
+		<Italian>Andalusia Nordica</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -144,7 +144,7 @@
 		<English>Venetian Andalusia</English>
 		<French>Andalousie V&#233;nitienne</French>
 		<German>Venezianisch-Andalusien</German>
-		<Italian></Italian>
+		<Italian>Andalusia Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -153,7 +153,7 @@
 		<English>Russian Andalusia</English>
 		<French>Andalousie Russe</French>
 		<German>Russisch-Andalusien</German>
-		<Italian></Italian>
+		<Italian>Andalusia Russa</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<English>German Andalusia</English>
 		<French>Andalousie Allemande</French>
 		<German>Deutsch-Andalusien</German>
-		<Italian></Italian>
+		<Italian>Andalusia Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>County of Andalusia</English>
 		<French>Comt&#233; d'Andalousie</French>
 		<German>County Andalusien</German>
-		<Italian></Italian>
+		<Italian>Contea dell'Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<English>Habsburg Andalusia</English>
 		<French>Andalousie Habsbourg</French>
 		<German>Habsburger Andalusien</German>
-		<Italian></Italian>
+		<Italian>Andalusia Asburgica</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>Principality of Endulus</English>
 		<French>Principaut&#233; de l'Endulus</French>
 		<German>Fürstentum Endulus</German>
-		<Italian></Italian>
+		<Italian>Principato dell'Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -198,7 +198,7 @@
 		<English>Province of Andalusia</English>
 		<French>Province d'Andalousie</French>
 		<German>Provinz Andalusien</German>
-		<Italian></Italian>
+		<Italian>Pronvincia dell'Andalusia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -207,7 +207,7 @@
 		<English>Hafsid Caliphate</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Califfato degli Hafsidi</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -216,7 +216,7 @@
 		<English>Hafsid Kingdom</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Regno degli Hafsidi</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -225,7 +225,7 @@
 		<English>Exarchate of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Esarcato di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -234,7 +234,7 @@
 		<English>Duchy of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Ducato di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -243,7 +243,7 @@
 		<English>Emirate of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Emirato di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -252,7 +252,7 @@
 		<English>Spanish Kingdom of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Regno Spagnolo di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -261,7 +261,7 @@
 		<English>Norse Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Tunisia Vichinga</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -270,7 +270,7 @@
 		<English>Venetian Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Tunisia Veneziana</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -279,7 +279,7 @@
 		<English>Russian Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Tunisia Russa</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -288,7 +288,7 @@
 		<English>German Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Tunisia Tedesca</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -297,7 +297,7 @@
 		<English>County of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Contea di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -306,7 +306,7 @@
 		<English>Habsburg Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Tunisia Asburgica</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -315,7 +315,7 @@
 		<English>Principality of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Principato di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -324,7 +324,7 @@
 		<English>Province of Tunisia</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Provincia di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>

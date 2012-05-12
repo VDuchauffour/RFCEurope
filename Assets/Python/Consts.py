@@ -383,7 +383,7 @@ tCoreAreasBR = (
 (59,36),   #Venice
 (48,42),   #Burgundy
 (58,50),   #Germany
-(88,50),   #Kiev 		AbsintheRed: Kursk shouldn't flip to them, rather they should easily conquer it in the first few turns
+(88,50),   #Kiev		AbsintheRed: Kursk shouldn't flip to them, rather they should easily conquer it in the first few turns
 (73,39),   #Hungary
 (32,36),   #Spain
 (70,50),   #Poland

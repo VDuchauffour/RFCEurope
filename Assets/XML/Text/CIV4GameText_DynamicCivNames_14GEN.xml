@@ -9,7 +9,7 @@
 		<English>Genoese Peoples</English>
 		<French>Peuplade G&#233;noise</French>
 		<German>Genuanische Völker</German>
-		<Italian></Italian>
+		<Italian>Popoli Liguri</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Duchy of Genoa</English>
 		<French>Duch&#233; de G&#234;nes</French>
 		<German>Herzogtum Genua</German>
-		<Italian></Italian>
+		<Italian>Ducato di Genova</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Most Serene Duchy of Genoa</English>
 		<French>Duch&#233; Serein de G&#234;nes</French>
 		<German>Erlauchtestes Herzogtum Genua</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Genova</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Duchy of Genoa</English>
 		<French>Duch&#233; de G&#234;nes</French>
 		<German>Herzogtum Genua</German>
-		<Italian></Italian>
+		<Italian>Ducato di Genova</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Genoese Empire</English>
 		<French>Empire G&#233;nois</French>
 		<German>Genuanisches Reich</German>
-		<Italian></Italian>
+		<Italian>Impero Genovese</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Most Serene Republic of Genoa</English>
 		<French>R&#233;publique Sereinne de G&#234;nes</French>
 		<German>Erlauchteste Republik Genua</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Genova</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<English>Sultanate of Genoa</English>
 		<French>Sultanat de G&#234;nes</French>
 		<German>Sultanat Genua</German>
-		<Italian></Italian>
+		<Italian>Sultanato di Genova</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -90,7 +90,7 @@
 		<English>Genoese Islamic Republic</English>
 		<French>R&#233;publique Islamique de G&#234;nes</French>
 		<German>Genuanische Islamische Republik </German>
-		<Italian></Italian>
+		<Italian>Repubblica Islamica Genovese</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>Exarchate of West Italy</English>
 		<French>Exarchat de l'Ouest de l'Italie</French>
 		<German>Exarchat Westitalien</German>
-		<Italian></Italian>
+		<Italian>Esarcato dell'Italia Occidentale</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>Duchy of Savoie</English>
 		<French>Duch&#233; de Savoie</French>
 		<German>Herzogtum Savoie</German>
-		<Italian></Italian>
+		<Italian>Ducato di Savoia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Emirate of Genoa</English>
 		<French>Emirat de G&#234;nes</French>
 		<German>Emirat Genua</German>
-		<Italian></Italian>
+		<Italian>Emirato di Genova</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Spanish Mediterranean</English>
 		<French>M&#233;diterran&#233;e Espagnol</French>
 		<German>Spanisch-Mittelmeer</German>
-		<Italian></Italian>
+		<Italian>Mediterraneo Spagnolo</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<English>Norse West Lombardy</English>
 		<French>Lombardie-Ouest Nordique</French>
 		<German>Nordisch-Westlombardei</German>
-		<Italian></Italian>
+		<Italian>Lombardia Occidentale Vichinga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -144,7 +144,7 @@
 		<English>Venetian West Italy</English>
 		<French>Italie Ouest V&#233;nitienne</French>
 		<German>Venezianisch-Westitalien</German>
-		<Italian></Italian>
+		<Italian>Italia Occidentale Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -153,7 +153,7 @@
 		<English>Russian Genoa</English>
 		<French>G&#234;nes Russe</French>
 		<German>Russisch-Genua</German>
-		<Italian></Italian>
+		<Italian>Genova Russa</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<English>German Genoa</English>
 		<French>G&#234;nes Allemande</French>
 		<German>Deutsch-Genua</German>
-		<Italian></Italian>
+		<Italian>Genova Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>County of Liguria</English>
 		<French>Comt&#233; de Ligurie</French>
 		<German>Counties Liguriens</German>
-		<Italian></Italian>
+		<Italian>Contea di Liguria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<English>Habsburg Genoa</English>
 		<French>G&#234;nes Habsbourg</French>
 		<German>Habsburger Genua</German>
-		<Italian></Italian>
+		<Italian>Genova Asburgica</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>Principality of Ligurya</English>
 		<French>Principaut&#233; de Ligurya</French>
 		<German>Fürstentum Ligurya</German>
-		<Italian></Italian>
+		<Italian>Principato di Ligurya</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -198,7 +198,7 @@
 		<English>Province of Liguria</English>
 		<French>Province de Ligurie</French>
 		<German>Provinz Ligurien</German>
-		<Italian></Italian>
+		<Italian>Provincia di Liguria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>

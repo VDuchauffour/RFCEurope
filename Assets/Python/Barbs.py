@@ -77,7 +77,7 @@ lCalais = [44,50,75,0] #800 AD
 lNidaros = [57,71,75,0] #800 AD, Trondheim
 lNovgorod = [80,62,87,0] #848 AD
 lEdinburgh = [37,63,90,0] #860 AD
-lAlbaIulia = [73,34,100,0] #900 AD
+lAlbaIulia = [73,34,95,0] #880 AD
 lTvanksta = [69,53,100,0] #900 AD, Konigsberg
 #lBreslau = [64,46,100,0] #900 AD
 lKrakow = [68,44,100,0] #900 AD
@@ -199,7 +199,7 @@ class Barbs:
 		
 		#Longobards in Italy
 		if (iGameTurn >= xml.i632AD and iGameTurn <= xml.i800AD):
-			self.spawnUnits( iBarbarian, (50,30),(55,38), xml.iAxeman, 1 + iHandicap, iGameTurn,10,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS", ()))
+			self.spawnUnits( iBarbarian, (49,33),(53,36), xml.iAxeman, 1 + iHandicap, iGameTurn,10,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS", ()))
 		
 		#Christians in Spain, this might be a bit overtuned, but lets wait for feedback
 		if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i880AD):
@@ -455,9 +455,10 @@ class Barbs:
                         self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
                         # 860AD
                         self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+                        # 880AD
+                        self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                 if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1259AD ):
                         # 900AD
-                        self.foundCity(iBarbarian, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent, lRiga, "Riga", iGameTurn, 2, xml.iCrossbowman, 2, -1, 1 )

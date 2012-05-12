@@ -21,6 +21,7 @@ Changes for RFCE 1.1:
 		- A couple changes and fixes in the settler maps in light of these AI distance changes
 		- Improved UHV counter for the Polish 3rd UHV - by HolyHandGrenade
 		- Added a Spawn map in the Reference folder (with all civs' spawn areas and spawn dates, and the indy/barb cities) - by HolyHandGrenade
+		- Olive plantation gives 1 food but one less commerce; unimproved grapes already give 1 food; additional 1 commerce from improved Silk
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -30,6 +31,8 @@ Changes for RFCE 1.1:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
 		- Small updates in the reference files
 		- Added a couple Spanish translations by mijamobu
+		- Added many Italian translations by Fede14
+		- Huge XML cleanup and reorganization
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
@@ -41,6 +44,7 @@ Changes for RFCE 1.1:
 		- Small changes to a couple civs initially spawned units too - mostly increasing defensive units for the AI
 		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
 		- Indy Augsburg starts with an additional archer - so it won't be razed so often by barbs before the German spawn
+		- Belograd (Alba Iulia) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
 	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art

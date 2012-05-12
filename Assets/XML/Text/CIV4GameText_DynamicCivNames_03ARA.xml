@@ -18,7 +18,7 @@
 		<English>Abbasid State of Arabia</English>
 		<French>Etat Abbasside d'Arabie</French>
 		<German>Abbasidischer Staat Arabien</German>
-		<Italian></Italian>
+		<Italian>Stato Abbaside d'Arabia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Rashidun Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian>Califfato dei Rashidun</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Umayyad Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian>Califfato degli Omayyadi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Abbasid Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian>Califfato degli Abbasidi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<English>Arabian Empire</English>
 		<French>Empire Arabe</French>
 		<German>Arabisches Reich</German>
-		<Italian></Italian>
+		<Italian>Impero Arabo</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Arabian Empire</English>
 		<French>Empire Arabe</French>
 		<German>Arabisches Reich</German>
-		<Italian></Italian>
+		<Italian>Impero Arabo</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>Exarchate of Arabia</English>
 		<French>Exarchat d'Arabie</French>
 		<German>Exarchat Arabien</German>
-		<Italian></Italian>
+		<Italian>Esarcato d'Arabia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>French Levant</English>
 		<French>Levant fran&#231;ais</French>
 		<German>Französisch-Levante</German>
-		<Italian></Italian>
+		<Italian>Levante Francese</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Emirate of Arabia</English>
 		<French>Emirat d'Arabie</French>
 		<German>Emirat Arabien</German>
-		<Italian></Italian>
+		<Italian>Emirato di Arabia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Spanish Levant</English>
 		<French>Levant Espagnol</French>
 		<German>Spanisch-Levante</German>
-		<Italian></Italian>
+		<Italian>Levante Spagnolo</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<English>Norse Arabia</English>
 		<French>Arabie Nordiste</French>
 		<German>Nordisch-Arabien</German>
-		<Italian></Italian>
+		<Italian>Arabia Vichinga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -144,7 +144,7 @@
 		<English>Venetian Levant</English>
 		<French>Levant V#233;nitien</French>
 		<German>Venezianisch-Levante</German>
-		<Italian></Italian>
+		<Italian>Levante Veneziano</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -153,7 +153,7 @@
 		<English>Russian Levant</English>
 		<French>Levant Russe</French>
 		<German>Russisch-Levante</German>
-		<Italian></Italian>
+		<Italian>Levante Russo</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>Counties of the Levant</English>
 		<French>Comtés du Levant</French>
 		<German>Counties der Levante</German>
-		<Italian></Italian>
+		<Italian>Contee del Levante</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<English>Habsburg Levant</English>
 		<French>Levant d'Habsbourg</French>
 		<German>Habsburger Levante</German>
-		<Italian></Italian>
+		<Italian>Levante Asburgico</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>Sharifate of Mekke</English>
 		<French>Chérif de La Mecque</French>
 		<German>Scherifat Mekka</German>
-		<Italian></Italian>
+		<Italian>Sharifato della Mecca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -207,7 +207,7 @@
 		<English>Mamluk Sultanate</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian>Sultanato dei Mamelucchi</Italian>
 		<Spanish></Spanish>
 		<Russian/>
 	</TEXT>
@@ -216,7 +216,7 @@
 		<English>Ayyubid Sultanate</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian>Sultanato degli Ayyubidi</Italian>
 		<Spanish></Spanish>
 		<Russian/>
 	</TEXT>
@@ -225,7 +225,7 @@
 		<English>Fatimid Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian>Califfato dei Fatimidi</Italian>
 		<Spanish></Spanish>
 		<Russian/>
 	</TEXT>
