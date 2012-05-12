@@ -9,153 +9,197 @@
 		<English>Polans Peoples</English>
 		<French>Peuplade Polanes</French>
 		<German>Polanische Völker</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL01</Tag>
 		<English>Kingdom of Poland</English>
 		<French>Royaume de Pologne</French>
 		<German>Königreich Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL02</Tag>
 		<English>Polish Commonwealth</English>
 		<French>Commonwealth Polonais</French>
 		<German>Polnisches Gemeinwesen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL03</Tag>
 		<English>Kingdom of Poland</English>
 		<French>Royaume de Pologne</French>
 		<German>Königreich Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL04</Tag>
 		<English>Polish Commonwealth</English>
 		<French>Commonwealth Polonais</French>
 		<German>Polnisches Gemeinwesen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL05</Tag>
 		<English>Republic of Poland</English>
 		<French>R&#233;publique de Pologne</French>
 		<German>Republik Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL06</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL08</Tag>
 		<English>Sultanate of Poland</English>
 		<French>Sultanat de Pologne</French>
 		<German>Sultanat Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL09</Tag>
 		<English>Islamic Republic of Poland</English>
 		<French>R&#233;publique Islamique de Pologne</French>
 		<German>Islamische Republik Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL10</Tag>
 		<English>Exarchate of Polonia</English>
 		<French>Exarchat de Polonia</French>
 		<German>Exarchat Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL11</Tag>
 		<English>Duchy of Warsaw</English>
 		<French>Duch&#233; de Varsovie</French>
 		<German>Herzogtum Warschau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL12</Tag>
 		<English>Emirate of Poland</English>
 		<French>Emirat de Pologne</French>
 		<German>Emirat Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL13</Tag>
 		<English>Spanish Kingdom of Poland</English>
 		<French>Royaume Espagnol de Pologne</French>
 		<German>Spanisches Königreich Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL14</Tag>
 		<English>South Baltic State</English>
 		<French>Etat Baltique du Sud</French>
 		<German>Südbaltischer Staat</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL15</Tag>
 		<English>Venetian Poland</English>
 		<French>Pologne V&#233;nitienne</French>
 		<German>Venezianisch-Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL16</Tag>
 		<English>Congress Poland</English>
 		<French>Congr&#232;s Pologne</French>
 		<German>Kongress Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL17</Tag>
 		<English>Grand Duchy of Posen</English>
 		<French>Grand-Duch&#233; de Posen</French>
 		<German>Großherzogtum Posen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL18</Tag>
 		<English>Counties of Poland</English>
 		<French>Comt&#233;es de Pologne</French>
 		<German>Counties Polens</German>
-		><Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL19</Tag>
 		<English>Habsburg Poland</English>
 		<French>Pologne Habsbourg</French>
 		<German>Habsburger Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL20</Tag>
 		<English>Principality of Polonya</English>
 		<French>Principaut&#233; de Polonya</French>
 		<German>Fürstentum Polonya</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL21</Tag>
 		<English>Province of Poland</English>
 		<French>Province de Pologne</French>
 		<German>Provinz Polen</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

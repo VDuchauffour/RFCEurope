@@ -18,14 +18,18 @@
 		<English>Kingdom of Germany</English>
 		<French>Royaume de Germanie</French>
 		<German>Königreich Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER02</Tag>
 		<English>Kingdom of Germany</English>
 		<French>Royaume de Germanie</French>
 		<German>Königreich Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER03</Tag>
@@ -50,21 +54,27 @@
 		<English>Republic of Germany</English>
 		<French>R&#233;publique de Germanie</French>
 		<German>Republik Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER06</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER08</Tag>
@@ -89,49 +99,63 @@
 		<English>Exarchate of Germania</English>
 		<French>Exarchat de Germanie</French>
 		<German>Exarchat Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER11</Tag>
 		<English>Duchy of the Rhine</English>
 		<French>Duch&#233; du Rhin</French>
 		<German>Herzogtum am Rhein</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER12</Tag>
 		<English>Emirate of Germany</English>
 		<French>Emirat de Germanie</French>
 		<German>Emirat Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER13</Tag>
 		<English>Spanish Kingdom of Germany</English>
 		<French>Royaume Espagnol de Germanie</French>
 		<German>Spanisches Königreich Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER14</Tag>
 		<English>Greater Denmark</English>
 		<French>Grand Danemark</French>
 		<German>Groß-Dänemark</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER15</Tag>
 		<English>Venetian Germany</English>
 		<French>Germanie V&#233;nitienne</French>
 		<German>Venezianisch-Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER16</Tag>
 		<English>Russian Germany</English>
 		<French>Germanie Russe</French>
 		<German>Russisch-Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER18</Tag>
@@ -147,14 +171,18 @@
 		<English>Northern Great Germany</English>
 		<French>Grande Germanie du Nord</French>
 		<German>Nördliches Groß-Deutschland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER20</Tag>
 		<English>Principality of Almanya</English>
 		<French>Principaut&#233; d'Almanya</French>
 		<German>Fürstentum Almanya</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER21</Tag>

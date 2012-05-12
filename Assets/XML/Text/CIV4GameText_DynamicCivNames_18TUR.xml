@@ -63,14 +63,18 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR08</Tag>
@@ -86,90 +90,116 @@
 		<English>Islamic Republic of Turkey</English>
 		<French>R&#233;publique Islamique de Turquie</French>
 		<German>Islamische Republik Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Repubblica Islamica di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR10</Tag>
 		<English>Theme of the Anatolics</English>
 		<French>Th&#232;me de l'Anatolique</French>
 		<German>Byzantinisches Thema Anatolikon</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Thema dell'Anatolia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR11</Tag>
 		<English>French Turkey</English>
 		<French>Turquie Fran&#201;aise</French>
 		<German>Französisch-Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Turchia Francese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR12</Tag>
 		<English>Ottoman Beylik</English>
 		<French>Beylik Ottoman</French>
 		<German>Osmanisches Beylik</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Beilikato Ottomano</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR13</Tag>
 		<English>Spanish Kingdom of Turkey</English>
 		<French>Royaume Espagnol de Turquie</French>
 		<German>Spanisches Königreich Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Regno Spagnolo di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR14</Tag>
 		<English>Norse Turkey</English>
 		<French>Turquie Nordique</French>
 		<German>Nordisch-Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Turchia Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR15</Tag>
 		<English>Venetian Turkey</English>
 		<French>Turquie V&#233;nitienne</French>
 		<German>Venezianisch-Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Turchia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR16</Tag>
 		<English>Russian Turkey</English>
 		<French>Turquie Russe</French>
 		<German>Russisch-Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Turchia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR17</Tag>
 		<English>German Turkey</English>
 		<French>Turquie Allemande</French>
 		<German>Deutsch-Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Turchia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR18</Tag>
 		<English>Counties of Turkey</English>
 		<French>Comt&#233;s de Turquie</French>
 		<German>Counties der Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Contee di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR19</Tag>
 		<English>Austrian Turkey</English>
 		<French>Turquie Autrichienne</French>
 		<German>Österreichisch-Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Turchia Austriaca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR20</Tag>
 		<English>Principality of Anadolu</English>
 		<French>Principaut&#233; de Anadolu</French>
 		<German>Fürstentum Anadolu</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Principato di Anadolu</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR21</Tag>
 		<English>Province of Turkey</English>
 		<French>Province de Turquie</French>
 		<German>Provinz Türkei</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Provincia di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>
