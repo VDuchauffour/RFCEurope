@@ -9,7 +9,7 @@
 		<English>Lithuanian People</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Popoli Lituani</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Grand Duchy of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Granducato di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Lithuanian Republic</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Repubblica di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -63,21 +63,25 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT08</Tag>
 		<English>Sultanate of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Sultanato di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -86,7 +90,7 @@
 		<English>Islamic Republic of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Repubblica Islamica di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -95,7 +99,7 @@
 		<English>Exarchate of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Esarcato di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -104,7 +108,7 @@
 		<English>Duchy of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Ducato di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -113,7 +117,7 @@
 		<English>Emirate of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Emirato di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -122,7 +126,7 @@
 		<English>Spanish Baltics</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Baltico Spagnolo</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -131,7 +135,7 @@
 		<English>Norse Baltics</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Baltico Vichingo</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -140,7 +144,7 @@
 		<English>Venetian Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Lituania Veneziana</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -149,7 +153,7 @@
 		<English>Russian Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Lituania Russa</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -158,7 +162,7 @@
 		<English>German Baltics</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Baltico Tedesco</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -167,7 +171,7 @@
 		<English>County of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Contea di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -176,7 +180,7 @@
 		<English>Habsburg Baltics</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Baltico Asburgico</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -185,7 +189,7 @@
 		<English>Principality of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Principato di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>
@@ -194,7 +198,7 @@
 		<English>Province of Lithuania</English>
 		<French>.</French>
 		<German>.</German>
-		<Italian>.</Italian>
+		<Italian>Provincia di Lituania</Italian>
 		<Spanish>.</Spanish>
 		<Russian/>
 	</TEXT>

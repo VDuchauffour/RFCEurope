@@ -9,153 +9,197 @@
 		<English>Muscovite Peoples</English>
 		<French>Peuplade Moscovite</French>
 		<German>Moskowitische Völker</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS01</Tag>
 		<English>Principality of Moscow</English>
 		<French>Principaut&#233; de Moscou</French>
 		<German>Fürstentum Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS02</Tag>
 		<English>Grand Duchy of Moscow</English>
 		<French>Grand-Duch&#233; de Moscou</French>
 		<German>Großfürstentum Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS03</Tag>
 		<English>Tsardom of Russia</English>
 		<French>Tsarie de Russie</French>
 		<German>Zarenreich Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS04</Tag>
 		<English>Tsardom of Russia</English>
 		<French>Tsarie de Russie</French>
 		<German>Zarenreich Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS05</Tag>
 		<English>Russian Republic</English>
 		<French>R&#233;publique Russe</French>
 		<German>Russische Republik</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS06</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS08</Tag>
 		<English>Islamic Tsardom of Russia</English>
 		<French>Tsarie Islamique de Russie</French>
 		<German>Islamisches Zarenreich Russland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS09</Tag>
 		<English>Russian Islamic Republic</English>
 		<French>R&#233;publique Islamique Russe</French>
 		<German>Russische Islamische Republik</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS10</Tag>
 		<English>Exarchate of Moscovia</English>
 		<French>Exarchat de Moscovie</French>
 		<German>Exarchat Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS11</Tag>
 		<English>Duchy of Muscovy</English>
 		<French>Duch&#233; de Moscovie</French>
 		<German>Herzogtum Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS12</Tag>
 		<English>Emirate of Moscow</English>
 		<French>Emirat de Moscou</French>
 		<German>Emirat Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS13</Tag>
 		<English>Spanish Muscovy</English>
 		<French>Moscovie Espagnol</French>
 		<German>Spanisch-Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS14</Tag>
 		<English>Norse Muscovy</English>
 		<French>Moscovie Nordique</French>
 		<German>Nordisch-Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS15</Tag>
 		<English>Venetian Muscovy</English>
 		<French>Moscovie V&#233;nitienne</French>
 		<German>Venezianisch-Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS16</Tag>
 		<English>Vladimir-Suzdal</English>
 		<French>Principaut&#233; de Vladimir-Suzdal</French>
 		<German>Fürstentum Wladimir-Susdal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS17</Tag>
 		<English>German Muscovy</English>
 		<French>Moscovie Allemande</French>
 		<German>Deutsch-Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS18</Tag>
 		<English>Counties of Muscovy</English>
 		<French>Comt&#233;es de Moscovie</French>
 		<German>Counties Moskaus</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS19</Tag>
 		<English>Habsburg Muscovy</English>
 		<French>Moscovie Habsbourg</French>
 		<German>Habsburger Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS20</Tag>
 		<English>Principality of Moskova</English>
 		<French>Principaut&#233; de Moskova</French>
 		<German>Fürstentum Moskova</German>
-		><Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS21</Tag>
 		<English>Province of Muscovy</English>
 		<French>Province de Moscovie</French>
 		<German>Provinz Moskau</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

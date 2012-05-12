@@ -9,153 +9,197 @@
 		<English>Kievan Peoples</English>
 		<French>Peuplade Kiev</French>
 		<German>Kiewer Völker</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE01</Tag>
 		<English>Kievan Rus'</English>
 		<French>Rus' de Kiev</French>
 		<German>Kiewer Rus</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE02</Tag>
 		<English>Kievan Rus'</English>
 		<French>Rus' de Kiev</French>
 		<German>Kiewer Rus</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE03</Tag>
 		<English>Kievan Russia</English>
 		<French>Petite Russie</French>
 		<German>Kiewer Russland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE04</Tag>
 		<English>Kievan Russia</English>
 		<French>Petite Russie</French>
 		<German>Kiewer Russland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE05</Tag>
 		<English>Kievan Republic</English>
 		<French>R&#233;publique de Kiev</French>
 		<German>Kiewer Republik</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE06</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE08</Tag>
 		<English>Sultanate of Kiev</English>
 		<French>Sultanat de Kiev</French>
 		<German>Sultanat Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE09</Tag>
 		<English>Kievan Islamic Republic</English>
 		<French>R&#233;publique Islamique de Kiev</French>
 		<German>Kiewer Islamische Republik</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE10</Tag>
 		<English>Exarchate of Kiev</English>
 		<French>Exarchat de Kiev</French>
 		<German>Exarchat Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE11</Tag>
 		<English>Duchy of Kiev</English>
 		<French>Duch&#233; de Kiev</French>
 		<German>Herzogtum Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE12</Tag>
 		<English>Emirate of Kiev</English>
 		<French>Emirat de Kiev</French>
 		<German>Emirat Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE13</Tag>
 		<English>Spanish Kiev</English>
 		<French>Kiev Espagnol</French>
 		<German>Spanisch-Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE14</Tag>
 		<English>Varangian Kiev</English>
 		<French>Kiev Viking</French>
 		<German>Warägisch-Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE15</Tag>
 		<English>Venetian Kiev</English>
 		<French>Kiev V&#233;nitienne</French>
 		<German>Venezianisch-Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE16</Tag>
 		<English>South Russia</English>
 		<French>Russie du Sud</French>
 		<German>Süd Russland</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE17</Tag>
 		<English>German Kiev</English>
 		<French>Kiev Allemande</French>
 		<German>Deutsch-Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE18</Tag>
 		<English>Counties of the Ukraine</English>
 		<French>Comt&#233;es d'Ukraine</French>
 		<German>Counties Ukraines</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE19</Tag>
 		<English>Habsburg Kiev</English>
 		<French>Kiev Habsbourg</French>
 		<German>Habsburger Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE20</Tag>
 		<English>Principality of Kiev</English>
 		<French>Principaut&#233; de Kiev</French>
 		<German>Fürstentum Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE21</Tag>
 		<English>Province of Kiev</English>
 		<French>Province de Kiev</French>
 		<German>Provinz Kiew</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

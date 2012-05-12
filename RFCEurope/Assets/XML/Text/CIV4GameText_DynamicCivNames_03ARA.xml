@@ -18,28 +18,36 @@
 		<English>Abbasid State of Arabia</English>
 		<French>Etat Abbasside d'Arabie</French>
 		<German>Abbasidischer Staat Arabien</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA02</Tag>
 		<English>Rashidun Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA03</Tag>
 		<English>Umayyad Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA04</Tag>
 		<English>Abbasid Caliphate</English>
 		<French></French>
 		<German></German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA05</Tag>
@@ -55,14 +63,18 @@
 		<English>Arabian Empire</English>
 		<French>Empire Arabe</French>
 		<German>Arabisches Reich</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA07</Tag>
 		<English>Arabian Empire</English>
 		<French>Empire Arabe</French>
 		<German>Arabisches Reich</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA08</Tag>
@@ -87,49 +99,63 @@
 		<English>Exarchate of Arabia</English>
 		<French>Exarchat d'Arabie</French>
 		<German>Exarchat Arabien</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA11</Tag>
 		<English>French Levant</English>
 		<French>Levant fran&#231;ais</French>
 		<German>Französisch-Levante</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA12</Tag>
 		<English>Emirate of Arabia</English>
 		<French>Emirat d'Arabie</French>
 		<German>Emirat Arabien</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA13</Tag>
 		<English>Spanish Levant</English>
 		<French>Levant Espagnol</French>
 		<German>Spanisch-Levante</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA14</Tag>
 		<English>Norse Arabia</English>
 		<French>Arabie Nordiste</French>
 		<German>Nordisch-Arabien</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA15</Tag>
 		<English>Venetian Levant</English>
 		<French>Levant V#233;nitien</French>
 		<German>Venezianisch-Levante</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA16</Tag>
 		<English>Russian Levant</English>
 		<French>Levant Russe</French>
 		<German>Russisch-Levante</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA17</Tag>
@@ -145,21 +171,27 @@
 		<English>Counties of the Levant</English>
 		<French>Comtés du Levant</French>
 		<German>Counties der Levante</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA19</Tag>
 		<English>Habsburg Levant</English>
 		<French>Levant d'Habsbourg</French>
 		<German>Habsburger Levante</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA20</Tag>
 		<English>Sharifate of Mekke</English>
 		<French>Chérif de La Mecque</French>
 		<German>Scherifat Mekka</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA21</Tag>

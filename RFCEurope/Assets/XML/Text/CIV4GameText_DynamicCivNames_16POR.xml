@@ -63,14 +63,18 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR07</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR08</Tag>
@@ -95,83 +99,107 @@
 		<English>Exarchate of Lusitania</English>
 		<French>Exarchat de Lusitanie</French>
 		<German>Exarchat Lusitanien</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Esarcato di Lusitania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR11</Tag>
 		<English>Duchy of Portugal</English>
 		<French>Duch&#233; du Portugal</French>
 		<German>Herzogtum Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Ducato del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR12</Tag>
 		<English>Emirate of Portugal</English>
 		<French>Emirat du Portugal</French>
 		<German>Emirat Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Emirato del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR13</Tag>
 		<English>Iberian Union</English>
 		<French>Union Ibérique</French>
 		<German>Iberische Union</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Unione Iberica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR14</Tag>
 		<English>Suevian Kingdom of Portugal</English>
 		<French>Royaume suève</French>
 		<German>Suebisches Königreich Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Regno Svevo del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR15</Tag>
 		<English>Venetian Portugal</English>
 		<French>Portugal V&#233;nitien</French>
 		<German>Venezianisch-Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Portogallo Veneziano</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR16</Tag>
 		<English>Russian Portugal</English>
 		<French>Portugal Russe</French>
 		<German>Russisch-Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Portogallo Russo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR17</Tag>
 		<English>German Portugal</English>
 		<French>Portugal Allemand</French>
 		<German>Deutsch-Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Portogallo Tedesco</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR18</Tag>
 		<English>County of Portugal</English>
 		<French>Comt&#233; du Portugal</French>
 		<German>County Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Contea del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR19</Tag>
 		<English>Habsburg Portugal</English>
 		<French>Portugal Habsbourg</French>
 		<German>Habsburger Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Portogallo Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR20</Tag>
 		<English>Principality of Portekiz</English>
 		<French>Principaut&#233; de Portekiz</French>
 		<German>Fürstentum Portekiz</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Principato del Portekiz</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR21</Tag>
 		<English>Province of Portugal</English>
 		<French>Province du Portugal</French>
 		<German>Provinz Portugal</German>
-		<Italian/><Spanish/><Russian/>
+		<Italian>Provincia del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>
