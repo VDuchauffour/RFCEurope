@@ -9,7 +9,7 @@
 		<English>Bulgar Peoples</English>
 		<French>Peuplade Bulgare</French>
 		<German>Bulgarische Völker</German>
-		<Italian></Italian>
+		<Italian>Popoli Bulgari</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Republic of Bulgaria</English>
 		<French>R&#233;publique de Bulgarie</French>
 		<German>Republik Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Repubblica di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Islamic Republic of Bulgaria</English>
 		<French>R&#233;publique Islamique Bulgare</French>
 		<German>Islamisches Bulgarisches Republik</German>
-		<Italian></Italian>
+		<Italian>Repubblica Islamica di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Theme of Bulgaria</English>
 		<French>Thème de Bulgarie</French>
 		<German>Byzantinisches Thema Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Thema di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Duchy of Bulgaria</English>
 		<French>Duché de Bulgarie</French>
 		<German>Herzogtum Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Ducato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Emirate of Bulgaria</English>
 		<French>Emirat de Bulgarie</French>
 		<German>Emirat Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Emirato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<English>Spanish Kingdom of Bulgaria</English>
 		<French>Royaume Espagnole de Bulgarie</French>
 		<German>Spanisches Königreich Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Regno Spagnolo di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Varangian Bulgaria</English>
 		<French>Bulgarie Viking</French>
 		<German>Warägisch-Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Bulgaria Variaga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<English>Venetian Bulgaria</English>
 		<French>Bulgarie V&#233;nitienne</French>
 		<German>Venezianisch-Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Bulgaria Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -90,7 +90,7 @@
 		<English>Principality of Bulgaria</English>
 		<French>Principaut&#233; de Bulgarie</French>
 		<German>Fürstentum Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Principato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>German Bulgaria</English>
 		<French>Bulgarie Allemande</French>
 		<German>Deutsch-Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Bulgaria Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>Counties of Bulgaria</English>
 		<French>Comtés de la Bulgarie</French>
 		<German>Counties Bulgariens</German>
-		<Italian></Italian>
+		<Italian>Contee di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Habsburg Bulgaria</English>
 		<French>Bulgarie Habsbourg</French>
 		<German>Habsburger Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Bulgaria Asburgica</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Principality of Rumelia</English>
 		<French>Principaut&#233; de Roum&#233;lie</French>
 		<German>Fürstentum Rumelia</German>
-		<Italian></Italian>
+		<Italian>Principato di Rumelia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -135,61 +135,61 @@
 		<English>Province of Bulgaria</English>
 		<French>Province de Bulgarie</French>
 		<German>Provinz Bulgarien</German>
-		<Italian></Italian>
+		<Italian>Provincia di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_CALIPHATE</Tag>
 		<English>Caliphate of Bulgaria</English>
-		<French>Caliphate of Bulgaria</French>
-		<German>Caliphate of Bulgaria</German>
-		<Italian></Italian>
+		<French></French>
+		<German></German>
+		<Italian>Califfato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_KHANATE</Tag>
 		<English>Bulgarian Khanate</English>
-		<French>Bulgarian Khanate</French>
-		<German>Bulgarian Khanate</German>
-		<Italian></Italian>
+		<French></French>
+		<German></German>
+		<Italian>Khanato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_TSARDOM</Tag>
 		<English>Bulgarian Tsardom</English>
-		<French>Bulgarian Tsardom</French>
-		<German>Bulgarian Tsardom</German>
-		<Italian></Italian>
+		<French></French>
+		<German></German>
+		<Italian>Zarato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_KINGDOM</Tag>
 		<English>Bulgarian Kingdom</English>
-		<French>Bulgarian Kingdom</French>
-		<German>Bulgarian Kingdom</German>
-		<Italian></Italian>
+		<French></French>
+		<German></German>
+		<Italian>Regno di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_EMPIRE1</Tag>
 		<English>Bulgarian Empire</English>
-		<French>Bulgarian Empire</French>
-		<German>Bulgarian Empire</German>
-		<Italian></Italian>
+		<French></French>
+		<German></German>
+		<Italian>Impero Bulgaro</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_EMPIRE2</Tag>
 		<English>Second Bulgarian Empire</English>
-		<French>Second Bulgarian Empire</French>
-		<German>Second Bulgarian Empire</German>
-		<Italian></Italian>
+		<French></French>
+		<German></German>
+		<Italian>Secondo Impero Bulgaro</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>

@@ -9,7 +9,7 @@
 		<English>Magyar Peoples</English>
 		<French>Peuplade Magyar</French>
 		<German>Magyarische Völker</German>
-		<Italian></Italian>
+		<Italian>Popoli Magiari</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Kingdom of Hungary</English>
 		<French>Royaume de Hongrie</French>
 		<German>Königreich Ungarn</German>
-		<Italian></Italian>
+		<Italian>Regno d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Hungarian Empire</English>
 		<French>Empire Hongrois</French>
 		<German>Ungarisches Reich</German>
-		<Italian></Italian>
+		<Italian>Impero Ungarico</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Kingdom of Hungary</English>
 		<French>Royaume de Hongrie</French>
 		<German>Königreich Ungarn</German>
-		<Italian></Italian>
+		<Italian>Regno d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Hungarian Empire</English>
 		<French>Empire Hongrois</French>
 		<German>Ungarisches Reich</German>
-		<Italian></Italian>
+		<Italian>Impero Ungarico</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Republic of Hungary</English>
 		<French>R&#233;publique de Hongrie</French>
 		<German>Republik Ungarn</German>
-		<Italian></Italian>
+		<Italian>Repubblica d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<English>Sultanate of Hungary</English>
 		<French>Sultanat de Hongrie</French>
 		<German>Sultanat Ungarn</German>
-		<Italian></Italian>
+		<Italian>Sultanato d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -90,7 +90,7 @@
 		<English>Islamic Republic of Hungary</English>
 		<French>R&#233;publique Islamique de Hongrie</French>
 		<German>Islamische Republik Ungarn</German>
-		<Italian></Italian>
+		<Italian>Repubblica Islamica d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>Exarchate of Sirmium</English>
 		<French>Exarchat de Sirmium</French>
 		<German>Exarchat Sirmium</German>
-		<Italian></Italian>
+		<Italian>Esarcato di Sirmio</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>Duchy of Hungary</English>
 		<French>Duch&#233; de Hongrie</French>
 		<German>Herzogtum Ungarn</German>
-		<Italian></Italian>
+		<Italian>Ducato d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Emirate of Hungary</English>
 		<French>Emirat de Hongrie</French>
 		<German>Emirat Ungarn</German>
-		<Italian></Italian>
+		<Italian>Emirato d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Spanish Kingdom of Hungary</English>
 		<French>Royaume Espagnol de Hongrie</French>
 		<German>Spanisches Königreich Ungarn</German>
-		<Italian></Italian>
+		<Italian>Regno Spagnolo d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<English>Norse Hungary</English>
 		<French>Hongrie Nordique</French>
 		<German>Nordisch-Ungarn</German>
-		<Italian></Italian>
+		<Italian>Ungheria Vichinga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -144,7 +144,7 @@
 		<English>Venetian Hungary</English>
 		<French>Hongrie V&#233;nitienne</French>
 		<German>Venezianisch-Ungarn</German>
-		<Italian></Italian>
+		<Italian>Ungheria Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -153,7 +153,7 @@
 		<English>Russian Hungary</English>
 		<French>Hongrie Russe</French>
 		<German>Russisch-Ungarn</German>
-		<Italian></Italian>
+		<Italian>Ungheria Russa</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<English>German Hungary</English>
 		<French>Hongrie Allemande</French>
 		<German>Deutsch-Ungarn</German>
-		<Italian></Italian>
+		<Italian>Ungheria Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>County of Hungary</English>
 		<French>Comt&#233;es de Hongrie</French>
 		<German>Counties Ungarns</German>
-		<Italian></Italian>
+		<Italian>Contea d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<English>Habsburg Kingdom of Hungary</English>
 		<French>Royaume Autro-Hongrois</French>
 		<German>Habsburger Königreich Ungarn</German>
-		<Italian></Italian>
+		<Italian>Regno Asburgico d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>Principality of Transylvania</English>
 		<French>Principaut&#233; de Transylvanie</French>
 		<German>Fürstentum Transsylvanien</German>
-		<Italian></Italian>
+		<Italian>Principato di Transilvania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -198,7 +198,7 @@
 		<English>Province of Hungary</English>
 		<French>Province de Hongrie</French>
 		<German>Provinz Ungarn</German>
-		<Italian></Italian>
+		<Italian>Pronvincia d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>

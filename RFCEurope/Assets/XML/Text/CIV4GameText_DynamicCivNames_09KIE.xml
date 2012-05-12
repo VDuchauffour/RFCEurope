@@ -9,7 +9,7 @@
 		<English>Kievan Peoples</English>
 		<French>Peuplade Kiev</French>
 		<German>Kiewer Völker</German>
-		<Italian></Italian>
+		<Italian>Popoli Kieviti</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Kievan Rus'</English>
 		<French>Rus' de Kiev</French>
 		<German>Kiewer Rus</German>
-		<Italian></Italian>
+		<Italian>Rus' di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Kievan Rus'</English>
 		<French>Rus' de Kiev</French>
 		<German>Kiewer Rus</German>
-		<Italian></Italian>
+		<Italian>Rus' di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Kievan Russia</English>
 		<French>Petite Russie</French>
 		<German>Kiewer Russland</German>
-		<Italian></Italian>
+		<Italian>Russia Kievita</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Kievan Russia</English>
 		<French>Petite Russie</French>
 		<German>Kiewer Russland</German>
-		<Italian></Italian>
+		<Italian>Russia Kievita</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Kievan Republic</English>
 		<French>R&#233;publique de Kiev</French>
 		<German>Kiewer Republik</German>
-		<Italian></Italian>
+		<Italian>Repubblica di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<English>Sultanate of Kiev</English>
 		<French>Sultanat de Kiev</French>
 		<German>Sultanat Kiew</German>
-		<Italian></Italian>
+		<Italian>Sultanato di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -90,7 +90,7 @@
 		<English>Kievan Islamic Republic</English>
 		<French>R&#233;publique Islamique de Kiev</French>
 		<German>Kiewer Islamische Republik</German>
-		<Italian></Italian>
+		<Italian>Repubblica Islamica di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>Exarchate of Kiev</English>
 		<French>Exarchat de Kiev</French>
 		<German>Exarchat Kiew</German>
-		<Italian></Italian>
+		<Italian>Esarcato di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>Duchy of Kiev</English>
 		<French>Duch&#233; de Kiev</French>
 		<German>Herzogtum Kiew</German>
-		<Italian></Italian>
+		<Italian>Ducato di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Emirate of Kiev</English>
 		<French>Emirat de Kiev</French>
 		<German>Emirat Kiew</German>
-		<Italian></Italian>
+		<Italian>Emirato di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Spanish Kiev</English>
 		<French>Kiev Espagnol</French>
 		<German>Spanisch-Kiew</German>
-		<Italian></Italian>
+		<Italian>Kiev Spagnola</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<English>Varangian Kiev</English>
 		<French>Kiev Viking</French>
 		<German>Warägisch-Kiew</German>
-		<Italian></Italian>
+		<Italian>Kiev Variaga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -144,7 +144,7 @@
 		<English>Venetian Kiev</English>
 		<French>Kiev V&#233;nitienne</French>
 		<German>Venezianisch-Kiew</German>
-		<Italian></Italian>
+		<Italian>Kiev Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -153,7 +153,7 @@
 		<English>South Russia</English>
 		<French>Russie du Sud</French>
 		<German>Süd Russland</German>
-		<Italian></Italian>
+		<Italian>Russia Meridionale</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<English>German Kiev</English>
 		<French>Kiev Allemande</French>
 		<German>Deutsch-Kiew</German>
-		<Italian></Italian>
+		<Italian>Kiev Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>Counties of the Ukraine</English>
 		<French>Comt&#233;es d'Ukraine</French>
 		<German>Counties Ukraines</German>
-		<Italian></Italian>
+		<Italian>Contee dell'Ucraina</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<English>Habsburg Kiev</English>
 		<French>Kiev Habsbourg</French>
 		<German>Habsburger Kiew</German>
-		<Italian></Italian>
+		<Italian>Kiev Asburgica</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>Principality of Kiev</English>
 		<French>Principaut&#233; de Kiev</French>
 		<German>Fürstentum Kiew</German>
-		<Italian></Italian>
+		<Italian>Principato di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -198,7 +198,7 @@
 		<English>Province of Kiev</English>
 		<French>Province de Kiev</French>
 		<German>Provinz Kiew</German>
-		<Italian></Italian>
+		<Italian>Provincia di Kiev</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>

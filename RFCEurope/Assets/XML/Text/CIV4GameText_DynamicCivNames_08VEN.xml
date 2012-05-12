@@ -9,7 +9,7 @@
 		<English>Venetian Peoples</English>
 		<French>Peuplade V&#233;nitienne</French>
 		<German>Venezianische Völker</German>
-		<Italian></Italian>
+		<Italian>Popoli Veneziane</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -18,7 +18,7 @@
 		<English>Most Serene Republic of Venice</English>
 		<French>R&#233;publique Sereinne de Venise</French>
 		<German>Erlauchteste Republik Venedig</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -27,7 +27,7 @@
 		<English>Most Serene Republic of Venice</English>
 		<French>R&#233;publique Sereinne de Venise</French>
 		<German>Erlauchteste Republik Venedig</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -36,7 +36,7 @@
 		<English>Most Serene Republic of Venice</English>
 		<French>R&#233;publique Sereinne de Venise</French>
 		<German>Erlauchteste Republik Venedig</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Most Serene Republic of Venice</English>
 		<French>R&#233;publique Sereinne de Venise</French>
 		<German>Erlauchteste Republik Venedig</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -54,7 +54,7 @@
 		<English>Most Serene Republic of Venice</English>
 		<French>R&#233;publique Sereinne de Venise</French>
 		<German>Erlauchteste Republik Venedig</German>
-		<Italian></Italian>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -62,8 +62,8 @@
 		<Tag>TXT_KEY_DN_VEN06</Tag>
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
-		<German>.Placeholder Error</German>
-		<Italian></Italian>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<English>Placeholder Error</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
-		<Italian></Italian>
+		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -81,7 +81,7 @@
 		<English>Sultanate of Venice</English>
 		<French>Sultanat de Venise</French>
 		<German>Sultanat Venedig</German>
-		<Italian></Italian>
+		<Italian>Sultanato di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -90,7 +90,7 @@
 		<English>Venetian Islamic Republic</English>
 		<French>R&#233;publique Islamique V&#233;nitienne</French>
 		<German>Venezianische Islamische Republik</German>
-		<Italian></Italian>
+		<Italian>Repubblica Islamica Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<English>Exarchate of Ravenna</English>
 		<French>Exarchat de Ravenne</French>
 		<German>Exarchat Ravenna</German>
-		<Italian></Italian>
+		<Italian>Esarcato di Ravenna</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<English>French Kingdom of Italy</English>
 		<French>Royaume Fran&#201;ais d'Italie</French>
 		<German>Französisches Königreich Venedig</German>
-		<Italian></Italian>
+		<Italian>Regno Francese d'Italia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>Emirate of Venice</English>
 		<French>Emirat de Venise</French>
 		<German>Emirat Venedig</German>
-		<Italian></Italian>
+		<Italian>Emirato di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -126,7 +126,7 @@
 		<English>Spanish Duchy of Venice</English>
 		<French>Duch&#233; Espagnol de Venise</French>
 		<German>Spanisches Herzogtum Venedig</German>
-		<Italian></Italian>
+		<Italian>Ducato Spagnolo di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<English>Norse East Lombardy</English>
 		<French>Lombarie-Est Nordique</French>
 		<German>Nordisch-Ostlombardei</German>
-		<Italian></Italian>
+		<Italian>Lombardia Orientale Vichinga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -144,7 +144,7 @@
 		<English>Dogado of Venice</English>
 		<French>Dogado de Venise</French>
 		<German>Dogado Venedig</German>
-		<Italian></Italian>
+		<Italian>Dogado di Venezia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -153,7 +153,7 @@
 		<English>Russian Venice</English>
 		<French>Venise Russe</French>
 		<German>Russisch-Venedig</German>
-		<Italian></Italian>
+		<Italian>Venezia Russa</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -162,7 +162,7 @@
 		<English>German Venice</English>
 		<French>Venise Allemande</French>
 		<German>Deutsch-Venedig</German>
-		<Italian></Italian>
+		<Italian>Venezia Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -171,7 +171,7 @@
 		<English>Counties of Venice</English>
 		<French>Comt&#233;es de Venise</French>
 		<German>Counties Venedigs</German>
-		<Italian></Italian>
+		<Italian>Contee Veneziane</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<English>Habsburg Venezia-Lombardy</English>
 		<French>Lombarie-V&#233;n&#233;tie Habsbourg</French>
 		<German>Habsburger Lombardei-Venedig</German>
-		<Italian></Italian>
+		<Italian>Veneto-Lombardo Asburgico</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>Principality of Venedik</English>
 		<French>Principaut&#233; de Venedik</French>
 		<German>Fürstentum Venedik</German>
-		<Italian></Italian>
+		<Italian>Principato di Venedik</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
@@ -198,7 +198,7 @@
 		<English>Province of Veneto</English>
 		<French>Province de Veneto</French>
 		<German>Provinz Veneto</German>
-		<Italian></Italian>
+		<Italian>Provincia del Veneto</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
