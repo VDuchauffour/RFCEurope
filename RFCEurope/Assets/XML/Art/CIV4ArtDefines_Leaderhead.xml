@@ -27,7 +27,7 @@
 			<Button>Art/Leaderheads/MariaTheresa/Btn_Maria_Theresa.dds</Button>
 			<NIF>Art/Leaderheads/MariaTheresa/victoria.nif</NIF>
 			<KFM>Art/Leaderheads/MariaTheresa/victoria.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/MariaTheresa/victoria_noshader.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/MariaTheresa/victoria.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/MariaTheresa/victoria_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
@@ -56,11 +56,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_BARBAROSSA</Type>
-			<Button>Art/Leaderheads/Barbarossa/barbarossa_btn.dds</Button>
-			<NIF>Art/Leaderheads/Barbarossa/Cunne_Shote.nif</NIF>
-			<KFM>Art/Leaderheads/Barbarossa/Cunne_Shote.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Barbarossa/Cunne_Shote.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Barbarossa/Cunne_Shote_BG.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Barbarossa/Btn_LH_Barbarossa.dds</Button>
+			<NIF>Art/Leaderheads/Barbarossa/Barbarossa.nif</NIF>
+			<KFM>Art/Leaderheads/Barbarossa/Barbarossa.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Barbarossa/Barbarossa.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Barbarossa/Barbarossa_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_CATHERINE</Type>
@@ -139,7 +139,7 @@
 			<Button>Art/Leaderheads/Maximilian/MaximilianButton.dds</Button>
 			<NIF>Art/Leaderheads/Maximilian/Sitting Bull.nif</NIF>
 			<KFM>Art/Leaderheads/Maximilian/Sitting Bull.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Maximilian/Sitting_Bull_NOSHADER.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/Maximilian/Sitting Bull.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Maximilian/Sitting Bull_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
@@ -224,11 +224,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_YAROSLAV</Type>
-			<Button>Art/Leaderheads/Yaroslav2/Yaroslav.dds</Button>
-			<NIF>Art/Leaderheads/Yaroslav2/hector.nif</NIF>
-			<KFM>Art/Leaderheads/Yaroslav2/alexander.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Yaroslav2/hector.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Yaroslav2/alexander_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Yaroslav/Yaroslav.dds</Button>
+			<NIF>Art/Leaderheads/Yaroslav/hector.nif</NIF>
+			<KFM>Art/Leaderheads/Yaroslav/alexander.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Yaroslav/hector.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Yaroslav/alexander_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_PETER</Type>
@@ -259,7 +259,7 @@
 			<Button>Art/LeaderHeads/isabella/Btn_LH_Spain_Isabella.dds</Button>
 			<NIF>Art/LeaderHeads/isabella/isabella.nif</NIF>
 			<KFM>Art/LeaderHeads/isabella/isabella.kfm</KFM>
-			<NoShaderNIF>art/Leaderheads/isabella/isabella.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/isabella/isabella.nif</NoShaderNIF>
 			<BackgroundKFM>Art/LeaderHeads/isabella/isabella_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
@@ -331,7 +331,7 @@
 			<Button>Art/Leaderheads/Andrea_Dandolo/Btn_Andrea_Dandolo.dds</Button>
 			<NIF>Art/Leaderheads/Andrea_Dandolo/Willem van Oranje.nif</NIF>
 			<KFM>Art/LeaderHeads/Andrea_Dandolo/Willem van Oranje.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Andrea_Dandolo/Willem_van_Oranje_NONSHADER.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/Andrea_Dandolo/Willem van Oranje.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Andrea_Dandolo/Willem van Oranje_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
@@ -347,7 +347,7 @@
 			<Button>Art/Leaderheads/Mindaugas/Btn_Mindaugas.dds</Button>
 			<NIF>Art/Leaderheads/Mindaugas/hannibal.nif</NIF>
 			<KFM>Art/Leaderheads/Mindaugas/hannibal.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Mindaugas/hannibal_noshader.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/Mindaugas/hannibal.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Mindaugas/hannibal_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
