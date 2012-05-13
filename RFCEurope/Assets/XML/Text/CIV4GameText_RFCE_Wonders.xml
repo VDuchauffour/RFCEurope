@@ -271,16 +271,25 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL</Tag>
-		<English>Tomb of Al Khalid</English>
-		<French>Tombe de Al-Khalid</French>
-		<German>Grabmal von Al-Khalid</German>
-		<Italian>Tomba di Al Khalid</Italian>
-		<Spanish>Tumba de Al Khalid</Spanish>
+		<English>Tomb of al-Walid</English>
+		<French>Tombe de Al-Walid</French>
+		<German>Grabmal von Al-Walid</German>
+		<Italian>Tomba di Al Walid</Italian>
+		<Spanish>Tumba de Al Walid</Spanish>
 		<Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL_PEDIA</Tag>
-		<English>[TAB]Khalid ibn al-Walid (592-642) also known as Sayfu l-Lahi l-Maslul (or Sayfullah, the "Drawn Sword of God", "God's Drawn Sword" or simply "Sword of God"), was one of the most successful commanders in military history. He is noted for his military prowess, commanding the forces of the Islamic prophet Muhammad and those of his immediate successors of the Rashidun Caliphate; Abu Bakr and Umar (Umar ibn al-Khattab). He has the distinction of being undefeated in over a hundred battles, against the numerically superior forces of the Byzantine Roman Empire, Sassanid Persian Empire, and their allies. His strategic achievements include the conquest of the Persian Empire's Iraq and Roman Syria within three years from 633 to 636. He is also remembered for his decisive victories at Yamamah, Ullais and Yarmouk.[PARAGRAPH:2]Khaled ibn Walid was from the Meccan tribe of Quraysh, who initially opposed Muhammad. He played a vital role in Qurayshi victory at the Battle of Uhud. He converted to Islam, however, and joined Muhammad after the Treaty of Hudaybiyyah and participated in various expeditions for him, such as the Battle of Mu'tah. After Muhammad's death, he played a key role in commanding Medinan forces for Abu Bakr in the Ridda wars, the capture of the Sassanid Arab client Kingdom of Al-Hirah, and the defeat of the Sassanid Persian forces during his conquest of Iraq. He then crossed the desert to capture the Byzantine Arab client state of the Ghassanids during his conquest of Roman Syria. Even though Umar later relieved him of high command, he remained the effective leader of the forces arrayed against the Byzantines during the early stages of the Byzantine?Arab Wars. Under his command, Damascus was captured in 634 and the key Arab victory against the Roman Byzantine forces was achieved at the Battle of Yarmouk (636), which led to the conquest of the Bilad al-Sham (Levant).[PARAGRAPH:2]Khalid died and was buried in 642 in Emesa (Hims), Syria. His tomb is now part of a mosque called Jamia Khalid ibn al-Walid (Khalid ibn al-Walid Mosque). Khalid's tombstone depicts a list of over 50 victorious battles that he commanded without defeat (not including small battles).</English>
+		<English>[TAB]Khalid ibn al-Walid (592-642) also known as Sayfu l-Lahi l-Maslul (or Sayfullah, the "Drawn Sword of God", "God's Drawn Sword" or simply "Sword of God"), was one of the most successful commanders in military history. He is noted for his military prowess, commanding the forces of the Islamic prophet Muhammad and those of his immediate successors of the Rashidun Caliphate; Abu Bakr and Umar (Umar ibn al-Khattab). It was under his military leadership that Arabia, for the first time in history, was united under a single political entity, the Caliphate. He has the distinction of being undefeated in over a hundred battles, against the numerically superior forces of the Byzantine Roman Empire, Sassanid Persian Empire, and their allies, in addition to other Arab tribes. His strategic achievements include the conquest of Arabia, Persian Mesopotamia and Roman Syria within several years from 633 to 636. He is also remembered for his decisive victories at Yamamah, Ullais, Firaz, and his tactical marvels, Walaja and Yarmouk.[PARAGRAPH:2]Khaled ibn Walid was from the Meccan tribe of Quraysh, who initially opposed Muhammad. He played a vital role in Qurayshi victory at the Battle of Uhud. He converted to Islam, however, and joined Muhammad after the Treaty of Hudaybiyyah and participated in various expeditions for him, such as the Battle of Mu'tah. After Muhammad's death, he played a key role in commanding Medinan forces for Abu Bakr in the Ridda wars, the capture of the Sassanid Arab client Kingdom of Al-Hirah, and the defeat of the Sassanid Persian forces during his conquest of Iraq. He then crossed the desert to capture the Byzantine Arab client state of the Ghassanids during his conquest of Roman Syria. Even though Umar later relieved him of high command, he remained the effective leader of the forces arrayed against the Byzantines during the early stages of the Byzantine-Arab Wars. Under his command, Damascus was captured in 634 and the key Arab victory against the Roman Byzantine forces was achieved at the Battle of Yarmouk (636), which led to the conquest of the Bilad al-Sham (Levant).[PARAGRAPH:2]Khalid died and was buried in 642 in Emesa (Hims), Syria. His tomb is now part of a mosque called Jamia Khalid ibn al-Walid (Khalid ibn al-Walid Mosque). Khalid's tombstone depicts a list of over 50 victorious battles that he commanded without defeat (not including small battles).</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOMB_KHAL_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Tomb of Khalid Ibn al-Walid[COLOR_REVERT] increases an enemy's war weariness and increases it's city's odds of generating a [COLOR_BUILDING_TEXT]Great Artist[COLOR_REVERT].</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

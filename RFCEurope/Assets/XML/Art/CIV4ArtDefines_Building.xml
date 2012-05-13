@@ -148,11 +148,11 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TOMB_KHAL</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
+			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>0.9</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Tomb_Khal/muscat02.nif</NIF>
+			<fScale>4.00</fScale>
+			<fInterfaceScale>0.67</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Tomb_Walid/Walid.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Wonders/tomb_BTN.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,1</Button>
 		</BuildingArtInfo>

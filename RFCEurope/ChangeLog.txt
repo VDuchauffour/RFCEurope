@@ -40,6 +40,8 @@ Changes for RFCE 1.1:
 		- Removed Religious School icon from the tech tree
 		- New LH for Barbarossa and Isabella
 		- Removing a couple unnecessary/unused art files from the LH folders
+		- New building art for Tomb of al-Walid
+		- New, improved flag for Germany by zwei833
 	
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
