@@ -83,11 +83,11 @@
 		</CivicInfo>
 		<CivicInfo> <!-- Feudal Monarchy-->
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
-			<Type>CIVIC_FEUDAL_MONARHCY</Type>
-			<Description>TXT_KEY_CIVIC_FEUDAL_MONARHCY</Description>
-			<Civilopedia>TXT_KEY_CIVIC_FEUDAL_MONARHCY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_FEUDAL_MONARHCY</Strategy>
-			<Help>TXT_KEY_CIVIC_FEUDAL_MONARHCY_HELP</Help>
+			<Type>CIVIC_FEUDAL_MONARCHY</Type>
+			<Description>TXT_KEY_CIVIC_FEUDAL_MONARCHY</Description>
+			<Civilopedia>TXT_KEY_CIVIC_FEUDAL_MONARCHY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_FEUDAL_MONARCHY</Strategy>
+			<Help>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Help>
 			<Button>,Art/Interface/Buttons/Civics/Electorate.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,13</Button>
 			<TechPrereq>TECH_FEUDALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>

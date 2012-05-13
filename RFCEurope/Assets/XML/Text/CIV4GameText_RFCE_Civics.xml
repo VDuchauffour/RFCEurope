@@ -15,10 +15,10 @@
 		<Russian/>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_STRATEGY</Tag>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Tag>
 		<English>Lower unit costs and happiness from castles</English>
-		<French>Am&#233;liore l'Espionnage; bonus de recherche et culture depuis les sp&#233;cialistes</French>
-		<German>Geringere Unterhalskosten für Einheiten und Zufriedenheit durch Schl&#246;sser</German>
+		<French></French>
+		<German>Geringerer Einheitenunterhalt und Zufriedenheit durch Burgen</German>
 		<Italian>Costo delle unità più basso e felicità dai castelli</Italian>
 		<Spanish/>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
@@ -27,7 +27,7 @@
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
 		<English>Happiness from military units; culture from specialists; faster great generals</English>
 		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French>
-		<German/>
+		<German>[ICON_HAPPY] durch Militäreinheiten; [ICON_CULTURE] durch Spezialisten; schneller Große Feldherren [ICON_GREAT_GENERAL]</German>
 		<Italian>Felicità dalle unità militari; cultura dagli specialisti; velocizza la nascita di grandi generali</Italian>
 		<Spanish/>
 		<Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
@@ -36,7 +36,7 @@
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
 		<English>"We Love the Despot Day"</English>
 		<French/>
-		<German/>
+		<German>"Wir Lieben den Tag des Despoten"</German>
 		<Italian>"Viva il Giorno del Despota"</Italian>
 		<Spanish/>
 		<Russian/>
@@ -45,7 +45,7 @@
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_KING</Tag>
 		<English>"We Love the King Day"</English>
 		<French/>
-		<German/>
+		<German>"Wir Lieben den Tag des Königs"</German>
 		<Italian>"Viva il Giorno del Re"</Italian>
 		<Spanish/>
 		<Russian/>
@@ -54,7 +54,7 @@
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
 		<English>Can use gold to rush production; +1 hammer from towns</English>
 		<French>Peut utiliser l'Or pour terminer la production</French>
-		<German/>
+		<German>Kann Gold zur Produktionsbeschleunigung nutzen; +1 [ICON_PRODUCTION] von Städten</German>
 		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
 		<Spanish/>
 		<Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
@@ -63,7 +63,7 @@
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
 		<English>Can levy units</English>
 		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French>
-		<German/>
+		<German>Kann Einheiten rekrutieren</German>
 		<Italian>Può richiamare alla leva le unità</Italian>
 		<Spanish/>
 		<Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian>
@@ -72,7 +72,7 @@
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
 		<English>Unlimited priests and faster great people; unhappiness with non-state religions</English>
 		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French>
-		<German/>
+		<German>unbegrenzt Priester und schneller Große Persönlichkeiten; Unzufriedenheit durch Nicht-Staatsreligionen</German>
 		<Italian>Sacerdoti illimati e i grandi generali nascono più in fretta; infelicità dalle religioni non-ufficiali</Italian>
 		<Spanish/>
 		<Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian>
@@ -276,7 +276,7 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_PEDIA</Tag>
 		<English>[TAB]Feudal monarchy spread across Europe in the wake of Charlemagne's empire. Kings and lesser lords were bound to each other by agreements to provide mutual assistance. The monarch guaranteed his authority to the execution of government functions by his vassals; in exchange, they agreed to provide the soldiers for the king's military adventures.[PARAGRAPH:2]In practice, feudal monarchies were quite diverse in the amount of authority given to vassals. The Kingdom of England was strong, but the weak Kingdom of France could not exert its power over its nominal vassals, like the Duchy of Burgundy. As kings centralised government authority, the traditional feudal monarchy declined. The last feudal government in Europe was on the island of Sark, which became a democracy only in 2008.</English>
 		<French>.</French>
 		<German>.</German>
@@ -522,7 +522,7 @@
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW</Tag>
 		<English>Feudal Law</English>
 		<French>Loi F&#233;odale</French>
-		<German>Feudales Recht</German>
+		<German>Lehnswesen</German>
 		<Italian>Legge Feudale</Italian>
 		<Spanish>Ley feudal</Spanish>
 		<Russian>&#212;&#229;&#238;&#228;&#224;&#235;&#252;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
@@ -540,7 +540,7 @@
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>
 		<English>Religious Law</English>
 		<French>Loi Religieuse</French>
-		<German>Religi&#246;ses Recht</German>
+		<German>Kirchenrecht</German>
 		<Italian>Legge Religiosa</Italian>
 		<Spanish>Ley de Relisious</Spanish>
 		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
@@ -558,7 +558,7 @@
 		<Tag>TXT_KEY_CIVIC_TRIBALISM</Tag>
 		<English>Tribalism</English>
 		<French>Tribalisme</French>
-		<German>Stammessystem</German>
+		<German>Stammestum</German>
 		<Italian>Organizzazione Tribale</Italian>
 		<Spanish>Tribalismo</Spanish>
 		<Russian>&#210;&#240;&#224;&#233;&#225;&#224;&#235;&#232;&#231;&#236;</Russian>
@@ -567,7 +567,7 @@
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
 		<English>Apprenticeship</English>
 		<French>Apprentissage</French>
-		<German>Ausbildung</German>
+		<German>Berufslehre</German>
 		<Italian>Apprendistato</Italian>
 		<Spanish>Aprendizaje</Spanish>
 		<Russian>&#211;&#247;&#229;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
@@ -585,7 +585,7 @@
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
 		<English>Free Peasantry</English>
 		<French>Paysannerie</French>
-		<German>Freie Bauernschaft</German>
+		<German>Bauernbefreiung</German>
 		<Italian>Contadini Liberi</Italian>
 		<Spanish>Liberte el Campesinado</Spanish>
 		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#229; &#202;&#240;&#229;&#241;&#242;&#252;&#255;&#237;&#241;&#242;&#226;&#238;</Russian>
@@ -594,7 +594,7 @@
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
 		<English>Free Labor</English>
 		<French>Libert&#233; de Travail</French>
-		<German>Freier Arbeitsmarkt</German>
+		<German>Gewerbefreiheit</German>
 		<Italian>Libertà Lavorativa</Italian>
 		<Spanish>Liberte Trabajo</Spanish>
 		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#240;&#224;&#225;&#238;&#247;&#224;&#255; &#209;&#232;&#235;&#224;</Russian>
@@ -699,20 +699,20 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARHCY_HELP</Tag>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feduale[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Theocracy, State Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Theocracy, State Religion, Organized Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libertà religiosa[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Theokratie, Staatsreligion, Organisierte Religion, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Religione Organizzata, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libertà religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -720,17 +720,17 @@
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libertà Lavorativa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 4 cities[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di cinque città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 5 città[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 4 Städten[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 4 città[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -738,44 +738,35 @@
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Absolute Monarchie, Leibeigenschaft, Grundherrschaft[COLOR_REVERT], Instabil mit [COLOR_RED]Handelsrepublik, Bauernbefreiung[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Feudale, Servitù, Manorialismo[COLOR_REVERT], Instabile con [COLOR_RED]Repubblica Mercantile, Contadini Liberi[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 5 cities[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 6 città[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 6 città[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 5 Städten[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 5 città[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Theocracy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Libertà Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewerbefreiheit[COLOR_REVERT], Instabil mit [COLOR_RED]Theokratie[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Libertà Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -783,17 +774,17 @@
 		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -801,17 +792,17 @@
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gilden[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Associazioni[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Common Law[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Common Law[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Legge Comune[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewohnheitsrecht[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Legge Comune[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -819,7 +810,7 @@
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Leibeigenschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Servitù[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -828,8 +819,8 @@
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -837,7 +828,7 @@
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Apprenticeship[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Berufslehre[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Apprendistato[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -846,7 +837,7 @@
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
 		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -855,7 +846,7 @@
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -864,17 +855,8 @@
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Gewohnheitsrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT], instabile con [COLOR_RED]Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
@@ -882,7 +864,7 @@
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -891,7 +873,7 @@
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
 		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -900,7 +882,7 @@
 		<Tag>TXT_KEY_CIVIC_GUILDS_STRATEGY</Tag>
 		<English>No Strategy yet.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -909,7 +891,7 @@
 		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
 		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
 		<French>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</French>
-		<German>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</German>
+		<German>[ICON_BULLET]Erlaubt den Bau von Nicht-Staatsreligion Gebäuden und Wundern</German>
 		<Italian>[ICON_BULLET]Permette la costruzione di Meraviglie ed Edifici di Religioni non-Ufficiali</Italian>
 		<Spanish>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Spanish>
 		<Russian>Allows contruction of non-State Religion Buildings and Wonders</Russian>
@@ -927,7 +909,7 @@
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
 		<English>Adds stability for each city outside the core area</English>
 		<French/>
-		<German/>
+		<German>Addiert Stabilität für jede Stadt außerhalb des Kerngebietes</German>
 		<Italian>Aumentà la stabilità per ogni città fuori dal centro dell'impero</Italian>
 		<Spanish/>
 		<Russian/>
@@ -936,7 +918,7 @@
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
 		<English>+1 production from farms, slower growth for cottages and great people</English>
 		<French/>
-		<German/>
+		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Gehöften und großen Persönlichkeiten</German>
 		<Italian>+1 produzione da fattorie, crescità più lenta per villete e grandi personaggi</Italian>
 		<Spanish/>
 		<Russian/>
@@ -963,7 +945,7 @@
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Mod% Unit Production</English>
 		<French>[ICON_BULLET]%D1_Mod% Unit Production</French>
-		<German>[ICON_BULLET]%D1_Mod% Unit Production</German>
+		<German>[ICON_BULLET]%D1_Mod% Einheitenproduktion</German>
 		<Italian>[ICON_BULLET]%D1_Mod% Unit Production</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% Unit Production</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod% Unit Production</Russian>
@@ -972,7 +954,7 @@
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
 		<English>[ICON_BULLET]%D1_Mod% from Civics</English>
 		<French>[ICON_BULLET]%D1_Mod% from Civics</French>
-		<German>[ICON_BULLET]%D1_Mod% from Civics</German>
+		<German>[ICON_BULLET]%D1_Mod% von Gesellschaftsformen</German>
 		<Italian>[ICON_BULLET]%D1_Mod% from Civics</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% from Civics</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod% from Civics</Russian>

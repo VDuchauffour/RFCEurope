@@ -161,7 +161,7 @@
 		<Tag>TXT_KEY_CONCEPT_GOLDEN_AGE</Tag>
 		<English>Golden Age in RFCE</English>
 		<French>Golden Age</French>
-		<German>Golden Age</German>
+		<German>Goldenes Zeitalter</German>
 		<Italian>Golden Age</Italian>
 		<Spanish>Golden Age</Spanish>
 		<Russian>Golden Age</Russian>
@@ -215,9 +215,9 @@
 		<Tag>TXT_KEY_CONCEPT_ODDS</Tag>
 		<English>Odds and Ends</English>
 		<French>Pr&#233;cisions</French>
-		<German/>
-		<Italian/>
-		<Spanish/>
+		<German>Sonstiges</German>
+		<Italian>Varie ed eventuali</Italian>
+		<Spanish>Demás aspectos</Spanish>
 		<Russian>&#205;&#229;&#240;&#224;&#226;&#229;&#237;&#241;&#242;&#226;&#238; &#232; &#202;&#238;&#237;&#246;&#251;</Russian>
 	</TEXT>
 	<TEXT>
@@ -290,7 +290,7 @@
 		<Tag>TXT_KEY_CONCEPT_COLONIES</Tag>
 		<English>Colonies and Access Resources</English>
 		<French>Resources Colonies et Acc&#232;s</French>
-		<German/>
+		<German>Kolonien und Transfer-Ressourcen</German>
 		<Italian/>
 		<Spanish/>
 		<Russian>Colonies and Access Resources</Russian>
@@ -308,7 +308,7 @@
 		<Tag>TXT_KEY_CONCEPT_RELIGION_OVERHAUL</Tag>
 		<English>Religion Overhaul</English>
 		<French>R&#233;vision de la Religion</French>
-		<German/>
+		<German>Instandsetzung der Religion</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>
@@ -401,7 +401,7 @@ There are two types of Crusades: for the Holy Land that aim at capturing Jerusal
 		<Tag>TXT_KEY_CONCEPT_STABILITY_GUIDE</Tag>
 		<English>Stability Guide</English>
 		<French/>
-		<German/>
+		<German>Stabilitätsratgeber</German>
 		<Italian/>
 		<Spanish/>
 		<Russian/>

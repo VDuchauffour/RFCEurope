@@ -953,7 +953,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_FEUDAL_MONARHCY</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_SERFDOM</CivicType>
 				<CivicType>CIVIC_MANORIALISM</CivicType>
@@ -4089,7 +4089,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_FEUDAL_MONARHCY</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_SERFDOM</CivicType>
 				<CivicType>CIVIC_MANORIALISM</CivicType>
@@ -5470,7 +5470,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_FEUDAL_MONARHCY</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_SERFDOM</CivicType>
 				<CivicType>CIVIC_MANORIALISM</CivicType>
@@ -7757,7 +7757,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_FEUDAL_MONARHCY</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_SERFDOM</CivicType>
 				<CivicType>CIVIC_MANORIALISM</CivicType>
@@ -8219,7 +8219,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_FEUDAL_MONARHCY</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
@@ -8652,7 +8652,7 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_FEUDAL_MONARHCY</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>

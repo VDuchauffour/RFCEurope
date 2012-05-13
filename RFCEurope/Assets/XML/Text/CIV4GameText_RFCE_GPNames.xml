@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_UNIT_GREAT_THEOLOGIAN</Tag>
 		<English>Great Theologian</English>
 		<French>Great Theologian</French>
-		<German>Great Theologian</German>
+		<German>Groﬂer Theologe</German>
 		<Italian>Grande Teologo</Italian>
 		<Spanish>Great Theologian</Spanish>
 		<Russian>Great Theologian</Russian>
@@ -18,7 +18,7 @@
 		<Tag>TXT_KEY_SPECIALIST_GREAT_THEOLOGIAN</Tag>
 		<English>Great Theologian</English>
 		<French>Great Theologian</French>
-		<German>Great Theologian</German>
+		<German>Groﬂer Theologe</German>
 		<Italian>Grande Teologo</Italian>
 		<Spanish>Great Theologian</Spanish>
 		<Russian>Great Theologian</Russian>
@@ -61,12 +61,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JEANNE_D'ARC</Tag>
-		<English>Jeanne D'arc</English>
-		<French>Jeanne D'arc</French>
-		<German>Jeanne D'arc</German>
-		<Italian>Jeanne D'arc</Italian>
-		<Spanish>Jeanne D'arc</Spanish>
-		<Russian>Jeanne D'arc</Russian>
+		<English>Jeanne d'Arc</English>
+		<French>Jeanne d'Arc</French>
+		<German>Jeanne d'Arc</German>
+		<Italian>Jeanne d'Arc</Italian>
+		<Spanish>Jeanne d'Arc</Spanish>
+		<Russian>Jeanne d'Arc</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABD_ALLAH_IBN_SENA</Tag>
