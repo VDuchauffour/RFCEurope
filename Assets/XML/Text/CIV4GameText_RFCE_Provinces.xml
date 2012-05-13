@@ -99,7 +99,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_2</Tag>
 		<English>Navarre</English>
 		<French>Navarre</French>
-		<German>Navarre</German>
+		<German>Navarra</German>
 		<Italian>Navarre</Italian>
 		<Spanish>Navarre</Spanish>
 		<Russian>Navarre</Russian>
@@ -315,7 +315,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_26</Tag>
 		<English>East Anglia</English>
 		<French>Est_Anglie</French>
-		<German>East Anglia</German>
+		<German>Ostanglien</German>
 		<Italian>Anglia Orientale</Italian>
 		<Spanish>Anglia Oriental</Spanish>
 		<Russian>East Anglia</Russian>
@@ -351,7 +351,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_30</Tag>
 		<English>Denmark</English>
 		<French>Danemark</French>
-		<German>Danemark</German>
+		<German>Dänemark</German>
 		<Italian>Danimarca</Italian>
 		<Spanish>Dinamarca</Spanish>
 		<Russian>Denmark</Russian>
@@ -459,7 +459,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_42</Tag>
 		<English>Bohemia</English>
 		<French>Boheme</French>
-		<German>Bohmen</German>
+		<German>Böhmen</German>
 		<Italian>Boemia</Italian>
 		<Spanish>Bohemia</Spanish>
 		<Russian>Bohemia</Russian>
@@ -621,7 +621,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_60</Tag>
 		<English>Carinthia</English>
 		<French>Carinthie</French>
-		<German>Karnten</German>
+		<German>Kärnten</German>
 		<Italian>Carinzia</Italian>
 		<Spanish>Carintia</Spanish>
 		<Russian>Carinthia</Russian>
@@ -630,7 +630,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_61</Tag>
 		<English>Austria</English>
 		<French>Autriche</French>
-		<German>Osterreich</German>
+		<German>Österreich</German>
 		<Italian>Austria</Italian>
 		<Spanish>Austria</Spanish>
 		<Russian>Austria</Russian>
@@ -657,7 +657,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_64</Tag>
 		<English>Transylvania</English>
 		<French>Transylvanie</French>
-		<German>Siebenburgen</German>
+		<German>Siebenbürgen</German>
 		<Italian>Transilvania</Italian>
 		<Spanish>Transilvania</Spanish>
 		<Russian>Transylvania</Russian>
@@ -675,7 +675,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_66</Tag>
 		<English>Moravia</English>
 		<French>Moravie</French>
-		<German>Mahren</German>
+		<German>Mähren</German>
 		<Italian>Moravia</Italian>
 		<Spanish>Moravia</Spanish>
 		<Russian>Moravia</Russian>
@@ -711,7 +711,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_70</Tag>
 		<English>Lombardy</English>
 		<French>Lombardie</French>
-		<German>Bombardei</German>
+		<German>Lombardei</German>
 		<Italian>Lombardia</Italian>
 		<Spanish>Lombardia</Spanish>
 		<Russian>Lombardy</Russian>
@@ -999,7 +999,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_102</Tag>
 		<English>Arabia</English>
 		<French>Arabie</French>
-		<German>Arabia</German>
+		<German>Arabien</German>
 		<Italian>Araba</Italian>
 		<Spanish>Arabia</Spanish>
 		<Russian>Arabia</Russian>
@@ -1008,7 +1008,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_103</Tag>
 		<English>Egypt</English>
 		<French>Egypte</French>
-		<German>Agypten</German>
+		<German>Ägypten</German>
 		<Italian>Egitto</Italian>
 		<Spanish>Egipto</Spanish>
 		<Russian>Egypt</Russian>
@@ -1134,7 +1134,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_117</Tag>
 		<English>Canaries</English>
 		<French>Canaries</French>
-		<German>Kanarien</German>
+		<German>Kanaren</German>
 		<Italian>Canarie</Italian>
 		<Spanish>Canarias</Spanish>
 		<Russian>Canaries</Russian>
@@ -1260,7 +1260,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_131</Tag>
 		<English>Chernigov</English>
 		<French>Tchernihiv</French>
-		<German>Tschernihiw</German>
+		<German>Tschernigov</German>
 		<Italian>Chernihiv</Italian>
 		<Spanish>Chernigov</Spanish>
 		<Russian>Chernigov</Russian>
@@ -1269,7 +1269,7 @@
 		<Tag>TXT_KEY_PROVINCE_NAME_132</Tag>
 		<English>Pereyaslavl</English>
 		<French>Pereyaslavl</French>
-		<German>Pereyaslavl</German>
+		<German>Pereyaslawl</German>
 		<Italian>Pereyaslavl</Italian>
 		<Spanish>Pereyaslavl</Spanish>
 		<Russian>Pereyaslavl</Russian>

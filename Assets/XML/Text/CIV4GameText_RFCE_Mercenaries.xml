@@ -212,7 +212,7 @@
 		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCES</Tag>
 		<English>Available in Provinces: </English>
 		<French>Available in Provinces: </French>
-		<German>Available in Provinces: </German>
+		<German>Verfügbar in den Provinzen: </German>
 		<Italian>Disponibili nelle seguenti Province: </Italian>
 		<Spanish>Available in Provinces: </Spanish>
 		<Russian>Available in Provinces: </Russian>
@@ -221,7 +221,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
 		<English>New Mercenaries are available for hire in</English>
 		<French>New Mercenaries are available for hire in</French>
-		<German>New Mercenaries are available for hire in</German>
+		<German>Neue Söldner zum Anwerben sind verfügbar in</German>
 		<Italian>Nuovi Mercenari sono disponibili per essere assoldati in</Italian>
 		<Spanish>New Mercenaries are available for hire in</Spanish>
 		<Russian>New Mercenaries are available for hire in</Russian>
@@ -230,7 +230,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
 		<English>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</English>
 		<French>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</French>
-		<German>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</German>
+		<German>Die Söldner wollten nicht mehr auf eine Vertrag warten und suchen ihr Glück nun woanders.</German>
 		<Italian>I Mercenari si sono stancati di aspettare il contratto e sono partiti per cercare fortuna altrove.</Italian>
 		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
 		<Russian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Russian>
@@ -239,7 +239,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
 		<English>Upset for not getting payed, Mercenaries have abandoned your cause.</English>
 		<French>Upset for not getting payed, Mercenaries have abandoned your cause.</French>
-		<German>Upset for not getting payed, Mercenaries have abandoned your cause.</German>
+		<German>Darüber verärgert nicht bezahlt zu werden veranlasste die Söldner zum Abbruch eures Anliegens.</German>
 		<Italian>Essendo arrabbiati per non essere stati pagari, i Mercenari hanno abbandonato la tua causa.</Italian>
 		<Spanish>Upset for not getting payed, Mercenaries have abandoned your cause.</Spanish>
 		<Russian>Upset for not getting payed, Mercenaries have abandoned your cause.</Russian>
@@ -248,7 +248,7 @@
 		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
 		<English>Serbian</English>
 		<French>Serbian</French>
-		<German>Serbian</German>
+		<German>Serbischer</German>
 		<Italian>Serbo</Italian>
 		<Spanish>Serbian</Spanish>
 		<Russian>Serbian</Russian>
@@ -275,7 +275,7 @@
 		<Tag>TXT_KEY_MERC_ITALIAN</Tag>
 		<English>Italian</English>
 		<French>Italian</French>
-		<German>Italian</German>
+		<German>Italienischer</German>
 		<Italian>Italiano</Italian>
 		<Spanish>Italian</Spanish>
 		<Russian>Italian</Russian>
@@ -284,7 +284,7 @@
 		<Tag>TXT_KEY_MERC_SWISS</Tag>
 		<English>Swiss</English>
 		<French>Swiss</French>
-		<German>Swiss</German>
+		<German>Schweizer</German>
 		<Italian>Svizzero</Italian>
 		<Spanish>Swiss</Spanish>
 		<Russian>Swiss</Russian>
@@ -311,7 +311,7 @@
 		<Tag>TXT_KEY_MERC_DANISH</Tag>
 		<English>Danish</English>
 		<French>Danish</French>
-		<German>Danish</German>
+		<German>Dänischer</German>
 		<Italian>Danese</Italian>
 		<Spanish>Danish</Spanish>
 		<Russian>Danish</Russian>
@@ -329,7 +329,7 @@
 		<Tag>TXT_KEY_MERC_MOROCCO</Tag>
 		<English>Moroccan</English>
 		<French>Moroccan</French>
-		<German>Moroccan</German>
+		<German>Marokkanischer</German>
 		<Italian>Marocchino</Italian>
 		<Spanish>Moroccan</Spanish>
 		<Russian>Moroccan</Russian>
@@ -338,7 +338,7 @@
 		<Tag>TXT_KEY_MERC_GERMAN</Tag>
 		<English>German</English>
 		<French>German</French>
-		<German>German</German>
+		<German>Deutscher</German>
 		<Italian>Tedesco</Italian>
 		<Spanish>German</Spanish>
 		<Russian>German</Russian>
@@ -347,7 +347,7 @@
 		<Tag>TXT_KEY_MERC_FINNISH</Tag>
 		<English>Finnish</English>
 		<French>Finnish</French>
-		<German>Finnish</German>
+		<German>Finnischer</German>
 		<Italian>Finlandese</Italian>
 		<Spanish>Finnish</Spanish>
 		<Russian>Finnish</Russian>
@@ -374,7 +374,7 @@
 		<Tag>TXT_KEY_MERC_BALTIC</Tag>
 		<English>Baltic</English>
 		<French>Baltic</French>
-		<German>Baltic</German>
+		<German>Baltischer</German>
 		<Italian>Baltico</Italian>
 		<Spanish>Baltic</Spanish>
 		<Russian>Baltic</Russian>
@@ -383,7 +383,7 @@
 		<Tag>TXT_KEY_MERC_IRISH</Tag>
 		<English>Irish</English>
 		<French>Irish</French>
-		<German>Irish</German>
+		<German>Irischer</German>
 		<Italian>Irlandese</Italian>
 		<Spanish>Irish</Spanish>
 		<Russian>Irish</Russian>
@@ -392,7 +392,7 @@
 		<Tag>TXT_KEY_MERC_SCOTTISH</Tag>
 		<English>Scottish</English>
 		<French>Scottish</French>
-		<German>Scottish</German>
+		<German>Schottischer</German>
 		<Italian>Scozzese</Italian>
 		<Spanish>Scottish</Spanish>
 		<Russian>Scottish</Russian>
@@ -401,7 +401,7 @@
 		<Tag>TXT_KEY_MERC_AFRICAN</Tag>
 		<English>African</English>
 		<French>African</French>
-		<German>African</German>
+		<German>Afrikanischer</German>
 		<Italian>Africano</Italian>
 		<Spanish>African</Spanish>
 		<Russian>African</Russian>
@@ -410,7 +410,7 @@
 		<Tag>TXT_KEY_MERC_NUBIAN</Tag>
 		<English>Nubian</English>
 		<French>Nubian</French>
-		<German>Nubian</German>
+		<German>Nubischer</German>
 		<Italian>Nubiano</Italian>
 		<Spanish>Nubian</Spanish>
 		<Russian>Nubian</Russian>
@@ -419,7 +419,7 @@
 		<Tag>TXT_KEY_MERC_WALLOON</Tag>
 		<English>Walloon</English>
 		<French>Walloon</French>
-		<German>Walloon</German>
+		<German>Wallonischer</German>
 		<Italian>Vallone</Italian>
 		<Spanish>Walloon</Spanish>
 		<Russian>Walloon</Russian>
@@ -487,7 +487,7 @@
 		<Tag>TXT_KEY_MERC_CORSAIR</Tag>
 		<English>Barbary Pirates</English>
 		<French>Barbary Pirates</French>
-		<German>Barbary Pirates</German>
+		<German>Barbarische Piraten</German>
 		<Italian>Pirati Berberi</Italian>
 		<Spanish>Barbary Pirates</Spanish>
 		<Russian>Barbary Pirates</Russian>
@@ -496,7 +496,7 @@
 		<Tag>TXT_KEY_MERC_HIGHLANDER</Tag>
 		<English>Highlander</English>
 		<French>Highlander</French>
-		<German>Highlander</German>
+		<German>Hochländer</German>
 		<Italian>Highlander</Italian>
 		<Spanish>Highlander</Spanish>
 		<Russian>Highlander</Russian>
@@ -505,7 +505,7 @@
 		<Tag>TXT_KEY_MERC_WELSH</Tag>
 		<English>Welsh Longbowman</English>
 		<French>Welsh Longbowman</French>
-		<German>Welsh Longbowman</German>
+		<German>Walisischer Langbogenschütze</German>
 		<Italian>Arciere con Arco lungo Gallese</Italian>
 		<Spanish>Welsh Longbowman</Spanish>
 		<Russian>Welsh Longbowman</Russian>
@@ -514,7 +514,7 @@
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
 		<English>Knights Templar</English>
 		<French>Knights Templar</French>
-		<German>Knights Templar</German>
+		<German>Tempelritter</German>
 		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Knights Templar</Spanish>
 		<Russian>Knights Templar</Russian>
@@ -523,7 +523,7 @@
 		<Tag>TXT_KEY_TEUTONIC_KNIGHTS</Tag>
 		<English>Teutonic Knights</English>
 		<French>Teutonic Knights</French>
-		<German>Teutonic Knights</German>
+		<German>Ordensritter</German>
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Teutonic Knights</Spanish>
 		<Russian>Teutonic Knights</Russian>
@@ -532,7 +532,7 @@
 		<Tag>TXT_KEY_MERC_GENERIC</Tag>
 		<English>Generic</English>
 		<French>Generic</French>
-		<German>Generic</German>
+		<German>Allgemeiner</German>
 		<Italian>Generico</Italian>
 		<Spanish>Generic</Spanish>
 		<Russian>Generic</Russian>
@@ -544,7 +544,7 @@
 		<Tag>TXT_KEY_MERCENARY_HELP</Tag>
 		<English>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</English>
 		<French>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</French>
-		<German>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</German>
+		<German>[ICON_BULLET]Nur als [LINK=CONCEPT_MERCENARIES]Söldner[\LINK] verfügbar</German>
 		<Italian>[ICON_BULLET]Disponibile solo come [LINK=CONCEPT_MERCENARIES]Mercenario[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</Russian>
@@ -571,7 +571,7 @@
 		<Tag>TXT_KEY_UNIT_CORSAIR</Tag>
 		<English>Corsair</English>
 		<French>Corsaire</French>
-		<German>Kosar</German>
+		<German>Korsar</German>
 		<Italian>Nave Corsara</Italian>
 		<Spanish>Corsario</Spanish>
 		<Russian>.</Russian>
@@ -589,7 +589,7 @@
 		<Tag>TXT_KEY_UNIT_HIGHLANDER</Tag>
 		<English>Highlander</English>
 		<French>Highlander</French>
-		<German>Highlander</German>
+		<German>Hochländer</German>
 		<Italian>Highlander</Italian>
 		<Spanish>Highlander</Spanish>
 		<Russian>&#195;&#238;&#240;&#229;&#246;</Russian>
@@ -607,7 +607,7 @@
 		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN</Tag>
 		<English>Welsh Longbowman</English>
 		<French>Archer Long Gallois</French>
-		<German>Walisischer Langbogensch&#252;tze</German>
+		<German>Walisischer Langbogenschütze</German>
 		<Italian>Arciere con Arco Lungo Gallese</Italian>
 		<Spanish>Saetero Galés</Spanish>
 		<Russian>&#211;&#253;&#235;&#252;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian>
@@ -643,7 +643,7 @@
 		<Tag>TXT_KEY_UNIT_SWISS_PIKEMAN</Tag>
 		<English>Swiss Pikeman</English>
 		<French>Swiss Pikeman</French>
-		<German>Swiss Pikeman</German>
+		<German>Schweizer Pikenier</German>
 		<Italian>Picchiere Svizzero</Italian>
 		<Spanish>Swiss Pikeman</Spanish>
 		<Russian>Swiss Pikeman</Russian>
@@ -661,7 +661,7 @@
 		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD</Tag>
 		<English>Varangian Guard</English>
 		<French>Varangian Guard</French>
-		<German>Varangian Guard</German>
+		<German>Warägergarde</German>
 		<Italian>Guardia Variaga</Italian>
 		<Spanish>Varangian Guard</Spanish>
 		<Russian>Varangian Guard</Russian>
@@ -715,7 +715,7 @@
 		<Tag>TXT_KEY_UNIT_BLACK_GUARD</Tag>
 		<English>Black Guard</English>
 		<French>Black Guard</French>
-		<German>Black Guard</German>
+		<German>Schwarzer Gardist</German>
 		<Italian>Guardia Nera</Italian>
 		<Spanish>Black Guard</Spanish>
 		<Russian>Black Guard</Russian>
@@ -751,7 +751,7 @@
 		<Tag>TXT_KEY_UNIT_REITER</Tag>
 		<English>Black Rider</English>
 		<French>Black Rider</French>
-		<German>Black Rider</German>
+		<German>Schwarzer Reiter</German>
 		<Italian>Incursore Nero</Italian>
 		<Spanish>Black Rider</Spanish>
 		<Russian>Black Rider</Russian>
@@ -769,7 +769,7 @@
 		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK</Tag>
 		<English>Zaporozhian Cossack</English>
 		<French>Zaporogue Cosaque</French>
-		<German>Saporoscher Kosak</German>
+		<German>Saporoscher Kosake</German>
 		<Italian>Cosacco Zaporizziano</Italian>
 		<Spanish>Zaporozhian Cosaco</Spanish>
 		<Russian>Zaporozhian Cossack</Russian>
@@ -787,7 +787,7 @@
 		<Tag>TXT_KEY_UNIT_DON_COSSACK</Tag>
 		<English>Don Cossack</English>
 		<French>Don Cossack</French>
-		<German>Don Cossack</German>
+		<German>Don Kosake</German>
 		<Italian>Cosacco del Don</Italian>
 		<Spanish>Don Cossack</Spanish>
 		<Russian>Don Cossack</Russian>
@@ -805,7 +805,7 @@
 		<Tag>TXT_KEY_UNIT_DOPPELSOLDNER</Tag>
 		<English>Doppelsoldner</English>
 		<French>Doppelsoldner</French>
-		<German>Doppelsoldner</German>
+		<German>Doppelsöldner</German>
 		<Italian>Doppelsoldner</Italian>
 		<Spanish>Doppelsoldner</Spanish>
 		<Russian>Doppelsoldner</Russian>
@@ -823,7 +823,7 @@
 		<Tag>TXT_KEY_UNIT_IRISH_BRIGADE</Tag>
 		<English>Irish Brigade</English>
 		<French>Irish Brigade</French>
-		<German>Irish Brigade</German>
+		<German>Irische Brigade</German>
 		<Italian>Brigata Irlandese</Italian>
 		<Spanish>Irish Brigade</Spanish>
 		<Russian>Irish Brigade</Russian>
@@ -841,7 +841,7 @@
 		<Tag>TXT_KEY_UNIT_STRADIOT</Tag>
 		<English>Stradiot</English>
 		<French>Stradiot</French>
-		<German>Stradiot</German>
+		<German>Stratiot</German>
 		<Italian>Stradiotta</Italian>
 		<Spanish>Stradiot</Spanish>
 		<Russian>Stradiot</Russian>
@@ -895,7 +895,7 @@
 		<Tag>TXT_KEY_UNIT_TURKOPOLES</Tag>
 		<English>Turkopoles</English>
 		<French>Turkopoles</French>
-		<German>Turkopoles</German>
+		<German>Turkopolen</German>
 		<Italian>Turkopoli</Italian>
 		<Spanish>Turkopoles</Spanish>
 		<Russian>Turkopoles</Russian>
@@ -913,7 +913,7 @@
 		<Tag>TXT_KEY_UNIT_WALLOON_GUARD</Tag>
 		<English>Walloon Guard</English>
 		<French>Walloon Guard</French>
-		<German>Walloon Guard</German>
+		<German>Walloischer Gardist</German>
 		<Italian>Guardia Vallona</Italian>
 		<Spanish>Walloon Guard</Spanish>
 		<Russian>Walloon Guard</Russian>
@@ -931,7 +931,7 @@
 		<Tag>TXT_KEY_UNIT_SWISS_GUN</Tag>
 		<English>Swiss Line Infantry</English>
 		<French>Swiss Line Infantry</French>
-		<German>Swiss Line Infantry</German>
+		<German>Schweizer Linieninfantry</German>
 		<Italian>Fanteria di Linea Svizzera</Italian>
 		<Spanish>Swiss Line Infantry</Spanish>
 		<Russian>Swiss Line Infantry</Russian>
@@ -949,7 +949,7 @@
 		<Tag>TXT_KEY_UNIT_LIPKA_TATAR</Tag>
 		<English>Lipka Tatar</English>
 		<French>Lipka Tatar</French>
-		<German>Lipka Tatar</German>
+		<German>Lipka-Tatar</German>
 		<Italian>Tartaro Bielorusso</Italian>
 		<Spanish>Lipka Tatar</Spanish>
 		<Russian>Lipka Tatar</Russian>
@@ -967,7 +967,7 @@
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_GUN</Tag>
 		<English>Highlander Infantry</English>
 		<French>Highlander Infantry</French>
-		<German>Highlander Infantry</German>
+		<German>Hochländer Infantry</German>
 		<Italian>Fanteria Highlander</Italian>
 		<Spanish>Highlander Infantry</Spanish>
 		<Russian>Highlander Infantry</Russian>
@@ -1003,7 +1003,7 @@
 		<Tag>TXT_KEY_UNIT_ZANJI</Tag>
 		<English>Zanji Spearman</English>
 		<French>Zanji Spearman</French>
-		<German>Zanji Spearman</German>
+		<German>Zanji Speerträger</German>
 		<Italian>Lanciere Zanji</Italian>
 		<Spanish>Zanji Spearman</Spanish>
 		<Russian>Zanji Spearman</Russian>

@@ -33,6 +33,7 @@ Changes for RFCE 1.1:
 		- Added a couple Spanish translations by mijamobu
 		- Added many Italian translations by Fede14
 		- Huge XML cleanup and reorganization
+		- German translations by HolyHandGrenade
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull

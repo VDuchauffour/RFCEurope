@@ -19,7 +19,7 @@
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Tag>
 		<English>[TAB]St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:2]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Sankt Peter im Vatikan in Rom, im deutschen Sprachraum meist Petersdom genannt (auch: Basilika St. Peter; Petersbasilika, Vatikanische Basilika oder Templum Vaticanum) ist die größte der Papstbasiliken in Rom, nicht aber die Kathedrale des Bischofs von Rom, dies ist die Lateranbasilika. Ihre volle Bezeichnung lautet Basilica Papale di San Pietro in Vaticano[1], lateinisch: Basilica Sancti Petri in Vaticano. Der Petersdom ist das Zentrum des unabhängigen Staats der Vatikanstadt.[PARAGRAPH:2]Den Vorgängerbau, auch Alt-St. Peter genannt, ließ Konstantin der Große um 324 als Grabeskirche über dem vermuteten Grab des Apostels Simon Petrus errichten, dem sie geweiht ist. Diese und der Petersdom waren seit Mitte des 5. Jahrhunderts die Patriarchalbasilika des Lateinischen Patriarchen von Konstantinopel (Amt 2006 niedergelegt).[PARAGRAPH:2]Der Petersdom fasst 20.000 Menschen und ist mit einer überbauten Fläche von 15.160 m² eines der größten Kirchengebäude der Welt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -28,7 +28,7 @@
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE</Tag>
 		<English>All Saints' Church</English>
 		<French>Eglise de Tous les Saints</French>
-		<German>Allerheiligenkirche</German>
+		<German>Schlosskirche</German>
 		<Italian>La Chiesa di Ognissanti</Italian>
 		<Spanish>Iglesia de todas las santos</Spanish>
 		<Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian>
@@ -37,7 +37,7 @@
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE_PEDIA</Tag>
 		<English>[TAB]All Saints' Church, commonly referred to as Schlosskirche, meaning "Castle Church" - to distinguish it from the "town church", the Stadtkirche of St. Mary - and sometimes known as the Reformation Memorial Church, is a Lutheran church in Lutherstadt Wittenberg, Germany. It has been called "the most famous building in Wittenberg", as the site where The Ninety-Five Theses were posted by Martin Luther on October 31, 1517, the act that has been called the start of the Protestant Reformation.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Die Schlosskirche zu Wittenberg wurde zwischen 1496 und 1509 zusammen mit dem Residenzschloss des Kurfürsten Friedrich von Sachsen erbaut und diente der 1502 gegründeten Wittenberger Universität 300 Jahre lang als Gotteshaus und Aula. Sie bildet den dritten Flügel des Schlosses.[PARAGRAPH:2]Die hölzerne Kirchentür diente der Universität als "Schwarzes Brett" und der Augustinerpater Dr. Martin Luther heftete am 31.0ktober 1517 seine 95 Thesen an diese, um zur Disputation über den Zustand der Kirche aufzufordern. Damit begann die Reformation.[PARAGRAPH:2]1760 im Siebenjährigen Krieg brannte die Kirche aus und wurde 1892 als "Denkmal der Reformation" wieder aufgebaut. Von den beiden Schlosstürmen wurde einer zum Kirchturm umgebaut.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -64,7 +64,7 @@
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
 		<English>Umayyad Mosque</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Umayyaden-Moschee</German>
 		<Italian>Moschea degli Omayyadi</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -73,7 +73,7 @@
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Tag>
 		<English>[TAB]The Umayyad Mosque, also known as the Great Mosque of Damascus (it was formerly the Basilica of Saint John the Baptist), is located in the old city of Damascus, and is one of the largest and oldest mosques in the world. It is considered the fourth-holiest place in Islam.[PARAGRAPH:2]After the Arab conquest of Damascus in 634, the mosque was built on the site of a Christian basilica, which was dedicated to John the Baptist (Yahya) since the time of the Roman emperor Constantine I. The mosque holds a shrine which today may still contain the head of John the Baptist, honored as a prophet by both Christians and Muslims alike. There are also many important landmarks within the mosque for the Shi'ah, among them the place where the head of Husayn (the grandson of Muhammad) was kept on display by Yazid I. The tomb of Saladin stands in a small garden adjoining the north wall of the mosque.[PARAGRAPH:2]Damascus was captured and besieged by Muslim Arab forces led by Khalid ibn al-Walid in 634. Decades later, the Islamic Caliphate came under the rule of the Umayyad dynasty which chose Damascus to be the administrative capital of the Muslim world. The sixth Umayyad caliph, al-Walid I, then commissioned the construction of a mosque on the site of the Byzantine cathedral in 706. Prior to this, the cathedral was still in use by the local Christians, but a prayer room (musalla) for Muslims had been constructed on the southeastern part of the building. Al-Walid, who personally supervised the project, had most of the cathedral including the musalla demolished. The construction of the mosque completely altered the layout of the building. The new house of worship was meant to serve as a large congregational mosque for the citizens of Damascus and as a tribute to the city. Because of Christian protest at the move, al-Walid ordered the all other confiscated churches in the city to be returned to the Christians as compensation. The mosque was completed in 715 by the caliph, Sulayman ibn Abd al-Malik, shortly after the death of al-Walid that same year.[PARAGRAPH:2]According to 10th-century Persian historian Ibn al-Faqih, somewhere between 600,000 and 1,000,000 dinars were spent on the project. Coptic craftsmen as well as Persian, Indian, Greek and Moroccan laborers provided the bulk of the work force which consisted of 12,000 people. Ibn al-Faqih also relays the story that during the construction of the mosque, workers found a cave-chapel which had a box containing the head of St. John the Baptist, or Yahya ibn Zakariya in Islam. Upon learning of that and examining it, al-Walid I ordered the head buried under a specific pillar in the mosque that was later inlaid with marble.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Die Umayyaden-Moschee ist eine Moschee in der syrischen Hauptstadt Damaskus. Sie ist eine der ältesten Moscheen der Welt und Vorbild für andere Moscheen im Baustil der Pfeilerhallenmoschee. In vorislamischer Zeit wurde sie als eine Johannes dem Täufer geweihte Kathedrale errichtet.[PARAGRAPH:2]In der Altstadt gelegen, wurde sie von dem Umayyaden-Kalifen Al-Walid nach zehnjähriger Bauzeit im Jahre 705 n. Chr. fertiggestellt. Die gesamten Außenmauern stammen jedoch von einem antiken Heiligtum und wurden nicht von den Arabern errichtet. Besonders auf der Außenseite der Südmauer sind neben griechischen Ornamenten auch noch griechische Inschriften und in einigen Metern Höhe ein antikes Relief mit ausgekratzem Gesicht zu sehen. Ebenfalls erhalten sind mehrere Säulen des größeren antiken Heiligtums außerhalb der Moschee, am eindrucksvollsten auf der Westseite.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -82,7 +82,7 @@
 		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE</Tag>
 		<English>Temple Mount</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Tempelberg</German>
 		<Italian>Monte del Tempio</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -91,7 +91,7 @@
 		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE_PEDIA</Tag>
 		<English>[TAB]The Temple Mount, also known as Mount Moriah and by Muslims as the Noble Sanctuary, is a religious site in the Old City of Jerusalem. Due to its importance for Judaism and Islam it is one of the most contested religious sites in the world.[PARAGRAPH:2]The Temple Mount contains the holiest site in Judaism. Jewish Midrash holds that it was from here that the world expanded into its present form, and that this was where God gathered the dust he used to create the first man, Adam. The Torah records that it was here that God chose to rest His Name and Divine Presence, and consequently two Jewish Temples were built at the site. According to Jewish tradition, the Third Temple will also be located here, and will be the final one. In recent times, due to difficulties in ascertaining the precise location of the Mount's holiest spot, many Jews will not set foot on the Mount itself.[PARAGRAPH:2]The Noble Sanctuary is the third holiest site in Islam, revered as the destination of Muhammad's journey to Jerusalem, and the location of his ascent to heaven. The site is also associated with all the Jewish biblical prophets who are also revered in Islam. The site is the location of the al-Aqsa Mosque and the Dome of the Rock, the oldest extant Islamic structure in the world.[PARAGRAPH:2]Controlled by Israel since 1967, both Israel and the Palestinian Authority claim sovereignty over the site, which remains a key issue in the Arab-Israeli conflict. A Muslim council, known as the Muslim Waqf, manages the site. The Israeli government enforces a controversial ban on prayer by non-Muslim visitors.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Der Tempelberg ist ein Hügel im Südostteil der Jerusalemer Altstadt, oberhalb des Kidrontales. An seinem Gipfel befindet sich ein künstliches Plateau. Ursprünglich standen hier der Salomonische Tempel und der nachfolgende Herodianische Tempel. Heute befinden sich dort der Felsendom und die al-Aq&#x1E63;&#x101;-Moschee. Der Tempelberg ist einer der umstrittensten heiligen Orte der Welt.[PARAGRAPH:2]Vor 3000 Jahren errichteten der Bibel zufolge die Israeliten unter Salomo den ersten Tempel &#x2013; Baubeginn 957 v. Chr. &#x2013; an dieser Stelle. An diesem Ort im Tempel befand sich das Hauptheiligtum des Judentums, das als Mishkan (hebräisch &#x5DE;&#x5E9;&#x5DB;&#x5DF; &#x201E;Gottes Heimstätte auf Erden&#x201C;), als &#x201E;Tabernakel&#x201C; oder im Deutsch der Lutherbibel auch als &#x201E;Stiftshütte&#x201C; bekannt ist. Im besonders heiligen, abgegrenzten Bereich dieses Allerheiligsten im Tempel wurde die Bundeslade aufbewahrt. Das Allerheiligste durfte nur einmal jährlich durch den Hohepriester betreten werden. Es war ein Symbol für das eigentliche Heiligtum, im Himmel, Gott. Der Tempel war das Zentrum des israelitischen Gottesdienstes. Als Nebukadnezar II. Jerusalem eroberte, ließ er den Tempel 586 v. Chr. zerstören. Nach ihrer Rückkehr aus dem Babylonischen Exil errichteten die Juden an derselben Stelle den zweiten Tempel (Fertigstellung 516 v. Chr.). Von Herodes dem Großen monumental ausgebaut, wurde der Tempel im jüdisch-römischen Krieg im Jahre 70 n. Chr. durch die Römer zerstört. Die Zerstörungen beider Tempel im Abstand von 655 Jahren, die nach der jüdischen Überlieferung beide am 9. Aw stattfanden, bilden zentrale Punkte in der jüdischen Geschichte. Der erhoffte Wiederaufbau des Tempels in Jerusalem und das ersehnte Anbrechen der Messianischen Zeiten ist zentrales Anliegen zahlreicher jüdischer Gebete, so des Achtzehnbittengebetes. Die Westmauer oder Klagemauer ist ein Überrest der Mauern, die das ursprüngliche, künstlich erweiterte Tempelplateau stützen. Viele Juden gestalten dort Gebete und viele Menschen hinterlassen Gebetszettel in den Mauerspalten.[PARAGRAPH:2]Nach der Zerstörung des zweiten Tempels und der Vertreibung der jüdischen Bevölkerung aus Jerusalem entstand auf dem Tempelberg zunächst ein römischer Jupiter-Tempel, später eine christliche Kirche.[PARAGRAPH:2]Im Islam gilt der Tempelberg als die drittheiligste Stätte nach Mekka und Medina. Von hier soll der Prophet Mohammed seine Nachtreise (Sure 17, Vers 1) zu der &#x201E;entferntesten Moschee&#x201C; unternommen haben.[PARAGRAPH:2]Der Tempelberg ist der Ort des ehemaligen Allerheiligsten des Judentums. Es war ein Symbol für das eigentliche Heiligtum, für Gott. Heute sind als symbolische Entsprechung die Bereiche in Synagogen, in denen die Gebete von den Gemeinden gestaltet werden, die Hauptheiligtümer im Judentum.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -1032,7 +1032,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_PROPHET</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Propheten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Profeta[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
@@ -1041,7 +1041,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_ARTIST</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Künstler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
@@ -1050,7 +1050,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_SCIENTIST</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Wissenschaftler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Scienziato[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
@@ -1059,7 +1059,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_MERCHANT</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Händler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Mercante[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
@@ -1068,7 +1068,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_ENGINEER</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Ingenieur[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Ingegnere[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
@@ -1077,7 +1077,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_GENERAL</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Feldherrn[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Generale[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
@@ -1086,7 +1086,7 @@
 		<Tag>TXT_KEY_LEANING_TOWER_SPY</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Agenten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato una [COLOR_UNIT_TEXT]Grande Spia[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
 		<Russian>.</Russian>
