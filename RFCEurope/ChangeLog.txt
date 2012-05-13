@@ -48,6 +48,8 @@ Changes for RFCE 1.1:
 		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
 		- Indy Augsburg starts with an additional archer - so it won't be razed so often by barbs before the German spawn
 		- Belograd (Alba Iulia) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
+		- A couple additional starting units for Poland and Lithuania
+		- Small changes in the starting techs. Poland got an additional tech, many civs got one less
 	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art

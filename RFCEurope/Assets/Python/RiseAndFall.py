@@ -167,7 +167,7 @@ class RiseAndFall:
 ##################################################
 ### Secure storage & retrieval of script data ###
 ################################################
-        
+
 
         def getNewCiv( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -195,7 +195,7 @@ class RiseAndFall:
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['iOldCivFlip'] = iNewValue
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
+
         def getTempTopLeft( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['tempTopLeft']
@@ -249,7 +249,7 @@ class RiseAndFall:
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['lNumCities'][iCiv] = iNewValue
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
+
         def getSpawnDelay( self, iCiv ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['lSpawnDelay'][iCiv]
@@ -303,25 +303,25 @@ class RiseAndFall:
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['iRebelCiv'] = iNewValue
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
+
         def getRebelCities( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['lRebelCities']
-                
+
         def setRebelCities( self, lCityList ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['lRebelCities'] = lCityList
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
+
         def getRebelSuppress( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['lRebelSuppress']
-                
+
         def setRebelSuppress( self, lSuppressList ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['lRebelSuppress'] = lSuppressList
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
+
         def getExileData( self, i ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['lExileData'][i]
@@ -330,7 +330,7 @@ class RiseAndFall:
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['lExileData'][i] = iNewValue
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-        
+
         def getTempFlippingCity( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['tempFlippingCity']
@@ -376,7 +376,7 @@ class RiseAndFall:
                 scriptDict['lFirstContactConquerors'][iCiv] = iNewValue
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) ) 
 
-	#Sedna17 Respawn
+        #Sedna17 Respawn
         def setRespawnTurn( self, iCiv, iNewValue ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['lRespawnTurns'][iCiv] = iNewValue
@@ -385,8 +385,8 @@ class RiseAndFall:
         def getAllRespawnTurns( self):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['lRespawnTurns']
-	
-                
+
+
 ###############
 ### Popups ###
 #############
@@ -644,8 +644,8 @@ class RiseAndFall:
                 #self.assign4000BCtechs()
                 self.setEarlyLeaders()
 
-		#Sedna17 Respawn setup special respawn turns
-		self.setupRespawnTurns()
+                #Sedna17 Respawn setup special respawn turns
+                self.setupRespawnTurns()
                                
                 # set starting gold
                 pBurgundy.changeGold( 250 )
@@ -679,7 +679,7 @@ class RiseAndFall:
                 #self.displayWelcomePopup()
 
                 # 3Miro: only the very first civ in the WB file
-		# Sedna17: Not wanted when Burgundy spawns late?
+                # Sedna17: Not wanted when Burgundy spawns late?
                 # 3Miro: I don't know what the point of this is, I think it has to do with the first nation spawning with no units
                 #       coded in the WB, lets remove it to see what breaks
                 #if (pBurgundy.isHuman()):
@@ -722,12 +722,12 @@ class RiseAndFall:
                 pass
         
         
-	#Sedna17 Respawn 
-	def setupRespawnTurns(self):
-		for iCiv in range(iNumMajorPlayers):
-			self.setRespawnTurn(iCiv, con.tRespawnTime[iCiv]+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier') - 10)+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier2') - 10)) #bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
-			
-		
+        #Sedna17 Respawn 
+        def setupRespawnTurns(self):
+                for iCiv in range(iNumMajorPlayers):
+                        self.setRespawnTurn(iCiv, con.tRespawnTime[iCiv]+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier') - 10)+(gc.getGame().getSorenRandNum(21, 'BirthTurnModifier2') - 10)) #bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
+
+
         def setupBirthTurnModifiers(self):
                 #3Miro: first and last civ (first that does not start)
                 # not sure if this even gets called, could be depricated
@@ -851,13 +851,13 @@ class RiseAndFall:
                 elif (gc.getGame().countCivPlayersEverAlive() - gc.getGame().countCivPlayersAlive() > iNumDeadCivs2): 
                         if (iGameTurn % 35 == 13):
                                 self.resurrection(iGameTurn, -1)
-		#lRespawnTurns = self.getAllRespawnTurns()
-		#print("Special Respawn Turns ",lRespawnTurns)
-		#if iGameTurn in lRespawnTurns:
-		#	iCiv = lRespawnTurns.index(iGameTurn)#Lookup index for 
+                #lRespawnTurns = self.getAllRespawnTurns()
+                #print("Special Respawn Turns ",lRespawnTurns)
+                #if iGameTurn in lRespawnTurns:
+                #        iCiv = lRespawnTurns.index(iGameTurn)#Lookup index for 
                 #        print("Special Respawn For Player: ",iCiv)
-		#	if iCiv < iNumMajorPlayers and iCiv > 0:
-		#		self.resurrection(iGameTurn,iCiv)
+                #        if iCiv < iNumMajorPlayers and iCiv > 0:
+                #                self.resurrection(iGameTurn,iCiv)
 
 
         def checkPlayerTurn(self, iGameTurn, iPlayer):
@@ -912,8 +912,8 @@ class RiseAndFall:
                             gc.getGame().getSorenRandNum(100, 'die roll') < iThreshold):
                                 gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][iLeaderIndex])
                                 print ("leader late switch:", tLateLeaders[iPlayer][iLeaderIndex], "in civ", iPlayer)
-            
-            
+
+
 
         def fragmentIndependents(self):
 
@@ -949,7 +949,7 @@ class RiseAndFall:
                                                                 iCounter += 1
                                                         if ( iCounter == 3 ):
                                                                 break
-                                                
+
 
 
         def fragmentBarbarians(self, iGameTurn):
@@ -991,7 +991,7 @@ class RiseAndFall:
 
 
 
-                            
+
 
         def collapseByBarbs(self, iGameTurn):
                 for iCiv in range(iNumPlayers):
@@ -1052,7 +1052,7 @@ class RiseAndFall:
                                                                         utils.killAndFragmentCiv(iCiv, False, False)
                                                 else:
                                                         self.setNumCities(iCiv, lNumCitiesNew[iCiv])
-                
+
 
         def collapseMotherland(self, iGameTurn):
                 #collapses if completely out of broader areas
@@ -1067,7 +1067,7 @@ class RiseAndFall:
                                                 #utils.killAndFragmentCiv(iCiv, iIndependent, iIndependent2, -1, False)
                                                 utils.killAndFragmentCiv(iCiv, False, False)
 
-                
+
 
         def secession(self, iGameTurn): # 3Miro secession - check every 5 turns
             
@@ -1095,7 +1095,7 @@ class RiseAndFall:
                 for pCity in apCityList:
                         city = pCity.GetCy()
                         pCurrent = gc.getMap().plot(city.getX(), city.getY())
-        
+
                         if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))):
                                 # 3MiroUP: Emperor
                                 if (pPlayer.getNumCities() > 0): #this check is needed, otherwise game crashes
@@ -1131,7 +1131,7 @@ class RiseAndFall:
                                                 #                if (pCurrent.getCulture(iLoop) > 0):
                                                 #                        cityList.append(city)
                                                 #                        break
-        
+
                 if (len(cityList)):
                         #iNewCiv = iIndependent
                         #iRndNum = gc.getGame().getSorenRandNum(2, 'random independent')
@@ -1158,10 +1158,10 @@ class RiseAndFall:
 
                               
         def resurrection(self, iGameTurn, iDeadCiv):
-        	if iDeadCiv == -1:
-                	iDeadCiv = self.findCivToResurect( iGameTurn , 0, -1)
-		else:
-			iDeadCiv = self.findCivToResurect( iGameTurn , 1, iDeadCiv) #For special re-spawn
+                if iDeadCiv == -1:
+                        iDeadCiv = self.findCivToResurect( iGameTurn , 0, -1)
+                else:
+                        iDeadCiv = self.findCivToResurect( iGameTurn , 1, iDeadCiv) #For special re-spawn
                 #print ("iDeadCiv", iDeadCiv)
                 if ( iDeadCiv > -1 ):
                         self.suppressResurection( iDeadCiv )
@@ -1177,10 +1177,10 @@ class RiseAndFall:
                 iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
                 cityList = []
                 for j in range(iRndnum, iRndnum + iNumPlayers):
-			if not bSpecialRespawn:
-                        	iDeadCiv = j % iNumPlayers
-			else:
-				iDeadCiv = iDeadCiv #We want a specific civ for special re-spawn
+                        if not bSpecialRespawn:
+                                iDeadCiv = j % iNumPlayers
+                        else:
+                                iDeadCiv = iDeadCiv #We want a specific civ for special re-spawn
                         cityList = []
                         if (not gc.getPlayer(iDeadCiv).isAlive() and iGameTurn > con.tBirth[iDeadCiv] + 25 and iGameTurn > utils.getLastTurnAlive(iDeadCiv) + 10): #Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
                                 pDeadCiv = gc.getPlayer(iDeadCiv)
@@ -1332,9 +1332,9 @@ class RiseAndFall:
                 for k0 in range(len(lCityList)):
                         if ( gc.getMap().plot( lCityList[k0][0], lCityList[k0][1] ).getPlotCity().getOwner() == iHuman ):
                                 bHuman = True
-			#iOwner = lCityList[k0][0].getOwner()
-			#if ( iOwner == iHuman ):
-			#	bHuman = True
+                        #iOwner = lCityList[k0][0].getOwner()
+                        #if ( iOwner == iHuman ):
+                        #        bHuman = True
 
                 ownersList = []        
                 bAlreadyVassal = False
@@ -2207,7 +2207,7 @@ class RiseAndFall:
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                 if (iCiv == iMoscow):
                         utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
@@ -2244,8 +2244,8 @@ class RiseAndFall:
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
                 if (iCiv == iLithuania):
-                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
                 if (iCiv == iAustria):
@@ -2303,13 +2303,13 @@ class RiseAndFall:
                 pass
         
         def ottomanInvasion(self,iCiv,tPlot):
-			print("I made Ottomans on Gallipoli")
-			utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-			utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iKnight, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iTurkeyGreatBombard, iCiv, tPlot, 4)
-			utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
+                        print("I made Ottomans on Gallipoli")
+                        utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iKnight, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iTurkeyGreatBombard, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
 
 
         def create4000BCstartingUnits( self ):
@@ -2438,7 +2438,6 @@ class RiseAndFall:
                         teamBurgundy.setHasTech( xml.iChainMail, True, iCiv, False, False )
                         teamBurgundy.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
                         teamBurgundy.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
-                        teamBurgundy.setHasTech( xml.iMusic, True, iCiv, False, False )
 
                 if ( iCiv == iArabia ):
                         teamArabia.setHasTech( xml.iTheology, True, iCiv, False, False )
@@ -2468,7 +2467,6 @@ class RiseAndFall:
                         teamCordoba.setHasTech( xml.iStirrup, True, iCiv, False, False )
                         teamCordoba.setHasTech( xml.iBronzeCasting, True, iCiv, False, False )
                         teamCordoba.setHasTech( xml.iArchitecture, True, iCiv, False, False )
-                        teamCordoba.setHasTech( xml.iLiterature, True, iCiv, False, False )
                         teamCordoba.setHasTech( xml.iMonasticism, True, iCiv, False, False )
                         teamCordoba.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
                         teamCordoba.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
@@ -2482,7 +2480,6 @@ class RiseAndFall:
                         teamSpain.setHasTech( xml.iLateenSails, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iMonasticism, True, iCiv, False, False )
-                        teamSpain.setHasTech( xml.iMusic, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iVassalage, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iEngineering, True, iCiv, False, False )
@@ -2505,7 +2502,6 @@ class RiseAndFall:
                         teamVenecia.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
                         teamVenecia.setHasTech( xml.iMonasticism, True, iCiv, False, False )
                         teamVenecia.setHasTech( xml.iMusic, True, iCiv, False, False )
-                        teamVenecia.setHasTech( xml.iLiterature, True, iCiv, False, False )
                         teamVenecia.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
                         teamVenecia.setHasTech( xml.iVassalage, True, iCiv, False, False )
                         teamVenecia.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
@@ -2516,7 +2512,6 @@ class RiseAndFall:
                                 teamKiev.setHasTech( iTech, True, iCiv, False, False )
                         teamKiev.setHasTech( xml.iMonasticism, True, iCiv, False, False )
                         teamKiev.setHasTech( xml.iVassalage, True, iCiv, False, False )
-                        teamKiev.setHasTech( xml.iFeudalism, True, iCiv, False, False )
                         teamKiev.setHasTech( xml.iFarriers, True, iCiv, False, False )
                         teamKiev.setHasTech( xml.iChainMail, True, iCiv, False, False )
 
@@ -2525,10 +2520,9 @@ class RiseAndFall:
                                 teamHungary.setHasTech( iTech, True, iCiv, False, False )
                         teamHungary.setHasTech( xml.iChainMail, True, iCiv, False, False )
                         teamHungary.setHasTech( xml.iArt, True, iCiv, False, False )
+                        teamHungary.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
                         teamHungary.setHasTech( xml.iMonasticism, True, iCiv, False, False )
                         teamHungary.setHasTech( xml.iVassalage, True, iCiv, False, False )
-                        teamHungary.setHasTech( xml.iFeudalism, True, iCiv, False, False )
-                        teamHungary.setHasTech( xml.iFarriers, True, iCiv, False, False )
 
                 if ( iCiv == iGermany ):
                         for iTech in range( xml.iStirrup + 1 ):
@@ -2544,12 +2538,12 @@ class RiseAndFall:
                         teamGermany.setHasTech( xml.iAristocracy, True, iCiv, False, False )
                         teamGermany.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
                         teamGermany.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
-                        teamGermany.setHasTech( xml.iMusic, True, iCiv, False, False )
 
                 if ( iCiv == iPoland ):
                         for iTech in range( xml.iStirrup + 1 ):
                                 teamPoland.setHasTech( iTech, True, iCiv, False, False )
                         teamPoland.setHasTech( xml.iMonasticism, True, iCiv, False, False )
+                        teamPoland.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
                         teamPoland.setHasTech( xml.iVassalage, True, iCiv, False, False )
                         teamPoland.setHasTech( xml.iFeudalism, True, iCiv, False, False )
                         teamPoland.setHasTech( xml.iFarriers, True, iCiv, False, False )
@@ -2586,7 +2580,6 @@ class RiseAndFall:
                         teamGenoa.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
                         teamGenoa.setHasTech( xml.iMonasticism, True, iCiv, False, False )
                         teamGenoa.setHasTech( xml.iMusic, True, iCiv, False, False )
-                        teamGenoa.setHasTech( xml.iLiterature, True, iCiv, False, False )
                         teamGenoa.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
                         teamGenoa.setHasTech( xml.iVassalage, True, iCiv, False, False )
                         teamGenoa.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
