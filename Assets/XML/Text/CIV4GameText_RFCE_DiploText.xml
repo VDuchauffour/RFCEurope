@@ -9,7 +9,7 @@
 		<!-- Generic first contact DiploTexts -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENERIC_1</Tag>
-		<English>Hello! I am [OUR_NAME], king of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</English>
+		<English>Hello! I am [OUR_NAME], ruler of [OUR_CIV_SHORT]! I expect years of good relations between the [OUR_EMPIRE] and the [CT_EMPIRE]!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -673,7 +673,7 @@
 		<Spanish>Pagad vuestras deudas, perro!</Spanish>
 	</TEXT>
 		<!-- Moscow 1st leader - Ivan IV -->
-		<!-- Swedish 2nd leader - Gustav Adolph -->
+		<!-- Swedish 1st leader - Gustav Vasa (it should be diplotext for Gustav Adolph) -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_1</Tag>
 		<English>Greetings from the great king of [OUR_CIV_SHORT], [OUR_NAME]! Are you looking for peace and an alliance with us or demand war?</English>
@@ -746,7 +746,7 @@
 		<Italian>[OUR_NAME] demands this! Do not test his patience!</Italian>
 		<Spanish>[OUR_NAME] demands this! Do not test his patience!</Spanish>
 	</TEXT>
-		<!-- Swedish 2nd leader - Gustav Adolph -->
+		<!-- Swedish 1st leader - Gustav Vasa (it should be diplotext for Gustav Adolph) -->
 		<!-- Hungarian 1st leader - Istvan I -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Tag>

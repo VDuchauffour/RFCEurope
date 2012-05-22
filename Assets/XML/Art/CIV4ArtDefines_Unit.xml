@@ -819,7 +819,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CORSAIR</Type>
-			<Button>,Art/Interface/Buttons/Units/barbary_corsair.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
+			<Button>,Art/Interface/Buttons/Units/barbary_corsair.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
 			<fScale>0.2</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -1646,7 +1646,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AUSTRIAN_KURASSIER</Type>
-			<Button>,Art/Interface/Buttons/Units/AustrianKurassier.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
+			<Button>,Art/Interface/Buttons/Units/AustrianKurassier.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,8,10</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3088,7 +3088,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3112,7 +3112,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN_2</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3136,7 +3136,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN_3</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3184,7 +3184,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_GERMAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3208,7 +3208,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_GERMAN_2</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3232,7 +3232,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_GERMAN_3</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3546,7 +3546,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_HUNGARIAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3618,7 +3618,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_HUNGARIAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3916,7 +3916,7 @@
 		<!-- ARTSTYLE_BYZANTINE -->
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_BYZANTINE</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -3964,7 +3964,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_BYZANTINE</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4302,7 +4302,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_VIKING</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4446,7 +4446,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_VIKING</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4544,7 +4544,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_RUSSIAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4616,7 +4616,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_RUSSIAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4640,7 +4640,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_RUSSIAN_2</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -4664,7 +4664,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_RUSSIAN_3</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -5740,7 +5740,7 @@
 		<!-- ARTSTYLE_OTTOMAN -->
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARCHER_OTTOMAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,4</Button>
+			<Button>,Art/Interface/Buttons/Units/Archer.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -5860,7 +5860,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AXEMAN_OTTOMAN</Type>
-			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,10</Button>
+			<Button>,Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,4</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>

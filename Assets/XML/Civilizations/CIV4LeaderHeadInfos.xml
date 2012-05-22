@@ -17916,7 +17916,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Gustavus - Sweden 1st-->
+		<!--Gustav Vasa - Sweden 1st-->
 		<LeaderHeadInfo>
 			<Type>LEADER_GUSTAVUS</Type>
 			<Description>TXT_KEY_LEADER_GUSTAVUS</Description>

@@ -22,6 +22,14 @@ Changes for RFCE 1.1:
 		- Improved UHV counter for the Polish 3rd UHV - by HolyHandGrenade
 		- Added a Spawn map in the Reference folder (with all civs' spawn areas and spawn dates, and the indy/barb cities) - by HolyHandGrenade
 		- Olive plantation gives 1 food but one less commerce; unimproved grapes already give 1 food; additional 1 commerce from improved Silk
+		- As of revision 949, the russian version is a separate download. An add-on to the mod
+			The main reason behind this is the need of the original special characters of Civ IV (more or less a Special ASCII HTML Character Code, instead of a russian one)
+			This will enable us to use such characters on the city name map too: גבהיכםצüתף
+			The character set is close enough to this: http://www.yellowpipe.com/yis/tools/ASCII-HTML-Characters/index.php
+			Actually we could have those extra characters before, but only in the civilopedia and other texts
+			Now we can have civ-specific names everywhere, including everything that appear on the map too
+			Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
+			Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -34,6 +42,8 @@ Changes for RFCE 1.1:
 		- Added many Italian translations by Fede14
 		- Huge XML cleanup and reorganization
 		- German translations by HolyHandGrenade
+		- New XML name tag for the 6th language
+		- Minor diplotext fixes
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
@@ -41,7 +51,9 @@ Changes for RFCE 1.1:
 		- New LH for Barbarossa and Isabella
 		- Removing a couple unnecessary/unused art files from the LH folders
 		- New building art for Tomb of al-Walid
-		- New, improved flag for Germany by zwei833
+		- New flag for Germany by zwei833
+		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
+		- Separate, uncompressed dds atlas for civilizations - better button quality
 	
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns

@@ -589,7 +589,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</Button>
+			<Button>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>

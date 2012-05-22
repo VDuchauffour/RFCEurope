@@ -14,7 +14,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_LIGHT_CAVALRY</Type>
 			<Description>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Description>
-			<Button>,Art/Interface/Buttons/Units/lightcav.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,8,10</Button>
+			<Button>,Art/Interface/Buttons/Units/lightcav.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_HEAVY_CAVALRY</Type>
