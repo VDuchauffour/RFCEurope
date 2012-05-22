@@ -32,12 +32,21 @@
 		<Russian>&#194;&#232;&#246;&#229;-&#234;&#238;&#240;&#238;&#235;&#252;</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LANGUAGE_5</Tag>
+		<English>Russian</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFEAT</Tag>
 		<English></English>
 		<French></French>
-		<German/>
-		<Italian/>
-		<Spanish/>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>

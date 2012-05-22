@@ -375,7 +375,7 @@
 			<Button>,Art/Interface/Buttons/WorldBuilder/Coffee.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,10</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
-		 <!--These are colonial-only resources and currently have dummy model-->
+		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SLAVES</Type>
 			<fScale>0.5</fScale>
@@ -412,6 +412,7 @@
 			<Button>,Art/Interface/Buttons/WorldBuilder/Access.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,11</Button>
 			<FontButtonIndex>47</FontButtonIndex>
 		</BonusArtInfo>
+		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AMBER</Type>
 			<fScale>1.0</fScale>

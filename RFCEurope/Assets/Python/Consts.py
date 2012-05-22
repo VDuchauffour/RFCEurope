@@ -125,7 +125,7 @@ lNeighbours = [
 [iByzantium,iHungary,iKiev],	#Bulgaria
 [iSpain,iPortugal],		#Cordoba
 [iSweden,iGermany],			#Norse
-[iGenoa,iGermany,iAustria,iHungary,iPope],		#Venecia
+[iGenoa,iGermany,iAustria,iHungary,iPope],		#Venice
 [iFrankia,iDutch,iGermany],		#Burgundy
 [iBurgundy,iDutch,iAustria,iVenecia,iGenoa,iPoland,iHungary,iNorse],	#Germany
 [iBulgaria,iMoscow,iPoland],		#Kiev
@@ -152,7 +152,7 @@ lOlderNeighbours = [
 [iByzantium], #Bulgaria
 [], #Cordoba
 [], #Norse
-[iCordoba], #Venecia
+[iCordoba], #Venice
 [], #Burgundy
 [], #Germany
 [iBulgaria], #Kiev
@@ -179,7 +179,7 @@ xml.i635AD, #632AD Arabia
 xml.i680AD, #680AD Bulgaria
 xml.i711AD, #712AD Cordoba
 xml.i780AD, #780AD Norse
-xml.i810AD, #810AD Venecia
+xml.i810AD, #810AD Venice
 xml.i843AD, #844AD Burgundy
 xml.i858AD, #858AD Germany
 xml.i880AD, #880AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
@@ -264,7 +264,7 @@ tStartingWorkers = (
 1, #tBulgaria
 1, #tCordoba
 2, #tNorse
-2, #tVenecia
+2, #tVenice
 2, #tBurgundy
 3, #tGermany
 3, #tKiev
@@ -407,7 +407,7 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 (), #Bulgaria
 ((26,15),(26,16),(26,17),(26,18),(27,15),(27,16),(27,17),(27,18),(28,15),(28,16),(28,17),(28,18),(29,15),(29,16),(29,17),(29,18)), #Cordoba
 ((61,56),(61,57),(61,58),(61,59),(61,60),(62,57),(62,58),(62,59)), #Norse
-((60,33),(60,34),(60,35)), #Venecia 
+((60,33),(60,34),(60,35)), #Venice 
 ((49,39),(49,40),(49,41),(49,42)), #Burgundy 
 (), #Germany
 (), #Kiev
@@ -488,7 +488,7 @@ tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 (), #Bulgaria
 (), #Cordoba
 (), #Norse
-((54,32),(54,33),(54,34),(55,32),(55,33),(55,34),(56,32),(56,33),(56,34),(57,32),(57,33),(58,32),(59,37),(60,36),(60,37)), #Venecia 
+((54,32),(54,33),(54,34),(55,32),(55,33),(55,34),(56,32),(56,33),(56,34),(57,32),(57,33),(58,32),(59,37),(60,36),(60,37)), #Venice 
 ((49,32),(49,33),(49,34),(49,35),(49,36)), #Burgundy
 ((52,51),(52,52),(52,53),(52,54),(51,51),(51,52),(51,53),(51,54)), #Germany
 ((87,41),(88,41),(89,41),(90,41),(91,41)), #Kiev
@@ -518,7 +518,7 @@ tBroaderAreasTL = (
 (71, 28), #Bulgaria
 (24, 23), #Cordoba
 (52, 53), #Norse
-(52, 29), #tVenecia
+(52, 29), #tVenice
 (42, 36), #Burgundy
 (49, 41), #tGermany
 (81, 37), #tKiev
@@ -544,7 +544,7 @@ tBroaderAreasBR = (
 (80, 31), #Bulgaria
 (34, 33), #Cordoba
 (62, 63), #Norse
-(62, 39), #tVenecia
+(62, 39), #tVenice
 (52, 46), #Burgundy
 (58, 51), #tGermany
 (91, 47), #tKiev
