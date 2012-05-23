@@ -1989,7 +1989,7 @@ class CvMainInterface:
 			screen.setLabel( "TimeText", "Background", g_szTimeText, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 56, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 			screen.show( "TimeText" )
 			
-			if (pPlayer.isAlive()):
+			if (gc.getPlayer(ePlayer).isAlive()):
 			
 				
 				#szText = gc.getEraInfo(gc.getPlayer(ePlayer).getCurrentEra()).getDescription()
@@ -2009,7 +2009,7 @@ class CvMainInterface:
                                 if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() >= con.tBirth[ePlayer] ):
                                         #iStability = utils.getStability(ePlayer)
                                         iStability = pPlayer.getStability()
-                                        szStabilityButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR))
+                                        szStabilityButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 10)
                                         if (iStability < -15):
                                                 szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
                                         elif (iStability >= -15 and iStability < -5):
@@ -2071,7 +2071,7 @@ class CvMainInterface:
                                         screen.hide( "GPInfoText" )
 
                                 if not CyInterface().isCityScreenUp() and gc.getPlayer(ePlayer).getCombatExperience() > 0:
-                                        eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
+                                        eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 11)
                                         eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(true))
                                         screen.setLabel( "CombatXPButton", "Background", eCombatXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
                                         screen.setLabel( "CombatXPText", "Background", eCombatXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
