@@ -54,6 +54,7 @@ Changes for RFCE 1.1:
 		- New flag for Germany by zwei833
 		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
 		- Separate, uncompressed dds atlas for civilizations - better button quality
+		- Main map icons for great general points and stability
 	
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
