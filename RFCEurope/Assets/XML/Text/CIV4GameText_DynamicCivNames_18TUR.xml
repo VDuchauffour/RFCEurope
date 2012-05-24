@@ -8,28 +8,28 @@
 		<Tag>TXT_KEY_DN_TUR00</Tag>
 		<English>Turkish Peoples</English>
 		<French>Peuplades Turques</French>
-		<German>Türkische Völker</German>
+		<German>Turkvölker</German>
 		<Italian>Popoli Turchi</Italian>
 		<Spanish>Pueblos Turcos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR01</Tag>
 		<English>Turkish Empire</English>
 		<French>Empire Turc</French>
-		<German>Osmanisches Reich</German>
+		<German>Türkisches Reich</German>
 		<Italian>Impero Turco</Italian>
 		<Spanish>Imperio Turco</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR02</Tag>
 		<English>Turkish Empire</English>
 		<French>Empire Turc</French>
-		<German>Osmanisches Reich</German>
+		<German>Türkisches Reich</German>
 		<Italian>Impero Turco</Italian>
 		<Spanish>Imperio Turco</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR03</Tag>
@@ -38,7 +38,7 @@
 		<German>Erhabener Osmanischer Staat</German>
 		<Italian>Sublime Stato Ottomano</Italian>
 		<Spanish>Sublime Estado Otomano</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR04</Tag>
@@ -47,7 +47,7 @@
 		<German>Erhabener Osmanischer Staat</German>
 		<Italian>Sublime Stato Ottomano</Italian>
 		<Spanish>Sublime Estado Otomano</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR05</Tag>
@@ -56,7 +56,7 @@
 		<German>Republik Türkei</German>
 		<Italian>Repubblica di Turchia</Italian>
 		<Spanish>Rep&#250;blica de Turqu&#237;a</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR06</Tag>
@@ -83,7 +83,7 @@
 		<German>Osmanisches Kalifat</German>
 		<Italian>Califfato Ottomano</Italian>
 		<Spanish>Califato Otomano</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR09</Tag>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_TUR18</Tag>
 		<English>Counties of Turkey</English>
 		<French>Comt&#233;s de Turquie</French>
-		<German>Counties der Türkei</German>
+		<German>Grafschaften der Türkei</German>
 		<Italian>Contee di Turchia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>

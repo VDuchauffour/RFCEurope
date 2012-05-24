@@ -11,7 +11,7 @@
 		<German>Fränkische Völker</German>
 		<Italian>Popoli Franchi</Italian>
 		<Spanish>Pueblos Francos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA01</Tag>
@@ -29,7 +29,7 @@
 		<German>Frankenreich</German>
 		<Italian>Impero Francese</Italian>
 		<Spanish>Imperio Franc&#233;s</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA03</Tag>
@@ -38,7 +38,7 @@
 		<German>Königreich Frankreich</German>
 		<Italian>Regno di Francia</Italian>
 		<Spanish>Reino de Francia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA04</Tag>
@@ -47,7 +47,7 @@
 		<German>Französisches Reich</German>
 		<Italian>Impero Francese</Italian>
 		<Spanish>Imperio Franc&#233;s</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA05</Tag>
@@ -56,7 +56,7 @@
 		<German>Französische Republik</German>
 		<Italian>Repubblica Francese</Italian>
 		<Spanish>Rep&#250;blica de Francia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA06</Tag>
@@ -83,7 +83,7 @@
 		<German>Sultanat Frankreich</German>
 		<Italian>Sultanato di Francia</Italian>
 		<Spanish>Sultanato de Francia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA09</Tag>
@@ -92,7 +92,7 @@
 		<German>Französische Islamische Republik</German>
 		<Italian>Repubblica Islamica Francese</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;#mica Franc&#233;s</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA10</Tag>
@@ -119,7 +119,7 @@
 		<German>Vizekönigreich Frankreich</German>
 		<Italian>Vicereame Francese</Italian>
 		<Spanish>Virreinato de Francia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA14</Tag>

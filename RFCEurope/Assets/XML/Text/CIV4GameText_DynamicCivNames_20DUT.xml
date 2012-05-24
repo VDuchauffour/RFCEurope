@@ -11,7 +11,7 @@
 		<German>Batavische Völker</German>
 		<Italian>Popoli Batavi</Italian>
 		<Spanish>Pueblos B&#225;tavos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT01</Tag>
@@ -20,7 +20,7 @@
 		<German>Königreich der Niederlande</German>
 		<Italian>Regno dei Paesi Bassi</Italian>
 		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT02</Tag>
@@ -29,7 +29,7 @@
 		<German>Vereinigtes Königreich der Niederlande</German>
 		<Italian>Regno Unito dei Paesi Bassi</Italian>
 		<Spanish>Reino Unido de los Pa&#237;ses Bajos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT03</Tag>
@@ -38,7 +38,7 @@
 		<German>Königreich der Niederlande</German>
 		<Italian>Regno dei Paesi Bassi</Italian>
 		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT04</Tag>
@@ -47,7 +47,7 @@
 		<German>Holländisches Reich</German>
 		<Italian>Impero Olandese</Italian>
 		<Spanish>Imperio Holand&#233;s</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT05</Tag>
@@ -56,7 +56,7 @@
 		<German>Republik der Sieben Vereinigten Provinzen</German>
 		<Italian>Repubblica delle Sette Province Unite</Italian>
 		<Spanish>Rep&#250;blica de las Siete Pa&#237;ses Bajos Unidos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT06</Tag>
@@ -83,7 +83,7 @@
 		<German>Sultanat der Niederlande</German>
 		<Italian>Sultanato dei Paesi Bassi</Italian>
 		<Spanish>Sultanato de los Pa&#237;ses Bajos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT09</Tag>
@@ -92,7 +92,7 @@
 		<German>Islamische Republik der Niederlande</German>
 		<Italian>Repubblica Islamica dei Paesi Bassi</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de los Pa&#237;ses Bajos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT10</Tag>
@@ -128,7 +128,7 @@
 		<German>Spanische Niederlande</German>
 		<Italian>Paesi Bassi Spagnoli</Italian>
 		<Spanish>Pa&#237;ses Bajos Espa&#241;oles</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT14</Tag>
@@ -152,7 +152,7 @@
 		<Tag>TXT_KEY_DN_DUT16</Tag>
 		<English>Russian Netherlands</English>
 		<French>Pays-Bas Russe</French>
-		<German>Russisch-Niederlande</German>
+		<German>Russiche Niederlande</German>
 		<Italian>Paesi Bassi Russi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -170,10 +170,10 @@
 		<Tag>TXT_KEY_DN_DUT18</Tag>
 		<English>County of Holland</English>
 		<French>Comt&#233; de Hollande</French>
-		<German>County Holland</German>
+		<German>Grafschaft Holland</German>
 		<Italian>Contea d'Olanda</Italian>
 		<Spanish>Condado de Holanda</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT19</Tag>

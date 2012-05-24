@@ -11,7 +11,7 @@
 		<German>Beduinen</German>
 		<Italian>Popoli Beduini</Italian>
 		<Spanish>Pueblos Beduinos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA01</Tag>
@@ -56,7 +56,7 @@
 		<German>Arabische Republik</German>
 		<Italian>Repubblica dell'Arabia</Italian>
 		<Spanish>Rep&#250;blica de Arabia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA06</Tag>
@@ -83,7 +83,7 @@
 		<German>Kalifat Arabien</German>
 		<Italian>Califfato d'Arabia</Italian>
 		<Spanish>Califato de Arabia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA09</Tag>
@@ -92,7 +92,7 @@
 		<German>Arabisch-Islamische Republik</German>
 		<Italian>Repubblica Islamica dell'Arabia</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de Arabia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA10</Tag>
@@ -164,7 +164,7 @@
 		<German>Deutsch-Levante</German>
 		<Italian>Arabia Tedesca</Italian>
 		<Spanish>Arabia Alemana</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA18</Tag>
@@ -200,7 +200,7 @@
 		<German>Provinz Arabien</German>
 		<Italian>Provincia di Arabia</Italian>
 		<Spanish>Provincia de Arabia</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA31</Tag>
@@ -209,7 +209,7 @@
 		<German>Mamlukensultanat</German>
 		<Italian>Sultanato dei Mamelucchi</Italian>
 		<Spanish></Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA32</Tag>
@@ -218,7 +218,7 @@
 		<German>Ayyubidensultanat</German>
 		<Italian>Sultanato degli Ayyubidi</Italian>
 		<Spanish></Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA33</Tag>
@@ -227,6 +227,6 @@
 		<German>Fatimidensultanat</German>
 		<Italian>Califfato dei Fatimidi</Italian>
 		<Spanish></Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

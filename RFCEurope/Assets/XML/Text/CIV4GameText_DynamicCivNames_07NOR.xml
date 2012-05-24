@@ -16,8 +16,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR01</Tag>
 		<English>Kingdom of Denmark</English>
-		<French>Royaumes de Danemark et Norv&#232;ge</French>
-		<German>Königreiche Dänemark und Norwegen</German>
+		<French>Royaume de Danemark</French>
+		<German>Königreich Dänemark</German>
 		<Italian>Regno di Danimarca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -44,7 +44,7 @@
 		<Tag>TXT_KEY_DN_NOR04</Tag>
 		<English>Danish Republic</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Dänische Republik</German>
 		<Italian>Repubblica Danese</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -62,7 +62,7 @@
 		<Tag>TXT_KEY_DN_NOR06</Tag>
 		<English>Viking Kingdoms</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Königreich der Wikinger</German>
 		<Italian>Regni Vichinghi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -71,7 +71,7 @@
 		<Tag>TXT_KEY_DN_NOR07</Tag>
 		<English>Viking Republic</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Wikingerrepublik</German>
 		<Italian>Regni Vichinghi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -80,7 +80,7 @@
 		<Tag>TXT_KEY_DN_NOR08</Tag>
 		<English>Islamic Nordic Sultanates</English>
 		<French>Sultanat Nordique</French>
-		<German>Islamische Nordische Sultanate</German>
+		<German>Islamisch-Nordische Sultanate</German>
 		<Italian>Sultanati Islamici del Nord</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -89,7 +89,7 @@
 		<Tag>TXT_KEY_DN_NOR09</Tag>
 		<English>Nordic Islamic Republic</English>
 		<French>R&#233;publique Islamique Nordique</French>
-		<German>Nordische Islamische Republik</German>
+		<German>Nordisch-Islamische Republik</German>
 		<Italian>Repubblica Islamica del Nord</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_NOR18</Tag>
 		<English>Counties of Scandinavia</English>
 		<French>Comt&#233;es de Scandinavie</French>
-		<German>Counties Skandinaviens</German>
+		<German>Grafschaften Skandinaviens</German>
 		<Italian>Contee di Scandinavia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -206,7 +206,7 @@
 		<Tag>TXT_KEY_DN_NOR22</Tag>
 		<English>Kalmar Union</English>
 		<French></French>
-		<German></German>
+		<German>Kalmar Union</German>
 		<Italian>Unione di Kalmar</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -215,7 +215,7 @@
 		<Tag>TXT_KEY_DN_NOR23</Tag>
 		<English>Kalmar Republic</English>
 		<French></French>
-		<German></German>
+		<German>Kalmar Republic</German>
 		<Italian>Repubblica di Kalmar</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
