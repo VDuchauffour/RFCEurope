@@ -64,8 +64,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Astrolab</Text>
-			<Gender>Female</Gender>
+			<Text>Astrolabium</Text>
+			<Gender>Neutral</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
@@ -164,7 +164,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Mönchstum</Text>
+			<Text>Mönchtum</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -189,7 +189,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Wissen der Klassik</Text>
+			<Text>Antikes Wissen</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -264,7 +264,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Belagerungsmaschinen</Text>
+			<Text>Belagerungsgeräte</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -314,7 +314,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gothische Architektur</Text>
+			<Text>Gotik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -339,7 +339,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Denkmalbau</Text>
+			<Text>Monumentalkunst</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -389,7 +389,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Latiner Segel</Text>
+			<Text>Lateinersegel</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -414,7 +414,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Plattenpanzerung</Text>
+			<Text>Plattenpanzer</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -464,7 +464,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Dampfmaschinen</Text>
+			<Text>Dampfmaschine</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -514,7 +514,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Schirmherrschaft</Text>
+			<Text>Kunstpatronage</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -539,7 +539,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Öffentliches Bauwesen</Text>
+			<Text>Städtebau</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -564,7 +564,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Militärwissenschaften</Text>
+			<Text>Militärtaktiken</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -589,7 +589,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Handelsgesellschaften</Text>
+			<Text>Handelskompanie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -664,7 +664,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Sprengstoff</Text>
+			<Text>Explosivstoffe</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -714,7 +714,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Tiefbau</Text>
+			<Text>Bauwesen</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -789,7 +789,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Kombinierte Waffengattungen</Text>
+			<Text>Truppenverband</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -839,7 +839,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gutsherrschaft</Text>
+			<Text>Grundherrschaft</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -864,7 +864,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Rittertum</Text>
+			<Text>Ritterlichkeit</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -939,7 +939,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Vieleckige Festung</Text>
+			<Text>Bastion</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1039,7 +1039,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Kettenpanzerung</Text>
+			<Text>Kettenpanzer</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1064,7 +1064,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Aristrokratie</Text>
+			<Text>Aristokratie</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1084,7 +1084,7 @@
 		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY_HELP</Tag>
 		<English>[ICON_BULLET]Obsoletes Knightly Orders' Masters (Executives)</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[ICON_BULLET]Veraltet Ordensmeister der Ritterorden</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>

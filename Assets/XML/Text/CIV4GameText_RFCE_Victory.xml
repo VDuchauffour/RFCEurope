@@ -259,7 +259,7 @@
 		<Tag>TXT_KEY_UHV_COR2</Tag>
 		<English>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</English>
 		<French>Construire l'Alhambra, les Jardins d'Al-Andalus et La Mezquita en 1309 ap.JC.</French>
-		<German>[COLOR_YELLOW]Die Überragende Architektur der Mauren:[COLOR_REVERT] Errichtet bis 1309 n.Chr. die Wunder Alhambra, die Gärten von Al-Andalus und La Mezquita.</German>
+		<German>[COLOR_YELLOW]Die Überragende Architektur der Mauren:[COLOR_REVERT] Errichtet bis 1309 n.Chr. die Wunder Alhambra, die Gärten von Al-Andalus und Mezquita-Catedral.</German>
 		<Italian>[COLOR_YELLOW]La Superiorità dell'Architettura Moresca:[COLOR_REVERT] Costruisci l'Alhambra, i Giardini di Al-Andalus e La Mezquita entro il 1309AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</Spanish>
 		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#243;, &#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;, &#232; &#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224; by 1300AD.</Russian>
@@ -708,29 +708,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP1</Tag>
 		<English>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</English>
-		<French/>
+		<French>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]Zerschmettert die Ungläubigen[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]Distruggi gli infedeli[COLOR_REVERT]</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP2</Tag>
 		<English>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</English>
-		<French/>
+		<French>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]Stellt sicher dass Jerusalem katholisch ist[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]Assicurati che Gerusalemme sia Cattolica[COLOR_REVERT]</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POPE</Tag>
 		<English>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</English>
-		<French/>
+		<French>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]Prophet der Welt[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]Profeta del Mondo[COLOR_REVERT]</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CULTURE</Tag>
@@ -1033,7 +1033,7 @@
 		<Tag>TXT_KEY_DQ_TEXT_STRING</Tag>
 		<English>%s1_leader, during this game you achieved the rank of %s2_leader!</English>
 		<French>%s1_leader, during this game you achieved the rank of %s2_leader!</French>
-		<German>%s1_leader, ihr habt in diesem Spiel den Rang %s2_leader erreicht!</German>
+		<German>%s1_leader, ihr habt in dieser Partie den Rang %s2_leader erreicht!</German>
 		<Italian>%s1_leader, durante questa partita hai raggiunto il livello di %s2_leader!</Italian>
 		<Spanish>%s1_leader, during this game you achieved the rank of %s2_leader!</Spanish>
 		<Russian>%s1_leader, during this game you achieved the rank of %s2_leader!</Russian>

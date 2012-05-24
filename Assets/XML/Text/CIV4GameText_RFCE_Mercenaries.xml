@@ -230,7 +230,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
 		<English>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</English>
 		<French>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</French>
-		<German>Die Söldner wollten nicht mehr auf eine Vertrag warten und suchen ihr Glück nun woanders.</German>
+		<German>Ermüdet darüber nicht verpflichtet zu werden ziehen die Söldner davon und suchen woanders ihr Glück.</German>
 		<Italian>I Mercenari si sono stancati di aspettare il contratto e sono partiti per cercare fortuna altrove.</Italian>
 		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
 		<Russian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Russian>
@@ -239,7 +239,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
 		<English>Upset for not getting payed, Mercenaries have abandoned your cause.</English>
 		<French>Upset for not getting payed, Mercenaries have abandoned your cause.</French>
-		<German>Darüber verärgert nicht bezahlt zu werden veranlasste die Söldner zum Abbruch eures Anliegens.</German>
+		<German>Wegen ausstehendem Sold lassen euch die Söldner im Stich.</German>
 		<Italian>Essendo arrabbiati per non essere stati pagari, i Mercenari hanno abbandonato la tua causa.</Italian>
 		<Spanish>Upset for not getting payed, Mercenaries have abandoned your cause.</Spanish>
 		<Russian>Upset for not getting payed, Mercenaries have abandoned your cause.</Russian>
