@@ -18,7 +18,7 @@
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
 		<English>Dense Forest</English>
 		<French>For&#234;t Dense</French>
-		<German>Wald</German>
+		<German>Dichter Wald</German>
 		<Italian>Foresta Fitta</Italian>
 		<Spanish>Bosque</Spanish>
 		<Russian>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Russian>
@@ -27,7 +27,7 @@
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
 		<English>Woodland</English>
 		<French>For&#234;t</French>
-		<German>Waldland</German>
+		<German>Waldgebiet</German>
 		<Italian>Bosco</Italian>
 		<Spanish>Bosque</Spanish>
 		<Russian>.</Russian>
@@ -45,7 +45,7 @@
 		<Tag>TXT_KEY_FEATURE_PALM_FOREST</Tag>
 		<English>Palm Forest</English>
 		<French>Palm Forest</French>
-		<German>Palm Forest</German>
+		<German>Palmenwald</German>
 		<Italian>Foresta di Palme</Italian>
 		<Spanish>Palm Forest</Spanish>
 		<Russian>Palm Forest</Russian>
@@ -72,7 +72,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
 		<English>Colonial Trade Route</English>
 		<French>Route Coloniale</French>
-		<German>Koloniale Handelroute</German>
+		<German>Koloniale Handelsroute</German>
 		<Italian>Rotta Commerciale Coloniale</Italian>
 		<Spanish>Ruta colonial de Comercio</Spanish>
 		<Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
@@ -90,7 +90,7 @@
 		<Tag>TXT_KEY_BUILD_COLONIAL_TRADE</Tag>
 		<English>Establish [LINK=IMPROVEMENT_COLONIAL_TRADE]Colonial Trade Route[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_COLONIAL_TRADE]Route Coloniale[\LINK] Etablie</French>
-		<German>Errichten [LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[/LINK]</German>
+		<German>[LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[/LINK] errichten</German>
 		<Italian>Traccia [LINK=IMPROVEMENT_COLONIAL_TRADE]una Rotta Commerciale Coloniale[\LINK]</Italian>
 		<Spanish>Establezca [LINK=IMPROVEMENT_COLONIAL_TRADE]Ruta colonial de Comercio[\LINK]</Spanish>
 		<Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
@@ -108,7 +108,7 @@
 		<Tag>TXT_KEY_TERRAIN_WETLAND</Tag>
 		<English>Wetland</English>
 		<French>.</French>
-		<German>.</German>
+		<German>Feuchtgebiet</German>
 		<Italian>Zone Umide</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -126,7 +126,7 @@
 		<Tag>TXT_KEY_BUILD_REMOVE_DENSE_FOREST</Tag>
 		<English>Clear [LINK=FEATURE_DENSE_FOREST]Dense Forest[\LINK]</English>
 		<French>d&#233;fricher la [LINK=FEATURE_DENSE_FOREST]for&#234;t[\LINK]</French>
-		<German>[LINK=FEATURE_DENSE_FOREST]Wald[\LINK] abholzen</German>
+		<German>[LINK=FEATURE_DENSE_FOREST]Dichten Wald[\LINK] abholzen</German>
 		<Italian>Disboscare una [LINK=FEATURE_DENSE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_DENSE_FOREST]bosque[\LINK]</Spanish>
 		<Russian>.</Russian>
@@ -135,7 +135,7 @@
 		<Tag>TXT_KEY_BUILD_REMOVE_WOODLAND</Tag>
 		<English>Clear [LINK=FEATURE_FOREST]Woodland[\LINK]</English>
 		<French>d&#233;fricher la [LINK=FEATURE_FOREST]for&#234;t[\LINK]</French>
-		<German>[LINK=FEATURE_FOREST]Wald[\LINK] abholzen</German>
+		<German>[LINK=FEATURE_FOREST]Waldgebiet[\LINK] abholzen</German>
 		<Italian>Disboscare una [LINK=FEATURE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_FOREST]bosque[\LINK]</Spanish>
 		<Russian>.</Russian>
@@ -144,7 +144,7 @@
 		<Tag>TXT_KEY_BUILD_REMOVE_MARSH</Tag>
 		<English>Clear [LINK=FEATURE_MARSH]Marsh[\LINK]</English>
 		<French>Eclaircir de la [LINK=FEATURE_MARSH]Marécage[\LINK]</French>
-		<German>Entferne [LINK=FEATURE_MARSH]Sumpf[\LINK]</German>
+		<German>[LINK=FEATURE_MARSH]Sumpf[\LINK] entfernen</German>
 		<Italian>Bonificare la [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
 		<Spanish>Vacíe [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
 		<Russian>.</Russian>

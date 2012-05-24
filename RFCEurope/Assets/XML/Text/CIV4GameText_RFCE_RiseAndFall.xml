@@ -162,7 +162,7 @@
 		<Tag>TXT_KEY_REBELLION_HUMAN</Tag>
 		<English>The people of %s1_CivName are trying to regain their independence and rebuild their nation. Cities from our empire want to join them!</English>
 		<French></French>
-		<German></German>
+		<German>Die Einwohner von %s1_CivName versuchen ihre Unabhängigkeit wiederzuerlangen und ihre Nation wieder aufzubauen. Städte aus unserem Reich möchten sich ihnen anschließen!</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -171,7 +171,7 @@
 		<Tag>TXT_KEY_REBELLION_LETGO</Tag>
 		<English>A sign of weakness: Let them go, they contribute nothing to our glorious empire are not worth the trouble.</English>
 		<French></French>
-		<German></German>
+		<German>Ein Anzeichen von Schwäche: Lasst sie ziehen, sie tragen nichts zu unserem gloreichen Reich bei und sind den Ärger nicht Wert.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -180,7 +180,7 @@
 		<Tag>TXT_KEY_REBELLION_DONOTHING</Tag>
 		<English>Stretched too thin: We cannot deal with them right now. Let the local garrison best deal with the situation on their own.</English>
 		<French></French>
-		<German></German>
+		<German>In die Länge ziehen: Wir können uns im Moment nicht um sie kümmern. Die örtliche Besatzung soll das beste aus der Situation machen.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -189,7 +189,7 @@
 		<Tag>TXT_KEY_REBELLION_CRACK</Tag>
 		<English>The whip: Let them feel the strength of our Empire, no one rebel against my rule!</English>
 		<French></French>
-		<German></German>
+		<German>Die Peitsche: Lasst sie die Stärke unseres Reiches spüren, kein Rebell gegen meine Herrschaft!</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -198,7 +198,7 @@
 		<Tag>TXT_KEY_REBELLION_BRIBE</Tag>
 		<English>The price of loyalty: Bribe the local lords, with them on our side we will not have to bother with the peasants. Bribe: </English>
 		<French></French>
-		<German></German>
+		<German>Der loyale Prinz: Bestecht die örtlichen Fürsten, mit ihnen auf unserer Seite müssen wir uns um die Bauern keine Sorge machen. Bestechungsgeld: </German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -207,7 +207,7 @@
 		<Tag>TXT_KEY_REBELLION_BOTH</Tag>
 		<English>Sticks and carrots: Do whatever it takes, but keep those cities loyal and subjugated.</English>
 		<French></French>
-		<German></German>
+		<German>Zuckerbrot und Peitsche: Unternehmt alles was möglich ist, aber haltet diese Städte loyal und unterworfen.</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
