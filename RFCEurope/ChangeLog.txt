@@ -74,6 +74,7 @@ Changes for RFCE 1.1:
 		- Fixed Jewish Quarter counting bug in the Polish 3rd UHV when Kazimierz is built - by HolyHandGrenade
 		- Fixed small bug in stability counting when using Divine Monarchy and Paganism civics together - by HolyHandGrenade
 		- Removed the UHV check for the old Spanish 3rd UHV (conquer protestant cities). It was possible to trigger both 3rd UHVs!! - by lzd
+		- Fixed small python mistakes: on city name convertion, and on destroying barbarian improvements
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_CRUSADE_INIT</Tag>
 		<English>The Pope has called for a Crusade to the Holy Land to defend the Holy City of Jerusalem from the infidel pest. Would you accept your duty, take up your sword, and leave for the Holy Land?</English>
 		<French>Le Pape a appel&#233; &#224; une croisade en Terre Sainte pour d&#233;fendre la ville sainte de J&#233;rusalem. Accepteriez-vous de votre devoir, de prendre votre &#233;p&#233;e, et partir pour la Terre Sainte?</French>
-		<German>Der Papst hat die christlichen Völker zu einem Kreuzzug ins Heilige Land aufgerufen um die heilige Stadt Jerusalem vor den Ungläubigen zu verteidigen. Wollt ihr diesem Ruf folgen und ins Heilige Land aufbrechen?</German>
+		<German>Der Papst hat die christlichen Völker zu einem Kreuzzug ins Heilige Land aufgerufen um die Heilige Stadt Jerusalem vor den Ungläubigen zu verteidigen. Wollt ihr diesem Ruf folgen und ins Heilige Land aufbrechen?</German>
 		<Italian>Il Papa ha richiesto una Crociata in Terra Santa per difendere la Città Santa di Gerusalemme dagli infedeli. Acceterai, prenderai la tua spada, e partirai per la Terra Santa?</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#208;&#232;&#236;&#241;&#234;&#232;&#233; &#239;&#224;&#239;&#224; &#239;&#240;&#232;&#231;&#226;&#224;&#235; &#234; &#207;&#238;&#245;&#238;&#228;&#243; &#234; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#238;&#233; &#199;&#229;&#236;&#235;&#229;, &#247;&#242;&#238;&#225;&#251; &#231;&#224;&#249;&#232;&#242;&#232;&#242;&#252; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#251;&#233; &#195;&#238;&#240;&#238;&#228; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#238;&#242; &#237;&#229;&#226;&#229;&#240;&#243;&#254;&#249;&#229;&#227;&#238; &#229;&#240;&#229;&#242;&#232;&#234;&#224;. &#194;&#251; &#227;&#238;&#242;&#238;&#226;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#226;&#224;&#248;&#243; &#238;&#225;&#255;&#231;&#224;&#237;&#237;&#238;&#241;&#242;&#252;, &#239;&#238;&#228;&#237;&#255;&#242;&#252; &#226;&#224;&#248; &#236;&#229;&#247;, &#232; &#238;&#242;&#239;&#240;&#224;&#226;&#232;&#242;&#252;&#241;&#255; &#226; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#243;&#254; &#199;&#229;&#236;&#235;&#254;?</Russian>
@@ -18,7 +18,7 @@
 		<Tag>TXT_KEY_CRUSADE_ACCEPT</Tag>
 		<English>By my Honor and in the name of my God I will defend the Holy Land!</English>
 		<French>Sur mon honneur et au nom de mon Dieu, je vais d&#233;fendre la Terre Sainte!</French>
-		<German>Bei meiner Ehre, ich werde im Namen meines Gottes aufbrechen um das heilige Land zu verteidigen!</German>
+		<German>Bei meiner Ehre, ich werde im Namen meines Gottes aufbrechen um das Heilige Land zu verteidigen!</German>
 		<Italian>Giuro sul mio Onore e nel nome di Dio che difenderò la Terra Santa!</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#202;&#235;&#255;&#237;&#243;&#241;&#252; &#236;&#238;&#229;&#233; &#215;&#229;&#241;&#242;&#252;&#254; &#232; &#232;&#236;&#229;&#237;&#229;&#236; &#236;&#238;&#229;&#227;&#238; &#227;&#238;&#241;&#239;&#238;&#228;&#224; &#193;&#238;&#227;&#224;, &#255; &#231;&#224;&#249;&#232;&#249;&#243; &#209;&#226;&#255;&#249;&#229;&#237;&#237;&#243;&#254; &#199;&#229;&#236;&#235;&#254;!</Russian>
@@ -135,7 +135,7 @@
 		<Tag>TXT_KEY_CRUSADE_TARGET</Tag>
 		<English>Choose a new target for the Crusade!</English>
 		<French>Choisissez une nouvelle cible pour la Croisade!</French>
-		<German>W&#252;hlt ein neues Ziel für den Kreuzzug!</German>
+		<German>Wählt ein neues Ziel für den Kreuzzug!</German>
 		<Italian>Scegli un nuovo obbiettivo per la Crociata!</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#194;&#251;&#225;&#229;&#240;&#232;&#242;&#229; &#237;&#238;&#226;&#243;&#254; &#246;&#229;&#235;&#252; &#228;&#235;&#255; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#238;&#227;&#238; &#207;&#238;&#245;&#238;&#228;&#224;!</Russian>
@@ -144,7 +144,7 @@
 		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK1</Tag>
 		<English>The Crusaders under the %s1_civ_adjective leadership of %s2_name have chosen our beautiful city of %s3_city as their target. They will arrive in 3 Turns. </English>
 		<French>Les crois&#233;s ont choisi notre belle ville de %s3_city comme leur cible. Ils arriveront en 3 tours</French>
-		<German>Die Kreuzfahrer unter der %s1:2_civ_adjective Führung von %s2_name haben unsere sch&#246;ne Stadt %s3_city als Ziel ihres Kreuzzuges ausgewählt. Sie werden in 3 Runden eintreffen.</German>
+		<German>Die Kreuzfahrer unter der %s1:2_civ_adjective Führung von %s2_name haben unsere schöne Stadt %s3_city als Ziel ihres Kreuzzuges ausgewählt. Sie werden in 3 Runden eintreffen.</German>
 		<Italian>I Crociati sotto il comando dei %s1_civ_adjective guidati da %s2_name hanno scelto la nostra città di %s3_city come loro obbiettivo. Arriveranno in 3 turni.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#202;&#240;&#229;&#241;&#242;&#238;&#237;&#238;&#241;&#246;&#251; &#226;&#251;&#225;&#240;&#224;&#235;&#232; &#237;&#224;&#248; &#234;&#240;&#224;&#241;&#232;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228; %s3_city &#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#241;&#226;&#238;&#229;&#233; &#246;&#229;&#235;&#232;. &#206;&#237;&#232; &#239;&#240;&#232;&#225;&#243;&#228;&#243;&#242; &#226; &#242;&#229;&#247;&#229;&#237;&#232;&#232; &#242;&#240;&#229;&#245; &#245;&#238;&#228;&#238;&#226;.</Russian>

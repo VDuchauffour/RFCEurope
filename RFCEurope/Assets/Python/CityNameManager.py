@@ -46,7 +46,7 @@ class CityNameManager:
                         cityName = tCityMap[iOwner][con.iMapMaxY-1-city.getY()][city.getX()]
                         #print(" City Name ",cityName)
                         if (cityName != "-1"):
-                                city.setName(cityName, False)
+                                city.setName(unicode(cityName, 'latin-1'), False)
 
         def renameCities(self, city, iNewOwner):
                 """Renames a city depending on its owner"""
@@ -55,7 +55,7 @@ class CityNameManager:
                 if ( iNewOwner < con.iNumMajorPlayers ):
                 	cityName = tCityMap[iNewOwner][con.iMapMaxY-1-city.getY()][city.getX()]
                 	if ( cityName != "-1" ):
-                		city.setName(cityName,False)
+                		city.setName(unicode(cityName, 'latin-1'), False)
                 		
 	def lookupName(self,city,iPlayer):
 		"""Looks up a city name in another player's map"""
