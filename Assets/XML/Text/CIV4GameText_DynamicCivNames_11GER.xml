@@ -11,7 +11,7 @@
 		<German>Germanische Völker</German>
 		<Italian>Popoli Germanici</Italian>
 		<Spanish>Pueblos Germ&#225;nicos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER01</Tag>
@@ -38,7 +38,7 @@
 		<German>Heiliges Römisches Reich</German>
 		<Italian>Sacro Romano Impero</Italian>
 		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER04</Tag>
@@ -47,7 +47,7 @@
 		<German>Heiliges Römisches Reich</German>
 		<Italian>Sacro Romano Impero</Italian>
 		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER05</Tag>
@@ -83,7 +83,7 @@
 		<German>Sultanat Deutschland</German>
 		<Italian>Sultanato di Germania</Italian>
 		<Spanish>Sultanato de Alemania</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER09</Tag>
@@ -92,13 +92,13 @@
 		<German>Islamische Republik Deutschland</German>
 		<Italian>Repubblica Islamica di Germania</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de Alemania</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER10</Tag>
 		<English>Exarchate of Germania</English>
 		<French>Exarchat de Germanie</French>
-		<German>Exarchat Deutschland</German>
+		<German>Exarchat Germanien</German>
 		<Italian>Esarcato di Germania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -161,10 +161,10 @@
 		<Tag>TXT_KEY_DN_GER18</Tag>
 		<English>German Counties</English>
 		<French>Comt&#233;es de Germanie</French>
-		<German>Counties Deutschlands</German>
+		<German>Grafschaften Deutschlands</German>
 		<Italian>Contea di Germania</Italian>
 		<Spanish>Condado de Alemania</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER19</Tag>
@@ -191,6 +191,6 @@
 		<German>Provinz Deutschland</German>
 		<Italian>Provincia di Germania</Italian>
 		<Spanish>Provincia de Germania</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

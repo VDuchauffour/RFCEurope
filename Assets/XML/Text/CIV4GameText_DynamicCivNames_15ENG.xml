@@ -20,7 +20,7 @@
 		<German>Königreich England</German>
 		<Italian>Reino de Inglaterra</Italian>
 		<Spanish>Reino de Inglaterra</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG02</Tag>
@@ -29,7 +29,7 @@
 		<German>Königreich Großbritannien</German>
 		<Italian>Regno di Gran Bretagna</Italian>
 		<Spanish>Reino de Gran Breta&#241;a</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG03</Tag>
@@ -38,7 +38,7 @@
 		<German>Vereinigtes Königreich Großbritannien</German>
 		<Italian>Regno Unito di Gran Bretagna</Italian>
 		<Spanish>Reino Unido de Gran Breta&#241;a</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG04</Tag>
@@ -47,7 +47,7 @@
 		<German>Britisches Reich</German>
 		<Italian>Impero Britannico</Italian>
 		<Spanish>Imperio Brit&#225;nico</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG05</Tag>
@@ -56,7 +56,7 @@
 		<German>Englisches Commonwealth</German>
 		<Italian>Commonwealth d'Inghilterra</Italian>
 		<Spanish>Commonwealth de Inglaterra</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG06</Tag>
@@ -83,7 +83,7 @@
 		<German>Sultanat England</German>
 		<Italian>Sultanato d'Inghilterra</Italian>
 		<Spanish>Sultanato de Inglaterra</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG09</Tag>
@@ -161,7 +161,7 @@
 		<Tag>TXT_KEY_DN_ENG17</Tag>
 		<English>British Saxony</English>
 		<French>Bretagne Saxonne</French>
-		<German>Britisches Sachsen</German>
+		<German>Britisch-Sachsen</German>
 		<Italian>Sassonia Bretone</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -173,7 +173,7 @@
 		<German>Großbritannien</German>
 		<Italian>Gran Bretagna</Italian>
 		<Spanish>Gran Breta&#241;a</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG19</Tag>
@@ -200,6 +200,6 @@
 		<German>Provinz Angleterre</German>
 		<Italian>Provincia d'Inghilterra</Italian>
 		<Spanish>Provincia de Inglaterra</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

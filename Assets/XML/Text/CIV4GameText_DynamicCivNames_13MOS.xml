@@ -35,7 +35,7 @@
 		<Tag>TXT_KEY_DN_MOS03</Tag>
 		<English>Tsardom of Russia</English>
 		<French>Tsarie de Russie</French>
-		<German>Zarenreich Moskau</German>
+		<German>Zarentum Russland</German>
 		<Italian>Zarato di Russia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -44,7 +44,7 @@
 		<Tag>TXT_KEY_DN_MOS04</Tag>
 		<English>Tsardom of Russia</English>
 		<French>Tsarie de Russie</French>
-		<German>Zarenreich Moskau</German>
+		<German>Zarentum Russland</German>
 		<Italian>Zarato di Russia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -80,7 +80,7 @@
 		<Tag>TXT_KEY_DN_MOS08</Tag>
 		<English>Islamic Tsardom of Russia</English>
 		<French>Tsarie Islamique de Russie</French>
-		<German>Islamisches Zarenreich Russland</German>
+		<German>Islamisches Zarentum Russland</German>
 		<Italian>Zarato Islamico di Russia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -98,7 +98,7 @@
 		<Tag>TXT_KEY_DN_MOS10</Tag>
 		<English>Exarchate of Moscovia</English>
 		<French>Exarchat de Moscovie</French>
-		<German>Exarchat Moskau</German>
+		<German>Exarchat Moskowien</German>
 		<Italian>Esarcato di Moscovia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -107,7 +107,7 @@
 		<Tag>TXT_KEY_DN_MOS11</Tag>
 		<English>Duchy of Muscovy</English>
 		<French>Duch&#233; de Moscovie</French>
-		<German>Herzogtum Moskau</German>
+		<German>Herzogtum Moskowien</German>
 		<Italian>Ducato di Mosca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -125,7 +125,7 @@
 		<Tag>TXT_KEY_DN_MOS13</Tag>
 		<English>Spanish Muscovy</English>
 		<French>Moscovie Espagnol</French>
-		<German>Spanisch-Moskau</German>
+		<German>Spanisch-Moskowien</German>
 		<Italian>Moscovia Spagnola</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -134,7 +134,7 @@
 		<Tag>TXT_KEY_DN_MOS14</Tag>
 		<English>Norse Muscovy</English>
 		<French>Moscovie Nordique</French>
-		<German>Nordisch-Moskau</German>
+		<German>Nordisch-Moskowien</German>
 		<Italian>Moscovia Vichinga</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -143,7 +143,7 @@
 		<Tag>TXT_KEY_DN_MOS15</Tag>
 		<English>Venetian Muscovy</English>
 		<French>Moscovie V&#233;nitienne</French>
-		<German>Venezianisch-Moskau</German>
+		<German>Venezianisch-Moskowien</German>
 		<Italian>Moscovia Veneziana</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -161,7 +161,7 @@
 		<Tag>TXT_KEY_DN_MOS17</Tag>
 		<English>German Muscovy</English>
 		<French>Moscovie Allemande</French>
-		<German>Deutsch-Moskau</German>
+		<German>Deutsch-Moskowien</German>
 		<Italian>Moscovia Tedesca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_MOS18</Tag>
 		<English>Counties of Muscovy</English>
 		<French>Comt&#233;es de Moscovie</French>
-		<German>Counties Moskaus</German>
+		<German>Grafschaften Moskowiens</German>
 		<Italian>Contea di Mosca</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -179,7 +179,7 @@
 		<Tag>TXT_KEY_DN_MOS19</Tag>
 		<English>Habsburg Muscovy</English>
 		<French>Moscovie Habsbourg</French>
-		<German>Habsburger Moskau</German>
+		<German>Habsburger Moskowien</German>
 		<Italian>Moscovia Asburgica</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -197,7 +197,7 @@
 		<Tag>TXT_KEY_DN_MOS21</Tag>
 		<English>Province of Muscovy</English>
 		<French>Province de Moscovie</French>
-		<German>Provinz Moskau</German>
+		<German>Provinz Moskowien</German>
 		<Italian>Provincia di Moscovia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>

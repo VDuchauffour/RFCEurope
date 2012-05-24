@@ -26,7 +26,7 @@
 		<Tag>TXT_KEY_DN_BUL09</Tag>
 		<English>Islamic Republic of Bulgaria</English>
 		<French>R&#233;publique Islamique Bulgare</French>
-		<German>Islamisches Bulgarisches Republik</German>
+		<German>Islamisch-Bulgarische Republik</German>
 		<Italian>Repubblica Islamica di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -107,7 +107,7 @@
 		<Tag>TXT_KEY_DN_BUL18</Tag>
 		<English>Counties of Bulgaria</English>
 		<French>Comtés de la Bulgarie</French>
-		<German>Counties Bulgariens</German>
+		<German>Grafschaften Bulgariens</German>
 		<Italian>Contee di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -143,7 +143,7 @@
 		<Tag>TXT_KEY_DN_BUL_CALIPHATE</Tag>
 		<English>Caliphate of Bulgaria</English>
 		<French></French>
-		<German></German>
+		<German>Kalifat Bulgarien</German>
 		<Italian>Califfato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -152,7 +152,7 @@
 		<Tag>TXT_KEY_DN_BUL_KHANATE</Tag>
 		<English>Bulgarian Khanate</English>
 		<French></French>
-		<German></German>
+		<German>Khanat Bulgarien</German>
 		<Italian>Khanato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -161,7 +161,7 @@
 		<Tag>TXT_KEY_DN_BUL_TSARDOM</Tag>
 		<English>Bulgarian Tsardom</English>
 		<French></French>
-		<German></German>
+		<German>Zarentum Bulgarien</German>
 		<Italian>Zarato di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_BUL_KINGDOM</Tag>
 		<English>Bulgarian Kingdom</English>
 		<French></French>
-		<German></German>
+		<German>Königreich Bulgarien</German>
 		<Italian>Regno di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -179,7 +179,7 @@
 		<Tag>TXT_KEY_DN_BUL_EMPIRE1</Tag>
 		<English>Bulgarian Empire</English>
 		<French></French>
-		<German></German>
+		<German>Bulgarisches Reich</German>
 		<Italian>Impero Bulgaro</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -188,7 +188,7 @@
 		<Tag>TXT_KEY_DN_BUL_EMPIRE2</Tag>
 		<English>Second Bulgarian Empire</English>
 		<French></French>
-		<German></German>
+		<German>Zweites Bulgarisches Reich</German>
 		<Italian>Secondo Impero Bulgaro</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>

@@ -11,7 +11,7 @@
 		<German>Lusitanische Völker</German>
 		<Italian>Popoli Lusitani</Italian>
 		<Spanish>Pueblos Lusitanos</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR01</Tag>
@@ -20,7 +20,7 @@
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
 		<Spanish>Reino de Portugal</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR02</Tag>
@@ -29,7 +29,7 @@
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
 		<Spanish>Reino de Portugal</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR03</Tag>
@@ -38,7 +38,7 @@
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
 		<Spanish>Reino de Portugal</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR04</Tag>
@@ -47,7 +47,7 @@
 		<German>Portugiesisches Reich</German>
 		<Italian>Impero Portoghese</Italian>
 		<Spanish>Imperio Portugu&#233;s</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR05</Tag>
@@ -56,7 +56,7 @@
 		<German>Portugiesische Republik </German>
 		<Italian>Repubblica Portoghese</Italian>
 		<Spanish>Rep&#250;blica Portuguesa</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR06</Tag>
@@ -83,7 +83,7 @@
 		<German>Sultanat Portugal</German>
 		<Italian>Sultanato del Portogallo</Italian>
 		<Spanish>Sultanato de Portugal</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR09</Tag>
@@ -92,7 +92,7 @@
 		<German>Portugiesische Islamische Republik</German>
 		<Italian>Repubblica Islamica Portoghese</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica Portuguesa</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR10</Tag>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_POR18</Tag>
 		<English>County of Portugal</English>
 		<French>Comt&#233; du Portugal</French>
-		<German>County Portugal</German>
+		<German>Grafschaft Portugal</German>
 		<Italian>Contea del Portogallo</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
