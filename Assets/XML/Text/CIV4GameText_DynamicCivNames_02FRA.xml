@@ -26,7 +26,7 @@
 		<Tag>TXT_KEY_DN_FRA02</Tag>
 		<English>Frankish Empire</English>
 		<French>Empire Francs</French>
-		<German>Fränkisches Reich</German>
+		<German>Frankenreich</German>
 		<Italian>Impero Francese</Italian>
 		<Spanish>Imperio Franc&#233;s</Spanish>
 		<Russian/>
@@ -44,7 +44,7 @@
 		<Tag>TXT_KEY_DN_FRA04</Tag>
 		<English>French Empire</English>
 		<French>Empire Fran&#231;ais</French>
-		<German>Fränkisches Reich</German>
+		<German>Französisches Reich</German>
 		<Italian>Impero Francese</Italian>
 		<Spanish>Imperio Franc&#233;s</Spanish>
 		<Russian/>
@@ -116,7 +116,7 @@
 		<Tag>TXT_KEY_DN_FRA13</Tag>
 		<English>Viceroyalty of France</English>
 		<French>Royaume Espagnole de France</French>
-		<German>Spanisches Königreich Frankreich</German>
+		<German>Vizekönigreich Frankreich</German>
 		<Italian>Vicereame Francese</Italian>
 		<Spanish>Virreinato de Francia</Spanish>
 		<Russian/>
@@ -152,7 +152,7 @@
 		<Tag>TXT_KEY_DN_FRA17</Tag>
 		<English>Western Francia</English>
 		<French></French>
-		<German></German>
+		<German>Westfrankenreich</German>
 		<Italian>Francia Occidentale</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -161,7 +161,7 @@
 		<Tag>TXT_KEY_DN_FRA18</Tag>
 		<English>Duchy of Chinon</English>
 		<French></French>
-		<German></German>
+		<German>Herzogtum Chinon</German>
 		<Italian>Ducato di Chinon</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -179,7 +179,7 @@
 		<Tag>TXT_KEY_DN_FRA20</Tag>
 		<English>Principality of Frangistan</English>
 		<French></French>
-		<German></German>
+		<German>Fürstentum Frangistan</German>
 		<Italian>Principato di Francia</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -188,7 +188,7 @@
 		<Tag>TXT_KEY_DN_FRA21</Tag>
 		<English>Emirate of Poitiers</English>
 		<French></French>
-		<German></German>
+		<German>Emirat Poitiers</German>
 		<Italian>Emirato di Poitiers</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -197,7 +197,7 @@
 		<Tag>TXT_KEY_DN_FRA22</Tag>
 		<English>Western Francia</English>
 		<French></French>
-		<German></German>
+		<German>Westfrankenreich</German>
 		<Italian>Francia Occidentale</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>

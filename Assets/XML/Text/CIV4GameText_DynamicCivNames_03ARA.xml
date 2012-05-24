@@ -26,7 +26,7 @@
 		<Tag>TXT_KEY_DN_ARA02</Tag>
 		<English>Rashidun Caliphate</English>
 		<French></French>
-		<German></German>
+		<German>Rechtgeleitete Kalifen</German>
 		<Italian>Califfato dei Rashidun</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -35,7 +35,7 @@
 		<Tag>TXT_KEY_DN_ARA03</Tag>
 		<English>Umayyad Caliphate</English>
 		<French></French>
-		<German></German>
+		<German>Umayyaden Kalifat</German>
 		<Italian>Califfato degli Omayyadi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -44,7 +44,7 @@
 		<Tag>TXT_KEY_DN_ARA04</Tag>
 		<English>Abbasid Caliphate</English>
 		<French></French>
-		<German></German>
+		<German>Abbasiden Kalifat</German>
 		<Italian>Califfato degli Abbasidi</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -89,7 +89,7 @@
 		<Tag>TXT_KEY_DN_ARA09</Tag>
 		<English>Arab Islamic Republic</English>
 		<French>R&#233;publique Islamique Arabe</French>
-		<German>Arabische Islamische Republik</German>
+		<German>Arabisch-Islamische Republik</German>
 		<Italian>Repubblica Islamica dell'Arabia</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de Arabia</Spanish>
 		<Russian/>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_ARA18</Tag>
 		<English>Counties of the Levant</English>
 		<French>Comtés du Levant</French>
-		<German>Counties der Levante</German>
+		<German>Grafschaften der Levante</German>
 		<Italian>Contee del Levante</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -206,7 +206,7 @@
 		<Tag>TXT_KEY_DN_ARA31</Tag>
 		<English>Mamluk Sultanate</English>
 		<French></French>
-		<German></German>
+		<German>Mamlukensultanat</German>
 		<Italian>Sultanato dei Mamelucchi</Italian>
 		<Spanish></Spanish>
 		<Russian/>
@@ -215,7 +215,7 @@
 		<Tag>TXT_KEY_DN_ARA32</Tag>
 		<English>Ayyubid Sultanate</English>
 		<French></French>
-		<German></German>
+		<German>Ayyubidensultanat</German>
 		<Italian>Sultanato degli Ayyubidi</Italian>
 		<Spanish></Spanish>
 		<Russian/>
@@ -224,7 +224,7 @@
 		<Tag>TXT_KEY_DN_ARA33</Tag>
 		<English>Fatimid Caliphate</English>
 		<French></French>
-		<German></German>
+		<German>Fatimidensultanat</German>
 		<Italian>Califfato dei Fatimidi</Italian>
 		<Spanish></Spanish>
 		<Russian/>

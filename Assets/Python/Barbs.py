@@ -606,15 +606,18 @@ class Barbs:
 
         def onImprovementDestroyed(self,iX,iY):
                 print ("Barb improvement destroyed")
+                #getHandicapType: Viceroy=0, Monarch=1, Emperor=2)
+                iHandicap = gc.getGame().getHandicapType()
                 iTurn = gc.getGame().getGameTurn()
                 if (iTurn > xml.i1500AD):
-                        self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),xml.iMusketman,1,1,1,0,utils.outerInvasion,1)
+                        iBarbUnit = xml.iMusketman
                 elif (iTurn > xml.i1284AD):
-                        self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),xml.iArquebusier,1,1,1,0,utils.outerInvasion,1)
+                        iBarbUnit = xml.iArquebusier
                 elif (iTurn > xml.i840AD):
-                        self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),xml.iHorseArcher,1,1,1,0,utils.outerInvasion,1)
+                        iBarbUnit = xml.iHorseArcher
                 else:
-                        self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),xml.iSpearman,1,1,1,0,utils.outerInvasion,1)
+                        iBarbUnit = xml.iSpearman
+                self.spawnUnits(iBarbarian, (iX-1,iY-1),(iX+1,iY+1),iBarbUnit,1 + iHandicap,1,1,0,utils.outerInvasion,1,"")
 
 # 3Miro: Minor Nations Start
         def setupMinorNation( self ):
