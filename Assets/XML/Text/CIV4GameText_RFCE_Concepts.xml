@@ -291,17 +291,17 @@
 		<English>Colonies and Access Resources</English>
 		<French>Resources Colonies et Acc&#232;s</French>
 		<German>Kolonien und Transfer-Ressourcen</German>
-		<Italian/>
-		<Spanish/>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>Colonies and Access Resources</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_COLONIES_PEDIA</Tag>
 		<English>[PARAGRAPH:2]Colonies played a major role in the economical development of Europe. In RFC:Europe colonies are represented by colonial projects.[PARAGRAPH:2]There are two Trading Companies that are national projects (i.e. everyone can have one of those) and a number of colonies that are world projects (i.e. only one player can build them). Some colonial projects require one Trading Company or another in order to be build. Every colony requires a specific tech and all the colonies require the abstract resource "Atlantic Access".[PARAGRAPH:2]We have added the Atlantic Access to ensure that colonies are mainly build by the historical colonial powers (note that this is different from physical access to the Atlantic Ocean). The number of AA resources is kept to a minimum to represent interesting gameplay. Traditional colonial powers, such as Portugal, Spain, England, France and the Netherlands, receive AA by default. Mediterranean nations can obtain AA from by establishing control over the Gibraltar straight and others can do that by war or trade with the colonial powers.[PARAGRAPH:2]Colonies are furthermore divided into several regions (South America, North America, Asia and Africa). Except for the colonies of the African region, by establishing a colony in the respected region, the player gets additional access resource making it easier to establish additional colonies in that region (i.e. having Virginia would make it easier to colonize New England).[PARAGRAPH:2]Every colony provides a number of resources for the nation that builds it. Many of those resources cannot be obtained by any other way (i.e. they are not present on the map). Colonies add to the overall score of the player. A number of UHV conditions require building a number of colonies, note that Trading Companies do not count as colonies.</English>
 		<French></French>
-		<German/>
-		<Italian/>
-		<Spanish/>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -309,9 +309,9 @@
 		<English>Religion Overhaul</English>
 		<French>R&#233;vision de la Religion</French>
 		<German>Instandsetzung der Religion</German>
-		<Italian/>
-		<Spanish/>
-		<Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RELIGION_OVERHAUL_PEDIA</Tag>
@@ -391,20 +391,20 @@ There are two types of Crusades: for the Holy Land that aim at capturing Jerusal
 [PARAGRAPH:2]Reformation stops the Crusades for the Holy Land, however, if you are at war with a Catholic nation, you may still suffer from a defensive Crusade.
 [H1]The Choice of Religion[\H1]
 [PARAGRAPH:2]The benefits form choosing one religion over another are tied to the individual civilizations' historical preferences. For example the Byzantines would definitely benefit more from Orthodoxy and Spain from Catholicism. Going with the historical setting is never a wrong decision, however, you are always free to experiment anyway you want.</English>
-		<French/>
-		<German/>
-		<Italian/>
-		<Spanish/>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Russian>Colonies and Access Resources</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_STABILITY_GUIDE</Tag>
 		<English>Stability Guide</English>
-		<French/>
+		<French></French>
 		<German>Stabilitätsratgeber</German>
-		<Italian/>
-		<Spanish/>
-		<Russian/>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_STABILITY_GUIDE_PEDIA</Tag>
@@ -568,10 +568,10 @@ for each city beyond 31 add -2
 
 [BOLD]Economy[\BOLD]
 The total value is bound between -7 and 7</English>
-		<French/>
-		<German/>
-		<Italian/>
-		<Spanish/>
-		<Russian/>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>
