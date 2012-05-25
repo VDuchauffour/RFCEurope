@@ -390,7 +390,7 @@
 		<Tag>TXT_KEY_BUILDING_INN</Tag>
 		<English>Inn</English>
 		<French>Auberge</French>
-		<German>Schänke</German>
+		<German>Gasthaus</German>
 		<Italian>Locanda</Italian>
 		<Spanish>Posada</Spanish>
 		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian>
@@ -399,7 +399,7 @@
 		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
 		<English>[TAB]Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.[PARAGRAPH:2]Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.[PARAGRAPH:2]In Europe, it is the provision of accommodation, if anything, that now differentiates inns from taverns, alehouses and pubs. The latter tend only to supply alcohol (although in the UK the conditions of their licence sometimes require them to have a nominal supply of food and soft drinks). Inns tend to be grander and more long-lived establishments. Famous London examples include the George and The Tabard. There is however no longer a formal distinction between an inn and other kinds of establishment, and many pubs will use the name "inn", either simply because they are long established and maybe were once a Coaching inn, or to summon up a particular kind of image; however, originally an Inn had to provide not only food and lodging, but also stabling and fodder for the traveller's horse(s) and for fresh horses for the Mail coach.[PARAGRAPH:2]The original functions of an inn are now usually split among separate establishments, such as hotels, lodges, and motels, all of which might provide the traditional functions of an inn but which focus more on lodging customers than on other services; public houses, which are primarily alcohol-serving establishments; and restaurants and taverns, which serve food and drink. (Hotels often contain restaurants and also often serve complimentary breakfast and meals, thus providing all of the functions of traditional inns.) In North America, the lodging aspect of the word "inn" lives on in hotel brand names like Holiday Inn, and in some state laws that refer to lodging operators as innkeepers.</English>
 		<French>.</French>
-		<German>[TAB]Schänke ist die historische Bezeichnung für eine Gaststätte mit Krugrecht. Die Schreibweisen "Schenke" (zu "ausschenken") und "Schänke" (zu "Ausschank") sind gleichermaßen zulässig.[PARAGRAPH:2]Das Krugrecht bezeichnet das spätmittelalterliche Recht zur gewerblichen Bewirtung von Gästen in einer Gaststätte ("Krug"). Dies beinhaltete jedoch nicht das Recht zur Beherbergung.[PARAGRAPH:2]Der Inhaber des Krugrechts wurde auch als Krüger (daher der Nachname) bezeichnet. Früher wurde dem beauftragten Gründer eines Dorfes (Lokator) meist neben dem Mahlrecht auch das Krugrecht verliehen. Später wurde das Krugrecht meist vom Dorfschulzen ausgeübt. Oft war es auch mit der Braugerechtsame gekoppelt.</German>
+		<German>[TAB]Eine Gaststätte (auch: Gasthaus, Wirtshaus oder Wirtschaft) ist ein gastronomischer Betrieb, in dem Getränke oder Speisen zum sofortigen Verzehr verkauft werden und der hierzu eine Aufenthaltsmöglichkeit bietet. Als Gaststube wird der Raum bezeichnet, in dem die Gäste die Speisen und Getränke verzehren.[PARAGRAPH:2]Die ersten Gasthäuser betrieben im Mittelalter quasi die Klöster, denen ihre Kenntnisse im Bierbrauen zu Gute kamen. Später entstanden an Handelswegen Gasthäuser, die Kost und Logis auf primitivem Niveau anboten. Einen Aufschwung erlebten sie, als sich im Spätmittelalter immer mehr Städte gründeten. Die Gasthäuser waren nicht nur der Ort, in dem Bier oder Wein ausgeschenkt wurde, sondern sie waren in vielen Fällen auch der Ort, in dem man um Geld spielte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -408,7 +408,7 @@
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
 		<English>Manor House</English>
 		<French>Château</French>
-		<German>Gutshof</German>
+		<German>Herrenhaus</German>
 		<Italian>Casa Patronale</Italian>
 		<Spanish>Casa solariega</Spanish>
 		<Russian>&#207;&#238;&#236;&#229;&#241;&#242;&#252;&#229;</Russian>
@@ -417,7 +417,7 @@
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
 		<English>[TAB]A manor house or fortified manor-house is a country house, which has historically formed the administrative centre of a manor, the lowest unit of territorial organization in the feudal system. The term is sometimes applied to relatively small country houses which belonged to gentry families, as well as to grand stately homes, particularly as a technical term for minor late medieval fortified country houses intended more for show than for defence.[PARAGRAPH:2]In general terms, the manor house was the dwelling house, or "capital messuage", of a feudal lord of a manor, which he occupied only on occasional visits if he held many manors. As such it was the place in which sessions of his "court baron", or manor court, were held. Sometimes a steward or seneschal was appointed by the seigneurial lord to oversee and manage his different manorial properties. The day-to-day administration was delegated to a bailiff, or reeve.[PARAGRAPH:2]Although not typically built with strong fortifications as castles were, many manor-houses were partly fortified: they were enclosed within walls or ditches that often included the farm buildings as well. Arranged for defence against robbers and thieves, it was often surrounded by a moat with a drawbridge, and equipped with small gatehouses and watchtowers; but was not provided with a keep or with large towers or lofty curtain walls so as to withstand a siege. The primary feature of the manor-house was its great hall, to which subsidiary apartments were added as the lessening of feudal warfare permitted more peaceful domestic life.[PARAGRAPH:2]By the beginning of the 16th century, manor-houses as well as small castles began to acquire the character and amenities of the residences of country gentlemen. This late 16th century transformation produced many of the smaller Renaissance châteaux of France and the numerous country mansions of the Elizabethan and Jacobean styles in England.</English>
 		<French>.</French>
-		<German>[TAB]Ein Gutshof ist ein größeres landwirtschaftliches Anwesen, als herrschaftlicher Besitz auch Gut oder Domäne genannt.Es beinhaltet die Gutsanlage (Herrenhaus, Ställe, Scheunen und Gesindehäuser) mit allem an Land, Forst und Wasser. Nebenhöfe, die vom Haupthof aus mit verwaltet wurden, nannte man Vorwerk.[PARAGRAPH:2]Früher bezeichnete ein Gut Vermögen oder Besitz. Daraus entwickelte sich die Bezeichnung Gut für ein großes landwirtschaftliches Anwesen. Die Güter, welche Ritter für verdienstvolle Tätigkeiten gegenüber ihrem König erhielten, wurden auch Rittergut genannt. In Norddeutschland, vor allem in Schleswig-Holstein, gab es dafür auch die Bezeichnung Adliges Gut.[PARAGRAPH:2]Im Rahmen der Grundherrschaft hatte ein Gutshof in der Rolle des Fronhofs weitreichende Kompetenzen. Beispielsweise ging von hier, das heißt vom Gutsherrn, die Patrimonialgerichtsbarkeit aus, in Preußen sogar bis ins 19. Jahrhundert hinein.[PARAGRAPH:2]Im Laufe der Zeit löste sich die Bezeichnung als Ritter- oder adliges Gut von den Besitzverhältnissen und stellte lediglich noch die Bezeichnung für ein mit bestimmten Rechten ausgestattetes landwirtschaftliches Unternehmen dar, das durchaus auch Bürgerlichen gehören konnte.</German>
+		<German>[TAB]Als Herrenhaus wird ein von Landadligen oder Gutsherren bewohntes Gebäude bezeichnet, soweit es sich dabei nicht um ein Schloss handelt; die Bezeichnungen werden jedoch häufig synonym, besonders für große, künstlerisch gestaltete Anlagen benutzt. Im eigentlichen Sinne ist ein Herrenhaus ein Wohngebäude aus adligem Besitz, das nicht durch den Landesherrn bewohnt wurde.[PARAGRAPH:2]Das Herrenhaus und das Schloss unterscheiden sich weniger durch ihre Bewohner, als durch ihre Funktion. Das Herrenhaus ist immer der Mittelpunkt des Gutes, wie das Rittergut, Weingut oder Adelsgut, also gewissermaßen eines historischen landwirtschaftlichen Betriebes, einer Gutsherrschaft. Der Gutsherr - der dem Adel entstammen konnte, aber nicht musste - war nicht nur Landbesitzer und Arbeitgeber, sondern er konnte auf seinem Gut in der Regel auch Recht sprechen und Urteile fällen. Die Arbeiter waren meist Leibeigene, die dem Gutsherrn vollkommen unterstellt waren. Die Unterschiede zwischen Herrenhaus und Schloss liegen daher im funktionellen Bereich: Ein kleines Gut eines nicht-adligen Herrn besitzt nur ein Herrenhaus, das Herrenhaus eines adligen Gutsherrn kann auch als Schloss bezeichnet werden. Dient ein adliges Schloss lediglich repräsentativen Zwecken und verfügt über keinen Gutsbetrieb, ist es nie ein Herrenhaus. Ist das Herrenhaus des nicht-adligen Herrn besonders groß und ebenso künstlerisch gestaltet, wird es meist umgangssprachlich zum Schloss geadelt.[PARAGRAPH:2]Die bauliche Entwicklung der Herrenhäuser setzte mit der Entstehung der landwirtschaftlichen Güter (vergleiche: Meierhof) um 1500 ein. Ursprünglich handelte es sich um schlichte aber massive Wohnhäuser, die den Mittelpunkt der Gutsanlagen bildeten. In den Dokumenten historischer Archivbestände werden diese Häuser daher oft als Festes Haus bezeichnet. Meist hatten sie einen Feldsteinsockel und einen Fachwerkaufbau, teilweise einen Gewölbekeller und als Anbau einen Treppenturm. In der ersten Hälfte des 17. Jahrhunderts setzte sich der Ziegelstein für die Außenmauern durch. Über zweiflügelige Anlagen entwickelte sich das Herrenhaus zum die umliegende Landschaft auch optisch beherrschenden Dreiflügelhaus weiter. Im Wiederaufbau nach dem Dreißigjährigen Krieg wurde das Herrenhaus zum Zentralbau größerer Hofanlagen. Ihm vorangestellt war häufig ein Torhaus, das den Eingang zur Anlage bildete.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -462,7 +462,7 @@
 		<Tag>TXT_KEY_BUILDING_TAVERN</Tag>
 		<English>Tavern</English>
 		<French>Tavern</French>
-		<German>Kneipe</German>
+		<German>Schänke</German>
 		<Italian>Taverna</Italian>
 		<Spanish>Tavern</Spanish>
 		<Russian>Tavern</Russian>
@@ -471,7 +471,7 @@
 		<Tag>TXT_KEY_BUILDING_TAVERN_PEDIA</Tag>
 		<English>[TAB]A tavern is a place of business where people gather to drink alcoholic beverages and be served food, and in some cases, where travelers receive lodging. An inn is a tavern which has a license to put up guests as lodgers. The word derives from the Latin taberna and the Greek ???????/taverna, whose original meaning was a shed or workshop. In the English language the tavern was an establishment which served wine whilst the inn served beer/ale. Over time, the words tavern and inn became interchangeable and synonymous with one another. Travelers stayed in taverns.</English>
 		<French>.</French>
-		<German>[TAB]Die Kneipe ist eine Gaststätte, die hauptsächlich dem Konsum von Bier, aber auch anderen alkoholischen und nicht-alkoholischen Getränken dient. Der formalere Begriff für "Kneipe" ist "Schankwirtschaft", im Gegensatz zu "Speisewirtschaft" (Restaurant). Da in Kneipen häufig auch kleine Speisen angeboten werden, ist die Grenze zum Restaurant fließend. Die Bezeichnung ist eine Verkürzung des Begriffs Kneipschenke, die bereits im 18. Jahrhundert existierte. Dabei handelte es sich um Räumlichkeiten, die so eng waren, dass die Gäste zusammengedrückt sitzen mussten. Der Begriff kneipen für dieses Zusammendrücken stammt vom Mittelhochdeutschen Wort knipen (eine andere Form davon ist kneifen).</German>
+		<German>[TAB]Schänke ist die historische Bezeichnung für eine Gaststätte mit Krugrecht. Die Schreibweisen "Schenke" (zu "ausschenken") und "Schänke" (zu "Ausschank") sind gleichermaßen zulässig.[PARAGRAPH:2]Das Krugrecht bezeichnet das spätmittelalterliche Recht zur gewerblichen Bewirtung von Gästen in einer Gaststätte ("Krug"). Dies beinhaltete jedoch nicht das Recht zur Beherbergung.[PARAGRAPH:2]Der Inhaber des Krugrechts wurde auch als Krüger (daher der Nachname) bezeichnet. Früher wurde dem beauftragten Gründer eines Dorfes (Lokator) meist neben dem Mahlrecht auch das Krugrecht verliehen. Später wurde das Krugrecht meist vom Dorfschulzen ausgeübt. Oft war es auch mit der Braugerechtsame gekoppelt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -498,7 +498,7 @@
 		<Tag>TXT_KEY_BUILDING_JEWELER</Tag>
 		<English>Jeweler</English>
 		<French>Bijoutier</French>
-		<German>Juwelier</German>
+		<German>Goldschmied</German>
 		<Italian>Gioielleria</Italian>
 		<Spanish>Joyería</Spanish>
 		<Russian>&#222;&#226;&#229;&#235;&#232;&#240;</Russian>
@@ -642,7 +642,7 @@
 		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
 		<English>Infirmary</English>
 		<French>Infirmerie</French>
-		<German>Krankenhaus</German>
+		<German>Hospital</German>
 		<Italian>Infermeria</Italian>
 		<Spanish>Enfermería</Spanish>
 		<Russian>&#203;&#224;&#231;&#224;&#240;&#229;&#242;</Russian>
