@@ -17,7 +17,7 @@
 		<Tag>TXT_KEY_DN_GER01</Tag>
 		<English>Kingdom of Germany</English>
 		<French>Royaume de Germanie</French>
-		<German>Königreich Deutschland</German>
+		<German>Deutsches Königreich</German>
 		<Italian>Regno di Germania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -26,7 +26,7 @@
 		<Tag>TXT_KEY_DN_GER02</Tag>
 		<English>Kingdom of Germany</English>
 		<French>Royaume de Germanie</French>
-		<German>Königreich Deutschland</German>
+		<German>Deutsches Königreich</German>
 		<Italian>Regno di Germania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -53,7 +53,7 @@
 		<Tag>TXT_KEY_DN_GER05</Tag>
 		<English>Republic of Germany</English>
 		<French>R&#233;publique de Germanie</French>
-		<German>Republik Deutschland</German>
+		<German>Deutsche Republik</German>
 		<Italian>Repubblica di Germania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -89,7 +89,7 @@
 		<Tag>TXT_KEY_DN_GER09</Tag>
 		<English>Islamic Republic of Germany</English>
 		<French>R&#233;publique Islamique de Germanie</French>
-		<German>Islamische Republik Deutschland</German>
+		<German>Deutsche Islamische Republik</German>
 		<Italian>Repubblica Islamica di Germania</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de Alemania</Spanish>
 		<Russian></Russian>
@@ -98,7 +98,7 @@
 		<Tag>TXT_KEY_DN_GER10</Tag>
 		<English>Exarchate of Germania</English>
 		<French>Exarchat de Germanie</French>
-		<German>Exarchat Germanien</German>
+		<German>Exarchat Germania</German>
 		<Italian>Esarcato di Germania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -116,7 +116,7 @@
 		<Tag>TXT_KEY_DN_GER12</Tag>
 		<English>Emirate of Germany</English>
 		<French>Emirat de Germanie</French>
-		<German>Emirat Deutschland</German>
+		<German>Emirat Germania</German>
 		<Italian>Emirato di Germania</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -161,7 +161,7 @@
 		<Tag>TXT_KEY_DN_GER18</Tag>
 		<English>German Counties</English>
 		<French>Comt&#233;es de Germanie</French>
-		<German>Grafschaften Deutschlands</German>
+		<German>Deutsche Grafschaften</German>
 		<Italian>Contea di Germania</Italian>
 		<Spanish>Condado de Alemania</Spanish>
 		<Russian></Russian>
@@ -170,7 +170,7 @@
 		<Tag>TXT_KEY_DN_GER19</Tag>
 		<English>Northern Great Germany</English>
 		<French>Grande Germanie du Nord</French>
-		<German>Nördliches Groß-Deutschland</German>
+		<German>Großdeutsches Reich Nord</German>
 		<Italian>Grande Germania del Nord</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -188,7 +188,7 @@
 		<Tag>TXT_KEY_DN_GER21</Tag>
 		<English>Province of Germany</English>
 		<French>Province de Germanie</French>
-		<German>Provinz Deutschland</German>
+		<German>Provinz Germanien</German>
 		<Italian>Provincia di Germania</Italian>
 		<Spanish>Provincia de Germania</Spanish>
 		<Russian></Russian>

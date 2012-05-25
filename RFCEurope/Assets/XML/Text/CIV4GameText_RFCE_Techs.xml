@@ -989,7 +989,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Hochseeschifffahrt</Text>
+			<Text>Schiffstechnik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -1014,7 +1014,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Bronzeverarbeitung</Text>
+			<Text>Bronzeguss</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
