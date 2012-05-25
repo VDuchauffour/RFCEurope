@@ -6,37 +6,10 @@
 <!-- Game Text - RFCE Civics -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_CIVICOPTION_EXPANSION</Tag>
-		<English>Expansion</English>
-		<French>Expansion</French>
-		<German>Expansion</German>
-		<Italian>Espansione</Italian>
-		<Spanish>Expansi&#243;n</Spanish>
-		<Russian></Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Tag>
-		<English>Lower unit costs and happiness from castles</English>
-		<French></French>
-		<German>Geringerer Einheitenunterhalt und Zufriedenheit durch Burgen</German>
-		<Italian>Costo delle unità più basso e felicità dai castelli</Italian>
-		<Spanish></Spanish>
-		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
-		<English>Happiness from military units; culture from specialists; faster great generals</English>
-		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French>
-		<German>[ICON_HAPPY] durch Militäreinheiten; [ICON_CULTURE] durch Spezialisten; schneller Große Feldherren [ICON_GREAT_GENERAL]</German>
-		<Italian>Felicità dalle unità militari; cultura dagli specialisti; velocizza la nascita di grandi generali</Italian>
-		<Spanish></Spanish>
-		<Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
 		<English>"We Love the Despot Day"</English>
 		<French></French>
-		<German>"Wir Lieben den Tag des Despoten"</German>
+		<German>"Feiern zu Ehren des Despoten"</German>
 		<Italian>"Viva il Giorno del Despota"</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
@@ -45,235 +18,56 @@
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_KING</Tag>
 		<English>"We Love the King Day"</English>
 		<French></French>
-		<German>"Wir Lieben den Tag des Königs"</German>
+		<German>"Feiern zu Ehren des Königs"</German>
 		<Italian>"Viva il Giorno del Re"</Italian>
 		<Spanish></Spanish>
 		<Russian></Russian>
 	</TEXT>
+	<!-- Civic Category Government -->
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
-		<English>Can use gold to rush production; +1 hammer from towns</English>
-		<French>Peut utiliser l'Or pour terminer la production</French>
-		<German>Kann Gold zur Produktionsbeschleunigung nutzen; +1 [ICON_PRODUCTION] von Städten</German>
-		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
-		<Spanish></Spanish>
-		<Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
+		<Tag>TXT_KEY_CIVICOPTION_GOVERNMENT</Tag>
+		<English>Government</English>
+		<French>Gouvernement</French>
+		<German>Regierung</German>
+		<Italian>Governo</Italian>
+		<Spanish>Gobierno</Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
-		<English>Can levy units</English>
-		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French>
-		<German>Kann Einheiten rekrutieren</German>
-		<Italian>Può richiamare alla leva le unità</Italian>
-		<Spanish></Spanish>
-		<Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian>
+		<Tag>TXT_KEY_CIVIC_DESPOTISM</Tag>
+		<English>Despotism</English>
+		<French>Despotisme</French>
+		<German>Despotismus</German>
+		<Italian>Dispotismo</Italian>
+		<Spanish>Despotismo</Spanish>
+		<Russian>&#196;&#229;&#241;&#239;&#238;&#242;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
-		<English>Unlimited priests and faster great people; unhappiness with non-state religions</English>
-		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French>
-		<German>unbegrenzt Priester und schneller Große Persönlichkeiten; Unzufriedenheit durch Nicht-Staatsreligionen</German>
-		<Italian>Sacerdoti illimati e i grandi generali nascono più in fretta; infelicità dalle religioni non-ufficiali</Italian>
-		<Spanish></Spanish>
-		<Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian>
+		<Tag>TXT_KEY_CIVIC_DESPOTISM_PEDIA</Tag>
+		<English>[TAB]Despotism is a form of government characterized by a ruler who wields absolute power over his people. Despite the word's negative connotations, a leader doesn't necessarily have to be a corrupt, evil megalomaniac to be a despot; it is possible to be a benevolent despot, though history records few cases of such. [PARAGRAPH:2]The strength of this form of government is that the ruler can easily implement his decisions; he does not need to compromise, cajole, or bribe anyone to get the job done. The weakness of this form of government is that the ruler can implement bad decisions just as easily as good ones; with no checks and balances, how can he be stopped? Also, there is a lot of truth in the old saying, "Power corrupts; absolute power corrupts absolutely." And though as said before, despots don't need to be corrupt, evil megalomaniacs, many of them end up that way.</English>
+		<French>[TAB]Le despotisme est une forme de gouvernement au sein duquel le dirigeant d&#233;tient le pouvoir absolu sur son peuple. Contrairement &#224; ce que l'on pense, un despote n'est pas forc&#233;ment un m&#233;galomane corrompu et mauvais. Le monde a connu des despotes bienveillants, m&#234;me s'il y en a eu peu. [PARAGRAPH:2]La force de ce type de gouvernement r&#233;side dans le fait que le dirigeant peut imposer facilement ses d&#233;cisions, sans passer par des compromis, des cajoleries ou des pots de vins. La faiblesse de ces r&#233;gimes r&#233;side dans le fait que le dirigeant peut aussi facilement imposer ses mauvaises d&#233;cisions puisqu'il n'y a pas de contre-pouvoirs. De plus, il y a une certaine v&#233;rit&#233; dans l'expression : "le pouvoir corrompt, le pouvoir absolu corrompt absolument." Et m&#234;me si les despotes ne sont pas n&#233;cessairement corrompus, beaucoup d'entre eux finissent par le devenir t&#244;t ou tard.</French>
+		<German>[TAB]Der Despotismus ist eine Willk&#252;rherrschaft, bei der ein Herrscher absolute Macht &#252;ber sein Volk aus&#252;bt. Trotz der eher negativen Belegung des Wortes ist dieser Herrscher allerdings nicht zwingend korrupt, b&#246;se und gr&#246;&#223;enwahnsinnig. Es hat im Laufe der Menschheitsgeschichte durchaus (wenn auch nur wenige) g&#252;tige Despoten gegeben. [PARAGRAPH:2]Der Vorteil dieser Regierungsform ist die einfache Umsetzbarkeit der Vorstellungen des Herrschers. Dieser muss keine Kompromisse eingehen und mit niemandem verhandeln, um seinen Willen durchzusetzen. Allerdings gilt dies f&#252;r segensreiche UND schlechte Entscheidungen, da diese von keiner gleichberechtigten oder &#252;bergeordneten Instanz in Frage gestellt werden. Daher ist das alte Sprichwort: "Macht korrumpiert, absolute Macht korrumpiert absolut" leider in aller Regel zutreffend. Fr&#252;her oder sp&#228;ter verliert auch der g&#252;tigste Despot seinen Sinn f&#252;r die Realit&#228;t.</German>
+		<Italian>[TAB]Il dispotismo &#232; una forma di governo nella quale un sovrano esercita un potere assoluto sul proprio popolo. Malgrado le connotazioni negative della parola, un despota non deve essere necessariamente corrotto o agire da pazzo megalomane; sono esistiti anche despoti benevoli, malgrado nel corso della storia non se ne siano visti molti. [PARAGRAPH:2]La forza di questa forma di governo &#232; che il sovrano pu&#242; mettere in pratica facilmente le proprie decisioni: non ha bisogno di corrompere, lusingare o scendere a compromessi con nessuno. La debolezza di questo tipo di governo, invece, &#232; che il sovrano pu&#242; rischiare di agire in modo errato quanto giusto e senza contrappesi, chi &#232; in grado di fermarlo? Inoltre, c'&#232; del vero nel vecchio detto "il potere corrompe; il potere assoluto ti corrompe assolutamente". E, come detto in precedenza, sebbene un sovrano non debba per forza essere malvagio o megalomane, molti sono finiti cos&#236;.</Italian>
+		<Spanish>[TAB]El despotismo es una forma de gobierno caracterizada por la presencia de un gobernante que ejerce un poder absoluto sobre su pueblo. A pesar de las connotaciones negativas de la palabra, el l&#237;der no tiene por qu&#233; ser necesariamente un megal&#243;mano corrupto y malvado. Es posible ser un d&#233;spota benevolente, aunque la historia no ha registrado demasiados casos. [PARAGRAPH:2]La principal ventaja de esta forma de gobierno radica en que el gobernante puede poner en pr&#225;ctica sus decisiones con facilidad. No necesita convencer, seducir o sobornar a nadie para conseguirlo. Su debilidad estriba en que las malas decisiones son igualmente f&#225;ciles de impulsar. Sin equilibrios ni contrapoderes, nadie puede detener al d&#233;spota. Adem&#225;s, hay mucha verdad en el antiguo dicho que asegura, "el poder corrompe, y el poder absoluto corrompe absolutamente". Y, aunque tal como se ha dicho antes, los d&#233;spotas no tienen por qu&#233; ser megal&#243;manos corruptos y malvados, muchos de ellos acaban si&#233;ndolo.</Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
-		<English>Faster great people. Higher military support costs</English>
-		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French>
-		<German>.</German>
-		<Italian>Velocizza la nascita di Grandi Personaggi. Aumenta i costi di supporo delle unità</Italian>
-		<Spanish></Spanish>
-		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Russian>
+		<Tag>TXT_KEY_CIVIC_DESPOTISM_STRATEGY</Tag>
+		<English>The most primitive Government civic</English>
+		<French>La forme la plus primitive de doctrine politique.</French>
+		<German>Die einfachste Regierungs-Staatsform des Spiels.</German>
+		<Italian>La forma di Governo pi&#249; primitiva</Italian>
+		<Spanish>El principio de gobierno m&#225;s primitivo.</Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
-		<English>+100% growth to cottages, hamlets, and villages; +2 gold from towns.</English>
-		<French>+100%% de croissance des cottages, hameaux et villages.</French>
-		<German>.</German>
-		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
-		<Spanish></Spanish>
-		<Russian>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
-		<English>Unlimited artists, scholars, and merchants; workshops give extra production</English>
-		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French>
-		<German>.</German>
-		<Italian>Artisti, scienziati e mercanti illimitati; le botteghe danno produzione extra</Italian>
-		<Spanish></Spanish>
-		<Russian>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
-		<English>Extra commerce and production from cities; penalty for other civs not adopting this</English>
-		<French>Amelioration du commerce et de la production depuis les villes</French>
-		<German>.</German>
-		<Italian>Più commercio e produzione dalle città; penalità per le civiltà che non la adottano</Italian>
-		<Spanish></Spanish>
-		<Russian>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
-		<English>-1 trade route, gold from farms</English>
-		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French>
-		<German>.</German>
-		<Italian>-1 rotta commerciale, oro dalle fattorie</Italian>
-		<Spanish></Spanish>
-		<Russian>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
-		<English>Good for trade; bad for war</English>
-		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French>
-		<German>.</German>
-		<Italian>Buona per il commercio; pessima per la guerra</Italian>
-		<Spanish></Spanish>
-		<Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
-		<English>Cities with State Religion train units faster</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>Le città con Religione Ufficiale addestrano più velocemente le unità</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
-		<English>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Tag>
-		<English>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Tag>
-		<English>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Tag>
-		<English>[TAB]In a republic, the head of state is not a monarch and there are no legal privileges for the nobility. The exact form of government can vary widely, from absolute despotism to direct democracy, but the most important difference between a republic and any form of monarchy is the much-diminished role of family and lineage in government.[PARAGRAPH:2]Before the French Revolution, a republic in Europe was an aberration. The state enjoyed none of the external security provided by royal family ties. Internally, the succession was decided to some extent by merit, even if this often meant merely that the man with the best ability to take power would do so.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_PEDIA</Tag>
-		<English>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_PEDIA</Tag>
-		<English>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_PEDIA</Tag>
-		<English>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Tag>
-		<English>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Tag>
-		<English>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_LABOR_PEDIA</Tag>
-		<English>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Tag>
-		<English>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Tag>
-		<English>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Tag>
-		<English>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Tag>
-		<English>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Tag>
-		<English>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</English>
-		<French>.</French>
-		<German>.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY</Tag>
+		<English>Feudal Monarchy</English>
+		<French>Monarchie féodale</French>
+		<German>Absolute Monarchie</German>
+		<Italian>Monarchia Feudale</Italian>
+		<Spanish>Monarquía feudal</Spanish>
+		<Russian>&#221;&#235;&#229;&#234;&#242;&#238;&#240;&#224;&#242;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_PEDIA</Tag>
@@ -285,6 +79,33 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Tag>
+		<English>Lower unit costs and happiness from castles</English>
+		<French></French>
+		<German>Geringerer Einheitenunterhalt und Zufriedenheit durch Burgen</German>
+		<Italian>Costo delle unità più basso e felicità dai castelli</Italian>
+		<Spanish></Spanish>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feduale[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY</Tag>
+		<English>Divine Monarchy</English>
+		<French>Monarchie Divine</French>
+		<German>G&#246;ttliche Monarchie</German>
+		<Italian>Monarchia Divina</Italian>
+		<Spanish>Adivine Monarquía</Spanish>
+		<Russian>&#193;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_PEDIA</Tag>
 		<English>[TAB]The theory of divine monarchy, or the divine right of kings, holds that monarchs derive their legitimacy from the will of God, and that any limitation of the king's power is therefore against the will of God. This provided a justification for absolute monarchs of Western Europe to overrule other social groups, including the nobility and the church itself.[PARAGRAPH:2]The doctrine was popular among both Protestant and Catholic kings, and similar concepts existed elsewhere. The common thread was simply that they sought to govern without regard to the will of the established and often powerful elite classes.</English>
 		<French>.</French>
@@ -292,6 +113,797 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
+		<English>Happiness from military units; culture from specialists; faster great generals</English>
+		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French>
+		<German>Gesteigerte Zufriedenheit durch Militäreinheiten in Städten; Kultur durch Spezialisten; höhere Wahrscheinlichkeit des Auftretens eines  [COLOR_UNIT_TEXT]Große Feldherren[COLOR_REVERT]</German>
+		<Italian>Felicità dalle unità militari; cultura dagli specialisti; velocizza la nascita di grandi generali</Italian>
+		<Spanish></Spanish>
+		<Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Theocracy, State Religion, Organized Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Theokratie, Staatsreligion, Organisierte Religion, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Religione Organizzata, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libertà religiosa[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
+		<English>Limited Monarchy</English>
+		<French>Monarchie Constitutionnelle</French>
+		<German>Konstit. Monarchie</German>
+		<Italian>Monarchia Costituzionale</Italian>
+		<Spanish>Monarquía constitucional</Spanish>
+		<Russian>&#202;&#238;&#237;&#241;&#242;&#232;&#242;&#243;&#246;&#232;&#238;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Tag>
+		<English>[TAB]A constitutional monarchy is a form of government in which a king or queen reigns with limits to their power along with a governing body (i.e. Parliament), giving rise to the modern adage "the Queen reigns but does not rule". In constitutional monarchies the position of monarch may be hereditary, hence the need for a royal family, or elected.[PARAGRAPH:2]The English monarchy is considered the oldest of modern constitutional monarchies, and the model for this form of government in the English-speaking world. A constitutional monarchy was able to form in England across different periods of history for a complex combination of reasons: sometimes due to a lack of strong leadership, and at other times due to strong leaders short of funding, who needed to raise money to prosecute wars, and needed to address public grievances to ensure this money was forthcoming.[PARAGRAPH:2]Historically, the English were divided on the question of the origins and justification for monarchy, but the Continental and Scottish belief in the "Divine Right of Kings" gradually gave ground to modern social-contract philosophy. The Magna Carta in 1215 is considered the first codification of the monarchy as a contract among territorial chiefs.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
+		<English>Can use gold to rush production; +1 hammer from towns</English>
+		<French>Peut utiliser l'Or pour terminer la production</French>
+		<German>Produktionsbeschleunigung durch Gold; +1 [ICON_PRODUCTION] von Kleinstädten</German>
+		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
+		<Spanish></Spanish>
+		<Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libertà Lavorativa[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Tag>
+		<English>Merchant Republic</English>
+		<French>R&#233;publique Marchande</French>
+		<German>Handelsrepublik</German>
+		<Italian>Repubblica Mercantile</Italian>
+		<Spanish>República de comerciante</Spanish>
+		<Russian>&#202;&#238;&#236;&#236;&#229;&#240;&#247;&#229;&#241;&#234;&#224;&#255; &#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Tag>
+		<English>[TAB]When the merchant class became powerful enough to influence public opinion by their actions, they sought to ensure the government would rule according to their interests. The landed aristocracy lost out as commercial goals often came into conflict with the desires of traditional domestic agriculture.[PARAGRAPH:2]Although this strife played itself out in many European states, it was in the republics of Venice and Genoa that mercantile oligarchies took power. Ruling councils ended feudal influence over taxation and spending. These states thrived on trade, but could not sustain the war economy common in medieval Europe without great cost to the interests of the government.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
+		<English>Good for trade; bad for war</English>
+		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French>
+		<German>Positiv für den Handel; Negativ für den Krieg</German>
+		<Italian>Buona per il commercio; pessima per la guerra</Italian>
+		<Spanish></Spanish>
+		<Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 4 cities[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 4 Städten[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 4 città[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<!-- Civic Category Government -->
+	<!-- Civic Category Legal -->
+	<TEXT>
+		<Tag>TXT_KEY_CIVICOPTION_LEGAL</Tag>
+		<English>Legal</English>
+		<French>Justice</French>
+		<German>Recht</German>
+		<Italian>Sistema legale</Italian>
+		<Spanish>Sistema legal</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW</Tag>
+		<English>Tribal Law</English>
+		<French>Loi Tribale</French>
+		<German>Stammesgesetz</German>
+		<Italian>Legge Tribale</Italian>
+		<Spanish>Ley tribal</Spanish>
+		<Russian>&#208;&#238;&#228;&#238;&#226;&#238;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_PEDIA</Tag>
+		<English>[TAB]After the fall of Rome, Europe reverted to local rule by local rulers. Codes of laws were applied arbitrarily where they even existed. The ordinary person had no conception of rights, and no entitlement to such rights, even in theory.[PARAGRAPH:2]The philosopher Thomas Hobbes wrote that human life without government is a "war of all against all"; much the same can be said for arbitrary government. Society cannot enact higher concepts such as justice and fairness. And without property rights, individuals have no interest in making long-term investments whose payoff they will never enjoy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_STRATEGY</Tag>
+		<English>The most primitive Legal civic</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW</Tag>
+		<English>Feudal Law</English>
+		<French>Loi F&#233;odale</French>
+		<German>Lehnswesen</German>
+		<Italian>Legge Feudale</Italian>
+		<Spanish>Ley feudal</Spanish>
+		<Russian>&#212;&#229;&#238;&#228;&#224;&#235;&#252;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_PEDIA</Tag>
+		<English>[TAB]Feudal law is the framework within which most medieval European societies operated. Under feudalism, the individual's position in society depended on his family and his family's land, and these would stay the same from generation to generation.[PARAGRAPH:2]Each man, from peasant to king, owes certain basic duties to those above and below him in the chain. The vassal must swear fealty to his lord, and the lord must protect his vassal from others. Government power of every sort is highly decentralised. Though far from a system of equal rights under one law, feudalism did create a balance of power among the classes in which Europe operated until the rise of free cities and merchants in the High Middle Ages.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
+		<English>Can levy units</English>
+		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French>
+		<German>Rekrutierung von Einheiten</German>
+		<Italian>Può richiamare alla leva le unità</Italian>
+		<Spanish></Spanish>
+		<Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Absolute Monarchie, Leibeigenschaft, Grundherrschaft[COLOR_REVERT], Instabil mit [COLOR_RED]Handelsrepublik, Bauernbefreiung[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Feudale, Servitù, Manorialismo[COLOR_REVERT], Instabile con [COLOR_RED]Repubblica Mercantile, Contadini Liberi[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_BUREAUCRACY</Tag>
+		<English>Bureaucracy</English>
+		<French>Bureaucratie</French>
+		<German>B&#252;rokratie</German>
+		<Italian>Burocrazia</Italian>
+		<Spanish>Burocracia</Spanish>
+		<Russian>&#193;&#254;&#240;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_PEDIA</Tag>
+		<English>[TAB]Bureaucracy is a form of government in which a professional class manages the day to day operations of the government. They collect the taxes. They build the roads. They turn the ruler's wishes into actuality. The Chinese mandarins are an early example of a bureaucracy; the motor vehicle agency of your local government is a later example. [PARAGRAPH:2]Bureaucracies provide a certain amount of stability and competence to a government, ensuring that the government will continue to operate efficiently even if the old ruler is thrown out and a new and totally inexperienced ruler takes his or her place. Over time, though, a bureaucracy may become "entrenched" - growing in size and inefficiency to the point where it is extremely difficult for a leader to accomplish anything - good or ill.</English>
+		<French>[TAB]La bureaucratie est une forme de gouvernement par laquelle une classe de professionnels dirige les op&#233;rations quotidiennes du gouvernement. Ils collectent les imp&#244;ts, construisent les routes et mettent en oeuvre les souhaits des dirigeants. Les mandarins chinois sont un des premiers exemples de bureaucratie. Les Directions R&#233;gionales du Commerce Ext&#233;rieur en sont un autre, plus r&#233;cent. [PARAGRAPH:2]La bureaucratie assure une certaine stabilit&#233; du pouvoir et met des comp&#233;tences au service des gouvernements. Ainsi, m&#234;me lorsqu'un dirigeant inexp&#233;riment&#233; arrive au pouvoir, le gouvernement continue de fonctionner avec une certaine efficacit&#233;. Cependant, la bureaucratie a tendance &#224; prolif&#233;rer et &#224; perdre en efficacit&#233;, au point de paralyser quelque peu le pouvoir et de l'emp&#234;cher de r&#233;aliser quoi que ce soit.</French>
+		<German>[TAB]In einer B&#252;rokratie lenken Beamte im Namen eines Herrschers die Geschicke der Regierung. Sie erheben Steuern, bauen Stra&#223;en und setzen die Vorstellungen des Herrschers in die Tat um. Der chinesische Mandarin ist ebenso ein typischer Vertreter einer B&#252;rokratie, wie das Verkehrsamt einer Kommunalregierung. [PARAGRAPH:2]Eine B&#252;rokratie garantiert die Stabilit&#228;t und Kontinuit&#228;t einer Regierung und erm&#246;glicht auch nach deren Absetzung eine Fortsetzung der Regierungsgesch&#228;fte. Wird der b&#252;rokratische Apparat eines Landes zu gro&#223;, kann dies im Extremfall die v&#246;llige Handlungsunf&#228;higkeit des Staatsoberhauptes nach sich ziehen.</German>
+		<Italian>[TAB]La burocrazia &#232; una forma di gestione politica nella quale una classe di professionisti gestisce le operazioni quotidiane di un governo: si possono costruire strade, riscuotere le tasse, realizzare i desideri del proprio governante. I Mandarini Cinesi sono uno dei primi esempi di burocrazia; la motorizzazione civile delle nostre nazioni &#232; l'esempio della burocrazia odierna. [PARAGRAPH:2]Le burocrazie garantiscono la stabilit&#224; e la competenza di un governo, assicurandone il funzionamento efficiente persino nella successione tra un vecchio leader in favore di uno nuovo totalmente inesperto. Nel corso del tempo, la burocrazia pu&#242; trasformarsi in una "trincea": con l'espansione della burocrazia, infatti, aumenta di conseguenza l'inefficienza del sistema al punto che, per un leader, diventa impossibile compiere qualsiasi azione, nel bene e nel male.</Italian>
+		<Spanish>[TAB]La burocracia es una forma de gobierno en la que una clase profesional administra las tareas cotidianas del gobierno. Recauda los impuestos. Construye las carreteras. Convierte los deseos del gobernante en realidad. Los mandarines chinos representan un ejemplo antiguo de burocracia; el departamento de tr&#225;fico de cualquier municipio es un ejemplo m&#225;s moderno. [PARAGRAPH:2]La burocracia proporciona ciertas dosis de estabilidad y competencia a los gobiernos, y garantiza que contin&#250;en funcionando con eficacia aun cuando el gobernante es expulsado y reemplazado por alguien totalmente inexperto en las tareas de gobierno. Con el tiempo, tiende a "atrincherarse", esto es, a crecer y atrofiarse, hasta el punto de que los gobernantes acaban por tener dificultades para implantar cualquier medida, sea buena o mala.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_STRATEGY</Tag>
+		<English>Increases production and commerce in your capital city</English>
+		<French>Augmente la production et le commerce dans votre capitale.</French>
+		<German>Steigert die Produktion und st&#228;rkt die Wirtschaft in Ihrer Hauptstadt.</German>
+		<Italian>Aumenta la produzione e il commercio della capitale</Italian>
+		<Spanish>Aumentan la producci&#243;n y el comercio en la capital.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 5 cities[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 5 Städten[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 5 città[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>
+		<English>Religious Law</English>
+		<French>Loi Religieuse</French>
+		<German>Kirchenrecht</German>
+		<Italian>Legge Religiosa</Italian>
+		<Spanish>Ley de Relisious</Spanish>
+		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_PEDIA</Tag>
+		<English>[TAB]Many organised religions have extensive codes or bodies of law to govern their internal affairs. In some societies, these legal systems are accepted as the principles which will govern the nation as a whole. A legal system in which religious principles determine secular law tends to mean an intermingling of the affairs of church and state.[PARAGRAPH:2]Canon law exists in those Christian churches with a centralised hierarchy, like Catholicism and Anglicanism. Though not widespread in Christendom, it did apply in religious communities instead of secular laws. The Islamic jurisprudence, or fiqh, has produced a body of work that lasts continuously from the time just after the Qur'an to the present day.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
+		<English>Unlimited priests and faster great people; unhappiness with non-state religions</English>
+		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French>
+		<German>Ernennung unbegrenzt vieler Priester; verbessert die Wahrscheinlichkeit des Auftretens [COLOR_HIGHLIGHT_TEXT]Großer Persönlichkeiten[COLOR_REVERT]; Unzufriedenheit in Städten mit anderen Religionen</German>
+		<Italian>Sacerdoti illimati e i grandi generali nascono più in fretta; infelicità dalle religioni non-ufficiali</Italian>
+		<Spanish></Spanish>
+		<Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Theocracy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COMMON_LAW</Tag>
+		<English>Common Law</English>
+		<French>Loi Commune</French>
+		<German>Gewohnheitsrecht</German>
+		<Italian>Diritto Comune</Italian>
+		<Spanish>Ley no escrita</Spanish>
+		<Russian>&#206;&#225;&#249;&#229;&#229; &#207;&#240;&#224;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Tag>
+		<English>[TAB]Common law was developed by the English judiciary following the Norman conquest of 1066. Judges themselves were given great scope to develop the law beyond that set out by the legislature or executive. The term "common law" itself refers to legal precedent, the body of past decisions which are binding upon future cases.[PARAGRAPH:2]Common law allowed for reliable outcomes from the legal system even without a formal code of laws. This was of great use in early commercial economies, and the qualities of the system are shown in its resilience. To this day, in many countries which were once part of the British Empire, case law precedent (not parliamentary legislation) is the basis for the laws of contract and liability.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
+		<English>Faster great people. Higher military support costs</English>
+		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French>
+		<German>Verbessert die Wahrscheinlichkeit des Auftretens [COLOR_HIGHLIGHT_TEXT]Großer Persönlichkeiten[COLOR_REVERT]; höhere laufende Kosten für Militäreinheiten</German>
+		<Italian>Velocizza la nascita di Grandi Personaggi. Aumenta i costi di supporo delle unità</Italian>
+		<Spanish></Spanish>
+		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewerbefreiheit[COLOR_REVERT], Instabil mit [COLOR_RED]Theokratie[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Libertà Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<!-- Civic Category Legal -->
+	<!-- Civic Category Labor -->
+	<TEXT>
+		<Tag>TXT_KEY_CIVICOPTION_LABOR</Tag>
+		<English>Labor</English>
+		<French>Travail</French>
+		<German>Arbeit</German>
+		<Italian>Lavoro</Italian>
+		<Spanish>Condc. laborales</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRIBALISM</Tag>
+		<English>Tribalism</English>
+		<French>Tribalisme</French>
+		<German>Stammestum</German>
+		<Italian>Organiz. tribale</Italian>
+		<Spanish>Tribalismo</Spanish>
+		<Russian>&#210;&#240;&#224;&#233;&#225;&#224;&#235;&#232;&#231;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRIBALISM_PEDIA</Tag>
+		<English>[TAB]Tribalism is a form of organization which emphasizes the tribe as the sole unit of importance. Individuals have no rights; each man, woman and child exists only to support the tribe.  Tribalism is a fairly useful form of government for a small group of people who exist on the edge of catastrophe. In a tribe everyone knows everybody else; who is strong and who is weak, who is intelligent and who is not, who is skilled and who is unskilled. [PARAGRAPH:2]Leadership in the tribe is usually determined by merit, according to the tribe's needs: if the tribe is hungry, the best hunter becomes the leader. If the tribe is surrounded by enemies, the best warrior is chosen. And so forth. A tribe must quickly learn how to pick successful leaders; otherwise it will perish. [PARAGRAPH:2]Tribalism tends to break down when the tribe becomes overly large. People no longer know everyone in their tribe. Groups (or factions) appear, and everyone no longer share the same objectives. The tribe must find a more sophisticated system of government or fracture into smaller squabbling units.</English>
+		<French>[TAB]Le tribalisme est une forme d'organisation qui place au-dessus de tout le bien-&#234;tre de la tribu. Les individus n'ont pas de droits, les hommes et les femmes n'existent que pour le bien de la tribu. Le tribalisme est une forme de gouvernement assez efficace pour de petits groupes de gens dont la survie est pr&#233;caire. Dans la tribu, tout le monde se conna&#238;t. On sait parfaitement qui est fort, intelligent ou habile. [PARAGRAPH:2]Les dirigeants sont g&#233;n&#233;ralement d&#233;sign&#233;s au m&#233;rite, selon les besoins de la tribu : si la tribu a faim, le chef sera le meilleur chasseur, si elle est attaqu&#233;e, le meilleur guerrier prend les commandes, et ainsi de suite. Une tribu doit savoir d&#233;signer les bons dirigeants, sinon elle dispara&#238;t. [PARAGRAPH:2]Le tribalisme ne survit pas &#224; l'accroissement de la population. Les gens de la m&#234;me tribu ne se connaissent plus, des groupes (ou factions) se forment, et la population ne partage plus les m&#234;mes aspirations. La tribu doit alors se trouver une autre forme de gouvernement, ou se fractionner en petits groupes.</French>
+		<German>[TAB]Innerhalb eines Stammessystems ist allein der Stamm von Bedeutung. Der Einzelne genie&#223;t keinerlei Rechte. Jedes Stammesmitglied (ob Mann, Frau oder Kind) ist verpflichtet, den Stamm zu unterst&#252;tzen. F&#252;r eine sehr kleine Gruppe von Menschen kann das Stammessystem eine praktikable Regierungsform sein, da jeder die St&#228;rken und Schw&#228;chen des anderen kennt und dessen individuelle F&#228;higkeiten einzusch&#228;tzen wei&#223;. [PARAGRAPH:2]Das Stammesoberhaupt wird meist aufgrund seiner Verdienste bestimmt, die sich wiederum an den Bed&#252;rfnissen des Stammes orientieren. Hungert der Stamm, wird der beste J&#228;ger zum Stammesoberhaupt ernannt. Ist der Stamm von Feinden umgeben, w&#228;hlt man den besten Krieger als Stammesoberhaupt aus. Gelingt es einem Stamm nicht, ein Stammesoberhaupt zu bestimmen, ist er meist dem Untergang geweiht. [PARAGRAPH:2]Das Stammessystem bricht im Allgemeinen auseinander, wenn der Stamm zu gro&#223; wird und pl&#246;tzlich Einzelgruppen pers&#246;nliche Ziele verfolgen. Ist dies der Fall, muss der Stamm ein komplexeres Regierungssystem finden oder sich in verschiedene Gruppen aufspalten.</German>
+		<Italian>[TAB]L'organizzazione tribale &#232; una forma di ordinamento che enfatizza l'importanza totale della trib&#249;. Gli individui non hanno diritti: uomini, donne e bambini esistono unicamente per sostentare la trib&#249;. L'organizzazione tribale &#232; un tipo di governo adatto a piccoli gruppi di persone che vivono sull'orlo del baratro. In una trib&#249;, tutti si conoscono, chi &#232; forte e chi &#232; debole, chi &#232; intelligente e chi no, chi &#232; abile e chi &#232; inesperto. [PARAGRAPH:2]Il comando di una trib&#249; viene in genere determinato per merito, a seconda dei bisogni del gruppo: se la trib&#249; &#232; affamata, il miglior cacciatore diventa il capo, se la trib&#249; &#232; assediata dal nemico, viene scelto il miglior guerriero, e via discorrendo. Una trib&#249; deve imparare velocemente a saper riconoscere il leader pi&#249; adatto, altrimenti rischia di perire. [PARAGRAPH:2]L'organizzazione tribale tende a disgregarsi quando aumentano gli individui del gruppo e non tutti si conoscono pi&#249; tra loro; appaiono cos&#236; gruppi (o fazioni) e la gente non condivide pi&#249; gli stessi obiettivi. La trib&#249; deve a quel punto trovare un nuovo sistema di governo pi&#249; sofisticato oppure divedersi in piccoli gruppi in perenne disputa.</Italian>
+		<Spanish>[TAB]El tribalismo es una forma de sociedad en la que la tribu es el &#250;nico elemento importante. Los individuos carecen de derechos; los hombres, mujeres y ni&#241;os solo existen para apoyar a la tribu.  Se trata de una forma de gobierno muy &#250;til para un grupo peque&#241;o de gente que vive bajo la constante amenaza de la extinci&#243;n. En una tribu todos se conocen: se sabe qui&#233;n es fuerte y qui&#233;n es d&#233;bil, qui&#233;n es inteligente y qui&#233;n no lo es, qui&#233;n es h&#225;bil y qui&#233;n no. [PARAGRAPH:2]El liderazgo suele determinarse por un sistema de m&#233;ritos adaptado a las necesidades de la tribu; si el hambre es un problema, el mejor cazador se convierte en l&#237;der. Si la tribu est&#225; rodeada de enemigos, se elige al mejor guerrero. Y as&#237; sucesivamente. La tribu debe aprender a elegir buenos l&#237;deres; de lo contrario, est&#225; condenada a la desaparici&#243;n. [PARAGRAPH:2]El tribalismo suele dejar de funcionar cuando la tribu crece en exceso. Los miembros de la tribu ya no se conocen. Aparecen grupos (o facciones) y todos dejan de compartir los mismos objetivos. Entonces la tribu debe encontrar un sistema de gobierno m&#225;s sofisticado o fraccionarse en unidades m&#225;s peque&#241;as y hostiles entre s&#237;.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRIBALISM_STRATEGY</Tag>
+		<English>The most primitive Labor civic</English>
+		<French>La forme la plus primitive de doctrine du travail.</French>
+		<German>Die einfachste Arbeiter-Staatsform.</German>
+		<Italian>La forma di Lavoro pi&#249; primitiva</Italian>
+		<Spanish>El principio laboral m&#225;s primitivo.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SERFDOM</Tag>
+		<English>Serfdom</English>
+		<French>Servage</French>
+		<German>Leibeigenschaft</German>
+		<Italian>Servit&#249;</Italian>
+		<Spanish>Servidumbre</Spanish>
+		<Russian>&#202;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SERFDOM_PEDIA</Tag>
+		<English>[TAB]Serfdom is a more "enlightened" form of slavery in that the power of the master is not absolute and the serfs are accorded a certain number of rights. The specific rights and obligations of masters and serfs vary significantly over time and from place to place. In some societies, the master had the right to control every aspect of a serf's life except that he couldn't kill the serf without just cause; in others, the serfs had the rights to marry and to inherit wealth and to a certain amount of self-government, but they could not leave the land without their lord's permission. [PARAGRAPH:2]The basic premise of serfdom is that one group of people are superior to another, and that they have the political and god-given right to control the other group's destiny. Thus serfdom only makes sense if one agrees with the group currently in power about who is superior to whom. </English>
+		<French>[TAB]Le servage est une forme plus "&#233;clair&#233;e" d'esclavage, dans laquelle le ma&#238;tre n'a pas un pouvoir absolu, et le serf dispose de certains droits. Les droits et obligations du ma&#238;tre et de l'esclave varient de mani&#232;re significative selon l'&#233;poque et le lieu. Dans certaines soci&#233;t&#233;s, le ma&#238;tre avait le droit de contr&#244;ler tous les aspects de la vie du serf, mais ne pouvait pas le tuer sans raison. Ailleurs, les serfs avaient le droit de se marier, de transmettre leur patrimoine et disposaient d'une certaine autonomie, mais ils ne pouvaient pas quitter leur terre sans l'accord de leur seigneur. [PARAGRAPH:2]Le principe de base du servage est qu'il existe un groupe d'individus sup&#233;rieurs aux autres. Ils ont politiquement et id&#233;ologiquement le droit de contr&#244;ler la destin&#233;e des autres. Ainsi, le servage n'a de sens que si la sup&#233;riorit&#233; des uns est accept&#233;e par les autres. </French>
+		<German>[TAB]Die Leibeigenschaft ist eine Form der Sklaverei. Allerdings hat der Meister keine absolute Macht &#252;ber den Leibeigenen, zumal diesem gewisse Rechte zugestanden werden. Die Rechte und Verpflichtungen von Meister und Leibeigenem sind im Allgemeinen sehr verschieden. In einigen L&#228;ndern kontrolliert der Meister jeden Aspekt im Leben seines Leibeigenen. Lediglich dessen grundlose Ermordung ist dem Meister untersagt. In anderen L&#228;ndern darf der Leibeigene heiraten, ist erbberechtigt und in vielerlei Hinsicht sein eigener Herr. Allerdings darf er das Land ohne die Zustimmung seines Herrn nicht verlassen. [PARAGRAPH:2]Die Voraussetzung der Leibeigenschaft ist eine Gesellschaftsschicht, die das politische bzw. gottgegebene Recht hat, &#252;ber das Schicksal einer untergeordneten Schicht zu bestimmen. Daher ist die Leibeigenschaft nur praktikabel, wenn &#252;ber die herrschenden Machtverh&#228;ltnisse Klarheit besteht.</German>
+		<Italian>[TAB]La servit&#249; &#232; una forma di schiavit&#249; pi&#249; "illuminata": il potere del padrone non &#232; assoluto e al servo vengono accordati un certo numero di diritti. Obblighi e rapporti tra padrone e servo sono mutati nel corso del tempo, a seconda delle epoche e delle necessit&#224;. In alcune societ&#224;, il padrone aveva il diritto di controllare qualsiasi aspetto della vita di un servo, tranne per il fatto che non poteva ucciderlo senza una giusta causa; da altre parti invece, i servi potevano sposarsi e tentare di prosperare, senza per&#242; poter abbandonare la terra, se non con il permesso del padrone. [PARAGRAPH:2]Secondo i principi della servit&#249;, un gruppo &#232; superiore a un altro poich&#233; ha il diritto divino di controllare il destino degli altri. Questo principio &#232; valido solo se un gruppo acconsente di essere inferiore a un altro attualmente in potere.</Italian>
+		<Spanish>[TAB]La servidumbre es una forma "m&#225;s humanitaria" de esclavitud, en la que el poder del amo no es tan absoluto y los siervos conservan determinados derechos. Los derechos y obligaciones de amos y siervos variaban significativamente en funci&#243;n del tiempo y el lugar. En algunas sociedades, el amo ten&#237;a derecho a controlar todos los aspectos de la vida de sus siervos (aunque no pod&#237;a quitarles la vida sin una causa justificada), mientras que en otras los siervos ten&#237;an derecho a contraer matrimonio y heredar, y pose&#237;an un cierto grado de autogobierno, si bien no pod&#237;an abandonar la tierra sin el permiso de su amo. [PARAGRAPH:2]La premisa b&#225;sica que sustenta el sistema de servidumbre es que un grupo es superior a otro y por tanto le asiste el derecho, tanto pol&#237;tico como divino, a controlar el destino de &#233;ste. Por consiguiente, la servidumbre solo tiene sentido en caso de que todos est&#233;n de acuerdo en qui&#233;n es superior a qui&#233;n. </Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
+		<English>+1 production from farms, slower growth for cottages and great people</English>
+		<French>.</French>
+		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Gehöften und großen Persönlichkeiten</German>
+		<Italian>+1 produzione da fattorie, crescità più lenta per villete e grandi personaggi</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
+		<English>Free Peasantry</English>
+		<French>Paysannerie</French>
+		<German>Bauernbefreiung</German>
+		<Italian>Contadini Liberi</Italian>
+		<Spanish>Liberte el Campesinado</Spanish>
+		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#229; &#202;&#240;&#229;&#241;&#242;&#252;&#255;&#237;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Tag>
+		<English>[TAB]Even when feudalism prevailed throughout Europe, there were subtle differences among the national systems. In countries like England, many or all peasants enjoyed great freedoms compared to their villein or serf counterparts. Certain taxes paid by the serfs were waived for the free peasants.[PARAGRAPH:2]Instead of owing labour services or the output of land, the free peasant paid a fixed rent to his lord. This allowed much greater freedom of action, for instance, in choosing which crops to grow or in alienating the land from his family. The existence of a free peasantry created social mobility which did not exist in other societies.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
+		<English>+100% growth to cottages, hamlets, and villages; +2 gold from towns.</English>
+		<French>+100%% de croissance des cottages, hameaux et villages.</French>
+		<German>.</German>
+		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
+		<Spanish></Spanish>
+		<Russian>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
+		<English>Apprenticeship</English>
+		<French>Apprentissage</French>
+		<German>Berufslehre</German>
+		<Italian>Apprendistato</Italian>
+		<Spanish>Aprendizaje</Spanish>
+		<Russian>&#211;&#247;&#229;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Tag>
+		<English>[TAB]The guild system which developed in the late Middle Ages involved strict controls on employment in trades, so that the guild would enjoy monopoly market power. The apprenticeship system allowed control of numbers by requiring that a trainee craftsman associate himself with a "master" (the owner of a workshop) during and after his training, which could last for between five and ten years.[PARAGRAPH:2]Traders were prevented by law from working in a trade if they had not completed an apprenticeship. By requiring a master, commitment and cheap labour, the system successfully limited participation in industry, and delayed Europe's change from the traditional agricultural economy.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
+		<English>Unlimited artists, scholars, and merchants; workshops give extra production</English>
+		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French>
+		<German>.</German>
+		<Italian>Artisti, scienziati e mercanti illimitati; le botteghe danno produzione extra</Italian>
+		<Spanish></Spanish>
+		<Russian>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gilden[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Associazioni[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
+		<English>Free Labor</English>
+		<French>Libert&#233; de Travail</French>
+		<German>Gewerbefreiheit</German>
+		<Italian>Libertà Lavorativa</Italian>
+		<Spanish>Liberte Trabajo</Spanish>
+		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#240;&#224;&#225;&#238;&#247;&#224;&#255; &#209;&#232;&#235;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_LABOR_PEDIA</Tag>
+		<English>[TAB]Free labor is a system in which people do not owe a statutory duty to their employer to provide work. Work, pay, terms and conditions are determined by agreement or contract. Free labor excludes slavery, serfdom and other systems in which workers cannot end their employment.[PARAGRAPH:2]When workers can choose what they want to do every day, they can enjoy better wages and a better quality of life. Society as a whole is better-off when workers and employers match up freely rather than under coercion or by tradition. In modern Western societies, only military conscription survives as a legacy of the days of unfree labor.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
+		<English>Extra commerce and production from cities; penalty for other civs not adopting this</English>
+		<French>Amelioration du commerce et de la production depuis les villes</French>
+		<German>.</German>
+		<Italian>Più commercio e produzione dalle città; penalità per le civiltà che non la adottano</Italian>
+		<Spanish></Spanish>
+		<Russian>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Common Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewohnheitsrecht[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Legge Comune[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<!-- Civic Category Labor -->
+	<!-- Civic Category Economy -->
+	<TEXT>
+		<Tag>TXT_KEY_CIVICOPTION_ECONOMY</Tag>
+		<English>Economy</English>
+		<French>Economie</French>
+		<German>&#214;konomie</German>
+		<Italian>Economia</Italian>
+		<Spanish>Econom&#237;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION</Tag>
+		<English>Decentralization</English>
+		<French>D&#233;centralisation</French>
+		<German>Dezentralisierung</German>
+		<Italian>Decentralizzazione</Italian>
+		<Spanish>Descentralizaci&#243;n</Spanish>
+		<Russian>&#196;&#229;&#246;&#229;&#237;&#242;&#240;&#224;&#235;&#232;&#231;&#224;&#246;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION_PEDIA</Tag>
+		<English>[TAB]Decentralization describes an economy in which the central government doesn't attempt to manage every aspect of a nation's production. The government doesn't set quotas, doesn't determine exactly what the nation's farms, factories, theatres and schools will output. Each farmer determines what his or her farm will produce; each factory owner decides what to build, whether to modernize or not, and so forth. [PARAGRAPH:2]This kind of a totally freewheeling economy may seriously increase a nation's productivity. However, it may also lead to disaster - if all of the farmers decide to produce cotton then the nation's people will be very hungry - well-dressed, perhaps, but still very hungry. </English>
+		<French>[TAB]La d&#233;centralisation est un syst&#232;me au sein duquel le gouvernement central ne tente pas de g&#233;rer tous les aspects &#233;conomiques de la nation. Le gouvernement n'&#233;tablit pas de quotas, et ne fixe pas d'objectifs pour les fermes, les usines, les th&#233;&#226;tres, ou les &#233;coles de la nation. Chaque fermier d&#233;termine seul ce que produira sa ferme. Les propri&#233;taires d'usines d&#233;cident de ce qu'ils vont fabriquer, et des investissements qu'ils vont r&#233;aliser, etc. [PARAGRAPH:2]Ce genre d'&#233;conomie totalement libre peut augmenter consid&#233;rablement la productivit&#233; d'une nation. Elle peut aussi conduire au d&#233;sastre : si tous les fermiers d&#233;cident de produire du coton, les gens seront peut-&#234;tre bien habill&#233;s, mais ils risquent d'avoir faim. </French>
+		<German>[TAB]In einer dezentralisierten Volkswirtschaft &#252;berwacht bzw. reguliert die Regierung nicht mehr alle Wirtschaftsbereiche. Sie setzt keine Quoten fest und verzichtet auf eine exakte Festlegung der Arbeitsweise von Bauernh&#246;fen, Fabriken, Theatern und Schulen. Jeder Bauer bestimmt selbst, was er produziert. Jeder Fabrikant entscheidet selbst, welche Produkte er herstellt, wann er seine Anlagen modernisiert, usw. [PARAGRAPH:2]Diese Art der freien Wirtschaft kann die Produktivit&#228;t eines Landes deutlich steigern ... oder in einer Katastrophe m&#252;nden. Beschlie&#223;en n&#228;mlich alle Bauern eines Landes, Baumwolle anzupflanzen, treten fr&#252;her oder sp&#228;ter Nahrungsengp&#228;sse auf.</German>
+		<Italian>[TAB]In un sistema decentralizzato, esiste un'economia nella quale il governo centrale non tenta di gestire tutti gli aspetti della produzione di una nazione. Il governo non stabilisce delle aliquote, non determina quante scuole, fabbriche o teatri debbano essere realizzati. Ciascun lavoratore agricolo determina cosa e quanto produrr&#224; nel proprio terreno, ciascuna fabbrica decide cosa costruire, se modernizzarsi o meno e via dicendo. [PARAGRAPH:2]Questo tipo di economia completamente libera pu&#242; aumentare notevolmente la produttivit&#224; di una nazione. Tuttavia, pu&#242; anche portare al disastro: se tutti gli agricoltori decidessero di produrre cotone, presto la popolazione si ritroverebbe alla fame; tutti sarebbero ben vestiti, ma decisamente affamati.</Italian>
+		<Spanish>[TAB]El t&#233;rmino descentralizaci&#243;n describe a aquellas econom&#237;as en las que el gobierno central no trata de controlar todos los aspectos de la producci&#243;n nacional. El gobierno no establece cuotas, ni determina exactamente lo que van a producir las granjas, f&#225;bricas, teatros y escuelas del pa&#237;s. Cada granjero decide lo que va a producir su granja, cada due&#241;o de f&#225;brica decide lo que quiere fabricar, si quiere modernizar sus instalaciones, etc. [PARAGRAPH:2]La libertad econ&#243;mica total puede incrementar de forma notable la productividad de un pa&#237;s. Sin embargo, tambi&#233;n puede ser desastrosa: si todos los granjeros deciden producir algod&#243;n, el pueblo se morir&#225; de hambre... aunque muy bien vestido, eso s&#237;.  </Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION_STRATEGY</Tag>
+		<English>The most primitive Economy civic</English>
+		<French>La forme la plus primitive de doctrine &#233;conomique.</French>
+		<German>Die einfachste Wirtschafts-Staatsform</German>
+		<Italian>La forma di economia pi&#249; primitiva</Italian>
+		<Spanish>El principio econ&#243;mico m&#225;s primitivo.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MANORIALISM</Tag>
+		<English>Manorialism</English>
+		<French>Manorialisme</French>
+		<German>Grunddherrschaft</German>
+		<Italian>Manorialismo</Italian>
+		<Spanish>Señorío</Spanish>
+		<Russian>&#204;&#224;&#237;&#238;&#240;&#224;&#235;&#232;&#231;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
+		<English>[TAB]Manorialism is the organization of rural economy and society in medieval western and parts of central Europe, characterised by the vesting of legal and economic power in a lord supported economically from his own direct landholding and from the obligatory contributions of a legally subject part of the peasant population under his jurisdiction. These obligations could be payable in labour, produce ("in kind") or rarely money.[PARAGRAPH:2]The word derives from traditional inherited divisions of the countryside reassigned as local jurisdictions known as manors; each manor being subject to a lord, usually holding his position in return for undertakings offered to a higher lord. The lord held a manor court governed by public law and local custom. Not all territorial seigneurs were secular: bishops and abbots held lands that entailed similar obligations.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
+		<English>-1 trade route, gold from farms</English>
+		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French>
+		<German>.</German>
+		<Italian>-1 rotta commerciale, oro dalle fattorie</Italian>
+		<Spanish></Spanish>
+		<Russian>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Leibeigenschaft[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Servitù[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY</Tag>
+		<English>Trade Economy</English>
+		<French>Économie de marché</French>
+		<German>Marktwirtschaft</German>
+		<Italian>Economia di Mercato</Italian>
+		<Spanish>Economía de mercado</Spanish>
+		<Russian>&#195;&#232;&#235;&#252;&#228;&#232;&#232;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Tag>
+		<English>[TAB]The diversity of natural environments in Europe led to strong medieval trade. Western and southern cities demanded the raw materials of the Baltic region, in order to furnish their own customers with refined goods. Some European cities became specialised centres of this trade.[PARAGRAPH:2]A merchant marine fleet could circumvent the multitude of laws, customs and tolls that frustrated trade by land. Trading cities formed military alliances and lobbied other cities to reduce tolls. The Hanseatic League is an example of an international trade federation that wielded significant power.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS</Tag>
+		<English>Guilds</English>
+		<French>Guildes</French>
+		<German>Gilden</German>
+		<Italian>Associazioni</Italian>
+		<Spanish>Gremios</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
+		<English>[TAB]A guild is an association of people who practice the same trade. The guilds seek to protect their members' incomes, maintain standards of performance, and train new workers in the trade. Guilds have often built hospitals, orphanages and schools to serve their members. Guilds seek to expand their membership to include all who practice their profession. Such monopolies allow guilds greater control over the fees their members can charge for their services. [PARAGRAPH:2]Many of the earliest guilds - Roman professional organizations, for instance - had strong religious components. One of the earliest known Muslim guilds were formed by the "warraqeen," or "those who work with knowledge." In the ninth century these professional writers and printers worked together to ensure the quality of published material and to stop other printers from making illegal copies of the material. [PARAGRAPH:2]The European guilds came into being around 1000 AD. They included a rigid hierarchy of skilled workers - apprentice, craftsman, journeyman, master and sometimes grandmaster. The higher in the hierarchy a member was, the more the payment he could demand. This structure greatly increased the guilds' memberships, since one could not attain the higher statuses without belonging to a guild.</English>
+		<French>[TAB]Une guilde est une association d'individus exer&#231;ant le m&#234;me m&#233;tier. Elle a pour objectif de prot&#233;ger les int&#233;r&#234;ts de ses membres, de d&#233;finir des r&#232;gles de comportement et de former des professionnels. Les guildes ont souvent construit des h&#244;pitaux, orphelinats ou &#233;coles r&#233;serv&#233;s &#224; leurs membres. Elles cherchent &#224; rassembler l'ensemble des membres de leur profession. Ces monopoles permettent aux guildes de contr&#244;ler le prix des services propos&#233;s par leur profession. [PARAGRAPH:2]Les premi&#232;res guildes, comme les organisations professionnelles romaines, reposaient sur de forts principes religieux. L'une des premi&#232;res guildes musulmanes connues rassemblait les "warraqin", "ceux qui travaillent avec la connaissance". Au IXe si&#232;cle, ces &#233;crivains et imprimeurs se sont rassembl&#233;s pour assurer la qualit&#233; des publications et emp&#234;cher les copies ill&#233;gales. [PARAGRAPH:2]Les guildes europ&#233;ennes sont apparues vers l'an 1 000. La hi&#233;rarchie y &#233;tait tr&#232;s marqu&#233;e : apprentis, artisans, compagnons, ma&#238;tres et parfois m&#234;me grands ma&#238;tres. Les prix d'un membre augmentaient &#224; mesure que celui-ci s'&#233;levait dans la hi&#233;rarchie. Cette structure favorisait les adh&#233;sions, car il fallait appartenir &#224; la guilde pour pouvoir s'&#233;lever socialement.</French>
+		<German>[TAB]Die Gilde ist ein Zusammenschluss von Menschen, die dasselbe Handwerk aus&#252;ben. Ziel der Gilde ist die Sicherung des Einkommen ihrer Mitglieder, die Wahrung von Qualit&#228;tsstandards und die Ausbildung junger Handwerker. Gilden haben nicht selten Krankenh&#228;user, Waisenh&#228;user und Schulen errichtet, um ihre Mitglieder zu unterst&#252;tzen. Aufgrund ihrer Monopolstellung k&#246;nnen Gilden die L&#246;hne ihrer Mitglieder kontrollieren. [PARAGRAPH:2]Viele Gilden, wie die r&#246;mischen Berufsorganisationen, hatten eine starke religi&#246;se Komponente. Eine der ersten bekannten muslimischen Gilden wurde im 9. Jahrhundert von Schreibern und Druckern gegr&#252;ndet, die die Qualit&#228;t ihrer Werke sichern und die Herstellung von Kopien verhindern wollten. [PARAGRAPH:2]Die ersten europ&#228;ischen Gilden entstanden etwa 1000 nach Christus. Innerhalb der Gilden herrschte eine strikte Hierarchie (Lehrling, Geselle, Meister und (gelegentlich) Gro&#223;meister). Je h&#246;her ein Handwerker innerhalb der Hierarchie stand, desto mehr Lohn durfte er verlangen. Aufgrund dieser Struktur wuchs die Mitgliederzahl der Gilden stetig an, da diese die Voraussetzung f&#252;r den sozialen und wirtschaftlichen Aufstieg eines Handwerkers bildeten.</German>
+		<Italian>[TAB]Una corporazione è un gruppo di individui che pratica lo stesso commercio. Le corporazioni cercano di proteggere i guadagni dei propri membri, mantenendo standard di qualità e addestrando nuovi lavoratori al commercio. Le corporazioni hanno spesso costruito ospedali, orfanatrofi e scuole per servire i propri membri; cercano di espandere l'associazione a tutti coloro che operano nello stesso settore. Questo &quot;monopolio&quot; permette alle corporazioni di ottenere un maggiore controllo sui prezzi imposti dai membri per i propri servizi. [PARAGRAPH:2]Molte delle prime corporazioni, come le organizzazioni professionali Romane, avevano forti connotati religiosi. Una delle prime corporazioni Musulmane venne formata dai &quot;warraqeen&quot; altrimenti noti come &quot;coloro che lavorano con la conoscenza&quot;. Nel IX secolo, scrittori e stampatori professionisti lavorarono assieme per assicurarsi la qualità del materiale pubblicato e per impedire ad altri stampatori di produrre copie illegali del materiale. [PARAGRAPH:2]Le corporazioni Europee nacquero intorno al 1000 d. C.: erano formate da una rigida gerarchia di abili lavoratori, come apprendisti, artigiani, lavoratori qualificati, maestri e, a volte, gran maestri. Più alto era il ruolo occupato nella scala gerarchica, maggiori erano i pagamenti che potevano richiedere. Questa struttura aumentò notevolmente le adesioni alle corporazioni, poiché non era possibile raggiungere un ceto migliore senza appartenere a una corporazione.</Italian>
+		<Spanish>[TAB]Un gremio es una asociaci&#243;n de gente que ejerce la misma profesi&#243;n. Su finalidad es proteger los ingresos de sus miembros, mantener los niveles de calidad y ofrecer instrucci&#243;n a los nuevos trabajadores. Muchas veces, erigen hospitales, orfanatos y escuelas para uso de sus miembros. Los gremios procuran englobar a todos aqu&#233;llos que practican su profesi&#243;n. Estos monopolios permiten ejercer un mayor control sobre las tarifas que sus miembros pueden cobrar por sus servicios. [PARAGRAPH:2]Muchos de los gremios m&#225;s antiguos &#151;las organizaciones profesionales romanas, por ejemplo&#151; pose&#237;an un fuerte componente religioso. Uno de los primeros gremios musulmanes del que se tiene noticia era el formado por los "warraqeen," o "aqu&#233;llos que trabajan con el saber". En el siglo IX, estos escritores y editores profesionales se encargaban de garantizar la calidad del material publicado e impedir que otros editores hicieran copias ilegales de su material. [PARAGRAPH:2]Los gremios europeos nacieron alrededor del a&#241;o 1000 d. C. Empleaban una r&#237;gida jerarqu&#237;a de trabajadores cualificados: aprendiz, artesano, oficial, maestro y, en ocasiones, gran maestro. Cuanto m&#225;s elevada era la posici&#243;n ocupada por un miembro, mayores precios pod&#237;a cobrar. Esta estructura contribuy&#243; en gran medida al crecimiento de los gremios, puesto que nadie pod&#237;a alcanzar los niveles m&#225;s elevados de la profesi&#243;n sin pertenecer a uno.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Apprenticeship[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Berufslehre[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Apprendistato[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCANTILISM</Tag>
+		<English>Mercantilism</English>
+		<French>Mercantilisme</French>
+		<German>Merkantilismus</German>
+		<Italian>Mercantilismo</Italian>
+		<Spanish>Mercantilismo</Spanish>
+		<Russian>&#204;&#229;&#240;&#234;&#224;&#237;&#242;&#232;&#235;&#232;&#231;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCANTILISM_PEDIA</Tag>
+		<English>[TAB]Mercantilism refers to government policy that strictly manages the nation's production. The government determines which farmers produce which crops, decides who will be allowed to sew pants and who will have a monopoly on shirts, and so on. The nation may ban all foreign imports. [PARAGRAPH:2]The advantages of mercantilism are that it ensures that a nation's wealth remains within the nation itself, and that its people are not put out of business by cheap foreign imports. On the other hand, the success or the failure of the entire economy is in the hands of just a few men or even one, and if they make foolish or unlucky decisions, the nation as a whole suffers. Further, the ban on foreign imports limits the nation's exposure to new products and new ideas. And if someone has a monopoly on an item, there is little pressure for that person to improve the item or make it cheaper.</English>
+		<French>[TAB]Le mercantilisme fait r&#233;f&#233;rence &#224; un gouvernement qui r&#233;glemente d'une mani&#232;re stricte la production de la nation. Le gouvernement d&#233;termine la production de chaque ferme, il d&#233;cide qui peut coudre des pantalons et qui vendra les chemises, etc. La nation peut interdire toute importation. [PARAGRAPH:2]L'avantage du mercantilisme est qu'il assure que toutes les richesses de la nation demeurent dans les fronti&#232;res de la nation, et que les gens ne seront pas mis au ch&#244;mage par les produits bon march&#233; import&#233;s de l'&#233;tranger. D'un autre c&#244;t&#233;, la r&#233;ussite ou l'&#233;chec de toute l'&#233;conomie est entre les mains de quelques individus voire d'un seul, et si ces derniers se trompent, c'est toute la nation qui en p&#226;tit. De plus, l'interdiction des importations limite l'acc&#232;s de la nation aux nouveaux produits et aux nouvelles id&#233;es. Enfin, si quelqu'un obtient un monopole, rien ou presque ne peut l'obliger &#224; am&#233;liorer son produit ou &#224; le vendre meilleur march&#233;.</French>
+		<German>[TAB]Der Merkantilismus ist ein Wirtschaftssystem, das die gesamte Produktion eines Landes reglementiert. Die Regierung allein bestimmt, was die Bauern des Landes anbauen, wer Hosen n&#228;hen und wer mit Hemden handeln darf. Au&#223;erdem kann die Einfuhr ausl&#228;ndischer Waren verboten werden. [PARAGRAPH:2]Der Merkantilismus gew&#228;hrleistet, dass keine Gelder ins Ausland abflie&#223;en und niemand aufgrund der Einfuhr von Waren finanzielle Einbu&#223;en hinnehmen muss. Allerdings liegt der Erfolg bzw. das Scheitern der Volkswirtschaft in den H&#228;nden einiger weniger Menschen. Treffen diese t&#246;richte oder falsche Entscheidungen, leidet das ganze Volk darunter. Dar&#252;ber hinaus gelangen aufgrund des Importverbots keine neuen Waren oder Ideen in das Land. Und hat ein Handwerker oder Fabrikant ein Monopol auf ein bestimmtes Produkt, gibt es f&#252;r ihn keinen Grund, das Produkt zu verbessern oder preiswerter anzubieten.</German>
+		<Italian>[TAB]Con la parola mercantilismo ci si riferisce alle politiche di un governo che gestisce strettamente la produzione di una nazione. Il governo determina quali agricoltori debbano produrre raccolti, chi debba realizzare i vestiti e chi invece abbia il monopolio delle magliette. Una nazione pu&#242; anche bandire tutte le importazioni dall'estero. [PARAGRAPH:2]Il mercantilismo assicura che il benessere di una nazione rimanga all'interno dei propri confini, impedendo alla gente di venire tagliata fuori da importazioni economiche. Per contro, il successo o il fallimento dell'intera economia &#232; nelle mani di pochi uomini, se non addirittura di uno solo: l'intera nazione pu&#242; pagare il peso di decisioni avventate o sbagliate. Inoltre, il bando delle importazioni limita l'esposizione di nuove idee e di nuovi prodotti della nazione e se qualcuno detiene il monopolio su un oggetto, ci sono poche pressioni per migliorarlo o renderlo pi&#249; economico.</Italian>
+		<Spanish>[TAB]El mercantilismo es una teor&#237;a pol&#237;tica que aboga por el control estricto de la producci&#243;n del estado. El gobierno determina qu&#233; cosecha cada granjero, qui&#233;n va a plantar nuevos cultivos, qui&#233;n disfrutar&#225; de un monopolio sobre las camisas, etc. La naci&#243;n puede llegar a prohibir las importaciones. [PARAGRAPH:2]La ventaja principal del mercantilismo es que garantiza que la riqueza del pa&#237;s permanece dentro de &#233;l y que los productores no sufren la competencia de productos baratos de importaci&#243;n. Por otro lado, el &#233;xito o fracaso de la econom&#237;a queda en manos de unos pocos hombres (o incluso uno solo) y si &#233;stos toman decisiones equivocadas o desafortunadas, la naci&#243;n entera lo paga. Adem&#225;s, cuando se proh&#237;ben las importaciones, se limita el acceso de la ciudadan&#237;a a productos e ideas nuevos. Y si alguien ejerce un monopolio sobre un producto, carece de incentivos para mejorarlo o abaratarlo.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCANTILISM_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<!-- Civic Category Economy -->
+	<!-- Civic Category Religion -->
+	<TEXT>
+		<Tag>TXT_KEY_CIVICOPTION_RELIGION</Tag>
+		<English>Religion</English>
+		<French>Religion</French>
+		<German>Religion</German>
+		<Italian>Religione</Italian>
+		<Spanish>Religi&#243;n</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_PAGANISM</Tag>
+		<English>Paganism</English>
+		<French>Paganisme</French>
+		<German>Heidentum</German>
+		<Italian>Paganesimo</Italian>
+		<Spanish>Paganismo</Spanish>
+		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_PAGANISM_PEDIA</Tag>
+		<English>[TAB]"Paganism" describes religions that believe in the holiness of all things around them - rocks, trees, animals, clouds and so forth - rather than in specific concepts or beings. Pagans believe in multitudes of gods, that the gods are all around them, causing the sunset, the rising of bread, and the success of the hunt. [PARAGRAPH:2]A pagan seeks to remain in harmony with the natural world around him or her. The pagan doesn't look to appease a distant deity or hierarchy of deities who control his or her destiny. To a pagan, the gods are all around him or her, in plain sight every day. </English>
+		<French>[TAB]On parle de "Paganisme" pour les religions qui croient au caract&#232;re sacr&#233; de tout ce qui nous entoure : les rochers, les arbres, les animaux, les nuages, etc. Les pa&#239;ens ont de nombreuses divinit&#233;s. Ils croient que les dieux vivent parmi nous, et sont la cause du coucher du soleil, de la pousse des plantes ou du succ&#232;s de la chasse. [PARAGRAPH:2]Un pa&#239;en cherche &#224; rester en harmonie avec le monde naturel. Le pa&#239;en ne cherche pas &#224; apaiser une divinit&#233; distante qui contr&#244;lerait sa destin&#233;e, il est convaincu que les dieux nous entourent et vivent parmi nous. </French>
+		<German>[TAB]Der Begriff "Heidentum" umfasst Religionen, die an die Heiligkeit aller Dinge (Steine, B&#228;ume, Tiere, Wolken) und nicht an abstrakte Gottheiten glauben. Im heidnischen Polytheismus sind verschiedene G&#246;tter f&#252;r den Sonnenaufgang, die Ernte, die Jagd usw. verantwortlich. [PARAGRAPH:2]Heiden leben meist in Einklang mit der Natur und verehren (wie bereits erw&#228;hnt) keine abstrakten Gottheiten. In den Augen eines Heiden ist der Mensch st&#228;ndig von - jederzeit sichtbaren - G&#246;ttern umgeben.</German>
+		<Italian>[TAB]Il "paganesimo" racchiude tutte le religioni che credono nella santit&#224; delle cose che ci circondano (un sasso, un albero, gli animali, le nuvole), piuttosto che in identit&#224; o concetti specifici. I pagani credono in una moltitudine di divinit&#224;, che li circondano e che sono responsabili dei tramonti, della lievitazione del pane e del successo nella caccia. [PARAGRAPH:2]Un pagano tenta di vivere in armonia con la natura circostante, senza cercare di soddisfare divinit&#224; che controllino il proprio destino. Agli occhi di un pagano, le divinit&#224; sono nelle cose tangibili di tutti i giorni.</Italian>
+		<Spanish>[TAB]El t&#233;rmino "paganismo" describe a aquellas religiones que creen en la divinidad de todas las cosas (rocas, &#225;rboles, animales, nubes, etc.) en lugar de en conceptos o criaturas espec&#237;ficas. Sus seguidores creen en la existencia de multitud de dioses, cuya presencia a su alrededor es la causa de la puesta del sol, el crecimiento del trigo y el &#233;xito en la caza. [PARAGRAPH:2]Los paganos procuran mantenerse en armon&#237;a con el mundo natural que los rodea. No se preocupan por complacer a lejanas deidades o panteones supuestamente due&#241;os de su destino. Consideran que los dioses est&#225;n en todo momento a su alrededor, a la vista. </Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_PAGANISM_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
+		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>
+		<English>State Religion</English>
+		<French>Religion d'&#201;tat</French>
+		<German>Staatsreligion</German>
+		<Italian>Religione di Stato</Italian>
+		<Spanish>Indique Religión</Spanish>
+		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Tag>
+		<English>[TAB]Most medieval states practiced some form of state religion. Though a state may have been ruled by a king rather than a cleric, it was clear that the authority of the monarch derived from God. To deviate from the state religion was at best a faux pas, at worst a crime punishable by death.[PARAGRAPH:2]Christian Kings were crowned and anointed in a ceremony similar to the investiture of clergy with holy orders. Those same clergy sat in the medieval European parliaments and enjoyed the same official position as the highest ranks of nobility. In the early Islamic world, religious gatherings performed many functions of government.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
+		<English>Cities with State Religion train units faster</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>Le città con Religione Ufficiale addestrano più velocemente le unità</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_THEOCRACY</Tag>
+		<English>Theocracy</English>
+		<French>Th&#233;ocratie</French>
+		<German>Theokratie</German>
+		<Italian>Teocrazia</Italian>
+		<Spanish>Teocracia</Spanish>
+		<Russian>&#210;&#229;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_THEOCRACY_PEDIA</Tag>
+		<English>[TAB]A theocracy is a form of government where priests or holy men are in charge of the government. The government is run to benefit the people, but, more importantly, in accord with the wishes of the almighty, as interpreted by the holy men and priests. According to the theory, it is the will of God that such men be in charge of running things, and political dissent is sinful and wrong-headed, if not outright heresy. [PARAGRAPH:2]In the modern world, theocracies tend to be backward-looking, seeking to return their country to some usually mythical past state of grace and away from the evil and corrupt modern world. Diplomacy tends to be extremely difficult for such countries, since countries who act against their interests are doing so at the urging of the devil, rather than because the other countries have their own points of view and objectives. How can a holy leader compromise with an imp of Satan?</English>
+		<French>[TAB]Une th&#233;ocratie est une forme de gouvernement dirig&#233;e par les pr&#234;tres et les hommes d'&#233;glise. Le gouvernement a pour but le bien-&#234;tre de la population, mais, et c'est le plus important, en accord avec la volont&#233; du tout-puissant, telle qu'elle est interpr&#233;t&#233;e par les religieux. En th&#233;orie, c'est Dieu qui a voulu que les religieux gouvernent la destin&#233;e des hommes. La dissidence politique est donc un p&#233;ch&#233;, une aberration, voire une h&#233;r&#233;sie. [PARAGRAPH:2]Dans le monde moderne, les th&#233;ocraties tendent &#224; &#234;tre r&#233;trogrades et &#224; restaurer une sorte de pass&#233; mythique, un &#233;tat de gr&#226;ce, &#224; l'&#233;cart du monde moderne corrompu. La diplomatie est rendue extr&#234;mement difficile pour ces nations : un pays qui agit contre l'int&#233;r&#234;t d'une th&#233;ocratie agit de la sorte car il y est incit&#233; par le diable, et non parce qu'il d&#233;fend ses propres int&#233;r&#234;ts ou points de vue. Comment un homme d'&#233;glise pourrait-il accepter un compromis avec un envoy&#233; de Satan ?</French>
+		<German>[TAB]Die Theokratie ist eine Regierungsform, bei der Priester und heilige M&#228;nner die Regierungsgesch&#228;fte leiten. Die Regierung wird so gef&#252;hrt, dass das Volk davon profitiert, aber in erster Linie bestimmen die W&#252;nsche des Allm&#228;chtigen, die von den heiligen M&#228;nnern und Priestern ausgelegt werden, die Regierungspolitik. Laut dieser Theorie ist es Gottes Wille, dass diese M&#228;nner die Regierung leiten, und eine andere politische Meinung ist eine S&#252;nde und Starrk&#246;pfigkeit, wenn nicht sogar Ketzerei. [PARAGRAPH:2]In der modernen Welt sind Theokratien meist r&#252;ckw&#228;rts gerichtete Gesellschaften, die ihr Land zur&#252;ck in den &#252;blicherweise mystischen Zustand der Vergangenheit und fort von der b&#246;sen und korrupten modernen Welt bringen wollen. Die Diplomatie gestaltet sich f&#252;r diese L&#228;nder meist ausgesprochen schwierig, da die L&#228;nder, die gegen ihre Interessen handeln, dies ihrer Meinung nach tun, weil sie sich vom B&#246;sen leiten lassen und nicht, weil diese anderen L&#228;nder eigene Ansichten und Ziele haben. Wie kann ein heiliger Anf&#252;hrer auch einen Kompromiss mit einem Schergen des Satans eingehen?</German>
+		<Italian>[TAB]La teocrazia &#232; una forma di governo dominata da sacerdoti e uomini santi. Il governo lavora in funzione del popolo, ma soprattutto in linea con i desideri dell'Onnipotente, i cui segni vengono interpretati dai sacerdoti. In teoria, questi uomini sono gli unici portavoce del volere di Dio, il dissenso politico &#232; un peccato e pu&#242; essere considerato addirittura eresia. [PARAGRAPH:2]Nel mondo moderno, le teocrazie tendono a guardare indietro, nel tentativo di riportare la propria nazione in qualche mitico stato di grazia appartenente al passato, lontano dal male e dalla corruzione. Per alcune nazioni, la diplomazia tende ad essere molto difficoltosa: se un paese agisce contro gli interessi di una teocrazia viene visto come un gesto del diavolo, piuttosto che una necessit&#224; e un differente punto di vista. Come pu&#242; un leader santo scendere a patti con un servo di Satana?</Italian>
+		<Spanish>[TAB]La teocracia es la forma de gobierno en la que la autoridad secular est&#225; en manos de sacerdotes u hombres santos. &#201;stos gobiernan en beneficio de la comunidad, pero sobre todo de acuerdo a los deseos del todopoderoso, interpretados por el sacerdocio. En teor&#237;a, es voluntad de Dios que el gobierno est&#233; en sus manos, y el disenso pol&#237;tico es pecaminoso y moralmente condenable, cuando no directamente her&#233;tico. [PARAGRAPH:2]En nuestros tiempos, las teocracias son sistemas caracterizados por una noci&#243;n nost&#225;lgica de la historia, que aspiran a devolver la tierra a un pasado de gracia (normalmente m&#237;tico) y apartarla de la maldad y corrupci&#243;n del mundo moderno. Los pa&#237;ses que la practican tienen grandes dificultades diplom&#225;ticas, puesto que consideran que los estados que se les oponen act&#250;an impulsados por una voluntad diab&#243;lica en lugar de por sus propios puntos de vista e intereses. &#191;C&#243;mo va a llegar a un acuerdo un l&#237;der santo con un siervo de Sat&#225;n?</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_THEOCRACY_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Gewohnheitsrecht[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT], instabile con [COLOR_RED]Legge Comune[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION</Tag>
+		<English>Organized Religion</English>
+		<French>Religion organis&#233;e</French>
+		<German>Organisierte Religion</German>
+		<Italian>Religione Organizzata</Italian>
+		<Spanish>Religi&#243;n organizada</Spanish>
+		<Russian>&#206;&#240;&#227;&#224;&#237;&#232;&#231;&#238;&#226;&#224;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_PEDIA</Tag>
+		<English>[TAB]An organized religion is one in which there is a central authority which interprets or determines theology, which decides which ceremonies are to be performed at which times, and which appoints priests or holy men to keep worshipers on the correct path. The central authority may be a rigid and powerful hierarchy with great religious and secular power, or it may be a group of elders who meet periodically to discuss matters of importance to their members. [PARAGRAPH:2]An organized religion can be a mighty thing, more powerful than kings or despots. Its followers may provide it with great wealth, and may construct mighty edifices in their gods' honor. Usually, however, organized religions are less powerful than that and must live in uneasy harmony with the local secular governments. </English>
+		<French>[TAB]Une religion organis&#233;e dispose d'une autorit&#233; centralis&#233;e qui interpr&#232;te et d&#233;termine la th&#233;ologie, qui d&#233;cide quand et comment sont organis&#233;es les c&#233;r&#233;monies du culte et qui se charge de nommer les pr&#234;tres et autres hommes d'&#233;glise qui dirigeront les fid&#232;les. L'autorit&#233; centrale peut prendre la forme d'une hi&#233;rarchie rigide et puissante ayant un pouvoir &#224; la fois religieux et la&#239;c. Elle peut aussi &#234;tre compos&#233;e d'un groupe d'anciens qui se r&#233;unissent r&#233;guli&#232;rement pour discuter des probl&#232;mes que rencontre leur communaut&#233;. [PARAGRAPH:2]Une religion organis&#233;e peut &#234;tre puissante et avoir davantage de pouvoir qu'un roi ou qu'un despote. Ses fid&#232;les peuvent la rendre riche et b&#226;tir des &#233;difices majestueux en l'honneur de leur Dieu. Cependant, les religions organis&#233;es sont rarement aussi puissantes et doivent g&#233;n&#233;ralement vivre tant bien que mal en harmonie avec un v&#233;ritable pouvoir la&#239;que. </French>
+		<German>[TAB]Eine organisierte Religion hat eine zentrale Autorit&#228;t, die f&#252;r die Interpretation der Theologie, die Liturgie, die Priesterweihe und Heiligsprechungen verantwortlich ist. Diese zentrale Autorit&#228;t ist nicht selten eine einflussreiche Beh&#246;rde mit betr&#228;chtlicher geistlicher und weltlicher Macht. [PARAGRAPH:2]Organisierte Religionen konnten sehr m&#228;chtig werden, m&#228;chtiger noch als K&#246;nige oder Despoten. Oft h&#228;uften ihre Gl&#228;ubigen gro&#223;e Reicht&#252;mer an und errichteten zu Ehren ihres Gottes pr&#228;chtige Geb&#228;ude. Heute ist der politische und religi&#246;se Einfluss organisierter Religionen allerdings eher gering.</German>
+		<Italian>[TAB]In una organizzazione religiosa esiste un'autorit&#224; centrale che interpreta o determina la teologia, che decide quando e quali cerimonie devono essere eseguite, che nomina i sacerdoti o gli uomini santi per mantenere i fedeli sulla retta via. L'autorit&#224; centrale pu&#242; essere una gerarchia potente e rigida di grandi religioni e potere secolare, oppure pu&#242; essere rappresentata da un gruppo di anziani che si incontrano periodicamente per discutere questioni importanti. [PARAGRAPH:2]Una organizzazione religiosa pu&#242; rappresentare un grande potere, pi&#249; di quello di un re o un despota: i seguaci possono fornire ricchezze e finanziare la realizzazione di grandi edifici in onore degli dei. Tuttavia, le organizzazioni religiose sono meno potenti e devono vivere in una difficile armonia con i governi locali laici.</Italian>
+		<Spanish>[TAB]Una religi&#243;n organizada es una en la que existe una autoridad central que interpreta o establece la teolog&#237;a, decide qu&#233; ceremonias se llevan a cabo y nombra a los sacerdotes u hombres santos encargados de mantener al reba&#241;o en el recto camino. La autoridad central puede ser una jerarqu&#237;a r&#237;gida y poderosa dotada de gran poder religioso y secular o puede estar formada por un consejo de ancianos que se re&#250;ne peri&#243;dicamente para debatir todos los asuntos concernientes a sus fieles.  [PARAGRAPH:2]Las religiones organizadas pueden ser muy poderosas, m&#225;s incluso que los reyes o los d&#233;spotas. Sus seguidores pueden proporcionarle enormes riquezas y erigir impresionantes edificios en honor a sus dioses.  Sin embargo, lo normal es que no sean tan poderosas y se vean obligadas a convivir en un estado de complicada armon&#237;a con los poderes seculares. </Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
+		<French>.</French>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_RELIGION</Tag>
+		<English>Free Religion</English>
+		<French>Libert&#233; de culte</French>
+		<German>Religionsfreiheit</German>
+		<Italian>Libert&#224; religiosa</Italian>
+		<Spanish>Libertad religiosa</Spanish>
+		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_PEDIA</Tag>
@@ -303,14 +915,25 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
-		<English>[ICON_BULLET]+1 stability for each colony founded.</English>
+		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_STRATEGY</Tag>
+		<English>No Strategy yet.</English>
 		<French>.</French>
-		<German>[ICON_BULLET]+1 Stabilität für jede gegründete Kolonie</German>
-		<Italian>[ICON_BULLET]+1 Stabilità per ogni colonia fondata.</Italian>
+		<German>Noch keine Strategie.</German>
+		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
+		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
+		<French>.</French>
+		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<!-- Civic Category Religion -->
+	<!-- Civic Category Expansion -->
 	<TEXT>
 		<Tag>TXT_KEY_CIVICOPTION_EXPANSION</Tag>
 		<English>Expansion</English>
@@ -339,6 +962,42 @@
 		<Russian>[TAB]The term "subjugation" is used to describe the policy of a nation's dominance over other lands. This doctrine has been frequently employed for economic exploitation in which an imperialist power makes use of other countries as sources of raw materials and cheap labor, shaping their economies to suit its own interests and keeping their people in poverty.[PARAGRAPH:2]Sometimes subjugation even refers to the acceptance, by the colonised, of the culture or doctrines of the coloniser as intrinsically more worthy or superior.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SUBJUGATION_STRATEGY</Tag>
+		<English>The most primitive Expansion civic</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_VASSALAGE</Tag>
+		<English>Vassalage</English>
+		<French>Vassalit&#233;</French>
+		<German>Vasallentum</German>
+		<Italian>Vassallaggio</Italian>
+		<Spanish>Vasallaje</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_VASSALAGE_PEDIA</Tag>
+		<English>[TAB]Vassalage is a feudal term referring to a person who enters a contract with his or her lord, agreeing to serve and protect the lord in return for monetary rewards or ownership or sovereignty over a parcel of land. The contract is often of both political and religious significance binding both parties by the rules of man and of God. [PARAGRAPH:2]Vassalage is often tribal in nature. One tribe conquers another, and rather than killing the conquered tribe or taking over its direct management, the conquering ruler makes the conquered his vassal: the lower ruler continues to maintain control over his people and territory, while paying tribute to his or her lord in the form of money, goods, soldiers or slaves. </English>
+		<French>[TAB]La vassalit&#233; est un terme f&#233;odal qui fait r&#233;f&#233;rence aux engagements pris entre des personnes et leur seigneur, l'un promettant de servir et de prot&#233;ger l'autre contre de l'argent, des biens ou m&#234;me la souverainet&#233; sur une parcelle de terres. Ce type de contrat a souvent &#224; la fois une signification politique et religieuse, les deux parties &#233;tant li&#233;es devant les hommes et devant Dieu. [PARAGRAPH:2]La vassalit&#233; est souvent tribale par nature. Une tribu en envahit une autre, mais plut&#244;t que de tuer tout le monde ou de s'emparer des r&#234;nes du pouvoir, le conqu&#233;rant fait du vaincu son vassal : ce dernier continue d'exercer le pouvoir sur son peuple, mais verse un tribut &#224; son seigneur sous la forme d'argent, de biens, de soldats ou d'esclaves. </French>
+		<German>[TAB]Vasallen waren in der feudalen Gesellschaft Personen, die ihren Lehnsherren dienten oder diese besch&#252;tzten und f&#252;r ihre Dienste mit Geld, Grundbesitz oder Macht belohnt wurden. Der Vertrag zwischen Lehnsherr und Vasall hatte nicht selten eine politische oder religi&#246;se Bedeutung und war f&#252;r beide Parteien bindend.[PARAGRAPH:2]Das Vasallentum ist vor allem f&#252;r Stammeskulturen typisch. Erobert Stamm A beispielsweise Stamm B, wird Letzterer automatisch ein Vasall des Siegers. Der unterlegene Herrscher bleibt in diesem Fall im Amt und verpflichtet sich, seinen Bezwinger mit Geld, Waren, Soldaten oder Sklaven zu unterst&#252;tzen.</German>
+		<Italian>[TAB]Il vassallaggio &#232; un termine feudale che si riferisce a una persona che stipula un contratto con il proprio signore, per proteggerlo e servirlo in cambio di ricompense monetarie, propriet&#224; o sovranit&#224; su una terra. Il contratto assume spesso un significato politico e religioso, legando entrambe le parti alle leggi umane e divine. [PARAGRAPH:2]Il vassallaggio assume spesso connotazioni di natura tribale. Una trib&#249; conquista un'altra e, invece di sterminarla o prendere il possesso della loro gestione, il vincitore della battaglia trasforma il perdente in un vassallo: il soggiogato continua a mantenere il controllo sulla propria gente e sul territorio, pagando per&#242; dei tributi sotto forma di soldi, beni, soldati o schiavi al proprio signore.</Italian>
+		<Spanish>[TAB]Vasallaje es un t&#233;rmino feudal que hace referencia a la persona que establece una relaci&#243;n contractual con su se&#241;or en la que se compromete a servirlo y protegerlo a cambio de recompensas pecuniarias o de la propiedad (o usufructo) de una parcela. Normalmente, el contrato tiene connotaciones pol&#237;ticas y religiosas y somete a ambas partes a las leyes del hombre y de Dios.  [PARAGRAPH:2]El vasallaje suele ser de naturaleza tribal. Una tribu conquista a otra y, en vez de exterminarla o hacerse cargo de la administraci&#243;n directa de su patrimonio, convierte a los conquistados en vasallos: el gobernante sometido mantiene el control sobre su pueblo y su territorio, pero paga un tributo a su se&#241;or en forma de dinero, mercanc&#237;as, soldados o esclavos. </Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Tag>
+		<English>Adds a Stability Points bonus for each vassal</English>
+		<French>Ajoute un bonus de points de stabilit&#233; par vassal</French>
+		<German>Stabilit&#228;tspunktbonus f&#252;r jeden Vasallen</German>
+		<Italian>Aggiunge un punto stabilit&#224; per ogni vassallo.</Italian>
+		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada vasallo</Spanish>
+		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM</Tag>
 		<English>Imperialism</English>
 		<French>Imperialisme</French>
@@ -346,6 +1005,24 @@
 		<Italian>Imperialismo</Italian>
 		<Spanish>Imperialismo</Spanish>
 		<Russian>&#200;&#236;&#239;&#229;&#240;&#232;&#224;&#235;&#232;&#231;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Tag>
+		<English>[TAB]Kings often challenged the legitimacy of their neighbours to rule certain plots of land. Wars of conquest were common in Europe during the Middle Ages. But under the feudal system, conquest inevitably meant the destruction of the old government as the losing barons were punished. Some states managed to overcome this problem and created great empires.[PARAGRAPH:2]Successful imperialism required leaders to rapidly export systems of law and commerce to their non-national territories, so that anarchy would not prevail. It often took a long time for new subjects to overcome their loyalty to the old king and nation, and instead embrace the winner of war, so patience was a leading virtue of an asiprant emperor.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
+		<English>Adds stability for each city outside the core area</English>
+		<French>.</French>
+		<German>Addiert Stabilität für jede Stadt außerhalb des Kerngebietes</German>
+		<Italian>Aumentà la stabilità per ogni città fuori dal centro dell'impero</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION</Tag>
@@ -366,87 +1043,6 @@
 		<Russian>[TAB]Belligerent military occupation occurs when one nation's military occupies all or part of the territory of another nation or recognized belligerent.[PARAGRAPH:2]In most wars some territory of the losing side is placed under the authority of the hostile army. Most military occupations end with the cessation of hostilities. In some cases the occupied territory is returned and in others the land remains under the control of the occupying power but usually not as militarily occupied territory. The latter was the case of Germany after WWII, which ended up being split into two different nations.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COLONIALISM</Tag>
-		<English>Colonialism</English>
-		<French>Colonialisme</French>
-		<German>Kolonialismus</German>
-		<Italian>Colonialismo</Italian>
-		<Spanish>Colonialismo</Spanish>
-		<Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#232;&#231;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS</Tag>
-		<English>[ICON_BULLET]+3 Stability Points for each vassal</English>
-		<French>[ICON_BULLET]+3 points de stabilit&#233; par vassal</French>
-		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden Vasallen</German>
-		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni vassallo.</Italian>
-		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada vasallo</Spanish>
-		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS_VANILLA</Tag>
-		<English>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</English>
-		<French>[ICON_BULLET]+3 points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
-		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
-		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
-		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, &#232;&#225;&#238; &#234;&#224;&#230;&#228;&#251;&#233; &#232;&#241;&#245;&#238;&#228;&#237;&#251;&#233; &#239;&#243;&#237;&#234;&#242; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#235;&#241;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
-		<English>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</English>
-		<French>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</French>
-		<German>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</German>
-		<Italian>[ICON_BULLET]+1 punti stabilità per ogni città in una provincia con stabilità inferiore a Solido.</Italian>
-		<Spanish>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</Spanish>
-		<Russian>[ICON_BULLET]+1 stability point for each city in a less than Solid Province.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_CONQUEST_BONUS</Tag>
-		<English>[ICON_BULLET]+1 additional Stability Points on city conquest</English>
-		<French>[ICON_BULLET]+1 points de stabilit&#233; &#224; la conqu&#234;te d'une ville</French>
-		<German>[ICON_BULLET]+1 zus&#228;tzliche Stabilit&#228;tspunkte bei Stadteroberung</German>
-		<Italian>[ICON_BULLET]+1 punti stabilit&#224; addizionali conquistando una citt&#224;.</Italian>
-		<Spanish>[ICON_BULLET]+1 puntos de estabilidad adicionales por conquista de ciudad</Spanish>
-		<Russian>[ICON_BULLET]+1 &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_OCCUPATION_BONUS</Tag>
-		<English>[ICON_BULLET]No negative Stability Points from cities under occupation</English>
-		<French>[ICON_BULLET]Pas de points de stabilit&#233; n&#233;gatifs pour les villes occup&#233;es</French>
-		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch besetzte St&#228;dte</German>
-		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di citt&#224; occupate.</Italian>
-		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por las ciudades sometidas a ocupaci&#243;n</Spanish>
-		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#238;&#247;&#234;&#238;&#226; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#238;&#233; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#239;&#238;&#228; &#231;&#224;&#237;&#255;&#242;&#232;&#229;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus for each vassal</English>
-		<French>Ajoute un bonus de points de stabilit&#233; par vassal</French>
-		<German>Stabilit&#228;tspunktbonus f&#252;r jeden Vasallen</German>
-		<Italian>Aggiunge un punto stabilit&#224; per ogni vassallo.</Italian>
-		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada vasallo</Spanish>
-		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_VASSALAGE_VANILLA_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus for each civilization starting point controlled</English>
-		<French>Ajoute un bonus de points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
-		<German>Stabilit&#228;tspunktbonus f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
-		<Italian>Aggiunge un punto stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
-		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#232; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#232;&#241;&#245;&#238;&#228;&#237;&#238;&#227;&#238; &#239;&#243;&#237;&#234;&#242;&#224; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RESETTLEMENT_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus for each city founded at least 15 tiles from the capital</English>
-		<French>Ajoute un bonus de points de stabilit&#233; par ville fond&#233;e &#224; 15 cases ou plus de la capitale</French>
-		<German>Stabilit&#228;tspunktbonus f&#252;r jede Stadt, die mindestens 15 Gel&#228;ndefelder von der Hauptstadt entfernt gegr&#252;ndet wurde</German>
-		<Italian>Aggiunge un bonus di punti stabilit&#224; per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
-		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
-		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#227;&#238;&#240;&#238;&#228;&#224;, &#238;&#241;&#237;&#238;&#226;&#224;&#237;&#237;&#238;&#227;&#238; &#234;&#224;&#234; &#236;&#232;&#237;&#232;&#236;&#243;&#236; &#237;&#224; 15 &#234;&#235;&#229;&#242;&#238;&#234; &#238;&#242; &#241;&#242;&#238;&#235;&#232;&#246;&#251;</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION_STRATEGY</Tag>
 		<English>Adds a Stability Points bonus on city conquest; no negative Stability Points from cities under occupation</English>
 		<French>Ajoute un bonus de points de stabilit&#233; par ville conquise ; pas de points de stabilit&#233; n&#233;gatifs pour les villes occup&#233;es</French>
@@ -456,445 +1052,22 @@
 		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;; &#237;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#239;&#238;&#228; &#238;&#234;&#234;&#243;&#239;&#224;&#246;&#232;&#229;&#233;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMONWEALTH_STRATEGY</Tag>
-		<English>No negative Stability Points for low amount of traded resources; no negative Stability Points for poor economy</English>
-		<French>Pas de points de stabilit&#233; n&#233;gatifs pour un faible niveau de ressources &#233;chang&#233;es ; pas de points de stabilit&#233; n&#233;gatifs pour une &#233;conomie pauvre</French>
-		<German>Keine Stabilit&#228;tspunktabz&#252;ge durch geringf&#252;gig gehandelte Ressourcen; keine Stabilit&#228;tspunktabz&#252;ge durch schlechte Wirtschaftslage</German>
-		<Italian>Nessun punto stabilit&#224; negativo in caso di scarso commercio di risorse; nessun punto stabilit&#224; negativo in caso di scarsa economia.</Italian>
-		<Spanish>No hay puntos de estabilidad negativos por baja cantidad de recursos intercambiados; no hay puntos de estabilidad negativos por econom&#237;a d&#233;bil</Spanish>
-		<Russian>&#205;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#237;&#232;&#231;&#234;&#238;&#227;&#238; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#224; &#242;&#238;&#240;&#227;&#243;&#254;&#249;&#232;&#245;&#241;&#255; &#240;&#229;&#241;&#243;&#240;&#241;&#238;&#226;; &#237;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#225;&#229;&#228;&#237;&#238;&#233; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#232;</Russian>
+		<Tag>TXT_KEY_CIVIC_COLONIALISM</Tag>
+		<English>Colonialism</English>
+		<French>Colonialisme</French>
+		<German>Kolonialismus</German>
+		<Italian>Colonialismo</Italian>
+		<Spanish>Colonialismo</Spanish>
+		<Russian>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#232;&#231;&#236;</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DESPOTISM</Tag>
-		<English>Despotism</English>
-		<French>Despotisme</French>
-		<German>Despotismus</German>
-		<Italian>Dispotismo</Italian>
-		<Spanish>Despotismo</Spanish>
-		<Russian>&#196;&#229;&#241;&#239;&#238;&#242;&#232;&#231;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY</Tag>
-		<English>Feudal Monarchy</English>
-		<French>Monarchie féodale</French>
-		<German>Feudale Monarchie</German>
-		<Italian>Monarchia Feudale</Italian>
-		<Spanish>Monarquía feudal</Spanish>
-		<Russian>&#221;&#235;&#229;&#234;&#242;&#238;&#240;&#224;&#242;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY</Tag>
-		<English>Divine Monarchy</English>
-		<French>Monarchie Divine</French>
-		<German>G&#246;ttliche Monarchie</German>
-		<Italian>Monarchia Divina</Italian>
-		<Spanish>Adivine Monarquía</Spanish>
-		<Russian>&#193;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
-		<English>Limited Monarchy</English>
-		<French>Monarchie Constitutionnelle</French>
-		<German>Konstitutionelle Monarchie</German>
-		<Italian>Monarchia Costituzionale</Italian>
-		<Spanish>Monarquía constitucional</Spanish>
-		<Russian>&#202;&#238;&#237;&#241;&#242;&#232;&#242;&#243;&#246;&#232;&#238;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
-		<English>Republic</English>
-		<French>R&#233;publique</French>
-		<German>Republik</German>
-		<Italian>Repubblica</Italian>
-		<Spanish>República</Spanish>
-		<Russian>&#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW</Tag>
-		<English>Tribal Law</English>
-		<French>Loi Tribale</French>
-		<German>Stammesgesetz</German>
-		<Italian>Legge Tribale</Italian>
-		<Spanish>Ley tribal</Spanish>
-		<Russian>&#208;&#238;&#228;&#238;&#226;&#238;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW</Tag>
-		<English>Feudal Law</English>
-		<French>Loi F&#233;odale</French>
-		<German>Lehnswesen</German>
-		<Italian>Legge Feudale</Italian>
-		<Spanish>Ley feudal</Spanish>
-		<Russian>&#212;&#229;&#238;&#228;&#224;&#235;&#252;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_BUREAUCRACY</Tag>
-		<English>Bureaucracy</English>
-		<French>Bureaucratie</French>
-		<German>B&#252;rokratie</German>
-		<Italian>Burocrazia</Italian>
-		<Spanish>Burocracia</Spanish>
-		<Russian>&#193;&#254;&#240;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>
-		<English>Religious Law</English>
-		<French>Loi Religieuse</French>
-		<German>Kirchenrecht</German>
-		<Italian>Legge Religiosa</Italian>
-		<Spanish>Ley de Relisious</Spanish>
-		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMON_LAW</Tag>
-		<English>Common Law</English>
-		<French>Loi Commune</French>
-		<German>Gewohnheitsrecht</German>
-		<Italian>Diritto Comune</Italian>
-		<Spanish>Ley no escrita</Spanish>
-		<Russian>&#206;&#225;&#249;&#229;&#229; &#207;&#240;&#224;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRIBALISM</Tag>
-		<English>Tribalism</English>
-		<French>Tribalisme</French>
-		<German>Stammestum</German>
-		<Italian>Organizzazione Tribale</Italian>
-		<Spanish>Tribalismo</Spanish>
-		<Russian>&#210;&#240;&#224;&#233;&#225;&#224;&#235;&#232;&#231;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
-		<English>Apprenticeship</English>
-		<French>Apprentissage</French>
-		<German>Berufslehre</German>
-		<Italian>Apprendistato</Italian>
-		<Spanish>Aprendizaje</Spanish>
-		<Russian>&#211;&#247;&#229;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_SERFDOM</Tag>
-		<English>Serfdom</English>
-		<French>Servage</French>
-		<German>Leibeigenschaft</German>
-		<Italian>Servit&#249;</Italian>
-		<Spanish>Servidumbre</Spanish>
-		<Russian>&#202;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
-		<English>Free Peasantry</English>
-		<French>Paysannerie</French>
-		<German>Bauernbefreiung</German>
-		<Italian>Contadini Liberi</Italian>
-		<Spanish>Liberte el Campesinado</Spanish>
-		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#229; &#202;&#240;&#229;&#241;&#242;&#252;&#255;&#237;&#241;&#242;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
-		<English>Free Labor</English>
-		<French>Libert&#233; de Travail</French>
-		<German>Gewerbefreiheit</German>
-		<Italian>Libertà Lavorativa</Italian>
-		<Spanish>Liberte Trabajo</Spanish>
-		<Russian>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#240;&#224;&#225;&#238;&#247;&#224;&#255; &#209;&#232;&#235;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION</Tag>
-		<English>Decentralization</English>
-		<French>D&#233;centralisation</French>
-		<German>Dezentralisierung</German>
-		<Italian>Decentralizzazione</Italian>
-		<Spanish>Descentralizaci&#243;n</Spanish>
-		<Russian>&#196;&#229;&#246;&#229;&#237;&#242;&#240;&#224;&#235;&#232;&#231;&#224;&#246;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MERCANTILISM</Tag>
-		<English>Mercantilism</English>
-		<French>Mercantilisme</French>
-		<German>Merkantilismus</German>
-		<Italian>Mercantilismo</Italian>
-		<Spanish>Mercantilismo</Spanish>
-		<Russian>&#204;&#229;&#240;&#234;&#224;&#237;&#242;&#232;&#235;&#232;&#231;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MANORIALISM</Tag>
-		<English>Manorialism</English>
-		<French>Manorialisme</French>
-		<German>Grunddherrschaft</German>
-		<Italian>Manorialismo</Italian>
-		<Spanish>Señorío</Spanish>
-		<Russian>&#204;&#224;&#237;&#238;&#240;&#224;&#235;&#232;&#231;&#236;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY</Tag>
-		<English>Trade Economy</English>
-		<French>Économie de marché</French>
-		<German>Marktwirtschaft</German>
-		<Italian>Economia di Mercato</Italian>
-		<Spanish>Economía de mercado</Spanish>
-		<Russian>&#195;&#232;&#235;&#252;&#228;&#232;&#232;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Tag>
-		<English>Merchant Republic</English>
-		<French>R&#233;publique Marchande</French>
-		<German>Handelsrepublik</German>
-		<Italian>Repubblica Mercantile</Italian>
-		<Spanish>República de comerciante</Spanish>
-		<Russian>&#202;&#238;&#236;&#236;&#229;&#240;&#247;&#229;&#241;&#234;&#224;&#255; &#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_PAGANISM</Tag>
-		<English>Paganism</English>
-		<French>Paganisme</French>
-		<German>Heidentum</German>
-		<Italian>Paganesimo</Italian>
-		<Spanish>Paganismo</Spanish>
-		<Russian>&#223;&#231;&#251;&#247;&#229;&#241;&#242;&#226;&#238;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION</Tag>
-		<English>Organized Religion</English>
-		<French>Religion organis&#233;e</French>
-		<German>Organisierte Religion</German>
-		<Italian>Religione Organizzata</Italian>
-		<Spanish>Religi&#243;n organizada</Spanish>
-		<Russian>&#206;&#240;&#227;&#224;&#237;&#232;&#231;&#238;&#226;&#224;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_THEOCRACY</Tag>
-		<English>Theocracy</English>
-		<French>Th&#233;ocratie</French>
-		<German>Theokratie</German>
-		<Italian>Teocrazia</Italian>
-		<Spanish>Teocracia</Spanish>
-		<Russian>&#210;&#229;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>
-		<English>State Religion</English>
-		<French>Religion d'&#201;tat</French>
-		<German>Staatsreligion</German>
-		<Italian>Religione di Stato</Italian>
-		<Spanish>Indique Religión</Spanish>
-		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_RELIGION</Tag>
-		<English>Free Religion</English>
-		<French>Libert&#233; de culte</French>
-		<German>Religionsfreiheit</German>
-		<Italian>Libert&#224; religiosa</Italian>
-		<Spanish>Libertad religiosa</Spanish>
-		<Russian>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
-		<English>No Pedia yet.</English>
+		<Tag>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Tag>
+		<English>[TAB]Advances in naval technology allowed Europe to begin colonising the world around them in the late 15th century. Colonial adventures brought European rulers and technology to weak states. At the same time, colonialism introduced Europeans to the powerful states beyond the Islamic world.[PARAGRAPH:2]A colonial disposition manifested itself in dynamism of settlement and trade and a concentration on naval technology and investment. The change from an inward-looking to an outward-looking perspective created a new hierarchy of states based on colonial success and allowed Western Europe, with its access to the Atlantic, to surge ahead of the East.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feduale[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Theocracy, State Religion, Organized Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Theokratie, Staatsreligion, Organisierte Religion, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Religione Organizzata, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libertà religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libertà Lavorativa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 4 cities[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 4 Städten[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 4 città[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Absolute Monarchie, Leibeigenschaft, Grundherrschaft[COLOR_REVERT], Instabil mit [COLOR_RED]Handelsrepublik, Bauernbefreiung[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Feudale, Servitù, Manorialismo[COLOR_REVERT], Instabile con [COLOR_RED]Repubblica Mercantile, Contadini Liberi[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 5 cities[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 5 Städten[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 5 città[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Theocracy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewerbefreiheit[COLOR_REVERT], Instabil mit [COLOR_RED]Theokratie[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Libertà Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gilden[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Associazioni[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Common Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewohnheitsrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Leibeigenschaft[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Servitù[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Apprenticeship[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Berufslehre[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Apprendistato[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
-		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Gewohnheitsrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT], instabile con [COLOR_RED]Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GUILDS_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
-		<French>.</French>
-		<German>Noch keine Strategie.</German>
-		<Italian>Nessuna strategia.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
-		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
-		<French>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</French>
-		<German>[ICON_BULLET]Erlaubt den Bau von Nicht-Staatsreligion Gebäuden und Wundern</German>
-		<Italian>[ICON_BULLET]Permette la costruzione di Meraviglie ed Edifici di Religioni non-Ufficiali</Italian>
-		<Spanish>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Spanish>
-		<Russian>Allows contruction of non-State Religion Buildings and Wonders</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
@@ -906,22 +1079,60 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
-		<English>Adds stability for each city outside the core area</English>
+		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
+		<English>[ICON_BULLET]+1 stability for each colony founded.</English>
 		<French>.</French>
-		<German>Addiert Stabilität für jede Stadt außerhalb des Kerngebietes</German>
-		<Italian>Aumentà la stabilità per ogni città fuori dal centro dell'impero</Italian>
+		<German>[ICON_BULLET]+1 Stabilität für jede gegründete Kolonie</German>
+		<Italian>[ICON_BULLET]+1 Stabilità per ogni colonia fondata.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
+	<!-- Civic Category Expansion -->
+	<!-- Used in the dll -->
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
-		<English>+1 production from farms, slower growth for cottages and great people</English>
-		<French>.</French>
-		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Gehöften und großen Persönlichkeiten</German>
-		<Italian>+1 produzione da fattorie, crescità più lenta per villete e grandi personaggi</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS</Tag>
+		<English>[ICON_BULLET]+3 Stability Points for each vassal</English>
+		<French>[ICON_BULLET]+3 points de stabilit&#233; par vassal</French>
+		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden Vasallen</German>
+		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni vassallo.</Italian>
+		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada vasallo</Spanish>
+		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
+		<English>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</English>
+		<French>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</French>
+		<German>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</German>
+		<Italian>[ICON_BULLET]+1 punti stabilità per ogni città in una provincia con stabilità inferiore a Solido.</Italian>
+		<Spanish>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</Spanish>
+		<Russian>[ICON_BULLET]+1 stability point for each city in a less than Solid Province.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_OCCUPATION_BONUS</Tag>
+		<English>[ICON_BULLET]No negative Stability Points from cities under occupation</English>
+		<French>[ICON_BULLET]Pas de points de stabilit&#233; n&#233;gatifs pour les villes occup&#233;es</French>
+		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch besetzte St&#228;dte</German>
+		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di citt&#224; occupate.</Italian>
+		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por las ciudades sometidas a ocupaci&#243;n</Spanish>
+		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#238;&#247;&#234;&#238;&#226; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#238;&#233; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#239;&#238;&#228; &#231;&#224;&#237;&#255;&#242;&#232;&#229;&#236;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_CONQUEST_BONUS</Tag>
+		<English>[ICON_BULLET]+1 additional Stability Points on city conquest</English>
+		<French>[ICON_BULLET]+1 points de stabilit&#233; &#224; la conqu&#234;te d'une ville</French>
+		<German>[ICON_BULLET]+1 zus&#228;tzliche Stabilit&#228;tspunkte bei Stadteroberung</German>
+		<Italian>[ICON_BULLET]+1 punti stabilit&#224; addizionali conquistando una citt&#224;.</Italian>
+		<Spanish>[ICON_BULLET]+1 puntos de estabilidad adicionales por conquista de ciudad</Spanish>
+		<Russian>[ICON_BULLET]+1 &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
+		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
+		<French>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</French>
+		<German>[ICON_BULLET]Erlaubt den Bau von Nicht-Staatsreligion Gebäuden und Wundern</German>
+		<Italian>[ICON_BULLET]Permette la costruzione di Meraviglie ed Edifici di Religioni non-Ufficiali</Italian>
+		<Spanish>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Spanish>
+		<Russian>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1</Tag>
@@ -959,4 +1170,61 @@
 		<Spanish>[ICON_BULLET]%D1_Mod% from Civics</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod% from Civics</Russian>
 	</TEXT>
+	<!-- Used in the dll -->
+	<!-- Currently unused in RFCE
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_VASSAL_BONUS_VANILLA</Tag>
+		<English>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</English>
+		<French>[ICON_BULLET]+3 points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
+		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
+		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
+		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
+		<Russian>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, &#232;&#225;&#238; &#234;&#224;&#230;&#228;&#251;&#233; &#232;&#241;&#245;&#238;&#228;&#237;&#251;&#233; &#239;&#243;&#237;&#234;&#242; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#235;&#241;&#255;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_VASSALAGE_VANILLA_STRATEGY</Tag>
+		<English>Adds a Stability Points bonus for each civilization starting point controlled</English>
+		<French>Ajoute un bonus de points de stabilit&#233; par point de d&#233;part de civilisation contr&#244;l&#233;</French>
+		<German>Stabilit&#228;tspunktbonus f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
+		<Italian>Aggiunge un punto stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
+		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
+		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#232; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#232;&#241;&#245;&#238;&#228;&#237;&#238;&#227;&#238; &#239;&#243;&#237;&#234;&#242;&#224; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_RESETTLEMENT_STRATEGY</Tag>
+		<English>Adds a Stability Points bonus for each city founded at least 15 tiles from the capital</English>
+		<French>Ajoute un bonus de points de stabilit&#233; par ville fond&#233;e &#224; 15 cases ou plus de la capitale</French>
+		<German>Stabilit&#228;tspunktbonus f&#252;r jede Stadt, die mindestens 15 Gel&#228;ndefelder von der Hauptstadt entfernt gegr&#252;ndet wurde</German>
+		<Italian>Aggiunge un bonus di punti stabilit&#224; per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
+		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
+		<Russian>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#227;&#238;&#240;&#238;&#228;&#224;, &#238;&#241;&#237;&#238;&#226;&#224;&#237;&#237;&#238;&#227;&#238; &#234;&#224;&#234; &#236;&#232;&#237;&#232;&#236;&#243;&#236; &#237;&#224; 15 &#234;&#235;&#229;&#242;&#238;&#234; &#238;&#242; &#241;&#242;&#238;&#235;&#232;&#246;&#251;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COMMONWEALTH_STRATEGY</Tag>
+		<English>No negative Stability Points for low amount of traded resources; no negative Stability Points for poor economy</English>
+		<French>Pas de points de stabilit&#233; n&#233;gatifs pour un faible niveau de ressources &#233;chang&#233;es ; pas de points de stabilit&#233; n&#233;gatifs pour une &#233;conomie pauvre</French>
+		<German>Keine Stabilit&#228;tspunktabz&#252;ge durch geringf&#252;gig gehandelte Ressourcen; keine Stabilit&#228;tspunktabz&#252;ge durch schlechte Wirtschaftslage</German>
+		<Italian>Nessun punto stabilit&#224; negativo in caso di scarso commercio di risorse; nessun punto stabilit&#224; negativo in caso di scarsa economia.</Italian>
+		<Spanish>No hay puntos de estabilidad negativos por baja cantidad de recursos intercambiados; no hay puntos de estabilidad negativos por econom&#237;a d&#233;bil</Spanish>
+		<Russian>&#205;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#237;&#232;&#231;&#234;&#238;&#227;&#238; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#224; &#242;&#238;&#240;&#227;&#243;&#254;&#249;&#232;&#245;&#241;&#255; &#240;&#229;&#241;&#243;&#240;&#241;&#238;&#226;; &#237;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#225;&#229;&#228;&#237;&#238;&#233; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#232;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
+		<English>Republic</English>
+		<French>R&#233;publique</French>
+		<German>Republik</German>
+		<Italian>Repubblica</Italian>
+		<Spanish>República</Spanish>
+		<Russian>&#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Tag>
+		<English>[TAB]In a republic, the head of state is not a monarch and there are no legal privileges for the nobility. The exact form of government can vary widely, from absolute despotism to direct democracy, but the most important difference between a republic and any form of monarchy is the much-diminished role of family and lineage in government.[PARAGRAPH:2]Before the French Revolution, a republic in Europe was an aberration. The state enjoyed none of the external security provided by royal family ties. Internally, the succession was decided to some extent by merit, even if this often meant merely that the man with the best ability to take power would do so.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	-->
 </Civ4GameText>
