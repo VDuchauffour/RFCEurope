@@ -12,7 +12,7 @@
 		<German>Expansion</German>
 		<Italian>Espansione</Italian>
 		<Spanish>Expansi&#243;n</Spanish>
-		<Russian/>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Tag>
@@ -20,7 +20,7 @@
 		<French></French>
 		<German>Geringerer Einheitenunterhalt und Zufriedenheit durch Burgen</German>
 		<Italian>Costo delle unità più basso e felicità dai castelli</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
 	</TEXT>
 	<TEXT>
@@ -29,26 +29,26 @@
 		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French>
 		<German>[ICON_HAPPY] durch Militäreinheiten; [ICON_CULTURE] durch Spezialisten; schneller Große Feldherren [ICON_GREAT_GENERAL]</German>
 		<Italian>Felicità dalle unità militari; cultura dagli specialisti; velocizza la nascita di grandi generali</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_DESPOT</Tag>
 		<English>"We Love the Despot Day"</English>
-		<French/>
+		<French></French>
 		<German>"Wir Lieben den Tag des Despoten"</German>
 		<Italian>"Viva il Giorno del Despota"</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_KING</Tag>
 		<English>"We Love the King Day"</English>
-		<French/>
+		<French></French>
 		<German>"Wir Lieben den Tag des Königs"</German>
 		<Italian>"Viva il Giorno del Re"</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
@@ -56,7 +56,7 @@
 		<French>Peut utiliser l'Or pour terminer la production</French>
 		<German>Kann Gold zur Produktionsbeschleunigung nutzen; +1 [ICON_PRODUCTION] von Städten</German>
 		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
@@ -65,7 +65,7 @@
 		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French>
 		<German>Kann Einheiten rekrutieren</German>
 		<Italian>Può richiamare alla leva le unità</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Russian>
 	</TEXT>
 	<TEXT>
@@ -74,71 +74,71 @@
 		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French>
 		<German>unbegrenzt Priester und schneller Große Persönlichkeiten; Unzufriedenheit durch Nicht-Staatsreligionen</German>
 		<Italian>Sacerdoti illimati e i grandi generali nascono più in fretta; infelicità dalle religioni non-ufficiali</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
 		<English>Faster great people. Higher military support costs</English>
 		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French>
-		<German/>
+		<German>.</German>
 		<Italian>Velocizza la nascita di Grandi Personaggi. Aumenta i costi di supporo delle unità</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
 		<English>+100% growth to cottages, hamlets, and villages; +2 gold from towns.</English>
 		<French>+100%% de croissance des cottages, hameaux et villages.</French>
-		<German/>
+		<German>.</German>
 		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
 		<English>Unlimited artists, scholars, and merchants; workshops give extra production</English>
 		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French>
-		<German/>
+		<German>.</German>
 		<Italian>Artisti, scienziati e mercanti illimitati; le botteghe danno produzione extra</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
 		<English>Extra commerce and production from cities; penalty for other civs not adopting this</English>
 		<French>Amelioration du commerce et de la production depuis les villes</French>
-		<German/>
+		<German>.</German>
 		<Italian>Più commercio e produzione dalle città; penalità per le civiltà che non la adottano</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
 		<English>-1 trade route, gold from farms</English>
 		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French>
-		<German/>
+		<German>.</German>
 		<Italian>-1 rotta commerciale, oro dalle fattorie</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
 		<English>Good for trade; bad for war</English>
 		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French>
-		<German/>
+		<German>.</German>
 		<Italian>Buona per il commercio; pessima per la guerra</Italian>
-		<Spanish/>
+		<Spanish></Spanish>
 		<Russian>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
 		<English>Cities with State Religion train units faster</English>
-		<French/>
-		<German/>
+		<French>.</French>
+		<German>.</German>
 		<Italian>Le città con Religione Ufficiale addestrano più velocemente le unità</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
@@ -899,29 +899,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
 		<English>Adds stability for each colony founded</English>
-		<French/>
+		<French>.</French>
 		<German>Stabilitätspunkte für jede errichtete Kolonie</German>
 		<Italian>Aumentà la stabilità per ogni colonia fondata</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
 		<English>Adds stability for each city outside the core area</English>
-		<French/>
+		<French>.</French>
 		<German>Addiert Stabilität für jede Stadt außerhalb des Kerngebietes</German>
 		<Italian>Aumentà la stabilità per ogni città fuori dal centro dell'impero</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
 		<English>+1 production from farms, slower growth for cottages and great people</English>
-		<French/>
+		<French>.</French>
 		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Gehöften und großen Persönlichkeiten</German>
 		<Italian>+1 produzione da fattorie, crescità più lenta per villete e grandi personaggi</Italian>
-		<Spanish/>
-		<Russian/>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1</Tag>

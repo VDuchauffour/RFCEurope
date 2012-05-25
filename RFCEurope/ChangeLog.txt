@@ -44,6 +44,7 @@ Changes for RFCE 1.1:
 		- German translations by HolyHandGrenade
 		- New XML name tag for the 6th language
 		- Minor diplotext fixes
+		- Various updates in the wording of the UP texts
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
