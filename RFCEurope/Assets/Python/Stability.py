@@ -62,15 +62,15 @@ class Stability:
         def checkTurn(self, iGameTurn):
                 #print "3Miro NewStability Check Turn"
                 # 3Miro: hidden modifier based upon the group/continent
-        	#if (iGameTurn % 21 == 0):
-	       	#	self.continentsNormalization(iGameTurn)
+                #if (iGameTurn % 21 == 0):
+                #        self.continentsNormalization(iGameTurn)
                 #if (iGameTurn % 6 == 0): #3 is too short to detect any change; must be a multiple of 3 anyway
-			#gc.calcLastOwned() # Compute the RFC arrays (getlOwnedPlots,getlOwnedCities) in C instead
+                        #gc.calcLastOwned() # Compute the RFC arrays (getlOwnedPlots,getlOwnedCities) in C instead
                         #for iLoopCiv in range(iNumPlayers):
-                        	#if ( gc.hasUP(iLoopCiv, con.iUP_LandStability) ): #French UP
-                        		#self.setOwnedPlotsLastTurn(iLoopCiv, 0)
-                        	#else:
-                                	#self.setOwnedPlotsLastTurn(iLoopCiv, gc.getlOwnedPlots(iLoopCiv))
+                                #if ( gc.hasUP(iLoopCiv, con.iUP_LandStability) ): #French UP
+                                        #self.setOwnedPlotsLastTurn(iLoopCiv, 0)
+                                #else:
+                                                #self.setOwnedPlotsLastTurn(iLoopCiv, gc.getlOwnedPlots(iLoopCiv))
                                 #self.setOwnedCitiesLastTurn(iLoopCiv, gc.getlOwnedCities(iLoopCiv))
 
                         ##Display up/down arrows
@@ -132,10 +132,10 @@ class Stability:
                 #       if (gc.getPlayer(iPlayer).isAlive()):
                 #                for j in range(len(con.lCivStabilityGroups)):
                 #                        if (iPlayer in con.lCivStabilityGroups[j]):
-		#				self.setParameter(iPlayer, iParExpansionE, True, lContinentModifier[j])
+                #                                self.setParameter(iPlayer, iParExpansionE, True, lContinentModifier[j])
                 #                                self.setStability(iPlayer, (self.getStability(iPlayer) + lContinentModifier[j]))
                 pass
-	
+
 
         def onCityBuilt(self, iPlayer, x, y):
                 iProv = rfcemaps.tProinceMap[y][x]
@@ -223,23 +223,23 @@ class Stability:
                 iTech == xml.iMachinery or
                 iTech == xml.iAristocracy ):
                         gc.getPlayer(iPlayer).changeStabilityBase( iCathegoryEconomy, -1 )
-        	pass
+                pass
 
 
         def onBuildingBuilt(self, iPlayer, iBuilding, city):
-		# 3Miro: some buildings give and others take stability
+                # 3Miro: some buildings give and others take stability
                 if ( iBuilding == xml.iManorHouse or iBuilding == xml.iFrenchChateau):
                         gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryEconomy, 1 )
                 elif ( iBuilding == xml.iCastle or iBuilding == xml.iMoscowKremlin or iBuilding == xml.iHungarianStronghold or iBuilding == xml.iSpanishCitadel):
-                	gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryExpansion, 1 )
+                        gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryExpansion, 1 )
                 elif ( iBuilding == xml.iNightWatch):
-                	gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCivics, 1 )
+                        gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCivics, 1 )
                 elif ( iBuilding == xml.iCourthouse or iBuilding == xml.iHolyRomanRathaus or iBuilding == xml.iKievVeche or iBuilding == xml.iLithuanianVoivodeship ):
                         gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCities, 1 )
                 elif (iBuilding == xml.iEscorial):
-			gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasEscorial, 1 )
-		elif (iBuilding == xml.iStephansdom):
-			gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+                        gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasEscorial, 1 )
+                elif (iBuilding == xml.iStephansdom):
+                        gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
                 elif (iBuilding == xml.iPalace):
                         #print(" Capital Changed",iPlayer)
                         pPlayer= gc.getPlayer( iPlayer )
@@ -269,8 +269,8 @@ class Stability:
 
 
         def onReligionSpread(self, iReligion, iPlayer):
-        	pass
-		#Sedna17: Religions seemed to be subtracted and re-inserted into cities, which makes this a bad idea.
+                pass
+                #Sedna17: Religions seemed to be subtracted and re-inserted into cities, which makes this a bad idea.
                 #if (iPlayer < iNumPlayers):  
                 #        pPlayer = gc.getPlayer(iPlayer)
                 #        if (pPlayer.getStateReligion() != iReligion):
@@ -280,7 +280,7 @@ class Stability:
                 #                                        self.setStability(iPlayer, self.getStability(iPlayer) - 1 )
                 #                                        self.setParameter(iPlayer, iParCitiesE, True, -1)
                 #                                        print("Stability - onReligionSpread - Target = ", iPlayer, "Cause = ", iLoopCiv, "Religion = ",iReligion)
-                #					 break
+                #                                        break
 
        	
         def checkImplosion(self, iGameTurn):
@@ -288,7 +288,7 @@ class Stability:
                         for iPlayer in range(iNumPlayers):
                                 pPlayer = gc.getPlayer(iPlayer)
                                 if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 25):
-                                	# 3MiroUP: Emperor
+                                        # 3MiroUP: Emperor
                                         if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() < 11) ): #civil war
                                                 print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
                                                 if (iPlayer != utils.getHumanID()):
@@ -310,10 +310,10 @@ class Stability:
                                                                 pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
 
 
-	def printStability(self, iGameTurn, iPlayer ):
+        def printStability(self, iGameTurn, iPlayer ):
                 cyPlayer = PyHelpers.PyPlayer(iPlayer)
                 pPlayer = gc.getPlayer( iPlayer )
-		print(" Turn: ",iGameTurn)
+                print(" Turn: ",iGameTurn)
                 print " ---------------- New Stability For " + cyPlayer.getCivilizationShortDescription()
                 print("                  Stability : ",pPlayer.getStability() )
                 print("                  Cities    : ",pPlayer.getStabilityBase( iCathegoryCities ) + pPlayer.getStabilityVary( iCathegoryCities ))
@@ -322,7 +322,7 @@ class Stability:
                 print("                  Expansion : ",pPlayer.getStabilityBase( iCathegoryExpansion ) + pPlayer.getStabilityVary( iCathegoryExpansion ) )
                 print("                  Swing     : ",pPlayer.getStabilitySwing() )
 
-	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
+        def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
                 pPlayer = gc.getPlayer(iPlayer)
                 pPlayer.changeStabilityBase( iCathegoryCities, -pPlayer.getStabilityBase( iCathegoryCities ) )
                 pPlayer.changeStabilityBase( iCathegoryCivics, -pPlayer.getStabilityBase( iCathegoryCivics ) )
@@ -374,8 +374,8 @@ class Stability:
                         if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 40 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
                                 iCultureStability -= 1
                 # 3Miro: prosecution count is decremented in Religions.py
-		iProsecutionCount = pPlayer.getProsecutionCount()
-		if ( iProsecutionCount > 0 ):
+                iProsecutionCount = pPlayer.getProsecutionCount()
+                if ( iProsecutionCount > 0 ):
                         iReligionStability -= 2* ( (iProsecutionCount+9) / 10 )
                 # Humans are far more competent then the AI, so give the AI a small boost
                 if ( pPlayer.isHuman() ):
@@ -392,7 +392,7 @@ class Stability:
                         iCityStability += 8
                 pPlayer.setStabilityVary( iCathegoryCities, iCityStability)
 
-	def recalcCivicCombos(self, iPlayer):
+        def recalcCivicCombos(self, iPlayer):
                 # Note from 3Miro: this is the only place Civics are referenced, yet refering them by number makes this hard to read
                 pPlayer = gc.getPlayer(iPlayer)
                 iCivic0 = pPlayer.getCivics(0)
@@ -405,26 +405,26 @@ class Stability:
                 iCivicCombo = 0
                 if (iCivic3 == xml.iCivicMerchantRepublic):
                         if (iCivic1 == xml.iCivicFeudalLaw): #Incompatible with Feudal Law (Venice likes this one)
-				iCivicCombo -= 4
+                                iCivicCombo -= 4
                         if (iCivic3 == xml.iCivicTradeEconomy):
                                 iCivicCombo += 3
                 if (iCivic0 == xml.iCivicDivineMonarchy): #Divine Monarchy should have an appropriate religious civic
-			if (iCivic4 == xml.iCivicPaganism): #Paganism
-				iCivicCombo -=4
-			if (iCivic4 == xml.iCivicTheocracy): #Theocracy
-				iCivicCombo +=3
-			if (iCivic4 == xml.iCivicStateReligion): #State Religion
-				iCivicCombo +=2
+                        if (iCivic4 == xml.iCivicPaganism): #Paganism
+                                iCivicCombo -=4
+                        if (iCivic4 == xml.iCivicTheocracy): #Theocracy
+                                iCivicCombo +=3
+                        if (iCivic4 == xml.iCivicStateReligion): #State Religion
+                                iCivicCombo +=2
                         if (iCivic4 == xml.iCivicOrganizedReligion): #State Religion
-				iCivicCombo +=2
-			if (iCivic4 == xml.iCivicFreeReligion): #Free Religion
-				iCivicCombo -=5
-			if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law
-				iCivicCombo +=2
+                                iCivicCombo +=2
+                        if (iCivic4 == xml.iCivicFreeReligion): #Free Religion
+                                iCivicCombo -=5
+                        if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law
+                                iCivicCombo +=2
                 if ( pPlayer.getPicklefreeParameter( con.iIsHasStephansdom ) == 1 ):
                         #if (self.getHasStephansdom(iPlayer) == 1):
                         if(iCivic0 == xml.iCivicFeudalMonarchy or iCivic0 == xml.iCivicDivineMonarchy or iCivic0 == xml.iCivicLimitedMonarchy):
-					iCivicCombo +=2
+                                        iCivicCombo +=2
                 if (iCivic0 == xml.iCivicLimitedMonarchy or iCivic0 == xml.iCivicMerchantRepublic): #Limited Monarchy and Republics both like enlightened civics
                         if (iCivic1 == xml.iCivicCommonLaw): #Common Law
                                 iCivicCombo +=3

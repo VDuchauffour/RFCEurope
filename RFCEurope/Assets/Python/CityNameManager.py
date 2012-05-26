@@ -42,7 +42,7 @@ class CityNameManager:
                 """Names a city depending on its plot"""
                 iOwner = city.getOwner()
                 if (iOwner < iNumMajorPlayers):
-                	#print(" City Name ",iOwner,con.iMapMaxY-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
+                        #print(" City Name ",iOwner,con.iMapMaxY-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
                         cityName = tCityMap[iOwner][con.iMapMaxY-1-city.getY()][city.getX()]
                         #print(" City Name ",cityName)
                         if (cityName != "-1"):
@@ -53,17 +53,17 @@ class CityNameManager:
 
                 #sName = city.getName()
                 if ( iNewOwner < con.iNumMajorPlayers ):
-                	cityName = tCityMap[iNewOwner][con.iMapMaxY-1-city.getY()][city.getX()]
-                	if ( cityName != "-1" ):
-                		city.setName(unicode(cityName, 'latin-1'), False)
-                		
-	def lookupName(self,city,iPlayer):
-		"""Looks up a city name in another player's map"""
-		if (iPlayer < con.iNumMajorPlayers):
-			cityName = tCityMap[iPlayer][con.iMapMaxY-1-city.getY()][city.getX()]
-			if (cityName == "-1"):
-				return "Unknown"
-			else:
-				return cityName
+                        cityName = tCityMap[iNewOwner][con.iMapMaxY-1-city.getY()][city.getX()]
+                        if ( cityName != "-1" ):
+                                city.setName(unicode(cityName, 'latin-1'), False)
 
-	
+        def lookupName(self,city,iPlayer):
+                """Looks up a city name in another player's map"""
+                if (iPlayer < con.iNumMajorPlayers):
+                        cityName = tCityMap[iPlayer][con.iMapMaxY-1-city.getY()][city.getX()]
+                        if (cityName == "-1"):
+                                return "Unknown"
+                        else:
+                                return cityName
+
+

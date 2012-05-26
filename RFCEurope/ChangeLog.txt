@@ -30,6 +30,7 @@ Changes for RFCE 1.1:
 			Now we can have civ-specific names everywhere, including everything that appear on the map too
 			Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
 			Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
+		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
