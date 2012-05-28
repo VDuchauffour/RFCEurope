@@ -231,7 +231,12 @@ class CvWorldBuilderScreen:
 		elif (inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED):
 			
 			if(self.currentMode != None):
-				return self.currentMode.handleDropdown(inputClass.getFunctionName(), int(inputClass.getData()))
+				screen = CyGInterfaceScreen( "WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN )
+				name = inputClass.getFunctionName()
+				index = int(inputClass.getData())
+				value = screen.getPullDownType(name, index)
+				
+				return self.currentMode.handleDropdown(name, index, value)
 			
 			if (inputClass.getFunctionName() == "WorldBuilderPlayerChoice"):
 				self.handlePlayerUnitPullDownCB(inputClass.getData())
@@ -248,6 +253,9 @@ class CvWorldBuilderScreen:
 				
 		if (self.currentMode != None):
 			self.m_pCurrentPlot = CyInterface().getMouseOverPlot()
+			
+			self.currentMode.mouseOverPlot(self.m_pCurrentPlot, argsList)
+			
 			if (CyInterface().isLeftMouseDown() and self.m_bLeftMouseDown):
 				self.currentMode.leftMouseDown(self.m_pCurrentPlot, argsList)
 			elif(CyInterface().isRightMouseDown() and self.m_bRightMouseDown):
@@ -2730,10 +2738,50 @@ class CvWorldBuilderScreen:
 
 
 #Caliom own classes
-class RevealMode:
+class Mode:
+	"Editor Mode template"
+	
+	def __init__ (self, worldBuilderScreen) :
+		self.iPlayer = None
+		self.worldBuilderScreen = worldBuilderScreen
+	
+	
+	def activate(self):
+		self.iPlayer = self.worldBuilderScreen.m_iCurrentPlayer
+	
+	def deactivate(self):
+		pass
+	
+	def mouseOverPlot(self, pPlot, argsList):
+		pass
+	
+	def leftMouseDown (self, pPlot, argsList):
+		pass
+	
+	def leftMouseUp(self, pPlot):
+		pass
+	
+	def rightMouseDown(self, pPlot, argsList):
+		pass
+	
+	def rightMouseUp(self, pPlot):
+		pass
+	
+	def updateScreen(self, pCurrentPlot):
+		pass
+	
+	def handleDropdown(self, name, index, value):
+		pass
+	
+	def isHighlightPlot(self):
+		return True
+
+
+class RevealMode(Mode):
 	"Editor Mode for BTS Visible Maps, RFCE War Maps, RFCE Settler Maps, RFCE Provinces, RFCE Core Areas, RFCE Normal Areas"
 	
 	def __init__ (self, worldBuilderScreen) :
+		Mode.__init__(self, worldBuilderScreen)
 		self.VISIBLE_MAP=1
 		self.WAR_MAP=2
 		self.SETTLER_MAP=3
@@ -2746,6 +2794,7 @@ class RevealMode:
 		self.iBrushSize = 1 #redundant 
 		self.iPlayer = 0 #redundant 
 		self.selectedPlots = set()
+		self.selectedPlot = None
 		self.worldBuilderScreen = worldBuilderScreen
 	
 	
@@ -2757,6 +2806,11 @@ class RevealMode:
 	def deactivate(self):
 		self.clearMaps()
 		self.clearWidgets()
+	
+	def mouseOverPlot(self, pPlot, argsList):
+		# CyInterface().addImmediateMessage(("onmouseover (%d,%d)"%(pPlot.getX(),pPlot.getY())), "")
+		self.highlightBrush(pPlot)
+		return
 	
 	def leftMouseDown (self, pPlot, argsList):
 		if(self.isSettlerMap() or self.isWarMap() or self.isProvinceMap() or self.isVisibleMap()):
@@ -2772,23 +2826,54 @@ class RevealMode:
 					elif(self.isVisibleMap()):
 						self.revealPlot(pPlot, true)
 					self.selectedPlots.add(coords)
+		elif(self.isCoreArea() or self.isNormalArea()):
+			if(self.selectedPlot == None):
+				self.selectedPlot = (pPlot.getX(),pPlot.getY())
+				self.highlightRectangleBrush(self.selectedPlot, self.selectedPlot)
+			else:
+				self.highlightRectangleBrush(self.selectedPlot, (pPlot.getX(),pPlot.getY()))
+			#MapManager.addCoreAreaAdditionalPlot(self.iPlayer, (pPlot.getX(), pPlot.getY()))
+		return
 	
 	def leftMouseUp(self, pPlot):
+		if(self.isCoreArea()):
+			BL = self.getBL(self.selectedPlot, (pPlot.getX(),pPlot.getY()))
+			TR = self.getTR(self.selectedPlot, (pPlot.getX(),pPlot.getY()))
+			if(BL == TR):
+				MapManager.addCoreAreaAdditionalPlot(self.iPlayer, BL)
+			else:
+				MapManager.setCoreAreaBLTR(self.iPlayer, BL, TR)
+			self.selectedPlot = None
+		elif(self.isNormalArea()):
+			BL = self.getBL(self.selectedPlot, (pPlot.getX(),pPlot.getY()))
+			TR = self.getTR(self.selectedPlot, (pPlot.getX(),pPlot.getY()))
+			if(BL == TR):
+				MapManager.addNormalAreaSubtractedPlot(self.iPlayer, BL)
+			else:
+				MapManager.setNormalAreaBLTR(self.iPlayer, BL, TR)
+			self.selectedPlot = None
+			
 		self.refreshMaps()
 		self.selectedPlots.clear()
+		if(self.isProvinceMap()):
+			MapVisualizer.highlightProvince(self.iBrushValue)
 	
 	def rightMouseDown(self, pPlot, argsList):
 		if(self.isSettlerMap()):
 			self.iBrushValue = MapManager.getSettlerValue(self.iPlayer, CyInterface().getMouseOverPlot())
 			self.sBrushColor = MapVisualizer.getSettlerMapColor(self.iBrushValue)
+			self.highlightBrush(pPlot)
 			self.refreshSideMenu()
 		elif(self.isWarMap()):
 			self.iBrushValue = MapManager.getWarValue(self.iPlayer, CyInterface().getMouseOverPlot())
 			self.sBrushColor = MapVisualizer.getWarMapColor(self.iBrushValue)
+			self.highlightBrush(pPlot)
 			self.refreshSideMenu()
 		elif(self.isProvinceMap()):
 			self.iBrushValue = MapManager.getProvinceId(CyInterface().getMouseOverPlot())
 			self.sBrushColor = MapVisualizer.getProvinceColor(self.iBrushValue)
+			self.highlightBrush(pPlot)
+			MapVisualizer.highlightProvince(self.iBrushValue)
 			self.refreshSideMenu()
 		elif(self.isVisibleMap()):
 			for pPlot in self.getBrushPlots(pPlot):
@@ -2796,26 +2881,30 @@ class RevealMode:
 				if coords not in self.selectedPlots:
 					self.revealPlot(pPlot,false)
 					self.selectedPlots.add(coords)
-	
+		elif(self.isCoreArea()):
+			MapManager.removeCoreAreaAdditionalPlot(self.iPlayer, (pPlot.getX(), pPlot.getY()))
+			self.refreshMaps()
+		elif(self.isNormalArea()):
+			MapManager.removeNormalAreaSubtractedPlot(self.iPlayer, (pPlot.getX(), pPlot.getY()))
+			self.refreshMaps()
+		return
+		
 	def rightMouseUp(self, pPlot):
 		if(self.isVisibleMap()):
 			self.refreshMaps()
 			self.selectedPlots.clear()
 	
-	def updateScreen(self, pCurrentPlot):
-		self.highlightBrush(pCurrentPlot)
-	
-	def handleDropdown(self, name, index):
+	def handleDropdown(self, name, index, value):
 		if(name == "WorldBuilderPlayerChoice"):
-			self.handlePlayerDropdown(index)
+			self.handlePlayerDropdown(index, value)
 		elif(name == "WorldBuilderBrushSize"):
-			self.handleBrushSizeDropdown(index)
+			self.handleBrushSizeDropdown(index, value)
 		elif(name == "WorldBuilderBrushValue"):
-			self.handleBrushValueDropdown(index)
+			self.handleBrushValueDropdown(index, value)
 		elif(name == "WorldBuilderMapType" or name == "WorldBuilderRevealType"):
-			self.handleMapTypeDropdown(index)
+			self.handleMapTypeDropdown(index, value)
 		elif(name == "WorldBuilderProvince"):
-			self.handleProvincePullDown(index)
+			self.handleProvinceDropdown(index, value)
 	
 	def isHighlightPlot(self):
 		return False
@@ -2852,12 +2941,12 @@ class RevealMode:
 		screen.addPullDownString(szDropdownName, "War Map", self.WAR_MAP, self.WAR_MAP, self.isWarMap() )
 		screen.addPullDownString(szDropdownName, "Settler Map", self.SETTLER_MAP, self.SETTLER_MAP, self.isSettlerMap() )
 		screen.addPullDownString(szDropdownName, "Provinces", self.PROVINCE_MAP, self.PROVINCE_MAP, self.isProvinceMap() )
-		screen.addPullDownString(szDropdownName, "Spawn Area (uneditable)", self.CORE_AREA, self.CORE_AREA, self.isCoreArea() )
-		screen.addPullDownString(szDropdownName, "Respawn Area (uneditable)", self.NORMAL_AREA, self.NORMAL_AREA, self.isNormalArea() )
+		screen.addPullDownString(szDropdownName, "Spawn Area", self.CORE_AREA, self.CORE_AREA, self.isCoreArea() )
+		screen.addPullDownString(szDropdownName, "Respawn Area", self.NORMAL_AREA, self.NORMAL_AREA, self.isNormalArea() )
 		
 		# province dropdown
 		if(self.isProvinceMap()):
-			szDropdownName = str("WorldBuilderProvinceChoice")
+			szDropdownName = str("WorldBuilderProvince")
 			screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString(szDropdownName, "None", -1, -1, (-1 == self.iBrushValue) )
 			for i in range( RFCEMapUtil.iNumProvinces ):
@@ -2908,7 +2997,7 @@ class RevealMode:
 		screen.deleteWidget("WorldBuilderBrushSize")
 		screen.deleteWidget("WorldBuilderBrushValue")
 		screen.deleteWidget("WorldBuilderBackgroundBottomPanel")
-		screen.deleteWidget("WorldBuilderProvinceChoice")
+		screen.deleteWidget("WorldBuilderProvince")
 		screen.deleteWidget("WorldBuilderRevealAll")
 		screen.deleteWidget("WorldBuilderUnrevealAll")
 	
@@ -2935,11 +3024,42 @@ class RevealMode:
 						plots.append(pPlot)
 		return plots
 	
-	def highlightBrush(self, pCurrentPlot):
-		if(pCurrentPlot != None and not pCurrentPlot == 0 and not pCurrentPlot.isNone()):
+	def getRectanglePlots(self, coords1, coords2):
+		BL = self.getBL(coords1, coords2)
+		TR = self.getTR(coords1, coords2)
+		plots = list()
+		plotX = BL[0]
+		plotY = TR[1]
+		for iX in range(TR[0]-BL[0]+1):
+			for iY in range(TR[1]-BL[1]+1):
+				pPlot = CyMap().plot(plotX+iX, plotY-iY)
+				if (not pPlot.isNone()):
+					plots.append(pPlot)
+		return plots
+	
+	def getBL(self, coords1, coords2):
+		B = min(coords1[0], coords2[0])
+		L = min(coords1[1], coords2[1])
+		return (B,L)
+	
+	def getTR(self, coords1, coords2):
+		T = max(coords1[0], coords2[0])
+		R = max(coords1[1], coords2[1])
+		return (T,R)
+	
+	def highlightRectangleBrush(self, coords1, coords2):
+		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
+		for pPlot in self.getRectanglePlots(coords1, coords2):
+			CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, "COLOR_WHITE", 1)
+		return
+	
+	def highlightBrush(self, pPlot=None):
+		if(pPlot == None):
+			pPlot=CyInterface().getMouseOverPlot()
+		if(pPlot != None and not pPlot == 0 and not pPlot.isNone()):
 			CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
-			for pPlot in self.getBrushPlots(pCurrentPlot):
-				CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, self.sBrushColor, 1)
+			for pBrushPlot in self.getBrushPlots(pPlot):
+				CyEngine().fillAreaBorderPlotAlt(pBrushPlot.getX(), pBrushPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, self.sBrushColor, 1)
 		return
 	
 	def refreshMaps ( self ) :
@@ -3009,8 +3129,8 @@ class RevealMode:
 		if bReveal or (not pPlot.isVisible(iTeam, False)):
 			pPlot.setRevealed(iTeam, bReveal, False, -1)
 	
-	def handleMapTypeDropdown ( self, iIndex ) :
-		self.iMapType = iIndex+1
+	def handleMapTypeDropdown ( self, index, value):
+		self.iMapType = value
 		if(self.isWarMap()):
 			self.iBrushValue = RFCEMapUtil.warMapDefault
 			self.sBrushColor = MapVisualizer.getWarMapColor(self.iBrushValue)
@@ -3024,52 +3144,48 @@ class RevealMode:
 			self.sBrushColor = "COLOR_GREEN"
 		elif(self.isCoreArea() or self.isNormalArea()):
 			self.iBrushSize = 1
-			self.sBrushColor = "COLOR_GREEN"
+			self.sBrushColor = "COLOR_GREY"
 		
 		self.refreshMaps()
 		self.refreshSideMenu()
 		return 1
 	
-	def handlePlayerDropdown ( self, iIndex ) :
-		iCount = -1
+	def handlePlayerDropdown ( self, index, value):
+		self.iPlayer = value
+		self.refreshMaps()
 		
-		for i in range( gc.getMAX_CIV_PLAYERS() ):
-			if ( gc.getPlayer(i).isEverAlive() ):
-				iCount = iCount + 1
-				if (iCount == iIndex):
-					self.iPlayer = i
-					self.refreshMaps()
-					return 1
-
-		i = i + 1
-		self.iPlayer = i
 		return 1
 	
-	def handleProvinceDropdown ( self, iIndex ) :
-		self.iBrushValue = iIndex-1;
+	def handleProvinceDropdown ( self, index, value):
+		self.iBrushValue = value
 		self.sBrushColor = MapVisualizer.getProvinceColor(self.iBrushValue)
+		self.highlightBrush()
+		MapVisualizer.highlightProvince(self.iBrushValue)
 		return 1
 	
-	def handleBrushSizeDropdown ( self, iIndex ) :
-		self.iBrushSize = iIndex+1;
+	def handleBrushSizeDropdown ( self, index, value):
+		self.iBrushSize = value;
+		self.highlightBrush()
 		return 1
 	
-	def handleBrushValueDropdown(self, iIndex):
-		screen = CyGInterfaceScreen( "WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN )
-		self.iBrushValue = screen.getPullDownType("WorldBuilderBrushValue", iIndex)
+	def handleBrushValueDropdown(self, index, value):
+		
+		self.iBrushValue = value
 		if(self.isWarMap()):
 			self.sBrushColor = MapVisualizer.getWarMapColor(self.iBrushValue)
 		elif(self.isSettlerMap()):
 			self.sBrushColor = MapVisualizer.getSettlerMapColor(self.iBrushValue)
 		else:
 			self.sBrushColor = "COLOR_GREEN"
+		self.highlightBrush()
 		return 1
 
 
-class LandmarkMode:
+class LandmarkMode(Mode):
 	"Editor Mode for BTS Landmarks, RFCE City Maps"
 	
 	def __init__ (self, worldBuilderScreen) :
+		Mode.__init__(self, worldBuilderScreen)
 		self.iPlayer = None
 		self.LANDMARKS = 1
 		self.CITY_NAMES = 2
@@ -3122,14 +3238,11 @@ class LandmarkMode:
 	def rightMouseUp(self, pPlot):
 		pass
 	
-	def updateScreen(self, pCurrentPlot):
-		pass
-	
-	def handleDropdown(self, name, index):
+	def handleDropdown(self, name, index, value):
 		if(name == "WorldBuilderPlayerChoice"):
-			return self.handlePlayerDropdown(index)
+			return self.handlePlayerDropdown(index, value)
 		elif(name == "WorldBuilderLandmarkType"):
-			return self.handleLandmarkTypeDropdown(index)
+			return self.handleLandmarkTypeDropdown(index, value)
 	
 	def isHighlightPlot(self):
 		return True
@@ -3203,10 +3316,10 @@ class LandmarkMode:
 	def isLandmarks(self):
 		return self.mode == self.LANDMARKS
 	
-	def handleLandmarkTypeDropdown ( self, iIndex ) :
+	def handleLandmarkTypeDropdown ( self, index, value) :
 		self.clearScreen()
 		
-		self.mode = iIndex +1
+		self.mode = value
 		
 		if(self.isCityNames()):
 			self.backupLandmarks()
@@ -3218,26 +3331,18 @@ class LandmarkMode:
 		self.refreshSideMenu()
 		return 1
 	
-	def handlePlayerDropdown ( self, iIndex ) :
+	def handlePlayerDropdown ( self, index, value) :
 		iBarbarian = gc.getBARBARIAN_PLAYER()
-		if((iIndex == iBarbarian or self.iPlayer != iBarbarian) and self.isCityNames()):
+		if((value == iBarbarian or self.iPlayer != iBarbarian) and self.isCityNames()):
 			# always switch to Barbarian player between two normal players to hide landmarks
 			self.clearScreen()
 			self.iPlayer = iBarbarian
 			self.refreshSideMenu()
 			return 1
 		
-		iCount = -1
-		for i in range( gc.getMAX_CIV_PLAYERS() ):
-			if ( gc.getPlayer(i).isEverAlive() ):
-				iCount = iCount + 1
-				if (iCount == iIndex):
-					self.iPlayer = i
-					self.refreshScreen()
-					return 1
-		
-		self.iPlayer = i + 1
+		self.iPlayer = value
 		self.refreshScreen()
+		
 		return 1
 	
 	def cityNamePopupBegin(self,userData):
@@ -3246,7 +3351,10 @@ class LandmarkMode:
 		cityName = MapManager.getCityName(iPlayer, pPlot);
 		if(cityName == None):
 			cityName = ""
-		MapVisualizer.hideCityName(pPlot)
+		else:
+			cityName = unicode(cityName, 'latin-1')
+			
+		MapVisualizer.hideCityName(pPlot) #landmark-update-problem-fix
 		
 		
 		cityNames = []
@@ -3255,7 +3363,8 @@ class LandmarkMode:
 				name = MapManager.getCityName(i, pPlot)
 				civ = gc.getPlayer(i).getCivilizationShortDescription(0)
 				if(name != None):
-					cityNames.append((name, civ))
+					cityNames.append((unicode(name, 'latin-1'), civ))
+		cityNames.sort()
 		
 		cityHeader = cityName
 		if(cityHeader == ""):
@@ -3343,37 +3452,3 @@ class LandmarkMode:
 		return
 
 
-class Mode:
-	"Editor Mode template"
-	
-	def __init__ (self, worldBuilderScreen) :
-		self.iPlayer = None
-		self.worldBuilderScreen = worldBuilderScreen
-	
-	
-	def activate(self):
-		self.iPlayer = self.worldBuilderScreen.m_iCurrentPlayer
-	
-	def deactivate(self):
-		pass
-	
-	def leftMouseDown (self, pPlot, argsList):
-		pass
-	
-	def leftMouseUp(self, pPlot):
-		pass
-	
-	def rightMouseDown(self, pPlot, argsList):
-		pass
-	
-	def rightMouseUp(self, pPlot):
-		pass
-	
-	def updateScreen(self, pCurrentPlot):
-		pass
-	
-	def handleDropdown(self, name, index):
-		pass
-	
-	def isHighlightPlot(self):
-		return True
