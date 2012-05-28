@@ -2,9 +2,9 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers       
+import PyHelpers
 import Popup
-import cPickle as pickle        	
+import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
@@ -594,8 +594,8 @@ class Religions:
                                         iFaith += 1
                                 if(pCity.hasBuilding(xml.iCatholicCathedral) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') > 50 ):
                                         pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
-					if ( pCity.hasBuilding(xml.iCatholicReliquary) ):
-						pCity.setHasRealBuilding(xml.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
+                                        if ( pCity.hasBuilding(xml.iCatholicReliquary) ):
+                                                pCity.setHasRealBuilding(xml.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
                                         pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
                                         iFaith += 1
                         elif ( bForceConvertSmall or gc.getGame().getSorenRandNum(100, 'Reformation of a City') < lReformationMatrix[pCity.getOwner()] ):
@@ -680,12 +680,18 @@ class Religions:
                 elif(popupReturn.getButtonClicked() == 1):
                         self.doCounterReformationNo(iHuman)
                         
+        def eventApply7628(self, popupReturn):		#Absinthe: persecution popup
+                """Persecution popup event."""
+                iPlotX, iPlotY, iUnitID = utils.getPersecutionData()
+                religionList = utils.getPersecutionReligions()
+                utils.prosecute(iPlotX, iPlotY, iUnitID, religionList[popupReturn.getButtonClicked()])
+                
         def doCounterReformationYes( self, iPlayer ):
                 print(" Counter Reformation Yes",iPlayer)
                 pPlayer = gc.getPlayer( iPlayer )
                 pCapital = pPlayer.getCapitalCity()
-		iX = pCapital.getX()
-		iY = pCapital.getY()
+                iX = pCapital.getX()
+                iY = pCapital.getY()
                 if ( iX == -1 or iY == -1 ):
                         if ( pPlayer.getNumCities() > 0 ):
                                 apCityList = PyPlayer(iPlayer).getCityList()

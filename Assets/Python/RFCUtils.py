@@ -3,12 +3,14 @@
 from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
+import Popup #Absinthe
 import Consts as con
 import XMLConsts as xml
 import cPickle as pickle
 
 # globals
 gc = CyGlobalContext()
+localText = CyTranslator() #Absinthe
 PyPlayer = PyHelpers.PyPlayer
 
 iNumPlayers = con.iNumPlayers
@@ -549,9 +551,9 @@ class RFCUtils:
                                                                 #gc.getMap().plot(122, 65).setRevealed(iCiv, False, True, -1);
                                                                 #gc.getMap().plot(123, 65).setRevealed(iCiv, False, True, -1);
                                                                 gc.getMap().plot(0, 72).setRevealed(iCiv, False, True, -1);
-								gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
-								gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
-                						gc.getMap().plot(1, 71).setRevealed(iCiv, False, True, -1);
+                                                                gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
+                                                                gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
+                                                                gc.getMap().plot(1, 71).setRevealed(iCiv, False, True, -1);
                                 
 
 
@@ -788,19 +790,19 @@ class RFCUtils:
                 iNumUnitsInAPlot = plotCity.getNumUnits()
                 pCiv = gc.getPlayer(iNewOwner)
 
-		# Sedna17: makes garrison units based on new tech tree/units
+                # Sedna17: makes garrison units based on new tech tree/units
                 if (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iNationalism) and gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMilitaryTactics)):
                         iUnitType = xml.iLineInfantry
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMatchlock)):
-			iUnitType = xml.iMusketman       
+                        iUnitType = xml.iMusketman       
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iGunpowder)):
-			iUnitType = xml.iArquebusier
+                        iUnitType = xml.iArquebusier
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMilitaryTradition)):
-			iUnitType = xml.iArquebusier
+                        iUnitType = xml.iArquebusier
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iClockmaking)):
-			iUnitType = xml.iArbalest
-		elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMachinery)):
-			iUnitType = xml.iCrossbowman
+                        iUnitType = xml.iArbalest
+                elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMachinery)):
+                        iUnitType = xml.iCrossbowman
                 else:
                         iUnitType = xml.iArcher
 
@@ -1150,31 +1152,68 @@ class RFCUtils:
                                                     return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
                 return (None, not bPaint, bContinue)
-            
-	def collapseImmune( self, iCiv ):
-		#3MiroUP: Emperor
-		if ( gc.hasUP(iCiv,con.iUP_Emperor) ):
-			#print(" 3Miro: has the power: ",iCiv)
-			if (gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).isCity()):
-				#print(" 3Miro: has the city: ",iCiv)
-				if(gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).getPlotCity().getOwner() == iCiv):
-					#print(" 3Miro: collapse immune ",iCiv)
-					return true
-		#print(" 3Miro: not immune ",iCiv)
-		return false
-		
-	def collapseImmuneCity( self, iCiv, x, y ):
-		#3MiroUP: Emperor
-		if ( gc.hasUP(iCiv,con.iUP_Emperor) ):
-			if (gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).isCity()):
-				if(gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).getPlotCity().getOwner() == iCiv):
-					if( (x>=con.tCoreAreasTL[iCiv][0]) and (x<=con.tCoreAreasBR[iCiv][0]) and (y>=con.tCoreAreasTL[iCiv][1]) and (y<=con.tCoreAreasBR[iCiv][1]) ):
-						#print(" 3Miro: collapse immune ",iCiv,x,y)
-						return true
-		#print(" 3Miro: collapse not immune ",iCiv,x,y)
-		return false            
 
-	def prosecute( self, iPlotX, iPlotY, iUnitID ):
+        def collapseImmune( self, iCiv ):
+                #3MiroUP: Emperor
+                if ( gc.hasUP(iCiv,con.iUP_Emperor) ):
+                        #print(" 3Miro: has the power: ",iCiv)
+                        if (gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).isCity()):
+                                #print(" 3Miro: has the city: ",iCiv)
+                                if(gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).getPlotCity().getOwner() == iCiv):
+                                        #print(" 3Miro: collapse immune ",iCiv)
+                                        return true
+                #print(" 3Miro: not immune ",iCiv)
+                return false
+
+        def collapseImmuneCity( self, iCiv, x, y ):
+                #3MiroUP: Emperor
+                if ( gc.hasUP(iCiv,con.iUP_Emperor) ):
+                        if (gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).isCity()):
+                                if(gc.getMap().plot( con.tCapitals[iCiv][0], con.tCapitals[iCiv][1]).getPlotCity().getOwner() == iCiv):
+                                        if( (x>=con.tCoreAreasTL[iCiv][0]) and (x<=con.tCoreAreasBR[iCiv][0]) and (y>=con.tCoreAreasTL[iCiv][1]) and (y<=con.tCoreAreasBR[iCiv][1]) ):
+                                                #print(" 3Miro: collapse immune ",iCiv,x,y)
+                                                return true
+                #print(" 3Miro: collapse not immune ",iCiv,x,y)
+                return false            
+
+        #Absinthe: chooseable persecution popup
+        def showPersecutionPopup(self):
+                """Asks the human player to select a religion to persecute."""
+
+                popup = Popup.PyPopup(7628, EventContextTypes.EVENTCONTEXT_ALL)
+                popup.setHeaderString("Religious Persecution")
+                popup.setBodyString("Choose a religious minority to deal with...")
+                religionList = self.getPersecutionReligions()
+                for iReligion in religionList:
+                        strIcon = gc.getReligionInfo(iReligion).getType()
+                        strIcon = "[%s]" %(strIcon.replace("RELIGION_", "ICON_"))
+                        strButtonText = "%s %s" %(localText.getText(strIcon, ()), gc.getReligionInfo(iReligion).getText())
+                        popup.addButton(strButtonText)
+                popup.launch(False)
+
+        def getPersecutionData(self):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lPersecutionData'][0], scriptDict['lPersecutionData'][1], scriptDict['lPersecutionData'][2]
+
+        def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lPersecutionData'] = [iPlotX, iPlotY, iUnitID]
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+
+        def getPersecutionReligions(self):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                return scriptDict['lPersecutionReligions']
+
+        def setPersecutionReligions(self, val):
+                scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                scriptDict['lPersecutionReligions'] = val
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+        #Absinthe: end
+
+        #Absinthe: persecution update
+        #the following prosecute function is only used by the persecution popup
+        #the persecution itself is handled in the canPurgeReligions and doPurgeReligions functions, in CvCity.cpp
+	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
 	# 3Miro: religious purge
 		#if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
 		#	return

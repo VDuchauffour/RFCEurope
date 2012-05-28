@@ -3652,22 +3652,41 @@ class CvMainInterface:
 		# Inquisitor button
 		if (inputClass.getNotifyCode() == 11 and inputClass.getData1() == 666 and inputClass.getData2() == 666):
 			
-			#pCharlemagne = CvEventInterface.getEventManager()
+			##pCharlemagne = CvEventInterface.getEventManager()
 			
-			pPlot = CyMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY())
+			#pPlot = CyMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY())
 			
-			#iPlayerID = g_pSelectedUnit.getOwner()
+			##iPlayerID = g_pSelectedUnit.getOwner()
 			
-			#iMessageID = pCharlemagne.m_iNetMessage_Inquisitor
-			iPlotX = pPlot.getX()
-			iPlotY = pPlot.getY()
-			#iOwner = g_pSelectedUnit.getOwner()
-			iUnitID = g_pSelectedUnit.getID()
+			##iMessageID = pCharlemagne.m_iNetMessage_Inquisitor
+			#iPlotX = pPlot.getX()
+			#iPlotY = pPlot.getY()
+			##iOwner = g_pSelectedUnit.getOwner()
+			#iUnitID = g_pSelectedUnit.getID()
 			
-			utils.prosecute( iPlotX, iPlotY, iUnitID )
-			#print( " Prosecute " )
-			# Send NetMessage to prevent OOS: will be received in the EventManager function "onModNetMessage()"
-			#CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
+			#utils.prosecute( iPlotX, iPlotY, iUnitID )
+			##print( " Prosecute " )
+			## Send NetMessage to prevent OOS: will be received in the EventManager function "onModNetMessage()"
+			##CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
+			
+			#Absinthe: persecution popup
+			if gc.getGame().getActivePlayer() == utils.getHumanID():
+				pCity = gc.getMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY()).getPlotCity()
+				if not pCity.isNone():
+					religionList = []
+					pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
+					for iReligion in range(gc.getNumReligionInfos()):
+						if pCity.isHasReligion(iReligion) and not pCity.isHolyCityByType(iReligion) and iReligion != pPlayer.getStateReligion():
+							religionList.append(iReligion)
+					if len(religionList) == 1:
+						utils.prosecute(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())
+					elif len(religionList) > 1:
+						utils.setPersecutionReligions(religionList)
+						utils.setPersecutionData(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())
+						utils.showPersecutionPopup()
+			else:
+				utils.prosecute(g_pSelectedUnit.getX(), g_pSelectedUnit.getY(), g_pSelectedUnit.getID())
+			#Absinthe: end
 
 		#3Miro: Saint
 		if (inputClass.getNotifyCode() == 11 and inputClass.getData1() == 1618 and inputClass.getData2() == 1618):
@@ -3683,7 +3702,7 @@ class CvMainInterface:
 
         # 3Miro: Show GP string from edead: start code from Main Interface Mod (Impaler)
         def getnextGPCity( self ):
-	
+
                 iFastestPerson = 10000000
                 iGPTurns = 0
                 pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())

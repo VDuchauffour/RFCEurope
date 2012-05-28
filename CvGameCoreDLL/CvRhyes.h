@@ -103,6 +103,12 @@
 #define ENEMY_DAMAGE			(16)
 #define BARB_DAMAGE				(32)
 
+#define PROTESTANTISM			(0)
+#define ISLAM					(1)
+#define CATHOLICISM				(2)
+#define ORTHODOXY				(3)
+#define JUDAISM					(4)
+
 bool MiroBelongToCore( int iCiv, int x, int y );
 bool MiroBelongToNormal( int iCiv, int x, int y );
 int getSettlersMaps( int iCiv, int y, int x, char * );
