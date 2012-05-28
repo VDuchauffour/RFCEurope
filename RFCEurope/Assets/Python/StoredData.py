@@ -64,19 +64,22 @@ class StoredData:
                                     'lDeviateTargets': [ False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False],
                                     'iTarget':[0,0],
                                     'iCrusadePower':0,
-				    'iCrusadeSucceeded':0,
+                                    'iCrusadeSucceeded':0,
                                     'iCrusadeToReturn':-1,
-				    'lSelectedUnits':[0, 0, 0, 0, 0, 0], # Templars, Zerglings ops! ... Teutonic Knights, Knights, Heavy Lancers, Siege Weapons, Generic
-				    'bDCEnabled': False,
-				    'iDCLast':0,
-				    #Sedna17 Respawns
-				    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                                    #3Miro: Monor Nations Respawn
+                                    'lSelectedUnits':[0, 0, 0, 0, 0, 0], # Templars, Zerglings ops! ... Teutonic Knights, Knights, Heavy Lancers, Siege Weapons, Generic
+                                    'bDCEnabled': False,
+                                    'iDCLast':0,
+                                    #Sedna17 Respawns
+                                    'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                    #3Miro: Minor Nations Respawn
                                     'lNextMinorRevolt':[-1,-1,-1,-1,-1,-1,-1],
                                     'lRevoltinNationRevoltIndex':[-1,-1,-1,-1,-1,-1,-1],
                                     #3Miro: hired mercs
                                     'lMercGlobalPool':[],
-                                    ## 3Miro: must be at least as long as lMercList (currently allow for 150)
-                                    'lMercsHiredBy':[-1]*150
-				}
+                                    #3Miro: must be at least as long as lMercList (currently allow for 150)
+                                    'lMercsHiredBy':[-1]*150,
+                                    #Absinthe: persecution popup
+                                    'lPersecutionData': [-1, -1, -1],
+                                    'lPersecutionReligions': [],
+                                }
                 gc.getGame().setScriptData( pickle.dumps(scriptDict) )

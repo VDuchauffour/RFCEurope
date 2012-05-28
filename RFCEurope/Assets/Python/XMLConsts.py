@@ -360,7 +360,7 @@ iZanji= 115
 iTouareg= 116
 iNubianLongbowman= 117
 
-iProsecutorClass = 62
+iProsecutorClass = 80
 
 
 

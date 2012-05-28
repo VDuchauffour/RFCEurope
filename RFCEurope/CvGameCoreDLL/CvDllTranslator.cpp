@@ -46,6 +46,14 @@ void CvDllTranslator::initializeTags(CvWString& szTagStartIcon, CvWString& szTag
 	aIconMap[L"[ICON_FOOD]"] = std::wstring(1, (wchar)GC.getYieldInfo(YIELD_FOOD).getChar());
 	aIconMap[L"[ICON_PRODUCTION]"] = std::wstring(1, (wchar)GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 	aIconMap[L"[ICON_COMMERCE]"] = std::wstring(1, (wchar)GC.getYieldInfo(YIELD_COMMERCE).getChar());
+	
+	//Absinthe: religious prosecution popup
+	aIconMap[L"[ICON_PROTESTANTISM]"] = std::wstring(1, (wchar)GC.getReligionInfo((ReligionTypes)PROTESTANTISM).getChar());
+	aIconMap[L"[ICON_ISLAM]"] = std::wstring(1, (wchar)GC.getReligionInfo((ReligionTypes)ISLAM).getChar());
+	aIconMap[L"[ICON_CATHOLICISM]"] = std::wstring(1, (wchar)GC.getReligionInfo((ReligionTypes)CATHOLICISM).getChar());
+	aIconMap[L"[ICON_ORTHODOXY]"] = std::wstring(1, (wchar)GC.getReligionInfo((ReligionTypes)ORTHODOXY).getChar());
+	aIconMap[L"[ICON_JUDAISM]"] = std::wstring(1, (wchar)GC.getReligionInfo((ReligionTypes)JUDAISM).getChar());
+	//Absinthe end
 
 	//create color map
 	aColorMap[L"[COLOR_REVERT]"] = CvWString(L"</color>");
