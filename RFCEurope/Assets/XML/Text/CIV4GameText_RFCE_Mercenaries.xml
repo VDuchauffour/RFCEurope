@@ -221,7 +221,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
 		<English>New Mercenaries are available for hire in</English>
 		<French>New Mercenaries are available for hire in</French>
-		<German>Neue Söldner zum Anwerben sind verfügbar in</German>
+		<German>Neue Söldner können angeworben werden in</German>
 		<Italian>Nuovi Mercenari sono disponibili per essere assoldati in</Italian>
 		<Spanish>New Mercenaries are available for hire in</Spanish>
 		<Russian>New Mercenaries are available for hire in</Russian>
@@ -230,7 +230,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
 		<English>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</English>
 		<French>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</French>
-		<German>Ermüdet darüber nicht verpflichtet zu werden ziehen die Söldner davon und suchen woanders ihr Glück.</German>
+		<German>Vertragslose Söldner brechen auf um ihr Glück woanders zu suchen.</German>
 		<Italian>I Mercenari si sono stancati di aspettare il contratto e sono partiti per cercare fortuna altrove.</Italian>
 		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
 		<Russian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Russian>
@@ -239,7 +239,7 @@
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
 		<English>Upset for not getting payed, Mercenaries have abandoned your cause.</English>
 		<French>Upset for not getting payed, Mercenaries have abandoned your cause.</French>
-		<German>Wegen ausstehendem Sold lassen euch die Söldner im Stich.</German>
+		<German>Ausbleibender Sold verärgert die Söldner und sie lassen euch sitzen.</German>
 		<Italian>Essendo arrabbiati per non essere stati pagari, i Mercenari hanno abbandonato la tua causa.</Italian>
 		<Spanish>Upset for not getting payed, Mercenaries have abandoned your cause.</Spanish>
 		<Russian>Upset for not getting payed, Mercenaries have abandoned your cause.</Russian>
@@ -248,7 +248,7 @@
 		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
 		<English>Serbian</English>
 		<French>Serbian</French>
-		<German>Serbischer</German>
+		<German>Serbisch</German>
 		<Italian>Serbo</Italian>
 		<Spanish>Serbian</Spanish>
 		<Russian>Serbian</Russian>
@@ -257,7 +257,7 @@
 		<Tag>TXT_KEY_MERC_KHAZAR</Tag>
 		<English>Khazar</English>
 		<French>Khazar</French>
-		<German>Khazar</German>
+		<German>Chasarisch</German>
 		<Italian>Cazaro</Italian>
 		<Spanish>Khazar</Spanish>
 		<Russian>Khazar</Russian>
@@ -266,7 +266,7 @@
 		<Tag>TXT_KEY_MERC_AVAR</Tag>
 		<English>Avar</English>
 		<French>Avar</French>
-		<German>Avar</German>
+		<German>Awarisch</German>
 		<Italian>Avaro</Italian>
 		<Spanish>Avar</Spanish>
 		<Russian>Avar</Russian>
@@ -275,7 +275,7 @@
 		<Tag>TXT_KEY_MERC_ITALIAN</Tag>
 		<English>Italian</English>
 		<French>Italian</French>
-		<German>Italienischer</German>
+		<German>Italienisch</German>
 		<Italian>Italiano</Italian>
 		<Spanish>Italian</Spanish>
 		<Russian>Italian</Russian>
@@ -293,7 +293,7 @@
 		<Tag>TXT_KEY_MERC_VARANGIAN</Tag>
 		<English>Varangian</English>
 		<French>Varangian</French>
-		<German>Varangian</German>
+		<German>Warägisch</German>
 		<Italian>Variago</Italian>
 		<Spanish>Varangian</Spanish>
 		<Russian>Varangian</Russian>
@@ -302,7 +302,7 @@
 		<Tag>TXT_KEY_MERC_BALKAN</Tag>
 		<English>Balkan</English>
 		<French>Balkan</French>
-		<German>Balkan</German>
+		<German>Balkanisch</German>
 		<Italian>Balcanico</Italian>
 		<Spanish>Balkan</Spanish>
 		<Russian>Balkan</Russian>
@@ -311,7 +311,7 @@
 		<Tag>TXT_KEY_MERC_DANISH</Tag>
 		<English>Danish</English>
 		<French>Danish</French>
-		<German>Dänischer</German>
+		<German>Dänisch</German>
 		<Italian>Danese</Italian>
 		<Spanish>Danish</Spanish>
 		<Russian>Danish</Russian>
@@ -320,7 +320,7 @@
 		<Tag>TXT_KEY_MERC_ARAGON</Tag>
 		<English>Aragonese</English>
 		<French>Aragonese</French>
-		<German>Aragonese</German>
+		<German>Aragonisch</German>
 		<Italian>Aragonese</Italian>
 		<Spanish>Aragonese</Spanish>
 		<Russian>Aragonese</Russian>
@@ -329,7 +329,7 @@
 		<Tag>TXT_KEY_MERC_MOROCCO</Tag>
 		<English>Moroccan</English>
 		<French>Moroccan</French>
-		<German>Marokkanischer</German>
+		<German>Marokkanisch</German>
 		<Italian>Marocchino</Italian>
 		<Spanish>Moroccan</Spanish>
 		<Russian>Moroccan</Russian>
@@ -338,7 +338,7 @@
 		<Tag>TXT_KEY_MERC_GERMAN</Tag>
 		<English>German</English>
 		<French>German</French>
-		<German>Deutscher</German>
+		<German>Deutsch</German>
 		<Italian>Tedesco</Italian>
 		<Spanish>German</Spanish>
 		<Russian>German</Russian>
@@ -347,7 +347,7 @@
 		<Tag>TXT_KEY_MERC_FINNISH</Tag>
 		<English>Finnish</English>
 		<French>Finnish</French>
-		<German>Finnischer</German>
+		<German>Finnisch</German>
 		<Italian>Finlandese</Italian>
 		<Spanish>Finnish</Spanish>
 		<Russian>Finnish</Russian>
@@ -356,7 +356,7 @@
 		<Tag>TXT_KEY_MERC_DON</Tag>
 		<English>Kuban</English>
 		<French>Kuban</French>
-		<German>Kuban</German>
+		<German>Kubanisch</German>
 		<Italian>Kubano</Italian>
 		<Spanish>Kuban</Spanish>
 		<Russian>Kuban</Russian>
@@ -365,7 +365,7 @@
 		<Tag>TXT_KEY_MERC_ZAPOROZHIAN</Tag>
 		<English>Zaporozhian</English>
 		<French>Zaporozhian</French>
-		<German>Zaporozhian</German>
+		<German>Saporosch</German>
 		<Italian>Zaporizziano</Italian>
 		<Spanish>Zaporozhian</Spanish>
 		<Russian>Zaporozhian</Russian>
@@ -374,7 +374,7 @@
 		<Tag>TXT_KEY_MERC_BALTIC</Tag>
 		<English>Baltic</English>
 		<French>Baltic</French>
-		<German>Baltischer</German>
+		<German>Baltisch</German>
 		<Italian>Baltico</Italian>
 		<Spanish>Baltic</Spanish>
 		<Russian>Baltic</Russian>
@@ -383,7 +383,7 @@
 		<Tag>TXT_KEY_MERC_IRISH</Tag>
 		<English>Irish</English>
 		<French>Irish</French>
-		<German>Irischer</German>
+		<German>Irisch</German>
 		<Italian>Irlandese</Italian>
 		<Spanish>Irish</Spanish>
 		<Russian>Irish</Russian>
@@ -392,7 +392,7 @@
 		<Tag>TXT_KEY_MERC_SCOTTISH</Tag>
 		<English>Scottish</English>
 		<French>Scottish</French>
-		<German>Schottischer</German>
+		<German>Schottisch</German>
 		<Italian>Scozzese</Italian>
 		<Spanish>Scottish</Spanish>
 		<Russian>Scottish</Russian>
@@ -401,7 +401,7 @@
 		<Tag>TXT_KEY_MERC_AFRICAN</Tag>
 		<English>African</English>
 		<French>African</French>
-		<German>Afrikanischer</German>
+		<German>Afrikanisch</German>
 		<Italian>Africano</Italian>
 		<Spanish>African</Spanish>
 		<Russian>African</Russian>
@@ -410,7 +410,7 @@
 		<Tag>TXT_KEY_MERC_NUBIAN</Tag>
 		<English>Nubian</English>
 		<French>Nubian</French>
-		<German>Nubischer</German>
+		<German>Nubisch</German>
 		<Italian>Nubiano</Italian>
 		<Spanish>Nubian</Spanish>
 		<Russian>Nubian</Russian>
@@ -419,7 +419,7 @@
 		<Tag>TXT_KEY_MERC_WALLOON</Tag>
 		<English>Walloon</English>
 		<French>Walloon</French>
-		<German>Wallonischer</German>
+		<German>Wallonisch</German>
 		<Italian>Vallone</Italian>
 		<Spanish>Walloon</Spanish>
 		<Russian>Walloon</Russian>
@@ -532,7 +532,7 @@
 		<Tag>TXT_KEY_MERC_GENERIC</Tag>
 		<English>Generic</English>
 		<French>Generic</French>
-		<German>Allgemeiner</German>
+		<German>Allgemein</German>
 		<Italian>Generico</Italian>
 		<Spanish>Generic</Spanish>
 		<Russian>Generic</Russian>
@@ -625,7 +625,7 @@
 		<Tag>TXT_KEY_UNIT_CONDOTTIERI</Tag>
 		<English>Condottiero</English>
 		<French>Condottiero</French>
-		<German>Condottiero</German>
+		<German>Condottiere</German>
 		<Italian>Condottiero</Italian>
 		<Spanish>Condottiero</Spanish>
 		<Russian>Condottiero</Russian>
@@ -634,7 +634,7 @@
 		<Tag>TXT_KEY_UNIT_CONDOTTIERI_PEDIA</Tag>
 		<English>[TAB]Condottieri (singular condottiero and condottiere) were the mercenary soldier leaders (or warlords) of the professional, military free companies contracted by the Italian city-states and the Papacy, from the late Middle Ages until the mid-16th century. In contemporary Italian, condottiero means "contractor", and is synonymous with the modern English title Mercenary Captain, which, historiographically, does not connote the hired soldier's nationality.[PARAGRAPH:1]These Italian words were standard usage in English writing of the Napoleonic times that remained current in the histories until the late 20th century; because formally-employed, standing, professional armies were uncommon until late in the Napoleonic Wars (1800-1815) thus, the word Condottiere in the English language has come to denote any hired soldier.[PARAGRAPH:1]In the thirteenth and fourteenth centuries, the Italian city-states of Venice, Florence, and Genoa were very rich from their trade with the Levant, yet possessed woefully small national armies. In the event that foreign powers and envious neighbours attacked, the ruling nobles hired foreign mercenaries to fight for them. The military-service terms and conditions were stipulated in a condotta (contract) between the City-State and the Soldier (officer and enlisted man), thus, the contracted leader, the Mercenary Captain commanding, was titled the Condottiere.[PARAGRAPH:1]From the eleventh to the thirteenth century, European soldiers led by professional officers, fought against the Muslims in the Crusades (1095-1291). These officers provided large-scale warfare combat experience in the foreign Holy Land of the Asian Middle East. On the Crusades' conclusion, the first masnada (bands of roving soldiers) appeared; they were not Italian, but (mostly) German, from the Duchy of Brabant (hence, Brabanzoni), and from Catalonia and Aragon. The latter were Spanish soldiers who had followed King Peter III of Aragon to the Holy Land in October 1282, and, post-war, remained there, seeking military employment. In Italy, in 1333, other mercenaries arrived with John of Bohemia to fight, as the Compagnia della Colomba (Dove Company), Perugia's war against Arezzo. Given the profession, some masnade were less mercenaries than bandits and desperate men.[PARAGRAPH:1]The first organised mercenaries were the Ventura Companies of Duke Werner of Urslingen and Count Konrad von Landau. Werner's company differed from other mercenary companies because its code of military justice imposed discipline and an equal division of the contract's income. The Ventura Company increased in number until becoming the fearsome "Great Company" of some 3,000 barbute (each barbuta comprised a knight and a sergeant). To this, the Italian nobleman Lodrisio Visconti countered with the "Company of St. George"-featuring cavalrymen as the key fighting men, and not infantrymen. In Italy, the first mercenary army was led by Alberico da Barbiano, the Count of Conio, who later taught military science to condottieri such as Braccio da Montone and Giacomuzzo Attendolo Sforza.[PARAGRAPH:1]Once aware of their military power monopoly in Italy, the condottieri bands became notorious for their capriciousness, and soon dictated terms to their ostensible employers. In turn, many condottieri, such as Braccio da Montone and Muzio Sforza, became powerful politicians. As most were educated men acquainted with Roman military-science manuals (e.g. Vegetius's Epitoma rei militarii), they began viewing warfare from the perspective of military science, rather than that of guts (physical courage)-a great, consequential departure from chivalry, the traditional medieval model of soldiering. Consequently, the condottieri fought by out-manoeuvring the opponent and fighting his ability to wage war, rather than risk uncertain fortune-defeat, capture, death-in battlefield combat.[PARAGRAPH:1]The medieval condottieri developed the art of war (strategy and tactics) into military science more than any of their historical military predecessors-fighting indirectly, not directly-thus, only reluctantly endangering themselves and their enlisted men, avoiding battle when possible. As a political scientist, Niccolo Machiavelli mis-interpreted that condottieri fought each other in grandiose, but often pointless and near-bloodless battles. Militarily, the condottieri line of battle still deployed the grand armoured knight and medieval weapons and tactics after most European powers had begun employing professional standing armies of pikemen and musketeers.[PARAGRAPH:1]In 1347, Cola di Rienzo (Tribune and effective dictator of the city) had Werner of Urslingen executed in Rome, and Konrad von Landau assumed command of the Great Company. In 1362, Count von Landau was betrayed by his Hungarian soldiers, and defeated in combat, by the White Company's more advanced tactics under commanders Albert Sterz and John Hawkwood. Stategically, the barbuta was replaced with the three-soldier, mounted lancia (a capo-lancia, a groom, and a boy); five lance composed a posta, five poste composed a bandiera (flag). By that time, the campaigning condottieri companies were as much Italian as foreign: the Astorre I Manfredi's Compagnia della Stella (Star Company); a new Company of St. George under Ambrogio Visconti; Niccolo da Montefeltro's Compagnia del Cappelletto (Little Hat Company); and the Compagnia della Rosa, commanded by Giovanni da Buscareto and Bartolomeo Gonzaga.[PARAGRAPH:1]From the fifteenth century hence, most condottieri were landless Italian nobles who had chosen the profession of arms as livelihood; the most famous of such mercenary captains was the son of Caterina Sforza, Giovanni dalle Bande Nere, from Forlì, known as The Last Condottiere; his son was Cosimo I de' Medici, Grand Duke of Tuscany; besides noblemen, princes also fought as condottieri, given the sizable income to their estates, notably Sigismondo Malatesta, Lord of Rimini, and Federico da Montefeltro, Duke of Urbino.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Condottiere (Singular, Plural: Condottieri) ist die Bezeichnung für einen Söldnerführer, wie ihn die italienischen Stadtstaaten vom späten Mittelalter bis in die Mitte des 15. Jahrhunderts beschäftigten. Der Begriff leitet sich vom italienischen condottiero (Singular) beziehungsweise condottieri (Plural) ab. Die Form condottiere entsprach der im Italienischen bzw. Toskanischen um 1500 gebräuchlichen Form. Die italienische Mehrzahl ist international geworden, die Einzahl wird im Deutschen wiederum in Analogie zu anderen italienischen Berufsbezeichnungen mit der Endung -iere geformt.[PARAGRAPH:1]Im 13. und 14. Jahrhundert waren italienische Stadtstaaten wie Venedig, Florenz und Genua durch ihren Orienthandel reich geworden. Diese Städte hatten aber nur schwache Streitkräfte und wurden so zum Angriffsziel fremder Mächte wie auch neidischer Nachbarn. Der regierende Adel suchte seine Länder durch das Anmieten von Söldnertruppen zu verteidigen, die einen condotta (Sold bzw. Soldvertrag) abschlossen und dann als compagnia di ventura bekannt waren. Jede compagnia wurde durch einen condottiero angeführt. Aufgrund ständiger interner Streitigkeiten zwischen den Adelsfamilien wurde auch die oberste Führung der Stadt oft für jeweils ein Jahr in die Hand auswärtiger Personen gegeben, die als Podestà bezeichnet wurden. Die Truppen der Condottieri waren für ihre Launen berüchtigt. Sie wechselten oft die Seiten für bessere Bezahlung, und dies nicht nur vor, sondern auch in der Schlacht. Die Condottieri rekrutierten sich auch von außerhalb Italiens. Während der Kampfpausen im Hundertjährigen Krieg verdingten sich viele Söldner in Italien. Schwäbische Niederadelige, welche ohne feste Lehensbindungen waren, zogen ebenfalls verstärkt über die Alpen. Die Condottieri spürten bald, dass sie ein Monopol auf die militärische Macht in Italien hatten, und begannen damit, ihren Arbeitgebern die Bedingungen zu diktieren. Viele Condottieri wie Braccio da Montone oder Muzio Attendolo Sforza wurden im 14. Jahrhundert mächtige Figuren auf der politischen Bühne. Währenddessen stellten sich die Condottieri nicht schnell genug auf moderne Methoden der Kriegsführung ein. Sie hielten an geharnischten Rittern und mittelalterlicher Bewaffnung und Taktik sogar noch fest, als in weiten Teilen Europas bereits moderne Armeen aus Pikenieren und Arkebusieren aufgestellt worden waren. Auch begannen sie damit, sich gegenseitig aus Prestigegründen in Schlachten zu verwickeln, die meist unblutig blieben.[PARAGRAPH:1]Als 1494 französische Truppen in Italien einmarschierten und der Kirchenstaat Spanien zur Hilfe rufen musste, wurden die verschwenderisch geschmückten, aber wenig effektiven Condottieri von jeder der nacheinander einmarschierenden ausländischen Armeen geschlagen. Gegen Schweizer Pikeniere, französische Kavalleristen und spanische Arkebusiere konnten sie keine Verteidigung mehr bieten. Bis 1500 verschwanden die Condottieri und ihre Truppen daher völlig.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -661,7 +661,7 @@
 		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD</Tag>
 		<English>Varangian Guard</English>
 		<French>Varangian Guard</French>
-		<German>Warägergarde</German>
+		<German>Waräger Gardist</German>
 		<Italian>Guardia Variaga</Italian>
 		<Spanish>Varangian Guard</Spanish>
 		<Russian>Varangian Guard</Russian>
@@ -697,7 +697,7 @@
 		<Tag>TXT_KEY_UNIT_ALMOGAVAR</Tag>
 		<English>Almogavar</English>
 		<French>Almogavar</French>
-		<German>Almogavar</German>
+		<German>Almogàvers</German>
 		<Italian>Almogaveri</Italian>
 		<Spanish>Almogavar</Spanish>
 		<Russian>Almogavar</Russian>
@@ -706,7 +706,7 @@
 		<Tag>TXT_KEY_UNIT_ALMOGAVAR_PEDIA</Tag>
 		<English>[TAB]The Almogavars were a class of soldiers from the Crown of Aragon, well-known during the Christian Reconquista (reconquest) of the Iberian Peninsula. They were much employed as mercenaries in Italy, Latin Greece and the Levant during the 13th and 14th centuries.[PARAGRAPH:2]The Almogavars came mainly from the mountain regions of Aragon, Catalonia and, to a lesser extent, from Navarre. They were frontiersmen and foot-soldiers who wore no armour, dressed in skins, were shod with brogues (abarcas), and carried the arms similar to those of Roman legionaries: two heavy javelins, or azconas in Spanish language, and a short stabbing sword.[PARAGRAPH:2]They were professional soldiers, and served kings, the Roman Catholic Church, nobles, or towns for pay; eventually they also hired themselves out to the Byzantine Empire. When Peter III of Aragon made war on Charles of Anjou after the Sicilian Vespers of March 30, 1282 for the possession of Naples and Sicily, the Almogavars formed the most effective element of his army. Their discipline and ferocity, the force with which they hurled their javelins, and their activity, made them very formidable to the heavy cavalry of the Angevin armies. They fought against cavalry by attacking firstly horses instead of knights. Once the knight was on the ground he was an easy victim for the Almogavar.[PARAGRAPH:2]When the Peace of Caltabellotta in 1302 ended the war in southern Italy, the Almogavars, under the leadership of Roger de Flor ("Roger Blum", a former Knight Templar), formed the Catalan Company in the service of the emperor of the East, Andronicus II Palaeologus, to fight against the Turks. Both kings of Aragon and Sicily agreed with the idea since peace had been reached and it was viable alternative to having the Almogavar standing army unemployed in their realms.[PARAGRAPH:2]Their campaign in Asia Minor during 1303 and 1304 was a series of military victories, but alongside widespread looting of Byzantine civilians, so when they insisted in receiving the agreed payment, the Emperor refused. Thereafter the Almogavars turned to violence, making their presence intolerable to the Byzantine population. Roger de Flor and his lieutenants were assassinated by orders of the Emperor in 1305 while meeting to discuss terms on their compensation, presumably on the instigation of Genoese merchants, who were conspiring to keep their own position of influence and power and keep the Catalans out of the loop. This betrayal resulted in the Almogavars ravaging the neighbourhood of Constantinople.[PARAGRAPH:2]Subsequently they marched against the Duchy of Athens, under the rule of the French House of Brienne. Duke Walter V of Brienne was defeated and slain by the Almogavars with all his knights at the Battle of the Cephissus, or Orchomenus, in Boeotia in March 1310. They then divided the wives and possessions of the Frenchmen by lot, and summoned a prince of the house of Aragon to rule over them.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Almogàvers, von Arabisch Al-Mugavari für Kundschafter abgeleitet, war der Name einer Truppe von katalanischen Soldaten, die in der Reconquista bekannt wurden, und in Italien und der Levante im 13. und 14. Jahrhundert häufig als Söldner eingesetzt wurden.[PARAGRAPH:1]Die Almogàvars kamen ursprünglich aus den Pyrenäen und wurden in späterer Zeit vor allem in Aragon und Katalonien rekrutiert. Sie waren Grenzbewohner und Fußsoldaten ohne Rüstung, in Felle gekleidet, trugen Schuhe mit gestanzten Löchern (Abarcas), und trugen die gleichen Waffen wie die römischen Legionäre: zwei schwere Wurfspieße (Katalanisch Atzagaia, Spanisch Azagaya, das römische Pilum), ein Kurzschwert und einen Schild.[PARAGRAPH:1]Sie waren Söldner und dienten dem König, dem Adel, der Kirche oder den Städten. Als Peter III. von Aragon nach der Sizilianischen Vesper vom 30. März 1282 gegen Karl I. von Anjou um den Besitz von Neapel und Sizilien in den Krieg zog, bildeten die Almogàvars den wirksamsten Teil seiner Armee. Ihre Disziplin und Wildheit, die Kraft, mit der sie ihre Speere schleuderten machten sie zu einem beeindruckenden Gegner für die schwere Kavallerie der angevinischen Armeen.[PARAGRAPH:1]1302 endete der Krieg in Süditalien mit dem Frieden von Caltabellotta . Die Almogàvars folgten nun Roger de Flor, einem ausgestoßenen Templer, traten in die Katalanische Kompanie und den Dienst beim byzantinischen Kaiser Andronikos II. ein, um wie Condottieri gegen die Türken zu kämpfen.[PARAGRAPH:1]Ihr Feldzug in Kleinasien 1303 und 1304 war eine Serie von Siegen, aber ihre Habgier und ihre Gewalttätigkeit machte sie für die christliche Bevölkerung unannehmbar. Als Roger de Flor von seinem griechischen Auftraggeber ermordet wurde, wandten sie sich gegen den Kaiser, und plünderten von Gallipoli aus die Umgebung von Konstantinopel.[PARAGRAPH:1]1310 lud sie Walter V. von Brienne ins Herzogtum Athen ein. Walter wurde im März 1311 in der Schlacht am Kephissos (oder Orchomenos) in Böotien geschlagen und mit seinen Rittern getötet. Daraufhin ergriffen die Almogàvers die Herrschaft, verlosten die Frauen und den Besitz der Franzosen unter sich und ernannten einen Prinzen aus Rosselló zum Herzog.[PARAGRAPH:1]Die Gründung des katalanischen Herzogtums Athen war der Höhepunkt der Taten der Almogàvers. Im 16. Jahrhundert starb der Name aus, wurde aber für kurze Zeit im Bürgerkrieg zur Zeit König Ferdinands VII. von Spanien als Beiname einer der Kriegsparteien wieder aufgebracht.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -733,7 +733,7 @@
 		<Tag>TXT_KEY_UNIT_HACKAPELL</Tag>
 		<English>Hackapell</English>
 		<French>Hackapell</French>
-		<German>Hackapell</German>
+		<German>Hakkapeliitta</German>
 		<Italian>Hackapellito</Italian>
 		<Spanish>Hackapell</Spanish>
 		<Russian>Hackapell</Russian>
@@ -886,7 +886,7 @@
 		<Tag>TXT_KEY_UNIT_NAFFATUN_PEDIA</Tag>
 		<English>[TAB]Naffatun were Arabian infantry corps armed with naphtha grenades. They are noted for the successful defense during the Seljuk Siege of Baghdad in 1157, when they managed to destroy several catapults.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Ohne jegliche nennenswerte Nahkampfbewaffnung machen die arabischen Naffatun auf den ersten Blick keinen gefährlichen Eindruck. Doch wenn sie erst angreifen, dann wird es heiß, wirklich heiß. Ausgerüstet mit Keramiktöpfe, die randvoll mit der leicht entflammbaren Naphtha-Chemikalie gefüllt sind, sollte jeder Gegner in Acht nehmen. Denn geht der brennende Naptha-Krug erst einmal auf seinem Ziel zu Bruch, wird ein höllisches und so gut wie unlöschbares Flammeninferno entfacht, vor dem es kein Entrinnen gibt und vor dem selbst die stärkste Rüstung keinen ausreichenden Schutz bietet. </German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -913,7 +913,7 @@
 		<Tag>TXT_KEY_UNIT_WALLOON_GUARD</Tag>
 		<English>Walloon Guard</English>
 		<French>Walloon Guard</French>
-		<German>Walloischer Gardist</German>
+		<German>Wallonischer Gardist</German>
 		<Italian>Guardia Vallona</Italian>
 		<Spanish>Walloon Guard</Spanish>
 		<Russian>Walloon Guard</Russian>
@@ -931,7 +931,7 @@
 		<Tag>TXT_KEY_UNIT_SWISS_GUN</Tag>
 		<English>Swiss Line Infantry</English>
 		<French>Swiss Line Infantry</French>
-		<German>Schweizer Linieninfantry</German>
+		<German>Schweizer Linieninfantrie</German>
 		<Italian>Fanteria di Linea Svizzera</Italian>
 		<Spanish>Swiss Line Infantry</Spanish>
 		<Russian>Swiss Line Infantry</Russian>
@@ -967,7 +967,7 @@
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_GUN</Tag>
 		<English>Highlander Infantry</English>
 		<French>Highlander Infantry</French>
-		<German>Hochländer Infantry</German>
+		<German>Hochländer Infantrie</German>
 		<Italian>Fanteria Highlander</Italian>
 		<Spanish>Highlander Infantry</Spanish>
 		<Russian>Highlander Infantry</Russian>
@@ -1003,7 +1003,7 @@
 		<Tag>TXT_KEY_UNIT_ZANJI</Tag>
 		<English>Zanji Spearman</English>
 		<French>Zanji Spearman</French>
-		<German>Zanji Speerträger</German>
+		<German>Zanji Speerkämpfer</German>
 		<Italian>Lanciere Zanji</Italian>
 		<Spanish>Zanji Spearman</Spanish>
 		<Russian>Zanji Spearman</Russian>
@@ -1021,15 +1021,16 @@
 		<Tag>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN</Tag>
 		<English>Medjay</English>
 		<French>Medjay</French>
-		<German>Medjay</German>
+		<German>Medjau</German>
 		<Italian>Medjay</Italian>
 		<Spanish>Medjay</Spanish>
+		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN_PEDIA</Tag>
 		<English>[TAB]The Arabs had taken Egypt in 641, and the jihad soon turned south. Makuria was one of the few states in the world to effectively resist Muslim conquest. Makurians defeated an Arab army at the First Battle of Dongola in in 642. They repeated this feat again in 652 at the Second Battle of Dongola. In both battles, Arab writers noted the Makurians skill with the bow.</English>
 		<French>.</French>
-		<German>.</German>
+		<German>[TAB]Unter dem Namen Medjau (auch Medjai oder Medja) wurden im Alten Ägypten vom Ende des Alten bis zum Neuen Reich Menschen bezeichnet, die in der Nubischen Wüste, im Roten-Meer-Gebirge und westlich davon in Atbai lebten. Sie dienten den Ägyptern als Karawanenführer, Polizisten und Berufssoldaten. Die Medjau waren aber auch gefährliche Feinde. Historische Aufzeichnungen berichten von häufigen Auseinandersetzungen mit den Ägyptern.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>

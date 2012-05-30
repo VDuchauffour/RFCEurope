@@ -1315,7 +1315,7 @@ class RiseAndFall:
                         teamDeadCiv.makePeace(l)
                 self.setNumCities(iDeadCiv, 0) #reset collapse condition
 
-                #reset vassallage
+                #reset vassalage
                 for iOtherCiv in range(iNumPlayers):
                         if (teamDeadCiv.isVassal(iOtherCiv) or gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).isVassal(iDeadCiv)):
                                 teamDeadCiv.freeVassal(iOtherCiv)
