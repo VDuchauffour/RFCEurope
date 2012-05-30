@@ -32,7 +32,7 @@ Changes for RFCE 1.1:
 		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files
 		- First part of the inquisition updates: base code for chooseable religion on persecution
 		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
-		- Added special chars to the hungarian city names as a test
+		- Added special chars to the hungarian and german city names as a test
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla

@@ -54,7 +54,6 @@ class RFCUtils:
                 #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         #Stability
-        
         def getTempFlippingCity( self ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 return scriptDict['tempFlippingCity']
@@ -109,15 +108,15 @@ class RFCUtils:
                 #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
                 
         def getProsecutionCount( self, iCiv ):
-        	#scriptDict = pickle.loads( gc.getGame().getScriptData() )
-        	#return scriptDict['iProsecutionCount'][iCiv]
-        	return gc.getProsecutionCount( iCiv )
-        	
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #return scriptDict['iProsecutionCount'][iCiv]
+                return gc.getProsecutionCount( iCiv )
+                
         def setProsecutionCount( self, iCiv, iNewValue ):
-        	#scriptDict = pickle.loads( gc.getGame().getScriptData() )
-        	#scriptDict['iProsecutionCount'][iCiv] = iNewValue
-        	#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-        	gc.setProsecutionCount( iCiv, iNewValue )
+                #scriptDict = pickle.loads( gc.getGame().getScriptData() )
+                #scriptDict['iProsecutionCount'][iCiv] = iNewValue
+                #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+                gc.setProsecutionCount( iCiv, iNewValue )
                 
         #Plague
         def getPlagueCountdown( self, iCiv ):
@@ -138,29 +137,29 @@ class RFCUtils:
 
         #Stability, RiseNFall, CvFinanceAdvisor
         #def setParameter(self, iPlayer, iParameter, bPreviousAmount, iAmount):
-		#if (bPreviousAmount):
-		        #self.setStabilityParameters(iPlayer, iParameter, self.getStabilityParameters(iPlayer,iParameter) + iAmount)
-		#else:
-		        #self.setStabilityParameters(iPlayer, iParameter, 0 + iAmount)
+                #if (bPreviousAmount):
+                        #self.setStabilityParameters(iPlayer, iParameter, self.getStabilityParameters(iPlayer,iParameter) + iAmount)
+                #else:
+                        #self.setStabilityParameters(iPlayer, iParameter, 0 + iAmount)
         
         ## 3Miro: for numbers in the stability screen
-	#def getParString( self, iPlayer, iCathegory ):
-		#if ( gc.getPlayer(iPlayer).isHuman()):
-			#if ( iCathegory == 0 ):
-				#sString = "%i | %i" %( self.getStabilityParameters(iPlayer, con.iParCitiesE), self.getStabilityParameters(iPlayer,con.iParCities3) )
-			#elif ( iCathegory == 1 ):
-				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParCivicsE), self.getStabilityParameters(iPlayer, con.iParCivics3), self.getStabilityParameters(iPlayer, con.iParCivics1) )
-			#elif ( iCathegory == 2 ):
-				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParEconomyE), self.getStabilityParameters(iPlayer, con.iParEconomy3), self.getStabilityParameters(iPlayer, con.iParEconomy1) )
-			#elif ( iCathegory == 3 ):
-				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParExpansionE), self.getStabilityParameters(iPlayer, con.iParExpansion3), self.getStabilityParameters(iPlayer, con.iParExpansion1) )
-			#elif ( iCathegory == 4 ):
-				#sString = "%i | %i" %(self.getStabilityParameters(iPlayer, con.iParDiplomacyE), self.getStabilityParameters(iPlayer, con.iParDiplomacy3) )
-			#else:
-				#sString = ""
-		#else:
-			#sString = ""
-		#return sString
+        #def getParString( self, iPlayer, iCathegory ):
+                #if ( gc.getPlayer(iPlayer).isHuman()):
+                        #if ( iCathegory == 0 ):
+                                #sString = "%i | %i" %( self.getStabilityParameters(iPlayer, con.iParCitiesE), self.getStabilityParameters(iPlayer,con.iParCities3) )
+                        #elif ( iCathegory == 1 ):
+                                #sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParCivicsE), self.getStabilityParameters(iPlayer, con.iParCivics3), self.getStabilityParameters(iPlayer, con.iParCivics1) )
+                        #elif ( iCathegory == 2 ):
+                                #sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParEconomyE), self.getStabilityParameters(iPlayer, con.iParEconomy3), self.getStabilityParameters(iPlayer, con.iParEconomy1) )
+                        #elif ( iCathegory == 3 ):
+                                #sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParExpansionE), self.getStabilityParameters(iPlayer, con.iParExpansion3), self.getStabilityParameters(iPlayer, con.iParExpansion1) )
+                        #elif ( iCathegory == 4 ):
+                                #sString = "%i | %i" %(self.getStabilityParameters(iPlayer, con.iParDiplomacyE), self.getStabilityParameters(iPlayer, con.iParDiplomacy3) )
+                        #else:
+                                #sString = ""
+                #else:
+                        #sString = ""
+                #return sString
 
         ##CvFinanceAdvisor 
         #def getParCities(self,iCiv):
@@ -285,11 +284,9 @@ class RFCUtils:
                 #else:
                 #        return -1
                         
-        
-
         # 3Miro: END Utilities
 
-            
+
         #Plague
         def getRandomCity(self, iPlayer):
                 cityList = []
@@ -302,12 +299,11 @@ class RFCUtils:
                         return -1
                         
         def getRandomCiv( self ):
-        	civList = []
-        	for i in range( iNumPlayers ):
-        		if ( gc.getPlayer( i ).isAlive() ):
-        			civList.append( i )
-        			
-        	return civList[gc.getGame().getSorenRandNum(len(civList), 'random civ')]
+                civList = []
+                for i in range( iNumPlayers ):
+                        if ( gc.getPlayer( i ).isAlive() ):
+                                civList.append( i )
+                return civList[gc.getGame().getSorenRandNum(len(civList), 'random civ')]
                                             
 
         def isMortalUnit(self, unit):
@@ -366,7 +362,7 @@ class RFCUtils:
                         x = city.getX()
                         y = city.getY()
                         for iActiveCiv in range( iNumActivePlayers ):
-				# 3MiroPapal: the Pope does not attack independent
+                                # 3MiroPapal: the Pope does not attack independent
                                 if ( gc.getPlayer(iActiveCiv).isAlive() and (not gc.getPlayer(iActiveCiv).isHuman()) and (not iActiveCiv == con.iPope) ):
                                         if (gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 90):
                                                 if (not teamMinor.isAtWar(iActiveCiv)):
@@ -431,7 +427,7 @@ class RFCUtils:
                         if (unit.getOwner() == iOldOwner):
                                 unit.kill(False, con.iBarbarian)
                                 if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler):
-                                	# 3Miro: 0, 72 change, see below
+                                        # 3Miro: 0, 72 change, see below
                                         self.makeUnit(unitType, iNewOwner, [0, 72], 1)
                         else:
                                 j += 1
@@ -728,10 +724,6 @@ class RFCUtils:
 
 
 
-                                
-
-
-
 
         #Congresses, RiseAndFall
         def pushOutGarrisons(self, tCityPlot, iOldOwner):
@@ -840,7 +832,7 @@ class RFCUtils:
                                 #gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv1, False, -1) #too dangerous?
                                 #gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv2, False, -1)
                                 for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-                                	gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(i, False, -1)
+                                        gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(i, False, -1)
                                 continue
                         #assign to neighbours first
                         bNeighbour = False
@@ -1254,43 +1246,40 @@ class RFCUtils:
 			pPlayer.changeProsecutionCount( 10 )
 		
 		#pPlayer.changeFaith( 1 ) # this is done in C++ now
-		
-	def saint( self, iOwner, iUnitID ):
-		# 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
-		pPlayer = gc.getPlayer( iOwner )
-		pPlayer.changeFaith( con.iSaintBenefit )
-		pUnit = pPlayer.getUnit(iUnitID)
-		pUnit.kill(0, -1)
-		
 
-	def selectRandomCity(self):
-		cityList = []
-		for i in range( con.iNumPlayers ):
-	                if (gc.getPlayer(i).isAlive()):
-	                        for pyCity in PyPlayer(i).getCityList():
-	                                cityList.append(pyCity.GetCy())
+        def saint( self, iOwner, iUnitID ):
+                # 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
+                pPlayer = gc.getPlayer( iOwner )
+                pPlayer.changeFaith( con.iSaintBenefit )
+                pUnit = pPlayer.getUnit(iUnitID)
+                pUnit.kill(0, -1)
+
+        def selectRandomCity(self):
+                cityList = []
+                for i in range( con.iNumPlayers ):
+                        if (gc.getPlayer(i).isAlive()):
+                                for pyCity in PyPlayer(i).getCityList():
+                                        cityList.append(pyCity.GetCy())
                 iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
                 city = cityList[iCity]
                 return (city.getX(), city.getY())
 
-	def spreadJews(self,tPlot,iReligion):
-		if (tPlot != False):
+        def spreadJews(self,tPlot,iReligion):
+                if (tPlot != False):
                         plot = gc.getMap().plot( tPlot[0], tPlot[1] )                
                         if (not plot.getPlotCity().isNone()):
-				plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
+                                plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
                                 return True
                         else:
                                 return False
-
                 return False
-	
-			
-	def isIndep( self, iCiv ):
-		if ( iCiv >= con.iIndepStart and iCiv <= con.iIndepEnd ):
-			return True
-		return False
-		
-	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
-		for iCount in range(con.iNumStabilityParameters):
-			self.setParameter(iPlayer, iCount, False, 0)
-			
+
+        def isIndep( self, iCiv ):
+                if ( iCiv >= con.iIndepStart and iCiv <= con.iIndepEnd ):
+                        return True
+                return False
+
+        def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
+                for iCount in range(con.iNumStabilityParameters):
+                        self.setParameter(iPlayer, iCount, False, 0)
+

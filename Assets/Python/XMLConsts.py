@@ -143,7 +143,8 @@ i1780AD =480                                                                    
 i1800AD =500 # Industrial Era
 
 
-# initialise religion variables to religion indices from XML
+#Religions: initialize religion variables to religion indices from XML
+
 iProtestantism = 0
 iIslam = 1
 iCatholicism = 2
@@ -152,7 +153,7 @@ iJudaism = 4
 iNumReligions = 5
 
 
-# initialise tech variables to unit indices from XML
+#Techs: initialize tech variables to unit indices from XML
 
 #Early
 iCalendar=0
@@ -239,7 +240,8 @@ iFutureTech = 74
 
 iNumTechsFuture = 1
 
-# initialise unit variables to unit indices from XML
+
+#Units: initialize unit variables to unit indices from XML
 
 iSettler= 0
 iWorker= 1
@@ -363,9 +365,9 @@ iNubianLongbowman= 117
 iProsecutorClass = 80
 
 
+#Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
-# initialise bonuses variables to bonuses IDs from WBSinulAi
-iRelic = 0 #This is actually the relic bonus, sorry
+iRelic = 0
 iCoal = 1
 iCopper = 2
 iHorse = 3
@@ -413,6 +415,7 @@ iNorthAccess = 44
 iSouthAccess = 45
 iAsiaAccess = 46
 iAmber = 47
+
 
 #Buildings
 
@@ -568,6 +571,7 @@ iPlague = 146
 iNumBuildingsPlague = 147
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
+
 #Projects
 
 iEncyclopedie = 0
@@ -576,12 +580,14 @@ iWestIndiaCompany = 2
 iNumNotColonies = 3
 iNumTotalColonies = 25
 
+
 #Eras
 
 iAncient = 0
 iClassical = 1
 iMedieval = 2
 iRenaissance = 3
+
 
 #Improvements
 
@@ -591,8 +597,9 @@ iImprovementHamlet = 19
 iImprovementVillage = 20
 iImprovementTown = 21
 
-# Civics
-#iManorialism = 16
+
+#Civics
+
 #iCivicRepublic = 4
 iCivicDespotism = 0
 iCivicFeudalMonarchy = 1
@@ -625,6 +632,9 @@ iCivicImperialism = 27
 iCivicOccupation = 28
 iCivicColonialism = 29
 
+
+#Terrain & promotion
+
 iTerrainOcean = 8
 
 iPromotionFormation = 7
@@ -633,7 +643,7 @@ iPromotionMerc = 48
 iPromotionLeader = 41
 
 
-#feature & terrain
+#Feature & terrain
 
 iIce = 0
 iJungle = 1
@@ -652,7 +662,8 @@ iWetland = 9
 
 
 #Leaders
-iLeaderBarbarian = 0	#Do NOT name this iBarbarian.  Very bad.	#Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it (AbsintheRed - Beta 6)
+
+iLeaderBarbarian = 0	#Do NOT name this iBarbarian.  Very bad.	#AbsintheRed: Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it
 iAbuYusufYaqub = 1
 iMaria_Theresa = 2
 iAbuBakr = 3
@@ -698,7 +709,6 @@ iMindaugas = 42
 iVytautas = 43
 iKarl_Xii = 44
 iIvan_Asen = 45
-
 
 
 ###################### PROVINCES #######################################

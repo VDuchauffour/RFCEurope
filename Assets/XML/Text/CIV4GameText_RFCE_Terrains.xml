@@ -90,7 +90,7 @@
 		<Tag>TXT_KEY_BUILD_COLONIAL_TRADE</Tag>
 		<English>Establish [LINK=IMPROVEMENT_COLONIAL_TRADE]Colonial Trade Route[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_COLONIAL_TRADE]Route Coloniale[\LINK] Etablie</French>
-		<German>[LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[/LINK] errichten</German>
+		<German>[LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[\LINK] errichten</German>
 		<Italian>Traccia [LINK=IMPROVEMENT_COLONIAL_TRADE]una Rotta Commerciale Coloniale[\LINK]</Italian>
 		<Spanish>Establezca [LINK=IMPROVEMENT_COLONIAL_TRADE]Ruta colonial de Comercio[\LINK]</Spanish>
 		<Russian>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Russian>
