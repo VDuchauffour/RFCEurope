@@ -1261,7 +1261,7 @@
 		<!-- Mercenaries End -->
 		<!-- 3Miro Prosecution -->
 		<InterfaceArtInfo>
-			<Type>INTERFACE_PERSICUTION</Type>
+			<Type>INTERFACE_PERSECUTION</Type>
 			<Path>,Art/Interface/Buttons/Buildings/Temple_Jewish.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,7,15</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>

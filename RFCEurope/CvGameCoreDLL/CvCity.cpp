@@ -14455,8 +14455,8 @@ int CvCity::getVotingPower( ReligionTypes eReligion ){
 	return ( getRealPopulation() * iReligionPower ) / ( 1000 + iReligionPower + iOtherPower );
 
 };
-
-bool CvCity::canPurgeReligion(){
+// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+/*bool CvCity::canPurgeReligion(){
 	if ( (getX() == HOLIEST_CITY_X) && (getY() == HOLIEST_CITY_Y) ){
 		return false;
 	};
@@ -14486,9 +14486,9 @@ void CvCity::doPurgeReligions(){
 	if ( !canPurgeReligion() ){
 		return;
 	};
-	/*if ( (getX() == HOLIEST_CITY_X) && (getY() == HOLIEST_CITY_Y) ){
-		return;
-	};*/
+	//if ( (getX() == HOLIEST_CITY_X) && (getY() == HOLIEST_CITY_Y) ){
+	//	return;
+	//};
 	int iStateReligion = GET_PLAYER(getOwner()).getStateReligion();
 	bool safeReligion;
 	int iJ;
@@ -14522,7 +14522,8 @@ void CvCity::doPurgeReligions(){
 	// 3MiroFaith
 	GET_PLAYER( getOwnerINLINE() ).changeFaith( 1 );
 	
-};
+};*/
+// Absinthe: end
 
 int CvCity::getProvince(){
 	return provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];

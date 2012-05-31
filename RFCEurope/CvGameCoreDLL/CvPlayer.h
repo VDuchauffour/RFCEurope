@@ -1058,7 +1058,9 @@ public:
 	void processCivNames(); //Rhye - dynamic civ names - not jdog's
 
 	// 3Miro: some additional utils
-	CvCity* choosePurgeCity();
+	// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+	// CvCity* choosePurgeCity();
+	// Absinthe: end
 	int getFinancialPower(); // returns gold + commerce * science rate for the entire empire
 	void doDamageEnemy();
 	int getVotingPower( ReligionTypes eReligion );

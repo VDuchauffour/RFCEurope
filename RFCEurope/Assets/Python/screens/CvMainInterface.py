@@ -1721,36 +1721,53 @@ class CvMainInterface:
 					
 					# Using an Inquisitor
 					if (iUnitInquisitor == pUnit.getUnitType()):
-
+					
+					#	pPlot = CyMap().plot(pUnit.getX(), pUnit.getY())
+					#	
+					#	# Plot is a city
+					#	if (pPlot.isCity()):
+					#		
+					#		pCity = pPlot.getPlotCity()
+					#		
+					#		pPlayer = gc.getPlayer(pUnit.getOwner())
+					#		
+					#		if ( pCity.canPurgeReligion() and ( pCity.getOwner() == pUnit.getOwner() or pUnit.getOwner() == con.iPope ) ):
+					#			screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSECUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
+					
+						# Absinthe: Updated code. This doesn't need the canPurgeReligion function from the dll
 						pPlot = CyMap().plot(pUnit.getX(), pUnit.getY())
-						
 						# Plot is a city
 						if (pPlot.isCity()):
-							
 							pCity = pPlot.getPlotCity()
-							
-							pPlayer = gc.getPlayer(pUnit.getOwner())
-							
-							if ( pCity.canPurgeReligion() and ( pCity.getOwner() == pUnit.getOwner() or pUnit.getOwner() == con.iPope ) ):
-								screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSICUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
 							# City belongs to unit's owner
-							#if (pCity.getOwner() == pUnit.getOwner() and not pPlayer.getCivics(4) == 24 ):
-							#	
-							#	# Make sure city has a religion which isn't this player's state religion
-							#	for iReligionLoop in range(gc.getNumReligionInfos()):
-							#		
-							#		# City has this religion
-							#		if (pCity.isHasReligion(iReligionLoop)):
-							#			
-							#			# City's religion is not player's state
-							#			if (pPlayer.getStateReligion() != iReligionLoop):
-							#				
-							#				screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSICUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
-							#				screen.show( "BottomButtonContainer" )
-							#				iCount = iCount + 1
-							#				
-							#				break
+							if (pCity.getOwner() == pUnit.getOwner()):
+								pPlayer = gc.getPlayer(pUnit.getOwner())
+								# Make sure city has a religion which isn't this player's state religion
+								for iReligionLoop in range(gc.getNumReligionInfos()):
+									# City has this religion
+									if pCity.isHasReligion(iReligionLoop) and not pCity.isHolyCityByType(iReligionLoop):
+										# City's religion is not player's state
+										if (pPlayer.getStateReligion() != iReligionLoop):
+											screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSECUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
+											screen.show( "BottomButtonContainer" )
+											iCount = iCount + 1
+											break
+							# Unit owner is the Pope		??? Added because of 3Miro's previous version of the code, but is this really needed here? The Pope is unplayable... does the AI need the actual button?
+							elif (pUnit.getOwner() == con.iPope):
+								pPlayer = gc.getPlayer(pCity.getOwner())
+								# Make sure city has a religion which isn't this player's state religion
+								for iReligionLoop in range(gc.getNumReligionInfos()):
+									# City has this religion
+									if pCity.isHasReligion(iReligionLoop) and not pCity.isHolyCityByType(iReligionLoop):
+										# City's religion is not player's state
+										if (pPlayer.getStateReligion() != iReligionLoop):
+											screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSECUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
+											screen.show( "BottomButtonContainer" )
+											iCount = iCount + 1
+											break
+						#Absinthe: end
 					
+					# Great Saint
 					iUnitProphet = 	CvUtil.findInfoTypeNum(gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_PROPHET")					
 					if ( iUnitProphet == pUnit.getUnitType() ):
 						pPlayer = gc.getPlayer(pUnit.getOwner())

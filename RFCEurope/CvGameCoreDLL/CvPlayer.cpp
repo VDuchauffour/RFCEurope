@@ -23262,8 +23262,9 @@ void CvPlayer::processCivNames()
 }
 //Rhye - end
 
-// 3Miro: additional units
-CvCity* CvPlayer::choosePurgeCity(){
+// 3Miro: additional utils
+// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+/*CvCity* CvPlayer::choosePurgeCity(){
 	int iLoop;
 	int iStateReligion;
 	CvCity *pCity;
@@ -23288,7 +23289,8 @@ CvCity* CvPlayer::choosePurgeCity(){
 		};
 	};
 	return NULL;
-};
+};*/
+// Absinthe: end
 
 int CvPlayer::getFinancialPower(){
 	int iLoop = 0, iCount =0;

@@ -2124,6 +2124,13 @@ int CyCity::getTradeRoutes()
 	return m_pCity ? m_pCity->getTradeRoutes() : -1;
 }
 
+// Absinthe: edead's code from SoI, needed for the persecution python function
+int CyCity::getReligionCount()
+{
+	return m_pCity ? m_pCity->getReligionCount() : -1;
+}
+// Absinthe: end
+
 void CyCity::clearOrderQueue()
 {
 	if (m_pCity)
@@ -2296,7 +2303,8 @@ void CyCity::liberate(bool bConquest)
 	}
 }
 
-// 3Miro: Prosecutions
+// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+/*// 3Miro: Prosecutions
 bool CyCity::canPurgeReligion(){
 	if ( m_pCity ){
 		return m_pCity ->canPurgeReligion();
@@ -2309,7 +2317,8 @@ void CyCity::doPurgeReligions(){
 	if ( m_pCity ){
 		m_pCity ->doPurgeReligions();
 	};
-};
+};*/
+// Absinthe: end
 
 int CyCity::getProvince(){
 	return m_pCity ->getProvince();
