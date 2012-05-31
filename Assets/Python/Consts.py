@@ -830,6 +830,15 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 )
 
 
+# The AI will persecute religions in this order, depending on its own state religion (one row per religion)
+tPersecutionOrder = (
+	(xml.iCatholicism, xml.iIslam, xml.iOrthodoxy, xml.iJudaism),			# Protestantism
+	(xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism, xml.iJudaism),	# Islam
+	(xml.iIslam, xml.iProtestantism, xml.iJudaism, xml.iOrthodoxy),			# Catholicism
+	(xml.iIslam, xml.iJudaism, xml.iCatholicism, xml.iProtestantism),		# Orhodoxy
+	(xml.iIslam, xml.iProtestantism, xml.iOrthodoxy, xml.iCatholicism),		# Judaism
+)
+
 
 #Stability Parameters
 

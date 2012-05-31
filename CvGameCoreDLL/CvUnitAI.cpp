@@ -95,6 +95,24 @@ bool CvUnitAI::AI_update()
 	*/
 	//Rhye (Gyathaar / Kael) - end comment 
 
+	// Absinthe: new code for AI persecution - handled through python
+	if ( getUnitType() == UNIT_PROSECUTOR )
+	{
+		CyUnit* pyUnit = new CyUnit(this);
+		CyArgsList argsList;
+		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
+		long lResult=0;
+		gDLL->getPythonIFace()->callFunction(PYGameModule, "AI_unitUpdate", argsList.makeFunctionArgs(), &lResult);
+		delete pyUnit;	// python fxn must not hold on to this pointer
+		if (lResult == 1)
+		{
+			return false;
+		}
+		getGroup()->pushMission(MISSION_SKIP);
+		return false;
+	}
+	// Absinthe: old code for AI persecution
+	/*
 	// 3MiroAI: decide how the AI would do with a prosecutor
 	//GC.getGameINLINE().logMsg("   Unit AI  at %d %d   UnitType: %d",getX(),getY(),getUnitType() ); 
 	//GC.getGameINLINE().logMsg("   Start Prosecutions ");
@@ -167,6 +185,8 @@ bool CvUnitAI::AI_update()
 	};
 	//GC.getGameINLINE().logMsg("   End Prosecutions ");
 	// 3MiroAI: end of the prosecutions
+	*/
+	// Absinthe: end
 
 	/*if ( ( getX() == 33) && ( getY() == 57) ){
 		GC.getGameINLINE().logMsg(" Unit AI_Update HERE 1 %d ",getUnitType() ); // 3Miro

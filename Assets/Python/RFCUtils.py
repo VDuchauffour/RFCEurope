@@ -97,7 +97,7 @@ class RFCUtils:
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 #scriptDict['lGreatDepressionCountdown'][iCiv] = iNewValue
                 #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                                
+
         #def getLastRecordedStabilityStuff( self, iParameter ):
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 #return scriptDict['lLastRecordedStabilityStuff'][iParameter]
@@ -106,18 +106,18 @@ class RFCUtils:
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 #scriptDict['lLastRecordedStabilityStuff'][iParameter] = iNewValue
                 #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-                
+
         def getProsecutionCount( self, iCiv ):
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 #return scriptDict['iProsecutionCount'][iCiv]
                 return gc.getProsecutionCount( iCiv )
-                
+
         def setProsecutionCount( self, iCiv, iNewValue ):
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 #scriptDict['iProsecutionCount'][iCiv] = iNewValue
                 #gc.getGame().setScriptData( pickle.dumps(scriptDict) )
                 gc.setProsecutionCount( iCiv, iNewValue )
-                
+
         #Plague
         def getPlagueCountdown( self, iCiv ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -141,7 +141,7 @@ class RFCUtils:
                         #self.setStabilityParameters(iPlayer, iParameter, self.getStabilityParameters(iPlayer,iParameter) + iAmount)
                 #else:
                         #self.setStabilityParameters(iPlayer, iParameter, 0 + iAmount)
-        
+
         ## 3Miro: for numbers in the stability screen
         #def getParString( self, iPlayer, iCathegory ):
                 #if ( gc.getPlayer(iPlayer).isHuman()):
@@ -163,55 +163,54 @@ class RFCUtils:
 
         ##CvFinanceAdvisor 
         #def getParCities(self,iCiv):
-            #if (self.getStabilityParameters(iCiv,con.iParCitiesE) > 7):
-                    #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-            #elif (self.getStabilityParameters(iCiv, con.iParCitiesE) < -7):
-                    #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-            #else:
-                    #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
+                #if (self.getStabilityParameters(iCiv,con.iParCitiesE) > 7):
+                        #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
+                #elif (self.getStabilityParameters(iCiv, con.iParCitiesE) < -7):
+                        #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
+                #else:
+                        #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
 
         #def getParCivics(self,iCiv):
-            #if (self.getStabilityParameters(iCiv, con.iParCivicsE) > 7):
-                    #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-            #elif (self.getStabilityParameters(iCiv, con.iParCivicsE) < -7):
-                    #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-            #else:
-                    #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
+                #if (self.getStabilityParameters(iCiv, con.iParCivicsE) > 7):
+                        #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
+                #elif (self.getStabilityParameters(iCiv, con.iParCivicsE) < -7):
+                        #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
+                #else:
+                        #return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
 
         #def getParDiplomacy(self,iCiv):
-            #if (self.getStabilityParameters(iCiv, con.iParDiplomacyE) > 7):
-                    #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-            #elif (self.getStabilityParameters(iCiv, con.iParDiplomacyE) < -7):
-                    #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-            #else:
-                    #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
+                #if (self.getStabilityParameters(iCiv, con.iParDiplomacyE) > 7):
+                        #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
+                #elif (self.getStabilityParameters(iCiv, con.iParDiplomacyE) < -7):
+                        #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
+                #else:
+                        #return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
 
-                
         #def getParEconomy(self, iCiv):
-            ##print ("ECO", self.getStabilityParameters(con.iParEconomy3), self.getStabilityParameters(con.iParEconomy1), self.getStabilityParameters(con.iParEconomyE))
-            #if (self.getStabilityParameters(iCiv, con.iParEconomyE) > 7):
-                    #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-            #elif (self.getStabilityParameters(iCiv, con.iParEconomyE) < -7):
-                    #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-            #else:
-                    #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-                
+                ##print ("ECO", self.getStabilityParameters(con.iParEconomy3), self.getStabilityParameters(con.iParEconomy1), self.getStabilityParameters(con.iParEconomyE))
+                #if (self.getStabilityParameters(iCiv, con.iParEconomyE) > 7):
+                        #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
+                #elif (self.getStabilityParameters(iCiv, con.iParEconomyE) < -7):
+                        #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
+                #else:
+                        #return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
+
         #def getParExpansion(self, iCiv):
-            #if (self.getStabilityParameters(iCiv, con.iParExpansionE) > 7):
-                    #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-            #elif (self.getStabilityParameters(iCiv, con.iParExpansionE) < -7):
-                    #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-            #else:
-                    #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
+                #if (self.getStabilityParameters(iCiv, con.iParExpansionE) > 7):
+                        #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
+                #elif (self.getStabilityParameters(iCiv, con.iParExpansionE) < -7):
+                        #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
+                #else:
+                        #return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
 
         #def getArrow(self, iParameter):
-            #if (iParameter == 0):
-                    #if (self.getStability(self.getHumanID()) >= self.getLastRecordedStabilityStuff(iParameter) + 6):
-                            #return 1
-                    #elif (self.getStability(self.getHumanID()) <= self.getLastRecordedStabilityStuff(iParameter) - 6):
-                            #return -1
-                    #else:
-                            #return 0
+                #if (iParameter == 0):
+                        #if (self.getStability(self.getHumanID()) >= self.getLastRecordedStabilityStuff(iParameter) + 6):
+                                #return 1
+                        #elif (self.getStability(self.getHumanID()) <= self.getLastRecordedStabilityStuff(iParameter) - 6):
+                                #return -1
+                        #else:
+                                #return 0
             #else:
                     #if (iParameter == 1):
                             #iNewValue = self.getParCities()
@@ -242,7 +241,7 @@ class RFCUtils:
                         #if (self.getGoal(iPlayer, j) == 1):
                         #        iResult += 1
                 return iResult
-                
+
         def getGoalsColor(self, iPlayer): #by CyberChrist
                 pPlayer = gc.getPlayer( iPlayer )
                 iCol = 0
@@ -259,7 +258,7 @@ class RFCUtils:
                 #        return scriptDict['iBurgundyCulture']
                 #else:
                 #        return -1
-                        
+
         def getArabianInfluence( self ):
                 return 0
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -267,7 +266,7 @@ class RFCUtils:
                 #        return gc.getGame().calculateReligionPercent( xml.iIslam )
                 #else:
                 #        return -1
-                        
+
         def getNorseRazed( self ):
                 return 0
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -275,7 +274,7 @@ class RFCUtils:
                 #        return scriptDict['iNorseRazed']
                 #else:
                 #        return -1
-                        
+
         def getKievFood( self ):
                 return 0
                 #scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -283,7 +282,7 @@ class RFCUtils:
                 #        return scriptDict['iKievFood']
                 #else:
                 #        return -1
-                        
+
         # 3Miro: END Utilities
 
 
@@ -297,14 +296,13 @@ class RFCUtils:
                         return cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
                 else:
                         return -1
-                        
+
         def getRandomCiv( self ):
                 civList = []
                 for i in range( iNumPlayers ):
                         if ( gc.getPlayer( i ).isAlive() ):
                                 civList.append( i )
                 return civList[gc.getGame().getSorenRandNum(len(civList), 'random civ')]
-                                            
 
         def isMortalUnit(self, unit):
                 if (unit.isHasPromotion(42)): #leader
@@ -336,11 +334,12 @@ class RFCUtils:
                         if (gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman()):
                                 if (teamMinor.isAtWar(iActiveCiv)):
                                         bActiveUnitsInIndependentTerritory = self.checkUnitsInEnemyTerritory(iActiveCiv, iMinorCiv)
-                                        bIndependentUnitsInActiveTerritory = self.checkUnitsInEnemyTerritory(iMinorCiv, iActiveCiv)                                                                  
-                                        if (not bActiveUnitsInIndependentTerritory and not bIndependentUnitsInActiveTerritory):            
+                                        bIndependentUnitsInActiveTerritory = self.checkUnitsInEnemyTerritory(iMinorCiv, iActiveCiv)
+                                        if (not bActiveUnitsInIndependentTerritory and not bIndependentUnitsInActiveTerritory):
                                                 teamMinor.makePeace(iActiveCiv)
                                                 if (bOpenBorders):
                                                         teamMinor.signOpenBorders(iActiveCiv)
+
         #AIWars
         def restorePeaceHuman(self, iMinorCiv, bOpenBorders): 
                 teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
@@ -350,9 +349,10 @@ class RFCUtils:
                                         if (teamMinor.isAtWar(iActiveCiv)):
                                                 bActiveUnitsInIndependentTerritory = self.checkUnitsInEnemyTerritory(iActiveCiv, iMinorCiv)
                                                 bIndependentUnitsInActiveTerritory = self.checkUnitsInEnemyTerritory(iMinorCiv, iActiveCiv)
-                                                if (not bActiveUnitsInIndependentTerritory and not bIndependentUnitsInActiveTerritory):            
+                                                if (not bActiveUnitsInIndependentTerritory and not bIndependentUnitsInActiveTerritory):
                                                         teamMinor.makePeace(iActiveCiv)
                                 return
+
         #AIWars
         def minorWars(self, iMinorCiv):
                 teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
@@ -370,16 +370,12 @@ class RFCUtils:
                                                         print ("Minor war", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0))
 
 
-
-            
         #RiseAndFall, Stability
         def calculateDistance(self, x1, y1, x2, y2):
                 dx = abs(x2-x1)
                 dy = abs(y2-y1)
                 return max(dx, dy)
 
-
-            
         #RiseAndFall
         def debugTextPopup(self, strText):
                 popup = Popup.PyPopup()
@@ -391,7 +387,6 @@ class RFCUtils:
                 for t in range(xml.iNumTechs):
                         if (gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t)):
                                     gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(t, True, iMinorCiv, False, False)
-
 
         #RiseAndFall, Religions, Congresses, UniquePowers
         def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
@@ -412,8 +407,6 @@ class RFCUtils:
 ##                                return iCiv     
                 return gc.getGame().getActivePlayer()
 
-
-
         #RiseAndFall
         def flipUnitsInCityBefore(self, tCityPlot, iNewOwner, iOldOwner):
                 #print ("tCityPlot Before", tCityPlot)
@@ -431,6 +424,7 @@ class RFCUtils:
                                         self.makeUnit(unitType, iNewOwner, [0, 72], 1)
                         else:
                                 j += 1
+
         #RiseAndFall
         def flipUnitsInCityAfter(self, tCityPlot, iCiv):
                 #moves new units back in their place
@@ -471,12 +465,11 @@ class RFCUtils:
                                 killPlot = gc.getMap().plot(x,y)
                                 iNumUnitsInAPlot = killPlot.getNumUnits()
                                 if (iNumUnitsInAPlot):
-                                        for i in range(iNumUnitsInAPlot):                                                        
+                                        for i in range(iNumUnitsInAPlot):
                                                 unit = killPlot.getUnit(0)
                                                 if (unit.getOwner() == iCiv):
                                                         unit.kill(False, con.iBarbarian)
 
-                                                        
         #RiseAndFall
         # 3Miro: why create units at (0, 67), have seen it in other places.
         # Multiple civs may have units in those tiles, still maybe better to check in a unit can be created in the tile before it is created
@@ -550,9 +543,6 @@ class RFCUtils:
                                                                 gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
                                                                 gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
                                                                 gc.getMap().plot(1, 71).setRevealed(iCiv, False, True, -1);
-                                
-
-
 
 
         #Congresses, RiseAndFall
@@ -569,13 +559,11 @@ class RFCUtils:
                         if not city.isNone():
                                 iOldOwner = city.getOwner()
                                 if (iOldOwner in iOldOwners or not iOldOwners):
-
                                         if (bKillUnits):
                                                 killPlot = gc.getMap().plot( tCityPlot[0], tCityPlot[1] )
                                                 for i in range(killPlot.getNumUnits()):
                                                         unit = killPlot.getUnit(0)
                                                         unit.kill(False, iNewOwner)
-                                                        
                                         if (bFlipType): #conquest
                                                 if (city.getPopulation() == 2):
                                                         city.setPopulation(3)
@@ -584,7 +572,6 @@ class RFCUtils:
                                                 pNewOwner.acquireCity(city, True, False)
                                         else: #trade
                                                 pNewOwner.acquireCity(city, False, True)
-                                                
                                         return True
                 return False
 
@@ -611,8 +598,8 @@ class RFCUtils:
                 #halve barbarian culture in a broader area
                 if (bBarbarian2x2Decay or bBarbarian2x2Conversion):
                         if (iNewOwner != con.iBarbarian and iNewOwner != con.iIndependent and iNewOwner != con.iIndependent2 and iNewOwner != con.iIndependent3 and iNewOwner != con.iIndependent4):
-                                for x in range(tCityPlot[0]-2, tCityPlot[0]+3):        # from x-2 to x+2
-                                        for y in range(tCityPlot[1]-2, tCityPlot[1]+3):	# from y-2 to y+2                                
+                                for x in range(tCityPlot[0]-2, tCityPlot[0]+3):				# from x-2 to x+2
+                                        for y in range(tCityPlot[1]-2, tCityPlot[1]+3):		# from y-2 to y+2
                                                 iPlotBarbCulture = gc.getMap().plot(x, y).getCulture(con.iBarbarian)
                                                 if (iPlotBarbCulture > 0):
                                                         if (gc.getMap().plot(x, y).getPlotCity().isNone() or (x==tCityPlot[0] and y==tCityPlot[1])):
@@ -637,15 +624,14 @@ class RFCUtils:
                                                                 if (bBarbarian2x2Conversion):
                                                                         gc.getMap().plot(x, y).setCulture(con.iIndependent2, 0, True)
                                                                         gc.getMap().plot(x, y).setCulture(iNewOwner, iPlotIndependent2Culture, True)
-                                                                        
-                #plot                               
-                for x in range(tCityPlot[0]-1, tCityPlot[0]+2):        # from x-1 to x+1
-                        for y in range(tCityPlot[1]-1, tCityPlot[1]+2):	# from y-1 to y+1
+
+                #plot
+                for x in range(tCityPlot[0]-1, tCityPlot[0]+2):				# from x-1 to x+1
+                        for y in range(tCityPlot[1]-1, tCityPlot[1]+2):		# from y-1 to y+1
                                 pCurrent = gc.getMap().plot(x, y)
-                                
                                 iCurrentPlotCulture = pCurrent.getCulture(iOldOwner)
 
-                                if (pCurrent.isCity()):                                
+                                if (pCurrent.isCity()):
                                         pCurrent.setCulture(iNewOwner, iCurrentPlotCulture*iCulturePercent/100, True)
                                         pCurrent.setCulture(iOldOwner, iCurrentPlotCulture*(100-iCulturePercent)/100, True)
                                 else:
@@ -658,7 +644,6 @@ class RFCUtils:
 ##                                                iPlotCulture = gc.getMap().plot(x, y).getCulture(iCiv)
 ##                                                if (iPlotCulture > 0):
 ##                                                        gc.getMap().plot(x, y).setCulture(iCiv, iPlotCulture/3, True)
-                                                        
                                 #print (x, y, pCurrent.getCulture(iNewOwner), ">", pCurrent.getCulture(iOldOwner))
 
                                 if (not pCurrent.isCity()):
@@ -666,9 +651,8 @@ class RFCUtils:
                                                 pCurrent.setOwner(iNewOwner)
                                         else:
                                                 if (pCurrent.getCulture(iNewOwner)*4 > pCurrent.getCulture(iOldOwner)):
-                                                        pCurrent.setOwner(iNewOwner)                                        
+                                                        pCurrent.setOwner(iNewOwner)
                                         #print ("NewOwner", pCurrent.getOwner())
-
 
 
         #handler
@@ -685,27 +669,28 @@ class RFCUtils:
                                                         iDen = 10
                                                 elif (gc.getPlayer(iMajorCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 150):
                                                         iDen = 15
-                                                        
+
                                                 iMinorCityCulture = city.getCulture(iMinor)
                                                 city.setCulture(iMajorCiv, iMinorCityCulture/iDen, True)
-                                                
+
                                                 iMinorPlotCulture = pCurrent.getCulture(iMinor)
-                                                pCurrent.setCulture(iMajorCiv, iMinorPlotCulture/iDen, True)                                
+                                                pCurrent.setCulture(iMajorCiv, iMinorPlotCulture/iDen, True)
+
 
         #UniquePowers
         # 3Miro: Turkey I guess
         def convertPlotCulture(self, pCurrent, iCiv, iPercent, bOwner):
-                
+
                 if (pCurrent.isCity()):
                         city = pCurrent.getPlotCity()
                         iCivCulture = city.getCulture(iCiv)
                         iLoopCivCulture = 0
                         for iLoopCiv in range(iNumTotalPlayers):
                                 if (iLoopCiv != iCiv):
-                                        iLoopCivCulture += city.getCulture(iLoopCiv)                                
+                                        iLoopCivCulture += city.getCulture(iLoopCiv)
                                         city.setCulture(iLoopCiv, city.getCulture(iLoopCiv)*(100-iPercent)/100, True)
-                        city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)  
-        
+                        city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
+
 ##                for iLoopCiv in range(iNumTotalPlayers):
 ##                        if (iLoopCiv != iCiv):
 ##                                iLoopCivCulture = pCurrent.getCulture(iLoopCiv)
@@ -716,13 +701,11 @@ class RFCUtils:
                 iLoopCivCulture = 0
                 for iLoopCiv in range(iNumTotalPlayers):
                         if (iLoopCiv != iCiv):
-                                iLoopCivCulture += pCurrent.getCulture(iLoopCiv)                                
+                                iLoopCivCulture += pCurrent.getCulture(iLoopCiv)
                                 pCurrent.setCulture(iLoopCiv, pCurrent.getCulture(iLoopCiv)*(100-iPercent)/100, True)
-                pCurrent.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)                                
+                pCurrent.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
                 if (bOwner == True):
                         pCurrent.setOwner(iCiv)
-
-
 
 
         #Congresses, RiseAndFall
@@ -739,14 +722,14 @@ class RFCUtils:
                         plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
                         iNumUnitsInAPlot = plotCity.getNumUnits()
                         j = 0
-                        for i in range(iNumUnitsInAPlot):                        
+                        for i in range(iNumUnitsInAPlot):
                                 unit = plotCity.getUnit(j)
                                 if (unit.getDomainType() == 2): #land unit
                                         #print("  3Miro 2 Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                                         unit.setXYOld(tDestination[0], tDestination[1])
                                 else:
                                         j = j + 1
-                                
+
         #Congresses, RiseAndFall
         def relocateSeaGarrisons(self, tCityPlot, iOldOwner):
                 tDestination = (-1, -1)
@@ -754,7 +737,7 @@ class RFCUtils:
                 for pyCity in cityList:
                         if (pyCity.GetCy().isCoastalOld()):
                                 tDestination = (pyCity.GetCy().getX(), pyCity.GetCy().getY())
-                if (tDestination == (-1, -1)):                    
+                if (tDestination == (-1, -1)):
                         for x in range(tCityPlot[0]-12, tCityPlot[0]+12):
                                 for y in range(tCityPlot[1]-12, tCityPlot[1]+12):
                                         pDestination = gc.getMap().plot(x, y)
@@ -773,7 +756,6 @@ class RFCUtils:
                                         unit.setXYOld(tDestination[0], tDestination[1])
                                 else:
                                         j = j + 1
-
 
         #Congresses, RiseAndFall
         def createGarrisons(self, tCityPlot, iNewOwner, iNumUnits):
@@ -801,9 +783,7 @@ class RFCUtils:
                 self.makeUnit(iUnitType, iNewOwner, [tCityPlot[0], tCityPlot[1]], iNumUnits)
 
 
-
         #RiseAndFall, Stability
-
         def killCiv(self, iCiv, iNewCiv):
                 self.clearPlague(iCiv)
                 for pyCity in PyPlayer(iCiv).getCityList():
@@ -860,8 +840,8 @@ class RFCUtils:
                                 #elif (iCounter % 2 == 1):
                                 #        iNewCiv = iNewCiv2
                                 iNewCiv = con.iIndepStart + gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random indep' )
-                                self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iNewCiv, iCiv)                            
-                                self.setTempFlippingCity((tCoords[0],tCoords[1]))                                                        
+                                self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iNewCiv, iCiv)
+                                self.setTempFlippingCity((tCoords[0],tCoords[1]))
                                 self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
                                 self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
                                 #pyCity.GetCy().setHasRealBuilding(con.iPlague, False)  #buggy
@@ -878,14 +858,14 @@ class RFCUtils:
                                 #        iNewCiv = iNewCiv3
                                 iNewCiv = con.iIndepStart + gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 2, 'random indep' )
                                 if ( iNewCiv == con.iIndepEnd + 1 ):
-                                	iNewCiv = iBarbarian
-                                self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iNewCiv, iCiv)                            
-                                self.setTempFlippingCity((tCoords[0],tCoords[1]))         
+                                        iNewCiv = iBarbarian
+                                self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iNewCiv, iCiv)
+                                self.setTempFlippingCity((tCoords[0],tCoords[1]))
                                 self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
                                 self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
                                 #pyCity.GetCy().setHasRealBuilding(con.iPlague, False) #buggy
                                 self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
-                                iCounter += 1                                      
+                                iCounter += 1
                                 self.flipUnitsInArea([tCoords[0]-1,tCoords[1]-1], [tCoords[0]+1,tCoords[1]+1], iNewCiv, iCiv, False, True)
                 if (bAssignOneCity == False):
                         #self.flipUnitsInArea([0,0], [123,67], iNewCiv1, iCiv, False, True) #causes a bug: if a unit was inside another city's civ, when it becomes independent or barbarian, may raze it
@@ -895,7 +875,7 @@ class RFCUtils:
                         self.clearEmbassies(iCiv)
                 self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
 
-                
+
         def resetUHV(self, iPlayer):
                 if (iPlayer < iNumMajorPlayers):
                         pPlayer = gc.getPlayer( iPlayer )
@@ -905,7 +885,7 @@ class RFCUtils:
                                 pPlayer.setUHV( 1, 0 )
                         if ( pPlayer.getUHV( 2 ) == -1 ):
                                 pPlayer.setUHV( 2, 0 )
-                                                
+
         def clearEmbassies(self, iDeadCiv):
                 #for i in range (iNumTotalPlayers):
                 #        for pyCity in PyPlayer(i).getCityList():
@@ -914,17 +894,13 @@ class RFCUtils:
                 #                        continue
                 pass
 
-
         def clearPlague(self, iCiv):
                 for pyCity in PyPlayer(iCiv).getCityList():
                         if (pyCity.GetCy().hasBuilding(xml.iPlague)):
                                 pyCity.GetCy().setHasRealBuilding(xml.iPlague, False)
 
 
-
-
         #AIWars, by CyberChrist
-
         def isNoVassal(self, iCiv):
                 iMaster = 0
                 for iMaster in range (iNumTotalPlayers):
@@ -949,7 +925,7 @@ class RFCUtils:
                 for x in range(tTopLeft[0], tBottomRight[0]+1):
                         for y in range(tTopLeft[1], tBottomRight[1]+1):
                                 result, bPaintPlot, bContinueSearch = function((x, y), result, argsList)
-                                if bPaintPlot:			# paint plot
+                                if bPaintPlot:				# paint plot
                                         tPaintedList.append((x, y))
                                 if not bContinueSearch:		# goal reached, so stop
                                         return result, tPaintedList
@@ -970,7 +946,7 @@ class RFCUtils:
                                                 return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
                 return (None, not bPaint, bContinue)
-                
+
         def forcedInvasion( self, tCoords, result, argsList ):
                 """Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
                 Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
@@ -996,8 +972,8 @@ class RFCUtils:
                 if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == xml.iCoast):
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                 iClean = 0
-                                for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
-                                        for y in range(tCoords[1] - 1, tCoords[1] + 2):	# from y-1 to y+1
+                                for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
+                                        for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
                                                 if (pCurrent.getNumUnits() != 0):
                                                         iClean += 1
                                 if ( iClean == 0 ):   
@@ -1017,11 +993,11 @@ class RFCUtils:
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                 if (pCurrent.countTotalCulture() == 0 ):
                                         iClean = 0
-                                        for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
-                                                for y in range(tCoords[1] - 1, tCoords[1] + 2):	# from y-1 to y+1
+                                        for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
+                                                for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
                                                         if (pCurrent.getNumUnits() != 0):
                                                                 iClean += 1
-                                        if ( iClean == 0 ):   
+                                        if ( iClean == 0 ):
                                                 # this is a good plot, so paint it and continue search
                                                 return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
@@ -1039,8 +1015,8 @@ class RFCUtils:
                         if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         iClean = 0
-                                        for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
-                                                for y in range(tCoords[1] - 1, tCoords[1] + 2):	# from y-1 to y+1
+                                        for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
+                                                for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
                                                         if (pCurrent.getNumUnits() != 0):
                                                                 iClean += 1
                                         if ( iClean == 0 ):
@@ -1048,7 +1024,7 @@ class RFCUtils:
                                                         # this is a good plot, so paint it and continue search
                                                         return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
-                return (None, not bPaint, bContinue)                                        
+                return (None, not bPaint, bContinue)
 
         #RiseAndFall
         def innerInvasion( self, tCoords, result, argsList ):
@@ -1064,7 +1040,7 @@ class RFCUtils:
                                             return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
                 return (None, not bPaint, bContinue)
-            
+
         def innerSpawn( self, tCoords, result, argsList ):
                 """Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
                 Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
@@ -1075,8 +1051,8 @@ class RFCUtils:
                         if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
                                 if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
                                         iClean = 0
-                                        for x in range(tCoords[0] - 1, tCoords[0] + 2):        # from x-1 to x+1
-                                                for y in range(tCoords[1] - 1, tCoords[1] + 2):	# from y-1 to y+1
+                                        for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
+                                                for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
                                                         if (pCurrent.getNumUnits() != 0):
                                                                 iClean += 1
                                         if ( iClean == 0 ):  
@@ -1203,49 +1179,130 @@ class RFCUtils:
         #Absinthe: end
 
         #Absinthe: persecution update
-        #the following prosecute function is only used by the persecution popup
-        #the persecution itself is handled in the canPurgeReligions and doPurgeReligions functions, in CvCity.cpp
 	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
-	# 3Miro: religious purge
-		#if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
-		#	return
+		"""Removes one religion from the city and handles the consequences."""
 		
-		if ( gc.getMap().plot( iPlotX, iPlotY ).isCity() ):
-			city = gc.getMap().plot( iPlotX, iPlotY ).getPlotCity()
+		if (gc.getMap().plot(iPlotX, iPlotY).isCity()):
+			city = gc.getMap().plot(iPlotX, iPlotY).getPlotCity()
 		else:
 			return
 		
 		iOwner = city.getOwner()
-		
-		pPlayer = gc.getPlayer( iOwner )
-		
-		#iStateReligion = pPlayer.getStateReligion()
-		#
-		## Loop through all religions, remove them from the city
-		#for iReligionLoop in range(gc.getNumReligionInfos()):
-		#	if (iReligionLoop != iStateReligion and (not city.isHolyCityByType(iReligionLoop) ) ):
-		#		city.setHasReligion(iReligionLoop, 0, 0, 0)
-		#		if (iReligionLoop == con.iJudaism): #Jews spread to another random city in the world
-		#			tCity = self.selectRandomCity()
-		#			self.spreadJews(tCity,con.iJudaism)
-		#		# 3Miro: purge Buildings
-		#		for iBuildingLoop in range( gc.getNumBuildingInfos() ):
-		#			if ( city.isHasRealBuilding( iBuildingLoop ) and gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligionLoop ):
-		#				 city.setHasRealBuilding( iBuildingLoop, False )
-
-		city.doPurgeReligions()
-		city.changeHurryAngerTimer( 10 )
-		
-		# 3Miro: kill the Prosecutor
+		pPlayer = gc.getPlayer(iOwner)
 		pUnit = pPlayer.getUnit(iUnitID)
+		
+		# chance to work: 50-75 based on piety
+		iChance = 50 + min(25, pPlayer.getFaith()/2)
+		if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
+			
+			iStateReligion = pPlayer.getStateReligion()
+			
+			# determine the target religion, if not supplied by the popup decision
+			if not iReligion:
+				for iReligion in con.tPersecutionOrder[iStateReligion]:
+					if iReligion != iStateReligion and not city.isHolyCityByType(iReligion): # spare holy cities
+						if city.isHasReligion(iReligion):
+							break
+			
+			# remove a single non-state religion and its buildings from the city, count the loot
+			iLootModifier = 2 * city.getPopulation() / city.getReligionCount() + 1
+			iLoot = 2 + iLootModifier
+			city.setHasReligion(iReligion, 0, 0, 0)
+			for iBuildingLoop in range(gc.getNumBuildingInfos()):
+				if iBuildingLoop < xml.iPlague:
+					if city.getNumRealBuilding(iBuildingLoop):
+						if gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligion:
+							city.setNumRealBuilding(iBuildingLoop, 0)
+							iLoot += iLootModifier
+			if iReligion == xml.iJudaism:
+				iLoot = iLoot*3/2
+			
+			# kill / expel some population
+			if city.getPopulation() > 14:
+				city.changePopulation(-3)
+			elif city.getPopulation() > 9:
+				city.changePopulation(-2)
+			elif city.getPopulation() > 3:
+				city.changePopulation(-1)
+			
+			# distribute the loot
+			iLoot = iLoot/2 + gc.getGame().getSorenRandNum(iLoot/2, 'random loot')
+			pPlayer.changeGold(iLoot)
+			
+	#		# apply diplomatic penalty
+	#		for iLoopPlayer in range(con.iNumPlayers):
+	#			pLoopPlayer = gc.getPlayer(iLoopPlayer)
+	#			if pLoopPlayer.isAlive() and iLoopPlayer != iOwner:
+	#				if pLoopPlayer.getStateReligion() == iReligion:
+	#					pLoopPlayer.AI_changeAttitudeExtra(iOwner, -1)
+			
+			# add piety
+			pPlayer.changeFaith( 1 )
+			
+	#		# count minor religion persecutions
+	#		if ( i == minorReligion ){ // 3Miro: count the minor religion prosecutions
+	#		minorReligionRefugies++;
+	#		gc.setMinorReligionRefugies( 0 )
+			
+			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION", (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot)), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
+		
+		else: # fail
+			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(), )), "AS2D_SABOTAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iRed), iPlotX, iPlotY, True, True)
+		
+		# start a small revolt
+		city.changeCultureUpdateTimer(1);
+		city.changeOccupationTimer(1);
+		
+		# consume the inquisitor
 		pUnit.kill(0, -1)
 		
-		#3MiroUP
-		if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ):	
-			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
-			pPlayer.changeProsecutionCount( 10 )
+		# Unhappiness from persecution
+		city.changeHurryAngerTimer(city.flatHurryAngerLength())
 		
-		#pPlayer.changeFaith( 1 ) # this is done in C++ now
+		return True
+
+#	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
+#	# 3Miro: religious purge
+#		#if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
+#		#	return
+#		
+#		if ( gc.getMap().plot( iPlotX, iPlotY ).isCity() ):
+#			city = gc.getMap().plot( iPlotX, iPlotY ).getPlotCity()
+#		else:
+#			return
+#		
+#		iOwner = city.getOwner()
+#		
+#		pPlayer = gc.getPlayer( iOwner )
+#		
+#		#iStateReligion = pPlayer.getStateReligion()
+#		#
+#		## Loop through all religions, remove them from the city
+#		#for iReligionLoop in range(gc.getNumReligionInfos()):
+#		#	if (iReligionLoop != iStateReligion and (not city.isHolyCityByType(iReligionLoop) ) ):
+#		#		city.setHasReligion(iReligionLoop, 0, 0, 0)
+#		#		if (iReligionLoop == con.iJudaism): #Jews spread to another random city in the world
+#		#			tCity = self.selectRandomCity()
+#		#			self.spreadJews(tCity,con.iJudaism)
+#		#		# 3Miro: purge Buildings
+#		#		for iBuildingLoop in range( gc.getNumBuildingInfos() ):
+#		#			if ( city.isHasRealBuilding( iBuildingLoop ) and gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligionLoop ):
+#		#				city.setHasRealBuilding( iBuildingLoop, False )
+#
+#		city.doPurgeReligions()
+#		city.changeHurryAngerTimer( 10 )
+#
+#		# 3Miro: kill the Prosecutor
+#		pUnit = pPlayer.getUnit(iUnitID)
+#		pUnit.kill(0, -1)
+#
+#		#3MiroUP
+#		if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ):
+#			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
+#			pPlayer.changeProsecutionCount( 10 )
+#
+#		#pPlayer.changeFaith( 1 ) # this is done in C++ now
+
 
         def saint( self, iOwner, iUnitID ):
                 # 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
@@ -1266,7 +1323,7 @@ class RFCUtils:
 
         def spreadJews(self,tPlot,iReligion):
                 if (tPlot != False):
-                        plot = gc.getMap().plot( tPlot[0], tPlot[1] )                
+                        plot = gc.getMap().plot( tPlot[0], tPlot[1] )
                         if (not plot.getPlotCity().isNone()):
                                 plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
                                 return True

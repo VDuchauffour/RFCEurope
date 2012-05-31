@@ -33,6 +33,11 @@ Changes for RFCE 1.1:
 		- First part of the inquisition updates: base code for chooseable religion on persecution
 		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
 		- Added special chars to the hungarian and german city names as a test
+		- Second part of the inquisition code (still not complete) - based on SoI, huge thanks to edead
+			chooseable religion works now for the human
+			persecution succeeds with a chance between 50% and 75%
+			small revolt after persecution
+			some of the population is killed/expelled if perseuction succeeds
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla

@@ -443,6 +443,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("isActiveCorporation", &CyCity::isActiveCorporation, "bool (CorporationID) - does city have active CorporationID?")
 		.def("getTradeCity", &CyCity::getTradeCity, python::return_value_policy<python::manage_new_object>(), "CyCity (int iIndex) - remove SpecialistType[iIndex]")
 		.def("getTradeRoutes", &CyCity::getTradeRoutes, "int ()")
+		.def("getReligionCount", &CyCity::getReligionCount, "int ()") // Absinthe: edead's code from SoI, needed for the persecution python function
 
 		.def("clearOrderQueue", &CyCity::clearOrderQueue, "void ()")
 		.def("pushOrder", &CyCity::pushOrder, "void (OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce)")
@@ -476,8 +477,10 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("liberate", &CyCity::liberate, "void ()")
 
 		// 3Miro: New functions
-		.def("canPurgeReligion", &CyCity::canPurgeReligion, "bool ()")
-		.def("doPurgeReligions", &CyCity::doPurgeReligions, "void ()")
+		// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+		/*.def("canPurgeReligion", &CyCity::canPurgeReligion, "bool ()")
+		.def("doPurgeReligions", &CyCity::doPurgeReligions, "void ()")*/
+		// Absinthe: end
 		.def("getProvince", &CyCity::getProvince, "int ()")
 
 		.def("getNumForeignReligions", &CyCity::getNumForeignReligions, "int ()")

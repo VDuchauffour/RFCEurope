@@ -456,6 +456,7 @@ public:
 	bool isActiveCorporation(int /*CorporationTypes*/ eCorporation);
 	CyCity* getTradeCity(int iIndex);
 	int getTradeRoutes();
+	int getReligionCount(); // Absinthe: edead's code from SoI, needed for the persecution python function
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce);
@@ -486,9 +487,10 @@ public:
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
 
-	// 3Miro: Prosecutions
+	// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+	/*// 3Miro: Prosecutions
 	bool canPurgeReligion();
-	void doPurgeReligions();
+	void doPurgeReligions();*/
 
 	// 3MiroProvinces
 	int getProvince();

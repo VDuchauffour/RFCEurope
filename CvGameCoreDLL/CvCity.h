@@ -942,9 +942,10 @@ public:
 
 	int getBestYieldAvailable(YieldTypes eYield) const;
 
-	// 3Miro: Prosecution purge, removed the non-state Religions
+	// Absinthe: with the new persecution code added from SoI, these functions are currently unused
+	/*// 3Miro: Prosecution purge, remove the non-state Religions
 	bool canPurgeReligion();
-	void doPurgeReligions();
+	void doPurgeReligions();*/
 
 	// 3Miro: damage enemy stuff
 	void changeDamageEnemy( int Change );
