@@ -212,7 +212,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
-		<English>Serbian</English>
+		<English>Serbian Mercenary</English>
 		<French>Serbian</French>
 		<German>Serbisch</German>
 		<Italian>Serbo</Italian>
@@ -221,7 +221,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_KHAZAR</Tag>
-		<English>Khazar</English>
+		<English>Khazar Mercenary</English>
 		<French>Khazar</French>
 		<German>Chasarisch</German>
 		<Italian>Cazaro</Italian>
@@ -230,7 +230,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AVAR</Tag>
-		<English>Avar</English>
+		<English>Avar Mercenary</English>
 		<French>Avar</French>
 		<German>Awarisch</German>
 		<Italian>Avaro</Italian>
@@ -239,7 +239,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ITALIAN</Tag>
-		<English>Italian</English>
+		<English>Italian Mercenary</English>
 		<French>Italian</French>
 		<German>Italienisch</German>
 		<Italian>Italiano</Italian>
@@ -248,7 +248,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SWISS</Tag>
-		<English>Swiss</English>
+		<English>Swiss Mercenary</English>
 		<French>Swiss</French>
 		<German>Schweizer</German>
 		<Italian>Svizzero</Italian>
@@ -257,7 +257,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_VARANGIAN</Tag>
-		<English>Varangian</English>
+		<English>Varangian Mercenary</English>
 		<French>Varangian</French>
 		<German>Warägisch</German>
 		<Italian>Variago</Italian>
@@ -266,7 +266,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_BALKAN</Tag>
-		<English>Balkan</English>
+		<English>Balkan Mercenary</English>
 		<French>Balkan</French>
 		<German>Balkanisch</German>
 		<Italian>Balcanico</Italian>
@@ -275,7 +275,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_DANISH</Tag>
-		<English>Danish</English>
+		<English>Danish Mercenary</English>
 		<French>Danish</French>
 		<German>Dänisch</German>
 		<Italian>Danese</Italian>
@@ -284,7 +284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ARAGON</Tag>
-		<English>Aragonese</English>
+		<English>Aragonese Mercenary</English>
 		<French>Aragonese</French>
 		<German>Aragonisch</German>
 		<Italian>Aragonese</Italian>
@@ -293,7 +293,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_MOROCCO</Tag>
-		<English>Moroccan</English>
+		<English>Moroccan Mercenary</English>
 		<French>Moroccan</French>
 		<German>Marokkanisch</German>
 		<Italian>Marocchino</Italian>
@@ -302,7 +302,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_GERMAN</Tag>
-		<English>German</English>
+		<English>German Mercenary</English>
 		<French>German</French>
 		<German>Deutsch</German>
 		<Italian>Tedesco</Italian>
@@ -311,7 +311,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_FINNISH</Tag>
-		<English>Finnish</English>
+		<English>Finnish Mercenary</English>
 		<French>Finnish</French>
 		<German>Finnisch</German>
 		<Italian>Finlandese</Italian>
@@ -320,7 +320,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_DON</Tag>
-		<English>Kuban</English>
+		<English>Kuban Mercenary</English>
 		<French>Kuban</French>
 		<German>Kubanisch</German>
 		<Italian>Kubano</Italian>
@@ -329,7 +329,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ZAPOROZHIAN</Tag>
-		<English>Zaporozhian</English>
+		<English>Zaporozhian Mercenary</English>
 		<French>Zaporozhian</French>
 		<German>Saporosch</German>
 		<Italian>Zaporizziano</Italian>
@@ -338,7 +338,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_BALTIC</Tag>
-		<English>Baltic</English>
+		<English>Baltic Mercenary</English>
 		<French>Baltic</French>
 		<German>Baltisch</German>
 		<Italian>Baltico</Italian>
@@ -347,7 +347,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_IRISH</Tag>
-		<English>Irish</English>
+		<English>Irish Mercenary</English>
 		<French>Irish</French>
 		<German>Irisch</German>
 		<Italian>Irlandese</Italian>
@@ -356,7 +356,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SCOTTISH</Tag>
-		<English>Scottish</English>
+		<English>Scottish Mercenary</English>
 		<French>Scottish</French>
 		<German>Schottisch</German>
 		<Italian>Scozzese</Italian>
@@ -364,8 +364,17 @@
 		<Russian>Scottish</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_WELSH</Tag>
+		<English>Welsh Mercenary</English>
+		<French>Welsh</French>
+		<German>Welsh</German>
+		<Italian>Welsh</Italian>
+		<Spanish>Welsh</Spanish>
+		<Russian>Welsh</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_AFRICAN</Tag>
-		<English>African</English>
+		<English>African Mercenary</English>
 		<French>African</French>
 		<German>Afrikanisch</German>
 		<Italian>Africano</Italian>
@@ -374,7 +383,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NUBIAN</Tag>
-		<English>Nubian</English>
+		<English>Nubian Mercenary</English>
 		<French>Nubian</French>
 		<German>Nubisch</German>
 		<Italian>Nubiano</Italian>
@@ -383,7 +392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_WALLOON</Tag>
-		<English>Walloon</English>
+		<English>Walloon Mercenary</English>
 		<French>Walloon</French>
 		<German>Wallonisch</German>
 		<Italian>Vallone</Italian>
@@ -392,53 +401,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ARABIAN</Tag>
-		<English>Arabian</English>
-		<French>
-			<Text>Arabes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Arabisch:arabischen:arabische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Arabo:Araba:Arabi:Arabe</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>&#225;rabe:&#225;rabe:&#225;rabes:&#225;rabes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>Arabian</Russian>
+		<English>Arabian Mercenary</English>
+		<French>Arabe Mercenaire</French>
+		<German>Arabische S&#246;ldner</German>
+		<Italian>Arabian Mercenario</Italian>
+		<Spanish>&#193;rabe Mercenario</Spanish>
+		<Russian>Arabian Mercenary</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_EGYPTIAN</Tag>
-		<English>Egyptian</English>
-		<French>
-			<Text>Egyptiens</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>&#196;gyptisch:&#228;gyptischen:&#228;gyptische</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Egiziano:Egiziana:Egiziani:Egiziane</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>egipcio:egipcia:egipcios:egipcias</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Russian>Egyptian</Russian>
+		<English>Egyptian Mercenary</English>
+		<French>Égyptienne Mercenaire</French>
+		<German>&#196;gyptischen S&#246;ldner</German>
+		<Italian>Egiziano Mercenario</Italian>
+		<Spanish>Egipto Mercenario</Spanish>
+		<Russian>Egyptian Mercenary</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_TAGMATA</Tag>
@@ -451,30 +428,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_CORSAIR</Tag>
-		<English>Barbary Pirates</English>
-		<French>Barbary Pirates</French>
+		<English>Barbary Pirate</English>
+		<French>Barbary Pirate</French>
 		<German>Barbarische Piraten</German>
-		<Italian>Pirati Berberi</Italian>
-		<Spanish>Barbary Pirates</Spanish>
-		<Russian>Barbary Pirates</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MERC_HIGHLANDER</Tag>
-		<English>Highlander</English>
-		<French>Highlander</French>
-		<German>Hochländer</German>
-		<Italian>Highlander</Italian>
-		<Spanish>Highlander</Spanish>
-		<Russian>Highlander</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MERC_WELSH</Tag>
-		<English>Welsh Longbowman</English>
-		<French>Welsh Longbowman</French>
-		<German>Walisischer Langbogenschütze</German>
-		<Italian>Arciere con Arco lungo Gallese</Italian>
-		<Spanish>Welsh Longbowman</Spanish>
-		<Russian>Welsh Longbowman</Russian>
+		<Italian>Pirata Berberi</Italian>
+		<Spanish>Barbary Pirate</Spanish>
+		<Russian>Barbary Pirate</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_TEMPLAR</Tag>
@@ -496,7 +455,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_GENERIC</Tag>
-		<English>Generic</English>
+		<English>Generic Mercenary</English>
 		<French>Generic</French>
 		<German>Allgemein</German>
 		<Italian>Generico</Italian>
