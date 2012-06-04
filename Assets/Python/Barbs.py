@@ -102,13 +102,13 @@ lValletta = [57,14,315,0] #1530 AD
 
 
 # Minor Nations sructure: [ int Province: all cities in this province will revolt
-#                           list nations: a city controlled by those players will not revolt (i.e. Greece wouldn't revolt against the Byz)
-#                           list religions: a city owned by someone with one of those state religions will not revolt (i.e. Jerusalem doesn't revolt against Muslims)
-#                           list revolt dates: the dates for the revolt,
-#                           list revolt strength: this is substracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
-#                           list units: corresponding to the revolt, if we crack down on the rebels, what barbarian units should spawn
-#                           list number: corresponding to the revolt, if we crack down on the rebels, how many units should spawn (note if we don't bribe the Lords, then double the number of Units will spawn)
-#                           list text keys: text keys for "The Nation" and "Nation Adjective"
+#                            list nations: a city controlled by those players will not revolt (i.e. Greece wouldn't revolt against the Byz)
+#                            list religions: a city owned by someone with one of those state religions will not revolt (i.e. Jerusalem doesn't revolt against Muslims)
+#                            list revolt dates: the dates for the revolt,
+#                            list revolt strength: this is substracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
+#                            list units: corresponding to the revolt, if we crack down on the rebels, what barbarian units should spawn
+#                            list number: corresponding to the revolt, if we crack down on the rebels, how many units should spawn (note if we don't bribe the Lords, then double the number of Units will spawn)
+#                            list text keys: text keys for "The Nation" and "Nation Adjective"
 # Note: lists 3, 4, 5, 6 should have the same size
 # Note: you should increase the size of 'lNextMinorRevolt' in StoredData to be at least the number of minor nations
 lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [xml.iAxeman,xml.iLongSwordsman], [1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ],
@@ -588,11 +588,11 @@ class Barbs:
                                 rndNum = gc.getGame().getSorenRandNum(len(plotList), 'Spawn units')
                                 result = plotList[rndNum]
                                 if (result):
-                                	#pPlayer = gc.getPlayer( iCiv )
-                                	#pPlayer.initUnit(iUnitType, result[0], result[1], UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                	#pPlayer.initUnit(xml.iGalley, result[0], result[1], UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                	self.makeUnit(iShipType, iCiv, result, iNumShips, 2, szName)
-                                	self.makeUnit(iFighterType, iCiv, result, iNumFighters, 1, szName)
+                                        #pPlayer = gc.getPlayer( iCiv )
+                                        #pPlayer.initUnit(iUnitType, result[0], result[1], UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                        #pPlayer.initUnit(xml.iGalley, result[0], result[1], UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                        self.makeUnit(iShipType, iCiv, result, iNumShips, 2, szName)
+                                        self.makeUnit(iFighterType, iCiv, result, iNumFighters, 1, szName)
 
 
         def killNeighbours(self, tCoords):

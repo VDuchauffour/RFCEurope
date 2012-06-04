@@ -2083,7 +2083,7 @@ class CvMainInterface:
                                         screen.show( "GPInfoButton" )
                                         screen.show( "GPInfoText" )
                                         iCount += 1
-                                else:	
+                                else:
                                         screen.hide( "GPInfoButton" )
                                         screen.hide( "GPInfoText" )
 
@@ -2119,7 +2119,8 @@ class CvMainInterface:
                                 if ( ePlayer == con.iBurgundy ):
                                         #iBurgundyCulture = utils.getBurgundyCulture()
                                         iBurgundyCulture = pPlayer.getUHVCounter( 1 )
-                                        if ( not CyInterface().isCityScreenUp() ):
+                                        #HHG: only display UHV counter as long as the UHV is undefined
+                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 1 ) == -1 ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2130,11 +2131,30 @@ class CvMainInterface:
                                         else:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
-                                                
+                                        
+                                #HHG: Lithuania culture goal added
+                                elif ( ePlayer == con.iLithuania ):
+                                        #iLithuaniaCulture = utils.getLithuaniaCulture()
+                                        iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
+                                        #HHG: only display UHV counter as long as the UHV is undefined
+                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 0 ) == -1 ):
+                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iLithuaniaCulture )
+                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.show("UHVButton")
+                                                screen.show("UHVText")
+                                                iCount += 1
+                                        else:
+                                                screen.hide( "UHVButton" )
+                                                screen.hide( "UHVText" )
+                                # HHG: end
+                                        
                                 elif ( ePlayer == con.iArabia ):
                                         #iIslamInfluence = utils.getArabianInfluence()
                                         iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
-                                        if ( not CyInterface().isCityScreenUp() ):
+                                        #HHG: only display UHV counter as long as the UHV is undefined
+                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_ISLAM",()) + (" (%i) " %iIslamInfluence )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2149,7 +2169,8 @@ class CvMainInterface:
                                 elif ( ePlayer == con.iNorse ):
                                         #iNorseRaized = utils.getNorseRazed()
                                         iNorseRaized = pPlayer.getUHVCounter( 2 )
-                                        if ( not CyInterface().isCityScreenUp() ):
+                                        #HHG: only display UHV counter as long as the UHV is undefined
+                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorseRaized )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2164,7 +2185,8 @@ class CvMainInterface:
                                 elif ( ePlayer == con.iKiev ):
                                         #iKievFood = utils.getKievFood()
                                         iKievFood = pPlayer.getUHVCounter( 0 )
-                                        if ( not CyInterface().isCityScreenUp() ):
+                                        #HHG: only display UHV counter as long as the UHV is undefined
+                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 0 ) == -1 ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)

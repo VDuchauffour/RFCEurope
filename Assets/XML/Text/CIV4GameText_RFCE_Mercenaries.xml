@@ -6,15 +6,6 @@
 <!-- Game Text - RFCE Mercenaries -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_MERCENARIES_PEDIA</Tag>
-		<English>[H1]Mercenaries[\H1][PARAGRAPH:2]Mercenaries are soldiers who fight primarily for private gain, usually with little regard for ideological, national, political, or moral considerations. However, when the term is used to refer to a soldier in a regular national army, it is usually considered an insult.[PARAGRAPH:2][PARAGRAPH:2]Mercenaries have seen regular deployment in battle since the time of Ancient Egypt and Carthage, up through the 16th century, including the famous Swiss Guard and the Landsknechts. In the game, Mercenaries can be hired only until the discovery of Nationalism, which changed the conception of armies and caused a rapid decline in Mercenary usage.[PARAGRAPH:2]</English>
-		<French>[H1]Mercenaires[\H1][PARAGRAPH:2]Les mercenaires sont des soldats qui se battent avant tout pour leur profit personnel, et n'ont que peu de consid&#233;rations id&#233;ologiques, territoriales, politiques ou morales. Lorsque ce terme est utilis&#233; pour un soldat d'une arm&#233;e r&#233;guli&#232;re, c'est en g&#233;n&#233;ral insultant.[PARAGRAPH:2][PARAGRAPH:2]Les mercenaires ont souvent &#233;t&#233; employ&#233;s depuis l'&#233;poque de l'Egypte ancienne et de Carthage, jusqu'au 16e si&#232;cle, avec les c&#233;l&#232;bres Gardes Suisses et les Lansquenets. Vous pouvez recruter des mercenaires jusqu'&#224; la d&#233;couverte du nationalisme, qui modifie la conception des arm&#233;es et entra&#238;ne un rapide d&#233;clin de l'utilisation des mercenaires.[PARAGRAPH:2]</French>
-		<German>[H1]S&#246;ldner[\H1][PARAGRAPH:2]S&#246;ldner sind K&#228;mpfer, die meist ohne jede R&#252;cksicht auf ideologische, patriotische, politische oder moralische &#220;berlegungen in erster Linie ihre pers&#246;nlichen Interessen verfolgen. Manchmal wird der Begriff auch als Bezeichnung f&#252;r Soldaten verwendet, die in einer regul&#228;ren nationalen Armee ihren Dienst verrichten, in diesem Fall ist er jedoch in aller Regel als Beleidigung zu verstehen.[PARAGRAPH:2][PARAGRAPH:2]Der Einsatz von S&#246;ldnern in der Schlacht war seit der Zeit des antiken &#196;gyptens und Karthagos bis ins 16. Jahrhundert, beispielsweise mit der Schweizergarde und den Landsknechten, weit verbreitet. Im Spiel k&#246;nnen S&#246;ldner bis zur Entdeckung des "Nationalismus" angeheuert werden, der das Prinzip des strukturellen Aufbaus einer Armee so stark ver&#228;nderte, dass er das Ende des S&#246;ldnertums einl&#228;utete.[PARAGRAPH:2]</German>
-		<Italian>[H1]Mercenari[\H1][PARAGRAPH:2]I mercenari sono soldati che combattono principalmente per un tornaconto privato, di solito senza considerazioni di ordine ideologico, nazionale, politico o morale. Per&#242; quando il termine viene utilizzato riferendosi a un soldato di un regolare esercito nazionale, &#232; considerato un insulto.[PARAGRAPH:2][PARAGRAPH:2]I mercenari sono stati impiegati in battaglia fin dai tempi dell'antico Egitto e di Cartagine fino al sedicesimo secolo, e tra l'altro includono i famosi Lanzichenecchi e la Guardia Svizzera. Nel gioco i mercenari possono essere assoldati solo fino alla scoperta del nazionalismo, che ha rivoluzionato la concezione degli eserciti e ha causato un rapido declino nell'utilizzo di truppe a pagamento.[PARAGRAPH:2]</Italian>
-		<Spanish>[H1]Mercenarios[\H1][PARAGRAPH:2]Los mercenarios son soldados a los que no les interesan las consideraciones ideol&#243;gicas, nacionales, pol&#237;ticas ni morales y que combaten fundamentalmente en busca de un beneficio propio. Sin embargo, cuando se utiliza este t&#233;rmino para referirse a un soldado de un ej&#233;rcito permanente, suele considerarse un insulto.[PARAGRAPH:2][PARAGRAPH:2]Los mercenarios han participado en guerras con regularidad desde la &#233;poca del antiguo Egipto y Cartago hasta el siglo XVI, como la famosa Guardia Suiza y los Lansquenetes. En el juego, solo se pueden contratar mercenarios hasta el descubrimiento del nacionalismo, que cambi&#243; la concepci&#243;n de los ej&#233;rcitos y provoc&#243; un r&#225;pido declive del empleo de mercenarios.[PARAGRAPH:2]</Spanish>
-		<Russian>[H1]Mercenaries[\H1][PARAGRAPH:2]Mercenaries are soldiers who fight primarily for private gain, usually with little regard for ideological, national, political, or moral considerations. However, when the term is used to refer to a soldier in a regular national army, it is usually considered an insult.[PARAGRAPH:2][PARAGRAPH:2]Mercenaries have seen regular deployment in battle since the time of Ancient Egypt and Carthage, up through the 16th century, including the famous Swiss Guard and the Landsknechts. In the game, Mercenaries can be hired only until the discovery of Nationalism, which changed the conception of armies and caused a rapid decline in Mercenary usage.[PARAGRAPH:2]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_SCREEN_TITLE</Tag>
 		<English>Mercenary Manager</English>
 		<French>Responsable des mercenaires</French>
@@ -173,31 +164,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>&#205;&#224;&#229;&#236;&#237;&#232;&#234;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_MERCENARIES</Tag>
-		<English>Mercenaries</English>
-		<French>
-			<Text>Mercenaires</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>S&#246;ldner</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Mercenari</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mercenarios</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Russian>&#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_DISABLED</Tag>
@@ -511,22 +477,22 @@
 		<Russian>Welsh Longbowman</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_KNIGHTS_TEMPLAR</Tag>
-		<English>Knights Templar</English>
-		<French>Knights Templar</French>
+		<Tag>TXT_KEY_MERC_TEMPLAR</Tag>
+		<English>Templar Knight</English>
+		<French>Chevalier Templier</French>
 		<German>Tempelritter</German>
 		<Italian>Cavaliere Templare</Italian>
-		<Spanish>Knights Templar</Spanish>
-		<Russian>Knights Templar</Russian>
+		<Spanish>Caballero Templario</Spanish>
+		<Russian>Templar Knight</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TEUTONIC_KNIGHTS</Tag>
-		<English>Teutonic Knights</English>
-		<French>Teutonic Knights</French>
-		<German>Ordensritter</German>
+		<Tag>TXT_KEY_MERC_TEUTONIC</Tag>
+		<English>Teutonic Knight</English>
+		<French>Chevalier Teutonique</French>
+		<German>Deutschordensritter</German>
 		<Italian>Cavaliere Teutonico</Italian>
-		<Spanish>Teutonic Knights</Spanish>
-		<Russian>Teutonic Knights</Russian>
+		<Spanish>Caballero Teut&#243;nico</Spanish>
+		<Russian>Teutonic Knight</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_GENERIC</Tag>

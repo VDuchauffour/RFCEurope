@@ -1191,11 +1191,19 @@ class RFCUtils:
 		pPlayer = gc.getPlayer(iOwner)
 		pUnit = pPlayer.getUnit(iUnitID)
 		
-		# chance to work: 50-75 based on piety
-		iChance = 50 + min(25, pPlayer.getFaith()/2)
+		# base chance to work: 60-90 based on faith:
+		iChance = 60 + min(30, pPlayer.getFaith()/3)
+		# lower chance for purging any religion from Jerusalem:
+		if (iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1]):
+			iChance = (iChance - 25)
+		# lower chance if the city has the chosen religion's buildings/wonders:
+		
 		if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
 			
 			iStateReligion = pPlayer.getStateReligion()
+			# sanity check - can only persecute with a state religion
+			if iStateReligion == -1:
+				return False
 			
 			# determine the target religion, if not supplied by the popup decision
 			if not iReligion:
@@ -1218,9 +1226,11 @@ class RFCUtils:
 				iLoot = iLoot*3/2
 			
 			# kill / expel some population
-			if city.getPopulation() > 14:
+			if city.getPopulation() > 18 and city.getReligionCount() < 2:
+				city.changePopulation(-4)
+			elif city.getPopulation() > 12 and city.getReligionCount() < 3:
 				city.changePopulation(-3)
-			elif city.getPopulation() > 9:
+			elif city.getPopulation() > 7 and city.getReligionCount() < 4:
 				city.changePopulation(-2)
 			elif city.getPopulation() > 3:
 				city.changePopulation(-1)
@@ -1262,7 +1272,7 @@ class RFCUtils:
 		return True
 
 #	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
-#	# 3Miro: religious purge
+#	# 3Miro: religious purge, removing all non-state religions from a city
 #		#if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
 #		#	return
 #		
