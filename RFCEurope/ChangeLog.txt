@@ -33,11 +33,23 @@ Changes for RFCE 1.1:
 		- First part of the inquisition updates: base code for chooseable religion on persecution
 		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
 		- Added special chars to the hungarian and german city names as a test
-		- Second part of the inquisition code (still not complete) - based on SoI, huge thanks to edead
-			chooseable religion works now for the human
-			persecution succeeds with a chance between 50% and 75%
-			small revolt after persecution
-			some of the population is killed/expelled if perseuction succeeds
+		- Second part of the inquisition code (still not complete) - most of it is based on SoI, huge thanks to edead
+			all persecutions now remove max one religion
+			chooseable religion for the human, with a popup on persecution if there are more than one target religions
+			holy cities cannot be persecuted from their holy religion
+			your state religion cannot be persecuted, and you can only persecute if you have a state religion
+			persecution has a base chance to succeed between 60% and 90%, based on your civ's faith
+				religious buildings of the target religion may lower this chance
+				religious wonders of the target religion seriously lower this chance
+				Jerusalem has a lower base chance on default
+			if persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
+			small revolt and unhappiness after both successful and unsuccessful persecution
+			some of the population is killed/expelled if persecution succeeds
+			gold loot from the killed/expelled population and the buildings destroyed
+			successful persecution increases your faith by one
+			interface message for the successful/unsuccessful persecution
+		- UHV counters (on the interface) are removed after the UHV goal is completed/failed
+		- Lithuania got a culture UHV counter
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -84,6 +96,7 @@ Changes for RFCE 1.1:
 		- Fixed small bug in stability counting when using Divine Monarchy and Paganism civics together - by HolyHandGrenade
 		- Removed the UHV check for the old Spanish 3rd UHV (conquer protestant cities). It was possible to trigger both 3rd UHVs!! - by lzd
 		- Fixed small python mistakes: on city name convertion, and on destroying barbarian improvements
+		- Fixed bug where some of the mercenaries couldn't appear
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

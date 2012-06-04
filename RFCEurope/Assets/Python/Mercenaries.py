@@ -84,12 +84,12 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iMusketman, "TXT_KEY_MERC_GENERIC", 300, 400, xml.lRegionBalkans, [], 20 ],
                 [xml.iMusketman, "TXT_KEY_MERC_GENERIC", 300, 400, xml.lRegionKiev, [], 20 ],
                 [xml.iMusketman, "TXT_KEY_MERC_GENERIC", 300, 400, xml.lRegionMiddleEast, [], 20 ],
-                [xml.iTemplar, "TXT_KEY_KNIGHTS_TEMPLAR", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-                [xml.iTemplar, "TXT_KEY_KNIGHTS_TEMPLAR", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-				[xml.iTemplar, "TXT_KEY_KNIGHTS_TEMPLAR", 170, 300, [xml.iP_Jerusalem], [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-                [xml.iTeutonic, "TXT_KEY_TEUTONIC_KNIGHTS", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-                [xml.iTeutonic, "TXT_KEY_TEUTONIC_KNIGHTS", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-				[xml.iTeutonic, "TXT_KEY_TEUTONIC_KNIGHTS", 170, 300, [xml.iP_Jerusalem], [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTemplar, "TXT_KEY_MERC_TEMPLAR", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTemplar, "TXT_KEY_MERC_TEMPLAR", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTemplar, "TXT_KEY_MERC_TEMPLAR", 170, 300, [xml.iP_Jerusalem], [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTeutonic, "TXT_KEY_MERC_TEUTONIC", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTeutonic, "TXT_KEY_MERC_TEUTONIC", 170, 300, xml.lRegionMiddleEast, [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iTeutonic, "TXT_KEY_MERC_TEUTONIC", 170, 300, [xml.iP_Jerusalem], [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism], 50 ],
                 [xml.iCondottieri, "TXT_KEY_MERC_ITALIAN", 217, 375, xml.lRegionItaly, [], 50 ],
                 [xml.iCondottieri, "TXT_KEY_MERC_ITALIAN", 217, 375, xml.lRegionItaly, [], 50 ],
                 [xml.iCondottieri, "TXT_KEY_MERC_ITALIAN", 217, 375, xml.lRegionItaly, [], 50 ],
@@ -146,17 +146,17 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 [xml.iTouareg, "TXT_KEY_MERC_AFRICAN", 50, 266, [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
                 [xml.iNubianLongbowman, "TXT_KEY_MERC_NUBIAN", 37, 150, [xml.iP_Egypt], [], 50 ],
                 [xml.iNubianLongbowman, "TXT_KEY_MERC_NUBIAN", 37, 150, [xml.iP_Egypt], [], 50 ],
-				[xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
-				[xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
-				[xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
-				[xml.iWelshLongbowman, "TXT_KEY_MERC_WELSH", 200, 350, [xml.iP_Wales], [], 50 ],
-				[xml.iWelshLongbowman, "TXT_KEY_MERC_WELSH", 200, 350, [xml.iP_Wales], [], 50 ],
-				[xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 120, 217, xml.lRegionAsiaMinor, [], 50 ],
-				[xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 120, 217, xml.lRegionAsiaMinor, [], 50 ],
-				[xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 120, 217, [xml.iP_Constantinople], [], 50 ],
-				[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-				[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
-				[xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Ifriqiya], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
+                [xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
+                [xml.iHighlander, "TXT_KEY_MERC_HIGHLANDER", 180, 370, [xml.iP_Scotland, xml.iP_Northumbria, xml.iP_TheIsles], [], 50 ],
+                [xml.iWelshLongbowman, "TXT_KEY_MERC_WELSH", 200, 350, [xml.iP_Wales], [], 50 ],
+                [xml.iWelshLongbowman, "TXT_KEY_MERC_WELSH", 200, 350, [xml.iP_Wales], [], 50 ],
+                [xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 120, 217, xml.lRegionAsiaMinor, [], 50 ],
+                [xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 120, 217, xml.lRegionAsiaMinor, [], 50 ],
+                [xml.iTagmata, "TXT_KEY_MERC_TAGMATA", 120, 217, [xml.iP_Constantinople], [], 50 ],
+                [xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
+                [xml.iCorsair, "TXT_KEY_MERC_CORSAIR", 260, 450, [xml.iP_Ifriqiya], [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism], 50 ],
                 ]
 
 ### A few Parameters for Mercs only:
@@ -209,7 +209,7 @@ class MercenaryManager:
                 self.lGlobalPool = []
                 self.lHiredBy = []
                 self.GMU = GlobalMercenaryUtils()
-		pass
+                pass
 
         def getMercLists(self):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
@@ -565,7 +565,7 @@ class MercenaryManager:
                                 if ( iFireRand < 0 ):
                                         self.GMU.fireMerc( lMercs[iI] )
                                         return
-                                        
+
         def HireMercAI( self, pPlayer ):
                 # decide which merc to hire
                 lCanHireMercs = []
@@ -580,25 +580,25 @@ class MercenaryManager:
                         #if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and len( sPlayerProvinces & sMercProvinces ) > 0 ):
                         if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and (lMerc[4] in lPlayerProvinces) ):
                               lCanHireMercs.append( lMerc )
-                              
+
                 if ( len( lCanHireMercs ) > 0 ):
                         iRandomMerc = gc.getGame().getSorenRandNum(len( lCanHireMercs ), 'random merc to hire')
-                        
+
                         self.GMU.hireMerc( lCanHireMercs[iRandomMerc], pPlayer.getID() )
                         self.getMercLists()
-                        
+
         def getNumDefendersAtPlot( self, pPlot ):
-		iOwner = pPlot.getOwner()
-		if ( iOwner < 0 ):
-			return 0
-		iNumUnits = pPlot.getNumUnits()
-		iDefenders = 0
-		for i in range( iNumUnits ):
-			if ( pPlot.getUnit(i).getOwner() == iOwner ):
-				iDefenders += 1
-		return iDefenders
-                
-                
+                iOwner = pPlot.getOwner()
+                if ( iOwner < 0 ):
+                        return 0
+                iNumUnits = pPlot.getNumUnits()
+                iDefenders = 0
+                for i in range( iNumUnits ):
+                        if ( pPlot.getUnit(i).getOwner() == iOwner ):
+                                iDefenders += 1
+                return iDefenders
+
+
 class GlobalMercenaryUtils:
         # the idea of this class is to provide ways to manipulate the mercenaries without the need to make a separate instance of the MercenaryManager
         # the MercManager provides event driven functions and those should be called from the event interface
@@ -760,7 +760,3 @@ class GlobalMercenaryUtils:
                 pMerc.kill( 0, -1 )
                 
                 
-                
-                
-                
-        

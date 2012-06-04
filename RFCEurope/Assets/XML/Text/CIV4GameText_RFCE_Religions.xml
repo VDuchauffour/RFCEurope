@@ -384,14 +384,14 @@
 		<Tag>TXT_KEY_FAITH_SAINT</Tag>
 		<English>Write a Great work of Theology to strengthen the Faith of your nation.</English>
 		<French>Write a Great work of Theology to strengthen the Faith of your nation.</French>
-		<German>Verfasst eine Groﬂes theologisches Werk zur St‰rkung des Glaubens innerhalb Eurer Nation.</German>
+		<German>Verfasst eine Groﬂes Theologisches Werk zur St‰rkung des Glaubens innerhalb eurer Nation.</German>
 		<Italian>Scrivi un grande trattato di Teologia per rafforzare la Fede nella tua nazione.</Italian>
 		<Spanish>Write a Great work of Theology to strengthen the Faith of your nation.</Spanish>
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_INQUISITION</Tag>
-		<English>Yeaaaah</English>
+		<English>Your inquisitor has successfully purged %s2_religion from %s1_city and confiscated %d3_gold[ICON_GOLD] from the victims.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -400,7 +400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_INQUISITION_FAIL</Tag>
-		<English>Noooooooooo</English>
+		<English>Your inquisitor in %s1_city was unsuccessful.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

@@ -108,7 +108,7 @@
 		<Tag>TXT_KEY_CRUSADE_DECIDE_WEALTH</Tag>
 		<English>Take over the Crusade, for it is wealth that moves the world and profit that rules it.</English>
 		<French>Prendre en charge la croisade, c'est la richesse qui meut le monde et sans but lucratif qui la dirige.</French>
-		<German>&#220;bernehmt die Kontrolle &#252;ber den Kreuzug, denn Reichtum bewegt die Welt und Profit regiert sie.</German>
+		<German>&#220;bernehmt die Kontrolle des Kreuzuges, denn Reichtum bewegt die Welt und Profit regiert sie.</German>
 		<Italian>Prendi il comando della Crociata, è il denaro che muove il mondo ed il profitto che lo governa.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#209;&#238;&#227;&#235;&#224;&#241;&#232;&#242;&#229;&#241;&#252; &#226;&#231;&#255;&#242;&#252; &#237;&#224; &#241;&#229;&#225;&#255; &#243;&#239;&#240;&#224;&#226;&#235;&#229;&#237;&#232;&#229; &#202;&#240;&#229;&#241;&#242;&#238;&#226;&#251;&#236; &#207;&#238;&#245;&#238;&#228;&#238;&#236;, &#232;&#225;&#238; &#253;&#242;&#238; - &#225;&#238;&#227;&#224;&#242;&#241;&#242;&#226;&#238;, &#234;&#238;&#242;&#238;&#240;&#238;&#229; &#232;&#231;&#236;&#229;&#237;&#255;&#229;&#242; &#236;&#232;&#240; &#232; &#228;&#238;&#245;&#238;&#228;, &#234;&#238;&#242;&#238;&#240;&#251;&#233; &#232;&#236; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#229;&#242;.</Russian>
@@ -234,7 +234,7 @@
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE</Tag>
 		<English>The Pope has called for a Crusade to aid </English>
 		<French>Le Pape a appel&#233; pour la Croisade en aide &#224; </French>
-		<German>Der Papst hat einen Kreuzzug ausgerufen zur Hilfe von</German>
+		<German>Der Papst ruft einen Kreuzzug aus zur Hilfe von</German>
 		<Italian>Il Papa ha richiesto una Crociata per aiutare</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
