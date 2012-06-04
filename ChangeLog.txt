@@ -65,6 +65,7 @@ Changes for RFCE 1.1:
 		- New XML name tag for the 6th language
 		- Minor diplotext fixes
 		- Various updates in the wording of the UP texts
+		- Changes in mercenary naming
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
