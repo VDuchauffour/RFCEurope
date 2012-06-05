@@ -275,19 +275,28 @@ class MercenaryManager:
                         iIterations += 1
                 
                 (iPurchaseCost, iUpkeepCost) = self.GMU.getCost( iMerc, lPromotions )
-                iCurrentProvince = lMercInfo[4][gc.getGame().getSorenRandNum( len(lMercInfo[4]), 'available prvonce') ]
+                iCurrentProvince = lMercInfo[4][gc.getGame().getSorenRandNum( len(lMercInfo[4]), 'available province') ]
                 
-                #### DEBUG - start
-                #if ( iMerc == 12 or iMerc == 76 ):
-                #        iCurrentProvince = xml.iP_Denmark
-                #### DEBUG - end
-                
+                # 3Miro: message for the human player
+                # Absinthe: different message if the player doesn't have enough culture in the province
                 iHuman = gc.getGame().getActivePlayer()
+                ProvMessage = False
                 if ( gc.getPlayer( iHuman ).getProvinceCityCount( iCurrentProvince ) > 0 ):
-                        szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
-                        szCurrentProvince = CyTranslator().getText(szProvName,())
-                        CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince, "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
-                
+                        apCityList = PyPlayer(iHuman).getCityList()
+                        for pCity in apCityList:
+                                city = pCity.GetCy()
+                                if ( city.getProvince() == iCurrentProvince ):
+                                        if (city.getCultureLevel() >= 2):
+                                                szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
+                                                szCurrentProvince = CyTranslator().getText(szProvName,())
+                                                CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince, "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+                                                ProvMessage = True
+                                                break
+                        if (not ProvMessage):
+                                szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
+                                szCurrentProvince = CyTranslator().getText(szProvName,())
+                                CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_CULTURE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+
                 # add the merc, keep the merc index, costs and promotions
                 self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
                 #print(" 3Miro Added Merc: ",[iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince])
@@ -713,7 +722,7 @@ class GlobalMercenaryUtils:
                 pPlayer.setGold( pPlayer.getGold() - iCost )
                 pPlayer.setPicklefreeParameter( iMercCostPerTurn, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + iUpkeep )
                 
-                # remove the merc from the golbal pool and set the "hired by" index
+                # remove the merc from the global pool and set the "hired by" index
                 lGlobalPool.remove( lMerc )
                 lHiredByList[lMerc[0]] = iPlayer
                 

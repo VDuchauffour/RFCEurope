@@ -75,7 +75,7 @@ class CvMercenaryManager:
 		self.iScreenId = iScreenId
 		
 		# When populated this dictionary will contain the information needed to build
-		# the widgets for the current screen resolution.		
+		# the widgets for the current screen resolution.
 		self.screenWidgetData = {}
 	
 		self.nWidgetCount = 0
@@ -87,7 +87,7 @@ class CvMercenaryManager:
 		global g_bDelayUnitReturn
 		global g_bRequireCityUnitContractCreation
 		
-	# Returns the instance of the mercenary manager screen.						
+	# Returns the instance of the mercenary manager screen.
 	def getScreen(self):
 		return CyGInterfaceScreen(self.MERCENARY_MANAGER_SCREEN_NAME, self.iScreenId)
 
@@ -98,7 +98,7 @@ class CvMercenaryManager:
 		screen.hideScreen()
 
 
-	# Returns true if the screen is active, false otherwise.	
+	# Returns true if the screen is active, false otherwise.
 	def isActive(self):
 		return self.getScreen().isActive()
 
@@ -128,18 +128,19 @@ class CvMercenaryManager:
 			self.drawMercenaryScreenContent(screen)
 		
 
-	# Populates the panel that shows all of the available mercenaries in the
-	# global mercenary pool.
-	def populateAvailableMercenariesPanel(self, screen):
+        # Populates the panel that shows all of the available mercenaries in the
+        # global mercenary pool.
+        def populateAvailableMercenariesPanel(self, screen):
                 ## 3Miro: draw the available merc info
                 # read in the available mercs
                 lAvailableMercs = GMU.getMercGlobalPool()
                 print(lAvailableMercs)
                 
-                ## Get the ID for the current active player
-		iPlayer = gc.getGame().getActivePlayer()
+                # Get the ID for the current active player
+                iPlayer = gc.getGame().getActivePlayer()
+                # Get the actual current player object
                 pPlayer = gc.getPlayer(iPlayer)
-                
+                # Get the player's current gold amount
                 iGold = pPlayer.getGold()
                 
                 # get a list of the provinces controlled by the player
@@ -184,23 +185,28 @@ class CvMercenaryManager:
                         strHCost = u"%d%c" %(iHireCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
                         strMCost = u"%1.2f%c" %(0.01*iUpkeepCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
                         
-                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(len(lMerc[1]) ))			
-			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
+                        # Absinthe: Add the province name
+                        sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
+                        sProvName = localText.getText(sProvName,())
+                        
+                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(len(lMerc[1]) ))
+                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
+                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text5", "     Province: " + sProvName)
                         
                         if ( iGold - iHireCost >= 0 ):
-				screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HireButton", "Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )        
+                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
+                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HireButton", "Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
                         
                         mercenaryCount = mercenaryCount + 1
 
-		# Add the padding to the available mercenaries panel to improve the look of the screen
-		if((4-mercenaryCount)>0):
+                # Add the padding to the available mercenaries panel to improve the look of the screen
+                if((4-mercenaryCount)>0):
 
-			for i in range(4-mercenaryCount):
-				screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+                        for i in range(4-mercenaryCount):
+                                screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                                screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+                                screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+                                screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
                                 
         def clearAvailableMercs( self, screen ):
                 
@@ -213,8 +219,8 @@ class CvMercenaryManager:
                         screen.deleteWidget( "dummyPanelHire"+str(iI) )
 
 
-	# Populates the panel that shows all of the players hired mercenaries
-	def populateHiredMercenariesPanel(self, screen):
+        # Populates the panel that shows all of the players hired mercenaries
+        def populateHiredMercenariesPanel(self, screen):
                 ## 3Miro: draw the hired merc info
 
                 iPlayer = gc.getGame().getActivePlayer()
@@ -252,17 +258,17 @@ class CvMercenaryManager:
                                 
                                 screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FindButton", "Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
 
-				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FireButton", "Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FireButton", "Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
                                 
                                 mercenaryCount = mercenaryCount + 1
 
-		# Add the padding to the hired mercenaries panel to improve the look of the screen
-		if((4-mercenaryCount)>0):
-			for i in range(4-mercenaryCount):
-				screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, "dummyPanelFire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
+                # Add the padding to the hired mercenaries panel to improve the look of the screen
+                if((4-mercenaryCount)>0):
+                        for i in range(4-mercenaryCount):
+                                screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, "dummyPanelFire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+                                screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
+                                screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
+                                screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
                                 
         def clearHiredMercs( self, screen ):
                 iPlayer = gc.getGame().getActivePlayer()
@@ -278,7 +284,7 @@ class CvMercenaryManager:
                 for iI in range( 4 ):
                         screen.deleteWidget( "dummyPanelFire"+str(iI) )
 
-				
+
 	# Clears out the unit information panel contents
 	def clearUnitInformation(self, screen):
 		screen.deleteWidget(UNIT_INFORMATION_PROMOTION_PANEL_ID)
@@ -342,31 +348,26 @@ class CvMercenaryManager:
                 
                 screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Maint. Cost: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-		screen.attachMultiListControlGFC(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
+                screen.attachMultiListControlGFC(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
 
-		# Add all of the promotions the mercenary has.
-		for iPromotion in lMerc[1]:
+                # Add all of the promotions the mercenary has.
+                for iPromotion in lMerc[1]:
                         pPromotionInfo = gc.getPromotionInfo(iPromotion)
-			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
-			
-		screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
+                        screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
+
+                screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
                 
                 # 3Miro: Add the provinces
                 pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
                 szProvinces = localText.getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES",())
-                #for iProv in lMercList[iMerc][4]:
-                #        if ( pPlayer.getProvinceCityCount( iProv ) > 0 ):
-                #                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
-                #                sProvName = localText.getText(sProvName,())
-                #                szProvinces = szProvinces + u"<color=0,255,0>%s</color>" %(sProvName) + "  "
                 if ( lMerc[4] > -1 ):
                         sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
                         sProvName = localText.getText(sProvName,())
-                        szProvinces = szProvinces + u"<color=0,255,0>%s</color>" %(sProvName)
+                        szProvinces = szProvinces + " " + u"<color=0,255,0>%s</color>" %(sProvName)
                 else:
                         szProvinces = ""
                         
-                screen.addMultilineText(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT", szProvinces, 500, 500, 500, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                screen.addMultilineText(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT", szProvinces, (self.screenWidgetData[MERCENARY_INFORMATION_PANEL_X] + 20), 500, 500, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 	
 	# Draws the gold information in the "Mercenary Manager" screens
@@ -500,17 +501,17 @@ class CvMercenaryManager:
 		
 		return strGoldText + strDelta
 
-	# Hires a mercenary for a player
-	def hireMercenary(self, screen, iMerc):
+        # Hires a mercenary for a player
+        def hireMercenary(self, screen, iMerc):
 
-		# Get the active player ID
-		iPlayer = gc.getGame().getActivePlayer()
+                # Get the active player ID
+                iPlayer = gc.getGame().getActivePlayer()
 
-		# Delete the UI representation of the unit from the available mercenaries
-		# panel
+                # Delete the UI representation of the unit from the available mercenaries
+                # panel
                 # 3Miro: get the Unique internal name
                 szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
-		#screen.deleteWidget(szUniqueInternalName)
+                #screen.deleteWidget(szUniqueInternalName)
                 
                 lGlobalMercPool = GMU.getMercGlobalPool()
                 
@@ -519,9 +520,9 @@ class CvMercenaryManager:
                                 lMerc = lGlobalMercPool[iI]
                                 
                 GMU.hireMerc( lMerc, iPlayer )
-				
-		# Draw the gold information for the screen
-		self.drawGoldInformation(screen)
+
+                # Draw the gold information for the screen
+                self.drawGoldInformation(screen)
                 
                 #3Miro: update hired mercs
                 self.clearAvailableMercs(screen)
@@ -530,11 +531,11 @@ class CvMercenaryManager:
                 self.populateAvailableMercenariesPanel(screen)
                 self.populateHiredMercenariesPanel(screen)
 
-		# Clear the information in the mercenary information panel
-		self.clearMercenaryInformation(screen)
+                # Clear the information in the mercenary information panel
+                self.clearMercenaryInformation(screen)
 
-	# Fire the mercenary from the player										
-	def fireMercenary(self, screen, iMerc):
+        # Fire the mercenary from the player
+        def fireMercenary(self, screen, iMerc):
                 
                 iPlayer = gc.getGame().getActivePlayer()
                 unitList = PyPlayer( iPlayer ).getUnitList()
@@ -545,9 +546,9 @@ class CvMercenaryManager:
                                 GMU.fireMerc( pUnit )
                                 screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
                                 break
-		
-		# Draw the gold information for the screen
-		self.drawGoldInformation(screen)		
+
+                # Draw the gold information for the screen
+                self.drawGoldInformation(screen)
                 
                 #3Miro: redraw merc information
                 self.clearAvailableMercs(screen)
@@ -555,20 +556,20 @@ class CvMercenaryManager:
                 
                 self.populateAvailableMercenariesPanel(screen)
                 self.populateHiredMercenariesPanel(screen)
-		
-		# Clear the information in the mercenary information panel
-		self.clearMercenaryInformation(screen)
-				
-	
-	# Handles the input to the mercenary manager screens
-	def handleInput (self, inputClass):
 
-		# Get the instance of the screen
-		screen = self.getScreen()
+                # Clear the information in the mercenary information panel
+                self.clearMercenaryInformation(screen)
 
-		# Debug code - start
-		if(g_bDebug):
-			screen.setText( "TopPanelDebugMsg", "TopPanel", inputClass.getFunctionName()
+
+        # Handles the input to the mercenary manager screens
+        def handleInput (self, inputClass):
+
+                # Get the instance of the screen
+                screen = self.getScreen()
+
+                # Debug code - start
+                if(g_bDebug):
+                        screen.setText( "TopPanelDebugMsg", "TopPanel", inputClass.getFunctionName()
 						, CvUtil.FONT_RIGHT_JUSTIFY, 1010, 20, -10, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		# Debug code - end
 		
@@ -793,7 +794,7 @@ class CvMercenaryManager:
 		# Available mercenaries panel information
 		self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_X] = self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_Y] = self.screenWidgetData[SCREEN_TITLE_PANEL_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
-		self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_WIDTH] = 450
+		self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_WIDTH] = 530
 		self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_HEIGHT] = (self.screenWidgetData[SCREEN_HEIGHT] - ((self.screenWidgetData[BORDER_WIDTH]*3) + self.screenWidgetData[SCREEN_TITLE_PANEL_HEIGHT] + self.screenWidgetData[BOTTOM_PANEL_HEIGHT]))/2
 		self.screenWidgetData[AVAILABLE_MERCENARIES_INNER_PANEL_X] = self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_X] + (4*self.screenWidgetData[BORDER_WIDTH])
 		self.screenWidgetData[AVAILABLE_MERCENARIES_INNER_PANEL_Y] = self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_Y] + (10*self.screenWidgetData[BORDER_WIDTH])
@@ -805,13 +806,13 @@ class CvMercenaryManager:
 		self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
 		self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_PANEL] = "<font=3b>" + localText.getText("TXT_KEY_AVAILABLE_MERCENARIES", ()) + "</font>"
 		self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_PANEL_X] = self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_X] + (self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_WIDTH]/2)
-		self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_PANEL_Y] = self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_Y] + 4		
+		self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_PANEL_Y] = self.screenWidgetData[AVAILABLE_MERCENARIES_TEXT_BACKGROUND_PANEL_Y] + 4
 		
 		
 		# Hired mercenaries panel information
 		self.screenWidgetData[HIRED_MERCENARIES_PANEL_X] = self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[HIRED_MERCENARIES_PANEL_Y] = self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_Y] + self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
-		self.screenWidgetData[HIRED_MERCENARIES_PANEL_WIDTH] = 450
+		self.screenWidgetData[HIRED_MERCENARIES_PANEL_WIDTH] = 530
 		self.screenWidgetData[HIRED_MERCENARIES_PANEL_HEIGHT] = (self.screenWidgetData[SCREEN_HEIGHT] - ((self.screenWidgetData[BORDER_WIDTH]*3) + self.screenWidgetData[SCREEN_TITLE_PANEL_HEIGHT] + self.screenWidgetData[BOTTOM_PANEL_HEIGHT]))/2
 		self.screenWidgetData[HIRED_MERCENARIES_INNER_PANEL_X] = self.screenWidgetData[HIRED_MERCENARIES_PANEL_X] + (4*self.screenWidgetData[BORDER_WIDTH])
 		self.screenWidgetData[HIRED_MERCENARIES_INNER_PANEL_Y] = self.screenWidgetData[HIRED_MERCENARIES_PANEL_Y] + (10*self.screenWidgetData[BORDER_WIDTH])
@@ -849,7 +850,7 @@ class CvMercenaryManager:
 		
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X] = self.screenWidgetData[MERCENARY_INFORMATION_TEXT_BACKGROUND_PANEL_X]
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_Y] = self.screenWidgetData[MERCENARY_ANIMATION_Y] + self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
-		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_WIDTH] = self.screenWidgetData[MERCENARY_INFORMATION_PANEL_WIDTH] - (self.screenWidgetData[BORDER_WIDTH]*18)
+		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_WIDTH] = self.screenWidgetData[MERCENARY_INFORMATION_PANEL_WIDTH] - (self.screenWidgetData[BORDER_WIDTH]*6)
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_HEIGHT] = 128 + (self.screenWidgetData[BORDER_WIDTH]*9)
 
 		self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_X] = self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X] + self.screenWidgetData[BORDER_WIDTH]
@@ -878,10 +879,10 @@ class CvMercenaryManager:
 		self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
 		self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL] = "<font=3b>" + localText.getText("TXT_KEY_UNITS_CONTRACTED_OUT", ()) + "</font>"
 		self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL_X] = self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_X] + (self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_WIDTH]/2)
-		self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL_Y] = self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_Y] + 4		
+		self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_PANEL_Y] = self.screenWidgetData[UNITS_CONTRACTED_OUT_TEXT_BACKGROUND_PANEL_Y] + 4
 
 		
-		# Hired mercenaries panel information
+		# Available units panel information
 		self.screenWidgetData[AVAILABLE_UNITS_PANEL_X] = self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[AVAILABLE_UNITS_PANEL_Y] = self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_Y] + self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[AVAILABLE_UNITS_PANEL_WIDTH] = 450
@@ -898,7 +899,7 @@ class CvMercenaryManager:
 		self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL_X] = self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_X] + (self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_WIDTH]/2)
 		self.screenWidgetData[AVAILABLE_UNITS_TEXT_PANEL_Y] = self.screenWidgetData[AVAILABLE_UNITS_TEXT_BACKGROUND_PANEL_Y] + 4
 		
-				
+		
 		# Unit information panel information
 		self.screenWidgetData[UNIT_INFORMATION_PANEL_X] = self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_X] + self.screenWidgetData[UNITS_CONTRACTED_OUT_PANEL_WIDTH] + self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[UNIT_INFORMATION_PANEL_Y] = self.screenWidgetData[SCREEN_TITLE_PANEL_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
@@ -936,7 +937,7 @@ class CvMercenaryManager:
 		self.screenWidgetData[UNIT_INFORMATION_DETAILS_PANEL_HEIGHT] = self.screenWidgetData[UNIT_ANIMATION_HEIGHT]
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X] = self.screenWidgetData[MERCENARY_INFORMATION_TEXT_BACKGROUND_PANEL_X]
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_Y] = self.screenWidgetData[MERCENARY_ANIMATION_Y] + self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
-		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_WIDTH] = self.screenWidgetData[MERCENARY_INFORMATION_PANEL_WIDTH] - (self.screenWidgetData[BORDER_WIDTH]*18)
+		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_WIDTH] = self.screenWidgetData[MERCENARY_INFORMATION_PANEL_WIDTH] - (self.screenWidgetData[BORDER_WIDTH]*6)
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_HEIGHT] = 128 + (self.screenWidgetData[BORDER_WIDTH]*9)
 
 		self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_X] = self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X] + self.screenWidgetData[BORDER_WIDTH]
@@ -948,6 +949,8 @@ class CvMercenaryManager:
 		self.screenWidgetData[MERCENARY_INFORMATION_DETAILS_PANEL_Y] = self.screenWidgetData[MERCENARY_ANIMATION_Y]
 		self.screenWidgetData[MERCENARY_INFORMATION_DETAILS_PANEL_WIDTH] = self.screenWidgetData[SCREEN_WIDTH] - (self.screenWidgetData[MERCENARY_ANIMATION_X] + self.screenWidgetData[MERCENARY_ANIMATION_WIDTH] + (self.screenWidgetData[BORDER_WIDTH])*6)
 		self.screenWidgetData[MERCENARY_INFORMATION_DETAILS_PANEL_HEIGHT] = self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT]
+		
+		
 		# Available mercenary groups panel information
 		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_PANEL_X] = self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_PANEL_Y] = self.screenWidgetData[SCREEN_TITLE_PANEL_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
@@ -963,7 +966,7 @@ class CvMercenaryManager:
 		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_HEIGHT] = 30
 		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL] = "<font=3b>" + localText.getText("TXT_KEY_AVAILABLE_MERCENARY_GROUPS", ()) + "</font>"
 		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_X] = self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_X] + (self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_WIDTH]/2)
-		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_Y] = self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_Y] + 4		
+		self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_PANEL_Y] = self.screenWidgetData[AVAILABLE_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_Y] + 4
 		
 		
 		# Hired mercenary groups panel information
@@ -982,7 +985,8 @@ class CvMercenaryManager:
 		self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL] = "<font=3b>" + localText.getText("TXT_KEY_HIRED_MERCENARY_GROUPS", ()) + "</font>"
 		self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL_X] = self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_X] + (self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_WIDTH]/2)
 		self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_PANEL_Y] = self.screenWidgetData[HIRED_MERCENARY_GROUPS_TEXT_BACKGROUND_PANEL_Y] + 4
-
+		
+		
 		# Mercenary groups information panel information
 		self.screenWidgetData[MERCENARY_GROUP_INFORMATION_PANEL_X] = self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_X] + self.screenWidgetData[AVAILABLE_MERCENARIES_PANEL_WIDTH] + self.screenWidgetData[BORDER_WIDTH]
 		self.screenWidgetData[MERCENARY_GROUP_INFORMATION_PANEL_Y] = self.screenWidgetData[SCREEN_TITLE_PANEL_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]
