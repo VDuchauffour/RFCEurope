@@ -50,6 +50,7 @@ Changes for RFCE 1.1:
 			interface message for the successful/unsuccessful persecution
 		- UHV counters (on the interface) are removed after the UHV goal is completed/failed
 		- Lithuania got a culture UHV counter
+		- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -97,7 +98,7 @@ Changes for RFCE 1.1:
 		- Fixed small bug in stability counting when using Divine Monarchy and Paganism civics together - by HolyHandGrenade
 		- Removed the UHV check for the old Spanish 3rd UHV (conquer protestant cities). It was possible to trigger both 3rd UHVs!! - by lzd
 		- Fixed small python mistakes: on city name convertion, and on destroying barbarian improvements
-		- Fixed bug where some of the mercenaries couldn't appear
+		- Fixed 2 different bugs with mercenary appearance/mercenary hiring. No more unhireable Welsh Longbowman for example
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

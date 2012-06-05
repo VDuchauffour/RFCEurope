@@ -176,12 +176,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCES</Tag>
-		<English>Available in Provinces: </English>
-		<French>Available in Provinces: </French>
-		<German>Verfügbar in den Provinzen: </German>
-		<Italian>Disponibili nelle seguenti Province: </Italian>
-		<Spanish>Available in Provinces: </Spanish>
-		<Russian>Available in Provinces: </Russian>
+		<English>Available in the following Province(s):</English>
+		<French>Available in the following Province(s):</French>
+		<German>Verfügbar in den Provinzen:</German>
+		<Italian>Disponibili nelle seguenti Province:</Italian>
+		<Spanish>Available in the following Province(s):</Spanish>
+		<Russian>Available in the following Province(s):</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
@@ -191,6 +191,15 @@
 		<Italian>Nuovi Mercenari sono disponibili per essere assoldati in</Italian>
 		<Spanish>New Mercenaries are available for hire in</Spanish>
 		<Russian>New Mercenaries are available for hire in</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_NEW_MERC_CULTURE</Tag>
+		<English>, but only if you develop a base culture level in the province!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>

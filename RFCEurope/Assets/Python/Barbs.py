@@ -634,7 +634,7 @@ class Barbs:
                         lNextMinorRevolt[iNationIndex] = iNextRevolt
                 
                 self.setRevolDates( lNextMinorRevolt )
-                        
+
 
         def doMinorNations( self, iGameTurn ):
                 lNextMinorRevolt = self.getRevolDates()
