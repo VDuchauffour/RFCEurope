@@ -44,7 +44,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>,Art/Interface/Buttons/Buildings/Seminary.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,7,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,7,16</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo> <!-- "Prereq" for House of Wisdom and Protestant Church School -->
 			<Type>SPECIALBUILDING_SCHOOL</Type>
@@ -54,7 +54,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>,Art/Interface/Buttons/Buildings/School.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,6,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,6,16</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo> <!-- Minaret also counts as a Chapel -->
 			<Type>SPECIALBUILDING_CHAPEL</Type>
@@ -64,7 +64,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>,Art/Interface/Buttons/Buildings/belfry.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,2,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,2,12</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_RELIQUARY</Type>
@@ -74,7 +74,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>,Art/Interface/Buttons/Buildings/Reliquary.dds,Art/Interface/Buttons/RFCE_Atlas2.dds,5,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,5,16</Button>
 		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>
 </Civ4SpecialBuildingInfos>

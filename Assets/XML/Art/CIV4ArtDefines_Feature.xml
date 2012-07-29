@@ -14,7 +14,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Ice.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,4,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,4,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -126,7 +126,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Jungle.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,5,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,5,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -203,7 +203,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -280,7 +280,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Oasis.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,6,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -301,7 +301,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/FloodPlains.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,2,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,2,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -322,7 +322,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -466,7 +466,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Fallout.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,1,3</Button>
+			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,1,3</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -487,7 +487,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.25</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -497,7 +497,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,Art/Interface/Buttons/BaseTerrain/marsh.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</VarietyButton>
+				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
@@ -508,7 +508,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,Art/Interface/Buttons/Terrain/button_palm_forest.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -574,7 +574,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,Art/Interface/Buttons/Terrain/button_palm_forest.dds,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</VarietyButton>
+				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 	</FeatureArtInfos>

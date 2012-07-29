@@ -8,7 +8,7 @@
 	<LeaderheadArtInfos>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_BARBARIAN</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Mongol_Genghis.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,12</Button>
+			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,12</Button>
 			<NIF>art/LeaderHeads/Sid/sid.nif</NIF>
 			<KFM>art/LeaderHeads/Sid/sid.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Sid/sid_noshader.nif</NoShaderNIF>
@@ -72,7 +72,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_CHARLEMAGNE</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Mongol_Genghis.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,1</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,1</Button>
 			<NIF>art/LeaderHeads/Charlemagne/Charlemagne.nif</NIF>
 			<KFM>art/LeaderHeads/Charlemagne/Charlemagne.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Charlemagne/Charlemagne_NONSHADER.nif</NoShaderNIF>
@@ -120,7 +120,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_MEHMED</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_America_Washington.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,8</Button>
+			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,8</Button>
 			<NIF>art/LeaderHeads/MehmedII/mehmed.nif</NIF>
 			<KFM>art/LeaderHeads/MehmedII/mehmed.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/MehmedII/mehmed_noshader.nif</NoShaderNIF>
@@ -128,7 +128,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_SALADIN</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Arabia_Saladin.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,11</Button>
+			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,11</Button>
 			<NIF>art/LeaderHeads/Saladin/saladin.nif</NIF>
 			<KFM>art/LeaderHeads/Saladin/saladin.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Saladin/saladin_noshader.nif</NoShaderNIF>
@@ -160,7 +160,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JUSTINIAN</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_America_Washington.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,1</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,1</Button>
 			<NIF>art/LeaderHeads/Justinian/Justinian.nif</NIF>
 			<KFM>art/LeaderHeads/Justinian/Justinian.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Justinian/Justinian_NONSHADER.nif</NoShaderNIF>
@@ -176,7 +176,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_WILLEM_VAN_ORANJE</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_America_Washington.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,7,2</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,7,2</Button>
 			<NIF>art/LeaderHeads/Willem van Oranje/Willem van Oranje.nif</NIF>
 			<KFM>art/LeaderHeads/Willem van Oranje/Willem van Oranje.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Willem van Oranje/Willem_van_Oranje_NONSHADER.nif</NoShaderNIF>
@@ -184,7 +184,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_ELIZABETH</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_England_ElizabethI.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,10</Button>
+			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,10</Button>
 			<NIF>art/LeaderHeads/Elizabeth/elizabeth.nif</NIF>
 			<KFM>art/LeaderHeads/Elizabeth/elizabeth.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Elizabeth/elizabeth_noshader.nif</NoShaderNIF>
@@ -192,7 +192,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_LOUIS_XIV</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_France_LouisXIV.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,11</Button>
+			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,11</Button>
 			<NIF>art/LeaderHeads/Louis_XIV/louis_xiv.nif</NIF>
 			<KFM>art/LeaderHeads/Louis_XIV/louis_xiv.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Louis_XIV/louis_xiv_noshader.nif</NoShaderNIF>
@@ -208,7 +208,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_FREDERICK</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Germany_Frederick.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,11</Button>
+			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,11</Button>
 			<NIF>art/LeaderHeads/Frederick_the_Great/frederick_the_great.nif</NIF>
 			<KFM>art/LeaderHeads/Frederick_the_Great/frederick_the_great.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Frederick_the_Great/frederick_the_great_noshader.nif</NoShaderNIF>
@@ -232,7 +232,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_PETER</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Russia_Peter.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,10</Button>
+			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,10</Button>
 			<NIF>art/Leaderheads/Peter_the_Great/peter.nif</NIF>
 			<KFM>art/Leaderheads/Peter_the_Great/peter.kfm</KFM>
 			<NoShaderNIF>art/Leaderheads/Peter_the_Great/peter_noshader.nif</NoShaderNIF>
@@ -248,7 +248,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JOAO</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_Russia_Peter.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,7,1</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,7,1</Button>
 			<NIF>art/Leaderheads/John II/John II.nif</NIF>
 			<KFM>art/Leaderheads/John II/John II.kfm</KFM>
 			<NoShaderNIF>art/Leaderheads/John II/John_II_NONSHADER.nif</NoShaderNIF>
@@ -272,7 +272,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_SULEIMAN</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_America_Washington.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,2</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,2</Button>
 			<NIF>art/LeaderHeads/Suleiman/Suleiman.nif</NIF>
 			<KFM>art/LeaderHeads/Suleiman/Suleiman.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/Suleiman/Suleiman_NONSHADER.nif</NoShaderNIF>

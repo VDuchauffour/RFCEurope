@@ -34,7 +34,7 @@
 			<Button>Art/Interface/Buttons/Religions/protestant.dds</Button>
 			<!-- Rhye -->
 			<TechButton>Art/Interface/Buttons/TechTree/Liberalism.dds</TechButton>
-			<GenericTechButton>,Art/Interface/Buttons/TechTree/Christianity.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,1,3</GenericTechButton>
+			<GenericTechButton>,-,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,1,3</GenericTechButton>
 			<MovieFile>Art/Movies/Religion/Christianity/Chr_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_PROTESTANT_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_PROTESTANT</Sound>
@@ -67,7 +67,7 @@
 			<Button>Art/Interface/Buttons/Religions/Islam.dds</Button>
 			<!-- Rhye -->
 			<TechButton>Art/Interface/Buttons/TechTree/writing.dds</TechButton>
-			<GenericTechButton>,Art/Interface/Buttons/TechTree/Islam.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,6,3</GenericTechButton>
+			<GenericTechButton>,-,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,6,3</GenericTechButton>
 			<MovieFile>Art/Movies/Religion/Islam/Isl_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_ISLAMIC_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_ISLAMIC</Sound>
@@ -100,7 +100,7 @@
 			<Button>Art/Interface/Buttons/Religions/catholic.dds</Button>
 			<!-- Rhye -->
 			<TechButton>Art/Interface/Buttons/TechTree/Theology.dds</TechButton>
-			<GenericTechButton>,Art/Interface/Buttons/TechTree/Christianity.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,1,3</GenericTechButton>
+			<GenericTechButton>,-,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,1,3</GenericTechButton>
 			<MovieFile>Art/Movies/Religion/Christianity/Chr_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_CATHOLIC_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_CATHOLIC</Sound>
@@ -133,7 +133,7 @@
 			<Button>Art/Interface/Buttons/Religions/orthodox.dds</Button>
 			<!-- Rhye -->
 			<TechButton>Art/Interface/Buttons/TechTree/Polytheism.dds</TechButton>
-			<GenericTechButton>,Art/Interface/Buttons/TechTree/Christianity.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,1,3</GenericTechButton>
+			<GenericTechButton>,-,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,1,3</GenericTechButton>
 			<MovieFile>Art/Movies/Religion/Christianity/Chr_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_ORTHODOX_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_ORTHODOX</Sound>
@@ -166,7 +166,7 @@
 			<Button>Art/Interface/Buttons/Religions/Jewish.dds</Button>
 			<!-- Rhye -->
 			<TechButton>Art/Interface/Buttons/TechTree/vaulted_arches.dds</TechButton>
-			<GenericTechButton>,Art/Interface/Buttons/TechTree/Judaism.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,4,3</GenericTechButton>
+			<GenericTechButton>,-,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,4,3</GenericTechButton>
 			<MovieFile>Art/Movies/Religion/Judaism/Jud_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_JEWISH_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_JEWISH</Sound>
