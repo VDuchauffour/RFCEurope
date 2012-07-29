@@ -24,7 +24,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Wonders/encyclopedie_BTN.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,4</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -56,7 +56,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Wonders/EastIndiaCompany.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,4</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -93,7 +93,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Wonders/WestIndiaCompany.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,2</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -130,7 +130,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Vinland.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,6</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -175,7 +175,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/GoldCoast.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,7</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -221,7 +221,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/IvoryCoast.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,7</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -267,7 +267,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Cuba.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,8</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_WEST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -323,7 +323,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Brazil.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,8</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_WEST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -384,7 +384,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/HudsonBay.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,7</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_WEST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -441,7 +441,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Virginia.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,6</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_WEST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -502,7 +502,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/China.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,8</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_EAST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -550,7 +550,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/India.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,7</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_EAST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -607,7 +607,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/EastIndies.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,7</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_EAST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -664,7 +664,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Malaysia.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,6</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_EAST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -725,7 +725,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/CapeTown.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,8</Button>
 			<PrereqProjects>
 				<ProjectType>PROJECT_EAST_INDIA_COMPANY</ProjectType>
 			</PrereqProjects>
@@ -777,7 +777,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/EastAfrica.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,8</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -818,7 +818,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Aztecs.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,8</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -863,7 +863,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Incas.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,7</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -908,7 +908,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Hispanolia.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,7</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -958,7 +958,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Quebec.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,6</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1017,7 +1017,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/NewEngland.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,6</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1076,7 +1076,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Jamaica.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,7</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,7</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1135,7 +1135,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Panama.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,6</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1189,7 +1189,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Louisiana.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,6</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
@@ -1252,7 +1252,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,Art/Interface/Buttons/Colonies/Philippines.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,6</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,6</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
