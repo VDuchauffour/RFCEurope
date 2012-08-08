@@ -80,7 +80,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Tag>
-		<English>Lower unit costs and happiness from castles</English>
+		<English>Your first couple units don't have a maintenance cost and you get a minor happiness boost from barracks</English>
 		<French></French>
 		<German>Geringerer Einheitenunterhalt und Zufriedenheit durch Burgen</German>
 		<Italian>Costo delle unità più basso e felicità dai castelli</Italian>
@@ -116,7 +116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Tag>
-		<English>Happiness from military units; culture from specialists; faster great generals</English>
+		<English>Happiness from military units in cities; happiness from castle; improved espionage</English>
 		<French>Bonheur depuis les unit&#233;s militaire; bonus de culture depuis les sp&#233;cialistes</French>
 		<German>Gesteigerte Zufriedenheit durch Militäreinheiten in Städten; Kultur durch Spezialisten; höhere Wahrscheinlichkeit des Auftretens eines  [COLOR_UNIT_TEXT]Große Feldherren[COLOR_REVERT]</German>
 		<Italian>Felicità dalle unità militari; cultura dagli specialisti; velocizza la nascita di grandi generali</Italian>
@@ -152,9 +152,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Tag>
-		<English>Can use gold to rush production; +1 hammer from towns</English>
+		<English>Can use gold to rush production; +1[ICON_PRODUCTION] from towns</English>
 		<French>Peut utiliser l'Or pour terminer la production</French>
-		<German>Produktionsbeschleunigung durch Gold; +1 [ICON_PRODUCTION] von Kleinstädten</German>
+		<German>Produktionsbeschleunigung durch Gold; +1[ICON_PRODUCTION] von Kleinstädten</German>
 		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
 		<Spanish></Spanish>
 		<Russian>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Russian>
@@ -188,7 +188,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Tag>
-		<English>Good for trade; bad for war</English>
+		<English>This government form is good for small, peaceful nations, bad for big empires and for war</English>
 		<French>Bonheur pour les &#233;changes; M&#233;contement pour la guerre</French>
 		<German>Positiv für den Handel; Negativ für den Krieg</German>
 		<Italian>Buona per il commercio; pessima per la guerra</Italian>
@@ -262,7 +262,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_STRATEGY</Tag>
-		<English>Can levy units</English>
+		<English>Bonus for unit production, and reduced maintenance for city distance</English>
 		<French>5 unit&#233;s gratuites; +2XP pour les nouvelles unit&#233;s</French>
 		<German>Rekrutierung von Einheiten</German>
 		<Italian>Può richiamare alla leva le unità</Italian>
@@ -334,7 +334,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Tag>
-		<English>Unlimited priests and faster great people; unhappiness with non-state religions</English>
+		<English>Can train missionaries without monastery; unhappiness with non-state religions; reduced war weariness</English>
 		<French>R&#233;duit le coût des batiments; augment le coût des recherches. Religion non-officiels cause des troubles</French>
 		<German>Ernennung unbegrenzt vieler Priester; verbessert die Wahrscheinlichkeit des Auftretens [COLOR_HIGHLIGHT_TEXT]Großer Persönlichkeiten[COLOR_REVERT]; Unzufriedenheit in Städten mit anderen Religionen</German>
 		<Italian>Sacerdoti illimati e i grandi generali nascono più in fretta; infelicità dalle religioni non-ufficiali</Italian>
@@ -370,7 +370,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Tag>
-		<English>Faster great people. Higher military support costs</English>
+		<English>Huge culture bonuses, penalty for players without Common Law</English>
 		<French>Am&#233;liore la recherche, ville. Trouble depuis les unit&#233;s militaires</French>
 		<German>Verbessert die Wahrscheinlichkeit des Auftretens [COLOR_HIGHLIGHT_TEXT]Großer Persönlichkeiten[COLOR_REVERT]; höhere laufende Kosten für Militäreinheiten</German>
 		<Italian>Velocizza la nascita di Grandi Personaggi. Aumenta i costi di supporo delle unità</Italian>
@@ -444,7 +444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
-		<English>+1 production from farms, slower growth for cottages and great people</English>
+		<English>+1 [ICON_PRODUCTION] from farms, slower growth for cottages and great people</English>
 		<French>.</French>
 		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Gehöften und großen Persönlichkeiten</German>
 		<Italian>+1 produzione da fattorie, crescità più lenta per villete e grandi personaggi</Italian>
@@ -480,7 +480,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Tag>
-		<English>+100% growth to cottages, hamlets, and villages; +2 gold from towns.</English>
+		<English>+100% growth to cottages, hamlets, and villages; workers complete improvements faster</English>
 		<French>+100%% de croissance des cottages, hameaux et villages.</French>
 		<German>.</German>
 		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
@@ -516,7 +516,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Tag>
-		<English>Unlimited artists, scholars, and merchants; workshops give extra production</English>
+		<English>Unlimited artists, scholars, and merchants; workshops, windmills and watermills give extra production</English>
 		<French>Sans limite artistes, scientifiques et marchants; ateliers am&#233;liore la production</French>
 		<German>.</German>
 		<Italian>Artisti, scienziati e mercanti illimitati; le botteghe danno produzione extra</Italian>
@@ -552,7 +552,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_STRATEGY</Tag>
-		<English>Extra commerce and production from cities; penalty for other civs not adopting this</English>
+		<English>+2 free specialists in your cities</English>
 		<French>Amelioration du commerce et de la production depuis les villes</French>
 		<German>.</German>
 		<Italian>Più commercio e produzione dalle città; penalità per le civiltà che non la adottano</Italian>
@@ -626,7 +626,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Tag>
-		<English>-1 trade route, gold from farms</English>
+		<English>-1 trade route in your cities, gold from farms, small income from manor houses</English>
 		<French>Augmente la production d'unit&#233;s militaires; -1 route commerciale, or depuis les fermes</French>
 		<German>.</German>
 		<Italian>-1 rotta commerciale, oro dalle fattorie</Italian>
@@ -662,7 +662,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>An additional trade route in all your cities</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -698,7 +698,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>All your specialists contribute more to your scientific advancement</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -734,7 +734,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>With disallowing foreign trade and corporations, your local markets and towns can thrive. Mercantilism can be very strong when your relations are not good enough with your neighbours.</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -772,7 +772,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>You cannot have a state religion under Paganism, but you get a happiness bonus for Pagan Shrines</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -808,7 +808,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Tag>
-		<English>Cities with State Religion train units faster</English>
+		<English>Improved production for buildings in cities where your state religion is present</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>Le città con Religione Ufficiale addestrano più velocemente le unità</Italian>
@@ -844,7 +844,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>Improved production and free XP for units in cities where your state religion is present</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -880,7 +880,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>Unlimited priests and huge bonus to Great Person birth rate in cities where your state religion is present</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -916,7 +916,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_STRATEGY</Tag>
-		<English>No Strategy yet.</English>
+		<English>Bonus happiness in cities where your state religion is present; allows construction of non-state religion buildings; +10% science</English>
 		<French>.</French>
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
@@ -990,7 +990,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus for each vassal</English>
+		<English>Grants you extra stability for each vassal</English>
 		<French>Ajoute un bonus de points de stabilit&#233; par vassal</French>
 		<German>Stabilit&#228;tspunktbonus f&#252;r jeden Vasallen</German>
 		<Italian>Aggiunge un punto stabilit&#224; per ogni vassallo.</Italian>
@@ -1017,7 +1017,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Tag>
-		<English>Adds stability for each city outside the core area</English>
+		<English>Grants you extra stability for each city outside the core area</English>
 		<French>.</French>
 		<German>Addiert Stabilität für jede Stadt außerhalb des Kerngebietes</German>
 		<Italian>Aumentà la stabilità per ogni città fuori dal centro dell'impero</Italian>
@@ -1044,7 +1044,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION_STRATEGY</Tag>
-		<English>Adds a Stability Points bonus on city conquest; no negative Stability Points from cities under occupation</English>
+		<English>Grants you extra stability on city conquest; no negative stability from cities under occupation</English>
 		<French>Ajoute un bonus de points de stabilit&#233; par ville conquise ; pas de points de stabilit&#233; n&#233;gatifs pour les villes occup&#233;es</French>
 		<German>Stabilit&#228;tspunktbonus bei Stadteroberung; keine Stabilit&#228;tspunktabz&#252;ge durch besetzte St&#228;dte</German>
 		<Italian>Aggiunge un bonus di punti stabilit&#224; per la conquista di citt&#224;; nessun punto stabilit&#224; negativo in caso di citt&#224; occupate.</Italian>
@@ -1071,7 +1071,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
-		<English>Adds stability for each colony founded</English>
+		<English>Grants you extra stability for each colony founded</English>
 		<French>.</French>
 		<German>Stabilitätspunkte für jede errichtete Kolonie</German>
 		<Italian>Aumentà la stabilità per ogni colonia fondata</Italian>

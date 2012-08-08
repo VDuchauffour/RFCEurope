@@ -289,7 +289,7 @@ class Stability:
                                 pPlayer = gc.getPlayer(iPlayer)
                                 if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 25):
                                         # 3MiroUP: Emperor
-                                        if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() < 11) ): #civil war
+                                        if (pPlayer.getStability() < -15 and pPlayer.getNumCities() > 11 and (not utils.collapseImmune(iPlayer))): #civil war
                                                 print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
                                                 if (iPlayer != utils.getHumanID()):
                                                         if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
@@ -403,7 +403,7 @@ class Stability:
                 iCivic5 = pPlayer.getCivics(5)
                 
                 iCivicCombo = 0
-                if (iCivic3 == xml.iCivicMerchantRepublic):
+                if (iCivic0 == xml.iCivicMerchantRepublic):
                         if (iCivic1 == xml.iCivicFeudalLaw): #Incompatible with Feudal Law (Venice likes this one)
                                 iCivicCombo -= 4
                         if (iCivic3 == xml.iCivicTradeEconomy):

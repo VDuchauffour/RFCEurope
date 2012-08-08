@@ -14,9 +14,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Katholischer Missionar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Katholischer Missionar:Katholischen Missionars:Katholischen Missionar:Katholischen Missionar:Katholische Missionare:Katholischen Missionare:Katholischen Missionaren:Katholischen Missionare</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
 			<Text>Missionario Cattolico</Text>
@@ -39,9 +39,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Orthodoxer Missionar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Orthodoxer Missionar:Orthodoxen Missionars:Orthodoxen Missionar:Orthodoxen Missionar:Orthodoxe Missionare:Orthodoxen Missionare:Orthodoxen Missionaren:Orthodoxen Missionare</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
 			<Text>Missionario Ortodosso</Text>
@@ -64,9 +64,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Protestantischer Missionar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Protestantischer Missionar:Protestantischen Missionars:Protestantischen Missionar:Protestantischen Missionar:Protestantische Missionare:Protestantischen Missionare:Protestantischen Missionaren:Protestantischen Missionare</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
 			<Text>Missionario Protestante</Text>
@@ -89,9 +89,9 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Islamischer Missionar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Islamischer Missionar:Islamischen Missionars:Islamischen Missionar:Islamischen Missionar:Islamische Missionare:Islamischen Missionare:Islamischen Missionaren:Islamischen Missionare</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
 			<Text>Missionario Islamico:Missionari Islamici</Text>
@@ -109,7 +109,11 @@
 		<Tag>TXT_KEY_UNIT_SPEARMAN</Tag>
 		<English>Spearman</English>
 		<French>Lancier</French>
-		<German>Speerkämpfer</German>
+		<German>
+			<Text>Speerkämpfer:Speerkämpfers:Speerkämpfer:Speerkämpfer:Speerkämpfer:Speerkämpfer:Speerkämpfern:Speerkämpfer</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Lanciere</Italian>
 		<Spanish>Lancero</Spanish>
 		<Russian>.</Russian>
@@ -127,7 +131,11 @@
 		<Tag>TXT_KEY_UNIT_GUISARME</Tag>
 		<English>Guisarmier</English>
 		<French>Piquier pontifical</French>
-		<German>Guisarmier</German>
+		<German>
+			<Text>Guisarmier:Guisarmiers:Guisarmier:Guisarmier:Guisarmiere:Guisarmiere:Guisarmieren:Guisarmiere</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Ronconiere</Italian>
 		<Spanish>Piquero papal</Spanish>
 		<Russian>&#192;&#235;&#229;&#225;&#224;&#240;&#228;&#237;&#232;&#234;</Russian>
@@ -145,7 +153,11 @@
 		<Tag>TXT_KEY_UNIT_PIKEMAN</Tag>
 		<English>Pikeman</English>
 		<French>Piquier</French>
-		<German>Pikenier</German>
+		<German>
+			<Text>Pikenier:Pikeniers:Pikenier:Pikenier:Pikeniere:Pikeniere:Pikenieren:Pikeniere</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Picchiere</Italian>
 		<Spanish>Piquero</Spanish>
 		<Russian>.</Russian>
@@ -163,7 +175,11 @@
 		<Tag>TXT_KEY_UNIT_ARBALEST</Tag>
 		<English>Arbalestier</English>
 		<French>Arbal&#233;trier lourd</French>
-		<German>Arbalestiere</German>
+		<German>
+			<Text>Arabelestiere:Arabelestiere:Arabelestiere:Arabelestiere:Arabelestieren:Arabelestieren:Arabelestieren:Arabelestieren</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Arbalestiere</Italian>
 		<Spanish>Ballestero pesado</Spanish>
 		<Russian>&#210;&#255;&#230;&#229;&#235;&#251;&#233; &#192;&#240;&#225;&#224;&#235;&#229;&#242;&#247;&#232;&#234;</Russian>
@@ -181,7 +197,11 @@
 		<Tag>TXT_KEY_UNIT_HORSE_ARCHER</Tag>
 		<English>Horse Archer</English>
 		<French>Archer mont&#233;</French>
-		<German>Berittener Bogensch&#252;tze</German>
+		<German>
+			<Text>Berittener Bogenschütze:Berittenen Bogenschützen:Berittenen Bogenschützen:Berittenen Bogenschützen:Berittene Bogenschützen:Berittenen Bogenschützen:Berittenen Bogenschützen:Berittenen Bogenschützen</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Arciere a Cavallo</Italian>
 		<Spanish>Arquero a caballo</Spanish>
 		<Russian>.</Russian>
@@ -199,7 +219,11 @@
 		<Tag>TXT_KEY_UNIT_MOUNTED_SERGEANT</Tag>
 		<English>Mounted Sergeant</English>
 		<French>.</French>
-		<German>Berittener Sergeant</German>
+		<German>
+			<Text>Berittener Sergeant:Berittenen Sergeanten:Berittenen Sergeanten:Berittenen Sergeanten:Berittene Sergeanten:Berittenen Sergeanten:Berittenen Sergeanten:Berittenen Sergeanten</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Sergente a Cavallo</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
@@ -217,7 +241,11 @@
 		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY</Tag>
 		<English>Mounted Infantry</English>
 		<French>Infanterie mont&#233;e</French>
-		<German>Berittene Infanterie</German>
+		<German>
+			<Text>Berittene Infanterie:Berittenen Infanterie:Berittenen Infanterie:Berittene Infanterie:Berittene Infanterien:Berittenen Infanterien:Berittenen Infanterien:Berittenen Infanterien</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Fanteria a Cavallo</Italian>
 		<Spanish>Infanter&#237;a montada</Spanish>
 		<Russian>&#202;&#238;&#237;&#237;&#251;&#233; &#209;&#229;&#240;&#230;&#224;&#237;&#242;</Russian>
@@ -235,7 +263,11 @@
 		<Tag>TXT_KEY_UNIT_LANCER</Tag>
 		<English>Lancer</English>
 		<French>Cavalerie l&#233;g&#232;re</French>
-		<German>Lanzierer</German>
+		<German>
+			<Text>Lanzenreiter:Lanzenreiters:Lanzenreiter:Lanzenreiter:Lanzenreiter:Lanzenreiter:Lanzenreitern:Lanzenreiter</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavalleria Leggera</Italian>
 		<Spanish>Caballer&#237;a ligera</Spanish>
 		<Russian>&#211;&#235;&#224;&#237;</Russian>
@@ -253,7 +285,11 @@
 		<Tag>TXT_KEY_UNIT_HEAVY_LANCER</Tag>
 		<English>Armored Lancer</English>
 		<French>Cavalerie lourde</French>
-		<German>Gepanzerter Lanzierer</German>
+		<German>
+			<Text>Lanzierer:Lanzierers:Lanzierer:Lanzierer:Lanzierer:Lanzierer:Lanzierern:Lanzierer</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavalleria Corazzata</Italian>
 		<Spanish>Caballer&#237;a pesada</Spanish>
 		<Russian>&#193;&#240;&#238;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#237;&#251;&#233; &#211;&#235;&#224;&#237;</Russian>
@@ -271,7 +307,11 @@
 		<Tag>TXT_KEY_UNIT_BOMBARD</Tag>
 		<English>Bombard</English>
 		<French>Bombard</French>
-		<German>Bombarde</German>
+		<German>
+			<Text>Bombarde:Bombarde:Bombarde:Bombarde:Bombarden:Bombarden:Bombarden:Bombarden</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Bombarda</Italian>
 		<Spanish>Bombarda</Spanish>
 		<Russian>&#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian>
@@ -289,7 +329,11 @@
 		<Tag>TXT_KEY_UNIT_FIELD_ARTILLERY</Tag>
 		<English>Field Artillery</English>
 		<French>Artillerie de Campagne</French>
-		<German>Feldartillerie</German>
+		<German>
+			<Text>Feldartillerie:Feldartillerie:Feldartillerie:Feldartillerie:Feldartillerien:Feldartillerien:Feldartillerien:Feldartillerien</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Artiglieria da Campo</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#207;&#238;&#235;&#229;&#226;&#224;&#255; &#207;&#243;&#248;&#234;&#224;</Russian>
@@ -307,7 +351,11 @@
 		<Tag>TXT_KEY_UNIT_HUSSAR</Tag>
 		<English>Hussar</English>
 		<French>Hussar</French>
-		<German>Husar</German>
+		<German>
+			<Text>Husar:Husaren:Husar:Husar:Husaren:Husaren:Husaren:Husaren</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Ussaro</Italian>
 		<Spanish>Húsar</Spanish>
 		<Russian>&#195;&#243;&#241;&#224;&#240;</Russian>
@@ -325,7 +373,11 @@
 		<Tag>TXT_KEY_UNIT_PISTOLIER</Tag>
 		<English>Pistolier</English>
 		<French>Pistolier</French>
-		<German>Pistolier</German>
+		<German>
+			<Text>Pistolier:Pistolieren:Pistolier:Pistolier:Pistoliere:Pistoliere:Pistolieren:Pistoliere</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Pistoliere</Italian>
 		<Spanish>Pistolier</Spanish>
 		<Russian>&#207;&#232;&#241;&#242;&#238;&#235;&#229;&#242;&#247;&#232;&#234;</Russian>
@@ -343,7 +395,11 @@
 		<Tag>TXT_KEY_UNIT_DRAGOON</Tag>
 		<English>Dragoon</English>
 		<French>Dragon</French>
-		<German>Dragoner</German>
+		<German>
+			<Text>Dragoner:Dragoners:Dragoner:Dragoner:Dragoner:Dragonern:Dragonern:Dragoner</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Dragone</Italian>
 		<Spanish>Dragón</Spanish>
 		<Russian>&#196;&#240;&#224;&#227;&#243;&#237;</Russian>
@@ -361,7 +417,11 @@
 		<Tag>TXT_KEY_UNIT_ARQUEBUSIER</Tag>
 		<English>Arquebusier</English>
 		<French>Arquebusier</French>
-		<German>Arkebusier</German>
+		<German>
+			<Text>Arkebusier:Arkebusiers:Arkebusier:Arkebusier:Arkebusiere:Arkebusiere:Arkebusieren:Arkebusiere</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Archibugiere</Italian>
 		<Spanish>Arquebusier</Spanish>
 		<Russian>&#192;&#240;&#234;&#229;&#225;&#243;&#231;&#232;&#240;&#249;&#232;&#234;</Russian>
@@ -379,7 +439,11 @@
 		<Tag>TXT_KEY_UNIT_LINE_INFANTRY</Tag>
 		<English>Line Infantry</English>
 		<French>Infanterie de Ligne</French>
-		<German>Linieninfanterie</German>
+		<German>
+			<Text>Linieninfanterie:Linieninfanterie:Linieninfanterie:Linieninfanterie:Linieninfanterien:Linieninfanterien:Linieninfanterien:Linieninfanterien</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Fanteria di Linea</Italian>
 		<Spanish>Infantería de Línea</Spanish>
 		<Russian>&#203;&#232;&#237;&#229;&#233;&#237;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Russian>
@@ -397,7 +461,11 @@
 		<Tag>TXT_KEY_UNIT_SWORDSMAN</Tag>
 		<English>Swordsman</English>
 		<French>Spadassin l&#233;ger</French>
-		<German>Schwertkämpfer</German>
+		<German>
+			<Text>Schwertkämpfer:Schwertkämpfers:Schwertkämpfer:Schwertkämpfer:Schwertkämpfer:Schwertkämpfer:Schwertkämpfern:Schwertkämpfer</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Spadaccino</Italian>
 		<Spanish>Soldado con espada ligera</Spanish>
 		<Russian>&#204;&#229;&#247;&#237;&#232;&#234;</Russian>
@@ -415,7 +483,11 @@
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN</Tag>
 		<English>Longswordsman</English>
 		<French>Spadassin Lourd</French>
-		<German>Langschwertk&#228;mpfer</German>
+		<German>
+			<Text>Langschwertkämpfer:Langschwertkämpfers:Langschwertkämpfer:Langschwertkämpfer:Langschwertkämpfer:Langschwertkämpfer:Langschwertkämpfern:Langschwertkämpfer</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Spadaccino Lungo</Italian>
 		<Spanish>Espadachín Largo</Spanish>
 		<Russian>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Russian>
@@ -433,7 +505,11 @@
 		<Tag>TXT_KEY_UNIT_SCOUT</Tag>
 		<English>Skirmisher</English>
 		<French>Accrocheur</French>
-		<German>Plänkler</German>
+		<German>
+			<Text>Plänkler:Plänklers:Plänkler:Plänkler:Plänkler:Plänkler:Plänklern:Plänkler</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Esploratore</Italian>
 		<Spanish>.</Spanish>
 		<Russian>&#199;&#224;&#241;&#242;&#240;&#229;&#235;&#252;&#249;&#232;&#234;</Russian>
@@ -451,7 +527,11 @@
 		<Tag>TXT_KEY_UNIT_COGGE</Tag>
 		<English>Cog</English>
 		<French>Cogue</French>
-		<German>Kogge</German>
+		<German>
+			<Text>Kogge:Kogge:Kogge:Kogge:Koggen:Koggen:Koggen:Koggen</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cocca</Italian>
 		<Spanish>Coca</Spanish>
 		<Russian>&#202;&#238;&#227;&#227;&#229;</Russian>
@@ -469,7 +549,11 @@
 		<Tag>TXT_KEY_UNIT_GUN_GALLEY</Tag>
 		<English>Gun Galley</English>
 		<French>Gal&#232;re Arm&#233;e</French>
-		<German>Kanonengaleere</German>
+		<German>
+			<Text>Kanonengaleere:Kanonengaleere:Kanonengaleere:Kanonengaleere:Kanonengaleeren:Kanonengaleeren:Kanonengaleeren:Kanonengaleeren</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Galea Armata</Italian>
 		<Spanish>Galera de Fusil</Spanish>
 		<Russian>.</Russian>
@@ -487,7 +571,11 @@
 		<Tag>TXT_KEY_UNIT_HOLK</Tag>
 		<English>Holk</English>
 		<French>Holk</French>
-		<German>Holk</German>
+		<German>
+			<Text>Holk:Holks:Holk:Holk:Holks:Holks:Holks:Holks</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Holk</Italian>
 		<Spanish>Urca</Spanish>
 		<Russian>.</Russian>
@@ -505,7 +593,11 @@
 		<Tag>TXT_KEY_UNIT_WAR_GALLEY</Tag>
 		<English>War Galley</English>
 		<French>Galion de guerre</French>
-		<German>Kriegsgaleere</German>
+		<German>
+			<Text>Kriegsgaleere:Kriegsgaleere:Kriegsgaleere:Kriegsgaleere:Kriegsgaleeren:Kriegsgaleeren:Kriegsgaleeren:Kriegsgaleeren</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Galea da Guerra</Italian>
 		<Spanish>Galera Guerree</Spanish>
 		<Russian>.</Russian>
@@ -523,7 +615,11 @@
 		<Tag>TXT_KEY_UNIT_PROSECUTOR</Tag>
 		<English>Religious Prosecutor</English>
 		<French>Inquisiteur</French>
-		<German>Religi&#246;ser Inquisitor</German>
+		<German>
+			<Text>Inquisitor:Inquisitors:Inquisitor:Inquisitor:Inquisitoren:Inquisitoren:Inquisitoren:Inquisitoren</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Inquisitore</Italian>
 		<Spanish>Acusador Religioso</Spanish>
 		<Russian>&#200;&#237;&#234;&#226;&#232;&#231;&#232;&#242;&#238;&#240;</Russian>
@@ -542,7 +638,11 @@
 		<Tag>TXT_KEY_UNIT_ARABIA_GHAZI</Tag>
 		<English>Ghazi</English>
 		<French>Ghazi</French>
-		<German>Ghazi</German>
+		<German>
+			<Text>Ghazi:Ghazis:Ghazi:Ghazi:Ghazis:Ghazis:Ghazis:Ghazis</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Ghazi</Italian>
 		<Spanish>Ghazi</Spanish>
 		<Russian>&#195;&#224;&#231;&#232;</Russian>
@@ -560,7 +660,11 @@
 		<Tag>TXT_KEY_UNIT_BURGUNDIAN_PALADIN</Tag>
 		<English>Paladin</English>
 		<French>Paladin</French>
-		<German>Paladin</German>
+		<German>
+			<Text>Paladin:Paladins:Paladin:Paladin:Paladine:Paladinen:Paladinen:Paladine</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Paladino</Italian>
 		<Spanish>Paladín</Spanish>
 		<Russian>&#207;&#224;&#235;&#224;&#228;&#232;&#237;</Russian>
@@ -578,7 +682,11 @@
 		<Tag>TXT_KEY_UNIT_BULGARIAN_KONNIK</Tag>
 		<English>Konnik</English>
 		<French>Konnik</French>
-		<German>Konnik</German>
+		<German>
+			<Text>Konnik:Konniks:Konnik:Konnik:Konniks:Konniks:Konniks:Konniks</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Konnik</Italian>
 		<Spanish>Konnik</Spanish>
 		<Russian>&#202;&#238;&#237;&#237;&#232;&#234;</Russian>
@@ -596,7 +704,11 @@
 		<Tag>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY</Tag>
 		<English>Berber Cavalry</English>
 		<French>Cavalerie Berber</French>
-		<German>Berberkavallerie</German>
+		<German>
+			<Text>Berberkavallerie:Berberkavallerie:Berberkavallerie:Berberkavallerie:Berberkavallerien:Berberkavallerien:Berberkavallerien:Berberkavallerien</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavalleria Berbera</Italian>
 		<Spanish>Caballería Beréber</Spanish>
 		<Russian>&#193;&#229;&#240;&#225;&#229;&#240;&#241;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
@@ -614,7 +726,11 @@
 		<Tag>TXT_KEY_UNIT_SPANISH_TERCIO</Tag>
 		<English>Tercio</English>
 		<French>Tercio</French>
-		<German>Tercio</German>
+		<German>
+			<Text>Tercio:Tercios:Tercio:Tercio:Tercios:Tercios:Tercios:Tercios</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Tercio</Italian>
 		<Spanish>Tercio</Spanish>
 		<Russian>&#210;&#229;&#240;&#246;&#232;&#238;</Russian>
@@ -632,7 +748,11 @@
 		<Tag>TXT_KEY_UNIT_VENICE_GALLEAS</Tag>
 		<English>Galleass</English>
 		<French>Galleass</French>
-		<German>Galeasse</German>
+		<German>
+			<Text>Galeasse:Galeasse:Galeasse:Galeasse:Galeassen:Galeassen:Galeassen:Galeassen</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Galeazza</Italian>
 		<Spanish>Galleass</Spanish>
 		<Russian>&#195;&#224;&#235;&#235;&#229;&#224;&#241;</Russian>
@@ -650,7 +770,11 @@
 		<Tag>TXT_KEY_UNIT_HUNGARIAN_LANCER</Tag>
 		<English>Huszár</English>
 		<French>Huszár</French>
-		<German>Huszár</German>
+		<German>
+			<Text>Huszár:Huszáren:Huszár:Huszár:Huszáren:Huszáren:Huszáren:Huszáren</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Huszár</Italian>
 		<Spanish>Huszár</Spanish>
 		<Russian>&#195;&#243;&#241;&#231;&#224;&#240;</Russian>
@@ -668,7 +792,11 @@
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR</Tag>
 		<English>Winged Hussar</English>
 		<French>Hussar Ail&#233;</French>
-		<German>Flügelhusar</German>
+		<German>
+			<Text>Flügelhusar:Flügelhusaren:Flügelhusar:Flügelhusar:Flügelhusaren:Flügelhusaren:Flügelhusaren:Flügelhusaren</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Ussaro Alato</Italian>
 		<Spanish>Húsar Alado</Spanish>
 		<Russian>&#202;&#240;&#251;&#235;&#224;&#242;&#251;&#233; &#195;&#243;&#241;&#224;&#240;</Russian>
@@ -686,7 +814,11 @@
 		<Tag>TXT_KEY_UNIT_MOSCOW_BOYAR</Tag>
 		<English>Boyar</English>
 		<French>Boyard</French>
-		<German>Bojar</German>
+		<German>
+			<Text>Bojar:Bojaren:Bojar:Bojar:Bojaren:Bojaren:Bojaren:Bojaren</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Boiardo</Italian>
 		<Spanish>Boyardo</Spanish>
 		<Russian>&#193;&#238;&#255;&#240;&#232;&#237;</Russian>
@@ -722,7 +854,11 @@
 		<Tag>TXT_KEY_UNIT_ENGLISH_LONGBOWMAN</Tag>
 		<English>English Longbowman</English>
 		<French>Archer Long Anglais</French>
-		<German>Englischer Langbogenschütze</German>
+		<German>
+			<Text>Englischer Langbogenschütze:Englischen Langbogenschützen:Englischen Langbogenschützen:Englischen Langbogenschützen:Englische Langbogenschützen:Englischen Langbogenschützen:Englischen Langbogenschützen:Englischen Langbogenschützen</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Arciere con Arco Lungo Inglese</Italian>
 		<Spanish>Saetero Inglés</Spanish>
 		<Russian>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian>
@@ -740,7 +876,11 @@
 		<Tag>TXT_KEY_UNIT_AUSTRIAN_KURASSIER</Tag>
 		<English>Kurassier</English>
 		<French>Kurassier</French>
-		<German>Elite-Kürassier</German>
+		<German>
+			<Text>Elite-Kürassier:Elite-Kürassiers:Elite-Kürassier:Elite-Kürassier:Elite-Kürassiere:Elite-Kürassieren:Elite-Kürassieren:Elite-Kürassiere</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Corazziere</Italian>
 		<Spanish>Kurassier</Spanish>
 		<Russian>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#202;&#232;&#240;&#224;&#241;&#232;&#240;</Russian>
@@ -758,7 +898,11 @@
 		<Tag>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD</Tag>
 		<English>Great Bombard</English>
 		<French>Grande Bombard</French>
-		<German>Gro&#223;e Bombarde</German>
+		<German>
+			<Text>Große Bombarde:Großen Bombarde:Großen Bombarde:Große Bombarde:Großen Bombarden:Großen Bombarden:Großen Bombarden:Großen Bombarden</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Grande Bombarda</Italian>
 		<Spanish>Bombardean Gran</Spanish>
 		<Russian>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian>
@@ -776,7 +920,11 @@
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN</Tag>
 		<English>Karolin</English>
 		<French>Carolean</French>
-		<German>Karolin</German>
+		<German>
+			<Text>Karoliner:Karoliners:Karoliner:Karoliner:Karoliner:Karoliner:Karolinern:Karoliner</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Carolean</Italian>
 		<Spanish>Carolean</Spanish>
 		<Russian>&#202;&#224;&#240;&#238;&#235;&#232;&#237;</Russian>
@@ -794,7 +942,11 @@
 		<Tag>TXT_KEY_UNIT_NETHERLANDS_GRENADIER</Tag>
 		<English>Dutch Grenadier</English>
 		<French>Grenadier Hollandais</French>
-		<German>Holl&#228;ndischer Grenadier</German>
+		<German>
+			<Text>Holländischer Grenadier:Holländischen Grenadiers:Holländischen Grenadier:Holländischen Grenadier:Holländische Grenadiere:Holländischen Grenadiere:Holländischen Grenadieren:Holländischen Grenadiere</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Granatiere Olandese</Italian>
 		<Spanish>Holandés Granaderos</Spanish>
 		<Russian>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Russian>
@@ -812,7 +964,11 @@
 		<Tag>TXT_KEY_UNIT_PORTUGAL_FOOT_KNIGHT</Tag>
 		<English>Knight of Aviz</English>
 		<French>Chevalier de Aviz</French>
-		<German>Ritter von Avis</German>
+		<German>
+			<Text>Ritter von Avis:Ritters von Avis:Ritter von Avis:Ritter von Avis:Ritter von Avis:Ritter von Avis:Rittern von Avis:Ritter von Avis</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavaliere d'Aviz</Italian>
 		<Spanish>Caballero de Aviz</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#192;&#226;&#232;&#231;&#224;</Russian>
@@ -830,7 +986,11 @@
 		<Tag>TXT_KEY_UNIT_KIEV_DRUZHINA</Tag>
 		<English>Druzhina</English>
 		<French>Druzhina</French>
-		<German>Druschina</German>
+		<German>
+			<Text>Druschina:Druschina:Druschina:Druschina:Druschinas:Druschinas:Druschinas:Druschinas</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Druzhina</Italian>
 		<Spanish>Druzhina</Spanish>
 		<Russian>&#196;&#240;&#243;&#230;&#232;&#237;&#224;</Russian>
@@ -848,7 +1008,11 @@
 		<Tag>TXT_KEY_UNIT_LITHUANIA_BAJORAS</Tag>
 		<English>Bajoras</English>
 		<French>Bajoras</French>
-		<German>Bajoras</German>
+		<German>
+			<Text>Bajoras:Bajoras:Bajoras:Bajoras:Bajorai:Bajorai:Bajorai:Bajorai</Text>
+			<Gender>male:male:male:male:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Bajoras</Italian>
 		<Spanish>Bajoras</Spanish>
 		<Russian>.</Russian>
@@ -866,7 +1030,11 @@
 		<Tag>TXT_KEY_UNIT_VIKING_BERSERKER</Tag>
 		<English>Berserker</English>
 		<French>Berserker</French>
-		<German>Berserker</German>
+		<German>
+			<Text>Berserker:Berserkers:Berserker:Berserker:Berserker:Berserker:Berserkern:Berserker</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Berserker</Italian>
 		<Spanish>Berserk</Spanish>
 		<Russian>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Russian>
@@ -885,7 +1053,11 @@
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Tag>
 		<English>Knight of St. John's</English>
 		<French>Chevalier Saint Jean</French>
-		<German>Ritter der Johanniter</German>
+		<German>
+			<Text>Johanniterritter:Johanniterritters:Johanniterritter:Johanniterritter:Johanniterritter:Johanniterritter:Johanniterrittern:Johanniterritter</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavaliere di San Giovanni</Italian>
 		<Spanish>Caballero de San Juan</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Russian>
@@ -903,7 +1075,11 @@
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT</Tag>
 		<English>Templar Knight</English>
 		<French>Chevalier Templier</French>
-		<German>Tempelritter</German>
+		<German>
+			<Text>Tempelritter:Tempelritters:Tempelritter:Tempelritter:Tempelritter:Tempelritter:Tempelrittern:Tempelritter</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Caballero Templario</Spanish>
 		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
@@ -921,7 +1097,11 @@
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT</Tag>
 		<English>Teutonic Knight</English>
 		<French>Chevalier Teutonique</French>
-		<German>Deutschritter</German>
+		<German>
+			<Text>Deutschordensritter:Deutschordensritters:Deutschordensritter:Deutschordensritter:Deutschordensritter:Deutschordensritter:Deutschordensrittern:Deutschordensritter</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Russian>
@@ -939,7 +1119,11 @@
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
 		<English>Keshik</English>
 		<French>Keshik</French>
-		<German>Keschik</German>
+		<German>
+			<Text>Keschik:Keschiks:Keschik:Keschik:Keschiks:Keschiks:Keschiks:Keschiks</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Keshik</Italian>
 		<Spanish>Keshik</Spanish>
 		<Russian>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Russian>
@@ -957,7 +1141,11 @@
 		<Tag>TXT_KEY_UNIT_SELJUK</Tag>
 		<English>Seljuk</English>
 		<French>Deldjouk</French>
-		<German>Seldschuke</German>
+		<German>
+			<Text>Seldschuke:Seldschuken:Seldschuken:Seldschuken:Seldschuken:Seldschuken:Seldschuken:Seldschuken</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Seljuk</Italian>
 		<Spanish>Selyuq</Spanish>
 		<Russian>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Russian>
@@ -975,7 +1163,11 @@
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Tag>
 		<English>Janissary</English>
 		<French>Janissaire</French>
-		<German>Janitschar</German>
+		<German>
+			<Text>Janitschar:Janitschars:Janitschar:Janitschar:Janitscharen:Janitscharen:Janitscharen:Janitscharen</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Giannizzero</Italian>
 		<Spanish>Jenízaro</Spanish>
 		<Russian>.</Russian>
