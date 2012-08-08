@@ -144,7 +144,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_1</Tag>
 		<English>Hospitaller Master</English>
 		<French>Maître Hospitalier</French>
-		<German>Ordensmeister der Johanniter</German>
+		<German>
+			<Text>Ordensmeister der Johanniter:Ordensmeisters der Johanniter:Ordensmeister der Johanniter:Ordensmeister der Johanniter:Ordensmeister der Johanniter:Ordensmeister der Johanniter:Ordensmeistern der Johanniter:Ordensmeister der Johanniter</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Maestro Ospedaliero</Italian>
 		<Spanish>Maestre Hospitalario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Russian>
@@ -153,7 +157,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
 		<English>Templar Master</English>
 		<French>Maître Templiers</French>
-		<German>Ordensmeister der Templer</German>
+		<German>
+			<Text>Ordensmeister der Templer:Ordensmeisters der Templer:Ordensmeister der Templer:Ordensmeister der Templer:Ordensmeister der Templer:Ordensmeister der Templer:Ordensmeistern der Templer:Ordensmeister der Templer</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Maestro Templare</Italian>
 		<Spanish>Maestre Templario</Spanish>
 		<Russian>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
@@ -162,7 +170,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_3</Tag>
 		<English>Teutonic Master</English>
 		<French>Maître Teutonique</French>
-		<German>Ordensmeister des Deutschordens</German>
+		<German>
+			<Text>Ordensmeister des Deutschordens:Ordensmeisters des Deutschordens:Ordensmeister des Deutschordens:Ordensmeister des Deutschordens:Ordensmeister des Deutschordens:Ordensmeister des Deutschordens:Ordensmeistern des Deutschordens:Ordensmeister des Deutschordens</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Maestro Teutonico</Italian>
 		<Spanish>Maestre Teut&#243;nico</Spanish>
 		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Russian>
@@ -171,7 +183,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_4</Tag>
 		<English>Hanseatic Executive</English>
 		<French>Cadre Hanse</French>
-		<German>Gesandter der Hanse</German>
+		<German>
+			<Text>Gesandter der Hanse:Gesandten der Hanse:Gesandten der Hanse:Gesandten der Hanse:Gesandten der Hanse:Gesandten der Hanse:Gesandten der Hanse:Gesandten der Hanse</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Mercante Anseatico</Italian>
 		<Spanish>Mercader Hanseático</Spanish>
 		<Russian>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#232;&#233; &#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;</Russian>
@@ -180,7 +196,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_5</Tag>
 		<English>Medici Executive</English>
 		<French>Cadre M&#233;dicis</French>
-		<German>Gesandter der Medici</German>
+		<German>
+			<Text>Gesandter der Medici:Gesandten der Medici:Gesandten der Medici:Gesandten der Medici:Gesandten der Medici:Gesandten der Medici:Gesandten der Medici:Gesandten der Medici</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Banchiere de Medici</Italian>
 		<Spanish>Mercader Medici</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Russian>
@@ -189,7 +209,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_6</Tag>
 		<English>Augsburg Executive</English>
 		<French>Cadre Augsburg</French>
-		<German>Gesandter der Augsburger</German>
+		<German>
+			<Text>Gesandter der Augsburger:Gesandten der Augsburger:Gesandten der Augsburger:Gesandten der Augsburger:Gesandten der Augsburger:Gesandten der Augsburger:Gesandten der Augsburger:Gesandten der Augsburger</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Mercante di Augusta</Italian>
 		<Spanish>Mercader Augsburgo</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Russian>
@@ -198,7 +222,11 @@
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_7</Tag>
 		<English>Bank of St. George Executive</English>
 		<French>Cadre de la Banque de St George</French>
-		<German>Gesandter der Banco di San Giorgio</German>
+		<German>
+			<Text>Gesandter der Banco di San Giorgio:Gesandten der Banco di San Giorgio:Gesandten der Banco di San Giorgio:Gesandten der Banco di San Giorgio:Gesandten der Banco di San Giorgio:Gesandten der Banco di San Giorgio:Gesandten der Banco di San Giorgio:Gesandten der Banco di San Giorgio</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Banchiere di San Giorgio</Italian>
 		<Spanish>Mercader del Banco de S. Jorge</Spanish>
 		<Russian>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Russian>

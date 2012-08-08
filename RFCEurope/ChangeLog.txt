@@ -67,6 +67,8 @@ Changes for RFCE 1.1:
 		- Minor diplotext fixes
 		- Various updates in the wording of the UP texts
 		- Changes in mercenary naming
+		- Updated strategy tooltips for the civics
+		- German grammatical cases for units by HolyHandGrenade
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
@@ -99,6 +101,7 @@ Changes for RFCE 1.1:
 		- Removed the UHV check for the old Spanish 3rd UHV (conquer protestant cities). It was possible to trigger both 3rd UHVs!! - by lzd
 		- Fixed small python mistakes: on city name convertion, and on destroying barbarian improvements
 		- Fixed 2 different bugs with mercenary appearance/mercenary hiring. No more unhireable Welsh Longbowman for example
+		- Stability fixes by HolyHandGrenade
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
