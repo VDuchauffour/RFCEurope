@@ -22,7 +22,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SONG_OPENING_MENU</SoundID>
-			<Filename>Sounds/Soundtrack/OpeningMenu</Filename>
+			<Filename>Sounds/Soundtrack/RFCE/OpeningMenu</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -43,14 +43,14 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SONG_VICTORY</SoundID>
-			<Filename>Sounds/Soundtrack/Victory</Filename>
+			<Filename>Sounds/Soundtrack/RFCE/Victory</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
 			<SoundID>SONG_DEFEAT</SoundID>
-			<Filename>Sounds/Soundtrack/Defeat</Filename>
+			<Filename>Sounds/Soundtrack/RFCE/Defeat</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -71,8 +71,8 @@
 		<!-- Rhye - start -->
 		</SoundData>
 		<SoundData>
-			<SoundID>SONG_R_F_C</SoundID>
-			<Filename>Sounds/Soundtrack/RFC</Filename>
+			<SoundID>SONG_RFC</SoundID>
+			<Filename>Sounds/Soundtrack/RFCE/RFC</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -562,8 +562,57 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SONG_ANNI_NOVI_NOVITAS</SoundID>
+			<Filename>Sounds/Soundtrack/AnniNoviNovitas</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BAILEMOS</SoundID>
+			<Filename>Sounds/Soundtrack/BailemosNosJaTodasTres</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SONG_BOGORODICE_DEVO</SoundID>
 			<Filename>Sounds/Soundtrack/BogorodiceDevo</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CANTIGAS</SoundID>
+			<Filename>Sounds/Soundtrack/CantigasDeSantaMaria</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CONDITOR</SoundID>
+			<Filename>Sounds/Soundtrack/ConditorAlmeSiderum</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DINDIRIDIN</SoundID>
+			<Filename>Sounds/Soundtrack/Dindiridin</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DEUCE_DAME_JOLIE</SoundID>
+			<Filename>Sounds/Soundtrack/DouceDameJolie</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DUM_PATER_FAMILIAS</SoundID>
+			<Filename>Sounds/Soundtrack/DumPaterFamilias</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

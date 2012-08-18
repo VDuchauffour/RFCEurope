@@ -44,11 +44,14 @@
 			<iSoundtrackSpace>0</iSoundtrackSpace>
 			<bFirstSoundtrackFirst>0</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
-				<EraInfoSoundtrack>AS2D_ANCIENT_SOUNDTRACK_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_ANCIENT_SOUNDTRACK_2</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_ANCIENT_SOUNDTRACK_3</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_ANCIENT_SOUNDTRACK_4</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANNI_NOVI_NOVITAS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BAILEMOS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_BOGORODICE_DEVO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CANTIGAS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CONDITOR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DINDIRIDIN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DEUCE_DAME_JOLIE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DUM_PATER_FAMILIAS</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -116,7 +119,14 @@
 				<EraInfoSoundtrack>AS2D_SONG_DIP_GR_EARLY_PEACE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_BARBARIAN</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_DIP_GR_EARLY_WAR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANNI_NOVI_NOVITAS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BAILEMOS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_BOGORODICE_DEVO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CANTIGAS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CONDITOR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DINDIRIDIN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DEUCE_DAME_JOLIE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DUM_PATER_FAMILIAS</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -132,8 +142,8 @@
 					<SoundscapeScript>ASSS_CITY_MIDDLE_LARGE_SELECT_AMB</SoundscapeScript>
 				</CitySoundscape>
 			</CitySoundscapes>
-			<AudioUnitVictoryScript>AS2D_VICTORY_MIDDLE</AudioUnitVictoryScript>
-			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
+			<AudioUnitVictoryScript>AS2D_VICTORY_EARLY</AudioUnitVictoryScript>
+			<AudioUnitDefeatScript>AS2D_LOSS_EARLY</AudioUnitDefeatScript>
 		</EraInfo>
 		<EraInfo> <!--Late Middle Age-->
 			<Type>ERA_MEDIEVAL</Type>

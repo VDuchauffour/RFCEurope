@@ -191,10 +191,10 @@ class CvDawnOfMan:
 		
 ##Rhye - end
 		return
-            
+		
 		
 	def onClose(self):
-                CyInterface().DoSoundtrack("AS2D_R_F_C") #Rhye
-		CyInterface().setSoundSelectionReady(true)		
+		CyInterface().DoSoundtrack("AS2D_RFC") #Rhye
+		CyInterface().setSoundSelectionReady(true)
 		return 0
 	
