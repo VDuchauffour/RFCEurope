@@ -618,6 +618,55 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SONG_ENO_SAGRADO_EN_VIGO</SoundID>
+			<Filename>Sounds/Soundtrack/EnoSagradoEnVigo</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_INTROIT_BENEDICTA_SIT</SoundID>
+			<Filename>Sounds/Soundtrack/IntroitBenedictaSit</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_JAY_GRANT_ESPOIR</SoundID>
+			<Filename>Sounds/Soundtrack/JayGrantEspoir</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MARTIN_JOGRAR</SoundID>
+			<Filename>Sounds/Soundtrack/MartinJograr</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MIA_IRMANA_FREMOSA</SoundID>
+			<Filename>Sounds/Soundtrack/MiaIrmanaFremosa</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_OLAFUR_LILJUROS</SoundID>
+			<Filename>Sounds/Soundtrack/OlafurLiljuros</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ON_BETHLEHEM</SoundID>
+			<Filename>Sounds/Soundtrack/OnTheWayToBethlehem</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SONG_BEETHOVEN_ANDANTE</SoundID>
 			<Filename>Sounds/Soundtrack/Renaissance/BeethovenAndante</Filename>
 			<LoadType>STREAMED</LoadType>
