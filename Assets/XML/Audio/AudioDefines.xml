@@ -667,6 +667,62 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SONG_PAX_AETERNA</SoundID>
+			<Filename>Sounds/Soundtrack/PaxAeterna</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_POLORUM_REGINA</SoundID>
+			<Filename>Sounds/Soundtrack/PolorumRegina</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PROPINAN_DE_MELYOR</SoundID>
+			<Filename>Sounds/Soundtrack/PropinanDeMelyor</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_QUEN_A_VIRGEN</SoundID>
+			<Filename>Sounds/Soundtrack/QuenAVirgen</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_QUEN_QUER_QUE</SoundID>
+			<Filename>Sounds/Soundtrack/QuenQuerQueTenEnDesden</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ROBIN_HOOD</SoundID>
+			<Filename>Sounds/Soundtrack/RobinHood</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SALTARELLO</SoundID>
+			<Filename>Sounds/Soundtrack/Saltarello4</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SKARAZULA</SoundID>
+			<Filename>Sounds/Soundtrack/SkarazulaMarazula</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SONG_BEETHOVEN_ANDANTE</SoundID>
 			<Filename>Sounds/Soundtrack/Renaissance/BeethovenAndante</Filename>
 			<LoadType>STREAMED</LoadType>
