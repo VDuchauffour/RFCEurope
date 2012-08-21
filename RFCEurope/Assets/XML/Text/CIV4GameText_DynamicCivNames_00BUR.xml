@@ -10,7 +10,7 @@
 		<French>Peuplade Burgonde</French>
 		<German>Burgundische Völker</German>
 		<Italian>Popoli Borgognoni</Italian>
-		<Spanish></Spanish>
+		<Spanish>Pueblo Burgundio</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -19,7 +19,7 @@
 		<French>Royaume de Bourgogne</French>
 		<German>Königreich Burgund</German>
 		<Italian>Regno di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Reino de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -28,7 +28,7 @@
 		<French>Royaume de Bourgogne</French>
 		<German>Königreich Burgund</German>
 		<Italian>Regno di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Reino de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -37,7 +37,7 @@
 		<French>Duché de Bourgogne</French>
 		<German>Herzogtum Burgund</German>
 		<Italian>Ducato di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Ducado de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -46,7 +46,7 @@
 		<French>Duché de Bourgogne</French>
 		<German>Herzogtum Burgund</German>
 		<Italian>Ducato di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Ducado de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -55,7 +55,7 @@
 		<French>R&#233;publique Bourguignonne</French>
 		<German>Republik Burgund</German>
 		<Italian>Repubblica Borgognona</Italian>
-		<Spanish></Spanish>
+		<Spanish>República Borgoñesa</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -82,7 +82,7 @@
 		<French>Sultanat de Bourgogne</French>
 		<German>Sultanat Burgund</German>
 		<Italian>Sultanato di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Sultanato de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -91,7 +91,7 @@
 		<French>R&#233;publique Islamique de Bourgogne</French>
 		<German>Islamische Republik Burgund</German>
 		<Italian>Repubblica Islamica di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>República Islámica de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -100,7 +100,7 @@
 		<French>Exarchat de Bourgogne</French>
 		<German>Exarchat Burgund</German>
 		<Italian>Esarcato di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Exarcado de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -109,7 +109,7 @@
 		<French>Duch&#233; Fran&#231;ais de Bougogne</French>
 		<German>Französisches Herzogtum Bourgogne</German>
 		<Italian>Ducato Francese di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Ducado Francés de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -118,7 +118,7 @@
 		<French>Emirat de Bourgogne</French>
 		<German>Emirat Burgund</German>
 		<Italian>Emirato di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Emirato de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -127,7 +127,7 @@
 		<French>Franche-Comt&#233;</French>
 		<German>Spanisch-Burgund</German>
 		<Italian>Contea di Borgogna</Italian>
-		<Spanish>Franco Condado</Spanish>
+		<Spanish>Condado de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -136,7 +136,7 @@
 		<French>Nouveau Bornholm</French>
 		<German>Neu Bornholm</German>
 		<Italian>Nuova Bornholm</Italian>
-		<Spanish></Spanish>
+		<Spanish>Nuevo Bornholm</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -145,7 +145,7 @@
 		<French>Bourgogne V&#233;nitienne</French>
 		<German>Venezianisch-Burgund</German>
 		<Italian>Borgogna Veneziana</Italian>
-		<Spanish></Spanish>
+		<Spanish>Borgoña Veneciana</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -154,7 +154,7 @@
 		<French>Bourgogne Russe</French>
 		<German>Russisch-Burgund</German>
 		<Italian>Borgogna Russa</Italian>
-		<Spanish></Spanish>
+		<Spanish>Borgoña Rusa</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -163,7 +163,7 @@
 		<French>Lotharingie</French>
 		<German>Lothringen</German>
 		<Italian>Lotaringia</Italian>
-		<Spanish></Spanish>
+		<Spanish>Lotaringia</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -172,16 +172,16 @@
 		<French>Comt&#233; de Bourgogne</French>
 		<German>Grafschaft Burgund</German>
 		<Italian>Contea di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Condado de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR19</Tag>
 		<English>Habsburg Burgundy</English>
-		<French>Bourgogne Habsbourg</French>
+		<French>Bourgogne Habsbourgeoise</French>
 		<German>Habsburger Burgund</German>
 		<Italian>Borgogna Asburgica</Italian>
-		<Spanish></Spanish>
+		<Spanish>Borgoña Habsburguesa</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -190,7 +190,7 @@
 		<French>Principaut&#233; de Burgonya</French>
 		<German>Fürstentum Burgonya</German>
 		<Italian>Principato di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Principado de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 	<TEXT>
@@ -199,7 +199,7 @@
 		<French>Province de Bourgogne</French>
 		<German>Provinz Burgund</German>
 		<Italian>Provincia di Borgogna</Italian>
-		<Spanish></Spanish>
+		<Spanish>Provincia de Borgoña</Spanish>
 		<Russian></Russian>
 	</TEXT>
 </Civ4GameText>

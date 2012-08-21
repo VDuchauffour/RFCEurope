@@ -59,7 +59,7 @@ Changes for RFCE 1.1:
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
 		- Small updates in the reference files
-		- Added a couple Spanish translations by mijamobu
+		- Added a couple Spanish translations by mijamobu and felyux
 		- Added many Italian translations by Fede14
 		- Huge XML cleanup and reorganization
 		- German translations by HolyHandGrenade
@@ -80,6 +80,7 @@ Changes for RFCE 1.1:
 		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
 		- Separate, uncompressed dds atlas for civilizations - better button quality
 		- Main map icons for great general points and stability
+		- New soundtrack - 22 medieval themed songs
 	
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
