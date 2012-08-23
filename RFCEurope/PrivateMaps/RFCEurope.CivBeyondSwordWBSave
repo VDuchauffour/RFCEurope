@@ -166,7 +166,7 @@ BeginPlayer
 	Team=6
 	LeaderType=LEADER_DANDOLO
 	CivType=CIVILIZATION_VENEZIA
-	PlayableCiv=1             
+	PlayableCiv=1
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
 	Handicap=HANDICAP_PRINCE
 EndPlayer
@@ -285,40 +285,40 @@ BeginPlayer
 	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
-BeginPlayer  
-	Team=23          
+BeginPlayer
+	Team=23
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
-	CivType=CIVILIZATION_INDEPENDENT                 	                 
-	PlayableCiv=0                 
-	MinorNationStatus=1                 
-	Handicap=HANDICAP_PRINCE                 
+	CivType=CIVILIZATION_INDEPENDENT
+	PlayableCiv=0
+	MinorNationStatus=1
+	Handicap=HANDICAP_PRINCE
 EndPlayer
-BeginPlayer                 
-	Team=24           
+BeginPlayer
+	Team=24
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
-	CivType=CIVILIZATION_INDEPENDENT2	                 
-	PlayableCiv=0                 
-	MinorNationStatus=1                 
-	Handicap=HANDICAP_PRINCE                 
+	CivType=CIVILIZATION_INDEPENDENT2
+	PlayableCiv=0
+	MinorNationStatus=1
+	Handicap=HANDICAP_PRINCE
 EndPlayer
-BeginPlayer                 
-	Team=25  
+BeginPlayer
+	Team=25
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
-	CivType=CIVILIZATION_INDEPENDENT3	                 
-	PlayableCiv=0                 
-	MinorNationStatus=1                 
-	Handicap=HANDICAP_PRINCE                 
+	CivType=CIVILIZATION_INDEPENDENT3
+	PlayableCiv=0
+	MinorNationStatus=1
+	Handicap=HANDICAP_PRINCE
 EndPlayer
-BeginPlayer                 
-	Team=26      
+BeginPlayer
+	Team=26
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
-	CivType=CIVILIZATION_INDEPENDENT4	                 
-	PlayableCiv=0                 
-	MinorNationStatus=1                 
+	CivType=CIVILIZATION_INDEPENDENT4
+	PlayableCiv=0
+	MinorNationStatus=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginMap

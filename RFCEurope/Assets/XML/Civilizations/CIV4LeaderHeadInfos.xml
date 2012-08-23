@@ -6,7 +6,7 @@
 <!-- Leader Infos and AI Settings -->
 <Civ4LeaderHeadInfos xmlns="x-schema:CIV4CivilizationsSchema.xml">
 	<LeaderHeadInfos>
-		<!--BARBARIAN-->
+		<!-- Barbarian -->
 		<LeaderHeadInfo>
 			<Type>LEADER_BARBARIAN</Type>
 			<Description>TXT_KEY_LEADER_BARBARIAN</Description>
@@ -159,7 +159,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Abu Yusuf Yaqub - Cordoba 2nd-->
+		<!-- Abu Yusuf Yaqub - Cordoba 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_ABUYUSUFYAQUB</Type>
 			<Description>TXT_KEY_LEADER_ABUYUSUFYAQUB</Description>
@@ -723,7 +723,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Maria Theresa - Austria 2nd-->
+		<!-- Maria Theresa - Austria 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_MARIA_THERESA</Type>
 			<Description>TXT_KEY_LEADER_MARIA_THERESA</Description>
@@ -1282,7 +1282,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Abu Bakr - Arabia 1st-->
+		<!-- Abu Bakr - Arabia 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_ABUBAKR</Type>
 			<Description>TXT_KEY_LEADER_ABUBAKR</Description>
@@ -1838,7 +1838,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Joan d'Arc - France 2nd-->
+		<!-- Joan d'Arc - France 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_JOAN</Type>
 			<Description>TXT_KEY_LEADER_JOAN</Description>
@@ -2406,7 +2406,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Matthias - Hungary 2nd-->
+		<!-- Matthias Corvinus - Hungary 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_MATTHIAS</Type>
 			<Description>TXT_KEY_LEADER_MATTHIAS</Description>
@@ -2982,7 +2982,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Barbarossa - Germany 1st-->
+		<!-- Barbarossa - Germany 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_BARBAROSSA</Type>
 			<Description>TXT_KEY_LEADER_BARBAROSSA</Description>
@@ -3558,7 +3558,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Catherine - Moscow 3rd-->
+		<!-- Catherine - Moscow 3rd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_CATHERINE</Type>
 			<Description>TXT_KEY_LEADER_CATHERINE</Description>
@@ -4121,7 +4121,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Charlemange - France 1st-->
+		<!-- Charlemange - France 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_CHARLEMAGNE</Type>
 			<Description>TXT_KEY_LEADER_CHARLEMAGNE</Description>
@@ -4684,7 +4684,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Philipp II - Spain 2nd-->
+		<!-- Philip II - Spain 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_PHILIP_II</Type>
 			<Description>TXT_KEY_LEADER_PHILIP_II</Description>
@@ -5260,7 +5260,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Sobieski - Poland 2nd-->
+		<!-- Sobieski - Poland 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_SOBIESKI</Type>
 			<Description>TXT_KEY_LEADER_SOBIESKI</Description>
@@ -5521,7 +5521,7 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>70</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -5529,7 +5529,7 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>70</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
@@ -5833,7 +5833,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Christian IV - Norse 3rd-->
+		<!-- Christian IV - Norse 3rd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_CHRISTIAN_IV</Type>
 			<Description>TXT_KEY_LEADER_CHRISTIAN_IV</Description>
@@ -6077,11 +6077,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -6089,11 +6089,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -6101,11 +6101,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -6417,7 +6417,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--William - England 1st-->
+		<!-- William - England 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_WILLIAM</Type>
 			<Description>TXT_KEY_LEADER_WILLIAM</Description>
@@ -6997,7 +6997,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Afonso - Portugal 1st-->
+		<!-- Afonso Henriques - Portugal 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_AFONSO</Type>
 			<Description>TXT_KEY_LEADER_AFONSO</Description>
@@ -7577,7 +7577,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Mehmed - Turkey 1st-->
+		<!-- Mehmed II - Turkey 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_MEHMED</Type>
 			<Description>TXT_KEY_LEADER_MEHMED</Description>
@@ -8149,7 +8149,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Saladin - Arabia 2nd-->
+		<!-- Saladin - Arabia 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_SALADIN</Type>
 			<Description>TXT_KEY_LEADER_SALADIN</Description>
@@ -8716,7 +8716,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Maximilian - Austria 1st-->
+		<!-- Maximilian - Austria 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_MAXIMILIAN</Type>
 			<Description>TXT_KEY_LEADER_MAXIMILIAN</Description>
@@ -9284,7 +9284,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Simeon - Bulgaria -->
+		<!-- Simeon - Bulgaria -->
 		<LeaderHeadInfo>
 			<Type>LEADER_SIMEON</Type>
 			<Description>TXT_KEY_LEADER_SIMEON</Description>
@@ -9853,7 +9853,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Philip the Bold - Burgundy-->
+		<!-- Philip the Bold - Burgundy -->
 		<LeaderHeadInfo>
 			<Type>LEADER_PHILIP_THE_BOLD</Type>
 			<Description>TXT_KEY_LEADER_PHILIP_THE_BOLD</Description>
@@ -10425,7 +10425,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Justinian - Byzantium-->
+		<!-- Justinian - Byzantium -->
 		<LeaderHeadInfo>
 			<Type>LEADER_JUSTINIAN</Type>
 			<Description>TXT_KEY_LEADER_JUSTINIAN</Description>
@@ -10988,7 +10988,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Abd-ar-Rahman - Cordoba 1st-->
+		<!-- Abd-ar-Rahman - Cordoba 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_ABDARRAHMAN</Type>
 			<Description>TXT_KEY_LEADER_ABDARRAHMAN</Description>
@@ -11560,7 +11560,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Willem Van Oranje - Dutch -->
+		<!-- Willem van Oranje - Dutch -->
 		<LeaderHeadInfo>
 			<Type>LEADER_WILLEM_VAN_ORANJE</Type>
 			<Description>TXT_KEY_LEADER_WILLEM_VAN_ORANJE</Description>
@@ -11808,11 +11808,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -11820,11 +11820,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -11832,11 +11832,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -11876,11 +11876,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_CANCELLED_OPEN_BORDERS</MemoryType>
-					<iMemoryRand>20</iMemoryRand>
+					<iMemoryRand>10</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_TRADED_TECH_TO_US</MemoryType>
-					<iMemoryRand>70</iMemoryRand>
+					<iMemoryRand>100</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_RECEIVED_TECH_FROM_ANY</MemoryType>
@@ -12144,7 +12144,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Elizabeth - England 2nd-->
+		<!-- Elizabeth - England 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_ELIZABETH</Type>
 			<Description>TXT_KEY_LEADER_ELIZABETH</Description>
@@ -12388,11 +12388,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -12400,11 +12400,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -12412,11 +12412,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -12732,7 +12732,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Louis XIV - France 3rd-->
+		<!-- Louis XIV - France 3rd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_LOUIS_XIV</Type>
 			<Description>TXT_KEY_LEADER_LOUIS_XIV</Description>
@@ -12980,11 +12980,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -12992,11 +12992,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -13004,11 +13004,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -13048,11 +13048,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_CANCELLED_OPEN_BORDERS</MemoryType>
-					<iMemoryRand>20</iMemoryRand>
+					<iMemoryRand>25</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_TRADED_TECH_TO_US</MemoryType>
-					<iMemoryRand>70</iMemoryRand>
+					<iMemoryRand>80</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_RECEIVED_TECH_FROM_ANY</MemoryType>
@@ -13299,7 +13299,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Simone - Genoa-->
+		<!-- Simone Boccanegra - Genoa -->
 		<LeaderHeadInfo>
 			<Type>LEADER_SIMONE</Type>
 			<Description>TXT_KEY_LEADER_SIMONE</Description>
@@ -13887,7 +13887,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Frederick - Germany 2nd-->
+		<!-- Frederick - Germany 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_FREDERICK</Type>
 			<Description>TXT_KEY_LEADER_FREDERICK</Description>
@@ -14460,7 +14460,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Stephen - Hungary 1st-->
+		<!-- Stephen I - Hungary 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_STEPHEN</Type>
 			<Description>TXT_KEY_LEADER_STEPHEN</Description>
@@ -15040,7 +15040,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Yaroslav - Kiev-->
+		<!-- Yaroslav - Kievan Rus -->
 		<LeaderHeadInfo>
 			<Type>LEADER_YAROSLAV</Type>
 			<Description>TXT_KEY_LEADER_YAROSLAV</Description>
@@ -15607,7 +15607,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Peter - Moscow 2nd-->
+		<!-- Peter - Moscow 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_PETER</Type>
 			<Description>TXT_KEY_LEADER_PETER</Description>
@@ -15851,11 +15851,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -15863,11 +15863,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -15875,11 +15875,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -15923,7 +15923,7 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_TRADED_TECH_TO_US</MemoryType>
-					<iMemoryRand>70</iMemoryRand>
+					<iMemoryRand>90</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_RECEIVED_TECH_FROM_ANY</MemoryType>
@@ -16183,7 +16183,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Casimir - Poland 1st-->
+		<!-- Casimir - Poland 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_CASIMIR</Type>
 			<Description>TXT_KEY_LEADER_CASIMIR</Description>
@@ -16755,7 +16755,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Joao - Portugal 2nd-->
+		<!-- Joao - Portugal 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_JOAO</Type>
 			<Description>TXT_KEY_LEADER_JOAO</Description>
@@ -17339,7 +17339,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Isabella - Spain 1st-->
+		<!-- Isabella - Spain 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_ISABELLA</Type>
 			<Description>TXT_KEY_LEADER_ISABELLA</Description>
@@ -17916,7 +17916,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Gustav Vasa - Sweden 1st-->
+		<!-- Gustav Vasa - Sweden 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_GUSTAVUS</Type>
 			<Description>TXT_KEY_LEADER_GUSTAVUS</Description>
@@ -18479,7 +18479,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Suleiman - Turkey 2nd-->
+		<!-- Suleiman - Turkey 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_SULEIMAN</Type>
 			<Description>TXT_KEY_LEADER_SULEIMAN</Description>
@@ -19047,7 +19047,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Enrico Dandolo - Venice 1st-->
+		<!-- Enrico Dandolo - Venice 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_DANDOLO</Type>
 			<Description>TXT_KEY_LEADER_DANDOLO</Description>
@@ -19615,7 +19615,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--The Pope - Pope-->
+		<!-- The Pope - Papal State -->
 		<LeaderHeadInfo>
 			<Type>LEADER_THE_POPE</Type>
 			<Description>TXT_KEY_LEADER_THE_POPE</Description>
@@ -20175,7 +20175,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Harald Hardrada - Norse 1st-->
+		<!-- Harald Hardrada - Norse 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_HARALD_HARDRADA</Type>
 			<Description>TXT_KEY_LEADER_HARALD_HARDRADA</Description>
@@ -20759,7 +20759,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Ivan IV - Moscow 1st-->
+		<!-- Ivan IV - Moscow 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_IVAN_IV</Type>
 			<Description>TXT_KEY_LEADER_IVAN_IV</Description>
@@ -21335,7 +21335,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--George III - England 3rd-->
+		<!-- George III - England 3rd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_GEORGE_III</Type>
 			<Description>TXT_KEY_LEADER_GEORGE_III</Description>
@@ -21579,11 +21579,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -21591,11 +21591,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -21603,11 +21603,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -21919,7 +21919,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Maria II - Portugal 3rd-->
+		<!-- Maria II - Portugal 3rd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_MARIA_II</Type>
 			<Description>TXT_KEY_LEADER_MARIA_II</Description>
@@ -22163,11 +22163,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_GIVE_HELP</MemoryType>
-					<iMemoryRand>60</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REFUSED_HELP</MemoryType>
-					<iMemoryRand>40</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPT_DEMAND</MemoryType>
@@ -22175,11 +22175,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -22187,11 +22187,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
@@ -22503,7 +22503,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Andrea Dandolo - Venice 2nd-->
+		<!-- Andrea Dandolo - Venice 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_ANDREA_DANDOLO</Type>
 			<Description>TXT_KEY_LEADER_ANDREA_DANDOLO</Description>
@@ -23063,7 +23063,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Haakon IV - Norse 2nd-->
+		<!-- Haakon IV - Norse 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_HAAKON_IV</Type>
 			<Description>TXT_KEY_LEADER_HAAKON_IV</Description>
@@ -23651,7 +23651,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Mindaugas - Lithunia 1st-->
+		<!-- Mindaugas - Lithunia 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_MINDAUGAS</Type>
 			<Description>TXT_KEY_LEADER_MINDAUGAS</Description>
@@ -24219,7 +24219,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Vytautas - Lithuania 2nd-->
+		<!-- Vytautas - Lithuania 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_VYTAUTAS</Type>
 			<Description>TXT_KEY_LEADER_VYTAUTAS</Description>
@@ -24475,11 +24475,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>60</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -24487,7 +24487,7 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>60</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
@@ -24507,7 +24507,7 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_STOP_TRADING</MemoryType>
-					<iMemoryRand>25</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_STOPPED_TRADING</MemoryType>
@@ -24531,7 +24531,7 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_CANCELLED_OPEN_BORDERS</MemoryType>
-					<iMemoryRand>20</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_TRADED_TECH_TO_US</MemoryType>
@@ -24787,7 +24787,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Karl XII - Sweden 2nd-->
+		<!-- Karl XII - Sweden 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_KARL_XII</Type>
 			<Description>TXT_KEY_LEADER_KARL_XII</Description>
@@ -25350,7 +25350,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!--Ivan Asen - Bulgaria 2nd-->
+		<!-- Ivan Asen - Bulgaria 2nd -->
 		<LeaderHeadInfo>
 			<Type>LEADER_IVAN_ASEN</Type>
 			<Description>TXT_KEY_LEADER_IVAN_ASEN</Description>
@@ -25603,11 +25603,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_REJECTED_DEMAND</MemoryType>
-					<iMemoryRand>35</iMemoryRand>
+					<iMemoryRand>40</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_RELIGION</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>50</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_RELIGION</MemoryType>
@@ -25615,11 +25615,11 @@
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_CIVIC</MemoryType>
-					<iMemoryRand>90</iMemoryRand>
+					<iMemoryRand>30</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_DENIED_CIVIC</MemoryType>
-					<iMemoryRand>30</iMemoryRand>
+					<iMemoryRand>20</iMemoryRand>
 				</MemoryDecay>
 				<MemoryDecay>
 					<MemoryType>MEMORY_ACCEPTED_JOIN_WAR</MemoryType>
