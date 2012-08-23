@@ -1,0 +1,4580 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - RFCE Dynamic Civ Names -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<!-- Arabia -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA00</Tag>
+		<English>Bedouin</English>
+		<French>Peuplade B&#233;douine</French>
+		<German>Beduinen</German>
+		<Italian>Popoli Beduini</Italian>
+		<Spanish>Pueblos Beduinos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA01</Tag>
+		<English>Abbasid State of Arabia</English>
+		<French>Etat Abbasside d'Arabie</French>
+		<German>Abbasidischer Staat Arabien</German>
+		<Italian>Stato Abbaside d'Arabia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA02</Tag>
+		<English>Rashidun Caliphate</English>
+		<French></French>
+		<German>Rechtgeleitete Kalifen</German>
+		<Italian>Califfato dei Rashidun</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA03</Tag>
+		<English>Umayyad Caliphate</English>
+		<French></French>
+		<German>Umayyaden Kalifat</German>
+		<Italian>Califfato degli Omayyadi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA04</Tag>
+		<English>Abbasid Caliphate</English>
+		<French></French>
+		<German>Abbasiden Kalifat</German>
+		<Italian>Califfato degli Abbasidi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA05</Tag>
+		<English>Arab Republic</English>
+		<French>R&#233;publique Arabe</French>
+		<German>Arabische Republik</German>
+		<Italian>Repubblica dell'Arabia</Italian>
+		<Spanish>Rep&#250;blica de Arabia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA06</Tag>
+		<English>Arabian Empire</English>
+		<French>Empire Arabe</French>
+		<German>Arabisches Reich</German>
+		<Italian>Impero Arabo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA07</Tag>
+		<English>Arabian Empire</English>
+		<French>Empire Arabe</French>
+		<German>Arabisches Reich</German>
+		<Italian>Impero Arabo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA08</Tag>
+		<English>Caliphate of Arabia</English>
+		<French>Califat d'Arabie</French>
+		<German>Kalifat Arabien</German>
+		<Italian>Califfato d'Arabia</Italian>
+		<Spanish>Califato de Arabia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA09</Tag>
+		<English>Arab Islamic Republic</English>
+		<French>R&#233;publique Islamique Arabe</French>
+		<German>Arabisch-Islamische Republik</German>
+		<Italian>Repubblica Islamica dell'Arabia</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica de Arabia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA10</Tag>
+		<English>Exarchate of Arabia</English>
+		<French>Exarchat d'Arabie</French>
+		<German>Exarchat Arabien</German>
+		<Italian>Esarcato d'Arabia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA11</Tag>
+		<English>French Levant</English>
+		<French>Levant fran&#231;ais</French>
+		<German>Französisch-Levante</German>
+		<Italian>Levante Francese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA12</Tag>
+		<English>Emirate of Arabia</English>
+		<French>Emirat d'Arabie</French>
+		<German>Emirat Arabien</German>
+		<Italian>Emirato di Arabia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA13</Tag>
+		<English>Spanish Levant</English>
+		<French>Levant Espagnol</French>
+		<German>Spanisch-Levante</German>
+		<Italian>Levante Spagnolo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA14</Tag>
+		<English>Norse Arabia</English>
+		<French>Arabie Nordiste</French>
+		<German>Nordisch-Arabien</German>
+		<Italian>Arabia Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA15</Tag>
+		<English>Venetian Levant</English>
+		<French>Levant V#233;nitien</French>
+		<German>Venezianisch-Levante</German>
+		<Italian>Levante Veneziano</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA16</Tag>
+		<English>Russian Levant</English>
+		<French>Levant Russe</French>
+		<German>Russisch-Levante</German>
+		<Italian>Levante Russo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA17</Tag>
+		<English>German Levant</English>
+		<French>Levant Allemand</French>
+		<German>Deutsch-Levante</German>
+		<Italian>Arabia Tedesca</Italian>
+		<Spanish>Arabia Alemana</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA18</Tag>
+		<English>Counties of the Levant</English>
+		<French>Comtés du Levant</French>
+		<German>Grafschaften der Levante</German>
+		<Italian>Contee del Levante</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA19</Tag>
+		<English>Habsburg Levant</English>
+		<French>Levant d'Habsbourg</French>
+		<German>Habsburger Levante</German>
+		<Italian>Levante Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA20</Tag>
+		<English>Sharifate of Mekke</English>
+		<French>Chérif de La Mecque</French>
+		<German>Scherifat Mekka</German>
+		<Italian>Sharifato della Mecca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA21</Tag>
+		<English>Province of Arabia</English>
+		<French>Province d'Arabie</French>
+		<German>Provinz Arabien</German>
+		<Italian>Provincia di Arabia</Italian>
+		<Spanish>Provincia de Arabia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA31</Tag>
+		<English>Mamluk Sultanate</English>
+		<French></French>
+		<German>Mamlukensultanat</German>
+		<Italian>Sultanato dei Mamelucchi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA32</Tag>
+		<English>Ayyubid Sultanate</English>
+		<French></French>
+		<German>Ayyubidensultanat</German>
+		<Italian>Sultanato degli Ayyubidi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARA33</Tag>
+		<English>Fatimid Caliphate</English>
+		<French></French>
+		<German>Fatimidensultanat</German>
+		<Italian>Califfato dei Fatimidi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Arabia -->
+	<!-- Austria -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS00</Tag>
+		<English>South German Peoples</English>
+		<French>Peuplade Austro-Bavaroise</French>
+		<German>Südgermanische Völker</German>
+		<Italian>Popoli Tedeschi Meridionali</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS01</Tag>
+		<English>Archduchy of Austria</English>
+		<French>Archiduché d'Autriche</French>
+		<German>Erzherzogtum Österreich</German>
+		<Italian>Arciducato d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS02</Tag>
+		<English>Habsburg Empire</English>
+		<French>Empire Habsbourg</French>
+		<German>Habsburger Reich</German>
+		<Italian>Impero Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS03</Tag>
+		<English>Archduchy of Austria</English>
+		<French>Archiduché d'Autriche</French>
+		<German>Erzherzogtum Österreich</German>
+		<Italian>Arciducato d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS04</Tag>
+		<English>Habsburg Empire</English>
+		<French>Empire Habsbourg</French>
+		<German>Habsburger Reich</German>
+		<Italian>Impero Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS05</Tag>
+		<English>Republic of Austria</English>
+		<French>R&#233;publique d'Autriche</French>
+		<German>Republik Österreich</German>
+		<Italian>Repubblica d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS08</Tag>
+		<English>Islamic Habsburg Sultanate</English>
+		<French>Sultanat Islamique Habsbourg</French>
+		<German>Islamisches Sultanat Habsburg</German>
+		<Italian>Sultanato Islamico Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS09</Tag>
+		<English>Islamic Republic of Austria</English>
+		<French>R&#233;publique Islamique d'Autriche</French>
+		<German>Islamische Republik Österreich</German>
+		<Italian>Repubblica Islamica dell'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS10</Tag>
+		<English>Exarchate of Austria</English>
+		<French>Exarchat d'Autriche</French>
+		<German>Exarchat Österreich</German>
+		<Italian>Esarcato d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS11</Tag>
+		<English>French Archduchy of Austria</English>
+		<French>Archiduché Fran&#201;ais d'Autriche</French>
+		<German>Französisches Erzherzogtum Österreich</German>
+		<Italian>Arciducato Francese d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS12</Tag>
+		<English>Emirate of Austria</English>
+		<French>Emirat d'Autriche</French>
+		<German>Emirat Österreich</German>
+		<Italian>Emirato d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS13</Tag>
+		<English>Junior Habsburg Lands</English>
+		<French>Lands d'Habsbourg</French>
+		<German>Junior Habsburger Lande</German>
+		<Italian>Terre Asburgiche</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS14</Tag>
+		<English>Norse Austria</English>
+		<French>Autriche Nordique</French>
+		<German>Nordisch-Österreich</German>
+		<Italian>Austria Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS15</Tag>
+		<English>Venetian Austria</English>
+		<French>Autriche V&#233;nitienne</French>
+		<German>Venezianisch-Österreich</German>
+		<Italian>Austria Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS16</Tag>
+		<English>Russian Austria</English>
+		<French>Autriche Russe</French>
+		<German>Russisch-Österreich</German>
+		<Italian>Austria Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS17</Tag>
+		<English>German Östmark</English>
+		<French>Grande Allemagne du Sud</French>
+		<German>Großdeutsches Reich Süd</German>
+		<Italian>Grande Germania del Sud</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS18</Tag>
+		<English>Counties of Austria</English>
+		<French>Comt&#233;s d'Autriche</French>
+		<German>Grafschaften Österreichs</German>
+		<Italian>Contee d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS19</Tag>
+		<English>Upper and Lower Austria</English>
+		<French>Autriche Intérieure et Antérieure.</French>
+		<German>Ober- und Unterösterreich </German>
+		<Italian>Alta e Bassa Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS20</Tag>
+		<English>Principality of Avusturya</English>
+		<French>Principaut&#233; d'Avusturya</French>
+		<German>Fürstentum Avusturya</German>
+		<Italian>Principato di Avusturya</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS21</Tag>
+		<English>Province of Austria</English>
+		<French>Province d'Autriche</French>
+		<German>Provinz Österreich</German>
+		<Italian>Provincia d'Austria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Austria -->
+	<!-- Bulgaria -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL00</Tag>
+		<English>Bulgar Peoples</English>
+		<French>Peuplade Bulgare</French>
+		<German>Bulgarische Völker</German>
+		<Italian>Popoli Bulgari</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL05</Tag>
+		<English>Republic of Bulgaria</English>
+		<French>R&#233;publique de Bulgarie</French>
+		<German>Republik Bulgarien</German>
+		<Italian>Repubblica di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL09</Tag>
+		<English>Islamic Republic of Bulgaria</English>
+		<French>R&#233;publique Islamique Bulgare</French>
+		<German>Islamische Republik Bulgarien</German>
+		<Italian>Repubblica Islamica di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL10</Tag>
+		<English>Theme of Bulgaria</English>
+		<French>Thème de Bulgarie</French>
+		<German>Byzantinisches Thema Bulgarien</German>
+		<Italian>Thema di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL11</Tag>
+		<English>Duchy of Bulgaria</English>
+		<French>Duché de Bulgarie</French>
+		<German>Herzogtum Bulgarien</German>
+		<Italian>Ducato di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL12</Tag>
+		<English>Emirate of Bulgaria</English>
+		<French>Emirat de Bulgarie</French>
+		<German>Emirat Bulgarien</German>
+		<Italian>Emirato di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL13</Tag>
+		<English>Spanish Kingdom of Bulgaria</English>
+		<French>Royaume Espagnole de Bulgarie</French>
+		<German>Spanisches Königreich Bulgarien</German>
+		<Italian>Regno Spagnolo di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL14</Tag>
+		<English>Varangian Bulgaria</English>
+		<French>Bulgarie Viking</French>
+		<German>Warägisch-Bulgarien</German>
+		<Italian>Bulgaria Variaga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL15</Tag>
+		<English>Venetian Bulgaria</English>
+		<French>Bulgarie V&#233;nitienne</French>
+		<German>Venezianisch-Bulgarien</German>
+		<Italian>Bulgaria Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL16</Tag>
+		<English>Principality of Bulgaria</English>
+		<French>Principaut&#233; de Bulgarie</French>
+		<German>Fürstentum Bulgarien</German>
+		<Italian>Principato di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL17</Tag>
+		<English>German Bulgaria</English>
+		<French>Bulgarie Allemande</French>
+		<German>Deutsch-Bulgarien</German>
+		<Italian>Bulgaria Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL18</Tag>
+		<English>Counties of Bulgaria</English>
+		<French>Comtés de la Bulgarie</French>
+		<German>Grafschaften Bulgariens</German>
+		<Italian>Contee di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL19</Tag>
+		<English>Habsburg Bulgaria</English>
+		<French>Bulgarie Habsbourg</French>
+		<German>Habsburger Bulgarien</German>
+		<Italian>Bulgaria Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL20</Tag>
+		<English>Principality of Rumelia</English>
+		<French>Principaut&#233; de Roum&#233;lie</French>
+		<German>Fürstentum Rumelia</German>
+		<Italian>Principato di Rumelia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL21</Tag>
+		<English>Province of Bulgaria</English>
+		<French>Province de Bulgarie</French>
+		<German>Provinz Bulgarien</German>
+		<Italian>Provincia di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_CALIPHATE</Tag>
+		<English>Caliphate of Bulgaria</English>
+		<French></French>
+		<German>Kalifat Bulgarien</German>
+		<Italian>Califfato di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_KHANATE</Tag>
+		<English>Bulgarian Khanate</English>
+		<French></French>
+		<German>Khanat Bulgarien</German>
+		<Italian>Khanato di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_TSARDOM</Tag>
+		<English>Bulgarian Tsardom</English>
+		<French></French>
+		<German>Zarentum Bulgarien</German>
+		<Italian>Zarato di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_KINGDOM</Tag>
+		<English>Bulgarian Kingdom</English>
+		<French></French>
+		<German>Königreich Bulgarien</German>
+		<Italian>Regno di Bulgaria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_EMPIRE1</Tag>
+		<English>Bulgarian Empire</English>
+		<French></French>
+		<German>Bulgarisches Reich</German>
+		<Italian>Impero Bulgaro</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_EMPIRE2</Tag>
+		<English>Second Bulgarian Empire</English>
+		<French></French>
+		<German>Zweites Bulgarisches Reich</German>
+		<Italian>Secondo Impero Bulgaro</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Bulgaria -->
+	<!-- Burgundy -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR00</Tag>
+		<English>Burgundian Peoples</English>
+		<French>Peuplade Burgonde</French>
+		<German>Burgundische Völker</German>
+		<Italian>Popoli Borgognoni</Italian>
+		<Spanish>Pueblo Burgundio</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR01</Tag>
+		<English>Kingdom of Burgundy</English>
+		<French>Royaume de Bourgogne</French>
+		<German>Königreich Burgund</German>
+		<Italian>Regno di Borgogna</Italian>
+		<Spanish>Reino de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR02</Tag>
+		<English>Kingdom of Burgundy</English>
+		<French>Royaume de Bourgogne</French>
+		<German>Königreich Burgund</German>
+		<Italian>Regno di Borgogna</Italian>
+		<Spanish>Reino de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR03</Tag>
+		<English>Duchy of Burgundy</English>
+		<French>Duché de Bourgogne</French>
+		<German>Herzogtum Burgund</German>
+		<Italian>Ducato di Borgogna</Italian>
+		<Spanish>Ducado de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR04</Tag>
+		<English>Duchy of Burgundy</English>
+		<French>Duché de Bourgogne</French>
+		<German>Herzogtum Burgund</German>
+		<Italian>Ducato di Borgogna</Italian>
+		<Spanish>Ducado de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR05</Tag>
+		<English>Burgundian Republic</English>
+		<French>R&#233;publique Bourguignonne</French>
+		<German>Republik Burgund</German>
+		<Italian>Repubblica Borgognona</Italian>
+		<Spanish>República Borgoñesa</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR06</Tag>
+		<English>Burgundy Error</English>
+		<French>Burgundy Error</French>
+		<German>Burgundy Error</German>
+		<Italian>Burgundy Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR07</Tag>
+		<English>Burgundy Error</English>
+		<French>Burgundy Error</French>
+		<German>Burgundy Error</German>
+		<Italian>Burgundy Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR08</Tag>
+		<English>Sultanate of Burgundy</English>
+		<French>Sultanat de Bourgogne</French>
+		<German>Sultanat Burgund</German>
+		<Italian>Sultanato di Borgogna</Italian>
+		<Spanish>Sultanato de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR09</Tag>
+		<English>Islamic Republic of Burgundy</English>
+		<French>R&#233;publique Islamique de Bourgogne</French>
+		<German>Islamische Republik Burgund</German>
+		<Italian>Repubblica Islamica di Borgogna</Italian>
+		<Spanish>República Islámica de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR10</Tag>
+		<English>Exarchate of Burgundy</English>
+		<French>Exarchat de Bourgogne</French>
+		<German>Exarchat Burgund</German>
+		<Italian>Esarcato di Borgogna</Italian>
+		<Spanish>Exarcado de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR11</Tag>
+		<English>French Duchy of Bourgogne</English>
+		<French>Duch&#233; Fran&#231;ais de Bougogne</French>
+		<German>Französisches Herzogtum Bourgogne</German>
+		<Italian>Ducato Francese di Borgogna</Italian>
+		<Spanish>Ducado Francés de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR12</Tag>
+		<English>Emirate of Burgundy</English>
+		<French>Emirat de Bourgogne</French>
+		<German>Emirat Burgund</German>
+		<Italian>Emirato di Borgogna</Italian>
+		<Spanish>Emirato de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR13</Tag>
+		<English>County of Burgundy</English>
+		<French>Franche-Comt&#233;</French>
+		<German>Spanisch-Burgund</German>
+		<Italian>Contea di Borgogna</Italian>
+		<Spanish>Condado de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR14</Tag>
+		<English>New Bornholm</English>
+		<French>Nouveau Bornholm</French>
+		<German>Neu Bornholm</German>
+		<Italian>Nuova Bornholm</Italian>
+		<Spanish>Nuevo Bornholm</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR15</Tag>
+		<English>Venetian Burgundy</English>
+		<French>Bourgogne V&#233;nitienne</French>
+		<German>Venezianisch-Burgund</German>
+		<Italian>Borgogna Veneziana</Italian>
+		<Spanish>Borgoña Veneciana</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR16</Tag>
+		<English>Russian Burgundy</English>
+		<French>Bourgogne Russe</French>
+		<German>Russisch-Burgund</German>
+		<Italian>Borgogna Russa</Italian>
+		<Spanish>Borgoña Rusa</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR17</Tag>
+		<English>Lothringen</English>
+		<French>Lotharingie</French>
+		<German>Lothringen</German>
+		<Italian>Lotaringia</Italian>
+		<Spanish>Lotaringia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR18</Tag>
+		<English>County of Burgundy</English>
+		<French>Comt&#233; de Bourgogne</French>
+		<German>Grafschaft Burgund</German>
+		<Italian>Contea di Borgogna</Italian>
+		<Spanish>Condado de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR19</Tag>
+		<English>Habsburg Burgundy</English>
+		<French>Bourgogne Habsbourgeoise</French>
+		<German>Habsburger Burgund</German>
+		<Italian>Borgogna Asburgica</Italian>
+		<Spanish>Borgoña Habsburguesa</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR20</Tag>
+		<English>Principality of Burgonya</English>
+		<French>Principaut&#233; de Burgonya</French>
+		<German>Fürstentum Burgonya</German>
+		<Italian>Principato di Borgogna</Italian>
+		<Spanish>Principado de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR21</Tag>
+		<English>Province of Burgundy</English>
+		<French>Province de Bourgogne</French>
+		<German>Provinz Burgund</German>
+		<Italian>Provincia di Borgogna</Italian>
+		<Spanish>Provincia de Borgoña</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Burgundy -->
+	<!-- Byzantium -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ00</Tag>
+		<English>Byzantine Empire</English>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian>Impero Bizantino</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ01</Tag>
+		<English>Byzantine Empire</English>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian>Impero Bizantino</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ02</Tag>
+		<English>Byzantine Empire</English>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian>Impero Bizantino</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ03</Tag>
+		<English>Byzantine Empire</English>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian>Impero Bizantino</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ04</Tag>
+		<English>Byzantine Empire</English>
+		<French>Empire Byzantin</French>
+		<German>Byzantinisches Reich</German>
+		<Italian>Impero Bizantino</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ05</Tag>
+		<English>Second Roman Republic</English>
+		<French>Seconde R&#233;publique Romaine</French>
+		<German>Zweite Römische Republik</German>
+		<Italian>Nuova Repubblica Romana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ06</Tag>
+		<English>Byzantine Error</English>
+		<French>Byzantine Error</French>
+		<German>Byzantine Error</German>
+		<Italian>Byzantine Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ07</Tag>
+		<English>Byzantine Error</English>
+		<French>Byzantine Error</French>
+		<German>Byzantine Error</German>
+		<Italian>Byzantine Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ08</Tag>
+		<English>Islamic Byzantine Empire</English>
+		<French>Empire Islamique Byzantin</French>
+		<German>Islamisches Byzantinisches Reich</German>
+		<Italian>Impero Islamico Bizantino</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ09</Tag>
+		<English>Islamic Roman Republic</English>
+		<French>R&#233;publique Islamique Romaine</French>
+		<German>Islamische Römische Republik</German>
+		<Italian>Repubblica Romana Islamica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ10</Tag>
+		<English>Theme of Constantinople</English>
+		<French>Thème de Constantinople</French>
+		<German>Byzantinisches Thema Konstantinopel</German>
+		<Italian>Thema di Costantinopoli</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ11</Tag>
+		<English>Duchy of Greece</English>
+		<French>Duché de Gr&#232;ce</French>
+		<German>Herzogtum Griechenland</German>
+		<Italian>Ducato di Grecia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ12</Tag>
+		<English>Emirate of Constantinople</English>
+		<French>Emirat de Constantinople</French>
+		<German>Emirat Konstantinopel</German>
+		<Italian>Emirato di Costantinopoli</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ13</Tag>
+		<English>Duchy of Neopatria</English>
+		<French>Royaume Espagnol de Gr&#232;ce</French>
+		<German>Herzogtum Neopatria</German>
+		<Italian>Ducato di Neopatria</Italian>
+		<Spanish>Ducado de Neopatria</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ14</Tag>
+		<English>Varangian Roman Empire</English>
+		<French>Empire Romain Viking</French>
+		<German>Warägisches Römisches Reich</German>
+		<Italian>Impero Romano Vichingo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ15</Tag>
+		<English>Kingdom of the Morea</English>
+		<French>Royaume de Mor&#233;e</French>
+		<German>Königreich Morea</German>
+		<Italian>Regno di Morea</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ16</Tag>
+		<English>Russian Tsargrad</English>
+		<French>Tsargrad Russe</French>
+		<German>Russisch-Tsargrad</German>
+		<Italian>Costantinopoli Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ17</Tag>
+		<English>Eastern Roman Empire</English>
+		<French>Empire Romain d'Orient</French>
+		<German>Oströmisches Reich</German>
+		<Italian>Impero Romano d'Oriente</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ18</Tag>
+		<English>Counties of Greece</English>
+		<French>Comt&#233;s de la Gr&#232;ce</French>
+		<German>Grafschaften Griechenlands</German>
+		<Italian>Contee Greche</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ19</Tag>
+		<English>Habsburg Greece</English>
+		<French>Gr&#232;ce Habsbourg</French>
+		<German>Habsburger Griechenland</German>
+		<Italian>Grecia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ20</Tag>
+		<English>Principality of Thrace</English>
+		<French>Principaut&#233; de Thrace</French>
+		<German>Fürstentum Thrakien</German>
+		<Italian>Principato di Tracia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ21</Tag>
+		<English>Province of Byzantium</English>
+		<French>Province de Byzance</French>
+		<German>Provinz Byzanz</German>
+		<Italian>Pronvincia di Bisanzio</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Byzantium -->
+	<!-- Cordoba -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR00</Tag>
+		<English>Andalusian Peoples</English>
+		<French>Peuplade Andalouse</French>
+		<German>Andalusische Völker</German>
+		<Italian>Popoli Andalusi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR01</Tag>
+		<English>Duchy of Andalusia</English>
+		<French>Duch&#233; d'Andalousie</French>
+		<German>Herzogtum Andalusien</German>
+		<Italian>Ducato dell' Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR02</Tag>
+		<English>Duchy of Andalusia</English>
+		<French>Duch&#233; d'Andalousie</French>
+		<German>Herzogtum Andalusien</German>
+		<Italian>Ducato dell' Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR03</Tag>
+		<English>Kingdom of Andalusia</English>
+		<French>Royaume d'Andalousie</French>
+		<German>Königreich Andalusien</German>
+		<Italian>Regno dell' Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR04</Tag>
+		<English>Kingdom of Andalusia</English>
+		<French>Royaume d'Andalousie</French>
+		<German>Königreich Andalusien</German>
+		<Italian>Regno dell' Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR05</Tag>
+		<English>Andalusian Republic</English>
+		<French>R&#233;publique d'Andalousie</French>
+		<German>Republik Andalusien</German>
+		<Italian>Repubblica Andalusa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR08</Tag>
+		<English>Caliphate of Cordoba</English>
+		<French>Califat de Courdoue</French>
+		<German>Kalifat Córdoba</German>
+		<Italian>Califfato di Cordoba</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR09</Tag>
+		<English>Taifa of Cordoba</English>
+		<French>Ta&#239;fa de Courdoue</French>
+		<German>Taifa Córdoba</German>
+		<Italian>Taifa di Cordoba</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR10</Tag>
+		<English>Exarchate of Andalusia</English>
+		<French>Exarchat d'Andalousie</French>
+		<German>Exarchat Andalusien</German>
+		<Italian>Esarcato di Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR11</Tag>
+		<English>Duchy of Andalusia</English>
+		<French>Duch&#233; d'Andalousie</French>
+		<German>Herzogtum Andalusien</German>
+		<Italian>Ducato di Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR12</Tag>
+		<English>Emirate of Cordoba</English>
+		<French>Emirat de Courdoue</French>
+		<German>Emirat Córdoba</German>
+		<Italian>Emirato di Cordoba</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR13</Tag>
+		<English>Kingdom of Andalusia</English>
+		<French>Andalousie Reconquite</French>
+		<German>Reconquista Andalusien</German>
+		<Italian>Regno dell' Andalusia</Italian>
+		<Spanish>Reino de Andalucia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR14</Tag>
+		<English>Norse Andalusia</English>
+		<French>Andalousie Nordique</French>
+		<German>Nordisch-Andalusien</German>
+		<Italian>Andalusia Nordica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR15</Tag>
+		<English>Venetian Andalusia</English>
+		<French>Andalousie V&#233;nitienne</French>
+		<German>Venezianisch-Andalusien</German>
+		<Italian>Andalusia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR16</Tag>
+		<English>Russian Andalusia</English>
+		<French>Andalousie Russe</French>
+		<German>Russisch-Andalusien</German>
+		<Italian>Andalusia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR17</Tag>
+		<English>German Andalusia</English>
+		<French>Andalousie Allemande</French>
+		<German>Deutsch-Andalusien</German>
+		<Italian>Andalusia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR18</Tag>
+		<English>County of Andalusia</English>
+		<French>Comt&#233; d'Andalousie</French>
+		<German>Grafschaft Andalusien</German>
+		<Italian>Contea dell'Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR19</Tag>
+		<English>Habsburg Andalusia</English>
+		<French>Andalousie Habsbourg</French>
+		<German>Habsburger Andalusien</German>
+		<Italian>Andalusia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR20</Tag>
+		<English>Principality of Endulus</English>
+		<French>Principaut&#233; de l'Endulus</French>
+		<German>Fürstentum Endulus</German>
+		<Italian>Principato dell'Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR21</Tag>
+		<English>Province of Andalusia</English>
+		<French>Province d'Andalousie</French>
+		<German>Provinz Andalusien</German>
+		<Italian>Pronvincia dell'Andalusia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_MUSLIM</Tag>
+		<English>Hafsid Caliphate</English>
+		<French>.</French>
+		<German>Hafsidenkalifat</German>
+		<Italian>Califfato degli Hafsidi</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_NONMUSLIM</Tag>
+		<English>Hafsid Kingdom</English>
+		<French>.</French>
+		<German>Königreich der Hafsiden</German>
+		<Italian>Regno degli Hafsidi</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR30</Tag>
+		<English>Exarchate of Tunisia</English>
+		<French>.</French>
+		<German>Exarchat Tunisia</German>
+		<Italian>Esarcato di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR31</Tag>
+		<English>Duchy of Tunisia</English>
+		<French>.</French>
+		<German>Herzogtum Tunesien</German>
+		<Italian>Ducato di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR32</Tag>
+		<English>Emirate of Tunisia</English>
+		<French>.</French>
+		<German>Emirat Tunesien</German>
+		<Italian>Emirato di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR33</Tag>
+		<English>Spanish Kingdom of Tunisia</English>
+		<French>.</French>
+		<German>Spanisches Königreich Tunesien</German>
+		<Italian>Regno Spagnolo di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR34</Tag>
+		<English>Norse Tunisia</English>
+		<French>.</French>
+		<German>Nordisch-Tunesien</German>
+		<Italian>Tunisia Vichinga</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR35</Tag>
+		<English>Venetian Tunisia</English>
+		<French>.</French>
+		<German>Venezianisch-Tunesien</German>
+		<Italian>Tunisia Veneziana</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR36</Tag>
+		<English>Russian Tunisia</English>
+		<French>.</French>
+		<German>Russisch-Tunesien</German>
+		<Italian>Tunisia Russa</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR37</Tag>
+		<English>German Tunisia</English>
+		<French>.</French>
+		<German>Deutsch-Tunesien</German>
+		<Italian>Tunisia Tedesca</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR38</Tag>
+		<English>County of Tunisia</English>
+		<French>.</French>
+		<German>Grafschaft Tunesien</German>
+		<Italian>Contea di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR39</Tag>
+		<English>Habsburg Tunisia</English>
+		<French>.</French>
+		<German>Habsburger Tunesien</German>
+		<Italian>Tunisia Asburgica</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR40</Tag>
+		<English>Principality of Tunisia</English>
+		<French>.</French>
+		<German>Fürstentum Tunesien</German>
+		<Italian>Principato di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR41</Tag>
+		<English>Province of Tunisia</English>
+		<French>.</French>
+		<German>Provinz Tunesien</German>
+		<Italian>Provincia di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<!-- Cordoba -->
+	<!-- Dutch -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT00</Tag>
+		<English>Batavian Peoples</English>
+		<French>Peuplade Batave</French>
+		<German>Batavische Völker</German>
+		<Italian>Popoli Batavi</Italian>
+		<Spanish>Pueblos B&#225;tavos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT01</Tag>
+		<English>Kingdom of the Netherlands</English>
+		<French>Royaume de Hollande</French>
+		<German>Königreich der Niederlande</German>
+		<Italian>Regno dei Paesi Bassi</Italian>
+		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT02</Tag>
+		<English>United Kingdom of the Netherlands</English>
+		<French>Royaume-Uni de Hollande</French>
+		<German>Vereinigtes Königreich der Niederlande</German>
+		<Italian>Regno Unito dei Paesi Bassi</Italian>
+		<Spanish>Reino Unido de los Pa&#237;ses Bajos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT03</Tag>
+		<English>Kingdom of the Netherlands</English>
+		<French>Royaume des Pays-Bas</French>
+		<German>Königreich der Niederlande</German>
+		<Italian>Regno dei Paesi Bassi</Italian>
+		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT04</Tag>
+		<English>Dutch Empire</English>
+		<French>Empire N&#233;erlandais</French>
+		<German>Holländisches Reich</German>
+		<Italian>Impero Olandese</Italian>
+		<Spanish>Imperio Holand&#233;s</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT05</Tag>
+		<English>Republic of the Seven United Netherlands</English>
+		<French>R&#233;publique des Sept Provinces Unies</French>
+		<German>Republik der Sieben Vereinigten Provinzen</German>
+		<Italian>Repubblica delle Sette Province Unite</Italian>
+		<Spanish>Rep&#250;blica de las Siete Pa&#237;ses Bajos Unidos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT08</Tag>
+		<English>Sultanate of the Netherlands</English>
+		<French>Sultanat des Pays-Bas</French>
+		<German>Sultanat der Niederlande</German>
+		<Italian>Sultanato dei Paesi Bassi</Italian>
+		<Spanish>Sultanato de los Pa&#237;ses Bajos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT09</Tag>
+		<English>Islamic Republic of the Netherlands</English>
+		<French>R&#233;publique Islamique des Pays-Bas</French>
+		<German>Islamische Republik der Niederlande</German>
+		<Italian>Repubblica Islamica dei Paesi Bassi</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica de los Pa&#237;ses Bajos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT10</Tag>
+		<English>Exarchate of Batavia</English>
+		<French>Exarchat de Batave</French>
+		<German>Exarchat Batavien</German>
+		<Italian>Esarcato di Batavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT11</Tag>
+		<English>Duchy of Batavia</English>
+		<French>Duch&#233; de Batave</French>
+		<German>Herzogtum Batavien</German>
+		<Italian>Ducato di Batavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT12</Tag>
+		<English>Emirate of the Netherlands</English>
+		<French>Emirat des Pays-Bas</French>
+		<German>Emirat der Niederlande</German>
+		<Italian>Emirato dei Paesi Bassi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT13</Tag>
+		<English>Spanish Netherlands</English>
+		<French>Pays-Bas Espagnol</French>
+		<German>Spanische Niederlande</German>
+		<Italian>Paesi Bassi Spagnoli</Italian>
+		<Spanish>Pa&#237;ses Bajos Espa&#241;oles</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT14</Tag>
+		<English>Norse Frisia</English>
+		<French>Pays-Bas Viking</French>
+		<German>Nordische Niederlande</German>
+		<Italian>Frisia Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT15</Tag>
+		<English>Venetian Netherlands</English>
+		<French>Pays-Bas V&#233;nitienne</French>
+		<German>Venezianische Niederlande</German>
+		<Italian>Paesi Bassi Veneziani</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT16</Tag>
+		<English>Russian Netherlands</English>
+		<French>Pays-Bas Russe</French>
+		<German>Russische Niederlande</German>
+		<Italian>Paesi Bassi Russi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT17</Tag>
+		<English>German Holland</English>
+		<French>Hollande Allemande</French>
+		<German>Deutsch-Holland</German>
+		<Italian>Olanda Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT18</Tag>
+		<English>County of Holland</English>
+		<French>Comt&#233; de Hollande</French>
+		<German>Grafschaft Holland</German>
+		<Italian>Contea d'Olanda</Italian>
+		<Spanish>Condado de Holanda</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT19</Tag>
+		<English>Habsburg Netherlands</English>
+		<French>Pays-Bas Habsbourg</French>
+		<German>Habsburger Niederlande</German>
+		<Italian>Paesi Bassi Asburgici</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT20</Tag>
+		<English>Principality of Holland</English>
+		<French>Principaut&#233; de Hollande</French>
+		<German>Fürstentum Holland</German>
+		<Italian>Principato d'Olanda</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT21</Tag>
+		<English>Province of Holland</English>
+		<French>Province de Hollande</French>
+		<German>Provinz Holland</German>
+		<Italian>Provincia d'Olanda</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Dutch -->
+	<!-- England -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG00</Tag>
+		<English>Anglo-Saxon Peoples</English>
+		<French>Peuplade Anglo-Saxonne</French>
+		<German>Angelsächsische Völker</German>
+		<Italian>Popoli Anglo-Sassoni</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG01</Tag>
+		<English>Kingdom of England</English>
+		<French>Royaume d'Angleterre</French>
+		<German>Königreich England</German>
+		<Italian>Reino de Inglaterra</Italian>
+		<Spanish>Reino de Inglaterra</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG02</Tag>
+		<English>Kingdom of Great Britain</English>
+		<French>Royaume de Grande-Bretagne</French>
+		<German>Königreich Großbritannien</German>
+		<Italian>Regno di Gran Bretagna</Italian>
+		<Spanish>Reino de Gran Breta&#241;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG03</Tag>
+		<English>United Kingdom of Great Britain</English>
+		<French>Royaume-Uni de Grande-Bretagne</French>
+		<German>Vereinigtes Königreich Großbritannien</German>
+		<Italian>Regno Unito di Gran Bretagna</Italian>
+		<Spanish>Reino Unido de Gran Breta&#241;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG04</Tag>
+		<English>British Empire</English>
+		<French>Empire Britannique</French>
+		<German>Britisches Reich</German>
+		<Italian>Impero Britannico</Italian>
+		<Spanish>Imperio Brit&#225;nico</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG05</Tag>
+		<English>English Commonwealth</English>
+		<French>Commonwealth Anglais</French>
+		<German>Englisches Commonwealth</German>
+		<Italian>Commonwealth d'Inghilterra</Italian>
+		<Spanish>Commonwealth de Inglaterra</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG08</Tag>
+		<English>Sultanate of England</English>
+		<French>Sultanat d'Angleterre</French>
+		<German>Sultanat England</German>
+		<Italian>Sultanato d'Inghilterra</Italian>
+		<Spanish>Sultanato de Inglaterra</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG09</Tag>
+		<English>Islamic Republic of England</English>
+		<French>R&#233;publique Islamique d'Angleterre</French>
+		<German>Islamische Republik England</German>
+		<Italian>Repubblica Islamica d'Inghilterra</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG10</Tag>
+		<English>Exarchate of Britannia</English>
+		<French>Exarchat de Bretagne</French>
+		<German>Exarchat Britannien</German>
+		<Italian>Esarcato di Britannia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG11</Tag>
+		<English>Duchy of La Manche</English>
+		<French>Duch&#233; de La Manche</French>
+		<German>Herzogtum La Manche</German>
+		<Italian>Ducato della Manica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG12</Tag>
+		<English>Emirate of England</English>
+		<French>Emirat d'Angleterre</French>
+		<German>Emirat England</German>
+		<Italian>Emirato d'Inghilterra</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG13</Tag>
+		<English>Spanish Kingdom of England</English>
+		<French>Royaume Espagnol d'Angleterre</French>
+		<German>Spanisches Königreich England</German>
+		<Italian>Regno Spagnolo d'Inghilterra</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG14</Tag>
+		<English>Danelaw Britain</English>
+		<French>Danelaw Britannique</French>
+		<German>Danelag Britannien</German>
+		<Italian>Danelaw</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG15</Tag>
+		<English>Venetian England</English>
+		<French>Angleterre V&#233;nitienne</French>
+		<German>Venezianisch-England</German>
+		<Italian>Inghilterra Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG16</Tag>
+		<English>Russian England</English>
+		<French>Angleterre Russe</French>
+		<German>Russisch-England</German>
+		<Italian>Inghilterra Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG17</Tag>
+		<English>British Saxony</English>
+		<French>Bretagne Saxonne</French>
+		<German>Britisch-Sachsen</German>
+		<Italian>Sassonia Bretone</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG18</Tag>
+		<English>Great Britain</English>
+		<French>Grande-Bretagne</French>
+		<German>Großbritannien</German>
+		<Italian>Gran Bretagna</Italian>
+		<Spanish>Gran Breta&#241;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG19</Tag>
+		<English>Habsburg England</English>
+		<French>Angleterre Habsbourg</French>
+		<German>Habsburger England</German>
+		<Italian>Inghilterra Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG20</Tag>
+		<English>Principality of Britanya</English>
+		<French>Principaut&#233; de Britanya</French>
+		<German>Fürstentum Britanya</German>
+		<Italian>Principato di Britanya</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG21</Tag>
+		<English>Province of England</English>
+		<French>Province d'Angleterre</French>
+		<German>Provinz Angleterre</German>
+		<Italian>Provincia d'Inghilterra</Italian>
+		<Spanish>Provincia de Inglaterra</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- England -->
+	<!-- France -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA00</Tag>
+		<English>Frankish Peoples</English>
+		<French>Peuplade Franques</French>
+		<German>Fränkische Völker</German>
+		<Italian>Popoli Franchi</Italian>
+		<Spanish>Pueblos Francos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA01</Tag>
+		<English>West Francia</English>
+		<French>Francie occidentale</French>
+		<German>Westfranken</German>
+		<Italian>Francia Occidentale</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA02</Tag>
+		<English>Frankish Empire</English>
+		<French>Empire Francs</French>
+		<German>Frankenreich</German>
+		<Italian>Impero Francese</Italian>
+		<Spanish>Imperio Franc&#233;s</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA03</Tag>
+		<English>Kingdom of France</English>
+		<French>Royaume de France</French>
+		<German>Königreich Frankreich</German>
+		<Italian>Regno di Francia</Italian>
+		<Spanish>Reino de Francia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA04</Tag>
+		<English>French Empire</English>
+		<French>Empire Fran&#231;ais</French>
+		<German>Französisches Reich</German>
+		<Italian>Impero Francese</Italian>
+		<Spanish>Imperio Franc&#233;s</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA05</Tag>
+		<English>French Republic</English>
+		<French>R&#233;publique Fran&#231;se</French>
+		<German>Französische Republik</German>
+		<Italian>Repubblica Francese</Italian>
+		<Spanish>Rep&#250;blica de Francia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA06</Tag>
+		<English>Frankish Error</English>
+		<French>Frankish Error</French>
+		<German>Frankish Error</German>
+		<Italian>Frankish Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA07</Tag>
+		<English>Frankish Error</English>
+		<French>Frankish Error</French>
+		<German>Frankish Error</German>
+		<Italian>Frankish Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA08</Tag>
+		<English>Sultanate of France</English>
+		<French>Sultanat de France</French>
+		<German>Sultanat Frankreich</German>
+		<Italian>Sultanato di Francia</Italian>
+		<Spanish>Sultanato de Francia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA09</Tag>
+		<English>French Islamic Republic</English>
+		<French>R&#233;publique Islamique Fran&#231;se</French>
+		<German>Französische Islamische Republik</German>
+		<Italian>Repubblica Islamica Francese</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;#mica Franc&#233;s</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA10</Tag>
+		<English>Exarchate of Gallia</English>
+		<French>Exarchat de france</French>
+		<German>Exarchat Gallia</German>
+		<Italian>Esarcato delle Gallie</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA12</Tag>
+		<English>Emirate of Frangistan</English>
+		<French>Emirat de France</French>
+		<German>Emirat Frangistan</German>
+		<Italian>Emirato di Francia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA13</Tag>
+		<English>Viceroyalty of France</English>
+		<French>Royaume Espagnole de France</French>
+		<German>Vizekönigreich Frankreich</German>
+		<Italian>Vicereame Francese</Italian>
+		<Spanish>Virreinato de Francia</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA14</Tag>
+		<English>Duchy of Normandy</English>
+		<French>Duché de Normandie</French>
+		<German>Herzogtum Normandie</German>
+		<Italian>Ducato di Normandia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA15</Tag>
+		<English>Venetian France</English>
+		<French>France V&#233;nitienne</French>
+		<German>Venezianisch-Frankreich</German>
+		<Italian>Francia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA16</Tag>
+		<English>Russian France</English>
+		<French>France Russe</French>
+		<German>Russisch-Frankreich</German>
+		<Italian>Francia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA17</Tag>
+		<English>Western Francia</English>
+		<French></French>
+		<German>Westfrankenreich</German>
+		<Italian>Francia Occidentale</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA18</Tag>
+		<English>Duchy of Chinon</English>
+		<French></French>
+		<German>Herzogtum Chinon</German>
+		<Italian>Ducato di Chinon</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA19</Tag>
+		<English>Habsburg France</English>
+		<French>France Habsbourg</French>
+		<German>Habsburger Frankreich</German>
+		<Italian>Francia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA20</Tag>
+		<English>Principality of Frangistan</English>
+		<French></French>
+		<German>Fürstentum Frangistan</German>
+		<Italian>Principato di Francia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA21</Tag>
+		<English>Emirate of Poitiers</English>
+		<French></French>
+		<German>Emirat Poitiers</German>
+		<Italian>Emirato di Poitiers</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA22</Tag>
+		<English>Western Francia</English>
+		<French></French>
+		<German>Westfrankenreich</German>
+		<Italian>Francia Occidentale</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA23</Tag>
+		<English>Province of France</English>
+		<French>Province de France</French>
+		<German>Provinz Frankreich</German>
+		<Italian>Provincia di Francia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- France -->
+	<!-- Genoa -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN00</Tag>
+		<English>Genoese Peoples</English>
+		<French>Peuplade G&#233;noise</French>
+		<German>Genuanische Völker</German>
+		<Italian>Popoli Liguri</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN01</Tag>
+		<English>Duchy of Genoa</English>
+		<French>Duch&#233; de G&#234;nes</French>
+		<German>Herzogtum Genua</German>
+		<Italian>Ducato di Genova</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN02</Tag>
+		<English>Most Serene Duchy of Genoa</English>
+		<French>Duch&#233; Serein de G&#234;nes</French>
+		<German>Erlauchtestes Herzogtum Genua</German>
+		<Italian>Serenissima Repubblica di Genova</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN03</Tag>
+		<English>Duchy of Genoa</English>
+		<French>Duch&#233; de G&#234;nes</French>
+		<German>Herzogtum Genua</German>
+		<Italian>Ducato di Genova</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN04</Tag>
+		<English>Genoese Empire</English>
+		<French>Empire G&#233;nois</French>
+		<German>Genuanisches Reich</German>
+		<Italian>Impero Genovese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN05</Tag>
+		<English>Most Serene Republic of Genoa</English>
+		<French>R&#233;publique Sereinne de G&#234;nes</French>
+		<German>Erlauchteste Republik Genua</German>
+		<Italian>Serenissima Repubblica di Genova</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN08</Tag>
+		<English>Sultanate of Genoa</English>
+		<French>Sultanat de G&#234;nes</French>
+		<German>Sultanat Genua</German>
+		<Italian>Sultanato di Genova</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN09</Tag>
+		<English>Genoese Islamic Republic</English>
+		<French>R&#233;publique Islamique de G&#234;nes</French>
+		<German>Genuanische Islamische Republik </German>
+		<Italian>Repubblica Islamica Genovese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN10</Tag>
+		<English>Exarchate of West Italy</English>
+		<French>Exarchat de l'Ouest de l'Italie</French>
+		<German>Exarchat Westitalien</German>
+		<Italian>Esarcato dell'Italia Occidentale</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN11</Tag>
+		<English>Duchy of Savoie</English>
+		<French>Duch&#233; de Savoie</French>
+		<German>Herzogtum Savoyen</German>
+		<Italian>Ducato di Savoia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN12</Tag>
+		<English>Emirate of Genoa</English>
+		<French>Emirat de G&#234;nes</French>
+		<German>Emirat Genua</German>
+		<Italian>Emirato di Genova</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN13</Tag>
+		<English>Spanish Mediterranean</English>
+		<French>M&#233;diterran&#233;e Espagnol</French>
+		<German>Spanisch-Mittelmeer</German>
+		<Italian>Mediterraneo Spagnolo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN14</Tag>
+		<English>Norse West Lombardy</English>
+		<French>Lombardie-Ouest Nordique</French>
+		<German>Nordisch-Westlombardei</German>
+		<Italian>Lombardia Occidentale Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN15</Tag>
+		<English>Venetian West Italy</English>
+		<French>Italie Ouest V&#233;nitienne</French>
+		<German>Venezianisch-Westitalien</German>
+		<Italian>Italia Occidentale Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN16</Tag>
+		<English>Russian Genoa</English>
+		<French>G&#234;nes Russe</French>
+		<German>Russisch-Genua</German>
+		<Italian>Genova Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN17</Tag>
+		<English>German Genoa</English>
+		<French>G&#234;nes Allemande</French>
+		<German>Deutsch-Genua</German>
+		<Italian>Genova Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN18</Tag>
+		<English>County of Liguria</English>
+		<French>Comt&#233; de Ligurie</French>
+		<German>Grafschaften Liguriens</German>
+		<Italian>Contea di Liguria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN19</Tag>
+		<English>Habsburg Genoa</English>
+		<French>G&#234;nes Habsbourg</French>
+		<German>Habsburger Genua</German>
+		<Italian>Genova Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN20</Tag>
+		<English>Principality of Ligurya</English>
+		<French>Principaut&#233; de Ligurya</French>
+		<German>Fürstentum Ligurya</German>
+		<Italian>Principato di Ligurya</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GEN21</Tag>
+		<English>Province of Liguria</English>
+		<French>Province de Ligurie</French>
+		<German>Provinz Ligurien</German>
+		<Italian>Provincia di Liguria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Genoa -->
+	<!-- Germany -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER00</Tag>
+		<English>Germanic Peoples</English>
+		<French>Peuplade Germanique</French>
+		<German>Germanische Völker</German>
+		<Italian>Popoli Germanici</Italian>
+		<Spanish>Pueblos Germ&#225;nicos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER01</Tag>
+		<English>Kingdom of Germany</English>
+		<French>Royaume de Germanie</French>
+		<German>Deutsches Königreich</German>
+		<Italian>Regno di Germania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER02</Tag>
+		<English>Kingdom of Germany</English>
+		<French>Royaume de Germanie</French>
+		<German>Deutsches Königreich</German>
+		<Italian>Regno di Germania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER03</Tag>
+		<English>Holy Roman Empire</English>
+		<French>Saint-Empire romain germanique</French>
+		<German>Heiliges Römisches Reich</German>
+		<Italian>Sacro Romano Impero</Italian>
+		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER04</Tag>
+		<English>Holy Roman Empire</English>
+		<French>Saint-Empire romain germanique</French>
+		<German>Heiliges Römisches Reich</German>
+		<Italian>Sacro Romano Impero</Italian>
+		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER05</Tag>
+		<English>Republic of Germany</English>
+		<French>R&#233;publique de Germanie</French>
+		<German>Deutsche Republik</German>
+		<Italian>Repubblica di Germania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER08</Tag>
+		<English>Sultanate of Germany</English>
+		<French>Sultanat de Germanie</French>
+		<German>Sultanat Deutschland</German>
+		<Italian>Sultanato di Germania</Italian>
+		<Spanish>Sultanato de Alemania</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER09</Tag>
+		<English>Islamic Republic of Germany</English>
+		<French>R&#233;publique Islamique de Germanie</French>
+		<German>Deutsche Islamische Republik</German>
+		<Italian>Repubblica Islamica di Germania</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica de Alemania</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER10</Tag>
+		<English>Exarchate of Germania</English>
+		<French>Exarchat de Germanie</French>
+		<German>Exarchat Germania</German>
+		<Italian>Esarcato di Germania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER11</Tag>
+		<English>Duchy of the Rhine</English>
+		<French>Duch&#233; du Rhin</French>
+		<German>Herzogtum am Rhein</German>
+		<Italian>Ducato del Reno</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER12</Tag>
+		<English>Emirate of Germany</English>
+		<French>Emirat de Germanie</French>
+		<German>Emirat Germania</German>
+		<Italian>Emirato di Germania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER13</Tag>
+		<English>Spanish Kingdom of Germany</English>
+		<French>Royaume Espagnol de Germanie</French>
+		<German>Spanisches Königreich Deutschland</German>
+		<Italian>Regno Spagnolo di Germania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER14</Tag>
+		<English>Greater Denmark</English>
+		<French>Grand Danemark</French>
+		<German>Groß-Dänemark</German>
+		<Italian>Grande Danimarca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER15</Tag>
+		<English>Venetian Germany</English>
+		<French>Germanie V&#233;nitienne</French>
+		<German>Venezianisch-Deutschland</German>
+		<Italian>Germania Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER16</Tag>
+		<English>Russian Germany</English>
+		<French>Germanie Russe</French>
+		<German>Russisch-Deutschland</German>
+		<Italian>Germania Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER18</Tag>
+		<English>German Counties</English>
+		<French>Comt&#233;es de Germanie</French>
+		<German>Deutsche Grafschaften</German>
+		<Italian>Contea di Germania</Italian>
+		<Spanish>Condado de Alemania</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER19</Tag>
+		<English>Northern Great Germany</English>
+		<French>Grande Germanie du Nord</French>
+		<German>Großdeutsches Reich Nord</German>
+		<Italian>Grande Germania del Nord</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER20</Tag>
+		<English>Principality of Almanya</English>
+		<French>Principaut&#233; d'Almanya</French>
+		<German>Fürstentum Almanya</German>
+		<Italian>Principato di Almanya</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER21</Tag>
+		<English>Province of Germany</English>
+		<French>Province de Germanie</French>
+		<German>Provinz Germanien</German>
+		<Italian>Provincia di Germania</Italian>
+		<Spanish>Provincia de Germania</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Germany -->
+	<!-- Hungary -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN00</Tag>
+		<English>Magyar Peoples</English>
+		<French>Peuplade Magyar</French>
+		<German>Magyarische Völker</German>
+		<Italian>Popoli Magiari</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN01</Tag>
+		<English>Kingdom of Hungary</English>
+		<French>Royaume de Hongrie</French>
+		<German>Königreich Ungarn</German>
+		<Italian>Regno d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN02</Tag>
+		<English>Hungarian Empire</English>
+		<French>Empire Hongrois</French>
+		<German>Ungarisches Reich</German>
+		<Italian>Impero Ungarico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN03</Tag>
+		<English>Kingdom of Hungary</English>
+		<French>Royaume de Hongrie</French>
+		<German>Königreich Ungarn</German>
+		<Italian>Regno d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN04</Tag>
+		<English>Hungarian Empire</English>
+		<French>Empire Hongrois</French>
+		<German>Ungarisches Reich</German>
+		<Italian>Impero Ungarico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN05</Tag>
+		<English>Republic of Hungary</English>
+		<French>R&#233;publique de Hongrie</French>
+		<German>Republik Ungarn</German>
+		<Italian>Repubblica d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN08</Tag>
+		<English>Sultanate of Hungary</English>
+		<French>Sultanat de Hongrie</French>
+		<German>Sultanat Ungarn</German>
+		<Italian>Sultanato d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN09</Tag>
+		<English>Islamic Republic of Hungary</English>
+		<French>R&#233;publique Islamique de Hongrie</French>
+		<German>Islamische Republik Ungarn</German>
+		<Italian>Repubblica Islamica d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN10</Tag>
+		<English>Exarchate of Sirmium</English>
+		<French>Exarchat de Sirmium</French>
+		<German>Exarchat Sirmium</German>
+		<Italian>Esarcato di Sirmio</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN11</Tag>
+		<English>Duchy of Hungary</English>
+		<French>Duch&#233; de Hongrie</French>
+		<German>Herzogtum Ungarn</German>
+		<Italian>Ducato d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN12</Tag>
+		<English>Emirate of Hungary</English>
+		<French>Emirat de Hongrie</French>
+		<German>Emirat Ungarn</German>
+		<Italian>Emirato d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN13</Tag>
+		<English>Spanish Kingdom of Hungary</English>
+		<French>Royaume Espagnol de Hongrie</French>
+		<German>Spanisches Königreich Ungarn</German>
+		<Italian>Regno Spagnolo d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN14</Tag>
+		<English>Norse Hungary</English>
+		<French>Hongrie Nordique</French>
+		<German>Nordisch-Ungarn</German>
+		<Italian>Ungheria Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN15</Tag>
+		<English>Venetian Hungary</English>
+		<French>Hongrie V&#233;nitienne</French>
+		<German>Venezianisch-Ungarn</German>
+		<Italian>Ungheria Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN16</Tag>
+		<English>Russian Hungary</English>
+		<French>Hongrie Russe</French>
+		<German>Russisch-Ungarn</German>
+		<Italian>Ungheria Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN17</Tag>
+		<English>German Hungary</English>
+		<French>Hongrie Allemande</French>
+		<German>Deutsch-Ungarn</German>
+		<Italian>Ungheria Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN18</Tag>
+		<English>County of Hungary</English>
+		<French>Comt&#233;es de Hongrie</French>
+		<German>Grafschaften Ungarns</German>
+		<Italian>Contea d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN19</Tag>
+		<English>Habsburg Kingdom of Hungary</English>
+		<French>Royaume Autro-Hongrois</French>
+		<German>Habsburger Königreich Ungarn</German>
+		<Italian>Regno Asburgico d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN20</Tag>
+		<English>Principality of Transylvania</English>
+		<French>Principaut&#233; de Transylvanie</French>
+		<German>Fürstentum Transsylvanien</German>
+		<Italian>Principato di Transilvania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN21</Tag>
+		<English>Province of Hungary</English>
+		<French>Province de Hongrie</French>
+		<German>Provinz Ungarn</German>
+		<Italian>Pronvincia d'Ungheria</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Hungary -->
+	<!-- Kievan Rus -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE00</Tag>
+		<English>Kievan Peoples</English>
+		<French>Peuplade Kiev</French>
+		<German>Kiewer Völker</German>
+		<Italian>Popoli Kieviti</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE01</Tag>
+		<English>Kievan Rus'</English>
+		<French>Rus' de Kiev</French>
+		<German>Kiewer Rus</German>
+		<Italian>Rus' di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE02</Tag>
+		<English>Kievan Rus'</English>
+		<French>Rus' de Kiev</French>
+		<German>Kiewer Rus</German>
+		<Italian>Rus' di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE03</Tag>
+		<English>Kievan Russia</English>
+		<French>Petite Russie</French>
+		<German>Kiewer Russland</German>
+		<Italian>Russia Kievita</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE04</Tag>
+		<English>Kievan Russia</English>
+		<French>Petite Russie</French>
+		<German>Kiewer Russland</German>
+		<Italian>Russia Kievita</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE05</Tag>
+		<English>Kievan Republic</English>
+		<French>R&#233;publique de Kiev</French>
+		<German>Kiewer Republik</German>
+		<Italian>Repubblica di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE08</Tag>
+		<English>Sultanate of Kiev</English>
+		<French>Sultanat de Kiev</French>
+		<German>Sultanat Kiew</German>
+		<Italian>Sultanato di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE09</Tag>
+		<English>Kievan Islamic Republic</English>
+		<French>R&#233;publique Islamique de Kiev</French>
+		<German>Kiewer Islamische Republik</German>
+		<Italian>Repubblica Islamica di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE10</Tag>
+		<English>Exarchate of Kiev</English>
+		<French>Exarchat de Kiev</French>
+		<German>Exarchat Kiew</German>
+		<Italian>Esarcato di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE11</Tag>
+		<English>Duchy of Kiev</English>
+		<French>Duch&#233; de Kiev</French>
+		<German>Herzogtum Kiew</German>
+		<Italian>Ducato di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE12</Tag>
+		<English>Emirate of Kiev</English>
+		<French>Emirat de Kiev</French>
+		<German>Emirat Kiew</German>
+		<Italian>Emirato di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE13</Tag>
+		<English>Spanish Kiev</English>
+		<French>Kiev Espagnol</French>
+		<German>Spanisch-Kiew</German>
+		<Italian>Kiev Spagnola</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE14</Tag>
+		<English>Varangian Kiev</English>
+		<French>Kiev Viking</French>
+		<German>Warägisch-Kiew</German>
+		<Italian>Kiev Variaga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE15</Tag>
+		<English>Venetian Kiev</English>
+		<French>Kiev V&#233;nitienne</French>
+		<German>Venezianisch-Kiew</German>
+		<Italian>Kiev Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE16</Tag>
+		<English>South Russia</English>
+		<French>Russie du Sud</French>
+		<German>Süd Russland</German>
+		<Italian>Russia Meridionale</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE17</Tag>
+		<English>German Kiev</English>
+		<French>Kiev Allemande</French>
+		<German>Deutsch-Kiew</German>
+		<Italian>Kiev Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE18</Tag>
+		<English>Counties of the Ukraine</English>
+		<French>Comt&#233;es d'Ukraine</French>
+		<German>Grafschaften der Ukraine</German>
+		<Italian>Contee dell'Ucraina</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE19</Tag>
+		<English>Habsburg Kiev</English>
+		<French>Kiev Habsbourg</French>
+		<German>Habsburger Kiew</German>
+		<Italian>Kiev Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE20</Tag>
+		<English>Principality of Kiev</English>
+		<French>Principaut&#233; de Kiev</French>
+		<German>Fürstentum Kiew</German>
+		<Italian>Principato di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_KIE21</Tag>
+		<English>Province of Kiev</English>
+		<French>Province de Kiev</French>
+		<German>Provinz Kiew</German>
+		<Italian>Provincia di Kiev</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Kievan Rus -->
+	<!-- Lithuania -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT00</Tag>
+		<English>Lithuanian People</English>
+		<French>.</French>
+		<German>Lithauische Völker</German>
+		<Italian>Popoli Lituani</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT01</Tag>
+		<English>Lithuania</English>
+		<French>.</French>
+		<German>Litauen</German>
+		<Italian>Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT02</Tag>
+		<English>Grand Duchy of Lithuania</English>
+		<French>.</French>
+		<German>Großherzogtum Litauen</German>
+		<Italian>Granducato di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT03</Tag>
+		<English>Lithuania</English>
+		<French>.</French>
+		<German>Litauen</German>
+		<Italian>Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT04</Tag>
+		<English>Lithuania</English>
+		<French>.</French>
+		<German>Litauen</German>
+		<Italian>Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT05</Tag>
+		<English>Lithuanian Republic</English>
+		<French>.</French>
+		<German>Republik Litauen</German>
+		<Italian>Repubblica di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT08</Tag>
+		<English>Sultanate of Lithuania</English>
+		<French>.</French>
+		<German>Sultanat Litauen</German>
+		<Italian>Sultanato di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT09</Tag>
+		<English>Islamic Republic of Lithuania</English>
+		<French>.</French>
+		<German>Islamische Republik Litauen</German>
+		<Italian>Repubblica Islamica di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT10</Tag>
+		<English>Exarchate of Lithuania</English>
+		<French>.</French>
+		<German>Exarchat Litauen</German>
+		<Italian>Esarcato di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT11</Tag>
+		<English>Duchy of Lithuania</English>
+		<French>.</French>
+		<German>Herzogtum Litauen</German>
+		<Italian>Ducato di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT12</Tag>
+		<English>Emirate of Lithuania</English>
+		<French>.</French>
+		<German>Emirat Litauen</German>
+		<Italian>Emirato di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT13</Tag>
+		<English>Spanish Baltics</English>
+		<French>.</French>
+		<German>Spanisches Baltikum</German>
+		<Italian>Baltico Spagnolo</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT14</Tag>
+		<English>Norse Baltics</English>
+		<French>.</French>
+		<German>Nordisches Baltikum</German>
+		<Italian>Baltico Vichingo</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT15</Tag>
+		<English>Venetian Lithuania</English>
+		<French>.</French>
+		<German>Venezianisch-Litauen</German>
+		<Italian>Lituania Veneziana</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT16</Tag>
+		<English>Russian Lithuania</English>
+		<French>.</French>
+		<German>Russisch-Litauen</German>
+		<Italian>Lituania Russa</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT17</Tag>
+		<English>German Baltics</English>
+		<French>.</French>
+		<German>Deutsches Baltikum</German>
+		<Italian>Baltico Tedesco</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT18</Tag>
+		<English>County of Lithuania</English>
+		<French>.</French>
+		<German>Grafschaft Litauen</German>
+		<Italian>Contea di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT19</Tag>
+		<English>Habsburg Baltics</English>
+		<French>.</French>
+		<German>Habsburger Baltikum</German>
+		<Italian>Baltico Asburgico</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT20</Tag>
+		<English>Principality of Lithuania</English>
+		<French>.</French>
+		<German>Fürstentum Litauen</German>
+		<Italian>Principato di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_LIT21</Tag>
+		<English>Province of Lithuania</English>
+		<French>.</French>
+		<German>Provinz Litauen</German>
+		<Italian>Provincia di Lituania</Italian>
+		<Spanish>.</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Lithuania -->
+	<!-- Muscovy -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS00</Tag>
+		<English>Muscovite Peoples</English>
+		<French>Peuplade Moscovite</French>
+		<German>Moskowitische Völker</German>
+		<Italian>Popoli Moscoviti</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS01</Tag>
+		<English>Principality of Moscow</English>
+		<French>Principaut&#233; de Moscou</French>
+		<German>Fürstentum Moskau</German>
+		<Italian>Principato di Mosca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS02</Tag>
+		<English>Grand Duchy of Moscow</English>
+		<French>Grand-Duch&#233; de Moscou</French>
+		<German>Großfürstentum Moskau</German>
+		<Italian>Granducato di Mosca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS03</Tag>
+		<English>Tsardom of Russia</English>
+		<French>Tsarie de Russie</French>
+		<German>Zarentum Russland</German>
+		<Italian>Zarato di Russia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS04</Tag>
+		<English>Tsardom of Russia</English>
+		<French>Tsarie de Russie</French>
+		<German>Zarentum Russland</German>
+		<Italian>Zarato di Russia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS05</Tag>
+		<English>Russian Republic</English>
+		<French>R&#233;publique Russe</French>
+		<German>Russische Republik</German>
+		<Italian>Repubblica Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS08</Tag>
+		<English>Islamic Tsardom of Russia</English>
+		<French>Tsarie Islamique de Russie</French>
+		<German>Islamisches Zarentum Russland</German>
+		<Italian>Zarato Islamico di Russia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS09</Tag>
+		<English>Russian Islamic Republic</English>
+		<French>R&#233;publique Islamique Russe</French>
+		<German>Russische Islamische Republik</German>
+		<Italian>Repubblica Islamica Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS10</Tag>
+		<English>Exarchate of Moscovia</English>
+		<French>Exarchat de Moscovie</French>
+		<German>Exarchat Moscovia</German>
+		<Italian>Esarcato di Moscovia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS11</Tag>
+		<English>Duchy of Muscovy</English>
+		<French>Duch&#233; de Moscovie</French>
+		<German>Herzogtum Moskowien</German>
+		<Italian>Ducato di Mosca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS12</Tag>
+		<English>Emirate of Moscow</English>
+		<French>Emirat de Moscou</French>
+		<German>Emirat Moskau</German>
+		<Italian>Emirato di Mosca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS13</Tag>
+		<English>Spanish Muscovy</English>
+		<French>Moscovie Espagnol</French>
+		<German>Spanisch-Moskowien</German>
+		<Italian>Moscovia Spagnola</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS14</Tag>
+		<English>Varangian Muscovy</English>
+		<French>Moscovie Nordique</French>
+		<German>Warägisch-Moskowien</German>
+		<Italian>Moscovia Variaga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS15</Tag>
+		<English>Venetian Muscovy</English>
+		<French>Moscovie V&#233;nitienne</French>
+		<German>Venezianisch-Moskowien</German>
+		<Italian>Moscovia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS16</Tag>
+		<English>Vladimir-Suzdal</English>
+		<French>Principaut&#233; de Vladimir-Suzdal</French>
+		<German>Fürstentum Wladimir-Susdal</German>
+		<Italian>Principato di Vladimir-Suzdal</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS17</Tag>
+		<English>German Muscovy</English>
+		<French>Moscovie Allemande</French>
+		<German>Deutsch-Moskowien</German>
+		<Italian>Moscovia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS18</Tag>
+		<English>Counties of Muscovy</English>
+		<French>Comt&#233;es de Moscovie</French>
+		<German>Grafschaften Moskowiens</German>
+		<Italian>Contea di Mosca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS19</Tag>
+		<English>Habsburg Muscovy</English>
+		<French>Moscovie Habsbourg</French>
+		<German>Habsburger Moskowien</German>
+		<Italian>Moscovia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS20</Tag>
+		<English>Principality of Moskova</English>
+		<French>Principaut&#233; de Moskova</French>
+		<German>Fürstentum Moskova</German>
+		<Italian>Principato di Mosca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOS21</Tag>
+		<English>Province of Muscovy</English>
+		<French>Province de Moscovie</French>
+		<German>Provinz Moskowien</German>
+		<Italian>Provincia di Moscovia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Muscovy -->
+	<!-- Norse -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR00</Tag>
+		<English>Scandinavian Peoples</English>
+		<French>Peuplade Scandinave</French>
+		<German>Skandinavische Völker</German>
+		<Italian>Popoli Scandinavi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR01</Tag>
+		<English>Kingdom of Denmark</English>
+		<French>Royaume de Danemark</French>
+		<German>Königreich Dänemark</German>
+		<Italian>Regno di Danimarca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR02</Tag>
+		<English>Empire of Denmark and Norway</English>
+		<French>Empire de Danemark et Norv&#232;ge</French>
+		<German>Reich Dänemarks und Norwegens</German>
+		<Italian>Impero di Danimarca e Norvegia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR03</Tag>
+		<English>Kingdoms of Denmark and Norway</English>
+		<French>Royaumes de Danemark et Norv&#232;ge</French>
+		<German>Königreiche Dänemark und Norwegen</German>
+		<Italian>Regni di Danimarca e Norvegia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR04</Tag>
+		<English>Danish Republic</English>
+		<French>.</French>
+		<German>Dänische Republik</German>
+		<Italian>Repubblica Danese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR05</Tag>
+		<English>Danish-Norwegian Republic</English>
+		<French>R&#233;publique Dano-Norv&#233;gien</French>
+		<German>Dänisch-Norwegische Republik</German>
+		<Italian>Repubbliche di Norvegia e Danimarca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR06</Tag>
+		<English>Viking Kingdoms</English>
+		<French>.</French>
+		<German>Königreich der Wikinger</German>
+		<Italian>Regni Vichinghi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR07</Tag>
+		<English>Viking Republic</English>
+		<French>.</French>
+		<German>Wikingerrepublik</German>
+		<Italian>Regni Vichinghi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR08</Tag>
+		<English>Islamic Nordic Sultanates</English>
+		<French>Sultanat Nordique</French>
+		<German>Islamisch-Nordische Sultanate</German>
+		<Italian>Sultanati Islamici del Nord</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR09</Tag>
+		<English>Nordic Islamic Republic</English>
+		<French>R&#233;publique Islamique Nordique</French>
+		<German>Nordisch-Islamische Republik</German>
+		<Italian>Repubblica Islamica del Nord</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR10</Tag>
+		<English>Exarchate of Scandinavia</English>
+		<French>Exarchat de Scandinavie</French>
+		<German>Exarchat Skandinavia</German>
+		<Italian>Esarcato di Scandinavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR11</Tag>
+		<English>Duchy of Denmark</English>
+		<French>Duch&#233; du Danemark</French>
+		<German>Herzogtum Dänemark</German>
+		<Italian>Ducato di Danimarca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR12</Tag>
+		<English>Scandinavian Emirate</English>
+		<French>Emirat Scandinave</French>
+		<German>Skandinavisches Emirat</German>
+		<Italian>Emirato della Scandinavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR13</Tag>
+		<English>Spanish Kingdom of Scandinavia</English>
+		<French>Royaume Espagnol de Scandinavie</French>
+		<German>Spanisches Königreich Skandinavien</German>
+		<Italian>Regno Spagnolo di Scandinavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR14</Tag>
+		<English>Kingdom of Denmark</English>
+		<French>Royaume du Danemark</French>
+		<German>Königreich Dänemark</German>
+		<Italian>Regno di Danimarca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR15</Tag>
+		<English>Venetian Scandinavia</English>
+		<French>Scandinavie V&#233;nitienne</French>
+		<German>Venezianisch-Skandinavien</German>
+		<Italian>Scandinavia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR16</Tag>
+		<English>Russian Scandinavia</English>
+		<French>Scandinavie Russe</French>
+		<German>Russisch-Skandinavien</German>
+		<Italian>Scandinavia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR17</Tag>
+		<English>German Scandinavia</English>
+		<French>Scandinavie Allemande</French>
+		<German>Deutsch-Skandinavien</German>
+		<Italian>Scandinavia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR18</Tag>
+		<English>Counties of Scandinavia</English>
+		<French>Comt&#233;es de Scandinavie</French>
+		<German>Grafschaften Skandinaviens</German>
+		<Italian>Contee di Scandinavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR19</Tag>
+		<English>Habsburg Scandinavia</English>
+		<French>Scandinavie Habsbourg</French>
+		<German>Habsburger Skandinavien</German>
+		<Italian>Scandinavia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR20</Tag>
+		<English>Principality of Iskandinavya</English>
+		<French>Principaut&#233; de Iskandinavya</French>
+		<German>Fürstentum Iskandinavya</German>
+		<Italian>Principato di Iskandinavya</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR21</Tag>
+		<English>Province of Scandinavia</English>
+		<French>Province de Scandinavie</French>
+		<German>Provinz Skandinavien</German>
+		<Italian>Provincia di Scandinavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR22</Tag>
+		<English>Kalmar Union</English>
+		<French></French>
+		<German>Kalmarer Union</German>
+		<Italian>Unione di Kalmar</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR23</Tag>
+		<English>Kalmar Republic</English>
+		<French></French>
+		<German>Kalmarer Republik</German>
+		<Italian>Repubblica di Kalmar</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Norse -->
+	<!-- Poland -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL00</Tag>
+		<English>Polan Peoples</English>
+		<French>Peuplade Polanes</French>
+		<German>Polanische Völker</German>
+		<Italian>Popoli Polacchi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL01</Tag>
+		<English>Kingdom of Poland</English>
+		<French>Royaume de Pologne</French>
+		<German>Königreich Polen</German>
+		<Italian>Regno di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL02</Tag>
+		<English>Polish Commonwealth</English>
+		<French>Commonwealth Polonais</French>
+		<German>Polnisches Gemeinwesen</German>
+		<Italian>Commonwealth Polacco</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL03</Tag>
+		<English>Kingdom of Poland</English>
+		<French>Royaume de Pologne</French>
+		<German>Königreich Polen</German>
+		<Italian>Regno di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL04</Tag>
+		<English>Polish Commonwealth</English>
+		<French>Commonwealth Polonais</French>
+		<German>Polnisches Gemeinwesen</German>
+		<Italian>Commonwealth Polacco</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL05</Tag>
+		<English>Republic of Poland</English>
+		<French>R&#233;publique de Pologne</French>
+		<German>Republik Polen</German>
+		<Italian>Repubblica di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL08</Tag>
+		<English>Sultanate of Poland</English>
+		<French>Sultanat de Pologne</French>
+		<German>Sultanat Polen</German>
+		<Italian>Sultanato di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL09</Tag>
+		<English>Islamic Republic of Poland</English>
+		<French>R&#233;publique Islamique de Pologne</French>
+		<German>Islamische Republik Polen</German>
+		<Italian>Repubblica Islamica di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL10</Tag>
+		<English>Exarchate of Polonia</English>
+		<French>Exarchat de Polonia</French>
+		<German>Exarchat Polonia</German>
+		<Italian>Esarcato di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL11</Tag>
+		<English>Duchy of Warsaw</English>
+		<French>Duch&#233; de Varsovie</French>
+		<German>Herzogtum Warschau</German>
+		<Italian>Ducato di Varsavia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL12</Tag>
+		<English>Emirate of Poland</English>
+		<French>Emirat de Pologne</French>
+		<German>Emirat Polen</German>
+		<Italian>Emirato di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL13</Tag>
+		<English>Spanish Kingdom of Poland</English>
+		<French>Royaume Espagnol de Pologne</French>
+		<German>Spanisches Königreich Polen</German>
+		<Italian>Regno Spagnolo di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL14</Tag>
+		<English>South Baltic State</English>
+		<French>Etat Baltique du Sud</French>
+		<German>Südbaltischer Staat</German>
+		<Italian>Stati Baltici Meridionali</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL15</Tag>
+		<English>Venetian Poland</English>
+		<French>Pologne V&#233;nitienne</French>
+		<German>Venezianisch-Polen</German>
+		<Italian>Polonia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL16</Tag>
+		<English>Congress Poland</English>
+		<French>Congr&#232;s Pologne</French>
+		<German>Kongress Polen</German>
+		<Italian>Congresso Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL17</Tag>
+		<English>Grand Duchy of Posen</English>
+		<French>Grand-Duch&#233; de Posen</French>
+		<German>Großherzogtum Posen</German>
+		<Italian>Granducato di Posen</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL18</Tag>
+		<English>Counties of Poland</English>
+		<French>Comt&#233;es de Pologne</French>
+		<German>Grafschaften Polens</German>
+		<Italian>Contea di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL19</Tag>
+		<English>Habsburg Poland</English>
+		<French>Pologne Habsbourg</French>
+		<German>Habsburger Polen</German>
+		<Italian>Polonia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL20</Tag>
+		<English>Principality of Polonya</English>
+		<French>Principaut&#233; de Polonya</French>
+		<German>Fürstentum Polonya</German>
+		<Italian>Principato di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POL21</Tag>
+		<English>Province of Poland</English>
+		<French>Province de Pologne</French>
+		<German>Provinz Polen</German>
+		<Italian>Provincia di Polonia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Poland -->
+	<!-- Portugal -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR00</Tag>
+		<English>Lusitanian Peoples</English>
+		<French>Peuplade Lusitanienne</French>
+		<German>Lusitanische Völker</German>
+		<Italian>Popoli Lusitani</Italian>
+		<Spanish>Pueblos Lusitanos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR01</Tag>
+		<English>Kingdom of Portugal</English>
+		<French>Royaume du Portugal</French>
+		<German>Königreich Portugal</German>
+		<Italian>Regno del Portogallo</Italian>
+		<Spanish>Reino de Portugal</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR02</Tag>
+		<English>Kingdom of Portugal</English>
+		<French>Royaume du Portugal</French>
+		<German>Königreich Portugal</German>
+		<Italian>Regno del Portogallo</Italian>
+		<Spanish>Reino de Portugal</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR03</Tag>
+		<English>Kingdom of Portugal</English>
+		<French>Royaume du Portugal</French>
+		<German>Königreich Portugal</German>
+		<Italian>Regno del Portogallo</Italian>
+		<Spanish>Reino de Portugal</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR04</Tag>
+		<English>Portuguese Empire</English>
+		<French>Empire Portugais</French>
+		<German>Portugiesisches Reich</German>
+		<Italian>Impero Portoghese</Italian>
+		<Spanish>Imperio Portugu&#233;s</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR05</Tag>
+		<English>Portuguese Republic</English>
+		<French>R&#233;publique Portugaise</French>
+		<German>Portugiesische Republik </German>
+		<Italian>Repubblica Portoghese</Italian>
+		<Spanish>Rep&#250;blica Portuguesa</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR08</Tag>
+		<English>Sultanate of Portugal</English>
+		<French>Sultanat du Protugal</French>
+		<German>Sultanat Portugal</German>
+		<Italian>Sultanato del Portogallo</Italian>
+		<Spanish>Sultanato de Portugal</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR09</Tag>
+		<English>Portuguese Islamic Republic</English>
+		<French>R&#233;publique Islamique Portugaise</French>
+		<German>Portugiesische Islamische Republik</German>
+		<Italian>Repubblica Islamica Portoghese</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica Portuguesa</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR10</Tag>
+		<English>Exarchate of Lusitania</English>
+		<French>Exarchat de Lusitanie</French>
+		<German>Exarchat Lusitanien</German>
+		<Italian>Esarcato di Lusitania</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR11</Tag>
+		<English>Duchy of Portugal</English>
+		<French>Duch&#233; du Portugal</French>
+		<German>Herzogtum Portugal</German>
+		<Italian>Ducato del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR12</Tag>
+		<English>Emirate of Portugal</English>
+		<French>Emirat du Portugal</French>
+		<German>Emirat Portugal</German>
+		<Italian>Emirato del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR13</Tag>
+		<English>Spanish Kingdom of Portugal</English>
+		<French>Union Ibérique</French>
+		<German>Iberische Union</German>
+		<Italian>Unione Iberica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR14</Tag>
+		<English>Suevian Kingdom of Portugal</English>
+		<French>Royaume suève</French>
+		<German>Suebisches Königreich Portugal</German>
+		<Italian>Regno Svevo del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR15</Tag>
+		<English>Venetian Portugal</English>
+		<French>Portugal V&#233;nitien</French>
+		<German>Venezianisch-Portugal</German>
+		<Italian>Portogallo Veneziano</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR16</Tag>
+		<English>Russian Portugal</English>
+		<French>Portugal Russe</French>
+		<German>Russisch-Portugal</German>
+		<Italian>Portogallo Russo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR17</Tag>
+		<English>German Portugal</English>
+		<French>Portugal Allemand</French>
+		<German>Deutsch-Portugal</German>
+		<Italian>Portogallo Tedesco</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR18</Tag>
+		<English>County of Portugal</English>
+		<French>Comt&#233; du Portugal</French>
+		<German>Grafschaft Portugal</German>
+		<Italian>Contea del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR19</Tag>
+		<English>Habsburg Portugal</English>
+		<French>Portugal Habsbourg</French>
+		<German>Habsburger Portugal</German>
+		<Italian>Portogallo Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR20</Tag>
+		<English>Principality of Portekiz</English>
+		<French>Principaut&#233; de Portekiz</French>
+		<German>Fürstentum Portekiz</German>
+		<Italian>Principato del Portekiz</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR21</Tag>
+		<English>Province of Portugal</English>
+		<French>Province du Portugal</French>
+		<German>Provinz Portugal</German>
+		<Italian>Provincia del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Portugal -->
+	<!-- Spain -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN00</Tag>
+		<English>Asturian Peoples</English>
+		<French>Peuplade Wisigoths</French>
+		<German>Westgotische Völker</German>
+		<Italian>Popoli dell'Asturia</Italian>
+		<Spanish>Pueblos Asturianos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN01</Tag>
+		<English>Kingdom of Le&#243;n</English>
+		<French>Royaume de Le&#243;n</French>
+		<German>Königreich Le&#243;n</German>
+		<Italian>Regno di Le&#243;n</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN02</Tag>
+		<English>Kingdom of Spain</English>
+		<French>Royaume d'Espagne</French>
+		<German>Königreich Spanien</German>
+		<Italian>Regno di Spagna</Italian>
+		<Spanish>Reino de Espa&#241;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN03</Tag>
+		<English>Crown of Castile</English>
+		<French>Couronne de Castille</French>
+		<German>Krone von Kastilien</German>
+		<Italian>Corona di Castiglia</Italian>
+		<Spanish>Corona de Castilla</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN04</Tag>
+		<English>Kingdom of Spain</English>
+		<French>Royaume d'Espagne</French>
+		<German>Königreich Spanien</German>
+		<Italian>Regno di Spagna</Italian>
+		<Spanish>Reino de Espa&#241;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN05</Tag>
+		<English>Spanish Republic</English>
+		<French>R&#233;publique Espagnole</French>
+		<German>Republik Spanien</German>
+		<Italian>Repubblica Spagnola</Italian>
+		<Spanish>Rep&#250;blica Espa&#421;ola</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN08</Tag>
+		<English>Emirate of Spain</English>
+		<French>Emirat d'Espagne</French>
+		<German>Emirat Spanien</German>
+		<Italian>Emirato di Spagna</Italian>
+		<Spanish>Emirato de Espa&#241;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN09</Tag>
+		<English>Spanish Islamic Republic</English>
+		<French>R&#233;publique Islamique Espagnole</French>
+		<German>Islamische Republik Spanien</German>
+		<Italian>Repubblica Islamica Spagnola</Italian>
+		<Spanish>Rep&#250;blica Isl&#225;mica Espa&#241;ola</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN10</Tag>
+		<English>Exarchate of Hispania</English>
+		<French>Exarchat d'Hispanie</French>
+		<German>Exarchat Hispanien</German>
+		<Italian>Esarcato di Spagna</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN11</Tag>
+		<English>Duchy of Leon</English>
+		<French>duch&#233; de Le&#243;n</French>
+		<German>Herzogtum León</German>
+		<Italian>Ducato di Leòn</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN12</Tag>
+		<English>Al-Andalus</English>
+		<French>Al-Andalus</French>
+		<German>Al-Andalus</German>
+		<Italian>Al-Andalus</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN13</Tag>
+		<English>Castile</English>
+		<French>Castile</French>
+		<German>Kastilien</German>
+		<Italian>Castiglia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN14</Tag>
+		<English>Visigothic Kingdom of Spain</English>
+		<French>Royaume Wisigoth d'Espagne</French>
+		<German>Westgotisches Königreich Spanien</German>
+		<Italian>Regno Visigoto di Spagna</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN15</Tag>
+		<English>Venetian Spain</English>
+		<French>Espagne V&#233;nitienne</French>
+		<German>Venezianisch-Spanien</German>
+		<Italian>Spagna Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN16</Tag>
+		<English>Russian Spain</English>
+		<French>Espagne Russe</French>
+		<German>Russisch-Spanien</German>
+		<Italian>Spagna Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN17</Tag>
+		<English>German Spain</English>
+		<French>Espagne Allemande</French>
+		<German>Deutsch-Spanien</German>
+		<Italian>Spagna Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN18</Tag>
+		<English>Counties of Spain</English>
+		<French>Comt&#233;es d'Espagne</French>
+		<German>Grafschaften Spaniens</German>
+		<Italian>Contee di Spagna</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN19</Tag>
+		<English>Habsburg Spain</English>
+		<French>Espagne Habsbourg</French>
+		<German>Habsburger Spanien</German>
+		<Italian>Spagna Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN20</Tag>
+		<English>Principality of Ispanya</English>
+		<French>Principaut&#233; d'Ispanya</French>
+		<German>Fürstentum Ispanya</German>
+		<Italian>Principato d'Iberia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN21</Tag>
+		<English>Province of Spain</English>
+		<French>Province d'Espagne</French>
+		<German>Provinz Spanien</German>
+		<Italian>Provincia di Hispani</Italian>
+		<Spanish>Provincia de Hispania</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Spain -->
+	<!-- Sweden -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE00</Tag>
+		<English>Swedish Peoples</English>
+		<French>Peuplade Su&#233;doise</French>
+		<German>Schwedische Völker</German>
+		<Italian>Popoli Svedesi</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE01</Tag>
+		<English>Kingdom of Sweden</English>
+		<French>Royaume de Su&#232;de</French>
+		<German>Königreich Schweden</German>
+		<Italian>Regno di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE02</Tag>
+		<English>Swedish Empire</English>
+		<French>Empire Su&#233;dois</French>
+		<German>Schwedisches Reich</German>
+		<Italian>Impero Svedese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE03</Tag>
+		<English>Kingdom of Sweden</English>
+		<French>Royaume de Su&#232;de</French>
+		<German>Königreich Schweden</German>
+		<Italian>Regno di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE04</Tag>
+		<English>Swedish Empire</English>
+		<French>Empire Su&#233;dois</French>
+		<German>Schwedisches Reich</German>
+		<Italian>Impero Svedese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE05</Tag>
+		<English>Republic of Sweden</English>
+		<French>R&#233;publique de Su&#232;de</French>
+		<German>Republik Schweden</German>
+		<Italian>Repubblica di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE08</Tag>
+		<English>Sultanate of Sweden</English>
+		<French>Sultanat de Su&#232;de</French>
+		<German>Sultanat Schweden</German>
+		<Italian>Sultanato di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE09</Tag>
+		<English>Islamic Republic of Sweden</English>
+		<French>R&#233;publique Islamique de Su&#232;de</French>
+		<German>Islamische Republik Schweden</German>
+		<Italian>Repubblica Islamica di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE10</Tag>
+		<English>Exarchate of Suedia</English>
+		<French>Exarchate de Su&#232;de</French>
+		<German>Exarchat Suedia</German>
+		<Italian>Esarcato di Suedia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE11</Tag>
+		<English>Duchy of Sweden</English>
+		<French>Duch&#233; de Su&#232;de</French>
+		<German>Herzogtum Schweden</German>
+		<Italian>Ducato di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE12</Tag>
+		<English>Emirate of Sweden</English>
+		<French>Emirat de Su&#232;de</French>
+		<German>Emirat Schweden</German>
+		<Italian>Emirato di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE13</Tag>
+		<English>Spanish Kingdom of Sweden</English>
+		<French>Royaume Espagnol de Su&#232;de</French>
+		<German>Spanisches Königreich Schweden</German>
+		<Italian>Regno Spagnolo di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE14</Tag>
+		<English>Kalmar Sweden</English>
+		<French>Su&#232;de Kalmar</French>
+		<German>Kalmar Schweden</German>
+		<Italian>Kalmar Svedese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE15</Tag>
+		<English>Venetian Sweden</English>
+		<French>Su&#232;de V&#233;nitienne</French>
+		<German>Venezianisch-Schweden</German>
+		<Italian>Svezia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE16</Tag>
+		<English>Russian Sweden</English>
+		<French>Su&#232;de Russe</French>
+		<German>Russisch-Schweden</German>
+		<Italian>Svezia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE17</Tag>
+		<English>German Sweden</English>
+		<French>Su&#232;de Allemande</French>
+		<German>Deutsch-Schweden</German>
+		<Italian>Svezia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE18</Tag>
+		<English>Counties of Sweden</English>
+		<French>Comt&#233;s de Su&#232;de</French>
+		<German>Grafschaften Schwedens</German>
+		<Italian>Contee di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE19</Tag>
+		<English>Habsburg Sweden</English>
+		<French>Su&#232;de Habsbourg</French>
+		<German>Habsburger Schweden</German>
+		<Italian>Svezia Asburgica</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE20</Tag>
+		<English>Principality of Isves</English>
+		<French>Principaut&#233; de Isves</French>
+		<German>Fürstentum Isves</German>
+		<Italian>Principato di Isves</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE21</Tag>
+		<English>Province of Sweden</English>
+		<French>Province de Su&#232;de</French>
+		<German>Provinz Schweden</German>
+		<Italian>Provincia di Svezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Sweden -->
+	<!-- Turkey -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR00</Tag>
+		<English>Turkish Peoples</English>
+		<French>Peuplades Turques</French>
+		<German>Turkvölker</German>
+		<Italian>Popoli Turchi</Italian>
+		<Spanish>Pueblos Turcos</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR01</Tag>
+		<English>Turkish Empire</English>
+		<French>Empire Turc</French>
+		<German>Türkisches Reich</German>
+		<Italian>Impero Turco</Italian>
+		<Spanish>Imperio Turco</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR02</Tag>
+		<English>Turkish Empire</English>
+		<French>Empire Turc</French>
+		<German>Türkisches Reich</German>
+		<Italian>Impero Turco</Italian>
+		<Spanish>Imperio Turco</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR03</Tag>
+		<English>Sublime Ottoman State</English>
+		<French>Sublime Etat Ottoman</French>
+		<German>Erhabener Osmanischer Staat</German>
+		<Italian>Sublime Stato Ottomano</Italian>
+		<Spanish>Sublime Estado Otomano</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR04</Tag>
+		<English>Sublime Ottoman State</English>
+		<French>Sublime Etat Ottoman</French>
+		<German>Erhabener Osmanischer Staat</German>
+		<Italian>Sublime Stato Ottomano</Italian>
+		<Spanish>Sublime Estado Otomano</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR05</Tag>
+		<English>Republic of Turkey</English>
+		<French>R&#233;publique de Turquie</French>
+		<German>Republik Türkei</German>
+		<Italian>Repubblica di Turchia</Italian>
+		<Spanish>Rep&#250;blica de Turqu&#237;a</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR08</Tag>
+		<English>Ottoman Caliphate</English>
+		<French>Califat Ottoman</French>
+		<German>Osmanisches Kalifat</German>
+		<Italian>Califfato Ottomano</Italian>
+		<Spanish>Califato Otomano</Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR09</Tag>
+		<English>Islamic Republic of Turkey</English>
+		<French>R&#233;publique Islamique de Turquie</French>
+		<German>Islamische Republik Türkei</German>
+		<Italian>Repubblica Islamica di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR10</Tag>
+		<English>Theme of the Anatolics</English>
+		<French>Th&#232;me de l'Anatolique</French>
+		<German>Byzantinisches Thema Anatolikon</German>
+		<Italian>Thema dell'Anatolia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR11</Tag>
+		<English>French Turkey</English>
+		<French>Turquie Fran&#201;aise</French>
+		<German>Französisch-Türkei</German>
+		<Italian>Turchia Francese</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR12</Tag>
+		<English>Ottoman Beylik</English>
+		<French>Beylik Ottoman</French>
+		<German>Osmanisches Beylik</German>
+		<Italian>Beilikato Ottomano</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR13</Tag>
+		<English>Spanish Kingdom of Turkey</English>
+		<French>Royaume Espagnol de Turquie</French>
+		<German>Spanisches Königreich Türkei</German>
+		<Italian>Regno Spagnolo di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR14</Tag>
+		<English>Norse Turkey</English>
+		<French>Turquie Nordique</French>
+		<German>Nordisch-Türkei</German>
+		<Italian>Turchia Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR15</Tag>
+		<English>Venetian Turkey</English>
+		<French>Turquie V&#233;nitienne</French>
+		<German>Venezianisch-Türkei</German>
+		<Italian>Turchia Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR16</Tag>
+		<English>Russian Turkey</English>
+		<French>Turquie Russe</French>
+		<German>Russisch-Türkei</German>
+		<Italian>Turchia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR17</Tag>
+		<English>German Turkey</English>
+		<French>Turquie Allemande</French>
+		<German>Deutsch-Türkei</German>
+		<Italian>Turchia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR18</Tag>
+		<English>Counties of Turkey</English>
+		<French>Comt&#233;s de Turquie</French>
+		<German>Grafschaften der Türkei</German>
+		<Italian>Contee di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR19</Tag>
+		<English>Austrian Turkey</English>
+		<French>Turquie Autrichienne</French>
+		<German>Österreichisch-Türkei</German>
+		<Italian>Turchia Austriaca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR20</Tag>
+		<English>Principality of Anadolu</English>
+		<French>Principaut&#233; de Anadolu</French>
+		<German>Fürstentum Anadolu</German>
+		<Italian>Principato di Anadolu</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUR21</Tag>
+		<English>Province of Turkey</English>
+		<French>Province de Turquie</French>
+		<German>Provinz Türkei</German>
+		<Italian>Provincia di Turchia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Turkey -->
+	<!-- Venezia -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN00</Tag>
+		<English>Venetian Peoples</English>
+		<French>Peuplade V&#233;nitienne</French>
+		<German>Venezianische Völker</German>
+		<Italian>Popoli Veneziane</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN01</Tag>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN02</Tag>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN03</Tag>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN04</Tag>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN05</Tag>
+		<English>Most Serene Republic of Venice</English>
+		<French>R&#233;publique Sereinne de Venise</French>
+		<German>Erlauchteste Republik Venedig</German>
+		<Italian>Serenissima Repubblica di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN06</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN07</Tag>
+		<English>Placeholder Error</English>
+		<French>Placeholder Error</French>
+		<German>Placeholder Error</German>
+		<Italian>Placeholder Error</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN08</Tag>
+		<English>Sultanate of Venice</English>
+		<French>Sultanat de Venise</French>
+		<German>Sultanat Venedig</German>
+		<Italian>Sultanato di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN09</Tag>
+		<English>Venetian Islamic Republic</English>
+		<French>R&#233;publique Islamique V&#233;nitienne</French>
+		<German>Venezianische Islamische Republik</German>
+		<Italian>Repubblica Islamica Veneziana</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN10</Tag>
+		<English>Exarchate of Ravenna</English>
+		<French>Exarchat de Ravenne</French>
+		<German>Exarchat Ravenna</German>
+		<Italian>Esarcato di Ravenna</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN11</Tag>
+		<English>French Kingdom of Italy</English>
+		<French>Royaume Fran&#201;ais d'Italie</French>
+		<German>Französisches Königreich Italien</German>
+		<Italian>Regno Francese d'Italia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN12</Tag>
+		<English>Emirate of Venice</English>
+		<French>Emirat de Venise</French>
+		<German>Emirat Venedig</German>
+		<Italian>Emirato di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN13</Tag>
+		<English>Spanish Protectorate of Venice</English>
+		<French>Duch&#233; Espagnol de Venise</French>
+		<German>Spanisches Herzogtum Venedig</German>
+		<Italian>Ducato Spagnolo di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN14</Tag>
+		<English>Norse East Lombardy</English>
+		<French>Lombarie-Est Nordique</French>
+		<German>Nordisch-Ostlombardei</German>
+		<Italian>Lombardia Orientale Vichinga</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN15</Tag>
+		<English>Dogado of Venice</English>
+		<French>Dogado de Venise</French>
+		<German>Dogado Venedig</German>
+		<Italian>Dogado di Venezia</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN16</Tag>
+		<English>Russian Venice</English>
+		<French>Venise Russe</French>
+		<German>Russisch-Venedig</German>
+		<Italian>Venezia Russa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN17</Tag>
+		<English>German Venice</English>
+		<French>Venise Allemande</French>
+		<German>Deutsch-Venedig</German>
+		<Italian>Venezia Tedesca</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN18</Tag>
+		<English>Counties of Venice</English>
+		<French>Comt&#233;es de Venise</French>
+		<German>Grafschaften Venedigs</German>
+		<Italian>Contee Veneziane</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN19</Tag>
+		<English>Habsburg Venezia-Lombardy</English>
+		<French>Lombarie-V&#233;n&#233;tie Habsbourg</French>
+		<German>Habsburger Lombardei-Venedig</German>
+		<Italian>Veneto-Lombardo Asburgico</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN20</Tag>
+		<English>Principality of Venedik</English>
+		<French>Principaut&#233; de Venedik</French>
+		<German>Fürstentum Venedik</German>
+		<Italian>Principato di Venedik</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_VEN21</Tag>
+		<English>Province of Veneto</English>
+		<French>Province de Veneto</French>
+		<German>Provinz Veneto</German>
+		<Italian>Provincia del Veneto</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Venezia -->
+	<!-- Pope -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_POP00</Tag>
+		<English>Papal States</English>
+		<French>&#201;tats pontificaux</French>
+		<German>Kirchenstaat</German>
+		<Italian>Stato della Chiesa</Italian>
+		<Spanish></Spanish>
+		<Russian></Russian>
+	</TEXT>
+	<!-- Pope -->
+</Civ4GameText>
