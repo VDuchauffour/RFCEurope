@@ -1804,8 +1804,8 @@
 		<ScriptID>AS2D_ANNI_NOVI_NOVITAS</ScriptID>
 		<SoundID>SONG_ANNI_NOVI_NOVITAS</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>95</iMinVolume>
+		<iMaxVolume>95</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1827,8 +1827,8 @@
 		<ScriptID>AS2D_BAILEMOS</ScriptID>
 		<SoundID>SONG_BAILEMOS</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1873,8 +1873,8 @@
 		<ScriptID>AS2D_CANTIGAS</ScriptID>
 		<SoundID>SONG_CANTIGAS</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>95</iMinVolume>
+		<iMaxVolume>95</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1896,8 +1896,8 @@
 		<ScriptID>AS2D_CONDITOR</ScriptID>
 		<SoundID>SONG_CONDITOR</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1919,8 +1919,8 @@
 		<ScriptID>AS2D_DINDIRIDIN</ScriptID>
 		<SoundID>SONG_DINDIRIDIN</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>80</iMinVolume>
+		<iMaxVolume>80</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1942,8 +1942,8 @@
 		<ScriptID>AS2D_DEUCE_DAME_JOLIE</ScriptID>
 		<SoundID>SONG_DEUCE_DAME_JOLIE</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>85</iMinVolume>
-		<iMaxVolume>85</iMaxVolume>
+		<iMinVolume>100</iMinVolume>
+		<iMaxVolume>100</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1965,8 +1965,8 @@
 		<ScriptID>AS2D_DUM_PATER_FAMILIAS</ScriptID>
 		<SoundID>SONG_DUM_PATER_FAMILIAS</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -1988,8 +1988,8 @@
 		<ScriptID>AS2D_ENO_SAGRADO_EN_VIGO</ScriptID>
 		<SoundID>SONG_ENO_SAGRADO_EN_VIGO</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>100</iMinVolume>
+		<iMaxVolume>100</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2011,8 +2011,8 @@
 		<ScriptID>AS2D_INTROIT_BENEDICTA_SIT</ScriptID>
 		<SoundID>SONG_INTROIT_BENEDICTA_SIT</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2034,8 +2034,8 @@
 		<ScriptID>AS2D_JAY_GRANT_ESPOIR</ScriptID>
 		<SoundID>SONG_JAY_GRANT_ESPOIR</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>95</iMinVolume>
+		<iMaxVolume>95</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2057,8 +2057,8 @@
 		<ScriptID>AS2D_MARTIN_JOGRAR</ScriptID>
 		<SoundID>SONG_MARTIN_JOGRAR</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>100</iMinVolume>
+		<iMaxVolume>100</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2080,8 +2080,8 @@
 		<ScriptID>AS2D_MIA_IRMANA_FREMOSA</ScriptID>
 		<SoundID>SONG_MIA_IRMANA_FREMOSA</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>100</iMinVolume>
+		<iMaxVolume>100</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2103,8 +2103,8 @@
 		<ScriptID>AS2D_OLAFUR_LILJUROS</ScriptID>
 		<SoundID>SONG_OLAFUR_LILJUROS</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>85</iMinVolume>
+		<iMaxVolume>85</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2126,8 +2126,8 @@
 		<ScriptID>AS2D_ON_BETHLEHEM</ScriptID>
 		<SoundID>SONG_ON_BETHLEHEM</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2149,8 +2149,8 @@
 		<ScriptID>AS2D_PAX_AETERNA</ScriptID>
 		<SoundID>SONG_PAX_AETERNA</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>100</iMinVolume>
+		<iMaxVolume>100</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2172,8 +2172,8 @@
 		<ScriptID>AS2D_POLORUM_REGINA</ScriptID>
 		<SoundID>SONG_POLORUM_REGINA</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>85</iMinVolume>
+		<iMaxVolume>85</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2195,8 +2195,8 @@
 		<ScriptID>AS2D_PROPINAN_DE_MELYOR</ScriptID>
 		<SoundID>SONG_PROPINAN_DE_MELYOR</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>85</iMinVolume>
+		<iMaxVolume>85</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2218,8 +2218,8 @@
 		<ScriptID>AS2D_QUEN_A_VIRGEN</ScriptID>
 		<SoundID>SONG_QUEN_A_VIRGEN</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>95</iMinVolume>
+		<iMaxVolume>95</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2241,8 +2241,8 @@
 		<ScriptID>AS2D_QUEN_QUER_QUE</ScriptID>
 		<SoundID>SONG_QUEN_QUER_QUE</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2264,8 +2264,8 @@
 		<ScriptID>AS2D_ROBIN_HOOD</ScriptID>
 		<SoundID>SONG_ROBIN_HOOD</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>85</iMinVolume>
+		<iMaxVolume>85</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2287,8 +2287,8 @@
 		<ScriptID>AS2D_SALTARELLO</ScriptID>
 		<SoundID>SONG_SALTARELLO</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -2310,8 +2310,8 @@
 		<ScriptID>AS2D_SKARAZULA</ScriptID>
 		<SoundID>SONG_SKARAZULA</SoundID>
 		<SoundType>GAME_MUSIC</SoundType>
-		<iMinVolume>75</iMinVolume>
-		<iMaxVolume>75</iMaxVolume>
+		<iMinVolume>90</iMinVolume>
+		<iMaxVolume>90</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
