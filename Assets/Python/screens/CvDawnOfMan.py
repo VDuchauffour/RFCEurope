@@ -144,7 +144,7 @@ class CvDawnOfMan:
 		screen.setStackedBarColors("ProgressBar", InfoBarTypes.INFOBAR_EMPTY, gc.getInfoTypeForString("COLOR_EMPTY"))
 		self.iTurnsRemaining = -1
 
-##Rhye - end		
+##Rhye - end
 		screen.addMultilineText( "BodyText", bodyString, self.X_TEXT_PANEL + self.iMarginSpace, self.Y_TEXT_PANEL + self.iMarginSpace + self.iTEXT_PANEL_MARGIN, self.W_TEXT_PANEL - (self.iMarginSpace * 2), self.H_TEXT_PANEL - (self.iMarginSpace * 2) - 139, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		
 		screen.setButtonGFC("Exit", self.EXIT_TEXT, "", self.X_EXIT, self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
@@ -158,40 +158,39 @@ class CvDawnOfMan:
 		return 0
 	
 	def update(self, fDelta):
-            
+	
 ##Rhye - begin
 		# 3Miro: tBirth?
 		#if (con.tBirth[CyGame().getActiveTeam()] == 0 or \
-                #    (not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= con.iArabia)):  #late start condition
-                #MiroTest = CyGame().getActiveTeam()
-                #print( "3Miro Test",MiroTest )
-                if (con.tBirth[CyGame().getActiveTeam()] == 0):
+		#    (not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= con.iArabia)):  #late start condition
+		#MiroTest = CyGame().getActiveTeam()
+		#print( "3Miro Test",MiroTest )
+		if (con.tBirth[CyGame().getActiveTeam()] == 0):
 			screen = CyGInterfaceScreen( "CvLoadingScreen", self.iScreenID )
 			screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
 			screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (0,)), CvUtil.FONT_CENTER_JUSTIFY, 516, 465, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                        screen.show( "Exit" )  #Rhye
+			screen.show( "Exit" )  #Rhye
 		else:                        
 			iGameTurn = CyGame().getGameTurn()
 
 			iNumAutoPlayTurns = con.tBirth[CyGame().getActiveTeam()]
 			iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
-                        
-			#if (iNumTurnsRemaining != self.iTurnsRemaining):                        
-			#	self.iTurnsRemaining = iNumTurnsRemaining                                
-                        screen = CyGInterfaceScreen( "CvLoadingScreen", self.iScreenID )
 
-                        exponent = 1 + iNumAutoPlayTurns/190
-                        if (gc.getPlayer(0).isPlayable()):  #late start condition
-                                screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn, exponent)) / float(math.pow(iNumAutoPlayTurns, exponent)))
-                        else:
-                                screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn-151, exponent)) / float(math.pow(iNumAutoPlayTurns-151, exponent)))
-                        screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (iNumTurnsRemaining,)), CvUtil.FONT_CENTER_JUSTIFY, 514, 465, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                        if (iNumTurnsRemaining <= 0):  #Rhye
-                                screen.show( "Exit" )  #Rhye
-		
-##Rhye - end
+			#if (iNumTurnsRemaining != self.iTurnsRemaining):
+			#	self.iTurnsRemaining = iNumTurnsRemaining
+			screen = CyGInterfaceScreen( "CvLoadingScreen", self.iScreenID )
+
+			exponent = 1 + iNumAutoPlayTurns/190
+			if (gc.getPlayer(0).isPlayable()):  #late start condition
+				screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn, exponent)) / float(math.pow(iNumAutoPlayTurns, exponent)))
+			else:
+				screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn-151, exponent)) / float(math.pow(iNumAutoPlayTurns-151, exponent)))
+			screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (iNumTurnsRemaining,)), CvUtil.FONT_CENTER_JUSTIFY, 514, 465, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			if (iNumTurnsRemaining <= 0):  #Rhye
+				screen.show( "Exit" )  #Rhye
+
 		return
-		
+##Rhye - end
 		
 	def onClose(self):
 		CyInterface().DoSoundtrack("AS2D_RFC") #Rhye

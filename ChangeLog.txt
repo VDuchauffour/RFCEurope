@@ -81,6 +81,7 @@ Changes for RFCE 1.1:
 		- Separate, uncompressed dds atlas for civilizations - better button quality
 		- Main map icons for great general points and stability
 		- New soundtrack - 22 medieval themed songs
+		- Era specific water worked, fishing and whaling boats
 	
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
@@ -104,6 +105,7 @@ Changes for RFCE 1.1:
 		- Fixed small python mistakes: on city name convertion, and on destroying barbarian improvements
 		- Fixed 2 different bugs with mercenary appearance/mercenary hiring. No more unhireable Welsh Longbowman for example
 		- Stability fixes by HolyHandGrenade
+		- Fixed improvement size of medieval mines
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

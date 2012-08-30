@@ -4328,6 +4328,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 		</ArtRef>
 	</LNode>
+
+	<!--- ERA WATERWORKED START -->
+
 	<LNode Name="Leaf_Water_Worked_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
@@ -4335,22 +4338,66 @@
 		<Attribute Class="RegionTest">0NW</Attribute>
 		<ArtRef Name="goal:IMPROVEMENT_WATER_WORKED">
 			<Attribute Class="Improvement">IMPROVEMENT_WATER_WORKED</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_WATER_WORKED">
+			<Attribute Class="Improvement">IMPROVEMENT_WATER_WORKED</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Waterworked/Waterworked_Medieval.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Waterworked/Waterworked.kfm</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_WATER_WORKED">
+			<Attribute Class="Improvement">IMPROVEMENT_WATER_WORKED</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Waterworked/Waterworked_Renaissance.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Waterworked/Waterworked.kfm</Attribute>
+		</ArtRef>
 	</LNode>
+
 	<LNode Name="Leaf_Water_Improvement_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<Attribute Class="RegionTest">0NW</Attribute>
+		<!-- fish -->
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS</Attribute>
+			<Attribute Class="Era">ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Medieval.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS</Attribute>
+			<Attribute Class="Era">ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Renaissance.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
+		</ArtRef>
+		<!-- whale -->
 		<ArtRef Name="goal:IMPROVEMENT_WHALING_BOATS">
 			<Attribute Class="Improvement">IMPROVEMENT_WHALING_BOATS</Attribute>
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 		</ArtRef>
 	</LNode>
+
+	<!--- ERA WATERWORKED END -->
 	
 	<LNode Name="Leaf_LandImprovement_4x4">
 		<Width>4</Width>
@@ -4360,7 +4407,7 @@
 		<!-- mine -->
 		<ArtRef Name="goal:IMPROVEMENT_MINE">
 			<Attribute Class="Improvement">IMPROVEMENT_MINE</Attribute>
-			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Era">ERA_ANCIENT,ERA_CLASSICAL,ERA_MEDIEVAL,ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Mine/Mine.nif</Attribute>
@@ -4437,12 +4484,14 @@
 	<!-- *************************************************************************** -->
 	<!-- *************************************************************************** -->
 
+	<!-- ERA WATERWORKED START -->
+
 	<LProduction From="PLOT_ROOT">
-		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_WATER_WORKED,!IMPROVEMENT_MINE,!IMPROVEMENT_PASTURE,!IMPROVEMENT_QUARRY,!IMPROVEMENT_WHALING_BOATS,!IMPROVEMENT_WINDMILL,!IMPROVEMENT_FORT</Attribute>
+		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_WATER_WORKED,!IMPROVEMENT_MINE,!IMPROVEMENT_PASTURE,!IMPROVEMENT_QUARRY,!IMPROVEMENT_WHALING_BOATS,!IMPROVEMENT_WINDMILL,!IMPROVEMENT_WATERMILL,!IMPROVEMENT_FORT</Attribute>
 		<To Name="Node_12x12"/>
 	</LProduction>
 	<LProduction From="PLOT_ROOT">
-		<Attribute Class="Improvement">IMPROVEMENT_MINE,IMPROVEMENT_WINDMILL,IMPROVEMENT_FORT</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_MINE,IMPROVEMENT_WINDMILL,IMPROVEMENT_WATERMILL,IMPROVEMENT_FORT</Attribute>
 		<Attribute Class="Bonus">BONUS_ALL</Attribute>
 		<To Name="Node_12x12"/>
 		<To Name="Leaf_LandImprovement_4x4"/>
@@ -4450,7 +4499,7 @@
 	<!-- *************************************************************************** -->
 	
 	<LProduction From="PLOT_ROOT" Name="LandImprovementProd">
-		<Attribute Class="Improvement">IMPROVEMENT_MINE,IMPROVEMENT_WINDMILL,IMPROVEMENT_FORT</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_MINE,IMPROVEMENT_WINDMILL,IMPROVEMENT_WATERMILL,IMPROVEMENT_FORT</Attribute>
 		<Attribute Class="Bonus">NO_BONUS</Attribute>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<To Name="Leaf_LandImprovement_4x4"/>
@@ -4463,12 +4512,14 @@
 	</LProduction>
 	
 	<LProduction From="PLOT_ROOT" Name="WaterImprovementProd">
-		<Attribute Class="Improvement">IMPROVEMENT_WHALING_BOATS</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_WHALING_BOATS,IMPROVEMENT_FISHING_BOATS</Attribute>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<To Name="Leaf_Water_Improvement_4x4">
 			<Translate>0,0</Translate>
 		</To>
 	</LProduction>
+
+	<!-- ERA WATERWORKED END -->
 
 	<LProduction From="PLOT_ROOT" Name="WaterWorkedProd">
 		<Attribute Class="Improvement">IMPROVEMENT_WATER_WORKED</Attribute>
