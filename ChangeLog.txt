@@ -82,6 +82,7 @@ Changes for RFCE 1.1:
 		- Main map icons for great general points and stability
 		- New soundtrack - 22 medieval themed songs
 		- Era specific water worked, fishing and whaling boats
+		- Wondermovie for Kazimierz
 	
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
