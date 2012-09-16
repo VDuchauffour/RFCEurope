@@ -394,7 +394,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>19.0</fScale>
 			<fInterfaceScale>0.52</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Golden_Bull/HumanBank.NIF</NIF>
+			<NIF>Art/Structures/Wonders/Golden_Bull/HumanBank.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,3</Button>
 		</BuildingArtInfo>
@@ -404,9 +404,9 @@
 			<bAnimated>0</bAnimated>
 			<fScale>0.72</fScale>
 			<fInterfaceScale>0.52</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Palacio_da_Pena/Palacio.NIF</NIF>
+			<NIF>Art/Structures/Wonders/Palacio_da_Pena/Palacio.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,6,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MONASTERY_OF_CLUNY</Type>
@@ -598,7 +598,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Dungeon/templar.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,8,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LEVEE</Type>
@@ -749,7 +749,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Star_Fort/star_fort.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,5,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THEATRE</Type>
@@ -1111,7 +1111,7 @@
 			<fInterfaceScale>0.62</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Lithuanian_Vaivadija/guild06.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,4,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,7,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NETHERLANDS_DIKE</Type>
