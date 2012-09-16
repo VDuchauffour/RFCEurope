@@ -93,7 +93,7 @@
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>
 			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,1</Button>
 			<PrereqProjects/>
 			<VictoryThresholds/>
 			<VictoryMinThresholds/>
