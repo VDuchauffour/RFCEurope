@@ -1206,16 +1206,16 @@
 			<DefaultBuilding>BUILDING_KRAK_DES_CHEVALIERS</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- RIBEIRA -->
-			<Type>BUILDINGCLASS_RIBEIRA</Type>
-			<Description>TXT_KEY_BUILDING_RIBEIRA</Description>
+		<BuildingClassInfo><!-- PALACIO_DA_PENA -->
+			<Type>BUILDINGCLASS_PALACIO_DA_PENA</Type>
+			<Description>TXT_KEY_BUILDING_PALACIO_DA_PENA</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_RIBEIRA</DefaultBuilding>
+			<DefaultBuilding>BUILDING_PALACIO_DA_PENA</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- MONASTERY_OF_CLUNY -->

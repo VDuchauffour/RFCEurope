@@ -2259,6 +2259,9 @@
 			<Attribute Class="Scalar">szBuilder:WallBuilder</Attribute>
 			<Attribute Class="Scalar">bLayoutAfterGenerics:1</Attribute>
 			<Attribute Class="Scalar">bNoContour:1</Attribute>
+			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Buildings/Walls/post01_eu_med.nif</Attribute>
+			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Buildings/Walls/wall%1_eu_med.nif</Attribute>
+			<Scale>1.0</Scale>
 			<Rotate>45</Rotate>
 			<!-- this needs to be the negative of the CITY_TWIST value in detail manager; note that this uses degrees but DetailManager uses radians. Sorry. -->
 		</ArtRef>
@@ -2267,26 +2270,20 @@
 			<Attribute Class="Scalar">szBuilder:WallBuilder</Attribute>
 			<Attribute Class="Scalar">bLayoutAfterGenerics:1</Attribute>
 			<Attribute Class="Scalar">bNoContour:1</Attribute>
-			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Buildings/KremlinWalls/post01_rus_ren.nif</Attribute>
-			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Buildings/KremlinWalls/wall%1_rus_ren.nif</Attribute>
+			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Buildings/Moscow_Kremlin_Walls/post01_rus_ren.nif</Attribute>
+			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Buildings/Moscow_Kremlin_Walls/wall%1_rus_ren.nif</Attribute>
+			<Scale>1.0</Scale>
 			<Rotate>45</Rotate>
 			<!-- this needs to be the negative of the CITY_TWIST value in detail manager; note that this uses degrees but DetailManager uses radians. Sorry. -->
 		</ArtRef>
-		<ArtRef Name="building:LSYSTEM_HIGH_WALLS">
+		<ArtRef Name="building:LSYSTEM_THEODOSIAN_WALLS">
 			<Attribute Class="Scalar">szSpecialLayout:CityCenter</Attribute>
 			<Attribute Class="Scalar">szBuilder:WallBuilder</Attribute>
 			<Attribute Class="Scalar">bLayoutAfterGenerics:1</Attribute>
 			<Attribute Class="Scalar">bNoContour:1</Attribute>
-			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Buildings/Tall Wall/post01_tall.nif</Attribute>
-			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Buildings/Tall Wall/wall%1_tall.nif</Attribute>
-			<Rotate>45</Rotate>
-			<!-- this needs to be the negative of the CITY_TWIST value in detail manager; note that this uses degrees but DetailManager uses radians. Sorry. -->
-		</ArtRef>
-		<ArtRef Name="building:LSYSTEM_GREAT_WALL">
-			<Attribute Class="Scalar">szSpecialLayout:CityCenter</Attribute>
-			<Attribute Class="Scalar">szBuilder:GreatWallBuilder</Attribute>
-			<Attribute Class="Scalar">bLayoutAfterGenerics:1</Attribute>
-			<Attribute Class="Scalar">bNoContour:1</Attribute>
+			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Wonders/Theodosian_Walls/post01_byz_med.nif</Attribute>
+			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Wonders/Theodosian_Walls/wall%1_byz_med.nif</Attribute>
+			<Scale>1.0</Scale>
 			<Rotate>45</Rotate>
 			<!-- this needs to be the negative of the CITY_TWIST value in detail manager; note that this uses degrees but DetailManager uses radians. Sorry. -->
 		</ArtRef>

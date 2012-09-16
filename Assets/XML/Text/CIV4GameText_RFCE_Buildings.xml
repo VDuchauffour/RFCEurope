@@ -208,14 +208,14 @@
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN</Tag>
 		<English>Bazaar</English>
 		<French>Bazar</French>
-		<German>Bazar</German>
+		<German>Basar</German>
 		<Italian>Bazar</Italian>
 		<Spanish>Bazar</Spanish>
 		<Russian>&#193;&#224;&#231;&#224;&#240;</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
-		<English>[TAB]Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, DVDs, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
+		<English>[TAB]Arabian bazaars are lively and crowded places with hundreds of stalls, and the air is filled with the cries of merchants trying to entice wary customers to purchase their goods. Virtually anything imaginable can be found in markets, from food to clothing, rugs, perfume, furniture, and so forth. Such places can be perilous for the uninitiated, for the merchants will seek to wring out the largest sum possible for their wares, and a customer who is not versed in the fine art of haggling is very likely to get taken for every penny he or she has. Bazaars have existed virtually unchanged in Arabian cities for centuries. The Grand Bazaar in Istanbul, Turkey, covers some 60 streets and contains around 400 shops. The Grand Bazaar in Tehran, Iran, has been around in one form or another for over a thousand years: with over 10 km of corridors, it is the largest covered neighborhood in the world.</English>
 		<French>.</French>
 		<German>[TAB]Basar ist das persische Wort für Markt. Wie das deutsche Wort meint Basar sowohl die Zusammenführung von Angebot und Nachfrage als auch den Handelsplatz, der hinsichtlich seiner Gestaltung, Lokalisierung und Funktion spezifische Charakteristika hat.[PARAGRAPH:2]Der Begriff Basar wird für Märkte in orientalisch-islamischen Städten verwendet und ist als Lehnwort in viele Sprachen von China bis auf den Balkan eingegangen.[PARAGRAPH:2]Ein Kennzeichen "orientalischer" Basare ist die Aneinanderreihung von Geschäften, die Waren derselben Kategorie (z. B. Schuhe, Gewürze, Stoffe) verkaufen (Branchensortierung). Im Gegensatz dazu bemühen sich mitteleuropäische Händler seit der Industrialisierung eher um Gebietsschutz, versuchen also, sich räumlich möglichst deutlich von konkurrierenden Händlern zu distanzieren. Ein weiteres Kennzeichen des Basars ist die funktionale Verflechtung von Groß- und Einzelhandel. Der Basar liegt meistens in der Nähe der Hauptmoschee.</German>
 		<Italian>.</Italian>
@@ -387,24 +387,6 @@
 		<Russian>.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INN</Tag>
-		<English>Inn</English>
-		<French>Auberge</French>
-		<German>Gasthaus</German>
-		<Italian>Locanda</Italian>
-		<Spanish>Posada</Spanish>
-		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
-		<English>[TAB]Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.[PARAGRAPH:2]Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.[PARAGRAPH:2]In Europe, it is the provision of accommodation, if anything, that now differentiates inns from taverns, alehouses and pubs. The latter tend only to supply alcohol (although in the UK the conditions of their licence sometimes require them to have a nominal supply of food and soft drinks). Inns tend to be grander and more long-lived establishments. Famous London examples include the George and The Tabard. There is however no longer a formal distinction between an inn and other kinds of establishment, and many pubs will use the name "inn", either simply because they are long established and maybe were once a Coaching inn, or to summon up a particular kind of image; however, originally an Inn had to provide not only food and lodging, but also stabling and fodder for the traveller's horse(s) and for fresh horses for the Mail coach.[PARAGRAPH:2]The original functions of an inn are now usually split among separate establishments, such as hotels, lodges, and motels, all of which might provide the traditional functions of an inn but which focus more on lodging customers than on other services; public houses, which are primarily alcohol-serving establishments; and restaurants and taverns, which serve food and drink. (Hotels often contain restaurants and also often serve complimentary breakfast and meals, thus providing all of the functions of traditional inns.) In North America, the lodging aspect of the word "inn" lives on in hotel brand names like Holiday Inn, and in some state laws that refer to lodging operators as innkeepers.</English>
-		<French>.</French>
-		<German>[TAB]Eine Gaststätte (auch: Gasthaus, Wirtshaus oder Wirtschaft) ist ein gastronomischer Betrieb, in dem Getränke oder Speisen zum sofortigen Verzehr verkauft werden und der hierzu eine Aufenthaltsmöglichkeit bietet. Als Gaststube wird der Raum bezeichnet, in dem die Gäste die Speisen und Getränke verzehren.[PARAGRAPH:2]Die ersten Gasthäuser betrieben im Mittelalter quasi die Klöster, denen ihre Kenntnisse im Bierbrauen zu Gute kamen. Später entstanden an Handelswegen Gasthäuser, die Kost und Logis auf primitivem Niveau anboten. Einen Aufschwung erlebten sie, als sich im Spätmittelalter immer mehr Städte gründeten. Die Gasthäuser waren nicht nur der Ort, in dem Bier oder Wein ausgeschenkt wurde, sondern sie waren in vielen Fällen auch der Ort, in dem man um Geld spielte.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Russian>.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
 		<English>Manor House</English>
 		<French>Château</French>
@@ -472,6 +454,24 @@
 		<English>[TAB]A tavern is a place of business where people gather to drink alcoholic beverages and be served food, and in some cases, where travelers receive lodging. An inn is a tavern which has a license to put up guests as lodgers. The word derives from the Latin taberna and the Greek ???????/taverna, whose original meaning was a shed or workshop. In the English language the tavern was an establishment which served wine whilst the inn served beer/ale. Over time, the words tavern and inn became interchangeable and synonymous with one another. Travelers stayed in taverns.</English>
 		<French>.</French>
 		<German>[TAB]Schänke ist die historische Bezeichnung für eine Gaststätte mit Krugrecht. Die Schreibweisen "Schenke" (zu "ausschenken") und "Schänke" (zu "Ausschank") sind gleichermaßen zulässig.[PARAGRAPH:2]Das Krugrecht bezeichnet das spätmittelalterliche Recht zur gewerblichen Bewirtung von Gästen in einer Gaststätte ("Krug"). Dies beinhaltete jedoch nicht das Recht zur Beherbergung.[PARAGRAPH:2]Der Inhaber des Krugrechts wurde auch als Krüger (daher der Nachname) bezeichnet. Früher wurde dem beauftragten Gründer eines Dorfes (Lokator) meist neben dem Mahlrecht auch das Krugrecht verliehen. Später wurde das Krugrecht meist vom Dorfschulzen ausgeübt. Oft war es auch mit der Braugerechtsame gekoppelt.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Russian>.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INN</Tag>
+		<English>Inn</English>
+		<French>Auberge</French>
+		<German>Gasthaus</German>
+		<Italian>Locanda</Italian>
+		<Spanish>Posada</Spanish>
+		<Russian>&#195;&#238;&#241;&#242;&#232;&#237;&#232;&#246;&#224;</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
+		<English>[TAB]Inns are generally establishments or buildings where travelers can seek lodging and, usually, food and drink. They are typically located in the country or along a highway.[PARAGRAPH:2]Found in Europe, they possibly first sprang up when the Romans built their system of Roman roads two millennia ago. Some inns in Europe are several centuries old. In addition to providing for the needs of travellers, inns traditionally acted as community gathering places.[PARAGRAPH:2]In Europe, it is the provision of accommodation, if anything, that now differentiates inns from taverns, alehouses and pubs. The latter tend only to supply alcohol (although in the UK the conditions of their licence sometimes require them to have a nominal supply of food and soft drinks). Inns tend to be grander and more long-lived establishments. Famous London examples include the George and The Tabard. There is however no longer a formal distinction between an inn and other kinds of establishment, and many pubs will use the name "inn", either simply because they are long established and maybe were once a Coaching inn, or to summon up a particular kind of image; however, originally an Inn had to provide not only food and lodging, but also stabling and fodder for the traveller's horse(s) and for fresh horses for the Mail coach.[PARAGRAPH:2]The original functions of an inn are now usually split among separate establishments, such as hotels, lodges, and motels, all of which might provide the traditional functions of an inn but which focus more on lodging customers than on other services; public houses, which are primarily alcohol-serving establishments; and restaurants and taverns, which serve food and drink. (Hotels often contain restaurants and also often serve complimentary breakfast and meals, thus providing all of the functions of traditional inns.) In North America, the lodging aspect of the word "inn" lives on in hotel brand names like Holiday Inn, and in some state laws that refer to lodging operators as innkeepers.</English>
+		<French>.</French>
+		<German>[TAB]Eine Gaststätte (auch: Gasthaus, Wirtshaus oder Wirtschaft) ist ein gastronomischer Betrieb, in dem Getränke oder Speisen zum sofortigen Verzehr verkauft werden und der hierzu eine Aufenthaltsmöglichkeit bietet. Als Gaststube wird der Raum bezeichnet, in dem die Gäste die Speisen und Getränke verzehren.[PARAGRAPH:2]Die ersten Gasthäuser betrieben im Mittelalter quasi die Klöster, denen ihre Kenntnisse im Bierbrauen zu Gute kamen. Später entstanden an Handelswegen Gasthäuser, die Kost und Logis auf primitivem Niveau anboten. Einen Aufschwung erlebten sie, als sich im Spätmittelalter immer mehr Städte gründeten. Die Gasthäuser waren nicht nur der Ort, in dem Bier oder Wein ausgeschenkt wurde, sondern sie waren in vielen Fällen auch der Ort, in dem man um Geld spielte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Russian>.</Russian>
