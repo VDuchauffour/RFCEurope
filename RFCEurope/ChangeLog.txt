@@ -51,6 +51,8 @@ Changes for RFCE 1.1:
 		- UHV counters (on the interface) are removed after the UHV goal is completed/failed
 		- Lithuania got a culture UHV counter
 		- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
+		- Tavern changed back to Brewery: +5% commerce, +1 happy with barley
+		- Burgundian Winery replaces Brewery: +5% commerce, +1 happy, +3 culture, +1 health with wine
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -61,7 +63,7 @@ Changes for RFCE 1.1:
 		- Small updates in the reference files
 		- Added a couple Spanish translations by mijamobu and felyux
 		- Added many Italian translations by Fede14
-		- Huge XML cleanup and reorganization
+		- Huge XML cleanup in most files. XML reorganization, in particular in the DCN, civic, and artdefine files
 		- German translations by HolyHandGrenade
 		- New XML name tag for the 6th language
 		- Minor diplotext fixes
@@ -69,19 +71,28 @@ Changes for RFCE 1.1:
 		- Changes in mercenary naming
 		- Updated strategy tooltips for the civics
 		- German grammatical cases for units by HolyHandGrenade
+		- Palacio del Escorial renamed to El Escorial, Paco da Ribeira renamed to Palacio da Pena, Tower of London renamed to Royal Dungeon
+		- New text for Palacio da Pena
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull
 		- Removed Religious School icon from the tech tree
-		- New LH for Barbarossa and Isabella
+		- New LH for Barbarossa and Isabella by Melcher Kurzer
 		- Removing a couple unnecessary/unused art files from the LH folders
-		- New building art for Tomb of al-Walid
 		- New flag for Germany by zwei833
 		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
 		- Separate, uncompressed dds atlas for civilizations - better button quality
 		- Main map icons for great general points and stability
 		- New soundtrack - 22 medieval themed songs
 		- Era specific water worked, fishing and whaling boats
+		- New art for Triumphal Arch, Copernicus Observatory, Gardens of Al-Andalus, Amsterdam Beurs, Round Church, Cluny Abbey, El Escorial, Tomb of al-Walid, Marco Polo Embassy
+		- New art for Hagia Sophia, St. Basil's Cathedral, Palazzo San Giorgio, Chateau de Fontainbleau, Royal Academy, Heroic Epic, Theodosian Walls, Temple Mount, Umayyad Mosque
+		- Revised Orthodox buildings: New art for Cathedral, Temple, Monastery, old Belfry changed to Seminary, old Cathedral changed to Reliquary, old Monastery changed to Belfry
+		- Revised Catholic buildings: New art for Cathedral, Monastery, Seminary, old Cathedral changed to Temple, old Temple changed to Belfry (both with improved textures)
+		- New art for English Royal Exchange, Lithuanian Vaivadija, Arabian Bazaar, Polish Folwark, Austrian Operahouse, Cordoban Noria, Jewish Quarter, Islamic Minaret
+		- New art for Guild Hall, Star Fort, Archery Range, Forge/Blacksmith, Manor House, Walls, Barracks, Stable, Dungeon, Brewery, Tannery, Wharf, Harbor, House of Wisdom
+		- Fixed art for La Mezquita, Pressburg Castle, All Saints' Church, Dome of the Rock, St. Sophia, Torre de Belem, Alhambra, National Gallery and Burgundian Winery
+		- Revised the size of all wonders and buildings - both ingame and in the civilopedia
 		- Wondermovie for Kazimierz
 	
 	Balance:
@@ -107,6 +118,7 @@ Changes for RFCE 1.1:
 		- Fixed 2 different bugs with mercenary appearance/mercenary hiring. No more unhireable Welsh Longbowman for example
 		- Stability fixes by HolyHandGrenade
 		- Fixed improvement size of medieval mines
+		- Magellan's Voyage now correctly shows up on the coast, not inside the city
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

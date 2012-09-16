@@ -67,6 +67,10 @@
 			<Path>Art/Movies/Wonders/Amdam_Beurs.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PALACIO_DA_PENA</Type>
+ 			<Path>Art/Movies/Wonders/Ribeira.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_RIBEIRA</Type>
  			<Path>Art/Movies/Wonders/Ribeira.dds</Path>
 		</MovieArtInfo>

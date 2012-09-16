@@ -2469,7 +2469,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BULGARIAN_STAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MONGOL_GER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BULGARIAN_STAN</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -5592,7 +5592,7 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Tower of London -->
+		<BuildingInfo> <!-- Royal Dungeon -->
 			<BuildingClass>BUILDINGCLASS_TOWER_LONDON</BuildingClass>
 			<Type>BUILDING_TOWER_LONDON</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -7095,7 +7095,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARABIC_CARAVAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARABIC_CARAVAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ARABIAN_BAZAAR</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -7267,11 +7267,11 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Brewery, now called Tavern -->
+		<BuildingInfo> 
 			<BuildingClass>BUILDINGCLASS_BREWERY</BuildingClass>
 			<Type>BUILDING_BREWERY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TAVERN</Description>
+			<Description>TXT_KEY_BUILDING_BREWERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BREWERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BREWERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -7411,10 +7411,6 @@
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_BARLEY</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_WINE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -7587,7 +7583,9 @@
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>5</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -7604,12 +7602,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_BARLEY</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
+			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -8373,10 +8366,7 @@
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>10</iYield>
-			</YieldModifiers>
+			<YieldModifiers/>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
@@ -10193,7 +10183,7 @@
 			<Strategy>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SWEDISH_TENNANT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LITHUANIAN_VOIVODESHIP</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -11888,7 +11878,7 @@
 			<Strategy>TXT_KEY_BUILDING_FRENCH_CHATEAU_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_STABILITY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BURGUNDIAN_CHATEAU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_CHATEAU</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -14678,7 +14668,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARABIAN_MADRASSA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_MADRASSA</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -21363,16 +21353,16 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Ribeira Palace -->
-			<BuildingClass>BUILDINGCLASS_RIBEIRA</BuildingClass>
-			<Type>BUILDING_RIBEIRA</Type>
+		<BuildingInfo> <!-- Pena National Palace -->
+			<BuildingClass>BUILDINGCLASS_PALACIO_DA_PENA</BuildingClass>
+			<Type>BUILDING_PALACIO_DA_PENA</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_RIBEIRA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RIBEIRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RIBEIRA_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_PALACIO_DA_PENA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PALACIO_DA_PENA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_PALACIO_DA_PENA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RIBEIRA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_RIBEIRA</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PALACIO_DA_PENA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PALACIO_DA_PENA</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
