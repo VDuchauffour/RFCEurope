@@ -77,8 +77,9 @@ Changes for RFCE 1.1:
 	Art/sound updates:
 		- Fixed button for Golden Bull, West India Company
 		- Removed Religious School icon from the tech tree
-		- New LH for Barbarossa and Isabella by Melcher Kurzer
-		- Removing a couple unnecessary/unused art files from the LH folders
+		- New LH for Barbarossa and Isabella - both of them made by Melcher Kurzer
+		- New LH for Mindaugas, Vytautas, Simone Boccanegra and William the Conqueror - made by Novator
+		- Removing a couple unnecessary/unused art files from the LH folders, optimizing LH graphics in a few cases
 		- New flag for Germany by zwei833
 		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
 		- Separate, uncompressed dds atlas for civilizations - better button quality
@@ -93,8 +94,9 @@ Changes for RFCE 1.1:
 		- New art for Guild Hall, Star Fort, Archery Range, Forge/Blacksmith, Manor House, Walls, Barracks, Stable, Dungeon, Brewery, Tannery, Wharf, Harbor, House of Wisdom
 		- Fixed art for La Mezquita, Pressburg Castle, All Saints' Church, Dome of the Rock, St. Sophia, Torre de Belem, Alhambra, National Gallery and Burgundian Winery
 		- Revised the size of all wonders and buildings - both ingame and in the civilopedia
-		- Wondermovie for Kazimierz
+		- Wondermovie for Kazimierz and Palacio da Pena
 		- Seperated the Wondermovies and the Colonymovies for better organization
+		- New button for Triumphal Arch, St. Peter's Basilica. Button updates for many of the changed/updated buildings
 
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
