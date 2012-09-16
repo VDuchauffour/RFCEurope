@@ -105,6 +105,7 @@ Changes for RFCE 1.1:
 		- A couple additional starting units for Poland and Lithuania
 		- Small changes in the starting techs. Poland got an additional tech, many civs got one less
 		- Minor leader personality, memory, and attitude modifications
+		- Sistine Chapel gives only 3 culture to state religion buildings
 	
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
