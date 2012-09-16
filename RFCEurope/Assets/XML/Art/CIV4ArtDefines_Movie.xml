@@ -6,6 +6,7 @@
 <!-- Movie art path information -->
 <Civ4ArtDefines xmlns="x-schema:CIV4ArtDefinesSchema.xml">
 	<MovieArtInfos>
+		<!-- General -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_INTRO</Type>
 			<Path>Art/Movies/Intros/BTS Intro Final.bik</Path>
@@ -34,6 +35,8 @@
 			<Type>ART_DEF_MOVIE_VICTORY_CULTURAL</Type>
 			<Path>Art/Movies/Victory/Cultural.bik</Path>
 		</MovieArtInfo>
+
+		<!-- Wonders -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MARCO_POLO</Type>
 			<Path>Art/Movies/Wonders/MarcoPolo.dds</Path>
@@ -69,6 +72,10 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_RIBEIRA</Type>
  			<Path>Art/Movies/Wonders/Ribeira.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PALACIO_DA_PENA</Type>
+			<Path>Art/Movies/Wonders/PalacioDaPena.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_IMPERIAL_DIET</Type>
@@ -207,112 +214,112 @@
 			<Path>Art/Movies/Wonders/magellan.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_GOLD_COAST</Type>
-			<Path>Art/Movies/Wonders/GoldCoast.dds</Path>
+			<Type>ART_DEF_MOVIE_LANTERNA</Type>
+			<Path>Art/Movies/Wonders/Lanterna.dds</Path>
 		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_IVORY_COAST</Type>
-			<Path>Art/Movies/Wonders/IvoryCoast.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CUBA</Type>
-			<Path>Art/Movies/Wonders/Cuba.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_BRAZIL</Type>
-			<Path>Art/Movies/Wonders/Brazil.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_HUDSON</Type>
-			<Path>Art/Movies/Wonders/HudsonBay.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_VIRGINIA</Type>
-			<Path>Art/Movies/Wonders/Virginia.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CHINA</Type>
-			<Path>Art/Movies/Wonders/China.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_INDIA</Type>
-			<Path>Art/Movies/Wonders/India.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EAST_INDIES</Type>
-			<Path>Art/Movies/Wonders/EastIndies.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_MALAYA</Type>
-			<Path>Art/Movies/Wonders/Malaya.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_CAPE_TOWN</Type>
-			<Path>Art/Movies/Wonders/CapeTown.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EAST_AFRICA</Type>
-			<Path>Art/Movies/Wonders/EastAfrica.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_WEST_INDIA_COMPANY</Type>
-			<Path>Art/Movies/Wonders/WestIndiaCompany.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EAST_INDIA_COMPANY</Type>
-			<Path>Art/Movies/Wonders/EastIndiaCompany.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_AZTEC_CONQUEST</Type>
-			<Path>Art/Movies/Wonders/Aztec.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_INCA_CONQUEST</Type>
-			<Path>Art/Movies/Wonders/Inca.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_HISPANIOLA</Type>
-			<Path>Art/Movies/Wonders/Hispaniola.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_JAMAICA</Type>
-			<Path>Art/Movies/Wonders/Jamaica.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_LOUISIANA</Type>
-			<Path>Art/Movies/Wonders/Lousiana.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NEW_ENGLAND</Type>
-			<Path>Art/Movies/Wonders/New_England.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_PANAMA</Type>
-			<Path>Art/Movies/Wonders/Panama.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_PHILLIPPINES</Type>
-			<Path>Art/Movies/Wonders/Phillippines.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_QUEBEC</Type>
-			<Path>Art/Movies/Wonders/Quebec.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_VINLAND</Type>
-			<Path>Art/Movies/Wonders/Vinland.dds</Path>
-		</MovieArtInfo>
+
+		<!-- Projects -->
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ENCYCLOPEDIE</Type>
 			<Path>Art/Movies/Wonders/encyclopedie.dds</Path>
 		</MovieArtInfo>
+
+		<!-- Colonies -->
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_LANTERNA</Type>
-			<Path>Art/Movies/Wonders/Lanterna.dds</Path>
+			<Type>ART_DEF_MOVIE_GOLD_COAST</Type>
+			<Path>Art/Movies/Colonies/GoldCoast.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_PALACIO_DA_PENA</Type>
-			<Path>Art/Movies/Wonders/PalacioDaPena.bik</Path>
+			<Type>ART_DEF_MOVIE_IVORY_COAST</Type>
+			<Path>Art/Movies/Colonies/IvoryCoast.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CUBA</Type>
+			<Path>Art/Movies/Colonies/Cuba.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BRAZIL</Type>
+			<Path>Art/Movies/Colonies/Brazil.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HUDSON</Type>
+			<Path>Art/Movies/Colonies/HudsonBay.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VIRGINIA</Type>
+			<Path>Art/Movies/Colonies/Virginia.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CHINA</Type>
+			<Path>Art/Movies/Colonies/China.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INDIA</Type>
+			<Path>Art/Movies/Colonies/India.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EAST_INDIES</Type>
+			<Path>Art/Movies/Colonies/EastIndies.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MALAYA</Type>
+			<Path>Art/Movies/Colonies/Malaya.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAPE_TOWN</Type>
+			<Path>Art/Movies/Colonies/CapeTown.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EAST_AFRICA</Type>
+			<Path>Art/Movies/Colonies/EastAfrica.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WEST_INDIA_COMPANY</Type>
+			<Path>Art/Movies/Colonies/WestIndiaCompany.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EAST_INDIA_COMPANY</Type>
+			<Path>Art/Movies/Colonies/EastIndiaCompany.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AZTEC_CONQUEST</Type>
+			<Path>Art/Movies/Colonies/Aztec.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INCA_CONQUEST</Type>
+			<Path>Art/Movies/Colonies/Inca.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HISPANIOLA</Type>
+			<Path>Art/Movies/Colonies/Hispaniola.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JAMAICA</Type>
+			<Path>Art/Movies/Colonies/Jamaica.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LOUISIANA</Type>
+			<Path>Art/Movies/Colonies/Lousiana.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEW_ENGLAND</Type>
+			<Path>Art/Movies/Colonies/New_England.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PANAMA</Type>
+			<Path>Art/Movies/Colonies/Panama.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PHILLIPPINES</Type>
+			<Path>Art/Movies/Colonies/Phillippines.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_QUEBEC</Type>
+			<Path>Art/Movies/Colonies/Quebec.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VINLAND</Type>
+			<Path>Art/Movies/Colonies/Vinland.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

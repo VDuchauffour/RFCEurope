@@ -94,7 +94,8 @@ Changes for RFCE 1.1:
 		- Fixed art for La Mezquita, Pressburg Castle, All Saints' Church, Dome of the Rock, St. Sophia, Torre de Belem, Alhambra, National Gallery and Burgundian Winery
 		- Revised the size of all wonders and buildings - both ingame and in the civilopedia
 		- Wondermovie for Kazimierz
-	
+		- Seperated the Wondermovies and the Colonymovies for better organization
+
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
 		- Lowered the number of extra units you get on initial war for most civs
