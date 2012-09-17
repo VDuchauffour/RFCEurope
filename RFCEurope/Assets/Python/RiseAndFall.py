@@ -695,11 +695,21 @@ class RiseAndFall:
                 
         ### 3Miro Province Related Functions ###
         def onCityBuilt(self, iPlayer, pCity ):
-                self.pm.onCityBuilt(iPlayer, pCity.getX(), pCity.getY() )
-                ### 3Miro: Venice defence boost
-                if ( (pCity.getX()==64) and (pCity.getY()==28) ):
-                        pCity.setHasRealBuilding( xml.iWalls, True ) # this gives defense to Venice, the rivers alone are not enough
-                
+                self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
+                # "prebuilt" walls
+                if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Early defense boost to Venice, the rivers alone are not enough
+                        pCity.setHasRealBuilding( xml.iWalls, True )
+                if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
+                        pCity.setHasRealBuilding( xml.iWalls, True )
+                if ( (pCity.getX()==23) and (pCity.getY()==31) ): #Porto
+                        pCity.setHasRealBuilding( xml.iWalls, True )
+                if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
+                        pCity.setHasRealBuilding( xml.iWalls, True )
+                if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod
+                        pCity.setHasRealBuilding( xml.iWalls, True )
+                if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
+                        pCity.setHasRealBuilding( xml.iWalls, True )
+
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
                 self.pm.onCityAcquired(owner, playerType, city, bConquest, bTrade)
                 if ( playerType == iTurkey ):
@@ -2200,8 +2210,8 @@ class RiseAndFall:
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
                 if (iCiv == iGermany):
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                 if (iCiv == iPoland):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)

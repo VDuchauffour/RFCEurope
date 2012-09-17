@@ -52,7 +52,7 @@ lAugsburg = [55,41,0,0] #500 AD
 #lCatania = [58,18,0,0] #500 AD
 lNapoli = [59,24,0,0] #500 AD
 lRagusa = [64,28,0,0] #500 AD
-lBeograd = [68,31,0,0] #500 AD
+lBeograd = [68,30,0,0] #500 AD
 lRhodes = [79,12,0,0] # 500 AD
 lPalermo = [55,19,2,0] # 508 AD
 #lZaragoza = [36,29,45,0] # 680 AD
@@ -393,14 +393,14 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (87,17),(99,26), xml.iMongolKeshik, 3 + iHandicap*2, iGameTurn,4,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			self.spawnUnits( iBarbarian, (94,15),(99,26), xml.iMongolKeshik, 4 + iHandicap*2, iGameTurn,5,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			
-		#Nogais (from Morholt)
+		#Nogais (from RFCE++)
 		if (iGameTurn >=xml.i1500AD and iGameTurn <=xml.i1600AD):
 			self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iHorseArcher, 3 + iHandicap*2, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()))
 		if (gc.getPlayer(con.iMoscow).isHuman()): #extra barbs for human Moscow
 			if (iGameTurn >=xml.i1500AD and iGameTurn <=xml.i1600AD):
 				self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iHorseArcher, 2 + iHandicap*2, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()))
 		
-		#Kalmyks (from Morholt)
+		#Kalmyks (from RFCE++)
 		if (iGameTurn >=xml.i1600AD and iGameTurn <=xml.i1715AD):
 			self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iMongolKeshik, 3 + iHandicap*2, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()))
 		if (gc.getPlayer(con.iMoscow).isHuman()): #extra barbs for human Moscow
@@ -408,9 +408,11 @@ class Barbs:
 				self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iMongolKeshik, 3 + iHandicap*2, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()))
 		
 		
-		#Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
-		# 3Miro Barbarian and Independent city spawn and barbarian invasions go here. Check with original RFC file for details
-		# self.foundCity(owner, self.lCity, name, iGameTurn, pop size, unit, num units, religion )
+		# 3Miro Barbarian and Independent city spawns and barbarian invasions go here. Check with original RFC file for details
+		# Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
+		# Barbarian cities are exceptions, they won't shrink. Also, they start with 2 additional units
+		# Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, number of units, religion, workers)
+		# Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 		
                 if ( iGameTurn < xml.i700AD ):
                         #500AD
@@ -427,8 +429,8 @@ class Barbs:
                         self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 ) 
                         self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+                        self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
+                        self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
                         # 508AD
                         self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 ) 
@@ -441,7 +443,7 @@ class Barbs:
                         self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
                         self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 3, xml.iCatholicism, 0 )
+                        self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
                         # 760AD
                         self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         # 800AD
@@ -484,9 +486,9 @@ class Barbs:
                         self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         # 1410AD
-                        self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 ) #Morholt
+                        self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 ) #from RFCE++
                         # 1530AD
-                        self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 ) #Morholt
+                        self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 ) #from RFCE++
                         
                 if ( iGameTurn == 1 ):
                         self.setupMinorNation()
@@ -499,7 +501,7 @@ class Barbs:
                 'Returns a city at coordinates tCoords.'
                 return CyGlobalContext().getMap().plot(tCoords[0], tCoords[1]).getPlotCity()
 
-        def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits,iReligion, iWorkers ):
+        def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
                 if ((iTurn == lCity[2] + lCity[3]) and (lCity[3]<10)):
                         #print self.checkRegion(tUr)
                         bResult, lCity[3] = self.checkRegion(lCity)

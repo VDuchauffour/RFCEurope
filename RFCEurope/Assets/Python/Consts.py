@@ -681,7 +681,7 @@ tAggressionLevel = (
 )
 
 
-#war during rise of new civs higher number means less war
+#War during rise of new civs. Higher number means less chance for war
 tAIStopBirthThreshold = (
     30, #Byzantium
     60, #Frankia
@@ -705,7 +705,7 @@ tAIStopBirthThreshold = (
     70, #Moscow
     60, #Sweden
     20, #Dutch
-    20,  #Pope
+    90, #Pope
     0, #Indep1
     0, #Indep2
     0, #Indep3

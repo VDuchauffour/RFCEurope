@@ -53,10 +53,14 @@ Changes for RFCE 1.1:
 		- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
 		- Tavern changed back to Brewery: +5% commerce, +1 happy with barley
 		- Burgundian Winery replaces Brewery: +5% commerce, +1 happy, +3 culture, +1 health with wine
+		- Byzantium starts with Religious Law. Historically fitting, and may increase early orthodoxy spread in a couple games.
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
 		- Forest near Antioch, so AI Arabia will have Damascus as it's first city -> it will be the holy city of Islam
+		- Belgrade moved 1 tile south, now it's in province Serbia - rebellions to be expected there
+		- Village near (previously under) Belgrade moved to Dacia/Transylvania. Added another one for Mesembria/Nesebar.
+		- Adjusted culture of preplaced Byzantine cities - Byz starting area on the map will be a bit more realistic (and look better)
 	
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
@@ -85,7 +89,7 @@ Changes for RFCE 1.1:
 		- Separate, uncompressed dds atlas for civilizations - better button quality
 		- Main map icons for great general points and stability
 		- New soundtrack - 22 medieval themed songs
-		- Era specific water worked, fishing and whaling boats
+		- Era specific water worked graphics, era specific fishing and whaling boats
 		- New art for Triumphal Arch, Copernicus Observatory, Gardens of Al-Andalus, Amsterdam Beurs, Round Church, Cluny Abbey, El Escorial, Tomb of al-Walid, Marco Polo Embassy
 		- New art for Hagia Sophia, St. Basil's Cathedral, Palazzo San Giorgio, Chateau de Fontainbleau, Royal Academy, Heroic Epic, Theodosian Walls, Temple Mount, Umayyad Mosque
 		- Revised Orthodox buildings: New art for Cathedral, Temple, Monastery, old Belfry changed to Seminary, old Cathedral changed to Reliquary, old Monastery changed to Belfry
@@ -103,9 +107,10 @@ Changes for RFCE 1.1:
 		- Lowered the number of extra units you get on initial war for most civs
 		- Small changes to a couple civs initially spawned units too - mostly increasing defensive units for the AI
 		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
-		- Indy Augsburg starts with an additional archer - so it won't be razed so often by barbs before the German spawn
+		- Indy Augsburg and Ragusa starts with an additional archer - so it won't be razed so often by barbs before the German and Venetian/Hungarian spawn
+		- "Prebuilt" walls for Augsburg, Porto, Prague, Novgorod, Riga
 		- Belograd (Alba Iulia/Gyulafehérvár) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
-		- A couple additional starting units for Poland and Lithuania
+		- A couple additional starting units for Poland, Lithuania and Germany
 		- Small changes in the starting techs. Poland got an additional tech, many civs got one less
 		- Minor leader personality, memory, and attitude modifications
 		- Sistine Chapel gives only 3 culture to state religion buildings
@@ -123,6 +128,7 @@ Changes for RFCE 1.1:
 		- Stability fixes by HolyHandGrenade
 		- Fixed improvement size of medieval mines
 		- Magellan's Voyage now correctly shows up on the coast, not inside the city
+		- Fixed mistake where Ragusa got free walls instead of Venice
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

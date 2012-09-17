@@ -123,6 +123,7 @@ BeginPlayer
 	CivType=CIVILIZATION_BYZANTIUM
 	PlayableCiv=1
 	StateReligion=RELIGION_ORTHODOXY
+	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -27517,7 +27518,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29242,7 +29242,7 @@ BeginPlot
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
+		Player0Culture=20
 	EndCity
 EndPlot
 BeginPlot
@@ -29669,7 +29669,7 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
+		Player0Culture=50
 	EndCity
 EndPlot
 BeginPlot
@@ -29784,6 +29784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=37
+	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -31050,7 +31051,7 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
+		Player0Culture=20
 	EndCity
 EndPlot
 BeginPlot
@@ -32386,7 +32387,8 @@ EndPlot
 BeginPlot
 	x=79,y=28
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	ImprovementType=IMPROVEMENT_VILLAGE
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33782,7 +33784,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
+		Player0Culture=30
 	EndCity
 EndPlot
 BeginPlot
@@ -35052,7 +35054,7 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=11
+		Player0Culture=50
 	EndCity
 EndPlot
 BeginPlot
@@ -35599,6 +35601,7 @@ BeginPlot
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_ORTHODOXY
+		Player0Culture=20
 	EndCity
 EndPlot
 BeginPlot
@@ -37780,7 +37783,7 @@ BeginPlot
 		CityName=Tarsus
 		CityPopulation=2
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
+		Player0Culture=5
 	EndCity
 EndPlot
 BeginPlot
@@ -38681,6 +38684,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
+		Player0Culture=10
 	EndCity
 EndPlot
 BeginPlot
@@ -39059,6 +39063,7 @@ BeginPlot
 		ReligionType=RELIGION_ORTHODOXY
 		ReligionType=RELIGION_JUDAISM
 		HolyCityReligionType=RELIGION_JUDAISM
+		Player0Culture=30
 	EndCity
 EndPlot
 BeginPlot
@@ -39189,7 +39194,7 @@ BeginPlot
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		ReligionType=RELIGION_ORTHODOXY
-		Player0Culture=10
+		Player0Culture=30
 	EndCity
 EndPlot
 BeginPlot
