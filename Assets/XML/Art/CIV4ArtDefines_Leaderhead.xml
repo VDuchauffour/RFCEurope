@@ -16,11 +16,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_ABUYUSUFYAQUB</Type>
-			<Button>Art/Leaderheads/Abu_Yusuf_Yaqub/Btn_Abu_Yusuf_Yaqub.dds</Button>
-			<NIF>Art/Leaderheads/Abu_Yusuf_Yaqub/zara yaqob.nif</NIF>
-			<KFM>Art/Leaderheads/Abu_Yusuf_Yaqub/zara yaqob.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Abu_Yusuf_Yaqub/zara yaqob_nonshader.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Abu_Yusuf_Yaqub/zara yaqob_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Yaqub_al_Mansur/Btn_Yaqub_al_Mansur.dds</Button>
+			<NIF>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob.nif</NIF>
+			<KFM>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob_nonshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_MARIA_THERESA</Type>
