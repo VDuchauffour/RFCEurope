@@ -789,7 +789,7 @@
 			<fInterfaceScale>0.72</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Tannery/tradingpost.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,1</Button>
+			<Button>Art/Interface/Buttons/tannery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SMOKEHOUSE</Type>
@@ -799,7 +799,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Smokehouse/smokehouse.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,6</Button>
+			<Button>Art/Interface/Buttons/smokehouse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUXURY_STORE</Type>
@@ -1051,7 +1051,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Polish_Folwark/Folwark.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,3</Button>
+			<Button>Art/Interface/Buttons/folwark.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OTTOMAN_HAMMAM</Type>
@@ -1081,7 +1081,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Kievan_Veche/Veche.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,5,1</Button>
+			<Button>Art/Interface/Buttons/kiev_veche.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HOLY_ROMAN_RATHAUS</Type>
@@ -1143,7 +1143,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Jewish_Quarter/jewish-cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,14</Button>
+			<Button>Art/Interface/Buttons/jewish_quarter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JEWISH_SHRINE</Type>
@@ -1223,7 +1223,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Islamic_House_of_Wisdom/arab_monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,3</Button>
+			<Button>Art/Interface/Buttons/house_of_wisdom.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ISLAMIC_CHAPEL</Type>
