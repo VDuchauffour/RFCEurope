@@ -166,7 +166,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/beehive/beehive3x.nif</NIF>
 			<KFM></KFM>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,5,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,3</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_COTTAGE</Type>
@@ -229,7 +229,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Units/Galleon/Galleon.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,4,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,3,3</Button>
 		</ImprovementArtInfo>
 	</ImprovementArtInfos>
 </Civ4ArtDefines>

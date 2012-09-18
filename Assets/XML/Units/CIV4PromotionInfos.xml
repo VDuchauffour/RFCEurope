@@ -635,7 +635,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,8</Button>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_FORMATION</Type>
@@ -971,7 +971,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,8</Button>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_AMPHIBIOUS</Type>
@@ -4037,7 +4037,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,8</Button>
 		</PromotionInfo>
 	</PromotionInfos>
 </Civ4PromotionInfos>

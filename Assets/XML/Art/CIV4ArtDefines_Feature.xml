@@ -487,7 +487,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.25</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -497,7 +497,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,2,2</VarietyButton>
+				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
@@ -508,7 +508,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,1,1</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -574,7 +574,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,1,2</VarietyButton>
+				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,1,1</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 	</FeatureArtInfos>

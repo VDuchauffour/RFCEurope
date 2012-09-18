@@ -88,7 +88,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_FEUDAL_MONARCHY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FEUDAL_MONARCHY_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,3,2</Button>
 			<TechPrereq>TECH_FEUDALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -169,7 +169,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_DIVINE_MONARCHY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_DIVINE_MONARCHY_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,4,2</Button>
 			<TechPrereq>TECH_DIVINE_RIGHT</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
@@ -255,7 +255,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_LIMITED_MONARCHY_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,1,2</Button>
 			<TechPrereq>TECH_PAPER</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -345,7 +345,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,7,1</Button>
 			<TechPrereq>TECH_SHIPBUILDING</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -580,7 +580,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_BUREAUCRACY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_BUREAUCRACY_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,7,2</Button>
 			<TechPrereq>TECH_CIVIL_SERVICE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
@@ -660,7 +660,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_RELIGIOUS_LAW_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_RELIGIOUS_LAW_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,4,1</Button>
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -745,7 +745,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_COMMON_LAW_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_COMMON_LAW_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,6,2</Button>
 			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -985,7 +985,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FREE_PEASANTRY_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,2,2</Button>
 			<TechPrereq>TECH_PRINTING_PRESS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -1061,7 +1061,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_APPRENTICESHIP_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,5,1</Button>
 			<TechPrereq>TECH_EDUCATION</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -1326,7 +1326,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MANORIALISM_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_MANORIALISM_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,8,1</Button>
 			<TechPrereq>TECH_MANORIALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
@@ -1732,7 +1732,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_STATE_RELIGION_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,2,1</Button>
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -2045,7 +2045,7 @@
 			<Description>TXT_KEY_CIVIC_SUBJUGATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SUBJUGATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SUBJUGATION_STRATEGY</Strategy>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,1,1</Button>
 			<TechPrereq>NONE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -2120,7 +2120,7 @@
 			<Description>TXT_KEY_CIVIC_VASSALAGE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_VASSALAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Strategy>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,8,2</Button>
 			<TechPrereq>TECH_VASSALAGE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -2195,7 +2195,7 @@
 			<Description>TXT_KEY_CIVIC_IMPERIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_IMPERIALISM_STRATEGY</Strategy>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,3,1</Button>
 			<TechPrereq>TECH_BANKING</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
@@ -2270,7 +2270,7 @@
 			<Description>TXT_KEY_CIVIC_OCCUPATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_OCCUPATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_OCCUPATION_STRATEGY</Strategy>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,6,1</Button>
 			<TechPrereq>TECH_FARRIERS</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
@@ -2346,7 +2346,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Strategy>
 			<Help>TXT_KEY_CIVIC_COLONIALISM_HELP</Help>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,5,2</Button>
 			<TechPrereq>TECH_ASTRONOMY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
