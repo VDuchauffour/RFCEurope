@@ -36,7 +36,7 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,7</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
@@ -72,7 +72,7 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,7</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
@@ -106,7 +106,7 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>50</iYieldProduced>
 			</YieldsProduced>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,7</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
@@ -142,7 +142,7 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,7</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_PALACE</Sound>
@@ -177,7 +177,7 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,7</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BANK</Sound>
@@ -212,7 +212,7 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>50</iYieldProduced>
 			</YieldsProduced>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,7</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BANK</Sound>

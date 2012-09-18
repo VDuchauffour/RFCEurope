@@ -24,7 +24,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Summer_Palace/ts_e_gov.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NATIONAL_THEATRE</Type>
@@ -84,7 +84,7 @@
 			<fInterfaceScale>0.44</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Triumphal_Arch/arc_de_triomphe.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,3,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ROYAL_ACADEMY</Type>
@@ -94,7 +94,7 @@
 			<fInterfaceScale>0.62</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Royal_Academy/bankeuropean.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,7,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TOWER_LONDON</Type>
@@ -104,7 +104,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Royal_Dungeon/dungeon.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PLAGUE</Type>
@@ -126,7 +126,7 @@
 			<fInterfaceScale>0.46</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Theodosian_Walls/theodosian_walls_civilopedia.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,8,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KALMAR_CASTLE</Type>
@@ -136,7 +136,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Kalmar_castle/castle.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WESTMINSTER</Type>
@@ -146,7 +146,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Westminster_Abbey/westminster.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PRESSBURG</Type>
@@ -156,7 +156,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Pressburg_Castle/Pressburg.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALAIS_PAPES</Type>
@@ -166,7 +166,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Palais_Papes/castle.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARCO_POLO</Type>
@@ -186,7 +186,7 @@
 			<fInterfaceScale>2.0</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Magellans_Voyage/Caravel_freeze1000.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GARDENS_AL_ANDALUS</Type>
@@ -196,7 +196,7 @@
 			<fInterfaceScale>0.46</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Gardens_Andalus/bath_middle_east.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,7,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VERSAILLES</Type>
@@ -216,7 +216,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/San_Marco_Basilica/sanmarco.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SOPHIA_KIEV</Type>
@@ -226,7 +226,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/St_Sophia_Cathedral/st_sophia.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,8,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TOMB_KHAL</Type>
@@ -236,7 +236,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Tomb_Walid/Walid.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LA_MEZQUITA</Type>
@@ -246,7 +246,7 @@
 			<fInterfaceScale>0.72</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/La_Mezquita/mezquita.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,8,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BRANDENBURG_GATE</Type>
@@ -256,7 +256,7 @@
 			<fInterfaceScale>0.55</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Brandenburg_Gate/brandenburg_gate.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,8,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MAGNA_CARTA</Type>
@@ -266,7 +266,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Magna_Carta/memorial.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,7,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DOME_ROCK</Type>
@@ -276,7 +276,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/dome_rock/mideast_midtemple.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,7,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ST_BASIL</Type>
@@ -296,7 +296,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Kazimierz/synagoga06.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,8,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LEONARDOS_WORKSHOP</Type>
@@ -306,7 +306,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Leonardos_Workshop/leonardos_workshop.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LEANING_TOWER</Type>
@@ -316,7 +316,7 @@
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Leaning_Tower/Pisa.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SISTINE_CHAPEL</Type>
@@ -346,7 +346,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Topkapi_Palace/fortme8.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SHRINE_OF_UPPSALA</Type>
@@ -356,7 +356,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Uppsala_Shrine/AsenShrine.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ALHAMBRA</Type>
@@ -366,7 +366,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Alhambra/alhambra.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KRAK_DES_CHEVALIERS</Type>
@@ -376,7 +376,7 @@
 			<fInterfaceScale>0.46</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Krak_Chevaliers/castle.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BELEM_TOWER</Type>
@@ -386,7 +386,7 @@
 			<fInterfaceScale>0.94</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Torre_de_Belem/torre_de_belem.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GOLDEN_BULL</Type>
@@ -396,7 +396,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Golden_Bull/HumanBank.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,6,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALACIO_DA_PENA</Type>
@@ -406,7 +406,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Palacio_da_Pena/Palacio.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,6,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MONASTERY_OF_CLUNY</Type>
@@ -416,7 +416,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Cluny_Abbey/cluny.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ESCORIAL</Type>
@@ -426,7 +426,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/El_Escorial/castle.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STEPHANSDOM</Type>
@@ -436,7 +436,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Stephansdom/stephansdom.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,7,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAN_GIORGIO</Type>
@@ -446,7 +446,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Palazzo_San_Giorgio/palace.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BEURS</Type>
@@ -456,7 +456,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Amsterdam_Beurs/konink.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIBLIOTHECA_CORVINIANA</Type>
@@ -466,7 +466,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Bibliotheca_Corviniana/Senate.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,5</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FONTAINEBLEAU</Type>
@@ -476,7 +476,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Chateau_Fontainebleau/la_scala.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,8,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IMPERIAL_DIET</Type>
@@ -486,7 +486,7 @@
 			<fInterfaceScale>0.66</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Imperial_Diet/DP.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COPERNICUS</Type>
@@ -496,7 +496,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Copernicus_Observatory/copernicus.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ROUND_CHURCH</Type>
@@ -506,7 +506,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Round_Church/armenian_cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LANTERNA</Type>
@@ -516,7 +516,7 @@
 			<fInterfaceScale>0.96</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/La_Lanterna/GreatLighthouse.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,3</Button>
 		</BuildingArtInfo>
 		<!-- World Wonders -->
 		<!-- Buildings -->
@@ -548,7 +548,7 @@
 			<fInterfaceScale>0.62</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Manor_House/Manor.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,4,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COURTHOUSE</Type>
@@ -598,7 +598,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Dungeon/templar.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,8,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LEVEE</Type>
@@ -639,7 +639,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Wharf/harbor.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,6,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HARBOR</Type>
@@ -689,7 +689,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Guild_Hall/hall.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,4,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_UNIVERSITY</Type>
@@ -719,7 +719,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Night_Watch/watchtower_eu.blend.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,5,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,5,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARCHERY_RANGE</Type>
@@ -729,7 +729,7 @@
 			<fInterfaceScale>0.64</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Archery_Range/archery_range.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,7,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HOSPITAL</Type>
@@ -749,7 +749,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Star_Fort/star_fort.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,5,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THEATRE</Type>
@@ -769,7 +769,7 @@
 			<fInterfaceScale>0.76</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Textile_Mill/alchemist.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,4,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JEWELER</Type>
@@ -779,7 +779,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Jeweler/Jewel.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,8,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TANNERY</Type>
@@ -789,7 +789,7 @@
 			<fInterfaceScale>0.72</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Tannery/tradingpost.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,1,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SMOKEHOUSE</Type>
@@ -799,7 +799,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Smokehouse/smokehouse.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,8,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LUXURY_STORE</Type>
@@ -809,7 +809,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Luxury_Store/ts_s_gov.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,2,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WAREHOUSE</Type>
@@ -819,7 +819,7 @@
 			<fInterfaceScale>0.62</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Warehouse/Warehouse_upgrade.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,7,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COFFEE_HOUSE</Type>
@@ -829,7 +829,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/CoffeeHouse/ts_e_tav.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,1,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INFIRMARY</Type>
@@ -839,7 +839,7 @@
 			<fInterfaceScale>.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Infirmary/hospital.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,5,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,5,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARKET</Type>
@@ -849,7 +849,7 @@
 			<fInterfaceScale>0.66</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Market/Market.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,3,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BREWERY</Type>
@@ -859,7 +859,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Brewery/Brewery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,3,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INN</Type>
@@ -869,7 +869,7 @@
 			<fInterfaceScale>0.64</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Tavern/tavern.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,3,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WEAVER</Type>
@@ -879,7 +879,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Weaver_Shop/Weaver's_Shop.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,8,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_APOTHECARY</Type>
@@ -921,7 +921,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/French_Chateau/an_palace_eu.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,4,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARABIAN_BAZAAR</Type>
@@ -931,7 +931,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Arabian_Bazaar/humanbazaar.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,1,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PORTUGAL_FEITORIA</Type>
@@ -951,7 +951,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Austrian_Opera_House/semperoper.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,7,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BURGUNDY_WINERY</Type>
@@ -971,7 +971,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Cordoban_Noria/watermill.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,6,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VENICE_ARSENAL</Type>
@@ -981,7 +981,7 @@
 			<fInterfaceScale>2.0</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Venetian_Arsenal/Harbor.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,6,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GENOA_BANK</Type>
@@ -991,7 +991,7 @@
 			<fInterfaceScale>0.66</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Genoan_Bank/Bank.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,3,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ENGLISH_ROYAL_EXCHANGE</Type>
@@ -1011,7 +1011,7 @@
 			<fInterfaceScale>0.46</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Hungarian_Vegvar/Castle2.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,2,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SPANISH_CITADEL</Type>
@@ -1051,7 +1051,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Polish_Folwark/Folwark.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,2,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OTTOMAN_HAMMAM</Type>
@@ -1071,7 +1071,7 @@
 			<fInterfaceScale>1.2</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Moscow_Kremlin_Walls/Kremlin_civopedia.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,1,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KIEV_VECHE</Type>
@@ -1081,7 +1081,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Kievan_Veche/Veche.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,5,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,5,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HOLY_ROMAN_RATHAUS</Type>
@@ -1111,7 +1111,7 @@
 			<fInterfaceScale>0.62</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Lithuanian_Vaivadija/guild06.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,7,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NETHERLANDS_DIKE</Type>
@@ -1133,7 +1133,7 @@
 			<fInterfaceScale>0.64</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Pagan_Shrine/AsenTemple.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,8,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JEWISH_QUARTER</Type>
@@ -1143,7 +1143,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Jewish_Quarter/jewish-cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,8,14</Button>
+			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,14</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JEWISH_SHRINE</Type>
@@ -1163,7 +1163,7 @@
 			<fInterfaceScale>0.46</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_Church/church.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,4,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_SCHOOL</Type>
@@ -1173,7 +1173,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_School/College.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,2,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_SEMINARY</Type>
@@ -1183,7 +1183,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_Seminary/University.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,3,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_CHAPEL</Type>
@@ -1193,7 +1193,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_Belfry/Belfry.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,8,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_CATHEDRAL</Type>
@@ -1203,7 +1203,7 @@
 			<fInterfaceScale>0.38</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_Cathedral/cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,1,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_SHRINE</Type>
@@ -1213,7 +1213,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/All_Saints_Church/WittenbergChurch.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,7,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ISLAMIC_SCHOOL</Type>
@@ -1223,7 +1223,7 @@
 			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Islamic_House_of_Wisdom/arab_monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,7,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ISLAMIC_CHAPEL</Type>
@@ -1263,7 +1263,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Islamic_Madrassa/Madrassa.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,6,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ISLAMIC_SHRINE</Type>
@@ -1273,7 +1273,7 @@
 			<fInterfaceScale>0.44</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Umayyad_Mosque/islamic_monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,6,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_TEMPLE</Type>
@@ -1283,7 +1283,7 @@
 			<fInterfaceScale>0.46</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Temple/christian cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,8,13</Button>
+			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,13</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_CATHEDRAL</Type>
@@ -1293,7 +1293,7 @@
 			<fInterfaceScale>0.38</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Cathedral/cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_MONASTERY</Type>
@@ -1313,7 +1313,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Belfry/christian temple.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,5,12</Button>
+			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,8,13</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_RELIQUARY</Type>
@@ -1323,7 +1323,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Reliquary/ts_e_church.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,6,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_SEMINARY</Type>
@@ -1333,7 +1333,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Seminary/christian shrine.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,7,12</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_SHRINE</Type>
@@ -1343,7 +1343,7 @@
 			<fInterfaceScale>0.42</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/St_Peters_Basilica/Apostolic_Palace.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas3.dds,4,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_TEMPLE</Type>
@@ -1353,7 +1353,7 @@
 			<fInterfaceScale>0.76</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Temple/lavrabelltower2.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,2,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,2,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_CHAPEL</Type>
@@ -1363,7 +1363,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Belfry/stgregorychurch.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,8,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_RELIQUARY</Type>
@@ -1373,7 +1373,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Reliquary/orthodoxtemple.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,4,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_SEMINARY</Type>
@@ -1383,7 +1383,7 @@
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Seminary/lavrabelltower.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,5,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_CATHEDRAL</Type>
@@ -1393,7 +1393,7 @@
 			<fInterfaceScale>3.4</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Cathedral/orthodox_cathedral.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,1,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,5,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_MONASTERY</Type>
@@ -1403,7 +1403,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Monastery/christian monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas2.dds,3,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,1,5</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_SHRINE</Type>
@@ -1413,7 +1413,7 @@
 			<fInterfaceScale>0.44</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Hagia_Sophia/hagiasophia_minarets.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,4,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,6</Button>
 		</BuildingArtInfo>
 		<!-- Religious Buildings -->
 		<!-- Corporations -->
@@ -1425,7 +1425,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Hospitaller/christian monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,2,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_2</Type>
@@ -1435,7 +1435,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Templar/christian monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,8,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,2,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_3</Type>
@@ -1445,7 +1445,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Teutonic/christian monastery.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,8</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_4</Type>
@@ -1455,7 +1455,7 @@
 			<fInterfaceScale>0.98</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Hanseatic/medieval_house2.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,3,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_5</Type>
@@ -1465,7 +1465,7 @@
 			<fInterfaceScale>0.66</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Medici/medieval_house2.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,1,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,3,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_6</Type>
@@ -1475,7 +1475,7 @@
 			<fInterfaceScale>0.66</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Augsburg/medieval_house2.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,9</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_7</Type>

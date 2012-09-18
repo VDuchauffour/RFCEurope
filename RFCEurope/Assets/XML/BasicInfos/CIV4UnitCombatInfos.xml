@@ -14,7 +14,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_LIGHT_CAVALRY</Type>
 			<Description>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Description>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,4,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,8</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_HEAVY_CAVALRY</Type>
@@ -24,12 +24,12 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_POLEARM</Type>
 			<Description>TXT_KEY_UNITCOMBAT_POLEARM</Description>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,5,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,8</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_HEAVY_INFANTRY</Type>
 			<Description>TXT_KEY_UNITCOMBAT_HEAVY_INFANTRY</Description>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas.dds,7,11</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,8</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SIEGE</Type>

@@ -8,157 +8,157 @@
 	<CivilizationArtInfos>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_ARABIA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,1,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,1,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Arabic.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_AUSTRIA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,2,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,2,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Austria.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BULGARIA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,3,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,3,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Bulgaria.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BURGUNDY</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,4,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,4,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Burgundy.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BYZANTIUM</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,5,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,5,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Byzantine_Labarum.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_CORDOBA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,6,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,6,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Cordoba_Moorish2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_DUTCH</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,6,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,6,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Dutch_Leeuw.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_ENGLAND</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,7,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,7,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_England_Lions.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_FRANCE</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,8,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,8,1</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_France_3FleurDeLis2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_GENOA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,1,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Genoa_StGeorgeCross.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_GERMANY</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,7,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,7,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Germany_HolyRomanEmpire3.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_HUNGARY</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,2,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,2,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Hungary2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_KIEV</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,3,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,3,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Kiev.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_LITHUANIA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,4,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,4,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Lithuania.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_MOSCOW</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,5,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,5,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Moscow.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_NORSE</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,6,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,6,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Norse_Raven.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_POLAND</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,7,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,7,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Poland.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_PORTUGAL</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,1,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,1,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Portugal_Escudo.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_SPAIN</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,2,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,2,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Spain_Castle4.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_SWEDEN</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,3,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,3,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Sweden.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_OTTOMAN</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,4,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,4,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Ottoman_Tugra.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_VENEZIA</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,5,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,5,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Venice.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_PAPAL</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,8,2</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,8,2</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_PapalState.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_INDEPENDENT</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,2,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,2,4</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Independent_X.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_MINOR</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,1,4</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,1,4</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Independent_X.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BARBARIAN</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas4_Civs.dds,8,3</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,8,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Barbarian_Skull2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>

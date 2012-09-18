@@ -73,7 +73,7 @@
 			<Quote>TXT_KEY_TECH_EU_CALENDAR_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Calendar.dds,Art/Interface/Buttons/TechTree_Atlas.dds,3,9</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,3,9</Button>
 		</TechInfo>
 		<TechInfo><!--ARCHITECTURE-->
 			<Type>TECH_ARCHITECTURE</Type>
@@ -136,7 +136,7 @@
 			<Quote>TXT_KEY_TECH_MASONRY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Masonry.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,5</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,5</Button>
 		</TechInfo>
 		<TechInfo><!--BRONZE_CASTING-->
 			<Type>TECH_BRONZE_CASTING</Type>
@@ -199,7 +199,7 @@
 			<Quote>TXT_KEY_TECH_EU_BRONZE_CASTING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Bronze Working.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,9</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,9</Button>
 		</TechInfo>
 		<TechInfo><!--THEOLOGY-->
 			<Type>TECH_THEOLOGY</Type>
@@ -266,7 +266,7 @@
 			<Quote>TXT_KEY_TECH_EU_THEOLOGY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Theology.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,12</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,12</Button>
 		</TechInfo>
 		<TechInfo><!--MANORIALISM-->
 			<Type>TECH_MANORIALISM</Type>
@@ -333,7 +333,7 @@
 			<Quote>TXT_KEY_TECH_EU_MANORIALISM_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/manorialism.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,4,5</Button>
 		</TechInfo>
 		<TechInfo><!--STIRRUP-->
 			<Type>TECH_STIRRUP</Type>
@@ -392,7 +392,7 @@
 			<Quote>TXT_KEY_TECH_EU_STIRRUP_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/stirrup.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,2,4</Button>
 		</TechInfo>
 		<TechInfo><!--ENGINEERING-->
 			<Type>TECH_ENGINEERING</Type>
@@ -457,7 +457,7 @@
 			<Quote>TXT_KEY_TECH_EU_ENGINEERING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Engineering.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,3</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,7,3</Button>
 		</TechInfo>
 		<TechInfo><!--CHAIN_MAIL-->
 			<Type>TECH_CHAIN_MAIL</Type>
@@ -518,7 +518,7 @@
 			<Quote>TXT_KEY_TECH_EU_CHAIN_MAIL_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/ChainMail.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,3,6</Button>
 		</TechInfo>
 		<TechInfo><!--ART-->
 			<Type>TECH_ART</Type>
@@ -579,7 +579,7 @@
 			<Quote>TXT_KEY_TECH_EU_RELIGIOUS_ART_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,16</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,16</Button>
 		</TechInfo>
 		<TechInfo><!--MONASTICISM-->
 			<Type>TECH_MONASTICISM</Type>
@@ -648,7 +648,7 @@
 			<Quote>TXT_KEY_TECH_EU_MONASTICISM_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Meditation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,5</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,5</Button>
 		</TechInfo>
 		<TechInfo><!--VASSALAGE-->
 			<Type>TECH_VASSALAGE</Type>
@@ -713,7 +713,7 @@
 			<Quote>TXT_KEY_TECH_EU_VASSALAGE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/vassalage.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,1,4</Button>
 		</TechInfo>
 		<TechInfo><!--ASTROLABE-->
 			<Type>TECH_ASTROLABE</Type>
@@ -783,7 +783,7 @@
 			<Quote>TXT_KEY_TECH_EU_ASTROLABE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Astrolabe.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,4,6</Button>
 		</TechInfo>
 		<TechInfo><!--MACHINERY-->
 			<Type>TECH_MACHINERY</Type>
@@ -856,7 +856,7 @@
 			<Quote>TXT_KEY_TECH_EU_MACHINERY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Machinery.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,10</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,8,10</Button>
 		</TechInfo>
 		<TechInfo><!--VAULTED_ARCHES-->
 			<Type>TECH_VAULTED_ARCHES</Type>
@@ -927,7 +927,7 @@
 			<Quote>TXT_KEY_TECH_EU_VAULTED_ARCHES_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/vaulted_arches.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,13</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,1,7</Button>
 		</TechInfo>
 		<TechInfo><!--MUSIC-->
 			<Type>TECH_MUSIC</Type>
@@ -988,7 +988,7 @@
 			<Quote>TXT_KEY_TECH_EU_MUSIC_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Music.dds,Art/Interface/Buttons/TechTree_Atlas.dds,3,11</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,3,11</Button>
 		</TechInfo>
 		<TechInfo><!--HERBAL_MEDICINE-->
 			<Type>TECH_HERBAL_MEDICINE</Type>
@@ -1057,7 +1057,7 @@
 			<Quote>TXT_KEY_TECH_EU_HERBAL MEDICINE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Pottery.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,8,6</Button>
 		</TechInfo>
 		<TechInfo><!--FEUDALISM-->
 			<Type>TECH_FEUDALISM</Type>
@@ -1126,7 +1126,7 @@
 			<Quote>TXT_KEY_TECH_EU_FEUDALISM_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Feudalism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,10</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,10</Button>
 		</TechInfo>
 		<TechInfo><!--FARRIERS-->
 			<Type>TECH_FARRIERS</Type>
@@ -1189,7 +1189,7 @@
 			<Quote>TXT_KEY_TECH_EU_FARRIERS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Horseback Riding.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,4</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,4</Button>
 		</TechInfo>
 		<TechInfo><!--MAP_MAKING-->
 			<Type>TECH_MAP_MAKING</Type>
@@ -1254,7 +1254,7 @@
 			<Quote>TXT_KEY_TECH_EU_MAPMAKING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/MapMaking.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,3,5</Button>
 		</TechInfo>
 		<TechInfo><!--BLAST_FURNACE-->
 			<Type>TECH_BLAST_FURNACE</Type>
@@ -1321,7 +1321,7 @@
 			<Quote>TXT_KEY_TECH_EU_BLAST_FURNACE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Metal Casting.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,5</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,5</Button>
 		</TechInfo>
 		<TechInfo><!--SIEGE_ENGINES-->
 			<Type>TECH_SIEGE_ENGINES</Type>
@@ -1382,7 +1382,7 @@
 			<Quote>TXT_KEY_TECH_EU_SIEGE_ENGINES_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/SiegeEngines.dds,Art/Interface/Buttons/RFCE_Atlas.dds,3,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,3,4</Button>
 		</TechInfo>
 		<TechInfo><!--GOTHIC_ARCHITECTURE-->
 			<Type>TECH_GOTHIC_ARCHITECTURE</Type>
@@ -1453,7 +1453,7 @@
 			<Quote>TXT_KEY_TECH_EU_GOTHIC_ARCHITECTURE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/GothicArchitecture.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,6,5</Button>
 		</TechInfo>
 		<TechInfo><!--LITERATURE-->
 			<Type>TECH_LITERATURE</Type>
@@ -1522,7 +1522,7 @@
 			<Quote>TXT_KEY_TECH_EU_LITERATURE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Literature.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,10</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,7,10</Button>
 		</TechInfo>
 		<TechInfo><!--CODE_OF_LAWS-->
 			<Type>TECH_CODE_OF_LAWS</Type>
@@ -1583,7 +1583,7 @@
 			<Quote>TXT_KEY_TECH_EU_CODE_OF_LAWS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Code of Laws.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,2</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,2</Button>
 		</TechInfo>
 		<TechInfo><!--ARISTOCRACY-->
 			<Type>TECH_ARISTOCRACY</Type>
@@ -1659,7 +1659,7 @@
 			<Quote>TXT_KEY_TECH_EU_ARISTOCRACY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Aristocracy.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,5,6</Button>
 		</TechInfo>
 		<TechInfo><!--LATEEN_SAILS-->
 			<Type>TECH_LATEEN_SAILS</Type>
@@ -1724,7 +1724,7 @@
 			<Quote>TXT_KEY_TECH_EU_LATEEN_SAILS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Sailing.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,7</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,7</Button>
 		</TechInfo>
 		<TechInfo><!--PLATE_ARMOR-->
 			<Type>TECH_PLATE_ARMOR</Type>
@@ -1799,7 +1799,7 @@
 			<Quote>TXT_KEY_TECH_EU_PLATE_ARMOUR_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Iron Working.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,10</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,10</Button>
 		</TechInfo>
 		<TechInfo><!--MONUMENT_BUILDING-->
 			<Type>TECH_MONUMENT_BUILDING</Type>
@@ -1862,7 +1862,7 @@
 			<Quote>TXT_KEY_TECH_EU_MONUMENT_BUILDING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
+			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
 		</TechInfo>
 		<TechInfo><!--CLASSICAL_KNOWLEDGE-->
 			<Type>TECH_CLASSICAL_KNOWLEDGE</Type>
@@ -1931,7 +1931,7 @@
 			<Quote>TXT_KEY_TECH_EU_CLASSICAL_KNOWLEDGE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Polytheism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,7,6</Button>
 		</TechInfo>
 		<TechInfo><!--ALCHEMY-->
 			<Type>TECH_ALCHEMY</Type>
@@ -1995,7 +1995,7 @@
 			<Quote>TXT_KEY_TECH_EU_ALCHEMY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Alchemy.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,8,6</Button>
 		</TechInfo>
 		<TechInfo><!--CIVIL_SERVICE-->
 			<Type>TECH_CIVIL_SERVICE</Type>
@@ -2070,7 +2070,7 @@
 			<Quote>TXT_KEY_TECH_EU_CIVIL_SERVICE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Civil Service.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,2</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,2</Button>
 		</TechInfo>
 		<TechInfo><!--CLOCKMAKING-->
 			<Type>TECH_CLOCKMAKING</Type>
@@ -2135,7 +2135,7 @@
 			<Quote>TXT_KEY_TECH_EU_CLOCK_MAKING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Compass.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,2</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,2</Button>
 		</TechInfo>
 		<TechInfo><!--PHILOSOPHY-->
 			<Type>TECH_PHILOSOPHY</Type>
@@ -2206,7 +2206,7 @@
 			<Quote>TXT_KEY_TECH_EU_PHILOSOPHY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Philosophy.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,4,6</Button>
 		</TechInfo>
 		<TechInfo><!--EDUCATION-->
 			<Type>TECH_EDUCATION</Type>
@@ -2273,7 +2273,7 @@
 			<Quote>TXT_KEY_TECH_EU_EDUCATION_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Education.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,3</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,3</Button>
 		</TechInfo>
 		<TechInfo><!--GUILDS-->
 			<Type>TECH_GUILDS</Type>
@@ -2344,7 +2344,7 @@
 			<Quote>TXT_KEY_TECH_EU_GUILDS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Guilds.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,4</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,4,4</Button>
 		</TechInfo>
 		<TechInfo><!--CHIVALRY-->
 			<Type>TECH_CHIVALRY</Type>
@@ -2416,7 +2416,7 @@
 			<Quote>TXT_KEY_TECH_EU_CHIVALRY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Chivalry.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,2,6</Button>
 		</TechInfo>
 		<TechInfo><!--OPTICS-->
 			<Type>TECH_OPTICS</Type>
@@ -2492,7 +2492,7 @@
 			<Quote>TXT_KEY_TECH_EU_OPTICS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Optics.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,6</Button>
 		</TechInfo>
 		<TechInfo><!--REPLACEABLE_PARTS-->
 			<Type>TECH_REPLACEABLE_PARTS</Type>
@@ -2555,7 +2555,7 @@
 			<Quote>TXT_KEY_TECH_EU_REPLACEABLE_PARTS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Replaceable Parts.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,7</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,7</Button>
 		</TechInfo>
 		<TechInfo><!--PATRONAGE-->
 			<Type>TECH_PATRONAGE</Type>
@@ -2626,7 +2626,7 @@
 			<Quote>TXT_KEY_TECH_EU_PATRONAGE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Writing.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,12</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,12</Button>
 		</TechInfo>
 		<TechInfo><!--GUNPOWDER-->
 			<Type>TECH_GUNPOWDER</Type>
@@ -2689,7 +2689,7 @@
 			<Quote>TXT_KEY_TECH_EU_GUNPOWDER_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Gunpowder.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,4</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,4</Button>
 		</TechInfo>
 		<TechInfo><!--BANKING-->
 			<Type>TECH_BANKING</Type>
@@ -2756,7 +2756,7 @@
 			<Quote>TXT_KEY_TECH_EU_BANKING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Banking.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,1</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,8,1</Button>
 		</TechInfo>
 		<TechInfo><!--MILITARY_TRADITION-->
 			<Type>TECH_MILITARY_TRADITION</Type>
@@ -2820,7 +2820,7 @@
 			<Quote>TXT_KEY_TECH_EU_MILITARY_TRADITION_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,1,16</Button>
+			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,1,16</Button>
 		</TechInfo>
 		<TechInfo><!--SHIPBUILDING-->
 			<Type>TECH_SHIPBUILDING</Type>
@@ -2891,7 +2891,7 @@
 			<Quote>TXT_KEY_TECH_EU_SHIPBUILDING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/ShipBuilding.dds,Art/Interface/Buttons/RFCE_Atlas.dds,4,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,4,4</Button>
 		</TechInfo>
 		<TechInfo><!--DRAMA-->
 			<Type>TECH_DRAMA</Type>
@@ -2962,7 +2962,7 @@
 			<Quote>TXT_KEY_TECH_EU_DRAMA_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Drama.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,3</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,3</Button>
 		</TechInfo>
 		<TechInfo><!--DIVINE_RIGHT-->
 			<Type>TECH_DIVINE_RIGHT</Type>
@@ -3034,7 +3034,7 @@
 			<Quote>TXT_KEY_TECH_EU_DIVINE_RIGHT_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Divine Right.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,3</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,3</Button>
 		</TechInfo>
 		<TechInfo><!--CHEMISTRY-->
 			<Type>TECH_CHEMISTRY</Type>
@@ -3101,7 +3101,7 @@
 			<Quote>TXT_KEY_TECH_EU_CHEMISTRY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Chemistry.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,9</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,4,9</Button>
 		</TechInfo>
 		<TechInfo><!--PAPER-->
 			<Type>TECH_PAPER</Type>
@@ -3172,7 +3172,7 @@
 			<Quote>TXT_KEY_TECH_EU_PAPER_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Paper.dds,Art/Interface/Buttons/TechTree_Atlas.dds,3,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,3,6</Button>
 		</TechInfo>
 		<TechInfo><!--PROFESSIONAL_ARMY-->
 			<Type>TECH_PROFESSIONAL_ARMY</Type>
@@ -3243,7 +3243,7 @@
 			<Quote>TXT_KEY_TECH_EU_PROFESSIONAL_ARMY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Fascism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,3</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,8,3</Button>
 		</TechInfo>
 		<TechInfo><!--PRINTING_PRESS-->
 			<Type>TECH_PRINTING_PRESS</Type>
@@ -3310,7 +3310,7 @@
 			<Quote>TXT_KEY_TECH_EU_PRINTING_PRESS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Printing Press.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,11</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,11</Button>
 		</TechInfo>
 		<TechInfo><!--PUBLIC_WORKS-->
 			<Type>TECH_PUBLIC_WORKS</Type>
@@ -3382,7 +3382,7 @@
 			<Quote>TXT_KEY_TECH_EU_PUBLIC_WORKS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/PublicWorks.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,7,4</Button>
 		</TechInfo>
 		<TechInfo><!--MATCHLOCK-->
 			<Type>TECH_MATCHLOCK</Type>
@@ -3449,7 +3449,7 @@
 			<Quote>TXT_KEY_TECH_EU_FLINTLOCK_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/flintlock.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,7,5</Button>
 		</TechInfo>
 		<TechInfo><!--ARABIC_KNOWLEDGE-->
 			<Type>TECH_ARABIC_KNOWLEDGE</Type>
@@ -3521,7 +3521,7 @@
 			<Quote>TXT_KEY_TECH_EU_ARABIC_KNOWLEDGE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/ArabicKnowledge.dds,Art/Interface/Buttons/RFCE_Atlas.dds,7,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,7,6</Button>
 		</TechInfo>
 		<TechInfo><!--ASTRONOMY-->
 			<Type>TECH_ASTRONOMY</Type>
@@ -3592,7 +3592,7 @@
 			<Quote>TXT_KEY_TECH_EU_ASTRONOMY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Astronomy.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,1</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,7,1</Button>
 		</TechInfo>
 		<TechInfo><!--STEAM_ENGINES-->
 			<Type>TECH_STEAM_ENGINES</Type>
@@ -3667,7 +3667,7 @@
 			<Quote>TXT_KEY_TECH_EU_STEAM_ENGINES_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Steam Power.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,12</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,12</Button>
 		</TechInfo>
 		<TechInfo><!--CONSTITUTION-->
 			<Type>TECH_CONSTITUTION</Type>
@@ -3743,7 +3743,7 @@
 			<Quote>TXT_KEY_TECH_EU_CONSTITUTION_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Constitution.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,2</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,8,2</Button>
 		</TechInfo>
 		<TechInfo><!--POLYGONAL_FORT-->
 			<Type>TECH_POLYGONAL_FORT</Type>
@@ -3807,7 +3807,7 @@
 			<Quote>TXT_KEY_TECH_EU_POLYGONAL_FORT_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/PolygonalFort.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,8,4</Button>
 		</TechInfo>
 		<TechInfo><!--ARABIC_MEDICINE-->
 			<Type>TECH_ARABIC_MEDICINE</Type>
@@ -3868,7 +3868,7 @@
 			<Quote>TXT_KEY_TECH_EU_ARABIC_MEDICINE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/ArabicMedicine.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,6,6</Button>
 		</TechInfo>
 		<TechInfo><!--RENAISSANCE_ART-->
 			<Type>TECH_RENAISSANCE_ART</Type>
@@ -3936,7 +3936,7 @@
 			<Quote>TXT_KEY_TECH_EU_RENAISSANCE_ART_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/RenaissanceArt.dds,Art/Interface/Buttons/RFCE_Atlas.dds,6,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,6,4</Button>
 		</TechInfo>
 		<TechInfo><!--NATIONALISM-->
 			<Type>TECH_NATIONALISM</Type>
@@ -4012,7 +4012,7 @@
 			<Quote>TXT_KEY_TECH_EU_NATIONALISM_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Nationalism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,6</Button>
 		</TechInfo>
 		<TechInfo><!--LIBERALISM-->
 			<Type>TECH_LIBERALISM</Type>
@@ -4084,7 +4084,7 @@
 			<Quote>TXT_KEY_TECH_EU_LIBERALISM_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Liberalism.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,10</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,10</Button>
 		</TechInfo>
 		<TechInfo><!--SCIENTIFIC_METHOD-->
 			<Type>TECH_SCIENTIFIC_METHOD</Type>
@@ -4152,7 +4152,7 @@
 			<Quote>TXT_KEY_TECH_EU_SCIENTIFIC_METHOD_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Scientific Method.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,7</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,8,7</Button>
 		</TechInfo>
 		<TechInfo><!--MILITARY_TACTICS-->
 			<Type>TECH_MILITARY_TACTICS</Type>
@@ -4215,7 +4215,7 @@
 			<Quote>TXT_KEY_TECH_EU_MILITARY_TACTICS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/MilitaryTactics.dds,Art/Interface/Buttons/RFCE_Atlas.dds,2,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,2,5</Button>
 		</TechInfo>
 		<TechInfo><!--NAVAL_ARCHITECTURE-->
 			<Type>TECH_NAVAL_ARCHITECTURE</Type>
@@ -4282,7 +4282,7 @@
 			<Quote>TXT_KEY_TECH_EU_NAVAL_ARCHITECTURE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/NavalArchitecture.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,1,5</Button>
 		</TechInfo>
 		<TechInfo><!--CIVIL_ENGINEERING-->
 			<Type>TECH_CIVIL_ENGINEERING</Type>
@@ -4345,7 +4345,7 @@
 			<Quote>TXT_KEY_TECH_EU_CIVIL_ENGINEERING_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Steel.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,12</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,12</Button>
 		</TechInfo>
 		<TechInfo><!--RIGHT_OF_MAN-->
 			<Type>TECH_RIGHT_OF_MAN</Type>
@@ -4416,7 +4416,7 @@
 			<Quote>TXT_KEY_TECH_EU_RIGHTS_OF_MAN_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/RightsOfMan.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,14</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,5,4</Button>
 		</TechInfo>
 		<TechInfo><!--ECONOMICS-->
 			<Type>TECH_ECONOMICS</Type>
@@ -4487,7 +4487,7 @@
 			<Quote>TXT_KEY_TECH_EU_ECONOMICS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Economics.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,3</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,4,3</Button>
 		</TechInfo>
 		<TechInfo><!--PHYSICS-->
 			<Type>TECH_PHYSICS</Type>
@@ -4556,7 +4556,7 @@
 			<Quote>TXT_KEY_TECH_EU_PHYSICS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Physics.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,6</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,5,6</Button>
 		</TechInfo>
 		<TechInfo><!--BIOLOGY-->
 			<Type>TECH_BIOLOGY</Type>
@@ -4621,7 +4621,7 @@
 			<Quote>TXT_KEY_TECH_EU_BIOLOGY_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Biology.dds,Art/Interface/Buttons/TechTree_Atlas.dds,1,9</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,1,9</Button>
 		</TechInfo>
 		<TechInfo><!--COMBINED_ARMS-->
 			<Type>TECH_COMBINED_ARMS</Type>
@@ -4682,7 +4682,7 @@
 			<Quote>TXT_KEY_TECH_EU_COMBINED_ARMS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/CombinedArms.dds,Art/Interface/Buttons/RFCE_Atlas.dds,1,16</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,1,6</Button>
 		</TechInfo>
 		<TechInfo><!--TRADING_COMPANIES-->
 			<Type>TECH_TRADING_COMPANIES</Type>
@@ -4751,7 +4751,7 @@
 			<Quote>TXT_KEY_TECH_EU_TRADING_COMPANIES_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,6,9</Button>
 		</TechInfo>
 		<TechInfo><!--MACHINE_TOOLS-->
 			<Type>TECH_MACHINE_TOOLS</Type>
@@ -4820,7 +4820,7 @@
 			<Quote>TXT_KEY_TECH_EU_MACHINE_TOOLS_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/MachineTools.dds,Art/Interface/Buttons/RFCE_Atlas.dds,5,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,5,5</Button>
 		</TechInfo>
 		<TechInfo><!--FREE_MARKET-->
 			<Type>TECH_FREE_MARKET</Type>
@@ -4889,7 +4889,7 @@
 			<Quote>TXT_KEY_TECH_EU_FREE_MARKET_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Currency.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,9</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,7,9</Button>
 		</TechInfo>
 		<TechInfo><!--EXPLOSIVES-->
 			<Type>TECH_EXPLOSIVES</Type>
@@ -4956,7 +4956,7 @@
 			<Quote>TXT_KEY_TECH_EU_EXPLOSIVES_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Explosives.dds,Art/Interface/Buttons/RFCE_Atlas.dds,8,15</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,8,5</Button>
 		</TechInfo>
 		<TechInfo><!--MEDICINE-->
 			<Type>TECH_MEDICINE</Type>
@@ -5031,7 +5031,7 @@
 			<Quote>TXT_KEY_TECH_EU_MEDICINE_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Medicine.dds,Art/Interface/Buttons/TechTree_Atlas.dds,4,5</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,4,5</Button>
 		</TechInfo>
 		<TechInfo><!--INDUSTRIAL_TECH-->
 			<Type>TECH_INDUSTRIAL_TECH</Type>
@@ -5116,7 +5116,7 @@
 			<Quote>TXT_KEY_TECH_EU_INDUSTRIAL_REVOLUTION_QUOTE</Quote>
 			<Sound>NONE</Sound>
 			<SoundMP>NONE</SoundMP>
-			<Button>,Art/Interface/Buttons/TechTree/Future Tech.dds,Art/Interface/Buttons/TechTree_Atlas.dds,2,4</Button>
+			<Button>,-,Art/Interface/Buttons/TechTree_Atlas.dds,2,4</Button>
 		</TechInfo>
 	</TechInfos>
 </Civ4TechInfos>
