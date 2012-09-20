@@ -526,9 +526,9 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.02</fScale>
 			<fInterfaceScale>0.46</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Tall Wall/Tall_Wall_Civilopedia.nif</NIF>
+			<NIF>Art/Structures/Buildings/Walls/tall_wall_civilopedia.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,4</Button>
+			 <Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CASTLE</Type>
@@ -1029,7 +1029,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>0.88</fScale>
 			<fInterfaceScale>0.78</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Yert_ger/Yurt_Ger.nif</NIF>
+			<NIF>Art/Structures/Buildings/Bulgarian_Stan/Yurt_Ger.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,3</Button>
 		</BuildingArtInfo>
@@ -1039,7 +1039,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.6</fScale>
 			<fInterfaceScale>0.74</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Viking Trading Post/Viking_Post.nif</NIF>
+			<NIF>Art/Structures/Buildings/Norse_Trading_Post/Viking_Post.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,4</Button>
 		</BuildingArtInfo>
@@ -1059,7 +1059,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.64</fScale>
 			<fInterfaceScale>0.62</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Ottoman Hammam/Hammam.nif</NIF>
+			<NIF>Art/Structures/Buildings/Ottoman_Hammam/Hammam.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,4</Button>
 		</BuildingArtInfo>
@@ -1089,7 +1089,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.4</fScale>
 			<fInterfaceScale>0.54</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/HRE_RathHouse/HRE_RathHouse.nif</NIF>
+			<NIF>Art/Structures/Buildings/German_Rathaus/HRE_RathHouse.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,1,7</Button>
 		</BuildingArtInfo>
@@ -1099,7 +1099,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.28</fScale>
 			<fInterfaceScale>0.56</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Military_Encampments/Military_Encampments.nif</NIF>
+			<NIF>Art/Structures/Buildings/Swedish_Soldattorp/Military_Encampments.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,4,2</Button>
 		</BuildingArtInfo>
@@ -1141,7 +1141,7 @@
 			<bAnimated>1</bAnimated>
 			<fScale>1.32</fScale>
 			<fInterfaceScale>0.58</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Cathedrals/jewish-cathedral.nif</NIF>
+			<NIF>Art/Structures/Buildings/Jewish_Quarter/jewish-cathedral.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,14</Button>
 		</BuildingArtInfo>
@@ -1241,7 +1241,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.9</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Cathedrals/islamic_cathedral.nif</NIF>
+			<NIF>Art/Structures/Buildings/Islamic_Grand_Mosque/islamic_cathedral.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,1,14</Button>
 		</BuildingArtInfo>
@@ -1251,7 +1251,7 @@
 			<bAnimated>1</bAnimated>
 			<fScale>2.64</fScale>
 			<fInterfaceScale>0.58</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Monastery/Islamic/islamic_monastery.nif</NIF>
+			<NIF>Art/Structures/Buildings/Islamic_Mosque/islamic_monastery.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,2,14</Button>
 		</BuildingArtInfo>
@@ -1261,7 +1261,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.4</fScale>
 			<fInterfaceScale>0.6</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Madrassa/Madrassa.nif</NIF>
+			<NIF>Art/Structures/Buildings/Islamic_Madrassa/Madrassa.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,3</Button>
 		</BuildingArtInfo>
@@ -1281,7 +1281,7 @@
 			<bAnimated>1</bAnimated>
 			<fScale>1.14</fScale>
 			<fInterfaceScale>0.46</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Cathedrals/christian cathedral.nif</NIF>
+			<NIF>Art/Structures/Buildings/Catholic_Temple/christian cathedral.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,5,13</Button>
 		</BuildingArtInfo>
@@ -1301,7 +1301,7 @@
 			<bAnimated>1</bAnimated>
 			<fScale>2.1</fScale>
 			<fInterfaceScale>0.56</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Monastery/Christian/christian monastery.nif</NIF>
+			<NIF>Art/Structures/Buildings/Catholic_Monastery/christian monastery.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,6,13</Button>
 		</BuildingArtInfo>
@@ -1311,7 +1311,7 @@
 			<bAnimated>1</bAnimated>
 			<fScale>1.68</fScale>
 			<fInterfaceScale>0.54</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Temple/christian/christian temple.nif</NIF>
+			<NIF>Art/Structures/Buildings/Catholic_Belfry/christian temple.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,8,13</Button>
 		</BuildingArtInfo>
@@ -1331,7 +1331,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.3</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Shrine/christian shrine.nif</NIF>
+			<NIF>Art/Structures/Buildings/Catholic_Seminary/christian shrine.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,2</Button>
 		</BuildingArtInfo>

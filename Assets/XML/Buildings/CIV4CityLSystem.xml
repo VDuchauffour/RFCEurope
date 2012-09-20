@@ -2259,8 +2259,8 @@
 			<Attribute Class="Scalar">szBuilder:WallBuilder</Attribute>
 			<Attribute Class="Scalar">bLayoutAfterGenerics:1</Attribute>
 			<Attribute Class="Scalar">bNoContour:1</Attribute>
-			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Buildings/Tall Wall/post01_eu_med.nif</Attribute>
-			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Buildings/Tall Wall/wall%1_eu_med.nif</Attribute>
+			<Attribute Class="Scalar">szPostArtFile:Art/Structures/Buildings/Walls/post01_eu_med.nif</Attribute>
+			<Attribute Class="Scalar">szWallArtFile:Art/Structures/Buildings/Walls/wall%1_eu_med.nif</Attribute>
 			<Scale>1.0</Scale>
 			<Rotate>45</Rotate>
 			<!-- this needs to be the negative of the CITY_TWIST value in detail manager; note that this uses degrees but DetailManager uses radians. Sorry. -->
