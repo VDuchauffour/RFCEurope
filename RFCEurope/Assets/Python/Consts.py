@@ -12,6 +12,7 @@ l0ArrayActive = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 l0ArrayTotal =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # this is just a dummy array
 
 lm1Array =      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+# Size of the above are final size
 
 # 3Miro: map size entered here
 iMapMaxX = 100
@@ -203,6 +204,33 @@ xml.i1581AD,#1580AD Dutch - turn 340 is normal time
 0
 ) # 3Miro: tBirth should finish with zeros for all minor civs (indeps, barbs and celts in original RFC)
 
+# "Collapse dates", gives a stability penalty to AI civs past this date. The idea is to speed up late game a bit - from RFCE++
+# Currently the penalty is small, mostly to weaken the civs if they are powerful
+tCollapse = (
+xml.i1453AD, #Byzantium - Ottoman conquest of Constantinople
+999, #Frankia
+xml.i1517AD, #Arabia - to make room for the Ottomans
+xml.i1393AD, #Bulgaria - Bulgaria UHV 3
+xml.i1492AD, #Cordoba - Cordoba UHV 3
+999, #Norse
+999, #Venice
+xml.i1473AD, #Burgundy - Burgundy UHV 3
+999, #Germany ##in RFCE++: xml.i1648AD, #Germany - to make room for Prussia
+xml.i1300AD, #Kiev - Kiev UHV 1
+xml.i1542AD, #Hungary - 1541, Ottoman conquest of Buda
+999, #Spain
+xml.i1780AD, #Poland
+xml.i1500AD, #Genoa
+999, #England
+999, #Portugal
+xml.i1569AD, #Lithuania - Lithuania UHV 3
+999, #Austria
+999, #Turkey
+999, #Moscow
+999, #Sweden
+999, #Dutch
+999  #Pope
+)
 
 tYear = ( # for Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),
@@ -1081,7 +1109,7 @@ iProvinceLost = 2     # you have no cities and others have cities in it
 iProvinceNone      = 0 # this is the default, use it for everything too far away to be considered
 iProvinceDesired   = 1 # for AI purposes, same as outer, just lower aggession flag
 iProvinceOuter     = 2 # small stability hit on owning
-iProvincePotential = 3 # changes to Home or Natural as soon as conquered
+iProvincePotential = 3 # changes to Core or Natural as soon as conquered
 iProvinceNatural   = 4 # stable, small penalty for not conquering it
 iProvinceCore      = 5 # stable, large penalty for not conquering it
 iNumProvinceTypes  = 6      
