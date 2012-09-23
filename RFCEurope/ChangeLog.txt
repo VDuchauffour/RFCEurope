@@ -30,10 +30,9 @@ Changes for RFCE 1.1:
 			Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
 			Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
 		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files
-		- First part of the inquisition updates: base code for chooseable religion on persecution
 		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
 		- Added special chars to the hungarian and german city names as a test
-		- Second part of the inquisition code (still not complete) - most of it is based on SoI, huge thanks to edead
+		- Inquisition overhaul (still incomplete) - parts of the code are based on SoI, huge thanks to edead for his additional help
 			all persecutions now remove max one religion
 			chooseable religion for the human, with a popup on persecution if there are more than one target religions
 			holy cities cannot be persecuted from their holy religion
@@ -120,7 +119,10 @@ Changes for RFCE 1.1:
 		- Small changes in the starting techs. Poland got an additional tech, many civs got one less
 		- Minor leader personality, memory, and attitude modifications
 		- Sistine Chapel gives only 3 culture to state religion buildings
-	
+		- Increased temporary but lowered permanent stability loss from losing cities in your core provinces. You may reconquer them after all
+		- Small temporary stability loss for losing a city in your OK or unstable provinces
+		- Lowered permanent stability loss from being in anarchy, both for small nations and for big empires
+		
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
 		- UHV counter display bug for Portugal and France
