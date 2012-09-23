@@ -704,7 +704,7 @@ class Barbs:
                 # substract the strength of the revolt
                 iSuppressOdds -= lNation[4][iRevoltIndex]
                 # time to roll the dice
-                if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
+                if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'minor nation revolt') ):
                         # revolt suppressed
                         for iI in range( len( cityList ) ):
                                 pCity = cityList[iI]

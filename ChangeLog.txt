@@ -55,6 +55,10 @@ Changes for RFCE 1.1:
 		- Burgundian Winery replaces Brewery: +5% commerce, +1 happy, +3 culture, +1 health with wine
 		- Byzantium starts with Religious Law. Historically fitting, and may increase early orthodoxy spread in a couple games.
 		- Separated leaderheads FPK into 2 smaller files. Might increase LH loading performance
+		- Collapse Dates: AI civs get a small but increasing stability penalty after their historical collapse dates
+		- The civil war mechanics (instead of instant collapse) are in empires with 10 or more cities
+		- Stability is accounted properly for cities and buildings placed in WB
+		- Added missing Morea province from Hungarian UHV 3
 	
 	Map and province changes:
 		- Atlantic Access near Sevilla
