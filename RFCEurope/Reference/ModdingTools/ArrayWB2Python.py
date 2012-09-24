@@ -10,14 +10,14 @@ import re #for string manipulations
 #       This Script reads a WorldBuilder file into three types of arrays
 #       
 #       Python Array:   
-#			for Settlers Map and War Map
-#			assumes the map contains a bunch of labels with ONLY NUMBERS, then it reads those and outputs
-#                       generates output of a Python array that can be places in RFCEMaps.py
+#           for Settlers Map and War Map
+#           assumes the map contains a bunch of labels with ONLY NUMBERS, then it reads those and outputs
+#           generates output of a Python array that can be places in RFCEMaps.py
 #
 #       City Name Map:
-#			writes the labels into an array of strings
+#           writes the labels into an array of strings
 #
-#	You need to edit tWBFilename and iOutputType
+#       You need to edit tWBFilename and iOutputType
 #
 #       Usage:
 #               edit the part below with the map size (by default the size of RFCEurope) and file-name of the WB file
@@ -34,18 +34,10 @@ import re #for string manipulations
 ######################################################################
 ##### Edit this Part ################
 
-#tWBFilename = "LithuaniaWarsMap.CivBeyondSwordWBSave"
-#tWBFilename = "LithuaniaSettlersMap.CivBeyondSwordWBSave"
-#tWBFilename = "PolandWarsMap.CivBeyondSwordWBSave"
-#tWBFilename = "PolandSettlersMap.CivBeyondSwordWBSave"
-#tWBFilename = "PortugalWarsMap.CivBeyondSwordWBSave"
-#tWBFilename = "CordobaSettlersMap.CivBeyondSwordWBSave"
-#tWBFilename = "PortugalSettlersMap.CivBeyondSwordWBSave"
-#tWBFilename = "PolandNewCityNamesAndResources.CivBeyondSwordWBSave"
 tWBFilename = "SwedenCityNames.CivBeyondSwordWBSave"
 
-iOutputType = 3 # 1 - Settlers Map 2 Array, 2 - War Map 2 Array. 3 - City Name Map
-
+#OutputType: 1 - Settler Map to Array, 2 - War Map to Array. 3 - City Name Map
+iOutputType = 3
 
 iMapMaxX = 100
 iMapMaxY = 73

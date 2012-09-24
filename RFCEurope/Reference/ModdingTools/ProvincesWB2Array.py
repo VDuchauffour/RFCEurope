@@ -31,7 +31,9 @@ import re #for string manipulations
 ##### Edit this Part ################
 
 tWBFilename = "Provinces_AR.CivBeyondSwordWBSave"
-iOutputType = 3 # 1 - Javascript Province, 2 - Javascript Map, 3 - Python Array for Maps.py
+
+#OutputType: 1 - Javascript Province, 2 - Javascript Map, 3 - Python Array for Maps.py
+iOutputType = 3
 
 iMapMaxX = 100
 iMapMaxY = 73
