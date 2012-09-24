@@ -24,29 +24,34 @@ Changes for RFCE 1.1:
 		- Olive plantation gives 1 food but one less commerce; unimproved grapes already give 1 food; additional 1 commerce from improved Silk
 		- As of revision 949, the russian version is a separate download. An add-on to the mod
 			The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a russian one)
-			This will enable us to use such characters: גבהיכםצüתף...
-			(actually we could have those extra characters before, but only in the civilopedia and other texts)
-			Now we can have civ-specific names everywhere, including everything that appear on the map too
+			This will enable us to use such characters: גבהיכםצüתף... (actually we could use them before, but only in the civilopedia)
+			Now we can have civ-specific names everywhere, including everything that appear on the map
 			Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
+			Added special characters to some of the hungarian and german city names as a test
 			Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
 		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files
 		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
-		- Added special chars to the hungarian and german city names as a test
 		- Inquisition overhaul (still incomplete) - parts of the code are based on SoI, huge thanks to edead for his additional help
-			all persecutions now remove max one religion
-			chooseable religion for the human, with a popup on persecution if there are more than one target religions
-			holy cities cannot be persecuted from their holy religion
-			your state religion cannot be persecuted, and you can only persecute if you have a state religion
-			persecution has a base chance to succeed between 60% and 90%, based on your civ's faith
-				religious buildings of the target religion may lower this chance
-				religious wonders of the target religion seriously lower this chance
+			All persecutions can remove maximum one religion
+			Chooseable religion for the human, with a popup on persecution if there are more than one target religions
+			The AI will choose it's target religion based on preset order of the religions:
+				Catholicism as state religion: Islam, Protestantism, Judaism, Orthodoxy
+				Orhodoxy as state religion: Islam, Judaism, Catholicism, Protestantism
+				Protestantism as state religion: Catholicism, Islam, Orthodoxy, Judaism
+				Islam as state religion: Catholicism, Orthodoxy, Protestantism, Judaism
+				Judaism as state religion: Islam, Protestantism, Orthodoxy, Catholicism
+			Holy cities cannot be persecuted from their holy religion
+			Your state religion cannot be persecuted, and you can only persecute if you have a state religion
+			Persecution has a base chance to succeed between 60% and 90%, based on your civ's faith
+				Religious buildings of the target religion may lower this chance
+				Religious wonders of the target religion seriously lower this chance
 				Jerusalem has a lower base chance on default
-			if persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
-			small revolt and unhappiness after both successful and unsuccessful persecution
-			some of the population is killed/expelled if persecution succeeds
-			gold loot from the killed/expelled population and the buildings destroyed
-			successful persecution increases your faith by one
-			interface message for the successful/unsuccessful persecution
+			If persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
+			Small revolt and unhappiness after both successful and unsuccessful persecution
+			Some of the population is killed/expelled if persecution succeeds
+			Gold loot from the killed/expelled population and the buildings destroyed
+			Successful persecution increases your faith by one
+			Interface message for the successful/unsuccessful persecution
 		- UHV counters (on the interface) are removed after the UHV goal is completed/failed
 		- Lithuania got a culture UHV counter
 		- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
@@ -72,9 +77,10 @@ Changes for RFCE 1.1:
 		- Added a couple Spanish translations by mijamobu and felyux
 		- Added many Italian translations by Fede14
 		- Huge XML cleanup in most files. XML reorganization, in particular in the DCN, civic, and artdefine files
+		- Text updates and fixes in the reference files
 		- German translations by HolyHandGrenade
 		- New XML name tag for the 6th language
-		- Minor diplotext fixes
+		- Minor diplotext fixes (in the generic diplotexts)
 		- Various updates in the wording of the UP texts
 		- Changes in mercenary naming
 		- Updated strategy tooltips for the civics
@@ -157,41 +163,37 @@ Changes for RFCE 1.0:
 		- New and/or improved city name map for most civs. Huge thanks to Michael Vick and Morholt for their help
 
 	XML/text updates:
-		- Dawn of Man text for Byzantium
-		- XML cleanup
-		- Dawn of Man text fix for Venice
+		- New Dawn of Man text for Byzantium, Dawn of Man text fix for Venice
 		- Added second "Master of" condition to the Dynamic names
 		- Added new unique ability for a building, Amsterdam Buers gives 2% interest to gold added each turn
 
 	Art/Sound updates:
-		- Fixed Light Forest button
-		- Fixed cottages+upgrades art
-		- Art cleanup
+		- Fixed Light Forest and Luxury Store button
+		- Fixed cottages (and it's upgrades) art
 		- Spy has "Monk-art" in the renaissance era instead of the secret agent art
 		- Great Spy doesn't get the modern art in the Renaissance
 		- Lithuanian flag has colors inverted (now the color of the borders are the same as the background of the flag, as all other flags have) + Button has correct colors now
-		- Fixed Luxury Store button
 
 	Balance:
 		- Norse got an additional Berserker on spawn
 		- Star Fort doesn't damages units in the area anymore, defense and bombard-free defense increased 25% (was 20%)
-		- Swiss Line Infantry is later available
-		- Large (>10 cities) unstable Empires no longer collapse instantly, they first start to rapidly lose cities
-		- fixed a bug with collapse and respawning in a different region (safeMotherland in C++)
-		- nerfed France and Burgundy (in Units production)
-		- the French UP is disabled for the AI, it seems to do well enough with it anyway (AI doesn't build Charlemagne's Empire)
-		- buffed Venice stability
-		- various balance tweaks, the AI is about as good as it will ever get
-		- the Dutch UHV now requires 5 colonies (I got 7 in my game, but had no powerful enemies)
+		- Swiss Line Infantry is available later
+		- Large (>11 cities) unstable Empires no longer collapse instantly, they first start to rapidly lose cities
+		- Fixed a bug with collapse and respawning in a different region (safeMotherland in C++)
+		- Nerfed France and Burgundy (in Units production)
+		- The French UP is disabled for the AI, it seems to do well enough with it anyway (AI doesn't build Charlemagne's Empire)
+		- Buffed expansion and city stability for Venice
+		- Various balance tweaks, the AI is about as good as it will ever get
+		- The Dutch UHV now requires 5 colonies
 		- Given another Missionary to the Dutch, since they may flip only Catholic cities
 		- The Dutch properly start with Merchant Republic civic, as they were a Republic
 		- Minor boost to English research and building construction rate, they were often unreasonably behind
-		- Ottomans and Venice used to get stability bonuses, now those bonuses expire after 1581AD and 1204AD (Ottomans bonus for the Human is weak and Human Venice gets no bonus)
+		- Ottomans and Venice used to get stability bonuses, now those bonuses expire after 1581AD and 1204AD (small Ottoman bonus for the Human, while Human Venice gets no bonus)
 
 	Bugfixes:
 		- GG Renaissance art (this caused the crash around turn 300)
-		- the way secession used to work, one can have -30 stability and 20 cities in Stable provinces and not collapse, now some cities are guaranteed to split
-		- fixed the new Kiev UHV, changed < meaning not conquered to >= to mean conquered, also fixed the text
+		- The way secession used to work, one can have -30 stability and 20 cities in Stable provinces and not collapse, now some cities are guaranteed to split
+		- Fixed the new Kiev UHV, changed < (meaning not conquered) to >= (to mean conquered), also fixed the text
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -235,9 +237,8 @@ Changes for Beta 14 (Release Candidate):
 	Mercenaries:
 		- Mercs desert only if you don't have enough gold AND your Commerce slider is set to 0 (i.e. there is no way to get more money)
 		- Mercs now show proper text if they leave the Merc pool and Mercs show the province where they become available (when they become available)
-		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard,
-				Swiss Line Infantry, Lipka Tatars, Highlander Infantry, Zanji Spearman (Sudan Spearman),
-				Touareg Camel Archer, Medjay (Nubian Longbowman)
+		- New Mercs: Doppelsoldner, Irish Brigade, Stradiot, Waardgelder, Naffatun, Turkopoles, Walloon Guard, Swiss Line Infantry, Lipka Tatars
+				Highlander Infantry, Zanji Spearman (Sudan Spearman), Touareg Camel Archer, Medjay (Nubian Longbowman)
 		- Swiss Pikeman available in a much bigger area, Almogavar available in Greece (Catalan Company)
 		- New art for Don Cossack, Huscarl
 		- Mercs should get proper promotion prerequisites now, you should no longer see Mercs with Combat III but no Combat I and II
@@ -318,7 +319,7 @@ Changes for Beta 13:
 			- Mercs are tied to provinces, thus we can have region specific mercs. Also they appear in the given province when hired
 			- Mercenaries are also tied to specific intervals on the timeline
 			- Added a bunch of generic mercs, they can be updated with specific names later on
-			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack (more to come in later versions)
+			- Added the following unique mercenaries: Condottiero, Swiss Pikeman, Almogavar, Black Guard, Varangian Guard, Huscarl, Hackapell, Reiter, Zaporozhian Cossack, Don Cossack
 			- Readded Tagmata, Corsair, Welsh Longbowman, Highlander as unique mercenaries (some of these also availeable as barbs)
 			- Update to Merc Mechanics: Mercs are only available at one province at a time
 			- Mercs can also randomly leave the pool
@@ -356,7 +357,7 @@ Changes for Beta 13:
 		- Added missing provinces for a few UHVs (some of the above ones + Austria and Poland)
 		- Swedish 3rd UHV needs 15 cities
 		- Lithuanian 1st UHV requires 2000 culture
-		- Added a couple new "barbarian" spawns from Morholt: Swedish Crusades, Chudes, Nogais, Kalmyks
+		- Added a couple new "barbarian" spawns from RFCE++: Swedish Crusades, Chudes, Nogais, Kalmyks
 		- Expanded Swedish and Portuguese spawn areas, so they flip Abo and Porto respectively
 		- Added Show Hidden Attitudes Modcomp
 		- Minor nations in Tetuoan (Wattasids), and Oran (Ziyyanids) from RFCE++
@@ -377,7 +378,7 @@ Changes for Beta 13:
 		- Balancing near the SE part of the map (both resources and a few plot types), and smaller changes in the North African area
 		- Added a couple more Wetlands/Marshes, mostly in the Russian area
 		- Added a few gems to North Africa and NE Russia (as all of them were replaced by amber). They represent the gems in the Atlas mountains and Siberia, and they are hard to get
-		- Added Reykjavik with Berserkers and Valletta with Hospitaller Knights as late indy cities, if they are not settled (from Morholt)
+		- Added Reykjavik with Berserkers and Valletta with Hospitaller Knights as late indy cities, if they are not settled (from RFCE++)
 		- Tripoli moved 2N 2W, added Tarabulus as it's respawn
 		- Added Nidaros, Abo and Porto as indy cities
 		- Adjusted territory and resources in these areas, especially in Portugal. Slightly expanded province Lusitania to follow these changes
