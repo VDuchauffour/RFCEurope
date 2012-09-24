@@ -48,6 +48,7 @@ Changes for RFCE 1.1:
 				Jerusalem has a lower base chance on default
 			If persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
 			Small revolt and unhappiness after both successful and unsuccessful persecution
+			Short term stability loss (Swing Stability) after successful persecution
 			Some of the population is killed/expelled if persecution succeeds
 			Gold loot from the killed/expelled population and the buildings destroyed
 			Successful persecution increases your faith by one
