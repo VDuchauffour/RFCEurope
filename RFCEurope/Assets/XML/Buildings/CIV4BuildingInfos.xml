@@ -20109,7 +20109,7 @@
 			<iTradeRoutes>0</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
-			<iTradeRouteModifier>100</iTradeRouteModifier>
+			<iTradeRouteModifier>50</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
@@ -20144,7 +20144,7 @@
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<iSpecialistCount>3</iSpecialistCount>
+					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
 			<FreeSpecialistCounts>
@@ -20478,7 +20478,7 @@
 			<iAirUnitCapacity>0</iAirUnitCapacity>
 			<iNukeModifier>0</iNukeModifier>
 			<iNukeExplosionRand>0</iNukeExplosionRand>
-			<iFreeSpecialist>2</iFreeSpecialist>
+			<iFreeSpecialist>1</iFreeSpecialist>
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
 			<iMaintenanceModifier>0</iMaintenanceModifier>
@@ -23948,7 +23948,7 @@
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-			<iTradeRoutes>3</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>0</iTradeRouteModifier>

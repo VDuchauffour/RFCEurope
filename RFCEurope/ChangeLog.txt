@@ -125,10 +125,12 @@ Changes for RFCE 1.1:
 		- A couple additional starting units for Poland, Lithuania and Germany
 		- Small changes in the starting techs. Poland got an additional tech, many civs got one less
 		- Minor leader personality, memory, and attitude modifications
-		- Sistine Chapel gives only 3 culture to state religion buildings
+		- Sistine Chapel gives only 3 culture to state religion buildings. Marco Polo's Embassy don't give happiness (there is the Silk resource) and adds less trade routes
+		- San Marco Basilica has +50% trade route modifier and only adds 2 merchant slots. St. Basil's Cathedral gives less free specialists
 		- Increased temporary but lowered permanent stability loss from losing cities in your core provinces. You may reconquer them after all
 		- Small temporary stability loss for losing a city in your OK or unstable provinces
 		- Lowered permanent stability loss from being in anarchy, both for small nations and for big empires
+		- Free Religion got low upkeep (previously it was the only civic with no upkeep)
 		
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
