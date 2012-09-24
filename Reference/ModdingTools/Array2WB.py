@@ -55,7 +55,7 @@ iNumTotalPlayersB = 28
 ######################################################################
 ##### Edit this Part ################
 
-#iOutputType = 2 # 1 - WB labels with city names, 2 - WB labels with Settlers Map, 3 - WB labels with War maps
+#OutputType: 1 - WB labels with city names, 2 - WB labels with Settlers Map, 3 - WB labels with War maps
 iOutputType = 1
 
 iPlayer = iGermany

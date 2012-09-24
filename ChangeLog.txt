@@ -22,7 +22,7 @@ Changes for RFCE 1.1:
 		- Improved UHV counter for the Polish 3rd UHV - by HolyHandGrenade
 		- Added a Spawn map in the Reference folder (with all civs' spawn areas and spawn dates, and the indy/barb cities) - by HolyHandGrenade
 		- Olive plantation gives 1 food but one less commerce; unimproved grapes already give 1 food; additional 1 commerce from improved Silk
-		- As of revision 949, the russian version is a separate download. An add-on to the mod
+		- As of revision 993, the russian version is a separate download. An add-on to the mod
 			The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a russian one)
 			This will enable us to use such characters: גבהיכםצüתף... (actually we could use them before, but only in the civilopedia)
 			Now we can have civ-specific names everywhere, including everything that appear on the map
