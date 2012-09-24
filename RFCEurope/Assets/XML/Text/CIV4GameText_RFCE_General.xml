@@ -29,11 +29,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#232;&#246;&#229;-&#234;&#238;&#240;&#238;&#235;&#252;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_5</Tag>
-		<English>Russian</English>
+		<English>Portuguese</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -56,7 +56,7 @@
 		<German>Wir wurden besiegt!!!</German>
 		<Italian>Sei stato sconfitto!!!</Italian>
 		<Spanish>&#161;Os han derrotado!</Spanish>
-		<Portuguese>&#194;&#251; &#225;&#251;&#235;&#232; &#240;&#224;&#231;&#227;&#240;&#238;&#236;&#235;&#229;&#237;&#251;!!!</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADING_TIME</Tag>
@@ -65,7 +65,7 @@
 		<German>(Gesch&#228;tzte Ladezeit:</German>
 		<Italian>(Tempo stimato di caricamento:</Italian>
 		<Spanish>(Tiempo estimado de carga:</Spanish>
-		<Portuguese>(&#206;&#246;&#229;&#237;&#232;&#226;&#224;&#254;&#242;, &#231;&#224;&#227;&#240;&#243;&#230;&#224;&#255; &#226;&#240;&#229;&#236;&#255;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINUTES</Tag>
@@ -74,7 +74,7 @@
 		<German>Minuten)</German>
 		<Italian>minuti)</Italian>
 		<Spanish>minuto/s)</Spanish>
-		<Portuguese>&#236;&#232;&#237;&#243;&#242;&#251;)</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOPLAY_TURNS_REMAINING</Tag>
@@ -83,7 +83,7 @@
 		<German>VERBLEIBENDE AUTOPLAY-RUNDEN:  %d1_Num</German>
 		<Italian>TURNI DI GIOCO AUTOMATICO RIMANENTI:  %d1_Num</Italian>
 		<Spanish>TURNOS AUTOM&#193;TICOS RESTANTES: %d1_Num</Spanish>
-		<Portuguese>AUTO-PLAY TURNS REMAINING:  %d1_Num</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVEGAME_TURN</Tag>
@@ -92,7 +92,7 @@
 		<German>Runde %d1_TurnNum</German>
 		<Italian>Turno %d1_TurnNum</Italian>
 		<Spanish>Turno %d1_TurnNum</Spanish>
-		<Portuguese>Turn %d1_TurnNum</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STARTING_YEAR</Tag>
@@ -101,7 +101,7 @@
 		<German>Startjahr</German>
 		<Italian>Anno di avvio</Italian>
 		<Spanish>A&#241;o de inicio</Spanish>
-		<Portuguese>&#209;&#242;&#224;&#240;&#242;&#238;&#226;&#251;&#233; &#227;&#238;&#228;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BC</Tag>
@@ -110,7 +110,7 @@
 		<German>v. Chr.</German>
 		<Italian>a.C.</Italian>
 		<Spanish>a.C.</Spanish>
-		<Portuguese>&#228;&#238; &#237;. &#253;.</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AD</Tag>
@@ -119,7 +119,7 @@
 		<German>n. Chr.</German>
 		<Italian>d.C.</Italian>
 		<Spanish>d.C.</Spanish>
-		<Portuguese>&#237;. &#253;.</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
@@ -128,7 +128,7 @@
 		<German>Frühes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
@@ -137,7 +137,7 @@
 		<German>Hochmittelalter</German>
 		<Italian>Pieno Medioevo</Italian>
 		<Spanish>Plenitud de la Edad Media</Spanish>
-		<Portuguese>&#209;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
@@ -146,7 +146,7 @@
 		<German>Sp&#228;tmittelalter</German>
 		<Italian>Basso Medioevo</Italian>
 		<Spanish>Baja Edad Media</Spanish>
-		<Portuguese>&#207;&#238;&#231;&#228;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
@@ -155,7 +155,7 @@
 		<German>Frühes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
-		<Portuguese>&#208;&#224;&#237;&#237;&#232;&#229; &#241;&#240;&#229;&#228;&#237;&#232;&#229; &#226;&#229;&#234;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_GOLD</Tag>
@@ -164,7 +164,7 @@
 		<German>[ICON_BULLET]Gold: </German>
 		<Italian>[ICON_BULLET]Oro: </Italian>
 		<Spanish>[ICON_BULLET]Oro: </Spanish>
-		<Portuguese>[ICON_BULLET]&#199;&#238;&#235;&#238;&#242;&#238;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_SCIENCE</Tag>
@@ -173,7 +173,7 @@
 		<German>[ICON_BULLET]Wissenschaft: </German>
 		<Italian>[ICON_BULLET]Scienza: </Italian>
 		<Spanish>[ICON_BULLET]Ciencia: </Spanish>
-		<Portuguese>[ICON_BULLET]&#205;&#224;&#243;&#234;&#224;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_TRADE</Tag>
@@ -182,7 +182,7 @@
 		<German>[ICON_BULLET]Handel: </German>
 		<Italian>[ICON_BULLET]Commercio: </Italian>
 		<Spanish>[ICON_BULLET]Intercambio: </Spanish>
-		<Portuguese>[ICON_BULLET]&#210;&#238;&#240;&#227;&#238;&#226;&#235;&#255;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_PRODUCTION</Tag>
@@ -191,7 +191,7 @@
 		<German>[ICON_BULLET]Produktion: </German>
 		<Italian>[ICON_BULLET]Produzione: </Italian>
 		<Spanish>[ICON_BULLET]Producci&#243;n: </Spanish>
-		<Portuguese>[ICON_BULLET]&#207;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_CULTURE</Tag>
@@ -200,7 +200,7 @@
 		<German>[ICON_BULLET]Kultur: </German>
 		<Italian>[ICON_BULLET]Cultura: </Italian>
 		<Spanish>[ICON_BULLET]Cultura: </Spanish>
-		<Portuguese>[ICON_BULLET]&#202;&#243;&#235;&#252;&#242;&#243;&#240;&#224;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_GROWTH</Tag>
@@ -209,7 +209,7 @@
 		<German>[ICON_BULLET]Wachstum: </German>
 		<Italian>[ICON_BULLET]Crescita: </Italian>
 		<Spanish>[ICON_BULLET]Crecimiento: </Spanish>
-		<Portuguese>[ICON_BULLET]&#208;&#238;&#241;&#242;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_STARTING_SITUATION</Tag>
@@ -218,7 +218,7 @@
 		<German>[ICON_BULLET]Startsituation: </German>
 		<Italian>[ICON_BULLET]Situazione di avvio: </Italian>
 		<Spanish>[ICON_BULLET]Situaci&#243;n de inicio: </Spanish>
-		<Portuguese>[ICON_BULLET]&#209;&#242;&#224;&#240;&#242;&#238;&#226;&#224;&#255; &#241;&#232;&#242;&#243;&#224;&#246;&#232;&#255;:</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_5STARS</Tag>
@@ -272,7 +272,7 @@
 		<German>Bewertung</German>
 		<Italian>Valutazione</Italian>
 		<Spanish>&#205;ndice</Spanish>
-		<Portuguese>&#206;&#246;&#229;&#237;&#234;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_BONUS</Tag>
@@ -281,7 +281,7 @@
 		<German>Milit&#228;rbonus</German>
 		<Italian>Bonus Militare</Italian>
 		<Spanish>Bonificaci&#243;n militar</Spanish>
-		<Portuguese>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#207;&#240;&#229;&#236;&#232;&#255;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FREE_PROMOTION</Tag>
@@ -290,7 +290,7 @@
 		<German>Freie Bef&#246;rderung: (%s1)</German>
 		<Italian>Promozione gratuita: (%s1)</Italian>
 		<Spanish>Ascenso gratis: (%s1)</Spanish>
-		<Portuguese>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#207;&#240;&#238;&#234;&#224;&#247;&#234;&#224;: (%s1)</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_DEFENSIVE_PACT</Tag>
@@ -299,7 +299,7 @@
 		<German>Ein Verteidigungsb&#252;ndnis - Beide Parteien stimmen zu, den Angreifern der anderen Partei automatisch den Krieg zu erkl&#228;ren.</German>
 		<Italian>Un patto di protezione reciproca: ogni civilt&#224; accetta di dichiarare automaticamente guerra se la civilt&#224; alleata viene attaccata.</Italian>
 		<Spanish>Un acuerdo de protecci&#243;n mutua: cada parte accede a declarar autom&#225;ticamente la guerra si alguien ataca a la otra.</Spanish>
-		<Portuguese>&#196;&#238;&#227;&#238;&#226;&#238;&#240; &#202;&#238;&#235;&#235;&#229;&#234;&#242;&#232;&#226;&#237;&#238;&#233; &#199;&#224;&#249;&#232;&#242;&#251; - &#202;&#224;&#230;&#228;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#209;&#238;&#227;&#235;&#224;&#241;&#237;&#224; &#192;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#232; &#206;&#225;&#250;&#255;&#226;&#232;&#242;&#252; &#194;&#238;&#233;&#237;&#243;, &#229;&#241;&#235;&#232; &#228;&#240;&#243;&#227;&#224;&#255; &#207;&#224;&#240;&#242;&#232;&#255; &#255;&#226;&#235;&#255;&#229;&#242;&#241;&#255; &#192;&#242;&#224;&#234;&#238;&#226;&#224;&#237;&#237;&#238;&#233;.</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CHECKF2</Tag>
@@ -308,7 +308,7 @@
 		<German>Einzelheiten im Inlandsberater (F2)</German>
 		<Italian>Per avere ulteriori dettagli consulta il Consigliere per gli interni (F2)</Italian>
 		<Spanish>Revisa el Consejero de Interior [F2] para obtener m&#225;s detalles.</Spanish>
-		<Portuguese>&#207;&#240;&#238;&#226;&#229;&#240;&#252;&#242;&#229; &#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#229;&#227;&#238; &#209;&#238;&#226;&#229;&#242;&#237;&#232;&#234;&#224; (F2) &#228;&#235;&#255; &#225;&#238;&#235;&#229;&#229; &#234;&#238;&#237;&#234;&#240;&#229;&#242;&#237;&#238;&#233; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#232;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_CHECKF8</Tag>
@@ -317,7 +317,7 @@
 		<German>Einzelheiten in den Siegbedingungen (F8)</German>
 		<Italian>Per ulteriori dettagli consulta le Condizioni di vittoria (F8)</Italian>
 		<Spanish>Revisa las condiciones para la victoria [F8] para obtener m&#225;s detalles.</Spanish>
-		<Portuguese>&#207;&#240;&#238;&#226;&#229;&#240;&#252;&#242;&#229; &#211;&#241;&#235;&#238;&#226;&#232;&#255; &#207;&#238;&#225;&#229;&#228;&#251; (F8) &#228;&#235;&#255; &#225;&#238;&#235;&#229;&#229; &#234;&#238;&#237;&#234;&#240;&#229;&#242;&#237;&#238;&#233; &#232;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#232;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS</Tag>
@@ -326,7 +326,7 @@
 		<German>F&#252;r das %s1:3_PlyrAdject Reich beginnt ein Goldenes Zeitalter</German>
 		<Italian>L'Et&#224; dell'oro %s1_PlyrAdject inizia</Italian>
 		<Spanish>Empieza la edad de oro de %s1_PlyrAdject.</Spanish>
-		<Portuguese>%s1_PlyrAdject &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; &#237;&#224;&#247;&#232;&#237;&#224;&#229;&#242;&#241;&#255;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN</Tag>
@@ -335,7 +335,7 @@
 		<German>F&#252;r das %s1:3_PlyrAdject Reich hat das Goldene Zeitalter begonnen!!!</German>
 		<Italian>L'Et&#224; dell'oro %s1_PlyrAdject &#232; iniziata!!!</Italian>
 		<Spanish>&#161;Ha empezado la edad de oro %s1_PlyrAdject!</Spanish>
-		<Portuguese>%s1_PlyrAdject &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; &#237;&#224;&#247;&#224;&#235;&#241;&#255;!!!</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED</Tag>
@@ -344,7 +344,7 @@
 		<German>F&#252;r das %s1:3_PlyrAdject Reich endet das Goldene Zeitalter...</German>
 		<Italian>L'Et&#224; dell'oro %s1:2_PlyrAdject &#232; finita...</Italian>
 		<Spanish>Ha terminado la edad de oro %s1_PlyrAdject...</Spanish>
-		<Portuguese>%s1_PlyrAdject &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; &#231;&#224;&#234;&#238;&#237;&#247;&#232;&#235;&#241;&#255;...</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_START_GOLDENAGE_HELP</Tag>
@@ -353,7 +353,7 @@
 		<German>Opfern Sie eine oder mehrere Gro&#223;e Pers&#246;nlichkeiten (unterschiedlicher Klassen), um ein Goldenes Zeitalter (zus&#228;tzliche [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE], keine Anarchie) zu begr&#252;nden.</German>
 		<Italian>Con questo ordine si consumano uno o pi&#249; Grandi Personaggi (di tipi differenti) e si avvia un'Et&#224; dell'Oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</Italian>
 		<Spanish>Esta orden consume uno o m&#225;s grandes personajes (de diferentes tipos) e inicia una edad de oro (extra [ICON_PRODUCTION], [ICON_COMMERCE], [ICON_GREATPEOPLE]).</Spanish>
-		<Portuguese>&#221;&#242;&#238;&#242; &#231;&#224;&#234;&#224;&#231; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#229;&#242; &#238;&#228;&#232;&#237; &#232;&#235;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#194;&#229;&#235;&#232;&#234;&#232;&#245; &#203;&#254;&#228;&#229;&#233; (&#240;&#224;&#231;&#235;&#232;&#247;&#237;&#251;&#245; &#242;&#232;&#239;&#238;&#226;) &#232; &#232;&#237;&#232;&#246;&#232;&#232;&#240;&#243;&#229;&#242; &#199;&#238;&#235;&#238;&#242;&#238;&#233; &#194;&#229;&#234; (&#238;&#241;&#238;&#225;&#229;&#237;&#237;&#238; [ICON_PRODUCTION] [ICON_COMMERCE] [ICON_GREATPEOPLE]).</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_POLEARM</Tag>
@@ -362,7 +362,7 @@
 		<German>Stangenwaffeninfanterie</German>
 		<Italian>Armi ad Asta</Italian>
 		<Spanish>Infantería de brazo de asta</Spanish>
-		<Portuguese>&#196;&#240;&#229;&#226;&#234;&#238;&#226;&#238;&#229; &#238;&#240;&#243;&#230;&#232;&#229;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_INFANTRY</Tag>
@@ -371,7 +371,7 @@
 		<German>Schwere Infanterie</German>
 		<Italian>Fanteria Pesante</Italian>
 		<Spanish>Infantería pesada</Spanish>
-		<Portuguese>&#210;&#255;&#230;&#229;&#235;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_LIGHT_CAVALRY</Tag>
@@ -380,7 +380,7 @@
 		<German>Leichte Kavallerie</German>
 		<Italian>Cavalleria Leggera</Italian>
 		<Spanish>Caballería ligera</Spanish>
-		<Portuguese>&#203;&#229;&#227;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEAVY_CAVALRY</Tag>
@@ -389,7 +389,7 @@
 		<German>Schwere Kavallerie</German>
 		<Italian>Cavalleria Pesante</Italian>
 		<Spanish>Caballería pesada</Spanish>
-		<Portuguese>&#210;&#255;&#230;&#229;&#235;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FEINT</Tag>
@@ -398,7 +398,7 @@
 		<German>Finte</German>
 		<Italian>Finta</Italian>
 		<Spanish>Finta</Spanish>
-		<Portuguese>&#207;&#240;&#232;&#242;&#226;&#238;&#240;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADES</Tag>
@@ -407,7 +407,7 @@
 		<German>Einheitenbef&#246;rderungen</German>
 		<Italian>Aggiornamento delle unit&#224;</Italian>
 		<Spanish>Modernizaci&#243;n de unidades</Spanish>
-		<Portuguese>&#211;&#235;&#243;&#247;&#248;&#229;&#237;&#232;&#229; &#222;&#237;&#232;&#242;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
@@ -425,6 +425,6 @@
 		<German>Nicht-staatliche Religion entfernen</German>
 		<Italian>Rimuovi la religione non-ufficiale</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>&#211;&#228;&#224;&#235;&#232;&#242;&#252; &#237;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 </Civ4GameText>
