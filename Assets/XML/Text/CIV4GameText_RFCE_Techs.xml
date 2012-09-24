@@ -28,7 +28,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#238;&#231;&#228;&#224;&#237;&#232;&#229; &#202;&#224;&#240;&#242;&#251;</Russian>
+		<Portuguese>&#209;&#238;&#231;&#228;&#224;&#237;&#232;&#229; &#202;&#224;&#240;&#242;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STIRRUP</Tag>
@@ -53,7 +53,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#242;&#240;&#229;&#236;&#255;</Russian>
+		<Portuguese>&#209;&#242;&#240;&#229;&#236;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTROLABE</Tag>
@@ -78,7 +78,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#192;&#241;&#242;&#240;&#238;&#235;&#255;&#225;&#232;&#255;</Russian>
+		<Portuguese>&#192;&#241;&#242;&#240;&#238;&#235;&#255;&#225;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKMAKING</Tag>
@@ -103,7 +103,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#238;&#231;&#228;&#224;&#237;&#232;&#229; &#215;&#224;&#241;&#238;&#226;</Russian>
+		<Portuguese>&#209;&#238;&#231;&#228;&#224;&#237;&#232;&#229; &#215;&#224;&#241;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ART</Tag>
@@ -128,7 +128,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#238;&#229; &#200;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;</Russian>
+		<Portuguese>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#238;&#229; &#200;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARCHITECTURE</Tag>
@@ -153,7 +153,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#192;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#224;</Russian>
+		<Portuguese>&#192;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MONASTICISM</Tag>
@@ -178,7 +178,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#204;&#238;&#237;&#224;&#248;&#229;&#241;&#242;&#226;&#238;</Russian>
+		<Portuguese>&#204;&#238;&#237;&#224;&#248;&#229;&#241;&#242;&#226;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLASSICAL_KNOWLEDGE</Tag>
@@ -203,7 +203,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#235;&#224;&#241;&#241;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#199;&#237;&#224;&#237;&#232;&#229;</Russian>
+		<Portuguese>&#202;&#235;&#224;&#241;&#241;&#232;&#247;&#229;&#241;&#234;&#238;&#229; &#199;&#237;&#224;&#237;&#232;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VAULTED_ARCHES</Tag>
@@ -228,7 +228,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#226;&#238;&#228;&#247;&#224;&#242;&#251;&#233; &#246;&#229;&#240;&#234;&#238;&#226;&#237;&#251;&#233; &#224;&#239;&#229;&#235;&#235;&#255;&#246;&#232;&#238;&#237;&#237;&#251;&#233; &#241;&#243;&#228;</Russian>
+		<Portuguese>&#209;&#226;&#238;&#228;&#247;&#224;&#242;&#251;&#233; &#246;&#229;&#240;&#234;&#238;&#226;&#237;&#251;&#233; &#224;&#239;&#229;&#235;&#235;&#255;&#246;&#232;&#238;&#237;&#237;&#251;&#233; &#241;&#243;&#228;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FARRIERS</Tag>
@@ -253,7 +253,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#243;&#231;&#237;&#229;&#246;&#251;</Russian>
+		<Portuguese>&#202;&#243;&#231;&#237;&#229;&#246;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIEGE_ENGINES</Tag>
@@ -278,7 +278,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#255; &#206;&#241;&#224;&#228;&#251;</Russian>
+		<Portuguese>&#209;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#255; &#206;&#241;&#224;&#228;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BLAST_FURNACE</Tag>
@@ -303,7 +303,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#194;&#224;&#242;&#229;&#240;&#230;&#224;&#234;&#229;&#242;&#237;&#224;&#255; &#207;&#229;&#247;&#252;</Russian>
+		<Portuguese>&#194;&#224;&#242;&#229;&#240;&#230;&#224;&#234;&#229;&#242;&#237;&#224;&#255; &#207;&#229;&#247;&#252;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GOTHIC_ARCHITECTURE</Tag>
@@ -328,7 +328,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#195;&#238;&#242;&#232;&#234;&#224;</Russian>
+		<Portuguese>&#195;&#238;&#242;&#232;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MONUMENT_BUILDING</Tag>
@@ -353,7 +353,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#199;&#228;&#224;&#237;&#232;&#229; &#207;&#224;&#236;&#255;&#242;&#237;&#232;&#234;&#224;</Russian>
+		<Portuguese>&#199;&#228;&#224;&#237;&#232;&#229; &#207;&#224;&#236;&#255;&#242;&#237;&#232;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ALCHEMY</Tag>
@@ -378,7 +378,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#192;&#235;&#245;&#232;&#236;&#232;&#255;</Russian>
+		<Portuguese>&#192;&#235;&#245;&#232;&#236;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LATEEN_SAILS</Tag>
@@ -403,7 +403,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#210;&#240;&#229;&#243;&#227;&#238;&#235;&#252;&#237;&#251;&#229; &#207;&#224;&#240;&#243;&#241;&#224;</Russian>
+		<Portuguese>&#210;&#240;&#229;&#243;&#227;&#238;&#235;&#252;&#237;&#251;&#229; &#207;&#224;&#240;&#243;&#241;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PLATE_ARMOR</Tag>
@@ -428,7 +428,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#235;&#224;&#241;&#242;&#232;&#237;&#247;&#224;&#242;&#224;&#255; &#193;&#240;&#238;&#237;&#255;</Russian>
+		<Portuguese>&#207;&#235;&#224;&#241;&#242;&#232;&#237;&#247;&#224;&#242;&#224;&#255; &#193;&#240;&#238;&#237;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HERBAL_MEDICINE</Tag>
@@ -453,7 +453,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#205;&#224;&#240;&#238;&#228;&#237;&#224;&#255; &#204;&#229;&#228;&#232;&#246;&#232;&#237;&#224;</Russian>
+		<Portuguese>&#205;&#224;&#240;&#238;&#228;&#237;&#224;&#255; &#204;&#229;&#228;&#232;&#246;&#232;&#237;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STEAM_ENGINES</Tag>
@@ -478,7 +478,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#224;&#240;&#238;&#226;&#238;&#231;&#251;</Russian>
+		<Portuguese>&#207;&#224;&#240;&#238;&#226;&#238;&#231;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SHIPBUILDING</Tag>
@@ -503,7 +503,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#243;&#228;&#238;&#241;&#242;&#240;&#238;&#229;&#237;&#232;&#229;</Russian>
+		<Portuguese>&#209;&#243;&#228;&#238;&#241;&#242;&#240;&#238;&#229;&#237;&#232;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PATRONAGE</Tag>
@@ -528,7 +528,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#224;&#242;&#240;&#238;&#237;&#224;&#230;</Russian>
+		<Portuguese>&#207;&#224;&#242;&#240;&#238;&#237;&#224;&#230;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PUBLIC_WORKS</Tag>
@@ -553,7 +553,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#206;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#229; &#208;&#224;&#225;&#238;&#242;&#251;</Russian>
+		<Portuguese>&#206;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#229; &#208;&#224;&#225;&#238;&#242;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MILITARY_TACTICS</Tag>
@@ -578,7 +578,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#210;&#224;&#234;&#242;&#232;&#234;&#224;</Russian>
+		<Portuguese>&#194;&#238;&#229;&#237;&#237;&#224;&#255; &#210;&#224;&#234;&#242;&#232;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRADING_COMPANIES</Tag>
@@ -603,7 +603,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#210;&#238;&#240;&#227;&#238;&#226;&#251;&#229; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#232;</Russian>
+		<Portuguese>&#210;&#238;&#240;&#227;&#238;&#226;&#251;&#229; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARABIC_KNOWLEDGE</Tag>
@@ -628,7 +628,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#192;&#240;&#224;&#225;&#241;&#234;&#238;&#229; &#199;&#237;&#224;&#237;&#232;&#229;</Russian>
+		<Portuguese>&#192;&#240;&#224;&#225;&#241;&#234;&#238;&#229; &#199;&#237;&#224;&#237;&#232;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARABIC_MEDICINE</Tag>
@@ -653,7 +653,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#192;&#240;&#224;&#225;&#241;&#234;&#224;&#255; &#204;&#229;&#228;&#232;&#246;&#232;&#237;&#224;</Russian>
+		<Portuguese>&#192;&#240;&#224;&#225;&#241;&#234;&#224;&#255; &#204;&#229;&#228;&#232;&#246;&#232;&#237;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXPLOSIVES</Tag>
@@ -678,7 +678,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#194;&#231;&#240;&#251;&#226;&#247;&#224;&#242;&#251;&#229; &#226;&#229;&#249;&#229;&#241;&#242;&#226;&#224;</Russian>
+		<Portuguese>&#194;&#231;&#240;&#251;&#226;&#247;&#224;&#242;&#251;&#229; &#226;&#229;&#249;&#229;&#241;&#242;&#226;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MACHINE_TOOLS</Tag>
@@ -703,7 +703,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#204;&#224;&#248;&#232;&#237;&#237;&#251;&#229; &#200;&#237;&#241;&#242;&#240;&#243;&#236;&#229;&#237;&#242;&#251;</Russian>
+		<Portuguese>&#204;&#224;&#248;&#232;&#237;&#237;&#251;&#229; &#200;&#237;&#241;&#242;&#240;&#243;&#236;&#229;&#237;&#242;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_ENGINEERING</Tag>
@@ -728,7 +728,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#238;&#229;&#234;&#242;&#232;&#240;&#238;&#226;&#224;&#237;&#232;&#229; &#209;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#233;</Russian>
+		<Portuguese>&#207;&#240;&#238;&#229;&#234;&#242;&#232;&#240;&#238;&#226;&#224;&#237;&#232;&#229; &#209;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FREE_MARKET</Tag>
@@ -753,7 +753,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#194;&#238;&#235;&#252;&#237;&#251;&#233; &#208;&#251;&#237;&#238;&#234;</Russian>
+		<Portuguese>&#194;&#238;&#235;&#252;&#237;&#251;&#233; &#208;&#251;&#237;&#238;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RIGHT_OF_MAN</Tag>
@@ -778,7 +778,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238; &#204;&#243;&#230;&#247;&#232;&#237;&#251;</Russian>
+		<Portuguese>&#207;&#240;&#224;&#226;&#238; &#204;&#243;&#230;&#247;&#232;&#237;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMBINED_ARMS</Tag>
@@ -803,7 +803,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#238;&#236;&#225;&#232;&#237;&#232;&#240;&#243;&#229;&#236;&#251;&#229; &#192;&#240;&#236;&#232;&#232;</Russian>
+		<Portuguese>&#202;&#238;&#236;&#225;&#232;&#237;&#232;&#240;&#243;&#229;&#236;&#251;&#229; &#192;&#240;&#236;&#232;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INDUSTRIAL_TECH</Tag>
@@ -828,7 +828,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#200;&#237;&#228;&#243;&#241;&#242;&#240;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#208;&#229;&#226;&#238;&#235;&#254;&#246;&#232;&#255;</Russian>
+		<Portuguese>&#200;&#237;&#228;&#243;&#241;&#242;&#240;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#208;&#229;&#226;&#238;&#235;&#254;&#246;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MANORIALISM</Tag>
@@ -853,7 +853,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#209;&#240;&#229;&#228;&#237;&#229;&#226;&#229;&#234;. &#241;&#232;&#241;&#242;. &#231;&#229;&#236;&#235;&#229;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#237;&#232;&#255;</Russian>
+		<Portuguese>&#209;&#240;&#229;&#228;&#237;&#229;&#226;&#229;&#234;. &#241;&#232;&#241;&#242;. &#231;&#229;&#236;&#235;&#229;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#237;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHIVALRY</Tag>
@@ -878,7 +878,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#208;&#251;&#246;&#224;&#240;&#241;&#242;&#226;&#238;</Russian>
+		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#241;&#242;&#226;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MATCHLOCK</Tag>
@@ -903,7 +903,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#199;&#224;&#236;&#238;&#234; &#234;&#240;&#229;&#236;&#237;&#229;&#226;&#238;&#227;&#238; &#240;&#243;&#230;&#252;&#255;</Russian>
+		<Portuguese>&#199;&#224;&#236;&#238;&#234; &#234;&#240;&#229;&#236;&#237;&#229;&#226;&#238;&#227;&#238; &#240;&#243;&#230;&#252;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY</Tag>
@@ -928,7 +928,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#238;&#244;&#229;&#241;&#241;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#236;&#232;&#255;</Russian>
+		<Portuguese>&#207;&#240;&#238;&#244;&#229;&#241;&#241;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#236;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POLYGONAL_FORT</Tag>
@@ -953,7 +953,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#204;&#237;&#238;&#227;&#238;&#243;&#227;&#238;&#235;&#252;&#237;&#251;&#233; &#212;&#238;&#240;&#242;</Russian>
+		<Portuguese>&#204;&#237;&#238;&#227;&#238;&#243;&#227;&#238;&#235;&#252;&#237;&#251;&#233; &#212;&#238;&#240;&#242;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_ART</Tag>
@@ -978,7 +978,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#208;&#229;&#237;&#229;&#241;&#241;&#224;&#237;&#241;&#237;&#238;&#229; &#200;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;</Russian>
+		<Portuguese>&#208;&#229;&#237;&#229;&#241;&#241;&#224;&#237;&#241;&#237;&#238;&#229; &#200;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NAVAL_ARCHITECTURE</Tag>
@@ -1003,7 +1003,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#204;&#238;&#240;&#241;&#234;&#224;&#255; &#192;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#224;</Russian>
+		<Portuguese>&#204;&#238;&#240;&#241;&#234;&#224;&#255; &#192;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BRONZE_CASTING</Tag>
@@ -1028,7 +1028,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#193;&#240;&#238;&#237;&#231;&#238;&#226;&#251;&#233; &#193;&#240;&#238;&#241;&#238;&#234;</Russian>
+		<Portuguese>&#193;&#240;&#238;&#237;&#231;&#238;&#226;&#251;&#233; &#193;&#240;&#238;&#241;&#238;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHAIN_MAIL</Tag>
@@ -1053,7 +1053,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#238;&#235;&#252;&#247;&#243;&#227;&#224;</Russian>
+		<Portuguese>&#202;&#238;&#235;&#252;&#247;&#243;&#227;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARISTOCRACY</Tag>
@@ -1078,7 +1078,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#192;&#240;&#232;&#241;&#242;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Russian>
+		<Portuguese>&#192;&#240;&#232;&#241;&#242;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY_HELP</Tag>
@@ -1087,6 +1087,6 @@
 		<German>[ICON_BULLET]Veraltet Ordensmeister der Ritterorden</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 </Civ4GameText>

@@ -28,7 +28,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#246;&#232;&#231;&#236;</Russian>
+		<Portuguese>&#202;&#224;&#242;&#238;&#235;&#232;&#246;&#232;&#231;&#236;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM_ADJECTIVE</Tag>
@@ -53,7 +53,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233;</Russian>
+		<Portuguese>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM_PEDIA</Tag>
@@ -62,7 +62,7 @@
 		<German>[TAB]Katholizismus bezeichnet soziologisch weniger die offizielle Lehre der Römisch-katholischen Kirche sondern das tatsächliche Denken, Empfinden und Handeln katholischer Bevölkerungsteile besonders dort, wo sie die Mehrheit bilden und milieuprägend wirken.[PARAGRAPH:2]In Europa prägt der Katholizismus die Zivilisation vor allem in Ländern, in denen der Protestantismus schwach war, etwa in Italien, Spanien, Portugal und Frankreich, oder im Zuge der Gegenreformation zurückgedrängt wurde. Im deutschsprachigen Raum ist er v.a. im Westen und Süden Deutschlands anzutreffen, aber auch in Österreich. In Irland und Polen steht die nationale Identität dem Katholizismus besonders nahe, da sich dort jeweils eine nationale Opposition auf den überlieferten Katholizismus stützte. Eine große Rolle spielt der Katholizismus darüber hinaus in Lateinamerika.[PARAGRAPH:2]Der Begriff bedeutet ursprünglich allumfassend, universell und leitet sich vom Griechischen ab. In diesem Sinne wird er etwa von Aristoteles oder Polybios, aber auch von frühen christlichen Schriftstellern verwendet; so spricht etwa Justin der Märtyrer von der "katholischen Auferstehung". Diese Bedeutung hat sich in der Bezeichnung Katholische Briefe für einige neutestamentliche Bücher erhalten. Die Wortverbindung "Katholische Kirche" wurde erstmals von Ignatius von Antiochien um das Jahr 110 verwendet, um diese von Kleingruppen abzugrenzen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY</Tag>
@@ -87,7 +87,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#232;&#229;</Russian>
+		<Portuguese>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#232;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY_ADJECTIVE</Tag>
@@ -112,7 +112,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233;</Russian>
+		<Portuguese>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY_PEDIA</Tag>
@@ -121,7 +121,7 @@
 		<German>[TAB]Orthodoxie bezeichnet allgemein eine Interpretation einer Lehre, die sich stark an die ursprüngliche Interpretation hält. Anhänger einer Orthodoxie sehen darin eine notwendige Selbstbehauptung des Denkens gegen Beliebigkeit und Willkür; die jeweiligen Kritiker wenden ein, dass eine orthodoxe Interpretation sich flexiblen Weiterentwicklungen und Anpassungen an veränderte religiöse, politische und kulturelle Verhältnisse verweigert.[PARAGRAPH:2]Im Christentum ist "Orthodoxie" ursprünglich der Begriff für das Festhalten an der trinitätstheologischen Entscheidung des 1. Konzils von Nicaea (325) ("homooúsios tô patrí" "mit dem Vater wesenseins") in Abgrenzung von den Arianern. Sodann wird damit das Bekenntnis zum christologischen Dogma des Konzils von Chalkedon (451) bezeichnet. Erst in nachreformatorischer Zeit ist damit das Beharren auf bestimmten traditionellen Lehrmeinungen, Ideologien oder Handlungsweisen gemeint, im Gegensatz zu Erneuerungsbewegungen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM</Tag>
@@ -146,7 +146,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#232;&#231;&#236;</Russian>
+		<Portuguese>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#232;&#231;&#236;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM_ADJECTIVE</Tag>
@@ -171,7 +171,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233;</Russian>
+		<Portuguese>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM_PEDIA</Tag>
@@ -180,7 +180,7 @@
 		<German>[TAB]Mit dem ursprünglich politischen Begriff Protestanten werden im engeren Sinne die Angehörigen der christlichen Konfessionen bezeichnet, die, ausgehend von Deutschland und der Schweiz, vor allem in Mittel- und Nordeuropa durch die Reformation des 16. Jahrhunderts entstanden sind.[PARAGRAPH:2]Allgemeiner werden auch nachreformatorisch entstandene Konfessionsrichtungen als protestantisch bezeichnet, die gleiche oder ähnliche Grundsätze wie die reformatorischen Kirchen vertreten und sich deshalb von der römisch-katholischen Kirche distanzierten. In diesem Sinne wird beispielsweise die Anglikanische Kirche zum Protestantismus gezählt. Nach der Unabhängigkeitserklärung nannten sich die amerikanischen Anglikaner Protestant Episcopal Church in the United States of America. Auch die evangelischen Freikirchen gehören zum Protestantismus und sehen sich ebenso als "Erben der Reformation". Dazu zählen in Deutschland zum Beispiel die Baptisten, die Methodisten, die Mennoniten, die Siebenten-Tags-Adventisten und die Pfingstler. Presbyterianer, Kongregationalisten und eine Anzahl anderer Kirchen vor allem in den Vereinigten Staaten gehören zur reformierten Kirchengemeinschaft. Die Quäker entstanden ebenfalls im Umkreis der englischen Reformation.[PARAGRAPH:2]Die deutschen protestantischen (bevorzugter Name: evangelischen) Landeskirchen haben sich in der Evangelischen Kirche in Deutschland (EKD) organisiert. Die protestantischen Freikirchen sind in der Vereinigung Evangelischer Freikirchen zusammengefasst. Durch Auswanderung und Mission entstanden in vielen Ländern der Erde größere oder kleinere protestantische Kirchen (Weltprotestantismus). Besonders stark wachsen sie in China und Lateinamerika. Die meisten lutherischen Kirchen sind im Lutherischen Weltbund zusammengeschlossen, die reformierten Kirchen in der Weltgemeinschaft Reformierter Kirchen. Auch die evangelischen Freikirchen kennen entsprechende internationale Zusammenschlüsse. Die große Mehrzahl der protestantischen Kirchen sind Mitglieder des Ökumenischen Rates der Kirchen. Protestanten bilden die Bevölkerungsmehrheit in Skandinavien, Großbritannien, den Vereinigten Staaten, Kanada, Australien und Neuseeland. In Deutschland, den Niederlanden und der Schweiz leben etwa gleich viele evangelische wie katholische Christen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_TITLE</Tag>
@@ -189,7 +189,7 @@
 		<German>Die Reformation!</German>
 		<Italian>La Riforma!</Italian>
 		<Spanish>La Reforma!</Spanish>
-		<Russian>&#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255;!</Russian>
+		<Portuguese>&#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255;!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
@@ -198,7 +198,7 @@
 		<German>Die Erfindung des Buchdrucks entfachte eine Welle von Glaubenslehren. Protestantische Kirchen traten der Macht des Papstes wegen christlicher Skandale entgegen. Sollen wir den Protestantismus annehmen? Sämtliche unserer katholischen Städte werden konvertiert werden.</German>
 		<Italian>L'invenzione della Stampa ha fatto diffondere nuove dottrine. Chiese Protestanti si stanno opponendo al potere del Papa. Dobbiamo appoggiare la Riforma? (Tutti gli edifici e le città Cattolici verrano convertiti in Protestanti)</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
-		<Russian>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229; "&#207;&#229;&#247;&#224;&#242;&#224;&#254;&#249;&#229;&#233;&#241;&#255; &#207;&#240;&#229;&#241;&#241;&#251;" &#239;&#238;&#235;&#238;&#230;&#232;&#235;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#226;&#238;&#235;&#237;&#229; &#237;&#238;&#226;&#251;&#245; &#228;&#238;&#234;&#242;&#240;&#232;&#237;. &#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#229; &#246;&#229;&#240;&#234;&#226;&#232; &#238;&#239;&#239;&#238;&#237;&#232;&#240;&#243;&#254;&#242; &#226;&#235;&#224;&#241;&#242;&#232; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#228; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#232;&#236;&#232; &#228;&#229;&#235;&#224;&#236;&#232;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#253;&#242;&#243; &#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254;? (&#194;&#241;&#229; &#237;&#224;&#248;&#232; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#232; &#231;&#228;&#224;&#237;&#232;&#255; &#225;&#243;&#228;&#243;&#242; &#239;&#240;&#229;&#226;&#240;&#224;&#249;&#229;&#237;&#251; &#226; &#237;&#238;&#226;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;.)</Russian>
+		<Portuguese>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229; "&#207;&#229;&#247;&#224;&#242;&#224;&#254;&#249;&#229;&#233;&#241;&#255; &#207;&#240;&#229;&#241;&#241;&#251;" &#239;&#238;&#235;&#238;&#230;&#232;&#235;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#226;&#238;&#235;&#237;&#229; &#237;&#238;&#226;&#251;&#245; &#228;&#238;&#234;&#242;&#240;&#232;&#237;. &#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#229; &#246;&#229;&#240;&#234;&#226;&#232; &#238;&#239;&#239;&#238;&#237;&#232;&#240;&#243;&#254;&#242; &#226;&#235;&#224;&#241;&#242;&#232; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#228; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#232;&#236;&#232; &#228;&#229;&#235;&#224;&#236;&#232;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#253;&#242;&#243; &#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254;? (&#194;&#241;&#229; &#237;&#224;&#248;&#232; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#232; &#231;&#228;&#224;&#237;&#232;&#255; &#225;&#243;&#228;&#243;&#242; &#239;&#240;&#229;&#226;&#240;&#224;&#249;&#229;&#237;&#251; &#226; &#237;&#238;&#226;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;.)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_TITLE</Tag>
@@ -207,7 +207,7 @@
 		<German>Die Gegenreformation!</German>
 		<Italian>La Contro-Riforma!</Italian>
 		<Spanish>The Counter-Reformation!</Spanish>
-		<Russian>The Counter-Reformation!</Russian>
+		<Portuguese>The Counter-Reformation!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE</Tag>
@@ -216,7 +216,7 @@
 		<German>Der Papst deklarierte seine Interpretation der christlichen Bibel als endgültig und erklärte die Reformation zur Häresie.</German>
 		<Italian>Il Papa ha dichiarato la sua interpretazione della Bibbia Cristiana come unica valida e ha dichiarato la Riforma un eresia.</Italian>
 		<Spanish>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a heresy.</Spanish>
-		<Russian>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a heresy.</Russian>
+		<Portuguese>The Pope has declared his interpretation of the Christian Bible to be final and had declared the Reformation a heresy.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1</Tag>
@@ -225,7 +225,7 @@
 		<German>Wir sollten dem Heiligen Vater helfen die Heretiker zu verbannen und die Einigkeit der Kirche wieder herzustellen. (erhaltet </German>
 		<Italian>Dobbiamo aiutare il nostro Santo Padre ad espellere gli eretici e riformare l'unità della Chiesa. (ottieni </Italian>
 		<Spanish>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Spanish>
-		<Russian>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Russian>
+		<Portuguese>We should help our Holy Father expel the heretics and restore unity to the Church. (get </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2</Tag>
@@ -234,7 +234,7 @@
 		<German> Inquisitoren)</German>
 		<Italian> Inquisitore)</Italian>
 		<Spanish> Prosecutors)</Spanish>
-		<Russian> Prosecutors)</Russian>
+		<Portuguese> Prosecutors)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1</Tag>
@@ -243,7 +243,7 @@
 		<German>Wir sollten zu unseren Brüdern und Schwestern, so irregeleitet sie auch sein mögen, tolerant sein. (erhaltet </German>
 		<Italian>Dobbiamo essere tolleranti con i nostri fratelli e le nostre sorelle per quanto possano sbagliarsi. (ottieni </Italian>
 		<Spanish>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Spanish>
-		<Russian>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Russian>
+		<Portuguese>We should be tolerant to our brothers and sisters as misguided as they can be. (get </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2</Tag>
@@ -252,7 +252,7 @@
 		<German> Stabilität)</German>
 		<Italian> Stabilità)</Italian>
 		<Spanish> Stability)</Spanish>
-		<Russian> Stability)</Russian>
+		<Portuguese> Stability)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_SCHISM</Tag>
@@ -261,7 +261,7 @@
 		<German>Das Morgenländische Schisma: Nach vielen Jahren polistischer und dogmatischer Auseinandersetzung haben sich Katholische und Orthodoxe Christen in zwei rivalisierende Glaubensrichtungen aufgespalten.</German>
 		<Italian>Il Grande Scisma: Dopo molti anni di divisione politica e dogmatica, i Cristiani Cattolici e Ortodossi si sono infine divisi in due credi distinti e rivali.</Italian>
 		<Spanish>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Spanish>
-		<Russian>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Russian>
+		<Portuguese>The Great Schism: Following many years of political and dogmatic struggle, Catholic and Orthodox Christians have finally split into two distinct rival religions.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_POINTS</Tag>
@@ -270,7 +270,7 @@
 		<German>Glaubenspunkte</German>
 		<Italian>Punti Fede</Italian>
 		<Spanish>Puntos Fe</Spanish>
-		<Russian>Faith Points</Russian>
+		<Portuguese>Faith Points</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_COUNT</Tag>
@@ -279,7 +279,7 @@
 		<German>Instabilitäts-Countdown durch Inquisition</German>
 		<Italian>Countdown per Instabilità da Inquisizione</Italian>
 		<Spanish>Prosecution Instability Countdown</Spanish>
-		<Russian>Prosecution Instability Countdown</Russian>
+		<Portuguese>Prosecution Instability Countdown</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_INSTABILITY</Tag>
@@ -288,7 +288,7 @@
 		<German>Instabilität durch Inquisition:</German>
 		<Italian>Instabilità da Inquisizione:</Italian>
 		<Spanish>Prosecution Instability:</Spanish>
-		<Russian>Prosecution Instability:</Russian>
+		<Portuguese>Prosecution Instability:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_STABILITY</Tag>
@@ -297,7 +297,7 @@
 		<German>Stabilit&#228;t:</German>
 		<Italian>Stabilit&#224;:</Italian>
 		<Spanish>Estabilidad:</Spanish>
-		<Russian>Stability:</Russian>
+		<Portuguese>Stability:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_CIVIC</Tag>
@@ -306,7 +306,7 @@
 		<German>Unterhaltskosten für Staatsform:</German>
 		<Italian>Manutenzione Statale:</Italian>
 		<Spanish>Civic Upkeep:</Spanish>
-		<Russian>Civic Upkeep:</Russian>
+		<Portuguese>Civic Upkeep:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GROWTH</Tag>
@@ -315,7 +315,7 @@
 		<German>Stadtwachstum:</German>
 		<Italian>Crescità della Città:</Italian>
 		<Spanish>City Growth:</Spanish>
-		<Russian>City Growth:</Russian>
+		<Portuguese>City Growth:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_UNITS</Tag>
@@ -324,7 +324,7 @@
 		<German>Einheitenproduktion:</German>
 		<Italian>Costo di Produzione delle Unità:</Italian>
 		<Spanish>Unit Production Cost:</Spanish>
-		<Russian>Unit Production Cost:</Russian>
+		<Portuguese>Unit Production Cost:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_SCIENCE</Tag>
@@ -333,7 +333,7 @@
 		<German>Technologiekosten:</German>
 		<Italian>Costo per l'accelerazione della ricerca:</Italian>
 		<Spanish>Tech Breaker Cost:</Spanish>
-		<Russian>Tech Breaker Cost:</Russian>
+		<Portuguese>Tech Breaker Cost:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PRODUCTION</Tag>
@@ -342,7 +342,7 @@
 		<German>Wunder und Projekt Produktionskosten:</German>
 		<Italian>Costo di Produzione per Meraviglie e Progetti:</Italian>
 		<Spanish>Wonder and Project Production Cost:</Spanish>
-		<Russian>Wonder and Project Production Cost:</Russian>
+		<Portuguese>Wonder and Project Production Cost:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_DIPLOMACY</Tag>
@@ -351,7 +351,7 @@
 		<German>Diplomatiebonus:</German>
 		<Italian>Incremento Diplomatico:</Italian>
 		<Spanish>Diplomacy Boost:</Spanish>
-		<Russian>Diplomacy Boost:</Russian>
+		<Portuguese>Diplomacy Boost:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GIFT</Tag>
@@ -360,7 +360,7 @@
 		<German>Ihr habt ein päpstliches Goldgeschenk erhalten</German>
 		<Italian>Hai ricevuto un regalo in oro dal Papa</Italian>
 		<Spanish>You have received a gift of gold from the Pope</Spanish>
-		<Russian>You have received a gift of gold from the Pope</Russian>
+		<Portuguese>You have received a gift of gold from the Pope</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_BUILDING1</Tag>
@@ -369,7 +369,7 @@
 		<German>Der Papst errichtete ein/e</German>
 		<Italian>Il Papa ha costruito un </Italian>
 		<Spanish>The Pope has built a </Spanish>
-		<Russian>The Pope has built a </Russian>
+		<Portuguese>The Pope has built a </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_BUILDING2</Tag>
@@ -378,7 +378,7 @@
 		<German> in Eurer Stadt </German>
 		<Italian> nella tua città di </Italian>
 		<Spanish> in your city of </Spanish>
-		<Russian> in your city of </Russian>
+		<Portuguese> in your city of </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_SAINT</Tag>
@@ -387,7 +387,7 @@
 		<German>Verfasst eine Großes Theologisches Werk zur Stärkung des Glaubens innerhalb eurer Nation.</German>
 		<Italian>Scrivi un grande trattato di Teologia per rafforzare la Fede nella tua nazione.</Italian>
 		<Spanish>Write a Great work of Theology to strengthen the Faith of your nation.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_INQUISITION</Tag>
@@ -396,7 +396,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_INQUISITION_FAIL</Tag>
@@ -405,6 +405,6 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 </Civ4GameText>

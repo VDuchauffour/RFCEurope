@@ -28,7 +28,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Russian>
+		<Portuguese>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORTHODOX_MISSIONARY</Tag>
@@ -53,7 +53,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Russian>
+		<Portuguese>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROTESTANT_MISSIONARY</Tag>
@@ -78,7 +78,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Russian>
+		<Portuguese>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISLAMIC_MISSIONARY</Tag>
@@ -103,7 +103,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Russian>
+		<Portuguese>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPEARMAN</Tag>
@@ -116,7 +116,7 @@
 		</German>
 		<Italian>Lanciere</Italian>
 		<Spanish>Lancero</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPEARMAN_PEDIA</Tag>
@@ -125,7 +125,7 @@
 		<German>[TAB]Obwohl ein mittelalterlicher Speer nur eine kleine Menge Stahl entlang der geschärften Kling benötigte, war er eine ökonomische Waffe. Quick to manufacture, and needing less smithing skill than a sword, it became the common weapon of the peasantry in many parts of the world. With the rise of heavy cavalry, spear shafts began to be planted against the ground to deter charging cavalry. Spears morphed into different pole-arms as mounted knights became more important on the battlefields of Europe and a means to counter them was needed.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUISARME</Tag>
@@ -138,7 +138,7 @@
 		</German>
 		<Italian>Ronconiere</Italian>
 		<Spanish>Piquero papal</Spanish>
-		<Russian>&#192;&#235;&#229;&#225;&#224;&#240;&#228;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#192;&#235;&#229;&#225;&#224;&#240;&#228;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUISARME_PEDIA</Tag>
@@ -147,7 +147,7 @@
 		<German>[TAB]Eine Guisarme war eine in Europa gebräuchliche Stangenwaffe, die aus dem bäuerlichen Werkzeug der Sense hervorging.Die ersten Exemplare der Guisarme werden bereits im 12. Jahrhundert in England beschrieben. Sie war im Mittelalter eine beliebte und verbreitete Waffe, wohl auch, weil sie einfach und billig herzustellen war. Die Guisarme - oder auch die Sturmsensen - wurde vom 11. Jahrhundert bis zum beginnenden 19. Jahrhundert benutzt.[PARAGRAPH:2]Die Guisarme besteht aus einer mehr oder weniger langen oder breiten Sensenklinge, die am Rücken verstärkt ist. Bei den meisten Versionen ist auf dem Klingenrücken eine weitere, schmale und spitze Klinge angebracht. Diese Klinge ist kurz und leicht nach oben gebogen oder lang und gerade. Bei anderen Ausführungen ist noch eine kleinere Stoßklinge an der Spitze des Sensenblattes angebracht. Bei manchen Versionen gleicht die Klinge nicht einem Sensenblatt, sondern eher der Klinge einer Knipp. Es gibt Guisarmen aus England, Deutschland, Italien und Frankreich</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIKEMAN</Tag>
@@ -160,7 +160,7 @@
 		</German>
 		<Italian>Picchiere</Italian>
 		<Spanish>Piquero</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIKEMAN_PEDIA</Tag>
@@ -169,7 +169,7 @@
 		<German>[TAB]Die Pikeniere stellten vom 15. bis zum 17. Jahrhundert die schwere Infanterie in großen Teilen Europas dar und waren nach ihrer Hauptwaffe, der Pike (Spieß) benannt. Die Bezeichnung wurde zu Beginn des 16. Jahrhunderts von dem französischen Wort pique entlehnt, das sich von dem Verb piquer ("stechen") ableitet.[PARAGRAPH:2]Der Spieß erwies sich als effektive Waffe im Kampf gegen Kavallerieeinheiten. Dazu brauchten die in tief gestaffelten Formationen kämpfenden Pikeniere eine weniger intensive Ausbildung als Ritter bzw. Kürassiere und waren zudem äußerst billig auszurüsten. Als Abwehrwaffe gegen Reiterei sollte ihre Reichweite die Länge der ritterlichen Lanzen übertreffen. In der Technik der Riposte, am Boden aufgestützt eingesetzt, diente sie dazu, den angreifenden Gegner auflaufen zu lassen und anstürmende Kavallerie zu stoppen.[PARAGRAPH:2]Die französische Armee löste 1703 ihre letzten Pikeniereinheiten auf. 1704 folgte England, und 1708 verzichtete auch die niederländische Armee auf die Verwendung der Piken. Lediglich in Schweden, das u. a. in der Schlacht bei Poltawa viele Pikeniere einsetzte, und in Russland kamen, neben Berdishi tragenden Schützen, bis in die 1720er Jahre Pikeniere zum Einsatz, die sich als effektiv gegen die türkische Reiterei erwiesen. Das Bajonett kann als Nachfolger der Pike gelten, und es gab noch bis zum Anfang des 20. Jahrhunderts Generäle, die Bajonettangriffe für eine sinnvolle Taktik hielten - oft mit schrecklichen Resultaten für die eigenen Männer.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARBALEST</Tag>
@@ -182,7 +182,7 @@
 		</German>
 		<Italian>Arbalestiere</Italian>
 		<Spanish>Ballestero pesado</Spanish>
-		<Russian>&#210;&#255;&#230;&#229;&#235;&#251;&#233; &#192;&#240;&#225;&#224;&#235;&#229;&#242;&#247;&#232;&#234;</Russian>
+		<Portuguese>&#210;&#255;&#230;&#229;&#235;&#251;&#233; &#192;&#240;&#225;&#224;&#235;&#229;&#242;&#247;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARBALEST_PEDIA</Tag>
@@ -191,7 +191,7 @@
 		<German>[TAB]Die Arbalest (auch Arbalst genannt) war ein im Spätmittelalter verwendetes Modell der Armbrust. Diese Armbrust war eine etwas größere Variante der schon im Frühmittelalter verwendeten Holzarmbrust, mit dem Unterschied, dass bei der Arbalest der eigentliche Bogen aus Stahl gefertigt wurde. Dadurch konnte sie beim Abschießen des Armbrustbolzens diesen mit einer Kraft von bis zu 5000 N beschleunigen. Aufgrund eines neu entwickelten Lademechanismus konnte sie auch schneller geladen werden als andere Armbrustmodelle, ein erfahrener Armbrustschütze konnte mit der Arbalest 2 Bolzen pro Minute abschießen. Oft wurde diese Waffe im Sicheren hinter einem Paveseschild geladen.[PARAGRAPH:2]Die Arbalest wurde im 12. Jahrhundert in Mitteleuropa entwickelt. Sie erwies sich bei der Verteidigung der Stadt Byzanz als sehr effizient. Verwendet wurde die Arbalest vor allem von den Truppen Italiens. Im 15. und 16. Jahrhundert erlitt sie das gleiche Schicksal wie viele andere Armbrüste auch, sie wurde von den aufkommenden Handfeuerwaffen (Handrohr, Arkebuse, Muskete) verdrängt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORSE_ARCHER</Tag>
@@ -204,7 +204,7 @@
 		</German>
 		<Italian>Arciere a Cavallo</Italian>
 		<Spanish>Arquero a caballo</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORSE_ARCHER_PEDIA</Tag>
@@ -213,7 +213,7 @@
 		<German>[TAB]Berittene Bogenschützen waren ein sehr wirkungsvolles Waffensystem, das viele Völker in verschiedenen Kontinenten unabhängig voneinander zu nutzen wussten. Zu den ältesten bekannten Reitervölkern gehören die Hyksos und die Skythen; am bekanntesten sind wohl die Hunnen, Mongolen, die nordamerikanischen Indianer und die Reitertruppen des osmanischen Reiches.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_SERGEANT</Tag>
@@ -226,7 +226,7 @@
 		</German>
 		<Italian>Sergente a Cavallo</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_SERGEANT_PEDIA</Tag>
@@ -235,7 +235,7 @@
 		<German>[TAB]Einem Hauptmann im Kriegsheer unterstand meistens eine Kompanie. Um diese Kompanie zu führen erhielt er einen Sergeant sowie eine Anzahl Korporale mit bestimmten Aufgaben, die sich auch im späten Mittelalter auf die nicht kämpfenden Teile einer Kompanie erstrecken konnten, z.B. Pferdeknechte. Der Sergeant konnte durchaus auch von Adel sein. Er konnte auch durchaus, wenn er sich ausgezeichnet hatte, geadelt werden, blieb aber trotzdem Sergeant aufgrund seiner Funktion.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY</Tag>
@@ -248,7 +248,7 @@
 		</German>
 		<Italian>Fanteria a Cavallo</Italian>
 		<Spanish>Infanter&#237;a montada</Spanish>
-		<Russian>&#202;&#238;&#237;&#237;&#251;&#233; &#209;&#229;&#240;&#230;&#224;&#237;&#242;</Russian>
+		<Portuguese>&#202;&#238;&#237;&#237;&#251;&#233; &#209;&#229;&#240;&#230;&#224;&#237;&#242;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
@@ -257,7 +257,7 @@
 		<German>[TAB]Soldaten der Berittenen Infanterie nutzen Pferde, um aufs Schlachtfeld zu gelangen. Sobald sie es erreicht haben, satteln sie jedoch ab und kämpfen zu Fuß. Sie nehmen nur selten an Vorstößen oder anderen Manövern zu Pferd teil, und wenn sie gegen ausgebildete Einheiten der Kavallerie eingesetzt werden, stecken sie meist viel Schaden ein. Wenn sie gefestigt auf einem Hügel stationiert ist, kann die Berittene Infanterie anrückenden Berittenen Bogenschützen oder Einheiten der Leichten Kavallerie jedoch schweren Schaden zufügen.</German>
 		<Italian>[TAB]I soldati della fanteria a cavallo usano i cavalli per arrivare al campo di battaglia ma poi smontano e combattono a piedi. Di rado prendono parte a cariche o altre manovre a cavallo, e tendono a subire malamente gli attacchi delle unit&#224; di cavalleria. D'altro canto quando sono fortificate in collina, i fanti a cavallo possono infliggere seri danni ad arcieri a cavallo o cavalleria leggera.</Italian>
 		<Spanish>[TAB]Los soldados de la infanter&#237;a montada usan sus caballos para llegar al campo de batalla, pero una vez all&#237; desmontan y luchan a pie. Solo en raras ocasiones toman parte en cargas u otras maniobras t&#237;picas de caballer&#237;a y, cuando se enfrentan con escuadrones de caballer&#237;a profesional, normalmente llevan las de perder. Por otro lado, cuando est&#225; atrincherada en una colina, la infanter&#237;a montada puede ser muy peligrosa para los arqueros a caballo o la caballer&#237;a ligera.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LANCER</Tag>
@@ -270,7 +270,7 @@
 		</German>
 		<Italian>Cavalleria Leggera</Italian>
 		<Spanish>Caballer&#237;a ligera</Spanish>
-		<Russian>&#211;&#235;&#224;&#237;</Russian>
+		<Portuguese>&#211;&#235;&#224;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LANCER_PEDIA</Tag>
@@ -279,7 +279,7 @@
 		<German>[TAB]Eine Lanze ist eine Stangenwaffe deren Schaft aus Holz (mitunter auch Stahlrohr) gefertigt ist und die wesentlich länger als ein Speer ist. Die Gesamtlänge beträgt 200cm ( Hoplitenlanze ) bis 500cm ( sarmatischer und spätrömischer Contus Schweizer Pike ). Es handelte sich um eine Stoßwaffe die bereits in der Antike von der Infanterie geführt wurde ( Hopliten ). Mit der Erfindung des Steigbügels im frühen Mittelalter wurde sie endgültig zur Hauptwaffe der Kavallerie im aufgesessenen Kampf. Sie wurde noch bis ins 20.Jahrhundert von Ulanen geführt. </German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_LANCER</Tag>
@@ -292,7 +292,7 @@
 		</German>
 		<Italian>Cavalleria Corazzata</Italian>
 		<Spanish>Caballer&#237;a pesada</Spanish>
-		<Russian>&#193;&#240;&#238;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#237;&#251;&#233; &#211;&#235;&#224;&#237;</Russian>
+		<Portuguese>&#193;&#240;&#238;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#237;&#251;&#233; &#211;&#235;&#224;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_LANCER_PEDIA</Tag>
@@ -301,7 +301,7 @@
 		<German>[TAB]Lanzierer gehören den europäischen Kavallerietruppen der Neuzeit an. Sie waren hauptsächlich mit einer Lanze bewaffnet, in der zweiten Hälfte des 16. Jahrhunderts führten sie aber auch vermehrt Radschlosspistolen mit sich. Sie schützten sich meist durch einen vollständigen Plattenpanzer oder durch einen Trabharnisch, der bis zu den Knien reichte. Auch die schweren Schlachtrösser der Lanziere waren oftmals durch einen Rossharnisch geschützt. Die Hauptaufgabe der Lanzierer bestand darin, die Linien der Feinde zu durchbrechen. Zum Beginn des 17. Jahrhunderts gingen die Lanzierer in der Truppengattung der Kürassiere auf.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD</Tag>
@@ -314,7 +314,7 @@
 		</German>
 		<Italian>Bombarda</Italian>
 		<Spanish>Bombarda</Spanish>
-		<Russian>&#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian>
+		<Portuguese>&#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD_PEDIA</Tag>
@@ -323,7 +323,7 @@
 		<German>[TAB]Bombarde ist eine Bezeichnung für Pulvergeschütze im Spätmittelalter. Sie ersetzten die bisher bei Belagerungen verwendeten mechanischen Wurfwaffen, wie das Trebuchet. Außer dass es sich um eine Steinbüchse (Geschütz zum Verschießen von Projektilen aus Stein) handelt, gibt es keine eindeutige technische Beschreibung. Vielfach wird von kurzen Geschützen mit verhältnismäßig großen Kalibern, also Mörsern, geschrieben. Teilweise wird die Mündung als trichterförmig beschrieben. Andere Quellen beschreiben die Bombarde als ein Geschütz mit längerem Rohr, also Kanone, in der Bauart als Kammergeschütz (also als frühen Hinterlader). Teilweise wird die Bauart als Stabringgeschütz beschrieben.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIELD_ARTILLERY</Tag>
@@ -336,7 +336,7 @@
 		</German>
 		<Italian>Artiglieria da Campo</Italian>
 		<Spanish>.</Spanish>
-		<Russian>&#207;&#238;&#235;&#229;&#226;&#224;&#255; &#207;&#243;&#248;&#234;&#224;</Russian>
+		<Portuguese>&#207;&#238;&#235;&#229;&#226;&#224;&#255; &#207;&#243;&#248;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIELD_ARTILLERY_PEDIA</Tag>
@@ -345,7 +345,7 @@
 		<German>[TAB]Ursprünglich bezeichnet Feldkanone ein kleines Geschütz, das der Infanterie auf dem Marsch folgen sollte und in der Schlacht beweglich genug war, um die Stellung schnell zu wechseln. Diese Eigenschaft unterscheidet die Feldkanone von den älteren Kanonen, die zu groß und zu schwerfällig waren und nur für Belagerungen eingesetzt wurden. Aus diesem Grund gehörten die Feldkanonen zur Feldartillerie, die schweren Geschütze dagegen zur Fuß- oder Festungsartillerie. Als Vorläufer der Feldkanonen gelten die Feldschlangen.[PARAGRAPH:2]Der wohl bekannteste Einsatz von Feldkanonen hinsichtlich moderner Schlachttaktiken war der von Gustav Adolf, der im Dreissigjährigen Krieg große Räder an die Feldkanonen montieren ließ, um sie schnell auf dem Schlachtfeld verlegen zu können. Durch diesen hochmobilen Einsatz der Kanonen während der Schlacht konnten geschlossene feindliche Streitkräfte aufgebrochen werden und somit ihre Einsatzstärke effektiv verringert werden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSSAR</Tag>
@@ -358,7 +358,7 @@
 		</German>
 		<Italian>Ussaro</Italian>
 		<Spanish>Húsar</Spanish>
-		<Russian>&#195;&#243;&#241;&#224;&#240;</Russian>
+		<Portuguese>&#195;&#243;&#241;&#224;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSSAR_PEDIA</Tag>
@@ -367,7 +367,7 @@
 		<German>[TAB]Husaren sind eine Truppengattung der leichten Reiterei, die erst ab dem späten 18. Jahrhundert auch als Kavallerie bezeichnet wurde. Ihre Ursprünge liegen vor allem in Ungarn und Kroatien. Erstmals schriftlich erwähnt sind die "hussarones" 1481 in einem auf Latein abgefassten Brief des Ungarnkönigs Matthias Corvinus. Unter seiner Regierung hatten sich die Husaren bereits zu schwer gepanzerten Reitern entwickelt. Sie trugen Helme im türkischen Stil (Zischäggen), Brust- und Armpanzer, mit Eisenblech beschlagene Schilde (bezeichnet als "Tartschen"), schwere Säbel (Sarrass genannt), Streitkolben und Lanzen. Am Sattel mitgeführt wurde außerdem ein Panzerstecher (hegyestor, "Pikenschwert"). Für den wahrscheinlichen Fall, dass die Lanze beim ersten Ansturm brach, wurde dieses etwa 150 Zentimeter lange (Klingenlänge!), drei- oder vierkantige Schwert auf den Oberschenkel gesetzt und als Stoßwaffe benutzt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PISTOLIER</Tag>
@@ -380,7 +380,7 @@
 		</German>
 		<Italian>Pistoliere</Italian>
 		<Spanish>Pistolier</Spanish>
-		<Russian>&#207;&#232;&#241;&#242;&#238;&#235;&#229;&#242;&#247;&#232;&#234;</Russian>
+		<Portuguese>&#207;&#232;&#241;&#242;&#238;&#235;&#229;&#242;&#247;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PISTOLIER_PEDIA</Tag>
@@ -389,7 +389,7 @@
 		<German>[TAB]Für eine regelrechte Revolution sorgte die Erfindung der Radschlosspistole (angeblich 1520 in Nürnberg), durch die es nicht nur möglich wurde feuerbereite Waffen mit sich zu führen, sondern diese auch während des Reitens zu laden und abzufeuern. Es dauerte zwar einige Zeit, bis sich die neue Bewaffnung durchgesetzt hatte, doch dann wurde sie vor allem in Deutschland zum Standard der Reiterei. Frankreich und Burgund - d.h. die habsburgischen Niederlande - setzten dagegen weiterhin auf ihre Gendarmes, Spanien auf seine Tercios und England mietete unter Heinrich VIII. ohnehin fremde Söldner, wenn es auf dem Kontinent Krieg führen wollte. Um 1540 waren die mit zwei Pistolen und einem Schwert bewaffneten deutschen Reiter auch für die Spießerhaufen zu einem gefürchteter Gegner geworden. Im Gegensatz zu den Gendarmes griffen sie nicht in einer breiten Linie sondern in einem tief gestaffelten Block an. Kurz vor dem Gegner feuerten sie dann ihre Pistolen ab, schwenkten zur Seite und gliederten sich wieder hinten in die Formation ein. Dieses Manöver nannte man Karakole oder karakolieren, und es sorgte dafür, dass um die Jahrhundertmitte die Reiterei wieder zur überlegenen Waffe wurde.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRAGOON</Tag>
@@ -402,7 +402,7 @@
 		</German>
 		<Italian>Dragone</Italian>
 		<Spanish>Dragón</Spanish>
-		<Russian>&#196;&#240;&#224;&#227;&#243;&#237;</Russian>
+		<Portuguese>&#196;&#240;&#224;&#227;&#243;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRAGOON_PEDIA</Tag>
@@ -411,7 +411,7 @@
 		<German>[TAB]Als Dragoner bezeichnete man ursprünglich berittene Infanterie, die ihre Pferde primär zum Transport, nicht aber für den Kampf verwendeten. Im Lauf der Zeit entwickelten sie sich fast überall zur Schlachtenkavallerie. Die Bezeichnung kam zu Beginn des 17. Jahrhunderts auf und leitet sich wahrscheinlich von einer als Dragon (im deutschen auch Karabiner genannt) bezeichneten Handfeuerwaffe ab. Ein anderer Erklärungsansatz besagt, dass jene Reiter, die bei den Prozessionen des Papstes auf ihrer Lanze einen Drachenschild als Sinnbild des Teufels trugen, "draconarii" (= Drachensoldaten) genannt worden seien. Davon soll sich das Wort Dragoner ableiten.[PARAGRAPPH:2]Dragoner trugen üblicherweise keine Rüstung, doch schützten sich manche von ihnen im 16. und 17. Jahrhundert mit einem schlichten Helm und einem Lederkoller. Bewaffnet waren sie mit einer Muskete oder auch einer Pike, für das Handgemenge besaßen sie Degen. Die Dragoner benötigten eine weniger intensive Ausbildung im Reiten als Kavalleristen, die mit ihren Pferden in Gefechtssituationen umgehen mussten. Darüber hinaus verwendeten Dragoner nur leichte Reitpferde, die deutlich weniger kostspielig als die Schlachtrösser der schweren Reiterei waren. Ihr Vorteil gegenüber der Infanterie bestand darin, dass sie sich schneller an einen bestimmten Ort des Schlachtfelds begeben konnten. Während des Englischen Bürgerkrieges gelang es dem Dragonerregiment der New Model Army in der Schlacht von Naseby 1645, ungehindert auf die rechte Flanke des gegnerischen Heeres zuzureiten. Danach stiegen die Dragoner von ihren Pferden und griffen ihre überraschten Gegner an. Als Mischform aus Infanterie und Kavallerie waren die Dragoner oftmals dem Spott der Soldaten anderer Truppengattungen ausgesetzt. Ein exemplarischer Spottvers über die Dragoner lautete:[NEWLINE]"Dragoner sind halb Mensch, halb Vieh, aufs Pferd gesetzte Infanterie!" </German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARQUEBUSIER</Tag>
@@ -424,7 +424,7 @@
 		</German>
 		<Italian>Archibugiere</Italian>
 		<Spanish>Arquebusier</Spanish>
-		<Russian>&#192;&#240;&#234;&#229;&#225;&#243;&#231;&#232;&#240;&#249;&#232;&#234;</Russian>
+		<Portuguese>&#192;&#240;&#234;&#229;&#225;&#243;&#231;&#232;&#240;&#249;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARQUEBUSIER_PEDIA</Tag>
@@ -433,7 +433,7 @@
 		<German>[TAB]Mit Hakenbüchse und Arkebuse wird eine vielfältige Familie von Vorderladern des 15. und 16. Jahrhunderts bezeichnet. Die früheren und schweren Hakenbüchsen waren noch klobige Weiterentwicklungen der Faustrohre, die allerdings mittels Kolben und Luntenschloss entscheidend verbessert wurden. Sie eigneten sich aufgrund ihrer Schwerfälligkeit ausschließlich als Verteidigungswaffen, wobei sie vorwiegend von der Burgmauer herab eingesetzt wurden; einige frühe Modelle mögen sich nur durch Kolben und Haken von einem Handrohr unterschieden haben und wurden (wie gehabt) abgefeuert, indem die Lunte von Hand an das Zündloch geführt wurde. Aus den Hakenbüchsen wurden Anfang des 16. Jahrhunderts die deutlich handlicheren Arkebusen entwickelt. Sie waren die kürzeren und leichteren Zwillinge der Musketen - die so schwer waren, dass sie stets eine Stützgabel erforderten - und konnten auch von Reitern genutzt werden; somit ermöglichten sie erstmals berittene Schützen und stellen also die Vorläufer der Karabiner dar.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LINE_INFANTRY</Tag>
@@ -446,7 +446,7 @@
 		</German>
 		<Italian>Fanteria di Linea</Italian>
 		<Spanish>Infantería de Línea</Spanish>
-		<Russian>&#203;&#232;&#237;&#229;&#233;&#237;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Russian>
+		<Portuguese>&#203;&#232;&#237;&#229;&#233;&#237;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LINE_INFANTRY_PEDIA</Tag>
@@ -455,7 +455,7 @@
 		<German>[TAB]Der Begriff Linieninfanterie bezeichnet eine Ergänzung zur Linientaktik. Sie entstand im 18. Jahrhundert, als man bei der Aufstellung zur Schlacht begann, vor die in dreifacher Linie massiert aufgestellte Infanterie des Haupttreffens (Infanterie de ligne) leichte, bewegliche Truppen vorzuschicken. Diese sollten die gegnerische Front durch gezieltes, unregelmäßiges Schützenfeuer in Unruhe versetzen. Da sie sich nicht in der Linie befanden, konnte die entsprechende Bezeichnung auch nicht in Anwendung gebracht werden, im Unterschied zur Linien-Infanterie nannte man sie daher Plänkler, Voltigeure oder auch leichte Infanterie.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWORDSMAN</Tag>
@@ -468,7 +468,7 @@
 		</German>
 		<Italian>Spadaccino</Italian>
 		<Spanish>Soldado con espada ligera</Spanish>
-		<Russian>&#204;&#229;&#247;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#204;&#229;&#247;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWORDSMAN_PEDIA</Tag>
@@ -477,7 +477,7 @@
 		<German>[TAB]Das Schwert ist eine Hieb- und Stichwaffe mit gerader oder gebogener, ein- oder zweischneidiger Klinge, Griff und, je nach Epoche und Herkunftsland, Parierstange und Knauf. Das Wort "Schwert" ist aus dem althochdeutschen Wort swert oder auch swerd entstanden. Der Ursprung dieses altgermanischen Substantivs ist jedoch unbekannt. </German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN</Tag>
@@ -490,7 +490,7 @@
 		</German>
 		<Italian>Spadaccino Lungo</Italian>
 		<Spanish>Espadachín Largo</Spanish>
-		<Russian>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN_PEDIA</Tag>
@@ -499,7 +499,7 @@
 		<German>[TAB]Als Langes Schwert bezeichnet man zweihändig geführte Schwerter des späten Mittelalters. Bisweilen wird auch der Begriff Langschwert verwendet, der aber sehr unpräzise ist, da er für verschiedene Schwerttypen verwendet wird, die im Vergleich zu vorausgehenden Typen länger waren. Das Lange Schwert entwickelte sich seit im 14. Jahrhundert aus Übergangstypen, wie dem Anderthalbhänder. Erst im Verlaufe des 15 Jh. wurden die zweihändig geführten Klingen bedeutend länger als die einhändig geführten. Diese Zweihänder grenzen sich vom Langen Schwert ab.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT</Tag>
@@ -512,7 +512,7 @@
 		</German>
 		<Italian>Esploratore</Italian>
 		<Spanish>.</Spanish>
-		<Russian>&#199;&#224;&#241;&#242;&#240;&#229;&#235;&#252;&#249;&#232;&#234;</Russian>
+		<Portuguese>&#199;&#224;&#241;&#242;&#240;&#229;&#235;&#252;&#249;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT_PEDIA</Tag>
@@ -521,7 +521,7 @@
 		<German>[TAB]Geplänkel ist eine Kampftaktik, die dem Zwecke dient, den Gegner durch andauernden, wenn auch ineffektiven Beschuss aus der Ruhe zu bringen, zu beschäftigen und zu schwächen.[PARAGRAPH:2]In der griechischen Antike wurden Plänkeltaktiken von den leichten Fußtruppen, den Peltasten, benutzt, um gegen die schwerer gepanzerten Phalangen aus Hopliten vorzugehen. Hierzu bewarfen die Peltastenformationen die Phalanx mit ihren Speeren und zogen sich bei einem Angriff der Phalanx zurück. Sie waren schneller, da sie weniger schwere Bewaffnung und Panzerung trugen, und konnten deshalb den Hopliten entkommen.[PARAGRAPH:2]Plänkeltaktiken wurden auch zur Zeit des Römischen Imperiums genutzt. Schwach gerüstete Truppen, die Plänkler, rückten nahe an die Linien des Feindes und bewarfen die feindlichen Soldaten z. B. mit Steinen. Falls der Feind daraufhin angriff, konnten die leichten Plänkler vor den schwerer gerüsteten Truppen fliehen und sie außer Atem bringen, sodass die eigene Seite Vorteile bei der späteren Schlacht hatte.[PARAGRAPH:2]In der Zeit der Napoleonischen Kriege wurden, meist vor dem Beginn der eigentlichen Schlacht, so genannte Jäger oder Chasseure (auch leichte Infanterie genannt) zum Lockern der gegnerischen Linien verwendet, indem sie, selbst in loser Formation, durch gezielte Schüsse vornehmlich Verbindungseinheiten herausschossen. Diese Kampftaktik wurde als Plänkeln bezeichnet.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COGGE</Tag>
@@ -534,7 +534,7 @@
 		</German>
 		<Italian>Cocca</Italian>
 		<Spanish>Coca</Spanish>
-		<Russian>&#202;&#238;&#227;&#227;&#229;</Russian>
+		<Portuguese>&#202;&#238;&#227;&#227;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COGGE_PEDIA</Tag>
@@ -543,7 +543,7 @@
 		<German>[TAB]Die Kogge (ursprünglich der Koggen) ist ein Segelschiff, das vor allem dem Handel diente, in Zeiten militärischer Auseinandersetzungen der Hansestädte mit Piraten u. a. aber auch mit Kanonen ausgestattet werden konnte. Sie hat einen Mast und ein Rahsegel. Knapp unterhalb der Mastspitze ist ein Krähennest genannter Ausguck angebracht. Achtern (hinten) besaßen Koggen das Achterkastell und im Verlauf des 14. Jahrhunderts kam am Bug (Schiffsspitze) häufig ein Bugkastell hinzu.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUN_GALLEY</Tag>
@@ -556,7 +556,7 @@
 		</German>
 		<Italian>Galea Armata</Italian>
 		<Spanish>Galera de Fusil</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUN_GALLEY_PEDIA</Tag>
@@ -565,7 +565,7 @@
 		<German>[TAB]Ab dem 13. Jahrhundert gab es im Mittelmeerraum nur noch einen Kriegsschiffstyp, die Galeere, die im 14. Jahrhundert ihre Vervollkommnung erlebte. Zum Ende des Mittelalters machte der Schiffbau in ganz Europa rasante Fortschritte, und die Einführung des Heckruders und der mehrmastigen Takelage machte auch vor der Galeere nicht halt, die nun nicht mehr auf die unhandlichen Riemen angewiesen war und als Tarida einen zweiten, kleineren Mast am Heck dazubekam. Im 15. Jahrhundert begann man, noch einen dritten Mast am Bug aufzustellen. Bei diesem Schiffstyp trugen alle drei Masten ein Lateinersegel.[PARAGRAPH:2]Mit Einführung der Feuerwaffen auf See im 15. Jahrhundert wurde auch die Galeere mit Kanonen bestückt. Da die Galeere, deren Hauptwaffe der Rammsporn war, direkt auf ihren Feind zufuhr, wurden die Kanonen auf der Back, in Fahrtrichtung zeigend, installiert. Damit hatte die Galeere ihre endgültige Form erreicht, die sie über Jahrhunderte beibehalten sollte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOLK</Tag>
@@ -578,7 +578,7 @@
 		</German>
 		<Italian>Holk</Italian>
 		<Spanish>Urca</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOLK_PEDIA</Tag>
@@ -587,7 +587,7 @@
 		<German>[TAB]Im 14. Jahrhundert entstand dann der größere Holk als neues Schiff der Hanse. Der Holk, versehen mit Vor- und Achterkastell und zwei Stockwerken, war noch leistungssfähiger als die Kogge. Der vergrößerte dreimastige Holk war eine Vermischung der alten einmastigen Holk und der Kogge. Das Schiff erhielt einen ausgeprägten Kiel, gemischte Kraweel- und Klinkerbeplankung und rundliche Formen. Durch Übergang auf reine Kraweelbeplankung und der dadurch mögliche Größenzuwachs wurde daraus gegen Ende des 15. Jahrhunderts der Kraweel. Diese Bauweise war zwar schwerer, hatte aber den Vorteil, dass sie prinzipiell keine Beschränkungen in der Größe des Schiffes auferlegte, da Planken auch in der Länge nach problemlos auf einem Spant gestoßen werden konnten. Die Klinkerbeplankung verursachte bei zunehmender Größe Probleme bei der Abdichtung des Rumpfes.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_GALLEY</Tag>
@@ -600,7 +600,7 @@
 		</German>
 		<Italian>Galea da Guerra</Italian>
 		<Spanish>Galera Guerree</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_GALLEY_PEDIA</Tag>
@@ -609,7 +609,7 @@
 		<German>[TAB]Mit den Kreuzzügen wuchs der Seeverkehr im Mittelmeerraum rapide. Davon profitierten vor allem italienische Städte wie Genua und Venedig, die es durch Transport und Handel zu Wohlstand brachten. Die Staaten hatten sowohl das Bedürfnis, ihre Seewege zu sichern, als auch die finanziellen Mittel, Flotten zu bauen und zu unterhalten. Im 11. und 12. Jahrhundert wurden so verschiedene Ruderschiffe gebaut, die teilweise Kopien von Dromonen waren, aber auch schon einige arabische Elemente besaßen. Ende des 12. Jahrhunderts schälte sich die eigentliche Galeere als neues Kriegsschiff heraus. Sie war ein wendiges schnelles Schiff mit einer Riemenreihe und einem ausfallenden Vorsteven, der in einem Überwasserrammsporn endete.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROSECUTOR</Tag>
@@ -622,7 +622,7 @@
 		</German>
 		<Italian>Inquisitore</Italian>
 		<Spanish>Acusador Religioso</Spanish>
-		<Russian>&#200;&#237;&#234;&#226;&#232;&#231;&#232;&#242;&#238;&#240;</Russian>
+		<Portuguese>&#200;&#237;&#234;&#226;&#232;&#231;&#232;&#242;&#238;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROSECUTOR_PEDIA</Tag>
@@ -631,7 +631,7 @@
 		<German>[TAB]W&#228;hrend Missionare sich oft darauf konzentrieren, die Tugenden ihrer jeweiligen G&#246;tter zu &#252;bertreiben, um ihre Religion zu verbreiten, konzentriert sich der Inquisitor stattdessen darauf, die Fehler aller anderen Religionen au&#223;er seiner eigenen aufzuzeigen. Der Inquisitor brennt vor &#220;berzeugung, dass alle anderen Religionen falsch sind, und lebt daf&#252;r, den Glauben aller anderen zu zerst&#246;ren. Sie k&#246;nnen einen Inquisitor in eine Stadt entsenden, um aus dieser Stadt alle Religionen au&#223;er Ihrer zu entfernen.</German>
 		<Italian>[TAB]Mentre i missionari si concentrano sulle lodi delle rispettive divinit&#224; per diffondere la propria religione, gli inquisitori mettono in risalto gli errori delle altre religioni. Credono ardentemente che le altre religioni si sbaglino e vivono per distruggere la fede degli altri. Puoi usare un Inquisitore in una citt&#224; per rimuoverne tutte le religioni tranne la tua.</Italian>
 		<Spanish>[TAB]Mientras que los misioneros suelen concentrarse en cantar las glorias de sus respectivos dioses para difundir su fe, los inquisidores se dedican a poner de manifiesto las falacias de todas las dem&#225;s religiones. Ferviente convencido de que todas las dem&#225;s religiones se equivocan, El inquisidor vive para socavar las creencias de los dem&#225;s. Puedes gastar un inquisidor dentro de una ciudad para eliminar todas las religiones salvo la tuya.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Unique Units -->
 	<TEXT>
@@ -645,7 +645,7 @@
 		</German>
 		<Italian>Ghazi</Italian>
 		<Spanish>Ghazi</Spanish>
-		<Russian>&#195;&#224;&#231;&#232;</Russian>
+		<Portuguese>&#195;&#224;&#231;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIA_GHAZI_PEDIA</Tag>
@@ -654,7 +654,7 @@
 		<German>[TAB]Die Ghazi waren ursprünglich Krieger für den islamischen Glauben. Ihre damaligen byzantinischen Gegner wurden akritai (Sing. akritas) genannt. Beide rekrutierten sich aus Söldnergruppen, welche häufig die Seiten wechselten. Die Überläufer wurden garib (Fremdlinge) genannt.[PARAGRAPH:2]Der Titel Ghazi wurde in der Regel wegen der Verdienste in einer Schlacht vergeben. Viele osmanische Sultane hatten den Beinamen Gazi. Das Wort Ghazi findet in der Türkei noch heute vielfache Verwendung um einen kulturell osmanischen Zusammenhang herzustellen, auch Kemal Atatürk bekam nach seinem Sieg über die Griechen den Ehrentitel Ghazi verliehen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURGUNDIAN_PALADIN</Tag>
@@ -667,7 +667,7 @@
 		</German>
 		<Italian>Paladino</Italian>
 		<Spanish>Paladín</Spanish>
-		<Russian>&#207;&#224;&#235;&#224;&#228;&#232;&#237;</Russian>
+		<Portuguese>&#207;&#224;&#235;&#224;&#228;&#232;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURGUNDIAN_PALADIN_PEDIA</Tag>
@@ -676,7 +676,7 @@
 		<German>[TAB]Ein Paladin ist ein mit besonderer Würde ausgestatteter Adliger, meist ein Ritter.[PARAGRAPH:2]Seine größte Bedeutung erlangte der Paladin im Mittelalter. Sieben Kurfürsten wurden bestimmt, den König zu wählen, zu küren, und lange Zeit regierte dieser durch das Reisekönigtum, der Hofstaat blieb nicht an einer Hauptstadt, sondern zog von einer Königspfalz zur nächsten. Die Paladine dieser Zeit werden geschichtswissenschaftlich anders genannt: Aus palatinus wurde die "Pfalz", und damit waren die palatini "Pfalzgrafen", und der Ort an dem sie wohnten (auch: der Ort, an dem der Kaiser gerade verweilte), wurde ebenfalls "Pfalz" genannt, genau wie das dazugehörige Land. Die Königspfalz war einer der Stützpunkte des römisch-deutschen Königs (nach Salbung "Kaiser" genannt) im Reich. Der Pfalzgraf war der Verwalter der Pfalz und in dessen Abwesenheit Vermittler zwischen Reich und Kaiser. Der Name und die Geschichte der Kurpfalz spiegeln die wechselvolle Geschichte dieser Beziehung wider, denn der dort wohnende Pfalzgraf war gleichzeitig außerdem seit 1214, endgültig seit 1356, einer der sieben Kurfürsten und Stellvertreter des Kaisers in dessen Abwesenheit.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULGARIAN_KONNIK</Tag>
@@ -689,7 +689,7 @@
 		</German>
 		<Italian>Konnik</Italian>
 		<Spanish>Konnik</Spanish>
-		<Russian>&#202;&#238;&#237;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#202;&#238;&#237;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULGARIA_KONNIK_PEDIA</Tag>
@@ -698,7 +698,7 @@
 		<German>[TAB]Die Bulgaren waren in den Reiterkünsten in hohem Grade erfahren. Ihre Armee bestand hauptsÃ¤chlich aus Reiter wegen ihrer hohen FÃ¤higkeit. Jeder Bulgar Reiter hatte hohe Disziplin und hatte einige Pferde. Jedoch nur ein einzelnes Pferd kÃ¶nnte fÃ¼r Kriegangelegenheiten benutzt werden, und es war verboten, um noch etwas mit ihm zu tun. Es wird geglaubt, daÃŸ das Bulgars das erste waren, wer die SteigbÃ¼gel zu Europa holte. Dieses gab ihnen Vorteile Ã¼ber den anderen europÃ¤ischen Armeen dieser Zeit. Das Bulgars konnte die BÃ¶gen benutzen, die noch an den Pferden angebracht wurden. Klingen und Stangen wurden auch im Krieg benutzt. Die SteigbÃ¼gel erhÃ¶hten auch die StabilitÃ¤t und die Geschwindigkeit des Mitfahrers.</German>
 		<Italian>[TAB]Il Bulgars era altamente esperto nelle arti equestrian. Il loro esercito pricipalmente ha consistito del horseman a causa dell'loro elevata specializzazione. Ogni horseman di Bulgar ha avuto alta disciplina ed ha avuto parecchi cavalli. Tuttavia, soltanto un singolo cavallo potrebbe essere usato per gli argomenti di wartime ed &#195;&#168; stato proibito a per fargli niente altro con. Si crede che il Bulgars sia stato il primo chi ha portato le staffe ad Europa. Ci&#195;&#178; ha dato loro i vantaggi sopra gli altri eserciti europei di questo tempo. Il Bulgars ha potuto usare gli archi ancora montati sui cavalli. Le spade ed i germogli inoltre sono stati utilizzati nella guerra. Le staffe inoltre hanno aumentato la stabilit&#195;&#160; e la velocit&#195;&#160; del rider.</Italian>
 		<Spanish>[TAB]El Bulgars era altamente experto en los artes ecuestres. Su ej&#195;&#169;rcito consisti&#195;&#179; en principalmente el jinete debido a su alta habilidad. Cada jinete de Bulgar ten&#195;&#173;a alta disciplina y ten&#195;&#173;a varios caballos. Sin embargo, solamente un solo caballo podr&#195;&#173;a ser utilizado para las materias del tiempo de guerra, y fue prohibido para hacer todo lo dem&#195;&#161;s con &#195;&#169;l. Se cree que el Bulgars era el primer qui&#195;&#169;n trajo los estribos a Europa. Esto les dio ventajas sobre los otros ej&#195;&#169;rcitos europeos de este tiempo. El Bulgars pod&#195;&#173;a utilizar los arcos todav&#195;&#173;a montados en caballos. Las espadas y las lanzas tambi&#195;&#169;n fueron utilizadas en guerra. Los estribos tambi&#195;&#169;n aumentaron la estabilidad y la velocidad del jinete.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY</Tag>
@@ -711,7 +711,7 @@
 		</German>
 		<Italian>Cavalleria Berbera</Italian>
 		<Spanish>Caballería Beréber</Spanish>
-		<Russian>&#193;&#229;&#240;&#225;&#229;&#240;&#241;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Russian>
+		<Portuguese>&#193;&#229;&#240;&#225;&#229;&#240;&#241;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY_PEDIA</Tag>
@@ -720,7 +720,7 @@
 		<German>[TAB]Berber werden als die ersten Bewohner im heutigen Marokko angesehen. Über die Herkunft der Berber ist kaum etwas bekannt, da es keine berberische Schriftsprache und damit auch keine Aufzeichnungen gibt. Sie selbst bezeichnen sich als Amzirin, als "freie Menschen". Nach der römischen Herrschaft (um die Zeitenwende bis Anfang 5. Jhrd) mussten sich die Berber am Ende des 7. Jahrhunderts den Arabern unterwerfen.[PARAGRAPH:2]Die Berber dienten daraufhin in großer Zahl im Heer der arabischen Eroberer.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_TERCIO</Tag>
@@ -733,7 +733,7 @@
 		</German>
 		<Italian>Tercio</Italian>
 		<Spanish>Tercio</Spanish>
-		<Russian>&#210;&#229;&#240;&#246;&#232;&#238;</Russian>
+		<Portuguese>&#210;&#229;&#240;&#246;&#232;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_TERCIO_PEDIA</Tag>
@@ -742,7 +742,7 @@
 		<German>[TAB]Als bedeutendste Neuerung bildeten die Spanier schon 1534/1536 als Tercio eine Truppenaufstellung, bei der das kompakte Pikenier-Quadrat von Musketieren oder Arkebusieren umgeben wurde. Die Musketiere schützten die Pikeniere vor schießender Kavallerie durch eigenes Feuer und wurden anschließend ihrerseits durch die Pikeniere geschützt. Notfalls konnten sie unter den langen Piken Schutz finden, mussten sich dazu aber auf den Boden kauern. Im Tercio war die gesamte Pikenierformation von mehreren Reihen und Gliedern von Musketieren umgeben, die auch als Hecke bezeichnet wurden.[PARAGRAPH:2]Als Spanische Ordonnanz wurde die gestaffelte Aufstellung mehrerer Tercios bezeichnet, vier als Brigade, mindestens sieben als Doppelbrigade. Der letzte Einsatz eines Heeres in dieser Gefechtsordnung war 1643 in der Schlacht von Rocroi, wo ein französisches Heer nach neueren Ausbildungsmethoden die spanischen Tercios im offenen Gelände besiegte.[PARAGRAPH:2]Die Befehlsstruktur der Tercios oberhalb der Kompanieebene kennzeichneten spezielle Dienstgrade, die sich von jenen in den nicht national-spanischen Infanterie-Regimentern Spaniens und von denen anderer Truppengattungen (Kavallerie, Artillerie etc.) unterschieden. Kommandeur war der Maestre de Campo (wörtlich "Feldmeister", vergleichbar dem Oberst). Ihm untergeben war der mit der Exezierausbildung beauftragte Sargento Mayor (etwa Major/Oberstleutnant); er war zugleich stellvertretender Kommandeur. Als Befehlshaber mehrerer Tercios gleichzeitig war der Maestre de campo general (Generaloberst), seit 1540 der zweithöchste Dienstgrad der Armee. Der Teniente de Maestre de campo general (etwa "Generaloberst-Leutnant", vergleiche Feldmarschallleutnant) war sein Stellvertreter.[PARAGRAPH:2]Seit 1630 rangierte der Gobernador de las Armas y Ejército (etwa "Heeres-Gouverneur", d.h. Befehlshaber der Heeres) zwischen dem Generaloberst und dem Generalkapitän; gegen 1640 bildete der Sargento General de Batalla (etwa " Generalwachtmeister der Schlacht") eine weitere Stufe direkt oberhalb des Maestre de Campo.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENICE_GALLEAS</Tag>
@@ -755,7 +755,7 @@
 		</German>
 		<Italian>Galeazza</Italian>
 		<Spanish>Galleass</Spanish>
-		<Russian>&#195;&#224;&#235;&#235;&#229;&#224;&#241;</Russian>
+		<Portuguese>&#195;&#224;&#235;&#235;&#229;&#224;&#241;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENICE_GALLEAS_PEDIA</Tag>
@@ -764,7 +764,7 @@
 		<German>[TAB]Die Galeasse war eine Kombination aus Segelschiff und Ruderschiff und entstand als eine Weiterentwicklung aus der neuzeitlichen Galeere. Der Name leitet sich vom italienischen Galea grossa ab. Sie war etwa 50 Meter lang und hatte zwischen 800 und 1.200 Mann an Bord. Die Beseglung bestand aus drei oder vier Masten mit jeweils einem Lateinersegel. Tiefgang, Länge und Gewicht waren deutlich höher als bei den wendigeren Galeeren. So konnten die Galeassen auch deutlich mehr Bewaffnung tragen als Galeeren. Galeassen waren höher gebaut als Galeeren und konnten so nur schwer geentert werden. Während bei Galeeren dieser Epoche alle Geschütze am Bug konzentriert waren, wurde die Bewaffnung der Galeassen über das ganze Schiff verteilt, auf dem Ruderdeck oder auf einem Deck oberhalb der Ruderer. So konnten Galeassen auch nach Backbord und Steuerbord feuern, während die damaligen Galeeren nur in Fahrtrichtung schießen konnten. So rechnete man, dass die Kampfkraft einer Galeasse der Kampfkraft von fünf Galeeren entsprach.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNGARIAN_LANCER</Tag>
@@ -777,7 +777,7 @@
 		</German>
 		<Italian>Huszár</Italian>
 		<Spanish>Huszár</Spanish>
-		<Russian>&#195;&#243;&#241;&#231;&#224;&#240;</Russian>
+		<Portuguese>&#195;&#243;&#241;&#231;&#224;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNGARIAN_LANCER_PEDIA</Tag>
@@ -786,7 +786,7 @@
 		<German>[TAB]Erstmals schriftlich erwähnt sind die "hussarones" 1481 in einem auf Latein abgefassten Brief des Ungarnkönigs Matthias Corvinus. Unter seiner Regierung hatten sich die Husaren bereits zu schwer gepanzerten Reitern entwickelt. Sie trugen Helme im türkischen Stil (Zischäggen), Brust- und Armpanzer, mit Eisenblech beschlagene Schilde (bezeichnet als "Tartschen"), schwere Säbel (Sarrass genannt), Streitkolben und Lanzen. Am Sattel mitgeführt wurde außerdem ein Panzerstecher (hegyestor, "Pikenschwert"). Für den wahrscheinlichen Fall, dass die Lanze beim ersten Ansturm brach, wurde dieses etwa 150 Zentimeter lange (Klingenlänge!), drei- oder vierkantige Schwert auf den Oberschenkel gesetzt und als Stoßwaffe benutzt.[PARAGRAPH:2]Am Dreißigjährigen Krieg nahmen die Kroaten im Rahmen des kaiserlichen Heeres der Habsburger teil, hauptsächlich wie Husaren, als Kavalliersöldner ausgerüstet. Ihre große Anzahl (zwischen 12.000 und 30.000 Reiter) zog derart viel Aufmerksamkeit an, dass auch polnische und ungarische Husaren fälschlicherweise als kroatische Husaren bezeichnet wurden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR</Tag>
@@ -799,7 +799,7 @@
 		</German>
 		<Italian>Ussaro Alato</Italian>
 		<Spanish>Húsar Alado</Spanish>
-		<Russian>&#202;&#240;&#251;&#235;&#224;&#242;&#251;&#233; &#195;&#243;&#241;&#224;&#240;</Russian>
+		<Portuguese>&#202;&#240;&#251;&#235;&#224;&#242;&#251;&#233; &#195;&#243;&#241;&#224;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR_PEDIA</Tag>
@@ -808,7 +808,7 @@
 		<German>[TAB]Unter ungarischem Einfluss fanden die Husaren zunächst als leichte Kavallerie Eingang in das polnische Heer. Der Wandel zur schweren Reiterei, die das mittelalterliche Ritteraufgebot ersetzte, fand Ende des 16. Jahrhunderts unter König Stefan Batory seinen vorläufigen Abschluss. Die gepanzerten polnischen Flügelhusaren (Hussaria) trugen Brustpanzer, Armschienen und kniehohe Lederstiefel. Der Name geht auf die zwei am Rückenpanzer befestigten großen Flügelstangen zurück, die bis zu einem Meter über dem Kopf aufragten. Sie sollten die galoppierenden Husaren durch ihr Rauschen und Aussehen besonders furchteinflößend erscheinen lassen. Außerdem schützten sie den Rücken vor Säbelhieben und wehrten die von den feindlichen Tataren verwendeten Fanglassos ab. Mit der Lanze als Hauptwaffe ausgerüstet, trugen die Flügelhusaren ihre Attacken in geschlossener Formation vor. Neben dieser schweren Schlachtenkavallerie hielten sich, in Ungarn wie in Polen, leicht bewaffnete Husaren als Aufklärungstruppe. Deren Taktik und Ausrüstung wurden seit Beginn des 17. Jahrhunderts europaweit kopiert.[PARAGRAPH:2]Die Husaren waren in Fähnlein (poln. Choragwie) von 210 Reitern eingeteilt. Die Aufstellung erfolgte überwiegend dreigliedrig, wobei das erste Glied von den Adligen (Towarzysz) und das zweite Glied von seinen Knappen (Pacholek), die ebenfalls aus dem niedrigen Adel stammten, besetzt war. Jede Einheit wurde von einem Rittmeister (Rotmistrz) im Range eines Oberst und seinem Stellvertreter (Porucznik) geführt. Weiter hatte jede Einheit eine Choragiew-Fahne, zwei Pauker und zwei Trompeter. Nur der König führte einen Roßschweif gekrönt von einem Falkenflügel. Hochadlige Anführer durften als Auszeichnung einen Roßschweif ohne Falkenflügel führen.</German>
 		<Italian>[TAB]La prima unit&#195;&#160; ussaro nel Regno di Polonia si sono formati dal Sejm, il parlamento polacco, nel 1503, che noleggiati tre bandiere ungheresi di mercenari. Presto, ha iniziato il reclutamento anche tra i cittadini polacchi e lituani. Il Ussari rivelato fondamentale per la Polonia perch&#195;&#169; erano pi&#195;&#185; manovrabile da quella usata in precedenza lance. Ma il regno di Stefan Batory, la ussari formata la maggior parte della cavalleria polacco e lituano. Nel corso di molti anni, ussari in Ungheria &#195;&#168; diventata pi&#195;&#185; pesante. Stefan Batory, quando &#195;&#168; stato eletto re di Polonia, ha riorganizzato il Polacco-Lituana ussari del suo Royal Guard rendendoli un pesante formazione, e di dotare le lance come loro principale arma. Questi polacco 'pesanti' ussari erano conosciuti in patria come "husaria"[PARAGRAPH:2]Con la Battaglia di Lubiszew nel 1577, il "Golden Age" del ussaro iniziato. Fino alla battaglia di Vienna, polacco - lituano ussari raramente perso in battaglia. In molti battaglie polacco - lituano ussari sarebbe rivelato un fattore importante contro la stragrande quota.[PARAGRAPH:2]La principale battaglia tattica del Polacco-Lituana ussari era l'accusa. Essi hanno anche la tendenza a ripetere la carica fino a quando il nemico formazione rotto. Il ussari combattuto con una lunga lancia, un szabla, uno o due pistole, e di una carabina o arquebus, in polacco noto come "bandolet". Ussari polacchi sono stati anche famosa per le ali che indossavano sulle loro spalle. Secondo alcune teorie, che sono stati progettati per sventare attacchi da Tataro lassos, un'altra teoria &#195;&#168; che la vibrazione di piume fatto uno strano suono che spaventati nemico cavalli. Tuttavia, gli esperimenti effettuati da ristabilire enactors movie e responsabili dal 1970 e, pi&#195;&#185; recentemente, dal polacco storici nel 2001 in contrasto con tali idee. Eventualmente, le ali sono stati indossati solo durante parate, e non durante il combattimento, ma questa spiegazione &#195;&#168; anche contestato.</Italian>
 		<Spanish>[TAB]La primera hussar unidades en el Reino de Polonia se formaron por el Sejm, el Parlamento polaco, en 1503, que contrat&#195;&#179; a tres pancartas h&#195;&#186;ngaro de los mercenarios. En breve, tambi&#195;&#169;n se inici&#195;&#179; la contrataci&#195;&#179;n entre los ciudadanos polacos y lituanos. El Hussars result&#195;&#179; vital para Polonia, ya que fueron m&#195;&#161;s maniobrable que los utilizados anteriormente lancers. But el reinado del rey Stefan Batory, la hussars forman el grueso de la caballer&#195;&#173;a polaco y lituano. Durante muchos a&#195;&#177;os, hussars en Hungr&#195;&#173;a se convirti&#195;&#179; en m&#195;&#161;s pesadas. Cuando Stefan Batory fue elegido rey de Polonia, se reorganiz&#195;&#179; el polaco - lituano hussars de su Guardia Real convierten en una pesada formaci&#195;&#179;n, y el equipamiento lancers como su principal arma. Estos polaco 'pesadas' hussars eran conocidos en su tierra natal como "husaria"[PARAGRAPH:2]Con la Batalla de Lubiszew en 1577, la "Edad de Oro" de la hussar comenz&#195;&#179;. Hasta la Batalla de Viena, polaco, lituano hussars rara vez perdi&#195;&#179; en la batalla. Muchas batallas en todo el polaco - lituano hussars resultar&#195;&#173;a ser un factor importante en contra de enormes dificultades.[PARAGRAPH:2]La principal batalla de la t&#195;&#161;ctica polaca y lituana hussars era el cargo. Tambi&#195;&#169;n tienden a repetir el cargo hasta que el enemigo rompi&#195;&#179; la formaci&#195;&#179;n. El hussars luch&#195;&#179; con una larga lanza, un szabla, una o dos pistolas, y una carabina o arquebus, conocido en Polonia como una "bandolet". Polish hussars tambi&#195;&#169;n famoso por las alas que llevaban en sus espaldas. Seg&#195;&#186;n algunas teor&#195;&#173;as, que estaban dise&#195;&#177;adas para frustrar los ataques de t&#195;&#161;rtaro lassos, otra teor&#195;&#173;a es que la vibraci&#195;&#179;n de plumas hizo un extra&#195;&#177;o sonido que asustados caballos enemigo. Sin embargo, los experimentos llevados a cabo por volver a enactors y de la pel&#195;&#173;cula de la formulaci&#195;&#179;n desde el decenio de 1970 y m&#195;&#161;s recientemente por historiadores de Polonia en 2001 contradice esas ideas. Posiblemente las alas se usaron s&#195;&#179;lo durante los desfiles y no durante el combate, pero esta explicaci&#195;&#179;n es tambi&#195;&#169;n controvertida.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOSCOW_BOYAR</Tag>
@@ -821,7 +821,7 @@
 		</German>
 		<Italian>Boiardo</Italian>
 		<Spanish>Boyardo</Spanish>
-		<Russian>&#193;&#238;&#255;&#240;&#232;&#237;</Russian>
+		<Portuguese>&#193;&#238;&#255;&#240;&#232;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOSCOW_BOYAR_PEDIA</Tag>
@@ -830,7 +830,7 @@
 		<German>[TAB]Bojaren oder Boljaren waren Adlige unterhalb des Ranges eines Fürsten (Knjas) oder Zaren.[PARAGRAPH:2]Der Titel war in Bulgarien, in der Kiewer Rus, im alten Russland, im Großfürstentum Litauen sowie in Moldawien, Rumänien und Serbien verbreitet. Die Bojaren bildeten in diesen Ländern zum Teil seit dem 8. Jahrhundert und in Rumänien teilweise noch bis 1945 die herrschende Schicht der Großgrundbesitzer.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENOA_BALESTRIERI</Tag>
@@ -839,7 +839,7 @@
 		<German>Balestrieri</German>
 		<Italian>Balestriere Genovese</Italian>
 		<Spanish>Balestrieri</Spanish>
-		<Russian>&#193;&#224;&#235;&#229;&#241;&#242;&#240;&#232;&#229;&#240;&#232;</Russian>
+		<Portuguese>&#193;&#224;&#235;&#229;&#241;&#242;&#240;&#232;&#229;&#240;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENOA_BALESTRIERI_PEDIA</Tag>
@@ -848,7 +848,7 @@
 		<German>[TAB]Armbrustschützen aus Genua (italienisch: Balestrieri genovesi) waren berühmte Militäreinheiten des Mittelalters, die einerseits zur Verteidigung in Genua eingesetzt wurden, aber auch als Söldner bei anderen italienischen oder europäischen Mächten dienten. Bewaffnet mit Armbrüsten die in Genua hergestellt wurden, kämpften sie an Land und auf See. Neben der Armbrust bestand die Ausrüstung aus einem Dolch, einem leichten Metallhelm, einem Ringkragen, einem Kettenhemd und einem großen Schild, genannt Pavese, das während des Ladevorgangs benutzt wurde. Das Schild wurde oftmals von einem Burschen gehalten. Die Kommandanten kamen normalerweise aus den adligen Familien der Stadt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENGLISH_LONGBOWMAN</Tag>
@@ -861,7 +861,7 @@
 		</German>
 		<Italian>Arciere con Arco Lungo Inglese</Italian>
 		<Spanish>Saetero Inglés</Spanish>
-		<Russian>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENGLISH_LONGBOWMAN_PEDIA</Tag>
@@ -870,7 +870,7 @@
 		<German>[TAB]Der Querschnitt des Englischen Langbogens weist ein schmales D-Profil auf. Er besteht bauchseitig und zum großen Teil aus druckstabilem Kernholz, während der Bogenrücken aus zugstabilem Splintholz besteht. Ein D-förmig profilierter Bogen stellt hohe Anforderungen an die Druckfestigkeit des Holzes, denen nur ausgesuchte Holzsorten und -qualitäten gerecht werden. Abhilfe schafft hier eine Änderung des Querschnittdesigns hin zu flacheren und breiteren, eher rechteckig anmutenden Wurfarmen, die neben der höheren Belastbarkeit auch ein angenehmeres Schießverhalten aufgrund deutlich reduzierten Handschocks aufweisen. Diese Form wird heute im englischen Sprachraum "Amerikanischer Flachbogen" genannt, auch wenn der Flachbogen während der Mittel- und Jungsteinzeit ebenso ein Standardtyp in Europa war.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTRIAN_KURASSIER</Tag>
@@ -883,7 +883,7 @@
 		</German>
 		<Italian>Corazziere</Italian>
 		<Spanish>Kurassier</Spanish>
-		<Russian>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#202;&#232;&#240;&#224;&#241;&#232;&#240;</Russian>
+		<Portuguese>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#202;&#232;&#240;&#224;&#241;&#232;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTRIAN_KURASSIER_PEDIA</Tag>
@@ -892,7 +892,7 @@
 		<German>[TAB]Die Kürassiere haben sich aus den geharnischten Rittern des Mittelalters entwickelt. Sie waren seit etwa der Mitte des 16.Jhd.die schwere Schlachtenreiterei, durchwegs auf großrahmigen Pferden berittene gepanzerte Reiterei - auch die Reiter waren in der Regel größer und stärker als die der leichten Reiterei. In Österreich trugen die Kürassiere nach den Vorschriften 1765/71 einen geschwärzten Brustkürass ohne Rückenteil. Die Rückenkürasse waren zwar in den Zeughäusern vorhanden, aber nur in den Türkenkriegen kam noch der komplette Kürass zum Einsatz,  bis dieser 1860 in der österreichischen Armee auch noch abgeschafft wurde.[PARAGRAPH:2]Bewaffnet waren die Kürassiere durchwegs mit dem Pallasch, einem schweren Stoßdegen mit breiter Klinge und einem eisernen Handschutz. Zudem führte jeder Kürassier zwei Vorderladerpistolen in den Pistolentaschen der Pferderüstung mit sich. Eine beschränkte Anzahl von Reitern je Eskadron war mit Kavalleriekarabinern ausgestattet.[NEWLINE]Den Kürassieren blieb als Nachfahren der "edlen Ritter" immer ein besonderes Flair. Sie galten als die Elite der Kavallerie und wurden auch als die letzen Ritter bezeichnet. Ihre taktische  Aufgabe bestand in der  schlachtentscheidenden geschlossenen, alles niedermalmenden Kavallerieattacke - sowohl gegen gegnerische Kavallerie jeglicher Gattung als auch gegen fliehende, stehende oder angreifende Infanteriemassen; weiters auch als Sperrangriffsformation in letzter Konsequenz, wenn die eigene Armee vom Schlachtfeld floh und von der feindlichen Reiterei verfolgt wurde.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD</Tag>
@@ -905,7 +905,7 @@
 		</German>
 		<Italian>Grande Bombarda</Italian>
 		<Spanish>Bombardean Gran</Spanish>
-		<Russian>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Russian>
+		<Portuguese>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD_PEDIA</Tag>
@@ -914,7 +914,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN</Tag>
@@ -927,7 +927,7 @@
 		</German>
 		<Italian>Carolean</Italian>
 		<Spanish>Carolean</Spanish>
-		<Russian>&#202;&#224;&#240;&#238;&#235;&#232;&#237;</Russian>
+		<Portuguese>&#202;&#224;&#240;&#238;&#235;&#232;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN_PEDIA</Tag>
@@ -936,7 +936,7 @@
 		<German>[TAB]Nach dem Schonischen Krieg offenbarte der Nordische Krieg (1674-1679) die Schwäche der schwedischen Militärorganisation und ruinierte den Staatshaushalt gänzlich. Unter der Regierung König Karl XI. wurde das schwedische System 1682 schließlich erneut reformiert, um das Militärsystem effektiver zu gestalten und an die neue defensive Außenpolitik anzugleichen. Das Ergebnis dieser Reformbestrebungen war der Kontrakt vom 5. Dezember 1682 (Datum der Ratifizierung), einem Vertrag zwischen den einzelnen Provinzen (landskapen) und der Krone. Jede Provinz verpflichtete sich, ein Regiment von 1.200 Soldaten, die (nach Karl XI. benannt) als Karoliner bezeichnet wurden, aufzustellen und zu unterhalten. Dies geschah dadurch, dass sich jeweils zwei bis fünf Bauern zu einer rote zusammenschlossen. Diese Bauern unterhielten jeweils einen Soldaten. Der Soldat bekam einen kleinen Hof (torp), ein Schwein pro Jahr und Saatgut. Als Gegenleistung wurde den zu einer rote zusammengeschlossenen Bauern Steuerfreiheit gewährt. Wenn der Soldat zum Dienst gerufen wurde, erhielt er außerdem einen festen Sold.[PARAGRAPH:2]Der Vorteil des Systems lag auf Seiten der Provinzen in der erheblich größeren Rechtssicherheit bei der Aufbringung des Militärs sowie in dem Schutz der ständigen Aushebungen. Die Krone brauchte dagegen keine Werbeoffiziere mehr, konnte ihre Streitkräfte kostengünstig unterhalten und die heimische Wirtschaft schonen. Dieses System war so erfolgreich, dass bis zum Ausbruch des Großen Nordischen Krieges die Armee auf fast 80.000 Soldaten anstieg.</German>
 		<Italian>[TAB]Il Caroleans era soldati dei re svedesi Charles XI e Charles XII. Facevano parte del sistema svedese annuale di assegnazione. Le tattiche del Caroleans erano di attacare ferocemente e rimanere unafraid. I soldati inoltre hanno sostenuto la disciplina severa, che sopra il vasto corso di una guerra venti-anno-lunga dimostrerebbe vitale. Le tattiche svedesi dell'esercito del tempo non hanno insegnato la ritirata, in modo da i soldati sono stati conosciuti per non ritirarsi mai dalla battaglia.</Italian>
 		<Spanish>[TAB]El Caroleans era soldados de los reyes suecos Charles XI y Charles XII. Eran parte del sistema sueco anual de la asignaci&#195;&#179;n. Las t&#195;&#161;ctica del Caroleans eran atacar ferozmente y seguir siendo sin miedo. Los soldados tambi&#195;&#169;n sostuvieron la disciplina severa, que sobre el curso extenso de una guerra veinte-a&#195;&#177;o-larga probar&#195;&#173;a vital. Las t&#195;&#161;ctica suecas del ej&#195;&#169;rcito del tiempo no ense&#195;&#177;aron el retratamiento, as&#195;&#173; que conoc&#195;&#173;an a los soldados nunca para retirarse de batalla.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NETHERLANDS_GRENADIER</Tag>
@@ -949,7 +949,7 @@
 		</German>
 		<Italian>Granatiere Olandese</Italian>
 		<Spanish>Holandés Granaderos</Spanish>
-		<Russian>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Russian>
+		<Portuguese>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NETHERLANDS_GRENADIER_PEDIA</Tag>
@@ -958,7 +958,7 @@
 		<German>[TAB]Grenadiere (anfangs als "Granatiere" bezeichnet) waren Infanteristen im 17. und 18. Jahrhundert, die spezielle Aufgaben zu erfüllen hatten. Ursprünglich waren sie mit Handgranaten bewaffnet, später bildeten sie eine Elite des Heeres.[PARAGRAPH:2]Seit 1667 mussten sich in jeder französischen Infanterie-Kompanie vier Soldaten auf den Umgang mit Granaten spezialisieren und wurden deshalb als Grenadiere bezeichnet. Der Anteil der Grenadiere an der Infanterie stieg in der Folgezeit, so dass bereits ab 1671 jedes französische Bataillon eine Kompanie Grenadiere umfasste. Seit 1670 wurden auch in Österreich, 1676 in Brandenburg und 1678 in England Grenadier-Einheiten aufgestellt, worauf bis zum Ende des 17. Jahrhunderts die meisten anderen europäischen Staaten folgten. Der Begriff wurde in dieser Zeit aus dem Französischen auch in die deutsche Sprache übernommen. Für die Aufstellung einer Grenadier-Einheit wurden die stärksten, geschicktesten und oft die größten Soldaten ausgesucht (ein Beispiel waren die "Langen Kerls" Friedrich Wilhelms I. von Preußen).</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGAL_FOOT_KNIGHT</Tag>
@@ -971,7 +971,7 @@
 		</German>
 		<Italian>Cavaliere d'Aviz</Italian>
 		<Spanish>Caballero de Aviz</Spanish>
-		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#192;&#226;&#232;&#231;&#224;</Russian>
+		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#252; &#192;&#226;&#232;&#231;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGAL_FOOT_KNIGHT_PEDIA</Tag>
@@ -980,7 +980,7 @@
 		<German>[TAB]Der Ritterorden von Aviz bzw. Avis (Ordem Militar de São Bento de Aviz), auch als Orden des heiligen Benedikt von Avis, bekannt, war ein portugiesischer Ritterorden und ist heute ein portugiesischer Verdienstorden. Der portugiesische Ritterorden von Aviz ging ursprünglich aus einer 1162 in Coimbra gegründeten Bruderschaft von Rittern (confraria de cavaleiros) zur Bekämpfung der Mauren hervor. Der König beauftragte die Ritter der Bruderschaft, die 1159 von den Mauren eroberte Stadt Évora gegen deren Gegenangriffe zu verteidigen.[PARAGRAPH:2]Nach 1166 wurde die Bruderschaft durch den portugiesischen König Alfons I. (Dom Afonso I Henriques) in einen geistlichen Ritterorden umgewandelt und nach ihrem Sitz anfangs als Orden von Évora bezeichnet. Ihr erster Meister in Portugal war zwischen 1175 und 1195 der Militärbefehlshaber von Lissabon und der Estremadura, Gonçalo Viegas de Lanhoso.[PARAGRAPH:2]König Alfons II. übergab den Rittern unter ihrem Meister Fernando Annes 1211 Festung und Stadt Aviz. Der Orden befestigte die Stadt, bauten die Festung aus und errichtete hier sein Konventsgebäude. 1223 und 1224 übersiedelte die gesamte Miliz von Évora unter ihrem Meister Fernão Rodrigues Monteiro nach Aviz und wurde seit dieser Zeit als Orden von Aviz bekannt. 1248 zeichneten sich die Avis-Ritter unter ihrem Meister Martím Fernandes bei der von Ferdinand dem Heiligen geführten Belagerung und Eroberung der andalusischen Stadt Sevilla aus, die Ferdinand dann in sein Königreich Kastilien eingliederte.[PARAGRAPH:2]Neben anderen Orden waren die Aviz-Ritter ein wichtiger militärischer und wirtschaftlicher Träger der portugiesischen Reconquista. Nachdem diese mit der Eroberung der Algarve Mitte des 13. Jahrhunderts zu ihrem Abschluss kam, wurde die Abhängigkeit der Aviz-Ritter vom Calatrava-Orden zu einer wachsenden Gefahr für die portugiesischen Könige in ihrer latenten Rivalität mit Kastilien. Das portugiesische Königshaus begann daher, die in Portugal begüterten Ritterorden dem kastilischen Einfluss zu entziehen und mit dem Christusorden, in den der aufgelöste Templerorden aufging, unter Billigung des Papsttums einen nationalen Ritterorden für die Fortführung der Reconquista in Nordafrika zu schaffen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KIEV_DRUZHINA</Tag>
@@ -993,7 +993,7 @@
 		</German>
 		<Italian>Druzhina</Italian>
 		<Spanish>Druzhina</Spanish>
-		<Russian>&#196;&#240;&#243;&#230;&#232;&#237;&#224;</Russian>
+		<Portuguese>&#196;&#240;&#243;&#230;&#232;&#237;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KIEV_DRUZHINA_PEDIA</Tag>
@@ -1002,7 +1002,7 @@
 		<German>[TAB]Druschina (auch Drushína oder Drushine) nennt man das persönliche Heergefolge oder die Leibwache eines russischen Fürsten im Mittelalter. Die Druschinas waren ursprünglich aus den Schwurgemeinschaften der Waräger entstanden, die die Flüsse Osteuropas befuhren. Im mittelalterlichen Großreich der Kiewer Rus hatte jeder Fürst seine eigene Druschina als Kriegergefolgschaft. Darüber hinaus übernahm die Druschina in Russland zahlreiche Funktionen der Herrschaftsausübung und Verwaltung, insbesondere die Eintreibung von Steuern, die im Westen vom Lehnssystem und vom niederen Adel ausgefüllt wurden. Teilweise beriet der Herrscher sich mit seiner Gefolgschaft auch über Regierungs- oder Kriegspläne. Der Herrscher musste sie versorgen und sich ihr Wohlwollen erhalten.[PARAGRAPH:2]Es gab zwei verschiedene Gefolgschaften: die ältere und die jüngere Gefolgschaft. Aus der Starschaja Druschina (Ältere Gefolgschaft = höherstehende Druschina), zu der vor allem die grossen Adligen mit eigener Gefolgschaft und eigenem Landgut gehörten, wurde ab Mitte des 12. Jahrhunderts der Begriff der Bojaren üblich. Die jüngere Gefolgschaft verdingte sich als Krieger für den Fürsten und wurde dafür von diesem weiter versorgt. Die Gefolgschaft des Fürsten konnte sich bei grösseren Feldzügen um das Aufgebot aller freien Männer, der sogenannten Opoltschenije, erweitern. Seit der Mitte des 12. Jahrhunderts verschmolzen die beiden Begriffe immer mehr. Die Gefolgschaft der Fürsten war im Frühmittelalter kein spezifisch slawisches Phänomen, sondern existierte auch in anderen Teilen Europas.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LITHUANIA_BAJORAS</Tag>
@@ -1015,7 +1015,7 @@
 		</German>
 		<Italian>Bajoras</Italian>
 		<Spanish>Bajoras</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LITHUANIA_BAJORAS_PEDIA</Tag>
@@ -1024,7 +1024,7 @@
 		<German>[TAB]Vor der Entstehung des litauischen Staates wurden die niederen Adligen in Litauen Bajorai genannt, die Mitglieder des höheren Adels Kunigai. Letzterer Begriff geht sprachlich auf das altdeutsche Kunig (= König) zurück. Der höhere Adel entstammte der Schicht der Stammesführer. Nach der Schaffung eines litauischen Staates durch den Großfürsten Mindaugas wurden sie allmählich höheren Herrschern untertan und später auch dem litauischen König. Nach Mindaugas' Tod hatten alle litauischen Regenten den Titel Großherzog (litauisch: Didysis kunigaikstis) oder König. Die höheren Adelsfamilien benutzten die heidnischen Vornamen ihrer Vorfahren als Familiennamen, beispielsweise Gostautai, Radvilos, Astikai oder Kesgailos. Diese Familien erwarben großen Reichtum und entwickelten sich zu Magnaten. Während der Union von Horodlo 1413 erhielten sie Familienwappen.[PARAGRAPH:2]Während der litauische Adel zunächst ausschließlich aus ethnischen Litauern bestand, kamen mit der territorialen Expansion mehr ruthenische Adelsfamilien hinzu. Schon im 16. Jahrhundert begannen sich die ruthenischen Adelsfamilien gente Ruthenus, natione Lithuanus zu nennen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIKING_BERSERKER</Tag>
@@ -1037,7 +1037,7 @@
 		</German>
 		<Italian>Berserker</Italian>
 		<Spanish>Berserk</Spanish>
-		<Russian>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Russian>
+		<Portuguese>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIKING_BERSERKER_PEDIA</Tag>
@@ -1046,7 +1046,7 @@
 		<German>[TAB]Die Berserker waren Wikingerkrieger, die sich selbst in einen rauschartigen Zustand bzw. in furchtbare Rage brachten, bevor sie letztlich ins Gefecht zogen. Der Begriff Berserker setzt sich aus den altnordischen Wörtern "bjorn" (Bär) oder "bar" (nackt, bloß) und "serkr" (Gewand) zusammen. Ein Berserker war also jemand, der im "Gewand" eines Bären (zum Beispiel mit bärenartiger Wut oder Stärke) oder unbekleidet in den Kampf zog. Die Berserker glaubten, dass sie von dem Kampfgeist des Tieres beseelt und möglicherweise sogar dessen Form annehmen würden, wenn sie ein Bärenfell trugen. Außerdem ist bekannt, dass sie sich dem nordischen Hauptgott Odin geweiht hatten und überzeugt waren, er würde sie schützen und ihnen übermenschliche Kräfte verleihen. Die Wikinger glaubten auch, dass ihre Gefallenen, wenn sie als Berserker gekämpft hatten, direkt in das Kriegerparadies Walhalla einziehen würden. [PARAGRAPH:2]Wie genau die Berserker sich in den Rauschzustand versetzten, den Zeitgenossen beschrieben, ist nicht überliefert. Manche vermuten, dass ihr wildes Verhalten auf die Einnahme halluzinogener Drogen zurückzuführen ist, andere suchen die Gründe in einer leichten Form von Epilepsie oder sogar einem Gen-Defekt, der ein übermäßiges Anschwellen des Schädels bewirkte. Die vielleicht einfachste Erklärung aber ist, dass die Berserker allein durch das Ritual der Vorbereitung derart in Ekstase gerieten, während sie ihre Gesichter bemalten, wie wilde Tiere heulten, auf ihre Helme und Trommeln einschlugen - und große Mengen Alkohol zu sich nahmen. [PARAGRAPH:2]Alle Geschichten über die Berserker stimmen darin überein, dass sie wie entfesselt mit unbändiger Kraft kämpften und offenbar keine Schmerzen wahrnahmen, bis der Kampf beendet war. Berserker wurden häufig als Schurken dargestellt, die alles niedermetzelten, was sich bewegte - einschließlich ihrer eigenen Familienangehörigen. Selbst ihre Verbündeten hielten in Gefechten im Allgemeinen mindestens eine Armlänge Abstand zu den Berserkern und fühlten sich in ihrer Gegenwart nicht allzu wohl. Die skandinavischen Könige weigerten sich, sie als Leibwächter einzusetzen, weil sie fürchteten, die Berserker könnten während eines Kampfes vergessen, wen sie schützen sollten. [PARAGRAPH:2]Im Jahr 1015 wurden die Berserker in Norwegen geächtet und auf der Grundlage der Grágás, dem mittelalterlichen isländischen Gesetzbuch, in die Verbannung verurteilt. Nach der Ausbreitung des Christentums in Skandinavien verschwanden die Berserker-Kriegerstämme im Jahr 1100 nach Christus vollständig.</German>
 		<Italian>[TAB]I berserk (o berserker) erano guerrieri vichinghi che facevano in modo di infuriarsi prima di scendere in campo. La parola berserker deriva dalla parola nordica &quot;bjorn&quot; (orso) o &quot;bare&quot; (nudo) e &quot;serkr&quot; (maglia); i berserk erano perciò coloro che andavano in battaglia o indossando la &quot;maglia&quot; dell'orso (ossia che, per forza e furia, assomigliassero a un orso) o completamente nudi. I berserk pensavano che indossando la pelliccia di un orso sarebbero stati posseduti dallo spirito dell'animale e forse persino mutarsi in esso. Essi erano anche noti per il giuramento fatto al dio nordico del cielo, Odino, che in cambio li avrebbe protetti e donato loro una forza sovrumana. I Vichinghi credevano inoltre che chi moriva combattendo da berserk, avrebbe raggiunto direttamente il Valhalla, il paradiso dei guerrieri. [PARAGRAPH:2]Nessuno sa come facessero i berserk a indurre se stessi in quello stato di furia violenta descritta dai contemporanei. Alcuni ipotizzano che derivasse dall'assunzione di allucinogeni, altri da una leggera epilessia, altri ancora da una malattia di tipo genetico che determinava una crescita eccessiva del cranio. La spiegazione pi&#249; probabile &#232; che i berserk si autoinducevano quello stato dipingendosi il volto, ululando come animali, sbattendo elmi e tamburi e bevendo alcool a volont&#224; prima della battaglia. [PARAGRAPH:2]Tutti i racconti sui berserk concordano sul fatto che combattevano con ferocia inaudita e che erano immuni al dolore fino al termine della battaglia. I berserk erano spesso ritratti come malvagi massacratori di tutto ciò che si muovesse, familiari compresi. In battaglia persino i loro alleati se ne tenevano a distanza e non erano a proprio agio nelle loro vicinanze. I re scandinavi si rifiutavano di impiegarli come guardie del corpo per paura che nello scontro dimenticassero chi dovevano proteggere. [PARAGRAPH:2]Nel 1015 i berserk furono banditi dalla Norvegia e il Gr&#225;g&#225;s, il codice islandese medievale, puniva i guerrieri berserk con l'esilio. Con l'adozione del cristianesimo in Scandinavia, le bande di guerrieri berserk sparirono del tutto (1100 d.C. circa). [PARAGRAPH:2]</Italian>
 		<Spanish>[TAB]Los berserker eran guerreros vikingos que entraban en terribles trances de furia antes de lanzarse al campo de batalla. La palabra berserk procede de las palabras nórdicas &quot;bjorn&quot; (que significa &quot;oso&quot;) y &quot;serk&quot; (que significa &quot;camisa&quot;). Un berserk era alguien que se lanzaba a la batalla llevando la &quot;camisa&quot; de un oso (esto es, alguien que luchaba con la furia y la fuerza de un oso) o que entraba en batalla desnudo. Estos guerreros pensaban que, si llevaban una camisa de oso, el espíritu del animal les poseería y puede que hasta llegaran a adoptar su forma. Tambi&#233;n juraban lealtad al dios nórdico Odín, pues creían que los protegería y les proporcionaría fuerza sobrehumana. Los vikingos creían adem&#225;s que, si la muerte los alcanzaba mientras luchaban como berserker, los caídos viajarían directamente al paraíso de los guerreros, el Valhalla. [PARAGRAPH:2]Nadie sabe cómo alcanzaban exactamente los berserker este estado de enloquecida violencia descrito por sus contempor&#225;neos. Algunas teorías defienden que este comportamiento salvaje se conseguía mediante la ingesta de diferentes alucinógenos, o era causado por una epilepsia moderada, o incluso por un defecto gen&#233;tico que provocaba una hipertrofia del cr&#225;neo. La explicación m&#225;s plausible es que, posiblemente, antes de entrar en batalla, los berserker simplemente se indujeran este frenesí pint&#225;ndose la cara, aullando como animales, golpeando yelmos y tambores... e ingiriendo grandes cantidades de alcohol. [PARAGRAPH:2]Todas las historias sobre ellos coinciden en que luchaban con la fuerza de aut&#233;nticos posesos y eran inmunes al dolor hasta el final de la batalla. A menudo han sido retratados como villanos que mataban cualquier cosa que se moviera, incluidos los miembros de sus propias familias. En las batallas, hasta sus propios aliados se mantenían a una distancia respetable y jam&#225;s se sentían cómodos en su presencia. Los reyes escandinavos nunca los usaban como guardaespaldas por miedo a que, una vez en la lucha, olvidaran a qui&#233;n tenían que proteger. [PARAGRAPH:2]En el año 1015, los berserker fueron declarados proscritos en Noruega, y el Gr&#225;g&#225;s, el código legislativo medieval island&#233;s, los sentenciaba al exilio. Tras la adopción generalizada del cristianismo en Escandinavia, en 1100 d. C., las bandas de guerreros berserker desaparecieron. [PARAGRAPH:2]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Unique Units -->
 	<TEXT>
@@ -1060,7 +1060,7 @@
 		</German>
 		<Italian>Cavaliere di San Giovanni</Italian>
 		<Spanish>Caballero de San Juan</Spanish>
-		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Russian>
+		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_HELP</Tag>
@@ -1069,7 +1069,7 @@
 		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_1]Johanniterorden[\LINK] in der Stadt</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT</Tag>
@@ -1082,7 +1082,7 @@
 		</German>
 		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Caballero Templario</Spanish>
-		<Russian>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Russian>
+		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT_HELP</Tag>
@@ -1091,7 +1091,7 @@
 		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_2]Templerorden[\LINK] in der Stadt</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT</Tag>
@@ -1104,7 +1104,7 @@
 		</German>
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
-		<Russian>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Russian>
+		<Portuguese>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT_HELP</Tag>
@@ -1113,7 +1113,7 @@
 		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_3]Deutscher Orden[\LINK] in der Stadt</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
@@ -1126,7 +1126,7 @@
 		</German>
 		<Italian>Keshik</Italian>
 		<Spanish>Keshik</Spanish>
-		<Russian>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Russian>
+		<Portuguese>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK_PEDIA</Tag>
@@ -1135,7 +1135,7 @@
 		<German>[TAB]Die Mongolen waren f&#252;r ihre Reitkunst ber&#252;hmt. Bereits im Alter von nur 3 Jahren lernten die mongolischen Kinder reiten. 2 Jahre sp&#228;ter bekamen sie Pfeil und Bogen, um zu jagen und zu k&#228;mpfen. Die nomadisch lebenden Mongolen waren perfekt auf die H&#228;rte des Krieges vorbereitet. Nicht selten lebten sie unter Bedingungen, die f&#252;r andere Truppen ihrer Zeit unertr&#228;glich gewesen w&#228;ren. Mongolische Reiter kamen zehn Tage lang ohne Nahrung aus und ern&#228;hrten sich in dieser Zeit vom Blut und der Milch ihrer Pferde.</German>
 		<Italian>[TAB]L'abilit&#224; equestre dei Mongoli era ben nota: imparavano ad andare a cavallo all'et&#224; di tre anni e gi&#224; a cinque venivano dotati di arco e frecce per andare a caccia o combattere. Per i Mongoli, andare in guerra diventava una cosa quasi normale. La vita dura e nomade dei Mongoli li prepar&#242; bene per gli stenti della guerra: riuscivano a sopravvivere in condizioni intollerabili per qualsiasi altro soldato dell'epoca. Se necessario, i cavallerizzi Mongoli potevano non mangiare nulla per dieci giorni, nutrendosi del sangue e del latte dei loro cavalli.</Italian>
 		<Spanish>[TAB]La destreza de los jinetes mongoles era famosa. Para los mongoles, que aprend&#237;an a montar a la edad de tres a&#241;os y que a los cinco recib&#237;an arco y flechas para cazar y hacer la guerra a lomos de sus monturas, era la forma m&#225;s natural de luchar. Su forma de vida, rigurosa y n&#243;mada, los preparaba para los rigores de la guerra. A menudo sal&#237;an victoriosos en condiciones que cualquier otro ej&#233;rcito de su tiempo hubiese encontrado intolerables. Cuando era necesario, los jinetes mongoles pod&#237;an pasar hasta diez d&#237;as sin cocinar, sustent&#225;ndose &#250;nicamente con la sangre y la leche de sus caballos.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELJUK</Tag>
@@ -1148,7 +1148,7 @@
 		</German>
 		<Italian>Seljuk</Italian>
 		<Spanish>Selyuq</Spanish>
-		<Russian>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Russian>
+		<Portuguese>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELJUK_PEDIA</Tag>
@@ -1157,7 +1157,7 @@
 		<German>[TAB]Die Seldschuken waren eine türkische Fürstendynastie, die das Reich der Großseldschuken begründete, das sich über Mittelasien, den Iran, Irak, Syrien, Anatolien und Teile der arabischen Halbinsel erstreckte. Einige Seldschuken-Fürsten beherrschten das gesamte Großseldschukenreich, andere Teilgebiete wie Kerman und Syrien (bis zum Anfang des 12. Jahrhunderts) oder Anatolien (Sultanat von Rum bis zum Anfang des 14. Jahrhunderts). Die Seldschuken waren sunnitische Muslime und leiteten mit ihrem Sieg in der Schlacht von Manzikert im Jahr 1071 die türkische Landnahme Anatoliens ein.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Tag>
@@ -1170,7 +1170,7 @@
 		</German>
 		<Italian>Giannizzero</Italian>
 		<Spanish>Jenízaro</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY_PEDIA</Tag>
@@ -1179,6 +1179,6 @@
 		<German>[TAB]Die Janitscharen waren die Elitekampftruppen in der Infanterie der osmanischen Sultane. Als Gardetruppen und Leibwache des Sultans erlangten sie enormen Einfluss, bevor sie im 19. Jahrhundert aufgel&#246;st wurden. Gegr&#252;ndet wurde das Janitschar-Corps um 1330 von Murat I. Die Truppen bestanden aus nicht muslimischen jungen M&#228;nnern, die w&#228;hrend Kampfhandlungen gefangen genommen oder als Sklaven gekauft und als Krieger aufgezogen wurden - &#228;hnlich wie die Mameluken (Milit&#228;rsklaven) in &#196;gypten, die m&#246;glicherweise als Vorbild f&#252;r die Janitscharen dienten. Die Janitscharen wurden die ersten Infanterieeinheiten der osmanischen Milit&#228;rstreitkr&#228;fte, denn zu dieser Zeit w&#228;re kein freier Mann bereit gewesen, sich als Fu&#223;soldat zu verdingen. [PARAGRAPH:2]Nach 1380 wurde mit der "Devschirme" (Knabenlese) ein standardisiertes System zur Zwangsrekrutierung neuer Soldaten eingef&#252;hrt, die zu Janitscharen ausgebildet wurden. Hierbei handelte es sich im Wesentlichen um eine Art "menschliche Steuer", wobei jedes zum Osmanischen Reich geh&#246;rige Gebiet dem Staat eine bestimmte Anzahl junger M&#228;nner &#252;berlassen musste, die fast immer christlicher Abstammung waren. [PARAGRAPH:2]Die Jungen wurden in gesonderten Kasernen abgeschottet, wo sie zum Islam umerzogen und zu Elitesoldaten ausgebildet wurden (ein &#228;hnliches Verfahren war in der Antike auch von den Spartanern in Griechenland praktiziert worden). Trotz der Tatsache, dass sie Sklaven waren, genossen die Janitscharen gewisse Privilegien, einschlie&#223;lich der Berechtigung zum Tragen von Waffen und einer h&#246;heren Besoldung als andere Soldaten. Anfangs waren sie lediglich kleine Leibw&#228;chter des Sultans, aber im Laufe der Zeit stellten sie einen Gro&#223;teil der osmanischen Armee, manchmal mehr als 200.000 Mann. [PARAGRAPH:2]Urspr&#252;nglich waren die Janitscharen zu hervorragenden Bogensch&#252;tzen ausgebildet worden, nach dem Aufkommen der Feuerwaffen spezialisierten sie sich jedoch schnell auf den Umgang mit Musketen. Im Nahkampf verwendeten sie &#252;blicherweise Beile oder S&#228;bel. In der fr&#252;hen Geschichte des Osmanenreiches waren die Janitscharen an allen bedeutenden Gefechten beteiligt, einschlie&#223;lich der Belagerung von Konstantinopel im Jahr 1453. [PARAGRAPH:2]Doch ihr Erfolg sollte ihnen schlie&#223;lich auch zum Verh&#228;ngnis werden. Als sie ihre Bedeutung f&#252;r die osmanischen Streitkr&#228;fte erkannten, verlangten sie eine h&#246;here Besoldung und drohten mit einem Aufstand, falls ihre Forderungen nicht erf&#252;llt werden sollten. Ihre erste Rebellion fand 1449 statt und es sollten noch viele weitere folgen. Bis zum 18. Jahrhundert hatten die Janitscharen die Regierung fest im Griff. Mithilfe h&#228;ufiger Palastrevolten setzten sie nach Belieben alte Sultane ab und neue ein. Dar&#252;ber hinaus blockierten sie auch die dringend notwendigen Reformen zur Modernisierung der osmanischen Armee. Weil viele Janitscharen korrupt wurden und nicht mehr f&#252;r den Kampf trainierten, sondern vielmehr wirtschaftliche oder politische Interessen verfolgten, wurde die Schw&#228;che der Osmanen angesichts der russischen und &#246;sterreichischen Expansionsbestrebungen bald nur allzu offensichtlich. In dem verzweifelten Versuch, die Kontrolle &#252;ber ihr Reich zur&#252;ckzugewinnen, griffen die osmanischen Herrscher zu entschiedenen Ma&#223;nahmen, um die Janitscharen auszuschalten. [PARAGRAPH:2]Schlie&#223;lich gelang es Mahmut II. im Jahr 1826, eine Streitmacht ohne Janitscharen-Beteiligung aufzustellen, die stark genug war, um es mit den Elitetruppen aufzunehmen. Nat&#252;rlich gaben diese sich nicht kampflos geschlagen und so musste Mahmut II. Artilleriegesch&#252;tze einsetzen und ihre Quartiere unter Beschuss nehmen, um sie endg&#252;ltig zur Aufgabe zu zwingen. Dieses Ereignis - das so genannte "Wohlt&#228;tige Ereignis" - beendete die &#196;ra der Janitscharen. Das Einzige, was heute noch an sie erinnert, ist ihre charakteristische Marschmusik.</German>
 		<Italian>[TAB]I giannizzeri erano una forza d'elite di fanteria creata dai sultani ottomani e impiegati nella protezione della loro dimora e della persona, tanto da giungere ad avere su di loro un'enorme influenza prima di essere sciolta nel diciannovesimo secolo. Murad I fond&#242; il corpo dei giannizzeri nel 1330; le truppe erano formate da ragazzi non musulmani catturati in battaglia o acquistati come schiavi e addestrati al combattimento, cos&#236; come gli schiavi-soldato mamelucchi d'Egitto, che potrebbero anche aver ispirato la formazione dei giannizzeri. I giannizzeri furono la prima forza di fanteria dell'esercito ottomano: a quel tempo nessun uomo libero si sarebbe abbassato a combattere a piedi. [PARAGRAPH:2]Dopo il 1380, il sistema di reclutamento dei giannizzeri si standardizz&#242; secondo la procedura del "devshirmeh": si trattava in sostanza di una "tassa umana" secondo la quale ogni comunit&#224; avrebbe dovuto pagare un dato numero di ragazzi allo stato. Nella pratica, si trattava quasi sempre di schiavi cristiani. [PARAGRAPH:2]I ragazzi venivano segregati in speciali caserme, dove venivano convertiti all'Islam e addestrati per diventare soldati d'elite (secondo modalit&#224; simili a quelle impiegate dagli Spartani dell'antica Grecia). Anche se schiavi, ai giannizzeri erano riservati dei privilegi speciali, come il diritto a portare armi e una paga superiore rispetto a quella degli altri soldati. Se inizialmente erano destinati alla guardia del corpo del sultano, col tempo costituirono il grosso dell'esercito ottomano, raggiungendo anche le 200.000 unit&#224; in certi periodi. [PARAGRAPH:2]I giannizzeri originariamente venivano addestrati come arcieri, ma quando furono introdotte le armi da fuoco, adottarono subito le nuove armi nell'uso delle quali diventarono molto esperti. Per il combattimento in mischia usavano asce o sciabole. I giannizzeri parteciparono a tutte le pi&#249; importanti battaglie del primo periodo dell'Impero ottomano, compreso l'assedio di Costantinopoli del 1453. [PARAGRAPH:2]Fu proprio il loro successo a decretare la fine dei giannizzeri. Intuendo la propria importanza, cominciarono a esigere paghe sempre pi&#249; alte e a minacciare rivolte in caso di mancata concessione. La loro prima ribellione avvenne nel 1449 e a essa ne seguirono molte altre. Nel diciottesimo secolo, in questo modo i giannizzeri tenevano il governo in ostaggio: con i loro colpi di stato facevano diventare sultano chi volevano e inoltre ostacolarono la necessaria modernizzazione dell'esercito ottomano. Molti di loro erano corrotti e non si addestravano pi&#249; al combattimento ma perseguivano imprese commerciali o carriere politiche, finch&#233; la fragilit&#224; dell'Impero ottomano di fronte all'espansionismo di Austria e Russia divenne evidente a tutti. Nel tentativo disperato di riassumere il controllo del proprio impero, i sultani compirono ogni sforzo per liberarsene. [PARAGRAPH:2]Alla fine, nel 1826, Mahmud II fu in grado di radunare un esercito di non giannizzeri forte abbastanza da scontrarsi con essi. I giannizzeri non si arresero senza lottare e Mahmud II dovette usare l'artiglieria per bombardare le loro caserme e costringerli alla sottomissione. Questo evento, noto come "l'incidente propizio" segn&#242; la fine dei giannizzeri. L'unica traccia che rimane oggi di loro &#232; la musica della loro marcia.</Italian>
 		<Spanish>[TAB]Los jen&#237;zaros eran un cuerpo de infanter&#237;a de &#233;lite empleado por los sultanes otomanos. Formaban las tropas de la casa del sult&#225;n y sus guardaespaldas, y llegaron a alcanzar una posici&#243;n de enorme influencia antes de desaparecer, en el siglo XIX. Murad I fund&#243; el cuerpo de los jen&#237;zaros en 1330. Las tropas estaban formadas por ni&#241;os no musulmanes que eran capturados en las batallas o comprados en los mercados de esclavos y criados como guerreros. En este sentido se parec&#237;an mucho a los soldados esclavos de los mamelucos de Egipto, que tal vez sirvieran de inspiraci&#243;n. Los jen&#237;zaros fueron la primera unidad de infanter&#237;a de las fuerzas otomanas, porque en aquel tiempo a los hombres libres no se les permit&#237;a luchar a pie. [PARAGRAPH:2]A partir de 1380, el sistema de reclutamiento de nuevos jen&#237;zaros se estandariz&#243; mediante un proceso denominado el "devshirmeh". B&#225;sicamente, se trataba de un "impuesto humano", por el que cada comunidad ten&#237;a que contribuir con cierto n&#250;mero de ni&#241;os para el estado. En la pr&#225;ctica, se trataba casi siempre de esclavos cristianos. [PARAGRAPH:2]Los ni&#241;os quedaban confinados en cuarteles especiales, donde se los convert&#237;a al Islam y recib&#237;an entrenamiento como soldados de &#233;lite (un proceso muy similar al practicado por los espartanos de la antigua Grecia). Aunque eran esclavos, los jen&#237;zaros recib&#237;an privilegios especiales, incluido el derecho a portar armas y una paga superior a la de los dem&#225;s soldados. Empezaron siendo un peque&#241;o contingente de guardaespaldas para el sult&#225;n, pero acabaron por formar la mayor parte del ej&#233;rcito otomano, superando la cifra de los doscientos mil hombres en algunas ocasiones. [PARAGRAPH:2]Inicialmente se entrenaban para convertirse en expertos arqueros, pero cuando se inventaron las armas de fuego las adoptaron muy pronto y se convirtieron en aut&#233;nticos expertos con el mosquete. En el cuerpo a cuerpo sol&#237;an utilizar hachas o sables. Los jen&#237;zaros estuvieron presentes en todas las batallas importantes de la historia inicial del Imperio Otomano, incluido el asedio de Constantinopla en 1453. [PARAGRAPH:2]Su mismo &#233;xito ser&#237;a lo que los destruyese. Al comprender su importancia, empezaron a exigir mayor paga y a amenazar con revueltas si no se les conced&#237;an sus exigencias. Su primera rebeli&#243;n se produjo en 1449, y fue seguida por muchas otras. En el siglo XVIII ya dominaban el gobierno. Por medio de frecuentes intrigas palaciegas, cambiaban los sultanes a su antojo y bloqueaban las reformas que tanto necesitaba el ej&#233;rcito otomano para modernizarse. Muchos de ellos cayeron en la corrupci&#243;n, abandonaron la instrucci&#243;n militar y se dedicaron a los negocios o a la vida pol&#237;tica, y la debilidad de los otomanos frente al expansionismo ruso y austr&#237;aco no tard&#243; en hacerse evidente. Desesperados por recuperar el control de su pa&#237;s, los gobernantes otomanos hicieron decididos esfuerzos por librarse de ellos. [PARAGRAPH:2]Finalmente, en 1826, Murad II pudo formar un ej&#233;rcito regular lo bastante fuerte como para enfrentarse a los jen&#237;zaros. Pero estos no se sometieron sin luchar, y Mahmud II tuvo que bombardear sus cuarteles con artiller&#237;a para someterlos. Este acontecimiento, conocido como el "feliz incidente", signific&#243; el fin de los jen&#237;zaros. Su caracter&#237;stica m&#250;sica de marcha es lo &#250;nico que queda de ellos hoy en d&#237;a.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 </Civ4GameText>

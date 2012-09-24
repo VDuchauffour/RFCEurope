@@ -12,7 +12,7 @@
 		<German>S&#246;ldner-Verwaltung</German>
 		<Italian>Gestione dei Mercenari</Italian>
 		<Spanish>Gestor de mercenarios</Spanish>
-		<Russian>&#204;&#229;&#237;&#229;&#228;&#230;&#229;&#240; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
+		<Portuguese>&#204;&#229;&#237;&#229;&#228;&#230;&#229;&#240; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_SCREEN_TITLE</Tag>
@@ -21,7 +21,7 @@
 		<German>S&#246;ldner</German>
 		<Italian>Mercenari</Italian>
 		<Spanish>Mercenarios</Spanish>
-		<Russian>&#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
+		<Portuguese>&#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE</Tag>
@@ -30,7 +30,7 @@
 		<German>S&#246;ldner-Gruppen</German>
 		<Italian>Gruppi di Mercenari</Italian>
 		<Spanish>Grupos de mercenarios</Spanish>
-		<Russian>&#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
+		<Portuguese>&#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE</Tag>
@@ -39,7 +39,7 @@
 		<German>S&#246;ldner-Vertr&#228;ge</German>
 		<Italian>Contratti dei Mercenari</Italian>
 		<Spanish>Contratos de mercenarios</Spanish>
-		<Russian>&#202;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
+		<Portuguese>&#202;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_MERCENARIES</Tag>
@@ -48,7 +48,7 @@
 		<German>Verf&#252;gbare S&#246;ldner</German>
 		<Italian>Mercenari disponibili</Italian>
 		<Spanish>Mercenarios disponibles</Spanish>
-		<Russian>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
+		<Portuguese>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_MERCENARY_GROUPS</Tag>
@@ -57,7 +57,7 @@
 		<German>Verf&#252;gbare S&#246;ldner-Gruppen</German>
 		<Italian>Gruppi di Mercenari disponibili</Italian>
 		<Spanish>Grupos de mercenarios disponibles</Spanish>
-		<Russian>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
+		<Portuguese>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITS_CONTRACTED_OUT</Tag>
@@ -66,7 +66,7 @@
 		<German>Ausgeschiedene Einheiten</German>
 		<Italian>Unità sotto contratto</Italian>
 		<Spanish>Unidades subcontratadas</Spanish>
-		<Russian>&#222;&#237;&#232;&#242;&#251; &#241; &#234;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#238;&#236;</Russian>
+		<Portuguese>&#222;&#237;&#232;&#242;&#251; &#241; &#234;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#238;&#236;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HIRED_MERCENARIES</Tag>
@@ -75,7 +75,7 @@
 		<German>Angeheuerte S&#246;ldner</German>
 		<Italian>Mercenari assoldati</Italian>
 		<Spanish>Mercenarios contratados</Spanish>
-		<Russian>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
+		<Portuguese>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HIRED_MERCENARY_GROUPS</Tag>
@@ -84,7 +84,7 @@
 		<German>Angeheuerte S&#246;ldner-Gruppen</German>
 		<Italian>Gruppi di Mercenari assoldati</Italian>
 		<Spanish>Grupos de mercenarios contratados</Spanish>
-		<Russian>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
+		<Portuguese>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_UNITS</Tag>
@@ -93,7 +93,7 @@
 		<German>Verf&#252;gbare Einheiten</German>
 		<Italian>Unit&#224; disponibili</Italian>
 		<Spanish>Unidades disponibles</Spanish>
-		<Russian>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Russian>
+		<Portuguese>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_INFORMATION</Tag>
@@ -102,7 +102,7 @@
 		<German>S&#246;ldner-Informationen</German>
 		<Italian>Informazioni sui Mercenari</Italian>
 		<Spanish>Informaci&#243;n de mercenarios</Spanish>
-		<Russian>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#229;</Russian>
+		<Portuguese>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_GROUP_INFORMATION</Tag>
@@ -111,7 +111,7 @@
 		<German>S&#246;ldner-Gruppen-Informationen</German>
 		<Italian>Informazioni sui gruppi di Mercenari</Italian>
 		<Spanish>Informaci&#243;n del grupo de mercenarios</Spanish>
-		<Russian>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#227;&#240;&#243;&#239;&#239;&#229; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Russian>
+		<Portuguese>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#227;&#240;&#243;&#239;&#239;&#229; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INFORMATION</Tag>
@@ -120,7 +120,7 @@
 		<German>Einheiten-Informationen</German>
 		<Italian>Informazioni sulle unit&#224;</Italian>
 		<Spanish>Informaci&#243;n de la unidad</Spanish>
-		<Russian>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#254;&#237;&#232;&#242;&#229;</Russian>
+		<Portuguese>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#254;&#237;&#232;&#242;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE_COST</Tag>
@@ -129,7 +129,7 @@
 		<German>S&#246;ldner-Unterhaltskosten</German>
 		<Italian>Costo mantenimento Mercenari</Italian>
 		<Spanish>Coste de mantenimiento de mercenarios</Spanish>
-		<Russian>&#209;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Russian>
+		<Portuguese>&#209;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_CONTRACT_INCOME</Tag>
@@ -138,7 +138,7 @@
 		<German>S&#246;ldner-Vertragseinnahmen</German>
 		<Italian>Entrata contratto Mercenari</Italian>
 		<Spanish>Ingresos de contratos de mercenarios</Spanish>
-		<Russian>&#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#224;&#255; &#207;&#240;&#232;&#225;&#251;&#235;&#252; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Russian>
+		<Portuguese>&#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#224;&#255; &#207;&#240;&#232;&#225;&#251;&#235;&#252; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MERCENARY</Tag>
@@ -163,7 +163,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#205;&#224;&#229;&#236;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#205;&#224;&#229;&#236;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_DISABLED</Tag>
@@ -172,7 +172,7 @@
 		<German>Der Nationalismus ver&#228;nderte das Prinzip des strukturellen Aufbaus einer Armee so grundlegend, dass S&#246;ldner nicht mehr in das Konzept passen.</German>
 		<Italian>Il nazionalismo ha cambiato la concezione degli eserciti: non c'&#232; pi&#249; posto per i mercenari!</Italian>
 		<Spanish>El nacionalismo ha cambiado la concepci&#243;n de los ej&#233;rcitos: &#161;los mercenarios ya no encajan en ellos!</Spanish>
-		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Russian>
+		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCES</Tag>
@@ -181,7 +181,7 @@
 		<German>Verfügbar in den Provinzen:</German>
 		<Italian>Disponibili nelle seguenti Province:</Italian>
 		<Spanish>Available in the following Province(s):</Spanish>
-		<Russian>Available in the following Province(s):</Russian>
+		<Portuguese>Available in the following Province(s):</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
@@ -190,7 +190,7 @@
 		<German>Neue Söldner können angeworben werden in</German>
 		<Italian>Nuovi Mercenari sono disponibili per essere assoldati in</Italian>
 		<Spanish>New Mercenaries are available for hire in</Spanish>
-		<Russian>New Mercenaries are available for hire in</Russian>
+		<Portuguese>New Mercenaries are available for hire in</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_CULTURE</Tag>
@@ -199,7 +199,7 @@
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
@@ -208,7 +208,7 @@
 		<German>Vertragslose Söldner brechen auf um ihr Glück woanders zu suchen.</German>
 		<Italian>I Mercenari si sono stancati di aspettare il contratto e sono partiti per cercare fortuna altrove.</Italian>
 		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
-		<Russian>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Russian>
+		<Portuguese>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
@@ -217,7 +217,7 @@
 		<German>Ausbleibender Sold verärgert die Söldner und sie lassen euch sitzen.</German>
 		<Italian>Essendo arrabbiati per non essere stati pagari, i Mercenari hanno abbandonato la tua causa.</Italian>
 		<Spanish>Upset for not getting payed, Mercenaries have abandoned your cause.</Spanish>
-		<Russian>Upset for not getting payed, Mercenaries have abandoned your cause.</Russian>
+		<Portuguese>Upset for not getting payed, Mercenaries have abandoned your cause.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SERBIAN</Tag>
@@ -226,7 +226,7 @@
 		<German>Serbisch</German>
 		<Italian>Serbo</Italian>
 		<Spanish>Serbian</Spanish>
-		<Russian>Serbian</Russian>
+		<Portuguese>Serbian</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_KHAZAR</Tag>
@@ -235,7 +235,7 @@
 		<German>Chasarisch</German>
 		<Italian>Cazaro</Italian>
 		<Spanish>Khazar</Spanish>
-		<Russian>Khazar</Russian>
+		<Portuguese>Khazar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AVAR</Tag>
@@ -244,7 +244,7 @@
 		<German>Awarisch</German>
 		<Italian>Avaro</Italian>
 		<Spanish>Avar</Spanish>
-		<Russian>Avar</Russian>
+		<Portuguese>Avar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ITALIAN</Tag>
@@ -253,7 +253,7 @@
 		<German>Italienisch</German>
 		<Italian>Italiano</Italian>
 		<Spanish>Italian</Spanish>
-		<Russian>Italian</Russian>
+		<Portuguese>Italian</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SWISS</Tag>
@@ -262,7 +262,7 @@
 		<German>Schweizer</German>
 		<Italian>Svizzero</Italian>
 		<Spanish>Swiss</Spanish>
-		<Russian>Swiss</Russian>
+		<Portuguese>Swiss</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_VARANGIAN</Tag>
@@ -271,7 +271,7 @@
 		<German>Warägisch</German>
 		<Italian>Variago</Italian>
 		<Spanish>Varangian</Spanish>
-		<Russian>Varangian</Russian>
+		<Portuguese>Varangian</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_BALKAN</Tag>
@@ -280,7 +280,7 @@
 		<German>Balkanisch</German>
 		<Italian>Balcanico</Italian>
 		<Spanish>Balkan</Spanish>
-		<Russian>Balkan</Russian>
+		<Portuguese>Balkan</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_DANISH</Tag>
@@ -289,7 +289,7 @@
 		<German>Dänisch</German>
 		<Italian>Danese</Italian>
 		<Spanish>Danish</Spanish>
-		<Russian>Danish</Russian>
+		<Portuguese>Danish</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ARAGON</Tag>
@@ -298,7 +298,7 @@
 		<German>Aragonisch</German>
 		<Italian>Aragonese</Italian>
 		<Spanish>Aragonese</Spanish>
-		<Russian>Aragonese</Russian>
+		<Portuguese>Aragonese</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_MOROCCO</Tag>
@@ -307,7 +307,7 @@
 		<German>Marokkanisch</German>
 		<Italian>Marocchino</Italian>
 		<Spanish>Moroccan</Spanish>
-		<Russian>Moroccan</Russian>
+		<Portuguese>Moroccan</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_GERMAN</Tag>
@@ -316,7 +316,7 @@
 		<German>Deutsch</German>
 		<Italian>Tedesco</Italian>
 		<Spanish>German</Spanish>
-		<Russian>German</Russian>
+		<Portuguese>German</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_FINNISH</Tag>
@@ -325,7 +325,7 @@
 		<German>Finnisch</German>
 		<Italian>Finlandese</Italian>
 		<Spanish>Finnish</Spanish>
-		<Russian>Finnish</Russian>
+		<Portuguese>Finnish</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_DON</Tag>
@@ -334,7 +334,7 @@
 		<German>Kubanisch</German>
 		<Italian>Kubano</Italian>
 		<Spanish>Kuban</Spanish>
-		<Russian>Kuban</Russian>
+		<Portuguese>Kuban</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ZAPOROZHIAN</Tag>
@@ -343,7 +343,7 @@
 		<German>Saporosch</German>
 		<Italian>Zaporizziano</Italian>
 		<Spanish>Zaporozhian</Spanish>
-		<Russian>Zaporozhian</Russian>
+		<Portuguese>Zaporozhian</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_BALTIC</Tag>
@@ -352,7 +352,7 @@
 		<German>Baltisch</German>
 		<Italian>Baltico</Italian>
 		<Spanish>Baltic</Spanish>
-		<Russian>Baltic</Russian>
+		<Portuguese>Baltic</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_IRISH</Tag>
@@ -361,7 +361,7 @@
 		<German>Irisch</German>
 		<Italian>Irlandese</Italian>
 		<Spanish>Irish</Spanish>
-		<Russian>Irish</Russian>
+		<Portuguese>Irish</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_SCOTTISH</Tag>
@@ -370,7 +370,7 @@
 		<German>Schottisch</German>
 		<Italian>Scozzese</Italian>
 		<Spanish>Scottish</Spanish>
-		<Russian>Scottish</Russian>
+		<Portuguese>Scottish</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_WELSH</Tag>
@@ -379,7 +379,7 @@
 		<German>Welsh</German>
 		<Italian>Welsh</Italian>
 		<Spanish>Welsh</Spanish>
-		<Russian>Welsh</Russian>
+		<Portuguese>Welsh</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AFRICAN</Tag>
@@ -388,7 +388,7 @@
 		<German>Afrikanisch</German>
 		<Italian>Africano</Italian>
 		<Spanish>African</Spanish>
-		<Russian>African</Russian>
+		<Portuguese>African</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NUBIAN</Tag>
@@ -397,7 +397,7 @@
 		<German>Nubisch</German>
 		<Italian>Nubiano</Italian>
 		<Spanish>Nubian</Spanish>
-		<Russian>Nubian</Russian>
+		<Portuguese>Nubian</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_WALLOON</Tag>
@@ -406,7 +406,7 @@
 		<German>Wallonisch</German>
 		<Italian>Vallone</Italian>
 		<Spanish>Walloon</Spanish>
-		<Russian>Walloon</Russian>
+		<Portuguese>Walloon</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_ARABIAN</Tag>
@@ -415,7 +415,7 @@
 		<German>Arabische S&#246;ldner</German>
 		<Italian>Arabian Mercenario</Italian>
 		<Spanish>&#193;rabe Mercenario</Spanish>
-		<Russian>Arabian Mercenary</Russian>
+		<Portuguese>Arabian Mercenary</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_EGYPTIAN</Tag>
@@ -424,7 +424,7 @@
 		<German>&#196;gyptischen S&#246;ldner</German>
 		<Italian>Egiziano Mercenario</Italian>
 		<Spanish>Egipto Mercenario</Spanish>
-		<Russian>Egyptian Mercenary</Russian>
+		<Portuguese>Egyptian Mercenary</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_TAGMATA</Tag>
@@ -433,7 +433,7 @@
 		<German>Tagmata</German>
 		<Italian>Tagmata</Italian>
 		<Spanish>Tagmata</Spanish>
-		<Russian>Tagmata</Russian>
+		<Portuguese>Tagmata</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_CORSAIR</Tag>
@@ -442,7 +442,7 @@
 		<German>Barbarische Piraten</German>
 		<Italian>Pirata Berberi</Italian>
 		<Spanish>Barbary Pirate</Spanish>
-		<Russian>Barbary Pirate</Russian>
+		<Portuguese>Barbary Pirate</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_TEMPLAR</Tag>
@@ -451,7 +451,7 @@
 		<German>Tempelritter</German>
 		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Caballero Templario</Spanish>
-		<Russian>Templar Knight</Russian>
+		<Portuguese>Templar Knight</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_TEUTONIC</Tag>
@@ -460,7 +460,7 @@
 		<German>Deutschordensritter</German>
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
-		<Russian>Teutonic Knight</Russian>
+		<Portuguese>Teutonic Knight</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_GENERIC</Tag>
@@ -469,7 +469,7 @@
 		<German>Allgemein</German>
 		<Italian>Generico</Italian>
 		<Spanish>Generic</Spanish>
-		<Russian>Generic</Russian>
+		<Portuguese>Generic</Portuguese>
 	</TEXT>
 
 	<!-- Conditional Mercs -->
@@ -481,7 +481,7 @@
 		<German>[ICON_BULLET]Nur als [LINK=CONCEPT_MERCENARIES]Söldner[\LINK] verfügbar</German>
 		<Italian>[ICON_BULLET]Disponibile solo come [LINK=CONCEPT_MERCENARIES]Mercenario[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</Spanish>
-		<Russian>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</Russian>
+		<Portuguese>[ICON_BULLET]Only Available as a [LINK=CONCEPT_MERCENARIES]Mercenary[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAGMATA</Tag>
@@ -490,7 +490,7 @@
 		<German>Tagmata</German>
 		<Italian>Tagmata</Italian>
 		<Spanish>Tagmata</Spanish>
-		<Russian>&#210;&#224;&#227;&#236;&#224;&#242;&#224;</Russian>
+		<Portuguese>&#210;&#224;&#227;&#236;&#224;&#242;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAGMATA_PEDIA</Tag>
@@ -499,7 +499,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORSAIR</Tag>
@@ -508,7 +508,7 @@
 		<German>Korsar</German>
 		<Italian>Nave Corsara</Italian>
 		<Spanish>Corsario</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORSAIR_PEDIA</Tag>
@@ -517,7 +517,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIGHLANDER</Tag>
@@ -526,7 +526,7 @@
 		<German>Hochländer</German>
 		<Italian>Highlander</Italian>
 		<Spanish>Highlander</Spanish>
-		<Russian>&#195;&#238;&#240;&#229;&#246;</Russian>
+		<Portuguese>&#195;&#238;&#240;&#229;&#246;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_PEDIA</Tag>
@@ -535,7 +535,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN</Tag>
@@ -544,7 +544,7 @@
 		<German>Walisischer Langbogenschütze</German>
 		<Italian>Arciere con Arco Lungo Gallese</Italian>
 		<Spanish>Saetero Galés</Spanish>
-		<Russian>&#211;&#253;&#235;&#252;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#211;&#253;&#235;&#252;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN_PEDIA</Tag>
@@ -553,7 +553,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONDOTTIERI</Tag>
@@ -562,7 +562,7 @@
 		<German>Condottiere</German>
 		<Italian>Condottiero</Italian>
 		<Spanish>Condottiero</Spanish>
-		<Russian>Condottiero</Russian>
+		<Portuguese>Condottiero</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONDOTTIERI_PEDIA</Tag>
@@ -571,7 +571,7 @@
 		<German>[TAB]Condottiere (Singular, Plural: Condottieri) ist die Bezeichnung für einen Söldnerführer, wie ihn die italienischen Stadtstaaten vom späten Mittelalter bis in die Mitte des 15. Jahrhunderts beschäftigten. Der Begriff leitet sich vom italienischen condottiero (Singular) beziehungsweise condottieri (Plural) ab. Die Form condottiere entsprach der im Italienischen bzw. Toskanischen um 1500 gebräuchlichen Form. Die italienische Mehrzahl ist international geworden, die Einzahl wird im Deutschen wiederum in Analogie zu anderen italienischen Berufsbezeichnungen mit der Endung -iere geformt.[PARAGRAPH:1]Im 13. und 14. Jahrhundert waren italienische Stadtstaaten wie Venedig, Florenz und Genua durch ihren Orienthandel reich geworden. Diese Städte hatten aber nur schwache Streitkräfte und wurden so zum Angriffsziel fremder Mächte wie auch neidischer Nachbarn. Der regierende Adel suchte seine Länder durch das Anmieten von Söldnertruppen zu verteidigen, die einen condotta (Sold bzw. Soldvertrag) abschlossen und dann als compagnia di ventura bekannt waren. Jede compagnia wurde durch einen condottiero angeführt. Aufgrund ständiger interner Streitigkeiten zwischen den Adelsfamilien wurde auch die oberste Führung der Stadt oft für jeweils ein Jahr in die Hand auswärtiger Personen gegeben, die als Podestà bezeichnet wurden. Die Truppen der Condottieri waren für ihre Launen berüchtigt. Sie wechselten oft die Seiten für bessere Bezahlung, und dies nicht nur vor, sondern auch in der Schlacht. Die Condottieri rekrutierten sich auch von außerhalb Italiens. Während der Kampfpausen im Hundertjährigen Krieg verdingten sich viele Söldner in Italien. Schwäbische Niederadelige, welche ohne feste Lehensbindungen waren, zogen ebenfalls verstärkt über die Alpen. Die Condottieri spürten bald, dass sie ein Monopol auf die militärische Macht in Italien hatten, und begannen damit, ihren Arbeitgebern die Bedingungen zu diktieren. Viele Condottieri wie Braccio da Montone oder Muzio Attendolo Sforza wurden im 14. Jahrhundert mächtige Figuren auf der politischen Bühne. Währenddessen stellten sich die Condottieri nicht schnell genug auf moderne Methoden der Kriegsführung ein. Sie hielten an geharnischten Rittern und mittelalterlicher Bewaffnung und Taktik sogar noch fest, als in weiten Teilen Europas bereits moderne Armeen aus Pikenieren und Arkebusieren aufgestellt worden waren. Auch begannen sie damit, sich gegenseitig aus Prestigegründen in Schlachten zu verwickeln, die meist unblutig blieben.[PARAGRAPH:1]Als 1494 französische Truppen in Italien einmarschierten und der Kirchenstaat Spanien zur Hilfe rufen musste, wurden die verschwenderisch geschmückten, aber wenig effektiven Condottieri von jeder der nacheinander einmarschierenden ausländischen Armeen geschlagen. Gegen Schweizer Pikeniere, französische Kavalleristen und spanische Arkebusiere konnten sie keine Verteidigung mehr bieten. Bis 1500 verschwanden die Condottieri und ihre Truppen daher völlig.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWISS_PIKEMAN</Tag>
@@ -580,7 +580,7 @@
 		<German>Schweizer Pikenier</German>
 		<Italian>Picchiere Svizzero</Italian>
 		<Spanish>Swiss Pikeman</Spanish>
-		<Russian>Swiss Pikeman</Russian>
+		<Portuguese>Swiss Pikeman</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWISS_PIKEMAN_PEDIA</Tag>
@@ -589,7 +589,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD</Tag>
@@ -598,7 +598,7 @@
 		<German>Waräger Gardist</German>
 		<Italian>Guardia Variaga</Italian>
 		<Spanish>Varangian Guard</Spanish>
-		<Russian>Varangian Guard</Russian>
+		<Portuguese>Varangian Guard</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VARANGIAN_GUARD_PEDIA</Tag>
@@ -607,7 +607,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSCARL</Tag>
@@ -616,7 +616,7 @@
 		<German>Huskarl</German>
 		<Italian>Huscarlo</Italian>
 		<Spanish>Huskarl</Spanish>
-		<Russian>Huskarl</Russian>
+		<Portuguese>Huskarl</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSCARL_PEDIA</Tag>
@@ -625,7 +625,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALMOGAVAR</Tag>
@@ -634,7 +634,7 @@
 		<German>Almogàvers</German>
 		<Italian>Almogaveri</Italian>
 		<Spanish>Almogavar</Spanish>
-		<Russian>Almogavar</Russian>
+		<Portuguese>Almogavar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALMOGAVAR_PEDIA</Tag>
@@ -643,7 +643,7 @@
 		<German>[TAB]Almogàvers, von Arabisch Al-Mugavari für Kundschafter abgeleitet, war der Name einer Truppe von katalanischen Soldaten, die in der Reconquista bekannt wurden, und in Italien und der Levante im 13. und 14. Jahrhundert häufig als Söldner eingesetzt wurden.[PARAGRAPH:1]Die Almogàvars kamen ursprünglich aus den Pyrenäen und wurden in späterer Zeit vor allem in Aragon und Katalonien rekrutiert. Sie waren Grenzbewohner und Fußsoldaten ohne Rüstung, in Felle gekleidet, trugen Schuhe mit gestanzten Löchern (Abarcas), und trugen die gleichen Waffen wie die römischen Legionäre: zwei schwere Wurfspieße (Katalanisch Atzagaia, Spanisch Azagaya, das römische Pilum), ein Kurzschwert und einen Schild.[PARAGRAPH:1]Sie waren Söldner und dienten dem König, dem Adel, der Kirche oder den Städten. Als Peter III. von Aragon nach der Sizilianischen Vesper vom 30. März 1282 gegen Karl I. von Anjou um den Besitz von Neapel und Sizilien in den Krieg zog, bildeten die Almogàvars den wirksamsten Teil seiner Armee. Ihre Disziplin und Wildheit, die Kraft, mit der sie ihre Speere schleuderten machten sie zu einem beeindruckenden Gegner für die schwere Kavallerie der angevinischen Armeen.[PARAGRAPH:1]1302 endete der Krieg in Süditalien mit dem Frieden von Caltabellotta . Die Almogàvars folgten nun Roger de Flor, einem ausgestoßenen Templer, traten in die Katalanische Kompanie und den Dienst beim byzantinischen Kaiser Andronikos II. ein, um wie Condottieri gegen die Türken zu kämpfen.[PARAGRAPH:1]Ihr Feldzug in Kleinasien 1303 und 1304 war eine Serie von Siegen, aber ihre Habgier und ihre Gewalttätigkeit machte sie für die christliche Bevölkerung unannehmbar. Als Roger de Flor von seinem griechischen Auftraggeber ermordet wurde, wandten sie sich gegen den Kaiser, und plünderten von Gallipoli aus die Umgebung von Konstantinopel.[PARAGRAPH:1]1310 lud sie Walter V. von Brienne ins Herzogtum Athen ein. Walter wurde im März 1311 in der Schlacht am Kephissos (oder Orchomenos) in Böotien geschlagen und mit seinen Rittern getötet. Daraufhin ergriffen die Almogàvers die Herrschaft, verlosten die Frauen und den Besitz der Franzosen unter sich und ernannten einen Prinzen aus Rosselló zum Herzog.[PARAGRAPH:1]Die Gründung des katalanischen Herzogtums Athen war der Höhepunkt der Taten der Almogàvers. Im 16. Jahrhundert starb der Name aus, wurde aber für kurze Zeit im Bürgerkrieg zur Zeit König Ferdinands VII. von Spanien als Beiname einer der Kriegsparteien wieder aufgebracht.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_GUARD</Tag>
@@ -652,7 +652,7 @@
 		<German>Schwarzer Gardist</German>
 		<Italian>Guardia Nera</Italian>
 		<Spanish>Black Guard</Spanish>
-		<Russian>Black Guard</Russian>
+		<Portuguese>Black Guard</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_GUARD_PEDIA</Tag>
@@ -661,7 +661,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HACKAPELL</Tag>
@@ -670,7 +670,7 @@
 		<German>Hakkapeliitta</German>
 		<Italian>Hackapellito</Italian>
 		<Spanish>Hackapell</Spanish>
-		<Russian>Hackapell</Russian>
+		<Portuguese>Hackapell</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HACKAPELL_PEDIA</Tag>
@@ -679,7 +679,7 @@
 		<German>[TAB]Hakkapeliitta (von finn.: hakkaa päälle "hau' drauf!") war während des Dreißigjährigen Krieges ein volkstümlicher Name für die berittenen finnischen Söldner, die für Schweden in Deutschland kämpften. Ihr berühmtester Oberbefehlshaber war Torsten Stålhandske von 1630 bis 1644. Hakkapeliten gab es aber über den Dreißigjährigen Krieg hinaus; sie nahmen Teil an allen schwedischen Kriegen des 17. Jahrhunderts.[PARAGRAPH:1]Im Jahre 1891 wurde der traditionelle Marsch der Hakkapeliten als Marsch der Finnländischen Reiterei (im 30-jährigen Kriege) oder Schwedischer Reitermarsch von der preussischen Armee öffentlich angenommen. Seitdem ist er in Deutschland ein beliebter Reitermarsch geblieben.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REITER</Tag>
@@ -688,7 +688,7 @@
 		<German>Schwarzer Reiter</German>
 		<Italian>Incursore Nero</Italian>
 		<Spanish>Black Rider</Spanish>
-		<Russian>Black Rider</Russian>
+		<Portuguese>Black Rider</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REITER_PEDIA</Tag>
@@ -697,7 +697,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK</Tag>
@@ -706,7 +706,7 @@
 		<German>Saporoscher Kosake</German>
 		<Italian>Cosacco Zaporizziano</Italian>
 		<Spanish>Zaporozhian Cosaco</Spanish>
-		<Russian>Zaporozhian Cossack</Russian>
+		<Portuguese>Zaporozhian Cossack</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK_PEDIA</Tag>
@@ -715,7 +715,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DON_COSSACK</Tag>
@@ -724,7 +724,7 @@
 		<German>Don Kosake</German>
 		<Italian>Cosacco del Don</Italian>
 		<Spanish>Don Cossack</Spanish>
-		<Russian>Don Cossack</Russian>
+		<Portuguese>Don Cossack</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DON_COSSACK_PEDIA</Tag>
@@ -733,7 +733,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOPPELSOLDNER</Tag>
@@ -742,7 +742,7 @@
 		<German>Doppelsöldner</German>
 		<Italian>Doppelsoldner</Italian>
 		<Spanish>Doppelsoldner</Spanish>
-		<Russian>Doppelsoldner</Russian>
+		<Portuguese>Doppelsoldner</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOPPELSOLDNER_PEDIA</Tag>
@@ -751,7 +751,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IRISH_BRIGADE</Tag>
@@ -760,7 +760,7 @@
 		<German>Irische Brigade</German>
 		<Italian>Brigata Irlandese</Italian>
 		<Spanish>Irish Brigade</Spanish>
-		<Russian>Irish Brigade</Russian>
+		<Portuguese>Irish Brigade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IRISH_BRIGADE_PEDIA</Tag>
@@ -769,7 +769,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STRADIOT</Tag>
@@ -778,7 +778,7 @@
 		<German>Stratiot</German>
 		<Italian>Stradiotta</Italian>
 		<Spanish>Stradiot</Spanish>
-		<Russian>Stradiot</Russian>
+		<Portuguese>Stradiot</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STRADIOT_PEDIA</Tag>
@@ -787,7 +787,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAARDGELDER</Tag>
@@ -796,7 +796,7 @@
 		<German>Waardgelder</German>
 		<Italian>Waardgelder</Italian>
 		<Spanish>Waardgelder</Spanish>
-		<Russian>Waardgelder</Russian>
+		<Portuguese>Waardgelder</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAARDGELDER_PEDIA</Tag>
@@ -805,7 +805,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAFFATUN</Tag>
@@ -814,7 +814,7 @@
 		<German>Naffatun</German>
 		<Italian>Naffatun</Italian>
 		<Spanish>Naffatun</Spanish>
-		<Russian>Naffatun</Russian>
+		<Portuguese>Naffatun</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAFFATUN_PEDIA</Tag>
@@ -823,7 +823,7 @@
 		<German>[TAB]Ohne jegliche nennenswerte Nahkampfbewaffnung machen die arabischen Naffatun auf den ersten Blick keinen gefährlichen Eindruck. Doch wenn sie erst angreifen, dann wird es heiß, wirklich heiß. Ausgerüstet mit Keramiktöpfe, die randvoll mit der leicht entflammbaren Naphtha-Chemikalie gefüllt sind, sollte jeder Gegner in Acht nehmen. Denn geht der brennende Naptha-Krug erst einmal auf seinem Ziel zu Bruch, wird ein höllisches und so gut wie unlöschbares Flammeninferno entfacht, vor dem es kein Entrinnen gibt und vor dem selbst die stärkste Rüstung keinen ausreichenden Schutz bietet. </German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TURKOPOLES</Tag>
@@ -832,7 +832,7 @@
 		<German>Turkopolen</German>
 		<Italian>Turkopoli</Italian>
 		<Spanish>Turkopoles</Spanish>
-		<Russian>Turkopoles</Russian>
+		<Portuguese>Turkopoles</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TURKOPOLES_PEDIA</Tag>
@@ -841,7 +841,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLOON_GUARD</Tag>
@@ -850,7 +850,7 @@
 		<German>Wallonischer Gardist</German>
 		<Italian>Guardia Vallona</Italian>
 		<Spanish>Walloon Guard</Spanish>
-		<Russian>Walloon Guard</Russian>
+		<Portuguese>Walloon Guard</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLOON_GUARD_PEDIA</Tag>
@@ -859,7 +859,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWISS_GUN</Tag>
@@ -868,7 +868,7 @@
 		<German>Schweizer Linieninfantrie</German>
 		<Italian>Fanteria di Linea Svizzera</Italian>
 		<Spanish>Swiss Line Infantry</Spanish>
-		<Russian>Swiss Line Infantry</Russian>
+		<Portuguese>Swiss Line Infantry</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWISS_GUN_PEDIA</Tag>
@@ -877,7 +877,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIPKA_TATAR</Tag>
@@ -886,7 +886,7 @@
 		<German>Lipka-Tatar</German>
 		<Italian>Tartaro Bielorusso</Italian>
 		<Spanish>Lipka Tatar</Spanish>
-		<Russian>Lipka Tatar</Russian>
+		<Portuguese>Lipka Tatar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIPKA_TATAR_PEDIA</Tag>
@@ -895,7 +895,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_GUN</Tag>
@@ -904,7 +904,7 @@
 		<German>Hochländer Infantrie</German>
 		<Italian>Fanteria Highlander</Italian>
 		<Spanish>Highlander Infantry</Spanish>
-		<Russian>Highlander Infantry</Russian>
+		<Portuguese>Highlander Infantry</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_GUN_PEDIA</Tag>
@@ -913,7 +913,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOUAREG</Tag>
@@ -922,7 +922,7 @@
 		<German>Tuareg</German>
 		<Italian>Tuareg</Italian>
 		<Spanish>Tuareg</Spanish>
-		<Russian>Tuareg</Russian>
+		<Portuguese>Tuareg</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOUAREG_PEDIA</Tag>
@@ -931,7 +931,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZANJI</Tag>
@@ -940,7 +940,7 @@
 		<German>Zanji Speerkämpfer</German>
 		<Italian>Lanciere Zanji</Italian>
 		<Spanish>Zanji Spearman</Spanish>
-		<Russian>Zanji Spearman</Russian>
+		<Portuguese>Zanji Spearman</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZANJI_PEDIA</Tag>
@@ -949,7 +949,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN</Tag>
@@ -958,7 +958,7 @@
 		<German>Medjau</German>
 		<Italian>Medjay</Italian>
 		<Spanish>Medjay</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN_PEDIA</Tag>
@@ -967,6 +967,6 @@
 		<German>[TAB]Unter dem Namen Medjau (auch Medjai oder Medja) wurden im Alten Ägypten vom Ende des Alten bis zum Neuen Reich Menschen bezeichnet, die in der Nubischen Wüste, im Roten-Meer-Gebirge und westlich davon in Atbai lebten. Sie dienten den Ägyptern als Karawanenführer, Polizisten und Berufssoldaten. Die Medjau waren aber auch gefährliche Feinde. Historische Aufzeichnungen berichten von häufigen Auseinandersetzungen mit den Ägyptern.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 </Civ4GameText>

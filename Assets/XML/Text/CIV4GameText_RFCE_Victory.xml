@@ -28,7 +28,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#233;</Russian>
+		<Portuguese>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GOALS</Tag>
@@ -37,7 +37,7 @@
 		<German>Historische Siegbedingungen</German>
 		<Italian>Obiettivi per le vittorie storiche</Italian>
 		<Spanish>Objetivos de la victoria hist&#243;rica</Spanish>
-		<Russian>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#246;&#229;&#235;&#232; &#207;&#238;&#225;&#229;&#228;&#251;</Russian>
+		<Portuguese>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#246;&#229;&#235;&#232; &#207;&#238;&#225;&#229;&#228;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ICON_BULLET</Tag>
@@ -46,7 +46,7 @@
 		<German>[ICON_BULLET]</German>
 		<Italian>[ICON_BULLET]</Italian>
 		<Spanish>[ICON_BULLET]</Spanish>
-		<Russian>[ICON_BULLET]</Russian>
+		<Portuguese>[ICON_BULLET]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED</Tag>
@@ -55,7 +55,7 @@
 		<German>Erf&#252;llt:</German>
 		<Italian>Raggiunti:</Italian>
 		<Spanish>Cumplidos:</Spanish>
-		<Russian>&#199;&#224;&#226;&#229;&#240;&#248;&#229;&#237;&#238;:</Russian>
+		<Portuguese>&#199;&#224;&#226;&#229;&#240;&#248;&#229;&#237;&#238;:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_YES</Tag>
@@ -64,7 +64,7 @@
 		<German>JA</German>
 		<Italian>S&#204;</Italian>
 		<Spanish>S&#205;</Spanish>
-		<Russian>&#196;&#192;</Russian>
+		<Portuguese>&#196;&#192;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NO</Tag>
@@ -73,7 +73,7 @@
 		<German>NEIN</German>
 		<Italian>NO</Italian>
 		<Spanish>NO</Spanish>
-		<Russian>&#205;&#197;&#210;</Russian>
+		<Portuguese>&#205;&#197;&#210;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_NOTYET</Tag>
@@ -82,7 +82,7 @@
 		<German>Noch nicht</German>
 		<Italian>Non ancora</Italian>
 		<Spanish>A&#250;n no</Spanish>
-		<Russian>&#197;&#249;&#229; &#237;&#229;</Russian>
+		<Portuguese>&#197;&#249;&#229; &#237;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_INTERMEDIATE</Tag>
@@ -91,7 +91,7 @@
 		<German>Wir haben 2 von 3 Historischen Siegbedingungen erf&#252;llt. In unserer Hauptstadt wurde ein Triumphbogen erbaut.</German>
 		<Italian>Abbiamo raggiunto 2 obiettivi storici su 3. &#200; stato costruito un arco di trionfo nella nostra capitale</Italian>
 		<Spanish>Hemos conseguido 2 de los 3 objetivos hist&#243;ricos. Se ha erigido un Arco de Triunfo en nuestra capital</Spanish>
-		<Russian>&#204;&#251; &#228;&#238;&#241;&#242;&#232;&#227;&#235;&#232; 2 &#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#245; &#214;&#229;&#235;&#229;&#233; &#232;&#231; 3. &#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#235;&#224;&#241;&#252; &#232;&#231; &#237;&#224;&#248;&#229;&#227;&#238; &#234;&#224;&#239;&#232;&#242;&#224;&#235;&#224;</Russian>
+		<Portuguese>&#204;&#251; &#228;&#238;&#241;&#242;&#232;&#227;&#235;&#232; 2 &#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#245; &#214;&#229;&#235;&#229;&#233; &#232;&#231; 3. &#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#235;&#224;&#241;&#252; &#232;&#231; &#237;&#224;&#248;&#229;&#227;&#238; &#234;&#224;&#239;&#232;&#242;&#224;&#235;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
@@ -100,7 +100,7 @@
 		<German>Erreichte historische Siegbedingungen:</German>
 		<Italian>Obiettivi storici raggiunti:</Italian>
 		<Spanish>Objetivos hist&#243;ricos conseguidos:</Spanish>
-		<Russian>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#231;&#224;&#226;&#229;&#240;&#248;&#229;&#237;&#237;&#251;&#229; &#246;&#229;&#235;&#232;:</Russian>
+		<Portuguese>&#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#231;&#224;&#226;&#229;&#240;&#248;&#229;&#237;&#237;&#251;&#229; &#246;&#229;&#235;&#232;:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MIN_LATITUDE</Tag>
@@ -109,7 +109,7 @@
 		<German>[COLOR_WARNING_TEXT]Wird bei Erf&#252;llung von 2 von 3 Historischen Siegbedingungen automatisch erbaut[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Viene automaticamente costruito al raggiungimento di 2 obiettivi storici su 3[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Se construye autom&#225;ticamente tras la consecuci&#243;n de 2 de los 3 objetivos hist&#243;ricos[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Is &#224;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#232; &#239;&#238;&#241;&#242;&#240;&#238;&#229;&#237;&#238; &#237;&#224; &#228;&#238;&#241;&#242;&#232;&#230;&#229;&#237;&#232;&#232; 2 &#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#245; &#214;&#229;&#235;&#229;&#233; &#232;&#231; 3[COLOR_REVERT]</Russian>
+		<Portuguese>[COLOR_WARNING_TEXT]Is &#224;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#229;&#241;&#234;&#232; &#239;&#238;&#241;&#242;&#240;&#238;&#229;&#237;&#238; &#237;&#224; &#228;&#238;&#241;&#242;&#232;&#230;&#229;&#237;&#232;&#232; 2 &#200;&#241;&#242;&#238;&#240;&#232;&#247;&#229;&#241;&#234;&#232;&#245; &#214;&#229;&#235;&#229;&#233; &#232;&#231; 3[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ1</Tag>
@@ -118,7 +118,7 @@
 		<German>[COLOR_YELLOW]Das Zweite Rom:[COLOR_REVERT] Macht 1025 n.Chr. Konstantinopel zur kulturell bedeutendsten und größten Stadt.</German>
 		<Italian>[COLOR_YELLOW]La Seconda Roma:[COLOR_REVERT] Rendi Costantinopoli la città più grande e con più cultura nel 1025AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Make Constantinople the largest and most cultured city in 1025AD.</Spanish>
-		<Russian>&#209;&#228;&#229;&#235;&#224;&#233;&#242;&#229; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#252; &#237;&#224;&#232;&#225;&#238;&#235;&#252;&#248;&#232;&#236; &#232; &#241;&#224;&#236;&#251;&#233; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#237;&#251;&#233; &#227;&#238;&#240;&#238;&#228; &#226; 1025AD.</Russian>
+		<Portuguese>&#209;&#228;&#229;&#235;&#224;&#233;&#242;&#229; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#252; &#237;&#224;&#232;&#225;&#238;&#235;&#252;&#248;&#232;&#236; &#232; &#241;&#224;&#236;&#251;&#233; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#237;&#251;&#233; &#227;&#238;&#240;&#238;&#228; &#226; 1025AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ2</Tag>
@@ -127,7 +127,7 @@
 		<German>[COLOR_YELLOW]Wiederbelebung des Römischen Glanzes:[COLOR_REVERT] Behaltet oder erobert bis 1282 n.Chr. Konstantinopel, Colonea, Antiochia, Charsiadon, Kilikien, Armeniakon, Anatolikon, Paphlagonia, Thrakesion und Opsikion.</German>
 		<Italian>[COLOR_YELLOW]Rivivere la Gloria di Roma:[COLOR_REVERT] Mantieni o riconquista le province di Costantinopoli, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Paflagonia, Thrakesion e Opsikion nel 1282AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ3</Tag>
@@ -136,7 +136,7 @@
 		<German>[COLOR_YELLOW]Wegkreuzung der Welt:[COLOR_REVERT] Seid bis 1453 n.Chr. das wohlhabendste Reich.</German>
 		<Italian>[COLOR_YELLOW]Crocevia del Mondo:[COLOR_REVERT] Devi essere la civiltà più ricca nel 1453AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Crossroads of the World: Be the richest empire in the world in 1453AD.</Spanish>
-		<Russian>&#193;&#243;&#228;&#252;&#242;&#229; &#241;&#224;&#236;&#238;&#233; &#225;&#238;&#227;&#224;&#242;&#238;&#233; &#232;&#236;&#239;&#229;&#240;&#232;&#229;&#233; &#226; &#236;&#232;&#240;&#229; &#226; 1453AD.</Russian>
+		<Portuguese>&#193;&#243;&#228;&#252;&#242;&#229; &#241;&#224;&#236;&#238;&#233; &#225;&#238;&#227;&#224;&#242;&#238;&#233; &#232;&#236;&#239;&#229;&#240;&#232;&#229;&#233; &#226; &#236;&#232;&#240;&#229; &#226; 1453AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL1</Tag>
@@ -145,7 +145,7 @@
 		<German>[COLOR_YELLOW]Bulgarien an Drei Meeren:[COLOR_REVERT] Erobert bis 917 n.Chr. Moesia, Thrace, Makedonien, Serbien, Arberia, Thessaloniki und Konstantinopel.</German>
 		<Italian>[COLOR_YELLOW]Bulgaria sui Tre Mari:[COLOR_REVERT] Controlla contemporaneamente le province di Moesia, Tracia, Macedonia, Serbia, Arberia, Salonicco e Costantinopoli entro il 971AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Bulgaria on Three Seas:[COLOR_REVERT] Conquer Moesia, Thrace, Macedonia, Serbia, Arberia, Thessaloniki and Constantinople by 917AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Bulgaria on Three Seas:[COLOR_REVERT] Conquer Moesia, Thrace, Macedonia, Serbia, Arberia, Thessaloniki and Constantinople by 917AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Bulgaria on Three Seas:[COLOR_REVERT] Conquer Moesia, Thrace, Macedonia, Serbia, Arberia, Thessaloniki and Constantinople by 917AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL2</Tag>
@@ -154,7 +154,7 @@
 		<German>[COLOR_YELLOW]Der Beginn der Renaissance:[COLOR_REVERT] Sammelt bis 1259 n.Chr. mindestens 100 orthodoxe Glaubenspunkte.</German>
 		<Italian>[COLOR_YELLOW]L'Inizio del Rinascimento:[COLOR_REVERT] Accumula almeno 100 Punti Fede Ortodossi entro il 1259AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Spanish>
-		<Russian>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Russian>
+		<Portuguese>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
@@ -163,7 +163,7 @@
 		<German>[COLOR_YELLOW]Nicht Einmal Vögel Können es Durchqueren:[COLOR_REVERT] Verliert vor 1393 n.Chr. keine Stadt an die Barbaren (Mongolen), die Byzantiner oder Osmanen.</German>
 		<Italian>[COLOR_YELLOW]Neanche gli uccelli possono attraversare le nostre mura:[COLOR_REVERT] Non farti conquistare nessuna città da Mongoli (Barbari), Bizantini o Ottomani prima del 1393AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Spanish>
-		<Russian>&#205;&#229; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#224;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#234; &#226;&#224;&#240;&#226;&#224;&#240;&#224;&#236; (&#204;&#238;&#237;&#227;&#238;&#235;&#251;), &#226;&#232;&#231;&#224;&#237;&#242;&#232;&#233;&#246;&#224;&#236;, &#232;&#235;&#232; &#238;&#242;&#242;&#238;&#236;&#224;&#237; &#224;&#236; &#239;&#229;&#240;&#229;&#228; 1393AD.</Russian>
+		<Portuguese>&#205;&#229; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#224;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#234; &#226;&#224;&#240;&#226;&#224;&#240;&#224;&#236; (&#204;&#238;&#237;&#227;&#238;&#235;&#251;), &#226;&#232;&#231;&#224;&#237;&#242;&#232;&#233;&#246;&#224;&#236;, &#232;&#235;&#232; &#238;&#242;&#242;&#238;&#236;&#224;&#237; &#224;&#236; &#239;&#229;&#240;&#229;&#228; 1393AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA1</Tag>
@@ -172,7 +172,7 @@
 		<German>[COLOR_YELLOW]Imperium des Westens:[COLOR_REVERT] Erobert bis 840 n.Chr. Ile-De-France, Picardie, Aquitanien, Provence, Burgund, Orleans, Champagne, Lothringen, Katalonien, Lombardei, Toskana, Schwaben und Sachsen.</German>
 		<Italian>[COLOR_YELLOW]Impero Occidentale:[COLOR_REVERT] Controlla le province di Ile-De-France, Piccardia, Aquitania, Provenza, Borgogna, Orleans, Champagne, Lorena , Catalogna, Lombardia, Toscana, Svevia e Sassonia nel 840AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Empire of the West:[COLOR_REVERT] Conquer Ile-De-France, Picardy, Aquitania, Provence, Burgundy, Orleans, Champagne, Lorraine, Catalonia, Lombardy, Tuscany, Swabia and Saxony by 840AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA2</Tag>
@@ -181,7 +181,7 @@
 		<German>[COLOR_YELLOW]Imperium des Heiligen Landes:[COLOR_REVERT] Kontrolliert 1291 n.Chr. Jerusalem.</German>
 		<Italian>[COLOR_YELLOW]Impero della Terra Santa:[COLOR_REVERT] Controlla Gerusalemme nel 1291AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] Control Jerusalem in 1291AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] &#199;&#224;&#245;&#226;&#224;&#242;&#232;&#242;&#229; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#226; 1291 AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Empire of the Holy Land:[COLOR_REVERT] &#199;&#224;&#245;&#226;&#224;&#242;&#232;&#242;&#229; &#200;&#229;&#240;&#243;&#241;&#224;&#235;&#232;&#236; &#226; 1291 AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA3</Tag>
@@ -190,7 +190,7 @@
 		<German>[COLOR_YELLOW]Imperium der Welt:[COLOR_REVERT] Errichtet 6 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Impero del Mondo:[COLOR_REVERT] Costruisci 6 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
-		<Russian>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] &#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
+		<Portuguese>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] &#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
@@ -199,7 +199,7 @@
 		<German>[COLOR_YELLOW]Wiedervereinigung:[COLOR_REVERT] Erobert bis 1376 n.Chr. Burgund, Provence, Picardie, Flandern, Champagne und Lothringen.</German>
 		<Italian>[COLOR_YELLOW]Riunificazione:[COLOR_REVERT] Controlla le province di Borgogna, Provenza, Piccardia, Fiandre, Champagne e Lorena nel 1376AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR2</Tag>
@@ -208,7 +208,7 @@
 		<German>[COLOR_YELLOW]Die Burgunder Art zu Leben:[COLOR_REVERT] Erzeugt bis 1336 n.Chr. 10.000 Kulturpunkte. (Große Künstler zählen nicht)</German>
 		<Italian>[COLOR_YELLOW]Lo Stile di Vita Borgognone:[COLOR_REVERT] Devi aver prodotto almeno 10,000 punti cultura entro il 1336AD. (Senza usare grandi Artisti)</Italian>
 		<Spanish>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Spanish>
-		<Russian>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Russian>
+		<Portuguese>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
@@ -217,7 +217,7 @@
 		<German>[COLOR_YELLOW]Die Macht im Westen:[COLOR_REVERT] Erreicht 1473 n.Chr. eine höhere Punktzahl als Frankreich, England und Deutschland.</German>
 		<Italian>[COLOR_YELLOW]La Potenza dell'Occidente:[COLOR_REVERT] Devi avere il punteggio più alto di Francia, Inghilterra e Germania nel 1473AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA1</Tag>
@@ -226,7 +226,7 @@
 		<German>[COLOR_YELLOW]Das Schwert des Islam:[COLOR_REVERT] Erobert bis 955 n.Chr. Arabien, Syrien, Libanon, Jerusalem, Antiochia und Ägypten.</German>
 		<Italian>[COLOR_YELLOW]La Spada dell'Islam:[COLOR_REVERT] Conquista le province di Arabia, Siria, Libano, Gerusalemme, Antiochia ed Egitto entro il 955AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Conquer Arabia, Syria, Lebanon, Jerusalem, Antiochia and Egypt in 955AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Conquer Arabia, Syria, Lebanon, Jerusalem, Antiochia and Egypt in 955AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Conquer Arabia, Syria, Lebanon, Jerusalem, Antiochia and Egypt in 955AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA2</Tag>
@@ -235,7 +235,7 @@
 		<German>[COLOR_YELLOW]Das Haus des Islam:[COLOR_REVERT] Erobert bis 1291 n.Chr. Arabien, Syrien, Libanon, Jerusalem, Antiochia, Ägypten, Tripolitania, Algier, Ifriqiya, Kyrenaika und Oran.</German>
 		<Italian>[COLOR_YELLOW]La Sede dell'Islam:[COLOR_REVERT] Conquista le province di Arabia, Siria, Libano, Gerusalemme, Antiochia, Egitto, Tripolitania, Algeri, Ifriqiya, Cirenaica ed Orano entro il 1291AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Conquer Arabia, Syria, Lebanon, Jerusalem, Antiochia, Egypt, Tripolitania, Algiers, Ifriqiya, Cyrenaica and Oran in 1291AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Conquer Arabia, Syria, Lebanon, Jerusalem, Antiochia, Egypt, Tripolitania, Algiers, Ifriqiya, Cyrenaica and Oran in 1291AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Conquer Arabia, Syria, Lebanon, Jerusalem, Antiochia, Egypt, Tripolitania, Algiers, Ifriqiya, Cyrenaica and Oran in 1291AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA3</Tag>
@@ -244,7 +244,7 @@
 		<German>[COLOR_YELLOW]Die Welt des Islam:[COLOR_REVERT] Sorgt für eine 35%-ige Verbreitung des Islam.</German>
 		<Italian>[COLOR_YELLOW]La Spada dell'Islam:[COLOR_REVERT] Diffondi l'Islam nel 35% delle città europee.</Italian>
 		<Spanish>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] Islam to spread to 35% of all people.</Spanish>
-		<Russian>&#200;&#241;&#235;&#224;&#236;, &#247;&#242;&#238;&#225;&#251; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#232;&#235;&#241;&#255; &#237;&#224; 25% &#232;&#231; &#226;&#241;&#229;&#245; &#235;&#254;&#228;&#229;&#233;.</Russian>
+		<Portuguese>&#200;&#241;&#235;&#224;&#236;, &#247;&#242;&#238;&#225;&#251; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#232;&#235;&#241;&#255; &#237;&#224; 25% &#232;&#231; &#226;&#241;&#229;&#245; &#235;&#254;&#228;&#229;&#233;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR1</Tag>
@@ -253,7 +253,7 @@
 		<German>[COLOR_YELLOW]Juwel der Welt:[COLOR_REVERT] Macht Cordoba 961 n.Chr. zur größten Stadt.</German>
 		<Italian>[COLOR_YELLOW]Gioiello del Mondo:[COLOR_REVERT] Cordoba deve essere la città più grande del mondo nel 961AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Jewel of the World:[COLOR_REVERT] Make Cordoba the largest city in the world in 961AD.</Spanish>
-		<Russian>&#209;&#228;&#229;&#235;&#224;&#233;&#242;&#229; &#202;&#238;&#240;&#228;&#238;&#225;&#243; &#237;&#224;&#232;&#225;&#238;&#235;&#252;&#248;&#232;&#236; &#227;&#238;&#240;&#238;&#228;&#238;&#236; &#226; &#236;&#232;&#240;&#229; &#226; 961AD.</Russian>
+		<Portuguese>&#209;&#228;&#229;&#235;&#224;&#233;&#242;&#229; &#202;&#238;&#240;&#228;&#238;&#225;&#243; &#237;&#224;&#232;&#225;&#238;&#235;&#252;&#248;&#232;&#236; &#227;&#238;&#240;&#238;&#228;&#238;&#236; &#226; &#236;&#232;&#240;&#229; &#226; 961AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR2</Tag>
@@ -262,7 +262,7 @@
 		<German>[COLOR_YELLOW]Die Überragende Architektur der Mauren:[COLOR_REVERT] Errichtet bis 1309 n.Chr. die Wunder Alhambra, die Gärten von Al-Andalus und Mezquita-Catedral.</German>
 		<Italian>[COLOR_YELLOW]La Superiorità dell'Architettura Moresca:[COLOR_REVERT] Costruisci l'Alhambra, i Giardini di Al-Andalus e La Mezquita entro il 1309AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#243;, &#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;, &#232; &#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224; by 1300AD.</Russian>
+		<Portuguese>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#243;, &#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;, &#232; &#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224; by 1300AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR3</Tag>
@@ -271,7 +271,7 @@
 		<German>[COLOR_YELLOW]Ummah von Iberien:[COLOR_REVERT] Verbreitet bis 1492 n.Chr. den Islam in allen Städten in Andalusien, Galicien, Leon, Kastilien, Navarre, Lusitania, Katalonien, Aragon, La Mancha und Valencia.</German>
 		<Italian>[COLOR_YELLOW]Ummah d'Iberia:[COLOR_REVERT] L'Islam deve essere presente in ogni città nelle province di Andalusia, Galizia, Leòn, Castiglia, Navarra, Lusitania, Catalogna, Aragona, La Mancha e Valencia nel 1492AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Leon, Castile, Navarre, Lusitania, Catalonia, Aragon, La Mancha and Valencia in 1492AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Leon, Castile, Navarre, Lusitania, Catalonia, Aragon, La Mancha and Valencia in 1492AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in Andalusia, Galicia, Leon, Castile, Navarre, Lusitania, Catalonia, Aragon, La Mancha and Valencia in 1492AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN1</Tag>
@@ -280,7 +280,7 @@
 		<German>[COLOR_YELLOW]Die Reconquista:[COLOR_REVERT] Macht Katholizismus zur alleinigen Religion auf der Iberischen Halbinsel und verbreitet bis 1492 n.Chr. den katholischen Glauben in allen Städten in Andalusien, Galicien, Kastilien, Leon, Lusitania, Katalonien, Aragon, Navarre, La Mancha und Valencia.</German>
 		<Italian>[COLOR_YELLOW]La Reconquista:[COLOR_REVERT] Rendi il Cattolicesimo l'unica religione presente nella penisola Iberica, e diffondilo in tutte le città delle province di  Andalusia, Galizia, Castiglia, Leòn, Lusitania, Catalogna, Aragona, La Mancha e Valencia nel 1492AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon, Navarre, La Mancha and Valencia in 1492AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon, Navarre, La Mancha and Valencia in 1492AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in Andalusia, Galicia, Castile, Leon, Lusitania, Catalonia, Aragon, Navarre, La Mancha and Valencia in 1492AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN2</Tag>
@@ -289,7 +289,7 @@
 		<German>[COLOR_YELLOW]Die Spanische Armada:[COLOR_REVERT] Besitzt 1588 n.Chr. die meisten Kolonien.</German>
 		<Italian>[COLOR_YELLOW]L'Invincibile Armada:[COLOR_REVERT] Devi avere più colonie di tutti nel 1588AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN3</Tag>
@@ -298,7 +298,7 @@
 		<German>[COLOR_YELLOW]Verteidiger des katholischen Europas:[COLOR_REVERT] Stellt sicher dass 1648 n.Chr. die katholischen Nationen eine größere Bevölkerung und mehr Land besitzen als irgendeine andere Religion.</German>
 		<Italian>[COLOR_YELLOW]Difensore dell'Europa Cattolica:[COLOR_REVERT] Assicurati che le nazioni Cattoliche abbiano più popolazione e più territorio complessivi di ogni altra religione nel 1648AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Defender of Catholic Europe:[COLOR_REVERT] Ensure that the Catholic nations have more population and more land than any other religion in 1648AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Defender of Catholic Europe:[COLOR_REVERT] Ensure that the Catholic nations have more population and more land than any other religion in 1648AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Defender of Catholic Europe:[COLOR_REVERT] Ensure that the Catholic nations have more population and more land than any other religion in 1648AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
@@ -307,7 +307,7 @@
 		<German>[COLOR_YELLOW]Entdecker:[COLOR_REVERT] Errichtet bis 1009 n.Chr. Vinland (Projekt).</German>
 		<Italian>[COLOR_YELLOW]Esploratori:[COLOR_REVERT] Colonizza la Terranova entro il 1009AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Explorers:[COLOR_REVERT] Build Vinland by 1009AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
@@ -316,7 +316,7 @@
 		<German>[COLOR_YELLOW]Eroberer:[COLOR_REVERT] Erobert bis 1061 n.Chr. Schottland, Irland, Northumbria, Normandie, Island, Nowgorod und Sizilien.</German>
 		<Italian>[COLOR_YELLOW]Conquistatori:[COLOR_REVERT] Conquista le province di Scozia, Irlanda, Northumbria, Normandia, Islanda, Novgorod e Sicilia entro il 1061AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Northumbria, Normandy, Iceland, Novgorod and Sicily by 1061AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Northumbria, Normandy, Iceland, Novgorod and Sicily by 1061AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer Scotland, Ireland, Northumbria, Normandy, Iceland, Novgorod and Sicily by 1061AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
@@ -325,7 +325,7 @@
 		<German>[COLOR_YELLOW]Wikinger:[COLOR_REVERT] Erzielt bis 1066 n.Chr. 50 Wikingerpunkte. Punkte erhaltet ihr durch Stadteroberungen (+1pt pro Bevölkerung), Plündern von Verbesserungen (+1pt) und Versenken von Schiffen (+2pt).</German>
 		<Italian>[COLOR_YELLOW]Vichinghi:[COLOR_REVERT] Ottieni 50 punti Vichinghi entro il 1066AD. Guadagni punti conquistando città (+1pt per abitante), distruggendo miglioramenti (+1pt) e affondando navi (+2pt).</Italian>
 		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Spanish>
-		<Russian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Russian>
+		<Portuguese>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN1</Tag>
@@ -334,7 +334,7 @@
 		<German>[COLOR_YELLOW]Dominanz der Adria:[COLOR_REVERT] Erobert bis 1004 n.Chr. Verona, Dalmatien, Arberia und Epirus.</German>
 		<Italian>[COLOR_YELLOW]Dominio sull'Adriatico:[COLOR_REVERT] Conquista le provincie di Veneto, Dalmazia, Arberia ed Epiro entro il 1004AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Domination of the Adriatic Sea:[COLOR_REVERT] Conquer Verona, Dalmatia, Arberia and Epirus by 1004AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Domination of the Adriatic Sea:[COLOR_REVERT] Conquer Verona, Dalmatia, Arberia and Epirus by 1004AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Domination of the Adriatic Sea:[COLOR_REVERT] Conquer Verona, Dalmatia, Arberia and Epirus by 1004AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
@@ -343,7 +343,7 @@
 		<German>[COLOR_YELLOW]Dominanz des Mittelmeeres:[COLOR_REVERT] Erobert bis 1204 n.Chr. Konstantinopel.</German>
 		<Italian>[COLOR_YELLOW]Dominio sul Mediterraneo:[COLOR_REVERT] ConquistaCostantinopoli entro il 1240AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
@@ -352,7 +352,7 @@
 		<German>[COLOR_YELLOW]Dominanz der Weltmeere:[COLOR_REVERT] Errichtet als erste Zivilisation eine Kolonie.</German>
 		<Italian>[COLOR_YELLOW]Dominio sugli Oceani:[COLOR_REVERT] Devi essere il primo a costruire un Progetto Coloniale.</Italian>
 		<Spanish>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colonial Project.</Spanish>
-		<Russian>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colonial Project.</Russian>
+		<Portuguese>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colonial Project.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE1</Tag>
@@ -361,7 +361,7 @@
 		<German>[COLOR_YELLOW]Die Fruchtbare Schwarzerde:[COLOR_REVERT] Erzeugt bis 1300 n.Chr. 20000 Nahrung.</German>
 		<Italian>[COLOR_YELLOW]Il Fertile Suolo Nero:[COLOR_REVERT] Devi aver prodotto 20000 di cibo nel 1300AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
@@ -370,7 +370,7 @@
 		<German>[COLOR_YELLOW]Herrscher des nördlichen Schwarzen Meeres:[COLOR_REVERT] Erobert bis 1288 n.Chr. 10 Provinzen aus Kiev, Podolien, Pereyaslawl, Sloboda, Tschernigow, Wolhynien, Minsk, Polotsk, Smolensk, Murom, Rostov, Nowgorod und Vologda.</German>
 		<Italian>[COLOR_YELLOW]Dominatore del Mar Nero settentrionale:[COLOR_REVERT] Controlla 10 province tra le seguenti: Kiev, Podolia, Pereyaslavl, Sloboda, Chernihiv, Volinia, Minsk, Polack, Smolensk, Murom, Rostov, Novgorod e Vologda nel 1288AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer 10 provinces from Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Murom, Rostov, Novgorod and Vologda in 1288AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer 10 provinces from Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Murom, Rostov, Novgorod and Vologda in 1288AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer 10 provinces from Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Murom, Rostov, Novgorod and Vologda in 1288AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE3</Tag>
@@ -379,7 +379,7 @@
 		<German>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Baut bis 1250 n.Chr. 3 orthodoxe Kathedralen und 8 orthodoxe Klöster.</German>
 		<Italian>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Costruisci 2 Cattedrali Ortodosse e 8 Monasteri Ortodossi entro il 1250AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 2 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#241;&#238;&#225;&#238;&#240;&#224; &#232; 8 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#236;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#229;&#233; 1250AD.</Russian>
+		<Portuguese>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 2 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#241;&#238;&#225;&#238;&#240;&#224; &#232; 8 &#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#245; &#236;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#229;&#233; 1250AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT1</Tag>
@@ -388,7 +388,7 @@
 		<German>[COLOR_YELLOW]Heidentum:[COLOR_REVERT] Sammelt bis 1386 n.Chr. 2000 Kulturpunkte ohne eine Staatsreligion zu deklarieren.</German>
 		<Italian>[COLOR_YELLOW]Paganesimo:[COLOR_REVERT] Accumula 2000 punti Cultura senza dichiarare alcuna Religione Ufficiale entro il 1386AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT2</Tag>
@@ -397,7 +397,7 @@
 		<German>[COLOR_YELLOW]Litauer Staatenunion:[COLOR_REVERT] Besitzt 1569 n.Chr. mindestens 18 Städte.</German>
 		<Italian>[COLOR_YELLOW]Commonwealth Lituano:[COLOR_REVERT] Devi avere almeno 18 città nel 1569AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Lithuanian Commonwealth:[COLOR_REVERT] Have at least 18 cities in 1569AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Lithuanian Commonwealth:[COLOR_REVERT] Have at least 18 cities in 1569AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Lithuanian Commonwealth:[COLOR_REVERT] Have at least 18 cities in 1569AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT3</Tag>
@@ -406,7 +406,7 @@
 		<German>[COLOR_YELLOW]Die Osteuropäische Dominanz:[COLOR_REVERT] Erobert oder unterwerft Moskau.</German>
 		<Italian>[COLOR_YELLOW]Il Dominio dell'Europa Orientale:[COLOR_REVERT] Conquista o vassallizza Mosca.</Italian>
 		<Spanish>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Spanish>
-		<Russian>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
@@ -415,7 +415,7 @@
 		<German>[COLOR_YELLOW]Die Schwarze Armee:[COLOR_REVERT] Kontrolliert 1490 n.Chr. das größte Gebiet Europas.</German>
 		<Italian>[COLOR_YELLOW]Esercito Nero:[COLOR_REVERT] Devi essere la nazione più grande d'Europa nel 1490AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</Spanish>
-		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#225;&#238;&#235;&#252;&#248;&#229; &#226;&#241;&#229;&#227;&#238; &#242;&#229;&#240;&#240;&#232;&#242;&#238;&#240;&#232;&#229;&#233; &#226; &#197;&#226;&#240;&#238;&#239;&#229; &#226; 1500AD.</Russian>
+		<Portuguese>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#225;&#238;&#235;&#252;&#248;&#229; &#226;&#241;&#229;&#227;&#238; &#242;&#229;&#240;&#240;&#232;&#242;&#238;&#240;&#232;&#229;&#233; &#226; &#197;&#226;&#240;&#238;&#239;&#229; &#226; 1500AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN2</Tag>
@@ -424,7 +424,7 @@
 		<German>[COLOR_YELLOW]Edikt von Turda:[COLOR_REVERT] Führt als erste Zivilisation die Staatsform Religionsfreiheit ein.</German>
 		<Italian>[COLOR_YELLOW]Editto di Torda:[COLOR_REVERT] Devi essere il primo ad adottare la Libertà Religiosa</Italian>
 		<Spanish>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</Spanish>
-		<Russian>&#193;&#243;&#228;&#252;&#242;&#229; &#239;&#229;&#240;&#226;&#251;&#236;, &#247;&#242;&#238;&#225;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#243;&#254; &#208;&#229;&#235;&#232;&#227;&#232;&#254;.</Russian>
+		<Portuguese>&#193;&#243;&#228;&#252;&#242;&#229; &#239;&#229;&#240;&#226;&#251;&#236;, &#247;&#242;&#238;&#225;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#243;&#254; &#208;&#229;&#235;&#232;&#227;&#232;&#254;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN3</Tag>
@@ -433,7 +433,7 @@
 		<German>[COLOR_YELLOW]Verteidiger Europas:[COLOR_REVERT] Gestattet 1444 n.Chr. keine osmanischen Städte in Walachei, Moesia, Thrace, Makedonien, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbien, Bosnien, Dalmatien und Kroatien.</German>
 		<Italian>[COLOR_YELLOW]Difensore dell'Europa:[COLOR_REVERT] Non devono esserci città Ottomane nelle province di  Vallachia, Moesia, Tracia, Macedonia, Salonnicco, Tessaglia, Morea, Epiro, Arberia, Serbia, Bosnia, Dalmazia e Croazia nel 1444AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
@@ -442,7 +442,7 @@
 		<German>[COLOR_YELLOW]Das Heilige Römische Reich:[COLOR_REVERT] Kontrolliert 1167 n.Chr. Lothringen, Schwaben, Sachsen, Bayern, Franken, Brandenburg, Lombardei und Toskana.</German>
 		<Italian>[COLOR_YELLOW]Il Sacro Romano Impero:[COLOR_REVERT] Controlla le province di Lorena, Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Lombardia e Toscana nel 1167AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</Spanish>
-		<Russian>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#236; &#225;&#224;&#237;&#234;&#238;&#236; &#208;&#229;&#233;&#237;&#224; &#226; 1167AD.</Russian>
+		<Portuguese>&#211;&#239;&#240;&#224;&#226;&#235;&#255;&#233;&#242;&#229; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#236; &#225;&#224;&#237;&#234;&#238;&#236; &#208;&#229;&#233;&#237;&#224; &#226; 1167AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER2</Tag>
@@ -451,7 +451,7 @@
 		<German>[COLOR_YELLOW]Die Reformation:[COLOR_REVERT] Begründet den Protestantismus.</German>
 		<Italian>[COLOR_YELLOW]La Riforma:[COLOR_REVERT] Fonda il Protestantesimo.</Italian>
 		<Spanish>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</Spanish>
-		<Russian>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Reformation:[COLOR_REVERT] Found Protestantism.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
@@ -460,7 +460,7 @@
 		<German>[COLOR_YELLOW]Der Dreißigjährige Krieg:[COLOR_REVERT] Erobert bis 1648 n.Chr. Schwaben, Sachsen, Bayern, Franken, Brandenburg, Flandern, Pommern, Schlesien, Böhmen, Mähren und Österreich.</German>
 		<Italian>La Guerra dei Trent'Anni:[COLOR_REVERT] Conquista le province di Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Fiandre, Pomerania, Silesia, Boemia, Moravia ed Austria entro il 1648AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
@@ -469,7 +469,7 @@
 		<German>[COLOR_YELLOW]Die Realunion:[COLOR_REVERT] Kontrolliert 1600 n.Chr. 12 Städte in Böhmen, Mähren, Oberungarn, Litauen, Livland, Polotsk, Minsk, Wolhynien, Podolia, Moldawien und Kiev.</German>
 		<Italian>[COLOR_YELLOW]Il Commonwealth:[COLOR_REVERT] Controlla 12 città nelle province di Boemia, Moravia, Alta Ungheria, Lituania, Livonia, Polack, Minsk, Volinia, Podolia, Moldavia e Kiev nel 1600AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL2</Tag>
@@ -478,7 +478,7 @@
 		<German>[COLOR_YELLOW]Die Kornkammer Europas:[COLOR_REVERT] Produziert zwischen 1500 und 1520 n.Chr. mindestens ein Jahr lang die meiste Nahrung.</German>
 		<Italian>[COLOR_YELLOW]Il Granaio d'Europa:[COLOR_REVERT] Devi produrre la maggior quantità di cibo in almeno un turno tra il 1500 e 1520 AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>
@@ -487,7 +487,7 @@
 		<German>[COLOR_YELLOW]Die Goldene Freiheit:[COLOR_REVERT] Errichtet 3 katholische und orthodoxe Kathedralen, 2 protestantische Kathedralen und 2 jüdische Viertel.</German>
 		<Italian>[COLOR_YELLOW]La Libertà Dorata:[COLOR_REVERT] Costruisci 3 Cattedrali Cattoliche ed Ortodosse, 2 Cattedrali Protestanti, inoltre devi avere almeno 2 Quartieri Ebrei nelle tue città.</Italian>
 		<Spanish>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</Spanish>
-		<Russian>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Golden Liberty:[COLOR_REVERT] Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>
@@ -496,7 +496,7 @@
 		<German>[COLOR_YELLOW]Das Vaterland:[COLOR_REVERT] Sorgt dafür dass 1482 n.Chr. keine mongolischen (barbarischen) Städte in Moskau, Donets, Kuban, Saporischschaja, Sloboda, Kiev, Moldawien, Krim, Pereyaslawl, Tschernigow, Simbirsk, Nischni Nowgorod, Vologda, Rostov, Nowgorod, Karelien, Smolensk, Polotsk, Minsk, Wolhynien, Podolia und Murom sind.</German>
 		<Italian>[COLOR_YELLOW]La Patria:[COLOR_REVERT] Assicurati che non ci siano città Mongole (Barbare) nelle province di Mosca, Donec, Kuban, Zaporizzia, Sloboda, Kiev, Moldavia, Crimea, Pereyaslavl, Chernihiv, Simbirsk, Niznij Novgorod, Vologda, Rostov, Novgorod, Carelia, Smolensk, Polack, Minsk, Volinia, Podolia e Murom nel 1482AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, Minsk, Volhynia, Podolia and Murom in 1482AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, Minsk, Volhynia, Podolia and Murom in 1482AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Moscow, Donets, Kuban, Zaporizhia, Sloboda, Kiev, Moldova, Crimea, Pereyaslavl, Chernigov, Simbirsk, NizhnyNovgorod, Vologda, Rostov, Novgorod, Karelia, Smolensk, Polotsk, Minsk, Volhynia, Podolia and Murom in 1482AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS2</Tag>
@@ -505,7 +505,7 @@
 		<German>[COLOR_YELLOW]Das Endlose Land:[COLOR_REVERT] Nehmt 20% der Landfläche ein.</German>
 		<Italian>[COLOR_YELLOW]Le Terre Infinite:[COLOR_REVERT] Controlla il 20% del territorio.</Italian>
 		<Spanish>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</Spanish>
-		<Russian>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Endless Land:[COLOR_REVERT] Get 20% of the land.</Portuguese>
 	</TEXT>
  	<TEXT>
  		<Tag>TXT_KEY_UHV_MOS3</Tag>
@@ -514,7 +514,7 @@
  		<German>[COLOR_YELLOW]Die Warmen Meere:[COLOR_REVERT] Erobert Konstantinopel oder kontrolliert eine Atlantik-Zugangs-Ressource.</German>
  		<Italian>[COLOR_YELLOW]I Mari Caldi:[COLOR_REVERT] Conquista Costantinopoli o procurati una risorsa Accesso all'Atlantico.</Italian>
  		<Spanish>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</Spanish>
- 		<Russian>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</Russian>
+ 		<Portuguese>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</Portuguese>
  	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN1</Tag>
@@ -523,7 +523,7 @@
 		<German>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Kontrolliert 1540 n.Chr. Sardinien, Mailand, Kreta und Zypern.</German>
 		<Italian>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Controlla le province di Corsica, Sardegna, Creta, Rodi e Crimea nel 1566AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
@@ -532,7 +532,7 @@
 		<German>[COLOR_YELLOW]Die Bank von Europa:[COLOR_REVERT] Gründet 2 Gesellschaften und baut 8 Banken.</German>
 		<Italian>[COLOR_YELLOW]La Banca d'Europa:[COLOR_REVERT] Fonda 2 Corporazioni e costruisci 8 Banche.</Italian>
 		<Spanish>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</Spanish>
-		<Russian>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</Russian>
+		<Portuguese>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN3</Tag>
@@ -541,7 +541,7 @@
 		<German>[COLOR_YELLOW]Handeln geht über alles:[COLOR_REVERT] Erzielt bis 1640 n.Chr. den größten Anteil an Exporten und Importen.</German>
 		<Italian>[COLOR_YELLOW]Il Commercio prima di tutto:[COLOR_REVERT] Devi avere il più grande numero totale di Importazioni ed Esportazioni nel 1640AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of Exports and Imports in 1640AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of Exports and Imports in 1640AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of Exports and Imports in 1640AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG1</Tag>
@@ -550,7 +550,7 @@
 		<German>[COLOR_YELLOW]Die Krone:[COLOR_REVERT] Erobert bis 1452 n.Chr. London, Wessex, Ostanglien, Mercia, Northumbria, Schottland, Wales, Irland, Normandie, Picardie, Bretagne, Il-de-France, Aquitanien und Orleans.</German>
 		<Italian>[COLOR_YELLOW]La Corona:[COLOR_REVERT] Conquista le province di Londra, Wessex, Anglia Orientale, Mercia, Northumbria, Scozia, Galles, Irlanda, Normandia, Piccardia, Bretagna, Ile-de-France, Aquitania ed Orleans entro il 1452AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Spanish>
-		<Russian>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>
@@ -559,7 +559,7 @@
 		<German>[COLOR_YELLOW]Juwel der Krone:[COLOR_REVERT] Errichtet 8 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Gioiello della Corona:[COLOR_REVERT] Costruisci 8 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 8 Colonial Projects.</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 5 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#238;&#226;.</Russian>
+		<Portuguese>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 5 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#238;&#226;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
@@ -568,7 +568,7 @@
 		<German>[COLOR_YELLOW]Erfinder der Krone:[COLOR_REVERT] Erreicht als erste Zivilisation das Industriezeitalter.</German>
 		<Italian>[COLOR_YELLOW]Inventori della Corona:[COLOR_REVERT] Devi essere il primo ad entrare nell'era Industriale.</Italian>
 		<Spanish>[COLOR_YELLOW]Inventors of the Crown:[COLOR_REVERT] Be the first to enter the Industrial age.</Spanish>
-		<Russian>&#193;&#243;&#228;&#252;&#242;&#229; &#239;&#229;&#240;&#226;&#251;&#236;, &#226;&#238;&#248;&#229;&#228;&#248;&#232;&#236; &#226; &#200;&#237;&#228;&#243;&#241;&#242;&#240;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#226;&#229;&#234;.</Russian>
+		<Portuguese>&#193;&#243;&#228;&#252;&#242;&#229; &#239;&#229;&#240;&#226;&#251;&#236;, &#226;&#238;&#248;&#229;&#228;&#248;&#232;&#236; &#226; &#200;&#237;&#228;&#243;&#241;&#242;&#240;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#226;&#229;&#234;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR1</Tag>
@@ -577,7 +577,7 @@
 		<German>[COLOR_YELLOW]Die Navigatoren:[COLOR_REVERT] Errichtet 3 Städte auf den Azoren, Kanaren und Madeira und 2 in Marokko, Tetouan und Oran.</German>
 		<Italian>[COLOR_YELLOW]I Navigatori:[COLOR_REVERT] Fonda 3 città nelle provincie di Azzorre, Canarie e Madeira e 2 nelle province di Marocco, Tetouan ed Orano.</Italian>
 		<Spanish>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores, Canaries and Madeira and 2 in Morocco, Tetouan and Oran.</Spanish>
-		<Russian>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores, Canaries and Madeira and 2 in Morocco, Tetouan and Oran.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Navigators:[COLOR_REVERT] Settle 3 cities on the Azores, Canaries and Madeira and 2 in Morocco, Tetouan and Oran.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR2</Tag>
@@ -586,7 +586,7 @@
 		<German>[COLOR_YELLOW]Verteidigung führt zu Ruhm:[COLOR_REVERT] Verliert bis 1640 n.Chr. keine einzige Stadt.</German>
 		<Italian>[COLOR_YELLOW]La Difesa porta alla gloria:[COLOR_REVERT] Non perdere nessuna città prima del 1640AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Defense leads to glory:[COLOR_REVERT] Do not lose a city before 1640AD.</Spanish>
-		<Russian>&#205;&#229; &#242;&#229;&#240;&#255;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#239;&#229;&#240;&#229;&#228; 1640AD.</Russian>
+		<Portuguese>&#205;&#229; &#242;&#229;&#240;&#255;&#233;&#242;&#229; &#227;&#238;&#240;&#238;&#228; &#239;&#229;&#240;&#229;&#228; 1640AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR3</Tag>
@@ -595,7 +595,7 @@
 		<German>[COLOR_YELLOW]Faktoreien auf der ganzen Welt:[COLOR_REVERT] Erstellt 6 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Feitorie in tutto il mondo:[COLOR_REVERT] Costruisci 6 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 6 Colonial Projects.</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
+		<Portuguese>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
@@ -604,7 +604,7 @@
 		<German>[COLOR_YELLOW]Habsburger Kaiserreich:[COLOR_REVERT] Erobert bis 1617 n.Chr. Ungarn, Oberungarn, Österreich, Bayern, Kärnten, Siebenbürgen, Pannonien, Mähren, Schlesien und Böhmen.</German>
 		<Italian>[COLOR_YELLOW]Impero Asburgico:[COLOR_REVERT] Conquista le provincie di Ungheria, Alta Ungheria, Austria, Baviera, Carinzia, Transilvania, Pannonia, Moravia, Silezia e Boemia entro il 1617AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silezia and Bohemia in 1617AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silezia and Bohemia in 1617AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silezia and Bohemia in 1617AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS2</Tag>
@@ -613,7 +613,7 @@
 		<German>[COLOR_YELLOW]Habsburger Allianzen:[COLOR_REVERT] Unterwerft bis 1700 n.Chr. mindestens 3 Vasallen.</German>
 		<Italian>[COLOR_YELLOW]Alleanze Asburgiche:[COLOR_REVERT] Devi avere almeno 3 Stati Vassalli nel 1700AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Habsburg Alliances:[COLOR_REVERT] Have 3 vassals in 1700AD.</Spanish>
-		<Russian>&#200;&#236;&#229;&#233;&#242;&#229; 3 &#226;&#224;&#241;&#241;&#224;&#235;&#224; &#226; 1700AD.</Russian>
+		<Portuguese>&#200;&#236;&#229;&#233;&#242;&#229; 3 &#226;&#224;&#241;&#241;&#224;&#235;&#224; &#226; 1700AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS3</Tag>
@@ -622,7 +622,7 @@
 		<German>[COLOR_YELLOW]Habsburger Dominanz:[COLOR_REVERT] Erreicht bis 1780 n.Chr. die höchste Punktzahl.</German>
 		<Italian>[COLOR_YELLOW]Dominio Asburgico:[COLOR_REVERT] Devi avere il punteggio più alto nel 1780AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Habsburg Domination:[COLOR_REVERT] Have the highest score in 1780AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Habsburg Domination:[COLOR_REVERT] Have the highest score in 1780AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Habsburg Domination:[COLOR_REVERT] Have the highest score in 1780AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR1</Tag>
@@ -631,7 +631,7 @@
 		<German>[COLOR_YELLOW]Osmans Reich:[COLOR_REVERT] Erobert bis 1453 n.Chr. Konstantinopel, Thrace, Makedonien, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnien und Serbien.</German>
 		<Italian>[COLOR_YELLOW]L'Impero di Osman:[COLOR_REVERT] Conquista le provincie di Costantinopoli, Tracia, Macedonia, Salonicco, Moesia, Arberia,, Epiro, Tessaglia, Morea, Bosnia e Serbia entro il 1453AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR2</Tag>
@@ -640,7 +640,7 @@
 		<German>[COLOR_YELLOW]Osmans Traum:[COLOR_REVERT] Erobert bis 1517 n.Chr. Colonea, Charsiadon, Kilikien, Armeniakon, Anatolikon, Paphlagonien, Thrakesion, Opsikion, Antiochia, Syrien, Libanon, Jerusalem und Ägypten.</German>
 		<Italian>[COLOR_YELLOW]Il Sogno di Osman:[COLOR_REVERT] Conquista le province di Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paflagonia, Thrakesion, Opsikion, Antiochia, Siria, Libano, Gerusalemme ed Egitto entro il 1517AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR3</Tag>
@@ -649,7 +649,7 @@
 		<German>[COLOR_YELLOW]Sieg über Europa:[COLOR_REVERT] Erobert bis 1683 n.Chr. Österreich.</German>
 		<Italian>[COLOR_YELLOW]Vittoria sull'Europa:[COLOR_REVERT] Conquista l'Austria entro il 1683AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Victory over Europe:[COLOR_REVERT] Conquer Austria by 1683AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE1</Tag>
@@ -658,7 +658,7 @@
 		<German>[COLOR_YELLOW]Vereinigtes Schweden:[COLOR_REVERT] Erobert bis 1600 n.Chr. Gotaland, Svealand, Norrland, Skaneland, Gotland und Osterland.</German>
 		<Italian>[COLOR_YELLOW]Svezia Unita:[COLOR_REVERT] Conquista le province di Gotaland, Svealand, Norrland, Skaneland, Gotland e Osterland entro il 1600AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>
@@ -667,7 +667,7 @@
 		<German>[COLOR_YELLOW]Karoliner:[COLOR_REVERT] Verliert vor 1700 n.Chr. keine Stadt an Polen, Litauen oder Russland.</German>
 		<Italian>[COLOR_YELLOW]Karolins:[COLOR_REVERT] Non farti conquistare nessuna città da Russia, Polonia o Lituania prima del 1700AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Karolins:[COLOR_REVERT] Don't lose any cities to Poland, Lithuania or Russia before 1700AD.</Spanish>
-		<Russian>&#205;&#229; &#238;&#242;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#237;&#232;&#234;&#224;&#234;&#232;&#245; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#207;&#238;&#235;&#252;&#248;&#229; &#232;&#235;&#232; &#208;&#238;&#241;&#241;&#232;&#232; &#239;&#229;&#240;&#229;&#228; 1700AD.</Russian>
+		<Portuguese>&#205;&#229; &#238;&#242;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#237;&#232;&#234;&#224;&#234;&#232;&#245; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#207;&#238;&#235;&#252;&#248;&#229; &#232;&#235;&#232; &#208;&#238;&#241;&#241;&#232;&#232; &#239;&#229;&#240;&#229;&#228; 1700AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE3</Tag>
@@ -676,7 +676,7 @@
 		<German>[COLOR_YELLOW]Löwe des Nordens:[COLOR_REVERT] Besitzt 1750 n.Chr. 15 Städte in Sachsen, Brandenburg, Pommern, Großpolen, Masowien, Suvalkija, Litauen, Livland, Estland, Smolensk, Polotsk, Minsk, Murom, Tschernigow, Moskau, Nowgorod und Rostov.</German>
 		<Italian>[COLOR_YELLOW]Leone del Nord:[COLOR_REVERT] Devi avere almeno 15 città nelle seguenti province: Sassonia, Brandeburgo, Pomerania, Grande Polonia, Masovia, Sudovia, Lituania, Estonia, Smolensk, Polack, Minsk, Murom, Chernigov, Mosca e Rostov nel 1750AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Spanish>
-		<Russian>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Russian>
+		<Portuguese>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT1</Tag>
@@ -685,7 +685,7 @@
 		<German>[COLOR_YELLOW]Das Finanzzentrum:[COLOR_REVERT] Siedelt bis 1750 n.Chr. 5 Große Händler in Amsterdam an.</German>
 		<Italian>[COLOR_YELLOW]Il Centro Finanziario:[COLOR_REVERT] Insedia 5 Grandi Mercanti ad Amsterdam entro il 1750AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Financial Center:[COLOR_REVERT] Settle 5 Great Merchants in Amsterdam by 1750AD.</Spanish>
-		<Russian>&#207;&#238;&#241;&#229;&#235;&#232;&#242;&#229; 5 &#193;&#238;&#235;&#252;&#248;&#232;&#245; &#210;&#238;&#240;&#227;&#238;&#226;&#246;&#229;&#226; &#226; &#192;&#236;&#241;&#242;&#229;&#240;&#228;&#224;&#236;&#229; 1750AD.</Russian>
+		<Portuguese>&#207;&#238;&#241;&#229;&#235;&#232;&#242;&#229; 5 &#193;&#238;&#235;&#252;&#248;&#232;&#245; &#210;&#238;&#240;&#227;&#238;&#226;&#246;&#229;&#226; &#226; &#192;&#236;&#241;&#242;&#229;&#240;&#228;&#224;&#236;&#229; 1750AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT2</Tag>
@@ -694,7 +694,7 @@
 		<German>[COLOR_YELLOW]Die Indien Kompanien:[COLOR_REVERT] Errichtet 5 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Le Compagnie delle Indie:[COLOR_REVERT] Costruisci 5 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 5 Colonial Projects.</Spanish>
-		<Russian>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Russian>
+		<Portuguese>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; 3 &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#245; &#207;&#240;&#238;&#229;&#234;&#242;&#224;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT3</Tag>
@@ -703,7 +703,7 @@
 		<German>[COLOR_YELLOW]Die Finanzielle Dominanz:[COLOR_REVERT] Werdet das reichste Land in Europa.</German>
 		<Italian>[COLOR_YELLOW]Il Dominio Finanziario:[COLOR_REVERT] Diventa la nazione più ricca d'Europa.</Italian>
 		<Spanish>[COLOR_YELLOW]The Financial Domination:[COLOR_REVERT] Become the richest country in Europe.</Spanish>
-		<Russian>[COLOR_YELLOW]The Financial Domination:[COLOR_REVERT] Become the richest country in Europe.</Russian>
+		<Portuguese>[COLOR_YELLOW]The Financial Domination:[COLOR_REVERT] Become the richest country in Europe.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP1</Tag>
@@ -712,7 +712,7 @@
 		<German>[COLOR_YELLOW]Zerschmettert die Ungläubigen[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]Distruggi gli infedeli[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</Russian>
+		<Portuguese>[COLOR_YELLOW]Smite the infidels[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP2</Tag>
@@ -721,7 +721,7 @@
 		<German>[COLOR_YELLOW]Stellt sicher dass Jerusalem katholisch ist[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]Assicurati che Gerusalemme sia Cattolica[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</Russian>
+		<Portuguese>[COLOR_YELLOW]Ensure Jerusalem is Catholic[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POPE</Tag>
@@ -730,7 +730,7 @@
 		<German>[COLOR_YELLOW]Prophet der Welt[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]Profeta del Mondo[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</Russian>
+		<Portuguese>[COLOR_YELLOW]Prophet of the World[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CULTURE</Tag>
@@ -739,7 +739,7 @@
 		<German>Kultur</German>
 		<Italian>Cultura</Italian>
 		<Spanish>Culture</Spanish>
-		<Russian>Culture</Russian>
+		<Portuguese>Culture</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ISLAM</Tag>
@@ -748,7 +748,7 @@
 		<German>Islamisch</German>
 		<Italian>Islamico</Italian>
 		<Spanish>Islamic</Spanish>
-		<Russian>Islamic</Russian>
+		<Portuguese>Islamic</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VIKING</Tag>
@@ -757,7 +757,7 @@
 		<German>Wikinger</German>
 		<Italian>Vichingo</Italian>
 		<Spanish>Viking</Spanish>
-		<Russian>Viking</Russian>
+		<Portuguese>Viking</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FOOD</Tag>
@@ -766,7 +766,7 @@
 		<German>Nahrung</German>
 		<Italian>Cibo</Italian>
 		<Spanish>Food</Spanish>
-		<Russian>Food</Russian>
+		<Portuguese>Food</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COLONIES</Tag>
@@ -775,7 +775,7 @@
 		<German>Kolonien</German>
 		<Italian>Colonie</Italian>
 		<Spanish>Colonies</Spanish>
-		<Russian>Colonies</Russian>
+		<Portuguese>Colonies</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CONQUERED</Tag>
@@ -784,7 +784,7 @@
 		<German>Erobert</German>
 		<Italian>Conquistati</Italian>
 		<Spanish>Conquered</Spanish>
-		<Russian>Conquered</Russian>
+		<Portuguese>Conquered</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOT_YET</Tag>
@@ -793,7 +793,7 @@
 		<German>Noch Nicht</German>
 		<Italian>Non Ancora</Italian>
 		<Spanish>Not Yet</Spanish>
-		<Russian>Not Yet</Russian>
+		<Portuguese>Not Yet</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOST_POPULATION</Tag>
@@ -802,7 +802,7 @@
 		<German>Größte Bevölkerung: </German>
 		<Italian>Maggiore Popolazione: </Italian>
 		<Spanish>Most Population: </Spanish>
-		<Russian>Most Population: </Russian>
+		<Portuguese>Most Population: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOST_LAND</Tag>
@@ -811,7 +811,7 @@
 		<German>Größtes Land: </German>
 		<Italian>Maggiore Territorio: </Italian>
 		<Spanish>Most Land: </Spanish>
-		<Russian>Most Land: </Russian>
+		<Portuguese>Most Land: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_PAGAN</Tag>
@@ -820,7 +820,7 @@
 		<German>Heide</German>
 		<Italian>Pagano</Italian>
 		<Spanish>Pagan</Spanish>
-		<Russian>Pagan</Russian>
+		<Portuguese>Pagan</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BIGGEST_TRADER</Tag>
@@ -829,7 +829,7 @@
 		<German>Der größte Händler ist: </German>
 		<Italian>Il Commerciante maggiore è: </Italian>
 		<Spanish>The biggest Trader is: </Spanish>
-		<Russian>The biggest Trader is: </Russian>
+		<Portuguese>The biggest Trader is: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_RICHEST_NATION</Tag>
@@ -838,7 +838,7 @@
 		<German>Das Reichste Oberhaupt ist: </German>
 		<Italian>Il leader più Ricco è: </Italian>
 		<Spanish>The Richest Leader is: </Spanish>
-		<Russian>The Richest Leader is: </Russian>
+		<Portuguese>The Richest Leader is: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CITIES_CONTROLLED</Tag>
@@ -847,7 +847,7 @@
 		<German>Städte unter Kontrolle: </German>
 		<Italian>Città sotto il controllo: </Italian>
 		<Spanish>Cities under control: </Spanish>
-		<Russian>Cities under control: </Russian>
+		<Portuguese>Cities under control: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
@@ -856,7 +856,7 @@
 		<German>Kaiser</German>
 		<Italian>Imperatore</Italian>
 		<Spanish>Emperor</Spanish>
-		<Russian>Emperor</Russian>
+		<Portuguese>Emperor</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_2</Tag>
@@ -865,7 +865,7 @@
 		<German>König</German>
 		<Italian>Re</Italian>
 		<Spanish>King</Spanish>
-		<Russian>King</Russian>
+		<Portuguese>King</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_3</Tag>
@@ -874,7 +874,7 @@
 		<German>Prinz</German>
 		<Italian>Principe</Italian>
 		<Spanish>Prince</Spanish>
-		<Russian>Prince</Russian>
+		<Portuguese>Prince</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_4</Tag>
@@ -883,7 +883,7 @@
 		<German>Großherzog</German>
 		<Italian>Arciduca</Italian>
 		<Spanish>Grand Duke</Spanish>
-		<Russian>Grand Duke</Russian>
+		<Portuguese>Grand Duke</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_5</Tag>
@@ -892,7 +892,7 @@
 		<German>Baron</German>
 		<Italian>Barone</Italian>
 		<Spanish>Baron</Spanish>
-		<Russian>Baron</Russian>
+		<Portuguese>Baron</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_6</Tag>
@@ -901,7 +901,7 @@
 		<German>Herzog</German>
 		<Italian>Duca</Italian>
 		<Spanish>Duke</Spanish>
-		<Russian>Duke</Russian>
+		<Portuguese>Duke</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_7</Tag>
@@ -910,7 +910,7 @@
 		<German>Marquis</German>
 		<Italian>Marchese</Italian>
 		<Spanish>Marquess</Spanish>
-		<Russian>Marquess</Russian>
+		<Portuguese>Marquess</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_8</Tag>
@@ -919,7 +919,7 @@
 		<German>Graf</German>
 		<Italian>Conte</Italian>
 		<Spanish>Count</Spanish>
-		<Russian>Count</Russian>
+		<Portuguese>Count</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_9</Tag>
@@ -928,7 +928,7 @@
 		<German>Ritter</German>
 		<Italian>Cavaliere</Italian>
 		<Spanish>Knight</Spanish>
-		<Russian>Knight</Russian>
+		<Portuguese>Knight</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_10</Tag>
@@ -937,7 +937,7 @@
 		<German>Gildenmeister</German>
 		<Italian>Maestro della Gilda</Italian>
 		<Spanish>Guild Master</Spanish>
-		<Russian>Guild Master</Russian>
+		<Portuguese>Guild Master</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_11</Tag>
@@ -946,7 +946,7 @@
 		<German>Kaufmann</German>
 		<Italian>Mercante</Italian>
 		<Spanish>Merchant</Spanish>
-		<Russian>Merchant</Russian>
+		<Portuguese>Merchant</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_12</Tag>
@@ -955,7 +955,7 @@
 		<German>Gutsherr</German>
 		<Italian>Scudiero</Italian>
 		<Spanish>Squire</Spanish>
-		<Russian>Squire</Russian>
+		<Portuguese>Squire</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_13</Tag>
@@ -964,7 +964,7 @@
 		<German>Dorfbürgermeister</German>
 		<Italian>Sindaco di Villaggio</Italian>
 		<Spanish>Village Mayor</Spanish>
-		<Russian>Village Mayor</Russian>
+		<Portuguese>Village Mayor</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_14</Tag>
@@ -973,7 +973,7 @@
 		<German>Hufschmied</German>
 		<Italian>Fabbro</Italian>
 		<Spanish>Blacksmith</Spanish>
-		<Russian>Blacksmith</Russian>
+		<Portuguese>Blacksmith</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_15</Tag>
@@ -982,7 +982,7 @@
 		<German>Hausierer</German>
 		<Italian>Venditore Ambulante</Italian>
 		<Spanish>Peddler</Spanish>
-		<Russian>Peddler</Russian>
+		<Portuguese>Peddler</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_16</Tag>
@@ -991,7 +991,7 @@
 		<German>Lehrling</German>
 		<Italian>Apprendista</Italian>
 		<Spanish>Apprentice</Spanish>
-		<Russian>Apprentice</Russian>
+		<Portuguese>Apprentice</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_17</Tag>
@@ -1000,7 +1000,7 @@
 		<German>Bauer</German>
 		<Italian>Contadino</Italian>
 		<Spanish>Peasant</Spanish>
-		<Russian>Peasant</Russian>
+		<Portuguese>Peasant</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_18</Tag>
@@ -1009,7 +1009,7 @@
 		<German>Hofnarr</German>
 		<Italian>Giullare</Italian>
 		<Spanish>Jester</Spanish>
-		<Russian>Jester</Russian>
+		<Portuguese>Jester</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_19</Tag>
@@ -1018,7 +1018,7 @@
 		<German>Leibeigener</German>
 		<Italian>Servo della Gleba</Italian>
 		<Spanish>Serf</Spanish>
-		<Russian>Serf</Russian>
+		<Portuguese>Serf</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_20</Tag>
@@ -1027,7 +1027,7 @@
 		<German>Bettler</German>
 		<Italian>Mendicante</Italian>
 		<Spanish>Begger</Spanish>
-		<Russian>Begger</Russian>
+		<Portuguese>Begger</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_TEXT_STRING</Tag>
@@ -1036,6 +1036,6 @@
 		<German>%s1_leader, ihr habt in dieser Partie den Rang %s2_leader erreicht!</German>
 		<Italian>%s1_leader, durante questa partita hai raggiunto il livello di %s2_leader!</Italian>
 		<Spanish>%s1_leader, during this game you achieved the rank of %s2_leader!</Spanish>
-		<Russian>%s1_leader, during this game you achieved the rank of %s2_leader!</Russian>
+		<Portuguese>%s1_leader, during this game you achieved the rank of %s2_leader!</Portuguese>
 	</TEXT>
 </Civ4GameText>

@@ -12,7 +12,7 @@
 		<German>Pest</German>
 		<Italian>Peste</Italian>
 		<Spanish>Peste</Spanish>
-		<Russian>&#215;&#243;&#236;&#224;</Russian>
+		<Portuguese>&#215;&#243;&#236;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAGUE_SPREAD_CITY</Tag>
@@ -21,7 +21,7 @@
 		<German>Die Pest breitet sich aus, diesmal in</German>
 		<Italian>La peste si &#232; diffusa a</Italian>
 		<Spanish>La peste se ha extendido por</Spanish>
-		<Russian>&#215;&#243;&#236;&#224; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#232;&#235;&#224;&#241;&#252; &#226;</Russian>
+		<Portuguese>&#215;&#243;&#236;&#224; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#232;&#235;&#224;&#241;&#252; &#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAGUE_PROCESS_CITY</Tag>
@@ -30,7 +30,7 @@
 		<German>Die Pest fordert Opfer in</German>
 		<Italian>La peste sta uccidendo gente a</Italian>
 		<Spanish>La peste est&#225; matando gente en</Spanish>
-		<Russian>&#215;&#243;&#236;&#224; &#243;&#225;&#232;&#226;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#226;</Russian>
+		<Portuguese>&#215;&#243;&#236;&#224; &#243;&#225;&#232;&#226;&#224;&#229;&#242; &#235;&#254;&#228;&#229;&#233; &#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAGUE_PROCESS_UNIT</Tag>
@@ -39,6 +39,6 @@
 		<German>Eine unserer Einheiten ist der Pest zum Opfer gefallen, und zwar in der N&#228;he von</German>
 		<Italian>La peste ha ucciso la nostra unit&#224; vicino a </Italian>
 		<Spanish>La peste ha matado a una unidad nuestra cerca de</Spanish>
-		<Russian>&#215;&#243;&#236;&#224; &#243;&#225;&#232;&#235;&#224; &#237;&#224;&#248;&#229;&#227;&#238; &#254;&#237;&#232;&#242;&#224; &#226;&#238;&#231;&#235;&#229;</Russian>
+		<Portuguese>&#215;&#243;&#236;&#224; &#243;&#225;&#232;&#235;&#224; &#237;&#224;&#248;&#229;&#227;&#238; &#254;&#237;&#232;&#242;&#224; &#226;&#238;&#231;&#235;&#229;</Portuguese>
 	</TEXT>
 </Civ4GameText>
