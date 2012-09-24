@@ -12,7 +12,7 @@
 		<German>Zerfallend</German>
 		<Italian>Collasso</Italian>
 		<Spanish>Al borde del colapso</Spanish>
-		<Russian>&#208;&#224;&#231;&#240;&#243;&#248;&#229;&#237;&#232;&#229;</Russian>
+		<Portuguese>&#208;&#224;&#231;&#240;&#243;&#248;&#229;&#237;&#232;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_UNSTABLE</Tag>
@@ -21,7 +21,7 @@
 		<German>Instabil</German>
 		<Italian>Instabile</Italian>
 		<Spanish>Inestable</Spanish>
-		<Russian>&#205;&#229;&#241;&#242;&#238;&#233;&#234;&#232;&#233;</Russian>
+		<Portuguese>&#205;&#229;&#241;&#242;&#238;&#233;&#234;&#232;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_SHAKY</Tag>
@@ -30,7 +30,7 @@
 		<German>Wankend</German>
 		<Italian>Traballante</Italian>
 		<Spanish>Incierta</Spanish>
-		<Russian>&#216;&#224;&#242;&#234;&#232;&#233;</Russian>
+		<Portuguese>&#216;&#224;&#242;&#234;&#232;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_STABLE</Tag>
@@ -39,7 +39,7 @@
 		<German>Stabil</German>
 		<Italian>Stabile</Italian>
 		<Spanish>Estable</Spanish>
-		<Russian>&#211;&#241;&#242;&#238;&#233;&#247;&#232;&#226;&#251;&#233;</Russian>
+		<Portuguese>&#211;&#241;&#242;&#238;&#233;&#247;&#232;&#226;&#251;&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_SOLID</Tag>
@@ -48,7 +48,7 @@
 		<German>Solide</German>
 		<Italian>Solido</Italian>
 		<Spanish>S&#243;lida</Spanish>
-		<Russian>&#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
+		<Portuguese>&#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_VERYSOLID</Tag>
@@ -57,7 +57,7 @@
 		<German>Sehr solide</German>
 		<Italian>Molto solido</Italian>
 		<Spanish>Muy s&#243;lida</Spanish>
-		<Russian>&#206;&#247;&#229;&#237;&#252; &#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Russian>
+		<Portuguese>&#206;&#247;&#229;&#237;&#252; &#197;&#228;&#232;&#237;&#238;&#227;&#235;&#224;&#241;&#237;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_HUMAN</Tag>
@@ -66,7 +66,7 @@
 		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
 		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
-		<Russian>&#194;&#224;&#248;&#224; &#232;&#236;&#239;&#229;&#240;&#232;&#255; &#237;&#232;&#241;&#245;&#238;&#228;&#255;&#249;&#224;&#255; &#226; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233; &#226;&#238;&#233;&#237;&#229;!</Russian>
+		<Portuguese>&#194;&#224;&#248;&#224; &#232;&#236;&#239;&#229;&#240;&#232;&#255; &#237;&#232;&#241;&#245;&#238;&#228;&#255;&#249;&#224;&#255; &#226; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233; &#226;&#238;&#233;&#237;&#229;!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR</Tag>
@@ -75,7 +75,7 @@
 		<German>steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>sta cadendo nella guerra civile!</Italian>
 		<Spanish>est&#225; sufriendo una guerra civil.</Spanish>
-		<Russian>&#237;&#232;&#241;&#245;&#238;&#228;&#255;&#249;&#232;&#233; &#226; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233; &#226;&#238;&#233;&#237;&#229;!</Russian>
+		<Portuguese>&#237;&#232;&#241;&#245;&#238;&#228;&#255;&#249;&#232;&#233; &#226; &#227;&#240;&#224;&#230;&#228;&#224;&#237;&#241;&#234;&#238;&#233; &#226;&#238;&#233;&#237;&#229;!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_SECESSION</Tag>
@@ -84,7 +84,7 @@
 		<German>hat seine Unabh&#228;ngigkeit erkl&#228;rt!</German>
 		<Italian>ha dichiarato la propria indipendenza!</Italian>
 		<Spanish>ha declarado su independencia.</Spanish>
-		<Russian>&#238;&#225;&#250;&#255;&#226;&#232;&#235; &#229;&#227;&#238; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Russian>
+		<Portuguese>&#238;&#225;&#250;&#255;&#226;&#232;&#235; &#229;&#227;&#238; &#237;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242;&#252;!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PERIOD</Tag>
@@ -93,7 +93,7 @@
 		<German>Euer Reich durchlebt eine Phase der</German>
 		<Italian>Il tuo impero sta vivendo un periodo di</Italian>
 		<Spanish>Tu imperio est&#225; pasando por un periodo de</Spanish>
-		<Russian>&#194;&#224;&#248;&#224; &#232;&#236;&#239;&#229;&#240;&#232;&#255; &#232;&#241;&#239;&#251;&#242;&#251;&#226;&#224;&#229;&#242; &#239;&#229;&#240;&#232;&#238;&#228;</Russian>
+		<Portuguese>&#194;&#224;&#248;&#224; &#232;&#236;&#239;&#229;&#240;&#232;&#255; &#232;&#241;&#239;&#251;&#242;&#251;&#226;&#224;&#229;&#242; &#239;&#229;&#240;&#232;&#238;&#228;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_DEMOCRACY</Tag>
@@ -102,7 +102,7 @@
 		<German>Instabilit&#228;t, verursacht durch den Wechsel zur Demokratie!</German>
 		<Italian>instabilit&#224;, causata dal passaggio alla democrazia!</Italian>
 		<Spanish>inestabilidad causada por la transici&#243;n a la democracia.</Spanish>
-		<Russian>&#237;&#229;&#243;&#241;&#242;&#238;&#233;&#247;&#232;&#226;&#238;&#241;&#242;&#252;, &#226;&#251;&#231;&#226;&#224;&#237;&#237;&#224;&#255; &#239;&#229;&#240;&#229;&#236;&#229;&#249;&#229;&#237;&#232;&#229;&#236; &#234; &#228;&#229;&#236;&#238;&#234;&#240;&#224;&#242;&#232;&#232;!</Russian>
+		<Portuguese>&#237;&#229;&#243;&#241;&#242;&#238;&#233;&#247;&#232;&#226;&#238;&#241;&#242;&#252;, &#226;&#251;&#231;&#226;&#224;&#237;&#237;&#224;&#255; &#239;&#229;&#240;&#229;&#236;&#229;&#249;&#229;&#237;&#232;&#229;&#236; &#234; &#228;&#229;&#236;&#238;&#234;&#240;&#224;&#242;&#232;&#232;!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_TITLE</Tag>
@@ -111,7 +111,7 @@
 		<German>Inlandsberater</German>
 		<Italian>Consigliere per gli interni</Italian>
 		<Spanish>Consejero de Interior</Spanish>
-		<Russian>&#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#232;&#233; &#209;&#238;&#226;&#229;&#242;&#237;&#232;&#234;</Russian>
+		<Portuguese>&#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#232;&#233; &#209;&#238;&#226;&#229;&#242;&#237;&#232;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_ADVISOR_TITLE</Tag>
@@ -120,7 +120,7 @@
 		<German>STABILIT&#196;T: </German>
 		<Italian>STABILIT&#192;: </Italian>
 		<Spanish>ESTABILIDAD: </Spanish>
-		<Russian>&#209;&#210;&#192;&#193;&#200;&#203;&#220;&#205;&#206;&#209;&#210;&#220;:</Russian>
+		<Portuguese>&#209;&#210;&#192;&#193;&#200;&#203;&#220;&#205;&#206;&#209;&#210;&#220;:</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_CITIES</Tag>
@@ -129,7 +129,7 @@
 		<German>ST&#196;DTE</German>
 		<Italian>CITT&#192;</Italian>
 		<Spanish>CIUDADES</Spanish>
-		<Russian>&#195;&#206;&#208;&#206;&#196;&#192;</Russian>
+		<Portuguese>&#195;&#206;&#208;&#206;&#196;&#192;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_CIVICS</Tag>
@@ -138,7 +138,7 @@
 		<German>STAATSFORMEN</German>
 		<Italian>FORME DI GOVERNO</Italian>
 		<Spanish>PRINCIPIOS</Spanish>
-		<Russian>&#195;&#208;&#192;&#198;&#196;&#192;&#205;&#209;&#202;&#200;&#197; &#196;&#197;&#203;&#192;</Russian>
+		<Portuguese>&#195;&#208;&#192;&#198;&#196;&#192;&#205;&#209;&#202;&#200;&#197; &#196;&#197;&#203;&#192;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_FOREIGN</Tag>
@@ -147,7 +147,7 @@
 		<German>AUSLAND</German>
 		<Italian>ESTERO</Italian>
 		<Spanish>ASUNTOS EXTERIORES</Spanish>
-		<Russian>&#199;&#192;&#208;&#211;&#193;&#197;&#198;&#205;&#219;&#201;</Russian>
+		<Portuguese>&#199;&#192;&#208;&#211;&#193;&#197;&#198;&#205;&#219;&#201;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_ECONOMY</Tag>
@@ -156,7 +156,7 @@
 		<German>WIRTSCHAFT</German>
 		<Italian>ECONOMIA</Italian>
 		<Spanish>ECONOM&#205;A</Spanish>
-		<Russian>&#221;&#202;&#206;&#205;&#206;&#204;&#200;&#202;&#192;</Russian>
+		<Portuguese>&#221;&#202;&#206;&#205;&#206;&#204;&#200;&#202;&#192;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_EXPANSION</Tag>
@@ -165,7 +165,7 @@
 		<German>EXPANSION</German>
 		<Italian>ESPANSIONE</Italian>
 		<Spanish>EXPANSI&#211;N</Spanish>
-		<Russian>&#208;&#192;&#209;&#216;&#200;&#208;&#197;&#205;&#200;&#197;</Russian>
+		<Portuguese>&#208;&#192;&#209;&#216;&#200;&#208;&#197;&#205;&#200;&#197;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_PARAMETER_SWING</Tag>
@@ -174,6 +174,6 @@
 		<German>SWING</German>
 		<Italian>RITMO</Italian>
 		<Spanish>SWING</Spanish>
-		<Russian>SWING</Russian>
+		<Portuguese>SWING</Portuguese>
 	</TEXT>
 </Civ4GameText>

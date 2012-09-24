@@ -12,7 +12,7 @@
 		<German>%s1_CivName revoltieren!</German>
 		<Italian>%s1_CivName sono in rivolta!</Italian>
 		<Spanish>%s1_CivName are revolting!</Spanish>
-		<Russian>%s1_CivName are revolting!</Russian>
+		<Portuguese>%s1_CivName are revolting!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_DESC</Tag>
@@ -21,7 +21,7 @@
 		<German>%s1_CivName versuchen einen selbständigen Staat zu bilden. Was sollen wir tun?</German>
 		<Italian>%s1_CivName stanno provando a formare una loro nazione. Cosa dobbiamo fare?</Italian>
 		<Spanish>%s1_CivName are trying to form their own country. What shall we do?</Spanish>
-		<Russian>%s1_CivName are trying to form their own country. What shall we do?</Russian>
+		<Portuguese>%s1_CivName are trying to form their own country. What shall we do?</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_DO_NOTHING</Tag>
@@ -30,7 +30,7 @@
 		<German>Einfach ignorieren, niemand würde unser mächtiges Reich verlassen wollen. (setzt ausschließlich auf die Stabilität %d1_RawOdds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Ignorali, nessuno vorrà davvero abbandonare il nostro potente Impero. (dipende dalla stabilità, solo il %d1_RawOdds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Spanish>
-		<Russian>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Russian>
+		<Portuguese>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_CRACK</Tag>
@@ -39,7 +39,7 @@
 		<German>Formiere die Bekämpfung der Rebellion and bezwinge diese Rebellen. (setzt auf die Anzahl der Einheiten in den Städten, erzeugt Unzufriedenheit und verursacht 1 Runde Revolte, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Sopprimi la rivolta. (dipende dal numero di unità presenti nelle tue città, genera infelicità e causa un turno di rivolta, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Spanish>
-		<Russian>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Russian>
+		<Portuguese>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_BRIBE</Tag>
@@ -48,7 +48,7 @@
 		<German>Besteche die lokalen Fürsten, die Rebellen sind chancenlos ohne deren Unterstützung. (setzt auf die Regierungsgesellschaftsform, bezahle %d1_Gold, %d2_Odds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Corrompi l'aristocrazia locale, i ribelli non hanno possibilità di sopravvivere senza il loro supporto. (dipende dalla tua forma di governo, paga %d1_Gold, %d2_Odds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Spanish>
-		<Russian>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Russian>
+		<Portuguese>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_ALL</Tag>
@@ -57,7 +57,7 @@
 		<German>Unternimm alles um sie zu behalten. (kombiniere alle oben erwähnten Möglichkeiten, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Fai qualunque cosa per fermarli. (combina tutte le opzioni di sopra, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
 		<Spanish>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Spanish>
-		<Russian>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Russian>
+		<Portuguese>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_SERBS</Tag>
@@ -66,7 +66,7 @@
 		<German>Die Serben</German>
 		<Italian>I Serbi</Italian>
 		<Spanish>The Serbs</Spanish>
-		<Russian>The Serbs</Russian>
+		<Portuguese>The Serbs</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SERBIAN</Tag>
@@ -75,7 +75,7 @@
 		<German>Serbische</German>
 		<Italian>Serbo</Italian>
 		<Spanish>Serbian</Spanish>
-		<Russian>Serbian</Russian>
+		<Portuguese>Serbian</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_SCOTS</Tag>
@@ -84,7 +84,7 @@
 		<German>Die Schotten</German>
 		<Italian>Gli Scozzesi</Italian>
 		<Spanish>The Scots</Spanish>
-		<Russian>The Scots</Russian>
+		<Portuguese>The Scots</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SCOTISH</Tag>
@@ -93,7 +93,7 @@
 		<German>Schottische</German>
 		<Italian>Scozzese</Italian>
 		<Spanish>Scottish</Spanish>
-		<Russian>Scottish</Russian>
+		<Portuguese>Scottish</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_CATALANS</Tag>
@@ -102,7 +102,7 @@
 		<German>Die Katalanen</German>
 		<Italian>I Catalani</Italian>
 		<Spanish>The Catalans</Spanish>
-		<Russian>The Catalans</Russian>
+		<Portuguese>The Catalans</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATALAN</Tag>
@@ -111,7 +111,7 @@
 		<German>Katalanische</German>
 		<Italian>Catalano</Italian>
 		<Spanish>Catalan</Spanish>
-		<Russian>Catalan</Russian>
+		<Portuguese>Catalan</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_MUSLIMS</Tag>
@@ -120,7 +120,7 @@
 		<German>Die Muslime</German>
 		<Italian>I Musulmani</Italian>
 		<Spanish>The Muslims</Spanish>
-		<Russian>The Muslims</Russian>
+		<Portuguese>The Muslims</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MUSLIM</Tag>
@@ -129,7 +129,7 @@
 		<German>Muslimische</German>
 		<Italian>Musulmano</Italian>
 		<Spanish>Muslim</Spanish>
-		<Russian>Muslim</Russian>
+		<Portuguese>Muslim</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_ZIYYANIDS</Tag>
@@ -138,7 +138,7 @@
 		<German>Die Ziyyaniden</German>
 		<Italian>Gli Ziyyanidi</Italian>
 		<Spanish>The Ziyyanids</Spanish>
-		<Russian>The Ziyyanids</Russian>
+		<Portuguese>The Ziyyanids</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ZIYYANID</Tag>
@@ -147,7 +147,7 @@
 		<German>Ziyyanidische</German>
 		<Italian>Zianide</Italian>
 		<Spanish>Ziyyanid</Spanish>
-		<Russian>Ziyyanid</Russian>
+		<Portuguese>Ziyyanid</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_WATTASIDS</Tag>
@@ -156,7 +156,7 @@
 		<German>Die Wattasiden</German>
 		<Italian>I Wattasidi</Italian>
 		<Spanish>The Wattasids</Spanish>
-		<Russian>The Wattasids</Russian>
+		<Portuguese>The Wattasids</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WATTASID</Tag>
@@ -165,7 +165,7 @@
 		<German>Wattasidische</German>
 		<Italian>Wattasida</Italian>
 		<Spanish>Wattasid</Spanish>
-		<Russian>Wattasid</Russian>
+		<Portuguese>Wattasid</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
@@ -174,7 +174,7 @@
 		<German>Chasaren</German>
 		<Italian>Cazari</Italian>
 		<Spanish>Khazars</Spanish>
-		<Russian>Khazars</Russian>
+		<Portuguese>Khazars</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_PECHENEGS</Tag>
@@ -183,7 +183,7 @@
 		<German>Petschenegen</German>
 		<Italian>Peceneghi</Italian>
 		<Spanish>Pechenegs</Spanish>
-		<Russian>Pechenegs</Russian>
+		<Portuguese>Pechenegs</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_CUMANS</Tag>
@@ -192,7 +192,7 @@
 		<German>Kiptschak</German>
 		<Italian>Cumani</Italian>
 		<Spanish>Cumans</Spanish>
-		<Russian>Cumans</Russian>
+		<Portuguese>Cumans</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS</Tag>
@@ -201,7 +201,7 @@
 		<German>Südslawen</German>
 		<Italian>Slavi Meridionali</Italian>
 		<Spanish>Southern Slavs</Spanish>
-		<Russian>Southern Slavs</Russian>
+		<Portuguese>Southern Slavs</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES</Tag>
@@ -210,7 +210,7 @@
 		<German>Germanenstämme</German>
 		<Italian>Tribù Germaniche</Italian>
 		<Spanish>Germanic Tribes</Spanish>
-		<Russian>Germanic Tribes</Russian>
+		<Portuguese>Germanic Tribes</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_VIKINGS</Tag>
@@ -219,7 +219,7 @@
 		<German>Wikinger</German>
 		<Italian>Vichinghi</Italian>
 		<Spanish>Vikings</Spanish>
-		<Russian>Vikings</Russian>
+		<Portuguese>Vikings</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SCOTS</Tag>
@@ -228,7 +228,7 @@
 		<German>Schotten</German>
 		<Italian>Scozzesi</Italian>
 		<Spanish>Scots</Spanish>
-		<Russian>Scots</Russian>
+		<Portuguese>Scots</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_WELSH</Tag>
@@ -237,7 +237,7 @@
 		<German>Waliser</German>
 		<Italian>Gallesi</Italian>
 		<Spanish>Welsh</Spanish>
-		<Russian>Welsh</Russian>
+		<Portuguese>Welsh</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_MAGYARS</Tag>
@@ -246,7 +246,7 @@
 		<German>Magyaren</German>
 		<Italian>Magiari</Italian>
 		<Spanish>Magyars</Spanish>
-		<Russian>Magyars</Russian>
+		<Portuguese>Magyars</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_MONGOLS</Tag>
@@ -255,7 +255,7 @@
 		<German>Mongolen</German>
 		<Italian>Mongoli</Italian>
 		<Spanish>Mongols</Spanish>
-		<Russian>Mongols</Russian>
+		<Portuguese>Mongols</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SELJUKS</Tag>
@@ -264,7 +264,7 @@
 		<German>Seldschuken</German>
 		<Italian>Selgiuchidi</Italian>
 		<Spanish>Seljuks</Spanish>
-		<Russian>Seljuks</Russian>
+		<Portuguese>Seljuks</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SASSANIDS</Tag>
@@ -273,7 +273,7 @@
 		<German>Sassaniden</German>
 		<Italian>Sasanidi</Italian>
 		<Spanish>Sassanids</Spanish>
-		<Russian>Sassanids</Russian>
+		<Portuguese>Sassanids</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_BEDUINS</Tag>
@@ -282,7 +282,7 @@
 		<German>Beduinenstämme</German>
 		<Italian>Tribù Beduine</Italian>
 		<Spanish>Beduin Tribes</Spanish>
-		<Russian>Beduin Tribes</Russian>
+		<Portuguese>Beduin Tribes</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_BERBERS</Tag>
@@ -291,7 +291,7 @@
 		<German>Berber</German>
 		<Italian>Berberi</Italian>
 		<Spanish>Berbers</Spanish>
-		<Russian>Berbers</Russian>
+		<Portuguese>Berbers</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES</Tag>
@@ -300,7 +300,7 @@
 		<German>Barbarische Piraten</German>
 		<Italian>Pirati Berberi</Italian>
 		<Spanish>Barbary Pirates</Spanish>
-		<Russian>Barbary Pirates</Russian>
+		<Portuguese>Barbary Pirates</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_LONGOBARDS</Tag>
@@ -309,7 +309,7 @@
 		<German>Longobarden</German>
 		<Italian>Longobardi</Italian>
 		<Spanish>Longobards</Spanish>
-		<Russian>Longobards</Russian>
+		<Portuguese>Longobards</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_AVARS</Tag>
@@ -318,7 +318,7 @@
 		<German>Awaren</German>
 		<Italian>Avari</Italian>
 		<Spanish>Avars</Spanish>
-		<Russian>Avars</Russian>
+		<Portuguese>Avars</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SWEDES</Tag>
@@ -327,7 +327,7 @@
 		<German>Schweden</German>
 		<Italian>Svevi</Italian>
 		<Spanish>Swedes</Spanish>
-		<Russian>Swedes</Russian>
+		<Portuguese>Swedes</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_CHUDES</Tag>
@@ -336,7 +336,7 @@
 		<German>Liven</German>
 		<Italian>Ciudi</Italian>
 		<Spanish>Chudes</Spanish>
-		<Russian>Chudes</Russian>
+		<Portuguese>Chudes</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_NOGAIS</Tag>
@@ -345,7 +345,7 @@
 		<German>Nogaier</German>
 		<Italian>Nogai</Italian>
 		<Spanish>Nogais</Spanish>
-		<Russian>Nogais</Russian>
+		<Portuguese>Nogais</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KALMYKS</Tag>
@@ -354,6 +354,6 @@
 		<German>Kalmücken</German>
 		<Italian>Calmucchi</Italian>
 		<Spanish>Kalmyks</Spanish>
-		<Russian>Kalmyks</Russian>
+		<Portuguese>Kalmyks</Portuguese>
 	</TEXT>
 </Civ4GameText>

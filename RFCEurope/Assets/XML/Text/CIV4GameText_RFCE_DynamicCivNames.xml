@@ -12,7 +12,7 @@
 		<German>Beduinen</German>
 		<Italian>Popoli Beduini</Italian>
 		<Spanish>Pueblos Beduinos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA01</Tag>
@@ -21,7 +21,7 @@
 		<German>Abbasidischer Staat Arabien</German>
 		<Italian>Stato Abbaside d'Arabia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA02</Tag>
@@ -30,7 +30,7 @@
 		<German>Rechtgeleitete Kalifen</German>
 		<Italian>Califfato dei Rashidun</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA03</Tag>
@@ -39,7 +39,7 @@
 		<German>Umayyaden Kalifat</German>
 		<Italian>Califfato degli Omayyadi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA04</Tag>
@@ -48,7 +48,7 @@
 		<German>Abbasiden Kalifat</German>
 		<Italian>Califfato degli Abbasidi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA05</Tag>
@@ -57,7 +57,7 @@
 		<German>Arabische Republik</German>
 		<Italian>Repubblica dell'Arabia</Italian>
 		<Spanish>Rep&#250;blica de Arabia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA06</Tag>
@@ -66,7 +66,7 @@
 		<German>Arabisches Reich</German>
 		<Italian>Impero Arabo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA07</Tag>
@@ -75,7 +75,7 @@
 		<German>Arabisches Reich</German>
 		<Italian>Impero Arabo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA08</Tag>
@@ -84,7 +84,7 @@
 		<German>Kalifat Arabien</German>
 		<Italian>Califfato d'Arabia</Italian>
 		<Spanish>Califato de Arabia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA09</Tag>
@@ -93,7 +93,7 @@
 		<German>Arabisch-Islamische Republik</German>
 		<Italian>Repubblica Islamica dell'Arabia</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de Arabia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA10</Tag>
@@ -102,7 +102,7 @@
 		<German>Exarchat Arabien</German>
 		<Italian>Esarcato d'Arabia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA11</Tag>
@@ -111,7 +111,7 @@
 		<German>Französisch-Levante</German>
 		<Italian>Levante Francese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA12</Tag>
@@ -120,7 +120,7 @@
 		<German>Emirat Arabien</German>
 		<Italian>Emirato di Arabia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA13</Tag>
@@ -129,7 +129,7 @@
 		<German>Spanisch-Levante</German>
 		<Italian>Levante Spagnolo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA14</Tag>
@@ -138,7 +138,7 @@
 		<German>Nordisch-Arabien</German>
 		<Italian>Arabia Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA15</Tag>
@@ -147,7 +147,7 @@
 		<German>Venezianisch-Levante</German>
 		<Italian>Levante Veneziano</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA16</Tag>
@@ -156,7 +156,7 @@
 		<German>Russisch-Levante</German>
 		<Italian>Levante Russo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA17</Tag>
@@ -165,7 +165,7 @@
 		<German>Deutsch-Levante</German>
 		<Italian>Arabia Tedesca</Italian>
 		<Spanish>Arabia Alemana</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA18</Tag>
@@ -174,7 +174,7 @@
 		<German>Grafschaften der Levante</German>
 		<Italian>Contee del Levante</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA19</Tag>
@@ -183,7 +183,7 @@
 		<German>Habsburger Levante</German>
 		<Italian>Levante Asburgico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA20</Tag>
@@ -192,7 +192,7 @@
 		<German>Scherifat Mekka</German>
 		<Italian>Sharifato della Mecca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA21</Tag>
@@ -201,7 +201,7 @@
 		<German>Provinz Arabien</German>
 		<Italian>Provincia di Arabia</Italian>
 		<Spanish>Provincia de Arabia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA31</Tag>
@@ -210,7 +210,7 @@
 		<German>Mamlukensultanat</German>
 		<Italian>Sultanato dei Mamelucchi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA32</Tag>
@@ -219,7 +219,7 @@
 		<German>Ayyubidensultanat</German>
 		<Italian>Sultanato degli Ayyubidi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARA33</Tag>
@@ -228,7 +228,7 @@
 		<German>Fatimidensultanat</German>
 		<Italian>Califfato dei Fatimidi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Arabia -->
 	<!-- Austria -->
@@ -239,7 +239,7 @@
 		<German>Südgermanische Völker</German>
 		<Italian>Popoli Tedeschi Meridionali</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS01</Tag>
@@ -248,7 +248,7 @@
 		<German>Erzherzogtum Österreich</German>
 		<Italian>Arciducato d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS02</Tag>
@@ -257,7 +257,7 @@
 		<German>Habsburger Reich</German>
 		<Italian>Impero Asburgico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS03</Tag>
@@ -266,7 +266,7 @@
 		<German>Erzherzogtum Österreich</German>
 		<Italian>Arciducato d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS04</Tag>
@@ -275,7 +275,7 @@
 		<German>Habsburger Reich</German>
 		<Italian>Impero Asburgico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS05</Tag>
@@ -284,7 +284,7 @@
 		<German>Republik Österreich</German>
 		<Italian>Repubblica d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS06</Tag>
@@ -293,7 +293,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS07</Tag>
@@ -302,7 +302,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS08</Tag>
@@ -311,7 +311,7 @@
 		<German>Islamisches Sultanat Habsburg</German>
 		<Italian>Sultanato Islamico Asburgico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS09</Tag>
@@ -320,7 +320,7 @@
 		<German>Islamische Republik Österreich</German>
 		<Italian>Repubblica Islamica dell'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS10</Tag>
@@ -329,7 +329,7 @@
 		<German>Exarchat Österreich</German>
 		<Italian>Esarcato d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS11</Tag>
@@ -338,7 +338,7 @@
 		<German>Französisches Erzherzogtum Österreich</German>
 		<Italian>Arciducato Francese d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS12</Tag>
@@ -347,7 +347,7 @@
 		<German>Emirat Österreich</German>
 		<Italian>Emirato d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS13</Tag>
@@ -356,7 +356,7 @@
 		<German>Junior Habsburger Lande</German>
 		<Italian>Terre Asburgiche</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS14</Tag>
@@ -365,7 +365,7 @@
 		<German>Nordisch-Österreich</German>
 		<Italian>Austria Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS15</Tag>
@@ -374,7 +374,7 @@
 		<German>Venezianisch-Österreich</German>
 		<Italian>Austria Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS16</Tag>
@@ -383,7 +383,7 @@
 		<German>Russisch-Österreich</German>
 		<Italian>Austria Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS17</Tag>
@@ -392,7 +392,7 @@
 		<German>Großdeutsches Reich Süd</German>
 		<Italian>Grande Germania del Sud</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS18</Tag>
@@ -401,7 +401,7 @@
 		<German>Grafschaften Österreichs</German>
 		<Italian>Contee d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS19</Tag>
@@ -410,7 +410,7 @@
 		<German>Ober- und Unterösterreich </German>
 		<Italian>Alta e Bassa Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS20</Tag>
@@ -419,7 +419,7 @@
 		<German>Fürstentum Avusturya</German>
 		<Italian>Principato di Avusturya</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS21</Tag>
@@ -428,7 +428,7 @@
 		<German>Provinz Österreich</German>
 		<Italian>Provincia d'Austria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Austria -->
 	<!-- Bulgaria -->
@@ -439,7 +439,7 @@
 		<German>Bulgarische Völker</German>
 		<Italian>Popoli Bulgari</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL05</Tag>
@@ -448,7 +448,7 @@
 		<German>Republik Bulgarien</German>
 		<Italian>Repubblica di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL09</Tag>
@@ -457,7 +457,7 @@
 		<German>Islamische Republik Bulgarien</German>
 		<Italian>Repubblica Islamica di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL10</Tag>
@@ -466,7 +466,7 @@
 		<German>Byzantinisches Thema Bulgarien</German>
 		<Italian>Thema di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL11</Tag>
@@ -475,7 +475,7 @@
 		<German>Herzogtum Bulgarien</German>
 		<Italian>Ducato di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL12</Tag>
@@ -484,7 +484,7 @@
 		<German>Emirat Bulgarien</German>
 		<Italian>Emirato di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL13</Tag>
@@ -493,7 +493,7 @@
 		<German>Spanisches Königreich Bulgarien</German>
 		<Italian>Regno Spagnolo di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL14</Tag>
@@ -502,7 +502,7 @@
 		<German>Warägisch-Bulgarien</German>
 		<Italian>Bulgaria Variaga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL15</Tag>
@@ -511,7 +511,7 @@
 		<German>Venezianisch-Bulgarien</German>
 		<Italian>Bulgaria Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL16</Tag>
@@ -520,7 +520,7 @@
 		<German>Fürstentum Bulgarien</German>
 		<Italian>Principato di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL17</Tag>
@@ -529,7 +529,7 @@
 		<German>Deutsch-Bulgarien</German>
 		<Italian>Bulgaria Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL18</Tag>
@@ -538,7 +538,7 @@
 		<German>Grafschaften Bulgariens</German>
 		<Italian>Contee di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL19</Tag>
@@ -547,7 +547,7 @@
 		<German>Habsburger Bulgarien</German>
 		<Italian>Bulgaria Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL20</Tag>
@@ -556,7 +556,7 @@
 		<German>Fürstentum Rumelia</German>
 		<Italian>Principato di Rumelia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL21</Tag>
@@ -565,7 +565,7 @@
 		<German>Provinz Bulgarien</German>
 		<Italian>Provincia di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_CALIPHATE</Tag>
@@ -574,7 +574,7 @@
 		<German>Kalifat Bulgarien</German>
 		<Italian>Califfato di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_KHANATE</Tag>
@@ -583,7 +583,7 @@
 		<German>Khanat Bulgarien</German>
 		<Italian>Khanato di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_TSARDOM</Tag>
@@ -592,7 +592,7 @@
 		<German>Zarentum Bulgarien</German>
 		<Italian>Zarato di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_KINGDOM</Tag>
@@ -601,7 +601,7 @@
 		<German>Königreich Bulgarien</German>
 		<Italian>Regno di Bulgaria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_EMPIRE1</Tag>
@@ -610,7 +610,7 @@
 		<German>Bulgarisches Reich</German>
 		<Italian>Impero Bulgaro</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL_EMPIRE2</Tag>
@@ -619,7 +619,7 @@
 		<German>Zweites Bulgarisches Reich</German>
 		<Italian>Secondo Impero Bulgaro</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Bulgaria -->
 	<!-- Burgundy -->
@@ -630,7 +630,7 @@
 		<German>Burgundische Völker</German>
 		<Italian>Popoli Borgognoni</Italian>
 		<Spanish>Pueblo Burgundio</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR01</Tag>
@@ -639,7 +639,7 @@
 		<German>Königreich Burgund</German>
 		<Italian>Regno di Borgogna</Italian>
 		<Spanish>Reino de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR02</Tag>
@@ -648,7 +648,7 @@
 		<German>Königreich Burgund</German>
 		<Italian>Regno di Borgogna</Italian>
 		<Spanish>Reino de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR03</Tag>
@@ -657,7 +657,7 @@
 		<German>Herzogtum Burgund</German>
 		<Italian>Ducato di Borgogna</Italian>
 		<Spanish>Ducado de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR04</Tag>
@@ -666,7 +666,7 @@
 		<German>Herzogtum Burgund</German>
 		<Italian>Ducato di Borgogna</Italian>
 		<Spanish>Ducado de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR05</Tag>
@@ -675,7 +675,7 @@
 		<German>Republik Burgund</German>
 		<Italian>Repubblica Borgognona</Italian>
 		<Spanish>República Borgoñesa</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR06</Tag>
@@ -684,7 +684,7 @@
 		<German>Burgundy Error</German>
 		<Italian>Burgundy Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR07</Tag>
@@ -693,7 +693,7 @@
 		<German>Burgundy Error</German>
 		<Italian>Burgundy Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR08</Tag>
@@ -702,7 +702,7 @@
 		<German>Sultanat Burgund</German>
 		<Italian>Sultanato di Borgogna</Italian>
 		<Spanish>Sultanato de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR09</Tag>
@@ -711,7 +711,7 @@
 		<German>Islamische Republik Burgund</German>
 		<Italian>Repubblica Islamica di Borgogna</Italian>
 		<Spanish>República Islámica de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR10</Tag>
@@ -720,7 +720,7 @@
 		<German>Exarchat Burgund</German>
 		<Italian>Esarcato di Borgogna</Italian>
 		<Spanish>Exarcado de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR11</Tag>
@@ -729,7 +729,7 @@
 		<German>Französisches Herzogtum Bourgogne</German>
 		<Italian>Ducato Francese di Borgogna</Italian>
 		<Spanish>Ducado Francés de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR12</Tag>
@@ -738,7 +738,7 @@
 		<German>Emirat Burgund</German>
 		<Italian>Emirato di Borgogna</Italian>
 		<Spanish>Emirato de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR13</Tag>
@@ -747,7 +747,7 @@
 		<German>Spanisch-Burgund</German>
 		<Italian>Contea di Borgogna</Italian>
 		<Spanish>Condado de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR14</Tag>
@@ -756,7 +756,7 @@
 		<German>Neu Bornholm</German>
 		<Italian>Nuova Bornholm</Italian>
 		<Spanish>Nuevo Bornholm</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR15</Tag>
@@ -765,7 +765,7 @@
 		<German>Venezianisch-Burgund</German>
 		<Italian>Borgogna Veneziana</Italian>
 		<Spanish>Borgoña Veneciana</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR16</Tag>
@@ -774,7 +774,7 @@
 		<German>Russisch-Burgund</German>
 		<Italian>Borgogna Russa</Italian>
 		<Spanish>Borgoña Rusa</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR17</Tag>
@@ -783,7 +783,7 @@
 		<German>Lothringen</German>
 		<Italian>Lotaringia</Italian>
 		<Spanish>Lotaringia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR18</Tag>
@@ -792,7 +792,7 @@
 		<German>Grafschaft Burgund</German>
 		<Italian>Contea di Borgogna</Italian>
 		<Spanish>Condado de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR19</Tag>
@@ -801,7 +801,7 @@
 		<German>Habsburger Burgund</German>
 		<Italian>Borgogna Asburgica</Italian>
 		<Spanish>Borgoña Habsburguesa</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR20</Tag>
@@ -810,7 +810,7 @@
 		<German>Fürstentum Burgonya</German>
 		<Italian>Principato di Borgogna</Italian>
 		<Spanish>Principado de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR21</Tag>
@@ -819,7 +819,7 @@
 		<German>Provinz Burgund</German>
 		<Italian>Provincia di Borgogna</Italian>
 		<Spanish>Provincia de Borgoña</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Burgundy -->
 	<!-- Byzantium -->
@@ -830,7 +830,7 @@
 		<German>Byzantinisches Reich</German>
 		<Italian>Impero Bizantino</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ01</Tag>
@@ -839,7 +839,7 @@
 		<German>Byzantinisches Reich</German>
 		<Italian>Impero Bizantino</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ02</Tag>
@@ -848,7 +848,7 @@
 		<German>Byzantinisches Reich</German>
 		<Italian>Impero Bizantino</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ03</Tag>
@@ -857,7 +857,7 @@
 		<German>Byzantinisches Reich</German>
 		<Italian>Impero Bizantino</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ04</Tag>
@@ -866,7 +866,7 @@
 		<German>Byzantinisches Reich</German>
 		<Italian>Impero Bizantino</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ05</Tag>
@@ -875,7 +875,7 @@
 		<German>Zweite Römische Republik</German>
 		<Italian>Nuova Repubblica Romana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ06</Tag>
@@ -884,7 +884,7 @@
 		<German>Byzantine Error</German>
 		<Italian>Byzantine Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ07</Tag>
@@ -893,7 +893,7 @@
 		<German>Byzantine Error</German>
 		<Italian>Byzantine Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ08</Tag>
@@ -902,7 +902,7 @@
 		<German>Islamisches Byzantinisches Reich</German>
 		<Italian>Impero Islamico Bizantino</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ09</Tag>
@@ -911,7 +911,7 @@
 		<German>Islamische Römische Republik</German>
 		<Italian>Repubblica Romana Islamica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ10</Tag>
@@ -920,7 +920,7 @@
 		<German>Byzantinisches Thema Konstantinopel</German>
 		<Italian>Thema di Costantinopoli</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ11</Tag>
@@ -929,7 +929,7 @@
 		<German>Herzogtum Griechenland</German>
 		<Italian>Ducato di Grecia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ12</Tag>
@@ -938,7 +938,7 @@
 		<German>Emirat Konstantinopel</German>
 		<Italian>Emirato di Costantinopoli</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ13</Tag>
@@ -947,7 +947,7 @@
 		<German>Herzogtum Neopatria</German>
 		<Italian>Ducato di Neopatria</Italian>
 		<Spanish>Ducado de Neopatria</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ14</Tag>
@@ -956,7 +956,7 @@
 		<German>Warägisches Römisches Reich</German>
 		<Italian>Impero Romano Vichingo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ15</Tag>
@@ -965,7 +965,7 @@
 		<German>Königreich Morea</German>
 		<Italian>Regno di Morea</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ16</Tag>
@@ -974,7 +974,7 @@
 		<German>Russisch-Tsargrad</German>
 		<Italian>Costantinopoli Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ17</Tag>
@@ -983,7 +983,7 @@
 		<German>Oströmisches Reich</German>
 		<Italian>Impero Romano d'Oriente</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ18</Tag>
@@ -992,7 +992,7 @@
 		<German>Grafschaften Griechenlands</German>
 		<Italian>Contee Greche</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ19</Tag>
@@ -1001,7 +1001,7 @@
 		<German>Habsburger Griechenland</German>
 		<Italian>Grecia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ20</Tag>
@@ -1010,7 +1010,7 @@
 		<German>Fürstentum Thrakien</German>
 		<Italian>Principato di Tracia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ21</Tag>
@@ -1019,7 +1019,7 @@
 		<German>Provinz Byzanz</German>
 		<Italian>Pronvincia di Bisanzio</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Byzantium -->
 	<!-- Cordoba -->
@@ -1030,7 +1030,7 @@
 		<German>Andalusische Völker</German>
 		<Italian>Popoli Andalusi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR01</Tag>
@@ -1039,7 +1039,7 @@
 		<German>Herzogtum Andalusien</German>
 		<Italian>Ducato dell' Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR02</Tag>
@@ -1048,7 +1048,7 @@
 		<German>Herzogtum Andalusien</German>
 		<Italian>Ducato dell' Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR03</Tag>
@@ -1057,7 +1057,7 @@
 		<German>Königreich Andalusien</German>
 		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR04</Tag>
@@ -1066,7 +1066,7 @@
 		<German>Königreich Andalusien</German>
 		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR05</Tag>
@@ -1075,7 +1075,7 @@
 		<German>Republik Andalusien</German>
 		<Italian>Repubblica Andalusa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR06</Tag>
@@ -1084,7 +1084,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR07</Tag>
@@ -1093,7 +1093,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR08</Tag>
@@ -1102,7 +1102,7 @@
 		<German>Kalifat Córdoba</German>
 		<Italian>Califfato di Cordoba</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR09</Tag>
@@ -1111,7 +1111,7 @@
 		<German>Taifa Córdoba</German>
 		<Italian>Taifa di Cordoba</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR10</Tag>
@@ -1120,7 +1120,7 @@
 		<German>Exarchat Andalusien</German>
 		<Italian>Esarcato di Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR11</Tag>
@@ -1129,7 +1129,7 @@
 		<German>Herzogtum Andalusien</German>
 		<Italian>Ducato di Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR12</Tag>
@@ -1138,7 +1138,7 @@
 		<German>Emirat Córdoba</German>
 		<Italian>Emirato di Cordoba</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR13</Tag>
@@ -1147,7 +1147,7 @@
 		<German>Reconquista Andalusien</German>
 		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish>Reino de Andalucia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR14</Tag>
@@ -1156,7 +1156,7 @@
 		<German>Nordisch-Andalusien</German>
 		<Italian>Andalusia Nordica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR15</Tag>
@@ -1165,7 +1165,7 @@
 		<German>Venezianisch-Andalusien</German>
 		<Italian>Andalusia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR16</Tag>
@@ -1174,7 +1174,7 @@
 		<German>Russisch-Andalusien</German>
 		<Italian>Andalusia Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR17</Tag>
@@ -1183,7 +1183,7 @@
 		<German>Deutsch-Andalusien</German>
 		<Italian>Andalusia Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR18</Tag>
@@ -1192,7 +1192,7 @@
 		<German>Grafschaft Andalusien</German>
 		<Italian>Contea dell'Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR19</Tag>
@@ -1201,7 +1201,7 @@
 		<German>Habsburger Andalusien</German>
 		<Italian>Andalusia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR20</Tag>
@@ -1210,7 +1210,7 @@
 		<German>Fürstentum Endulus</German>
 		<Italian>Principato dell'Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR21</Tag>
@@ -1219,7 +1219,7 @@
 		<German>Provinz Andalusien</German>
 		<Italian>Pronvincia dell'Andalusia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_MUSLIM</Tag>
@@ -1228,7 +1228,7 @@
 		<German>Hafsidenkalifat</German>
 		<Italian>Califfato degli Hafsidi</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_NONMUSLIM</Tag>
@@ -1237,7 +1237,7 @@
 		<German>Königreich der Hafsiden</German>
 		<Italian>Regno degli Hafsidi</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR30</Tag>
@@ -1246,7 +1246,7 @@
 		<German>Exarchat Tunisia</German>
 		<Italian>Esarcato di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR31</Tag>
@@ -1255,7 +1255,7 @@
 		<German>Herzogtum Tunesien</German>
 		<Italian>Ducato di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR32</Tag>
@@ -1264,7 +1264,7 @@
 		<German>Emirat Tunesien</German>
 		<Italian>Emirato di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR33</Tag>
@@ -1273,7 +1273,7 @@
 		<German>Spanisches Königreich Tunesien</German>
 		<Italian>Regno Spagnolo di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR34</Tag>
@@ -1282,7 +1282,7 @@
 		<German>Nordisch-Tunesien</German>
 		<Italian>Tunisia Vichinga</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR35</Tag>
@@ -1291,7 +1291,7 @@
 		<German>Venezianisch-Tunesien</German>
 		<Italian>Tunisia Veneziana</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR36</Tag>
@@ -1300,7 +1300,7 @@
 		<German>Russisch-Tunesien</German>
 		<Italian>Tunisia Russa</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR37</Tag>
@@ -1309,7 +1309,7 @@
 		<German>Deutsch-Tunesien</German>
 		<Italian>Tunisia Tedesca</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR38</Tag>
@@ -1318,7 +1318,7 @@
 		<German>Grafschaft Tunesien</German>
 		<Italian>Contea di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR39</Tag>
@@ -1327,7 +1327,7 @@
 		<German>Habsburger Tunesien</German>
 		<Italian>Tunisia Asburgica</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR40</Tag>
@@ -1336,7 +1336,7 @@
 		<German>Fürstentum Tunesien</German>
 		<Italian>Principato di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR41</Tag>
@@ -1345,7 +1345,7 @@
 		<German>Provinz Tunesien</German>
 		<Italian>Provincia di Tunisia</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<!-- Cordoba -->
 	<!-- Dutch -->
@@ -1356,7 +1356,7 @@
 		<German>Batavische Völker</German>
 		<Italian>Popoli Batavi</Italian>
 		<Spanish>Pueblos B&#225;tavos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT01</Tag>
@@ -1365,7 +1365,7 @@
 		<German>Königreich der Niederlande</German>
 		<Italian>Regno dei Paesi Bassi</Italian>
 		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT02</Tag>
@@ -1374,7 +1374,7 @@
 		<German>Vereinigtes Königreich der Niederlande</German>
 		<Italian>Regno Unito dei Paesi Bassi</Italian>
 		<Spanish>Reino Unido de los Pa&#237;ses Bajos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT03</Tag>
@@ -1383,7 +1383,7 @@
 		<German>Königreich der Niederlande</German>
 		<Italian>Regno dei Paesi Bassi</Italian>
 		<Spanish>Reino de los Pa&#237;ses Bajos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT04</Tag>
@@ -1392,7 +1392,7 @@
 		<German>Holländisches Reich</German>
 		<Italian>Impero Olandese</Italian>
 		<Spanish>Imperio Holand&#233;s</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT05</Tag>
@@ -1401,7 +1401,7 @@
 		<German>Republik der Sieben Vereinigten Provinzen</German>
 		<Italian>Repubblica delle Sette Province Unite</Italian>
 		<Spanish>Rep&#250;blica de las Siete Pa&#237;ses Bajos Unidos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT06</Tag>
@@ -1410,7 +1410,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT07</Tag>
@@ -1419,7 +1419,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT08</Tag>
@@ -1428,7 +1428,7 @@
 		<German>Sultanat der Niederlande</German>
 		<Italian>Sultanato dei Paesi Bassi</Italian>
 		<Spanish>Sultanato de los Pa&#237;ses Bajos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT09</Tag>
@@ -1437,7 +1437,7 @@
 		<German>Islamische Republik der Niederlande</German>
 		<Italian>Repubblica Islamica dei Paesi Bassi</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de los Pa&#237;ses Bajos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT10</Tag>
@@ -1446,7 +1446,7 @@
 		<German>Exarchat Batavien</German>
 		<Italian>Esarcato di Batavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT11</Tag>
@@ -1455,7 +1455,7 @@
 		<German>Herzogtum Batavien</German>
 		<Italian>Ducato di Batavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT12</Tag>
@@ -1464,7 +1464,7 @@
 		<German>Emirat der Niederlande</German>
 		<Italian>Emirato dei Paesi Bassi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT13</Tag>
@@ -1473,7 +1473,7 @@
 		<German>Spanische Niederlande</German>
 		<Italian>Paesi Bassi Spagnoli</Italian>
 		<Spanish>Pa&#237;ses Bajos Espa&#241;oles</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT14</Tag>
@@ -1482,7 +1482,7 @@
 		<German>Nordische Niederlande</German>
 		<Italian>Frisia Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT15</Tag>
@@ -1491,7 +1491,7 @@
 		<German>Venezianische Niederlande</German>
 		<Italian>Paesi Bassi Veneziani</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT16</Tag>
@@ -1500,7 +1500,7 @@
 		<German>Russische Niederlande</German>
 		<Italian>Paesi Bassi Russi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT17</Tag>
@@ -1509,7 +1509,7 @@
 		<German>Deutsch-Holland</German>
 		<Italian>Olanda Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT18</Tag>
@@ -1518,7 +1518,7 @@
 		<German>Grafschaft Holland</German>
 		<Italian>Contea d'Olanda</Italian>
 		<Spanish>Condado de Holanda</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT19</Tag>
@@ -1527,7 +1527,7 @@
 		<German>Habsburger Niederlande</German>
 		<Italian>Paesi Bassi Asburgici</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT20</Tag>
@@ -1536,7 +1536,7 @@
 		<German>Fürstentum Holland</German>
 		<Italian>Principato d'Olanda</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT21</Tag>
@@ -1545,7 +1545,7 @@
 		<German>Provinz Holland</German>
 		<Italian>Provincia d'Olanda</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Dutch -->
 	<!-- England -->
@@ -1556,7 +1556,7 @@
 		<German>Angelsächsische Völker</German>
 		<Italian>Popoli Anglo-Sassoni</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG01</Tag>
@@ -1565,7 +1565,7 @@
 		<German>Königreich England</German>
 		<Italian>Reino de Inglaterra</Italian>
 		<Spanish>Reino de Inglaterra</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG02</Tag>
@@ -1574,7 +1574,7 @@
 		<German>Königreich Großbritannien</German>
 		<Italian>Regno di Gran Bretagna</Italian>
 		<Spanish>Reino de Gran Breta&#241;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG03</Tag>
@@ -1583,7 +1583,7 @@
 		<German>Vereinigtes Königreich Großbritannien</German>
 		<Italian>Regno Unito di Gran Bretagna</Italian>
 		<Spanish>Reino Unido de Gran Breta&#241;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG04</Tag>
@@ -1592,7 +1592,7 @@
 		<German>Britisches Reich</German>
 		<Italian>Impero Britannico</Italian>
 		<Spanish>Imperio Brit&#225;nico</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG05</Tag>
@@ -1601,7 +1601,7 @@
 		<German>Englisches Commonwealth</German>
 		<Italian>Commonwealth d'Inghilterra</Italian>
 		<Spanish>Commonwealth de Inglaterra</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG06</Tag>
@@ -1610,7 +1610,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG07</Tag>
@@ -1619,7 +1619,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG08</Tag>
@@ -1628,7 +1628,7 @@
 		<German>Sultanat England</German>
 		<Italian>Sultanato d'Inghilterra</Italian>
 		<Spanish>Sultanato de Inglaterra</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG09</Tag>
@@ -1637,7 +1637,7 @@
 		<German>Islamische Republik England</German>
 		<Italian>Repubblica Islamica d'Inghilterra</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG10</Tag>
@@ -1646,7 +1646,7 @@
 		<German>Exarchat Britannien</German>
 		<Italian>Esarcato di Britannia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG11</Tag>
@@ -1655,7 +1655,7 @@
 		<German>Herzogtum La Manche</German>
 		<Italian>Ducato della Manica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG12</Tag>
@@ -1664,7 +1664,7 @@
 		<German>Emirat England</German>
 		<Italian>Emirato d'Inghilterra</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG13</Tag>
@@ -1673,7 +1673,7 @@
 		<German>Spanisches Königreich England</German>
 		<Italian>Regno Spagnolo d'Inghilterra</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG14</Tag>
@@ -1682,7 +1682,7 @@
 		<German>Danelag Britannien</German>
 		<Italian>Danelaw</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG15</Tag>
@@ -1691,7 +1691,7 @@
 		<German>Venezianisch-England</German>
 		<Italian>Inghilterra Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG16</Tag>
@@ -1700,7 +1700,7 @@
 		<German>Russisch-England</German>
 		<Italian>Inghilterra Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG17</Tag>
@@ -1709,7 +1709,7 @@
 		<German>Britisch-Sachsen</German>
 		<Italian>Sassonia Bretone</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG18</Tag>
@@ -1718,7 +1718,7 @@
 		<German>Großbritannien</German>
 		<Italian>Gran Bretagna</Italian>
 		<Spanish>Gran Breta&#241;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG19</Tag>
@@ -1727,7 +1727,7 @@
 		<German>Habsburger England</German>
 		<Italian>Inghilterra Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG20</Tag>
@@ -1736,7 +1736,7 @@
 		<German>Fürstentum Britanya</German>
 		<Italian>Principato di Britanya</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ENG21</Tag>
@@ -1745,7 +1745,7 @@
 		<German>Provinz Angleterre</German>
 		<Italian>Provincia d'Inghilterra</Italian>
 		<Spanish>Provincia de Inglaterra</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- England -->
 	<!-- France -->
@@ -1756,7 +1756,7 @@
 		<German>Fränkische Völker</German>
 		<Italian>Popoli Franchi</Italian>
 		<Spanish>Pueblos Francos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA01</Tag>
@@ -1765,7 +1765,7 @@
 		<German>Westfranken</German>
 		<Italian>Francia Occidentale</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA02</Tag>
@@ -1774,7 +1774,7 @@
 		<German>Frankenreich</German>
 		<Italian>Impero Francese</Italian>
 		<Spanish>Imperio Franc&#233;s</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA03</Tag>
@@ -1783,7 +1783,7 @@
 		<German>Königreich Frankreich</German>
 		<Italian>Regno di Francia</Italian>
 		<Spanish>Reino de Francia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA04</Tag>
@@ -1792,7 +1792,7 @@
 		<German>Französisches Reich</German>
 		<Italian>Impero Francese</Italian>
 		<Spanish>Imperio Franc&#233;s</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA05</Tag>
@@ -1801,7 +1801,7 @@
 		<German>Französische Republik</German>
 		<Italian>Repubblica Francese</Italian>
 		<Spanish>Rep&#250;blica de Francia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA06</Tag>
@@ -1810,7 +1810,7 @@
 		<German>Frankish Error</German>
 		<Italian>Frankish Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA07</Tag>
@@ -1819,7 +1819,7 @@
 		<German>Frankish Error</German>
 		<Italian>Frankish Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA08</Tag>
@@ -1828,7 +1828,7 @@
 		<German>Sultanat Frankreich</German>
 		<Italian>Sultanato di Francia</Italian>
 		<Spanish>Sultanato de Francia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA09</Tag>
@@ -1837,7 +1837,7 @@
 		<German>Französische Islamische Republik</German>
 		<Italian>Repubblica Islamica Francese</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;#mica Franc&#233;s</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA10</Tag>
@@ -1846,7 +1846,7 @@
 		<German>Exarchat Gallia</German>
 		<Italian>Esarcato delle Gallie</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA12</Tag>
@@ -1855,7 +1855,7 @@
 		<German>Emirat Frangistan</German>
 		<Italian>Emirato di Francia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA13</Tag>
@@ -1864,7 +1864,7 @@
 		<German>Vizekönigreich Frankreich</German>
 		<Italian>Vicereame Francese</Italian>
 		<Spanish>Virreinato de Francia</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA14</Tag>
@@ -1873,7 +1873,7 @@
 		<German>Herzogtum Normandie</German>
 		<Italian>Ducato di Normandia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA15</Tag>
@@ -1882,7 +1882,7 @@
 		<German>Venezianisch-Frankreich</German>
 		<Italian>Francia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA16</Tag>
@@ -1891,7 +1891,7 @@
 		<German>Russisch-Frankreich</German>
 		<Italian>Francia Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA17</Tag>
@@ -1900,7 +1900,7 @@
 		<German>Westfrankenreich</German>
 		<Italian>Francia Occidentale</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA18</Tag>
@@ -1909,7 +1909,7 @@
 		<German>Herzogtum Chinon</German>
 		<Italian>Ducato di Chinon</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA19</Tag>
@@ -1918,7 +1918,7 @@
 		<German>Habsburger Frankreich</German>
 		<Italian>Francia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA20</Tag>
@@ -1927,7 +1927,7 @@
 		<German>Fürstentum Frangistan</German>
 		<Italian>Principato di Francia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA21</Tag>
@@ -1936,7 +1936,7 @@
 		<German>Emirat Poitiers</German>
 		<Italian>Emirato di Poitiers</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA22</Tag>
@@ -1945,7 +1945,7 @@
 		<German>Westfrankenreich</German>
 		<Italian>Francia Occidentale</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA23</Tag>
@@ -1954,7 +1954,7 @@
 		<German>Provinz Frankreich</German>
 		<Italian>Provincia di Francia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- France -->
 	<!-- Genoa -->
@@ -1965,7 +1965,7 @@
 		<German>Genuanische Völker</German>
 		<Italian>Popoli Liguri</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN01</Tag>
@@ -1974,7 +1974,7 @@
 		<German>Herzogtum Genua</German>
 		<Italian>Ducato di Genova</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN02</Tag>
@@ -1983,7 +1983,7 @@
 		<German>Erlauchtestes Herzogtum Genua</German>
 		<Italian>Serenissima Repubblica di Genova</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN03</Tag>
@@ -1992,7 +1992,7 @@
 		<German>Herzogtum Genua</German>
 		<Italian>Ducato di Genova</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN04</Tag>
@@ -2001,7 +2001,7 @@
 		<German>Genuanisches Reich</German>
 		<Italian>Impero Genovese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN05</Tag>
@@ -2010,7 +2010,7 @@
 		<German>Erlauchteste Republik Genua</German>
 		<Italian>Serenissima Repubblica di Genova</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN06</Tag>
@@ -2019,7 +2019,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN07</Tag>
@@ -2028,7 +2028,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN08</Tag>
@@ -2037,7 +2037,7 @@
 		<German>Sultanat Genua</German>
 		<Italian>Sultanato di Genova</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN09</Tag>
@@ -2046,7 +2046,7 @@
 		<German>Genuanische Islamische Republik </German>
 		<Italian>Repubblica Islamica Genovese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN10</Tag>
@@ -2055,7 +2055,7 @@
 		<German>Exarchat Westitalien</German>
 		<Italian>Esarcato dell'Italia Occidentale</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN11</Tag>
@@ -2064,7 +2064,7 @@
 		<German>Herzogtum Savoyen</German>
 		<Italian>Ducato di Savoia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN12</Tag>
@@ -2073,7 +2073,7 @@
 		<German>Emirat Genua</German>
 		<Italian>Emirato di Genova</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN13</Tag>
@@ -2082,7 +2082,7 @@
 		<German>Spanisch-Mittelmeer</German>
 		<Italian>Mediterraneo Spagnolo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN14</Tag>
@@ -2091,7 +2091,7 @@
 		<German>Nordisch-Westlombardei</German>
 		<Italian>Lombardia Occidentale Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN15</Tag>
@@ -2100,7 +2100,7 @@
 		<German>Venezianisch-Westitalien</German>
 		<Italian>Italia Occidentale Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN16</Tag>
@@ -2109,7 +2109,7 @@
 		<German>Russisch-Genua</German>
 		<Italian>Genova Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN17</Tag>
@@ -2118,7 +2118,7 @@
 		<German>Deutsch-Genua</German>
 		<Italian>Genova Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN18</Tag>
@@ -2127,7 +2127,7 @@
 		<German>Grafschaften Liguriens</German>
 		<Italian>Contea di Liguria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN19</Tag>
@@ -2136,7 +2136,7 @@
 		<German>Habsburger Genua</German>
 		<Italian>Genova Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN20</Tag>
@@ -2145,7 +2145,7 @@
 		<German>Fürstentum Ligurya</German>
 		<Italian>Principato di Ligurya</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GEN21</Tag>
@@ -2154,7 +2154,7 @@
 		<German>Provinz Ligurien</German>
 		<Italian>Provincia di Liguria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Genoa -->
 	<!-- Germany -->
@@ -2165,7 +2165,7 @@
 		<German>Germanische Völker</German>
 		<Italian>Popoli Germanici</Italian>
 		<Spanish>Pueblos Germ&#225;nicos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER01</Tag>
@@ -2174,7 +2174,7 @@
 		<German>Deutsches Königreich</German>
 		<Italian>Regno di Germania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER02</Tag>
@@ -2183,7 +2183,7 @@
 		<German>Deutsches Königreich</German>
 		<Italian>Regno di Germania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER03</Tag>
@@ -2192,7 +2192,7 @@
 		<German>Heiliges Römisches Reich</German>
 		<Italian>Sacro Romano Impero</Italian>
 		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER04</Tag>
@@ -2201,7 +2201,7 @@
 		<German>Heiliges Römisches Reich</German>
 		<Italian>Sacro Romano Impero</Italian>
 		<Spanish>Sacro Imperio Romano Germ&#225;nico</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER05</Tag>
@@ -2210,7 +2210,7 @@
 		<German>Deutsche Republik</German>
 		<Italian>Repubblica di Germania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER06</Tag>
@@ -2219,7 +2219,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER07</Tag>
@@ -2228,7 +2228,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER08</Tag>
@@ -2237,7 +2237,7 @@
 		<German>Sultanat Deutschland</German>
 		<Italian>Sultanato di Germania</Italian>
 		<Spanish>Sultanato de Alemania</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER09</Tag>
@@ -2246,7 +2246,7 @@
 		<German>Deutsche Islamische Republik</German>
 		<Italian>Repubblica Islamica di Germania</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica de Alemania</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER10</Tag>
@@ -2255,7 +2255,7 @@
 		<German>Exarchat Germania</German>
 		<Italian>Esarcato di Germania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER11</Tag>
@@ -2264,7 +2264,7 @@
 		<German>Herzogtum am Rhein</German>
 		<Italian>Ducato del Reno</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER12</Tag>
@@ -2273,7 +2273,7 @@
 		<German>Emirat Germania</German>
 		<Italian>Emirato di Germania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER13</Tag>
@@ -2282,7 +2282,7 @@
 		<German>Spanisches Königreich Deutschland</German>
 		<Italian>Regno Spagnolo di Germania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER14</Tag>
@@ -2291,7 +2291,7 @@
 		<German>Groß-Dänemark</German>
 		<Italian>Grande Danimarca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER15</Tag>
@@ -2300,7 +2300,7 @@
 		<German>Venezianisch-Deutschland</German>
 		<Italian>Germania Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER16</Tag>
@@ -2309,7 +2309,7 @@
 		<German>Russisch-Deutschland</German>
 		<Italian>Germania Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER18</Tag>
@@ -2318,7 +2318,7 @@
 		<German>Deutsche Grafschaften</German>
 		<Italian>Contea di Germania</Italian>
 		<Spanish>Condado de Alemania</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER19</Tag>
@@ -2327,7 +2327,7 @@
 		<German>Großdeutsches Reich Nord</German>
 		<Italian>Grande Germania del Nord</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER20</Tag>
@@ -2336,7 +2336,7 @@
 		<German>Fürstentum Almanya</German>
 		<Italian>Principato di Almanya</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER21</Tag>
@@ -2345,7 +2345,7 @@
 		<German>Provinz Germanien</German>
 		<Italian>Provincia di Germania</Italian>
 		<Spanish>Provincia de Germania</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Germany -->
 	<!-- Hungary -->
@@ -2356,7 +2356,7 @@
 		<German>Magyarische Völker</German>
 		<Italian>Popoli Magiari</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN01</Tag>
@@ -2365,7 +2365,7 @@
 		<German>Königreich Ungarn</German>
 		<Italian>Regno d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN02</Tag>
@@ -2374,7 +2374,7 @@
 		<German>Ungarisches Reich</German>
 		<Italian>Impero Ungarico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN03</Tag>
@@ -2383,7 +2383,7 @@
 		<German>Königreich Ungarn</German>
 		<Italian>Regno d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN04</Tag>
@@ -2392,7 +2392,7 @@
 		<German>Ungarisches Reich</German>
 		<Italian>Impero Ungarico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN05</Tag>
@@ -2401,7 +2401,7 @@
 		<German>Republik Ungarn</German>
 		<Italian>Repubblica d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN06</Tag>
@@ -2410,7 +2410,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN07</Tag>
@@ -2419,7 +2419,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN08</Tag>
@@ -2428,7 +2428,7 @@
 		<German>Sultanat Ungarn</German>
 		<Italian>Sultanato d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN09</Tag>
@@ -2437,7 +2437,7 @@
 		<German>Islamische Republik Ungarn</German>
 		<Italian>Repubblica Islamica d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN10</Tag>
@@ -2446,7 +2446,7 @@
 		<German>Exarchat Sirmium</German>
 		<Italian>Esarcato di Sirmio</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN11</Tag>
@@ -2455,7 +2455,7 @@
 		<German>Herzogtum Ungarn</German>
 		<Italian>Ducato d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN12</Tag>
@@ -2464,7 +2464,7 @@
 		<German>Emirat Ungarn</German>
 		<Italian>Emirato d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN13</Tag>
@@ -2473,7 +2473,7 @@
 		<German>Spanisches Königreich Ungarn</German>
 		<Italian>Regno Spagnolo d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN14</Tag>
@@ -2482,7 +2482,7 @@
 		<German>Nordisch-Ungarn</German>
 		<Italian>Ungheria Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN15</Tag>
@@ -2491,7 +2491,7 @@
 		<German>Venezianisch-Ungarn</German>
 		<Italian>Ungheria Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN16</Tag>
@@ -2500,7 +2500,7 @@
 		<German>Russisch-Ungarn</German>
 		<Italian>Ungheria Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN17</Tag>
@@ -2509,7 +2509,7 @@
 		<German>Deutsch-Ungarn</German>
 		<Italian>Ungheria Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN18</Tag>
@@ -2518,7 +2518,7 @@
 		<German>Grafschaften Ungarns</German>
 		<Italian>Contea d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN19</Tag>
@@ -2527,7 +2527,7 @@
 		<German>Habsburger Königreich Ungarn</German>
 		<Italian>Regno Asburgico d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN20</Tag>
@@ -2536,7 +2536,7 @@
 		<German>Fürstentum Transsylvanien</German>
 		<Italian>Principato di Transilvania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN21</Tag>
@@ -2545,7 +2545,7 @@
 		<German>Provinz Ungarn</German>
 		<Italian>Pronvincia d'Ungheria</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Hungary -->
 	<!-- Kievan Rus -->
@@ -2556,7 +2556,7 @@
 		<German>Kiewer Völker</German>
 		<Italian>Popoli Kieviti</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE01</Tag>
@@ -2565,7 +2565,7 @@
 		<German>Kiewer Rus</German>
 		<Italian>Rus' di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE02</Tag>
@@ -2574,7 +2574,7 @@
 		<German>Kiewer Rus</German>
 		<Italian>Rus' di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE03</Tag>
@@ -2583,7 +2583,7 @@
 		<German>Kiewer Russland</German>
 		<Italian>Russia Kievita</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE04</Tag>
@@ -2592,7 +2592,7 @@
 		<German>Kiewer Russland</German>
 		<Italian>Russia Kievita</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE05</Tag>
@@ -2601,7 +2601,7 @@
 		<German>Kiewer Republik</German>
 		<Italian>Repubblica di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE06</Tag>
@@ -2610,7 +2610,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE07</Tag>
@@ -2619,7 +2619,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE08</Tag>
@@ -2628,7 +2628,7 @@
 		<German>Sultanat Kiew</German>
 		<Italian>Sultanato di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE09</Tag>
@@ -2637,7 +2637,7 @@
 		<German>Kiewer Islamische Republik</German>
 		<Italian>Repubblica Islamica di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE10</Tag>
@@ -2646,7 +2646,7 @@
 		<German>Exarchat Kiew</German>
 		<Italian>Esarcato di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE11</Tag>
@@ -2655,7 +2655,7 @@
 		<German>Herzogtum Kiew</German>
 		<Italian>Ducato di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE12</Tag>
@@ -2664,7 +2664,7 @@
 		<German>Emirat Kiew</German>
 		<Italian>Emirato di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE13</Tag>
@@ -2673,7 +2673,7 @@
 		<German>Spanisch-Kiew</German>
 		<Italian>Kiev Spagnola</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE14</Tag>
@@ -2682,7 +2682,7 @@
 		<German>Warägisch-Kiew</German>
 		<Italian>Kiev Variaga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE15</Tag>
@@ -2691,7 +2691,7 @@
 		<German>Venezianisch-Kiew</German>
 		<Italian>Kiev Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE16</Tag>
@@ -2700,7 +2700,7 @@
 		<German>Süd Russland</German>
 		<Italian>Russia Meridionale</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE17</Tag>
@@ -2709,7 +2709,7 @@
 		<German>Deutsch-Kiew</German>
 		<Italian>Kiev Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE18</Tag>
@@ -2718,7 +2718,7 @@
 		<German>Grafschaften der Ukraine</German>
 		<Italian>Contee dell'Ucraina</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE19</Tag>
@@ -2727,7 +2727,7 @@
 		<German>Habsburger Kiew</German>
 		<Italian>Kiev Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE20</Tag>
@@ -2736,7 +2736,7 @@
 		<German>Fürstentum Kiew</German>
 		<Italian>Principato di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE21</Tag>
@@ -2745,7 +2745,7 @@
 		<German>Provinz Kiew</German>
 		<Italian>Provincia di Kiev</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Kievan Rus -->
 	<!-- Lithuania -->
@@ -2756,7 +2756,7 @@
 		<German>Lithauische Völker</German>
 		<Italian>Popoli Lituani</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT01</Tag>
@@ -2765,7 +2765,7 @@
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT02</Tag>
@@ -2774,7 +2774,7 @@
 		<German>Großherzogtum Litauen</German>
 		<Italian>Granducato di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT03</Tag>
@@ -2783,7 +2783,7 @@
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT04</Tag>
@@ -2792,7 +2792,7 @@
 		<German>Litauen</German>
 		<Italian>Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT05</Tag>
@@ -2801,7 +2801,7 @@
 		<German>Republik Litauen</German>
 		<Italian>Repubblica di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT06</Tag>
@@ -2810,7 +2810,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT07</Tag>
@@ -2819,7 +2819,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT08</Tag>
@@ -2828,7 +2828,7 @@
 		<German>Sultanat Litauen</German>
 		<Italian>Sultanato di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT09</Tag>
@@ -2837,7 +2837,7 @@
 		<German>Islamische Republik Litauen</German>
 		<Italian>Repubblica Islamica di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT10</Tag>
@@ -2846,7 +2846,7 @@
 		<German>Exarchat Litauen</German>
 		<Italian>Esarcato di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT11</Tag>
@@ -2855,7 +2855,7 @@
 		<German>Herzogtum Litauen</German>
 		<Italian>Ducato di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT12</Tag>
@@ -2864,7 +2864,7 @@
 		<German>Emirat Litauen</German>
 		<Italian>Emirato di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT13</Tag>
@@ -2873,7 +2873,7 @@
 		<German>Spanisches Baltikum</German>
 		<Italian>Baltico Spagnolo</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT14</Tag>
@@ -2882,7 +2882,7 @@
 		<German>Nordisches Baltikum</German>
 		<Italian>Baltico Vichingo</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT15</Tag>
@@ -2891,7 +2891,7 @@
 		<German>Venezianisch-Litauen</German>
 		<Italian>Lituania Veneziana</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT16</Tag>
@@ -2900,7 +2900,7 @@
 		<German>Russisch-Litauen</German>
 		<Italian>Lituania Russa</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT17</Tag>
@@ -2909,7 +2909,7 @@
 		<German>Deutsches Baltikum</German>
 		<Italian>Baltico Tedesco</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT18</Tag>
@@ -2918,7 +2918,7 @@
 		<German>Grafschaft Litauen</German>
 		<Italian>Contea di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT19</Tag>
@@ -2927,7 +2927,7 @@
 		<German>Habsburger Baltikum</German>
 		<Italian>Baltico Asburgico</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT20</Tag>
@@ -2936,7 +2936,7 @@
 		<German>Fürstentum Litauen</German>
 		<Italian>Principato di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_LIT21</Tag>
@@ -2945,7 +2945,7 @@
 		<German>Provinz Litauen</German>
 		<Italian>Provincia di Lituania</Italian>
 		<Spanish>.</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Lithuania -->
 	<!-- Muscovy -->
@@ -2956,7 +2956,7 @@
 		<German>Moskowitische Völker</German>
 		<Italian>Popoli Moscoviti</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS01</Tag>
@@ -2965,7 +2965,7 @@
 		<German>Fürstentum Moskau</German>
 		<Italian>Principato di Mosca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS02</Tag>
@@ -2974,7 +2974,7 @@
 		<German>Großfürstentum Moskau</German>
 		<Italian>Granducato di Mosca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS03</Tag>
@@ -2983,7 +2983,7 @@
 		<German>Zarentum Russland</German>
 		<Italian>Zarato di Russia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS04</Tag>
@@ -2992,7 +2992,7 @@
 		<German>Zarentum Russland</German>
 		<Italian>Zarato di Russia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS05</Tag>
@@ -3001,7 +3001,7 @@
 		<German>Russische Republik</German>
 		<Italian>Repubblica Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS06</Tag>
@@ -3010,7 +3010,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS07</Tag>
@@ -3019,7 +3019,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS08</Tag>
@@ -3028,7 +3028,7 @@
 		<German>Islamisches Zarentum Russland</German>
 		<Italian>Zarato Islamico di Russia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS09</Tag>
@@ -3037,7 +3037,7 @@
 		<German>Russische Islamische Republik</German>
 		<Italian>Repubblica Islamica Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS10</Tag>
@@ -3046,7 +3046,7 @@
 		<German>Exarchat Moscovia</German>
 		<Italian>Esarcato di Moscovia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS11</Tag>
@@ -3055,7 +3055,7 @@
 		<German>Herzogtum Moskowien</German>
 		<Italian>Ducato di Mosca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS12</Tag>
@@ -3064,7 +3064,7 @@
 		<German>Emirat Moskau</German>
 		<Italian>Emirato di Mosca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS13</Tag>
@@ -3073,7 +3073,7 @@
 		<German>Spanisch-Moskowien</German>
 		<Italian>Moscovia Spagnola</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS14</Tag>
@@ -3082,7 +3082,7 @@
 		<German>Warägisch-Moskowien</German>
 		<Italian>Moscovia Variaga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS15</Tag>
@@ -3091,7 +3091,7 @@
 		<German>Venezianisch-Moskowien</German>
 		<Italian>Moscovia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS16</Tag>
@@ -3100,7 +3100,7 @@
 		<German>Fürstentum Wladimir-Susdal</German>
 		<Italian>Principato di Vladimir-Suzdal</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS17</Tag>
@@ -3109,7 +3109,7 @@
 		<German>Deutsch-Moskowien</German>
 		<Italian>Moscovia Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS18</Tag>
@@ -3118,7 +3118,7 @@
 		<German>Grafschaften Moskowiens</German>
 		<Italian>Contea di Mosca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS19</Tag>
@@ -3127,7 +3127,7 @@
 		<German>Habsburger Moskowien</German>
 		<Italian>Moscovia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS20</Tag>
@@ -3136,7 +3136,7 @@
 		<German>Fürstentum Moskova</German>
 		<Italian>Principato di Mosca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOS21</Tag>
@@ -3145,7 +3145,7 @@
 		<German>Provinz Moskowien</German>
 		<Italian>Provincia di Moscovia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Muscovy -->
 	<!-- Norse -->
@@ -3156,7 +3156,7 @@
 		<German>Skandinavische Völker</German>
 		<Italian>Popoli Scandinavi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR01</Tag>
@@ -3165,7 +3165,7 @@
 		<German>Königreich Dänemark</German>
 		<Italian>Regno di Danimarca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR02</Tag>
@@ -3174,7 +3174,7 @@
 		<German>Reich Dänemarks und Norwegens</German>
 		<Italian>Impero di Danimarca e Norvegia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR03</Tag>
@@ -3183,7 +3183,7 @@
 		<German>Königreiche Dänemark und Norwegen</German>
 		<Italian>Regni di Danimarca e Norvegia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR04</Tag>
@@ -3192,7 +3192,7 @@
 		<German>Dänische Republik</German>
 		<Italian>Repubblica Danese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR05</Tag>
@@ -3201,7 +3201,7 @@
 		<German>Dänisch-Norwegische Republik</German>
 		<Italian>Repubbliche di Norvegia e Danimarca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR06</Tag>
@@ -3210,7 +3210,7 @@
 		<German>Königreich der Wikinger</German>
 		<Italian>Regni Vichinghi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR07</Tag>
@@ -3219,7 +3219,7 @@
 		<German>Wikingerrepublik</German>
 		<Italian>Regni Vichinghi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR08</Tag>
@@ -3228,7 +3228,7 @@
 		<German>Islamisch-Nordische Sultanate</German>
 		<Italian>Sultanati Islamici del Nord</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR09</Tag>
@@ -3237,7 +3237,7 @@
 		<German>Nordisch-Islamische Republik</German>
 		<Italian>Repubblica Islamica del Nord</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR10</Tag>
@@ -3246,7 +3246,7 @@
 		<German>Exarchat Skandinavia</German>
 		<Italian>Esarcato di Scandinavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR11</Tag>
@@ -3255,7 +3255,7 @@
 		<German>Herzogtum Dänemark</German>
 		<Italian>Ducato di Danimarca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR12</Tag>
@@ -3264,7 +3264,7 @@
 		<German>Skandinavisches Emirat</German>
 		<Italian>Emirato della Scandinavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR13</Tag>
@@ -3273,7 +3273,7 @@
 		<German>Spanisches Königreich Skandinavien</German>
 		<Italian>Regno Spagnolo di Scandinavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR14</Tag>
@@ -3282,7 +3282,7 @@
 		<German>Königreich Dänemark</German>
 		<Italian>Regno di Danimarca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR15</Tag>
@@ -3291,7 +3291,7 @@
 		<German>Venezianisch-Skandinavien</German>
 		<Italian>Scandinavia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR16</Tag>
@@ -3300,7 +3300,7 @@
 		<German>Russisch-Skandinavien</German>
 		<Italian>Scandinavia Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR17</Tag>
@@ -3309,7 +3309,7 @@
 		<German>Deutsch-Skandinavien</German>
 		<Italian>Scandinavia Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR18</Tag>
@@ -3318,7 +3318,7 @@
 		<German>Grafschaften Skandinaviens</German>
 		<Italian>Contee di Scandinavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR19</Tag>
@@ -3327,7 +3327,7 @@
 		<German>Habsburger Skandinavien</German>
 		<Italian>Scandinavia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR20</Tag>
@@ -3336,7 +3336,7 @@
 		<German>Fürstentum Iskandinavya</German>
 		<Italian>Principato di Iskandinavya</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR21</Tag>
@@ -3345,7 +3345,7 @@
 		<German>Provinz Skandinavien</German>
 		<Italian>Provincia di Scandinavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR22</Tag>
@@ -3354,7 +3354,7 @@
 		<German>Kalmarer Union</German>
 		<Italian>Unione di Kalmar</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR23</Tag>
@@ -3363,7 +3363,7 @@
 		<German>Kalmarer Republik</German>
 		<Italian>Repubblica di Kalmar</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Norse -->
 	<!-- Poland -->
@@ -3374,7 +3374,7 @@
 		<German>Polanische Völker</German>
 		<Italian>Popoli Polacchi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL01</Tag>
@@ -3383,7 +3383,7 @@
 		<German>Königreich Polen</German>
 		<Italian>Regno di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL02</Tag>
@@ -3392,7 +3392,7 @@
 		<German>Polnisches Gemeinwesen</German>
 		<Italian>Commonwealth Polacco</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL03</Tag>
@@ -3401,7 +3401,7 @@
 		<German>Königreich Polen</German>
 		<Italian>Regno di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL04</Tag>
@@ -3410,7 +3410,7 @@
 		<German>Polnisches Gemeinwesen</German>
 		<Italian>Commonwealth Polacco</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL05</Tag>
@@ -3419,7 +3419,7 @@
 		<German>Republik Polen</German>
 		<Italian>Repubblica di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL06</Tag>
@@ -3428,7 +3428,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL07</Tag>
@@ -3437,7 +3437,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL08</Tag>
@@ -3446,7 +3446,7 @@
 		<German>Sultanat Polen</German>
 		<Italian>Sultanato di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL09</Tag>
@@ -3455,7 +3455,7 @@
 		<German>Islamische Republik Polen</German>
 		<Italian>Repubblica Islamica di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL10</Tag>
@@ -3464,7 +3464,7 @@
 		<German>Exarchat Polonia</German>
 		<Italian>Esarcato di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL11</Tag>
@@ -3473,7 +3473,7 @@
 		<German>Herzogtum Warschau</German>
 		<Italian>Ducato di Varsavia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL12</Tag>
@@ -3482,7 +3482,7 @@
 		<German>Emirat Polen</German>
 		<Italian>Emirato di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL13</Tag>
@@ -3491,7 +3491,7 @@
 		<German>Spanisches Königreich Polen</German>
 		<Italian>Regno Spagnolo di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL14</Tag>
@@ -3500,7 +3500,7 @@
 		<German>Südbaltischer Staat</German>
 		<Italian>Stati Baltici Meridionali</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL15</Tag>
@@ -3509,7 +3509,7 @@
 		<German>Venezianisch-Polen</German>
 		<Italian>Polonia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL16</Tag>
@@ -3518,7 +3518,7 @@
 		<German>Kongress Polen</German>
 		<Italian>Congresso Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL17</Tag>
@@ -3527,7 +3527,7 @@
 		<German>Großherzogtum Posen</German>
 		<Italian>Granducato di Posen</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL18</Tag>
@@ -3536,7 +3536,7 @@
 		<German>Grafschaften Polens</German>
 		<Italian>Contea di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL19</Tag>
@@ -3545,7 +3545,7 @@
 		<German>Habsburger Polen</German>
 		<Italian>Polonia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL20</Tag>
@@ -3554,7 +3554,7 @@
 		<German>Fürstentum Polonya</German>
 		<Italian>Principato di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POL21</Tag>
@@ -3563,7 +3563,7 @@
 		<German>Provinz Polen</German>
 		<Italian>Provincia di Polonia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Poland -->
 	<!-- Portugal -->
@@ -3574,7 +3574,7 @@
 		<German>Lusitanische Völker</German>
 		<Italian>Popoli Lusitani</Italian>
 		<Spanish>Pueblos Lusitanos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR01</Tag>
@@ -3583,7 +3583,7 @@
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
 		<Spanish>Reino de Portugal</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR02</Tag>
@@ -3592,7 +3592,7 @@
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
 		<Spanish>Reino de Portugal</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR03</Tag>
@@ -3601,7 +3601,7 @@
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
 		<Spanish>Reino de Portugal</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR04</Tag>
@@ -3610,7 +3610,7 @@
 		<German>Portugiesisches Reich</German>
 		<Italian>Impero Portoghese</Italian>
 		<Spanish>Imperio Portugu&#233;s</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR05</Tag>
@@ -3619,7 +3619,7 @@
 		<German>Portugiesische Republik </German>
 		<Italian>Repubblica Portoghese</Italian>
 		<Spanish>Rep&#250;blica Portuguesa</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR06</Tag>
@@ -3628,7 +3628,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR07</Tag>
@@ -3637,7 +3637,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR08</Tag>
@@ -3646,7 +3646,7 @@
 		<German>Sultanat Portugal</German>
 		<Italian>Sultanato del Portogallo</Italian>
 		<Spanish>Sultanato de Portugal</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR09</Tag>
@@ -3655,7 +3655,7 @@
 		<German>Portugiesische Islamische Republik</German>
 		<Italian>Repubblica Islamica Portoghese</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica Portuguesa</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR10</Tag>
@@ -3664,7 +3664,7 @@
 		<German>Exarchat Lusitanien</German>
 		<Italian>Esarcato di Lusitania</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR11</Tag>
@@ -3673,7 +3673,7 @@
 		<German>Herzogtum Portugal</German>
 		<Italian>Ducato del Portogallo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR12</Tag>
@@ -3682,7 +3682,7 @@
 		<German>Emirat Portugal</German>
 		<Italian>Emirato del Portogallo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR13</Tag>
@@ -3691,7 +3691,7 @@
 		<German>Iberische Union</German>
 		<Italian>Unione Iberica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR14</Tag>
@@ -3700,7 +3700,7 @@
 		<German>Suebisches Königreich Portugal</German>
 		<Italian>Regno Svevo del Portogallo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR15</Tag>
@@ -3709,7 +3709,7 @@
 		<German>Venezianisch-Portugal</German>
 		<Italian>Portogallo Veneziano</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR16</Tag>
@@ -3718,7 +3718,7 @@
 		<German>Russisch-Portugal</German>
 		<Italian>Portogallo Russo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR17</Tag>
@@ -3727,7 +3727,7 @@
 		<German>Deutsch-Portugal</German>
 		<Italian>Portogallo Tedesco</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR18</Tag>
@@ -3736,7 +3736,7 @@
 		<German>Grafschaft Portugal</German>
 		<Italian>Contea del Portogallo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR19</Tag>
@@ -3745,7 +3745,7 @@
 		<German>Habsburger Portugal</German>
 		<Italian>Portogallo Asburgico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR20</Tag>
@@ -3754,7 +3754,7 @@
 		<German>Fürstentum Portekiz</German>
 		<Italian>Principato del Portekiz</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR21</Tag>
@@ -3763,7 +3763,7 @@
 		<German>Provinz Portugal</German>
 		<Italian>Provincia del Portogallo</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Portugal -->
 	<!-- Spain -->
@@ -3774,7 +3774,7 @@
 		<German>Westgotische Völker</German>
 		<Italian>Popoli dell'Asturia</Italian>
 		<Spanish>Pueblos Asturianos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN01</Tag>
@@ -3783,7 +3783,7 @@
 		<German>Königreich Le&#243;n</German>
 		<Italian>Regno di Le&#243;n</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN02</Tag>
@@ -3792,7 +3792,7 @@
 		<German>Königreich Spanien</German>
 		<Italian>Regno di Spagna</Italian>
 		<Spanish>Reino de Espa&#241;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN03</Tag>
@@ -3801,7 +3801,7 @@
 		<German>Krone von Kastilien</German>
 		<Italian>Corona di Castiglia</Italian>
 		<Spanish>Corona de Castilla</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN04</Tag>
@@ -3810,7 +3810,7 @@
 		<German>Königreich Spanien</German>
 		<Italian>Regno di Spagna</Italian>
 		<Spanish>Reino de Espa&#241;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN05</Tag>
@@ -3819,7 +3819,7 @@
 		<German>Republik Spanien</German>
 		<Italian>Repubblica Spagnola</Italian>
 		<Spanish>Rep&#250;blica Espa&#421;ola</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN06</Tag>
@@ -3828,7 +3828,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN07</Tag>
@@ -3837,7 +3837,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN08</Tag>
@@ -3846,7 +3846,7 @@
 		<German>Emirat Spanien</German>
 		<Italian>Emirato di Spagna</Italian>
 		<Spanish>Emirato de Espa&#241;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN09</Tag>
@@ -3855,7 +3855,7 @@
 		<German>Islamische Republik Spanien</German>
 		<Italian>Repubblica Islamica Spagnola</Italian>
 		<Spanish>Rep&#250;blica Isl&#225;mica Espa&#241;ola</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN10</Tag>
@@ -3864,7 +3864,7 @@
 		<German>Exarchat Hispanien</German>
 		<Italian>Esarcato di Spagna</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN11</Tag>
@@ -3873,7 +3873,7 @@
 		<German>Herzogtum León</German>
 		<Italian>Ducato di Leòn</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN12</Tag>
@@ -3882,7 +3882,7 @@
 		<German>Al-Andalus</German>
 		<Italian>Al-Andalus</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN13</Tag>
@@ -3891,7 +3891,7 @@
 		<German>Kastilien</German>
 		<Italian>Castiglia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN14</Tag>
@@ -3900,7 +3900,7 @@
 		<German>Westgotisches Königreich Spanien</German>
 		<Italian>Regno Visigoto di Spagna</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN15</Tag>
@@ -3909,7 +3909,7 @@
 		<German>Venezianisch-Spanien</German>
 		<Italian>Spagna Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN16</Tag>
@@ -3918,7 +3918,7 @@
 		<German>Russisch-Spanien</German>
 		<Italian>Spagna Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN17</Tag>
@@ -3927,7 +3927,7 @@
 		<German>Deutsch-Spanien</German>
 		<Italian>Spagna Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN18</Tag>
@@ -3936,7 +3936,7 @@
 		<German>Grafschaften Spaniens</German>
 		<Italian>Contee di Spagna</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN19</Tag>
@@ -3945,7 +3945,7 @@
 		<German>Habsburger Spanien</German>
 		<Italian>Spagna Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN20</Tag>
@@ -3954,7 +3954,7 @@
 		<German>Fürstentum Ispanya</German>
 		<Italian>Principato d'Iberia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN21</Tag>
@@ -3963,7 +3963,7 @@
 		<German>Provinz Spanien</German>
 		<Italian>Provincia di Hispani</Italian>
 		<Spanish>Provincia de Hispania</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Spain -->
 	<!-- Sweden -->
@@ -3974,7 +3974,7 @@
 		<German>Schwedische Völker</German>
 		<Italian>Popoli Svedesi</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE01</Tag>
@@ -3983,7 +3983,7 @@
 		<German>Königreich Schweden</German>
 		<Italian>Regno di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE02</Tag>
@@ -3992,7 +3992,7 @@
 		<German>Schwedisches Reich</German>
 		<Italian>Impero Svedese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE03</Tag>
@@ -4001,7 +4001,7 @@
 		<German>Königreich Schweden</German>
 		<Italian>Regno di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE04</Tag>
@@ -4010,7 +4010,7 @@
 		<German>Schwedisches Reich</German>
 		<Italian>Impero Svedese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE05</Tag>
@@ -4019,7 +4019,7 @@
 		<German>Republik Schweden</German>
 		<Italian>Repubblica di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE06</Tag>
@@ -4028,7 +4028,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE07</Tag>
@@ -4037,7 +4037,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE08</Tag>
@@ -4046,7 +4046,7 @@
 		<German>Sultanat Schweden</German>
 		<Italian>Sultanato di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE09</Tag>
@@ -4055,7 +4055,7 @@
 		<German>Islamische Republik Schweden</German>
 		<Italian>Repubblica Islamica di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE10</Tag>
@@ -4064,7 +4064,7 @@
 		<German>Exarchat Suedia</German>
 		<Italian>Esarcato di Suedia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE11</Tag>
@@ -4073,7 +4073,7 @@
 		<German>Herzogtum Schweden</German>
 		<Italian>Ducato di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE12</Tag>
@@ -4082,7 +4082,7 @@
 		<German>Emirat Schweden</German>
 		<Italian>Emirato di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE13</Tag>
@@ -4091,7 +4091,7 @@
 		<German>Spanisches Königreich Schweden</German>
 		<Italian>Regno Spagnolo di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE14</Tag>
@@ -4100,7 +4100,7 @@
 		<German>Kalmar Schweden</German>
 		<Italian>Kalmar Svedese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE15</Tag>
@@ -4109,7 +4109,7 @@
 		<German>Venezianisch-Schweden</German>
 		<Italian>Svezia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE16</Tag>
@@ -4118,7 +4118,7 @@
 		<German>Russisch-Schweden</German>
 		<Italian>Svezia Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE17</Tag>
@@ -4127,7 +4127,7 @@
 		<German>Deutsch-Schweden</German>
 		<Italian>Svezia Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE18</Tag>
@@ -4136,7 +4136,7 @@
 		<German>Grafschaften Schwedens</German>
 		<Italian>Contee di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE19</Tag>
@@ -4145,7 +4145,7 @@
 		<German>Habsburger Schweden</German>
 		<Italian>Svezia Asburgica</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE20</Tag>
@@ -4154,7 +4154,7 @@
 		<German>Fürstentum Isves</German>
 		<Italian>Principato di Isves</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE21</Tag>
@@ -4163,7 +4163,7 @@
 		<German>Provinz Schweden</German>
 		<Italian>Provincia di Svezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Sweden -->
 	<!-- Turkey -->
@@ -4174,7 +4174,7 @@
 		<German>Turkvölker</German>
 		<Italian>Popoli Turchi</Italian>
 		<Spanish>Pueblos Turcos</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR01</Tag>
@@ -4183,7 +4183,7 @@
 		<German>Türkisches Reich</German>
 		<Italian>Impero Turco</Italian>
 		<Spanish>Imperio Turco</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR02</Tag>
@@ -4192,7 +4192,7 @@
 		<German>Türkisches Reich</German>
 		<Italian>Impero Turco</Italian>
 		<Spanish>Imperio Turco</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR03</Tag>
@@ -4201,7 +4201,7 @@
 		<German>Erhabener Osmanischer Staat</German>
 		<Italian>Sublime Stato Ottomano</Italian>
 		<Spanish>Sublime Estado Otomano</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR04</Tag>
@@ -4210,7 +4210,7 @@
 		<German>Erhabener Osmanischer Staat</German>
 		<Italian>Sublime Stato Ottomano</Italian>
 		<Spanish>Sublime Estado Otomano</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR05</Tag>
@@ -4219,7 +4219,7 @@
 		<German>Republik Türkei</German>
 		<Italian>Repubblica di Turchia</Italian>
 		<Spanish>Rep&#250;blica de Turqu&#237;a</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR06</Tag>
@@ -4228,7 +4228,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR07</Tag>
@@ -4237,7 +4237,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR08</Tag>
@@ -4246,7 +4246,7 @@
 		<German>Osmanisches Kalifat</German>
 		<Italian>Califfato Ottomano</Italian>
 		<Spanish>Califato Otomano</Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR09</Tag>
@@ -4255,7 +4255,7 @@
 		<German>Islamische Republik Türkei</German>
 		<Italian>Repubblica Islamica di Turchia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR10</Tag>
@@ -4264,7 +4264,7 @@
 		<German>Byzantinisches Thema Anatolikon</German>
 		<Italian>Thema dell'Anatolia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR11</Tag>
@@ -4273,7 +4273,7 @@
 		<German>Französisch-Türkei</German>
 		<Italian>Turchia Francese</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR12</Tag>
@@ -4282,7 +4282,7 @@
 		<German>Osmanisches Beylik</German>
 		<Italian>Beilikato Ottomano</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR13</Tag>
@@ -4291,7 +4291,7 @@
 		<German>Spanisches Königreich Türkei</German>
 		<Italian>Regno Spagnolo di Turchia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR14</Tag>
@@ -4300,7 +4300,7 @@
 		<German>Nordisch-Türkei</German>
 		<Italian>Turchia Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR15</Tag>
@@ -4309,7 +4309,7 @@
 		<German>Venezianisch-Türkei</German>
 		<Italian>Turchia Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR16</Tag>
@@ -4318,7 +4318,7 @@
 		<German>Russisch-Türkei</German>
 		<Italian>Turchia Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR17</Tag>
@@ -4327,7 +4327,7 @@
 		<German>Deutsch-Türkei</German>
 		<Italian>Turchia Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR18</Tag>
@@ -4336,7 +4336,7 @@
 		<German>Grafschaften der Türkei</German>
 		<Italian>Contee di Turchia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR19</Tag>
@@ -4345,7 +4345,7 @@
 		<German>Österreichisch-Türkei</German>
 		<Italian>Turchia Austriaca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR20</Tag>
@@ -4354,7 +4354,7 @@
 		<German>Fürstentum Anadolu</German>
 		<Italian>Principato di Anadolu</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUR21</Tag>
@@ -4363,7 +4363,7 @@
 		<German>Provinz Türkei</German>
 		<Italian>Provincia di Turchia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Turkey -->
 	<!-- Venezia -->
@@ -4374,7 +4374,7 @@
 		<German>Venezianische Völker</German>
 		<Italian>Popoli Veneziane</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN01</Tag>
@@ -4383,7 +4383,7 @@
 		<German>Erlauchteste Republik Venedig</German>
 		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN02</Tag>
@@ -4392,7 +4392,7 @@
 		<German>Erlauchteste Republik Venedig</German>
 		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN03</Tag>
@@ -4401,7 +4401,7 @@
 		<German>Erlauchteste Republik Venedig</German>
 		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN04</Tag>
@@ -4410,7 +4410,7 @@
 		<German>Erlauchteste Republik Venedig</German>
 		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN05</Tag>
@@ -4419,7 +4419,7 @@
 		<German>Erlauchteste Republik Venedig</German>
 		<Italian>Serenissima Repubblica di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN06</Tag>
@@ -4428,7 +4428,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN07</Tag>
@@ -4437,7 +4437,7 @@
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN08</Tag>
@@ -4446,7 +4446,7 @@
 		<German>Sultanat Venedig</German>
 		<Italian>Sultanato di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN09</Tag>
@@ -4455,7 +4455,7 @@
 		<German>Venezianische Islamische Republik</German>
 		<Italian>Repubblica Islamica Veneziana</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN10</Tag>
@@ -4464,7 +4464,7 @@
 		<German>Exarchat Ravenna</German>
 		<Italian>Esarcato di Ravenna</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN11</Tag>
@@ -4473,7 +4473,7 @@
 		<German>Französisches Königreich Italien</German>
 		<Italian>Regno Francese d'Italia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN12</Tag>
@@ -4482,7 +4482,7 @@
 		<German>Emirat Venedig</German>
 		<Italian>Emirato di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN13</Tag>
@@ -4491,7 +4491,7 @@
 		<German>Spanisches Herzogtum Venedig</German>
 		<Italian>Ducato Spagnolo di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN14</Tag>
@@ -4500,7 +4500,7 @@
 		<German>Nordisch-Ostlombardei</German>
 		<Italian>Lombardia Orientale Vichinga</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN15</Tag>
@@ -4509,7 +4509,7 @@
 		<German>Dogado Venedig</German>
 		<Italian>Dogado di Venezia</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN16</Tag>
@@ -4518,7 +4518,7 @@
 		<German>Russisch-Venedig</German>
 		<Italian>Venezia Russa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN17</Tag>
@@ -4527,7 +4527,7 @@
 		<German>Deutsch-Venedig</German>
 		<Italian>Venezia Tedesca</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN18</Tag>
@@ -4536,7 +4536,7 @@
 		<German>Grafschaften Venedigs</German>
 		<Italian>Contee Veneziane</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN19</Tag>
@@ -4545,7 +4545,7 @@
 		<German>Habsburger Lombardei-Venedig</German>
 		<Italian>Veneto-Lombardo Asburgico</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN20</Tag>
@@ -4554,7 +4554,7 @@
 		<German>Fürstentum Venedik</German>
 		<Italian>Principato di Venedik</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_VEN21</Tag>
@@ -4563,7 +4563,7 @@
 		<German>Provinz Veneto</German>
 		<Italian>Provincia del Veneto</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Venezia -->
 	<!-- Pope -->
@@ -4574,7 +4574,7 @@
 		<German>Kirchenstaat</German>
 		<Italian>Stato della Chiesa</Italian>
 		<Spanish></Spanish>
-		<Russian></Russian>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Pope -->
 </Civ4GameText>

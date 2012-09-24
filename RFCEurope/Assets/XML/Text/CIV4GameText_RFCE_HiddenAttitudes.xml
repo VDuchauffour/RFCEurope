@@ -11,7 +11,7 @@
 		<German>%D1: "Der erste Eindruck zählt."</German>
 		<Italian>%D1: "La prima impressione è quella che conta."</Italian>
 		<Spanish>%D1: "La primera impresión es la que cuenta."</Spanish>
-		<Russian>%D1: "A first impression is a lasting one."</Russian>
+		<Portuguese>%D1: "A first impression is a lasting one."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_TEAM_SIZE</Tag>
@@ -20,7 +20,7 @@
 		<German>%D1: "Ihr habt zu viele Verbündete."</German>
 		<Italian>%D1: "Hai troppi alleati."</Italian>
 		<Spanish>%D1: "Tu equipo es demasiado grande."</Spanish>
-		<Russian>%D1: "You have too many allies."</Russian>
+		<Portuguese>%D1: "You have too many allies."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_BETTER_RANK</Tag>
@@ -29,7 +29,7 @@
 		<German>%D1: "Eure kleine Zivilisation ist keine Bedrohung für uns."</German>
 		<Italian>%D1: "La tua insignificante civiltà non ci pone alcuna minaccia."</Italian>
 		<Spanish>%D1: "Tu pequeña civilización no supone ninguna amenaza para nosotros."</Spanish>
-		<Russian>%D1: "Your small state is no threat to us."</Russian>
+		<Portuguese>%D1: "Your small state is no threat to us."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_WORSE_RANK</Tag>
@@ -38,7 +38,7 @@
 		<German>%D1: "Wir fühlen uns von Eurer großen Zivilisation bedroht."</German>
 		<Italian>%D1: "Ci sentiamo minacciati dalla tua grande civiltà."</Italian>
 		<Spanish>%D1: "Nos sentimos amenazados por tu gran civilización."</Spanish>
-		<Russian>%D1: "We feel threatened by your growing empire."</Russian>
+		<Portuguese>%D1: "We feel threatened by your growing empire."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_LOW_RANK</Tag>
@@ -47,7 +47,7 @@
 		<German>%D1: "Zurückliegende Nationen sollten kooperieren um voranzukommen."</German>
 		<Italian>%D1: "Le nazioni più arretrate dovrebbero cooperare tra loro per progredire."</Italian>
 		<Spanish>%D1: "Las naciones atrasadas deberían cooperar para salir adelante."</Spanish>
-		<Russian>%D1: "Small nations should work together."</Russian>
+		<Portuguese>%D1: "Small nations should work together."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_LOST_WAR</Tag>
@@ -56,7 +56,7 @@
 		<German>%D1: "Dieser Krieg verläuft ungünstig für uns."</German>
 		<Italian>%D1: "La guerra sta andando male per noi."</Italian>
 		<Spanish>%D1: "Nos va mal en esta guerra."</Spanish>
-		<Russian>%D1: "The war is going badly for us."</Russian>
+		<Portuguese>%D1: "The war is going badly for us."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_EXTRA_GOOD</Tag>
@@ -65,7 +65,7 @@
 		<German>%D1: "Die vergangenen Ereignisse haben Eure guten Absichten bewiesen."</German>
 		<Italian>%D1: "Gli eventi passati hanno unito i nostri popoli."</Italian>
 		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra bondad."</Spanish>
-		<Russian>%D1: "Past events have brought our people together."</Russian>
+		<Portuguese>%D1: "Past events have brought our people together."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_EXTRA_BAD</Tag>
@@ -74,7 +74,7 @@
 		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen."</German>
 		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>
 		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra maldad."</Spanish>
-		<Russian>%D1: "Past events have drawn our people apart."</Russian>
+		<Portuguese>%D1: "Past events have drawn our people apart."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_FREEDOM</Tag>
@@ -83,7 +83,7 @@
 		<German>%D1: "Ihr habt uns unsere Unabh&#228;ngigkeit gegeben!"</German>
 		<Italian>%D1: "Ci hai promesso l'indipendenza!"</Italian>
 		<Spanish>%D1: "Nos hab&#233;is concedido la independencia."</Spanish>
-		<Russian>%D1: "You have granted us our independence!"</Russian>
+		<Portuguese>%D1: "You have granted us our independence!"</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_PROSECUTION</Tag>
@@ -92,7 +92,7 @@
 		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen."</German>
 		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>
 		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra maldad."</Spanish>
-		<Russian>%D1: "We cannot forget the prosecution of our brothers in faith!"</Russian>
+		<Portuguese>%D1: "We cannot forget the prosecution of our brothers in faith!"</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_RAZED_CITY</Tag>
@@ -101,7 +101,7 @@
 		<German>"Ihr habt eine unserer St&#228;dte vernichtet!"</German>
 		<Italian>"Hai razziato una delle nostre citt&#224;!"</Italian>
 		<Spanish>"&#161;Arrasasteis una de nuestras ciudades!"</Spanish>
-		<Russian>"You razed our cities!"</Russian>
+		<Portuguese>"You razed our cities!"</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_TRADED_TECH_TO_US</Tag>
@@ -110,7 +110,7 @@
 		<German>"Ihr habt Eure technologischen Errungenschaften mit uns geteilt."</German>
 		<Italian>"Avete condiviso le vostre scoperte tecnologiche con noi."</Italian>
 		<Spanish>"Compartisteis con nosotros vuestros descubrimientos tecnol&#243;gicos."</Spanish>
-		<Russian>"You have shared technological discoveries with us."</Russian>
+		<Portuguese>"You have shared technological discoveries with us."</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Tag>
@@ -119,6 +119,6 @@
 		<German>"Ihr habt eine Technologie von einer anderen Zivilisation erhalten."</German>
 		<Italian>"Hai ricevuto una tecnologia da un'altra civilt&#224;."</Italian>
 		<Spanish>"Recibisteis una tecnolog&#237;a de otra civilizaci&#243;n."</Spanish>
-		<Russian>"You received too many techs from other civilizations."</Russian>
+		<Portuguese>"You received too many techs from other civilizations."</Portuguese>
 	</TEXT>
 </Civ4GameText>

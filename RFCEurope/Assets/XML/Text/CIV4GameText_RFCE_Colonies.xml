@@ -12,7 +12,7 @@
 		<German>[ICON_BULLET]Ben&#246;tigt [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
 		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
-		<Russian>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </Russian>
+		<Portuguese>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
@@ -21,7 +21,7 @@
 		<German>[ICON_BULLET]Ben&#246;tigt [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
 		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
-		<Russian>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Russian>
+		<Portuguese>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
@@ -30,7 +30,7 @@
 		<German> [SPACE] (%D1_Mod) </German>
 		<Italian> [SPACE] (%D1_Mod) </Italian>
 		<Spanish> [SPACE] (%D1_Mod) </Spanish>
-		<Russian> [SPACE] (%D1_Mod) </Russian>
+		<Portuguese> [SPACE] (%D1_Mod) </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE1</Tag>
@@ -39,7 +39,7 @@
 		<German>[ICON_BULLET]Liefert %D1_Mod </German>
 		<Italian>[ICON_BULLET]Fornisce %D1_Mod </Italian>
 		<Spanish>[ICON_BULLET]Proporciona %D1_Mod </Spanish>
-		<Russian>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Russian>
+		<Portuguese>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
@@ -48,7 +48,7 @@
 		<German>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Italian>
 		<Spanish>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Spanish>
-		<Russian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Russian>
+		<Portuguese>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_TRADING_COMPANY</Tag>
@@ -57,7 +57,7 @@
 		<German>Handelsgesellschaft</German>
 		<Italian>Compagnia Commerciale</Italian>
 		<Spanish>La Compa&#241;&#237;a de las Indias</Spanish>
-		<Russian>&#210;&#238;&#240;&#227;&#238;&#226;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian>
+		<Portuguese>&#210;&#238;&#240;&#227;&#238;&#226;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIA_COMPANY</Tag>
@@ -66,7 +66,7 @@
 		<German>Ostindien-Kompanie</German>
 		<Italian>Compagnia delle Indie Orientali</Italian>
 		<Spanish>Compania de las Indias Orientales</Spanish>
-		<Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian>
+		<Portuguese>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_WEST_INDIA_COMPANY</Tag>
@@ -75,7 +75,7 @@
 		<German>Westindien-Kompanie</German>
 		<Italian>Compagnia delle Indie Occidentali</Italian>
 		<Spanish>Compania de las Indias Occidentales</Spanish>
-		<Russian>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Russian>
+		<Portuguese>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE</Tag>
@@ -84,7 +84,7 @@
 		<German>Enzyklop&#228;die</German>
 		<Italian>L'Enciclopedia</Italian>
 		<Spanish>Enciclopedia</Spanish>
-		<Russian>&#221;&#237;&#246;&#232;&#234;&#235;&#238;&#239;&#229;&#228;&#232;&#255; ("L'Encyclopedie")</Russian>
+		<Portuguese>&#221;&#237;&#246;&#232;&#234;&#235;&#238;&#239;&#229;&#228;&#232;&#255; ("L'Encyclopedie")</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_GOLD_COAST</Tag>
@@ -93,7 +93,7 @@
 		<German>Goldk&#252;ste</German>
 		<Italian>Costa dell'Oro</Italian>
 		<Spanish>Costa del Oro</Spanish>
-		<Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#229; &#207;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;</Russian>
+		<Portuguese>&#199;&#238;&#235;&#238;&#242;&#238;&#229; &#207;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVORY_COAST</Tag>
@@ -102,7 +102,7 @@
 		<German>Elfenbeink&#252;ste</German>
 		<Italian>Costa d'Avorio</Italian>
 		<Spanish>Costa de Marfil</Spanish>
-		<Russian>&#193;&#229;&#240;&#229;&#227; &#241;&#235;&#238;&#237;&#238;&#226;&#238;&#233; &#234;&#238;&#241;&#242;&#232;</Russian>
+		<Portuguese>&#193;&#229;&#240;&#229;&#227; &#241;&#235;&#238;&#237;&#238;&#226;&#238;&#233; &#234;&#238;&#241;&#242;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CUBA</Tag>
@@ -111,7 +111,7 @@
 		<German>Kuba</German>
 		<Italian>Cuba</Italian>
 		<Spanish>Cuba</Spanish>
-		<Russian>&#202;&#243;&#225;&#224;</Russian>
+		<Portuguese>&#202;&#243;&#225;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_BRAZIL</Tag>
@@ -120,7 +120,7 @@
 		<German>Brazilien</German>
 		<Italian>Brasile</Italian>
 		<Spanish>Brasil</Spanish>
-		<Russian>&#193;&#240;&#224;&#231;&#232;&#235;&#232;&#255;</Russian>
+		<Portuguese>&#193;&#240;&#224;&#231;&#232;&#235;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HUDSON</Tag>
@@ -129,7 +129,7 @@
 		<German>Hudson Bay</German>
 		<Italian>Baia di Hudson</Italian>
 		<Spanish>Bahía de Hudson</Spanish>
-		<Russian>&#195;&#243;&#228;&#231;&#238;&#237;&#241;&#234;&#224;&#255; &#193;&#243;&#245;&#242;&#224;</Russian>
+		<Portuguese>&#195;&#243;&#228;&#231;&#238;&#237;&#241;&#234;&#224;&#255; &#193;&#243;&#245;&#242;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT</Tag>
@@ -138,7 +138,7 @@
 		<German>Fernöstlicher Vertragshafen</German>
 		<Italian>Trattato Portuale Orientale</Italian>
 		<Spanish>Puerto Oriental distante de Tratado</Spanish>
-		<Russian>&#196;&#224;&#235;&#229;&#234;&#232;&#233; &#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#233; &#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#251;&#233; &#207;&#238;&#240;&#242;</Russian>
+		<Portuguese>&#196;&#224;&#235;&#229;&#234;&#232;&#233; &#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#233; &#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#251;&#233; &#207;&#238;&#240;&#242;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_INDIA</Tag>
@@ -147,7 +147,7 @@
 		<German>Indischer Handelsposten</German>
 		<Italian>Stazione Commerciale Indiana</Italian>
 		<Spanish>Centro de comercio Indio</Spanish>
-		<Russian>&#200;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#212;&#224;&#234;&#242;&#238;&#240;&#232;&#255;</Russian>
+		<Portuguese>&#200;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#212;&#224;&#234;&#242;&#238;&#240;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIES</Tag>
@@ -156,7 +156,7 @@
 		<German>Ostindien</German>
 		<Italian>Indie Orientali</Italian>
 		<Spanish>Indias Orientales</Spanish>
-		<Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#229; &#200;&#237;&#228;&#232;&#232;</Russian>
+		<Portuguese>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#229; &#200;&#237;&#228;&#232;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_MALAYSIA</Tag>
@@ -165,7 +165,7 @@
 		<German>Malaysia</German>
 		<Italian>Malacca</Italian>
 		<Spanish>Malaca</Spanish>
-		<Russian>&#204;&#224;&#235;&#224;&#233;&#255;</Russian>
+		<Portuguese>&#204;&#224;&#235;&#224;&#233;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CAPE_TOWN</Tag>
@@ -174,7 +174,7 @@
 		<German>Kapstadt</German>
 		<Italian>Città del Capo</Italian>
 		<Spanish>Ciudad del Cabo</Spanish>
-		<Russian>&#202;&#229;&#233;&#239;&#242;&#224;&#243;&#237;</Russian>
+		<Portuguese>&#202;&#229;&#233;&#239;&#242;&#224;&#243;&#237;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VIRGINIA</Tag>
@@ -183,7 +183,7 @@
 		<German>Virginia</German>
 		<Italian>Virginia</Italian>
 		<Spanish>Virginia</Spanish>
-		<Russian>&#194;&#232;&#240;&#228;&#230;&#232;&#237;&#232;&#255;</Russian>
+		<Portuguese>&#194;&#232;&#240;&#228;&#230;&#232;&#237;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_AFRICA</Tag>
@@ -192,7 +192,7 @@
 		<German>Ostafrika</German>
 		<Italian>Africa Orientale</Italian>
 		<Spanish>África Oriental</Spanish>
-		<Russian>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#192;&#244;&#240;&#232;&#234;&#224;</Russian>
+		<Portuguese>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#192;&#244;&#240;&#232;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_AZTEC_CONQUEST</Tag>
@@ -201,7 +201,7 @@
 		<German>Eroberung der Azteken</German>
 		<Italian>Conquista dell'Impero Azteco</Italian>
 		<Spanish>Conquista Azteca</Spanish>
-		<Russian>Aztec Conquest</Russian>
+		<Portuguese>Aztec Conquest</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_INCA_CONQUEST</Tag>
@@ -210,7 +210,7 @@
 		<German>Eroberung der Inkas</German>
 		<Italian>Conquista dell'Impero Inca</Italian>
 		<Spanish>Conquista Incaica</Spanish>
-		<Russian>Inca Conquest</Russian>
+		<Portuguese>Inca Conquest</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HISPANIOLA</Tag>
@@ -219,7 +219,7 @@
 		<German>Hispaniola</German>
 		<Italian>Hispaniola</Italian>
 		<Spanish>La Española</Spanish>
-		<Russian>Hispaniola</Russian>
+		<Portuguese>Hispaniola</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_QUEBEC</Tag>
@@ -228,7 +228,7 @@
 		<German>Qu&#233;bec</German>
 		<Italian>Qu&#233;bec</Italian>
 		<Spanish>Quebec</Spanish>
-		<Russian>Quebec</Russian>
+		<Portuguese>Quebec</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_NEW_ENGLAND</Tag>
@@ -237,7 +237,7 @@
 		<German>Neu-England</German>
 		<Italian>Nuova Inghilterra</Italian>
 		<Spanish>Nueva Inglaterra</Spanish>
-		<Russian>New England</Russian>
+		<Portuguese>New England</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_JAMAICA</Tag>
@@ -246,7 +246,7 @@
 		<German>Jamaika</German>
 		<Italian>Giamaica</Italian>
 		<Spanish>Jamaica</Spanish>
-		<Russian>Jamaica</Russian>
+		<Portuguese>Jamaica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PANAMA</Tag>
@@ -255,7 +255,7 @@
 		<German>Panama</German>
 		<Italian>Panamá</Italian>
 		<Spanish>Panamá</Spanish>
-		<Russian>Panama</Russian>
+		<Portuguese>Panama</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_LOUISIANA</Tag>
@@ -264,7 +264,7 @@
 		<German>Louisiana</German>
 		<Italian>Louisiana</Italian>
 		<Spanish>Luisiana</Spanish>
-		<Russian>Louisiana</Russian>
+		<Portuguese>Louisiana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PHILLIPPINES</Tag>
@@ -273,7 +273,7 @@
 		<German>Philippinen</German>
 		<Italian>Filippine</Italian>
 		<Spanish>Filipinas</Spanish>
-		<Russian>Phillipines</Russian>
+		<Portuguese>Phillipines</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_GUINEA</Tag>
@@ -282,7 +282,7 @@
 		<German>Guinea</German>
 		<Italian>Guinea</Italian>
 		<Spanish>Guinea</Spanish>
-		<Russian>Guinea</Russian>
+		<Portuguese>Guinea</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VINLAND</Tag>
@@ -291,7 +291,7 @@
 		<German>Vinland</German>
 		<Italian>Terranova</Italian>
 		<Spanish>Vinland</Spanish>
-		<Russian>Vinland</Russian>
+		<Portuguese>Vinland</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Tag>
@@ -300,7 +300,7 @@
 		<German>[TAB]Eine Enzyklopädie ist ein besonders umfangreiches Nachschlagewerk. Der Begriff "Enzyklopädie" soll auf Ausführlichkeit oder eine große Themenbreite hinweisen, wie beispielsweise bei einem Menschen, dem enzyklopädisches Wissen nachgesagt wird. Andererseits wird nicht das gesamte Wissen, sondern nur eine Zusammenfassung dargestellt. Die Enzyklopädie ist so gesehen eine überblickende Anordnung des Wissens, die einen Zusammenhang herstellt. Daneben findet sich die Bezeichnung "Enzyklopädie" auch bei vielen Werken, die nur ein begrenztes Fachgebiet oder auch nur Sachgebiet behandeln, den Fachenzyklopädien.[PARAGRAPH:2]Als älteste vollständig erhaltene Enzyklopädie gilt die Naturalis historia aus dem ersten nachchristlichen Jahrhundert. Die Grenzen waren fließend; Enzyklopädien standen zwischen Lehrbüchern einerseits und Wörterbüchern andererseits. Vor allem die große französische Encyclopédie (1751-1780) hat die Bezeichnung "Enzyklopädie" für ein Sachwörterbuch durchgesetzt. Wegen der alphabetischen Anordnung werden Enzyklopädien oft als Lexika bezeichnet, in der Geschichte der Enzyklopädien finden sich aber auch viele weitere Namen.[PARAGRAPH:2]Die heutige Form des Nachschlagewerkes hat sich vor allem seit dem 18. Jahrhundert entwickelt; dabei handelt es sich um ein umfangreiches Sachwörterbuch über alle Themen für eine breite Leserschaft. Im 19. Jahrhundert kam der typische, neutral-sachliche Stil hinzu. Die Enzyklopädien wurden besser strukturiert und beinhalteten neue Texte, keine bloßen Übernahmen älterer (fremder) Werke. Eines der bekanntesten Beispiele im deutschsprachigen Raum war lange Zeit die Brockhaus Enzyklopädie (ab 1808), im englischsprachigen die Encyclopaedia Britannica (ab 1768).[PARAGRAPH:2]Seit den 1980er-Jahren werden Enzyklopädien ferner in digitaler Form angeboten, auf CD-ROM und im Internet. Teilweise handelt es sich um Fortführungen älterer Werke, teilweise um neue Projekte. Ein besonderer Erfolg war die 1993 erstmals auf CD-ROM herausgegebene Microsoft Encarta. Die 2001 gegründete Wikipedia entwickelte sich zur größten Internet-Enzyklopädie.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIA_COMPANY_PEDIA</Tag>
@@ -309,7 +309,7 @@
 		<German>[TAB]Die Ostindischen Kompanien waren in mehreren Nationen Europas bestehende Gesellschaften, die für den Handel mit Indien und Ostasien (hier vor allem mit den sogenannten Gewürzinseln und dem Kaiserreich China) privilegiert waren.[PARGRAPH:2]Sie entstanden im 17. Jahrhundert, manche auch erst im 18. Jahrhundert, als die Blütezeit der Kolonialreiche Spaniens und Portugals bereits vorüber war. Im Gegensatz zu deren Kolonialpolitik, die hauptsächlich nach Gold und Grundbesitz strebte, suchten die Ostindien-Kompanien möglichst großen Handelsgewinn zu erwirtschaften. Dabei konkurrierten sie sowohl untereinander als auch mit zahlreichen lokalen Händlern (überwiegend Chinesen), deren Vorteil in der intimen Kenntnis der örtlichen Gegebenheiten bestand und die über zahlreiche Beziehungen zu den Lokalfürsten und -händlern verfügten. Auch war der Verwaltungsaufwand der Kompanien typischerweise wesentlich höher als bei den kleineren Handelshäusern.[PARGRAPH:2]Sie setzten zur Durchsetzung ihrer Handelspolitik sowohl diplomatische als auch kriegerische Mittel ein. So wurde Siam zweimal von den Holländern durch eine Seeblockade des Hafens von Ayutthaya zum Einlenken gezwungen. Die Kompanien hatten in allen größeren Häfen und Hauptstädten so genannte Faktoreien (Geschäftsstellen), die von Gouverneuren und Generalgouverneuren geleitet wurden. Deren Aufgabe lag darin, die Beziehungen zu den Herrschern und den lokalen Händlern zu pflegen und auf die Durchsetzung der vereinbarten Privilegien und Handelsspannen zu achten.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_WEST_INDIA_COMPANY_PEDIA</Tag>
@@ -318,7 +318,7 @@
 		<German>[TAB]Es gab mehrere Westindien-Kompanien:[NEWLINE][ICON_BULLET]Dänische Westindien-Kompanie (Vestindisk kompagni oder Det Vestindisk-Guineiske kompagni), gegründet 1671, aufgelöst 1776[NEWLINE][ICON_BULLET]Französische Westindien-Kompanie (Compagnie des Indes Occidentales Françaises), gegründet 1664[NEWLINE][ICON_BULLET]Niederländische Westindien-Kompanie (Geoctroyeerde West-Indische Compagnie), gegründet 1621[NEWLINE][ICON_BULLET]Schwedische Westindien-Kompanie (Svenska Västindiska Kompaniet), gegründet 1786[PARAGRAPH:2]Die Dänische Westindien-Kompanie (Dänisch-Westindisch-Guinesische Compagnie) (Dänisch: Vestindisk kompagni oder Det Vestindisk-Guineiske kompagni) war eine dänische Handelskompanie, die dem Handel zwischen den dänischen Kolonien an der sogenannten Goldküste (heute Ghana) und den Inseln St. Thomas, St. John, St. Croix in Dänisch-Westindien (heute Virgin Islands) diente.[PARAGRAPH:2]Die Französische Westindienkompanie (frz. Compagnie des Indes Occidentales Françaises) war eine Westindien-Kompanie, die 1664 durch Colbert mit dem Ziel gegründet wurde, Handel mit den französischen Besitzungen in Amerika zu treiben. Da ihr die Verwaltung der französischen Kolonie in Nordamerika von der bisherigen Compagnie de la Nouvelle-France übertragen wurde, sollte sie auch für die Besiedlung dieses Gebietes Sorge tragen. Ihr Heimathafen war Le Havre.[PARAGRAPH:2]Die Niederländische Westindien Kompanie (niederl.: Geoctroyeerde West-Indische Compagnie, häufig kurz WIC), war eine niederländische Handelskompanie, der am 3. Juni 1621 durch die Republik der Sieben Vereinigten Niederlande ein exklusives Handelspatent (Monopol) für den Handel in Westafrika und Amerika zugesprochen wurde. Diese Charta sollte jeglichen Wettbewerb zwischen den verschiedenen Handelsplätzen unterbinden.[PARAGRAPH:2]Die Schwedische Westindien-Kompanie ("Svenska Västindiska Kompaniet") war eine Handelskompanie, die sich mit dem Handel zwischen Schweden und Westindien beschäftigte.Die Gesellschaft erhielt am 31. Oktober 1786 die königliche Gründungsgenehmigung, verbunden mit dem Privileg des Handels mit der westindischen Insel Saint-Barthélemy (schwedischer Besitz ab 1784) und mit anderen westindischen Inseln zwischen Nord- und Südamerika. Die Stockholmer Großkaufleute Arfwedson, Schinckell und Pauli begannen ab den 1. Januar 1787 mit der Aktienzeichnung der Kompanie. Einer der größten Handelsgesellschaften jener Zeit war das Handelshaus Tottie u. Arfwedson. Anhaltend hohe Verluste an Schiffen durch Kaperei, Einfuhrverbot verschiedener Waren (besonders von Kaffee) führten 1805 zur Auflösung der meisten Überseehandelsgesellschaften.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_AZTEC_CONQUEST_PEDIA</Tag>
@@ -327,7 +327,7 @@
 		<German>[TAB]Aufgrund ihrer Aggressivität waren die Azteken bei ihren Nachbarn mehr verhasst als beliebt. Diese schafften es nicht auf diplomatischer Ebene und auch nicht durch Blutheiraten, den Machtdrang der Azteken zu bremsen. Die Ankunft der Spanier unter Führung von Hernán Cortés war für einige Stämme die einzige Chance, der Herrschaft der Azteken zu entkommen. Der aztekische Herrscher Moctezuma II. erfuhr bereits frühzeitig von der Ankunft der Spanier, doch verhielt er sich zu zögerlich. Nachdem die Spanier zusammen mit ihren Verbündeten, den Tlaxcalteken, im November 1519 nach Tenochtitlán gekommen waren, nahmen diese Moctezuma im Handstreich gefangen und kontrollierten über ihn die Geschicke des Reiches.[PARAGRAPH:2]Als Cortés im Frühjahr 1520 wieder an die Atlantikküste zog, weil von Kuba aus ein Trupp mit der Aufgabe gelandet war, ihn festzunehmen, erhoben sich die Azteken gegen die in der Stadt verbliebenen Spanier. Nach seiner Rückkehr kam es zu Kämpfen zwischen Spaniern und Azteken, in deren Verlauf Moctezuma von seinen Landsleuten getötet wurde. Cortés sah daraufhin keine andere Möglichkeit als die Flucht aus der Stadt. Der Versuch, in der Nacht zum 1. Juli 1520 aus Tenochtitlán zu entkommen, kostete fast drei Viertel der spanischen Soldaten das Leben.[PARAGRAPH:2]Während sich Cortés' Truppe in den folgenden Wochen erholte, wütete in Tenochtitlán eine Pockenepidemie, durch die gut sechzig Prozent der Bewohner der Stadt starben, darunter auch der neue König Cuitláuac. Sein Nachfolger Cuauhtémoc schaffte es nicht, den Abfall des Königs von Texcoco zu verhindern. Zusammen mit den Tlaxcalteken, Kriegern aus Texcoco und Verstärkung aus Kuba begann Cortés mit der Belagerung der Stadt, die am 13. August 1521 endete.[PARAGRAPH:2]Cuauhtémoc, der letzte aztekische Herrscher, wurde 1525 hingerichtet. Die meisten Gebäude Tenochtitláns waren während der Belagerung zerstört worden; auf ihren Ruinen wurde das neue Mexiko-Stadt errichtet. In den Jahren nach der Ausrufung des Vizekönigreichs Neuspanien 1535 wurde ein Großteil der einheimischen Bevölkerung zum Christentum bekehrt und die aztekische Kultur verschwand allmählich, ohne jedoch völlig zu erlöschen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_INCA_CONQUEST_PEDIA</Tag>
@@ -336,7 +336,7 @@
 		<German>[TAB]Im April 1532 landete Francisco Pizarro an der peruanischen Küste und marschierte unter Beobachtung durch Inka-Kundschafter tief ins Innere des Inkareiches ein. Bereits einige Jahre zuvor wurden die Inka von für sie neuartigen Krankheiten (Pocken und Masern) heimgesucht, die sich über Mittelamerika nach Süden ausgebreitet hatten und tödlich verliefen. Pizarro fand ein Reich vor, das in einen Bruderkrieg zwischen den Brüdern Atahualpa und Huáscar verstrickt war. Die schnelle Expansion der Inka und deren Zwangsregime mit Deportationen hatten eine enorme Unzufriedenheit unter den unterworfenen Völkern hervorgerufen, die zur Instabilität des Reiches beitrug und zu Aufständen der Völker, die nun eine Chance zur Befreiung erkannten, was Pizarro systematisch nutzte.[PARAGRAPH:2]Atahualpa unterschätzte bei der Ankunft der Spanier die von ihnen ausgehende Gefahr. Am 14. November 1532 wurden sie von Atahualpa in Cajamarca, das weiträumig von ca. 40.000 Inkasoldaten gesichert war, freundlich zu Verhandlungen empfangen. Der Inka erschien mit etwa 8.000 Bewaffneten zur Verhandlung und ließ, im Bewusstsein seiner riesigen Übermacht am Platz und ringsum, auf Wunsch von Pizarro die Waffen ablegen. Dies nutzten Pizarro sowie seine 159 Gefährten für einen Hinterhalt und nahmen Atahualpa gefangen, schlugen die unbewaffnete Armee der Inka vernichtend (Schlacht von Cajamarca) und metzelten neben dem indigenen Adel auch viele Generäle der Inka nieder. Die Inka waren mit europäischer Waffentechnik und Taktik nicht vertraut, was den spanischen Eroberern einen doppelten Vorteil bot. Den Feuerwaffen, Rüstungen und Blankwaffen aus Stahl sowie den laut Berichten drei Kanonen hatten sie mit ihrer früh-bronzezeitlichen Bewaffnung, Rüstungen aus Leder und Baumwolle, Bögen, Wurfspeeren, Lanzen, hölzernen maqana (beidseitig geschärften Schwertern aus Palmholz), sternbesetzten Streitkeulen, Äxten aus Kupfer und warak'a (Stein- und Pfeilschleudern an drei Schnüren) nichts Adäquates entgegenzusetzen. Zwar verfügten sie über das Lasso und die liwi (boleadora) - Riemen mit eingeknoteten Steinen, die geworfen werden und sich um die Beine von Mensch und Tier schlingen, so dass sie stürzen - aber sie kannten weder Pferde, auf denen die Angreifer ritten und die ihnen Angst einflößten, noch Kampfhunde, von denen die Spanier zahlreiche mitgeführt haben sollen.[PARAGRAPH:2]Atahualpa wollte sich gegen einen 50 Quadratmeter großen Raum voller Gold und Silber freikaufen. Dazu wurden alle Tempel und Schatzkammern des Reiches geplündert. Lamakarawanen trafen aus allen Reichsteilen ein und lieferten vielfach die Kultgegenstände ganzer Stämme und Orte ab, die heute auf einen Wert zwischen 25 und 45 Millionen Euro geschätzt werden. Um den Gold- und Silberschmuck der Inka einzuschmelzen, brannten die Schmelzöfen 34 Tage lang. Die Spanier raubten von den Inka ca. 180.000 Kilogramm Gold sowie ca. 16 Millionen Kilogramm Silber. Obwohl Atahualpa in der Hand der Spanier war, hatte er noch immer Befehlsgewalt inne und gab den Befehl, seinen Bruder zu töten, der in Cuzco gefangen war, aus Sorge, er könne gegen ihn mit den Spaniern konspirieren. Atahualpa wurde anschließend in einem Schauprozess aufgrund einer fingierten Anklage auf Vielweiberei, Brudermord und Götzenanbetung von Diego de Almagro, der sich und seinen 150 Kumpanen so einen Anteil an der Beute sicherte, zum Tode auf dem Scheiterhaufen verurteilt. Pizarro unterzeichnete das von vornherein feststehende Urteil. Weil Atahualpa seine eigene "Unsterblichkeit" als Mumie sichern wollte, ließ er eine Taufe über sich ergehen und wurde statt durch Verbrennen am 26. Juli 1533 durch Erdrosselung mit der Garrotte, der spanischen Würgeschlinge, hingerichtet. Der Widerstand der Inka nahm daraufhin stetig ab. Die früher von den Inka unterworfenen Stämme schlugen sich auf die Seite der Eroberer, in der Hoffnung, dadurch ihre Unabhängigkeit zu erreichen. Am 15. November 1533 erreichte Pizarro die Hauptstadt Cuzco, die er ohne nennenswerten Widerstand einnehmen konnte.[PARAGRAPH:2]Pizarro setzte 1533 den Halbbruder Atahualpas, Manco Cápac II., als Marionette der Spanier zum Sapa Inka ein. Aus Furcht vor den Truppen Atahualpas, insbesondere seines Generals Quisquis, verbündete sich Manco Cápac II. anfangs mit Pizarro. Doch bereits 1536 belagerte er die Spanier in Cuzco mit einer Truppe von 200.000 Mann. Da seine Armee jedoch vom Proviant in den Lebensmitteldepots abgeschnitten war, hielt sie die Belagerung nicht durch. Bei Zwistigkeiten zwischen Pizarro und Diego de Almagro schlug sich Manco Cápac II. dann auf die Seite von Almagro. Nachdem Almagro in der Schlacht von Las Salinas am 26. April 1538 von Hernando Pizarro geschlagen und im Juli des gleichen Jahres hingerichtet wurde, zog sich Manco Cápac II. mit seinen Anhängern an den Osthang der Anden zurück, ließ alle Brücken hinter sich zerstören und versuchte, den spanischen Eindringlingen durch eine Art Guerillakrieg vom sagenumwobenen Vilcabamba aus Widerstand zu leisten. Pizarro wurde von Anhängern Almagros am 26. Juni 1541 ermordet. Eine andere Gruppe von Anhängern Almagros hatte sich auf der Flucht vor Pizarro zu Manco Cápac II. durchgeschlagen und wurde von diesem versorgt und bewirtet. 1544 ermordeten die Flüchtlinge den Inka-Herrscher, da sie immer noch auf die Gunst der Partei Almagros hofften (Almagro wurde in der Zwischenzeit getötet, sodass sie sich bei dessen Sohn beliebt machen wollten). Die Söhne Manco Capacs II, Sayri Túpac und Titu Cusi Yupanqui, führten den Kampf weiter fort.[PARAGRAPH:2]Nach deren Tod gelangte ihr Halbbruder Túpac Amaru zur Herrschaft. Bei einer Expedition besetzten die Spanier am 24. Juli 1572 das erst im 20. Jahrhundert wiederentdeckte Vilcabamba. Túpac Amaru war zwar bereits geflüchtet, aber sein Aufenthaltsort wurde verraten und der letzte Inka festgenommen. Am 24. September 1572 wurde er in Cuzco durch Enthauptung hingerichtet. Der Legende nach soll der Inka-Adel entkommen sein und sich in die verlorene Stadt Paititi zurückgezogen haben.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HUDSON_PEDIA</Tag>
@@ -345,7 +345,7 @@
 		<German>[TAB]Henry Hudson erkundete die Bucht 1610 mit seinem Schiff Discovery. Auf seiner vierten und letzten Schiffsreise segelte er entlang der Westküste Grönlands in die Bucht und kartierte einen großen Teil der dortigen Ostküste. Im Winter wurde die Discovery von Eis eingeschlossen, wobei die Crew am südlichen Ende der James Bay an Land überlebte. Als das Eis im Frühjahr auftaute, wollte Hudson den Rest der Bucht erkunden. Die Crew meuterte jedoch am 22. Juni 1611. Auf der Suche nach Hudson erkundete Thomas Button 1612-1613 das Westufer der Hudson Bay, er kartographierte das Gebiet und entdeckte die Mündung des Nelson River sowie die Mansel-Insel.[PARAGRAPH:2]60 Jahre später erreichte das Schiff Nonsuch die Bucht und betrieb mit den Cree-Indianern erfolgreich Biberpelzhandel. Dies führte zur Gründung der Hudson's Bay Company, welche bis heute diesen Namen trägt. Die britische Krone gewährte der Hudsonbay-Gesellschaft ein Handelsmonopol mit den Indianern im Einzugsbereich des Gewässers, das Rupert's Land genannt wurde. Frankreich bestritt die Landzuweisung und entsandte verschiedene militärische Expeditionen in die Region. Durch den Vertrag von Utrecht im April 1713 musste es seine Ansprüche jedoch aufgeben.[PARAGRAPH:2]In dieser Zeit baute die Gesellschaft Forts und Handelsposten an den Mündungen der wichtigsten Flüsse. Dazu gehörten Fort Severn (Ontario), York Factory (Manitoba) und Churchill (Manitoba). Die strategische Lage erlaubte Expeditionen in das Inland und noch wichtiger, erleichterte den Handel mit der einheimischen Bevölkerung. Die Indianer brachten Felle zu den Posten, wo sie direkt nach Europa verschifft wurden (was einen kürzeren Weg als von Montreal darstellte). Die Hudson's Bay Company benutzte diese Posten bis zum Beginn des 20. Jahrhunderts.[PARAGRAPH:2]Das Land mit einer Fläche von 3,9 Mio. km² wurde 1870 Kanada überlassen und Teil der Nordwest-Territorien, als das Handelsmonopol aufgegeben war. Als Folge einer Namensänderung wird die Hudson's Bay heute Hudson Bay genannt, was oft zu Verwechslungen mit der Gesellschaft führt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_LOUISIANA_PEDIA</Tag>
@@ -354,7 +354,7 @@
 		<German>[TAB]Der Name wurde zu Ehren Königs Ludwig XIV. von Frankreich gewählt. Louisiana wurde früh erforscht; bereits der Spanier Hernando de Soto erkundete von 1539 bis 1542 das Mississippigebiet, der Franzose Robert Cavelier de La Salle setzte diese Forschungen 1681 fort, woraufhin Frankreich das Gebiet für sich beanspruchte und 1699 erstmals dauerhaft besiedelte. (siehe Kolonie Louisiana)[PARAGRAPH:2]Im Herbst 1729 kam es mit dem Natchez-Aufstand (Natchez Uprising) zu einer großen Rebellion der Natchez-Indianer, die sich mit afrikanischstämmigen Sklaven verbündet hatten, gegen die französischen Kolonialherren, bei der das Fort Rosalie zerstört und fast alle dort lebenden Franzosen getötet wurden. Der Aufstand traf die Kolonisten so schwer, dass die Wirtschaft der Region fast ein Jahrhundert lang stagnierte und eine hochprofitable Plantagenökonomie, wie sie in anderen Teilen des amerikanischen Südens bereits im 18. Jahrhundert entstand, sich in Louisiana erst im 19. Jahrhundert herausbildete.[PARAGRAPH:2]Die Besitzverhältnisse änderten sich im Laufe der Jahre mehrmals: Auf Grund der Übereinkünfte im Pariser Frieden kam der westliche Teil 1762 an Spanien, der östliche ein Jahr später an Großbritannien, das ihn 1783 an die Vereinigten Staaten abgeben musste. 1800 erwarb Napoleon I. den spanischen Anteil zurück.[PARAGRAPH:2]Am 30. April 1803 kaufte US-Präsident Thomas Jefferson mit dem so genannten Louisiana Purchase die französische Kolonie Louisiana von Napoleon I. für 15 Mio $. Die Vereinigten Staaten verdoppelten damit ihr Staatsgebiet auf einen Schlag, denn das damalige Louisiana umfasste noch große Gebiete des Mittleren Westens. Louisiana wurde am 10. März 1804 in einer förmlichen Zeremonie übergeben. Mit dem Organic Act vom 26. März 1804 wurde mit Wirkung vom 1. Oktober aus dem Gebiet, das südlich des 33. Breitengrades lag, das Orleans-Territorium geschaffen, das im Wesentlichen dem heutigen Louisiana entspricht. Der weitaus größere Teil nördlich des 33. Breitengrades wurde zum District of Louisiana, der 1805 in Louisiana-Territorium umbenannt wurde. Am 30. April 1812 wurde das Orleans-Territorium unter dem Namen Louisiana als 18. Bundesstaat der USA aufgenommen. Um eine Verwechslung zu vermeiden wurde im Juni des gleichen Jahres das Louisiana-Territorium in Missouri-Territorium umbenannt.[PARAGRAPH:2]Während des Amerikanischen Bürgerkriegs (1861-1865) gehörte der Staat Louisiana der Südstaatenunion der Konföderierten Staaten von Amerika an. Hauptstadt von Louisiana ist Baton Rouge, größte und bekannteste Stadt ist New Orleans.[PARAGRAPH:2]Im August 2005 wurde der Südosten des Staates vom Hurrikan Katrina heimgesucht. Die Stadt New Orleans und umliegende Regionen erlitten dabei schwere Schäden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_NEW_ENGLAND_PEDIA</Tag>
@@ -363,7 +363,7 @@
 		<German>[TAB]Die Bezeichnung Neuengland geht auf den Söldner und Abenteurer John Smith zurück, der dieses Gebiet um 1614 eingehend bereiste und erkundete. 1616 veröffentlichte er in seinem Buch A Description of New England eine ausführliche Beschreibung dieser Region. Er erwähnte insbesondere den Fisch- und Holzreichtum der Gegend, wodurch spätere englische Siedler auf diese Region aufmerksam wurden.[PARAGRAPH:2]Die Kolonialisierung Neuenglands begann im 17. Jahrhundert zunächst durch küstennahe Niederlassungen. 1620 gründeten die so genannten Pilgerväter die Siedlung Plymouth. Nach 1629 wanderten im Zuge der Great Migration zehntausende Puritaner in die in diesem Jahr gegründete Massachusetts Bay Colony aus und gründeten Siedlungen wie Boston, Salem und Roxbury.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_QUEBEC_PEDIA</Tag>
@@ -372,7 +372,7 @@
 		<German>[TAB]Québec war ursprünglich das Siedlungsgebiet indigener Völker wie Inuit, Mohawks, Cree, Algonkin, Innu, Attikamek, Mi'kmaq, Wyandot, Abenaki, Maliseet und Naskapi. Während die meisten Völker im Kanadischen Schild und in den Appalachen ein nomadisches Leben als Jäger, Sammler und Fischer führten, waren die Sankt-Lorenz-Irokesen sesshaft und betrieben Landwirtschaft.[PARAGRAPH:2]Baskische Walfänger und Fischer kamen ab etwa 1525 regelmäßig an die ostkanadische Küste und stießen bis zum Ästuar des Sankt-Lorenz-Stroms vor. Der erste europäische Entdecker, der ins Innere Québec gelangte, war der Franzose Jacques Cartier. Er erreichte 1534 Gaspé und befuhr im darauf folgenden Jahr den Strom. Pierre Chauvin gründete 1600 einen ersten Handelsposten in Tadoussac an der Mündung des Flusses Saguenay.[PARAGRAPH:2]1608 gründete Samuel de Champlain die Stadt Québec, die zur Hauptstadt der Kolonie Neufrankreich ernannt wurde. Es bildeten sich Handelsbeziehungen und schließlich militärische Bündnisse mit den Algonkin und den Wyandot. Pelze wurden nach Frankreich exportiert, im Gegenzug erhielten die Indianer Metallwaren, Schusswaffen und Alkohol. Von der Stadt Québec aus erforschten Waldläufer (coureurs des bois) und katholische Missionare das Innere des nordamerikanischen Kontinents. Weitere Ansiedlungen wurden entlang des St. Lorenz-Stromes (Fleuve St. Laurent) noch im 17. Jahrhundert gegründet (Montréal 1648).</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VIRGINIA_PEDIA</Tag>
@@ -381,7 +381,7 @@
 		<German>[TAB]Den Namen erhielt Virginia zu Ehren der englischen Königin Elisabeth I. von Walter Raleigh im Zuge seiner Expedition von 1584, als er die erste Ansiedlung auf Roanoke Island gründete. Da die unverheiratete Königin den Beinamen "Jungfräuliche Königin" (Virgin Queen) hatte und es aus der Sicht der Kolonialisten schließlich um die Besiedlung und Urbarmachung eines solchen Landes ging, wurde dieser Name gewählt. Allerdings bezeichnete man damit einst ein Gebiet, welches die späteren Staaten Virginia, West Virginia, North Carolina, Kentucky, Tennessee und Ohio umfasste.[PARAGRAPH:2]Von den Ureinwohnern Virginias sind am besten die zu den Virginia-Algonkin gehörenden Powhatan bekannt, die nahe der Küste lebten. Weitere Gruppen waren die zur Irokesen-Sprachfamilie gehörenden Nottaway und Meherrin südwestlich von diesen, die zur Sioux-Sprachfamilie gehörenden Monacan und Saponi, die im Vorland der Appalachen wohnten, und die Cherokee im äußersten Westen des Staates.[PARAGRAPH:2]In Virginia fanden die ersten Siedlungsversuche der Engländer statt. Allerdings wurden diese ersten Versuche nicht von der englischen Regierung, sondern von einem Unternehmen namens "Virginia Company" unternommen, das 1607 die Siedlung Jamestown gegründet hatte. Der englischen Regierung fehlte zu dieser Zeit das Geld, um solche teuren und unsicheren Expeditionen zu finanzieren. Anfangs hatten die Besiedlungsversuche nur mäßigen Erfolg. Von den im Dezember 1606 in England gestarteten 144 Männern waren neun Monate später nur noch 38 am Leben (39 starben während der Überfahrt, 67 in den ersten neun Monaten nach der Ankunft an der Küste). Auch Hungersnöte waren keine Seltenheit, trotzdem nahmen immer mehr Engländer die Gelegenheit wahr und emigrierten nach Virginia.[PARAGRAPH:2]In den Englischen Powhatankriegen kam die Kolonie in starke Bedrängnisse.[PARAGRAPH:2]Das Jahr 1612 stellt ein ökonomisch sehr bedeutendes Jahr dar. John Rolfe pflanzte die erste Tabakpflanze (die er wahrscheinlich aus Trinidad mitgebracht hatte) in Virginia. Aufgrund des heißen und feuchten Klimas und der Hilfe der Indianer gediehen die Tabakpflanzen prächtig. Rolfe, der 1614 eine Indianerin namens Pocahontas geheiratet hatte, machte sich 1616 mit der ersten Ladung Tabak auf den Weg nach England, wo er einen durchschlagenden Erfolg erlebte. 1617 kehrte er nach Virginia zurück, um sich weiter dem Tabakanbau zu widmen, allerdings ohne Pocahontas, die in England gestorben war. Rolfe hatte den ersten Boom der neuen englischen Welt ausgelöst. 1618 wurden 20.000 Pfund Tabak exportiert, 1638 betrug die Summe der Exporte bereits drei Millionen Pfund.[PARAGRAPH:2]Der zweite Gouverneur der Kolonie wurde Lord De La Warr. Deutsche Einwanderer aus dem Siegerland gründeten 1714 die Kolonie Germanna. Germanna wurde nach Deutschland (Germany) und der damaligen britischen Königin Anne benannt.[PARAGRAPH:2]Als Heimat vieler Gründerväter, insbesondere Patrick Henry, Thomas Jefferson, Richard Henry Lee, James Madison, George Mason und George Washington, spielte Virginia eine herausragende Rolle in der Amerikanischen Unabhängigkeitsbewegung. Die britischen Kolonialherren wurden aus Virginia nach der verlorenen Schlacht von Great Bridge (9. Dezember 1775) endgültig vertrieben. Der in Williamsburg tagende Konvent von Virginia erklärte am 15. Mai 1776 Virginia für unabhängig. Im Rahmen der Arbeit an einer Verfassung verabschiedete er am 12. Juni 1776 einstimmig eine maßgeblich von George Mason formulierte Grundrechteerklärung - die Virginia Declaration of Rights. Wenige Wochen später wählte der Konvent schließlich Patrick Henry zum ersten Gouverneur von Virginia. Mit Annahme der Unabhängigkeitserklärung der Vereinigten Staaten durch den Kontinentalkongress am 4. Juli des Jahres wurde Virginia einer der dreizehn Gründerstaaten der USA.[PARAGRAPH:2]Im Konflikt zwischen Süd- und Nordstaaten, der 1861 zum Amerikanischen Bürgerkrieg führte, gehörte Virginia zur Konföderation. Am 17. April 1861 beschloss die im Februar einberufene State Convention die "secession ordinance" (Sezessions-Verfügung). Vorausgegangen waren lange und intensive Debatten über das Pro und Contra der Sezession. Maßgeblichen Anteil an der Entscheidung zur Sezession hatte die Truppeneinberufung Abraham Lincolns (nach dem Angriff von South Carolina auf Fort Sumter), wodurch Befürchtungen geweckt wurden, der Norden wolle die aus der Union ausgetretenen Staaten mit militärischen Mitteln zum Verbleib in der Union zwingen. Unter diesen Vorzeichen entstand eine Mehrheit in der state convention, die die Sezession befürwortete. Mit 88 zu 55 Stimmen war das Abstimmungsergebnis allerdings nicht so eindeutig wie in den meisten anderen Sezessionsstaaten. Das änderte jedoch nichts daran, dass Virginia in den folgenden vier Jahren zu einem der wichtigsten Schauplätze des Bürgerkrieges werden sollte, zumal es mit Richmond auch die Hauptstadt der Konföderierten stellte. Die sklavenfreien nordwestlichen Countys erklärten dagegen ihrerseits am 27. April 1861 die Abspaltung vom Staat und den Verbleib in der Union. Dieser Teil Virginias wurde noch während des Krieges 1863 als West Virginia 35. Gliedstaat der USA.[PARAGRAPH:2]Am 26. Januar 1870 wurde Virginia wieder in die Union aufgenommen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_GOLD_COAST_PEDIA</Tag>
@@ -390,7 +390,7 @@
 		<German>[TAB]Die Europäer haben sich schon früh an der Goldküste festgesetzt, die 1470 durch den Portugiesen João de Santarém den Europäern bekannt gemacht worden war. Diogo de Azambuja landete 1481 mit 700 Mann bei Elmina und baute Fort São Jorge da Mina. Die Holländer setzten sich in Mori (Ghana) (östlich von Cape Coast Castle) und an anderen Orten fest und vertrieben 1637 die Portugiesen. Englische Abenteurer siedelten sich ebenfalls an, doch wurden ihre Forts mit Ausnahme von Cape Coast Castle 1667 von den Holländern genommen. Anschließend bildete sich 1672 die Royal African Company von Kaufleuten. Die Kompanie baute oder verstärkte Dixcove, Sekondi, Anomabo, Winneba (Simpah), Akkra und Cape Coast Castle, nahe den holländischen und den vorher errichteten dänischen Forts. Von 1683 bis 1720 gab hier Brandenburg-Preußen ein kurzes koloniales Intermezzo mit der Besitzung Groß Friedrichsburg. 1752 bildete sich eine neue Afrikanische Kompanie von Kaufleuten. Währenddessen nahmen die Fanti das Land des Herrschers von Efutu und wurden Verbündete der Briten. Die Holländer andererseits verbündeten sich mit den Aschanti. Briten und Holländer, auch die Dänen, bezahlten den Häuptlingen einen Grundzins.[PARAGRAPH:2]Die Aschanti unterwarfen 1807 das Land der Fanti und verlangten nun von den Engländern einen Grundzins. Im September 1817 konnte man sich schließlich einigen. Darauf wurde 1821 die Afrikanische Kompanie aufgehoben und die Goldküste eine Dependenz von Sierra Leone. Die Engländer unterstützten die Fanti und schlugen 1826 die Aschanti-Armee vollständig. Doch wurde erst 1831 ein Vertrag abgeschlossen, nach dem sämtliche südlich vom oberen Pra gelegenen Länder unter britischen Schutz gestellt wurden, ebenso Dankira.[PARAGRAPH:2]Die Forderung nach Gründung einer Kolonie Goldküste wurde dann verstärkt seit den 1840er Jahren von britischen Siedlern und Händlern vor Ort erhoben. Die Kosten einer dauerhaften Beherrschung des Gebietes schienen dem Kolonialamt im "Mutterland" im Vergleich zum möglichen Gewinn allerdings zu hoch und das Ansinnen wurde von den zuständigen Behörden mehrfach abgelehnt. Bis 1850 war dann die britische Regierung mit Ausnahme einiger holländischer Niederlassungen allmählich Herrin der ganzen Goldküste geworden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVORY_COAST_PEDIA</Tag>
@@ -399,7 +399,7 @@
 		<German>[TAB]Seit dem Ende des 15. Jahrhunderts gab es Handelskontakte zwischen Europäern und den Küstenvölkern der Elfenbeinküste. Die ersten Europäer an dieser Küste waren die Portugiesen, die den Handel über hundert Jahre lang beherrschten. Ivorische Städtenamen wie Sassandra, San Pedro oder Fresco erinnern noch heute daran. Im Gegensatz zur sich östlich anschließenden Goldküste errichteten die europäischen Mächte hier jedoch lange Zeit keinerlei befestigte Stützpunkte. Erst 1698 bauten die Franzosen bei Assinie, also im östlichsten Teil der Küste des Landes, ein hölzernes Fort und nannten es St. Louis, gaben es aber bereits 1704 wieder auf. In die Mitte des 19. Jahrhunderts fielen die ersten dauerhaften Kontakte der Franzosen mit den Küstenvölkern durch Händler und Missionare. Der Name Côte d'Ivoire, "Elfenbeinküste" wurde nachweislich von dem französischen Admiral Louis Edouard Bouet-Willaumez 1839 verwendet. 1843/44 schloss Bouet-Williaumet Verträge mit Herrschern aus den Gebieten um die Küstenorte Grand-Bassam und Assinie ab, durch die diese Gebiete zu französischen Protektoraten wurden. Von hier aus begannen später französische Offiziere und Unteroffiziere mithilfe afrikanischer Söldner die koloniale Eroberung der Elfenbeinküste. Die kolonialen Anstrengungen Frankreichs erlahmten ab 1871 durch die Niederlage im Deutsch-Französischen Krieg, wurden aber durch die Vereinbarungen der Kongokonferenz von 1885 über die Küsten Afrikas und besonders der gleichartigen Verträge von 1890 über das Landesinnere des Kontinents neu entfacht.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_AFRICA_PEDIA</Tag>
@@ -408,7 +408,7 @@
 		<German>[TAB]Die heutigen Staaten Tansania (Festlandsgebiet ohne Sansibar), Ruanda und Burundi sowie ein kleiner Teil Mosambiks (Kionga-Dreieck) bildeten die ehemalige Kolonie Deutsch-Ostafrika. Kenia wurde als Britisch-Ostafrika, Mosambik als Portugiesisch-Ostafrika bezeichnet. Äthiopien, Eritrea, und Somalia wurden 1936-1941 zu Italienisch-Ostafrika zusammengefasst, wobei Äthiopien lediglich besetzt wurde und längst nicht alle Teile unter italienische Gewalt gebracht wurden.[PARAGRAPH:2]Die Grenzen vieler Staaten wurden durch die Kolonialmächte willkürlich ohne Beachtung von Kultur- oder Völkergrenzen festgelegt.[PARAGRAPH:2]1967 gründeten Kenia, Tansania und Uganda die Ostafrikanische Gemeinschaft (East African Community, EAC) zur wirtschaftlichen Integration und förderten das in allen drei Ländern verbreitete Swahili als ostafrikanische Verkehrssprache, doch schon 1977 zerbrach diese Gemeinschaft an ihren Gegensätzen und gegenseitigen Einmischungen. Im Juli 2000 wurde die Gemeinschaft offiziell neu gegründet und zählt seit Juli 2007 auch Burundi und Ruanda zu ihren Mitgliedern.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CAPE_TOWN_PEDIA</Tag>
@@ -417,7 +417,7 @@
 		<German>[TAB}Das Gebiet, das heute als Kapstadt bekannt ist, war ursprünglich von den San und Khoikhoi besiedelt. Im Jahre 1652 ging der Niederländer Jan van Riebeeck in der Tafelbucht an Land und gründete dort eine Versorgungsstation für die Handelsschiffe der Niederländischen Ostindien-Kompanie (Vereenigde Oost-Indische Compagnie; kurz: VOC) auf ihrer Route nach Indien. Der Ort war gewählt worden, weil sich eine geschützte Bucht als natürlicher Hafen anbot. Die Niederländer vertrieben die Ureinwohner, die bisher das Gebiet besiedelt hatten, und erbauten umgehend zu ihrem eigenen Schutz das Fort de Goede Hoop - das heutige Castle of Good Hope. Da sich die Ureinwohner weigerten, mit den Eroberern Handel zu treiben und für sie zu arbeiten, importierte die VOC Menschen aus ihren Handelsgebieten in Madagaskar, Indien, Malaysia und Indonesien, um sie als Sklaven zu halten. Da aber nicht nur ein Mangel an Arbeitskräften, sondern auch an Frauen in der noch jungen Kolonie herrschte, wurden die Sklavinnen in doppelter Hinsicht ausgebeutet: für Arbeit und sexuelle Beziehungen. Die daraus resultierende Durchmischung von Europäern, Sklaven und den afrikanischen Ureinwohnern ist der Ursprung der heutigen farbigen Bevölkerungsschicht (Cape Coloureds).[PARAGRAPH:2]Während der 150-jährigen niederländischen Herrschaft wuchs die Siedlung zu einem wichtigen und lebendigen Hafen heran, der auch die Taverne des Meeres genannt wurde, da er Rast und Aufenthalt für die vielen Schiffe bot, die zwischen Europa und Asien verkehrten. Als die VOC am Ende des 18. Jahrhunderts nahezu bankrott war, wurde die Stadt eine leichte Beute für britische Imperialisten, die ihr Einflussgebiet in diese Region erweitern wollten. Nach der Niederlage der Niederländer gegen die Briten im Jahr 1806 am Bloubergstrand, etwa 25 Kilometer nördlich von Kapstadt gelegen, wurde die Kolonie am 13. August 1814 zur Britischen Kronkolonie erklärt und die Sklaverei abgeschafft.[PARAGRAPH:2]Die Entdeckung und der erstmalige Abbau von Diamanten und Gold auf dem Highveld im Inneren des Landes in den Jahren zwischen 1869 und 1890 veränderte Kapstadt sehr schnell. Die Stadt war nun nicht mehr die einzige und dominierende Großstadt der Kolonie, erlangte aber als größter Hafen des Landes Reichtum und Wohlstand, während sich immer mehr Industriebetriebe in der Stadt ansiedelten. Zu dieser Zeit erwirtschaftete der damals in Kapstadt lebende Premierminister der Kapkolonie, Cecil John Rhodes, große Profite mit seinem Konzern De Beers, noch heute der größte Diamantenförderer der Welt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_JAMAICA_PEDIA</Tag>
@@ -426,7 +426,7 @@
 		<German>[TAB]Als Christoph Kolumbus 1494 während seiner zweiten Reise als erster Europäer auf Jamaika landete, lebten dort etwa 100.000 Menschen. Bei Pedro Bluff in Saint Elizabeth wurden Höhlen mit Malereien gefunden, die denen auf anderen Karibikinseln gleichen.[PARAGRAPH:2]Nach einem jahrelangen Streit zwischen Diego Kolumbus, dem Sohn von Christoph Kolumbus, und der spanischen Krone über den Besitz einiger Karibikinseln wurde er schließlich Vizekönig aller von seinem Vater entdeckten Inseln. Er erhielt das Recht, einen Anteil des dort gefundenen Goldes für sich zu behalten und Steuern zu erheben. 1509 ließ er Jamaika durch Juan Ponce de León einnehmen und nannte es Santiago. Dieser Name bürgerte sich nie ein. Auch die Spanier gebrauchten die ursprünglichen indianischen Namen Chaymakas oder Xaymaca, die sie in Jamaica verdrehten. In weniger als zehn Jahren zerfiel die Kultur der Ureinwohner, sie wurden durch eingeschleppte Krankheiten und die brutale Behandlung durch die Siedler dezimiert. Seit der zweiten Hälfte des 17. Jahrhunderts gelten sie als ausgestorben. Um den Mangel an Arbeitskräften zu kompensieren, brachten die Spanier ab 1517 die ersten afrikanischen Sklaven auf die Insel, vorwiegend von der Gold- und Sklavenküste. 1611 wurden erstmals mehr schwarzafrikanische als europäische Einwohner gezählt. Hauptstadt wurde Nueva Sevilla, das heutige Spanish Town. Zunächst wurde in der Landwirtschaft das Verwaltungssystem Encomienda eingeführt. Spanier erhielten große Ländereien, zusammen mit den darauf lebenden Ureinwohnern, die sie zur Arbeit einsetzen konnten und die sie missionierten. Das System war menschenverachtend und trug entscheidend zum Aussterben der indianischen Kultur bei. Kurz vor der Eroberung durch England wurde auf das humanere Repartimiento umgestellt, bei dem indianische Dorfgemeinschaften zwei bis vier Prozent ihrer Arbeitskraft den Kolonialherren zur Verfügung stellen mussten.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CUBA_PEDIA</Tag>
@@ -435,7 +435,7 @@
 		<German>[TAB]Christoph Kolumbus entdeckte die Insel auf seiner ersten Reise mit der Landung in der Bucht von Bariay im Nordosten der Insel am 27. oder 28. Oktober 1492 und nahm sie für Spanien in Besitz. Von 1511 bis 1515 wurde die Insel im Auftrag des Königs Ferdinand durch Diego Velázquez de Cuéllar erobert. Dieser brach mit seiner Gefolgschaft den ersten Widerstand der Indianer unter der Führung des Kaziken Hatuey. Die indianische Bevölkerung ging durch Kriege gegen die Spanier, eingeschleppte Krankheiten (Pocken), Zwangsarbeit und Unterernährung stark zurück. Bemühungen von Seiten der Kirche, besonders des Dominikanerordens, und des spanischen Staates, die Indianer vor der Willkür der Kolonisten zu schützen, hatten wenig Erfolg. Bartolomé de las Casas, der als Feldkaplan an der Eroberung teilgenommen hatte, verzichtete 1514 aus Gewissensgründen auf seine Encomienda und engagierte sich gegen die Unterdrückung der Indianer. Auf sein Betreiben ordnete König Karl V 1542 die sukzessive Aufhebung der Encomiendas an, was sich in Kuba auch relativ schnell durchsetzte. Kuba wurde Teil des Vizekönigreichs Neu-Spanien und hatte darin den Status eines Generalkapitanats (Capitanía General).</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HISPANIOLA_PEDIA</Tag>
@@ -444,7 +444,7 @@
 		<German>[TAB]Am 5. Dezember 1492 entdeckte Christoph Kolumbus Hispaniola für Europa. Nach Goldlagerstätten forschend, entdeckte Kolumbus die Häfen von Valparaiso, Punta Santa und errichtete vor seiner Rückkehr nach Europa in der Nähe des Letzteren mit Hilfe der Arawak aus den Trümmern des gestrandeten Schiffs Santa Maria ein kleines Fort, La Navidad, worin er eine Besatzung von 40 Mann zurückließ. La Navidad war die erste Kolonie Spaniens in Amerika.[PARAGRAPH:2]Bei seiner Rückkehr nach Hispaniola am 28. November 1493, fand er das Fort in Trümmern; Arawaken angeführt vom Kaziken Caonabo hatten - gereizt durch die Gewalttaten und Plünderungszüge der 40 Spanier - das Fort zerstört und die Besatzung beendet. Kolumbus ließ daraufhin in einem Feldzug gegen die Arawaken viele von ihnen versklaven und nach Spanien schicken, was nicht auf Zustimmung des spanischen Königspaares stieß. Die Spanier legten im Osten des Kap Montecristi im Januar 1494 die Stadt La Isabela an, von wo aus sie sich in den Besitz der reichen Goldminen von Cibao setzten und zur Sicherung derselben das Fort St. Thomas errichteten.[PARAGRAPH:2]Als Kolumbus 1496 die Heimreise antrat, gründete sein Bruder Bartolomeo im Süden, an der Mündung des Flusses Ozama, eine neue Stadt, Santo Domingo, welche die Hauptstadt der Insel wurde und ihr (bzw. dem Ostteil) später ihren Namen gab. Seitdem La Isabela aufgegeben wurde, ist Santo Domingo die älteste noch bestehende von Europäern gegründete Siedlung in Amerika.[PARAGRAPH:2]Am 31. August 1498 erreichte Kolumbus erneut die Stadt Santo Domingo. Er versuchte, Streitigkeiten der Siedler mit seinem Bruder zu schlichten und verstärkte die Christianisierung sowie die Suche nach Gold. Aufgrund negativer Berichte ersetzte der spanische Hof Kolumbus als Gouverneur durch Francisco de Bobadilla, der am 23. August 1500 Hispaniola erreicht. Er nahm Christoph und Bartolomeo Kolumbus gefangen und schickte sie in Ketten nach Spanien. Hier wurden die beiden Männer durch das Königspaar begnadigt, jedoch nicht wieder in ihre ehemaligen Ämter eingesetzt.[PARAGRAPH:2]Unter dem 1503 eingeführten Encomienda-System, das die Indios zur Zwangsarbeit verpflichtete, litten diese sehr. Nach den Aufzeichnungen vom Zeugen Las Casas lebten auf Hispaniola 1508 nur noch 60.000 Indios. Neben den unmenschlichen Arbeitsbedingungen in der Sklavenarbeit und der Verfolgung von Flüchtigen starben zusätzlich viele Indios durch aus Europa und Afrika eingeschleppte Seuchen, gegen die sie keine Abwehrkräfte hatten. Eine der Stätten dieses raschen Sterbens waren die von Francisco de Bobadilla aufgefundenen und von ihm sowie seinem Nachfolger Nicolás de Ovando ausgebeuteten Goldminen von San Cristoforo, die reiche Ausbeute lieferten.[PARAGRAPH:2]1517 brachte Pedro d'Atenza das Zuckerrohr von den Kanarischen Inseln nach Haiti, und Gonzalez gab den Impuls zum Plantagen- und Zuckermühlenbau. Zu deren Betreibung holte Ovando, da viele der einheimischen Indios bereits umgekommen waren, 40.000 Kariben von den Bahamas. Aber auch diese starben infolge der Seuchen bald, worauf (ab 1503 oder 1505) Menschen aus Afrika verbracht und als Sklaven eingeführt wurden.[PARAGRAPH:2]1509 wurde Diego Colón, der Sohn von Christoph Kolumbus, Gouverneur, später auch Vizekönig Hispaniolas. 1512 fand die Einweihung der Universität von Santo Domingo, der ersten Universität in der Neuen Welt, statt.[PARAGRAPH:2]In der Zeit zwischen 1519 und 1533 erhoben sich die überlebenden Indios (etwa 4.000) unter ihrem Führer (Kaziken) Enriquillo (oder Enrico) erfolglos gegen die Spanier. Ihr Volk wurde in den folgenden Jahren und Jahrzehnten fast vollständig ausgerottet. Nach einem Friedensschluss auf Geheiß der Spanischen Krone überließen ihnen die Spanier ein kleines Gebiet bei Boyà bzw. Azua, ca. 100 Kilometer nordöstlich von Santo Domingo. Dass sich dort bis heute Nachkommen der Kaziken erhalten haben, beruht aber auf einer Legende. Vielmehr vermischten sich die Indios mit den Mulatten und verloren mit der Zeit ihre kulturelle und ethnische Identität. Anderen Berichten zufolge, starben sie schon im späten 16. Jahrhundert durch eine Seuche aus.[PARAGRAPH:2]Von 1537 bis 1548 kam es zudem zu Aufständen geflohener schwarzer Sklaven, die Cimarrones genannt wurden. 1542 lebten auf der Insel 200 Indios, 5.000 Spanier und 30.000 schwarze Sklaven. 1586 eroberte und plünderte der englische Freibeuter Francis Drake die Stadt Santo Domingo. Ein weiterer englischer Angriff fand 1655 unter Admiral William Penn statt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PANAMA_PEDIA</Tag>
@@ -453,7 +453,7 @@
 		<German>[TAB]Im Jahr 1501 brach Rodrigo de Bastidas aus Sevilla, der Christoph Kolumbus auf seiner zweiten Amerikareise begleitete, von der Atlantikküste des heutigen Kolumbiens auf, um die Küstenlinie des karibischen Meers zu kartographieren. Er erreichte La Punta de Manzanillo an Panamas oberer karibischer Küste, bevor er auf Grund des schlechten Schiffszustandes nach Santo Domingoto zurückkehren musste. Er gilt als der erste Europäer, der diesen Teil des Isthmus, das Gebiet des heutigen Kuna Yala, beanspruchte. Vor Ankunft der Europäer war Panama weitestgehend von den Völkern der Chibcha und Chocoa besiedelt, deren größte Gruppe die Cueva darstellten. Ein Jahr nach de Bastidas Ankunft in Panama segelte Christoph Kolumbus von den heutigen Gebieten Honduras und Costa Ricas in südlicher Richtung zum Isthmus. Kolumbus fertigte in dieser Zeit Karten der panamaischen Küstenlinie an und erkundete, im Gegensatz zu de Bastida, den westlichen Teil Panamas. Er landete an einem Platz namens Almirante und rückte in ein Gebiet vor, das er Veragua (deutsch: Wasser sehen) nannte. Er setzte seine Küstenfahrt bis zum Río Chagres fort, landete in Portobelo, einer natürlichen Bucht, die 1597 ein bedeutender Karibikhafen der spanischen Flotte werden sollte, und beendete schließlich seine Erkundungen in Del Retrete, nachdem er lediglich zwei Monate im Bereich des heutigen Panamas war.[PARAGRAPH:2]Vasco Núñez de Balboa, ein Begleiter de Bastidas im Jahre 1501, konnte 1513 die Erzählungen der indigenen Bevölkerung bestätigen, wonach es einen weiteren Ozean geben sollte, indem er sich auf den schwierigen Weg vom Atlantik zum Pazifik machte. Balboa nannte den Ozean zunächst Südsee, später hingegen wurde er in Pazifik umbenannt.[PARAGRAPH:2]Zentrum des kolonialen Panama wurde Panama-Stadt. 1519 von Pedro Arias Dávila gegründet wurde sie bald Sitz der Audiencia und Bischofssitz. Die Stadt an der geografisch besteigneten Position für den interozeanischen Handel gelegen - obgleich in einer ungünstigen topographischen Lage - wurde wichtiger Umschlagplatz auf der Route zwischen Peru und Spanien. Gold und Silber wurden auf dem Seeweg nach Panama gebracht und von dort auf dem Landweg an die Karibikküste geschafft und von dort dann weiter nach Spanien verschifft. Es entwickelte sich ein System mit zwei Routen: dem Camino Real (Deutsch: königlicher Weg) auf dem während der Trockenzeit von Dezember bis April das Gold und Silber auf dem Rücken von Maultieren transportiert wurde, und der Camino de Cruces (Deutsch: Weg der Kreuze) der von Panama Stadt auf dem Landweg nach Venta de Cruces führte, dort wurden die Güter in Boote umgeladen und über den Fluss Chagres zur Mündung gebracht. Der Camino de Cruces wurde vor allem während der Regenzeit für den allgemeinen Warenverkehr benutzt. Der Ursprung des Namens Camino de Cruces wird von der kreuzformigen Form des Strassenpflasters abgeleitet.[PARAGRAPH:2]1671 wurde Panamá la Vieja durch den englischen Piraten Henry Morgan zerstört. Er kam über den Isthmus und griff die Stadt von der Landseite an, die danach in 10 km Entfernung an besser geeigneter Stelle neu gebaut wurde.[PARAGRAPH:2]Ein wiederkehrendes Thema in der Geschichte Panamas ist somit immer wieder das Verhältnis des Isthmus zum Aufleben einer Weltwirtschaft. Balboas "Entdeckung" bedeutete für Panama, dass es ein Umschlagplatz für geplünderte peruanische Schätze, europäische Waren, Dienstleistungen, Menschen, Arbeit und Versklavung wurde; eben alles, was in den spanischen Kolonien gehandelt wurde. Der Erfolg der spanischen Herrschaft stand in scharfem Kontrast zur Unterdrückung der indigenen Völker. Wenige Jahre nach der Conquista waren die einheimischen Völker weitgehend ausgerottet. Im späten 17. Jahrhundert war beispielsweise die Kultur der Cueva vollständig verschwunden.[PARAGRAPH:2]Panama unterstand von 1538 bis 1821 spanischer Herrschaft und das panamaische Schicksal war eng mit der geopolitischen Bedeutung des Isthmus für die spanische Krone verbunden. Die Bedeutung Panamas sank zum Ende des 17. Jahrhunderts in erheblichem Maße und verschwand Mitte des 18. Jahrhunderts fast völlig, als die Macht und der Einfluss Spaniens in Europa sank und spanische Schiffe mehrheitlich Kap Hoorn umsegelten, um den Pazifik zu erreichen. Während die Strecke über Panama kurz war, war sie auch arbeitsintensiv und teuer, wegen des mehrfachen Ladungsumschlages und des aufwändigen Landtransportes. Zusätzlich war die Strecke über Panama durch (meist niederländische und englische) Piraten, sowie Cimarrons genannte Afrikaner, die aus Versklavung geflohen waren, bedroht.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_BRAZIL_PEDIA</Tag>
@@ -462,7 +462,7 @@
 		<German>[TAB]Schon 1494 beschlossen Portugal und Spanien die Aufteilung Südamerikas im Vertrag von Tordesillas. Das Land wurde nach dem in Europa sehr beliebten Brasilholz, einem roten Edelholz, das heute höchst selten ist, benannt. Dort wurde unter Vermittlung von Papst Alexander VI. eine Trennung der Interessensphären festgeschrieben, so dass die gesamte Westküste spanische, und die (zu diesem Zeitpunkt noch allgemein unbekannten) Küstenabschnitte des heutigen Brasiliens portugiesische Kolonie würden. Am 22. April 1500 landete der portugiesische Seefahrer Pedro Alvares Cabral dann beim heutigen Porto Seguro (im Süden des Bundesstaates Bahia) an der brasilianischen Küste an und nahm das Land für die portugiesische Krone in Besitz. Die Zeit von 1500 bis 1530 war von Tauschhandel mit den Einheimischen geprägt. Um jedoch den Franzosen, die unter Missachtung des Vertrags von Tordesillas auch mit den Indios Tauschgeschäfte für Rotholz machten, Einhalt zu gebieten, beschloss die portugiesische Krone, europäische Siedler nach Brasilien zu schicken.[PARAGRAPH:2]1549 wurde das heutige Salvador da Bahia (São Salvador da Bahía de Todos os Santos) zur Hauptstadt ernannt. Ab 1530 wurden Indios aus dem Landesinnern an die Küste gebracht, die die Arbeit auf den Zuckerrohrplantagen im Nordosten verrichten mussten. Wegen harter Arbeit, Verfolgung und Anfälligkeit der Indios für europäische Krankheiten starben viele von ihnen. Die Kolonialherren versuchten daraufhin, die verlorengegangene Arbeitskraft durch Sklaven aus Afrika zu ersetzen. Bis 1580 brachten die Portugiesen das ganze Land faktisch unter ihre Kontrolle.[PARAGRAPH:2]1629 hatten sich die Niederländer in der Nähe des heutigen Recife niedergelassen und 1637 unter Führung von Johann Moritz von Nassau-Siegen diese Anbaugebiete erobert, die daraufhin nochmals kurz aufblühten. Bis 1654 stand der Nordosten, v.a. das Gebiet um Pernambuco, unter niederländischer Kontrolle. In der Schlacht von Guararapes wurden die niederländischen Truppen im selben Jahr entscheidend geschlagen und wieder vertrieben.[PARAGRAPH:2]Reiche Barockstädte entwickelten sich im 17. Jahrhundert, als Bandeirantes-Expeditionen das Hinterland erkundeten und neben anderen Bodenschätzen auch Gold und Diamanten entdeckten. Im selben Jahrhundert bauten entflohene Sklaven einfache Siedlungen, sogenannte Quilombos, auf. Als in den Quilombos Aufstände gegen die Unterdrückung der Schwarzen ausbrachen, zerstörte man bis 1699 alle Siedlungen wieder. 1763 wurde Rio de Janeiro zur Hauptstadt ernannt, weil sich das wirtschaftliche Zentrum des Landes auf den Süden verlagerte. 25 Jahre später führte der Offizier und Zahnarzt Tiradentes einen Aufstand an, der aber scheiterte. 1792 wurde der heutige Nationalheld Brasiliens hingerichtet. Gleichzeitig begann ein Konflikt mit Spanien, weil die Bandeirantes-Expeditionen die Westgrenze Brasiliens entgegen den Vereinbarungen verschoben.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIES_PEDIA</Tag>
@@ -471,7 +471,7 @@
 		<German>[TAB]Als erste Europäer erforschten um die Wende vom 15. zum 16. Jahrhundert portugiesische und später spanische Entdecker die Region. Rasch entwickelte sich ein blühender Seehandel mit Sandelholz, Indigo und Gewürzen, der ab dem 17. Jahrhundert von den eigens dafür gegründeten Handelsgesellschaften - vor allem der Britischen und der Niederländischen Ostindienkompanie - in monopoliserter Weise abgewickelt wurde. Große Teile des Archipels wurden niederländische Kolonie, der nördliche Teil Borneos britisch. Die Philippinen waren zunächst spanisch, gingen aber später an die USA. Osttimor blieb als letzter Rest der zuvor im Archipel weit verteilten Besitzungen bis in das 20. Jahrhundert unter portugiesischer Kontrolle.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_INDIA_PEDIA</Tag>
@@ -480,7 +480,7 @@
 		<German>[TAB]Nachdem Vasco da Gama 1498 den Seeweg nach Indien entdeckt hatte, begann Portugal ab 1505 kleinere Küstenstützpunkte zu erobern (vgl. Portugiesisch-Indien). Von 1756 an unterwarf die britische Ostindien-Kompanie (British East India Company) von ihren Hafenstützpunkten Calcutta (heute: Kolkata), Madras (heute: Chennai) und Bombay (heute: Mumbai) aus weite Teile Indiens. Der vorher bestehende Einfluss der europäischen Kolonialmächte Portugal, Niederlande und Frankreich wurde von ihr weitgehend beseitigt. Loyale Fürsten behielten Staaten mit begrenzter Souveränität wie Hyderabad, Bhopal, Mysore oder Kaschmir. 1857/58 erhoben sich Teile der Bevölkerung Nordindiens im Sepoy-Aufstand gegen die Herrschaft der Ostindien-Kompanie. Nach der Niederwerfung des Aufstandes wurde diese aufgelöst und Indien der direkten Kontrolle durch Großbritannien unterstellt. Die britischen Monarchen trugen ab 1877 (bis 1947) zusätzlich den Titel Empress of India bzw. Emperor of India (Kaiser(in) von Indien).</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT_PEDIA</Tag>
@@ -489,7 +489,7 @@
 		<German>[TAB]Als Vertragshäfen oder Traktatshäfen bezeichnete man jene Häfen in China, Japan und Korea, die im Rahmen der "Ungleichen Verträge" mit den Kolonialmächten im 19. Jahrhundert für den ausländischen Handel zwangs-"geöffnet" worden waren. Eine Sonderform sind Pachthäfen.[PARAGRAPH:2]Faktisch handelte es sich bei den Häfen um exterritoriale Niederlassungen. Die schwachen ostasiatischen Kaiserreiche wurden gezwungen, den Kolonialmächten in ostasiatischen Hafenstädten deren eigene Verwaltung, eigene Gerichtsbarkeit, eigene Polizeigewalt und eigene Zollhoheit zu gewähren und ihnen damit die Hoheitsrechte in diesen Städten zu überlassen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_MALAYSIA_PEDIA</Tag>
@@ -498,7 +498,7 @@
 		<German>[TAB]Die malaiische Halbinsel wurde zu einem großen Handelszentrum in Südostasien, als der Handel zwischen China und Indien zu florieren begann. Damals begann in der Straße von Malakka ein reges Treiben. Die ersten malaiischen Königreiche entstanden durch Häfen, die im 10. Jahrhundert gegründet worden waren. Die wichtigsten frühen Königreiche waren Langkasuka und Lembah Bujang in Kedah, sowie Beruas und Gangga Negara in Perak und Pan Pan in Kelantan. Der Islam kam im 14. Jahrhundert in Terengganu an. Im frühen 15. Jahrhundert wurde das Sultanat von Malakka gegründet. Durch seinen Wohlstand zog es das Interesse von Portugal auf sich. Der Hafen wurde dann ein Zentrum der Kolonialisierung durch die Niederländer und die Briten.[PARAGRAPH:2]Die britische Kronkolonie Straits Settlements wurde im Jahre 1826 gegründet und England gewann schrittweise die Kontrolle über den Rest der Halbinsel. Zu den Straits Settlements gehörten Penang, Singapur und Malakka. Penang war im Jahre 1786 durch Kapitän Francis Light gegründet worden und diente als Militär- und Handelsbasis. In seiner Bedeutung wurde es bald von Singapur überholt, das im Jahre 1819 durch Sir Stamford Raffles gegründet wurde. Malakka war nach dem englisch-niederländischen Vertrag von 1824 endgültig in britischem Besitz. Die Kolonie wurde durch die Britische Ostindien-Kompagnie mit Sitz in Kalkutta regiert, bis deren Sitz 1867 nach London verlegt wurde.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PHILLIPPINES_PEDIA</Tag>
@@ -507,7 +507,7 @@
 		<German>[TAB]Am 16. März 1521 entdeckte der portugiesische Seefahrer Fernão de Magalhães (Ferdinand Magellan), unter spanischer Flagge segelnd, die südphilippinischen Inseln für den europäischen Kulturraum. Als Magellan auf der Insel Homonhon landete, nahm er das Land für Spanien in Anspruch und benannte es Islas de San Lazaro (Sankt-Lazarus-Inseln), da an diesem Tag das Fest zu Ehren des Heiligen Lazarus gefeiert wurde. Er und seine Leute bauten freundschaftliche Beziehungen zu lokalen Stammesfürsten und zu Rajah Humabon, dem König von Cebu, auf und bekehrte einige Einheimischen zum Christentum. Bei einem Feldzug gegen den feindlich gesinnten Stammesführer der Nachbarinsel Mactan, wurden Magellan, vermutlich durch die Hand des Kriegerhäuptlings Lapu Lapu selbst, zusammen mit vielen seiner Männer getötet.[PARAGRAPH:2]Alsbald kamen zahlreiche Mönche und Missionare auf die Philippinen und es gelang ihnen sehr schnell, einen Großteil der damaligen islamischen oder animistischen Bevölkerung zum Christentum zu bekehren. Die Missionierung wurde vornehmlich von katholischen Orden durchgeführt: Dominikaner, Franziskaner (OFM), Augustiner und Jesuiten. Bei der Missionierung und Verwaltung der philippinischen Kolonie wurden lokale Häuptlinge in einer Art indirekter Herrschaft mit einbezogen. Aus ihnen entstand die so genannte principalia, eine ländliche einheimische Führungsschicht mit entsprechenden Privilegien.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VINLAND_PEDIA</Tag>
@@ -516,6 +516,6 @@
 		<German>[TAB]Vinland (früher auch Winland, oftmals als "Weinland" gedeutet) war der Name, den der aus Grönland bzw. Island stammende Leif Eriksson einem Teil Nordamerikas um das Jahr 1000 gab, als er als vermutlich erster Europäer dort landete. Der Skálholtsbók zufolge geschah es auf der Rückreise von Europa, dass Leif etwas vom Kurs abkam und auf der anderen Seite der Davisstraße Land entdeckte. In der Flateyjarbók dagegen heißt es, dass er zuerst nach Grönland auf den Hof seines Vaters zurückkehrte und dann losfuhr, um nach einem flachen und bewaldeten Land zu suchen, das Bjarni Herjúlfsson von seinem Schiff aus weit draußen auf der Davisstraße gesichtet hatte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 </Civ4GameText>

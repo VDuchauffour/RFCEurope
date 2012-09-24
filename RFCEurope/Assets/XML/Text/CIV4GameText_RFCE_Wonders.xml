@@ -13,7 +13,7 @@
 		<German>Petersdom</German>
 		<Italian>Basilica di San Pietro</Italian>
 		<Spanish>Basílica de San Pedro</Spanish>
-		<Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Russian>
+		<Portuguese>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Tag>
@@ -22,7 +22,7 @@
 		<German>[TAB]Sankt Peter im Vatikan in Rom, im deutschen Sprachraum meist Petersdom genannt (auch: Basilika St. Peter; Petersbasilika, Vatikanische Basilika oder Templum Vaticanum) ist die größte der Papstbasiliken in Rom, nicht aber die Kathedrale des Bischofs von Rom, dies ist die Lateranbasilika. Ihre volle Bezeichnung lautet Basilica Papale di San Pietro in Vaticano[1], lateinisch: Basilica Sancti Petri in Vaticano. Der Petersdom ist das Zentrum des unabhängigen Staats der Vatikanstadt.[PARAGRAPH:2]Den Vorgängerbau, auch Alt-St. Peter genannt, ließ Konstantin der Große um 324 als Grabeskirche über dem vermuteten Grab des Apostels Simon Petrus errichten, dem sie geweiht ist. Diese und der Petersdom waren seit Mitte des 5. Jahrhunderts die Patriarchalbasilika des Lateinischen Patriarchen von Konstantinopel (Amt 2006 niedergelegt).[PARAGRAPH:2]Der Petersdom fasst 20.000 Menschen und ist mit einer überbauten Fläche von 15.160 m² eines der größten Kirchengebäude der Welt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE</Tag>
@@ -31,7 +31,7 @@
 		<German>Schlosskirche</German>
 		<Italian>La Chiesa di Ognissanti</Italian>
 		<Spanish>Iglesia de todas las santos</Spanish>
-		<Russian>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Russian>
+		<Portuguese>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE_PEDIA</Tag>
@@ -40,7 +40,7 @@
 		<German>[TAB]Die Schlosskirche zu Wittenberg wurde zwischen 1496 und 1509 zusammen mit dem Residenzschloss des Kurfürsten Friedrich von Sachsen erbaut und diente der 1502 gegründeten Wittenberger Universität 300 Jahre lang als Gotteshaus und Aula. Sie bildet den dritten Flügel des Schlosses.[PARAGRAPH:2]Die hölzerne Kirchentür diente der Universität als "Schwarzes Brett" und der Augustinerpater Dr. Martin Luther heftete am 31.0ktober 1517 seine 95 Thesen an diese, um zur Disputation über den Zustand der Kirche aufzufordern. Damit begann die Reformation.[PARAGRAPH:2]1760 im Siebenjährigen Krieg brannte die Kirche aus und wurde 1892 als "Denkmal der Reformation" wieder aufgebaut. Von den beiden Schlosstürmen wurde einer zum Kirchturm umgebaut.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE</Tag>
@@ -49,7 +49,7 @@
 		<German>Hagia Sophia</German>
 		<Italian>Santa Sofia</Italian>
 		<Spanish>Santa Sof&#237;a</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Tag>
@@ -58,7 +58,7 @@
 		<German>[TAB]Die Hagia Sophia, oder "Kirche der heiligen Weisheit", wurde 530 nach Christus als griechisch-orthodoxe Kirche gebaut. Das kunstvolle Marmorgeb&#228;ude im t&#252;rkischen Istanbul (dem ehemaligen Konstantinopel) wird von einer 56 Meter hohen Kuppel gekr&#246;nt. Die Kuppel (seinerzeit ein technisches Wunderwerk) ist seit ihrem Bau bereits mehrmals eingest&#252;rzt. An den Ecken des Geb&#228;udes stehen vier Minarette.[PARAGRAPH:2]Das Innere der Hagia Sophia besteht aus S&#228;ulen und B&#246;gen, die sich bis zur scheinbar schwebenden Kuppel erstrecken. Die W&#228;nde zierten Marmor- und Goldmosaike biblischer Szenen und christlicher Heiliger.[PARAGRAPH:2]Seit die Ottomanen Konstantinopel im Jahr 1453 eroberten, ist die Hagia Sophia eine Moschee. In der Folgezeit wurden die Mosaike innerhalb der Kirche wegen des Bilderverbotes im Islam unter Putz gelegt.[PARAGRAPH:2]1934 erkl&#228;rte der t&#252;rkische Pr&#228;sident Kemal Atat&#252;rk das Geb&#228;ude zum Museum. In den letzten Jahren wurden im Rahmen der Restaurierung der Hagia Sophia einige Mosaike freigelegt. Trotz der Verw&#252;stungen im Laufe der Jahrhunderte gilt die Hagia Sophia bis heute als eines der sch&#246;nsten Geb&#228;ude der Welt.</German>
 		<Italian>[TAB]La basilica di Santa Sofia o "chiesa della sacra saggezza" fu eretta nel 530 d. C. come chiesa Greca Ortodossa e si trova in Turchia, nell'attuale Istanbul (un tempo Costantinopoli): si tratta di una struttura meravigliosa e decorata finemente, realizzata in marmo e pietra, in cima una cupola d'oro di 30 metri di diametro. Per l'epoca, fu un'opera di ingegneria senza precedenti anche se la cupola croll&#242; diverse volte durante la sua esistenza. Ai quattro angoli della basilica si trovano altrettante raffinate torri.[PARAGRAPH:2]L'interno della basilica di Santa Sofia &#232; uno spazio occupato da archi e colonne che si estendono fino alla cupola che sembra quasi fluttuare in cima all'edificio. Gli interni sono rivestiti in marmo e mosaici dorati che descrivono scene bibliche e immagini di santi Cristiani.[PARAGRAPH:2]Nel 1453, Costantinopoli venne conquistata dai Turchi Ottomani e la basilica di Santa Sofia venne convertita in una moschea: l'iconografia umana non era pi&#249; gradita e i mosaici vennero ricoperti con intonaci.[PARAGRAPH:2]Nel 1934, il presidente Turco Kemal Ataturk trasform&#242; il palazzo in un museo: negli ultimi anni, la basilica ha ricevuto diverse opere di restauro e sono stati scoperti diversi mosaici. Malgrado il passare del tempo, Santa Sofia &#232; universalmente noto come uno degli edifici pi&#249; affascinanti del mondo.</Italian>
 		<Spanish>[TAB]Santa Sof&#237;a, o la "iglesia de la Santa Sabidur&#237;a", fue construida en el 530 d. C. como iglesia de los ortodoxos griegos. Levantada en Estambul (antes Constantinopla), Turqu&#237;a, es un edificio bello y decorado construido de m&#225;rmol y piedra y coronado por una c&#250;pula de oro que mide unos treinta metros de di&#225;metro. La c&#250;pula, un reto muy dif&#237;cil para la arquitectura de la &#233;poca, se ha derrumbado varias veces durante su vida. Cuatro torres esbeltas se levantan en cada esquina del edificio.[PARAGRAPH:2]El interior de Santa Sof&#237;a es un espacio maravilloso de columnas y arcos que se extienden hasta la b&#243;veda, ofreciendo la impresi&#243;n de flotar encima del edificio. El interior est&#225; revestido de m&#225;rmol de colores y mosaicos de oro que representan escenas e im&#225;genes b&#237;blicas de los santos cristianos.[PARAGRAPH:2]En 1453, Constantinopla fue capturada por los turcos otomanos, y Santa Sof&#237;a se convirti&#243; en una mezquita. Las representaciones humanas no son bien vistas en las mezquitas y muchos de los mosaicos fueron cubiertos con yeso.[PARAGRAPH:2]En 1934, el presidente turco Kemal Ataturk convirti&#243; el edificio en un museo. Hace pocos a&#241;os se llevaron a cabo algunas restauraciones en Santa Sof&#237;a y se recuperaron unos cuantos mosaicos. Pese a los estragos del tiempo, sigue siendo reconocida universalmente como uno de los edificios m&#225;s bellos del mundo.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Tag>
@@ -67,7 +67,7 @@
 		<German>Umayyaden-Moschee</German>
 		<Italian>Moschea degli Omayyadi</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Tag>
@@ -76,7 +76,7 @@
 		<German>Die Umayyaden-Moschee ist eine Moschee in der syrischen Hauptstadt Damaskus. Sie ist eine der ältesten Moscheen der Welt und Vorbild für andere Moscheen im Baustil der Pfeilerhallenmoschee. In vorislamischer Zeit wurde sie als eine Johannes dem Täufer geweihte Kathedrale errichtet.[PARAGRAPH:2]In der Altstadt gelegen, wurde sie von dem Umayyaden-Kalifen Al-Walid nach zehnjähriger Bauzeit im Jahre 705 n. Chr. fertiggestellt. Die gesamten Außenmauern stammen jedoch von einem antiken Heiligtum und wurden nicht von den Arabern errichtet. Besonders auf der Außenseite der Südmauer sind neben griechischen Ornamenten auch noch griechische Inschriften und in einigen Metern Höhe ein antikes Relief mit ausgekratzem Gesicht zu sehen. Ebenfalls erhalten sind mehrere Säulen des größeren antiken Heiligtums außerhalb der Moschee, am eindrucksvollsten auf der Westseite.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE</Tag>
@@ -85,7 +85,7 @@
 		<German>Tempelberg</German>
 		<Italian>Monte del Tempio</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE_PEDIA</Tag>
@@ -94,7 +94,7 @@
 		<German>[TAB]Der Tempelberg ist ein Hügel im Südostteil der Jerusalemer Altstadt, oberhalb des Kidrontales. An seinem Gipfel befindet sich ein künstliches Plateau. Ursprünglich standen hier der Salomonische Tempel und der nachfolgende Herodianische Tempel. Heute befinden sich dort der Felsendom und die al-Aq&#x1E63;&#x101;-Moschee. Der Tempelberg ist einer der umstrittensten heiligen Orte der Welt.[PARAGRAPH:2]Vor 3000 Jahren errichteten der Bibel zufolge die Israeliten unter Salomo den ersten Tempel &#x2013; Baubeginn 957 v. Chr. &#x2013; an dieser Stelle. An diesem Ort im Tempel befand sich das Hauptheiligtum des Judentums, das als Mishkan (hebräisch &#x5DE;&#x5E9;&#x5DB;&#x5DF; &#x201E;Gottes Heimstätte auf Erden&#x201C;), als &#x201E;Tabernakel&#x201C; oder im Deutsch der Lutherbibel auch als &#x201E;Stiftshütte&#x201C; bekannt ist. Im besonders heiligen, abgegrenzten Bereich dieses Allerheiligsten im Tempel wurde die Bundeslade aufbewahrt. Das Allerheiligste durfte nur einmal jährlich durch den Hohepriester betreten werden. Es war ein Symbol für das eigentliche Heiligtum, im Himmel, Gott. Der Tempel war das Zentrum des israelitischen Gottesdienstes. Als Nebukadnezar II. Jerusalem eroberte, ließ er den Tempel 586 v. Chr. zerstören. Nach ihrer Rückkehr aus dem Babylonischen Exil errichteten die Juden an derselben Stelle den zweiten Tempel (Fertigstellung 516 v. Chr.). Von Herodes dem Großen monumental ausgebaut, wurde der Tempel im jüdisch-römischen Krieg im Jahre 70 n. Chr. durch die Römer zerstört. Die Zerstörungen beider Tempel im Abstand von 655 Jahren, die nach der jüdischen Überlieferung beide am 9. Aw stattfanden, bilden zentrale Punkte in der jüdischen Geschichte. Der erhoffte Wiederaufbau des Tempels in Jerusalem und das ersehnte Anbrechen der Messianischen Zeiten ist zentrales Anliegen zahlreicher jüdischer Gebete, so des Achtzehnbittengebetes. Die Westmauer oder Klagemauer ist ein Überrest der Mauern, die das ursprüngliche, künstlich erweiterte Tempelplateau stützen. Viele Juden gestalten dort Gebete und viele Menschen hinterlassen Gebetszettel in den Mauerspalten.[PARAGRAPH:2]Nach der Zerstörung des zweiten Tempels und der Vertreibung der jüdischen Bevölkerung aus Jerusalem entstand auf dem Tempelberg zunächst ein römischer Jupiter-Tempel, später eine christliche Kirche.[PARAGRAPH:2]Im Islam gilt der Tempelberg als die drittheiligste Stätte nach Mekka und Medina. Von hier soll der Prophet Mohammed seine Nachtreise (Sure 17, Vers 1) zu der &#x201E;entferntesten Moschee&#x201C; unternommen haben.[PARAGRAPH:2]Der Tempelberg ist der Ort des ehemaligen Allerheiligsten des Judentums. Es war ein Symbol für das eigentliche Heiligtum, für Gott. Heute sind als symbolische Entsprechung die Bereiche in Synagogen, in denen die Gebete von den Gemeinden gestaltet werden, die Hauptheiligtümer im Judentum.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Religious Shrines -->
 		<!-- World Wonders -->
@@ -105,7 +105,7 @@
 		<German>Kazimierz</German>
 		<Italian>Kazimierz</Italian>
 		<Spanish>Kazimierz</Spanish>
-		<Russian>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Russian>
+		<Portuguese>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KAZIMIERZ_PEDIA</Tag>
@@ -114,7 +114,7 @@
 		<German>[TAB]Die Stadt Kazimierz wurde 1335 von König Kasimir dem Großen gegründet und nach seinem Vornamen Kazimierz benannt. Die Stadt erhielt Wehranlagen und drei Kirchen, die gotische Katharinenkirche, die ebenfalls gotische Fronleichnamskirche sowie die barocke Klosterkirche Skalka, welche an Stelle eines alten heidnischen Heiligtums gebaut wurde und die zur Station der Pilgerzüge vor der Königskrönung wurde.[PARAGRAPH:2]Unter Kasimir Jagiello wurde die Fronleichnamskirche den lateranischen Kanonikern übergeben, in deren Besitz sie sich noch immer befindet. In den Pogromen von 1494 wurden Juden aus Krakau vertrieben und siedelten sich hier an; es entstand ein jüdisches Viertel, die Judenstadt mit ihrem unverwechselbaren, vom jüdischen Leben geprägten Stadtbild. Mehrere Synagogen entstanden, darunter die von Rabbi Moses Isserles (1525-1572) erbaute Remu-Synagoge, sowie der jüdische Friedhof aus dem Jahre 1551.[PARAGRAPH:2]Im Zuge der Ersten Teilung Polens wurde Kazimierz von der österreichischen Armee besetzt und in die österreichische Verwaltung eingegliedert. Erst ein paar Jahre später wurde es an Polen zurückgegeben. Als 1846 die Republik Krakau vom Kaisertum Österreich annektiert wurde, wurde Kazimierz Teil des Großherzogtums Krakau und damit Österreichs. Im Jahre 1867 wurde Kazimierz nach Krakau eingemeindet.[PARAGRAPH:2]Die jüdische Gemeinde von Kazimierz wurde während der deutschen Besetzung zunächst in das Ghetto Krakau in Podgórze umgesiedelt; die Mitglieder der Gemeinde wurden in der Folge fast alle ermordet. Nach dem Ende des Zweiten Weltkrieges verkam Kazimierz zum verrufensten Stadtteil Krakaus und verfiel zu großen Teilen. Erst durch den Film Schindlers Liste, dessen Handlung teilweise in Kazimierz gedreht wurde, obwohl sich das Ghetto in Podgórze auf der anderen Seite der Weichsel befand, erwachte der Stadtteil zu neuem Leben. Inzwischen sind viele der Gebäude saniert worden, und in die ehemalige Judenstadt zogen wieder Geschäfte und Restaurants ein. Kazimierz wird heute von vielen Besuchern Krakaus aufgesucht.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM</Tag>
@@ -123,7 +123,7 @@
 		<German>Stephansdom</German>
 		<Italian>Stephansdom</Italian>
 		<Spanish>Stephansdom</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_PEDIA</Tag>
@@ -132,7 +132,7 @@
 		<German>[TAB]Der Stephansdom (eigentlich: Domkirche St. Stephan zu Wien) am Wiener Stephansplatz (Bezirk Innere Stadt) ist seit 1365 Domkirche (Sitz eines Domkapitels), seit 1469/1479 Kathedrale (Bischofssitz) und seit 1723 Metropolitankirche des Erzbischofs von Wien. Der von Wienern mitunter auch kurz Steffl genannte römisch-katholische Dom gilt als Wahrzeichen Wiens und wird häufig auch als österreichisches Nationalheiligtum bezeichnet. Namensgeber ist der heilige Stephanus, der als erster christlicher Märtyrer gilt.[PARAGRAPH:2]Das Bauwerk ist 107 Meter lang und 34 Meter breit. Der Dom ist eines der wichtigsten gotischen Bauwerke in Österreich. Teile des spätromanischen Vorgängerbaues von 1230/40 bis 1263 sind noch erhalten und bilden die Westfassade, flankiert von den beiden Heidentürmen, die etwa 65 Meter hoch sind. Insgesamt besitzt der Stephansdom vier Türme: Der höchste ist der Südturm mit 136,4 Meter, der Nordturm wurde nicht fertiggestellt und ist nur 68 Meter hoch. Im ehemaligen Österreich-Ungarn durfte keine Kirche höher als der Südturm des Stephansdoms erbaut werden. So wurde beispielsweise der Maria-Empfängnis-Dom in Linz um zwei Meter niedriger gebaut.[PARAGRAPH:2]Der Südturm ist ein architektonisches Meisterwerk der damaligen Zeit; trotz seiner bemerkenswerten Höhe ist das Fundament weniger als 4 Meter tief. Im Südturm befinden sich insgesamt 13 Glocken, wovon 11 das Hauptgeläut des Stephansdoms bilden. Die Pummerin, die zweitgrößte freischwingend geläutete Kirchenglocke Europas, befindet sich im Nordturm unter einer Turmhaube aus der Renaissance-Zeit.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_HELP</Tag>
@@ -141,7 +141,7 @@
 		<German>[ICON_BULLET]+2 Stabilit&#228;t mit einer monarchischen Staatsform</German>
 		<Italian>[ICON_BULLET]+2 Punti Stabilità per l'utilizzo di una Monarchia.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL</Tag>
@@ -150,7 +150,7 @@
 		<German>El Escorial</German>
 		<Italian>El Escorial</Italian>
 		<Spanish>El Escorial</Spanish>
-		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#221;&#241;&#234;&#238;&#240;&#232;&#224;&#235; </Russian>
+		<Portuguese>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#221;&#241;&#234;&#238;&#240;&#232;&#224;&#235; </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_PEDIA</Tag>
@@ -159,7 +159,7 @@
 		<German>[TAB]Der Real Sitio de San Lorenzo de El Escorial (Königlicher Sitz Sankt Laurentius von El Escorial) ist eine Schloss- und Klosteranlage, die in den Jahren 1563 bis 1584 auf Initiative des Königs Philipp II. von Spanien nach Plänen von Juan Bautista de Toledo in der spanischen Ortschaft San Lorenzo de El Escorial in der Region Madrid errichtet wurde. Die Entfernung zur spanischen Hauptstadt beträgt etwa 45 Kilometer. Das Schloss ist der größte Renaissancebau der Welt.[PARAGRAPH:2]Das Bauwerk wirkt trotz seiner beeindruckenden Länge von 207 m und einer Breite von 161 m nicht wie ein typischer Palast. Die Fassaden sind im nüchternen Stil der spanischen Renaissance gestaltet. Das verweist auf den sakralen Zweck des Gebäudes, das eben nicht nur Residenz, sondern auch ein Ort des Glaubens sein sollte. Zum Gebäudekomplex gehören eine Kirche, ein Kloster, der eigentliche Königspalast, eine Schule und eine Bibliothek. Der Bau gilt als erstes Beispiel für den Desornamentado-Stil. Auf einer Grundfläche von 33.000 m², die nur durch den Vatikanpalast übertroffen wird, gibt es 2000 Gemächer mit 3000 Türen und 2673 Fenstern, außerdem 16 Höfe, 12 Kreuzgänge, 88 Brunnen und 86 Treppenaufgänge. Der Grundriss hat die Form eines Gitters, da der heilige Laurentius (Namensgeber des Palastes) der Legende nach auf einem Feuerrost sein Martyrium erleiden musste.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_HELP</Tag>
@@ -168,7 +168,7 @@
 		<German>[ICON_BULLET]Kein Stabilitätsmalus wegen schlechter Wirschaftslage.</German>
 		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#231;&#224; &#239;&#235;&#238;&#245;&#243;&#254; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;.</Russian>
+		<Portuguese>[ICON_BULLET]&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#231;&#224; &#239;&#235;&#238;&#245;&#243;&#254; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
@@ -177,7 +177,7 @@
 		<German>Krak des Chevaliers</German>
 		<Italian>Krak des Chevaliers</Italian>
 		<Spanish>Krak des Chevaliers</Spanish>
-		<Russian>&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229;</Russian>
+		<Portuguese>&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Tag>
@@ -186,7 +186,7 @@
 		<German>[TAB]Der Crac des Chevaliers (auch Krak des Chevaliers) ist eine Burg in Syrien, deren heute sichtbare Bauteile überwiegend aus der Zeit der Kreuzzüge stammen.[PARAGRAPH:2]Die erste historisch greifbare Befestigung wurde 1031 durch den Emir von Homs auf dem Berg errichtet. Sie hatte den Namen Hisn al-Akrad (Kurden-Burg).[PARAGRAPH:2]1099 erreichte das Heer des Ersten Kreuzzugs unter Raimund von Saint-Gilles, das sich auf dem Weg nach Jerusalem befand, Hisn al-Akrad. Das Heer besetzte die Burg und hielt sich zehn Tage darin auf, bevor es weiterzog und die Stadt Arqa belagerte. Nachdem das Kreuzfahrerheer weitergezogen war, gelangte die Burg wieder in muslimischen Besitz.[PARAGRAPH:2]Wenige Jahre nach dem erfolgreichen Ende des Ersten Kreuzzugs kehrte Raimund von Toulouse in die Gegend zurück und versuchte, sich eine eigene Herrschaft aufzubauen. Während er die Hafenstadt Tartus schon 1102 einnehmen konnte, leisteten Hisn al-Akrad und die Hafenstadt Tripolis erbitterten Widerstand. Nach Raimunds Tod 1105 setzte sein Sohn Bertrand von Saint-Gilles sein Vorhaben der Errichtung der Grafschaft Tripolis mit der Eroberung von Tripolis 1109 fort. Hisn al-Akrad wurde 1110 durch den normannischen Heerführer Tankred von Tiberias erobert, der in Konkurrenz zu den provencalischen Saint-Gilles' und ihrer Grafschaft Tripolis die Ausweitung der normannischen Herrschaft um das von seinem Onkel Bohemund von Tarent gegründeten Fürstentum Antiochia verfolgte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[TAB]&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229; &#232;&#235;&#232; &#202;&#240;&#224;&#234; &#228;&#229; &#235;'&#206;&#241;&#239;&#232;&#242;&#224;&#235;&#252; (&#244;&#240;. Krak des Chevaliers, &#244;&#240;. Krak de l'Hospital) &#151; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#252; &#227;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#238;&#226;, &#240;&#224;&#241;&#239;&#238;&#235;&#238;&#230;&#229;&#237;&#237;&#224;&#255; &#226; &#209;&#232;&#240;&#232;&#232; &#234; &#226;&#238;&#241;&#242;&#238;&#234;&#243; &#238;&#242; &#235;&#232;&#226;&#224;&#237;&#241;&#234;&#238;&#227;&#238; &#210;&#240;&#232;&#239;&#238;&#235;&#232; &#237;&#224; &#226;&#229;&#240;&#248;&#232;&#237;&#229; &#243;&#242;&#184;&#241;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 650 &#236;&#229;&#242;&#240;&#238;&#226;, &#237;&#229;&#239;&#238;&#228;&#224;&#235;&#184;&#234;&#243; &#238;&#242; &#228;&#238;&#240;&#238;&#227;&#232;, &#226;&#229;&#228;&#243;&#249;&#229;&#233; &#232;&#231; &#192;&#237;&#242;&#232;&#238;&#245;&#232;&#232; &#234; &#193;&#229;&#233;&#240;&#243;&#242;&#243; &#232; &#209;&#240;&#229;&#228;&#232;&#231;&#229;&#236;&#237;&#238;&#236;&#243; &#236;&#238;&#240;&#254;. &#193;&#235;&#232;&#230;&#224;&#233;&#248;&#232;&#233; &#234;&#240;&#243;&#239;&#237;&#251;&#233; &#241;&#232;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#227;&#238;&#240;&#238;&#228; &#151; &#213;&#238;&#236;&#241; &#151; &#237;&#224;&#245;&#238;&#228;&#232;&#242;&#241;&#255; &#226; 65 &#234;&#236; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#229;&#229; &#231;&#224;&#236;&#234;&#224;. &#206;&#228;&#237;&#224; &#232;&#231; &#237;&#224;&#232;&#225;&#238;&#235;&#229;&#229; &#241;&#238;&#245;&#240;&#224;&#237;&#232;&#226;&#248;&#232;&#245;&#241;&#255; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#229;&#233; &#227;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#238;&#226; &#226; &#236;&#232;&#240;&#229;. &#194; 2006 &#227;&#238;&#228;&#243; &#226;&#236;&#229;&#241;&#242;&#229; &#241; &#246;&#232;&#242;&#224;&#228;&#229;&#235;&#252;&#254; &#209;&#224;&#235;&#224;&#228;&#232;&#237;&#224; &#231;&#224;&#236;&#238;&#234; &#225;&#251;&#235; &#226;&#237;&#229;&#241;&#184;&#237; &#226; &#209;&#239;&#232;&#241;&#238;&#234; &#194;&#241;&#229;&#236;&#232;&#240;&#237;&#238;&#227;&#238; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#237;&#238;&#227;&#238; &#237;&#224;&#241;&#235;&#229;&#228;&#232;&#255; &#222;&#205;&#197;&#209;&#202;&#206;.</Russian>
+		<Portuguese>[TAB]&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229; &#232;&#235;&#232; &#202;&#240;&#224;&#234; &#228;&#229; &#235;'&#206;&#241;&#239;&#232;&#242;&#224;&#235;&#252; (&#244;&#240;. Krak des Chevaliers, &#244;&#240;. Krak de l'Hospital) &#151; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#252; &#227;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#238;&#226;, &#240;&#224;&#241;&#239;&#238;&#235;&#238;&#230;&#229;&#237;&#237;&#224;&#255; &#226; &#209;&#232;&#240;&#232;&#232; &#234; &#226;&#238;&#241;&#242;&#238;&#234;&#243; &#238;&#242; &#235;&#232;&#226;&#224;&#237;&#241;&#234;&#238;&#227;&#238; &#210;&#240;&#232;&#239;&#238;&#235;&#232; &#237;&#224; &#226;&#229;&#240;&#248;&#232;&#237;&#229; &#243;&#242;&#184;&#241;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 650 &#236;&#229;&#242;&#240;&#238;&#226;, &#237;&#229;&#239;&#238;&#228;&#224;&#235;&#184;&#234;&#243; &#238;&#242; &#228;&#238;&#240;&#238;&#227;&#232;, &#226;&#229;&#228;&#243;&#249;&#229;&#233; &#232;&#231; &#192;&#237;&#242;&#232;&#238;&#245;&#232;&#232; &#234; &#193;&#229;&#233;&#240;&#243;&#242;&#243; &#232; &#209;&#240;&#229;&#228;&#232;&#231;&#229;&#236;&#237;&#238;&#236;&#243; &#236;&#238;&#240;&#254;. &#193;&#235;&#232;&#230;&#224;&#233;&#248;&#232;&#233; &#234;&#240;&#243;&#239;&#237;&#251;&#233; &#241;&#232;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#227;&#238;&#240;&#238;&#228; &#151; &#213;&#238;&#236;&#241; &#151; &#237;&#224;&#245;&#238;&#228;&#232;&#242;&#241;&#255; &#226; 65 &#234;&#236; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#229;&#229; &#231;&#224;&#236;&#234;&#224;. &#206;&#228;&#237;&#224; &#232;&#231; &#237;&#224;&#232;&#225;&#238;&#235;&#229;&#229; &#241;&#238;&#245;&#240;&#224;&#237;&#232;&#226;&#248;&#232;&#245;&#241;&#255; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#229;&#233; &#227;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#238;&#226; &#226; &#236;&#232;&#240;&#229;. &#194; 2006 &#227;&#238;&#228;&#243; &#226;&#236;&#229;&#241;&#242;&#229; &#241; &#246;&#232;&#242;&#224;&#228;&#229;&#235;&#252;&#254; &#209;&#224;&#235;&#224;&#228;&#232;&#237;&#224; &#231;&#224;&#236;&#238;&#234; &#225;&#251;&#235; &#226;&#237;&#229;&#241;&#184;&#237; &#226; &#209;&#239;&#232;&#241;&#238;&#234; &#194;&#241;&#229;&#236;&#232;&#240;&#237;&#238;&#227;&#238; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#237;&#238;&#227;&#238; &#237;&#224;&#241;&#235;&#229;&#228;&#232;&#255; &#222;&#205;&#197;&#209;&#202;&#206;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP</Tag>
@@ -195,7 +195,7 @@
 		<German>[ICON_BULLET]Freie Gebäude [COLOR_BUILDING_TEXT]Stadtmauern[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Burg[COLOR_REVERT] in jeder eroberten Stadt</German>
 		<Italian>[ICON_BULLET]Mura e Castello gratuiti in ogni città conquistata.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[ICON_BULLET]&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#229; &#241;&#242;&#229;&#237;&#251; &#232; &#231;&#224;&#236;&#238;&#234; &#226; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#236; &#227;&#238;&#240;&#238;&#228;&#229;.</Russian>
+		<Portuguese>[ICON_BULLET]&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#229; &#241;&#242;&#229;&#237;&#251; &#232; &#231;&#224;&#236;&#238;&#234; &#226; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#236; &#227;&#238;&#240;&#238;&#228;&#229;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS</Tag>
@@ -204,7 +204,7 @@
 		<German>Die G&#228;rten von Al-Andalus</German>
 		<Italian>I Giardini di Al Andalus</Italian>
 		<Spanish>Los Jardines del Generalife</Spanish>
-		<Russian>&#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;</Russian>
+		<Portuguese>&#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_PEDIA</Tag>
@@ -213,7 +213,7 @@
 		<German>[TAB]Der Palacio de Generalife, war der Sommerpalast und Landsitz der Nasriden-Sultane von Granada.[PARAGRAPH:2]Der Palast und seine Gärten wurden im 13. Jahrhundert errichtet und bereits unter Ismail I. (1313-1324) umgebaut.[PARAGRAPH:2]Die Anlage besteht aus dem Patio de la Acequia (Hof des Wasserkanals), der ein langes Wasserbecken, eingerahmt von Blumenbeeten, Brunnen, Kolonnaden und Pavillons aufweist, und dem Jardín de la Sultana (Garten der Sultanin). Ersterer wird als bestes Beispiel für einen mittelalterlichen Garten in Al-Andalus angesehen. Ursprünglich war der Generalife über einen überdachten Fußweg über die Schlucht hinweg mit der Alhambra verbunden. Der Generalife ist einer der ältesten verbleibenden maurischen Gärten.[PARAGRAPH:2]Die heutigen Gärten wurden von Francisco Prieto Moreno 1931 begonnen und 1951 fertiggestellt. Die Fußwege wurden im traditionellen Stil Granadas mit einem Mosaik aus Kieseln gepflastert, Weißen aus dem Fluss Darro und schwarzen aus dem Genil.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_HELP</Tag>
@@ -222,7 +222,7 @@
 		<German>[ICON_BULLET]Erlaubt den Bau von [COLOR_BUILDING_TEXT]Bauernhöfen[COLOR_REVERT] ohne Bewässerung</German>
 		<Italian>[ICON_BULLET]Permette di costruire [COLOR_BUILDING_TEXT]Fattorie[COLOR_REVERT] senza irrigazione</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Tag>
@@ -231,7 +231,7 @@
 		<German>Der Schrein von Uppsala</German>
 		<Italian>Il Santuario di Uppsala</Italian>
 		<Spanish>El Santuario de Uppsala</Spanish>
-		<Russian>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Russian>
+		<Portuguese>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_PEDIA</Tag>
@@ -240,7 +240,7 @@
 		<German>[TAB]Der gotische Dom St. Erik in der schwedischen Stadt Uppsala ist mit 118,7 Meter das höchste Kirchengebäude Skandinaviens. Der Dom ist sowohl Krönungs- als auch Grabstätte vieler schwedischer Könige und Sitz eines Evangelisch-Lutherischen Erzbischofs.[PARAGRAPH:2]Zu den Schätzen der Kirche zählt unter anderem ein vergoldeter Schrein aus dem späten 16. Jahrhundert, in dem die Relikte von Erik dem Heiligen untergebracht sind. Im nördlichen Turm befindet sich heute ein Museum mit kirchlichen Textilien. Am südlichen Portal sind steinerne Statuen aus dem 14. Jahrhundert aufgestellt. Die bekanntesten der hier begrabenen Personen sind Gustav I. Wasa und Carl von Linné.[PARAGRAPH:2]Nach einem Brand in der Domkirche von Alt-Uppsala gab der Papst die Erlaubnis, den Bischofssitz an seine heutige Stelle zu verlegen. Die ersten Planungen für den neuen Kirchenbau gab es schon 1258.[PARAGRAPH:2]Nach der Grundsteinlegung von 1260 verzögerte sich der Bau mehrfach aufgrund von Kriegen, Thronstreitigkeiten und Einstürzen von Gebäudeteilen. Auch die Pest verhinderte lange einen zügigen Aufbau. Erst im Jahre 1435 konnte der Dom unter Erzbischof Olaus Laurentii eingeweiht werden.[PARAGRAPH:2]Der Dom erlebte mehrere umfassende Renovierungen. Zum Beispiel waren beim verheerenden Stadtbrand von 1702 beide Turmspitzen herabgestürzt. Der die Renovierung leitende Architekt, Carl Hårleman, ließ Barockkuppeln aufsetzen. Im 19. Jahrhundert wurden diese Kuppeln unter Leitung von Helgo Zettervall durch die spitzen Türme ersetzt, die sich auch heute noch auf dem Dom befinden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[TAB]&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251; &#225;&#251;&#235;&#224; &#240;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#236; &#246;&#229;&#237;&#242;&#240;&#238;&#236; &#226; &#211;&#239;&#241;&#224;&#235;&#229; (&#209;&#242;&#224;&#240;&#224;&#255; &#211;&#239;&#241;&#224;&#235;&#224;) "Gamla", &#226;&#238;&#231;&#235;&#229; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#238;&#233; &#211;&#239;&#241;&#224;&#235;&#251;, &#216;&#226;&#229;&#246;&#232;&#232;, &#238;&#237;&#224; &#225;&#251;&#235;&#224; &#241;&#238;&#231;&#228;&#224;&#237;&#224;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#234;&#235;&#238;&#237;&#255;&#242;&#252;&#241;&#255; &#228;&#240;&#229;&#226;&#237;&#232;&#236; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#236; &#225;&#238;&#227;&#224;&#236;. &#214;&#229;&#237;&#242;&#240; &#234;&#243;&#235;&#252;&#242;&#224; &#240;&#229;&#228;&#234;&#238; &#228;&#238;&#234;&#243;&#236;&#229;&#237;&#242;&#232;&#240;&#243;&#229;&#242;&#241;&#255;, &#237;&#238; &#238; &#237;&#229;&#236; &#229;&#241;&#242;&#252; &#243;&#239;&#238;&#236;&#232;&#237;&#224;&#237;&#232;&#255; &#226; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#245; &#241;&#224;&#227;&#224;&#245; &#232; "Saxo Grammaticus' Gesta Danorum", &#232; &#239;&#238;&#228;&#225;&#240;&#238;&#225;&#237;&#229;&#229;, &#234;&#224;&#234; "&#231;&#238;&#235;&#238;&#247;&#229;&#237;&#237;&#251;&#233; &#245;&#240;&#224;&#236;" &#226; &#240;&#224;&#225;&#238;&#242;&#229; &#192;&#228;&#224;&#236;&#224; &#193;&#240;&#229;&#236;&#229;&#237;&#224;</Russian>
+		<Portuguese>[TAB]&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251; &#225;&#251;&#235;&#224; &#240;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#236; &#246;&#229;&#237;&#242;&#240;&#238;&#236; &#226; &#211;&#239;&#241;&#224;&#235;&#229; (&#209;&#242;&#224;&#240;&#224;&#255; &#211;&#239;&#241;&#224;&#235;&#224;) "Gamla", &#226;&#238;&#231;&#235;&#229; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#238;&#233; &#211;&#239;&#241;&#224;&#235;&#251;, &#216;&#226;&#229;&#246;&#232;&#232;, &#238;&#237;&#224; &#225;&#251;&#235;&#224; &#241;&#238;&#231;&#228;&#224;&#237;&#224;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#234;&#235;&#238;&#237;&#255;&#242;&#252;&#241;&#255; &#228;&#240;&#229;&#226;&#237;&#232;&#236; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#236; &#225;&#238;&#227;&#224;&#236;. &#214;&#229;&#237;&#242;&#240; &#234;&#243;&#235;&#252;&#242;&#224; &#240;&#229;&#228;&#234;&#238; &#228;&#238;&#234;&#243;&#236;&#229;&#237;&#242;&#232;&#240;&#243;&#229;&#242;&#241;&#255;, &#237;&#238; &#238; &#237;&#229;&#236; &#229;&#241;&#242;&#252; &#243;&#239;&#238;&#236;&#232;&#237;&#224;&#237;&#232;&#255; &#226; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#245; &#241;&#224;&#227;&#224;&#245; &#232; "Saxo Grammaticus' Gesta Danorum", &#232; &#239;&#238;&#228;&#225;&#240;&#238;&#225;&#237;&#229;&#229;, &#234;&#224;&#234; "&#231;&#238;&#235;&#238;&#247;&#229;&#237;&#237;&#251;&#233; &#245;&#240;&#224;&#236;" &#226; &#240;&#224;&#225;&#238;&#242;&#229; &#192;&#228;&#224;&#236;&#224; &#193;&#240;&#229;&#236;&#229;&#237;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Tag>
@@ -249,7 +249,7 @@
 		<German>[ICON_BULLET]+1[ICON_CULTURE] in jeder Stadt ohne Staatsreligion.</German>
 		<Italian>[ICON_BULLET]+1[ICON_CULTURE] in tutte le città senza una religione ufficiale.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>
@@ -258,7 +258,7 @@
 		<German>Die Runde Kirche</German>
 		<Italian>La Chiesa Rotonda</Italian>
 		<Spanish>La Iglesia Redonda</Spanish>
-		<Russian>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Russian>
+		<Portuguese>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH_PEDIA</Tag>
@@ -267,7 +267,7 @@
 		<German>[TAB]Preslav war von 893 bis 969 bulgarische Hauptstadt, die Siedlung diente zunächst als Militärlager. Von Chronisten wird die Stadt später als ein Ort mit einer Größe von etwa 3,2 Quadratkilometern beschrieben, deren glänzende Gebäude mit Holz, Gold und Silber geschmückt sind. In früheren Jahrhunderten umgab eine starke Festungsmauer die äußere Stadt, wo die "einfachen" Leute lebten und arbeiteten. Als Überreste sind heute noch zwei Pforten der Außenstadt sowie ein, kleiner sieben Meter hoher Teil der Mauer erhalten geblieben.[PARAGRAPH:2]Das bekannteste Gebäude der Stadt ist die "goldene" Kirche aus dem Jahr 908. Schon von weither ist die von außen vergoldete Kuppel des relativ kleinen Gotteshauses zu erkennen. Das zentrale Gebäude ist von 12 Nischen und 12 wei0en Marmorsäulen geprägt, mit den Mosaikverzierungen und Skulpturen stellt die goldene Kirche ein einzigartiges Denkmal altbulgarischer Architektur dar. Viele Wissenschaftler zog es in die alte Hauptstadt, erste Ausgrabungen begannen im Jahr 1987, Rekonstruktions-und Restaurationsarbeiten sind noch heute im Gange. Unter den Exponaten im archäologischen Museum des Ortes ist zum Beispiel die Keramikikone von St. Teodor, sie wurde aus 20 gemalten Keramikplatten hergestellt und zählt zu einem der Meisterwerke altbulgarischer Kunst. </German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL</Tag>
@@ -276,7 +276,7 @@
 		<German>Chalid ibn al-Walid Grab</German>
 		<Italian>Tomba di Al Walid</Italian>
 		<Spanish>Tumba de Al Walid</Spanish>
-		<Russian>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Russian>
+		<Portuguese>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL_PEDIA</Tag>
@@ -285,7 +285,7 @@
 		<German>[TAB]Chalid ibn al-Walid (* um 584 in Mekka; ? 642 in Emesa (Syrien)) war ein Gefährte Mohammeds und ein bedeutender arabischer Feldherr der islamischen Eroberungskriege. Chalid ibn al-Walid entstammte der Sippe Banu Machzum vom Stamm der Qurais in Mekka. Er gehörte zunächst zu den Gegnern des Propheten Muhammad und besiegte als Reiterführer von Mekka die Muslime 625 in der Schlacht von Uhud. In der Folgezeit trat er aber zum Islam über und wurde ein wichtiger Heerführer Muhammads. So rettete er in der Schlacht bei Muta 629 die Muslime vor der Umzingelung durch die Byzantiner. Als nach dem Tod Muhammads die Ridda-Kriege ausbrachen, schlug er unter dem Kalifen Abu Bakr den Aufstand der Stämme auf der Arabischen Halbinsel nieder und kämpfte unter anderem gegen Musailima (632). 633 besiegte er die persische Armee in der Schlacht von Walaja, eroberte Hira und unterwarf die Lachmiden.[PARAGRAPH:2]Ab 635 widmete er sich vermehrt der Umstrukturierung der Streitkräfte nach byzantinischem Muster. Er bildete kleine Kampfeinheiten anstelle der Stammesaufgebote. Während die Formationen der Stämme in langen nur drei Mann tiefen Linien aufmarschiert waren, formierte al-Walid dichte Infanteriekolonnen wie Byzanz. Diese neuen Formationen wurden nach Bogenschützen, Infanterie und lanzenbewaffneter Kavallerie in Einheiten eingeteilt und unter das Kommando kampferprobter Kommandeure gestellt, die die Stammesfürsten und Clanchefs ablösten. Er stellte auch als Erster arabische Quartiermeistereinheiten zur Versorgung der Truppen auf. Durch seine Reformen wurde die spätere Expansion des Islam ermöglicht.[PARAGRAPH:2]Sein Grab befindet sich im syrischen Homs in der nach ihm benannten Moschee.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL_STRATEGY</Tag>
@@ -294,7 +294,7 @@
 		<German>Das [COLOR_BUILDING_TEXT]Chalid ibn al-Walid Grab[COLOR_REVERT] erhöht die Kriegsmüdigkeit bei Feinden und steigert die Wahrscheinlichkeit eines [COLOR_BUILDING_TEXT]Großen Künstlers[COLOR_REVERT]</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA</Tag>
@@ -303,7 +303,7 @@
 		<German>Magna Carta</German>
 		<Italian>Magna Carta</Italian>
 		<Spanish>Carta Magna</Spanish>
-		<Russian>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Russian>
+		<Portuguese>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA_PEDIA</Tag>
@@ -312,7 +312,7 @@
 		<German>[TAB]Die meist nur kurz als Magna Carta (auch: Magna Charta) bezeichnete Magna Charta Libertatum - auf Deutsch etwa: "großer Freibrief" - ist eine von König Johann Ohneland zu Runnymede in England am 15. Juni 1215 unterzeichnete Vereinbarung mit dem revoltierenden englischen Adel. Sie gilt als die wichtigste Quelle des englischen Verfassungsrechts. Ein bedeutender Teil der Magna Charta ist eine wörtliche Kopie der Charter of Liberties Heinrichs I., welche dem englischen Adel seine Rechte gewährte. Die Magna Charta verbriefte grundlegende politische Freiheiten des Adels gegenüber dem englischen König, dessen Land seinerzeit Lehen des Papstes Innozenz III. war. Der Kirche wurde die Unabhängigkeit von der Krone garantiert. Das Dokument wurde vom König nur auf erheblichen Druck der Barone angenommen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL</Tag>
@@ -321,7 +321,7 @@
 		<German>Goldene Bulle</German>
 		<Italian>Bolla d'Oro</Italian>
 		<Spanish>Torro Dorada</Spanish>
-		<Russian>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Russian>
+		<Portuguese>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL_PEDIA</Tag>
@@ -330,7 +330,7 @@
 		<German>[TAB]Die Goldene Bulle von 1356 war das wichtigste der "Grundgesetze" des Heiligen Römischen Reiches und regelte die Modalitäten der Wahl und der Krönung der römisch-deutschen Könige durch die Kurfürsten bis zum Ende des Alten Reiches 1806.[PARAGRAPH:2]Der Name bezieht sich auf das goldene Siegel der Urkunde, er wurde allerdings erst im 15. Jahrhundert gebräuchlich. Karl IV., in dessen Herrschaftszeit das in lateinischer Sprache abgefasste Gesetzeswerk verkündet wurde, nannte sie unser keiserliches rechtbuch.[PARAGRAPH:2]Die ersten 23 Kapitel (Nürnberger Gesetzbuch) wurden in Nürnberg erarbeitet und am 10. Januar 1356 auf dem Nürnberger Hoftag verkündet, die Kapitel 24 bis 31 (Metzer Gesetzbuch) am 25. Dezember 1356 in Metz. Die Goldene Bulle ist das wichtigste Verfassungsdokument des mittelalterlichen Reiches.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
@@ -339,7 +339,7 @@
 		<German>Die Alhambra</German>
 		<Italian>L'Alhambra</Italian>
 		<Spanish>La Alhambra</Spanish>
-		<Russian>&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224;</Russian>
+		<Portuguese>&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Tag>
@@ -348,7 +348,7 @@
 		<German>[TAB]Die Alhambra ist eine bedeutende Stadtburg auf dem Sabikah-Hügel von Granada in Spanien, die als eines der schönsten Beispiele des maurischen Stils der islamischen Kunst gilt. Die Alhambra ist eine der meistbesuchten Touristenattraktionen Europas und seit 1984 Weltkulturerbe. Die Grundfläche der Burganlage beträgt 730 m x 180 m, ca. 13 Hektar.[PARAGRAPH:2]Der Alhambra genannte Baukomplex ist eine für das Mittelalter typische Kombination aus einer befestigten Oberstadt mit einer separat befestigten Zitadelle für den Machthaber. Die Oberstadt beherbergte neben dem Adel und dem Militär auch die höher stehende Bürgerschaft, Kaufleute sowie wichtige Handwerker. Auch die Waffenschmieden befand sich hier. Als Alcazaba wird in der Literatur eine Stadtburg (Akropolis) bezeichnet; eine großflächige Befestigungsanlage mit stadtähnlichem Charakter mit Stadtburg oder Zitadelle. In Granada wird die Zitadelle als Alcazaba bezeichnet, während die Gesamtanlage Alhambra heißt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[TAB]&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224; - &#228;&#226;&#238;&#240;&#246;&#238;&#226;&#251;&#233; &#232; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#238;&#233; &#234;&#238;&#236;&#239;&#235;&#229;&#234;&#241; &#204;&#224;&#226;&#240;&#232;&#242;&#224;&#237;&#241;&#234;&#232;&#245; &#236;&#238;&#237;&#224;&#240;&#245;&#238;&#226; &#195;&#240;&#224;&#237;&#224;&#228;&#251;, &#226; &#254;&#230;&#237;&#238;&#233; &#200;&#241;&#239;&#224;&#237;&#232;&#232;</Russian>
+		<Portuguese>[TAB]&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224; - &#228;&#226;&#238;&#240;&#246;&#238;&#226;&#251;&#233; &#232; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#238;&#233; &#234;&#238;&#236;&#239;&#235;&#229;&#234;&#241; &#204;&#224;&#226;&#240;&#232;&#242;&#224;&#237;&#241;&#234;&#232;&#245; &#236;&#238;&#237;&#224;&#240;&#245;&#238;&#226; &#195;&#240;&#224;&#237;&#224;&#228;&#251;, &#226; &#254;&#230;&#237;&#238;&#233; &#200;&#241;&#239;&#224;&#237;&#232;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL</Tag>
@@ -357,7 +357,7 @@
 		<German>Basilius-Kathedrale</German>
 		<Italian>Cattedrale di San Basilio</Italian>
 		<Spanish>Catedral de San Basilio</Spanish>
-		<Russian>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Russian>
+		<Portuguese>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL_PEDIA</Tag>
@@ -366,7 +366,7 @@
 		<German>[TAB]Die Basilius-Kathedrale, eigentlich: Kathedrale des seligen Basilius, ist der inoffizielle Name der russisch-orthodoxen Mariä-Schutz-und-Fürbitte-Kathedrale am Graben in der russischen Hauptstadt Moskau. Die am südlichen Ende des Roten Platzes stehende Kathedrale gilt als eines der Wahrzeichen Moskaus.[PARAGRAPH:2]Die Geschichte der Kathedrale beginnt im Jahre 1552 mit dem Errichten der Kirche der Heiligen Dreifaltigkeit zu Ehren des Sieges des russischen Heeres über die Tataren (genauer: das Khanat Kasan) am Ende der Moskau-Kasan-Kriege. Schon drei Jahre später wurde die aus Holz gebaute Kirche der Heiligen Dreifaltigkeit abgetragen. An ihrer Stelle wurde anschließend im Auftrag des Zaren Iwan IV. die Basilius-Kathedrale errichtet.[PARAGRAPH:2]Nach einigen Quellen hieß der alleinige Architekt des Bauwerks Postnik Jakowlew; nach anderen stand ihm der Architekt Barma zur Seite.[PARAGRAPH:2]Einer Legende nach stellte Iwan nach Vollendung des Baus (1561) dem Architekten die Frage, ob er in der Lage wäre, nochmals eine so schöne Kathedrale zu bauen. Dieser antwortete, er könne eine noch viel schönere Kathedrale errichten. Daraufhin soll der Zar ihm die Augen haben ausstechen lassen, auf dass dieser nicht anderswo etwas von vergleichbarer Schönheit errichten könnte. Die Legende ist allerdings frei erfunden, da Postnik Jakowlew später nachweislich viele Bauten in mehreren Städten errichtete, und auch die Kapelle zu Ehren des Basilius des Seligen wurde vier Jahre nach Iwans Tod von Postnik Jakowlew selbst dazugebaut.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO</Tag>
@@ -375,7 +375,7 @@
 		<German>Markusdom</German>
 		<Italian>Basilica di San Marco</Italian>
 		<Spanish>Basilica de San Marcos</Spanish>
-		<Russian>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Russian>
+		<Portuguese>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO_PEDIA</Tag>
@@ -384,7 +384,7 @@
 		<German>[TAB]Der Markusdom (italienisch Basilica di San Marco) in Venedig war bis 1797 das zentrale Staatsheiligtum der Republik Venedig und ist seit 1807 die Kathedrale des Patriarchen von Venedig. Er befindet sich am Markusplatz im Stadtsechstel San Marco.[PARAGRAPH:2]Bis zum Untergang der Republik war es erklärte Absicht der venezianischen Regierung durch die Jahrhunderte hindurch, den Sitz des Bischofs möglichst weit entfernt vom Zentrum der Macht zu wissen. San Marco dagegen war die Palastkapelle des Dogen, später Staatskirche Venedigs. Sie wurde erbaut als würdige Ruhestätte für die Gebeine des Evangelisten Markus, des Stadtheiligen Venedigs, der den heiligen Theodor als Stadtpatron ablöste. Der Bischofspalast und der Bischofssitz des Patriarchen von Venedig befanden sich bis zur Säkularisierung in dem abgelegenen Distrikt von San Pietro di Castello.[PARAGRAPH:2]Die erste dem heiligen Markus geweihte Kirche wurde 828 gestiftet und in den Jahren 829 bis 832 anstelle einer Hauskapelle des Dogenpalastes erbaut, um die aus Alexandria durch eine List venezianischer Kaufleute entführten Gebeine des Evangelisten Markus aufzunehmen. 976 fielen Kirche, Dogenpalast und 200 Häuser einer Feuersbrunst zu Opfer. Im selben Jahr begann der Doge Pietro I. Orseolo mit dem Wiederaufbau, der nach mehrmaligen Unterbrechungen erst 1094 beendet war. Die (angeblichen) Gebeine des Hl. Markus wurden durch ein (angebliches) Wunder am 25. Juni 1094 "wiedergefunden". Dieser Tag wurde zum Feiertag Inventio Sancti Marci.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE</Tag>
@@ -393,7 +393,7 @@
 		<German>Brandenburger Tor</German>
 		<Italian>Portale di Brandeburgo</Italian>
 		<Spanish>Puerta de Brandeburgo</Spanish>
-		<Russian>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Russian>
+		<Portuguese>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE_PEDIA</Tag>
@@ -402,7 +402,7 @@
 		<German>[TAB]Das Brandenburger Tor in Berlin steht am Pariser Platz in der Dorotheenstadt im Ortsteil Mitte (Bezirk Mitte). Es wurde in den Jahren von 1788 bis 1791 auf Anweisung des preußischen Königs Friedrich Wilhelm II. von Carl Gotthard Langhans errichtet und ist das bekannteste Wahrzeichen der Stadt. Zugleich ist das Tor ein nationales Symbol, mit dem viele wichtige Ereignisse der Geschichte Berlins, Deutschlands, Europas und der Welt des 20. Jahrhunderts verbunden sind. Der Bau ist dem frühklassizistischen Stil zuzuordnen.[PARAGRAPH:2]Mit dem Bau der Zollmauer der Stadt Berlin wurde 1734 ein Vorgängerbau des heutigen Brandenburger Tores als Stadttor an der Straße nach Brandenburg an der Havel errichtet. Die Toranlage bestand aus Pylonen und beigeordneten Wachhäusern. Im Zuge des Ausbaus der Mauer und ihrer Tore ließ Friedrich Wilhelm II. ab 1788 das Brandenburger Tor neu gestalten, das dem Andenken an den Krieg des kurz zuvor verstorbenen Friedrich II. diente, von dessen Verdiensten auch etwas Glanz auf den Neffen und Nachfolger fallen sollte.[PARAGRAPH:2]Als Architekt wurde Carl Gotthard Langhans beauftragt. Er orientierte sich an dem "Stadttor von Athen", das er aus Stichen von Leroy, Stuart und Revett kannte, die aber die Propyläen der Athener Akropolis abgebildet hatten. Das Eingangstor zur Akropolis war im dorischen Stil des Parthenon gehalten, um eine optische Einheit zu bilden. Das Tor hatte eine breite Mittelöffnung und zwei schmale Seiteneingänge für Fußgänger. Im rechten Winkel dazu standen zwei Seitenflügel. Nach Langhans Planung sollten entsprechend beim Berliner Tor durch den breiten Mittelgang die königlichen Kutschen, daneben die sonstigen Gespanne fahren und außen die Fußgänger gehen. In den Seitenflügeln sollten die Wache und die Akziseeinnehmer untergebracht werden. 1788 wurde das alte Tor abgerissen, eine große Baugrube ausgehoben und fundamentiert. 1789 wurde der Neubau begonnen. Die Baukosten lagen bei 111.000 Talern. Am 6. August 1791 wurde das noch nicht ganz fertige Tor geöffnet.[PARAGRAPH:2]Die 1793 von Johann Gottfried Schadow gefertigte Quadriga auf dem Brandenburger Tor stellte ursprünglich nach der wohl überwiegend vertretenen Auffassung eine geflügelte Friedensbringerin dar. Das Brandenburger Tor erhielt den Namen Friedenstor, diesen Namen zeigte auch eine Inschrift aus Bronzelettern am Tor. Diese Sinngebung interpretiert auch der bildliche Schmuck. Die Entwürfe für die Reliefs wurden vorwiegend von dem Maler und Akademiedirektor Christian Bernhard Rode angefertigt. Schadow hat die Entwürfe überarbeitet und die Steinmetze bei der Ausführung beaufsichtigt. Die Göttin in der Quadriga wird durch das Relief auf der Attika der Stadtseite als Friedensbringerin erklärt. Das Attikarelief steht unter dem Thema "Der Zug der Friedensgöttin". Im Zentrum des Reliefs über dem Mittelgang stehen Sinnbilder auf Frieden und Freundschaft. Die Friedensgöttin Eirene steht auf der äußersten Kante eines Triumphwagens. Mit der Rechten stützt sie sich auf den mit einer Lorbeergirlande geschmückten Rand des Wagens. In der einen Hand hält sie einen Palmenzweig, in der anderen einen Lorbeerkranz. Ihr Wagen wird von vier Eroten gezogen. Weiter rechts auf dem Attikarelief kann man Nike mit Flügeln und Tropaion erkennen.[PARAGRAPH:2]Direkt über diesem Relief steht die Quadriga Schadows. Deren göttliche Wagenlenkerin ist Nike und Eirene in einer Person. Nach einer abweichenden Auffassung soll es sich von Anfang an um eine "Siegesgöttin" gehandelt haben, unter anderem weil davon bereits im Vertrag zur Anfertigung der Figurengruppe vom 22. Juli 1789 die Rede gewesen sei. Schadow hatte ursprünglich für die Wagenlenkerin keine Trophäe entworfen. Ihm schwebte mehr die griechische Eirene als Friedensgöttin vor, als die römische Siegesgöttin Viktoria. 1793 verlangte dann aber ein Akademiebeschluss eine Kopie der Siegestrophäe der Nike rechts auf dem Attikarelief auch für die Wagenlenkerin der Quadriga. Bei der Bevölkerung fand sie keinen Zuspruch. Aufgrund heftiger Kritik besserte Schadow noch ein weiteres Mal nach. Das Tropaion wurde nun durch eine Lanze mit einem Lorbeerkranz und einem römischen Adler ersetzt. Außerdem erhielt die knapp bekleidete Wagenlenkerin nun ein bis auf den Boden reichendes Gewand.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK</Tag>
@@ -411,7 +411,7 @@
 		<German>Der Felsendom</German>
 		<Italian>Cupola della Roccia</Italian>
 		<Spanish>Cupula de la Roca</Spanish>
-		<Russian>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Russian>
+		<Portuguese>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK_PEDIA</Tag>
@@ -420,7 +420,7 @@
 		<German>Der Felsendom ist das wohl bekannteste Wahrzeichen Jerusalems und eines der Hauptheiligtümer des Islam. Er befindet sich auf dem Tempelberg im südöstlichen Teil der Altstadt von Jerusalem. Der Felsendom ist der älteste islamische Sakralbau und stellt ein Meisterwerk der islamischen Baukunst des frühen Umayyadenstils dar, in welchem die Übernahme des frühchristlich-byzantinischen Zentralbautyps zum Ausdruck kommt.[PARAGRAPH:2]Der Kuppelbau wurde über dem Felsen (Sachra) errichtet, auf welchem Abraham der biblischen Erzählung nach seinen Sohn Isaak zu opfern bereit war und wo die Himmelfahrt Mohammeds stattgefunden haben soll. Er ist ursprünglich - und auch heute - nicht als Moschee, sondern als ein Schrein beziehungsweise eine Kuppel verstanden worden.[PARAGRAPH:2]Die Erbauung des Felsendoms wird in der neueren Forschung dem Kalifen ?Abd al-Malik ibn Marwan (regierte 685-705) sowie dessen Sohn und Nachfolger al-Walid ibn ?Abd al-Malik (reg. 705-715), der auch den Bau der al-Aqsa-Moschee weitergeführt haben soll, zugeschrieben. Die Bauinschrift in archaischem kufischen Duktus, die über dem Kranzgesims an der Kuppel erhalten ist, dokumentiert nicht nur den Namen des Erbauers, sondern auch die ursprüngliche Bezeichnung der Anlage, die man lediglich als Kuppel (Qubba) verstanden hat; der hier in Klammern stehende Namensteil ist vom Abbasidenkalifen Al-Ma?mun getilgt und durch seinen eigenen Namen ersetzt worden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_MEZQUITA</Tag>
@@ -429,7 +429,7 @@
 		<German>Mezquita-Catedral</German>
 		<Italian>La Mezquita</Italian>
 		<Spanish>La Mezquita</Spanish>
-		<Russian>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Russian>
+		<Portuguese>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_MEZQUITA_PEDIA</Tag>
@@ -438,7 +438,7 @@
 		<German>[TAB]Die Mezquita-Catedral von Córdoba ist seit der Reconquista der Stadt deren römisch-katholische Kathedrale. Ihre architektonische Weltgeltung besitzt sie aber als ehemalige Hauptmoschee - al-Dschami? al-kabir / Dschami? Qur?uba - aus der Epoche des maurischen Spaniens. Als Kirche heißt sie Mariä-Empfängnis-Kathedrale. Mezquita ist die spanische Form des arabischen Wortes ?Masgid und entspricht dem ebenfalls gleichbedeutenden deutschen Wort Moschee. Der berühmte Betsaal ist durch Hufeisenbögen in Mittel- und Querschiffe aufgeteilt. Er wurde durch die Emire und Kalifen von Córdoba in mehreren Bauabschnitten immer wieder erweitert. Die Kathedrale von der Aufnahme Unserer Lieben Frau gehört mit ca. 23.000 m² zu den größten ehemaligen Moscheebauten weltweit.[PARAGRAPH:2]Der Ort, an dem sich die Kathedrale befindet, diente schon zu Zeiten des Römischen Reiches der Religionsausübung. Es befand sich dort ein römischer Tempel, danach eine westgotische Kathedrale für Sankt Vincent von Saragossa.[PARAGRAPH:2]Mit dem Bau der Moschee wurde 784 unter der Aufsicht von Abd ar-Rahman I., dem ersten umayyadischen Emir von Córdoba, begonnen. In den zwei folgenden Jahrhunderten wurde sie erweitert. Abd ar-Rahman III. gab ein neues Minarett in Auftrag, Al-Hakam II. erweiterte das Gebäude und stattete den Mihrab mit neuen Elementen aus. Die im Betsaal aufstehenden Säulen sind Spolien; die heute vorhandenen Bogenformen zur Hervorhebung einzelner Betsaalbereiche sind erst in der Bauphase unter Al-Hakam II. verwendet worden. Die letzten Erweiterungen wurden durch den Wesir Al-Mansur Ibn Abi Aamir 987 vorgenommen. Die Mezquita war die prächtigste der Moscheen der Stadt. Córdoba wurde in den folgenden Jahrhunderten häufig erobert, und auf jede Eroberung folgten Veränderungen der Architektur.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY</Tag>
@@ -447,7 +447,7 @@
 		<German>Abtei von Cluny</German>
 		<Italian>Abbazia di Cluny</Italian>
 		<Spanish>Monasterio de Cluny</Spanish>
-		<Russian>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Russian>
+		<Portuguese>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY_PEDIA</Tag>
@@ -456,7 +456,7 @@
 		<German>[TAB]Die Abtei von Cluny in Burgund war als Ausgangspunkt bedeutender Klosterreformen eines der einflussreichsten religiösen Zentren des Mittelalters. Ihre Kirche war zeitweise das größte Gotteshaus des Christentums. Mehrere Gebäude der Benediktinerabtei und einige Reste der im Zuge der Französischen Revolution abgerissenen Abteikirche im Zentrum der gleichnamigen französischen Stadt Cluny sind erhalten. Als erstes Monument in Frankreich hat der französische Staat die Abtei 2007 mit dem Europäischen Kulturerbe-Siegel ausgezeichnet.[PARAGRAPH:2]Cluny wurde mit Urkunde vom 11. September 910 durch Wilhelm I. Herzog von Aquitanien und Graf von Mâconnais als Benediktinerkloster gegründet. Dabei verzichtete Herzog Wilhelm auf jede Gewalt über das Kloster und schloss jegliche Einmischung weltlicher oder geistlicher Gewalt in die internen Angelegenheiten des Klosters aus (Exemtion und Immunität). Insbesondere wurde auf die wirtschaftliche Nutzung verzichtet. Das Kloster selbst wurde unter den direkten Schutz des Papstes gestellt. Für die Verhältnisse des 10. Jahrhunderts war dies eine Neuerung. Wilhelm ernannte lediglich den ersten Abt Berno und erlaubte dem Konvent danach eine freie Abtswahl. Diese beiden Neuerungen, Exemtion und freie Abtswahl, trugen wesentlich zur Entfaltung Clunys bei. Zusammen mit einer strengen Auslegung der Benediktusregel machten sie Cluny zum Ausgangs- und Mittelpunkt der cluniazensischen Reform, in deren Blütezeit etwa 1.200 Klöster mit rund 20.000 Mönchen zu Cluny gehörten. Eines der wichtigsten Priorate lag in La Charité-sur-Loire. Bemerkenswert war die straffe Ordnung innerhalb der Gemeinschaft. Im Auftrag von Abt Hugo schrieb der Heilige Ulrich von Zell zwischen 1079 und 1086 sein Werk "Constitutiones Cluniacenses", ein für die Geschichte der Cluniazensischen Reform bedeutendes Werk in drei Bänden. Noch heute gibt es eine rege Diskussion über die Cluniazensische Bewegung, welche von der Abtei ausging.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEODOSIAN_WALLS</Tag>
@@ -465,7 +465,7 @@
 		<German>Theodosianische Mauer</German>
 		<Italian>Mura Teodosiane</Italian>
 		<Spanish>Muralla Teodosiana</Spanish>
-		<Russian>&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251;</Russian>
+		<Portuguese>&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEODOSIAN_WALLS_PEDIA</Tag>
@@ -474,7 +474,7 @@
 		<German>[TAB]Die Theodosianische Mauer ist eine Anfang des 5. Jahrhunderts unter Kaiser Theodosius II. und dem Präfekten Anthemius errichtete, etwa 19-20 Kilometer lange Befestigungsanlage (Land- und Seemauern) zum Schutz von Konstantinopel, dem heutigen Istanbul.[PARAGRAPH:2]Die Theodosianische Mauer wird von einigen Historikern als eine der erfolgreichsten und bestdurchdachten Befestigungsanlagen in der Geschichte der Kriegstechnik angesehen. Viele der einschneidensten Ereignisse in der Geschichte der Stadt stehen eng mit diesem außergewöhnlichen Bauwerk in Zusammenhang. Der Bau des Wallsystems wurde notwendig, um der Bedrohung durch die Hunnen zu begegnen und der rasch expandierenden Stadt zusätzlichen Raum zu verschaffen. Trotz zunehmenden Verfalles und dem Aufkommen der Feuerwaffen, waren die Befestigungen bei entschlossener Verteidigung auch noch in der Mitte des 15. Jahrhunderts nur schwer zu überwinden. Die Komplexität der Verteidigungsanlagen trug wesentlich zum langen Bestehen des Byzantinischen Reiches bei.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[TAB]&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#228;&#235;&#232;&#237;&#238;&#233; 5630 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#232; &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251; &#228;&#235;&#255; &#231;&#224;&#249;&#232;&#242;&#251; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#255; &#238;&#242; &#226;&#224;&#240;&#226;&#224;&#240;&#238;&#226; &#239;&#240;&#232; &#232;&#236;&#239;&#229;&#240;&#224;&#242;&#238;&#240;&#229; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; II, &#234;&#238;&#227;&#228;&#224; &#227;&#238;&#240;&#238;&#228; &#237;&#224; &#241;&#229;&#236;&#232; &#245;&#238;&#235;&#236;&#224;&#245; &#226;&#251;&#240;&#238;&#241; &#231;&#224; &#239;&#240;&#229;&#228;&#229;&#235;&#251; &#242;&#229;&#245; &#241;&#242;&#229;&#237;, &#234;&#238;&#242;&#238;&#240;&#251;&#229; &#225;&#251;&#235;&#232; &#239;&#240;&#229;&#228;&#243;&#241;&#236;&#238;&#242;&#240;&#229;&#237;&#251; &#229;&#227;&#238; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#229;&#235;&#229;&#236;, &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#236; &#194;&#229;&#235;&#232;&#234;&#232;&#236;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#239;&#240;&#238;&#228;&#238;&#235;&#230;&#224;&#235;&#238;&#241;&#252; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236; &#239;&#240;&#229;&#244;&#229;&#234;&#242;&#224; &#192;&#237;&#244;&#232;&#236;&#232;&#255; &#241; 408 &#239;&#238; 413 &#227;&#238;&#228;&#251;. &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#225;&#251;&#235;&#232; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#251; &#239;&#238;&#241;&#235;&#229; &#242;&#238;&#227;&#238;, &#234;&#224;&#234; &#247;&#224;&#241;&#242;&#252; &#232;&#245; &#238;&#225;&#240;&#243;&#248;&#232;&#235;&#224;&#241;&#252; &#239;&#240;&#232; &#231;&#229;&#236;&#235;&#229;&#242;&#240;&#255;&#241;&#229;&#237;&#232;&#232; 447 &#227;&#238;&#228;&#224;. &#210;&#238;&#227;&#228;&#224; &#230;&#229; &#239;&#229;&#240;&#229;&#228; &#241;&#242;&#229;&#237;&#238;&#233; &#225;&#251;&#235; &#226;&#251;&#240;&#251;&#242; &#248;&#232;&#240;&#238;&#234;&#232;&#233; &#240;&#238;&#226;. &#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#255;&#255; &#241;&#242;&#229;&#237;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 12 &#236;&#229;&#242;&#240;&#238;&#226; &#232; &#248;&#232;&#240;&#232;&#237;&#238;&#233; 5 &#236;&#229;&#242;&#240;&#238;&#226; &#247;&#229;&#240;&#229;&#231; &#234;&#224;&#230;&#228;&#251;&#229; 55 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#224; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#224; &#248;&#229;&#241;&#242;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#235;&#232;&#225;&#238; &#226;&#238;&#241;&#252;&#236;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#225;&#224;&#248;&#237;&#229;&#233; &#226;&#251;&#241;&#238;&#242;&#238;&#233; &#226; 20 &#236;&#229;&#242;&#240;&#238;&#226;, &#238;&#225;&#249;&#229;&#229; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#238; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#228;&#238;&#245;&#238;&#228;&#232;&#235;&#238; &#228;&#238; &#241;&#242;&#224;. &#205;&#232;&#230;&#237;&#232;&#233; &#255;&#240;&#243;&#241; &#225;&#224;&#248;&#229;&#237; &#225;&#251;&#235; &#239;&#240;&#232;&#241;&#239;&#238;&#241;&#238;&#225;&#235;&#229;&#237; &#239;&#238;&#228; &#241;&#234;&#235;&#224;&#228; &#239;&#240;&#238;&#228;&#238;&#226;&#238;&#235;&#252;&#241;&#242;&#226;&#232;&#255;. &#194;&#237;&#229;&#248;&#237;&#255;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#224;&#255; &#241;&#242;&#229;&#237;&#224; &#225;&#251;&#235;&#224; &#236;&#229;&#237;&#252;&#248;&#229; &#226;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#229;&#233; &#232; &#239;&#238; &#226;&#251;&#241;&#238;&#242;&#229; &#232; &#239;&#238; &#248;&#232;&#240;&#232;&#237;&#229;. &#200;&#231; 96 &#225;&#224;&#248;&#229;&#237; &#226;&#237;&#229;&#248;&#237;&#229;&#233; &#241;&#242;&#229;&#237;&#251; &#228;&#229;&#241;&#255;&#242;&#252; &#225;&#251;&#235;&#232; &#239;&#240;&#238;&#229;&#231;&#228;&#237;&#251;&#236;&#232;, &#232;&#231; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#239;&#224;&#240;&#224;&#228;&#237;&#251;&#236;&#232; &#241;&#247;&#232;&#242;&#224;&#235;&#232;&#241;&#252; &#199;&#238;&#235;&#238;&#242;&#251;&#229; &#226;&#238;&#240;&#238;&#242;&#224; &#151; &#239;&#240;&#238;&#238;&#225;&#240;&#224;&#231; &#238;&#228;&#237;&#238;&#232;&#236;&#184;&#237;&#237;&#251;&#245; &#241;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#233; &#226; &#202;&#232;&#229;&#226;&#229; &#232; &#194;&#235;&#224;&#228;&#232;&#236;&#232;&#240;&#229;. &#221;&#242;&#232; &#226;&#238;&#240;&#238;&#242;&#224; &#241;&#238;&#241;&#242;&#238;&#255;&#235;&#232; &#232;&#231; &#242;&#240;&#184;&#245; &#236;&#240;&#224;&#236;&#238;&#240;&#237;&#251;&#245; &#242;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#251;&#245; &#224;&#240;&#238;&#234;, &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251;&#245; &#229;&#249;&#184; &#239;&#240;&#232; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; I &#232; &#243;&#226;&#229;&#237;&#247;&#224;&#237;&#237;&#251;&#245; &#234;&#240;&#251;&#235;&#224;&#242;&#238;&#233; &#224;&#235;&#235;&#229;&#227;&#238;&#240;&#232;&#229;&#233; &#207;&#238;&#225;&#229;&#228;&#251;.</Russian>
+		<Portuguese>[TAB]&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#228;&#235;&#232;&#237;&#238;&#233; 5630 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#232; &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251; &#228;&#235;&#255; &#231;&#224;&#249;&#232;&#242;&#251; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#255; &#238;&#242; &#226;&#224;&#240;&#226;&#224;&#240;&#238;&#226; &#239;&#240;&#232; &#232;&#236;&#239;&#229;&#240;&#224;&#242;&#238;&#240;&#229; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; II, &#234;&#238;&#227;&#228;&#224; &#227;&#238;&#240;&#238;&#228; &#237;&#224; &#241;&#229;&#236;&#232; &#245;&#238;&#235;&#236;&#224;&#245; &#226;&#251;&#240;&#238;&#241; &#231;&#224; &#239;&#240;&#229;&#228;&#229;&#235;&#251; &#242;&#229;&#245; &#241;&#242;&#229;&#237;, &#234;&#238;&#242;&#238;&#240;&#251;&#229; &#225;&#251;&#235;&#232; &#239;&#240;&#229;&#228;&#243;&#241;&#236;&#238;&#242;&#240;&#229;&#237;&#251; &#229;&#227;&#238; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#229;&#235;&#229;&#236;, &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#236; &#194;&#229;&#235;&#232;&#234;&#232;&#236;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#239;&#240;&#238;&#228;&#238;&#235;&#230;&#224;&#235;&#238;&#241;&#252; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236; &#239;&#240;&#229;&#244;&#229;&#234;&#242;&#224; &#192;&#237;&#244;&#232;&#236;&#232;&#255; &#241; 408 &#239;&#238; 413 &#227;&#238;&#228;&#251;. &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#225;&#251;&#235;&#232; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#251; &#239;&#238;&#241;&#235;&#229; &#242;&#238;&#227;&#238;, &#234;&#224;&#234; &#247;&#224;&#241;&#242;&#252; &#232;&#245; &#238;&#225;&#240;&#243;&#248;&#232;&#235;&#224;&#241;&#252; &#239;&#240;&#232; &#231;&#229;&#236;&#235;&#229;&#242;&#240;&#255;&#241;&#229;&#237;&#232;&#232; 447 &#227;&#238;&#228;&#224;. &#210;&#238;&#227;&#228;&#224; &#230;&#229; &#239;&#229;&#240;&#229;&#228; &#241;&#242;&#229;&#237;&#238;&#233; &#225;&#251;&#235; &#226;&#251;&#240;&#251;&#242; &#248;&#232;&#240;&#238;&#234;&#232;&#233; &#240;&#238;&#226;. &#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#255;&#255; &#241;&#242;&#229;&#237;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 12 &#236;&#229;&#242;&#240;&#238;&#226; &#232; &#248;&#232;&#240;&#232;&#237;&#238;&#233; 5 &#236;&#229;&#242;&#240;&#238;&#226; &#247;&#229;&#240;&#229;&#231; &#234;&#224;&#230;&#228;&#251;&#229; 55 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#224; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#224; &#248;&#229;&#241;&#242;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#235;&#232;&#225;&#238; &#226;&#238;&#241;&#252;&#236;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#225;&#224;&#248;&#237;&#229;&#233; &#226;&#251;&#241;&#238;&#242;&#238;&#233; &#226; 20 &#236;&#229;&#242;&#240;&#238;&#226;, &#238;&#225;&#249;&#229;&#229; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#238; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#228;&#238;&#245;&#238;&#228;&#232;&#235;&#238; &#228;&#238; &#241;&#242;&#224;. &#205;&#232;&#230;&#237;&#232;&#233; &#255;&#240;&#243;&#241; &#225;&#224;&#248;&#229;&#237; &#225;&#251;&#235; &#239;&#240;&#232;&#241;&#239;&#238;&#241;&#238;&#225;&#235;&#229;&#237; &#239;&#238;&#228; &#241;&#234;&#235;&#224;&#228; &#239;&#240;&#238;&#228;&#238;&#226;&#238;&#235;&#252;&#241;&#242;&#226;&#232;&#255;. &#194;&#237;&#229;&#248;&#237;&#255;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#224;&#255; &#241;&#242;&#229;&#237;&#224; &#225;&#251;&#235;&#224; &#236;&#229;&#237;&#252;&#248;&#229; &#226;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#229;&#233; &#232; &#239;&#238; &#226;&#251;&#241;&#238;&#242;&#229; &#232; &#239;&#238; &#248;&#232;&#240;&#232;&#237;&#229;. &#200;&#231; 96 &#225;&#224;&#248;&#229;&#237; &#226;&#237;&#229;&#248;&#237;&#229;&#233; &#241;&#242;&#229;&#237;&#251; &#228;&#229;&#241;&#255;&#242;&#252; &#225;&#251;&#235;&#232; &#239;&#240;&#238;&#229;&#231;&#228;&#237;&#251;&#236;&#232;, &#232;&#231; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#239;&#224;&#240;&#224;&#228;&#237;&#251;&#236;&#232; &#241;&#247;&#232;&#242;&#224;&#235;&#232;&#241;&#252; &#199;&#238;&#235;&#238;&#242;&#251;&#229; &#226;&#238;&#240;&#238;&#242;&#224; &#151; &#239;&#240;&#238;&#238;&#225;&#240;&#224;&#231; &#238;&#228;&#237;&#238;&#232;&#236;&#184;&#237;&#237;&#251;&#245; &#241;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#233; &#226; &#202;&#232;&#229;&#226;&#229; &#232; &#194;&#235;&#224;&#228;&#232;&#236;&#232;&#240;&#229;. &#221;&#242;&#232; &#226;&#238;&#240;&#238;&#242;&#224; &#241;&#238;&#241;&#242;&#238;&#255;&#235;&#232; &#232;&#231; &#242;&#240;&#184;&#245; &#236;&#240;&#224;&#236;&#238;&#240;&#237;&#251;&#245; &#242;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#251;&#245; &#224;&#240;&#238;&#234;, &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251;&#245; &#229;&#249;&#184; &#239;&#240;&#232; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; I &#232; &#243;&#226;&#229;&#237;&#247;&#224;&#237;&#237;&#251;&#245; &#234;&#240;&#251;&#235;&#224;&#242;&#238;&#233; &#224;&#235;&#235;&#229;&#227;&#238;&#240;&#232;&#229;&#233; &#207;&#238;&#225;&#229;&#228;&#251;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALACIO_DA_PENA</Tag>
@@ -483,7 +483,7 @@
 		<German>Palacio da Pena</German>
 		<Italian>Palacio da Pena</Italian>
 		<Spanish>Palacio da Pena</Spanish>
-		<Russian>Palacio da Pena</Russian>
+		<Portuguese>Palacio da Pena</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALACIO_DA_PENA_PEDIA</Tag>
@@ -492,7 +492,7 @@
 		<German>Palacio da Pena</German>
 		<Italian>Palacio da Pena</Italian>
 		<Spanish>Palacio da Pena</Spanish>
-		<Russian>Palacio da Pena</Russian>
+		<Portuguese>Palacio da Pena</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIBEIRA</Tag>
@@ -501,7 +501,7 @@
 		<German>Pa&#231;o da Ribeira</German>
 		<Italian>Pa&#231;o da Ribeira</Italian>
 		<Spanish>Pa&#231;o da Ribeira</Spanish>
-		<Russian>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Russian>
+		<Portuguese>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIBEIRA_PEDIA</Tag>
@@ -510,7 +510,7 @@
 		<German>[TAB]Der Paço da Ribeira war bis zum Erdbeben von 1755 über 200 Jahre lang Lissabons Königspalast. Der Platz auf dem der Palast stand ist heute einer der wichtigsten Plätze Lissabons, der Praça do Comércio.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE</Tag>
@@ -519,7 +519,7 @@
 		<German>Magellans Reise</German>
 		<Italian>Viaggio di Magellano</Italian>
 		<Spanish>El Viaje de Magallanes</Spanish>
-		<Russian>&#204;&#224;&#227;&#229;&#235;&#235;&#224;&#237;&#238;&#226;&#238; &#207;&#243;&#242;&#229;&#248;&#229;&#241;&#242;&#226;&#232;&#229;</Russian>
+		<Portuguese>&#204;&#224;&#227;&#229;&#235;&#235;&#224;&#237;&#238;&#226;&#238; &#207;&#243;&#242;&#229;&#248;&#229;&#241;&#242;&#226;&#232;&#229;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE_PEDIA</Tag>
@@ -528,7 +528,7 @@
 		<German>[TAB]Wahrscheinlich im portugiesischen Seefahrtsarchiv hatte Magellan eine geheim gehaltene Karte gefunden, die darauf deutete, dass in Südamerika ein paso, eine Durchfahrt zum Pazifischen Ozean existiere. Möglicherweise war das große Mündungsdelta des Rio de La Plata als Meerenge missdeutet worden. Er entschied, als erster diesen Weg westwärts zu nutzen, um die Gewürzinseln (die heutigen Molukken) zu erreichen. Sie stellten einen strategisch wichtigen Ausgangspunkt zum lukrativen Gewürzhandel dar. Zudem war Magellan überzeugt, dass die Gewürzinseln nach dem Vertrag von Tordesillas von 1494 auf der vom Papst Spanien zugesprochenen Welthälfte lägen. Unterstützung erhielt Magellan bei der Vorbereitung dieses Unterfangens durch den Astronomen Ruy Faleiro, der ebenfalls portugiesischer Herkunft war.[PARAGRAPH:2]Magellan gelang es, einflussreiche Freunde für seine Pläne zu gewinnen, insbesondere den Faktor der Casa de Contratación (des Indienhauses) Juan de Aranda und den Kardinal von Burgos Juan Rodríguez de Fonseca. Am 22. März 1518 schloss er in Valladolid einen Vertrag mit Karl I. von Spanien, der Magellan fünf Schiffe zur Verfügung stellte, mit denen er die Gewürzinseln finden sollte. Ihm und Ruy Faleiro wurde ein Fünftel der Reichtümer zugebilligt, die die Reise einbringen sollte. Sie und ihre Erben sollten in allen entdeckten Ländern als Gouverneure regieren. Zudem sicherte der Kaiser zu, innerhalb von zehn Jahren keinem anderen diese Reise zu ermöglichen. Die Finanzierung erfolgte durch die spanische Krone und den Reeder Cristobal de Haro, in geringerem Maße beteiligte sich das Bankhaus der Augsburger Fugger. Die Flotte fuhr unter der kaiserlichen Flagge des heiligen Römischen Reiches, wohl um von deren zu dieser Zeit hohen Ansehen zu profitieren.[PARAGRAPH:2]Am 10. August 1519 begann die Reise in Sevilla. Am 6. September des Jahres 1522 erreichte die Victoria Sanlúcar, den spanischen Ausgangshafen. Lediglich 18 Männer der einst aufgebrochenen 237  (abzüglich der in der Magellanstraße meuternden 60 Mann Besatzung der San Antonio) gingen an Land, begleitet von drei ostindischen Besatzungsmitgliedern. Die erste Weltumseglung war vollendet und hatte zwei Jahre, elf Monate und zwei Wochen gedauert.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP</Tag>
@@ -537,7 +537,7 @@
 		<German>Leonardos Erfindungen</German>
 		<Italian>Le Invenzioni di Leonardo</Italian>
 		<Spanish>Taller de Leonardo</Spanish>
-		<Russian>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#255; &#203;&#229;&#238;&#237;&#224;&#240;&#228;&#238;</Russian>
+		<Portuguese>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#255; &#203;&#229;&#238;&#237;&#224;&#240;&#228;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP_PEDIA</Tag>
@@ -546,7 +546,7 @@
 		<German>[TAB]Leonardo schuf nicht nur zahlreiche Kunstwerke, sondern mehr noch eine große Anzahl von Entwürfen für Gebäude, Maschinen, Kunstgegenstände, Gemälde und Skulpturen, zu deren Realisierung er nie kam. Von sich selber sagte er, dass er die Idee mehr liebe als deren Ausführung, und dass er am Anfang einer Tätigkeit bereits ans Ende dächte. Wie andere Genies (Albert Einstein, Wolfgang Amadeus Mozart, Thomas Edison, Richard Wagner) gehörte er zu den "Hyperaktiven", denen man eine genetische Veranlagung (ADHS) ihrer Genialität nachsagt. Tun und Erkennen waren für ihn gleichermaßen wichtig. Teilweise wurde seine Tatkraft von seinem großen Forschungsdrang gelähmt. Zunächst wollte er lernen, Meisterwerke der Kunst zu schaffen. Mehr und mehr interessierte er sich dann aber für das Wissen über die Natur und war fasziniert von deren Vielfalt und Schönheit und schrieb:[PARAGRAPH:2]"Für die Ehrgeizigen, die sich weder mit dem Geschenk des Lebens noch mit der Schönheit der Welt zufriedengeben, liegt eine Strafe darin, dass sie sich selbst dieses Leben verbittern und die Vorteile und die Schönheit der Welt nicht besitzen."[PARAGRAPH:2]Leonardo verband die Vergilsche Sehnsucht rerum cognoscere causas (die Ursachen der Dinge zu erkennen) mit dem Willen zum sichtbaren Schaffen. Seine Notizbücher, Zeichnungen und Skizzen bestehen aus ca. 6000 Blättern. Zu seinen Lebzeiten wurde, insbesondere von seinen naturwissenschaftlichen Arbeiten, nichts veröffentlicht. Erst im 19. und 20. Jahrhundert fanden sich die Manuskripte in Bibliotheken und privaten Sammlungen und wurden somit erst spät gewürdigt.[PARAGRAPH:2]Er schuf im Laufe seines Lebens eine große Zahl von künstlerisch wertvollen Illustrationen zu verschiedenen Themen wie Biologie, Anatomie, Technik, Waffentechnik, Wasserwirtschaft und Architektur und hinterließ Bauwerke, technische Anlagen und Beobachtungen des Kosmos. Besonders bedeutsam sind seine sehr genauen anatomischen u.a. naturwissenschaftlichen Zeichnungen. Bereits gegen Ende seiner Lebenszeit wurde er als Uomo Universale verehrt und wird auch von heutigen Historikern als eines der außergewöhnlichsten Genies aller Zeiten bezeichnet.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOPHIA_KIEV</Tag>
@@ -555,7 +555,7 @@
 		<German>Sophienkathedrale</German>
 		<Italian>Cattedrale di Santa Sofia</Italian>
 		<Spanish>Catedral de Santa Sofia</Spanish>
-		<Russian>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Russian>
+		<Portuguese>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOPHIA_KIEV_PEDIA</Tag>
@@ -564,7 +564,7 @@
 		<German>[TAB]Die Sophienkathedrale in Kiew, Ukraine gilt als eines der herausragendsten Bauwerke europäisch-christlicher Kultur. Sie wurde Anfang des 11. Jahrhunderts begonnen, im Laufe der Jahrhunderte mehrfach zerstört, umgebaut und erweitert.[PARAGRAPH:2]Die Kathedrale wurde als siebenkuppelige fünfschiffige Kreuzkirche mit offener Galerie nach byzantinischem Vorbild - speziell nach dem der Hagia Sophia in Konstantinopel - errichtet. Als Hauptkathedrale der Kiewer Rus war sie ihrer christlichen und kulturellen Bedeutung nach dazu berufen, von der Weisheit des Christentums und der Festigung der politischen Macht der Rus zu künden. Die Kathedrale war Mittelpunkt des kulturellen und politischen Lebens des altrussischen Staates. Hier fanden unter anderem die Thronbesteigungen der Kiewer Fürsten statt, hier tagte die Kiewer Volksversammlung (Vece), hier wurden Staatsgäste empfangen und Hofzeremonielle durchgeführt. Als Namenspatronin diente Sophia als Sinnbild der Weisheit.[PARAGRAPH:2]Die Ausmaße der Kathedrale - 37 Meter lang, 55 Meter breit und bis zur Zentralkuppel 29 Meter hoch - waren für die damalige Zeit beeindruckend. Die Kathedrale diente auch als Bestattungsort der Kiewer Fürsten. Als wichtiges Grabmal hat sich der Sarg von Jaroslaw dem Weisen bis heute erhalten, der hier 1054 beigesetzt wurde.[PARAGRAPH:2]Nach dem Einfall der Mongolen in die Rus (Mitte des 13. Jahrhunderts) büßte nicht nur die Stadt Kiew ihre zentrale politische und kulturelle Funktion ein, auch die Sophienkathedrale verlor ihre kirchliche Bedeutung. Der Kirchenbau wurde teilweise zerstört, der Sitz des Metropoliten nach Nowgorod Velikij (und später nach Moskau) verlegt. In den folgenden zwei Jahrhunderten wurde die Kathedrale durch weitere Einfälle der Krimtataren in Kiew immer stärker zerstört.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO</Tag>
@@ -573,7 +573,7 @@
 		<German>Marco Polos Botschaft</German>
 		<Italian>Ambasciata di Marco Polo</Italian>
 		<Spanish>Embajada de Marco Polo</Spanish>
-		<Russian>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Russian>
+		<Portuguese>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Tag>
@@ -582,7 +582,7 @@
 		<German>[TAB]Über Marco Polo selbst ist nur wenig überliefert, aber immerhin gibt es rund 150 Handschriften seines Reiseberichtes. Der Schotte Henry Yule konnte allein schon achtundsiebzig Manuskripte nachweisen. Davon sind 41 in Lateinisch, 21 in Italienisch, zehn in Französisch und vier in Deutsch verfasst. Es wird von vielen Forschern angenommen, dass Polo seine Erlebnisse nicht eigenhändig selbst im Gefängnis aufschrieb, sondern höchstens über Notizen verfügte, die er dem Rustichello da Pisa diktierte. Die vergleichenden Forschungen führten zu dem Ergebnis, dass ein Manuskript in altfranzösischer Sprache eine sehr große Nähe zur Urfassung hat. Damit ist das französische Manuskript gemeint, das die Geographische Gesellschaft zu Paris im Jahre 1824 veröffentlichte und das seitdem als der "Geographische Text" bezeichnet wird. Von weiterem besonderen Interesse für die Forscher sind in dieser Hinsicht auch ein franko-italienischer Text und das lateinische "Zelada-Manuskript", die beide ebenfalls als der Urfassung sehr nahe stehend betrachtet werden. Darüber, dass von diesen drei frühesten Manuskripten eines der Originalfassung am allernächsten steht, gibt es bislang keine Einigkeit.[PARAGRAPH:2]Nach Ansicht von Barbara Wehr, Professorin für Französische und Italienische Sprachwissenschaft der Johannes Gutenberg-Universität Mainz, muss die bislang vorherrschende Auffassung, Marco Polo habe seinen Reisebericht dem Rustichello da Pisa diktiert und die Sprache des Urtexts sei Altfranzösisch, möglicherweise korrigiert werden. Ihrer Ansicht nach gibt es mit der lateinischen Fassung von Francesco Pipino da Bologna einen Strang der Textüberlieferung, der keinerlei Spuren der französischen Version von Rustichello da Pisa aufweist. Sie schließt daraus, dass Rustichello da Pisa sich erst nachträglich in die Textüberlieferung eingemischt hat und dass es einen Urtext gab, der direkt aus der Feder Marco Polos stammte und auf Altvenezianisch verfasst war.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES</Tag>
@@ -591,7 +591,7 @@
 		<German>Papstpalast</German>
 		<Italian>Palazzo dei Papi</Italian>
 		<Spanish>Palacio Papal de Avi&#241;&#243;n</Spanish>
-		<Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#207;&#224;&#239;&#229;&#241;&#224;</Russian>
+		<Portuguese>&#196;&#226;&#238;&#240;&#229;&#246; &#207;&#224;&#239;&#229;&#241;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES_PEDIA</Tag>
@@ -600,7 +600,7 @@
 		<German>[TAB]Der Papstpalast zu Avignon (frz. Palais des Papes) war zwischen 1335 und 1430 die Residenz verschiedener Päpste und Gegenpäpste.[PARAGRAPH:2]Avignon ist als alte Papststadt bekannt. 1309 siedelte sich der Papst Clemens V. hier an (Avignonesisches Papsttum). Sechs weitere Päpste und fünf Gegenpäpste haben nach ihm in Avignon residiert.[PARAGRAPH:2]1304 war Papst Benedikt XI. nach kurzem Pontifikat gestorben und der französische König Philipp der Schöne wollte aus dem Papsttum ein persönliches Machtinstrument machen. Der französische Einfluss im Kardinalskollegium war damals sehr groß und so wurde 1305 der Erzbischof von Bordeaux als Papst Clemens V. gewählt, der zu seiner Konsekration, also zu seiner liturgischen Weihe erst gar nicht in Rom erschien, sondern in Frankreich blieb und in Lyon geweiht wurde. Auf der Suche nach einer würdigen Residenz wählte man kurz darauf Avignon, das gleichsam auf kirchlichem Gebiet lag, und machte es zur "größten Baustelle des Jahrhunderts".[PARAGRAPH:2]Clemens V. residierte jedoch nur vorübergehend in Avignon und wohnte im Kloster der Dominikaner. Sein Nachfolger, Papst Johannes XXII. richtete sich im bischöflichen Palast ein, den er ausbauen und vergrößern ließ. Dieser Palast stand an einem Hang südlich der Kathedrale Notre-Dame-des-Doms.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER</Tag>
@@ -609,7 +609,7 @@
 		<German>Torre de Belem</German>
 		<Italian>Torre di Bel&#233;m</Italian>
 		<Spanish>Tour de Bel&#233;m</Spanish>
-		<Russian>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Russian>
+		<Portuguese>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER_PEDIA</Tag>
@@ -618,7 +618,7 @@
 		<German>[TAB]Die Torre de Belém im Stadtteil Santa Maria de Belém an der Tejomündung ist eines der bekanntesten Wahrzeichen Lissabons. Neben dem nahegelegenen Mosteiro dos Jerónimos gehört der Turm zu den wenigen herausragenden Bauwerken des manuelinischen Stils, die das Erdbeben von Lissabon überstanden haben. Die oberste, 35 Meter hohe, freiliegende Etage des Turms ist heute eine Aussichtsplattform.[PARAGRAPH:2]Im Jahre 1515 wurde der Turm vom portugiesischen König, Manuel I., in Auftrag gegeben. Sechs Jahre später, im Todesjahr Manuels (1521) wurde er fertiggestellt. Er versinnbildlicht seitdem die Glanzzeit des portugiesischen See- und Handelsimperiums. Als Leuchtturm auf einem Felsen im Mündungstrichter des Tejo gelegen, begrüßte er die ankommenden Entdecker und Handelsschiffe.[PARAGRAPH:2]Als Schutzsymbol der Seefahrer blickt eine Statue Unserer Lieben Frau der sicheren Heimkehr auf das Meer. An der Nordwestseite des Turmes befindet sich zudem eine Plastik eines Nashornkopfes, welche die erste plastische Darstellung dieses Tieres in Europa ist. Es handelt sich dabei um eine Abbildung des Panzernashorns, welches Afonso de Albuquerque 1515 von seiner Indienfahrt mitbrachte und später auch Albrecht Dürer die Vorlage für den Holzschnitt seines "Rhinozeros" lieferte. Die Bastion erhält ihren eigenen Charakter durch die reichen Ausschmückungen mit Schnurreliefen, schildförmigen Zinnen, durchbrochenen Balkonen und maurischen Ausgucken.[PARAGRAPH:2]Das düstere Innere diente bis ins 19. Jahrhundert als Gefängnis und Waffenlager. Im 19. Jahrhundert kam es zu Aufschüttungen am nördlichen Tejoufer. Heute ist der Torre daher nur noch wenige Meter vom Land entfernt und kann bei Ebbe auch trockenen Fußes erreicht werden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE</Tag>
@@ -627,7 +627,7 @@
 		<German>Schloss Kalmar</German>
 		<Italian>Castello di Kalmar</Italian>
 		<Spanish>Castillo de Kalmar</Spanish>
-		<Russian>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Russian>
+		<Portuguese>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE_PEDIA</Tag>
@@ -636,7 +636,7 @@
 		<German>[TAB]Schloss Kalmar in der schwedischen Stadt Kalmar ist der beste erhaltene Renaissance-Palast in Nordeuropa und spielte durch seine Lage an der einstigen Grenze zu Dänemark ein wichtige Rolle in der schwedischen Geschichte. Das Schloss steht auf einer kleinen Halbinsel an der Ostseeküste und ist durch einen Burggraben von Festland getrennt.[PARAGRAPH:2]Das Schloss geht zurück auf ein 1180 unter der Regierung von Knut Eriksson erbauten Verteidigungsturm (Kastal) zum Schutz gegen Piraten und andere Feinde, die von der See her die Stadt bedrohten. Magnus Ladulås ließ Ende des 13. Jahrhunderts eine Ringmauer samt vier Türmen um den eigentlichen Verteidigungsturm errichten.[PARAGRAPH:2]Das Schloss war der erste Aufenthaltsort Gustav Wasas in Schweden nach seiner Flucht aus dänischer Gefangenschaft. Deswegen findet man im Schloss einen Brunnen, der nach ihm benannt ist, und ein Monument zu seinen Ehren. Gustav und seine Söhne ließen das Schloss weiter ausbauen. Gustav selbst ließ es durch einen Stein- und Erdwall ergänzen, der als Verteidigung gegen die neu aufkommende Artillerie gedacht war. Die Söhne Erik XIV. und Johann III. legten mehr Augenmerk auf die künstlerische Ausstattung des Schlosses. Für die Inneneinrichtung des Bauwerkes verpflichteten sie ausländische Architekten und Künstler.[PARAGRAPH:2]Zum Ende des 17. Jahrhunderts begann eine lange Zeit des Verfalls. Die Festung, welche unter den vorangegangenen 395 Jahren 22 Mal belagert wurde, aber nie erstürmt werden konnte, wurde zum Gefängnis, Getreidespeicher und zur königlichen Schnapsbrennerei degradiert. Große Teile der alten Einrichtung wurden zerstört und es gab sogar Vorschläge, das Schloss abzureißen. In den 1850er Jahren begann man mit Renovierungsarbeiten, die bis heute andauern.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER</Tag>
@@ -645,7 +645,7 @@
 		<German>Der schiefe Turm</German>
 		<Italian>La Torre Pendente</Italian>
 		<Spanish>la Torre Inclinada</Spanish>
-		<Russian>&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#193;&#224;&#248;&#237;&#255;</Russian>
+		<Portuguese>&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#193;&#224;&#248;&#237;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_PEDIA</Tag>
@@ -654,7 +654,7 @@
 		<German>[TAB]Der schiefe Turm von Pisa (Italienisch: La Torre di Pisa) ist ein "Campanile", ein frei stehender Glockenturm des Doms von Pisa. Er befindet sich auf der R&#252;ckseite des Doms und ist als drittes Bauwerk auf Pisas "Piazza dei Miracoli" (Platz der Wunder) das wohl bekannteste schiefe Geb&#228;ude der Welt. Das Geb&#228;ude sollte gem&#228;&#223; der Bauplaner normal gerade stehen, doch kurz nach Baubeginn im Jahr 1173 bekam es wegen eines Grundbruches, dem Nachgeben des Fundamentes, eine Schr&#228;glage Richtung S&#252;dosten.</German>
 		<Italian>[TAB]La torre pendente di Pisa, o semplicemente la torre di Pisa &#232; il campanile della cattedrale di Pisa. Si trova dietro la cattedrale ed &#232; la terza struttura nel Campo dei Miracoli. La torre &#232; il pi&#249; famoso edificio pendente al mondo. Pur essendo stata progettata per rimanere verticale, cominci&#242; a pendere poco dopo l'inizio dei lavori di costruzione nel 1173, a causa di fondamenta mal realizzate e di un sottostrato friabile che ha permesso alle fondamenta di spostarsi.</Italian>
 		<Spanish>[TAB]La Torre Inclinada de Pisa, o simplemente la Torre de Pisa, es una torre campanario individual de la catedral de la ciudad italiana de Pisa. Est&#225; situada detr&#225;s de la catedral y es la tercera estructura del "Campo dei Miracoli" de Pisa ("Campo de los Milagros"). La torre es el edificio inclinado m&#225;s famoso del mundo. Aunque se pretend&#237;a que fuera totalmente vertical, comenz&#243; a inclinarse hacia el sudeste poco despu&#233;s de su construcci&#243;n, en 1173, debido a unos cimientos defectuosos y la tierra reblandecida sobre la que reposa.</Spanish>
-		<Russian>[TAB]&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#225;&#224;&#248;&#237;&#255; (&#232;&#242;&#224;&#235;. Torre pendente di Pisa) &#151; &#234;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#224;&#255; &#225;&#224;&#248;&#237;&#255;, &#247;&#224;&#241;&#242;&#252; &#224;&#237;&#241;&#224;&#236;&#225;&#235;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#227;&#238; &#241;&#238;&#225;&#238;&#240;&#224; &#209;&#224;&#237;&#242;&#224;-&#204;&#224;&#240;&#232;&#255; &#192;&#241;&#241;&#243;&#237;&#242;&#224; &#226; &#227;&#238;&#240;&#238;&#228;&#229; &#207;&#232;&#231;&#224;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#225;&#224;&#248;&#237;&#232; &#225;&#251;&#235;&#238; &#231;&#224;&#234;&#238;&#237;&#247;&#229;&#237;&#238; &#226; 1360 &#227;&#238;&#228;&#243;. &#193;&#224;&#248;&#237;&#255; &#239;&#238;&#235;&#243;&#247;&#232;&#235;&#224; &#239;&#240;&#238;&#231;&#226;&#232;&#249;&#229; &#171;&#207;&#224;&#228;&#224;&#254;&#249;&#224;&#255; &#225;&#224;&#248;&#237;&#255;&#187; &#232; &#226;&#241;&#229;&#236;&#232;&#240;&#237;&#243;&#254; &#232;&#231;&#226;&#229;&#241;&#242;&#237;&#238;&#241;&#242;&#252; &#225;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#255; &#242;&#238;&#236;&#243;, &#247;&#242;&#238; &#238;&#237;&#224; &#241;&#232;&#235;&#252;&#237;&#238; &#237;&#224;&#234;&#235;&#238;&#237;&#229;&#237;&#224; &#232; &#234;&#224;&#234; &#225;&#251; &#171;&#239;&#224;&#228;&#224;&#229;&#242;&#187;. &#194;&#251;&#241;&#238;&#242;&#224; &#225;&#224;&#248;&#237;&#232; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 55,86 &#236; &#238;&#242; &#231;&#229;&#236;&#235;&#232; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#237;&#232;&#231;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229; &#232; 56,7 &#236; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229;. &#216;&#232;&#240;&#232;&#237;&#224; &#241;&#242;&#229;&#237; &#226; &#238;&#241;&#237;&#238;&#226;&#229; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 4,09 &#236; &#232; &#226;&#226;&#229;&#240;&#245;&#243; 2,48 &#236;. &#197;&#184; &#236;&#224;&#241;&#241;&#224; &#238;&#246;&#229;&#237;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#226; 14453 &#242;. &#210;&#229;&#234;&#243;&#249;&#232;&#233; &#237;&#224;&#234;&#235;&#238;&#237; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; &#238;&#234;&#238;&#235;&#238; 3,97&#176; (&#238;&#242;&#234;&#235;&#238;&#237;&#229;&#237;&#232;&#229; &#239;&#240;&#232;&#236;&#229;&#240;&#237;&#238; 3,9 &#236; &#238;&#242; &#226;&#229;&#240;&#242;&#232;&#234;&#224;&#235;&#232;). &#193;&#224;&#248;&#237;&#255; &#232;&#236;&#229;&#229;&#242; 294 &#241;&#242;&#243;&#239;&#229;&#237;&#252;&#234;&#232;.</Russian>
+		<Portuguese>[TAB]&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#225;&#224;&#248;&#237;&#255; (&#232;&#242;&#224;&#235;. Torre pendente di Pisa) &#151; &#234;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#224;&#255; &#225;&#224;&#248;&#237;&#255;, &#247;&#224;&#241;&#242;&#252; &#224;&#237;&#241;&#224;&#236;&#225;&#235;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#227;&#238; &#241;&#238;&#225;&#238;&#240;&#224; &#209;&#224;&#237;&#242;&#224;-&#204;&#224;&#240;&#232;&#255; &#192;&#241;&#241;&#243;&#237;&#242;&#224; &#226; &#227;&#238;&#240;&#238;&#228;&#229; &#207;&#232;&#231;&#224;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#225;&#224;&#248;&#237;&#232; &#225;&#251;&#235;&#238; &#231;&#224;&#234;&#238;&#237;&#247;&#229;&#237;&#238; &#226; 1360 &#227;&#238;&#228;&#243;. &#193;&#224;&#248;&#237;&#255; &#239;&#238;&#235;&#243;&#247;&#232;&#235;&#224; &#239;&#240;&#238;&#231;&#226;&#232;&#249;&#229; &#171;&#207;&#224;&#228;&#224;&#254;&#249;&#224;&#255; &#225;&#224;&#248;&#237;&#255;&#187; &#232; &#226;&#241;&#229;&#236;&#232;&#240;&#237;&#243;&#254; &#232;&#231;&#226;&#229;&#241;&#242;&#237;&#238;&#241;&#242;&#252; &#225;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#255; &#242;&#238;&#236;&#243;, &#247;&#242;&#238; &#238;&#237;&#224; &#241;&#232;&#235;&#252;&#237;&#238; &#237;&#224;&#234;&#235;&#238;&#237;&#229;&#237;&#224; &#232; &#234;&#224;&#234; &#225;&#251; &#171;&#239;&#224;&#228;&#224;&#229;&#242;&#187;. &#194;&#251;&#241;&#238;&#242;&#224; &#225;&#224;&#248;&#237;&#232; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 55,86 &#236; &#238;&#242; &#231;&#229;&#236;&#235;&#232; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#237;&#232;&#231;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229; &#232; 56,7 &#236; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229;. &#216;&#232;&#240;&#232;&#237;&#224; &#241;&#242;&#229;&#237; &#226; &#238;&#241;&#237;&#238;&#226;&#229; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 4,09 &#236; &#232; &#226;&#226;&#229;&#240;&#245;&#243; 2,48 &#236;. &#197;&#184; &#236;&#224;&#241;&#241;&#224; &#238;&#246;&#229;&#237;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#226; 14453 &#242;. &#210;&#229;&#234;&#243;&#249;&#232;&#233; &#237;&#224;&#234;&#235;&#238;&#237; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; &#238;&#234;&#238;&#235;&#238; 3,97&#176; (&#238;&#242;&#234;&#235;&#238;&#237;&#229;&#237;&#232;&#229; &#239;&#240;&#232;&#236;&#229;&#240;&#237;&#238; 3,9 &#236; &#238;&#242; &#226;&#229;&#240;&#242;&#232;&#234;&#224;&#235;&#232;). &#193;&#224;&#248;&#237;&#255; &#232;&#236;&#229;&#229;&#242; 294 &#241;&#242;&#243;&#239;&#229;&#237;&#252;&#234;&#232;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_STRATEGY</Tag>
@@ -663,7 +663,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_REVERT] erweckt eine zufällige Große Persönlichkeit.</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_REVERT] genera un grande personaggio casuale.</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Spanish>
-		<Russian>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Russian>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_HELP</Tag>
@@ -672,7 +672,7 @@
 		<German>[ICON_BULLET]Erweckt eine zufällige Große Persönlichkeit</German>
 		<Italian>[ICON_BULLET]Genera un Grande Personaggio casuale</Italian>
 		<Spanish>[ICON_BULLET]Provides a Random Great Person</Spanish>
-		<Russian>[ICON_BULLET]Provides a Random Great Person</Russian>
+		<Portuguese>[ICON_BULLET]Provides a Random Great Person</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA</Tag>
@@ -681,7 +681,7 @@
 		<German>Bibliotheca Corviniana</German>
 		<Italian>Biblioteca Corviniana</Italian>
 		<Spanish>Biblioteca Corviniana</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_PEDIA</Tag>
@@ -690,7 +690,7 @@
 		<German>[TAB]Die Bibliotheca Corviniana (kurz Corvina) ist die weltberühmte Büchersammlung des ungarischen Königs Matthias Corvinus (1443-1490). Sie bildete eine der größten und wertvollsten Bibliotheken im Zeitalter der Renaissance und wurde 2005 in das Weltdokumentenerbe aufgenommen. Sie ist großteils verloren oder verstreut, die nachgewiesenen Exemplare werden Corvinen genannt.[PARAGRAPH:2]Die Blüte der Bibliothek begann mit der Vermählung des Königs Matthias mit der kunstsinnigen Beatrix von Aragón (1476). Matthias Corvinus trug mit großem Aufwand eine Bibliothek zusammen, wofür er in Italien prächtig verzierte Handschriften herstellen ließ. Boten wurden durch Italien, Griechenland und Kleinasien gesandt, die Handschriften klassischer Autoren sowie syrischer und hebräischer Schriftsteller aufkaufen sollten. 33.000 Dukaten standen zur Verfügung. Man schätzt den seinerzeitigen Umfang auf 2.000 Bände, womit die Bibliotheca Corviniana nach der Vatikanbilbliothek die zweitgrößte ihrer Zeit war.[PARAGRAPH:2]Charakteristisch für die Bibliotheca Corviniana sind die meist prachtvollen Illuminierungen der Handschriften mit eingezeichnetem Wappen des Königs, die mit Gold gezierten Ledereinbände und die Samt- und Seideneinbände.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FONTAINEBLEAU</Tag>
@@ -699,7 +699,7 @@
 		<German>Schloss Fontainebleau</German>
 		<Italian>Chateau di Fontainebleau</Italian>
 		<Spanish>Chateau de Fontainebleau</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FONTAINEBLEAU_PEDIA</Tag>
@@ -708,7 +708,7 @@
 		<German>[TAB]Das Schloss Fontainebleau in Fontainebleau (Département Seine-et-Marne) ist ein französisches Königsschloss rund 60 km südlich von Paris, das zeitweilig u. a. von Kaiser Napoléon Bonaparte genutzt wurde. Es ist vor allem berühmt für seine Innenausstattung aus der Zeit der Renaissance, an der zahlreiche italienische Künstler arbeiteten, und wurde 1981 von der UNESCO zum Weltkulturerbe erklärt.[PARAGRAPH:2]Der Name des Schlosses Fontainebleau, früher auch "Fontainbleau" geschrieben, leitet sich ab von: "fontaine belle eau", das heißt "Quelle (mit) schönem Wasser".[PARAGRAPH:2]Die Anlage wurde unter Franz I. und Heinrich II. an der Stelle eines Jagdschlosses gebaut. Bauanfang war 1528. Das Schloss gilt als erster Renaissancebau auf französischem Boden.[PARAGRAPH:2]Schloss Fontainebleau hat fünf Höfe, eine Kapelle, Prunkräume, Fresken und Stuckaturen. Die Arbeiten für das Schloss wurden ab 1530 von italienischen Künstlern wie Rosso Fiorentino ausgeführt. Diese brachten manieristische Stilelemente und italienisches Formengut nach Frankreich.[PARAGRAPH:2]Ludwig XIV. ließ in den Gärten ein neues Parterre im Stil des Barocks, einen großen Kanal und einen neuen Park anlegen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_DIET</Tag>
@@ -717,7 +717,7 @@
 		<German>Reichstag</German>
 		<Italian>Dieta Imperiale</Italian>
 		<Spanish>Dieta Imperial</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_DIET_PEDIA</Tag>
@@ -726,7 +726,7 @@
 		<German>[TAB]Der Begriff Reichstag bezeichnet ursprünglich die Versammlung der Reichsstände des Heiligen Römischen Reiches. Die neben dem König/Kaiser stehende Körperschaft entwickelte sich seit dem 12. Jahrhundert aus den formlosen Hoftagen und wurde 1495 mittels eines Vertrages zwischen dem Kaiser und den Ständen zu einer festen Institution der Reichsverfassung.[PARAGRAPH:2]Der Reichstag wurde bis zum 16. Jahrhundert in unregelmäßigen Abständen jeweils in eine Bischofs- oder Reichsstadt einberufen und war das maßgebliche Gegengewicht der Stände gegenüber der kaiserlichen Zentralgewalt. Seit 1663 tagte der Immerwährende Reichstag als ständiger Gesandtenkongress in Regensburg.[PARAGRAPH:2]Der Reichstag trat bis 1663 etwa 40- bis 45-mal zusammen und konnte einige Wochen, aber auch mehrere Monate dauern. Der Reichstag begann - zumindest in seiner nicht-permanenten Zeit - neben zeremoniellen Akten mit der Verlesung der kaiserlichen Proposition, der vom Kaiser vorab festgelegten Tagesordnung, im sog. Reichsrat und endete mit der Verlesung und Beurkundung der Beschlüsse des Reichstages, dem Reichsabschied. Der letzte dieser Reichsabschiede war der Jüngste Reichsabschied (recessus imperii novissimus) aus dem Jahre 1653/54. Dieser Reichstag in Regensburg hatte die Aufgabe, die bei den Friedensverhandlungen von 1648 zur Beendigung des Dreißigjährigen Krieges nicht behandelten Themen zu beraten.[PARAGRAPH:2]Die Permanenz des Immerwährenden Reichstags nach 1663 wurde nie formell beschlossen, war aber in den Beschlüssen des Westfälischen Friedens angelegt, woraus sich allmählich die Permanenz des Reichstages entwickelte. Dieser Reichstag entwickelte sich aber nach Meinung heutiger Historiker niemals zu einem Parlament oder einer ständischen Volksvertretung. Stattdessen war und blieb er immer die Vertretungsinstitution der Kurfürsten, der fürstlichen und nicht-fürstlichen Reichsstände. Der Immerwährende Reichstag entwickelte sich aufgrund seiner Permanenz recht schnell zu einem reinen Gesandtenkongress, auf dem die Reichsstände nur sehr selten erschienen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COPERNICUS</Tag>
@@ -735,7 +735,7 @@
 		<German>Observatorium von Kopernicus</German>
 		<Italian>Osservatorio di Copernico</Italian>
 		<Spanish>Observatoire de Copernic</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COPERNICUS_PEDIA</Tag>
@@ -744,7 +744,7 @@
 		<German>[TAB]Nicolaus Copernicus lebte von 1513 bis zu seinem Tode 1543 mit kurzen Unterbrechungen in Frauenburg. Der Mathematiker, welcher als Astronom einer der Begründer des heliozentrischen Weltbildes gilt, wirkte als ermländischer Domherr und wurde im Dom begraben. Copernicus hat Frauenburg scherzhaft Weiberstadt[6] oder Ginnepolis (altpreussisch ginne), (griechisch: gyne = Frau, polis = Stadt) genannt. Die Nicolaus Copernicus Gesamtausgabe verzeichnet neben einem latinisierten Fraunburgum auch Gynopolis[7], in seinen Handschriften finden sich Einträge wie in Frueburgo Prussiae oder Frueburgo, quam Gynopolim dicere possumus. Der älteste Turm der Domburg in deren Nordwestecke wird heute "Copernicusturm" genannt, da er dem Gelehrten gehörte, der dort seine Wohnung und Arbeitsräume hatte. In seinem unteren Stockwerk wurde ein Raum als Arbeitszimmer eines Renaissance-Gelehrten aus der Zeit Copernicus' eingerichtet. Die übrigen Räume des Turmes dienen Wechselausstellungen.[PARAGRAPH:2]Copernicus' Grabstätte im Frauenburger Dom geriet bald nach seinem Tod in Vergessenheit. Bei einer archäologischen Suche wurden 2005 Skelettreste gefunden, die nach dem Alter und dem anhand zeitgenössischer Bilder rekonstruierten Aussehen des Gelehrten von Copernicus stammen könnten. Auch eine wissenschaftliche Genanalyse ergab, dass die menschlichen Überreste mit 97 % Wahrscheinlichkeit von Copernicus stammen. Ein letzter, absoluter Beweis dafür ließ sich aber bislang nicht erbringen. Im Dom erinnern eine Gedenktafel aus dem 18. Jahrhundert sowie eine Büste aus den 1970er Jahren an Copernicus.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_GIORGIO</Tag>
@@ -753,7 +753,7 @@
 		<German>Palazzo San Giorgio</German>
 		<Italian>Palazzo San Giorgio</Italian>
 		<Spanish>Palazzo San Giorgio</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_GIORGIO_PEDIA</Tag>
@@ -762,7 +762,7 @@
 		<German>[TAB]Der Palazzo San Giorgio (italienisch für: Sankt-Georg-Palast) ist ein Gebäude in Genua, Italien. Es ist an der Piazza Caricamento, in unmittelbarer Nähe zum Porto Antico, gelegen.[PARAGRAPH:2]Der Palast wurde 1260 von Guglielmo Boccanegra, dem Onkel des ersten Dogen Genuas Simone Boccanegra, erbaut. Für die Konstruktion des neuen Gebäudes wurde Material von der, zuvor abgerissenen, Venezianischen Botschaft in Konstantinopel verwendet. Dies geschah auf Befehl des byzantinischen Imperators Michael VIII., der damit für die genuesische Unterstützung gegen das Römische Reich dankte. Der Palast sollte durch die Einrichtung eines zivil-politischen Zentrums die Trennung von Kirche und Republik verdeutlichen. Vor Allem sollte die Macht der katholischen Kirche, welche durch die in der Nähe gelegene Kathedrale San Lorenzo manifestiert wurde, gemindert werden.[PARAGRAPH:2]1262 wurde Guglielmo Boccanegra gezwungen ins Exil zu gehen und der Palast wurde als Gefängnis zweckentfremdet. Der berühmteste Insasse soll Marco Polo gewesen sein, der dort seine Reiseberichte ("Il Milione") dem Mithäftling Rustichello da Pisa diktiert haben soll.[PARAGRAPH:2]Im 15. Jahrhundert wurde das Gebäude Sitz der Banco di San Giorgio.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEURS</Tag>
@@ -771,7 +771,7 @@
 		<German>Amsterdamer Börse</German>
 		<Italian>Borsa di Amsterdam</Italian>
 		<Spanish>Bolsa de Amsterdam</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEURS_PEDIA</Tag>
@@ -780,7 +780,7 @@
 		<German>[TAB]Die Amsterdamer Börse wurde 1611 als Warenbörse (niederl.: Goederenbeurs) eröffnet. Ab 1612 fand auch Wertpapierhandel statt. Damit ist die Amsterdamer Börse entgegen oft gelesener Auffassungen nicht die älteste Warenbörse, gilt aber als die älteste Effektenbörse der Welt.[PARAGRAPH:2]Das erste Amsterdamer Börsengebäude der frühen Neuzeit entstand zwischen 1608 bis 1611 nach einem Entwurf von Hendrick de Keyser und musste 1835 abgerissen werden, um einem neuen Gebäude nach einem Entwurf von Jan David Zocher d. J. Platz zu machen. Dessen unbeliebter klassizistischer Bau stand nur von 1845 bis 1903. Das dritte und heute noch erhaltene, 1903 eröffnete Börsengebäude nimmt einen so prominenten Platz in der niederländischen Architekturgeschichte ein, dass der Name des Baumeisters Hendrik Petrus Berlage längst auf das Gebäude übergegangen ist, das Beurs van Berlage - die Börse von Berlage - genannt wird.[PARAGRAPH:2]Die Niederlande am Anfang des 17. Jahrhunderts waren von einer enormen wirtschaftlichen Expansion geprägt, weswegen die Epoche auch als ihr Goldenes Zeitalter bezeichnet wird. Die wichtigsten Handelszweige waren der Ostseehandel, der Handel mit Russland und die "straatvaart" (der Handel mit Italien und der Levante, den Ländern an der Ostküste des Mittelmeeres). So war es nur folgerichtig, dass 1609 die Amsterdamer Wechselbank - die weltweit erste Zentralbank - gegründet wurde, die den Zahlungsverkehr zu organisieren und zu fördern vermochte, der bis dahin durch die Vielzahl in Umlauf befindlicher Währungen erschwert wurde. Darüber hinaus zogen günstige Zinssätze, feste Devisenkurse und eine hohe Darlehensbereitschaft der niederländischen Bank bald Kapitalanleger und Finanzleute aus ganz Europa an. Binnen kurzem spielte die Amsterdamer Wechselbank eine enorm wichtige internationale Rolle, was auch den Warenumschlag in Amsterdam stark beförderte.[PARAGRAPH:2]Der Warenhandel im Amsterdam des frühen 17. Jahrhunderts spielte sich unter freiem Himmel hauptsächlich in der Warmoesstraat und auf dem Platz de Dam am Rathaus und der Waage ab, in deren unmittelbarer Nähe die Anlegeplätze auf der Amstel für die Segelschiffe lagen. Seine starke Zunahme machte ein eigenes Gebäude erforderlich, in dem der Handel bei jedem Wetter und jeder Jahreszeit strukturiert abgewickelt werden konnte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER</Tag>
@@ -789,7 +789,7 @@
 		<German>Westminster Abbey</German>
 		<Italian>Abbazia di Westminster</Italian>
 		<Spanish>Abad&#237;a de Westminster</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Tag>
@@ -798,7 +798,7 @@
 		<German>[TAB]Westminster Abbey (deutsch: Abtei von Westmünster, Westmünsterabtei; eigentlich The Collegiate Church of St Peter, Westminster) ist eine Kirche in London. Traditionell werden hier die Könige von England (später britische Monarchen) gekrönt und beigesetzt. Die Stiftskirche des Kollegiatstifts St. Peter, Westminster gehört zur Kirche von England, ist aber aufgrund ihrer Funktion keiner Diözese zugehörig, sondern Eigenkirche ("royal peculiar") der britischen Monarchie. Daher wird ihr oberster Geistlicher, der Dekan von Westminster, direkt vom britischen Monarchen berufen.[PARAGRAPH:2]Am heutigen Standort befand sich ursprünglich die Klosterkirche einer um 750 gegründeten Benediktinerabtei. Wegen ihrer Lage zu der damaligen Stadt trug die Kirche bereits den Namen West Minster (Westmünster). Die eigentliche Westminster Abbey wurde zwischen 1045 und 1065 unter Eduard dem Bekenner im romanischen Stil erbaut. Nach seiner Heiligsprechung 1065, ein Jahr vor der normannischen Invasion Englands, wurde die Abtei geweiht und der König hier beigesetzt. Die einzige noch erhaltene Abbildung dieser ersten Abtei findet sich auf dem Teppich von Bayeux. Im Jahre 1245 begann Heinrich III. mit dem Bau der heutigen Kirche im Stil der anglofranzösischen Frühgotik. Der untere Teil der Westfassade stammt aus dem 15. Jahrhundert. Die beiden Haupttürme dagegen wurden erst zwischen 1722 und 1745 von Christopher Wren, Nicholas Hawksmoor und John James errichtet. In dem dreischiffigen Innenraum sind alle drei Epochen der englischen Gotik vertreten: "Early English", "Decorated" und "Perpendicular".</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VERSAILLES</Tag>
@@ -807,7 +807,7 @@
 		<German>Versailles</German>
 		<Italian>Versailles</Italian>
 		<Spanish>Versalles</Spanish>
-		<Russian>&#194;&#229;&#240;&#241;&#224;&#235;&#252;</Russian>
+		<Portuguese>&#194;&#229;&#240;&#241;&#224;&#235;&#252;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VERSAILLES_PEDIA</Tag>
@@ -816,7 +816,7 @@
 		<German>[TAB]Schloss Versailles war zun&#228;chst ein Jagdschl&#246;sschen K&#246;nig Ludwigs XIII. 1660 lie&#223; sein Sohn Ludwig XIV. das "Chateau" in einen Palast umbauen, den er ab 1682 bewohnte, obwohl das Hauptschloss erst 1688 fertig gestellt wurde. Das riesige Geb&#228;ude beherbergte Ludwigs gesamten Hofstaat und die zentrale Verwaltung Frankreichs. Versailles ist ein Geb&#228;udekomplex in einer etwa 4 Quadratkilometer gro&#223;en Parkanlage mit pr&#228;chtigen Brunnen und Statuen. [PARAGRAPH:2]In der Mitte des Palastes befand sich Ludwigs prunkvolles Schlafzimmer. Das k&#246;nigliche Bett war von einem Gel&#228;nder umgeben, das Besucher der k&#246;niglichen Audienzen (die Ludwig nicht selten im Bett abzuhalten pflegte) auf Distanz halten sollte. [PARAGRAPH:2]Der wohl ber&#252;hmteste Raum des Schlosses ist der 60 Meter lange und 9 Meter breite Spiegelsaal mit seinen 578 Spiegeln und 17 verzierten Fenstern. Die 30 Deckenfresken des Spiegelsaals zeigen die Triumphe und Wohltaten des Monarchen. [PARAGRAPH:2]Ludwig hatte &#252;brigens einen guten Grund, Versailles zu bauen. Durch die Verlegung des Hofstaates aus Paris in das neue Schloss konnte er den Einfluss des Adels schm&#228;lern und seine eigene Macht festigen. [PARAGRAPH:2]Allerdings war Versailles ein ausgesprochen teures Bauprojekt. Allein die Instandhaltung des Palastes und die Versorgung seiner Bewohner verschlang j&#228;hrlich etwa 6%% der Staatsfinanzen. [PARAGRAPH:2]Nach der Franz&#246;sischen Revolution und dem Ende der Monarchie verfiel das Schloss. Nach dem Deutsch-Franz&#246;sischen Krieg in den Jahren 1870/71 wurde Wilhelm I. im Spiegelsaal von Versailles zum Kaiser proklamiert. Der Verfall des Schlosses wurde erst in den 60er Jahren des 20. Jahrhunderts gestoppt, als Pierre Verlet den k&#252;hnen Plan fasste, Versailles wieder aufzubauen. Seitdem hat das Schloss einen Teil seines alten Glanzes (und viele M&#246;belst&#252;cke aus der Zeit Ludwigs XIV.) zur&#252;ckgewonnen.</German>
 		<Italian>[TAB]La Reggia di Versailles nacque inizialmente come un alloggio per la caccia per ordine di re Luigi XIII, al quale piaceva aggirarsi nei boschi circostanti. Nel 1660, suo figlio Luigi XIV decise di trasformare la "casa gentilizia" in un palazzo. Luigi XIV vi prese residenza nel 1682 e la costruzione dell'edificio venne terminata nel 1688. Questo enorme palazzo non rappresentava solamente la residenza di Luigi XIV, ma fungeva anche da corte reale e da cuore pulsante della burocrazia di Francia. Versailles &#232; un complesso di edifici molto ricchi distribuiti al centro di un enorme parco circondato da bellissime fontane, statue e giardini. [PARAGRAPH:2]Al centro esatto del palazzo si trovava, naturalmente, la stanza di Luigi XIV, un ambiente pomposo e molto ampio: al centro della stanza si trovava il Letto Reale che era circondato da alcune ringhiere; questo dettaglio lascia pensare che il re abbia ricevuto molte persone e che le ringhiere servissero a tenere lontane delle mani dalle stoffe reali. [PARAGRAPH:2]Il salone degli specchi &#232; un altro luogo mozzafiato di Versailles, di 60 metri per 10: in questa stanza sono presenti 578 specchi e 17 finestre ornate; sul soffitto, Luigi XIV fece affrescare dei dipinti che ritraessero i trionfi e i benefici del suo dominio. [PARAGRAPH:2]Malgrado fosse realmente sfarzosa, Luigi aveva avuto una buona ragione per costruire Versailles: in un colpo riusc&#236; ad eliminare la nobilt&#224; e la democrazia dagli intrighi parigini, rendendoli pi&#249; facilmente controllabili da lui. In questo modo riusc&#236; a rendere praticamente impotenti i nobili dell'epoca e le grandi famiglie che lottarono per conquistare il trono di Francia, dando loro il privilegio di una vita pi&#249; agiata. [PARAGRAPH:2]Ci&#242; nonostante, Versailles era a tutti gli effetti una costruzione estremamente costosa: si calcola che le spese necessarie alla manutenzione del palazzo e della nobilt&#224; ammontassero al 6%% dell'intero budget nazionale Francese. Per fare un esempio pratico, il budget presidenziale del 2006 per gli Stati Uniti ammonta a 2,2 mila miliardi di dollari in entrata; il sei per cento rappresenta 132 miliardi di dollari. [PARAGRAPH:2]Dopo la Rivoluzione Francese e la scomparsa della monarchia, Versailles fin&#236; in rovina e non venne pi&#249; utilizzata fino al 1870, quando l'esercito Germanico la utilizz&#242; come quartier generale nella vittoria durante la Guerra Franco-Prussiana del 1870. Il palazzo decadde fino agli anni '60 quando Pierre Verlet concep&#236; l'idea di restaurare e riportare Versailles ai fasti di Luigi XIV. Da allora, i responsabili del progetto sono riusciti a recuperare molti degli arredi originali disseminati in tutta Europa.</Italian>
 		<Spanish>[TAB]El palacio de Versalles empez&#243; siendo un pabell&#243;n de caza construido a instancias del rey Luis XIII, a quien le gustaba cazar en los bosques de la vecindad. En 1660, su hijo Luis XIV decidi&#243; convertir el "chateau" en un palacio. El monarca se instal&#243; all&#237; en 1682, y la construcci&#243;n del palacio finaliz&#243; en 1688. Durante su vida, este enorme, desgarbado y recargado edificio ejerci&#243;, adem&#225;s de como residencia real, como corte y centro de la burocracia de Francia. Versalles es un complejo de edificios ricamente decorados, organizado alrededor de milla y media cuadrada de hermosos parques. Est&#225; rodeado de preciosas fuentes y esculturas, y magn&#237;ficos y elegantes jardines. [PARAGRAPH:2]En el centro mismo del palacio, naturalmente, se encuentran los aposentos de Luis, una sala enorme y ostentosa. En el centro del dormitorio se encuentra la cama real, rodeada por una barandilla, que parece sugerir que el rey celebraba grandes audiencias reclinado all&#237; y necesitaba alg&#250;n modo de impedir que los visitantes tocasen las s&#225;banas regias con los dedos. [PARAGRAPH:2]El Sal&#243;n de los Espejos es otra sala impresionante. Con m&#225;s de 65 metros de longitud y 10 de anchura, el sal&#243;n contiene 578 espejos y 17 ventanas ornamentales. En el techo, Luis hizo pintar 30 frescos en los que se relatan sus muchos triunfos y los beneficios de su gobierno. [PARAGRAPH:2]Aunque a muchos les pareciera un colosal ejercicio de exceso real, Luis ten&#237;a buenas razones para construir Versalles. De un solo golpe alej&#243; a la nobleza y la burocracia de las intrigas de Par&#237;s y las hizo m&#225;s inmediatamente responsables ante &#233;l. De este modo, redujo a la impotencia a la anta&#241;o poderosa aristocracia. Las grandes familias, que en el pasado se hab&#237;an disputado el trono de Francia, se encontraron ahora intrigando por el privilegio de atender al ba&#241;o del rey.[PARAGRAPH:2]No obstante, Versalles fue un edificio extraordinariamente caro. Se ha calculado que el mantenimiento del palacio y sus nobles moradores consum&#237;a el 6%% de la totalidad del presupuesto de Francia. A modo de comparaci&#243;n, digamos que el c&#225;lculo del presupuesto de los Estados Unidos para 2006 estima que el total ascender&#225; aproximadamente a 2.200 millones de d&#243;lares. El 6%% de ese total ser&#237;an 132 mil millones de d&#243;lares. [PARAGRAPH:2]Tras la Revoluci&#243;n Francesa y la disoluci&#243;n de la monarqu&#237;a, Versalles qued&#243; en estado de abandono. El ej&#233;rcito alem&#225;n hizo del complejo su cuartel general tras derrotar a Francia en la Guerra Franco-Prusiana de 1870. El edificio permaneci&#243; en estado de decadencia hasta los a&#241;os 60 del siglo XX, cuando Pierre Verlet concibi&#243; la audaz idea de devolverlo a sus d&#237;as de gloria, la &#233;poca de Luis XIV. Desde entonces, los conservadores han conseguido recuperar parte del mobiliario original desde todas partes de Europa.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESSBURG</Tag>
@@ -825,7 +825,7 @@
 		<German>Pressburger Burg</German>
 		<Italian>Castello di Presburgo</Italian>
 		<Spanish>Castillo de Presburgo</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESSBURG_PEDIA</Tag>
@@ -834,7 +834,7 @@
 		<German>[TAB]Die Burg Pozsony, deutsch auch Burg Pressburg, Pressburger Burg oder einfach nur Pressburg, ist befindet sich im südlichen Teil der Kleinen Karpaten, auf einem Felsen 85 Meter über dem linken Ufer der Donau an der Kreuzung europäischer Handelswege.[PARAGRAPH:2]Eine erste steinerne Burg wurde im 10. Jahrhundert errichtet. Kaiser Sigismund von Luxemburg ließ die Burg um 1430 zu einer Festung im gotischen Stil ausbauen. Kaiser Ferdinand I. ordnete den Umbau im Renaissance-Stil an; um 1650 erhielt die Burg ihr heutiges barockes Aussehen. Kaiserin Maria Theresia erhob die Burg 1740 zu ihrer ungarischen Residenz. Im Mai 1811 brannte die Burg bis auf die Grundmauern nieder. Während mehr als 140 Jahre erhoben sich lediglich Ruinen über der Stadt. Von 1953 bis 1968 wurde die Burg originalgetreu wiederaufgebaut, heute dient sie als Museum und für repräsentative Zwecke.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE</Tag>
@@ -843,7 +843,7 @@
 		<German>Topkapi Palast</German>
 		<Italian>Palazzo Topkapi</Italian>
 		<Spanish>Palacio de Topkapi</Spanish>
-		<Russian>&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;</Russian>
+		<Portuguese>&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_PEDIA</Tag>
@@ -852,7 +852,7 @@
 		<German>[TAB]Der Topkapi-Palast (im Deutschen auch Topkapi-Serail, wörtlich "Kanonentor-Palast") in Istanbul war jahrhundertelang der Wohn- und Regierungssitz der Sultane sowie das Verwaltungszentrum des Osmanischen Reiches.[PARAGRAPH:2]Mit dem Bau wurde kurz nach der Eroberung Konstantinopels (1453) durch Sultan Mehmed II. begonnen. Zunächst ordnete er die Errichtung des Palastes auf dem heutigen Beyazitplatz (Beyazit Meydani) an, entschied sich dann aber für die heute Sarayburnu genannte Landspitze zwischen Goldenem Horn und Marmarameer. Dabei wurden Teile des byzantinischen Mangana-Palastes überbaut. Ihr heutiges Aussehen erhielt die Anlage durch umfangreiche Renovierungen und Erweiterungen bis zum Anfang des 18. Jahrhunderts. Seit Mehmed II. residierten alle osmanischen Herrscher im Topkapi-Palast, bis Sultan Abdülmecid I. im Jahre 1856 das neue Dolmabahçe Sarayi auf der anderen Seite des Goldenen Horns am Ufer des Bosporus bezog. Beide Paläste sind heute Museen.[PARAGRAPH:2]Der Palast besteht nicht aus einem einzelnen, sondern getreu der türkischen Tradition aus mehreren Gebäuden in einem großen Garten. Mit einer Fläche von über 69 Hektar und bis zu 5000 Bewohnern war der Palast eine eigene Stadt. Man nannte ihn anfangs Saray-i Cedîd-i Âmire oder Yeni Saray /,Neuer Palast', bevor sich im 18. Jahrhundert der Name Topkapi Sarayi durchsetzte, der sich von der palasteigenen Kanonengießerei ableitete.[PARAGRAPH:2]Der Palast ist in vier Höfe unterteilt, die jeweils durch eigene Tore erreicht werden. Mit seiner Lage auf einer Landspitze bietet er eine beispiellose Panoramasicht auf Istanbul, den Bosporus und das Goldene Horn.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANTERNA</Tag>
@@ -861,7 +861,7 @@
 		<German>La Lanterna</German>
 		<Italian>La Lanterna</Italian>
 		<Spanish>La Lanterna</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANTERNA_PEDIA</Tag>
@@ -870,7 +870,7 @@
 		<German>[TAB]Der Leuchtturm von Genua (Italienisch: Torre della Lanterna di Genova) ist der Hafenleuchtturm der ligurischen Regionalhauptstadt Genua.[PARAGRAPH:2]Der erste Turm an dieser Stelle wurde um 1128 erbaut. Er setzte sich aus drei zinnengeschmückten Teilen zusammen und hatte ungefähr dieselbe Höhe wie der heutige Turm. Als Leuchtsignal wurde anfangs ein offenes Feuer genutzt. Ab 1326 wurde eine Öllaterne verwendet. Beim Kampf der Genuesen gegen französische Truppen wurde der Turm 1506 schwer beschädigt. Im Jahr 1543 wurde er in seiner heutigen Form wieder aufgebaut. 1840 wurde eine sich drehende Leuchtfeueroptik mit Fresnel-Linsen eingebaut. Das Leuchtsystem wurde 1881 und 1913 verbessert und erreichte schließlich eine Leuchtstärke von 520.000 IK. 1936 wurde der Leuchtturm elektrifiziert, seine Leuchtstärke erreichte 745.000 IK. Nach Beschädigungen im Zweiten Weltkrieg wurde der Turm 1956 wiederhergestellt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- World Wonders -->
 		<!-- National Wonders -->
@@ -881,7 +881,7 @@
 		<German>Sommerresidenz</German>
 		<Italian>Palazzo d'Estate</Italian>
 		<Spanish>Palacio de Verano</Spanish>
-		<Russian>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Russian>
+		<Portuguese>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE_PEDIA</Tag>
@@ -890,7 +890,7 @@
 		<German>[TAB]Eine Residenz ist der Wohnsitz eines Staatsoberhaupts oder einer anderen hochrangigen Person des &#246;ffentlichen Lebens. Viele Residenzen dienen heute als Parlamentssitze oder Museen. Staatsoberh&#228;upter, insbesondere Monarchen, leben in der Regel einige Wochen im Jahr nicht in ihrem Hauptwohnsitz, sondern (je nach Jahreszeit) in ihren so genannten Winter- oder Sommerresidenzen. Beispiele hierf&#252;r sind der russische Winterpalast in St. Petersburg, der chinesische Sommerpalast in Peking und der K&#252;c&#252;ksu-Sommerpalast in Istanbul.</German>
 		<Italian>[TAB]Un palazzo &#232; la casa di un capo di stato o di un'altra importante figura pubblica. Molti palazzi ora sono adibiti a usi diversi, come parlamenti o musei. I capi di stato, specialmente i monarchi, passano qualche settimana ogni anno in palazzi che non sono la loro residenza primaria. Solitamente sono chiamati palazzo d'inverno o d'estate, a seconda della stagione in cui vengono usati. Un esempio sono il Palazzo d'Inverno a San Pietroburgo, il Palazzo d'Estate a Pechino e il Palazzo d'Estate Kucuksu a Istanbul.</Italian>
 		<Spanish>[TAB]Un palacio es el hogar del jefe de estado o de otro personaje p&#250;blico de alto rango. Hoy en d&#237;a, muchos palacios se usan para cosas diferentes, por ejemplo, como sedes del Parlamento o museos. Los cabezas de estado, especialmente los monarcas, sol&#237;an pasar algunas semanas del a&#241;o fuera de su residencia habitual, en otros palacios. Dichos edificios sol&#237;an recibir el nombre de palacios de invierno o de verano, en funci&#243;n de la estaci&#243;n en la que fueran utilizados. Algunos ejemplos son el Palacio de Invierno ruso de San Petersburgo, el Palacio de Verano chino de Pek&#237;n, y el Palacio de Kucuksu, de verano, en Estambul.</Spanish>
-		<Russian>[TAB]&#196;&#226;&#238;&#240;&#229;&#246; - &#228;&#238;&#236; &#227;&#235;&#224;&#226;&#251; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#224; &#232;&#235;&#232; &#228;&#240;&#243;&#227;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#239;&#238;&#241;&#242;&#224;&#226;&#235;&#229;&#237;&#237;&#238;&#233; &#238;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#238;&#233; &#244;&#232;&#227;&#243;&#240;&#251;. &#204;&#237;&#238;&#227;&#238; &#228;&#226;&#238;&#240;&#246;&#238;&#226; &#241;&#229;&#233;&#247;&#224;&#241; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#237;&#232;&#229; &#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#239;&#224;&#240;&#235;&#224;&#236;&#229;&#237;&#242;&#238;&#226; &#232;&#235;&#232; &#236;&#243;&#231;&#229;&#229;&#226;</Russian>
+		<Portuguese>[TAB]&#196;&#226;&#238;&#240;&#229;&#246; - &#228;&#238;&#236; &#227;&#235;&#224;&#226;&#251; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#224; &#232;&#235;&#232; &#228;&#240;&#243;&#227;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#239;&#238;&#241;&#242;&#224;&#226;&#235;&#229;&#237;&#237;&#238;&#233; &#238;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#238;&#233; &#244;&#232;&#227;&#243;&#240;&#251;. &#204;&#237;&#238;&#227;&#238; &#228;&#226;&#238;&#240;&#246;&#238;&#226; &#241;&#229;&#233;&#247;&#224;&#241; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#237;&#232;&#229; &#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#239;&#224;&#240;&#235;&#224;&#236;&#229;&#237;&#242;&#238;&#226; &#232;&#235;&#232; &#236;&#243;&#231;&#229;&#229;&#226;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Tag>
@@ -899,7 +899,7 @@
 		<German>Nationale Universit&#228;t</German>
 		<Italian>Universita Nazionale</Italian>
 		<Spanish>Universidad Nacional</Spanish>
-		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#211;&#237;&#232;&#226;&#229;&#240;&#241;&#232;&#242;&#229;&#242;</Russian>
+		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#211;&#237;&#232;&#226;&#229;&#240;&#241;&#232;&#242;&#229;&#242;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY_PEDIA</Tag>
@@ -908,7 +908,7 @@
 		<German>[TAB]Die Universit&#228;t im englischen Oxford ist die &#228;lteste Universit&#228;t der englischsprachigen Welt. Der genaue Zeitpunkt ihrer Gr&#252;ndung ist unbekannt. Wissenschaftler gehen davon aus, dass sie bereits um 1100 nach Christus gegr&#252;ndet wurde.[PARAGRAPH:2]Oxford besteht aus 39 Colleges und sieben so genannten "Permanent Private Halls" religi&#246;ser Organisationen. Die Colleges bestehen im Allgemeinen aus einer gro&#223;en Halle, einer Kapelle, einer Bibliothek, einer Mensa, einigen Gemeinschaftsr&#228;umen, Klassenr&#228;umen sowie Unterk&#252;nften f&#252;r etwa 300 Studenten. Die &#228;ltesten Colleges (Balliol, Merton und das University College) wurden um 1250 gebaut.[PARAGRAPH:2]Oxford geh&#246;rte seit ihrer Gr&#252;ndung stets zu den gr&#246;&#223;ten Universit&#228;ten der Welt. Viele ber&#252;hmte Pers&#246;nlichkeiten haben hier studiert; unter anderem vier britische und acht ausl&#228;ndische K&#246;nige, &#252;ber 50 Pr&#228;sidenten und Premierminister (z. B. Bill Clinton), 47 Nobelpreistr&#228;ger und ein Papst.</German>
 		<Italian>[TAB]L'universit&#224; di Oxford in Inghilterra, &#232; la pi&#249; antica universit&#224; del mondo di lingua Inglese, oltre a essere una delle pi&#249; prestigiose. La data esatta della fondazione dell'universit&#224; &#232; sconosciuta, ma gli studiosi credono sia attorno al 1100 d. C.[PARAGRAPH:2]Oxford &#232; composta da 39 college e sette e sette "case degli studenti permanenti" (che sono organizzazioni religiose); ogni facolt&#224; si trova in edifici differenti in piazze vicino a una corte quadrangolare. I college sono in genere formati da una grande sala, una cappella, una libreria, un bar, diverse stanze comuni, classi e alloggi per circa 300 studenti. Costruiti nel 1250, i college Balliol, Merton e University sono tra i pi&#249; antichi.[PARAGRAPH:2]Per la maggior parte della sua esistenza, Oxford &#232; stata una della pi&#249; grandi universit&#224; del mondo e lo &#232; anche tutt'oggi: molti personaggi famosi sono passati da qui, compresi quattro re Inglesi e otto stranieri, pi&#249; di 50 presidenti e primi ministri (tra cui William Clinton), 47 premi Nobel e un Papa.</Italian>
 		<Spanish>[TAB]La universidad de Oxford, Inglaterra, es la universidad m&#225;s antigua del mundo angloparlante y tambi&#233;n es una de las m&#225;s prestigiosas. Se desconoce la fecha exacta de su fundaci&#243;n, aunque algunos estudiosos la sit&#250;an alrededor del 1100.[PARAGRAPH:2]Oxford se compone de treinta y nueve colegios universitarios y siete "colegios mayores privados permanentes" (que son organizaciones religiosas). Cada uno est&#225; albergado en un edificio diferente, construido normalmente en un cuadrado alrededor de un cuadril&#225;tero. Los colegios universitarios por lo general se componen de un sal&#243;n, una capilla, una biblioteca, un bar, varias salas comunes, aulas y habitaciones para alrededor de trescientos estudiantes. Construidos a mediados del s. XIII, los colegios de Balliol y Merton y los de la propia universidad se cuentan entre los m&#225;s antiguos.[PARAGRAPH:2]Durante gran parte de su existencia, Oxford ha sido una de las mejores universidades del mundo y sigue si&#233;ndolo en nuestros d&#237;as. Muchos personajes famosos han pasado por sus estancias, incluyendo cuatro reyes ingleses y ocho extranjeros, m&#225;s de cincuenta presidentes y primeros ministros (incluido William Clinton, presidente de los EE. UU.), cuarenta y siete ganadores de los premios Nobel y un papa. </Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEROIC_EPIC</Tag>
@@ -917,7 +917,7 @@
 		<German>Heldenepos</German>
 		<Italian>Poema epico</Italian>
 		<Spanish>La Epopeya heroica</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEROIC_EPIC_PEDIA</Tag>
@@ -926,7 +926,7 @@
 		<German>[TAB]Das Epos gehört zur Dichtung, ist im Unterschied zum jüngeren Roman aber nicht unbedingt Literatur, weil seine kulturelle Bedeutung den Umgang mit Texten und das Lesenkönnen nicht voraussetzt. Mit der mündlichen Verbreitung hängt die Versform des Epos zusammen, die als Gedankenstütze und Deklamationshilfe dient. Epen handeln von bedeutenden Ereignissen, bei denen oft Götter oder Helden im Mittelpunkt stehen (siehe Mythos). Antike und mittelalterliche Epen stammen nicht unbedingt von Autoren im modernen Sinne her, sind also keine individualistischen und eigenschöpferischen Werke. Im 18./19. Jahrhundert versuchte man sie auch als kollektive "Volksdichtungen" zu verstehen, was jedoch nicht zutrifft.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_GALLERY</Tag>
@@ -935,7 +935,7 @@
 		<German>Nationalgalerie</German>
 		<Italian>Galleria Nazionale</Italian>
 		<Spanish>la National Gallery</Spanish>
-		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#195;&#224;&#235;&#229;&#240;&#229;&#255;</Russian>
+		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#195;&#224;&#235;&#229;&#240;&#229;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_GALLERY_PEDIA</Tag>
@@ -944,7 +944,7 @@
 		<German>[TAB]Eine Nationalgalerie ist die gr&#246;&#223;te &#246;ffentlich zug&#228;ngliche Kunstgalerie eines Landes. Diese Galerien sind unter verschiedenen Bezeichnungen in fast allen Hauptst&#228;dten weit verbreitet und dienen als Ausstellungsorte f&#252;r Kunst, meist bildende Kunst, und zwar in erster Linie f&#252;r Gem&#228;lde, Illustrationen und Skulpturen. Das Kunstmuseum als solches ist eine relativ moderne Einrichtung: Die erste Institution dieser Art war der Pariser Louvre, der erst 1793 - kurz nach der franz&#246;sischen Revolution - gebaut wurde, nachdem die k&#246;niglichen Sch&#228;tze per Dekret dem Volk zug&#228;nglich gemacht worden waren. </German>
 		<Italian>[TAB]Una galleria nazionale &#232; la principale galleria d'arte pubblica di una nazione. Con diversi nomi se ne trovano in quasi ogni capitale. Sono uno spazio per l'esibizione dell'arte, solitamente visiva, e principalmente dipinti, illustrazioni e sculture. Il museo d'arte &#232; considerato un'invenzione abbastanza moderna: il primo &#232; quello del Louvre a Parigi fondato nel 1793, poco dopo la rivoluzione francese, quando i tesori reali vennero dichiarati di propriet&#224; del popolo. </Italian>
 		<Spanish>[TAB]Una galer&#237;a nacional es un gran museo de arte p&#250;blico de un pa&#237;s. Recibe diferentes nombres, pero casi todas las capitales del mundo cuentan con una de ellas. Hay un espacio para la exhibici&#243;n de elementos art&#237;sticos, normalmente artes visuales, fundamentalmente pintura, ilustraci&#243;n y escultura. El museo de arte se considera una invenci&#243;n relativamente moderna. El primero de ellos fue el Louvre en Par&#237;s, fundado en 1793, al poco de finalizar la Revoluci&#243;n Francesa y tras declarar p&#250;blicos los bienes de la realeza. </Spanish>
-		<Russian>[TAB]&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#227;&#224;&#235;&#229;&#240;&#229;&#255; - &#227;&#235;&#224;&#226;&#237;&#224;&#255; &#238;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#234;&#224;&#240;&#242;&#232;&#237;&#237;&#224;&#255; &#227;&#224;&#235;&#229;&#240;&#229;&#255; &#241;&#242;&#240;&#224;&#237;&#251;. &#209; &#240;&#224;&#231;&#235;&#232;&#247;&#237;&#251;&#236;&#232; &#232;&#236;&#229;&#237;&#224;&#236;&#232;, &#238;&#237;&#232; &#248;&#232;&#240;&#238;&#234;&#238; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#229;&#237;&#251; &#239;&#238;&#247;&#242;&#232; &#226; &#234;&#224;&#230;&#228;&#238;&#233; &#241;&#242;&#238;&#235;&#232;&#246;&#229; &#237;&#224;&#246;&#232;&#232;. &#221;&#242;&#238; - &#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#241;&#242;&#226;&#238; &#228;&#235;&#255; &#226;&#251;&#241;&#242;&#224;&#226;&#234;&#232; &#232;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#224;, &#238;&#225;&#251;&#247;&#237;&#238; &#226;&#232;&#231;&#243;&#224;&#235;&#252;&#237;&#238;&#229; &#232;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;, &#232; &#238;&#225;&#251;&#247;&#237;&#238; &#239;&#240;&#229;&#230;&#228;&#229; &#226;&#241;&#229;&#227;&#238; &#230;&#232;&#226;&#238;&#239;&#232;&#241;&#232;, &#232;&#235;&#235;&#254;&#241;&#242;&#240;&#224;&#246;&#232;&#232;, &#232; &#241;&#234;&#243;&#235;&#252;&#239;&#242;&#243;&#240;. &#213;&#243;&#228;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#233; &#236;&#243;&#231;&#229;&#233; &#240;&#224;&#241;&#241;&#236;&#224;&#242;&#240;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#241;&#239;&#240;&#224;&#226;&#229;&#228;&#235;&#232;&#226;&#238; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#251;&#236; &#232;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229;&#236;, &#239;&#229;&#240;&#226;&#251;&#236; &#225;&#251;&#235; &#203;&#243;&#226;&#240; &#226; &#207;&#224;&#240;&#232;&#230;&#229;, &#234;&#238;&#242;&#238;&#240;&#251;&#233; &#225;&#251;&#235; &#243;&#241;&#242;&#224;&#237;&#238;&#226;&#235;&#229;&#237; &#226; 1793, &#241;&#234;&#238;&#240;&#238; &#239;&#238;&#241;&#235;&#229; &#212;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#238;&#233; &#208;&#229;&#226;&#238;&#235;&#254;&#246;&#232;&#232;, &#234;&#238;&#227;&#228;&#224; &#234;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#229; &#241;&#238;&#234;&#240;&#238;&#226;&#232;&#249;&#224; &#241;&#242;&#224;&#235;&#232; &#228;&#238;&#241;&#242;&#243;&#239;&#237;&#251; &#228;&#235;&#255; &#235;&#254;&#228;&#229;&#233;.</Russian>
+		<Portuguese>[TAB]&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#227;&#224;&#235;&#229;&#240;&#229;&#255; - &#227;&#235;&#224;&#226;&#237;&#224;&#255; &#238;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#234;&#224;&#240;&#242;&#232;&#237;&#237;&#224;&#255; &#227;&#224;&#235;&#229;&#240;&#229;&#255; &#241;&#242;&#240;&#224;&#237;&#251;. &#209; &#240;&#224;&#231;&#235;&#232;&#247;&#237;&#251;&#236;&#232; &#232;&#236;&#229;&#237;&#224;&#236;&#232;, &#238;&#237;&#232; &#248;&#232;&#240;&#238;&#234;&#238; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#229;&#237;&#251; &#239;&#238;&#247;&#242;&#232; &#226; &#234;&#224;&#230;&#228;&#238;&#233; &#241;&#242;&#238;&#235;&#232;&#246;&#229; &#237;&#224;&#246;&#232;&#232;. &#221;&#242;&#238; - &#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#241;&#242;&#226;&#238; &#228;&#235;&#255; &#226;&#251;&#241;&#242;&#224;&#226;&#234;&#232; &#232;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#224;, &#238;&#225;&#251;&#247;&#237;&#238; &#226;&#232;&#231;&#243;&#224;&#235;&#252;&#237;&#238;&#229; &#232;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;, &#232; &#238;&#225;&#251;&#247;&#237;&#238; &#239;&#240;&#229;&#230;&#228;&#229; &#226;&#241;&#229;&#227;&#238; &#230;&#232;&#226;&#238;&#239;&#232;&#241;&#232;, &#232;&#235;&#235;&#254;&#241;&#242;&#240;&#224;&#246;&#232;&#232;, &#232; &#241;&#234;&#243;&#235;&#252;&#239;&#242;&#243;&#240;. &#213;&#243;&#228;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#233; &#236;&#243;&#231;&#229;&#233; &#240;&#224;&#241;&#241;&#236;&#224;&#242;&#240;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#241;&#239;&#240;&#224;&#226;&#229;&#228;&#235;&#232;&#226;&#238; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#251;&#236; &#232;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229;&#236;, &#239;&#229;&#240;&#226;&#251;&#236; &#225;&#251;&#235; &#203;&#243;&#226;&#240; &#226; &#207;&#224;&#240;&#232;&#230;&#229;, &#234;&#238;&#242;&#238;&#240;&#251;&#233; &#225;&#251;&#235; &#243;&#241;&#242;&#224;&#237;&#238;&#226;&#235;&#229;&#237; &#226; 1793, &#241;&#234;&#238;&#240;&#238; &#239;&#238;&#241;&#235;&#229; &#212;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#238;&#233; &#208;&#229;&#226;&#238;&#235;&#254;&#246;&#232;&#232;, &#234;&#238;&#227;&#228;&#224; &#234;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#229; &#241;&#238;&#234;&#240;&#238;&#226;&#232;&#249;&#224; &#241;&#242;&#224;&#235;&#232; &#228;&#238;&#241;&#242;&#243;&#239;&#237;&#251; &#228;&#235;&#255; &#235;&#254;&#228;&#229;&#233;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE</Tag>
@@ -953,7 +953,7 @@
 		<German>Nationaltheather</German>
 		<Italian>Teatro Nazionale</Italian>
 		<Spanish>Teatro Nacional</Spanish>
-		<Russian>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Russian>
+		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE_PEDIA</Tag>
@@ -962,7 +962,7 @@
 		<German>[TAB]Die meisten Shakespeare-Dramen wurden um 1600 auf der B&#252;hne des Globe Theatre in London uraufgef&#252;hrt. Das Theater bot der Bev&#246;lkerung die Gelegenheit, sich fern des Alltags zu am&#252;sieren und an Kom&#246;dien, Trag&#246;dien und Triumphen zu erfreuen, die auf der Schauspielb&#252;hne dargeboten wurden. Weitere Theater wie die Com&#233;die Fran&#231;aise in Paris und die Scala in Mailand boten den B&#252;rgern der jeweiligen St&#228;dte ebenfalls Unterhaltung und Zerstreuung. Das urspr&#252;ngliche Globe Theatre brannte zwar nieder, aber auch heute noch werden die Dramen von Shakespeare in einem neuen Theater gleichen Namens sowie in zahlreichen anderen Theaterh&#228;usern in aller Welt aufgef&#252;hrt.</German>
 		<Italian>[TAB]La maggior parte delle opere teatrali di William Shakespeare andarono in scena per la prima volta al Globe Theatre di Londra. Il teatro offriva alla gente un diversivo alle tribolazioni della vita quotidiana, consentendo di assistere a commedie, tragedie e successi rappresentati sul palcoscenico. Teatri simili, come la Comedie Fran&#231;aise a Parigi, o La Scala a Milano, svolgevano un ruolo dello stesso genere, attirando con le loro rappresentazioni spettatori da tutte le aree circostanti. Nonostante il Globe Theatre sia ormai da tempo andato distrutto in un incendio, le opere di Shakespeare vengono tutt'oggi rappresentate in un nuovo teatro che porta il suo nome e in quelli di tutto il mondo.</Italian>
 		<Spanish>[TAB]La mayor&#237;a de las obras de William Shakespeare fueron representadas por vez primera en el escenario del Globe Theatre de Londres durante el siglo XVII. Los teatros ofrec&#237;an a la gente entretenimiento en su rutina diaria, pues les permit&#237;an disfrutar de las comedias, tragedias y triunfos representados en escena. Otros teatros similares, como la Com&#233;die Fran&#231;aise de Par&#237;s y La Scala de Mil&#225;n, desempe&#241;aban papeles similares ofreciendo diversi&#243;n a los habitantes de sus ciudades. Aunque el Globe Theatre original se incendi&#243;, las obras de Shakespeare a&#250;n se representan en un nuevo teatro bautizado con su nombre, y en otros teatros de todo el mundo.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOWER_LONDON</Tag>
@@ -971,7 +971,7 @@
 		<German>Royal Dungeon</German>
 		<Italian>Royal Dungeon</Italian>
 		<Spanish>Royal Dungeon</Spanish>
-		<Russian>Royal Dungeon</Russian>
+		<Portuguese>Royal Dungeon</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOWER_LONDON_PEDIA</Tag>
@@ -980,7 +980,7 @@
 		<German>[TAB]Her Majesty's Royal Palace and Fortress, landläufig besser bekannt als Tower of London, ist ein im Mittelalter errichteter, befestigter Gebäudekomplex entlang der Themse am südöstlichen Ende der City of London. Er diente den englischen und britischen Königen unter anderem als Burg, Waffenkammer (stronghouse), königlicher Palast und Gefängnis.[PARAGRAPH:2]Ursprünglich wurde der Tower als Festung Wilhelm des Eroberers gegen die potentiell feindseligen Bürger der Stadt London errichtet. Bis zu Jakob I. nutzen alle englischen Könige und Königinnen den Tower zeitweilig zum Aufenthalt. Es war üblich, dass der Monarch vor dem Tag seiner Krönung im Tower übernachtete und dann in feierlichem Zug durch die Stadt nach Westminster ritt. Als Stützpunkt der britischen Monarchie im historischen Zentrum Londons ist der Tower eng mit der britischen Geschichte verbunden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_ACADEMY</Tag>
@@ -989,7 +989,7 @@
 		<German>K&#246;nigliche Akademie</German>
 		<Italian>Accademia Reale</Italian>
 		<Spanish>Real Academia</Spanish>
-		<Russian>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Russian>
+		<Portuguese>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_ACADEMY_PEDIA</Tag>
@@ -998,7 +998,7 @@
 		<German>[TAB]Die Royal Academy of Arts wurde 1768 von 40 Künstlern unter Leitung von Joshua Reynolds gegründet. Auslöser war ein Streit innerhalb der damals führenden Künstlervereinigung Society of Artists. Der Architekt William Chambers verließ diese Vereinigung, nachdem er vergeblich für die Präsidentschaft kandidiert hatte. Nachdem er seine guten Verbindungen zum englischen Königshaus genutzt hatte, bewilligte Georg III. schließlich die Gründung einer neuen Künstlervereinigung. Sie nahm ihre Arbeit offiziell im Folgejahr 1769 auf. Die Akademie nimmt maximal 80 Mitglieder auf.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_EPIC</Tag>
@@ -1007,7 +1007,7 @@
 		<German>Nationalepos</German>
 		<Italian>Poema Patriottico</Italian>
 		<Spanish>La Epopeya nacional</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Tag>
@@ -1016,7 +1016,7 @@
 		<German>[TAB]Ein "Epos" beschreibt die Taten und Leistungen eines oder mehrerer Helden. Klassische Epen sind beispielsweise Homers "Ilias" und die "Odyssee."[PARAGRAPH:2]Ein "Nationalepos" feiert die Heldentaten eines ganzen Landes. Eines der ersten Nationalepen war das "Shahnama" (Das Buch der K&#246;nige), ein um 1000 verfasster Klassiker der persischen Literatur. Das Shahnama zeichnet die Geschichte Persiens von der mythologischen Fr&#252;hgeschichte bis zur Regentschaft Khosraus II. (590-628) auf. Es besteht aus &#252;ber 60.000 Reimpaaren und ist auch heute noch lesbar und unterhaltsam.[PARAGRAPH:2]Die Zeit literarischer Epen mag zwar vergangen sein, seit das Zeitalter des Films eingesetzt hat. Allerdings w&#228;re der Untergang des Epos nicht nur f&#252;r die Wissenschaft ein schwerer Verlust.</German>
 		<Italian>[TAB]Un "poema epico" &#232; una saga che celebra la vita e le vittorie di individui o gruppi. I classici esempi sono l'Iliade e l'Odissea di Omero.[PARAGRAPH:2]Un "poema epico nazionale" celebra le gesta di un intero paese. Uno degli esempi pi&#249; antichi &#232; lo "Shahnama," (il libro dei re), un classico della letteratura Persiana scritto intorno al 1000 d. C. Lo Shahnama &#232; il resoconto della storia di Persia dalla preistoria fino al regno di Khosrau II (590-628). Il lavoro &#232; composto da pi&#249; di 60.000 strofe ed &#232; una lettura godibile anche oggi.[PARAGRAPH:2]Probabilmente l'epoca della letteratura epica &#232; terminata e nel futuro tutte le grandi storie verranno narrate in "film per la TV".</Italian>
 		<Spanish>[TAB]Un "ciclo &#233;pico" es un poema heroico que celebra la vida y los logros de un individuo o un grupo. Entre los ejemplos cl&#225;sicos de ciclos &#233;picos se encuentran la Il&#237;ada y la Odisea de Homero.[PARAGRAPH:2]Un "ciclo &#233;pico nacional" celebra los logros de un pa&#237;s entero. Uno de los primeros ejemplos es el "Shahnama," (el Libro de los Reyes), un cl&#225;sico de la literatura persa que data aproximadamente del a&#241;o 1000 a. C. El Shahnama relata la historia de Persia, desde los tiempos mitol&#243;gicos prehist&#243;ricos hasta el reinado de Cosroes II (590-628). La obra contiene m&#225;s de 60.000 pareados y a&#250;n sigue siendo objeto de disfrute y estudio por parte de lectores de nuestro tiempo.[PARAGRAPH:2]Es posible que la edad de los poemas &#233;picos haya pasado, y que en el futuro todas las historias se compongan como los guiones de televisi&#243;n. &#201;sta ser&#237;a una gran tragedia para el mundo de las letras... y para el resto del mundo.</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRIUMPHAL_ARCH</Tag>
@@ -1025,7 +1025,7 @@
 		<German>Triumphbogen</German>
 		<Italian>Arco di Trionfo</Italian>
 		<Spanish>Arco de Triunfo</Spanish>
-		<Russian>&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224;</Russian>
+		<Portuguese>&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRIUMPHAL_ARCH_PEDIA</Tag>
@@ -1034,7 +1034,7 @@
 		<German>[TAB]Ein Triumphbogen ist ein frei stehendes Bauwerk in Form eines monumentalen Tors oder Bogengangs, das &#252;blicherweise zur W&#252;rdigung eines bedeutenden milit&#228;rischen Sieges abseits von Stadttoren oder -mauern errichtet wird. In seiner einfachsten Form besteht ein Triumphbogen aus zwei S&#228;ulen, die durch einen Bogen verbunden und mit einer Attika versehen sind, auf der eine Statue thront oder eine Inschrift angebracht ist. Aufw&#228;ndiger gearbeitete Triumphb&#246;gen haben zus&#228;tzlich noch angrenzende Seitenbogeng&#228;nge, die meist paarweise angeordnet sind. Ber&#252;hmte Triumphb&#246;gen sind beispielsweise der Titusbogen in Rom und der Arc de Triomphe in Paris.</German>
 		<Italian>[TAB]Un arco di trionfo &#232; una struttura con la forma di una monumentale arcata, spesso costruita per celebrare la vittoria in una guerra. L'arco &#232; invariabilmente una struttura a s&#233; stante, separata dalle mura o dalle porte di una citt&#224;. Nella sua forma pi&#249; semplice un arco di trionfo consiste di due colonne unite da un arco, sovrastato da una struttura o un attico su cui si possono trovare statue o iscrizioni. Gli archi di trionfo pi&#249; elaborati possono avere arcate sussidiarie laterali, di solito una coppia. Tra i pi&#249; famosi sono l'Arco di Tito a Roma e l'Arco di Trionfo a Parigi.</Italian>
 		<Spanish>[TAB]Un Arco de Triunfo es una enorme arcada monumental que se suele construir para celebrar una victoria en la guerra. El arco siempre es una estructura solitaria, separada de las puertas o muros de la ciudad. En su forma m&#225;s sencilla consiste en dos pilares conectados por un arco que a su vez est&#225; coronado por una estructura superior en la cual se suele colocar una estatua o una inscripci&#243;n conmemorativa. Los Arcos de Triunfo m&#225;s elaborados pueden tener un par de arcos secundarios en los laterales. Los m&#225;s famosos son el Arco de Tito en Roma y el Arco del Triunfo de Paris.</Spanish>
-		<Russian>[TAB]&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#224;&#240;&#234;&#224; &#151; &#224;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#237;&#251;&#233; &#239;&#224;&#236;&#255;&#242;&#237;&#232;&#234;, &#241;&#238;&#241;&#242;&#238;&#255;&#249;&#232;&#233; &#232;&#231; &#225;&#238;&#235;&#252;&#248;&#232;&#245; &#239;&#238;&#240;&#242;&#232;&#234;&#238;&#226;. &#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#251;&#229; &#224;&#240;&#234;&#232; &#243;&#241;&#242;&#240;&#224;&#232;&#226;&#224;&#254;&#242;&#241;&#255; &#239;&#240;&#232; &#226;&#245;&#238;&#228;&#229; &#226; &#227;&#238;&#240;&#238;&#228;&#224;, &#226; &#234;&#238;&#237;&#246;&#229; &#243;&#235;&#232;&#246;, &#237;&#224; &#236;&#238;&#241;&#242;&#224;&#245;, &#237;&#224; &#225;&#238;&#235;&#252;&#248;&#232;&#245; &#228;&#238;&#240;&#238;&#227;&#224;&#245; &#226; &#247;&#229;&#241;&#242;&#252; &#239;&#238;&#225;&#229;&#228;&#232;&#242;&#229;&#235;&#229;&#233; &#232;&#235;&#232; &#226; &#239;&#224;&#236;&#255;&#242;&#252; &#226;&#224;&#230;&#237;&#251;&#245; &#241;&#238;&#225;&#251;&#242;&#232;&#233;.</Russian>
+		<Portuguese>[TAB]&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#224;&#240;&#234;&#224; &#151; &#224;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#237;&#251;&#233; &#239;&#224;&#236;&#255;&#242;&#237;&#232;&#234;, &#241;&#238;&#241;&#242;&#238;&#255;&#249;&#232;&#233; &#232;&#231; &#225;&#238;&#235;&#252;&#248;&#232;&#245; &#239;&#238;&#240;&#242;&#232;&#234;&#238;&#226;. &#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#251;&#229; &#224;&#240;&#234;&#232; &#243;&#241;&#242;&#240;&#224;&#232;&#226;&#224;&#254;&#242;&#241;&#255; &#239;&#240;&#232; &#226;&#245;&#238;&#228;&#229; &#226; &#227;&#238;&#240;&#238;&#228;&#224;, &#226; &#234;&#238;&#237;&#246;&#229; &#243;&#235;&#232;&#246;, &#237;&#224; &#236;&#238;&#241;&#242;&#224;&#245;, &#237;&#224; &#225;&#238;&#235;&#252;&#248;&#232;&#245; &#228;&#238;&#240;&#238;&#227;&#224;&#245; &#226; &#247;&#229;&#241;&#242;&#252; &#239;&#238;&#225;&#229;&#228;&#232;&#242;&#229;&#235;&#229;&#233; &#232;&#235;&#232; &#226; &#239;&#224;&#236;&#255;&#242;&#252; &#226;&#224;&#230;&#237;&#251;&#245; &#241;&#238;&#225;&#251;&#242;&#232;&#233;.</Portuguese>
 	</TEXT>
 		<!-- National Wonders -->
 		<!-- Misc -->
@@ -1045,7 +1045,7 @@
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] beim Kampf gegen Glaubensbrüder [ICON_RELIGION]; Diplomatiemalus gegen Nationen der gleichen Religion.</German>
 		<Italian>[ICON_BULLET]Nessuna infelicità per la guerra contro i fratelli di fede. Penalità diplomatica verso le nazioni con la stessa religione.</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Russian>
+		<Portuguese>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VASSAL_UU</Tag>
@@ -1054,7 +1054,7 @@
 		<German>[ICON_BULLET]Erlaubt die Spezialeinheit der Vasallen zu trainieren</German>
 		<Italian>[ICON_BULLET]Può addestrare le Unità Uniche dei Vassalli</Italian>
 		<Spanish>.</Spanish>
-		<Russian>[ICON_BULLET]&#209;&#238;&#231;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#243;&#237;&#232;&#234;&#224;&#235;&#252;&#237;&#251;&#233; &#254;&#237;&#232;&#242; &#194;&#224;&#241;&#241;&#224;&#235;&#224;</Russian>
+		<Portuguese>[ICON_BULLET]&#209;&#238;&#231;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#243;&#237;&#232;&#234;&#224;&#235;&#252;&#237;&#251;&#233; &#254;&#237;&#232;&#242; &#194;&#224;&#241;&#241;&#224;&#235;&#224;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_PROPHET</Tag>
@@ -1063,7 +1063,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Propheten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Profeta[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_ARTIST</Tag>
@@ -1072,7 +1072,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Künstler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_SCIENTIST</Tag>
@@ -1081,7 +1081,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Wissenschaftler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Scienziato[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_MERCHANT</Tag>
@@ -1090,7 +1090,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Händler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Mercante[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_ENGINEER</Tag>
@@ -1099,7 +1099,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Ingenieur[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Ingegnere[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_GENERAL</Tag>
@@ -1108,7 +1108,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Feldherrn[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Generale[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_SPY</Tag>
@@ -1117,7 +1117,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Agenten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato una [COLOR_UNIT_TEXT]Grande Spia[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Russian>.</Russian>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Misc -->
 </Civ4GameText>
