@@ -87,7 +87,7 @@ Changes for RFCE 1.1:
 		- Updated strategy tooltips for the civics
 		- German grammatical cases for units by HolyHandGrenade
 		- Palacio del Escorial renamed to El Escorial, Paco da Ribeira renamed to Palacio da Pena, Tower of London renamed to Royal Dungeon
-		- New text for Palacio da Pena
+		- New text for Palacio da Pena, Atlantic Access, Protestant Church School
 	
 	Art/sound updates:
 		- Fixed button for Golden Bull, West India Company

@@ -12,7 +12,7 @@
 		<German>Salz</German>
 		<Italian>Sale</Italian>
 		<Spanish>Sal</Spanish>
-		<Portuguese>&#209;&#238;&#235;&#252;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT_PEDIA</Tag>
@@ -30,7 +30,7 @@
 		<German>Kartoffeln</German>
 		<Italian>Patate</Italian>
 		<Spanish>Papas</Spanish>
-		<Portuguese>&#202;&#224;&#240;&#242;&#238;&#244;&#229;&#235;&#252;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATO_PEDIA</Tag>
@@ -48,7 +48,7 @@
 		<German>Kaffee</German>
 		<Italian>Caffè</Italian>
 		<Spanish>Cafe</Spanish>
-		<Portuguese>&#202;&#238;&#244;&#229;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COFFEE_PEDIA</Tag>
@@ -66,7 +66,7 @@
 		<German>Schwefel</German>
 		<Italian>Zolfo</Italian>
 		<Spanish>Azufre</Spanish>
-		<Portuguese>&#209;&#229;&#240;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR_PEDIA</Tag>
@@ -84,7 +84,7 @@
 		<German>Tabak</German>
 		<Italian>Tabacco</Italian>
 		<Spanish>Tabaco</Spanish>
-		<Portuguese>&#210;&#224;&#225;&#224;&#234;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO_PEDIA</Tag>
@@ -102,7 +102,7 @@
 		<German>Gerste</German>
 		<Italian>Orzo</Italian>
 		<Spanish>Cebada</Spanish>
-		<Portuguese>&#223;&#247;&#236;&#229;&#237;&#252;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BARLEY_PEDIA</Tag>
@@ -120,7 +120,7 @@
 		<German>&#196;pfel</German>
 		<Italian>Mele</Italian>
 		<Spanish>Manzanas</Spanish>
-		<Portuguese>&#223;&#225;&#235;&#238;&#234;&#232;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APPLE_PEDIA</Tag>
@@ -138,7 +138,7 @@
 		<German>Oliven</German>
 		<Italian>Olive</Italian>
 		<Spanish>Aceitunas</Spanish>
-		<Portuguese>&#204;&#224;&#241;&#235;&#232;&#237;&#251;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
@@ -156,7 +156,7 @@
 		<German>Tee</German>
 		<Italian>T&#232;</Italian>
 		<Spanish>T&#233;</Spanish>
-		<Portuguese>&#215;&#224;&#233;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEA_PEDIA</Tag>
@@ -174,7 +174,7 @@
 		<German>Bauholz</German>
 		<Italian>Legname</Italian>
 		<Spanish>Madera</Spanish>
-		<Portuguese>&#203;&#229;&#241;&#238;&#236;&#224;&#242;&#229;&#240;&#232;&#224;&#235;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIMBER_PEDIA</Tag>
@@ -192,7 +192,7 @@
 		<German>Honig</German>
 		<Italian>Miele</Italian>
 		<Spanish>Miel</Spanish>
-		<Portuguese>&#204;&#229;&#228;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONEY_PEDIA</Tag>
@@ -210,7 +210,7 @@
 		<German>Baumwolle</German>
 		<Italian>Cotone</Italian>
 		<Spanish>Algod&#243;n</Spanish>
-		<Portuguese>&#194;&#224;&#242;&#224;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
@@ -264,11 +264,11 @@
 		<German>Atlantikzugang</German>
 		<Italian>Accesso all'Atlantico</Italian>
 		<Spanish>Acceso atlántico</Spanish>
-		<Portuguese>&#192;&#242;&#235;&#224;&#237;&#242;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#196;&#238;&#241;&#242;&#243;&#239;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ACCESS_PEDIA</Tag>
-		<English>[TAB]Atlantic Access</English>
+		<English>[TAB]Atlantic Access was the very basic requisite for European powers to launch their naval exploration to North and South America and into the Far East. This is represented in RFCE by the Atlantic Access resource, you need at least one of them if you wan't to compete in the colonial race.[PARAGRAPH:2]Atlantic Accesses can be found in their "historical locations", near cities/areas which were capable of launching big colonial expeditions. A couple examples: near Sevilla, Lisbon, western coast of France and England, Amsterdam.</English>
 		<French>[TAB]Atlantic Access</French>
 		<German>[TAB]Atlantikzugang</German>
 		<Italian>[TAB]Accesso all'Atlantico</Italian>
@@ -322,7 +322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EAST_ASIA_ACCESS_PEDIA</Tag>
-		<English>[TAB]Access to East Asia was the original driving force of European exploration and colonization, but it was always on the minds of Western traders. The profit surrounding the trade- which included silk, spice, gold, and other valuable items, was immense, and has been coveted by the West ever since trade routes linked Orientals to Occidentals.[PARAGRAPH:2]European trade with China has gone at least as far back as the infancy of the Roman Empire, whom traded with the Chinese Han Empire via a vast transcontinental trade route known as the Silk Road. The trade remained a very lucrative business, even after the fall of Rome, and goods from the East still flowed to the West despite the Silk Road falling into disrepair. This made travel more dangerous (and more expensive), but it made the goods that reached Europe all the more valuable. Constantinople was one of the first to profit off this trade, after the collapse of the Roman Empire due to its position on the most direct land and sea routes between Europe and Asia. Even the Emperor Justinian got in the act, by having silkworms smuggled from China.[PARAGRAPH:2]The riches of the East, however, did not leave the thoughts of ambitious Europeans. Within a century, goods that were once transported across small seas on Italian galleys were replaced by Spanish and Portuguese caravels, carracks and galleons. The two kingdoms were racing to the Indies, the spice rich islands that had made the Egyptians so wealthy. Portugal headed west, as it had already been exploring the African coast and needed only to round the continent, which was accomplished by Bartolomeu Dias in 1488. Spain meanwhile, sent a Genovese navigator, named Christopher Columbus, to find the Indies- by sailing west. Setting off in August of 1492, three months later he landed in what he thought was Indonesia. Columbus' discovery shocked the Portuguese, who believed that their claims to the East had been stolen by the Spaniards, and a shouting match between the two Empires. The Pope finally put an end to their bickering with the Treaty of Tordesillas in 1494, which split the world into two halves, with Portugal ruling the East and Spain ruling the west.[PARAGRAPH:2]Other European powers eventually searched for a path to the East as well. English, French, and Dutch explorers tried to find a "Northwest Passage" around North America and into the Pacific. Unsuccessful, they instead ousted the Portuguese from West Africa and now the Dutch established a colony on the very tip of South Africa, Cape Town, which became a frequented resupply post for Dutch (and later British) Ships on the way to India, China, and Indonesia. The French also tried to reach the East, indeed one of Napoleons' goals when invading Egypt in 1799 was finding a route to India, as traveling through the Red Sea was much faster than rounding Cape Town or Cape Horn, on the tip of South America. When the British, who more or less controlled both points, then took Egypt for themselves, they would exploit this by building the Suez Canal, and the United States did the same in Panama to unite its Atlantic and Pacific fleets.[PARAGRAPH:2]Today, access to the East remains vital for Western businesses. Access to East Asia is much easier to achieve today with airports, Trans oceanic canals and even simply through the internet, but such access is crucial in and increasingly global economy with China becoming the world's prime industrial center, and India and Singapore as the high tech industry's chief locations for expansion.</English>
+		<English>[TAB]Access to East Asia was the original driving force of European exploration and colonization, but it was always on the minds of Western traders. The profit surrounding the trade - which included silk, spice, gold, and other valuable items - was immense, and has been coveted by the West ever since trade routes linked Orientals to Occidentals.[PARAGRAPH:2]European trade with China has gone at least as far back as the infancy of the Roman Empire, whom traded with the Chinese Han Empire via a vast transcontinental trade route known as the Silk Road. The trade remained a very lucrative business, even after the fall of Rome, and goods from the East still flowed to the West despite the Silk Road falling into disrepair. This made travel more dangerous (and more expensive), but it made the goods that reached Europe all the more valuable. Constantinople was one of the first to profit off this trade, after the collapse of the Roman Empire due to its position on the most direct land and sea routes between Europe and Asia. Even the Emperor Justinian got in the act, by having silkworms smuggled from China.[PARAGRAPH:2]The riches of the East, however, did not leave the thoughts of ambitious Europeans. Within a century, goods that were once transported across small seas on Italian galleys were replaced by Spanish and Portuguese caravels, carracks and galleons. The two kingdoms were racing to the Indies, the spice rich islands that had made the Egyptians so wealthy. Portugal headed west, as it had already been exploring the African coast and needed only to round the continent, which was accomplished by Bartolomeu Dias in 1488. Spain meanwhile, sent a Genovese navigator, named Christopher Columbus, to find the Indies- by sailing west. Setting off in August of 1492, three months later he landed in what he thought was Indonesia. Columbus' discovery shocked the Portuguese, who believed that their claims to the East had been stolen by the Spaniards, and a shouting match between the two Empires. The Pope finally put an end to their bickering with the Treaty of Tordesillas in 1494, which split the world into two halves, with Portugal ruling the East and Spain ruling the west.[PARAGRAPH:2]Other European powers eventually searched for a path to the East as well. English, French, and Dutch explorers tried to find a "Northwest Passage" around North America and into the Pacific. Unsuccessful, they instead ousted the Portuguese from West Africa and now the Dutch established a colony on the very tip of South Africa, Cape Town, which became a frequented resupply post for Dutch (and later British) Ships on the way to India, China, and Indonesia. The French also tried to reach the East, indeed one of Napoleons' goals when invading Egypt in 1799 was finding a route to India, as traveling through the Red Sea was much faster than rounding Cape Town or Cape Horn, on the tip of South America. When the British, who more or less controlled both points, then took Egypt for themselves, they would exploit this by building the Suez Canal, and the United States did the same in Panama to unite its Atlantic and Pacific fleets.[PARAGRAPH:2]Today, access to the East remains vital for Western businesses. Access to East Asia is much easier to achieve today with airports, Trans oceanic canals and even simply through the internet, but such access is crucial in and increasingly global economy with China becoming the world's prime industrial center, and India and Singapore as the high tech industry's chief locations for expansion.</English>
 		<French>.</French>
 		<German>[TAB]Nach den Erkundungsfahrten des portugiesischen Prinzen Heinrichs des Seefahrers zu Beginn des 15. Jahrhunderts hatten viele Seefahrer versucht, einen Weg nach China oder zu den "Gewürzinseln" zu finden. Während also ein Christoph Kolumbus mit Unterstützung der spanischen Krone diesen Weg im Westen suchte, rüstete sich ein anderer bereits für eine Expedition in die entgegengesetzte Richtung: Vasco da Gama. Im Juli 1497 verließen seine drei Schiffe Portugal mit dem königlichen Auftrag, den Seeweg nach Indien komplett zu erschließen. Nachdem sie im November das bereits 1486/87 von Bartolomeu Diaz entdeckte Kap der Guten Hoffnung an der Südspitze Afrikas umrundet hatten, erreichten sie die muslimische Stadt Malindi an der Ostküste des schwarzen Kontinents. Von dort aus segelten die Portugiesen mit Hilfe eines einheimischen Lotsen weiter nach Indien, wo sie mit dem König von Calicut einen Handelsvertrag abschlossen. Der daraus erwachsende Reichtum veranlasste die Portugiesen, 1510 die Stadt Goa zu erobern und sie zur Hauptstadt von Portugiesisch-Indien zu machen. Von dort aus wurde der von den Moslems betriebene Seehandel im indischen Ozean im Laufe der Zeit unterbunden und von portugiesischen Händlern übernommen. Nachdem die katholische Kirche drohte, den Portugiesen das Handelsmonopol für Asien zu entziehen, begann ab 1540 auch die christliche Missionierung Indiens und weiterer Länder in Asien.</German>
 		<Italian>.</Italian>
@@ -336,7 +336,7 @@
 		<German>Sklaven</German>
 		<Italian>Schiavi</Italian>
 		<Spanish>Esclavos</Spanish>
-		<Portuguese>&#208;&#224;&#225;&#251;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLAVES_PEDIA</Tag>
@@ -354,7 +354,7 @@
 		<German>Relikt</German>
 		<Italian>Reliquia</Italian>
 		<Spanish>Reliquia</Spanish>
-		<Portuguese>&#208;&#229;&#235;&#232;&#234;&#226;&#232;&#255;</Portuguese>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RELIC_PEDIA</Tag>
