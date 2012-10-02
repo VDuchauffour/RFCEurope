@@ -235,7 +235,7 @@
 			<FeatureStructs>
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
-						<PrereqTech>NONE</PrereqTech>
+						<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
 						<iTime>400</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>

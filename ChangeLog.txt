@@ -13,7 +13,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.1:
-(to-be-released: ???)
+(to-be-released: 2012.10.14.)
 	
 	General changes:
 		- Protestant Church School requires Protestantism as a state religion
@@ -146,6 +146,8 @@ Changes for RFCE 1.1:
 		- Fixed improvement size of medieval mines
 		- Magellan's Voyage now correctly shows up on the coast, not inside the city
 		- Fixed mistake where Ragusa got free walls instead of Venice
+		- You can no longer discover Amber from random mines
+		- Fixed bug where it was possible to build plantations on forests (and remove the forest) before the discovery of Plate Armor
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
