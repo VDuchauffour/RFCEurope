@@ -1182,14 +1182,14 @@
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </Portuguese>
 	</TEXT>
-        <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </English>
 		<French>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </French>
 		<German>[ICON_BULLET]%D1_Mod % Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt. </German>
 		<Italian>[ICON_BULLET]%D1_Mod % di interessi aggiunti al tuo [ICON_GOLD] all'inizio di ogni turno. </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn.</Portuguese>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>
