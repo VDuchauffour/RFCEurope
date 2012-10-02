@@ -14,7 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for RFCE 1.1:
 (to-be-released: 2012.10.14.)
-	
+
 	General changes:
 		- Protestant Church School requires Protestantism as a state religion
 		- Revised AI distance settings for city placement - territory coverage should be better now
@@ -64,7 +64,7 @@ Changes for RFCE 1.1:
 		- The civil war mechanics (instead of instant collapse) are in empires with 10 or more cities
 		- Stability is accounted properly for cities and buildings placed in WB
 		- Added missing Morea province from Hungarian UHV 3
-		- More (Conditional) Mercenaries are aviable and more equally distributed in time (still not optimal, but better than the current system)
+		- More (Conditional) Mercenaries are available and more equally distributed in time (still not optimal, but better than the current system)
 
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -72,7 +72,8 @@ Changes for RFCE 1.1:
 		- Belgrade moved 1 tile south, now it's in province Serbia - rebellions to be expected there
 		- Village near (previously under) Belgrade moved to Dacia/Transylvania. Added another one for Mesembria/Nesebar.
 		- Adjusted culture of preplaced Byzantine cities - Byz starting area on the map will be a bit more realistic (and look better)
-	
+		- Small resource rearrangement in the eastern part of the map. Most important change is the closer stone resource for Kiev
+
 	XML/text updates:
 		- New Dawn of Man text for Hungary, Kiev, Cordoba. Minor fixes in most of the other texts
 		- Small updates in the reference files
@@ -89,7 +90,7 @@ Changes for RFCE 1.1:
 		- German grammatical cases for units by HolyHandGrenade
 		- Palacio del Escorial renamed to El Escorial, Paco da Ribeira renamed to Palacio da Pena, Tower of London renamed to Royal Dungeon
 		- New text for Palacio da Pena, Atlantic Access, Protestant Church School
-	
+
 	Art/sound updates:
 		- Fixed button for Golden Bull, West India Company
 		- Removed Religious School icon from the tech tree
@@ -132,7 +133,7 @@ Changes for RFCE 1.1:
 		- Small temporary stability loss for losing a city in your OK or unstable provinces
 		- Lowered permanent stability loss from being in anarchy, both for small nations and for big empires
 		- Free Religion got low upkeep (previously it was the only civic with no upkeep)
-		
+
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
 		- UHV counter display bug for Portugal and France
