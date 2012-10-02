@@ -150,7 +150,7 @@ class RFCEBalance:
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
 		gc.setProductionModifiersAI(iBurgundy,  125, 110, 120, 140 )
 		gc.setProductionModifiersHu(iBurgundy,  150, 110, 120, 140 )
-		gc.setProductionModifiersAI(iByzantium, 250, 220, 200, 350 )
+		gc.setProductionModifiersAI(iByzantium, 200, 200, 200, 350 )
 		gc.setProductionModifiersHu(iByzantium, 200, 150, 200, 350 )
 		gc.setProductionModifiersAI(iFrankia,   150, 110, 125, 120 )
 		gc.setProductionModifiersHu(iFrankia,   150, 110, 125, 125 )
