@@ -50,7 +50,7 @@ class StoredData:
                                     #------------Plague
                                     'lPlagueCountdown': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #total players + barbarians
                                     'lGenericPlagueDates': [-1, -1, -1, -1, -1],
-									'bBadPlague':False,
+                                    'bBadPlague':False,
                                     'lReligionFounded': [-1, -1, -1, -1, -1],
                                     # 3MiroCrusades
                                     'lCrusadeInit': [-2,-2,-2,-2,-2],
@@ -77,7 +77,7 @@ class StoredData:
                                     #3Miro: hired mercs
                                     'lMercGlobalPool':[],
                                     #3Miro: must be at least as long as lMercList (currently allow for 150)
-                                    'lMercsHiredBy':[-1]*150,
+                                    'lMercsHiredBy':[-1]*400,
                                     #Absinthe: persecution popup
                                     'lPersecutionData': [-1, -1, -1],
                                     'lPersecutionReligions': [],
