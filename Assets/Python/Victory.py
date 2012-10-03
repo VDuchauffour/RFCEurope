@@ -203,10 +203,9 @@ class Victory:
                 #    print (iCiv, self.getGoal(iCiv, 0), self.getGoal(iCiv, 1), self.getGoal(iCiv, 2))
 
 
-                    
-       	
+
         def checkPlayerTurn(self, iGameTurn, iPlayer):
-		# 3Miro: pretty much everything here is written by me, the victory check at the end is Rhye's, but the rest is mine
+                # 3Miro: pretty much everything here is written by me, the victory check at the end is Rhye's, but the rest is mine
                 # we use Python version of Switch statement, it is supposed to be better, now all condition checks are in separate functions
                 pPlayer = gc.getPlayer(iPlayer)
                 if ( iPlayer < iPope and pPlayer.isAlive() ): # don't count the Pope

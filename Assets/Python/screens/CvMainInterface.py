@@ -2020,7 +2020,7 @@ class CvMainInterface:
 				# < Mercenaries End   >
 				screen.setLabel( "GoldText", "Background", szText, CvUtil.FONT_LEFT_JUSTIFY, 12, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 				screen.show( "GoldText" )
-				
+
                                 # 3Miro: Show stability string from edead: start stability icon
                                 iCount += 1
                                 if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() >= con.tBirth[ePlayer] ):
@@ -2052,9 +2052,8 @@ class CvMainInterface:
                                 else:
                                         screen.hide("StabilityButton")
                                         screen.hide("StabilityText")
-                                # edead: end
-                                
-                                # edead: start piety
+
+                                # edead: Piety/Faith Points
                                 iFaithPoints = pPlayer.getFaith()
                                 if iFaithPoints >= 0 and gc.getPlayer(ePlayer).getStateReligion() >= 0 and not CyInterface().isCityScreenUp():
                                         szFaithButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.RELIGION_CHAR))
@@ -2070,8 +2069,7 @@ class CvMainInterface:
                                 else:
                                         screen.hide("FaithButton")
                                         screen.hide("FaithText")
-                                # edead: end
-				
+
                                 # edead: start GP info text by NeverMind 2/2
                                 pGreatPersonCity, iGPTurns = self.getnextGPCity()
                                 if not CyInterface().isCityScreenUp() and iGPTurns < 10000000 and pGreatPersonCity:
@@ -2087,6 +2085,7 @@ class CvMainInterface:
                                         screen.hide( "GPInfoButton" )
                                         screen.hide( "GPInfoText" )
 
+                                # edead: Great General Points
                                 if not CyInterface().isCityScreenUp() and gc.getPlayer(ePlayer).getCombatExperience() > 0:
                                         eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 11)
                                         eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(true))
@@ -2099,8 +2098,8 @@ class CvMainInterface:
                                 else:
                                         screen.hide( "CombatXPButton" )
                                         screen.hide( "CombatXPText" )
-                                        
-                                # 3Miro: Janissary points
+
+                                # 3Miro: Janissary Points
                                 if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
                                         eJanissaryXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
                                         eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/400"
@@ -2113,14 +2112,13 @@ class CvMainInterface:
                                 else:
                                         screen.hide( "JanissaryXPButton" )
                                         screen.hide( "JanissaryXPText" )
-                                # edead: end
-                                
+
                                 # 3Miro: Show UHV info on the screen
                                 if ( ePlayer == con.iBurgundy ):
                                         #iBurgundyCulture = utils.getBurgundyCulture()
                                         iBurgundyCulture = pPlayer.getUHVCounter( 1 )
-                                        #HHG: only display UHV counter as long as the UHV is undefined
-                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 1 ) == -1 ):
+                                        #Absinthe: only display UHV counter until the UHV date
+                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1336AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2131,13 +2129,13 @@ class CvMainInterface:
                                         else:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
-                                        
+
                                 #HHG: Lithuania culture goal added
                                 elif ( ePlayer == con.iLithuania ):
                                         #iLithuaniaCulture = utils.getLithuaniaCulture()
                                         iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
-                                        #HHG: only display UHV counter as long as the UHV is undefined
-                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 0 ) == -1 ):
+                                        #Absinthe: only display UHV counter until the UHV date
+                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1386AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iLithuaniaCulture )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2148,8 +2146,7 @@ class CvMainInterface:
                                         else:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
-                                # HHG: end
-                                        
+
                                 elif ( ePlayer == con.iArabia ):
                                         #iIslamInfluence = utils.getArabianInfluence()
                                         iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
@@ -2165,12 +2162,12 @@ class CvMainInterface:
                                         else:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
-                                                
+
                                 elif ( ePlayer == con.iNorse ):
                                         #iNorseRaized = utils.getNorseRazed()
                                         iNorseRaized = pPlayer.getUHVCounter( 2 )
-                                        #HHG: only display UHV counter as long as the UHV is undefined
-                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
+                                        #Absinthe: only display UHV counter until the UHV date
+                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1066AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorseRaized )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2181,12 +2178,12 @@ class CvMainInterface:
                                         else:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
-                                                
+
                                 elif ( ePlayer == con.iKiev ):
                                         #iKievFood = utils.getKievFood()
                                         iKievFood = pPlayer.getUHVCounter( 0 )
-                                        #HHG: only display UHV counter as long as the UHV is undefined
-                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 0 ) == -1 ):
+                                        #Absinthe: only display UHV counter until the UHV date
+                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1300AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2197,6 +2194,7 @@ class CvMainInterface:
                                         else:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
+
                                 elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch ):
                                         if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
                                                 if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal ):
