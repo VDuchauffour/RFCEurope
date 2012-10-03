@@ -321,12 +321,21 @@
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,8,2</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
-		<BonusArtInfo>
+	<!--	<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HONEY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Corn/Corn.nif</NIF>
 			<KFM>Art/Terrain/Resources/Corn/Corn.kfm</KFM>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,6,2</Button>
+			<FontButtonIndex>38</FontButtonIndex>
+		</BonusArtInfo>-->
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_HONEY</Type>
+			<fScale>0.8</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Honey/flowers.nif</NIF>
+			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,6,2</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
@@ -375,22 +384,21 @@
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,7,2</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
-		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SLAVES</Type>
-			<fScale>0.5</fScale>
+			<fScale>0.8</fScale>
 			<fInterfaceScale>1.5</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Barley/Wheat.nif</NIF>
-			<KFM>Art/Terrain/Resources/Barley/Wheat.kfm</KFM>
+			<NIF>Art/Structures/Buildings/ZuluIkhanda/Ikhanda.nif</NIF>
+			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,2</Button>
 			<FontButtonIndex>44</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_TEA</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.5</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Barley/Wheat.nif</NIF>
-			<KFM>Art/Terrain/Resources/Barley/Wheat.kfm</KFM>
+			<fScale>0.73</fScale>
+			<fInterfaceScale>1.3</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Tea/Tea.nif</NIF>
+			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,8,1</Button>
 			<FontButtonIndex>45</FontButtonIndex>
 		</BonusArtInfo>

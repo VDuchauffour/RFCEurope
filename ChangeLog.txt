@@ -117,6 +117,8 @@ Changes for RFCE 1.1:
 		- Wondermovie for Kazimierz and Palacio da Pena
 		- Seperated the Wondermovies and the Colonymovies for better organization
 		- New button for St. Peter's Basilica, and for most of the changed/updated buildings
+		- Improved Coffee Plantation graphics (difference in art when worked, not worked etc.)
+		- New art for Tea, Honey and Slaves
 
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
