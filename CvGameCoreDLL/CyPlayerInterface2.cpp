@@ -20,6 +20,78 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 	// set the docstring of the current module scope 
 	python::scope().attr("__doc__") = "Civilization IV Player Class"; 
 	x
+		// 3Miro: added functions
+		.def("getFinancialPower", &CyPlayer::getFinancialPower, "int getFinancialPower()")
+		.def("getVotingPower", &CyPlayer::getVotingPower, "int getVotingPower( eReligionTypes )")
+
+		.def("setIsCrusader", &CyPlayer::setIsCrusader, "void setIsCrusader( bool bVal )")
+		.def("getIsCrusader", &CyPlayer::getIsCrusader, "bool getIsCrusader()")
+
+		.def("getFaith", &CyPlayer::getFaith, "int getFaith()")
+		.def("setFaith", &CyPlayer::setFaith, "void setFaith( int iNewFaith )")
+		.def("changeFaith", &CyPlayer::changeFaith, "void changeFaith( int iChange )")
+
+		.def("getProsecutionCount", &CyPlayer::getProsecutionCount, "int getProsecutionCount()")
+		.def("setProsecutionCount", &CyPlayer::setProsecutionCount, "void setProsecutionCount( int iNewCount )")
+		.def("changeProsecutionCount", &CyPlayer::changeProsecutionCount, "void changeProsecutionCount( int iChange )")
+
+		//.def("getFaithStability", &CyPlayer::getFaithStability, "int getFaithStability()")
+		.def("getFaithBenefit", &CyPlayer::getFaithBenefit, "int getFaithBenefit( int iFaithPower )")
+		.def("isFaithBenefit", &CyPlayer::isFaithBenefit, "bool isFaithBenefit( int iFaithPower )")
+
+		.def("countCultureProduced", &CyPlayer::countCultureProduced, "int countCultureProduced()")
+
+		.def("setUHV", &CyPlayer::setUHV, "void ( int iUHV, int iValue )")
+		.def("getUHV", &CyPlayer::getUHV, "int ( int iUHV )")
+		.def("setUHVCounter", &CyPlayer::setUHVCounter, "void ( int iUHV, int iValue )")
+		.def("getUHVCounter", &CyPlayer::getUHVCounter, "int ( int iUHV )")
+		.def("setUHV2of3", &CyPlayer::setUHV2of3, "void ( bool bNewValue )")
+		.def("getUHV2of3", &CyPlayer::getUHV2of3, "bool getUHV2of3()")
+		.def("getUHVDescription", &CyPlayer::getUHVDescription, "str ( int )")
+
+		.def("setProvinceType", &CyPlayer::setProvinceType, "void ( int, int )")
+		.def("getProvinceType", &CyPlayer::getProvinceType, "int ( int )")
+		.def("getProvinceCurrentState", &CyPlayer::getProvinceCurrentState, "int ( int )")
+		.def("getProvinceCityCount", &CyPlayer::getProvinceCityCount, "int ( int )")
+		.def("getForeignCitiesInMyProvinceType", &CyPlayer::getForeignCitiesInMyProvinceType, "int ( int )")
+
+		// 3MiroStability
+		.def("getStabilityBase", &CyPlayer::getStabilityBase, "int ( int )")
+		.def("changeStabilityBase", &CyPlayer::changeStabilityBase, "void ( int, int )")
+		.def("getStabilityVary", &CyPlayer::getStabilityVary, "int ( int )")
+		.def("setStabilityVary", &CyPlayer::setStabilityVary, "void ( int, int )")
+		.def("getStabilitySwing", &CyPlayer::getStabilitySwing, "int ( )")
+		.def("setStabilitySwing", &CyPlayer::setStabilitySwing, "void ( int )")
+		.def("getStability", &CyPlayer::getStability, "int ( )")
+		.def("getWarPeaceChange", &CyPlayer::getWarPeaceChange, "int ( )")
+
+		// 3MiroColonies
+		.def("getNumColonies", &CyPlayer::getNumColonies, "int ( )")
+		.def("setNumColonies", &CyPlayer::setNumColonies, "void ( int )")
+
+		.def("getPicklefreeParameter", &CyPlayer::getPicklefreeParameter, "int ( int )")
+		.def("setPicklefreeParameter", &CyPlayer::setPicklefreeParameter, "void ( int, int )")
+
+		.def("getMaster", &CyPlayer::getMaster, "int ( )")
+		.def("countVassals", &CyPlayer::countVassals, "int ( )")
+
+		// 3MiroProvinces: extra province functions
+		.def("provinceIsSpreadReligion", &CyPlayer::provinceIsSpreadReligion, "bool (int, int)")
+		.def("provinceIsConvertReligion", &CyPlayer::provinceIsConvertReligion, "bool (int, int)")
+
+		.def("getRespawned", &CyPlayer::getRespawned, "bool ()")
+		.def("setRespawned", &CyPlayer::setRespawned, "void ( bool )")
+
+		.def("getForcedHistoricityUnitProduction", &CyPlayer::getForcedHistoricityUnitProduction, "int ()")
+		.def("setForcedHistoricityUnitProduction", &CyPlayer::setForcedHistoricityUnitProduction, "void ( int )")
+
+		.def("getForcedHistoricityUnitSupport", &CyPlayer::getForcedHistoricityUnitSupport, "int ()")
+		.def("setForcedHistoricityUnitSupport", &CyPlayer::setForcedHistoricityUnitSupport, "void ( int )")
+
+		.def("getForcedHistoricityCivicSupport", &CyPlayer::getForcedHistoricityCivicSupport, "int ()")
+		.def("setForcedHistoricityCivicSupport", &CyPlayer::setForcedHistoricityCivicSupport, "void ( int )")
+
+		// Absitnhe: original CyPlayerInterface2.cpp file started here
 		.def("AI_updateFoundValues", &CyPlayer::AI_updateFoundValues, "void (bool bStartingLoc)")
 		.def("AI_foundValue", &CyPlayer::AI_foundValue, "int (int, int, int, bool)")
 		.def("AI_isFinancialTrouble", &CyPlayer::AI_isFinancialTrouble, "bool ()")

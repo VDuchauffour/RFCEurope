@@ -836,37 +836,37 @@ class RFCEBalance:
                 gc.setTimelineTechDateForTech( xml.iExplosives, 460 )
                 gc.setTimelineTechDateForTech( xml.iMedicine, 458 )
                 gc.setTimelineTechDateForTech( xml.iIndustrialTech, xml.i1800AD )
-                
+
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE
-                gc.setSizeNPlayers( con.iMapMaxX, con.iMapMaxY, iNumPlayers, iNumTotalPlayers, xml.iNumTechs, xml.iNumBuildingsPlague, xml.iNumReligions )
-                for i in range( iNumPlayers ):
-                        for y in range( con.iMapMaxY ):
-                                for x in range( con.iMapMaxX ):
-                                        gc.setSettlersMap( i, y, x, rfcemaps.tSettlersMaps[i][y][x] )
-                                        gc.setWarsMap( i, y, x, rfcemaps.tWarsMaps[i][y][x] )
-	
-                for y in range( con.iMapMaxY ):
-                        for x in range( con.iMapMaxX ):
-                                if ( rfcemaps.tProinceMap[y][x] > -1 ): 
-                                        # "no province" of ocean is settled different than -1, set only non-negative values, 
-                                        # the C++ map is initialized to "no-province" by setSizeNPlayers(...)
-                                        # "no-province" is returned as -1 via the Cy interface
-                                        gc.setProvince( x, y, rfcemaps.tProinceMap[y][x] )
-                gc.createProvinceCrossreferenceList() # make sure to call this AFTER setting all the Province entries
-                
-                gc.setProvinceTypeNumber( con.iNumProvinceTypes ) # set the Number of Provinces, call this before you set any AI or culture modifiers
-                
-                gc.setNumRegions( xml.iNumMapRegions )
-                for lRegion in xml.tRegionMap:
-                        iIndex = xml.tRegionMap.index( lRegion )
-                        for iProvince in lRegion:
-                                gc.setProvinceToRegion( iProvince, iIndex )
-        
-                # birth turns for the players, do not change this loop
-                for i in range( iNumTotalPlayers ):
-                        gc.setStartingTurn( i, con.tBirth[i] )	
-			
+		gc.setSizeNPlayers( con.iMapMaxX, con.iMapMaxY, iNumPlayers, iNumTotalPlayers, xml.iNumTechs, xml.iNumBuildingsPlague, xml.iNumReligions )
+		for i in range( iNumPlayers ):
+			for y in range( con.iMapMaxY ):
+				for x in range( con.iMapMaxX ):
+					gc.setSettlersMap( i, y, x, rfcemaps.tSettlersMaps[i][y][x] )
+					gc.setWarsMap( i, y, x, rfcemaps.tWarsMaps[i][y][x] )
+
+		for y in range( con.iMapMaxY ):
+			for x in range( con.iMapMaxX ):
+				if ( rfcemaps.tProinceMap[y][x] > -1 ): 
+					# "no province" of ocean is settled different than -1, set only non-negative values, 
+					# the C++ map is initialized to "no-province" by setSizeNPlayers(...)
+					# "no-province" is returned as -1 via the Cy interface
+					gc.setProvince( x, y, rfcemaps.tProinceMap[y][x] )
+		gc.createProvinceCrossreferenceList() # make sure to call this AFTER setting all the Province entries
+
+		gc.setProvinceTypeNumber( con.iNumProvinceTypes ) # set the Number of Provinces, call this before you set any AI or culture modifiers
+
+		gc.setNumRegions( xml.iNumMapRegions )
+		for lRegion in xml.tRegionMap:
+			iIndex = xml.tRegionMap.index( lRegion )
+			for iProvince in lRegion:
+				gc.setProvinceToRegion( iProvince, iIndex )
+
+		# birth turns for the players, do not change this loop
+		for i in range( iNumTotalPlayers ):
+			gc.setStartingTurn( i, con.tBirth[i] )	
+
 	def postAreas( self ):
 		#3Miro: DO NOT CHANGE THIS CODE
 		# this adds the Core and Normal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
@@ -886,19 +886,18 @@ class RFCEBalance:
 				gc.addCoreException( iCiv, con.tExceptions[iCiv][iEx][0], con.tExceptions[iCiv][iEx][1] )
 			for iEx in range( iCNE ):
 				gc.addNormalException( iCiv, con.tNormalAreasSubtract[iCiv][iEx][0], con.tNormalAreasSubtract[iCiv][iEx][1] )
-				
+
 		gc.setProsecutorReligions( xml.iProsecutor, xml.iProsecutorClass )
 		gc.setSaintParameters( xml.iProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
 		gc.setPapalPlayer( iPope, xml.iCatholicism )
 
 		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack, sync with RNF module
-                
-                #3MiroMercs: set the merc promotion
-                gc.setMercPromotion( xml.iPromotionMerc )
-		
-		
+
+		#3MiroMercs: set the merc promotion
+		gc.setMercPromotion( xml.iPromotionMerc )
+
+
 		for iCiv in range( iNumPlayers ):
 			#print( "  sw: ",iCiv )
 			gc.setStartingWorkers( iCiv, con.tStartingWorkers[iCiv] )
-		
