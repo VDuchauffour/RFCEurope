@@ -156,6 +156,7 @@ Changes for RFCE 1.1:
 		- Fixed mistake where Ragusa got free walls instead of Venice
 		- You can no longer discover Amber from random mines
 		- Fixed bug where it was possible to build plantations on forests (and remove the forest) before the discovery of Plate Armor
+		- Removed buildingclasses (thus unnecessary searches) for no longer used buildings: Builders Yard, Grocer, Toll House, Herbalist, Catholic and Orthodox Scriptorum
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
