@@ -67,7 +67,7 @@ Changes for RFCE 1.1:
 		- Stability is accounted properly for cities and buildings placed in WB
 		- Added missing Morea province from Hungarian UHV 3
 		- More (Conditional) Mercenaries are available and more equally distributed in time (still not optimal, but better than the current system)
-		- Updated C++ source files. Now it's possible to compile a debug .dll for the mod
+		- Updated C++ source files. Now it's possible to compile a debug version of the .dll for the mod
 
 	Map and province changes:
 		- Atlantic Access near Sevilla
