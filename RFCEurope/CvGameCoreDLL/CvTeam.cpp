@@ -1102,7 +1102,7 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 		return false;
 	};
 
-	// 3Miro: Cannot Declare War for 10 turns after player spawn
+	// 3Miro: Cannot Declare War for 5 turns after player spawn - variable exported into python
 	int iPlayer = GET_TEAM(eTeam).getLeaderID();
 	if ( GC.getGameINLINE().getGameTurn() < startingTurn[iPlayer] + iPeaceTurnsAfterSpawn ){
 		return false;

@@ -16,6 +16,7 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x);
 void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x);
 void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x);
 void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x);
+void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x);
 void CyGamePythonInterface();
 void CyRandomPythonInterface();
 void CyEnumsPythonInterface();
@@ -73,9 +74,10 @@ DllExport void DLLPublishToPython()
 	python::class_<CyPlot> plot ("CyPlot");		// define plot class
 	CyPlotPythonInterface1(plot);				// publish it's methods
 
-	python::class_<CyGlobalContext> gc ("CyGlobalContext");	// define globals class 
-	CyGlobalContextPythonInterface1(gc);					// publish it's methods 
+	python::class_<CyGlobalContext> gc ("CyGlobalContext");	// define globals class
+	CyGlobalContextPythonInterface1(gc);					// publish it's methods
 	CyGlobalContextPythonInterface2(gc);					// publish it's methods
 	CyGlobalContextPythonInterface3(gc);					// publish it's methods
-	CyGlobalContextPythonInterface4(gc);					// publish it's methods 
+	CyGlobalContextPythonInterface4(gc);					// publish it's methods
+	CyGlobalContextPythonInterface5(gc);					// publish it's methods
 }

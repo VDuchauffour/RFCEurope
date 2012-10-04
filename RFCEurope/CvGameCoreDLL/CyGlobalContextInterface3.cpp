@@ -1,5 +1,6 @@
 //
 // published python interface for CyGlobalContext
+// Author - Mustafa Thamer
 //
 
 #include "CvGameCoreDLL.h"
@@ -11,6 +12,7 @@
 //#include "CvStructs.h"
 #include "CvInfos.h"
 #include "CyTeam.h"
+
 
 void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 {
@@ -40,7 +42,7 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 
 		.def("getNumCalendarInfos", &CyGlobalContext::getNumCalendarInfos, "int () - Returns NumCalendarInfos")
 		.def("getCalendarInfo", &CyGlobalContext::getCalendarInfo, python::return_value_policy<python::reference_existing_object>(), "CalendarInfo () - Returns Info object")
-		 
+
 		.def("getNumGameOptionInfos", &CyGlobalContext::getNumGameOptionInfos, "int () - Returns NumGameOptionInfos")
 		.def("getGameOptionInfo", &CyGlobalContext::getGameOptionInfo, python::return_value_policy<python::reference_existing_object>(), "GameOptionInfo () - Returns Info object")
 
