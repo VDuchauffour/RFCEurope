@@ -175,18 +175,6 @@
 			<DefaultBuilding>BUILDING_FORGE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- BUILDERS YARD -->
-			<Type>BUILDINGCLASS_BUILDERS_YARD</Type>
-			<Description>TXT_KEY_BUILDING_BUILDERS_YARD</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_BUILDERS_YARD</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- GUILD_HALL -->
 			<Type>BUILDINGCLASS_GUILD_HALL</Type>
 			<Description>TXT_KEY_BUILDING_GUILD_HALL</Description>
@@ -331,18 +319,6 @@
 			<DefaultBuilding>BUILDING_TANNERY</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- GROCER -->
-			<Type>BUILDINGCLASS_GROCER</Type>
-			<Description>TXT_KEY_BUILDING_GROCER</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_GROCER</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- LUXURY_STORE -->
 			<Type>BUILDINGCLASS_LUXURY_STORE</Type>
 			<Description>TXT_KEY_BUILDING_LUXURY_STORE</Description>
@@ -401,18 +377,6 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_COURTHOUSE</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- TOLL_HOUSE -->
-			<Type>BUILDINGCLASS_TOLL_HOUSE</Type>
-			<Description>TXT_KEY_BUILDING_TOLL_HOUSE</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_TOLL_HOUSE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- DUNGEON -->
@@ -485,18 +449,6 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_MANOR_HOUSE</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- HERBALIST -->
-			<Type>BUILDINGCLASS_HERBALIST</Type>
-			<Description>TXT_KEY_BUILDING_HERBALIST</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_HERBALIST</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- INFIRMARY -->
@@ -766,18 +718,6 @@
 			<DefaultBuilding>BUILDING_CATHOLIC_MONASTERY</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CATHOLIC_SCRIPTORIUM -->
-			<Type>BUILDINGCLASS_CATHOLIC_SCRIPTORIUM</Type>
-			<Description>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>0</bMonument>
-			<DefaultBuilding>BUILDING_CATHOLIC_SCRIPTORIUM</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- CATHOLIC_SEMINARY -->
 			<Type>BUILDINGCLASS_CATHOLIC_SEMINARY</Type>
 			<Description>TXT_KEY_BUILDING_CATHOLIC_SEMINARY</Description>
@@ -860,18 +800,6 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_ORTHODOX_MONASTERY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
-		<BuildingClassInfo><!-- ORTHODOX_SCRIPTORIUM -->
-			<Type>BUILDINGCLASS_ORTHODOX_SCRIPTORIUM</Type>
-			<Description>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_ORTHODOX_SCRIPTORIUM</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- ORTHODOX_SEMINARY -->
