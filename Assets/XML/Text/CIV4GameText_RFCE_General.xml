@@ -429,7 +429,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_UNITCOMBAT_LIGHT_CAVALRY</Tag>
-		<English>Congratulations, you have trained your first Mounted Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can move farther per turn than regular units, allowing them to wreak havoc behind enemy lines.</English>
+		<English>Congratulations, you have trained your first Light Cavalry Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can move very fast, allowing them to wreak havoc behind enemy lines.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -438,7 +438,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_UNITCOMBAT_HEAVY_CAVALRY</Tag>
-		<English>Congratulations, you have trained your first Melee Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units form the backbone of your earliest armies.</English>
+		<English>Congratulations, you have trained your first Heavy Cavalry Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! The strongest units in the medieval armies, while still considerably fast. If you have access to both iron and horse, don't hesitate to build them!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -447,7 +447,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_UNITCOMBAT_POLEARM</Tag>
-		<English>Congratulations, you have trained your first Armored Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! They are the strongest offensive units available - use them to crush your enemies!</English>
+		<English>Congratulations, you have trained your first Polearm Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! They are effective against both Light and Heavy Cavalry units - use them to break the mounted dominance on the battlefields!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -456,7 +456,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_UNITCOMBAT_HEAVY_INFANTRY</Tag>
-		<English>Congratulations, you have trained your first Helicopter Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can fly over short distances, allowing them to ignore regular terrain costs.</English>
+		<English>Congratulations, you have trained your first Heavy Infantry Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These melee units form the backbone of your armies.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -582,7 +582,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_100_THOUSAND</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now reached One Hundred Thousand urban population! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of One Hundred Thousand souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -591,7 +591,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_200_THOUSAND</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now reached Two Hundred Thousand urban population! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Two Hundred Thousand souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -600,7 +600,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_500_THOUSAND</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now reached Five Hundred Thousand urban population! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Five Hundred Thousand souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -609,7 +609,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_1_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds a Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of One Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -618,7 +618,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_2_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds Two Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Two Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -627,7 +627,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_5_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds Five Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Five Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -636,7 +636,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_10_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds Ten Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Ten Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -645,7 +645,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_20_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds Twenty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Twenty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -654,7 +654,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_50_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds Fifty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of Fifty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -663,7 +663,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_100_MILLION</Tag>
-		<English>Congratulations, the burgeoning %s1Civ_Name now holds One Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
+		<English>Congratulations, the burgeoning %s1Civ_Name now reached an urban population of One Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
