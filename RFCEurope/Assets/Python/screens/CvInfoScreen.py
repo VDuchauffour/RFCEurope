@@ -12,7 +12,7 @@ import string
 import time
 
 import Consts as con #Rhye
-import XMLConsts
+import XMLConsts as xml
 
 from PyHelpers import PyPlayer
 
@@ -412,7 +412,8 @@ class CvInfoScreen:
 		self.TEXT_LAND_AREA_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ())
 		self.TEXT_POPULATION_MEASURE = ""
 		self.TEXT_HAPPINESS_MEASURE = "%"
-		self.TEXT_HEALTH_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ())
+		self.TEXT_HAPPINESS_MEASURE_2 = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS_MEASURE", ())
+		self.TEXT_HEALTH_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_HEALTH_MEASURE", ())
 		self.TEXT_IMP_EXP_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
 
 		self.TEXT_TIME_PLAYED = localText.getText("TXT_KEY_INFO_SCREEN_TIME_PLAYED", ())
@@ -975,8 +976,8 @@ class CvInfoScreen:
 		iEconomy = pPlayer.calculateTotalCommerce()
 		iIndustry = pPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
 		iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
-		fMilitary = pPlayer.getPower() * 1000
-		iLandArea = pPlayer.getTotalLand() * 1000
+		fMilitary = pPlayer.getPower() * 500
+		iLandArea = pPlayer.getTotalLand() * 2300
 		iPopulation = pPlayer.getRealPopulation()
 		if (pPlayer.calculateTotalCityHappiness() > 0):
 			iHappiness = int((1.0 * pPlayer.calculateTotalCityHappiness()) / (pPlayer.calculateTotalCityHappiness() + \
@@ -1061,8 +1062,8 @@ class CvInfoScreen:
 				aiGroupEconomy.append(pCurrPlayer.calculateTotalCommerce())
 				aiGroupIndustry.append(pCurrPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION))
 				aiGroupAgriculture.append(pCurrPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD))
-				aiGroupMilitary.append(pCurrPlayer.getPower() * 1000)
-				aiGroupLandArea.append(pCurrPlayer.getTotalLand() * 1000)
+				aiGroupMilitary.append(pCurrPlayer.getPower() * 500)
+				aiGroupLandArea.append(pCurrPlayer.getTotalLand() * 2300)
 				aiGroupPopulation.append(pCurrPlayer.getRealPopulation())
 				if (pCurrPlayer.calculateTotalCityHappiness() > 0):
 					aiGroupHappiness.append(int((1.0 * pCurrPlayer.calculateTotalCityHappiness()) / (pCurrPlayer.calculateTotalCityHappiness() \
@@ -1268,7 +1269,7 @@ class CvInfoScreen:
 		screen.setTableColumnHeader(szTable, 4, self.TEXT_WORST, 155)
 		screen.setTableColumnHeader(szTable, 5, self.TEXT_RANK, 90)
 
-		for i in range(18 + 5): # 18 normal items + 5 lines for spacing
+		for i in range(16 + 8): # 16 normal items + 8 lines for spacing
 			screen.appendTableRow(szTable)
 		iNumRows = screen.getTableNumRows(szTable)
 		iRow = iNumRows - 1
@@ -1284,10 +1285,11 @@ class CvInfoScreen:
 		screen.setTableText(szTable, iCol, 12, self.TEXT_LAND_AREA_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 14, self.TEXT_POPULATION, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 16, self.TEXT_HAPPINESS, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 18, self.TEXT_HEALTH, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 19, self.TEXT_HEALTH_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 21, self.TEXT_IMP_EXP, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 22, self.TEXT_IMP_EXP_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 17, self.TEXT_HAPPINESS_MEASURE_2, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 19, self.TEXT_HEALTH, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 20, self.TEXT_HEALTH_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 22, self.TEXT_IMP_EXP, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 23, self.TEXT_IMP_EXP_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 		iCol = 1
 		screen.setTableText(szTable, iCol, 0, str(iEconomy), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1297,8 +1299,8 @@ class CvInfoScreen:
 		screen.setTableText(szTable, iCol, 11, str(iLandArea), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 14, str(iPopulation), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 16, str(iHappiness) + self.TEXT_HAPPINESS_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 18, str(iHealth), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 21, str(iImports) + "/" + str(iExports), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 19, str(iHealth), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 22, str(iImports) + "/" + str(iExports), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 		iCol = 2
 		screen.setTableText(szTable, iCol, 0, str(iEconomyGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1308,8 +1310,8 @@ class CvInfoScreen:
 		screen.setTableText(szTable, iCol, 11, str(iLandAreaGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 14, str(iPopulationGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 16, str(iHappinessGameBest) + self.TEXT_HAPPINESS_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 18, str(iHealthGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 21, str(iImportsGameBest) + "/" + str(iExportsGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 19, str(iHealthGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 22, str(iImportsGameBest) + "/" + str(iExportsGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 		iCol = 3
 		screen.setTableText(szTable, iCol, 0, str(int(fEconomyGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1319,8 +1321,8 @@ class CvInfoScreen:
 		screen.setTableText(szTable, iCol, 11, str(int(fLandAreaGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 14, str(int(fPopulationGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 16, str(int(fHappinessGameAverage)) + self.TEXT_HAPPINESS_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 18, str(int(fHealthGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 21, str(int(fImportsGameAverage)) + "/" + str(int(fExportsGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 19, str(int(fHealthGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 22, str(int(fImportsGameAverage)) + "/" + str(int(fExportsGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 		iCol = 4
 		screen.setTableText(szTable, iCol, 0, str(iEconomyGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1330,8 +1332,8 @@ class CvInfoScreen:
 		screen.setTableText(szTable, iCol, 11, str(iLandAreaGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 14, str(iPopulationGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 16, str(iHappinessGameWorst) + self.TEXT_HAPPINESS_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 18, str(iHealthGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 21, str(iImportsGameWorst) + "/" + str(iExportsGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 19, str(iHealthGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 22, str(iImportsGameWorst) + "/" + str(iExportsGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 		iCol = 5
 		screen.setTableText(szTable, iCol, 0, str(iEconomyRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1341,8 +1343,8 @@ class CvInfoScreen:
 		screen.setTableText(szTable, iCol, 11, str(iLandAreaRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 14, str(iPopulationRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 16, str(iHappinessRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 18, str(iHealthRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 21, str(iImpExpRatioRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 19, str(iHealthRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 22, str(iImpExpRatioRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 		return
 
@@ -1532,23 +1534,23 @@ class CvInfoScreen:
                                 iActivePlayer = CyGame().getActivePlayer()
                                 pActivePlayer = gc.getPlayer(iActivePlayer)
                                 tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-                                iBronzeWorking = 61
-                                iIronWorking = 63
-                                iCalendar = 33
+                                #iBronzeWorking = 61
+                                #iIronWorking = 63
+                                #iCalendar = 33
                                 
-                                if (tActivePlayer.isHasTech(iCalendar)):
+                                if (tActivePlayer.isHasTech(xml.iCalendar)):
                                         if (iTurnYear < 0):
                                             szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
                                         else:
                                             szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
                                 elif (iTurnYear >= 1500):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())              
+                                        szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
                                 elif (iTurnYear >= 450):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())    
+                                        szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
                                 elif (iTurnYear >= -800):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())    
+                                        szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
                                 elif (iTurnYear >= -2000):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())    
+                                        szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
                                 else:
                                         szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
                                 #Rhye - end
@@ -1835,22 +1837,22 @@ class CvInfoScreen:
                                         iActivePlayer = CyGame().getActivePlayer()
                                         pActivePlayer = gc.getPlayer(iActivePlayer)
                                         tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-                                        iCalendar = 33
+                                        #iCalendar = 33
                                         
-                                        if (tActivePlayer.isHasTech(iCalendar)):
+                                        if (tActivePlayer.isHasTech(xml.iCalendar)):
                                                 if (iTurnYear < 0):
                                                     szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
                                                 else:
                                                     szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
                                                 
                                         elif (iTurnYear >= 1500):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())              
+                                                szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
                                         elif (iTurnYear >= 450):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())    
+                                                szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
                                         elif (iTurnYear >= -800):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())    
+                                                szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
                                         elif (iTurnYear >= -2000):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())    
+                                                szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
                                         else:
                                                 szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
 
@@ -2302,7 +2304,7 @@ class CvInfoScreen:
 						screen.addFlagWidgetGFC(self.home_flag,hxy[iPlayerLoop][0]-40,hxy[iPlayerLoop][1]-20,80,80,iPlayerLoop,WidgetTypes.WIDGET_GENERAL, -1, -1)
 					except IndexError:
 						pass
-					for iProjectLoop in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
+					for iProjectLoop in range(xml.iNumNotColonies,xml.iNumTotalColonies):
 
 						for iI in range(pTeam.getProjectCount(iProjectLoop)):
 								
@@ -2312,7 +2314,7 @@ class CvInfoScreen:
 
 		cxy = con.colony_positions_xy
 		#Loop through to place flags first (so flags are all "under" the colony dots)
-		for i in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
+		for i in range(xml.iNumNotColonies,xml.iNumTotalColonies):
 			builtcount = 0
 			possible = 1
 			for colony in self.aaColoniesBuilt:
@@ -2322,7 +2324,7 @@ class CvInfoScreen:
 					builtcount += 1
 				
 		#Loop through to place dots
-		for i in range(XMLConsts.iNumNotColonies,XMLConsts.iNumTotalColonies):
+		for i in range(xml.iNumNotColonies,xml.iNumTotalColonies):
 			builtcount = 0
 			possible = 1
 			for colony in self.aaColoniesBuilt:
@@ -2370,25 +2372,25 @@ class CvInfoScreen:
                 iPlayer = CyGame().getActivePlayer()
                 pPlayer = gc.getPlayer(iPlayer)
                 tPlayer = gc.getTeam(pPlayer.getTeam())
-                iBronzeWorking = 61
-                iIronWorking = 63
-                iCalendar = 33
+                #iBronzeWorking = 61
+                #iIronWorking = 63
+                #iCalendar = 33
                 
-                if (tPlayer.isHasTech(iCalendar)):  
+                if (tPlayer.isHasTech(xml.iCalendar)):  
                         if (year < 0):
                             return localText.getText("TXT_KEY_TIME_BC", (-year,))
                         else:
-                            return localText.getText("TXT_KEY_TIME_AD", (year,))         
+                            return localText.getText("TXT_KEY_TIME_AD", (year,))
                 elif (year >= 1500):
-                        return localText.getText("TXT_KEY_AGE_RENAISSANCE", ())  
+                        return localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
                 elif (year >= 450):
-                        return localText.getText("TXT_KEY_AGE_MEDIEVAL", ())    
+                        return localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
                 elif (year >= -800):
-                        return localText.getText("TXT_KEY_AGE_IRON", ())    
+                        return localText.getText("TXT_KEY_AGE_IRON", ())
                 elif (year >= -2000):
-                        return localText.getText("TXT_KEY_AGE_BRONZE", ())    
+                        return localText.getText("TXT_KEY_AGE_BRONZE", ())
                 else:
-                        return localText.getText("TXT_KEY_AGE_STONE", ())    
+                        return localText.getText("TXT_KEY_AGE_STONE", ())
                 #Rhye - end
 
 

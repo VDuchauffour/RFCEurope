@@ -671,6 +671,60 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_TEXT</Tag>
+		<English>Urban Population</English>
+		<French>Population</French>
+		<German>Bev&#246;lkerung</German>
+		<Italian>Popolazione</Italian>
+		<Spanish>Poblaci&#243;n</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_TEXT</Tag>
+		<English>Military Power</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_SOLDIERS_TEXT</Tag>
+		<English>Soldiers</English>
+		<French>Soldats</French>
+		<German>Soldaten</German>
+		<Italian>Soldati</Italian>
+		<Spanish>Soldados</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT</Tag>
+		<English>Approval Rate</English>
+		<French>Taux d'approbation</French>
+		<German>Billigungsrate</German>
+		<Italian>Grado di approvazione</Italian>
+		<Spanish>Ritmo aprobaci&#243;n</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_HAPPINESS_MEASURE</Tag>
+		<English> Based on happiness</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_HEALTH_MEASURE</Tag>
+		<English> Based on health, in years</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADES</Tag>
 		<English>Unit Upgrades</English>
 		<French>Am&#233;liorations d'unit&#233;s</French>

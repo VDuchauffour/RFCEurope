@@ -1,3 +1,0 @@
-Stability Guide:
-
-There are 4 + 1 Stability Cathegories

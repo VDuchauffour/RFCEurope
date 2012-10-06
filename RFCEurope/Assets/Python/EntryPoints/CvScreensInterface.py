@@ -864,7 +864,7 @@ def featAccomplishedOnClickedCallback(argsList):
 		elif ((iData1 == FeatTypes.FEAT_NATIONAL_WONDER)):
 		  # 2 is for the wonder tab...
 			showInfoScreen([2, 0])
-		elif ((iData1 >= FeatTypes.FEAT_POPULATION_HALF_MILLION) and (iData1 <= FeatTypes.FEAT_POPULATION_2_BILLION)):
+		elif ((iData1 >= FeatTypes.FEAT_POPULATION_100_THOUSAND) and (iData1 <= FeatTypes.FEAT_POPULATION_100_MILLION)):
 		  # 1 is for the demographics tab...
 			showInfoScreen([1, 0])
 		elif iData1 == FeatTypes.FEAT_CORPORATION_ENABLED:

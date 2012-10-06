@@ -68,6 +68,7 @@ Changes for RFCE 1.1:
 		- Added missing Morea province from Hungarian UHV 3
 		- More (Conditional) Mercenaries are available and more equally distributed in time (still not optimal, but better than the current system)
 		- Updated C++ source files. Now it's possible to compile a debug version of the .dll for the mod
+		- Tweaks to the demographics screen. Urban Population, Military Power, Land Area, etc.
 
 	Map and province changes:
 		- Atlantic Access near Sevilla
