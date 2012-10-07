@@ -124,6 +124,7 @@ Changes for RFCE 1.1:
 		- New button for St. Peter's Basilica, and for most of the changed/updated buildings
 		- Improved Coffee Plantation graphics (difference in art when worked, not worked etc.)
 		- New art for Tea, Honey and Slaves
+		- New art for swamps/marshes, with 3 different varieties
 
 	Balance:
 		- Separated Mongol and Seljuk spawn: very hard on the human player, easier for the AI. Additional minor tweaks in a few other barbarian spawns
