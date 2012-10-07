@@ -482,17 +482,39 @@
 		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_MARSH</Type>
 			<bAnimated>0</bAnimated>
-			<bRiverArt>1</bRiverArt>
+			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
 			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.25</fScale>
+			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
-						<ModelFile/>
-						<Connections/>
+						<ModelFile>Art/Terrain/Features/Swamp/marsh_1.nif</ModelFile>
+						<Connections>NW NE SE SW</Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</VarietyButton>
+			</FeatureVariety>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Swamp/marsh_2.nif</ModelFile>
+						<Connections>NW NE SE SW</Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</VarietyButton>
+			</FeatureVariety>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Swamp/marsh_3.nif</ModelFile>
+						<Connections>NW NE SE SW</Connections>
 					</FeatureArtPiece>
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>

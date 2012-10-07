@@ -321,15 +321,6 @@
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,8,2</Button>
 			<FontButtonIndex>37</FontButtonIndex>
 		</BonusArtInfo>
-	<!--	<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HONEY</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Corn/Corn.nif</NIF>
-			<KFM>Art/Terrain/Resources/Corn/Corn.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,6,2</Button>
-			<FontButtonIndex>38</FontButtonIndex>
-		</BonusArtInfo>-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_HONEY</Type>
 			<fScale>0.8</fScale>
@@ -420,7 +411,6 @@
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,4,1</Button>
 			<FontButtonIndex>47</FontButtonIndex>
 		</BonusArtInfo>
-		<!--These are colonial-only resources and currently have dummy model-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AMBER</Type>
 			<fScale>1.0</fScale>
