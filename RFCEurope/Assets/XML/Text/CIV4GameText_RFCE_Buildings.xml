@@ -13,7 +13,7 @@
 		<German>Arsenal</German>
 		<Italian>Arsenale</Italian>
 		<Spanish>Arsenal</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Arsenal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
@@ -31,7 +31,7 @@
 		<German>Bulgarisches Stan</German>
 		<Italian>Stan Bulgaro</Italian>
 		<Spanish>Stan Búlgaro</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Acampamento B&#250;lgaro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Tag>
@@ -49,7 +49,7 @@
 		<German>Wetscher Saal</German>
 		<Italian>Veche Femminile</Italian>
 		<Spanish>Veche Feminino</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Assembl&#233;ia Eslava</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KIEV_VECHE_PEDIA</Tag>
@@ -58,7 +58,7 @@
 		<German>[TAB]Das Wetsche war eine Versammlung der Bevölkerung in altrussischen Städten und ein Organ der Mitbestimmung oder der Selbstverwaltung. Zum ersten Mal wird diese Institution in einer Chronik 997 für die Stadt Belgorod erwähnt, sie hatte ihren Höhepunkt im 12. Jahrhundert als sie in vielen russischen Teilfürstentümern als Vertragspartner des jeweiligen Regenten auftrat.[PARAGRAPH:2]In den Städten Nowgorod und Pskow erlebte das Wetsche seine markanteste Ausprägung, diese wurden bis zum Ende des 15. Jahrhunderts von einem Wetsche regiert. Mit der Eingliederung der beiden Städte in das Großfürstentum Moskau 1478 beziehungsweise 1510 endete die Tradition des Wetsche in Russland.</German>
 		<Italian>[TAB]La parola "veche" si riferisce ai complessivi popolari nei paesi medioevali di Slavic. Nel Kievan Rus, un regno ucraino medioevale &#195;&#139; conosciuto per essere l'origine di molti degli altri veches durante i paesi di Slavic. Le menzioni pi? iniziali dei veches in chronicles russi si riferiscono agli esempi in Belgorod, ad una citt&#226;€&#161; sul Dnieper in 977, alla Repubblica di Novgorod in 1016 ed a Kiev in 1068. I complessivi hanno discusso sugli argomenti della guerra e della pace, hanno adottato le leggi ed hanno richiesto ed hanno espulso i righelli.</Italian>
 		<Spanish>[TAB]La palabra "veche" refiere a las asambleas populares en los pa&#195;&#140;ses medievales de Slavic. En el Kievan Rus, un reino ucraniano medieval se conoce para ser el origen de muchos de los otros veches a trav&#233;s de los pa&#195;&#140;ses de Slavic. Las menciones m&#194;&#183;s tempranas de veches en los chronicles rusos refieren a ejemplos en Belgorod, a una ciudad en el Dnieper en 977, a la rep?blica de Novgorod en 1016, y en Kiev en 1068. Las materias discutidas asambleas de la guerra y paz, leyes adoptados, y llamado para y reglas expelidas.</Spanish>
-		<Portuguese>[TAB]The word "veche" refers to popular assemblies in medieval Slavic countries. In the Kievan Rus, a medieval Ukrainian kingdom is known to be the origin of many of the other veches throughout Slavic countries. The earliest mentions of veches in Russian chronicles refer to examples in Belgorod, a city on the Dnieper in 977, the Novgorod Republic in 1016, and in Kiev in 1068. The assemblies discussed matters of war and peace, adopted laws, and called for and expelled rulers.</Portuguese>
+		<Portuguese>[TAB]A palavra &quot;veche&quot; refere-se &#224;s assembl&#233;ias populares nos pa&#237;ses eslavos medievais. No Principado de Kiev, um reino medieval ucraniano &#233; conhecido como a origem de muitos outros veches em pa&#237;ses eslavos. As men&#231;&#245;es mais antigas de veches em cr&#244;nicas russas referem a exemplos em Belgorod, uma cidade no rio Dnieper em 977, e em Kiev em 1068. As assembl&#233;ias discutiam quest&#245;es de guerra e paz, ado&#231;&#227;o de leis, e chamar ou remover governantes.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD</Tag>
@@ -67,7 +67,7 @@
 		<German>Kirchenburg</German>
 		<Italian>Vegvar</Italian>
 		<Spanish>Vegvar</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Fortaleza H&#250;ngara</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGARIAN_STRONGHOLD_PEDIA</Tag>
@@ -76,7 +76,7 @@
 		<German>[TAB]Besonders häufig findet man Kirchenburgen in Franken, Südfrankreich und Siebenbürgen. Insbesondere in Siebenbürgen, einem historischen deutschen Siedlungsgebiet in Rumänien, gibt es weit über hundert Kirchenburgen, von denen sieben zum UNESCO-Weltkulturerbe erklärt wurden (Birthälm/Biertan 1993, Kelling/Calnic, Wurmloch/Valea Viilor, Dersch/Darjiu, Deutsch-Weißkirch/Viscri, Keisd/Saschiz und Tartlau/Prejmer 1999). Erbaut und instandgehalten wurden sie, um sich gegen die immer wiederkehrenden Türkeneinfälle zu verteidigen.[PARAGRAPH:2]Die Kirchenburganlagen entstanden im späten Mittelalter. Die Dörfler hatten im Gegensatz zu den Städtern nicht das Geld, um Wehranlagen rings um das Dorf zu errichten. Sie waren aber nicht minder den kriegerischen Auseinandersetzungen ihrer Landesherren und damit auch Überfällen und Plünderungen ausgesetzt. Auch größere Räuberbanden waren eine nicht zu unterschätzende Gefahr. Die Kirche, oft der einzige Steinbau im Ort, war am ehesten geeignet, um sich darinnen zu verteidigen. So entstanden die unterschiedlichen Formen befestigter Kirchen, von der mit Speichern umgebenen Kirche, in der man eine mehrtägige Belagerung aushalten konnte, oder einem befestigten Wehrfriedhof, über einfache Wehrkirchen bis zur Kirchenburg.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Depois dos turcos terem conquistado muito da regi&#227;o sul da Hungria, uma nova linha de defesa dentro do pa&#237;s era necess&#225;ria. Fora de castelos, mans&#245;es, igrejas e mosteiros uma nova linha de defesa foi constru&#237;da com os esfor&#231;os dos fiadores da &#225;rea entorno em pouco tempo. Um novo sistema de castelos foi criado, que come&#231;ava no Mar Adri&#225;tico, terminava no baixo Dan&#250;bio e circundava a &#225;rea controlada pelos turcos. A fun&#231;&#227;o mais importante destes V&#233;gv&#225;rs era defender as bordas, garantir as ruas e as passagens por rio, a preven&#231;&#227;o do suprimento das tropas inimigas e a seguran&#231;a das pessoas e seus bens nas terras do entorno.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK</Tag>
@@ -85,7 +85,7 @@
 		<German>Vorwerk</German>
 		<Italian>Folwark</Italian>
 		<Spanish>Folwark</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Fazenda Polonesa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_FOLWARK_PEDIA</Tag>
@@ -103,7 +103,7 @@
 		<German>Woiwodschaft</German>
 		<Italian>Vaivadija</Italian>
 		<Spanish>Vaivadija</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Corte Provincial</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LITHUANIAN_VOIVODESHIP_PEDIA</Tag>
@@ -121,7 +121,7 @@
 		<German>Genuesische Bank</German>
 		<Italian>Banca Genovese</Italian>
 		<Spanish>Banco de Genoan</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Banco Genov&#234;s</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENOA_BANK_PEDIA</Tag>
@@ -139,7 +139,7 @@
 		<German>Opernhaus</German>
 		<Italian>Teatro dell'Opera</Italian>
 		<Spanish>Teatro de ópera</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Casa de &#211;pera</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUSTRIAN_OPERA_HOUSE_PEDIA</Tag>
@@ -157,7 +157,7 @@
 		<German>Soldattorp</German>
 		<Italian>Soldattorp</Italian>
 		<Spanish>Soldattorp</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Quartel Sueco</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SWEDISH_TENNANT_PEDIA</Tag>
@@ -175,7 +175,7 @@
 		<German>Schloss</German>
 		<Italian>Château</Italian>
 		<Spanish>Chateau</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Chateau</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRENCH_CHATEAU_PEDIA</Tag>
@@ -193,7 +193,7 @@
 		<German>Kellerei</German>
 		<Italian>Cantina</Italian>
 		<Spanish>Bodega</Spanish>
-		<Portuguese>Winery</Portuguese>
+		<Portuguese>Vin&#237;cola</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGUNDIAN_WINERY_PEDIA</Tag>
@@ -211,7 +211,7 @@
 		<German>Basar</German>
 		<Italian>Bazar</Italian>
 		<Spanish>Bazar</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Bazar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARABIC_CARAVAN_PEDIA</Tag>
@@ -220,7 +220,7 @@
 		<German>[TAB]Basar ist das persische Wort für Markt. Wie das deutsche Wort meint Basar sowohl die Zusammenführung von Angebot und Nachfrage als auch den Handelsplatz, der hinsichtlich seiner Gestaltung, Lokalisierung und Funktion spezifische Charakteristika hat.[PARAGRAPH:2]Der Begriff Basar wird für Märkte in orientalisch-islamischen Städten verwendet und ist als Lehnwort in viele Sprachen von China bis auf den Balkan eingegangen.[PARAGRAPH:2]Ein Kennzeichen "orientalischer" Basare ist die Aneinanderreihung von Geschäften, die Waren derselben Kategorie (z. B. Schuhe, Gewürze, Stoffe) verkaufen (Branchensortierung). Im Gegensatz dazu bemühen sich mitteleuropäische Händler seit der Industrialisierung eher um Gebietsschutz, versuchen also, sich räumlich möglichst deutlich von konkurrierenden Händlern zu distanzieren. Ein weiteres Kennzeichen des Basars ist die funktionale Verflechtung von Groß- und Einzelhandel. Der Basar liegt meistens in der Nähe der Hauptmoschee.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Os baz&#225;res &#193;rabes s&#227;o lugares cheios de vida e lotados de gente com centenas de tendas, e o ar &#233; cheio de gritos de mercadores tentando seduzir clientes cautelosos a comprar seus produtos. Praticamente qualquer coisa imagin&#225;vel pode ser achada em mercados, de comidas a roupas, tapetes, perfumes, m&#243;veis e tantos outros. Tais lugares podem ser perigosos para os n&#227;o iniciados, j&#225; que os mercadores tentar&#227;o espremer a maior quantia em dinheiro pelos seus produtos, e um cliente que n&#227;o &#233; versado nas artes da barganha tem grandes chances de gastar at&#233; seu &#250;ltimo centavo. Os  baz&#225;res existiram virtualmente intocados nas cidades &#225;rabes por s&#233;culos. O Grande Bazar em Istambul, Turquia, cobre umas 60 ruas e possui por volta 400 lojas. O Grande Bazar em Teer&#227;, Ir&#227;, existe de uma forma ou de outra por mais de mil anos: com mais de 10km de corredores, ele &#233; a maior vizinhan&#231;a coberta do mundo.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA</Tag>
@@ -229,7 +229,7 @@
 		<German>Noria</German>
 		<Italian>Noria</Italian>
 		<Spanish>Noria</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Nora</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORDOBAN_NORIA_PEDIA</Tag>
@@ -238,7 +238,7 @@
 		<German>[TAB]Eine Noria ist ein in Syrien gebräuchliche Form des Wasserschöpfrads.[PARAGRAPH:2]Die berühmten Wasserschöpfräder (Norias) in Hama in Syrien gelten als die größten der Welt. Sie überwinden mit entsprechend großen Raddurchmessern Höhenunterschiede von z. T. über 30 Metern. Die Wasserkunst von Mértola in Portugal hatte vermutlich ein Schöpfrad von 24 m Durchmesser.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Uma nora &#233; uma m&#225;quina de extrair &#225;gua para um pequeno aqueduto, tanto para motivos de irriga&#231;&#227;o ou, em pelo menos um exemplo conhecido, para alimentar uma salina de &#225;gua do mar.[PARAGRAPH:2]Engenheiros mu&#231;ulmanos usavam noras para descarregar &#225;gua em aquedutos que carregavam a &#225;gua para as cidades e campos. Algumas das noras usadas no mundo isl&#226;mico medieval chegavam a 20 metros de di&#226;metro, sendo a de Hama um exemplo que sobreviveu ao tempo e ainda &#233; usada em tempos modernos. Ela tem 120 compartimentos de coleta de &#225;gua e poderia levantar at&#233; 95 litros de &#225;gua por minuto.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE</Tag>
@@ -247,7 +247,7 @@
 		<German>K&#246;nigliche B&#246;rse</German>
 		<Italian>Borsa Reale</Italian>
 		<Spanish>Bolsa Real</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Bolsa Real</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENGLISH_ROYAL_EXCHANGE_PEDIA</Tag>
@@ -265,7 +265,7 @@
 		<German>Kreml</German>
 		<Italian>Cremlino</Italian>
 		<Spanish>Kremlin</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Kremlim</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOSCOW_KREMLIN_PEDIA</Tag>
@@ -285,7 +285,7 @@
 		<German>Kerker</German>
 		<Italian>Prigione</Italian>
 		<Spanish>Mazmorra</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Masmorra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUNGEON_PEDIA</Tag>
@@ -303,7 +303,7 @@
 		<German>Bogenschie&#223;anlage</German>
 		<Italian>Accademia di Tiro con l'Arco</Italian>
 		<Spanish>Gama de tiro al arco</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Campo de Arquearia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE_PEDIA</Tag>
@@ -321,7 +321,7 @@
 		<German>Kai</German>
 		<Italian>Molo</Italian>
 		<Spanish>Muelle</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Cais</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
@@ -339,7 +339,7 @@
 		<German>Zunfthaus</German>
 		<Italian>Sala delle Gilde</Italian>
 		<Spanish>Vestíbulo de gremio</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Corporação de Ofício</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILD_HALL_PEDIA</Tag>
@@ -357,7 +357,7 @@
 		<German>Gerberei</German>
 		<Italian>Conceria</Italian>
 		<Spanish>Curtiduría</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Curtume</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TANNERY_PEDIA</Tag>
@@ -375,7 +375,7 @@
 		<German>Nachtwache</German>
 		<Italian>Guardia Notturna</Italian>
 		<Spanish>Reloj de noche</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Vigília Noturna</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NIGHT_WATCH_PEDIA</Tag>
@@ -384,7 +384,7 @@
 		<German>[TAB]Die Aufgabe der Nachtwachte war es, nachts durch die Straßen und Gassen der Stadt zu gehen und für Ruhe und Ordnung zu sorgen. Der Nachtwächter warnte die schlafenden Bürger vor Feuern, Feinden und Dieben. Er überwachte das ordnungsgemäße Verschließen der Haustüren und Stadttore, und häufig gehörte es auch zu den Aufgaben des Nachtwächters, die Stunden anzusagen. Er hatte das Recht, verdächtige Personen, die nachts unterwegs waren, anzuhalten, zu befragen und notfalls zu verhaften..</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Uma vig&#237;lia noturna era uma forma&#231;&#227;o de aplica&#231;&#227;o da lei encontrada em alguns pa&#237;ses e momentos hist&#243;ricos, normalmente subordinadas ao governo municipal local. Na hist&#243;ria muitas cidades tiveram suas pr&#243;prias forma&#231;&#245;es de guarda, que serviam de pol&#237;cia e for&#231;a militar nos tempos de necessidade.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE</Tag>
@@ -393,7 +393,7 @@
 		<German>Herrenhaus</German>
 		<Italian>Casa Patronale</Italian>
 		<Spanish>Casa solariega</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Solar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANOR_HOUSE_PEDIA</Tag>
@@ -411,7 +411,7 @@
 		<German>Weberei</German>
 		<Italian>Tessitore</Italian>
 		<Spanish>Tejedor</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Tecel&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEAVER_PEDIA</Tag>
@@ -429,7 +429,7 @@
 		<German>Brauerei</German>
 		<Italian>Birreria</Italian>
 		<Spanish>Cervecería</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Cervejaria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREWERY_PEDIA</Tag>
@@ -438,7 +438,7 @@
 		<German>[TAB]Als Brauerei bezeichnet man im weitesten Sinne eine Einrichtung, in der zusammengesetzte Flüssigkeiten, meist mit Hilfe der Gärung, hergestellt werden. Brauerei bezeichnet den Ort beziehungsweise das Gebäude (Brauhaus), an dem Bier oder andere Gärgetränke gebraut werden. Brauerei bezeichnet auch das Unternehmen, das Bier herstellt und vertreibt. Der Ort, an dem die brautechnischen Anlagen stehen, wird in der Branche als Braustätte bezeichnet. Vereinzelt spricht man auch von einer Bierfabrik, insbesondere im österreichischen Sprachraum. Auch Sojasauce und manche alkoholfreie Erfrischungsgetränke werden im Brauereiverfahren hergestellt.[PARAGRAPH:2]Wenn auch Wein im Mittelalter als das prestigeträchtigere Getränk galt, war Bier in vielen Gegenden Europas das wichtigste Volksgetränk. Zum Brauen des Bieres wurden alle vorhandenen Getreidearten verwendet und bis ins 16. Jahrhundert mit Gruit oder Grut (Grutbier) gewürzt. Bier, das aus diesen regional unterschiedlichen Kräutermischungen hergestellt wurde, war trüb, süßlich, kohlensäurearm, nicht lange haltbar und wies vermutlich einen deutlich niedrigeren Alkoholgehalt als das heutige Bier auf. Anders als Wein galt Bier nicht als gesundheitsfördernd. Im Jahr 1256 bezeichnete der aus Siena stammende Arzt Aldobrandino Bier als ein Getränk, das schlechten Atem verursache, Kopf und Magen schädige und die Zähne ruiniere. Gagel als Bierwürze wurde zunehmend durch Hopfen verdrängt. Belegt ist ein Verbot von Gagelbier aber erstmals für Mölln im 16. Jahrhundert.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Uma cervejaria &#233; um estabelecimento dedicado &#224; produ&#231;&#227;o de cerveja, embora a cerveja possa ser feita em casa, e tenha sido assim durante a maior parte de sua hist&#243;ria. Uma companhia que faz cerveja &#233; tanto chamada uma cervejaria quanto uma companhia de cerveja.[PARAGRAPH:2]A diversidade nos tamanhos das cervejarias &#233; equiparada &#224; diversidade dos processos, graus de automa&#231;&#227;o, e tipos de cerveja produzidos nas cervejarias. Tipicamente uma cervejaria &#233; dividida em sec&#231;&#245;es distintas, com cada sec&#231;&#227;o reservada para uma parte do preparo da cerveja.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAVERN</Tag>
@@ -447,7 +447,7 @@
 		<German>Schänke</German>
 		<Italian>Taverna</Italian>
 		<Spanish>Tavern</Spanish>
-		<Portuguese>Tavern</Portuguese>
+		<Portuguese>Taverna</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAVERN_PEDIA</Tag>
@@ -456,7 +456,7 @@
 		<German>[TAB]Schänke ist die historische Bezeichnung für eine Gaststätte mit Krugrecht. Die Schreibweisen "Schenke" (zu "ausschenken") und "Schänke" (zu "Ausschank") sind gleichermaßen zulässig.[PARAGRAPH:2]Das Krugrecht bezeichnet das spätmittelalterliche Recht zur gewerblichen Bewirtung von Gästen in einer Gaststätte ("Krug"). Dies beinhaltete jedoch nicht das Recht zur Beherbergung.[PARAGRAPH:2]Der Inhaber des Krugrechts wurde auch als Krüger (daher der Nachname) bezeichnet. Früher wurde dem beauftragten Gründer eines Dorfes (Lokator) meist neben dem Mahlrecht auch das Krugrecht verliehen. Später wurde das Krugrecht meist vom Dorfschulzen ausgeübt. Oft war es auch mit der Braugerechtsame gekoppelt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Uma taverna &#233; um lugar de neg&#243;cios onde pessoas se re&#250;nem para beber bebidas alco&#243;licas e comer, e em alguns casos onde viajantes recebem alojamento. Uma estalagem &#233; uma taverna que tem uma licensa para colocar convidados como alojados. A palavra deriva do Latim taberna e do Grego ??????, cujo significado original era uma oficina. Na l&#237;ngua inglesa a taverna era um estabelecimento que servia vinho enquanto a estalagem servia cerveja. Com o passar do tempo, as palavras taverna e estalagem tornaram-se intercambi&#225;veis e sin&#244;nimas uma com a outra. Viajantes ficavam em tavernas.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN</Tag>
@@ -465,7 +465,7 @@
 		<German>Gasthaus</German>
 		<Italian>Locanda</Italian>
 		<Spanish>Posada</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Estalagem</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INN_PEDIA</Tag>
@@ -483,7 +483,7 @@
 		<German>Walkmühle</German>
 		<Italian>Fabbrica Tessile</Italian>
 		<Spanish>Manufactura textil</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Ind&#250;stria T&#234;xtil</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_MILL_PEDIA</Tag>
@@ -501,7 +501,7 @@
 		<German>Goldschmied</German>
 		<Italian>Gioielleria</Italian>
 		<Spanish>Joyería</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Joalheria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWELER_PEDIA</Tag>
@@ -519,7 +519,7 @@
 		<German>R&#228;ucherei</German>
 		<Italian>Affumicatoio</Italian>
 		<Spanish>Ahumadero</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Defumadouro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMOKEHOUSE_PEDIA</Tag>
@@ -537,7 +537,7 @@
 		<German>Bollwerk</German>
 		<Italian>Fortificazione a Stella</Italian>
 		<Spanish>Estrelle Fuerte</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Fortifica&#231;&#227;o Abaluartada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT_PEDIA</Tag>
@@ -555,7 +555,7 @@
 		<German>Speicher</German>
 		<Italian>Magazzino</Italian>
 		<Spanish>Almacén</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Armaz&#233;m</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAREHOUSE_PEDIA</Tag>
@@ -573,7 +573,7 @@
 		<German>Kaffeehaus</German>
 		<Italian>Caffetteria</Italian>
 		<Spanish>Café</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Cafeteria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COFFEE_HOUSE_PEDIA</Tag>
@@ -591,7 +591,7 @@
 		<German>Luxusladen</German>
 		<Italian>Negozio di Lusso</Italian>
 		<Spanish>Tienda de lujo</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Loja de Luxos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_STORE_PEDIA</Tag>
@@ -609,7 +609,7 @@
 		<German>Schmiede</German>
 		<Italian>Fucina</Italian>
 		<Spanish>Herrero</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Forja</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORGE_PEDIA</Tag>
@@ -627,7 +627,7 @@
 		<German>Apotheke</German>
 		<Italian>Farmacista</Italian>
 		<Spanish>Boticario</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Botic&#225;rio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_APOTHECARY_PEDIA</Tag>
@@ -645,7 +645,7 @@
 		<German>Hospital</German>
 		<Italian>Infermeria</Italian>
 		<Spanish>Enfermería</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Enfermaria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Tag>
@@ -663,7 +663,7 @@
 		<German>[ICON_BULLET]Benötigt den [LINK=CORPORATION_1]Johanniterorden[\LINK] in dieser Stadt</German>
 		<Italian>[ICON_BULLET]Richiede [LINK=CORPORATION_1]Cavalieri Ospedalieri[\LINK]nella città</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_1]Knights Hospitallers[\LINK] presente na cidade</Portuguese>
 	</TEXT>
 		<!-- General Buildings -->
 		<!-- Religious Buildings -->
@@ -674,7 +674,7 @@
 		<German>Heidnischer Schrein</German>
 		<Italian>Santuario Pagano</Italian>
 		<Spanish>Relicario pagano</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Santu&#225;rio Pag&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Tag>
@@ -692,7 +692,7 @@
 		<German>J&#252;disches Viertel</German>
 		<Italian>Quartiere Ebreo</Italian>
 		<Spanish>Cuarto judío</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Bairro Judaico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Tag>
@@ -710,7 +710,7 @@
 		<German>Islamische Moschee</German>
 		<Italian>Moschea Islamica</Italian>
 		<Spanish>Mezquita isl&#225;mica</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Mesquita Isl&#226;mica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE_PEDIA</Tag>
@@ -728,7 +728,7 @@
 		<German>Islamisches Minarett</German>
 		<Italian>Minareto Islamica</Italian>
 		<Spanish>Minarete islámico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Minarete Isl&#226;mico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CHAPEL_PEDIA</Tag>
@@ -746,7 +746,7 @@
 		<German>Islamische Madrasa</German>
 		<Italian>Madrassa Islamica</Italian>
 		<Spanish>Madraza isl&#225;mico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Madrassa Isl&#226;mica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MADRASSA_PEDIA</Tag>
@@ -764,7 +764,7 @@
 		<German>Islamische Gro&#223;moschee</German>
 		<Italian>Grande Moschea Islamica</Italian>
 		<Spanish>Gran Mezquita islámica</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Gr&#227;-Mesquita Isl&#226;mica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL_PEDIA</Tag>
@@ -782,7 +782,7 @@
 		<German>Haus der Weisheit</German>
 		<Italian>Casa della Sapienza</Italian>
 		<Spanish>La casa de Sabiduría</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Casa do Saber</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SCHOOL_PEDIA</Tag>
@@ -800,7 +800,7 @@
 		<German>Katholische Kirche</German>
 		<Italian>Chiesa Cattolica</Italian>
 		<Spanish>Iglesia Católica</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Igreja Cat&#243;lica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CHAPEL</Tag>
@@ -809,7 +809,7 @@
 		<German>Katholischer Glockenturm</German>
 		<Italian>Campanile cattolico</Italian>
 		<Spanish>Campanario católico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Campan&#225;rio Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_MONASTERY</Tag>
@@ -818,7 +818,7 @@
 		<German>Katholisches Kloster</German>
 		<Italian>Monastero Cattolico</Italian>
 		<Spanish>Monasterio católico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Mosteiro Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL</Tag>
@@ -827,7 +827,7 @@
 		<German>Katholische Kathedrale</German>
 		<Italian>Cattedrale Cattolica</Italian>
 		<Spanish>Catedral católica</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Catedral Cat&#243;lica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY</Tag>
@@ -836,7 +836,7 @@
 		<German>Katholischer Reliquienschrein</German>
 		<Italian>Reliquiario Cattolico</Italian>
 		<Spanish>Relicario católico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Relic&#225;rio Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL</Tag>
@@ -845,7 +845,7 @@
 		<German>Katholische Hochschule</German>
 		<Italian>Scuola Religiosa Cattolica</Italian>
 		<Spanish>Escuela Catedral católica</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Escola Católica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM</Tag>
@@ -854,7 +854,7 @@
 		<German>Katholisches Skriptorium</German>
 		<Italian>Scriptorium Cattolico</Italian>
 		<Spanish>Scriptorium católico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Scriptorium Católico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY</Tag>
@@ -863,7 +863,7 @@
 		<German>Katholisches Seminar</German>
 		<Italian>Seminario Cattolico</Italian>
 		<Spanish>Seminario católico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Seminário Católico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Tag>
@@ -872,7 +872,7 @@
 		<German>Orthodoxe Kirche</German>
 		<Italian>Chiesa Ortodossa</Italian>
 		<Spanish>Iglesia ortodoxa</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Igreja Ortodoxa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CHAPEL</Tag>
@@ -881,7 +881,7 @@
 		<German>Orthodoxer Glockenturm</German>
 		<Italian>Campanile Ortodosso</Italian>
 		<Spanish>Campanario ortodoxo</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Campanário Ortodoxo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_MONASTERY</Tag>
@@ -890,7 +890,7 @@
 		<German>Orthodoxes Kloster</German>
 		<Italian>Monastero Ortodosso</Italian>
 		<Spanish>Monasterio ortodoxo</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Mosteiro Ortodoxo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL</Tag>
@@ -899,7 +899,7 @@
 		<German>Orthodoxe Kathedrale</German>
 		<Italian>Cattedrale Ortodossa</Italian>
 		<Spanish>Catedral ortodoxa</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Catedral Ortodoxa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY</Tag>
@@ -908,7 +908,7 @@
 		<German>Orthodoxer Reliquienschrein</German>
 		<Italian>Reliquario Ortodosso</Italian>
 		<Spanish>Relicario ortodoxo</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Relicário Ortodoxo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL</Tag>
@@ -917,7 +917,7 @@
 		<German>Orthodoxe Hochschule</German>
 		<Italian>Scuola Religiosa Ortodossa</Italian>
 		<Spanish>Escuela Catedral ortodoxa</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Escola Ortodoxa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCRIPTORIUM</Tag>
@@ -926,7 +926,7 @@
 		<German>Orthodoxes Skriptorium</German>
 		<Italian>Scriptorium Ortodosso</Italian>
 		<Spanish>Scriptorium ortodoxo</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Scriptorium Ortodoxo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SEMINARY</Tag>
@@ -935,7 +935,7 @@
 		<German>Orthodoxes Seminar</German>
 		<Italian>Seminario Ortodosso</Italian>
 		<Spanish>Seminario ortodoxo</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Seminário Ortodoxo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_TEMPLE</Tag>
@@ -944,7 +944,7 @@
 		<German>Protestantische Kirche</German>
 		<Italian>Chiesa Protestante</Italian>
 		<Spanish>Iglesia protestante</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Igreja Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_CHAPEL</Tag>
@@ -953,7 +953,7 @@
 		<German>Protestantischer Glockenturm</German>
 		<Italian>Campanile Protestante</Italian>
 		<Spanish>Campanario protestante</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Campanário Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_MONASTERY</Tag>
@@ -962,7 +962,7 @@
 		<German>Protestantisches Kloster</German>
 		<Italian>Monastero Protestante</Italian>
 		<Spanish>Monasterio protestante</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Mosteiro Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL</Tag>
@@ -971,7 +971,7 @@
 		<German>Protestantische Kathedrale</German>
 		<Italian>Cattedrale Protestante</Italian>
 		<Spanish>Catedral protestante</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Catedral Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SCHOOL</Tag>
@@ -980,7 +980,7 @@
 		<German>Protestantische Hochschule</German>
 		<Italian>Scuola Religiosa Protestante</Italian>
 		<Spanish>Colegio religioso protestante</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Escola Eclesiástica Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SEMINARY</Tag>
@@ -989,7 +989,7 @@
 		<German>Protestantisches Seminar</German>
 		<Italian>Seminario Protestante</Italian>
 		<Spanish>Seminario protestante</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Seminário Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Tag>
@@ -1061,7 +1061,7 @@
 		<German>Glockenturm</German>
 		<Italian>Campanile</Italian>
 		<Spanish>Campanario</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Campanário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_RELIQUARY</Tag>
@@ -1070,7 +1070,7 @@
 		<German>Reliquienschrein</German>
 		<Italian>Reliquiario</Italian>
 		<Spanish>Relicario</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Relicário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SCHOOL</Tag>
@@ -1079,7 +1079,7 @@
 		<German>Theologische Hochschule</German>
 		<Italian>Scuola Religiosa</Italian>
 		<Spanish>Escuela religiosa</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Escola Eclesiástica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SEMINARY</Tag>
@@ -1088,7 +1088,7 @@
 		<German>Theologisches Seminar</German>
 		<Italian>Seminario</Italian>
 		<Spanish>Seminario</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Seminário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_SCRIPTORIUM</Tag>
@@ -1097,7 +1097,7 @@
 		<German>Skriptorium</German>
 		<Italian>Scriptorium</Italian>
 		<Spanish>Scriptorium</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Scriptorium</Portuguese>
 	</TEXT>
 		<!-- Religious Buildings -->
 		<!-- Other -->
@@ -1108,7 +1108,7 @@
 		<German>[ICON_BULLET]+1 Stabilität</German>
 		<Italian>[ICON_BULLET]+1 Stabilità</Italian>
 		<Spanish>[ICON_BULLET]+1 Stability</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>[ICON_BULLET]+1 Estabilidade;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
@@ -1117,7 +1117,7 @@
 		<German>[ICON_BULLET]Beschädigt feindliche Einheiten in der Umgebung.</German>
 		<Italian>[ICON_BULLET]Danneggia le unità nemiche nei paraggi.</Italian>
 		<Spanish>[ICON_BULLET]Damages enemy units in the area.</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>[ICON_BULLET]Danifica unidades inimigas na área</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BOMBARD_IMMUNE_DEFENSE</Tag>
@@ -1126,7 +1126,7 @@
 		<German>[ICON_BULLET]%D1_Mod% Verteidigung (kann durch Bombardierung nicht durchbrochen werden)</German>
 		<Italian>[ICON_BULLET]%D1_Mod% Defense (Non può essere distrutta dai bombardamenti)</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod% Defesa (Não pode ser destruída por Bombardeio)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1</Tag>
@@ -1171,7 +1171,7 @@
 		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] in jeder Stadt sofern ihr keine Staatsreligion habt. </German>
 		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per città, se non hai una Religione Ufficiale. </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] por cidade, se você não possuir uma religião estatal. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
@@ -1180,7 +1180,7 @@
 		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] ohne Staatsreligion. </German>
 		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] se non hai una Religione Ufficiale. </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] sem uma religião estatal. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>
@@ -1189,7 +1189,7 @@
 		<German>[ICON_BULLET]%D1_Mod % Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt. </German>
 		<Italian>[ICON_BULLET]%D1_Mod % di interessi aggiunti al tuo [ICON_GOLD] all'inizio di ogni turno. </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn.</Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] no começo de cada turno. </Portuguese>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

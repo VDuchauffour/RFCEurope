@@ -12,7 +12,7 @@
 		<German>Johanniterorden</German>
 		<Italian>Cavalieri Ospedalieri</Italian>
 		<Spanish>Caballeros Hospitalarios</Spanish>
-		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#232; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#251;</Portuguese>
+		<Portuguese>Cavaleiros Hospitalários</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Tag>
@@ -30,7 +30,7 @@
 		<German>Templerorden</German>
 		<Italian>Cavalieri Templari</Italian>
 		<Spanish>Caballeros Templarios</Spanish>
-		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#232; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;&#251;</Portuguese>
+		<Portuguese>Cavaleiros Templários</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Tag>
@@ -48,7 +48,7 @@
 		<German>Deutscher Orden</German>
 		<Italian>Cavalieri Teutonici</Italian>
 		<Spanish>Caballeros Teut&#243;nica</Spanish>
-		<Portuguese>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#229; &#208;&#251;&#246;&#224;&#240;&#232;</Portuguese>
+		<Portuguese>Cavaleiros Teutônicos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Tag>
@@ -66,7 +66,7 @@
 		<German>Hanse</German>
 		<Italian>Lega Anseatica</Italian>
 		<Spanish>Liga Hanse&#225;tica</Spanish>
-		<Portuguese>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#224;&#255; &#203;&#232;&#227;&#224;</Portuguese>
+		<Portuguese>Liga Hanseática</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANSEATIC_LEAGUE_PEDIA</Tag>
@@ -84,7 +84,7 @@
 		<German>[ICON_BULLET]Kann nur in einer Küstenstadt begründet werden</German>
 		<Italian>[ICON_BULLET]Può essere fondata solo in città costiere</Italian>
 		<Spanish>[ICON_BULLET]Can only be founded in coastal towns</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Só pode ser fundada em cidades costeiras</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEDICI_BANKS</Tag>
@@ -93,7 +93,7 @@
 		<German>Banco Medici</German>
 		<Italian>Banco dei Medici</Italian>
 		<Spanish>Bancos Medici</Spanish>
-		<Portuguese>&#193;&#224;&#237;&#234;&#232; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Portuguese>
+		<Portuguese>Bancos Médici</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEDICI_BANKS_PEDIA</Tag>
@@ -111,7 +111,7 @@
 		<German>Augsburger Familien</German>
 		<Italian>Famiglie di Augusta</Italian>
 		<Spanish>Familias Augsburgo</Spanish>
-		<Portuguese>&#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#209;&#229;&#236;&#252;&#232;</Portuguese>
+		<Portuguese>Famílias Augsburgo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUGSBURG_FAMILIES_PEDIA</Tag>
@@ -129,7 +129,7 @@
 		<German>Banco di San Giorgio</German>
 		<Italian>Banco di San Giorgio</Italian>
 		<Spanish>Banco de S. Jorge</Spanish>
-		<Portuguese>&#193;&#224;&#237;&#234; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Portuguese>
+		<Portuguese>Banco de São Jorge</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BANK_OF_ST_GEORGE_PEDIA</Tag>
@@ -151,7 +151,7 @@
 		</German>
 		<Italian>Maestro Ospedaliero</Italian>
 		<Spanish>Maestre Hospitalario</Spanish>
-		<Portuguese>&#204;&#224;&#241;&#242;&#229;&#240; &#195;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;</Portuguese>
+		<Portuguese>Mestre Hospitalário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_2</Tag>
@@ -164,7 +164,7 @@
 		</German>
 		<Italian>Maestro Templare</Italian>
 		<Spanish>Maestre Templario</Spanish>
-		<Portuguese>&#204;&#224;&#241;&#242;&#229;&#240; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Portuguese>
+		<Portuguese>Mestre Templário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_3</Tag>
@@ -177,7 +177,7 @@
 		</German>
 		<Italian>Maestro Teutonico</Italian>
 		<Spanish>Maestre Teut&#243;nico</Spanish>
-		<Portuguese>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#204;&#224;&#241;&#242;&#229;&#240;</Portuguese>
+		<Portuguese>Mestre Teutônico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_4</Tag>
@@ -190,7 +190,7 @@
 		</German>
 		<Italian>Mercante Anseatico</Italian>
 		<Spanish>Mercader Hanseático</Spanish>
-		<Portuguese>&#195;&#224;&#237;&#231;&#229;&#233;&#241;&#234;&#232;&#233; &#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;</Portuguese>
+		<Portuguese>Mercador Hanseático</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_5</Tag>
@@ -203,7 +203,7 @@
 		</German>
 		<Italian>Banchiere de Medici</Italian>
 		<Spanish>Mercader Medici</Spanish>
-		<Portuguese>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#241;&#229;&#236;&#252;&#232; &#204;&#229;&#228;&#232;&#247;&#232;</Portuguese>
+		<Portuguese>Mercador Médici</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_6</Tag>
@@ -216,7 +216,7 @@
 		</German>
 		<Italian>Mercante di Augusta</Italian>
 		<Spanish>Mercader Augsburgo</Spanish>
-		<Portuguese>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#192;&#243;&#227;&#241;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#245; &#241;&#229;&#236;&#229;&#233;</Portuguese>
+		<Portuguese>Mercador Augsburgo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXECUTIVE_7</Tag>
@@ -229,6 +229,6 @@
 		</German>
 		<Italian>Banchiere di San Giorgio</Italian>
 		<Spanish>Mercader del Banco de S. Jorge</Spanish>
-		<Portuguese>&#200;&#241;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252; &#193;&#224;&#237;&#234;&#224; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#195;&#229;&#238;&#240;&#227;&#232;&#255;</Portuguese>
+		<Portuguese>Mercador do Banco de São Jorge</Portuguese>
 	</TEXT>
 </Civ4GameText>

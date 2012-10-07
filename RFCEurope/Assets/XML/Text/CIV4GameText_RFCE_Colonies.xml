@@ -12,7 +12,7 @@
 		<German>[ICON_BULLET]Ben&#246;tigt [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
 		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
-		<Portuguese>[ICON_BULLET]Requires [LINK=literal]%s1_Bonus[\LINK] </Portuguese>
+		<Portuguese>[ICON_BULLET]Requer [LINK=literal]%s1_Bonus[\LINK] </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES1</Tag>
@@ -21,7 +21,7 @@
 		<German>[ICON_BULLET]Ben&#246;tigt [LINK=literal]%s1_Bonus[\LINK] </German>
 		<Italian>[ICON_BULLET]Richiede [LINK=literal]%s1_Bonus [\LINK] </Italian>
 		<Spanish>[ICON_BULLET]Requiere [LINK=literal]%s1_Bonus [\LINK] </Spanish>
-		<Portuguese>[ICON_BULLET]&#210;&#240;&#229;&#225;&#243;&#229;&#242; [LINK=literal]%s1_Bonus[\LINK]</Portuguese>
+		<Portuguese>[ICON_BULLET]Requer [LINK=literal]%s1_Bonus[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PPROJECT_REQUIRES2</Tag>
@@ -39,7 +39,7 @@
 		<German>[ICON_BULLET]Liefert %D1_Mod </German>
 		<Italian>[ICON_BULLET]Fornisce %D1_Mod </Italian>
 		<Spanish>[ICON_BULLET]Proporciona %D1_Mod </Spanish>
-		<Portuguese>[ICON_BULLET]&#206;&#225;&#229;&#241;&#239;&#229;&#247;&#232;&#226;&#224;&#229;&#242; %D1_Mod</Portuguese>
+		<Portuguese>[ICON_BULLET]Proporciona %D1_Mod</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
@@ -57,7 +57,7 @@
 		<German>Handelsgesellschaft</German>
 		<Italian>Compagnia Commerciale</Italian>
 		<Spanish>La Compa&#241;&#237;a de las Indias</Spanish>
-		<Portuguese>&#210;&#238;&#240;&#227;&#238;&#226;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Portuguese>
+		<Portuguese>Companhia Comercial</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIA_COMPANY</Tag>
@@ -66,7 +66,7 @@
 		<German>Ostindien-Kompanie</German>
 		<Italian>Compagnia delle Indie Orientali</Italian>
 		<Spanish>Compania de las Indias Orientales</Spanish>
-		<Portuguese>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Portuguese>
+		<Portuguese>Companhia das Índias Orientais</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_WEST_INDIA_COMPANY</Tag>
@@ -75,7 +75,7 @@
 		<German>Westindien-Kompanie</German>
 		<Italian>Compagnia delle Indie Occidentali</Italian>
 		<Spanish>Compania de las Indias Occidentales</Spanish>
-		<Portuguese>&#199;&#224;&#239;&#224;&#228;&#237;&#224;&#255; &#232;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#202;&#238;&#236;&#239;&#224;&#237;&#232;&#255;</Portuguese>
+		<Portuguese>Companhia das Índias Ocidentais</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_ENCYCLOPEDIE</Tag>
@@ -84,7 +84,7 @@
 		<German>Enzyklop&#228;die</German>
 		<Italian>L'Enciclopedia</Italian>
 		<Spanish>Enciclopedia</Spanish>
-		<Portuguese>&#221;&#237;&#246;&#232;&#234;&#235;&#238;&#239;&#229;&#228;&#232;&#255; ("L'Encyclopedie")</Portuguese>
+		<Portuguese>A Enciclopédia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_GOLD_COAST</Tag>
@@ -93,7 +93,7 @@
 		<German>Goldk&#252;ste</German>
 		<Italian>Costa dell'Oro</Italian>
 		<Spanish>Costa del Oro</Spanish>
-		<Portuguese>&#199;&#238;&#235;&#238;&#242;&#238;&#229; &#207;&#238;&#225;&#229;&#240;&#229;&#230;&#252;&#229;</Portuguese>
+		<Portuguese>Costa do Ouro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVORY_COAST</Tag>
@@ -102,7 +102,7 @@
 		<German>Elfenbeink&#252;ste</German>
 		<Italian>Costa d'Avorio</Italian>
 		<Spanish>Costa de Marfil</Spanish>
-		<Portuguese>&#193;&#229;&#240;&#229;&#227; &#241;&#235;&#238;&#237;&#238;&#226;&#238;&#233; &#234;&#238;&#241;&#242;&#232;</Portuguese>
+		<Portuguese>Costa do Marfim</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CUBA</Tag>
@@ -111,7 +111,7 @@
 		<German>Kuba</German>
 		<Italian>Cuba</Italian>
 		<Spanish>Cuba</Spanish>
-		<Portuguese>&#202;&#243;&#225;&#224;</Portuguese>
+		<Portuguese>Cuba</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_BRAZIL</Tag>
@@ -120,7 +120,7 @@
 		<German>Brazilien</German>
 		<Italian>Brasile</Italian>
 		<Spanish>Brasil</Spanish>
-		<Portuguese>&#193;&#240;&#224;&#231;&#232;&#235;&#232;&#255;</Portuguese>
+		<Portuguese>Brasil</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HUDSON</Tag>
@@ -129,7 +129,7 @@
 		<German>Hudson Bay</German>
 		<Italian>Baia di Hudson</Italian>
 		<Spanish>Bahía de Hudson</Spanish>
-		<Portuguese>&#195;&#243;&#228;&#231;&#238;&#237;&#241;&#234;&#224;&#255; &#193;&#243;&#245;&#242;&#224;</Portuguese>
+		<Portuguese>Baía de Hudson</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT</Tag>
@@ -138,7 +138,7 @@
 		<German>Fernöstlicher Vertragshafen</German>
 		<Italian>Trattato Portuale Orientale</Italian>
 		<Spanish>Puerto Oriental distante de Tratado</Spanish>
-		<Portuguese>&#196;&#224;&#235;&#229;&#234;&#232;&#233; &#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#233; &#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#251;&#233; &#207;&#238;&#240;&#242;</Portuguese>
+		<Portuguese>Feitoria do Extremo Oriente</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_INDIA</Tag>
@@ -147,7 +147,7 @@
 		<German>Indischer Handelsposten</German>
 		<Italian>Stazione Commerciale Indiana</Italian>
 		<Spanish>Centro de comercio Indio</Spanish>
-		<Portuguese>&#200;&#237;&#228;&#232;&#233;&#241;&#234;&#224;&#255; &#212;&#224;&#234;&#242;&#238;&#240;&#232;&#255;</Portuguese>
+		<Portuguese>Feitoria Indiana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_INDIES</Tag>
@@ -156,7 +156,7 @@
 		<German>Ostindien</German>
 		<Italian>Indie Orientali</Italian>
 		<Spanish>Indias Orientales</Spanish>
-		<Portuguese>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#251;&#229; &#200;&#237;&#228;&#232;&#232;</Portuguese>
+		<Portuguese>Índias Orientais</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_MALAYSIA</Tag>
@@ -165,7 +165,7 @@
 		<German>Malaysia</German>
 		<Italian>Malacca</Italian>
 		<Spanish>Malaca</Spanish>
-		<Portuguese>&#204;&#224;&#235;&#224;&#233;&#255;</Portuguese>
+		<Portuguese>Malásia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_CAPE_TOWN</Tag>
@@ -174,7 +174,7 @@
 		<German>Kapstadt</German>
 		<Italian>Città del Capo</Italian>
 		<Spanish>Ciudad del Cabo</Spanish>
-		<Portuguese>&#202;&#229;&#233;&#239;&#242;&#224;&#243;&#237;</Portuguese>
+		<Portuguese>Cidade do Cabo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VIRGINIA</Tag>
@@ -183,7 +183,7 @@
 		<German>Virginia</German>
 		<Italian>Virginia</Italian>
 		<Spanish>Virginia</Spanish>
-		<Portuguese>&#194;&#232;&#240;&#228;&#230;&#232;&#237;&#232;&#255;</Portuguese>
+		<Portuguese>Virgínia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_EAST_AFRICA</Tag>
@@ -192,7 +192,7 @@
 		<German>Ostafrika</German>
 		<Italian>Africa Orientale</Italian>
 		<Spanish>África Oriental</Spanish>
-		<Portuguese>&#194;&#238;&#241;&#242;&#238;&#247;&#237;&#224;&#255; &#192;&#244;&#240;&#232;&#234;&#224;</Portuguese>
+		<Portuguese>África Oriental</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_AZTEC_CONQUEST</Tag>
@@ -201,7 +201,7 @@
 		<German>Eroberung der Azteken</German>
 		<Italian>Conquista dell'Impero Azteco</Italian>
 		<Spanish>Conquista Azteca</Spanish>
-		<Portuguese>Aztec Conquest</Portuguese>
+		<Portuguese>Conquista Azteca</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_INCA_CONQUEST</Tag>
@@ -210,7 +210,7 @@
 		<German>Eroberung der Inkas</German>
 		<Italian>Conquista dell'Impero Inca</Italian>
 		<Spanish>Conquista Incaica</Spanish>
-		<Portuguese>Inca Conquest</Portuguese>
+		<Portuguese>Conquista Inca</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_HISPANIOLA</Tag>
@@ -237,7 +237,7 @@
 		<German>Neu-England</German>
 		<Italian>Nuova Inghilterra</Italian>
 		<Spanish>Nueva Inglaterra</Spanish>
-		<Portuguese>New England</Portuguese>
+		<Portuguese>Nova Inglaterra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_JAMAICA</Tag>
@@ -255,7 +255,7 @@
 		<German>Panama</German>
 		<Italian>Panamá</Italian>
 		<Spanish>Panamá</Spanish>
-		<Portuguese>Panama</Portuguese>
+		<Portuguese>Panamá</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_LOUISIANA</Tag>
@@ -264,7 +264,7 @@
 		<German>Louisiana</German>
 		<Italian>Louisiana</Italian>
 		<Spanish>Luisiana</Spanish>
-		<Portuguese>Louisiana</Portuguese>
+		<Portuguese>Luisiana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_PHILLIPPINES</Tag>
@@ -273,7 +273,7 @@
 		<German>Philippinen</German>
 		<Italian>Filippine</Italian>
 		<Spanish>Filipinas</Spanish>
-		<Portuguese>Phillipines</Portuguese>
+		<Portuguese>Filipinas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_GUINEA</Tag>
@@ -282,7 +282,7 @@
 		<German>Guinea</German>
 		<Italian>Guinea</Italian>
 		<Spanish>Guinea</Spanish>
-		<Portuguese>Guinea</Portuguese>
+		<Portuguese>Guiné</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_VINLAND</Tag>

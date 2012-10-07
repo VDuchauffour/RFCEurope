@@ -28,7 +28,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
+		<Portuguese>
+			<Text>Missionário Católico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORTHODOX_MISSIONARY</Tag>
@@ -53,7 +57,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
+		<Portuguese>
+			<Text>Missionário Ortodoxo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROTESTANT_MISSIONARY</Tag>
@@ -78,7 +86,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
+		<Portuguese>
+			<Text>Missionário Protestante</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISLAMIC_MISSIONARY</Tag>
@@ -103,7 +115,11 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Portuguese>&#204;&#243;&#241;&#243;&#235;&#252;&#236;&#224;&#237;&#241;&#234;&#232;&#233; &#204;&#232;&#241;&#241;&#232;&#238;&#237;&#229;&#240;</Portuguese>
+		<Portuguese>
+			<Text>Missionário Islâmico:Missionários Islâmicos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPEARMAN</Tag>
@@ -116,7 +132,7 @@
 		</German>
 		<Italian>Lanciere</Italian>
 		<Spanish>Lancero</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Lanceiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPEARMAN_PEDIA</Tag>
@@ -138,7 +154,7 @@
 		</German>
 		<Italian>Ronconiere</Italian>
 		<Spanish>Piquero papal</Spanish>
-		<Portuguese>&#192;&#235;&#229;&#225;&#224;&#240;&#228;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUISARME_PEDIA</Tag>
@@ -182,7 +198,7 @@
 		</German>
 		<Italian>Arbalestiere</Italian>
 		<Spanish>Ballestero pesado</Spanish>
-		<Portuguese>&#210;&#255;&#230;&#229;&#235;&#251;&#233; &#192;&#240;&#225;&#224;&#235;&#229;&#242;&#247;&#232;&#234;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARBALEST_PEDIA</Tag>
@@ -204,7 +220,7 @@
 		</German>
 		<Italian>Arciere a Cavallo</Italian>
 		<Spanish>Arquero a caballo</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Arqueiro Montado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORSE_ARCHER_PEDIA</Tag>
@@ -226,7 +242,7 @@
 		</German>
 		<Italian>Sergente a Cavallo</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Sargento Montado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_SERGEANT_PEDIA</Tag>
@@ -248,7 +264,7 @@
 		</German>
 		<Italian>Fanteria a Cavallo</Italian>
 		<Spanish>Infanter&#237;a montada</Spanish>
-		<Portuguese>&#202;&#238;&#237;&#237;&#251;&#233; &#209;&#229;&#240;&#230;&#224;&#237;&#242;</Portuguese>
+		<Portuguese>Infantaria Montada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
@@ -270,7 +286,7 @@
 		</German>
 		<Italian>Cavalleria Leggera</Italian>
 		<Spanish>Caballer&#237;a ligera</Spanish>
-		<Portuguese>&#211;&#235;&#224;&#237;</Portuguese>
+		<Portuguese>Lanceiro Montado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LANCER_PEDIA</Tag>
@@ -292,7 +308,7 @@
 		</German>
 		<Italian>Cavalleria Corazzata</Italian>
 		<Spanish>Caballer&#237;a pesada</Spanish>
-		<Portuguese>&#193;&#240;&#238;&#237;&#232;&#240;&#238;&#226;&#224;&#237;&#237;&#251;&#233; &#211;&#235;&#224;&#237;</Portuguese>
+		<Portuguese>Lanceiro Montado Pesado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_LANCER_PEDIA</Tag>
@@ -314,7 +330,7 @@
 		</German>
 		<Italian>Bombarda</Italian>
 		<Spanish>Bombarda</Spanish>
-		<Portuguese>&#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Portuguese>
+		<Portuguese>Bombardeiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD_PEDIA</Tag>
@@ -336,7 +352,7 @@
 		</German>
 		<Italian>Artiglieria da Campo</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>&#207;&#238;&#235;&#229;&#226;&#224;&#255; &#207;&#243;&#248;&#234;&#224;</Portuguese>
+		<Portuguese>Artilharia de Campo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIELD_ARTILLERY_PEDIA</Tag>
@@ -358,7 +374,7 @@
 		</German>
 		<Italian>Ussaro</Italian>
 		<Spanish>Húsar</Spanish>
-		<Portuguese>&#195;&#243;&#241;&#224;&#240;</Portuguese>
+		<Portuguese>Hussar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSSAR_PEDIA</Tag>
@@ -380,7 +396,7 @@
 		</German>
 		<Italian>Pistoliere</Italian>
 		<Spanish>Pistolier</Spanish>
-		<Portuguese>&#207;&#232;&#241;&#242;&#238;&#235;&#229;&#242;&#247;&#232;&#234;</Portuguese>
+		<Portuguese>Pistoleiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PISTOLIER_PEDIA</Tag>
@@ -402,7 +418,7 @@
 		</German>
 		<Italian>Dragone</Italian>
 		<Spanish>Dragón</Spanish>
-		<Portuguese>&#196;&#240;&#224;&#227;&#243;&#237;</Portuguese>
+		<Portuguese>Dragoon</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRAGOON_PEDIA</Tag>
@@ -424,7 +440,7 @@
 		</German>
 		<Italian>Archibugiere</Italian>
 		<Spanish>Arquebusier</Spanish>
-		<Portuguese>&#192;&#240;&#234;&#229;&#225;&#243;&#231;&#232;&#240;&#249;&#232;&#234;</Portuguese>
+		<Portuguese>Arquebuseiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARQUEBUSIER_PEDIA</Tag>
@@ -446,7 +462,7 @@
 		</German>
 		<Italian>Fanteria di Linea</Italian>
 		<Spanish>Infantería de Línea</Spanish>
-		<Portuguese>&#203;&#232;&#237;&#229;&#233;&#237;&#224;&#255; &#207;&#229;&#245;&#238;&#242;&#224;</Portuguese>
+		<Portuguese>Infantaria de Linha</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LINE_INFANTRY_PEDIA</Tag>
@@ -468,7 +484,7 @@
 		</German>
 		<Italian>Spadaccino</Italian>
 		<Spanish>Soldado con espada ligera</Spanish>
-		<Portuguese>&#204;&#229;&#247;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>Espadachin</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWORDSMAN_PEDIA</Tag>
@@ -490,7 +506,7 @@
 		</German>
 		<Italian>Spadaccino Lungo</Italian>
 		<Spanish>Espadachín Largo</Spanish>
-		<Portuguese>&#196;&#235;&#232;&#237;&#237;&#238;&#236;&#229;&#247;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>Espadachin Largo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN_PEDIA</Tag>
@@ -512,7 +528,7 @@
 		</German>
 		<Italian>Esploratore</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>&#199;&#224;&#241;&#242;&#240;&#229;&#235;&#252;&#249;&#232;&#234;</Portuguese>
+		<Portuguese>Escamoteiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT_PEDIA</Tag>
@@ -534,7 +550,7 @@
 		</German>
 		<Italian>Cocca</Italian>
 		<Spanish>Coca</Spanish>
-		<Portuguese>&#202;&#238;&#227;&#227;&#229;</Portuguese>
+		<Portuguese>Cog</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COGGE_PEDIA</Tag>
@@ -556,7 +572,7 @@
 		</German>
 		<Italian>Galea Armata</Italian>
 		<Spanish>Galera de Fusil</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Galera Armada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUN_GALLEY_PEDIA</Tag>
@@ -578,7 +594,7 @@
 		</German>
 		<Italian>Holk</Italian>
 		<Spanish>Urca</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Holk</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOLK_PEDIA</Tag>
@@ -600,7 +616,7 @@
 		</German>
 		<Italian>Galea da Guerra</Italian>
 		<Spanish>Galera Guerree</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Galera de Guerra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_GALLEY_PEDIA</Tag>
@@ -622,7 +638,7 @@
 		</German>
 		<Italian>Inquisitore</Italian>
 		<Spanish>Acusador Religioso</Spanish>
-		<Portuguese>&#200;&#237;&#234;&#226;&#232;&#231;&#232;&#242;&#238;&#240;</Portuguese>
+		<Portuguese>Perseguidor Religioso</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROSECUTOR_PEDIA</Tag>
@@ -645,7 +661,7 @@
 		</German>
 		<Italian>Ghazi</Italian>
 		<Spanish>Ghazi</Spanish>
-		<Portuguese>&#195;&#224;&#231;&#232;</Portuguese>
+		<Portuguese>Ghazi</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIA_GHAZI_PEDIA</Tag>
@@ -667,7 +683,7 @@
 		</German>
 		<Italian>Paladino</Italian>
 		<Spanish>Paladín</Spanish>
-		<Portuguese>&#207;&#224;&#235;&#224;&#228;&#232;&#237;</Portuguese>
+		<Portuguese>Paladino</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURGUNDIAN_PALADIN_PEDIA</Tag>
@@ -689,7 +705,7 @@
 		</German>
 		<Italian>Konnik</Italian>
 		<Spanish>Konnik</Spanish>
-		<Portuguese>&#202;&#238;&#237;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>Konnik</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULGARIA_KONNIK_PEDIA</Tag>
@@ -711,7 +727,7 @@
 		</German>
 		<Italian>Cavalleria Berbera</Italian>
 		<Spanish>Caballería Beréber</Spanish>
-		<Portuguese>&#193;&#229;&#240;&#225;&#229;&#240;&#241;&#234;&#224;&#255; &#202;&#238;&#237;&#237;&#232;&#246;&#224;</Portuguese>
+		<Portuguese>Cavalaria Berbere</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORDOBAN_BERBER_CAVALRY_PEDIA</Tag>
@@ -733,7 +749,7 @@
 		</German>
 		<Italian>Tercio</Italian>
 		<Spanish>Tercio</Spanish>
-		<Portuguese>&#210;&#229;&#240;&#246;&#232;&#238;</Portuguese>
+		<Portuguese>Tercio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_TERCIO_PEDIA</Tag>
@@ -755,7 +771,7 @@
 		</German>
 		<Italian>Galeazza</Italian>
 		<Spanish>Galleass</Spanish>
-		<Portuguese>&#195;&#224;&#235;&#235;&#229;&#224;&#241;</Portuguese>
+		<Portuguese>Galleass</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VENICE_GALLEAS_PEDIA</Tag>
@@ -777,7 +793,7 @@
 		</German>
 		<Italian>Huszár</Italian>
 		<Spanish>Huszár</Spanish>
-		<Portuguese>&#195;&#243;&#241;&#231;&#224;&#240;</Portuguese>
+		<Portuguese>Huszár</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNGARIAN_LANCER_PEDIA</Tag>
@@ -799,7 +815,7 @@
 		</German>
 		<Italian>Ussaro Alato</Italian>
 		<Spanish>Húsar Alado</Spanish>
-		<Portuguese>&#202;&#240;&#251;&#235;&#224;&#242;&#251;&#233; &#195;&#243;&#241;&#224;&#240;</Portuguese>
+		<Portuguese>Hussar Alado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR_PEDIA</Tag>
@@ -821,7 +837,7 @@
 		</German>
 		<Italian>Boiardo</Italian>
 		<Spanish>Boyardo</Spanish>
-		<Portuguese>&#193;&#238;&#255;&#240;&#232;&#237;</Portuguese>
+		<Portuguese>Boyar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOSCOW_BOYAR_PEDIA</Tag>
@@ -839,7 +855,7 @@
 		<German>Balestrieri</German>
 		<Italian>Balestriere Genovese</Italian>
 		<Spanish>Balestrieri</Spanish>
-		<Portuguese>&#193;&#224;&#235;&#229;&#241;&#242;&#240;&#232;&#229;&#240;&#232;</Portuguese>
+		<Portuguese>Balestrieri</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENOA_BALESTRIERI_PEDIA</Tag>
@@ -861,7 +877,7 @@
 		</German>
 		<Italian>Arciere con Arco Lungo Inglese</Italian>
 		<Spanish>Saetero Inglés</Spanish>
-		<Portuguese>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>Longbowman</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENGLISH_LONGBOWMAN_PEDIA</Tag>
@@ -883,7 +899,7 @@
 		</German>
 		<Italian>Corazziere</Italian>
 		<Spanish>Kurassier</Spanish>
-		<Portuguese>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#202;&#232;&#240;&#224;&#241;&#232;&#240;</Portuguese>
+		<Portuguese>Kurassier</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTRIAN_KURASSIER_PEDIA</Tag>
@@ -905,7 +921,7 @@
 		</German>
 		<Italian>Grande Bombarda</Italian>
 		<Spanish>Bombardean Gran</Spanish>
-		<Portuguese>&#194;&#229;&#235;&#232;&#234;&#224;&#255; &#193;&#238;&#236;&#225;&#224;&#240;&#228;&#224;</Portuguese>
+		<Portuguese>Grande Bombardeiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_GREAT_BOMBARD_PEDIA</Tag>
@@ -927,7 +943,7 @@
 		</German>
 		<Italian>Carolean</Italian>
 		<Spanish>Carolean</Spanish>
-		<Portuguese>&#202;&#224;&#240;&#238;&#235;&#232;&#237;</Portuguese>
+		<Portuguese>Karolin</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN_PEDIA</Tag>
@@ -949,7 +965,7 @@
 		</German>
 		<Italian>Granatiere Olandese</Italian>
 		<Spanish>Holandés Granaderos</Spanish>
-		<Portuguese>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233; &#195;&#240;&#229;&#237;&#224;&#228;&#229;&#240;</Portuguese>
+		<Portuguese>Granadeiro Holandês</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NETHERLANDS_GRENADIER_PEDIA</Tag>
@@ -971,7 +987,7 @@
 		</German>
 		<Italian>Cavaliere d'Aviz</Italian>
 		<Spanish>Caballero de Aviz</Spanish>
-		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#252; &#192;&#226;&#232;&#231;&#224;</Portuguese>
+		<Portuguese>Cavaleiro d'Aviz</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGAL_FOOT_KNIGHT_PEDIA</Tag>
@@ -993,7 +1009,7 @@
 		</German>
 		<Italian>Druzhina</Italian>
 		<Spanish>Druzhina</Spanish>
-		<Portuguese>&#196;&#240;&#243;&#230;&#232;&#237;&#224;</Portuguese>
+		<Portuguese>Druzhina</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KIEV_DRUZHINA_PEDIA</Tag>
@@ -1015,7 +1031,7 @@
 		</German>
 		<Italian>Bajoras</Italian>
 		<Spanish>Bajoras</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Bajoras</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LITHUANIA_BAJORAS_PEDIA</Tag>
@@ -1037,7 +1053,7 @@
 		</German>
 		<Italian>Berserker</Italian>
 		<Spanish>Berserk</Spanish>
-		<Portuguese>&#193;&#229;&#240;&#241;&#229;&#240;&#234;&#229;&#240;</Portuguese>
+		<Portuguese>Berserker</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIKING_BERSERKER_PEDIA</Tag>
@@ -1060,7 +1076,7 @@
 		</German>
 		<Italian>Cavaliere di San Giovanni</Italian>
 		<Spanish>Caballero de San Juan</Spanish>
-		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#252; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#196;&#230;&#238;&#237;&#224;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_HELP</Tag>
@@ -1082,7 +1098,7 @@
 		</German>
 		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Caballero Templario</Spanish>
-		<Portuguese>&#208;&#251;&#246;&#224;&#240;&#252; &#210;&#224;&#236;&#239;&#235;&#232;&#229;&#240;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT_HELP</Tag>
@@ -1104,7 +1120,7 @@
 		</German>
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
-		<Portuguese>&#210;&#229;&#226;&#242;&#238;&#237;&#241;&#234;&#232;&#233; &#208;&#251;&#246;&#224;&#240;&#252;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT_HELP</Tag>
@@ -1126,7 +1142,7 @@
 		</German>
 		<Italian>Keshik</Italian>
 		<Spanish>Keshik</Spanish>
-		<Portuguese>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK_PEDIA</Tag>
@@ -1148,7 +1164,7 @@
 		</German>
 		<Italian>Seljuk</Italian>
 		<Spanish>Selyuq</Spanish>
-		<Portuguese>&#209;&#229;&#235;&#252;&#228;&#230;&#243;&#234;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELJUK_PEDIA</Tag>

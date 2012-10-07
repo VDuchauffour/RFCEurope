@@ -12,7 +12,7 @@
 		<German>Die Sonne erhellt das Jahr %s1_year. Das %s2:3_civ Volk ist bereit, sich niederzulassen und Eure erste Stadt zu gr&#252;nden.[NEWLINE][NEWLINE]%s3_leader, Euer Volk hat Euch absolute Macht verliehen und vertraut darauf, dass Ihr eine Zivilisation errichtet, welche die Zeit &#252;berdauern wird!</German>
 		<Italian>Il sole sorge nell'anno %s1_year. La popolazione %s2:2_civ &#232; infine pronta a stabilirsi e a fondare la tua prima citt&#224;.[NEWLINE][NEWLINE]%s3_leader, il tuo popolo ti ha conferito potere assoluto, credendo che tu possa sviluppare una civilt&#224; in grado di resistere alle prove del tempo!</Italian>
 		<Spanish>El sol se alza en el a&#241;o %s1_year. Las gentes del %s2_civ est&#225;n listas para asentarse y fundar vuestra primera ciudad.[NEWLINE][NEWLINE]%s3_leader, vuestro pueblo os ha conferido poder absoluto, confiando en que pod&#225;is desarrollar una civilizaci&#243;n que supere los retos del tiempo.</Spanish>
-		<Portuguese>&#209;&#238;&#235;&#237;&#246;&#229; &#226;&#238;&#241;&#245;&#238;&#228;&#232;&#242; &#226; %s1_year. %s2_civ &#235;&#254;&#228;&#232; &#227;&#238;&#242;&#238;&#226;&#251; &#231;&#224;&#241;&#229;&#235;&#232;&#242;&#252;&#241;&#255; &#232; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#252; &#226;&#224;&#248; &#239;&#229;&#240;&#226;&#251;&#233; &#227;&#238;&#240;&#238;&#228;.[NEWLINE][NEWLINE]%s3_leader, &#226;&#224;&#248;&#232; &#235;&#254;&#228;&#232; &#237;&#224;&#228;&#229;&#235;&#232;&#235;&#232; &#226;&#241;&#229;&#226;&#235;&#224;&#241;&#242;&#232;&#229;&#236; &#226;&#224;&#241;, &#228;&#238;&#226;&#229;&#240;&#232;&#226; &#242;&#238;, &#247;&#242;&#238; &#226;&#251; &#236;&#238;&#230;&#229;&#242;&#229; &#239;&#238;&#241;&#242;&#240;&#238;&#232;&#242;&#252; &#214;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#254;, &#247;&#242;&#238;&#225;&#251; &#226;&#251;&#228;&#229;&#240;&#230;&#224;&#242;&#252; &#232;&#241;&#239;&#251;&#242;&#224;&#237;&#232;&#229; &#226;&#240;&#229;&#236;&#229;&#237;&#229;&#236;!</Portuguese>
+		<Portuguese>O sol nasce no ano de %s1_year. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
@@ -21,7 +21,7 @@
 		<German>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</German>
 		<Italian>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Italian>
 		<Spanish>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Spanish>
-		<Portuguese>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Portuguese>
+		<Portuguese>RHYE'S AND FALL OF CIVILIZATIONS: EUROPA</Portuguese>
 	</TEXT>
 		<!-- Civ Specific Dawn of Man -->
 		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->

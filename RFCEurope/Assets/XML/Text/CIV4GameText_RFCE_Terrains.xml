@@ -12,7 +12,7 @@
 		<German>Große Karte von Europa</German>
 		<Italian>Grande Mappa d'Europa</Italian>
 		<Spanish>El Mapa grande de Europa</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Mapa Largo da Europa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
@@ -21,7 +21,7 @@
 		<German>Dichter Wald</German>
 		<Italian>Foresta Fitta</Italian>
 		<Spanish>Bosque</Spanish>
-		<Portuguese>&#195;&#243;&#241;&#242;&#238;&#233; &#203;&#229;&#241;</Portuguese>
+		<Portuguese>Floresta Densa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
@@ -30,7 +30,7 @@
 		<German>Waldgebiet</German>
 		<Italian>Bosco</Italian>
 		<Spanish>Bosque</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Bosque</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
@@ -39,7 +39,7 @@
 		<German>Moor</German>
 		<Italian>Brughiera</Italian>
 		<Spanish>Páramo</Spanish>
-		<Portuguese>&#194;&#229;&#240;&#229;&#241;&#234;&#238;&#226;&#224;&#255; &#239;&#243;&#241;&#242;&#238;&#248;&#252;</Portuguese>
+		<Portuguese>Moor</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_PALM_FOREST</Tag>
@@ -48,7 +48,7 @@
 		<German>Palmenwald</German>
 		<Italian>Foresta di Palme</Italian>
 		<Spanish>Palm Forest</Spanish>
-		<Portuguese>Palm Forest</Portuguese>
+		<Portuguese>Palmeiral</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_APIARY</Tag>
@@ -57,7 +57,7 @@
 		<German>Imkerei</German>
 		<Italian>Apiario</Italian>
 		<Spanish>Colmenar</Spanish>
-		<Portuguese>&#207;&#224;&#241;&#229;&#234;&#224;</Portuguese><Japanese/><Chinese/>
+		<Portuguese>Apiário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COLONIAL_TRADE</Tag>
@@ -66,7 +66,7 @@
 		<German>Koloniale Handelsroute</German>
 		<Italian>Rotta Commerciale Coloniale</Italian>
 		<Spanish>Ruta colonial de Comercio</Spanish>
-		<Portuguese>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Portuguese>
+		<Portuguese>Rota Comercial Colonial</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINERY</Tag>
@@ -75,7 +75,7 @@
 		<German>Weingut</German>
 		<Italian>Azienda vinicola</Italian>
 		<Spanish>Bodega</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Vinícola</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONIAL_TRADE</Tag>
@@ -84,7 +84,7 @@
 		<German>[LINK=IMPROVEMENT_COLONIAL_TRADE]Koloniale Handelsroute[\LINK] errichten</German>
 		<Italian>Traccia [LINK=IMPROVEMENT_COLONIAL_TRADE]una Rotta Commerciale Coloniale[\LINK]</Italian>
 		<Spanish>Establezca [LINK=IMPROVEMENT_COLONIAL_TRADE]Ruta colonial de Comercio[\LINK]</Spanish>
-		<Portuguese>&#211;&#241;&#242;&#224;&#237;&#238;&#226;&#232;&#242;&#229; &#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#204;&#224;&#240;&#248;&#240;&#243;&#242;</Portuguese>
+		<Portuguese>Estabeleça uma [LINK=IMPROVEMENT_COLONIAL_TRADE]Rota Comercial Colonial[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_APIARY</Tag>
@@ -93,7 +93,7 @@
 		<German>[LINK=IMPROVEMENT_APIARY]Imkerei[\LINK] bauen</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_APIARY]Apiario[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_APIARY]Colmenar[\LINK]</Spanish>
-		<Portuguese>&#207;&#238;&#241;&#242;&#240;&#238;&#233;&#242;&#229; &#207;&#224;&#241;&#229;&#234;&#243;</Portuguese>
+		<Portuguese>Construir um [LINK=IMPROVEMENT_APIARY]Apiário[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_WETLAND</Tag>
@@ -102,7 +102,7 @@
 		<German>Feuchtgebiet</German>
 		<Italian>Zone Umide</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Zona Úmida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
@@ -111,7 +111,7 @@
 		<German>Sumpf</German>
 		<Italian>Palude</Italian>
 		<Spanish>Ci&#233;naga</Spanish>
-		<Portuguese>&#193;&#238;&#235;&#238;&#242;&#238;</Portuguese>
+		<Portuguese>Marisma</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_DENSE_FOREST</Tag>
@@ -120,7 +120,7 @@
 		<German>[LINK=FEATURE_DENSE_FOREST]Dichten Wald[\LINK] abholzen</German>
 		<Italian>Disboscare una [LINK=FEATURE_DENSE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_DENSE_FOREST]bosque[\LINK]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Cortar uma [LINK=FEATURE_DENSE_FOREST]Floresta Densa[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_WOODLAND</Tag>
@@ -129,7 +129,7 @@
 		<German>[LINK=FEATURE_FOREST]Waldgebiet[\LINK] abholzen</German>
 		<Italian>Disboscare una [LINK=FEATURE_FOREST]foresta[\LINK]</Italian>
 		<Spanish>Talar un [LINK=FEATURE_FOREST]bosque[\LINK]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Cortar um [LINK=FEATURE_FOREST]Bosque[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_MARSH</Tag>
@@ -138,7 +138,7 @@
 		<German>[LINK=FEATURE_MARSH]Sumpf[\LINK] entfernen</German>
 		<Italian>Bonificare la [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
 		<Spanish>Vacíe [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Drenar [LINK=FEATURE_MARSH]Marisma[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINERY</Tag>
@@ -147,6 +147,6 @@
 		<German>[LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
 		<Italian>Costruire un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Construir uma [LINK=IMPROVEMENT_WINERY]Vinícola[\LINK]</Portuguese>
 	</TEXT>
 </Civ4GameText>
