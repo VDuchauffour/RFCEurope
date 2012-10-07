@@ -28,7 +28,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#224;&#242;&#238;&#235;&#232;&#246;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM_ADJECTIVE</Tag>
@@ -53,7 +53,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_CATHOLICISM_PEDIA</Tag>
@@ -87,7 +87,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#232;&#229;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY_ADJECTIVE</Tag>
@@ -112,7 +112,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#240;&#224;&#226;&#238;&#241;&#235;&#224;&#226;&#237;&#251;&#233;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_ORTHODOXY_PEDIA</Tag>
@@ -146,7 +146,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM_ADJECTIVE</Tag>
@@ -171,7 +171,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM_PEDIA</Tag>
@@ -189,7 +189,7 @@
 		<German>Die Reformation!</German>
 		<Italian>La Riforma!</Italian>
 		<Spanish>La Reforma!</Spanish>
-		<Portuguese>&#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255;!</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
@@ -198,7 +198,7 @@
 		<German>Die Erfindung des Buchdrucks entfachte eine Welle von Glaubenslehren. Protestantische Kirchen traten der Macht des Papstes wegen christlicher Skandale entgegen. Sollen wir den Protestantismus annehmen? Sämtliche unserer katholischen Städte werden konvertiert werden.</German>
 		<Italian>L'invenzione della Stampa ha fatto diffondere nuove dottrine. Chiese Protestanti si stanno opponendo al potere del Papa. Dobbiamo appoggiare la Riforma? (Tutti gli edifici e le città Cattolici verrano convertiti in Protestanti)</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
-		<Portuguese>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229; "&#207;&#229;&#247;&#224;&#242;&#224;&#254;&#249;&#229;&#233;&#241;&#255; &#207;&#240;&#229;&#241;&#241;&#251;" &#239;&#238;&#235;&#238;&#230;&#232;&#235;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#226;&#238;&#235;&#237;&#229; &#237;&#238;&#226;&#251;&#245; &#228;&#238;&#234;&#242;&#240;&#232;&#237;. &#207;&#240;&#238;&#242;&#229;&#241;&#242;&#224;&#237;&#242;&#241;&#234;&#232;&#229; &#246;&#229;&#240;&#234;&#226;&#232; &#238;&#239;&#239;&#238;&#237;&#232;&#240;&#243;&#254;&#242; &#226;&#235;&#224;&#241;&#242;&#232; &#207;&#224;&#239;&#251; &#208;&#232;&#236;&#241;&#234;&#238;&#227;&#238; &#237;&#224;&#228; &#213;&#240;&#232;&#241;&#242;&#232;&#224;&#237;&#241;&#234;&#232;&#236;&#232; &#228;&#229;&#235;&#224;&#236;&#232;. &#196;&#238;&#235;&#230;&#237;&#251; &#236;&#251; &#239;&#240;&#232;&#237;&#255;&#242;&#252; &#253;&#242;&#243; &#208;&#229;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#254;? (&#194;&#241;&#229; &#237;&#224;&#248;&#232; &#202;&#224;&#242;&#238;&#235;&#232;&#247;&#229;&#241;&#234;&#232;&#229; &#227;&#238;&#240;&#238;&#228;&#224; &#232; &#231;&#228;&#224;&#237;&#232;&#255; &#225;&#243;&#228;&#243;&#242; &#239;&#240;&#229;&#226;&#240;&#224;&#249;&#229;&#237;&#251; &#226; &#237;&#238;&#226;&#243;&#254; &#240;&#229;&#235;&#232;&#227;&#232;&#254;.)</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COUNTER_REFORMATION_TITLE</Tag>

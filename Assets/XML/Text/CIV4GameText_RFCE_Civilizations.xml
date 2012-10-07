@@ -30,7 +30,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#193;&#243;&#240;&#227;&#243;&#237;&#228;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Burgúndios</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BURGUNDY_SHORT_DESC</Tag>
@@ -55,7 +59,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#193;&#243;&#240;&#227;&#243;&#237;&#228;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Borgonha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BURGUNDY_ADJECTIVE</Tag>
@@ -84,7 +92,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#193;&#243;&#240;&#227;&#243;&#237;&#228;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>burgúndio:burgúndia:burgúndios:burgúndias</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BURGUNDY_PEDIA</Tag>
@@ -120,7 +132,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#232;&#231;&#224;&#237;&#242;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Os Bizantinos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_SHORT_DESC</Tag>
@@ -145,7 +161,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#232;&#231;&#224;&#237;&#242;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Bizâncio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>
@@ -174,7 +194,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#232;&#231;&#224;&#237;&#242;&#232;&#233;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>bizantino:bizantina:bizantinos:bizantinas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_PEDIA</Tag>
@@ -210,7 +234,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#212;&#240;&#224;&#237;&#246;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Os Franceses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCE_SHORT_DESC</Tag>
@@ -235,7 +263,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#212;&#240;&#224;&#237;&#246;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>França</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCE_ADJECTIVE</Tag>
@@ -260,7 +292,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#212;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>francês:francesa:franceses:francesas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCE_PEDIA</Tag>
@@ -296,7 +332,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#240;&#224;&#225;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Árabes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ARABIA_SHORT_DESC</Tag>
@@ -321,7 +361,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#240;&#224;&#225;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Arábia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ARABIA_ADJECTIVE</Tag>
@@ -350,7 +394,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#240;&#224;&#226;&#232;&#233;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>árabe:árabe:árabes:árabes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ARABIA_PEDIA</Tag>
@@ -386,7 +434,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#193;&#238;&#235;&#227;&#224;&#240;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Búlgaros</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BULGARIA_SHORT_DESC</Tag>
@@ -411,7 +463,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#193;&#238;&#235;&#227;&#224;&#240;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Bulgária</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BULGARIA_ADJECTIVE</Tag>
@@ -440,7 +496,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#193;&#238;&#235;&#227;&#224;&#240;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>búlgaro:búlgara:búlgaros:búlgaras</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BULGARIA_PEDIA</Tag>
@@ -476,7 +536,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#238;&#240;&#228;&#238;&#225;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Cordovenses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CORDOBA_SHORT_DESC</Tag>
@@ -501,7 +565,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#238;&#240;&#228;&#238;&#225;&#224;</Portuguese>
+		<Portuguese>
+			<Text>Córdova</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CORDOBA_ADJECTIVE</Tag>
@@ -530,7 +598,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#238;&#240;&#228;&#238;&#225;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>cordovense:cordovense:cordovenses:cordovenses</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CORDOBA_PEDIA</Tag>
@@ -566,7 +638,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#200;&#241;&#239;&#224;&#237;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Espanhóis</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SPAIN_SHORT_DESC</Tag>
@@ -591,7 +667,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#200;&#241;&#239;&#224;&#237;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Espanha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SPAIN_ADJECTIVE</Tag>
@@ -616,7 +696,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#200;&#241;&#239;&#224;&#237;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>espanhol:espanhola:espanhóis:espanholas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SPAIN_PEDIA</Tag>
@@ -652,7 +736,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#238;&#240;&#226;&#229;&#230;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Escandinavos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NORSE_SHORT_DESC</Tag>
@@ -677,7 +765,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#238;&#240;&#226;&#229;&#227;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Escandinávia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NORSE_ADJECTIVE</Tag>
@@ -706,7 +798,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>escandinavo:escandinava:escandinavos:escandinavas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NORSE_PEDIA</Tag>
@@ -742,7 +838,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#229;&#237;&#229;&#246;&#232;&#224;&#237;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Venezianos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_VENEZIA_SHORT_DESC</Tag>
@@ -767,7 +867,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#229;&#237;&#229;&#246;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Veneza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_VENEZIA_ADJECTIVE</Tag>
@@ -796,7 +900,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#229;&#237;&#229;&#246;&#232;&#224;&#237;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>veneziano:veneziana:venezianos:venezianas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_VENEZIA_PEDIA</Tag>
@@ -832,7 +940,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#232;&#229;&#226;&#235;&#255;&#237;&#229;</Portuguese>
+		<Portuguese>
+			<Text>Os Kievanos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_KIEV_SHORT_DESC</Tag>
@@ -857,7 +969,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#232;&#229;&#226;&#241;&#234;&#224;&#255; &#208;&#243;&#241;&#252;</Portuguese>
+		<Portuguese>
+			<Text>Kiev</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_KIEV_ADJECTIVE</Tag>
@@ -886,7 +1002,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#202;&#232;&#229;&#226;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>kievano:kievana:kievanos:kievanas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_KIEV_PEDIA</Tag>
@@ -922,7 +1042,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#229;&#237;&#227;&#229;&#240;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Húngaros</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HUNGARY_SHORT_DESC</Tag>
@@ -947,7 +1071,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#229;&#237;&#227;&#240;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Hungria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HUNGARY_ADJECTIVE</Tag>
@@ -976,7 +1104,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#229;&#237;&#227;&#229;&#240;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>húngaro:húngara:húngaros:húngaras</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_HUNGARY_PEDIA</Tag>
@@ -1012,7 +1144,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#229;&#236;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Alemães</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GERMANY_SHORT_DESC</Tag>
@@ -1037,7 +1173,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#195;&#229;&#240;&#236;&#224;&#237;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Alemanha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GERMANY_ADJECTIVE</Tag>
@@ -1066,7 +1206,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#229;&#236;&#229;&#246;&#234;&#232;&#233; </Portuguese>
+		<Portuguese>
+			<Text>alemão:alemã:alemãos:alemãs</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GERMANY_PEDIA</Tag>
@@ -1102,7 +1246,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#238;&#235;&#255;&#234;&#232;</Portuguese>
+		<Portuguese>
+			<Text>Os Poloneses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLAND_SHORT_DESC</Tag>
@@ -1127,7 +1275,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#238;&#235;&#252;&#248;&#224;</Portuguese>
+		<Portuguese>
+			<Text>Polônia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLAND_ADJECTIVE</Tag>
@@ -1152,7 +1304,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#238;&#235;&#252;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>polonês:polonesa:poloneses:polonesas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLAND_PEDIA</Tag>
@@ -1188,7 +1344,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#204;&#238;&#241;&#234;&#238;&#226;&#232;&#242;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Moscovitas</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOSCOW_SHORT_DESC</Tag>
@@ -1213,7 +1373,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#204;&#238;&#241;&#234;&#226;&#224;</Portuguese>
+		<Portuguese>
+			<Text>Moscóvia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Tag>
@@ -1242,7 +1406,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#204;&#238;&#241;&#234;&#238;&#226;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>moscovita:moscovita:moscovitas:moscovitas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOSCOW_PEDIA</Tag>
@@ -1278,7 +1446,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#195;&#229;&#237;&#243;&#233;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Genoveses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GENOA_SHORT_DESC</Tag>
@@ -1303,7 +1475,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#195;&#229;&#237;&#243;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Gênova</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GENOA_ADJECTIVE</Tag>
@@ -1332,7 +1508,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#195;&#229;&#237;&#243;&#233;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>genovês:genovesa:genoveses:genovesas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GENOA_PEDIA</Tag>
@@ -1368,7 +1548,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#237;&#227;&#235;&#232;&#247;&#224;&#237;&#229;</Portuguese>
+		<Portuguese>
+			<Text>Os Ingleses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLAND_SHORT_DESC</Tag>
@@ -1393,7 +1577,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#237;&#227;&#235;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Inglaterra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Tag>
@@ -1418,7 +1606,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>inglês:inglesa:ingleses:inglesas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLAND_PEDIA</Tag>
@@ -1454,7 +1646,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#252;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Portugueses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGAL_SHORT_DESC</Tag>
@@ -1479,7 +1675,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Portugal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Tag>
@@ -1504,7 +1704,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#238;&#240;&#242;&#243;&#227;&#224;&#235;&#252;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>português:portuguesa:portugueses:portuguesas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGAL_PEDIA</Tag>
@@ -1540,7 +1744,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Austríacos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AUSTRIA_SHORT_DESC</Tag>
@@ -1565,7 +1773,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#226;&#241;&#242;&#240;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Áustria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AUSTRIA_ADJECTIVE</Tag>
@@ -1594,7 +1806,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#192;&#226;&#241;&#242;&#240;&#232;&#233;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>austríaco:austríaca:austríacos:austríacas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_AUSTRIA_PEDIA</Tag>
@@ -1630,7 +1846,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#206;&#242;&#242;&#238;&#236;&#224;&#237;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Otomanos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</Tag>
@@ -1655,7 +1875,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#210;&#243;&#240;&#246;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Turquia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Tag>
@@ -1684,7 +1908,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#206;&#242;&#242;&#238;&#236;&#224;&#237;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>otomano:otomana:otomanos:otomanas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_PEDIA</Tag>
@@ -1720,7 +1948,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#216;&#226;&#229;&#228;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Suecos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SWEDEN_SHORT_DESC</Tag>
@@ -1745,7 +1977,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#216;&#226;&#229;&#246;&#232;&#255;</Portuguese>
+		<Portuguese>
+			<Text>Suécia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SWEDEN_ADJECTIVE</Tag>
@@ -1774,7 +2010,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#216;&#226;&#229;&#228;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>sueco:sueca:suecos:suecas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SWEDEN_PEDIA</Tag>
@@ -1810,7 +2050,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#195;&#238;&#235;&#235;&#224;&#237;&#228;&#246;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Os Holandeses</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DUTCH_SHORT_DESC</Tag>
@@ -1835,7 +2079,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#232;&#228;&#229;&#240;&#235;&#224;&#237;&#228;&#251;</Portuguese>
+		<Portuguese>
+			<Text>Países Baixos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DUTCH_ADJECTIVE</Tag>
@@ -1860,7 +2108,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#195;&#238;&#235;&#235;&#224;&#237;&#228;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>holandês:holandesa:holandeses:holandesas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_DUTCH_PEDIA</Tag>
@@ -1884,7 +2136,11 @@
 		</German>
 		<Italian>I Lituani</Italian>
 		<Spanish>Los Lituanos</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Os Lituanos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_LITHUANIA_SHORT_DESC</Tag>
@@ -1893,7 +2149,11 @@
 		<German>Litauen</German>
 		<Italian>Lituano</Italian>
 		<Spanish>Lituania</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Lituânia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_LITHUANIA_ADJECTIVE</Tag>
@@ -1918,7 +2178,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>lituano:lituana:lituanos:lituanas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_LITHUANIA_PEDIA</Tag>
@@ -1954,7 +2218,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#224;&#239;&#241;&#234;&#238;&#229; &#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>
+			<Text>O Papa</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PAPAL_SHORT_DESC</Tag>
@@ -1979,7 +2247,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#194;&#224;&#242;&#232;&#234;&#224;&#237;</Portuguese>
+		<Portuguese>
+			<Text>Roma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PAPAL_ADJECTIVE</Tag>
@@ -2004,7 +2276,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#207;&#224;&#239;&#241;&#234;&#232;&#233;</Portuguese>
+		<Portuguese>
+			<Text>papal:papal:papais:papais</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PAPAL_PEDIA</Tag>
@@ -2040,7 +2316,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#251;&#229; &#195;&#238;&#240;&#238;&#228;&#224;</Portuguese>
+		<Portuguese>
+			<Text>Cidades Independentes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INDEPENDENT_SHORT_DESC</Tag>
@@ -2065,7 +2345,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#251;&#229;</Portuguese>
+		<Portuguese>
+			<Text>Independentes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INDEPENDENT_ADJECTIVE</Tag>
@@ -2090,7 +2374,11 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#229;&#231;&#224;&#226;&#232;&#241;&#232;&#236;&#251;&#233;</Portuguese>
+		<Portuguese>
+			<Text>independente:independente:independentes:independentes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INDEPENDENT_PEDIA</Tag>
@@ -2099,7 +2387,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>[TAB]Sobreviviré...</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Nós sobreviveremos!</Portuguese>
 	</TEXT>
 		<!-- Civilization Independent -->
 </Civ4GameText>

@@ -12,7 +12,7 @@
 		<German>"Feiern zu Ehren des Despoten"</German>
 		<Italian>"Viva il Giorno del Despota"</Italian>
 		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>"Viva o Dia do Déspota"</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_KING</Tag>
@@ -21,7 +21,7 @@
 		<German>"Feiern zu Ehren des Königs"</German>
 		<Italian>"Viva il Giorno del Re"</Italian>
 		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>"Viva o Dia do Rei"</Portuguese>
 	</TEXT>
 	<!-- Civic Category Government -->
 	<TEXT>
@@ -31,7 +31,7 @@
 		<German>Regierung</German>
 		<Italian>Governo</Italian>
 		<Spanish>Gobierno</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Governo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DESPOTISM</Tag>
@@ -40,7 +40,7 @@
 		<German>Despotismus</German>
 		<Italian>Dispotismo</Italian>
 		<Spanish>Despotismo</Spanish>
-		<Portuguese>&#196;&#229;&#241;&#239;&#238;&#242;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>Despotismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DESPOTISM_PEDIA</Tag>
@@ -58,7 +58,7 @@
 		<German>Die einfachste Regierungs-Staatsform des Spiels.</German>
 		<Italian>La forma di Governo pi&#249; primitiva</Italian>
 		<Spanish>El principio de gobierno m&#225;s primitivo.</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>A forma de Governo mais Primitiva</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY</Tag>
@@ -67,7 +67,7 @@
 		<German>Absolute Monarchie</German>
 		<Italian>Monarchia Feudale</Italian>
 		<Spanish>Monarquía feudal</Spanish>
-		<Portuguese>&#221;&#235;&#229;&#234;&#242;&#238;&#240;&#224;&#242;</Portuguese>
+		<Portuguese>Monarquia Feudal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_PEDIA</Tag>
@@ -85,7 +85,7 @@
 		<German>Geringerer Einheitenunterhalt und Zufriedenheit durch Burgen</German>
 		<Italian>Costo delle unità più basso e felicità dai castelli</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#234; &#248;&#239;&#232;&#238;&#237;&#224;&#230;&#243;; &#228;&#238;&#225;&#224;&#226;&#238;&#247;&#237;&#238;&#229; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#229; &#232; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Portuguese>
+		<Portuguese>Suas primeiras unidades não terão custo de manutenção e você ganha um pequeno incremento de felicidade no seu quartel</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Tag>
@@ -94,7 +94,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feduale[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Lei Feudal[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY</Tag>
@@ -103,7 +103,7 @@
 		<German>G&#246;ttliche Monarchie</German>
 		<Italian>Monarchia Divina</Italian>
 		<Spanish>Adivine Monarquía</Spanish>
-		<Portuguese>&#193;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Portuguese>
+		<Portuguese>Monarquia Divina</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_PEDIA</Tag>
@@ -121,7 +121,7 @@
 		<German>Gesteigerte Zufriedenheit durch Militäreinheiten in Städten; Kultur durch Spezialisten; höhere Wahrscheinlichkeit des Auftretens eines [COLOR_UNIT_TEXT]Große Feldherren[COLOR_REVERT]</German>
 		<Italian>Felicità dalle unità militari; cultura dagli specialisti; velocizza la nascita di grandi generali</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#209;&#247;&#224;&#241;&#242;&#252;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#229;&#228;&#232;&#237;&#232;&#246;; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#224; &#238;&#242; &#241;&#239;&#229;&#246;&#232;&#224;&#235;&#232;&#241;&#242;&#238;&#226;</Portuguese>
+		<Portuguese>Unidades militares em cidades fornecem felicidade; castelos fornecem felicidade; espionagem incrementada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
@@ -130,7 +130,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Theokratie, Staatsreligion, Organisierte Religion, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Religione Organizzata, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libertà religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Teocracia, Religião de Estado, Religião Organizada, Legislação Religiosa[COLOR_REVERT], Instável com [COLOR_RED]Paganismo, Livre Culto[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
@@ -139,7 +139,7 @@
 		<German>Konstit. Monarchie</German>
 		<Italian>Monarchia Costituzionale</Italian>
 		<Spanish>Monarquía constitucional</Spanish>
-		<Portuguese>&#202;&#238;&#237;&#241;&#242;&#232;&#242;&#243;&#246;&#232;&#238;&#237;&#237;&#224;&#255; &#204;&#238;&#237;&#224;&#240;&#245;&#232;&#255;</Portuguese>
+		<Portuguese>Monarquia Constitucional</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_PEDIA</Tag>
@@ -157,7 +157,7 @@
 		<German>Produktionsbeschleunigung durch Gold; +1[ICON_PRODUCTION] von Kleinstädten</German>
 		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#204;&#238;&#230;&#229;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#242;&#252; &#231;&#238;&#235;&#238;&#242;&#238;, &#247;&#242;&#238;&#225;&#251; &#243;&#241;&#234;&#238;&#240;&#232;&#242;&#252; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>Pode pagar para acelerar a produção; +1[ICON_PRODUCTION] por distritos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
@@ -166,7 +166,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libertà Lavorativa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Tag>
@@ -175,7 +175,7 @@
 		<German>Handelsrepublik</German>
 		<Italian>Repubblica Mercantile</Italian>
 		<Spanish>República de comerciante</Spanish>
-		<Portuguese>&#202;&#238;&#236;&#236;&#229;&#240;&#247;&#229;&#241;&#234;&#224;&#255; &#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Portuguese>
+		<Portuguese>República Mercante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_PEDIA</Tag>
@@ -193,7 +193,7 @@
 		<German>Positiv für den Handel; Negativ für den Krieg</German>
 		<Italian>Buona per il commercio; pessima per la guerra</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#213;&#238;&#240;&#238;&#248;&#238; &#228;&#235;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#232;; &#239;&#235;&#238;&#245;&#238; &#228;&#235;&#255; &#226;&#238;&#233;&#237;&#251;</Portuguese>
+		<Portuguese>Esta forma de governo é boa para pequenas e pacíficas nações, ruim para grandes impérios e guerra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
@@ -202,7 +202,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 4 Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 4 città[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre, Economia de Mercado, Menos de 5 cidades[COLOR_REVERT], Instável com [COLOR_RED]Lei Feudal, Mais de 4 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Government -->
 	<!-- Civic Category Legal -->
@@ -213,7 +213,7 @@
 		<German>Recht</German>
 		<Italian>Sistema legale</Italian>
 		<Spanish>Sistema legal</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Sistema Legal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW</Tag>
@@ -222,7 +222,7 @@
 		<German>Stammesgesetz</German>
 		<Italian>Legge Tribale</Italian>
 		<Spanish>Ley tribal</Spanish>
-		<Portuguese>&#208;&#238;&#228;&#238;&#226;&#238;&#233; &#199;&#224;&#234;&#238;&#237;</Portuguese>
+		<Portuguese>Lei Tribal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBAL_LAW_PEDIA</Tag>
@@ -240,7 +240,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>A mais primitiva forma de Lei</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW</Tag>
@@ -249,7 +249,7 @@
 		<German>Lehnswesen</German>
 		<Italian>Legge Feudale</Italian>
 		<Spanish>Ley feudal</Spanish>
-		<Portuguese>&#212;&#229;&#238;&#228;&#224;&#235;&#252;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Portuguese>
+		<Portuguese>Lei Feudal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_PEDIA</Tag>
@@ -267,7 +267,7 @@
 		<German>Rekrutierung von Einheiten</German>
 		<Italian>Può richiamare alla leva le unità</Italian>
 		<Spanish></Spanish>
-		<Portuguese>5 &#225;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;; &#237;&#238;&#226;&#251;&#229; &#254;&#237;&#232;&#242;&#251; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; +2 &#238;&#239;&#251;&#242;&#224;</Portuguese>
+		<Portuguese>Bônus para produção de unidades, e custo reduzido de manutenção por distância entre cidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
@@ -276,7 +276,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Absolute Monarchie, Leibeigenschaft, Grundherrschaft[COLOR_REVERT], Instabil mit [COLOR_RED]Handelsrepublik, Bauernbefreiung[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Feudale, Servitù, Manorialismo[COLOR_REVERT], Instabile con [COLOR_RED]Repubblica Mercantile, Contadini Liberi[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Feudal, Servidão, Senhorialismo[COLOR_REVERT], Instável com [COLOR_RED]República Mercante, Campesinato Livre[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY</Tag>
@@ -285,7 +285,7 @@
 		<German>B&#252;rokratie</German>
 		<Italian>Burocrazia</Italian>
 		<Spanish>Burocracia</Spanish>
-		<Portuguese>&#193;&#254;&#240;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Portuguese>
+		<Portuguese>Burocracia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_PEDIA</Tag>
@@ -303,7 +303,7 @@
 		<German>Steigert die Produktion und st&#228;rkt die Wirtschaft in Ihrer Hauptstadt.</German>
 		<Italian>Aumenta la produzione e il commercio della capitale</Italian>
 		<Spanish>Aumentan la producci&#243;n y el comercio en la capital.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Aumenta a produção e o comércio na sua capital</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
@@ -312,7 +312,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 5 Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 5 città[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Menos de 6 cidades[COLOR_REVERT], Instável com [COLOR_RED]Mais de 5 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>
@@ -321,7 +321,7 @@
 		<German>Kirchenrecht</German>
 		<Italian>Legge Religiosa</Italian>
 		<Spanish>Ley de Relisious</Spanish>
-		<Portuguese>&#208;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#233; &#199;&#224;&#234;&#238;&#237;</Portuguese>
+		<Portuguese>Legislação Religiosa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_PEDIA</Tag>
@@ -339,7 +339,7 @@
 		<German>Ernennung unbegrenzt vieler Priester; verbessert die Wahrscheinlichkeit des Auftretens [COLOR_HIGHLIGHT_TEXT]Großer Persönlichkeiten[COLOR_REVERT]; Unzufriedenheit in Städten mit anderen Religionen</German>
 		<Italian>Sacerdoti illimati e i grandi generali nascono più in fretta; infelicità dalle religioni non-ufficiali</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#211;&#236;&#229;&#237;&#252;&#248;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#231;&#228;&#224;&#237;&#232;&#233;; &#243;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#224;&#255; &#241;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#232;&#241;&#241;&#228;&#229;&#238;&#226;&#224;&#237;&#232;&#255;. &#205;&#229; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#240;&#229;&#235;&#232;&#227;&#232;&#255; &#226;&#251;&#231;&#251;&#226;&#224;&#229;&#242; &#226;&#238;&#235;&#237;&#229;&#237;&#232;&#229;</Portuguese>
+		<Portuguese>Pode treinar missionários sem mosteiros; infelicidade com religião não estatal; reduz infelicidade pela guerra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
@@ -348,7 +348,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina, Teocracia[COLOR_REVERT], Instável com [COLOR_RED]Paganismo, Livre Culto[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW</Tag>
@@ -357,7 +357,7 @@
 		<German>Gewohnheitsrecht</German>
 		<Italian>Diritto Comune</Italian>
 		<Spanish>Ley no escrita</Spanish>
-		<Portuguese>&#206;&#225;&#249;&#229;&#229; &#207;&#240;&#224;&#226;&#238;</Portuguese>
+		<Portuguese>Direito Comum</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_PEDIA</Tag>
@@ -375,7 +375,7 @@
 		<German>Verbessert die Wahrscheinlichkeit des Auftretens [COLOR_HIGHLIGHT_TEXT]Großer Persönlichkeiten[COLOR_REVERT]; höhere laufende Kosten für Militäreinheiten</German>
 		<Italian>Velocizza la nascita di Grandi Personaggi. Aumenta i costi di supporo delle unità</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#200;&#241;&#239;&#238;&#235;&#252;&#231;&#243;&#233;&#242;&#229; &#228;&#235;&#255; &#232;&#241;&#241;&#235;&#229;&#228;&#238;&#226;&#224;&#237;&#232;&#233;, &#227;&#238;&#240;&#238;&#228;&#238;&#226;, &#232; &#226;&#229;&#235;&#232;&#234;&#232;&#245; &#235;&#254;&#228;&#229;&#233;. &#194;&#238;&#235;&#237;&#229;&#237;&#232;&#229; &#238;&#242; &#226;&#238;&#229;&#237;&#237;&#251;&#245; &#254;&#237;&#232;&#242;&#238;&#226;.</Portuguese>
+		<Portuguese>Grande bônus de cultura, penalidade para jogadores sem Direito Comum</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
@@ -384,7 +384,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewerbefreiheit[COLOR_REVERT], Instabil mit [COLOR_RED]Theokratie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Libertà Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Constiucional, República Mercante, Labor Livre[COLOR_REVERT], Instável com [COLOR_RED]Teocracia[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Legal -->
 	<!-- Civic Category Labor -->
@@ -395,7 +395,7 @@
 		<German>Arbeit</German>
 		<Italian>Lavoro</Italian>
 		<Spanish>Condc. laborales</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Labor</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBALISM</Tag>
@@ -404,7 +404,7 @@
 		<German>Stammestum</German>
 		<Italian>Organiz. tribale</Italian>
 		<Spanish>Tribalismo</Spanish>
-		<Portuguese>&#210;&#240;&#224;&#233;&#225;&#224;&#235;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>Tribalismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRIBALISM_PEDIA</Tag>
@@ -422,7 +422,7 @@
 		<German>Die einfachste Arbeiter-Staatsform.</German>
 		<Italian>La forma di Lavoro pi&#249; primitiva</Italian>
 		<Spanish>El principio laboral m&#225;s primitivo.</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>A forma mais primitiva de organização do trabalho</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM</Tag>
@@ -431,7 +431,7 @@
 		<German>Leibeigenschaft</German>
 		<Italian>Servit&#249;</Italian>
 		<Spanish>Servidumbre</Spanish>
-		<Portuguese>&#202;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>Servidão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_PEDIA</Tag>
@@ -449,7 +449,7 @@
 		<German>+1 [ICON_PRODUCTION] von Farmen, geringere Zuwachsrate von Gehöften und großen Persönlichkeiten</German>
 		<Italian>+1 produzione da fattorie, crescità più lenta per villete e grandi personaggi</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>+1 [ICON_PRODUCTION] por fazenda, reduz a taxa de Grandes Personalidades e de crescimento de cabanas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
@@ -458,7 +458,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Lei Feudal, Senhorialismo[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
@@ -467,7 +467,7 @@
 		<German>Bauernbefreiung</German>
 		<Italian>Contadini Liberi</Italian>
 		<Spanish>Liberte el Campesinado</Spanish>
-		<Portuguese>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#238;&#229; &#202;&#240;&#229;&#241;&#242;&#252;&#255;&#237;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>Campesinato Livre</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_PEDIA</Tag>
@@ -485,7 +485,7 @@
 		<German>.</German>
 		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
 		<Spanish></Spanish>
-		<Portuguese>+100% &#239;&#240;&#232;&#240;&#238;&#241;&#242; &#234; &#234;&#238;&#242;&#242;&#229;&#228;&#230;&#224;&#236;, &#239;&#238;&#241;&#229;&#235;&#229;&#237;&#232;&#255;&#236; &#232; &#241;&#229;&#235;&#224;&#236;.</Portuguese>
+		<Portuguese>+100% na taxa de crescimento de cabanas, aldeias, e vilarejos; trabalhadores acabam melhorias mais rápido</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
@@ -494,7 +494,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Constitucional, República Mercante[COLOR_REVERT], Instável com [COLOR_RED]Lei Feudal[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
@@ -503,7 +503,7 @@
 		<German>Berufslehre</German>
 		<Italian>Apprendistato</Italian>
 		<Spanish>Aprendizaje</Spanish>
-		<Portuguese>&#211;&#247;&#229;&#237;&#232;&#247;&#229;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>Aprendizagem</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_PEDIA</Tag>
@@ -521,7 +521,7 @@
 		<German>.</German>
 		<Italian>Artisti, scienziati e mercanti illimitati; le botteghe danno produzione extra</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#193;&#229;&#231;&#227;&#240;&#224;&#237;&#232;&#247;&#237;&#251;&#229; &#245;&#243;&#228;&#238;&#230;&#237;&#232;&#234;&#232;, &#248;&#234;&#238;&#235;&#252;&#237;&#232;&#234;&#232; &#232; &#242;&#238;&#240;&#227;&#238;&#226;&#246;&#251;; &#246;&#229;&#245;&#224; &#228;&#224;&#254;&#242; &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>Artistas, mercadores e intelectuais ilimitados; oficinas, moinhos de vento e moinhos d'água fornecem produção extra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
@@ -530,7 +530,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gilden[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Associazioni[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Corporações de Ofício[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
@@ -539,7 +539,7 @@
 		<German>Gewerbefreiheit</German>
 		<Italian>Libertà Lavorativa</Italian>
 		<Spanish>Liberte Trabajo</Spanish>
-		<Portuguese>&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#224;&#255; &#240;&#224;&#225;&#238;&#247;&#224;&#255; &#209;&#232;&#235;&#224;</Portuguese>
+		<Portuguese>Labor Livre</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_PEDIA</Tag>
@@ -557,7 +557,7 @@
 		<German>.</German>
 		<Italian>Più commercio e produzione dalle città; penalità per le civiltà che non la adottano</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#196;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#242;&#238;&#240;&#227;&#238;&#226;&#235;&#255; &#232; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226;.</Portuguese>
+		<Portuguese>+2 especialistas livres nas suas cidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
@@ -566,7 +566,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewohnheitsrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Legge Comune[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Constitucional, República Mercante, Direito Comum[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Labor -->
 	<!-- Civic Category Economy -->
@@ -577,7 +577,7 @@
 		<German>&#214;konomie</German>
 		<Italian>Economia</Italian>
 		<Spanish>Econom&#237;a</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Economia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION</Tag>
@@ -586,7 +586,7 @@
 		<German>Dezentralisierung</German>
 		<Italian>Decentralizzazione</Italian>
 		<Spanish>Descentralizaci&#243;n</Spanish>
-		<Portuguese>&#196;&#229;&#246;&#229;&#237;&#242;&#240;&#224;&#235;&#232;&#231;&#224;&#246;&#232;&#255;</Portuguese>
+		<Portuguese>Descentralização</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DECENTRALIZATION_PEDIA</Tag>
@@ -604,7 +604,7 @@
 		<German>Die einfachste Wirtschafts-Staatsform</German>
 		<Italian>La forma di economia pi&#249; primitiva</Italian>
 		<Spanish>El principio econ&#243;mico m&#225;s primitivo.</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>A forma mais primitiva de economia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM</Tag>
@@ -613,7 +613,7 @@
 		<German>Grunddherrschaft</German>
 		<Italian>Manorialismo</Italian>
 		<Spanish>Señorío</Spanish>
-		<Portuguese>&#204;&#224;&#237;&#238;&#240;&#224;&#235;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>Senhorialismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_PEDIA</Tag>
@@ -631,7 +631,7 @@
 		<German>.</German>
 		<Italian>-1 rotta commerciale, oro dalle fattorie</Italian>
 		<Spanish></Spanish>
-		<Portuguese>&#211;&#226;&#229;&#235;&#232;&#247;&#229;&#237;&#237;&#238;&#229; &#226;&#238;&#229;&#237;&#237;&#238;&#229; &#229;&#228;&#232;&#237;&#232;&#247;&#237;&#238;&#229; &#239;&#240;&#238;&#232;&#231;&#226;&#238;&#228;&#241;&#242;&#226;&#238;; -1 &#242;&#238;&#240;&#227;&#238;&#226;&#251;&#233; &#236;&#224;&#240;&#248;&#240;&#243;&#242;, &#231;&#238;&#235;&#238;&#242;&#238; &#238;&#242; &#244;&#229;&#240;&#236;</Portuguese>
+		<Portuguese>-1 rota comercial nas suas cidades, comércio por fazendas, pequena renda por solares</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
@@ -640,7 +640,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Leibeigenschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Servitù[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Lei Feudal, Servidão[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY</Tag>
@@ -649,7 +649,7 @@
 		<German>Marktwirtschaft</German>
 		<Italian>Economia di Mercato</Italian>
 		<Spanish>Economía de mercado</Spanish>
-		<Portuguese>&#195;&#232;&#235;&#252;&#228;&#232;&#232;</Portuguese>
+		<Portuguese>Economia de Mercado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_PEDIA</Tag>
@@ -667,7 +667,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Uma rota comercial adicional em todas as suas cidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
@@ -676,7 +676,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]República Mercante[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS</Tag>
@@ -685,7 +685,7 @@
 		<German>Gilden</German>
 		<Italian>Associazioni</Italian>
 		<Spanish>Gremios</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Corporações de Ofício</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_PEDIA</Tag>
@@ -703,7 +703,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Todos os seus especialistas contribuem mais para seu desenvolvimento científico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
@@ -712,7 +712,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Berufslehre[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Apprendistato[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Aprendizagem[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM</Tag>
@@ -721,7 +721,7 @@
 		<German>Merkantilismus</German>
 		<Italian>Mercantilismo</Italian>
 		<Spanish>Mercantilismo</Spanish>
-		<Portuguese>&#204;&#229;&#240;&#234;&#224;&#237;&#242;&#232;&#235;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>Mercantilismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM_PEDIA</Tag>
@@ -739,7 +739,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Desabilitando o comércio estrangeiro e as corporações, seus mercados locais e distritos podem prosperar. Mercantilismo pode ser muito fortalecedor quando suas relações com seus vizinhos não são muito boas</Portuguese>
 	</TEXT>
 	<!-- Civic Category Economy -->
 	<!-- Civic Category Religion -->
@@ -750,7 +750,7 @@
 		<German>Religion</German>
 		<Italian>Religione</Italian>
 		<Spanish>Religi&#243;n</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Religião</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM</Tag>
@@ -759,7 +759,7 @@
 		<German>Heidentum</German>
 		<Italian>Paganesimo</Italian>
 		<Spanish>Paganismo</Spanish>
-		<Portuguese>&#223;&#231;&#251;&#247;&#229;&#241;&#242;&#226;&#238;</Portuguese>
+		<Portuguese>Paganismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_PEDIA</Tag>
@@ -777,7 +777,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Você não pode ter uma religião estatal sob Paganismo, mas você ganha um bônus de felicidade por Santuários Pagãos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
@@ -786,7 +786,7 @@
 		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Instável com [COLOR_RED]Monarquia Divina, Legislação Religiosa[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>
@@ -795,7 +795,7 @@
 		<German>Staatsreligion</German>
 		<Italian>Religione di Stato</Italian>
 		<Spanish>Indique Religión</Spanish>
-		<Portuguese>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Portuguese>
+		<Portuguese>Religião de Estado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_PEDIA</Tag>
@@ -813,7 +813,7 @@
 		<German>.</German>
 		<Italian>Le città con Religione Ufficiale addestrano più velocemente le unità</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Aumenta a taxa de produção de construções em todas suas cidades que possuam sua religião estatal.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
@@ -822,7 +822,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY</Tag>
@@ -831,7 +831,7 @@
 		<German>Theokratie</German>
 		<Italian>Teocrazia</Italian>
 		<Spanish>Teocracia</Spanish>
-		<Portuguese>&#210;&#229;&#238;&#234;&#240;&#224;&#242;&#232;&#255;</Portuguese>
+		<Portuguese>Teocracia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_PEDIA</Tag>
@@ -849,7 +849,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Aumenta a taxa de produção de unidades e lhes dá XP de graça em todas suas cidades que possuam a sua religião estatal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
@@ -858,7 +858,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Gewohnheitsrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT], instabile con [COLOR_RED]Legge Comune[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina, Legislação Religiosa[COLOR_REVERT], Instável com [COLOR_RED]Direito Comum[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION</Tag>
@@ -867,15 +867,15 @@
 		<German>Organisierte Religion</German>
 		<Italian>Religione Organizzata</Italian>
 		<Spanish>Religi&#243;n organizada</Spanish>
-		<Portuguese>&#206;&#240;&#227;&#224;&#237;&#232;&#231;&#238;&#226;&#224;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Portuguese>
+		<Portuguese>Religião Organizada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_PEDIA</Tag>
-		<English>[TAB]An organized religion is one in which there is a central authority which interprets or determines theology, which decides which ceremonies are to be performed at which times, and which appoints priests or holy men to keep worshipers on the correct path. The central authority may be a rigid and powerful hierarchy with great religious and secular power, or it may be a group of elders who meet periodically to discuss matters of importance to their members. [PARAGRAPH:2]An organized religion can be a mighty thing, more powerful than kings or despots. Its followers may provide it with great wealth, and may construct mighty edifices in their gods' honor. Usually, however, organized religions are less powerful than that and must live in uneasy harmony with the local secular governments. </English>
-		<French>[TAB]Une religion organis&#233;e dispose d'une autorit&#233; centralis&#233;e qui interpr&#232;te et d&#233;termine la th&#233;ologie, qui d&#233;cide quand et comment sont organis&#233;es les c&#233;r&#233;monies du culte et qui se charge de nommer les pr&#234;tres et autres hommes d'&#233;glise qui dirigeront les fid&#232;les. L'autorit&#233; centrale peut prendre la forme d'une hi&#233;rarchie rigide et puissante ayant un pouvoir &#224; la fois religieux et la&#239;c. Elle peut aussi &#234;tre compos&#233;e d'un groupe d'anciens qui se r&#233;unissent r&#233;guli&#232;rement pour discuter des probl&#232;mes que rencontre leur communaut&#233;. [PARAGRAPH:2]Une religion organis&#233;e peut &#234;tre puissante et avoir davantage de pouvoir qu'un roi ou qu'un despote. Ses fid&#232;les peuvent la rendre riche et b&#226;tir des &#233;difices majestueux en l'honneur de leur Dieu. Cependant, les religions organis&#233;es sont rarement aussi puissantes et doivent g&#233;n&#233;ralement vivre tant bien que mal en harmonie avec un v&#233;ritable pouvoir la&#239;que. </French>
+		<English>[TAB]An organized religion is one in which there is a central authority which interprets or determines theology, which decides which ceremonies are to be performed at which times, and which appoints priests or holy men to keep worshipers on the correct path. The central authority may be a rigid and powerful hierarchy with great religious and secular power, or it may be a group of elders who meet periodically to discuss matters of importance to their members. [PARAGRAPH:2]An organized religion can be a mighty thing, more powerful than kings or despots. Its followers may provide it with great wealth, and may construct mighty edifices in their gods' honor. Usually, however, organized religions are less powerful than that and must live in uneasy harmony with the local secular governments.</English>
+		<French>[TAB]Une religion organis&#233;e dispose d'une autorit&#233; centralis&#233;e qui interpr&#232;te et d&#233;termine la th&#233;ologie, qui d&#233;cide quand et comment sont organis&#233;es les c&#233;r&#233;monies du culte et qui se charge de nommer les pr&#234;tres et autres hommes d'&#233;glise qui dirigeront les fid&#232;les. L'autorit&#233; centrale peut prendre la forme d'une hi&#233;rarchie rigide et puissante ayant un pouvoir &#224; la fois religieux et la&#239;c. Elle peut aussi &#234;tre compos&#233;e d'un groupe d'anciens qui se r&#233;unissent r&#233;guli&#232;rement pour discuter des probl&#232;mes que rencontre leur communaut&#233;. [PARAGRAPH:2]Une religion organis&#233;e peut &#234;tre puissante et avoir davantage de pouvoir qu'un roi ou qu'un despote. Ses fid&#232;les peuvent la rendre riche et b&#226;tir des &#233;difices majestueux en l'honneur de leur Dieu. Cependant, les religions organis&#233;es sont rarement aussi puissantes et doivent g&#233;n&#233;ralement vivre tant bien que mal en harmonie avec un v&#233;ritable pouvoir la&#239;que.</French>
 		<German>[TAB]Eine organisierte Religion hat eine zentrale Autorit&#228;t, die f&#252;r die Interpretation der Theologie, die Liturgie, die Priesterweihe und Heiligsprechungen verantwortlich ist. Diese zentrale Autorit&#228;t ist nicht selten eine einflussreiche Beh&#246;rde mit betr&#228;chtlicher geistlicher und weltlicher Macht. [PARAGRAPH:2]Organisierte Religionen konnten sehr m&#228;chtig werden, m&#228;chtiger noch als K&#246;nige oder Despoten. Oft h&#228;uften ihre Gl&#228;ubigen gro&#223;e Reicht&#252;mer an und errichteten zu Ehren ihres Gottes pr&#228;chtige Geb&#228;ude. Heute ist der politische und religi&#246;se Einfluss organisierter Religionen allerdings eher gering.</German>
 		<Italian>[TAB]In una organizzazione religiosa esiste un'autorit&#224; centrale che interpreta o determina la teologia, che decide quando e quali cerimonie devono essere eseguite, che nomina i sacerdoti o gli uomini santi per mantenere i fedeli sulla retta via. L'autorit&#224; centrale pu&#242; essere una gerarchia potente e rigida di grandi religioni e potere secolare, oppure pu&#242; essere rappresentata da un gruppo di anziani che si incontrano periodicamente per discutere questioni importanti. [PARAGRAPH:2]Una organizzazione religiosa pu&#242; rappresentare un grande potere, pi&#249; di quello di un re o un despota: i seguaci possono fornire ricchezze e finanziare la realizzazione di grandi edifici in onore degli dei. Tuttavia, le organizzazioni religiose sono meno potenti e devono vivere in una difficile armonia con i governi locali laici.</Italian>
-		<Spanish>[TAB]Una religi&#243;n organizada es una en la que existe una autoridad central que interpreta o establece la teolog&#237;a, decide qu&#233; ceremonias se llevan a cabo y nombra a los sacerdotes u hombres santos encargados de mantener al reba&#241;o en el recto camino. La autoridad central puede ser una jerarqu&#237;a r&#237;gida y poderosa dotada de gran poder religioso y secular o puede estar formada por un consejo de ancianos que se re&#250;ne peri&#243;dicamente para debatir todos los asuntos concernientes a sus fieles.[PARAGRAPH:2]Las religiones organizadas pueden ser muy poderosas, m&#225;s incluso que los reyes o los d&#233;spotas. Sus seguidores pueden proporcionarle enormes riquezas y erigir impresionantes edificios en honor a sus dioses. Sin embargo, lo normal es que no sean tan poderosas y se vean obligadas a convivir en un estado de complicada armon&#237;a con los poderes seculares. </Spanish>
+		<Spanish>[TAB]Una religi&#243;n organizada es una en la que existe una autoridad central que interpreta o establece la teolog&#237;a, decide qu&#233; ceremonias se llevan a cabo y nombra a los sacerdotes u hombres santos encargados de mantener al reba&#241;o en el recto camino. La autoridad central puede ser una jerarqu&#237;a r&#237;gida y poderosa dotada de gran poder religioso y secular o puede estar formada por un consejo de ancianos que se re&#250;ne peri&#243;dicamente para debatir todos los asuntos concernientes a sus fieles.[PARAGRAPH:2]Las religiones organizadas pueden ser muy poderosas, m&#225;s incluso que los reyes o los d&#233;spotas. Sus seguidores pueden proporcionarle enormes riquezas y erigir impresionantes edificios en honor a sus dioses. Sin embargo, lo normal es que no sean tan poderosas y se vean obligadas a convivir en un estado de complicada armon&#237;a con los poderes seculares.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -885,7 +885,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Sacerdotes ilimitados e um grande bônus para a taxa de nascimento de Grandes Personalidades onde sua religião estatal está presente</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
@@ -894,7 +894,7 @@
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION</Tag>
@@ -903,7 +903,7 @@
 		<German>Religionsfreiheit</German>
 		<Italian>Libert&#224; religiosa</Italian>
 		<Spanish>Libertad religiosa</Spanish>
-		<Portuguese>&#195;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#208;&#229;&#235;&#232;&#227;&#232;&#255;</Portuguese>
+		<Portuguese>Livre Culto</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_PEDIA</Tag>
@@ -921,7 +921,7 @@
 		<German>Noch keine Strategie.</German>
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Bônus de felicidade nas cidades onde sua religião estatal está presente; permite a construção de construções religiosas de outras religiões; +10% ciência</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
@@ -930,7 +930,7 @@
 		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Instável com [COLOR_RED]Monarquia Divina, Legislação Religiosa[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Religion -->
 	<!-- Civic Category Expansion -->
@@ -941,7 +941,7 @@
 		<German>Expansion</German>
 		<Italian>Espansione</Italian>
 		<Spanish>Expansi&#243;n</Spanish>
-		<Portuguese>&#208;&#224;&#241;&#248;&#232;&#240;&#229;&#237;&#232;&#229;</Portuguese>
+		<Portuguese>Expansão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SUBJUGATION</Tag>
@@ -950,7 +950,7 @@
 		<German>Unterwerfung</German>
 		<Italian>Sottomissione</Italian>
 		<Spanish>Subyugaci&#243;n</Spanish>
-		<Portuguese>&#207;&#238;&#228;&#247;&#232;&#237;&#229;&#237;&#232;&#229;</Portuguese>
+		<Portuguese>Submissão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SUBJUGATION_PEDIA</Tag>
@@ -968,7 +968,7 @@
 		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>A forma mais primitiva de expansão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE</Tag>
@@ -977,15 +977,15 @@
 		<German>Vasallentum</German>
 		<Italian>Vassallaggio</Italian>
 		<Spanish>Vasallaje</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Vassalagem</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE_PEDIA</Tag>
-		<English>[TAB]Vassalage is a feudal term referring to a person who enters a contract with his or her lord, agreeing to serve and protect the lord in return for monetary rewards or ownership or sovereignty over a parcel of land. The contract is often of both political and religious significance binding both parties by the rules of man and of God. [PARAGRAPH:2]Vassalage is often tribal in nature. One tribe conquers another, and rather than killing the conquered tribe or taking over its direct management, the conquering ruler makes the conquered his vassal: the lower ruler continues to maintain control over his people and territory, while paying tribute to his or her lord in the form of money, goods, soldiers or slaves. </English>
-		<French>[TAB]La vassalit&#233; est un terme f&#233;odal qui fait r&#233;f&#233;rence aux engagements pris entre des personnes et leur seigneur, l'un promettant de servir et de prot&#233;ger l'autre contre de l'argent, des biens ou m&#234;me la souverainet&#233; sur une parcelle de terres. Ce type de contrat a souvent &#224; la fois une signification politique et religieuse, les deux parties &#233;tant li&#233;es devant les hommes et devant Dieu. [PARAGRAPH:2]La vassalit&#233; est souvent tribale par nature. Une tribu en envahit une autre, mais plut&#244;t que de tuer tout le monde ou de s'emparer des r&#234;nes du pouvoir, le conqu&#233;rant fait du vaincu son vassal : ce dernier continue d'exercer le pouvoir sur son peuple, mais verse un tribut &#224; son seigneur sous la forme d'argent, de biens, de soldats ou d'esclaves. </French>
+		<English>[TAB]Vassalage is a feudal term referring to a person who enters a contract with his or her lord, agreeing to serve and protect the lord in return for monetary rewards or ownership or sovereignty over a parcel of land. The contract is often of both political and religious significance binding both parties by the rules of man and of God. [PARAGRAPH:2]Vassalage is often tribal in nature. One tribe conquers another, and rather than killing the conquered tribe or taking over its direct management, the conquering ruler makes the conquered his vassal: the lower ruler continues to maintain control over his people and territory, while paying tribute to his or her lord in the form of money, goods, soldiers or slaves.</English>
+		<French>[TAB]La vassalit&#233; est un terme f&#233;odal qui fait r&#233;f&#233;rence aux engagements pris entre des personnes et leur seigneur, l'un promettant de servir et de prot&#233;ger l'autre contre de l'argent, des biens ou m&#234;me la souverainet&#233; sur une parcelle de terres. Ce type de contrat a souvent &#224; la fois une signification politique et religieuse, les deux parties &#233;tant li&#233;es devant les hommes et devant Dieu. [PARAGRAPH:2]La vassalit&#233; est souvent tribale par nature. Une tribu en envahit une autre, mais plut&#244;t que de tuer tout le monde ou de s'emparer des r&#234;nes du pouvoir, le conqu&#233;rant fait du vaincu son vassal : ce dernier continue d'exercer le pouvoir sur son peuple, mais verse un tribut &#224; son seigneur sous la forme d'argent, de biens, de soldats ou d'esclaves.</French>
 		<German>[TAB]Vasallen waren in der feudalen Gesellschaft Personen, die ihren Lehnsherren dienten oder diese besch&#252;tzten und f&#252;r ihre Dienste mit Geld, Grundbesitz oder Macht belohnt wurden. Der Vertrag zwischen Lehnsherr und Vasall hatte nicht selten eine politische oder religi&#246;se Bedeutung und war f&#252;r beide Parteien bindend.[PARAGRAPH:2]Das Vasallentum ist vor allem f&#252;r Stammeskulturen typisch. Erobert Stamm A beispielsweise Stamm B, wird Letzterer automatisch ein Vasall des Siegers. Der unterlegene Herrscher bleibt in diesem Fall im Amt und verpflichtet sich, seinen Bezwinger mit Geld, Waren, Soldaten oder Sklaven zu unterst&#252;tzen.</German>
 		<Italian>[TAB]Il vassallaggio &#232; un termine feudale che si riferisce a una persona che stipula un contratto con il proprio signore, per proteggerlo e servirlo in cambio di ricompense monetarie, propriet&#224; o sovranit&#224; su una terra. Il contratto assume spesso un significato politico e religioso, legando entrambe le parti alle leggi umane e divine. [PARAGRAPH:2]Il vassallaggio assume spesso connotazioni di natura tribale. Una trib&#249; conquista un'altra e, invece di sterminarla o prendere il possesso della loro gestione, il vincitore della battaglia trasforma il perdente in un vassallo: il soggiogato continua a mantenere il controllo sulla propria gente e sul territorio, pagando per&#242; dei tributi sotto forma di soldi, beni, soldati o schiavi al proprio signore.</Italian>
-		<Spanish>[TAB]Vasallaje es un t&#233;rmino feudal que hace referencia a la persona que establece una relaci&#243;n contractual con su se&#241;or en la que se compromete a servirlo y protegerlo a cambio de recompensas pecuniarias o de la propiedad (o usufructo) de una parcela. Normalmente, el contrato tiene connotaciones pol&#237;ticas y religiosas y somete a ambas partes a las leyes del hombre y de Dios.[PARAGRAPH:2]El vasallaje suele ser de naturaleza tribal. Una tribu conquista a otra y, en vez de exterminarla o hacerse cargo de la administraci&#243;n directa de su patrimonio, convierte a los conquistados en vasallos: el gobernante sometido mantiene el control sobre su pueblo y su territorio, pero paga un tributo a su se&#241;or en forma de dinero, mercanc&#237;as, soldados o esclavos. </Spanish>
+		<Spanish>[TAB]Vasallaje es un t&#233;rmino feudal que hace referencia a la persona que establece una relaci&#243;n contractual con su se&#241;or en la que se compromete a servirlo y protegerlo a cambio de recompensas pecuniarias o de la propiedad (o usufructo) de una parcela. Normalmente, el contrato tiene connotaciones pol&#237;ticas y religiosas y somete a ambas partes a las leyes del hombre y de Dios.[PARAGRAPH:2]El vasallaje suele ser de naturaleza tribal. Una tribu conquista a otra y, en vez de exterminarla o hacerse cargo de la administraci&#243;n directa de su patrimonio, convierte a los conquistados en vasallos: el gobernante sometido mantiene el control sobre su pueblo y su territorio, pero paga un tributo a su se&#241;or en forma de dinero, mercanc&#237;as, soldados o esclavos.</Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
@@ -995,7 +995,7 @@
 		<German>Stabilit&#228;tspunktbonus f&#252;r jeden Vasallen</German>
 		<Italian>Aggiunge un punto stabilit&#224; per ogni vassallo.</Italian>
 		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada vasallo</Spanish>
-		<Portuguese>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Portuguese>
+		<Portuguese>Fornece estabilidade extra por cada vassalo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM</Tag>
@@ -1004,7 +1004,7 @@
 		<German>Imperialismus</German>
 		<Italian>Imperialismo</Italian>
 		<Spanish>Imperialismo</Spanish>
-		<Portuguese>&#200;&#236;&#239;&#229;&#240;&#232;&#224;&#235;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>Imperialismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_PEDIA</Tag>
@@ -1022,7 +1022,7 @@
 		<German>Addiert Stabilität für jede Stadt außerhalb des Kerngebietes</German>
 		<Italian>Aumentà la stabilità per ogni città fuori dal centro dell'impero</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Fornece estabilidade extra por cada cidade fora da sua área central</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION</Tag>
@@ -1031,7 +1031,7 @@
 		<German>Militarism</German>
 		<Italian>Occupazione</Italian>
 		<Spanish>Militarism</Spanish>
-		<Portuguese>Militarism</Portuguese>
+		<Portuguese>Militarismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION_PEDIA</Tag>
@@ -1049,7 +1049,7 @@
 		<German>Stabilit&#228;tspunktbonus bei Stadteroberung; keine Stabilit&#228;tspunktabz&#252;ge durch besetzte St&#228;dte</German>
 		<Italian>Aggiunge un bonus di punti stabilit&#224; per la conquista di citt&#224;; nessun punto stabilit&#224; negativo in caso di citt&#224; occupate.</Italian>
 		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por conquista de ciudades; no hay puntos de estabilidad negativos por las ciudades sometidas a ocupaci&#243;n</Spanish>
-		<Portuguese>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;; &#237;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#239;&#238;&#228; &#238;&#234;&#234;&#243;&#239;&#224;&#246;&#232;&#229;&#233;</Portuguese>
+		<Portuguese>Fornece estabilidade extra na conquista de cidades; ausência de estabilidade negativa por cidades ocupadas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM</Tag>
@@ -1058,7 +1058,7 @@
 		<German>Kolonialismus</German>
 		<Italian>Colonialismo</Italian>
 		<Spanish>Colonialismo</Spanish>
-		<Portuguese>&#202;&#238;&#235;&#238;&#237;&#232;&#224;&#235;&#232;&#231;&#236;</Portuguese>
+		<Portuguese>Colonialismo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Tag>
@@ -1076,7 +1076,7 @@
 		<German>Stabilitätspunkte für jede errichtete Kolonie</German>
 		<Italian>Aumentà la stabilità per ogni colonia fondata</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Fornece estabilidade extra por cada colônia fundada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_HELP</Tag>
@@ -1085,7 +1085,7 @@
 		<German>[ICON_BULLET]+1 Stabilität für jede gegründete Kolonie</German>
 		<Italian>[ICON_BULLET]+1 Stabilità per ogni colonia fondata.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]+1 estabilidade por cada colônia fundada</Portuguese>
 	</TEXT>
 	<!-- Civic Category Expansion -->
 	<!-- Used in the dll -->
@@ -1096,7 +1096,7 @@
 		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden Vasallen</German>
 		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni vassallo.</Italian>
 		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada vasallo</Spanish>
-		<Portuguese>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#226;&#224;&#241;&#241;&#224;&#235;&#224;</Portuguese>
+		<Portuguese>[ICON_BULLET]+3 pontos de estabilidade por cada vassalo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IMPERIALISM_BONUS</Tag>
@@ -1105,7 +1105,7 @@
 		<German>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</German>
 		<Italian>[ICON_BULLET]+1 punti stabilità per ogni città in una provincia con stabilità inferiore a Solido.</Italian>
 		<Spanish>[ICON_BULLET]+1 stability point for each city in a less than Solid Province</Spanish>
-		<Portuguese>[ICON_BULLET]+1 stability point for each city in a less than Solid Province.</Portuguese>
+		<Portuguese>[ICON_BULLET]+1 ponto de estabilidade por cada cidade em uma província menos que Sólida.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_OCCUPATION_BONUS</Tag>
@@ -1114,7 +1114,7 @@
 		<German>[ICON_BULLET]Keine Stabilit&#228;tspunktabz&#252;ge durch besetzte St&#228;dte</German>
 		<Italian>[ICON_BULLET]Nessun punto stabilit&#224; negativo in caso di citt&#224; occupate.</Italian>
 		<Spanish>[ICON_BULLET]No hay puntos de estabilidad negativos por las ciudades sometidas a ocupaci&#243;n</Spanish>
-		<Portuguese>[ICON_BULLET]&#205;&#229;&#242; &#238;&#247;&#234;&#238;&#226; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#238;&#233; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#238;&#242; &#227;&#238;&#240;&#238;&#228;&#238;&#226; &#239;&#238;&#228; &#231;&#224;&#237;&#255;&#242;&#232;&#229;&#236;</Portuguese>
+		<Portuguese>[ICON_BULLET]Sem pontos negativos de estabilidade por cidades ocupadas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CONQUEST_BONUS</Tag>
@@ -1123,7 +1123,7 @@
 		<German>[ICON_BULLET]+1 zus&#228;tzliche Stabilit&#228;tspunkte bei Stadteroberung</German>
 		<Italian>[ICON_BULLET]+1 punti stabilit&#224; addizionali conquistando una citt&#224;.</Italian>
 		<Spanish>[ICON_BULLET]+1 puntos de estabilidad adicionales por conquista de ciudad</Spanish>
-		<Portuguese>[ICON_BULLET]+1 &#228;&#238;&#239;&#238;&#235;&#237;&#232;&#242;&#229;&#235;&#252;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#237;&#224; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#236; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#232;&#232;</Portuguese>
+		<Portuguese>[ICON_BULLET]+1 ponto de estabilidade adicional ao conquistar cidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
@@ -1132,7 +1132,7 @@
 		<German>[ICON_BULLET]Erlaubt den Bau von Nicht-Staatsreligion Gebäuden und Wundern</German>
 		<Italian>[ICON_BULLET]Permette la costruzione di Meraviglie ed Edifici di Religioni non-Ufficiali</Italian>
 		<Spanish>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Spanish>
-		<Portuguese>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Portuguese>
+		<Portuguese>[ICON_BULLET]Permite a produção de Construções e Maravilhas de outras religiões</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMBO_CIVIC_INFO1</Tag>
@@ -1159,7 +1159,7 @@
 		<German>[ICON_BULLET]%D1_Mod% Einheitenproduktion</German>
 		<Italian>[ICON_BULLET]%D1_Mod% Unit Production</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% Unit Production</Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod% Unit Production</Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod% Produção de Unidades</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIT_PRODUCTION_MODIFIER_INCITY_HELP</Tag>
@@ -1168,7 +1168,7 @@
 		<German>[ICON_BULLET]%D1_Mod% von Gesellschaftsformen</German>
 		<Italian>[ICON_BULLET]%D1_Mod% from Civics</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% from Civics</Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod% from Civics</Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod% por Regimes</Portuguese>
 	</TEXT>
 	<!-- Used in the dll -->
 	<!-- Currently unused in RFCE
@@ -1179,7 +1179,7 @@
 		<German>[ICON_BULLET]+3 Stabilit&#228;tspunkte f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
 		<Italian>[ICON_BULLET]+3 punti stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
 		<Spanish>[ICON_BULLET]+3 puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Portuguese>[ICON_BULLET]+3 &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252;, &#232;&#225;&#238; &#234;&#224;&#230;&#228;&#251;&#233; &#232;&#241;&#245;&#238;&#228;&#237;&#251;&#233; &#239;&#243;&#237;&#234;&#242; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; &#243;&#239;&#240;&#224;&#226;&#235;&#255;&#235;&#241;&#255;</Portuguese>
+		<Portuguese>[ICON_BULLET]+3 Stability Points for each civilization starting point controlled</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE_VANILLA_STRATEGY</Tag>
@@ -1188,7 +1188,7 @@
 		<German>Stabilit&#228;tspunktbonus f&#252;r jeden kontrollierten Zivilisationsstartpunkt</German>
 		<Italian>Aggiunge un punto stabilit&#224; per ogni punto di avvio di civilt&#224; controllato.</Italian>
 		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada punto de inicio de civilizaci&#243;n controlado</Spanish>
-		<Portuguese>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#232; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#232;&#241;&#245;&#238;&#228;&#237;&#238;&#227;&#238; &#239;&#243;&#237;&#234;&#242;&#224; &#246;&#232;&#226;&#232;&#235;&#232;&#231;&#224;&#246;&#232;&#232; </Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RESETTLEMENT_STRATEGY</Tag>
@@ -1197,7 +1197,7 @@
 		<German>Stabilit&#228;tspunktbonus f&#252;r jede Stadt, die mindestens 15 Gel&#228;ndefelder von der Hauptstadt entfernt gegr&#252;ndet wurde</German>
 		<Italian>Aggiunge un bonus di punti stabilit&#224; per ogni citt&#224; fondata ad almeno 15 caselle dalla capitale.</Italian>
 		<Spanish>A&#241;ade una bonificaci&#243;n de puntos de estabilidad por cada ciudad fundada al menos a 15 casillas de la capital</Spanish>
-		<Portuguese>&#196;&#238;&#225;&#224;&#226;&#235;&#255;&#229;&#242; &#239;&#240;&#229;&#236;&#232;&#254; &#207;&#243;&#237;&#234;&#242;&#238;&#226; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#228;&#235;&#255; &#234;&#224;&#230;&#228;&#238;&#227;&#238; &#227;&#238;&#240;&#238;&#228;&#224;, &#238;&#241;&#237;&#238;&#226;&#224;&#237;&#237;&#238;&#227;&#238; &#234;&#224;&#234; &#236;&#232;&#237;&#232;&#236;&#243;&#236; &#237;&#224; 15 &#234;&#235;&#229;&#242;&#238;&#234; &#238;&#242; &#241;&#242;&#238;&#235;&#232;&#246;&#251;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMONWEALTH_STRATEGY</Tag>
@@ -1206,7 +1206,7 @@
 		<German>Keine Stabilit&#228;tspunktabz&#252;ge durch geringf&#252;gig gehandelte Ressourcen; keine Stabilit&#228;tspunktabz&#252;ge durch schlechte Wirtschaftslage</German>
 		<Italian>Nessun punto stabilit&#224; negativo in caso di scarso commercio di risorse; nessun punto stabilit&#224; negativo in caso di scarsa economia.</Italian>
 		<Spanish>No hay puntos de estabilidad negativos por baja cantidad de recursos intercambiados; no hay puntos de estabilidad negativos por econom&#237;a d&#233;bil</Spanish>
-		<Portuguese>&#205;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#237;&#232;&#231;&#234;&#238;&#227;&#238; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#224; &#242;&#238;&#240;&#227;&#243;&#254;&#249;&#232;&#245;&#241;&#255; &#240;&#229;&#241;&#243;&#240;&#241;&#238;&#226;; &#237;&#232;&#234;&#224;&#234;&#224;&#255; &#237;&#229;&#227;&#224;&#242;&#232;&#226;&#237;&#224;&#255; &#209;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#252; &#228;&#235;&#255; &#225;&#229;&#228;&#237;&#238;&#233; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#232;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REPUBLIC</Tag>
@@ -1215,7 +1215,7 @@
 		<German>Republik</German>
 		<Italian>Repubblica</Italian>
 		<Spanish>República</Spanish>
-		<Portuguese>&#208;&#229;&#241;&#239;&#243;&#225;&#235;&#232;&#234;&#224;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Tag>

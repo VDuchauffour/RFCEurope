@@ -12,7 +12,7 @@
 		<German>Groﬂer Theologe</German>
 		<Italian>Grande Teologo</Italian>
 		<Spanish>Great Theologian</Spanish>
-		<Portuguese>Great Theologian</Portuguese>
+		<Portuguese>Grande TeÛlogo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_THEOLOGIAN</Tag>
@@ -21,7 +21,7 @@
 		<German>Groﬂer Theologe</German>
 		<Italian>Grande Teologo</Italian>
 		<Spanish>Great Theologian</Spanish>
-		<Portuguese>Great Theologian</Portuguese>
+		<Portuguese>Grande TeÛlogo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SCHOLAR</Tag>
@@ -30,7 +30,7 @@
 		<German>Gelehrter</German>
 		<Italian>Scienziato</Italian>
 		<Spanish>Erudito</Spanish>
-		<Portuguese>&#211;&#247;&#229;&#237;&#251;&#233;</Portuguese>
+		<Portuguese>Intelectual</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SCHOLAR</Tag>
@@ -39,7 +39,7 @@
 		<German>Groﬂer Gelehrter</German>
 		<Italian>Grande Scienziato</Italian>
 		<Spanish>Gran erudito</Spanish>
-		<Portuguese>&#194;&#229;&#235;&#232;&#234;&#232;&#233; &#211;&#247;&#229;&#237;&#251;&#233;</Portuguese>
+		<Portuguese>Grande Intelectual</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_THE_PIOUS</Tag>
@@ -48,7 +48,7 @@
 		<German>Robert der Fromme</German>
 		<Italian>Roberto il Pio</Italian>
 		<Spanish>Robert the Pious</Spanish>
-		<Portuguese>&#193;&#235;&#224;&#227;&#238;&#247;&#229;&#241;&#242;&#232;&#226;&#251;&#233; &#208;&#238;&#225;&#229;&#240;&#242;</Portuguese>
+		<Portuguese>Roberto o Pio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_THOMAS_MAGISTER</Tag>
@@ -57,7 +57,7 @@
 		<German>Thomas Magister</German>
 		<Italian>Thomas Magister</Italian>
 		<Spanish>Thomas Magister</Spanish>
-		<Portuguese>&#210;&#238;&#236;&#224;&#241; &#204;&#224;&#227;&#232;&#241;&#242;&#229;&#240;</Portuguese>
+		<Portuguese>Thomas Magister</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JEANNE_D'ARC</Tag>

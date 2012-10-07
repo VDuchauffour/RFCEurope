@@ -12,7 +12,7 @@
 		<German>Salz</German>
 		<Italian>Sale</Italian>
 		<Spanish>Sal</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Sal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT_PEDIA</Tag>
@@ -21,7 +21,7 @@
 		<German>[TAB]Salz geh&#246;rte in der Geschichte der Menschheit stets zu den wertvollsten G&#252;tern &#252;berhaupt, nicht zuletzt auch deshalb, weil der menschliche K&#246;rper einen bestimmten Salzgehalt &#252;ber die Nahrung aufnehmen muss, um &#252;berleben zu k&#246;nnen. Dementsprechend setzten sich die Menschen schon vor Tausenden von Jahren, weit vor der Geschichtsschreibung, mit der Salzgewinnung auseinander.[PARAGRAPH:2]Eine der wichtigsten Eigenschaften des Salzes ist, dass es bakteriellen Befall verz&#246;gert oder gar verhindert und daher verwendet werden kann, um Lebensmittel haltbarer zu machen. Dementsprechend wurden Nahrungsmittel in der Zeit vor der Verf&#252;gbarkeit zuverl&#228;ssiger K&#252;hlsysteme durch Zuf&#252;gen von Salz vor dem Verrotten bewahrt. (F&#252;r manche Lebensmittel ist jedoch die "R&#228;uchermethode" besser geeignet.) Dar&#252;ber hinaus diente Salz aber nat&#252;rlich auch als W&#252;rzmittel.[PARAGRAPH:2]Eine der fr&#252;hesten Salzgewinnungsmethoden war es, Salzwasser in der Sonne verdunsten zu lassen - ein sehr langwieriger und aufw&#228;ndiger Prozess, der den Preis f&#252;r dieses wichtige Gut rasant in schwindelnde H&#246;hen schnellen lie&#223;. Erst Mitte des 19. Jahrhunderts, als der Salzabbau schlie&#223;lich in der ganzen Welt praktiziert wurde, r&#252;ckten auch die Preise wieder in erschwingliche Bereiche und Salz musste nicht mehr sprichw&#246;rtlich "in Gold aufgewogen" werden. </German>
 		<Italian>[TAB]Il sale &#232; sempre stato uno dei beni pi&#249; preziosi della storia dell'umanit&#224;: tra le altre cose, l'uomo ha bisogno di una certa quantit&#224; di sale nella dieta per sopravvivere. L'uomo ha prodotto il sale per migliaia di anni, sin dall'inizio della storia e anzi molto prima che esistessero documenti scritti.[PARAGRAPH:2]Una della pi&#249; notevoli propriet&#224; del sale &#232; quella di preservare i cibi. Prima dello sviluppo di un sistema di refrigerazione affidabile, oltre all'affumicazione uno dei pochi modi conosciuti per evitare che il cibo andasse a male era metterlo sotto sale (il sale ostacola o impedisce l'accumulo di batteri); senza contare che oltre a conservare il cibo, esso ne esalta il sapore.[PARAGRAPH:2]Uno dei primi metodi scoperti per produrre il sale fu far evaporare l'acqua marina al sole, un procedimento lungo e costoso che manteneva alto il prezzo del sale. Solo alla met&#224; del diciannovesimo secolo (quando le miniere di sali erano ormai comuni in tutto il mondo) il prezzo del sale scese sensibilmente e il sale smise di costare "tanto oro quanto pesava", come si diceva allora. </Italian>
 		<Spanish>[TAB]La sal ha sido una de las mercanc&#237;as m&#225;s valiosas de la historia de la humanidad: entre otras razones, los hombres necesitan cierta cantidad de sal en su dieta para sobrevivir. Se lleva extrayendo miles de a&#241;os. La pr&#225;ctica se inici&#243; al principio de los tiempos, mucho antes de que existieran registros escritos.[PARAGRAPH:2]Una de las m&#225;s importantes propiedades de la sal es su capacidad para conservar la comida. Antes de que se inventaran sistemas de refrigeraci&#243;n fiables, una de las pocas formas conocidas para impedir que la comida se estropeara era aplicar una capa de sal, capaz de demorar o prevenir las invasiones microbianas (algunos tipos de comida pueden ser preservados ahum&#225;ndolos). Adem&#225;s de estas propiedades, la sal hace que las cosas sepan mejor.[PARAGRAPH:2]Uno de los m&#233;todos m&#225;s antiguos para extraer sal era la evaporaci&#243;n del agua del mar, un proceso tedioso y caro que encarec&#237;a los precios de esta importante mercanc&#237;a. No ser&#237;a hasta mediados del siglo XIX, con la extensi&#243;n de la miner&#237;a de la sal por todo el mundo, cuando esta mercanc&#237;a bajara su precio y dejara de valer "su peso en oro", como sol&#237;a decirse. </Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]O sal tem sido uma das mercado&#237;as mais importantes na hist&#243;ria da humanidade - entre outras raz&#245;es, o homem precisa de uma certa quantidade de sal em sua dieta para sobreviver. O homem vem extraindo sal por milhares de anos; a pr&#225;tica come&#231;ou nos tempos mais prim&#243;rdios, muito antes de se ter qualquer registro escrito.[PARAGRAPH:2]Uma das propriedades mais importantes do sal &#233; a sua habilidade de preservar a comida. Antes do desenvolvimento de uma refrigera&#231;&#227;o confi&#225;vel, uma das poucas maneiras conhecidas de se conservar a comida era a aplica&#231;&#227;o de sal, que retarda ou previne a contamina&#231;&#227;o por micr&#243;bios. (Alguns tipos de comida tamb&#233;m podem se preservar por defuma&#231;&#227;o.)Al&#233;m de suas propriedades conservativas, o sal tamb&#233;m deixa o gosto da comida melhor.[PARAGRAPH:2]Um dos m&#233;todos mais arcaicos j&#225; descobertos para extrair sal era por evapora&#231;&#227;o da &#225;gua marinha ao sol, um processo muito caro e tedioso, levando a altos pre&#231;os este importante produto. S&#243; seria em meados do s&#233;culo XIX - quando a minera&#231;&#227;o de sal j&#225; era amplamente praticada ao redor do mundo - que esta mercadoria tornar-se-ia muito mais barata, n&#227;o mais &quot;avaliado seu peso em ouro&quot;, como normalmente era dito.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATO</Tag>
@@ -30,7 +30,7 @@
 		<German>Kartoffeln</German>
 		<Italian>Patate</Italian>
 		<Spanish>Papas</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Batatas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATO_PEDIA</Tag>
@@ -39,7 +39,7 @@
 		<German>[TAB]Die Kartoffel (Solanum tuberosum) ist eine anhaltende Pflanze des Solanaceae, oder Nachtschatten, Familie, normalerweise gewachsen f&#252;r seinen st&#228;rkehaltigen tuber. Kartoffeln sind der Welt die meiste allgemein gewachsene tuber Ernte, und das vierte die gr&#246;&#223;te Ernte in Begriffen frischen Bodenprodukts (nach Reis, Weizen, und Mais), aber diese Rangzuordnung ist auf Grund des hohen Wassergehalts der Verwandte von frischen Kartoffeln zu das von anderen Ernten hochgetrieben. Die Kartoffel hat in S&#252;damerika, irgendwo in zeitgem&#228;&#223;em Peru hervorgebracht. Kartoffeln sind wichtig f&#252;r die Kultur von den Anden, wo Landwirte viele verschiedene Vielfalt wachsen, die eine bemerkenswerte Verschiedenheit von Farben und Gestalten haben. Kartoffeln breiten zur restlichen Welt aus nachdem europ&#228;ischer Kontakt mit den Amerikas in den sp&#228;ten 1400er Jahren und den fr&#252;hen 1500er Jahren und haben, da eine wichtige Feldernte wird.</German>
 		<Italian>[TAB]La patata (il tuberosum di Solanum) &#232; una pianta perenne del Solanaceae, o la morella, la famiglia, comunemente cresciuto per il suo tubero ricco di amido. Le patate sono il mondo la maggior parte del raccolto di tubero molto cresciuto, ed il quarto il pi&#249; grande raccolto in termini di prodotto fresco (dopo il riso, dopo il frumento, e dopo il granturco), ma questo classificare &#232; gonfiato dovuto all'alto contenuto dell'acqua di patate fresche relative a ci&#242; di altri raccolti. La patata ha provenuto in Sudamerica, in qualche luogo in Per&#249; attuale. Le patate sono importanti alla cultura delle Ande, dove i contadini crescono molte variet&#224; diverse che hanno un'eccezionale diversit&#224; di colori e le forme. Le patate stendono al riposo del mondo dopo che il contatto Europeo con le Americhe nei tardi 1400 e prima 1500 e ha poich&#233; diventa un raccolto di campo importante.</Italian>
 		<Spanish>[TAB]La papa (tuberosum de Solanum) es una planta perenne del Solanaceae, o del solano, la familia, com&#250;nmente crecido para su tub&#233;rculo feculento. Las papas son el mundo la mayor&#237;a de la cosecha extensamente crecida del tub&#233;rculo, y de la cuarta cosecha m&#225;s grande en t&#233;rminos del producto fresco (despu&#233;s de arroz, despu&#233;s del trigo, y despu&#233;s del ma&#237;z), pero este situar es hinchado debido al contenido de la pleamar del pariente fresco de papas a eso de otras cosechas. La papa origin&#243; en Sudam&#233;rica, en alg&#250;n lugar en Per&#250; actual. Las papas son importantes a la cultura de los Andes, donde granjeros crecen muchas variedades diferentes que tienen una diversidad notable de colores y formas. Las papas esparcen al resto del mundo despu&#233;s de que el contacto europeo con las Am&#233;ricas en los tarde 1400 y 1500 tempranos y tienen desde que llega a ser una cosecha importante de campo.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]A batata (Solanum tuberosum) &#233; uma planta perene da fam&#237;lia das solan&#225;ceas, comumente cultivada pela sua tub&#233;rcula amil&#225;cea. Batatas s&#227;o as tuberosas mais cultivadas em todo mundo, e a quarta mais cultivada em termos de produ&#231;&#227;o fresca (depois do arroz, trigo, e milho), mas essa coloca&#231;&#227;o &#233; inflada pelo alto teor de &#225;gua em batatas frescas em rela&#231;&#227;o &#224;s outras esp&#233;cies. A batata &#233; origin&#225;ria da Am&#233;rica do Sul, em algum lugar no Peru. Batatas s&#227;o importantes para a cultura dos Andes, onde fazendeiros cultivam uma alta variedade de esp&#233;cies que apresentam uma diversidade consider&#225;vel de cores e formatos. As batatas espalharam-se para o resto do mundo depois do contato Europeu com a Am&#233;rica no final dos anos de 1400 e come&#231;o dos de 1500 e desde ent&#227;o tornaram-se parte importante da colheita.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COFFEE</Tag>
@@ -48,7 +48,7 @@
 		<German>Kaffee</German>
 		<Italian>Caffè</Italian>
 		<Spanish>Cafe</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Caf&#233;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COFFEE_PEDIA</Tag>
@@ -57,7 +57,7 @@
 		<German>[TAB]Die Geschichte des Kaffees beginnt im 9. Jahrhundert. Es ist gedacht, in den Hochl&#228;ndern von &#196;thiopien und Ausbreitung zur restlichen Welt &#252;ber &#196;gypten und Europa hervorgebracht zu haben. Der Wortkaffee ist vom arabischen Wort Qah'wa, &#252;ber Ottoman t&#252;rkischem Kahve abgeleitet, der urspr&#252;nglich Wein oder andere Berauschenalkohole bedeutet hat. Teilweise auf Grund des islamischen Verbots auf Trinkenalkohol, der und Trinkenkaffee vorbereitet, ist geworden ein wichtiges soziales Ritual. Im 15. Jahrhundert haben Muslime Kaffee in Persien, &#196;gypten, n&#246;rdlichen Afrika und die T&#252;rkei, eingef&#252;hrt wo die erste Cafeteria, Kiva Han, ge&#246;ffnet in 1475 in Constantinople. Die Anregungswirkung, Kaffee zu trinken, hat verursacht, dass es unter orthodoxem und konservativem imams in Mekka in 1511 und in Kairo in 1532 durch einen theologischen Gerichtshof verboten wird. In &#196;gypten wurden coffeehouses und Lagerh&#228;user, die Kaffeekirschen enthalten, rausgeschmissen. Aber die Popularit&#228;t hat des Produkts, besonders unter Intellektuelle, zur Umkehrung von dieser Entscheidung in 1524 durch einen Reihenfolge den Ottoman t&#252;rkischen Sultan Selim I. gef&#252;hrt. Von der Muslimisch Welt Kaffeeausbreitung nach Europa, wo es popul&#228;r im 17. Jahrhundert geworden ist. Holl&#228;ndische H&#228;ndler waren das erste, Gro&#223;ma&#223;stabimport des Kaffees in Europa anzufangen.</German>
 		<Italian>[TAB]La storia di caff&#232; inizia nel secolo 9. &#200; pensato avere provenuto nella regione montuosa di Etiopia e nella coperta al riposo del mondo via Egitto ed in Europa. Il caff&#232; di parola &#232; derivato dal Qah'wa di parola Arabo, sopra Kahve Ottomano turco, che ha significato originalmente il vino o l'altro inebria i liquori. In parte dovuto alla proibizione Islamica su bere di alcool, preparando ed il caff&#232; di bere &#232; diventato un rituale importante sociale. Nel secolo 15, Musulmani hanno introdotto il caff&#232; in Persia, Egitto, Africa del nord ed il Tacchino, dove la prima mensa, Kiva Han, aperto in 1475 in Costantinopoli. L'effetto di stimolante di bere di caff&#232; l'ha causato essere vietato fra fra l'imams ortodosso e conservatore in Mecca in 1511 ed in Cairo in 1532 da un tribunale teologico. In Egitto, i caff&#232; ed i magazzini contenendo le ciliegie di caff&#232; sono stato sacked. Ma la popolarit&#224; del prodotto, particolarmente fra gli intellettuali, condotti all'inversione di questa decisione in 1524 da un ordine del Selim di Sultano Ottomano turco I. Dal mondo Musulmano, la coperta di caff&#232; a Europa, dove &#232; diventato popolare nel secolo 17. I commercianti olandesi erano il primo cominciare l'importazione di larga scala di caff&#232; in Europa.</Italian>
 		<Spanish>[TAB]La historia de caf&#233; empieza en el siglo IX. Es pensado haber originado en las tierras altas de Etiop&#237;a y la extensi&#243;n al resto del mundo v&#237;a Egipto y Europa. El caf&#233; de la palabra es derivado de la palabra &#225;rabe Qah'wa, sobre Kahve turco otomano, que signific&#243; originalmente vino u otro intoxicando los licores. En parte debido a la prohibici&#243;n Isl&#225;mica en el alcohol potable, preparando y caf&#233; potable lleg&#243; a ser un ritual social importante. En el siglo XV, los musulmanes introdujeron caf&#233; en Persia, Egipto, Africa septentrionales y Turqu&#237;a, donde el primer restaurante, Kiva Han, abri&#243; en 1475 en Constantinopla. El efecto de estimulante de caf&#233; potable caus&#243; que estuviera prohibido entre imanes ortodoxos y conservadores en Meca en 1511 y en El Cairo en 1532 por un tribunal teol&#243;gico. En Egipto, los caf&#233;s y los almacenes que contienen cerezas de caf&#233; fueron ensacados. Pero la popularidad del producto, especialmente entre intelectuales, llev&#243; a la reversi&#243;n de esta decisi&#243;n en 1524 por una orden del Sult&#225;n turco otomano Selim I. Del mundo musulm&#225;n, la extensi&#243;n de caf&#233; a Europa, donde lo lleg&#243; a ser popular en el siglo XVII. Los comerciantes holandeses fueron el primer de empezar la importaci&#243;n grande de la escala de caf&#233; en Europa.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]A hist&#243;ria do caf&#233; come&#231;a no s&#233;culo IX. Acha-se que seja origin&#225;rio das terras altas da Eti&#243;pia e espalhado ao resto do mundo pelo Egito e pela Europa. A palavra caf&#233; &#233; derivada do &#225;rabe Qah&#39;wa, depois Kahve em turco-otomano, que originalmente significava vinho ou outro licor embriagante. Em parte devido &#224; proibi&#231;&#227;o Isl&#226;mica de se beber &#225;lcool, preparar e beber caf&#233; tornou-se um importante ritual social. No s&#233;culo XV, Mu&#231;ulmanos introduziram o caf&#233; na P&#233;rsia, no Egito, norte da &#193;frica e Turquia, onde a primeira cafeteria, Kiva Han, foi inaugurada em 1475 em Constantinopla. O efeito estimulante de se beber caf&#233; o fez ser proibido entre imans conservadores e ortodoxos em Mecca em 1511 e no Cairo em 1532 por uma corte teol&#243;gica. No Egito, dep&#243;sitos e casas de caf&#233; contendo gr&#227;os de caf&#233; foram saqueados. Por&#233;m a popularidade do produto, particularmente entre intelectuais, levou &#224; desconsidera&#231;&#227;o da decis&#227;o em 1524 por uma ordem do Sult&#227;o Turco Otomano Selim I. Vindo do mundo isl&#226;mico, o caf&#233; espalhou-se para a Europa, onde ficou popular no s&#233;culo XVII. Mercadores Holandeses foram os primeiros a realizar importa&#231;&#245;es de grande escala do caf&#233; para a Europa.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR</Tag>
@@ -66,7 +66,7 @@
 		<German>Schwefel</German>
 		<Italian>Zolfo</Italian>
 		<Spanish>Azufre</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Enxofre</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR_PEDIA</Tag>
@@ -75,7 +75,7 @@
 		<German>[TAB]Schwefel ist das chemische Element im periodischen Tisch, der das Symbol S und Ordnungszahl 16 hat. Es ist ein reichliches, geschmackloses, geruchloses, multivalent Nichtmetall. Schwefel, in seine eingeborene Form, ist ein gelber kristalliner Festk&#246;rper. In Natur kann es als das reine Element oder der als sulfide und schwefelige Mineralien gefunden werden. Es ist ein wesentliches Element f&#252;r Leben und ist in zwei Aminos&#228;uren gefunden. Seine gewerblichen Gebr&#228;uche sind haupts&#228;chlich in D&#252;ngemitteln aber es ist auch allgemein in Schie&#223;pulver, Gegenst&#252;cken, Insektengiften und Fungiziden benutzt. Schwefel (Sanskrit, sulvari; Latein, sulpur) wurde in alten Zeiten gewusst, und ist in den Biblischen Pentateuch (Entstehung) gesehen. Das Wort, das sich wahrscheinlich vom arabischen sufra Bedeutung Gelb ist, von der hellen Farbe von der nat&#252;rlich stattfindenden Form, obwohl der Sanskrit Name f&#252;r Schwefel, sulvari k&#246;nnten auch interpretiert werden, als &#132;Feind des Kupfers&#147; bedeutend. Englische &#220;bersetzungen von der Bibel sehen normalerweise Schwefel als &#132;Schwefelstein&#147;, den den Namen von &#130;Feuer und Schwefelstein&#145; Predigten verursacht, sind in welchen Zuh&#246;rern vom Schicksal von ewigem damnation erinnert, der den nonbelieving und unrepented erwartet. Es ist von diesem Teil von der Bibel jener H&#246;lle ist besagt &#132;um von Schwefel zu riechen&#147;, obwohl wie oben erw&#228;hnten Schwefel eigentlich geruchlos ist. &#132;Der Geruch des Schwefel&#147; sieht gew&#246;hnlich den Geruch von Wasserstoff sulfide, z.B. von verdorbenen Eiern. Verbrennenschwefel stellt Schwefeldioxid, der Geruch her, der mit verbrannten Gegenst&#252;cken verbunden wird. Homer hat &#132;Plage abwendenden Schwefel&#147; im 8. Jahrhundert BC erw&#228;hnt und in 424 BC, hat der Stamm von Boeotia die W&#228;nde von einer Stadt durch Verbrennen einer Mischung der Kohle, Schwefel, und Teer unter ihnen zerst&#246;rt. Irgendwann im 12. Jahrhundert hat der Chinese Gewehrpulver erfunden, das eine Mischung von Kaliumnitrat ist (KNO3), Kohlenstoff, und Schwefel. Fr&#252;he Alchimisten haben Schwefel seinen eigenen alchemical Symbol gegeben, das ein Dreieck oben auf einem Kreuz war. In den sp&#228;ten 1770er Jahren Antoine Lavoisier, der geholfen ist, um die wissenschaftliche Gemeinschaft zu &#252;berzeugen, dass jener Schwefel ein Element und keine Zusammensetzung war.</German>
 		<Italian>[TAB]Lo zolfo &#232; l'elemento chimico nella tavola periodica che ha il simbolo S ed il numero atomico 16. &#200; un non metallo di multivalent abbondantemente,, insipido, inodore,. Lo zolfo, nella sua forma nativa, &#232; un solido giallo cristallino. Nella natura, pu&#242; essere trovato come l'elemento puro o i come minerali di sulfide e solfato. &#200; un elemento essenziale per la vita ed &#232; trovato in due amminoacidi. I suoi usi commerciali sono principalmente nei fertilizzanti ma in esso molto &#232; anche usato nella polvere da sparo, i fiammiferi, gli insetticidi ed i fungicidi. Lo zolfo (Sanskrit, il sulvari; latino, il sulpur) &#232; stato saputo nei tempi antichi, ed &#232; fatto riferimento a nel Pentateuch Biblico (la Genesi). La parola che s&#233; &#232; probabilmente dal significato di sufra Arabo giallo, dal colore luminoso della forma naturalmente accadendo, sebbene il nome di Sanskrit per lo zolfo, il sulvari potrebbe essere anche interpretato come il significato "il nemico di rame". Le traduzioni inglesi della Bibbia fanno riferimento a comunemente lo zolfo come "zolfo", provocando il nome di 'il Fuoco e lo zolfo' i sermoni, in cui ascoltatori sono ricordato del destino di dannazione eterna che attende il nonbelieving ed unrepented. &#200; da questa parte della Bibbia che quell'Inferno &#232; implicato "di odorare di zolfo", sebbene come menzionato &#232; al di sopra di zolfo infatti inodore. Il "l'odore di zolfo" fa riferimento a di solito l'odore di sulfide di idrogeno, per esempio dalle uova marcie. Lo zolfo bruciante produce il diossido di zolfo, l'odore &#232; frequentato i fiammiferi bruciati. Il Homer ha menzionato lo "zolfo di peste-distogliendo nel BC di secolo 8 ed in 424 BC, la trib&#249; di Beozia ha distrutto i muri di una citt&#224; bruciando un miscuglio di carbone, lo zolfo, ed il catrame sotto loro. Un giorno nel secolo 12, il cinese ha inventato la polvere di pistola che &#232; un miscuglio di nitrato di potassio (KNO3), il carbonio, e lo zolfo. Prima alchimisti hanno dato il suo proprio simbolo alchimistico che era un triangolo in cima a una croce allo zolfo. Non nei tardi 1770, Antoine Lavoisier ha aiutato convince la comunit&#224; scientifica quello zolfo era un elemento ed un composto.</Italian>
 		<Spanish>[TAB]El azufre es el elemento qu&#237;mico en la tabla peri&#243;dica que tiene el S del s&#237;mbolo y el n&#250;mero at&#243;mico 16. Es un abundante, ins&#237;pido, inodoro, polivalente no met&#225;lico. El azufre, en su forma nativa, es un s&#243;lido de cristal amarillo. En la naturaleza, puede ser encontrado como el puro elemento o como minerales de sulfuro y sulfato. Es un elemento esencial para la vida y es encontrado en dos amino&#225;cidos. Sus usos comerciales son principalmente en abonos pero en tambi&#233;n es utilizado extensamente en la p&#243;lvora, los iguales, insecticidas y fungicidas. El azufre (s&#225;nscrito, sulvari; lat&#237;n, sulpur) fue sabido en tiempos antiguos, y es referido a en el Pentateuco B&#237;blico (la G&#233;nesis). La palabra que &#233;l mismo es probablemente del sufra &#225;rabe que significa amarillo, del color brillante de la forma naturalmente ocurriendo, aunque el nombre s&#225;nscrito para el azufre, sulvari pueda ser interpretado tambi&#233;n significando como "enemigo de cobre". Las traducciones inglesas de la Biblia se refieren com&#250;nmente al azufre como "azufre", ocasionando el nombre de sermones de "fuego eterno", en cu&#225;l oyentes es recordado del destino de la condenaci&#243;n eterna que aguarda el nonbelieving y unrepented. Es de esta parte de la Biblia que ese Infierno es implicado "oler a azufre", aunque como mencionado encima de azufre sea de hecho inodoro. El "el olor de azufre" se refiere generalmente al olor de &#225;cido sulfh&#237;drico, por ejemplo de huevos podridos. El azufre del ardor produce el bi&#243;xido de azufre, el olor asociado con quem&#243; los iguales. El chollo mencion&#243; peste-apartando azufre en el siglo VIII AC y en 424 AC, el tribu de Boeotia destruy&#243; las paredes de una ciudad quemando una mezcla de carb&#243;n, del azufre, y del alquitr&#225;n bajo ellos. Alguna vez en el siglo XII, el chino invent&#243; polvo de fusil que es una mezcla del nitrato de potasio (KNO3), el carb&#243;n, y el azufre. Los alquimistas tempranos dieron azufre su propio s&#237;mbolo alqu&#237;mico que fue un tri&#225;ngulo a la cabeza de una cruz. En los tarde 1770, Antoine Lavoisier ayud&#243; a convencer la comunidad cient&#237;fica que ese azufre no fue un elemento y un recinto.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Enxofre &#233; o elemento qu&#237;mico da tabela peri&#243;dica que tem o s&#237;mbolo S e n&#250;mero at&#244;mico 16. &#201; um ametal abundante, ins&#237;pido, inodoro e polivalente. O Enxofre, na sua forma natural, &#233; um s&#243;lido cristalino amarelado. Na natureza, pode-se ach&#225;-lo como elemento puro ou em min&#233;rios de sulfato ou sulfureto. &#201; um elemento essencial &#224; vida e &#233; achado em 2 amino&#225;cidos. Seus usos comerciais s&#227;o primariamente em forma de fertilizantes, por&#233;m tamb&#233;m &#233; amplamente utilizado na p&#243;lvora, f&#243;sforos, inseticidas e fungicidas. Enxofre (S&#226;nscrito, sulvari; Latim, sulpur) era conhecido na antiguidade, e &#233; lhe feita uma refer&#234;ncia no Pentateuco B&#237;blico (G&#234;nesis). A palavra em si vem provavelmente do &#225;rabe sufra querendo dizer amarelo, pela cor brilhante da sua forma natural, apesar do nome s&#226;nscrito para o enxofre, sulvari poder ser interpretado tamb&#233;m como significando &quot;inimigo do cobre&quot;. Tradu&#231;&#245;es inglesas da b&#237;blia geralmente referem-se ao enxofre como &quot;brimstone&quot;, dando nome aos serm&#245;es de &#39;Fogo e Enxofre&#39;, nos quais os ouvintes s&#227;o lembrados do destino de dana&#231;&#227;o eterna que espera os descrentes e os n&#227;o arrependidos. &#201; dessa parte da b&#237;blia que o Inferno &#233; qualificado por &quot;cheirar a enxofre&quot;, apesar do enxofre ser inodoro, como mencionado acima. O &quot;cheiro de enxofre&quot; normalmente se refere ao cheiro de sulfureto de hidrog&#234;nio, ex.: de ovos podres. Queimar enxofre produz di&#243;xido de enxofre, com cheiro similar ao de f&#243;sforo queimado. Homero menciona &quot;enxofre anti-praga&quot; no s&#233;culo VIII AC, e em 424 AC uma tribo da Be&#243;cia destruiu as muralhas de uma cidade queimando uma mistura de carv&#227;o, enxofre e alcatr&#227;o embaixo delas. Em algum momento do s&#233;culo XII, os chineses inventaram a p&#243;lvora que &#233; uma mistura de nitrato de pot&#225;ssio (KNO3), carbono, e enxofre. Alquimistas antigos deram ao enxofre seu pr&#243;prio s&#237;mbolo alqu&#237;mico que era um tri&#226;ngulo no topo de uma cruz. No final da d&#233;cada de 1770, Antoine Lavoisier ajudou a convencer a comunidade cient&#237;fica de que o enxofre era um elemento e n&#227;o um composto.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO</Tag>
@@ -84,7 +84,7 @@
 		<German>Tabak</German>
 		<Italian>Tabacco</Italian>
 		<Spanish>Tabaco</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Tabaco</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO_PEDIA</Tag>
@@ -102,7 +102,7 @@
 		<German>Gerste</German>
 		<Italian>Orzo</Italian>
 		<Spanish>Cebada</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Cevada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BARLEY_PEDIA</Tag>
@@ -120,7 +120,7 @@
 		<German>&#196;pfel</German>
 		<Italian>Mele</Italian>
 		<Spanish>Manzanas</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Ma&#231;&#227;s</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APPLE_PEDIA</Tag>
@@ -129,7 +129,7 @@
 		<German>[TAB]Der Apfel ist die pomaceous Frucht des Apfelbaums, Sorte Malus domestica in der rose Familie Rosaceae. Er ist eine der weit bebauten Baumfr&#252;chte. Der Baum ist klein und laubwechselnd und erreicht 5-12 m hoch, mit einer ausgedehnten, h&#228;ufig dicht twiggy Krone.</German>
 		<Italian>[TAB]La mela &#232; la frutta pomaceous di di melo, domestica di Malus di specie nella famiglia di rosa Rosaceae. &#200; una delle frutte il pi&#249; ampiamente coltivate dell'albero. L'albero &#232; piccolo e deciduo, raggiungendo 5-12 m. alto, con una vasta, parte superiore spesso densamente twiggy.</Italian>
 		<Spanish>[TAB]La manzana es la fruta pomaceous del manzano, domestica de Malus de la especie en la familia color de rosa Rosaceae. Es una de las frutas lo m&#225;s extensamente posible cultivadas del &#225;rbol. El &#225;rbol es peque&#241;o y de hojas caducas, alcanzando 5-12 m alto, con una corona amplia, a menudo denso twiggy.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]A ma&#231;&#227; &#233; a fruta pom&#225;cea da macieira, a esp&#233;cie Malus domestica da fam&#237;lia Rosaceae. &#201; uma das &#225;rvore frut&#237;feras mais cultivadas. A &#225;rvore &#233; pequena e dec&#237;dua, podendo ter de 5-12 metros.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
@@ -138,7 +138,7 @@
 		<German>Oliven</German>
 		<Italian>Olive</Italian>
 		<Spanish>Aceitunas</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Azeitonas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
@@ -156,7 +156,7 @@
 		<German>Tee</German>
 		<Italian>T&#232;</Italian>
 		<Spanish>T&#233;</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Ch&#225;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEA_PEDIA</Tag>
@@ -165,7 +165,7 @@
 		<German>[TAB]Als Aufguss aus den Bl&#228;ttern oder Knospen eines Busches zubereitet, ist Tee zu einem weltweit beliebten Getr&#228;nk geworden. Die "Camellia Sinensis" (Teegew&#228;chs) wird in tropischen und subtropischen Regionen wie China oder Indien angebaut. Urspr&#252;nglich aus S&#252;dostasien stammend, wurde der Tee zu einem wichtigen Bestandteil der orientalischen Ern&#228;hrungsweise. Erst im 16. oder 17. Jahrhundert brachten Forschungsreisende die Teepflanze schlie&#223;lich auch nach Europa. Da der Tee als Getr&#228;nk im reichen Westeuropa gro&#223;en Anklang fand, legten die Briten in ihrer Kolonie Indien zahlreiche Plantagen an, um die steigende Nachfrage befriedigen zu k&#246;nnen, und auch heute noch geh&#246;rt Indien zu den gr&#246;&#223;ten Tee produzierenden L&#228;ndern der Welt.</German>
 		<Italian>[TAB]Ricavato dalle foglie o dalle gemme di un arbusto, il t&#232; &#232; una bevanda popolare in tutto il mondo che si ottiene immergendo le foglie nell'acqua calda. la "camellia sinesis" (la pianta del t&#232;) cresce nelle regioni tropicali e sub-tropicali del pianeta (Cina e India, per esempio). Originario del sudest asiatico, ben presto il t&#232; entr&#242; a far parte della dieta di molti orientali, mentre fu introdotto in Europa soltanto nel sedicesimo o diciassettesimo secolo, portato da esploratori che giravano il mondo in lungo e in largo in cerca di nuove conoscenze e tesori. Il t&#232; raccolse in breve tempo il consenso delle classi agiate europee e per soddisfare la domanda, l'Inghilterra cre&#242; enormi piantagioni in India, che ancora oggi rimane il pi&#249; grande produttore di t&#232; al mondo.</Italian>
 		<Spanish>[TAB]El t&#233;, l&#237;quido creado por la infusi&#243;n en agua de las hojas o los brotes de un matorral, es una bebida que goza de gran fama en todo el mundo. La "camellia sinesis" (planta del t&#233;) crece en regiones tropicales y subtropicales del planeta, como China y la India. Procedente del sudeste de Asia, se convirti&#243; desde muy pronto en la base de la dieta de muchos orientales. Hasta los siglos XVI o XVII no fue introducido en Europa por los aventureros que cruzaban el mundo en busca de conocimientos y tesoros. El t&#233; se hizo r&#225;pidamente popular entre la gente acomodada de Europa occidental, y los brit&#225;nicos crear&#237;an inmensas plantaciones en sus colonias de la India para satisfacer la demanda. En la actualidad, la India contin&#250;a siendo el mayor productor mundial.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Feito de folhas ou de brotos, o ch&#225; &#233; o l&#237;quido criado pela infus&#227;o da folhagem extra&#237;da na &#225;gua e &#233; uma bebida popular pelo mundo. A &quot;Camellia Sinesis,&quot; (planta ch&#225;), cresce em regi&#245;es tropicais e sub-tropicais do planeta como na China ou &#205;ndia. Origin&#225;ria do sudeste asi&#225;tico, ela tornou-se parte importante na dieta de v&#225;rias pessoas do oriente. Somente a partir dos s&#233;culos XVI e XVII que sua introdu&#231;&#227;o se deu na Europa a partir de exploradores que cruzaram o globo em busca de conhecimento e tesouros. O ch&#225; rapidamente tronou-se popular entre as fam&#237;lias ricas da Europa Ocidental, e a Gr&#227;-Bretanha n&#227;o tardou em preparar diversas planta&#231;&#245;es nas suas col&#244;nias da &#205;ndia para ajudar a saciar a demanda - A &#205;ndia at&#233; hoje permanece a maior produtora de ch&#225; do mundo.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIMBER</Tag>
@@ -174,7 +174,7 @@
 		<German>Bauholz</German>
 		<Italian>Legname</Italian>
 		<Spanish>Madera</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Madeira</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIMBER_PEDIA</Tag>
@@ -192,7 +192,7 @@
 		<German>Honig</German>
 		<Italian>Miele</Italian>
 		<Spanish>Miel</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Mel</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONEY_PEDIA</Tag>
@@ -210,7 +210,7 @@
 		<German>Baumwolle</German>
 		<Italian>Cotone</Italian>
 		<Spanish>Algod&#243;n</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Algod&#227;o</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
@@ -228,7 +228,7 @@
 		<German>Elfenbein</German>
 		<Italian>Avorio</Italian>
 		<Spanish>Marfil</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Marfim</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IVORY_PEDIA</Tag>
@@ -246,7 +246,7 @@
 		<German>Bernstein</German>
 		<Italian>Ambra</Italian>
 		<Spanish>Ambar</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>&#194;mbar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMBER_PEDIA</Tag>
@@ -264,7 +264,7 @@
 		<German>Atlantikzugang</German>
 		<Italian>Accesso all'Atlantico</Italian>
 		<Spanish>Acceso atlántico</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Acesso Atl&#226;ntico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ACCESS_PEDIA</Tag>
@@ -273,7 +273,7 @@
 		<German>[TAB]Atlantikzugang</German>
 		<Italian>[TAB]Accesso all'Atlantico</Italian>
 		<Spanish>[TAB]Atlantic Access</Spanish>
-		<Portuguese>[TAB]Atlantic Access</Portuguese>
+		<Portuguese>[TAB]Acesso Atl&#226;ntico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORTH_AMERICA_ACCESS</Tag>
@@ -282,7 +282,7 @@
 		<German>Nordamerikazugang</German>
 		<Italian>Accesso all'America del Nord</Italian>
 		<Spanish>Acceso de Norteamérica</Spanish>
-		<Portuguese>North America Access</Portuguese>
+		<Portuguese>Acesso &#224; Am&#233;rica do Norte</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORTH_AMERICA_ACCESS_PEDIA</Tag>
@@ -300,7 +300,7 @@
 		<German>S&#252;damerikazugang</German>
 		<Italian>Accesso all'America del Sud</Italian>
 		<Spanish>Acceso de Sudamérica</Spanish>
-		<Portuguese>South America Access</Portuguese>
+		<Portuguese>Acesso &#224; Am&#233;rica do Sul</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOUTH_AMERICA_ACCESS_PEDIA</Tag>
@@ -318,7 +318,7 @@
 		<German>Ostasienzugang</German>
 		<Italian>Accesso all'Asia Orientale</Italian>
 		<Spanish>Acceso oriental de Asia</Spanish>
-		<Portuguese>East Asia Access</Portuguese>
+		<Portuguese>Acesso &#224; &#193;sia Oriental</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EAST_ASIA_ACCESS_PEDIA</Tag>
@@ -336,7 +336,7 @@
 		<German>Sklaven</German>
 		<Italian>Schiavi</Italian>
 		<Spanish>Esclavos</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Escravos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLAVES_PEDIA</Tag>
@@ -345,7 +345,7 @@
 		<German>[TAB]Im frühen Mittelalter trieben Turkvölker wie die Chasaren und germanische Völker wie die Waräger und die Wikinger im europäischen und orientalischen Raum Handel mit Kriegsgefangenen und Sklaven. In Sachsen und im Ostfrankenreich entstand nach kriegerischen Auseinandersetzungen mit den Slawen ein gut organisierter und sehr umfangreicher Handel mit slawischen Sklaven. Mit der Christianisierung ging die Sklaverei in hochmittelalterlichen Mitteleuropa, wo es Christen verboten war, andere Christen als Sklaven zu verkaufen oder zu erwerben, zurück. Südlich der Alpen - etwa in den italienischen Seerepubliken, im Schwarzmeerraum, auf dem Balkan und in Ägypten - wurden Sklaven jedoch weiterhin in großem Umfang gehandelt. Auch Päpste und Klöster besaßen Sklaven. Mittelalterliche Theologen wie Thomas von Aquin begründeten unter Berufung auf Aristoteles die Rechtmäßigkeit und Notwendigkeit der Sklaverei aus dem Naturrecht.[PARAGRAPH:2]In der Neuzeit nahm die Sklaverei einen erneuten Aufschwung mit der Ausdehnung des europäischen Seehandels und der Errichtung überseeischer Kolonien. Diese waren in vielen Fällen nur dünn besiedelt, sodass für den Aufbau der Wirtschaft afrikanische Sklaven eingeführt wurden, auf deren Arbeitskraft die Ökonomie dieser Kolonien jahrhundertelang weitgehend basierte. Die weltweit führende Sklaven handelnde Nation war bis ins 19. Jahrhundert Portugal. Allein nach Brasilien wurden von portugiesischen Kaufleuten in der Neuzeit mehr als 3 Millionen afrikanischer Sklaven verkauft. Es gab freilich kaum eine europäische Seehandelsmacht, die am internationalen Sklavenhandel nicht beteiligt war; dies schließt nicht nur spanische, britische, französische und holländische, sondern auch schwedische, dänische und brandenburgische Kaufleute ein.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Na Alta Idade M&#233;dia, a escravid&#227;o foi sendo lentamente substitu&#237;da pela servid&#227;o. Em algumas &#225;reas fora da Europa Ocidental, por&#233;m, escravos ainda eram uma parte vital da economia.[PARAGRAPH:2]Na Era Viking (c. 793), os invasores n&#243;rdicos normalmente capturavam e escravizavam seus oponentes. Na Noruega e Isl&#226;ndia os escravos eram chamados &quot;thralls&quot;. Os &quot;thralls&quot; eram em sua maioria da Europa Ocidental, dentre eles muitos francos, irlandeses e anglo-sax&#245;es. H&#225; evid&#234;ncia de escravos alem&#227;es e sul-europeus tamb&#233;m. A escravid&#227;o n&#243;rdica chegou ao fim com o advento do cristianismo e leis nacionais nos pa&#237;ses escandinavos.[PARAGRAPH:2]O mundo &#225;rabe comercializava escravos como muitas outras culturas da regi&#227;o. Era um dos mais antigos tr&#225;ficos de escravo, predatando o tr&#225;fico de escravos transatl&#226;ntico europeu por centenas de anos. Acha-se que o tr&#225;fico de escravos &#225;rabe ou do Oriente M&#233;dio originou-se com a escravid&#227;o transsaariana. Os Mouros, come&#231;ando no s&#233;culo VIII, invadiam &#225;reas costeiras do Mediterr&#226;neo e Norte Europeu (incluindo a Gr&#227;-Bretanha e at&#233; a Escandin&#225;via) e as vezes levavam vilas inteiras aos mercados mouros de escravos na Costa B&#225;rbara.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RELIC</Tag>
@@ -354,15 +354,15 @@
 		<German>Relikt</German>
 		<Italian>Reliquia</Italian>
 		<Spanish>Reliquia</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Rel&#237;quia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RELIC_PEDIA</Tag>
-		<English>[TAB]A relic is an object or a personal item of religious significance, carefully preserved with an air of veneration as a tangible memorial. Relics are an important aspect of some forms of Buddhism, Christianity, Hinduism, Shamanism, and many other religions.[PARAGRAPH:2]The word relic comes from the Latin reliquiae, meaning "remains." A reliquary is a shrine that houses one or more relics.</English>
+		<English>[TAB]A relic is an object or a personal item of religious significance, carefully preserved with an air of veneration as a tangible memorial. Relics are an important aspect of some forms of Buddhism, Christianity, Hinduism, Shamanism, and many other religions.[PARAGRAPH:2]The word relic comes from the Latin reliquiae, meaning "remains". A reliquary is a shrine that houses one or more relics.</English>
 		<French>.</French>
 		<German>[TAB]Ein Relikt ist ein Objekt oder ein pers&#246;nlicher Gegenstand von religi&#246;ser Bedeutung, der aus tiefer Verehrung als ein greifbares Denkmal des Glaubens aufbewahrt wird. Relikte sind ein wichtiger Aspekt einiger Formen des Buddhismus, Hinduismus, Schamanismus, des Christentums und anderer Religionen.[PARAGRAPH:2]Das Word "Relikt" kommt vom lateinischen "reliquiae", was "&#252;berreste" bedeutet. Ein "Reliquiar" ist ein Schrein, der eines oder mehrere Relikte beherbergt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[TAB]Uma rel&#237;quia &#233; um objeto ou item pessoal de valor religioso, cuidadosamente guardado com uma ar de venera&#231;&#227;o como um memorial tang&#237;vel. Rel&#237;quias s&#227;o um importante aspecto de algumas formas de Budismo, Cristianismo, Hindu&#237;smo, Xamanismo e diversas outras religi&#245;es.[PARAGRAPH:2] A palavra rel&#237;quia vem do Latim reliquiae, significando &quot;restos&quot;. Um relic&#225;rio &#233; um santu&#225;rio que guarda uma ou mais rel&#237;quias.</Portuguese>
 	</TEXT>
 </Civ4GameText>

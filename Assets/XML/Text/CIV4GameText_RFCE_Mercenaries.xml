@@ -12,7 +12,7 @@
 		<German>S&#246;ldner-Verwaltung</German>
 		<Italian>Gestione dei Mercenari</Italian>
 		<Spanish>Gestor de mercenarios</Spanish>
-		<Portuguese>&#204;&#229;&#237;&#229;&#228;&#230;&#229;&#240; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_SCREEN_TITLE</Tag>
@@ -21,7 +21,7 @@
 		<German>S&#246;ldner</German>
 		<Italian>Mercenari</Italian>
 		<Spanish>Mercenarios</Spanish>
-		<Portuguese>&#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_GROUPS_SCREEN_TITLE</Tag>
@@ -30,7 +30,7 @@
 		<German>S&#246;ldner-Gruppen</German>
 		<Italian>Gruppi di Mercenari</Italian>
 		<Spanish>Grupos de mercenarios</Spanish>
-		<Portuguese>&#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_CONTRACTS_SCREEN_TITLE</Tag>
@@ -39,7 +39,7 @@
 		<German>S&#246;ldner-Vertr&#228;ge</German>
 		<Italian>Contratti dei Mercenari</Italian>
 		<Spanish>Contratos de mercenarios</Spanish>
-		<Portuguese>&#202;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_MERCENARIES</Tag>
@@ -48,7 +48,7 @@
 		<German>Verf&#252;gbare S&#246;ldner</German>
 		<Italian>Mercenari disponibili</Italian>
 		<Spanish>Mercenarios disponibles</Spanish>
-		<Portuguese>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_MERCENARY_GROUPS</Tag>
@@ -57,7 +57,7 @@
 		<German>Verf&#252;gbare S&#246;ldner-Gruppen</German>
 		<Italian>Gruppi di Mercenari disponibili</Italian>
 		<Spanish>Grupos de mercenarios disponibles</Spanish>
-		<Portuguese>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITS_CONTRACTED_OUT</Tag>
@@ -66,7 +66,7 @@
 		<German>Ausgeschiedene Einheiten</German>
 		<Italian>Unità sotto contratto</Italian>
 		<Spanish>Unidades subcontratadas</Spanish>
-		<Portuguese>&#222;&#237;&#232;&#242;&#251; &#241; &#234;&#238;&#237;&#242;&#240;&#224;&#234;&#242;&#238;&#236;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HIRED_MERCENARIES</Tag>
@@ -75,7 +75,7 @@
 		<German>Angeheuerte S&#246;ldner</German>
 		<Italian>Mercenari assoldati</Italian>
 		<Spanish>Mercenarios contratados</Spanish>
-		<Portuguese>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HIRED_MERCENARY_GROUPS</Tag>
@@ -84,7 +84,7 @@
 		<German>Angeheuerte S&#246;ldner-Gruppen</German>
 		<Italian>Gruppi di Mercenari assoldati</Italian>
 		<Spanish>Grupos de mercenarios contratados</Spanish>
-		<Portuguese>&#205;&#224;&#237;&#255;&#242;&#251;&#229; &#195;&#240;&#243;&#239;&#239;&#251; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AVAILABLE_UNITS</Tag>
@@ -93,7 +93,7 @@
 		<German>Verf&#252;gbare Einheiten</German>
 		<Italian>Unit&#224; disponibili</Italian>
 		<Spanish>Unidades disponibles</Spanish>
-		<Portuguese>&#196;&#238;&#241;&#242;&#243;&#239;&#237;&#251;&#229; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_INFORMATION</Tag>
@@ -102,7 +102,7 @@
 		<German>S&#246;ldner-Informationen</German>
 		<Italian>Informazioni sui Mercenari</Italian>
 		<Spanish>Informaci&#243;n de mercenarios</Spanish>
-		<Portuguese>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#229;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARY_GROUP_INFORMATION</Tag>
@@ -111,7 +111,7 @@
 		<German>S&#246;ldner-Gruppen-Informationen</German>
 		<Italian>Informazioni sui gruppi di Mercenari</Italian>
 		<Spanish>Informaci&#243;n del grupo de mercenarios</Spanish>
-		<Portuguese>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#227;&#240;&#243;&#239;&#239;&#229; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#238;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INFORMATION</Tag>
@@ -120,7 +120,7 @@
 		<German>Einheiten-Informationen</German>
 		<Italian>Informazioni sulle unit&#224;</Italian>
 		<Spanish>Informaci&#243;n de la unidad</Spanish>
-		<Portuguese>&#200;&#237;&#244;&#238;&#240;&#236;&#224;&#246;&#232;&#255; &#238; &#254;&#237;&#232;&#242;&#229;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE_COST</Tag>
@@ -129,7 +129,7 @@
 		<German>S&#246;ldner-Unterhaltskosten</German>
 		<Italian>Costo mantenimento Mercenari</Italian>
 		<Spanish>Coste de mantenimiento de mercenarios</Spanish>
-		<Portuguese>&#209;&#242;&#238;&#232;&#236;&#238;&#241;&#242;&#252; &#241;&#238;&#228;&#229;&#240;&#230;&#224;&#237;&#232;&#255; &#237;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_CONTRACT_INCOME</Tag>
@@ -138,7 +138,7 @@
 		<German>S&#246;ldner-Vertragseinnahmen</German>
 		<Italian>Entrata contratto Mercenari</Italian>
 		<Spanish>Ingresos de contratos de mercenarios</Spanish>
-		<Portuguese>&#196;&#238;&#227;&#238;&#226;&#238;&#240;&#237;&#224;&#255; &#207;&#240;&#232;&#225;&#251;&#235;&#252; &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#224;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MERCENARY</Tag>
@@ -163,7 +163,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>&#205;&#224;&#229;&#236;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_DISABLED</Tag>
@@ -172,7 +172,7 @@
 		<German>Der Nationalismus ver&#228;nderte das Prinzip des strukturellen Aufbaus einer Armee so grundlegend, dass S&#246;ldner nicht mehr in das Konzept passen.</German>
 		<Italian>Il nazionalismo ha cambiato la concezione degli eserciti: non c'&#232; pi&#249; posto per i mercenari!</Italian>
 		<Spanish>El nacionalismo ha cambiado la concepci&#243;n de los ej&#233;rcitos: &#161;los mercenarios ya no encajan en ellos!</Spanish>
-		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#232;&#231;&#236; &#232;&#231;&#236;&#229;&#237;&#232;&#235; &#234;&#238;&#237;&#246;&#229;&#239;&#246;&#232;&#254; &#224;&#240;&#236;&#232;&#233;: &#205;&#224;&#229;&#236;&#237;&#232;&#234;&#232; &#225;&#238;&#235;&#252;&#248;&#229; &#237;&#229; &#239;&#238;&#228;&#245;&#238;&#228;&#255;&#242;!</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCES</Tag>
@@ -490,7 +490,7 @@
 		<German>Tagmata</German>
 		<Italian>Tagmata</Italian>
 		<Spanish>Tagmata</Spanish>
-		<Portuguese>&#210;&#224;&#227;&#236;&#224;&#242;&#224;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAGMATA_PEDIA</Tag>
@@ -526,7 +526,7 @@
 		<German>Hochländer</German>
 		<Italian>Highlander</Italian>
 		<Spanish>Highlander</Spanish>
-		<Portuguese>&#195;&#238;&#240;&#229;&#246;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_PEDIA</Tag>
@@ -544,7 +544,7 @@
 		<German>Walisischer Langbogenschütze</German>
 		<Italian>Arciere con Arco Lungo Gallese</Italian>
 		<Spanish>Saetero Galés</Spanish>
-		<Portuguese>&#211;&#253;&#235;&#252;&#241;&#234;&#232;&#233; &#196;&#235;&#232;&#237;&#237;&#238;&#235;&#243;&#247;&#237;&#232;&#234;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WELSH_LONGBOWMAN_PEDIA</Tag>

@@ -13,7 +13,7 @@
 		<German>Petersdom</German>
 		<Italian>Basilica di San Pietro</Italian>
 		<Spanish>Basílica de San Pedro</Spanish>
-		<Portuguese>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#207;&#229;&#242;&#240;&#224;</Portuguese>
+		<Portuguese>Basílica de São Pedro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Tag>
@@ -31,7 +31,7 @@
 		<German>Schlosskirche</German>
 		<Italian>La Chiesa di Ognissanti</Italian>
 		<Spanish>Iglesia de todas las santos</Spanish>
-		<Portuguese>&#214;&#229;&#240;&#234;&#238;&#226;&#252; &#194;&#241;&#229;&#245; &#209;&#226;&#255;&#242;&#251;&#245;</Portuguese>
+		<Portuguese>Igreja de Todos os Santos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTESTANT_SHRINE_PEDIA</Tag>
@@ -49,7 +49,7 @@
 		<German>Hagia Sophia</German>
 		<Italian>Santa Sofia</Italian>
 		<Spanish>Santa Sof&#237;a</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Basílica de Santa Sofia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SHRINE_PEDIA</Tag>
@@ -67,7 +67,7 @@
 		<German>Umayyaden-Moschee</German>
 		<Italian>Moschea degli Omayyadi</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Mesquita dos Omíadas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Tag>
@@ -85,7 +85,7 @@
 		<German>Tempelberg</German>
 		<Italian>Monte del Tempio</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Monte do Templo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_SHRINE_PEDIA</Tag>
@@ -105,7 +105,7 @@
 		<German>Kazimierz</German>
 		<Italian>Kazimierz</Italian>
 		<Spanish>Kazimierz</Spanish>
-		<Portuguese>&#213;&#240;&#224;&#236; &#195;&#238;&#240;&#251;</Portuguese>
+		<Portuguese>Kazimierz</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KAZIMIERZ_PEDIA</Tag>
@@ -123,7 +123,7 @@
 		<German>Stephansdom</German>
 		<Italian>Stephansdom</Italian>
 		<Spanish>Stephansdom</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Catedral de Santo Estêvão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_PEDIA</Tag>
@@ -141,7 +141,7 @@
 		<German>[ICON_BULLET]+2 Stabilit&#228;t mit einer monarchischen Staatsform</German>
 		<Italian>[ICON_BULLET]+2 Punti Stabilità per l'utilizzo di una Monarchia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]+2 pontos de estabilidade por ser uma Monarquia.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL</Tag>
@@ -150,7 +150,7 @@
 		<German>El Escorial</German>
 		<Italian>El Escorial</Italian>
 		<Spanish>El Escorial</Spanish>
-		<Portuguese>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#221;&#241;&#234;&#238;&#240;&#232;&#224;&#235; </Portuguese>
+		<Portuguese>Mosteiro e Sítio do Escorial </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_PEDIA</Tag>
@@ -168,7 +168,7 @@
 		<German>[ICON_BULLET]Kein Stabilitätsmalus wegen schlechter Wirschaftslage.</German>
 		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]&#205;&#229;&#242; &#237;&#224;&#234;&#224;&#231;&#224;&#237;&#232;&#255; &#241;&#242;&#224;&#225;&#232;&#235;&#252;&#237;&#238;&#241;&#242;&#232; &#231;&#224; &#239;&#235;&#238;&#245;&#243;&#254; &#253;&#234;&#238;&#237;&#238;&#236;&#232;&#234;&#243;.</Portuguese>
+		<Portuguese>[ICON_BULLET]Sem penalidade na estabilidade por uma economia deficitária.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
@@ -177,7 +177,7 @@
 		<German>Krak des Chevaliers</German>
 		<Italian>Krak des Chevaliers</Italian>
 		<Spanish>Krak des Chevaliers</Spanish>
-		<Portuguese>&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229;</Portuguese>
+		<Portuguese>Krak des Chevaliers</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Tag>
@@ -186,7 +186,7 @@
 		<German>[TAB]Der Crac des Chevaliers (auch Krak des Chevaliers) ist eine Burg in Syrien, deren heute sichtbare Bauteile überwiegend aus der Zeit der Kreuzzüge stammen.[PARAGRAPH:2]Die erste historisch greifbare Befestigung wurde 1031 durch den Emir von Homs auf dem Berg errichtet. Sie hatte den Namen Hisn al-Akrad (Kurden-Burg).[PARAGRAPH:2]1099 erreichte das Heer des Ersten Kreuzzugs unter Raimund von Saint-Gilles, das sich auf dem Weg nach Jerusalem befand, Hisn al-Akrad. Das Heer besetzte die Burg und hielt sich zehn Tage darin auf, bevor es weiterzog und die Stadt Arqa belagerte. Nachdem das Kreuzfahrerheer weitergezogen war, gelangte die Burg wieder in muslimischen Besitz.[PARAGRAPH:2]Wenige Jahre nach dem erfolgreichen Ende des Ersten Kreuzzugs kehrte Raimund von Toulouse in die Gegend zurück und versuchte, sich eine eigene Herrschaft aufzubauen. Während er die Hafenstadt Tartus schon 1102 einnehmen konnte, leisteten Hisn al-Akrad und die Hafenstadt Tripolis erbitterten Widerstand. Nach Raimunds Tod 1105 setzte sein Sohn Bertrand von Saint-Gilles sein Vorhaben der Errichtung der Grafschaft Tripolis mit der Eroberung von Tripolis 1109 fort. Hisn al-Akrad wurde 1110 durch den normannischen Heerführer Tankred von Tiberias erobert, der in Konkurrenz zu den provencalischen Saint-Gilles' und ihrer Grafschaft Tripolis die Ausweitung der normannischen Herrschaft um das von seinem Onkel Bohemund von Tarent gegründeten Fürstentum Antiochia verfolgte.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[TAB]&#202;&#240;&#224;&#234; &#228;&#229; &#216;&#229;&#226;&#224;&#235;&#252;&#229; &#232;&#235;&#232; &#202;&#240;&#224;&#234; &#228;&#229; &#235;'&#206;&#241;&#239;&#232;&#242;&#224;&#235;&#252; (&#244;&#240;. Krak des Chevaliers, &#244;&#240;. Krak de l'Hospital) &#151; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#252; &#227;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#238;&#226;, &#240;&#224;&#241;&#239;&#238;&#235;&#238;&#230;&#229;&#237;&#237;&#224;&#255; &#226; &#209;&#232;&#240;&#232;&#232; &#234; &#226;&#238;&#241;&#242;&#238;&#234;&#243; &#238;&#242; &#235;&#232;&#226;&#224;&#237;&#241;&#234;&#238;&#227;&#238; &#210;&#240;&#232;&#239;&#238;&#235;&#232; &#237;&#224; &#226;&#229;&#240;&#248;&#232;&#237;&#229; &#243;&#242;&#184;&#241;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 650 &#236;&#229;&#242;&#240;&#238;&#226;, &#237;&#229;&#239;&#238;&#228;&#224;&#235;&#184;&#234;&#243; &#238;&#242; &#228;&#238;&#240;&#238;&#227;&#232;, &#226;&#229;&#228;&#243;&#249;&#229;&#233; &#232;&#231; &#192;&#237;&#242;&#232;&#238;&#245;&#232;&#232; &#234; &#193;&#229;&#233;&#240;&#243;&#242;&#243; &#232; &#209;&#240;&#229;&#228;&#232;&#231;&#229;&#236;&#237;&#238;&#236;&#243; &#236;&#238;&#240;&#254;. &#193;&#235;&#232;&#230;&#224;&#233;&#248;&#232;&#233; &#234;&#240;&#243;&#239;&#237;&#251;&#233; &#241;&#232;&#240;&#232;&#233;&#241;&#234;&#232;&#233; &#227;&#238;&#240;&#238;&#228; &#151; &#213;&#238;&#236;&#241; &#151; &#237;&#224;&#245;&#238;&#228;&#232;&#242;&#241;&#255; &#226; 65 &#234;&#236; &#226;&#238;&#241;&#242;&#238;&#247;&#237;&#229;&#229; &#231;&#224;&#236;&#234;&#224;. &#206;&#228;&#237;&#224; &#232;&#231; &#237;&#224;&#232;&#225;&#238;&#235;&#229;&#229; &#241;&#238;&#245;&#240;&#224;&#237;&#232;&#226;&#248;&#232;&#245;&#241;&#255; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#229;&#233; &#227;&#238;&#241;&#239;&#232;&#242;&#224;&#235;&#252;&#229;&#240;&#238;&#226; &#226; &#236;&#232;&#240;&#229;. &#194; 2006 &#227;&#238;&#228;&#243; &#226;&#236;&#229;&#241;&#242;&#229; &#241; &#246;&#232;&#242;&#224;&#228;&#229;&#235;&#252;&#254; &#209;&#224;&#235;&#224;&#228;&#232;&#237;&#224; &#231;&#224;&#236;&#238;&#234; &#225;&#251;&#235; &#226;&#237;&#229;&#241;&#184;&#237; &#226; &#209;&#239;&#232;&#241;&#238;&#234; &#194;&#241;&#229;&#236;&#232;&#240;&#237;&#238;&#227;&#238; &#234;&#243;&#235;&#252;&#242;&#243;&#240;&#237;&#238;&#227;&#238; &#237;&#224;&#241;&#235;&#229;&#228;&#232;&#255; &#222;&#205;&#197;&#209;&#202;&#206;.</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP</Tag>
@@ -195,7 +195,7 @@
 		<German>[ICON_BULLET]Freie Gebäude [COLOR_BUILDING_TEXT]Stadtmauern[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Burg[COLOR_REVERT] in jeder eroberten Stadt</German>
 		<Italian>[ICON_BULLET]Mura e Castello gratuiti in ogni città conquistata.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]&#193;&#229;&#241;&#239;&#235;&#224;&#242;&#237;&#251;&#229; &#241;&#242;&#229;&#237;&#251; &#232; &#231;&#224;&#236;&#238;&#234; &#226; &#231;&#224;&#226;&#238;&#229;&#226;&#224;&#237;&#237;&#238;&#236; &#227;&#238;&#240;&#238;&#228;&#229;.</Portuguese>
+		<Portuguese>[ICON_BULLET]Toda cidade conquistada gera uma muralha e um castelo de graça.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS</Tag>
@@ -204,7 +204,7 @@
 		<German>Die G&#228;rten von Al-Andalus</German>
 		<Italian>I Giardini di Al Andalus</Italian>
 		<Spanish>Los Jardines del Generalife</Spanish>
-		<Portuguese>&#209;&#224;&#228;&#251; &#192;&#235;&#252; &#192;&#237;&#228;&#224;&#235;&#243;&#241;</Portuguese>
+		<Portuguese>Os Jardins de Al-Andalus</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_PEDIA</Tag>
@@ -222,7 +222,7 @@
 		<German>[ICON_BULLET]Erlaubt den Bau von [COLOR_BUILDING_TEXT]Bauernhöfen[COLOR_REVERT] ohne Bewässerung</German>
 		<Italian>[ICON_BULLET]Permette di costruire [COLOR_BUILDING_TEXT]Fattorie[COLOR_REVERT] senza irrigazione</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Permite construir [COLOR_BUILDING_TEXT]Fazendas[COLOR_REVERT] sem Irrigação.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Tag>
@@ -231,7 +231,7 @@
 		<German>Der Schrein von Uppsala</German>
 		<Italian>Il Santuario di Uppsala</Italian>
 		<Spanish>El Santuario de Uppsala</Spanish>
-		<Portuguese>&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251;</Portuguese>
+		<Portuguese>O Santuário de Uppsala</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_PEDIA</Tag>
@@ -240,7 +240,7 @@
 		<German>[TAB]Der gotische Dom St. Erik in der schwedischen Stadt Uppsala ist mit 118,7 Meter das höchste Kirchengebäude Skandinaviens. Der Dom ist sowohl Krönungs- als auch Grabstätte vieler schwedischer Könige und Sitz eines Evangelisch-Lutherischen Erzbischofs.[PARAGRAPH:2]Zu den Schätzen der Kirche zählt unter anderem ein vergoldeter Schrein aus dem späten 16. Jahrhundert, in dem die Relikte von Erik dem Heiligen untergebracht sind. Im nördlichen Turm befindet sich heute ein Museum mit kirchlichen Textilien. Am südlichen Portal sind steinerne Statuen aus dem 14. Jahrhundert aufgestellt. Die bekanntesten der hier begrabenen Personen sind Gustav I. Wasa und Carl von Linné.[PARAGRAPH:2]Nach einem Brand in der Domkirche von Alt-Uppsala gab der Papst die Erlaubnis, den Bischofssitz an seine heutige Stelle zu verlegen. Die ersten Planungen für den neuen Kirchenbau gab es schon 1258.[PARAGRAPH:2]Nach der Grundsteinlegung von 1260 verzögerte sich der Bau mehrfach aufgrund von Kriegen, Thronstreitigkeiten und Einstürzen von Gebäudeteilen. Auch die Pest verhinderte lange einen zügigen Aufbau. Erst im Jahre 1435 konnte der Dom unter Erzbischof Olaus Laurentii eingeweiht werden.[PARAGRAPH:2]Der Dom erlebte mehrere umfassende Renovierungen. Zum Beispiel waren beim verheerenden Stadtbrand von 1702 beide Turmspitzen herabgestürzt. Der die Renovierung leitende Architekt, Carl Hårleman, ließ Barockkuppeln aufsetzen. Im 19. Jahrhundert wurden diese Kuppeln unter Leitung von Helgo Zettervall durch die spitzen Türme ersetzt, die sich auch heute noch auf dem Dom befinden.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[TAB]&#209;&#226;&#255;&#242;&#251;&#237;&#255; &#211;&#239;&#241;&#224;&#235;&#251; &#225;&#251;&#235;&#224; &#240;&#229;&#235;&#232;&#227;&#232;&#238;&#231;&#237;&#251;&#236; &#246;&#229;&#237;&#242;&#240;&#238;&#236; &#226; &#211;&#239;&#241;&#224;&#235;&#229; (&#209;&#242;&#224;&#240;&#224;&#255; &#211;&#239;&#241;&#224;&#235;&#224;) "Gamla", &#226;&#238;&#231;&#235;&#229; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#238;&#233; &#211;&#239;&#241;&#224;&#235;&#251;, &#216;&#226;&#229;&#246;&#232;&#232;, &#238;&#237;&#224; &#225;&#251;&#235;&#224; &#241;&#238;&#231;&#228;&#224;&#237;&#224;, &#247;&#242;&#238;&#225;&#251; &#239;&#238;&#234;&#235;&#238;&#237;&#255;&#242;&#252;&#241;&#255; &#228;&#240;&#229;&#226;&#237;&#232;&#236; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#236; &#225;&#238;&#227;&#224;&#236;. &#214;&#229;&#237;&#242;&#240; &#234;&#243;&#235;&#252;&#242;&#224; &#240;&#229;&#228;&#234;&#238; &#228;&#238;&#234;&#243;&#236;&#229;&#237;&#242;&#232;&#240;&#243;&#229;&#242;&#241;&#255;, &#237;&#238; &#238; &#237;&#229;&#236; &#229;&#241;&#242;&#252; &#243;&#239;&#238;&#236;&#232;&#237;&#224;&#237;&#232;&#255; &#226; &#205;&#238;&#240;&#226;&#229;&#230;&#241;&#234;&#232;&#245; &#241;&#224;&#227;&#224;&#245; &#232; "Saxo Grammaticus' Gesta Danorum", &#232; &#239;&#238;&#228;&#225;&#240;&#238;&#225;&#237;&#229;&#229;, &#234;&#224;&#234; "&#231;&#238;&#235;&#238;&#247;&#229;&#237;&#237;&#251;&#233; &#245;&#240;&#224;&#236;" &#226; &#240;&#224;&#225;&#238;&#242;&#229; &#192;&#228;&#224;&#236;&#224; &#193;&#240;&#229;&#236;&#229;&#237;&#224;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Tag>
@@ -249,7 +249,7 @@
 		<German>[ICON_BULLET]+1[ICON_CULTURE] in jeder Stadt ohne Staatsreligion.</German>
 		<Italian>[ICON_BULLET]+1[ICON_CULTURE] in tutte le città senza una religione ufficiale.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]+1[ICON_CULTURE] em todas as cidades sem religião de estado.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>
@@ -258,7 +258,7 @@
 		<German>Die Runde Kirche</German>
 		<Italian>La Chiesa Rotonda</Italian>
 		<Spanish>La Iglesia Redonda</Spanish>
-		<Portuguese>&#202;&#240;&#243;&#227;&#235;&#224;&#255; &#214;&#229;&#240;&#234;&#238;&#226;&#252; &#207;&#240;&#229;&#241;&#235;&#224;&#226;&#224;</Portuguese>
+		<Portuguese>A Igreja Redonda</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH_PEDIA</Tag>
@@ -276,7 +276,7 @@
 		<German>Chalid ibn al-Walid Grab</German>
 		<Italian>Tomba di Al Walid</Italian>
 		<Spanish>Tumba de Al Walid</Spanish>
-		<Portuguese>&#204;&#238;&#227;&#232;&#235;&#224; &#192;&#235;&#252; &#202;&#224;&#235;&#232;&#228;</Portuguese>
+		<Portuguese>Tumba de Al Walid</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOMB_KHAL_PEDIA</Tag>
@@ -294,7 +294,7 @@
 		<German>Das [COLOR_BUILDING_TEXT]Chalid ibn al-Walid Grab[COLOR_REVERT] erhöht die Kriegsmüdigkeit bei Feinden und steigert die Wahrscheinlichkeit eines [COLOR_BUILDING_TEXT]Großen Künstlers[COLOR_REVERT]</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>A [COLOR_BUILDING_TEXT]Tumba de Khalid Ibn al-Walid[COLOR_REVERT] aumenta o cansaço de guerra no inimigo e aumenta as chances da cidade gerar um [COLOR_BUILDING_TEXT]Grande Artista[COLOR_REVERT].</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA</Tag>
@@ -303,7 +303,7 @@
 		<German>Magna Carta</German>
 		<Italian>Magna Carta</Italian>
 		<Spanish>Carta Magna</Spanish>
-		<Portuguese>&#204;&#224;&#227;&#237;&#224; &#202;&#224;&#240;&#242;&#224;</Portuguese>
+		<Portuguese>Magna Carta</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA_PEDIA</Tag>
@@ -321,7 +321,7 @@
 		<German>Goldene Bulle</German>
 		<Italian>Bolla d'Oro</Italian>
 		<Spanish>Torro Dorada</Spanish>
-		<Portuguese>&#199;&#238;&#235;&#238;&#242;&#238;&#233; &#193;&#251;&#234;</Portuguese>
+		<Portuguese>Bula Dourada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL_PEDIA</Tag>
@@ -339,7 +339,7 @@
 		<German>Die Alhambra</German>
 		<Italian>L'Alhambra</Italian>
 		<Spanish>La Alhambra</Spanish>
-		<Portuguese>&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224;</Portuguese>
+		<Portuguese>Alhambra</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Tag>
@@ -348,7 +348,7 @@
 		<German>[TAB]Die Alhambra ist eine bedeutende Stadtburg auf dem Sabikah-Hügel von Granada in Spanien, die als eines der schönsten Beispiele des maurischen Stils der islamischen Kunst gilt. Die Alhambra ist eine der meistbesuchten Touristenattraktionen Europas und seit 1984 Weltkulturerbe. Die Grundfläche der Burganlage beträgt 730 m x 180 m, ca. 13 Hektar.[PARAGRAPH:2]Der Alhambra genannte Baukomplex ist eine für das Mittelalter typische Kombination aus einer befestigten Oberstadt mit einer separat befestigten Zitadelle für den Machthaber. Die Oberstadt beherbergte neben dem Adel und dem Militär auch die höher stehende Bürgerschaft, Kaufleute sowie wichtige Handwerker. Auch die Waffenschmieden befand sich hier. Als Alcazaba wird in der Literatur eine Stadtburg (Akropolis) bezeichnet; eine großflächige Befestigungsanlage mit stadtähnlichem Charakter mit Stadtburg oder Zitadelle. In Granada wird die Zitadelle als Alcazaba bezeichnet, während die Gesamtanlage Alhambra heißt.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[TAB]&#192;&#235;&#252;&#227;&#224;&#236;&#225;&#240;&#224; - &#228;&#226;&#238;&#240;&#246;&#238;&#226;&#251;&#233; &#232; &#234;&#240;&#229;&#239;&#238;&#241;&#242;&#237;&#238;&#233; &#234;&#238;&#236;&#239;&#235;&#229;&#234;&#241; &#204;&#224;&#226;&#240;&#232;&#242;&#224;&#237;&#241;&#234;&#232;&#245; &#236;&#238;&#237;&#224;&#240;&#245;&#238;&#226; &#195;&#240;&#224;&#237;&#224;&#228;&#251;, &#226; &#254;&#230;&#237;&#238;&#233; &#200;&#241;&#239;&#224;&#237;&#232;&#232;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL</Tag>
@@ -357,7 +357,7 @@
 		<German>Basilius-Kathedrale</German>
 		<Italian>Cattedrale di San Basilio</Italian>
 		<Spanish>Catedral de San Basilio</Spanish>
-		<Portuguese>&#209;&#238;&#225;&#238;&#240; &#209;&#226;&#255;&#242;&#238;&#227;&#238; &#193;&#253;&#231;&#232;&#235;&#224;</Portuguese>
+		<Portuguese>Catedral de São Basílio</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL_PEDIA</Tag>
@@ -375,7 +375,7 @@
 		<German>Markusdom</German>
 		<Italian>Basilica di San Marco</Italian>
 		<Spanish>Basilica de San Marcos</Spanish>
-		<Portuguese>&#193;&#224;&#231;&#232;&#235;&#232;&#234;&#224; &#209;&#224;&#237; &#204;&#224;&#240;&#234;&#238;</Portuguese>
+		<Portuguese>Basílica de São Marcos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO_PEDIA</Tag>
@@ -393,7 +393,7 @@
 		<German>Brandenburger Tor</German>
 		<Italian>Portale di Brandeburgo</Italian>
 		<Spanish>Puerta de Brandeburgo</Spanish>
-		<Portuguese>&#193;&#240;&#224;&#237;&#228;&#229;&#237;&#225;&#243;&#240;&#227;&#241;&#234;&#232;&#229; &#194;&#238;&#240;&#238;&#242;&#224;</Portuguese>
+		<Portuguese>Portão de Brandemburgo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE_PEDIA</Tag>
@@ -411,7 +411,7 @@
 		<German>Der Felsendom</German>
 		<Italian>Cupola della Roccia</Italian>
 		<Spanish>Cupula de la Roca</Spanish>
-		<Portuguese>&#202;&#243;&#239;&#238;&#235; &#209;&#234;&#224;&#235;&#251;</Portuguese>
+		<Portuguese>Cúpula da Rocha</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK_PEDIA</Tag>
@@ -429,7 +429,7 @@
 		<German>Mezquita-Catedral</German>
 		<Italian>La Mezquita</Italian>
 		<Spanish>La Mezquita</Spanish>
-		<Portuguese>&#203;&#224; &#204;&#229;&#231;&#234;&#226;&#232;&#242;&#224;</Portuguese>
+		<Portuguese>La Mezquita</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LA_MEZQUITA_PEDIA</Tag>
@@ -447,7 +447,7 @@
 		<German>Abtei von Cluny</German>
 		<Italian>Abbazia di Cluny</Italian>
 		<Spanish>Monasterio de Cluny</Spanish>
-		<Portuguese>&#204;&#238;&#237;&#224;&#241;&#242;&#251;&#240;&#252; &#202;&#235;&#243;&#237;&#232;</Portuguese>
+		<Portuguese>Abadia de Cluny</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONASTERY_OF_CLUNY_PEDIA</Tag>
@@ -465,7 +465,7 @@
 		<German>Theodosianische Mauer</German>
 		<Italian>Mura Teodosiane</Italian>
 		<Spanish>Muralla Teodosiana</Spanish>
-		<Portuguese>&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251;</Portuguese>
+		<Portuguese>Muralha Teodosiana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEODOSIAN_WALLS_PEDIA</Tag>
@@ -474,7 +474,7 @@
 		<German>[TAB]Die Theodosianische Mauer ist eine Anfang des 5. Jahrhunderts unter Kaiser Theodosius II. und dem Präfekten Anthemius errichtete, etwa 19-20 Kilometer lange Befestigungsanlage (Land- und Seemauern) zum Schutz von Konstantinopel, dem heutigen Istanbul.[PARAGRAPH:2]Die Theodosianische Mauer wird von einigen Historikern als eine der erfolgreichsten und bestdurchdachten Befestigungsanlagen in der Geschichte der Kriegstechnik angesehen. Viele der einschneidensten Ereignisse in der Geschichte der Stadt stehen eng mit diesem außergewöhnlichen Bauwerk in Zusammenhang. Der Bau des Wallsystems wurde notwendig, um der Bedrohung durch die Hunnen zu begegnen und der rasch expandierenden Stadt zusätzlichen Raum zu verschaffen. Trotz zunehmenden Verfalles und dem Aufkommen der Feuerwaffen, waren die Befestigungen bei entschlossener Verteidigung auch noch in der Mitte des 15. Jahrhunderts nur schwer zu überwinden. Die Komplexität der Verteidigungsanlagen trug wesentlich zum langen Bestehen des Byzantinischen Reiches bei.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[TAB]&#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#228;&#235;&#232;&#237;&#238;&#233; 5630 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#232; &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251; &#228;&#235;&#255; &#231;&#224;&#249;&#232;&#242;&#251; &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#239;&#238;&#235;&#255; &#238;&#242; &#226;&#224;&#240;&#226;&#224;&#240;&#238;&#226; &#239;&#240;&#232; &#232;&#236;&#239;&#229;&#240;&#224;&#242;&#238;&#240;&#229; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; II, &#234;&#238;&#227;&#228;&#224; &#227;&#238;&#240;&#238;&#228; &#237;&#224; &#241;&#229;&#236;&#232; &#245;&#238;&#235;&#236;&#224;&#245; &#226;&#251;&#240;&#238;&#241; &#231;&#224; &#239;&#240;&#229;&#228;&#229;&#235;&#251; &#242;&#229;&#245; &#241;&#242;&#229;&#237;, &#234;&#238;&#242;&#238;&#240;&#251;&#229; &#225;&#251;&#235;&#232; &#239;&#240;&#229;&#228;&#243;&#241;&#236;&#238;&#242;&#240;&#229;&#237;&#251; &#229;&#227;&#238; &#238;&#241;&#237;&#238;&#226;&#224;&#242;&#229;&#235;&#229;&#236;, &#202;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;&#237;&#238;&#236; &#194;&#229;&#235;&#232;&#234;&#232;&#236;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#239;&#240;&#238;&#228;&#238;&#235;&#230;&#224;&#235;&#238;&#241;&#252; &#239;&#238;&#228; &#240;&#243;&#234;&#238;&#226;&#238;&#228;&#241;&#242;&#226;&#238;&#236; &#239;&#240;&#229;&#244;&#229;&#234;&#242;&#224; &#192;&#237;&#244;&#232;&#236;&#232;&#255; &#241; 408 &#239;&#238; 413 &#227;&#238;&#228;&#251;. &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#229;&#226;&#251; &#241;&#242;&#229;&#237;&#251; &#225;&#251;&#235;&#232; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#251; &#239;&#238;&#241;&#235;&#229; &#242;&#238;&#227;&#238;, &#234;&#224;&#234; &#247;&#224;&#241;&#242;&#252; &#232;&#245; &#238;&#225;&#240;&#243;&#248;&#232;&#235;&#224;&#241;&#252; &#239;&#240;&#232; &#231;&#229;&#236;&#235;&#229;&#242;&#240;&#255;&#241;&#229;&#237;&#232;&#232; 447 &#227;&#238;&#228;&#224;. &#210;&#238;&#227;&#228;&#224; &#230;&#229; &#239;&#229;&#240;&#229;&#228; &#241;&#242;&#229;&#237;&#238;&#233; &#225;&#251;&#235; &#226;&#251;&#240;&#251;&#242; &#248;&#232;&#240;&#238;&#234;&#232;&#233; &#240;&#238;&#226;. &#194;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#255;&#255; &#241;&#242;&#229;&#237;&#224; &#226;&#251;&#241;&#238;&#242;&#238;&#233; 12 &#236;&#229;&#242;&#240;&#238;&#226; &#232; &#248;&#232;&#240;&#232;&#237;&#238;&#233; 5 &#236;&#229;&#242;&#240;&#238;&#226; &#247;&#229;&#240;&#229;&#231; &#234;&#224;&#230;&#228;&#251;&#229; 55 &#236;&#229;&#242;&#240;&#238;&#226; &#225;&#251;&#235;&#224; &#243;&#234;&#240;&#229;&#239;&#235;&#229;&#237;&#224; &#248;&#229;&#241;&#242;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#235;&#232;&#225;&#238; &#226;&#238;&#241;&#252;&#236;&#232;&#243;&#227;&#238;&#235;&#252;&#237;&#238;&#233; &#225;&#224;&#248;&#237;&#229;&#233; &#226;&#251;&#241;&#238;&#242;&#238;&#233; &#226; 20 &#236;&#229;&#242;&#240;&#238;&#226;, &#238;&#225;&#249;&#229;&#229; &#234;&#238;&#235;&#232;&#247;&#229;&#241;&#242;&#226;&#238; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#228;&#238;&#245;&#238;&#228;&#232;&#235;&#238; &#228;&#238; &#241;&#242;&#224;. &#205;&#232;&#230;&#237;&#232;&#233; &#255;&#240;&#243;&#241; &#225;&#224;&#248;&#229;&#237; &#225;&#251;&#235; &#239;&#240;&#232;&#241;&#239;&#238;&#241;&#238;&#225;&#235;&#229;&#237; &#239;&#238;&#228; &#241;&#234;&#235;&#224;&#228; &#239;&#240;&#238;&#228;&#238;&#226;&#238;&#235;&#252;&#241;&#242;&#226;&#232;&#255;. &#194;&#237;&#229;&#248;&#237;&#255;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#224;&#255; &#241;&#242;&#229;&#237;&#224; &#225;&#251;&#235;&#224; &#236;&#229;&#237;&#252;&#248;&#229; &#226;&#237;&#243;&#242;&#240;&#229;&#237;&#237;&#229;&#233; &#232; &#239;&#238; &#226;&#251;&#241;&#238;&#242;&#229; &#232; &#239;&#238; &#248;&#232;&#240;&#232;&#237;&#229;. &#200;&#231; 96 &#225;&#224;&#248;&#229;&#237; &#226;&#237;&#229;&#248;&#237;&#229;&#233; &#241;&#242;&#229;&#237;&#251; &#228;&#229;&#241;&#255;&#242;&#252; &#225;&#251;&#235;&#232; &#239;&#240;&#238;&#229;&#231;&#228;&#237;&#251;&#236;&#232;, &#232;&#231; &#234;&#238;&#242;&#238;&#240;&#251;&#245; &#239;&#224;&#240;&#224;&#228;&#237;&#251;&#236;&#232; &#241;&#247;&#232;&#242;&#224;&#235;&#232;&#241;&#252; &#199;&#238;&#235;&#238;&#242;&#251;&#229; &#226;&#238;&#240;&#238;&#242;&#224; &#151; &#239;&#240;&#238;&#238;&#225;&#240;&#224;&#231; &#238;&#228;&#237;&#238;&#232;&#236;&#184;&#237;&#237;&#251;&#245; &#241;&#238;&#238;&#240;&#243;&#230;&#229;&#237;&#232;&#233; &#226; &#202;&#232;&#229;&#226;&#229; &#232; &#194;&#235;&#224;&#228;&#232;&#236;&#232;&#240;&#229;. &#221;&#242;&#232; &#226;&#238;&#240;&#238;&#242;&#224; &#241;&#238;&#241;&#242;&#238;&#255;&#235;&#232; &#232;&#231; &#242;&#240;&#184;&#245; &#236;&#240;&#224;&#236;&#238;&#240;&#237;&#251;&#245; &#242;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#251;&#245; &#224;&#240;&#238;&#234;, &#226;&#238;&#231;&#228;&#226;&#232;&#227;&#237;&#243;&#242;&#251;&#245; &#229;&#249;&#184; &#239;&#240;&#232; &#212;&#229;&#238;&#228;&#238;&#241;&#232;&#232; I &#232; &#243;&#226;&#229;&#237;&#247;&#224;&#237;&#237;&#251;&#245; &#234;&#240;&#251;&#235;&#224;&#242;&#238;&#233; &#224;&#235;&#235;&#229;&#227;&#238;&#240;&#232;&#229;&#233; &#207;&#238;&#225;&#229;&#228;&#251;.</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALACIO_DA_PENA</Tag>
@@ -483,7 +483,7 @@
 		<German>Palacio da Pena</German>
 		<Italian>Palacio da Pena</Italian>
 		<Spanish>Palacio da Pena</Spanish>
-		<Portuguese>Palacio da Pena</Portuguese>
+		<Portuguese>Palácio da Pena</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALACIO_DA_PENA_PEDIA</Tag>
@@ -501,7 +501,7 @@
 		<German>Pa&#231;o da Ribeira</German>
 		<Italian>Pa&#231;o da Ribeira</Italian>
 		<Spanish>Pa&#231;o da Ribeira</Spanish>
-		<Portuguese>&#207;&#224;&#235;&#224;&#246;&#232;&#238; &#228;&#224; &#207;&#229;&#237;&#224;</Portuguese>
+		<Portuguese>Paço da Ribeira</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIBEIRA_PEDIA</Tag>
@@ -519,7 +519,7 @@
 		<German>Magellans Reise</German>
 		<Italian>Viaggio di Magellano</Italian>
 		<Spanish>El Viaje de Magallanes</Spanish>
-		<Portuguese>&#204;&#224;&#227;&#229;&#235;&#235;&#224;&#237;&#238;&#226;&#238; &#207;&#243;&#242;&#229;&#248;&#229;&#241;&#242;&#226;&#232;&#229;</Portuguese>
+		<Portuguese>A Viagem de Fernão de Magalhães</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE_PEDIA</Tag>
@@ -537,7 +537,7 @@
 		<German>Leonardos Erfindungen</German>
 		<Italian>Le Invenzioni di Leonardo</Italian>
 		<Spanish>Taller de Leonardo</Spanish>
-		<Portuguese>&#200;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#255; &#203;&#229;&#238;&#237;&#224;&#240;&#228;&#238;</Portuguese>
+		<Portuguese>Invenções de da Vinci</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP_PEDIA</Tag>
@@ -555,7 +555,7 @@
 		<German>Sophienkathedrale</German>
 		<Italian>Cattedrale di Santa Sofia</Italian>
 		<Spanish>Catedral de Santa Sofia</Spanish>
-		<Portuguese>&#209;&#226;&#255;&#242;&#224;&#255; &#209;&#238;&#244;&#232;&#255; &#202;&#232;&#229;&#226;&#224;</Portuguese>
+		<Portuguese>Catedral de Santa Sofia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOPHIA_KIEV_PEDIA</Tag>
@@ -573,7 +573,7 @@
 		<German>Marco Polos Botschaft</German>
 		<Italian>Ambasciata di Marco Polo</Italian>
 		<Spanish>Embajada de Marco Polo</Spanish>
-		<Portuguese>&#207;&#238;&#241;&#238;&#235;&#252;&#241;&#242;&#226;&#238; &#204;&#224;&#240;&#234;&#238; &#207;&#238;&#235;&#238;</Portuguese>
+		<Portuguese>Embaixada de Marco Polo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Tag>
@@ -591,7 +591,7 @@
 		<German>Papstpalast</German>
 		<Italian>Palazzo dei Papi</Italian>
 		<Spanish>Palacio Papal de Avi&#241;&#243;n</Spanish>
-		<Portuguese>&#196;&#226;&#238;&#240;&#229;&#246; &#207;&#224;&#239;&#229;&#241;&#224;</Portuguese>
+		<Portuguese>Palácio dos Papas de Avinhão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES_PEDIA</Tag>
@@ -609,7 +609,7 @@
 		<German>Torre de Belem</German>
 		<Italian>Torre di Bel&#233;m</Italian>
 		<Spanish>Tour de Bel&#233;m</Spanish>
-		<Portuguese>&#193;&#229;&#235;&#229;&#237; &#193;&#224;&#248;&#237;&#255;</Portuguese>
+		<Portuguese>Torre de Belém</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER_PEDIA</Tag>
@@ -627,7 +627,7 @@
 		<German>Schloss Kalmar</German>
 		<Italian>Castello di Kalmar</Italian>
 		<Spanish>Castillo de Kalmar</Spanish>
-		<Portuguese>&#199;&#224;&#236;&#238;&#234; &#202;&#224;&#235;&#252;&#236;&#224;&#240;&#224;</Portuguese>
+		<Portuguese>Castelo de Kalmar</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE_PEDIA</Tag>
@@ -645,7 +645,7 @@
 		<German>Der schiefe Turm</German>
 		<Italian>La Torre Pendente</Italian>
 		<Spanish>la Torre Inclinada</Spanish>
-		<Portuguese>&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#193;&#224;&#248;&#237;&#255;</Portuguese>
+		<Portuguese>Torre de Pisa</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_PEDIA</Tag>
@@ -654,7 +654,7 @@
 		<German>[TAB]Der schiefe Turm von Pisa (Italienisch: La Torre di Pisa) ist ein "Campanile", ein frei stehender Glockenturm des Doms von Pisa. Er befindet sich auf der R&#252;ckseite des Doms und ist als drittes Bauwerk auf Pisas "Piazza dei Miracoli" (Platz der Wunder) das wohl bekannteste schiefe Geb&#228;ude der Welt. Das Geb&#228;ude sollte gem&#228;&#223; der Bauplaner normal gerade stehen, doch kurz nach Baubeginn im Jahr 1173 bekam es wegen eines Grundbruches, dem Nachgeben des Fundamentes, eine Schr&#228;glage Richtung S&#252;dosten.</German>
 		<Italian>[TAB]La torre pendente di Pisa, o semplicemente la torre di Pisa &#232; il campanile della cattedrale di Pisa. Si trova dietro la cattedrale ed &#232; la terza struttura nel Campo dei Miracoli. La torre &#232; il pi&#249; famoso edificio pendente al mondo. Pur essendo stata progettata per rimanere verticale, cominci&#242; a pendere poco dopo l'inizio dei lavori di costruzione nel 1173, a causa di fondamenta mal realizzate e di un sottostrato friabile che ha permesso alle fondamenta di spostarsi.</Italian>
 		<Spanish>[TAB]La Torre Inclinada de Pisa, o simplemente la Torre de Pisa, es una torre campanario individual de la catedral de la ciudad italiana de Pisa. Est&#225; situada detr&#225;s de la catedral y es la tercera estructura del "Campo dei Miracoli" de Pisa ("Campo de los Milagros"). La torre es el edificio inclinado m&#225;s famoso del mundo. Aunque se pretend&#237;a que fuera totalmente vertical, comenz&#243; a inclinarse hacia el sudeste poco despu&#233;s de su construcci&#243;n, en 1173, debido a unos cimientos defectuosos y la tierra reblandecida sobre la que reposa.</Spanish>
-		<Portuguese>[TAB]&#207;&#232;&#231;&#224;&#237;&#241;&#234;&#224;&#255; &#225;&#224;&#248;&#237;&#255; (&#232;&#242;&#224;&#235;. Torre pendente di Pisa) &#151; &#234;&#238;&#235;&#238;&#234;&#238;&#235;&#252;&#237;&#224;&#255; &#225;&#224;&#248;&#237;&#255;, &#247;&#224;&#241;&#242;&#252; &#224;&#237;&#241;&#224;&#236;&#225;&#235;&#255; &#227;&#238;&#240;&#238;&#228;&#241;&#234;&#238;&#227;&#238; &#241;&#238;&#225;&#238;&#240;&#224; &#209;&#224;&#237;&#242;&#224;-&#204;&#224;&#240;&#232;&#255; &#192;&#241;&#241;&#243;&#237;&#242;&#224; &#226; &#227;&#238;&#240;&#238;&#228;&#229; &#207;&#232;&#231;&#224;. &#209;&#242;&#240;&#238;&#232;&#242;&#229;&#235;&#252;&#241;&#242;&#226;&#238; &#225;&#224;&#248;&#237;&#232; &#225;&#251;&#235;&#238; &#231;&#224;&#234;&#238;&#237;&#247;&#229;&#237;&#238; &#226; 1360 &#227;&#238;&#228;&#243;. &#193;&#224;&#248;&#237;&#255; &#239;&#238;&#235;&#243;&#247;&#232;&#235;&#224; &#239;&#240;&#238;&#231;&#226;&#232;&#249;&#229; &#171;&#207;&#224;&#228;&#224;&#254;&#249;&#224;&#255; &#225;&#224;&#248;&#237;&#255;&#187; &#232; &#226;&#241;&#229;&#236;&#232;&#240;&#237;&#243;&#254; &#232;&#231;&#226;&#229;&#241;&#242;&#237;&#238;&#241;&#242;&#252; &#225;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#255; &#242;&#238;&#236;&#243;, &#247;&#242;&#238; &#238;&#237;&#224; &#241;&#232;&#235;&#252;&#237;&#238; &#237;&#224;&#234;&#235;&#238;&#237;&#229;&#237;&#224; &#232; &#234;&#224;&#234; &#225;&#251; &#171;&#239;&#224;&#228;&#224;&#229;&#242;&#187;. &#194;&#251;&#241;&#238;&#242;&#224; &#225;&#224;&#248;&#237;&#232; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 55,86 &#236; &#238;&#242; &#231;&#229;&#236;&#235;&#232; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#237;&#232;&#231;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229; &#232; 56,7 &#236; &#237;&#224; &#241;&#224;&#236;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#233; &#241;&#242;&#238;&#240;&#238;&#237;&#229;. &#216;&#232;&#240;&#232;&#237;&#224; &#241;&#242;&#229;&#237; &#226; &#238;&#241;&#237;&#238;&#226;&#229; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; 4,09 &#236; &#232; &#226;&#226;&#229;&#240;&#245;&#243; 2,48 &#236;. &#197;&#184; &#236;&#224;&#241;&#241;&#224; &#238;&#246;&#229;&#237;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#226; 14453 &#242;. &#210;&#229;&#234;&#243;&#249;&#232;&#233; &#237;&#224;&#234;&#235;&#238;&#237; &#241;&#238;&#241;&#242;&#224;&#226;&#235;&#255;&#229;&#242; &#238;&#234;&#238;&#235;&#238; 3,97&#176; (&#238;&#242;&#234;&#235;&#238;&#237;&#229;&#237;&#232;&#229; &#239;&#240;&#232;&#236;&#229;&#240;&#237;&#238; 3,9 &#236; &#238;&#242; &#226;&#229;&#240;&#242;&#232;&#234;&#224;&#235;&#232;). &#193;&#224;&#248;&#237;&#255; &#232;&#236;&#229;&#229;&#242; 294 &#241;&#242;&#243;&#239;&#229;&#237;&#252;&#234;&#232;.</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_STRATEGY</Tag>
@@ -663,7 +663,7 @@
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_REVERT] erweckt eine zufällige Große Persönlichkeit.</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_REVERT] genera un grande personaggio casuale.</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] provides a random great person.</Portuguese>
+		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_REVERT] gera uma Grande Personalidade aleatória.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_HELP</Tag>
@@ -672,7 +672,7 @@
 		<German>[ICON_BULLET]Erweckt eine zufällige Große Persönlichkeit</German>
 		<Italian>[ICON_BULLET]Genera un Grande Personaggio casuale</Italian>
 		<Spanish>[ICON_BULLET]Provides a Random Great Person</Spanish>
-		<Portuguese>[ICON_BULLET]Provides a Random Great Person</Portuguese>
+		<Portuguese>[ICON_BULLET]Gera uma Grande Personalidade Aleatória</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA</Tag>
@@ -681,7 +681,7 @@
 		<German>Bibliotheca Corviniana</German>
 		<Italian>Biblioteca Corviniana</Italian>
 		<Spanish>Biblioteca Corviniana</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Biblioteca Corviniana</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_PEDIA</Tag>
@@ -699,7 +699,7 @@
 		<German>Schloss Fontainebleau</German>
 		<Italian>Chateau di Fontainebleau</Italian>
 		<Spanish>Chateau de Fontainebleau</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Palácio de Fontainebleau</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FONTAINEBLEAU_PEDIA</Tag>
@@ -717,7 +717,7 @@
 		<German>Reichstag</German>
 		<Italian>Dieta Imperiale</Italian>
 		<Spanish>Dieta Imperial</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Dieta Imperial</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_DIET_PEDIA</Tag>
@@ -735,7 +735,7 @@
 		<German>Observatorium von Kopernicus</German>
 		<Italian>Osservatorio di Copernico</Italian>
 		<Spanish>Observatoire de Copernic</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Observatório de Copérnico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COPERNICUS_PEDIA</Tag>
@@ -753,7 +753,7 @@
 		<German>Palazzo San Giorgio</German>
 		<Italian>Palazzo San Giorgio</Italian>
 		<Spanish>Palazzo San Giorgio</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Palácio de São Jorge</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_GIORGIO_PEDIA</Tag>
@@ -771,7 +771,7 @@
 		<German>Amsterdamer Börse</German>
 		<Italian>Borsa di Amsterdam</Italian>
 		<Spanish>Bolsa de Amsterdam</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Bolsa de Amsterdã</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEURS_PEDIA</Tag>
@@ -789,7 +789,7 @@
 		<German>Westminster Abbey</German>
 		<Italian>Abbazia di Westminster</Italian>
 		<Spanish>Abad&#237;a de Westminster</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Abadia de Westminster</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Tag>
@@ -807,7 +807,7 @@
 		<German>Versailles</German>
 		<Italian>Versailles</Italian>
 		<Spanish>Versalles</Spanish>
-		<Portuguese>&#194;&#229;&#240;&#241;&#224;&#235;&#252;</Portuguese>
+		<Portuguese>Palácio de Versalhes</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VERSAILLES_PEDIA</Tag>
@@ -825,7 +825,7 @@
 		<German>Pressburger Burg</German>
 		<Italian>Castello di Presburgo</Italian>
 		<Spanish>Castillo de Presburgo</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Castelo de Bratislava</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESSBURG_PEDIA</Tag>
@@ -843,7 +843,7 @@
 		<German>Topkapi Palast</German>
 		<Italian>Palazzo Topkapi</Italian>
 		<Spanish>Palacio de Topkapi</Spanish>
-		<Portuguese>&#196;&#226;&#238;&#240;&#229;&#246; &#210;&#238;&#239;&#234;&#224;&#239;&#232;</Portuguese>
+		<Portuguese>Palácio de Topkapi</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_PEDIA</Tag>
@@ -861,7 +861,7 @@
 		<German>La Lanterna</German>
 		<Italian>La Lanterna</Italian>
 		<Spanish>La Lanterna</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>A Lanterna</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANTERNA_PEDIA</Tag>
@@ -881,7 +881,7 @@
 		<German>Sommerresidenz</German>
 		<Italian>Palazzo d'Estate</Italian>
 		<Spanish>Palacio de Verano</Spanish>
-		<Portuguese>&#203;&#229;&#242;&#237;&#232;&#233; &#196;&#226;&#238;&#240;&#229;&#246;</Portuguese>
+		<Portuguese>Palácio de Verão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUMMER_PALACE_PEDIA</Tag>
@@ -890,7 +890,7 @@
 		<German>[TAB]Eine Residenz ist der Wohnsitz eines Staatsoberhaupts oder einer anderen hochrangigen Person des &#246;ffentlichen Lebens. Viele Residenzen dienen heute als Parlamentssitze oder Museen. Staatsoberh&#228;upter, insbesondere Monarchen, leben in der Regel einige Wochen im Jahr nicht in ihrem Hauptwohnsitz, sondern (je nach Jahreszeit) in ihren so genannten Winter- oder Sommerresidenzen. Beispiele hierf&#252;r sind der russische Winterpalast in St. Petersburg, der chinesische Sommerpalast in Peking und der K&#252;c&#252;ksu-Sommerpalast in Istanbul.</German>
 		<Italian>[TAB]Un palazzo &#232; la casa di un capo di stato o di un'altra importante figura pubblica. Molti palazzi ora sono adibiti a usi diversi, come parlamenti o musei. I capi di stato, specialmente i monarchi, passano qualche settimana ogni anno in palazzi che non sono la loro residenza primaria. Solitamente sono chiamati palazzo d'inverno o d'estate, a seconda della stagione in cui vengono usati. Un esempio sono il Palazzo d'Inverno a San Pietroburgo, il Palazzo d'Estate a Pechino e il Palazzo d'Estate Kucuksu a Istanbul.</Italian>
 		<Spanish>[TAB]Un palacio es el hogar del jefe de estado o de otro personaje p&#250;blico de alto rango. Hoy en d&#237;a, muchos palacios se usan para cosas diferentes, por ejemplo, como sedes del Parlamento o museos. Los cabezas de estado, especialmente los monarcas, sol&#237;an pasar algunas semanas del a&#241;o fuera de su residencia habitual, en otros palacios. Dichos edificios sol&#237;an recibir el nombre de palacios de invierno o de verano, en funci&#243;n de la estaci&#243;n en la que fueran utilizados. Algunos ejemplos son el Palacio de Invierno ruso de San Petersburgo, el Palacio de Verano chino de Pek&#237;n, y el Palacio de Kucuksu, de verano, en Estambul.</Spanish>
-		<Portuguese>[TAB]&#196;&#226;&#238;&#240;&#229;&#246; - &#228;&#238;&#236; &#227;&#235;&#224;&#226;&#251; &#227;&#238;&#241;&#243;&#228;&#224;&#240;&#241;&#242;&#226;&#224; &#232;&#235;&#232; &#228;&#240;&#243;&#227;&#238;&#233; &#226;&#251;&#241;&#238;&#234;&#238;&#239;&#238;&#241;&#242;&#224;&#226;&#235;&#229;&#237;&#237;&#238;&#233; &#238;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#238;&#233; &#244;&#232;&#227;&#243;&#240;&#251;. &#204;&#237;&#238;&#227;&#238; &#228;&#226;&#238;&#240;&#246;&#238;&#226; &#241;&#229;&#233;&#247;&#224;&#241; &#239;&#238;&#235;&#243;&#247;&#224;&#254;&#242; &#232;&#241;&#239;&#238;&#235;&#252;&#231;&#238;&#226;&#224;&#237;&#232;&#229; &#226; &#234;&#224;&#247;&#229;&#241;&#242;&#226;&#229; &#239;&#224;&#240;&#235;&#224;&#236;&#229;&#237;&#242;&#238;&#226; &#232;&#235;&#232; &#236;&#243;&#231;&#229;&#229;&#226;</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY</Tag>
@@ -899,7 +899,7 @@
 		<German>Nationale Universit&#228;t</German>
 		<Italian>Universita Nazionale</Italian>
 		<Spanish>Universidad Nacional</Spanish>
-		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#211;&#237;&#232;&#226;&#229;&#240;&#241;&#232;&#242;&#229;&#242;</Portuguese>
+		<Portuguese>Universidade Nacional</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_UNIVERSITY_PEDIA</Tag>
@@ -917,7 +917,7 @@
 		<German>Heldenepos</German>
 		<Italian>Poema epico</Italian>
 		<Spanish>La Epopeya heroica</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Epopéia Heroica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEROIC_EPIC_PEDIA</Tag>
@@ -935,7 +935,7 @@
 		<German>Nationalgalerie</German>
 		<Italian>Galleria Nazionale</Italian>
 		<Spanish>la National Gallery</Spanish>
-		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#195;&#224;&#235;&#229;&#240;&#229;&#255;</Portuguese>
+		<Portuguese>Galeria Nacional</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_GALLERY_PEDIA</Tag>
@@ -944,7 +944,7 @@
 		<German>[TAB]Eine Nationalgalerie ist die gr&#246;&#223;te &#246;ffentlich zug&#228;ngliche Kunstgalerie eines Landes. Diese Galerien sind unter verschiedenen Bezeichnungen in fast allen Hauptst&#228;dten weit verbreitet und dienen als Ausstellungsorte f&#252;r Kunst, meist bildende Kunst, und zwar in erster Linie f&#252;r Gem&#228;lde, Illustrationen und Skulpturen. Das Kunstmuseum als solches ist eine relativ moderne Einrichtung: Die erste Institution dieser Art war der Pariser Louvre, der erst 1793 - kurz nach der franz&#246;sischen Revolution - gebaut wurde, nachdem die k&#246;niglichen Sch&#228;tze per Dekret dem Volk zug&#228;nglich gemacht worden waren. </German>
 		<Italian>[TAB]Una galleria nazionale &#232; la principale galleria d'arte pubblica di una nazione. Con diversi nomi se ne trovano in quasi ogni capitale. Sono uno spazio per l'esibizione dell'arte, solitamente visiva, e principalmente dipinti, illustrazioni e sculture. Il museo d'arte &#232; considerato un'invenzione abbastanza moderna: il primo &#232; quello del Louvre a Parigi fondato nel 1793, poco dopo la rivoluzione francese, quando i tesori reali vennero dichiarati di propriet&#224; del popolo. </Italian>
 		<Spanish>[TAB]Una galer&#237;a nacional es un gran museo de arte p&#250;blico de un pa&#237;s. Recibe diferentes nombres, pero casi todas las capitales del mundo cuentan con una de ellas. Hay un espacio para la exhibici&#243;n de elementos art&#237;sticos, normalmente artes visuales, fundamentalmente pintura, ilustraci&#243;n y escultura. El museo de arte se considera una invenci&#243;n relativamente moderna. El primero de ellos fue el Louvre en Par&#237;s, fundado en 1793, al poco de finalizar la Revoluci&#243;n Francesa y tras declarar p&#250;blicos los bienes de la realeza. </Spanish>
-		<Portuguese>[TAB]&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#224;&#255; &#227;&#224;&#235;&#229;&#240;&#229;&#255; - &#227;&#235;&#224;&#226;&#237;&#224;&#255; &#238;&#225;&#249;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#224;&#255; &#234;&#224;&#240;&#242;&#232;&#237;&#237;&#224;&#255; &#227;&#224;&#235;&#229;&#240;&#229;&#255; &#241;&#242;&#240;&#224;&#237;&#251;. &#209; &#240;&#224;&#231;&#235;&#232;&#247;&#237;&#251;&#236;&#232; &#232;&#236;&#229;&#237;&#224;&#236;&#232;, &#238;&#237;&#232; &#248;&#232;&#240;&#238;&#234;&#238; &#240;&#224;&#241;&#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#229;&#237;&#251; &#239;&#238;&#247;&#242;&#232; &#226; &#234;&#224;&#230;&#228;&#238;&#233; &#241;&#242;&#238;&#235;&#232;&#246;&#229; &#237;&#224;&#246;&#232;&#232;. &#221;&#242;&#238; - &#239;&#240;&#238;&#241;&#242;&#240;&#224;&#237;&#241;&#242;&#226;&#238; &#228;&#235;&#255; &#226;&#251;&#241;&#242;&#224;&#226;&#234;&#232; &#232;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#224;, &#238;&#225;&#251;&#247;&#237;&#238; &#226;&#232;&#231;&#243;&#224;&#235;&#252;&#237;&#238;&#229; &#232;&#241;&#234;&#243;&#241;&#241;&#242;&#226;&#238;, &#232; &#238;&#225;&#251;&#247;&#237;&#238; &#239;&#240;&#229;&#230;&#228;&#229; &#226;&#241;&#229;&#227;&#238; &#230;&#232;&#226;&#238;&#239;&#232;&#241;&#232;, &#232;&#235;&#235;&#254;&#241;&#242;&#240;&#224;&#246;&#232;&#232;, &#232; &#241;&#234;&#243;&#235;&#252;&#239;&#242;&#243;&#240;. &#213;&#243;&#228;&#238;&#230;&#229;&#241;&#242;&#226;&#229;&#237;&#237;&#251;&#233; &#236;&#243;&#231;&#229;&#233; &#240;&#224;&#241;&#241;&#236;&#224;&#242;&#240;&#232;&#226;&#224;&#229;&#242;&#241;&#255; &#241;&#239;&#240;&#224;&#226;&#229;&#228;&#235;&#232;&#226;&#238; &#241;&#238;&#226;&#240;&#229;&#236;&#229;&#237;&#237;&#251;&#236; &#232;&#231;&#238;&#225;&#240;&#229;&#242;&#229;&#237;&#232;&#229;&#236;, &#239;&#229;&#240;&#226;&#251;&#236; &#225;&#251;&#235; &#203;&#243;&#226;&#240; &#226; &#207;&#224;&#240;&#232;&#230;&#229;, &#234;&#238;&#242;&#238;&#240;&#251;&#233; &#225;&#251;&#235; &#243;&#241;&#242;&#224;&#237;&#238;&#226;&#235;&#229;&#237; &#226; 1793, &#241;&#234;&#238;&#240;&#238; &#239;&#238;&#241;&#235;&#229; &#212;&#240;&#224;&#237;&#246;&#243;&#231;&#241;&#234;&#238;&#233; &#208;&#229;&#226;&#238;&#235;&#254;&#246;&#232;&#232;, &#234;&#238;&#227;&#228;&#224; &#234;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#232;&#229; &#241;&#238;&#234;&#240;&#238;&#226;&#232;&#249;&#224; &#241;&#242;&#224;&#235;&#232; &#228;&#238;&#241;&#242;&#243;&#239;&#237;&#251; &#228;&#235;&#255; &#235;&#254;&#228;&#229;&#233;.</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE</Tag>
@@ -953,7 +953,7 @@
 		<German>Nationaltheather</German>
 		<Italian>Teatro Nazionale</Italian>
 		<Spanish>Teatro Nacional</Spanish>
-		<Portuguese>&#205;&#224;&#246;&#232;&#238;&#237;&#224;&#235;&#252;&#237;&#251;&#233; &#210;&#229;&#224;&#242;&#240;</Portuguese>
+		<Portuguese>Teatro Nacional</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_THEATRE_PEDIA</Tag>
@@ -971,7 +971,7 @@
 		<German>Royal Dungeon</German>
 		<Italian>Royal Dungeon</Italian>
 		<Spanish>Royal Dungeon</Spanish>
-		<Portuguese>Royal Dungeon</Portuguese>
+		<Portuguese>Masmorra Real</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOWER_LONDON_PEDIA</Tag>
@@ -989,7 +989,7 @@
 		<German>K&#246;nigliche Akademie</German>
 		<Italian>Accademia Reale</Italian>
 		<Spanish>Real Academia</Spanish>
-		<Portuguese>&#202;&#238;&#240;&#238;&#235;&#229;&#226;&#241;&#234;&#224;&#255; &#192;&#234;&#224;&#228;&#229;&#236;&#232;&#255;</Portuguese>
+		<Portuguese>Academia Real</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_ACADEMY_PEDIA</Tag>
@@ -1007,7 +1007,7 @@
 		<German>Nationalepos</German>
 		<Italian>Poema Patriottico</Italian>
 		<Spanish>La Epopeya nacional</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Epopéia Nacional</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Tag>
@@ -1025,7 +1025,7 @@
 		<German>Triumphbogen</German>
 		<Italian>Arco di Trionfo</Italian>
 		<Spanish>Arco de Triunfo</Spanish>
-		<Portuguese>&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#192;&#240;&#234;&#224;</Portuguese>
+		<Portuguese>Arco do Triunfo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRIUMPHAL_ARCH_PEDIA</Tag>
@@ -1034,7 +1034,7 @@
 		<German>[TAB]Ein Triumphbogen ist ein frei stehendes Bauwerk in Form eines monumentalen Tors oder Bogengangs, das &#252;blicherweise zur W&#252;rdigung eines bedeutenden milit&#228;rischen Sieges abseits von Stadttoren oder -mauern errichtet wird. In seiner einfachsten Form besteht ein Triumphbogen aus zwei S&#228;ulen, die durch einen Bogen verbunden und mit einer Attika versehen sind, auf der eine Statue thront oder eine Inschrift angebracht ist. Aufw&#228;ndiger gearbeitete Triumphb&#246;gen haben zus&#228;tzlich noch angrenzende Seitenbogeng&#228;nge, die meist paarweise angeordnet sind. Ber&#252;hmte Triumphb&#246;gen sind beispielsweise der Titusbogen in Rom und der Arc de Triomphe in Paris.</German>
 		<Italian>[TAB]Un arco di trionfo &#232; una struttura con la forma di una monumentale arcata, spesso costruita per celebrare la vittoria in una guerra. L'arco &#232; invariabilmente una struttura a s&#233; stante, separata dalle mura o dalle porte di una citt&#224;. Nella sua forma pi&#249; semplice un arco di trionfo consiste di due colonne unite da un arco, sovrastato da una struttura o un attico su cui si possono trovare statue o iscrizioni. Gli archi di trionfo pi&#249; elaborati possono avere arcate sussidiarie laterali, di solito una coppia. Tra i pi&#249; famosi sono l'Arco di Tito a Roma e l'Arco di Trionfo a Parigi.</Italian>
 		<Spanish>[TAB]Un Arco de Triunfo es una enorme arcada monumental que se suele construir para celebrar una victoria en la guerra. El arco siempre es una estructura solitaria, separada de las puertas o muros de la ciudad. En su forma m&#225;s sencilla consiste en dos pilares conectados por un arco que a su vez est&#225; coronado por una estructura superior en la cual se suele colocar una estatua o una inscripci&#243;n conmemorativa. Los Arcos de Triunfo m&#225;s elaborados pueden tener un par de arcos secundarios en los laterales. Los m&#225;s famosos son el Arco de Tito en Roma y el Arco del Triunfo de Paris.</Spanish>
-		<Portuguese>[TAB]&#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#224;&#255; &#224;&#240;&#234;&#224; &#151; &#224;&#240;&#245;&#232;&#242;&#229;&#234;&#242;&#243;&#240;&#237;&#251;&#233; &#239;&#224;&#236;&#255;&#242;&#237;&#232;&#234;, &#241;&#238;&#241;&#242;&#238;&#255;&#249;&#232;&#233; &#232;&#231; &#225;&#238;&#235;&#252;&#248;&#232;&#245; &#239;&#238;&#240;&#242;&#232;&#234;&#238;&#226;. &#210;&#240;&#232;&#243;&#236;&#244;&#224;&#235;&#252;&#237;&#251;&#229; &#224;&#240;&#234;&#232; &#243;&#241;&#242;&#240;&#224;&#232;&#226;&#224;&#254;&#242;&#241;&#255; &#239;&#240;&#232; &#226;&#245;&#238;&#228;&#229; &#226; &#227;&#238;&#240;&#238;&#228;&#224;, &#226; &#234;&#238;&#237;&#246;&#229; &#243;&#235;&#232;&#246;, &#237;&#224; &#236;&#238;&#241;&#242;&#224;&#245;, &#237;&#224; &#225;&#238;&#235;&#252;&#248;&#232;&#245; &#228;&#238;&#240;&#238;&#227;&#224;&#245; &#226; &#247;&#229;&#241;&#242;&#252; &#239;&#238;&#225;&#229;&#228;&#232;&#242;&#229;&#235;&#229;&#233; &#232;&#235;&#232; &#226; &#239;&#224;&#236;&#255;&#242;&#252; &#226;&#224;&#230;&#237;&#251;&#245; &#241;&#238;&#225;&#251;&#242;&#232;&#233;.</Portuguese>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- National Wonders -->
 		<!-- Misc -->
@@ -1045,7 +1045,7 @@
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] beim Kampf gegen Glaubensbrüder [ICON_RELIGION]; Diplomatiemalus gegen Nationen der gleichen Religion.</German>
 		<Italian>[ICON_BULLET]Nessuna infelicità per la guerra contro i fratelli di fede. Penalità diplomatica verso le nazioni con la stessa religione.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]&#205;&#229;&#242; &#237;&#229;&#241;&#247;&#224;&#241;&#242;&#252;&#255; &#238;&#242; &#225;&#238;&#240;&#252;&#225;&#251; &#239;&#240;&#238;&#242;&#232;&#226; &#225;&#240;&#224;&#242;&#252;&#229;&#226; &#226; &#226;&#229;&#240;&#229;.</Portuguese>
+		<Portuguese>[ICON_BULLET]Não gera infelicidade por lutar contra irmãos em fé, penalidade diplomática com nações que têm a mesma religião estatal.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VASSAL_UU</Tag>
@@ -1054,16 +1054,16 @@
 		<German>[ICON_BULLET]Erlaubt die Spezialeinheit der Vasallen zu trainieren</German>
 		<Italian>[ICON_BULLET]Può addestrare le Unità Uniche dei Vassalli</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]&#209;&#238;&#231;&#228;&#224;&#226;&#224;&#233;&#242;&#229; &#243;&#237;&#232;&#234;&#224;&#235;&#252;&#237;&#251;&#233; &#254;&#237;&#232;&#242; &#194;&#224;&#241;&#241;&#224;&#235;&#224;</Portuguese>
+		<Portuguese>[ICON_BULLET]Treina uma Unidade Única de um Vassalo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_PROPHET</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Theologian[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Theologian[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Propheten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Profeta[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Prophet[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Teólogo[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Teólogo[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_ARTIST</Tag>
@@ -1071,17 +1071,17 @@
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Künstler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_SCIENTIST</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scholar[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scholar[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Wissenschaftler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Scienziato[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scientist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Intelectual[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Intelectual[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_MERCHANT</Tag>
@@ -1089,8 +1089,8 @@
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Händler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Mercante[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Mercador[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Mercador[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_ENGINEER</Tag>
@@ -1098,8 +1098,8 @@
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Ingenieur[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Ingegnere[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Engenheiro[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Engenheiro[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_GENERAL</Tag>
@@ -1107,8 +1107,8 @@
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Feldherrn[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Generale[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_SPY</Tag>
@@ -1116,8 +1116,8 @@
 		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Großen Agenten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
 		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato una [COLOR_UNIT_TEXT]Grande Spia[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>.</Portuguese>
+		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Espião[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Espião[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
 	</TEXT>
 		<!-- Misc -->
 </Civ4GameText>
