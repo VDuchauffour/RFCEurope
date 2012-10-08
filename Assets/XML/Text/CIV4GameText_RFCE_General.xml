@@ -684,8 +684,8 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_MEAURE</Tag>
-		<English>Military Power</English>
+		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_MEASURE</Tag>
+		<English> Military Power Index</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -703,11 +703,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DEMO_SCREEN_SOLDIERS_MEASURE</Tag>
-		<English>Soldiers</English>
-		<French>Soldats</French>
-		<German>Soldaten</German>
-		<Italian>Soldati</Italian>
-		<Spanish>Soldados</Spanish>
+		<English> Current Military Units</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>

@@ -399,6 +399,7 @@ class CvInfoScreen:
 		self.TEXT_INDUSTRY = localText.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ())
 		self.TEXT_AGRICULTURE = localText.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ())
 		self.TEXT_MILITARY = localText.getText("TXT_KEY_DEMO_SCREEN_MILITARY_TEXT", ())
+		self.TEXT_SOLDIERS = localText.getText("TXT_KEY_DEMO_SCREEN_SOLDIERS_TEXT", ())		#Absinthe
 		self.TEXT_LAND_AREA = localText.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT", ())
 		self.TEXT_POPULATION = localText.getText("TXT_KEY_DEMO_SCREEN_POPULATION_TEXT", ())
 		self.TEXT_TOTAL_POPULATION = localText.getText("TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_TEXT", ())		#Absinthe
@@ -409,7 +410,8 @@ class CvInfoScreen:
 		self.TEXT_ECONOMY_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
 		self.TEXT_INDUSTRY_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ())
 		self.TEXT_AGRICULTURE_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ())
-		self.TEXT_MILITARY_MEASURE = ""
+		self.TEXT_MILITARY_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_MILITARY_MEASURE", ())		#Absinthe
+		self.TEXT_SOLDIERS_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_SOLDIERS_MEASURE", ())		#Absinthe
 		self.TEXT_LAND_AREA_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ())
 		self.TEXT_POPULATION_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ())		#Absinthe
 		self.TEXT_TOTAL_POPULATION_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + localText.getText("TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_MEASURE", ())		#Absinthe
@@ -978,11 +980,12 @@ class CvInfoScreen:
 		iEconomy = pPlayer.calculateTotalCommerce()
 		iIndustry = pPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
 		iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
-		fMilitary = pPlayer.getPower() * 500
+		fMilitary = pPlayer.getPower() * 30
+		iSoldiers = pPlayer.getNumMilitaryUnits() * 1000		#Absinthe
 		iLandArea = pPlayer.getTotalLand() * 2300
 		iPopulation = pPlayer.getRealPopulation()
 		#Absinthe
-		iTotalPopulation = (int(iPopulation * (6 - (((CyGame().getGameTurn()) * 3) / 500 )) / 5000) + 2) * 5000		#Ranges from 6 to 3, slightly decreasing each turn. Rounded to 5000
+		iTotalPopulation = (int(((iPopulation * (8 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 1500))/ 5000) + 6) * 5000		#Era multiplier ranges from 8 to 4, slightly decreasing each turn. Result rounded to 5000
 		#Absinthe end
 		if (pPlayer.calculateTotalCityHappiness() > 0):
 			iHappiness = int((1.0 * pPlayer.calculateTotalCityHappiness()) / (pPlayer.calculateTotalCityHappiness() + \
@@ -1014,9 +1017,10 @@ class CvInfoScreen:
 		iIndustryRank = 0
 		iAgricultureRank = 0
 		iMilitaryRank = 0
+		iSoldiersRank = 0		#Absinthe
 		iLandAreaRank = 0
 		iPopulationRank = 0
-		iTotalPopulationRank = 0 # Absinthe
+		iTotalPopulationRank = 0		#Absinthe
 		iHappinessRank = 0
 		iHealthRank = 0
 		iImpExpRatioRank = 0
@@ -1025,6 +1029,7 @@ class CvInfoScreen:
 		fIndustryGameAverage = 0
 		fAgricultureGameAverage = 0
 		fMilitaryGameAverage = 0
+		fSoldiersGameAverage = 0		#Absinthe
 		fLandAreaGameAverage = 0
 		fPopulationGameAverage = 0
 		fTotalPopulationGameAverage = 0		#Absinthe
@@ -1040,6 +1045,7 @@ class CvInfoScreen:
 		aiGroupIndustry = []
 		aiGroupAgriculture = []
 		aiGroupMilitary = []
+		aiGroupSoldiers = []		#Absinthe
 		aiGroupLandArea = []
 		aiGroupPopulation = []
 		aiGroupTotalPopulation = []		#Absinthe
@@ -1070,10 +1076,11 @@ class CvInfoScreen:
 				aiGroupEconomy.append(pCurrPlayer.calculateTotalCommerce())
 				aiGroupIndustry.append(pCurrPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION))
 				aiGroupAgriculture.append(pCurrPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD))
-				aiGroupMilitary.append(pCurrPlayer.getPower() * 500)
+				aiGroupMilitary.append(pCurrPlayer.getPower() * 30)
+				aiGroupSoldiers.append(pCurrPlayer.getNumMilitaryUnits() * 1000)		#Absinthe
 				aiGroupLandArea.append(pCurrPlayer.getTotalLand() * 2300)
 				aiGroupPopulation.append(pCurrPlayer.getRealPopulation())
-				aiGroupTotalPopulation.append((int(pCurrPlayer.getRealPopulation() * (6 - (((CyGame().getGameTurn()) * 3) / 500 )) / 5000) + 2) * 5000)		#Absinthe
+				aiGroupTotalPopulation.append((int(((pCurrPlayer.getRealPopulation() * (8 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pCurrPlayer.getNumUnits() * 1500))/ 5000) + 6) * 5000)		#Absinthe
 				if (pCurrPlayer.calculateTotalCityHappiness() > 0):
 					aiGroupHappiness.append(int((1.0 * pCurrPlayer.calculateTotalCityHappiness()) / (pCurrPlayer.calculateTotalCityHappiness() \
 						+ pCurrPlayer.calculateTotalCityUnhappiness()) * 100))
@@ -1121,6 +1128,7 @@ class CvInfoScreen:
 		aiGroupIndustry.sort()
 		aiGroupAgriculture.sort()
 		aiGroupMilitary.sort()
+		aiGroupSoldiers.sort()		#Absinthe
 		aiGroupLandArea.sort()
 		aiGroupPopulation.sort()
 		aiGroupTotalPopulation.sort()		#Absinthe
@@ -1134,6 +1142,7 @@ class CvInfoScreen:
 		aiGroupIndustry.reverse()
 		aiGroupAgriculture.reverse()
 		aiGroupMilitary.reverse()
+		aiGroupSoldiers.reverse()		#Absinthe
 		aiGroupLandArea.reverse()
 		aiGroupPopulation.reverse()
 		aiGroupTotalPopulation.reverse()		#Absinthe
@@ -1149,6 +1158,7 @@ class CvInfoScreen:
 		bIndustryFound = false
 		bAgricultureFound = false
 		bMilitaryFound = false
+		bSoldiersFound = false		#Absinthe
 		bLandAreaFound = false
 		bPopulationFound = false
 		bTotalPopulationFound = false		#Absinthe
@@ -1181,6 +1191,13 @@ class CvInfoScreen:
 				bMilitaryFound = true
 			else:
 				fMilitaryGameAverage += aiGroupMilitary[i]
+
+			#Absinthe
+			if (iSoldiers == aiGroupSoldiers[i] and bSoldiersFound == false):
+				iSoldiersRank = i + 1
+				bSoldiersFound = true
+			else:
+				fSoldiersGameAverage += aiGroupSoldiers[i]
 
 			if (iLandArea == aiGroupLandArea[i] and bLandAreaFound == false):
 				iLandAreaRank = i + 1
@@ -1224,6 +1241,7 @@ class CvInfoScreen:
 		iIndustryGameBest	= 0
 		iAgricultureGameBest	= 0
 		iMilitaryGameBest	= 0
+		iSoldiersGameBest	= 0		#Absinthe
 		iLandAreaGameBest	= 0
 		iPopulationGameBest	= 0
 		iTotalPopulationGameBest	= 0		#Absinthe
@@ -1234,6 +1252,7 @@ class CvInfoScreen:
 		iIndustryGameWorst	= 0
 		iAgricultureGameWorst	= 0
 		iMilitaryGameWorst	= 0
+		iSoldiersGameWorst	= 0		#Absinthe
 		iLandAreaGameWorst	= 0
 		iPopulationGameWorst	= 0
 		iTotalPopulationGameWorst	= 0		#Absinthe
@@ -1246,6 +1265,7 @@ class CvInfoScreen:
 			fIndustryGameAverage = (1.0 * fIndustryGameAverage) / (iNumActivePlayers - 1)
 			fAgricultureGameAverage = (1.0 * fAgricultureGameAverage) / (iNumActivePlayers - 1)
 			fMilitaryGameAverage = int((1.0 * fMilitaryGameAverage) / (iNumActivePlayers - 1))
+			fSoldiersGameAverage = int((1.0 * fSoldiersGameAverage) / (iNumActivePlayers - 1))		#Absinthe
 			fLandAreaGameAverage = (1.0 * fLandAreaGameAverage) / (iNumActivePlayers - 1)
 			fPopulationGameAverage = int((1.0 * fPopulationGameAverage) / (iNumActivePlayers - 1))
 			fTotalPopulationGameAverage = int((1.0 * fTotalPopulationGameAverage) / (iNumActivePlayers - 1))		#Absinthe
@@ -1260,6 +1280,7 @@ class CvInfoScreen:
 			iIndustryGameBest	= aiGroupIndustry[ix(iIndustryRank)]
 			iAgricultureGameBest	= aiGroupAgriculture[ix(iAgricultureRank)]
 			iMilitaryGameBest	= aiGroupMilitary[ix(iMilitaryRank)]
+			iSoldiersGameBest	= aiGroupSoldiers[ix(iSoldiersRank)]		#Absinthe
 			iLandAreaGameBest	= aiGroupLandArea[ix(iLandAreaRank)]
 			iPopulationGameBest	= aiGroupPopulation[ix(iPopulationRank)]
 			iTotalPopulationGameBest	= aiGroupTotalPopulation[ix(iPopulationRank)]		#Absinthe
@@ -1272,6 +1293,7 @@ class CvInfoScreen:
 			iIndustryGameWorst	= aiGroupIndustry[ix(iIndustryRank)]
 			iAgricultureGameWorst	= aiGroupAgriculture[ix(iAgricultureRank)]
 			iMilitaryGameWorst	= aiGroupMilitary[ix(iMilitaryRank)]
+			iSoldiersGameWorst	= aiGroupSoldiers[ix(iSoldiersRank)]		#Absinthe
 			iLandAreaGameWorst	= aiGroupLandArea[ix(iLandAreaRank)]
 			iPopulationGameWorst	= aiGroupPopulation[ix(iPopulationRank)]
 			iTotalPopulationGameWorst	= aiGroupTotalPopulation[ix(iPopulationRank)]		#Absinthe
@@ -1300,11 +1322,14 @@ class CvInfoScreen:
 		iCol = 0
 		screen.setTableText(szTable, iCol, 0, self.TEXT_ECONOMY, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 1, self.TEXT_ECONOMY_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 3, self.TEXT_INDUSTRY, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 4, self.TEXT_INDUSTRY_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 6, self.TEXT_AGRICULTURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 7, self.TEXT_AGRICULTURE_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 9, self.TEXT_MILITARY, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 2, self.TEXT_INDUSTRY, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 3, self.TEXT_INDUSTRY_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 4, self.TEXT_AGRICULTURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 5, self.TEXT_AGRICULTURE_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 7, self.TEXT_MILITARY, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 8, self.TEXT_MILITARY_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
+		screen.setTableText(szTable, iCol, 9, self.TEXT_SOLDIERS, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
+		screen.setTableText(szTable, iCol, 10, self.TEXT_SOLDIERS_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
 		screen.setTableText(szTable, iCol, 11, self.TEXT_LAND_AREA, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 12, self.TEXT_LAND_AREA_MEASURE, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 13, self.TEXT_POPULATION, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1320,9 +1345,10 @@ class CvInfoScreen:
 
 		iCol = 1
 		screen.setTableText(szTable, iCol, 0, str(iEconomy), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 3, str(iIndustry), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 6, str(iAgriculture), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 9, str(int(fMilitary)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 2, str(iIndustry), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 4, str(iAgriculture), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 7, str(int(fMilitary)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 9, str(iSoldiers), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
 		screen.setTableText(szTable, iCol, 11, str(iLandArea), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 13, str(iPopulation), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 15, str(iTotalPopulation), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
@@ -1332,9 +1358,10 @@ class CvInfoScreen:
 
 		iCol = 2
 		screen.setTableText(szTable, iCol, 0, str(iEconomyGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 3, str(iIndustryGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 6, str(iAgricultureGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 9, str(iMilitaryGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 2, str(iIndustryGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 4, str(iAgricultureGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 7, str(iMilitaryGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 9, str(iSoldiersGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
 		screen.setTableText(szTable, iCol, 11, str(iLandAreaGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 13, str(iPopulationGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 15, str(iTotalPopulationGameBest), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
@@ -1344,9 +1371,10 @@ class CvInfoScreen:
 
 		iCol = 3
 		screen.setTableText(szTable, iCol, 0, str(int(fEconomyGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 3, str(int(fIndustryGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 6, str(int(fAgricultureGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 9, str(int(fMilitaryGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 2, str(int(fIndustryGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 4, str(int(fAgricultureGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 7, str(int(fMilitaryGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 9, str(int(fSoldiersGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
 		screen.setTableText(szTable, iCol, 11, str(int(fLandAreaGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 13, str(int(fPopulationGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 15, str(int(fTotalPopulationGameAverage)), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
@@ -1356,9 +1384,10 @@ class CvInfoScreen:
 
 		iCol = 4
 		screen.setTableText(szTable, iCol, 0, str(iEconomyGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 3, str(iIndustryGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 6, str(iAgricultureGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 9, str(iMilitaryGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 2, str(iIndustryGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 4, str(iAgricultureGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 7, str(iMilitaryGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 9, str(iSoldiersGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
 		screen.setTableText(szTable, iCol, 11, str(iLandAreaGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 13, str(iPopulationGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 15, str(iTotalPopulationGameWorst), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
@@ -1368,9 +1397,10 @@ class CvInfoScreen:
 
 		iCol = 5
 		screen.setTableText(szTable, iCol, 0, str(iEconomyRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 3, str(iIndustryRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 6, str(iAgricultureRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.setTableText(szTable, iCol, 9, str(iMilitaryRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 2, str(iIndustryRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 4, str(iAgricultureRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 7, str(iMilitaryRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.setTableText(szTable, iCol, 9, str(iSoldiersRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
 		screen.setTableText(szTable, iCol, 11, str(iLandAreaRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 13, str(iPopulationRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		screen.setTableText(szTable, iCol, 15, str(iTotalPopulationRank), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)		#Absinthe
