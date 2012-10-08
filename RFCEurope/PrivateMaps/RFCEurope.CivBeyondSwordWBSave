@@ -29222,6 +29222,13 @@ BeginPlot
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
+		UnitType=UNIT_SPEARMAN, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginUnit
 		UnitType=UNIT_WORKER, UnitOwner=0
 		Damage=0
 		Level=1, Experience=0
@@ -31029,11 +31036,11 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 	BeginUnit
-		UnitType=UNIT_SWORDSMAN, UnitOwner=0
+		UnitType=UNIT_SPEARMAN, UnitOwner=0
 		Damage=0
 		Level=1, Experience=0
 		FacingDirection=4
-		UnitAIType=UNITAI_ATTACK
+		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARCHER, UnitOwner=0
@@ -33315,11 +33322,11 @@ BeginPlot
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_SPEARMAN, UnitOwner=0
+		UnitType=UNIT_ARCHER, UnitOwner=0
 		Damage=0
 		Level=1, Experience=0
 		FacingDirection=4
-		UnitAIType=UNITAI_COUNTER
+		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARCHER, UnitOwner=0
@@ -38678,6 +38685,13 @@ BeginPlot
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
 	BeginCity
 		CityOwner=0
 		CityName=Caesaraea
@@ -39171,6 +39185,13 @@ BeginPlot
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARCHER, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SPEARMAN, UnitOwner=0
 		Damage=0
 		Level=1, Experience=0
 		FacingDirection=4

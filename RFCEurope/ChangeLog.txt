@@ -136,7 +136,8 @@ Changes for RFCE 1.1:
 		- Small changes to a couple civs initially spawned units too - mostly increasing defensive units for the AI
 		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
 		- Lowered some civs' unit production modifiers for the AI (means cheaper units), for Byzantium for the human player too
-		- Stronger Sassanid "barbs" for Byzantium, greatly increased barbarian activitity in North Africa and in the Middle East
+		- Stronger Sassanid Persians and Slavic barbs for Byzantium, greatly increased barbarian activitity in North Africa and in the Middle East
+		- Byzantium starts with a couple additional defensive units. Also some of the UNITAI's were changed to defensive
 		- Indy Augsburg and Ragusa starts with an additional archer - so it won't be razed so often by barbs before the German and Venetian/Hungarian spawn
 		- "Prebuilt" walls for Augsburg, Porto, Prague, Novgorod, Riga
 		- Belograd (Alba Iulia/Gyulafehérvár) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
