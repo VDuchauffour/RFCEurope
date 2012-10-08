@@ -675,16 +675,16 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_TEXT</Tag>
-		<English>Urban Population</English>
-		<French>Population</French>
-		<German>Bev&#246;lkerung</German>
-		<Italian>Popolazione</Italian>
-		<Spanish>Poblaci&#243;n</Spanish>
+		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_TEXT</Tag>
+		<English>Military Power</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_TEXT</Tag>
+		<Tag>TXT_KEY_DEMO_SCREEN_MILITARY_MEAURE</Tag>
 		<English>Military Power</English>
 		<French></French>
 		<German></German>
@@ -699,6 +699,51 @@
 		<German>Soldaten</German>
 		<Italian>Soldati</Italian>
 		<Spanish>Soldados</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_SOLDIERS_MEASURE</Tag>
+		<English>Soldiers</English>
+		<French>Soldats</French>
+		<German>Soldaten</German>
+		<Italian>Soldati</Italian>
+		<Spanish>Soldados</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_TEXT</Tag>
+		<English>Urban Population</English>
+		<French>Population</French>
+		<German>Bev&#246;lkerung</German>
+		<Italian>Popolazione</Italian>
+		<Spanish>Poblaci&#243;n</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE</Tag>
+		<English> Population in your cities</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_TEXT</Tag>
+		<English>Total Population</English>
+		<French>Population</French>
+		<German>Bev&#246;lkerung</German>
+		<Italian>Popolazione</Italian>
+		<Spanish>Poblaci&#243;n</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_MEASURE</Tag>
+		<English> All your subjects (estimate)</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
