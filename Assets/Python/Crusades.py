@@ -606,7 +606,7 @@ class Crusades:
 	def unitProbability( self, iUnitType ):
 		if ( iUnitType == xml.iArcher or iUnitType == xml.iCrossbowman or iUnitType == xml.iArbalest or iUnitType == xml.iGenoaBalestrieri or iUnitType == xml.iLongbowman or iUnitType == xml.iEnglishLongbowman or iUnitType == xml.iPortugalFootKnight ):
 			return 33
-		if ( iUnitType == xml.iHungarianLancer or iUnitType == xml.iLancer or iUnitType == xml.iCordobanBerber or iUnitType == xml.iHeavyLancer or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iPolishWingedHussar or iUnitType == xml.iBurgundianPaladin ):
+		if ( iUnitType == xml.iLancer or iUnitType == xml.iCordobanBerber or iUnitType == xml.iHeavyLancer or iUnitType == xml.iHungarianHuszar or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iBurgundianPaladin ):
 			return 66
 		if ( iUnitType == xml.iTemplar or iUnitType == xml.iTeutonic ):
 			return 90
@@ -619,9 +619,9 @@ class Crusades:
 			return 0
 		if ( iUnitType == xml.iTeutonic ):
 			return 1
-		if ( iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iPolishWingedHussar or iUnitType == xml.iBurgundianPaladin ):
+		if ( iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iBurgundianPaladin ):
 			return 2
-		if ( iUnitType == xml.iHeavyLancer or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKievDruzhina ):
+		if ( iUnitType == xml.iHeavyLancer or iUnitType == xml.iHungarianHuszar or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKievDruzhina ):
 			return 3
 		if ( iUnitType == xml.iCatapult or iUnitType == xml.iTrebuchet ):
 			return 4

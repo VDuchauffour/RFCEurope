@@ -985,7 +985,7 @@ class CvInfoScreen:
 		iLandArea = pPlayer.getTotalLand() * 2300
 		iPopulation = pPlayer.getRealPopulation()
 		#Absinthe
-		iTotalPopulation = (int(((iPopulation * (8 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 1500))/ 5000) + 6) * 5000		#Era multiplier ranges from 8 to 4, slightly decreasing each turn. Result rounded to 5000
+		iTotalPopulation = (int(((iPopulation * (7 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 1500))/ 5000) + 6) * 5000		#Era multiplier ranges from 7 to 4, slightly decreasing each turn. Result rounded to 5000
 		#Absinthe end
 		if (pPlayer.calculateTotalCityHappiness() > 0):
 			iHappiness = int((1.0 * pPlayer.calculateTotalCityHappiness()) / (pPlayer.calculateTotalCityHappiness() + \
@@ -1080,7 +1080,7 @@ class CvInfoScreen:
 				aiGroupSoldiers.append(pCurrPlayer.getNumMilitaryUnits() * 1000)		#Absinthe
 				aiGroupLandArea.append(pCurrPlayer.getTotalLand() * 2300)
 				aiGroupPopulation.append(pCurrPlayer.getRealPopulation())
-				aiGroupTotalPopulation.append((int(((pCurrPlayer.getRealPopulation() * (8 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pCurrPlayer.getNumUnits() * 1500))/ 5000) + 6) * 5000)		#Absinthe
+				aiGroupTotalPopulation.append((int(((pCurrPlayer.getRealPopulation() * (7 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pCurrPlayer.getNumUnits() * 1500))/ 5000) + 6) * 5000)		#Absinthe
 				if (pCurrPlayer.calculateTotalCityHappiness() > 0):
 					aiGroupHappiness.append(int((1.0 * pCurrPlayer.calculateTotalCityHappiness()) / (pCurrPlayer.calculateTotalCityHappiness() \
 						+ pCurrPlayer.calculateTotalCityUnhappiness()) * 100))

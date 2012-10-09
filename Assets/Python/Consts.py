@@ -290,7 +290,7 @@ tStartingWorkers = (
 0, #tFrance
 1, #tArabia
 1, #tBulgaria
-1, #tCordoba
+2, #tCordoba
 2, #tNorse
 2, #tVenice
 2, #tBurgundy

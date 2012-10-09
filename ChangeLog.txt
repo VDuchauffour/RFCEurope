@@ -71,8 +71,9 @@ Changes for RFCE 1.1:
 		- Tweaks to the demographics screen. Urban Population, Military Power, Land Area, etc.
 		- New statistics on the demographics screen: Total Population, Soldiers
 			Total Population = Urban population * era multiplier + 1500 * unit number + constant
-			Era multiplier based on turn number (slowly decreasing from 8 to 4), result rounded to 5000
+			Era multiplier based on turn number (slowly decreasing from 7 to 4), result rounded to 5000
 			Military Power is an index for power (both current and potential), while Soldiers show the actual number of military units
+		- Changed Horse Archer to be a replacement of Mounted Infantry. So it's really unique for Arabia, Cordoba, Bulgaria, Hungary, Kiev (and the Ottomans)
 
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -103,7 +104,7 @@ Changes for RFCE 1.1:
 		- Revised feat messages from population tresholds (reach 100.000, 200.000, 500.000, 1.000.000, etc. urban population)
 
 	Art/sound updates:
-		- Fixed button for Golden Bull, West India Company
+		- Fixed button for Golden Bull, West India Company, Arabian Arbalest
 		- Removed Religious School icon from the tech tree
 		- New LH for Barbarossa and Isabella - both of them made by Melcher Kurzer
 		- New LH for Mindaugas, Vytautas, Simone Boccanegra and William the Conqueror - made by Novator
@@ -138,6 +139,7 @@ Changes for RFCE 1.1:
 		- Lowered some civs' unit production modifiers for the AI (means cheaper units), for Byzantium for the human player too
 		- Stronger Sassanid Persians and Slavic barbs for Byzantium, greatly increased barbarian activitity in North Africa and in the Middle East
 		- Byzantium starts with a couple additional defensive units. Also some of the UNITAI's were changed to defensive
+		- One more starting worker for Cordoba. Cordoban Berber Cavalry upgradeable to Heavy/Armored Lancer
 		- Indy Augsburg and Ragusa starts with an additional archer - so it won't be razed so often by barbs before the German and Venetian/Hungarian spawn
 		- "Prebuilt" walls for Augsburg, Porto, Prague, Novgorod, Riga
 		- Belograd (Alba Iulia/Gyulafehérvár) spawns in 880 AD, changed to be an indy city instead of barbarian, and starts with 2 archers instead of 1 crossbowman
@@ -169,6 +171,7 @@ Changes for RFCE 1.1:
 		- Fixed bug where it was possible to build plantations on forests (and remove the forest) before the discovery of Plate Armor
 		- Removed buildingclasses (thus unnecessary searches) for no longer used buildings: Builders Yard, Grocer, Toll House, Herbalist, Catholic and Orthodox Scriptorum
 		- Fixed bug where the C++ code tried to compare variables with unused unittypes' IDs in the CvScreenInterface.py
+		- Fixed critical bug about UB and UU types. A lot less early CTDs should occur, especially during autoplay
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
