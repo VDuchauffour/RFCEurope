@@ -2233,7 +2233,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<ConstructSound>AS2D_BUILD_ARCHERYRANGE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -2416,7 +2416,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -2598,7 +2598,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -3514,7 +3514,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
+			<ConstructSound>AS2D_BUILD_BATHHOUSE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -4074,7 +4074,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_LIGHTHOUSE</ConstructSound>
+			<ConstructSound>AS2D_BUILD_HARBOR</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -4249,7 +4249,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_DRYDOCK</ConstructSound>
+			<ConstructSound>AS2D_BUILD_HARBOR</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -4603,7 +4603,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
+			<ConstructSound>AS2D_BUILD_CUSTOMS_HOUSE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -5378,7 +5378,7 @@
 			</FreeSpecialistCounts>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_FACTORY</ConstructSound>
+			<ConstructSound>AS2D_BUILD_GUILDHALL</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -5739,7 +5739,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound/>
+			<ConstructSound>AS2D_BUILD_JAIL</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -6282,7 +6282,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
+			<ConstructSound>AS2D_BUILD_INFIRMARY</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -6862,7 +6862,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_THEATRE</ConstructSound>
+			<ConstructSound>AS2D_BUILD_OPERA</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -7406,7 +7406,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_BREWERY</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -7595,7 +7595,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_BREWERY</ConstructSound>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_WINE</BonusType>
@@ -7782,7 +7782,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_JEWELLERY</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -8192,7 +8192,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_SMOKEHOUSE</ConstructSound>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_PIG</BonusType>
@@ -8380,7 +8380,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_TANNERY</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -8580,7 +8580,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_LUXURY_STORE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -8799,7 +8799,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_LUXURY_STORE</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -10520,7 +10520,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound/>
+			<ConstructSound>AS2D_BUILD_JAIL</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -10713,7 +10713,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound/>
+			<ConstructSound>AS2D_BUILD_WATCHTOWER</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -10902,7 +10902,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_SWEDISH_TENNANT</ConstructSound>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -11451,7 +11451,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCERY</ConstructSound>
+			<ConstructSound>AS2D_BUILD_INN</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
@@ -11633,7 +11633,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_INN</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -12192,7 +12192,7 @@
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
-			<ConstructSound>AS2D_BUILD_GROCER</ConstructSound>
+			<ConstructSound>AS2D_BUILD_INFIRMARY</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
