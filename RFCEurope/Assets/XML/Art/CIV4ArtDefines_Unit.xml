@@ -5106,7 +5106,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ARBALESTIER_ARABIAN</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,1</Button>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,6</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
