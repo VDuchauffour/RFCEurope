@@ -2118,7 +2118,7 @@ class CvMainInterface:
                                         #iBurgundyCulture = utils.getBurgundyCulture()
                                         iBurgundyCulture = pPlayer.getUHVCounter( 1 )
                                         #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1336AD + 2) ):
+                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1336AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2135,7 +2135,7 @@ class CvMainInterface:
                                         #iLithuaniaCulture = utils.getLithuaniaCulture()
                                         iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
                                         #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1386AD + 2) ):
+                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1386AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iLithuaniaCulture )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2167,7 +2167,7 @@ class CvMainInterface:
                                         #iNorseRaized = utils.getNorseRazed()
                                         iNorseRaized = pPlayer.getUHVCounter( 2 )
                                         #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1066AD + 2) ):
+                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorseRaized )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2183,7 +2183,7 @@ class CvMainInterface:
                                         #iKievFood = utils.getKievFood()
                                         iKievFood = pPlayer.getUHVCounter( 0 )
                                         #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and iGameTurn < (xml.i1300AD + 2) ):
+                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1300AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
