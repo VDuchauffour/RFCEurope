@@ -153,6 +153,7 @@ Changes for RFCE 1.1:
 		- Small temporary stability loss for losing a city in your OK or unstable provinces
 		- Lowered permanent stability loss from being in anarchy, both for small nations and for big empires
 		- Free Religion got low upkeep (previously it was the only civic with no upkeep)
+		- Mounted Soldier recieve an attack bonus vs. Catapults and Trebuchets, Horse Archer slightly more expensive, this equalizes both a bit, but still remaining some difference between them
 
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
