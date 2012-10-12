@@ -479,7 +479,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
-					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -931,6 +931,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
 					<UnitType>UNIT_AUSTRIAN_KURASSIER</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -1508,7 +1512,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
-					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<!-- 3Miro, some free units were added here, makes no difference since they are killed in the autoplay -->
@@ -1957,6 +1961,10 @@
 					<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
 					<UnitType>UNIT_BURGUNDIAN_PALADIN</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -2400,6 +2408,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_HEAVY_LANCER</UnitClassType>
 					<UnitType>UNIT_BYZANTINE_CATAPHRACT</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -3160,7 +3172,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
-					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -3626,6 +3638,10 @@
 					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
 					<UnitType>UNIT_NETHERLANDS_GRENADIER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -4056,6 +4072,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
 					<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -4506,6 +4526,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 					<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -4979,6 +5003,10 @@
 					<UnitClassType>UNITCLASS_ARBALEST</UnitClassType>
 					<UnitType>UNIT_GENOA_BALESTRIERI</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -5425,6 +5453,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
 					<UnitType>UNIT_HOLY_ROMAN_LANDSKNECHT</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -5875,7 +5907,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
-					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -6299,7 +6331,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
-					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -6716,6 +6748,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
 					<UnitType>UNIT_MOSCOW_BOYAR</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -7259,6 +7295,10 @@
 					<UnitClassType>UNITCLASS_AXEMAN</UnitClassType>
 					<UnitType>UNIT_VIKING_BERSERKER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -7700,6 +7740,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
 					<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -8159,6 +8203,10 @@
 					<UnitClassType>UNITCLASS_MACEMAN</UnitClassType>
 					<UnitType>UNIT_PORTUGAL_FOOT_KNIGHT</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -8587,6 +8635,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 					<UnitType>UNIT_SPANISH_TERCIO</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -9017,6 +9069,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 					<UnitType>UNIT_SWEDISH_KAROLIN</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -9452,7 +9508,7 @@
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
-					<UnitType>UNIT_HORSE_ARCHER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -9904,6 +9960,10 @@
 					<UnitClassType>UNITCLASS_GUN_GALLEY</UnitClassType>
 					<UnitType>UNIT_VENICE_GALLEAS</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -10347,6 +10407,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_MACEMAN</UnitClassType>
 					<UnitType>UNIT_LITHUANIAN_BAJORAS</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -10809,15 +10873,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<UnitType>UNIT_SETTLER</UnitType>
-				</Unit>
-				<Unit>
-					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-					<UnitType>UNIT_MERCHANT</UnitType>
-				</Unit>
-				<Unit>
-					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses/>
@@ -10908,25 +10964,25 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-					<BuildingType>BUILDING_CASTLE</BuildingType>
+					<BuildingType>NONE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<UnitType>UNIT_SETTLER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
-					<UnitType>UNIT_GREAT_SPY</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses/>
@@ -11018,25 +11074,25 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-					<BuildingType>BUILDING_CASTLE</BuildingType>
+					<BuildingType>NONE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<UnitType>UNIT_SETTLER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
-					<UnitType>UNIT_GREAT_SPY</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses/>
@@ -11127,25 +11183,25 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-					<BuildingType>BUILDING_CASTLE</BuildingType>
+					<BuildingType>NONE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<UnitType>UNIT_SETTLER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
-					<UnitType>UNIT_GREAT_SPY</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses/>
@@ -11236,25 +11292,25 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-					<BuildingType>BUILDING_CASTLE</BuildingType>
+					<BuildingType>NONE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<UnitType>UNIT_SETTLER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_GREAT_SPY</UnitClassType>
-					<UnitType>UNIT_GREAT_SPY</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses/>
@@ -11499,21 +11555,21 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<BuildingType>BUILDING_PALACE</BuildingType>
+					<BuildingType>NONE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
-					<UnitType>UNIT_SETTLER</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MERCHANT</UnitClassType>
-					<UnitType>UNIT_MERCHANT</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_PROPHET</UnitClassType>
-					<UnitType>UNIT_PROPHET</UnitType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses/>
