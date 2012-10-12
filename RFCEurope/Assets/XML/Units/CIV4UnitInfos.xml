@@ -8177,7 +8177,7 @@
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
 		<UnitInfo> <!--Horse Archer -->
-			<Class>UNITCLASS_MOUNTED_INFANTRY</Class>
+			<Class>UNITCLASS_HORSE_ARCHER</Class>
 			<Type>UNIT_HORSE_ARCHER</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
@@ -8279,7 +8279,7 @@
 			<ProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
-			<iCost>55</iCost>
+			<iCost>50</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>

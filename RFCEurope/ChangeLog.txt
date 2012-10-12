@@ -73,7 +73,7 @@ Changes for RFCE 1.1:
 			Total Population = Urban population * era multiplier + 1500 * unit number + constant
 			Era multiplier based on turn number (slowly decreasing from 7 to 4), result rounded to 5000
 			Military Power is an index for power (both current and potential), while Soldiers show the actual number of military units
-		- Changed Horse Archer to be a replacement of Mounted Infantry. So it's really unique for Arabia, Cordoba, Bulgaria, Hungary, Kiev (and the Ottomans)
+		- Horse Archer only buildable by Arabia, Cordoba, Bulgaria, Hungary, Kiev (and the Ottomans)
 
 	Map and province changes:
 		- Atlantic Access near Sevilla
@@ -153,7 +153,8 @@ Changes for RFCE 1.1:
 		- Small temporary stability loss for losing a city in your OK or unstable provinces
 		- Lowered permanent stability loss from being in anarchy, both for small nations and for big empires
 		- Free Religion got low upkeep (previously it was the only civic with no upkeep)
-		- Mounted Soldier recieve an attack bonus vs. Catapults and Trebuchets, Horse Archer slightly more expensive, this equalizes both a bit, but still remaining some difference between them
+		- Mounted Sergeants recieve an attack bonus vs. Catapults and Trebuchets
+		- Horse Archer slightly more expensive, to make it's cost closer to Mounted Sergeant
 
 	Bugfixes:
 		- Bulgarian, Hungarian, Polish and Lithuanian cottage/hamlet/village/town improvement art
