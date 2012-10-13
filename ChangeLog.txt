@@ -42,7 +42,7 @@ Changes for RFCE 1.1:
 				Judaism as state religion: Islam, Protestantism, Orthodoxy, Catholicism
 			Holy cities cannot be persecuted from their holy religion
 			Your state religion cannot be persecuted, and you can only persecute if you have a state religion
-			Persecution has a base chance to succeed between 60% and 90%, based on your civ's faith
+			Persecution has a base chance to succeed between 50% and 90%, based on your civ's faith (default is 60% with 0 faith)
 				Religious buildings of the target religion may lower this chance
 				Religious wonders of the target religion seriously lower this chance
 				Jerusalem has a lower base chance on default
@@ -74,6 +74,8 @@ Changes for RFCE 1.1:
 			Era multiplier based on turn number (slowly decreasing from 7 to 4), result rounded to 5000
 			Military Power is an index for power (both current and potential), while Soldiers show the actual number of military units
 		- Horse Archer only buildable by Arabia, Cordoba, Bulgaria, Hungary, Kiev (and the Ottomans)
+		- Barbarians and independents cannot "produce" great persons - made it in line with the previous XML changes
+		- Limit cultural borders of independent and barbarian cities to 2 (code from SoI)
 
 	Map and province changes:
 		- Atlantic Access near Sevilla

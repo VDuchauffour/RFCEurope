@@ -1768,7 +1768,7 @@ class CvMainInterface:
 						#Absinthe: end
 					
 					# Great Saint
-					iUnitProphet = 	CvUtil.findInfoTypeNum(gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_PROPHET")					
+					iUnitProphet = 	CvUtil.findInfoTypeNum(gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_PROPHET")
 					if ( iUnitProphet == pUnit.getUnitType() ):
 						pPlayer = gc.getPlayer(pUnit.getOwner())
 						if ( pPlayer.getStateReligion() > -1 ):

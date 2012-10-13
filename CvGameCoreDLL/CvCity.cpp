@@ -1806,7 +1806,8 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 	// 3MiroProsecutor: Make it so that Prosecutors can only be build in cities with state religion
 	if ( eUnit == UNIT_PROSECUTOR ){
 		//if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) || (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){
-		if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() != NO_RELIGION) && (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){
+		if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() != NO_RELIGION) && (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) )
+		{
 			return false;
 		};
 	};
@@ -7831,6 +7832,16 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 		}
 	}
 
+	// Absinthe: limit the borders to 2 for Independents and Barbarians (from SoI)
+	if (isBarbarian() || GET_PLAYER(getOwnerINLINE()).isMinorCiv())
+	{
+		if (eCultureLevel > (CultureLevelTypes)2)
+		{
+			eCultureLevel = (CultureLevelTypes)2;
+		}
+	}
+	// Absinthe: end
+
 	setCultureLevel(eCultureLevel, bUpdatePlotGroups);
 }
 
@@ -9858,6 +9869,7 @@ int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	if (isBarbarian() || GET_PLAYER(getOwnerINLINE()).isMinorCiv()) return 0; // Absinthe: no GPs for Independents and Barbarians
 	return m_paiGreatPeopleUnitRate[eIndex];
 }
 
@@ -9886,6 +9898,7 @@ int CvCity::getGreatPeopleUnitProgress(UnitTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	if (getOwnerINLINE() >= NUM_MAJOR_PLAYERS) return 0; // Absinthe: no GPs for Independents and Barbarians
 	return m_paiGreatPeopleUnitProgress[eIndex];
 }
 
@@ -14117,7 +14130,8 @@ PlayerTypes CvCity::getLiberationPlayer(bool bConquest) const
 	{
 		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 
-		if (kLoopPlayer.isAlive())
+		//if (kLoopPlayer.isAlive())
+		if (kLoopPlayer.isAlive() && !kLoopPlayer.isBarbarian() && !kLoopPlayer.isMinorCiv()) // Absinthe
 		{
 			if (kLoopPlayer.canReceiveTradeCity())
 			{
