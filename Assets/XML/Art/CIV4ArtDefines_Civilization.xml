@@ -151,12 +151,6 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_MINOR</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,1,4</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Independent_X.dds</Path>
-			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>
-		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BARBARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,8,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Barbarian_Skull2.dds</Path>
