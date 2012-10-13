@@ -1144,41 +1144,41 @@ class RFCUtils:
                 #print(" 3Miro: collapse not immune ",iCiv,x,y)
                 return false            
 
-        #Absinthe: chooseable persecution popup
-        def showPersecutionPopup(self):
-                """Asks the human player to select a religion to persecute."""
+	#Absinthe: chooseable persecution popup
+	def showPersecutionPopup(self):
+		"""Asks the human player to select a religion to persecute."""
 
-                popup = Popup.PyPopup(7628, EventContextTypes.EVENTCONTEXT_ALL)
-                popup.setHeaderString("Religious Persecution")
-                popup.setBodyString("Choose a religious minority to deal with...")
-                religionList = self.getPersecutionReligions()
-                for iReligion in religionList:
-                        strIcon = gc.getReligionInfo(iReligion).getType()
-                        strIcon = "[%s]" %(strIcon.replace("RELIGION_", "ICON_"))
-                        strButtonText = "%s %s" %(localText.getText(strIcon, ()), gc.getReligionInfo(iReligion).getText())
-                        popup.addButton(strButtonText)
-                popup.launch(False)
+		popup = Popup.PyPopup(7628, EventContextTypes.EVENTCONTEXT_ALL)
+		popup.setHeaderString("Religious Persecution")
+		popup.setBodyString("Choose a religious minority to deal with...")
+		religionList = self.getPersecutionReligions()
+		for iReligion in religionList:
+			strIcon = gc.getReligionInfo(iReligion).getType()
+			strIcon = "[%s]" %(strIcon.replace("RELIGION_", "ICON_"))
+			strButtonText = "%s %s" %(localText.getText(strIcon, ()), gc.getReligionInfo(iReligion).getText())
+			popup.addButton(strButtonText)
+		popup.launch(False)
 
-        def getPersecutionData(self):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lPersecutionData'][0], scriptDict['lPersecutionData'][1], scriptDict['lPersecutionData'][2]
+	def getPersecutionData(self):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lPersecutionData'][0], scriptDict['lPersecutionData'][1], scriptDict['lPersecutionData'][2]
 
-        def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lPersecutionData'] = [iPlotX, iPlotY, iUnitID]
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lPersecutionData'] = [iPlotX, iPlotY, iUnitID]
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getPersecutionReligions(self):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lPersecutionReligions']
+	def getPersecutionReligions(self):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lPersecutionReligions']
 
-        def setPersecutionReligions(self, val):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lPersecutionReligions'] = val
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-        #Absinthe: end
+	def setPersecutionReligions(self, val):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lPersecutionReligions'] = val
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	#Absinthe: end
 
-        #Absinthe: persecution update
+	#Absinthe: persecution update
 	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
 		"""Removes one religion from the city and handles the consequences."""
 		
@@ -1191,8 +1191,8 @@ class RFCUtils:
 		pPlayer = gc.getPlayer(iOwner)
 		pUnit = pPlayer.getUnit(iUnitID)
 		
-		# base chance to work: 60-90 based on faith:
-		iChance = 60 + min(30, pPlayer.getFaith()/3)
+		# base chance to work: 50-90 based on faith:
+		iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
 		# lower chance for purging any religion from Jerusalem:
 		if (iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1]):
 			iChance = (iChance - 25)
@@ -1226,11 +1226,11 @@ class RFCUtils:
 				iLoot = iLoot*3/2
 			
 			# kill / expel some population
-			if city.getPopulation() > 18 and city.getReligionCount() < 2:
+			if city.getPopulation() > 15 and city.getReligionCount() < 2:
 				city.changePopulation(-4)
-			elif city.getPopulation() > 12 and city.getReligionCount() < 3:
+			elif city.getPopulation() > 10 and city.getReligionCount() < 3:
 				city.changePopulation(-3)
-			elif city.getPopulation() > 7 and city.getReligionCount() < 4:
+			elif city.getPopulation() > 6 and city.getReligionCount() < 4:
 				city.changePopulation(-2)
 			elif city.getPopulation() > 3:
 				city.changePopulation(-1)
@@ -1314,39 +1314,39 @@ class RFCUtils:
 #		#pPlayer.changeFaith( 1 ) # this is done in C++ now
 
 
-        def saint( self, iOwner, iUnitID ):
-                # 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
-                pPlayer = gc.getPlayer( iOwner )
-                pPlayer.changeFaith( con.iSaintBenefit )
-                pUnit = pPlayer.getUnit(iUnitID)
-                pUnit.kill(0, -1)
+	def saint( self, iOwner, iUnitID ):
+		# 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
+		pPlayer = gc.getPlayer( iOwner )
+		pPlayer.changeFaith( con.iSaintBenefit )
+		pUnit = pPlayer.getUnit(iUnitID)
+		pUnit.kill(0, -1)
 
-        def selectRandomCity(self):
-                cityList = []
-                for i in range( con.iNumPlayers ):
-                        if (gc.getPlayer(i).isAlive()):
-                                for pyCity in PyPlayer(i).getCityList():
-                                        cityList.append(pyCity.GetCy())
-                iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
-                city = cityList[iCity]
-                return (city.getX(), city.getY())
+	def selectRandomCity(self):
+		cityList = []
+		for i in range( con.iNumPlayers ):
+			if (gc.getPlayer(i).isAlive()):
+				for pyCity in PyPlayer(i).getCityList():
+					cityList.append(pyCity.GetCy())
+		iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
+		city = cityList[iCity]
+		return (city.getX(), city.getY())
 
-        def spreadJews(self,tPlot,iReligion):
-                if (tPlot != False):
-                        plot = gc.getMap().plot( tPlot[0], tPlot[1] )
-                        if (not plot.getPlotCity().isNone()):
-                                plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
-                                return True
-                        else:
-                                return False
-                return False
+	def spreadJews(self,tPlot,iReligion):
+		if (tPlot != False):
+			plot = gc.getMap().plot( tPlot[0], tPlot[1] )
+			if (not plot.getPlotCity().isNone()):
+				plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
+				return True
+			else:
+				return False
+		return False
 
-        def isIndep( self, iCiv ):
-                if ( iCiv >= con.iIndepStart and iCiv <= con.iIndepEnd ):
-                        return True
-                return False
+	def isIndep( self, iCiv ):
+		if ( iCiv >= con.iIndepStart and iCiv <= con.iIndepEnd ):
+			return True
+		return False
 
-        def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
-                for iCount in range(con.iNumStabilityParameters):
-                        self.setParameter(iPlayer, iCount, False, 0)
+	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
+		for iCount in range(con.iNumStabilityParameters):
+			self.setParameter(iPlayer, iCount, False, 0)
 
