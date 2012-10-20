@@ -77,6 +77,15 @@
 		<Portuguese>%D1: "Eventos passados afastaram nossos povos."</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTITUDE_PERSECUTION</Tag>
+		<English>%D1: "We cannot forget the persecution of our brothers in faith!"</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>%D1: "Nós não podemos esquecer a perseguição de nossos irmãos em fé!"</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_FREEDOM</Tag>
 		<English>%D1: "You have granted us our independence!"</English>
 		<French>%D1: "Vous nous avez accord&#233; l'ind&#233;pendance!"</French>
@@ -84,15 +93,6 @@
 		<Italian>%D1: "Ci hai promesso l'indipendenza!"</Italian>
 		<Spanish>%D1: "Nos hab&#233;is concedido la independencia."</Spanish>
 		<Portuguese>%D1: "Você nos garantiu nossa independência!"</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_ATTITUDE_PERSECUTION</Tag>
-		<English>%D1: "We cannot forget the persecution of our brothers in faith!"</English>
-		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on ne peut vous faire confiance."</French>
-		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen."</German>
-		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>
-		<Spanish>%D1: "Los acontecimientos pasados nos han demostrado vuestra maldad."</Spanish>
-		<Portuguese>%D1: "Nós não podemos esquecer a perseguição de nossos irmãos em fé!"</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_RAZED_CITY</Tag>
