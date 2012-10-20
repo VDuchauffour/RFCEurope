@@ -79,22 +79,6 @@ bool CvUnitAI::AI_update()
 	FAssertMsg(canMove(), "canMove is expected to be true");
 	FAssertMsg(isGroupHead(), "isGroupHead is expected to be true"); // XXX is this a good idea???
 
-	// allow python to handle it
-	//Rhye (Gyathaar / Kael) - start comment 
-	/*
-	CyUnit* pyUnit = new CyUnit(this);
-	CyArgsList argsList;
-	argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-	long lResult=0;
-	gDLL->getPythonIFace()->callFunction(PYGameModule, "AI_unitUpdate", argsList.makeFunctionArgs(), &lResult);
-	delete pyUnit;	// python fxn must not hold on to this pointer
-	if (lResult == 1)
-	{
-		return false;
-	}
-	*/
-	//Rhye (Gyathaar / Kael) - end comment 
-
 	// Absinthe: new code for AI persecution - handled through python
 	if ( getUnitType() == UNIT_PROSECUTOR )
 	{
@@ -111,6 +95,7 @@ bool CvUnitAI::AI_update()
 		getGroup()->pushMission(MISSION_SKIP);
 		return false;
 	}
+
 	// Absinthe: old code for AI persecution
 	/*
 	// 3MiroAI: decide how the AI would do with a prosecutor

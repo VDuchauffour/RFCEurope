@@ -444,6 +444,6 @@ class Plague:
                                 city.setHasRealBuilding(iPlague, False)
                 
         def onCityRazed(self, city, iNewOwner):
-                # even if you raze the city, you shoul dstill get the plague
+                # even if you raze the city, you should still get the plague
                 pass
                                                                 

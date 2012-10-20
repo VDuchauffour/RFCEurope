@@ -460,7 +460,7 @@ class Religions:
         def spreadReligion(self, tPlot, iReligion ):
                 pPlot = gc.getMap().plot( tPlot[0], tPlot[1] )                
                 if ( pPlot.isCity() ):
-                        pPlot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
+                        pPlot.getPlotCity().setHasReligion(iReligion,1,0,0) # puts the given religion (iReligion) into this city
 
         def buildInRandomCity( self, iPlayer, iBuilding, iReligion ):
                 #print(" Building ",iBuilding," for ",iPlayer )
@@ -517,7 +517,7 @@ class Religions:
                                                         self.setReformationHitMatrix(iCiv,1)
 
         def reformationArrayChoice(self):
-                # 3Miro: this should be fixed, recusrion and Python don't go well together
+                # 3Miro: this should be fixed, recursion and Python don't go well together
                 iCiv = gc.getGame().getSorenRandNum(iNumPlayers, 'Civ chosen for reformation')
                 while ( self.getReformationHitMatrix(iCiv) != 1 ):
                         iCiv = gc.getGame().getSorenRandNum(iNumPlayers, 'Civ chosen for reformation')

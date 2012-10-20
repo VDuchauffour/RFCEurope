@@ -91,7 +91,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getForcedHistoricityCivicSupport", &CyPlayer::getForcedHistoricityCivicSupport, "int ()")
 		.def("setForcedHistoricityCivicSupport", &CyPlayer::setForcedHistoricityCivicSupport, "void ( int )")
 
-		// Absitnhe: original CyPlayerInterface2.cpp file started here
+		// Absinthe: original CyPlayerInterface2.cpp file started here
 		.def("AI_updateFoundValues", &CyPlayer::AI_updateFoundValues, "void (bool bStartingLoc)")
 		.def("AI_foundValue", &CyPlayer::AI_foundValue, "int (int, int, int, bool)")
 		.def("AI_isFinancialTrouble", &CyPlayer::AI_isFinancialTrouble, "bool ()")
