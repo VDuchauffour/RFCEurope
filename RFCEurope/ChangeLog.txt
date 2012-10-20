@@ -15,58 +15,75 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 Changes for RFCE 1.1:
 (to-be-released: 2012.10.14.)
 
+	Major changes:
+		- Inquisition overhaul:
+			- All persecutions can remove maximum one religion
+			- Chooseable religion for the human player, with a popup on persecution if there are more than one possible target religions
+			- The AI will choose it's target religion based on a preset order of the religions:
+				- Catholicism as state religion: Islam, Protestantism, Judaism, Orthodoxy
+				- Orhodoxy as state religion: Islam, Judaism, Catholicism, Protestantism
+				- Protestantism as state religion: Catholicism, Islam, Orthodoxy, Judaism
+				- Islam as state religion: Catholicism, Orthodoxy, Protestantism, Judaism
+				- Judaism as state religion: Islam, Protestantism, Orthodoxy, Catholicism
+			- Tolerance factor for the AI: how tolerant are the different civs towards non-state religions:
+				- The most tolerant civs won't purge any religions
+				- Some will only purge Islam if they have a Chistian State Religion, or purge the Christian religions if they have Islam as state religion
+				- Some civs will also purge Judaism (on top of the previous category)
+				- Some civs will purge everything other than their State Religion (so even the other 2 Christian religions if they are Christian)
+			- Holy cities cannot be persecuted from their holy religion
+			- Your state religion cannot be persecuted, and you can only persecute if you have a state religion
+			- Persecution has a base chance to succeed between 50% and 90%, based on your civ's faith
+			- The base chance is modified in the following cases:
+				- Religious buildings of the target religion (in the target city) slightly lower this chance
+				- Religious wonders of the target religion (in the target city) seriously lower this chance
+				- Jerusalem has a lower base chance on default
+			- If persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
+			- The AI won't purge religions in cities where there is a wonder tied to that religion
+			- Small revolt and unhappiness after both successful and unsuccessful persecution
+			- Short term stability loss (Swing Stability) after successful persecution
+			- Some of the population is killed/expelled if persecution succeeds
+			- Gold loot from the killed/expelled population and from the destroyed buildings
+			- Successful persecution increases your faith by one
+			- Interface message for the successful/unsuccessful persecution
+			- If Judaism is persecuted, it has 80% chance to move to another city on the map, also with interface message
+			- Diplomatic penalty with civs who has the persecuted religion as their state religion
+			- Lowered the cost of persecutor units
+		- Language changes:
+			- As of revision 993, the russian version is a separate download. An add-on to the mod
+			- The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a russian one)
+			- This will enable us to use such characters: גבהיכםצüתף... (actually we could use them before, but only in the civilopedia)
+			- Now we can have civ-specific names everywhere, including everything that appear on the map
+			- Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
+			- Added special characters to some of the hungarian and german city names as a test
+			- Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
+			- Caliom's WB tool updated, so it can handle all special chars from the Latin-1 set
+		- Interface:
+			- UHV counters:
+				- Lithuania got a culture UHV counter
+				- Improved UHV counter for the Polish 3rd UHV
+				- All UHV counters are removed on the 1st turn after the UHV date
+				- So you can still check how far would have you gone, even if you complete it earlier
+				- If there is no exact UHV date, they are removed upon UHV completion
+			- Demographics Screen:
+				- Tweaks to the demographics screen. Urban Population, Military Power, Land Area, etc.
+				- New statistics on the demographics screen: Total Population, Soldiers
+				- Urban Population is the summary of the population in your cities
+				- Total Population = Urban population * era multiplier + 1500 * unit number + constant
+				- Era multiplier based on turn number (slowly decreasing from 7 to 4)
+				- The result for Total Population is rounded to 5000
+				- Soldiers show the actual number of military units, in 1000s
+				- Military Power is an index for total power (so both actual and potential power included)
+			- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
+			- Settler/war maps and spawn/respawn areas are shown on the minimap when editing them in the WB
+			- New interface icons (on the main map) for great general points and stability
+
 	General changes:
 		- Protestant Church School requires Protestantism as a state religion
 		- Revised AI distance settings for city placement - territory coverage should be better now
 		- A couple changes and fixes in the settler maps in light of these AI distance changes
-		- Improved UHV counter for the Polish 3rd UHV - by HolyHandGrenade
 		- Added a Spawn map in the Reference folder (with all civs' spawn areas and spawn dates, and the indy/barb cities) - by HolyHandGrenade
 		- Olive plantation gives 1 food but one less commerce; unimproved grapes already give 1 food; additional 1 commerce from improved Silk
-		- As of revision 993, the russian version is a separate download. An add-on to the mod
-			The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a russian one)
-			This will enable us to use such characters: גבהיכםצüתף... (actually we could use them before, but only in the civilopedia)
-			Now we can have civ-specific names everywhere, including everything that appear on the map
-			Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
-			Added special characters to some of the hungarian and german city names as a test
-			Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
-		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files
-		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
-		- Inquisition overhaul - parts of the code are based on SoI, huge thanks to edead for his additional help
-			All persecutions can remove maximum one religion
-			Chooseable religion for the human, with a popup on persecution if there are more than one target religions
-			The AI will choose it's target religion based on preset order of the religions:
-				Catholicism as state religion: Islam, Protestantism, Judaism, Orthodoxy
-				Orhodoxy as state religion: Islam, Judaism, Catholicism, Protestantism
-				Protestantism as state religion: Catholicism, Islam, Orthodoxy, Judaism
-				Islam as state religion: Catholicism, Orthodoxy, Protestantism, Judaism
-				Judaism as state religion: Islam, Protestantism, Orthodoxy, Catholicism
-			Tolerance factor for the AI: how tolerant are the different civs towards non-state religions:
-				Some civs won't purge any religions
-				Some will only purge islam if they have a chistian state religion, and purge the christian religions if they have islam as state religion
-				Some civs will also purge judaism
-				Some civs will purge everything other than there state religion (so even the other 2 christian religions if they are christian)
-			Holy cities cannot be persecuted from their holy religion
-			Your state religion cannot be persecuted, and you can only persecute if you have a state religion
-			Persecution has a base chance to succeed between 50% and 90%, based on your civ's faith
-				Religious buildings of the target religion slightly lower this chance
-				Religious wonders of the target religion seriously lower this chance
-				Jerusalem has a lower base chance on default
-			If persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
-			The AI won't purge religions in cities where there is a wonder tied to that religion
-			Small revolt and unhappiness after both successful and unsuccessful persecution
-			Short term stability loss (Swing Stability) after successful persecution
-			Some of the population is killed/expelled if persecution succeeds
-			Gold loot from the killed/expelled population and the buildings destroyed
-			Successful persecution increases your faith by one
-			Interface message for the successful/unsuccessful persecution
-			Judaism has 80% chance to move to another city on the map, also with interface message
-			Diplomatic penalty with civs who has the persecuted religion as their state religion
-			Lowered the cost of persecutor units
-		- UHV counters (on the interface) are removed on the 1st turn after the UHV date
-			So you can still check how far would have you gone, even if you complete it earlier
-			If there is no exact UHV date, they are removed upon UHV completion
-		- Lithuania got a culture UHV counter
-		- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
+		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files	
 		- Tavern changed back to Brewery: +5% commerce, +1 happy with barley
 		- Burgundian Winery replaces Brewery: +5% commerce, +1 happy, +3 culture, +1 health with wine
 		- Byzantium starts with Religious Law. Historically fitting, and may increase early orthodoxy spread in a couple games
@@ -75,13 +92,8 @@ Changes for RFCE 1.1:
 		- The civil war mechanics (instead of instant collapse) are in empires with 10 or more cities
 		- Stability is accounted properly for cities and buildings placed in WB
 		- Added missing Morea province from Hungarian UHV 3
-		- More (Conditional) Mercenaries are available and more equally distributed in time (still not optimal, but better than the current system)
+		- More (Conditional) Mercenaries are available and more equally distributed in time (still not optimal, but better than the previous system)
 		- Updated C++ source files. Now it's possible to compile a debug version of the .dll for the mod
-		- Tweaks to the demographics screen. Urban Population, Military Power, Land Area, etc.
-		- New statistics on the demographics screen: Total Population, Soldiers
-			Total Population = Urban population * era multiplier + 1500 * unit number + constant
-			Era multiplier based on turn number (slowly decreasing from 7 to 4), result rounded to 5000
-			Military Power is an index for power (both current and potential), while Soldiers show the actual number of military units
 		- Horse Archer only buildable by Arabia, Cordoba, Bulgaria, Hungary, Kiev (and the Ottomans)
 		- Barbarians and independents cannot "produce" great persons - made it in line with the previous XML changes
 		- Limit cultural borders of independent and barbarian cities to 2 (code from SoI)
@@ -124,7 +136,6 @@ Changes for RFCE 1.1:
 		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
 		- Separated, uncompressed dds atlas for civilizations - better button quality
 		- Seperated all atlas' into more smaller ones for better organization
-		- Main map icons for great general points and stability
 		- New soundtrack - 22 medieval themed songs
 		- Era specific water worked graphics, era specific fishing and whaling boats
 		- New art for Triumphal Arch, Copernicus Observatory, Gardens of Al-Andalus, Amsterdam Beurs, Round Church, Cluny Abbey, El Escorial, Tomb of al-Walid, Marco Polo Embassy
