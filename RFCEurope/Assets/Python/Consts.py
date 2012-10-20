@@ -202,7 +202,7 @@ xml.i1581AD,#1580AD Dutch - turn 340 is normal time
 0,
 0,
 0
-) # 3Miro: tBirth should finish with zeros for all minor civs (indeps, barbs and celts in original RFC)
+) # 3Miro: tBirth should finish with zeros for all minor civs (the 4 independents and the barbs)
 
 # "Collapse dates", gives a stability penalty to AI civs past this date. The idea is to speed up late game a bit - from RFCE++
 # Currently the penalty is small, mostly to weaken the civs if they are powerful
@@ -516,7 +516,7 @@ tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 (), #Bulgaria
 (), #Cordoba
 (), #Norse
-((54,32),(54,33),(54,34),(55,32),(55,33),(55,34),(56,32),(56,33),(56,34),(57,32),(57,33),(58,32),(59,37),(60,36),(60,37)), #Venice 
+((54,32),(54,33),(54,34),(55,32),(55,33),(55,34),(56,32),(56,33),(56,34),(57,32),(57,33),(58,32),(59,37),(60,36),(60,37)), #Venice
 ((49,32),(49,33),(49,34),(49,35),(49,36)), #Burgundy
 ((52,51),(52,52),(52,53),(52,54),(51,51),(51,52),(51,53),(51,54)), #Germany
 ((87,41),(88,41),(89,41),(90,41),(91,41)), #Kiev
@@ -656,7 +656,7 @@ tHire = (
 10, #Bulgaria 
 50, #Cordoba
 10, #Norse
-30, #Venecia
+30, #Venezia
 10, #Burgundy
 70, #Germany
 40, #Kiev
@@ -689,7 +689,7 @@ tAggressionLevel = (
 2, #Bulgaria
 1, #Cordoba
 2, #Norse
-0, #Venecia
+0, #Venezia
 0, #Burgundy
 1, #Germany
 1, #Kiev
@@ -717,7 +717,7 @@ tAIStopBirthThreshold = (
     70, #Bulgaria
     10, #Cordoba
     70, #Norse
-    30, #Venecia
+    30, #Venezia
     20, #Burgundy
     80, #Germany
     80, #Kiev
@@ -750,7 +750,7 @@ tResurrectionProb = (
 30, #Bulgaria
 50, #Cordoba
 60, #Norse
-20, #Venecia
+20, #Venezia
 10, #Burgundy
 70, #Germany
 20, #Kiev
@@ -778,7 +778,7 @@ tRespawnTime = (
 #174, #Cordoba 1122 -- Almohads, better timing than Almoravids
 215, #Cordoba 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia
 265, #Norse 1395 -- Kalmar Union
-999, #Venecia -- no special respawn
+999, #Venezia -- no special respawn
 245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
 401, #Germany 1701 -- Prussia
 999, #Kiev -- no special respawn
@@ -806,7 +806,7 @@ tPatienceThreshold = (
 30, #Bulgaria
 30, #Cordoba
 30, #Norse
-30, #Venecia
+30, #Venezia
 30, #Burgundy
 30, #Germany
 30, #Kiev
@@ -833,7 +833,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (100,  50, 100, 350,  10), #Bulgaria
 ( 50, 250, 100,  20,  10), #Cordoba
 (250,  50, 100, 150,  10), #Norse
-( 90,  50, 200,  30,  10), #tVenecia
+( 90,  50, 200,  30,  10), #tVenezia
 (150,  20, 150,  70,  10), #Burgundy
 (450,  20, 250,  20,  10), #tGermany
 ( 90,  90,  90, 250,  10), #tKiev
@@ -868,8 +868,40 @@ tPersecutionOrder = (
 )
 
 
-#Stability Parameters
+# 100 and 80: don't purge any religions; 60: purge islam if christian, and all christian religions if muslim; 40: also judaism; 20: all but state religion
+tReligiousTolerance = (
+60, #Byzantium
+40, #Frankia
+60, #Arabia
+40, #Bulgaria
+80, #Cordoba
+60, #Norse
+40, #Venezia
+20, #Burgundy
+20, #Germany
+40, #Kiev
+60, #Hungary
+20, #Spain
+80, #Poland
+20, #Genoa
+40, #England
+20, #Portugal
+80, #Lithuania
+20, #Austria
+20, #Turkey
+40, #Moscow
+60, #Sweden
+40, #Dutch
+20, #Pope
+100, #Indy1
+100, #Indy2
+100, #Indy3
+100, #Indy4
+100, #Barbarian
+)
 
+
+#Stability Parameters
 iParCities3 = 0
 iParCitiesE = 1
 iParCivics3 = 2
@@ -888,6 +920,7 @@ iNumStabilityParameters = 13
 
 #Plague
 iImmunity = 20
+
 
 #Positions on the Colony map for "home" original flags
 home_positions_xy = [
@@ -943,6 +976,7 @@ colony_positions_xy=[
 (110,220), #Louisiana
 (960,320), #Philipines
 ]
+
 
 tLeaders = (		#First has to be the primary leader (the one that appears on the civ selection screen). Can be changed in the WB file (AbsintheRed)
 (xml.iJustinian,),
@@ -1025,7 +1059,6 @@ tLateLeaders = (		#All switch dates up to 200 years earlier because the switch i
 )
 
 
-
 # 3Miro: UP begins here
 #iUP_Culture = 0
 #iUP_Emperor = 1
@@ -1050,37 +1083,37 @@ tLateLeaders = (		#All switch dates up to 200 years earlier because the switch i
 # alliances and Endless land could be fixed in diplo relations and maintenance
 
 
-iUP_Happiness = 0		# happiness bonus
+iUP_Happiness = 0			# happiness bonus
 iUP_PerCityCommerce = 1		# bonus of commerse per city
 iUP_CityTileYield = 2		# bonus on yield of the city tile
 iUP_ReligiousTolerance = 3	# no instability from foreign religion
 iUP_CulturalTolerance = 4	# no unhappiness from foreign culture
 iUP_CommercePercent = 5		# global bonus to specific type of commerce
 iUP_UnitProduction = 6		# after specific tech, faster unit production
-iUP_EnableCivic = 7		# always enable some civics (also use the WB)
-iUP_TradeRoutes = 8		# add some trade routes (sync with GlobalDefines.xml for max trade routes)
+iUP_EnableCivic = 7			# always enable some civics (also use the WB)
+iUP_TradeRoutes = 8			# add some trade routes (sync with GlobalDefines.xml for max trade routes)
 iUP_ImprovementBonus = 9	# chnage the yield of a specific improvement
-iUP_PromotionI = 10		# give a promotion to all units for which it is valid
+iUP_PromotionI = 10			# give a promotion to all units for which it is valid
 iUP_PromotionII = 11		# give a promotion to all units regardless if it is valid
 iUP_CanEnterTerrain = 12	# all unit can enter some terrain type
 iUP_NoResistance = 13		# no resistance from conquering cities
 iUP_Conscription = 14		# can draft from cities with foreign culture
 iUP_Inquisition = 15		# no instability from religious prosecution
-iUP_Emperor = 16		# no civil war and no secession in the core (Python only)
-iUP_Faith = 17			# state religion spreads to newly accuired cities (found/trade/conquest) with a temple (Python only)
+iUP_Emperor = 16			# no civil war and no secession in the core (Python only)
+iUP_Faith = 17				# state religion spreads to newly accuired cities (found/trade/conquest) with a temple (Python only)
 iUP_Mercenaries = 18		# halves the cost of mercenaries (Python only - Mercenaries)
 iUP_LandStability = 19		# no penalty from owning unstable land (Python only)
-iUP_Discovery = 20		# lower cost of a block of projects
+iUP_Discovery = 20			# lower cost of a block of projects
 iUP_EndlessLand = 21		# lower civic cost assosiated with cities
-iUP_ForeignSea = 22		# allows the ships to enter foreign sea territory (Dutch UP from RFC)
-iUP_Pious = 23			# increase the gain (and loss) of Faith Points
-iUP_PaganCulture = 24           # give bonus to culure if no state religion is present
-iUP_PaganHappy = 25             # give bonus to happyness if no state religion is present
-iUP_StabilityConquestBoost = 26 # if stability is < 0, then get +1 stability on Conquest
-iUP_StabilitySettler = 27       # don't lose stability from founding cities in Outer and None Provinces
-iUP_StabilityPlaceholder1 = 28  # does nothing
-iUP_StabilityPlaceholder2 = 29  # does nothing
-iUP_Janissary = 30              # free units for foreign religions (Python only)
+iUP_ForeignSea = 22			# allows the ships to enter foreign sea territory (Dutch UP from RFC)
+iUP_Pious = 23				# increase the gain (and loss) of Faith Points
+iUP_PaganCulture = 24		# give bonus to culure if no state religion is present
+iUP_PaganHappy = 25			# give bonus to happyness if no state religion is present
+iUP_StabilityConquestBoost = 26		# if stability is < 0, then get +1 stability on Conquest
+iUP_StabilitySettler = 27			# don't lose stability from founding cities in Outer and None Provinces
+iUP_StabilityPlaceholder1 = 28		# does nothing
+iUP_StabilityPlaceholder2 = 29		# does nothing
+iUP_Janissary = 30					# free units for foreign religions (Python only)
 
 
 iFP_Stability = 0		# stability bonus
@@ -1099,7 +1132,7 @@ iNumCrusades = 5
 iJerusalem = ( 94, 6 )
 
 
-# Province States
+# Province Status
 iProvinceOwn = 5      # own every tile
 iProvinceConquer = 4  # own every city (capture or settle) or own every tile
 iProvinceDominate = 3 # 2*sum of population + owned tiles is more for you than the sum total of everyone else (true if conquer is true)
@@ -1112,7 +1145,7 @@ iProvinceOuter     = 2 # small stability hit on owning
 iProvincePotential = 3 # changes to Core or Natural as soon as conquered
 iProvinceNatural   = 4 # stable, small penalty for not conquering it
 iProvinceCore      = 5 # stable, large penalty for not conquering it
-iNumProvinceTypes  = 6      
+iNumProvinceTypes  = 6
 
 # special parameters 10 per player (picklefree)
 iIsHasStephansdom = 0 # Stability parameter in Python

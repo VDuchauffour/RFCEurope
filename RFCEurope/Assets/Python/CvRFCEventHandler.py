@@ -805,31 +805,24 @@ class CvRFCEventHandler:
         #Mercenaries - end
 
 
+	def printDebug(self, iGameTurn):
+		pass
 
-        #Rhye - start
-        def printDebug(self, iGameTurn):
-                pass
+	def printPlotsDebug(self):
+		pass
 
+	def printEmbassyDebug(self):
+		pass
 
-                        
-        def printPlotsDebug(self):
-                pass
+	def printStabilityDebug(self):
+		print ("Stability")
+		for iCiv in range(con.iNumPlayers):
+			if (gc.getPlayer(iCiv).isAlive()):
+				print ("Base:", utils.getBaseStabilityLastTurn(iCiv), "Modifier:", utils.getStability(iCiv)-utils.getBaseStabilityLastTurn(iCiv), "Total:", utils.getStability(iCiv), "civic", gc.getPlayer(iCiv).getCivics(5), gc.getPlayer(iCiv).getCivilizationDescription(0))
+				for i in range(con.iNumStabilityParameters):
+					print("Parameter", i, utils.getStabilityParameters(iCiv,i))
+			else:
+				print ("dead", iCiv)
+		for i in range(con.iNumPlayers):
+			print (gc.getPlayer(i).getCivilizationShortDescription(0), "PLOT OWNERSHIP ABROAD:", self.sta.getOwnedPlotsLastTurn(i), "CITY OWNERSHIP LOST:", self.sta.getOwnedCitiesLastTurn(i) )
 
-        def printEmbassyDebug(self):
-                pass
-
-
-        def printStabilityDebug(self):
-                print ("Stability")
-                for iCiv in range(con.iNumPlayers):
-                        if (gc.getPlayer(iCiv).isAlive()):
-                                print ("Base:", utils.getBaseStabilityLastTurn(iCiv), "Modifier:", utils.getStability(iCiv)-utils.getBaseStabilityLastTurn(iCiv), "Total:", utils.getStability(iCiv), "civic", gc.getPlayer(iCiv).getCivics(5), gc.getPlayer(iCiv).getCivilizationDescription(0))
-		                for i in range(con.iNumStabilityParameters):
-		                        print("Parameter", i, utils.getStabilityParameters(iCiv,i))
-                        else:
-                                print ("dead", iCiv)
-                for i in range(con.iNumPlayers):
-                        print (gc.getPlayer(i).getCivilizationShortDescription(0), "PLOT OWNERSHIP ABROAD:", self.sta.getOwnedPlotsLastTurn(i), "CITY OWNERSHIP LOST:", self.sta.getOwnedCitiesLastTurn(i) )
-
-	def AI_unitUpdate( self ):
-		print( " Update the Unit AI ")

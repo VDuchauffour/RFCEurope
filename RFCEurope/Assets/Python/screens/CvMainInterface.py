@@ -168,8 +168,8 @@ class CvMainInterface:
 		global g_bRequireCityUnitContractCreation 
 
 		self.repainting=false
-		# < Mercenaries End   >
-						
+		# < Mercenaries End >
+
 		if ( CyGame().isPitbossHost() ):
 			return
 
@@ -299,7 +299,7 @@ class CvMainInterface:
 		# < Mercenaries Start >
 		iBtnX += iBtnAdvance
 		# Set the mercenary manager button in the interface
-		screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 1, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, -1 )
+		screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 2, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, -1 )
 		# Hide the mercenary manager button 
 		screen.hide( "MercenaryManagerButton" )
 		# < Mercenaries End >
@@ -438,7 +438,7 @@ class CvMainInterface:
 				screen.addDDSGFCAt( szStringIcon, szStringPanel, szFileName, xOffset, 0, 12, 12, WidgetTypes.WIDGET_PLOT_LIST, k, -1, False )
 				screen.hide( szStringIcon )
 
-		# End Turn Text		
+		# End Turn Text
 		screen.setLabel( "EndTurnText", "Background", u"", CvUtil.FONT_CENTER_JUSTIFY, 0, yResolution - 188, -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.setHitTest( "EndTurnText", HitTestTypes.HITTEST_NOHIT )
 
@@ -982,7 +982,7 @@ class CvMainInterface:
                                 #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
                                 #if (not teamPlayer.isHasTech(con.iNationalism)): 
                                 screen.show( "MercenaryManagerButton" )
-                                #Rhye - end					
+                                #Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -1020,7 +1020,7 @@ class CvMainInterface:
 			screen.moveToFront( "VictoryAdvisorButton" )
 			screen.moveToFront( "InfoAdvisorButton" )
 
-		elif (CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_ADVANCED_START):		
+		elif (CyInterface().getShowInterface() == InterfaceVisibility.INTERFACE_ADVANCED_START):
 			screen.hide( "InterfaceLeftBackgroundWidget" )
 			screen.hide( "InterfaceTopBackgroundWidget" )
 			screen.hide( "InterfaceCenterBackgroundWidget" )
@@ -1030,6 +1030,9 @@ class CvMainInterface:
 			screen.hide( "InterfaceTopCenter" )
 			screen.hide( "InterfaceTopRight" )
 			screen.hide( "TurnLogButton" )
+			# < Mercenaries Start >
+			screen.hide( "MercenaryManagerButton" )
+			# < Mercenaries End >
 			screen.hide( "EspionageAdvisorButton" )
 			screen.hide( "DomesticAdvisorButton" )
 			screen.hide( "ForeignAdvisorButton" )
@@ -1074,7 +1077,7 @@ class CvMainInterface:
 			screen.show( "FinanceAdvisorButton" )
 			screen.show( "MilitaryAdvisorButton" )
 			screen.show( "VictoryAdvisorButton" )
-			screen.show( "InfoAdvisorButton" )			
+			screen.show( "InfoAdvisorButton" )
 			screen.moveToFront( "TurnLogButton" )
 			# < Mercenaries Start >
 			# Move the mercenary manager button to the front if the player has at least one city and they are in the
@@ -1117,7 +1120,7 @@ class CvMainInterface:
 			if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.show( "MercenaryManagerButton" )
-                                teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
                                 #if (not teamPlayer.isHasTech(con.iNationalism)): 
                                 screen.show( "MercenaryManagerButton" )
                                 #Rhye - end
@@ -1141,7 +1144,7 @@ class CvMainInterface:
 			if(gc.getActivePlayer().getNumCities() > 0 ):
                                 #Rhye - start
                                 #screen.moveToFront( "MercenaryManagerButton" )
-                                teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
                                 #if (not teamPlayer.isHasTech(con.iNationalism)): 
                                 screen.moveToFront( "MercenaryManagerButton" )
                                 #Rhye - end
@@ -1195,7 +1198,7 @@ class CvMainInterface:
 						elif ( eOrderNodeType == OrderTypes.ORDER_MAINTAIN ):
 							screen.hide( "InterfaceUnitModel" )
 							bHandled = True
-													
+							
 				if ( not bHandled ):
 					screen.hide( "InterfaceUnitModel" )
 					bHandled = True
@@ -1663,57 +1666,7 @@ class CvMainInterface:
 						screen.show( "BottomButtonContainer" )
 						
 						iCount = iCount + 1
-					
-					# < Mercenaries Start >
-                                        # 3Miro: this is for the Contract out Merc, we removed this mechanics in RFCE					
-					#if(not self.repainting):
-						#self.repainting=true
- 
-						#b=false
 
-						#while(not b):
-							#try:
-						
-								## Show the contract out unit and fire mercenary buttons only if the player has at least one city and
-								## and the current player era is at or beyond the configured starting era.
-								##if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
-								#if(gc.getActivePlayer().getNumCities() > 0 ):
-
-                                                                        ##print (gc.getActivePlayer().getName(), "=?", gc.getPlayer(gc.getGame().getActivePlayer()).getName()) #Rhye
-                                					#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam()) #Rhye
-                                					##if (not teamPlayer.isHasTech(con.iNationalism)):  #Rhye
-
-                                                                        #bCreateContract = true
-                                                                                
-                                                                                ## If the require city unit contract creation and the unit is not in a city then
-                                                                                ## don't show the create contract button for the unit
-                                                                        #if(g_bRequireCityUnitContractCreation and not g_pSelectedUnit.plot().isCity()):
-                                                                        	#bCreateContract = false
-                                                                                        
-                                                                                ## Show the contract out unit button only if the selected unit can be contracted out and if the 
-                                                                                ## selected unit isn't already a mercenary.
-                                                                                ##Rhye - start comment
-                                                                                ##if(objMercenaryUtils.canContractOutUnit(gc.getUnitInfo(g_pSelectedUnit.getUnitType())) and not objMercenaryUtils.isMercenary(g_pSelectedUnit) and bCreateContract):
-                                                                                ##        screen.appendMultiListButton( "BottomButtonContainer", "Art/Interface/Buttons/Actions/ContractOutUnit.dds", 0, WidgetTypes.WIDGET_ACTION, CvMercenaryModGameUtils.CONTRACT_OUT_UNIT, -1, False )
-                                                                                ##        screen.show( "BottomButtonContainer" )
-                                                                                ##        iCount = iCount + 1
-                                                                                
-                                                                                ## Show the fire mercenary button only if the selected unit information is a mercenary.
-                                                                                ##if(objMercenaryUtils.isMercenary(g_pSelectedUnit)):
-                                                                                ##        screen.appendMultiListButton( "BottomButtonContainer", "Art/Interface/Buttons/Actions/FireMercenary.dds", 0, WidgetTypes.WIDGET_ACTION, CvMercenaryModGameUtils.FIRE_MERCENARY, -1, False )
-                                                                                ##        screen.show( "BottomButtonContainer" )
-                                                                                ##        iCount = iCount + 1
-                                                                                ##Rhye - end comment
-								#b = true
-
-							#except:
-								#gameUtils.initActionButtonNumbers()
-								#pass		
-
-						#self.repainting=false						
-
-					## < Mercenaries End >
-				# 3Miro: copy from Charlemagne	
 				########### Adding Inquisitor functionality ###########
 					
 					pUnit = g_pSelectedUnit
@@ -1722,6 +1675,7 @@ class CvMainInterface:
 					# Using an Inquisitor
 					if (iUnitInquisitor == pUnit.getUnitType()):
 					
+					##	3Miro: based on Charlemagne code
 					#	pPlot = CyMap().plot(pUnit.getX(), pUnit.getY())
 					#	
 					#	# Plot is a city
@@ -1744,7 +1698,7 @@ class CvMainInterface:
 								pPlayer = gc.getPlayer(pUnit.getOwner())
 								# Make sure city has a religion which isn't this player's state religion
 								for iReligionLoop in range(gc.getNumReligionInfos()):
-									# City has this religion
+									# City has this religion, which isn't the religion's holy city
 									if pCity.isHasReligion(iReligionLoop) and not pCity.isHolyCityByType(iReligionLoop):
 										# City's religion is not player's state
 										if (pPlayer.getStateReligion() != iReligionLoop):
@@ -3683,7 +3637,7 @@ class CvMainInterface:
 		# Handle the case where the "Mercenary Manager" button is pressed. 
 		if(inputClass.getFunctionName() == "MercenaryManagerButton"):
 			mercenaryManager.interfaceScreen()
-		# < Mercenaries End   >
+		# < Mercenaries End >
 		
 		# 3Miro religious prosecutions
 		# Inquisitor button

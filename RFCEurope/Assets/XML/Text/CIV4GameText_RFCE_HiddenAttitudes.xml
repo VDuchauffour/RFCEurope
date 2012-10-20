@@ -86,8 +86,8 @@
 		<Portuguese>%D1: "Você nos garantiu nossa independência!"</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_ATTITUDE_PROSECUTION</Tag>
-		<English>%D1: "We cannot forget the prosecution of our brothers in faith!"</English>
+		<Tag>TXT_KEY_MISC_ATTITUDE_PERSECUTION</Tag>
+		<English>%D1: "We cannot forget the persecution of our brothers in faith!"</English>
 		<French>%D1 : "Les &#233;v&#233;nements pass&#233;s prouvent qu'on ne peut vous faire confiance."</French>
 		<German>%D1: "Die vergangenen Ereignisse haben Eure schlechten Absichten bewiesen."</German>
 		<Italian>%D1: "Gli eventi passati hanno diviso i nostri popoli."</Italian>

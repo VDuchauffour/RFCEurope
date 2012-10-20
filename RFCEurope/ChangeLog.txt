@@ -31,7 +31,7 @@ Changes for RFCE 1.1:
 			Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
 		- Added option in the dll for stable and unstable text icons. Can be referenced with [ICON_STABLE] and [ICON_UNSTABLE] in the XML files
 		- Update of Caliom's WB tool: can handle all special chars from the Latin-1 set, settler/war maps and spawn/respawn areas are shown on the minimap when editing
-		- Inquisition overhaul (still incomplete) - parts of the code are based on SoI, huge thanks to edead for his additional help
+		- Inquisition overhaul - parts of the code are based on SoI, huge thanks to edead for his additional help
 			All persecutions can remove maximum one religion
 			Chooseable religion for the human, with a popup on persecution if there are more than one target religions
 			The AI will choose it's target religion based on preset order of the religions:
@@ -40,19 +40,28 @@ Changes for RFCE 1.1:
 				Protestantism as state religion: Catholicism, Islam, Orthodoxy, Judaism
 				Islam as state religion: Catholicism, Orthodoxy, Protestantism, Judaism
 				Judaism as state religion: Islam, Protestantism, Orthodoxy, Catholicism
+			Tolerance factor for the AI: how tolerant are the different civs towards non-state religions:
+				Some civs won't purge any religions
+				Some will only purge islam if they have a chistian state religion, and purge the christian religions if they have islam as state religion
+				Some civs will also purge judaism
+				Some civs will purge everything other than there state religion (so even the other 2 christian religions if they are christian)
 			Holy cities cannot be persecuted from their holy religion
 			Your state religion cannot be persecuted, and you can only persecute if you have a state religion
-			Persecution has a base chance to succeed between 50% and 90%, based on your civ's faith (default is 60% with 0 faith)
-				Religious buildings of the target religion may lower this chance
+			Persecution has a base chance to succeed between 50% and 90%, based on your civ's faith
+				Religious buildings of the target religion slightly lower this chance
 				Religious wonders of the target religion seriously lower this chance
 				Jerusalem has a lower base chance on default
 			If persecution succeeds, all religious buildings are destroyed (including religious wonders - this will fix the inconsistency with the Spanish UHV)
+			The AI won't purge religions in cities where there is a wonder tied to that religion
 			Small revolt and unhappiness after both successful and unsuccessful persecution
 			Short term stability loss (Swing Stability) after successful persecution
 			Some of the population is killed/expelled if persecution succeeds
 			Gold loot from the killed/expelled population and the buildings destroyed
 			Successful persecution increases your faith by one
 			Interface message for the successful/unsuccessful persecution
+			Judaism has 80% chance to move to another city on the map, also with interface message
+			Diplomatic penalty with civs who has the persecuted religion as their state religion
+			Lowered the cost of persecutor units
 		- UHV counters (on the interface) are removed on the 1st turn after the UHV date
 			So you can still check how far would have you gone, even if you complete it earlier
 			If there is no exact UHV date, they are removed upon UHV completion
@@ -177,6 +186,7 @@ Changes for RFCE 1.1:
 		- Removed buildingclasses (thus unnecessary searches) for no longer used buildings: Builders Yard, Grocer, Toll House, Herbalist, Catholic and Orthodox Scriptorum
 		- Fixed bug where the C++ code tried to compare variables with unused unittypes' IDs in the CvScreenInterface.py
 		- Fixed critical bug about UB and UU types. A lot less early CTDs should occur, especially during autoplay
+		- Fixed annoying bug with Iberian ArtStyleTypes. Probably caused some CTDs in the late game
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

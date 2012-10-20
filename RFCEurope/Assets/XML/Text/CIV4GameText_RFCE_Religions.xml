@@ -407,4 +407,13 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_JEWISH_MOVE</Tag>
+		<English>The Jews from %s1_city established a new home in a distant city!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
 </Civ4GameText>

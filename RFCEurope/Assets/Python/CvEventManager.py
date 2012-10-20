@@ -164,7 +164,6 @@ class CvEventManager:
 			'playerGoldTrade'		: self.onPlayerGoldTrade,
 			'windowActivation'		: self.onWindowActivation,
 			'gameUpdate'			: self.onGameUpdate,		# sample generic event
-			'AI_unitUpdate'                 : self.AI_unitUpdate
 		}
 
 		################## Events List ###############################
@@ -1080,10 +1079,7 @@ class CvEventManager:
 #                        utils.setStability(iTargetPlayer, utils.getStability(iTargetPlayer) + 3) #anti-Whitefire
 #                        print ("anti-Whitefire")
                 #Rhye - end
-				
-	def AI_unitUpdate( self ):
-		pass
-				
+
 	def __eventEditCityNameBegin(self, city, bRename):
 		popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.setUserData((city.getID(), bRename))
@@ -1092,7 +1088,7 @@ class CvEventManager:
 		popup.createEditBox(city.getName())
 		popup.setEditBoxMaxCharCount( 15 )
 		popup.launch()
-	
+
 	def __eventEditCityNameApply(self, playerID, userData, popupReturn):	
 		'Edit City Name Event'
 		iCityID = userData[0]

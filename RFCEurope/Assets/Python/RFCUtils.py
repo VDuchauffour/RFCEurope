@@ -1142,7 +1142,7 @@ class RFCUtils:
                                                 #print(" 3Miro: collapse immune ",iCiv,x,y)
                                                 return true
                 #print(" 3Miro: collapse not immune ",iCiv,x,y)
-                return false            
+                return false
 
 	#Absinthe: chooseable persecution popup
 	def showPersecutionPopup(self):
@@ -1178,53 +1178,67 @@ class RFCUtils:
 		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 	#Absinthe: end
 
-	#Absinthe: persecution update
+	#Absinthe: persecution
 	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
 		"""Removes one religion from the city and handles the consequences."""
-		
+
 		if (gc.getMap().plot(iPlotX, iPlotY).isCity()):
 			city = gc.getMap().plot(iPlotX, iPlotY).getPlotCity()
 		else:
 			return
-		
+
 		iOwner = city.getOwner()
 		pPlayer = gc.getPlayer(iOwner)
 		pUnit = pPlayer.getUnit(iUnitID)
-		
-		# base chance to work: 50-90 based on faith:
-		iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
+		iStateReligion = pPlayer.getStateReligion()
+
+		# sanity check - can only persecute with a state religion
+		if iStateReligion == -1:
+			return False
+
+		# determine the target religion, if not supplied by the popup decision (for the AI)
+		if not iReligion:
+			for iReligion in con.tPersecutionOrder[iStateReligion]:
+				if not city.isHolyCityByType(iReligion): # spare holy cities
+					if city.isHasReligion(iReligion):
+						break
+
+		# count the number of religious buildings and wonders (for the chance)
+		if iReligion > -1:
+			lReligionBuilding = []
+			lReligionWonder = 0
+			for iBuilding in xrange(gc.getNumBuildingInfos()):
+				if city.getNumRealBuilding(iBuilding):
+					BuildingInfo = gc.getBuildingInfo(iBuilding)
+					if BuildingInfo.getPrereqReligion() == iReligion:
+						lReligionBuilding.append(iBuilding)
+						if isWorldWonderClass(BuildingInfo.getBuildingClassType()) or isNationalWonderClass(BuildingInfo.getBuildingClassType()):
+							lReligionWonder += 1
+		else:
+			return False	# when there is no available religion to purge
+
+		# base chance to work: about 50-90, based on faith:
+		## iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
+		iChance = 55 + pPlayer.getFaith()/3
 		# lower chance for purging any religion from Jerusalem:
 		if (iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1]):
-			iChance = (iChance - 25)
+			iChance -= 25
 		# lower chance if the city has the chosen religion's buildings/wonders:
-		
+		iChance -= (len(lReligionBuilding) * 8 + lReligionWonder * 17)		# the wonders have an extra chance reduction (in addition to the first reduction)
+
 		if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
-			
-			iStateReligion = pPlayer.getStateReligion()
-			# sanity check - can only persecute with a state religion
-			if iStateReligion == -1:
-				return False
-			
-			# determine the target religion, if not supplied by the popup decision
-			if not iReligion:
-				for iReligion in con.tPersecutionOrder[iStateReligion]:
-					if iReligion != iStateReligion and not city.isHolyCityByType(iReligion): # spare holy cities
-						if city.isHasReligion(iReligion):
-							break
-			
+		# on successful persecution:
+
 			# remove a single non-state religion and its buildings from the city, count the loot
 			iLootModifier = 2 * city.getPopulation() / city.getReligionCount() + 1
 			iLoot = 2 + iLootModifier
 			city.setHasReligion(iReligion, 0, 0, 0)
-			for iBuildingLoop in range(gc.getNumBuildingInfos()):
-				if iBuildingLoop < xml.iPlague:
-					if city.getNumRealBuilding(iBuildingLoop):
-						if gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligion:
-							city.setNumRealBuilding(iBuildingLoop, 0)
-							iLoot += iLootModifier
+			for i in range(len(lReligionBuilding)):
+				city.setNumRealBuilding(lReligionBuilding[i], 0)
+				iLoot += iLootModifier
 			if iReligion == xml.iJudaism:
 				iLoot = iLoot*3/2
-			
+
 			# kill / expel some population
 			if city.getPopulation() > 15 and city.getReligionCount() < 2:
 				city.changePopulation(-4)
@@ -1234,85 +1248,56 @@ class RFCUtils:
 				city.changePopulation(-2)
 			elif city.getPopulation() > 3:
 				city.changePopulation(-1)
-			
+
 			# distribute the loot
 			iLoot = iLoot/2 + gc.getGame().getSorenRandNum(iLoot/2, 'random loot')
 			pPlayer.changeGold(iLoot)
-			
-	#		# apply diplomatic penalty
-	#		for iLoopPlayer in range(con.iNumPlayers):
-	#			pLoopPlayer = gc.getPlayer(iLoopPlayer)
-	#			if pLoopPlayer.isAlive() and iLoopPlayer != iOwner:
-	#				if pLoopPlayer.getStateReligion() == iReligion:
-	#					pLoopPlayer.AI_changeAttitudeExtra(iOwner, -1)
-			
-			# add piety
+
+			# add faith for the persecution itself (there is an indirect increase too, the negative modifier from having a non-state religion is gone)
 			pPlayer.changeFaith( 1 )
-			
-	#		# count minor religion persecutions
+
+			# apply diplomatic penalty
+			for iLoopPlayer in range(con.iNumPlayers):
+				pLoopPlayer = gc.getPlayer(iLoopPlayer)
+				if pLoopPlayer.isAlive() and iLoopPlayer != iOwner:
+					if pLoopPlayer.getStateReligion() == iReligion:
+						pLoopPlayer.AI_changeAttitudeExtra(iOwner, -1)
+
+		## count minor religion persecutions??
 	#		if ( i == minorReligion ){ // 3Miro: count the minor religion prosecutions
 	#		minorReligionRefugies++;
 	#		gc.setMinorReligionRefugies( 0 )
+	
+		## Spanish UP?
+	#		if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ):
+	#			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
+	#			pPlayer.changeProsecutionCount( 10 )
 			
+			# interface message for the player
 			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION", (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot)), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
-		
-		else: # fail
+
+			# Jews may spread to another random city
+			if iReligion == xml.iJudaism:
+				if gc.getGame().getSorenRandNum(100, "judaism spread chance") < 80:
+					tCity = self.selectRandomCity()
+					self.spreadJews(tCity,xml.iJudaism)
+					CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(), )), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
+
+		else: # message on failed persecution:
 			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(), )), "AS2D_SABOTAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iRed), iPlotX, iPlotY, True, True)
-		
+
 		# start a small revolt
 		city.changeCultureUpdateTimer(1);
 		city.changeOccupationTimer(1);
-		
+
 		# consume the inquisitor
 		pUnit.kill(0, -1)
-		
-		# Unhappiness from persecution
+
+		# unhappiness from persecution
 		city.changeHurryAngerTimer(city.flatHurryAngerLength())
-		
+
 		return True
-
-#	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
-#	# 3Miro: religious purge, removing all non-state religions from a city
-#		#if ( iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1] ):
-#		#	return
-#		
-#		if ( gc.getMap().plot( iPlotX, iPlotY ).isCity() ):
-#			city = gc.getMap().plot( iPlotX, iPlotY ).getPlotCity()
-#		else:
-#			return
-#		
-#		iOwner = city.getOwner()
-#		
-#		pPlayer = gc.getPlayer( iOwner )
-#		
-#		#iStateReligion = pPlayer.getStateReligion()
-#		#
-#		## Loop through all religions, remove them from the city
-#		#for iReligionLoop in range(gc.getNumReligionInfos()):
-#		#	if (iReligionLoop != iStateReligion and (not city.isHolyCityByType(iReligionLoop) ) ):
-#		#		city.setHasReligion(iReligionLoop, 0, 0, 0)
-#		#		if (iReligionLoop == con.iJudaism): #Jews spread to another random city in the world
-#		#			tCity = self.selectRandomCity()
-#		#			self.spreadJews(tCity,con.iJudaism)
-#		#		# 3Miro: purge Buildings
-#		#		for iBuildingLoop in range( gc.getNumBuildingInfos() ):
-#		#			if ( city.isHasRealBuilding( iBuildingLoop ) and gc.getBuildingInfo(iBuildingLoop).getPrereqReligion() == iReligionLoop ):
-#		#				city.setHasRealBuilding( iBuildingLoop, False )
-#
-#		city.doPurgeReligions()
-#		city.changeHurryAngerTimer( 10 )
-#
-#		# 3Miro: kill the Prosecutor
-#		pUnit = pPlayer.getUnit(iUnitID)
-#		pUnit.kill(0, -1)
-#
-#		#3MiroUP
-#		if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ):
-#			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
-#			pPlayer.changeProsecutionCount( 10 )
-#
-#		#pPlayer.changeFaith( 1 ) # this is done in C++ now
-
+	#Absinthe: end
 
 	def saint( self, iOwner, iUnitID ):
 		# 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
@@ -1323,7 +1308,7 @@ class RFCUtils:
 
 	def selectRandomCity(self):
 		cityList = []
-		for i in range( con.iNumPlayers ):
+		for i in range( con.iNumPlayers ):	# current civ range is iNumPlayers, so it can only be a major player's city
 			if (gc.getPlayer(i).isAlive()):
 				for pyCity in PyPlayer(i).getCityList():
 					cityList.append(pyCity.GetCy())
@@ -1335,7 +1320,7 @@ class RFCUtils:
 		if (tPlot != False):
 			plot = gc.getMap().plot( tPlot[0], tPlot[1] )
 			if (not plot.getPlotCity().isNone()):
-				plot.getPlotCity().setHasReligion(iReligion,1,0,0) #Puts Judaism or another religion into this city
+				plot.getPlotCity().setHasReligion(iReligion,1,0,0) # puts the religion into this city
 				return True
 			else:
 				return False
