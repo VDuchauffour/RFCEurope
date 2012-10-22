@@ -249,42 +249,40 @@ class CvGameUtils:
 		# Looks to see if the AI controls a city with a religion that is not the State Religion, not a Holy City, and do not has religious wonders in it
 		for iReligion in con.tPersecutionOrder[iStateReligion]:
 			for pCity in apCityList:
-				if iReligion != iStateReligion and not pCity.isHolyCityByType(iReligion):
+				if pCity.GetCy().isHasReligion(iReligion) and not pCity.GetCy().isHolyCityByType(iReligion):
 					
-					lReligionWonder = 0
+					bWonder = false
 					for iBuilding in xrange(gc.getNumBuildingInfos()):
-						if city.getNumRealBuilding(iBuilding):
+						if pCity.GetCy().getNumRealBuilding(iBuilding):
 							BuildingInfo = gc.getBuildingInfo(iBuilding)
 							if BuildingInfo.getPrereqReligion() == iReligion:
 								if isWorldWonderClass(BuildingInfo.getBuildingClassType()) or isNationalWonderClass(BuildingInfo.getBuildingClassType()):
-									lReligionWonder += 1
+									bWonder = true
+									break
 					
-					if lReligionWonder == 0:
+					if bWonder: continue # skip the code below, and continue with the next city in the loop
+					
+					bFound = False
+					# If the civ's tolerance > 70 it won't purge any religions
+					# If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
+					# If > 30 (but < 50) it will also purge Judaism
+					# If < 30 it will purge all but the State Religion (so the other 2 Christian Religions as well)
+					if iTolerance < 70:
+						if iReligion == xml.iIslam: bFound = True
+						elif iReligion == xml.iCatholicism or iReligion == xml.iOrthodoxy or iReligion == xml.iProtestantism:
+							if iStateReligion != xml.iCatholicism and iStateReligion != xml.iOrthodoxy and iStateReligion != xml.iProtestantism:
+								bFound = True
+					if iTolerance < 50:
+						if iReligion == xml.iJudaism: bFound = True
+					if iTolerance < 30:
+						bFound = True
 						
-						bFound = False
-						# If the civ's tolerance > 70 it won't purge any religions
-						# If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
-						# If > 30 (but < 50) it will also purge Judaism
-						# If < 30 it will purge all but the State Religion (so the other 2 Christian Religions as well)
-						if iTolerance < 70:
-							if iReligion == xml.iIslam: bFound = True
-							elif iReligion == xml.iCatholicism or iReligion == xml.iOrthodoxy or iReligion == xml.iProtestantism:
-								if iStateReligion != xml.iCatholicism and iStateReligion != xml.iOrthodoxy and iStateReligion != xml.iProtestantism:
-									bFound = True
-						if iTolerance < 50:
-							if iReligion == xml.iJudaism: bFound = True
-						if iTolerance < 30:
-							bFound = True
-						
-						if bFound:
-							city = pCity.GetCy()
-							if city.isHasReligion(iReligion):
-								if pUnit.generatePath(city.plot(), 0, False, None):
-									self.doInquisitorMove(pUnit, city)
-									return
+					if bFound:
+						if pUnit.generatePath(city.plot(), 0, False, None):
+							self.doInquisitorMove(pUnit, city)
+							return
 
 	def doInquisitorMove(self, pUnit, pCity):
-		
 		if pUnit.getX() != pCity.getX() or pUnit.getY() != pCity.getY():
 			pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, pCity.getX(), pCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
 		else:

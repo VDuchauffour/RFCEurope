@@ -58,12 +58,6 @@ Changes for RFCE 1.1:
 			- Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
 			- Caliom's WB tool updated, so it can handle all special chars from the Latin-1 set
 		- Interface:
-			- UHV counters:
-				- Lithuania got a culture UHV counter
-				- Improved UHV counter for the Polish 3rd UHV
-				- All UHV counters are removed on the 1st turn after the UHV date
-				- So you can still check how far would have you gone, even if you complete it earlier
-				- If there is no exact UHV date, they are removed upon UHV completion
 			- Demographics Screen:
 				- Tweaks to the demographics screen. Urban Population, Military Power, Land Area, etc.
 				- New statistics on the demographics screen: Total Population, Soldiers
@@ -73,6 +67,12 @@ Changes for RFCE 1.1:
 				- The result for Total Population is rounded to 5000
 				- Soldiers show the actual number of military units, in 1000s
 				- Military Power is an index for total power (so both actual and potential power included)
+			- UHV counters:
+				- Lithuania got an interface counter for it's culture UHV
+				- Improved UHV counter for the Polish 3rd UHV
+				- All UHV counters are removed on the 1st turn after the UHV date
+				- So you can still check how far would have you gone, even if you complete it earlier
+				- If there is no exact UHV date, they are removed upon UHV completion
 			- New mercenary message if the merc is available in a province where your culture do not allow you to hire it
 			- Settler/war maps and spawn/respawn areas are shown on the minimap when editing them in the WB
 			- New interface icons (on the main map) for great general points and stability
