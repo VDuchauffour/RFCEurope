@@ -278,6 +278,7 @@ class CvGameUtils:
 						bFound = True
 						
 					if bFound:
+						city = pCity.GetCy()
 						if pUnit.generatePath(city.plot(), 0, False, None):
 							self.doInquisitorMove(pUnit, city)
 							return
