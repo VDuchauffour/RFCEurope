@@ -62,11 +62,12 @@ Changes for RFCE 1.1:
 				- Tweaks to the demographics screen. Urban Population, Military Power, Land Area, etc.
 				- New statistics on the demographics screen: Total Population, Soldiers
 				- Urban Population is the summary of the population in your cities
-				- Total Population = Urban population * era multiplier + 1500 * unit number + constant
+				- Total Population = Urban population * era multiplier + 4000 * unit number + constant
 				- Era multiplier based on turn number (slowly decreasing from 7 to 4)
 				- The result for Total Population is rounded to 5000
-				- Soldiers show the actual number of military units, in 1000s
+				- Soldiers show the actual number of military units (one unit represents about 3000 soldiers)
 				- Military Power is an index for total power (so both actual and potential power included)
+				- Land Area also shows a more realistic number (around 2.200-2.300 km2 per tile)
 			- UHV counters:
 				- Lithuania got an interface counter for it's culture UHV
 				- Improved UHV counter for the Polish 3rd UHV
@@ -196,7 +197,7 @@ Changes for RFCE 1.1:
 		- Fixed bug where it was possible to build plantations on forests (and remove the forest) before the discovery of Plate Armor
 		- Removed buildingclasses (thus unnecessary searches) for no longer used buildings: Builders Yard, Grocer, Toll House, Herbalist, Catholic and Orthodox Scriptorum
 		- Fixed bug where the C++ code tried to compare variables with unused unittypes' IDs in the CvScreenInterface.py
-		- Fixed critical bug about UB and UU types. A lot less early CTDs should occur, especially during autoplay
+		- Fixed critical bug about UB and UU types. This fixes a couple possible early CTDs, especially during autoplay
 		- Fixed annoying bug with Iberian ArtStyleTypes. Probably caused some CTDs in the late game
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
