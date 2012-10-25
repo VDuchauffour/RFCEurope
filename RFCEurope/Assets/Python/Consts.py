@@ -21,7 +21,7 @@ iMapMaxY = 73
 #### Chronological order
 # Byzantium   i500AD
 # France      i500AD
-# Arabia      i635AD
+# Arabia      i632AD
 # Bulgaria    i680AD
 # Cordoba     i711AD
 # Norse       i780AD
@@ -30,11 +30,12 @@ iMapMaxY = 73
 # Germany     i858AD
 # Kiev        i880AD
 # Hungary     i895AD
-# Spain       i910AD
+# Spain       i909AD
 # Poland      i966AD
 # Genoa       i1016AD
 # England     i1066AD
 # Portugal    i1139AD
+# Lithuania   i1236AD
 # Austria     i1282AD
 # Turkey      i1359AD
 # Moscow      i1380AD
@@ -176,26 +177,26 @@ lOlderNeighbours = [
 tBirth = (
 xml.i500AD, #500AD Byzantium
 xml.i500AD, #500AD Frankia
-xml.i635AD, #632AD Arabia
+xml.i632AD, #632AD Arabia
 xml.i680AD, #680AD Bulgaria
-xml.i711AD, #712AD Cordoba
+xml.i711AD, #711AD Cordoba
 xml.i780AD, #780AD Norse
 xml.i810AD, #810AD Venice
-xml.i843AD, #844AD Burgundy
+xml.i843AD, #843AD Burgundy
 xml.i858AD, #858AD Germany
 xml.i880AD, #880AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
-xml.i895AD, #896AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
+xml.i895AD, #895AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
 xml.i910AD, #909AD Spain
 xml.i966AD, #966AD Poland
-xml.i1016AD,#1020AD Genoa
+xml.i1016AD,#1016AD Genoa
 xml.i1066AD,#1066AD England
-xml.i1139AD,#1100AD Portugal
+xml.i1139AD,#1139AD Portugal
 xml.i1236AD,#1236AD Lithuania
 xml.i1282AD,#1282AD Austria
 xml.i1359AD,#1359AD Turkey - turn 233 is normal time (Conquest of Adrianopolis)
 xml.i1380AD,#1380AD Moscow
 xml.i1523AD,#1523AD Sweden
-xml.i1581AD,#1580AD Dutch - turn 340 is normal time
+xml.i1581AD,#1581AD Dutch - turn 340 is normal time
 0,	#Pope
 0,
 0,

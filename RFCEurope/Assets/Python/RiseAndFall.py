@@ -140,7 +140,6 @@ tCapitals = con.tCapitals
 tNewCapitals = con.tNewCapitals
 
 
-
 # core areas coordinates (top left and bottom right)
 
 tCoreAreasTL = con.tCoreAreasTL

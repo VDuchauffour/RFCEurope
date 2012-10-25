@@ -6,8 +6,8 @@
 #		#Important event			#Spawn			#UHV
 i500AD = 0
 i600AD = 25 # Stirrup in the beginning of the 7th century
-i632AD = 33
-i635AD = 34						# Spawn of Arabia
+i632AD = 33						# Spawn of Arabia
+i635AD = 34
 i640AD = 35
 i680AD = 45						# Spawn of Bulgaria
 i700AD = 50

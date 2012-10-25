@@ -14,7 +14,7 @@
 			<Civilopedia>TXT_KEY_CIV_ARABIA_PEDIA</Civilopedia>
 			<!-- Rhye -->
 			<!-- 3Miro Begin Update -->
-			<StartingYear>635AD</StartingYear>
+			<StartingYear>632AD</StartingYear>
 			<LoadingTime>5</LoadingTime>
 			<UP1>TXT_KEY_UP_ARA</UP1>
 			<UP2>TXT_KEY_UP_ARA2</UP2>
@@ -8257,7 +8257,7 @@
 			<Adjective>TXT_KEY_CIV_SPAIN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>910AD</StartingYear>
+			<StartingYear>909AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_SPN</UP1>
 			<UP2>TXT_KEY_UP_SPN2</UP2>
