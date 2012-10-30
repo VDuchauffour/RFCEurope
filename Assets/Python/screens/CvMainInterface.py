@@ -136,8 +136,7 @@ class CvMainInterface:
 	"Main Interface Screen"
 
 	#m_iNumPlotListButtons = (CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE ).getXResolution() - (iMultiListXL+iMultiListXR) - 68) / 34 #Rhye (bugfix)
-        m_iNumPlotListButtons = 800 #Rhye (bugfix)
-        
+	m_iNumPlotListButtons = 800 #Rhye (bugfix)
 	# < Mercenaries Start >
 	repainting = false
 	# < Mercenaries End   >
@@ -165,7 +164,7 @@ class CvMainInterface:
 
 		# < Mercenaries Start >
 		global g_iStartingEra
-		global g_bRequireCityUnitContractCreation 
+		global g_bRequireCityUnitContractCreation
 
 		self.repainting=false
 		# < Mercenaries End >
@@ -205,8 +204,9 @@ class CvMainInterface:
 ##		if(config != None):
 ##			g_iStartingEra = gc.getInfoTypeForString(config.get("Mercenaries Mod","Starting Era","ERA_ANCIENT"))
 ##			g_bRequireCityUnitContractCreation = config.getboolean("Mercenaries Mod", "Require City Unit Contract Creation", true)
-                #Rhye - end comment
-		# < Mercenaries End   >
+		#Rhye - end comment
+
+		# < Mercenaries End >
 
 		
 		# Help Text Area
@@ -299,7 +299,8 @@ class CvMainInterface:
 		# < Mercenaries Start >
 		iBtnX += iBtnAdvance
 		# Set the mercenary manager button in the interface
-		screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 2, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, -1 )
+		screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 1, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_MERCENARIES_MANAGER).getActionInfoIndex(), -1 )
+		#screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 2, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, -1 )
 		# Hide the mercenary manager button 
 		screen.hide( "MercenaryManagerButton" )
 		# < Mercenaries End >

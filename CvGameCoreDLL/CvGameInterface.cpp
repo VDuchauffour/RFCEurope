@@ -1384,6 +1384,7 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_CHAT_ALL:
 	case CONTROL_CHAT_TEAM:
 	case CONTROL_GLOBE_VIEW:
+	case CONTROL_MERCENARIES_MANAGER: // Absinthe
 		if (!gDLL->getInterfaceIFace()->isFocused())
 		{
 			return true;
