@@ -3,7 +3,7 @@
 # By: The Lopez
 # CvMercenaryManager
 # 
-# 3Miro: we take the merc screen as it looks well. However, the rest of the machincs have been changed mostly to
+# 3Miro: we take the merc screen as it looks well. However, the rest of the mechanics have been changed mostly to
 #        remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
@@ -452,10 +452,10 @@ class CvMercenaryManager:
 
 		# Get the player
 		pPlayer = gc.getPlayer(iPlayer)
-	
+
 		# get the number of cities the player owns
 		numCities = pPlayer.getNumCities()	
-					
+
 		totalUnitCost = pPlayer.calculateUnitCost()
 		totalUnitSupply = pPlayer.calculateUnitSupply()
 		totalMaintenance = pPlayer.getTotalMaintenance()
@@ -463,7 +463,7 @@ class CvMercenaryManager:
 		totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
 		totalInflatedCosts = pPlayer.calculateInflatedCosts()
 		#totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-                totalMercenaryCost = (pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + 99) / 100
+		totalMercenaryCost = (pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + 99) / 100
 		#totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
 		goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
 		gold = pPlayer.getGold()
