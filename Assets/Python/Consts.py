@@ -712,35 +712,35 @@ tAggressionLevel = (
 
 #War during rise of new civs. Higher number means less chance for war
 tAIStopBirthThreshold = (
-    30, #Byzantium
-    60, #Frankia
-    50, #Arabia
-    70, #Bulgaria
-    10, #Cordoba
-    70, #Norse
-    30, #Venezia
-    20, #Burgundy
-    80, #Germany
-    80, #Kiev
-    80, #Hungary
-    80, #Spain
-    40, #Poland
-    40, #Genoa
-    80, #England
-    30, #Portugal
-    40, #Lithuania
-    30, #Austria
-    80, #Turkey
-    70, #Moscow
-    60, #Sweden
-    20, #Dutch
-    90, #Pope
-    0, #Indep1
-    0, #Indep2
-    0, #Indep3
-    0, #Indep4
-    0  #Barb (probably do not need indies and barbs here.)
-    )
+30, #Byzantium
+60, #Frankia
+50, #Arabia
+70, #Bulgaria
+10, #Cordoba
+70, #Norse
+30, #Venezia
+20, #Burgundy
+80, #Germany
+80, #Kiev
+80, #Hungary
+80, #Spain
+40, #Poland
+40, #Genoa
+80, #England
+30, #Portugal
+40, #Lithuania
+30, #Austria
+80, #Turkey
+70, #Moscow
+60, #Sweden
+20, #Dutch
+90, #Pope
+0, #Indep1
+0, #Indep2
+0, #Indep3
+0, #Indep4
+0  #Barb (probably do not need indies and barbs here.)
+)
 
 
 #RiseAndFall. This is one place to tune frequency of resurrections.
