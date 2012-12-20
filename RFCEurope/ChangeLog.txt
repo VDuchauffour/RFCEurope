@@ -138,6 +138,7 @@ Changes for RFCE 1.1:
 		- New text for Palacio da Pena, Atlantic Access, Protestant Church School
 		- New feat messages when you build each unittype's first unit (for the RFCE specific unit tpyes like Light and Heavy Cavalry, Polearm)
 		- Revised feat messages from population tresholds (reach 100.000, 200.000, 500.000, 1.000.000, etc. urban population)
+		- Cities build outside the Citymap will get a proper name (no Persian names for Bulgaria for example)
 
 	Art/sound updates:
 		- Fixed button for Golden Bull, West India Company, Arabian Arbalest

@@ -451,19 +451,11 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_KUFAH</City>
-				<City>TXT_KEY_CITY_NAME_KHURASAN</City>
 				<City>TXT_KEY_CITY_NAME_ANJAR</City>
-				<City>TXT_KEY_CITY_NAME_YAMAMA</City>
 				<City>TXT_KEY_CITY_NAME_MANSURA</City>
-				<City>TXT_KEY_CITY_NAME_BUKHARA</City>
-				<City>TXT_KEY_CITY_NAME_AYDAB</City>
-				<City>TXT_KEY_CITY_NAME_BAYT_RAS</City>
-				<City>TXT_KEY_CITY_NAME_TAIF</City>
-				<City>TXT_KEY_CITY_NAME_SHIHR</City>
-				<City>Abu Dhabi</City>
-				<City>TXT_KEY_CITY_NAME_KAIROUAN</City>
-				<City>TXT_KEY_CITY_NAME_ORAN</City>
+				<City>TXT_KEY_CITY_NAME_FUSTAT</City>
+				<City>TXT_KEY_CITY_NAME_HAMA</City>
+				<City>TXT_KEY_CITY_NAME_TABUK</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -874,51 +866,14 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_ESSEN</City>
-				<City>TXT_KEY_CITY_NAME_DUISBURG</City>
-				<City>TXT_KEY_CITY_NAME_BONN</City>
-				<City>TXT_KEY_CITY_NAME_BOCHUM</City>
-				<City>TXT_KEY_CITY_NAME_MAGDEBURG</City>
-				<City>TXT_KEY_CITY_NAME_BIELEFELD</City>
-				<City>TXT_KEY_CITY_NAME_MANNHEIM</City>
-				<City>TXT_KEY_CITY_NAME_KARLSRUHE</City>
-				<City>TXT_KEY_CITY_NAME_GELSENKIRCHEN</City>
-				<City>TXT_KEY_CITY_NAME_WIESBADEN</City>
-				<City>TXT_KEY_CITY_NAME_MUNSTER</City>
-				<City>TXT_KEY_CITY_NAME_CHEMNITZ</City>
-				<City>TXT_KEY_CITY_NAME_BRAUNSCHWEIG</City>
-				<City>TXT_KEY_CITY_NAME_HALLE</City>
-				<City>TXT_KEY_CITY_NAME_MONCHENGLADBACH</City>
-				<City>TXT_KEY_CITY_NAME_WUPPERTAL</City>
-				<City>TXT_KEY_CITY_NAME_LUBECK</City>
-				<City>TXT_KEY_CITY_NAME_HAGEN</City>
-				<City>TXT_KEY_CITY_NAME_ERFURT</City>
-				<City>TXT_KEY_CITY_NAME_HEIDELBERG</City>
-				<City>TXT_KEY_CITY_NAME_KASSEL</City>
-				<City>TXT_KEY_CITY_NAME_OBERHAUSEN</City>
-				<City>TXT_KEY_CITY_NAME_HAMM</City>
-				<City>TXT_KEY_CITY_NAME_SAARBRUCKEN</City>
-				<City>TXT_KEY_CITY_NAME_KREFELD</City>
-				<City>TXT_KEY_CITY_NAME_POTSDAM</City>
-				<City>TXT_KEY_CITY_NAME_SOLINGEN</City>
-				<City>TXT_KEY_CITY_NAME_OSNABRUCK</City>
-				<City>TXT_KEY_CITY_NAME_LUDWIGSHAFEN</City>
-				<City>TXT_KEY_CITY_NAME_LEVERKUSEN</City>
-				<City>TXT_KEY_CITY_NAME_OLDENBURG</City>
-				<City>TXT_KEY_CITY_NAME_NEUSS</City>
-				<City>TXT_KEY_CITY_NAME_MULHEIM</City>
-				<City>TXT_KEY_CITY_NAME_DARMSTADT</City>
-				<City>TXT_KEY_CITY_NAME_HERNE</City>
-				<City>TXT_KEY_CITY_NAME_WURZBURG</City>
-				<City>TXT_KEY_CITY_NAME_REGENSBURG</City>
-				<City>TXT_KEY_CITY_NAME_RECKLINGHAUSEN</City>
-				<City>TXT_KEY_CITY_NAME_GOTTINGEN</City>
-				<City>TXT_KEY_CITY_NAME_WOLFSBURG</City>
-				<City>TXT_KEY_CITY_NAME_ULM</City>
-				<City>TXT_KEY_CITY_NAME_KOBLENZ</City>
-				<City>TXT_KEY_CITY_NAME_HILDESHEIM</City>
-				<City>TXT_KEY_CITY_NAME_ERLANGEN</City>
-				<City>D&#252;sseldorf</City>
+				<City>Graz</City>
+				<City>Linz</City>
+				<City>Innsbruck</City>
+				<City>Klagenfurt</City>
+				<City>Hall</City>
+				<City>Bregenz</City>
+				<City>Villach</City>
+				<City>St Polten</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -1456,47 +1411,15 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Pathragada</City>
-				<City>Neh</City>
-				<City>TXT_KEY_CITY_NAME_ERGILI</City>
-				<City>TXT_KEY_CITY_NAME_ZOHAK</City>
-				<City>TXT_KEY_CITY_NAME_PTEIRA</City>
-				<City>TXT_KEY_CITY_NAME_ASPABOTA</City>
-				<City>TXT_KEY_CITY_NAME_DAPHNAI</City>
-				<City>TXT_KEY_CITY_NAME_EION</City>
-				<City>TXT_KEY_CITY_NAME_BAMPUR</City>
-				<City>TXT_KEY_CITY_NAME_GAUGAMELA</City>
-				<City>TXT_KEY_CITY_NAME_PATIGRBANA</City>
-				<City>TXT_KEY_CITY_NAME_DARIUSHKABIR</City>
-				<City>TXT_KEY_CITY_NAME_GHULAMAN</City>
-				<City>TXT_KEY_CITY_NAME_ISTAKHR</City>
-				<City>TXT_KEY_CITY_NAME_JINJAN</City>
-				<City>TXT_KEY_CITY_NAME_BORAZJAN</City>
-				<City>TXT_KEY_CITY_NAME_DAKYANUS</City>
-				<City>TXT_KEY_CITY_NAME_ALTINTEPE</City>
-				<City>TXT_KEY_CITY_NAME_BUNYAN</City>
-				<City>TXT_KEY_CITY_NAME_CHARSADDA</City>
-				<City>TXT_KEY_CITY_NAME_URATYUBE</City>
-				<City>TXT_KEY_CITY_NAME_DURAEUROPOS</City>
-				<City>TXT_KEY_CITY_NAME_QATNA</City>
-				<City>TXT_KEY_CITY_NAME_CAPISA</City>
-				<City>TXT_KEY_CITY_NAME_KYRESKHATA</City>
-				<City>TXT_KEY_CITY_NAME_PESHAWAR</City>
-				<City>TXT_KEY_CITY_NAME_VAN</City>
-				<City>TXT_KEY_CITY_NAME_AUTIYARA</City>
-				<City>TXT_KEY_CITY_NAME_BAGASTANA</City>
-				<City>TXT_KEY_CITY_NAME_DARMASA</City>
-				<City>TXT_KEY_CITY_NAME_DRAPSAKA</City>
-				<City>TXT_KEY_CITY_NAME_GANDUTAVA</City>
-				<City>TXT_KEY_CITY_NAME_IZATA</City>
-				<City>TXT_KEY_CITY_NAME_KAMPADA</City>
-				<City>TXT_KEY_CITY_NAME_KAPISA</City>
-				<City>TXT_KEY_CITY_NAME_KARMANA</City>
-				<City>TXT_KEY_CITY_NAME_KOUNAXA</City>
-				<City>TXT_KEY_CITY_NAME_KUGANAKA</City>
-				<City>TXT_KEY_CITY_NAME_NAUTAKA</City>
-				<City>TXT_KEY_CITY_NAME_PAISHIYAUVADA</City>
-				<City>Arshada</City>
+				<City>Pliska</City>
+				<City>Sofia</City>
+				<City>Plovdiv</City>
+				<City>Varna</City>
+				<City>Burgas</City>
+				<City>Ruse</City>
+				<City>Dobrich</City>
+				<City>Gabrovo</City>
+				<City>Haskovo</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -1926,27 +1849,14 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_CHARTRES</City>
 				<City>TXT_KEY_CITY_NAME_GRENOBLE</City>
-				<City>TXT_KEY_CITY_NAME_DJION</City>
-				<City>TXT_KEY_CITY_NAME_POITIERS</City>
-				<City>TXT_KEY_CITY_NAME_BAYONNE</City>
 				<City>Carcassonne</City>
 				<City>Toulon</City>
 				<City>Nice</City>
-				<City>Caen</City>
 				<City>Arles</City>
 				<City>Aix-en-Provence</City>
-				<City>Le Havre</City>
 				<City>Montpellier</City>
-				<City>TXT_KEY_CITY_NAME_LE_MANS</City>
-				<City>TXT_KEY_CITY_NAME_NANCY</City>
-				<City>TXT_KEY_CITY_NAME_LILLE</City>
-				<City>TXT_KEY_CITY_NAME_LOURDES</City>
 				<City>TXT_KEY_CITY_NAME_CANNES</City>
-				<City>TXT_KEY_CITY_NAME_LA_ROCHELLE</City>
-				<City>TXT_KEY_CITY_NAME_BOURGES</City>
-				<City>TXT_KEY_CITY_NAME_CALAIS</City>
 				<City>Saint &#201;tienne</City>
 				<!-- Rhye - end -->
 			</Cities>
@@ -3144,19 +3054,12 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_KUFAH</City>
-				<City>TXT_KEY_CITY_NAME_KHURASAN</City>
-				<City>TXT_KEY_CITY_NAME_ANJAR</City>
 				<City>TXT_KEY_CITY_NAME_YAMAMA</City>
-				<City>TXT_KEY_CITY_NAME_MANSURA</City>
-				<City>TXT_KEY_CITY_NAME_BUKHARA</City>
-				<City>TXT_KEY_CITY_NAME_AYDAB</City>
-				<City>TXT_KEY_CITY_NAME_BAYT_RAS</City>
-				<City>TXT_KEY_CITY_NAME_TAIF</City>
-				<City>TXT_KEY_CITY_NAME_SHIHR</City>
-				<City>Abu Dhabi</City>
 				<City>TXT_KEY_CITY_NAME_KAIROUAN</City>
 				<City>TXT_KEY_CITY_NAME_ORAN</City>
+				<City>TXT_KEY_CITY_NAME_FEZ</City>
+				<City>TXT_KEY_CITY_NAME_CASABLANCA</City>
+				<City>TXT_KEY_CITY_NAME_MARRAKECH</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -3593,7 +3496,6 @@
 				<City>TXT_KEY_CITY_NAME_LEIDEN</City>
 				<City>TXT_KEY_CITY_NAME_HAARLEM</City>
 				<City>TXT_KEY_CITY_NAME_S_HERTOGENBOSCH</City>
-				<City>TXT_KEY_CITY_NAME_DORESTAD</City>
 				<City>TXT_KEY_CITY_NAME_DEVENTER</City>
 				<City>TXT_KEY_CITY_NAME_KAMPEN</City>
 				<City>TXT_KEY_CITY_NAME_LEEUWARDEN</City>
@@ -3623,8 +3525,7 @@
 				<City>TXT_KEY_CITY_NAME_ASSEN</City>
 				<City>TXT_KEY_CITY_NAME_ENSCHEDE</City>
 				<City>TXT_KEY_CITY_NAME_APELDOORN</City>
-				<City>TXT_KEY_CITY_NAME_LELYSTAD</City>
-				<City>TXT_KEY_CITY_NAME_ALMERE</City>
+				<City>Weert</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -4493,27 +4394,16 @@
 			<Cities>
 				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_CHARTRES</City>
-				<City>TXT_KEY_CITY_NAME_GRENOBLE</City>
-				<City>TXT_KEY_CITY_NAME_DJION</City>
 				<City>TXT_KEY_CITY_NAME_POITIERS</City>
 				<City>TXT_KEY_CITY_NAME_BAYONNE</City>
-				<City>Carcassonne</City>
-				<City>Toulon</City>
-				<City>Nice</City>
 				<City>Caen</City>
-				<City>Arles</City>
-				<City>Aix-en-Provence</City>
-				<City>Le Havre</City>
-				<City>Montpellier</City>
 				<City>TXT_KEY_CITY_NAME_LE_MANS</City>
 				<City>TXT_KEY_CITY_NAME_NANCY</City>
 				<City>TXT_KEY_CITY_NAME_LILLE</City>
 				<City>TXT_KEY_CITY_NAME_LOURDES</City>
-				<City>TXT_KEY_CITY_NAME_CANNES</City>
 				<City>TXT_KEY_CITY_NAME_LA_ROCHELLE</City>
 				<City>TXT_KEY_CITY_NAME_BOURGES</City>
 				<City>TXT_KEY_CITY_NAME_CALAIS</City>
-				<City>Saint &#201;tienne</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -4947,49 +4837,11 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Cumae</City>
-				<City>Arpinum</City>
-				<City>Circei</City>
-				<City>Setia</City>
-				<City>Satricum</City>
-				<City>Ostia</City>
-				<City>Paestum</City>
-				<City>Placentia</City>
-				<City>Senagallica</City>
-				<City>Sipontum</City>
-				<City>Buxentum</City>
-				<City>Florentia</City>
-				<City>Augusta Praetoria</City>
-				<City>TXT_KEY_CITY_NAME_ARDEA</City>
-				<City>TXT_KEY_CITY_NAME_VELITRAE</City>
-				<City>TXT_KEY_CITY_NAME_VIROCONIUM</City>
-				<City>Aquae Sextiae</City>
-				<City>Narbo Martius</City>
-				<City>TXT_KEY_CITY_NAME_SIGNIA</City>
-				<City>TXT_KEY_CITY_NAME_CLUSIUM</City>
-				<City>TXT_KEY_CITY_NAME_SUTRIUM</City>
-				<City>TXT_KEY_CITY_NAME_CREMONA</City>
-				<City>TXT_KEY_CITY_NAME_AURELIANORUM</City>
-				<City>TXT_KEY_CITY_NAME_AGRIPPINA</City>
-				<City>TXT_KEY_CITY_NAME_CORFINIUM</City>
-				<City>TXT_KEY_CITY_NAME_TREVERI</City>
-				<City>TXT_KEY_CITY_NAME_SIRMIUM</City>
-				<City>TXT_KEY_CITY_NAME_BAGACUM</City>
-				<City>TXT_KEY_CITY_NAME_LAURIACUM</City>
-				<City>TXT_KEY_CITY_NAME_TEURNIA</City>
-				<City>TXT_KEY_CITY_NAME_CURIA</City>
-				<City>TXT_KEY_CITY_NAME_FREGELLAE</City>
-				<City>TXT_KEY_CITY_NAME_ALBAFUCENS</City>
-				<City>TXT_KEY_CITY_NAME_SORA</City>
-				<City>TXT_KEY_CITY_NAME_INTERRAMA</City>
-				<City>TXT_KEY_CITY_NAME_SUESSA</City>
-				<City>Narona</City>
-				<City>Carnuntum</City>
-				<City>Poetovio</City>
-				<City>TXT_KEY_CITY_NAME_SATICULA</City>
-				<City>TXT_KEY_CITY_NAME_LUCERIA</City>
-				<City>TXT_KEY_CITY_NAME_ARMINIUM</City>
-				<City>TXT_KEY_CITY_NAME_CASTRUMNOVUM</City>
+				<City>La Spezia</City>
+				<City>Sann-a</City>
+				<City>San Remo</City>
+				<City>Camogli</City>
+				<City>Chiavari</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -6303,19 +6155,11 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Khabarovsk</City>
-				<City>Brjanks</City>
-				<City>Omsk</City>
-				<City>Kursk</City>
-				<City>Vladimir</City>
-				<City>Perm</City>
-				<City>Pskov</City>
-				<City>Starajarussa</City>
-				<City>Suzdal</City>
-				<City>Krasnojarsk</City>
-				<City>Saransk</City>
-				<City>Jelets</City>
-				<City>Ribinsk</City>
+				<City>Chernigov</City>
+				<City>Bilhorod Kyivsky</City>
+				<City>Vyshhorod</City>
+				<City>Halych</City>
+				<City>Tmutarakan</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -6723,16 +6567,10 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Khabarovsk</City>
-				<City>Brjanks</City>
-				<City>Omsk</City>
-				<City>Kursk</City>
-				<City>Vladimir</City>
+				<City>TXT_KEY_CITY_NAME_VOLOGDA</City>
 				<City>Perm</City>
 				<City>Pskov</City>
-				<City>Starajarussa</City>
 				<City>Suzdal</City>
-				<City>Krasnojarsk</City>
 				<City>Saransk</City>
 				<City>Jelets</City>
 				<City>Ribinsk</City>
@@ -7259,23 +7097,16 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_BIRKA</City>
-				<City>TXT_KEY_CITY_NAME_ROSKILDE</City>
-				<City>TXT_KEY_CITY_NAME_SIGTUNA</City>
 				<City>TXT_KEY_CITY_NAME_ODENSE</City>
 				<City>TXT_KEY_CITY_NAME_RIBE</City>
 				<City>TXT_KEY_CITY_NAME_LINDHOLM</City>
-				<City>TXT_KEY_CITY_NAME_VASTERAS</City>
 				<City>TXT_KEY_CITY_NAME_LUND</City>
 				<City>TXT_KEY_CITY_NAME_KAUPANG</City>
 				<City>TXT_KEY_CITY_NAME_THINGVELLIR</City>
-				<City>TXT_KEY_CITY_NAME_STAMFORD</City>
-				<City>TXT_KEY_CITY_NAME_VADREJFORD</City>
 				<City>TXT_KEY_CITY_NAME_ROWANE</City>
 				<City>TXT_KEY_CITY_NAME_TYNWALD</City>
 				<City>TXT_KEY_CITY_NAME_LEIRVIK</City>
 				<City>TXT_KEY_CITY_NAME_TINGANES</City>
-				<City>TXT_KEY_CITY_NAME_BRATTAHLID</City>
 				<City>TXT_KEY_CITY_NAME_THUNDERFALL</City>
 				<City>Vorbasse</City>
 				<City>Bj&#248;rgvin</City>
@@ -7715,19 +7546,19 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Khabarovsk</City>
-				<City>Brjanks</City>
-				<City>Omsk</City>
-				<City>Kursk</City>
-				<City>Vladimir</City>
-				<City>Perm</City>
-				<City>Pskov</City>
-				<City>Starajarussa</City>
-				<City>Suzdal</City>
-				<City>Krasnojarsk</City>
-				<City>Saransk</City>
-				<City>Jelets</City>
-				<City>Ribinsk</City>
+				<City>Poznan</City>
+				<City>Lodz</City>
+				<City>Lublin</City>
+				<City>Gdynia</City>
+				<City>Wroclaw</City>
+				<City>Gniezno</City>
+				<City>Szczecin</City>
+				<City>Bydgoszcz</City>
+				<City>Opole</City>
+				<City>Elblag</City>
+				<City>Plock</City>
+				<City>Breslau</City>
+				<City>Katowice</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -9034,29 +8865,13 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_BIRKA</City>
-				<City>TXT_KEY_CITY_NAME_ROSKILDE</City>
-				<City>TXT_KEY_CITY_NAME_SIGTUNA</City>
-				<City>TXT_KEY_CITY_NAME_ODENSE</City>
-				<City>TXT_KEY_CITY_NAME_RIBE</City>
-				<City>TXT_KEY_CITY_NAME_LINDHOLM</City>
-				<City>TXT_KEY_CITY_NAME_VASTERAS</City>
-				<City>TXT_KEY_CITY_NAME_LUND</City>
-				<City>TXT_KEY_CITY_NAME_KAUPANG</City>
-				<City>TXT_KEY_CITY_NAME_THINGVELLIR</City>
-				<City>TXT_KEY_CITY_NAME_STAMFORD</City>
-				<City>TXT_KEY_CITY_NAME_VADREJFORD</City>
-				<City>TXT_KEY_CITY_NAME_ROWANE</City>
-				<City>TXT_KEY_CITY_NAME_TYNWALD</City>
-				<City>TXT_KEY_CITY_NAME_LEIRVIK</City>
-				<City>TXT_KEY_CITY_NAME_TINGANES</City>
-				<City>TXT_KEY_CITY_NAME_BRATTAHLID</City>
-				<City>TXT_KEY_CITY_NAME_THUNDERFALL</City>
-				<City>Vorbasse</City>
-				<City>Bj&#248;rgvin</City>
-				<City>T&#248;nsberg</City>
-				<City>Kirkjub&#248;ur</City>
-				<City>TXT_KEY_CITY_NAME_LODOSE</City>
+				<City>Göteborg</City>
+				<City>Malmö</City>
+				<City>Sigtaguna</City>
+				<City>Västerås</City>
+				<City>Örebro</City>
+				<City>Linköping</City>
+				<City>Helsingborg</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -9904,49 +9719,12 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Cumae</City>
-				<City>Arpinum</City>
-				<City>Circei</City>
-				<City>Setia</City>
-				<City>Satricum</City>
-				<City>Ostia</City>
-				<City>Paestum</City>
-				<City>Placentia</City>
-				<City>Senagallica</City>
-				<City>Sipontum</City>
-				<City>Buxentum</City>
-				<City>Florentia</City>
-				<City>Augusta Praetoria</City>
-				<City>TXT_KEY_CITY_NAME_ARDEA</City>
-				<City>TXT_KEY_CITY_NAME_VELITRAE</City>
-				<City>TXT_KEY_CITY_NAME_VIROCONIUM</City>
-				<City>Aquae Sextiae</City>
-				<City>Narbo Martius</City>
-				<City>TXT_KEY_CITY_NAME_SIGNIA</City>
-				<City>TXT_KEY_CITY_NAME_CLUSIUM</City>
-				<City>TXT_KEY_CITY_NAME_SUTRIUM</City>
-				<City>TXT_KEY_CITY_NAME_CREMONA</City>
-				<City>TXT_KEY_CITY_NAME_AURELIANORUM</City>
-				<City>TXT_KEY_CITY_NAME_AGRIPPINA</City>
-				<City>TXT_KEY_CITY_NAME_CORFINIUM</City>
-				<City>TXT_KEY_CITY_NAME_TREVERI</City>
-				<City>TXT_KEY_CITY_NAME_SIRMIUM</City>
-				<City>TXT_KEY_CITY_NAME_BAGACUM</City>
-				<City>TXT_KEY_CITY_NAME_LAURIACUM</City>
-				<City>TXT_KEY_CITY_NAME_TEURNIA</City>
-				<City>TXT_KEY_CITY_NAME_CURIA</City>
-				<City>TXT_KEY_CITY_NAME_FREGELLAE</City>
-				<City>TXT_KEY_CITY_NAME_ALBAFUCENS</City>
-				<City>TXT_KEY_CITY_NAME_SORA</City>
-				<City>TXT_KEY_CITY_NAME_INTERRAMA</City>
-				<City>TXT_KEY_CITY_NAME_SUESSA</City>
-				<City>Narona</City>
-				<City>Carnuntum</City>
-				<City>Poetovio</City>
-				<City>TXT_KEY_CITY_NAME_SATICULA</City>
-				<City>TXT_KEY_CITY_NAME_LUCERIA</City>
-				<City>TXT_KEY_CITY_NAME_ARMINIUM</City>
-				<City>TXT_KEY_CITY_NAME_CASTRUMNOVUM</City>
+				<City>Padua</City>
+				<City>Verona</City>
+				<City>Este</City>
+				<City>Maròstega</City>
+				<City>Belùn</City>
+				<City>Asolo</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -10823,51 +10601,7 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
-				<City>Cumae</City>
-				<City>Arpinum</City>
-				<City>Circei</City>
-				<City>Setia</City>
-				<City>Satricum</City>
-				<City>Ostia</City>
-				<City>Paestum</City>
-				<City>Placentia</City>
-				<City>Senagallica</City>
-				<City>Sipontum</City>
-				<City>Buxentum</City>
-				<City>Florentia</City>
-				<City>Augusta Praetoria</City>
-				<City>TXT_KEY_CITY_NAME_ARDEA</City>
-				<City>TXT_KEY_CITY_NAME_VELITRAE</City>
-				<City>TXT_KEY_CITY_NAME_VIROCONIUM</City>
-				<City>Aquae Sextiae</City>
-				<City>Narbo Martius</City>
-				<City>TXT_KEY_CITY_NAME_SIGNIA</City>
-				<City>TXT_KEY_CITY_NAME_CLUSIUM</City>
-				<City>TXT_KEY_CITY_NAME_SUTRIUM</City>
-				<City>TXT_KEY_CITY_NAME_CREMONA</City>
-				<City>TXT_KEY_CITY_NAME_AURELIANORUM</City>
-				<City>TXT_KEY_CITY_NAME_AGRIPPINA</City>
-				<City>TXT_KEY_CITY_NAME_CORFINIUM</City>
-				<City>TXT_KEY_CITY_NAME_TREVERI</City>
-				<City>TXT_KEY_CITY_NAME_SIRMIUM</City>
-				<City>TXT_KEY_CITY_NAME_BAGACUM</City>
-				<City>TXT_KEY_CITY_NAME_LAURIACUM</City>
-				<City>TXT_KEY_CITY_NAME_TEURNIA</City>
-				<City>TXT_KEY_CITY_NAME_CURIA</City>
-				<City>TXT_KEY_CITY_NAME_FREGELLAE</City>
-				<City>TXT_KEY_CITY_NAME_ALBAFUCENS</City>
-				<City>TXT_KEY_CITY_NAME_SORA</City>
-				<City>TXT_KEY_CITY_NAME_INTERRAMA</City>
-				<City>TXT_KEY_CITY_NAME_SUESSA</City>
-				<City>Narona</City>
-				<City>Carnuntum</City>
-				<City>Poetovio</City>
-				<City>TXT_KEY_CITY_NAME_SATICULA</City>
-				<City>TXT_KEY_CITY_NAME_LUCERIA</City>
-				<City>TXT_KEY_CITY_NAME_ARMINIUM</City>
-				<City>TXT_KEY_CITY_NAME_CASTRUMNOVUM</City>
-				<!-- Rhye - end -->
+				<City>THIS NAME IS BUGGED</City>
 			</Cities>
 			<Buildings/>
 			<Units>
