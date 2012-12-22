@@ -451,11 +451,11 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_ANJAR</City>
-				<City>TXT_KEY_CITY_NAME_MANSURA</City>
-				<City>TXT_KEY_CITY_NAME_FUSTAT</City>
-				<City>TXT_KEY_CITY_NAME_HAMA</City>
-				<City>TXT_KEY_CITY_NAME_TABUK</City>
+				<City>Anjar</City>
+				<City>Al-Mansura</City>
+				<City>Al-Fustat</City>
+				<City>Hamah</City>
+				<City>Tabuk</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -1849,14 +1849,14 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_GRENOBLE</City>
+				<City>Grenoble</City>
 				<City>Carcassonne</City>
 				<City>Toulon</City>
 				<City>Nice</City>
 				<City>Arles</City>
 				<City>Aix-en-Provence</City>
 				<City>Montpellier</City>
-				<City>TXT_KEY_CITY_NAME_CANNES</City>
+				<City>Cannes</City>
 				<City>Saint &#201;tienne</City>
 				<!-- Rhye - end -->
 			</Cities>
@@ -3054,12 +3054,12 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_YAMAMA</City>
-				<City>TXT_KEY_CITY_NAME_KAIROUAN</City>
-				<City>TXT_KEY_CITY_NAME_ORAN</City>
-				<City>TXT_KEY_CITY_NAME_FEZ</City>
-				<City>TXT_KEY_CITY_NAME_CASABLANCA</City>
-				<City>TXT_KEY_CITY_NAME_MARRAKECH</City>
+				<City>Yamama</City>
+				<City>Al-Qairawan</City>
+				<City>Oran</City>
+				<City>Fas</City>
+				<City>Ad-Dar al-Baydah</City>
+				<City>Murrakus</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -4837,7 +4837,7 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>La Spezia</City>
+				<City>A Spèza</City>
 				<City>Sann-a</City>
 				<City>San Remo</City>
 				<City>Camogli</City>
