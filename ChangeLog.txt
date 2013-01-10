@@ -18,11 +18,13 @@ Changes for RFCE 1.2:
 	General changes:
 		- Spawn of Arabia moved back one turn, to 632AD
 		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
+	
 	XML and Text updates:
-		- Cities build outside the Citymap will get a proper name (no Persian names for Bulgaria for example)
+		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
+		- Fixed sound issues for Venice and Genoa
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -873,7 +873,7 @@
 				<City>Hall</City>
 				<City>Bregenz</City>
 				<City>Villach</City>
-				<City>St Polten</City>
+				<City>St. Polten</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -1412,9 +1412,7 @@
 			<Cities>
 				<!-- Rhye - start -->
 				<City>Pliska</City>
-				<City>Sofia</City>
 				<City>Plovdiv</City>
-				<City>Varna</City>
 				<City>Burgas</City>
 				<City>Ruse</City>
 				<City>Dobrich</City>
@@ -2263,14 +2261,8 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_THESSALONICA</City>
-				<City>TXT_KEY_CITY_NAME_ADRIANOPLE</City>
-				<City>TXT_KEY_CITY_NAME_NICAEA</City>
-				<City>TXT_KEY_CITY_NAME_ANTIOCH</City>
 				<City>TXT_KEY_CITY_NAME_NICOMEDIA</City>
 				<City>TXT_KEY_CITY_NAME_ANGORA</City>
-				<!-- Rhye - end -->
 				<City>TXT_KEY_CITY_NAME_ICONIUM</City>
 				<City>TXT_KEY_CITY_NAME_LAODICEA</City>
 				<City>TXT_KEY_CITY_NAME_DORYLAEUM</City>
@@ -2284,7 +2276,6 @@
 				<City>TXT_KEY_CITY_NAME_ODESSOS</City>
 				<City>TXT_KEY_CITY_NAME_MESEMBRIA</City>
 				<City>TXT_KEY_CITY_NAME_SARDICA</City>
-				<City>TXT_KEY_CITY_NAME_RAGUSA</City>
 				<City>TXT_KEY_CITY_NAME_PHILIPPI</City>
 				<City>TXT_KEY_CITY_NAME_JUSTINIANOPOLIS</City>
 				<City>TXT_KEY_CITY_NAME_IOANNINA</City>
@@ -2303,7 +2294,6 @@
 				<City>TXT_KEY_CITY_NAME_SEBASTEA</City>
 				<City>TXT_KEY_CITY_NAME_MYRA</City>
 				<City>TXT_KEY_CITY_NAME_GANGRA</City>
-				<City>TXT_KEY_CITY_NAME_OCHRYD</City>
 				<City>TXT_KEY_CITY_NAME_BUTHROTUM</City>
 				<City>TXT_KEY_CITY_NAME_NAISSUS</City>
 				<City>TXT_KEY_CITY_NAME_CHERSON</City>
@@ -3057,8 +3047,8 @@
 				<City>Yamama</City>
 				<City>Al-Qairawan</City>
 				<City>Oran</City>
-				<City>Fas</City>
 				<City>Ad-Dar al-Baydah</City>
+				<City>Fas</City>
 				<City>Murrakus</City>
 				<!-- Rhye - end -->
 			</Cities>
@@ -3938,6 +3928,7 @@
 				<City>TXT_KEY_CITY_NAME_COVENTRY</City>
 				<City>TXT_KEY_CITY_NAME_WARWICK</City>
 				<City>Cardiff</City>
+				<City>Oxford</City>
 				<City>TXT_KEY_CITY_NAME_LIVERPOOL</City>
 				<City>TXT_KEY_CITY_NAME_DOVER</City>
 				<City>TXT_KEY_CITY_NAME_BRIGHTON</City>
@@ -4393,17 +4384,14 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_CHARTRES</City>
 				<City>TXT_KEY_CITY_NAME_POITIERS</City>
 				<City>TXT_KEY_CITY_NAME_BAYONNE</City>
-				<City>Caen</City>
 				<City>TXT_KEY_CITY_NAME_LE_MANS</City>
 				<City>TXT_KEY_CITY_NAME_NANCY</City>
 				<City>TXT_KEY_CITY_NAME_LILLE</City>
 				<City>TXT_KEY_CITY_NAME_LOURDES</City>
 				<City>TXT_KEY_CITY_NAME_LA_ROCHELLE</City>
 				<City>TXT_KEY_CITY_NAME_BOURGES</City>
-				<City>TXT_KEY_CITY_NAME_CALAIS</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -4837,11 +4825,11 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>A Spèza</City>
 				<City>Sann-a</City>
-				<City>San Remo</City>
-				<City>Camogli</City>
+				<City>Speza</City>
+				<City>Sanremo</City>
 				<City>Chiavari</City>
+				<City>Camuggi</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -5721,24 +5709,24 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Visegrad</City>
-				<City>Kecskemet</City>
-				<City>Gyor</City>
-				<City>Csongrad</City>
+				<City>Visegrád</City>
+				<City>Kecskemét</City>
+				<City>Gyõr</City>
+				<City>Csongrád</City>
 				<City>Fogaras</City>
-				<City>Szigetvar</City>
-				<City>Mako</City>
-				<City>Bacs</City>
-				<City>Zemplen</City>
-				<City>Kaposvar</City>
-				<City>Zalavar</City>
+				<City>Szigetvár</City>
+				<City>Makó</City>
+				<City>Bács</City>
+				<City>Zemplén</City>
+				<City>Kaposvár</City>
+				<City>Zalavár</City>
 				<City>Borsod</City>
-				<City>Somogyvar</City>
-				<City>Valkovar</City>
-				<City>Csanad</City>
-				<City>Cegled</City>
-				<City>Szatmar</City>
-				<City>Ujvidek</City>
+				<City>Somogyvár</City>
+				<City>Valkóvár</City>
+				<City>Csanád</City>
+				<City>Cegléd</City>
+				<City>Szatmár</City>
+				<City>Újvidék</City>
 				<City>Zenta</City>
 				<City>Tihany</City>
 				<City>Torda</City>
@@ -6567,7 +6555,7 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_VOLOGDA</City>
+				<City>Vologda</City>
 				<City>Perm</City>
 				<City>Pskov</City>
 				<City>Suzdal</City>
@@ -7546,18 +7534,15 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Poznan</City>
 				<City>Lodz</City>
 				<City>Lublin</City>
 				<City>Gdynia</City>
-				<City>Wroclaw</City>
 				<City>Gniezno</City>
 				<City>Szczecin</City>
 				<City>Bydgoszcz</City>
 				<City>Opole</City>
 				<City>Elblag</City>
 				<City>Plock</City>
-				<City>Breslau</City>
 				<City>Katowice</City>
 				<!-- Rhye - end -->
 			</Cities>
@@ -7987,11 +7972,6 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_COIMBRA</City>
-				<City>TXT_KEY_CITY_NAME_LAGOS</City>
-				<City>TXT_KEY_CITY_NAME_BRAGA</City>
-				<City>TXT_KEY_CITY_NAME_LEIRIA</City>
-				<City>TXT_KEY_CITY_NAME_BRAGANZA</City>
 				<City>TXT_KEY_CITY_NAME_SAGRES</City>
 				<City>TXT_KEY_CITY_NAME_AVEIRO</City>
 				<City>TXT_KEY_CITY_NAME_VISEU</City>
@@ -8013,8 +7993,6 @@
 				<City>TXT_KEY_CITY_NAME_ALMADA</City>
 				<City>TXT_KEY_CITY_NAME_ESTREMOZ</City>
 				<City>TXT_KEY_CITY_NAME_MIRANDA_DO_DOURO</City>
-				<City>Guimar&#227;es</City>
-				<City>&#201;vora</City>
 				<City>Covilh&#227;</City>
 				<City>Leix&#245;es</City>
 				<City>Set&#250;bal</City>
@@ -8436,7 +8414,6 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_MURCIA</City>
 				<City>TXT_KEY_CITY_NAME_VITORIA</City>
 				<City>Oviedo</City>
 				<City>TXT_KEY_CITY_NAME_ALICANTE</City>
@@ -8453,7 +8430,6 @@
 				<City>TXT_KEY_CITY_NAME_SAN_SEBASTIAN</City>
 				<City>TXT_KEY_CITY_NAME_HUELVA</City>
 				<City>TXT_KEY_CITY_NAME_IBIZA</City>
-				<City>TXT_KEY_CITY_NAME_LAS_PALMAS</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -8865,9 +8841,7 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Göteborg</City>
-				<City>Malmö</City>
-				<City>Sigtaguna</City>
+				<City>Sigtuna</City>
 				<City>Västerås</City>
 				<City>Örebro</City>
 				<City>Linköping</City>
@@ -9283,7 +9257,6 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>TXT_KEY_CITY_NAME_GAZIANTEP</City>
 				<City>TXT_KEY_CITY_NAME_MARSIN</City>
 				<City>TXT_KEY_CITY_NAME_ZONGULDAK</City>
 				<City>TXT_KEY_CITY_NAME_DENIZLI</City>
@@ -9298,7 +9271,6 @@
 				<City>TXT_KEY_CITY_NAME_SIVAS</City>
 				<City>TXT_KEY_CITY_NAME_AMASYA</City>
 				<City>TXT_KEY_CITY_NAME_MARMARIS</City>
-				<City>Iznik</City>
 				<City>Bilecik</City>
 				<City>Efes</City>
 				<City>Bergama</City>
@@ -9307,7 +9279,6 @@
 				<City>Kerc</City>
 				<City>Tergoviste</City>
 				<City>Semendre</City>
-				<City>Kastamonu</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -9721,9 +9692,15 @@
 				<!-- Rhye - start -->
 				<City>Padua</City>
 				<City>Verona</City>
+				<City>Trevixo</City>
+				<City>Belluno</City>
+				<City>Feltre</City>
 				<City>Este</City>
-				<City>Maròstega</City>
-				<City>Belùn</City>
+				<City>Udine</City>
+				<City>Pordenone</City>
+				<City>Sacile</City>
+				<City>Codroipo</City>
+				<City>Aquileia</City>
 				<City>Asolo</City>
 				<!-- Rhye - end -->
 			</Cities>
@@ -10154,9 +10131,6 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
-				<City>Vilnius</City>
-				<City>Kaunas</City>
-				<City>Klaipeda</City>
 				<City>Siauliai</City>
 				<City>Panevezys</City>
 				<City>Visaginas</City>
@@ -10601,7 +10575,7 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<City>THIS NAME IS BUGGED</City>
+				<City>THIS NAME IS BUGGED, THE POPE CAN'T FOUND CITIES</City>
 			</Cities>
 			<Buildings/>
 			<Units>
@@ -10670,26 +10644,16 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<City>TXT_KEY_CITY_NAME_CHEROKEE</City>
-				<City>TXT_KEY_CITY_NAME_ANASAZI</City>
-				<City>TXT_KEY_CITY_NAME_TEOIHUACAN</City>
-				<City>TXT_KEY_CITY_NAME_OLMEC</City>
-				<City>TXT_KEY_CITY_NAME_ZAPOTEC</City>
-				<City>TXT_KEY_CITY_NAME_CHINOOK</City>
-				<City>TXT_KEY_CITY_NAME_APACHE</City>
-				<City>TXT_KEY_CITY_NAME_CHEHALIS</City>
-				<City>TXT_KEY_CITY_NAME_ILLINOIS</City>
-				<City>TXT_KEY_CITY_NAME_NAVAJO</City>
-				<City>TXT_KEY_CITY_NAME_CARIB</City>
+				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
+				<City>TXT_KEY_CITY_NAME_AVAR</City>
+				<City>TXT_KEY_CITY_NAME_CUMAN</City>
+				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
 				<City>TXT_KEY_CITY_NAME_SAXON</City>
 				<City>TXT_KEY_CITY_NAME_VANDAL</City>
 				<City>TXT_KEY_CITY_NAME_GOTH</City>
-				<City>TXT_KEY_CITY_NAME_ANGLE</City>
-				<City>TXT_KEY_CITY_NAME_KHAZAK</City>
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_JUTE</City>
 				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
@@ -10697,7 +10661,17 @@
 				<City>TXT_KEY_CITY_NAME_GAUL</City>
 				<City>TXT_KEY_CITY_NAME_MINOAN</City>
 				<City>TXT_KEY_CITY_NAME_MYCENIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
+				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
+				<City>TXT_KEY_CITY_NAME_NUMIDIAN</City>
+				<City>TXT_KEY_CITY_NAME_SARMATIAN</City>
+				<City>TXT_KEY_CITY_NAME_SCYTHIAN</City>
+				<City>TXT_KEY_CITY_NAME_ASSYRIAN</City>
+				<City>TXT_KEY_CITY_NAME_HITTITE</City>
+				<City>TXT_KEY_CITY_NAME_PARTHIAN</City>
+				<City>TXT_KEY_CITY_NAME_NUBIAN</City>
+				<City>TXT_KEY_CITY_NAME_HURRIAN</City>
+				<City>TXT_KEY_CITY_NAME_LIBYAN</City>
+				<City>TXT_KEY_CITY_NAME_TARTAR</City>
 			</Cities>
 			<Buildings>
 				<Building>
@@ -10733,7 +10707,6 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<!-- 3Miro: some recursion here, indy1 derives from indy2 and indy2 from indy2???? -->
 			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound/>
 			<CivilizationActionSound/>
@@ -10766,39 +10739,32 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
-				<City>TXT_KEY_CITY_NAME_LIGURIAN</City>
+				<City>TXT_KEY_CITY_NAME_AVAR</City>
+				<City>TXT_KEY_CITY_NAME_CUMAN</City>
+				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
+				<City>TXT_KEY_CITY_NAME_SAXON</City>
+				<City>TXT_KEY_CITY_NAME_VANDAL</City>
+				<City>TXT_KEY_CITY_NAME_GOTH</City>
+				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
+				<City>TXT_KEY_CITY_NAME_GEPID</City>
+				<City>TXT_KEY_CITY_NAME_HUN</City>
+				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
+				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
+				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
+				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
+				<City>TXT_KEY_CITY_NAME_GAUL</City>
+				<City>TXT_KEY_CITY_NAME_MINOAN</City>
+				<City>TXT_KEY_CITY_NAME_MYCENIAN</City>
+				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_NUMIDIAN</City>
 				<City>TXT_KEY_CITY_NAME_SARMATIAN</City>
 				<City>TXT_KEY_CITY_NAME_SCYTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_ASSYRIAN</City>
 				<City>TXT_KEY_CITY_NAME_HITTITE</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
-				<City>TXT_KEY_CITY_NAME_MAURYAN</City>
 				<City>TXT_KEY_CITY_NAME_PARTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
 				<City>TXT_KEY_CITY_NAME_NUBIAN</City>
-				<City>TXT_KEY_CITY_NAME_BACTRIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
-				<City>TXT_KEY_CITY_NAME_CUMAN</City>
 				<City>TXT_KEY_CITY_NAME_HURRIAN</City>
-				<City>TXT_KEY_CITY_NAME_KASSITE</City>
-				<City>TXT_KEY_CITY_NAME_BANTU</City>
-				<City>TXT_KEY_CITY_NAME_KHOISAN</City>
 				<City>TXT_KEY_CITY_NAME_LIBYAN</City>
-				<City>TXT_KEY_CITY_NAME_SHANGIAN</City>
-				<City>TXT_KEY_CITY_NAME_YAYOI</City>
-				<City>TXT_KEY_CITY_NAME_ZHOU</City>
-				<City>TXT_KEY_CITY_NAME_AINU</City>
-				<City>TXT_KEY_CITY_NAME_POLYNESIAN</City>
-				<City>TXT_KEY_CITY_NAME_ARYAN</City>
-				<City>TXT_KEY_CITY_NAME_AVAR</City>
-				<City>TXT_KEY_CITY_NAME_GHUZZ</City>
-				<City>TXT_KEY_CITY_NAME_HSUNGNU</City>
-				<City>TXT_KEY_CITY_NAME_KUSHANS</City>
-				<City>TXT_KEY_CITY_NAME_YUECHI</City>
-				<City>TXT_KEY_CITY_NAME_SAKAE</City>
-				<City>TXT_KEY_CITY_NAME_UZBEK</City>
 				<City>TXT_KEY_CITY_NAME_TARTAR</City>
 			</Cities>
 			<Buildings>
@@ -10867,39 +10833,32 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
-				<City>TXT_KEY_CITY_NAME_LIGURIAN</City>
+				<City>TXT_KEY_CITY_NAME_AVAR</City>
+				<City>TXT_KEY_CITY_NAME_CUMAN</City>
+				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
+				<City>TXT_KEY_CITY_NAME_SAXON</City>
+				<City>TXT_KEY_CITY_NAME_VANDAL</City>
+				<City>TXT_KEY_CITY_NAME_GOTH</City>
+				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
+				<City>TXT_KEY_CITY_NAME_GEPID</City>
+				<City>TXT_KEY_CITY_NAME_HUN</City>
+				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
+				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
+				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
+				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
+				<City>TXT_KEY_CITY_NAME_GAUL</City>
+				<City>TXT_KEY_CITY_NAME_MINOAN</City>
+				<City>TXT_KEY_CITY_NAME_MYCENIAN</City>
+				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_NUMIDIAN</City>
 				<City>TXT_KEY_CITY_NAME_SARMATIAN</City>
 				<City>TXT_KEY_CITY_NAME_SCYTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_ASSYRIAN</City>
 				<City>TXT_KEY_CITY_NAME_HITTITE</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
-				<City>TXT_KEY_CITY_NAME_MAURYAN</City>
 				<City>TXT_KEY_CITY_NAME_PARTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
 				<City>TXT_KEY_CITY_NAME_NUBIAN</City>
-				<City>TXT_KEY_CITY_NAME_BACTRIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
-				<City>TXT_KEY_CITY_NAME_CUMAN</City>
 				<City>TXT_KEY_CITY_NAME_HURRIAN</City>
-				<City>TXT_KEY_CITY_NAME_KASSITE</City>
-				<City>TXT_KEY_CITY_NAME_BANTU</City>
-				<City>TXT_KEY_CITY_NAME_KHOISAN</City>
 				<City>TXT_KEY_CITY_NAME_LIBYAN</City>
-				<City>TXT_KEY_CITY_NAME_SHANGIAN</City>
-				<City>TXT_KEY_CITY_NAME_YAYOI</City>
-				<City>TXT_KEY_CITY_NAME_ZHOU</City>
-				<City>TXT_KEY_CITY_NAME_AINU</City>
-				<City>TXT_KEY_CITY_NAME_POLYNESIAN</City>
-				<City>TXT_KEY_CITY_NAME_ARYAN</City>
-				<City>TXT_KEY_CITY_NAME_AVAR</City>
-				<City>TXT_KEY_CITY_NAME_GHUZZ</City>
-				<City>TXT_KEY_CITY_NAME_HSUNGNU</City>
-				<City>TXT_KEY_CITY_NAME_KUSHANS</City>
-				<City>TXT_KEY_CITY_NAME_YUECHI</City>
-				<City>TXT_KEY_CITY_NAME_SAKAE</City>
-				<City>TXT_KEY_CITY_NAME_UZBEK</City>
 				<City>TXT_KEY_CITY_NAME_TARTAR</City>
 			</Cities>
 			<Buildings>
@@ -10968,39 +10927,32 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
-				<City>TXT_KEY_CITY_NAME_LIGURIAN</City>
+				<City>TXT_KEY_CITY_NAME_AVAR</City>
+				<City>TXT_KEY_CITY_NAME_CUMAN</City>
+				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
+				<City>TXT_KEY_CITY_NAME_SAXON</City>
+				<City>TXT_KEY_CITY_NAME_VANDAL</City>
+				<City>TXT_KEY_CITY_NAME_GOTH</City>
+				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
+				<City>TXT_KEY_CITY_NAME_GEPID</City>
+				<City>TXT_KEY_CITY_NAME_HUN</City>
+				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
+				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
+				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
+				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
+				<City>TXT_KEY_CITY_NAME_GAUL</City>
+				<City>TXT_KEY_CITY_NAME_MINOAN</City>
+				<City>TXT_KEY_CITY_NAME_MYCENIAN</City>
+				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_NUMIDIAN</City>
 				<City>TXT_KEY_CITY_NAME_SARMATIAN</City>
 				<City>TXT_KEY_CITY_NAME_SCYTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_ASSYRIAN</City>
 				<City>TXT_KEY_CITY_NAME_HITTITE</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
-				<City>TXT_KEY_CITY_NAME_MAURYAN</City>
 				<City>TXT_KEY_CITY_NAME_PARTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
 				<City>TXT_KEY_CITY_NAME_NUBIAN</City>
-				<City>TXT_KEY_CITY_NAME_BACTRIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
-				<City>TXT_KEY_CITY_NAME_CUMAN</City>
 				<City>TXT_KEY_CITY_NAME_HURRIAN</City>
-				<City>TXT_KEY_CITY_NAME_KASSITE</City>
-				<City>TXT_KEY_CITY_NAME_BANTU</City>
-				<City>TXT_KEY_CITY_NAME_KHOISAN</City>
 				<City>TXT_KEY_CITY_NAME_LIBYAN</City>
-				<City>TXT_KEY_CITY_NAME_SHANGIAN</City>
-				<City>TXT_KEY_CITY_NAME_YAYOI</City>
-				<City>TXT_KEY_CITY_NAME_ZHOU</City>
-				<City>TXT_KEY_CITY_NAME_AINU</City>
-				<City>TXT_KEY_CITY_NAME_POLYNESIAN</City>
-				<City>TXT_KEY_CITY_NAME_ARYAN</City>
-				<City>TXT_KEY_CITY_NAME_AVAR</City>
-				<City>TXT_KEY_CITY_NAME_GHUZZ</City>
-				<City>TXT_KEY_CITY_NAME_HSUNGNU</City>
-				<City>TXT_KEY_CITY_NAME_KUSHANS</City>
-				<City>TXT_KEY_CITY_NAME_YUECHI</City>
-				<City>TXT_KEY_CITY_NAME_SAKAE</City>
-				<City>TXT_KEY_CITY_NAME_UZBEK</City>
 				<City>TXT_KEY_CITY_NAME_TARTAR</City>
 			</Cities>
 			<Buildings>
@@ -11068,68 +11020,33 @@
 			<bPlayable>0</bPlayable>
 			<bAIPlayable>0</bAIPlayable>
 			<Cities>
-				<City>TXT_KEY_CITY_NAME_CHEROKEE</City>
-				<City>TXT_KEY_CITY_NAME_ANASAZI</City>
-				<City>TXT_KEY_CITY_NAME_TEOIHUACAN</City>
-				<City>TXT_KEY_CITY_NAME_OLMEC</City>
-				<City>TXT_KEY_CITY_NAME_ZAPOTEC</City>
-				<City>TXT_KEY_CITY_NAME_CHINOOK</City>
-				<City>TXT_KEY_CITY_NAME_APACHE</City>
-				<City>TXT_KEY_CITY_NAME_CHEHALIS</City>
-				<City>TXT_KEY_CITY_NAME_ILLINOIS</City>
-				<City>TXT_KEY_CITY_NAME_NAVAJO</City>
-				<City>TXT_KEY_CITY_NAME_CARIB</City>
+				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
+				<City>TXT_KEY_CITY_NAME_AVAR</City>
+				<City>TXT_KEY_CITY_NAME_CUMAN</City>
+				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
 				<City>TXT_KEY_CITY_NAME_SAXON</City>
 				<City>TXT_KEY_CITY_NAME_VANDAL</City>
 				<City>TXT_KEY_CITY_NAME_GOTH</City>
-				<City>TXT_KEY_CITY_NAME_ANGLE</City>
-				<City>TXT_KEY_CITY_NAME_KHAZAK</City>
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
-				<City>TXT_KEY_CITY_NAME_BURGUNDIAN</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_JUTE</City>
-				<City>TXT_KEY_CITY_NAME_PHEONICIAN</City>
+				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
 				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
 				<City>TXT_KEY_CITY_NAME_GAUL</City>
 				<City>TXT_KEY_CITY_NAME_MINOAN</City>
 				<City>TXT_KEY_CITY_NAME_MYCENIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIMMERIAN</City>
-				<City>TXT_KEY_CITY_NAME_LIGURIAN</City>
+				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_NUMIDIAN</City>
 				<City>TXT_KEY_CITY_NAME_SARMATIAN</City>
 				<City>TXT_KEY_CITY_NAME_SCYTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_VISIGOTH</City>
 				<City>TXT_KEY_CITY_NAME_ASSYRIAN</City>
 				<City>TXT_KEY_CITY_NAME_HITTITE</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
-				<City>TXT_KEY_CITY_NAME_MAURYAN</City>
 				<City>TXT_KEY_CITY_NAME_PARTHIAN</City>
-				<City>TXT_KEY_CITY_NAME_HARAPPAN</City>
 				<City>TXT_KEY_CITY_NAME_NUBIAN</City>
-				<City>TXT_KEY_CITY_NAME_BACTRIAN</City>
-				<City>TXT_KEY_CITY_NAME_CIRCASSIAN</City>
-				<City>TXT_KEY_CITY_NAME_CUMAN</City>
 				<City>TXT_KEY_CITY_NAME_HURRIAN</City>
-				<City>TXT_KEY_CITY_NAME_KASSITE</City>
-				<City>TXT_KEY_CITY_NAME_BANTU</City>
-				<City>TXT_KEY_CITY_NAME_KHOISAN</City>
 				<City>TXT_KEY_CITY_NAME_LIBYAN</City>
-				<City>TXT_KEY_CITY_NAME_SHANGIAN</City>
-				<City>TXT_KEY_CITY_NAME_YAYOI</City>
-				<City>TXT_KEY_CITY_NAME_ZHOU</City>
-				<City>TXT_KEY_CITY_NAME_AINU</City>
-				<City>TXT_KEY_CITY_NAME_POLYNESIAN</City>
-				<City>TXT_KEY_CITY_NAME_ARYAN</City>
-				<City>TXT_KEY_CITY_NAME_AVAR</City>
-				<City>TXT_KEY_CITY_NAME_GHUZZ</City>
-				<City>TXT_KEY_CITY_NAME_HSUNGNU</City>
-				<City>TXT_KEY_CITY_NAME_KUSHANS</City>
-				<City>TXT_KEY_CITY_NAME_YUECHI</City>
-				<City>TXT_KEY_CITY_NAME_SAKAE</City>
-				<City>TXT_KEY_CITY_NAME_UZBEK</City>
 				<City>TXT_KEY_CITY_NAME_TARTAR</City>
 			</Cities>
 			<Buildings>

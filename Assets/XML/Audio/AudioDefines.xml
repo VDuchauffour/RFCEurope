@@ -6764,7 +6764,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_ITLAY_ORDER</SoundID>
+			<SoundID>SND_ITALY_ORDER</SoundID>
 			<Filename>Sounds/Units/ItalyOrder</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
