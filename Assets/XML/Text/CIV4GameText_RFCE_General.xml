@@ -783,6 +783,24 @@
 		<Portuguese>Aprimoramento de Unidades</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_RESOURCE_DISCOVERED</Tag>
+		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
+		<French>Vous avez d&#233;couvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] pr&#232;s de %s2_CityName !</French>
+		<German>Ihr habt in der N&#228;he der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
+		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
+		<Spanish>Hab&#233;is descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RESOURCE_EXHAUSTED</Tag>
+		<English>A source of [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] near %s2_CityName has been exhausted!</English>
+		<French>Notre source [NUM1:de:d'] [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] est perdue.</French>
+		<German>Verlust der Ressource [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT].</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] [NUM1:finito:finita].</Italian>
+		<Spanish>[NUM1:Se ha perdido el:Se ha perdido la:Se han perdido los:Se han perdido las] [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT].</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1% %F2from Resources</English>
 		<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>
