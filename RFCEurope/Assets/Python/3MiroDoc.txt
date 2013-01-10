@@ -6,7 +6,7 @@ Consts: (with consts for players and civs and some relations, edit for new civ)
 	Many functions reference those and there are search algorithm that I do not whant to change, so leave this with the comment on how to be used
 
 AIWars (not sure how this works, edit for new civ)
-Barbs (edit for babrb invasions, Mongols would be here, also indep cities)
+Barbs (edit for barb invasions, Mongols would be here, also indep cities)
 CityNameManager (for city name maps only)
 RFCEventHandler ( Tech and city building UHVs and UPs)
 Resourse (resourses appear)
@@ -20,6 +20,7 @@ RiseAndFall: initially consts on top,
 
 Victory: checks for many of the victories
 	checkPlayerTurn: times victories (i.e. at year)
+
 
 
 Some C++ pointers:
@@ -40,11 +41,10 @@ CvPlayer.* : doTurn() gets called for all players and it calls Pyton first
 CvCity.* : doTurn() gets called every turn from the CvPlayer
 	Porduction - does the production and overflow
 	popOrder() does a lot of stuff, changes the production order
-	
+
 CvCityAI.* : inherits from CvCity and implements the AI_chooseProduction() popOrder -> unitAIViability
 
 logMsg: with printf type of format outputs info to sdk* in Log folder
-
 
 CvGameTextMgr.cpp: all the year and begining of the game texts, in Rhye.cpp the civs are addressed as in the XML file, i.e. orderes as in the XML file
 	setDateStrPlayer: the current year and the hide year before calendar
@@ -74,7 +74,7 @@ Some XML pointers:
 
 To add a new nation:
 	Add it to the Civilizations XML file along with the Leader, Civ Names, UP, UHV, ART
-	Add it to c++, CvDefines.h for the number of civs, Rhyes.h and Rhyes.cpp. Increase the size of the arrays and add setler maps.
+	Add it to c++, CvDefines.h for the number of civs, Rhyes.h and Rhyes.cpp. Increase the size of the arrays and add settler maps.
 	Add it to Consts.py with maps, grouping and so on.
 	Add it to RhyesAndFall.py for starting units and gold (and techs)
 	Add it to the WB file
