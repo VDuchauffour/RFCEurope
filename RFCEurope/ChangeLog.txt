@@ -22,6 +22,7 @@ Changes for RFCE 1.2:
 
 	XML and Text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
+		- Portuguese translations by Spirictum
 
 	Art/sound updates:
 		- Added theme files for the mod

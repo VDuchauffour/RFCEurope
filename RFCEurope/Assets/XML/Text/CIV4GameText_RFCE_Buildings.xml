@@ -1144,7 +1144,7 @@
 		<German>mit [LINK=literal]%s1_Building[\LINK]</German>
 		<Italian>with [LINK=literal]%s1_Building[\LINK]</Italian>
 		<Spanish>with [LINK=literal]%s1_Building[\LINK]</Spanish>
-		<Portuguese>with [LINK=literal]%s1_Building[\LINK]</Portuguese>
+		<Portuguese>com [LINK=literal]%s1_Building[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_CULTURE1</Tag>
@@ -1162,7 +1162,7 @@
 		<German>mit [LINK=literal]%s1_Religion[\LINK]</German>
 		<Italian>with [LINK=literal]%s1_Religion[\LINK]</Italian>
 		<Spanish>with [LINK=literal]%s1_Religion[\LINK]</Spanish>
-		<Portuguese>with [LINK=literal]%s1_Religion[\LINK]</Portuguese>
+		<Portuguese>com [LINK=literal]%s1_Religion[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PAGAN_CULTURE_PER_CITY</Tag>
@@ -1189,7 +1189,7 @@
 		<German>[ICON_BULLET]%D1_Mod % Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt. </German>
 		<Italian>[ICON_BULLET]%D1_Mod % di interessi aggiunti al tuo [ICON_GOLD] all'inizio di ogni turno. </Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] no começo de cada turno. </Portuguese>
+		<Portuguese>[ICON_BULLET]%D1_Mod % de juro adicionado ao [ICON_GOLD] no começo de cada turno. </Portuguese>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

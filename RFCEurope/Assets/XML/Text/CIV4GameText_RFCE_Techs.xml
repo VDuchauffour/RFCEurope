@@ -57,7 +57,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Estribo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTROLABE</Tag>
@@ -82,7 +86,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Astrolábio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKMAKING</Tag>
@@ -107,7 +115,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Relojoaria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ART</Tag>
@@ -132,7 +144,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Arte Religiosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARCHITECTURE</Tag>
@@ -157,7 +173,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Arquitetura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MONASTICISM</Tag>
@@ -182,7 +202,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Monasticismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLASSICAL_KNOWLEDGE</Tag>
@@ -207,7 +231,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Conhecimento Clássico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VAULTED_ARCHES</Tag>
@@ -232,7 +260,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Arcos abobadados</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FARRIERS</Tag>
@@ -257,7 +289,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Ferradores</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIEGE_ENGINES</Tag>
@@ -282,7 +318,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Armas de Cerco</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BLAST_FURNACE</Tag>
@@ -307,7 +347,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Alto-Forno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GOTHIC_ARCHITECTURE</Tag>
@@ -332,7 +376,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Arquitectura Gótica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MONUMENT_BUILDING</Tag>
@@ -357,7 +405,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Edificação de Monumento</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ALCHEMY</Tag>
@@ -382,7 +434,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Alquimia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LATEEN_SAILS</Tag>
@@ -407,7 +463,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Velas Latinas</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PLATE_ARMOR</Tag>
@@ -432,7 +492,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Armadura de Placas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HERBAL_MEDICINE</Tag>
@@ -457,7 +521,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Medicina Herbal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_STEAM_ENGINES</Tag>
@@ -482,7 +550,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Máquinas a Vapor</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SHIPBUILDING</Tag>
@@ -507,7 +579,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Construção Naval</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PATRONAGE</Tag>
@@ -532,7 +608,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Mecenato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PUBLIC_WORKS</Tag>
@@ -557,7 +637,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Obras Públicas</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MILITARY_TACTICS</Tag>
@@ -582,7 +666,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Táticas Militares</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRADING_COMPANIES</Tag>
@@ -607,7 +695,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Companhias Comerciais</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARABIC_KNOWLEDGE</Tag>
@@ -632,7 +724,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Conhecimento Árabe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARABIC_MEDICINE</Tag>
@@ -657,7 +753,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Medicina Árabe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXPLOSIVES</Tag>
@@ -682,7 +782,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Explosivos</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MACHINE_TOOLS</Tag>
@@ -707,7 +811,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Máquinas Ferramentas</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_ENGINEERING</Tag>
@@ -732,7 +840,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Engenharia Civil</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FREE_MARKET</Tag>
@@ -757,7 +869,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Livre Mercado</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RIGHT_OF_MAN</Tag>
@@ -782,7 +898,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Direito do Homem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMBINED_ARMS</Tag>
@@ -807,7 +927,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Armas Combinadas</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INDUSTRIAL_TECH</Tag>
@@ -832,7 +956,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Revolução Industrial</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MANORIALISM</Tag>
@@ -857,7 +985,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Senhorialismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHIVALRY</Tag>
@@ -882,7 +1014,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Cavalheirismo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MATCHLOCK</Tag>
@@ -907,7 +1043,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Pederneira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY</Tag>
@@ -932,7 +1072,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Exército Profissional</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POLYGONAL_FORT</Tag>
@@ -957,7 +1101,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Forte Poligonal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_ART</Tag>
@@ -982,7 +1130,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Arte Renascentista</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NAVAL_ARCHITECTURE</Tag>
@@ -1007,7 +1159,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Arquitetura Naval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BRONZE_CASTING</Tag>
@@ -1032,7 +1188,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Fundição de Bronze</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHAIN_MAIL</Tag>
@@ -1057,7 +1217,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Cota de Malha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARISTOCRACY</Tag>
@@ -1082,7 +1246,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>
+			<Text>Aristocracia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY_HELP</Tag>
@@ -1091,6 +1259,6 @@
 		<German>[ICON_BULLET]Veraltet Ordensmeister der Ritterorden</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Obsoleta Mestres (Executivos) das Ordens Cavalariças</Portuguese>
 	</TEXT>
 </Civ4GameText>

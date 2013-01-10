@@ -154,7 +154,7 @@
 		</German>
 		<Italian>Ronconiere</Italian>
 		<Spanish>Piquero papal</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Guisarmeiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUISARME_PEDIA</Tag>
@@ -176,7 +176,7 @@
 		</German>
 		<Italian>Picchiere</Italian>
 		<Spanish>Piquero</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Piqueiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIKEMAN_PEDIA</Tag>
@@ -198,7 +198,7 @@
 		</German>
 		<Italian>Arbalestiere</Italian>
 		<Spanish>Ballestero pesado</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Arbaleteiro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARBALEST_PEDIA</Tag>
@@ -374,7 +374,7 @@
 		</German>
 		<Italian>Ussaro</Italian>
 		<Spanish>Húsar</Spanish>
-		<Portuguese>Hussar</Portuguese>
+		<Portuguese>Hussardo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSSAR_PEDIA</Tag>
@@ -418,7 +418,7 @@
 		</German>
 		<Italian>Dragone</Italian>
 		<Spanish>Dragón</Spanish>
-		<Portuguese>Dragoon</Portuguese>
+		<Portuguese>Dragão</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRAGOON_PEDIA</Tag>
@@ -506,7 +506,7 @@
 		</German>
 		<Italian>Spadaccino Lungo</Italian>
 		<Spanish>Espadachín Largo</Spanish>
-		<Portuguese>Espadachin Largo</Portuguese>
+		<Portuguese>Guerreiro de Montante</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LONG_SWORDSMAN_PEDIA</Tag>
@@ -550,7 +550,7 @@
 		</German>
 		<Italian>Cocca</Italian>
 		<Spanish>Coca</Spanish>
-		<Portuguese>Cog</Portuguese>
+		<Portuguese>Coca</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COGGE_PEDIA</Tag>
@@ -594,7 +594,7 @@
 		</German>
 		<Italian>Holk</Italian>
 		<Spanish>Urca</Spanish>
-		<Portuguese>Holk</Portuguese>
+		<Portuguese>Urca</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOLK_PEDIA</Tag>
@@ -815,7 +815,7 @@
 		</German>
 		<Italian>Ussaro Alato</Italian>
 		<Spanish>Húsar Alado</Spanish>
-		<Portuguese>Hussar Alado</Portuguese>
+		<Portuguese>Hussardo Alado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLISH_WINGED_HUSSAR_PEDIA</Tag>
@@ -837,7 +837,7 @@
 		</German>
 		<Italian>Boiardo</Italian>
 		<Spanish>Boyardo</Spanish>
-		<Portuguese>Boyar</Portuguese>
+		<Portuguese>Boiardo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOSCOW_BOYAR_PEDIA</Tag>
@@ -877,7 +877,7 @@
 		</German>
 		<Italian>Arciere con Arco Lungo Inglese</Italian>
 		<Spanish>Saetero Inglés</Spanish>
-		<Portuguese>Longbowman</Portuguese>
+		<Portuguese>Arqueiro Inglês</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENGLISH_LONGBOWMAN_PEDIA</Tag>
@@ -943,7 +943,7 @@
 		</German>
 		<Italian>Carolean</Italian>
 		<Spanish>Carolean</Spanish>
-		<Portuguese>Karolin</Portuguese>
+		<Portuguese>Carolean</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWEDISH_KAROLIN_PEDIA</Tag>
@@ -1076,7 +1076,7 @@
 		</German>
 		<Italian>Cavaliere di San Giovanni</Italian>
 		<Spanish>Caballero de San Juan</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Cavaleiro de São João</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_HELP</Tag>
@@ -1085,7 +1085,7 @@
 		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_1]Johanniterorden[\LINK] in der Stadt</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_1]Cavaleiros Hospitalários[\LINK] presente na cidade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT</Tag>
@@ -1098,7 +1098,7 @@
 		</German>
 		<Italian>Cavaliere Templare</Italian>
 		<Spanish>Caballero Templario</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Cavaleiro Templário</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT_HELP</Tag>
@@ -1107,7 +1107,7 @@
 		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_2]Templerorden[\LINK] in der Stadt</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_2]Cavaleiros Templários[\LINK] presente na cidade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT</Tag>
@@ -1120,7 +1120,7 @@
 		</German>
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Cavaleiro Teutônico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT_HELP</Tag>
@@ -1129,7 +1129,7 @@
 		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_3]Deutscher Orden[\LINK] in der Stadt</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_3]Cavaleiros Teutônicos[\LINK] presente na cidade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
@@ -1142,7 +1142,7 @@
 		</German>
 		<Italian>Keshik</Italian>
 		<Spanish>Keshik</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Keshik</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK_PEDIA</Tag>
@@ -1164,7 +1164,7 @@
 		</German>
 		<Italian>Seljuk</Italian>
 		<Spanish>Selyuq</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Seljúcida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELJUK_PEDIA</Tag>
@@ -1186,7 +1186,7 @@
 		</German>
 		<Italian>Giannizzero</Italian>
 		<Spanish>Jenízaro</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Janízaro</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY_PEDIA</Tag>
