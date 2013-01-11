@@ -355,7 +355,6 @@
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
-
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
@@ -364,7 +363,6 @@
 	</Define>
 	<Define>
 		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
-
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -381,7 +379,6 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_DISTANCE_CITY_MAINTENANCE</DefineName>
-
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
@@ -538,7 +535,6 @@
 	</Define>
 	<Define>
 		<DefineName>LAKE_MAX_AREA_SIZE</DefineName>
-
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
@@ -579,7 +575,6 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_GOLDEN_AGE_UNITS</DefineName>
-
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
@@ -720,7 +715,6 @@
 	</Define>
 	<Define>
 		<DefineName>NUKE_POPULATION_DEATH_BASE</DefineName>
-
 		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1331,7 +1325,6 @@
 	<Define>
 		<DefineName>SCORE_WONDER_FACTOR</DefineName>
 		<!--Score you get if you have all the wonders-->
-
 		<iDefineIntVal>1000</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1434,8 +1427,7 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_WATER_SIZE_FOR_OCEAN</DefineName>
-
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>9</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_CITY_ATTACK_MODIFIER_FOR_SIEGE_TOWER</DefineName>
@@ -1476,7 +1468,6 @@
 	</Define>
 	<Define>
 		<DefineName>ESPIONAGE_INTERCEPT_SPENDING_MAX</DefineName>
-
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1661,19 +1652,10 @@
 	</Define>
 	<Define>
 		<DefineName>PATH_DAMAGE_WEIGHT</DefineName>
-
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_SPIES_NO_ENTER_BORDERS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
-
-
-
-
-
-
-
-
 </Civ4Defines>
