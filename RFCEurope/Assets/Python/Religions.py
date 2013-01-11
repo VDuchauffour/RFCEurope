@@ -453,10 +453,6 @@ class Religions:
                                 return (city.getX(), city.getY())
                 return False
 
-        #def spreadReligion(self, tCoords, iNum, iMissionary):
-        #        city = gc.getMap().plot( tCoords[0], tCoords[1] ).getPlotCity()
-        #        utils.makeUnit(iMissionary, city.getOwner(), tCoords, iNum)
-
         def spreadReligion(self, tPlot, iReligion ):
                 pPlot = gc.getMap().plot( tPlot[0], tPlot[1] )                
                 if ( pPlot.isCity() ):

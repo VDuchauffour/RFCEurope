@@ -637,24 +637,15 @@ class CvEventManager:
 		player = PyPlayer(city.getOwner())
 
 		## Topkapi Palace Start ##
-
+		
 		pCity = argsList[0]
 		pUnit = argsList[1]
 		pPlayer = gc.getPlayer(pUnit.getOwner())
 		iUnitType = pUnit.getUnitType()
-                 
-		#b_BUILDING_TOPKAPI = gc.getInfoTypeForString("BUILDING_TOPKAPI_PALACE")
-		#obsoleteTech = gc.getBuildingInfo(b_BUILDING_TOPKAPI).getObsoleteTech()
-		#if ( gc.getTeam(pPlayer.getTeam()).isHasTech(obsoleteTech) == False or obsoleteTech == -1 ):
-		#	topkapi = false
-		#	for iCity in range(pPlayer.getNumCities()):
-		#		if topkapi == false:
-		#			ppCity = pPlayer.getCity(iCity)
-		#			if ppCity.getNumActiveBuilding(b_BUILDING_TOPKAPI) == true:
-		#				topkapi = true
 		iTeam = pPlayer.getTeam()
 		pTeam = gc.getTeam(iTeam)
-		if ( pTeam.isTrainVassalUU() ):			
+		
+		if ( pTeam.isTrainVassalUU() ):
 			l_vassalUB = []
 			for iPlayer in range(gc.getMAX_PLAYERS()):
 				ppPlayer = gc.getPlayer(iPlayer)
@@ -668,17 +659,12 @@ class CvEventManager:
 								if ( iUnitType == iDefaultUnit ):
 									l_vassalUB.append(iUniqueUnit)
 			if ( len(l_vassalUB) >= 1 ):
-				##Original line would give a 1 in 5(?) chance of building vassal's unit.
-				#self.iVassalUUChance = self.getRandomNumber( 4 )
-				#self.iVassalUUChance = 0
-				#if self.iVassalUUChance == 0:
-				chance = CyGame().getSorenRandNum(len(l_vassalUB), "Random for UB")
+				chance = CyGame().getSorenRandNum(len(l_vassalUB), "Random for UU")
 				iX = pUnit.getX()
 				iY = pUnit.getY()
 				pNewUnit = pPlayer.initUnit( l_vassalUB[chance], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION )
 				pNewUnit.convert(pUnit)
-                
-                
+		
 		## Topkapi Palace End ##
 
 

@@ -10,6 +10,10 @@
 		<iDefineIntVal>319</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>MIN_VERSION</DefineName>
+		<iDefineIntVal>000</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>301</iDefineIntVal>
 	</Define>
@@ -63,12 +67,10 @@
 	</Define>
 	<Define>
 		<DefineName>STANDARD_HANDICAP</DefineName>
-		<!-- Rhye -->
 		<DefineTextVal>HANDICAP_PRINCE</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>STANDARD_HANDICAP_QUICK</DefineName>
-		<!-- Rhye -->
 		<DefineTextVal>HANDICAP_PRINCE</DefineTextVal>
 	</Define>
 	<Define>
@@ -97,12 +99,10 @@
 	</Define>
 	<Define>
 		<DefineName>AI_HANDICAP</DefineName>
-		<!-- Rhye -->
 		<DefineTextVal>HANDICAP_PRINCE</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>BARBARIAN_HANDICAP</DefineName>
-		<!-- Rhye -->
 		<DefineTextVal>HANDICAP_PRINCE</DefineTextVal>
 	</Define>
 	<Define>
@@ -135,8 +135,7 @@
 	</Define>
 	<Define>
 		<DefineName>START_YEAR</DefineName>
-		<!-- Rhye -->
-		<iDefineIntVal>-3000</iDefineIntVal>
+		<iDefineIntVal>500</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>WEEKS_PER_MONTHS</DefineName>
@@ -224,7 +223,6 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_CITY_RANGE</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -313,12 +311,10 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_TEAM_WONDERS_PER_CITY</DefineName>
-		<!-- Rhye -->
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>-1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
@@ -359,6 +355,7 @@
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
+
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
@@ -367,6 +364,7 @@
 	</Define>
 	<Define>
 		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
+
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -383,7 +381,7 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_DISTANCE_CITY_MAINTENANCE</DefineName>
-		<!-- Rhye -->
+
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
@@ -540,6 +538,7 @@
 	</Define>
 	<Define>
 		<DefineName>LAKE_MAX_AREA_SIZE</DefineName>
+
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
@@ -580,8 +579,8 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_GOLDEN_AGE_UNITS</DefineName>
+
 		<iDefineIntVal>2</iDefineIntVal>
-		<!-- Rhye -->
 	</Define>
 	<Define>
 		<DefineName>GOLDEN_AGE_UNITS_MULTIPLIER</DefineName>
@@ -701,7 +700,6 @@
 	</Define>
 	<Define>
 		<DefineName>NUKE_UNIT_DAMAGE_BASE</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>70</iDefineIntVal>
 	</Define>
 	<Define>
@@ -718,12 +716,11 @@
 	</Define>
 	<Define>
 		<DefineName>NUKE_BUILDING_DESTRUCTION_PROB</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>NUKE_POPULATION_DEATH_BASE</DefineName>
-		<!-- Rhye -->
+
 		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
 	<Define>
@@ -784,7 +781,7 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_OCCUPATION_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>OCCUPATION_TURNS_POPULATION_PERCENT</DefineName>
@@ -860,7 +857,6 @@
 	</Define>
 	<Define>
 		<DefineName>DEFY_RESOLUTION_POP_ANGER</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1009,12 +1005,10 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_UNIT_UPGRADE_COST</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>UNIT_UPGRADE_COST_PER_PRODUCTION</DefineName>
-		<!-- Rhye -->
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1146,7 +1140,6 @@
 	</Define>
 	<Define>
 		<DefineName>CAMERA_START_DISTANCE</DefineName>
-		<!-- Rhye -->
 		<fDefineFloatVal>2800</fDefineFloatVal>
 	</Define>
 	<Define>
@@ -1187,7 +1180,7 @@
 	</Define>
 	<Define>
 		<DefineName>RENDER_GLOBEVIEW_CLOUDS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RENDER_WATER</DefineName>
@@ -1338,6 +1331,7 @@
 	<Define>
 		<DefineName>SCORE_WONDER_FACTOR</DefineName>
 		<!--Score you get if you have all the wonders-->
+
 		<iDefineIntVal>1000</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1421,7 +1415,6 @@
 	<Define>
 		<DefineName>VICTORY_SOUNDTRACK_AVAILABLE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
-		<!-- Rhye -->
 	</Define>
 	<Define>
 		<DefineName>MAX_WITHDRAWAL_PROBABILITY</DefineName>
@@ -1441,6 +1434,7 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_WATER_SIZE_FOR_OCEAN</DefineName>
+
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1482,6 +1476,7 @@
 	</Define>
 	<Define>
 		<DefineName>ESPIONAGE_INTERCEPT_SPENDING_MAX</DefineName>
+
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1666,10 +1661,19 @@
 	</Define>
 	<Define>
 		<DefineName>PATH_DAMAGE_WEIGHT</DefineName>
+
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_SPIES_NO_ENTER_BORDERS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
+
+
+
+
+
+
+
+
 </Civ4Defines>
