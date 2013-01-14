@@ -6715,6 +6715,20 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_GERMANY_SELECT</SoundID>
+			<Filename>Sounds/Units/GermanySelect</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_GERMANY_ORDER</SoundID>
+			<Filename>Sounds/Units/GermanyOrder</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_HOLY_ROMAN_SELECT</SoundID>
 			<Filename>Sounds/Units/HolyRomanEmpireSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
