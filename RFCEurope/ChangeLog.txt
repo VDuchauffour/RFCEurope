@@ -25,11 +25,13 @@ Changes for RFCE 1.2:
 	XML and Text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
 		- Portuguese translations by Spirictum
-		- Austria is called Ostmark instead of Östmark when vassal of Germany
+		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
 
 	Art/sound updates:
 		- Added theme files for the mod
 		- New HUD button for the corporation/company screen
+		- Austria has german unit sounds instead of the HRE ones
+		- Lithuania has polish unit sounds instead of russian (until we manage to get proper lithuanian sounds)
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button

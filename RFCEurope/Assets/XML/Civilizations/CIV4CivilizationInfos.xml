@@ -927,8 +927,8 @@
 				</Leader>
 			</Leaders>
 			<DerivativeCiv>NONE</DerivativeCiv>
-			<CivilizationSelectionSound>AS3D_HOLY_ROMAN_SELECT</CivilizationSelectionSound>
-			<CivilizationActionSound>AS3D_HOLY_ROMAN_ORDER</CivilizationActionSound>
+			<CivilizationSelectionSound>AS3D_GERMANY_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_GERMANY_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BULGARIA</Type>
@@ -10200,8 +10200,8 @@
 				</Leader>
 			</Leaders>
 			<DerivativeCiv>NONE</DerivativeCiv>
-			<CivilizationSelectionSound>AS3D_RUSSIA_SELECT</CivilizationSelectionSound>
-			<CivilizationActionSound>AS3D_RUSSIA_ORDER</CivilizationActionSound>
+			<CivilizationSelectionSound>AS3D_POLAND_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_POLAND_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_PAPAL</Type>
@@ -10614,8 +10614,8 @@
 				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_BYZANTIUM</DerivativeCiv>
-			<CivilizationSelectionSound>AS3D_ROME_SELECT</CivilizationSelectionSound>
-			<CivilizationActionSound>AS3D_ROME_ORDER</CivilizationActionSound>
+			<CivilizationSelectionSound>AS3D_ITALY_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ITALY_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INDEPENDENT</Type>
