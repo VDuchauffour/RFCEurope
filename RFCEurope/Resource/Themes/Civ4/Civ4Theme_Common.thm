@@ -160,12 +160,12 @@ with GFC_Control
 			.TextShadow_Disable					=	GColor(  0,  0,  0,128);
 			.TextShadow_DisableSelect			=	GColor(  0,  0,  0,128);
 
-			.Link_Default						=	GColor(245,220,135);
-			.Link_Select						=	GColor(245,220,135);
-			.Link_Rollover						=	GColor(255,245,120);
-			.Link_Inactive						=	GColor(245,220,135);	
-			.Link_InactiveSelect				=	GColor(245,220,135);	
-			.Link_InactiveRollover				=	GColor(255,245,120);	
+			.Link_Default						=	GColor(175,210,245);
+			.Link_Select						=	GColor(175,210,245);
+			.Link_Rollover						=	GColor(255,211,126);
+			.Link_Inactive						=	GColor(175,210,245);	
+			.Link_InactiveSelect				=	GColor(175,210,245);	
+			.Link_InactiveRollover				=	GColor(255,211,126);	
 			.Link_Disable						=	GColor(255,255,255,128);
 			.Link_DisableSelect					=	GColor(255,255,255,128);
 			.Link_DisableRollover				=	GColor(255,255,255,128);		
@@ -201,16 +201,16 @@ with GFC_Control
 				GColor	.SelectTextDisable			=	GColor(255,229,121,128);
 				GColor	.SelectTextShadowDisable	=	GColor(  0,  0,  0,128);
 				// Used for backgrounds of Window and Menu/ComboBox popup.
-				GColor	.BG							=	GColor(100, 70, 35,215)		: GFC_Control_Color;	//Set for dynamic color change
+				GColor	.BG							=	GColor( 69, 93,156,217)		: GFC_Control_Color;	//Set for dynamic color change
 				GColor	.MenuBG						=	GColor( 27, 39, 63,255)		: GFC_Control_Color;	//Set for dynamic color change
 				GColor	.MergeBG					=	GColor( 44, 84,130,255)		: GFC_Control_Color;	//Set for dynamic color change
 				GColor	.Winoff						=	GColor( 32, 32, 64, 48)		: GFC_Control_Color;	//Set for dynamic color change				
 				// Table grid color
 				GColor	.Grid						=	GColor(105, 97, 86,128);
 				// Table selection color
-				GColor	.Select						=	GColor(230,200,110, 89);
+				GColor	.Select						=	GColor(128,168,255, 89);
 				GColor	.Offselect					=	GColor(199,178,153, 89);
-				GColor	.Multiselect				=	GColor(230,200,110, 64);
+				GColor	.Multiselect				=	GColor(128,168,255, 64);
 				GColor	.DisableSelect				=	GColor(199,178,153, 89);
 				GColor	.DisableOffselect			=	GColor(199,178,153, 89);	
 				GColor	.DisableMultiselect			=	GColor(199,178,153, 64);
@@ -218,21 +218,21 @@ with GFC_Control
 				// Table alt row / column
 				GColor	.AltCell					=	GColor(199,178,153, 32);
 				// Progress Fill
-				GColor	.Fill						=	GColor(  0,180, 40,255);
+				GColor	.Fill						=	GColor( 67,140, 38,255);
 				// Leader border/button color
-				GColor	.Leader						=	GColor(255,200, 97,255);
+				GColor	.Leader						=	GColor(171,255,129,255);
 				GColor	.LeaderRoll					=	GColor(255,255,255,255);
 				GColor	.LeaderDisable				=	GColor(128,128,128,255);
 				// Text Rollover Disable
-				GColor	.RollText					=	GColor(255,228,169,255);
+				GColor	.RollText					=	GColor(179,228,255,255);
 				GColor	.DisableText				=	GColor(128,128,128,255);	
 				// Focus & Check Radio
-				GColor	.Focus						=	GColor(255,168,128,255);					
-				GColor	.CheckRadio					=	GColor(255, 90, 90,255);
+				GColor	.Focus						=	GColor(128,168,255,255);					
+				GColor	.CheckRadio					=	GColor(128,220,255,255);
 				// Main Menu Header Text
-				GColor	.HeaderText					=	GColor(255,229,121,255);
+				GColor	.HeaderText					=	GColor(214,238,255,255);
 				// Slider Fill
-				GColor	.SliderFill					=	GColor(255,220,128,255);
+				GColor	.SliderFill					=	GColor(128,220,255,255);
 				GColor	.DisableSliderFill			=	GColor(172,172,172,255);
 				//Modal
 				GColor	.Modal						=	GColor(  0,  0,  0, 89);				
@@ -242,7 +242,7 @@ with GFC_Control
 				GColor	.IconBG						=	GColor( 69, 93,156, 89)		: GFC_Control_Color;	//Set for dynamic color change
 				GColor	.HelpBG						=	GColor( 69, 93,156, 89)		: GFC_Control_Color;	//Set for dynamic color change
 				// HUD icon border color
-				GColor	.HUDBorder					=	GColor( 40, 28, 14,255)		: GFC_Control_Color;	//Set for dynamic color change	
+				GColor	.HUDBorder					=	GColor( 78, 97,130,255)		: GFC_Control_Color;	//Set for dynamic color change	
 
 				GColor	.EndTurnDot_Green			=	GColor(  0,192,  0,255);	
 				GColor	.EndTurnDot_Red				=	GColor(192,  0,  0,255);

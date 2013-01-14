@@ -882,11 +882,11 @@ with GFC_Control_Button
 		with GFC_Control_Button_Image
 		{
 			.Default				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 0);
-			.Rollover				= .Default;
+			.Rollover				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 1);
 			.Press					= .Default;
-			.Disable				= .Default;
-			.Toggle					= .Default;
-			.ToggleRollover			= .Default;
+			.Disable				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 2);
+			.Toggle					= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 3);
+			.ToggleRollover			= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 1, 4);
 			.TogglePress			= .Toggle;
 			.ToggleDisable			= .Disable;
 		}
@@ -902,11 +902,11 @@ with GFC_Control_Button
 		with GFC_Control_Button_Image
 		{
 			.Default				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 0);
-			.Rollover				= .Default;
+			.Rollover				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 1);
 			.Press					= .Default;
-			.Disable				= .Default;
-			.Toggle					= .Default;
-			.ToggleRollover			= .Default;
+			.Disable				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 2);
+			.Toggle					= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 3);
+			.ToggleRollover			= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 0, 4);
 			.TogglePress			= .Toggle;
 			.ToggleDisable			= .Disable;
 		}
