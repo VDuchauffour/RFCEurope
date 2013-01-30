@@ -8,10 +8,9 @@
 	<HandicapInfos>
 		<HandicapInfo>
 			<Type>HANDICAP_SETTLER</Type>
-			<!-- Rhye - start -->
 			<Description>TXT_KEY_HANDICAP_VICEROY</Description>
-			<Help>TXT_KEY_HANDICAP_CHIEFTAIN_HELP</Help>
-			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
+			<Help>TXT_KEY_HANDICAP_VICEROY_HELP</Help>
+			<iFreeWinsVsBarbs>0</iFreeWinsVsBarbs>
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iStartingLocPercent>50</iStartingLocPercent>
 			<iAdvancedStartPointsMod>150</iAdvancedStartPointsMod>
@@ -90,16 +89,14 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
-			<!-- Rhye - end -->
 			<FreeTechs/>
 			<AIFreeTechs/>
 		</HandicapInfo>
 		<HandicapInfo>
-			<!-- Rhye - start -->
 			<Type>HANDICAP_PRINCE</Type>
 			<Description>TXT_KEY_HANDICAP_MONARCH</Description>
 			<Help>TXT_KEY_HANDICAP_MONARCH_HELP</Help>
-			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
+			<iFreeWinsVsBarbs>0</iFreeWinsVsBarbs>
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iStartingLocPercent>50</iStartingLocPercent>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
@@ -180,14 +177,12 @@
 			</Goodies>
 			<FreeTechs/>
 			<AIFreeTechs/>
-			<!-- Rhye - end -->
 		</HandicapInfo>
 		<HandicapInfo>
-			<!-- Rhye - start -->
 			<Type>HANDICAP_DEITY</Type>
 			<Description>TXT_KEY_HANDICAP_EMPEROR</Description>
 			<Help>TXT_KEY_HANDICAP_EMPEROR_HELP</Help>
-			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
+			<iFreeWinsVsBarbs>0</iFreeWinsVsBarbs>
 			<iAnimalAttackProb>100</iAnimalAttackProb>
 			<iStartingLocPercent>50</iStartingLocPercent>
 			<iAdvancedStartPointsMod>85</iAdvancedStartPointsMod>
@@ -268,7 +263,6 @@
 			</Goodies>
 			<FreeTechs/>
 			<AIFreeTechs/>
-			<!-- Rhye - end -->
 		</HandicapInfo>
 	</HandicapInfos>
 </Civ4HandicapInfo>

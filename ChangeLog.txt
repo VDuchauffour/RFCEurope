@@ -24,11 +24,14 @@ Changes for RFCE 1.2:
 		- Interface message for the preset religion spreads (same way as it is when religions spread "normally")
 		- Judaism got an additional random spread mechanics, with bigger chance for spreading in central european cities
 		- Slightly lowered the base duration of the occupation resistance
+		- Removed free wins against barbarians - this means some of the early barbs might have to be rebalanced
+		- Increased the maximum XP you can get from barbarians (not from a single battle, the total XP) - was 10, now there is no cap
 
 	XML and Text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
 		- Portuguese translations by Spirictum
 		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
+		- RFCE specific texts for the handicap levels
 
 	Art/sound updates:
 		- Added theme files for the mod

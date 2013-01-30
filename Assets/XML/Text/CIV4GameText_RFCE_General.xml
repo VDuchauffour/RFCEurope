@@ -36,6 +36,83 @@
 		</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_MONARCH</Tag>
+		<English>Monarch</English>
+		<French>
+			<Text>Monarque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nig</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Monarca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Monarca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_EMPEROR</Tag>
+		<English>Emperor</English>
+		<French>
+			<Text>Empereur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kaiser</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Imperatore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emperador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_VICEROY_HELP</Tag>
+		<English>Viceroy is a relatively easy difficulty level - good for when you want to try a new strategy. Barbarians are not too strong and your people are more forgiving, resulting in higher stability. You might find the UHVs too easy after a few games with RFCE.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_MONARCH_HELP</Tag>
+		<English>The challenges definitely start to ramp up on Monarch. Barbarians are a threat now, upkeep is higher, your people are harder to please so you may run into frequent stability issues, and your computer opponents are just plain smarter. This is the most balanced level for RFCE, the UHVs should be fairly challenging.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_EMPEROR_HELP</Tag>
+		<English>Are you ready to be an Emperor? If so, you will need to prove yourself by overcoming a lot of difficulties. Raging barbarians, strong opponents and difficult finances, while it is much harder to keep your people statisifed, thus your state stable. Can you achieve all UHVs in time? This is a true test for Civ experts.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_5</Tag>
 		<English>Portuguese</English>
 		<French></French>
