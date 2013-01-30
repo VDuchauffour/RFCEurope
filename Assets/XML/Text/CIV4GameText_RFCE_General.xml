@@ -801,6 +801,60 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_DESTROYED_1</Tag>
+		<English>You have destroyed the wonder %s1!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_DESTROYED_2</Tag>
+		<English>The %s1 has destroyed the wonder %s2!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_DESTROYED_3</Tag>
+		<English>The %s1 lost the wonder %s2, it has been destroyed!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_CAPTURED_1</Tag>
+		<English>You have captured the wonder %s1!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_CAPTURED_2</Tag>
+		<English>The %s1 has captured the wonder %s2!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_CAPTURED_3</Tag>
+		<English>The %s1 lost the wonder %s2, it has been captured!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
 		<English>[ICON_BULLET]%D1% %F2from Resources</English>
 		<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>

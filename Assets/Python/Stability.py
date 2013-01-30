@@ -234,18 +234,15 @@ class Stability:
                 #             Thus, if 3Miro is right, and playerType is the one razing the city, then: iOwner == playerType in all cases
                 if (city.hasBuilding(xml.iEscorial)):
                         gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
-                        gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
+                        gc.getPlayer( iOwner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
                 if (city.hasBuilding(xml.iStephansdom)):
                         gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
-                        gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
+                        gc.getPlayer( iOwner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
                 self.recalcCivicCombos(playerType)
-                #print(" Who is doing what?", playerType, iOwner)
 
                 #AbsintheRed: -1 for everyone, additional -1 if not Norse:
                 if ( playerType != con.iNorse ):
                         gc.getPlayer( playerType ).changeStabilityBase( iCathegoryExpansion, -1 )
-                #if ( iOwner != playerType ):
-                #        gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -2 )
                 if ( iOwner == playerType ):
                         gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -1 )
                 self.recalcEpansion( gc.getPlayer( playerType ) )

@@ -114,6 +114,7 @@ tGermany = [xml.iP_Lorraine,xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia]
 tWestAfrica = [xml.iP_Tetouan,xml.iP_Morocco,xml.iP_Marrakesh,xml.iP_Oran]
 tNorthAfrica = [xml.iP_Algiers,xml.iP_Ifriqiya,xml.iP_Tripolitania,xml.iP_Cyrenaica]
 tBalkansAndAnatolia = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon]
+tCentralEurope = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_GaliciaPoland,xml.iP_Brest,xml.iP_Suvalkija,xml.iP_Lithuania,xml.iP_Pomerania,xml.iP_Saxony,xml.iP_Brandenburg,xml.iP_Denmark,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Bohemia,xml.iP_Moravia,xml.iP_Silesia,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_UpperHungary,xml.iP_Pannonia,xml.iP_Slavonia,xml.iP_Carinthia,xml.iP_Austria]
 
 class Religions:
 
@@ -166,79 +167,86 @@ class Religions:
 ### Main methods (Event-Triggered) ###
 #####################################  
 
-        def setup(self):
-                gc.getPlayer(con.iTurkey).changeFaith( 20 )
-                self.setSeed()
+	def setup(self):
+		gc.getPlayer(con.iTurkey).changeFaith( 20 )
+		self.setSeed()
 
-        def checkTurn(self, iGameTurn):
-                # Absinthe: Spreading religions in a couple preset dates
-                if (iGameTurn == xml.i700AD-2):
-                        # Spread Judaism to Toledo
-                        self.spreadReligion(tToledo,xml.iJudaism)
-                        # Spread Judaism and Islam to a random city in Africa
-                        tCity = self.selectRandomCityArea(tNorthAfrica)
-                        self.spreadReligion(tCity,xml.iIslam)
-                        tCity = self.selectRandomCityArea(tNorthAfrica)
-                        self.spreadReligion(tCity,xml.iIslam)
-                if (iGameTurn == xml.i700AD+2):
-                        # Spread Judaism and Islam to a random city in Africa
-                        tCity = self.selectRandomCityArea(tWestAfrica)
-                        self.spreadReligion(tCity,xml.iIslam)
-                        tCity = self.selectRandomCityArea(tWestAfrica)
-                        self.spreadReligion(tCity,xml.iJudaism)
-                if (iGameTurn == xml.i900AD):
-                        # Spread Judaism to another city in Spain
-                        tCity = self.selectRandomCityArea(tSpain)
-                        self.spreadReligion(tCity,xml.iJudaism)
-                if (iGameTurn == xml.i1000AD):
-                        # Spread Judaism to a city in France/Germany
-                        tCity = self.selectRandomCityArea(tGermany)
-                        self.spreadReligion(tCity,xml.iJudaism)
-                        # Spread Islam to another city in Africa
-                        tCity = self.selectRandomCityArea(tNorthAfrica)
-                        self.spreadReligion(tCity,xml.iIslam)
-                if (iGameTurn == xml.i1101AD):
-                        # Spread Judaism to a couple towns in Poland
-                        tCity = self.selectRandomCityArea(tPoland)
-                        self.spreadReligion(tCity,xml.iJudaism)
-                if (iGameTurn == xml.i1200AD):
-                        # Spread Judaism to a couple towns in Poland
-                        tCity = self.selectRandomCityArea(tPoland)
-                        self.spreadReligion(tCity,xml.iJudaism)
-                if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1359AD and iGameTurn % 3 == 0):
-                        # Spread Islam to a couple cities in Anatolia before the Ottoman spawn
-                        tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
-                        self.spreadReligion(tCity,xml.iIslam)
-                if (iGameTurn == xml.i1401AD):
-                        # Spread Judaism to a couple towns in Poland
-                        tCity = self.selectRandomCityArea(tPoland)
-                        self.spreadReligion(tCity,xml.iJudaism)
-                if (iGameTurn == xml.i1580AD and (not gc.getGame().isReligionFounded(xml.iProtestantism) ) ):
-                        # If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it
-                        gc.getPlayer(con.iDutch).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
-                        gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
-                        self.setReformationActive(True)
-                        self.reformationchoice(con.iDutch)
-                        self.reformationOther(con.iIndependent)
-                        self.reformationOther(con.iIndependent2)
-                        self.reformationOther(con.iIndependent3)
-                        self.reformationOther(con.iIndependent4)
-                        self.reformationOther(con.iBarbarian)
-                        self.setReformationHitMatrix(con.iDutch,2)
-                        for iCiv in range(iNumPlayers):
-                                if ((iCiv in lReformationNeighbours[con.iDutch]) and self.getReformationHitMatrix(iCiv) == 0):
-                                        self.setReformationHitMatrix(iCiv,1)
+	def checkTurn(self, iGameTurn):
+		# Absinthe: Spreading religions in a couple preset dates
+		if (iGameTurn == xml.i700AD-2):
+			# Spread Judaism to Toledo
+			self.spreadReligion(tToledo,xml.iJudaism)
+			# Spread Judaism and Islam to a random city in Africa
+			tCity = self.selectRandomCityArea(tNorthAfrica)
+			self.spreadReligion(tCity,xml.iIslam)
+			tCity = self.selectRandomCityArea(tNorthAfrica)
+			self.spreadReligion(tCity,xml.iIslam)
+		if (iGameTurn == xml.i700AD+2):
+			# Spread Judaism and Islam to a random city in Africa
+			tCity = self.selectRandomCityArea(tWestAfrica)
+			self.spreadReligion(tCity,xml.iIslam)
+			tCity = self.selectRandomCityArea(tWestAfrica)
+			self.spreadReligion(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i900AD):
+			# Spread Judaism to another city in Spain
+			tCity = self.selectRandomCityArea(tSpain)
+			self.spreadReligion(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1000AD):
+			# Spread Judaism to a city in France/Germany
+			tCity = self.selectRandomCityArea(tGermany)
+			self.spreadReligion(tCity,xml.iJudaism)
+			# Spread Islam to another city in Africa
+			tCity = self.selectRandomCityArea(tNorthAfrica)
+			self.spreadReligion(tCity,xml.iIslam)
+		if (iGameTurn == xml.i1101AD):
+			# Spread Judaism to a couple towns in Poland
+			tCity = self.selectRandomCityArea(tPoland)
+			self.spreadReligion(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1200AD):
+			# Spread Judaism to a couple towns in Poland
+			tCity = self.selectRandomCityArea(tPoland)
+			self.spreadReligion(tCity,xml.iJudaism)
+		if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1359AD and iGameTurn % 3 == 0):
+			# Spread Islam to a couple cities in Anatolia before the Ottoman spawn
+			tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
+			self.spreadReligion(tCity,xml.iIslam)
+		if (iGameTurn == xml.i1401AD):
+			# Spread Judaism to a couple towns in Poland
+			tCity = self.selectRandomCityArea(tPoland)
+			self.spreadReligion(tCity,xml.iJudaism)
+		if (iGameTurn == xml.i1580AD and (not gc.getGame().isReligionFounded(xml.iProtestantism) ) ):
+			# If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it
+			gc.getPlayer(con.iDutch).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
+			gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
+			self.setReformationActive(True)
+			self.reformationchoice(con.iDutch)
+			self.reformationOther(con.iIndependent)
+			self.reformationOther(con.iIndependent2)
+			self.reformationOther(con.iIndependent3)
+			self.reformationOther(con.iIndependent4)
+			self.reformationOther(con.iBarbarian)
+			self.setReformationHitMatrix(con.iDutch,2)
+			for iCiv in range(iNumPlayers):
+				if ((iCiv in lReformationNeighbours[con.iDutch]) and self.getReformationHitMatrix(iCiv) == 0):
+					self.setReformationHitMatrix(iCiv,1)
 
+		# Absinthe: Spreading Judaism in random dates
+		# general 5% chance to spread Jews to a random city in every third turn
+		if (iGameTurn > xml.i800AD and iGameTurn < xml.i1700AD and iGameTurn % 3 == 0):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 5 ):
+				tCity = self.selectRandomCityAll()
+				self.spreadReligion(tCity,xml.iJudaism)
+		# additional 9% chance to spread Jews to a random central european city in every third turn
+		if (iGameTurn > xml.i1000AD and iGameTurn < xml.i1500AD and iGameTurn % 3 == 1):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 9 ):
+				tCity = self.selectRandomCityArea(tCentralEurope)
+				self.spreadReligion(tCity,xml.iJudaism)
 
-                #for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
-                        #pPlayer = gc.getPlayer( i )
-                        #print( " Player ",i,"  Faith: ",pPlayer.getFaith() )
-
-                # Prosecution
-                for i in range( con.iNumPlayers ):
-                        pPlayer = gc.getPlayer( i )
-                        if ( pPlayer.getProsecutionCount() > 0 ):
-                                pPlayer.changeProsecutionCount( -1 )
+		# Persecution
+		for i in range( con.iNumPlayers ):
+			pPlayer = gc.getPlayer( i )
+			if ( pPlayer.getProsecutionCount() > 0 ):
+				pPlayer.changeProsecutionCount( -1 )
 
                 # Resettle Jewish refugies
                 iRefugies = gc.getMinorReligionRefugies()
@@ -332,7 +340,7 @@ class Religions:
 
         def foundReligion(self, tPlot, iReligion):
                 if (tPlot != False):
-                        plot = gc.getMap().plot( tPlot[0], tPlot[1] )                
+                        plot = gc.getMap().plot( tPlot[0], tPlot[1] )
                         if (not plot.getPlotCity().isNone()):
                                 #if (gc.getPlayer(city.getOwner()).isHuman() == 0):
                                 #if (not gc.getGame().isReligionFounded(iReligion)):
@@ -343,68 +351,82 @@ class Religions:
                             
                 return False
 
-        def onReligionSpread(self, iReligion, iPlayer ):
-                pPlayer = gc.getPlayer( iPlayer )
-                if ( pPlayer.getStateReligion() == iReligion ):
-                        pPlayer.changeFaith( 1 )
-                else:
-                        pPlayer.changeFaith( -1 )
+	def onReligionSpread(self, iReligion, iPlayer ):
+		pPlayer = gc.getPlayer( iPlayer )
+		if ( pPlayer.getStateReligion() == iReligion ):
+			pPlayer.changeFaith( 1 )
+		else:
+			pPlayer.changeFaith( -1 )
 
-        def onBuildingBuild(seld, iPlayer, iBuilding ):
-                pPlayer = gc.getPlayer( iPlayer )
-                iStateReligion = pPlayer.getStateReligion()
-                if ( iStateReligion == xml.iCatholicism and ( iBuilding in tCatholicBuildings ) ):
-                        pPlayer.changeFaith( 1 )
-                        if ( iBuilding == xml.iCatholicCathedral ):
-                                pPlayer.changeFaith( 3 )
-                if ( iStateReligion == xml.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
-                        pPlayer.changeFaith( 1 )
-                        if ( iBuilding == xml.iOrthodoxCathedral ):
-                                pPlayer.changeFaith( 3 )
-                if ( iStateReligion == xml.iIslam and ( iBuilding in tIslamicBuildings  ) ):
-                        pPlayer.changeFaith( 1 )
-                        if ( iBuilding == xml.iIslamicCathedral ):
-                                pPlayer.changeFaith( 3 )
-                if ( iStateReligion == xml.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
-                        pPlayer.changeFaith( 1 )
-                        if ( iBuilding == xml.iProtestantCathedral ):
-                                pPlayer.changeFaith( 3 )
-                if ( iBuilding in tReligiousWonders ):
-                        pPlayer.changeFaith( 6 )
-                if ( iStateReligion != xml.iJudaism and iBuilding == xml.iKazimierz ):
-                        pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
-                        # Kazimierz should also spread Judaism
-                        apCityList = PyPlayer(iPlayer).getCityList()
-                        for i in range(4):
-                                pCity = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for jews')].GetCy()
-                                if (not pCity.isHasReligion(xml.iJudaism) ):
-                                        pCity.setHasReligion(xml.iJudaism, True, True, False)
+	def onBuildingBuild(seld, iPlayer, iBuilding ):
+		pPlayer = gc.getPlayer( iPlayer )
+		iStateReligion = pPlayer.getStateReligion()
+		if ( iStateReligion == xml.iCatholicism and ( iBuilding in tCatholicBuildings ) ):
+			pPlayer.changeFaith( 1 )
+			if ( iBuilding == xml.iCatholicCathedral ):
+				pPlayer.changeFaith( 3 )
+		if ( iStateReligion == xml.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
+			pPlayer.changeFaith( 1 )
+			if ( iBuilding == xml.iOrthodoxCathedral ):
+				pPlayer.changeFaith( 3 )
+		if ( iStateReligion == xml.iIslam and ( iBuilding in tIslamicBuildings ) ):
+			pPlayer.changeFaith( 1 )
+			if ( iBuilding == xml.iIslamicCathedral ):
+				pPlayer.changeFaith( 3 )
+		if ( iStateReligion == xml.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
+			pPlayer.changeFaith( 1 )
+			if ( iBuilding == xml.iProtestantCathedral ):
+				pPlayer.changeFaith( 3 )
+		if ( iBuilding in tReligiousWonders ):
+			pPlayer.changeFaith( 6 )
+		if ( iStateReligion != xml.iJudaism and iBuilding == xml.iKazimierz ):
+			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
+			# Kazimierz should also spread Judaism
+			apCityList = PyPlayer(iPlayer).getCityList()
+			for i in range(4):
+				pCity = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for jews')].GetCy()
+				if (not pCity.isHasReligion(xml.iJudaism) ):
+					pCity.setHasReligion(xml.iJudaism, True, True, False)
 
-        def selectRandomCityCiv(self, iCiv):
-                if (gc.getPlayer(iCiv).isAlive()):
-                        cityList = []
-                        for pyCity in PyPlayer(iCiv).getCityList():
-                                cityList.append(pyCity.GetCy())
-                        iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
-                        city = cityList[iCity]
-                        return (city.getX(), city.getY())
-                return False
-            
 
-        def selectRandomCityArea(self, tProvinces):
-                cityList = []
-                for x in range( con.iMapMaxX ):
-                        for y in range( con.iMapMaxY ):
-                                if ( tProvinceMap[y][x] in tProvinces ):
-                                        pCurrent = gc.getMap().plot( x, y )
-                                        if ( pCurrent.isCity()):
-                                                cityList.append(pCurrent.getPlotCity())
-                if (cityList):
-                        iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
-                        city = cityList[iCity]
-                        return (city.getX(), city.getY())
-                else:
-                        return False
+	def selectRandomCityAll(self):
+		cityList = []
+		for x in range( con.iMapMaxX ):
+			for y in range( con.iMapMaxY ):
+				pCurrent = gc.getMap().plot( x, y )
+				if ( pCurrent.isCity()):
+					cityList.append(pCurrent.getPlotCity())
+		if (len(cityList) >= 1):
+			iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
+			city = cityList[iCity]
+			return (city.getX(), city.getY())
+		else:
+			return False
+
+	def selectRandomCityCiv(self, iCiv):
+		if (gc.getPlayer(iCiv).isAlive()):
+			cityList = []
+			for pyCity in PyPlayer(iCiv).getCityList():
+				cityList.append(pyCity.GetCy())
+			iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
+			city = cityList[iCity]
+			return (city.getX(), city.getY())
+		return False
+
+	def selectRandomCityArea(self, tProvinces):
+		cityList = []
+		for x in range( con.iMapMaxX ):
+			for y in range( con.iMapMaxY ):
+				if ( tProvinceMap[y][x] in tProvinces ):
+					pCurrent = gc.getMap().plot( x, y )
+					if ( pCurrent.isCity()):
+						cityList.append(pCurrent.getPlotCity())
+		if (len(cityList) >= 1):
+			iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
+			city = cityList[iCity]
+			return (city.getX(), city.getY())
+		else:
+			return False
 
         def selectRandomCityAreaCiv(self, tTopLeft, tBottomRight, iCiv):
                 cityList = []
@@ -447,26 +469,25 @@ class Religions:
                                 return (city.getX(), city.getY())
                 return False
 
-        def spreadReligion(self, tPlot, iReligion ):
-                pPlot = gc.getMap().plot( tPlot[0], tPlot[1] )
-                if ( pPlot.isCity() ):
-                        pPlot.getPlotCity().setHasReligion(iReligion,1,1,0) # Puts the given religion (iReligion) into this city, with interface message
+	def spreadReligion(self, tPlot, iReligion ):
+		pPlot = gc.getMap().plot( tPlot[0], tPlot[1] )
+		if ( pPlot.isCity() ):
+			pPlot.getPlotCity().setHasReligion(iReligion,1,1,0) # Absinthe: puts the given religion (iReligion) into this city, with interface message
 
-        def buildInRandomCity( self, iPlayer, iBuilding, iReligion ):
-                #print(" Building ",iBuilding," for ",iPlayer )
-                cityList = []
-                for pyCity in PyPlayer(iPlayer).getCityList():
-                        if ( (not pyCity.GetCy().hasBuilding(iBuilding)) and pyCity.GetCy().isHasReligion( iReligion )  ):
-                                cityList.append(pyCity.GetCy())
-                if ( len(cityList) > 0 ):
-                        iRandCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
-                        city = cityList[iRandCity]
-                        city.setHasRealBuilding(iBuilding, True)
-                        gc.getPlayer( iPlayer ).changeFaith( 1 )
-                        if ( utils.getHumanID() == iPlayer ):
-                                #sText = CyTranslator().getText("TXT_KEY_FAITH_GIFT", ())
-                                sText = CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ()) +" " + gc.getBuildingInfo( iBuilding ).getDescription() + " " + CyTranslator().getText("TXT_KEY_FAITH_BUILDING2", ()) + " " + city.getName()
-                                CyInterface().addMessage(iPlayer, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+	def buildInRandomCity( self, iPlayer, iBuilding, iReligion ):
+		#print(" Building ",iBuilding," for ",iPlayer )
+		cityList = []
+		for pyCity in PyPlayer(iPlayer).getCityList():
+			if ( (not pyCity.GetCy().hasBuilding(iBuilding)) and pyCity.GetCy().isHasReligion( iReligion )  ):
+				cityList.append(pyCity.GetCy())
+		if ( len(cityList) > 0 ):
+			iRandCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
+			city = cityList[iRandCity]
+			city.setHasRealBuilding(iBuilding, True)
+			gc.getPlayer( iPlayer ).changeFaith( 1 )
+			if ( utils.getHumanID() == iPlayer ):
+				sText = CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ()) +" " + gc.getBuildingInfo( iBuilding ).getDescription() + " " + CyTranslator().getText("TXT_KEY_FAITH_BUILDING2", ()) + " " + city.getName()
+				CyInterface().addMessage(iPlayer, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 
 ##REFORMATION
 

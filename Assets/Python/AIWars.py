@@ -68,72 +68,69 @@ class AIWars:
 
 
 
-        def checkTurn(self, iGameTurn):
+	def checkTurn(self, iGameTurn):
 
-                #turn automatically peace on between independent cities and all the major civs
-                if (iGameTurn % 20 == 0):
-                	utils.restorePeaceHuman(con.iIndependent2, False)
-                if (iGameTurn % 20 == 5):
-                	utils.restorePeaceHuman(con.iIndependent, False)
+		#turn automatically peace on between independent cities and all the major civs
+		if (iGameTurn % 20 == 0):
+			utils.restorePeaceHuman(con.iIndependent2, False)
+		if (iGameTurn % 20 == 5):
+			utils.restorePeaceHuman(con.iIndependent, False)
 		if (iGameTurn % 20 == 10):
-                	utils.restorePeaceHuman(con.iIndependent3, False)
+			utils.restorePeaceHuman(con.iIndependent3, False)
 		if (iGameTurn % 20 == 15):
-                	utils.restorePeaceHuman(con.iIndependent4, False)
-                if (iGameTurn % 60 == 0 and iGameTurn > 50):
-                        utils.restorePeaceAI(con.iIndependent, False)
-                if (iGameTurn % 60 == 15 and iGameTurn > 50):
-                        utils.restorePeaceAI(con.iIndependent2, False)
+			utils.restorePeaceHuman(con.iIndependent4, False)
+		if (iGameTurn % 60 == 0 and iGameTurn > 50):
+			utils.restorePeaceAI(con.iIndependent, False)
+		if (iGameTurn % 60 == 15 and iGameTurn > 50):
+			utils.restorePeaceAI(con.iIndependent2, False)
 		if (iGameTurn % 60 == 30 and iGameTurn > 50):
-                        utils.restorePeaceAI(con.iIndependent3, False)
+			utils.restorePeaceAI(con.iIndependent3, False)
 		if (iGameTurn % 60 == 45 and iGameTurn > 50):
-                        utils.restorePeaceAI(con.iIndependent4, False)
-                #turn automatically war on between independent cities and some AI major civs
-                if (iGameTurn % 60 == 2 and iGameTurn > 50): #1 turn after restorePeace()
-                        utils.minorWars(con.iIndependent)
-                if (iGameTurn % 60 == 17 and iGameTurn > 50): #1 turn after restorePeace()
-                        utils.minorWars(con.iIndependent2)
+			utils.restorePeaceAI(con.iIndependent4, False)
+		#turn automatically war on between independent cities and some AI major civs
+		if (iGameTurn % 60 == 2 and iGameTurn > 50): #1 turn after restorePeace()
+			utils.minorWars(con.iIndependent)
+		if (iGameTurn % 60 == 17 and iGameTurn > 50): #1 turn after restorePeace()
+			utils.minorWars(con.iIndependent2)
 		if (iGameTurn % 60 == 32 and iGameTurn > 50): #1 turn after restorePeace()
-                        utils.minorWars(con.iIndependent3)
+			utils.minorWars(con.iIndependent3)
 		if (iGameTurn % 60 == 47 and iGameTurn > 50): #1 turn after restorePeace()
-                        utils.minorWars(con.iIndependent4)
+			utils.minorWars(con.iIndependent4)
 
 
-                ### 3Miro: AI Hacking - Venice has hard time dealing with Indy Ragusa
-                if ( (iGameTurn % 7 == 3) and (not pVenice.isHuman()) ):
-                        pRagusa = gc.getMap().plot( 64, 28 )
-                        if ( pRagusa.isCity() ):
-                                pRagusa = pRagusa.getPlotCity()
-                                if ( utils.isIndep( pRagusa.getOwner() ) ):
-                                        #pTeamRagusa = gc.getTeam( gc.getPlayer( pRagusa.getOwner() ).getTeam() ).setAtWar
-                                        teamVenice.setAtWar( gc.getPlayer( pRagusa.getOwner() ).getTeam(), True )
-                ### 3Miro: End of AI Hacking
+		### 3Miro: AI Hacking - Venice has hard time dealing with Indy Ragusa
+		if ( (iGameTurn % 7 == 3) and (not pVenice.isHuman()) ):
+			pRagusa = gc.getMap().plot( 64, 28 )
+			if ( pRagusa.isCity() ):
+				pRagusa = pRagusa.getPlotCity()
+				if ( utils.isIndep( pRagusa.getOwner() ) ):
+					teamVenice.setAtWar( gc.getPlayer( pRagusa.getOwner() ).getTeam(), True )
+		### 3Miro: End of AI Hacking
 
-                     
-                if (iGameTurn == self.getNextTurnAIWar()):
-                    
-                    	# 3Miro: how long it takes (the else from the statement goes all the way down
-                        #if (iGameTurn > con.i1600AD): #longer periods due to globalization of contacts
-                        #        iMinInterval = iMinIntervalLate
-                        #        iMaxInterval = iMaxIntervalLate
-                        #else:
-                        iMinInterval = iMinIntervalEarly
-                        iMaxInterval = iMaxIntervalEarly
 
-                        #skip if in a world war already
-                        #print ("AIWars iTargetCiv missing", iCiv)
-                        iCiv, iTargetCiv = self.pickCivs()
-                        if (iTargetCiv >= 0 and iTargetCiv <= iNumTotalPlayers):
+		if (iGameTurn == self.getNextTurnAIWar()):
+		
+			# 3Miro: how long it takes (the else from the statement goes all the way down)
+			#if (iGameTurn > xml.i1600AD): #longer periods due to globalization of contacts
+			#	iMinInterval = iMinIntervalLate
+			#	iMaxInterval = iMaxIntervalLate
+			#else:
+			iMinInterval = iMinIntervalEarly
+			iMaxInterval = iMaxIntervalEarly
+			
+			#skip if already in a world war
+			#print ("AIWars iTargetCiv missing", iCiv)
+			iCiv, iTargetCiv = self.pickCivs()
+			if (iTargetCiv >= 0 and iTargetCiv <= iNumTotalPlayers):
 				if (iTargetCiv != con.iPope and iCiv != con.iPope ):
 					self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
 					return
-                        else:
-                                print ("AIWars iTargetCiv missing again", iCiv)
-
-                        #make sure we don't miss this
-                        print("Skipping AIWar")
-                        self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
-                
-                #print(" 3MiroDebug: end AI wars ")
+			else:
+				print ("AIWars iTargetCiv missing again", iCiv)
+			
+			#make sure we don't miss this
+			print("Skipping AIWar")
+			self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
 
 
         def pickCivs(self): 
@@ -162,7 +159,6 @@ class AIWars:
 ##                                grid.append( line )
 ##                        self.lSettlersMap.append( grid )
 ##                print self.lSettlersMap
-
 
 
 
@@ -207,13 +203,13 @@ class AIWars:
                                                         iCiv = iLoopCiv
                         #print ("attacking civ", iCiv)
                         if (iAlreadyAttacked != -100):
-                                self.setAttackingCivsArray(iCiv, iAlreadyAttacked + 1)                        
+                                self.setAttackingCivsArray(iCiv, iAlreadyAttacked + 1)
                                 return iCiv
                         else:
                                 return -1
                 return -1
-                    
-             
+
+
 
         def checkGrid(self, iCiv):
                 pCiv = gc.getPlayer(iCiv)
@@ -258,8 +254,8 @@ class AIWars:
                 #there are other routines for this
                 lTargetCivs[iIndependent] /= 3
                 lTargetCivs[iIndependent2] /= 3
-		lTargetCivs[iIndependent3] /= 3
-		lTargetCivs[iIndependent4] /= 3
+                lTargetCivs[iIndependent3] /= 3
+                lTargetCivs[iIndependent4] /= 3
 
                 #can they attack civs with lost contact?
                 for k in range( iNumPlayers ): 
@@ -284,7 +280,7 @@ class AIWars:
                 #print(lTargetCivs)
                 
                 for iLoopCiv in range( iNumTotalPlayers ):
-
+                
                         if (lTargetCivs[iLoopCiv] <= 0):
                                 continue
                             
@@ -343,9 +339,7 @@ class AIWars:
                         return iTargetCiv
                 return -1
 
-                                        
-	    
+
         def forgetMemory(self, iTech, iPlayer):
                 pass
-
 

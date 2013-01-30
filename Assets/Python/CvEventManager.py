@@ -20,6 +20,7 @@ import sys
 import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
+import Consts as con
 import XMLConsts as xml
 
 #Rhye
@@ -519,7 +520,7 @@ class CvEventManager:
 		'Building Completed'
 		pCity, iBuildingType = argsList
 		game = gc.getGame()
-			
+		
 # The Leaning Tower Start
 # Added by AbsintheRed, based on Tsentom's School of Confucius. Improved by merijn_v1
 		if ( iBuildingType == xml.iLeaningTower):
@@ -570,14 +571,14 @@ class CvEventManager:
 			popupInfo.setData3(0)
 			popupInfo.setText(u"showWonderMovie")
 			popupInfo.addPopup(pCity.getOwner())
-
+		
 		CvAdvisorUtils.buildingBuiltFeats(pCity, iBuildingType)
-
+		
 		if (not self.__LOG_BUILDING):
 			return
 		CvUtil.pyPrint('%s was finished by Player %d Civilization %s' 
 			%(PyInfo.BuildingInfo(iBuildingType).getDescription(), pCity.getOwner(), gc.getPlayer(pCity.getOwner()).getCivilizationDescription(0)))
-	
+
 	def onProjectBuilt(self, argsList):
 		'Project Completed'
 		pCity, iProjectType = argsList
@@ -590,7 +591,7 @@ class CvEventManager:
 			popupInfo.setData3(2)
 			popupInfo.setText(u"showWonderMovie")
 			popupInfo.addPopup(pCity.getOwner())
-				
+
 	def onSelectionGroupPushMission(self, argsList):
 		'selection group mission'
 		eOwner = argsList[0]
@@ -602,7 +603,7 @@ class CvEventManager:
 			return
 		if pHeadUnit:
 			CvUtil.pyPrint("Selection Group pushed mission %d" %(eMission))
-	
+
 	def onUnitMove(self, argsList):
 		'unit move'
 		pPlot,pUnit,pOldPlot = argsList
@@ -622,7 +623,7 @@ class CvEventManager:
 		unitInfo = PyInfo.UnitInfo(pUnit.getUnitType())
 		if (not self.__LOG_MOVEMENT):
 			return
-		
+
 	def onUnitCreated(self, argsList):
 		'Unit Completed'
 		unit = argsList[0]
@@ -667,14 +668,13 @@ class CvEventManager:
 		
 		## Topkapi Palace End ##
 
-
 		CvAdvisorUtils.unitBuiltFeats(city, unit)
 		
 		if (not self.__LOG_UNITBUILD):
 			return
 		CvUtil.pyPrint('%s was finished by Player %d Civilization %s' 
 			%(PyInfo.UnitInfo(unit.getUnitType()).getDescription(), player.getID(), player.getCivilizationName()))
-	
+
 	def onUnitKilled(self, argsList):
 		'Unit Killed'
 		unit, iAttacker = argsList
@@ -687,14 +687,14 @@ class CvEventManager:
 
 	def onUnitLost(self, argsList):
 		'Unit Lost'
-                #print("3Miro: CvEvenetManager: onUnitLost")
+		#print("3Miro: CvEvenetManager: onUnitLost")
 		unit = argsList[0]
 		player = PyPlayer(unit.getOwner())
 		if (not self.__LOG_UNITLOST):
 			return
 		CvUtil.pyPrint('%s was lost by Player %d Civilization %s' 
 			%(PyInfo.UnitInfo(unit.getUnitType()).getDescription(), player.getID(), player.getCivilizationName()))
-	
+
 	def onUnitPromoted(self, argsList):
 		'Unit Promoted'
 		pUnit, iPromotion = argsList
@@ -702,7 +702,7 @@ class CvEventManager:
 		if (not self.__LOG_UNITPROMOTED):
 			return
 		CvUtil.pyPrint('Unit Promotion Event: %s - %s' %(player.getCivilizationName(), pUnit.getName(),))
-	
+
 	def onUnitSelected(self, argsList):
 		'Unit Selected'
 		unit = argsList[0]
@@ -711,13 +711,13 @@ class CvEventManager:
 			return
 		CvUtil.pyPrint('%s was selected by Player %d Civilization %s' 
 			%(PyInfo.UnitInfo(unit.getUnitType()).getDescription(), player.getID(), player.getCivilizationName()))
-	
+
 	def onUnitRename(self, argsList):
 		'Unit is renamed'
 		pUnit = argsList[0]
 		if (pUnit.getOwner() == gc.getGame().getActivePlayer()):
 			self.__eventEditUnitNameBegin(pUnit)
-	
+
 	def onUnitPillage(self, argsList):
 		'Unit pillages a plot'
 		pUnit, iImprovement, iRoute, iOwner = argsList
@@ -729,7 +729,7 @@ class CvEventManager:
 			return
 		CvUtil.pyPrint("Player %d's %s pillaged improvement %d and route %d at plot at (%d, %d)" 
 			%(iOwner, PyInfo.UnitInfo(pUnit.getUnitType()).getDescription(), iImprovement, iRoute, iPlotX, iPlotY))
-	
+
 	def onUnitSpreadReligionAttempt(self, argsList):
 		'Unit tries to spread religion to a city'
 		pUnit, iReligion, bSuccess = argsList
@@ -738,11 +738,11 @@ class CvEventManager:
 		iY = pUnit.getY()
 		pPlot = CyMap().plot(iX, iY)
 		pCity = pPlot.getPlotCity()
-	
+
 	def onUnitGifted(self, argsList):
 		'Unit is gifted from one player to another'
 		pUnit, iGiftingPlayer, pPlotLocation = argsList
-	
+
 	def onUnitBuildImprovement(self, argsList):
 		'Unit begins enacting a Build (building an Improvement or Route)'
 		pUnit, iBuild, bFinished = argsList
@@ -753,7 +753,7 @@ class CvEventManager:
 		if (not self.__LOG_GOODYRECEIVED):
 			return
 		CvUtil.pyPrint('%s received a goody' %(gc.getPlayer(iPlayer).getCivilizationDescription(0)),)
-	
+
 	def onGreatPersonBorn(self, argsList):
 		'Unit Promoted'
 		pUnit, iPlayer, pCity = argsList
@@ -763,7 +763,7 @@ class CvEventManager:
 		if (not self.__LOG_GREATPERSON):
 			return
 		CvUtil.pyPrint('A %s was born for %s in %s' %(pUnit.getName(), player.getCivilizationName(), pCity.getName()))
-	
+
 	def onTechAcquired(self, argsList):
 		'Tech Acquired'
 		iTechType, iTeam, iPlayer, bAnnounce = argsList
@@ -783,14 +783,14 @@ class CvEventManager:
 			return
 		CvUtil.pyPrint('%s was finished by Team %d' 
 			%(PyInfo.TechnologyInfo(iTechType).getDescription(), iTeam))
-	
+
 	def onTechSelected(self, argsList):
 		'Tech Selected'
 		iTechType, iPlayer = argsList
 		if (not self.__LOG_TECH):
 			return
 		CvUtil.pyPrint('%s was selected by Player %d' %(PyInfo.TechnologyInfo(iTechType).getDescription(), iPlayer))
-	
+
 	def onReligionFounded(self, argsList):
 		'Religion Founded'
 		iReligion, iFounder = argsList
@@ -829,7 +829,7 @@ class CvEventManager:
 			return
 		CvUtil.pyPrint('%s has been removed from Player %d Civilization %s city of %s'
 			%(gc.getReligionInfo(iReligion).getDescription(), iOwner, player.getCivilizationName(), pRemoveCity.getName()))
-				
+
 	def onCorporationFounded(self, argsList):
 		'Corporation Founded'
 		iCorporation, iFounder = argsList
@@ -857,7 +857,7 @@ class CvEventManager:
 			return
 		CvUtil.pyPrint('%s has been removed from Player %d Civilization %s city of %s'
 			%(gc.getReligionInfo(iReligion).getDescription(), iOwner, player.getCivilizationName(), pRemoveCity.getName()))
-				
+
 	def onGoldenAge(self, argsList):
 		'Golden Age'
 		iPlayer = argsList[0]
@@ -889,48 +889,80 @@ class CvEventManager:
 			strStatus = "declared peace"
 		CvUtil.pyPrint('Team %d has %s on Team %d'
 			%(iTeam, strStatus, iRivalTeam))
-	
+
 	def onChat(self, argsList):
 		'Chat Message Event'
 		chatMessage = "%s" %(argsList[0],)
-		
+
 	def onSetPlayerAlive(self, argsList):
 		'Set Player Alive Event'
 		iPlayerID = argsList[0]
 		bNewValue = argsList[1]
 		CvUtil.pyPrint("Player %d's alive status set to: %d" %(iPlayerID, int(bNewValue)))
-		
+
 	def onPlayerChangeStateReligion(self, argsList):
 		'Player changes his state religion'
 		iPlayer, iNewReligion, iOldReligion = argsList
-		
+
 	def onPlayerGoldTrade(self, argsList):
 		'Player Trades gold to another player'
 		iFromPlayer, iToPlayer, iGoldAmount = argsList
-		
+
 	def onCityBuilt(self, argsList):
 		'City Built'
 		city = argsList[0]
+		# Rhye: no city naming in RFC on settling, so this is commented out
 		#if (city.getOwner() == gc.getGame().getActivePlayer()):
- 		#	self.__eventEditCityNameBegin(city, False)	    #Rhye
+ 		#	self.__eventEditCityNameBegin(city, False)
 		CvUtil.pyPrint('City Built Event: %s' %(city.getName()))
-		
+
 	def onCityRazed(self, argsList):
 		'City Razed'
 		city, iPlayer = argsList
 		iOwner = city.findHighestCulture()
 		
-		#Rhye - start bugfix
-		#owner = PyPlayer(city.getOwner())
-                owner = PyPlayer(city.getOwner())
-                if (city.getOwner() == iPlayer):
-                        if (city.getPreviousOwner() != -1):
-                                owner = PyPlayer(city.getPreviousOwner())
-                #Rhye - end bugfix
+		# Rhye - start bugfix
+		owner = PyPlayer(city.getOwner())
+		if (city.getOwner() == iPlayer):
+			if (city.getPreviousOwner() != -1):
+				owner = PyPlayer(city.getPreviousOwner())
+		# Rhye - end bugfix
 		
 		razor = PyPlayer(iPlayer)
 		CvUtil.pyPrint('Player %d Civilization %s City %s was razed by Player %d' 
 			%(owner.getID(), owner.getCivilizationName(), city.getName(), razor.getID()))
+		
+		# Absinthe: wonder destroyed message start
+		pCity = city
+		NumWonders = pCity.getNumWorldWonders
+		if NumWonders() > 0:
+			for i in range(gc.getNumBuildingInfos()):
+				if pCity.getNumBuilding(i) > 0:
+					actualbuilding = gc.getBuildingInfo(i)
+					actualbuildingclass = actualbuilding.getBuildingClassType()
+					actualbuildingclassinfo = gc.getBuildingClassInfo(actualbuildingclass)
+					if actualbuildingclassinfo.getMaxGlobalInstances() == 1:
+						ConquerPlayer = gc.getPlayer(pCity.getOwner())
+						ConquerTeam = ConquerPlayer.getTeam()
+						ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
+						if (pCity.getPreviousOwner() != -1):
+							PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
+							PreviousTeam = PreviousPlayer.getTeam()
+							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
+						HumanPlayer = gc.getPlayer(utils.getHumanID())
+						HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+						WonderName = actualbuilding.getDescription()
+						iX = pCity.getX()
+						iY = pCity.getY()
+						if ConquerPlayer.isHuman():
+							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
+						else:
+							if HumanTeam.isHasMet(ConquerTeam):
+								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
+							else:
+								if HumanTeam.isHasMet(PreviousTeam):
+									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
+		# Absinthe - wonder destroyed message end
 		
 		# Partisans!
 		if city.getPopulation > 1 and iOwner != -1 and iPlayer != -1:
@@ -941,9 +973,9 @@ class CvEventManager:
 						iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
 						if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
 							triggerData = owner.initTriggeredData(iEvent, true, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
-			
+		
 		CvUtil.pyPrint("City Razed Event: %s" %(city.getName(),))
-	
+
 	def onCityAcquired(self, argsList):
 		'City Acquired'
 		iPreviousOwner,iNewOwner,pCity,bConquest,bTrade = argsList
@@ -952,6 +984,38 @@ class CvEventManager:
 	def onCityAcquiredAndKept(self, argsList):
 		'City Acquired and Kept'
 		iOwner,pCity = argsList
+		
+		# Absinthe: wonder captured message start
+		NumWonders = pCity.getNumWorldWonders
+		if NumWonders() > 0:
+			for i in range(gc.getNumBuildingInfos()):
+				if pCity.getNumBuilding(i) > 0:
+					actualbuilding = gc.getBuildingInfo(i)
+					actualbuildingclass = actualbuilding.getBuildingClassType()
+					actualbuildingclassinfo = gc.getBuildingClassInfo(actualbuildingclass)
+					if actualbuildingclassinfo.getMaxGlobalInstances() == 1:
+						ConquerPlayer = gc.getPlayer(pCity.getOwner())
+						ConquerTeam = ConquerPlayer.getTeam()
+						ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
+						if (pCity.getPreviousOwner() != -1):
+							PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
+							PreviousTeam = PreviousPlayer.getTeam()
+							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
+						HumanPlayer = gc.getPlayer(utils.getHumanID())
+						HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+						WonderName = actualbuilding.getDescription()
+						iX = pCity.getX()
+						iY = pCity.getY()
+						if ConquerPlayer.isHuman():
+							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iPurple), iX, iY, True, True)
+						else:
+							if HumanTeam.isHasMet(ConquerTeam):
+								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iPurple), iX, iY, True, True)
+							else:
+								if HumanTeam.isHasMet(PreviousTeam):
+									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iPurple), iX, iY, True, True)
+		# Absinthe - wonder captured message end
+		
 		CvUtil.pyPrint('City Acquired and Kept Event: %s' %(pCity.getName()))
 	
 	def onCityLost(self, argsList):
