@@ -8,16 +8,16 @@ import CvMercenaryManager #Mercenaries
 #import MercenaryUtils #Mercenaries
 import CvScreenEnums  #Mercenaries
 #import CvConfigParser #Mercenaries #Rhye
-import Popup as PyPopup 
+import Popup as PyPopup
 
 import StoredData
-import RiseAndFall        
-import Barbs                
-import Religions        
-import Resources        
-import CityNameManager  
-import UniquePowers     
-import AIWars           
+import RiseAndFall
+import Barbs
+import Religions
+import Resources
+import CityNameManager
+import UniquePowers
+import AIWars
 #import Congresses
 import Consts as con
 import XMLConsts as xml
@@ -30,13 +30,12 @@ import Plague
 #import Communications
 import Crusades
 import Mercenaries
-import RFCEMaps as rfcemaps      
-        
-gc = CyGlobalContext()        
+import RFCEMaps as rfcemaps
+
+gc = CyGlobalContext()
 #iBetrayalCheaters = 15
 
-
-#Rhye - start
+#Civ constants
 iBurgundy = con.iBurgundy
 iByzantium = con.iByzantium
 iFrankia = con.iFrankia
@@ -66,8 +65,6 @@ iIndependent = con.iIndependent
 iIndependent2 = con.iIndependent2
 iBarbarian = con.iBarbarian
 iNumTotalPlayers = con.iNumTotalPlayers
-#Rhye - end
-
 
 
 #Mercenaries - start
@@ -238,39 +235,32 @@ class CvRFCEventHandler:
                 return 0
 
 
-        def onCityAcquired(self, argsList):
-                #'City Acquired'
-                owner,playerType,city,bConquest,bTrade = argsList
-                #CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
-                #if ( owner >= con.iNumMajorPlayers and playerType < con.iNumMajorPlayers and rfcemaps.tWarsMaps[playerType][con.iMapMaxY-city.getY()-1][city.getX()] == 0 ):
-                #	print("  3Miro - Special City Captured: ")
-                #	print("  Params: ",owner,playerType,bConquest,bTrade)
-                
-                self.rnf.onCityAcquired(owner,playerType,city,bConquest,bTrade)
-                	
-                self.cnm.renameCities(city, playerType)
-                
-                # 3Miro Arab UP
-                if ( gc.hasUP( playerType, con.iUP_Faith ) ):
-                	self.up.faithUP( playerType, city )
-                #elif (playerType == con.iTurkey):
-                #        self.up.turkishUP(city)
+	def onCityAcquired(self, argsList):
+		#'City Acquired'
+		owner,playerType,city,bConquest,bTrade = argsList
+		#CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
+		
+		self.rnf.onCityAcquired(owner,playerType,city,bConquest,bTrade)
+		self.cnm.renameCities(city, playerType)
 
-                if (playerType < iNumMajorPlayers):
-                         utils.spreadMajorCulture(playerType, city.getX(), city.getY())
+		# 3Miro: Arab UP
+		if ( gc.hasUP( playerType, con.iUP_Faith ) ):
+			self.up.faithUP( playerType, city )
 
-                self.sta.onCityAcquired(owner,playerType,city,bConquest,bTrade)
+		# Absinthe: Spread some culture of the conqueror civ to the occupied city
+		if (playerType < iNumMajorPlayers):
+			utils.spreadMajorCulture(playerType, city.getX(), city.getY())
 
-		# 3Miro: Jerusalem's Golden Age Insentive
-                if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
-                        pPlayer = gc.getPlayer(playerType)
-                        if ( pPlayer.getStateReligion() == xml.iCatholicism ):
+		self.sta.onCityAcquired(owner,playerType,city,bConquest,bTrade)
+
+		# 3Miro: Jerusalem's Golden Age Incentive
+		if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
+			pPlayer = gc.getPlayer(playerType)
+			if ( pPlayer.getStateReligion() == xml.iCatholicism ):
 				self.crusade.success( playerType )
 
-		#Sedna17, added code for Krak des Chevaliers
-		#Begin Krak
-                bKrak = false
-				
+		# Sedna17: code for Krak des Chevaliers
+		bKrak = false
 		if (bConquest):
 			iNewOwner = city.getOwner() 
 			lCities = PyPlayer( iNewOwner).getCityList( )
@@ -289,10 +279,9 @@ class CvRFCEventHandler:
 				city.setHasRealBuilding(xml.iHungarianStronghold, True)
 			else:
 				city.setHasRealBuilding(xml.iCastle, True)
+		# Sedna17, end
 
-		# End Krak des Chevaliers
-				
-                # 3Miro: National wonders and city acuire by trade
+                # 3Miro: National wonders and city acquire by trade
                 #if (bTrade):
                 #        for i in range (con.iScotlandYard +1 - con.iHeroicEpic):
                 #                iNationalWonder = i + con.iHeroicEpic
@@ -329,7 +318,7 @@ class CvRFCEventHandler:
                         self.cnm.assignName(city)
 
 
-                #Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
+                # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
                 pCurrent = gc.getMap().plot( city.getX(), city.getY() )
                 for i in range(con.iNumTotalPlayers - con.iNumActivePlayers):
                         iMinorCiv = i + con.iNumActivePlayers
@@ -358,15 +347,15 @@ class CvRFCEventHandler:
                 self.sta.onCombatResult(argsList)
 
 
-        def onReligionFounded(self, argsList):
-                'Religion Founded'
-                iReligion, iFounder = argsList
-        
-        	lCities = PyPlayer( iFounder ).getCityList( )
-        	for iCity in range( len( lCities ) ):
-        		pCity = gc.getPlayer( iFounder ).getCity( lCities[ iCity ].getID( ) )
-        		if ( pCity.isHolyCityByType( iReligion ) and iReligion <> xml.iJudaism): #Sedna -- ProtestantShrine is now starting point for consistency with Religion.xml, Judaism is special
-        			if (iReligion == 0):
+	def onReligionFounded(self, argsList):
+		'Religion Founded'
+		iReligion, iFounder = argsList
+		
+		lCities = PyPlayer( iFounder ).getCityList( )
+		for iCity in range( len( lCities ) ):
+			pCity = gc.getPlayer( iFounder ).getCity( lCities[ iCity ].getID( ) )
+			if ( pCity.isHolyCityByType( iReligion ) and iReligion <> xml.iJudaism): # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
+				if (iReligion == 0):
 					iTemple = xml.iProtestantTemple
 					iShrine = xml.iProtestantShrine
 				if (iReligion == 1):
@@ -379,39 +368,39 @@ class CvRFCEventHandler:
 					iTemple = xml.iOrthodoxTemple
 					iShrine = xml.iOrthodoxShrine
 				if ( not pCity.isHasRealBuilding(iShrine) ):
-        				pCity.setHasRealBuilding(iShrine, True )
-        			if ( not pCity.isHasRealBuilding(iTemple) ):
-        				pCity.setHasRealBuilding(iTemple, True )
-        
-                self.vic.onReligionFounded(iReligion, iFounder)
+					pCity.setHasRealBuilding(iShrine, True )
+				if ( not pCity.isHasRealBuilding(iTemple) ):
+					pCity.setHasRealBuilding(iTemple, True )
+					
+		self.vic.onReligionFounded(iReligion, iFounder)
 		
-                if (iFounder < con.iNumPlayers):
-                        self.sta.onReligionFounded(iFounder)
-                        
-                # 3MiroCrusade: end Crusades for the Holy Land after the Reformation
-                if (iReligion == xml.iProtestantism ):
-                	self.crusade.endCrusades()
+		if (iFounder < con.iNumPlayers):
+			self.sta.onReligionFounded(iFounder)
+			
+		# 3Miro: end Crusades for the Holy Land after the Reformation
+		if (iReligion == xml.iProtestantism ):
+			self.crusade.endCrusades()
+
 
 	def onCorporationFounded(self, argsList):
 		'Corporation Founded'
 		iCorporation, iFounder = argsList
 		#player = PyPlayer(iFounder)
 		
-                if (iFounder < con.iNumPlayers):
-                        self.sta.onCorporationFounded(iFounder)
+		if (iFounder < con.iNumPlayers):
+			self.sta.onCorporationFounded(iFounder)
 			self.vic.onCorporationFounded(iFounder)
 
 
-                        
+	def onBuildingBuilt(self, argsList):
+		city, iBuildingType = argsList
+		iOwner = city.getOwner()
+		self.vic.onBuildingBuilt(city.getOwner(), iBuildingType)
+		if (city.getOwner() < con.iNumPlayers):
+			self.sta.onBuildingBuilt(iOwner, iBuildingType, city)
+		# 3Miro: Faith
+		self.rel.onBuildingBuild( iOwner, iBuildingType )
 
-        def onBuildingBuilt(self, argsList):
-                city, iBuildingType = argsList
-                iOwner = city.getOwner()
-                self.vic.onBuildingBuilt(city.getOwner(), iBuildingType)
-                if (city.getOwner() < con.iNumPlayers):
-                        self.sta.onBuildingBuilt(iOwner, iBuildingType, city)
-                #3MiroFaith
-                self.rel.onBuildingBuild( iOwner, iBuildingType )
 
         def onProjectBuilt(self, argsList):
                 city, iProjectType = argsList

@@ -66,7 +66,6 @@ iIndependent4 = con.iIndependent4
 iBarbarian = con.iBarbarian
 iNumTotalPlayers = con.iNumTotalPlayers
 
-
 pBurgundy = gc.getPlayer(iBurgundy)
 pByzantium = gc.getPlayer(iByzantium)
 pFrankia = gc.getPlayer(iFrankia)
@@ -517,7 +516,6 @@ class RiseAndFall:
                                                                                 utils.makeUnit(iUnitType, iNewCivFlip, (x,y), 1)
                                                                                 i = i - 1
 
-
                         if (self.getCheatersCheck(0) == 0):
                                 self.setCheatersCheck(0, iCheatersPeriod)
                                 self.setCheatersCheck(1, self.getNewCivFlip())
@@ -544,14 +542,7 @@ class RiseAndFall:
                                                 self.initBetrayal()
 
 
-                                        
-                                                                
-                                
         def rebellionPopup(self, iRebelCiv, iNumCities ):
-                #self.showPopup(7622, CyTranslator().getText("TXT_KEY_REBELLION_TITLE", ()), \
-                #               CyTranslator().getText("TXT_KEY_REBELLION_TEXT", (gc.getPlayer(iRebelCiv).getCivilizationAdjectiveKey(),)), \
-                #               (CyTranslator().getText("TXT_KEY_POPUP_YES", ()), \
-                #                CyTranslator().getText("TXT_KEY_POPUP_NO", ())))
                 iLoyalPrice = min( (10 * gc.getPlayer( utils.getHumanID() ).getGold()) / 100, 50 * iNumCities )
                 self.showPopup(7622, CyTranslator().getText("TXT_KEY_REBELLION_TITLE", ()), \
                                 CyTranslator().getText("TXT_KEY_REBELLION_HUMAN", (gc.getPlayer(iRebelCiv).getCivilizationAdjectiveKey(),)), \
@@ -561,13 +552,8 @@ class RiseAndFall:
                                 CyTranslator().getText("TXT_KEY_REBELLION_BRIBE", ()) + " " + str(iLoyalPrice), \
                                 CyTranslator().getText("TXT_KEY_REBELLION_BOTH", ())))
 
+
         def eventApply7622(self, popupReturn):
-                #iHuman = utils.getHumanID()
-                #iRebelCiv = self.getRebelCiv()
-                #if( popupReturn.getButtonClicked() == 0 ): # 1st button
-                #        gc.getTeam(gc.getPlayer(iHuman).getTeam()).makePeace(iRebelCiv)                                                   
-                #elif( popupReturn.getButtonClicked() == 1 ): # 2nd button
-                #        gc.getTeam(gc.getPlayer(iHuman).getTeam()).declareWar(iRebelCiv, False, -1)
                 iHuman = utils.getHumanID()
                 iRebelCiv = self.getRebelCiv()
                 iChoice = popupReturn.getButtonClicked()
@@ -608,17 +594,16 @@ class RiseAndFall:
                                         pCity = gc.getMap().plot( lCityList[iCity][0], lCityList[iCity][1] ).getPlotCity()
                                         if ( pCity.getOwner() == iHuman ):
                                                 pCity.changeOccupationTimer( 2 )
-                                                pCity.changeHurryAngerTimer( 10 )                       
+                                                pCity.changeHurryAngerTimer( 10 )
                                 lList = self.getRebelSuppress()
                                 lList[iHuman] = 3 # keep + war
                                 self.setRebelSuppress( lList )
-                                                        
+                        
                         else:
                                 lList = self.getRebelSuppress()
                                 lList[iHuman] = 2 # let go + war
-                                self.setRebelSuppress( lList )        
+                                self.setRebelSuppress( lList )
                 self.resurectCiv( self.getRebelCiv() )
-
 
 
 
@@ -626,7 +611,7 @@ class RiseAndFall:
 ### Main methods (Event-Triggered) ###
 #####################################  
 
-        def setup(self):            
+        def setup(self):
                 
                 self.pm.setup()
 
@@ -647,14 +632,14 @@ class RiseAndFall:
                 self.setupRespawnTurns()
                                
                 # set starting gold
-                pBurgundy.changeGold( 250 )
-                pByzantium.changeGold( 1000 )
-                pFrankia.changeGold( 50 )
-                pArabia.changeGold( 200 )
-                pBulgaria.changeGold( 100 )
-                pCordoba.changeGold( 200 )
-                pSpain.changeGold( 500 )
-                pNorse.changeGold( 200 )
+                pBurgundy.changeGold(250)
+                pByzantium.changeGold(1000)
+                pFrankia.changeGold(50)
+                pArabia.changeGold(200)
+                pBulgaria.changeGold(100)
+                pCordoba.changeGold(200)
+                pSpain.changeGold(500)
+                pNorse.changeGold(200)
                 pVenecia.changeGold(300)
                 pKiev.changeGold(250)
                 pHungary.changeGold(300)
@@ -673,7 +658,7 @@ class RiseAndFall:
                 pIndependent2.changeGold(50)
                 pIndependent3.changeGold(50)
                 pIndependent4.changeGold(50)
-           
+
                 # display welcome message
                 #self.displayWelcomePopup()
 
@@ -691,9 +676,10 @@ class RiseAndFall:
                 #        unit = plotEgypt.getUnit(0)
                 #        unit.centerCamera()
                 #        #print (unit)
-                
+
+
         ### 3Miro Province Related Functions ###
-        def onCityBuilt(self, iPlayer, pCity ):
+        def onCityBuilt(self, iPlayer, pCity):
                 self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
                 # "prebuilt" walls
                 if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Early defense boost to Venice, the rivers alone are not enough
@@ -709,6 +695,7 @@ class RiseAndFall:
                 if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
                         pCity.setHasRealBuilding( xml.iWalls, True )
 
+
         def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
                 self.pm.onCityAcquired(owner, playerType, city, bConquest, bTrade)
                 if ( playerType == iTurkey ):
@@ -721,7 +708,7 @@ class RiseAndFall:
                                 city.setHasRealBuilding((xml.iPalace), True)
                                 if ( pTurkey.getStateReligion() == xml.iIslam ):
                                         city.setHasReligion(xml.iIslam,1,0,0)
-                                
+
 
         def onCityRazed(self, iOwner, playerType, city):
                 self.pm.onCityRazed(iOwner, playerType, city)
@@ -729,8 +716,8 @@ class RiseAndFall:
 
         def clear600ADChina(self):
                 pass
-        
-        
+
+
         #Sedna17 Respawn 
         def setupRespawnTurns(self):
                 for iCiv in range(iNumMajorPlayers):
@@ -752,15 +739,15 @@ class RiseAndFall:
                                                 self.setBirthTurnModifier(iNextCiv, (self.getBirthTurnModifier(iNextCiv)+1))
 
 
-
         def setEarlyLeaders(self):
                 for i in range(iNumActivePlayers):
                         if (tEarlyLeaders[i] != tLeaders[i][0]):
                                 if (not gc.getPlayer(i).isHuman()):
                                         gc.getPlayer(i).setLeader(tEarlyLeaders[i])
                                         print ("leader starting switch:", tEarlyLeaders[i], "in civ", i)
-        
-        def setWarOnSpawn( self ):
+
+
+        def setWarOnSpawn(self):
                 for i in range( iNumMajorPlayers - 1 ): # exclude the Pope
                         iTeamMajor = gc.getPlayer(i).getTeam()
                         pTeamMajor = gc.getTeam( iTeamMajor )
@@ -771,11 +758,11 @@ class RiseAndFall:
                                                 pTeamSecond = gc.getTeam( iTeamSecond )
                                                 #print(" 3Miro WAR ON SPAWN between ",iTeamMajor,iTeamSecond)
                                                 #pTeamMajor.setAtWar( iTeamSecond, True )
-                                                #pTeamSecond.setAtWar( iTeamMajot, True )
+                                                #pTeamSecond.setAtWar( iTeamMajor, True )
                                                 gc.getTeam( gc.getPlayer(i).getTeam() ).setAtWar( gc.getPlayer(j).getTeam(), True )
                                                 gc.getTeam( gc.getPlayer(j).getTeam() ).setAtWar( gc.getPlayer(i).getTeam(), True )
-                                
-                
+
+
         def checkTurn(self, iGameTurn):
                 
                 #Trigger betrayal mode
@@ -925,7 +912,6 @@ class RiseAndFall:
 
 
         def fragmentIndependents(self):
-
                 for iTest1 in range( con.iIndepStart, con.iIndepEnd + 1):
                         for iTest2 in range( con.iIndepStart, con.iIndepEnd + 1):
                                 if ( not (iTest1 == iTest2) ):
@@ -962,7 +948,6 @@ class RiseAndFall:
 
 
         def fragmentBarbarians(self, iGameTurn):
-
                 iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
                 for j in range(iRndnum, iRndnum + iNumPlayers):
                         iDeadCiv = j % iNumPlayers                                                        
@@ -997,8 +982,6 @@ class RiseAndFall:
                                                                                 utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
                                                                                 iDivideCounter += 1
                                         return
-
-
 
 
 
@@ -1165,7 +1148,7 @@ class RiseAndFall:
                         pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
 
 
-                              
+
         def resurrection(self, iGameTurn, iDeadCiv):
                 if iDeadCiv == -1:
                         iDeadCiv = self.findCivToResurect( iGameTurn , 0, -1)
@@ -1175,7 +1158,8 @@ class RiseAndFall:
                 if ( iDeadCiv > -1 ):
                         self.suppressResurection( iDeadCiv )
                         #self.resurectCiv( iDeadCiv )
-                                
+
+
         def findCivToResurect( self, iGameTurn , bSpecialRespawn, iDeadCiv):
                 #print("Looking up a civ to resurect, iDeadCiv: ",iDeadCiv)
                 if ( bSpecialRespawn ):
@@ -2297,7 +2281,7 @@ class RiseAndFall:
                 self.showArea(iCiv)
                 self.initContact(iCiv)
 
-                                
+
         def createStartingWorkers( self, iCiv, tPlot ):
                 # 3Miro: get the workers
                 # Sedna17: Cleaned the code

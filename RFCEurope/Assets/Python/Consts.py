@@ -97,9 +97,9 @@ lCivStabilityGroups = [[iByzantium,iBulgaria,iKiev,iLithuania,iMoscow],	#Eastern
 			[iNorse,iSweden]]		#Norse
 
 lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iSpain, iCordoba, iNorse, iVenecia, iKiev, iHungary, \
-		   iGermany, iPoland, iMoscow, iGenoa, iEngland, iPortugal, iLithuania, iAustria, iTurkey, iSweden, iDutch, iPope, \
-                   iIndependent, iIndependent2, iBarbarian]
-                   
+			iGermany, iPoland, iMoscow, iGenoa, iEngland, iPortugal, iLithuania, iAustria, iTurkey, iSweden, iDutch, iPope, \
+			iIndependent, iIndependent2, iBarbarian]
+
 lCivBioNewWorld = []
 
 #for messages
@@ -197,7 +197,7 @@ xml.i1359AD,#1359AD Turkey - turn 233 is normal time (Conquest of Adrianopolis)
 xml.i1380AD,#1380AD Moscow
 xml.i1523AD,#1523AD Sweden
 xml.i1581AD,#1581AD Dutch - turn 340 is normal time
-0,	#Pope
+0, #Pope
 0,
 0,
 0,
@@ -436,8 +436,8 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 (), #Bulgaria
 ((26,15),(26,16),(26,17),(26,18),(27,15),(27,16),(27,17),(27,18),(28,15),(28,16),(28,17),(28,18),(29,15),(29,16),(29,17),(29,18)), #Cordoba
 ((61,56),(61,57),(61,58),(61,59),(61,60),(62,57),(62,58),(62,59)), #Norse
-((60,33),(60,34),(60,35)), #Venice 
-((49,39),(49,40),(49,41),(49,42)), #Burgundy 
+((60,33),(60,34),(60,35)), #Venice
+((49,39),(49,40),(49,41),(49,42)), #Burgundy
 (), #Germany
 (), #Kiev
 (), #Hungary
