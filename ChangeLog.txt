@@ -17,33 +17,37 @@ Changes for RFCE 1.2:
 
 	General changes:
 		- Spawn of Arabia moved back one turn, to 632AD
-		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
-		- Minor tweaks to the French and Cordoban barb spawns, further separating it for the human and the AI player
 		- Interface message when a resource appears/disappears within your cultural borders
 		- Interface message when wonders are destroyed/captured by you, by a known civilization, or from a known civilization
 		- Interface message for the preset religion spreads (same way as it is when religions spread "normally")
 		- Judaism got an additional random spread mechanics, with bigger chance for spreading in central european cities
-		- Slightly lowered the base duration of the occupation resistance
-		- Removed free wins against barbarians - this means some of the early barbs might have to be rebalanced
-		- Increased the maximum XP you can get from barbarians (not from a single battle, the total XP) - was 10, now there is no cap
+		- Dead civs won't show up on the scoreboard anymore
 
-	XML and Text updates:
+	XML and text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
 		- Portuguese translations by Spirictum
 		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
 		- RFCE specific texts for the handicap levels
 
-	Art/sound updates:
+	Art and sound updates:
 		- Added theme files for the mod
 		- New HUD button for the corporation/company screen
 		- Austria has german unit sounds instead of the HRE ones
 		- Lithuania has polish unit sounds instead of russian (until we manage to get proper lithuanian sounds)
+	
+	Balance:
+		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
+		- Minor tweaks to the French and Cordoban barb spawns, further separating it for the human and the AI player
+		- Slightly lowered the base duration of the occupation resistance
+		- Removed free wins against barbarians - this means some of the early barbs might have to be rebalanced
+		- Increased the maximum XP you can get from barbarians (not from a single battle, the total XP) - was 10, now there is no cap
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
 		- Fixed sound issues for Venice and Genoa
 		- Fixed bug where Judaism didn't spread to a second city in Poland
 		- Fixed stability calculating issue when some of the stability giving wonders were razed
+		- Fixed viewing issues with the GlobeView layers - now everything shows up without any problems
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
