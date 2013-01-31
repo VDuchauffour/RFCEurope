@@ -22,6 +22,7 @@ Changes for RFCE 1.2:
 		- Interface message for the preset religion spreads (same way as it is when religions spread "normally")
 		- Judaism got an additional random spread mechanics, with bigger chance for spreading in central european cities
 		- Dead civs won't show up on the scoreboard anymore
+		- Autoraze changes: if the city has 1 population, 60% chance to autoraze if culture is less than 10, 30% chance to autoraze if culture is at least 10 but less than 50
 
 	XML and text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
