@@ -180,6 +180,8 @@ public:
 	DllExport void getTradeScreenIcons(std::vector< std::pair<CvString, CvWidgetDataStruct> >& aIconInfos, PlayerTypes ePlayer);
 	DllExport void getTradeScreenHeader(CvWString& szHeader, PlayerTypes ePlayer, PlayerTypes eOtherPlayer, bool bAttitude);
 
+	DllExport void getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWString& strName);
+
 	DllExport void getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp);
 	void getRebasePlotHelp(CvPlot* pPlot, CvWString& strHelp);
 	void getNukePlotHelp(CvPlot* pPlot, CvWString& strHelp);

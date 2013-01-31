@@ -14372,6 +14372,78 @@ void CvGameTextMgr::getTradeScreenHeader(CvWString& szHeader, PlayerTypes ePlaye
 	}
 }
 
+void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWString& strName)
+{
+	switch (eType)
+	{
+	case GLOBE_LAYER_STRATEGY:
+		switch(iOption)
+		{
+		case 0:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_STRATEGY_VIEW");
+			break;
+		case 1:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_STRATEGY_NEW_LINE");
+			break;
+		case 2:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_STRATEGY_NEW_SIGN");
+			break;
+		case 3:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_STRATEGY_DELETE");
+			break;
+		case 4:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_STRATEGY_DELETE_LINES");
+			break;
+		}
+		break;
+	case GLOBE_LAYER_UNIT:
+		switch(iOption)
+		{
+		case SHOW_ALL_MILITARY:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_UNITS_ALLMILITARY");
+			break;
+		case SHOW_TEAM_MILITARY:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_UNITS_TEAMMILITARY");
+			break;
+		case SHOW_ENEMIES_IN_TERRITORY:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_UNITS_ENEMY_TERRITORY_MILITARY");
+			break;
+		case SHOW_ENEMIES:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_UNITS_ENEMYMILITARY");
+			break;
+		case SHOW_PLAYER_DOMESTICS:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_UNITS_DOMESTICS");
+			break;
+		}
+		break;
+	case GLOBE_LAYER_RESOURCE:
+		switch(iOption)
+		{
+		case SHOW_ALL_RESOURCES:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_EVERYTHING");
+			break;
+		case SHOW_STRATEGIC_RESOURCES:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_GENERAL");
+			break;
+		case SHOW_HAPPY_RESOURCES:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_LUXURIES");
+			break;
+		case SHOW_HEALTH_RESOURCES:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_FOOD");
+			break;
+		}
+		break;
+	case GLOBE_LAYER_RELIGION:
+		strName = GC.getReligionInfo((ReligionTypes) iOption).getDescription();
+		break;
+	case GLOBE_LAYER_CULTURE:
+	case GLOBE_LAYER_TRADE:
+		// these have no sub-options
+		strName.clear();
+		break;
+	}
+}
+
 void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp)
 {
 	if (gDLL->getInterfaceIFace()->isCityScreenUp())

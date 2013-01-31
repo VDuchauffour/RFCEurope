@@ -2541,6 +2541,9 @@ class CvMainInterface:
 				i = 0
 				iNumBuildings = 0
 				for i in range( gc.getNumBuildingInfos() ):
+					
+					if gc.getBuildingInfo(i).isGraphicalOnly(): continue # Do not display hidden buildings - plague for example
+					
 					if (pHeadSelectedCity.getNumBuilding(i) > 0):
 
 						for k in range(pHeadSelectedCity.getNumBuilding(i)):
@@ -2885,8 +2888,8 @@ class CvMainInterface:
 					screen.show( "CultureText" )
 
 				if ((pHeadSelectedCity.getGreatPeopleProgress() > 0) or (pHeadSelectedCity.getGreatPeopleRate() > 0)):
-                                        #Rhye - great people info here
-                                        szBuffer = localText.getText("INTERFACE_CITY_GREATPEOPLE_RATE", (CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR), pHeadSelectedCity.getGreatPeopleRate()))
+					#Rhye - great people info here
+					szBuffer = localText.getText("INTERFACE_CITY_GREATPEOPLE_RATE", (CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR), pHeadSelectedCity.getGreatPeopleRate()))
 
 					screen.setLabel( "GreatPeopleText", "Background", szBuffer, CvUtil.FONT_CENTER_JUSTIFY, xResolution - 146, yResolution - 176, -1.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setHitTest( "GreatPeopleText", HitTestTypes.HITTEST_NOHIT )
@@ -3203,9 +3206,9 @@ class CvMainInterface:
 						while (j > -1):
 							ePlayer = gc.getGame().getRankPlayer(j)
 
-							if (not CyInterface().isScoresMinimized() or gc.getGame().getActivePlayer() == ePlayer):
-                                                                #if (gc.getPlayer(ePlayer).isAlive() and not gc.getPlayer(ePlayer).isMinorCiv()): #Rhye
-                                                                if (gc.getPlayer(ePlayer).isEverAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):
+							if (not CyInterface().isScoresMinimized() or gc.getGame().getActivePlayer() == ePlayer): # Next two lines for dead civs on the scoreboard - showing up or not
+								if (gc.getPlayer(ePlayer).isAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):
+								#if (gc.getPlayer(ePlayer).isEverAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):
 
                                                                         if (gc.getPlayer(ePlayer).getTeam() == eTeam):
                                                                                 szBuffer = u"<font=2>"
@@ -3464,7 +3467,7 @@ class CvMainInterface:
 				for iTmp in range(iNumOptions):
 					iOption = iTmp # iNumOptions - iTmp - 1
 					szName = "GlobeLayerOption" + str(iOption)
-					szCaption = kLayer.getOptionName(iOption)			
+					szCaption = kLayer.getOptionName(iOption)
 					if(iOption == iCurOption):
 						szBuffer = "  <color=0,255,0>%s</color>  " % (szCaption)
 					else:
