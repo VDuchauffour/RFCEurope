@@ -7802,7 +7802,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 				{
 					if (GC.getProcessInfo(getProductionProcess()).getProductionToCommerceModifier(COMMERCE_CULTURE) > 0)
 					{
-						popOrder(0, false, true);						
+						popOrder(0, false, true);
 					}
 				}
 			}
@@ -7892,7 +7892,7 @@ void CvCity::changeRiverPlotYield(YieldTypes eIndex, int iChange)
 }
 
 
-int CvCity::getBaseYieldRate(YieldTypes eIndex)	const													
+int CvCity::getBaseYieldRate(YieldTypes eIndex)	const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
@@ -8969,7 +8969,7 @@ void CvCity::updateCorporationBonus()
 }
 
 
-int CvCity::getCommerceRateModifier(CommerceTypes eIndex) const											 
+int CvCity::getCommerceRateModifier(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
@@ -8993,7 +8993,7 @@ void CvCity::changeCommerceRateModifier(CommerceTypes eIndex, int iChange)
 }
 
 
-int CvCity::getCommerceHappinessPer(CommerceTypes eIndex) const									 
+int CvCity::getCommerceHappinessPer(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
@@ -9038,7 +9038,7 @@ void CvCity::changeCommerceHappinessPer(CommerceTypes eIndex, int iChange)
 }
 
 
-int CvCity::getDomainFreeExperience(DomainTypes eIndex) const													 
+int CvCity::getDomainFreeExperience(DomainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
@@ -9055,7 +9055,7 @@ void CvCity::changeDomainFreeExperience(DomainTypes eIndex, int iChange)
 }
 
 
-int CvCity::getDomainProductionModifier(DomainTypes eIndex) const										 
+int CvCity::getDomainProductionModifier(DomainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex expected to be < NUM_DOMAIN_TYPES");
@@ -14256,9 +14256,20 @@ bool CvCity::isAutoRaze() const
 
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_RAZING))
 	{
-		if ( (getHighestPopulation() == 1) && (GC.getGameINLINE().getSorenRandNum(100," Shall we autoraze") < 40) )
+		// Absinthe: If the city has 1 population, 60% chance to autoraze if culture is less than 10, 30% chance to autoraze if culture is at least 10 but less than 50
+		if ( (getHighestPopulation() == 1) && (getCultureTimes100(getOwnerINLINE()) < 1000) )
 		{
-			return true;
+			if (GC.getGameINLINE().getSorenRandNum(100," Shall we autoraze") < 60)
+			{
+				return true;
+			}
+		}
+		else
+		{
+			if ( (getHighestPopulation() == 1) && (getCultureTimes100(getOwnerINLINE()) < 5000) && (GC.getGameINLINE().getSorenRandNum(100," Shall we autoraze") < 30) )
+			{
+				return true;
+			}
 		}
 
 		if (GC.getGameINLINE().getMaxCityElimination() > 0)
@@ -14292,7 +14303,7 @@ int CvCity::getMusicScriptId() const
 		}
 	}
 	else
-	{			
+	{
 		if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).isAtWar(getTeam()))
 		{
 			bIsHappy = false;
