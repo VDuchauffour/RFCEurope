@@ -2361,11 +2361,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 	//Rhye - start switch (unit AI types)
 
 	if (GET_PLAYER((PlayerTypes)getOwnerINLINE()).verifySettlersHalt(300)) {}
-	else if (GET_PLAYER((PlayerTypes)getOwnerINLINE()).verifySettlersHalt(40)) 
+	else if (GET_PLAYER((PlayerTypes)getOwnerINLINE()).verifySettlersHalt(100)) 
 		{
 		// 3Miro: settle
 		//if (!GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-		//	aiUnitAIVal[UNITAI_SETTLE] /= 2;
+			aiUnitAIVal[UNITAI_SETTLE] /= 2;
 		}
 	else aiUnitAIVal[UNITAI_SETTLE] /= 4;
 

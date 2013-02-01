@@ -42,6 +42,9 @@ Changes for RFCE 1.2:
 		- Slightly lowered the base duration of the occupation resistance
 		- Removed free wins against barbarians - this means some of the early barbs might have to be rebalanced
 		- Increased the maximum XP you can get from barbarians (not from a single battle, the total XP) - was 10, now there is no cap
+		- Lowered preset diplomacy modifiers, overkill to have 10+ relations there
+		- The French got some additional starting units (1 archer and 2 axemans)
+		- Burdigala and Tolosa (Bordeaux and Toulouse) start with less archers
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
@@ -49,6 +52,8 @@ Changes for RFCE 1.2:
 		- Fixed bug where Judaism didn't spread to a second city in Poland
 		- Fixed stability calculating issue when some of the stability giving wonders were razed
 		- Fixed viewing issues with the GlobeView layers - now everything shows up without any problems
+		- Revised the hidden attitude modcomp, now every part of it should work (show up) correctly
+		- Fixed issue where AI built large number of settlers but didn't use them, also improvements in the settler move code
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
