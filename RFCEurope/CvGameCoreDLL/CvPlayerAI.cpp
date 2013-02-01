@@ -5915,33 +5915,23 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	return range(iAttitude, -100, 100);*/
 }
 
-// BEGIN: Show Hidden Attitude Mod 01/22/2009
+// BEGIN: Show Hidden Attitude Mod - modified by Absinthe, based on SoI
 int CvPlayerAI::AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const
 {
-    int iAttitude;
-
-	iAttitude = GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
-
-	iAttitude += GC.getHandicapInfo(GET_PLAYER(ePlayer).getHandicapType()).getAttitudeChange();
-	if (!(GET_PLAYER(ePlayer).isHuman()))
+	CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
+	int iAttitude = GC.getHandicapInfo(kPlayer.getHandicapType()).getAttitudeChange();
+	
+	iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
+	
+	if (GC.getGameINLINE().isDebugMode())
 	{
-#ifndef HIDDEN_ATTITUDE_SPOILER
-        if (GC.getGameINLINE().isDebugMode())
-        {
-#endif
-            // iBasePeaceWeight + iPeaceWeightRand
-            iAttitude += (4 - abs(AI_getPeaceWeight() - GET_PLAYER(ePlayer).AI_getPeaceWeight()));
-#ifndef HIDDEN_ATTITUDE_SPOILER
-        }
-        else
-        {
-            // iBasePeaceWeight
-            iAttitude += (4 - abs(GC.getLeaderHeadInfo(getPersonalityType()).getBasePeaceWeight() - GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getBasePeaceWeight()));
-        }
-#endif
-		iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(), GC.getLeaderHeadInfo(GET_PLAYER(ePlayer).getPersonalityType()).getWarmongerRespect());
+		if (!kPlayer.isHuman())
+		{
+			iAttitude += (4 - abs(AI_getPeaceWeight() - kPlayer.AI_getPeaceWeight())); // edead: this spoiler is OK
+			iAttitude += std::min(GC.getLeaderHeadInfo(getPersonalityType()).getWarmongerRespect(), GC.getLeaderHeadInfo(kPlayer.getPersonalityType()).getWarmongerRespect());
+		}
 	}
-    return iAttitude;
+	return iAttitude;
 }
 
 int CvPlayerAI::AI_getTeamSizeAttitude(PlayerTypes ePlayer) const
@@ -5949,98 +5939,114 @@ int CvPlayerAI::AI_getTeamSizeAttitude(PlayerTypes ePlayer) const
 	return -std::max(0, (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getNumMembers() - GET_TEAM(getTeam()).getNumMembers()));
 }
 
-#ifndef HIDDEN_ATTITUDE_SPOILER
 // Count only players visible on the active player's scoreboard
 int CvPlayerAI::AI_getKnownPlayerRank(PlayerTypes ePlayer) const
 {
-    PlayerTypes eActivePlayer = GC.getGameINLINE().getActivePlayer();
-    if (NO_PLAYER == eActivePlayer || GC.getGameINLINE().isDebugMode()) {
-        // Use the full scoreboard
-        return GC.getGameINLINE().getPlayerRank(ePlayer);
-    }
+	PlayerTypes eActivePlayer = GC.getGameINLINE().getActivePlayer();
+	if (NO_PLAYER == eActivePlayer || GC.getGameINLINE().isDebugMode()) {
+		// Use the full scoreboard
+		return GC.getGameINLINE().getPlayerRank(ePlayer);
+	}
 
-    int iRank = 0;
-    for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-    {
-        PlayerTypes eRankPlayer = GC.getGameINLINE().getRankPlayer(iI);
-        if (GET_TEAM(GET_PLAYER(eActivePlayer).getTeam()).isHasMet(GET_PLAYER(eRankPlayer).getTeam()) || GET_TEAM(GET_PLAYER(eRankPlayer).getTeam()).isHuman())
-        {
-            if (eRankPlayer == ePlayer) {
-                return iRank;
-            }
-            iRank++;
-        }
-    }
-    // Should only get here if we tried to find the rank of an unknown player
-    return iRank;
+	TeamTypes eActiveTeam = GC.getGameINLINE().getActiveTeam();
+	int iRank = 0;
+	for (int iI = 0; iI < NUM_MAJOR_PLAYERS; iI++) // edead: MAX_CIV_PLAYERS -> NUM_MAJOR_PLAYERS
+	{
+		PlayerTypes eRankPlayer = GC.getGameINLINE().getRankPlayer(iI);
+		if (eRankPlayer != NO_PLAYER)
+		{
+			CvTeam& kRankTeam = GET_TEAM(GET_PLAYER(eRankPlayer).getTeam());
+			if (kRankTeam.isAlive() && (kRankTeam.isHasMet(eActiveTeam) || kRankTeam.isHuman()))
+			{
+				if (eRankPlayer == ePlayer) {
+					return iRank;
+				}
+				iRank++;
+			}
+		}
+	}
+
+	// Should only get here if we tried to find the rank of an unknown player
+	return iRank + 1;
 }
-#endif
 
 int CvPlayerAI::AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const
 {
-#ifdef HIDDEN_ATTITUDE_SPOILER
-    int iRankDifference = (GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer));
-#else
-    int iRankDifference = (AI_getKnownPlayerRank(getID()) - AI_getKnownPlayerRank(ePlayer));
-#endif
-	if (iRankDifference < 0)
+	int iRankDifference;
+	if (GC.getGameINLINE().isDebugMode())
 	{
-		return (GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange() * -(iRankDifference)) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1);
+		iRankDifference = GC.getGameINLINE().getPlayerRank(ePlayer) - GC.getGameINLINE().getPlayerRank(getID());
 	}
-    return 0;
+	else
+	{
+		iRankDifference = AI_getKnownPlayerRank(ePlayer) - AI_getKnownPlayerRank(getID());
+	}
+
+	if (iRankDifference > 0)
+	{
+		return GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange() * iRankDifference / (GC.getGameINLINE().countCivPlayersEverAlive() + 1);
+	}
+
+	return 0;
 }
 
 int CvPlayerAI::AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const
 {
-#ifdef HIDDEN_ATTITUDE_SPOILER
-    int iRankDifference = (GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer));
-#else
-    int iRankDifference = (AI_getKnownPlayerRank(getID()) - AI_getKnownPlayerRank(ePlayer));
-#endif
+	int iRankDifference;
+	if (GC.getGameINLINE().isDebugMode())
+	{
+		iRankDifference = GC.getGameINLINE().getPlayerRank(getID()) - GC.getGameINLINE().getPlayerRank(ePlayer);
+	}
+	else
+	{
+	    iRankDifference = AI_getKnownPlayerRank(getID()) - AI_getKnownPlayerRank(ePlayer);
+	}
 
 	if (iRankDifference > 0)
 	{
-		return (GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange() * iRankDifference) / (GC.getGameINLINE().countCivPlayersEverAlive() + 1);
+		return GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange() * iRankDifference / (GC.getGameINLINE().countCivPlayersEverAlive() + 1);
 	}
-    return 0;
+
+	return 0;
 }
 
 int CvPlayerAI::AI_getLowRankAttitude(PlayerTypes ePlayer) const
 {
-#ifdef HIDDEN_ATTITUDE_SPOILER
-	if ((GC.getGameINLINE().getPlayerRank(getID()) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)) &&
-		  (GC.getGameINLINE().getPlayerRank(ePlayer) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)))
-#else
-	if ((AI_getKnownPlayerRank(getID()) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)) &&
-		  (AI_getKnownPlayerRank(ePlayer) >= (GC.getGameINLINE().countCivPlayersEverAlive() / 2)))
-#endif
+	int iThisPlayerRank;
+	int iPlayerRank;
+	if (GC.getGameINLINE().isDebugMode())
 	{
-		return 1;
+		iThisPlayerRank = GC.getGameINLINE().getPlayerRank(getID());
+		iPlayerRank = GC.getGameINLINE().getPlayerRank(ePlayer);
 	}
-    return 0;
+	else
+	{
+		iThisPlayerRank = AI_getKnownPlayerRank(getID());
+		iPlayerRank = AI_getKnownPlayerRank(ePlayer);
+	}
+
+	int iMedianRank = GC.getGameINLINE().countCivPlayersEverAlive() / 2;
+	return (iThisPlayerRank >= iMedianRank && iPlayerRank >= iMedianRank) ? 1 : 0;
 }
 
 int CvPlayerAI::AI_getLostWarAttitude(PlayerTypes ePlayer) const
 {
-#ifndef HIDDEN_ATTITUDE_SPOILER
-    if (!GC.getGameINLINE().isDebugMode())
-    {
-        PlayerTypes eActivePlayer = GC.getGameINLINE().getActivePlayer();
-        if (NO_PLAYER != eActivePlayer)
-        {
-            // Hide war success for wars you are not involved in
-            if (GET_PLAYER(eActivePlayer).getTeam() != getTeam() && GET_PLAYER(eActivePlayer).getTeam() != GET_PLAYER(ePlayer).getTeam())
-			{
-                return 0;
-            }
-        }
-    }
-#endif
-	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getWarSuccess(getTeam()) > GET_TEAM(getTeam()).AI_getWarSuccess(GET_PLAYER(ePlayer).getTeam()))
+	TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
+	if (!GC.getGameINLINE().isDebugMode() && NO_PLAYER != GC.getGameINLINE().getActivePlayer())
+	{
+		// Hide war success for wars you are not involved in
+		if (GC.getGameINLINE().getActiveTeam() != getTeam() && GC.getGameINLINE().getActiveTeam() != eTeam)
+		{
+			return 0;
+		}
+	}
+
+	if (GET_TEAM(eTeam).AI_getWarSuccess(getTeam()) > GET_TEAM(getTeam()).AI_getWarSuccess(eTeam))
 	{
 		return GC.getLeaderHeadInfo(getPersonalityType()).getLostWarAttitudeChange();
 	}
-    return 0;
+
+	return 0;
 }
 // END: Show Hidden Attitude Mod
 

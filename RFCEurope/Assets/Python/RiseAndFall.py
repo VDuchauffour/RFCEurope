@@ -2309,8 +2309,8 @@ class RiseAndFall:
                 # 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
                 
                 utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 2)
-                utils.makeUnit(xml.iArcher, iFrankia, tCapitals[iFrankia], 2)
-                utils.makeUnit(xml.iAxeman, iFrankia, tCapitals[iFrankia], 2)
+                utils.makeUnit(xml.iArcher, iFrankia, tCapitals[iFrankia], 3)
+                utils.makeUnit(xml.iAxeman, iFrankia, tCapitals[iFrankia], 4)
                 utils.makeUnit(xml.iWorker, iFrankia, tCapitals[iFrankia], 2)
                 utils.makeUnit(xml.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
 

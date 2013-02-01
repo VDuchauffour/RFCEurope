@@ -184,12 +184,12 @@ class Barbs:
 
 		#Germanic Barbarians throughout Western Europe (France, Germany)
 		if (iGameTurn < xml.i800AD):
-			self.spawnUnits( iBarbarian, (45,45),(60,55), xml.iAxeman, 1 + iHandicap, iGameTurn,12,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+			self.spawnUnits( iBarbarian, (45,45),(60,55), xml.iAxeman, 1 + iHandicap, iGameTurn,14,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 		if (gc.getPlayer(con.iFrankia).isHuman()): #extra barbs for human France
 			if (iGameTurn < xml.i800AD):
-				self.spawnUnits( iBarbarian, (43,42),(52,50), xml.iAxeman, 1 + iHandicap, iGameTurn,8,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
-				self.spawnUnits( iBarbarian, (42,40),(56,48), xml.iSpearman, 1 + iHandicap, iGameTurn,10,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
-				self.spawnUnits( iBarbarian, (46,48),(62,55), xml.iAxeman, 1 + iHandicap, iGameTurn,15,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+				self.spawnUnits( iBarbarian, (43,42),(52,50), xml.iAxeman, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+				self.spawnUnits( iBarbarian, (42,40),(56,48), xml.iSpearman, 1 + iHandicap, iGameTurn,11,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+				self.spawnUnits( iBarbarian, (46,48),(62,55), xml.iAxeman, 1 + iHandicap, iGameTurn,18,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 
 		#Longobards in Italy
 		if (iGameTurn >= xml.i632AD and iGameTurn <= xml.i800AD):
@@ -433,18 +433,18 @@ class Barbs:
 
 
 		# 3Miro Barbarian and Independent city spawns and barbarian invasions go here. Check with original RFC file for details
-		# Setting cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
-		# Barbarian cities are exceptions, they won't shrink. Also, they start with 2 additional units
+		# Setting independent cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
+		# Barbarian cities are exceptions, they won't shrink. Also, they start with 2 additional units (archers in 500AD)
 		# Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, number of units, religion, workers)
 		# Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 
                 if ( iGameTurn < xml.i700AD ):
                         #500AD
                         self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 ) 
-                        self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 1, -1, 0 )
+                        self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 0, -1, 0 )
                         self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
                         self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+                        self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 0, -1, 0 )
                         self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # 3Miro - Lyon flips to Burgundy
                         self.foundCity(iIndependent2, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )

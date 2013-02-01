@@ -130,19 +130,15 @@ public:
 	int AI_getMemoryAttitude(PlayerTypes ePlayer, MemoryTypes eMemory) const;
 	int AI_getColonyAttitude(PlayerTypes ePlayer) const;
 
-    // BEGIN: Show Hidden Attitude Mod 01/22/2010
-#define HIDDEN_ATTITUDE_SPOILER 1
+	// BEGIN: Show Hidden Attitude Mod 01/22/2010
 	int AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const;
 	int AI_getTeamSizeAttitude(PlayerTypes ePlayer) const;
 	int AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const;
 	int AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const;
 	int AI_getLowRankAttitude(PlayerTypes ePlayer) const;
 	int AI_getLostWarAttitude(PlayerTypes ePlayer) const;
-#ifndef HIDDEN_ATTITUDE_SPOILER
-    int AI_getKnownPlayerRank(PlayerTypes ePlayer) const;
-#endif
-    // END: Show Hidden Attitude Mod
-
+	int AI_getKnownPlayerRank(PlayerTypes ePlayer) const;
+	// END: Show Hidden Attitude Mod
 
 	PlayerVoteTypes AI_diploVote(const VoteSelectionSubData& kVoteData, VoteSourceTypes eVoteSource, bool bPropose);
 
