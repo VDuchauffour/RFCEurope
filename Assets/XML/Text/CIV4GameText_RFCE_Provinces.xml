@@ -646,6 +646,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_63</Tag>
+		<English>Province_63</English>
+		<French>Province_63</French>
+		<German>Province_63</German>
+		<Italian>Province_63</Italian>
+		<Spanish>Province_63</Spanish>
+		<Portuguese>Province_63</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Currently unused -->
+		<Tag>TXT_KEY_PROVINCE_NAME_63_2</Tag>
 		<English>Tyrol</English>
 		<French>Tyrol</French>
 		<German>Tirol</German>
@@ -653,8 +662,8 @@
 		<Spanish>Tirol</Spanish>
 		<Portuguese>Tirol</Portuguese>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROVINCE_NAME_63_2</Tag>
+	<TEXT> <!-- Currently unused -->
+		<Tag>TXT_KEY_PROVINCE_NAME_63_3</Tag>
 		<English>Salzburg</English>
 		<French>Salzbourg</French>
 		<German>Salzburg</German>
@@ -862,6 +871,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_86</Tag>
+		<English>Bosnia</English>
+		<French>Bosnie</French>
+		<German>Bosnien</German>
+		<Italian>Bosnia</Italian>
+		<Spanish>Bosnia</Spanish>
+		<Portuguese>Bósnia</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Currently unused -->
+		<Tag>TXT_KEY_PROVINCE_NAME_86_2</Tag>
 		<English>Croatia</English>
 		<French>Croatie</French>
 		<German>Kroatien</German>
@@ -1375,12 +1393,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_143</Tag>
-		<English>Bosnia</English>
-		<French>Bosnie</French>
-		<German>Bosnien</German>
-		<Italian>Bosnia</Italian>
-		<Spanish>Bosnia</Spanish>
-		<Portuguese>Bósnia</Portuguese>
+		<English>Province_143</English>
+		<French>Province_143</French>
+		<German>Province_143</German>
+		<Italian>Province_143</Italian>
+		<Spanish>Province_143</Spanish>
+		<Portuguese>Province_143</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_144</Tag>

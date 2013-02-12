@@ -51,7 +51,8 @@ Changes for RFCE 1.2:
 		- The eastern part of the Black Sea got a line of coast tiles, the actual coast is only 1-2 tiles away anyway, and this way early ships can pass there too
 		- New provinces: Banat (representing the southern Banates of medieval Hungary), Holstein (buffer province between Denmark and Germany, also helps in the French first UHV)
 		- New provinces: Prussia (for the Teutonic Order/Prussia civ), Liguria (better to have a separate province because of the French UHV)
-		- Lots of small province adjustments: primarly near the new provinces, in Scandinavia, and in the Polish-Lithuanian-Kievan territories
+		- Lots of small province adjustments: primarly near the new provinces, in the Austrian territories, in Scandinavia, and in the Polish-Lithuanian-Kievan territories
+		- Province Croatia merged into Slavonia, province adjustment in the area - the Dalmatian coast will be better shaped culturally (between Venice and Hungary / Austria)
 		- Both Alba Iulia / Gyulafehervar and Lubeck spawns 1 tile north, to follow the province changes
 
 	XML and text updates:
@@ -105,8 +106,9 @@ Changes for RFCE 1.2:
 		- For Genoa Liguria is core, while Lombardy and Tuscany are also stable, but not core
 		- Liguria is OK for the Franks, but changes to unstable after Germany spawns
 		- The province Prussia is unstable for everyone, at least for now
-		- The German first and third UHV requires Holstein too, the Ottoman first UHV and the Hungarian anti-Ottoman UHV requires Banat too
-		- Holstein and Prussia also counts in the Swedish third UHV, Prussia also counts in the Polish first UHV
+		- The German first and third UHV requires Holstein too, the Ottoman first UHV requires Banat, and the Hungarian anti-Ottoman UHV requires Banat and Slavonia
+		- Holstein and Prussia also count in the Swedish third UHV, Prussia also counts in the Polish first UHV
+		- Minor changes in the defensive crusades, also updated them with the new provinces
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button

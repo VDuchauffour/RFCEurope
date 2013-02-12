@@ -34,18 +34,18 @@ tDefensiveCrusadeMap = [
 [], #tBulgaria
 [xml.iP_Leon, xml.iP_GaliciaSpain, xml.iP_Lusitania, xml.iP_Aragon, xml.iP_Catalonia, xml.iP_Navarre, xml.iP_Castile, xml.iP_Andalusia, xml.iP_LaMancha, xml.iP_Valencia], #tCordoba (for consistency)
 [], #tNorse
-[xml.iP_Verona, xml.iP_Tuscany, xml.iP_Arberia, xml.iP_Dalmatia, xml.iP_Croatia], #tVenecia
+[xml.iP_Verona, xml.iP_Tuscany, xml.iP_Arberia, xml.iP_Dalmatia], #tVenecia
 [xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine,xml.iP_Picardy], #tBurgundy
-[xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Bavaria, xml.iP_Saxony, xml.iP_Franconia, xml.iP_Flanders, xml.iP_Brandenburg, xml.iP_Bohemia], #tGermany
+[xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Bavaria, xml.iP_Saxony, xml.iP_Franconia, xml.iP_Flanders, xml.iP_Brandenburg, xml.iP_Holstein, xml.iP_Bohemia], #tGermany
 [], #tKiev
-[xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Slavonia, xml.iP_Pannonia, xml.iP_Austria, xml.iP_Carinthia, xml.iP_Serbia, xml.iP_Moesia, xml.iP_Croatia], #tHungary
+[xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Slavonia, xml.iP_Pannonia, xml.iP_Austria, xml.iP_Carinthia, xml.iP_Serbia, xml.iP_Moesia, xml.iP_Banat, xml.iP_Bosnia, xml.iP_Dalmatia], #tHungary
 [xml.iP_Leon, xml.iP_GaliciaSpain, xml.iP_Lusitania, xml.iP_Aragon, xml.iP_Catalonia, xml.iP_Navarre, xml.iP_Castile, xml.iP_Andalusia, xml.iP_LaMancha, xml.iP_Valencia], #tSpain
 [xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Silesia, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_GaliciaPoland, xml.iP_Brest], #tPoland
-[xml.iP_Lombardy, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Tuscany], #tGenoa
+[xml.iP_Liguria, xml.iP_Lombardy, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Tuscany], #tGenoa
 [], #tEngland
 [xml.iP_Leon, xml.iP_GaliciaSpain, xml.iP_Lusitania, xml.iP_Aragon, xml.iP_Catalonia, xml.iP_Navarre, xml.iP_Castile, xml.iP_Andalusia, xml.iP_LaMancha, xml.iP_Valencia], #tPortugal
 [], #tLithuania
-[xml.iP_Austria, xml.iP_Carinthia, xml.iP_Bavaria, xml.iP_Bohemia, xml.iP_Moravia], #tAustria
+[xml.iP_Austria, xml.iP_Carinthia, xml.iP_Bavaria, xml.iP_Bohemia, xml.iP_Moravia, xml.iP_Silesia], #tAustria
 [], #tTurkey
 [], #tMoscow
 [], #tSweden
