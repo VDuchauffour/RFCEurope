@@ -535,7 +535,7 @@
 	</Define>
 	<Define>
 		<DefineName>LAKE_MAX_AREA_SIZE</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>9</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_BASE_FREE_UNITS</DefineName>
@@ -1427,7 +1427,7 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_WATER_SIZE_FOR_OCEAN</DefineName>
-		<iDefineIntVal>9</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_CITY_ATTACK_MODIFIER_FOR_SIEGE_TOWER</DefineName>

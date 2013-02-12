@@ -17843,7 +17843,7 @@ bool CvUnitAI::AI_plotValid(CvPlot* pPlot)
 	switch (getDomainType())
 	{
 	case DOMAIN_SEA:
-		if (pPlot->isWater() || canMoveAllTerrain())
+		if (pPlot->isWater())
 		{
 			return true;
 		}

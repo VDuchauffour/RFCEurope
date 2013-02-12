@@ -44,8 +44,8 @@ public:
 	DllExport void eraseAIDevelopment();	// Exposed to Python
 	//Rhye - end
 
-	DllExport float getPointX() const;														
-	DllExport float getPointY() const;														
+	DllExport float getPointX() const;
+	DllExport float getPointY() const;
 	DllExport NiPoint3 getPoint() const;																																	// Exposed to Python
 
 	float getSymbolSize() const;
@@ -85,7 +85,7 @@ public:
 	bool isAdjacentToArea(int iAreaID) const;
 	bool isAdjacentToArea(const CvArea* pArea) const;																						// Exposed to Python
 	bool shareAdjacentArea( const CvPlot* pPlot) const;																					// Exposed to Python
-	bool isAdjacentToLand() const;																															// Exposed to Python 
+	bool isAdjacentToLand() const;																															// Exposed to Python
 	bool isCoastalLand(int iMinWaterSize = -1) const;																																	// Exposed to Python
 
 	bool isVisibleWorked() const;
@@ -107,7 +107,7 @@ public:
 	int getNearestLandArea() const;																															// Exposed to Python
 	CvPlot* getNearestLandPlot() const;																													// Exposed to Python
 
-	int seeFromLevel(TeamTypes eTeam) const;																										// Exposed to Python  
+	int seeFromLevel(TeamTypes eTeam) const;																										// Exposed to Python
 	int seeThroughLevel() const;																																// Exposed to Python
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
 	bool canSeePlot(CvPlot *plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
@@ -125,12 +125,12 @@ public:
 	int getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** ppCity) const;																// Exposed to Python
 
 	DllExport CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;		// Exposed to Python
-	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, bool bDefensiveBonuses = true, bool bTestAtWar = false, bool bTestPotentialEnemy = false) const;	
-	CvUnit* getSelectedUnit() const;																																// Exposed to Python				
-	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const;																					// Exposed to Python				
+	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, bool bDefensiveBonuses = true, bool bTestAtWar = false, bool bTestPotentialEnemy = false) const;
+	CvUnit* getSelectedUnit() const;																																// Exposed to Python
+	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const;																					// Exposed to Python
 
-	int defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp = false) const;									// Exposed to Python				
-	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const;														// Exposed to Python				
+	int defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp = false) const;									// Exposed to Python
+	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const;														// Exposed to Python
 
 	int getExtraMovePathCost() const;																																// Exposed to Python
 	void changeExtraMovePathCost(int iChange);																																// Exposed to Python
@@ -239,7 +239,7 @@ public:
 	}
 #endif
 	bool at(int iX, int iY) const;																																		// Exposed to Python
-	int getLatitude() const;																																					// Exposed to Python  
+	int getLatitude() const;																																					// Exposed to Python
 	int getFOWIndex() const;
 
 	CvArea* area() const;																																							// Exposed to Python
@@ -259,7 +259,7 @@ public:
 
 	CvArea* secondWaterArea() const;
 	int getArea() const;																																		// Exposed to Python
-	void setArea(int iNewValue);			
+	void setArea(int iNewValue);
 
 	DllExport int getFeatureVariety() const;																													// Exposed to Python
 
@@ -288,15 +288,15 @@ public:
 
 	bool isStartingPlot() const;																																			// Exposed to Python
 	void setStartingPlot(bool bNewValue);																															// Exposed to Python
-	
-	DllExport bool isNOfRiver() const;																																// Exposed to Python					
-	DllExport void setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir);											// Exposed to Python					
-																																																		
-	DllExport bool isWOfRiver() const;																																// Exposed to Python					
-	DllExport void setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir);											// Exposed to Python					
-																																																		
-	DllExport CardinalDirectionTypes getRiverNSDirection() const;																			// Exposed to Python					
-	DllExport CardinalDirectionTypes getRiverWEDirection() const;																			// Exposed to Python					
+
+	DllExport bool isNOfRiver() const;																																// Exposed to Python
+	DllExport void setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir);											// Exposed to Python
+
+	DllExport bool isWOfRiver() const;																																// Exposed to Python
+	DllExport void setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir);											// Exposed to Python
+
+	DllExport CardinalDirectionTypes getRiverNSDirection() const;																			// Exposed to Python
+	DllExport CardinalDirectionTypes getRiverWEDirection() const;																			// Exposed to Python
 
 	CvPlot* getInlandCorner() const;																																	// Exposed to Python
 	bool hasCoastAtSECorner() const;
@@ -388,8 +388,8 @@ public:
 	//int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false) const;	// Exposed to Python
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/	
-	
+/************************************************************************************************/
+
 	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;												// Exposed to Python
 	bool hasYield() const;																																		// Exposed to Python
 	void updateYield();
@@ -447,15 +447,15 @@ public:
 	bool isAdjacentNonrevealed(TeamTypes eTeam) const;																				// Exposed to Python
 
 	DllExport ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug) const;					// Exposed to Python
-	void setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue);			
+	void setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue);
 
 	DllExport RouteTypes getRevealedRouteType(TeamTypes eTeam, bool bDebug) const;											// Exposed to Python
-	void setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue);							
+	void setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue);
 
-	int getBuildProgress(BuildTypes eBuild) const;																											// Exposed to Python  
-	bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM);								// Exposed to Python 
+	int getBuildProgress(BuildTypes eBuild) const;																											// Exposed to Python
+	bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM);								// Exposed to Python
 
-	void updateFeatureSymbolVisibility(); 
+	void updateFeatureSymbolVisibility();
 	void updateFeatureSymbol(bool bForce = false);
 
 	DllExport bool isLayoutDirty() const;							// The plot layout contains bonuses and improvements --- it is, like the city layout, passively computed by LSystems
@@ -528,6 +528,10 @@ public:
 	DllExport float getAqueductSourceWeight() const;  // used to place aqueducts on the map
 	DllExport bool shouldDisplayBridge(CvPlot* pToPlot, PlayerTypes ePlayer) const;
 	DllExport bool checkLateEra() const;
+
+	// Absinthe: start
+//	int getProvince();
+	// Absinthe: end
 
 	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
 	int getPlayerDangerCache(PlayerTypes ePlayer, int iRange);

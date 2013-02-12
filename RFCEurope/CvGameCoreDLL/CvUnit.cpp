@@ -2474,25 +2474,27 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 				{
 					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
 					{
-						//Rhye - start UP (Khmer)
-						//return false;
-						// 3Miro
-						//if (getOwnerINLINE() == KHMER && pPlot->getFeatureType() == 1)
-						//	return true;
-						//else
-						//if ( getOwnerINLINE() == 8 && pPlot ->getX() == 56 && pPlot ->getY() == 35 ){
 						if ( (StrategicTileX[getOwnerINLINE()] == pPlot ->getX()) && (StrategicTileY[getOwnerINLINE()] == pPlot ->getY()) ){
-							//GC.getGameINLINE().logMsg(" Strategic Tile: %d %d ",pPlot->getX(),pPlot->getY()); // 3Miro
 							return true;
 						}else{
 							return false;
 						};
-						//Rhye - end
 					}
 				}
 			}
 		}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       09/17/09                         TC01 & jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+/* original bts code
 		else
+*/
+		// always check terrain also
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 		{
 			if (m_pUnitInfo->getTerrainImpassable(pPlot->getTerrainType()))
 			{
@@ -2503,7 +2505,6 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 					{
 						if (bIgnoreLoad || !canLoad(pPlot)) 
 						{
-							//GC.getGameINLINE().logMsg(" You shall not pass 1: %d %d",pPlot->getX(),pPlot->getY());
 							return false;
 						}
 					}
@@ -2516,7 +2517,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	switch (getDomainType())
 	{
 	case DOMAIN_SEA:
-		if (!pPlot->isWater() && !canMoveAllTerrain())
+		if (!pPlot->isWater())
 		{
 			if (!pPlot->isFriendlyCity(*this, true) || !pPlot->isCoastalLand()) 
 			{
@@ -2555,19 +2556,16 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		break;
 
 	case DOMAIN_LAND:
-		//if ( (pPlot -> getX() != 45) || (pPlot -> getY() != 51) ){ // 3MiroTest
-			if (pPlot->isWater() && !canMoveAllTerrain())
+		if (pPlot->isWater() && !canMoveAllTerrain())
+		{
+			if (!pPlot->isCity() || 0 == GC.getDefineINT("LAND_UNITS_CAN_ATTACK_WATER_CITIES"))
 			{
-				if (!pPlot->isCity() || 0 == GC.getDefineINT("LAND_UNITS_CAN_ATTACK_WATER_CITIES"))
+				if (bIgnoreLoad || !isHuman() || plot()->isWater() || !canLoad(pPlot))
 				{
-					if (bIgnoreLoad || !isHuman() || plot()->isWater() || !canLoad(pPlot))
-					{
-						//GC.getGameINLINE().logMsg(" You shall not pass 2: %d %d",pPlot->getX(),pPlot->getY());
-						return false;
-					}
+					return false;
 				}
 			}
-		//};
+		}
 		break;
 
 	case DOMAIN_IMMOBILE:

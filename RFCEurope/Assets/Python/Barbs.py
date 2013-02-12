@@ -52,9 +52,10 @@ lAugsburg = [55,41,0,0] #500 AD
 #lCatania = [58,18,0,0] #500 AD
 lNapoli = [59,24,0,0] #500 AD
 lRagusa = [64,28,0,0] #500 AD
-lBeograd = [68,30,0,0] #500 AD
-lRhodes = [79,12,0,0] # 500 AD
+#lBeograd = [68,30,0,0] #500 AD
+lSeville = [27,21,0,0] #500 AD
 lPalermo = [55,19,2,0] # 508 AD
+lRhodes = [80,13,25,0] # 600 AD
 #lZaragoza = [36,29,45,0] # 680 AD
 lToledo = [30,27,45,0] #680 AD
 #lLeon = [27,32,50,0] # 700 AD
@@ -64,20 +65,24 @@ lPamplona = [35,32,50,0] #700 AD
 lPorto = [23,31,50,0] #700 AD
 lYork = [39,59,50,0] # 700 AD
 lDublin = [32,58,50,0] # 700 AD
-lLubeck = [57,53,50,0] #700 AD
+lLubeck = [57,54,50,0] #700 AD
 lTonsberg = [57,65,65,0] #760 AD
+lRaska = [68,28,67,0] #768 AD
+lFez = [29,12,70,0] # 780 AD
 #lCorunna = [24,35,75,0] #800 AD
 lMilan = [52,37,75,0] #800 AD, Respawn of Mediolanum, so that it still exists if razed
-lFirenze = [54,32,75,0] #800 AD, Respawn of Florentia 
+lFirenze = [54,32,75,0] #800 AD, Respawn of Florentia
 #lLeipzig = [58,48,75,0] #800 AD
 lPrague = [60,44,75,0] #800 AD
 #lKharkov = [90,46,75,0] #800 AD
 lKursk = [90,48,75,0] #800 AD
 lCalais = [44,50,75,0] #800 AD
 lNidaros = [57,71,75,0] #800 AD, Trondheim
+#lLadoga = [81,65,75,0] #800 AD
+lBeloozero = [87,65,75,0] #800 AD
 lNovgorod = [80,62,87,0] #848 AD
 lEdinburgh = [37,63,90,0] #860 AD
-lAlbaIulia = [73,34,95,0] #880 AD
+lAlbaIulia = [73,35,95,0] #880 AD
 lTvanksta = [69,53,100,0] #900 AD, Konigsberg
 #lBreslau = [64,46,100,0] #900 AD
 lKrakow = [68,44,100,0] #900 AD
@@ -96,6 +101,7 @@ lNizhnyNovgorod = [97,58,240,0] #1320 AD
 #lMemel = [70,55,240,0] #1320 AD, Klaipeda
 lVologda = [91,64,240,0] #1320 AD
 #lTver = [88,60,240,0] #1320 AD
+lTanais = [96,38,264,0] # 1392 AD
 lReykjavik = [2,70,270,0] #1410 AD
 lValletta = [57,14,315,0] #1530 AD
 
@@ -117,9 +123,9 @@ lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [x
                   [ xml.iP_Jerusalem, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
                   [ xml.iP_Syria, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
                   [ xml.iP_Oran, [], [], [xml.i1236AD,xml.i1346AD,xml.i1359AD,xml.i1542AD], [40,10,10,20], [xml.iKnight,xml.iHeavyLancer,xml.iHeavyLancer,xml.iMusketman], [2,2,2,2], ["TXT_KEY_THE_ZIYYANIDS","TXT_KEY_ZIYYANID"] ],
-                  [ xml.iP_Tetouan, [con.iCordoba, con.iSpain, con.iPortugal], [], [xml.i1473AD], [30], [xml.iArquebusier], [4], ["TXT_KEY_THE_WATTASIDS","TXT_KEY_WATTASID"] ],
+                  [ xml.iP_Fez, [con.iCordoba, con.iSpain, con.iPortugal], [], [xml.i1473AD], [30], [xml.iArquebusier], [4], ["TXT_KEY_THE_WATTASIDS","TXT_KEY_WATTASID"] ],
                 ]
-# 3Miro: Jerusalem is added so that the Crusaders will not be able to control it for too long
+# 3Miro: Jerusalem is Syria were added here, so the Crusaders will not be able to control it for too long
 
 
 
@@ -159,7 +165,7 @@ class Barbs:
                         if (iForceAttack == 0):
                                 pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
                         elif (iForceAttack == 1):
-                                pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)                                  
+                                pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
                         elif (iForceAttack == 2):
                                 pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
                         if ( szName != "" ):
@@ -211,9 +217,9 @@ class Barbs:
 			self.spawnUnits(iBarbarian, (19,18),(27,21), xml.iHorseArcher, 1 + iHandicap, iGameTurn,8,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
 			self.spawnUnits(iBarbarian, (19,18),(27,21), xml.iAxeman, 1 + iHandicap, iGameTurn,11,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
 			self.spawnUnits(iBarbarian, (19,18),(27,21), xml.iSpearman, 1 + iHandicap, iGameTurn,7,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
-			self.spawnUnits(iBarbarian, (26,12),(35,16), xml.iHorseArcher, 2 + iHandicap, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
+			self.spawnUnits(iBarbarian, (26,12),(35,16), xml.iHorseArcher, 1 + iHandicap, iGameTurn,10,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
 
-		#Avars in Austria-Hungary from 550 AD to 800 AD	
+		#Avars in Austria-Hungary from 550 AD to 800 AD
 		if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
 			self.spawnUnits( iBarbarian, (60,30),(75,40), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()))
 		if (gc.getPlayer(con.iBulgaria).isHuman()): #extra barbs for human Bulgaria
@@ -226,7 +232,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (68,18),(78,28), xml.iAxeman, 1 + iHandicap, iGameTurn,6,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()))
 		if (gc.getPlayer(con.iByzantium).isHuman()): #extra barbs for human Byzantium
 			if (iGameTurn < xml.i640AD):
-				self.spawnUnits( iBarbarian, (64,21),(75,25), xml.iAxeman, 1 + iHandicap, iGameTurn,4,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()))
+				self.spawnUnits( iBarbarian, (64,21),(75,25), xml.iAxeman, 1 + iHandicap, iGameTurn,8,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()))
 				self.spawnUnits( iBarbarian, (68,18),(78,28), xml.iSpearman, 1 + iHandicap, iGameTurn,6,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()))
 		#Sassanids in Anatolia
 		if (iGameTurn < xml.i640AD):
@@ -234,14 +240,14 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (94,19),(98,26), xml.iLancer, 2 + iHandicap, iGameTurn,8,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()))
 		if (gc.getPlayer(con.iByzantium).isHuman()): #extra Persians for human Byzantium
 			if (iGameTurn < xml.i640AD):
-				self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iLancer, 2 + iHandicap, iGameTurn,5,2,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()))
-				self.spawnUnits( iBarbarian, (94,19),(98,26), xml.iLancer, 2 + iHandicap, iGameTurn,8,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()))
-		#Barbs in Eastern Greece 
+				self.spawnUnits( iBarbarian, (90,15),(99,28), xml.iLancer, 1 + iHandicap, iGameTurn,5,2,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()))
+				self.spawnUnits( iBarbarian, (94,19),(98,26), xml.iLancer, 1 + iHandicap, iGameTurn,8,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()))
+		#Barbs in Eastern Greece
 		if (iGameTurn < xml.i720AD):
 			self.spawnUnits( iBarbarian, (66,21),(69,28), xml.iAxeman, 1 + iHandicap, iGameTurn,9,3,utils.outerInvasion,1, "")
 		if (gc.getPlayer(con.iByzantium).isHuman()): #extra barbs for human Byzantium
 			if (iGameTurn < xml.i720AD):
-				self.spawnUnits( iBarbarian, (66,21),(69,28), xml.iAxeman, 1 + iHandicap, iGameTurn,9,3,utils.outerInvasion,1, "")
+				self.spawnUnits( iBarbarian, (66,21),(69,28), xml.iSpearman, 1 + iHandicap, iGameTurn,9,3,utils.outerInvasion,1, "")
 
 		#Misc Asiatic tribes to keep Ukraine empty
 		if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
@@ -265,7 +271,7 @@ class Barbs:
 		if (gc.getPlayer(con.iHungary).isHuman()): #extra barbs for human Hungary
 			if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1160AD):
 				self.spawnUnits( iBarbarian, (64,33),(77,43), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-				self.spawnUnits( iBarbarian, (66,35),(75,42), xml.iHorseArcher, 1 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))		
+				self.spawnUnits( iBarbarian, (66,35),(75,42), xml.iHorseArcher, 1 + iHandicap, iGameTurn,6,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
 		if (gc.getPlayer(con.iBulgaria).isHuman()): #extra barbs for human Bulgaria
 			if (iGameTurn >= xml.i940AD and iGameTurn < xml.i1160AD):
 				self.spawnUnits( iBarbarian, (78,32),(80,34), xml.iHorseArcher, 2 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
@@ -394,7 +400,7 @@ class Barbs:
 			if (gc.getPlayer(con.iPoland).isHuman()):
 				self.spawnUnits( iBarbarian, (72,40),(75,58), xml.iMongolKeshik, 4 + iExtra*2 + iHandicap*2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			else:
-				self.spawnUnits( iBarbarian, (72,40),(75,58), xml.iMongolKeshik, 2 + iExtra + iHandicap, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))				
+				self.spawnUnits( iBarbarian, (72,40),(75,58), xml.iMongolKeshik, 2 + iExtra + iHandicap, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Bulgaria
 			if (gc.getPlayer(con.iBulgaria).isHuman()):
 				self.spawnUnits( iBarbarian, (78,32),(83,34), xml.iMongolKeshik, 3 + iExtra*2 + iHandicap*2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
@@ -402,7 +408,7 @@ class Barbs:
 				self.spawnUnits( iBarbarian, (78,32),(83,34), xml.iMongolKeshik, 2 + iExtra + iHandicap, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Moscow area
 			self.spawnUnits( iBarbarian, (89,46),(99,56), xml.iMongolKeshik, 2 + iExtra*2 + iHandicap*2, iGameTurn,4,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
-			self.spawnUnits( iBarbarian, (91,48),(97,54), xml.iMongolKeshik, 2 + iExtra + iHandicap, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))			
+			self.spawnUnits( iBarbarian, (91,48),(97,54), xml.iMongolKeshik, 2 + iExtra + iHandicap, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Middle East
 			self.spawnUnits( iBarbarian, (94,20),(99,26), xml.iMongolKeshik, 2 + iExtra*2 + iHandicap*2, iGameTurn,3,2,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			self.spawnUnits( iBarbarian, (92,21),(97,25), xml.iMongolKeshik, 2 + iExtra + iHandicap, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
@@ -434,53 +440,60 @@ class Barbs:
 
 		# 3Miro Barbarian and Independent city spawns and barbarian invasions go here. Check with original RFC file for details
 		# Setting independent cities to size 2 initially has no effect. They start with zero-sized culture, so immediately shrink one pop. Hack is to start with three.
-		# Barbarian cities are exceptions, they won't shrink. Also, they start with 2 additional units (archers in 500AD)
+		# Barbarian cities are exceptions, they won't shrink. Also, they start with 2 additional units, from the given type
 		# Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, number of units, religion, workers)
 		# Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 
                 if ( iGameTurn < xml.i700AD ):
                         #500AD
-                        self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 ) 
+                        self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 )
                         self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 0, -1, 0 )
                         self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
                         self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 0, -1, 0 )
                         self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # 3Miro - Lyon flips to Burgundy
-                        self.foundCity(iIndependent2, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+                        self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # Lyon flips to Burgundy
+                        self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 ) 
+                        self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1, -1, 0 )
                         self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
-                        self.foundCity(iBarbarian, lBeograd, "Beograd", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
+                        self.foundCity(iIndependent4, lSeville, "Hispalis", iGameTurn, 1, xml.iArcher, 2, -1, 0 ) # Seville flips to Cordoba
                         # 508AD
-                        self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 ) 
+                        self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+                        # 600AD
+                        self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
                         # 680AD
-                        self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
-                if ( iGameTurn > xml.i680AD and iGameTurn < xml.i900AD ):        
+                        self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+                if ( iGameTurn > xml.i680AD and iGameTurn < xml.i900AD ):
                         # 700AD
                         self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
+                        self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
                         self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
                         # 760AD
                         self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+                        # 768AD
+                        self.foundCity(iIndependent2, lRaska, "Ras", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
+                        # 780AD
+                        self.foundCity(iIndependent4, lFez, "Fes", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 1)
                         # 800AD
                         self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
                         self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
                         self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                         self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-                        self.foundCity(iIndependent2, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+                        self.foundCity(iBarbarian, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+                        #self.foundCity(iIndependent3, lLadoga, "Ladoga", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0)
+                        self.foundCity(iIndependent4, lBeloozero, "Beloozero", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1)
                         # 848AD
                         self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
                         # 860AD
-                        self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+                        self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
                         # 880AD
                         self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
                 if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1259AD ):
@@ -504,19 +517,21 @@ class Barbs:
                         # 1227 AD
                         self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 4, xml.iArbalest, 2, xml.iIslam, 1 )
                         # 1250 AD
-                        self.foundCity(iIndependent2, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) #Abo - flips to Sweden
+                        self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) # Abo flips to Sweden
                 if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
                         # 1320AD
                         self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+                        # 1392AD
+                        self.foundCity(iIndependent3, lTanais, "Tana", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 0)
                         # 1410AD
-                        self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 ) #from RFCE++
+                        self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 )
                         # 1530AD
-                        self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 ) #from RFCE++
-                        
+                        self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 )
+
                 if ( iGameTurn == 1 ):
                         self.setupMinorNation()
-                
+
                 self.doMinorNations(iGameTurn)
 
 
@@ -548,12 +563,12 @@ class Barbs:
                 cityPlot = gc.getMap().plot(tCity[0], tCity[1])
 ##                iNumUnitsInAPlot = cityPlot.getNumUnits()
 ##                print iNumUnitsInAPlot
-                
+
                 #checks if the plot already belongs to someone
                 if (cityPlot.isOwned()):
                         if (cityPlot.getOwner() != iBarbarian ):
                                 return (False, -1)
-                    
+
 ##                #checks if there's a unit on the plot
 ##                if (iNumUnitsInAPlot):
 ##                        for i in range(iNumUnitsInAPlot):
@@ -644,23 +659,23 @@ class Barbs:
 # 3Miro: Minor Nations Start
         def setupMinorNation( self ):
                 lNextMinorRevolt = self.getRevolDates()
-                
+
                 for lNation in lMinorNations:
                         #iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
                         iNextRevolt = lNation[3][0]
                         while iNextRevolt in lNextMinorRevolt:
                                 iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
                         print(" Revolt Date ",iNextRevolt)
-                        iNationIndex = lMinorNations.index(lNation)                        
+                        iNationIndex = lMinorNations.index(lNation)
                         print(" NationIndex ",iNationIndex)
                         lNextMinorRevolt[iNationIndex] = iNextRevolt
-                
+
                 self.setRevolDates( lNextMinorRevolt )
 
 
         def doMinorNations( self, iGameTurn ):
                 lNextMinorRevolt = self.getRevolDates()
-                
+
                 if ( iGameTurn in lNextMinorRevolt ):
                         #iNation = lNextMinorRevolt.index( iGameTurn )
                         lNation = lMinorNations[ lNextMinorRevolt.index( iGameTurn ) ]
@@ -680,7 +695,7 @@ class Barbs:
                                         if ( iOwner > -1 and iOwner < con.iPope ): # pope doesn't count here
                                                 if ( (not iOwner in lNation[1]) and ( not gc.getPlayer( iOwner ).getStateReligion() in lNation[2] ) ):
                                                         lPlayersOwning[iOwner] += 1
-                        
+
                         for iPlayer in range( con.iPope ):
                                 if ( lPlayersOwning[iPlayer] > 0 ):
                                         if ( utils.getHumanID() == iPlayer ):
@@ -695,8 +710,8 @@ class Barbs:
                                         iNextRevolt = lNation[3][iRevoltIndex] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
                                 lNextMinorRevolt[lNextMinorRevolt.index( iGameTurn )] = iNextRevolt
                                 self.setRevolDates( lNextMinorRevolt )
-                        
-                                                
+
+
         # revolution choice effects: suppress with force, revolt +1 turn, unhappy +1 for 10 turns, suppression chance 20% + 5% per unit stationed (cap at 33%)
         #                            bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
         #                            passive stability: >0 add 20%, additional +2% for every point above 5 (cap at 34% for +12 Stability)
@@ -709,7 +724,7 @@ class Barbs:
                                 pCity = gc.getMap().plot( iX, iY ).getPlotCity()
                                 if ( pCity.getOwner() == iPlayer ):
                                         cityList.append(pCity)
-                
+
                 # AI always cracks on revolt
                 iSuppressOdds = 20
                 iNumGarrason = 0
@@ -720,7 +735,7 @@ class Barbs:
                 pPlayer = gc.getPlayer( iPlayer )
                 if ( pPlayer.getStability() > 0 ):
                         iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
-                
+
                 # substract the strength of the revolt
                 iSuppressOdds -= lNation[4][iRevoltIndex]
                 # time to roll the dice
@@ -738,11 +753,11 @@ class Barbs:
                         for iI in range( len( cityList ) ):
                                 pCity = cityList[iI]
                                 utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
-                                utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)                            
+                                utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
                                 self.setTempFlippingCity((pCity.getX(),pCity.getY()))
                                 utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
                                 utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
-                                
+
         def showPopup(self, popupID, title, message, labels):
                 popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
                 popup.setHeaderString(title)
@@ -750,16 +765,16 @@ class Barbs:
                 for i in labels:
                     popup.addButton( i )
                 popup.launch(False)
-                
-                
-        
+
+
+
         def eventApply7627( self, popupReturn ):
                 iDecision = popupReturn.getButtonClicked()
                 iNationIndex, iRevoltIndex = self.getNationRevoltIndex()
                 #print("Event Apply",iNationIndex, iRevoltIndex,iDecision )
                 lNation = lMinorNations[iNationIndex]
                 iPlayer = utils.getHumanID()
-                
+
                 cityList = []
                 for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
                         iX = gc.getProvinceX( lNation[0], iI )
@@ -768,19 +783,19 @@ class Barbs:
                                 pCity = gc.getMap().plot( iX, iY ).getPlotCity()
                                 if ( pCity.getOwner() == iPlayer ):
                                         cityList.append(pCity)
-                
+
                 # raw suppress score
                 iSuppressOdds = - lNation[4][iRevoltIndex]
                 pPlayer = gc.getPlayer( iPlayer )
                 if ( pPlayer.getStability() > 0 ):
                         iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
-                
+
                 if ( iDecision == 1 or iDecision == 3 ):
                         iNumGarrason = 0
                         for iI in range( len( cityList ) ):
                                 iNumGarrason += self.getGarrasonSize( cityList[iI] )
                         iSuppressOdds += 20 + min( (5 * iNumGarrason) / len( cityList ), 13 )
-                
+
                 if ( iDecision == 2 or iDecision == 3 ):
                         iBribeGold = 0
                         for iI in range( len( cityList ) ):
@@ -801,7 +816,7 @@ class Barbs:
                                 iBribeOdds = ( iBribeOdds * iGold ) / ( iBribeGold )
                         pPlayer.setGold( iGold - min( iGold, iBribeGold ) )
                         iSuppressOdds += iBribeOdds
-                 
+
                 #if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
                 #print(" Chance to suppress. ")
                 if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
@@ -823,16 +838,16 @@ class Barbs:
                                 pCity = cityList[iI]
                                 CyInterface().addMessage(iPlayer, True, con.iDuration, pCity.getName() + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
                                 utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
-                                utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)                            
+                                utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
                                 self.setTempFlippingCity((pCity.getX(),pCity.getY()))
                                 utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
-                                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)       
-                                
-                
-                        
+                                utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
+
+
+
         def doRevoltHuman( self, iPlayer, iGameTurn, lNation, iRevoltIndex ):
                 self.setNationRevoltIndex( lMinorNations.index(lNation), iRevoltIndex )
-                
+
                 cityList = []
                 for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
                         iX = gc.getProvinceX( lNation[0], iI )
@@ -841,7 +856,7 @@ class Barbs:
                                 pCity = gc.getMap().plot( iX, iY ).getPlotCity()
                                 if ( pCity.getOwner() == iPlayer ):
                                         cityList.append(pCity)
-                
+
                 # rebellion odds
                 # raw odds considering minor nation strength and player stability
                 iRawOdds = - lNation[4][iRevoltIndex]
@@ -872,8 +887,8 @@ class Barbs:
                 iGold = pPlayer.getGold()
                 if ( iGold < iBribeGold ):
                         iBribeOdds = ( iBribeOdds * iGold ) / ( iBribeGold )
-                
-                
+
+
                 #iLoyalPrice = min( (10 * gc.getPlayer( utils.getHumanID() ).getGold()) / 100, 50 * iNumCities )
                 szRebellName = localText.getText(lNation[7][0], ())
                 #print( szTitle )
@@ -912,9 +927,9 @@ class Barbs:
                                         if ( pPlot.isHills() or pPlot.isFlatlands() ):
                                                 if ( pPlot.getNumUnits() == 0 and (not pPlot.isCity()) ):
                                                         lAvailableFreeTiles.append( (iX, iY) )
-                                                elif ( not pPlot.isCity() ): 
+                                                elif ( not pPlot.isCity() ):
                                                         lAvailableTiles.append( (iX, iY) )
-                                                        
+
                 if ( len( lAvailableFreeTiles ) > 0 ):
                         iI = gc.getGame().getSorenRandNum(len(lAvailableFreeTiles),'select a free tile for the rebels')
                         iTX = lAvailableFreeTiles[iI][0]
@@ -937,4 +952,4 @@ class Barbs:
                         for iI in range( iCount ):
                                 pUnit = pBarb.initUnit(iUnit, iTX, iTY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
                                 pUnit.setName( localText.getText(szName, ()) )
-        
+

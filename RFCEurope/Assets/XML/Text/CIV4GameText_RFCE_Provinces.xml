@@ -331,21 +331,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_28</Tag>
+		<English>The Isles</English>
+		<French>The Isles</French>
+		<German>The Isles</German>
+		<Italian>The Isles</Italian>
+		<Spanish>The Isles</Spanish>
+		<Portuguese>As Ilhas</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROVINCE_NAME_29</Tag>
 		<English>Iceland</English>
 		<French>Islande</French>
 		<German>Island</German>
 		<Italian>Islanda</Italian>
 		<Spanish>Eslandia</Spanish>
 		<Portuguese>Islandia</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROVINCE_NAME_29</Tag>
-		<English>Province_29</English>
-		<French>Province_29</French>
-		<German>Province_29</German>
-		<Italian>Province_29</Italian>
-		<Spanish>Province_29</Spanish>
-		<Portuguese>Province_29</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_30</Tag>
@@ -412,12 +412,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_37</Tag>
-		<English>Oppland</English>
-		<French>Oppland</French>
-		<German>Oppland</German>
-		<Italian>Oppland</Italian>
-		<Spanish>Oppland</Spanish>
-		<Portuguese>Oppland</Portuguese>
+		<English>Jamtland</English>
+		<French>Jamtland</French>
+		<German>Jamtland</German>
+		<Italian>Jamtland</Italian>
+		<Spanish>Jamtland</Spanish>
+		<Portuguese>Jamtland</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_38</Tag>
@@ -502,21 +502,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_47</Tag>
-		<English>Tyrol</English>
-		<French>Tyrol</French>
-		<German>Tirol</German>
-		<Italian>Tirolo</Italian>
-		<Spanish>Tirol</Spanish>
-		<Portuguese>Tirol</Portuguese>
+		<English>Holstein</English>
+		<French>Holstein</French>
+		<German>Holstein</German>
+		<Italian>Holstein</Italian>
+		<Spanish>Holstein</Spanish>
+		<Portuguese>Holstein</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_48</Tag>
-		<English>Province_48</English>
-		<French>Province_48</French>
-		<German>Province_48</German>
-		<Italian>Province_48</Italian>
-		<Spanish>Province_48</Spanish>
-		<Portuguese>Province_48</Portuguese>
+		<English>Prussia</English>
+		<French>Prussia</French>
+		<German>Prussia</German>
+		<Italian>Prussia</Italian>
+		<Spanish>Prussia</Spanish>
+		<Portuguese>Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_49</Tag>
@@ -646,6 +646,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_63</Tag>
+		<English>Tyrol</English>
+		<French>Tyrol</French>
+		<German>Tirol</German>
+		<Italian>Tirolo</Italian>
+		<Spanish>Tirol</Spanish>
+		<Portuguese>Tirol</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROVINCE_NAME_63_2</Tag>
 		<English>Salzburg</English>
 		<French>Salzbourg</French>
 		<German>Salzburg</German>
@@ -763,21 +772,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_76</Tag>
+		<English>Liguria</English>
+		<French>Liguria</French>
+		<German>Liguria</German>
+		<Italian>Liguria</Italian>
+		<Spanish>Liguria</Spanish>
+		<Portuguese>Liguria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROVINCE_NAME_77</Tag>
 		<English>Arberia</English>
 		<French>Arberia</French>
 		<German>Arberia</German>
 		<Italian>Arberia</Italian>
 		<Spanish>Arberia</Spanish>
 		<Portuguese>Arberia</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROVINCE_NAME_77</Tag>
-		<English>Malta</English>
-		<French>Malte</French>
-		<German>Malta</German>
-		<Italian>Malta</Italian>
-		<Spanish>Malta</Spanish>
-		<Portuguese>Malta</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_78</Tag>
@@ -790,12 +799,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_79</Tag>
-		<English>Province_79</English>
-		<French>Province_79</French>
-		<German>Province_79</German>
-		<Italian>Province_79</Italian>
-		<Spanish>Province_79</Spanish>
-		<Portuguese>Province_79</Portuguese>
+		<English>Banat</English>
+		<French>Banat</French>
+		<German>Banat</German>
+		<Italian>Banat</Italian>
+		<Spanish>Banat</Spanish>
+		<Portuguese>Banat</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_80</Tag>
@@ -1402,12 +1411,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_147</Tag>
-		<English>The Isles</English>
-		<French>The Isles</French>
-		<German>The Isles</German>
-		<Italian>The Isles</Italian>
-		<Spanish>The Isles</Spanish>
-		<Portuguese>As Ilhas</Portuguese>
+		<English>Malta</English>
+		<French>Malte</French>
+		<German>Malta</German>
+		<Italian>Malta</Italian>
+		<Spanish>Malta</Spanish>
+		<Portuguese>Malta</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_148</Tag>

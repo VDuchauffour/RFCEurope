@@ -1621,6 +1621,8 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
+	PROFILE_FUNC();
+
 	CvSelectionGroup* pSelectionGroup;
 	CvPlot* pFromPlot;
 	CvPlot* pToPlot;
@@ -1637,15 +1639,23 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	FAssert(pToPlot != NULL);
 
 	pSelectionGroup = ((CvSelectionGroup *)pointer);
-
-	// XXX might want to take this out...
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      03/03/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
 	if (pSelectionGroup->getDomainType() == DOMAIN_SEA)
 	{
+		PROFILE("pathValid domain sea");
+
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
 			if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
 			{
-				return FALSE;
+				if( !(pSelectionGroup->canMoveAllTerrain()) )
+				{
+					return FALSE;
+				}
 			}
 		}
 	}
@@ -1657,10 +1667,7 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 
 	if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_SAFE_TERRITORY)
 	{
-		if (!(pFromPlot->isRevealed(pSelectionGroup->getHeadTeam(), false)))
-		{
-			return FALSE;
-		}
+		PROFILE("pathValid move save");
 
 		if (pFromPlot->isOwned())
 		{
@@ -1669,10 +1676,17 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 				return FALSE;
 			}
 		}
+
+		if (!(pFromPlot->isRevealed(pSelectionGroup->getHeadTeam(), false)))
+		{
+			return FALSE;
+		}
 	}
 
 	if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_NO_ENEMY_TERRITORY)
 	{
+		PROFILE("pathValid no enemy");
+
 		if (pFromPlot->isOwned())
 		{
 			if (atWar(pFromPlot->getTeam(), pSelectionGroup->getHeadTeam()))
@@ -1686,6 +1700,7 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 
 	if (bAIControl)
 	{
+		PROFILE("pathValid danger & invisible");
 		if ((parent->m_iData2 > 1) || (parent->m_iData1 == 0))
 		{
 			if (!(gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_IGNORE_DANGER))
@@ -1712,6 +1727,8 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 
 	if (bAIControl || pFromPlot->isRevealed(pSelectionGroup->getHeadTeam(), false))
 	{
+		PROFILE("pathValid move through");
+
 		if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_THROUGH_ENEMY)
 		{
 			if (!(pSelectionGroup->canMoveOrAttackInto(pFromPlot)))
@@ -1727,6 +1744,9 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 			}
 		}
 	}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	return TRUE;
 }
@@ -1864,6 +1884,7 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		return FALSE;
 	}
 
+/* Absinthe: disabled this part of the BBAI code, it may mess up with RFCE's passable diagonal sea tiles
 	// Don't count diagonal hops across land isthmus
 	if (pFromPlot->isWater() && pNewPlot->isWater())
 	{
@@ -1872,6 +1893,7 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 			return FALSE;
 		}
 	}
+*/
 /********************************************************************************/
 /* 	BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
