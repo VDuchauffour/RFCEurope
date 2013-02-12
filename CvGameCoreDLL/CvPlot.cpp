@@ -71,7 +71,7 @@ CvPlot::CvPlot()
 	m_paiBuildProgress = NULL;
 	m_apaiCultureRangeCities = NULL;
 	m_apaiInvisibleVisibilityCount = NULL;
-	
+
 	m_pFeatureSymbol = NULL;
 	m_pPlotBuilder = NULL;
 	m_pRouteSymbol = NULL;
@@ -224,7 +224,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_bFlagDirty = false;
 	m_bPlotLayoutDirty = false;
 	m_bLayoutStateWorked = false;
-	
+
 	m_eOwner = NO_PLAYER;
 	m_ePlotType = PLOT_OCEAN;
 	m_eTerrainType = NO_TERRAIN;
@@ -747,7 +747,7 @@ void CvPlot::updateSymbols()
 	{
 		int maxYieldStack = GC.getDefineINT("MAX_YIELD_STACK");
 		int layers = maxYield /maxYieldStack + 1;
-		
+
 		CvSymbol *pSymbol= NULL;
 		for(int i=0;i<layers;i++)
 		{
@@ -835,7 +835,7 @@ void CvPlot::verifyUnitValidPlot()
 	PROFILE_FUNC();
 
 	//GC.getGameINLINE().logMsg("  DEBUG Plot Verify (owner - X,Y - Turn) %d  - %d  %d - %d",getOwner(),getX(),getY(), GC.getGameINLINE().getGameTurn() );
-	
+
 	std::vector<CvUnit*> aUnits;
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 	while (pUnitNode != NULL)
@@ -1337,7 +1337,7 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 		{
 			//Rhye - start
 			//if (pAdjacentPlot->isWater())
-			if (pAdjacentPlot->isWater() && !(pAdjacentPlot->getFeatureType() == 0)) //(ice)  .isImpassable()
+			if (pAdjacentPlot->isWater() && !(pAdjacentPlot->getFeatureType() == 0)) //(ice)
 			//Rhye - end
 			{
 				if (pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
@@ -1397,29 +1397,26 @@ bool CvPlot::isLake() const
 {
 	CvArea* pArea = area();
 
-	// 3Miro: no salt lakes in Europe
-	//Rhye - start (salt lake)
-	/*int saltLakePlots[13][2] = {
-	{77, 43}, //Urmia
-	{82, 48}, //Aral sea
-	{82, 49},
-	{83, 48},
-	{83, 49},
-	{87, 50}, //eastern Balkhash
-	{88, 50},
-	{88, 48}, //Aydar
-	{72, 49}, //Black Sea
-	{112, 43}, //Japan
-	{113, 44},
-	{112, 14}, //Eyre
-	{14, 48} //Great Salt Lake
-	}; 
+	// Absinthe: salt lakes and smaller seas in Europe, based on Rhye's original code
+	int saltLakePlots[11][2] = {
+	{94,  5}, // Dead Sea near Jerusalem
+	{89, 19}, // Lake Tuz in Anatolia
+	{88,  0}, // Red Sea, on both sides of the Sinai-peninsula
+	{88,  1},
+	{89,  0},
+	{92,  0},
+	{92,  1},
+	{78, 23}, // Sea of Marmara, between Bosporus and Dardanelles
+	{79, 23},
+	{80, 23},
+	{81, 23},
+	};
 
-	for (int i = 0; i < 13; i++) {
+	for (int i = 0; i < 11; i++) {
 		if (getX() == saltLakePlots[i][0] && getY() == saltLakePlots[i][1])
 			return false;
-	}*/
-	//Rhye - end
+	}
+	// Absinthe: end
 
 	if (pArea != NULL)
 	{
@@ -1854,7 +1851,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 						}
 					}
 				}
-				
+
 				if (eFacingDirection != NO_DIRECTION)
 				{
 					if((abs(dx) <= 1) && (abs(dy) <= 1)) //always reveal adjacent plots when using line of sight
@@ -1980,7 +1977,7 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int origina
 			}
 		}
 	}
-	
+
 	return false;
 }
 
@@ -2001,7 +1998,7 @@ bool CvPlot::shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionT
 
 		int directionX = displacements[eFacingDirection][0];
 		int directionY = displacements[eFacingDirection][1];
-		
+
 		//compute angle off of direction
 		int crossProduct = directionX * dy - directionY * dx; //cross product
 		int dotProduct = directionX * dx + directionY * dy; //dot product
@@ -2021,7 +2018,7 @@ bool CvPlot::shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionT
 		{
 			return false;
 		}
-        
+
 		/*
 		DirectionTypes leftDirection = GC.getTurnLeftDirection(eFacingDirection);
 		DirectionTypes rightDirection = GC.getTurnRightDirection(eFacingDirection);
@@ -2100,8 +2097,8 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	{
 		pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = nextUnitNode(pUnitNode);
-		
-		
+
+
 		changeAdjacentSight(pLoopUnit->getTeam(), pLoopUnit->visibilityRange(), bIncrement, pLoopUnit, bUpdatePlotGroups);
 	}
 
@@ -2134,7 +2131,7 @@ void CvPlot::updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups)
 	}
 
 	iRange = std::max(GC.getDefineINT("RECON_VISIBILITY_RANGE") + 1, iRange);
-	
+
 	for (iDX = -iRange; iDX <= iRange; iDX++)
 	{
 		for (iDY = -iRange; iDY <= iRange; iDY++)
@@ -2715,7 +2712,7 @@ int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, Dom
 						if (eDomainType == NO_DOMAIN || (pLoopUnit->getDomainType() == eDomainType))
 						{
 							const CvPlot* pPlot = NULL;
-							
+
 							if (bDefensiveBonuses)
 								pPlot = this;
 
@@ -2859,7 +2856,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 
 	if (pUnit->ignoreTerrainCost())
 	{
-		iRegularCost = 1; 
+		iRegularCost = 1;
 	}
 	else
 	{
@@ -2867,7 +2864,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 		// 3Miro: if we ever do that, we will put in the XML
 		//if (((pUnit->getUnitType() == 64) || (pUnit->getUnitType() == 65) || (pUnit->getUnitType() == 70)) && (getTerrainType() == 2)) //war chariot, immortal and camel archer in desert
 		//{
-		//	iRegularCost = 1; 
+		//	iRegularCost = 1;
 		//}
 		//else {
 	//Rhye - end
@@ -3125,7 +3122,7 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb )
 
 				pLoopCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
 
-				
+
 
 				if( pLoopCity != NULL )
 
@@ -3691,7 +3688,7 @@ bool CvPlot::isVisible(TeamTypes eTeam, bool bDebug) const
 
 bool CvPlot::isActiveVisible(bool bDebug) const
 {
-	return isVisible(GC.getGameINLINE().getActiveTeam(), bDebug); 
+	return isVisible(GC.getGameINLINE().getActiveTeam(), bDebug);
 }
 
 
@@ -4276,7 +4273,7 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 	switch (unit.getDomainType())
 	{
 	case DOMAIN_SEA:
-		return (isWater() || unit.canMoveAllTerrain());
+		return (isWater());
 		break;
 
 	case DOMAIN_AIR:
@@ -4428,14 +4425,14 @@ CvArea* CvPlot::waterArea(bool bNoImpassable) const
 
 CvArea* CvPlot::secondWaterArea() const
 {
-	
+
 	CvArea* pWaterArea = waterArea();
 	CvArea* pBestArea;
 	CvPlot* pAdjacentPlot;
 	int iValue;
 	int iBestValue;
 	int iI;
-	
+
 	FAssert(!isWater());
 
 	iBestValue = 0;
@@ -4460,8 +4457,8 @@ CvArea* CvPlot::secondWaterArea() const
 		}
 	}
 
-	return pBestArea;	
-	
+	return pBestArea;
+
 }
 
 
@@ -4675,7 +4672,7 @@ bool CvPlot::isStartingPlot() const
 }
 
 
-void CvPlot::setStartingPlot(bool bNewValue)														 
+void CvPlot::setStartingPlot(bool bNewValue)
 {
 	m_bStartingPlot = bNewValue;
 }
@@ -5652,7 +5649,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 		if (bRebuildGraphics && GC.IsGraphicsInitialized())
 		{
-			//Update terrain graphical 
+			//Update terrain graphical
 			gDLL->getEngineIFace()->RebuildPlot(getX_INLINE(), getY_INLINE(), true, true);
 			//gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true); //minimap does a partial update
 			//gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
@@ -5782,7 +5779,7 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety)
 
 		updateFeatureSymbol();
 
-		if (((eOldFeature != NO_FEATURE) && (GC.getFeatureInfo(eOldFeature).getArtInfo()->isRiverArt())) || 
+		if (((eOldFeature != NO_FEATURE) && (GC.getFeatureInfo(eOldFeature).getArtInfo()->isRiverArt())) ||
 			  ((getFeatureType() != NO_FEATURE) && (GC.getFeatureInfo(getFeatureType()).getArtInfo()->isRiverArt())))
 		{
 			updateRiverSymbolArt(true);
@@ -5937,7 +5934,7 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 		updateYield();
 
 		setLayoutDirty(true);
-		
+
 		gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 	}
 }
@@ -6050,7 +6047,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewValue)
 		CvCity* pWorkingCity = getWorkingCity();
 		if (NULL != pWorkingCity)
 		{
-			if ((NO_IMPROVEMENT != eNewValue && pWorkingCity->getImprovementFreeSpecialists(eNewValue) > 0)	|| 
+			if ((NO_IMPROVEMENT != eNewValue && pWorkingCity->getImprovementFreeSpecialists(eNewValue) > 0)	||
 				(NO_IMPROVEMENT != eOldImprovement && pWorkingCity->getImprovementFreeSpecialists(eOldImprovement) > 0))
 			{
 
@@ -6856,7 +6853,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	{
 		iYield = std::max(iYield, GC.getYieldInfo(eYield).getMinCity());
 		// 3MiroUP
-		//if ( (UniquePowers[pCity->getOwner()][UP_GROWTH] == 1)&&(eYield==0) ) iYield += 2; 
+		//if ( (UniquePowers[pCity->getOwner()][UP_GROWTH] == 1)&&(eYield==0) ) iYield += 2;
 		int iUPY = UniquePowers[pCity->getOwner() * UP_TOTAL_NUM + UP_CITY_TILE_YIELD];
 		if ( iUPY > -1 ){
 			if ( eYield == YIELD_COMMERCE ){
@@ -7140,7 +7137,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		};
 		//GC.getGameINLINE().logMsg("  Change for %d %d after iNewValue: %d ",getX_INLINE(),getY_INLINE(),iNewValue);
 
-		
+
 
 		// 3MiroPAPAL: pope's culture is restricted close to ROME
 		if ( eIndex == PAPAL_PLAYER ){
@@ -7161,7 +7158,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 			};
 		}else{
 			//GC.getGameINLINE().logMsg("   Not in Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
-			// 3Miro: Nasty bug expelling units from territory on flip, 
+			// 3Miro: Nasty bug expelling units from territory on flip,
 			//			now if a plot is in somone's core, nobody gets culture there for 3 turns after spawn
 			/*if ( withinSpawnDate ){
 				if ( (eIndex >= NUM_MAJOR_PLAYERS) || ( !MiroBelongToCore(eIndex,getX_INLINE(),getX_INLINE()) ) ){
@@ -7175,7 +7172,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 					};
 					if ( inBirthAndCore ){
 						m_aiCulture[eIndex] = 0;
-						
+
 					}else{
 						m_aiCulture[eIndex] = iNewValue;
 					};
@@ -7202,7 +7199,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		};
 		// 3MiroPAPAL: end of section
 		//m_aiCulture[eIndex] = iNewValue;
-		
+
 		//GC.getGameINLINE().logMsg("  plot  6");
 		FAssert(getCulture(eIndex) >= 0);
 
@@ -7283,7 +7280,7 @@ bool CvPlot::isBestAdjacentFound(PlayerTypes eIndex)
 	{
 		return false;
 	}
-	
+
 	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
 		pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
@@ -8617,7 +8614,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 		m_pRiverSymbol = gDLL->getRiverIFace()->createRiver();
 		FAssertMsg(m_pRiverSymbol != NULL, "m_pRiverSymbol is not expected to be equal with NULL");
 		gDLL->getRiverIFace()->init(m_pRiverSymbol, 0, 0, 0, this);
-		
+
 		//force tree cuts for adjacent plots
 		DirectionTypes affectedDirections[] = {NO_DIRECTION, DIRECTION_EAST, DIRECTION_SOUTHEAST, DIRECTION_SOUTH};
 		for(int i=0;i<4;i++)
@@ -8645,7 +8642,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 		// update the symbol
 		setLayoutDirty(true);
 	}
-	
+
 	//recontour rivers
 	gDLL->getEntityIFace()->updatePosition((CvEntity *)m_pRiverSymbol); //update position and contours
 }
@@ -9095,7 +9092,7 @@ CvSymbol* CvPlot::addSymbol()
 }
 
 
-void CvPlot::deleteSymbol(int iID)			
+void CvPlot::deleteSymbol(int iID)
 {
 	m_symbols.erase(m_symbols.begin()+iID);
 }
@@ -9253,7 +9250,7 @@ void CvPlot::doCulture()
 			//if (GET_PLAYER(eCulturalOwner).getTeam() != getTeam()) //Rhye
 			if (GET_PLAYER(eCulturalOwner).getTeam() != getTeam() ||
 					(iMax != -1 && getCulture((PlayerTypes)eCulturalOwner)<10*iMaxValue))  //Rhye
-			{ 
+			{
 				if (iMax != -1 && getCulture((PlayerTypes)eCulturalOwner)<10*iMaxValue) {
 					iOldOwner = eCulturalOwner;
 					eCulturalOwner = (PlayerTypes)iMax;
@@ -9512,7 +9509,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iMinOriginalStartDist);
 	pStream->Read(&m_iReconCount);
 	pStream->Read(&m_iRiverCrossingCount);
-	
+
 	pStream->Read(&bVal);
 	m_bStartingPlot = bVal;
 	pStream->Read(&bVal);
@@ -9996,7 +9993,7 @@ bool CvPlot::updatePlotBuilder()
 
 bool CvPlot::isLayoutDirty() const
 {
-	return m_bPlotLayoutDirty;	
+	return m_bPlotLayoutDirty;
 }
 
 bool CvPlot::isLayoutStateDifferent() const
@@ -10172,11 +10169,11 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 			bIgnoreFeature = true;
 		}
 	}
-		
+
 	iYield += calculateNatureYield(eYield, getTeam(), bIgnoreFeature);
-	
+
 	ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
-	
+
 	if (eImprovement != NO_IMPROVEMENT)
 	{
 		if (bWithUpgrade)
@@ -10192,20 +10189,20 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 					ImprovementTypes eUpgradeImprovement2 = (ImprovementTypes)GC.getImprovementInfo(eUpgradeImprovement).getImprovementUpgrade();
 					if (eUpgradeImprovement2 != NO_IMPROVEMENT)
 					{
-						eUpgradeImprovement = eUpgradeImprovement2;				
+						eUpgradeImprovement = eUpgradeImprovement2;
 					}
 				}
 			}
-			
+
 			if ((eUpgradeImprovement != NO_IMPROVEMENT) && (eUpgradeImprovement != eImprovement))
 			{
 				eImprovement = eUpgradeImprovement;
 			}
 		}
-		
+
 		iYield += calculateImprovementYieldChange(eImprovement, eYield, getOwnerINLINE(), false);
 	}
-	
+
 	RouteTypes eRoute = (RouteTypes)GC.getBuildInfo(eBuild).getRoute();
 	if (eRoute != NO_ROUTE)
 	{
@@ -10223,7 +10220,7 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 		}
 	}
 
-	
+
 	return iYield;
 }
 
@@ -11026,3 +11023,10 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
+
+// Absinthe: start
+// returns province as int
+//int CvCity::getProvince(){
+//	return provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];
+//};
+// Absinthe: end

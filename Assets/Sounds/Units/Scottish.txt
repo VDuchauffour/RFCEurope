@@ -1,0 +1,22 @@
+
+ScottishOrder-000 - Aye! - Yes!
+ScottishOrder-001 - Dinnae fret yersel'! - Don't worry!
+ScottishOrder-002 - Forward! - Forward!
+ScottishOrder-003 - I can dae that! - I can do that!
+ScottishOrder-004 - I'll be right on it! - I'll be right on it!
+ScottishOrder-005 - It's nae trouble! - It's no trouble!
+ScottishOrder-006 - Nae bother! - No problem!
+ScottishOrder-007 - Nae hassle! - No problem!
+ScottishOrder-008 - We'll handle it! - We will do it!
+ScottishOrder-009 - We'r daen it! - We are doing it!
+
+ScottishSelect-000 - Ah'm aw ears! - I'm all ears!
+ScottishSelect-001 - Ah'm listenin'! - I'm listening!
+ScottishSelect-002 - Aye? - Yes?
+ScottishSelect-003 - Gie me an order! - Give me an order!
+ScottishSelect-004 - You needin' a hand wi any'hin'? - Do you need help with anything?
+ScottishSelect-005 - Ready for anythin'! - Ready for anything!
+ScottishSelect-006 - We've bin waitin'! - We've been waiting!
+ScottishSelect-007 - What am ah dae'n? - What should I do?
+ScottishSelect-008 - Whit's the plan? - What is the plan?
+

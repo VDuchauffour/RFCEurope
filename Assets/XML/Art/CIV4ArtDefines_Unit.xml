@@ -1970,8 +1970,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_CELTS_SELECT</SelectionSound>
-			<ActionSound>AS3D_CELTS_ORDER</ActionSound>
+			<SelectionSound>AS3D_SCOTTISH_SELECT</SelectionSound>
+			<ActionSound>AS3D_SCOTTISH_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_KNIGHT_OF_ST_JOHNS</Type>
@@ -6589,8 +6589,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_ENGLAND_SELECT</SelectionSound>
-			<ActionSound>AS3D_ENGLAND_ORDER</ActionSound>
+			<SelectionSound>AS3D_CELTS_SELECT</SelectionSound>
+			<ActionSound>AS3D_CELTS_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_STRADIOT</Type>
@@ -6771,8 +6771,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_CELTS_SELECT</SelectionSound>
-			<ActionSound>AS3D_CELTS_ORDER</ActionSound>
+			<SelectionSound>AS3D_SCOTTISH_SELECT</SelectionSound>
+			<ActionSound>AS3D_SCOTTISH_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_ZANJI</Type>

@@ -18,14 +18,14 @@ class Resources:
 
 	def createResource(self, iX, iY, iBonus, textKey="TXT_KEY_RESOURCE_DISCOVERED"):
 		"""Creates a bonus resource and alerts the plot owner"""
-		
+
 		if gc.getMap().plot(iX,iY).getBonusType(-1) == -1 or iBonus == -1: # only proceed if the bonus isn't already there or if we're removing the bonus
 			if iBonus == -1:
 				iBonus = gc.getMap().plot(iX,iY).getBonusType(-1) # for alert
 				gc.getMap().plot(iX,iY).setBonusType(-1)
 			else:
 				gc.getMap().plot(iX,iY).setBonusType(iBonus)
-				
+
 			iOwner = gc.getMap().plot(iX,iY).getOwner()
 			if iOwner >= 0 and textKey != -1: # only show alert to the tile owner
 				city = gc.getMap().findCity(iX, iY, iOwner, TeamTypes.NO_TEAM, True, False, TeamTypes.NO_TEAM, DirectionTypes.NO_DIRECTION, CyCity())
@@ -36,7 +36,7 @@ class Resources:
 
 	def removeResource(self, iX, iY, textKey="TXT_KEY_RESOURCE_EXHAUSTED"):
 		"""Removes a bonus resource and alerts the plot owner"""
-		
+
 		self.createResource(iX, iY, -1, textKey)
 
 
@@ -50,8 +50,8 @@ class Resources:
 		if (iGameTurn == xml.i1250AD):
 			self.removeResource( 2, 69)  #Remove the NAA from Iceland
 		if (iGameTurn == xml.i1452AD):   #Coffee spawns instead of being preplaced
-			self.createResource(94, 0, xml.iCoffee)  #near Sinai
-			self.createResource(99, 14, xml.iCoffee) #near Damascus
+			self.createResource(93, 0, xml.iCoffee)  #near Sinai
+			self.createResource(99, 13, xml.iCoffee) #near Damascus
 		if (iGameTurn == xml.i1580AD):
 			self.createResource(32, 59, xml.iPotato) #Potatoes in Ireland
 			self.createResource(29, 57, xml.iPotato)

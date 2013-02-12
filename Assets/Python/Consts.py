@@ -233,7 +233,7 @@ xml.i1569AD, #Lithuania - Lithuania UHV 3
 999  #Pope
 )
 
-tYear = ( # for Dawn of Man starting screen
+tYear = ( #For the Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
 ("635", "TXT_KEY_AD"),
@@ -261,9 +261,9 @@ tYear = ( # for Dawn of Man starting screen
 
 # starting locations coordinates
 tCapitals = (
-(81, 25), #tConstantinople, Byzantium
+(81, 24), #tConstantinople, Byzantium
 (44, 46), #tParis, France
-(97, 13), #tDamascus, Arabia
+(97, 10), #tDamascus, Arabia
 (78, 29), #tPreslav, Bulgaria
 (30, 23), #tCordoba, Cordoba
 (59, 57), #tRoskilde, Norse
@@ -279,12 +279,13 @@ tCapitals = (
 (21, 25), #tLisboa, Portugal
 (75, 53), #tVilnius, Lithuania
 (62, 40), #tWien, Austria
-(79, 22), #tBursa, Turkey
+(78, 22), #tGallipoli, Ottomans
+#(81, 22), #tBursa, Ottomans		#Bursa is too close to Constaninople
 (91, 56), #tMoscow, Moscow
 (66, 64), #tStockholm, Sweden
 (49, 52), #tAmsterdam, Dutch
 (56, 27)  #tRome, Pope
-) 
+)
 
 tStartingWorkers = (
 0, #tByzantium
@@ -314,39 +315,39 @@ tStartingWorkers = (
 
 #for minor civs
 tReserveCapitals = (
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
-(), 
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
 )
 
 tNewCapitals = (  #for RiseAndFall
-((81, 25),(81, 25)), #tByzantium: Constantinople
+((81, 24),(81, 24)), #tByzantium: Constantinople
 ((44, 46),(44, 46)), #tFrance: Paris
-((85, 4),(84, 3),(85, 3)), #tArabia: Damascus --> Alexandria (best Egyptian city)
+((83, 3),(84, 3),(84, 4)), #tArabia: Damascus --> Alexandria (best Egyptian city)
 ((78, 29),(78, 29)), #tBulgaria: Preslav
 ((48, 16),(50, 18)), #tCordoba: Cordoba --> Hafsids at Tunis
 ((59, 57),(59, 57)), #tNorse: Roskilde
@@ -362,12 +363,12 @@ tNewCapitals = (  #for RiseAndFall
 ((21, 25),(21, 25)), #tPortugal: Lisboa
 ((75, 53),(75, 53)), #tLithuania: Vilnius
 ((62, 40),(62, 40)), #tAustria: Wien
-((79, 22),(79, 22)), #tTurkey: Bursa
+((78, 22),(78, 22)), #tTurkey, Gallipoli
 ((91, 56),(91, 56)), #tMoscow: Moscow
 ((66, 64),(66, 64)), #tSweden: Stockholm
 ((49, 52),(49, 52)), #tDutch: Amsterdam
 ((56, 27),(56, 27))  #tPope: Rome
-) 
+)
 
 #core areas (for RiseAndFall and Victory)
 
@@ -379,7 +380,7 @@ tNewCapitals = (  #for RiseAndFall
 tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for stability
 (66,14),   #Byzantium
 (42,43),   #Franks
-(93,1),    #Arabs
+(92,0),    #Arabs
 (74,27),   #Bulgaria
 (24,19),   #Cordoba
 (53,55),   #Norse
@@ -395,17 +396,17 @@ tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for st
 (21,24),   #Portugal
 (70,50),   #Lithuania
 (59,37),   #Austria
-(76,16),   #Turks
+(76,16),   #Ottomans
 (83,54),   #Moscow
 (61,59),   #Sweden
 (46,50),   #Netherlands
 (54,25)	   #Pope
-) 
+)
 
 tCoreAreasBR = (
 (84,26),   #Byzantium
 (46,47),   #Franks
-(99,15),   #Arabs
+(99,12),   #Arabs
 (80,30),   #Bulgaria
 (37,28),   #Cordoba
 (60,67),   #Norse
@@ -421,7 +422,7 @@ tCoreAreasBR = (
 (24,32),   #Portugal
 (77,59),   #Lithuania
 (62,44),   #Austria
-(84,22),   #Turks
+(84,22),   #Ottomans
 (97,66),   #Moscow
 (68,71),   #Sweden
 (52,55),   #Netherlands
@@ -448,7 +449,7 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 ((25,27),(25,28),(25,29),(25,30),(25,31)), #Portugal
 (), #Lithuania
 ((60,36),(61,36),(62,36)), #Austria
-((75,23),(75,24),(75,25),(75,26),(76,23),(76,24),(76,25),(76,26),(77,23),(77,24),(77,25),(77,26),(78,23),(78,24),(78,25),(78,26)), #Turkey
+((76,23),(77,23),(78,23),(79,23)), #Ottomans
 (), #Moscow
 ((60,60),(60,61),(60,62),(60,63),(69,65),(69,66),(69,67),(69,68),(70,65),(70,66),(70,67),(70,68),(71,65),(71,66),(71,67),(71,68),(72,65),(72,66),(72,67),(72,68)), #Sweden
 ((46,49),(47,49),(48,49),(49,49),(50,49)), #Dutch
@@ -460,7 +461,7 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 tNormalAreasTL = ( #These areas are typically used for resurrection.
 (66,13),   #Byzantium
 (33,32),   #Franks
-(53,1),    #Arabs
+(53,0),    #Arabs
 (72,27),   #Bulgaria
 (43,8),    #Cordoba
 (53,56),   #Norse
@@ -481,12 +482,12 @@ tNormalAreasTL = ( #These areas are typically used for resurrection.
 (60,59),   #Sweden
 (47,50),   #Netherlands
 (54,25)	   #Pope
-) 
+)
 
 tNormalAreasBR = (
 (75,24),   #Byzantium
 (44,46),   #Franks
-(98,13),   #Arabs
+(99,11),   #Arabs
 (80,31),   #Bulgaria
 (52,19),   #Cordoba
 (59,71),   #Norse
@@ -507,13 +508,13 @@ tNormalAreasBR = (
 (68,71),   #Sweden
 (52,54),   #Netherlands
 (58,29)	   #Pope
-) 
+)
 
 
 tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 (), #Byzantium
 ((33,32),(33,33),(33,34),(33,35),(33,36),(34,32),(34,33),(34,34),(34,35),(35,32),(35,33),(35,34),(36,32),(36,33),(37,32),(38,32)), #Frankia
-((66,13),(67,13),(68,13),(69,13),(70,13),(71,13),(72,13),(73,13),(74,13),(75,13),(73,10),(74,10),(75,10),(76,10),(78,11),(79,12),(88,11),(88,12),(89,11),(89,12),(90,12),(91,13)), #Arabia
+((73,10),(74,10),(75,10),(76,10),(87,10),(87,11),(88,10),(88,11),(89,11)), #Arabia
 (), #Bulgaria
 (), #Cordoba
 (), #Norse
@@ -538,7 +539,7 @@ tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 
 
 # broader areas coordinates (top left and bottom right) (for RiseAndFall)
-# 3Miro: see core area comment 
+# 3Miro: see core area comment
 # Sedna17: Currently unused?
 tBroaderAreasTL = (
 (68, 14), #Byzantium
@@ -654,7 +655,7 @@ tHire = (
 10, #Byzantium
 30, #Frankia
 50, #Arabia
-10, #Bulgaria 
+10, #Bulgaria
 50, #Cordoba
 10, #Norse
 30, #Venezia
@@ -768,7 +769,7 @@ tResurrectionProb = (
 70, #Sweden
 60, #Dutch
 90  #Pope
-)  
+)
 
 #Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
 tRespawnTime = (
@@ -791,7 +792,7 @@ tRespawnTime = (
 267, #Portugal 1400 -- Make sure Portugal is around for colonies
 999, #Lithuania -- no special respawn
 313, #Austria 1526 -- Battle of Mohacs, start of Habsburg influence in NW Hungary
-294, #Turkey 1482 -- End of Mehmed II conquest. 
+294, #Turkey 1482 -- End of Mehmed II conquest.
 999, #Moscow -- no special respawn
 999, #Sweden -- no special respawn
 999, #Dutch -- no special respawn
@@ -823,7 +824,7 @@ tPatienceThreshold = (
 30, #Moscow
 30, #Sweden
 30  #Dutch
-) 
+)
 
 
 # religion spread modifiers:
@@ -1130,7 +1131,7 @@ iSaintBenefit = 10		# number of Faith points generated by a saint
 
 # Crusade section / Towns
 iNumCrusades = 5
-iJerusalem = ( 94, 6 )
+iJerusalem = ( 93, 5 )
 
 
 # Province Status

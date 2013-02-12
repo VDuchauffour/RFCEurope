@@ -432,21 +432,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN3</Tag>
-		<English>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</English>
-		<French>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</French>
-		<German>[COLOR_YELLOW]Verteidiger Europas:[COLOR_REVERT] Gestattet 1444 n.Chr. keine osmanischen Städte in Walachei, Moesia, Thrace, Makedonien, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbien, Bosnien, Dalmatien und Kroatien.</German>
-		<Italian>[COLOR_YELLOW]Difensore dell'Europa:[COLOR_REVERT] Non devono esserci città Ottomane nelle province di Vallachia, Moesia, Tracia, Macedonia, Salonnicco, Tessaglia, Morea, Epiro, Arberia, Serbia, Bosnia, Dalmazia e Croazia nel 1444AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Bosnia, Dalmatia and Croatia in 1444AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Defensor da Europa:[COLOR_REVERT] Não permita nenhuma cidade Otomana em Valáquia, Mésia, Trácia, Macedônia, Tessalonica, Tessália, Moreia, Épiro, Arberia, Sérvia, Bósnia, Dalmácia e Croácia em 1444DC.</Portuguese>
+		<English>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Croatia in 1444AD.</English>
+		<French>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Croatia in 1444AD.</French>
+		<German>[COLOR_YELLOW]Verteidiger Europas:[COLOR_REVERT] Gestattet 1444 n.Chr. keine osmanischen Städte in Walachei, Moesia, Thrace, Makedonien, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbien, Banaten, Bosnien, Dalmatien und Kroatien.</German>
+		<Italian>[COLOR_YELLOW]Difensore dell'Europa:[COLOR_REVERT] Non devono esserci città Ottomane nelle province di Vallachia, Moesia, Tracia, Macedonia, Salonnicco, Tessaglia, Morea, Epiro, Arberia, Serbia, Banat, Bosnia, Dalmazia e Croazia nel 1444AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Croatia in 1444AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Defensor da Europa:[COLOR_REVERT] Não permita nenhuma cidade Otomana em Valáquia, Mésia, Trácia, Macedônia, Tessalonica, Tessália, Moreia, Épiro, Arberia, Sérvia, Banat, Bósnia, Dalmácia e Croácia em 1444DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
-		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</English>
-		<French>Contr&#244;ler la rive est du Rhin en 1167AD ap.JC.</French>
-		<German>[COLOR_YELLOW]Das Heilige Römische Reich:[COLOR_REVERT] Kontrolliert 1167 n.Chr. Lothringen, Schwaben, Sachsen, Bayern, Franken, Brandenburg, Lombardei und Toskana.</German>
-		<Italian>[COLOR_YELLOW]Il Sacro Romano Impero:[COLOR_REVERT] Controlla le province di Lorena, Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Lombardia e Toscana nel 1167AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Lombardy and Tuscany in 1167AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]O Sacro Império Romano:[COLOR_REVERT] Controle Lorena, Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Lombardia e Toscana em 1167DC..</Portuguese>
+		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167AD.</English>
+		<French>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167AD.</French>
+		<German>[COLOR_YELLOW]Das Heilige Römische Reich:[COLOR_REVERT] Kontrolliert 1167 n.Chr. Lothringen, Schwaben, Sachsen, Bayern, Franken, Brandenburg, Holstein, Lombardei und Toskana.</German>
+		<Italian>[COLOR_YELLOW]Il Sacro Romano Impero:[COLOR_REVERT] Controlla le province di Lorena, Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Holstein, Lombardia e Toscana nel 1167AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]O Sacro Império Romano:[COLOR_REVERT] Controle Lorena, Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Holstein, Lombardia e Toscana em 1167DC..</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER2</Tag>
@@ -459,21 +459,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</English>
-		<French>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</French>
-		<German>[COLOR_YELLOW]Der Dreißigjährige Krieg:[COLOR_REVERT] Erobert bis 1648 n.Chr. Schwaben, Sachsen, Bayern, Franken, Brandenburg, Flandern, Pommern, Schlesien, Böhmen, Mähren und Österreich.</German>
-		<Italian>La Guerra dei Trent'Anni:[COLOR_REVERT] Conquista le province di Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Fiandre, Pomerania, Silesia, Boemia, Moravia ed Austria entro il 1648AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]A Guerra dos Trinta Anos:[COLOR_REVERT] Conquiste Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Flandres, Silésia, Boêmia, Morávia e Áustria em 1648DC.</Portuguese>
+		<English>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</English>
+		<French>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</French>
+		<German>[COLOR_YELLOW]Der Dreißigjährige Krieg:[COLOR_REVERT] Erobert bis 1648 n.Chr. Schwaben, Sachsen, Bayern, Franken, Brandenburg, Holstein, Flandern, Pommern, Schlesien, Böhmen, Mähren und Österreich.</German>
+		<Italian>[COLOR_YELLOW]La Guerra dei Trent'Anni:[COLOR_REVERT] Conquista le province di Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Holstein, Fiandre, Pomerania, Silesia, Boemia, Moravia ed Austria entro il 1648AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]A Guerra dos Trinta Anos:[COLOR_REVERT] Conquiste Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Holstein, Flandres, Silésia, Boêmia, Morávia e Áustria em 1648DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
-		<English>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</English>
-		<French>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</French>
-		<German>[COLOR_YELLOW]Die Realunion:[COLOR_REVERT] Kontrolliert 1600 n.Chr. 12 Städte in Böhmen, Mähren, Oberungarn, Litauen, Livland, Polotsk, Minsk, Wolhynien, Podolia, Moldawien und Kiev.</German>
-		<Italian>[COLOR_YELLOW]Il Commonwealth:[COLOR_REVERT] Controlla 12 città nelle province di Boemia, Moravia, Alta Ungheria, Lituania, Livonia, Polack, Minsk, Volinia, Podolia, Moldavia e Kiev nel 1600AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]A Commonwealth:[COLOR_REVERT]Controle 12 cidades em Boêmia, Morávia, Alta Hungria, Lituânia, Livônia, Polotsk, Minsk, Volínia, Podólia, Moldávia e Kiev em 1600DC.</Portuguese>
+		<English>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</English>
+		<French>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</French>
+		<German>[COLOR_YELLOW]Die Realunion:[COLOR_REVERT] Kontrolliert 1600 n.Chr. 12 Städte in Böhmen, Mähren, Oberungarn, Prussia, Litauen, Livland, Polotsk, Minsk, Wolhynien, Podolia, Moldawien und Kiev.</German>
+		<Italian>[COLOR_YELLOW]Il Commonwealth:[COLOR_REVERT] Controlla 12 città nelle province di Boemia, Moravia, Alta Ungheria, Prussia, Lituania, Livonia, Polack, Minsk, Volinia, Podolia, Moldavia e Kiev nel 1600AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]A Commonwealth:[COLOR_REVERT]Controle 12 cidades em Boêmia, Morávia, Alta Hungria, Prussia, Lituânia, Livônia, Polotsk, Minsk, Volínia, Podólia, Moldávia e Kiev em 1600DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL2</Tag>
@@ -630,12 +630,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR1</Tag>
-		<English>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</English>
-		<French>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</French>
-		<German>[COLOR_YELLOW]Osmans Reich:[COLOR_REVERT] Erobert bis 1453 n.Chr. Konstantinopel, Thrace, Makedonien, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnien und Serbien.</German>
-		<Italian>[COLOR_YELLOW]L'Impero di Osman:[COLOR_REVERT] Conquista le provincie di Costantinopoli, Tracia, Macedonia, Salonicco, Moesia, Arberia,, Epiro, Tessaglia, Morea, Bosnia e Serbia entro il 1453AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia and Serbia in 1453AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Império de Osmã:[COLOR_REVERT] Conquiste Constantinopla, Trácia, Macedônia, Tessalônica, Mésia, Arberia, Épiro, Tessália, Moreia, Bósnia e Sérvia em 1453DC.</Portuguese>
+		<English>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia, Banat and Serbia in 1453AD.</English>
+		<French>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia, Banat and Serbia in 1453AD.</French>
+		<German>[COLOR_YELLOW]Osmans Reich:[COLOR_REVERT] Erobert bis 1453 n.Chr. Konstantinopel, Thrace, Makedonien, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnien, Banaten und Serbien.</German>
+		<Italian>[COLOR_YELLOW]L'Impero di Osman:[COLOR_REVERT] Conquista le provincie di Costantinopoli, Tracia, Macedonia, Salonicco, Moesia, Arberia,, Epiro, Tessaglia, Morea, Bosnia, Banat e Serbia entro il 1453AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople, Thrace, Macedonia, Thessaloniki, Moesia, Arberia, Epirus, Thessaly, Morea, Bosnia, Banat and Serbia in 1453AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Império de Osmã:[COLOR_REVERT] Conquiste Constantinopla, Trácia, Macedônia, Tessalônica, Mésia, Arberia, Épiro, Tessália, Moreia, Bósnia, Banat e Sérvia em 1453DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR2</Tag>
@@ -675,12 +675,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE3</Tag>
-		<English>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</English>
-		<French>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</French>
-		<German>[COLOR_YELLOW]Löwe des Nordens:[COLOR_REVERT] Besitzt 1750 n.Chr. 15 Städte in Sachsen, Brandenburg, Pommern, Großpolen, Masowien, Suvalkija, Litauen, Livland, Estland, Smolensk, Polotsk, Minsk, Murom, Tschernigow, Moskau, Nowgorod und Rostov.</German>
-		<Italian>[COLOR_YELLOW]Leone del Nord:[COLOR_REVERT] Devi avere almeno 15 città nelle seguenti province: Sassonia, Brandeburgo, Pomerania, Grande Polonia, Masovia, Sudovia, Lituania, Estonia, Smolensk, Polack, Minsk, Murom, Chernigov, Mosca e Rostov nel 1750AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Pomerania, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Leão do Norte:[COLOR_REVERT] Tenha 15 cidades em Saxônia, Brandemburgo, Pomerânia, Grande Polônia, Masóvia, Suvalkija, Lituânia, Livônia, Estônia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscou, Novgorod e Rostov em 1750DC.</Portuguese>
+		<English>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Holstein, Pomerania, Prussia, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</English>
+		<French>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Holstein, Pomerania, Prussia, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</French>
+		<German>[COLOR_YELLOW]Löwe des Nordens:[COLOR_REVERT] Besitzt 1750 n.Chr. 15 Städte in Sachsen, Brandenburg, Holstein, Pommern, Prussia, Großpolen, Masowien, Suvalkija, Litauen, Livland, Estland, Smolensk, Polotsk, Minsk, Murom, Tschernigow, Moskau, Nowgorod und Rostov.</German>
+		<Italian>[COLOR_YELLOW]Leone del Nord:[COLOR_REVERT] Devi avere almeno 15 città nelle seguenti province: Sassonia, Brandeburgo, Holstein, Pomerania, Prussia, Grande Polonia, Masovia, Sudovia, Lituania, Estonia, Smolensk, Polack, Minsk, Murom, Chernigov, Mosca e Rostov nel 1750AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Have 15 cities in Saxony, Brandenburg, Holstein, Pomerania, Prussia, Greater Poland, Masovia, Suvalkija, Lithuania, Livonia, Estonia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscow, Novgorod and Rostov in 1750AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Leão do Norte:[COLOR_REVERT] Tenha 15 cidades em Saxônia, Brandemburgo, Holstein, Pomerânia, Prussia, Grande Polônia, Masóvia, Suvalkija, Lituânia, Livônia, Estônia, Smolensk, Polotsk, Minsk, Murom, Chernigov, Moscou, Novgorod e Rostov em 1750DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT1</Tag>
