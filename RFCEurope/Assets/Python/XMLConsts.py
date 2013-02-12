@@ -789,8 +789,8 @@ iP_Estonia = 58
 iP_Carinthia = 60
 iP_Austria = 61
 iP_Slavonia = 62
-#iP_Tyrol = 63 # Merged with Bavaria
-#iP_Salzburg = 63 # Merged with Bavaria
+#iP_Tyrol = 63 # merged with Bavaria
+#iP_Salzburg = 63 # merged with Bavaria
 iP_Transylvania = 64
 iP_Hungary = 65
 iP_Moravia = 66
@@ -817,7 +817,8 @@ iP_Thrace = 82
 iP_Thessaly = 83
 iP_Macedonia = 84
 iP_Serbia = 85
-iP_Croatia = 86
+iP_Bosnia = 86
+#iP_Croatia = 86 # merged with Slavonia
 iP_Epirus = 87
 iP_Morea = 88
 iP_Wallachia = 89
@@ -885,7 +886,6 @@ iP_Karelia = 141
 iP_Volhynia = 142
 
 # Rest
-iP_Bosnia = 143
 iP_Thessaloniki = 144
 iP_Marrakesh = 145
 iP_Madeira = 146
@@ -903,8 +903,8 @@ lRegionGermany		= [ iP_Lorraine, iP_Swabia, iP_Saxony, iP_Bavaria, iP_Franconia,
 lRegionPoland		= [ iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_LesserPoland, iP_Silesia, iP_Masovia ]
 lRegionLithuania	= [ iP_Lithuania, iP_Livonia, iP_Estonia ]
 lRegionAustria		= [ iP_Carinthia, iP_Austria, iP_Moravia, iP_Bohemia, iP_Silesia ]
-lRegionHungary		= [ iP_Transylvania, iP_Hungary, iP_Slavonia, iP_Croatia, iP_Pannonia, iP_UpperHungary ]
-lRegionBalkans		= [ iP_Serbia, iP_Thrace, iP_Macedonia, iP_Moesia, iP_Arberia, iP_Dalmatia, iP_Croatia, iP_Bosnia, iP_Banat ]
+lRegionHungary		= [ iP_Transylvania, iP_Hungary, iP_Slavonia, iP_Pannonia, iP_UpperHungary ]
+lRegionBalkans		= [ iP_Serbia, iP_Thrace, iP_Macedonia, iP_Moesia, iP_Arberia, iP_Dalmatia, iP_Bosnia, iP_Banat ]
 lRegionGreece		= [ iP_Constantinople, iP_Thessaly, iP_Epirus, iP_Morea, iP_Thessaloniki ]
 lRegionAsiaMinor	= [ iP_Colonea, iP_Charsiadon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
 lRegionMiddleEast	= [ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem ]
@@ -918,7 +918,7 @@ lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, i
 #tRegionMap = [ [], # default region is empty
 #[ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Navarre, iP_LaMancha, iP_Valencia, iP_Andalusia, iP_Bretagne, iP_Normandy, iP_Aquitania, iP_IleDeFrance, iP_Provence, iP_Burgundy, iP_Orleans, iP_Champagne, iP_Flanders, iP_Picardy, iP_London, iP_Wessex, iP_Wales, iP_Scotland, iP_Ireland, iP_Mercia, iP_EastAnglia, iP_Northumbria, iP_Iceland, iP_TheIsles ], # Western Europe
 #[ iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Jamtland, iP_Skaneland, iP_Gotland ], # Northern Europe
-#[ iP_Netherlands, iP_Denmark, iP_Swabia, iP_Bavaria, iP_Bohemia, iP_Saxony, iP_Lorraine, iP_Franconia, iP_Brandenburg, iP_Holstein, iP_Pomerania, iP_GaliciaPoland, iP_LesserPoland, iP_GreaterPoland, iP_Masovia, iP_Carinthia, iP_Austria, iP_Slavonia, iP_Transylvania, iP_Hungary, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, iP_Lombardy, iP_Liguria, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Dalmatia, iP_Bosnia, iP_Banat, iP_Croatia ], # Central Europe
+#[ iP_Netherlands, iP_Denmark, iP_Swabia, iP_Bavaria, iP_Bohemia, iP_Saxony, iP_Lorraine, iP_Franconia, iP_Brandenburg, iP_Holstein, iP_Pomerania, iP_GaliciaPoland, iP_LesserPoland, iP_GreaterPoland, iP_Masovia, iP_Carinthia, iP_Austria, iP_Slavonia, iP_Transylvania, iP_Hungary, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, iP_Lombardy, iP_Liguria, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Dalmatia, iP_Bosnia, iP_Banat ], # Central Europe
 #[ iP_Prussia, iP_Suvalkija, iP_Lithuania, iP_Livonia, iP_Moesia, iP_Constantinople, iP_Thrace, iP_Thessaly, iP_Macedonia, iP_Serbia, iP_Epirus, iP_Morea, iP_Wallachia, iP_Moldova, iP_Crimea, iP_Novgorod, iP_Kuban, iP_Zaporizhia, iP_Rostov, iP_Moscow, iP_Vologda, iP_Smolensk, iP_Polotsk, iP_Murom, iP_Chernigov, iP_Pereyaslavl, iP_Sloboda, iP_Donets, iP_Kiev, iP_Podolia, iP_Minsk, iP_Brest, iP_Simbirsk, iP_NizhnyNovgorod, iP_Karelia, iP_Volhynia, iP_Thessaloniki, iP_Estonia, iP_Osterland ], # Eastern Europe
 #[ iP_Jerusalem, iP_Paphlagonia, iP_Opsikion, iP_Thrakesion, iP_Cilicia, iP_Anatolikon, iP_Armeniakon, iP_Charsiadon, iP_Colonea, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Egypt ], # Asia
 #[ iP_Sicily, iP_Crete, iP_Cyprus, iP_Rhodes, iP_Corsica, iP_Sardinia, iP_Balears, iP_Canaries, iP_Azores, iP_Malta, iP_Madeira ], # Islands
