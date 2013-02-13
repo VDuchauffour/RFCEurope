@@ -6,10 +6,10 @@ import re #for string manipulations
 
 ################################################################################################################################################
 #   Moding script for RFCEurope, written by 3Miro, feel free to use it for other mods/purposes (assume license GPLv3)
-#       
+#
 #       This Script reads a WorldBuilder file into three types of arrays
-#       
-#       Python Array:   
+#
+#       Python Array:
 #           for Settlers Map and War Map
 #           assumes the map contains a bunch of labels with ONLY NUMBERS, then it reads those and outputs
 #           generates output of a Python array that can be places in RFCEMaps.py
@@ -71,7 +71,7 @@ def populate_array_string(rows, columns):
         #        for col in range(0, columns):
         #                array_dic[row].append('None')     ## initialize to 'None'
         return [["-1" for i in range(columns)] for j in range(rows)]
-        
+
 def write_array_to_Javascript(rows, columns, array ):
         #f = open('JavascriptArray.txt', 'w')
         for iY in range( iMapMaxY ):
@@ -99,19 +99,19 @@ def write_array_to_PythonCity(rows, columns, array ):
                 print "(",
                 for iX in range( iMapMaxX ):
                         #sstr = ( "\"%d\"," %array[iY][iX] )
-			#if ( array[iMapMaxY-iY-1][iX] == "-1" ):
-	                #       if ( iX < iMapMaxX -1 ):
-        	        #                sstr = ( "\"%d\"," %array[iMapMaxY-iY-1][iX] )
-                	#        else:
-                        #	        sstr = ( "\"%d\"" %array[iMapMaxY-iY-1][iX] )
-			#else:
-			#	if ( iX < iMapMaxX -1 ):
-        	        #                sstr = ( "\"%s\"," %array[iMapMaxY-iY-1][iX] )
-                	#        else:
-                        #	        sstr = ( "\"%s\"" %array[iMapMaxY-iY-1][iX] )
+                        #if ( array[iMapMaxY-iY-1][iX] == "-1" ):
+                        #        if ( iX < iMapMaxX -1 ):
+                        #                sstr = ( "\"%d\"," %array[iMapMaxY-iY-1][iX] )
+                        #        else:
+                        #                sstr = ( "\"%d\"" %array[iMapMaxY-iY-1][iX] )
+                        #else:
+                        #        if ( iX < iMapMaxX -1 ):
+                        #                sstr = ( "\"%s\"," %array[iMapMaxY-iY-1][iX] )
+                        #        else:
+                        #                sstr = ( "\"%s\"" %array[iMapMaxY-iY-1][iX] )
                         if ( iX < iMapMaxX -1 ):
-        	                sstr = ( "\"%s\"," %array[iMapMaxY-iY-1][iX] )
-                	else:
+                                sstr = ( "\"%s\"," %array[iMapMaxY-iY-1][iX] )
+                        else:
                                 sstr = ( "\"%s\"" %array[iMapMaxY-iY-1][iX] )
                         print sstr,
                 print "),"
@@ -120,8 +120,8 @@ def findCapital(rows, columns, array ):
         #f = open('JavascriptArray.txt', 'w')
         for iY in range( iMapMaxY ):
                 for iX in range( iMapMaxX ):
-			if ( array[iY][iX] == 700 ):
-				print iX, iY
+                        if ( array[iY][iX] == 700 ):
+                        print iX, iY
 
 def parseLabels2ArraySettler():
         tProv = populate_array( iMapMaxY, iMapMaxX )
@@ -148,7 +148,7 @@ def parseLabels2ArraySettler():
                         tProv[iY][iX] = int( line.strip("	caption=") )
 
         write_array_to_Python( iMapMaxY, iMapMaxX, tProv )
-	#findCapital( iMapMaxY, iMapMaxX, tProv )
+        #findCapital( iMapMaxY, iMapMaxX, tProv )
 
 def parseLabels2ArrayWar():
         tProv = populate_array( iMapMaxY, iMapMaxX )
@@ -217,4 +217,4 @@ if ( iOutputType == 1 ):
 elif ( iOutputType == 2 ):
         parseLabels2ArrayWar()
 else:
-	parseLabels2ArrayCity()
+        parseLabels2ArrayCity()
