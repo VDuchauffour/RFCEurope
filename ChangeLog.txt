@@ -46,13 +46,14 @@ Changes for RFCE 1.2:
 		- Added the Dardanelles strait to the map, so the Ottoman spawn doesn't have to be separated into an Anatolian and European part
 		- Added the Oresund strait to the map - connecting Denmark and Norway will seriously strengthen the Norse AI
 		- New indy cities: Seville (spawns in 500AD as Hispalis, flips to Cordoba), Fez (780 AD), Beloozero (800 AD), Tanais (1392 AD, Timurid conquest)
+		- New indy cities: Graz (spawns in 1110AD, flips to Austria), Kalmar (spawns in 1050AD, flips to Sweden), Vologda is removed for now
 		- Added salt lakes (mesosaline and hypersaline) to the mod: Dead Sea near Jerusalem, Lake Tuz in Anatolia - same yield as coast
 		- Red Sea (the visible parts in RFCE) and Sea of Marmara are now coastal ocean tiles, instead of being fresh water lakes due to their small size
 		- The eastern part of the Black Sea got a line of coast tiles, the actual coast is only 1-2 tiles away anyway, and this way early ships can pass there too
 		- New provinces: Banat (representing the southern Banates of medieval Hungary), Holstein (buffer province between Denmark and Germany, also helps in the French first UHV)
 		- New provinces: Prussia (for the Teutonic Order/Prussia civ), Liguria (better to have a separate province because of the French UHV)
 		- Lots of small province adjustments: primarly near the new provinces, in the Austrian territories, in Scandinavia, and in the Polish-Lithuanian-Kievan territories
-		- Province Croatia merged into Slavonia, province adjustment in the area - the Dalmatian coast will be better shaped culturally (between Venice and Hungary / Austria)
+		- Province Croatia merged into Slavonia, province adjustment in the area - the Dalmatian coast will be better shaped (culturally between Venice and Hungary or Austria)
 		- Both Alba Iulia / Gyulafehervar and Lubeck spawns 1 tile north, to follow the province changes
 
 	XML and text updates:

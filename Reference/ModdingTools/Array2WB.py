@@ -8,7 +8,7 @@ import re #for string manipulations
 
 ################################################################################################################################################
 #   Moding script for RFCEurope, written by 3Miro, feel free to use it for other mods/purposes (assume license GPLv3)
-#       
+#
 #   This script reads RFCEMaps.py (in the same folder) and outputs WB labels
 #   Set iOutputType and iPlayer for the desired output
 #   The resulting labels have to be copy/pasted at the end of the WorldBuilder save file
@@ -55,7 +55,7 @@ iNumTotalPlayersB = 28
 ######################################################################
 ##### Edit this Part ################
 
-#OutputType: 1 - WB labels with city names, 2 - WB labels with Settlers Map, 3 - WB labels with War maps
+#OutputType: 1 - WB labels with city names, 2 - WB labels with Settlers Map, 3 - WB labels with War maps, 4 - WB labels with province IDs
 iOutputType = 1
 
 iPlayer = iGermany
@@ -77,7 +77,7 @@ def populate_array(rows, columns):
         #        for col in range(0, columns):
         #                array_dic[row].append('None')     ## initialize to 'None'
         return [[0 for i in range(columns)] for j in range(rows)]
-        
+
 def write_array_to_Javascript(rows, columns, array ):
         #f = open('JavascriptArray.txt', 'w')
         for iY in range( iMapMaxY ):
@@ -102,7 +102,7 @@ def write_array_to_Python(rows, columns, array ):
 def writeCityNames( tMap ):
 	iNumSigns = 0
 	for iY in range( iMapMaxY ):
-                for iX in range( iMapMaxX ):
+		for iX in range( iMapMaxX ):
 			if ( tMap[iY][iX] != "-1" ):
 				iInvY = iMapMaxY - iY-1
 				print "BeginSign\r",
@@ -117,7 +117,7 @@ def writeCityNames( tMap ):
 def writeSettlersMap( tMap ):
 	iNumSigns = 0
 	for iY in range( iMapMaxY ):
-                for iX in range( iMapMaxX ):
+		for iX in range( iMapMaxX ):
 			if ( tMap[iY][iX] != 20 ):
 				iInvY = iMapMaxY - iY-1
 				print "BeginSign\r",
@@ -132,8 +132,23 @@ def writeSettlersMap( tMap ):
 def writeWarMap( tMap ):
 	iNumSigns = 0
 	for iY in range( iMapMaxY ):
-                for iX in range( iMapMaxX ):
+		for iX in range( iMapMaxX ):
 			if ( tMap[iY][iX] != 0 ):
+				iInvY = iMapMaxY - iY-1
+				print "BeginSign\r",
+				print "	plotX=%d\r" %iX,
+				print "	plotY=%d\r" %iInvY,
+				print "	playerType=-1\r",
+				print "	caption=%d\r" %tMap[iY][iX],
+				print "EndSign\r",
+				iNumSigns += 1
+	print iNumSigns
+
+def writeProvinceMap( tMap ):
+	iNumSigns = 0
+	for iY in range( iMapMaxY ):
+		for iX in range( iMapMaxX ):
+			if ( tMap[iY][iX] != -1 ):
 				iInvY = iMapMaxY - iY-1
 				print "BeginSign\r",
 				print "	plotX=%d\r" %iX,
@@ -148,6 +163,8 @@ def writeWarMap( tMap ):
 if ( iOutputType == 1 ):
 	writeCityNames( maps.tCityMap[iPlayer] )
 elif ( iOutputType == 2 ):
-        writeSettlersMap( maps.tSettlersMaps[iPlayer] )
+	writeSettlersMap( maps.tSettlersMaps[iPlayer] )
 elif ( iOutputType == 3 ):
-        writeWarMap( maps.tWarsMaps[iPlayer] )
+	writeWarMap( maps.tWarsMaps[iPlayer] )
+elif ( iOutputType == 4 ):
+	writeProvinceMap( maps.tProinceMap[iByzantium] )

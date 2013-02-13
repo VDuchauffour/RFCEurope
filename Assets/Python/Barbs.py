@@ -91,17 +91,19 @@ lMinsk = [79,52,120,0] #960 AD
 lSmolensk = [84,55,120,0] #960 AD
 lYaroslavl = [92,61,137,0] #1010 AD
 lGroningen = [52,54,150,0] #1050 AD
+lKalmar = [64,60,150,0] #1050 AD
 #lMunster = [52,50,150,0] #1050 AD
 lMus = [99,21,153,0] #1060 AD
 lMarrakesh = [24,7,157,0] #1071 AD
+lGraz = [61,37,170,0] #1110 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
 lTarabulus = [54,8,209,0] #1227 AD, Respawn of Tripoli
 lAbo = [71,66,217,0] #1250 AD
 lNizhnyNovgorod = [97,58,240,0] #1320 AD
 #lMemel = [70,55,240,0] #1320 AD, Klaipeda
-lVologda = [91,64,240,0] #1320 AD
+#lVologda = [91,64,240,0] #1320 AD
 #lTver = [88,60,240,0] #1320 AD
-lTanais = [96,38,264,0] # 1392 AD
+lTanais = [96,38,264,0] #1392 AD
 lReykjavik = [2,70,270,0] #1410 AD
 lValletta = [57,14,315,0] #1530 AD
 
@@ -191,9 +193,10 @@ class Barbs:
 		#Germanic Barbarians throughout Western Europe (France, Germany)
 		if (iGameTurn < xml.i800AD):
 			self.spawnUnits( iBarbarian, (45,45),(60,55), xml.iAxeman, 1 + iHandicap, iGameTurn,14,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+			self.spawnUnits( iBarbarian, (43,42),(50,50), xml.iAxeman, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 		if (gc.getPlayer(con.iFrankia).isHuman()): #extra barbs for human France
 			if (iGameTurn < xml.i800AD):
-				self.spawnUnits( iBarbarian, (43,42),(52,50), xml.iAxeman, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+				self.spawnUnits( iBarbarian, (43,42),(50,50), xml.iAxeman, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 				self.spawnUnits( iBarbarian, (42,40),(56,48), xml.iSpearman, 1 + iHandicap, iGameTurn,11,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 				self.spawnUnits( iBarbarian, (46,48),(62,55), xml.iAxeman, 1 + iHandicap, iGameTurn,18,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 
@@ -508,10 +511,13 @@ class Barbs:
                         self.foundCity(iIndependent3, lYaroslavl, "Yaroslavl", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
                         # 1050AD
                         self.foundCity(iIndependent2, lGroningen, "Groningen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+                        self.foundCity(iIndependent2, lKalmar, "Kalmar", iGameTurn, 3, xml.iCrossbowman, 1, xml.iCatholicism, 1)
                         # 1060AD
                         self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
                         # 1071AD
                         self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 3, xml.iCrossbowman, 2, xml.iIslam, 1 )
+                        # 1110AD
+                        self.foundCity(iIndependent3, lGraz, "Graz", iGameTurn, 3, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
                         # 1200AD
                         self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
                         # 1227 AD
@@ -521,9 +527,9 @@ class Barbs:
                 if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
                         # 1320AD
                         self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-                        self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+                        #self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
                         # 1392AD
-                        self.foundCity(iIndependent3, lTanais, "Tana", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 0)
+                        self.foundCity(iBarbarian, lTanais, "Tana", iGameTurn, 1, xml.iLongbowman, 2, xml.iIslam, 0)
                         # 1410AD
                         self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 )
                         # 1530AD

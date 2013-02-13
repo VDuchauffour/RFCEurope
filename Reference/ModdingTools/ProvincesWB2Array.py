@@ -6,9 +6,9 @@ import re #for string manipulations
 
 ################################################################################################################################################
 #   Moding script for RFCEurope, written by 3Miro, feel free to use it for other mods/purposes (assume license GPLv3)
-#       
+#
 #       This Script reads a WorldBuilder file into three types of arrays
-#       Javascript Map: generates a Javascript array in row major format with numvers depending on the terrain type
+#       Javascript Map: generates a Javascript array in row major format with numbers depending on the terrain type
 #                       you can use that to place for visualization purposes in the HTML file
 #       Javascript Provinces:   assumes the map contains a bunch of labels with ONLY NUMBERS, then it reads those and outputs
 #                               a Javascript array that can be used to visualize Provinces in the HTML file
@@ -30,7 +30,7 @@ import re #for string manipulations
 ######################################################################
 ##### Edit this Part ################
 
-tWBFilename = "Provinces_AR.CivBeyondSwordWBSave"
+tWBFilename = "Provinces.CivBeyondSwordWBSave"
 
 #OutputType: 1 - Javascript Province, 2 - Javascript Map, 3 - Python Array for Maps.py
 iOutputType = 3
@@ -59,7 +59,7 @@ def populate_array(rows, columns):
         #        for col in range(0, columns):
         #                array_dic[row].append('None')     ## initialize to 'None'
         return [[0 for i in range(columns)] for j in range(rows)]
-        
+
 def write_array_to_Javascript(rows, columns, array ):
         #f = open('JavascriptArray.txt', 'w')
         for iY in range( iMapMaxY ):
