@@ -62,7 +62,7 @@ Changes for RFCE 1.2:
 		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
 		- RFCE specific help texts for the handicap levels
 		- Translations for the Scottish and Magyar/Hungarian unit sounds
-		- Province Oppland renamed to Jämtland
+		- Province Oppland renamed to Jämtland, Charsiakon corrected to Charsianon
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -100,7 +100,7 @@ Changes for RFCE 1.2:
 			La Mezquita (-100 production cost, +1 free specialist, -1 gold from state religion buildings), Magellan's Voyage (-1 trade routes from coastal cities, +2 xp for naval units),
 			St. Basil's Cathedral (available with Chemistry, -10% GP modifier, -1 free specialist, +1 spy slot, +2 espionage points from state religion buildings), St. Sophia (-1 priest slot),
 			Cluny Abbey (+1 free priest), Palais des Papes (+2 happiness), San Marco Basilica (+1 trade route, -30% trade route yield), St. Peter's Basilica (no unhappiness in the city)
-		- Crete and Cyprus provinces are now stable for Venice, Banat and Wallachia are now OK for the Ottomans
+		- Crete and Cyprus provinces are now stable for Venice, Banat, Wallachia, Cyrenaica and Tripolitania are now OK for the Ottomans
 		- Province Banat is OK for Bulgaria, changes to unstable after the Hungarian spawn
 		- Dalmatia, Bosnia and Banat provinces are reduced to OK for Hungary after the Ottoman spawn
 		- Holstein is OK for the Norse, stable for Germany (but not a core, so won't hurt their stability if another civ holds it)
@@ -110,6 +110,8 @@ Changes for RFCE 1.2:
 		- The German first and third UHV requires Holstein too, the Ottoman first UHV requires Banat, and the Hungarian anti-Ottoman UHV requires Banat and Slavonia
 		- Holstein and Prussia also count in the Swedish third UHV, Prussia also counts in the Polish first UHV
 		- Minor changes in the defensive crusades, also updated them with the new provinces
+		- Changes in the Ottoman core and solid areas (only western Anatolia and Thrace are their core), thus making their early collapse less likely
+		- Minor nerfs to the Byzantine, French and Venetian modifiers
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button

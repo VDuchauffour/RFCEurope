@@ -83,7 +83,7 @@ iProvinceCore      = con.iProvinceCore
 iNumProvinceTypes  = con.iNumProvinceTypes
 
 ############ Lists of all the provinces for each Civ ###################
-tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Thessaloniki,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Antiochia,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt]
+tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Thessaloniki,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsianon,xml.iP_Antiochia,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt]
 tByzantiumNorm = [xml.iP_Colonea]
 tByzantiumOuter = [xml.iP_Moesia,xml.iP_Serbia,xml.iP_Cyrenaica]
 tByzantiumPot2Core = []
@@ -211,9 +211,9 @@ tAustriaDesire = []
 
 tTurkeyCore = []
 tTurkeyNorm = []
-tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Serbia,xml.iP_Moesia,xml.iP_Hungary,xml.iP_Pannonia,xml.iP_Bosnia,xml.iP_Slavonia,xml.iP_Banat,xml.iP_Wallachia,xml.iP_Crete,xml.iP_Cyprus,xml.iP_Rhodes]
-tTurkeyPot2Core = [xml.iP_Opsikion,xml.iP_Thrakesion,xml.iP_Paphlagonia,xml.iP_Anatolikon,xml.iP_Cilicia,xml.iP_Armeniakon,xml.iP_Charsiadon,xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Colonea]
-tTurkeyPot2Norm = [xml.iP_Antiochia,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki]
+tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Serbia,xml.iP_Hungary,xml.iP_Pannonia,xml.iP_Slavonia,xml.iP_Bosnia,xml.iP_Banat,xml.iP_Wallachia,xml.iP_Crete,xml.iP_Cyprus,xml.iP_Rhodes,xml.iP_Cyrenaica,xml.iP_Tripolitania]
+tTurkeyPot2Core = [xml.iP_Opsikion,xml.iP_Thrakesion,xml.iP_Paphlagonia,xml.iP_Anatolikon,xml.iP_Constantinople,xml.iP_Thrace]
+tTurkeyPot2Norm = [xml.iP_Armeniakon,xml.iP_Colonea,xml.iP_Charsianon,xml.iP_Cilicia,xml.iP_Antiochia,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki,xml.iP_Moesia]
 tTurkeyDesire = []
 
 tMoscowCore = []
@@ -500,7 +500,7 @@ class ProvinceManager:
                         pByzantium.setProvinceType( xml.iP_Lebanon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Jerusalem, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
-                        pByzantium.setProvinceType( xml.iP_Charsiadon, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Colonea, iProvinceOuter )
                 elif ( iPlayer == iBulgaria ):
                         pByzantium.setProvinceType( xml.iP_Thrace, iProvinceOuter )
@@ -533,7 +533,7 @@ class ProvinceManager:
                         pByzantium.setProvinceType( xml.iP_Thrakesion, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Anatolikon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
-                        pByzantium.setProvinceType( xml.iP_Charsiadon, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Armeniakon, iProvinceOuter )
                         pHungary.setProvinceType( xml.iP_Dalmatia, iProvinceOuter )
                         pHungary.setProvinceType( xml.iP_Bosnia, iProvinceOuter )

@@ -126,12 +126,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ2</Tag>
-		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</English>
-		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</French>
-		<German>[COLOR_YELLOW]Wiederbelebung des Römischen Glanzes:[COLOR_REVERT] Behaltet oder erobert bis 1282 n.Chr. Konstantinopel, Colonea, Antiochia, Charsiadon, Kilikien, Armeniakon, Anatolikon, Paphlagonia, Thrakesion und Opsikion.</German>
-		<Italian>[COLOR_YELLOW]Rivivere la Gloria di Roma:[COLOR_REVERT] Mantieni o riconquista le province di Costantinopoli, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Paflagonia, Thrakesion e Opsikion nel 1282AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Revivendo a Glória Romana:[COLOR_REVERT] Mantenha ou reconquiste Constantinopla, Colonea, Antioquia, Charsiadon, Cilícia, Armeniakon, Anatólico, Paflagônia, Thrakesion and Opsikion em 1282DC.</Portuguese>
+		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</English>
+		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</French>
+		<German>[COLOR_YELLOW]Wiederbelebung des Römischen Glanzes:[COLOR_REVERT] Behaltet oder erobert bis 1282 n.Chr. Konstantinopel, Colonea, Antiochia, Charsianon, Kilikien, Armeniakon, Anatolikon, Paphlagonia, Thrakesion und Opsikion.</German>
+		<Italian>[COLOR_YELLOW]Rivivere la Gloria di Roma:[COLOR_REVERT] Mantieni o riconquista le province di Costantinopoli, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Paflagonia, Thrakesion e Opsikion nel 1282AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Revivendo a Glória Romana:[COLOR_REVERT] Mantenha ou reconquiste Constantinopla, Colonea, Antioquia, Charsianon, Cilícia, Armeniakon, Anatólico, Paflagônia, Thrakesion and Opsikion em 1282DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ3</Tag>
@@ -639,12 +639,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR2</Tag>
-		<English>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</English>
-		<French>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</French>
-		<German>[COLOR_YELLOW]Osmans Traum:[COLOR_REVERT] Erobert bis 1517 n.Chr. Colonea, Charsiadon, Kilikien, Armeniakon, Anatolikon, Paphlagonien, Thrakesion, Opsikion, Antiochia, Syrien, Libanon, Jerusalem und Ägypten.</German>
-		<Italian>[COLOR_YELLOW]Il Sogno di Osman:[COLOR_REVERT] Conquista le province di Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paflagonia, Thrakesion, Opsikion, Antiochia, Siria, Libano, Gerusalemme ed Egitto entro il 1517AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsiadon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Sonho de Osmã:[COLOR_REVERT] Conquiste Colonea, Charsiadon, Cilícia, Armeniakon, Anatólico, Paflagônia, Thrakesion, Opsikion, Antióquia, Síria, Líbano, Jerusalém e Egito em 1517DC.</Portuguese>
+		<English>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</English>
+		<French>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</French>
+		<German>[COLOR_YELLOW]Osmans Traum:[COLOR_REVERT] Erobert bis 1517 n.Chr. Colonea, Charsianon, Kilikien, Armeniakon, Anatolikon, Paphlagonien, Thrakesion, Opsikion, Antiochia, Syrien, Libanon, Jerusalem und Ägypten.</German>
+		<Italian>[COLOR_YELLOW]Il Sogno di Osman:[COLOR_REVERT] Conquista le province di Colonea, Charsianon, Cilicia, Armeniakon, Anatolikon, Paflagonia, Thrakesion, Opsikion, Antiochia, Siria, Libano, Gerusalemme ed Egitto entro il 1517AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Colonea, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion, Opsikion, Antiochia, Syria, Lebanon, Jerusalem and Egypt in 1517AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Sonho de Osmã:[COLOR_REVERT] Conquiste Colonea, Charsianon, Cilícia, Armeniakon, Anatólico, Paflagônia, Thrakesion, Opsikion, Antióquia, Síria, Líbano, Jerusalém e Egito em 1517DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR3</Tag>
