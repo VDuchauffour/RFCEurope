@@ -831,7 +831,7 @@ iP_Thrakesion = 93
 iP_Cilicia = 94
 iP_Anatolikon = 95
 iP_Armeniakon = 96
-iP_Charsiadon = 97
+iP_Charsianon = 97
 iP_Colonea = 98
 iP_Antiochia = 99
 
@@ -905,7 +905,7 @@ lRegionAustria		= [ iP_Carinthia, iP_Austria, iP_Moravia, iP_Bohemia, iP_Silesia
 lRegionHungary		= [ iP_Transylvania, iP_Hungary, iP_Slavonia, iP_Pannonia, iP_UpperHungary ]
 lRegionBalkans		= [ iP_Serbia, iP_Thrace, iP_Macedonia, iP_Moesia, iP_Arberia, iP_Dalmatia, iP_Bosnia, iP_Banat ]
 lRegionGreece		= [ iP_Constantinople, iP_Thessaly, iP_Epirus, iP_Morea, iP_Thessaloniki ]
-lRegionAsiaMinor	= [ iP_Colonea, iP_Charsiadon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
+lRegionAsiaMinor	= [ iP_Colonea, iP_Charsianon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
 lRegionMiddleEast	= [ iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem ]
 lRegionAfrica		= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh, iP_Fez ]
 lRegionKiev			= [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_Pereyaslavl, iP_Chernigov, iP_Podolia, iP_Minsk ]
@@ -919,7 +919,7 @@ lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, i
 #[ iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Jamtland, iP_Skaneland, iP_Gotland ], # Northern Europe
 #[ iP_Netherlands, iP_Denmark, iP_Swabia, iP_Bavaria, iP_Bohemia, iP_Saxony, iP_Lorraine, iP_Franconia, iP_Brandenburg, iP_Holstein, iP_Pomerania, iP_GaliciaPoland, iP_LesserPoland, iP_GreaterPoland, iP_Masovia, iP_Carinthia, iP_Austria, iP_Slavonia, iP_Transylvania, iP_Hungary, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, iP_Lombardy, iP_Liguria, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Dalmatia, iP_Bosnia, iP_Banat ], # Central Europe
 #[ iP_Prussia, iP_Suvalkija, iP_Lithuania, iP_Livonia, iP_Moesia, iP_Constantinople, iP_Thrace, iP_Thessaly, iP_Macedonia, iP_Serbia, iP_Epirus, iP_Morea, iP_Wallachia, iP_Moldova, iP_Crimea, iP_Novgorod, iP_Kuban, iP_Zaporizhia, iP_Rostov, iP_Moscow, iP_Vologda, iP_Smolensk, iP_Polotsk, iP_Murom, iP_Chernigov, iP_Pereyaslavl, iP_Sloboda, iP_Donets, iP_Kiev, iP_Podolia, iP_Minsk, iP_Brest, iP_Simbirsk, iP_NizhnyNovgorod, iP_Karelia, iP_Volhynia, iP_Thessaloniki, iP_Estonia, iP_Osterland ], # Eastern Europe
-#[ iP_Jerusalem, iP_Paphlagonia, iP_Opsikion, iP_Thrakesion, iP_Cilicia, iP_Anatolikon, iP_Armeniakon, iP_Charsiadon, iP_Colonea, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Egypt ], # Asia
+#[ iP_Jerusalem, iP_Paphlagonia, iP_Opsikion, iP_Thrakesion, iP_Cilicia, iP_Anatolikon, iP_Armeniakon, iP_Charsianon, iP_Colonea, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Egypt ], # Asia
 #[ iP_Sicily, iP_Crete, iP_Cyprus, iP_Rhodes, iP_Corsica, iP_Sardinia, iP_Balears, iP_Canaries, iP_Azores, iP_Malta, iP_Madeira ], # Islands
 #[ iP_Cyrenaica, iP_Tripolitania, iP_Ifriqiya, iP_Algiers, iP_Tetouan, iP_Oran, iP_Marrakesh, iP_Morocco, iP_Fez ], # North Africa
 #]
