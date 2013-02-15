@@ -27638,7 +27638,7 @@
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<!-- Rhye -->
-			<iMilitaryProductionModifier>50</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
 			<iTradeRoutes>0</iTradeRoutes>
