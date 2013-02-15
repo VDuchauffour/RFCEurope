@@ -112,6 +112,8 @@ Changes for RFCE 1.2:
 		- Minor changes in the defensive crusades, also updated them with the new provinces
 		- Changes in the Ottoman core and solid areas (only western Anatolia and Thrace are their core), thus making their early collapse less likely
 		- Minor nerfs to the Byzantine, French and Venetian modifiers
+		- Revised all civs' settler and war maps, significant improvements in AI city placement
+		- Bonus modifier for military units from the Triumphal Arch is reduced to 20% (until we find a better bonus)
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
