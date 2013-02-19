@@ -6,6 +6,15 @@
 <!-- Game Text - RFCE Crusades -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_INIT_POPUP</Tag>
+		<English>Crusade!</English>
+		<French>Croisade!</French>
+		<German>Kreuzzug!</German>
+		<Italian>Crociata!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Cruzada!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_INIT</Tag>
 		<English>The Pope has called for a Crusade to the Holy Land to defend the Holy City of Jerusalem from the infidel pest. Would you accept your duty, take up your sword, and leave for the Holy Land?</English>
 		<French>Le Pape a appel&#233; &#224; une croisade en Terre Sainte pour d&#233;fendre la ville sainte de J&#233;rusalem. Accepteriez-vous de votre devoir, de prendre votre &#233;p&#233;e, et partir pour la Terre Sainte?</French>
@@ -33,22 +42,13 @@
 		<Portuguese>Eu NUNCA farei parte dos esquemas desta víbora de um Papa!</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_CALLED</Tag>
-		<English>The Pope has called for a crusade!</English>
-		<French>Le Pape a appel&#233; &#224; une croisade!</French>
-		<German>Der Papst hat zu einem Kreuzzug aufgerufen!</German>
-		<Italian>Il Papa ha richiesto una Crociata!</Italian>
+		<Tag>TXT_KEY_CRUSADE_VOTE_POPUP</Tag>
+		<English>Vote for a Leader</English>
+		<French>Voter pour le Leader</French>
+		<German>W&#228;hle einen Anf&#252;hrer aus</German>
+		<Italian>Vota per un Leader</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Papa organiza uma Cruzada!</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_LEAD</Tag>
-		<English> [SPACE] was chosen to lead the Crusade!</English>
-		<French> [SPACE] a &#233;t&#233; choisi pour diriger la croisade!</French>
-		<German> [SPACE] wurde ausgewählt um den Kreuzzug anzuführen!</German>
-		<Italian> [SPACE] è stato scelto per comandare la Crociata!</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese> [SPACE] foi escolhido para liderar a Cruzada</Portuguese>
+		<Portuguese>Vote em um Líder</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_VOTE</Tag>
@@ -58,6 +58,33 @@
 		<Italian> Per chi voterai come comandante della Crociata?</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese> Em quem irás votar para liderar a Cruzada?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_CALLED</Tag>
+		<English>The Pope has called for a crusade!</English>
+		<French>Le Pape a appel&#233; &#224; une croisade!</French>
+		<German>Der Papst hat zu einem Kreuzzug aufgerufen!</German>
+		<Italian>Il Papa ha richiesto una Crociata!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>O Papa organiza uma Cruzada!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_LEADER_POPUP</Tag>
+		<English>Crusade Leader Chosen:</English>
+		<French>Leader choisi pour les Croisades:</French>
+		<German>F&#252;hrung des Kreuzzugs auserw&#228;hlt:</German>
+		<Italian>Leader scelto per la Crociata:</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Escolhido o Líder da Cruzada:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_LEAD</Tag>
+		<English>[SPACE]was chosen to lead the Crusade!</English>
+		<French>[SPACE]a &#233;t&#233; choisi pour diriger la croisade!</French>
+		<German>[SPACE]wurde ausgewählt um den Kreuzzug anzuführen!</German>
+		<Italian>[SPACE]è stato scelto per comandare la Crociata!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>[SPACE]foi escolhido para liderar a Cruzada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_OK</Tag>
@@ -78,15 +105,6 @@
 		<Portuguese>O Papa espalha sua influência sobre a vida espiritual dos Católicos, mas há forças ainda mais poderosas que a fé. Você construiu um império de riquezas e de muitas maneiras sua influência política extende-se além daquela do Papa. Você tem a oportunidade de usar esta influência e tomar as rédeas da Cruzada,desviando-a para qualquer alvo que você achar apropriado.[NEWLINE]</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_GOLD</Tag>
-		<English>gold.[NEWLINE]</English>
-		<French>or.[NEWLINE]</French>
-		<German>Gold.[NEWLINE]</German>
-		<Italian>oro.[NEWLINE]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>ouro.[NEWLINE]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_COST</Tag>
 		<English>The cost to take over </English>
 		<French>Le coût pour prendre en charge </French>
@@ -96,6 +114,15 @@
 		<Portuguese>O custo de tomar </Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_GOLD</Tag>
+		<English>gold.[NEWLINE]</English>
+		<French>or.[NEWLINE]</French>
+		<German>Gold.[NEWLINE]</German>
+		<Italian>oro.[NEWLINE]</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>ouro.[NEWLINE]</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_CURRENT_LEADER</Tag>
 		<English>is the current chosen leader. </English>
 		<French>est le leader choisi.</French>
@@ -103,6 +130,15 @@
 		<Italian>è il leader scelto per la crociata.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>é o atual líder escolhido. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEVIATE</Tag>
+		<English>Wealth or Faith</English>
+		<French>Richesse ou Foi</French>
+		<German>Reichtum oder Glaube</German>
+		<Italian>Ricchezza o Fede</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Riqueza ou Fé</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DECIDE_WEALTH</Tag>
@@ -123,13 +159,13 @@
 		<Portuguese>Não vamos interferir com a vontade Divina, dinheiro é a raíz de todo mal.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_COST</Tag>
-		<English>Do not interfere with the Divine's will, money is the root of all evil.</English>
-		<French>N'interf&#232;rent pas avec la volont&#233; Divine, l'argent est la racine de tout mal.</French>
-		<German>Lasst uns nicht Gottes Willen behindern, Geld ist die Wurzel alles B&#246;sen.</German>
-		<Italian>Non interferire con la volontà del Divino, il denaro è la radice di ogni male.</Italian>
+		<Tag>TXT_KEY_CRUSADE_CORRUPT</Tag>
+		<English>Corrupt Crusade</English>
+		<French>Soudoyer la Croisade</French>
+		<German>K&#228;uflicher Kreuzzug</German>
+		<Italian>Corrompi la Crociata</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Não vamos interferir com a vontade Divina, dinheiro é a raíz de todo mal.</Portuguese>
+		<Portuguese>Cruzada Corrupta</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_TARGET</Tag>
@@ -141,6 +177,24 @@
 		<Portuguese>Escolha um novo alvo para a Cruzada!</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEVIATED</Tag>
+		<English>[SPACE]has used financial power to take control of the Crusade.</English>
+		<French>[SPACE]a utilis&#233; la puissance financi&#232;re pour prendre le contrôle de la croisade.</French>
+		<German>[SPACE]hat seine finanzielle Macht genutzt um die Kontrolle &#252;ber den Kreuzzug zu erlangen.</German>
+		<Italian>[SPACE]ha usato il potere finanziario per prendere il comando della Crociata.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>[SPACE]usou o poder financeiro para tomar o controle da Cruzada.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK</Tag>
+		<English>Under Crusade Attack</English>
+		<French>En vertu de la Croisade</French>
+		<German>Unter Kreuzzug Angriff</German>
+		<Italian>Sotto attacco da parte della Crociata</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Sob Ataque Cruzado</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_UNDER_ATTACK1</Tag>
 		<English>The Crusaders under the %s1_civ_adjective leadership of %s2_name have chosen our beautiful city of %s3_city as their target. They will arrive in 3 Turns. </English>
 		<French>Les crois&#233;s ont choisi notre belle ville de %s3_city comme leur cible. Ils arriveront en 3 tours</French>
@@ -150,13 +204,13 @@
 		<Portuguese>Os cruzados sob o comando %s1_civ_adjective de %s2_name escolheram nossa bela cidade de %s3_city como seu alvo. Eles chegarão em 3 Turnos.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_DEVIATED</Tag>
-		<English>has used financial power to take control of the Crusade.</English>
-		<French>a utilis&#233; la puissance financi&#232;re pour prendre le contrôle de la croisade.</French>
-		<German>hat seine finanzielle Macht genutzt um die Kontrolle &#252;ber den Kreuzzug zu erlangen.</German>
-		<Italian>ha usato il potere finanziario per prendere il comando della Crociata.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>usou o poder financeiro para tomar o controle da Cruzada</Portuguese>
+		<Tag>TXT_KEY_CRUSADE_PREPARE</Tag>
+		<English> We have to prepare our defences! </English>
+		<French> OK </French>
+		<German> OK </German>
+		<Italian> OK </Italian>
+		<Spanish> OK </Spanish>
+		<Portuguese> OK </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_START</Tag>
@@ -168,60 +222,6 @@
 		<Portuguese>Os Cruzados estão partindo sob a liderança ????? de %s2_name para conquistar a cidade ????? de %s4_city em nome de seu deus.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_INIT_POPUP</Tag>
-		<English>Crusade!</English>
-		<French>Croisade!</French>
-		<German>Kreuzzug!</German>
-		<Italian>Crociata!</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Cruzada!</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_LEADER_POPUP</Tag>
-		<English>Crusade Leader Chosen:</English>
-		<French>Leader choisi pour les Croisades:</French>
-		<German>F&#252;hrung des Kreuzzugs auserw&#228;hlt:</German>
-		<Italian>Leader scelto per la Crociata:</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Escolhido o Líder da Cruzada:</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_VOTE_POPUP</Tag>
-		<English>Vote for a Leader</English>
-		<French>Voter pour le Leader</French>
-		<German>W&#228;hle einen Anf&#252;hrer aus</German>
-		<Italian>Vota per un Leader</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Vote em um Líder</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_DEVIATE</Tag>
-		<English>Wealth or Faith</English>
-		<French>Richesse ou Foi</French>
-		<German>Reichtum oder Glaube</German>
-		<Italian>Ricchezza o Fede</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Riqueza ou Fé</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_CORRUPT</Tag>
-		<English>Corrupt Crusade</English>
-		<French>Soudoyer la Croisade</French>
-		<German>K&#228;uflicher Kreuzzug</German>
-		<Italian>Corrompi la Crociata</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Cruzada Corrupta</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_ATTACK</Tag>
-		<English>Under Crusade Attack</English>
-		<French>En vertu de la Croisade</French>
-		<German>Unter Kreuzzug Angriff</German>
-		<Italian>Sotto attacco da parte della Crociata</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Sob Ataque Cruzado</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_LEAVE</Tag>
 		<English>Our Unit is leaving for the Crusade: </English>
 		<French>Votre Unit&#233;e est partis pour la Croisade: </French>
@@ -231,17 +231,26 @@
 		<Portuguese>Nossas unidades estão partindo para a Cruzada: </Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE</Tag>
-		<English>The Pope has called for a Crusade to aid </English>
-		<French>Le Pape a appel&#233; pour la Croisade en aide &#224; </French>
-		<German>Der Papst ruft einen Kreuzzug aus zur Hilfe von</German>
-		<Italian>Il Papa ha richiesto una Crociata per aiutare</Italian>
+		<Tag>TXT_KEY_CRUSADE_RETURNING_AFTER_VICTORY</Tag>
+		<English>After successfully capturing the Holy City, Crusaders are returning home: </English>
+		<French>After successfully capturing the Holy City, Crusaders are returning home: </French>
+		<German>Nach der Eroberung der Heiligen Stadt kehren die Kreuzfahrer heim: </German>
+		<Italian>Dopo aver catturato la Città Santa, i Crociati stanno tornando a casa: </Italian>
+		<Spanish>After successfully capturing the Holy City, Crusaders are returning home: </Spanish>
+		<Portuguese>Após a captura bem sucedida da Cidade Santa, Cruzados estão retornando a casa: </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP</Tag>
+		<English>Defensive Crusade</English>
+		<French>Croisade D&#233;fensive</French>
+		<German>Verteidigender Kreuzzug</German>
+		<Italian>Crociata Difensiva</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>O Papa organizou uma Cruzada para ajudar </Portuguese>
+		<Portuguese>Cruzada Defensiva</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL</Tag>
-		<English>Your Magesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</English>
+		<English>Your Majesty, shall we ask our Holy Father to call on our Catholic brothers and sisters to help us against the infidels?</English>
 		<French>Votre Majest&#233;, allons-nous demander &#224; notre Saint-P&#232;re de faire appel &#224; nos fr&#232;res et soeurs catholiques afin de nous aider contre les infid&#232;les?</French>
 		<German>Eure Majest&#228;t, sollen wir den Heiligen Vater bitten unsere katholischen Br&#252;der und Schwestern zur Hilfe gegen die Ungl&#228;ubigen zu rufen?</German>
 		<Italian>Sua Maestà, dobbiamo chiedere ai nostri fratelli e sorelle Cattolici di aiutarci contro gli infedeli?</Italian>
@@ -267,21 +276,12 @@
 		<Portuguese>NÃO, nós podemos esmagar essa escória nós mesmos!</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP</Tag>
-		<English>Defensive Crusade</English>
-		<French>Croisade D&#233;fensive</French>
-		<German>Verteidigender Kreuzzug</German>
-		<Italian>Crociata Difensiva</Italian>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE</Tag>
+		<English>The Pope has called for a Crusade to aid </English>
+		<French>Le Pape a appel&#233; pour la Croisade en aide &#224; </French>
+		<German>Der Papst ruft einen Kreuzzug aus zur Hilfe von</German>
+		<Italian>Il Papa ha richiesto una Crociata per aiutare</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Cruzada Defensiva</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_RETURNING_AFTER_VICTORY</Tag>
-		<English>After successfully capturing the Holy City, Crusaders are returning home: </English>
-		<French>After successfully capturing the Holy City, Crusaders are returning home: </French>
-		<German>Nach der Eroberung der Heiligen Stadt kehren die Kreuzfahrer heim: </German>
-		<Italian>Dopo aver catturato la Città Santa, i Crociati stanno tornando a casa: </Italian>
-		<Spanish>After successfully capturing the Holy City, Crusaders are returning home: </Spanish>
-		<Portuguese>Após a captura bem sucedida da Cidade Santa, Cruzados estão retornando a casa: </Portuguese>
+		<Portuguese>O Papa organizou uma Cruzada para ajudar </Portuguese>
 	</TEXT>
 </Civ4GameText>

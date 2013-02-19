@@ -125,7 +125,6 @@ class Crusades:
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		return scriptDict['iFavorite']
 
-
 	def setFavorite( self, iFavorite ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		scriptDict['iFavorite'] = iFavorite
@@ -268,7 +267,7 @@ class Crusades:
 		lTargetList.append( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getName() + " (" + gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getCivilizationAdjective(0) + ")" )
 		for iPlayer in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( iPlayer )
-			if ( iPlayer == con.iPope or iPlayer == con.iPope or pPlayer.getStateReligion() == iCatholicism or ( not pPlayer.isAlive() ) ):
+			if ( iPlayer == con.iPope or pPlayer.getStateReligion() == iCatholicism or ( not pPlayer.isAlive() ) ):
 				self.setIsTarget( iPlayer, False )
 			else:
 				self.setIsTarget( iPlayer, True )
@@ -277,7 +276,7 @@ class Crusades:
 
 	def underCrusadeAttackPopup( self, sCityName, iLeader ):
 		sText = CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK1", (gc.getPlayer(iLeader).getCivilizationAdjective(0), gc.getPlayer(iLeader).getName(), sCityName))
-		self.showPopup( 7621, CyTranslator().getText("TXT_KEY_CRUSADE_ATTACK", ()), sText, (CyTranslator().getText("TXT_KEY_CRUSADE_OK", ()),) )
+		self.showPopup( 7621, CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK", ()), sText, (CyTranslator().getText("TXT_KEY_CRUSADE_PREPARE", ()),) )
 
 	def endCrusades(self):
 		for i in range( iNumCrusades ):
@@ -708,13 +707,14 @@ class Crusades:
 		if ( iActiveCrusade == 0 ):
 			self.setRichestCatholic( -1 )
 
+
 	def decideDeviateHuman( self ):
 		self.deviateHumanPopup()
+
 
 	def decideDeviateAI( self ):
 		iRichest = self.getRichestCatholic()
 		bStolen = False
-		#if ( iRichest == con.iVenecia or iRichest == con.iGenoa or iRichest == con.iFrankia ):
 		if ( iRichest == con.iVenecia or iRichest == con.iGenoa ):
 			pByzantium = gc.getPlayer( con.iByzantium )
 			if ( pByzantium.isAlive() ):
@@ -730,10 +730,11 @@ class Crusades:
 
 		self.startCrusade()
 
+
 	def crusadeStolenAI( self, iNewLeader, iNewTarget ):
 		self.setLeader( iNewLeader )
 		pLeader = gc.getPlayer( iNewLeader )
-		CyInterface().addMessage(utils.getHumanID(), True, con.iDuration/2, pLeader.getName() + " " + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+		CyInterface().addMessage(utils.getHumanID(), True, con.iDuration/2, pLeader.getName() + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 		#pLeader.setGold( pLeader.getGold() - gc.getPlayer( con.iPope ).getGold() / 3 )
 		#pLeader.setGold( gc.getPlayer( con.iPope ).getGold() / 4 )
 		pLeader.setGold( 3* pLeader.getGold() / 4 )
@@ -767,6 +768,7 @@ class Crusades:
 	def returnCrusaders( self ):
 		for i in range( con.iNumPlayers ):
 			gc.getPlayer( i ).setIsCrusader( False )
+
 
 	def crusadeArrival( self ):
 		iTX = self.getTargetX()
