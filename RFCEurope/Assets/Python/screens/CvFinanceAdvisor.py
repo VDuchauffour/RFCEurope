@@ -68,8 +68,8 @@ class CvFinanceAdvisor:
 		self.X_PARAMETERS3 = self.X_PARAMETERS2 + self.PARAMETERS_WIDTH + 20 #Rhye
 		self.X_PARAMETERS4 = self.X_PARAMETERS3 + self.PARAMETERS_WIDTH + 20 #Rhye
 		self.X_PARAMETERS5 = self.X_PARAMETERS4 + self.PARAMETERS_WIDTH + 20 #Rhye
-		
-		
+
+
 		self.nWidgetCount = 0
 
 	def getScreen(self):
@@ -80,13 +80,13 @@ class CvFinanceAdvisor:
 		self.iActiveLeader = CyGame().getActivePlayer()
 
 		player = gc.getPlayer(self.iActiveLeader)
-	
+
 		screen = self.getScreen()
 		if screen.isActive():
 			return
 		screen.setRenderInterfaceOnly(True);
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
+
 		# Set the background and exit button, and show the screen
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
 
@@ -99,7 +99,7 @@ class CvFinanceAdvisor:
 
 		# Header...
 		screen.setLabel(self.WIDGET_HEADER, "Background", u"<font=4b>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_TITLE", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_SCREEN, self.Y_TITLE, self.Z_CONTROLS, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				
+
 		if (CyGame().isDebugMode()):
 			self.szDropdownName = self.DEBUG_DROPDOWN_ID
 			screen.addDropDownBoxGFC(self.szDropdownName, 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
@@ -111,12 +111,12 @@ class CvFinanceAdvisor:
 		self.drawContents()
 
 	def drawContents(self):
-		
+
 		self.deleteAllWidgets()
 
 		# Create a new screen, called FinanceAdvisor, using the file FinanceAdvisor.py for input
 		screen = self.getScreen()
-	
+
 		player = gc.getPlayer(self.iActiveLeader)
 
 		ePlayer = self.iActiveLeader #Rhye
@@ -139,9 +139,9 @@ class CvFinanceAdvisor:
                         #szTempBuffer = szTempBuffer + "  " + unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(0))
                         szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
 		#Rhye - end
-	
-		numCities = player.getNumCities()	
-					
+
+		numCities = player.getNumCities()
+
 		totalUnitCost = player.calculateUnitCost()
 		totalUnitSupply = player.calculateUnitSupply()
 		totalMaintenance = player.getTotalMaintenance()
@@ -153,7 +153,7 @@ class CvFinanceAdvisor:
 			goldCommerce += player.calculateBaseNetResearch()
 		gold = player.getGold()
 		goldFromCivs = player.getGoldPerTurn()
-		
+
 		# < Mercenaries Start >
 		#totalMercenaryMaintenanceCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(self.iActiveLeader)
                 totalMercenaryMaintenanceCost = (player.getPicklefreeParameter( iMercCostPerTurn )+99)/100
@@ -167,11 +167,11 @@ class CvFinanceAdvisor:
 		szCommercePanel = self.getNextWidgetName()
 		screen.addPanel(szCommercePanel, u"", "", True, True, self.X_SLIDERS, self.Y_LOCATION, self.PANE_WIDTH, self.PANE_HEIGHT, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_CONCEPT_COMMERCE", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_SLIDERS + self.PANE_WIDTH/2, self.Y_LOCATION + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-				
+
 		szIncomePanel = self.getNextWidgetName()
 		screen.addPanel(szIncomePanel, u"", "", True, True, self.X_INCOME, self.Y_LOCATION, self.PANE_WIDTH, self.PANE_HEIGHT, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_INCOME_HEADER", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_INCOME + self.PANE_WIDTH/2, self.Y_LOCATION + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		
+
 		szExpensePanel = self.getNextWidgetName()
 		screen.addPanel(szExpensePanel, u"", "", True, True, self.X_EXPENSES, self.Y_LOCATION, self.PANE_WIDTH, self.PANE_HEIGHT, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_EXPENSES_HEADER", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH/2, self.Y_LOCATION + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
@@ -266,13 +266,13 @@ class CvFinanceAdvisor:
                 #self.printArrow(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
                 self.printText( ePlayer, 4, self.getNextWidgetName(), self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
-		
-		#Rhye - end		
 
-		
+		#Rhye - end
+
+
 		# Slider percentages
 		yLocation  = self.Y_LOCATION
-	
+
 		yLocation += 0.5 * self.Y_SPACING
 		for iI in range(CommerceTypes.NUM_COMMERCE_TYPES):
 			eCommerce = (iI + 1) % CommerceTypes.NUM_COMMERCE_TYPES
@@ -371,7 +371,7 @@ class CvFinanceAdvisor:
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(iExpenses) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		return 0
-		
+
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):
 		szName = self.WIDGET_ID + str(self.nWidgetCount)
@@ -387,7 +387,7 @@ class CvFinanceAdvisor:
 			i -= 1
 
 		self.nWidgetCount = 0
-			
+
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
 		'Calls function mapped in FinanceAdvisorInputMap'
@@ -411,11 +411,11 @@ class CvFinanceAdvisor:
                     totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                 if (gc.getPlayer(ePlayer).isHuman()):
                         self.getScreen().setLabel(panel, "Background",  totStars, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-	    
+
 	def printArrow(self, ePlayer, panel, iParameter, x, y, z):
                 if (gc.getPlayer(ePlayer).isHuman()):
                         self.getScreen().setLabel(panel, "Background",  unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(iParameter)), CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                        
+
         def printText(self, ePlayer, iCathegory, panel, x, y, z ):
         	#3Miro: print stuff
                 pPlayer = gc.getPlayer(ePlayer)

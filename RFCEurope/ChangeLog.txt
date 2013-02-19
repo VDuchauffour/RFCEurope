@@ -36,7 +36,7 @@ Changes for RFCE 1.2:
 	Map and province changes:
 		- Huge changes in the SE region: Egypt, Levant and Anatolia totally revised
 		- Smaller changes in the northern coast of the Black Sea, and in the south Balkans
-		- Revised rivers in and around Hungary, small terrain changes in the borders of the Carpathian-basin
+		- Revised rivers in Hungary (Danube, Drava, Szava, Koros) and south Poland (added river San), small terrain changes in the borders of the Carpathian-basin
 		- Removed the "lakes" (scattered coastline) from Dalmatia, it was strange with the new strait mechanics. Lake Scutari remains on the coast though
 		- Damascus is finally moved to a geographically more correct place (3S), obviously the Arabian spawn moved here
 		- The new map resulted in moving Jerusalem (1SW) and Constantinople (1S) too, along with almost all the preplaced Byzantine cities
@@ -58,6 +58,7 @@ Changes for RFCE 1.2:
 		- Lots of small province adjustments: primarly near the new provinces, in the Austrian territories, in Scandinavia, and in the Polish-Lithuanian-Kievan territories
 		- Province Croatia merged into Slavonia, province adjustment in the area - the Dalmatian coast will be better shaped (culturally between Venice and Hungary or Austria)
 		- Both Alba Iulia / Gyulafehervar and Lubeck spawns 1 tile north, to follow the province changes
+		- Small resource rearrengement in Greece/Southern Balkans
 
 	XML and text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
@@ -66,6 +67,7 @@ Changes for RFCE 1.2:
 		- RFCE specific help texts for the handicap levels
 		- Translations for the Scottish and Magyar/Hungarian unit sounds
 		- Province Oppland renamed to Jämtland, Charsiakon corrected to Charsianon, Gotaland to Götaland, Osterland to Österland
+		- Improvements in the crusade texts
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -111,7 +113,7 @@ Changes for RFCE 1.2:
 		- Liguria is core for Genoa, while Lombardy and Tuscany are also stable, but not core
 		- Liguria is OK for the Franks, but changes to unstable after Germany spawns
 		- Byzantium got some of the Italian provinces as OK, changes to unstable after the Venetian spawn
-		- Cyrenaica, Egypt and Arabia changes to unstable after the Arabian spawn, while Syria, Lebanon and Jerusalem changes to OK
+		- For Byzantium Cyrenaica, Egypt and Arabia changes to unstable after the Arabian spawn, while Syria, Lebanon and Jerusalem changes to OK
 		- The province Prussia is unstable for everyone, at least for now
 		- The German first and third UHV requires Holstein too, the Ottoman first UHV requires Banat, and the Hungarian anti-Ottoman UHV requires Banat and Slavonia
 		- Holstein and Prussia also count in the Swedish third UHV, Prussia also counts in the Polish first UHV
