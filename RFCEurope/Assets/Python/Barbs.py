@@ -30,7 +30,6 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 # 3Miro: I believe those are only used for barb spawns coordinates in the class below
 # city coordinates, spawn 1st turn and retries
 
-
 lTangier = [27,16,0,0] #500 AD
 lBurdigala = [37,38,0,0] #500 AD, Bordeaux
 #lNantes = [36,43,0,0] #500 AD
@@ -331,9 +330,9 @@ class Barbs:
 		#Barbs in the middle east
 		if (iGameTurn>=xml.i700AD and iGameTurn <= xml.i1300AD ):
 			if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(xml.iFarriers)):
-				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 2 + iHandicap, iGameTurn,8,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 1 + iHandicap, iGameTurn,8,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 			else:
-				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iArabiaGhazi, 2 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iArabiaGhazi, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 		if (gc.getPlayer(con.iArabia).isHuman()): #extra barbs for human Arabia
 			if (iGameTurn>=xml.i700AD and iGameTurn <= xml.i1300AD ):
 				if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(xml.iFarriers)):

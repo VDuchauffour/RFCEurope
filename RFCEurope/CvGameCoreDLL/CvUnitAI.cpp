@@ -11896,7 +11896,7 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 											iValue = 0;
 										};
 									};
-									// 3MiroAI: Phyco AI, this should make AI Turkey tink it has 90 percent odds of capturing AI Constantinople, see also getDefenderCombatValues in CvUnit
+									// 3MiroAI: Psycho AI, this should make AI Turkey think it has 90 percent odds of capturing AI Constantinople, see also getDefenderCombatValues in CvUnit
 									if ( ( psychoAI_player == getOwnerINLINE() ) && ( pLoopPlot ->getX() == psychoAI_x ) && ( pLoopPlot ->getY() == psychoAI_y ) ){
 										//if ( (pLoopPlot ->getPlotCity() ->getOwner() != getOwenerINLINE() ) && ( !GET_PLAYER(pLoopPlot ->getPlotCity() ->getOwner() ).isHuman() ) ){
 										if ( !( (int)pLoopPlot ->getPlotCity() ->getOwner() == (int) this->getOwnerINLINE() ) && ( !GET_PLAYER(pLoopPlot ->getPlotCity() ->getOwner() ).isHuman() ) ){

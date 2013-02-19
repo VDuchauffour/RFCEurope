@@ -430,7 +430,7 @@ public:
 	void setBuildingCivicCommerseCombo2( int iCode );
 	void setBuildingCivicCommerseCombo3( int iCode );
 
-	// 3Miro: Psycho AI cheat, this gives a AI player gratiinsentive to attack a city at X, Y and it greatly improves the odds of success
+	// 3Miro: Psycho AI cheat, this misleads the AI about it's odds in succeeding an attack against a given city, also actually improves the odds of success
 	void setPsychoAICheat( int iPlayer, int iX, int iY );
 
 	// 3Miro: set historical enemy AI cheat

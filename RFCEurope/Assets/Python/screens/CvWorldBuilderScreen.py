@@ -2950,7 +2950,11 @@ class RevealMode(Mode):
 			screen.addDropDownBoxGFC(szDropdownName, iPanelX+8, (10+36+36+36), iPanelWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString(szDropdownName, "None", -1, -1, (-1 == self.iBrushValue) )
 			for i in range( RFCEMapUtil.iNumProvinces ):
-				screen.addPullDownString(szDropdownName, MapManager.getProvinceName(i), i, i, (i == self.iBrushValue) )
+				try:
+					ProvinceName = unicode(MapManager.getProvinceName(i), 'latin-1')
+				except TypeError:
+					ProvinceName = MapManager.getProvinceName(i)
+				screen.addPullDownString(szDropdownName, ProvinceName, i, i, (i == self.iBrushValue) )
 
 		# player dropdown
 		else:
@@ -2965,7 +2969,6 @@ class RevealMode(Mode):
 			iButtonHeight = 32
 			screen.setImageButton( "WorldBuilderRevealAll", ArtFileMgr.getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(), iPanelX+8, (10+36+36+36+36), iButtonWidth, iButtonHeight, WidgetTypes.WIDGET_WB_REVEAL_ALL_BUTTON, -1, -1)
 			screen.setImageButton( "WorldBuilderUnrevealAll", ArtFileMgr.getInterfaceArtInfo("WORLDBUILDER_UNREVEAL_ALL_TILES").getPath(), iPanelX+8+35, (10+36+36+36+36), iButtonWidth, iButtonHeight, WidgetTypes.WIDGET_WB_UNREVEAL_ALL_BUTTON, -1, -1)
-
 
 		# brushsize dropdown
 		if(self.isWarMap() or self.isSettlerMap() or self.isProvinceMap() or self.isVisibleMap()):

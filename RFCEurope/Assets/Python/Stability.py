@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers   
+import PyHelpers
 import Popup
 #import cPickle as pickle
 import Consts as con
@@ -291,7 +291,7 @@ class Stability:
         def onProjectBuilt(self, iPlayer, iProject):
                 pPlayer = gc.getPlayer(iPlayer)
                 iCivic5 = pPlayer.getCivics(5)
-                
+
                 if (iCivic5 == 29): #If civ is in Colonialism
                         if (iProject >= xml.iNumNotColonies):
                                 pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
@@ -313,7 +313,7 @@ class Stability:
         def onReligionSpread(self, iReligion, iPlayer):
                 pass
                 #Sedna17: Religions seemed to be subtracted and re-inserted into cities, which makes this a bad idea.
-                #if (iPlayer < iNumPlayers):  
+                #if (iPlayer < iNumPlayers):
                 #        pPlayer = gc.getPlayer(iPlayer)
                 #        if (pPlayer.getStateReligion() != iReligion):
                 #                for iLoopCiv in range(iNumPlayers):
@@ -445,7 +445,7 @@ class Stability:
                 iCivic3 = pPlayer.getCivics(3)
                 iCivic4 = pPlayer.getCivics(4)
                 iCivic5 = pPlayer.getCivics(5)
-                
+
                 iCivicCombo = 0
                 if (iCivic0 == xml.iCivicMerchantRepublic):
                         if (iCivic1 == xml.iCivicFeudalLaw): #Incompatible with Feudal Law (Venice likes this one)
@@ -485,19 +485,19 @@ class Stability:
                                 iCivicCombo -=4
                 if (iCivic2 == xml.iCivicSerfdom and iCivic3 == xml.iCivicManorialism): #Serfdom and Manorialism go together
                         iCivicCombo +=2
-                if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law 
+                if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law
                         if (iCivic4 == xml.iCivicPaganism or iCivic4 == xml.iCivicFreeReligion): #Dislikes Paganism or Free Religion
                                 iCivicCombo -=5
                         if (iCivic4 == xml.iCivicTheocracy): #Favors theocracy
                                 iCivicCombo +=3
-                if (iCivic1 == xml.iCivicCommonLaw): #Common Law 
+                if (iCivic1 == xml.iCivicCommonLaw): #Common Law
                         if (iCivic2 == xml.iCivicFreeLabor): #likes Free labor
                                 iCivicCombo +=3
                         if (iCivic4 == xml.iCivicTheocracy): #dislikes theocracy
                                 iCivicCombo -=4
                 if (iCivic2 == xml.iCivicApprenticeship and iCivic3 == xml.iCivicGuilds): #Apprenticeship and Guilds
                         iCivicCombo +=3
-                if (iCivic1 == xml.iCivicBureaucracy): #Bureaucracy 
+                if (iCivic1 == xml.iCivicBureaucracy): #Bureaucracy
                         if ( pPlayer.isHuman() ):
                                 iCivicCombo += max( -4, 5 - pPlayer.getNumCities() )
                         else:
@@ -526,7 +526,7 @@ class Stability:
         def recalcEconomy(self, pPlayer):
                 iPopNum = pPlayer.getTotalPopulation()
                 iNumCities = pPlayer.getNumCities()
-                
+
                 iImports = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE)
                 iExports = pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
                 if ( pPlayer.getID() == con.iCordoba ):

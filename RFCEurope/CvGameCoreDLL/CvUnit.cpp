@@ -12795,11 +12795,11 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 		}
 	}
 
-	// 3MiroAICheat: make iTheirOdds to allow Ottomans to crush Byzantine defnese in Constantinople
+	// 3MiroAICheat: lower iTheirOdds to allow Ottomans to crush Byzantine defenses in Constantinople
 	if ( (getOwnerINLINE() == psychoAI_player) && (pPlot -> getX() == psychoAI_x) && (pPlot -> getY() == psychoAI_y) ){
 		if ( pPlot ->isCity() ){
 			if ( !( (int)pPlot ->getPlotCity() ->getOwner() == (int) this->getOwnerINLINE() ) && ( !GET_PLAYER(pPlot ->getPlotCity() ->getOwner() ).isHuman() ) ){
-				iTheirOdds = 40;
+				iTheirOdds -= 20;
 				//GC.getGameINLINE().logMsg(" Psycho AI Odds "); // 3Miro
 			};
 		};

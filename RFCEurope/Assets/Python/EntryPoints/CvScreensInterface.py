@@ -72,7 +72,7 @@ def resetStabilityParameters(argsList):
         utils.setLastRecordedStabilityStuff(3, 0)
         utils.setLastRecordedStabilityStuff(4, 0)
         utils.setLastRecordedStabilityStuff(5, 0)
-                
+
 #Rhye - end
 
 
@@ -87,7 +87,7 @@ def toggleSetScreenOn(argsList):
 	g_bIsScreenActive = argsList[0]
 
 #diplomacyScreen = CvDiplomacy.CvDiplomacy()
-	
+
 mainInterface = CvMainInterface.CvMainInterface()
 def showMainInterface():
 	mainInterface.interfaceScreen()
@@ -156,11 +156,11 @@ def showDawnOfMan(argsList):
 introMovie = CvIntroMovieScreen.CvIntroMovieScreen()
 def showIntroMovie(argsList):
 	introMovie.interfaceScreen()
-	
+
 victoryMovie = CvVictoryMovieScreen.CvVictoryMovieScreen()
 def showVictoryMovie(argsList):
 	victoryMovie.interfaceScreen(argsList[0])
-	
+
 wonderMovie = CvWonderMovieScreen.CvWonderMovieScreen()
 def showWonderMovie(argsList):
 	wonderMovie.interfaceScreen(argsList[0], argsList[1], argsList[2])
@@ -168,12 +168,12 @@ def showWonderMovie(argsList):
 eraMovie = CvEraMovieScreen.CvEraMovieScreen()
 def showEraMovie(argsList):
 	eraMovie.interfaceScreen(argsList[0])
-	
+
 spaceShip = CvSpaceShipScreen.CvSpaceShipScreen()
 def showSpaceShip(argsList):
 	if (-1 != CyGame().getActivePlayer()):
 		spaceShip.interfaceScreen(argsList[0])
-	
+
 replayScreen = CvReplayScreen.CvReplayScreen(REPLAY_SCREEN)
 def showReplay(argsList):
 	if argsList[0] > -1:
@@ -214,7 +214,7 @@ def showVictoryScreen():
 # < Mercenaries Mod Start >
 mercenaryManager = CvMercenaryManager.CvMercenaryManager(MERCENARY_MANAGER)
 def showMercenaryManager():
-	mercenaryManager.interfaceScreen()	
+	mercenaryManager.interfaceScreen()
 # < Mercenaries Mod End   >
 
 #################################################
@@ -223,19 +223,19 @@ def showMercenaryManager():
 pediaMainScreen = CvPediaMain.CvPediaMain()
 def linkToPedia(argsList):
 	pediaMainScreen.link(argsList[0])
-		
+
 def pediaShow():
 	return pediaMainScreen.pediaShow()
-	
+
 def pediaBack():
 	return pediaMainScreen.back()
-		
+
 def pediaForward():
 	pediaMainScreen.forward()
-		
+
 def pediaMain(argsList):
 	pediaMainScreen.pediaJump(PEDIA_MAIN, argsList[0], True)
-		
+
 def pediaJumpToTech(argsList):
 	pediaMainScreen.pediaJump(PEDIA_TECH, argsList[0], True)
 
@@ -244,31 +244,31 @@ def pediaJumpToUnit(argsList):
 
 def pediaJumpToBuilding(argsList):
 	pediaMainScreen.pediaJump(PEDIA_BUILDING, argsList[0], True)
-	
+
 def pediaJumpToProject(argsList):
 	pediaMainScreen.pediaJump(PEDIA_PROJECT, argsList[0], True)
-	
+
 def pediaJumpToReligion(argsList):
 	pediaMainScreen.pediaJump(PEDIA_RELIGION, argsList[0], True)
-	
+
 def pediaJumpToCorporation(argsList):
 	pediaMainScreen.pediaJump(PEDIA_CORPORATION, argsList[0], True)
-	
+
 def pediaJumpToPromotion(argsList):
 	pediaMainScreen.pediaJump(PEDIA_PROMOTION, argsList[0], True)
-	
+
 def pediaJumpToUnitChart(argsList):
 	pediaMainScreen.pediaJump(PEDIA_UNIT_CHART, argsList[0], True)
 
 def pediaJumpToBonus(argsList):
 	pediaMainScreen.pediaJump(PEDIA_BONUS, argsList[0], True)
-	
+
 def pediaJumpToTerrain(argsList):
 	pediaMainScreen.pediaJump(PEDIA_TERRAIN, argsList[0], True)
-	
+
 def pediaJumpToFeature(argsList):
 	pediaMainScreen.pediaJump(PEDIA_FEATURE, argsList[0], True)
-	
+
 def pediaJumpToImprovement(argsList):
 	pediaMainScreen.pediaJump(PEDIA_IMPROVEMENT, argsList[0], True)
 
@@ -283,7 +283,7 @@ def pediaJumpToLeader(argsList):
 
 def pediaJumpToSpecialist(argsList):
 	pediaMainScreen.pediaJump(PEDIA_SPECIALIST, argsList[0], True)
-	
+
 def pediaShowHistorical(argsList):
 	iEntryId = pediaMainScreen.pediaHistorical.getIdFromEntryInfo(argsList[0], argsList[1])
 	pediaMainScreen.pediaJump(PEDIA_HISTORY, iEntryId, True)
@@ -364,13 +364,13 @@ def WorldBuilderHandleAllPlotsCB( argsList ):
 
 def WorldBuilderHandleUnitEditExperienceCB( argsList ):
 	worldBuilderScreen.handleUnitEditExperienceCB(argsList)
-	
+
 def WorldBuilderHandleUnitEditLevelCB( argsList ):
 	worldBuilderScreen.handleUnitEditLevelCB(argsList)
-	
+
 def WorldBuilderHandleUnitEditNameCB( argsList ):
 	worldBuilderScreen.handleUnitEditNameCB(argsList)
-	
+
 def WorldBuilderHandleCityEditPopulationCB( argsList ):
 	worldBuilderScreen.handleCityEditPopulationCB(argsList)
 
@@ -439,12 +439,12 @@ def WorldBuilderGetHighlightPlot(argsList):
 
 def WorldBuilderOnAdvancedStartBrushSelected(argsList):
 	iList,iIndex,iTab = argsList;
-	print("WB Advanced Start brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))	
+	print("WB Advanced Start brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))
 	if (iTab == worldBuilderScreen.m_iASTechTabID):
 		showTechChooser()
 	elif (iTab == worldBuilderScreen.m_iASCityTabID and iList == worldBuilderScreen.m_iASAutomateListID):
 		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, worldBuilderScreen.m_iCurrentPlayer, -1, -1, -1, true)
-		
+
 	if (worldBuilderScreen.setCurrentAdvancedStartIndex(iIndex)):
 		if (worldBuilderScreen.setCurrentAdvancedStartList(iList)):
 			return 1
@@ -452,14 +452,14 @@ def WorldBuilderOnAdvancedStartBrushSelected(argsList):
 
 def WorldBuilderOnNormalPlayerBrushSelected(argsList):
 	iList,iIndex,iTab = argsList;
-	print("WB brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))	
+	print("WB brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))
 	if (worldBuilderScreen.setCurrentNormalPlayerIndex(iIndex)):
 		return 1
 	return 0
 
 def WorldBuilderOnNormalMapBrushSelected(argsList):
 	iList,iIndex,iTab = argsList;
-	print("WB brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))	
+	print("WB brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))
 	if (worldBuilderScreen.setCurrentNormalMapIndex(iIndex)):
 		if (worldBuilderScreen.setCurrentNormalMapList(iList)):
 			return 1
@@ -602,7 +602,7 @@ def WorldBuilderHasHeadquarters(argsList):
 
 def WorldBuilderHandleDiploPlayerDropdownCB( argsList ):
 	worldBuilderScreen.handleDiploPlayerDropdownCB(argsList)
-	
+
 ##### WORLDBUILDER DIPLOMACY SCREEN #####
 
 worldBuilderDiplomacyScreen = CvWorldBuilderDiplomacyScreen.CvWorldBuilderDiplomacyScreen()
@@ -638,7 +638,7 @@ def movieDone(argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().movieDone(argsList)):
 		return
-	
+
 	if (argsList[0] == INTRO_MOVIE_SCREEN):
 		introMovie.hideScreen()
 
@@ -649,17 +649,17 @@ def leftMouseDown (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().leftMouseDown(argsList)):
 		return
-	
+
 	if ( argsList[0] == WORLDBUILDER_SCREEN ):
 		worldBuilderScreen.leftMouseDown(argsList[1:])
 		return 1
 	return 0
-		
+
 def rightMouseDown (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().rightMouseDown(argsList)):
 		return
-	
+
 	if ( argsList[0] == WORLDBUILDER_SCREEN ):
 		worldBuilderScreen.rightMouseDown(argsList)
 		return 1
@@ -669,20 +669,20 @@ def mouseOverPlot (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().mouseOverPlot(argsList)):
 		return
-	
+
 	if (WORLDBUILDER_SCREEN == argsList[0]):
 		worldBuilderScreen.mouseOverPlot(argsList)
 
 def handleInput (argsList):
 	' handle input is called when a screen is up '
 	inputClass = PyScreenInput.ScreenInput(argsList)
-	
+
 	# allows overides for mods
 	ret = CvScreenUtilsInterface.getScreenUtils().handleInput( (inputClass.getPythonFile(),inputClass) )
 
 	# get the screen that is active from the HandleInputMap Dictionary
 	screen = HandleInputMap.get( inputClass.getPythonFile() )
-	
+
 	# call handle input on that screen
 	if ( screen and not ret):
 		return screen.handleInput(inputClass)
@@ -692,7 +692,7 @@ def update (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().update(argsList)):
 		return
-	
+
 	if (HandleInputMap.has_key(argsList[0])):
 		screen = HandleInputMap.get(argsList[0])
 		screen.update(argsList[1])
@@ -705,13 +705,13 @@ def onClose (argsList):
 	if (HandleCloseMap.has_key(argsList[0])):
 		screen = HandleCloseMap.get(argsList[0])
 		screen.onClose()
-		
+
 # Forced screen update
 def forceScreenUpdate (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().forceScreenUpdate(argsList)):
 		return
-		
+
 	# Tech chooser update (forced from net message)
 	if ( argsList[0] == TECH_CHOOSER ):
 		techChooser.updateTechRecords(false)
@@ -730,7 +730,7 @@ def forceScreenRedraw (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().forceScreenRedraw(argsList)):
 		return
-	
+
 	# Main Interface Screen
 	if ( argsList[0] == MAIN_INTERFACE ):
 		mainInterface.redraw()
@@ -746,7 +746,7 @@ def minimapClicked (argsList):
 	# allows overides for mods
 	if (CvScreenUtilsInterface.getScreenUtils().minimapClicked(argsList)):
 		return
-	
+
 	if (MILITARY_ADVISOR == argsList[0]):
 		militaryAdvisor.minimapClicked()
 	return
@@ -780,7 +780,7 @@ def refreshMilitaryAdvisor (argsList):
 		militaryAdvisor.drawCombatExperience()
 	elif (argsList[0] <= 0):
 		militaryAdvisor.refreshSelectedUnit(-argsList[0], argsList[1])
-	
+
 def updateMusicPath (argsList):
     szPathName = argsList[0]
     optionsScreen.updateMusicPath(szPathName)
@@ -853,7 +853,7 @@ def featAccomplishedOnClickedCallback(argsList):
 	szText = argsList[5]
 	bOption1 = argsList[6]
 	bOption2 = argsList[7]
-	
+
 	if (iButtonId == 1):
 		if (iData1 == FeatTypes.FEAT_TRADE_ROUTE):
 			showDomesticAdvisor(())
@@ -878,11 +878,11 @@ def featAccomplishedOnFocusCallback(argsList):
 	szText = argsList[4]
 	bOption1 = argsList[5]
 	bOption2 = argsList[6]
-	
+
 	CyInterface().playGeneralSound("AS2D_FEAT_ACCOMPLISHED")
 	if ((iData1 >= FeatTypes.FEAT_UNITCOMBAT_ARCHER) and (iData1 <= FeatTypes.FEAT_FOOD_CONNECTED)):
 		CyInterface().lookAtCityOffset(iData2)
-		
+
 	return 0
 
 
@@ -890,8 +890,8 @@ def featAccomplishedOnFocusCallback(argsList):
 ## Handle Close Map
 #######################################################################################
 HandleCloseMap = {  DAWN_OF_MAN : dawnOfMan,
-					SPACE_SHIP_SCREEN : spaceShip,			
-					TECH_CHOOSER : techChooser,			
+					SPACE_SHIP_SCREEN : spaceShip,
+					TECH_CHOOSER : techChooser,
 				# add new screens here
 				}
 
@@ -922,7 +922,7 @@ HandleInputMap = {  MAIN_INTERFACE : mainInterface,
 					VICTORY_MOVIE_SCREEN : victoryMovie,
 					ESPIONAGE_ADVISOR : espionageAdvisor,
 					DAN_QUAYLE_SCREEN : danQuayleScreen,
-					
+
 					PEDIA_MAIN : pediaMainScreen,
 					PEDIA_TECH : pediaMainScreen,
 					PEDIA_UNIT : pediaMainScreen,
@@ -942,11 +942,11 @@ HandleInputMap = {  MAIN_INTERFACE : mainInterface,
 					PEDIA_HISTORY : pediaMainScreen,
 					WORLDBUILDER_SCREEN : worldBuilderScreen,
 					WORLDBUILDER_DIPLOMACY_SCREEN : worldBuilderDiplomacyScreen,
-					
+
 					DEBUG_INFO_SCREEN : debugInfoScreen,
-				
+
 				# add new screens here
-					# < Mercenaries Mod Start > 
+					# < Mercenaries Mod Start >
 					MERCENARY_MANAGER: mercenaryManager,
 					# < Mercenaries Mod End   >
 				}
@@ -972,6 +972,6 @@ HandleNavigationMap = {
 					PEDIA_HISTORY : pediaMainScreen,
 					PEDIA_RELIGION : pediaMainScreen,
 					PEDIA_CORPORATION : pediaMainScreen
-				
+
 				# add new screens here
 				}

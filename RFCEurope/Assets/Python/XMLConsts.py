@@ -666,7 +666,7 @@ iWetland = 9
 
 #Leaders
 
-iLeaderBarbarian = 0	#Do NOT name this iBarbarian.  Very bad.	#AbsintheRed: Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it
+iLeaderBarbarian = 0	#Do NOT name this iBarbarian.	#AbsintheRed: Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it
 iAbuYusufYaqub = 1
 iMaria_Theresa = 2
 iAbuBakr = 3
@@ -714,7 +714,7 @@ iKarl_Xii = 44
 iIvan_Asen = 45
 
 
-###################### PROVINCES #######################################
+################################ PROVINCES ################################
 #Iberia 0+
 iP_GaliciaSpain = 0
 iP_Castile = 1
@@ -892,6 +892,8 @@ iP_Malta = 147
 iP_Fez = 148
 iP_Picardy = 149
 
+iP_MaxNumberOfProvinces = 150
+
 # these regions are for easier access for UHV and Mercs
 lRegionIberia		= [ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, iP_Navarre, iP_LaMancha ]
 lRegionFrance		= [ iP_Normandy, iP_Bretagne, iP_IleDeFrance, iP_Orleans, iP_Picardy ]
@@ -926,5 +928,3 @@ lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, i
 #iNumMapRegions = 8
 
 
-######
-iP_MaxNumberOfProvinces = 150
