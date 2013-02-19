@@ -1,4 +1,4 @@
-Some PYthon pointers.
+Some PYthon pointers:
 
 Consts: (with consts for players and civs and some relations, edit for new civ)
 	tCoreArea and tNormalArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
@@ -9,14 +9,14 @@ AIWars (not sure how this works, edit for new civ)
 Barbs (edit for barb invasions, Mongols would be here, also indep cities)
 CityNameManager (for city name maps only)
 RFCEventHandler ( Tech and city building UHVs and UPs)
-Resourse (resourses appear)
+Resource (resources appear)
 
-RiseAndFall: initially consts on top, 
-	setup:	 		for intial civ creations plus gold
-	createStartingUnits: on spawn
-	create4000starting:  units (on load)
-	assignTech: 		for late civs, on load
-	checkTurn: 	iFirstSpawn starts the loop for the birth of nations
+RiseAndFall: initially consts on top,
+	setup:			for intial civ creations plus gold
+	createStartingUnits:	on spawn
+	create4000starting:		initial units (on map startup)
+	assignTech:		for late civs, on load
+	checkTurn:		iFirstSpawn starts the loop for the birth of nations
 
 Victory: checks for many of the victories
 	checkPlayerTurn: times victories (i.e. at year)
@@ -59,14 +59,9 @@ Some XML pointers:
 	CIV4GameText_DynamicCivNames_05PER.xml: for each civ, all the keys for the different names in history. Bulky files.
 	CIV4GameText_RFCGeneral.xml: AD, BC keys, also age keys
 	CIV4GameText_RiseAndFall.xml: Events, birth of civ, rebellion
-	in victory files, there are the UHV descriptions (changes from one distribution Warlords, BtS make the UHVs in different files) Not all of them are in that file
-	CIV4GameText_TextFix2.xml: persian short description and others
-	ForthRoundTranslations: info about the mod
-	fifth round has some UHVs
 	RFC_General: Ages
 	RFCVanilla TextFix: Obsolete Units, but need to be kept for now
 	RFCWarlords: independents + cotton
-	TextFix2: religions
 
 	THERE ARE TWO FILES, UNIT_INFOS AND UNIT_CLASS INFOS!!!!!!
 
@@ -84,7 +79,7 @@ Tech Three:
 	disable all buildings for the barbs
 	Techs in Tech folder
 	Text_KEY in text *RFCE*
-	
+
 Balancing:
 	add arrays in Rhyes.h and Rhyes.cpp, then add modifying functions in CyGlobalContext.*, then add a line in CyGlobalContextInterface4 to expose the function to Python
 	call balancing functions in RFCEBalance

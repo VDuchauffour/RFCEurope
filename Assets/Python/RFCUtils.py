@@ -61,7 +61,7 @@ class RFCUtils:
         def setTempFlippingCity( self, tNewValue ):
                 scriptDict = pickle.loads( gc.getGame().getScriptData() )
                 scriptDict['tempFlippingCity'] = tNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) ) 
+                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
         def getStability( self, iCiv ):
                 return gc.getPlayer( iCiv ).getStability()
@@ -161,7 +161,7 @@ class RFCUtils:
                         #sString = ""
                 #return sString
 
-        ##CvFinanceAdvisor 
+        ##CvFinanceAdvisor
         #def getParCities(self,iCiv):
                 #if (self.getStabilityParameters(iCiv,con.iParCitiesE) > 7):
                         #return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
@@ -233,7 +233,7 @@ class RFCUtils:
         def countAchievedGoals(self, iPlayer):
                 pPlayer = gc.getPlayer( iPlayer )
                 iResult = 0
-                for j in range(3):                        
+                for j in range(3):
                         iTemp = pPlayer.getUHV( j )
                         if (iTemp < 0):
                                 iTemp = 0
@@ -292,7 +292,7 @@ class RFCUtils:
                 apCityList = PyPlayer(iPlayer).getCityList()
                 for pCity in apCityList:
                         cityList.append(pCity.GetCy())
-                if (len(cityList)):           
+                if (len(cityList)):
                         return cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
                 else:
                         return -1
@@ -307,7 +307,7 @@ class RFCUtils:
         def isMortalUnit(self, unit):
                 if (unit.isHasPromotion(42)): #leader
                         if (not gc.getPlayer(unit.getOwner()).isHuman()):
-                                return False            
+                                return False
                 iUnitType = unit.getUnitType()
                 if (iUnitType >= xml.iProphet ):
                         return False
@@ -317,7 +317,7 @@ class RFCUtils:
                 return False
 
         #AIWars
-        def checkUnitsInEnemyTerritory(self, iCiv1, iCiv2): 
+        def checkUnitsInEnemyTerritory(self, iCiv1, iCiv2):
                 unitList = PyPlayer(iCiv1).getUnitList()
                 if(len(unitList)):
                         for unit in unitList:
@@ -341,7 +341,7 @@ class RFCUtils:
                                                         teamMinor.signOpenBorders(iActiveCiv)
 
         #AIWars
-        def restorePeaceHuman(self, iMinorCiv, bOpenBorders): 
+        def restorePeaceHuman(self, iMinorCiv, bOpenBorders):
                 teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
                 for iActiveCiv in range( iNumActivePlayers ):
                         if (gc.getPlayer(iActiveCiv).isHuman()):
@@ -380,10 +380,10 @@ class RFCUtils:
         def debugTextPopup(self, strText):
                 popup = Popup.PyPopup()
                 popup.setBodyString( strText )
-                popup.launch()		
+                popup.launch()
 
         #RiseAndFall
-        def updateMinorTechs( self, iMinorCiv, iMajorCiv):                
+        def updateMinorTechs( self, iMinorCiv, iMajorCiv):
                 for t in range(xml.iNumTechs):
                         if (gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t)):
                                     gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(t, True, iMinorCiv, False, False)
@@ -404,17 +404,17 @@ class RFCUtils:
         def getHumanID(self):
 ##                for iCiv in range(iNumPlayers):
 ##                        if (gc.getPlayer(iCiv).isHuman()):
-##                                return iCiv     
+##                                return iCiv
                 return gc.getGame().getActivePlayer()
 
         #RiseAndFall
         def flipUnitsInCityBefore(self, tCityPlot, iNewOwner, iOldOwner):
                 #print ("tCityPlot Before", tCityPlot)
                 plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
-                city = plotCity.getPlotCity()    
+                city = plotCity.getPlotCity()
                 iNumUnitsInAPlot = plotCity.getNumUnits()
                 j = 0
-                for i in range(iNumUnitsInAPlot):                        
+                for i in range(iNumUnitsInAPlot):
                         unit = plotCity.getUnit(j)
                         unitType = unit.getUnitType()
                         if (unit.getOwner() == iOldOwner):
@@ -432,7 +432,7 @@ class RFCUtils:
                 tempPlot = gc.getMap().plot(0,72)
                 if (tempPlot.getNumUnits() != 0):
                         iNumUnitsInAPlot = tempPlot.getNumUnits()
-                        #print ("iNumUnitsInAPlot", iNumUnitsInAPlot)                        
+                        #print ("iNumUnitsInAPlot", iNumUnitsInAPlot)
                         for i in range(iNumUnitsInAPlot):
                                 unit = tempPlot.getUnit(0)
                                 #print("  3Miro Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
@@ -501,7 +501,7 @@ class RFCUtils:
                                                 pass
                                         else:
                                                 j = 0
-                                                for i in range(iNumUnitsInAPlot):                                                        
+                                                for i in range(iNumUnitsInAPlot):
                                                         unit = killPlot.getUnit(j)
                                                         #print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
                                                         if (unit.getOwner() == iOldOwner):
@@ -583,7 +583,7 @@ class RFCUtils:
                 If old owner is barbarian, all the culture is converted"""
 
                 pCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
-                city = pCity.getPlotCity()                
+                city = pCity.getPlotCity()
 
                 #city
                 if (pCity.isCity()):
@@ -656,7 +656,7 @@ class RFCUtils:
 
 
         #handler
-        def spreadMajorCulture(self, iMajorCiv, iX, iY):                
+        def spreadMajorCulture(self, iMajorCiv, iX, iY):
                 for x in range(iX-4, iX+5):        # from x-4 to x+4
                         for y in range(iY-4, iY+5):	# from y-4 to y+4
                                 pCurrent = gc.getMap().plot(x, y)
@@ -760,7 +760,7 @@ class RFCUtils:
         #Congresses, RiseAndFall
         def createGarrisons(self, tCityPlot, iNewOwner, iNumUnits):
                 plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
-                city = plotCity.getPlotCity()    
+                city = plotCity.getPlotCity()
                 iNumUnitsInAPlot = plotCity.getNumUnits()
                 pCiv = gc.getPlayer(iNewOwner)
 
@@ -768,7 +768,7 @@ class RFCUtils:
                 if (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iNationalism) and gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMilitaryTactics)):
                         iUnitType = xml.iLineInfantry
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMatchlock)):
-                        iUnitType = xml.iMusketman       
+                        iUnitType = xml.iMusketman
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iGunpowder)):
                         iUnitType = xml.iArquebusier
                 elif (gc.getTeam(pCiv.getTeam()).isHasTech(xml.iMilitaryTradition)):
@@ -822,7 +822,7 @@ class RFCUtils:
                                 if (gc.getPlayer(iLoopCiv).isAlive() and iLoopCiv != iCiv and not gc.getPlayer(iLoopCiv).isHuman()):
                                         if (pCurrent.getCulture(iLoopCiv) > 0):
                                                 if (pCurrent.getCulture(iLoopCiv)*100 / (pCurrent.getCulture(iLoopCiv) + pCurrent.getCulture(iCiv) + pCurrent.getCulture(iBarbarian) + pCurrent.getCulture(iIndependent) + pCurrent.getCulture(iIndependent2)) >= 5): #change in vanilla
-                                                        self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iLoopCiv, iCiv)                            
+                                                        self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iLoopCiv, iCiv)
                                                         self.setTempFlippingCity((tCoords[0],tCoords[1]))
                                                         self.flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
                                                         #pyCity.GetCy().setHasRealBuilding(con.iPlague, False)  #buggy
@@ -976,7 +976,7 @@ class RFCUtils:
                                         for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
                                                 if (pCurrent.getNumUnits() != 0):
                                                         iClean += 1
-                                if ( iClean == 0 ):   
+                                if ( iClean == 0 ):
                                         # this is a good plot, so paint it and continue search
                                         return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
@@ -1055,7 +1055,7 @@ class RFCUtils:
                                                 for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
                                                         if (pCurrent.getNumUnits() != 0):
                                                                 iClean += 1
-                                        if ( iClean == 0 ):  
+                                        if ( iClean == 0 ):
                                                 if (pCurrent.getOwner() in argsList ):
                                                         # this is a good plot, so paint it and continue search
                                                         return (None, bPaint, bContinue)
@@ -1092,7 +1092,7 @@ class RFCUtils:
                                 # this is a good plot, so paint it and continue search
                                 return (None, bPaint, bContinue)
                 # not a good plot, so don't paint it but continue search
-                return (None, not bPaint, bContinue) 
+                return (None, not bPaint, bContinue)
 
         def ownedPlots( self, tCoords, result, argsList ):
                 """Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
@@ -1267,12 +1267,12 @@ class RFCUtils:
 	#		if ( i == minorReligion ){ // 3Miro: count the minor religion prosecutions
 	#		minorReligionRefugies++;
 	#		gc.setMinorReligionRefugies( 0 )
-	
+
 		## Spanish UP?
 	#		if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ):
 	#			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
 	#			pPlayer.changeProsecutionCount( 10 )
-			
+
 			# interface message for the player
 			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION", (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot)), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
 

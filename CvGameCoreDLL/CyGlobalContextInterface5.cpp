@@ -22,7 +22,7 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		// 3Miro balancing stuff, expose to Python
 		.def("setStartingTurn", &CyGlobalContext::setStartingTurn, "void (int iCiv, int iVal)") // 3Miro
 		.def("getStartingTurn", &CyGlobalContext::getStartingTurn, "int (int iCiv )") // 3Miro
-		
+
 		.def("setGrowthModifiersAI", &CyGlobalContext::setGrowthModifiersAI, "void ( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop )") // 3Miro
 		.def("setProductionModifiersAI", &CyGlobalContext::setProductionModifiersAI, "void ( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch )") // 3Miro
 		.def("setSupportModifiersAI", &CyGlobalContext::setSupportModifiersAI, "void ( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic )") // 3Miro
@@ -30,10 +30,10 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("setGrowthModifiersHu", &CyGlobalContext::setGrowthModifiersHu, "void ( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop )") // 3Miro
 		.def("setProductionModifiersHu", &CyGlobalContext::setProductionModifiersHu, "void ( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch )") // 3Miro
 		.def("setSupportModifiersHu", &CyGlobalContext::setSupportModifiersHu, "void ( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic )") // 3Miro
-		
+
 		.def("setInitialPopulation", &CyGlobalContext::setInitialPopulation, "void ( int iCiv, int iInitPop )") // 3Miro
 		.def("setInitialBuilding", &CyGlobalContext::setInitialBuilding, "void ( int iCiv, int iBuilding, bool w )") // 3Miro
-		
+
 		.def("setStartingTurn", &CyGlobalContext::setStartingTurn, "void (int iCiv, int iVal)") // 3Miro
 		.def("setCityClusterAI", &CyGlobalContext::setCityClusterAI, "void (int iCiv, int iTop, int iBottom, int iMinus )") // 3Miro
 		.def("setCityWarDistanceAI", &CyGlobalContext::setCityWarDistanceAI, "void (int iCiv, int iVal)") // 3Miro
@@ -42,7 +42,7 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("setDiplomacyModifiers", &CyGlobalContext::setDiplomacyModifiers, "void (int iCiv1, int iCiv2, int iVal)") // 3Miro
 		.def("setUP", &CyGlobalContext::setUP, "void (int iCiv, int iPower, int iParameter)") // 3Miro
 		.def("hasUP", &CyGlobalContext::hasUP, "bool (int iCiv, int iPower)") // 3Miro
-		
+
 		.def("setSizeNPlayers", &CyGlobalContext::setSizeNPlayers, "void ( int iMaxX, int iMaxY, int iNumPlayers, int iAllPlayers, int iNumTechs, int iNumReligions )") // 3Miro
 		.def("setSettlersMap", &CyGlobalContext::setSettlersMap, "void (int iCiv, int y, int x, int iVal)") // 3Miro
 		.def("setWarsMap", &CyGlobalContext::setWarsMap, "void (int iCiv, int y, int x, int iVal)") // 3Miro
@@ -50,7 +50,7 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("setIndependnets", &CyGlobalContext::setIndependnets, "void ( int iIndyStart, int iIndyEnd, int iBarb )") // 3Miro
 		.def("setPapalPlayer", &CyGlobalContext::setPapalPlayer, "void ( int iCiv, int iReligion )") // 3Miro
 
-		
+
 		// UHV optimizations
 		.def("isLargestCity", &CyGlobalContext::isLargestCity, "bool (int x, int y)") // 3Miro
 		.def("isTopCultureCity", &CyGlobalContext::isTopCultureCity, "bool (int x, int y)") // 3Miro
@@ -129,7 +129,7 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("setBuildingCivicCommerseCombo2", &CyGlobalContext::setBuildingCivicCommerseCombo2, "void ( int iCode )") // 3Miro
 		.def("setBuildingCivicCommerseCombo3", &CyGlobalContext::setBuildingCivicCommerseCombo3, "void ( int iCode )") // 3Miro
 
-		// 3Miro: Psycho AI cheat, this gives a AI player gratiinsentive to attack a city at X, Y and it greatly improves the odds of success
+		// 3Miro: Psycho AI cheat, this misleads the AI about it's odds in succeeding an attack against a given city, also actually improves the odds of success
 		.def("setPsychoAICheat", &CyGlobalContext::setPsychoAICheat, "void ( int iPlayer, int iX, int iY )") // 3Miro
 
 		// 3Miro: on AI to AI battles, this gives a iChange chnage to the attack.defense odds

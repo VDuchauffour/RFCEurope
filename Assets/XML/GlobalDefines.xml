@@ -763,11 +763,11 @@
 	</Define>
 	<Define>
 		<DefineName>MIN_REVOLUTION_TURNS</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MIN_CONVERSION_TURNS</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>OCCUPATION_CULTURE_PERCENT_THRESHOLD</DefineName>

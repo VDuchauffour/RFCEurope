@@ -162,7 +162,7 @@ class RFCEMapManager:
 		else:
 			iProvince = iProvinceIdOrPlot
 		if(iProvince != provinceMapDefault):
-			return str(localText.getText( ("TXT_KEY_PROVINCE_NAME_%i" %iProvince),()))
+			return unicode(localText.getText( ("TXT_KEY_PROVINCE_NAME_%i" %iProvince),()))
 		return ""
 
 	def getProvinceId( self, pPlot):

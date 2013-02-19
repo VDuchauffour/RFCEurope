@@ -743,7 +743,7 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	warsMaps = new int[NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y ];
 	for( i=0; i<NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y; i++ ) warsMaps[i] = 0;
 	conditionalVassalage = new int[ NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B ];
-	for( i=0; i< NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B; i++ ){conditionalVassalage[i] = 0; }; 
+	for( i=0; i< NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B; i++ ){conditionalVassalage[i] = 0; };
 	/*warsMaps = new int**[NUM_MAJOR_PLAYERS];
 	for ( i=0; i<NUM_MAJOR_PLAYERS; i++ ){
 		warsMaps[i] = new int*[iMaxY];
@@ -994,7 +994,7 @@ void CyGlobalContext::addCoreException( int iCiv, int x, int y ){
 	CoreAreasMinus[iCiv][2*CoreAreasMinusCount[iCiv]+1] = y;
 	CoreAreasMinusCount[iCiv]++;
 };
-	
+
 void CyGlobalContext::addNormalException( int iCiv, int x, int y ){
 	NormalAreasMinus[iCiv][2*NormalAreasMinusCount[iCiv]] = x;
 	NormalAreasMinus[iCiv][2*NormalAreasMinusCount[iCiv]+1] = y;
@@ -1132,7 +1132,7 @@ void CyGlobalContext::setBuildingCivicCommerseCombo3( int iCode ){
 };
 
 void CyGlobalContext::setPsychoAICheat( int iPlayer, int iX, int iY ){
-	psychoAI_x = iX; 
+	psychoAI_x = iX;
 	psychoAI_y = iY;
 	psychoAI_player = iPlayer;
 };

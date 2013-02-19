@@ -2,12 +2,12 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers  
-import cPickle as pickle        	# LOQ 2005-10-12
+import PyHelpers
+import cPickle as pickle		# LOQ 2005-10-12
 
 # globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer	
+PyPlayer = PyHelpers.PyPlayer
 
 
 class StoredData:

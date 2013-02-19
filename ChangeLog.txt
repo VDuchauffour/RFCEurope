@@ -29,6 +29,9 @@ Changes for RFCE 1.2:
 		- Ottomans spawn in Gallipoli (Dardanelles), so they have a connection between Europe/Anatolia. No second spawn stack needed, and Adrianople/Edirne doesn't flip to them
 		- Edirne becomes the Ottoman Capital if they conquer it before Constantinople, Constantinople becomes the Ottoman Capital whenever they conquer it (without stability hit)
 		- The Wattasid revolt moved to Fez province, so now Tanja in the Tetouan province (city on the African part of Gibraltar, with AA) is relatively safe
+		- Added compatibility for the Latin-1 set for provinces, so we can have all Latin-1 characters in the province names
+		- Minimal wait between revolutions is increased to 10 turns - both for civic and religion changes
+		- Culture modifiers per province type: all civs get 1/3 culture in unstable, 2x in solid, and 3x in core provinces
 
 	Map and province changes:
 		- Huge changes in the SE region: Egypt, Levant and Anatolia totally revised
@@ -62,7 +65,7 @@ Changes for RFCE 1.2:
 		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
 		- RFCE specific help texts for the handicap levels
 		- Translations for the Scottish and Magyar/Hungarian unit sounds
-		- Province Oppland renamed to Jämtland, Charsiakon corrected to Charsianon
+		- Province Oppland renamed to Jämtland, Charsiakon corrected to Charsianon, Gotaland to Götaland, Osterland to Österland
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -74,7 +77,7 @@ Changes for RFCE 1.2:
 
 	Balance:
 		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
-		- Minor tweaks to the French and Cordoban barb spawns, further separating it for the human and the AI player
+		- Minor tweaks to the French and Cordoban barb spawns, further separating it for the human and the AI player, less barbs for AI Arabia
 		- Lowered barbarian activity in the North African area (now that barbs can attack targets farther away it could be overpowered on the African coastline)
 		- Slightly lowered the base duration of the occupation resistance
 		- Removed free wins against barbarians - this means some of the early barbs might have to be rebalanced
@@ -99,21 +102,26 @@ Changes for RFCE 1.2:
 			Lithuanian Voivodija (-1 XP for land units), French Chateau (obsolete with Public Works), Jewish Quarter (-10% commerce, -50 production cost),
 			La Mezquita (-100 production cost, +1 free specialist, -1 gold from state religion buildings), Magellan's Voyage (-1 trade routes from coastal cities, +2 xp for naval units),
 			St. Basil's Cathedral (available with Chemistry, -10% GP modifier, -1 free specialist, +1 spy slot, +2 espionage points from state religion buildings), St. Sophia (-1 priest slot),
-			Cluny Abbey (+1 free priest), Palais des Papes (+2 happiness), San Marco Basilica (+1 trade route, -30% trade route yield), St. Peter's Basilica (no unhappiness in the city)
+			Cluny Abbey (+1 free priest), Palais des Papes (+2 happiness), San Marco Basilica (+2 trade routes, -30% trade route yield, -1 free merchant), Alhambra (cost increased by 50),
+			St. Peter's Basilica (no unhappiness in the city), Torre de Belem (-2 gold for water tiles, -1 free merchant)
 		- Crete and Cyprus provinces are now stable for Venice, Banat, Wallachia, Cyrenaica and Tripolitania are now OK for the Ottomans
 		- Province Banat is OK for Bulgaria, changes to unstable after the Hungarian spawn
 		- Dalmatia, Bosnia and Banat provinces are reduced to OK for Hungary after the Ottoman spawn
 		- Holstein is OK for the Norse, stable for Germany (but not a core, so won't hurt their stability if another civ holds it)
-		- For Genoa Liguria is core, while Lombardy and Tuscany are also stable, but not core
+		- Liguria is core for Genoa, while Lombardy and Tuscany are also stable, but not core
 		- Liguria is OK for the Franks, but changes to unstable after Germany spawns
+		- Byzantium got some of the Italian provinces as OK, changes to unstable after the Venetian spawn
+		- Cyrenaica, Egypt and Arabia changes to unstable after the Arabian spawn, while Syria, Lebanon and Jerusalem changes to OK
 		- The province Prussia is unstable for everyone, at least for now
 		- The German first and third UHV requires Holstein too, the Ottoman first UHV requires Banat, and the Hungarian anti-Ottoman UHV requires Banat and Slavonia
 		- Holstein and Prussia also count in the Swedish third UHV, Prussia also counts in the Polish first UHV
 		- Minor changes in the defensive crusades, also updated them with the new provinces
 		- Changes in the Ottoman core and solid areas (only western Anatolia and Thrace are their core), thus making their early collapse less likely
-		- Minor nerfs to the Byzantine, French and Venetian modifiers
+		- Minor nerfs to the Byzantine, French, Burgundian and Venetian production modifiers
+		- Various minor changes in the tech modifiers for Cordoba, England, Venice, Poland, Burgundy
 		- Revised all civs' settler and war maps, significant improvements in AI city placement
 		- Bonus modifier for military units from the Triumphal Arch is reduced to 20% (until we find a better bonus)
+		- Cordoba and Arabia are less likely to build christian wonders
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
@@ -125,6 +133,7 @@ Changes for RFCE 1.2:
 		- Fixed issue where AI built large number of settlers but didn't use them, also improvements in the settler move code
 		- Fixed critical bug, which caused most early autorun CTDs! - thanks to edead
 		- Fixed issue where all islands had the same area ID (which caused serious problems for the AI when to use naval/land movement)
+		- Fixed some mistakes with handling the PsychoAI, also reduced the connected bonus which was way too powerful
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

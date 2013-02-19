@@ -18,9 +18,9 @@ utils = RFCUtils.RFCUtils() # Absinthe
 
 class CvGameUtils:
 	"Miscellaneous game functions"
-	def __init__(self): 
+	def __init__(self):
 		pass
-	
+
 	def isVictoryTest(self):
 		if ( gc.getGame().getElapsedGameTurns() > 10 ):
 			return True
@@ -41,14 +41,14 @@ class CvGameUtils:
 
 	def createBarbarianCities(self):
 		return False
-		
+
 	def createBarbarianUnits(self):
 		return False
-		
+
 	def skipResearchPopup(self,argsList):
 		ePlayer = argsList[0]
 		return False
-		
+
 	def showTechChooserButton(self,argsList):
 		ePlayer = argsList[0]
 		return True
@@ -61,19 +61,19 @@ class CvGameUtils:
 		ePlayer = argsList[0]
 		eFirstTech = argsList[1]
 		return TechTypes.NO_TECH
-	
+
 	def canRaze(self,argsList):
 		iRazingPlayer, pCity = argsList
 		return True
-	
+
 	def canDeclareWar(self,argsList):
 		iAttackingTeam, iDefendingTeam = argsList
 		return True
-	
+
 	def skipProductionPopup(self,argsList):
 		pCity = argsList[0]
 		return False
-		
+
 	def showExamineCityButton(self,argsList):
 		pCity = argsList[0]
 		return True
@@ -95,7 +95,7 @@ class CvGameUtils:
 		return False
 
 	def unitCannotMoveInto(self,argsList):
-		ePlayer = argsList[0]		
+		ePlayer = argsList[0]
 		iUnitId = argsList[1]
 		iPlotX = argsList[2]
 		iPlotY = argsList[3]
@@ -157,7 +157,7 @@ class CvGameUtils:
 		ePlayer = argsList[0]
 		eCivic = argsList[1]
 		return False
-		
+
 	def canTrain(self,argsList):
 		pCity = argsList[0]
 		eUnit = argsList[1]
@@ -240,17 +240,17 @@ class CvGameUtils:
 
 	# Absinthe: start Inquisitor AI proper (based on SoI)
 	def doInquisitorCore_AI(self, pUnit):
-		
+
 		iOwner = pUnit.getOwner()
 		iStateReligion = gc.getPlayer(iOwner).getStateReligion()
 		iTolerance = con.tReligiousTolerance[iOwner]
 		apCityList = PyPlayer(iOwner).getCityList()
-		
+
 		# Looks to see if the AI controls a city with a religion that is not the State Religion, not a Holy City, and do not has religious wonders in it
 		for iReligion in con.tPersecutionOrder[iStateReligion]:
 			for pCity in apCityList:
 				if pCity.GetCy().isHasReligion(iReligion) and not pCity.GetCy().isHolyCityByType(iReligion):
-					
+
 					bWonder = false
 					for iBuilding in xrange(gc.getNumBuildingInfos()):
 						if pCity.GetCy().getNumRealBuilding(iBuilding):
@@ -259,9 +259,9 @@ class CvGameUtils:
 								if isWorldWonderClass(BuildingInfo.getBuildingClassType()) or isNationalWonderClass(BuildingInfo.getBuildingClassType()):
 									bWonder = true
 									break
-					
+
 					if bWonder: continue # skip the code below, and continue with the next city in the loop
-					
+
 					bFound = False
 					# If the civ's tolerance > 70 it won't purge any religions
 					# If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
@@ -276,7 +276,7 @@ class CvGameUtils:
 						if iReligion == xml.iJudaism: bFound = True
 					if iTolerance < 30:
 						bFound = True
-						
+
 					if bFound:
 						city = pCity.GetCy()
 						if pUnit.generatePath(city.plot(), 0, False, None):
@@ -302,7 +302,7 @@ class CvGameUtils:
 		ePlayer = argsList[0]
 		bFinal = argsList[1]
 		bVictory = argsList[2]
-		
+
                 if ( not bFinal ):
                         iPopulationScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getPopScore(), gc.getGame().getInitPopulation(), gc.getGame().getMaxPopulation(), gc.getDefineINT("SCORE_POPULATION_FACTOR"), True, bFinal, bVictory)
                         iLandScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getLandScore(), gc.getGame().getInitLand(), gc.getGame().getMaxLand(), gc.getDefineINT("SCORE_LAND_FACTOR"), True, bFinal, bVictory)
@@ -323,7 +323,7 @@ class CvGameUtils:
                         if ( iUHVDone == 3 ): # if finished all 3 UHV conditions
                                 iUHVScore += 6000
                         return int(iPopulationScore + iLandScore + iWondersScore + iTechScore + iUHVScore)
-                        
+
         def getScoreComponentRFCE(self,iRawScore, iInitial, iMax, iFactor, bExponential, bFinal, bVictory):
         # 3Miro: to compensate for the late starts, we remove the time dependence for the final score
                 if bFinal and bVictory:
@@ -402,32 +402,32 @@ class CvGameUtils:
 	def doMeltdown(self,argsList):
 		pCity = argsList[0]
 		return False
-	
+
 	def doReviveActivePlayer(self,argsList):
 		"allows you to perform an action after an AIAutoPlay"
 		iPlayer = argsList[0]
 		return False
-	
+
 	def doPillageGold(self, argsList):
 		"controls the gold result of pillaging"
 		pPlot = argsList[0]
 		pUnit = argsList[1]
-		
+
 		iPillageGold = 0
 		iPillageGold = CyGame().getSorenRandNum(gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold(), "Pillage Gold 1")
 		iPillageGold += CyGame().getSorenRandNum(gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold(), "Pillage Gold 2")
 
 		iPillageGold += (pUnit.getPillageChange() * iPillageGold) / 100
-		
+
 		return iPillageGold
-	
+
 	def doCityCaptureGold(self, argsList):
 		"controls the gold result of capturing a city"
-		
+
 		pOldCity = argsList[0]
-		
+
 		iCaptureGold = 0
-		
+
 		iCaptureGold += gc.getDefineINT("BASE_CAPTURE_GOLD")
 		iCaptureGold += (pOldCity.getPopulation() * gc.getDefineINT("CAPTURE_GOLD_PER_POPULATION"))
 		iCaptureGold += CyGame().getSorenRandNum(gc.getDefineINT("CAPTURE_GOLD_RAND1"), "Capture Gold 1")
@@ -436,17 +436,17 @@ class CvGameUtils:
 		if (gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS") > 0):
 			iCaptureGold *= cyIntRange((CyGame().getGameTurn() - pOldCity.getGameTurnAcquired()), 0, gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS"))
 			iCaptureGold /= gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS")
-		
+
 		return iCaptureGold
-	
+
 	def citiesDestroyFeatures(self,argsList):
 		iX, iY= argsList
 		return True
-		
+
 	def canFoundCitiesOnWater(self,argsList):
 		iX, iY= argsList
 		return False
-		
+
 	def doCombat(self,argsList):
 		pSelectionGroup, pDestPlot = argsList
 		return False
@@ -454,41 +454,41 @@ class CvGameUtils:
 	def getConscriptUnitType(self, argsList):
 		iPlayer = argsList[0]
 		iConscriptUnitType = -1 #return this with the value of the UNIT TYPE you want to be conscripted, -1 uses default system
-		
+
 		return iConscriptUnitType
 
 	def getCityFoundValue(self, argsList):
 		iPlayer, iPlotX, iPlotY = argsList
 		iFoundValue = -1 # Any value besides -1 will be used
-		
+
 		return iFoundValue
-		
+
 	def canPickPlot(self, argsList):
 		pPlot = argsList[0]
 		return true
-		
+
 	def getUnitCostMod(self, argsList):
 		iPlayer, iUnit = argsList
 		iCostMod = -1 # Any value > 0 will be used
-		
+
 		return iCostMod
 
 	def getBuildingCostMod(self, argsList):
 		iPlayer, iCityID, iBuilding = argsList
 		pPlayer = gc.getPlayer(iPlayer)
 		pCity = pPlayer.getCity(iCityID)
-		
+
 		iCostMod = -1 # Any value > 0 will be used
-		
+
 		return iCostMod
-		
+
 	def canUpgradeAnywhere(self, argsList):
 		pUnit = argsList
-		
+
 		bCanUpgradeAnywhere = 0
-		
+
 		return bCanUpgradeAnywhere
-		
+
 	def getWidgetHelp(self, argsList):
 		# 3Miro and sedna17, saint and prosecutor Info
 		eWidgetType, iData1, iData2, bOption = argsList
@@ -497,7 +497,7 @@ class CvGameUtils:
 		elif ( iData1 == 1618 ):
 			return CyTranslator().getText("TXT_KEY_FAITH_SAINT", ())
 		return u""
-		
+
 	def getUpgradePriceOverride(self, argsList):
 		iPlayer, iUnitID, iUnitTypeUpgrade = argsList
 
@@ -507,15 +507,15 @@ class CvGameUtils:
 	def getExperienceNeeded(self, argsList):
 		# use this function to set how much experience a unit needs
 		iLevel, iOwner = argsList
-		
+
 		iExperienceNeeded = 0
 
-		# regular epic game experience		
+		# regular epic game experience
 		iExperienceNeeded = iLevel * iLevel + 1
 
 		iModifier = gc.getPlayer(iOwner).getLevelExperienceModifier()
 		if (0 != iModifier):
 			iExperienceNeeded += (iExperienceNeeded * iModifier + 99) / 100   # ROUND UP
-			
+
 		return iExperienceNeeded
-		
+

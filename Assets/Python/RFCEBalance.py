@@ -148,37 +148,37 @@ class RFCEBalance:
 		#void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-		gc.setProductionModifiersAI(iBurgundy,  125, 110, 120, 140 )
-		gc.setProductionModifiersHu(iBurgundy,  150, 110, 120, 140 )
+		gc.setProductionModifiersAI(iBurgundy,  130, 120, 120, 150 )
+		gc.setProductionModifiersHu(iBurgundy,  150, 120, 120, 150 )
 		gc.setProductionModifiersAI(iByzantium, 200, 200, 200, 350 )
 		gc.setProductionModifiersHu(iByzantium, 200, 150, 200, 350 )
-		gc.setProductionModifiersAI(iFrankia,   140, 120, 125, 120 )
-		gc.setProductionModifiersHu(iFrankia,   150, 120, 125, 125 )
-		gc.setProductionModifiersAI(iArabia,    140, 125, 150, 280 )
+		gc.setProductionModifiersAI(iFrankia,   140, 120, 125, 150 )
+		gc.setProductionModifiersHu(iFrankia,   150, 120, 125, 130 )
+		gc.setProductionModifiersAI(iArabia,    130, 125, 150, 280 )
 		gc.setProductionModifiersHu(iArabia,    150, 125, 150, 230 )
-		gc.setProductionModifiersAI(iBulgaria,  125, 125, 125, 250 )
+		gc.setProductionModifiersAI(iBulgaria,  130, 125, 125, 250 )
 		gc.setProductionModifiersHu(iBulgaria,  150, 150, 125, 200 )
-		gc.setProductionModifiersAI(iCordoba,   125, 150, 125, 230 )
+		gc.setProductionModifiersAI(iCordoba,   125, 150, 125, 250 )
 		gc.setProductionModifiersHu(iCordoba,   150, 150, 125, 230 )
 		gc.setProductionModifiersAI(iSpain,     100, 100, 100, 120 )
 		gc.setProductionModifiersHu(iSpain,     125, 100, 100, 120 )
-		gc.setProductionModifiersAI(iNorse,     100, 100, 100, 120 )
-		gc.setProductionModifiersHu(iNorse,     100, 100, 100, 120 )
-		gc.setProductionModifiersAI(iVenecia,   100, 100, 100, 120 )
+		gc.setProductionModifiersAI(iNorse,     100, 100, 100, 150 )
+		gc.setProductionModifiersHu(iNorse,     100, 100, 100, 130 )
+		gc.setProductionModifiersAI(iVenecia,   100, 100, 100, 130 )
 		gc.setProductionModifiersHu(iVenecia,   100, 100, 100, 120 )
 		gc.setProductionModifiersAI(iKiev,      100, 125, 100, 150 )
 		gc.setProductionModifiersHu(iKiev,      125, 150, 125, 150 )
 		gc.setProductionModifiersAI(iHungary,   100, 100, 100, 130 )
 		gc.setProductionModifiersHu(iHungary,   125, 125, 100, 130 )
 		gc.setProductionModifiersAI(iGermany,   100, 100, 100, 130 )
-		gc.setProductionModifiersHu(iGermany,   125, 125, 125, 130 )
-		gc.setProductionModifiersAI(iPoland,    100, 125, 130, 120 )
-		gc.setProductionModifiersHu(iPoland,    125, 150, 130, 120 )
+		gc.setProductionModifiersHu(iGermany,   125, 125, 125, 120 )
+		gc.setProductionModifiersAI(iPoland,    100, 125, 130, 130 )
+		gc.setProductionModifiersHu(iPoland,    125, 150, 130, 130 )
 		gc.setProductionModifiersAI(iMoscow,     80,  80, 100, 150 )
 		gc.setProductionModifiersHu(iMoscow,    100, 100, 100, 150 )
 		gc.setProductionModifiersAI(iGenoa,     100, 100, 100, 125 )
 		gc.setProductionModifiersHu(iGenoa,     100, 100, 100, 125 )
-		gc.setProductionModifiersAI(iEngland,    80,  80, 100,  90 )
+		gc.setProductionModifiersAI(iEngland,    80,  80, 100, 110 )
 		gc.setProductionModifiersHu(iEngland,   100, 100, 100, 100 )
 		gc.setProductionModifiersAI(iPortugal,   70,  90, 100,  90 )
 		gc.setProductionModifiersHu(iPortugal,   80,  90, 100,  90 )
@@ -527,7 +527,7 @@ class RFCEBalance:
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
 				gc.setDiplomacyModifiers( i, iAustria, +4 )
-                gc.setUP( iAustria, iUP_PerCityCommerce, 200)
+		gc.setUP( iAustria, iUP_PerCityCommerce, 200)
 
 		#gc.setUP( iTurkey, iUP_Conscription, 330 )
 		#gc.setUP( iTurkey, iUP_Conscription, 1 )
@@ -558,28 +558,28 @@ class RFCEBalance:
 		gc.setHoliestCity( con.iJerusalem[0], con.iJerusalem[1] )
 
 		# 3Miro: Faith Points benefits
-		# gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )
-		# 	note that for powers iParameter = -1 means that this religion doesn't have this power (-1 is the default)
+		#gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )
+		#	note that for powers iParameter = -1 means that this religion doesn't have this power (-1 is the default)
 		#	iCap sets a cap for the maximum number of FP a religion can have (per player) Can be adjusted per Player
 		#
-		# iFP_Stability: stability += iParameter * num_FaithPoints / 100
+		#iFP_Stability: stability += iParameter * num_FaithPoints / 100
 		#		 i.e. 1 Faith Point = iParameter percent of a stability point
-		# iFP_Civic: civic_upkeep *= 100 - (num_FaithPoints * iParameter) / 100
-		#	     civic_upkeep /= 100
-		#	     iParameter = 200, means 2% lower cost per Faith Point, iParameter = 50 means .5% lower cost per FP
-		# iFP_Growth: iTreshhold *= 100 - (num_FaithPoints * iParameter) / 100
-		#	      iTreshhold /= 100
-		#	      iParameter = 200, means 2% faster growth per Faith Point, iParameter = 50 means .5% faster growth per FP
-		# iFP_Units: iProductionNeeded *= 100 - (num_FaithPoints * iParameter) / 100
-		#	     iProductionNeeded /= 100
-		#	     iParameter = 200, means 2% faster production per Faith Point, iParameter = 50 means .5% faster production per FP
-		# iFP_Science: same as units, iParameter = 200, means 2% lower tech cost per Faith Point, iParameter = 50 means .5% lower tech cost per FP
-		# iFP_Production: iProductionNeeded *= 100 - (num_FaithPoints * iParameter) / 100
-		#	     	  iProductionNeeded /= 100
-		#	     	  iParameter = 200, means 2% faster production per Faith Point, iParameter = 50 means .5% faster production per FP
-		#		  Counts for Wonders and Projects
-		# iFP_Displomacy: iAttitude += 	iParameter * num_FaithPoints / 100
-		#		 i.e. 1 Faith Point = iParameter percent of an attitude point
+		#iFP_Civic: civic_upkeep *= 100 - (num_FaithPoints * iParameter) / 100
+		#		civic_upkeep /= 100
+		#		iParameter = 200, means 2% lower cost per Faith Point, iParameter = 50 means .5% lower cost per FP
+		#iFP_Growth: iTreshhold *= 100 - (num_FaithPoints * iParameter) / 100
+		#		iTreshhold /= 100
+		#		iParameter = 200, means 2% faster growth per Faith Point, iParameter = 50 means .5% faster growth per FP
+		#iFP_Units: iProductionNeeded *= 100 - (num_FaithPoints * iParameter) / 100
+		#		iProductionNeeded /= 100
+		#		iParameter = 200, means 2% faster production per Faith Point, iParameter = 50 means .5% faster production per FP
+		#iFP_Science: same as units, iParameter = 200, means 2% lower tech cost per Faith Point, iParameter = 50 means .5% lower tech cost per FP
+		#iFP_Production: iProductionNeeded *= 100 - (num_FaithPoints * iParameter) / 100
+		#		iProductionNeeded /= 100
+		#		iParameter = 200, means 2% faster production per Faith Point, iParameter = 50 means .5% faster production per FP
+		#		Counts for Wonders and Projects
+		#iFP_Displomacy: iAttitude += iParameter * num_FaithPoints / 100
+		#		i.e. 1 Faith Point = iParameter percent of an attitude point
 
 		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 8, 100 )
 		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Civic, 50, 100 )
@@ -598,9 +598,7 @@ class RFCEBalance:
 		# every nation gets a land tile that is normally impassible and now pass through it
 		#gc.setStrategicTile( iVenecia, 56, 35 )
 
-		# set AI modifiers for preffered buildings (it is possible that it works only for wonders)
-		# gc.setBuildingPref( iFrankia, con.iNotreDame, 10 )
-		# gc.setBuildingPref( iCordoba, con.iNotreDame, -10 )
+		# set AI modifiers for preferred buildings
 		# use values -10 for very unlikely, 0 for default neutral and positive for desirable
 		# values less than -10 might not work, above 10 should be fine
 
@@ -615,9 +613,11 @@ class RFCEBalance:
 
 		gc.setBuildingPref( iArabia, xml.iDomeRock, 10 )
 		gc.setBuildingPref( iArabia, xml.iTombKhal, 20 )
-		gc.setBuildingPref( iArabia, xml.iNotreDame, -3 )
-		gc.setBuildingPref( iArabia, xml.iSistineChapel, -3 )
-		gc.setBuildingPref( iArabia, xml.iKrakDesChevaliers, -3 )
+		gc.setBuildingPref( iArabia, xml.iNotreDame, -5 )
+		gc.setBuildingPref( iArabia, xml.iStephansdom, -5 )
+		gc.setBuildingPref( iArabia, xml.iSistineChapel, -5 )
+		gc.setBuildingPref( iArabia, xml.iKrakDesChevaliers, -5 )
+		gc.setBuildingPref( iArabia, xml.iLeaningTower, -3 )
 		gc.setBuildingPref( iArabia, xml.iGoldenBull, -3 )
 		gc.setBuildingPref( iArabia, xml.iCopernicus, -3 )
 
@@ -627,9 +627,11 @@ class RFCEBalance:
 		gc.setBuildingPref( iCordoba, xml.iLaMezquita, 20 )
 		gc.setBuildingPref( iCordoba, xml.iAlhambra, 20 )
 		gc.setBuildingPref( iCordoba, xml.iDomeRock, 10 )
-		gc.setBuildingPref( iCordoba, xml.iNotreDame, -3 )
-		gc.setBuildingPref( iCordoba, xml.iSistineChapel, -3 )
-		gc.setBuildingPref( iCordoba, xml.iKrakDesChevaliers, -3 )
+		gc.setBuildingPref( iCordoba, xml.iNotreDame, -5 )
+		gc.setBuildingPref( iCordoba, xml.iStephansdom, -5 )
+		gc.setBuildingPref( iCordoba, xml.iSistineChapel, -5 )
+		gc.setBuildingPref( iCordoba, xml.iKrakDesChevaliers, -5 )
+		gc.setBuildingPref( iCordoba, xml.iLeaningTower, -3 )
 		gc.setBuildingPref( iCordoba, xml.iGoldenBull, -3 )
 
 		gc.setBuildingPref( iSpain, xml.iEscorial, 20 )
@@ -638,8 +640,8 @@ class RFCEBalance:
 		gc.setBuildingPref( iNorse, xml.iShrineOfUppsala, 20 )
 		gc.setBuildingPref( iNorse, xml.iKalmarCastle, 10 )
 
-		gc.setBuildingPref( iVenecia, xml.iMarcoPolo, 10 )
-		gc.setBuildingPref( iVenecia, xml.iSanMarco, 10 )
+		gc.setBuildingPref( iVenecia, xml.iMarcoPolo, 15 )
+		gc.setBuildingPref( iVenecia, xml.iSanMarco, 15 )
 		gc.setBuildingPref( iVenecia, xml.iLanterna, 10 )
 		gc.setBuildingPref( iVenecia, xml.iLeonardosWorkshop, 5 )
 		gc.setBuildingPref( iVenecia, xml.iLeaningTower, 5 )
@@ -685,9 +687,9 @@ class RFCEBalance:
 
 		gc.setBuildingPref( iPope, xml.iSistineChapel, 20 )
 
-                # 3Miro: set the Jews as the minor Religion
-                gc.setMinorReligion( xml.iJudaism )
-                gc.setMinorReligionRefugies( 0 )
+		# 3Miro: set the Jews as the minor Religion
+		gc.setMinorReligion( xml.iJudaism )
+		gc.setMinorReligionRefugies( 0 )
 
 		# Manor House + Manorism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
 			# 3Miro: moved to XML, no need to put it here
@@ -696,59 +698,58 @@ class RFCEBalance:
 		#gc.setBuildingCivicCommerseCombo3(-1)
 
 		# 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
-		#  it will also indeed boost Ottoman's odds, but only by about 60 percent (maybe even less)
-		#   works only for AI vs AI, Humans are excempts of this rule
-		#gc.setPsychoAICheat( iBulgaria, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ); # This is for testing only
+		#	it will also actually boost the Ottoman's odds, by about 20 percent, but only when attacking Constantinople
 		gc.setPsychoAICheat( iTurkey, con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] )
 
 		# 3Miro: be very careful here, this can really mess the AI
-		#        this works only for AI vs AI, if either player is Human, this is ignored
-		#        setHistoricalEnemyAICheat( iAttacker, iDefender, 10 ) gives the attacker +10% bonus, when attacking units belonging to the defender
-		#        none of the AI players is "aware" of the modification, if you make it too big, then the AI will act really stupid (even for an AI)
-		#        this should be "last" resot solution, other methods are always preferable
+		#	setHistoricalEnemyAICheat( iAttacker, iDefender, 10 ) gives the attacker +10% bonus, when attacked units belong to the defender
+		#	this modifier only works in AI vs AI battles, it's ignored if either player is Human
+		#	none of the AI players is "aware" of the modification, if you make it too big, it could lead to a couple strange situations
+		#	(where the AI has clear advantage in a battle, yet it still won't attack)
+		#	so this should be a "last resort" solution, other methods are always preferable
 		gc.setHistoricalEnemyAICheat( iTurkey, iBulgaria,  10 )
 		gc.setHistoricalEnemyAICheat( iBulgaria, iTurkey, -10 )
 
 		gc.setHistoricalEnemyAICheat( iSpain, iCordoba,  10 )
 		gc.setHistoricalEnemyAICheat( iCordoba, iSpain, -10 )
 
-                gc.setHistoricalEnemyAICheat( iPortugal, iSpain,  10 )
+		gc.setHistoricalEnemyAICheat( iPortugal, iSpain,  10 )
 		gc.setHistoricalEnemyAICheat( iSpain, iPortugal, -10 )
 
-                gc.setHistoricalEnemyAICheat( iAustria, iHungary,  10 )
+		gc.setHistoricalEnemyAICheat( iAustria, iHungary,  10 )
 		gc.setHistoricalEnemyAICheat( iHungary, iAustria, -10 )
 
-                gc.setHistoricalEnemyAICheat( iAustria, iGermany,  10 )
+		gc.setHistoricalEnemyAICheat( iAustria, iGermany,  10 )
 		gc.setHistoricalEnemyAICheat( iGermany, iAustria, -10 )
 
-                # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
-                #        second parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
-                #        the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
-                #        the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
-                gc.setVassalagaeCondition( iCordoba, iArabia, 1, con.iProvinceDesired )
-                gc.setVassalagaeCondition( iArabia, iCordoba, 1, con.iProvinceDesired )
+		# 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
+		#	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
+		#	the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
+		#	the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
+		gc.setVassalagaeCondition( iCordoba, iArabia, 1, con.iProvinceDesired )
+		gc.setVassalagaeCondition( iArabia, iCordoba, 1, con.iProvinceDesired )
 
-                # How much culture should we get into a province of this type, ignoe the war and settler values (0,0)
-                gc.setProvinceTypeParams( con.iProvinceNone, 0, 0, 2, 3 ) # 2/3 culture
-                gc.setProvinceTypeParams( con.iProvinceDesired, 0, 0, 1, 2 ) # this is not used
-                gc.setProvinceTypeParams( con.iProvinceOuter, 0, 0, 1, 1 ) # no change to culture
-                gc.setProvinceTypeParams( con.iProvincePotential, 0, 0, 1, 1 ) # same as outer culture
-                gc.setProvinceTypeParams( con.iProvinceNatural, 0, 0, 2, 1 ) # double-culture
-                gc.setProvinceTypeParams( con.iProvinceCore, 0, 0, 2, 1 ) # double-culture
+		# How much culture should we get into a province of this type, ignore the war and settler values (0,0)
+		gc.setProvinceTypeParams( con.iProvinceNone, 0, 0, 1, 3 ) # 1/3 culture
+		gc.setProvinceTypeParams( con.iProvinceDesired, 0, 0, 1, 2 ) # 1/2, but this province type is not used currently
+		gc.setProvinceTypeParams( con.iProvinceOuter, 0, 0, 1, 1 ) # no change to culture
+		gc.setProvinceTypeParams( con.iProvincePotential, 0, 0, 1, 1 ) # same as outer culture
+		gc.setProvinceTypeParams( con.iProvinceNatural, 0, 0, 2, 1 ) # double-culture
+		gc.setProvinceTypeParams( con.iProvinceCore, 0, 0, 3, 1 ) # triple-culture
 
-                # block foundation of Protestantism except by a Catholic player
-                gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
+		# block foundation of Protestantism except by a Catholic player
+		gc.setParentSchismReligions( xml.iCatholicism, xml.iProtestantism )
 
-                # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
-                gc.setPaceTurnsAfterSpawn( 5 )
+		# block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
+		gc.setPaceTurnsAfterSpawn( 5 )
 
-                # set the Visualization parameters, note that those functions can be accessed at any time, not just here
-                # note that if you set Civs for mode 0 and 1 in WB mode, they will stay set until you exit
-                gc.setWhatToPlot( 0 ) # 0 - Core (default), 1 - Normal, 2 - Settler, 3 - Wars
-                #gc.setCivForCore( iByzantium ) # plot the Core of Byzantium (only if setWhatToPlot is set to 0)
-                #gc.setCivForNormal( iByzantium ) # plot the Normal area of Byzantium (only if setWhatToPlot is set to 1)
-                #gc.setCivForSettler( iFrankia ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
-                #gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
+		# set the Visualization parameters, note that those functions can be accessed at any time, not just here
+		# note that if you set Civs for mode 0 and 1 in WB mode, they will stay set until you exit
+		gc.setWhatToPlot( 0 ) # 0 - Core (default), 1 - Normal, 2 - Settler, 3 - Wars
+		#gc.setCivForCore( iByzantium ) # plot the Core of Byzantium (only if setWhatToPlot is set to 0)
+		#gc.setCivForNormal( iByzantium ) # plot the Normal area of Byzantium (only if setWhatToPlot is set to 1)
+		#gc.setCivForSettler( iFrankia ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
+		#gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
 
 		self.postAreas()
 

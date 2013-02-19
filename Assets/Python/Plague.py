@@ -86,7 +86,7 @@ class Plague:
 
                 #Sedna17: Set number of GenericPlagues in StoredData
                 #3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
-                self.setGenericPlagueDates(0, 33 + gc.getGame().getSorenRandNum(7, 'Variation') - 10) #Plagues of Constantinople
+                self.setGenericPlagueDates(0, 32 + gc.getGame().getSorenRandNum(5, 'Variation') - 10) #Plagues of Constantinople
                 self.setGenericPlagueDates(1, 247 + gc.getGame().getSorenRandNum(40, 'Variation') - 20) #1341 Black Death
                 self.setGenericPlagueDates(2, 300 + gc.getGame().getSorenRandNum(40, 'Variation') - 20) #Generic reaccurance of plague
                 self.setGenericPlagueDates(3, 375 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1650 Great Plague
