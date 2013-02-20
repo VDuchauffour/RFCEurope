@@ -85,9 +85,9 @@ iNumProvinceTypes  = con.iNumProvinceTypes
 ############ Lists of all the provinces for each Civ ###################
 tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Thessaloniki,xml.iP_Macedonia,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsianon,xml.iP_Antiochia]
 tByzantiumNorm = [xml.iP_Colonea]
-tByzantiumOuter = [xml.iP_Cyrenaica,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Moesia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Dalmatia,xml.iP_Verona,xml.iP_Tuscany,xml.iP_Latium,xml.iP_Calabria,xml.iP_Apulia,xml.iP_Liguria,xml.iP_Sicily]
+tByzantiumOuter = [xml.iP_Cyrenaica,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Bosnia,xml.iP_Dalmatia,xml.iP_Verona,xml.iP_Tuscany,xml.iP_Latium,xml.iP_Calabria,xml.iP_Apulia,xml.iP_Sicily]
 tByzantiumPot2Core = []
-tByzantiumPot2Norm = [xml.iP_Cyprus,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem]
+tByzantiumPot2Norm = [xml.iP_Moesia,xml.iP_Serbia,xml.iP_Cyprus,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem]
 tByzantiumDesire = []
 
 tFranceCore = []
@@ -491,7 +491,7 @@ class ProvinceManager:
                         pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
 
         def onSpawn( self, iPlayer ):
-                # when a new nations spawns, old nation should lose some of their provinces
+                # when a new nations spawns, old nations in the region should lose some of their provinces
                 if ( iPlayer == iArabia ):
                         pByzantium.setProvinceType( xml.iP_Cyrenaica, iProvinceNone )
                         pByzantium.setProvinceType( xml.iP_Egypt, iProvinceNone )
@@ -504,17 +504,16 @@ class ProvinceManager:
                         pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceOuter )
                         pByzantium.setProvinceType( xml.iP_Colonea, iProvinceOuter )
                 elif ( iPlayer == iBulgaria ):
-                        pByzantium.setProvinceType( xml.iP_Thrace, iProvinceOuter )
-                        pByzantium.setProvinceType( xml.iP_Macedonia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Serbia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Moesia, iProvinceOuter )
+                        pByzantium.setProvinceType( xml.iP_Thrace, iProvinceNatural )
+                        pByzantium.setProvinceType( xml.iP_Macedonia, iProvinceNatural )
                 elif ( iPlayer == iVenecia ):
                         pByzantium.setProvinceType( xml.iP_Dalmatia, iProvinceNone )
+                        pByzantium.setProvinceType( xml.iP_Bosnia, iProvinceNone )
                         pByzantium.setProvinceType( xml.iP_Verona, iProvinceNone )
                         pByzantium.setProvinceType( xml.iP_Tuscany, iProvinceNone )
                         pByzantium.setProvinceType( xml.iP_Latium, iProvinceNone )
-                        pByzantium.setProvinceType( xml.iP_Calabria, iProvinceNone )
-                        pByzantium.setProvinceType( xml.iP_Apulia, iProvinceNone )
-                        pByzantium.setProvinceType( xml.iP_Liguria, iProvinceNone )
-                        pByzantium.setProvinceType( xml.iP_Sicily, iProvinceNone )
                 elif ( iPlayer == iBurgundy ):
                         pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential )
                         pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential )
@@ -530,6 +529,10 @@ class ProvinceManager:
                 elif ( iPlayer == iSpain ):
                         pCordoba.setProvinceType( xml.iP_LaMancha, iProvinceOuter )
                         pCordoba.setProvinceType( xml.iP_Valencia, iProvinceOuter )
+                elif ( iPlayer == iGenoa ):
+                        pByzantium.setProvinceType( xml.iP_Apulia, iProvinceNone )
+                        pByzantium.setProvinceType( xml.iP_Calabria, iProvinceNone )
+                        pByzantium.setProvinceType( xml.iP_Sicily, iProvinceNone )
                 elif ( iPlayer == iEngland ):
                         pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential )
                         pFrankia.setProvinceType( xml.iP_Picardy, iProvincePotential )
