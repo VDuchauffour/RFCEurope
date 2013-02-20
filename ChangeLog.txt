@@ -112,7 +112,7 @@ Changes for RFCE 1.2:
 		- Holstein is OK for the Norse, stable for Germany (but not a core, so won't hurt their stability if another civ holds it)
 		- Liguria is core for Genoa, while Lombardy and Tuscany are also stable, but not core
 		- Liguria is OK for the Franks, but changes to unstable after Germany spawns
-		- Byzantium got some of the Italian provinces as OK, changes to unstable after the Venetian spawn
+		- Byzantium got some of the Italian provinces as OK, all of them change to unstable after the Venetian and Genoan spawn
 		- For Byzantium Cyrenaica, Egypt and Arabia changes to unstable after the Arabian spawn, while Syria, Lebanon and Jerusalem changes to OK
 		- The province Prussia is unstable for everyone, at least for now
 		- The German first and third UHV requires Holstein too, the Ottoman first UHV requires Banat, and the Hungarian anti-Ottoman UHV requires Banat and Slavonia
