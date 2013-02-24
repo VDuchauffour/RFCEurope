@@ -730,6 +730,10 @@
 					<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 					<bNotRequired>1</bNotRequired>
 				</SpecialBuildingNotRequired>
+				<SpecialBuildingNotRequired>
+					<SpecialBuildingType>SPECIALBUILDING_SEMINARY</SpecialBuildingType>
+					<bNotRequired>1</bNotRequired>
+				</SpecialBuildingNotRequired>
 			</SpecialBuildingNotRequireds>
 			<SpecialistValids/>
 			<BuildingHappinessChanges/>

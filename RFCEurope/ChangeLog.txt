@@ -68,6 +68,8 @@ Changes for RFCE 1.2:
 		- Translations for the Scottish and Magyar/Hungarian unit sounds
 		- Province Oppland renamed to Jämtland, Charsiakon corrected to Charsianon, Gotaland to Götaland, Osterland to Österland
 		- Improvements in the crusade texts
+		- German text fixes by Simplicissimus
+		- New city name map for England and Muscovy by iOnlySignIn
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -124,6 +126,7 @@ Changes for RFCE 1.2:
 		- Revised all civs' settler and war maps, significant improvements in AI city placement
 		- Bonus modifier for military units from the Triumphal Arch is reduced to 20% (until we find a better bonus)
 		- Cordoba and Arabia are less likely to build christian wonders
+		- Updates in the crusading units, bigger chance for more unique units in both "normal" and defensive crusades
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
@@ -136,6 +139,8 @@ Changes for RFCE 1.2:
 		- Fixed critical bug, which caused most early autorun CTDs! - thanks to edead
 		- Fixed issue where all islands had the same area ID (which caused serious problems for the AI when to use naval/land movement)
 		- Fixed some mistakes with handling the PsychoAI, also reduced the connected bonus which was way too powerful
+		- Fixed mistake where you couldn't build protestant missionaries without Seminaries under the Religious Law civic
+		- Fixed issue where some of the python scripts couldn't handle Latin-1 characters
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

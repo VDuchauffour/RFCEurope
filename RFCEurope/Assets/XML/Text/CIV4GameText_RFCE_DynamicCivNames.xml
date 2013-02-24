@@ -1962,7 +1962,7 @@
 		<Tag>TXT_KEY_DN_GEN00</Tag>
 		<English>Genoese Peoples</English>
 		<French>Peuplade G&#233;noise</French>
-		<German>Genuanische Völker</German>
+		<German>Genuesische Völker</German>
 		<Italian>Popoli Liguri</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Povos Genoveses</Portuguese>
@@ -1998,7 +1998,7 @@
 		<Tag>TXT_KEY_DN_GEN04</Tag>
 		<English>Genoese Empire</English>
 		<French>Empire G&#233;nois</French>
-		<German>Genuanisches Reich</German>
+		<German>Genuesisches Reich</German>
 		<Italian>Impero Genovese</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Império Genovês</Portuguese>
@@ -2043,7 +2043,7 @@
 		<Tag>TXT_KEY_DN_GEN09</Tag>
 		<English>Genoese Islamic Republic</English>
 		<French>R&#233;publique Islamique de G&#234;nes</French>
-		<German>Genuanische Islamische Republik </German>
+		<German>Islamische Republik Genua</German>
 		<Italian>Repubblica Islamica Genovese</Italian>
 		<Spanish></Spanish>
 		<Portuguese>República Islâmica Genovesa</Portuguese>
@@ -2079,7 +2079,7 @@
 		<Tag>TXT_KEY_DN_GEN13</Tag>
 		<English>Spanish Mediterranean</English>
 		<French>M&#233;diterran&#233;e Espagnol</French>
-		<German>Spanisch-Mittelmeer</German>
+		<German>Spanisch-Ligurien</German>
 		<Italian>Mediterraneo Spagnolo</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Mediterrâneo Espanhol</Portuguese>
@@ -2124,7 +2124,7 @@
 		<Tag>TXT_KEY_DN_GEN18</Tag>
 		<English>County of Liguria</English>
 		<French>Comt&#233; de Ligurie</French>
-		<German>Grafschaften Liguriens</German>
+		<German>Grafschaften Ligurien</German>
 		<Italian>Contea di Liguria</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Condado da Liguria</Portuguese>
@@ -2133,7 +2133,7 @@
 		<Tag>TXT_KEY_DN_GEN19</Tag>
 		<English>Habsburg Genoa</English>
 		<French>G&#234;nes Habsbourg</French>
-		<German>Habsburger Genua</German>
+		<German>Habsburgisch-Genua</German>
 		<Italian>Genova Asburgica</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Gênova Habsburga</Portuguese>
