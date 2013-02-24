@@ -1,21 +1,35 @@
 #!/usr/bin/python
-
-#import Consts as con
+# -*- coding: latin-1 -*-
 
 import RFCEMaps as maps
-
 import re #for string manipulations
 
 ################################################################################################################################################
-#   Moding script for RFCEurope, written by 3Miro, feel free to use it for other mods/purposes (assume license GPLv3)
 #
-#   This script reads RFCEMaps.py (in the same folder) and outputs WB labels
-#   Set iOutputType and iPlayer for the desired output
-#   The resulting labels have to be copy/pasted at the end of the WorldBuilder save file
-#   The last integer printed is the number of labels, this has to be copied over xxx in "num signs written=xxx" in BeginMap/EndMap section
+#	Modding script for RFCEurope, written by 3Miro and AbsintheRed
+#	Feel free to use it for other mods/purposes (GPLv3 license assumed)
+#
+#	This script reads RFCEMaps.py (has to be in the same folder), and outputs WB labels
+#	Usage:
+#		You have to set iOutputType and iPlayer for the desired output
+#		Also the part below with the map size (by default the size of RFCEurope)
+#		Then call the script:
+#			with Unix command (check for permissions): ./Array2WB.py > output_file
+#			with Windows command (under cmd): Array2WB.py > output_file.txt
+#		The resulted labels have to be copypasted at the end of the WorldBuilder save file
+#		The last integer printed is the number of labels, this has to be copied to the "num signs written=" line in BeginMap/EndMap section
 #
 ################################################################################################################################################
 
+#	Edit this part:
+#	iOutputType: 1 - WB labels with city names, 2 - WB labels with settler map, 3 - WB labels with war map, 4 - WB labels with province IDs
+iOutputType = 1
+iPlayer = iHungary
+
+iMapMaxX = 100
+iMapMaxY = 73
+
+################################################################################################################################################
 
 iByzantium = 0
 iFrankia = 1
@@ -50,54 +64,6 @@ iIndependent4 = 26
 iNumTotalPlayers = 27
 iBarbarian = 27
 iNumTotalPlayersB = 28
-
-
-######################################################################
-##### Edit this Part ################
-
-#OutputType: 1 - WB labels with city names, 2 - WB labels with Settlers Map, 3 - WB labels with War maps, 4 - WB labels with province IDs
-iOutputType = 1
-
-iPlayer = iGermany
-
-iMapMaxX = 100
-iMapMaxY = 73
-
-
-######################################################################
-
-
-
-
-
-def populate_array(rows, columns):
-        #array_dic = {}
-        #for row in range(1, rows+1):     ## starts with one, not zero
-        #        array_dic[row] = []
-        #        for col in range(0, columns):
-        #                array_dic[row].append('None')     ## initialize to 'None'
-        return [[0 for i in range(columns)] for j in range(rows)]
-
-def write_array_to_Javascript(rows, columns, array ):
-        #f = open('JavascriptArray.txt', 'w')
-        for iY in range( iMapMaxY ):
-                for iX in range( iMapMaxX ):
-                        #sstr = ( "\"%d\"," %array[iY][iX] )
-                        sstr = ( "%d," %array[iY][iX] )
-                        print sstr,
-
-def write_array_to_Python(rows, columns, array ):
-        #f = open('JavascriptArray.txt', 'w')
-        for iY in range( iMapMaxY ):
-                print "(",
-                for iX in range( iMapMaxX ):
-                        #sstr = ( "\"%d\"," %array[iY][iX] )
-                        if ( iX < iMapMaxX -1 ):
-                                sstr = ( "%d," %array[iY][iX] )
-                        else:
-                                sstr = ( "%d" %array[iY][iX] )
-                        print sstr,
-                print "),"
 
 def writeCityNames( tMap ):
 	iNumSigns = 0
@@ -167,4 +133,4 @@ elif ( iOutputType == 2 ):
 elif ( iOutputType == 3 ):
 	writeWarMap( maps.tWarsMaps[iPlayer] )
 elif ( iOutputType == 4 ):
-	writeProvinceMap( maps.tProinceMap[iByzantium] )
+	writeProvinceMap( maps.tProinceMap )

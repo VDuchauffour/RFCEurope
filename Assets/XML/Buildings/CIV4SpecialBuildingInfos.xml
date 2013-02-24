@@ -27,7 +27,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Cathedral.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_MONASTERY</Type>
+			<Type>SPECIALBUILDING_MONASTERY</Type> <!-- Madrassa is the Islamic Monastery -->
 			<Description>TXT_KEY_SPECIALBUILDING_MONASTERY</Description>
 			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<TechPrereq>TECH_MONASTICISM</TechPrereq>

@@ -324,11 +324,11 @@ public:
 	void setGrowthModifiersAI( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
 	void setProductionModifiersAI( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 	void setSupportModifiersAI( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
-	
+
 	void setGrowthModifiersHu( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
 	void setProductionModifiersHu( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 	void setSupportModifiersHu( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
-	
+
 	void setInitialPopulation( int iCiv, int iInitPop );
 	void setInitialBuilding( int iCiv, int iBuilding, bool w );
 
@@ -357,7 +357,7 @@ public:
 	int doesOwnOrVassalCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
 	bool doesHaveOtherReligion( int BLx, int BLy, int TRx, int TRy, int AllowR );
 	int countOwnedCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
-	int countCitiesLostTo( int iCiv, int iNewOwner ); 
+	int countCitiesLostTo( int iCiv, int iNewOwner );
 	bool safeMotherland( int iCiv );
 	bool canSeeAllTerrain( int iCiv, int iTerrain );
 	bool controlMostTeritory( int iCiv, int BLx, int BLy, int TRx, int TRy );
@@ -450,7 +450,7 @@ public:
 	void setProvinceTypeParams( int iType, int iSettlerValue, int iWarValue, int iCultureTop, int iCultureBottom ); // set the number of province types
 
 	void setVassalagaeCondition( int iPlayer, int iWhoTo, int iCondition, int iProvinceType );
-	// there is only one iProvinceType, even though it is being set every time (only the last one counts). 
+	// there is only one iProvinceType, even though it is being set every time (only the last one counts).
 	// If iCondition is 1, iProvinceType still needs to be set
 
 	int getNumProvinceTiles( int iProvince );

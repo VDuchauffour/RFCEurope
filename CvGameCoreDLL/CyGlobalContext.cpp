@@ -1131,12 +1131,14 @@ void CyGlobalContext::setBuildingCivicCommerseCombo3( int iCode ){
 	iCivicBuildingCommerse3 = iCode;
 };
 
+// 3Miro: Psycho AI cheat, this misleads the AI about it's odds in succeeding an attack against a given city, also actually improves the odds of success
 void CyGlobalContext::setPsychoAICheat( int iPlayer, int iX, int iY ){
 	psychoAI_x = iX;
 	psychoAI_y = iY;
 	psychoAI_player = iPlayer;
 };
 
+// 3Miro: set historical enemy AI cheat
 void CyGlobalContext::setHistoricalEnemyAICheat( int iAttacker, int iDefender, int iChange ){
 	historicalEnemyAIcheat[ iAttacker * NUM_ALL_PLAYERS_B + iDefender ] = iChange;
 };

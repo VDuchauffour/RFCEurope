@@ -217,7 +217,7 @@ extern int* cityWarDistance;
 extern int** techPreferences;
 
 // 3Miro: AI cheat to make Ottomans conquer Constantinople
-extern int psychoAI_x; 
+extern int psychoAI_x;
 extern int psychoAI_y;
 extern int psychoAI_player;
 
@@ -307,4 +307,3 @@ extern int iPeaceTurnsAfterSpawn;
 
 extern int minorReligion; // 3Miro: set the Jews here to be the minorReligion in the game
 extern int minorReligionRefugies; // 3Miro: this is incremented every tume the minorReligion is prosecuted
-								
