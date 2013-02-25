@@ -32,6 +32,7 @@ Changes for RFCE 1.2:
 		- Added compatibility for the Latin-1 set for provinces, so we can have all Latin-1 characters in the province names
 		- Minimal wait between revolutions is increased to 10 turns - both for civic and religion changes
 		- Culture modifiers per province type: all civs get 1/3 culture in unstable, 2x in solid, and 3x in core provinces
+		- Introduction of a new, generic city name map, which will be the base for all the other ones
 
 	Map and province changes:
 		- Huge changes in the SE region: Egypt, Levant and Anatolia totally revised
@@ -63,6 +64,7 @@ Changes for RFCE 1.2:
 	XML and text updates:
 		- Cities built outside the corresponding CityNameMap will get a civ specific name (no Persian names for Bulgaria for example)
 		- Portuguese translations by Spirictum
+		- Rome renamed to Papal States
 		- Spelling mistake fix: Austria is called Ostmark instead of Östmark when vassal of Germany
 		- RFCE specific help texts for the handicap levels
 		- Translations for the Scottish and Magyar/Hungarian unit sounds
@@ -70,6 +72,9 @@ Changes for RFCE 1.2:
 		- Improvements in the crusade texts
 		- German text fixes by Simplicissimus
 		- New city name map for England and Muscovy by iOnlySignIn
+		- German/Austrian city name map updates by 2phunkey4u
+		- Portuguese city name map accents by Spirictum
+		- Updates in some crusading civs' city name maps in the Levant/Egypt/Anatolia
 
 	Art and sound updates:
 		- Added theme files for the mod

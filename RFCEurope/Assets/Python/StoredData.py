@@ -76,7 +76,7 @@ class StoredData:
                                     'lRevoltinNationRevoltIndex':[-1,-1,-1,-1,-1,-1,-1],
                                     #3Miro: hired mercs
                                     'lMercGlobalPool':[],
-                                    #3Miro: must be at least as long as lMercList (currently allow for 150)
+                                    #3Miro: must be at least as long as lMercList (currently allow for 400)
                                     'lMercsHiredBy':[-1]*400,
                                     #Absinthe: persecution popup
                                     'lPersecutionData': [-1, -1, -1],

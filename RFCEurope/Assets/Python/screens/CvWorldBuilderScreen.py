@@ -3283,7 +3283,8 @@ class LandmarkMode(Mode):
 
 			for i in range( Consts.iNumMajorPlayers ):
 				if ( gc.getPlayer(i).isEverAlive() ):
-					screen.addPullDownString(szDropdownName, gc.getPlayer(i).getName(), i, i, self.iPlayer == i )
+					screen.addPullDownString(szDropdownName, gc.getPlayer(i).getCivilizationShortDescription(0), i, i, self.iPlayer == i )
+			screen.addPullDownString(szDropdownName, "Generic map", (Consts.iNumMajorPlayers), (Consts.iNumMajorPlayers), self.iPlayer == (Consts.iNumMajorPlayers) )
 			iBarb = gc.getBARBARIAN_PLAYER()
 			screen.addPullDownString(szDropdownName, "Please choose again", iBarb, iBarb, self.iPlayer == iBarb )
 		return
@@ -3361,18 +3362,28 @@ class LandmarkMode(Mode):
 
 
 		cityNames = []
+		# all major civs' city names, in civ order
 		for i in range(Consts.iNumMajorPlayers):
-			if(i != iPlayer):
+			if (i != iPlayer):
 				name = MapManager.getCityName(i, pPlot)
 				civ = gc.getPlayer(i).getCivilizationShortDescription(0)
-				if(name != None):
+				if (name != None):
 					cityNames.append((unicode(name, 'latin-1'), civ))
-		cityNames.sort()
+		# uncomment for city names in alphabetic order
+		#cityNames.sort()
+		# generic city name, always on last place
+		if ((Consts.iNumMajorPlayers) != iPlayer):
+			name = MapManager.getCityName((Consts.iNumMajorPlayers), pPlot)
+			if (name != None):
+				cityNames.append((unicode(name, 'latin-1'), "GENERIC NAME"))
 
 		cityHeader = cityName
 		if(cityHeader == ""):
 			cityHeader = "New City"
-		sHeaderText = ("%s - %s" %(cityHeader, gc.getPlayer(iPlayer).getCivilizationShortDescription(0)))
+		if iPlayer == Consts.iNumMajorPlayers:
+			sHeaderText = ("%s - %s" %(cityHeader, "Generic Name"))
+		else:
+			sHeaderText = ("%s - %s" %(cityHeader, gc.getPlayer(iPlayer).getCivilizationShortDescription(0)))
 		sBodyText = ""
 		for i in range(len(cityNames)):
 			sBodyText = sBodyText + ("%s - %s \n" %cityNames[i])
