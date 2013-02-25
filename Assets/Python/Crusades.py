@@ -923,32 +923,33 @@ class Crusades:
 		#if ( self.getCrusadePower() > 90 ):
 		#	self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
 		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
-        def freeCrusaders( self, iPlayer ):
-                # this will kill the majority of Crusader units belonging to the player so that the Crusaders will have harder time keeping Jerusalem
-                unitList = PyPlayer( iPlayer ).getUnitList()
-                for pUnit in unitList:
-                        if ( pUnit.getMercID() == -5 ):
-                                # this is a Crusader Unit
-                                pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
-                                iOdds = 80
-                                iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
-                                if ( iCrusadeCategory < 3 ):
-                                        iOdds = -1 # Knight Orders don't return
-                                elif ( iCrusadeCategory == 5 ):
-                                        iOdds = 40 # leave some defenders
-                                if ( iOdds > 0 and pPlot.isCity() ):
-                                        if ( pPlot.getPlotCity().getOwner() == iPlayer ):
-                                                iDefenders = self.getNumDefendersAtPlot( pPlot )
-                                                if ( iDefenders < 4 ):
-                                                        iOdds = 20
-                                                        if ( iDefenders == 0 ):
-                                                                iOdds = -1
 
-                                if ( gc.getGame().getSorenRandNum(100, 'free Crusaders') < iOdds ):
-                                        pUnit.kill( 0, -1 )
-                                        iHuman = utils.getHumanID()
-                                        if ( iHuman == iPlayer ):
-                                                CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_RETURNING_AFTER_VICTORY", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+
+	def freeCrusaders( self, iPlayer ):
+		# the majority of Crusader units will return from the Crusade, so that the Crusading civ will have harder time keeping Jerusalem and the Levant
+		unitList = PyPlayer( iPlayer ).getUnitList()
+		for pUnit in unitList:
+			if ( pUnit.getMercID() == -5 ): # so this is a Crusader Unit
+				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
+				iOdds = 80
+				iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
+				if ( iCrusadeCategory < 3 ):
+					iOdds = -1 # Knight Orders don't return
+				elif ( iCrusadeCategory == 5 ):
+					iOdds = 40 # leave some defenders
+				if ( iOdds > 0 and pPlot.isCity() ):
+					if ( pPlot.getPlotCity().getOwner() == iPlayer ):
+						iDefenders = self.getNumDefendersAtPlot( pPlot )
+						if ( iDefenders < 4 ):
+							iOdds = 20
+							if ( iDefenders == 0 ):
+								iOdds = -1
+
+				if ( gc.getGame().getSorenRandNum(100, 'free Crusaders') < iOdds ):
+					pUnit.kill( 0, -1 )
+					iHuman = utils.getHumanID()
+					if ( iHuman == iPlayer ):
+						CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_RETURNING_AFTER_VICTORY", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 
 	def success( self, iPlayer ):
@@ -1147,10 +1148,11 @@ class Crusades:
 				return
 
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		if ( pPlayer.getNumCities() < 6 ): # smaller Empires need a bit more help
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+		if ( iFaith > 3 ):
+			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		if ( iFaith > 8 ):
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		if ( iFaith > 14 ):
