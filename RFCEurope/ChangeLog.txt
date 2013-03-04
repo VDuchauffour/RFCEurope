@@ -75,6 +75,9 @@ Changes for RFCE 1.2:
 		- German/Austrian city name map updates by 2phunkey4u
 		- Portuguese city name map accents by Spirictum
 		- Updates in some crusading civs' city name maps in the Levant/Egypt/Anatolia
+		- Changed the order of the Polish, Burgundian, Kievan and Hungarian UHVs
+		- Minor fixes in the Dawn of Civilization texts
+		- Civ-specific and UHV updates in the reference texts
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -146,6 +149,7 @@ Changes for RFCE 1.2:
 		- Fixed some mistakes with handling the PsychoAI, also reduced the connected bonus which was way too powerful
 		- Fixed mistake where you couldn't build protestant missionaries without Seminaries under the Religious Law civic
 		- Fixed issue where some of the python scripts couldn't handle Latin-1 characters
+		- Fixed "display bug" with the initial Byzantine stability
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

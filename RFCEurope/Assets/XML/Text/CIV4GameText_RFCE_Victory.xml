@@ -198,21 +198,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
-		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</English>
-		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</French>
-		<German>[COLOR_YELLOW]Wiedervereinigung:[COLOR_REVERT] Erobert bis 1376 n.Chr. Burgund, Provence, Picardie, Flandern, Champagne und Lothringen.</German>
-		<Italian>[COLOR_YELLOW]Riunificazione:[COLOR_REVERT] Controlla le province di Borgogna, Provenza, Piccardia, Fiandre, Champagne e Lorena nel 1376AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Reunificação:[COLOR_REVERT] Conquiste Borgonha, Provença, Picardia, Flandres, Champagne e Lorena em 1376DC.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UHV_BUR2</Tag>
 		<English>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</English>
 		<French>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</French>
 		<German>[COLOR_YELLOW]Die Burgunder Art zu Leben:[COLOR_REVERT] Erzeugt bis 1336 n.Chr. 10.000 Kulturpunkte. (Große Künstler zählen nicht)</German>
 		<Italian>[COLOR_YELLOW]Lo Stile di Vita Borgognone:[COLOR_REVERT] Devi aver prodotto almeno 10,000 punti cultura entro il 1336AD. (Senza usare grandi Artisti)</Italian>
 		<Spanish>[COLOR_YELLOW]The Burgundian Way of Life:[COLOR_REVERT] Produce 10,000 culture points by 1336AD. (Great Artists don't count)</Spanish>
 		<Portuguese>[COLOR_YELLOW]Estilo de vida Burgúndio:[COLOR_REVERT] Produza 10.000 pontos de cultura até 1336DC. (Grandes Artistas não contam)</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_BUR2</Tag>
+		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</English>
+		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</French>
+		<German>[COLOR_YELLOW]Wiedervereinigung:[COLOR_REVERT] Erobert bis 1376 n.Chr. Burgund, Provence, Picardie, Flandern, Champagne und Lothringen.</German>
+		<Italian>[COLOR_YELLOW]Riunificazione:[COLOR_REVERT] Controlla le province di Borgogna, Provenza, Piccardia, Fiandre, Champagne e Lorena nel 1376AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Reunificação:[COLOR_REVERT] Conquiste Borgonha, Provença, Picardia, Flandres, Champagne e Lorena em 1376DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
@@ -360,12 +360,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE1</Tag>
-		<English>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</English>
-		<French>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</French>
-		<German>[COLOR_YELLOW]Die Fruchtbare Schwarzerde:[COLOR_REVERT] Erzeugt bis 1300 n.Chr. 20000 Nahrung.</German>
-		<Italian>[COLOR_YELLOW]Il Fertile Suolo Nero:[COLOR_REVERT] Devi aver prodotto 20000 di cibo nel 1300AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]A Fértil Terra Roxa:[COLOR_REVERT] Produza 20000 de comida até 1300DC.</Portuguese>
+		<English>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</English>
+		<French>Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1250 ap.JC.</French>
+		<German>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Baut bis 1250 n.Chr. 3 orthodoxe Kathedralen und 8 orthodoxe Klöster.</German>
+		<Italian>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Costruisci 2 Cattedrali Ortodosse e 8 Monasteri Ortodossi entro il 1250AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Lavra[COLOR_REVERT] Construa 2 Catedrais Ortodoxas e 8 Mosteiros Ortodoxos até 1250DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
@@ -378,12 +378,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE3</Tag>
-		<English>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</English>
-		<French>Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1250 ap.JC.</French>
-		<German>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Baut bis 1250 n.Chr. 3 orthodoxe Kathedralen und 8 orthodoxe Klöster.</German>
-		<Italian>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Costruisci 2 Cattedrali Ortodosse e 8 Monasteri Ortodossi entro il 1250AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Lavra[COLOR_REVERT] Construa 2 Catedrais Ortodoxas e 8 Mosteiros Ortodoxos até 1250DC.</Portuguese>
+		<English>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</English>
+		<French>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</French>
+		<German>[COLOR_YELLOW]Die Fruchtbare Schwarzerde:[COLOR_REVERT] Erzeugt bis 1300 n.Chr. 20000 Nahrung.</German>
+		<Italian>[COLOR_YELLOW]Il Fertile Suolo Nero:[COLOR_REVERT] Devi aver prodotto 20000 di cibo nel 1300AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Fertile Black Soil:[COLOR_REVERT] Produce 20000 food by 1300AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]A Fértil Terra Roxa:[COLOR_REVERT] Produza 20000 de comida até 1300DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT1</Tag>
@@ -414,6 +414,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN1</Tag>
+		<English>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Slavonia in 1444AD.</English>
+		<French>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Slavonie in 1444AD.</French>
+		<German>[COLOR_YELLOW]Verteidiger Europas:[COLOR_REVERT] Gestattet 1444 n.Chr. keine osmanischen Städte in Walachei, Moesia, Thrace, Makedonien, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbien, Banaten, Bosnien, Dalmatien und Slawonien.</German>
+		<Italian>[COLOR_YELLOW]Difensore dell'Europa:[COLOR_REVERT] Non devono esserci città Ottomane nelle province di Vallachia, Moesia, Tracia, Macedonia, Salonnicco, Tessaglia, Morea, Epiro, Arberia, Serbia, Banat, Bosnia, Dalmazia e Slavonia nel 1444AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Slavonia in 1444AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Defensor da Europa:[COLOR_REVERT] Não permita nenhuma cidade Otomana em Valáquia, Mésia, Trácia, Macedônia, Tessalonica, Tessália, Moreia, Épiro, Arberia, Sérvia, Banat, Bósnia, Dalmácia e Eslavônia em 1444DC.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_HUN2</Tag>
 		<English>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</English>
 		<French>Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
 		<German>[COLOR_YELLOW]Die Schwarze Armee:[COLOR_REVERT] Kontrolliert 1490 n.Chr. das größte Gebiet Europas.</German>
@@ -422,22 +431,13 @@
 		<Portuguese>[COLOR_YELLOW]Exército Negro:[COLOR_REVERT] Controle o maior território na Europa em 1490DC.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_HUN2</Tag>
+		<Tag>TXT_KEY_UHV_HUN3</Tag>
 		<English>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</English>
 		<French>Etre le premier &#224; adopter la Libert&#233; de Culte.</French>
 		<German>[COLOR_YELLOW]Edikt von Turda:[COLOR_REVERT] Führt als erste Zivilisation die Staatsform Religionsfreiheit ein.</German>
 		<Italian>[COLOR_YELLOW]Editto di Torda:[COLOR_REVERT] Devi essere il primo ad adottare la Libertà Religiosa</Italian>
 		<Spanish>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</Spanish>
 		<Portuguese>[COLOR_YELLOW]O Edito de Torda:[COLOR_REVERT] Seja o primeiro a adotar o Livre Culto.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UHV_HUN3</Tag>
-		<English>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Slavonia in 1444AD.</English>
-		<French>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Slavonie in 1444AD.</French>
-		<German>[COLOR_YELLOW]Verteidiger Europas:[COLOR_REVERT] Gestattet 1444 n.Chr. keine osmanischen Städte in Walachei, Moesia, Thrace, Makedonien, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbien, Banaten, Bosnien, Dalmatien und Slawonien.</German>
-		<Italian>[COLOR_YELLOW]Difensore dell'Europa:[COLOR_REVERT] Non devono esserci città Ottomane nelle province di Vallachia, Moesia, Tracia, Macedonia, Salonnicco, Tessaglia, Morea, Epiro, Arberia, Serbia, Banat, Bosnia, Dalmazia e Slavonia nel 1444AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Defender of Europe:[COLOR_REVERT] Allow no Ottoman cities in Wallachia, Moesia, Thrace, Macedonia, Thessaloniki, Thessaly, Morea, Epirus, Arberia, Serbia, Banat, Bosnia, Dalmatia and Slavonia in 1444AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Defensor da Europa:[COLOR_REVERT] Não permita nenhuma cidade Otomana em Valáquia, Mésia, Trácia, Macedônia, Tessalonica, Tessália, Moreia, Épiro, Arberia, Sérvia, Banat, Bósnia, Dalmácia e Eslavônia em 1444DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
@@ -468,21 +468,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
-		<English>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</English>
-		<French>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</French>
-		<German>[COLOR_YELLOW]Die Realunion:[COLOR_REVERT] Kontrolliert 1600 n.Chr. 12 Städte in Böhmen, Mähren, Oberungarn, Prussia, Litauen, Livland, Polotsk, Minsk, Wolhynien, Podolia, Moldawien und Kiev.</German>
-		<Italian>[COLOR_YELLOW]Il Commonwealth:[COLOR_REVERT] Controlla 12 città nelle province di Boemia, Moravia, Alta Ungheria, Prussia, Lituania, Livonia, Polack, Minsk, Volinia, Podolia, Moldavia e Kiev nel 1600AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]A Commonwealth:[COLOR_REVERT]Controle 12 cidades em Boêmia, Morávia, Alta Hungria, Prussia, Lituânia, Livônia, Polotsk, Minsk, Volínia, Podólia, Moldávia e Kiev em 1600DC.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UHV_POL2</Tag>
 		<English>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</English>
 		<French>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</French>
 		<German>[COLOR_YELLOW]Die Kornkammer Europas:[COLOR_REVERT] Produziert zwischen 1500 und 1520 n.Chr. mindestens ein Jahr lang die meiste Nahrung.</German>
 		<Italian>[COLOR_YELLOW]Il Granaio d'Europa:[COLOR_REVERT] Devi produrre la maggior quantità di cibo in almeno un turno tra il 1500 e 1520 AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]O Celeiro da Europa:[COLOR_REVERT] Produza o maior volume de comida pelo menos 1 ano entre 1500 e 1520 DC.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_POL2</Tag>
+		<English>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</English>
+		<French>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</French>
+		<German>[COLOR_YELLOW]Die Realunion:[COLOR_REVERT] Kontrolliert 1600 n.Chr. 12 Städte in Böhmen, Mähren, Oberungarn, Prussia, Litauen, Livland, Polotsk, Minsk, Wolhynien, Podolia, Moldawien und Kiev.</German>
+		<Italian>[COLOR_YELLOW]Il Commonwealth:[COLOR_REVERT] Controlla 12 città nelle province di Boemia, Moravia, Alta Ungheria, Prussia, Lituania, Livonia, Polack, Minsk, Volinia, Podolia, Moldavia e Kiev nel 1600AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]A Commonwealth:[COLOR_REVERT]Controle 12 cidades em Boêmia, Morávia, Alta Hungria, Prussia, Lituânia, Livônia, Polotsk, Minsk, Volínia, Podólia, Moldávia e Kiev em 1600DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>

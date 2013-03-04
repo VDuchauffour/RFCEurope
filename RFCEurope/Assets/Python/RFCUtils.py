@@ -1331,7 +1331,7 @@ class RFCUtils:
 			return True
 		return False
 
-	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
+	def zeroStability(self,iPlayer): # called by RiseAndFall Resurrection
 		for iCount in range(con.iNumStabilityParameters):
 			self.setParameter(iPlayer, iCount, False, 0)
 
