@@ -119,7 +119,8 @@ class Stability:
                                 #self.setLastRecordedStabilityStuff(3, utils.getParEconomy(iHuman))
                                 #self.setLastRecordedStabilityStuff(4, utils.getParExpansion(iHuman))
                                 #self.setLastRecordedStabilityStuff(5, utils.getParDiplomacy(iHuman))
-                pass
+                if (iGameTurn == 0):
+                        self.recalcEpansion( gc.getPlayer(con.iByzantium) )
 
 
         def updateBaseStability(self, iGameTurn, iPlayer): #Base stability is temporary (i.e. turn-based) stability
@@ -427,7 +428,7 @@ class Stability:
                         iCityStability = min( max( iCityStability, -6 ), 8 )
                 else:
                         iCityStability += max( iHappyStability, -2 ) + iHealthStability # AI keeps very unhappy cities
-                        iCityStability += max( iReligionStability + iHurryStability, -3 )+ max( iCultureStability, -3 )
+                        iCityStability += max( iReligionStability + iHurryStability, -3 ) + max( iCultureStability, -3 )
                         iCityStability = min( max( iCityStability, -5 ), 5 )
                 iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
                 #print(" City Stability for: ",iPlayer," Caths: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
@@ -585,13 +586,13 @@ class Stability:
                         if ( iProvType <= con.iProvinceOuter ):
                                 if ( iCivic5 == xml.iCivicImperialism ): # Imperialism
                                         iCivicBonus += 1
-                                if ( bIsUPLandStability ):
+                                if ( bIsUPLandStability ): # French UP
                                         iUPBonus += 1
-                iExpStability += min( 6, iCivicBonus )
-                iExpStability += min( 6, iUPBonus )
+                iExpStability += min( 12, iCivicBonus ) # Imperialism
+                iExpStability += min( 6, iUPBonus ) # French UP
                 if ( not (pPlayer.getCivics(5) == xml.iCivicOccupation) ):
-                        iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceCore )
-                        iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural )
+                        iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceCore ) # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
+                        iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural ) # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
                 if ( pPlayer.getMaster() > -1 ):
                         iExpStability += 8
                 if ( iCivic5 == xml.iCivicVassalage ):
@@ -604,11 +605,9 @@ class Stability:
                         iNumCities = max( 0, iNumCities - 5 )
                 iExpStability -= iNumCities*iNumCities / 40
                 if ( pPlayer.getID() == con.iTurkey and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
-                        if ( pPlayer.isHuman() ):
-                                iExpStability += 5
-                        else:
-                                iExpStability += min( 3 - pPlayer.getStability(), 8 )
-                if ( pPlayer.getID() == con.iVenecia and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
+                        if ( not pPlayer.isHuman() ):
+                                iExpStability += min( 3 - pPlayer.getStability(), 6 )
+                if ( pPlayer.getID() == con.iVenecia and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
                         if ( not pPlayer.isHuman() ):
                                 iExpStability += 4
                 pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )

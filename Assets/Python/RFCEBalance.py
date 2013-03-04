@@ -463,7 +463,7 @@ class RFCEBalance:
 		# iUP_ReligiousTolerance. iParameter = 0 for no instability
 		# iUP_Conscription, iParameter = percent of foreign culture needed to draft + 100 * max number of units to draft per turn
 		# iUP_NoResistance, iParameter = 0 for no resistane or resistance turns = resistance turns / iParameter
-		# iUP_UnitProduction, iParameter = iRequiredTech * 100 + Percent ( 75% for 25% faster unit building)
+		# iUP_UnitProduction, iParameter = iRequiredTech * 100 + Percent ( 75 for 25% faster unit building)
 		# iUP_EnableCivic, iParameter = Civic5 * 100000000 + Civic4 * 1000000 + Civic3 * 10000 + Civic2 * 100 + Civic1, NOTE: also need to enable this in the WB, civic indexed by 0 is always available, civic5 cannot be bigger than 20
 		# iUP_TradeRoutes, iParameter = number of extra trade routes, NOTE: this must be syncronized with GlobalDefines.xml: max trade routes
 		# iUP_ImprovementBonus, iParameter = iImprovement * 1000000 + iFoodBonus * 10000 + iProductionBonus * 100 + iCommerceBonus, bonuses are limited to (0-99)
