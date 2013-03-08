@@ -1,3 +1,4 @@
+
 Welcome to Rhye's and Fall of Europe, a mod based on the incredibly popular original Rhye's and Fall of Civilizations (RFC).
 If you've played RFC before, all the familiar elements are here: stability, plagues, dynamic rises, barbarian uprisings, Unique Powers, Unique Historical Victories,
 and uniquely customized parameters designed to simulate history while allowing you the freedom to change it.
@@ -86,6 +87,7 @@ Changes for RFCE 1.2:
 		- Lithuania has polish unit sounds instead of russian (until we manage to get proper lithuanian sounds)
 		- New Scottish voice set by Annomander
 		- Irish Brigade got Celtic sounds, Highlander and Highlander Infantry got Scottish sounds
+		- New art Westminster Abbey by hrochland
 
 	Balance:
 		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
